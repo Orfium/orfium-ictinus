@@ -1,6 +1,7 @@
 import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
 import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
-import DatePicker, { extraOptions } from './DatePicker';
+import DatePicker from './DatePicker';
+import { CALENDAR_DEFAULT_OPTIONS } from './constants';
 import DatePickerShowcase from '../storyUtils/DatePickerShowcase';
 import { currentDay } from './utils';
 import Stack from '../storyUtils/Stack';
@@ -81,7 +82,7 @@ import { DatePicker } from '@orfium/ictinus';
 
 # DatePicker
 
-Implementation of the regular DatePicker on different sizes
+Implementation of the regular DatePicker
 
 <Preview>
   <Story name="DatePicker" parameters={{ decorators: [withKnobs] }}>
@@ -106,7 +107,7 @@ Implementation of the regular DatePicker on different sizes
 
 # DateRangePicker
 
-Implementation of the regular DatePicker on different sizes
+Implementation of the regular DatePicker
 
 <Preview>
   <Story name="DateRangePicker" parameters={{ decorators: [withKnobs] }}>
@@ -120,7 +121,33 @@ Implementation of the regular DatePicker on different sizes
               value={date}
               onChange={setDate}
               isClearable={true}
-              hasOptions={boolean('hasOptions', false)}
+              disableDates={select('disableDates', options, options[0])}
+              dateFormatOverride={select('dateFormat', dateFormatOptions, dateFormatOptions[1])}
+            />
+          );
+        }}
+      </Function>
+    </Stack>
+  </Story>
+</Preview>
+
+# DateRangePicker with options
+
+Implementation of the regular DatePicker with options
+
+<Preview>
+  <Story name="DateRangePicker with options" parameters={{ decorators: [withKnobs] }}>
+    <Stack vertical>
+      <Function>
+        {() => {
+          const [date, setDate] = useState({ from: currentDay.toDate(), to: currentDay.toDate() });
+          return (
+            <DatePicker
+              isRangePicker
+              value={date}
+              onChange={setDate}
+              options={CALENDAR_DEFAULT_OPTIONS}
+              isClearable={true}
               disableDates={select('disableDates', options, options[0])}
               dateFormatOverride={select('dateFormat', dateFormatOptions, dateFormatOptions[1])}
             />

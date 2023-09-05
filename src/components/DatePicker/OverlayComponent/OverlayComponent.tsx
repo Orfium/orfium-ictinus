@@ -26,7 +26,6 @@ export type OverlayComponentProps = {
   selectedDays: Range;
   onDaySelect: (date: Dayjs) => void;
   disabledDates?: DisabledDates;
-  hasOptions?: boolean;
 };
 
 export type Range = {
@@ -43,7 +42,6 @@ const OverlayComponent: React.FC<OverlayComponentProps> = ({
   disabledDates,
   onCancel = () => {},
   onApply = () => {},
-  hasOptions,
 }) => {
   const [date, setDate] = useState(currentDay);
   const [date2, setDate2] = useState(currentDay);
@@ -60,7 +58,7 @@ const OverlayComponent: React.FC<OverlayComponentProps> = ({
     <div css={overlayWrapperStyle()}>
       <div css={buttonsMonthsWrapperStyle()} data-testid="butonMonthsWrapperStyle">
         <div css={{ display: 'flex' }}>
-          {hasOptions && extraOptions.length > 0 && isRangePicker && (
+          {extraOptions.length > 0 && isRangePicker && (
             <div css={optionsWrapperStyle()} data-testid="optionsWrapperStyle">
               {extraOptions.map((option) => (
                 <div

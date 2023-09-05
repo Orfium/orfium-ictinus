@@ -1696,6 +1696,28 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
 }
 
 .emotion-3 {
+  border-right: 0.0625rem solid #E7E8FF;
+}
+
+.emotion-4 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  white-space: nowrap;
+  padding: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+  background-color: transparent;
+  position: relative;
+}
+
+.emotion-4:hover {
+  background-color: rgba(84,94,255,0.06);
+}
+
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1707,7 +1729,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   z-index: 10;
 }
 
-.emotion-4 {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1719,7 +1741,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   padding: 1.25rem 1.25rem;
 }
 
-.emotion-5 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1734,7 +1756,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   position: relative;
 }
 
-.emotion-6 {
+.emotion-10 {
   cursor: pointer;
   margin: auto 0.3125rem;
   position: absolute;
@@ -1747,14 +1769,14 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   z-index: 10;
 }
 
-.emotion-7 {
+.emotion-11 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-8 {
+.emotion-12 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -1770,24 +1792,24 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-8:focus-visible:not(:disabled) {
+.emotion-12:focus-visible:not(:disabled) {
   background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-8:disabled {
+.emotion-12:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-8:hover:not(:disabled) {
+.emotion-12:hover:not(:disabled) {
   background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-8:active:not(:disabled) {
+.emotion-12:active:not(:disabled) {
   background-color: rgba(84,94,255,0.14);
 }
 
-.emotion-9 {
+.emotion-13 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1803,17 +1825,17 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   justify-content: center;
 }
 
-.emotion-10 {
+.emotion-14 {
   fill: #1552DD;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-10 path {
+.emotion-14 path {
   fill: #1552DD;
 }
 
-.emotion-11 {
+.emotion-15 {
   padding: 0;
   -webkit-align-content: center;
   -ms-flex-line-pack: center;
@@ -1837,7 +1859,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   position: relative;
 }
 
-.emotion-12 {
+.emotion-16 {
   margin: 0 0.5rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1851,7 +1873,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   color: #0f0f17;
 }
 
-.emotion-14 {
+.emotion-18 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -1867,24 +1889,24 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-14:focus-visible:not(:disabled) {
+.emotion-18:focus-visible:not(:disabled) {
   background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-14:disabled {
+.emotion-18:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-14:hover:not(:disabled) {
+.emotion-18:hover:not(:disabled) {
   background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-14:active:not(:disabled) {
+.emotion-18:active:not(:disabled) {
   background-color: rgba(84,94,255,0.14);
 }
 
-.emotion-15 {
+.emotion-19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1900,7 +1922,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-16 {
+.emotion-20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1911,7 +1933,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   justify-content: space-around;
 }
 
-.emotion-17 {
+.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1933,12 +1955,12 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   font-weight: 500;
 }
 
-.emotion-24 {
+.emotion-28 {
   border-collapse: separate;
   border-spacing: 0 0.75rem;
 }
 
-.emotion-25 {
+.emotion-29 {
   vertical-align: middle;
   text-align: center;
   cursor: pointer;
@@ -1948,7 +1970,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   opacity: 1;
 }
 
-.emotion-26 {
+.emotion-30 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -1974,12 +1996,12 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   background: transparent;
 }
 
-.emotion-26:hover {
+.emotion-30:hover {
   border-radius: 6.25rem;
   background: #F5F5FF;
 }
 
-.emotion-27 {
+.emotion-31 {
   vertical-align: middle;
   text-align: center;
   cursor: pointer;
@@ -1990,7 +2012,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   opacity: 1;
 }
 
-.emotion-28 {
+.emotion-32 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -2017,12 +2039,12 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   background: transparent;
 }
 
-.emotion-28:hover {
+.emotion-32:hover {
   border-radius: 6.25rem;
   background: #F5F5FF;
 }
 
-.emotion-29 {
+.emotion-33 {
   vertical-align: middle;
   text-align: center;
   cursor: pointer;
@@ -2035,7 +2057,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   border-top-left-radius: 100%;
 }
 
-.emotion-29:after {
+.emotion-33:after {
   z-index: -1;
   content: ' ';
   height: 100%;
@@ -2050,7 +2072,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   border-top-left-radius: 100%;
 }
 
-.emotion-30 {
+.emotion-34 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -2077,12 +2099,12 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   background: #175bf5;
 }
 
-.emotion-30:hover {
+.emotion-34:hover {
   border-radius: 6.25rem;
   background: false;
 }
 
-.emotion-31 {
+.emotion-35 {
   vertical-align: middle;
   text-align: center;
   cursor: pointer;
@@ -2093,7 +2115,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   background: #F5F5FF;
 }
 
-.emotion-32 {
+.emotion-36 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -2119,12 +2141,12 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   background: transparent;
 }
 
-.emotion-32:hover {
+.emotion-36:hover {
   border-radius: 6.25rem;
   background: transparent;
 }
 
-.emotion-83 {
+.emotion-87 {
   vertical-align: middle;
   text-align: center;
   cursor: pointer;
@@ -2132,7 +2154,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   background: #ffffff;
 }
 
-.emotion-96 {
+.emotion-100 {
   cursor: pointer;
   margin: auto 0.3125rem;
   position: absolute;
@@ -2145,7 +2167,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   z-index: 10;
 }
 
-.emotion-143 {
+.emotion-147 {
   vertical-align: middle;
   text-align: center;
   cursor: pointer;
@@ -2158,7 +2180,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   border-top-right-radius: 100%;
 }
 
-.emotion-143:after {
+.emotion-147:after {
   z-index: -1;
   content: ' ';
   height: 100%;
@@ -2173,7 +2195,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   border-top-left-radius: false;
 }
 
-.emotion-176 {
+.emotion-180 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2192,7 +2214,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   border-top: 0.0625rem solid #E7E8FF;
 }
 
-.emotion-181 {
+.emotion-185 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -2208,20 +2230,20 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-181:focus-visible:not(:disabled) {
+.emotion-185:focus-visible:not(:disabled) {
   background-color: #1552DD;
 }
 
-.emotion-181:disabled {
+.emotion-185:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-181:hover:not(:disabled) {
+.emotion-185:hover:not(:disabled) {
   background-color: #1552DD;
 }
 
-.emotion-181:active:not(:disabled) {
+.emotion-185:active:not(:disabled) {
   background-color: #1249C4;
 }
 
@@ -2259,6 +2281,28 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
 }
 
 .emotion-3 {
+  border-right: 0.0625rem solid #E7E8FF;
+}
+
+.emotion-4 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  white-space: nowrap;
+  padding: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+  background-color: transparent;
+  position: relative;
+}
+
+.emotion-4:hover {
+  background-color: rgba(84,94,255,0.06);
+}
+
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2270,7 +2314,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   z-index: 10;
 }
 
-.emotion-4 {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2282,7 +2326,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   padding: 1.25rem 1.25rem;
 }
 
-.emotion-5 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2297,7 +2341,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   position: relative;
 }
 
-.emotion-6 {
+.emotion-10 {
   cursor: pointer;
   margin: auto 0.3125rem;
   position: absolute;
@@ -2310,14 +2354,14 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   z-index: 10;
 }
 
-.emotion-7 {
+.emotion-11 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-8 {
+.emotion-12 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -2333,24 +2377,24 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-8:focus-visible:not(:disabled) {
+.emotion-12:focus-visible:not(:disabled) {
   background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-8:disabled {
+.emotion-12:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-8:hover:not(:disabled) {
+.emotion-12:hover:not(:disabled) {
   background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-8:active:not(:disabled) {
+.emotion-12:active:not(:disabled) {
   background-color: rgba(84,94,255,0.14);
 }
 
-.emotion-9 {
+.emotion-13 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2366,17 +2410,17 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   justify-content: center;
 }
 
-.emotion-10 {
+.emotion-14 {
   fill: #1552DD;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-10 path {
+.emotion-14 path {
   fill: #1552DD;
 }
 
-.emotion-11 {
+.emotion-15 {
   padding: 0;
   -webkit-align-content: center;
   -ms-flex-line-pack: center;
@@ -2400,7 +2444,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   position: relative;
 }
 
-.emotion-12 {
+.emotion-16 {
   margin: 0 0.5rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2414,7 +2458,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   color: #0f0f17;
 }
 
-.emotion-14 {
+.emotion-18 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -2430,24 +2474,24 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-14:focus-visible:not(:disabled) {
+.emotion-18:focus-visible:not(:disabled) {
   background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-14:disabled {
+.emotion-18:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-14:hover:not(:disabled) {
+.emotion-18:hover:not(:disabled) {
   background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-14:active:not(:disabled) {
+.emotion-18:active:not(:disabled) {
   background-color: rgba(84,94,255,0.14);
 }
 
-.emotion-15 {
+.emotion-19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2463,7 +2507,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-16 {
+.emotion-20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2474,7 +2518,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   justify-content: space-around;
 }
 
-.emotion-17 {
+.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2496,12 +2540,12 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   font-weight: 500;
 }
 
-.emotion-24 {
+.emotion-28 {
   border-collapse: separate;
   border-spacing: 0 0.75rem;
 }
 
-.emotion-25 {
+.emotion-29 {
   vertical-align: middle;
   text-align: center;
   cursor: pointer;
@@ -2511,7 +2555,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   opacity: 1;
 }
 
-.emotion-26 {
+.emotion-30 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -2537,12 +2581,12 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   background: transparent;
 }
 
-.emotion-26:hover {
+.emotion-30:hover {
   border-radius: 6.25rem;
   background: #F5F5FF;
 }
 
-.emotion-27 {
+.emotion-31 {
   vertical-align: middle;
   text-align: center;
   cursor: pointer;
@@ -2553,7 +2597,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   opacity: 1;
 }
 
-.emotion-28 {
+.emotion-32 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -2580,12 +2624,12 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   background: transparent;
 }
 
-.emotion-28:hover {
+.emotion-32:hover {
   border-radius: 6.25rem;
   background: #F5F5FF;
 }
 
-.emotion-29 {
+.emotion-33 {
   vertical-align: middle;
   text-align: center;
   cursor: pointer;
@@ -2598,7 +2642,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   border-top-left-radius: 100%;
 }
 
-.emotion-29:after {
+.emotion-33:after {
   z-index: -1;
   content: ' ';
   height: 100%;
@@ -2613,7 +2657,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   border-top-left-radius: 100%;
 }
 
-.emotion-30 {
+.emotion-34 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -2640,12 +2684,12 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   background: #175bf5;
 }
 
-.emotion-30:hover {
+.emotion-34:hover {
   border-radius: 6.25rem;
   background: false;
 }
 
-.emotion-31 {
+.emotion-35 {
   vertical-align: middle;
   text-align: center;
   cursor: pointer;
@@ -2656,7 +2700,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   background: #F5F5FF;
 }
 
-.emotion-32 {
+.emotion-36 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -2682,12 +2726,12 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   background: transparent;
 }
 
-.emotion-32:hover {
+.emotion-36:hover {
   border-radius: 6.25rem;
   background: transparent;
 }
 
-.emotion-83 {
+.emotion-87 {
   vertical-align: middle;
   text-align: center;
   cursor: pointer;
@@ -2695,7 +2739,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   background: #ffffff;
 }
 
-.emotion-96 {
+.emotion-100 {
   cursor: pointer;
   margin: auto 0.3125rem;
   position: absolute;
@@ -2708,7 +2752,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   z-index: 10;
 }
 
-.emotion-143 {
+.emotion-147 {
   vertical-align: middle;
   text-align: center;
   cursor: pointer;
@@ -2721,7 +2765,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   border-top-right-radius: 100%;
 }
 
-.emotion-143:after {
+.emotion-147:after {
   z-index: -1;
   content: ' ';
   height: 100%;
@@ -2736,7 +2780,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   border-top-left-radius: false;
 }
 
-.emotion-176 {
+.emotion-180 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2755,7 +2799,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   border-top: 0.0625rem solid #E7E8FF;
 }
 
-.emotion-181 {
+.emotion-185 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -2771,20 +2815,20 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-181:focus-visible:not(:disabled) {
+.emotion-185:focus-visible:not(:disabled) {
   background-color: #1552DD;
 }
 
-.emotion-181:disabled {
+.emotion-185:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-181:hover:not(:disabled) {
+.emotion-185:hover:not(:disabled) {
   background-color: #1552DD;
 }
 
-.emotion-181:active:not(:disabled) {
+.emotion-185:active:not(:disabled) {
   background-color: #1249C4;
 }
 
@@ -2801,29 +2845,49 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
       >
         <div
           class="emotion-3"
+          data-testid="optionsWrapperStyle"
         >
           <div
             class="emotion-4"
           >
+            Last 7 days
+          </div>
+          <div
+            class="emotion-4"
+          >
+            Last 30 days
+          </div>
+          <div
+            class="emotion-4"
+          >
+            Custom
+          </div>
+        </div>
+        <div
+          class="emotion-7"
+        >
+          <div
+            class="emotion-8"
+          >
             <div
-              class="emotion-5"
+              class="emotion-9"
             >
               <div
-                class="emotion-6"
+                class="emotion-10"
               >
                 <div
-                  class="emotion-7"
+                  class="emotion-11"
                 >
                   <button
-                    class="emotion-8"
+                    class="emotion-12"
                     data-testid="icon-button"
                     type="button"
                   >
                     <span
-                      class="emotion-9"
+                      class="emotion-13"
                     >
                       <span
-                        class="emotion-10"
+                        class="emotion-14"
                       />
                     </span>
                   </button>
@@ -2831,21 +2895,21 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
               </div>
               <div>
                 <div
-                  class="emotion-11"
+                  class="emotion-15"
                 >
                   <div
-                    class="emotion-12"
+                    class="emotion-16"
                   >
                     <div
-                      class="emotion-7"
+                      class="emotion-11"
                     >
                       <button
-                        class="emotion-14"
+                        class="emotion-18"
                         data-testid="button"
                         type="button"
                       >
                         <span
-                          class="emotion-15"
+                          class="emotion-19"
                         >
                           <span>
                             November
@@ -2860,75 +2924,49 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
               </div>
             </div>
             <div
-              class="emotion-16"
+              class="emotion-20"
             >
               <div
-                class="emotion-17"
+                class="emotion-21"
               >
                 Mo
               </div>
               <div
-                class="emotion-17"
+                class="emotion-21"
               >
                 Tu
               </div>
               <div
-                class="emotion-17"
+                class="emotion-21"
               >
                 We
               </div>
               <div
-                class="emotion-17"
+                class="emotion-21"
               >
                 Th
               </div>
               <div
-                class="emotion-17"
+                class="emotion-21"
               >
                 Fr
               </div>
               <div
-                class="emotion-17"
+                class="emotion-21"
               >
                 Sa
               </div>
               <div
-                class="emotion-17"
+                class="emotion-21"
               >
                 Su
               </div>
             </div>
             <table
-              class="emotion-24"
+              class="emotion-28"
             >
               <tbody>
                 <tr>
-                  <td
-                    style="padding: 0px;"
-                  >
-                    <div
-                      class="emotion-25"
-                    >
-                      <div
-                        class="emotion-26"
-                      >
-                        2
-                      </div>
-                    </div>
-                  </td>
-                  <td
-                    style="padding: 0px;"
-                  >
-                    <div
-                      class="emotion-27"
-                    >
-                      <div
-                        class="emotion-28"
-                      >
-                        3
-                      </div>
-                    </div>
-                  </td>
                   <td
                     style="padding: 0px;"
                   >
@@ -2938,7 +2976,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                       <div
                         class="emotion-30"
                       >
-                        4
+                        2
                       </div>
                     </div>
                   </td>
@@ -2950,6 +2988,32 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     >
                       <div
                         class="emotion-32"
+                      >
+                        3
+                      </div>
+                    </div>
+                  </td>
+                  <td
+                    style="padding: 0px;"
+                  >
+                    <div
+                      class="emotion-33"
+                    >
+                      <div
+                        class="emotion-34"
+                      >
+                        4
+                      </div>
+                    </div>
+                  </td>
+                  <td
+                    style="padding: 0px;"
+                  >
+                    <div
+                      class="emotion-35"
+                    >
+                      <div
+                        class="emotion-36"
                       >
                         5
                       </div>
@@ -2959,10 +3023,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         6
                       </div>
@@ -2972,10 +3036,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         7
                       </div>
@@ -2985,10 +3049,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         8
                       </div>
@@ -3000,10 +3064,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         9
                       </div>
@@ -3013,10 +3077,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         10
                       </div>
@@ -3026,10 +3090,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         11
                       </div>
@@ -3039,10 +3103,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         12
                       </div>
@@ -3052,10 +3116,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         13
                       </div>
@@ -3065,10 +3129,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         14
                       </div>
@@ -3078,10 +3142,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         15
                       </div>
@@ -3093,10 +3157,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         16
                       </div>
@@ -3106,10 +3170,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         17
                       </div>
@@ -3119,10 +3183,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         18
                       </div>
@@ -3132,10 +3196,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         19
                       </div>
@@ -3145,10 +3209,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         20
                       </div>
@@ -3158,10 +3222,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         21
                       </div>
@@ -3171,10 +3235,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         22
                       </div>
@@ -3186,10 +3250,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         23
                       </div>
@@ -3199,10 +3263,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         24
                       </div>
@@ -3212,10 +3276,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         25
                       </div>
@@ -3225,10 +3289,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         26
                       </div>
@@ -3238,10 +3302,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         27
                       </div>
@@ -3251,10 +3315,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         28
                       </div>
@@ -3264,10 +3328,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         29
                       </div>
@@ -3279,60 +3343,60 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         30
                       </div>
                     </div>
                   </td>
                   <td
-                    class="emotion-83"
+                    class="emotion-87"
                   />
                   <td
-                    class="emotion-83"
+                    class="emotion-87"
                   />
                   <td
-                    class="emotion-83"
+                    class="emotion-87"
                   />
                   <td
-                    class="emotion-83"
+                    class="emotion-87"
                   />
                   <td
-                    class="emotion-83"
+                    class="emotion-87"
                   />
                   <td
-                    class="emotion-83"
+                    class="emotion-87"
                   />
                 </tr>
               </tbody>
             </table>
           </div>
           <div
-            class="emotion-4"
+            class="emotion-8"
           >
             <div
-              class="emotion-5"
+              class="emotion-9"
             >
               <div>
                 <div
-                  class="emotion-11"
+                  class="emotion-15"
                 >
                   <div
-                    class="emotion-12"
+                    class="emotion-16"
                   >
                     <div
-                      class="emotion-7"
+                      class="emotion-11"
                     >
                       <button
-                        class="emotion-14"
+                        class="emotion-18"
                         data-testid="button"
                         type="button"
                       >
                         <span
-                          class="emotion-15"
+                          class="emotion-19"
                         >
                           <span>
                             December
@@ -3345,21 +3409,21 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                   </div>
                 </div>
                 <div
-                  class="emotion-96"
+                  class="emotion-100"
                 >
                   <div
-                    class="emotion-7"
+                    class="emotion-11"
                   >
                     <button
-                      class="emotion-8"
+                      class="emotion-12"
                       data-testid="icon-button"
                       type="button"
                     >
                       <span
-                        class="emotion-9"
+                        class="emotion-13"
                       >
                         <span
-                          class="emotion-10"
+                          class="emotion-14"
                         />
                       </span>
                     </button>
@@ -3368,60 +3432,60 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
               </div>
             </div>
             <div
-              class="emotion-16"
+              class="emotion-20"
             >
               <div
-                class="emotion-17"
+                class="emotion-21"
               >
                 Mo
               </div>
               <div
-                class="emotion-17"
+                class="emotion-21"
               >
                 Tu
               </div>
               <div
-                class="emotion-17"
+                class="emotion-21"
               >
                 We
               </div>
               <div
-                class="emotion-17"
+                class="emotion-21"
               >
                 Th
               </div>
               <div
-                class="emotion-17"
+                class="emotion-21"
               >
                 Fr
               </div>
               <div
-                class="emotion-17"
+                class="emotion-21"
               >
                 Sa
               </div>
               <div
-                class="emotion-17"
+                class="emotion-21"
               >
                 Su
               </div>
             </div>
             <table
-              class="emotion-24"
+              class="emotion-28"
             >
               <tbody>
                 <tr>
                   <td
-                    class="emotion-83"
+                    class="emotion-87"
                   />
                   <td
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         1
                       </div>
@@ -3431,10 +3495,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         2
                       </div>
@@ -3444,10 +3508,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         3
                       </div>
@@ -3457,10 +3521,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         4
                       </div>
@@ -3470,10 +3534,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         5
                       </div>
@@ -3483,10 +3547,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         6
                       </div>
@@ -3498,10 +3562,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         7
                       </div>
@@ -3511,10 +3575,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         8
                       </div>
@@ -3524,10 +3588,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         9
                       </div>
@@ -3537,10 +3601,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         10
                       </div>
@@ -3550,10 +3614,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         11
                       </div>
@@ -3563,10 +3627,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         12
                       </div>
@@ -3576,10 +3640,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         13
                       </div>
@@ -3591,10 +3655,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         14
                       </div>
@@ -3604,10 +3668,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         15
                       </div>
@@ -3617,10 +3681,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-31"
+                      class="emotion-35"
                     >
                       <div
-                        class="emotion-32"
+                        class="emotion-36"
                       >
                         16
                       </div>
@@ -3630,10 +3694,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-143"
+                      class="emotion-147"
                     >
                       <div
-                        class="emotion-30"
+                        class="emotion-34"
                       >
                         17
                       </div>
@@ -3643,10 +3707,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-25"
+                      class="emotion-29"
                     >
                       <div
-                        class="emotion-26"
+                        class="emotion-30"
                       >
                         18
                       </div>
@@ -3656,10 +3720,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-25"
+                      class="emotion-29"
                     >
                       <div
-                        class="emotion-26"
+                        class="emotion-30"
                       >
                         19
                       </div>
@@ -3669,10 +3733,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-25"
+                      class="emotion-29"
                     >
                       <div
-                        class="emotion-26"
+                        class="emotion-30"
                       >
                         20
                       </div>
@@ -3684,10 +3748,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-25"
+                      class="emotion-29"
                     >
                       <div
-                        class="emotion-26"
+                        class="emotion-30"
                       >
                         21
                       </div>
@@ -3697,10 +3761,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-25"
+                      class="emotion-29"
                     >
                       <div
-                        class="emotion-26"
+                        class="emotion-30"
                       >
                         22
                       </div>
@@ -3710,10 +3774,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-25"
+                      class="emotion-29"
                     >
                       <div
-                        class="emotion-26"
+                        class="emotion-30"
                       >
                         23
                       </div>
@@ -3723,10 +3787,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-25"
+                      class="emotion-29"
                     >
                       <div
-                        class="emotion-26"
+                        class="emotion-30"
                       >
                         24
                       </div>
@@ -3736,10 +3800,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-25"
+                      class="emotion-29"
                     >
                       <div
-                        class="emotion-26"
+                        class="emotion-30"
                       >
                         25
                       </div>
@@ -3749,10 +3813,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-25"
+                      class="emotion-29"
                     >
                       <div
-                        class="emotion-26"
+                        class="emotion-30"
                       >
                         26
                       </div>
@@ -3762,10 +3826,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-25"
+                      class="emotion-29"
                     >
                       <div
-                        class="emotion-26"
+                        class="emotion-30"
                       >
                         27
                       </div>
@@ -3777,10 +3841,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-25"
+                      class="emotion-29"
                     >
                       <div
-                        class="emotion-26"
+                        class="emotion-30"
                       >
                         28
                       </div>
@@ -3790,10 +3854,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-25"
+                      class="emotion-29"
                     >
                       <div
-                        class="emotion-26"
+                        class="emotion-30"
                       >
                         29
                       </div>
@@ -3803,10 +3867,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-25"
+                      class="emotion-29"
                     >
                       <div
-                        class="emotion-26"
+                        class="emotion-30"
                       >
                         30
                       </div>
@@ -3816,23 +3880,23 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     style="padding: 0px;"
                   >
                     <div
-                      class="emotion-25"
+                      class="emotion-29"
                     >
                       <div
-                        class="emotion-26"
+                        class="emotion-30"
                       >
                         31
                       </div>
                     </div>
                   </td>
                   <td
-                    class="emotion-83"
+                    class="emotion-87"
                   />
                   <td
-                    class="emotion-83"
+                    class="emotion-87"
                   />
                   <td
-                    class="emotion-83"
+                    class="emotion-87"
                   />
                 </tr>
               </tbody>
@@ -3841,18 +3905,18 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
         </div>
       </div>
       <div
-        class="emotion-176"
+        class="emotion-180"
       >
         <div
-          class="emotion-7"
+          class="emotion-11"
         >
           <button
-            class="emotion-14"
+            class="emotion-18"
             data-testid="button-cancel"
             type="button"
           >
             <span
-              class="emotion-15"
+              class="emotion-19"
             >
               <span>
                 Clear All
@@ -3861,15 +3925,15 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
           </button>
         </div>
         <div
-          class="emotion-7"
+          class="emotion-11"
         >
           <button
-            class="emotion-181"
+            class="emotion-185"
             data-testid="button-apply"
             type="button"
           >
             <span
-              class="emotion-15"
+              class="emotion-19"
             >
               <span>
                 Apply Dates

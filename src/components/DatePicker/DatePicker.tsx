@@ -1,8 +1,8 @@
+import isEmpty from 'lodash/isEmpty';
 import React, { useCallback, memo, useMemo, useState } from 'react';
 import isEqual from 'react-fast-compare';
 import { Dayjs } from 'utils/date';
 
-import { extraOptions } from './constants';
 import { datePickerStyles } from './DatePicker.style';
 import { DatePickerProps } from './DatePicker.types';
 import DatePickInput from './DatePickInput';
@@ -21,7 +21,7 @@ const DatePicker: React.FC<DatePickerProps & TestProps> = ({
   dateFormatOverride = undefined,
   isClearable = false,
   filterConfig,
-  hasOptions,
+  options,
   dataTestId,
 }) => {
   const value = useMemo(() => initDates(initialValue || {}), [initialValue]);
@@ -29,19 +29,22 @@ const DatePicker: React.FC<DatePickerProps & TestProps> = ({
   const [selectedOption, setSelectedOption] = useState<string>('');
   const [range, setRange] = useState<Range>(value);
 
-  const handleSelectedOptions = useCallback((option: string) => {
-    const foundOption = extraOptions.find((optionItem) => optionItem.value === option);
+  const handleSelectedOptions = useCallback(
+    (option: string) => {
+      const foundOption = options?.find((optionItem) => optionItem.value === option);
 
-    if (foundOption) {
-      setRange(
-        Array.isArray(foundOption.dates)
-          ? { from: foundOption.dates[0], to: foundOption.dates[1] }
-          : { from: foundOption.dates, to: foundOption.dates }
-      );
-    }
+      if (foundOption) {
+        setRange(
+          Array.isArray(foundOption.dates)
+            ? { from: foundOption.dates[0], to: foundOption.dates[1] }
+            : { from: foundOption.dates, to: foundOption.dates }
+        );
 
-    setSelectedOption(option);
-  }, []);
+        setSelectedOption(option);
+      }
+    },
+    [options]
+  );
 
   const applyRangeAndClose = useCallback(
     (oldState: Range) => {
@@ -159,14 +162,13 @@ const DatePicker: React.FC<DatePickerProps & TestProps> = ({
           <OverlayComponent
             selectedOption={selectedOption}
             setSelectedOption={handleSelectedOptions}
-            extraOptions={extraOptions}
+            extraOptions={options}
             isRangePicker={isRangePicker}
             onDaySelect={setRangePick}
             selectedDays={range}
             disabledDates={disableDates}
             onCancel={onCancel}
             onApply={onApply}
-            hasOptions={hasOptions}
           />
         </div>
       </PositionInScreen>

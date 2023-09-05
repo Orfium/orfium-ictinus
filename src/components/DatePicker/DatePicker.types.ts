@@ -21,6 +21,8 @@ export type DatePickerProps = {
   disableDates?: DisabledDates;
   /** Value to define if needed an initial state or to handle it externally */
   value: DateRange;
+  /** Calendar options for DateRangePicker */
+  options?: ExtraOption[];
   /** Props of the TextField input */
   inputProps?: TextFieldProps;
   /** The format of the date displayed in the input field */
@@ -39,8 +41,6 @@ export type DatePickerProps = {
     /** This property defines the Filter's type */
     filterType?: FilterType;
   };
-  /** Whether the DateRangePicker has options */
-  hasOptions?: boolean;
 };
 
 export type ExtraOption = { value: string; label: string; dates: Dayjs[] };
