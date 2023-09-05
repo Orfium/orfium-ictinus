@@ -23,6 +23,7 @@ describe('OverlayComponent', () => {
     const { container } = render(
       <OverlayComponent
         isRangePicker
+        hasOptions
         selectedDays={{
           from: mockDate.add(1, 'day'),
           to: mockDate.add(44, 'day'),
@@ -50,8 +51,8 @@ describe('OverlayComponent', () => {
       />
     );
 
-    const applyBtn = await findByText('Apply');
-    const cancelBtn = await findByText('Cancel');
+    const applyBtn = await findByText('Apply Dates');
+    const cancelBtn = await findByText('Clear All');
     fireEvent.click(applyBtn);
     fireEvent.click(cancelBtn);
 
@@ -103,6 +104,7 @@ describe('OverlayComponent', () => {
     const { findByText } = render(
       <OverlayComponent
         isRangePicker
+        hasOptions
         selectedDays={{
           from: date,
           to: date,
