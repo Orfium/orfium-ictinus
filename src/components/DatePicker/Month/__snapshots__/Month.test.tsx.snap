@@ -10,23 +10,33 @@ exports[`Month should render correctly 1`] = `
   -ms-flex-pack: space-around;
   -webkit-justify-content: space-around;
   justify-content: space-around;
-  border-top: 0.0625rem solid;
-  border-bottom: 0.0625rem solid;
-  border-color: #e7ebf2;
 }
 
 .emotion-1 {
-  color: #5f6c85;
-  padding: 1rem 0;
-  width: 2.4375rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: #54587F;
+  width: 2.25rem;
+  height: 2.25rem;
   font-size: 0.875rem;
+  line-height: 1.25rem;
   text-align: center;
   font-weight: 500;
 }
 
 .emotion-8 {
   border-collapse: separate;
-  border-spacing: 0 0.5rem;
+  border-spacing: 0 0.75rem;
 }
 
 .emotion-9 {
@@ -34,16 +44,22 @@ exports[`Month should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #0f0f17;
-  width: 2.5rem;
-  padding: 0 0.25rem;
+  color: #212332;
+  width: 2.25rem;
   opacity: 1;
 }
 
 .emotion-10 {
-  border: 0.0625rem solid transparent;
-  width: 2.4375rem;
-  height: 2.4375rem;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  border: 0.0625rem solid rgba(84,94,255,0);
+  width: 2.25rem;
+  height: 2.25rem;
+  color: #212332;
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -60,8 +76,8 @@ exports[`Month should render correctly 1`] = `
 }
 
 .emotion-10:hover {
-  border-radius: 100%;
-  background: #f3f5f8;
+  border-radius: 6.25rem;
+  background: #F5F5FF;
 }
 
 .emotion-11 {
@@ -69,18 +85,24 @@ exports[`Month should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #0f0f17;
-  width: 2.5rem;
-  padding: 0 0.25rem;
+  color: #212332;
+  width: 2.25rem;
   font-weight: bold;
   opacity: 1;
 }
 
 .emotion-12 {
-  border: 0.0625rem solid #93a5c5;
-  border-radius: 100%;
-  width: 2.4375rem;
-  height: 2.4375rem;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  border: 0.0625rem solid #175bf5;
+  border-radius: 6.25rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  color: #212332;
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -97,8 +119,8 @@ exports[`Month should render correctly 1`] = `
 }
 
 .emotion-12:hover {
-  border-radius: 100%;
-  background: #f3f5f8;
+  border-radius: 6.25rem;
+  background: #F5F5FF;
 }
 
 .emotion-13 {
@@ -106,11 +128,10 @@ exports[`Month should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: white;
-  width: 2.5rem;
-  padding: 0 0.25rem;
+  color: #ffffff;
+  width: 2.25rem;
   opacity: 1;
-  background: transparent;
+  background: #175bf5;
   border-bottom-left-radius: 100%;
   border-top-left-radius: 100%;
 }
@@ -122,7 +143,6 @@ exports[`Month should render correctly 1`] = `
   width: 50%;
   position: absolute;
   top: 0;
-  background: #e7eefe;
   left: initial;
   right: 0;
   border-bottom-right-radius: false;
@@ -132,10 +152,17 @@ exports[`Month should render correctly 1`] = `
 }
 
 .emotion-14 {
-  border: 0.0625rem solid transparent;
-  border-radius: 100%;
-  width: 2.4375rem;
-  height: 2.4375rem;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  border: 0 solid rgba(84,94,255,0);
+  border-radius: 6.25rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  color: #ffffff;
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -152,7 +179,7 @@ exports[`Month should render correctly 1`] = `
 }
 
 .emotion-14:hover {
-  border-radius: 100%;
+  border-radius: 6.25rem;
   background: false;
 }
 
@@ -161,17 +188,23 @@ exports[`Month should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #0f0f17;
-  width: 2.5rem;
-  padding: 0 0.25rem;
+  color: #212332;
+  width: 2.25rem;
   opacity: 1;
-  background: #e7eefe;
+  background: #F5F5FF;
 }
 
 .emotion-16 {
-  border: 0.0625rem solid transparent;
-  width: 2.4375rem;
-  height: 2.4375rem;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  border: 0.0625rem solid rgba(84,94,255,0);
+  width: 2.25rem;
+  height: 2.25rem;
+  color: #212332;
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -188,8 +221,8 @@ exports[`Month should render correctly 1`] = `
 }
 
 .emotion-16:hover {
-  border-radius: 100%;
-  background: #d0defd;
+  border-radius: 6.25rem;
+  background: transparent;
 }
 
 .emotion-67 {
@@ -197,7 +230,7 @@ exports[`Month should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  background: transparent;
+  background: #ffffff;
 }
 
 .emotion-0 {
@@ -209,23 +242,33 @@ exports[`Month should render correctly 1`] = `
   -ms-flex-pack: space-around;
   -webkit-justify-content: space-around;
   justify-content: space-around;
-  border-top: 0.0625rem solid;
-  border-bottom: 0.0625rem solid;
-  border-color: #e7ebf2;
 }
 
 .emotion-1 {
-  color: #5f6c85;
-  padding: 1rem 0;
-  width: 2.4375rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: #54587F;
+  width: 2.25rem;
+  height: 2.25rem;
   font-size: 0.875rem;
+  line-height: 1.25rem;
   text-align: center;
   font-weight: 500;
 }
 
 .emotion-8 {
   border-collapse: separate;
-  border-spacing: 0 0.5rem;
+  border-spacing: 0 0.75rem;
 }
 
 .emotion-9 {
@@ -233,16 +276,22 @@ exports[`Month should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #0f0f17;
-  width: 2.5rem;
-  padding: 0 0.25rem;
+  color: #212332;
+  width: 2.25rem;
   opacity: 1;
 }
 
 .emotion-10 {
-  border: 0.0625rem solid transparent;
-  width: 2.4375rem;
-  height: 2.4375rem;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  border: 0.0625rem solid rgba(84,94,255,0);
+  width: 2.25rem;
+  height: 2.25rem;
+  color: #212332;
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -259,8 +308,8 @@ exports[`Month should render correctly 1`] = `
 }
 
 .emotion-10:hover {
-  border-radius: 100%;
-  background: #f3f5f8;
+  border-radius: 6.25rem;
+  background: #F5F5FF;
 }
 
 .emotion-11 {
@@ -268,18 +317,24 @@ exports[`Month should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #0f0f17;
-  width: 2.5rem;
-  padding: 0 0.25rem;
+  color: #212332;
+  width: 2.25rem;
   font-weight: bold;
   opacity: 1;
 }
 
 .emotion-12 {
-  border: 0.0625rem solid #93a5c5;
-  border-radius: 100%;
-  width: 2.4375rem;
-  height: 2.4375rem;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  border: 0.0625rem solid #175bf5;
+  border-radius: 6.25rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  color: #212332;
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -296,8 +351,8 @@ exports[`Month should render correctly 1`] = `
 }
 
 .emotion-12:hover {
-  border-radius: 100%;
-  background: #f3f5f8;
+  border-radius: 6.25rem;
+  background: #F5F5FF;
 }
 
 .emotion-13 {
@@ -305,11 +360,10 @@ exports[`Month should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: white;
-  width: 2.5rem;
-  padding: 0 0.25rem;
+  color: #ffffff;
+  width: 2.25rem;
   opacity: 1;
-  background: transparent;
+  background: #175bf5;
   border-bottom-left-radius: 100%;
   border-top-left-radius: 100%;
 }
@@ -321,7 +375,6 @@ exports[`Month should render correctly 1`] = `
   width: 50%;
   position: absolute;
   top: 0;
-  background: #e7eefe;
   left: initial;
   right: 0;
   border-bottom-right-radius: false;
@@ -331,10 +384,17 @@ exports[`Month should render correctly 1`] = `
 }
 
 .emotion-14 {
-  border: 0.0625rem solid transparent;
-  border-radius: 100%;
-  width: 2.4375rem;
-  height: 2.4375rem;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  border: 0 solid rgba(84,94,255,0);
+  border-radius: 6.25rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  color: #ffffff;
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -351,7 +411,7 @@ exports[`Month should render correctly 1`] = `
 }
 
 .emotion-14:hover {
-  border-radius: 100%;
+  border-radius: 6.25rem;
   background: false;
 }
 
@@ -360,17 +420,23 @@ exports[`Month should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #0f0f17;
-  width: 2.5rem;
-  padding: 0 0.25rem;
+  color: #212332;
+  width: 2.25rem;
   opacity: 1;
-  background: #e7eefe;
+  background: #F5F5FF;
 }
 
 .emotion-16 {
-  border: 0.0625rem solid transparent;
-  width: 2.4375rem;
-  height: 2.4375rem;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  border: 0.0625rem solid rgba(84,94,255,0);
+  width: 2.25rem;
+  height: 2.25rem;
+  color: #212332;
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -387,8 +453,8 @@ exports[`Month should render correctly 1`] = `
 }
 
 .emotion-16:hover {
-  border-radius: 100%;
-  background: #d0defd;
+  border-radius: 6.25rem;
+  background: transparent;
 }
 
 .emotion-67 {
@@ -396,7 +462,7 @@ exports[`Month should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  background: transparent;
+  background: #ffffff;
 }
 
 <div>
