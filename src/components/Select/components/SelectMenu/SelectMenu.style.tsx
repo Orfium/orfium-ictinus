@@ -38,7 +38,7 @@ export const optionStyle =
   };
 
 export const menuStyle =
-  ({ status, isVirtualized, sx  }: SelectMenuProps & Omit<TextFieldProps, 'ref' | 'label'>) =>
+  ({ status, isVirtualized, sx }: SelectMenuProps & Omit<TextFieldProps, 'ref' | 'label' | 'sx'>) =>
   (theme: Theme): SerializedStyles =>
     css`
       background-color: ${theme.globals.oldColors.white};
