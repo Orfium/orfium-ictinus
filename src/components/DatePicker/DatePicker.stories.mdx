@@ -2,6 +2,7 @@ import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
 import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 import DatePicker from './DatePicker';
 import { CALENDAR_DEFAULT_OPTIONS } from './constants';
+import { openDatePicker } from './utils';
 import DatePickerShowcase from '../storyUtils/DatePickerShowcase';
 import { currentDay } from './utils';
 import Stack from '../storyUtils/Stack';
@@ -85,7 +86,7 @@ import { DatePicker } from '@orfium/ictinus';
 Implementation of the regular DatePicker
 
 <Preview>
-  <Story name="DatePicker" parameters={{ decorators: [withKnobs] }}>
+  <Story name="DatePicker" parameters={{ decorators: [withKnobs] }} play={openDatePicker} autoPlay>
     <Stack vertical>
       <Function>
         {() => {
@@ -110,7 +111,12 @@ Implementation of the regular DatePicker
 Implementation of the regular DatePicker
 
 <Preview>
-  <Story name="DateRangePicker" parameters={{ decorators: [withKnobs] }}>
+  <Story
+    name="DateRangePicker"
+    parameters={{ decorators: [withKnobs] }}
+    play={openDatePicker}
+    autoPlay
+  >
     <Stack vertical>
       <Function>
         {() => {
