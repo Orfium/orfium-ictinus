@@ -1,4 +1,3 @@
-import isEmpty from 'lodash/isEmpty';
 import React, { useCallback, memo, useMemo, useState } from 'react';
 import isEqual from 'react-fast-compare';
 import { Dayjs } from 'utils/date';
