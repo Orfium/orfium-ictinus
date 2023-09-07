@@ -1,22 +1,26 @@
-import React, { useCallback, InputHTMLAttributes } from 'react';
+import useTheme from 'hooks/useTheme';
+import { rem } from 'polished';
+import React, { useCallback, InputHTMLAttributes, useMemo } from 'react';
 import dayjs, { Dayjs } from 'utils/date';
 
-import { rangeInputsWrapper } from './DatePickInput.style';
+import { iconStyles } from './DatePickInput.style';
 import { generateTestDataId, getLocaleFormat } from '../../../utils/helpers';
 import { TestProps } from '../../../utils/types';
 import FilterBase from '../../Filter/components/FilterBase';
 import { FilterType, StyleType } from '../../Filter/types';
-import Icon from '../../Icon';
 import TextField, { TextFieldProps } from '../../TextField/TextField';
-import { DateFormatType } from '../DatePicker';
+import { DateFormatType } from '../DatePicker.types';
 import { Range } from '../OverlayComponent/OverlayComponent';
+import Icon from 'components/Icon';
+import { getDatePickerMinWidth } from 'components/TextInputBase/config';
+import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
 
 // TODO: Need to fix this (TextField onChange prop)
 const ON_CHANGE_MOCK = () => {};
 
 export type DatePickInputProps = {
-  /** Handles the focus state of the component */
-  handleFocus: () => void;
+  /** Callback for the calendar icon button of the input field */
+  handleIconClick: () => void;
   /** Handles the clear action for the datepicker */
   handleClear: (event?: React.KeyboardEvent) => void;
   /** Defines whether the component selects a single date or a range */
@@ -52,7 +56,7 @@ const getLabels = (isRangePicker: boolean, formattedTo: string) => ({
 const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
   (
     {
-      handleFocus,
+      handleIconClick,
       filterConfig = {},
       handleClear,
       dataTestId,
@@ -64,6 +68,10 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
     },
     ref
   ) => {
+    const theme = useTheme();
+
+    const tokens = getTextInputBaseTokens(theme);
+
     const getDateFormatted = useCallback(formatDate(dateFormatOverride), [dateFormatOverride]);
 
     const formattedFrom = getDateFormatted(selectedDay.from);
@@ -72,6 +80,17 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
     const labels = getLabels(isRangePicker, formattedTo);
 
     const { buttonType = 'primary', styleType = 'filled', filterType } = filterConfig;
+
+    const sx = { wrapper: { minWidth: rem(getDatePickerMinWidth(isRangePicker)) } };
+
+    const renderIconButton = useMemo(
+      () => (
+        <div css={iconStyles()} onClick={handleIconClick} data-testid="calendar_button">
+          <Icon name="calendarEmpty" size={20} color={tokens('addOn.iconColor')} />
+        </div>
+      ),
+      [handleIconClick, tokens]
+    );
 
     const renderBase = () => {
       if (filterType) {
@@ -82,7 +101,7 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
             isDisabled={false}
             buttonType={buttonType}
             styleType={styleType}
-            handleOpen={handleFocus}
+            handleOpen={handleIconClick}
             filterType={filterType}
             onClear={handleClear}
             selectedItemLabel={
@@ -101,13 +120,13 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
           <TextField
             ref={ref}
             {...inputProps}
-            onFocus={handleFocus}
             onKeyDown={handleClear}
             dataTestId={dataTestId}
             onChange={ON_CHANGE_MOCK}
-            label="Date (start) - Date (end)"
+            label="Enter Date Range"
             value={selectedDay.from ? `${formattedFrom} - ${formattedTo}` : ''}
-            suffix={'calendarEmpty'}
+            suffix={renderIconButton}
+            sx={sx}
           />
         );
       }
@@ -116,18 +135,18 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
         <TextField
           ref={ref}
           {...inputProps}
-          onFocus={handleFocus}
           onKeyDown={handleClear}
           dataTestId={dataTestId}
           onChange={ON_CHANGE_MOCK}
           label="Select date"
           value={selectedDay.to ? formattedFrom : ''}
-          suffix={'calendarEmpty'}
+          suffix={renderIconButton}
+          sx={sx}
         />
       );
     };
 
-    return <div css={rangeInputsWrapper()}>{renderBase()}</div>;
+    return <div>{renderBase()}</div>;
   }
 );
 

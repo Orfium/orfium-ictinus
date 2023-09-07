@@ -12,7 +12,8 @@ import {
   overlayWrapperStyle,
 } from './OverlayComponent.style';
 import Button from '../../Button';
-import { DisabledDates, ExtraOption } from '../DatePicker';
+import { APPLY_DATES, CLEAR_ALL } from '../constants';
+import { DisabledDates, ExtraOption } from '../DatePicker.types';
 import { currentDay } from '../utils';
 
 export type OverlayComponentProps = {
@@ -55,56 +56,58 @@ const OverlayComponent: React.FC<OverlayComponentProps> = ({
 
   return (
     <div css={overlayWrapperStyle()}>
-      {extraOptions.length > 0 && isRangePicker && (
-        <div css={optionsWrapperStyle()}>
-          {extraOptions.map((option) => (
-            <div
-              key={option.value}
-              css={optionStyle({ isSelected: selectedOption === option.value })}
-              onClick={() => setSelectedOption(option.value)}
-            >
-              {option.label}
+      <div css={buttonsMonthsWrapperStyle()} data-testid="butonMonthsWrapperStyle">
+        <div css={{ display: 'flex' }}>
+          {extraOptions.length > 0 && isRangePicker && (
+            <div css={optionsWrapperStyle()} data-testid="optionsWrapperStyle">
+              {extraOptions.map((option) => (
+                <div
+                  key={option.value}
+                  css={optionStyle({ isSelected: selectedOption === option.value })}
+                  onClick={() => setSelectedOption(option.value)}
+                >
+                  {option.label}
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      )}
-      <div css={buttonsMonthsWrapperStyle({ isRangePicker })}>
-        <div css={monthsWrapperStyle({ isRangePicker })}>
-          <MonthWrapper
-            date={date}
-            onDaySelect={onDaySelect}
-            selectedDays={selectedDays}
-            setDate={setDate}
-            handleArrow={handleArrow}
-            showedArrows={isRangePicker ? 'left' : 'both'}
-            disabledDates={disabledDates}
-            isRangePicker={isRangePicker}
-          />
-
-          {isRangePicker && (
+          )}
+          <div css={monthsWrapperStyle()}>
             <MonthWrapper
-              date={date2.month(date2.month() + 1)}
+              date={date}
               onDaySelect={onDaySelect}
               selectedDays={selectedDays}
-              setDate={setDate2}
+              setDate={setDate}
               handleArrow={handleArrow}
-              showedArrows={isRangePicker ? 'right' : 'both'}
+              showedArrows={isRangePicker ? 'left' : 'both'}
               disabledDates={disabledDates}
               isRangePicker={isRangePicker}
             />
-          )}
+
+            {isRangePicker && (
+              <MonthWrapper
+                date={date2.month(date2.month() + 1)}
+                onDaySelect={onDaySelect}
+                selectedDays={selectedDays}
+                setDate={setDate2}
+                handleArrow={handleArrow}
+                showedArrows={isRangePicker ? 'right' : 'both'}
+                disabledDates={disabledDates}
+                isRangePicker={isRangePicker}
+              />
+            )}
+          </div>
         </div>
 
         <div css={buttonsWrapperStyle()}>
-          <Button onClick={onCancel} dataTestId={'cancel'}>
-            Cancel
+          <Button onClick={onCancel} dataTestId={'cancel'} type="tertiary">
+            {CLEAR_ALL}
           </Button>
           <Button
             onClick={onApply}
             dataTestId={'apply'}
             isDisabled={Boolean(!selectedDays.from || !selectedDays.to)}
           >
-            Apply
+            {APPLY_DATES}
           </Button>
         </div>
       </div>

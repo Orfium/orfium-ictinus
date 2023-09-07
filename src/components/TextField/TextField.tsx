@@ -63,6 +63,7 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
     onMultiValueDelete,
     onMultiValueClearAll = () => null,
     mask,
+    sx,
     ...rest
   } = props;
   const id = useRef(userDefinedId || generateUniqueID('textfield_')).current;
@@ -80,6 +81,7 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
     status,
     isDisabled,
     ref,
+    sx,
   });
 
   const inputProps = {

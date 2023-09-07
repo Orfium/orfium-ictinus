@@ -1,3 +1,4 @@
+import { fireEvent, screen } from '@testing-library/react';
 import dayjs, { Dayjs } from 'utils/date';
 
 import { Range } from './OverlayComponent/OverlayComponent';
@@ -14,4 +15,9 @@ export const initDates = (value: { from?: Date; to?: Date }): Range => {
     from: value.from ? dayjs(value.from) : undefined,
     to: value.to ? dayjs(value.to) : undefined,
   };
+};
+
+export const openDatePicker = async () => {
+  const calendarButton = screen.getByTestId('calendar_button');
+  fireEvent.click(calendarButton);
 };

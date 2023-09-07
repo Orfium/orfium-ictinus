@@ -1,4 +1,3 @@
-import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
 import React from 'react';
 import { Dayjs } from 'utils/date';
 
@@ -28,8 +27,6 @@ const Day: React.FC<DayProps> = ({
   isFirst = false,
   isDisabled = false,
 }) => {
-  const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
-  const calculatedColor = calculateColorBetweenColorAndType('', 'primary');
   const date = React.useMemo(
     () => day && currentDay.month(month).date(day).year(year),
     [year, day, month]
@@ -58,7 +55,6 @@ const Day: React.FC<DayProps> = ({
         css={dayWrapperStyle({
           isSelected,
           isBetween,
-          calculatedColor,
           isLast,
           isFirst,
           isToday,
@@ -69,7 +65,6 @@ const Day: React.FC<DayProps> = ({
           css={dayStyle({
             isSelected,
             isBetween,
-            calculatedColor,
             isLast,
             isFirst,
             isToday,

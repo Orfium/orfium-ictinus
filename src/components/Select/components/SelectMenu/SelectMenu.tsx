@@ -1,3 +1,4 @@
+import { CSSObject } from '@emotion/react';
 import useCombinedRefs from 'hooks/useCombinedRefs';
 import { flatMap, head } from 'lodash';
 import uniqueId from 'lodash/uniqueId';
@@ -18,6 +19,7 @@ export type SelectMenuProps = {
   isVirtualized?: boolean;
   searchTerm?: string;
   hasSelectAllOption?: boolean;
+  sx?: CSSObject;
 } & Pick<TextInputBaseProps, 'status'>;
 
 const SelectMenu = forwardRef<HTMLUListElement, SelectMenuProps>((props, ref) => {

@@ -4,3 +4,5 @@ export const SELECT_MIN_WIDTH = 150;
 
 export const MULTI_MIN_WIDTH = 240;
 export const TEXT_AREA_MIN_WIDTH = 220;
+
+export const getDatePickerMinWidth = (isRangePicker: boolean) => (isRangePicker ? 250 : 160);

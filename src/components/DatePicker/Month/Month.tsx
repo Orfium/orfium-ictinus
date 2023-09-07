@@ -11,7 +11,7 @@ import {
   calculateSelectedDay,
   calculateSelectedDayPosition,
 } from './Month.utils';
-import { DisabledDates } from '../DatePicker';
+import { DisabledDates } from '../DatePicker.types';
 import Day from '../Day/Day';
 import { Range } from '../OverlayComponent/OverlayComponent';
 import { currentDay } from '../utils';

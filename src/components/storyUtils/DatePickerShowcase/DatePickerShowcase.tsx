@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 
 import Button from '../../Button';
-import DatePicker, { DateRange } from '../../DatePicker';
+import DatePicker from '../../DatePicker';
 import { currentDay } from '../../DatePicker/utils';
+import { DateRange } from 'components/DatePicker/DatePicker.types';
 
 const DatePickerShowcase: React.FC = () => {
   const [date, setDate] = useState<DateRange>({
