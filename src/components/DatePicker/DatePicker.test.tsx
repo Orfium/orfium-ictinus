@@ -113,7 +113,7 @@ describe('DatePicker', () => {
       />
     );
     const calendarButton = getByTestId('calendar_button');
-    const input = getByPlaceholderText('Select date') as HTMLInputElement;
+    const input = getByPlaceholderText('Select Date') as HTMLInputElement;
     // trigger overlay
     fireEvent.click(calendarButton);
 
@@ -125,8 +125,7 @@ describe('DatePicker', () => {
     await waitFor(() => expect(applyButton).not.toBeInTheDocument());
   });
 
-  /** @TODO modify or remove this test if not needed */
-  it.skip('should handle clearing the selected date', async () => {
+  it('should handle clearing the selected date', async () => {
     const onChange = jest.fn();
     const { getByPlaceholderText } = render(
       <DatePicker
@@ -139,7 +138,7 @@ describe('DatePicker', () => {
         onChange={onChange}
       />
     );
-    const input = getByPlaceholderText('Select date') as HTMLInputElement;
+    const input = getByPlaceholderText('Select Date') as HTMLInputElement;
     fireEvent.keyDown(input, { key: 'Backspace', keyCode: 8 });
 
     expect(onChange).toBeCalledTimes(1);
@@ -149,8 +148,7 @@ describe('DatePicker', () => {
     });
   });
 
-  /** @TODO modify or remove this test if not needed */
-  it.skip('should handle clearing the selected date in range pickger', async () => {
+  it('should handle clearing the selected date in range pickger', async () => {
     const onChange = jest.fn();
     const { getByPlaceholderText } = render(
       <DatePicker
@@ -164,7 +162,7 @@ describe('DatePicker', () => {
         onChange={onChange}
       />
     );
-    const input = getByPlaceholderText('Date (start) - Date (end)') as HTMLInputElement;
+    const input = getByPlaceholderText('Enter Date Range') as HTMLInputElement;
     fireEvent.keyDown(input, { key: 'Backspace', keyCode: 8 });
 
     expect(onChange).toBeCalledTimes(1);
