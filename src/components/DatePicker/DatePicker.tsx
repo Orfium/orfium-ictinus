@@ -2,6 +2,7 @@ import React, { useCallback, memo, useMemo, useState } from 'react';
 import isEqual from 'react-fast-compare';
 import { Dayjs } from 'utils/date';
 
+import { EMPTY_STATE } from './constants';
 import { datePickerStyles } from './DatePicker.style';
 import { DatePickerProps } from './DatePicker.types';
 import DatePickInput from './DatePickInput';
@@ -70,7 +71,7 @@ const DatePicker: React.FC<DatePickerProps & TestProps> = ({
       if (!isRangePicker) {
         return setRange((oldState) => {
           if (oldState.from && oldState.to && day.isBetween(oldState.from, oldState.to)) {
-            return { from: undefined, to: undefined };
+            return EMPTY_STATE;
           }
 
           return { from: startOfDay, to: endOfDay };
@@ -97,6 +98,12 @@ const DatePicker: React.FC<DatePickerProps & TestProps> = ({
     setIsOpen(false);
   }, []);
 
+  const onClearAll = useCallback(() => {
+    setRange(EMPTY_STATE);
+    onChange(EMPTY_STATE);
+    setIsOpen(false);
+  }, [onChange]);
+
   const handleIconClick = useCallback(() => {
     setIsOpen(true);
   }, []);
@@ -109,8 +116,9 @@ const DatePicker: React.FC<DatePickerProps & TestProps> = ({
 
       if (filterConfig?.filterType) {
         setIsOpen(false);
+        setRange(EMPTY_STATE);
 
-        return onChange({ to: undefined, from: undefined });
+        return onChange(EMPTY_STATE);
       }
 
       if (e.keyCode === 27) {
@@ -128,8 +136,8 @@ const DatePicker: React.FC<DatePickerProps & TestProps> = ({
           }
         }
 
-        setRange({ from: undefined, to: undefined });
-        onChange({ to: undefined, from: undefined });
+        setRange(EMPTY_STATE);
+        onChange(EMPTY_STATE);
       }
     },
     [isClearable, filterConfig?.filterType, onChange, value, isRangePicker]
@@ -166,7 +174,7 @@ const DatePicker: React.FC<DatePickerProps & TestProps> = ({
             onDaySelect={setRangePick}
             selectedDays={range}
             disabledDates={disableDates}
-            onCancel={onCancel}
+            onClearAll={onClearAll}
             onApply={onApply}
           />
         </div>

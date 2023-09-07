@@ -9,6 +9,7 @@ import { TestProps } from '../../../utils/types';
 import FilterBase from '../../Filter/components/FilterBase';
 import { FilterType, StyleType } from '../../Filter/types';
 import TextField, { TextFieldProps } from '../../TextField/TextField';
+import { DATE_PICKER_LABEL, DATE_RANGE_PICKER_LABEL } from '../constants';
 import { DateFormatType } from '../DatePicker.types';
 import { Range } from '../OverlayComponent/OverlayComponent';
 import Icon from 'components/Icon';
@@ -92,6 +93,14 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
       [handleIconClick, tokens]
     );
 
+    const getLabel = useMemo(() => {
+      if (inputProps?.label.length) {
+        return inputProps.label;
+      }
+
+      return isRangePicker ? DATE_RANGE_PICKER_LABEL : DATE_PICKER_LABEL;
+    }, [inputProps?.label, isRangePicker]);
+
     const renderBase = () => {
       if (filterType) {
         return (
@@ -120,10 +129,10 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
           <TextField
             ref={ref}
             {...inputProps}
+            label={getLabel}
             onKeyDown={handleClear}
             dataTestId={dataTestId}
             onChange={ON_CHANGE_MOCK}
-            label="Enter Date Range"
             value={selectedDay.from ? `${formattedFrom} - ${formattedTo}` : ''}
             suffix={renderIconButton}
             sx={sx}
@@ -135,10 +144,10 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
         <TextField
           ref={ref}
           {...inputProps}
+          label={getLabel}
           onKeyDown={handleClear}
           dataTestId={dataTestId}
           onChange={ON_CHANGE_MOCK}
-          label="Select date"
           value={selectedDay.to ? formattedFrom : ''}
           suffix={renderIconButton}
           sx={sx}
