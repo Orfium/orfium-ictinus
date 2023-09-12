@@ -18,7 +18,7 @@ import { currentDay } from '../utils';
 
 export type OverlayComponentProps = {
   selectedOption?: string;
-  onCancel?: () => void;
+  onClearAll?: () => void;
   onApply?: () => void;
   setSelectedOption?: (x: string) => void;
   isRangePicker?: boolean;
@@ -40,7 +40,7 @@ const OverlayComponent: React.FC<OverlayComponentProps> = ({
   onDaySelect,
   selectedDays,
   disabledDates,
-  onCancel = () => {},
+  onClearAll = () => {},
   onApply = () => {},
 }) => {
   const [date, setDate] = useState(currentDay);
@@ -99,7 +99,7 @@ const OverlayComponent: React.FC<OverlayComponentProps> = ({
         </div>
 
         <div css={buttonsWrapperStyle()}>
-          <Button onClick={onCancel} dataTestId={'cancel'} type="tertiary">
+          <Button onClick={onClearAll} dataTestId={'cancel'} type="tertiary">
             {CLEAR_ALL}
           </Button>
           <Button

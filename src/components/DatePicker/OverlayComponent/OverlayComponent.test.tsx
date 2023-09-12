@@ -37,7 +37,7 @@ describe('OverlayComponent', () => {
 
   it('should run callbacks correctly on buttons Cancel, Apply', async () => {
     const onApply = jest.fn();
-    const onCancel = jest.fn();
+    const onClearAll = jest.fn();
     const date = mockDate.add(1, 'day');
 
     const { findByText } = render(
@@ -48,7 +48,7 @@ describe('OverlayComponent', () => {
         }}
         onDaySelect={() => {}}
         onApply={onApply}
-        onCancel={onCancel}
+        onClearAll={onClearAll}
         extraOptions={CALENDAR_DEFAULT_OPTIONS}
       />
     );
@@ -59,7 +59,7 @@ describe('OverlayComponent', () => {
     fireEvent.click(cancelBtn);
 
     expect(onApply).toHaveBeenCalledTimes(1);
-    expect(onCancel).toHaveBeenCalledTimes(1);
+    expect(onClearAll).toHaveBeenCalledTimes(1);
   });
 
   it('should run onDaySelect correctly', async () => {
