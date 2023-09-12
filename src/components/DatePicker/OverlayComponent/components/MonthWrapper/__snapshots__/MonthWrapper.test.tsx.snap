@@ -251,143 +251,7 @@ exports[`MonthWrapper should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #212332;
-  width: 2.25rem;
-  opacity: 1;
-}
-
-.emotion-27 {
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-  border: 0.0625rem solid rgba(84,94,255,0);
-  width: 2.25rem;
-  height: 2.25rem;
-  color: #212332;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  background: transparent;
-}
-
-.emotion-27:hover {
-  border-radius: 6.25rem;
-  background: #F5F5FF;
-}
-
-.emotion-28 {
-  vertical-align: middle;
-  text-align: center;
-  cursor: pointer;
-  position: relative;
-  color: #212332;
-  width: 2.25rem;
-  font-weight: bold;
-  opacity: 1;
-}
-
-.emotion-29 {
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-  border: 0.0625rem solid #175bf5;
-  border-radius: 6.25rem;
-  width: 2.25rem;
-  height: 2.25rem;
-  color: #212332;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  background: transparent;
-}
-
-.emotion-29:hover {
-  border-radius: 6.25rem;
-  background: #F5F5FF;
-}
-
-.emotion-30 {
-  vertical-align: middle;
-  text-align: center;
-  cursor: pointer;
-  position: relative;
-  color: #ffffff;
-  width: 2.25rem;
-  opacity: 1;
-  background: #175bf5;
-  border-bottom-left-radius: 100%;
-  border-top-left-radius: 100%;
-}
-
-.emotion-30:after {
-  z-index: -1;
-  content: ' ';
-  height: 100%;
-  width: 50%;
-  position: absolute;
-  top: 0;
-  left: initial;
-  right: 0;
-  border-bottom-right-radius: false;
-  border-top-right-radius: false;
-  border-bottom-left-radius: 100%;
-  border-top-left-radius: 100%;
-}
-
-.emotion-31 {
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-  border: 0 solid rgba(84,94,255,0);
-  border-radius: 6.25rem;
-  width: 2.25rem;
-  height: 2.25rem;
-  color: #ffffff;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  background: #175bf5;
-}
-
-.emotion-31:hover {
-  border-radius: 6.25rem;
-  background: false;
+  background: #ffffff;
 }
 
 .emotion-32 {
@@ -398,7 +262,6 @@ exports[`MonthWrapper should render correctly 1`] = `
   color: #212332;
   width: 2.25rem;
   opacity: 1;
-  background: #F5F5FF;
 }
 
 .emotion-33 {
@@ -429,15 +292,152 @@ exports[`MonthWrapper should render correctly 1`] = `
 
 .emotion-33:hover {
   border-radius: 6.25rem;
-  background: transparent;
+  background: #F5F5FF;
 }
 
-.emotion-84 {
+.emotion-36 {
   vertical-align: middle;
   text-align: center;
   cursor: pointer;
   position: relative;
-  background: #ffffff;
+  color: #212332;
+  width: 2.25rem;
+  font-weight: bold;
+  opacity: 1;
+}
+
+.emotion-37 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  border: 0.0625rem solid #175bf5;
+  border-radius: 6.25rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  color: #212332;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.emotion-37:hover {
+  border-radius: 6.25rem;
+  background: #F5F5FF;
+}
+
+.emotion-38 {
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  color: #ffffff;
+  width: 2.25rem;
+  opacity: 1;
+  background: #175bf5;
+  border-bottom-left-radius: 100%;
+  border-top-left-radius: 100%;
+}
+
+.emotion-38:after {
+  z-index: -1;
+  content: ' ';
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  left: initial;
+  right: 0;
+  border-bottom-right-radius: false;
+  border-top-right-radius: false;
+  border-bottom-left-radius: 100%;
+  border-top-left-radius: 100%;
+}
+
+.emotion-39 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  border: 0 solid rgba(84,94,255,0);
+  border-radius: 6.25rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  color: #ffffff;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background: #175bf5;
+}
+
+.emotion-39:hover {
+  border-radius: 6.25rem;
+  background: false;
+}
+
+.emotion-40 {
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  color: #212332;
+  width: 2.25rem;
+  opacity: 1;
+  background: #F5F5FF;
+}
+
+.emotion-41 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  border: 0.0625rem solid rgba(84,94,255,0);
+  width: 2.25rem;
+  height: 2.25rem;
+  color: #212332;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.emotion-41:hover {
+  border-radius: 6.25rem;
+  background: transparent;
 }
 
 .emotion-0 {
@@ -690,143 +690,7 @@ exports[`MonthWrapper should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #212332;
-  width: 2.25rem;
-  opacity: 1;
-}
-
-.emotion-27 {
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-  border: 0.0625rem solid rgba(84,94,255,0);
-  width: 2.25rem;
-  height: 2.25rem;
-  color: #212332;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  background: transparent;
-}
-
-.emotion-27:hover {
-  border-radius: 6.25rem;
-  background: #F5F5FF;
-}
-
-.emotion-28 {
-  vertical-align: middle;
-  text-align: center;
-  cursor: pointer;
-  position: relative;
-  color: #212332;
-  width: 2.25rem;
-  font-weight: bold;
-  opacity: 1;
-}
-
-.emotion-29 {
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-  border: 0.0625rem solid #175bf5;
-  border-radius: 6.25rem;
-  width: 2.25rem;
-  height: 2.25rem;
-  color: #212332;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  background: transparent;
-}
-
-.emotion-29:hover {
-  border-radius: 6.25rem;
-  background: #F5F5FF;
-}
-
-.emotion-30 {
-  vertical-align: middle;
-  text-align: center;
-  cursor: pointer;
-  position: relative;
-  color: #ffffff;
-  width: 2.25rem;
-  opacity: 1;
-  background: #175bf5;
-  border-bottom-left-radius: 100%;
-  border-top-left-radius: 100%;
-}
-
-.emotion-30:after {
-  z-index: -1;
-  content: ' ';
-  height: 100%;
-  width: 50%;
-  position: absolute;
-  top: 0;
-  left: initial;
-  right: 0;
-  border-bottom-right-radius: false;
-  border-top-right-radius: false;
-  border-bottom-left-radius: 100%;
-  border-top-left-radius: 100%;
-}
-
-.emotion-31 {
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-  border: 0 solid rgba(84,94,255,0);
-  border-radius: 6.25rem;
-  width: 2.25rem;
-  height: 2.25rem;
-  color: #ffffff;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  background: #175bf5;
-}
-
-.emotion-31:hover {
-  border-radius: 6.25rem;
-  background: false;
+  background: #ffffff;
 }
 
 .emotion-32 {
@@ -837,7 +701,6 @@ exports[`MonthWrapper should render correctly 1`] = `
   color: #212332;
   width: 2.25rem;
   opacity: 1;
-  background: #F5F5FF;
 }
 
 .emotion-33 {
@@ -868,15 +731,152 @@ exports[`MonthWrapper should render correctly 1`] = `
 
 .emotion-33:hover {
   border-radius: 6.25rem;
-  background: transparent;
+  background: #F5F5FF;
 }
 
-.emotion-84 {
+.emotion-36 {
   vertical-align: middle;
   text-align: center;
   cursor: pointer;
   position: relative;
-  background: #ffffff;
+  color: #212332;
+  width: 2.25rem;
+  font-weight: bold;
+  opacity: 1;
+}
+
+.emotion-37 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  border: 0.0625rem solid #175bf5;
+  border-radius: 6.25rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  color: #212332;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.emotion-37:hover {
+  border-radius: 6.25rem;
+  background: #F5F5FF;
+}
+
+.emotion-38 {
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  color: #ffffff;
+  width: 2.25rem;
+  opacity: 1;
+  background: #175bf5;
+  border-bottom-left-radius: 100%;
+  border-top-left-radius: 100%;
+}
+
+.emotion-38:after {
+  z-index: -1;
+  content: ' ';
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  left: initial;
+  right: 0;
+  border-bottom-right-radius: false;
+  border-top-right-radius: false;
+  border-bottom-left-radius: 100%;
+  border-top-left-radius: 100%;
+}
+
+.emotion-39 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  border: 0 solid rgba(84,94,255,0);
+  border-radius: 6.25rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  color: #ffffff;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background: #175bf5;
+}
+
+.emotion-39:hover {
+  border-radius: 6.25rem;
+  background: false;
+}
+
+.emotion-40 {
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  color: #212332;
+  width: 2.25rem;
+  opacity: 1;
+  background: #F5F5FF;
+}
+
+.emotion-41 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  border: 0.0625rem solid rgba(84,94,255,0);
+  width: 2.25rem;
+  height: 2.25rem;
+  color: #212332;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.emotion-41:hover {
+  border-radius: 6.25rem;
+  background: transparent;
 }
 
 <div>
@@ -1003,13 +1003,46 @@ exports[`MonthWrapper should render correctly 1`] = `
       <tbody>
         <tr>
           <td
+            class="emotion-26"
+          />
+          <td
+            class="emotion-26"
+          />
+          <td
+            class="emotion-26"
+          />
+          <td
+            class="emotion-26"
+          />
+          <td
+            class="emotion-26"
+          />
+          <td
+            class="emotion-26"
+          />
+          <td
             style="padding: 0px;"
           >
             <div
-              class="emotion-26"
+              class="emotion-32"
             >
               <div
-                class="emotion-27"
+                class="emotion-33"
+              >
+                1
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td
+            style="padding: 0px;"
+          >
+            <div
+              class="emotion-32"
+            >
+              <div
+                class="emotion-33"
               >
                 2
               </div>
@@ -1019,10 +1052,10 @@ exports[`MonthWrapper should render correctly 1`] = `
             style="padding: 0px;"
           >
             <div
-              class="emotion-28"
+              class="emotion-36"
             >
               <div
-                class="emotion-29"
+                class="emotion-37"
               >
                 3
               </div>
@@ -1032,10 +1065,10 @@ exports[`MonthWrapper should render correctly 1`] = `
             style="padding: 0px;"
           >
             <div
-              class="emotion-30"
+              class="emotion-38"
             >
               <div
-                class="emotion-31"
+                class="emotion-39"
               >
                 4
               </div>
@@ -1045,10 +1078,10 @@ exports[`MonthWrapper should render correctly 1`] = `
             style="padding: 0px;"
           >
             <div
-              class="emotion-32"
+              class="emotion-40"
             >
               <div
-                class="emotion-33"
+                class="emotion-41"
               >
                 5
               </div>
@@ -1058,10 +1091,10 @@ exports[`MonthWrapper should render correctly 1`] = `
             style="padding: 0px;"
           >
             <div
-              class="emotion-32"
+              class="emotion-40"
             >
               <div
-                class="emotion-33"
+                class="emotion-41"
               >
                 6
               </div>
@@ -1071,10 +1104,10 @@ exports[`MonthWrapper should render correctly 1`] = `
             style="padding: 0px;"
           >
             <div
-              class="emotion-32"
+              class="emotion-40"
             >
               <div
-                class="emotion-33"
+                class="emotion-41"
               >
                 7
               </div>
@@ -1084,10 +1117,10 @@ exports[`MonthWrapper should render correctly 1`] = `
             style="padding: 0px;"
           >
             <div
-              class="emotion-32"
+              class="emotion-40"
             >
               <div
-                class="emotion-33"
+                class="emotion-41"
               >
                 8
               </div>
@@ -1099,10 +1132,10 @@ exports[`MonthWrapper should render correctly 1`] = `
             style="padding: 0px;"
           >
             <div
-              class="emotion-32"
+              class="emotion-40"
             >
               <div
-                class="emotion-33"
+                class="emotion-41"
               >
                 9
               </div>
@@ -1112,10 +1145,10 @@ exports[`MonthWrapper should render correctly 1`] = `
             style="padding: 0px;"
           >
             <div
-              class="emotion-32"
+              class="emotion-40"
             >
               <div
-                class="emotion-33"
+                class="emotion-41"
               >
                 10
               </div>
@@ -1125,10 +1158,10 @@ exports[`MonthWrapper should render correctly 1`] = `
             style="padding: 0px;"
           >
             <div
-              class="emotion-32"
+              class="emotion-40"
             >
               <div
-                class="emotion-33"
+                class="emotion-41"
               >
                 11
               </div>
@@ -1138,10 +1171,10 @@ exports[`MonthWrapper should render correctly 1`] = `
             style="padding: 0px;"
           >
             <div
-              class="emotion-32"
+              class="emotion-40"
             >
               <div
-                class="emotion-33"
+                class="emotion-41"
               >
                 12
               </div>
@@ -1151,10 +1184,10 @@ exports[`MonthWrapper should render correctly 1`] = `
             style="padding: 0px;"
           >
             <div
-              class="emotion-32"
+              class="emotion-40"
             >
               <div
-                class="emotion-33"
+                class="emotion-41"
               >
                 13
               </div>
@@ -1164,10 +1197,10 @@ exports[`MonthWrapper should render correctly 1`] = `
             style="padding: 0px;"
           >
             <div
-              class="emotion-32"
+              class="emotion-40"
             >
               <div
-                class="emotion-33"
+                class="emotion-41"
               >
                 14
               </div>
@@ -1177,10 +1210,10 @@ exports[`MonthWrapper should render correctly 1`] = `
             style="padding: 0px;"
           >
             <div
-              class="emotion-32"
+              class="emotion-40"
             >
               <div
-                class="emotion-33"
+                class="emotion-41"
               >
                 15
               </div>
@@ -1192,10 +1225,10 @@ exports[`MonthWrapper should render correctly 1`] = `
             style="padding: 0px;"
           >
             <div
-              class="emotion-32"
+              class="emotion-40"
             >
               <div
-                class="emotion-33"
+                class="emotion-41"
               >
                 16
               </div>
@@ -1205,10 +1238,10 @@ exports[`MonthWrapper should render correctly 1`] = `
             style="padding: 0px;"
           >
             <div
-              class="emotion-32"
+              class="emotion-40"
             >
               <div
-                class="emotion-33"
+                class="emotion-41"
               >
                 17
               </div>
@@ -1218,10 +1251,10 @@ exports[`MonthWrapper should render correctly 1`] = `
             style="padding: 0px;"
           >
             <div
-              class="emotion-32"
+              class="emotion-40"
             >
               <div
-                class="emotion-33"
+                class="emotion-41"
               >
                 18
               </div>
@@ -1231,10 +1264,10 @@ exports[`MonthWrapper should render correctly 1`] = `
             style="padding: 0px;"
           >
             <div
-              class="emotion-32"
+              class="emotion-40"
             >
               <div
-                class="emotion-33"
+                class="emotion-41"
               >
                 19
               </div>
@@ -1244,10 +1277,10 @@ exports[`MonthWrapper should render correctly 1`] = `
             style="padding: 0px;"
           >
             <div
-              class="emotion-32"
+              class="emotion-40"
             >
               <div
-                class="emotion-33"
+                class="emotion-41"
               >
                 20
               </div>
@@ -1257,10 +1290,10 @@ exports[`MonthWrapper should render correctly 1`] = `
             style="padding: 0px;"
           >
             <div
-              class="emotion-32"
+              class="emotion-40"
             >
               <div
-                class="emotion-33"
+                class="emotion-41"
               >
                 21
               </div>
@@ -1270,10 +1303,10 @@ exports[`MonthWrapper should render correctly 1`] = `
             style="padding: 0px;"
           >
             <div
-              class="emotion-32"
+              class="emotion-40"
             >
               <div
-                class="emotion-33"
+                class="emotion-41"
               >
                 22
               </div>
@@ -1285,10 +1318,10 @@ exports[`MonthWrapper should render correctly 1`] = `
             style="padding: 0px;"
           >
             <div
-              class="emotion-32"
+              class="emotion-40"
             >
               <div
-                class="emotion-33"
+                class="emotion-41"
               >
                 23
               </div>
@@ -1298,10 +1331,10 @@ exports[`MonthWrapper should render correctly 1`] = `
             style="padding: 0px;"
           >
             <div
-              class="emotion-32"
+              class="emotion-40"
             >
               <div
-                class="emotion-33"
+                class="emotion-41"
               >
                 24
               </div>
@@ -1311,10 +1344,10 @@ exports[`MonthWrapper should render correctly 1`] = `
             style="padding: 0px;"
           >
             <div
-              class="emotion-32"
+              class="emotion-40"
             >
               <div
-                class="emotion-33"
+                class="emotion-41"
               >
                 25
               </div>
@@ -1324,10 +1357,10 @@ exports[`MonthWrapper should render correctly 1`] = `
             style="padding: 0px;"
           >
             <div
-              class="emotion-32"
+              class="emotion-40"
             >
               <div
-                class="emotion-33"
+                class="emotion-41"
               >
                 26
               </div>
@@ -1337,10 +1370,10 @@ exports[`MonthWrapper should render correctly 1`] = `
             style="padding: 0px;"
           >
             <div
-              class="emotion-32"
+              class="emotion-40"
             >
               <div
-                class="emotion-33"
+                class="emotion-41"
               >
                 27
               </div>
@@ -1350,10 +1383,10 @@ exports[`MonthWrapper should render correctly 1`] = `
             style="padding: 0px;"
           >
             <div
-              class="emotion-32"
+              class="emotion-40"
             >
               <div
-                class="emotion-33"
+                class="emotion-41"
               >
                 28
               </div>
@@ -1363,10 +1396,10 @@ exports[`MonthWrapper should render correctly 1`] = `
             style="padding: 0px;"
           >
             <div
-              class="emotion-32"
+              class="emotion-40"
             >
               <div
-                class="emotion-33"
+                class="emotion-41"
               >
                 29
               </div>
@@ -1378,32 +1411,32 @@ exports[`MonthWrapper should render correctly 1`] = `
             style="padding: 0px;"
           >
             <div
-              class="emotion-32"
+              class="emotion-40"
             >
               <div
-                class="emotion-33"
+                class="emotion-41"
               >
                 30
               </div>
             </div>
           </td>
           <td
-            class="emotion-84"
+            class="emotion-26"
           />
           <td
-            class="emotion-84"
+            class="emotion-26"
           />
           <td
-            class="emotion-84"
+            class="emotion-26"
           />
           <td
-            class="emotion-84"
+            class="emotion-26"
           />
           <td
-            class="emotion-84"
+            class="emotion-26"
           />
           <td
-            class="emotion-84"
+            class="emotion-26"
           />
         </tr>
       </tbody>
