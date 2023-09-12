@@ -15,17 +15,10 @@ import {
   calculateDisabledDays,
   calculateSelectedDay,
   calculateSelectedDayPosition,
+  getNumWeeksForMonth,
 } from './Month.utils';
 
 dayjs.extend(isBetween);
-
-function getNumWeeksForMonth(year: number, month: number) {
-  const date = new Date(year, month - 1, 1);
-  const day = date.getDay();
-  const numDaysInMonth = new Date(year, month, 0).getDate();
-
-  return Math.ceil((numDaysInMonth + day) / 7);
-}
 
 const DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thurdsday', 'Friday', 'Saturday', 'Sunday'];
 
@@ -41,12 +34,9 @@ export type Props = {
 
 const Month: React.FC<Props> = ({ year, month, onDaySelect, selectedDays, disabledDates }) => {
   const weeksWithDays = React.useMemo<WeekRow[]>(() => {
-    const monthDate = currentDay
-      .month(month)
-      .year(year)
-      .date(1);
+    const monthDate = currentDay.month(month).year(year).date(1);
     const daysOfMonth = monthDate.daysInMonth();
-    const startDay = monthDate.day();
+    const startDay = monthDate.day() ? monthDate.day() : 7;
     const daysPerWeekCount = 7;
     const weeksCount = getNumWeeksForMonth(year, month);
     const daysForThisMonthsWeeks = Array(weeksCount * daysPerWeekCount).fill(null);
@@ -70,7 +60,7 @@ const Month: React.FC<Props> = ({ year, month, onDaySelect, selectedDays, disabl
   return (
     <React.Fragment>
       <div css={weekDaysWrapperStyle()}>
-        {DAYS.map(day => (
+        {DAYS.map((day) => (
           <div key={day} css={weekDayStyle()}>
             {day.substr(0, 2)}
           </div>

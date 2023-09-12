@@ -221,126 +221,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #0f0f17;
-  width: 2.5rem;
-  padding: 0 0.25rem;
-  opacity: 1;
-}
-
-.emotion-26 {
-  border: 0.0625rem solid transparent;
-  width: 2.4375rem;
-  height: 2.4375rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
   background: transparent;
-}
-
-.emotion-26:hover {
-  border-radius: 100%;
-  background: #f6f7ff;
-}
-
-.emotion-27 {
-  vertical-align: middle;
-  text-align: center;
-  cursor: pointer;
-  position: relative;
-  color: #0f0f17;
-  width: 2.5rem;
-  padding: 0 0.25rem;
-  font-weight: bold;
-  opacity: 1;
-}
-
-.emotion-28 {
-  border: 0.0625rem solid #b0b8ff;
-  border-radius: 100%;
-  width: 2.4375rem;
-  height: 2.4375rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  background: transparent;
-}
-
-.emotion-28:hover {
-  border-radius: 100%;
-  background: #f6f7ff;
-}
-
-.emotion-29 {
-  vertical-align: middle;
-  text-align: center;
-  cursor: pointer;
-  position: relative;
-  color: white;
-  width: 2.5rem;
-  padding: 0 0.25rem;
-  opacity: 1;
-  background: transparent;
-  border-bottom-left-radius: 100%;
-  border-top-left-radius: 100%;
-}
-
-.emotion-29:after {
-  z-index: -1;
-  content: ' ';
-  height: 100%;
-  width: 50%;
-  position: absolute;
-  top: 0;
-  background: #e7eefe;
-  left: initial;
-  right: 0;
-  border-bottom-right-radius: false;
-  border-top-right-radius: false;
-  border-bottom-left-radius: 100%;
-  border-top-left-radius: 100%;
-}
-
-.emotion-30 {
-  border: 0.0625rem solid transparent;
-  border-radius: 100%;
-  width: 2.4375rem;
-  height: 2.4375rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  background: #175BF5;
-}
-
-.emotion-30:hover {
-  border-radius: 100%;
-  background: false;
 }
 
 .emotion-31 {
@@ -352,7 +233,6 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   width: 2.5rem;
   padding: 0 0.25rem;
   opacity: 1;
-  background: #e7eefe;
 }
 
 .emotion-32 {
@@ -376,18 +256,138 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
 
 .emotion-32:hover {
   border-radius: 100%;
-  background: #d0defd;
+  background: #f6f7ff;
 }
 
-.emotion-83 {
+.emotion-35 {
   vertical-align: middle;
   text-align: center;
   cursor: pointer;
   position: relative;
+  color: #0f0f17;
+  width: 2.5rem;
+  padding: 0 0.25rem;
+  font-weight: bold;
+  opacity: 1;
+}
+
+.emotion-36 {
+  border: 0.0625rem solid #b0b8ff;
+  border-radius: 100%;
+  width: 2.4375rem;
+  height: 2.4375rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   background: transparent;
 }
 
-.emotion-93 {
+.emotion-36:hover {
+  border-radius: 100%;
+  background: #f6f7ff;
+}
+
+.emotion-37 {
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  color: white;
+  width: 2.5rem;
+  padding: 0 0.25rem;
+  opacity: 1;
+  background: transparent;
+  border-bottom-left-radius: 100%;
+  border-top-left-radius: 100%;
+}
+
+.emotion-37:after {
+  z-index: -1;
+  content: ' ';
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  background: #e7eefe;
+  left: initial;
+  right: 0;
+  border-bottom-right-radius: false;
+  border-top-right-radius: false;
+  border-bottom-left-radius: 100%;
+  border-top-left-radius: 100%;
+}
+
+.emotion-38 {
+  border: 0.0625rem solid transparent;
+  border-radius: 100%;
+  width: 2.4375rem;
+  height: 2.4375rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background: #175BF5;
+}
+
+.emotion-38:hover {
+  border-radius: 100%;
+  background: false;
+}
+
+.emotion-39 {
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  color: #0f0f17;
+  width: 2.5rem;
+  padding: 0 0.25rem;
+  opacity: 1;
+  background: #e7eefe;
+}
+
+.emotion-40 {
+  border: 0.0625rem solid transparent;
+  width: 2.4375rem;
+  height: 2.4375rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.emotion-40:hover {
+  border-radius: 100%;
+  background: #d0defd;
+}
+
+.emotion-101 {
   cursor: pointer;
   margin: auto 0.3125rem;
   position: absolute;
@@ -400,7 +400,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   z-index: 10;
 }
 
-.emotion-138 {
+.emotion-146 {
   vertical-align: middle;
   text-align: center;
   cursor: pointer;
@@ -414,7 +414,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   border-top-right-radius: 100%;
 }
 
-.emotion-138:after {
+.emotion-146:after {
   z-index: -1;
   content: ' ';
   height: 100%;
@@ -430,7 +430,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   border-top-left-radius: false;
 }
 
-.emotion-171 {
+.emotion-179 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -443,11 +443,11 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   margin-right: 1.5rem;
 }
 
-.emotion-171>button {
+.emotion-179>button {
   margin: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.emotion-172 {
+.emotion-180 {
   font-size: 0.8125rem;
   font-weight: 500;
   color: #175BF5;
@@ -461,29 +461,29 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-172:focus-visible:not(:disabled) {
+.emotion-180:focus-visible:not(:disabled) {
   outline: #C813D5 auto 0.125rem;
 }
 
-.emotion-172:hover:not(:disabled) {
+.emotion-180:hover:not(:disabled) {
   background-color: rgba(23,91,245,0.07);
 }
 
-.emotion-172:active:not(:disabled) {
+.emotion-180:active:not(:disabled) {
   background-color: rgba(23,91,245,0.14);
 }
 
-.emotion-172:disabled {
+.emotion-180:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.emotion-172:disabled style {
+.emotion-180:disabled style {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.emotion-173 {
+.emotion-181 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -498,12 +498,12 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   justify-content: center;
 }
 
-.emotion-174 {
+.emotion-182 {
   margin-left: 0;
   margin-right: 0;
 }
 
-.emotion-175 {
+.emotion-183 {
   font-size: 0.8125rem;
   font-weight: 500;
   color: white;
@@ -517,29 +517,29 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-175:focus-visible:not(:disabled) {
+.emotion-183:focus-visible:not(:disabled) {
   outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-175:hover:not(:disabled) {
+.emotion-183:hover:not(:disabled) {
   background-color: #1451dc;
 }
 
-.emotion-175:active:not(:disabled) {
+.emotion-183:active:not(:disabled) {
   background-color: #1248c4;
 }
 
-.emotion-175:disabled {
+.emotion-183:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.emotion-175:disabled style {
+.emotion-183:disabled style {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.emotion-351 {
+.emotion-367 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -550,7 +550,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   position: relative;
 }
 
-.emotion-352 {
+.emotion-368 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -563,11 +563,11 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   z-index: 10;
 }
 
-.emotion-352>div:first-of-type {
+.emotion-368>div:first-of-type {
   margin-right: 0;
 }
 
-.emotion-358 {
+.emotion-374 {
   padding: 0;
   -webkit-align-content: center;
   -ms-flex-line-pack: center;
@@ -591,7 +591,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   position: relative;
 }
 
-.emotion-359 {
+.emotion-375 {
   margin: 0 0.5rem;
   padding: 0.5rem;
   display: -webkit-box;
@@ -607,7 +607,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   color: #0f0f17;
 }
 
-.emotion-360 {
+.emotion-376 {
   font-size: 1rem;
   font-weight: 500;
   color: black;
@@ -621,51 +621,51 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-360:focus-visible:not(:disabled) {
+.emotion-376:focus-visible:not(:disabled) {
   outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-360:hover:not(:disabled) {
+.emotion-376:hover:not(:disabled) {
   background-color: #fdfdfd;
 }
 
-.emotion-360:active:not(:disabled) {
+.emotion-376:active:not(:disabled) {
   background-color: #fdfdfd;
 }
 
-.emotion-360:disabled {
+.emotion-376:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.emotion-360:disabled style {
+.emotion-376:disabled style {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.emotion-362 {
+.emotion-378 {
   margin-left: 0;
   margin-right: 0.5rem;
 }
 
-.emotion-363 {
+.emotion-379 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
-.emotion-365 {
+.emotion-381 {
   fill: #0f0f17;
   width: 0.625rem;
   height: 0.625rem;
 }
 
-.emotion-365 path {
+.emotion-381 path {
   fill: #0f0f17;
 }
 
-.emotion-382 {
+.emotion-406 {
   vertical-align: middle;
   text-align: center;
   cursor: pointer;
@@ -681,7 +681,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   border-top-left-radius: 100%;
 }
 
-.emotion-382:after {
+.emotion-406:after {
   z-index: -1;
   content: ' ';
   height: 100%;
@@ -864,6 +864,24 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                     <tbody>
                       <tr>
                         <td
+                          className="emotion-25"
+                        />
+                        <td
+                          className="emotion-25"
+                        />
+                        <td
+                          className="emotion-25"
+                        />
+                        <td
+                          className="emotion-25"
+                        />
+                        <td
+                          className="emotion-25"
+                        />
+                        <td
+                          className="emotion-25"
+                        />
+                        <td
                           onClick={[Function]}
                           style={
                             Object {
@@ -872,10 +890,30 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
+                            >
+                              1
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          onClick={[Function]}
+                          style={
+                            Object {
+                              "padding": 0,
+                            }
+                          }
+                        >
+                          <div
+                            className="emotion-31"
+                          >
+                            <div
+                              className="emotion-32"
                             >
                               2
                             </div>
@@ -890,10 +928,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-27"
+                            className="emotion-35"
                           >
                             <div
-                              className="emotion-28"
+                              className="emotion-36"
                             >
                               3
                             </div>
@@ -908,10 +946,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-29"
+                            className="emotion-37"
                           >
                             <div
-                              className="emotion-30"
+                              className="emotion-38"
                             >
                               4
                             </div>
@@ -926,10 +964,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               5
                             </div>
@@ -944,10 +982,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               6
                             </div>
@@ -962,10 +1000,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               7
                             </div>
@@ -980,10 +1018,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               8
                             </div>
@@ -1000,10 +1038,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               9
                             </div>
@@ -1018,10 +1056,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               10
                             </div>
@@ -1036,10 +1074,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               11
                             </div>
@@ -1054,10 +1092,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               12
                             </div>
@@ -1072,10 +1110,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               13
                             </div>
@@ -1090,10 +1128,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               14
                             </div>
@@ -1108,10 +1146,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               15
                             </div>
@@ -1128,10 +1166,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               16
                             </div>
@@ -1146,10 +1184,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               17
                             </div>
@@ -1164,10 +1202,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               18
                             </div>
@@ -1182,10 +1220,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               19
                             </div>
@@ -1200,10 +1238,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               20
                             </div>
@@ -1218,10 +1256,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               21
                             </div>
@@ -1236,10 +1274,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               22
                             </div>
@@ -1256,10 +1294,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               23
                             </div>
@@ -1274,10 +1312,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               24
                             </div>
@@ -1292,10 +1330,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               25
                             </div>
@@ -1310,10 +1348,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               26
                             </div>
@@ -1328,10 +1366,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               27
                             </div>
@@ -1346,10 +1384,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               28
                             </div>
@@ -1364,10 +1402,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               29
                             </div>
@@ -1384,32 +1422,32 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               30
                             </div>
                           </div>
                         </td>
                         <td
-                          className="emotion-83"
+                          className="emotion-25"
                         />
                         <td
-                          className="emotion-83"
+                          className="emotion-25"
                         />
                         <td
-                          className="emotion-83"
+                          className="emotion-25"
                         />
                         <td
-                          className="emotion-83"
+                          className="emotion-25"
                         />
                         <td
-                          className="emotion-83"
+                          className="emotion-25"
                         />
                         <td
-                          className="emotion-83"
+                          className="emotion-25"
                         />
                       </tr>
                     </tbody>
@@ -1438,7 +1476,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                         </div>
                       </div>
                       <div
-                        className="emotion-93"
+                        className="emotion-101"
                         onClick={[Function]}
                       >
                         <span
@@ -1497,7 +1535,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                     <tbody>
                       <tr>
                         <td
-                          className="emotion-83"
+                          className="emotion-25"
                         />
                         <td
                           onClick={[Function]}
@@ -1508,10 +1546,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               1
                             </div>
@@ -1526,10 +1564,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               2
                             </div>
@@ -1544,10 +1582,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               3
                             </div>
@@ -1562,10 +1600,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               4
                             </div>
@@ -1580,10 +1618,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               5
                             </div>
@@ -1598,10 +1636,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               6
                             </div>
@@ -1618,10 +1656,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               7
                             </div>
@@ -1636,10 +1674,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               8
                             </div>
@@ -1654,10 +1692,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               9
                             </div>
@@ -1672,10 +1710,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               10
                             </div>
@@ -1690,10 +1728,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               11
                             </div>
@@ -1708,10 +1746,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               12
                             </div>
@@ -1726,10 +1764,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               13
                             </div>
@@ -1746,10 +1784,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               14
                             </div>
@@ -1764,10 +1802,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               15
                             </div>
@@ -1782,10 +1820,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               16
                             </div>
@@ -1800,10 +1838,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-138"
+                            className="emotion-146"
                           >
                             <div
-                              className="emotion-30"
+                              className="emotion-38"
                             >
                               17
                             </div>
@@ -1818,10 +1856,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               18
                             </div>
@@ -1836,10 +1874,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               19
                             </div>
@@ -1854,10 +1892,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               20
                             </div>
@@ -1874,10 +1912,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               21
                             </div>
@@ -1892,10 +1930,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               22
                             </div>
@@ -1910,10 +1948,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               23
                             </div>
@@ -1928,10 +1966,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               24
                             </div>
@@ -1946,10 +1984,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               25
                             </div>
@@ -1964,10 +2002,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               26
                             </div>
@@ -1982,10 +2020,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               27
                             </div>
@@ -2002,10 +2040,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               28
                             </div>
@@ -2020,10 +2058,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               29
                             </div>
@@ -2038,10 +2076,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               30
                             </div>
@@ -2056,23 +2094,23 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               31
                             </div>
                           </div>
                         </td>
                         <td
-                          className="emotion-83"
+                          className="emotion-25"
                         />
                         <td
-                          className="emotion-83"
+                          className="emotion-25"
                         />
                         <td
-                          className="emotion-83"
+                          className="emotion-25"
                         />
                       </tr>
                     </tbody>
@@ -2080,37 +2118,37 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                 </div>
               </div>
               <div
-                className="emotion-171"
+                className="emotion-179"
               >
                 <button
-                  className="emotion-172"
+                  className="emotion-180"
                   data-testid="button-cancel"
                   disabled={false}
                   onClick={[Function]}
                   type="button"
                 >
                   <span
-                    className="emotion-173"
+                    className="emotion-181"
                   >
                     <span
-                      className="emotion-174"
+                      className="emotion-182"
                     >
                       Cancel
                     </span>
                   </span>
                 </button>
                 <button
-                  className="emotion-175"
+                  className="emotion-183"
                   data-testid="button-apply"
                   disabled={false}
                   onClick={[Function]}
                   type="button"
                 >
                   <span
-                    className="emotion-173"
+                    className="emotion-181"
                   >
                     <span
-                      className="emotion-174"
+                      className="emotion-182"
                     >
                       Apply
                     </span>
@@ -2210,6 +2248,24 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                     <tbody>
                       <tr>
                         <td
+                          className="emotion-25"
+                        />
+                        <td
+                          className="emotion-25"
+                        />
+                        <td
+                          className="emotion-25"
+                        />
+                        <td
+                          className="emotion-25"
+                        />
+                        <td
+                          className="emotion-25"
+                        />
+                        <td
+                          className="emotion-25"
+                        />
+                        <td
                           onClick={[Function]}
                           style={
                             Object {
@@ -2218,10 +2274,30 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
+                            >
+                              1
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          onClick={[Function]}
+                          style={
+                            Object {
+                              "padding": 0,
+                            }
+                          }
+                        >
+                          <div
+                            className="emotion-31"
+                          >
+                            <div
+                              className="emotion-32"
                             >
                               2
                             </div>
@@ -2236,10 +2312,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-27"
+                            className="emotion-35"
                           >
                             <div
-                              className="emotion-28"
+                              className="emotion-36"
                             >
                               3
                             </div>
@@ -2254,10 +2330,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-29"
+                            className="emotion-37"
                           >
                             <div
-                              className="emotion-30"
+                              className="emotion-38"
                             >
                               4
                             </div>
@@ -2272,10 +2348,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               5
                             </div>
@@ -2290,10 +2366,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               6
                             </div>
@@ -2308,10 +2384,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               7
                             </div>
@@ -2326,10 +2402,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               8
                             </div>
@@ -2346,10 +2422,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               9
                             </div>
@@ -2364,10 +2440,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               10
                             </div>
@@ -2382,10 +2458,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               11
                             </div>
@@ -2400,10 +2476,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               12
                             </div>
@@ -2418,10 +2494,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               13
                             </div>
@@ -2436,10 +2512,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               14
                             </div>
@@ -2454,10 +2530,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               15
                             </div>
@@ -2474,10 +2550,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               16
                             </div>
@@ -2492,10 +2568,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               17
                             </div>
@@ -2510,10 +2586,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               18
                             </div>
@@ -2528,10 +2604,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               19
                             </div>
@@ -2546,10 +2622,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               20
                             </div>
@@ -2564,10 +2640,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               21
                             </div>
@@ -2582,10 +2658,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               22
                             </div>
@@ -2602,10 +2678,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               23
                             </div>
@@ -2620,10 +2696,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               24
                             </div>
@@ -2638,10 +2714,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               25
                             </div>
@@ -2656,10 +2732,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               26
                             </div>
@@ -2674,10 +2750,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               27
                             </div>
@@ -2692,10 +2768,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               28
                             </div>
@@ -2710,10 +2786,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               29
                             </div>
@@ -2730,32 +2806,32 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               30
                             </div>
                           </div>
                         </td>
                         <td
-                          className="emotion-83"
+                          className="emotion-25"
                         />
                         <td
-                          className="emotion-83"
+                          className="emotion-25"
                         />
                         <td
-                          className="emotion-83"
+                          className="emotion-25"
                         />
                         <td
-                          className="emotion-83"
+                          className="emotion-25"
                         />
                         <td
-                          className="emotion-83"
+                          className="emotion-25"
                         />
                         <td
-                          className="emotion-83"
+                          className="emotion-25"
                         />
                       </tr>
                     </tbody>
@@ -2784,7 +2860,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                         </div>
                       </div>
                       <div
-                        className="emotion-93"
+                        className="emotion-101"
                         onClick={[Function]}
                       >
                         <span
@@ -2843,7 +2919,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                     <tbody>
                       <tr>
                         <td
-                          className="emotion-83"
+                          className="emotion-25"
                         />
                         <td
                           onClick={[Function]}
@@ -2854,10 +2930,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               1
                             </div>
@@ -2872,10 +2948,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               2
                             </div>
@@ -2890,10 +2966,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               3
                             </div>
@@ -2908,10 +2984,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               4
                             </div>
@@ -2926,10 +3002,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               5
                             </div>
@@ -2944,10 +3020,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               6
                             </div>
@@ -2964,10 +3040,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               7
                             </div>
@@ -2982,10 +3058,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               8
                             </div>
@@ -3000,10 +3076,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               9
                             </div>
@@ -3018,10 +3094,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               10
                             </div>
@@ -3036,10 +3112,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               11
                             </div>
@@ -3054,10 +3130,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               12
                             </div>
@@ -3072,10 +3148,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               13
                             </div>
@@ -3092,10 +3168,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               14
                             </div>
@@ -3110,10 +3186,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               15
                             </div>
@@ -3128,10 +3204,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-31"
+                            className="emotion-39"
                           >
                             <div
-                              className="emotion-32"
+                              className="emotion-40"
                             >
                               16
                             </div>
@@ -3146,10 +3222,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-138"
+                            className="emotion-146"
                           >
                             <div
-                              className="emotion-30"
+                              className="emotion-38"
                             >
                               17
                             </div>
@@ -3164,10 +3240,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               18
                             </div>
@@ -3182,10 +3258,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               19
                             </div>
@@ -3200,10 +3276,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               20
                             </div>
@@ -3220,10 +3296,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               21
                             </div>
@@ -3238,10 +3314,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               22
                             </div>
@@ -3256,10 +3332,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               23
                             </div>
@@ -3274,10 +3350,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               24
                             </div>
@@ -3292,10 +3368,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               25
                             </div>
@@ -3310,10 +3386,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               26
                             </div>
@@ -3328,10 +3404,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               27
                             </div>
@@ -3348,10 +3424,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               28
                             </div>
@@ -3366,10 +3442,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               29
                             </div>
@@ -3384,10 +3460,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               30
                             </div>
@@ -3402,23 +3478,23 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               31
                             </div>
                           </div>
                         </td>
                         <td
-                          className="emotion-83"
+                          className="emotion-25"
                         />
                         <td
-                          className="emotion-83"
+                          className="emotion-25"
                         />
                         <td
-                          className="emotion-83"
+                          className="emotion-25"
                         />
                       </tr>
                     </tbody>
@@ -3426,37 +3502,37 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                 </div>
               </div>
               <div
-                className="emotion-171"
+                className="emotion-179"
               >
                 <button
-                  className="emotion-172"
+                  className="emotion-180"
                   data-testid="button-cancel"
                   disabled={false}
                   onClick={[Function]}
                   type="button"
                 >
                   <span
-                    className="emotion-173"
+                    className="emotion-181"
                   >
                     <span
-                      className="emotion-174"
+                      className="emotion-182"
                     >
                       Cancel
                     </span>
                   </span>
                 </button>
                 <button
-                  className="emotion-175"
+                  className="emotion-183"
                   data-testid="button-apply"
                   disabled={false}
                   onClick={[Function]}
                   type="button"
                 >
                   <span
-                    className="emotion-173"
+                    className="emotion-181"
                   >
                     <span
-                      className="emotion-174"
+                      className="emotion-182"
                     >
                       Apply
                     </span>
@@ -3469,10 +3545,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
             className="emotion-2"
           >
             <div
-              className="emotion-351"
+              className="emotion-367"
             >
               <div
-                className="emotion-352"
+                className="emotion-368"
               >
                 <div
                   className="emotion-9"
@@ -3497,37 +3573,37 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                       role="button"
                     >
                       <div
-                        className="emotion-358"
+                        className="emotion-374"
                       >
                         <div
-                          className="emotion-359"
+                          className="emotion-375"
                         >
                           <button
-                            className="emotion-360"
+                            className="emotion-376"
                             data-testid="button"
                             disabled={false}
                             onClick={[Function]}
                             type="button"
                           >
                             <span
-                              className="emotion-173"
+                              className="emotion-181"
                             >
                               <span
-                                className="emotion-362"
+                                className="emotion-378"
                               >
                                 November
                                  
                                 2020
                               </span>
                               <span
-                                className="emotion-363"
+                                className="emotion-379"
                               >
                                 <span
                                   className="emotion-12"
                                   onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-365"
+                                    className="emotion-381"
                                   />
                                 </span>
                               </span>
@@ -3536,7 +3612,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                         </div>
                       </div>
                       <div
-                        className="emotion-93"
+                        className="emotion-101"
                         onClick={[Function]}
                       >
                         <span
@@ -3595,6 +3671,24 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                     <tbody>
                       <tr>
                         <td
+                          className="emotion-25"
+                        />
+                        <td
+                          className="emotion-25"
+                        />
+                        <td
+                          className="emotion-25"
+                        />
+                        <td
+                          className="emotion-25"
+                        />
+                        <td
+                          className="emotion-25"
+                        />
+                        <td
+                          className="emotion-25"
+                        />
+                        <td
                           onClick={[Function]}
                           style={
                             Object {
@@ -3603,10 +3697,30 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
+                            >
+                              1
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          onClick={[Function]}
+                          style={
+                            Object {
+                              "padding": 0,
+                            }
+                          }
+                        >
+                          <div
+                            className="emotion-31"
+                          >
+                            <div
+                              className="emotion-32"
                             >
                               2
                             </div>
@@ -3621,10 +3735,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-27"
+                            className="emotion-35"
                           >
                             <div
-                              className="emotion-28"
+                              className="emotion-36"
                             >
                               3
                             </div>
@@ -3639,10 +3753,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-382"
+                            className="emotion-406"
                           >
                             <div
-                              className="emotion-30"
+                              className="emotion-38"
                             >
                               4
                             </div>
@@ -3657,10 +3771,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               5
                             </div>
@@ -3675,10 +3789,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               6
                             </div>
@@ -3693,10 +3807,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               7
                             </div>
@@ -3711,10 +3825,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               8
                             </div>
@@ -3731,10 +3845,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               9
                             </div>
@@ -3749,10 +3863,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               10
                             </div>
@@ -3767,10 +3881,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               11
                             </div>
@@ -3785,10 +3899,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               12
                             </div>
@@ -3803,10 +3917,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               13
                             </div>
@@ -3821,10 +3935,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               14
                             </div>
@@ -3839,10 +3953,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               15
                             </div>
@@ -3859,10 +3973,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               16
                             </div>
@@ -3877,10 +3991,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               17
                             </div>
@@ -3895,10 +4009,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               18
                             </div>
@@ -3913,10 +4027,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               19
                             </div>
@@ -3931,10 +4045,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               20
                             </div>
@@ -3949,10 +4063,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               21
                             </div>
@@ -3967,10 +4081,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               22
                             </div>
@@ -3987,10 +4101,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               23
                             </div>
@@ -4005,10 +4119,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               24
                             </div>
@@ -4023,10 +4137,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               25
                             </div>
@@ -4041,10 +4155,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               26
                             </div>
@@ -4059,10 +4173,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               27
                             </div>
@@ -4077,10 +4191,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               28
                             </div>
@@ -4095,10 +4209,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               29
                             </div>
@@ -4115,32 +4229,32 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-25"
+                            className="emotion-31"
                           >
                             <div
-                              className="emotion-26"
+                              className="emotion-32"
                             >
                               30
                             </div>
                           </div>
                         </td>
                         <td
-                          className="emotion-83"
+                          className="emotion-25"
                         />
                         <td
-                          className="emotion-83"
+                          className="emotion-25"
                         />
                         <td
-                          className="emotion-83"
+                          className="emotion-25"
                         />
                         <td
-                          className="emotion-83"
+                          className="emotion-25"
                         />
                         <td
-                          className="emotion-83"
+                          className="emotion-25"
                         />
                         <td
-                          className="emotion-83"
+                          className="emotion-25"
                         />
                       </tr>
                     </tbody>
@@ -4148,37 +4262,37 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                 </div>
               </div>
               <div
-                className="emotion-171"
+                className="emotion-179"
               >
                 <button
-                  className="emotion-172"
+                  className="emotion-180"
                   data-testid="button-cancel"
                   disabled={false}
                   onClick={[Function]}
                   type="button"
                 >
                   <span
-                    className="emotion-173"
+                    className="emotion-181"
                   >
                     <span
-                      className="emotion-174"
+                      className="emotion-182"
                     >
                       Cancel
                     </span>
                   </span>
                 </button>
                 <button
-                  className="emotion-175"
+                  className="emotion-183"
                   data-testid="button-apply"
                   disabled={false}
                   onClick={[Function]}
                   type="button"
                 >
                   <span
-                    className="emotion-173"
+                    className="emotion-181"
                   >
                     <span
-                      className="emotion-174"
+                      className="emotion-182"
                     >
                       Apply
                     </span>
