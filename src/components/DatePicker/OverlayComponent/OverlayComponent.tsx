@@ -13,7 +13,7 @@ import {
   optionsWrapperStyle,
   overlayWrapperStyle,
 } from './OverlayComponent.style';
-import { getFromDate, getToDate } from './utils';
+import { getLeftCalendarDate, getRightCalendarDate } from './utils';
 
 type Props = {
   selectedOption?: string;
@@ -43,8 +43,8 @@ const OverlayComponent: React.FC<Props> = ({
   onCancel = () => {},
   onApply = () => {},
 }) => {
-  const [date, setDate] = useState(getFromDate(selectedDays));
-  const [date2, setDate2] = useState(getToDate(selectedDays));
+  const [date, setDate] = useState(getLeftCalendarDate(selectedDays));
+  const [date2, setDate2] = useState(getRightCalendarDate(selectedDays));
 
   const handleArrow = useCallback(
     (direction: 'forward' | 'back' = 'back') => {
