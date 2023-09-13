@@ -65,6 +65,7 @@ const MonthWrapper = ({
                 name={'triangleLeft'}
                 type="tertiary"
                 onClick={() => handleArrow('back')}
+                dataTestId="month_back"
               />
             </div>
           )}
@@ -79,6 +80,7 @@ const MonthWrapper = ({
                 <Button
                   onClick={!isRangePicker ? () => setIsOpen(!isOpen) : undefined}
                   type="tertiary"
+                  dataTestId={`${showedArrows !== 'both' ? showedArrows + '_' : ''}month`}
                 >
                   {date.format('MMMM')} {date.format('YYYY')}
                 </Button>
@@ -101,6 +103,7 @@ const MonthWrapper = ({
                   name={'triangleRight'}
                   type="tertiary"
                   onClick={() => handleArrow('forward')}
+                  dataTestId="month_forward"
                 />
               </div>
             )}
