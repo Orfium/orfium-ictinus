@@ -31,12 +31,7 @@ const Day: React.FC<Props> = ({
   const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
   const calculatedColor = calculateColorBetweenColorAndType('', 'primary');
   const date = React.useMemo(
-    () =>
-      day &&
-      currentDay
-        .month(month)
-        .date(day)
-        .year(year),
+    () => day && currentDay.month(month).date(day).year(year),
     [year, day, month]
   );
   const isToday = React.useMemo(() => {
@@ -44,7 +39,7 @@ const Day: React.FC<Props> = ({
   }, [year, month, day]);
 
   const onDayClick = React.useCallback(
-    e => {
+    (e) => {
       e.preventDefault();
       if (onSelect && date) {
         onSelect(date);
@@ -69,6 +64,7 @@ const Day: React.FC<Props> = ({
           isToday,
           disabled,
         })}
+        data-testid={`${day}_${month + 1}_${year}` + `${isSelected ? '_selected' : ''}`}
       >
         <div
           css={dayStyle({

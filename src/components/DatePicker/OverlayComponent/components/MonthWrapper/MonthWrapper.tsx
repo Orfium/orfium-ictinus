@@ -36,7 +36,7 @@ function generateArrayOfYears(date: Dayjs): SelectOption[] {
   const min = new Date().getFullYear() - span;
   const years = range(min, max);
 
-  return years.map(year => ({
+  return years.map((year) => ({
     value: year.toString(),
     label: `${date.format('MMMM')} ${year.toString()}`,
   }));
@@ -64,6 +64,7 @@ const MonthWrapper = ({
           {(showedArrows === 'left' || showedArrows === 'both') && (
             <div
               onClick={() => handleArrow('back')}
+              data-testid="month_back"
               css={monthHeaderNavigationIconWrapperStyle({ position: 'left' })}
             >
               <Icon
@@ -92,11 +93,12 @@ const MonthWrapper = ({
                         color={theme.utils.getColor('darkGrey', 850)}
                       />
                     }
+                    dataTestId={'month'}
                   >
                     {date.format('MMMM')} {date.format('YYYY')}
                   </Button>
                 ) : (
-                  <div>
+                  <div data-testid={`${showedArrows !== 'both' ? showedArrows + '_' : ''}month`}>
                     {date.format('MMMM')} {date.format('YYYY')}
                   </div>
                 )}
@@ -104,7 +106,7 @@ const MonthWrapper = ({
               {open && (
                 <SelectMenu
                   filteredOptions={years}
-                  handleOptionClick={e => {
+                  handleOptionClick={(e) => {
                     setDate(date.year(Number(e.value)));
                     setOpen(false);
                   }}
@@ -116,6 +118,7 @@ const MonthWrapper = ({
               <div
                 onClick={() => handleArrow('forward')}
                 css={monthHeaderNavigationIconWrapperStyle({ position: 'right' })}
+                data-testid="month_forward"
               >
                 <Icon
                   name={'chevronSmallRight'}
