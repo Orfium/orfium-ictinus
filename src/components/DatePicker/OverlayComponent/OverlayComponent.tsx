@@ -11,10 +11,10 @@ import {
   optionsWrapperStyle,
   overlayWrapperStyle,
 } from './OverlayComponent.style';
+import { getFromDate, getToDate } from './utils';
 import Button from '../../Button';
 import { APPLY_DATES, CLEAR_ALL } from '../constants';
 import { DisabledDates, ExtraOption } from '../DatePicker.types';
-import { currentDay } from '../utils';
 
 export type OverlayComponentProps = {
   selectedOption?: string;
@@ -43,8 +43,8 @@ const OverlayComponent: React.FC<OverlayComponentProps> = ({
   onClearAll = () => {},
   onApply = () => {},
 }) => {
-  const [date, setDate] = useState(currentDay);
-  const [date2, setDate2] = useState(currentDay);
+  const [date, setDate] = useState(getFromDate(selectedDays));
+  const [date2, setDate2] = useState(getToDate(selectedDays));
 
   const handleArrow = useCallback(
     (direction: 'forward' | 'back' = 'back') => {
@@ -85,7 +85,7 @@ const OverlayComponent: React.FC<OverlayComponentProps> = ({
 
             {isRangePicker && (
               <MonthWrapper
-                date={date2.month(date2.month() + 1)}
+                date={date2}
                 onDaySelect={onDaySelect}
                 selectedDays={selectedDays}
                 setDate={setDate2}
