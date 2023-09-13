@@ -99,6 +99,64 @@ describe('DatePicker', () => {
     });
   });
 
+  it('should change months when arrow buttons are clicked', () => {
+    const { getByTestId } = render(
+      <DatePicker
+        dataTestId={'input'}
+        isClearable
+        value={{
+          from: currentDay.toDate(),
+          to: currentDay.add(1, 'day').toDate(),
+        }}
+      />
+    );
+
+    const calendarButton = getByTestId('calendar_button');
+    fireEvent.click(calendarButton);
+
+    const backButton = getByTestId('icon-button-month_back');
+    const forwardButton = getByTestId('icon-button-month_forward');
+    const monthButton = getByTestId('button-month');
+
+    fireEvent.click(backButton);
+
+    expect(monthButton).toContainHTML(currentDay.month(currentDay.month() - 1).format('MMMM YYYY'));
+
+    fireEvent.click(forwardButton);
+
+    expect(monthButton).toContainHTML(currentDay.format('MMMM YYYY'));
+  });
+
+  it('should render the calendars correctly when initial values are given', () => {
+    const { getByTestId } = render(
+      <DatePicker
+        dataTestId={'input'}
+        isClearable
+        isRangePicker
+        value={{
+          from: currentDay.month(currentDay.month() - 1).toDate(),
+          to: currentDay.add(1, 'day').toDate(),
+        }}
+      />
+    );
+
+    console.log('initial', {
+      from: currentDay.month(currentDay.month() - 1).toDate(),
+      to: currentDay.add(1, 'day').toDate(),
+    });
+
+    const calendarButton = getByTestId('calendar_button');
+    fireEvent.click(calendarButton);
+
+    const selectedFrom = getByTestId(
+      currentDay.month(currentDay.month() - 1).format('D_M_YYYY') + '_selected'
+    );
+    const selectedTo = getByTestId(currentDay.add(1, 'day').format('D_M_YYYY') + '_selected');
+
+    expect(selectedFrom).toBeInTheDocument();
+    expect(selectedTo).toBeInTheDocument();
+  });
+
   it('should handle escape', async () => {
     const onChange = jest.fn();
     const { getByTestId, getByPlaceholderText } = render(
