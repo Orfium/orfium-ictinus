@@ -11,7 +11,7 @@ import {
   optionsWrapperStyle,
   overlayWrapperStyle,
 } from './OverlayComponent.style';
-import { getFromDate, getToDate } from './utils';
+import { getRightCalendarDate, getLeftCalendarDate } from './utils';
 import Button from '../../Button';
 import { APPLY_DATES, CLEAR_ALL } from '../constants';
 import { DisabledDates, ExtraOption } from '../DatePicker.types';
@@ -43,8 +43,8 @@ const OverlayComponent: React.FC<OverlayComponentProps> = ({
   onClearAll = () => {},
   onApply = () => {},
 }) => {
-  const [date, setDate] = useState(getFromDate(selectedDays));
-  const [date2, setDate2] = useState(getToDate(selectedDays));
+  const [date, setDate] = useState(getLeftCalendarDate(selectedDays));
+  const [date2, setDate2] = useState(getRightCalendarDate(selectedDays));
 
   const handleArrow = useCallback(
     (direction: 'forward' | 'back' = 'back') => {
