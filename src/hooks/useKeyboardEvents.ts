@@ -2,6 +2,7 @@ import { useKeyboard } from '@react-aria/interactions';
 import { KeyboardEvent } from 'react';
 
 const KEYBOARD_EVENT_KEYS = {
+  ArrowUp: 'ArrowUp',
   ArrowDown: 'ArrowDown',
   ArrowRight: 'ArrowRight',
   ArrowLeft: 'ArrowLeft',
@@ -15,6 +16,7 @@ export type KeyboardArrowHorizontalDirection = 'left' | 'right';
 type Props = {
   events: {
     keydown: {
+      onArrowUp?: (e: KeyboardEvent) => void;
       onArrowDown?: (e: KeyboardEvent) => void;
       onEscape?: () => void;
       onEnter?: (text: string) => void;
@@ -24,12 +26,16 @@ type Props = {
     };
   };
 };
-const useKeyboarEvents = ({ events: { keydown } }: Props) => {
+const useKeyboardEvents = ({ events: { keydown } }: Props) => {
   const { keyboardProps } = useKeyboard({
     onKeyDown: (event) => {
       const target = event.target as HTMLInputElement;
       const text = target.value;
       switch (event.key) {
+        case KEYBOARD_EVENT_KEYS.ArrowUp:
+          event.preventDefault();
+          keydown.onArrowUp && keydown.onArrowUp(event);
+          break;
         case KEYBOARD_EVENT_KEYS.ArrowDown:
           event.preventDefault();
           keydown.onArrowDown && keydown.onArrowDown(event);
@@ -65,4 +71,4 @@ const useKeyboarEvents = ({ events: { keydown } }: Props) => {
   };
 };
 
-export default useKeyboarEvents;
+export default useKeyboardEvents;
