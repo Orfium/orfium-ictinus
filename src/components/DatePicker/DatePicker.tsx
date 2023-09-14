@@ -105,8 +105,8 @@ const DatePicker: React.FC<DatePickerProps & TestProps> = ({
   }, [onChange]);
 
   const handleIconClick = useCallback(() => {
-    setIsOpen(true);
-  }, []);
+    setIsOpen(!isOpen);
+  }, [isOpen]);
 
   const handleClear = useCallback(
     (e?) => {
