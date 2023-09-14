@@ -2,6 +2,7 @@ import isEmpty from 'lodash/isEmpty';
 import uniqueId from 'lodash/uniqueId';
 import * as React from 'react';
 import { Link } from 'react-router-dom';
+import { ReactFCC } from 'utils/types';
 
 import { breadcrumbLinkStyles, breadcrumbStyles } from './Breadcrumb.style';
 import BreadcrumbItem from './BreadcrumbItem/BreadcrumbItem';
@@ -12,10 +13,10 @@ export type Props = {
   data?: BreadcrumbItemData[];
 };
 
-const isLastItem = (dataItems: React.ReactNode[], itemIndex: number) =>
+const isLastItem = (dataItems: (React.ReactNode | BreadcrumbItemData)[], itemIndex: number) =>
   itemIndex === dataItems.length - 1;
 
-const Breadcrumb: React.FC<Props> = ({ children, data = [] }) => {
+const Breadcrumb: ReactFCC<Props> = ({ children, data = [] }) => {
   const passDataToRouterLink = React.useCallback(
     (dataItem: BreadcrumbItemData, index: number) => {
       const { to, label } = dataItem;

@@ -1,13 +1,13 @@
 import { CSSObject } from '@emotion/serialize';
 import useTheme from 'hooks/useTheme';
-import React, { FC } from 'react';
+import React from 'react';
 import { formFieldStyles } from 'theme/palette';
 import { DEFAULT_SIZE } from 'utils/size-utils';
+import { ReactFCC, TestProps } from 'utils/types';
 
-import { generateTestDataId } from '../../utils/helpers';
-import { TestProps } from '../../utils/types';
 import { textInputSizes } from './config';
 import { errorMsgStyle, textFieldStyle, wrapperStyle } from './TextInputBase.style';
+import { generateTestDataId } from '../../utils/helpers';
 import Icon from 'components/Icon';
 import { AcceptedIconNames } from 'components/Icon/types';
 
@@ -18,10 +18,10 @@ export type Props = {
   placeholder?: string;
   /** An optional icon to show to the left
    * TODO This prop will be renamed to 'prefix', like: https://ant.design/components/input/#components-input-demo-presuffix */
-  leftIcon?: AcceptedIconNames | JSX.Element | null;
+  leftIcon?: AcceptedIconNames | React.ReactElement | null;
   /** An optional icon to show to the right
    * TODO This prop will be renamed to 'suffix', like: https://ant.design/components/input/#components-input-demo-presuffix */
-  rightIcon?: AcceptedIconNames | JSX.Element | null;
+  rightIcon?: AcceptedIconNames | React.ReactElement | null;
   /** If the text field value is required */
   required?: boolean;
   /** If the text field is disabled */
@@ -39,7 +39,7 @@ export type Props = {
   /** Style of input field */
   styleType?: formFieldStyles;
   /** Sets the size of the textField */
-  size?: typeof textInputSizes[number];
+  size?: (typeof textInputSizes)[number];
   /** The status of the button regarding the status which is in - default normal */
   status?: 'success' | 'normal' | 'hint' | 'error';
   /** Sx prop to override specific properties */
@@ -57,7 +57,7 @@ export type Props = {
 
 /** This Component is a wrapper for all primitives that hold text like Select, TextArea, TextInput. Here we keep the
  * logic of all the hover, focus status etc and the styling of these centralized **/
-const TextInputBase: FC<Props & TestProps> = ({
+const TextInputBase: ReactFCC<Props & TestProps> = ({
   lean = false,
   disabled,
   hintMsg,

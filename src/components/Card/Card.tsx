@@ -1,5 +1,6 @@
 import { Elevation, Spacing } from 'index';
 import React from 'react';
+import { ReactFCC } from 'utils/types';
 
 import { cardStyle } from './Card.style';
 
@@ -12,7 +13,7 @@ export type Props = {
   radius?: keyof Spacing;
 };
 
-const Card: React.FC<Props> = ({ elevated, transparent = false, radius, children }) => {
+const Card: ReactFCC<Props> = ({ elevated, transparent = false, radius, children }) => {
   return <div css={cardStyle({ elevated, transparent, radius })}>{children}</div>;
 };
 

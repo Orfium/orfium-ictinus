@@ -1,6 +1,5 @@
 import useTheme from 'hooks/useTheme';
 import max from 'lodash/max';
-import { lighten } from 'polished';
 import React, { useCallback, useMemo } from 'react';
 import {
   BarChart as RechartsBarChart,
@@ -13,11 +12,11 @@ import {
   LabelList,
 } from 'recharts';
 
-import Wrapper from '../Wrapper';
 import CustomLabel from './components/CustomLabel';
 import CustomTooltip from './components/CustomTooltip';
 import CustomTooltipContent from './components/CustomTooltipContent';
 import { getValues, customTickFormatter, getBarColors, getColoringOptions } from './utils';
+import Wrapper from '../Wrapper';
 
 const multiplyFactor = 9.5;
 const yAxisWidthDefault = 160;
@@ -77,14 +76,21 @@ const WrappedChart = Wrapper(RechartsBarChart);
 const BarChart: React.FC<Props> = ({ data }) => {
   const theme = useTheme();
 
-  const barColors = useMemo(() => getBarColors(data, theme.palette.flat.darkBlue[100]), [
-    data,
-    theme.palette.flat.darkBlue,
-  ]);
+  const barColors = useMemo(
+    () => getBarColors(data, theme.palette.flat.darkBlue[100]),
+    [data, theme.palette.flat.darkBlue]
+  );
 
-  const findMaxInData = useCallback(operator => max(data.map(operator)), [data]);
+  const findMaxInData = useCallback(
+    (operator: (obj: Data) => number | undefined) => max(data.map(operator)),
+    [data]
+  );
 
-  const setColoringOptions = useCallback(op => getColoringOptions(data, op), [data]);
+  const setColoringOptions = useCallback(
+    // @ts-ignore @TODO Ignoring this as this component will be under further investigation of what we need to keep
+    (op: (obj: Data) => boolean | string) => getColoringOptions(data, op),
+    [data]
+  );
 
   const maxLabelLength = findMaxInData((obj: Data) => obj.name.length);
 
@@ -100,6 +106,8 @@ const BarChart: React.FC<Props> = ({ data }) => {
   const labelColoringOptions = setColoringOptions(() => false);
 
   const tickColoringOptions = setColoringOptions((obj: Data) => obj.name);
+
+  console.log({ labelColoringOptions, tickColoringOptions });
 
   return (
     <WrappedChart
@@ -117,7 +125,7 @@ const BarChart: React.FC<Props> = ({ data }) => {
         tickMargin={24}
         tickCount={tickCount}
         domain={[0, maxDomainValue]}
-        tickFormatter={tick => {
+        tickFormatter={(tick) => {
           return customTickFormatter(tick, maxDomainValue);
         }}
       />
@@ -138,7 +146,7 @@ const BarChart: React.FC<Props> = ({ data }) => {
       <YAxis
         type="category"
         dataKey="name"
-        tick={props => <CustomYAxisTick {...props} colors={tickColoringOptions} />}
+        tick={(props) => <CustomYAxisTick {...props} colors={tickColoringOptions} />}
         width={yAxisWidth}
         axisLine={false}
         tickLine={false}

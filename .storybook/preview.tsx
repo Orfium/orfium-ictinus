@@ -3,6 +3,7 @@
 import React from 'react';
 import ThemeProvider from '../src/components/ThemeProvider';
 import { useThemeSwitch } from '../src/hooks/useThemeSwitch';
+import { ReactFCC } from '../src/utils/types';
 
 const viewPorts = {
   desktop1920: {
@@ -90,7 +91,7 @@ const ThemeSwitcher = () => {
   );
 };
 
-const Wrapper: React.FC = ({ children }) => {
+const Wrapper: ReactFCC = ({ children }) => {
   const themeSwitchState = useThemeSwitch();
   return (
     <div

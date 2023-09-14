@@ -1,9 +1,9 @@
 import React, { useCallback } from 'react';
 import { TestProps } from 'utils/types';
 
+import { listItemStyle, contentStyle } from './ListItem.style';
 import { ListItemType, ListRowSize, SelectHandlerType } from '../types';
 import { renderContent } from '../utils';
-import { listItemStyle, contentStyle } from './ListItem.style';
 
 type Props = {
   /** Size of the ListItem (translates to height) */
@@ -53,14 +53,16 @@ const ListItem = React.forwardRef<HTMLDivElement, Props>(
         css={listItemStyle({ size, selected, highlighted, disabled, isGroupItem })}
         ref={selected ? ref : null}
         onClick={handleListItemSelect}
-        onMouseDown={event => {
+        onMouseDown={(event) => {
           event.preventDefault();
         }}
         data-testid={dataTestId ?? 'ictinus_list' + ('_item_' + index)}
       >
         <div css={contentStyle()}>
-          {/** @TODO latest version typescript 4.4 is solving this as a constant */
-          renderContent(content, searchTerm)}
+          {
+            /** @TODO latest version typescript 4.4 is solving this as a constant */
+            renderContent(content, searchTerm)
+          }
         </div>
       </div>
     );

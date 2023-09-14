@@ -1,5 +1,6 @@
-import { Data } from './BarChart';
 import { lighten } from 'polished';
+
+import { Data } from './BarChart';
 
 const incrementFactor = 0.05;
 const lightenFactor = 0.2;
@@ -41,7 +42,7 @@ export const customTickFormatter = (tickValue: number, maxDomainValue: number): 
 };
 
 export const getBarColors = (data: Data[], defaultColor: string) =>
-  data.map(obj => {
+  data.map((obj) => {
     if (obj?.options?.color) {
       if (obj?.options?.coloringOption === 'all') {
         return lighten(lightenFactor, obj?.options?.color);

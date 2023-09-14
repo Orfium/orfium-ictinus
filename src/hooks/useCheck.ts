@@ -10,7 +10,7 @@ export const useCheck = (isChecked: boolean, onCheck?: OnCheckHandler) => {
   }, [isChecked]);
 
   const handleCheck = useCallback(
-    (checkedCheckbox, e) => {
+    (checkedCheckbox: boolean, e: ChangeEvent) => {
       if (onCheck) {
         onCheck(checkedCheckbox, e);
       }
