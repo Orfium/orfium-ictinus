@@ -14,6 +14,7 @@ export type DayProps = {
   isLast?: boolean;
   isFirst?: boolean;
   isDisabled?: boolean;
+  tabIndex?: number;
 };
 
 const Day: React.FC<DayProps> = ({
@@ -26,6 +27,7 @@ const Day: React.FC<DayProps> = ({
   isLast = false,
   isFirst = false,
   isDisabled = false,
+  tabIndex,
 }) => {
   const date = React.useMemo(
     () => day && currentDay.month(month).date(day).year(year),
@@ -60,7 +62,13 @@ const Day: React.FC<DayProps> = ({
           isToday,
           isDisabled,
         })}
+        tabIndex={tabIndex}
         data-testid={`${day}_${month + 1}_${year}` + `${isSelected ? '_selected' : ''}`}
+        onKeyDown={(e) => {
+          if (e.code === 'Enter' && !isDisabled) {
+            onDayClick(e);
+          }
+        }}
       >
         <div
           css={dayStyle({
