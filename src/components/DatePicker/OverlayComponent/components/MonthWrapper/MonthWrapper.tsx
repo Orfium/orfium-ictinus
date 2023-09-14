@@ -1,5 +1,6 @@
-import { range } from 'lodash';
-import React, { useMemo, useState } from 'react';
+import useKeyboardEvents from 'hooks/useKeyboardEvents';
+import { head, range } from 'lodash';
+import React, { useMemo, useRef, useState } from 'react';
 import { Dayjs } from 'utils/date';
 
 import {
@@ -55,6 +56,40 @@ const MonthWrapper = ({
 
   const years = useMemo(() => generateArrayOfYears(date), [date]);
 
+  const listRef = useRef<HTMLUListElement | null>(null);
+  const { keyboardProps } = useKeyboardEvents({
+    events: {
+      keydown: {
+        onArrowDown: () => {
+          setIsOpen(true);
+          // set on diff thread to wait to open
+          setTimeout(() => {
+            const options = listRef.current?.querySelectorAll('[role="option"]');
+            if (options && options?.length > 0) {
+              const firstOption = head(options);
+              if (firstOption instanceof HTMLElement && typeof firstOption.focus === 'function') {
+                firstOption.focus();
+              }
+            }
+          }, 0);
+        },
+        onEscape: () => {
+          setIsOpen(false);
+        },
+        onEnter: (text) => {
+          if (text.length > 0) {
+            setTimeout(() => {
+              const firstChild = listRef.current?.firstChild;
+              if (firstChild instanceof HTMLElement && typeof firstChild.click === 'function') {
+                firstChild.click();
+              }
+            }, 0);
+          }
+        },
+      },
+    },
+  });
+
   return (
     <React.Fragment>
       <div css={monthWrapperStyle()}>
@@ -76,7 +111,10 @@ const MonthWrapper = ({
             }}
           >
             <div css={monthHeaderTitleWrapperStyle()}>
-              <div css={monthHeaderTitleStyle({ isRangePicker })}>
+              <div
+                css={monthHeaderTitleStyle({ isRangePicker })}
+                {...(!isRangePicker ? keyboardProps : {})}
+              >
                 <Button
                   onClick={!isRangePicker ? () => setIsOpen(!isOpen) : undefined}
                   type="tertiary"
@@ -87,6 +125,7 @@ const MonthWrapper = ({
               </div>
               {isOpen && (
                 <SelectMenu
+                  ref={listRef}
                   filteredOptions={years}
                   handleOptionClick={(e) => {
                     setDate(date.year(Number(e.value)));
