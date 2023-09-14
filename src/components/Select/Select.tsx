@@ -1,4 +1,4 @@
-import useKeyboard from 'hooks/useKeyboarEvents';
+import useKeyboard from 'hooks/useKeyboardEvents';
 import { differenceBy, head } from 'lodash';
 import debounce from 'lodash/debounce';
 import React, { useCallback, useMemo, useRef, useState } from 'react';
