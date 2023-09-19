@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { FC, useMemo } from 'react';
+import { useMemo } from 'react';
 import { getTrackBackground } from 'react-range';
 import { ITrackProps } from 'react-range/lib/types';
+import { ReactFCC, TestProps } from 'utils/types';
 
-import useTheme from '../../../../hooks/useTheme';
-import { TestProps } from '../../../../utils/types';
-import { MAX, MIN } from '../../Slider';
 import { Track } from './SliderTrack.style';
+import useTheme from '../../../../hooks/useTheme';
+import { MAX, MIN } from '../../Slider';
 
 type Props = {
   values: number[];
@@ -15,7 +15,7 @@ type Props = {
   restProps: ITrackProps;
 };
 
-const SliderTrack: FC<Props & TestProps> = ({
+const SliderTrack: ReactFCC<Props & TestProps> = ({
   values,
   disabled,
   isSelector,

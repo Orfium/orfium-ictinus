@@ -9,7 +9,7 @@ const PlaceHolder = () => (
 );
 
 interface Props {
-  logoIcon?: JSX.Element;
+  logoIcon?: React.ReactElement;
 }
 
 const LogoWrapper: FC<Props> = ({ logoIcon }) => (

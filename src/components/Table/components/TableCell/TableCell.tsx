@@ -1,6 +1,7 @@
 import useTheme from 'hooks/useTheme';
 import { rem } from 'polished';
 import * as React from 'react';
+import { ReactFCC } from 'utils/types';
 
 import { parentStyles } from './TableCell.style';
 import { getTestId } from './utils';
@@ -23,7 +24,7 @@ type Props = {
   onClick?: () => void;
 };
 
-const TableCell: React.FC<Props> = React.memo(
+const TableCell: ReactFCC<Props> = React.memo(
   ({
     textAlign = 'left',
     component = 'td',

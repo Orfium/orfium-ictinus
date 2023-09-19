@@ -14,7 +14,7 @@ export const selectDropdownOption = async (
   userEvent.click(screen.getByText(option)); // select the option from displayed options
 };
 
-const renderWithThemeProvider = (children: JSX.Element) => {
+const renderWithThemeProvider = (children: React.ReactElement) => {
   return render(
     <ThemeProvider
       theme={{

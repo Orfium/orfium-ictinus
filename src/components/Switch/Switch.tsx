@@ -27,7 +27,7 @@ const Switch: React.FC<Props & TestProps> = ({
 }) => {
   const theme = useTheme();
 
-  const addLabel = (component: JSX.Element) => {
+  const addLabel = (component: React.ReactElement) => {
     if (!label) {
       return component;
     }

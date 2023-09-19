@@ -3,8 +3,8 @@ import { Theme } from 'theme';
 import { mainTypes } from 'theme/palette';
 
 import { ColorShapeFromComponent, getColorFromType } from '../../utils/themeFunctions';
-import { buttonConfig } from './config';
 import { Props } from './ButtonBase';
+import { buttonConfig } from './config';
 
 /**
  * This function defines what background-color to show based on type or color passed

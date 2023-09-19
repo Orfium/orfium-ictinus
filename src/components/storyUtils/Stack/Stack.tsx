@@ -1,10 +1,12 @@
 import React from 'react';
 
+import { ReactFCC } from '../../../utils/types';
+
 type Props = {
   vertical?: boolean;
 };
 
-const Stack: React.FC<Props> = ({ vertical = false, children }) => {
+const Stack: ReactFCC<Props> = ({ vertical = false, children }) => {
   return (
     <div css={{ display: 'flex', flexDirection: vertical ? 'column' : 'row', flexWrap: 'wrap' }}>
       {React.Children.toArray(children).map((item, index) => (

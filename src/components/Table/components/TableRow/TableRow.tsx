@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { ReactFCC } from 'utils/types';
 
 import useTheme from '../../../../hooks/useTheme';
 
@@ -8,7 +9,7 @@ type Props = {
   onClick?: () => void;
 };
 
-const TableRow: React.FC<Props> = ({ nested, selected, children, onClick, ...rest }) => {
+const TableRow: ReactFCC<Props> = ({ nested, selected, children, onClick, ...rest }) => {
   const theme = useTheme();
 
   return (

@@ -88,7 +88,7 @@ const TextField = React.forwardRef<HTMLInputElement, Props & InputProps & TestPr
     const inputRef = React.useRef<HTMLInputElement>(null);
     const combinedRefs = useCombinedRefs(inputRef, ref);
 
-    const getIcon = (icon: AcceptedIconNames | JSX.Element | null) =>
+    const getIcon = (icon: AcceptedIconNames | React.ReactElement | null) =>
       icon ? (
         typeof icon === 'string' ? (
           <Icon
