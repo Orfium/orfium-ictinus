@@ -107,8 +107,6 @@ const BarChart: React.FC<Props> = ({ data }) => {
 
   const tickColoringOptions = setColoringOptions((obj: Data) => obj.name);
 
-  console.log({ labelColoringOptions, tickColoringOptions });
-
   return (
     <WrappedChart
       data={data}

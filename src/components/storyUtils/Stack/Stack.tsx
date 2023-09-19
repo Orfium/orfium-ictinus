@@ -1,5 +1,6 @@
 import React from 'react';
-import { ReactFCC } from 'utils/types';
+
+import { ReactFCC } from '../../../utils/types';
 
 type Props = {
   vertical?: boolean;

@@ -1,11 +1,13 @@
 import * as React from 'react';
 
+import { ReactFCC } from '../../../utils/types';
+
 type Props = {
   name: string;
   width?: string;
 };
 
-const PresentComponent: React.FC<Props> = ({ name, width = 'auto', children }) => {
+const PresentComponent: ReactFCC<Props> = ({ name, width = 'auto', children }) => {
   return (
     <div
       style={{
