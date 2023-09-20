@@ -140,11 +140,6 @@ describe('DatePicker', () => {
       />
     );
 
-    console.log('initial', {
-      from: currentDay.month(currentDay.month() - 1).toDate(),
-      to: currentDay.add(1, 'day').toDate(),
-    });
-
     const calendarButton = getByTestId('calendar_button');
     fireEvent.click(calendarButton);
 
@@ -181,6 +176,49 @@ describe('DatePicker', () => {
     fireEvent.keyDown(input, { key: 'Escape', keyCode: 27 });
 
     await waitFor(() => expect(applyButton).not.toBeInTheDocument());
+  });
+
+  it('should navigate through the month days when arrows are clicked', async () => {
+    const { getByTestId } = render(
+      <DatePicker
+        value={{
+          from: currentDay.toDate(),
+          to: currentDay.add(1, 'day').toDate(),
+        }}
+      />
+    );
+
+    const calendarButton = getByTestId('calendar_button');
+    fireEvent.click(calendarButton);
+
+    const selectedDay = getByTestId('3_11_2020_selected');
+    expect(selectedDay).toHaveFocus();
+
+    fireEvent.keyDown(document, {
+      key: 'ArrowDown',
+    });
+
+    fireEvent.keyDown(document, {
+      key: 'ArrowRight',
+    });
+
+    fireEvent.keyDown(document, {
+      key: 'ArrowUp',
+    });
+
+    fireEvent.keyDown(document, {
+      key: 'ArrowRight',
+    });
+
+    fireEvent.keyDown(document, {
+      key: 'ArrowLeft',
+    });
+
+    fireEvent.keyDown(document, { key: 'Enter', code: 'Enter', charCode: 13 });
+
+    /** Clicked keys path should lead to the following day being selected*/
+    const newSelectedDay = getByTestId('4_11_2020_selected');
+    expect(newSelectedDay).toBeInTheDocument();
   });
 
   it('should handle clearing the selected date', async () => {

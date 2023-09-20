@@ -6,7 +6,7 @@ import { currentDay } from 'components/DatePicker/utils';
 
 type Props = Omit<MonthProps, 'onDaySelect' | 'disabledDates'>;
 
-/** 
+/**
  * Custom hook that holds all the logic for the keyboard navigation inside the calendar-grid
  */
 const useMonthKeyboardNavigation = ({ selectedDays, isFirstCalendar, month, year }: Props) => {
@@ -77,7 +77,7 @@ const useMonthKeyboardNavigation = ({ selectedDays, isFirstCalendar, month, year
     }
   }, [focusedDay]);
 
-  return {focusedDay, setFocusedDay, calendarRef, keyboardProps};
+  return { focusedDay, setFocusedDay, calendarRef, keyboardProps };
 };
 
 export default useMonthKeyboardNavigation;
