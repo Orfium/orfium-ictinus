@@ -35,7 +35,12 @@ const Month: React.FC<MonthProps> = ({ year, month, onDaySelect, selectedDays, d
   const weeksWithDays = React.useMemo<WeekRow[]>(() => {
     const monthDate = currentDay.month(month).year(year).date(1);
     const daysOfMonth = monthDate.daysInMonth();
-    const startDay = monthDate.day() ? monthDate.day() : 7;
+    /**
+     * Dayjs uses 0-6 (Sun-Sat) indexing for days of the week, while the reduce callback on line 48 uses
+     * 1-7 (Mon-Sun) indexing for calculating the days array for the calendar grid. To resolve this conflict,
+     * we replace the 0 used for Sunday with 7, so that Dayjs can match our internal indexing.
+     */
+    const startDay = monthDate.day() || 7;
     const daysPerWeekCount = 7;
     const weeksCount = getNumWeeksForMonth(year, month);
     const daysForThisMonthsWeeks = Array(weeksCount * daysPerWeekCount).fill(null);
