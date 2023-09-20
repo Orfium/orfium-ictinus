@@ -2,15 +2,15 @@ import { Dayjs } from 'dayjs';
 import React, { useCallback, memo, useMemo, useState } from 'react';
 import isEqual from 'react-fast-compare';
 
+import { datePickerStyles } from './DatePicker.style';
+import DatePickInput from './DatePickInput';
+import OverlayComponent, { Range } from './OverlayComponent/OverlayComponent';
+import { currentDay, initDates } from './utils';
 import { TestProps } from '../../utils/types';
 import { FilterType, StyleType } from '../Filter/types';
 import { Props as TextFieldProps } from '../TextField/TextField';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import PositionInScreen from '../utils/PositionInScreen';
-import { datePickerStyles } from './DatePicker.style';
-import DatePickInput from './DatePickInput';
-import OverlayComponent, { Range } from './OverlayComponent/OverlayComponent';
-import { currentDay, initDates } from './utils';
 
 export type DisabledDates = {
   daysOfWeek?: number[];
@@ -167,9 +167,9 @@ const DatePicker: React.FC<Props & TestProps> = ({
   }, []);
 
   const handleClear = useCallback(
-    (e?) => {
+    (e?: React.KeyboardEvent) => {
       if (!isClearable && filterConfig?.filterType !== 'added') {
-        return false;
+        return;
       }
 
       if (filterConfig?.filterType) {
@@ -178,12 +178,14 @@ const DatePicker: React.FC<Props & TestProps> = ({
         return onChange({ to: undefined, from: undefined });
       }
 
-      if (e.keyCode === 27) {
+      if (e?.keyCode === 27) {
         // if escape
-        return setIsOpen(false);
+        setIsOpen(false);
+
+        return;
       }
 
-      if (e.keyCode === 8) {
+      if (e?.keyCode === 8) {
         //backspace
         if (isRangePicker) {
           if (value.from && value.to) {

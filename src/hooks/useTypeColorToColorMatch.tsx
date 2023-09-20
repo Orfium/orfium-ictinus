@@ -2,6 +2,7 @@ import useTheme from 'hooks/useTheme';
 import keys from 'lodash/keys';
 import pick from 'lodash/pick';
 import * as React from 'react';
+import { ReactFCC } from 'utils/types';
 
 import { BASE_SHADE, flatPalette, generatedColorShades, mainTypes } from '../theme/palette';
 import {
@@ -11,14 +12,14 @@ import {
 
 const defaultContextData = {
   typesShadesColor: {},
-  calculateColorBetweenColorAndType: (color: string, type: typeof mainTypes[number]) => {},
+  calculateColorBetweenColorAndType: (color: string, type: (typeof mainTypes)[number]) => {},
 };
 
 type ContextProps = {
   typesShadesColor: TypesShadeAndColors;
   calculateColorBetweenColorAndType: (
     color: string,
-    type: typeof mainTypes[number]
+    type: (typeof mainTypes)[number]
   ) => ColorShapeFromComponent;
 };
 
@@ -36,7 +37,7 @@ const useTypeColorToColorMatch = () => {
   return React.useContext<ContextProps>(TypeColorToColorMatchContext);
 };
 
-export type TypesShadeAndColors = Record<typeof mainTypes[number], ColorShapeFromComponent>;
+export type TypesShadeAndColors = Record<(typeof mainTypes)[number], ColorShapeFromComponent>;
 
 /**
  * Apply for each type passed what color it is and shade (shade now is auto applied at 500)
@@ -44,7 +45,7 @@ export type TypesShadeAndColors = Record<typeof mainTypes[number], ColorShapeFro
  * return e.g { primary: { shade: 500, color: 'orange'}, info: { shade: 500, color: 'darkBlue'}}
  */
 const calculateTypesShadeAndColors = (
-  types: Record<typeof mainTypes[number], generatedColorShades>,
+  types: Record<(typeof mainTypes)[number], generatedColorShades>,
   palette: flatPalette
 ) => {
   // for each mainType
@@ -59,7 +60,7 @@ const calculateTypesShadeAndColors = (
     mainTypeAcc[mainType] = flatPaletteKeys.reduce((acc, paletteColor) => {
       const colorShadesKeys = keys(palette[paletteColor]); // the shades of the palette color currently in the iteration
       const foundShadeWithThatColor = colorShadesKeys.find(
-        shade => palette[paletteColor][shade].toLowerCase() === typeColor.toLowerCase()
+        (shade) => palette[paletteColor][shade].toLowerCase() === typeColor.toLowerCase()
       );
 
       // return either the found color as e.g { shade: 500, color: 'orange'} or the object as it was
@@ -72,7 +73,7 @@ const calculateTypesShadeAndColors = (
   }, {}) as TypesShadeAndColors;
 };
 
-const TypeColorToColorMatchProvider: React.FC = ({ children }) => {
+const TypeColorToColorMatchProvider: ReactFCC = ({ children }) => {
   const theme = useTheme();
   const types = pick(theme.palette, mainTypes);
 
@@ -81,7 +82,7 @@ const TypeColorToColorMatchProvider: React.FC = ({ children }) => {
   }, [types, theme]);
 
   const calculateColorBetweenColorAndType = React.useCallback(
-    (color, type) => {
+    (color: string, type: string) => {
       const calculatedColor = color ? calculateActualColorFromComponentProp(color) : undefined;
 
       return calculatedColor ? calculatedColor : typesShadesColor[type];

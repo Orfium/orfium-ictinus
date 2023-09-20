@@ -7,7 +7,10 @@ import { LoaderType } from './Loader';
 
 export const loaderTypes = ['dots', 'indeterminate', 'spinner'] as const;
 
-const loadersConfig = (dataTestId?: string, color?: string): Record<LoaderType, JSX.Element> => ({
+const loadersConfig = (
+  dataTestId?: string,
+  color?: string
+): Record<LoaderType, React.ReactElement> => ({
   dots: <DotsLoader dataTestId={dataTestId} color={color} />,
   indeterminate: <IndeterminateLoader dataTestId={dataTestId} color={color} />,
   spinner: <Spinner dataTestId={dataTestId} color={color} />,

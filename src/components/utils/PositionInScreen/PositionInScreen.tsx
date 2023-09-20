@@ -1,5 +1,6 @@
 import { CSSObject } from '@emotion/serialize';
 import React, { useRef } from 'react';
+import { ReactFCC } from 'utils/types';
 
 import { useWrapperWidth, usePositionInScreen } from './hooks';
 import { container, itemContainer } from './PositionInScreen.style';
@@ -16,7 +17,7 @@ type Props = {
   /** Additional offset-y */
   offsetY?: number;
   /** The parent element */
-  parent: JSX.Element;
+  parent: React.ReactElement;
   /** Sx prop to override specific properties */
   sx?: {
     container?: CSSObject;
@@ -24,7 +25,7 @@ type Props = {
   };
 };
 
-const PositionInScreen: React.FC<Props> = ({
+const PositionInScreen: ReactFCC<Props> = ({
   visible,
   parent,
   withOverflow,

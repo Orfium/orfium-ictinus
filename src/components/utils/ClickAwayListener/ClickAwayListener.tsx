@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { ReactFCC } from 'utils/types';
 
 const useClickAwayListener = (ref: React.MutableRefObject<any>, onClick: () => void) => {
   const handleClickOutside = (event: any) => {
@@ -25,7 +26,7 @@ type Props = {
   cssStyles?: { [key: string]: unknown };
 };
 
-const ClickAwayListener: React.FC<Props> = ({
+const ClickAwayListener: ReactFCC<Props> = ({
   onClick,
   CustomHtmlTag = 'div',
   ariaRole = 'button',

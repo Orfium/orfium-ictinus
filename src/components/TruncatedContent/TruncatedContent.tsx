@@ -1,4 +1,5 @@
 import React, { useCallback, useMemo, useRef, useState } from 'react';
+import { ReactFCC } from 'utils/types';
 
 import { TruncationDiv } from './TruncatedContent.style';
 import Tooltip from 'components/Tooltip';
@@ -12,7 +13,7 @@ type Props = {
   placement?: 'top' | 'bottom' | 'right' | 'left';
 };
 
-const TruncatedContent: React.FC<Props> = ({
+const TruncatedContent: ReactFCC<Props> = ({
   children,
   shouldAlwaysShow = false,
   tooltipContent,

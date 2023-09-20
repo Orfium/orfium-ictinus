@@ -3,9 +3,10 @@ import React, { useRef } from 'react';
 import { ButtonProps } from 'utils/common';
 import { TestProps } from 'utils/types';
 
-import ButtonBase, { Props as ButtonBaseProps } from '../ButtonBase/ButtonBase';
 import { buttonSpanStyle, childrenWrapperStyle, iconStyle } from './Button.style';
 import ButtonLoader from './ButtonLoader';
+import ButtonBase, { Props as ButtonBaseProps } from '../ButtonBase/ButtonBase';
+import Icon from '../Icon';
 
 export type Props = ButtonBaseProps & TestProps & onClickProp;
 type onClickProp = { onClick: ClickHandler };
@@ -59,5 +60,4 @@ const Button = React.forwardRef<HTMLButtonElement, Props & ButtonProps>((props, 
   );
 });
 Button.displayName = 'Button';
-
 export default Button;

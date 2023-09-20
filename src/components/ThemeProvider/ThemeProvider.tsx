@@ -4,13 +4,13 @@ import { ThemeSwitchProvider, useThemeSwitch } from 'hooks/useThemeSwitch';
 import { keys, merge, pick } from 'lodash';
 import React from 'react';
 import theme, { Theme, ThemeConfig } from 'theme';
+import { DeepPartial, ReactFCC } from 'utils/types';
 
+import { globalStyles } from './ThemeProvider.style';
 import { TypeColorToColorMatchProvider } from '../../hooks/useTypeColorToColorMatch';
 import { ColorScheme } from '../../theme/types';
 import { enhancePaletteWithShades } from '../../theme/utils';
-import { DeepPartial } from '../../utils/types';
 import 'utils/initLocaleFormat';
-import { globalStyles } from './ThemeProvider.style';
 
 type Props = {
   /** Theme properties to override or pass theming down to library */
@@ -20,7 +20,7 @@ type Props = {
 const deepMergeTheme = (newTheme: DeepPartial<Theme>, theming: 'dark' | 'light'): Theme =>
   merge(theme(theming), pick(newTheme, keys(theme(theming))));
 
-const ThemeProvider: React.FC<Props> = ({ theme = {}, children }) => {
+const ThemeProvider: ReactFCC<Props> = ({ theme = {}, children }) => {
   return (
     <ThemeSwitchProvider>
       <ThemeProviderContents theme={theme}>{children}</ThemeProviderContents>
@@ -28,7 +28,7 @@ const ThemeProvider: React.FC<Props> = ({ theme = {}, children }) => {
   );
 };
 
-const ThemeProviderContents: React.FC<Props> = ({ theme = {}, children }) => {
+const ThemeProviderContents: ReactFCC<Props> = ({ theme = {}, children }) => {
   const themeSwitchState = useThemeSwitch();
   const colorScheme = themeSwitchState.dark ? 'dark' : ('light' as ColorScheme);
   const newTheme = {

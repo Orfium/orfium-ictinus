@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 
-const Tippy: React.FC<{ content: string }> = props => {
+const Tippy = (props: PropsWithChildren<{ content: string }>) => {
   const { children, content, ...rest } = props;
 
   return (

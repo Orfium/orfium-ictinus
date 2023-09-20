@@ -14,7 +14,7 @@ export const generateTestDataId = (defaultId: TestId, customId?: TestId) =>
 export function isComponentFunctionType(
   // TODO this must be fixed @Panagiotis
   // eslint-disable-next-line @typescript-eslint/ban-types
-  element: string | number | JSX.Element | Function
+  element: string | number | React.ReactElement | Function
   // eslint-disable-next-line @typescript-eslint/ban-types
 ): element is Function {
   return typeof element === 'function' && React.isValidElement(element());
@@ -22,9 +22,7 @@ export function isComponentFunctionType(
 
 /**  A function that retrieves the correct date format based on system's locale */
 export const getLocaleFormat = (dateFormat: string | undefined) => {
-  const localeFormat = dayjs()
-    ?.localeData()
-    ?.longDateFormat('L');
+  const localeFormat = dayjs()?.localeData()?.longDateFormat('L');
 
   return dateFormat ? dateFormat : localeFormat;
 };

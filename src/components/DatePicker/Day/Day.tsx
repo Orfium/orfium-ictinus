@@ -2,8 +2,8 @@ import { Dayjs } from 'dayjs';
 import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
 import React from 'react';
 
-import { currentDay } from '../utils';
 import { dayStyle, dayWrapperStyle, emptyDayStyle } from './Day.style';
+import { currentDay } from '../utils';
 
 export type Props = {
   day?: number;
@@ -39,7 +39,7 @@ const Day: React.FC<Props> = ({
   }, [year, month, day]);
 
   const onDayClick = React.useCallback(
-    (e) => {
+    (e: React.MouseEvent) => {
       e.preventDefault();
       if (onSelect && date) {
         onSelect(date);
