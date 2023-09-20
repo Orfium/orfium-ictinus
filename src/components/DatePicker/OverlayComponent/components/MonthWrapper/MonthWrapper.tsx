@@ -54,6 +54,8 @@ const MonthWrapper = ({
 }: MonthWrapperProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const isFirstCalendar = !(showedArrows === 'right');
+
   const years = useMemo(() => generateArrayOfYears(date), [date]);
 
   const listRef = useRef<HTMLUListElement | null>(null);
@@ -154,6 +156,7 @@ const MonthWrapper = ({
           onDaySelect={onDaySelect}
           selectedDays={selectedDays}
           disabledDates={disabledDates}
+          isFirstCalendar={isFirstCalendar}
         />
       </div>
     </React.Fragment>
