@@ -64,6 +64,7 @@ const Day: React.FC<Props> = ({
           isToday,
           disabled,
         })}
+        data-testid={`${day}_${month + 1}_${year}` + `${isSelected ? '_selected' : ''}`}
       >
         <div
           css={dayStyle({

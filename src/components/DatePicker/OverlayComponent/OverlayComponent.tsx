@@ -4,7 +4,6 @@ import { useCallback, useState } from 'react';
 
 import Button from '../../Button';
 import { DisabledDates, ExtraOption } from '../DatePicker';
-import { currentDay } from '../utils';
 import MonthWrapper from './components/MonthWrapper/MonthWrapper';
 import {
   buttonsMonthsWrapperStyle,
@@ -14,6 +13,7 @@ import {
   optionsWrapperStyle,
   overlayWrapperStyle,
 } from './OverlayComponent.style';
+import { getLeftCalendarDate, getRightCalendarDate } from './utils';
 
 type Props = {
   selectedOption?: string;
@@ -31,6 +31,7 @@ export type Range = {
   from?: Dayjs;
   to?: Dayjs;
 };
+
 const OverlayComponent: React.FC<Props> = ({
   selectedOption,
   setSelectedOption = () => {},
@@ -42,8 +43,8 @@ const OverlayComponent: React.FC<Props> = ({
   onCancel = () => {},
   onApply = () => {},
 }) => {
-  const [date, setDate] = useState(currentDay);
-  const [date2, setDate2] = useState(currentDay);
+  const [date, setDate] = useState(getLeftCalendarDate(selectedDays));
+  const [date2, setDate2] = useState(getRightCalendarDate(selectedDays));
 
   const handleArrow = useCallback(
     (direction: 'forward' | 'back' = 'back') => {
@@ -83,7 +84,7 @@ const OverlayComponent: React.FC<Props> = ({
 
           {isRangePicker && (
             <MonthWrapper
-              date={date2.month(date2.month() + 1)}
+              date={date2}
               onDaySelect={onDaySelect}
               selectedDays={selectedDays}
               setDate={setDate2}
