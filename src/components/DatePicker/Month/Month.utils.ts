@@ -78,3 +78,29 @@ export const calculateSelectedDay = (
 
   return [from?.format('D,M,YYYY'), to?.format('D,M,YYYY')].includes(date.format('D,M,YYYY'));
 };
+
+export const getNumWeeksForMonth = (year: number, month: number): number => {
+  // Create a date object for the first day of the month
+  const firstDayOfMonth = new Date(year, month, 1);
+
+  // Get the day of the week for the first day (0 = Monday, 1 = Tuesday, ..., 6 = Sunday)
+  const firstDayOfWeek = (firstDayOfMonth.getDay() + 6) % 7; // Adjusting the index to start from Monday
+
+  // Calculate the number of days in the month
+  const lastDayOfMonth = new Date(year, month + 1, 0);
+  const totalDaysInMonth = lastDayOfMonth.getDate();
+
+  // Calculate the number of days needed to complete the first week
+  const daysToCompleteFirstWeek = 7 - firstDayOfWeek;
+
+  // Calculate the number of remaining days after completing the first week
+  const remainingDays = totalDaysInMonth - daysToCompleteFirstWeek;
+
+  // Calculate the number of additional weeks needed for the remaining days
+  const additionalWeeks = Math.ceil(remainingDays / 7);
+
+  // Total weeks needed, including the first partial week
+  const totalWeeks = 1 + additionalWeeks;
+
+  return totalWeeks;
+};
