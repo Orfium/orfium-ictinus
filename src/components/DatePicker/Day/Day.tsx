@@ -47,6 +47,15 @@ const Day: React.FC<DayProps> = ({
     [onSelect, date]
   );
 
+  const onKeyDown = React.useCallback(
+    (e) => {
+      if (e.code === 'Enter' && !isDisabled) {
+        onDayClick(e);
+      }
+    },
+    [isDisabled, onDayClick]
+  );
+
   if (!day) {
     return <td css={emptyDayStyle({ isBetween })} />;
   }
@@ -64,11 +73,7 @@ const Day: React.FC<DayProps> = ({
         })}
         tabIndex={tabIndex}
         data-testid={`${day}_${month + 1}_${year}` + `${isSelected ? '_selected' : ''}`}
-        onKeyDown={(e) => {
-          if (e.code === 'Enter' && !isDisabled) {
-            onDayClick(e);
-          }
-        }}
+        onKeyDown={onKeyDown}
       >
         <div
           css={dayStyle({

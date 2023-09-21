@@ -1,7 +1,7 @@
 import { useKeyboard } from '@react-aria/interactions';
 import { KeyboardEvent } from 'react';
 
-export const KEYBOARD_EVENT_KEYS = {
+const KEYBOARD_EVENT_KEYS = {
   ArrowUp: 'ArrowUp',
   ArrowDown: 'ArrowDown',
   ArrowRight: 'ArrowRight',
@@ -29,7 +29,6 @@ type Props = {
 const useKeyboardEvents = ({ events: { keydown } }: Props) => {
   const { keyboardProps } = useKeyboard({
     onKeyDown: (event) => {
-      console.log('event:', event);
       const target = event.target as HTMLInputElement;
       const text = target.value;
       switch (event.key) {

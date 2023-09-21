@@ -5,7 +5,6 @@ import React from 'react';
 import { fireEvent, render } from '../../test';
 import DatePicker from './DatePicker';
 import { currentDay } from './utils';
-import { act } from '@testing-library/react-hooks';
 
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
@@ -179,8 +178,8 @@ describe('DatePicker', () => {
     await waitFor(() => expect(applyButton).not.toBeInTheDocument());
   });
 
-  it('should navigate through the month days when arrows are clicked', () => {
-    const { getByTestId, debug } = render(
+  it('should navigate through the month days when arrows are clicked', async () => {
+    const { getByTestId, findByTestId } = render(
       <DatePicker
         value={{
           from: currentDay.toDate(),
@@ -221,16 +220,14 @@ describe('DatePicker', () => {
       charCode: 39,
     });
 
-    fireEvent.keyDown(calendarTable, {
-      key: 'ArrowLeft',
-      code: 'ArrowLeft',
-      charCode: 37,
-    });
+    const selectedDayElements = calendarTable.querySelectorAll(`div[tabindex = "0"]`);
+    /** Make sure that only one day is focused */
+    expect(selectedDayElements.length).toBe(1);
 
-    fireEvent.keyDown(calendarTable, { key: 'Enter', code: 'Enter', charCode: 13 });
+    fireEvent.keyDown(selectedDayElements[0], { key: 'Enter', code: 'Enter', charCode: 13 });
 
     /** Clicked keys path should lead to the following day being selected*/
-    const newSelectedDay = getByTestId('4_11_2020_selected');
+    const newSelectedDay = await findByTestId('5_11_2020_selected');
     expect(newSelectedDay).toBeInTheDocument();
   });
 
