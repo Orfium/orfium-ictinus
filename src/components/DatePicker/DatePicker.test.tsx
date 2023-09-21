@@ -5,6 +5,7 @@ import React from 'react';
 import { fireEvent, render } from '../../test';
 import DatePicker from './DatePicker';
 import { currentDay } from './utils';
+import { act } from '@testing-library/react-hooks';
 
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
@@ -178,12 +179,12 @@ describe('DatePicker', () => {
     await waitFor(() => expect(applyButton).not.toBeInTheDocument());
   });
 
-  it('should navigate through the month days when arrows are clicked', async () => {
-    const { getByTestId } = render(
+  it('should navigate through the month days when arrows are clicked', () => {
+    const { getByTestId, debug } = render(
       <DatePicker
         value={{
           from: currentDay.toDate(),
-          to: currentDay.add(1, 'day').toDate(),
+          to: currentDay.toDate(),
         }}
       />
     );
@@ -191,30 +192,42 @@ describe('DatePicker', () => {
     const calendarButton = getByTestId('calendar_button');
     fireEvent.click(calendarButton);
 
+    const calendarTable = getByTestId('calendar_table');
+
     const selectedDay = getByTestId('3_11_2020_selected');
     expect(selectedDay).toHaveFocus();
 
-    fireEvent.keyDown(document, {
+    fireEvent.keyDown(calendarTable, {
       key: 'ArrowDown',
+      code: 'ArrowDown',
+      charCode: 40,
     });
 
-    fireEvent.keyDown(document, {
+    fireEvent.keyDown(calendarTable, {
       key: 'ArrowRight',
+      code: 'ArrowRight',
+      charCode: 39,
     });
 
-    fireEvent.keyDown(document, {
+    fireEvent.keyDown(calendarTable, {
       key: 'ArrowUp',
+      code: 'ArrowUp',
+      charCode: 38,
     });
 
-    fireEvent.keyDown(document, {
+    fireEvent.keyDown(calendarTable, {
       key: 'ArrowRight',
+      code: 'ArrowRight',
+      charCode: 39,
     });
 
-    fireEvent.keyDown(document, {
+    fireEvent.keyDown(calendarTable, {
       key: 'ArrowLeft',
+      code: 'ArrowLeft',
+      charCode: 37,
     });
 
-    fireEvent.keyDown(document, { key: 'Enter', code: 'Enter', charCode: 13 });
+    fireEvent.keyDown(calendarTable, { key: 'Enter', code: 'Enter', charCode: 13 });
 
     /** Clicked keys path should lead to the following day being selected*/
     const newSelectedDay = getByTestId('4_11_2020_selected');
