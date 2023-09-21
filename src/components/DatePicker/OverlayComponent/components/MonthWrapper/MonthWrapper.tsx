@@ -54,7 +54,7 @@ const MonthWrapper = ({
 }: MonthWrapperProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const isFirstCalendar = !(showedArrows === 'right');
+  const isFirstCalendar = showedArrows !== 'right';
 
   const years = useMemo(() => generateArrayOfYears(date), [date]);
 
@@ -77,16 +77,6 @@ const MonthWrapper = ({
         },
         onEscape: () => {
           setIsOpen(false);
-        },
-        onEnter: (text) => {
-          if (text.length > 0) {
-            setTimeout(() => {
-              const firstChild = listRef.current?.firstChild;
-              if (firstChild instanceof HTMLElement && typeof firstChild.click === 'function') {
-                firstChild.click();
-              }
-            }, 0);
-          }
         },
       },
     },
@@ -115,6 +105,7 @@ const MonthWrapper = ({
             <div css={monthHeaderTitleWrapperStyle()}>
               <div
                 css={monthHeaderTitleStyle({ isRangePicker })}
+                data-testid="month_header"
                 {...(!isRangePicker ? keyboardProps : {})}
               >
                 <Button

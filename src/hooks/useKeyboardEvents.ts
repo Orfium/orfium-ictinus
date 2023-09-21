@@ -1,7 +1,7 @@
 import { useKeyboard } from '@react-aria/interactions';
 import { KeyboardEvent } from 'react';
 
-const KEYBOARD_EVENT_KEYS = {
+export const KEYBOARD_EVENT_KEYS = {
   ArrowUp: 'ArrowUp',
   ArrowDown: 'ArrowDown',
   ArrowRight: 'ArrowRight',

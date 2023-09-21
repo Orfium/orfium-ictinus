@@ -4,7 +4,7 @@ import React from 'react';
 
 import { fireEvent, render } from '../../test';
 import DatePicker from './DatePicker';
-import { currentDay } from './utils';
+import { currentDay, navigateOnElement } from './utils';
 
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
@@ -196,29 +196,22 @@ describe('DatePicker', () => {
     const selectedDay = getByTestId('3_11_2020_selected');
     expect(selectedDay).toHaveFocus();
 
-    fireEvent.keyDown(calendarTable, {
-      key: 'ArrowDown',
-      code: 'ArrowDown',
-      charCode: 40,
-    });
-
-    fireEvent.keyDown(calendarTable, {
-      key: 'ArrowRight',
-      code: 'ArrowRight',
-      charCode: 39,
-    });
-
-    fireEvent.keyDown(calendarTable, {
-      key: 'ArrowUp',
-      code: 'ArrowUp',
-      charCode: 38,
-    });
-
-    fireEvent.keyDown(calendarTable, {
-      key: 'ArrowRight',
-      code: 'ArrowRight',
-      charCode: 39,
-    });
+    navigateOnElement(calendarTable, [
+      'ArrowUp',
+      'ArrowLeft',
+      'ArrowLeft',
+      'ArrowLeft',
+      'ArrowLeft',
+      'ArrowDown',
+      'ArrowDown',
+      'ArrowDown',
+      'ArrowDown',
+      'ArrowDown',
+      'ArrowRight',
+      'ArrowRight',
+      'ArrowRight',
+      'ArrowUp',
+    ]);
 
     const selectedDayElements = calendarTable.querySelectorAll(`div[tabindex = "0"]`);
     /** Make sure that only one day is focused */
@@ -227,7 +220,7 @@ describe('DatePicker', () => {
     fireEvent.keyDown(selectedDayElements[0], { key: 'Enter', code: 'Enter', charCode: 13 });
 
     /** Clicked keys path should lead to the following day being selected*/
-    const newSelectedDay = await findByTestId('5_11_2020_selected');
+    const newSelectedDay = await findByTestId('23_11_2020_selected');
     expect(newSelectedDay).toBeInTheDocument();
   });
 

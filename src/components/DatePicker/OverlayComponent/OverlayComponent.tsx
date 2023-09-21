@@ -56,7 +56,7 @@ const OverlayComponent: React.FC<OverlayComponentProps> = ({
 
   return (
     <div css={overlayWrapperStyle()}>
-      <div css={buttonsMonthsWrapperStyle()} data-testid="butonMonthsWrapperStyle">
+      <div css={buttonsMonthsWrapperStyle()} data-testid="buttonMonthsWrapperStyle">
         <div css={{ display: 'flex' }}>
           {extraOptions.length > 0 && isRangePicker && (
             <div css={optionsWrapperStyle()} data-testid="optionsWrapperStyle">
