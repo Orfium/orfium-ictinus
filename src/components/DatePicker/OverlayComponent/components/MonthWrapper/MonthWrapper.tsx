@@ -63,7 +63,6 @@ const MonthWrapper = ({
     events: {
       keydown: {
         onArrowDown: () => {
-          setIsOpen(true);
           // set on diff thread to wait to open
           setTimeout(() => {
             const options = listRef.current?.querySelectorAll('[role="option"]');
@@ -74,9 +73,6 @@ const MonthWrapper = ({
               }
             }
           }, 0);
-        },
-        onEscape: () => {
-          setIsOpen(false);
         },
       },
     },

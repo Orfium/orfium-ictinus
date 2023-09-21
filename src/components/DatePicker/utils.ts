@@ -34,7 +34,7 @@ export const navigateOnElement = (
   element: HTMLElement,
   path: (keyof typeof KEYBOARD_EVENT_KEYS)[]
 ) => {
-  path.map((key) => {
+  path.forEach((key) => {
     switch (key) {
       case KEYBOARD_EVENT_KEYS.ArrowLeft:
         return clickOnElement(element, KEYBOARD_EVENT_KEYS.ArrowLeft, 37);
