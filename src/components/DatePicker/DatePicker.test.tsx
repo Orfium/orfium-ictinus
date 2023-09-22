@@ -4,7 +4,7 @@ import React from 'react';
 
 import { fireEvent, render } from '../../test';
 import DatePicker from './DatePicker';
-import { currentDay } from './utils';
+import { currentDay, navigateOnElement } from './utils';
 
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
@@ -140,11 +140,6 @@ describe('DatePicker', () => {
       />
     );
 
-    console.log('initial', {
-      from: currentDay.month(currentDay.month() - 1).toDate(),
-      to: currentDay.add(1, 'day').toDate(),
-    });
-
     const calendarButton = getByTestId('calendar_button');
     fireEvent.click(calendarButton);
 
@@ -181,6 +176,52 @@ describe('DatePicker', () => {
     fireEvent.keyDown(input, { key: 'Escape', keyCode: 27 });
 
     await waitFor(() => expect(applyButton).not.toBeInTheDocument());
+  });
+
+  it('should navigate through the month days when arrows are clicked', async () => {
+    const { getByTestId, findByTestId } = render(
+      <DatePicker
+        value={{
+          from: currentDay.toDate(),
+          to: currentDay.toDate(),
+        }}
+      />
+    );
+
+    const calendarButton = getByTestId('calendar_button');
+    fireEvent.click(calendarButton);
+
+    const calendarTable = getByTestId('calendar_table');
+
+    const selectedDay = getByTestId('3_11_2020_selected');
+    expect(selectedDay).toHaveFocus();
+
+    navigateOnElement(calendarTable, [
+      'ArrowUp',
+      'ArrowLeft',
+      'ArrowLeft',
+      'ArrowLeft',
+      'ArrowLeft',
+      'ArrowDown',
+      'ArrowDown',
+      'ArrowDown',
+      'ArrowDown',
+      'ArrowDown',
+      'ArrowRight',
+      'ArrowRight',
+      'ArrowRight',
+      'ArrowUp',
+    ]);
+
+    const selectedDayElements = calendarTable.querySelectorAll(`div[tabindex = "0"]`);
+    /** Make sure that only one day is focused */
+    expect(selectedDayElements.length).toBe(1);
+
+    fireEvent.keyDown(selectedDayElements[0], { key: 'Enter', code: 'Enter', charCode: 13 });
+
+    /** Clicked keys path should lead to the following day being selected*/
+    const newSelectedDay = await findByTestId('23_11_2020_selected');
+    expect(newSelectedDay).toBeInTheDocument();
   });
 
   it('should handle clearing the selected date', async () => {

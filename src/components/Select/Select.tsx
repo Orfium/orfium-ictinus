@@ -1,4 +1,4 @@
-import useKeyboard from 'hooks/useKeyboarEvents';
+import useKeyboard from 'hooks/useKeyboardEvents';
 import { differenceBy, head } from 'lodash';
 import debounce from 'lodash/debounce';
 import React, { useCallback, useMemo, useRef, useState } from 'react';
@@ -67,7 +67,8 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
 
           handleIconClick();
         },
-        onEnter: (text) => {
+        onEnter: (e) => {
+          const text = (e.target as HTMLInputElement).value;
           if (text.length > 0) {
             setTimeout(() => {
               const firstChild = listRef.current?.firstChild;

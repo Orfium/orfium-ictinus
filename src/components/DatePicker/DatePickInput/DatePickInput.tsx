@@ -86,7 +86,18 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
 
     const renderIconButton = useMemo(
       () => (
-        <div css={iconStyles()} onClick={handleIconClick} data-testid="calendar_button">
+        <div
+          tabIndex={0}
+          css={iconStyles()}
+          onClick={handleIconClick}
+          onKeyDown={(e) => {
+            if (e.code === 'Enter') {
+              handleIconClick();
+            }
+          }}
+          data-testid="calendar_button"
+        >
+          {/** @TODO: Replace this with Interactive Icon once is implemented */}
           <Icon name="calendarEmpty" size={20} color={tokens('addOn.iconColor')} />
         </div>
       ),

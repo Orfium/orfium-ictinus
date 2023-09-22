@@ -4,6 +4,7 @@ import { useCallback } from 'react';
 import * as React from 'react';
 import dayjs, { Dayjs } from 'utils/date';
 
+import useMonthKeyboardNavigation from './hooks/useMonthKeyboardNavigation';
 import { datesWrapperStyle, weekDayStyle, weekDaysWrapperStyle } from './Month.style';
 import {
   calculatedDayIsBetween,
@@ -29,9 +30,17 @@ export type MonthProps = {
   onDaySelect?: (date: Dayjs) => void;
   selectedDays: Range;
   disabledDates?: DisabledDates;
+  isFirstCalendar?: boolean;
 };
 
-const Month: React.FC<MonthProps> = ({ year, month, onDaySelect, selectedDays, disabledDates }) => {
+const Month: React.FC<MonthProps> = ({
+  year,
+  month,
+  onDaySelect,
+  selectedDays,
+  disabledDates,
+  isFirstCalendar,
+}) => {
   const weeksWithDays = React.useMemo<WeekRow[]>(() => {
     const monthDate = currentDay.month(month).year(year).date(1);
     const daysOfMonth = monthDate.daysInMonth();
@@ -61,6 +70,13 @@ const Month: React.FC<MonthProps> = ({ year, month, onDaySelect, selectedDays, d
   const calculateIsBetween = useCallback(calculatedDayIsBetween, []);
   const calculateSelectedDayFirstOrLast = useCallback(calculateSelectedDayPosition, []);
 
+  const { focusedDay, setFocusedDay, calendarRef, keyboardProps } = useMonthKeyboardNavigation({
+    selectedDays,
+    isFirstCalendar,
+    month,
+    year,
+  });
+
   return (
     <React.Fragment>
       <div css={weekDaysWrapperStyle()}>
@@ -70,7 +86,18 @@ const Month: React.FC<MonthProps> = ({ year, month, onDaySelect, selectedDays, d
           </div>
         ))}
       </div>
-      <table css={datesWrapperStyle()}>
+      <table
+        css={datesWrapperStyle()}
+        ref={calendarRef}
+        tabIndex={0}
+        data-testid={'calendar_table'}
+        {...keyboardProps}
+        onFocus={() => {
+          if (focusedDay === 0) {
+            setFocusedDay(1);
+          }
+        }}
+      >
         <tbody>
           {weeksWithDays.map((week, weekIndex) => (
             <tr
@@ -81,6 +108,7 @@ const Month: React.FC<MonthProps> = ({ year, month, onDaySelect, selectedDays, d
                 <Day
                   // eslint-disable-next-line react/no-array-index-key
                   key={`${year}-${month}-${weekIndex}-${dayIndex}-day`}
+                  tabIndex={focusedDay === day ? 0 : -1}
                   year={year}
                   month={month}
                   day={day}

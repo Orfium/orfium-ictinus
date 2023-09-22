@@ -1,7 +1,8 @@
 import { useKeyboard } from '@react-aria/interactions';
 import { KeyboardEvent } from 'react';
 
-const KEYBOARD_EVENT_KEYS = {
+export const KEYBOARD_EVENT_KEYS = {
+  ArrowUp: 'ArrowUp',
   ArrowDown: 'ArrowDown',
   ArrowRight: 'ArrowRight',
   ArrowLeft: 'ArrowLeft',
@@ -15,21 +16,30 @@ export type KeyboardArrowHorizontalDirection = 'left' | 'right';
 type Props = {
   events: {
     keydown: {
+      onArrowUp?: (e: KeyboardEvent) => void;
       onArrowDown?: (e: KeyboardEvent) => void;
       onEscape?: () => void;
-      onEnter?: (text: string) => void;
+      onEnter?: (e: KeyboardEvent) => void;
       onAlphaNumerical?: () => void;
       onBackspace?: (text: string) => void;
       onArrowMove?: (text: string, direction: KeyboardArrowHorizontalDirection) => void;
     };
   };
+  hasPropagation?: boolean;
 };
-const useKeyboarEvents = ({ events: { keydown } }: Props) => {
+const useKeyboardEvents = ({ events: { keydown }, hasPropagation = false }: Props) => {
   const { keyboardProps } = useKeyboard({
     onKeyDown: (event) => {
+      if (hasPropagation) {
+        event.continuePropagation();
+      }
       const target = event.target as HTMLInputElement;
       const text = target.value;
       switch (event.key) {
+        case KEYBOARD_EVENT_KEYS.ArrowUp:
+          event.preventDefault();
+          keydown.onArrowUp && keydown.onArrowUp(event);
+          break;
         case KEYBOARD_EVENT_KEYS.ArrowDown:
           event.preventDefault();
           keydown.onArrowDown && keydown.onArrowDown(event);
@@ -44,7 +54,7 @@ const useKeyboarEvents = ({ events: { keydown } }: Props) => {
           keydown.onEscape && keydown.onEscape();
           break;
         case KEYBOARD_EVENT_KEYS.Enter:
-          keydown.onEnter && keydown.onEnter(text);
+          keydown.onEnter && keydown.onEnter(event);
           break;
         case KEYBOARD_EVENT_KEYS.Backspace:
           keydown.onBackspace && keydown.onBackspace(text);
@@ -65,4 +75,4 @@ const useKeyboarEvents = ({ events: { keydown } }: Props) => {
   };
 };
 
-export default useKeyboarEvents;
+export default useKeyboardEvents;

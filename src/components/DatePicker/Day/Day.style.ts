@@ -45,6 +45,11 @@ export const dayWrapperStyle =
       border-bottom-left-radius: ${isFirst && isSelected && '100%'};
       border-top-left-radius: ${isFirst && isSelected && '100%'};
 
+      &:focus-visible {
+        background-color: ${tokens('backgroundColor.focused')};
+        border-radius: ${tokens('borderRadius.2')};
+      }
+
       ${(isSelected || isLast || isFirst) &&
       `&:after {
           z-index: -1;

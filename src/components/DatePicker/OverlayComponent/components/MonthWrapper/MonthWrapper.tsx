@@ -1,5 +1,6 @@
-import { range } from 'lodash';
-import React, { useMemo, useState } from 'react';
+import useKeyboardEvents from 'hooks/useKeyboardEvents';
+import { head, range } from 'lodash';
+import React, { useMemo, useRef, useState } from 'react';
 import { Dayjs } from 'utils/date';
 
 import {
@@ -53,7 +54,30 @@ const MonthWrapper = ({
 }: MonthWrapperProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const isFirstCalendar = showedArrows !== 'right';
+
   const years = useMemo(() => generateArrayOfYears(date), [date]);
+
+  const listRef = useRef<HTMLUListElement | null>(null);
+  const { keyboardProps } = useKeyboardEvents({
+    events: {
+      keydown: {
+        onArrowDown: () => {
+          // set on diff thread to wait to open
+          setTimeout(() => {
+            const options = listRef.current?.querySelectorAll('[role="option"]');
+            if (options && options?.length > 0) {
+              const firstOption = head(options);
+              if (firstOption instanceof HTMLElement && typeof firstOption.focus === 'function') {
+                firstOption.focus();
+              }
+            }
+          }, 0);
+        },
+      },
+    },
+    hasPropagation: true,
+  });
 
   return (
     <React.Fragment>
@@ -76,7 +100,11 @@ const MonthWrapper = ({
             }}
           >
             <div css={monthHeaderTitleWrapperStyle()}>
-              <div css={monthHeaderTitleStyle({ isRangePicker })}>
+              <div
+                css={monthHeaderTitleStyle({ isRangePicker })}
+                data-testid="month_header"
+                {...(!isRangePicker ? keyboardProps : {})}
+              >
                 <Button
                   onClick={!isRangePicker ? () => setIsOpen(!isOpen) : undefined}
                   type="tertiary"
@@ -87,6 +115,7 @@ const MonthWrapper = ({
               </div>
               {isOpen && (
                 <SelectMenu
+                  ref={listRef}
                   filteredOptions={years}
                   handleOptionClick={(e) => {
                     setDate(date.year(Number(e.value)));
@@ -115,6 +144,7 @@ const MonthWrapper = ({
           onDaySelect={onDaySelect}
           selectedDays={selectedDays}
           disabledDates={disabledDates}
+          isFirstCalendar={isFirstCalendar}
         />
       </div>
     </React.Fragment>
