@@ -67,7 +67,8 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
 
           handleIconClick();
         },
-        onEnter: (text) => {
+        onEnter: (e) => {
+          const text = (e.target as HTMLInputElement).value;
           if (text.length > 0) {
             setTimeout(() => {
               const firstChild = listRef.current?.firstChild;

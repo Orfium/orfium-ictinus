@@ -306,60 +306,64 @@ exports[`Storyshots Design System/DatePicker DatePicker 1`] = `
       >
         <div>
           <div
-            className="emotion-3"
+            onKeyDown={[Function]}
           >
-            <div>
-              <div
-                onClick={[Function]}
-              >
+            <div
+              className="emotion-3"
+            >
+              <div>
                 <div
-                  className="emotion-4"
+                  onClick={[Function]}
                 >
                   <div
-                    className="emotion-5"
+                    className="emotion-4"
                   >
                     <div
-                      className="emotion-6"
-                    >
-                      <input
-                        aria-invalid={false}
-                        className="emotion-7"
-                        data-testid="input"
-                        disabled={false}
-                        id="textfield__00"
-                        onChange={[Function]}
-                        onKeyDown={[Function]}
-                        placeholder="Select Date"
-                        required={false}
-                        value="11/03/2020"
-                      />
-                      <label
-                        className="emotion-8"
-                        htmlFor="textfield__00"
-                      >
-                        Select Date
-                         
-                      </label>
-                    </div>
-                    <div
-                      aria-hidden={false}
-                      className="emotion-9"
+                      className="emotion-5"
                     >
                       <div
-                        className="emotion-10"
-                        data-testid="calendar_button"
-                        onClick={[Function]}
-                        onKeyDown={[Function]}
-                        tabIndex={0}
+                        className="emotion-6"
                       >
-                        <span
-                          className="emotion-11"
+                        <input
+                          aria-invalid={false}
+                          className="emotion-7"
+                          data-testid="input"
+                          disabled={false}
+                          id="textfield__00"
+                          onChange={[Function]}
+                          onKeyDown={[Function]}
+                          placeholder="Select Date"
+                          required={false}
+                          value="11/03/2020"
+                        />
+                        <label
+                          className="emotion-8"
+                          htmlFor="textfield__00"
+                        >
+                          Select Date
+                           
+                        </label>
+                      </div>
+                      <div
+                        aria-hidden={false}
+                        className="emotion-9"
+                      >
+                        <div
+                          className="emotion-10"
+                          data-testid="calendar_button"
                           onClick={[Function]}
+                          onKeyDown={[Function]}
+                          tabIndex={0}
                         >
                           <span
-                            className="emotion-12"
-                          />
-                        </span>
+                            className="emotion-11"
+                            onClick={[Function]}
+                          >
+                            <span
+                              className="emotion-12"
+                            />
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -655,51 +659,55 @@ exports[`Storyshots Design System/DatePicker DatePicker with Filter 1`] = `
       >
         <div>
           <div
-            className="emotion-3"
+            onKeyDown={[Function]}
           >
-            <div>
-              <div
-                className="emotion-4"
-                data-testid="filter"
-              >
-                <button
-                  className="emotion-5"
-                  data-testid="filter-filter"
-                  disabled={false}
-                  onClick={[Function]}
+            <div
+              className="emotion-3"
+            >
+              <div>
+                <div
+                  className="emotion-4"
+                  data-testid="filter"
                 >
-                  <div
-                    className="emotion-6"
+                  <button
+                    className="emotion-5"
+                    data-testid="filter-filter"
+                    disabled={false}
+                    onClick={[Function]}
                   >
                     <div
-                      className="emotion-7"
+                      className="emotion-6"
                     >
                       <div
-                        className="emotion-8"
+                        className="emotion-7"
                       >
-                        <span
-                          className="emotion-9"
+                        <div
+                          className="emotion-8"
                         >
-                          <div
-                            data-testid="filter-label"
+                          <span
+                            className="emotion-9"
                           >
-                            Select Dates
-                             
-                            
-                          </div>
+                            <div
+                              data-testid="filter-label"
+                            >
+                              Select Dates
+                               
+                              
+                            </div>
+                          </span>
+                        </div>
+                        <span
+                          className="emotion-10"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="emotion-11"
+                          />
                         </span>
                       </div>
-                      <span
-                        className="emotion-10"
-                        onClick={[Function]}
-                      >
-                        <span
-                          className="emotion-11"
-                        />
-                      </span>
                     </div>
-                  </div>
-                </button>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -714,51 +722,55 @@ exports[`Storyshots Design System/DatePicker DatePicker with Filter 1`] = `
       >
         <div>
           <div
-            className="emotion-3"
+            onKeyDown={[Function]}
           >
-            <div>
-              <div
-                className="emotion-4"
-                data-testid="filter"
-              >
-                <button
-                  className="emotion-14"
-                  data-testid="filter-filter"
-                  disabled={false}
-                  onClick={[Function]}
+            <div
+              className="emotion-3"
+            >
+              <div>
+                <div
+                  className="emotion-4"
+                  data-testid="filter"
                 >
-                  <div
-                    className="emotion-15"
+                  <button
+                    className="emotion-14"
+                    data-testid="filter-filter"
+                    disabled={false}
+                    onClick={[Function]}
                   >
                     <div
-                      className="emotion-7"
+                      className="emotion-15"
                     >
                       <div
-                        className="emotion-8"
+                        className="emotion-7"
                       >
-                        <span
-                          className="emotion-18"
+                        <div
+                          className="emotion-8"
                         >
-                          
                           <span
-                            className="emotion-19"
-                            data-testid="filter-selected-item-label"
+                            className="emotion-18"
                           >
-                            Select Dates : 11/03/2020 - 11/03/2020
+                            
+                            <span
+                              className="emotion-19"
+                              data-testid="filter-selected-item-label"
+                            >
+                              Select Dates : 11/03/2020 - 11/03/2020
+                            </span>
                           </span>
+                        </div>
+                        <span
+                          className="emotion-10"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="emotion-11"
+                          />
                         </span>
                       </div>
-                      <span
-                        className="emotion-10"
-                        onClick={[Function]}
-                      >
-                        <span
-                          className="emotion-11"
-                        />
-                      </span>
                     </div>
-                  </div>
-                </button>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -1075,60 +1087,64 @@ exports[`Storyshots Design System/DatePicker DateRangePicker 1`] = `
       >
         <div>
           <div
-            className="emotion-3"
+            onKeyDown={[Function]}
           >
-            <div>
-              <div
-                onClick={[Function]}
-              >
+            <div
+              className="emotion-3"
+            >
+              <div>
                 <div
-                  className="emotion-4"
+                  onClick={[Function]}
                 >
                   <div
-                    className="emotion-5"
+                    className="emotion-4"
                   >
                     <div
-                      className="emotion-6"
-                    >
-                      <input
-                        aria-invalid={false}
-                        className="emotion-7"
-                        data-testid="input"
-                        disabled={false}
-                        id="textfield__00"
-                        onChange={[Function]}
-                        onKeyDown={[Function]}
-                        placeholder="Enter Date Range"
-                        required={false}
-                        value="11/03/2020 - 11/03/2020"
-                      />
-                      <label
-                        className="emotion-8"
-                        htmlFor="textfield__00"
-                      >
-                        Enter Date Range
-                         
-                      </label>
-                    </div>
-                    <div
-                      aria-hidden={false}
-                      className="emotion-9"
+                      className="emotion-5"
                     >
                       <div
-                        className="emotion-10"
-                        data-testid="calendar_button"
-                        onClick={[Function]}
-                        onKeyDown={[Function]}
-                        tabIndex={0}
+                        className="emotion-6"
                       >
-                        <span
-                          className="emotion-11"
+                        <input
+                          aria-invalid={false}
+                          className="emotion-7"
+                          data-testid="input"
+                          disabled={false}
+                          id="textfield__00"
+                          onChange={[Function]}
+                          onKeyDown={[Function]}
+                          placeholder="Enter Date Range"
+                          required={false}
+                          value="11/03/2020 - 11/03/2020"
+                        />
+                        <label
+                          className="emotion-8"
+                          htmlFor="textfield__00"
+                        >
+                          Enter Date Range
+                           
+                        </label>
+                      </div>
+                      <div
+                        aria-hidden={false}
+                        className="emotion-9"
+                      >
+                        <div
+                          className="emotion-10"
+                          data-testid="calendar_button"
                           onClick={[Function]}
+                          onKeyDown={[Function]}
+                          tabIndex={0}
                         >
                           <span
-                            className="emotion-12"
-                          />
-                        </span>
+                            className="emotion-11"
+                            onClick={[Function]}
+                          >
+                            <span
+                              className="emotion-12"
+                            />
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1449,60 +1465,64 @@ exports[`Storyshots Design System/DatePicker DateRangePicker with options 1`] = 
       >
         <div>
           <div
-            className="emotion-3"
+            onKeyDown={[Function]}
           >
-            <div>
-              <div
-                onClick={[Function]}
-              >
+            <div
+              className="emotion-3"
+            >
+              <div>
                 <div
-                  className="emotion-4"
+                  onClick={[Function]}
                 >
                   <div
-                    className="emotion-5"
+                    className="emotion-4"
                   >
                     <div
-                      className="emotion-6"
-                    >
-                      <input
-                        aria-invalid={false}
-                        className="emotion-7"
-                        data-testid="input"
-                        disabled={false}
-                        id="textfield__00"
-                        onChange={[Function]}
-                        onKeyDown={[Function]}
-                        placeholder="Enter Date Range"
-                        required={false}
-                        value="11/03/2020 - 11/03/2020"
-                      />
-                      <label
-                        className="emotion-8"
-                        htmlFor="textfield__00"
-                      >
-                        Enter Date Range
-                         
-                      </label>
-                    </div>
-                    <div
-                      aria-hidden={false}
-                      className="emotion-9"
+                      className="emotion-5"
                     >
                       <div
-                        className="emotion-10"
-                        data-testid="calendar_button"
-                        onClick={[Function]}
-                        onKeyDown={[Function]}
-                        tabIndex={0}
+                        className="emotion-6"
                       >
-                        <span
-                          className="emotion-11"
+                        <input
+                          aria-invalid={false}
+                          className="emotion-7"
+                          data-testid="input"
+                          disabled={false}
+                          id="textfield__00"
+                          onChange={[Function]}
+                          onKeyDown={[Function]}
+                          placeholder="Enter Date Range"
+                          required={false}
+                          value="11/03/2020 - 11/03/2020"
+                        />
+                        <label
+                          className="emotion-8"
+                          htmlFor="textfield__00"
+                        >
+                          Enter Date Range
+                           
+                        </label>
+                      </div>
+                      <div
+                        aria-hidden={false}
+                        className="emotion-9"
+                      >
+                        <div
+                          className="emotion-10"
+                          data-testid="calendar_button"
                           onClick={[Function]}
+                          onKeyDown={[Function]}
+                          tabIndex={0}
                         >
                           <span
-                            className="emotion-12"
-                          />
-                        </span>
+                            className="emotion-11"
+                            onClick={[Function]}
+                          >
+                            <span
+                              className="emotion-12"
+                            />
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1823,60 +1843,64 @@ exports[`Storyshots Design System/DatePicker DayPicker with disabled dates 1`] =
       >
         <div>
           <div
-            className="emotion-3"
+            onKeyDown={[Function]}
           >
-            <div>
-              <div
-                onClick={[Function]}
-              >
+            <div
+              className="emotion-3"
+            >
+              <div>
                 <div
-                  className="emotion-4"
+                  onClick={[Function]}
                 >
                   <div
-                    className="emotion-5"
+                    className="emotion-4"
                   >
                     <div
-                      className="emotion-6"
-                    >
-                      <input
-                        aria-invalid={false}
-                        className="emotion-7"
-                        data-testid="input"
-                        disabled={false}
-                        id="textfield__00"
-                        onChange={[Function]}
-                        onKeyDown={[Function]}
-                        placeholder="Select Date"
-                        required={false}
-                        value="11/03/2020"
-                      />
-                      <label
-                        className="emotion-8"
-                        htmlFor="textfield__00"
-                      >
-                        Select Date
-                         
-                      </label>
-                    </div>
-                    <div
-                      aria-hidden={false}
-                      className="emotion-9"
+                      className="emotion-5"
                     >
                       <div
-                        className="emotion-10"
-                        data-testid="calendar_button"
-                        onClick={[Function]}
-                        onKeyDown={[Function]}
-                        tabIndex={0}
+                        className="emotion-6"
                       >
-                        <span
-                          className="emotion-11"
+                        <input
+                          aria-invalid={false}
+                          className="emotion-7"
+                          data-testid="input"
+                          disabled={false}
+                          id="textfield__00"
+                          onChange={[Function]}
+                          onKeyDown={[Function]}
+                          placeholder="Select Date"
+                          required={false}
+                          value="11/03/2020"
+                        />
+                        <label
+                          className="emotion-8"
+                          htmlFor="textfield__00"
+                        >
+                          Select Date
+                           
+                        </label>
+                      </div>
+                      <div
+                        aria-hidden={false}
+                        className="emotion-9"
+                      >
+                        <div
+                          className="emotion-10"
+                          data-testid="calendar_button"
                           onClick={[Function]}
+                          onKeyDown={[Function]}
+                          tabIndex={0}
                         >
                           <span
-                            className="emotion-12"
-                          />
-                        </span>
+                            className="emotion-11"
+                            onClick={[Function]}
+                          >
+                            <span
+                              className="emotion-12"
+                            />
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -2173,65 +2197,69 @@ exports[`Storyshots Design System/DatePicker Playground 1`] = `
   >
     <div>
       <div
-        className="emotion-2"
+        onKeyDown={[Function]}
       >
-        <div>
-          <div
-            onClick={[Function]}
-          >
+        <div
+          className="emotion-2"
+        >
+          <div>
             <div
-              className="emotion-3"
+              onClick={[Function]}
             >
               <div
-                className="emotion-4"
+                className="emotion-3"
               >
                 <div
-                  className="emotion-5"
-                >
-                  <input
-                    aria-invalid={false}
-                    className="emotion-6"
-                    data-testid="input"
-                    disabled={false}
-                    id="textfield__00"
-                    onChange={[Function]}
-                    onKeyDown={[Function]}
-                    placeholder="Custom Date"
-                    required={false}
-                    value="11/03/2020"
-                  />
-                  <label
-                    className="emotion-7"
-                    htmlFor="textfield__00"
-                  >
-                    Custom Date
-                     
-                  </label>
-                </div>
-                <div
-                  aria-hidden={false}
-                  className="emotion-8"
+                  className="emotion-4"
                 >
                   <div
-                    className="emotion-9"
-                    data-testid="calendar_button"
-                    onClick={[Function]}
-                    onKeyDown={[Function]}
-                    tabIndex={0}
+                    className="emotion-5"
                   >
-                    <span
-                      className="emotion-10"
+                    <input
+                      aria-invalid={false}
+                      className="emotion-6"
+                      data-testid="input"
+                      disabled={false}
+                      id="textfield__00"
+                      onChange={[Function]}
+                      onKeyDown={[Function]}
+                      placeholder="Custom Date"
+                      required={false}
+                      value="11/03/2020"
+                    />
+                    <label
+                      className="emotion-7"
+                      htmlFor="textfield__00"
+                    >
+                      Custom Date
+                       
+                    </label>
+                  </div>
+                  <div
+                    aria-hidden={false}
+                    className="emotion-8"
+                  >
+                    <div
+                      className="emotion-9"
+                      data-testid="calendar_button"
                       onClick={[Function]}
+                      onKeyDown={[Function]}
+                      tabIndex={0}
                     >
                       <span
-                        className="emotion-11"
-                      />
-                    </span>
+                        className="emotion-10"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="emotion-11"
+                        />
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
+              
             </div>
-            
           </div>
         </div>
       </div>

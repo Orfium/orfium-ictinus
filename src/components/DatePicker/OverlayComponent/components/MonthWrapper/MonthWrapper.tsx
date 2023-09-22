@@ -76,6 +76,7 @@ const MonthWrapper = ({
         },
       },
     },
+    hasPropagation: true,
   });
 
   return (

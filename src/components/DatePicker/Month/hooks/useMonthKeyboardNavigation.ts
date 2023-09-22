@@ -68,6 +68,7 @@ const useMonthKeyboardNavigation = ({ selectedDays, isFirstCalendar, month, year
         },
       },
     },
+    hasPropagation: true,
   });
 
   React.useEffect(() => {

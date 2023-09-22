@@ -19,16 +19,20 @@ type Props = {
       onArrowUp?: (e: KeyboardEvent) => void;
       onArrowDown?: (e: KeyboardEvent) => void;
       onEscape?: () => void;
-      onEnter?: (text: string) => void;
+      onEnter?: (e: KeyboardEvent) => void;
       onAlphaNumerical?: () => void;
       onBackspace?: (text: string) => void;
       onArrowMove?: (text: string, direction: KeyboardArrowHorizontalDirection) => void;
     };
   };
+  hasPropagation?: boolean;
 };
-const useKeyboardEvents = ({ events: { keydown } }: Props) => {
+const useKeyboardEvents = ({ events: { keydown }, hasPropagation = false }: Props) => {
   const { keyboardProps } = useKeyboard({
     onKeyDown: (event) => {
+      if (hasPropagation) {
+        event.continuePropagation();
+      }
       const target = event.target as HTMLInputElement;
       const text = target.value;
       switch (event.key) {
@@ -50,7 +54,7 @@ const useKeyboardEvents = ({ events: { keydown } }: Props) => {
           keydown.onEscape && keydown.onEscape();
           break;
         case KEYBOARD_EVENT_KEYS.Enter:
-          keydown.onEnter && keydown.onEnter(text);
+          keydown.onEnter && keydown.onEnter(event);
           break;
         case KEYBOARD_EVENT_KEYS.Backspace:
           keydown.onBackspace && keydown.onBackspace(text);

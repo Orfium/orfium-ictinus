@@ -1,3 +1,4 @@
+import useKeyboardEvents from 'hooks/useKeyboardEvents';
 import React from 'react';
 import { Dayjs } from 'utils/date';
 
@@ -47,14 +48,18 @@ const Day: React.FC<DayProps> = ({
     [onSelect, date]
   );
 
-  const onKeyDown = React.useCallback(
-    (e) => {
-      if (e.code === 'Enter' && !isDisabled) {
-        onDayClick(e);
-      }
+  const { keyboardProps } = useKeyboardEvents({
+    events: {
+      keydown: {
+        onEnter: (e) => {
+          if (!isDisabled) {
+            onDayClick(e);
+          }
+        },
+      },
     },
-    [isDisabled, onDayClick]
-  );
+    hasPropagation: true,
+  });
 
   if (!day) {
     return <td css={emptyDayStyle({ isBetween })} />;
@@ -73,7 +78,7 @@ const Day: React.FC<DayProps> = ({
         })}
         tabIndex={tabIndex}
         data-testid={`${day}_${month + 1}_${year}` + `${isSelected ? '_selected' : ''}`}
-        onKeyDown={onKeyDown}
+        {...keyboardProps}
       >
         <div
           css={dayStyle({
