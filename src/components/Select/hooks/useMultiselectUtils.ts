@@ -63,6 +63,10 @@ const useMultiselectUtils = ({
         if (!lastItem.isCreated) {
           setAvailableMultiSelectOptions([...availableMultiSelectOptions, lastItem]);
         }
+
+        if (onOptionDelete) {
+          onOptionDelete(lastItem);
+        }
       }
     }
   };

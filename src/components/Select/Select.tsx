@@ -34,7 +34,7 @@ export type SelectOption = {
 
 export type Props = {
   /** The function that is used to return the selected options */
-  handleSelectedOption?: (selectedOption: SelectOption) => void;
+  handleSelectedOption?: (selectedOption?: SelectOption) => void;
   /** the default value of the select if needed */
   /** TODO: defaultValue is duplication of selectedOption*/
   defaultValue?: SelectOption;
@@ -302,6 +302,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
 
       if (isBackspace) {
         setInputValue(emptyValue);
+        handleSelectedOption(undefined);
         debouncedOnChange('');
       }
     };
