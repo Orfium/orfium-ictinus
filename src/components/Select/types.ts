@@ -34,7 +34,7 @@ export type MultiSelectProps = {
 };
 export type SingleSelectProps = {
   /** The function that is used to return the selected options */
-  onChange?: (selectedOption: SelectOption) => void;
+  onChange?: (selectedOption?: SelectOption) => void;
   /** If false the user can select one option */
   isMulti?: never;
   /** the value of the select if select is controlled */
