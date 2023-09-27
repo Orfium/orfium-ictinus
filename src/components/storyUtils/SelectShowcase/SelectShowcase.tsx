@@ -13,6 +13,7 @@ type SelectShowcaseProps = {
 };
 
 const SelectShowcase: React.FC<SelectShowcaseProps> = ({ minCharactersToSearch = 0 }) => {
+  const [selectedOption, setSelectedOption] = useState<SelectOption>();
   const [options, setOptions] = useState<SelectOption[]>(dummyUnrefinedData);
   const [isLoading, setIsLoading] = React.useState(false);
 
@@ -39,6 +40,8 @@ const SelectShowcase: React.FC<SelectShowcaseProps> = ({ minCharactersToSearch =
         isAsync
         label={'Flavour'}
         options={options}
+        selectedOption={selectedOption}
+        onChange={setSelectedOption}
         asyncSearch={mockedApiCall}
         isLoading={isLoading}
         onKeyPress={() => setIsLoading(true)}

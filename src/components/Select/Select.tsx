@@ -23,6 +23,8 @@ import PositionInScreen from 'components/utils/PositionInScreen';
 
 export const emptyValue: SelectOption = { label: '', value: '' };
 
+/** @TODO: Refactor component to reduce Cognitive Complexity */
+
 const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
   const {
     selectedOption,
@@ -81,6 +83,17 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
         onBackspace: () => {
           debouncedOnChange('');
           setIsOpen(true);
+
+          /** When the textField's value equals the selectedOption's label we should clear the field*/
+          if (!isMulti) {
+            if (selectedOption && onChange) {
+              if (selectedOption.label === textFieldValue) {
+                onChange(undefined);
+                setSearchValue('');
+                asyncSearch('');
+              }
+            }
+          }
         },
         onAlphaNumerical: () => {
           if (isSearchable) {
@@ -109,9 +122,15 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
 
   const [searchValue, setSearchValue] = useState('');
 
-  const textFieldValue = Array.isArray(selectedOption)
-    ? searchValue
-    : searchValue || selectedOption?.label;
+  const textFieldValue = useMemo(() => {
+    if (Array.isArray(selectedOption)) return searchValue;
+
+    if (!selectedOption) {
+      return searchValue;
+    }
+
+    return searchValue || selectedOption?.label;
+  }, [searchValue, selectedOption]);
 
   const handleOptionClick = (option: SelectOption) => {
     if (!isMulti) {
@@ -122,17 +141,20 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
       setSearchValue('');
     }
 
-    if (onChange && selectedOption) {
-      if (isMulti) {
+    if (isMulti) {
+      if (onChange && selectedOption) {
         if (isEqual(option, SELECT_ALL_OPTION)) {
           onChange(options.filter((o) => !o.isDisabled));
         } else {
           onChange([...selectedOption, option]);
         }
-      } else {
+      }
+    } else {
+      if (onChange) {
         onChange(option);
       }
     }
+
     combinedRefs.current?.focus();
   };
 
@@ -150,7 +172,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
        * For Multiselect: [for now] when we select an option the SelectMenu closes but the user
        * can still type on the input field (so they must be able to see the SelectMenu)
        */
-      if (!open) {
+      if (!isOpen) {
         setIsOpen(true);
       }
 
@@ -163,7 +185,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
         minCharactersToSearch,
       });
     },
-    [debouncedOnChange, isAsync, isSearchable, minCharactersToSearch]
+    [debouncedOnChange, isAsync, isOpen, isSearchable, minCharactersToSearch]
   );
 
   const filteredOptions = useMemo(() => {
@@ -235,7 +257,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
         if (isMulti) {
           onChange([]);
         } else {
-          onChange(emptyValue);
+          onChange(undefined);
         }
       }
       asyncSearch('');
