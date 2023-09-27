@@ -23,6 +23,8 @@ import PositionInScreen from 'components/utils/PositionInScreen';
 
 export const emptyValue: SelectOption = { label: '', value: '' };
 
+/** @TODO: Refactor component to reduce Cognitive Complexity */
+
 const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
   const {
     selectedOption,
