@@ -67,8 +67,8 @@ export const wrapperStyle =
   ({ isDisabled, status, isInteractive, sx }: Partial<TextInputBaseProps>) =>
   (theme: Theme): SerializedStyles => {
     const colorScheme = theme.colorScheme;
-    const isLocked = status?.type === 'read-only';
-    const hasError = status?.type === 'error';
+    const isLocked = !isDisabled && status?.type === 'read-only';
+    const hasError = !isDisabled && status?.type === 'error';
 
     const tokens = getTextInputBaseTokens(theme);
 
@@ -190,7 +190,7 @@ export const inputStyle =
   };
 
 export const hintMessageStyle =
-  ({ status }: Partial<TextInputBaseProps>) =>
+  ({ status, isDisabled }: Partial<TextInputBaseProps>) =>
   (theme: Theme): SerializedStyles => {
     const tokens = getTextInputBaseTokens(theme);
 
@@ -199,8 +199,9 @@ export const hintMessageStyle =
         display: 'flex',
         alignItems: 'center',
         gap: tokens('hintGap'),
+        opacity: isDisabled ? theme.tokens.disabledState.get('default') : 1,
         color:
-          status?.type === 'error'
+          status?.type === 'error' && !isDisabled
             ? tokens('textColor.errorHintColor')
             : tokens('textColor.inputColorAlt'),
         padding: `${tokens('hintPadding')} 0 0`,

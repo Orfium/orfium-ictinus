@@ -141,7 +141,7 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
               label={label}
               isRequired={isRequired}
               isAnimated={Boolean(rest.value)}
-              hasError={status?.type === 'error'}
+              hasError={!isDisabled && status?.type === 'error'}
             />
           </div>
           {suffixContent && (
