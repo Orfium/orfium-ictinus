@@ -2,8 +2,7 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 
 import { fireEvent, render, screen } from '../../test';
-import TextFieldShowCase from '../storyUtils/TextFieldShowcase/TextFieldShowcase';
-import MaskedTextFieldShowCase from '../storyUtils/MaskedTextFieldShowCase/MaskedTextFieldShowCase';
+import { MultiTextFieldShowcase, TextFieldShowCase } from '../storyUtils/TextFieldShowcases/';
 
 export const values = ['Value 1', 'Value 2'];
 
@@ -13,7 +12,7 @@ describe('Multi TextField', () => {
   let newChip: HTMLElement;
 
   beforeEach(() => {
-    render(<TextFieldShowCase values={values} />);
+    render(<MultiTextFieldShowcase values={values} />);
   });
 
   beforeEach(() => {
@@ -53,7 +52,7 @@ describe('Masked TextField', () => {
   let input: HTMLInputElement;
 
   beforeEach(() => {
-    render(<MaskedTextFieldShowCase mask={'+(999)'} />);
+    render(<TextFieldShowCase mask={'+(999)'} />);
   });
 
   beforeEach(() => {
