@@ -5,13 +5,13 @@ describe('pickCSSProperties', () => {
   it('should pick only the styled box props from the input object', () => {
     const inputObject: BoxProps = {
       color: 'inverted.secondary',
-      backgroundColor: 'light',
+      backgroundColor: 'default',
       id: 'testing-id',
     };
 
     const expectedOutput: BoxProps = {
       color: 'inverted.secondary',
-      backgroundColor: 'light',
+      backgroundColor: 'default',
     };
 
     const result = pickCSSProperties(inputObject);
@@ -46,7 +46,7 @@ describe('pickNonCSSProps', () => {
   it('should pick only the non-CSS props from the input object', () => {
     const inputObject: BoxProps = {
       color: 'inverted.secondary',
-      backgroundColor: 'light',
+      backgroundColor: 'default',
       id: 'testing-id',
     };
 
@@ -62,7 +62,7 @@ describe('pickNonCSSProps', () => {
   it('should return an empty object if all props are CSS props', () => {
     const inputObject: BoxProps = {
       color: 'inverted.secondary',
-      backgroundColor: 'light',
+      backgroundColor: 'default',
     };
 
     const expectedOutput: BoxProps = {};
