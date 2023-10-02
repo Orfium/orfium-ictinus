@@ -43,7 +43,7 @@ const button = {
     },
     textColor: {
       type: 'color',
-      value: '{sem.colors.textColor.light.active}',
+      value: '{sem.colors.textColor.default.active}',
       description: 'Sets text and icon color for secondary button',
     },
   },
@@ -51,22 +51,22 @@ const button = {
     backgroundColor: {
       default: {
         type: 'color',
-        value: '{sem.colors.palette.tertiary.lightest}',
+        value: '{sem.colors.palette.tertiary.default.lightest}',
         description: 'Sets backgroundColor for tertiary default button',
       },
       hover: {
-        value: '{sem.colors.palette.tertiary.light}',
+        value: '{sem.colors.palette.tertiary.default.light}',
         type: 'color',
         description: 'Sets backgroundColor for tertiary hovered button',
       },
       active: {
-        value: '{sem.colors.palette.tertiary.main}',
+        value: '{sem.colors.palette.tertiary.default.main}',
         type: 'color',
         description: 'Sets backgroundColor for tertiary active button',
       },
     },
     textColor: {
-      value: '{sem.colors.textColor.light.active}',
+      value: '{sem.colors.textColor.default.active}',
       type: 'color',
       description: 'Sets text and icon color tertiary button',
     },
@@ -75,16 +75,16 @@ const button = {
     backgroundColor: {
       default: {
         type: 'color',
-        value: '{sem.colors.palette.tertiary.lightest}',
+        value: '{sem.colors.palette.tertiary.default.lightest}',
         description: 'Sets backgroundColor for invertedAlt default button',
       },
       hover: {
-        value: '{sem.colors.palette.tertiary.light}',
+        value: '{sem.colors.palette.tertiary.default.light}',
         type: 'color',
         description: 'Sets backgroundColor for invertedAlt hovered button',
       },
       active: {
-        value: '{sem.colors.palette.tertiary.main}',
+        value: '{sem.colors.palette.tertiary.default.main}',
         type: 'color',
         description: 'Sets backgroundColor for invertedAlt active button',
       },
@@ -115,7 +115,7 @@ const button = {
     },
     textColor: {
       type: 'color',
-      value: '{sem.colors.textColor.light.error}',
+      value: '{sem.colors.textColor.default.error}',
       description: 'Sets text and icon color for danger button',
     },
   },
@@ -139,7 +139,7 @@ const button = {
     },
     textColor: {
       type: 'color',
-      value: '{sem.colors.textColor.light.primary}',
+      value: '{sem.colors.textColor.default.primary}',
       description: 'Sets text and icon color for inverted button',
     },
   },
