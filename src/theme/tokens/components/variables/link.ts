@@ -52,7 +52,7 @@ const link = {
       description: 'Sets borderColor for all link states except for focused',
     },
   },
-  standalone: {
+  block: {
     '1': {
       value: '{sem.typography.normal.label01}',
       type: 'typography',

@@ -8,7 +8,7 @@ export type LinkProps = {
   /** The type of the Link in terms of style */
   type?: 'primary' | 'inverted';
   /** The placement of the link */
-  placement?: 'standalone' | 'inline';
+  placement?: 'block' | 'inline';
   /** The size of the Link */
   size?: LinkSizes;
   /** Optional icon to add at the right of the Link */

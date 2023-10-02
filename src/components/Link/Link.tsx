@@ -10,7 +10,7 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
   const {
     htmlHref,
     type = 'primary',
-    placement = 'standalone',
+    placement = 'block',
     size = 1,
     iconName,
     isDisabled,

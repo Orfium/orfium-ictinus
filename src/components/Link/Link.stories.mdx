@@ -70,7 +70,7 @@ A link is a navigational component that takes a user to another URL, an element 
 ### Placement
 
 Inline: Used within a body of copy; always with underline text decoration for better discoverability <br/>
-Standalone: Used without a body of copy; without underline text decoration
+Block: Used without a body of copy; without underline text decoration
 
 <Preview>
   <Story name="Placement">
@@ -127,7 +127,7 @@ Standalone: Used without a body of copy; without underline text decoration
       <Link
         size={select('size', [1, 2, 3], 1)}
         type={select('type', ['primary', 'inverted'], 'primary')}
-        placement={select('placement', ['standalone', 'inline'], 'standalone')}
+        placement={select('placement', ['block', 'inline'], 'block')}
         isDisabled={boolean('isDisabled', false)}
       >
         Link
