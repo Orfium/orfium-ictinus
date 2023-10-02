@@ -1,0 +1,137 @@
+import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
+import { boolean, select, withKnobs } from '@storybook/addon-knobs';
+import Link from './Link';
+import Stack from '../storyUtils/Stack';
+import { BASE_SHADE } from '../../theme/palette';
+import { FIGMA_URL } from '../../utils/common';
+import SectionHeader from '../../storybook/SectionHeader';
+
+<Meta
+  title="Design System/Link"
+  component={Link}
+  parameters={{
+    design: [
+      {
+        type: 'figma',
+        name: 'Avatar',
+        url: `${FIGMA_URL}?node-id=3325%3A58246`,
+      },
+    ],
+  }}
+/>
+
+<SectionHeader title={'Link'} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
+
+## Overview
+
+A link is a navigational component that takes a user to another URL, an element within the page, or a file.
+
+## Props
+
+<Props of={Link} />
+
+## Usage
+
+<UsageGuidelines
+  guidelines={[
+    'Use as navigation to a new URL',
+    'Use to navigate to an element within a page (anchor link)',
+    'Use to download a file',
+    'Use to show a secondary action (e.g. "Cancel")',
+  ]}
+/>
+
+<Tip>To show a primary action (like “Save”), use a Button instead. </Tip>
+
+## Props
+
+<Props of={Link} />
+
+## Variants
+
+### Style
+
+<Preview>
+  <Story name="Style">
+    <Stack isVertical>
+      <Link>Primary</Link>
+    </Stack>
+    <Stack isInverted>
+      <Link type="inverted">Inverted</Link>
+    </Stack>
+  </Story>
+</Preview>
+
+### Placement
+
+Inline: Used within a body of copy; always with underline text decoration for better discoverability <br/>
+Standalone: Used without a body of copy; without underline text decoration
+
+<Preview>
+  <Story name="Placement">
+    <Stack isVertical>
+      <div>
+        This is an{' '}
+        <Link placement="inline" size={1}>
+          inline Link
+        </Link>
+        .
+      </div>
+      <div>
+        This is a<Link size={1}>block Link</Link>.
+      </div>
+    </Stack>
+  </Story>
+</Preview>
+
+### Sizes
+
+<Preview>
+  <Story name="Sizes">
+    <Stack isVertical>
+      <Link size={1}>Size 1</Link>
+      <Link size={2}>Size 2</Link>
+      <Link size={3}>Size 3</Link>
+    </Stack>
+  </Story>
+</Preview>
+
+### Link with Icon
+
+<Preview>
+  <Story name="Link with Icon">
+    <Stack isVertical>
+      <Link size={1} iconName="externalLink">
+        Link
+      </Link>
+      <Link size={2} iconName="externalLink">
+        Link
+      </Link>
+      <Link size={3} iconName="externalLink">
+        Link
+      </Link>
+    </Stack>
+  </Story>
+</Preview>
+
+### Playground
+
+<Preview>
+  <Story name="Playground" parameters={{ decorators: [withKnobs] }}>
+    <Stack isVertical>
+      <Link
+        size={select('size', [1, 2, 3], 1)}
+        type={select('type', ['primary', 'inverted'], 'primary')}
+        placement={select('placement', ['standalone', 'inline'], 'standalone')}
+        isDisabled={boolean('isDisabled', false)}
+      >
+        Link
+      </Link>
+    </Stack>
+  </Story>
+</Preview>
