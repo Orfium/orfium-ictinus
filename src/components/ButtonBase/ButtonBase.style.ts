@@ -8,7 +8,7 @@ import {
   getIconButtonTokens,
   getTextButtonTokens,
 } from '../Button/Button.tokens';
-import { label02 } from '../Typography/Typography.config.styles';
+import { generateStylesFromTokens } from 'components/Typography/utils';
 
 export const buttonWrapperStyle = ({
   isBlock,
@@ -73,7 +73,7 @@ export const buttonBaseStyle =
         : {};
 
     return css`
-      ${label02(theme)};
+      ${generateStylesFromTokens(tokens('text.normal'))};
       ${baseButtonStyles};
       ${loadingStyles};
       ${sx?.container};

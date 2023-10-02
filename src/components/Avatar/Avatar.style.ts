@@ -1,5 +1,4 @@
 import { css, SerializedStyles } from '@emotion/react';
-import { get } from 'lodash';
 
 import {
   AvatarTextTokens,
@@ -10,12 +9,13 @@ import {
 import { AvatarColors, AvatarSizes } from './Avatar.types';
 import { Theme } from '../../theme';
 import { flex } from '../../theme/functions';
+import { generateStylesFromTokens } from 'components/Typography/utils';
 
 export const avatarStyle =
   ({ size, color }: { size: AvatarSizes; color: AvatarColors }) =>
   (theme: Theme): SerializedStyles => {
     const tokens = getAvatarTokens(theme);
-    const typographyTokens = getAvatarTextTokens();
+    const typographyTokens = getAvatarTextTokens(theme);
 
     return css`
       ${flex};
@@ -34,10 +34,7 @@ export const avatarStyle =
       user-select: none;
       justify-content: center;
 
-      font-size: ${get(typographyTokens(`${size}` as AvatarTextTokens), 'fontSize')};
-      font-weight: ${get(typographyTokens(`${size}` as AvatarTextTokens), 'fontWeight')};
-      line-height: ${get(typographyTokens(`${size}` as AvatarTextTokens), 'lineHeight')};
-      letter-spacing: ${get(typographyTokens(`${size}` as AvatarTextTokens), 'letterSpacing')};
+      ${generateStylesFromTokens(typographyTokens(`${size}` as AvatarTextTokens))};
 
       img {
         border-radius: ${tokens('borderRadius')};
