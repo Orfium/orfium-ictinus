@@ -1,6 +1,6 @@
 import useTheme from 'hooks/useTheme';
 import React from 'react';
-import { LabelProps, PolarViewBox } from 'recharts';
+import { LabelProps, PolarAngleAxisProps } from 'recharts';
 
 import { flexContainer, labelUnitStyle } from './CustomLabel.style';
 
@@ -10,7 +10,7 @@ type CustomLabelProps = LabelProps & {
 };
 
 const CustomLabel: React.FC<CustomLabelProps> = ({ viewBox, value, units }) => {
-  const { cx, cy } = viewBox as PolarViewBox;
+  const { cx, cy } = viewBox as PolarAngleAxisProps;
   const theme = useTheme();
 
   return (

@@ -1,7 +1,8 @@
 import React from 'react';
-import { ResponsiveContainer, AreaChartProps, BarChartProps } from 'recharts';
+import { ResponsiveContainer } from 'recharts';
+import { CategoricalChartProps } from 'recharts/types/chart/generateCategoricalChart';
 
-type ChartProps = AreaChartProps & BarChartProps;
+type ChartProps = CategoricalChartProps;
 
 type Props = ChartProps & {
   aspect?: number;
