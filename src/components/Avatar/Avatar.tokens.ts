@@ -15,14 +15,10 @@ export const parseAvatarStackSize = (val: string) =>
 export type AvatarTokens = DotKeys<typeof avatar>;
 export type AvatarTextTokens = DotKeys<typeof avatarText>;
 
-export const getAvatarTokens = (
-  theme: Theme
-): ((path: AvatarTokens, fn?: (val: string) => any) => any) => {
+export const getAvatarTokens = (theme: Theme) => {
   return getComponentTokens(avatar, theme);
 };
 
-export const getAvatarTextTokens = (
-  theme: Theme
-): ((path: DotKeys<typeof avatarText>) => any) => {
+export const getAvatarTextTokens = (theme: Theme) => {
   return getComponentTokens(avatarText, theme);
 };
