@@ -1,21 +1,24 @@
 import useTheme from 'hooks/useTheme';
-import React from 'react';
+import React, { AnchorHTMLAttributes } from 'react';
 
 import { linkContainer } from './Link.style';
 import { LinkTokens, getLinkTokens } from './Link.tokens';
 import { LinkProps } from './Link.types';
 import Icon from 'components/Icon';
 
-const Link = React.forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
+const Link = React.forwardRef<
+  HTMLAnchorElement,
+  AnchorHTMLAttributes<HTMLAnchorElement> & LinkProps
+>((props, ref) => {
   const {
-    htmlHref,
     type = 'primary',
     placement = 'block',
     size = 1,
     iconName,
     isDisabled,
-    dataTestPrefixId,
+    dataTestPrefixId = '',
     children,
+    ...rest
   } = props;
 
   const theme = useTheme();
@@ -24,15 +27,20 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
 
   return (
     <a
-      href={htmlHref}
       css={linkContainer({ placement, type, size, isDisabled })}
       ref={ref}
       data-testid={`${dataTestPrefixId}_link`}
+      {...rest}
     >
       <span>{children}</span>
       {/** @TODO Set the right size for the icon based on tokens once Icon component is refactored */}
       {iconName && (
-        <Icon name={iconName} color={tokens(`textColor.${type}.default` as LinkTokens)} size={12} />
+        <Icon
+          name={iconName}
+          color={tokens(`textColor.${type}.default` as LinkTokens)}
+          size={12}
+          dataTestId={`${dataTestPrefixId}_link_icon`}
+        />
       )}
     </a>
   );

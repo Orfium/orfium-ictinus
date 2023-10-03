@@ -19,8 +19,8 @@ export const linkContainer =
       display: ${placement === 'inline' ? 'inline-flex' : 'flex'};
       gap: ${tokens('padding')};
       color: ${tokens(`textColor.${type}.default` as LinkTokens)};
-
-      border-width: ${tokens('borderWidth.1')};
+      text-decoration: none;
+      border: ${tokens('borderWidth.1')} solid ${tokens('borderColor.default')};
 
       &:hover {
         color: ${tokens(`textColor.${type}.hover` as LinkTokens)};
@@ -37,7 +37,7 @@ export const linkContainer =
       }
 
       &:focus-visible {
-        border-width: ${tokens('borderWidth.2')};
+        border: ${tokens('borderWidth.2')} solid ${tokens('borderColor.focused')};
       }
 
       opacity: ${isDisabled ? theme.tokens.disabledState.get('default') : 1};

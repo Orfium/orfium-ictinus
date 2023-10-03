@@ -59,10 +59,12 @@ A link is a navigational component that takes a user to another URL, an element 
 <Preview>
   <Story name="Style">
     <Stack isVertical>
-      <Link>Primary</Link>
+      <Link href="#">Primary</Link>
     </Stack>
     <Stack isInverted>
-      <Link type="inverted">Inverted</Link>
+      <Link href="#" type="inverted">
+        Inverted
+      </Link>
     </Stack>
   </Story>
 </Preview>
@@ -77,13 +79,17 @@ Block: Used without a body of copy; without underline text decoration
     <Stack isVertical>
       <div>
         This is an{' '}
-        <Link placement="inline" size={1}>
+        <Link href="#" placement="inline" size={1}>
           inline Link
         </Link>
         .
       </div>
       <div>
-        This is a<Link size={1}>block Link</Link>.
+        This is a
+        <Link href="#" size={1}>
+          block Link
+        </Link>
+        .
       </div>
     </Stack>
   </Story>
@@ -94,9 +100,15 @@ Block: Used without a body of copy; without underline text decoration
 <Preview>
   <Story name="Sizes">
     <Stack isVertical>
-      <Link size={1}>Size 1</Link>
-      <Link size={2}>Size 2</Link>
-      <Link size={3}>Size 3</Link>
+      <Link href="#" size={1}>
+        Size 1
+      </Link>
+      <Link href="#" size={2}>
+        Size 2
+      </Link>
+      <Link href="#" size={3}>
+        Size 3
+      </Link>
     </Stack>
   </Story>
 </Preview>
@@ -106,13 +118,13 @@ Block: Used without a body of copy; without underline text decoration
 <Preview>
   <Story name="Link with Icon">
     <Stack isVertical>
-      <Link size={1} iconName="externalLink">
+      <Link href="#" size={1} iconName="externalLink">
         Link
       </Link>
-      <Link size={2} iconName="externalLink">
+      <Link href="#" size={2} iconName="externalLink">
         Link
       </Link>
-      <Link size={3} iconName="externalLink">
+      <Link href="#" size={3} iconName="externalLink">
         Link
       </Link>
     </Stack>
@@ -125,6 +137,7 @@ Block: Used without a body of copy; without underline text decoration
   <Story name="Playground" parameters={{ decorators: [withKnobs] }}>
     <Stack isVertical>
       <Link
+        href="#"
         size={select('size', [1, 2, 3], 1)}
         type={select('type', ['primary', 'inverted'], 'primary')}
         placement={select('placement', ['block', 'inline'], 'block')}

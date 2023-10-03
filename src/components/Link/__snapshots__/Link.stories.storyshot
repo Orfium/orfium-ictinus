@@ -37,7 +37,9 @@ exports[`Storyshots Design System/Link Link with Icon 1`] = `
   display: flex;
   gap: 0.25rem;
   color: #1552DD;
-  border-width: 0.25rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0.25rem solid rgba(84,94,255,0);
   opacity: 1;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -72,7 +74,7 @@ exports[`Storyshots Design System/Link Link with Icon 1`] = `
 }
 
 .emotion-3:focus-visible {
-  border-width: 0.25rem;
+  border: 0.25rem solid #9347ff;
 }
 
 .emotion-4 {
@@ -108,7 +110,9 @@ exports[`Storyshots Design System/Link Link with Icon 1`] = `
   display: flex;
   gap: 0.25rem;
   color: #1552DD;
-  border-width: 0.25rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0.25rem solid rgba(84,94,255,0);
   opacity: 1;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -143,7 +147,7 @@ exports[`Storyshots Design System/Link Link with Icon 1`] = `
 }
 
 .emotion-6:focus-visible {
-  border-width: 0.25rem;
+  border: 0.25rem solid #9347ff;
 }
 
 .emotion-9 {
@@ -153,7 +157,9 @@ exports[`Storyshots Design System/Link Link with Icon 1`] = `
   display: flex;
   gap: 0.25rem;
   color: #1552DD;
-  border-width: 0.25rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0.25rem solid rgba(84,94,255,0);
   opacity: 1;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -188,7 +194,7 @@ exports[`Storyshots Design System/Link Link with Icon 1`] = `
 }
 
 .emotion-9:focus-visible {
-  border-width: 0.25rem;
+  border: 0.25rem solid #9347ff;
 }
 
 <div
@@ -209,13 +215,15 @@ exports[`Storyshots Design System/Link Link with Icon 1`] = `
       >
         <a
           className="emotion-3"
-          data-testid="undefined_link"
+          data-testid="_link"
+          href="#"
         >
           <span>
             Link
           </span>
           <span
             className="emotion-4"
+            data-testid="_link_icon"
             onClick={[Function]}
           >
             <span
@@ -233,13 +241,15 @@ exports[`Storyshots Design System/Link Link with Icon 1`] = `
       >
         <a
           className="emotion-6"
-          data-testid="undefined_link"
+          data-testid="_link"
+          href="#"
         >
           <span>
             Link
           </span>
           <span
             className="emotion-4"
+            data-testid="_link_icon"
             onClick={[Function]}
           >
             <span
@@ -257,13 +267,15 @@ exports[`Storyshots Design System/Link Link with Icon 1`] = `
       >
         <a
           className="emotion-9"
-          data-testid="undefined_link"
+          data-testid="_link"
+          href="#"
         >
           <span>
             Link
           </span>
           <span
             className="emotion-4"
+            data-testid="_link_icon"
             onClick={[Function]}
           >
             <span
@@ -314,7 +326,9 @@ exports[`Storyshots Design System/Link Placement 1`] = `
   display: inline-flex;
   gap: 0.25rem;
   color: #1552DD;
-  border-width: 0.25rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0.25rem solid rgba(84,94,255,0);
   opacity: 1;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -351,7 +365,7 @@ exports[`Storyshots Design System/Link Placement 1`] = `
 }
 
 .emotion-3:focus-visible {
-  border-width: 0.25rem;
+  border: 0.25rem solid #9347ff;
 }
 
 .emotion-4 {
@@ -361,7 +375,9 @@ exports[`Storyshots Design System/Link Placement 1`] = `
   display: flex;
   gap: 0.25rem;
   color: #1552DD;
-  border-width: 0.25rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0.25rem solid rgba(84,94,255,0);
   opacity: 1;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -396,7 +412,7 @@ exports[`Storyshots Design System/Link Placement 1`] = `
 }
 
 .emotion-4:focus-visible {
-  border-width: 0.25rem;
+  border: 0.25rem solid #9347ff;
 }
 
 <div
@@ -420,7 +436,8 @@ exports[`Storyshots Design System/Link Placement 1`] = `
            
           <a
             className="emotion-3"
-            data-testid="undefined_link"
+            data-testid="_link"
+            href="#"
           >
             <span>
               inline Link
@@ -440,7 +457,8 @@ exports[`Storyshots Design System/Link Placement 1`] = `
           This is a
           <a
             className="emotion-4"
-            data-testid="undefined_link"
+            data-testid="_link"
+            href="#"
           >
             <span>
               block Link
@@ -491,7 +509,9 @@ exports[`Storyshots Design System/Link Playground 1`] = `
   display: flex;
   gap: 0.25rem;
   color: #1552DD;
-  border-width: 0.25rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0.25rem solid rgba(84,94,255,0);
   opacity: 1;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -526,7 +546,7 @@ exports[`Storyshots Design System/Link Playground 1`] = `
 }
 
 .emotion-3:focus-visible {
-  border-width: 0.25rem;
+  border: 0.25rem solid #9347ff;
 }
 
 <div
@@ -547,7 +567,8 @@ exports[`Storyshots Design System/Link Playground 1`] = `
       >
         <a
           className="emotion-3"
-          data-testid="undefined_link"
+          data-testid="_link"
+          href="#"
         >
           <span>
             Link
@@ -596,7 +617,9 @@ exports[`Storyshots Design System/Link Sizes 1`] = `
   display: flex;
   gap: 0.25rem;
   color: #1552DD;
-  border-width: 0.25rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0.25rem solid rgba(84,94,255,0);
   opacity: 1;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -631,7 +654,7 @@ exports[`Storyshots Design System/Link Sizes 1`] = `
 }
 
 .emotion-3:focus-visible {
-  border-width: 0.25rem;
+  border: 0.25rem solid #9347ff;
 }
 
 .emotion-4 {
@@ -641,7 +664,9 @@ exports[`Storyshots Design System/Link Sizes 1`] = `
   display: flex;
   gap: 0.25rem;
   color: #1552DD;
-  border-width: 0.25rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0.25rem solid rgba(84,94,255,0);
   opacity: 1;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -676,7 +701,7 @@ exports[`Storyshots Design System/Link Sizes 1`] = `
 }
 
 .emotion-4:focus-visible {
-  border-width: 0.25rem;
+  border: 0.25rem solid #9347ff;
 }
 
 .emotion-5 {
@@ -686,7 +711,9 @@ exports[`Storyshots Design System/Link Sizes 1`] = `
   display: flex;
   gap: 0.25rem;
   color: #1552DD;
-  border-width: 0.25rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0.25rem solid rgba(84,94,255,0);
   opacity: 1;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -721,7 +748,7 @@ exports[`Storyshots Design System/Link Sizes 1`] = `
 }
 
 .emotion-5:focus-visible {
-  border-width: 0.25rem;
+  border: 0.25rem solid #9347ff;
 }
 
 <div
@@ -742,7 +769,8 @@ exports[`Storyshots Design System/Link Sizes 1`] = `
       >
         <a
           className="emotion-3"
-          data-testid="undefined_link"
+          data-testid="_link"
+          href="#"
         >
           <span>
             Size 1
@@ -758,7 +786,8 @@ exports[`Storyshots Design System/Link Sizes 1`] = `
       >
         <a
           className="emotion-4"
-          data-testid="undefined_link"
+          data-testid="_link"
+          href="#"
         >
           <span>
             Size 2
@@ -774,7 +803,8 @@ exports[`Storyshots Design System/Link Sizes 1`] = `
       >
         <a
           className="emotion-5"
-          data-testid="undefined_link"
+          data-testid="_link"
+          href="#"
         >
           <span>
             Size 3
@@ -823,7 +853,9 @@ exports[`Storyshots Design System/Link Style 1`] = `
   display: flex;
   gap: 0.25rem;
   color: #1552DD;
-  border-width: 0.25rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0.25rem solid rgba(84,94,255,0);
   opacity: 1;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -858,7 +890,7 @@ exports[`Storyshots Design System/Link Style 1`] = `
 }
 
 .emotion-3:focus-visible {
-  border-width: 0.25rem;
+  border: 0.25rem solid #9347ff;
 }
 
 .emotion-4 {
@@ -883,7 +915,9 @@ exports[`Storyshots Design System/Link Style 1`] = `
   display: flex;
   gap: 0.25rem;
   color: #1de9b6;
-  border-width: 0.25rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0.25rem solid rgba(84,94,255,0);
   opacity: 1;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -918,7 +952,7 @@ exports[`Storyshots Design System/Link Style 1`] = `
 }
 
 .emotion-5:focus-visible {
-  border-width: 0.25rem;
+  border: 0.25rem solid #9347ff;
 }
 
 <div
@@ -939,7 +973,8 @@ exports[`Storyshots Design System/Link Style 1`] = `
       >
         <a
           className="emotion-3"
-          data-testid="undefined_link"
+          data-testid="_link"
+          href="#"
         >
           <span>
             Primary
@@ -959,7 +994,8 @@ exports[`Storyshots Design System/Link Style 1`] = `
       >
         <a
           className="emotion-5"
-          data-testid="undefined_link"
+          data-testid="_link"
+          href="#"
         >
           <span>
             Inverted
