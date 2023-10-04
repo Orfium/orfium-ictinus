@@ -1,167 +1,381 @@
 const typography = {
-  headline01: {
-    value: {
-      fontFamily: '{fontFamily.roboto}',
-      fontWeight: '{fontWeight.bold}',
-      lineHeight: '{lineHeight.10}',
-      fontSize: '{fontSize.10}',
-      letterSpacing: '{letterSpacing.0}',
+  normal: {
+    headline01: {
+      value: {
+        fontFamily: '{fontFamily.roboto}',
+        fontWeight: '{fontWeight.bold}',
+        lineHeight: '{lineHeight.10}',
+        fontSize: '{fontSize.10}',
+        letterSpacing: '{letterSpacing.0}',
+      },
+      type: 'typography',
+      description: 'Largest text on the screen, reserved for the page title. Can only appear once',
     },
-    type: 'typography',
-    description: 'Largest text on the screen, reserved for the page title. Can only appear once',
+    headline02: {
+      value: {
+        fontFamily: '{fontFamily.roboto}',
+        fontWeight: '{fontWeight.bold}',
+        lineHeight: '{lineHeight.9}',
+        fontSize: '{fontSize.9}',
+        letterSpacing: '{letterSpacing.0}',
+      },
+      type: 'typography',
+      description:
+        'Headline variant 2, reserved for important copy that is not a title (e.g. section titles)',
+    },
+    headline03: {
+      value: {
+        fontFamily: '{fontFamily.roboto}',
+        fontWeight: '{fontWeight.bold}',
+        lineHeight: '{lineHeight.8}',
+        fontSize: '{fontSize.8}',
+        letterSpacing: '{letterSpacing.0}',
+      },
+      type: 'typography',
+      description: 'Headline variant 3',
+    },
+    headline04: {
+      value: {
+        fontFamily: '{fontFamily.roboto}',
+        fontWeight: '{fontWeight.bold}',
+        lineHeight: '{lineHeight.7}',
+        fontSize: '{fontSize.6}',
+        letterSpacing: '{letterSpacing.0}',
+      },
+      type: 'typography',
+      description: 'Headline variant 4',
+    },
+    headline05: {
+      value: {
+        fontFamily: '{fontFamily.roboto}',
+        fontWeight: '{fontWeight.bold}',
+        lineHeight: '{lineHeight.6}',
+        fontSize: '{fontSize.5}',
+        letterSpacing: '{letterSpacing.0}',
+      },
+      type: 'typography',
+      description: 'Headline variant 5',
+    },
+    title01: {
+      value: {
+        fontFamily: '{fontFamily.roboto}',
+        fontWeight: '{fontWeight.bold}',
+        lineHeight: '{lineHeight.5}',
+        fontSize: '{fontSize.4}',
+        letterSpacing: '{letterSpacing.1}',
+      },
+      type: 'typography',
+      description:
+        'Smaller than headline, reserved for short, medium emphasis text or text within components. Large variant',
+    },
+    title02: {
+      value: {
+        fontFamily: '{fontFamily.roboto}',
+        fontWeight: '{fontWeight.bold}',
+        lineHeight: '{lineHeight.4}',
+        fontSize: '{fontSize.3}',
+        letterSpacing: '{letterSpacing.2}',
+      },
+      type: 'typography',
+      description:
+        'Smaller than headline, reserved for short, medium emphasis text or text within components. Medium variant',
+    },
+    title03: {
+      value: {
+        fontFamily: '{fontFamily.roboto}',
+        fontWeight: '{fontWeight.bold}',
+        lineHeight: '{lineHeight.2}',
+        fontSize: '{fontSize.2}',
+        letterSpacing: '{letterSpacing.1}',
+      },
+      type: 'typography',
+      description:
+        'Smaller than headline, reserved for short, medium emphasis text or text within components. Small variant',
+    },
+    label01: {
+      value: {
+        fontFamily: '{fontFamily.roboto}',
+        fontWeight: '{fontWeight.medium}',
+        lineHeight: '{lineHeight.5}',
+        fontSize: '{fontSize.4}',
+        letterSpacing: '{letterSpacing.1}',
+      },
+      type: 'typography',
+      description:
+        'Smaller than headline, resrved for short to medium, medium emphasis text (less than titles) or text within components. Large variant',
+    },
+    label02: {
+      value: {
+        fontFamily: '{fontFamily.roboto}',
+        fontWeight: '{fontWeight.medium}',
+        lineHeight: '{lineHeight.4}',
+        fontSize: '{fontSize.3}',
+        letterSpacing: '{letterSpacing.2}',
+      },
+      type: 'typography',
+      description:
+        'Smaller than headline, resrved for short to medium, medium emphasis text (less than titles) or text within components. Medium variant',
+    },
+    label03: {
+      value: {
+        fontFamily: '{fontFamily.roboto}',
+        fontWeight: '{fontWeight.medium}',
+        lineHeight: '{lineHeight.2}',
+        fontSize: '{fontSize.2}',
+        letterSpacing: '{letterSpacing.2}',
+      },
+      type: 'typography',
+      description:
+        'Smaller than headline, resrved for short to medium, medium emphasis text (less than titles) or text within components. Small variant',
+    },
+    label04: {
+      value: {
+        fontFamily: '{fontFamily.roboto}',
+        fontWeight: '{fontWeight.medium}',
+        lineHeight: '{lineHeight.1}',
+        fontSize: '{fontSize.1}',
+        letterSpacing: '{letterSpacing.1}',
+      },
+      type: 'typography',
+      description:
+        'Resrved for short to medium, medium emphasis text (less than titles) or text within components. Extra small variant',
+    },
+    body01: {
+      value: {
+        fontFamily: '{fontFamily.roboto}',
+        fontWeight: '{fontWeight.regular}',
+        lineHeight: '{lineHeight.5}',
+        fontSize: '{fontSize.4}',
+        letterSpacing: '{letterSpacing.2}',
+      },
+      type: 'typography',
+      description:
+        'Used for longer text string of regular emphasis or text within components. Large variant',
+    },
+    body02: {
+      value: {
+        fontFamily: '{fontFamily.roboto}',
+        fontWeight: '{fontWeight.regular}',
+        lineHeight: '{lineHeight.4}',
+        fontSize: '{fontSize.3}',
+        letterSpacing: '{letterSpacing.2}',
+      },
+      type: 'typography',
+      description:
+        'Used for longer text string of regular emphasis or text within components. Medium variant',
+    },
+    body03: {
+      value: {
+        fontFamily: '{fontFamily.roboto}',
+        fontWeight: '{fontWeight.regular}',
+        lineHeight: '{lineHeight.2}',
+        fontSize: '{fontSize.2}',
+        letterSpacing: '{letterSpacing.2}',
+      },
+      type: 'typography',
+      description:
+        'Used for longer text string of regular emphasis or text within components. Small variant',
+    },
+    body04: {
+      value: {
+        fontFamily: '{fontFamily.roboto}',
+        fontWeight: '{fontWeight.regular}',
+        lineHeight: '{lineHeight.1}',
+        fontSize: '{fontSize.1}',
+        letterSpacing: '{letterSpacing.1}',
+      },
+      type: 'typography',
+      description: 'Used for text within components. Extra small variant',
+    },
   },
-  headline02: {
-    value: {
-      fontFamily: '{fontFamily.roboto}',
-      fontWeight: '{fontWeight.bold}',
-      lineHeight: '{lineHeight.9}',
-      fontSize: '{fontSize.9}',
-      letterSpacing: '{letterSpacing.0}',
+  mono: {
+    headline01: {
+      value: {
+        fontFamily: '{fontFamily.robotoMono}',
+        fontWeight: '{fontWeight.bold}',
+        lineHeight: '{lineHeight.10}',
+        fontSize: '{fontSize.10}',
+        letterSpacing: '{letterSpacing.0}',
+      },
+      type: 'typography',
+      description: 'Largest text on the screen, reserved for the page title. Can only appear once',
     },
-    type: 'typography',
-    description:
-      'Headline variant 2, reserved for important copy that is not a title (e.g. section titles)',
-  },
-  headline03: {
-    value: {
-      fontFamily: '{fontFamily.roboto}',
-      fontWeight: '{fontWeight.bold}',
-      lineHeight: '{lineHeight.8}',
-      fontSize: '{fontSize.8}',
-      letterSpacing: '{letterSpacing.0}',
+    body04: {
+      value: {
+        fontFamily: '{fontFamily.robotoMono}',
+        fontWeight: '{fontWeight.regular}',
+        lineHeight: '{lineHeight.1}',
+        fontSize: '{fontSize.1}',
+        letterSpacing: '{letterSpacing.1}',
+      },
+      type: 'typography',
+      description: 'Used for text within components. Extra small variant',
     },
-    type: 'typography',
-    description: 'Headline variant 3',
-  },
-  headline04: {
-    value: {
-      fontFamily: '{fontFamily.roboto}',
-      fontWeight: '{fontWeight.bold}',
-      lineHeight: '{lineHeight.7}',
-      fontSize: '{fontSize.6}',
-      letterSpacing: '{letterSpacing.0}',
+    headline02: {
+      value: {
+        fontFamily: '{fontFamily.robotoMono}',
+        fontWeight: '{fontWeight.bold}',
+        lineHeight: '{lineHeight.9}',
+        fontSize: '{fontSize.9}',
+        letterSpacing: '{letterSpacing.0}',
+      },
+      type: 'typography',
+      description:
+        'Headline variant 2, reserved for important copy that is not a title (e.g. section titles)',
     },
-    type: 'typography',
-    description: 'Headline variant 4',
-  },
-  headline05: {
-    value: {
-      fontFamily: '{fontFamily.roboto}',
-      fontWeight: '{fontWeight.bold}',
-      lineHeight: '{lineHeight.6}',
-      fontSize: '{fontSize.5}',
-      letterSpacing: '{letterSpacing.0}',
+    headline03: {
+      value: {
+        fontFamily: '{fontFamily.robotoMono}',
+        fontWeight: '{fontWeight.bold}',
+        lineHeight: '{lineHeight.8}',
+        fontSize: '{fontSize.8}',
+        letterSpacing: '{letterSpacing.0}',
+      },
+      type: 'typography',
+      description: 'Headline variant 3',
     },
-    type: 'typography',
-    description: 'Headline variant 5',
-  },
-  title01: {
-    value: {
-      fontFamily: '{fontFamily.roboto}',
-      fontWeight: '{fontWeight.bold}',
-      lineHeight: '{lineHeight.5}',
-      fontSize: '{fontSize.4}',
-      letterSpacing: '{letterSpacing.1}',
+    headline04: {
+      value: {
+        fontFamily: '{fontFamily.robotoMono}',
+        fontWeight: '{fontWeight.bold}',
+        lineHeight: '{lineHeight.7}',
+        fontSize: '{fontSize.6}',
+        letterSpacing: '{letterSpacing.0}',
+      },
+      type: 'typography',
+      description: 'Headline variant 4',
     },
-    type: 'typography',
-    description:
-      'Smaller than headline, reserved for short, medium emphasis text or text within components. Large variant',
-  },
-  title02: {
-    value: {
-      fontFamily: '{fontFamily.roboto}',
-      fontWeight: '{fontWeight.bold}',
-      lineHeight: '{lineHeight.4}',
-      fontSize: '{fontSize.3}',
-      letterSpacing: '{letterSpacing.1}',
+    headline05: {
+      value: {
+        fontFamily: '{fontFamily.robotoMono}',
+        fontWeight: '{fontWeight.bold}',
+        lineHeight: '{lineHeight.6}',
+        fontSize: '{fontSize.5}',
+        letterSpacing: '{letterSpacing.0}',
+      },
+      type: 'typography',
+      description: 'Headline variant 5',
     },
-    type: 'typography',
-    description:
-      'Smaller than headline, reserved for short, medium emphasis text or text within components. Medium variant',
-  },
-  title03: {
-    value: {
-      fontFamily: '{fontFamily.roboto}',
-      fontWeight: '{fontWeight.bold}',
-      lineHeight: '{lineHeight.3}',
-      fontSize: '{fontSize.2}',
-      letterSpacing: '{letterSpacing.2}',
+    title01: {
+      value: {
+        fontFamily: '{fontFamily.robotoMono}',
+        fontWeight: '{fontWeight.bold}',
+        lineHeight: '{lineHeight.5}',
+        fontSize: '{fontSize.4}',
+        letterSpacing: '{letterSpacing.1}',
+      },
+      type: 'typography',
+      description:
+        'Smaller than headline, reserved for short, medium emphasis text or text within components. Large variant',
     },
-    type: 'typography',
-    description:
-      'Smaller than headline, reserved for short, medium emphasis text or text within components. Small variant',
-  },
-  label01: {
-    value: {
-      fontFamily: '{fontFamily.roboto}',
-      fontWeight: '{fontWeight.medium}',
-      lineHeight: '{lineHeight.5}',
-      fontSize: '{fontSize.4}',
-      letterSpacing: '{letterSpacing.1}',
+    title02: {
+      value: {
+        fontFamily: '{fontFamily.robotoMono}',
+        fontWeight: '{fontWeight.bold}',
+        lineHeight: '{lineHeight.4}',
+        fontSize: '{fontSize.3}',
+        letterSpacing: '{letterSpacing.2}',
+      },
+      type: 'typography',
+      description:
+        'Smaller than headline, reserved for short, medium emphasis text or text within components. Medium variant',
     },
-    type: 'typography',
-    description:
-      'Smaller than headline, resrved for short to medium, medium emphasis text (less than titles) or text within components. Large variant',
-  },
-  label02: {
-    value: {
-      fontFamily: '{fontFamily.roboto}',
-      fontWeight: '{fontWeight.medium}',
-      lineHeight: '{lineHeight.4}',
-      fontSize: '{fontSize.3}',
-      letterSpacing: '{letterSpacing.2}',
+    title03: {
+      value: {
+        fontFamily: '{fontFamily.robotoMono}',
+        fontWeight: '{fontWeight.bold}',
+        lineHeight: '{lineHeight.2}',
+        fontSize: '{fontSize.2}',
+        letterSpacing: '{letterSpacing.1}',
+      },
+      type: 'typography',
+      description:
+        'Smaller than headline, reserved for short, medium emphasis text or text within components. Small variant',
     },
-    type: 'typography',
-    description:
-      'Smaller than headline, resrved for short to medium, medium emphasis text (less than titles) or text within components. Medium variant',
-  },
-  label03: {
-    value: {
-      fontFamily: '{fontFamily.roboto}',
-      fontWeight: '{fontWeight.medium}',
-      lineHeight: '{lineHeight.3}',
-      fontSize: '{fontSize.2}',
-      letterSpacing: '{letterSpacing.2}',
+    label01: {
+      value: {
+        fontFamily: '{fontFamily.robotoMono}',
+        fontWeight: '{fontWeight.medium}',
+        lineHeight: '{lineHeight.5}',
+        fontSize: '{fontSize.4}',
+        letterSpacing: '{letterSpacing.1}',
+      },
+      type: 'typography',
+      description:
+        'Smaller than headline, resrved for short to medium, medium emphasis text (less than titles) or text within components. Large variant',
     },
-    type: 'typography',
-    description:
-      'Smaller than headline, resrved for short to medium, medium emphasis text (less than titles) or text within components. Small variant',
-  },
-  body01: {
-    value: {
-      fontFamily: '{fontFamily.roboto}',
-      fontWeight: '{fontWeight.regular}',
-      lineHeight: '{lineHeight.5}',
-      fontSize: '{fontSize.4}',
-      letterSpacing: '{letterSpacing.2}',
+    label02: {
+      value: {
+        fontFamily: '{fontFamily.robotoMono}',
+        fontWeight: '{fontWeight.medium}',
+        lineHeight: '{lineHeight.4}',
+        fontSize: '{fontSize.3}',
+        letterSpacing: '{letterSpacing.2}',
+      },
+      type: 'typography',
+      description:
+        'Smaller than headline, resrved for short to medium, medium emphasis text (less than titles) or text within components. Medium variant',
     },
-    type: 'typography',
-    description:
-      'Used for longer text string of regular emphasis or text within components. Large variant',
-  },
-  body02: {
-    value: {
-      fontFamily: '{fontFamily.roboto}',
-      fontWeight: '{fontWeight.regular}',
-      lineHeight: '{lineHeight.4}',
-      fontSize: '{fontSize.3}',
-      letterSpacing: '{letterSpacing.2}',
+    label03: {
+      value: {
+        fontFamily: '{fontFamily.robotoMono}',
+        fontWeight: '{fontWeight.medium}',
+        lineHeight: '{lineHeight.2}',
+        fontSize: '{fontSize.2}',
+        letterSpacing: '{letterSpacing.2}',
+      },
+      type: 'typography',
+      description:
+        'Smaller than headline, resrved for short to medium, medium emphasis text (less than titles) or text within components. Small variant',
     },
-    type: 'typography',
-    description:
-      'Used for longer text string of regular emphasis or text within components. Medium variant',
-  },
-  body03: {
-    value: {
-      fontFamily: '{fontFamily.roboto}',
-      fontWeight: '{fontWeight.regular}',
-      lineHeight: '{lineHeight.3}',
-      fontSize: '{fontSize.2}',
-      letterSpacing: '{letterSpacing.2}',
+    label04: {
+      value: {
+        fontFamily: '{fontFamily.robotoMono}',
+        fontWeight: '{fontWeight.medium}',
+        lineHeight: '{lineHeight.1}',
+        fontSize: '{fontSize.1}',
+        letterSpacing: '{letterSpacing.1}',
+      },
+      type: 'typography',
+      description:
+        'Resrved for short to medium, medium emphasis text (less than titles) or text within components. Extra small variant',
     },
-    type: 'typography',
-    description:
-      'Used for longer text string of regular emphasis or text within components. Small variant',
+    body01: {
+      value: {
+        fontFamily: '{fontFamily.robotoMono}',
+        fontWeight: '{fontWeight.regular}',
+        lineHeight: '{lineHeight.5}',
+        fontSize: '{fontSize.4}',
+        letterSpacing: '{letterSpacing.2}',
+      },
+      type: 'typography',
+      description:
+        'Used for longer text string of regular emphasis or text within components. Large variant',
+    },
+    body02: {
+      value: {
+        fontFamily: '{fontFamily.robotoMono}',
+        fontWeight: '{fontWeight.regular}',
+        lineHeight: '{lineHeight.4}',
+        fontSize: '{fontSize.3}',
+        letterSpacing: '{letterSpacing.2}',
+      },
+      type: 'typography',
+      description:
+        'Used for longer text string of regular emphasis or text within components. Medium variant',
+    },
+    body03: {
+      value: {
+        fontFamily: '{fontFamily.robotoMono}',
+        fontWeight: '{fontWeight.regular}',
+        lineHeight: '{lineHeight.2}',
+        fontSize: '{fontSize.2}',
+        letterSpacing: '{letterSpacing.2}',
+      },
+      type: 'typography',
+      description:
+        'Used for longer text string of regular emphasis or text within components. Small variant',
+    },
   },
 } as const;
 

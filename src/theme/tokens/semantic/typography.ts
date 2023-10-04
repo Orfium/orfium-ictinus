@@ -1,10 +1,23 @@
 import typographyFigma from './variables/typography';
 import { DotKeys, parseCompositionToken } from '../utils';
 
-export type SemanticTypographyKeys = keyof typeof typographyFigma.headline01.value;
+export type TypographyKeys =
+  | 'fontSize'
+  | 'fontWeight'
+  | 'fontFamily'
+  | 'lineHeight'
+  | 'letterSpacing'
+  | 'textCase'
+  | 'textDecoration';
+
+export type SemanticTypographyKey = DotKeys<typeof typographyFigma>;
+
+export type FontSpacing = keyof typeof typographyFigma;
+
+export type TypographyObject = Record<TypographyKeys, string>;
 
 export type SemanticTypography = {
-  get: (val: DotKeys<typeof typographyFigma>) => Record<SemanticTypographyKeys, string>;
+  get: (val: SemanticTypographyKey) => TypographyObject;
 };
 
 const typography: SemanticTypography = {

@@ -29,7 +29,7 @@ export const scrollbar = (theme: Theme): SerializedStyles => css`
 `;
 
 export const globalStyles = (theme: Theme): SerializedStyles => css`
-  @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700;900&family=Roboto:wght@300;400;500;700;900&display=swap');
   ${emotionReset};
   ${scrollbar(theme)}
 

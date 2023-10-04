@@ -89,16 +89,16 @@ exports[`Storyshots Design System/Typography As specific element 1`] = `
   font-weight: 700;
   line-height: 1.25rem;
   font-size: 0.875rem;
-  letter-spacing: 0.00625rem;
+  letter-spacing: 0.015625rem;
   color: #212332;
 }
 
 .emotion-10 {
   font-family: Roboto;
   font-weight: 700;
-  line-height: 1.125rem;
+  line-height: 1rem;
   font-size: 0.75rem;
-  letter-spacing: 0.015625rem;
+  letter-spacing: 0.00625rem;
   color: #212332;
 }
 
@@ -123,7 +123,7 @@ exports[`Storyshots Design System/Typography As specific element 1`] = `
 .emotion-13 {
   font-family: Roboto;
   font-weight: 500;
-  line-height: 1.125rem;
+  line-height: 1rem;
   font-size: 0.75rem;
   letter-spacing: 0.015625rem;
   color: #212332;
@@ -150,7 +150,7 @@ exports[`Storyshots Design System/Typography As specific element 1`] = `
 .emotion-16 {
   font-family: Roboto;
   font-weight: 400;
-  line-height: 1.125rem;
+  line-height: 1rem;
   font-size: 0.75rem;
   letter-spacing: 0.015625rem;
   color: #212332;
@@ -459,6 +459,226 @@ exports[`Storyshots Design System/Typography Extra style 1`] = `
           className="emotion-5"
         >
           Underline
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Typography Font Spacing Variations 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  font-family: Roboto;
+  font-weight: 700;
+  line-height: 2.5rem;
+  font-size: 2rem;
+  letter-spacing: 0rem;
+  color: #212332;
+}
+
+.emotion-4 {
+  font-family: Roboto;
+  font-weight: 700;
+  line-height: 1.375rem;
+  font-size: 1rem;
+  letter-spacing: 0.00625rem;
+  color: #212332;
+}
+
+.emotion-5 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.375rem;
+  font-size: 1rem;
+  letter-spacing: 0.00625rem;
+  color: #212332;
+}
+
+.emotion-6 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.375rem;
+  font-size: 1rem;
+  letter-spacing: 0.015625rem;
+  color: #212332;
+}
+
+.emotion-7 {
+  font-family: Roboto Mono;
+  font-weight: 700;
+  line-height: 2.5rem;
+  font-size: 2rem;
+  letter-spacing: 0rem;
+  color: #212332;
+}
+
+.emotion-8 {
+  font-family: Roboto Mono;
+  font-weight: 700;
+  line-height: 1.375rem;
+  font-size: 1rem;
+  letter-spacing: 0.00625rem;
+  color: #212332;
+}
+
+.emotion-9 {
+  font-family: Roboto Mono;
+  font-weight: 500;
+  line-height: 1.375rem;
+  font-size: 1rem;
+  letter-spacing: 0.00625rem;
+  color: #212332;
+}
+
+.emotion-10 {
+  font-family: Roboto Mono;
+  font-weight: 400;
+  line-height: 1.375rem;
+  font-size: 1rem;
+  letter-spacing: 0.015625rem;
+  color: #212332;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <h1
+          className="emotion-3"
+        >
+          Headline 01 (Normal)
+        </h1>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <h6
+          className="emotion-4"
+        >
+          Title 01 (Normal)
+        </h6>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <span
+          className="emotion-5"
+        >
+          Label 01 (Normal)
+        </span>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <p
+          className="emotion-6"
+        >
+          Body 01 (Normal)
+        </p>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <h1
+          className="emotion-7"
+        >
+          Headline 01 (Mono)
+        </h1>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <h6
+          className="emotion-8"
+        >
+          Title 01 (Mono)
+        </h6>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <span
+          className="emotion-9"
+        >
+          Label 01 (Mono)
+        </span>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <p
+          className="emotion-10"
+        >
+          Body 01 (Mono)
         </p>
       </div>
     </div>
@@ -864,16 +1084,16 @@ exports[`Storyshots Design System/Typography Variants 1`] = `
   font-weight: 700;
   line-height: 1.25rem;
   font-size: 0.875rem;
-  letter-spacing: 0.00625rem;
+  letter-spacing: 0.015625rem;
   color: #212332;
 }
 
 .emotion-10 {
   font-family: Roboto;
   font-weight: 700;
-  line-height: 1.125rem;
+  line-height: 1rem;
   font-size: 0.75rem;
-  letter-spacing: 0.015625rem;
+  letter-spacing: 0.00625rem;
   color: #212332;
 }
 
@@ -898,13 +1118,22 @@ exports[`Storyshots Design System/Typography Variants 1`] = `
 .emotion-13 {
   font-family: Roboto;
   font-weight: 500;
-  line-height: 1.125rem;
+  line-height: 1rem;
   font-size: 0.75rem;
   letter-spacing: 0.015625rem;
   color: #212332;
 }
 
 .emotion-14 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 0.875rem;
+  font-size: 0.625rem;
+  letter-spacing: 0.00625rem;
+  color: #212332;
+}
+
+.emotion-15 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.375rem;
@@ -913,7 +1142,7 @@ exports[`Storyshots Design System/Typography Variants 1`] = `
   color: #212332;
 }
 
-.emotion-15 {
+.emotion-16 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -922,12 +1151,21 @@ exports[`Storyshots Design System/Typography Variants 1`] = `
   color: #212332;
 }
 
-.emotion-16 {
+.emotion-17 {
   font-family: Roboto;
   font-weight: 400;
-  line-height: 1.125rem;
+  line-height: 1rem;
   font-size: 0.75rem;
   letter-spacing: 0.015625rem;
+  color: #212332;
+}
+
+.emotion-18 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 0.875rem;
+  font-size: 0.625rem;
+  letter-spacing: 0.00625rem;
   color: #212332;
 }
 
@@ -1090,8 +1328,21 @@ exports[`Storyshots Design System/Typography Variants 1`] = `
           }
         }
       >
-        <p
+        <span
           className="emotion-14"
+        >
+          Label 04
+        </span>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <p
+          className="emotion-15"
         >
           Body 01
         </p>
@@ -1104,7 +1355,7 @@ exports[`Storyshots Design System/Typography Variants 1`] = `
         }
       >
         <p
-          className="emotion-15"
+          className="emotion-16"
         >
           Body 02
         </p>
@@ -1117,9 +1368,22 @@ exports[`Storyshots Design System/Typography Variants 1`] = `
         }
       >
         <p
-          className="emotion-16"
+          className="emotion-17"
         >
           Body 03
+        </p>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <p
+          className="emotion-18"
+        >
+          Body 04
         </p>
       </div>
     </div>
