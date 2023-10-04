@@ -1,4 +1,5 @@
 import React from 'react';
+import { FontSpacing } from 'theme/tokens/semantic/typography';
 
 import { typographyWrapper } from './Typography.style';
 
@@ -14,9 +15,11 @@ export type TypographyVariant =
   | 'label01'
   | 'label02'
   | 'label03'
+  | 'label04'
   | 'body01'
   | 'body02'
-  | 'body03';
+  | 'body03'
+  | 'body04';
 
 export type TypographyComponent = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
 
@@ -27,6 +30,8 @@ export type TypographyProps = {
   type?: TextColorTypes;
   /** The variant of the Typography is the style of the text (font size, weight, line height, etc) */
   variant?: TypographyVariant;
+  /** The Font Spacing used in the selection of the font family */
+  fontSpacing?: FontSpacing;
   /** How you want to represent it, eg div, span or other */
   component?: TypographyComponent;
   /** A boolean definition of the inverted case */
@@ -62,6 +67,7 @@ const Typography = React.forwardRef<HTMLHeadingElement, TypographyProps>(
     {
       type = 'primary',
       variant = 'body01',
+      fontSpacing = 'normal',
       component,
       isInverted,
       isUnderline,
@@ -81,6 +87,7 @@ const Typography = React.forwardRef<HTMLHeadingElement, TypographyProps>(
           isInverted,
           type,
           variant,
+          fontSpacing,
           isUnderline,
           isItalic,
           isBold,

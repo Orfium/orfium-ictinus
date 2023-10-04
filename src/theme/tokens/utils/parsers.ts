@@ -91,7 +91,7 @@ export const parseComponentToken =
     const pathKeys = path.slice(1, -1).split('.');
 
     if (pathKeys[0] === 'sem') {
-      const category = pathKeys[1]; // backdrop | backgroundColor | borderColor | disabledState | palette | textColor
+      const category = pathKeys[1]; // backdrop | backgroundColor | borderColor | disabledState | palette | textColor | typography
       const rest = pathKeys.slice(2).join('.');
 
       return theme.tokens[category].get(rest, fn);

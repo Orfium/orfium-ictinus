@@ -1,6 +1,6 @@
 import avatar from 'theme/tokens/components/variables/avatar';
 import avatarText from 'theme/tokens/components/variables/avatarText';
-import { getComponentTokens, parseCompositionToken, DotKeys } from 'theme/tokens/utils';
+import { getComponentTokens, DotKeys } from 'theme/tokens/utils';
 import { rem } from 'theme/utils';
 
 import { Theme } from '../../theme';
@@ -15,12 +15,10 @@ export const parseAvatarStackSize = (val: string) =>
 export type AvatarTokens = DotKeys<typeof avatar>;
 export type AvatarTextTokens = DotKeys<typeof avatarText>;
 
-export const getAvatarTokens = (
-  theme: Theme
-): ((path: AvatarTokens, fn?: (val: string) => any) => string) => {
+export const getAvatarTokens = (theme: Theme) => {
   return getComponentTokens(avatar, theme);
 };
 
-export const getAvatarTextTokens = (): ((path: DotKeys<typeof avatarText>) => string) => {
-  return parseCompositionToken(avatarText);
+export const getAvatarTextTokens = (theme: Theme) => {
+  return getComponentTokens(avatarText, theme);
 };

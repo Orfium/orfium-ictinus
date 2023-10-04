@@ -1,32 +1,27 @@
 import { css, SerializedStyles } from '@emotion/react';
-import { get } from 'lodash';
 
-import {
-  AvatarTextTokens,
-  AvatarTokens,
-  getAvatarTextTokens,
-  getAvatarTokens,
-} from './Avatar.tokens';
+import { getAvatarTextTokens, getAvatarTokens } from './Avatar.tokens';
 import { AvatarColors, AvatarSizes } from './Avatar.types';
 import { Theme } from '../../theme';
 import { flex } from '../../theme/functions';
+import { generateStylesFromTokens } from 'components/Typography/utils';
 
 export const avatarStyle =
   ({ size, color }: { size: AvatarSizes; color: AvatarColors }) =>
   (theme: Theme): SerializedStyles => {
     const tokens = getAvatarTokens(theme);
-    const typographyTokens = getAvatarTextTokens();
+    const typographyTokens = getAvatarTextTokens(theme);
 
     return css`
       ${flex};
-      width: ${tokens(`size.${size}` as AvatarTokens)};
-      height: ${tokens(`size.${size}` as AvatarTokens)};
+      width: ${tokens(`size.${size}` as const)};
+      height: ${tokens(`size.${size}` as const)};
       border-radius: ${tokens('borderRadius')};
       border: ${tokens('borderWidth')} solid;
-      border-color: ${tokens(`borderColor.${color}` as AvatarTokens)};
+      border-color: ${tokens(`borderColor.${color}` as const)};
       box-sizing: border-box;
-      background-color: ${tokens(`backgroundColor.${color}` as AvatarTokens)};
-      color: ${tokens(`textColor.${color}` as AvatarTokens)};
+      background-color: ${tokens(`backgroundColor.${color}` as const)};
+      color: ${tokens(`textColor.${color}` as const)};
       overflow: hidden;
       position: relative;
       align-items: center;
@@ -34,10 +29,7 @@ export const avatarStyle =
       user-select: none;
       justify-content: center;
 
-      font-size: ${get(typographyTokens(`${size}` as AvatarTextTokens), 'fontSize')};
-      font-weight: ${get(typographyTokens(`${size}` as AvatarTextTokens), 'fontWeight')};
-      line-height: ${get(typographyTokens(`${size}` as AvatarTextTokens), 'lineHeight')};
-      letter-spacing: ${get(typographyTokens(`${size}` as AvatarTextTokens), 'letterSpacing')};
+      ${generateStylesFromTokens(typographyTokens(`${size}`))};
 
       img {
         border-radius: ${tokens('borderRadius')};
