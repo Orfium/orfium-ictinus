@@ -7,9 +7,9 @@ import { TableWrapperStyle } from './TypographyTokensShowcase.style';
 import Typography, { TypographyVariant } from 'components/Typography';
 
 const TypographyTokensShowcase = () => {
-  const typographyArray = map(typographyCollection, (value, key) => ({ key, ...value }));
+  const typographyArray = map(typographyCollection.normal, (value, key) => ({ key, ...value }));
 
-  const parsedTypographyCompositionToken = parseCompositionToken(typographyCollection);
+  const parsedTypographyCompositionToken = parseCompositionToken(typographyCollection.normal);
 
   return (
     <table css={TableWrapperStyle} width={'100%'}>
@@ -25,6 +25,11 @@ const TypographyTokensShowcase = () => {
           <tr key={key} css={{ background: index % 2 !== 0 ? '#E7EEFE' : '#FFFFFF' }}>
             <td>
               <Typography variant={key as TypographyVariant}>{key}</Typography>
+              <br />
+              <Typography fontSpacing="mono" variant={key as TypographyVariant}>
+                {key} (Mono)
+              </Typography>
+              <br />
               <Typography variant={'body01'} type={'secondary'}>
                 {description}
               </Typography>

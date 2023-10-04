@@ -9,20 +9,14 @@ export type ButtonTokens = DotKeys<typeof button>;
 export type TextButtonTokens = DotKeys<typeof textButton>;
 export type IconButtonTokens = DotKeys<typeof iconButton>;
 
-export const getButtonTokens = (
-  theme: Theme
-): ((path: ButtonTokens, fn?: (val: string) => any) => string) => {
+export const getButtonTokens = (theme: Theme) => {
   return getComponentTokens(button, theme);
 };
 
-export const getTextButtonTokens = (
-  theme: Theme
-): ((path: TextButtonTokens, fn?: (val: string) => any) => string) => {
+export const getTextButtonTokens = (theme: Theme) => {
   return getComponentTokens(textButton, theme);
 };
 
-export const getIconButtonTokens = (
-  theme: Theme
-): ((path: IconButtonTokens, fn?: (val: string) => any) => string) => {
+export const getIconButtonTokens = (theme: Theme) => {
   return getComponentTokens(iconButton, theme);
 };

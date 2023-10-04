@@ -1,7 +1,7 @@
 import { get, isEmpty } from 'lodash';
 import { Theme } from 'theme';
 
-import { parseComponentToken } from './parsers';
+import { parseComponentToken, parseCompositionToken } from './parsers';
 import { Token, TokensObject } from './types';
 
 /**
@@ -21,6 +21,11 @@ export const getComponentTokens =
 
     const pathKeys = path.split('.');
     const tokensObject = get(object, pathKeys, {});
+
+    if (tokensObject.type === 'typography' && typeof tokensObject.value === 'object') {
+      /** In this case value is a composition token with global typography keys */
+      return parseCompositionToken(object)(path);
+    }
 
     return !isEmpty(tokensObject) ? parseComponentToken(tokensObject.value, fn)(theme) : '';
   };
