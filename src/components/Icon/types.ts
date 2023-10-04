@@ -170,4 +170,8 @@ export type AcceptedIconNames =
   | 'unpaired'
   | 'unpairedV2'
   | 'clockOutlined'
-  | 'userCheck';
+  | 'userCheck'
+  | 'undo'
+  | 'bookmark'
+  | 'tag'
+  | 'triangleWarning';

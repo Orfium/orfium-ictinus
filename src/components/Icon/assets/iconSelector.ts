@@ -1,4 +1,3 @@
-import { AcceptedIconNames } from '../types';
 import AccountIcon from './account.svg';
 import ActionsIcon from './actions.svg';
 import AddIcon from './add.svg';
@@ -12,6 +11,7 @@ import ArtistIcon from './artist.svg';
 import AssetMatchingIcon from './asset-matching.svg';
 import AssetIcon from './asset.svg';
 import AutoIcon from './auto.svg';
+import BookmarkIcon from './bookmark.svg';
 import Broadcast from './broadcast.svg';
 import CalendarEmptyIcon from './calendar-empty.svg';
 import CalendarFilledIcon from './calendar-filled.svg';
@@ -151,6 +151,7 @@ import StampIcon from './stamp.svg';
 import StarIcon from './star.svg';
 import Statements from './statements.svg';
 import SuccessIcon from './success.svg';
+import TagIcon from './tag.svg';
 import Television from './television.svg';
 import ThunderIcon from './thunder.svg';
 import TicTacToeArrowIcon from './tic-tac-toe-arrow.svg';
@@ -160,9 +161,11 @@ import TriangleDownIcon from './triangle-down.svg';
 import TriangleLeftIcon from './triangle-left.svg';
 import TriangleRightIcon from './triangle-right.svg';
 import TriangleUpIcon from './triangle-up.svg';
+import TriangleWarningIcon from './triangle-warning.svg';
 import TrophyIcon from './trophy.svg';
 import TVCinemaIcon from './TVCinema.svg';
 import TVRadioIcon from './TVRadio.svg';
+import UndoIcon from './undo.svg';
 import UnpairedV2 from './unpaired-v2.svg';
 import Unpaired from './unpaired.svg';
 import UpdateIcon from './update.svg';
@@ -178,6 +181,7 @@ import WarningIcon from './warning.svg';
 import WorksIcon from './works.svg';
 import WriterIcon from './writer.svg';
 import YoutubeIcon from './youtube.svg';
+import { AcceptedIconNames } from '../types';
 
 const iconSelector: { [key in AcceptedIconNames]: string } = {
   account: AccountIcon,
@@ -352,6 +356,10 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   userCheck: UserCheck,
   distribution: Distribution,
   royaltyShares: RoyaltyShares,
+  undo: UndoIcon,
+  bookmark: BookmarkIcon,
+  tag: TagIcon,
+  triangleWarning: TriangleWarningIcon
 };
 
 export default iconSelector;
