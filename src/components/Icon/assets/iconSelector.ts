@@ -10,6 +10,8 @@ import ArrowRightIcon from './arrow-right.svg';
 import ArtistIcon from './artist.svg';
 import AssetMatchingIcon from './asset-matching.svg';
 import AssetIcon from './asset.svg';
+import AudioOffIcon from './audioOff.svg';
+import AudioOnIcon from './audioOn.svg';
 import AutoIcon from './auto.svg';
 import BookmarkIcon from './bookmark.svg';
 import Broadcast from './broadcast.svg';
@@ -88,6 +90,10 @@ import HeartFillIcon from './heart-fill.svg';
 import HeartStrokeIcon from './heart-stroke.svg';
 import HelpIcon from './help.svg';
 import HourglassIcon from './hourglass.svg';
+import ImageFillOffIcon from './imageFillOff.svg';
+import ImageFillOnIcon from './imageFillOn.svg';
+import ImageOutlinedOffIcon from './imageOutlinedOff.svg';
+import ImageOutlinedOnIcon from './imageOutlinedOn.svg';
 import IncomeIcon from './income.svg';
 import InfoFilledIcon from './info-filled.svg';
 import InfoIcon from './info.svg';
@@ -176,6 +182,10 @@ import UserCheck from './userCheck.svg';
 import UsersIcon from './users.svg';
 import Users2Icon from './users2.svg';
 import VideoCondirmationIcon from './videoConfirmation.svg';
+import VideoFillOffIcon from './videoFillOff.svg';
+import VideoFillOnIcon from './videoFillOn.svg';
+import VideoOutlineOffIcon from './videoOutlineOff.svg';
+import VideoOutlineOnIcon from './videoOutlineOn.svg';
 import ViewIcon from './view.svg';
 import WarningIcon from './warning.svg';
 import WorksIcon from './works.svg';
@@ -359,7 +369,17 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   undo: UndoIcon,
   bookmark: BookmarkIcon,
   tag: TagIcon,
-  triangleWarning: TriangleWarningIcon
+  triangleWarning: TriangleWarningIcon,
+  audioOff: AudioOffIcon,
+  audioOn: AudioOnIcon,
+  imageFillOff: ImageFillOffIcon,
+  imageFillOn: ImageFillOnIcon,
+  imageOutlinedOff: ImageOutlinedOffIcon,
+  imageOutlinedOn: ImageOutlinedOnIcon,
+  videoFillOff: VideoFillOffIcon,
+  videoFillOn: VideoFillOnIcon,
+  videoOutlineOff: VideoOutlineOffIcon,
+  videoOutlineOn: VideoOutlineOnIcon,
 };
 
 export default iconSelector;
