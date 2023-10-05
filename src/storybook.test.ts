@@ -1,10 +1,9 @@
+import path from 'path';
+
 import { createSerializer } from '@emotion/jest';
-import initStoryshots, { Stories2SnapsConverter } from '@storybook/addon-storyshots';
+import initStoryshots, { multiSnapshotWithOptions } from '@storybook/addon-storyshots';
 import { addSerializer } from 'jest-specific-snapshot';
 import { ReactElement } from 'react';
-import renderer from 'react-test-renderer';
-
-import { crawlTreeChildrenProps } from './utils/storyshots';
 
 /** Every time we run the tests, the dynamic attribute values that are generated for each element cause tests to fail.
  * A quick solution is to update snapshots every time we run the tests (jest -u) and then push the updated snapshots to git.
@@ -37,16 +36,19 @@ function createNodeMock(element: ReactElement) {
 }
 
 initStoryshots({
+  framework: 'react',
+  integrityOptions: { cwd: __dirname },
   storyNameRegex: /^(?!.*DontTest).*/,
-  test: ({ story, context }) => {
-    const converter = new Stories2SnapsConverter();
-    const options = { createNodeMock };
+  test: (story) => {
+    // FIXME Workaround for https://github.com/storybookjs/storybook/issues/16692
+    const fileName = path.resolve(__dirname, '..', story.context.fileName);
 
-    const snapshotFilename = converter.getSnapshotFileName(context);
-    const storyElement = story.render(context);
-    const tree = renderer.create(storyElement, options).toJSON();
-    crawlTreeChildrenProps(tree);
-
-    expect(tree).toMatchSpecificSnapshot(snapshotFilename);
+    return multiSnapshotWithOptions({
+      createNodeMock,
+    })({
+      ...story,
+      options: {},
+      context: { ...story.context, fileName },
+    });
   },
 });
