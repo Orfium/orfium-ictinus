@@ -1,9 +1,11 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
-import { text, withKnobs } from '@storybook/addon-knobs';
+import { text, number, select, boolean, withKnobs } from '@storybook/addon-knobs';
 import Tooltip from './Tooltip';
-import TooltipShowcase from '../storyUtils/TooltipShowcase';
 import Stack from '../storyUtils/Stack';
-import { FIGMA_URL } from '../../utils/common';
+import TooltipShowcase from '../storyUtils/TooltipShowcase';
+import { FIGMA_URL, Function } from '../../utils/common';
+import SectionHeader from '../../storybook/SectionHeader';
+import Button from '../Button';
 
 <Meta
   title="Design System/Tooltip"
@@ -18,72 +20,159 @@ import { FIGMA_URL } from '../../utils/common';
   }}
 />
 
-# Tooltip
+<SectionHeader title={'Tooltip'} />
 
-Generic tooltip that can show content as string
-The background defined is set as property to ThemeProvider with `overrides` property because color for this is global and cannot be changed per case.
-e.g `overrides: { tooltip: { background: { color: 'darkGray', shade: '500' } } }`
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
 
-## Usage
+## Overview
 
-```js
-import { Tooltip } from '@orfium/ictinus';
-
-<Tooltip content="Content you want to show as descrption of tooltip" placement={'right'}>
-  ...
-</Tooltip>;
-```
+Tooltips provide brief, helpful information when a user hovers or focuses on the trigger element.
 
 ## Props
 
 <Props of={Tooltip} />
 
-### Generic Tooltip
+## Usage
 
-Tooltip use to show info in any direction defined. If there is no space in the screen then it moves to the available space.
+<UsageGuidelines
+  guidelines={[
+    'To display the full string of a truncated text',
+    'To provide additional context for unlabeled icon buttons',
+    'Use text tooltips to offer additional context that does not support links or actions',
+    'Use interactive tooltips for more complex layouts and to offer simple actions within the tooltip',
+    'Do not display critical information in a tooltip',
+    'Do not use tooltips to display information unrelated to the triggered element',
+  ]}
+/>
+
+## Variants
+
+### Text Tooltip
+
+Text Tooltip takes a string as a content prop. There are 2 variations of Text Tooltips, default and inverted.
 
 <Preview>
-  <Story name="Generic Tooltip" parameters={{ decorators: [withKnobs] }}>
-    <TooltipShowcase
-      content={text(
-        'content',
-        'By hovering here you can see very long and useful info that totally breaks into two lines'
-      )}
-    />
+  <Story name="Text Tooltip">
+    <Stack>
+      <Function>
+        {() => {
+          return (
+            <div style={{ padding: '16px' }}>
+              <Tooltip content={'This is a Tooltip'} placement={'right'}>
+                <Button>Hover here</Button>
+              </Tooltip>
+            </div>
+          );
+        }}
+      </Function>
+    </Stack>
+    <Stack isInverted>
+      <Function>
+        {() => {
+          return (
+            <div style={{ padding: '16px' }}>
+              <Tooltip content={'This is a Tooltip'} placement={'right'} isInverted>
+                <Button type="inverted">Hover here</Button>
+              </Tooltip>
+            </div>
+          );
+        }}
+      </Function>
+    </Stack>
   </Story>
 </Preview>
 
-### Tooltip sizes
+### Interactive Tooltip
 
-Tooltip sizes are 3 `large, medium, small` and you can see them in action below.
+Interactive Tooltip takes a React Component as a content prop. There are 2 variations of Text Tooltips, default and inverted.
 
 <Preview>
-  <Story name="Tooltip sizes">
+  <Story name="Interactive Tooltip">
     <Stack>
-      <Tooltip
-        id={'right1'}
-        size={'large'}
-        content="By hover here you can see useful info"
-        placement={'right'}
-      >
-        <button>Large</button>
-      </Tooltip>
-      <Tooltip
-        id={'right2'}
-        size={'medium'}
-        content="By hover here you can see useful info"
-        placement={'right'}
-      >
-        <button>Medium</button>
-      </Tooltip>
-      <Tooltip
-        id={'right3'}
-        size={'small'}
-        content="By hover here you can see useful info"
-        placement={'right'}
-      >
-        <button>Small</button>
-      </Tooltip>
+      <TooltipShowcase />
+    </Stack>
+    <Stack isInverted>
+      <TooltipShowcase isInverted />
+    </Stack>
+  </Story>
+</Preview>
+
+### Tooltip Placement
+
+Tooltip can be placed to the top, bottom, left or right of the element.
+
+<Preview>
+  <Story name="Tooltip Placement" parameters={{ decorators: [withKnobs] }}>
+    <Stack>
+      <Function>
+        {() => {
+          return (
+            <div
+              style={{
+                padding: '16px',
+                width: '300px',
+                height: '100px',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+            >
+              <Tooltip
+                content={'This is a Tooltip'}
+                placement={select('placement', ['top', 'right', 'bottom', 'left'], 'right')}
+              >
+                <Button>Hover here</Button>
+              </Tooltip>
+            </div>
+          );
+        }}
+      </Function>
+    </Stack>
+  </Story>
+</Preview>
+
+### Playground
+
+<Preview>
+  <Story name="Playground" parameters={{ decorators: [withKnobs] }}>
+    <Stack>
+      <Function>
+        {() => {
+          return (
+            <div
+              style={{
+                padding: '16px',
+                width: '600px',
+                height: '200px',
+                display: 'flex',
+                gap: '128px',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+            >
+              <Tooltip
+                content={text('Tooltip Text', 'This is a Tooltip')}
+                placement={select('placement', ['top', 'right', 'bottom', 'left'], 'right')}
+                isInverted={boolean('isInverted', false)}
+                delayIn={number('delayIn', 100)}
+                delayOut={number('delayOut', 100)}
+              >
+                <Button>Text</Button>
+              </Tooltip>
+              <TooltipShowcase
+                buttonText={'Interactive'}
+                isInverted={boolean('isInverted', false)}
+                delayIn={number('delayIn', 100)}
+                delayOut={number('delayOut', 100)}
+                placement={select('placement', ['top', 'right', 'bottom', 'left'], 'right')}
+              />
+            </div>
+          );
+        }}
+      </Function>
     </Stack>
   </Story>
 </Preview>
