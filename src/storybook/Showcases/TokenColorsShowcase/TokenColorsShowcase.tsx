@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
-import { get, map, pick } from 'lodash';
-import React, { FC } from 'react';
+import { get } from 'lodash';
+import React, { FC, useCallback } from 'react';
 import globalColorsFigma from 'theme/globals/constants/colors';
 import colorsFigma from 'theme/tokens/semantic/variables/colors';
 import { DotKeys } from 'theme/tokens/utils';
@@ -29,16 +29,48 @@ const TokenColorsShowcase: FC<Props> = ({ type = 'globals' }) => {
     : ['lightest', 'light', 'main', 'dark', 'darkest'];
 
   const colorKeys = isGlobal
-    ? ['blue', 'tinted', 'transparent', 'teal', 'purple', 'orange', 'red', 'neutral', 'gradient']
+    ? [
+        'blue',
+        'tinted',
+        'transparent.default',
+        'transparent.alt',
+        'teal',
+        'purple',
+        'orange',
+        'red',
+        'neutral',
+        'gradient',
+      ]
     : ['primary', 'secondary', 'tertiary', 'inverted', 'warning', 'upsell', 'error'];
 
   const colorsObj = isGlobal ? globalColorsFigma : colorsFigma.palette;
 
-  // eslint-disable-next-line @typescript-eslint/ban-types
-  const colors = map(pick(colorsObj as Object, colorKeys), (value, key) => ({
-    key,
-    ...value,
-  }));
+  const colors = colorKeys.map((val) => {
+    return { key: val, ...get(colorsObj, val) };
+  });
+
+  const renderDescription = useCallback(
+    (key: string, state: string) => {
+      const colorKey = key.split('.');
+      colorKey.push(state);
+
+      return (
+        <div css={descriptionStyle}>
+          <Typography variant={'body02'} type={'secondary'}>
+            {get(colorsObj, colorKey).description}
+          </Typography>
+          <Typography variant={'label03'} component={'span'} type={'active'}>
+            ${`palette.${key}.${state}`}
+          </Typography>
+          {' = '}
+          <Typography variant={'label03'} component={'span'} type={'active'}>
+            {get(colorsObj, colorKey).value}
+          </Typography>
+        </div>
+      );
+    },
+    [colorsObj]
+  );
 
   return (
     <div css={{}}>
@@ -55,7 +87,12 @@ const TokenColorsShowcase: FC<Props> = ({ type = 'globals' }) => {
               </Typography>
               <div css={stateWrapperStyle}>
                 {states
-                  .filter((state) => get(colorsObj, [type.key, state]))
+                  .filter((state) => {
+                    const colorKey = type.key.split('.');
+                    colorKey.push(state);
+
+                    return get(colorsObj, colorKey);
+                  })
                   .map((state) => (
                     <div
                       key={`palette.${type.key}.${state}`}
@@ -78,18 +115,7 @@ const TokenColorsShowcase: FC<Props> = ({ type = 'globals' }) => {
                       />
                       <div>
                         <Typography isBold>{state}</Typography>
-                        <div css={descriptionStyle}>
-                          <Typography variant={'body02'} type={'secondary'}>
-                            {colorsObj[type.key][state].description}
-                          </Typography>
-                          <Typography variant={'label03'} component={'span'} type={'active'}>
-                            ${`palette.${type.key}.${state}`}
-                          </Typography>
-                          {' = '}
-                          <Typography variant={'label03'} component={'span'} type={'active'}>
-                            {colorsObj[type.key][state].value}
-                          </Typography>
-                        </div>
+                        <div css={descriptionStyle}>{renderDescription(type.key, state)}</div>
                       </div>
                     </div>
                   ))}
