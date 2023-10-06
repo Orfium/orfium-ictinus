@@ -41,7 +41,7 @@ module.exports = {
     'storybook-addon-designs',
   ],
   features: {
-    storyStoreV7: true,
+    storyStoreV7: false, // FIXME disabled for storyshots to work properly
   },
   core: {
     builder: 'webpack5',
