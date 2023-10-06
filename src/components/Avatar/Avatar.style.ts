@@ -29,7 +29,7 @@ export const avatarStyle =
       user-select: none;
       justify-content: center;
 
-      ${generateStylesFromTokens(typographyTokens(`${size}`))};
+      ${generateStylesFromTokens(typographyTokens(`${size}` as const))};
 
       img {
         border-radius: ${tokens('borderRadius')};
