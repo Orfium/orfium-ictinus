@@ -16,10 +16,9 @@ const parseColorToken = (token: Token) => {
 
   if (value.startsWith('{colors.')) {
     const valueArray = value.slice(1, -1).split('.');
-    const color = valueArray[1];
-    const shade = Number(valueArray[2]);
+    const colorPath = valueArray.splice(1).join('.');
 
-    return get(globals, 'colors').get(`${color}.${shade}` as ColorsKey);
+    return get(globals, 'colors').get(colorPath as ColorsKey);
   }
 
   return value;

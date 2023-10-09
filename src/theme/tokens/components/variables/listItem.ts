@@ -1,7 +1,7 @@
 const listItem = {
   iconColor: {
     type: 'color',
-    value: '{sem.colors.textColor.light.secondary}',
+    value: '{sem.colors.textColor.default.secondary}',
     description: 'Sets color for list item icons',
   },
   iconSize: {
@@ -122,18 +122,18 @@ const listItem = {
   textColor: {
     default: {
       type: 'color',
-      value: '{sem.colors.textColor.light.primary}',
+      value: '{sem.colors.textColor.default.primary}',
       description: 'Sets textColor for primary list item copy',
     },
     secondary: {
       type: 'color',
-      value: '{sem.colors.textColor.light.secondary}',
+      value: '{sem.colors.textColor.default.secondary}',
       description:
         'Sets textColor for secondary list item copy and content variants (e.g. loading, no results)',
     },
     active: {
       type: 'color',
-      value: '{sem.colors.textColor.light.active}',
+      value: '{sem.colors.textColor.default.active}',
       description: 'Sets textColor for active list item copy',
     },
   },

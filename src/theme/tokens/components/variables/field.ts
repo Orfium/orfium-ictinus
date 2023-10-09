@@ -1,67 +1,4 @@
 const field = {
-  inputChip: {
-    height: {
-      value: '{sizing.5}',
-      type: 'sizing',
-      description: 'Sets fixed height for _block input chip',
-    },
-    backgroundColor: {
-      default: {
-        value: '{sem.colors.palette.secondary.lightest}',
-        type: 'color',
-        description: 'Sets backgroundColor for block input chip (default state)',
-      },
-      focused: {
-        value: '{sem.colors.palette.secondary.light}',
-        type: 'color',
-        description: 'Sets backgroundColor for block input chip (focused state)',
-      },
-    },
-    borderColor: {
-      default: {
-        value: '{sem.colors.borderColor.interactive.default}',
-        type: 'color',
-        description: 'Sets borderColor for block input chip (default state)',
-      },
-      focused: {
-        value: '{sem.colors.borderColor.interactive.active}',
-        type: 'color',
-        description: 'Sets borderColor for block input chip (focused state)',
-      },
-    },
-    borderRadius: {
-      value: '{borderRadius.1}',
-      type: 'borderRadius',
-      description: 'Sets borderRadius for block input chip',
-    },
-    textColor: {
-      value: '{sem.colors.textColor.light.secondary}',
-      type: 'color',
-      description: 'Sets textColor for block input chip',
-    },
-    borderWidth: {
-      '1': {
-        value: '{borderWidth.1}',
-        type: 'borderWidth',
-        description: 'Sets borderWidth for block input chip (default state)',
-      },
-      '2': {
-        value: '{borderWidth.2}',
-        type: 'borderWidth',
-        description: 'Sets borderWidth for block input chip (focused state)',
-      },
-    },
-    label: {
-      value: '{sem.typography.normal.body02}',
-      type: 'typography',
-      description: 'Sets text for block input chip',
-    },
-    paddingHorizontal: {
-      value: '{spacing.4}',
-      type: 'spacing',
-      description: 'Sets left and right padding for _block input chip',
-    },
-  },
   addOn: {
     height: {
       normal: {
@@ -76,7 +13,7 @@ const field = {
       },
     },
     iconColor: {
-      value: '{sem.colors.textColor.light.secondary}',
+      value: '{sem.colors.textColor.default.secondary}',
       type: 'color',
       description: 'Sets color for _block addOn icon',
     },
@@ -107,7 +44,7 @@ const field = {
       },
     },
   },
-  increment: {
+  stepper: {
     backgroundColor: {
       default: {
         value: '{sem.colors.palette.tertiary.lightest}',
@@ -126,25 +63,17 @@ const field = {
     type: 'spacing',
     description: 'sets vertical padding between an input field container and its hint (if used)',
   },
-  placeholder: {
-    value: '{sem.typography.normal.body02}',
-    type: 'typography',
-    description: 'Sets text for input field placeholder label',
-  },
-  input: {
-    value: '{sem.typography.normal.body02}',
-    type: 'typography',
-    description: 'Sets text for field input',
-  },
-  label: {
-    value: '{sem.typography.normal.label03}',
-    type: 'typography',
-    description: 'Sets text for input field label',
-  },
-  labelCompact: {
-    value: '{sem.typography.normal.body03}',
-    type: 'typography',
-    description: 'Sets text for compact input field label',
+  normal: {
+    input: {
+      value: '{sem.typography.normal.body02}',
+      type: 'typography',
+      description: 'Sets text for field prefix/input/suffix/placeholder',
+    },
+    label: {
+      value: '{sem.typography.normal.label03}',
+      type: 'typography',
+      description: 'Sets text for input field label',
+    },
   },
   hint: {
     value: '{sem.typography.normal.body03}',
@@ -160,6 +89,11 @@ const field = {
       description: 'Sets text color for a field hint',
     },
     description: 'Sets text for input field hint',
+    iconSize: {
+      value: '{sem.icon.size.2}',
+      type: 'sizing',
+      description: 'Sets icon size for error hint icon in fields',
+    },
   },
   backgroundColor: {
     default: {
@@ -217,40 +151,40 @@ const field = {
   },
   textColor: {
     inputColor: {
-      value: '{sem.colors.textColor.light.primary}',
+      value: '{sem.colors.textColor.default.primary}',
       type: 'color',
       description: 'Sets textColor for a field input',
     },
     inputColorAlt: {
       type: 'color',
-      value: '{sem.colors.textColor.light.secondary}',
+      value: '{sem.colors.textColor.default.secondary}',
       description:
         'Sets textColor for field label, hint, text placehodler and locked field contnet ',
     },
     errorHintColor: {
       type: 'color',
-      value: '{sem.colors.textColor.light.error}',
+      value: '{sem.colors.textColor.default.error}',
       description: 'Sets textColor for error input field hint',
     },
     labelActive: {
       type: 'color',
-      value: '{sem.colors.textColor.light.active}',
+      value: '{sem.colors.textColor.default.active}',
       description: 'Sets textColor for an active field label',
     },
     labelError: {
       type: 'color',
-      value: '{sem.colors.textColor.light.error}',
+      value: '{sem.colors.textColor.default.error}',
       description: 'Sets textColor for an error field label',
     },
   },
   iconColor: {
     default: {
-      value: '{sem.colors.textColor.light.secondary}',
+      value: '{sem.colors.textColor.default.secondary}',
       type: 'color',
       description: 'Sets color for a field icon/suffix (if used)',
     },
     errorIcon: {
-      value: '{sem.colors.textColor.light.error}',
+      value: '{sem.colors.textColor.default.error}',
       type: 'color',
       description: 'Sets color for an error input field icon',
     },
@@ -306,6 +240,18 @@ const field = {
     value: '{spacing.6}',
     type: 'spacing',
     description: 'Sets top and bottom padding for text area',
+  },
+  compact: {
+    input: {
+      value: '{sem.typography.normal.body03}',
+      type: 'typography',
+      description: 'Sets text for input field label',
+    },
+  },
+  hintIconSize: {
+    value: '{sem.icon.size.2}',
+    type: 'sizing',
+    description: 'Sets icon size for field error hint icon',
   },
 } as const;
 
