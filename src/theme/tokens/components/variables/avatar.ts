@@ -92,7 +92,7 @@ const avatar = {
       description: 'Sets size for small avatar',
     },
     '3': {
-      value: '{sizing.9}',
+      value: '{sizing.8}',
       type: 'sizing',
       description: 'Sets size for medium avatar',
     },

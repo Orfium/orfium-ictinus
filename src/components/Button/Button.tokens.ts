@@ -10,13 +10,13 @@ export type TextButtonTokens = DotKeys<typeof textButton>;
 export type IconButtonTokens = DotKeys<typeof iconButton>;
 
 export const getButtonTokens = (theme: Theme) => {
-  return getComponentTokens(button, theme);
+  return getComponentTokens<ButtonTokens>(button, theme);
 };
 
 export const getTextButtonTokens = (theme: Theme) => {
-  return getComponentTokens(textButton, theme);
+  return getComponentTokens<TextButtonTokens>(textButton, theme);
 };
 
 export const getIconButtonTokens = (theme: Theme) => {
-  return getComponentTokens(iconButton, theme);
+  return getComponentTokens<IconButtonTokens>(iconButton, theme);
 };

@@ -16,9 +16,9 @@ export type AvatarTokens = DotKeys<typeof avatar>;
 export type AvatarTextTokens = DotKeys<typeof avatarText>;
 
 export const getAvatarTokens = (theme: Theme) => {
-  return getComponentTokens(avatar, theme);
+  return getComponentTokens<AvatarTokens>(avatar, theme);
 };
 
 export const getAvatarTextTokens = (theme: Theme) => {
-  return getComponentTokens(avatarText, theme);
+  return getComponentTokens<AvatarTextTokens>(avatarText, theme);
 };

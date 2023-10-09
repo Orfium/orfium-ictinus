@@ -14,7 +14,8 @@ import { Token, TokensObject } from './types';
  * @returns the parsed value of the requested path
  */
 export const getComponentTokens =
-  (object: TokensObject | Token, theme: Theme) => (path: string, fn?: (val: string) => unknown) => {
+  <T extends string>(object: TokensObject | Token, theme: Theme) =>
+  (path: T, fn?: (val: string) => unknown) => {
     if (object?.value) {
       return parseComponentToken((object as Token).value, fn)(theme);
     }

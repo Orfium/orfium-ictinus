@@ -1,6 +1,6 @@
 const menu = {
   backgroundColor: {
-    value: '{sem.colors.backgroundColor.light}',
+    value: '{sem.colors.backgroundColor.default}',
     type: 'color',
     description: 'Background color for menu container',
   },
