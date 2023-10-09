@@ -1,4 +1,3 @@
-import { AcceptedIconNames } from '../types';
 import AccountIcon from './account.svg';
 import ActionsIcon from './actions.svg';
 import AddIcon from './add.svg';
@@ -11,7 +10,10 @@ import ArrowRightIcon from './arrow-right.svg';
 import ArtistIcon from './artist.svg';
 import AssetMatchingIcon from './asset-matching.svg';
 import AssetIcon from './asset.svg';
+import AudioOffIcon from './audioOff.svg';
+import AudioOnIcon from './audioOn.svg';
 import AutoIcon from './auto.svg';
+import BookmarkIcon from './bookmark.svg';
 import Broadcast from './broadcast.svg';
 import CalendarEmptyIcon from './calendar-empty.svg';
 import CalendarFilledIcon from './calendar-filled.svg';
@@ -88,6 +90,10 @@ import HeartFillIcon from './heart-fill.svg';
 import HeartStrokeIcon from './heart-stroke.svg';
 import HelpIcon from './help.svg';
 import HourglassIcon from './hourglass.svg';
+import ImageFillOffIcon from './imageFillOff.svg';
+import ImageFillOnIcon from './imageFillOn.svg';
+import ImageOutlinedOffIcon from './imageOutlinedOff.svg';
+import ImageOutlinedOnIcon from './imageOutlinedOn.svg';
 import IncomeIcon from './income.svg';
 import InfoFilledIcon from './info-filled.svg';
 import InfoIcon from './info.svg';
@@ -151,6 +157,7 @@ import StampIcon from './stamp.svg';
 import StarIcon from './star.svg';
 import Statements from './statements.svg';
 import SuccessIcon from './success.svg';
+import TagIcon from './tag.svg';
 import Television from './television.svg';
 import ThunderIcon from './thunder.svg';
 import TicTacToeArrowIcon from './tic-tac-toe-arrow.svg';
@@ -160,9 +167,11 @@ import TriangleDownIcon from './triangle-down.svg';
 import TriangleLeftIcon from './triangle-left.svg';
 import TriangleRightIcon from './triangle-right.svg';
 import TriangleUpIcon from './triangle-up.svg';
+import TriangleWarningIcon from './triangle-warning.svg';
 import TrophyIcon from './trophy.svg';
 import TVCinemaIcon from './TVCinema.svg';
 import TVRadioIcon from './TVRadio.svg';
+import UndoIcon from './undo.svg';
 import UnpairedV2 from './unpaired-v2.svg';
 import Unpaired from './unpaired.svg';
 import UpdateIcon from './update.svg';
@@ -173,11 +182,16 @@ import UserCheck from './userCheck.svg';
 import UsersIcon from './users.svg';
 import Users2Icon from './users2.svg';
 import VideoCondirmationIcon from './videoConfirmation.svg';
+import VideoFillOffIcon from './videoFillOff.svg';
+import VideoFillOnIcon from './videoFillOn.svg';
+import VideoOutlineOffIcon from './videoOutlineOff.svg';
+import VideoOutlineOnIcon from './videoOutlineOn.svg';
 import ViewIcon from './view.svg';
 import WarningIcon from './warning.svg';
 import WorksIcon from './works.svg';
 import WriterIcon from './writer.svg';
 import YoutubeIcon from './youtube.svg';
+import { AcceptedIconNames } from '../types';
 
 const iconSelector: { [key in AcceptedIconNames]: string } = {
   account: AccountIcon,
@@ -352,6 +366,20 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   userCheck: UserCheck,
   distribution: Distribution,
   royaltyShares: RoyaltyShares,
+  undo: UndoIcon,
+  bookmark: BookmarkIcon,
+  tag: TagIcon,
+  triangleWarning: TriangleWarningIcon,
+  audioOff: AudioOffIcon,
+  audioOn: AudioOnIcon,
+  imageFillOff: ImageFillOffIcon,
+  imageFillOn: ImageFillOnIcon,
+  imageOutlinedOff: ImageOutlinedOffIcon,
+  imageOutlinedOn: ImageOutlinedOnIcon,
+  videoFillOff: VideoFillOffIcon,
+  videoFillOn: VideoFillOnIcon,
+  videoOutlineOff: VideoOutlineOffIcon,
+  videoOutlineOn: VideoOutlineOnIcon,
 };
 
 export default iconSelector;

@@ -1,3 +1,14 @@
+import AudioOffIcon from 'components/Icon/assets/audioOff.svg';
+import AudioOnIcon from 'components/Icon/assets/audioOn.svg';
+import ImageFillOffIcon from 'components/Icon/assets/imageFillOff.svg';
+import ImageFillOnIcon from 'components/Icon/assets/imageFillOn.svg';
+import ImageOutlinedOffIcon from 'components/Icon/assets/imageOutlinedOff.svg';
+import ImageOutlinedOnIcon from 'components/Icon/assets/imageOutlinedOn.svg';
+import VideoFillOffIcon from 'components/Icon/assets/videoFillOff.svg';
+import VideoFillOnIcon from 'components/Icon/assets/videoFillOn.svg';
+import VideoOutlineOffIcon from 'components/Icon/assets/videoOutlineOff.svg';
+import VideoOutlineOnIcon from 'components/Icon/assets/videoOutlineOn.svg';
+
 export type AcceptedIconNames =
   | 'account'
   | 'actions'
@@ -170,4 +181,18 @@ export type AcceptedIconNames =
   | 'unpaired'
   | 'unpairedV2'
   | 'clockOutlined'
-  | 'userCheck';
+  | 'userCheck'
+  | 'undo'
+  | 'bookmark'
+  | 'tag'
+  | 'triangleWarning'
+  | 'audioOff'
+  | 'audioOn'
+  | 'imageFillOff'
+  | 'imageFillOn'
+  | 'imageOutlinedOff'
+  | 'imageOutlinedOn'
+  | 'videoFillOff'
+  | 'videoFillOn'
+  | 'videoOutlineOff'
+  | 'videoOutlineOn';
