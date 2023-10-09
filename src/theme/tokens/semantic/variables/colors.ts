@@ -151,49 +151,47 @@ const colors = {
       },
     },
     tertiary: {
-      default: {
-        lightest: {
-          value: '{colors.transparent.default.1}',
-          type: 'color',
-        },
-        light: {
-          value: '{colors.transparent.default.2}',
-          type: 'color',
-        },
-        main: {
-          value: '{colors.transparent.default.3}',
-          type: 'color',
-        },
-        dark: {
-          type: 'color',
-          value: '{colors.transparent.default.4}',
-        },
-        darkest: {
-          type: 'color',
-          value: '{colors.transparent.default.5}',
-        },
+      lightest: {
+        value: '{colors.transparent.default.1}',
+        type: 'color',
       },
-      alt: {
-        lightest: {
-          value: '{colors.transparent.alt.1}',
-          type: 'color',
-        },
-        light: {
-          value: '{colors.transparent.alt.2}',
-          type: 'color',
-        },
-        main: {
-          value: '{colors.transparent.alt.3}',
-          type: 'color',
-        },
-        dark: {
-          type: 'color',
-          value: '{colors.transparent.alt.4}',
-        },
-        darkest: {
-          type: 'color',
-          value: '{colors.transparent.alt.5}',
-        },
+      light: {
+        value: '{colors.transparent.default.2}',
+        type: 'color',
+      },
+      main: {
+        value: '{colors.transparent.default.3}',
+        type: 'color',
+      },
+      dark: {
+        type: 'color',
+        value: '{colors.transparent.default.4}',
+      },
+      darkest: {
+        type: 'color',
+        value: '{colors.transparent.default.5}',
+      },
+    },
+    tertiaryAlt: {
+      lightest: {
+        value: '{colors.transparent.alt.1}',
+        type: 'color',
+      },
+      light: {
+        value: '{colors.transparent.alt.2}',
+        type: 'color',
+      },
+      main: {
+        value: '{colors.transparent.alt.3}',
+        type: 'color',
+      },
+      dark: {
+        type: 'color',
+        value: '{colors.transparent.alt.4}',
+      },
+      darkest: {
+        type: 'color',
+        value: '{colors.transparent.alt.5}',
       },
     },
     upsell: {

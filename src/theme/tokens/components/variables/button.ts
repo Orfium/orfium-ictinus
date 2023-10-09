@@ -51,16 +51,16 @@ const button = {
     backgroundColor: {
       default: {
         type: 'color',
-        value: '{sem.colors.palette.tertiary.default.lightest}',
+        value: '{sem.colors.palette.tertiary.lightest}',
         description: 'Sets backgroundColor for tertiary default button',
       },
       hover: {
-        value: '{sem.colors.palette.tertiary.default.light}',
+        value: '{sem.colors.palette.tertiary.light}',
         type: 'color',
         description: 'Sets backgroundColor for tertiary hovered button',
       },
       active: {
-        value: '{sem.colors.palette.tertiary.default.main}',
+        value: '{sem.colors.palette.tertiary.main}',
         type: 'color',
         description: 'Sets backgroundColor for tertiary active button',
       },
@@ -75,16 +75,16 @@ const button = {
     backgroundColor: {
       default: {
         type: 'color',
-        value: '{sem.colors.palette.tertiary.default.lightest}',
+        value: '{sem.colors.palette.tertiary.lightest}',
         description: 'Sets backgroundColor for invertedAlt default button',
       },
       hover: {
-        value: '{sem.colors.palette.tertiary.default.light}',
+        value: '{sem.colors.palette.tertiary.light}',
         type: 'color',
         description: 'Sets backgroundColor for invertedAlt hovered button',
       },
       active: {
-        value: '{sem.colors.palette.tertiary.default.main}',
+        value: '{sem.colors.palette.tertiary.main}',
         type: 'color',
         description: 'Sets backgroundColor for invertedAlt active button',
       },

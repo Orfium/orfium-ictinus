@@ -62,7 +62,7 @@ export const typographyWrapper =
       body04,
     };
 
-    const textColorCategory = isInverted ? 'inverted' : 'light';
+    const textColorCategory = isInverted ? 'inverted' : 'default';
     const textColor = `textColor.${textColorCategory}.${type}` as DotKeys<typeof colorsFigma>;
 
     return css`

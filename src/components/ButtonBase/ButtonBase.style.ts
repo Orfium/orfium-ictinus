@@ -2,12 +2,7 @@ import { css, SerializedStyles } from '@emotion/react';
 
 import { ButtonBaseProps } from './ButtonBase';
 import { Theme } from '../../theme';
-import {
-  ButtonTokens,
-  getButtonTokens,
-  getIconButtonTokens,
-  getTextButtonTokens,
-} from '../Button/Button.tokens';
+import { getButtonTokens, getIconButtonTokens, getTextButtonTokens } from '../Button/Button.tokens';
 import { generateStylesFromTokens } from 'components/Typography/utils';
 
 export const buttonWrapperStyle = ({
@@ -31,10 +26,10 @@ export const buttonBaseStyle =
     const textButtonTokens = getTextButtonTokens(theme);
 
     const baseButtonStyles = {
-      color: tokens(`${type}.textColor` as ButtonTokens),
+      color: tokens(`${type}.textColor` as const),
       width: isBlock ? '100%' : undefined,
       backgroundColor: tokens(
-        `${type}.backgroundColor.${isLoading ? 'active' : 'default'}` as ButtonTokens
+        `${type}.backgroundColor.${isLoading ? 'active' : 'default'}` as const
       ),
       padding: isIconButton
         ? iconButtonTokens('padding')
@@ -51,17 +46,17 @@ export const buttonBaseStyle =
       transition: 'background-color,border 150ms linear',
 
       ':focus-visible:not(:disabled)': {
-        backgroundColor: tokens(`${type}.backgroundColor.hover` as ButtonTokens),
+        backgroundColor: tokens(`${type}.backgroundColor.hover` as const),
       },
       ':disabled': {
         opacity: theme.tokens.disabledState.get('default'),
         cursor: 'not-allowed',
       },
       ':hover:not(:disabled)': {
-        backgroundColor: tokens(`${type}.backgroundColor.hover` as ButtonTokens),
+        backgroundColor: tokens(`${type}.backgroundColor.hover` as const),
       },
       ':active:not(:disabled)': {
-        backgroundColor: tokens(`${type}.backgroundColor.active` as ButtonTokens),
+        backgroundColor: tokens(`${type}.backgroundColor.active` as const),
       },
     };
 

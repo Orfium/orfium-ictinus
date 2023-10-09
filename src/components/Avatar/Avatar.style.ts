@@ -1,11 +1,6 @@
 import { css, SerializedStyles } from '@emotion/react';
 
-import {
-  AvatarTextTokens,
-  AvatarTokens,
-  getAvatarTextTokens,
-  getAvatarTokens,
-} from './Avatar.tokens';
+import { getAvatarTextTokens, getAvatarTokens } from './Avatar.tokens';
 import { AvatarColors, AvatarSizes } from './Avatar.types';
 import { Theme } from '../../theme';
 import { flex } from '../../theme/functions';
@@ -19,14 +14,14 @@ export const avatarStyle =
 
     return css`
       ${flex};
-      width: ${tokens(`size.${size}` as AvatarTokens)};
-      height: ${tokens(`size.${size}` as AvatarTokens)};
+      width: ${tokens(`size.${size}` as const)};
+      height: ${tokens(`size.${size}` as const)};
       border-radius: ${tokens('borderRadius')};
       border: ${tokens('borderWidth')} solid;
-      border-color: ${tokens(`borderColor.${color}` as AvatarTokens)};
+      border-color: ${tokens(`borderColor.${color}` as const)};
       box-sizing: border-box;
-      background-color: ${tokens(`backgroundColor.${color}` as AvatarTokens)};
-      color: ${tokens(`textColor.${color}` as AvatarTokens)};
+      background-color: ${tokens(`backgroundColor.${color}` as const)};
+      color: ${tokens(`textColor.${color}` as const)};
       overflow: hidden;
       position: relative;
       align-items: center;
@@ -34,7 +29,7 @@ export const avatarStyle =
       user-select: none;
       justify-content: center;
 
-      ${generateStylesFromTokens(typographyTokens(`${size}` as AvatarTextTokens))};
+      ${generateStylesFromTokens(typographyTokens(`${size}` as const))};
 
       img {
         border-radius: ${tokens('borderRadius')};
