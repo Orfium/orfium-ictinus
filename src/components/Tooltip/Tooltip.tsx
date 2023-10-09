@@ -12,8 +12,8 @@ const Tooltip = React.forwardRef<HTMLDivElement, TooltipProps>(
       placement = 'right',
       isInverted = false,
       isInteractive = false,
-      delayIn = 100,
-      delayOut = 100,
+      delayIn = 500,
+      delayOut = 500,
     },
     ref
   ) => {

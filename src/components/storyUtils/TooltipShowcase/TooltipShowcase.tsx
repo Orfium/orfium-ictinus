@@ -35,13 +35,13 @@ const TooltipShowcase = ({
             }}
           >
             <div>This container is custom content</div>
-            <Button>Hello there mate</Button>
+            <Button type={isInverted ? 'primary' : 'inverted'}>Hello there mate</Button>
           </div>
         }
         isInteractive
         isInverted={isInverted}
       >
-        <Button>{buttonText}</Button>
+        <Button type={isInverted ? 'inverted' : 'primary'}>{buttonText}</Button>
       </Tooltip>
     </div>
   );

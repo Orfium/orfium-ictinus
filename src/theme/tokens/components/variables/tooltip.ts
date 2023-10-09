@@ -39,14 +39,14 @@ const tooltip = {
   },
   borderColor: {
     default: {
-      value: '{sem.colors.borderColor.decorative.muted}',
-      type: 'color',
-      description: 'Sets borderColor for tooltip',
-    },
-    inverted: {
       value: '{sem.colors.borderColor.decorative.transparent}',
       type: 'color',
-      description: 'Sets borderColor for tooltip',
+      description: 'Sets borderColor for tooltip (default variant)',
+    },
+    inverted: {
+      value: '{sem.colors.borderColor.decorative.muted}',
+      type: 'color',
+      description: 'Sets borderColor for tooltip (inverted variant)',
     },
   },
   boxShadow: {
