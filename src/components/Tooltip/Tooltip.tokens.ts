@@ -6,5 +6,5 @@ import { Theme } from '../../theme';
 export type TooltipTokens = DotKeys<typeof tooltip>;
 
 export const getTooltipTokens = (theme: Theme) => {
-  return getComponentTokens(tooltip, theme);
+  return getComponentTokens<TooltipTokens>(tooltip, theme);
 };
