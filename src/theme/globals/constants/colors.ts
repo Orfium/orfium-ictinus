@@ -5,7 +5,11 @@ const colors = {
       type: 'color',
     },
     '2': {
-      value: 'linear-gradient(90deg, #1248C4 0%, #5C28CC 100%)',
+      value: 'linear-gradient(90deg, #B9CDFC 0%, #B9C0FF 100%)',
+      type: 'color',
+    },
+    '3': {
+      value: 'linear-gradient(-90deg, #1B214F 0%, #020D25 100%)',
       type: 'color',
     },
   },
@@ -159,37 +163,66 @@ const colors = {
       type: 'color',
     },
     '3': {
-      value: '#54587F',
+      value: '#686BB3',
       type: 'color',
       description: 'AA compliant against white',
     },
     '4': {
-      value: '#212332',
+      value: '#1B214F',
+      type: 'color',
+    },
+    '5': {
+      value: '#111530',
       type: 'color',
       description: 'AA compliant against white',
     },
   },
   transparent: {
-    '1': {
-      value: 'rgba(84,94,255,0)',
-      type: 'color',
+    default: {
+      '1': {
+        value: 'rgba(84,94,255,0)',
+        type: 'color',
+      },
+      '2': {
+        value: 'rgba(84,94,255,0.06)',
+        type: 'color',
+      },
+      '3': {
+        value: 'rgba(84,94,255,0.14)',
+        type: 'color',
+      },
+      '4': {
+        value: 'rgba(84,94,255,0.24)',
+        type: 'color',
+      },
+      '5': {
+        value: 'rgba(26,30,95,0.40)',
+        type: 'color',
+        description: 'AA compliant against white',
+      },
     },
-    '2': {
-      value: 'rgba(84,94,255,0.06)',
-      type: 'color',
-    },
-    '3': {
-      value: 'rgba(84,94,255,0.14)',
-      type: 'color',
-    },
-    '4': {
-      value: 'rgba(84,94,255,0.24)',
-      type: 'color',
-    },
-    '5': {
-      value: 'rgba(26,30,95,0.40)',
-      type: 'color',
-      description: 'AA compliant against white',
+    alt: {
+      '1': {
+        value: 'rgba(255,255,255,0)',
+        type: 'color',
+      },
+      '2': {
+        value: 'rgba(255,255,255,0.06)',
+        type: 'color',
+      },
+      '3': {
+        value: 'rgba(255,255,255,0.14)',
+        type: 'color',
+      },
+      '4': {
+        value: 'rgba(255,255,255,0.24)',
+        type: 'color',
+      },
+      '5': {
+        value: 'rgba(255,255,255,0.40)',
+        type: 'color',
+        description: 'AA compliant against white',
+      },
     },
   },
 } as const;

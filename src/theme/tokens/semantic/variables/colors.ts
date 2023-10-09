@@ -1,12 +1,12 @@
 const colors = {
   backgroundColor: {
-    light: {
+    default: {
       value: '{colors.neutral.1}',
       type: 'color',
       description: 'light backgroundColor variant',
     },
     transparent: {
-      value: '{colors.transparent.1}',
+      value: '{colors.transparent.default.1}',
       type: 'color',
       description: 'transparent backgroundColor variant',
     },
@@ -20,15 +20,20 @@ const colors = {
       type: 'color',
       description: 'invertedBackgroundColor variant',
     },
+    invertedAlt: {
+      value: '{colors.neutral.5}',
+      type: 'color',
+      description: 'invertedBackgroundColor, dark variant',
+    },
   },
   backdrop: {
     transparent: {
-      value: '{colors.transparent.1}',
+      value: '{colors.transparent.default.1}',
       type: 'color',
       description: 'backdrop shade, transparent variant',
     },
     dark: {
-      value: '{colors.transparent.5}',
+      value: '{colors.transparent.default.5}',
       type: 'color',
       description: 'backdrop shade, dark variant',
     },
@@ -147,24 +152,46 @@ const colors = {
     },
     tertiary: {
       lightest: {
-        value: '{colors.transparent.1}',
+        value: '{colors.transparent.default.1}',
         type: 'color',
       },
       light: {
-        value: '{colors.transparent.2}',
+        value: '{colors.transparent.default.2}',
         type: 'color',
       },
       main: {
-        value: '{colors.transparent.3}',
+        value: '{colors.transparent.default.3}',
         type: 'color',
       },
       dark: {
         type: 'color',
-        value: '{colors.transparent.4}',
+        value: '{colors.transparent.default.4}',
       },
       darkest: {
         type: 'color',
-        value: '{colors.transparent.5}',
+        value: '{colors.transparent.default.5}',
+      },
+    },
+    tertiaryAlt: {
+      lightest: {
+        value: '{colors.transparent.alt.1}',
+        type: 'color',
+      },
+      light: {
+        value: '{colors.transparent.alt.2}',
+        type: 'color',
+      },
+      main: {
+        value: '{colors.transparent.alt.3}',
+        type: 'color',
+      },
+      dark: {
+        type: 'color',
+        value: '{colors.transparent.alt.4}',
+      },
+      darkest: {
+        type: 'color',
+        value: '{colors.transparent.alt.5}',
       },
     },
     upsell: {
@@ -191,7 +218,7 @@ const colors = {
     },
   },
   textColor: {
-    light: {
+    default: {
       primary: {
         value: '{colors.neutral.4}',
         type: 'color',
@@ -249,7 +276,7 @@ const colors = {
   borderColor: {
     decorative: {
       transparent: {
-        value: '{colors.transparent.1}',
+        value: '{colors.transparent.default.1}',
         type: 'color',
         description: 'transparent borderColor variant',
       },
