@@ -21,14 +21,14 @@ Ictinus has an internal system for storing and using parameters such as `spacing
 
 The theme configuration is the core of the whole app as we said. This consist of `params` but also `utils` vital for the theme to function. The parameters that we store are shown below.
 
-| Property    | Type                                                         |
-| ----------- | ------------------------------------------------------------ |
-| palette     | [Palette](/?path=/story/system-theme--page#theme-palette)    |
-| typography  | [Typography](/?path=/story/guide-typography--page)           |
-| spacing     | [Spacing](/?path=/story/system-theme--page#theme-spacing)    |
-| elevation   | [Elevation](/?path=/docs/system-theme--page#theme-elevation) |
-| colorScheme | string ('light' or 'dark')                                   |
-| utils       | [Utility Functions](/story/system-utils--page)               |
+| Property    | Type                                                                     |
+| ----------- | ------------------------------------------------------------------------ |
+| palette     | [Palette](#theme-palette)                                                |
+| typography  | [Typography](../?path=/docs/design-tokens-semantic-typography--overview) |
+| spacing     | [Spacing](../?path=/docs/design-tokens-global-spacing--overview)         |
+| elevation   | [Elevation](#theme-elevation)                                            |
+| colorScheme | string ('light' or 'dark')                                               |
+| utils       | [Utility Functions](../?path=/docs/system-utilities--overview)           |
 
 <br />
 <br />
@@ -59,7 +59,7 @@ The **_type_** represents a specific functionality UI or UX wise. E.g error type
 ### Theme Elevation
 
 In the system it is vital to have elevation to several components. For this our design team have made 4 different variations of elevations.
-Those elevations can be found in the [Card](/docs/design-system-card--card-with-elevation#card) component where you can define in a card the elevation that you want but you can also use a specific elevation
+Those elevations can be found in the [Card](../?path=/docs/original-components-card--overview) component where you can define in a card the elevation that you want but you can also use a specific elevation
 from our system by reference the number of elevation.
 
 The table below shows the elevation metrics that are used
@@ -81,7 +81,7 @@ box-shadow: ${theme.globals.elevation['02']};
 
 ### Theme Spacing
 
-As mentioned in the design spacing [section](/?path=/story/guide-spacing--page) we are using specific metrics of spacings.
+As mentioned in the design spacing [section](../?path=/docs/design-tokens-global-spacing--overview) we are using specific metrics of spacings.
 
 These metrics are being translated from **_px_** to **_rem_** in order to be flexible across different screen sizes.
 
