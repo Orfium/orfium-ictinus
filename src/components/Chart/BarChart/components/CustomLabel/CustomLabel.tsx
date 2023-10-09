@@ -11,8 +11,8 @@ interface CustomLabelProps extends LabelProps {
 
 const CustomLabel: React.FC<CustomLabelProps> = ({ colors, value, x, y, width, height, index }) => {
   const theme = useTheme();
-  const xValue = x && width ? x + width + xValueBase : xValueBase;
-  const yValue = y && height ? y + height / divisor : 0;
+  const xValue = x && width ? Number(x) + Number(width) + xValueBase : xValueBase;
+  const yValue = y && height ? Number(y) + Number(height) / divisor : 0;
   const fill = index && colors[index] ? colors[index] : theme.palette.black;
 
   return (

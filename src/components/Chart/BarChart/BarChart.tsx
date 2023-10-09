@@ -115,7 +115,7 @@ const BarChart: React.FC<Props> = ({ data }) => {
       barCategoryGap="20%"
       maxBarSize={32}
     >
-      <CartesianGrid offset={{ left: 0 }} horizontal={false} />
+      <CartesianGrid horizontal={false} />
       <XAxis
         type="number"
         axisLine={false}
