@@ -270,6 +270,9 @@ exports[`Storyshots Design System/List/ListItem List Item Compilations 1`] = `
 
 .emotion-12 span {
   display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .emotion-18 {

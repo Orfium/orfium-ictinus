@@ -119,6 +119,7 @@ exports[`Storyshots Design System/DatePicker DatePicker 1`] = `
   background: transparent;
   border: none;
   color: #1B214F;
+  padding: 0;
   display: block;
   position: relative;
   top: 0.4375rem;
@@ -178,10 +179,10 @@ exports[`Storyshots Design System/DatePicker DatePicker 1`] = `
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
   transform: translate(0.1875rem, -35%) scale(0.8);
-  font-weight: 700;
 }
 
 .emotion-7:focus-within+label {
+  font-weight: 700!important;
   color: #1552DD;
 }
 
@@ -206,7 +207,7 @@ exports[`Storyshots Design System/DatePicker DatePicker 1`] = `
   transform: translate(0.1875rem, -95%) scale(0.8);
   font-size: 0.875rem;
   font-weight: 400;
-  color: #5f6c85;
+  color: #686BB3;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -217,6 +218,7 @@ exports[`Storyshots Design System/DatePicker DatePicker 1`] = `
   display: flex;
   top: 0;
   bottom: 0;
+  right: 0.1875rem;
   margin: auto;
   white-space: nowrap;
 }
@@ -257,7 +259,9 @@ exports[`Storyshots Design System/DatePicker DatePicker 1`] = `
   justify-content: center;
 }
 
-.emotion-10:focus-visible {
+.emotion-10:focus-visible,
+.emotion-10:hover {
+  background: rgba(84,94,255,0.06);
   border-radius: 6.25rem;
 }
 
@@ -843,7 +847,7 @@ exports[`Storyshots Design System/DatePicker DateRangePicker 1`] = `
   opacity: 1;
   cursor: text;
   height: 3.25rem;
-  min-width: 15.625rem;
+  min-width: 16.25rem;
   background-color: #ffffff;
 }
 
@@ -899,6 +903,7 @@ exports[`Storyshots Design System/DatePicker DateRangePicker 1`] = `
   background: transparent;
   border: none;
   color: #1B214F;
+  padding: 0;
   display: block;
   position: relative;
   top: 0.4375rem;
@@ -958,10 +963,10 @@ exports[`Storyshots Design System/DatePicker DateRangePicker 1`] = `
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
   transform: translate(0.1875rem, -35%) scale(0.8);
-  font-weight: 700;
 }
 
 .emotion-7:focus-within+label {
+  font-weight: 700!important;
   color: #1552DD;
 }
 
@@ -986,7 +991,7 @@ exports[`Storyshots Design System/DatePicker DateRangePicker 1`] = `
   transform: translate(0.1875rem, -95%) scale(0.8);
   font-size: 0.875rem;
   font-weight: 400;
-  color: #5f6c85;
+  color: #686BB3;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -997,6 +1002,7 @@ exports[`Storyshots Design System/DatePicker DateRangePicker 1`] = `
   display: flex;
   top: 0;
   bottom: 0;
+  right: 0.1875rem;
   margin: auto;
   white-space: nowrap;
 }
@@ -1037,7 +1043,9 @@ exports[`Storyshots Design System/DatePicker DateRangePicker 1`] = `
   justify-content: center;
 }
 
-.emotion-10:focus-visible {
+.emotion-10:focus-visible,
+.emotion-10:hover {
+  background: rgba(84,94,255,0.06);
   border-radius: 6.25rem;
 }
 
@@ -1220,7 +1228,7 @@ exports[`Storyshots Design System/DatePicker DateRangePicker with options 1`] = 
   opacity: 1;
   cursor: text;
   height: 3.25rem;
-  min-width: 15.625rem;
+  min-width: 16.25rem;
   background-color: #ffffff;
 }
 
@@ -1276,6 +1284,7 @@ exports[`Storyshots Design System/DatePicker DateRangePicker with options 1`] = 
   background: transparent;
   border: none;
   color: #1B214F;
+  padding: 0;
   display: block;
   position: relative;
   top: 0.4375rem;
@@ -1335,10 +1344,10 @@ exports[`Storyshots Design System/DatePicker DateRangePicker with options 1`] = 
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
   transform: translate(0.1875rem, -35%) scale(0.8);
-  font-weight: 700;
 }
 
 .emotion-7:focus-within+label {
+  font-weight: 700!important;
   color: #1552DD;
 }
 
@@ -1363,7 +1372,7 @@ exports[`Storyshots Design System/DatePicker DateRangePicker with options 1`] = 
   transform: translate(0.1875rem, -95%) scale(0.8);
   font-size: 0.875rem;
   font-weight: 400;
-  color: #5f6c85;
+  color: #686BB3;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1374,6 +1383,7 @@ exports[`Storyshots Design System/DatePicker DateRangePicker with options 1`] = 
   display: flex;
   top: 0;
   bottom: 0;
+  right: 0.1875rem;
   margin: auto;
   white-space: nowrap;
 }
@@ -1414,7 +1424,9 @@ exports[`Storyshots Design System/DatePicker DateRangePicker with options 1`] = 
   justify-content: center;
 }
 
-.emotion-10:focus-visible {
+.emotion-10:focus-visible,
+.emotion-10:hover {
+  background: rgba(84,94,255,0.06);
   border-radius: 6.25rem;
 }
 
@@ -1653,6 +1665,7 @@ exports[`Storyshots Design System/DatePicker DayPicker with disabled dates 1`] =
   background: transparent;
   border: none;
   color: #1B214F;
+  padding: 0;
   display: block;
   position: relative;
   top: 0.4375rem;
@@ -1712,10 +1725,10 @@ exports[`Storyshots Design System/DatePicker DayPicker with disabled dates 1`] =
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
   transform: translate(0.1875rem, -35%) scale(0.8);
-  font-weight: 700;
 }
 
 .emotion-7:focus-within+label {
+  font-weight: 700!important;
   color: #1552DD;
 }
 
@@ -1740,7 +1753,7 @@ exports[`Storyshots Design System/DatePicker DayPicker with disabled dates 1`] =
   transform: translate(0.1875rem, -95%) scale(0.8);
   font-size: 0.875rem;
   font-weight: 400;
-  color: #5f6c85;
+  color: #686BB3;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1751,6 +1764,7 @@ exports[`Storyshots Design System/DatePicker DayPicker with disabled dates 1`] =
   display: flex;
   top: 0;
   bottom: 0;
+  right: 0.1875rem;
   margin: auto;
   white-space: nowrap;
 }
@@ -1791,7 +1805,9 @@ exports[`Storyshots Design System/DatePicker DayPicker with disabled dates 1`] =
   justify-content: center;
 }
 
-.emotion-10:focus-visible {
+.emotion-10:focus-visible,
+.emotion-10:hover {
+  background: rgba(84,94,255,0.06);
   border-radius: 6.25rem;
 }
 
@@ -2016,6 +2032,7 @@ exports[`Storyshots Design System/DatePicker Playground 1`] = `
   background: transparent;
   border: none;
   color: #1B214F;
+  padding: 0;
   display: block;
   position: relative;
   top: 0.4375rem;
@@ -2075,10 +2092,10 @@ exports[`Storyshots Design System/DatePicker Playground 1`] = `
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
   transform: translate(0.1875rem, -35%) scale(0.8);
-  font-weight: 700;
 }
 
 .emotion-6:focus-within+label {
+  font-weight: 700!important;
   color: #1552DD;
 }
 
@@ -2103,7 +2120,7 @@ exports[`Storyshots Design System/DatePicker Playground 1`] = `
   transform: translate(0.1875rem, -95%) scale(0.8);
   font-size: 0.875rem;
   font-weight: 400;
-  color: #5f6c85;
+  color: #686BB3;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2114,6 +2131,7 @@ exports[`Storyshots Design System/DatePicker Playground 1`] = `
   display: flex;
   top: 0;
   bottom: 0;
+  right: 0.1875rem;
   margin: auto;
   white-space: nowrap;
 }
@@ -2154,7 +2172,9 @@ exports[`Storyshots Design System/DatePicker Playground 1`] = `
   justify-content: center;
 }
 
-.emotion-9:focus-visible {
+.emotion-9:focus-visible,
+.emotion-9:hover {
+  background: rgba(84,94,255,0.06);
   border-radius: 6.25rem;
 }
 

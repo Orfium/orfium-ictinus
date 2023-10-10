@@ -97,13 +97,14 @@ exports[`Storyshots Design System/TextArea Disabled TextArea 1`] = `
   background: transparent;
   border: none;
   color: #1B214F;
+  padding: 0;
   display: block;
   position: relative;
   top: 0.4375rem;
   z-index: 1;
   text-overflow: ellipsis;
-  width: 13.75rem;
-  min-width: 13.75rem;
+  width: 15rem;
+  min-width: 15rem;
   resize: none;
 }
 
@@ -164,6 +165,7 @@ exports[`Storyshots Design System/TextArea Disabled TextArea 1`] = `
 }
 
 .emotion-6:focus-within+label {
+  font-weight: 700!important;
   color: #1552DD;
 }
 
@@ -188,7 +190,7 @@ exports[`Storyshots Design System/TextArea Disabled TextArea 1`] = `
   transform: translate(0.1875rem, 0);
   font-size: 0.875rem;
   font-weight: 400;
-  color: #5f6c85;
+  color: #686BB3;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -199,6 +201,7 @@ exports[`Storyshots Design System/TextArea Disabled TextArea 1`] = `
   display: flex;
   top: 0;
   bottom: 0;
+  right: 0.1875rem;
   margin: auto;
   white-space: nowrap;
 }
@@ -355,12 +358,14 @@ exports[`Storyshots Design System/TextArea Playground 1`] = `
   background: transparent;
   border: none;
   color: #1B214F;
+  padding: 0;
   display: block;
   position: relative;
+  top: 0.4375rem;
   z-index: 1;
   text-overflow: ellipsis;
-  width: 13.75rem;
-  min-width: 13.75rem;
+  width: 15rem;
+  min-width: 15rem;
   resize: both;
 }
 
@@ -372,35 +377,19 @@ exports[`Storyshots Design System/TextArea Playground 1`] = `
 }
 
 .emotion-6::-webkit-input-placeholder {
-  font-family: Roboto;
-  font-weight: 400;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
+  color: transparent;
 }
 
 .emotion-6::-moz-placeholder {
-  font-family: Roboto;
-  font-weight: 400;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
+  color: transparent;
 }
 
 .emotion-6:-ms-input-placeholder {
-  font-family: Roboto;
-  font-weight: 400;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
+  color: transparent;
 }
 
 .emotion-6::placeholder {
-  font-family: Roboto;
-  font-weight: 400;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
+  color: transparent;
 }
 
 .emotion-6:focus {
@@ -437,6 +426,7 @@ exports[`Storyshots Design System/TextArea Playground 1`] = `
 }
 
 .emotion-6:focus-within+label {
+  font-weight: 700!important;
   color: #1552DD;
 }
 
@@ -461,7 +451,7 @@ exports[`Storyshots Design System/TextArea Playground 1`] = `
   transform: translate(0.1875rem, 0);
   font-size: 0.875rem;
   font-weight: 400;
-  color: #5f6c85;
+  color: #686BB3;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -472,6 +462,7 @@ exports[`Storyshots Design System/TextArea Playground 1`] = `
   display: flex;
   top: 0;
   bottom: 0;
+  right: 0.1875rem;
   margin: auto;
   white-space: nowrap;
 }
@@ -532,14 +523,19 @@ exports[`Storyshots Design System/TextArea Playground 1`] = `
               <textarea
                 aria-multiline={true}
                 className="emotion-6"
+                cols={10}
                 disabled={false}
-                placeholder="Label "
+                maxLength={0}
+                placeholder="Placeholder "
                 required={false}
                 role="textbox"
+                rows={5}
+                value=""
               />
               <label
                 className="emotion-7"
               >
+                Label
                  
               </label>
             </div>
@@ -559,7 +555,7 @@ exports[`Storyshots Design System/TextArea Playground 1`] = `
 </div>
 `;
 
-exports[`Storyshots Design System/TextArea Text Area Sizes 1`] = `
+exports[`Storyshots Design System/TextArea Resizable TextArea 1`] = `
 .emotion-0 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -661,13 +657,14 @@ exports[`Storyshots Design System/TextArea Text Area Sizes 1`] = `
   background: transparent;
   border: none;
   color: #1B214F;
+  padding: 0;
   display: block;
   position: relative;
   top: 0.4375rem;
   z-index: 1;
   text-overflow: ellipsis;
-  width: 13.75rem;
-  min-width: 13.75rem;
+  width: 15rem;
+  min-width: 15rem;
   resize: both;
 }
 
@@ -728,6 +725,7 @@ exports[`Storyshots Design System/TextArea Text Area Sizes 1`] = `
 }
 
 .emotion-6:focus-within+label {
+  font-weight: 700!important;
   color: #1552DD;
 }
 
@@ -752,7 +750,7 @@ exports[`Storyshots Design System/TextArea Text Area Sizes 1`] = `
   transform: translate(0.1875rem, 0);
   font-size: 0.875rem;
   font-weight: 400;
-  color: #5f6c85;
+  color: #686BB3;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -763,6 +761,7 @@ exports[`Storyshots Design System/TextArea Text Area Sizes 1`] = `
   display: flex;
   top: 0;
   bottom: 0;
+  right: 0.1875rem;
   margin: auto;
   white-space: nowrap;
 }
@@ -919,13 +918,14 @@ exports[`Storyshots Design System/TextArea TextArea Statuses 1`] = `
   background: transparent;
   border: none;
   color: #1B214F;
+  padding: 0;
   display: block;
   position: relative;
   top: 0.4375rem;
   z-index: 1;
   text-overflow: ellipsis;
-  width: 13.75rem;
-  min-width: 13.75rem;
+  width: 15rem;
+  min-width: 15rem;
   resize: none;
 }
 
@@ -986,6 +986,7 @@ exports[`Storyshots Design System/TextArea TextArea Statuses 1`] = `
 }
 
 .emotion-7:focus-within+label {
+  font-weight: 700!important;
   color: #1552DD;
 }
 
@@ -1010,7 +1011,7 @@ exports[`Storyshots Design System/TextArea TextArea Statuses 1`] = `
   transform: translate(0.1875rem, 0);
   font-size: 0.875rem;
   font-weight: 400;
-  color: #5f6c85;
+  color: #686BB3;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1021,6 +1022,7 @@ exports[`Storyshots Design System/TextArea TextArea Statuses 1`] = `
   display: flex;
   top: 0;
   bottom: 0;
+  right: 0.1875rem;
   margin: auto;
   white-space: nowrap;
 }
@@ -1116,6 +1118,7 @@ exports[`Storyshots Design System/TextArea TextArea Statuses 1`] = `
   display: flex;
   top: 0;
   bottom: 0;
+  right: 0.1875rem;
   margin: auto;
   white-space: nowrap;
 }
@@ -1193,7 +1196,7 @@ exports[`Storyshots Design System/TextArea TextArea Statuses 1`] = `
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: not-allowed;
+  cursor: text;
   height: auto;
   min-width: 8.75rem;
   background-color: #F5F5FF;
@@ -1207,6 +1210,91 @@ exports[`Storyshots Design System/TextArea TextArea Statuses 1`] = `
 .emotion-18:focus-within {
   box-shadow: 0 0 0 0.125rem #b9cdfc;
   background-color: #F5F5FF;
+}
+
+.emotion-21 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #1B214F;
+  padding: 0;
+  display: block;
+  position: relative;
+  top: 0.4375rem;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 15rem;
+  min-width: 15rem;
+  resize: none;
+}
+
+.emotion-21+label {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-21::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-21::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-21:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-21::placeholder {
+  color: transparent;
+}
+
+.emotion-21:focus {
+  outline: none;
+}
+
+.emotion-21:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-21:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-21:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-21:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-21:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-21:focus-within+label,
+.emotion-21:not(:placeholder-shown)+label {
+  -webkit-transform: translate(0.1875rem, -4px) scale(0.8);
+  -moz-transform: translate(0.1875rem, -4px) scale(0.8);
+  -ms-transform: translate(0.1875rem, -4px) scale(0.8);
+  transform: translate(0.1875rem, -4px) scale(0.8);
+  font-weight: 700;
+}
+
+.emotion-21:focus-within+label {
+  font-weight: 700!important;
+  color: #1552DD;
+}
+
+.emotion-21:disabled {
+  cursor: text;
 }
 
 <div
@@ -1342,7 +1430,7 @@ exports[`Storyshots Design System/TextArea TextArea Statuses 1`] = `
                 >
                   <textarea
                     aria-multiline={true}
-                    className="emotion-7"
+                    className="emotion-21"
                     cols={10}
                     disabled={true}
                     placeholder="Label"
@@ -1470,13 +1558,14 @@ exports[`Storyshots Design System/TextArea TextArea with Counter 1`] = `
   background: transparent;
   border: none;
   color: #1B214F;
+  padding: 0;
   display: block;
   position: relative;
   top: 0.4375rem;
   z-index: 1;
   text-overflow: ellipsis;
-  width: 13.75rem;
-  min-width: 13.75rem;
+  width: 15rem;
+  min-width: 15rem;
   resize: none;
 }
 
@@ -1537,6 +1626,7 @@ exports[`Storyshots Design System/TextArea TextArea with Counter 1`] = `
 }
 
 .emotion-6:focus-within+label {
+  font-weight: 700!important;
   color: #1552DD;
 }
 
@@ -1561,7 +1651,7 @@ exports[`Storyshots Design System/TextArea TextArea with Counter 1`] = `
   transform: translate(0.1875rem, 0);
   font-size: 0.875rem;
   font-weight: 400;
-  color: #5f6c85;
+  color: #686BB3;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1572,6 +1662,7 @@ exports[`Storyshots Design System/TextArea TextArea with Counter 1`] = `
   display: flex;
   top: 0;
   bottom: 0;
+  right: 0.1875rem;
   margin: auto;
   white-space: nowrap;
 }
@@ -1591,6 +1682,7 @@ exports[`Storyshots Design System/TextArea TextArea with Counter 1`] = `
   justify-content: flex-end;
   padding: 0.5rem 0 0;
   color: #686BB3;
+  opacity: 1;
   font-family: Roboto;
   font-weight: 400;
   line-height: 1rem;
@@ -1768,13 +1860,14 @@ exports[`Storyshots Design System/TextArea TextArea with labels 1`] = `
   background: transparent;
   border: none;
   color: #1B214F;
+  padding: 0;
   display: block;
   position: relative;
   top: 0.4375rem;
   z-index: 1;
   text-overflow: ellipsis;
-  width: 13.75rem;
-  min-width: 13.75rem;
+  width: 15rem;
+  min-width: 15rem;
   resize: none;
 }
 
@@ -1835,6 +1928,7 @@ exports[`Storyshots Design System/TextArea TextArea with labels 1`] = `
 }
 
 .emotion-6:focus-within+label {
+  font-weight: 700!important;
   color: #1552DD;
 }
 
@@ -1859,7 +1953,7 @@ exports[`Storyshots Design System/TextArea TextArea with labels 1`] = `
   transform: translate(0.1875rem, 0);
   font-size: 0.875rem;
   font-weight: 400;
-  color: #5f6c85;
+  color: #686BB3;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1870,6 +1964,7 @@ exports[`Storyshots Design System/TextArea TextArea with labels 1`] = `
   display: flex;
   top: 0;
   bottom: 0;
+  right: 0.1875rem;
   margin: auto;
   white-space: nowrap;
 }
@@ -1883,13 +1978,14 @@ exports[`Storyshots Design System/TextArea TextArea with labels 1`] = `
   background: transparent;
   border: none;
   color: #1B214F;
+  padding: 0;
   display: block;
   position: relative;
   top: 0.4375rem;
   z-index: 1;
   text-overflow: ellipsis;
-  width: 13.75rem;
-  min-width: 13.75rem;
+  width: 15rem;
+  min-width: 15rem;
   resize: none;
 }
 
@@ -1950,6 +2046,7 @@ exports[`Storyshots Design System/TextArea TextArea with labels 1`] = `
 }
 
 .emotion-11:focus-within+label {
+  font-weight: 700!important;
   color: #1552DD;
 }
 

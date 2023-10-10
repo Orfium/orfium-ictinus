@@ -150,6 +150,9 @@ exports[`Storyshots Design System/List/ListItemText ListItemText normal 1`] = `
 
 .emotion-6 span {
   display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 <div
@@ -429,6 +432,9 @@ exports[`Storyshots Design System/List/ListItemText ListItemText with secondary 
 
 .emotion-6 span {
   display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 <div
