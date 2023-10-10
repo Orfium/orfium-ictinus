@@ -1,10 +1,9 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { CSSObject } from '@emotion/serialize';
+import { rem } from 'theme/utils';
 
 import { TextAreaProps } from './TextArea';
 import { Theme } from '../../theme';
-import { rem } from '../../theme/utils';
-import { TEXT_AREA_MIN_WIDTH } from '../TextInputBase/config';
 import { LABEL_TRANSFORM_LEFT_SPACING } from 'components/Label/Label.style';
 import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
 import { body03 } from 'components/Typography/Typography.config.styles';
@@ -18,8 +17,8 @@ export const sxProp =
       wrapper: { width: 'auto', height: 'auto' },
       textField: { padding: `${tokens('paddingVertical')} ${tokens('paddingContentLeft')}` },
       input: {
-        width: rem(TEXT_AREA_MIN_WIDTH),
-        minWidth: rem(TEXT_AREA_MIN_WIDTH),
+        width: rem(tokens('minWidth.large.normal')),
+        minWidth: rem(tokens('minWidth.large.normal')),
         resize: !isResizeEnabled ? 'none' : 'both',
 
         '& + label': {
@@ -36,21 +35,24 @@ export const sxProp =
     };
   };
 
-export const hintMessageStyle = (theme: Theme): SerializedStyles => {
-  const tokens = getTextInputBaseTokens(theme);
+export const hintMessageStyle =
+  ({ isDisabled }: Pick<TextAreaProps, 'isDisabled'>) =>
+  (theme: Theme): SerializedStyles => {
+    const tokens = getTextInputBaseTokens(theme);
 
-  return css(
-    {
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'flex-end',
-      padding: `${tokens('hintPadding')} 0 0`,
-      color: tokens('textColor.inputColorAlt'),
-      span: {
-        alignItems: 'stretch',
-        padding: 0,
+    return css(
+      {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'flex-end',
+        padding: `${tokens('hintPadding')} 0 0`,
+        color: tokens('textColor.inputColorAlt'),
+        span: {
+          alignItems: 'stretch',
+          padding: 0,
+        },
+        opacity: isDisabled ? theme.tokens.disabledState.get('default') : 1,
       },
-    },
-    body03(theme)
-  );
-};
+      body03(theme)
+    );
+  };

@@ -2,7 +2,6 @@ import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
 import { rem } from 'theme/utils';
 
-import { MIN_WIDTH } from './config';
 import { TextInputBaseProps } from './TextInputBase';
 import { getTextInputBaseTokens, TextInputBaseTokens } from './TextInputBase.tokens';
 import { ColorScheme } from '../../theme/types';
@@ -90,9 +89,9 @@ export const wrapperStyle =
       borderRadius: tokens('borderRadius'),
       userSelect: 'none',
       opacity: isDisabled ? theme.tokens.disabledState.get('default') : 1,
-      cursor: isDisabled || isLocked ? 'not-allowed' : 'text',
+      cursor: isDisabled ? 'not-allowed' : 'text',
       height: tokens('container'),
-      minWidth: rem(MIN_WIDTH),
+      minWidth: rem(tokens('minWidth.small.normal')),
       ...wrapperStyleSwitch({
         theme,
         colorScheme,
@@ -128,7 +127,7 @@ export const textFieldStyle =
   };
 
 export const inputStyle =
-  ({ label, placeholder, sx }: Partial<TextInputBaseProps>) =>
+  ({ label, placeholder, isLocked, isDisabled, sx }: Partial<TextInputBaseProps> & { isLocked?: boolean }) =>
   (theme: Theme): SerializedStyles => {
     const tokens = getTextInputBaseTokens(theme);
 
@@ -136,6 +135,7 @@ export const inputStyle =
       background: 'transparent',
       border: 'none',
       color: tokens('textColor.inputColor'),
+      padding: 0,
       display: 'block',
       position: 'relative',
       /**
@@ -172,18 +172,18 @@ export const inputStyle =
       '&:focus-within, &:not(:placeholder-shown)': {
         '& + label': {
           transform: `translate(${LABEL_TRANSFORM_LEFT_SPACING}, -35%) scale(0.8)`,
-          fontWeight: theme.globals.typography.fontWeight.get('bold'),
         },
       },
 
       '&:focus-within': {
         '& + label': {
+          fontWeight: `${theme.globals.typography.fontWeight.get('bold')} !important`,
           color: tokens('textColor.labelActive'),
         },
       },
 
       '&:disabled': {
-        cursor: 'not-allowed',
+        cursor: isLocked && !isDisabled ? 'text' : 'not-allowed',
       },
       ...sx?.input,
     });

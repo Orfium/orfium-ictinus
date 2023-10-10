@@ -15,7 +15,8 @@ export const iconStyles =
       justify-content: center;
 
       /** @TODO: revisit these styles when Interactive Icon is implemented */
-      &:focus-visible {
+      &:focus-visible,
+      &:hover {
         background: ${theme.tokens.state.get('backgroundColor.hover')};
         border-radius: ${theme.globals.borderRadius.get('7')};
       }
