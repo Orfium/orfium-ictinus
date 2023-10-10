@@ -248,7 +248,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
   }, [selectedOption, isSearchable, searchValue]);
 
   const handleIconClick = React.useCallback(() => {
-    if (isSearchable && isOpen) {
+    if (!isSearchable) {
       setIsOpen(!isOpen);
     }
     if (isSearchable && !Array.isArray(selectedOption) && (searchValue || selectedOption?.value)) {

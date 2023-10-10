@@ -87,7 +87,7 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
   const inputProps = {
     // eslint-disable-next-line @typescript-eslint/naming-convention
     readOnly: isLocked || isReadOnly,
-    css: inputStyle({ label, placeholder }),
+    css: inputStyle({ label, placeholder, isLocked, isDisabled }),
     placeholder: placeholder ? `${placeholder} ${isRequired ? '*' : ''}` : label,
     // eslint-disable-next-line @typescript-eslint/naming-convention
     required: isRequired,

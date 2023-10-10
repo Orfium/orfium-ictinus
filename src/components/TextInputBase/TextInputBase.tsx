@@ -81,7 +81,7 @@ const TextInputBase: FC<
       >
         <div css={textFieldStyle({ sx })}>{children}</div>
       </div>
-      {status.hintMessage && status.type !== 'read-only' && hintMessageToShow}
+      {status.hintMessage && hintMessageToShow}
     </React.Fragment>
   );
 };

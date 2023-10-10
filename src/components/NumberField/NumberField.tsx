@@ -97,7 +97,7 @@ const NumberField = React.forwardRef<HTMLInputElement, NumberFieldProps>((props,
                 disabled={isDisabled || isLocked}
                 required={isRequired}
                 placeholder={placeholder ? `${placeholder} ${isRequired ? '*' : ''}` : label}
-                css={inputStyle({ label, placeholder })}
+                css={inputStyle({ label, placeholder, isLocked, isDisabled })}
                 aria-invalid={status?.type === 'error'}
                 aria-describedby={hintMessageId}
                 data-testid={props.dataTestId ? `input_${props.dataTestId}` : 'input'}
