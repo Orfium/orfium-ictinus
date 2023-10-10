@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import { container, wrapper } from './MultiSelectShowcase.style';
-import Select, { SelectOption } from '../../Select';
+import Select, { SelectOption, SelectProps } from '../../Select';
 
 type Props = {
   isDisabled?: boolean;
@@ -36,11 +36,9 @@ export const dummyUndefinedData = new Array(15).fill(undefined).map((__, index) 
   label: `Test option ${index}`,
 }));
 
-const SelectShowcase: React.FC<Props> = ({
-  isDisabled = false,
-  hasSelectAllOption = false,
-  isCreatable = false,
-}) => {
+const SelectShowcase: React.FC<
+  Pick<SelectProps, 'isDisabled' | 'hasSelectAllOption' | 'isCreatable' | 'status'>
+> = ({ isDisabled = false, hasSelectAllOption = false, isCreatable = false, status }) => {
   const [asyncOptions, setAsyncOptions] = useState<SelectOption[]>(dummyUndefinedData);
   const [isLoading, setIsLoading] = React.useState(false);
   const [value, setValue] = React.useState<SelectOption[]>(selectedOptions);
@@ -69,6 +67,7 @@ const SelectShowcase: React.FC<Props> = ({
           onChange={setValue}
           isDisabled={isDisabled}
           hasSelectAllOption={hasSelectAllOption}
+          status={status}
           isCreatable={isCreatable}
         />
       </div>
@@ -76,6 +75,7 @@ const SelectShowcase: React.FC<Props> = ({
         <Select
           isMulti
           isAsync
+          status={status}
           label={'Multi Select - Async'}
           options={asyncOptions}
           asyncSearch={mockedApiCall}

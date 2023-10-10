@@ -1,5 +1,6 @@
 import { css } from '@emotion/react';
 import React, { useState } from 'react';
+import { rem } from 'theme/utils';
 
 import Select, { SelectOption } from '../../Select';
 
@@ -33,7 +34,7 @@ const SelectShowcase: React.FC<SelectShowcaseProps> = ({ minCharactersToSearch =
     <div
       css={css`
         width: 25%;
-        height: 100%;
+        height: ${rem(350)};
       `}
     >
       <Select

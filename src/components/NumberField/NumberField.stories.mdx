@@ -71,12 +71,11 @@ Formatting options for the value displayed in the number field can be configured
 
 ### NumberField with suffix or Stepper
 
-NumberField can either have custom suffix (as in TextField) or a stepper with increment and decrement buttons. Step defaults to 1 if not provided.
+NumberField can have a stepper with increment and decrement buttons. Step defaults to 1 if not provided.
 
 <Preview>
-  <Story name="NumberField with suffix or Stepper">
+  <Story name="NumberField with Stepper">
     <Stack>
-      <NumberField label={'Label'} suffix={<div style={{ color: 'gray' }}>%</div>} />
       <NumberField label={'Label'} hasStepper step={number('Step', undefined)} />
     </Stack>
   </Story>
@@ -137,9 +136,17 @@ NumberField inherits all TextField statuses behavior.
         label={'Label'}
         status={{
           type: 'read-only',
+          hintMessage: text('Custom Hint Message', 'Hint in Text Field'),
         }}
       />
-      <NumberField label={'Label'} isDisabled />
+      <NumberField
+        label={'Label'}
+        isDisabled
+        status={{
+          type: 'normal',
+          hintMessage: text('Custom Hint Message', 'Hint in Text Field'),
+        }}
+      />
     </Stack>
   </Story>
 </Preview>

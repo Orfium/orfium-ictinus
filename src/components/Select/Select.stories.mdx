@@ -113,7 +113,7 @@ Simple select component with clearable data and searchable input
 
 <Preview>
   <Story name="Simple Select">
-    <Stack>
+    <Stack height={300}>
       <Function>
         {() => {
           const [selectedOption, setSelectedOption] = useState(defaultValue);
@@ -153,38 +153,6 @@ Simple select component with clearable data and searchable input
               selectedOption={selectedOption}
               onChange={setSelectedOption}
               isCreatable={boolean('isCreatable', false)}
-            />
-          );
-        }}
-      </Function>
-    </Stack>
-  </Story>
-</Preview>
-
-### Select with suffix
-
-Select with suffix options
-
-<Preview>
-  <Story name="Select with icon and size">
-    <Stack>
-      <Function>
-        {() => {
-          const [selectedOption, setSelectedOption] = useState(defaultValue);
-          return (
-            <Select
-              label={'Flavour'}
-              options={options}
-              selectedOption={selectedOption}
-              onChange={setSelectedOption}
-              suffix={
-                <img
-                  style={{ background: 'red' }}
-                  src="https://brandmark.io/logo-rank/random/pepsi.png"
-                  width="16"
-                  height="16"
-                />
-              }
             />
           );
         }}
@@ -238,7 +206,7 @@ Select with Label and Statuses
 
 <Preview>
   <Story name="Select with label and statuses" parameters={{ decorators: [withKnobs] }}>
-    <Stack>
+    <Stack height={350}>
       <Select
         label={'Label'}
         status={{
@@ -266,7 +234,7 @@ Select with uncontrolled state
 
 <Preview>
   <Story name="Select with uncontrolled state" parameters={{ decorators: [withKnobs] }}>
-    <Stack>
+    <Stack height={350}>
       <StatefulSelect
         label={'Label'}
         status={{
@@ -289,7 +257,7 @@ Simple select component where searched term is highlighted in options
 
 <Preview>
   <Story name="Select with Highlight">
-    <Stack>
+    <Stack height={350}>
       <Function>
         {() => {
           const [selectedOption, setSelectedOption] = useState(defaultValue);
@@ -314,7 +282,7 @@ Simple select component with grouped data and searchable input
 
 <Preview>
   <Story name="Simple Group Select">
-    <Stack>
+    <Stack height={350}>
       <Function>
         {() => {
           const [selectedOption, setSelectedOption] = useState(defaultValue);
@@ -339,7 +307,7 @@ Not Searchable Select
 
 <Preview>
   <Story name="Not Searchable Select">
-    <Stack>
+    <Stack height={350}>
       <Function>
         {() => {
           const [selectedOption, setSelectedOption] = useState(defaultValue);
@@ -364,7 +332,7 @@ Disabled option with helper text
 
 <Preview>
   <Story name="Disabled option with helper text">
-    <Stack>
+    <Stack height={350}>
       <Function>
         {() => {
           const [selectedOption, setSelectedOption] = useState(defaultValue);
@@ -430,9 +398,10 @@ _. When in MultiSelect, `onClear` prop refers to the all selected options deleti
   <Story name="MultiSelect">
     <MultiSelectShowcase
       isDisabled={boolean('isDisabled', false)}
-      isLocked={boolean('isLocked', false)}
-      status={select('status', ['normal', 'hint', 'error'], 'normal')}
-      hintMessage={text('hintMessage', '')}
+      status={{
+        type: select('Status', ['error', 'normal', 'read-only'], 'normal'),
+        hintMessage: text('Hint/Error message', 'Message in Text Field'),
+      }}
       hasSelectAllOption={boolean('hasSelectAllOption', false)}
       isCreatable={boolean('isCreatable', false)}
     />
