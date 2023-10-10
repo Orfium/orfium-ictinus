@@ -13,7 +13,7 @@ import {
 } from './OverlayComponent.style';
 import { getRightCalendarDate, getLeftCalendarDate } from './utils';
 import Button from '../../Button';
-import { APPLY_DATES, CLEAR_ALL } from '../constants';
+import { APPLY, CLEAR_ALL } from '../constants';
 import { DisabledDates, ExtraOption } from '../DatePicker.types';
 
 export type OverlayComponentProps = {
@@ -107,7 +107,7 @@ const OverlayComponent: React.FC<OverlayComponentProps> = ({
             dataTestId={'apply'}
             isDisabled={Boolean(!selectedDays.from || !selectedDays.to)}
           >
-            {APPLY_DATES}
+            {APPLY}
           </Button>
         </div>
       </div>

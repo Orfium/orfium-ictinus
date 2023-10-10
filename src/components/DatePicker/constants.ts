@@ -1,7 +1,7 @@
 import { ExtraOption } from './DatePicker.types';
 import { currentDay } from './utils';
 
-export const APPLY_DATES = 'Apply Dates';
+export const APPLY = 'Apply';
 export const CLEAR_ALL = 'Clear All';
 
 export const DATE_PICKER_LABEL = 'Select Date';
