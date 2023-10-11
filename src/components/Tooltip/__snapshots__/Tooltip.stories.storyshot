@@ -1114,13 +1114,119 @@ exports[`Storyshots Design System/Tooltip Tooltip Placement 1`] = `
             Object {
               "alignItems": "center",
               "display": "flex",
+              "gap": "32px",
               "height": "100px",
               "justifyContent": "center",
-              "padding": "16px",
-              "width": "300px",
+              "padding": "48px 72px",
+              "width": "600px",
             }
           }
         >
+          <div
+            arrow={true}
+            className="emotion-3"
+            delay={
+              Array [
+                500,
+                500,
+              ]
+            }
+            interactive={false}
+            placement="left"
+          >
+            <div
+              className="emotion-4"
+            >
+              <button
+                className="emotion-5"
+                data-testid="button"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+              >
+                <span
+                  className="emotion-6"
+                >
+                  <span>
+                    Left Tooltip
+                  </span>
+                </span>
+              </button>
+            </div>
+          </div>
+          <div>
+            This is a Tooltip
+          </div>
+          <div
+            arrow={true}
+            className="emotion-3"
+            delay={
+              Array [
+                500,
+                500,
+              ]
+            }
+            interactive={false}
+            placement="top"
+          >
+            <div
+              className="emotion-4"
+            >
+              <button
+                className="emotion-5"
+                data-testid="button"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+              >
+                <span
+                  className="emotion-6"
+                >
+                  <span>
+                    Top Tooltip
+                  </span>
+                </span>
+              </button>
+            </div>
+          </div>
+          <div>
+            This is a Tooltip
+          </div>
+          <div
+            arrow={true}
+            className="emotion-3"
+            delay={
+              Array [
+                500,
+                500,
+              ]
+            }
+            interactive={false}
+            placement="bottom"
+          >
+            <div
+              className="emotion-4"
+            >
+              <button
+                className="emotion-5"
+                data-testid="button"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+              >
+                <span
+                  className="emotion-6"
+                >
+                  <span>
+                    Bottom Tooltip
+                  </span>
+                </span>
+              </button>
+            </div>
+          </div>
+          <div>
+            This is a Tooltip
+          </div>
           <div
             arrow={true}
             className="emotion-3"
@@ -1147,7 +1253,7 @@ exports[`Storyshots Design System/Tooltip Tooltip Placement 1`] = `
                   className="emotion-6"
                 >
                   <span>
-                    Hover here
+                    Right Tooltip
                   </span>
                 </span>
               </button>

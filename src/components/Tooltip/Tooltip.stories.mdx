@@ -1,6 +1,7 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
 import { text, number, select, boolean, withKnobs } from '@storybook/addon-knobs';
 import Tooltip from './Tooltip';
+import { hoverOnTooltips } from './utils';
 import Stack from '../storyUtils/Stack';
 import TooltipShowcase from '../storyUtils/TooltipShowcase';
 import { FIGMA_URL, Function } from '../../utils/common';
@@ -55,7 +56,7 @@ Tooltips provide brief, helpful information when a user hovers or focuses on the
 Text Tooltip takes a string as a content prop. There are 2 variations of Text Tooltips, default and inverted.
 
 <Preview>
-  <Story name="Text Tooltip">
+  <Story name="Text Tooltip" play={hoverOnTooltips} autoPlay>
     <Stack>
       <Function>
         {() => {
@@ -90,7 +91,7 @@ Text Tooltip takes a string as a content prop. There are 2 variations of Text To
 Interactive Tooltip takes a React Component as a content prop. There are 2 variations of Text Tooltips, default and inverted.
 
 <Preview>
-  <Story name="Interactive Tooltip">
+  <Story name="Interactive Tooltip" play={hoverOnTooltips} autoPlay>
     <Stack>
       <TooltipShowcase />
     </Stack>
@@ -105,26 +106,33 @@ Interactive Tooltip takes a React Component as a content prop. There are 2 varia
 Tooltip can be placed to the top, bottom, left or right of the element.
 
 <Preview>
-  <Story name="Tooltip Placement" parameters={{ decorators: [withKnobs] }}>
+  <Story name="Tooltip Placement" play={hoverOnTooltips} autoPlay>
     <Stack>
       <Function>
         {() => {
           return (
             <div
               style={{
-                padding: '16px',
-                width: '300px',
+                padding: '48px 72px',
+                width: '600px',
+                gap: '32px',
                 height: '100px',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
               }}
             >
-              <Tooltip
-                content={'This is a Tooltip'}
-                placement={select('placement', ['top', 'right', 'bottom', 'left'], 'right')}
-              >
-                <Button>Hover here</Button>
+              <Tooltip content={'This is a Tooltip'} placement={'left'}>
+                <Button>Left Tooltip</Button>
+              </Tooltip>
+              <Tooltip content={'This is a Tooltip'} placement={'top'}>
+                <Button>Top Tooltip</Button>
+              </Tooltip>
+              <Tooltip content={'This is a Tooltip'} placement={'bottom'}>
+                <Button>Bottom Tooltip</Button>
+              </Tooltip>
+              <Tooltip content={'This is a Tooltip'} placement={'right'}>
+                <Button>Right Tooltip</Button>
               </Tooltip>
             </div>
           );
@@ -137,7 +145,7 @@ Tooltip can be placed to the top, bottom, left or right of the element.
 ### Playground
 
 <Preview>
-  <Story name="Playground" parameters={{ decorators: [withKnobs] }}>
+  <Story name="Playground" parameters={{ decorators: [withKnobs] }} play={hoverOnTooltips} autoPlay>
     <Stack>
       <Function>
         {() => {
