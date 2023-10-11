@@ -437,6 +437,15 @@ exports[`Storyshots Design System/List/ListItemText ListItemText with secondary 
   text-overflow: ellipsis;
 }
 
+.emotion-7 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  color: #686BB3;
+}
+
 <div
   className="emotion-0"
 >
@@ -520,7 +529,9 @@ exports[`Storyshots Design System/List/ListItemText ListItemText with secondary 
                     <span>
                       Item 1
                     </span>
-                    <p>
+                    <p
+                      className="emotion-7"
+                    >
                       This is a secondary text on this item
                     </p>
                   </div>
@@ -555,7 +566,9 @@ exports[`Storyshots Design System/List/ListItemText ListItemText with secondary 
                     <span>
                       Item 2
                     </span>
-                    <p>
+                    <p
+                      className="emotion-7"
+                    >
                       This is a secondary text on this item
                     </p>
                   </div>

@@ -2,6 +2,7 @@ import { SerializedStyles, css } from '@emotion/react';
 import { Theme } from 'index';
 
 import { getListItemTokens } from 'components/List/List.tokens';
+import { generateStylesFromTokens } from 'components/Typography/utils';
 
 export const listItemTextWrapperStyles =
   (isGroupItem?: boolean, isHighlighted?: boolean) =>
@@ -31,5 +32,16 @@ export const listItemTextWrapperStyles =
         overflow: hidden;
         text-overflow: ellipsis;
       }
+    `;
+  };
+
+export const descriptionStyles =
+  () =>
+  (theme: Theme): SerializedStyles => {
+    const tokens = getListItemTokens(theme);
+
+    return css`
+      ${generateStylesFromTokens(tokens('secondaryText'))};
+      color: ${tokens('textColor.secondary')};
     `;
   };

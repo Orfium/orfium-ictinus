@@ -7,14 +7,10 @@ import { Theme } from '../../theme';
 export type ListTokens = DotKeys<typeof menu>;
 export type ListItemTokens = DotKeys<typeof listItem>;
 
-export const getListTokens = (
-  theme: Theme
-): ((path: ListTokens, fn?: (val: string) => any) => string) => {
-  return getComponentTokens(menu, theme);
+export const getListTokens = (theme: Theme) => {
+  return getComponentTokens<ListTokens>(menu, theme);
 };
 
-export const getListItemTokens = (
-  theme: Theme
-): ((path: ListItemTokens, fn?: (val: string) => any) => string) => {
-  return getComponentTokens(listItem, theme);
+export const getListItemTokens = (theme: Theme) => {
+  return getComponentTokens<ListItemTokens>(listItem, theme);
 };
