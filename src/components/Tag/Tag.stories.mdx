@@ -1,0 +1,223 @@
+import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
+import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
+import Tag from './Tag';
+import Typography from '../Typography';
+import Stack from '../storyUtils/Stack';
+import { FIGMA_URL, Function } from '../../utils/common';
+import SectionHeader from '../../storybook/SectionHeader';
+import TagShowcase from '../../storybook/Showcases/TagShowcase';
+import { getIconSelectorKnob } from '../../utils/stories';
+import { useState } from 'react';
+
+<Meta
+  title="Design System/Tag"
+  component={Tag}
+  parameters={{
+    design: [
+      {
+        type: 'figma',
+        name: 'Tag',
+        url: `${FIGMA_URL}?node-id=3325%3A58246`,
+      },
+    ],
+    chromatic: { diffThreshold: 0.3 },
+  }}
+/>
+
+<SectionHeader title={'Tag'} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
+
+## Overview
+
+A universal Tag that is used to highlight system-generated metadata.
+
+## Props
+
+<Props of={Tag} />
+
+## Usage
+
+<UsageGuidelines
+  guidelines={[
+    'Use tags to show metadata that needs to be highlighted somehow',
+    'Use tags to relate secondary information about a page element (px a “Writer” tag next to a name)s',
+    'Use selectable tags to quickly filter existing content',
+    'Do not use tags as standalone elements in a page; they should always relate to something elseh',
+    'Do not use tags for complex filtering. If you want a tag that shows a select menu upon being clicked, used filters instead',
+    'Try not to use selectable tags within tables, as they might confuse the user. Opt for read-only tag variants when possible',
+  ]}
+/>
+
+## Variants
+
+### Read-only Tag
+
+Read-only Tag comes in 5 colors: `neutral`, `blue`, `red`, `purple` and `teal`.
+
+<Preview>
+  <Story name="Read-only Tag">
+    <Stack>
+      <Tag>Label</Tag>
+      <Tag color="blue">Label</Tag>
+      <Tag color="red">Label</Tag>
+      <Tag color="purple">Label</Tag>
+      <Tag color="teal">Label</Tag>
+    </Stack>
+  </Story>
+</Preview>
+
+### Read-only Tag with icon
+
+An leading icon can be added to the read-only Tag.
+
+<Preview>
+  <Story name="Read-only Tag with icon">
+    <Stack>
+      <Tag iconName={'dashboard'}>Label</Tag>
+      <Tag iconName={'dashboard'} color="blue">
+        Label
+      </Tag>
+      <Tag iconName={'dashboard'} color="red">
+        Label
+      </Tag>
+      <Tag iconName={'dashboard'} color="purple">
+        Label
+      </Tag>
+      <Tag iconName={'dashboard'} color="teal">
+        Label
+      </Tag>
+    </Stack>
+  </Story>
+</Preview>
+
+### Selectable Tag
+
+Tag can also be selectable. To enable this functionality, provide the `onSelect` prop to the component.<br/>
+The `isSelected` prop indicates whether the Tag is selected or not.
+
+<Preview>
+  <Story name="Selectable Tag">
+    <Stack>
+      <Function>
+        {() => {
+          const [isSelected, setIsSelected] = useState(false);
+          return (
+            <Tag isSelected={isSelected} onSelect={() => setIsSelected(true)}>
+              Label
+            </Tag>
+          );
+        }}
+      </Function>
+    </Stack>
+  </Story>
+</Preview>
+
+### Clearable Tag
+
+Tag can also be clearable. To enable this functionality, provide the `onClear` prop to the component
+
+<Tip>
+  Tags cannot be selectable and clearable at the same time. If the onClear prop is provided, it
+  overrides the selectable functionality
+</Tip>
+
+<Preview>
+  <Story name="Clearable Tag">
+    <Stack>
+      <Tag onClear={() => console.log('clear')}>Label</Tag>
+    </Stack>
+  </Story>
+</Preview>
+
+### Tag Sizes
+
+There are two Tag sizes: `normal` and `small`.
+
+<Preview>
+  <Story name="Tag Sizes">
+    <Stack>
+      <Typography>Read-only Tag</Typography>
+    </Stack>
+    <Stack>
+      <Tag>Normal</Tag>
+      <Tag color="blue">Normal</Tag>
+      <Tag color="red">Normal</Tag>
+      <Tag color="purple">Normal</Tag>
+      <Tag color="teal">Normal</Tag>
+    </Stack>
+    <Stack>
+      <Tag size="small">Small</Tag>
+      <Tag size="small" color="blue">
+        Small
+      </Tag>
+      <Tag size="small" color="red">
+        Small
+      </Tag>
+      <Tag size="small" color="purple">
+        Small
+      </Tag>
+      <Tag size="small" color="teal">
+        Small
+      </Tag>
+    </Stack>
+    <Stack>
+      <Typography>Selectable Tag</Typography>
+    </Stack>
+    <Stack>
+      <Function>
+        {() => {
+          const [isSelected, setIsSelected] = useState(false);
+          return (
+            <Tag isSelected={isSelected} onSelect={() => setIsSelected(true)}>
+              Normal
+            </Tag>
+          );
+        }}
+      </Function>
+    </Stack>
+    <Stack>
+      <Function>
+        {() => {
+          const [isSelected, setIsSelected] = useState(false);
+          return (
+            <Tag size="small" isSelected={isSelected} onSelect={() => setIsSelected(true)}>
+              Small
+            </Tag>
+          );
+        }}
+      </Function>
+    </Stack>
+    <Stack>
+      <Typography>Clearable Tag</Typography>
+    </Stack>
+    <Stack>
+      <Tag onClear={() => console.log('clear')}>Normal</Tag>
+    </Stack>
+    <Stack>
+      <Tag size="small" onClear={() => console.log('clear')}>
+        Small
+      </Tag>
+    </Stack>
+  </Story>
+</Preview>
+
+### Playground
+
+<Preview>
+  <Story name="Playground" parameters={{ decorators: [withKnobs] }}>
+    <Stack>
+      <TagShowcase
+        text={text('text', 'Label')}
+        type={select('type', ['read-only', 'selectable', 'clearable'], 'read-only')}
+        size={select('size', ['normal', 'small'], 'normal')}
+        color={select('color', ['neutral', 'blue', 'red', 'purple', 'teal'], 'neutral')}
+        hasIcon={boolean('hasIcon', false)}
+        iconName={getIconSelectorKnob('iconLeftName')}
+      />
+    </Stack>
+  </Story>
+</Preview>
