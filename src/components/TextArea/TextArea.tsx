@@ -101,7 +101,7 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>((props, re
             label={label}
             isRequired={isRequired}
             isAnimated={Boolean(rest.value)}
-            hasError={status?.type === 'error'}
+            hasError={!isDisabled && status?.type === 'error'}
           />
         </div>
       </TextInputBase>
