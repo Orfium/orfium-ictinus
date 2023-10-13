@@ -1,5 +1,6 @@
 import React from 'react';
 
+import TooltipContent from './components/TooltipContent/TooltipContent';
 import Tooltip from '../../Tooltip';
 import Button from 'components/Button';
 import { TooltipProps } from 'components/Tooltip/Tooltip.types';
@@ -14,30 +15,12 @@ const TooltipShowcase = ({
   buttonText?: string;
 }) => {
   return (
-    <div style={{ padding: '48px' }}>
+    <div style={{ padding: '120px' }}>
       <Tooltip
         delayIn={delayIn}
         delayOut={delayOut}
         placement={placement}
-        content={
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center',
-              background: isInverted ? '#DCDFFF' : '#434666',
-              padding: '8px',
-              width: '240px',
-              color: isInverted ? 'black' : 'white',
-              border: '1px solid' + isInverted ? '#DCDFFF' : '#434666',
-              borderRadius: '4px',
-            }}
-          >
-            <div>This container is custom content</div>
-            <Button type={isInverted ? 'primary' : 'inverted'}>Hello there mate</Button>
-          </div>
-        }
+        content={<TooltipContent isInverted={isInverted} />}
         isInteractive
         isInverted={isInverted}
       >

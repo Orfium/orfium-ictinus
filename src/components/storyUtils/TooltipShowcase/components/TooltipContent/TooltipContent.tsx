@@ -1,0 +1,24 @@
+import React from 'react';
+
+import { containerStyles, illustrationStyles } from './TooltipContent.style';
+import Illustration from '../assets/TooltipShowcaseIllustration.svg';
+
+type Props = {
+  isInverted?: boolean;
+};
+
+const TooltipContent: React.FC<Props> = ({ isInverted }) => {
+  return (
+    <div css={containerStyles(isInverted)}>
+      <div css={illustrationStyles(isInverted)}>
+        <Illustration />
+      </div>
+      <div css={{ textAlign: 'center' }}>
+        It was a dark and stormy night; the rain fell in torrents
+      </div>
+      <div>learn more</div>
+    </div>
+  );
+};
+
+export default TooltipContent;
