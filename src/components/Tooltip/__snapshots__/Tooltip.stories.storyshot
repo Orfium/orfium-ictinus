@@ -102,7 +102,155 @@ exports[`Storyshots Design System/Tooltip Interactive Tooltip 1`] = `
   gap: 0.5rem;
 }
 
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+  color: #b9cdfc;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
 .emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 8.875rem;
+  width: 12.375rem;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  background: #111530;
+}
+
+.emotion-9 {
+  text-align: center;
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  color: #1de9b6;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0.25rem solid rgba(84,94,255,0);
+  opacity: 1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  pointer-events: default;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.375rem;
+  font-size: 1rem;
+  letter-spacing: 0.00625rem;
+}
+
+.emotion-10:hover {
+  color: #ffffff;
+}
+
+.emotion-10:hover path {
+  fill: #ffffff;
+}
+
+.emotion-10:visited {
+  color: #dbc1ff;
+}
+
+.emotion-10:visited path {
+  fill: #dbc1ff;
+}
+
+.emotion-10:focus-visible {
+  border: 0.25rem solid #9347ff;
+}
+
+.emotion-11 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-12 {
+  fill: #1de9b6;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-12 path {
+  fill: #1de9b6;
+}
+
+.emotion-13 {
+  background: #1B214F;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-14 {
+  background-color: #ffffff;
+  border: 0.0625rem solid #E7E8FF;
+  box-shadow: 0rem 0.25rem 0.5rem 0rem #10306612;
+}
+
+.emotion-14 .tippy-content {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+
+.emotion-14 .tippy-arrow::before {
+  color: #ffffff;
+}
+
+.emotion-16 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -118,52 +266,118 @@ exports[`Storyshots Design System/Tooltip Interactive Tooltip 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-8:focus-visible:not(:disabled) {
+.emotion-16:focus-visible:not(:disabled) {
   background-color: #00C6A2;
 }
 
-.emotion-8:disabled {
+.emotion-16:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-8:hover:not(:disabled) {
+.emotion-16:hover:not(:disabled) {
   background-color: #00C6A2;
 }
 
-.emotion-8:active:not(:disabled) {
+.emotion-16:active:not(:disabled) {
   background-color: #0C7D61;
 }
 
-.emotion-10 {
-  background: #1B214F;
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+  color: #686BB3;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
 }
 
-.emotion-11 {
-  background-color: #ffffff;
-  border: 0.0625rem solid #E7E8FF;
-  box-shadow: 0rem 0.25rem 0.5rem 0rem #10306612;
+.emotion-19 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 8.875rem;
+  width: 12.375rem;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  background: #F4F8FF;
 }
 
-.emotion-11 .tippy-content {
-  background-color: #ffffff;
-  padding: 1rem;
-  border-radius: 0.25rem;
+.emotion-21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  color: #1552DD;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0.25rem solid rgba(84,94,255,0);
+  opacity: 1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  pointer-events: default;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.375rem;
+  font-size: 1rem;
+  letter-spacing: 0.00625rem;
 }
 
-.emotion-11 .tippy-arrow::before {
-  color: #ffffff;
+.emotion-21:hover {
+  color: #1B214F;
+}
+
+.emotion-21:hover path {
+  fill: #1B214F;
+}
+
+.emotion-21:visited {
+  color: #6c28cc;
+}
+
+.emotion-21:visited path {
+  fill: #6c28cc;
+}
+
+.emotion-21:focus-visible {
+  border: 0.25rem solid #9347ff;
+}
+
+.emotion-23 {
+  fill: #1552DD;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-23 path {
+  fill: #1552DD;
 }
 
 <div
@@ -185,7 +399,7 @@ exports[`Storyshots Design System/Tooltip Interactive Tooltip 1`] = `
         <div
           style={
             Object {
-              "padding": "48px",
+              "padding": "128px",
             }
           }
         >
@@ -223,50 +437,43 @@ exports[`Storyshots Design System/Tooltip Interactive Tooltip 1`] = `
           </div>
           <div>
             <div
-              style={
-                Object {
-                  "alignItems": "center",
-                  "background": "#434666",
-                  "border": "#DCDFFF",
-                  "borderRadius": "4px",
-                  "color": "white",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "justifyContent": "center",
-                  "padding": "8px",
-                  "width": "240px",
-                }
-              }
+              className="emotion-7"
             >
-              <div>
-                This container is custom content
+              <div
+                className="emotion-8"
+              >
+                <span />
               </div>
               <div
-                className="emotion-4"
+                className="emotion-9"
               >
-                <button
-                  className="emotion-8"
-                  data-testid="button"
-                  disabled={false}
+                It was a dark and stormy night; the rain fell in torrents
+              </div>
+              <a
+                className="emotion-10"
+                data-testid="_link"
+                href="#"
+              >
+                <span>
+                  Learn more
+                </span>
+                <span
+                  className="emotion-11"
+                  data-testid="_link_icon"
                   onClick={[Function]}
-                  type="button"
                 >
                   <span
-                    className="emotion-6"
-                  >
-                    <span>
-                      Hello there mate
-                    </span>
-                  </span>
-                </button>
-              </div>
+                    className="emotion-12"
+                  />
+                </span>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </div>
     <div
-      className="emotion-10"
+      className="emotion-13"
     >
       <div
         style={
@@ -278,13 +485,13 @@ exports[`Storyshots Design System/Tooltip Interactive Tooltip 1`] = `
         <div
           style={
             Object {
-              "padding": "48px",
+              "padding": "128px",
             }
           }
         >
           <div
             arrow={false}
-            className="emotion-11"
+            className="emotion-14"
             delay={
               Array [
                 500,
@@ -298,7 +505,7 @@ exports[`Storyshots Design System/Tooltip Interactive Tooltip 1`] = `
               className="emotion-4"
             >
               <button
-                className="emotion-8"
+                className="emotion-16"
                 data-testid="button"
                 disabled={false}
                 onClick={[Function]}
@@ -316,43 +523,36 @@ exports[`Storyshots Design System/Tooltip Interactive Tooltip 1`] = `
           </div>
           <div>
             <div
-              style={
-                Object {
-                  "alignItems": "center",
-                  "background": "#DCDFFF",
-                  "border": "#DCDFFF",
-                  "borderRadius": "4px",
-                  "color": "black",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "justifyContent": "center",
-                  "padding": "8px",
-                  "width": "240px",
-                }
-              }
+              className="emotion-18"
             >
-              <div>
-                This container is custom content
+              <div
+                className="emotion-19"
+              >
+                <span />
               </div>
               <div
-                className="emotion-4"
+                className="emotion-9"
               >
-                <button
-                  className="emotion-5"
-                  data-testid="button"
-                  disabled={false}
+                It was a dark and stormy night; the rain fell in torrents
+              </div>
+              <a
+                className="emotion-21"
+                data-testid="_link"
+                href="#"
+              >
+                <span>
+                  Learn more
+                </span>
+                <span
+                  className="emotion-11"
+                  data-testid="_link_icon"
                   onClick={[Function]}
-                  type="button"
                 >
                   <span
-                    className="emotion-6"
-                  >
-                    <span>
-                      Hello there mate
-                    </span>
-                  </span>
-                </button>
-              </div>
+                    className="emotion-23"
+                  />
+                </span>
+              </a>
             </div>
           </div>
         </div>
@@ -490,37 +690,121 @@ exports[`Storyshots Design System/Tooltip Playground 1`] = `
   color: #1B214F;
 }
 
-.emotion-12 {
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+  color: #b9cdfc;
   font-family: Roboto;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
-  color: #1B214F;
-  background-color: #1de9b6;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  border: none;
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 8.875rem;
+  width: 12.375rem;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  background: #111530;
+}
+
+.emotion-13 {
+  text-align: center;
+}
+
+.emotion-14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  color: #1de9b6;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0.25rem solid rgba(84,94,255,0);
+  opacity: 1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
+  pointer-events: default;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.375rem;
+  font-size: 1rem;
+  letter-spacing: 0.00625rem;
 }
 
-.emotion-12:focus-visible:not(:disabled) {
-  background-color: #00C6A2;
+.emotion-14:hover {
+  color: #ffffff;
 }
 
-.emotion-12:disabled {
-  opacity: 50%;
-  cursor: not-allowed;
+.emotion-14:hover path {
+  fill: #ffffff;
 }
 
-.emotion-12:hover:not(:disabled) {
-  background-color: #00C6A2;
+.emotion-14:visited {
+  color: #dbc1ff;
 }
 
-.emotion-12:active:not(:disabled) {
-  background-color: #0C7D61;
+.emotion-14:visited path {
+  fill: #dbc1ff;
+}
+
+.emotion-14:focus-visible {
+  border: 0.25rem solid #9347ff;
+}
+
+.emotion-15 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-16 {
+  fill: #1de9b6;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-16 path {
+  fill: #1de9b6;
 }
 
 <div
@@ -590,7 +874,7 @@ exports[`Storyshots Design System/Tooltip Playground 1`] = `
           <div
             style={
               Object {
-                "padding": "48px",
+                "padding": "128px",
               }
             }
           >
@@ -628,43 +912,36 @@ exports[`Storyshots Design System/Tooltip Playground 1`] = `
             </div>
             <div>
               <div
-                style={
-                  Object {
-                    "alignItems": "center",
-                    "background": "#434666",
-                    "border": "#DCDFFF",
-                    "borderRadius": "4px",
-                    "color": "white",
-                    "display": "flex",
-                    "flexDirection": "column",
-                    "justifyContent": "center",
-                    "padding": "8px",
-                    "width": "240px",
-                  }
-                }
+                className="emotion-11"
               >
-                <div>
-                  This container is custom content
+                <div
+                  className="emotion-12"
+                >
+                  <span />
                 </div>
                 <div
-                  className="emotion-4"
+                  className="emotion-13"
                 >
-                  <button
-                    className="emotion-12"
-                    data-testid="button"
-                    disabled={false}
+                  It was a dark and stormy night; the rain fell in torrents
+                </div>
+                <a
+                  className="emotion-14"
+                  data-testid="_link"
+                  href="#"
+                >
+                  <span>
+                    Learn more
+                  </span>
+                  <span
+                    className="emotion-15"
+                    data-testid="_link_icon"
                     onClick={[Function]}
-                    type="button"
                   >
                     <span
-                      className="emotion-6"
-                    >
-                      <span>
-                        Hello there mate
-                      </span>
-                    </span>
-                  </button>
-                </div>
+                      className="emotion-16"
+                    />
+                  </span>
+                </a>
               </div>
             </div>
           </div>
