@@ -15,7 +15,7 @@ const TooltipShowcase = ({
   buttonText?: string;
 }) => {
   return (
-    <div style={{ padding: '120px' }}>
+    <div style={{ padding: '128px' }}>
       <Tooltip
         delayIn={delayIn}
         delayOut={delayOut}
