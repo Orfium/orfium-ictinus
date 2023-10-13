@@ -4,6 +4,7 @@ import Link from './Link';
 import Stack from '../storyUtils/Stack';
 import { BASE_SHADE } from '../../theme/palette';
 import { FIGMA_URL } from '../../utils/common';
+import { getIconSelectorKnob } from '../../utils/stories';
 import SectionHeader from '../../storybook/SectionHeader';
 
 <Meta
@@ -116,15 +117,15 @@ Block: Used without a body of copy; without underline text decoration
 ### Link with Icon
 
 <Preview>
-  <Story name="Link with Icon">
+  <Story name="Link with Icon" parameters={{ decorators: [withKnobs] }}>
     <Stack isVertical>
-      <Link href="#" size={1} iconName="externalLink">
+      <Link href="#" size={1} iconName={getIconSelectorKnob('iconName', 'externalLink')}>
         Link
       </Link>
-      <Link href="#" size={2} iconName="externalLink">
+      <Link href="#" size={2} iconName={getIconSelectorKnob('iconName', 'externalLink')}>
         Link
       </Link>
-      <Link href="#" size={3} iconName="externalLink">
+      <Link href="#" size={3} iconName={getIconSelectorKnob('iconName', 'externalLink')}>
         Link
       </Link>
     </Stack>
