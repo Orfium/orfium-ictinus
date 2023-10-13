@@ -14265,10 +14265,6 @@ exports[`PaletteShowcase should render correctly 1`] = `
   min-width: 100%;
 }
 
-.emotion-776+label {
-  font-size: 0.9375rem;
-}
-
 .emotion-776::-webkit-input-placeholder {
   color: transparent;
 }
@@ -14311,6 +14307,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
 
 .emotion-776:focus-within+label,
 .emotion-776:not(:placeholder-shown)+label {
+  font-weight: 700!important;
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -14318,7 +14315,6 @@ exports[`PaletteShowcase should render correctly 1`] = `
 }
 
 .emotion-776:focus-within+label {
-  font-weight: 700!important;
   color: #1552DD;
 }
 
@@ -14330,7 +14326,6 @@ exports[`PaletteShowcase should render correctly 1`] = `
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
-  line-height: normal;
   width: 100%;
   position: absolute;
   -webkit-user-select: none;
@@ -14341,8 +14336,6 @@ exports[`PaletteShowcase should render correctly 1`] = `
   -moz-transform: translate(0.1875rem, -95%) scale(0.8);
   -ms-transform: translate(0.1875rem, -95%) scale(0.8);
   transform: translate(0.1875rem, -95%) scale(0.8);
-  font-size: 0.875rem;
-  font-weight: 400;
   color: #686BB3;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -14357,6 +14350,11 @@ exports[`PaletteShowcase should render correctly 1`] = `
   right: 0.1875rem;
   margin: auto;
   white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
 }
 
 .emotion-778 {
@@ -29131,10 +29129,6 @@ exports[`PaletteShowcase should render correctly 1`] = `
   min-width: 100%;
 }
 
-.emotion-776+label {
-  font-size: 0.9375rem;
-}
-
 .emotion-776::-webkit-input-placeholder {
   color: transparent;
 }
@@ -29177,6 +29171,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
 
 .emotion-776:focus-within+label,
 .emotion-776:not(:placeholder-shown)+label {
+  font-weight: 700!important;
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -29184,7 +29179,6 @@ exports[`PaletteShowcase should render correctly 1`] = `
 }
 
 .emotion-776:focus-within+label {
-  font-weight: 700!important;
   color: #1552DD;
 }
 
@@ -29196,7 +29190,6 @@ exports[`PaletteShowcase should render correctly 1`] = `
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
-  line-height: normal;
   width: 100%;
   position: absolute;
   -webkit-user-select: none;
@@ -29207,8 +29200,6 @@ exports[`PaletteShowcase should render correctly 1`] = `
   -moz-transform: translate(0.1875rem, -95%) scale(0.8);
   -ms-transform: translate(0.1875rem, -95%) scale(0.8);
   transform: translate(0.1875rem, -95%) scale(0.8);
-  font-size: 0.875rem;
-  font-weight: 400;
   color: #686BB3;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -29223,6 +29214,11 @@ exports[`PaletteShowcase should render correctly 1`] = `
   right: 0.1875rem;
   margin: auto;
   white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
 }
 
 .emotion-778 {

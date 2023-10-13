@@ -140,7 +140,14 @@ Disabled TextField.
 <Preview>
   <Story name="Disabled TextField">
     <Stack>
-      <TextField isDisabled label={'Label'} />
+      <TextField
+        isDisabled
+        label={'Label'}
+        status={{
+          type: 'normal',
+          hintMessage: 'This field is disabled',
+        }}
+      />
     </Stack>
   </Story>
 </Preview>
@@ -170,6 +177,7 @@ TextField with different Statuses.
         label={'Read-only'}
         status={{
           type: 'read-only',
+          hintMessage: text('Normal Message', 'Normal Message'),
         }}
       />
     </Stack>

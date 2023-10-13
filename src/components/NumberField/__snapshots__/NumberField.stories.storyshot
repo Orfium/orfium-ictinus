@@ -112,10 +112,6 @@ exports[`Storyshots Design System/NumberField NumberField with Label and Placeho
   min-width: 100%;
 }
 
-.emotion-7+label {
-  font-size: 0.9375rem;
-}
-
 .emotion-7::-webkit-input-placeholder {
   color: transparent;
 }
@@ -158,6 +154,7 @@ exports[`Storyshots Design System/NumberField NumberField with Label and Placeho
 
 .emotion-7:focus-within+label,
 .emotion-7:not(:placeholder-shown)+label {
+  font-weight: 700!important;
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -165,7 +162,6 @@ exports[`Storyshots Design System/NumberField NumberField with Label and Placeho
 }
 
 .emotion-7:focus-within+label {
-  font-weight: 700!important;
   color: #1552DD;
 }
 
@@ -177,7 +173,6 @@ exports[`Storyshots Design System/NumberField NumberField with Label and Placeho
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
-  line-height: normal;
   width: 100%;
   position: absolute;
   -webkit-user-select: none;
@@ -188,8 +183,6 @@ exports[`Storyshots Design System/NumberField NumberField with Label and Placeho
   -moz-transform: translate(0.1875rem, 0);
   -ms-transform: translate(0.1875rem, 0);
   transform: translate(0.1875rem, 0);
-  font-size: 0.875rem;
-  font-weight: 400;
   color: #686BB3;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -204,6 +197,11 @@ exports[`Storyshots Design System/NumberField NumberField with Label and Placeho
   right: 0.1875rem;
   margin: auto;
   white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
 }
 
 .emotion-13 {
@@ -223,10 +221,6 @@ exports[`Storyshots Design System/NumberField NumberField with Label and Placeho
   text-overflow: ellipsis;
   width: 0;
   min-width: 100%;
-}
-
-.emotion-13+label {
-  font-size: 0.9375rem;
 }
 
 .emotion-13::-webkit-input-placeholder {
@@ -271,6 +265,7 @@ exports[`Storyshots Design System/NumberField NumberField with Label and Placeho
 
 .emotion-13:focus-within+label,
 .emotion-13:not(:placeholder-shown)+label {
+  font-weight: 700!important;
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -278,7 +273,6 @@ exports[`Storyshots Design System/NumberField NumberField with Label and Placeho
 }
 
 .emotion-13:focus-within+label {
-  font-weight: 700!important;
   color: #1552DD;
 }
 
@@ -576,10 +570,6 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
   min-width: 100%;
 }
 
-.emotion-7+label {
-  font-size: 0.9375rem;
-}
-
 .emotion-7::-webkit-input-placeholder {
   color: transparent;
 }
@@ -622,6 +612,7 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
 
 .emotion-7:focus-within+label,
 .emotion-7:not(:placeholder-shown)+label {
+  font-weight: 700!important;
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -629,7 +620,6 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
 }
 
 .emotion-7:focus-within+label {
-  font-weight: 700!important;
   color: #1552DD;
 }
 
@@ -641,7 +631,6 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
-  line-height: normal;
   width: 100%;
   position: absolute;
   -webkit-user-select: none;
@@ -652,8 +641,6 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
   -moz-transform: translate(0.1875rem, 0);
   -ms-transform: translate(0.1875rem, 0);
   transform: translate(0.1875rem, 0);
-  font-size: 0.875rem;
-  font-weight: 400;
   color: #686BB3;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -668,6 +655,11 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
   right: 0.1875rem;
   margin: auto;
   white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
 }
 
 .emotion-9 {
@@ -736,7 +728,6 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
-  line-height: normal;
   width: 100%;
   position: absolute;
   -webkit-user-select: none;
@@ -747,8 +738,6 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
   -moz-transform: translate(0.1875rem, 0);
   -ms-transform: translate(0.1875rem, 0);
   transform: translate(0.1875rem, 0);
-  font-size: 0.875rem;
-  font-weight: 400;
   color: #FF176B;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -763,6 +752,11 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
   right: 0.1875rem;
   margin: auto;
   white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
 }
 
 .emotion-16 {
@@ -896,10 +890,6 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
   min-width: 100%;
 }
 
-.emotion-23+label {
-  font-size: 0.9375rem;
-}
-
 .emotion-23::-webkit-input-placeholder {
   color: transparent;
 }
@@ -942,6 +932,7 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
 
 .emotion-23:focus-within+label,
 .emotion-23:not(:placeholder-shown)+label {
+  font-weight: 700!important;
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -949,7 +940,6 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
 }
 
 .emotion-23:focus-within+label {
-  font-weight: 700!important;
   color: #1552DD;
 }
 
@@ -1564,10 +1554,6 @@ exports[`Storyshots Design System/NumberField NumberField with Stepper 1`] = `
   min-width: 100%;
 }
 
-.emotion-7+label {
-  font-size: 0.9375rem;
-}
-
 .emotion-7::-webkit-input-placeholder {
   color: transparent;
 }
@@ -1610,6 +1596,7 @@ exports[`Storyshots Design System/NumberField NumberField with Stepper 1`] = `
 
 .emotion-7:focus-within+label,
 .emotion-7:not(:placeholder-shown)+label {
+  font-weight: 700!important;
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -1617,7 +1604,6 @@ exports[`Storyshots Design System/NumberField NumberField with Stepper 1`] = `
 }
 
 .emotion-7:focus-within+label {
-  font-weight: 700!important;
   color: #1552DD;
 }
 
@@ -1629,7 +1615,6 @@ exports[`Storyshots Design System/NumberField NumberField with Stepper 1`] = `
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
-  line-height: normal;
   width: 100%;
   position: absolute;
   -webkit-user-select: none;
@@ -1640,8 +1625,6 @@ exports[`Storyshots Design System/NumberField NumberField with Stepper 1`] = `
   -moz-transform: translate(0.1875rem, 0);
   -ms-transform: translate(0.1875rem, 0);
   transform: translate(0.1875rem, 0);
-  font-size: 0.875rem;
-  font-weight: 400;
   color: #686BB3;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -1656,6 +1639,11 @@ exports[`Storyshots Design System/NumberField NumberField with Stepper 1`] = `
   right: 0.1875rem;
   margin: auto;
   white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
 }
 
 .emotion-9 {
@@ -1991,10 +1979,6 @@ exports[`Storyshots Design System/NumberField NumberField with min and max value
   min-width: 100%;
 }
 
-.emotion-7+label {
-  font-size: 0.9375rem;
-}
-
 .emotion-7::-webkit-input-placeholder {
   color: transparent;
 }
@@ -2037,6 +2021,7 @@ exports[`Storyshots Design System/NumberField NumberField with min and max value
 
 .emotion-7:focus-within+label,
 .emotion-7:not(:placeholder-shown)+label {
+  font-weight: 700!important;
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -2044,7 +2029,6 @@ exports[`Storyshots Design System/NumberField NumberField with min and max value
 }
 
 .emotion-7:focus-within+label {
-  font-weight: 700!important;
   color: #1552DD;
 }
 
@@ -2056,7 +2040,6 @@ exports[`Storyshots Design System/NumberField NumberField with min and max value
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
-  line-height: normal;
   width: 100%;
   position: absolute;
   -webkit-user-select: none;
@@ -2067,8 +2050,6 @@ exports[`Storyshots Design System/NumberField NumberField with min and max value
   -moz-transform: translate(0.1875rem, 0);
   -ms-transform: translate(0.1875rem, 0);
   transform: translate(0.1875rem, 0);
-  font-size: 0.875rem;
-  font-weight: 400;
   color: #686BB3;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -2083,6 +2064,11 @@ exports[`Storyshots Design System/NumberField NumberField with min and max value
   right: 0.1875rem;
   margin: auto;
   white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
 }
 
 .emotion-9 {
@@ -2325,10 +2311,6 @@ exports[`Storyshots Design System/NumberField NumberField with number format 1`]
   min-width: 100%;
 }
 
-.emotion-7+label {
-  font-size: 0.9375rem;
-}
-
 .emotion-7::-webkit-input-placeholder {
   color: transparent;
 }
@@ -2371,6 +2353,7 @@ exports[`Storyshots Design System/NumberField NumberField with number format 1`]
 
 .emotion-7:focus-within+label,
 .emotion-7:not(:placeholder-shown)+label {
+  font-weight: 700!important;
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -2378,7 +2361,6 @@ exports[`Storyshots Design System/NumberField NumberField with number format 1`]
 }
 
 .emotion-7:focus-within+label {
-  font-weight: 700!important;
   color: #1552DD;
 }
 
@@ -2390,7 +2372,6 @@ exports[`Storyshots Design System/NumberField NumberField with number format 1`]
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
-  line-height: normal;
   width: 100%;
   position: absolute;
   -webkit-user-select: none;
@@ -2401,8 +2382,6 @@ exports[`Storyshots Design System/NumberField NumberField with number format 1`]
   -moz-transform: translate(0.1875rem, 0);
   -ms-transform: translate(0.1875rem, 0);
   transform: translate(0.1875rem, 0);
-  font-size: 0.875rem;
-  font-weight: 400;
   color: #686BB3;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -2417,6 +2396,11 @@ exports[`Storyshots Design System/NumberField NumberField with number format 1`]
   right: 0.1875rem;
   margin: auto;
   white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
 }
 
 <div
@@ -2626,10 +2610,6 @@ exports[`Storyshots Design System/NumberField Playground 1`] = `
   min-width: 100%;
 }
 
-.emotion-7+label {
-  font-size: 0.9375rem;
-}
-
 .emotion-7::-webkit-input-placeholder {
   color: transparent;
 }
@@ -2672,6 +2652,7 @@ exports[`Storyshots Design System/NumberField Playground 1`] = `
 
 .emotion-7:focus-within+label,
 .emotion-7:not(:placeholder-shown)+label {
+  font-weight: 700!important;
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -2679,7 +2660,6 @@ exports[`Storyshots Design System/NumberField Playground 1`] = `
 }
 
 .emotion-7:focus-within+label {
-  font-weight: 700!important;
   color: #1552DD;
 }
 
@@ -2691,7 +2671,6 @@ exports[`Storyshots Design System/NumberField Playground 1`] = `
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
-  line-height: normal;
   width: 100%;
   position: absolute;
   -webkit-user-select: none;
@@ -2702,8 +2681,6 @@ exports[`Storyshots Design System/NumberField Playground 1`] = `
   -moz-transform: translate(0.1875rem, 0);
   -ms-transform: translate(0.1875rem, 0);
   transform: translate(0.1875rem, 0);
-  font-size: 0.875rem;
-  font-weight: 400;
   color: #686BB3;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -2718,6 +2695,11 @@ exports[`Storyshots Design System/NumberField Playground 1`] = `
   right: 0.1875rem;
   margin: auto;
   white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
 }
 
 .emotion-9 {

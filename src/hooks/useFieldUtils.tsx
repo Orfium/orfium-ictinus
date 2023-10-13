@@ -25,7 +25,7 @@ const useFieldUtils = ({
   const combinedRefs = useCombinedRefs(inputRef, ref);
 
   const suffixContent = useMemo(() => {
-    if (isLocked || typeof suffix === 'string') {
+    if ((!isDisabled && isLocked) || typeof suffix === 'string') {
       const iconName = isLocked ? 'lock' : suffix;
 
       return (
@@ -38,7 +38,7 @@ const useFieldUtils = ({
     }
 
     return suffix;
-  }, [isLocked, suffix, theme.utils]);
+  }, [isDisabled, isLocked, suffix, theme.utils]);
 
   const handleContainerClick = () => {
     if (!isLocked && !isDisabled) {

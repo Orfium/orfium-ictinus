@@ -110,7 +110,7 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
     );
 
     const getLabel = useMemo(() => {
-      if (inputProps?.label.length) {
+      if (inputProps?.label?.length) {
         return inputProps.label;
       }
 

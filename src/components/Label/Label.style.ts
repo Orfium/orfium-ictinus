@@ -5,6 +5,7 @@ import { rem } from 'theme/utils';
 
 import { LabelProps } from './Label';
 import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
+import { generateStylesFromTokens } from 'components/Typography/utils';
 
 export const LABEL_TRANSFORM_LEFT_SPACING = rem(3);
 
@@ -16,15 +17,12 @@ export const labelStyle =
     return css`
       transition: transform 0.25s, opacity 0.25s ease-in-out;
       transform-origin: 0 0;
-      line-height: normal;
       width: 100%;
       position: absolute;
       user-select: none;
       transform: ${!isAnimated
         ? `translate(${LABEL_TRANSFORM_LEFT_SPACING}, 0)`
         : `translate(${LABEL_TRANSFORM_LEFT_SPACING}, -95%) scale(0.8);`};
-      font-size: ${theme.globals.typography.fontSize.get('3')};
-      font-weight: ${theme.globals.typography.fontWeight.get('regular')};
       color: ${hasError
         ? theme.utils.getColor('error', BASE_SHADE, 'normal')
         : tokens('textColor.inputColorAlt')};
@@ -35,5 +33,7 @@ export const labelStyle =
       right: ${rem(3)};
       margin: auto;
       white-space: nowrap;
+
+      ${generateStylesFromTokens(tokens('normal.input'))}
     `;
   };

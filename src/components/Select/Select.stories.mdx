@@ -161,69 +161,70 @@ Simple select component with clearable data and searchable input
   </Story>
 </Preview>
 
-### Disabled/Locked Select
+### Select with Statuses
 
-Select disabled with label
-
-<Preview>
-  <Story name="Disabled/Locked Select">
-    <Stack>
-      <Function>
-        {() => {
-          const [selectedOption, setSelectedOption] = useState(defaultValue);
-          return (
-            <Select
-              selectedOption={selectedOption}
-              onChange={setSelectedOption}
-              isDisabled
-              label={'Flavour'}
-              options={options}
-            />
-          );
-        }}
-      </Function>
-      <Function>
-        {() => {
-          const [selectedOption, setSelectedOption] = useState(defaultValue);
-          return (
-            <Select
-              selectedOption={selectedOption}
-              onChange={setSelectedOption}
-              label={'Flavour'}
-              options={options}
-              status={{ type: 'read-only' }}
-            />
-          );
-        }}
-      </Function>
-    </Stack>
-  </Story>
-</Preview>
-
-### Select with Label and Statuses
-
-Select with Label and Statuses
+Select with Statuses
 
 <Preview>
-  <Story name="Select with label and statuses" parameters={{ decorators: [withKnobs] }}>
+  <Story name="Select with Statuses" parameters={{ decorators: [withKnobs] }}>
     <Stack height={350}>
-      <Select
-        label={'Label'}
-        status={{
-          type: 'normal',
-          hintMessage: text('Custom Hint Message', 'Hint Message'),
+      <Function>
+        {() => {
+          const [selectedOption, setSelectedOption] = useState(defaultValue);
+          return (
+            <Select
+              label={'Normal'}
+              status={{
+                type: 'normal',
+                hintMessage: text('Custom Hint Message', 'Hint Message'),
+              }}
+              options={options}
+              selectedOption={selectedOption}
+              onChange={setSelectedOption}
+              isCreatable={boolean('isCreatable', false)}
+              isVirtualized={boolean('isVirtualized', true)}
+            />
+          );
         }}
-        options={options}
-        selectedOption={defaultValue}
-      />
-      <Select
-        label={'Label'}
-        status={{
-          type: 'error',
-          hintMessage: text('Custom Error Message', 'Error Message'),
+      </Function>
+      <Function>
+        {() => {
+          const [selectedOption, setSelectedOption] = useState(defaultValue);
+          return (
+            <Select
+              label={'Error'}
+              status={{
+                type: 'error',
+                hintMessage: text('Custom Error Message', 'Error Message'),
+              }}
+              options={options}
+              selectedOption={selectedOption}
+              onChange={setSelectedOption}
+              isCreatable={boolean('isCreatable', false)}
+              isVirtualized={boolean('isVirtualized', true)}
+            />
+          );
         }}
-        options={options}
-      />
+      </Function>
+      <Function>
+        {() => {
+          const [selectedOption, setSelectedOption] = useState(defaultValue);
+          return (
+            <Select
+              label={'Read-only'}
+              status={{
+                type: 'read-only',
+                hintMessage: text('Custom Hint Message', 'Hint Message'),
+              }}
+              options={options}
+              selectedOption={selectedOption}
+              onChange={setSelectedOption}
+              isCreatable={boolean('isCreatable', false)}
+              isVirtualized={boolean('isVirtualized', true)}
+            />
+          );
+        }}
+      </Function>
     </Stack>
   </Story>
 </Preview>
@@ -322,6 +323,23 @@ Not Searchable Select
           );
         }}
       </Function>
+    </Stack>
+  </Story>
+</Preview>
+
+### Disabled Select
+
+Select disabled with label
+
+<Preview>
+  <Story name="Disabled Select">
+    <Stack>
+      <Select
+        isDisabled
+        label={'Label'}
+        options={options}
+        status={{ type: 'normal', hintMessage: 'This field is disabled' }}
+      />
     </Stack>
   </Story>
 </Preview>

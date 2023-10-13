@@ -7,6 +7,7 @@ import { getTextInputBaseTokens, TextInputBaseTokens } from './TextInputBase.tok
 import { ColorScheme } from '../../theme/types';
 import { LABEL_TRANSFORM_LEFT_SPACING } from 'components/Label/Label.style';
 import { body02, body03 } from 'components/Typography/Typography.config.styles';
+import { generateStylesFromTokens } from 'components/Typography/utils';
 
 // TODO:MERGE: remove theme as prop and do it as (theme) => ({}) because emotion should pass
 const wrapperStyleSwitch = ({
@@ -127,7 +128,13 @@ export const textFieldStyle =
   };
 
 export const inputStyle =
-  ({ label, placeholder, isLocked, isDisabled, sx }: Partial<TextInputBaseProps> & { isLocked?: boolean }) =>
+  ({
+    label,
+    placeholder,
+    isLocked,
+    isDisabled,
+    sx,
+  }: Partial<TextInputBaseProps> & { isLocked?: boolean }) =>
   (theme: Theme): SerializedStyles => {
     const tokens = getTextInputBaseTokens(theme);
 
@@ -147,13 +154,9 @@ export const inputStyle =
       width: 0,
       minWidth: '100%',
 
-      '& + label': {
-        fontSize: theme.globals.typography.fontSize[15],
-      },
-
       '&::placeholder': {
         color: 'transparent',
-        ...(!label && placeholder ? body02(theme) : {}),
+        ...(!label && placeholder ? generateStylesFromTokens(tokens('normal.input')) : {}),
       },
 
       '&:focus': {
@@ -171,13 +174,13 @@ export const inputStyle =
 
       '&:focus-within, &:not(:placeholder-shown)': {
         '& + label': {
+          fontWeight: `${theme.globals.typography.fontWeight.get('bold')} !important`,
           transform: `translate(${LABEL_TRANSFORM_LEFT_SPACING}, -35%) scale(0.8)`,
         },
       },
 
       '&:focus-within': {
         '& + label': {
-          fontWeight: `${theme.globals.typography.fontWeight.get('bold')} !important`,
           color: tokens('textColor.labelActive'),
         },
       },
