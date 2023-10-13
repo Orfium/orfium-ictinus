@@ -35,16 +35,3 @@ export const containerStyles =
       ${generateStylesFromTokens(theme.tokens.typography.get('normal.body02'))};
     `;
   };
-
-// style={{
-//     display: 'flex',
-//     flexDirection: 'column',
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//     background: isInverted ? '#DCDFFF' : '#434666',
-//     padding: '8px',
-//     width: '240px',
-//     color: isInverted ? 'black' : 'white',
-//     border: '1px solid' + isInverted ? '#DCDFFF' : '#434666',
-//     borderRadius: '4px',
-//   }}
