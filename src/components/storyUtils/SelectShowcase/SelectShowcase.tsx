@@ -1,8 +1,8 @@
 import { css } from '@emotion/react';
 import React, { useState } from 'react';
+import { rem } from 'theme/utils';
 
-import Select from '../../Select';
-import { SelectOption } from '../../Select/Select';
+import Select, { SelectOption } from '../../Select';
 
 export const dummyUnrefinedData = new Array(15).fill(undefined).map((value, index) => ({
   value: index,
@@ -14,6 +14,7 @@ type SelectShowcaseProps = {
 };
 
 const SelectShowcase: React.FC<SelectShowcaseProps> = ({ minCharactersToSearch = 0 }) => {
+  const [selectedOption, setSelectedOption] = useState<SelectOption>();
   const [options, setOptions] = useState<SelectOption[]>(dummyUnrefinedData);
   const [isLoading, setIsLoading] = React.useState(false);
 
@@ -33,17 +34,18 @@ const SelectShowcase: React.FC<SelectShowcaseProps> = ({ minCharactersToSearch =
     <div
       css={css`
         width: 25%;
-        height: 100%;
+        height: ${rem(350)};
       `}
     >
       <Select
         isAsync
         label={'Flavour'}
         options={options}
+        selectedOption={selectedOption}
+        onChange={setSelectedOption}
         asyncSearch={mockedApiCall}
         isLoading={isLoading}
         onKeyPress={() => setIsLoading(true)}
-        styleType={'filled'}
         minCharactersToSearch={minCharactersToSearch}
       />
     </div>

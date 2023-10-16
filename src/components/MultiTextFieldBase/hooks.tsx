@@ -2,6 +2,7 @@ import useTheme from 'hooks/useTheme';
 import React, { useMemo } from 'react';
 
 import { Props as MultiTextFieldBase } from './MultiTextFieldBase';
+import { SelectOption } from '../Select';
 import Icon from 'components/Icon';
 import { TextFieldProps } from 'components/TextField/TextField';
 
@@ -22,7 +23,7 @@ const useMultiTextFieldBaseUtils = ({
   onOptionDelete,
   onClearAllOptions,
   onKeyDown,
-}: Props) => {
+}: Props & { isLocked: boolean }) => {
   const TextfieldRef = React.useRef<HTMLDivElement>(null);
 
   const theme = useTheme();
@@ -30,11 +31,15 @@ const useMultiTextFieldBaseUtils = ({
   const hasLabel = Boolean(label);
 
   const inputPlaceholder = useMemo(() => {
-    if (!label && placeholder && !hasValue) {
+    if (!hasValue && placeholder) {
       return isRequired ? `${placeholder} *` : placeholder;
     }
 
-    return label;
+    if (!hasValue) {
+      return label;
+    }
+
+    return undefined;
   }, [hasValue, label, placeholder, isRequired]);
 
   const iconName = useMemo(() => {
@@ -53,15 +58,16 @@ const useMultiTextFieldBaseUtils = ({
     return undefined;
   }, [hasValue, isTextfield, isLocked]);
 
-  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (value === '' && event.key === 'Backspace') {
-      onOptionDelete();
-    }
+  const handleKeyDown =
+    (option?: SelectOption | string) => (event: React.KeyboardEvent<HTMLInputElement>) => {
+      if (value === '' && event.key === 'Backspace') {
+        onOptionDelete(option);
+      }
 
-    if (onKeyDown) {
-      onKeyDown(event);
-    }
-  };
+      if (onKeyDown) {
+        onKeyDown(event);
+      }
+    };
 
   const icon = useMemo(() => {
     const handleClick = () => {

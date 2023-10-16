@@ -40,7 +40,7 @@ describe('MonthWrapper', () => {
     const dayCell = await findByText('4');
     fireEvent.click(dayCell);
 
-    const monthBtn = await findByTestId('button');
+    const monthBtn = await findByTestId('button-month');
     fireEvent.click(monthBtn);
 
     const newMonthOption = await findByText(monthText);

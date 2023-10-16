@@ -3,6 +3,7 @@ import { fireEvent, render } from 'test';
 
 import { currentDay } from '../utils';
 import OverlayComponent from './OverlayComponent';
+import { APPLY, CALENDAR_DEFAULT_OPTIONS } from '../constants';
 
 describe('OverlayComponent', () => {
   const mockDate = currentDay;
@@ -23,6 +24,7 @@ describe('OverlayComponent', () => {
     const { container } = render(
       <OverlayComponent
         isRangePicker
+        extraOptions={CALENDAR_DEFAULT_OPTIONS}
         selectedDays={{
           from: mockDate.add(1, 'day'),
           to: mockDate.add(44, 'day'),
@@ -35,7 +37,7 @@ describe('OverlayComponent', () => {
 
   it('should run callbacks correctly on buttons Cancel, Apply', async () => {
     const onApply = jest.fn();
-    const onCancel = jest.fn();
+    const onClearAll = jest.fn();
     const date = mockDate.add(1, 'day');
 
     const { findByText } = render(
@@ -46,17 +48,18 @@ describe('OverlayComponent', () => {
         }}
         onDaySelect={() => {}}
         onApply={onApply}
-        onCancel={onCancel}
+        onClearAll={onClearAll}
+        extraOptions={CALENDAR_DEFAULT_OPTIONS}
       />
     );
 
-    const applyBtn = await findByText('Apply');
-    const cancelBtn = await findByText('Cancel');
+    const applyBtn = await findByText(APPLY);
+    const cancelBtn = await findByText('Clear All');
     fireEvent.click(applyBtn);
     fireEvent.click(cancelBtn);
 
     expect(onApply).toHaveBeenCalledTimes(1);
-    expect(onCancel).toHaveBeenCalledTimes(1);
+    expect(onClearAll).toHaveBeenCalledTimes(1);
   });
 
   it('should run onDaySelect correctly', async () => {
@@ -70,6 +73,7 @@ describe('OverlayComponent', () => {
           to: date,
         }}
         onDaySelect={onDaySelect}
+        extraOptions={CALENDAR_DEFAULT_OPTIONS}
       />
     );
 
@@ -82,23 +86,6 @@ describe('OverlayComponent', () => {
     const onDaySelect = jest.fn();
     const onSelectedOption = jest.fn();
     const date = mockDate.add(1, 'day');
-    const extraOptions = [
-      {
-        value: 'last-7-days',
-        label: 'Last 7 days',
-        dates: [mockDate.subtract(7, 'day'), currentDay],
-      },
-      {
-        value: 'last-30-days',
-        label: 'Last 30 days',
-        dates: [mockDate.subtract(30, 'day'), currentDay],
-      },
-      {
-        value: 'custom',
-        label: 'Custom',
-        dates: [mockDate],
-      },
-    ];
 
     const { findByText } = render(
       <OverlayComponent
@@ -107,17 +94,17 @@ describe('OverlayComponent', () => {
           from: date,
           to: date,
         }}
-        extraOptions={extraOptions}
+        extraOptions={CALENDAR_DEFAULT_OPTIONS}
         setSelectedOption={onSelectedOption}
         onDaySelect={onDaySelect}
       />
     );
 
-    const firstExtraOption = await findByText(extraOptions[0].label);
+    const firstExtraOption = await findByText(CALENDAR_DEFAULT_OPTIONS[0].label);
     fireEvent.click(firstExtraOption);
 
     expect(firstExtraOption).toBeTruthy();
     expect(onSelectedOption).toHaveBeenCalledTimes(1);
-    expect(onSelectedOption.mock.calls[0][0]).toBe(extraOptions[0].value);
+    expect(onSelectedOption.mock.calls[0][0]).toBe(CALENDAR_DEFAULT_OPTIONS[0].value);
   });
 });

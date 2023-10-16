@@ -82,7 +82,7 @@ export { default as Radio } from './components/Radio';
 export * from './components/Radio';
 export { default as RadioGroup } from './components/RadioGroup';
 export * from './components/RadioGroup';
-export { default as Select } from './components/Select';
+export { default as Select, StatefulSelect } from './components/Select';
 export * from './components/Select';
 export { default as Slider } from './components/Slider';
 export * from './components/Slider';

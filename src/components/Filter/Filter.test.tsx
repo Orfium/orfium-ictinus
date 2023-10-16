@@ -4,6 +4,7 @@ import { render, screen, waitFor } from 'test';
 
 import { selectDropdownOption } from '../../test';
 import Filter from './Filter';
+import { SELECT_ALL_OPTION } from '../Select/constants';
 
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
@@ -80,11 +81,13 @@ describe('Generic Filter', () => {
 
     const selectInput = screen.getByTestId('filter-input');
 
-    expect(screen.getByTestId('ictinus_list_default_option')).toBeInTheDocument();
+    expect(screen.getByTestId(`ictinus_list_item_${defaultFilter.value}`)).toBeInTheDocument();
 
     userEvent.type(selectInput, 'test');
 
-    expect(screen.queryByTestId('ictinus_list_default_option')).not.toBeInTheDocument();
+    expect(
+      screen.queryByTestId(`ictinus_list_item_${defaultFilter.value}`)
+    ).not.toBeInTheDocument();
   });
 
   it('should display loading dots when isLoading is true', async () => {
@@ -214,7 +217,7 @@ describe('Multi Filter', () => {
   });
 
   it('selects all options and changes label when Select All is clicked', async () => {
-    userEvent.click(screen.getByTestId('ictinus_list_default_option'));
+    userEvent.click(screen.getByTestId(`ictinus_list_item_${SELECT_ALL_OPTION.value}`));
 
     userEvent.click(button);
 

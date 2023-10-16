@@ -6,18 +6,27 @@ exports[`Day should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #0f0f17;
-  width: 2.5rem;
-  padding: 0 0.25rem;
+  width: 2.25rem;
   font-weight: bold;
   opacity: 1;
 }
 
+.emotion-0:focus-visible {
+  background-color: #F5F5FF;
+  border-radius: 6.25rem;
+}
+
 .emotion-1 {
-  border: 0.0625rem solid #93a5c5;
-  border-radius: 100%;
-  width: 2.4375rem;
-  height: 2.4375rem;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  border: 0.0625rem solid #175bf5;
+  border-radius: 6.25rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -34,8 +43,8 @@ exports[`Day should render correctly 1`] = `
 }
 
 .emotion-1:hover {
-  border-radius: 100%;
-  background: #f3f5f8;
+  border-radius: 6.25rem;
+  background: #F5F5FF;
 }
 
 .emotion-0 {
@@ -43,18 +52,27 @@ exports[`Day should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #0f0f17;
-  width: 2.5rem;
-  padding: 0 0.25rem;
+  width: 2.25rem;
   font-weight: bold;
   opacity: 1;
 }
 
+.emotion-0:focus-visible {
+  background-color: #F5F5FF;
+  border-radius: 6.25rem;
+}
+
 .emotion-1 {
-  border: 0.0625rem solid #93a5c5;
-  border-radius: 100%;
-  width: 2.4375rem;
-  height: 2.4375rem;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  border: 0.0625rem solid #175bf5;
+  border-radius: 6.25rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -71,8 +89,8 @@ exports[`Day should render correctly 1`] = `
 }
 
 .emotion-1:hover {
-  border-radius: 100%;
-  background: #f3f5f8;
+  border-radius: 6.25rem;
+  background: #F5F5FF;
 }
 
 <div>
@@ -84,6 +102,7 @@ exports[`Day should render correctly 1`] = `
         >
           <div
             class="emotion-0"
+            data-testid="3_11_2020"
           >
             <div
               class="emotion-1"
@@ -104,18 +123,27 @@ exports[`Day should render disabled correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #0f0f17;
-  width: 2.5rem;
-  padding: 0 0.25rem;
+  width: 2.25rem;
   font-weight: bold;
   opacity: 0.5;
 }
 
+.emotion-0:focus-visible {
+  background-color: #F5F5FF;
+  border-radius: 6.25rem;
+}
+
 .emotion-1 {
-  border: 0.0625rem solid #93a5c5;
-  border-radius: 100%;
-  width: 2.4375rem;
-  height: 2.4375rem;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  border: 0.0625rem solid #175bf5;
+  border-radius: 6.25rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -136,18 +164,27 @@ exports[`Day should render disabled correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #0f0f17;
-  width: 2.5rem;
-  padding: 0 0.25rem;
+  width: 2.25rem;
   font-weight: bold;
   opacity: 0.5;
 }
 
+.emotion-0:focus-visible {
+  background-color: #F5F5FF;
+  border-radius: 6.25rem;
+}
+
 .emotion-1 {
-  border: 0.0625rem solid #93a5c5;
-  border-radius: 100%;
-  width: 2.4375rem;
-  height: 2.4375rem;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  border: 0.0625rem solid #175bf5;
+  border-radius: 6.25rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -172,6 +209,7 @@ exports[`Day should render disabled correctly 1`] = `
         >
           <div
             class="emotion-0"
+            data-testid="3_11_2020"
           >
             <div
               class="emotion-1"
@@ -192,12 +230,15 @@ exports[`Day should render isFirst, isLast correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #0f0f17;
-  width: 2.5rem;
-  padding: 0 0.25rem;
+  width: 2.25rem;
   font-weight: bold;
   opacity: 1;
-  background: transparent;
+  background: #175bf5;
+}
+
+.emotion-0:focus-visible {
+  background-color: #F5F5FF;
+  border-radius: 6.25rem;
 }
 
 .emotion-0:after {
@@ -207,7 +248,6 @@ exports[`Day should render isFirst, isLast correctly 1`] = `
   width: 50%;
   position: absolute;
   top: 0;
-  background: false;
   left: initial;
   right: 0;
   border-bottom-right-radius: false;
@@ -217,10 +257,16 @@ exports[`Day should render isFirst, isLast correctly 1`] = `
 }
 
 .emotion-1 {
-  border: 0.0625rem solid #93a5c5;
-  border-radius: 100%;
-  width: 2.4375rem;
-  height: 2.4375rem;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  border: 0.0625rem solid #175bf5;
+  border-radius: 6.25rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -237,8 +283,8 @@ exports[`Day should render isFirst, isLast correctly 1`] = `
 }
 
 .emotion-1:hover {
-  border-radius: 100%;
-  background: #f3f5f8;
+  border-radius: 6.25rem;
+  background: #F5F5FF;
 }
 
 .emotion-0 {
@@ -246,12 +292,15 @@ exports[`Day should render isFirst, isLast correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #0f0f17;
-  width: 2.5rem;
-  padding: 0 0.25rem;
+  width: 2.25rem;
   font-weight: bold;
   opacity: 1;
-  background: transparent;
+  background: #175bf5;
+}
+
+.emotion-0:focus-visible {
+  background-color: #F5F5FF;
+  border-radius: 6.25rem;
 }
 
 .emotion-0:after {
@@ -261,7 +310,6 @@ exports[`Day should render isFirst, isLast correctly 1`] = `
   width: 50%;
   position: absolute;
   top: 0;
-  background: false;
   left: initial;
   right: 0;
   border-bottom-right-radius: false;
@@ -271,10 +319,16 @@ exports[`Day should render isFirst, isLast correctly 1`] = `
 }
 
 .emotion-1 {
-  border: 0.0625rem solid #93a5c5;
-  border-radius: 100%;
-  width: 2.4375rem;
-  height: 2.4375rem;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  border: 0.0625rem solid #175bf5;
+  border-radius: 6.25rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -291,8 +345,8 @@ exports[`Day should render isFirst, isLast correctly 1`] = `
 }
 
 .emotion-1:hover {
-  border-radius: 100%;
-  background: #f3f5f8;
+  border-radius: 6.25rem;
+  background: #F5F5FF;
 }
 
 <div>
@@ -304,6 +358,7 @@ exports[`Day should render isFirst, isLast correctly 1`] = `
         >
           <div
             class="emotion-0"
+            data-testid="3_11_2020"
           >
             <div
               class="emotion-1"
@@ -324,12 +379,15 @@ exports[`Day should render isFirst, isLast correctly 2`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #0f0f17;
-  width: 2.5rem;
-  padding: 0 0.25rem;
+  width: 2.25rem;
   font-weight: bold;
   opacity: 1;
-  background: transparent;
+  background: #175bf5;
+}
+
+.emotion-0:focus-visible {
+  background-color: #F5F5FF;
+  border-radius: 6.25rem;
 }
 
 .emotion-0:after {
@@ -339,7 +397,6 @@ exports[`Day should render isFirst, isLast correctly 2`] = `
   width: 50%;
   position: absolute;
   top: 0;
-  background: false;
   left: 0;
   right: initial;
   border-bottom-right-radius: false;
@@ -349,10 +406,16 @@ exports[`Day should render isFirst, isLast correctly 2`] = `
 }
 
 .emotion-1 {
-  border: 0.0625rem solid #93a5c5;
-  border-radius: 100%;
-  width: 2.4375rem;
-  height: 2.4375rem;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  border: 0.0625rem solid #175bf5;
+  border-radius: 6.25rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -369,8 +432,8 @@ exports[`Day should render isFirst, isLast correctly 2`] = `
 }
 
 .emotion-1:hover {
-  border-radius: 100%;
-  background: #f3f5f8;
+  border-radius: 6.25rem;
+  background: #F5F5FF;
 }
 
 .emotion-0 {
@@ -378,12 +441,15 @@ exports[`Day should render isFirst, isLast correctly 2`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #0f0f17;
-  width: 2.5rem;
-  padding: 0 0.25rem;
+  width: 2.25rem;
   font-weight: bold;
   opacity: 1;
-  background: transparent;
+  background: #175bf5;
+}
+
+.emotion-0:focus-visible {
+  background-color: #F5F5FF;
+  border-radius: 6.25rem;
 }
 
 .emotion-0:after {
@@ -393,7 +459,6 @@ exports[`Day should render isFirst, isLast correctly 2`] = `
   width: 50%;
   position: absolute;
   top: 0;
-  background: false;
   left: 0;
   right: initial;
   border-bottom-right-radius: false;
@@ -403,10 +468,16 @@ exports[`Day should render isFirst, isLast correctly 2`] = `
 }
 
 .emotion-1 {
-  border: 0.0625rem solid #93a5c5;
-  border-radius: 100%;
-  width: 2.4375rem;
-  height: 2.4375rem;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  border: 0.0625rem solid #175bf5;
+  border-radius: 6.25rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -423,8 +494,8 @@ exports[`Day should render isFirst, isLast correctly 2`] = `
 }
 
 .emotion-1:hover {
-  border-radius: 100%;
-  background: #f3f5f8;
+  border-radius: 6.25rem;
+  background: #F5F5FF;
 }
 
 <div>
@@ -436,6 +507,7 @@ exports[`Day should render isFirst, isLast correctly 2`] = `
         >
           <div
             class="emotion-0"
+            data-testid="3_11_2020"
           >
             <div
               class="emotion-1"

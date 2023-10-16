@@ -2,23 +2,30 @@ import { css, SerializedStyles } from '@emotion/react';
 import { transition } from 'theme/functions';
 import { rem } from 'theme/utils';
 
+import { Theme } from '../../theme';
+import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
+
 export const selectWrapper =
-  ({ isSearchable }: { isSearchable: boolean }) =>
-  (): SerializedStyles =>
-    css`
+  () =>
+  (theme: Theme): SerializedStyles => {
+    const tokens = getTextInputBaseTokens(theme);
+
+    return css`
       position: relative;
-      min-width: ${rem(150)};
-
-      * {
-        cursor: ${!isSearchable && 'pointer'};
-      }
+      min-width: ${rem(tokens('minWidth.small.normal'))};
     `;
+  };
 
-export const rightIconContainer =
-  (isOpen: boolean, isSearchable: boolean) => (): SerializedStyles =>
-    css`
+export const suffixContainer =
+  (isOpen: boolean, isSearchable: boolean) =>
+  (theme: Theme): SerializedStyles => {
+    const tokens = getTextInputBaseTokens(theme);
+
+    return css`
+      padding: ${tokens('addOn.padding.normal.left')};
       display: flex;
       cursor: pointer;
       transform: rotate(${isOpen && !isSearchable ? '180' : '0'}deg);
       ${transition(0.2)}
     `;
+  };

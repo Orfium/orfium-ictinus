@@ -3,7 +3,7 @@ import React from 'react';
 import Menu from 'components/Menu';
 
 const MenuShowcase = () => {
-  const [selectedItem, setSelectedItem] = React.useState('');
+  const [selectedItem, setSelectedItem] = React.useState<string | number>('');
 
   return (
     <div>
@@ -13,7 +13,7 @@ const MenuShowcase = () => {
       <Menu
         items={['My Profile', 'Settings', 'Billing', 'Notifications', 'Logout']}
         selectedItem={selectedItem}
-        onSelect={option => setSelectedItem(option)}
+        onSelect={(option) => setSelectedItem(option)}
         buttonText={'More'}
       />
     </div>

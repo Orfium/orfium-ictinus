@@ -149,9 +149,8 @@ const Slider: React.FC<SliderProps & TestProps> = ({
         <InputsContainer>
           <InputContainer>
             <TextField
+              label="Start"
               isDisabled={isDisabled}
-              hasMinWidthCompat={false}
-              size={'sm'}
               value={values[0]}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                 const sanitizedValue = sanitizeValues(parseInt(e?.target.value || '0'));
@@ -163,7 +162,7 @@ const Slider: React.FC<SliderProps & TestProps> = ({
                   onBlur([sanitizedValue, values[1]]);
                 }
               }}
-              rightIcon={<>%</>}
+              suffix={<>%</>}
               sx={{
                 textField: {
                   color: theme.utils.getColor('lightGrey', 650),
@@ -173,9 +172,8 @@ const Slider: React.FC<SliderProps & TestProps> = ({
           </InputContainer>
           <InputContainer>
             <TextField
+              label="End"
               isDisabled={isDisabled}
-              hasMinWidthCompat={false}
-              size={'sm'}
               value={values[1]}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                 const sanitizedValue = sanitizeValues(parseInt(e?.target.value || '100'));
@@ -187,7 +185,7 @@ const Slider: React.FC<SliderProps & TestProps> = ({
                   onBlur([values[0], sanitizedValue]);
                 }
               }}
-              rightIcon={<>%</>}
+              suffix={<>%</>}
               sx={{
                 textField: {
                   color: theme.utils.getColor('lightGrey', 650),

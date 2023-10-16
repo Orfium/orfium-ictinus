@@ -1,14 +1,10 @@
 import React, { useState } from 'react';
 
 import { container, wrapper } from './MultiSelectShowcase.style';
-import Select from '../../Select';
-import { SelectOption } from '../../Select/Select';
+import Select, { SelectOption, SelectProps } from '../../Select';
 
 type Props = {
-  isLocked?: boolean;
   isDisabled?: boolean;
-  status?: 'hint' | 'success' | 'normal' | 'error' | undefined;
-  hintMessage?: string;
   hasSelectAllOption?: boolean;
   isCreatable?: boolean;
 };
@@ -35,26 +31,23 @@ const selectedOptions = [
   { value: 'buttered_pecan', label: 'Buttered Pecan' },
 ];
 
-export const dummyUnrefinedData = new Array(15).fill(undefined).map((__, index) => ({
+export const dummyUndefinedData = new Array(15).fill(undefined).map((__, index) => ({
   value: index,
   label: `Test option ${index}`,
 }));
 
-const SelectShowcase: React.FC<Props> = ({
-  isLocked = false,
-  isDisabled = false,
-  status = 'hint',
-  hintMessage = '',
-  hasSelectAllOption = false,
-  isCreatable = false,
-}) => {
-  const [asyncOptions, setAsyncOptions] = useState<SelectOption[]>(dummyUnrefinedData);
+const SelectShowcase: React.FC<
+  Pick<SelectProps, 'isDisabled' | 'hasSelectAllOption' | 'isCreatable' | 'status'>
+> = ({ isDisabled = false, hasSelectAllOption = false, isCreatable = false, status }) => {
+  const [asyncOptions, setAsyncOptions] = useState<SelectOption[]>(dummyUndefinedData);
   const [isLoading, setIsLoading] = React.useState(false);
+  const [value, setValue] = React.useState<SelectOption[]>(selectedOptions);
+  const [value2, setValue2] = React.useState<SelectOption[]>();
 
   const mockedApiCall = (term: string) => {
     new Promise<SelectOption[]>((resolve) => {
       setTimeout(() => {
-        resolve(dummyUnrefinedData);
+        resolve(dummyUndefinedData);
         setIsLoading(false);
       }, 1500);
     }).then((values) => {
@@ -70,12 +63,11 @@ const SelectShowcase: React.FC<Props> = ({
           isMulti
           label={'Multi Select'}
           options={options}
-          selectedOptions={selectedOptions}
-          isLocked={isLocked}
+          selectedOption={value}
+          onChange={setValue}
           isDisabled={isDisabled}
-          status={status}
-          hintMsg={hintMessage}
           hasSelectAllOption={hasSelectAllOption}
+          status={status}
           isCreatable={isCreatable}
         />
       </div>
@@ -83,17 +75,17 @@ const SelectShowcase: React.FC<Props> = ({
         <Select
           isMulti
           isAsync
+          status={status}
           label={'Multi Select - Async'}
           options={asyncOptions}
           asyncSearch={mockedApiCall}
           isLoading={isLoading}
           onKeyPress={() => setIsLoading(true)}
-          isLocked={isLocked}
           isDisabled={isDisabled}
-          status={status}
-          hintMsg={hintMessage}
           hasSelectAllOption={hasSelectAllOption}
           isCreatable={isCreatable}
+          selectedOption={value2}
+          onChange={setValue2}
         />
       </div>
     </div>

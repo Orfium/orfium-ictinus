@@ -2,95 +2,85 @@ import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
 
 import { flex } from '../../../theme/functions';
+import { getDatePickerTokens, getDateTokens } from '../DatePicker.tokens';
+import { getListItemTokens } from 'components/List/List.tokens';
+import { label02 } from 'components/Typography/Typography.config.styles';
 
 export const overlayWrapperStyle =
   () =>
-  (theme: Theme): SerializedStyles =>
-    css`
+  (theme: Theme): SerializedStyles => {
+    const tokens = getDateTokens(theme);
+
+    return css`
       ${flex};
-      border: 1px solid ${theme.utils.getColor('lightGrey', 100)};
-      border-radius: ${theme.globals.spacing.get('3')};
+      border: ${tokens('borderWidth')} solid ${tokens('container.borderColor')};
+      border-radius: ${tokens('container.borderRadius')};
       width: fit-content;
     `;
+  };
 
 export const optionsWrapperStyle =
   () =>
-  (theme: Theme): SerializedStyles =>
-    css`
-      background-color: ${theme.utils.getColor('lightGrey', null, 'pale')};
+  (theme: Theme): SerializedStyles => {
+    const tokens = getDateTokens(theme);
+
+    return css`
+      border-right: ${tokens('borderWidth')} solid ${tokens('container.borderColor')};
     `;
+  };
 
 export const optionStyle =
   ({ isSelected }: { isSelected?: boolean }) =>
-  (theme: Theme): SerializedStyles =>
-    css`
+  (theme: Theme): SerializedStyles => {
+    const listItemTokens = getListItemTokens(theme);
+
+    return css`
+      ${label02(theme)};
       white-space: nowrap;
       padding: ${theme.globals.spacing.get('6')};
       font-weight: ${isSelected
         ? theme.globals.typography.fontWeight.get('medium')
         : theme.globals.typography.fontWeight.get('regular')};
+      color: ${isSelected && listItemTokens('textColor.active')};
       cursor: pointer;
-      background-color: ${isSelected ? theme.utils.getColor('blue', 50) : 'transparent'};
+      background-color: ${isSelected ? listItemTokens('backgroundColor.active') : 'transparent'};
       position: relative;
-      font-size: ${theme.globals.typography.fontSize['13']};
 
       &:hover {
-        background-color: ${theme.utils.getColor('lightGrey', 50)};
-      }
-
-      ${isSelected &&
-      `&:after {
-    content: '';
-    position: absolute;
-    right: -10px;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    width: 0;
-    height: 0;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-top: 15px solid #fff;
-    clear: both;
-    transform: rotate(90deg);
-  }`}
-    `;
-
-export const buttonsMonthsWrapperStyle =
-  ({ isRangePicker }: { isRangePicker: boolean }) =>
-  (theme: Theme): SerializedStyles =>
-    css`
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      margin-bottom: ${isRangePicker && theme.globals.spacing.get('6')};
-    `;
-export const monthsWrapperStyle =
-  ({ isRangePicker }: { isRangePicker: boolean }) =>
-  (theme: Theme): SerializedStyles =>
-    css`
-      display: flex;
-      flex-direction: row;
-      position: relative;
-      padding: 0 ${theme.globals.spacing.get('8')};
-      z-index: 10;
-
-      > div:first-of-type {
-        margin-right: ${isRangePicker ? theme.globals.spacing.get('8') : 0};
+        background-color: ${listItemTokens('backgroundColor.active')};
       }
     `;
+  };
+
+export const buttonsMonthsWrapperStyle = (): SerializedStyles =>
+  css`
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  `;
+
+export const monthsWrapperStyle = (): SerializedStyles => {
+  return css`
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    z-index: 10;
+  `;
+};
 
 export const buttonsWrapperStyle =
   () =>
-  (theme: Theme): SerializedStyles =>
-    css`
+  (theme: Theme): SerializedStyles => {
+    const dateTokens = getDateTokens(theme);
+    const datePickerTokens = getDatePickerTokens(theme);
+
+    return css`
       display: flex;
       justify-content: flex-end;
-      margin-bottom: ${theme.globals.spacing.get('6')};
-      margin-right: ${theme.globals.spacing.get('8')};
-
-      button {
-        margin: ${theme.globals.spacing.get('4')} 0 ${theme.globals.spacing.get('4')}
-          ${theme.globals.spacing.get('4')};
-      }
+      height: ${datePickerTokens('actionsContainer')};
+      align-items: center;
+      gap: ${dateTokens('actionsSpacing')};
+      padding: 0 ${dateTokens('horizontalPadding')};
+      border-top: ${dateTokens('borderWidth')} solid ${dateTokens('container.borderColor')};
     `;
+  };

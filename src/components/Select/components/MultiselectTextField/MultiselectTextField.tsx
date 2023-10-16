@@ -1,7 +1,8 @@
 import useTheme from 'hooks/useTheme';
 import omit from 'lodash/omit';
 import React, { useMemo } from 'react';
-import { generateUniqueID } from 'utils/helpers';
+import isEqual from 'react-fast-compare';
+import { generateUniqueKey } from 'utils/helpers';
 import { TestProps } from 'utils/types';
 
 import {
@@ -17,7 +18,7 @@ import Chip from 'components/Chip';
 import Icon from 'components/Icon';
 import Label from 'components/Label';
 import Loader from 'components/Loader';
-import { SelectOption } from 'components/Select/Select';
+import { SelectOption } from 'components/Select';
 import { InputProps, TextFieldProps } from 'components/TextField/TextField';
 import TextInputBase from 'components/TextInputBase';
 import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
@@ -43,22 +44,19 @@ const MultiselectTextField = React.forwardRef<HTMLInputElement, Props & InputPro
       selectedOptions,
       value,
       isDisabled,
-      isLocked,
-      status,
-      isLean,
-      isDark,
-      isReadOnly,
+      status = { type: 'normal' },
       label,
       id,
       placeholder,
       isRequired = false,
-      styleType,
       onOptionDelete,
       onClearAllOptions,
       isLoading,
-      rightIcon,
+      suffix,
       ...rest
     } = props;
+
+    const isLocked = status.type === 'read-only';
 
     const TextfieldRef = React.useRef<HTMLDivElement>(null);
 
@@ -96,7 +94,7 @@ const MultiselectTextField = React.forwardRef<HTMLInputElement, Props & InputPro
       () => (
         <>
           {selectedOptions?.map((option, index) => (
-            <span key={generateUniqueID('chip' + index)} css={chipStyle()}>
+            <span key={generateUniqueKey('chip' + index)} css={chipStyle()}>
               <Chip
                 onClear={!(isLocked || isDisabled) ? () => onOptionDelete(option) : undefined}
                 fill="lightGrey"
@@ -119,12 +117,12 @@ const MultiselectTextField = React.forwardRef<HTMLInputElement, Props & InputPro
     );
 
     const icon = useMemo(() => {
-      if (rightIcon) {
-        if (typeof rightIcon === 'string') {
-          return <Icon name={rightIcon} size={20} color={theme.utils.getColor('lightGrey', 650)} />;
+      if (suffix) {
+        if (typeof suffix === 'string') {
+          return <Icon name={suffix} size={20} color={theme.utils.getColor('lightGrey', 650)} />;
         }
 
-        return rightIcon;
+        return suffix;
       }
 
       return (
@@ -136,32 +134,27 @@ const MultiselectTextField = React.forwardRef<HTMLInputElement, Props & InputPro
           dataTestId="select-right-icon"
         />
       );
-    }, [hasValue, iconName, isLocked, onClearAllOptions, rightIcon, theme.utils]);
+    }, [hasValue, iconName, isLocked, onClearAllOptions, suffix, theme.utils]);
 
     return (
       <div ref={TextfieldRef}>
         <TextInputBase
           isDisabled={isDisabled}
-          isLocked={isLocked}
           status={status}
-          isLean={isLean}
-          size={'md'}
-          styleType={styleType}
           {...rest}
           sx={textInputBaseOverrides({ hasValue, isLoading })(theme)}
         >
           <div css={inputContainer()}>
             {chips}
             <input
-              readOnly={isReadOnly}
+              readOnly={isLocked}
               onKeyDown={handleKeyDown}
               css={inputStyle({
-                size: 'md',
                 placeholder,
                 label,
-                isDark,
-                isLean,
                 sx: inputOverrides(),
+                isLocked,
+                isDisabled,
               })}
               placeholder={inputPlaceholder}
               required={isRequired}
@@ -178,7 +171,7 @@ const MultiselectTextField = React.forwardRef<HTMLInputElement, Props & InputPro
                 label={label}
                 isRequired={isRequired}
                 isAnimated={hasValue}
-                hasError={status === 'error'}
+                hasError={status.type === 'error'}
               />
             )}
           </div>
@@ -197,4 +190,4 @@ const MultiselectTextField = React.forwardRef<HTMLInputElement, Props & InputPro
 
 MultiselectTextField.displayName = 'MultiselectTextField';
 
-export default MultiselectTextField;
+export default React.memo(MultiselectTextField, isEqual);

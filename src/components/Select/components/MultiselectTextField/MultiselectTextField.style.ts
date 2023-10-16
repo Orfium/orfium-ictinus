@@ -1,9 +1,9 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { rem } from 'polished';
 import { Theme } from 'theme';
-import { getTextFieldHeight } from 'utils/size-utils';
 
 import { LABEL_TRANSFORM_LEFT_SPACING } from 'components/Label/Label.style';
+import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
 
 export const chipContent =
   ({ maxWidth }: { maxWidth?: number }) =>
@@ -63,6 +63,8 @@ export const inputContainer =
 export const textInputBaseOverrides =
   ({ hasValue, isLoading }: { hasValue: boolean; isLoading?: boolean }) =>
   (theme: Theme) => {
+    const tokens = getTextInputBaseTokens(theme);
+
     const labelStyles = {
       fontWeight: `${theme.globals.typography.fontWeight.get('bold')} !important` as any,
       transform: `translate(${LABEL_TRANSFORM_LEFT_SPACING}, -82%) scale(0.8) !important`,
@@ -72,7 +74,7 @@ export const textInputBaseOverrides =
     return {
       wrapper: {
         height: 'unset',
-        minHeight: `${getTextFieldHeight('md')} !important`,
+        minHeight: `${tokens('container')} !important`,
         ...(hasValue
           ? { label: labelStyles }
           : {
