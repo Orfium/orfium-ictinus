@@ -57,12 +57,12 @@ export const tagContainerStyles =
 
       border-radius: ${tokens(`borderRadius.${size}` as const)};
 
-      &:hover,
-      &:focus-visible {
-        background: ${isInteractive ? tokens('backgroundColor.interactive.focused') : null};
+      &:hover {
+        background: ${isSelectable ? tokens('backgroundColor.interactive.focused') : null};
       }
 
       &:focus-visible {
+        background: ${isInteractive ? tokens('backgroundColor.interactive.focused') : null};
         border-color: ${isInteractive ? tokens('borderColor.interactive.focused') : null};
       }
 
@@ -83,7 +83,7 @@ export const iconStyles =
 
       cursor: pointer;
 
-      &:focus-visible {
+      &:hover {
         background: ${theme.tokens.state.get('backgroundColor.hover')};
         border-radius: ${theme.globals.borderRadius.get('7')};
       }

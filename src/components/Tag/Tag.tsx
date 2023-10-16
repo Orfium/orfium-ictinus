@@ -1,6 +1,5 @@
 import React from 'react';
 import { DivProps } from 'utils/common';
-import { TestProps } from 'utils/types';
 
 import useGetTagUtils from './hooks/useGetTagUtils';
 import { tagContainerStyles } from './Tag.style';
@@ -14,7 +13,7 @@ const Tag = React.forwardRef<HTMLDivElement, DivProps & TagProps>(
       iconName,
       onSelect,
       onClear,
-      isSelected,
+      isSelected = false,
       children,
       dataTestPrefixId,
       ...rest
@@ -32,6 +31,8 @@ const Tag = React.forwardRef<HTMLDivElement, DivProps & TagProps>(
         css={tagContainerStyles({ size, color, isSelectable, isClearable, isSelected })}
         ref={ref}
         data-testid={`${dataTestPrefixId}_tag_container`}
+        aria-label={children?.toString()}
+        aria-selected={isSelected}
         {...rest}
       >
         {prefix}

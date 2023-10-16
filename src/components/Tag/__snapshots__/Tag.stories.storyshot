@@ -63,12 +63,8 @@ exports[`Storyshots Design System/Tag Clearable Tag 1`] = `
   letter-spacing: 0.015625rem;
 }
 
-.emotion-3:hover,
 .emotion-3:focus-visible {
   background: #F5F5FF;
-}
-
-.emotion-3:focus-visible {
   border-color: #175bf5;
 }
 
@@ -90,7 +86,7 @@ exports[`Storyshots Design System/Tag Clearable Tag 1`] = `
   cursor: pointer;
 }
 
-.emotion-4:focus-visible {
+.emotion-4:hover {
   background: rgba(84,94,255,0.06);
   border-radius: 6.25rem;
 }
@@ -138,6 +134,8 @@ exports[`Storyshots Design System/Tag Clearable Tag 1`] = `
         }
       >
         <div
+          aria-label="Label"
+          aria-selected={false}
           className="emotion-3"
           data-testid="undefined_tag_container"
           onKeyDown={[Function]}
@@ -145,9 +143,9 @@ exports[`Storyshots Design System/Tag Clearable Tag 1`] = `
         >
           Label
           <div
+            aria-hidden="true"
             className="emotion-4"
-            onKeyDown={[Function]}
-            tabIndex={0}
+            tabIndex={-1}
           >
             <span
               className="emotion-5"
@@ -247,6 +245,8 @@ exports[`Storyshots Design System/Tag Playground 1`] = `
       >
         <div>
           <div
+            aria-label="Label"
+            aria-selected={false}
             className="emotion-3"
             data-testid="undefined_tag_container"
             onKeyDown={[Function]}
@@ -473,6 +473,8 @@ exports[`Storyshots Design System/Tag Read-only Tag 1`] = `
         }
       >
         <div
+          aria-label="Label"
+          aria-selected={false}
           className="emotion-3"
           data-testid="undefined_tag_container"
           onKeyDown={[Function]}
@@ -489,6 +491,8 @@ exports[`Storyshots Design System/Tag Read-only Tag 1`] = `
         }
       >
         <div
+          aria-label="Label"
+          aria-selected={false}
           className="emotion-4"
           data-testid="undefined_tag_container"
           onKeyDown={[Function]}
@@ -505,6 +509,8 @@ exports[`Storyshots Design System/Tag Read-only Tag 1`] = `
         }
       >
         <div
+          aria-label="Label"
+          aria-selected={false}
           className="emotion-5"
           data-testid="undefined_tag_container"
           onKeyDown={[Function]}
@@ -521,6 +527,8 @@ exports[`Storyshots Design System/Tag Read-only Tag 1`] = `
         }
       >
         <div
+          aria-label="Label"
+          aria-selected={false}
           className="emotion-6"
           data-testid="undefined_tag_container"
           onKeyDown={[Function]}
@@ -537,6 +545,8 @@ exports[`Storyshots Design System/Tag Read-only Tag 1`] = `
         }
       >
         <div
+          aria-label="Label"
+          aria-selected={false}
           className="emotion-7"
           data-testid="undefined_tag_container"
           onKeyDown={[Function]}
@@ -818,6 +828,8 @@ exports[`Storyshots Design System/Tag Read-only Tag with icon 1`] = `
         }
       >
         <div
+          aria-label="Label"
+          aria-selected={false}
           className="emotion-3"
           data-testid="undefined_tag_container"
           onKeyDown={[Function]}
@@ -842,6 +854,8 @@ exports[`Storyshots Design System/Tag Read-only Tag with icon 1`] = `
         }
       >
         <div
+          aria-label="Label"
+          aria-selected={false}
           className="emotion-6"
           data-testid="undefined_tag_container"
           onKeyDown={[Function]}
@@ -866,6 +880,8 @@ exports[`Storyshots Design System/Tag Read-only Tag with icon 1`] = `
         }
       >
         <div
+          aria-label="Label"
+          aria-selected={false}
           className="emotion-9"
           data-testid="undefined_tag_container"
           onKeyDown={[Function]}
@@ -890,6 +906,8 @@ exports[`Storyshots Design System/Tag Read-only Tag with icon 1`] = `
         }
       >
         <div
+          aria-label="Label"
+          aria-selected={false}
           className="emotion-12"
           data-testid="undefined_tag_container"
           onKeyDown={[Function]}
@@ -914,6 +932,8 @@ exports[`Storyshots Design System/Tag Read-only Tag with icon 1`] = `
         }
       >
         <div
+          aria-label="Label"
+          aria-selected={false}
           className="emotion-15"
           data-testid="undefined_tag_container"
           onKeyDown={[Function]}
@@ -998,12 +1018,12 @@ exports[`Storyshots Design System/Tag Selectable Tag 1`] = `
   letter-spacing: 0.015625rem;
 }
 
-.emotion-3:hover,
-.emotion-3:focus-visible {
+.emotion-3:hover {
   background: #F5F5FF;
 }
 
 .emotion-3:focus-visible {
+  background: #F5F5FF;
   border-color: #175bf5;
 }
 
@@ -1050,6 +1070,8 @@ exports[`Storyshots Design System/Tag Selectable Tag 1`] = `
         }
       >
         <div
+          aria-label="Label"
+          aria-selected={true}
           className="emotion-3"
           data-testid="undefined_tag_container"
           onClick={[Function]}
@@ -1475,12 +1497,12 @@ exports[`Storyshots Design System/Tag Tag Sizes 1`] = `
   letter-spacing: 0.015625rem;
 }
 
-.emotion-19:hover,
-.emotion-19:focus-visible {
+.emotion-19:hover {
   background: #F5F5FF;
 }
 
 .emotion-19:focus-visible {
+  background: #F5F5FF;
   border-color: #175bf5;
 }
 
@@ -1517,12 +1539,12 @@ exports[`Storyshots Design System/Tag Tag Sizes 1`] = `
   letter-spacing: 0.015625rem;
 }
 
-.emotion-21:hover,
-.emotion-21:focus-visible {
+.emotion-21:hover {
   background: #F5F5FF;
 }
 
 .emotion-21:focus-visible {
+  background: #F5F5FF;
   border-color: #175bf5;
 }
 
@@ -1559,12 +1581,8 @@ exports[`Storyshots Design System/Tag Tag Sizes 1`] = `
   letter-spacing: 0.015625rem;
 }
 
-.emotion-25:hover,
 .emotion-25:focus-visible {
   background: #F5F5FF;
-}
-
-.emotion-25:focus-visible {
   border-color: #175bf5;
 }
 
@@ -1586,7 +1604,7 @@ exports[`Storyshots Design System/Tag Tag Sizes 1`] = `
   cursor: pointer;
 }
 
-.emotion-26:focus-visible {
+.emotion-26:hover {
   background: rgba(84,94,255,0.06);
   border-radius: 6.25rem;
 }
@@ -1650,12 +1668,8 @@ exports[`Storyshots Design System/Tag Tag Sizes 1`] = `
   letter-spacing: 0.015625rem;
 }
 
-.emotion-30:hover,
 .emotion-30:focus-visible {
   background: #F5F5FF;
-}
-
-.emotion-30:focus-visible {
   border-color: #175bf5;
 }
 
@@ -1693,6 +1707,8 @@ exports[`Storyshots Design System/Tag Tag Sizes 1`] = `
         }
       >
         <div
+          aria-label="Normal"
+          aria-selected={false}
           className="emotion-5"
           data-testid="undefined_tag_container"
           onKeyDown={[Function]}
@@ -1709,6 +1725,8 @@ exports[`Storyshots Design System/Tag Tag Sizes 1`] = `
         }
       >
         <div
+          aria-label="Normal"
+          aria-selected={false}
           className="emotion-6"
           data-testid="undefined_tag_container"
           onKeyDown={[Function]}
@@ -1725,6 +1743,8 @@ exports[`Storyshots Design System/Tag Tag Sizes 1`] = `
         }
       >
         <div
+          aria-label="Normal"
+          aria-selected={false}
           className="emotion-7"
           data-testid="undefined_tag_container"
           onKeyDown={[Function]}
@@ -1741,6 +1761,8 @@ exports[`Storyshots Design System/Tag Tag Sizes 1`] = `
         }
       >
         <div
+          aria-label="Normal"
+          aria-selected={false}
           className="emotion-8"
           data-testid="undefined_tag_container"
           onKeyDown={[Function]}
@@ -1757,6 +1779,8 @@ exports[`Storyshots Design System/Tag Tag Sizes 1`] = `
         }
       >
         <div
+          aria-label="Normal"
+          aria-selected={false}
           className="emotion-9"
           data-testid="undefined_tag_container"
           onKeyDown={[Function]}
@@ -1777,6 +1801,8 @@ exports[`Storyshots Design System/Tag Tag Sizes 1`] = `
         }
       >
         <div
+          aria-label="Small"
+          aria-selected={false}
           className="emotion-11"
           data-testid="undefined_tag_container"
           onKeyDown={[Function]}
@@ -1793,6 +1819,8 @@ exports[`Storyshots Design System/Tag Tag Sizes 1`] = `
         }
       >
         <div
+          aria-label="Small"
+          aria-selected={false}
           className="emotion-12"
           data-testid="undefined_tag_container"
           onKeyDown={[Function]}
@@ -1809,6 +1837,8 @@ exports[`Storyshots Design System/Tag Tag Sizes 1`] = `
         }
       >
         <div
+          aria-label="Small"
+          aria-selected={false}
           className="emotion-13"
           data-testid="undefined_tag_container"
           onKeyDown={[Function]}
@@ -1825,6 +1855,8 @@ exports[`Storyshots Design System/Tag Tag Sizes 1`] = `
         }
       >
         <div
+          aria-label="Small"
+          aria-selected={false}
           className="emotion-14"
           data-testid="undefined_tag_container"
           onKeyDown={[Function]}
@@ -1841,6 +1873,8 @@ exports[`Storyshots Design System/Tag Tag Sizes 1`] = `
         }
       >
         <div
+          aria-label="Small"
+          aria-selected={false}
           className="emotion-15"
           data-testid="undefined_tag_container"
           onKeyDown={[Function]}
@@ -1878,6 +1912,8 @@ exports[`Storyshots Design System/Tag Tag Sizes 1`] = `
         }
       >
         <div
+          aria-label="Normal"
+          aria-selected={false}
           className="emotion-19"
           data-testid="undefined_tag_container"
           onClick={[Function]}
@@ -1899,6 +1935,8 @@ exports[`Storyshots Design System/Tag Tag Sizes 1`] = `
         }
       >
         <div
+          aria-label="Small"
+          aria-selected={false}
           className="emotion-21"
           data-testid="undefined_tag_container"
           onClick={[Function]}
@@ -1937,6 +1975,8 @@ exports[`Storyshots Design System/Tag Tag Sizes 1`] = `
         }
       >
         <div
+          aria-label="Normal"
+          aria-selected={false}
           className="emotion-25"
           data-testid="undefined_tag_container"
           onKeyDown={[Function]}
@@ -1944,9 +1984,9 @@ exports[`Storyshots Design System/Tag Tag Sizes 1`] = `
         >
           Normal
           <div
+            aria-hidden="true"
             className="emotion-26"
-            onKeyDown={[Function]}
-            tabIndex={0}
+            tabIndex={-1}
           >
             <span
               className="emotion-27"
@@ -1972,6 +2012,8 @@ exports[`Storyshots Design System/Tag Tag Sizes 1`] = `
         }
       >
         <div
+          aria-label="Small"
+          aria-selected={false}
           className="emotion-30"
           data-testid="undefined_tag_container"
           onKeyDown={[Function]}
@@ -1979,9 +2021,9 @@ exports[`Storyshots Design System/Tag Tag Sizes 1`] = `
         >
           Small
           <div
+            aria-hidden="true"
             className="emotion-26"
-            onKeyDown={[Function]}
-            tabIndex={0}
+            tabIndex={-1}
           >
             <span
               className="emotion-27"

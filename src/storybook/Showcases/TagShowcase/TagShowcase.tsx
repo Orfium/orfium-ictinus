@@ -19,7 +19,7 @@ const TagShowcase: FC<Props> = ({ color, size, hasIcon, iconName, type, text }) 
       : type === 'selectable'
       ? {
           isSelected,
-          onSelect: () => setIsSelected(true),
+          onSelect: () => setIsSelected((isSelected) => !isSelected),
         }
       : {
           ...(hasIcon ? { iconName } : {}),

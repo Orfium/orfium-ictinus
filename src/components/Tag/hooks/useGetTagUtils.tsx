@@ -28,17 +28,12 @@ const useGetTagUtils = ({
       if (e.key === 'Enter' && isSelectable && onSelect) {
         onSelect();
       }
-    },
-    [isSelectable, onSelect]
-  );
 
-  const handleIconKeyDown = useCallback(
-    (e: React.KeyboardEvent) => {
-      if (e.key === 'Enter' && onClear) {
+      if (e.key === 'Enter' && isClearable && onClear) {
         onClear();
       }
     },
-    [onClear]
+    [isClearable, isSelectable, onClear, onSelect]
   );
 
   const prefix = useMemo(() => {
@@ -61,7 +56,7 @@ const useGetTagUtils = ({
   const suffix = useMemo(
     () =>
       isClearable ? (
-        <div tabIndex={0} css={iconStyles()} onKeyDown={handleIconKeyDown}>
+        <div tabIndex={-1} aria-hidden="true" css={iconStyles()}>
           <Icon
             onClick={onClear}
             size={12}
@@ -71,7 +66,7 @@ const useGetTagUtils = ({
           />
         </div>
       ) : null,
-    [color, dataTestPrefixId, handleIconKeyDown, isClearable, onClear, tokens]
+    [color, dataTestPrefixId, isClearable, onClear, tokens]
   );
 
   return {
