@@ -986,7 +986,7 @@ exports[`Storyshots Design System/Tag Selectable Tag 1`] = `
   gap: 0.25rem;
   padding: 0.25rem 0.5rem;
   cursor: pointer;
-  background: #ffffff;
+  background: #F5F5FF;
   color: #1249C4;
   border: 0.0625rem solid;
   border-color: #b9cdfc;
@@ -1005,6 +1005,32 @@ exports[`Storyshots Design System/Tag Selectable Tag 1`] = `
 
 .emotion-3:focus-visible {
   border-color: #175bf5;
+}
+
+.emotion-4 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-5 {
+  fill: #1249C4;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-5 path {
+  fill: #1249C4;
 }
 
 <div
@@ -1030,6 +1056,15 @@ exports[`Storyshots Design System/Tag Selectable Tag 1`] = `
           onKeyDown={[Function]}
           tabIndex={0}
         >
+          <span
+            className="emotion-4"
+            data-testid="undefined_tag_prefix"
+            onClick={[Function]}
+          >
+            <span
+              className="emotion-5"
+            />
+          </span>
           Label
         </div>
       </div>

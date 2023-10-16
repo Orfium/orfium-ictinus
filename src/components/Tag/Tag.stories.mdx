@@ -46,7 +46,9 @@ A universal Tag that is used to highlight system-generated metadata.
     'Use tags to show metadata that needs to be highlighted somehow',
     'Use tags to relate secondary information about a page element (px a “Writer” tag next to a name)s',
     'Use selectable tags to quickly filter existing content',
-    'Do not use tags as standalone elements in a page; they should always relate to something elseh',
+  ]}
+  policies={[
+    'Do not use tags as standalone elements in a page; they should always relate to something else',
     'Do not use tags for complex filtering. If you want a tag that shows a select menu upon being clicked, used filters instead',
     'Try not to use selectable tags within tables, as they might confuse the user. Opt for read-only tag variants when possible',
   ]}
@@ -104,9 +106,12 @@ The `isSelected` prop indicates whether the Tag is selected or not.
     <Stack>
       <Function>
         {() => {
-          const [isSelected, setIsSelected] = useState(false);
+          const [isSelected, setIsSelected] = useState(true);
           return (
-            <Tag isSelected={isSelected} onSelect={() => setIsSelected(true)}>
+            <Tag
+              isSelected={isSelected}
+              onSelect={() => setIsSelected((isSelected) => !isSelected)}
+            >
               Label
             </Tag>
           );
