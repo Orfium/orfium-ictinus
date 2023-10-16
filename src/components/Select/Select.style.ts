@@ -3,14 +3,18 @@ import { transition } from 'theme/functions';
 import { rem } from 'theme/utils';
 
 import { Theme } from '../../theme';
-import { SELECT_MIN_WIDTH } from '../TextInputBase/config';
 import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
 
-export const selectWrapper = () => (): SerializedStyles =>
-  css`
-    position: relative;
-    min-width: ${rem(SELECT_MIN_WIDTH)};
-  `;
+export const selectWrapper =
+  () =>
+  (theme: Theme): SerializedStyles => {
+    const tokens = getTextInputBaseTokens(theme);
+
+    return css`
+      position: relative;
+      min-width: ${rem(tokens('minWidth.small.normal'))};
+    `;
+  };
 
 export const suffixContainer =
   (isOpen: boolean, isSearchable: boolean) =>

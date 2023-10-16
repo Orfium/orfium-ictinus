@@ -26,7 +26,7 @@ const EdgeCasesSelectShowcase: React.FC = () => {
             {
               value: 'strawberry',
               label:
-                'Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry',
+                '‘This is an example of a long list item. Avoid using very long list item names if possible. Using a very long list name will automatically truncate...’',
             },
           ]}
           selectedOption={defaultValue}
@@ -39,23 +39,6 @@ const EdgeCasesSelectShowcase: React.FC = () => {
         selectedOption={defaultValue}
         onChange={handleSelectedOption}
       />
-
-      <div style={{ width: 100 }}>
-        <StatefulSelect
-          label={'Flavour'}
-          options={options}
-          selectedOption={defaultValue}
-          onChange={handleSelectedOption}
-        />
-      </div>
-      <div style={{ width: 400, position: 'absolute', bottom: '15%' }}>
-        <StatefulSelect
-          label={'Bottom positioned case'}
-          options={options}
-          selectedOption={defaultValue}
-          onChange={handleSelectedOption}
-        />
-      </div>
     </div>
   );
 };

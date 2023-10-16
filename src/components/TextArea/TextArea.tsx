@@ -61,17 +61,21 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>((props, re
     placeholder,
   })(theme);
 
-  const shouldShowCounter = maxCharacters && status?.type != 'error' && !status?.hintMessage;
+  const shouldShowCounter = maxCharacters && status?.type != 'error';
 
   const counter = shouldShowCounter ? (
-    <div css={hintMessageStyle(theme)}>
+    <div css={hintMessageStyle({ isDisabled })}>
       {rest.value?.length}/{maxCharacters}
     </div>
   ) : undefined;
 
+  const textAreaStatus = status
+    ? { ...status, hintMessage: !shouldShowCounter ? status.hintMessage : undefined }
+    : undefined;
+
   return (
     <React.Fragment>
-      <TextInputBase {...props} sx={sx}>
+      <TextInputBase {...props} status={textAreaStatus} sx={sx}>
         <div css={{ width: '100%' }}>
           <textarea
             role="textbox"
@@ -81,6 +85,8 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>((props, re
               placeholder,
               label,
               sx,
+              isLocked,
+              isDisabled,
             })}
             placeholder={placeholder ? `${placeholder} ${isRequired ? '*' : ''}` : label}
             required={isRequired}
@@ -95,7 +101,7 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>((props, re
             label={label}
             isRequired={isRequired}
             isAnimated={Boolean(rest.value)}
-            hasError={status?.type === 'error'}
+            hasError={!isDisabled && status?.type === 'error'}
           />
         </div>
       </TextInputBase>

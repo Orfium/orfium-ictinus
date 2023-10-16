@@ -113,7 +113,7 @@ Simple select component with clearable data and searchable input
 
 <Preview>
   <Story name="Simple Select">
-    <Stack>
+    <Stack height={300}>
       <Function>
         {() => {
           const [selectedOption, setSelectedOption] = useState(defaultValue);
@@ -161,55 +161,28 @@ Simple select component with clearable data and searchable input
   </Story>
 </Preview>
 
-### Select with suffix
+### Select with Statuses
 
-Select with suffix options
+Select with Statuses
 
 <Preview>
-  <Story name="Select with icon and size">
-    <Stack>
+  <Story name="Select with Statuses" parameters={{ decorators: [withKnobs] }}>
+    <Stack height={350}>
       <Function>
         {() => {
           const [selectedOption, setSelectedOption] = useState(defaultValue);
           return (
             <Select
-              label={'Flavour'}
+              label={'Normal'}
+              status={{
+                type: 'normal',
+                hintMessage: text('Custom Hint Message', 'Hint Message'),
+              }}
               options={options}
               selectedOption={selectedOption}
               onChange={setSelectedOption}
-              suffix={
-                <img
-                  style={{ background: 'red' }}
-                  src="https://brandmark.io/logo-rank/random/pepsi.png"
-                  width="16"
-                  height="16"
-                />
-              }
-            />
-          );
-        }}
-      </Function>
-    </Stack>
-  </Story>
-</Preview>
-
-### Disabled/Locked Select
-
-Select disabled with label
-
-<Preview>
-  <Story name="Disabled/Locked Select">
-    <Stack>
-      <Function>
-        {() => {
-          const [selectedOption, setSelectedOption] = useState(defaultValue);
-          return (
-            <Select
-              selectedOption={selectedOption}
-              onChange={setSelectedOption}
-              isDisabled
-              label={'Flavour'}
-              options={options}
+              isCreatable={boolean('isCreatable', false)}
+              isVirtualized={boolean('isVirtualized', true)}
             />
           );
         }}
@@ -219,43 +192,39 @@ Select disabled with label
           const [selectedOption, setSelectedOption] = useState(defaultValue);
           return (
             <Select
+              label={'Error'}
+              status={{
+                type: 'error',
+                hintMessage: text('Custom Error Message', 'Error Message'),
+              }}
+              options={options}
               selectedOption={selectedOption}
               onChange={setSelectedOption}
-              label={'Flavour'}
-              options={options}
-              status={{ type: 'read-only' }}
+              isCreatable={boolean('isCreatable', false)}
+              isVirtualized={boolean('isVirtualized', true)}
             />
           );
         }}
       </Function>
-    </Stack>
-  </Story>
-</Preview>
-
-### Select with Label and Statuses
-
-Select with Label and Statuses
-
-<Preview>
-  <Story name="Select with label and statuses" parameters={{ decorators: [withKnobs] }}>
-    <Stack>
-      <Select
-        label={'Label'}
-        status={{
-          type: 'normal',
-          hintMessage: text('Custom Hint Message', 'Hint Message'),
+      <Function>
+        {() => {
+          const [selectedOption, setSelectedOption] = useState(defaultValue);
+          return (
+            <Select
+              label={'Read-only'}
+              status={{
+                type: 'read-only',
+                hintMessage: text('Custom Hint Message', 'Hint Message'),
+              }}
+              options={options}
+              selectedOption={selectedOption}
+              onChange={setSelectedOption}
+              isCreatable={boolean('isCreatable', false)}
+              isVirtualized={boolean('isVirtualized', true)}
+            />
+          );
         }}
-        options={options}
-        selectedOption={defaultValue}
-      />
-      <Select
-        label={'Label'}
-        status={{
-          type: 'error',
-          hintMessage: text('Custom Error Message', 'Error Message'),
-        }}
-        options={options}
-      />
+      </Function>
     </Stack>
   </Story>
 </Preview>
@@ -266,7 +235,7 @@ Select with uncontrolled state
 
 <Preview>
   <Story name="Select with uncontrolled state" parameters={{ decorators: [withKnobs] }}>
-    <Stack>
+    <Stack height={350}>
       <StatefulSelect
         label={'Label'}
         status={{
@@ -289,7 +258,7 @@ Simple select component where searched term is highlighted in options
 
 <Preview>
   <Story name="Select with Highlight">
-    <Stack>
+    <Stack height={350}>
       <Function>
         {() => {
           const [selectedOption, setSelectedOption] = useState(defaultValue);
@@ -314,7 +283,7 @@ Simple select component with grouped data and searchable input
 
 <Preview>
   <Story name="Simple Group Select">
-    <Stack>
+    <Stack height={350}>
       <Function>
         {() => {
           const [selectedOption, setSelectedOption] = useState(defaultValue);
@@ -339,7 +308,7 @@ Not Searchable Select
 
 <Preview>
   <Story name="Not Searchable Select">
-    <Stack>
+    <Stack height={350}>
       <Function>
         {() => {
           const [selectedOption, setSelectedOption] = useState(defaultValue);
@@ -358,13 +327,30 @@ Not Searchable Select
   </Story>
 </Preview>
 
+### Disabled Select
+
+Select disabled with label
+
+<Preview>
+  <Story name="Disabled Select">
+    <Stack>
+      <Select
+        isDisabled
+        label={'Label'}
+        options={options}
+        status={{ type: 'normal', hintMessage: 'This field is disabled' }}
+      />
+    </Stack>
+  </Story>
+</Preview>
+
 ### Disabled option with helper text
 
 Disabled option with helper text
 
 <Preview>
   <Story name="Disabled option with helper text">
-    <Stack>
+    <Stack height={350}>
       <Function>
         {() => {
           const [selectedOption, setSelectedOption] = useState(defaultValue);
@@ -430,9 +416,10 @@ _. When in MultiSelect, `onClear` prop refers to the all selected options deleti
   <Story name="MultiSelect">
     <MultiSelectShowcase
       isDisabled={boolean('isDisabled', false)}
-      isLocked={boolean('isLocked', false)}
-      status={select('status', ['normal', 'hint', 'error'], 'normal')}
-      hintMessage={text('hintMessage', '')}
+      status={{
+        type: select('Status', ['error', 'normal', 'read-only'], 'normal'),
+        hintMessage: text('Hint/Error message', 'Message in Text Field'),
+      }}
       hasSelectAllOption={boolean('hasSelectAllOption', false)}
       isCreatable={boolean('isCreatable', false)}
     />

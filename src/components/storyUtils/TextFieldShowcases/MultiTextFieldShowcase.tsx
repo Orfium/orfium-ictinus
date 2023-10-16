@@ -6,7 +6,7 @@ type Props = {
   values?: string[];
 };
 
-const TextFieldShowcase: FC<Props> = ({ values = [] }) => {
+const MultiTextFieldShowcase: FC<Props> = ({ values = [] }) => {
   const [value, setValue] = useState('');
   const [tags, setTags] = useState<string[]>(values);
 
@@ -61,4 +61,4 @@ const TextFieldShowcase: FC<Props> = ({ values = [] }) => {
   );
 };
 
-export default TextFieldShowcase;
+export default MultiTextFieldShowcase;

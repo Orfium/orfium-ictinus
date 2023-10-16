@@ -3,7 +3,7 @@ import { fireEvent, render } from 'test';
 
 import { currentDay } from '../utils';
 import OverlayComponent from './OverlayComponent';
-import { CALENDAR_DEFAULT_OPTIONS } from '../constants';
+import { APPLY, CALENDAR_DEFAULT_OPTIONS } from '../constants';
 
 describe('OverlayComponent', () => {
   const mockDate = currentDay;
@@ -53,7 +53,7 @@ describe('OverlayComponent', () => {
       />
     );
 
-    const applyBtn = await findByText('Apply Dates');
+    const applyBtn = await findByText(APPLY);
     const cancelBtn = await findByText('Clear All');
     fireEvent.click(applyBtn);
     fireEvent.click(cancelBtn);

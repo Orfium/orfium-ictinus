@@ -5,8 +5,6 @@ import { Theme } from '../../theme';
 
 export type TextInputBaseTokens = DotKeys<typeof field>;
 
-export const getTextInputBaseTokens = (
-  theme: Theme
-): ((path: TextInputBaseTokens, fn?: (val: string) => any) => string) => {
-  return getComponentTokens(field, theme);
+export const getTextInputBaseTokens = (theme: Theme) => {
+  return getComponentTokens<TextInputBaseTokens>(field, theme);
 };

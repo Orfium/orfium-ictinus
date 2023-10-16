@@ -2,12 +2,12 @@ import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
 import { rem } from 'theme/utils';
 
-import { MIN_WIDTH } from './config';
 import { TextInputBaseProps } from './TextInputBase';
 import { getTextInputBaseTokens, TextInputBaseTokens } from './TextInputBase.tokens';
 import { ColorScheme } from '../../theme/types';
 import { LABEL_TRANSFORM_LEFT_SPACING } from 'components/Label/Label.style';
 import { body02, body03 } from 'components/Typography/Typography.config.styles';
+import { generateStylesFromTokens } from 'components/Typography/utils';
 
 // TODO:MERGE: remove theme as prop and do it as (theme) => ({}) because emotion should pass
 const wrapperStyleSwitch = ({
@@ -67,8 +67,8 @@ export const wrapperStyle =
   ({ isDisabled, status, isInteractive, sx }: Partial<TextInputBaseProps>) =>
   (theme: Theme): SerializedStyles => {
     const colorScheme = theme.colorScheme;
-    const isLocked = status?.type === 'read-only';
-    const hasError = status?.type === 'error';
+    const isLocked = !isDisabled && status?.type === 'read-only';
+    const hasError = !isDisabled && status?.type === 'error';
 
     const tokens = getTextInputBaseTokens(theme);
 
@@ -90,9 +90,9 @@ export const wrapperStyle =
       borderRadius: tokens('borderRadius'),
       userSelect: 'none',
       opacity: isDisabled ? theme.tokens.disabledState.get('default') : 1,
-      cursor: isDisabled || isLocked ? 'not-allowed' : 'text',
+      cursor: isDisabled ? 'not-allowed' : 'text',
       height: tokens('container'),
-      minWidth: rem(MIN_WIDTH),
+      minWidth: rem(tokens('minWidth.small.normal')),
       ...wrapperStyleSwitch({
         theme,
         colorScheme,
@@ -128,7 +128,13 @@ export const textFieldStyle =
   };
 
 export const inputStyle =
-  ({ label, placeholder, sx }: Partial<TextInputBaseProps>) =>
+  ({
+    label,
+    placeholder,
+    isLocked,
+    isDisabled,
+    sx,
+  }: Partial<TextInputBaseProps> & { isLocked?: boolean }) =>
   (theme: Theme): SerializedStyles => {
     const tokens = getTextInputBaseTokens(theme);
 
@@ -136,6 +142,7 @@ export const inputStyle =
       background: 'transparent',
       border: 'none',
       color: tokens('textColor.inputColor'),
+      padding: 0,
       display: 'block',
       position: 'relative',
       /**
@@ -147,13 +154,9 @@ export const inputStyle =
       width: 0,
       minWidth: '100%',
 
-      '& + label': {
-        fontSize: theme.globals.typography.fontSize[15],
-      },
-
       '&::placeholder': {
         color: 'transparent',
-        ...(!label && placeholder ? body02(theme) : {}),
+        ...(!label && placeholder ? generateStylesFromTokens(tokens('normal.input')) : {}),
       },
 
       '&:focus': {
@@ -171,8 +174,8 @@ export const inputStyle =
 
       '&:focus-within, &:not(:placeholder-shown)': {
         '& + label': {
+          fontWeight: `${theme.globals.typography.fontWeight.get('bold')} !important`,
           transform: `translate(${LABEL_TRANSFORM_LEFT_SPACING}, -35%) scale(0.8)`,
-          fontWeight: theme.globals.typography.fontWeight.get('bold'),
         },
       },
 
@@ -183,14 +186,14 @@ export const inputStyle =
       },
 
       '&:disabled': {
-        cursor: 'not-allowed',
+        cursor: isLocked && !isDisabled ? 'text' : 'not-allowed',
       },
       ...sx?.input,
     });
   };
 
 export const hintMessageStyle =
-  ({ status }: Partial<TextInputBaseProps>) =>
+  ({ status, isDisabled }: Partial<TextInputBaseProps>) =>
   (theme: Theme): SerializedStyles => {
     const tokens = getTextInputBaseTokens(theme);
 
@@ -199,8 +202,9 @@ export const hintMessageStyle =
         display: 'flex',
         alignItems: 'center',
         gap: tokens('hintGap'),
+        opacity: isDisabled ? theme.tokens.disabledState.get('default') : 1,
         color:
-          status?.type === 'error'
+          status?.type === 'error' && !isDisabled
             ? tokens('textColor.errorHintColor')
             : tokens('textColor.inputColorAlt'),
         padding: `${tokens('hintPadding')} 0 0`,

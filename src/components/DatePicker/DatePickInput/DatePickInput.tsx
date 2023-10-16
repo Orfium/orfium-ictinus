@@ -1,6 +1,6 @@
 import useTheme from 'hooks/useTheme';
-import { rem } from 'polished';
 import React, { useCallback, InputHTMLAttributes, useMemo } from 'react';
+import { rem } from 'theme/utils';
 import dayjs, { Dayjs } from 'utils/date';
 
 import { iconStyles } from './DatePickInput.style';
@@ -13,7 +13,6 @@ import { DATE_PICKER_LABEL, DATE_RANGE_PICKER_LABEL } from '../constants';
 import { DateFormatType } from '../DatePicker.types';
 import { Range } from '../OverlayComponent/OverlayComponent';
 import Icon from 'components/Icon';
-import { getDatePickerMinWidth } from 'components/TextInputBase/config';
 import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
 
 // TODO: Need to fix this (TextField onChange prop)
@@ -82,7 +81,13 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
 
     const { buttonType = 'primary', styleType = 'filled', filterType } = filterConfig;
 
-    const sx = { wrapper: { minWidth: rem(getDatePickerMinWidth(isRangePicker)) } };
+    const sx = {
+      wrapper: {
+        minWidth: isRangePicker
+          ? rem(tokens('minWidth.extraLarge.normal'))
+          : rem(tokens('minWidth.medium.normal')),
+      },
+    };
 
     const renderIconButton = useMemo(
       () => (
@@ -105,7 +110,7 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
     );
 
     const getLabel = useMemo(() => {
-      if (inputProps?.label.length) {
+      if (inputProps?.label?.length) {
         return inputProps.label;
       }
 

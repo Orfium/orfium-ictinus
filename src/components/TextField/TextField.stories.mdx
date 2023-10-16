@@ -6,8 +6,10 @@ import Stack from '../storyUtils/Stack';
 import Icon from '../Icon';
 import iconSelector from '../Icon/assets/iconSelector';
 import Loader from '../Loader';
-import TextFieldShowcase from '../../components/storyUtils/TextFieldShowcase/TextFieldShowcase.tsx';
-import MaskedTextFieldShowCase from '../../components/storyUtils/MaskedTextFieldShowCase/MaskedTextFieldShowCase.tsx';
+import {
+  MultiTextFieldShowcase,
+  TextFieldShowCase,
+} from '../../components/storyUtils/TextFieldShowcases';
 import { FIGMA_URL } from '../../utils/common';
 import SectionHeader from '../../storybook/SectionHeader';
 
@@ -93,9 +95,11 @@ The mask rules are the following:
 <Preview>
   <Story name="Masked TextField (DontTest)">
     <Stack>
-      <MaskedTextFieldShowCase
+      <TextFieldShowCase
+        label="Masked TextField"
         mask={text('Mask', '+(999) 999')}
         isDisabled={boolean('isDisabled', false)}
+        hasSuffix={boolean('hasSuffixIcon', false)}
         suffix={select('Suffix icon name', ['', ...Object.keys(iconSelector)], 'info')}
         status={{
           type: select('Status', ['error', 'normal', 'read-only'], 'normal'),
@@ -129,18 +133,6 @@ TextField with icon options right of the text, either as external image or one o
   </Story>
 </Preview>
 
-### TextField with Suffix
-
-Regular TextField with a Suffix element.
-
-<Preview>
-  <Story name="TextField with Suffix">
-    <Stack>
-      <TextField label={'Label'} suffix={<div style={{ color: 'gray' }}>%</div>} />
-    </Stack>
-  </Story>
-</Preview>
-
 ### Disabled TextField
 
 Disabled TextField.
@@ -148,7 +140,14 @@ Disabled TextField.
 <Preview>
   <Story name="Disabled TextField">
     <Stack>
-      <TextField isDisabled label={'Label'} />
+      <TextField
+        isDisabled
+        label={'Label'}
+        status={{
+          type: 'normal',
+          hintMessage: 'This field is disabled',
+        }}
+      />
     </Stack>
   </Story>
 </Preview>
@@ -161,23 +160,24 @@ TextField with different Statuses.
   <Story name="TextField with different Statuses" parameters={{ decorators: [withKnobs] }}>
     <Stack>
       <TextField
-        label={'Label'}
+        label={'Normal'}
         status={{
           type: 'normal',
-          hintMessage: text('Custom Hint Message', 'Hint in Text Field'),
+          hintMessage: text('Normal Message', 'Normal Message'),
         }}
       />
       <TextField
-        label={'Label'}
+        label={'Error'}
         status={{
           type: 'error',
-          hintMessage: text('Custom Error Message', 'Error in Text Field'),
+          hintMessage: text('Error Message', 'Error Message'),
         }}
       />
       <TextField
-        label={'Label'}
+        label={'Read-only'}
         status={{
           type: 'read-only',
+          hintMessage: text('Normal Message', 'Normal Message'),
         }}
       />
     </Stack>
@@ -190,7 +190,7 @@ MultiTextField enables a user to enter one or individual entries as free text.
 
 <Preview>
   <Story name="MultiTextField">
-    <TextFieldShowcase />
+    <MultiTextFieldShowcase />
   </Story>
 </Preview>
 
@@ -199,9 +199,11 @@ MultiTextField enables a user to enter one or individual entries as free text.
 <Preview>
   <Story name="Playground" parameters={{ decorators: [withKnobs] }}>
     <Stack>
-      <TextField
+      <TextFieldShowCase
         label={text('Label', 'Label')}
+        placeholder={text('Placeholder', 'Placeholder')}
         isDisabled={boolean('isDisabled', false)}
+        hasSuffix={boolean('hasSuffixIcon', false)}
         suffix={select('Suffix icon name', ['', ...Object.keys(iconSelector)], 'info')}
         status={{
           type: select('Status', ['error', 'normal', 'read-only'], 'normal'),

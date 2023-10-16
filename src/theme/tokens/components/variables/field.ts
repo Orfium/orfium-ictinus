@@ -253,6 +253,41 @@ const field = {
     type: 'sizing',
     description: 'Sets icon size for field error hint icon',
   },
+  minWidth: {
+    small: {
+      normal: {
+        value: '140px',
+        type: 'sizing',
+        description: "Sets 'small' minimum width for base field (normal size)",
+      },
+      compact: {
+        value: '70px',
+        type: 'sizing',
+        description: "Sets 'small' minimum width for base field (compact size)",
+      },
+    },
+    large: {
+      normal: {
+        value: '240px',
+        type: 'sizing',
+        description: "Sets 'large' minimum width for base field (normal size)",
+      },
+    },
+    medium: {
+      normal: {
+        value: '160px',
+        type: 'sizing',
+        description: "Sets 'medium' minimum width for base field (normal size)",
+      },
+    },
+    extraLarge: {
+      normal: {
+        value: '260px',
+        type: 'sizing',
+        description: "Sets 'large' minimum width for base field (normal size)",
+      },
+    },
+  },
 } as const;
 
 export default field;

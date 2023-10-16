@@ -144,6 +144,8 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
                 placeholder,
                 label,
                 sx: inputOverrides(),
+                isLocked,
+                isDisabled,
               })}
               placeholder={inputPlaceholder}
               required={isRequired}

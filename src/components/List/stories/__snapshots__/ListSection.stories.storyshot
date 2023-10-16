@@ -155,6 +155,9 @@ exports[`Storyshots Design System/List/ListSection Compact ListSection 1`] = `
 
 .emotion-8 span {
   display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 <div
@@ -537,6 +540,9 @@ exports[`Storyshots Design System/List/ListSection Normal ListSection 1`] = `
 
 .emotion-8 span {
   display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 <div

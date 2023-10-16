@@ -67,7 +67,7 @@ Implementation of the regular DatePicker
 
 <Preview>
   <Story name="DatePicker" parameters={{ decorators: [withKnobs] }} play={openDatePicker} autoPlay>
-    <Stack vertical>
+    <Stack vertical height={600}>
       <Function>
         {() => {
           const [date, setDate] = useState({ from: currentDay.toDate(), to: currentDay.toDate() });
@@ -97,7 +97,7 @@ Implementation of the regular DateRangePicker
     play={openDatePicker}
     autoPlay
   >
-    <Stack vertical>
+    <Stack vertical height={600}>
       <Function>
         {() => {
           const [date, setDate] = useState({ from: currentDay.toDate(), to: currentDay.toDate() });
@@ -117,13 +117,93 @@ Implementation of the regular DateRangePicker
   </Story>
 </Preview>
 
+### DatePicker and DateRangePicker with Statuses
+
+DatePicker and DateRangePicker inherit all TextField statuses behavior.
+
+<Preview>
+  <Story
+    name="DatePicker and DateRangePicker with Statuses"
+    parameters={{ decorators: [withKnobs] }}
+  >
+    <Stack vertical height={600}>
+      <Function>
+        {() => {
+          const [date, setDate] = useState({ from: currentDay.toDate(), to: currentDay.toDate() });
+          return (
+            <DatePicker
+              value={date}
+              isRangePicker={boolean('isRangePicker', false)}
+              onChange={setDate}
+              isClearable={true}
+              disableDates={select('disableDates', options, options[0])}
+              dateFormatOverride={select('dateFormat', dateFormatOptions, dateFormatOptions[1])}
+              inputProps={{
+                label: 'Normal',
+                status: {
+                  type: 'normal',
+                  hintMessage: text('Custom Hint Message', 'Hint Message'),
+                },
+              }}
+            />
+          );
+        }}
+      </Function>
+      <Function>
+        {() => {
+          const [date, setDate] = useState({ from: currentDay.toDate(), to: currentDay.toDate() });
+          return (
+            <DatePicker
+              value={date}
+              isRangePicker={boolean('isRangePicker', false)}
+              onChange={setDate}
+              isClearable={true}
+              disableDates={select('disableDates', options, options[0])}
+              dateFormatOverride={select('dateFormat', dateFormatOptions, dateFormatOptions[1])}
+              inputProps={{
+                label: 'Error',
+                status: {
+                  type: 'error',
+                  hintMessage: text('Custom Error Message', 'Error Message'),
+                },
+              }}
+            />
+          );
+        }}
+      </Function>
+      <Function>
+        {() => {
+          const [date, setDate] = useState({ from: currentDay.toDate(), to: currentDay.toDate() });
+          return (
+            <DatePicker
+              value={date}
+              isRangePicker={boolean('isRangePicker', false)}
+              onChange={setDate}
+              isClearable={true}
+              disableDates={select('disableDates', options, options[0])}
+              dateFormatOverride={select('dateFormat', dateFormatOptions, dateFormatOptions[1])}
+              inputProps={{
+                label: 'Read-only',
+                status: {
+                  type: 'read-only',
+                  hintMessage: text('Custom Hint Message', 'Hint Message'),
+                },
+              }}
+            />
+          );
+        }}
+      </Function>
+    </Stack>
+  </Story>
+</Preview>
+
 ### DateRangePicker with options
 
 Implementation of the regular DatePicker with options
 
 <Preview>
   <Story name="DateRangePicker with options" parameters={{ decorators: [withKnobs] }}>
-    <Stack vertical>
+    <Stack vertical height={600}>
       <Function>
         {() => {
           const [date, setDate] = useState({ from: currentDay.toDate(), to: currentDay.toDate() });
@@ -150,7 +230,7 @@ Implementation of the DatePicker with a Filter instead of a TextField
 
 <Preview>
   <Story name="DatePicker with Filter" parameters={{ decorators: [withKnobs] }}>
-    <Stack vertical>
+    <Stack vertical height={600}>
       <Function>
         {() => {
           const [date, setDate] = useState({ from: undefined, to: undefined });
@@ -185,13 +265,13 @@ Implementation of the DatePicker with a Filter instead of a TextField
   </Story>
 </Preview>
 
-### DayPicker with disabled dates
+### DatePicker with disabled dates
 
 Some disable dates functionality
 
 <Preview>
-  <Story name="DayPicker with disabled dates">
-    <Stack>
+  <Story name="DatePicker with disabled dates">
+    <Stack height={600}>
       <Function>
         {() => {
           const [date, setDate] = useState({
@@ -199,6 +279,38 @@ Some disable dates functionality
             to: currentDay.toDate(),
           });
           return <DatePicker disableDates={disableDates} value={date} onChange={setDate} />;
+        }}
+      </Function>
+    </Stack>
+  </Story>
+</Preview>
+
+### Disabled DatePicker & DateRangePicker
+
+Disabled DatePicker & DateRangePicker
+
+<Preview>
+  <Story name="Disabled DatePicker & DateRangePicker">
+    <Stack>
+      <Function>
+        {() => {
+          const [date, setDate] = useState({ from: currentDay.toDate(), to: currentDay.toDate() });
+          return (
+            <DatePicker
+              value={date}
+              isRangePicker={boolean('isRangePicker', false)}
+              onChange={setDate}
+              isClearable={true}
+              inputProps={{
+                label: 'Normal',
+                status: {
+                  type: 'normal',
+                  hintMessage: 'This field is disabled',
+                },
+                isDisabled: true,
+              }}
+            />
+          );
         }}
       </Function>
     </Stack>

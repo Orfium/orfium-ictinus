@@ -75,7 +75,7 @@ TextArea with label, with or without placeholder
 TextArea and how to change size with cols and rows
 
 <Preview>
-  <Story name="Text Area Sizes">
+  <Story name="Resizable TextArea">
     <Stack>
       <TextArea label={'Label'} cols={10} rows={5} />
     </Stack>
@@ -124,7 +124,7 @@ TextArea with 3 available statuses: Normal, Error and Read-only.
     <Stack>
       <Stack>
         <TextArea
-          label={'Label'}
+          label={'Normal'}
           cols={10}
           rows={5}
           isResizeEnabled={false}
@@ -134,7 +134,7 @@ TextArea with 3 available statuses: Normal, Error and Read-only.
           }}
         />
         <TextArea
-          label={'Label'}
+          label={'Error'}
           cols={10}
           rows={5}
           isResizeEnabled={false}
@@ -144,12 +144,13 @@ TextArea with 3 available statuses: Normal, Error and Read-only.
           }}
         />
         <TextArea
-          label={'Label'}
+          label={'Read-only'}
           cols={10}
           rows={5}
           isResizeEnabled={false}
           status={{
             type: 'read-only',
+            hintMessage: text('Custom Hint Message', 'Hint in Text Area'),
           }}
         />
       </Stack>
@@ -164,7 +165,16 @@ Regular TextArea disabled with label
 <Preview>
   <Story name="Disabled TextArea">
     <Stack>
-      <TextArea isDisabled label={'Label'} cols={10} rows={5} />
+      <TextArea
+        isDisabled
+        label={'Label'}
+        cols={10}
+        rows={5}
+        status={{
+          type: 'normal',
+          hintMessage: 'This field is disabled',
+        }}
+      />
     </Stack>
   </Story>
 </Preview>
@@ -174,15 +184,29 @@ Regular TextArea disabled with label
 <Preview>
   <Story name="Playground" parameters={{ decorators: [withKnobs] }}>
     <Stack>
-      <TextArea
-        placeholder={text('Label', 'Label')}
-        isDisabled={boolean('isDisabled', false)}
-        isResizeEnabled={boolean('isResizeEnabled', true)}
-        status={{
-          type: select('status', ['error', 'normal', 'read-only'], 'normal'),
-          hintMessage: text('custom hint message', 'Hint in Text Area'),
+      <Function>
+        {() => {
+          const [value, setValue] = useState('');
+          const handleChange = (e) => setValue(e.target.value);
+          return (
+            <TextArea
+              value={value}
+              label={text('Label', 'Label')}
+              onChange={handleChange}
+              placeholder={text('Placeholder', 'Placeholder')}
+              isDisabled={boolean('isDisabled', false)}
+              isResizeEnabled={boolean('isResizeEnabled', true)}
+              maxCharacters={number('maxCharacters', undefined)}
+              cols={10}
+              rows={5}
+              status={{
+                type: select('status', ['error', 'normal', 'read-only'], 'normal'),
+                hintMessage: text('custom hint message', 'Hint in Text Area'),
+              }}
+            />
+          );
         }}
-      />
+      </Function>
     </Stack>
   </Story>
 </Preview>

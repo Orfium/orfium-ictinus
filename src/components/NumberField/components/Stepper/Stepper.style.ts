@@ -29,6 +29,7 @@ export const buttonWrapperStyle =
 
       &:hover {
         cursor: pointer;
+        background: ${theme.tokens.state.get('backgroundColor.hover')};
       }
     `;
   };

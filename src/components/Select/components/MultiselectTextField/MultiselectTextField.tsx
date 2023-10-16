@@ -153,6 +153,8 @@ const MultiselectTextField = React.forwardRef<HTMLInputElement, Props & InputPro
                 placeholder,
                 label,
                 sx: inputOverrides(),
+                isLocked,
+                isDisabled,
               })}
               placeholder={inputPlaceholder}
               required={isRequired}
