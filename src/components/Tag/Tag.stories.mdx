@@ -106,6 +106,19 @@ The `isSelected` prop indicates whether the Tag is selected or not.
     <Stack>
       <Function>
         {() => {
+          const [isSelected, setIsSelected] = useState(false);
+          return (
+            <Tag
+              isSelected={isSelected}
+              onSelect={() => setIsSelected((isSelected) => !isSelected)}
+            >
+              Label
+            </Tag>
+          );
+        }}
+      </Function>
+      <Function>
+        {() => {
           const [isSelected, setIsSelected] = useState(true);
           return (
             <Tag
@@ -177,7 +190,23 @@ There are two Tag sizes: `normal` and `small`.
         {() => {
           const [isSelected, setIsSelected] = useState(false);
           return (
-            <Tag isSelected={isSelected} onSelect={() => setIsSelected(true)}>
+            <Tag
+              isSelected={isSelected}
+              onSelect={() => setIsSelected((isSelected) => !isSelected)}
+            >
+              Normal
+            </Tag>
+          );
+        }}
+      </Function>
+      <Function>
+        {() => {
+          const [isSelected, setIsSelected] = useState(true);
+          return (
+            <Tag
+              isSelected={isSelected}
+              onSelect={() => setIsSelected((isSelected) => !isSelected)}
+            >
               Normal
             </Tag>
           );
@@ -189,7 +218,25 @@ There are two Tag sizes: `normal` and `small`.
         {() => {
           const [isSelected, setIsSelected] = useState(false);
           return (
-            <Tag size="small" isSelected={isSelected} onSelect={() => setIsSelected(true)}>
+            <Tag
+              size="small"
+              isSelected={isSelected}
+              onSelect={() => setIsSelected((isSelected) => !isSelected)}
+            >
+              Small
+            </Tag>
+          );
+        }}
+      </Function>
+      <Function>
+        {() => {
+          const [isSelected, setIsSelected] = useState(true);
+          return (
+            <Tag
+              size="small"
+              isSelected={isSelected}
+              onSelect={() => setIsSelected((isSelected) => !isSelected)}
+            >
               Small
             </Tag>
           );
