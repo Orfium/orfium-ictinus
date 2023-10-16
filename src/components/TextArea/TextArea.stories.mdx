@@ -192,10 +192,11 @@ Regular TextArea disabled with label
             <TextArea
               value={value}
               label={text('Label', 'Label')}
+              onChange={handleChange}
               placeholder={text('Placeholder', 'Placeholder')}
               isDisabled={boolean('isDisabled', false)}
               isResizeEnabled={boolean('isResizeEnabled', true)}
-              maxCharacters={number('maxCharacters', 0)}
+              maxCharacters={number('maxCharacters', undefined)}
               cols={10}
               rows={5}
               status={{
