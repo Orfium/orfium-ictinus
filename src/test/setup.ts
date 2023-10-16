@@ -3,6 +3,12 @@ import { createSerializer } from '@emotion/jest';
 
 expect.addSnapshotSerializer(createSerializer());
 
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}));
+
 jest.mock(
   (() => {
     // This will mock the version of uuid belonging to react-tooltip
@@ -20,6 +26,11 @@ jest.mock(
     v4: () => '00000000-0000-0000-0000-000000000000',
   })
 );
+
+jest.mock('@react-aria/ssr/dist/main', () => ({
+  ...jest.requireActual('@react-aria/ssr/dist/main'),
+  useSSRSafeId: () => 'react-aria-generated-id',
+}));
 
 // because scrollIntoView doesn't exist in jest
 window.HTMLElement.prototype.scrollIntoView = function () {};
@@ -41,3 +52,8 @@ Object.defineProperty(window, 'matchMedia', {
     dispatchEvent: jest.fn(),
   })),
 });
+
+jest.mock('@react-aria/ssr/dist/main', () => ({
+  ...jest.requireActual('@react-aria/ssr/dist/main'),
+  useSSRSafeId: () => 'react-aria-generated-id',
+}));

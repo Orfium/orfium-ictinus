@@ -23,7 +23,7 @@ const state = {
   },
   backgroundColor: {
     hover: {
-      value: '{colors.transparent.2}',
+      value: '{colors.transparent.default.2}',
       type: 'color',
       description: 'Sets color for hover state',
     },

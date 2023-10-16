@@ -1,34 +1,40 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
-import { rem } from 'theme/utils';
 
-export const weekDaysWrapperStyle =
-  () =>
-  (theme: Theme): SerializedStyles =>
-    css`
-      display: flex;
-      justify-content: space-around;
-      border-top: ${rem(1)} solid;
-      border-bottom: ${rem(1)} solid;
-      border-color: ${theme.utils.getColor('lightGrey', 100)};
-    `;
+import { getDateTokens } from '../DatePicker.tokens';
+
+export const weekDaysWrapperStyle = (): SerializedStyles =>
+  css`
+    display: flex;
+    justify-content: space-around;
+  `;
 
 export const weekDayStyle =
   () =>
-  (theme: Theme): SerializedStyles =>
-    css`
-      color: ${theme.utils.getColor('lightGrey', 650)};
-      padding: ${theme.globals.spacing.get('6')} 0;
-      width: ${rem(39)};
+  (theme: Theme): SerializedStyles => {
+    const tokens = getDateTokens(theme);
+
+    return css`
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: ${tokens('textColor.weekday')};
+      width: ${tokens('size')};
+      height: ${tokens('size')};
       font-size: ${theme.globals.typography.fontSize.get('3')};
+      line-height: ${theme.globals.typography.lineHeight.get('4')};
       text-align: center;
       font-weight: ${theme.globals.typography.fontWeight.get('medium')};
     `;
+  };
 
 export const datesWrapperStyle =
   () =>
-  (theme: Theme): SerializedStyles =>
-    css`
+  (theme: Theme): SerializedStyles => {
+    const tokens = getDateTokens(theme);
+
+    return css`
       border-collapse: separate;
-      border-spacing: 0 ${theme.globals.spacing.get('4')};
+      border-spacing: 0 ${tokens('rowPadding')};
     `;
+  };

@@ -1,21 +1,17 @@
 import useTheme from 'hooks/useTheme';
-import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
-import { isEmpty } from 'lodash';
+import { head, isEmpty } from 'lodash';
 import * as React from 'react';
 import { EventProps } from 'utils/common';
-import { AcceptedColorComponentTypes } from 'utils/themeFunctions';
 
 import { wrapperStyle } from './Menu.style';
 import { TestProps } from '../../utils/types';
 import Button from '../Button';
-import { defineBackgroundColor } from '../Button/utils';
-import Icon from '../Icon';
 import { AcceptedIconNames } from '../Icon/types';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import { optionsStyle, MenuPositionAllowed } from '../utils/DropdownOptions';
-import Avatar, { AvatarColors } from 'components/Avatar';
+import { AvatarColors } from 'components/Avatar';
 import { ButtonTypes } from 'components/Button/Button.types';
-import List from 'components/List';
+import List, { ListItem, ListItemText } from 'components/List';
 
 export type MenuProps = {
   /** the color of the button based on our colors eg. red-500 */
@@ -23,9 +19,9 @@ export type MenuProps = {
   /** Items that are being declared as menu options */
   items?: string[];
   /** Returns the items selected on the menu */
-  selectedItem?: string | null;
+  selectedItem?: string | number | null;
   /** A callback that is being triggered when an items has been clicked */
-  onSelect: (option: string) => void;
+  onSelect: (option: string | number) => void;
   /** The text of the button to show - defaults to "More" */
   buttonText: React.ReactNode;
   /** Define if the button is in disabled state */
@@ -80,13 +76,20 @@ const Menu: React.FC<MenuProps> = (props) => {
           <div css={optionsStyle({ menuPosition })(theme)}>
             {items && (
               <List
-                data={items}
-                rowSize={'small'}
-                handleOptionClick={(option: string) => {
+                label={'filter-options'}
+                onSelectionChange={(keys) => {
                   setIsOpen(false);
-                  onSelect(option);
+                  const keyFound = String(head(Array.from(keys)));
+                  const optionFound = items.find((o) => o === keyFound);
+                  optionFound && onSelect(optionFound);
                 }}
-              />
+              >
+                {items.map((item) => (
+                  <ListItem key={item} rowSize={'compact'}>
+                    <ListItemText>{item}</ListItemText>
+                  </ListItem>
+                ))}
+              </List>
             )}
           </div>
         )}

@@ -386,9 +386,7 @@ exports[`Storyshots Design System/TopNavBar playground 1`] = `
         <div
           className="emotion-10"
         >
-          <div
-            role="button"
-          >
+          <div>
             <div
               className="emotion-11"
               data-testid="userMenu"
@@ -641,7 +639,7 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   position: relative;
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #cfd7e5;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
   border-radius: 0.25rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -649,18 +647,18 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   user-select: none;
   opacity: 1;
   cursor: text;
-  min-width: 9.375rem;
-  height: 2.875rem;
-  background-color: white;
+  height: 3.25rem;
+  min-width: 8.75rem;
+  background-color: #ffffff;
 }
 
 .emotion-10:hover {
-  background-color: #f3f5f8;
+  background-color: #F5F5FF;
 }
 
 .emotion-10:focus-within {
-  box-shadow: 0 0 0 0.125rem #1451dc;
-  background-color: #e7ebf2;
+  box-shadow: 0 0 0 0.125rem #175bf5;
+  background-color: #F5F5FF;
 }
 
 .emotion-11 {
@@ -680,8 +678,8 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   width: -webkit-fill-available;
   width: -moz-available;
   width: fill-available;
-  padding: 0 1rem;
-  cursor: text;
+  padding: 0 0 0 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .emotion-11>div {
@@ -689,29 +687,32 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
 }
 
 .emotion-12 {
-  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .emotion-13 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
   background: transparent;
   border: none;
-  color: #0f0f17;
+  color: #1B214F;
+  padding: 0;
   display: block;
   position: relative;
+  top: 0.4375rem;
   z-index: 1;
-  font-size: 0.9375rem;
   text-overflow: ellipsis;
   width: 0;
   min-width: 100%;
-}
-
-.emotion-13+label {
-  font-size: 0.9375rem;
-  cursor: text;
-}
-
-.emotion-13:focus {
-  outline: none;
 }
 
 .emotion-13::-webkit-input-placeholder {
@@ -730,24 +731,83 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   color: transparent;
 }
 
+.emotion-13:focus {
+  outline: none;
+}
+
+.emotion-13:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-13:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-13:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-13:focus::placeholder {
+  color: transparent;
+}
+
 .emotion-13:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-13:focus+label,
+.emotion-13:focus-within+label,
 .emotion-13:not(:placeholder-shown)+label {
+  font-weight: 700!important;
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
   transform: translate(0.1875rem, -35%) scale(0.8);
-  font-weight: 700;
+}
+
+.emotion-13:focus-within+label {
+  color: #1552DD;
 }
 
 .emotion-13:disabled {
   cursor: not-allowed;
 }
 
-.emotion-22 {
+.emotion-14 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, 0);
+  -moz-transform: translate(0.1875rem, 0);
+  -ms-transform: translate(0.1875rem, 0);
+  transform: translate(0.1875rem, 0);
+  color: #686BB3;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0.1875rem;
+  margin: auto;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-25 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -772,19 +832,19 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-23 {
+.emotion-26 {
   position: relative;
   display: inline-block;
 }
 
-.emotion-24 {
+.emotion-27 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-25 {
+.emotion-28 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -800,24 +860,24 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-25:focus-visible:not(:disabled) {
+.emotion-28:focus-visible:not(:disabled) {
   background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-25:disabled {
+.emotion-28:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-25:hover:not(:disabled) {
+.emotion-28:hover:not(:disabled) {
   background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-25:active:not(:disabled) {
+.emotion-28:active:not(:disabled) {
   background-color: rgba(84,94,255,0.14);
 }
 
-.emotion-26 {
+.emotion-29 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -833,7 +893,7 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-27 {
+.emotion-30 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -873,23 +933,23 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   letter-spacing: 0.00625rem;
 }
 
-.emotion-27 img {
+.emotion-30 img {
   border-radius: 6.25rem;
   width: 100%;
   height: 100%;
 }
 
-.emotion-28 {
+.emotion-31 {
   font-weight: 500;
 }
 
-.emotion-30 {
+.emotion-33 {
   fill: #1552DD;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-30 path {
+.emotion-33 path {
   fill: #1552DD;
 }
 
@@ -957,10 +1017,21 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
                   className="emotion-12"
                 >
                   <input
+                    aria-invalid={false}
                     className="emotion-13"
+                    data-testid="input"
                     disabled={false}
+                    id="textfield__00"
+                    placeholder="Label"
                     required={false}
                   />
+                  <label
+                    className="emotion-14"
+                    htmlFor="textfield__00"
+                  >
+                    Label
+                     
+                  </label>
                 </div>
               </div>
             </div>
@@ -978,10 +1049,21 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
                   className="emotion-12"
                 >
                   <input
+                    aria-invalid={false}
                     className="emotion-13"
+                    data-testid="input"
                     disabled={false}
+                    id="textfield__00"
+                    placeholder="Label"
                     required={false}
                   />
+                  <label
+                    className="emotion-14"
+                    htmlFor="textfield__00"
+                  >
+                    Label
+                     
+                  </label>
                 </div>
               </div>
             </div>
@@ -999,40 +1081,49 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
                   className="emotion-12"
                 >
                   <input
+                    aria-invalid={false}
                     className="emotion-13"
+                    data-testid="input"
                     disabled={false}
+                    id="textfield__00"
+                    placeholder="Label"
                     required={false}
                   />
+                  <label
+                    className="emotion-14"
+                    htmlFor="textfield__00"
+                  >
+                    Label
+                     
+                  </label>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div
-          className="emotion-22"
+          className="emotion-25"
         >
-          <div
-            role="button"
-          >
+          <div>
             <div
-              className="emotion-23"
+              className="emotion-26"
               data-testid="userMenu"
             >
               <div
-                className="emotion-24"
+                className="emotion-27"
               >
                 <button
-                  className="emotion-25"
+                  className="emotion-28"
                   data-testid="button"
                   disabled={false}
                   onClick={[Function]}
                   type="button"
                 >
                   <span
-                    className="emotion-26"
+                    className="emotion-29"
                   >
                     <div
-                      className="emotion-27"
+                      className="emotion-30"
                       data-testid="_avatar"
                     >
                       <img
@@ -1042,7 +1133,7 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
                     <span>
                       <span>
                         <span
-                          className="emotion-28"
+                          className="emotion-31"
                         >
                           Tom Cruise
                         </span>
@@ -1053,7 +1144,7 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-30"
+                        className="emotion-33"
                       />
                     </span>
                   </span>
@@ -1454,9 +1545,7 @@ exports[`Storyshots Design System/TopNavBar with Dark theme enabled 1`] = `
         <div
           className="emotion-10"
         >
-          <div
-            role="button"
-          >
+          <div>
             <div
               className="emotion-11"
               data-testid="userMenu"
@@ -1897,9 +1986,7 @@ exports[`Storyshots Design System/TopNavBar with Logo Placeholder 1`] = `
         <div
           className="emotion-10"
         >
-          <div
-            role="button"
-          >
+          <div>
             <div
               className="emotion-11"
               data-testid="userMenu"

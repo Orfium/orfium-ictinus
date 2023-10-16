@@ -1,12 +1,19 @@
 import useTheme from 'hooks/useTheme';
 import React from 'react';
+import { rem } from 'theme/utils';
 
 type StackProps = {
   isVertical?: boolean;
   isInverted?: boolean;
+  height?: number;
 };
 
-const Stack: React.FC<StackProps> = ({ isVertical = false, isInverted = false, children }) => {
+const Stack: React.FC<StackProps> = ({
+  isVertical = false,
+  isInverted = false,
+  height,
+  children,
+}) => {
   const theme = useTheme();
 
   return (
@@ -16,6 +23,7 @@ const Stack: React.FC<StackProps> = ({ isVertical = false, isInverted = false, c
         display: 'flex',
         flexDirection: isVertical ? 'column' : 'row',
         flexWrap: 'wrap',
+        ...(height ? { height: rem(height) } : {}),
       }}
     >
       {React.Children.toArray(children).map((item, index) => (

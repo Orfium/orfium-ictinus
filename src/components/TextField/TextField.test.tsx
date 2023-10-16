@@ -1,10 +1,10 @@
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 
-import { render, screen } from '../../test';
-import TextField from './TextField';
+import { fireEvent, render, screen } from '../../test';
+import { MultiTextFieldShowcase, TextFieldShowCase } from '../storyUtils/TextFieldShowcases/';
 
-const values = ['Value 1', 'Value 2'];
+export const values = ['Value 1', 'Value 2'];
 
 describe('Multi TextField', () => {
   let input: HTMLInputElement;
@@ -12,15 +12,11 @@ describe('Multi TextField', () => {
   let newChip: HTMLElement;
 
   beforeEach(() => {
-    render(
-      <div>
-        <TextField multi label={'Country'} multiValues={values} />
-      </div>
-    );
+    render(<MultiTextFieldShowcase values={values} />);
   });
 
   beforeEach(() => {
-    input = screen.getByPlaceholderText('Country') as HTMLInputElement;
+    input = screen.getByTestId('input_showcase') as HTMLInputElement;
   });
 
   it('renders the initial values', async () => {
@@ -49,5 +45,29 @@ describe('Multi TextField', () => {
   it('deletes a chip when Backspace is pressed', async () => {
     userEvent.type(input, '{backspace}');
     expect(screen.queryByTestId('chip-chip_1')).not.toBeInTheDocument();
+  });
+});
+
+describe('Masked TextField', () => {
+  let input: HTMLInputElement;
+
+  beforeEach(() => {
+    render(<TextFieldShowCase mask={'+(999)'} />);
+  });
+
+  beforeEach(() => {
+    input = screen.getByTestId('input') as HTMLInputElement;
+  });
+
+  it('shows the mask as a placeholder when focused', async () => {
+    input.focus();
+
+    expect(input.value).toEqual('+(   )');
+  });
+
+  it('formats the input correctly according to the mask', async () => {
+    fireEvent.change(input, { target: { value: '123' } });
+
+    expect(input.value).toEqual('+(123)');
   });
 });

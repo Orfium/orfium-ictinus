@@ -12,9 +12,10 @@ export const container =
       flex-wrap: wrap;
       row-gap: ${rem(48)};
       margin-bottom: ${rem(48)};
+      height: ${rem(350)};
     `;
 
 export const wrapper = (): SerializedStyles =>
   css`
-    width: 25%;
+    width: 45%;
   `;

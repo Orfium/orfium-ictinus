@@ -1,12 +1,17 @@
 import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
 import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
+import { linkTo } from '@storybook/addon-links';
 import TextField from './TextField';
 import Stack from '../storyUtils/Stack';
 import Icon from '../Icon';
 import iconSelector from '../Icon/assets/iconSelector';
 import Loader from '../Loader';
-import TextFieldShowcase from '../../components/storyUtils/TextFieldShowcase/TextFieldShowcase.tsx';
+import {
+  MultiTextFieldShowcase,
+  TextFieldShowCase,
+} from '../../components/storyUtils/TextFieldShowcases';
 import { FIGMA_URL } from '../../utils/common';
+import SectionHeader from '../../storybook/SectionHeader';
 
 <Meta
   title="Design System/TextField"
@@ -21,310 +26,189 @@ import { FIGMA_URL } from '../../utils/common';
   }}
 />
 
-# TextField
+<SectionHeader title={'TextField'} />
 
-A universal TextField component that can be used as the <input/> in any form.
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
 
-## Usage
+## Overview
 
-```js
-import { TextField } from '@orfium/ictinus';
-
-<TextField label={'label'} />;
-```
+A universal TextField component which provides a wide range of features such as statuses, inline suffixes
+such as icons and components, and a multi-input functionality with the help of the Chip component.
 
 ## Props
 
 <Props of={TextField} />
 
-# Text Field Types
+## Usage
 
-Regular TextField and the 3 available types - filled, outlined, elevated
+<UsageGuidelines
+  guidelines={[
+    'Do not display TextFields in the same row unless they are related (e.g. “First Name” / “Last Name”)',
+    'Explicitly mark optional fields as such',
+    'When possible, try to choose input width that is relevant to the content being entered into the input field',
+    'Avoid truncating field label and input as much as possible',
+  ]}
+/>
+
+<Tip>
+  When the user needs to enter more than one individual values at a given field that are not
+  selected from a predefined list, MultiTextField is more suitable. <br />
+  (scroll down for more details)
+</Tip>
+
+## Variants
+
+### TextField with Label and Placeholder
+
+Regular TextField with label options. Label that will float, with or without Placeholder
 
 <Preview>
-  <Story name="Text Field Types">
+  <Story name="TextField with Label and Placeholder">
     <Stack>
-      <TextField label={'Label'} size={'md'} styleType={'filled'} />
-      <TextField label={'Label'} size={'md'} styleType={'outlined'} />
-      <TextField label={'Label'} size={'md'} styleType={'elevated'} />
+      <TextField label={'Label'} />
+      <TextField label={'Label'} placeholder={'Placeholder'} />
     </Stack>
   </Story>
 </Preview>
 
-# Text Field Sizes
+### Masked TextField
 
-Regular TextField and available sizes
+TextField with mask option. When used, placeholder prop is not available.
+The mask rules are the following:
+
+<UsageGuidelines
+  guidelines={[
+    " '9' => [0-9] (Numeric)",
+    " 'a' => [A-Za-z] (Alphabetical)",
+    " '*' => [A-Za-z0-9] (Alphanumeric)",
+  ]}
+/>
+
+<Tip>
+  In case number 9 is needed as a constant inside the mask, use '\9'. For example Georgian phone
+  number format would be +\9\9\9 999 999999 (example: +999 123 123456){' '}
+</Tip>
 
 <Preview>
-  <Story name="Text Field Sizes">
+  <Story name="Masked TextField (DontTest)">
     <Stack>
-      <TextField label={'Label'} size={'md'} styleType={'outlined'} />
-      <TextField label={'Label'} size={'sm'} styleType={'outlined'} />
-    </Stack>
-  </Story>
-</Preview>
-
-# Text Field with and without Label
-
-Regular TextField with label options. Label that will float, placeholder and no placeholder
-
-<Preview>
-  <Story name="Text Field with and without Label">
-    <Stack>
-      <TextField label={'Label'} size={'md'} styleType={'outlined'} />
-      <TextField placeholder={'Placeholder'} size={'md'} styleType={'outlined'} />
-      <TextField size={'md'} styleType={'outlined'} />
-    </Stack>
-  </Story>
-</Preview>
-
-# Text Field Icons
-
-TextField with icon options right and left of the text
-
-<Preview>
-  <Story name="Text Field with Icons">
-    <Stack>
-      <TextField
-        size={select('size', ['md', 'sm'], 'md')}
-        label={'Label'}
-        leftIcon={
-          <img
-            style={{ background: 'red' }}
-            src="https://brandmark.io/logo-rank/random/pepsi.png"
-            width="16"
-            height="16"
-          />
-        }
-        styleType={select('style', ['filled', 'outlined', 'elevated'], 'outlined')}
-      />
-      <TextField
-        size={select('size', ['md', 'sm'], 'md')}
-        label={'Label'}
-        rightIcon={
-          <img
-            style={{ background: 'red' }}
-            src="https://brandmark.io/logo-rank/random/pepsi.png"
-            width="16"
-            height="16"
-          />
-        }
-        styleType={select('style', ['filled', 'outlined', 'elevated'], 'outlined')}
-      />
-      <TextField
-        size={select('size', ['md', 'sm'], 'md')}
-        label={'Label'}
-        leftIcon={
-          <img
-            style={{ background: 'red' }}
-            src="https://brandmark.io/logo-rank/random/pepsi.png"
-            width="16"
-            height="16"
-          />
-        }
-        rightIcon={
-          <img
-            style={{ background: 'red' }}
-            src="https://brandmark.io/logo-rank/random/pepsi.png"
-            width="16"
-            height="16"
-          />
-        }
-        styleType={select('style', ['filled', 'outlined', 'elevated'], 'outlined')}
-      />
-      <TextField
-        size={select('size', ['md', 'sm'], 'md')}
-        label={'Label'}
-        rightIcon={<Loader type={'dots'} />}
-        styleType={select('style', ['filled', 'outlined', 'elevated'], 'outlined')}
-      />
-    </Stack>
-  </Story>
-</Preview>
-
-# TextField with prefix/suffix
-
-Regular TextField with a prefix or a suffix
-
-<Preview>
-  <Story name="TextField with prefix/suffix">
-    <Stack>
-      <div style={{ width: '80px' }}>
-        <TextField
-          size={select('size', ['md', 'sm'], 'md')}
-          hasMinWidthCompat={false}
-          leftIcon={<div style={{ color: '#757BB2' }}>$</div>}
-          styleType={select('style', ['filled', 'outlined', 'elevated'], 'outlined')}
-        />
-      </div>
-      <div style={{ width: '80px' }}>
-        <TextField
-          size={select('size', ['md', 'sm'], 'md')}
-          hasMinWidthCompat={false}
-          rightIcon={<div style={{ color: '#757BB2' }}>%</div>}
-          styleType={select('style', ['filled', 'outlined', 'elevated'], 'outlined')}
-        />
-      </div>
-      <div style={{ width: '120px' }}>
-        <TextField
-          size={select('size', ['md', 'sm'], 'md')}
-          hasMinWidthCompat={false}
-          leftIcon={<div style={{ color: '#757BB2' }}>$</div>}
-          rightIcon={<div style={{ color: '#757BB2' }}>%</div>}
-          styleType={select('style', ['filled', 'outlined', 'elevated'], 'outlined')}
-        />
-      </div>
-    </Stack>
-  </Story>
-</Preview>
-
-# TextField disabled with label
-
-Regular TextField disabled with label
-
-<Preview>
-  <Story name="TextField disabled with label">
-    <Stack>
-      <TextField isDisabled label={'Label'} size={'md'} styleType={'filled'} />
-      <TextField isDisabled label={'Label'} size={'md'} styleType={'outlined'} />
-      <TextField isDisabled label={'Label'} size={'md'} styleType={'elevated'} />
-    </Stack>
-  </Story>
-</Preview>
-
-# TextField locked with label
-
-Regular TextField locked with label. Locked state defined a locked text field but not disabled (style-wise)
-
-<Preview>
-  <Story name="TextField locked with label">
-    <Stack>
-      <Stack>
-        <TextField isLocked label={'Label'} size={'md'} styleType={'filled'} />
-        <TextField isLocked label={'Label'} size={'md'} styleType={'outlined'} />
-        <TextField isLocked label={'Label'} size={'md'} styleType={'elevated'} />
-      </Stack>
-      <Stack>
-        <TextField isLocked label={'Label'} size={'sm'} styleType={'filled'} />
-        <TextField isLocked label={'Label'} size={'sm'} styleType={'outlined'} />
-        <TextField isLocked label={'Label'} size={'sm'} styleType={'elevated'} />
-      </Stack>
-    </Stack>
-  </Story>
-</Preview>
-
-# TextField with Label and Statuses
-
-Regular TextField with Label and Statuses. Error and Hint are shown below for all 3 types filled, outlined, elevated
-
-<Preview>
-  <Story name="TextField with label and statuses" parameters={{ decorators: [withKnobs] }}>
-    <Stack isVertical>
-      <Stack>
-        <TextField
-          hintMsg={text('custom error message', 'Error in Text Field')}
-          label={'Label'}
-          status={'error'}
-          styleType={'outlined'}
-        />
-        <div style={{ width: '200px' }}>
-          <TextField
-            hintMsg={
-              'Big Error Message for fixed width TextField to see icon alignment: Error Error Error Error Error Error Error Error Error Error Error'
-            }
-            label={'Label'}
-            status={'error'}
-            styleType={'outlined'}
-          />
-        </div>
-      </Stack>
-      <Stack>
-        <TextField
-          hintMsg={text('custom error message', 'Error in Text Field')}
-          label={'Label'}
-          status={'hint'}
-          styleType={'outlined'}
-        />
-        <div style={{ width: '200px' }}>
-          <TextField
-            hintMsg={
-              'Big Hint Message for fixed width TextField to see icon alignment: Hint Hint Hint Hint Hint Hint Hint Hint Hint Hint'
-            }
-            label={'Label'}
-            status={'hint'}
-            styleType={'outlined'}
-          />
-        </div>
-      </Stack>
-    </Stack>
-  </Story>
-</Preview>
-
-# Multi TextField
-
-<Preview>
-  <Story name="Multi TextField">
-    <div>
-      <TextField
-        multi
-        multiValues={['Orange', 'Citrus']}
-        label={text('Label', 'Label')}
-        locked={boolean('Locked', false)}
-        disabled={boolean('Disabled', false)}
-        hintMsg={text('Custom message', 'Press Enter to create multiple values')}
-        status={select('Status', ['hint', 'error', 'normal'], 'hint')}
-        maxMultiValues={text('maxMultiValues', 10)}
-        sx={{
-          textField: { width: '100%' },
+      <TextFieldShowCase
+        label="Masked TextField"
+        mask={text('Mask', '+(999) 999')}
+        isDisabled={boolean('isDisabled', false)}
+        hasSuffix={boolean('hasSuffixIcon', false)}
+        suffix={select('Suffix icon name', ['', ...Object.keys(iconSelector)], 'info')}
+        status={{
+          type: select('Status', ['error', 'normal', 'read-only'], 'normal'),
+          hintMessage: text('Hint/Error message', 'Message in Text Field'),
         }}
       />
-    </div>
-    <TextFieldShowcase />
+    </Stack>
   </Story>
 </Preview>
 
-# Text Field with KNOBS
+### TextField with Icons
 
-Regular Text Field with KNOBS
+TextField with icon options right of the text, either as external image or one of the available ictinus Icons.
 
 <Preview>
-  <Story name="Text Field with KNOBS" parameters={{ decorators: [withKnobs] }}>
+  <Story name="TextField with Icons">
     <Stack>
       <TextField
-        label={text('Label', 'Label')}
-        size={select('Size', ['md', 'sm'], 'md')}
-        isLean={boolean('Lean version', false)}
-        isLocked={boolean('isLocked', false)}
-        isDisabled={boolean('isDisabled', false)}
-        leftIcon={select('LeftIcon', ['', ...Object.keys(iconSelector)], 'calendarEmpty')}
-        rightIcon={select('RightIcon', ['', ...Object.keys(iconSelector)], 'info')}
-        styleType={select('Style', ['filled', 'outlined', 'elevated'], 'outlined')}
-        hintMsg={text('custom error message', 'Error in Text Field')}
-        status={select('status', ['hint', 'error', 'normal'], 'normal')}
+        label={'Label'}
+        suffix={
+          <img
+            style={{ background: 'red' }}
+            src="https://brandmark.io/logo-rank/random/pepsi.png"
+            width="16"
+            height="16"
+          />
+        }
+      />
+      <TextField label={'Label'} suffix={'keyword'} />
+    </Stack>
+  </Story>
+</Preview>
+
+### Disabled TextField
+
+Disabled TextField.
+
+<Preview>
+  <Story name="Disabled TextField">
+    <Stack>
+      <TextField
+        isDisabled
+        label={'Label'}
+        status={{
+          type: 'normal',
+          hintMessage: 'This field is disabled',
+        }}
+      />
+    </Stack>
+  </Story>
+</Preview>
+
+### TextField with different Statuses
+
+TextField with different Statuses.
+
+<Preview>
+  <Story name="TextField with different Statuses" parameters={{ decorators: [withKnobs] }}>
+    <Stack>
+      <TextField
+        label={'Normal'}
+        status={{
+          type: 'normal',
+          hintMessage: text('Normal Message', 'Normal Message'),
+        }}
       />
       <TextField
+        label={'Error'}
+        status={{
+          type: 'error',
+          hintMessage: text('Error Message', 'Error Message'),
+        }}
+      />
+      <TextField
+        label={'Read-only'}
+        status={{
+          type: 'read-only',
+          hintMessage: text('Normal Message', 'Normal Message'),
+        }}
+      />
+    </Stack>
+  </Story>
+</Preview>
+
+### MultiTextField
+
+MultiTextField enables a user to enter one or individual entries as free text.
+
+<Preview>
+  <Story name="MultiTextField">
+    <MultiTextFieldShowcase />
+  </Story>
+</Preview>
+
+### Playground
+
+<Preview>
+  <Story name="Playground" parameters={{ decorators: [withKnobs] }}>
+    <Stack>
+      <TextFieldShowCase
         label={text('Label', 'Label')}
-        size={select('Size', ['md', 'sm'], 'md')}
-        isLean={boolean('Lean version', false)}
-        isLocked={boolean('isLocked', false)}
+        placeholder={text('Placeholder', 'Placeholder')}
         isDisabled={boolean('isDisabled', false)}
-        leftIcon={
-          <Icon
-            name={select('LeftIcon', ['', ...Object.keys(iconSelector)], 'calendarEmpty')}
-            size={24}
-            color={'#f5781b'}
-          />
-        }
-        rightIcon={
-          <Icon
-            name={select('RightIcon', ['', ...Object.keys(iconSelector)], 'info')}
-            size={24}
-            color={'#f5781b'}
-          />
-        }
-        styleType={select('Style', ['filled', 'outlined', 'elevated'], 'outlined')}
-        hintMsg={text('custom error message', 'Error in Text Field')}
-        status={select('status', ['hint', 'error', 'normal'], 'normal')}
+        hasSuffix={boolean('hasSuffixIcon', false)}
+        suffix={select('Suffix icon name', ['', ...Object.keys(iconSelector)], 'info')}
+        status={{
+          type: select('Status', ['error', 'normal', 'read-only'], 'normal'),
+          hintMessage: text('Hint/Error message', 'Message in Text Field'),
+        }}
       />
     </Stack>
   </Story>

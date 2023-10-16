@@ -14,3 +14,16 @@ export const iconWrapperStyle =
       margin-left: ${iconPosition === 'right' ? theme.globals.spacing.get('4') : 'inherit'};
       margin-right: ${iconPosition === 'left' ? theme.globals.spacing.get('4') : 0};
     `;
+
+export const suffixContainerStyle =
+  (isClickable = false) =>
+  (): SerializedStyles => {
+    return css`
+      min-width: ${rem(44)};
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: ${isClickable ? 'pointer' : 'unset'};
+    `;
+  };

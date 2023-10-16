@@ -29,36 +29,38 @@ export const dotsWrapper = css`
   height: ${rem(6)};
 `;
 
-export const dotsContainer = (color?: string) => (theme: Theme): SerializedStyles => css`
-  position: absolute;
-  left: ${rem(10)};
-  ${getDotsLayout(0.5, 'dotFlashing 0.7s infinite linear alternate', theme, 0, color)};
+export const dotsContainer =
+  (color?: string) =>
+  (theme: Theme): SerializedStyles =>
+    css`
+      position: absolute;
+      ${getDotsLayout(0.5, 'dotFlashing 0.7s infinite linear alternate', theme, 10, color)};
 
-  &::after,
-  &::before {
-    content: '';
-    display: inline-block;
-    position: absolute;
-    top: 0;
-  }
+      &::after,
+      &::before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 0;
+      }
 
-  &::before {
-    ${getDotsLayout(0, 'dotFlashing 0.7s infinite alternate', theme, -10, color)};
-  }
+      &::before {
+        ${getDotsLayout(0, 'dotFlashing 0.7s infinite alternate', theme, -10, color)};
+      }
 
-  &::after {
-    ${getDotsLayout(0.7, 'dotFlashing 0.7s infinite alternate', theme, 10, color)};
-  }
+      &::after {
+        ${getDotsLayout(0.7, 'dotFlashing 0.7s infinite alternate', theme, 10, color)};
+      }
 
-  @keyframes dotFlashing {
-    0% {
-      background-color: ${getColorForDots(theme, 0, color)};
-    }
-    50% {
-      background-color: ${getColorForDots(theme, 0.05, color)};
-    }
-    100% {
-      background-color: ${getColorForDots(theme, 0.1, color)};
-    }
-  }
-`;
+      @keyframes dotFlashing {
+        0% {
+          background-color: ${getColorForDots(theme, 0, color)};
+        }
+        50% {
+          background-color: ${getColorForDots(theme, 0.05, color)};
+        }
+        100% {
+          background-color: ${getColorForDots(theme, 0.1, color)};
+        }
+      }
+    `;

@@ -1,11 +1,10 @@
 import React, { ForwardedRef, Fragment } from 'react';
-import { errorHandler, generateTestDataId } from 'utils/helpers';
+import { errorHandler, generateTestDataId, generateUniqueID } from 'utils/helpers';
 
 import { avatarStyle, chipStyle, closeIconWrapperStyle } from './Chip.style';
 import { ChipProps } from './Chip.types';
 import Badge from './components/Badge';
 import { defaultProps, errors } from './utils';
-import { BASE_SHADE } from '../../theme/palette';
 import Avatar from 'components/Avatar';
 import Icon from 'components/Icon';
 
@@ -19,8 +18,17 @@ const Chip = React.forwardRef<HTMLButtonElement | HTMLDivElement, ChipProps>(
     },
     ref
   ) => {
-    const { onClick, isChecked, thumbnail, fill, isSelected, onClear, children, badgeNumber } =
-      rest;
+    const {
+      onClick,
+      isChecked,
+      thumbnail,
+      fill,
+      isSelected,
+      onClear,
+      children,
+      badgeNumber,
+      id = generateUniqueID('chip_'),
+    } = rest;
 
     errorHandler<ChipProps>(errors, { styleType, isSelected, isChecked, badgeNumber, isDisabled });
 
@@ -34,7 +42,7 @@ const Chip = React.forwardRef<HTMLButtonElement | HTMLDivElement, ChipProps>(
             </Avatar>
           </div>
         )}
-        <div>{children}</div>
+        <div aria-label={id}>{children}</div>
         {badgeNumber && (
           <Badge
             fill={fill}
@@ -44,7 +52,7 @@ const Chip = React.forwardRef<HTMLButtonElement | HTMLDivElement, ChipProps>(
           />
         )}
         {onClear && (
-          <div css={closeIconWrapperStyle(isDisabled)}>
+          <div aria-hidden={!onClear} css={closeIconWrapperStyle(isDisabled)}>
             <Icon
               size={14}
               name={'close'}

@@ -48,7 +48,7 @@ describe('DropdownButton:', () => {
 
     userEvent.click(iconButton);
 
-    const option = screen.getByTestId('dropdown-button-options');
+    const option = screen.getByTestId('ictinus_list_item_Item_1');
 
     userEvent.click(option);
 
