@@ -3242,25 +3242,29 @@ exports[`Storyshots Design System/Table Regular Table with sorting and tooltips 
 }
 
 .emotion-9 {
-  background: transparent;
+  background-color: #1B214F;
+  border: 0.0625rem solid rgba(84,94,255,0);
+  box-shadow: 0rem 0.25rem 0.5rem 0rem #10306612;
 }
 
 .emotion-9 .tippy-content {
-  color: white;
-  background-color: #0f0f17;
+  background-color: #1B214F;
   max-width: 16rem;
   padding: 0.5rem;
-  font-size: 0.875rem;
+  border-radius: 0.25rem;
+  color: #ffffff;
+  font-family: Roboto;
   font-weight: 400;
-  line-height: 110%;
-  border-radius: 0.5rem;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
   text-align: start;
   white-space: pre-wrap;
   word-break: break-word;
 }
 
-.emotion-9 .tippy-arrow {
-  color: #0f0f17;
+.emotion-9 .tippy-arrow::before {
+  color: #1B214F;
 }
 
 .emotion-10 {
@@ -3425,9 +3429,15 @@ exports[`Storyshots Design System/Table Regular Table with sorting and tooltips 
                   className="emotion-8"
                 >
                   <div
+                    arrow={true}
                     className="emotion-9"
+                    delay={
+                      Array [
+                        500,
+                        500,
+                      ]
+                    }
                     interactive={false}
-                    interactiveDebounce={100}
                     placement="bottom"
                   >
                     <span
@@ -3492,10 +3502,16 @@ exports[`Storyshots Design System/Table Regular Table with sorting and tooltips 
                   className="emotion-8"
                 >
                   <div
+                    arrow={true}
                     className="emotion-9"
+                    delay={
+                      Array [
+                        500,
+                        500,
+                      ]
+                    }
                     interactive={false}
-                    interactiveDebounce={100}
-                    placement="top"
+                    placement="right"
                   >
                     <span
                       className="emotion-10"
@@ -3548,9 +3564,15 @@ exports[`Storyshots Design System/Table Regular Table with sorting and tooltips 
                   className="emotion-8"
                 >
                   <div
+                    arrow={true}
                     className="emotion-9"
+                    delay={
+                      Array [
+                        500,
+                        500,
+                      ]
+                    }
                     interactive={false}
-                    interactiveDebounce={100}
                     placement="right"
                   >
                     <span
@@ -23682,25 +23704,29 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
 }
 
 .emotion-21 {
-  background: transparent;
+  background-color: #1B214F;
+  border: 0.0625rem solid rgba(84,94,255,0);
+  box-shadow: 0rem 0.25rem 0.5rem 0rem #10306612;
 }
 
 .emotion-21 .tippy-content {
-  color: white;
-  background-color: #0f0f17;
+  background-color: #1B214F;
   max-width: 16rem;
   padding: 0.5rem;
-  font-size: 0.875rem;
+  border-radius: 0.25rem;
+  color: #ffffff;
+  font-family: Roboto;
   font-weight: 400;
-  line-height: 110%;
-  border-radius: 0.5rem;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
   text-align: start;
   white-space: pre-wrap;
   word-break: break-word;
 }
 
-.emotion-21 .tippy-arrow {
-  color: #0f0f17;
+.emotion-21 .tippy-arrow::before {
+  color: #1B214F;
 }
 
 .emotion-23 {
@@ -24050,9 +24076,15 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                   className="emotion-20"
                 >
                   <div
+                    arrow={true}
                     className="emotion-21"
+                    delay={
+                      Array [
+                        500,
+                        500,
+                      ]
+                    }
                     interactive={false}
-                    interactiveDebounce={100}
                     placement="bottom"
                   >
                     <span
@@ -24117,10 +24149,16 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                   className="emotion-20"
                 >
                   <div
+                    arrow={true}
                     className="emotion-21"
+                    delay={
+                      Array [
+                        500,
+                        500,
+                      ]
+                    }
                     interactive={false}
-                    interactiveDebounce={100}
-                    placement="top"
+                    placement="right"
                   >
                     <span
                       className="emotion-9"
@@ -24173,9 +24211,15 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                   className="emotion-20"
                 >
                   <div
+                    arrow={true}
                     className="emotion-21"
+                    delay={
+                      Array [
+                        500,
+                        500,
+                      ]
+                    }
                     interactive={false}
-                    interactiveDebounce={100}
                     placement="right"
                   >
                     <span

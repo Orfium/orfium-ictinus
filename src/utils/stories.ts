@@ -1,12 +1,13 @@
 import { select } from '@storybook/addon-knobs';
 
+import { AcceptedIconNames } from 'components/Icon';
 import iconSelector from 'components/Icon/assets/iconSelector';
 
-export const getIconSelectorKnob = (propName: string) =>
+export const getIconSelectorKnob = (propName: string, initialValue?: AcceptedIconNames) =>
   select(
     propName,
     Object.keys(iconSelector)
       .sort((a, b) => a.localeCompare(b))
       .map((iconName) => iconName),
-    'check'
+    initialValue ?? 'check'
   );

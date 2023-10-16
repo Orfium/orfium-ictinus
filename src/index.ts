@@ -47,6 +47,8 @@ export { default as ExpandCollapse } from './components/ExpandCollapse';
 export * from './components/ExpandCollapse';
 export { default as Icon } from './components/Icon';
 export * from './components/Icon';
+export { default as Link } from './components/Link';
+export * from './components/Link';
 export { default as IconButton } from './components/IconButton';
 export * from './components/IconButton';
 export { default as Label } from './components/Label';
