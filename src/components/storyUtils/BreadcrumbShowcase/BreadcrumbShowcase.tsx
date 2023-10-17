@@ -3,10 +3,11 @@ import { uniqueId } from 'lodash';
 import React, { useState, useEffect } from 'react';
 import { Router, Switch, Route } from 'react-router-dom';
 
-import { BreadcrumbItemData } from '../../Breadcrumb/types';
+import { BreadcrumbItem } from '../../Breadcrumb/Breadcrumb.types';
 import Breadcrumb from 'components/Breadcrumb';
+import Button from 'components/Button';
 interface Props {
-  initData: BreadcrumbItemData[];
+  initData: BreadcrumbItem[];
 }
 
 const createNewDataConfig = (routeId: number) => ({
@@ -17,10 +18,10 @@ const createNewDataConfig = (routeId: number) => ({
 const browserHistory = createBrowserHistory();
 
 const BreadcrumbShowcase: React.FC<Props> = ({ initData = [] }) => {
-  const [data, setData] = useState<BreadcrumbItemData[]>(initData);
+  const [data, setData] = useState<BreadcrumbItem[]>(initData);
 
   const clickHandler = () => {
-    const newDataConfig: BreadcrumbItemData = createNewDataConfig(data.length + 1);
+    const newDataConfig: BreadcrumbItem = createNewDataConfig(data.length + 1);
 
     setData((prevState) => [...prevState, newDataConfig]);
   };
@@ -44,12 +45,10 @@ const BreadcrumbShowcase: React.FC<Props> = ({ initData = [] }) => {
   });
 
   return (
-    <div>
-      <button type="button" onClick={clickHandler} style={{ marginBottom: '16px' }}>
-        Add data to Breadcrumb
-      </button>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
+      <Button onClick={clickHandler}>Add data to Breadcrumb</Button>
       <Router history={browserHistory}>
-        <Breadcrumb data={data} />
+        <Breadcrumb items={data} />
         <Switch>{routes}</Switch>
       </Router>
     </div>

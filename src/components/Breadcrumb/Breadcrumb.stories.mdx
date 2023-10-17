@@ -4,6 +4,7 @@ import BreadcrumbShowcase from '../storyUtils/BreadcrumbShowcase/BreadcrumbShowc
 import Stack from '../storyUtils/Stack';
 import Breadcrumb from './Breadcrumb';
 import { FIGMA_URL } from '../../utils/common';
+import SectionHeader from '../../storybook/SectionHeader';
 
 <Meta
   title="Design System/Breadcrumb"
@@ -19,61 +20,40 @@ import { FIGMA_URL } from '../../utils/common';
   }}
 />
 
-# Breadcrumb
+<SectionHeader title={'Breadcrumb'} />
 
-A Breadcrumb component that can be configured either by adding children components (Usage 1) or bypassing the data property (Usage 2).
-It contains a collapsed view. In case components overcome the maximum value of Breadcrumb items which is hardcoded to 4.
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
 
-## 1
+## Overview
 
-```js
-import { Breadcrumb } from '@orfium/ictinus';
-
-<Breadcrumb>
-  <div>content 1</div>
-  <div>content 2</div>
-  <div>content 3</div>
-</Breadcrumb>;
-```
-
-## 2
-
-```js
-import { Breadcrumb } from '@orfium/ictinus';
-
-<Breadcrumb data={[{ to: '/path', label: 'label' }]} />;
-```
+Breadcrumbs consist of a list of links that help a user visualize a page's location within the hierarchical structure of a website and allow navigation up to any of its levels.
 
 ## Props
 
 <Props of={Breadcrumb} />
 
-# Simple Breadcrumbs (up to 3 levels)
+## Usage
 
-A simple Breadcrumbs example
+<UsageGuidelines
+  guidelines={[
+    'Include a breadcrumb in pages to show the hierarchy of parent and child pages and allow the user to navigate to a previous level.',
+    'Breadcrumbs can only show relationships between a parent page and a child page. If your page needs to link to a sibling, not a parent or child in relation to it, use tabs or navigation instead.',
+  ]}
+/>
 
-<Preview>
-  <Story name="Simple Breadcrumbs">
-    <Stack>
-      <Breadcrumb>
-        <div>Level 1</div>
-        <div>Level 2</div>
-        <div>Level 3</div>
-      </Breadcrumb>
-    </Stack>
-  </Story>
-</Preview>
+## Variants
 
-# Active Breadcrumbs
-
-Active Breadcrumbs
+### Basic Breadcrumbs
 
 <Preview>
-  <Story name="Active Breadcrumbs">
+  <Story name="Basic Breadcrumbs">
     <Stack>
       <Router>
         <Breadcrumb
-          data={[
+          items={[
             { to: '/first-level', label: 'Level 1' },
             { to: '/second-level', label: 'Level 2' },
             { to: '/third-level', label: 'Level 3' },
@@ -103,56 +83,27 @@ Active Breadcrumbs
   </Story>
 </Preview>
 
-# Active Breadcrumbs with inactive last breadcrumb
+### Go Back To
 
-Active Breadcrumbs with inactive last breadcrumb
+Instead of providing list of levels (`items`), `backTo` prop offers the capability of using Breadcrumb as a Go Back To Link.
 
 <Preview>
-  <Story name="Active Breadcrumbs with inactive last breadcrumb">
+  <Story name="Go Back To">
     <Stack>
-      <Router>
-        <Breadcrumb
-          data={[
-            { to: '/first-level', label: 'Level 1' },
-            { to: '/second-level', label: 'Level 2' },
-            { to: '/third-level', label: 'Level 3' },
-            { to: '/forth-level', label: 'Level 4' },
-            { to: '', label: 'Level 5' },
-          ]}
-        />
-        <Switch>
-          <Route path="/first-level">
-            {() => <div style={{ marginTop: '8px' }}>Current: Level 1</div>}
-          </Route>
-          <Route path="/second-level">
-            {() => <div style={{ marginTop: '8px' }}>Current: Level 2</div>}
-          </Route>
-          <Route path="/third-level">
-            {() => <div style={{ marginTop: '8px' }}>Current: Level 3</div>}
-          </Route>
-          <Route path="/forth-level">
-            {() => <div style={{ marginTop: '8px' }}>Current: Level 4</div>}
-          </Route>
-        </Switch>
-      </Router>
+      <Breadcrumb backTo={{ to: '/first-level', label: 'Level 1' }} />
     </Stack>
   </Story>
 </Preview>
 
-# Breadcrumb showcase
-
-A Breadcrumb showcase
+### Playground
 
 <Preview>
-  <Story name="Breadcrumb showcase">
+  <Story name="Playground">
     <Stack>
       <BreadcrumbShowcase
         initData={[
           { to: '/first-level', label: 'Level 1' },
           { to: '/second-level', label: 'Level 2' },
-          { to: '/third-level', label: 'Level 3' },
-          { to: '/forth-level', label: 'Level 4' },
-          { to: '/fifth-level', label: 'Level 5' },
         ]}
       />
     </Stack>
