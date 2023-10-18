@@ -2,9 +2,9 @@ import * as React from 'react';
 
 import { Theme } from '../../theme';
 import { ColorShapeFromComponent } from '../../utils/themeFunctions';
-import { SelectOptionValues } from '../Select/Select';
+import { SelectOption } from '../Select';
 
-export type FilterOption = SelectOptionValues;
+export type FilterOption = SelectOption;
 
 export type StyleType = 'filled' | 'transparent';
 

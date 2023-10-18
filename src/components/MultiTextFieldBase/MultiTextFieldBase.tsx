@@ -1,8 +1,8 @@
 import useTheme from 'hooks/useTheme';
-import { merge } from 'lodash';
+import { last, merge } from 'lodash';
 import omit from 'lodash/omit';
-import React, { useMemo } from 'react';
-import { generateUniqueID } from 'utils/helpers';
+import React, { useMemo, useRef } from 'react';
+import { generateUniqueID, generateUniqueKey } from 'utils/helpers';
 import { TestProps } from 'utils/types';
 
 import useMultiTextFieldBaseUtils from './hooks';
@@ -18,14 +18,14 @@ import {
 import Chip from 'components/Chip';
 import Label from 'components/Label';
 import Loader from 'components/Loader';
-import { SelectOption } from 'components/Select/Select';
+import { SelectOption } from 'components/Select';
 import { InputProps, TextFieldProps } from 'components/TextField/TextField';
 import TextInputBase from 'components/TextInputBase';
 import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
 
 export type Props = {
   /** the values of the MultiTextField if MultiTextField is controlled */
-  selectedOptions?: SelectOption[] | string[];
+  selectedOptions: SelectOption[] | string[];
   /** Callback fired when the `input` value typed is changed */
   onInput?: React.EventHandler<any>;
   /** Value of the `input` element */
@@ -49,16 +49,12 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
       selectedOptions,
       value,
       isDisabled,
-      isLocked,
-      status,
-      isLean,
-      isDark,
+      status = { type: 'normal' },
       isReadOnly,
       label,
-      id,
+      id: userDefinedId,
       placeholder,
       isRequired = false,
-      styleType,
       onOptionDelete,
       onClearAllOptions,
       isLoading,
@@ -69,9 +65,14 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
       sx,
       ...rest
     } = props;
+    const id = useRef(userDefinedId || generateUniqueID('multiTextfield_')).current;
 
     const theme = useTheme();
     const hasValue = Boolean(value || (selectedOptions?.length && selectedOptions?.length > 0));
+
+    const isLocked = status?.type === 'read-only';
+
+    const hintMessageId = status?.hintMessage ? status?.id ?? `${id}_hintMessage` : undefined;
 
     const { inputPlaceholder, handleKeyDown, icon, hasLabel, TextfieldRef } =
       useMultiTextFieldBaseUtils({
@@ -79,8 +80,8 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
         label,
         placeholder,
         isRequired,
-        isLocked,
         hasValue,
+        isLocked,
         value,
         onOptionDelete,
         onClearAllOptions,
@@ -91,9 +92,16 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
       () => (
         <>
           {selectedOptions?.map((option: any, index: number) => (
-            <span key={generateUniqueID('chip' + index)} css={chipStyle()}>
+            <span
+              key={generateUniqueKey('chip' + (typeof option === 'string' ? option : option.label))}
+              css={chipStyle()}
+            >
               <Chip
-                onClear={!(isLocked || isDisabled) ? () => onOptionDelete(option) : undefined}
+                onClear={
+                  !(status?.type === 'read-only' || isDisabled)
+                    ? () => onOptionDelete(option)
+                    : undefined
+                }
                 fill="lightGrey"
                 dataTestId={`chip_${index}`}
               >
@@ -110,18 +118,14 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
           ))}
         </>
       ),
-      [isDisabled, isLocked, onOptionDelete, selectedOptions]
+      [isDisabled, onOptionDelete, selectedOptions, status?.type]
     );
 
     return (
       <div ref={TextfieldRef}>
         <TextInputBase
           isDisabled={isInteractive && isDisabled}
-          isLocked={isInteractive && isLocked}
-          status={isInteractive ? status : 'normal'}
-          isLean={isLean}
-          size={'md'}
-          styleType={styleType}
+          status={isInteractive ? { ...status, id: hintMessageId } : { type: 'normal' }}
           {...rest}
           isInteractive={isInteractive}
           sx={merge(
@@ -134,20 +138,22 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
           <div css={inputContainer()}>
             {chips}
             <input
-              readOnly={isReadOnly}
-              onKeyDown={handleKeyDown}
+              readOnly={isLocked || isReadOnly}
+              onKeyDown={handleKeyDown(last<SelectOption | string>(selectedOptions))}
               css={inputStyle({
-                size: 'md',
                 placeholder,
                 label,
-                isDark,
-                isLean,
                 sx: inputOverrides(),
+                isLocked,
+                isDisabled,
               })}
               placeholder={inputPlaceholder}
               required={isRequired}
               id={id}
               disabled={isDisabled || isLocked}
+              data-testid={rest.dataTestId ? `input_${rest.dataTestId}` : 'input'}
+              aria-invalid={status?.type === 'error'}
+              aria-describedby={hintMessageId}
               {...omit(rest, 'dataTestId')}
               value={value}
               ref={ref}
@@ -159,7 +165,7 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
                 label={label}
                 isRequired={isRequired}
                 isAnimated={hasValue}
-                hasError={status === 'error'}
+                hasError={status?.type === 'error'}
               />
             )}
           </div>

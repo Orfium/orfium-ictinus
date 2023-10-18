@@ -12,13 +12,15 @@ export const MAX_SMALL_HEIGHT = 265;
 export const optionStyle =
   ({
     isSelected,
-    size,
     hasNoResultsExist,
-  }: { isSelected: boolean; hasNoResultsExist?: boolean } & Omit<TextFieldProps, 'ref'>) =>
+  }: { isSelected: boolean; hasNoResultsExist?: boolean } & Omit<
+    TextFieldProps,
+    'ref' | 'label'
+  >) =>
   (theme: Theme): SerializedStyles => {
     return css`
       padding: ${theme.globals.spacing.get('6')};
-      font-size: ${theme.globals.typography.fontSize.get(size === 'md' ? '4' : '3')};
+      font-size: ${theme.globals.typography.fontSize.get('4')};
       background-color: ${isSelected
         ? darken(0.07, theme.globals.oldColors.white)
         : theme.globals.oldColors.white};
@@ -36,18 +38,19 @@ export const optionStyle =
   };
 
 export const menuStyle =
-  ({ status, size, isVirtualized }: SelectMenuProps & Omit<TextFieldProps, 'ref'>) =>
+  ({ status, isVirtualized, sx }: SelectMenuProps & Omit<TextFieldProps, 'ref' | 'label' | 'sx'>) =>
   (theme: Theme): SerializedStyles =>
     css`
       background-color: ${theme.globals.oldColors.white};
       border-radius: 4px;
       box-shadow: ${theme.globals.elevation['02']};
-      top: ${status !== 'normal' ? '70%' : '110%'};
+      top: ${status?.type !== 'normal' ? '70%' : '110%'};
       z-index: 500;
       position: absolute;
-      max-height: ${rem(size === 'md' ? MAX_LARGE_HEIGHT : MAX_SMALL_HEIGHT)};
+      max-height: ${rem(MAX_LARGE_HEIGHT)};
       overflow-y: ${isVirtualized ? 'hidden' : 'auto'};
       // TODO we need a technique to identify menu position left or right
       min-width: 100%;
       max-width: ${rem(620)};
+      ${sx};
     `;

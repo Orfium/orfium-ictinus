@@ -1,0 +1,584 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Design System/List/ListItemText ListItemText normal 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  border: 0.0625rem solid #E7E8FF;
+  border-radius: 0.25rem;
+  width: undefinedpx;
+  box-shadow: 0rem 0.25rem 0.5rem 0rem #10306612;
+}
+
+.emotion-4 {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-radius: 0.25rem;
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  overflow-x: hidden;
+  background: #ffffff;
+}
+
+.emotion-5 {
+  background-color: rgba(84,94,255,0);
+  opacity: 1;
+  cursor: initial;
+}
+
+.emotion-5>div {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-5 span[role='presentation'] {
+  padding: 0 0.75rem;
+  min-height: 3.25rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  font-weight: 700;
+}
+
+.emotion-5[role='option'] {
+  padding: 0 0.75rem;
+  min-height: 3.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.75rem;
+}
+
+.emotion-5[role='option']:hover {
+  background-color: rgba(84,94,255,0.06);
+  cursor: pointer;
+}
+
+.emotion-5[data-focus-visible] {
+  background-color: rgba(84,94,255,0.06);
+}
+
+.emotion-5[aria-selected='true'] {
+  background-color: rgba(84,94,255,0.06);
+}
+
+.emotion-5[aria-selected='true']>div {
+  color: #1552DD;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-5[aria-selected='true'][data-focus-visible] {
+  background-color: rgba(84,94,255,0.06);
+}
+
+.emotion-6 {
+  color: #1B214F;
+  font-weight: initial;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-6 strong {
+  font-weight: bold;
+}
+
+.emotion-6 span {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-3"
+        >
+          <div
+            data-testid="ictinus_list"
+          >
+            <div
+              style={
+                Object {
+                  "height": "100%",
+                }
+              }
+            >
+              <ul
+                aria-labelledby="react-aria-generated-id"
+                className="emotion-4"
+                id="react-aria-generated-id"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyDownCapture={[Function]}
+                onMouseDown={[Function]}
+                onScroll={[Function]}
+                role="listbox"
+                style={
+                  Object {
+                    "display": "flex",
+                    "flexDirection": "column",
+                    "height": "100%",
+                    "listStyle": "none",
+                    "overflowY": "auto",
+                    "padding": 0,
+                    "position": "relative",
+                  }
+                }
+                tabIndex={0}
+              >
+                <li
+                  aria-selected={false}
+                  className="emotion-5 "
+                  data-key="$.0"
+                  data-testid="ictinus_list_item_$.0"
+                  id="react-aria-generated-id-option-$.0"
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onDragStart={[Function]}
+                  onDragStartCapture={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchCancel={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="option"
+                  tabIndex={-1}
+                >
+                  <div
+                    className="emotion-6"
+                  >
+                    <span>
+                      Item 1
+                    </span>
+                  </div>
+                </li>
+                <li
+                  aria-selected={false}
+                  className="emotion-5 "
+                  data-key="$.1"
+                  data-testid="ictinus_list_item_$.1"
+                  id="react-aria-generated-id-option-$.1"
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onDragStart={[Function]}
+                  onDragStartCapture={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchCancel={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="option"
+                  tabIndex={-1}
+                >
+                  <div
+                    className="emotion-6"
+                  >
+                    <span>
+                      Item 2
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/List/ListItemText ListItemText with secondary text 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  border: 0.0625rem solid #E7E8FF;
+  border-radius: 0.25rem;
+  width: undefinedpx;
+  box-shadow: 0rem 0.25rem 0.5rem 0rem #10306612;
+}
+
+.emotion-4 {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-radius: 0.25rem;
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  overflow-x: hidden;
+  background: #ffffff;
+}
+
+.emotion-5 {
+  background-color: rgba(84,94,255,0);
+  opacity: 1;
+  cursor: initial;
+}
+
+.emotion-5>div {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-5 span[role='presentation'] {
+  padding: 0 0.75rem;
+  min-height: 3.25rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  font-weight: 700;
+}
+
+.emotion-5[role='option'] {
+  padding: 0 0.75rem;
+  min-height: 3.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.75rem;
+}
+
+.emotion-5[role='option']:hover {
+  background-color: rgba(84,94,255,0.06);
+  cursor: pointer;
+}
+
+.emotion-5[data-focus-visible] {
+  background-color: rgba(84,94,255,0.06);
+}
+
+.emotion-5[aria-selected='true'] {
+  background-color: rgba(84,94,255,0.06);
+}
+
+.emotion-5[aria-selected='true']>div {
+  color: #1552DD;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-5[aria-selected='true'][data-focus-visible] {
+  background-color: rgba(84,94,255,0.06);
+}
+
+.emotion-6 {
+  color: #1B214F;
+  font-weight: initial;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-6 strong {
+  font-weight: bold;
+}
+
+.emotion-6 span {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-7 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  color: #686BB3;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-3"
+        >
+          <div
+            data-testid="ictinus_list"
+          >
+            <div
+              style={
+                Object {
+                  "height": "100%",
+                }
+              }
+            >
+              <ul
+                aria-labelledby="react-aria-generated-id"
+                className="emotion-4"
+                id="react-aria-generated-id"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyDownCapture={[Function]}
+                onMouseDown={[Function]}
+                onScroll={[Function]}
+                role="listbox"
+                style={
+                  Object {
+                    "display": "flex",
+                    "flexDirection": "column",
+                    "height": "100%",
+                    "listStyle": "none",
+                    "overflowY": "auto",
+                    "padding": 0,
+                    "position": "relative",
+                  }
+                }
+                tabIndex={0}
+              >
+                <li
+                  aria-selected={false}
+                  className="emotion-5 "
+                  data-key="$.0"
+                  data-testid="ictinus_list_item_$.0"
+                  id="react-aria-generated-id-option-$.0"
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onDragStart={[Function]}
+                  onDragStartCapture={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchCancel={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="option"
+                  tabIndex={-1}
+                >
+                  <div
+                    className="emotion-6"
+                  >
+                    <span>
+                      Item 1
+                    </span>
+                    <p
+                      className="emotion-7"
+                    >
+                      This is a secondary text on this item
+                    </p>
+                  </div>
+                </li>
+                <li
+                  aria-selected={false}
+                  className="emotion-5 "
+                  data-key="$.1"
+                  data-testid="ictinus_list_item_$.1"
+                  id="react-aria-generated-id-option-$.1"
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onDragStart={[Function]}
+                  onDragStartCapture={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchCancel={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="option"
+                  tabIndex={-1}
+                >
+                  <div
+                    className="emotion-6"
+                  >
+                    <span>
+                      Item 2
+                    </span>
+                    <p
+                      className="emotion-7"
+                    >
+                      This is a secondary text on this item
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

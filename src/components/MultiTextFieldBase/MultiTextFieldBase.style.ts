@@ -1,9 +1,9 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { rem } from 'polished';
 import { Theme } from 'theme';
-import { getTextFieldHeight, getTextFieldSize } from 'utils/size-utils';
 
 import { LABEL_TRANSFORM_LEFT_SPACING } from 'components/Label/Label.style';
+import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
 
 export const chipContent =
   ({ maxWidth }: { maxWidth?: number }) =>
@@ -21,7 +21,7 @@ export const rightIconsContainer =
     css`
       position: absolute !important;
       bottom: 0;
-      right: ${theme.globals.spacing.get('6')};
+      right: ${theme.globals.spacing.get('3')};
       top: 0;
       display: flex;
       align-items: center;
@@ -29,10 +29,25 @@ export const rightIconsContainer =
 
 export const rightIconStyles =
   ({ isClickable }: { isClickable: boolean }) =>
-  (): SerializedStyles =>
-    css`
+  (theme: Theme): SerializedStyles => {
+    return css`
+      /** @TODO: revisit these styles when Interactive Icon is implemented */
+      width: ${rem(36)};
+      height: ${rem(36)};
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
       cursor: ${isClickable ? 'pointer' : 'auto'};
+
+      /** @TODO: revisit these styles when Interactive Icon is implemented */
+      &:focus-visible,
+      &:hover {
+        background: ${theme.tokens.state.get('backgroundColor.hover')};
+        border-radius: ${theme.globals.borderRadius.get('7')};
+      }
     `;
+  };
 
 export const chipStyle =
   () =>
@@ -84,10 +99,13 @@ export const textInputBaseOverrides =
     const paddingTop = hasLabel ? 21 : 13;
     const paddingBottom = hasLabel ? 5 : 13;
 
+    const tokens = getTextInputBaseTokens(theme);
+
     return {
       wrapper: {
         height: 'unset',
-        minHeight: `${getTextFieldHeight('md')} !important`,
+        // TODO - fix this
+        minHeight: `${rem(52)} !important`,
         ...(hasValue
           ? { label: labelStyles }
           : {
@@ -105,12 +123,12 @@ export const textInputBaseOverrides =
         // so we can override the existing TextFieldInputBase paddings to
         // perfectly position and align the content inside.
         padding: isLoading
-          ? `${rem(paddingTop)} ${rem(80)} ${rem(paddingBottom)} ${theme.globals.spacing.get('6')}`
-          : `${rem(paddingTop)} ${rem(40)} ${rem(paddingBottom)} ${theme.globals.spacing.get('6')}`,
+          ? `${rem(paddingTop)} ${rem(80)} ${rem(paddingBottom)} ${tokens('paddingContentLeft')}`
+          : `${rem(paddingTop)} ${rem(40)} ${rem(paddingBottom)} ${tokens('paddingContentLeft')}`,
         ...(isResponsive
-          ? { width: 'max-content', minWidth: getTextFieldSize(true, 'md').minWidth }
+          ? { width: 'max-content', minWidth: rem(tokens('minWidth.large.normal')) }
           : {}),
-        ...(isTextfield ? { width: getTextFieldSize(true, 'md', true).width } : {}),
+        ...(isTextfield ? { minWidth: rem(tokens('minWidth.large.normal')), width: '100%' } : {}),
       },
     };
   };

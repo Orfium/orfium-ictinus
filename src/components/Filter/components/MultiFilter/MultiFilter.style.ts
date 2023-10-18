@@ -2,8 +2,6 @@ import { css } from '@emotion/react';
 import { Theme } from 'theme';
 import { rem } from 'theme/utils';
 
-import { textInputConfig } from 'components/TextInputBase/config';
-
 export const textFieldWrapper = () =>
   css`
     & > div > div {
@@ -13,17 +11,12 @@ export const textFieldWrapper = () =>
   `;
 
 export const optionsWrapper = () => (theme: Theme) => {
-  const borderConfig = textInputConfig.types[theme.colorScheme].outlined.border;
-
   return css`
     & > div {
-      box-shadow: 0 0 0 ${rem(borderConfig.width)}
-        ${theme.utils.getColor(borderConfig.color.default.name, borderConfig.color.default.shade)};
+      box-shadow: 0 0 0 ${rem(1)} ${theme.utils.getColor('lightGrey', 200)};
       border: none;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
     }
   `;
 };
-
-

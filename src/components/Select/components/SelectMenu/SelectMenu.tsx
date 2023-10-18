@@ -1,26 +1,28 @@
-import React, { useEffect, useRef } from 'react';
+import { CSSObject } from '@emotion/react';
+import useCombinedRefs from 'hooks/useCombinedRefs';
+import { flatMap, head } from 'lodash';
+import uniqueId from 'lodash/uniqueId';
+import React, { forwardRef, useCallback, useEffect, useRef } from 'react';
 
 import { menuStyle, optionStyle } from './SelectMenu.style';
-import { SelectOption } from '../../Select';
-import List from 'components/List';
-import { MAX_NON_VIRTUALIZED_ITEMS_SELECT } from 'components/List/utils';
+import { SelectOption } from '../../types';
+import List, { ListItem, ListItemText, ListSection, ListSelection } from 'components/List';
+import { COMPACT_LIST_ITEM_HEIGHT, MAX_NON_VIRTUALIZED_ITEMS_SELECT } from 'components/List/utils';
 import { SELECT_ALL_OPTION } from 'components/Select/constants';
+import { TextInputBaseProps } from 'components/TextInputBase';
 
 export type SelectMenuProps = {
-  /** Sets the size of the menu */
-  size?: 'md' | 'sm';
-  /** The status of the button regarding the status which is in - default normal */
-  status?: 'success' | 'normal' | 'hint' | 'error';
   filteredOptions: SelectOption[];
   handleOptionClick: (option: SelectOption) => void;
-  selectedOption: string | number;
+  selectedOption: SelectOption;
   isLoading?: boolean;
   isVirtualized?: boolean;
   searchTerm?: string;
   hasSelectAllOption?: boolean;
-};
+  sx?: CSSObject;
+} & Pick<TextInputBaseProps, 'status'>;
 
-const SelectMenu: React.FC<SelectMenuProps> = (props) => {
+const SelectMenu = forwardRef<HTMLUListElement, SelectMenuProps>((props, ref) => {
   const {
     filteredOptions,
     handleOptionClick,
@@ -30,9 +32,28 @@ const SelectMenu: React.FC<SelectMenuProps> = (props) => {
     searchTerm,
     hasSelectAllOption = false,
   } = props;
-  const myRef = useRef<HTMLDivElement>(null);
+  const myRef = useRef<HTMLUListElement>(null);
+  const combinedRefs = useCombinedRefs(myRef, ref);
+  const minListHeightWithCompactListItem = 5 * COMPACT_LIST_ITEM_HEIGHT; // 40 is the height of compact list item and we want to show 5 on render
 
-  const executeScroll = () => myRef.current?.scrollIntoView({ block: 'nearest', inline: 'start' });
+  const executeScroll = () =>
+    myRef.current?.scrollIntoView &&
+    myRef.current?.scrollIntoView({ block: 'nearest', inline: 'start' });
+
+  const onSelectionChange = useCallback(
+    (keys: ListSelection) => {
+      const keyFound = String(head(Array.from(keys)));
+      if (keyFound === SELECT_ALL_OPTION.value) {
+        handleOptionClick(SELECT_ALL_OPTION);
+      } else {
+        const optionFound = flatMap(filteredOptions, (o) => o.options || o).find(
+          (o) => String(o.value) === keyFound
+        );
+        optionFound && handleOptionClick(optionFound);
+      }
+    },
+    [filteredOptions, handleOptionClick]
+  );
 
   useEffect(() => {
     executeScroll();
@@ -41,21 +62,45 @@ const SelectMenu: React.FC<SelectMenuProps> = (props) => {
   const renderOptions = () =>
     filteredOptions.length > 0 ? (
       <List
-        data={filteredOptions}
-        rowSize={'small'}
+        label={uniqueId('menu_list')}
+        ref={combinedRefs}
+        height={minListHeightWithCompactListItem}
         isVirtualized={isVirtualized && filteredOptions.length > MAX_NON_VIRTUALIZED_ITEMS_SELECT}
-        ref={myRef}
-        handleOptionClick={handleOptionClick}
-        searchTerm={searchTerm}
-        selectedItem={selectedOption}
-        defaultOption={hasSelectAllOption ? SELECT_ALL_OPTION : undefined}
-      />
+        onSelectionChange={onSelectionChange}
+        selectedKeys={[selectedOption.value]}
+        disabledKeys={filteredOptions.filter((o) => o.isDisabled).map((o) => o.value)}
+      >
+        {hasSelectAllOption ? (
+          <ListItem key={SELECT_ALL_OPTION.value} textValue={SELECT_ALL_OPTION.label}>
+            <ListItemText>{SELECT_ALL_OPTION.label}</ListItemText>
+          </ListItem>
+        ) : null}
+        {filteredOptions.map((option) => {
+          if (option.options && option.options?.length > 0) {
+            return (
+              <ListSection key={option.value} title={option.value}>
+                {option.options.map((o) => (
+                  <ListItem key={o.value} textValue={o.label}>
+                    <ListItemText description={o.helperText}>{o.label}</ListItemText>
+                  </ListItem>
+                ))}
+              </ListSection>
+            );
+          }
+
+          return (
+            <ListItem key={option.value} textValue={option.label}>
+              <ListItemText description={option.helperText}>{option.label}</ListItemText>
+            </ListItem>
+          );
+        })}
+      </List>
     ) : (
       <div css={optionStyle({ isSelected: false, hasNoResultsExist: true })}>No options</div>
     );
 
   return (
-    <div css={menuStyle(props)}>
+    <div css={menuStyle(props)} tabIndex={-1}>
       {isLoading ? (
         <div css={optionStyle({ isSelected: false, hasNoResultsExist: true })}>Loading...</div>
       ) : (
@@ -63,6 +108,8 @@ const SelectMenu: React.FC<SelectMenuProps> = (props) => {
       )}
     </div>
   );
-};
+});
+
+SelectMenu.displayName = 'SelectMenu';
 
 export default SelectMenu;

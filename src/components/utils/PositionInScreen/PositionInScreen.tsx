@@ -5,6 +5,7 @@ import { useWrapperWidth, usePositionInScreen } from './hooks';
 import { container, itemContainer } from './PositionInScreen.style';
 
 export type PositionInScreenProps = {
+  id?: string;
   /** Whether the item to be positioned is visible */
   isVisible: boolean;
   /** Configures the container's overflow */
@@ -25,6 +26,7 @@ export type PositionInScreenProps = {
 };
 
 const PositionInScreen: React.FC<PositionInScreenProps> = ({
+  id = 'unique-tooltip-id',
   isVisible,
   parent,
   isOverflowAllowed,
@@ -46,7 +48,7 @@ const PositionInScreen: React.FC<PositionInScreenProps> = ({
     <div css={container(isOverflowAllowed, hasTooltip, sx)} ref={wrapperRef}>
       {parent}
       {hasTooltip && (
-        <div css={itemContainer(x, y, wrapperWidth, sx)} id={'unique-tooltip-id'} ref={itemRef}>
+        <div css={itemContainer(x, y, wrapperWidth, sx)} id={id} ref={itemRef}>
           {children}
         </div>
       )}

@@ -87,6 +87,12 @@ export const parseComponentToken =
   (path: string, fn?: (val: string) => unknown) => (theme: Theme) => {
     if (!path.length) return '';
 
+    /** If comp tokens return a constant value not referring to global or semantic tokens
+     * we return the exact value and it's up to the component's styles to parse the value
+     * accordingly 
+     */
+    if (!path.startsWith('{')) return path;
+
     const pathKeys = path.slice(1, -1).split('.');
 
     if (pathKeys[0] === 'sem') {

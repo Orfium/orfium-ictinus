@@ -1,4 +1,4 @@
-import { TooltipPlacement } from '../Tooltip/Tooltip';
+import { TooltipPlacement } from 'components/Tooltip/Tooltip.types';
 
 export type SortingOrder = 'asc' | 'desc';
 

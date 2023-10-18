@@ -25,4 +25,4 @@ const DemoUseSearchQueryParams: FC<{ initialEntries: string } & RouterProps> = (
 };
 
 // @ts-ignore
-export default withRouter(DemoUseSearchQueryParams);
+export default withRouter(DemoUseSearchQueryParams) as React.ComponentType;

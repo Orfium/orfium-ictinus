@@ -2,7 +2,9 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 
 import { render, screen, selectDropdownOption, waitFor } from '../../test';
-import Select from './Select';
+import StatefulSelect from './StatefulSelect';
+import { fireEvent } from '@testing-library/react';
+import { SELECT_ALL_OPTION } from './constants';
 
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
@@ -33,12 +35,7 @@ describe('Generic Select', () => {
     beforeEach(() => {
       render(
         <div>
-          <Select
-            label={'Country'}
-            options={dropdownList}
-            styleType={'filled'}
-            handleSelectedOption={handleSubmit}
-          />
+          <StatefulSelect label={'Country'} options={dropdownList} onChange={handleSubmit} />
         </div>
       );
     });
@@ -98,13 +95,12 @@ describe('Generic Select', () => {
     const renderSelect = (minCharacters = 0, isLoading = false) => {
       return render(
         <div>
-          <Select
+          <StatefulSelect
             isAsync
             isLoading={isLoading}
             label={'Country'}
             options={dropdownList}
-            styleType={'filled'}
-            handleSelectedOption={handleSubmit}
+            onChange={handleSubmit}
             asyncSearch={asyncSearch}
             minCharactersToSearch={minCharacters}
           />
@@ -154,11 +150,11 @@ describe('Generic Select', () => {
     const renderSelect = () => {
       return render(
         <div>
-          <Select
+          <StatefulSelect
             isSearchable={false}
             label={'Countries'}
             options={dropdownListWithHelperText}
-            handleSelectedOption={handleSubmit}
+            onChange={handleSubmit}
           />
         </div>
       );
@@ -179,6 +175,122 @@ describe('Generic Select', () => {
       await waitFor(() => expect(screen.getByText('Europe')).toBeVisible());
     });
   });
+
+  describe('Keyboard Navigation', () => {
+    it('down arrow should open menu', async () => {
+      const { getByTestId, container } = render(
+        <div>
+          <StatefulSelect
+            dataTestId={'test'}
+            isSearchable={false}
+            label={'Countries'}
+            options={dropdownList}
+          />
+        </div>
+      );
+
+      const select = getByTestId('input_select-input-test');
+      fireEvent.keyDown(select, {
+        key: 'ArrowDown',
+        code: 'ArrowDown',
+        charCode: 40,
+      });
+
+      await waitFor(() => expect(container.querySelector('#select__00')).toBeInTheDocument());
+    });
+
+    it('down arrow should open menu and close it with Escape', async () => {
+      const { getByTestId, container } = render(
+        <div>
+          <StatefulSelect
+            dataTestId={'test'}
+            isSearchable={false}
+            label={'Countries'}
+            options={dropdownList}
+          />
+        </div>
+      );
+
+      const select = getByTestId('input_select-input-test');
+      fireEvent.keyDown(select, {
+        key: 'ArrowDown',
+        code: 'ArrowDown',
+        charCode: 40,
+      });
+
+      await waitFor(() => expect(container.querySelector('#select__00')).toBeInTheDocument());
+
+      fireEvent.keyDown(select, {
+        key: 'Escape',
+      });
+      await waitFor(() => expect(container.querySelector('#select__00')).not.toBeInTheDocument());
+    });
+
+    it('escape on input should clear the value', async () => {
+      const { getByTestId, container } = render(
+        <div>
+          <StatefulSelect
+            selectedOption={dropdownList[0]}
+            dataTestId={'test'}
+            label={'Countries'}
+            options={dropdownList}
+          />
+        </div>
+      );
+
+      const select = getByTestId('input_select-input-test');
+      fireEvent.keyDown(select, {
+        key: 'ArrowDown',
+        code: 'ArrowDown',
+        charCode: 40,
+      });
+
+      // this clears the value
+      fireEvent.keyDown(select, {
+        key: 'Escape',
+      });
+
+      expect(select).toHaveValue('');
+    });
+
+    it('on type more than 1 character in input and enter selects the first from the list', async () => {
+      jest.useFakeTimers();
+      const handleSubmit = jest.fn();
+
+      const { getByTestId } = render(
+        <div>
+          <StatefulSelect
+            selectedOption={dropdownList[0]}
+            dataTestId={'test'}
+            label={'Countries'}
+            options={dropdownList}
+            onChange={handleSubmit}
+          />
+        </div>
+      );
+
+      const select = getByTestId('input_select-input-test');
+      // open menu
+      fireEvent.keyDown(select, {
+        key: 'ArrowDown',
+      });
+      // this clears the value
+      fireEvent.keyDown(select, {
+        key: 'Escape',
+      });
+      expect(handleSubmit).toBeCalledTimes(1);
+
+      await userEvent.type(select, 'zi');
+      fireEvent.keyDown(select, {
+        key: 'Enter',
+      });
+
+      jest.runAllTimers();
+
+      expect(handleSubmit).toBeCalledTimes(2);
+      expect(handleSubmit).toBeCalledWith(dropdownList[1]);
+    });
+  });
 });
 
 describe('Multi Select', () => {
@@ -190,7 +302,13 @@ describe('Multi Select', () => {
   beforeEach(() => {
     render(
       <div>
-        <Select isMulti isCreatable label={'Country'} options={dropdownList} hasSelectAllOption />
+        <StatefulSelect
+          isMulti
+          isCreatable
+          label={'Country'}
+          options={dropdownList}
+          hasSelectAllOption
+        />
       </div>
     );
   });
@@ -205,9 +323,9 @@ describe('Multi Select', () => {
 
   it('renders the Chips when options are clicked', async () => {
     await selectDropdownOption(selectInput, dropdownList[0].label);
+    expect(screen.getByTestId('chip-chip_0')).toBeVisible();
     await selectDropdownOption(selectInput, dropdownList[1].label);
 
-    expect(screen.getByTestId('chip-chip_0')).toBeVisible();
     expect(screen.getByTestId('chip-chip_1')).toBeVisible();
   });
 
@@ -246,7 +364,7 @@ describe('Multi Select', () => {
 
   it('selects all options when Select All is clicked', async () => {
     userEvent.click(selectInput);
-    userEvent.click(screen.getByTestId('ictinus_list_default_option'));
+    userEvent.click(screen.getByTestId(`ictinus_list_item_${SELECT_ALL_OPTION.value}`));
 
     chips = await screen.findAllByTestId(/chip-chip_/);
 

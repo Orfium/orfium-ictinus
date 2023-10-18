@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { showcaseContainer } from './EdgeCasesSelectShowcase.style';
-import Select from 'components/Select';
+import { StatefulSelect } from 'components/Select';
 
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
@@ -19,47 +19,26 @@ const EdgeCasesSelectShowcase: React.FC = () => {
   return (
     <div css={showcaseContainer()}>
       <div style={{ width: 250 }}>
-        <Select
+        <StatefulSelect
           label={'Flavour'}
           options={[
             ...options,
             {
               value: 'strawberry',
               label:
-                'Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry Strawberry',
+                '‘This is an example of a long list item. Avoid using very long list item names if possible. Using a very long list name will automatically truncate...’',
             },
           ]}
           selectedOption={defaultValue}
-          handleSelectedOption={handleSelectedOption}
-          styleType={'filled'}
+          onChange={handleSelectedOption}
         />
       </div>
-      <Select
+      <StatefulSelect
         label={'Flavour'}
         options={options}
         selectedOption={defaultValue}
-        handleSelectedOption={handleSelectedOption}
-        styleType={'filled'}
+        onChange={handleSelectedOption}
       />
-
-      <div style={{ width: 100 }}>
-        <Select
-          label={'Flavour'}
-          options={options}
-          selectedOption={defaultValue}
-          handleSelectedOption={handleSelectedOption}
-          styleType={'filled'}
-        />
-      </div>
-      <div style={{ width: 400, position: 'absolute', bottom: '15%' }}>
-        <Select
-          label={'Bottom positioned case'}
-          options={options}
-          selectedOption={defaultValue}
-          handleSelectedOption={handleSelectedOption}
-          styleType={'filled'}
-        />
-      </div>
     </div>
   );
 };

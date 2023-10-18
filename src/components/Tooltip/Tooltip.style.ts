@@ -1,45 +1,50 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { rem } from 'theme/utils';
 
-import { TooltipSize } from './Tooltip';
+import { getTooltipTokens } from './Tooltip.tokens';
+import { TooltipProps } from './Tooltip.types';
 import { Theme } from '../../theme';
 import 'tippy.js/dist/tippy.css';
+import { generateStylesFromTokens } from 'components/Typography/utils';
 
 export const tooltipStyle =
-  ({ size, isTransparent }: { size: TooltipSize; isTransparent: boolean }) =>
+  ({
+    isInverted = false,
+    isInteractive = false,
+  }: Pick<TooltipProps, 'isInverted' | 'isInteractive'>) =>
   (theme: Theme): SerializedStyles => {
-    const color = 'darkGrey';
-    const shade = 850;
-    const backgroundColor = isTransparent ? 'transparent' : theme.utils.getColor(color, shade);
+    const tokens = getTooltipTokens(theme);
 
-    const defineFontSizeBasedOnTooltipSize = (size: TooltipSize) => {
-      if (size === 'large') {
-        return theme.globals.typography.fontSize.get('4');
-      } else if (size === 'small') {
-        return theme.globals.typography.fontSize.get('2');
-      }
+    const backgroundColor = tokens(
+      `backgroundColor.${isInverted ? 'inverted' : 'default'}` as const
+    );
 
-      return theme.globals.typography.fontSize.get('3');
+    const textWrap = {
+      'text-align': 'start',
+      'white-space': 'pre-wrap',
+      'word-break': 'break-word',
     };
 
     return css`
-      background: transparent;
+      background-color: ${backgroundColor};
+      border: ${tokens('borderWidth.default')} solid
+        ${tokens(`borderColor.${isInverted ? 'inverted' : 'default'}` as const)};
+      box-shadow: ${tokens('boxShadow')};
 
       .tippy-content {
-        color: ${theme.utils.getAAColorFromSwatches(color, shade)};
         background-color: ${backgroundColor};
-        max-width: ${rem(256)};
-        padding: ${theme.globals.spacing.get('4')};
-        font-size: ${defineFontSizeBasedOnTooltipSize(size)};
-        font-weight: ${theme.globals.typography.fontWeight.get('regular')};
-        line-height: 110%;
-        border-radius: ${theme.globals.spacing.get('4')};
-        text-align: start;
-        white-space: pre-wrap;
-        word-break: break-word;
+        max-width: ${!isInteractive && rem(256)};
+        padding: ${tokens(`padding.${isInteractive ? 'interactive' : 'text'}` as const)};
+        border-radius: ${tokens('borderRadius')};
+        color: ${!isInteractive &&
+        tokens(`textColor.${isInverted ? 'inverted' : 'default'}` as const)};
+
+        ${!isInteractive && generateStylesFromTokens(tokens('text'))};
+
+        ${!isInteractive && textWrap};
       }
 
-      .tippy-arrow {
+      .tippy-arrow::before {
         color: ${backgroundColor};
       }
     `;

@@ -13,7 +13,7 @@ const DEFAULT_COLOR = 'white';
 const ColorUtility = ({ defaultColor }: { defaultColor?: string }) => {
   const theme = useTheme();
 
-  const { color, updateColor, setDarkenValue, setLightenValue, utilityValues } =
+  const { color, colorInput, updateColor, setDarkenValue, setLightenValue, utilityValues } =
     useColors(defaultColor);
 
   const palette = colorShadesCreator(color.normal);
@@ -27,9 +27,9 @@ const ColorUtility = ({ defaultColor }: { defaultColor?: string }) => {
         <div css={{ flexDirection: 'column', marginRight: '8px' }}>
           <div css={inputWrapper}>
             <TextField
+              label={'Color'}
+              value={colorInput}
               placeholder={color.normal || DEFAULT_COLOR}
-              size={'md'}
-              styleType={'outlined'}
               onChange={updateColor}
             />
           </div>

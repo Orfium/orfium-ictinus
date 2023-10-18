@@ -2,11 +2,20 @@ import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
 import { rem } from 'theme/utils';
 
-export const monthWrapperStyle = () => (): SerializedStyles =>
-  css`
-    display: flex;
-    flex-direction: column;
-  `;
+import { getDateTokens } from 'components/DatePicker/DatePicker.tokens';
+
+export const monthWrapperStyle =
+  () =>
+  (theme: Theme): SerializedStyles => {
+    const tokens = getDateTokens(theme);
+
+    return css`
+      display: flex;
+      flex-direction: column;
+      gap: ${tokens('rowPadding')};
+      padding: ${tokens('verticalPadding')} ${tokens('horizontalPadding')};
+    `;
+  };
 
 export const monthHeaderWrapperStyle = () => (): SerializedStyles =>
   css`
@@ -30,27 +39,23 @@ export const monthHeaderNavigationIconWrapperStyle =
       z-index: 10;
     `;
 
-export const monthHeaderTitleWrapperStyle =
-  ({ isRangePicker }: { isRangePicker: boolean }) =>
-  (theme: Theme): SerializedStyles =>
-    css`
-      margin: ${isRangePicker && `${theme.globals.spacing.get('6')} 0`};
-      padding: 0;
-      align-content: center;
-      text-align: center;
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-    `;
+export const monthHeaderTitleWrapperStyle = (): SerializedStyles =>
+  css`
+    padding: 0;
+    align-content: center;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  `;
 
 export const monthHeaderTitleStyle =
   ({ isRangePicker }: { isRangePicker: boolean }) =>
   (theme: Theme): SerializedStyles =>
     css`
       margin: 0 ${theme.globals.spacing.get('4')};
-      padding: ${theme.globals.spacing.get('4')};
       display: flex;
       justify-content: center;
       cursor: ${!isRangePicker && 'pointer'};

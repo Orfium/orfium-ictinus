@@ -1,9 +1,8 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
-import { rem } from 'theme/utils';
 
-import { getHover } from '../../../theme/states';
-import { ColorShapeFromComponent } from '../../../utils/themeFunctions';
+import { getDateTokens } from '../DatePicker.tokens';
+import { label02 } from 'components/Typography/Typography.config.styles';
 
 type DayStyleProps = {
   day?: number;
@@ -13,100 +12,103 @@ type DayStyleProps = {
   isFirst?: boolean;
   isDisabled?: boolean;
   isToday: boolean;
-  calculatedColor: ColorShapeFromComponent;
 };
 
 export const dayWrapperStyle =
   ({
     isSelected,
     isBetween,
-    calculatedColor,
     isLast,
     isFirst,
     isToday,
     isDisabled,
-  }: DayStyleProps & { isToday: boolean; calculatedColor: ColorShapeFromComponent }) =>
-  (theme: Theme): SerializedStyles =>
-    css`
+  }: DayStyleProps & { isToday: boolean }) =>
+  (theme: Theme): SerializedStyles => {
+    const tokens = getDateTokens(theme);
+
+    return css`
       vertical-align: middle;
       text-align: center;
       cursor: pointer;
       position: relative;
-      color: ${isSelected
-        ? theme.utils.getAAColorFromSwatches(calculatedColor.color, calculatedColor.shade)
-        : theme.utils.getColor('darkGrey', 850)};
-      width: ${rem(40)};
-      padding: 0 ${rem(4)};
+      color: ${isSelected ? tokens('textColor.active') : tokens('textColor.default')};
+      width: ${tokens('size')};
       font-weight: ${isToday && 'bold'};
       opacity: ${isDisabled ? 0.5 : 1};
       background: ${isLast || isFirst
-        ? 'transparent'
+        ? tokens('backgroundColor.active')
         : (isSelected || isBetween) &&
           typeof isBetween !== 'undefined' &&
-          theme.utils.getColor('blue', 50)};
+          tokens('backgroundColor.focused')};
       border-bottom-right-radius: ${isLast && isSelected && '100%'};
       border-top-right-radius: ${isLast && isSelected && '100%'};
       border-bottom-left-radius: ${isFirst && isSelected && '100%'};
       border-top-left-radius: ${isFirst && isSelected && '100%'};
 
+      &:focus-visible {
+        background-color: ${tokens('backgroundColor.focused')};
+        border-radius: ${tokens('borderRadius.2')};
+      }
+
       ${(isSelected || isLast || isFirst) &&
       `&:after {
-    z-index: -1;
-    content: ' ';
-    height: 100%;
-    width: 50%;
-    position: absolute;
-    top: 0;
-     background: ${
-       isLast && isFirst
-         ? 'transparent'
-         : (isSelected || isBetween) &&
-           typeof isBetween !== 'undefined' &&
-           theme.utils.getColor('blue', 50)
-     };
-  left: ${isLast ? '0' : 'initial'};
-  right: ${isFirst ? '0' : 'initial'};
-  border-bottom-right-radius: ${isLast && isSelected && '100%'};
-  border-top-right-radius: ${isLast && isSelected && '100%'};
-  border-bottom-left-radius: ${isFirst && isSelected && '100%'};
-  border-top-left-radius: ${isFirst && isSelected && '100%'};
-  }`}
+          z-index: -1;
+          content: ' ';
+          height: 100%;
+          width: 50%;
+          position: absolute;
+          top: 0;
+          left: ${isLast ? '0' : 'initial'};
+          right: ${isFirst ? '0' : 'initial'};
+          border-bottom-right-radius: ${isLast && isSelected && '100%'};
+          border-top-right-radius: ${isLast && isSelected && '100%'};
+          border-bottom-left-radius: ${isFirst && isSelected && '100%'};
+          border-top-left-radius: ${isFirst && isSelected && '100%'};
+      }`}
     `;
+  };
 
 export const emptyDayStyle =
   ({ isBetween }: { isBetween: boolean }) =>
-  (theme: Theme) =>
-    css`
+  (theme: Theme) => {
+    const tokens = getDateTokens(theme);
+
+    return css`
       vertical-align: middle;
       text-align: center;
       cursor: pointer;
       position: relative;
-      background: ${isBetween ? theme.utils.getColor('blue', 50) : 'transparent'};
+      background: ${isBetween
+        ? tokens('backgroundColor.focused')
+        : tokens('backgroundColor.default')};
     `;
+  };
 
 export const dayStyle =
-  ({ isSelected, calculatedColor, isToday, isDisabled, isBetween }: DayStyleProps) =>
-  (theme: Theme) =>
-    css`
-      border: ${rem(1)} solid ${isToday ? theme.utils.getColor('lightGrey', 450) : 'transparent'};
-      border-radius: ${(isToday || isSelected) && '100%'};
-      width: ${rem(39)};
-      height: ${rem(39)};
+  ({ isSelected, isToday, isDisabled, isBetween }: DayStyleProps) =>
+  (theme: Theme) => {
+    const tokens = getDateTokens(theme);
+
+    return css`
+      ${label02(theme)};
+      border: ${isSelected ? 0 : tokens('borderWidth')} solid
+        ${isToday ? tokens('borderColor.present') : tokens('borderColor.default')};
+      border-radius: ${(isToday || isSelected) && tokens('borderRadius.2')};
+      width: ${tokens('size')};
+      height: ${tokens('size')};
+      color: ${isSelected ? tokens('textColor.active') : tokens('textColor.default')};
+      box-sizing: border-box;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: ${isSelected
-        ? theme.utils.getColor(calculatedColor.color, calculatedColor.shade)
-        : 'transparent'};
+      background: ${isSelected ? tokens('backgroundColor.active') : 'transparent'};
 
       ${!isDisabled &&
       `&:hover {
-            border-radius: 100%;
+            border-radius: ${tokens('borderRadius.2')};
             background: ${
-              !isSelected &&
-              (!isBetween
-                ? getHover({ theme }).backgroundColor
-                : getHover({ theme, color: 'blue', shade: 50 }).backgroundColor)
+              !isSelected && (!isBetween ? tokens('backgroundColor.focused') : 'transparent')
             };
           }`}
     `;
+  };

@@ -1,14 +1,12 @@
-import React from 'react';
+import { Key } from 'react';
 
-import { FilterOption } from 'components/Filter/types';
-import { SelectOption } from 'components/Select/Select';
+import { SelectOption } from 'components/Select';
 
-export type ListItemType = string | number | SelectOption | FilterOption | React.ReactNode;
+export type ListSelection = Set<Key>;
+export type ListSelected = 'all' | Iterable<Key>;
 
-export type ListRowSize = 'small' | 'normal';
+export type ListItemType = SelectOption;
 
-export type SelectHandlerType =
-  | ((option: string) => void)
-  | ((option: number) => void)
-  | ((option: SelectOption) => void)
-  | ((option: FilterOption) => void);
+export type ListRowSize = 'compact' | 'normal';
+
+export type SelectHandlerType = (option: ListItemType) => void;
