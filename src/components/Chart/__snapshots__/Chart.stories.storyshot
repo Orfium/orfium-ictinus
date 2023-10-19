@@ -56,6 +56,7 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
         onTouchEnd={[Function]}
         onTouchMove={[Function]}
         onTouchStart={[Function]}
+        role="region"
         style={
           Object {
             "cursor": "default",
@@ -68,13 +69,14 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
         <svg
           className="recharts-surface"
           height={500}
-          version="1.1"
           viewBox="0 0 1000 500"
           width={1000}
         >
+          <title />
+          <desc />
           <defs>
             <clipPath
-              id="recharts9-clip"
+              id="recharts8-clip"
             >
               <rect
                 height={450}
@@ -225,6 +227,7 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
                   className="recharts-text recharts-cartesian-axis-tick-value"
                   fill="#666"
                   height={30}
+                  orientation="bottom"
                   stroke="none"
                   textAnchor="middle"
                   width={760}
@@ -246,6 +249,7 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
                   className="recharts-text recharts-cartesian-axis-tick-value"
                   fill="#666"
                   height={30}
+                  orientation="bottom"
                   stroke="none"
                   textAnchor="middle"
                   width={760}
@@ -267,6 +271,7 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
                   className="recharts-text recharts-cartesian-axis-tick-value"
                   fill="#666"
                   height={30}
+                  orientation="bottom"
                   stroke="none"
                   textAnchor="middle"
                   width={760}
@@ -288,6 +293,7 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
                   className="recharts-text recharts-cartesian-axis-tick-value"
                   fill="#666"
                   height={30}
+                  orientation="bottom"
                   stroke="none"
                   textAnchor="middle"
                   width={760}
@@ -309,6 +315,7 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
                   className="recharts-text recharts-cartesian-axis-tick-value"
                   fill="#666"
                   height={30}
+                  orientation="bottom"
                   stroke="none"
                   textAnchor="middle"
                   width={760}
@@ -330,6 +337,7 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
                   className="recharts-text recharts-cartesian-axis-tick-value"
                   fill="#666"
                   height={30}
+                  orientation="bottom"
                   stroke="none"
                   textAnchor="middle"
                   width={760}
@@ -351,6 +359,7 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
                   className="recharts-text recharts-cartesian-axis-tick-value"
                   fill="#666"
                   height={30}
+                  orientation="bottom"
                   stroke="none"
                   textAnchor="middle"
                   width={760}
@@ -372,6 +381,7 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
                   className="recharts-text recharts-cartesian-axis-tick-value"
                   fill="#666"
                   height={30}
+                  orientation="bottom"
                   stroke="none"
                   textAnchor="middle"
                   width={760}
@@ -393,6 +403,7 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
                   className="recharts-text recharts-cartesian-axis-tick-value"
                   fill="#666"
                   height={30}
+                  orientation="bottom"
                   stroke="none"
                   textAnchor="middle"
                   width={760}
@@ -414,6 +425,7 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
                   className="recharts-text recharts-cartesian-axis-tick-value"
                   fill="#666"
                   height={30}
+                  orientation="bottom"
                   stroke="none"
                   textAnchor="middle"
                   width={760}
@@ -724,11 +736,13 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
         </svg>
         <div
           className="recharts-tooltip-wrapper"
+          role="dialog"
           style={
             Object {
               "MozTransform": "translate(undefinedpx, undefinedpx)",
               "OTransform": "translate(undefinedpx, undefinedpx)",
               "WebkitTransform": "translate(undefinedpx, undefinedpx)",
+              "left": 0,
               "msTransform": "translate(undefinedpx, undefinedpx)",
               "pointerEvents": "none",
               "position": "absolute",
@@ -737,6 +751,7 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
               "visibility": "hidden",
             }
           }
+          tabIndex={-1}
         />
       </div>
     </div>
@@ -795,6 +810,7 @@ exports[`Storyshots Design System/Chart DonutChart 1`] = `
     >
       <div
         className="recharts-wrapper"
+        role="region"
         style={
           Object {
             "cursor": "default",
@@ -806,11 +822,14 @@ exports[`Storyshots Design System/Chart DonutChart 1`] = `
       >
         <svg
           className="recharts-surface"
+          cx="50%"
+          cy="50%"
           height={500}
-          version="1.1"
           viewBox="0 0 1000 500"
           width={1000}
         >
+          <title />
+          <desc />
           <defs>
             <clipPath
               id="recharts11-clip"
@@ -825,6 +844,7 @@ exports[`Storyshots Design System/Chart DonutChart 1`] = `
           </defs>
           <g
             className="recharts-layer recharts-pie"
+            tabIndex={0}
           >
             <g
               className="recharts-layer"
@@ -833,11 +853,13 @@ exports[`Storyshots Design System/Chart DonutChart 1`] = `
                 className="recharts-layer recharts-pie-sector"
                 onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
+                tabIndex={-1}
               />
               <g
                 className="recharts-layer recharts-pie-sector"
                 onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
+                tabIndex={-1}
               />
             </g>
             <g>
@@ -928,6 +950,7 @@ exports[`Storyshots Design System/Chart LineChart 1`] = `
       onTouchEnd={[Function]}
       onTouchMove={[Function]}
       onTouchStart={[Function]}
+      role="region"
       style={
         Object {
           "cursor": "default",
@@ -940,13 +963,14 @@ exports[`Storyshots Design System/Chart LineChart 1`] = `
       <svg
         className="recharts-surface"
         height={500}
-        version="1.1"
         viewBox="0 0 1000 500"
         width={1000}
       >
+        <title />
+        <desc />
         <defs>
           <clipPath
-            id="recharts4-clip"
+            id="recharts1-clip"
           >
             <rect
               height={410}
@@ -1025,6 +1049,7 @@ exports[`Storyshots Design System/Chart LineChart 1`] = `
                 className="recharts-text recharts-cartesian-axis-tick-value"
                 fill="#666"
                 height={30}
+                orientation="bottom"
                 stroke="none"
                 textAnchor="middle"
                 width={900}
@@ -1046,6 +1071,7 @@ exports[`Storyshots Design System/Chart LineChart 1`] = `
                 className="recharts-text recharts-cartesian-axis-tick-value"
                 fill="#666"
                 height={30}
+                orientation="bottom"
                 stroke="none"
                 textAnchor="middle"
                 width={900}
@@ -1067,6 +1093,7 @@ exports[`Storyshots Design System/Chart LineChart 1`] = `
                 className="recharts-text recharts-cartesian-axis-tick-value"
                 fill="#666"
                 height={30}
+                orientation="bottom"
                 stroke="none"
                 textAnchor="middle"
                 width={900}
@@ -1088,6 +1115,7 @@ exports[`Storyshots Design System/Chart LineChart 1`] = `
                 className="recharts-text recharts-cartesian-axis-tick-value"
                 fill="#666"
                 height={30}
+                orientation="bottom"
                 stroke="none"
                 textAnchor="middle"
                 width={900}
@@ -1109,6 +1137,7 @@ exports[`Storyshots Design System/Chart LineChart 1`] = `
                 className="recharts-text recharts-cartesian-axis-tick-value"
                 fill="#666"
                 height={30}
+                orientation="bottom"
                 stroke="none"
                 textAnchor="middle"
                 width={900}
@@ -1130,6 +1159,7 @@ exports[`Storyshots Design System/Chart LineChart 1`] = `
                 className="recharts-text recharts-cartesian-axis-tick-value"
                 fill="#666"
                 height={30}
+                orientation="bottom"
                 stroke="none"
                 textAnchor="middle"
                 width={900}
@@ -1151,6 +1181,7 @@ exports[`Storyshots Design System/Chart LineChart 1`] = `
                 className="recharts-text recharts-cartesian-axis-tick-value"
                 fill="#666"
                 height={30}
+                orientation="bottom"
                 stroke="none"
                 textAnchor="middle"
                 width={900}
@@ -1168,6 +1199,8 @@ exports[`Storyshots Design System/Chart LineChart 1`] = `
           </g>
           <text
             className="recharts-text recharts-label"
+            fill="#808080"
+            offset={35}
             textAnchor="middle"
             x={530}
             y={485}
@@ -1193,6 +1226,7 @@ exports[`Storyshots Design System/Chart LineChart 1`] = `
                 className="recharts-text recharts-cartesian-axis-tick-value"
                 fill="#666"
                 height={410}
+                orientation="left"
                 stroke="none"
                 textAnchor="start"
                 width={60}
@@ -1214,6 +1248,7 @@ exports[`Storyshots Design System/Chart LineChart 1`] = `
                 className="recharts-text recharts-cartesian-axis-tick-value"
                 fill="#666"
                 height={410}
+                orientation="left"
                 stroke="none"
                 textAnchor="start"
                 width={60}
@@ -1235,6 +1270,7 @@ exports[`Storyshots Design System/Chart LineChart 1`] = `
                 className="recharts-text recharts-cartesian-axis-tick-value"
                 fill="#666"
                 height={410}
+                orientation="left"
                 stroke="none"
                 textAnchor="start"
                 width={60}
@@ -1256,6 +1292,7 @@ exports[`Storyshots Design System/Chart LineChart 1`] = `
                 className="recharts-text recharts-cartesian-axis-tick-value"
                 fill="#666"
                 height={410}
+                orientation="left"
                 stroke="none"
                 textAnchor="start"
                 width={60}
@@ -1277,6 +1314,7 @@ exports[`Storyshots Design System/Chart LineChart 1`] = `
                 className="recharts-text recharts-cartesian-axis-tick-value"
                 fill="#666"
                 height={410}
+                orientation="left"
                 stroke="none"
                 textAnchor="start"
                 width={60}
@@ -1294,6 +1332,8 @@ exports[`Storyshots Design System/Chart LineChart 1`] = `
           </g>
           <text
             className="recharts-text recharts-label"
+            fill="#808080"
+            offset={15}
             textAnchor="end"
             transform="rotate(-90, 5, 215)"
             x={5}
@@ -1563,12 +1603,15 @@ exports[`Storyshots Design System/Chart LineChart 1`] = `
                   "verticalAlign": "middle",
                 }
               }
-              version="1.1"
               viewBox="0 0 32 32"
               width={16}
             >
+              <title />
+              <desc />
               <path
                 className="recharts-symbols"
+                cx={16}
+                cy={16}
                 d="M16,0A16,16,0,1,1,-16,0A16,16,0,1,1,16,0"
                 fill="#00008B"
                 transform="translate(16, 16)"
@@ -1576,6 +1619,11 @@ exports[`Storyshots Design System/Chart LineChart 1`] = `
             </svg>
             <span
               className="recharts-legend-item-text"
+              style={
+                Object {
+                  "color": "#00008B",
+                }
+              }
             >
               hidden
             </span>
@@ -1599,12 +1647,15 @@ exports[`Storyshots Design System/Chart LineChart 1`] = `
                   "verticalAlign": "middle",
                 }
               }
-              version="1.1"
               viewBox="0 0 32 32"
               width={16}
             >
+              <title />
+              <desc />
               <path
                 className="recharts-symbols"
+                cx={16}
+                cy={16}
                 d="M16,0A16,16,0,1,1,-16,0A16,16,0,1,1,16,0"
                 fill="#FFA500"
                 transform="translate(16, 16)"
@@ -1612,6 +1663,11 @@ exports[`Storyshots Design System/Chart LineChart 1`] = `
             </svg>
             <span
               className="recharts-legend-item-text"
+              style={
+                Object {
+                  "color": "#FFA500",
+                }
+              }
             >
               claimed
             </span>
@@ -1635,12 +1691,15 @@ exports[`Storyshots Design System/Chart LineChart 1`] = `
                   "verticalAlign": "middle",
                 }
               }
-              version="1.1"
               viewBox="0 0 32 32"
               width={16}
             >
+              <title />
+              <desc />
               <path
                 className="recharts-symbols"
+                cx={16}
+                cy={16}
                 d="M16,0A16,16,0,1,1,-16,0A16,16,0,1,1,16,0"
                 fill="#FF0000"
                 transform="translate(16, 16)"
@@ -1648,6 +1707,11 @@ exports[`Storyshots Design System/Chart LineChart 1`] = `
             </svg>
             <span
               className="recharts-legend-item-text"
+              style={
+                Object {
+                  "color": "#FF0000",
+                }
+              }
             >
               amt
             </span>
@@ -1656,11 +1720,13 @@ exports[`Storyshots Design System/Chart LineChart 1`] = `
       </div>
       <div
         className="recharts-tooltip-wrapper"
+        role="dialog"
         style={
           Object {
             "MozTransform": "translate(undefinedpx, undefinedpx)",
             "OTransform": "translate(undefinedpx, undefinedpx)",
             "WebkitTransform": "translate(undefinedpx, undefinedpx)",
+            "left": 0,
             "msTransform": "translate(undefinedpx, undefinedpx)",
             "pointerEvents": "none",
             "position": "absolute",
@@ -1669,6 +1735,7 @@ exports[`Storyshots Design System/Chart LineChart 1`] = `
             "visibility": "hidden",
           }
         }
+        tabIndex={-1}
       >
         <div
           className="custom-tooltip emotion-2"

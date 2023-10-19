@@ -19,7 +19,7 @@ export type ThemeProviderProps = {
 const deepMergeTheme = (newTheme: DeepPartial<Theme>, theming: 'dark' | 'semantic'): Theme =>
   merge(theme(theming), pick(newTheme, keys(theme(theming))));
 
-const ThemeProvider: React.FC<ThemeProviderProps> = ({ theme = {}, children }) => {
+const ThemeProvider: React.FCC<ThemeProviderProps> = ({ theme = {}, children }) => {
   return (
     <ThemeSwitchProvider>
       <ThemeProviderContents theme={theme}>{children}</ThemeProviderContents>
@@ -27,7 +27,7 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({ theme = {}, children }) =
   );
 };
 
-const ThemeProviderContents: React.FC<ThemeProviderProps> = ({ theme = {}, children }) => {
+const ThemeProviderContents: React.FCC<ThemeProviderProps> = ({ theme = {}, children }) => {
   const themeSwitchState = useThemeSwitch();
   const colorScheme = themeSwitchState.isDark ? 'dark' : ('semantic' as ColorScheme);
   const newTheme = {

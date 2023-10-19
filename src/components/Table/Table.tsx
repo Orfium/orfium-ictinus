@@ -1,7 +1,7 @@
 import useBreakpoints from 'hooks/useBreakpoints';
 import { head } from 'lodash';
 import pluralize from 'pluralize';
-import React, {memo, useEffect, useState} from 'react';
+import React, { memo, useEffect, useState } from 'react';
 import isEqual from 'react-fast-compare';
 
 import ExtendedColumnItem from './components/ExtendedColumnItem';
@@ -13,7 +13,7 @@ import { ExtendedColumn, Sort, SortingOrder } from './types';
 import { isItemString } from './utils';
 import CheckBox from '../CheckBox';
 
-export type ContentComponent<T> = (data: Cell<T>) => React.Component | JSX.Element;
+export type ContentComponent<T> = (data: Cell<T>) => React.ReactNode;
 export type Cell<T> = {
   content: number | string | ContentComponent<T>;
   tooltipContent?: string;
@@ -35,7 +35,7 @@ export type Row<T> = {
     row: Row<T>;
     isSelected: boolean;
     isExpanded: boolean;
-  }) => React.Component | JSX.Element;
+  }) => React.ReactNode;
   rowSpan?: number;
 };
 
@@ -65,9 +65,9 @@ export type TableProps<T> = {
   /** If provided sort will only work with this option (asc or desc only). By default supports bidirectional sort*/
   sortDir?: SortingOrder;
   /** Top left text on the table - showing a counter, text etc. */
-  topLeftText?: string | JSX.Element;
+  topLeftText?: string | React.ReactElement;
   /** Top right area to define a custom component for buttons or other usage. */
-  topRightArea?: (data: Row<T>[], selectionData?: Selection[]) => React.Component | JSX.Element;
+  topRightArea?: (data: Row<T>[], selectionData?: Selection[]) => React.ReactNode;
   /** Action cell width for Table with Expandable Rows (in %)*/
   actionWidth?: number;
   /** If true, table's expandable rows will be expanded on initial render. */

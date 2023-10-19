@@ -8,7 +8,7 @@ import { actionContainer, actionsContainer } from '../../Notification.style';
 
 type Props = NotificationActions & TestProps;
 
-const NotificationActionsArea: React.FC<Props> = ({
+const NotificationActionsArea: React.FCC<Props> = ({
   primaryCTA,
   primaryCTALabel,
   secondaryCTA,

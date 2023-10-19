@@ -17,7 +17,7 @@ export type SwitchProps = {
   isDisabled?: boolean;
 } & TestProps;
 
-const Switch: React.FC<SwitchProps> = ({
+const Switch: React.FCC<SwitchProps> = ({
   isDisabled = false,
   label,
   isChecked,

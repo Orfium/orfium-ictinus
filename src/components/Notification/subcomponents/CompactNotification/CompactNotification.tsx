@@ -43,7 +43,7 @@ export type CompactNotificationProps = {
 export const typeToIconName = (type: NotificationTypes): AcceptedIconNames =>
   type === 'warning' ? 'alert' : type;
 
-const CompactNotification: React.FC<CompactNotificationProps> = ({
+const CompactNotification: React.FCC<CompactNotificationProps> = ({
   hasIcon = false,
   message,
   variant,

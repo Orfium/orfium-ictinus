@@ -30,7 +30,7 @@ export const STEP_WITH_INCREMENTS = 20;
 export const MIN = 0;
 export const MAX = 100;
 
-const Slider: React.FC<SliderProps & TestProps> = ({
+const Slider: React.FCC<SliderProps & TestProps> = ({
   values,
   onChange,
   onBlur,

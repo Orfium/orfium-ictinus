@@ -25,7 +25,7 @@ export type PositionInScreenProps = {
   };
 };
 
-const PositionInScreen: React.FC<PositionInScreenProps> = ({
+const PositionInScreen: React.FCC<PositionInScreenProps> = ({
   id = 'unique-tooltip-id',
   isVisible,
   parent,

@@ -18,7 +18,7 @@ export interface Props {
   isSearchable?: boolean;
   dataTestId?: string;
 }
-const Options: React.FC<Props> = ({
+const Options: React.FCC<Props> = ({
   items,
   onSelect,
   defaultValue,

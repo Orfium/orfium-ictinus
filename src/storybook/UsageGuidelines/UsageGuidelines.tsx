@@ -3,7 +3,7 @@ import React, { useMemo } from 'react';
 import { iconStyle, WrapperStyle } from './UsageGuidelines.style';
 import Icon from '../../components/Icon';
 
-export const UsageGuidelines: React.FC<{ guidelines: string[] }> = ({ guidelines }) => {
+export const UsageGuidelines: React.FCC<{ guidelines: string[] }> = ({ guidelines }) => {
   const guidelinesElements = useMemo(
     () =>
       guidelines.map((guideline, index) => (

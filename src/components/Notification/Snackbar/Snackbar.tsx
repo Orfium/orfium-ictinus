@@ -25,7 +25,7 @@ export type SnackbarProps = {
   dataTestId?: TestId;
 } & NotificationActions;
 
-const Snackbar: React.FC<SnackbarProps> = ({
+const Snackbar: React.FCC<SnackbarProps> = ({
   message,
   type,
   styleType = 'elevated',

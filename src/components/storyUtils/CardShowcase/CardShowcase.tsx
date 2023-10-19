@@ -11,7 +11,7 @@ type CardShowcaseProps = {
   radius?: SpacingKey;
 };
 
-const CardShowcase: React.FC<CardShowcaseProps> = ({ elevated, isTransparent, radius }) => {
+const CardShowcase: React.FCC<CardShowcaseProps> = ({ elevated, isTransparent, radius }) => {
   const CardContent = () => (
     <div css={{ padding: '16px' }}>
       <div>{`Card with ${elevated ? elevated : 'no'} elevation`}</div>

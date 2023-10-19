@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { FC, useMemo } from 'react';
+import { FCC, useMemo } from 'react';
 import { IMarkProps } from 'react-range/lib/types';
 
 import { Mark, MarkHoverCircle } from './SliderMark.style';
@@ -15,7 +15,7 @@ export type SliderMarkProps = {
   restProps: IMarkProps;
 };
 
-const SliderMark: FC<SliderMarkProps & TestProps> = ({
+const SliderMark: FCC<SliderMarkProps & TestProps> = ({
   values,
   index,
   isDisabled,
