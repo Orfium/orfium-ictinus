@@ -1,10 +1,11 @@
 import useTheme from 'hooks/useTheme';
 import React, { useMemo } from 'react';
-import { SemanticColorsKey } from 'theme/tokens/semantic/colors';
+import type { SemanticColorsKey } from 'theme/tokens/semantic/colors';
 import colors from 'theme/tokens/semantic/variables/colors';
 
 import { descriptionStyle, dividerStyle } from './TextColorShowcase.style';
-import Typography, { TextColorTypes } from 'components/Typography';
+import type { TextColorTypes } from 'components/Typography';
+import Typography from 'components/Typography';
 
 const TextColorShowcase = () => {
   const theme = useTheme();

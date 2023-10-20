@@ -1,4 +1,4 @@
-import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
 import List, { ListItemText, ListItem } from '../index';
 import { FIGMA_URL, Function } from '../../../utils/common';
 import SectionHeader from '../../../storybook/SectionHeader';
@@ -55,13 +55,13 @@ const MyComponent = () => {
 
 ## Props
 
-<Props of={ListItemText} />
+<ArgsTable of={ListItemText} />
 
 ## Variants
 
 ### ListItemText normal
 
-<Preview>
+<Canvas>
   <Story name="ListItemText normal">
     <Stack>
       <Function>
@@ -80,11 +80,11 @@ const MyComponent = () => {
       </Function>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### ListItemText with secondary text
 
-<Preview>
+<Canvas>
   <Story name="ListItemText with secondary text">
     <Stack>
       <Function>
@@ -107,7 +107,7 @@ const MyComponent = () => {
       </Function>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### References
 

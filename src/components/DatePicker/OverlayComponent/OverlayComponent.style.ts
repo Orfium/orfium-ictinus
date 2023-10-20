@@ -1,5 +1,6 @@
-import { css, SerializedStyles } from '@emotion/react';
-import { Theme } from 'theme';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
+import type { Theme } from 'theme';
 
 import { flex } from '../../../theme/functions';
 import { getDatePickerTokens, getDateTokens } from '../DatePicker.tokens';

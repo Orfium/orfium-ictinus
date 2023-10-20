@@ -1,9 +1,5 @@
-import '@storybook/addon-docs/register';
-import { addons } from '@storybook/addons';
-// import '@storybook/addon-actions/register';
-// import '@storybook/addon-links/register';
+import { addons } from '@storybook/manager-api';
 import { create } from '@storybook/theming';
-// import logo from "./logo.png";
 
 const theme = create({
   base: 'light',
@@ -12,6 +8,8 @@ const theme = create({
   barSelectedColor: '#175BF5',
   brandTitle: 'Ictinus Design System',
   barTextColor: 'rgb(153, 153, 153)',
+  colorPrimary: '#175BF5',
+  colorSecondary: '#585C6D',
 });
 
 addons.setConfig({

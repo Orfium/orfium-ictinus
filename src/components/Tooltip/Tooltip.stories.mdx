@@ -1,4 +1,4 @@
-import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
 import { text, number, select, boolean, withKnobs } from '@storybook/addon-knobs';
 import Tooltip from './Tooltip';
 import { hoverOnTooltips } from './utils';
@@ -34,7 +34,7 @@ Tooltips provide brief, helpful information when a user hovers or focuses on the
 
 ## Props
 
-<Props of={Tooltip} />
+<ArgsTable of={Tooltip} />
 
 ## Usage
 
@@ -55,7 +55,7 @@ Tooltips provide brief, helpful information when a user hovers or focuses on the
 
 Text Tooltip takes a string as a content prop. There are 2 variations of Text Tooltips, default and inverted.
 
-<Preview>
+<Canvas>
   <Story name="Text Tooltip" play={hoverOnTooltips} autoPlay>
     <Stack>
       <Function>
@@ -84,13 +84,13 @@ Text Tooltip takes a string as a content prop. There are 2 variations of Text To
       </Function>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Interactive Tooltip
 
 Interactive Tooltip takes a React Component as a content prop. There are 2 variations of Text Tooltips, default and inverted.
 
-<Preview>
+<Canvas>
   <Story name="Interactive Tooltip" play={hoverOnTooltips} autoPlay>
     <Stack>
       <TooltipShowcase />
@@ -99,13 +99,13 @@ Interactive Tooltip takes a React Component as a content prop. There are 2 varia
       <TooltipShowcase isInverted />
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Tooltip Placement
 
 Tooltip can be placed to the top, bottom, left or right of the element.
 
-<Preview>
+<Canvas>
   <Story name="Tooltip Placement" play={hoverOnTooltips} autoPlay>
     <Stack>
       <Function>
@@ -140,11 +140,11 @@ Tooltip can be placed to the top, bottom, left or right of the element.
       </Function>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Playground
 
-<Preview>
+<Canvas>
   <Story name="Playground" parameters={{ decorators: [withKnobs] }} play={hoverOnTooltips} autoPlay>
     <Stack>
       <Function>
@@ -183,4 +183,4 @@ Tooltip can be placed to the top, bottom, left or right of the element.
       </Function>
     </Stack>
   </Story>
-</Preview>
+</Canvas>

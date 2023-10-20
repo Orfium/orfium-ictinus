@@ -1,8 +1,9 @@
-import { css, SerializedStyles } from '@emotion/react';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
 import { BASE_SHADE } from 'theme/palette';
 
-import { Theme } from '../../../theme';
-import { RequiredProperties } from '../../../utils/common';
+import type { Theme } from '../../../theme';
+import type { RequiredProperties } from '../../../utils/common';
 
 type StyleProps = {
   isActive: boolean;

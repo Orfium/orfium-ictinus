@@ -1,4 +1,4 @@
-import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
 import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
 import Select from './Select';
 import Stack from '../storyUtils/Stack';
@@ -7,53 +7,8 @@ import EdgeCasesSelectShowcase from '../storyUtils/EdgeCasesSelectShowcase';
 import { FIGMA_URL, Function } from '../../utils/common';
 import { useState } from 'react';
 import { StatefulSelect } from './index';
+import { options, optionsWithHelperInDisabled, groupOptions, defaultValue } from './storyUtils';
 import SectionHeader from '../../storybook/SectionHeader';
-const options = [
-  { value: 'chocolate', label: 'Chocolate' },
-  { value: 'strawberry', label: 'Strawberry' },
-  { value: 'banana', label: 'Banana' },
-  { value: 'citrus2', label: 'Citrus2' },
-  { value: 'citrus3', label: 'Citrus3' },
-  { value: 'citrus4', label: 'Citrus4' },
-  { value: 'vanilla', label: 'Vanilla', isDisabled: true },
-];
-const optionsWithHelperInDisabled = [
-  { value: 'chocolate', label: 'Chocolate' },
-  { value: 'strawberry', label: 'Strawberry' },
-  { value: 'banana', label: 'Banana' },
-  { value: 'citrus', label: 'Citrus' },
-  { value: 'why_Disabled', label: 'Why Disabled?', helperText: 'this is why!', isDisabled: true },
-];
-const groupOptions = [
-  {
-    value: 'Sweet',
-    label: 'Sweets',
-    options: [
-      { value: '1', label: 'Chocolate' },
-      { value: '2', label: 'Option 2' },
-    ],
-  },
-  {
-    value: 'Sour',
-    label: 'Sour',
-    options: [{ value: '3', label: 'Option 3' }],
-  },
-  { value: '4', label: 'Option 4' },
-  {
-    value: 'group5',
-    label: 'Group 5',
-    options: [
-      { value: '5', label: 'Option 7' },
-      { value: '6', label: 'Option 8' },
-    ],
-  },
-  {
-    value: 'group6',
-    label: 'Group 6',
-    options: [{ value: '7', label: 'Option 9' }],
-  },
-];
-const defaultValue = options[0];
 
 <Meta
   title="Design System/Select"
@@ -103,7 +58,7 @@ A universal Select component that is a clickable element that can hold many form
 
 ## Props
 
-<Props of={Select} />
+<ArgsTable of={Select} />
 
 ## Variants
 
@@ -111,7 +66,7 @@ A universal Select component that is a clickable element that can hold many form
 
 Simple select component with clearable data and searchable input
 
-<Preview>
+<Canvas>
   <Story name="Simple Select">
     <Stack height={300}>
       <Function>
@@ -159,13 +114,13 @@ Simple select component with clearable data and searchable input
       </Function>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Select with Statuses
 
 Select with Statuses
 
-<Preview>
+<Canvas>
   <Story name="Select with Statuses" parameters={{ decorators: [withKnobs] }}>
     <Stack height={350}>
       <Function>
@@ -227,13 +182,13 @@ Select with Statuses
       </Function>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Select with uncontrolled state
 
 Select with uncontrolled state
 
-<Preview>
+<Canvas>
   <Story name="Select with uncontrolled state" parameters={{ decorators: [withKnobs] }}>
     <Stack height={350}>
       <StatefulSelect
@@ -250,13 +205,13 @@ Select with uncontrolled state
       />
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Select with Highlighted search term
 
 Simple select component where searched term is highlighted in options
 
-<Preview>
+<Canvas>
   <Story name="Select with Highlight">
     <Stack height={350}>
       <Function>
@@ -275,13 +230,13 @@ Simple select component where searched term is highlighted in options
       </Function>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Simple Group Select
 
 Simple select component with grouped data and searchable input
 
-<Preview>
+<Canvas>
   <Story name="Simple Group Select">
     <Stack height={350}>
       <Function>
@@ -300,13 +255,13 @@ Simple select component with grouped data and searchable input
       </Function>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Not Searchable Select
 
 Not Searchable Select
 
-<Preview>
+<Canvas>
   <Story name="Not Searchable Select">
     <Stack height={350}>
       <Function>
@@ -325,13 +280,13 @@ Not Searchable Select
       </Function>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Disabled Select
 
 Select disabled with label
 
-<Preview>
+<Canvas>
   <Story name="Disabled Select">
     <Stack>
       <Select
@@ -342,13 +297,13 @@ Select disabled with label
       />
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Disabled option with helper text
 
 Disabled option with helper text
 
-<Preview>
+<Canvas>
   <Story name="Disabled option with helper text">
     <Stack height={350}>
       <Function>
@@ -367,27 +322,27 @@ Disabled option with helper text
       </Function>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Select with Async and Loading
 
 Select that support asynchronous fetching, with loading status
 
-<Preview>
+<Canvas>
   <Story name="Async Select">
     <SelectShowcase />
   </Story>
-</Preview>
+</Canvas>
 
 ### Select with Async, Loading and Minimum Characters to Search for
 
 Select that support asynchronous fetching, with loading status
 
-<Preview>
+<Canvas>
   <Story name="Async Select with min characters">
     <SelectShowcase minCharactersToSearch={3} />
   </Story>
-</Preview>
+</Canvas>
 
 ### Select with edge case
 
@@ -397,11 +352,11 @@ Select cases where it gets to minimum and maximum width based on options <br />
 2. max width with smaller floating menu content that set to max
 3. min size (150px) for both
 
-<Preview>
+<Canvas>
   <Story name="Select with edge case">
     <EdgeCasesSelectShowcase />
   </Story>
-</Preview>
+</Canvas>
 
 ### MultiSelect
 
@@ -412,7 +367,7 @@ _. In this variation the props: `leftIcon` and `size` are deprecated (`size` is 
 _. Instead of the `selectedOption` prop we now use the `selectedOptions` prop (with type: `SelectOption[]`) .
 _. When in MultiSelect, `onClear` prop refers to the all selected options deletion and `onOptionDelete` prop refers to single option deletion
 
-<Preview>
+<Canvas>
   <Story name="MultiSelect">
     <MultiSelectShowcase
       isDisabled={boolean('isDisabled', false)}
@@ -424,4 +379,4 @@ _. When in MultiSelect, `onClear` prop refers to the all selected options deleti
       isCreatable={boolean('isCreatable', false)}
     />
   </Story>
-</Preview>
+</Canvas>

@@ -3,10 +3,10 @@ import React from 'react';
 import isEqual from 'react-fast-compare';
 
 import { rem } from '../../theme/utils';
-import { TestProps } from '../../utils/types';
+import type { TestProps } from '../../utils/types';
 import Icon from '../Icon';
 import { IconWrapper } from '../TextField/components/commons';
-import { TextFieldProps } from 'components/TextField/TextField';
+import type { TextFieldProps } from 'components/TextField/TextField';
 import TextInputBase from 'components/TextInputBase';
 import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
 import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';

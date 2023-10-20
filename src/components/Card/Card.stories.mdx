@@ -1,4 +1,4 @@
-import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
+import { Meta, Story, Canvas, ArgTypes } from '@storybook/addon-docs';
 import { select, boolean } from '@storybook/addon-knobs';
 import CardShowcase from '../storyUtils/CardShowcase';
 import Card from './Card';
@@ -35,13 +35,13 @@ import { Card } from '@orfium/ictinus';
 
 ## Props
 
-<Props of={Card} />
+<ArgTypes of={Card} />
 
 ### Card with Elevation
 
 Card with Elevation
 
-<Preview>
+<Canvas>
   <Story name="Card with elevation">
     <Stack>
       <CardShowcase
@@ -66,4 +66,4 @@ Card with Elevation
       />
     </Stack>
   </Story>
-</Preview>
+</Canvas>

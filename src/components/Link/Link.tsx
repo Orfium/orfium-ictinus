@@ -1,9 +1,11 @@
 import useTheme from 'hooks/useTheme';
-import React, { AnchorHTMLAttributes } from 'react';
+import type { AnchorHTMLAttributes } from 'react';
+import React from 'react';
 
 import { linkContainer } from './Link.style';
-import { LinkTokens, getLinkTokens } from './Link.tokens';
-import { LinkProps } from './Link.types';
+import type { LinkTokens} from './Link.tokens';
+import { getLinkTokens } from './Link.tokens';
+import type { LinkProps } from './Link.types';
 import Icon from 'components/Icon';
 
 const Link = React.forwardRef<

@@ -1,4 +1,4 @@
-import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
+import { Meta, Canvas, ArgsTable, Story } from '@storybook/addon-docs';
 import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
 import LineChart from './LineChart';
 import BarChartShowCase from '../storyUtils/BarChartShowCase';
@@ -24,9 +24,9 @@ import { LineChart } from '@orfium/ictinus';
 
 ## Props
 
-<Props of={LineChart} />
+<ArgsTable of={LineChart} />
 
-<Preview>
+<Canvas>
   <Story name="LineChart" parameters={{ decorators: [withKnobs] }}>
     <LineChart
       data={initData}
@@ -36,7 +36,7 @@ import { LineChart } from '@orfium/ictinus';
       color={color}
     />
   </Story>
-</Preview>
+</Canvas>
 
 # BarChart
 
@@ -52,13 +52,13 @@ import { BarChart } from '@orfium/ictinus';
 
 ## Props
 
-<Props of={BarChart} />
+<ArgsTable of={BarChart} />
 
-<Preview>
+<Canvas>
   <Story name="BarChart" parameters={{ decorators: [withKnobs] }}>
     <BarChartShowCase />
   </Story>
-</Preview>
+</Canvas>
 
 # DonutChart
 
@@ -74,13 +74,13 @@ import { DonutChart } from '@orfium/ictinus';
 
 ## Props
 
-<Props of={DonutChart} />
+<ArgsTable of={DonutChart} />
 
-<Preview>
+<Canvas>
   <Story name="DonutChart" parameters={{ decorators: [withKnobs] }}>
     <DonutChartShowCase
       chartValue={text('chartValue', 'value')}
       chartUnits={text('chartUnits', 'units')}
     />
   </Story>
-</Preview>
+</Canvas>

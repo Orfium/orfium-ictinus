@@ -1,10 +1,11 @@
-import React, { ReactNode, useCallback } from 'react';
+import type { ReactNode} from 'react';
+import React, { useCallback } from 'react';
 
 import useTheme from '../../../../hooks/useTheme';
 import { useTypeColorToColorMatch } from '../../../../hooks/useTypeColorToColorMatch';
 import { generateTestDataId } from '../../../../utils/helpers';
 import Icon from '../../../Icon';
-import { AcceptedIconNames } from '../../../Icon/types';
+import type { AcceptedIconNames } from '../../../Icon/types';
 import {
   buttonSpanStyle,
   buttonStyle,
@@ -16,7 +17,7 @@ import {
   valueSpanStyle,
   wrapperStyle,
 } from '../../Filter.style';
-import { FilterProps } from '../../types';
+import type { FilterProps } from '../../types';
 import { getTextColor } from '../../utils';
 
 export type FilterBaseProps = {

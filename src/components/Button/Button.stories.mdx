@@ -1,5 +1,5 @@
-import { Meta, Props, Story } from '@storybook/addon-docs';
-import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
+import { Meta, ArgsTable, Story, Canvas } from '@storybook/addon-docs';
+import { boolean, select, withKnobs } from '@storybook/addon-knobs';
 import Button from './Button';
 import Stack from '../storyUtils/Stack';
 import LinkTo from '@storybook/addon-links/react';
@@ -72,7 +72,7 @@ A universal Button component that is a clickable element that can hold many form
 
 ## Props
 
-<Props of={Button} />
+<ArgsTable of={Button} />
 
 ## Variants
 
@@ -80,7 +80,7 @@ A universal Button component that is a clickable element that can hold many form
 
 Button types based on the system approved literals for `primary, secondary, tertiary, danger, inverted, invertedAlt`
 
-<Preview>
+<Canvas>
   <Story name="Button Types">
     <Stack>
       <Button type="primary">Primary</Button>
@@ -103,13 +103,13 @@ Button types based on the system approved literals for `primary, secondary, tert
       </Button>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Inverted Button Types
 
 Button types based on the system approved literals for `primary, secondary, tertiary, danger, inverted, invertedAlt`
 
-<Preview isInverted>
+<Canvas isInverted>
   <Story name="Inverted Button Types">
     <Stack>
       <Button type="inverted">Inverted</Button>
@@ -124,23 +124,23 @@ Button types based on the system approved literals for `primary, secondary, tert
       </Button>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Loading Button
 
 Button Loading variations based on the `isLoading` boolean prop.
 
-<Preview>
+<Canvas>
   <Story name="Loading Button">
     <LoadingButtonShowcase />
   </Story>
-</Preview>
+</Canvas>
 
 ### Buttons with Icons
 
 Buttons with icons. 3 different variations based on the icon's placement.
 
-<Preview>
+<Canvas>
   <Story name="Buttons with Icons" parameters={{ decorators: [withKnobs] }}>
     <Stack>
       <Button
@@ -176,14 +176,14 @@ Buttons with icons. 3 different variations based on the icon's placement.
       </Button>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Buttons with Avatars
 
 An avatar can be placed instead of a left icon. Only for `primary, secondary, tertiary` buttons.
 Can be only combined with a right icon, not with a left icon at the same time.
 
-<Preview>
+<Canvas>
   <Story name="Buttons with Avatars" parameters={{ decorators: [withKnobs] }}>
     <Stack>
       <Button
@@ -226,11 +226,11 @@ Can be only combined with a right icon, not with a left icon at the same time.
       </Button>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Block Button
 
-<Preview>
+<Canvas>
   <Story name="Block Button" parameters={{ decorators: [withKnobs] }}>
     <Stack isVertical>
       <Button
@@ -279,11 +279,11 @@ Can be only combined with a right icon, not with a left icon at the same time.
       </Button>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Button Playground
 
-<Preview>
+<Canvas>
   <Story name="Button Playground" parameters={{ decorators: [withKnobs] }}>
     <Stack isVertical>
       <Button
@@ -303,4 +303,4 @@ Can be only combined with a right icon, not with a left icon at the same time.
       </Button>
     </Stack>
   </Story>
-</Preview>
+</Canvas>

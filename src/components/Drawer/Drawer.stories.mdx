@@ -1,4 +1,4 @@
-import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
 import DrawerShowcase from '../storyUtils/DrawerShowcase';
 import Drawer from './Drawer';
 import { FIGMA_URL } from '../../utils/common';
@@ -45,23 +45,23 @@ When rendering the Drawer component, the parent component should have `position:
 
 ## Props
 
-<Props of={Drawer} />
+<ArgsTable of={Drawer} />
 
 # Drawer
 
 Drawer
 
-<Preview>
+<Canvas>
   <Story name="Drawer">
     <div>
       <DrawerShowcase />
     </div>
   </Story>
-</Preview>
+</Canvas>
 
 Drawer with custom component
 
-<Preview>
+<Canvas>
   <Story name="Drawer with custom component">
     <div>
       <DrawerShowcase
@@ -71,4 +71,4 @@ Drawer with custom component
       />
     </div>
   </Story>
-</Preview>
+</Canvas>

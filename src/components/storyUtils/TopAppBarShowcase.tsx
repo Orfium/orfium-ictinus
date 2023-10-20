@@ -1,8 +1,9 @@
-import React, { FCC, useState } from 'react';
+import type { FCC} from 'react';
+import React, { useState } from 'react';
 
 import TextField from '../TextField';
 import TopAppBar from '../TopAppBar';
-import { TopAppBarProps } from '../TopAppBar/TopAppBar.types';
+import type { TopAppBarProps } from '../TopAppBar/TopAppBar.types';
 
 interface Props extends TopAppBarProps {
   hasLogo?: boolean;

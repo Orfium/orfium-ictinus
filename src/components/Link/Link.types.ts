@@ -1,4 +1,4 @@
-import { AcceptedIconNames } from 'components/Icon';
+import type { AcceptedIconNames } from 'components/Icon';
 
 type LinkSizes = 1 | 2 | 3;
 

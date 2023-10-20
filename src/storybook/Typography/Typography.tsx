@@ -1,6 +1,8 @@
-import React, { FCC, useMemo } from 'react';
+import type { FCC} from 'react';
+import React, { useMemo } from 'react';
 
-import TypographyComponent, { TypographyVariant } from '../../components/Typography';
+import type { TypographyVariant } from '../../components/Typography';
+import TypographyComponent from '../../components/Typography';
 
 export type TypographyProps = {
   children: string;

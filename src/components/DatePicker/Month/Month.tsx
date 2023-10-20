@@ -2,7 +2,8 @@ import isBetween from 'dayjs/plugin/isBetween';
 import { chunk, inRange } from 'lodash';
 import { useCallback } from 'react';
 import * as React from 'react';
-import dayjs, { Dayjs } from 'utils/date';
+import type { Dayjs } from 'utils/date';
+import dayjs from 'utils/date';
 
 import useMonthKeyboardNavigation from './hooks/useMonthKeyboardNavigation';
 import { datesWrapperStyle, weekDayStyle, weekDaysWrapperStyle } from './Month.style';
@@ -13,9 +14,9 @@ import {
   calculateSelectedDayPosition,
   getNumWeeksForMonth,
 } from './Month.utils';
-import { DisabledDates } from '../DatePicker.types';
+import type { DisabledDates } from '../DatePicker.types';
 import Day from '../Day/Day';
-import { Range } from '../OverlayComponent/OverlayComponent';
+import type { Range } from '../OverlayComponent/OverlayComponent';
 import { currentDay } from '../utils';
 
 dayjs.extend(isBetween);

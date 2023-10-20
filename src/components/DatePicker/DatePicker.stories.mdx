@@ -1,4 +1,4 @@
-import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
+import { Meta, Canvas, ArgsTable, Story } from '@storybook/addon-docs';
 import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 import DatePicker from './DatePicker';
 import { CALENDAR_DEFAULT_OPTIONS } from './constants';
@@ -49,7 +49,7 @@ User may either type the date in the suggested format (text input) or click on t
 
 ## Props
 
-<Props of={DatePicker} />
+<ArgsTable of={DatePicker} />
 
 ## Usage
 
@@ -65,7 +65,7 @@ import { DatePicker } from '@orfium/ictinus';
 
 Implementation of the regular DatePicker
 
-<Preview>
+<Canvas>
   <Story name="DatePicker" parameters={{ decorators: [withKnobs] }} play={openDatePicker} autoPlay>
     <Stack vertical height={600}>
       <Function>
@@ -84,13 +84,13 @@ Implementation of the regular DatePicker
       </Function>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### DateRangePicker
 
 Implementation of the regular DateRangePicker
 
-<Preview>
+<Canvas>
   <Story
     name="DateRangePicker"
     parameters={{ decorators: [withKnobs] }}
@@ -115,13 +115,13 @@ Implementation of the regular DateRangePicker
       </Function>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### DatePicker and DateRangePicker with Statuses
 
 DatePicker and DateRangePicker inherit all TextField statuses behavior.
 
-<Preview>
+<Canvas>
   <Story
     name="DatePicker and DateRangePicker with Statuses"
     parameters={{ decorators: [withKnobs] }}
@@ -195,13 +195,13 @@ DatePicker and DateRangePicker inherit all TextField statuses behavior.
       </Function>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### DateRangePicker with options
 
 Implementation of the regular DatePicker with options
 
-<Preview>
+<Canvas>
   <Story name="DateRangePicker with options" parameters={{ decorators: [withKnobs] }}>
     <Stack vertical height={600}>
       <Function>
@@ -222,13 +222,13 @@ Implementation of the regular DatePicker with options
       </Function>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### DatePicker with Filter
 
 Implementation of the DatePicker with a Filter instead of a TextField
 
-<Preview>
+<Canvas>
   <Story name="DatePicker with Filter" parameters={{ decorators: [withKnobs] }}>
     <Stack vertical height={600}>
       <Function>
@@ -263,13 +263,13 @@ Implementation of the DatePicker with a Filter instead of a TextField
       </Function>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### DatePicker with disabled dates
 
 Some disable dates functionality
 
-<Preview>
+<Canvas>
   <Story name="DatePicker with disabled dates">
     <Stack height={600}>
       <Function>
@@ -283,13 +283,13 @@ Some disable dates functionality
       </Function>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Disabled DatePicker & DateRangePicker
 
 Disabled DatePicker & DateRangePicker
 
-<Preview>
+<Canvas>
   <Story name="Disabled DatePicker & DateRangePicker">
     <Stack>
       <Function>
@@ -315,11 +315,11 @@ Disabled DatePicker & DateRangePicker
       </Function>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Playground
 
-<Preview>
+<Canvas>
   <Story name="Playground" parameters={{ decorators: [withKnobs] }}>
     <Function>
       {() => {
@@ -345,4 +345,4 @@ Disabled DatePicker & DateRangePicker
       }}
     </Function>
   </Story>
-</Preview>
+</Canvas>

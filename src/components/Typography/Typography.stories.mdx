@@ -1,4 +1,4 @@
-import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
+import { Meta, Canvas, ArgsTable, Story } from '@storybook/addon-docs';
 import Typography from './Typography';
 import Stack from '../storyUtils/Stack';
 import { FIGMA_URL } from '../../utils/common';
@@ -43,7 +43,7 @@ A global component that is used to represent any text
 
 ## Props
 
-<Props of={Typography} />
+<ArgsTable of={Typography} />
 
 ## Variants
 
@@ -51,7 +51,7 @@ A global component that is used to represent any text
 
 General use of Typography based on available variants
 
-<Preview>
+<Canvas>
   <Story name="Variants">
     <Stack isVertical>
       <Typography variant={'headline01'}>Headline 01</Typography>
@@ -72,13 +72,13 @@ General use of Typography based on available variants
       <Typography variant={'body04'}>Body 04</Typography>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Font Spacing Variations
 
 We have 2 different font spacing variations, normal (font-family: Roboto) and mono (font-family: Roboto Mono)
 
-<Preview>
+<Canvas>
   <Story name="Font Spacing Variations">
     <Stack isVertical>
       <Typography variant={'headline01'}>Headline 01 (Normal)</Typography>
@@ -99,13 +99,13 @@ We have 2 different font spacing variations, normal (font-family: Roboto) and mo
       </Typography>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Types (default)
 
 General use of Typography based on available light types
 
-<Preview>
+<Canvas>
   <Story name="Types (default)">
     <Stack isVertical>
       <Typography type={'primary'}>Primary</Typography>
@@ -115,7 +115,7 @@ General use of Typography based on available light types
       <Typography type={'visited'}>Visited</Typography>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Types (inverted)
 
@@ -123,7 +123,7 @@ General use of Typography based on available inverted type.
 Inverted type is used to show content **on darker background** and **is not linked with dark variation**
 The following example is based on dark background so we can show the difference.
 
-<Preview>
+<Canvas>
   <Story name="Types (inverted)">
     <Stack isVertical isInverted>
       <Typography type={'primary'} isInverted>
@@ -143,13 +143,13 @@ The following example is based on dark background so we can show the difference.
       </Typography>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Extra style
 
 Typography extra styles like bold, italic and underline
 
-<Preview>
+<Canvas>
   <Story name="Extra style">
     <Stack isVertical>
       <Typography isBold>Bold</Typography>
@@ -157,7 +157,7 @@ Typography extra styles like bold, italic and underline
       <Typography isUnderline>Underline</Typography>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### As specific element
 
@@ -165,7 +165,7 @@ Define Typography based on custom component - below are listed by default value
 
 You can define component to be any of the following `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `p`, `span`
 
-<Preview>
+<Canvas>
   <Story name="As specific element">
     <Stack isVertical>
       <Typography variant={'headline01'} component="h1">
@@ -212,4 +212,4 @@ You can define component to be any of the following `h1`, `h2`, `h3`, `h4`, `h5`
       </Typography>
     </Stack>
   </Story>
-</Preview>
+</Canvas>

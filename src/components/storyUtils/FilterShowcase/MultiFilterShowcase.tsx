@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { FilterOption, FilterType, StyleType } from '../..//Filter/types';
+import type { FilterOption, FilterType, StyleType } from '../..//Filter/types';
 import Filter from '../../Filter';
 
 export const dummyUnrefinedData = Array.from({ length: 15 }, (value, index) => ({

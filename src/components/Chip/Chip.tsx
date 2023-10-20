@@ -1,8 +1,9 @@
-import React, { ForwardedRef, Fragment } from 'react';
+import type { ForwardedRef} from 'react';
+import React, { Fragment } from 'react';
 import { errorHandler, generateTestDataId, generateUniqueID } from 'utils/helpers';
 
 import { avatarStyle, chipStyle, closeIconWrapperStyle } from './Chip.style';
-import { ChipProps } from './Chip.types';
+import type { ChipProps } from './Chip.types';
 import Badge from './components/Badge';
 import { defaultProps, errors } from './utils';
 import Avatar from 'components/Avatar';

@@ -1,5 +1,6 @@
-import { css, SerializedStyles } from '@emotion/react';
-import { CSSObject } from '@emotion/serialize';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
+import type { CSSObject } from '@emotion/serialize';
 import { rem } from 'polished';
 
 import { Theme } from '../../../theme';

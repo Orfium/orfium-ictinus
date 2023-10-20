@@ -1,8 +1,8 @@
 import useEscape from 'hooks/useEscape';
 import React from 'react';
-import { DivProps } from 'utils/common';
+import type { DivProps } from 'utils/common';
 import { generateTestDataId } from 'utils/helpers';
-import { TestId } from 'utils/types';
+import type { TestId } from 'utils/types';
 
 import { backdropStyle, closeIconContainer, contentStyle, overlayStyle } from './Overlay.style';
 import IconButton from 'components/IconButton';

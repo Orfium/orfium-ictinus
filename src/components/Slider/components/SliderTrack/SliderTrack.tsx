@@ -1,11 +1,12 @@
+import type { FCC} from 'react';
 import * as React from 'react';
-import { FCC, useMemo } from 'react';
+import { useMemo } from 'react';
 import { getTrackBackground } from 'react-range';
-import { ITrackProps } from 'react-range/lib/types';
+import type { ITrackProps } from 'react-range/lib/types';
 
 import { Track } from './SliderTrack.style';
 import useTheme from '../../../../hooks/useTheme';
-import { TestProps } from '../../../../utils/types';
+import type { TestProps } from '../../../../utils/types';
 import { MAX, MIN } from '../../Slider';
 
 export type SliderTrackProps = {

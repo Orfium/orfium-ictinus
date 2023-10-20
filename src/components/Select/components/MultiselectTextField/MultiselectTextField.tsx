@@ -3,7 +3,7 @@ import omit from 'lodash/omit';
 import React, { useMemo } from 'react';
 import isEqual from 'react-fast-compare';
 import { generateUniqueKey } from 'utils/helpers';
-import { TestProps } from 'utils/types';
+import type { TestProps } from 'utils/types';
 
 import {
   chipContent,
@@ -18,8 +18,8 @@ import Chip from 'components/Chip';
 import Icon from 'components/Icon';
 import Label from 'components/Label';
 import Loader from 'components/Loader';
-import { SelectOption } from 'components/Select';
-import { InputProps, TextFieldProps } from 'components/TextField/TextField';
+import type { SelectOption } from 'components/Select';
+import type { InputProps, TextFieldProps } from 'components/TextField/TextField';
 import TextInputBase from 'components/TextInputBase';
 import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
 

@@ -1,4 +1,5 @@
-import { css, CSSObject } from '@emotion/react';
+import type { CSSObject } from '@emotion/react';
+import { css } from '@emotion/react';
 import useTheme from 'hooks/useTheme';
 import { omit } from 'lodash';
 import React, { forwardRef, ReactNode } from 'react';

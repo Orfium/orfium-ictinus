@@ -1,6 +1,7 @@
 import { css } from '@emotion/react';
 import { get, map } from 'lodash';
-import React, { FCC } from 'react';
+import type { FCC } from 'react';
+import React from 'react';
 
 import {
   colorStyle,

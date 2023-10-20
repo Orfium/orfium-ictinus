@@ -13,7 +13,7 @@ import {
   subMenuIconStyle,
   menuLinkStyle,
 } from '../Navigation.style';
-import { DrawerMenuItem } from 'components/Drawer/types';
+import type { DrawerMenuItem } from 'components/Drawer/types';
 import ExpandCollapse from 'components/ExpandCollapse';
 import Icon from 'components/Icon';
 

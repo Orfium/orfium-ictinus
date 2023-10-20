@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 
 import { backgroundContainer, cardSizing, closeContainer, modalContainer } from './Modal.style';
-import ModalContent, { ModalContentProps } from './ModalContent/ModalContent';
+import type { ModalContentProps } from './ModalContent/ModalContent';
+import ModalContent from './ModalContent/ModalContent';
 import useEscape from '../../hooks/useEscape';
 import { generateTestDataId } from '../../utils/helpers';
-import { TestId } from '../../utils/types';
+import type { TestId } from '../../utils/types';
 import Card from '../Card';
 import IconButton from '../IconButton';
 import ClickAwayListener from '../utils/ClickAwayListener';
@@ -22,7 +23,7 @@ export type ModalProps = {
   isContentPadded?: boolean;
 };
 
-const Modal: React.FCC<ModalProps> = ({
+const Modal: React.FC<React.PropsWithChildren<ModalProps>> = ({
   isOpen = false,
   onClose,
   dataTestId,

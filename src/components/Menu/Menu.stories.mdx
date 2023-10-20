@@ -1,4 +1,4 @@
-import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
+import { Meta, Canvas, ArgsTable, Story } from '@storybook/addon-docs';
 import Menu from '../Menu';
 import MenuShowcase from '../storyUtils/MenuShowcase';
 import Stack from '../storyUtils/Stack';
@@ -37,23 +37,23 @@ import { Menu } from '@orfium/ictinus';
 
 ## Props
 
-<Props of={Menu} />
+<ArgsTable of={Menu} />
 
 ### Menu with selection handler
 
 A menu with a selection handler to return selection on change and to pass selection callback
 
-<Preview>
+<Canvas>
   <Story name="Menu with selection handler">
     <MenuShowcase />
   </Story>
-</Preview>
+</Canvas>
 
 ### Menu with option icon and different colour
 
 Menu with option icon (dots) and different button colour
 
-<Preview>
+<Canvas>
   <Story name="Menu with option icon and different colour">
     <Stack>
       <Menu
@@ -77,13 +77,13 @@ Menu with option icon (dots) and different button colour
       />
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Menu with avatar
 
 Menu with avatar and different button colour
 
-<Preview>
+<Canvas>
   <Story name="Menu with avatar and different button colour">
     <Stack>
       <Menu
@@ -123,13 +123,13 @@ Menu with avatar and different button colour
       />
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Menu disabled
 
 Menu disabled
 
-<Preview>
+<Canvas>
   <Story name="Disabled Menu">
     <Stack>
       <Menu
@@ -141,4 +141,4 @@ Menu disabled
       />
     </Stack>
   </Story>
-</Preview>
+</Canvas>

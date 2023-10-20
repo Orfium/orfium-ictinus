@@ -1,19 +1,20 @@
 import useKeyboardEvents from 'hooks/useKeyboardEvents';
 import React, { useCallback, memo, useMemo, useState } from 'react';
 import isEqual from 'react-fast-compare';
-import { Dayjs } from 'utils/date';
+import type { Dayjs } from 'utils/date';
 
 import { EMPTY_STATE } from './constants';
 import { datePickerStyles } from './DatePicker.style';
-import { DatePickerProps } from './DatePicker.types';
+import type { DatePickerProps } from './DatePicker.types';
 import DatePickInput from './DatePickInput';
-import OverlayComponent, { Range } from './OverlayComponent/OverlayComponent';
+import type { Range } from './OverlayComponent/OverlayComponent';
+import OverlayComponent from './OverlayComponent/OverlayComponent';
 import { initDates } from './utils';
-import { TestProps } from '../../utils/types';
+import type { TestProps } from '../../utils/types';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import PositionInScreen from '../utils/PositionInScreen';
 
-const DatePicker: React.FCC<DatePickerProps & TestProps> = ({
+const DatePicker: React.FC<DatePickerProps & TestProps> = ({
   isRangePicker = false,
   onChange = () => {},
   disableDates,

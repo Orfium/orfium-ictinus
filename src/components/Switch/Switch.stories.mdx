@@ -1,4 +1,4 @@
-import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
+import { Meta, Story, Canvas, ArgsTable, ArgTypes } from '@storybook/addon-docs';
 import Switch from './Switch';
 import Stack from '../storyUtils/Stack';
 import SwitchShowcase from '../storyUtils/SwitchShowcase';
@@ -20,11 +20,11 @@ import { Switch } from '@orfium/ictinus';
 
 ## Props
 
-<Props of={Switch} />
+<ArgTypes of={Switch} />
 
 ### Simple Switch
 
-<Preview>
+<Canvas>
   <Story name="Simple Switch" parameters={{ decorators: [withKnobs] }}>
     <Stack>
       <SwitchShowcase
@@ -35,4 +35,4 @@ import { Switch } from '@orfium/ictinus';
       />
     </Stack>
   </Story>
-</Preview>
+</Canvas>

@@ -1,4 +1,4 @@
-import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
 import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
 import Toast from '../Toast';
 import NotificationVisual from '../Notification/NotificationVisual';
@@ -20,7 +20,7 @@ import NotificationShowcase, {
 
 ### Props
 
-<Props of={InlineNotification} />
+<ArgsTable of={InlineNotification} />
 
 ### Usage
 
@@ -37,7 +37,7 @@ import { InlineNotification } from '@orfium/ictinus';
 />
 ```
 
-<Preview>
+<Canvas>
   <Story
     name="Inline Notification"
     parameters={{
@@ -85,13 +85,13 @@ import { InlineNotification } from '@orfium/ictinus';
       </PresentComponent>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ## Banner Notification
 
 ### Props
 
-<Props of={Banner} />
+<ArgsTable of={Banner} />
 
 ### Usage
 
@@ -112,7 +112,7 @@ import { NotificationsContainer, Banner } from '@orfium/ictinus';
 </NotificationsContainer>
 ```
 
-<Preview>
+<Canvas>
   <Story name="Banner Notification" parameters={{ decorators: [withKnobs] }}>
     <PresentComponent name="" width={1024}>
       <NotificationShowcase>
@@ -159,17 +159,17 @@ import { NotificationsContainer, Banner } from '@orfium/ictinus';
       </NotificationShowcase>
     </PresentComponent>
   </Story>
-</Preview>
+</Canvas>
 
 ## Toast Notification
 
 ### Toast Props
 
-<Props of={Toast} />
+<ArgsTable of={Toast} />
 
 ### NotificationVisual Props
 
-<Props of={NotificationVisual} />
+<ArgsTable of={NotificationVisual} />
 
 ### Usage
 
@@ -190,7 +190,7 @@ import { Toast, NotificationVisual } from '@orfium/ictinus';
 </NotificationsContainer>;
 ```
 
-<Preview>
+<Canvas>
   <Story name="Toast Notification" parameters={{ decorators: [withKnobs] }}>
     <PresentComponent name="" width={768}>
       <NotificationShowcase>
@@ -241,13 +241,13 @@ import { Toast, NotificationVisual } from '@orfium/ictinus';
       </NotificationShowcase>
     </PresentComponent>
   </Story>
-</Preview>
+</Canvas>
 
 ## Snackbar Notification
 
 ### Props
 
-<Props of={Snackbar} />
+<ArgsTable of={Snackbar} />
 
 ### Usage
 
@@ -268,7 +268,7 @@ import { Snackbar } from '@orfium/ictinus';
 </NotificationsContainer>;
 ```
 
-<Preview>
+<Canvas>
   <Story name="Snackbar Notification" parameters={{ decorators: [withKnobs] }}>
     <PresentComponent name="" width={768}>
       <NotificationShowcase>
@@ -307,11 +307,11 @@ import { Snackbar } from '@orfium/ictinus';
       </NotificationShowcase>
     </PresentComponent>
   </Story>
-</Preview>
+</Canvas>
 
 ## Playground 1
 
-<Preview>
+<Canvas>
   <Story
     name="Playground 1"
     parameters={{
@@ -404,11 +404,11 @@ import { Snackbar } from '@orfium/ictinus';
       </NotificationShowcase>
     </PresentComponent>
   </Story>
-</Preview>
+</Canvas>
 
 ## Playground 2
 
-<Preview>
+<Canvas>
   <Story
     name="Playground 2"
     parameters={{
@@ -462,13 +462,13 @@ import { Snackbar } from '@orfium/ictinus';
       </NotificationShowcase>
     </PresentComponent>
   </Story>
-</Preview>
+</Canvas>
 
 ## Playground 3
 
 Notifications contained within a specific parent
 
-<Preview>
+<Canvas>
   <Story
     name="Playground 3"
     parameters={{
@@ -516,4 +516,4 @@ Notifications contained within a specific parent
       </NotificationShowcase>
     </PresentComponent>
   </Story>
-</Preview>
+</Canvas>

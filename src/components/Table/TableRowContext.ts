@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Row, TableType } from './Table';
+import type { Row, TableType } from './Table';
 
 export type TableRowContextProps<T extends { [key: string]: unknown }> = {
   row: Row<T>;

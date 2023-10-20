@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import Filter from 'components/Filter';
-import { FilterOption } from 'components/Filter/types';
+import type { FilterOption } from 'components/Filter/types';
 
 export const dummyUnrefinedData = new Array(15).fill(undefined).map((value, index) => ({
   value: index,

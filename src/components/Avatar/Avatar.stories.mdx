@@ -1,4 +1,4 @@
-import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
+import { Meta, Canvas, ArgsTable, Story } from '@storybook/addon-docs';
 import { select, withKnobs } from '@storybook/addon-knobs';
 import Avatar from './Avatar';
 import AvatarStack from './AvatarStack';
@@ -35,7 +35,7 @@ A universal Avatar component can be found around ictinus on menus or can be a st
 
 ## Props
 
-<Props of={Avatar} />
+<ArgsTable of={Avatar} />
 
 ## Usage
 
@@ -57,7 +57,7 @@ A universal Avatar component can be found around ictinus on menus or can be a st
 
 Avatar with icon
 
-<Preview>
+<Canvas>
   <Story name="Avatar with icon">
     <Stack>
       <Avatar size={1} color={'blue'} iconName={'user'} />
@@ -68,13 +68,13 @@ Avatar with icon
       <Avatar size={6} color={'blue'} iconName={'view'} />
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Avatar with letter
 
 Avatar with letter
 
-<Preview>
+<Canvas>
   <Story name="Avatar with letter">
     <Stack>
       <Avatar size={1} color={'blue'}>
@@ -97,13 +97,13 @@ Avatar with letter
       </Avatar>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Avatar with src
 
 Avatar with src
 
-<Preview>
+<Canvas>
   <Story name="Avatar with src">
     <Stack>
       <Avatar size={1} src={'https://mui.com/static/images/avatar/1.jpg'}>
@@ -126,13 +126,13 @@ Avatar with src
       </Avatar>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Avatar Playground
 
 Avatar Playground
 
-<Preview>
+<Canvas>
   <Story name="Avatar Playground" parameters={{ decorators: [withKnobs] }}>
     <Stack>
       <Avatar
@@ -152,4 +152,4 @@ Avatar Playground
       />
     </Stack>
   </Story>
-</Preview>
+</Canvas>

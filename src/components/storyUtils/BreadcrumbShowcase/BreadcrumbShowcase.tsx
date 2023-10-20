@@ -3,7 +3,7 @@ import { uniqueId } from 'lodash';
 import React, { useState, useEffect } from 'react';
 import { Router, Switch, Route } from 'react-router-dom';
 
-import { BreadcrumbItemData } from '../../Breadcrumb/types';
+import type { BreadcrumbItemData } from '../../Breadcrumb/types';
 import Breadcrumb from 'components/Breadcrumb';
 interface Props {
   initData: BreadcrumbItemData[];

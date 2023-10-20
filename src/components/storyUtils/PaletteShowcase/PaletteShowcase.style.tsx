@@ -1,8 +1,9 @@
-import { css, SerializedStyles } from '@emotion/react';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
 
-import { Theme } from '../../../theme';
+import type { Theme } from '../../../theme';
 import { transition } from '../../../theme/functions';
-import { colorShades, flatColors } from '../../../theme/palette';
+import type { colorShades, flatColors } from '../../../theme/palette';
 
 export const paletteWrapper = css`
   display: grid;

@@ -1,6 +1,5 @@
-import { Meta, Props, Story } from '@storybook/addon-docs';
+import { Meta, Story, Canvas, ArgTypes } from '@storybook/addon-docs';
 import Box from './Box';
-import Stack from '../storyUtils/Stack';
 
 import SectionHeader from '../../storybook/SectionHeader';
 
@@ -33,7 +32,7 @@ The mentality is that we use all CSS props based on https://developer.mozilla.or
 
 ## Props
 
-<Props of={Box} />
+<ArgTypes of={Box} />
 
 ## Variants
 
@@ -43,7 +42,7 @@ Most common use of box can be represented below with spacing, background colors 
 
 All application below comes with a default margin bottom '5' which is 12px
 
-<Preview>
+<Canvas>
   <Story name="Box Padding (All sides)">
     <Box backgroundColor={'default'} p={'3'} mb={'5'}>
       Padding 3
@@ -55,37 +54,37 @@ All application below comes with a default margin bottom '5' which is 12px
       Padding 12
     </Box>
   </Story>
-</Preview>
+</Canvas>
 
 ### Box Horizontal Padding
 
 Padding is the same as "margin" in the application, you can also use `mx` for margin.
 
-<Preview>
+<Canvas>
   <Story name="Box Horizontal Padding">
     <Box backgroundColor={'default'} px={'7'}>
       Padding Horizontal 7
     </Box>
   </Story>
-</Preview>
+</Canvas>
 
 ### Box Vertical Padding
 
 Padding is the same as "margin" in the application, you can also use `my` for margin.
 
-<Preview>
+<Canvas>
   <Story name="Box Vertical Padding">
     <Box backgroundColor={'default'} py={'7'}>
       Padding Vertical 7
     </Box>
   </Story>
-</Preview>
+</Canvas>
 
 ### Box Background
 
 All application below comes with a default margin bottom '5' which is 12px
 
-<Preview>
+<Canvas>
   <Story name="Box Background">
     <Box backgroundColor={'inverted'} color={'inverted.primary'} mb={'5'}>
       Background Inverted
@@ -97,4 +96,4 @@ All application below comes with a default margin bottom '5' which is 12px
       Background Transparent
     </Box>
   </Story>
-</Preview>
+</Canvas>

@@ -1,6 +1,7 @@
-import { css, SerializedStyles } from '@emotion/react';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
 import { rem } from 'polished';
-import { Theme } from 'theme';
+import type { Theme } from 'theme';
 
 import { LABEL_TRANSFORM_LEFT_SPACING } from 'components/Label/Label.style';
 import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';

@@ -1,6 +1,6 @@
 import { select } from '@storybook/addon-knobs';
 
-import { AcceptedIconNames } from 'components/Icon';
+import type { AcceptedIconNames } from 'components/Icon';
 import iconSelector from 'components/Icon/assets/iconSelector';
 
 export const getIconSelectorKnob = (propName: string, initialValue?: AcceptedIconNames) =>

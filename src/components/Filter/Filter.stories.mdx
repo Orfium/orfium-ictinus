@@ -1,4 +1,4 @@
-import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
+import { Meta, Canvas, ArgsTable, Story } from '@storybook/addon-docs';
 import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 
 import Filter from '../Filter';
@@ -80,14 +80,14 @@ import { Filter } from '@orfium/ictinus';
 
 ## Props
 
-<Props of={Filter} />
+<ArgsTable of={Filter} />
 
 ### Filters
 
 A filter with different style types and a selection handler to return selection on change and to pass selection callback.
 Here you can see our two different filter types as well.
 
-<Preview>
+<Canvas>
   <Story name="Preset Filter">
     <h2>Preset</h2>
     <Stack isVertical>
@@ -109,45 +109,45 @@ Here you can see our two different filter types as well.
     <h2>Transparent</h2>
     <div>Transparent Styles are not available for added filters</div>
   </Story>
-</Preview>
+</Canvas>
 
 ### Searchable Filter
 
 A filter that supports searching options
 
-<Preview>
+<Canvas>
   <Story name="Searchable Filter">
     <Stack>
       <FilterShowcase styleType="filled" isSearchable />
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Filter with Async and Loading
 
 Filter that support asynchronous fetching, with loading status
 
-<Preview>
+<Canvas>
   <Story name="Async Filter">
     <AsyncFilterShowcase />
   </Story>
-</Preview>
+</Canvas>
 
 ### Filter with Async, Loading and Minimum Characters to Search for
 
 Filter that support asynchronous fetching, with loading status
 
-<Preview>
+<Canvas>
   <Story name="Async Filter with min characters">
     <AsyncFilterShowcase minCharactersToSearch={3} />
   </Story>
-</Preview>
+</Canvas>
 
 # MultiFilter
 
 A filter that supports searching options
 
-<Preview>
+<Canvas>
   <Story name="MultiFilter">
     <Stack>
       <MultiFilterShowcase
@@ -158,11 +158,11 @@ A filter that supports searching options
       />
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Playground - Knobs
 
-<Preview>
+<Canvas>
   <Story name="Playground" parameters={{ decorators: [withKnobs] }}>
     <FilterShowcase
       items={[
@@ -189,4 +189,4 @@ A filter that supports searching options
       buttonType={select('buttonType', ['primary', 'secondary'], 'primary')}
     />
   </Story>
-</Preview>
+</Canvas>

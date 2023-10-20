@@ -1,8 +1,9 @@
-import React, { FCC } from 'react';
+import type { FCC } from 'react';
+import React from 'react';
 
 import { spinnerContainer } from './Spinner.style';
 import { generateTestDataId } from '../../../../utils/helpers';
-import { TestId } from '../../../../utils/types';
+import type { TestId } from '../../../../utils/types';
 
 export interface Props {
   dataTestId?: TestId;

@@ -1,11 +1,11 @@
 import React from 'react';
 
 import { optionsWrapper, textFieldWrapper } from './MultiFilter.style';
-import { FilterOption, FilterProps } from '../../types';
+import type { FilterOption, FilterProps } from '../../types';
 import Options from '../Options/Options';
 import { menuStyle } from 'components/Filter/Filter.style';
 import MultiTextFieldBase from 'components/MultiTextFieldBase';
-import { SelectOption } from 'components/Select';
+import type { SelectOption } from 'components/Select';
 import { SELECT_ALL_OPTION } from 'components/Select/constants';
 
 type Props = Pick<FilterProps, 'selectedItems' | 'items' | 'isLoading' | 'hasSelectAllOption'> & {

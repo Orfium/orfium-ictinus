@@ -1,13 +1,13 @@
 import React, { useRef } from 'react';
 import { Range } from 'react-range';
-import { IMarkProps, IThumbProps, ITrackProps } from 'react-range/lib/types';
+import type { IMarkProps, IThumbProps, ITrackProps } from 'react-range/lib/types';
 
 import SliderMark from './components/SliderMark';
 import SliderThumb from './components/SliderThumb';
 import SliderTrack from './components/SliderTrack';
 import { Container, InputContainer, InputsContainer } from './Slider.style';
 import useTheme from '../../hooks/useTheme';
-import { TestProps } from '../../utils/types';
+import type { TestProps } from '../../utils/types';
 import TextField from '../TextField';
 
 export type SliderProps = {
@@ -30,7 +30,7 @@ export const STEP_WITH_INCREMENTS = 20;
 export const MIN = 0;
 export const MAX = 100;
 
-const Slider: React.FCC<SliderProps & TestProps> = ({
+const Slider: React.FC<SliderProps & TestProps> = ({
   values,
   onChange,
   onBlur,

@@ -1,4 +1,5 @@
-import React, { ReactEventHandler, useState } from 'react';
+import type { ReactEventHandler} from 'react';
+import React, { useState } from 'react';
 
 import Radio from 'components/Radio';
 

@@ -6,7 +6,7 @@ import { generateUniqueID } from 'utils/helpers';
 
 import Stepper from './components/Stepper/Stepper';
 import { groupStyles } from './NumberField.style';
-import { TextFieldProps } from '../TextField/TextField';
+import type { TextFieldProps } from '../TextField/TextField';
 import Label from 'components/Label';
 import { suffixContainerStyle } from 'components/TextField/TextField.style';
 import TextInputBase from 'components/TextInputBase/TextInputBase';

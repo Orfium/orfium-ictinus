@@ -1,4 +1,4 @@
-import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
+import { Meta, Canvas, ArgsTable, Story } from '@storybook/addon-docs';
 import Icon from './Icon';
 import Stack from '../storyUtils/Stack';
 import PresentComponent from '../storyUtils/PresentComponent';
@@ -33,13 +33,13 @@ import { Icon } from '@orfium/ictinus';
 
 ## Props
 
-<Props of={Icon} />
+<ArgsTable of={Icon} />
 
 ### Icons Gallery
 
 All the icons available for use.
 
-<Preview>
+<Canvas>
   <Story name="Icons Gallery">
     <Stack>
       {Object.keys(iconSelector)
@@ -51,13 +51,13 @@ All the icons available for use.
         ))}
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Icon with color
 
 Icon with color.
 
-<Preview>
+<Canvas>
   <Story name="Icon with color">
     <Stack>
       <PresentComponent name={'primary'}>
@@ -89,13 +89,13 @@ Icon with color.
       </PresentComponent>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Icon with size
 
 Icon with size.
 
-<Preview>
+<Canvas>
   <Story name="Icon with size">
     <Stack>
       <PresentComponent name={'default'}>
@@ -109,4 +109,4 @@ Icon with size.
       </PresentComponent>
     </Stack>
   </Story>
-</Preview>
+</Canvas>

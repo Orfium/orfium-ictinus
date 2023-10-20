@@ -3,9 +3,10 @@ import React, { useCallback } from 'react';
 
 import { emptyStyle } from './Options.style';
 import { SELECT_ALL_OPTION } from '../../../Select/constants';
-import { FilterOption } from '../../types';
+import type { FilterOption } from '../../types';
 import { FILTER_OPTIONS_MAX_HEIGHT } from 'components/Filter/utils';
-import List, { ListItem, ListItemText, ListSelection } from 'components/List';
+import type { ListSelection } from 'components/List';
+import List, { ListItem, ListItemText } from 'components/List';
 import { MAX_NON_VIRTUALIZED_ITEMS_FILTER } from 'components/List/utils';
 
 export interface Props {

@@ -1,4 +1,4 @@
-import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
+import { Meta, Canvas, ArgsTable, Story } from '@storybook/addon-docs';
 import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 import { linkTo } from '@storybook/addon-links';
 import TextField from './TextField';
@@ -40,7 +40,7 @@ such as icons and components, and a multi-input functionality with the help of t
 
 ## Props
 
-<Props of={TextField} />
+<ArgsTable of={TextField} />
 
 ## Usage
 
@@ -65,14 +65,14 @@ such as icons and components, and a multi-input functionality with the help of t
 
 Regular TextField with label options. Label that will float, with or without Placeholder
 
-<Preview>
+<Canvas>
   <Story name="TextField with Label and Placeholder">
     <Stack>
       <TextField label={'Label'} />
       <TextField label={'Label'} placeholder={'Placeholder'} />
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Masked TextField
 
@@ -92,7 +92,7 @@ The mask rules are the following:
   number format would be +\9\9\9 999 999999 (example: +999 123 123456){' '}
 </Tip>
 
-<Preview>
+<Canvas>
   <Story name="Masked TextField (DontTest)">
     <Stack>
       <TextFieldShowCase
@@ -108,13 +108,13 @@ The mask rules are the following:
       />
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### TextField with Icons
 
 TextField with icon options right of the text, either as external image or one of the available ictinus Icons.
 
-<Preview>
+<Canvas>
   <Story name="TextField with Icons">
     <Stack>
       <TextField
@@ -131,13 +131,13 @@ TextField with icon options right of the text, either as external image or one o
       <TextField label={'Label'} suffix={'keyword'} />
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Disabled TextField
 
 Disabled TextField.
 
-<Preview>
+<Canvas>
   <Story name="Disabled TextField">
     <Stack>
       <TextField
@@ -150,13 +150,13 @@ Disabled TextField.
       />
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### TextField with different Statuses
 
 TextField with different Statuses.
 
-<Preview>
+<Canvas>
   <Story name="TextField with different Statuses" parameters={{ decorators: [withKnobs] }}>
     <Stack>
       <TextField
@@ -182,21 +182,21 @@ TextField with different Statuses.
       />
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### MultiTextField
 
 MultiTextField enables a user to enter one or individual entries as free text.
 
-<Preview>
+<Canvas>
   <Story name="MultiTextField">
     <MultiTextFieldShowcase />
   </Story>
-</Preview>
+</Canvas>
 
 ### Playground
 
-<Preview>
+<Canvas>
   <Story name="Playground" parameters={{ decorators: [withKnobs] }}>
     <Stack>
       <TextFieldShowCase
@@ -212,4 +212,4 @@ MultiTextField enables a user to enter one or individual entries as free text.
       />
     </Stack>
   </Story>
-</Preview>
+</Canvas>

@@ -1,9 +1,10 @@
-import { css, SerializedStyles } from '@emotion/react';
-import { Theme } from 'theme';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
+import type { Theme } from 'theme';
 import { BASE_SHADE } from 'theme/palette';
 import { rem } from 'theme/utils';
 
-import { LabelProps } from './Label';
+import type { LabelProps } from './Label';
 import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
 import { generateStylesFromTokens } from 'components/Typography/utils';
 

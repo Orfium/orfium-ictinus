@@ -1,4 +1,4 @@
-import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
+import { Meta, Canvas, ArgsTable, Story } from '@storybook/addon-docs';
 import DropdownButton from './DropdownButton';
 import Stack from '../storyUtils/Stack';
 import { FIGMA_URL } from '../../utils/common';
@@ -52,13 +52,13 @@ A DropdownButton is a dual-function menu button that comes with a CTA and a drop
 
 ## Props
 
-<Props of={DropdownButton} />
+<ArgsTable of={DropdownButton} />
 
 ## Variants
 
 ### Button with DropdownButton
 
-<Preview>
+<Canvas>
   <Story name="Button with Dropdown">
     <Stack>
       <DropdownButton
@@ -86,11 +86,11 @@ A DropdownButton is a dual-function menu button that comes with a CTA and a drop
       </DropdownButton>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### IconButton with Dropdown
 
-<Preview>
+<Canvas>
   <Story name="IconButton with Dropdown">
     <Stack>
       <DropdownButton
@@ -109,4 +109,4 @@ A DropdownButton is a dual-function menu button that comes with a CTA and a drop
       />
     </Stack>
   </Story>
-</Preview>
+</Canvas>

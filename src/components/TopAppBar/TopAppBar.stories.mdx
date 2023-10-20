@@ -1,4 +1,4 @@
-import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
 import TopAppBar from './TopAppBar';
 import Stack from '../storyUtils/Stack';
 import TextField from '../TextField';
@@ -46,47 +46,47 @@ import { TopNavBar } from '@orfium/ictinus';
 
 ## Props
 
-<Props of={TopAppBar} />
+<ArgsTable of={TopAppBar} />
 
 ## UserMenu Props
 
-<Props of={UserMenu} />
+<ArgsTable of={UserMenu} />
 
 # TopAppBar with Logo Placeholder
 
-<Preview>
+<Canvas>
   <Story name="with Logo Placeholder">
     <div style={{ padding: 10 }}>
       <TopAppBarShowcase />
     </div>
   </Story>
-</Preview>
+</Canvas>
 
 # TopAppBar with additionalTools
 
-<Preview>
+<Canvas>
   <Story name="with Additional Tools">
     <div style={{ padding: 10 }}>
       <TopAppBarShowcase hasAdditionalTools={true} />
     </div>
   </Story>
-</Preview>
+</Canvas>
 
 # TopAppBar Dark Theme
 
-<Preview>
+<Canvas>
   <Story name="with Dark theme enabled">
     <div style={{ padding: 10 }}>
       <TopAppBarShowcase isDark={true} />
     </div>
   </Story>
-</Preview>
+</Canvas>
 
 # TopAppBar Playground
 
 TopAppBar Playground
 
-<Preview>
+<Canvas>
   <Story name="playground">
     <div style={{ padding: 10 }}>
       <TopAppBarShowcase
@@ -98,4 +98,4 @@ TopAppBar Playground
       />
     </div>
   </Story>
-</Preview>
+</Canvas>

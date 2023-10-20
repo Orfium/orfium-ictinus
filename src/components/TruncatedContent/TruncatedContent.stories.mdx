@@ -1,4 +1,4 @@
-import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
+import { Meta, Canvas, ArgsTable, Story } from '@storybook/addon-docs';
 import TruncatedContent from './TruncatedContent';
 import Table from '../Table';
 
@@ -19,13 +19,13 @@ import { TruncatedContent } from '@orfium/ictinus';
 
 ## Props
 
-<Props of={TruncatedContent} />
+<ArgsTable of={TruncatedContent} />
 
 # Text Truncation
 
 Regular Text with truncation and tooltip
 
-<Preview>
+<Canvas>
   <Story name="Regular Text with truncation and tooltip">
     <div style={{ width: 150 }}>
       <TruncatedContent tooltipContent="This is a long text that will overflow">
@@ -33,13 +33,13 @@ Regular Text with truncation and tooltip
       </TruncatedContent>
     </div>
   </Story>
-</Preview>
+</Canvas>
 
 # Table With Cell Tooltips
 
 Regular Table with cell tooltips
 
-<Preview>
+<Canvas>
   <Story name="Regular Table with cell tooltips">
     <Table
       columns={['Column 1', 'Column 2', 'Column 3', 'Column 4']}
@@ -63,4 +63,4 @@ Regular Table with cell tooltips
       ]}
     />
   </Story>
-</Preview>
+</Canvas>

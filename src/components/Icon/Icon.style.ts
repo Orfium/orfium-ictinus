@@ -1,8 +1,9 @@
 import { rem } from 'theme/utils';
 
-import { Theme } from '../../theme';
-import { colorShades } from '../../theme/palette';
-import { AcceptedColorComponentTypes, fillPickerBasedOnType } from '../../utils/themeFunctions';
+import type { Theme } from '../../theme';
+import type { colorShades } from '../../theme/palette';
+import type { AcceptedColorComponentTypes} from '../../utils/themeFunctions';
+import { fillPickerBasedOnType } from '../../utils/themeFunctions';
 
 type iconStyleProps = {
   /** Property indicating the color of the icon. Defaults to primary */

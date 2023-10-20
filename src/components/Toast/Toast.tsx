@@ -11,10 +11,10 @@ import {
   expandedContainer,
 } from './Toast.style';
 import { generateTestDataId } from '../../utils/helpers';
-import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
-import { TestId } from '../../utils/types';
+import type { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
+import type { TestId } from '../../utils/types';
 import Icon from '../Icon';
-import { NotificationStyleType, NotificationTypes } from '../Notification/Notification';
+import type { NotificationStyleType, NotificationTypes } from '../Notification/Notification';
 import { actionContainer } from '../Notification/Notification.style';
 import { typeToIconName } from '../Notification/subcomponents/CompactNotification/CompactNotification';
 
@@ -39,7 +39,7 @@ export const isNotificationTypes = (type: string): type is NotificationTypes => 
   return ['success', 'error', 'warning', 'info'].includes(type);
 };
 
-const Toast: React.FCC<ToastProps> = ({
+const Toast: React.FC<React.PropsWithChildren<ToastProps>> = ({
   message,
   type = 'primary',
   styleType = 'elevated',

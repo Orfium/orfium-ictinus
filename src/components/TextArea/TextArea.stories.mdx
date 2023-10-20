@@ -1,4 +1,4 @@
-import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
+import { Meta, Canvas, ArgsTable, Story } from '@storybook/addon-docs';
 import { boolean, select, text, withKnobs, number } from '@storybook/addon-knobs';
 import TextArea from './TextArea';
 import Stack from '../storyUtils/Stack';
@@ -38,7 +38,7 @@ A universal TextArea component used for the case where large string of text is n
 
 ## Props
 
-<Props of={TextArea} />
+<ArgsTable of={TextArea} />
 
 ## Usage
 
@@ -55,7 +55,7 @@ A universal TextArea component used for the case where large string of text is n
 
 TextArea with label, with or without placeholder
 
-<Preview>
+<Canvas>
   <Story name="TextArea with labels">
     <Stack>
       <TextArea label={'Label'} cols={10} rows={5} isResizeEnabled={false} />
@@ -68,19 +68,19 @@ TextArea with label, with or without placeholder
       />
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Resizable TextArea
 
 TextArea and how to change size with cols and rows
 
-<Preview>
+<Canvas>
   <Story name="Resizable TextArea">
     <Stack>
       <TextArea label={'Label'} cols={10} rows={5} />
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### TextArea with Counter
 
@@ -91,7 +91,7 @@ TextArea with maximum characters indicated by a counter.
   passed to the component.
 </Tip>
 
-<Preview>
+<Canvas>
   <Story name="TextArea with Counter">
     <Stack>
       <Function>
@@ -113,13 +113,13 @@ TextArea with maximum characters indicated by a counter.
       </Function>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### TextArea Statuses
 
 TextArea with 3 available statuses: Normal, Error and Read-only.
 
-<Preview>
+<Canvas>
   <Story name="TextArea Statuses" parameters={{ decorators: [withKnobs] }}>
     <Stack>
       <Stack>
@@ -156,13 +156,13 @@ TextArea with 3 available statuses: Normal, Error and Read-only.
       </Stack>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Disabled TextArea
 
 Regular TextArea disabled with label
 
-<Preview>
+<Canvas>
   <Story name="Disabled TextArea">
     <Stack>
       <TextArea
@@ -177,11 +177,11 @@ Regular TextArea disabled with label
       />
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Playground
 
-<Preview>
+<Canvas>
   <Story name="Playground" parameters={{ decorators: [withKnobs] }}>
     <Stack>
       <Function>
@@ -209,4 +209,4 @@ Regular TextArea disabled with label
       </Function>
     </Stack>
   </Story>
-</Preview>
+</Canvas>

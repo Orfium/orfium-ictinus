@@ -1,7 +1,7 @@
 import { get, isEmpty } from 'lodash';
 
 import { parseToken } from './parsers';
-import { Token, TokensObject } from './types';
+import type { Token, TokensObject } from './types';
 
 /**
  * Used by themes like semantic in order to fetch all the variables defined in the `tokens/<theme_name>/variables`

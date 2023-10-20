@@ -4,7 +4,8 @@ import typographyCollection from 'theme/tokens/semantic/variables/typography';
 import { parseCompositionToken } from 'theme/tokens/utils';
 
 import { TableWrapperStyle } from './TypographyTokensShowcase.style';
-import Typography, { TypographyVariant } from 'components/Typography';
+import type { TypographyVariant } from 'components/Typography';
+import Typography from 'components/Typography';
 
 const TypographyTokensShowcase = () => {
   const typographyArray = map(typographyCollection.normal, (value, key) => ({ key, ...value }));

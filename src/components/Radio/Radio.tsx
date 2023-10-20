@@ -9,7 +9,7 @@ import {
 } from './Radio.style';
 import useTheme from '../../hooks/useTheme';
 import { generateTestDataId } from '../../utils/helpers';
-import { TestId } from '../../utils/types';
+import type { TestId } from '../../utils/types';
 import useRadioGroup from '../RadioGroup/useRadioGroup';
 
 export type RadioProps = {

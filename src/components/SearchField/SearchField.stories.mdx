@@ -1,4 +1,4 @@
-import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
+import { Meta, Canvas, ArgsTable, Story } from '@storybook/addon-docs';
 import Stack from '../storyUtils/Stack';
 import SearchField from './SearchField';
 import SearchFieldShowcase from './SearchFieldShowcase';
@@ -42,34 +42,34 @@ import { SearchField } from '@orfium/ictinus';
 
 ## Props
 
-<Props of={SearchField} />
+<ArgsTable of={SearchField} />
 
 # Search Field
 
 Search Field
 
-<Preview>
+<Canvas>
   <Story name="Search Field">
     <SearchFieldShowcase />
   </Story>
-</Preview>
+</Canvas>
 
 # Search Field disabled
 
 Disabled Search Field
 
-<Preview>
+<Canvas>
   <Story name="Search Field disabled">
     <SearchFieldShowcase isDisabled />
   </Story>
-</Preview>
+</Canvas>
 
 # Search Field with placeholder
 
 Search Field with placeholder
 
-<Preview>
+<Canvas>
   <Story name="Search Field with placeholder">
     <SearchFieldShowcase placeholder={'Placeholder'} />
   </Story>
-</Preview>
+</Canvas>

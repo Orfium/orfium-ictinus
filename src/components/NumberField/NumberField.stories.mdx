@@ -1,4 +1,4 @@
-import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
+import { Meta, Canvas, ArgsTable, Story } from '@storybook/addon-docs';
 import { boolean, number, select, text, withKnobs } from '@storybook/addon-knobs';
 import { linkTo } from '@storybook/addon-links';
 import NumberField from './NumberField';
@@ -35,7 +35,7 @@ A universal NumberField that only allows for numerical characters, designed to h
 
 ## Props
 
-<Props of={NumberField} />
+<ArgsTable of={NumberField} />
 
 ## Usage
 
@@ -55,7 +55,7 @@ A universal NumberField that only allows for numerical characters, designed to h
 Formatting options for the value displayed in the number field can be configured based on
 [Intl.NumberFormatOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat)
 
-<Preview>
+<Canvas>
   <Story name="NumberField with number format">
     <Stack>
       <NumberField
@@ -67,7 +67,7 @@ Formatting options for the value displayed in the number field can be configured
       />
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### NumberField with Stepper
 
@@ -78,19 +78,19 @@ NumberField can have a stepper with increment and decrement buttons. Step defaul
   the arrowUp and arrowDown keys.
 </Tip>
 
-<Preview>
+<Canvas>
   <Story name="NumberField with Stepper">
     <Stack>
       <NumberField label={'Label'} hasStepper step={number('Step', undefined)} />
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ## NumberField with min and max values
 
 NumberField can have min and max values provided as props.
 
-<Preview>
+<Canvas>
   <Story name="NumberField with min and max values">
     <Stack>
       <NumberField
@@ -101,26 +101,26 @@ NumberField can have min and max values provided as props.
       />
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### NumberField with Label and Placeholder
 
 NumberField with label options. Label that will float, with or without Placeholder
 
-<Preview>
+<Canvas>
   <Story name="NumberField with Label and Placeholder">
     <Stack>
       <NumberField label={'Label'} />
       <NumberField label={'Label'} placeholder={'Placeholder'} />
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### NumberField with Statuses
 
 NumberField inherits all TextField statuses behavior.
 
-<Preview>
+<Canvas>
   <Story name="NumberField with Label, Placeholder and Statuses">
     <Stack>
       <NumberField
@@ -154,11 +154,11 @@ NumberField inherits all TextField statuses behavior.
       />
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Playground
 
-<Preview>
+<Canvas>
   <Story name="Playground" parameters={{ decorators: [withKnobs] }}>
     <Stack>
       <NumberField
@@ -181,4 +181,4 @@ NumberField inherits all TextField statuses behavior.
       />
     </Stack>
   </Story>
-</Preview>
+</Canvas>

@@ -1,10 +1,11 @@
-import { css, SerializedStyles } from '@emotion/react';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
 import { darken } from 'polished';
-import { Theme } from 'theme';
+import type { Theme } from 'theme';
 import { rem } from 'theme/utils';
 
-import { SelectMenuProps } from './SelectMenu';
-import { TextFieldProps } from 'components/TextField/TextField';
+import type { SelectMenuProps } from './SelectMenu';
+import type { TextFieldProps } from 'components/TextField/TextField';
 
 export const MAX_LARGE_HEIGHT = 277;
 export const MAX_SMALL_HEIGHT = 265;

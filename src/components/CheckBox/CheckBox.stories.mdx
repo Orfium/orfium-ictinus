@@ -1,4 +1,4 @@
-import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
+import { Meta, Story, Canvas, ArgTypes } from '@storybook/addon-docs';
 import { withKnobs, boolean, text } from '@storybook/addon-knobs';
 import CheckBox from './CheckBox';
 import Stack from '../storyUtils/Stack';
@@ -24,7 +24,7 @@ A universal CheckBox component that the input component for any forms.
 
 ## Usage
 
-```js
+```
 import { CheckBox } from '@orfium/ictinus';
 
 <CheckBox />;
@@ -32,13 +32,13 @@ import { CheckBox } from '@orfium/ictinus';
 
 ## Props
 
-<Props of={CheckBox} />
+<ArgTypes of={CheckBox} />
 
 # CheckBox
 
 Regular CheckBox
 
-<Preview>
+<Canvas>
   <Story name="CheckBox">
     <Stack>
       <CheckBox isChecked={false} />
@@ -59,13 +59,13 @@ Regular CheckBox
       <CheckBox isChecked={false} isFilled={false} isIntermediate isDisabled />
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### CheckBox with Label
 
 Regular CheckBox with label
 
-<Preview>
+<Canvas>
   <Story name="CheckBox with Label">
     <div>
       <Stack>
@@ -115,9 +115,9 @@ Regular CheckBox with label
       </Stack>
     </div>
   </Story>
-</Preview>
+</Canvas>
 
-<Preview>
+<Canvas>
   <Story name="CheckBox with Props" parameters={{ decorators: [withKnobs] }}>
     <Stack>
       <CheckBox
@@ -129,4 +129,4 @@ Regular CheckBox with label
       />
     </Stack>
   </Story>
-</Preview>
+</Canvas>

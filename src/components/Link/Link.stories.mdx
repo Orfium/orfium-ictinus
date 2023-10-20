@@ -1,4 +1,4 @@
-import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
+import { Meta, Canvas, ArgsTable, Story } from '@storybook/addon-docs';
 import { boolean, select, withKnobs } from '@storybook/addon-knobs';
 import Link from './Link';
 import Stack from '../storyUtils/Stack';
@@ -34,7 +34,7 @@ A link is a navigational component that takes a user to another URL, an element 
 
 ## Props
 
-<Props of={Link} />
+<ArgsTable of={Link} />
 
 ## Usage
 
@@ -51,13 +51,13 @@ A link is a navigational component that takes a user to another URL, an element 
 
 ## Props
 
-<Props of={Link} />
+<ArgsTable of={Link} />
 
 ## Variants
 
 ### Style
 
-<Preview>
+<Canvas>
   <Story name="Style">
     <Stack isVertical>
       <Link href="#">Primary</Link>
@@ -68,14 +68,14 @@ A link is a navigational component that takes a user to another URL, an element 
       </Link>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Placement
 
 Inline: Used within a body of copy; always with underline text decoration for better discoverability <br/>
 Block: Used without a body of copy; without underline text decoration
 
-<Preview>
+<Canvas>
   <Story name="Placement">
     <Stack isVertical>
       <div>
@@ -94,11 +94,11 @@ Block: Used without a body of copy; without underline text decoration
       </div>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Sizes
 
-<Preview>
+<Canvas>
   <Story name="Sizes">
     <Stack isVertical>
       <Link href="#" size={1}>
@@ -112,11 +112,11 @@ Block: Used without a body of copy; without underline text decoration
       </Link>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Link with Icon
 
-<Preview>
+<Canvas>
   <Story name="Link with Icon" parameters={{ decorators: [withKnobs] }}>
     <Stack isVertical>
       <Link href="#" size={1} iconName={getIconSelectorKnob('iconName', 'externalLink')}>
@@ -130,11 +130,11 @@ Block: Used without a body of copy; without underline text decoration
       </Link>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Playground
 
-<Preview>
+<Canvas>
   <Story name="Playground" parameters={{ decorators: [withKnobs] }}>
     <Stack isVertical>
       <Link
@@ -148,4 +148,4 @@ Block: Used without a body of copy; without underline text decoration
       </Link>
     </Stack>
   </Story>
-</Preview>
+</Canvas>

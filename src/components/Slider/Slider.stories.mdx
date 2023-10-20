@@ -1,4 +1,4 @@
-import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
 import Slider from './Slider';
 import Stack from '../storyUtils/Stack';
 import SwitchShowcase from '../storyUtils/SwitchShowcase';
@@ -21,19 +21,19 @@ import { Slider } from '@orfium/ictinus';
 
 ## Props
 
-<Props of={Slider} />
+<ArgsTable of={Slider} />
 
 ### Range Slider
 
-<Preview>
+<Canvas>
   <Story name="Range Slider (DontTest)" parameters={{ decorators: [withKnobs] }}>
     <SliderShowcase isSelector={false} isDisabled={boolean('isDisabled', false)} />
   </Story>
-</Preview>
+</Canvas>
 
 ### Range Slider with Increments
 
-<Preview>
+<Canvas>
   <Story name="Range Slider with Increments (DontTest)" parameters={{ decorators: [withKnobs] }}>
     <SliderShowcase
       isSelector={false}
@@ -41,19 +41,19 @@ import { Slider } from '@orfium/ictinus';
       hasIncrements={true}
     />
   </Story>
-</Preview>
+</Canvas>
 
 ### Selector Slider
 
-<Preview>
+<Canvas>
   <Story name="Selector Slider (DontTest)" parameters={{ decorators: [withKnobs] }}>
     <SliderShowcase isSelector={true} isDisabled={boolean('isDisabled', false)} />
   </Story>
-</Preview>
+</Canvas>
 
 ### Selector Slider with Increments
 
-<Preview>
+<Canvas>
   <Story name="Selector Slider with Increments (DontTest)" parameters={{ decorators: [withKnobs] }}>
     <SliderShowcase
       isDisabled={boolean('isDisabled', false)}
@@ -61,4 +61,4 @@ import { Slider } from '@orfium/ictinus';
       hasIncrements={true}
     />
   </Story>
-</Preview>
+</Canvas>

@@ -1,9 +1,10 @@
 import { css } from '@emotion/react';
 import { get } from 'lodash';
-import React, { FCC, useCallback } from 'react';
+import type { FCC} from 'react';
+import React, { useCallback } from 'react';
 import globalColorsFigma from 'theme/globals/constants/colors';
 import colorsFigma from 'theme/tokens/semantic/variables/colors';
-import { DotKeys } from 'theme/tokens/utils';
+import type { DotKeys } from 'theme/tokens/utils';
 
 import {
   colorStyle,

@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { rem } from 'theme/utils';
 
-import { ListRowSize } from '../../types';
+import type { ListRowSize } from '../../types';
 import { COMPACT_LIST_ITEM_HEIGHT, NORMAL_LIST_ITEM_HEIGHT } from '../../utils';
 import { getListItemTokens } from 'components/List/List.tokens';
 import { body02, label02, body03, label03 } from 'components/Typography/Typography.config.styles';

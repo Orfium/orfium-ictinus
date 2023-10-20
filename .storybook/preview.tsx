@@ -8,6 +8,7 @@ import Typography from '../src/storybook/Typography';
 import { UsageGuidelines, Tip, Preview } from '../src/storybook';
 import { TypographyWrapper as SBTypographyWrapper } from '../src/storybook/Typography/Typography.style';
 import Box from '../src/components/Box';
+import { Preview as SBPreview } from '@storybook/react';
 
 const viewPorts = {
   desktop1920: {
@@ -102,78 +103,95 @@ export const decorators = [
 ];
 
 const inputEmpty = styled.input(({ theme }) => ({}));
-export const parameters = {
-  controls: {
-    expanded: true,
-    sort: 'requiredFirst',
-  },
-  viewport: {
-    viewports: viewPorts,
-  },
-  options: { showPanel: true },
-  chromatic: { delay: 2000 },
-  viewMode: 'docs',
-  previewTabs: {
-    'storybook/docs/panel': {
-      index: -1,
+const preview: SBPreview = {
+  decorators,
+  parameters: {
+    controls: {
+      expanded: true,
+      sort: 'requiredFirst',
     },
-    canvas: { title: 'Sandbox' },
-  },
-  docs: {
-    page: DocsPage,
-    inlineStories: true,
-    container: ({ children, context }: any) => (
-      // @ts-ignore
-      <DocsContainer context={context}>
-        <ThemeProvider>{children}</ThemeProvider>
-      </DocsContainer>
-    ),
-    components: {
-      h1: ({ children }: any) => (
-        <Box mx={'6'}>
-          {/*// @ts-ignore*/}
-          <Typography css={SBTypographyWrapper} variant={'headline01'}>
-            {children}
-          </Typography>
-        </Box>
+    viewport: {
+      viewports: viewPorts,
+    },
+    options: {
+      storySort: {
+        method: 'alphabetical',
+        order: [
+          'Welcome',
+          'Getting Started',
+          'Guide',
+          'System',
+          'Design Tokens',
+          'Design System',
+          ['*', ['*', 'Docs']],
+          'Hooks',
+        ],
+        locales: 'en-US',
+      },
+      showPanel: true,
+    },
+    chromatic: { delay: 2000 },
+    viewMode: 'docs',
+
+    layout: 'centered',
+    docs: {
+      page: DocsPage,
+      story: {
+        inline: true,
+      },
+      container: ({ children, context }: any) => (
+        // @ts-ignore
+        <DocsContainer context={context}>
+          <ThemeProvider>{children}</ThemeProvider>
+        </DocsContainer>
       ),
-      h2: ({ children }: any) => (
-        <Box mx={'6'}>
-          {/*// @ts-ignore*/}
-          <Typography css={SBTypographyWrapper} variant={'headline02'}>
-            {children}
-          </Typography>
-        </Box>
-      ),
-      h3: ({ children }: any) => (
-        <Box mx={'6'}>
-          {/*// @ts-ignore*/}
-          <Typography css={SBTypographyWrapper} variant={'headline03'}>
-            {children}
-          </Typography>
-        </Box>
-      ),
-      h4: ({ children }: any) => (
-        <Box mx={'6'}>
-          {/*// @ts-ignore*/}
-          <Typography css={SBTypographyWrapper} variant={'headline04'}>
-            {children}
-          </Typography>
-        </Box>
-      ),
-      p: ({ children }: any) => (
-        <Box mx={'6'}>
-          <Typography variant={'body01'}>{children}</Typography>
-        </Box>
-      ),
-      span: ({ children }: any) => <Typography variant={'body01'}>{children}</Typography>,
-      div: ({ children }: any) => <Typography variant={'body01'}>{children}</Typography>,
-      input: inputEmpty,
-      UsageGuidelines,
-      Tip,
-      Preview,
+      components: {
+        h1: ({ children }: any) => (
+          <Box mx={'6'}>
+            {/*// @ts-ignore*/}
+            <Typography css={SBTypographyWrapper} variant={'headline01'}>
+              {children}
+            </Typography>
+          </Box>
+        ),
+        h2: ({ children }: any) => (
+          <Box mx={'6'}>
+            {/*// @ts-ignore*/}
+            <Typography css={SBTypographyWrapper} variant={'headline02'}>
+              {children}
+            </Typography>
+          </Box>
+        ),
+        h3: ({ children }: any) => (
+          <Box mx={'6'}>
+            {/*// @ts-ignore*/}
+            <Typography css={SBTypographyWrapper} variant={'headline03'}>
+              {children}
+            </Typography>
+          </Box>
+        ),
+        h4: ({ children }: any) => (
+          <Box mx={'6'}>
+            {/*// @ts-ignore*/}
+            <Typography css={SBTypographyWrapper} variant={'headline04'}>
+              {children}
+            </Typography>
+          </Box>
+        ),
+        p: ({ children }: any) => (
+          <Box mx={'6'}>
+            <Typography variant={'body01'}>{children}</Typography>
+          </Box>
+        ),
+        span: ({ children }: any) => <Typography variant={'body01'}>{children}</Typography>,
+        div: ({ children }: any) => <Typography variant={'body01'}>{children}</Typography>,
+        input: inputEmpty,
+        UsageGuidelines,
+        Tip,
+        Preview,
+      },
     },
   },
 };
 
-export default parameters;
+export default preview;

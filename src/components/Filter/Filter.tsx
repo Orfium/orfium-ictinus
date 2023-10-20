@@ -1,13 +1,13 @@
 import { debounce } from 'lodash';
 import React, { useMemo } from 'react';
-import { ChangeEvent } from 'utils/common';
+import type { ChangeEvent } from 'utils/common';
 import { errorHandler } from 'utils/helpers';
 
 import FilterBase from './components/FilterBase';
 import MultiFilter from './components/MultiFilter/MultiFilter';
 import SingleFilter from './components/SingleFilter/SingleFilter';
 import useMultiFilterUtils from './hooks/useMultiFilterUtils';
-import { FilterOption, FilterProps } from './types';
+import type { FilterOption, FilterProps } from './types';
 import { errors } from './utils';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import handleSearch from 'components/utils/handleSearch';

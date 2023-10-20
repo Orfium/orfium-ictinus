@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
 import { container, wrapper } from './MultiSelectShowcase.style';
-import Select, { SelectOption, SelectProps } from '../../Select';
+import type { SelectOption, SelectProps } from '../../Select';
+import Select from '../../Select';
 
 type Props = {
   isDisabled?: boolean;

@@ -1,7 +1,8 @@
 import React from 'react';
 
 import { loaderContainer } from './Loader.style';
-import { getLoader, loaderTypes } from './Loader.utils';
+import type { loaderTypes } from './Loader.utils';
+import { getLoader } from './Loader.utils';
 
 export type LoaderType = (typeof loaderTypes)[number];
 
@@ -14,7 +15,7 @@ export type LoaderProps = {
   color?: string;
 };
 
-const Loader: React.FCC<LoaderProps> = ({ type = 'dots', dataTestId, color }) => {
+const Loader: React.FC<LoaderProps> = ({ type = 'dots', dataTestId, color }) => {
   return <div css={loaderContainer()}>{getLoader(type, dataTestId, color)}</div>;
 };
 

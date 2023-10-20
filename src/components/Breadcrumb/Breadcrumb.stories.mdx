@@ -1,4 +1,4 @@
-import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
+import { Meta, Canvas, ArgsTable, Story } from '@storybook/addon-docs';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import BreadcrumbShowcase from '../storyUtils/BreadcrumbShowcase/BreadcrumbShowcase.tsx';
 import Stack from '../storyUtils/Stack';
@@ -46,13 +46,13 @@ import { Breadcrumb } from '@orfium/ictinus';
 
 ## Props
 
-<Props of={Breadcrumb} />
+<ArgsTable of={Breadcrumb} />
 
 # Simple Breadcrumbs (up to 3 levels)
 
 A simple Breadcrumbs example
 
-<Preview>
+<Canvas>
   <Story name="Simple Breadcrumbs">
     <Stack>
       <Breadcrumb>
@@ -62,13 +62,13 @@ A simple Breadcrumbs example
       </Breadcrumb>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 # Active Breadcrumbs
 
 Active Breadcrumbs
 
-<Preview>
+<Canvas>
   <Story name="Active Breadcrumbs">
     <Stack>
       <Router>
@@ -101,13 +101,13 @@ Active Breadcrumbs
       </Router>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 # Active Breadcrumbs with inactive last breadcrumb
 
 Active Breadcrumbs with inactive last breadcrumb
 
-<Preview>
+<Canvas>
   <Story name="Active Breadcrumbs with inactive last breadcrumb">
     <Stack>
       <Router>
@@ -137,13 +137,13 @@ Active Breadcrumbs with inactive last breadcrumb
       </Router>
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 # Breadcrumb showcase
 
 A Breadcrumb showcase
 
-<Preview>
+<Canvas>
   <Story name="Breadcrumb showcase">
     <Stack>
       <BreadcrumbShowcase
@@ -157,4 +157,4 @@ A Breadcrumb showcase
       />
     </Stack>
   </Story>
-</Preview>
+</Canvas>

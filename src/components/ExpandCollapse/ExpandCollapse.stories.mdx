@@ -1,4 +1,4 @@
-import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
 import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
 import ExpandCollapse from './ExpandCollapse';
 import { Fragment } from 'react';
@@ -38,11 +38,11 @@ import { ExpandCollapse } from '@orfium/ictinus';
 
 ## Props
 
-<Props of={ExpandCollapse} />
+<ArgsTable of={ExpandCollapse} />
 
 # ExpandCollapse
 
-<Preview>
+<Canvas>
   <Story name="ExpandCollapse">
     <div>
       <ExpandCollapse
@@ -127,4 +127,4 @@ import { ExpandCollapse } from '@orfium/ictinus';
       </ExpandCollapse>
     </div>
   </Story>
-</Preview>
+</Canvas>

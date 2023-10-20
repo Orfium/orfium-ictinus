@@ -1,8 +1,8 @@
 import { get, isEmpty } from 'lodash';
-import { Theme } from 'theme';
+import type { Theme } from 'theme';
 
 import { parseComponentToken, parseCompositionToken } from './parsers';
-import { Token, TokensObject } from './types';
+import type { Token, TokensObject } from './types';
 
 /**
  * Must be used on react components in order to fetch their component tokens

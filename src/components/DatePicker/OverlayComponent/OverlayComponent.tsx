@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useCallback, useState } from 'react';
-import { Dayjs } from 'utils/date';
+import type { Dayjs } from 'utils/date';
 
 import MonthWrapper from './components/MonthWrapper/MonthWrapper';
 import {
@@ -14,7 +14,7 @@ import {
 import { getRightCalendarDate, getLeftCalendarDate } from './utils';
 import Button from '../../Button';
 import { APPLY, CLEAR_ALL } from '../constants';
-import { DisabledDates, ExtraOption } from '../DatePicker.types';
+import type { DisabledDates, ExtraOption } from '../DatePicker.types';
 
 export type OverlayComponentProps = {
   selectedOption?: string;

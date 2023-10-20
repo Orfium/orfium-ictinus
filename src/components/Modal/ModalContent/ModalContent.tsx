@@ -8,7 +8,7 @@ import {
   modalContentContainer,
 } from './ModalContent.style';
 import { generateTestDataId } from '../../../utils/helpers';
-import { TestId } from '../../../utils/types';
+import type { TestId } from '../../../utils/types';
 import Button from '../../Button';
 
 export type ModalContentProps = {

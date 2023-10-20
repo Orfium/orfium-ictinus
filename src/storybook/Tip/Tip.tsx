@@ -1,5 +1,6 @@
 import { css } from '@emotion/react';
-import React, { FCC } from 'react';
+import type { FCC } from 'react';
+import React from 'react';
 
 import Typography from '../../components/Typography';
 
@@ -23,6 +24,10 @@ const Tip: FCC<TipProps> = ({ title = 'Tip', children }) => {
         h4 {
           margin: 0 0 8px 0;
         }
+
+        p {
+          margin: 0;
+        }
       `}
     >
       <div
@@ -35,7 +40,7 @@ const Tip: FCC<TipProps> = ({ title = 'Tip', children }) => {
           {title}:
         </Typography>
       </div>
-      <span>{children}</span>
+      <span style={{ margin: 0 }}>{children}</span>
     </div>
   );
 };

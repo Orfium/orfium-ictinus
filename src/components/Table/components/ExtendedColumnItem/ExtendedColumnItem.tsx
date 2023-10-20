@@ -2,7 +2,7 @@ import useTheme from 'hooks/useTheme';
 import React from 'react';
 
 import { containerStyles, contentStyles } from './ExtendedColumnItem.style';
-import { ExtendedColumn, Sort } from '../../types';
+import type { ExtendedColumn, Sort } from '../../types';
 import { hasTooltipOrSortingKey, isItemString } from '../../utils';
 import Icon from 'components/Icon';
 import Tooltip from 'components/Tooltip';

@@ -1,15 +1,16 @@
-import { CSSObject } from '@emotion/react';
+import type { CSSObject } from '@emotion/react';
 import useCombinedRefs from 'hooks/useCombinedRefs';
 import { flatMap, head } from 'lodash';
 import uniqueId from 'lodash/uniqueId';
 import React, { forwardRef, useCallback, useEffect, useRef } from 'react';
 
 import { menuStyle, optionStyle } from './SelectMenu.style';
-import { SelectOption } from '../../types';
-import List, { ListItem, ListItemText, ListSection, ListSelection } from 'components/List';
+import type { SelectOption } from '../../types';
+import type { ListSelection } from 'components/List';
+import List, { ListItem, ListItemText, ListSection } from 'components/List';
 import { COMPACT_LIST_ITEM_HEIGHT, MAX_NON_VIRTUALIZED_ITEMS_SELECT } from 'components/List/utils';
 import { SELECT_ALL_OPTION } from 'components/Select/constants';
-import { TextInputBaseProps } from 'components/TextInputBase';
+import type { TextInputBaseProps } from 'components/TextInputBase';
 
 export type SelectMenuProps = {
   filteredOptions: SelectOption[];

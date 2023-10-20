@@ -1,4 +1,4 @@
-import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
 import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
 import Radio from '../Radio';
 import RadioGroup from './RadioGroup';
@@ -33,11 +33,11 @@ import { RadioGroup } from '@orfium/ictinus';
 
 ## Props
 
-<Props of={RadioGroup} />
+<ArgsTable of={RadioGroup} />
 
 # Self controlled radio group
 
-<Preview>
+<Canvas>
   <Story name="Radio with options">
     <div style={{ color: '#82e616' }}>
       <RadioGroup defaultValue="b" name="group">
@@ -47,11 +47,11 @@ import { RadioGroup } from '@orfium/ictinus';
       </RadioGroup>
     </div>
   </Story>
-</Preview>
+</Canvas>
 
 # Self controlled radio group with onChange handler
 
-<Preview>
+<Canvas>
   <Story name="Radio with options with onChange handler">
     <div style={{ color: '#82e616' }}>
       <RadioGroup
@@ -67,4 +67,4 @@ import { RadioGroup } from '@orfium/ictinus';
       </RadioGroup>
     </div>
   </Story>
-</Preview>
+</Canvas>

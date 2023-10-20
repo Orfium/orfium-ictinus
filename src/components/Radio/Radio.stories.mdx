@@ -1,4 +1,4 @@
-import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
+import { Meta, Canvas, ArgsTable, Story } from '@storybook/addon-docs';
 import Radio from './Radio';
 import RadioButtonsShowcase from '../storyUtils/RadioButtonsShowcase';
 import { boolean, select, withKnobs } from '@storybook/addon-knobs';
@@ -34,68 +34,68 @@ import { Radio } from '@orfium/ictinus';
 
 ## Props
 
-<Props of={Radio} />
+<ArgsTable of={Radio} />
 
 ### Not selected Radio (`checked === undefined`)
 
-<Preview>
+<Canvas>
   <Story name="Not selected Radio  (`checked === undefined`)">
     <Stack>
       <Radio />
       <Radio isFilled={false} />
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Not selected Radio (`checked === false`)
 
-<Preview>
+<Canvas>
   <Story name="Not selected Radio (`checked === false`)">
     <Stack>
       <Radio isChecked={false} />
       <Radio isFilled={false} isChecked={false} />
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Selected Radio
 
-<Preview>
+<Canvas>
   <Story name="Selected Radio">
     <Radio isChecked={true} />
   </Story>
-</Preview>
+</Canvas>
 
 ### Disabled not selected Radio
 
-<Preview>
+<Canvas>
   <Story name="Disabled not selected Radio">
     <Stack>
       <Radio isChecked={false} isDisabled={true} />
       <Radio isFilled={false} isChecked={false} isDisabled={true} />
     </Stack>
   </Story>
-</Preview>
+</Canvas>
 
 ### Disabled selected Radio
 
-<Preview>
+<Canvas>
   <Story name="Disabled selected Radio">
     <Radio isChecked={true} isDisabled={true} />
   </Story>
-</Preview>
+</Canvas>
 
 ### Radio group
 
-<Preview>
+<Canvas>
   <Story name="Radio showcase">
     <RadioButtonsShowcase />
   </Story>
-</Preview>
+</Canvas>
 
 ### Radio Playground
 
-<Preview>
+<Canvas>
   <Story name="Radio Playground" parameters={{ decorators: [withKnobs] }}>
     <Radio
       isChecked={boolean('isChecked', true)}
@@ -103,4 +103,4 @@ import { Radio } from '@orfium/ictinus';
       isFilled={boolean('isFilled', false)}
     />
   </Story>
-</Preview>
+</Canvas>

@@ -1,4 +1,4 @@
-import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
+import { Meta, Canvas, ArgsTable, Story } from '@storybook/addon-docs';
 import { select, number } from '@storybook/addon-knobs';
 import Table from './Table';
 import TableFilterShowcase from '../storyUtils/TableFilterShowcase';
@@ -57,13 +57,13 @@ import { Table } from '@orfium/ictinus';
 
 ## Props
 
-<Props of={Table} />
+<ArgsTable of={Table} />
 
 ### Regular Table
 
 Regular Table with simple rows
 
-<Preview>
+<Canvas>
   <Story name="Regular Table with simple rows">
     <Table
       columns={['Title', 'Name', 'Surname', 'Age', 'Sauron Age']}
@@ -159,13 +159,13 @@ Regular Table with simple rows
       ]}
     />
   </Story>
-</Preview>
+</Canvas>
 
 ### Table With Sorting And Column Tooltips
 
 Regular Table with sorting and column tooltips
 
-<Preview>
+<Canvas>
   <Story name="Regular Table with sorting and tooltips">
     <Table
       columns={[
@@ -282,13 +282,13 @@ Regular Table with sorting and column tooltips
       ]}
     />
   </Story>
-</Preview>
+</Canvas>
 
 ### Expandable Table
 
 Table with expandable rows and nested header
 
-<Preview>
+<Canvas>
   <Story name="Table with expandable rows">
     <Table
       columns={['Title', 'Name', 'Surname', 'Age']}
@@ -322,13 +322,13 @@ Table with expandable rows and nested header
       actionWidth={number('Action Width', 3)}
     />
   </Story>
-</Preview>
+</Canvas>
 
 ### Table with Expandable Rows - Expanded on Page Load
 
 Table with Expandable Rows - Expanded on Page Load
 
-<Preview>
+<Canvas>
   <Story name="Table with Expandable Rows - Expanded on Page Load">
     <Table
       columns={['Title', 'Name', 'Surname', 'Age']}
@@ -362,13 +362,13 @@ Table with Expandable Rows - Expanded on Page Load
       isInitiallyExpanded
     />
   </Story>
-</Preview>
+</Canvas>
 
 ### Financial Table
 
 Financial Table that has lines at the end as it requires a financial Orfium table
 
-<Preview>
+<Canvas>
   <Story name="Financial Table">
     <Table
       columns={['Title', 'Name', 'Surname', 'Age']}
@@ -419,13 +419,13 @@ Financial Table that has lines at the end as it requires a financial Orfium tabl
       ]}
     />
   </Story>
-</Preview>
+</Canvas>
 
 ### Fixed Header Table
 
 Fixed Header Table
 
-<Preview>
+<Canvas>
   <Story name="Fixed Header Table">
     <Table
       columns={['Title', 'Name', 'Surname', 'Age']}
@@ -523,13 +523,13 @@ Fixed Header Table
       ]}
     />
   </Story>
-</Preview>
+</Canvas>
 
 ### Expandable Table with sort, fixed Header and cta's
 
 Table with expandable rows with sort, fixed Header and cta's
 
-<Preview>
+<Canvas>
   <Story name="Table with expandable rows and sortDir">
     <Table
       columns={[
@@ -598,14 +598,14 @@ Table with expandable rows with sort, fixed Header and cta's
       actionWidth={number('Action Width', 3)}
     />
   </Story>
-</Preview>
+</Canvas>
 
 ### Table with filtered data for performance
 
 Table with filtered data for performance
 
-<Preview>
+<Canvas>
   <Story name="Table with filtered data for performance">
     <TableFilterShowcase />
   </Story>
-</Preview>
+</Canvas>

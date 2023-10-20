@@ -1,10 +1,10 @@
 import { css } from '@emotion/react';
 
-import { Theme } from '../../theme';
+import type { Theme } from '../../theme';
 
 export const TypographyWrapper = (theme: Theme) =>
   css`
-    margin-top: 35px;
+    margin-top: 35px !important;
     display: grid;
     &:after {
       content: '';

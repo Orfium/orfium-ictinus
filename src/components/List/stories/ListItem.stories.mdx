@@ -1,4 +1,4 @@
-import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
+import { Meta, Canvas, ArgsTable, Story } from '@storybook/addon-docs';
 import List, { ListItem, ListItemAction, ListItemText } from '../index';
 import { FIGMA_URL, Function } from '../../../utils/common';
 import SectionHeader from '../../../storybook/SectionHeader';
@@ -60,13 +60,13 @@ const MyComponent = () => {
 
 ## Props
 
-<Props of={ListItem} />
+<ArgsTable of={ListItem} />
 
 ## Variants
 
 ### List Item Compilations
 
-<Preview>
+<Canvas>
   <Story name="List Item Compilations">
     <Function>
       {() => {
@@ -164,11 +164,11 @@ const MyComponent = () => {
       }}
     </Function>
   </Story>
-</Preview>
+</Canvas>
 
 ### Disabled ListItem
 
-<Preview>
+<Canvas>
   <Story name="Disabled ListItem">
     <Function>
       {() => {
@@ -208,7 +208,7 @@ const MyComponent = () => {
       }}
     </Function>
   </Story>
-</Preview>
+</Canvas>
 
 ### References
 

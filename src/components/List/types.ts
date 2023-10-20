@@ -1,6 +1,6 @@
-import { Key } from 'react';
+import type { Key } from 'react';
 
-import { SelectOption } from 'components/Select';
+import type { SelectOption } from 'components/Select';
 
 export type ListSelection = Set<Key>;
 export type ListSelected = 'all' | Iterable<Key>;

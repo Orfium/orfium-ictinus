@@ -9,7 +9,7 @@ import TableCell from './components/TableCell';
 import TableRow from './components/TableRow';
 import TableRowWrapper from './components/TableRowWrapper';
 import { tableCTAStyle, tableRowHeadersStyle, tableStyle } from './Table.style';
-import { ExtendedColumn, Sort, SortingOrder } from './types';
+import type { ExtendedColumn, Sort, SortingOrder } from './types';
 import { isItemString } from './utils';
 import CheckBox from '../CheckBox';
 

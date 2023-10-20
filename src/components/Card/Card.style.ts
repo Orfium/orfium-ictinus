@@ -1,9 +1,10 @@
-import { css, SerializedStyles } from '@emotion/react';
-import { Elevation } from 'index';
-import { SpacingKey } from 'theme/globals/spacing';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
+import type { Elevation } from 'index';
+import type { SpacingKey } from 'theme/globals/spacing';
 
-import { CardProps } from './Card';
-import { Theme } from '../../theme';
+import type { CardProps } from './Card';
+import type { Theme } from '../../theme';
 
 export const cardStyle =
   ({ elevated, isTransparent, radius }: CardProps) =>

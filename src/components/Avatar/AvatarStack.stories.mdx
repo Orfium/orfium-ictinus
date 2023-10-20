@@ -1,4 +1,4 @@
-import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
+import { Meta, Canvas, ArgsTable, Story } from '@storybook/addon-docs';
 import { select, withKnobs } from '@storybook/addon-knobs';
 import Avatar from './Avatar';
 import AvatarStack from './AvatarStack';
@@ -39,11 +39,11 @@ import { Avatar, AvatarStack } from '@orfium/ictinus';
 
 ## Props
 
-<Props of={AvatarStack} />
+<ArgsTable of={AvatarStack} />
 
 ### Avatar Stack
 
-<Preview>
+<Canvas>
   <Story name="Avatar Stack">
     <Stack isVertical>
       <AvatarStack size={1} color={'blue'}>
@@ -162,4 +162,4 @@ import { Avatar, AvatarStack } from '@orfium/ictinus';
       </AvatarStack>
     </Stack>
   </Story>
-</Preview>
+</Canvas>

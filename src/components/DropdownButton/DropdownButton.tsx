@@ -1,8 +1,8 @@
-import { ClickEvent } from 'hooks/useLoading';
+import type { ClickEvent } from 'hooks/useLoading';
 import useTheme from 'hooks/useTheme';
 import { head } from 'lodash';
 import React, { useCallback } from 'react';
-import { TestProps } from 'utils/types';
+import type { TestProps } from 'utils/types';
 
 import {
   buttonSpanStyle,
@@ -12,11 +12,13 @@ import {
 } from './DropdownButton.style';
 import { generateTestDataId } from '../../utils/helpers';
 import Button from 'components/Button';
-import { PrimitiveButtonTypes } from 'components/Button/Button.types';
+import type { PrimitiveButtonTypes } from 'components/Button/Button.types';
 import IconButton from 'components/IconButton';
-import List, { ListItem, ListItemText, ListItemType, ListSelection } from 'components/List';
+import type { ListSelection } from 'components/List';
+import List, { ListItem, ListItemText, ListItemType } from 'components/List';
 import ClickAwayListener from 'components/utils/ClickAwayListener';
-import { MenuPositionAllowed, optionsStyle } from 'components/utils/DropdownOptions';
+import type { MenuPositionAllowed} from 'components/utils/DropdownOptions';
+import { optionsStyle } from 'components/utils/DropdownOptions';
 
 export type DropdownButtonProps = TestProps & {
   /** The Dropdown Items' CTA */

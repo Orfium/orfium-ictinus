@@ -1,4 +1,4 @@
-import { ExtraOption } from './DatePicker.types';
+import type { ExtraOption } from './DatePicker.types';
 import { currentDay } from './utils';
 
 export const APPLY = 'Apply';
