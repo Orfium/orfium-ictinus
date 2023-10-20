@@ -5,7 +5,7 @@ import { generateTestDataId } from 'utils/helpers';
 
 import { textFieldWrapper, iconWrapper } from './SearchInput.style';
 import Icon from 'components/Icon';
-import Loader from 'components/Loader';
+import ProgressIndicator from 'components/ProgressIndicator';
 import TextField from 'components/TextField';
 
 export type SearchInputProps = {
@@ -21,7 +21,7 @@ const SearchInput = ({ onChange, value, dataTestId, isLoading }: SearchInputProp
   const suffix = useMemo(
     () => (
       <div css={iconWrapper()}>
-        {isLoading && <Loader />}
+        {isLoading && <ProgressIndicator type="circular" />}
         <Icon size={20} name="search" color={theme.utils.getColor('lightGrey', 650)} />
       </div>
     ),

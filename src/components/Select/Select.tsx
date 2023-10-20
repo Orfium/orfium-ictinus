@@ -17,8 +17,8 @@ import Icon from '../Icon';
 import TextField from '../TextField';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import handleSearch from '../utils/handleSearch';
-import Loader from 'components/Loader';
 import MultiTextFieldBase from 'components/MultiTextFieldBase/MultiTextFieldBase';
+import ProgressIndicator from 'components/ProgressIndicator';
 import PositionInScreen from 'components/utils/PositionInScreen';
 
 export const emptyValue: SelectOption = { label: '', value: '' };
@@ -267,19 +267,19 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
   const suffixRender = useMemo(
     () => (
       <div css={suffixContainer(isOpen, isSearchable)}>
-        {isLoading && (
+        {isLoading ? (
           <Box py={'2'} display={'flex'} alignItems={'center'}>
-            <Loader />
+            <ProgressIndicator type="circular" />
           </Box>
+        ) : (
+          <Icon
+            size={isSearchable ? 20 : 12}
+            name={suffixNameSelector}
+            color={theme.utils.getColor('lightGrey', 650)}
+            onClick={handleIconClick}
+            dataTestId="select-right-icon"
+          />
         )}
-
-        <Icon
-          size={isSearchable ? 20 : 12}
-          name={suffixNameSelector}
-          color={theme.utils.getColor('lightGrey', 650)}
-          onClick={handleIconClick}
-          dataTestId="select-right-icon"
-        />
       </div>
     ),
     [isOpen, isLoading, isSearchable, suffixNameSelector, theme.utils, handleIconClick]
