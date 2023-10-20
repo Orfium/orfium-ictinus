@@ -6,12 +6,14 @@ type StackProps = {
   isVertical?: boolean;
   isInverted?: boolean;
   height?: number;
+  width?: number;
 };
 
 const Stack: React.FC<StackProps> = ({
   isVertical = false,
   isInverted = false,
   height,
+  width,
   children,
 }) => {
   const theme = useTheme();
@@ -28,7 +30,7 @@ const Stack: React.FC<StackProps> = ({
     >
       {React.Children.toArray(children).map((item, index) => (
         // eslint-disable-next-line react/no-array-index-key
-        <div key={index} style={{ margin: 5 }}>
+        <div key={index} style={{ margin: 5, ...(width ? { width: rem(width) } : {}) }}>
           {item}
         </div>
       ))}
