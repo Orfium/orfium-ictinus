@@ -1,0 +1,37 @@
+import { isUndefined } from 'lodash';
+import React from 'react';
+import { ProgressBar as AriaProgressBar } from 'react-aria-components';
+
+import { barStyles, fillStyles, progressBarContainer } from './ProgressBar.style';
+import { ProgressIndicatorProps } from 'components/ProgressIndicator/ProgressIndicator.types';
+
+const ProgressBar = React.forwardRef<
+  HTMLDivElement,
+  Pick<ProgressIndicatorProps, 'value' | 'status' | 'hasBorderRadius' | 'dataTestPrefixId'>
+>(({ value, status, hasBorderRadius, dataTestPrefixId }, ref) => {
+  const props = {
+    ...(isUndefined(value) ? { isIndeterminate: true } : { value }),
+  };
+
+  return (
+    <AriaProgressBar {...props} css={progressBarContainer()} ref={ref}>
+      {() => (
+        <div
+          css={barStyles({ hasBorderRadius })}
+          className="bar"
+          data-testid={`${dataTestPrefixId}_linear_progress_container`}
+        >
+          <div
+            css={fillStyles({ status, value })}
+            className="fill"
+            data-testid={`${dataTestPrefixId}_linear_progress_value`}
+          />
+        </div>
+      )}
+    </AriaProgressBar>
+  );
+});
+
+ProgressBar.displayName = 'ProgressBar';
+
+export default ProgressBar;
