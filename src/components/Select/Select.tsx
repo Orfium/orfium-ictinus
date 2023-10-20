@@ -269,7 +269,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
       <div css={suffixContainer(isOpen, isSearchable)}>
         {isLoading ? (
           <Box py={'2'} display={'flex'} alignItems={'center'}>
-            <ProgressIndicator type="circular" />
+            <ProgressIndicator type="circular" dataTestPrefixId='select'/>
           </Box>
         ) : (
           <Icon

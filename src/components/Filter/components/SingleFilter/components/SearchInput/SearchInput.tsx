@@ -21,7 +21,7 @@ const SearchInput = ({ onChange, value, dataTestId, isLoading }: SearchInputProp
   const suffix = useMemo(
     () => (
       <div css={iconWrapper()}>
-        {isLoading && <ProgressIndicator type="circular" />}
+        {isLoading && <ProgressIndicator type="circular" dataTestPrefixId="search" />}
         <Icon size={20} name="search" color={theme.utils.getColor('lightGrey', 650)} />
       </div>
     ),

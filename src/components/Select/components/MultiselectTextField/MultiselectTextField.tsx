@@ -178,7 +178,7 @@ const MultiselectTextField = React.forwardRef<HTMLInputElement, Props & InputPro
 
           {!isDisabled && (
             <div css={rightIconsContainer()}>
-              {/* {isLoading && <ProgressIndicator type="circular" />} */}
+              {isLoading && <ProgressIndicator type="circular" dataTestPrefixId='multi_select_textfield'/>}
               <div css={rightIconStyles({ isClickable: hasValue && !isLocked })}>{icon}</div>
             </div>
           )}

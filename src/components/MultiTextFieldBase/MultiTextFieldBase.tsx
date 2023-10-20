@@ -175,7 +175,7 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
             <div css={rightIconsContainer()}>
               {isLoading ? (
                 <div css={progressIndicatorStyles()}>
-                  <ProgressIndicator type="circular" />
+                  <ProgressIndicator type="circular" dataTestPrefixId='multi_textdield_base' />
                 </div>
               ) : (
                 icon && (

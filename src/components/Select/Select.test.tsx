@@ -112,14 +112,14 @@ describe('Generic Select', () => {
       jest.clearAllMocks();
     });
 
-    it('should display loading dots when isLoading is true', async () => {
+    it('should display progress indicator when isLoading is true', async () => {
       renderSelect(0, true);
 
       selectInput = screen.getByPlaceholderText('Country') as HTMLInputElement;
 
       userEvent.type(selectInput, 'Greece');
 
-      await waitFor(() => expect(screen.getByTestId('dots-loading')).toBeVisible());
+      await waitFor(() => expect(screen.getByTestId('select_circular_progress_container')).toBeVisible());
     });
 
     it('should call asyncSearch when typing', async () => {
