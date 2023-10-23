@@ -91,7 +91,7 @@ const Month: React.FCC<MonthProps> = ({
         css={datesWrapperStyle()}
         ref={calendarRef}
         tabIndex={0}
-        data-testid={'calendar_table'}
+        data-testid="calendar_table"
         {...keyboardProps}
         onFocus={() => {
           if (focusedDay === 0) {

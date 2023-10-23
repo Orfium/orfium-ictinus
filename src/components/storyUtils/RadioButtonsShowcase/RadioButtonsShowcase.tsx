@@ -12,23 +12,23 @@ function RadioButtonsShowcase() {
 
   return (
     <div>
-      <Radio isChecked={selectedValue === 'a'} value={'a'} onChange={handleChange} />
+      <Radio isChecked={selectedValue === 'a'} value="a" onChange={handleChange} />
       <Radio
         isChecked={selectedValue === 'b'}
-        value={'b'}
+        value="b"
         onChange={handleChange}
         isFilled={false}
       />
-      <Radio isChecked={selectedValue === 'c'} value={'c'} onChange={handleChange} />
-      <Radio isChecked={selectedValue === 'd'} value={'d'} onChange={handleChange} isDisabled />
+      <Radio isChecked={selectedValue === 'c'} value="c" onChange={handleChange} />
+      <Radio isChecked={selectedValue === 'd'} value="d" onChange={handleChange} isDisabled />
       <Radio
         isChecked={selectedValue === 'e'}
-        value={'e'}
+        value="e"
         onChange={handleChange}
         isDisabled
         isFilled={false}
       />
-      <Radio isChecked={true} value={'g'} onChange={handleChange} isDisabled />
+      <Radio isChecked={true} value="g" onChange={handleChange} isDisabled />
     </div>
   );
 }

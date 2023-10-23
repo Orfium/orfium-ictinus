@@ -47,7 +47,7 @@ describe('Table', () => {
   });
 
   test('that the onCheck returns the selected rows back when a row is selected', async () => {
-    const onCheck = jest.fn();
+    const onCheck = vi.fn();
     const { getAllByText } = render(
       <Table
         columns={['Title', 'Name', 'Surname', 'Age']}
@@ -68,7 +68,7 @@ describe('Table', () => {
   });
 
   test('that the onCheck on top of the table returns the selected rows back when all are selected', async () => {
-    const onCheck = jest.fn();
+    const onCheck = vi.fn();
     const topLeftText = 'topLeftText';
     const { getByText } = render(
       <Table
@@ -91,7 +91,7 @@ describe('Table', () => {
   });
 
   test('that the header contains sorting and tooltip icons', () => {
-    const onSort = jest.fn();
+    const onSort = vi.fn();
 
     render(
       <Table
@@ -128,7 +128,7 @@ describe('Table', () => {
   });
 
   test('that onSort is called with correct parameters', () => {
-    const onSort = jest.fn();
+    const onSort = vi.fn();
 
     render(
       <Table
@@ -182,7 +182,7 @@ describe('Table', () => {
   });
 
   test('that the order of the icons is correct when column is numerical', () => {
-    const onSort = jest.fn();
+    const onSort = vi.fn();
 
     render(
       <Table

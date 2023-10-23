@@ -15,7 +15,7 @@ import Button from 'components/Button';
 import type { PrimitiveButtonTypes } from 'components/Button/Button.types';
 import IconButton from 'components/IconButton';
 import type { ListSelection } from 'components/List';
-import List, { ListItem, ListItemText, ListItemType } from 'components/List';
+import List, { ListItem, ListItemText } from 'components/List';
 import ClickAwayListener from 'components/utils/ClickAwayListener';
 import type { MenuPositionAllowed} from 'components/utils/DropdownOptions';
 import { optionsStyle } from 'components/utils/DropdownOptions';
@@ -120,12 +120,12 @@ const DropdownButton = React.forwardRef<HTMLButtonElement, DropdownButtonProps>(
           <div css={optionsStyle({ menuPosition })(theme)}>
             {items && (
               <List
-                label={'dropdown-button'}
+                label="dropdown-button"
                 onSelectionChange={onSelectionChange}
                 dataTestId={generateTestDataId('dropdown-button-options', dataTestPrefixId)}
               >
                 {items.map((item) => (
-                  <ListItem key={item} rowSize={'compact'}>
+                  <ListItem key={item} rowSize="compact">
                     <ListItemText>{item}</ListItemText>
                   </ListItem>
                 ))}

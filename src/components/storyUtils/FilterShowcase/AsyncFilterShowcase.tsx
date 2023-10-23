@@ -50,8 +50,8 @@ export const AsyncFilterShowcase: React.FCC<AsyncFilterShowcaseProps> = ({
       defaultValue={defaultValue}
       onAsyncSearch={handleAsyncSearch}
       onSelect={handleSelectItem}
-      styleType={'filled'}
-      label={'Async Label'}
+      styleType="filled"
+      label="Async Label"
     />
   );
 };

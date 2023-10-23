@@ -6,10 +6,10 @@ import { fireEvent, render } from '../../test';
 import DatePicker from './DatePicker';
 import { currentDay, navigateOnElement } from './utils';
 
-global.ResizeObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  unobserve: jest.fn(),
-  disconnect: jest.fn(),
+global.ResizeObserver = vi.fn().mockImplementation(() => ({
+  observe: vi.fn(),
+  unobserve: vi.fn(),
+  disconnect: vi.fn(),
 }));
 
 const format = 'YYYY-MM-DD';
@@ -28,7 +28,7 @@ describe('DatePicker', () => {
   });
 
   it('should handle selecting a day in day picker mode', () => {
-    const onChange = jest.fn();
+    const onChange = vi.fn();
     const { getByText, getByTestId } = render(
       <DatePicker
         dataTestId={'input'}
@@ -62,7 +62,7 @@ describe('DatePicker', () => {
   });
 
   it('should handle selecting a range in range picker mode', () => {
-    const onChange = jest.fn();
+    const onChange = vi.fn();
     const { getByTestId, getAllByText } = render(
       <DatePicker
         dataTestId={'input'}
@@ -153,7 +153,7 @@ describe('DatePicker', () => {
   });
 
   it('should handle escape', async () => {
-    const onChange = jest.fn();
+    const onChange = vi.fn();
     const { getByTestId, getByPlaceholderText } = render(
       <DatePicker
         dataTestId={'input'}
@@ -225,7 +225,7 @@ describe('DatePicker', () => {
   });
 
   it('should handle clearing the selected date', async () => {
-    const onChange = jest.fn();
+    const onChange = vi.fn();
     const { getByPlaceholderText } = render(
       <DatePicker
         dataTestId={'input'}
@@ -248,7 +248,7 @@ describe('DatePicker', () => {
   });
 
   it('should handle clearing the selected date in range pickger', async () => {
-    const onChange = jest.fn();
+    const onChange = vi.fn();
     const { getByPlaceholderText } = render(
       <DatePicker
         dataTestId={'input'}

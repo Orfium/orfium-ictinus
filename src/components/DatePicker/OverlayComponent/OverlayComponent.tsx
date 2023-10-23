@@ -99,12 +99,12 @@ const OverlayComponent: React.FCC<OverlayComponentProps> = ({
         </div>
 
         <div css={buttonsWrapperStyle()}>
-          <Button onClick={onClearAll} dataTestId={'cancel'} type="tertiary">
+          <Button onClick={onClearAll} dataTestId="cancel" type="tertiary">
             {CLEAR_ALL}
           </Button>
           <Button
             onClick={onApply}
-            dataTestId={'apply'}
+            dataTestId="apply"
             isDisabled={Boolean(!selectedDays.from || !selectedDays.to)}
           >
             {APPLY}

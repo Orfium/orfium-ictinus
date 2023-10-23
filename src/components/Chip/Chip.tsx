@@ -35,10 +35,10 @@ const Chip = React.forwardRef<HTMLButtonElement | HTMLDivElement, ChipProps>(
 
     const contents = (
       <Fragment>
-        {isChecked && <Icon size={14} name={'checkmark'} color={'darkGrey'} variant={850} />}
+        {isChecked && <Icon size={14} name="checkmark" color="darkGrey" variant={850} />}
         {thumbnail && (
           <div css={avatarStyle()}>
-            <Avatar color={'blue'} src={thumbnail.src} dataTestPrefixId="chip">
+            <Avatar color="blue" src={thumbnail.src} dataTestPrefixId="chip">
               {thumbnail.name}
             </Avatar>
           </div>
@@ -56,8 +56,8 @@ const Chip = React.forwardRef<HTMLButtonElement | HTMLDivElement, ChipProps>(
           <div aria-hidden={!onClear} css={closeIconWrapperStyle(isDisabled)}>
             <Icon
               size={14}
-              name={'close'}
-              color={'darkGrey'}
+              name="close"
+              color="darkGrey"
               variant={850}
               onClick={(e) => {
                 e.stopPropagation();

@@ -6,10 +6,10 @@ import { selectDropdownOption } from '../../test';
 import Filter from './Filter';
 import { SELECT_ALL_OPTION } from '../Select/constants';
 
-global.ResizeObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  unobserve: jest.fn(),
-  disconnect: jest.fn(),
+global.ResizeObserver = vi.fn().mockImplementation(() => ({
+  observe: vi.fn(),
+  unobserve: vi.fn(),
+  disconnect: vi.fn(),
 }));
 
 const items = [
@@ -32,7 +32,7 @@ const renderFilter = (props: Partial<Props> = {}) => {
     items,
     isSearchable: false,
     selectedItem: { label: 'option 1', value: 1 },
-    onSelect: jest.fn(),
+    onSelect: vi.fn(),
   };
 
   return render(<Filter styleType={'filled'} {...{ ...defaultProps, ...props }} />);
@@ -40,7 +40,7 @@ const renderFilter = (props: Partial<Props> = {}) => {
 
 describe('Generic Filter', () => {
   afterEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   it('should display a dropdown menu when the button is clicked', () => {
@@ -54,7 +54,7 @@ describe('Generic Filter', () => {
   });
 
   it('should trigger onSelect property function when one item of the dropdown is clicked', () => {
-    const onSelect = jest.fn();
+    const onSelect = vi.fn();
     renderFilter({ onSelect });
 
     const button = screen.getByTestId('filter');
@@ -103,7 +103,7 @@ describe('Generic Filter', () => {
   });
 
   it('should call onAsyncSearch when typing', async () => {
-    const onAsyncSearch = jest.fn();
+    const onAsyncSearch = vi.fn();
 
     renderFilter({ isSearchable: true, onAsyncSearch });
 
@@ -117,7 +117,7 @@ describe('Generic Filter', () => {
   });
 
   it('should call onAsyncSearch when minCharactersToSearch check is satisfied', async () => {
-    const onAsyncSearch = jest.fn();
+    const onAsyncSearch = vi.fn();
 
     renderFilter({ isSearchable: true, onAsyncSearch, minCharactersToSearch: 3 });
 
@@ -146,7 +146,7 @@ describe('Multi Filter', () => {
           label={'Country'}
           items={items}
           defaultValue={defaultFilter}
-          onSelect={jest.fn()}
+          onSelect={vi.fn()}
           styleType={'filled'}
           hasSelectAllOption
         />
@@ -163,7 +163,7 @@ describe('Multi Filter', () => {
   });
 
   afterEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   it('renders the Chips and changes label when options are clicked', async () => {

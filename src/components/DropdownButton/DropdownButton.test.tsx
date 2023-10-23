@@ -2,8 +2,8 @@ import { render, screen } from '../../test';
 import DropdownButton from './DropdownButton';
 import userEvent from '@testing-library/user-event';
 
-const mockOnButtonClick = jest.fn();
-const mockonOptionSelect = jest.fn();
+const mockOnButtonClick = vi.fn();
+const mockonOptionSelect = vi.fn();
 
 const renderComponent = () => {
   const props = {
@@ -17,7 +17,7 @@ const renderComponent = () => {
 
 describe('DropdownButton:', () => {
   afterEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   it('should display a dropdown menu when the triangleDown icon is clicked', () => {

@@ -71,7 +71,7 @@ const ExtendedColumnItem: React.FCC<ExtendedColumnItemProps> = ({ item, sorting,
       >
         <Tooltip content={item?.tooltip?.content} placement={item?.tooltip.placement}>
           <Icon
-            name={'info'}
+            name="info"
             dataTestId={`table_icon_tooltip_${itemContentLowerCase}`}
             color={theme.utils.getColor('lightGrey', 750)}
           />

@@ -6,16 +6,11 @@ import { createSerializer } from '@emotion/jest';
 import initStoryshots, { multiSnapshotWithOptions } from '@storybook/addon-storyshots';
 import { ReactElement } from 'react';
 
-jest.mock('react-dom', () => ({
+vi.mock('react-dom', () => ({
   // @ts-ignore
-  ...jest.requireActual('react-dom'),
+  ...vi.requireActual('react-dom'),
   createPortal: (node: any) => node,
 }));
-
-import {
-  TestMethodOptions,
-} from '@storybook/addon-storyshots/dist/ts3.9/api/StoryshotsOptions';
-
 
 /** Every time we run the tests, the dynamic attribute values that are generated for each element cause tests to fail.
  * A quick solution is to update snapshots every time we run the tests (jest -u) and then push the updated snapshots to git.
@@ -64,12 +59,6 @@ const reactTestingLibrarySerializer = {
   print: (val: any, serialize: any, indent: any) => serialize(val.container.firstChild),
   test: (val: any) => val && val.hasOwnProperty('container'),
 };
-
-interface StoryshotMethod extends Omit<TestMethodOptions, 'context'> {
-  context: {
-    fileName: string;
-  };
-}
 
 initStoryshots({
   framework: 'react',

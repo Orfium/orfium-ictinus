@@ -11,7 +11,7 @@ export type SectionHeaderProps = {
 const SectionHeader: FCC<SectionHeaderProps> = ({ title = '' }) => {
   return (
     <div css={sectionHeaderWrapper()}>
-      <Typography variant={'headline01'}>{title}</Typography>
+      <Typography variant="headline01">{title}</Typography>
     </div>
   );
 };

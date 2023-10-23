@@ -23,9 +23,9 @@ export const DEFAULT_USER_MENU = {
 
 const DEFAULT_ADDITIONAL_TOOLS = (
   <>
-    <TextField label={'Label'} />
-    <TextField label={'Label'} />
-    <TextField label={'Label'} />
+    <TextField label="Label" />
+    <TextField label="Label" />
+    <TextField label="Label" />
   </>
 );
 
@@ -45,7 +45,7 @@ const TopAppBarShowcase: FCC<Props> = ({
 }) => {
   const [state, setState] = useState('');
   const logoIcon = hasLogo && (
-    <img src={'https://cdn.orfium.com/dist/0c5279a27dfc65b6b41b52634cbe7b80.svg'} alt={'logo'} />
+    <img src="https://cdn.orfium.com/dist/0c5279a27dfc65b6b41b52634cbe7b80.svg" alt="logo" />
   );
 
   const onSearchHandler = (event: React.ChangeEvent<HTMLInputElement>) => {

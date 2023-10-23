@@ -1,4 +1,3 @@
-import React from 'react';
 import { fireEvent, render } from 'test';
 
 import { currentDay } from '../../../utils';
@@ -22,8 +21,8 @@ describe('MonthWrapper', () => {
 
   it('should run callbacks correctly onDaySelect, setDate', async () => {
     const date = currentDay;
-    const setDate = jest.fn();
-    const onDaySelect = jest.fn();
+    const setDate = vi.fn();
+    const onDaySelect = vi.fn();
     const nextYearDate = date.year(date.year() + 1);
     const monthText = `${nextYearDate.format('MMMM')} ${nextYearDate.format('YYYY')}`;
     const { findByText, findByTestId } = render(

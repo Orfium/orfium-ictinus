@@ -106,7 +106,7 @@ const Radio = React.forwardRef<HTMLInputElement, RadioProps>((props, ref) => {
         onBlur={handleBlur}
         onMouseLeave={handleBlur}
         onMouseOver={handleFocus}
-        type={'radio'}
+        type="radio"
         onChange={handleChange}
         name={nameValue}
         value={value}

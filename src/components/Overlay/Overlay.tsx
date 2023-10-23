@@ -45,9 +45,9 @@ const Overlay = React.forwardRef<HTMLDivElement, React.PropsWithChildren<Overlay
             <div css={closeIconContainer()}>
               <IconButton
                 type="tertiary"
-                name={'close'}
+                name="close"
                 onClick={onClose}
-                dataTestId={'overlay-close'}
+                dataTestId="overlay-close"
               />
             </div>
             <div css={contentStyle()}>{children}</div>

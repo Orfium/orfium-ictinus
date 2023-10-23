@@ -13,7 +13,7 @@ describe('Modal', () => {
   };
 
   test('Modal renders correctly', async () => {
-    const closeCTA = jest.fn();
+    const closeCTA = vi.fn();
 
     const { findByText, findByTestId } = render(
       <Modal isOpen={true} onClose={closeCTA} dataTestId={'modal'}>
@@ -29,7 +29,7 @@ describe('Modal', () => {
   });
 
   test('Modal renders correctly with ModalContent', async () => {
-    const closeCTA = jest.fn();
+    const closeCTA = vi.fn();
 
     const { findByText, findByTestId } = render(
       <Modal isOpen={true} onClose={closeCTA} dataTestId={'modal'}>
@@ -48,7 +48,7 @@ describe('Modal', () => {
   });
 
   test('Modal closeCTA works properly when clicked', async () => {
-    const closeCTA = jest.fn();
+    const closeCTA = vi.fn();
 
     const { findByTestId } = render(
       <Modal isOpen={true} onClose={closeCTA} dataTestId={'modal'}>
@@ -63,9 +63,9 @@ describe('Modal', () => {
   });
 
   test('Modal buttons works properly when clicked', async () => {
-    const closeCTA = jest.fn();
-    const primaryCTA = jest.fn();
-    const secondaryCTA = jest.fn();
+    const closeCTA = vi.fn();
+    const primaryCTA = vi.fn();
+    const secondaryCTA = vi.fn();
 
     const { findByTestId } = render(
       <Modal isOpen={true} onClose={closeCTA} dataTestId={'modal'}>

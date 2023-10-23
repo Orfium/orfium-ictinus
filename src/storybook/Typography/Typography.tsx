@@ -1,4 +1,4 @@
-import type { FCC} from 'react';
+import type { FCC } from 'react';
 import React, { useMemo } from 'react';
 
 import type { TypographyVariant } from '../../components/Typography';

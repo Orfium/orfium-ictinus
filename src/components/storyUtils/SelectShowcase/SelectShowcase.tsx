@@ -5,7 +5,7 @@ import { rem } from 'theme/utils';
 import type { SelectOption } from '../../Select';
 import Select from '../../Select';
 
-export const dummyUnrefinedData = new Array(15).fill(undefined).map((value, index) => ({
+export const dummyUnrefinedData = new Array(15).fill(undefined).map((__value, index) => ({
   value: index,
   label: `Test option ${index}`,
 }));
@@ -40,7 +40,7 @@ const SelectShowcase: React.FCC<SelectShowcaseProps> = ({ minCharactersToSearch 
     >
       <Select
         isAsync
-        label={'Flavour'}
+        label="Flavour"
         options={options}
         selectedOption={selectedOption}
         onChange={setSelectedOption}

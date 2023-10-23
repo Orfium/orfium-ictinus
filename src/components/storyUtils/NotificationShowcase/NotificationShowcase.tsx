@@ -1,6 +1,6 @@
 import { select } from '@storybook/addon-knobs';
 import type { ReactNode} from 'react';
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 
 import Button from '../../Button';
 import NotificationsContainer from '../../Notification/NotificationsContainer';

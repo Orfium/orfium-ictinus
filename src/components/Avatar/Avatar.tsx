@@ -25,7 +25,7 @@ const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
       return (
         <Icon
           color={tokens(`textColor.${color}` as AvatarTokens)}
-          name={'userAvatar'}
+          name="userAvatar"
           size={parseFloat(tokens(`size.${size}` as AvatarTokens, parseAvatarIconSize))}
         />
       );

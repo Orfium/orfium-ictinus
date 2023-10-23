@@ -3,7 +3,6 @@ import { css } from '@emotion/react';
 import type { CSSObject } from '@emotion/serialize';
 import { rem } from 'polished';
 
-import { Theme } from '../../../theme';
 
 export const container =
   (hasOverflow?: boolean, isVisible?: boolean,

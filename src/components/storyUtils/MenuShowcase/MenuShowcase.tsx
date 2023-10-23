@@ -14,7 +14,7 @@ const MenuShowcase = () => {
         items={['My Profile', 'Settings', 'Billing', 'Notifications', 'Logout']}
         selectedItem={selectedItem}
         onSelect={(option) => setSelectedItem(option)}
-        buttonText={'More'}
+        buttonText="More"
       />
     </div>
   );

@@ -179,7 +179,7 @@ import WriterIcon from './writer.svg?react';
 import YoutubeIcon from './youtube.svg?react';
 import type { AcceptedIconNames } from '../types';
 
-const iconSelector: { [key in AcceptedIconNames]: string } = {
+const iconSelector: { [key in AcceptedIconNames]: React.FunctionComponent } = {
   account: AccountIcon,
   actions: ActionsIcon,
   add: AddIcon,

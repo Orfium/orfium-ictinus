@@ -5,10 +5,10 @@ import StatefulSelect from './StatefulSelect';
 import { fireEvent } from '@testing-library/react';
 import { SELECT_ALL_OPTION } from './constants';
 
-global.ResizeObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  unobserve: jest.fn(),
-  disconnect: jest.fn(),
+global.ResizeObserver = vi.fn().mockImplementation(() => ({
+  observe: vi.fn(),
+  unobserve: vi.fn(),
+  disconnect: vi.fn(),
 }));
 
 const dropdownList = [
@@ -26,7 +26,7 @@ const dropdownListWithHelperText = [
 
 describe('Generic Select', () => {
   describe('Sync Select', () => {
-    const handleSubmit = jest.fn();
+    const handleSubmit = vi.fn();
 
     let selectInput: HTMLInputElement;
     let clearIcon: HTMLElement;
@@ -44,7 +44,7 @@ describe('Generic Select', () => {
     });
 
     afterEach(() => {
-      jest.clearAllMocks();
+      vi.clearAllMocks();
     });
 
     it('should change the input value correctly', async () => {
@@ -86,8 +86,8 @@ describe('Generic Select', () => {
   });
 
   describe('Async Select', () => {
-    const handleSubmit = jest.fn();
-    const asyncSearch = jest.fn();
+    const handleSubmit = vi.fn();
+    const asyncSearch = vi.fn();
 
     let selectInput: HTMLInputElement;
 
@@ -108,7 +108,7 @@ describe('Generic Select', () => {
     };
 
     afterEach(() => {
-      jest.clearAllMocks();
+      vi.clearAllMocks();
     });
 
     it('should display loading dots when isLoading is true', async () => {
@@ -142,7 +142,7 @@ describe('Generic Select', () => {
   });
 
   describe('Select helper text option', () => {
-    const handleSubmit = jest.fn();
+    const handleSubmit = vi.fn();
 
     let selectInput: HTMLInputElement;
 
@@ -160,7 +160,7 @@ describe('Generic Select', () => {
     };
 
     afterEach(() => {
-      jest.clearAllMocks();
+      vi.clearAllMocks();
     });
 
     it('should display helper text when passed as prop', async () => {
@@ -253,8 +253,8 @@ describe('Generic Select', () => {
     });
 
     it('on type more than 1 character in input and enter selects the first from the list', async () => {
-      jest.useFakeTimers();
-      const handleSubmit = jest.fn();
+      vi.useFakeTimers();
+      const handleSubmit = vi.fn();
 
       const { getByTestId } = render(
         <div>
@@ -284,7 +284,7 @@ describe('Generic Select', () => {
         key: 'Enter',
       });
 
-      jest.runAllTimers();
+      vi.runAllTimers();
 
       expect(handleSubmit).toBeCalledTimes(2);
       expect(handleSubmit).toBeCalledWith(dropdownList[1]);
@@ -317,7 +317,7 @@ describe('Multi Select', () => {
   });
 
   afterEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   it('renders the Chips when options are clicked', async () => {

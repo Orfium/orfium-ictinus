@@ -45,8 +45,8 @@ const TextColorShowcase = () => {
           }}
         >
           <Typography
-            variant={'headline04'}
-            type={'secondary'}
+            variant="headline04"
+            type="secondary"
             isInverted={colorCategory === 'inverted'}
           >
             {colorCategory}
@@ -57,7 +57,7 @@ const TextColorShowcase = () => {
               <div css={{ marginBottom: '8px' }}>
                 <Typography
                   type={color.type as TextColorTypes}
-                  variant={'title01'}
+                  variant="title01"
                   isInverted={colorCategory === 'inverted'}
                 >
                   {color.type}
@@ -65,27 +65,27 @@ const TextColorShowcase = () => {
               </div>
               <div css={descriptionStyle(colorCategory)}>
                 <Typography
-                  variant={'label03'}
-                  component={'span'}
-                  type={'active'}
+                  variant="label03"
+                  component="span"
+                  type="active"
                   isInverted={colorCategory === 'inverted'}
                 >
                   {color.label}
                 </Typography>
                 {' = '}
                 <Typography
-                  variant={'label03'}
-                  component={'span'}
-                  type={'active'}
+                  variant="label03"
+                  component="span"
+                  type="active"
                   isInverted={colorCategory === 'inverted'}
                 >
                   {color.value}
                 </Typography>
                 {' = '}
                 <Typography
-                  variant={'label03'}
-                  component={'span'}
-                  type={'active'}
+                  variant="label03"
+                  component="span"
+                  type="active"
                   isInverted={colorCategory === 'inverted'}
                 >
                   {color.hex}

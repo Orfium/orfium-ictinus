@@ -13,7 +13,7 @@ const TypographyTokensShowcase = () => {
   const parsedTypographyCompositionToken = parseCompositionToken(typographyCollection.normal);
 
   return (
-    <table css={TableWrapperStyle} width={'100%'}>
+    <table css={TableWrapperStyle} width="100%">
       <thead css={{ background: '#FFFFFF' }}>
         <tr>
           <th>Title & description</th>
@@ -31,7 +31,7 @@ const TypographyTokensShowcase = () => {
                 {key} (Mono)
               </Typography>
               <br />
-              <Typography variant={'body01'} type={'secondary'}>
+              <Typography variant="body01" type="secondary">
                 {description}
               </Typography>
             </td>

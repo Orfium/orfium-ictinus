@@ -4,7 +4,7 @@ import globals from './globals';
 import overrides from './overrides';
 import { getAAColor, getAAColorFromSwatches, getColor } from './palette';
 import tokens from './tokens';
-import type { TextColorTypes, Theme, ThemeConfig } from './types';
+import type { ColorScheme, TextColorTypes, Theme, ThemeConfig } from './types';
 
 const defaultTheme = (theming: ColorScheme): Theme => {
   return {

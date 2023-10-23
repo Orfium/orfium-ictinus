@@ -1,4 +1,3 @@
-import React from 'react';
 
 // @TODO this needs to be used on Select/Filter level now to have such functionality
 // import Highlighter from 'react-highlight-words';

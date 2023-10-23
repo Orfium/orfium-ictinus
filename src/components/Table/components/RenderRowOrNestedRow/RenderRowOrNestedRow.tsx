@@ -51,7 +51,7 @@ const RenderRowWithCells = React.memo(
       >
         {hasOnSelectionChange && (
           <TableCell
-            component={'th'}
+            component="th"
             isSticky={false}
             width={50}
             isPadded={isPadded}
@@ -61,7 +61,7 @@ const RenderRowWithCells = React.memo(
           >
             <div onClick={(e) => e.stopPropagation()}>
               <CheckBox
-                dataTestIdSuffix={'row-check'}
+                dataTestIdSuffix="row-check"
                 isChecked={isRowSelected}
                 onClick={tChange}
                 isFilled={false}
@@ -158,7 +158,7 @@ const RenderRowOrNestedRow = <T extends { [key: string]: unknown }>({
                         colSpan={columnCount}
                         dataTestIdPrefix={dataTestIdPrefix}
                         rowIndex={rowIndex}
-                        index={'expanded'}
+                        index="expanded"
                       >
                         {ExpandedComponent}
                       </TableCell>

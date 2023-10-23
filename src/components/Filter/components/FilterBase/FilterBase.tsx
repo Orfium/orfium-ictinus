@@ -126,7 +126,7 @@ export const FilterBase = React.forwardRef<HTMLButtonElement, FilterBaseProps>((
             <div css={dividedButtonStyle(buttonStyleProps)}>
               <Icon
                 size={19}
-                name={'closeTag'}
+                name="closeTag"
                 color={pickIconColor(true)}
                 onClick={(e) => {
                   e.stopPropagation();

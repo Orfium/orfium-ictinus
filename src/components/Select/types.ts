@@ -67,6 +67,6 @@ export type SelectProps = {
   /** Whether the MultiSelect should have a Select All option */
   hasSelectAllOption?: boolean;
 } & (MultiSelectProps | SingleSelectProps) &
-  Omit<TextFieldProps, 'onChange'> &
-  Omit<InputProps, 'onChange'> &
+  Omit<TextFieldProps, 'onChange' | 'placeholder'> &
+  Omit<InputProps, 'onChange' | 'placeholder'> &
   TestProps;

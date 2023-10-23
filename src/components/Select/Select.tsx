@@ -86,7 +86,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
 
           /** When the textField's value equals the selectedOption's label we should clear the field*/
           if (!isMulti) {
-            if (selectedOption && onChange) {
+            if (selectedOption && onChange && 'label' in selectedOption) {
               if (selectedOption.label === textFieldValue) {
                 onChange(undefined);
                 setSearchValue('');
@@ -141,7 +141,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
       setSearchValue('');
     }
 
-    if (isMulti) {
+    if (isMulti === true) {
       if (onChange && selectedOption) {
         if (isEqual(option, SELECT_ALL_OPTION)) {
           onChange(options.filter((o) => !o.isDisabled));
@@ -151,6 +151,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
       }
     } else {
       if (onChange) {
+        // @ts-ignore
         onChange(option);
       }
     }
@@ -268,7 +269,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
     () => (
       <div css={suffixContainer(isOpen, isSearchable)}>
         {isLoading && (
-          <Box py={'2'} display={'flex'} alignItems={'center'}>
+          <Box py="2" display="flex" alignItems="center">
             <Loader />
           </Box>
         )}
@@ -347,7 +348,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
                 autoComplete="off"
                 {...keyboardProps}
                 onClick={() => setIsOpen(true)}
-                role={'combobox'}
+                role="combobox"
                 aria-expanded={isOpen}
                 aria-controls={selectUniqueId}
               />
@@ -356,17 +357,17 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
                 suffix={suffixRender}
                 {...keyboardProps}
                 onInput={handleOnInput}
-                readOnly={!isSearchable}
+                isReadOnly={!isSearchable}
                 isDisabled={isDisabled}
                 dataTestId={generateTestDataId('select-input', dataTestId)}
                 {...restInputProps}
-                placeholder={undefined}
                 onClick={() => setIsOpen(true)}
                 status={status}
+                label=""
                 value={textFieldValue}
                 ref={combinedRefs}
                 autoComplete="off"
-                role={'combobox'}
+                role="combobox"
                 aria-expanded={isOpen}
                 aria-controls={selectUniqueId}
               />
@@ -377,7 +378,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
             ref={listRef}
             filteredOptions={filteredOptions}
             handleOptionClick={handleOptionClick}
-            selectedOption={isMulti || !selectedOption ? emptyValue : selectedOption}
+            selectedOption={isMulti === true || !selectedOption ? emptyValue : selectedOption}
             status={status}
             isLoading={isLoading}
             isVirtualized={isVirtualized}

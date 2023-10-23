@@ -4,7 +4,7 @@ import React from 'react';
 import { render, screen } from '../../test';
 import Switch from './Switch';
 
-const mockChange = jest.fn();
+const mockChange = vi.fn();
 
 describe('Switch', () => {
   it('will correctly call onChange when clicked', () => {

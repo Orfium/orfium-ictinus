@@ -36,8 +36,8 @@ describe('OverlayComponent', () => {
   });
 
   it('should run callbacks correctly on buttons Cancel, Apply', async () => {
-    const onApply = jest.fn();
-    const onClearAll = jest.fn();
+    const onApply = vi.fn();
+    const onClearAll = vi.fn();
     const date = mockDate.add(1, 'day');
 
     const { findByText } = render(
@@ -63,7 +63,7 @@ describe('OverlayComponent', () => {
   });
 
   it('should run onDaySelect correctly', async () => {
-    const onDaySelect = jest.fn();
+    const onDaySelect = vi.fn();
     const date = mockDate.add(1, 'day');
 
     const { findByText } = render(
@@ -83,8 +83,8 @@ describe('OverlayComponent', () => {
     expect(onDaySelect).toHaveBeenCalledTimes(1);
   });
   it('should display and handle extra options', async () => {
-    const onDaySelect = jest.fn();
-    const onSelectedOption = jest.fn();
+    const onDaySelect = vi.fn();
+    const onSelectedOption = vi.fn();
     const date = mockDate.add(1, 'day');
 
     const { findByText } = render(

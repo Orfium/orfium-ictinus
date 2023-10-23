@@ -166,7 +166,7 @@ const MultiselectTextField = React.forwardRef<HTMLInputElement, Props & InputPro
             />
             {label && (
               <Label
-                size={'md'}
+                size="md"
                 htmlFor={id}
                 label={label}
                 isRequired={isRequired}

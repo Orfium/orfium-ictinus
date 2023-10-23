@@ -200,7 +200,7 @@ function Table<T>({
             <TableRow>
               {onCheck && (
                 <TableCell
-                  component={'th'}
+                  component="th"
                   width={50}
                   isPadded={isPadded}
                   dataTestIdPrefix={dataTestIdPrefix}
@@ -239,7 +239,7 @@ function Table<T>({
               </TableCell>
               {topRightArea && (
                 <TableCell
-                  textAlign={'right'}
+                  textAlign="right"
                   isPadded={isPadded}
                   colSpan={columnCount - (onCheck ? 2 : 1)}
                   dataTestIdPrefix={dataTestIdPrefix}
@@ -263,7 +263,7 @@ function Table<T>({
               >
                 {onCheck && (
                   <TableCell
-                    component={'th'}
+                    component="th"
                     isPaddedSticky={hasFixedCTA}
                     isSticky={hasFixedHeader}
                     width={50}
@@ -281,7 +281,7 @@ function Table<T>({
                           ? 'right'
                           : 'left'
                       }
-                      component={'th'}
+                      component="th"
                       key={`${isItemString(item) ? item : item.content.sortingKey}`}
                       isSticky={hasFixedHeader}
                       isPaddedSticky={hasFixedCTA}
@@ -314,7 +314,7 @@ function Table<T>({
                 })}
                 {hasExpandableRows && (
                   <TableCell
-                    component={'th'}
+                    component="th"
                     isSticky={hasFixedHeader}
                     isPaddedSticky={hasFixedCTA}
                     width={actionCellWidth}

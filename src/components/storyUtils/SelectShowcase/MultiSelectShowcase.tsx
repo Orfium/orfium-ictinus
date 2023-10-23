@@ -62,7 +62,7 @@ const SelectShowcase: React.FCC<
       <div css={wrapper()}>
         <Select
           isMulti
-          label={'Multi Select'}
+          label="Multi Select"
           options={options}
           selectedOption={value}
           onChange={setValue}
@@ -77,7 +77,7 @@ const SelectShowcase: React.FCC<
           isMulti
           isAsync
           status={status}
-          label={'Multi Select - Async'}
+          label="Multi Select - Async"
           options={asyncOptions}
           asyncSearch={mockedApiCall}
           isLoading={isLoading}

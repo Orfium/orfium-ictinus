@@ -77,7 +77,7 @@ const Menu: React.FC<MenuProps> = (props) => {
           <div css={optionsStyle({ menuPosition })(theme)}>
             {items && (
               <List
-                label={'filter-options'}
+                label="filter-options"
                 onSelectionChange={(keys) => {
                   setIsOpen(false);
                   const keyFound = String(head(Array.from(keys)));
@@ -86,7 +86,7 @@ const Menu: React.FC<MenuProps> = (props) => {
                 }}
               >
                 {items.map((item) => (
-                  <ListItem key={item} rowSize={'compact'}>
+                  <ListItem key={item} rowSize="compact">
                     <ListItemText>{item}</ListItemText>
                   </ListItem>
                 ))}

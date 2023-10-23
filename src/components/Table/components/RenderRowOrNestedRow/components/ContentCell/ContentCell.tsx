@@ -57,7 +57,7 @@ const ContentCell: React.FCC<ContentCellProps> = ({
         </div>
       )}
 
-      <TruncatedContent placement={'bottom'} tooltipContent={tooltipContent}>
+      <TruncatedContent placement="bottom" tooltipContent={tooltipContent}>
         {isComponentFunctionType(content) ? (
           content({ content, colSpan })
         ) : (

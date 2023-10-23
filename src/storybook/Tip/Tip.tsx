@@ -36,7 +36,7 @@ const Tip: FCC<TipProps> = ({ title = 'Tip', children }) => {
         `}
       >
         <span style={{ marginRight: 4 }}>⚡</span>
-        <Typography isBold component={'span'}>
+        <Typography isBold component="span">
           {title}:
         </Typography>
       </div>

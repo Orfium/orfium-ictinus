@@ -51,13 +51,13 @@ const Modal: React.FC<React.PropsWithChildren<ModalProps>> = ({
     <div css={backgroundContainer} data-testid={generateTestDataId('modal-container', dataTestId)}>
       <ClickAwayListener onClick={onClose}>
         <div css={cardSizing}>
-          <Card elevated={'02'} radius={'3'}>
+          <Card elevated="02" radius="3">
             <div css={closeContainer}>
               <IconButton
                 type="tertiary"
-                name={'close'}
+                name="close"
                 onClick={onClose}
-                dataTestId={'modal-close'}
+                dataTestId="modal-close"
               />
             </div>
             <div css={modalContainer({ isContentPadded })}>

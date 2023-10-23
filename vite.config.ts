@@ -36,12 +36,11 @@ export default defineConfig(({ mode }) => {
       // eslint-disable-next-line @typescript-eslint/naming-convention
       globals: true,
       environment: 'jsdom',
-      setupFiles: './src/testing/setup.ts',
+      setupFiles: './src/test/setup.ts',
       coverage: {
         provider: 'v8', // or 'istanbul'
         exclude: [
           ...coverageConfigDefaults.exclude,
-          '**/page.tsx',
           '**/*.styles.ts',
           '**/styles.ts',
           '**/__mocks__/',

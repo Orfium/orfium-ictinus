@@ -28,7 +28,7 @@ const Search: FCC<SearchProps> = ({
     <div aria-disabled={isSearchDisabled} css={searchWrapper(isDark)}>
       <div css={iconWrapperStyle({ iconPosition: 'left' })}>
         <Icon
-          name={'search'}
+          name="search"
           color={isDark ? theme.globals.oldColors.white : theme.utils.getColor('lightGrey', 650)}
           size={20}
         />{' '}
@@ -38,8 +38,8 @@ const Search: FCC<SearchProps> = ({
         css={customInputStyle(searchPlaceholder, isDark)}
         placeholder={searchPlaceholder}
         defaultValue={searchDefaultValue}
-        id={'top-nav-search'}
-        data-testid={'top-nav-search'}
+        id="top-nav-search"
+        data-testid="top-nav-search"
         disabled={false}
         onChange={onSearchHandler}
         onKeyPress={onKeyPressHandler}

@@ -36,7 +36,7 @@ describe('Chip', () => {
   });
 
   test('that onClick handler is being called on interactive Chip', async () => {
-    const onClick = jest.fn();
+    const onClick = vi.fn();
     const { getByTestId } = render(
       <Chip styleType={'interactive'} onClick={onClick}>
         {chipLabel}
@@ -48,7 +48,7 @@ describe('Chip', () => {
   });
 
   test('that onClick handler is not being called on read-only Chip', async () => {
-    const onClick = jest.fn();
+    const onClick = vi.fn();
     const { getByTestId } = render(<Chip onClick={onClick}>{chipLabel}</Chip>);
     const chip = getByTestId('chip');
     fireEvent.click(chip);

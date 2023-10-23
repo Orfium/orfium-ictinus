@@ -14,7 +14,7 @@ const Separator: React.FCC<SeparatorProps> = (props) => {
 
   return (
     <span css={separatorStyles()}>
-      <Icon name={'triangleRight'} color={'lightGrey'} variant={650} size={12} />
+      <Icon name="triangleRight" color="lightGrey" variant={650} size={12} />
     </span>
   );
 };
