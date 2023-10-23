@@ -44,8 +44,10 @@ exports[`Storyshots Design System/Button/IconButton IconButton Playground 1`] = 
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
   color: #ffffff;
+  width: 2.25rem;
+  height: 2.25rem;
   background-color: #175bf5;
-  padding: 0.5rem;
+  padding: 0;
   border-radius: 2.25rem;
   border: none;
   cursor: pointer;
@@ -138,7 +140,7 @@ exports[`Storyshots Design System/Button/IconButton IconButton Playground 1`] = 
 </div>
 `;
 
-exports[`Storyshots Design System/Button/IconButton IconButton Types 1`] = `
+exports[`Storyshots Design System/Button/IconButton IconButton Types and Sizes 1`] = `
 .emotion-0 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -182,8 +184,10 @@ exports[`Storyshots Design System/Button/IconButton IconButton Types 1`] = `
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
   color: #ffffff;
+  width: 2.25rem;
+  height: 2.25rem;
   background-color: #175bf5;
-  padding: 0.5rem;
+  padding: 0;
   border-radius: 2.25rem;
   border: none;
   cursor: pointer;
@@ -241,8 +245,10 @@ exports[`Storyshots Design System/Button/IconButton IconButton Types 1`] = `
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
   color: #1552DD;
+  width: 2.25rem;
+  height: 2.25rem;
   background-color: #E7E8FF;
-  padding: 0.5rem;
+  padding: 0;
   border-radius: 2.25rem;
   border: none;
   cursor: pointer;
@@ -284,8 +290,10 @@ exports[`Storyshots Design System/Button/IconButton IconButton Types 1`] = `
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
   color: #1552DD;
+  width: 2.25rem;
+  height: 2.25rem;
   background-color: rgba(84,94,255,0);
-  padding: 0.5rem;
+  padding: 0;
   border-radius: 2.25rem;
   border: none;
   cursor: pointer;
@@ -317,8 +325,10 @@ exports[`Storyshots Design System/Button/IconButton IconButton Types 1`] = `
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
   color: #ffffff;
+  width: 2.25rem;
+  height: 2.25rem;
   background-color: #175bf5;
-  padding: 0.5rem;
+  padding: 0;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
@@ -350,8 +360,10 @@ exports[`Storyshots Design System/Button/IconButton IconButton Types 1`] = `
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
   color: #1552DD;
+  width: 2.25rem;
+  height: 2.25rem;
   background-color: #E7E8FF;
-  padding: 0.5rem;
+  padding: 0;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
@@ -383,8 +395,10 @@ exports[`Storyshots Design System/Button/IconButton IconButton Types 1`] = `
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
   color: #1552DD;
+  width: 2.25rem;
+  height: 2.25rem;
   background-color: rgba(84,94,255,0);
-  padding: 0.5rem;
+  padding: 0;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
@@ -406,6 +420,236 @@ exports[`Storyshots Design System/Button/IconButton IconButton Types 1`] = `
 }
 
 .emotion-25:active:not(:disabled) {
+  background-color: rgba(84,94,255,0.14);
+}
+
+.emotion-30 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  color: #ffffff;
+  width: 1.75rem;
+  height: 1.75rem;
+  background-color: #175bf5;
+  padding: 0;
+  border-radius: 2.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-30:focus-visible:not(:disabled) {
+  background-color: #1552DD;
+}
+
+.emotion-30:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-30:hover:not(:disabled) {
+  background-color: #1552DD;
+}
+
+.emotion-30:active:not(:disabled) {
+  background-color: #1249C4;
+}
+
+.emotion-32 {
+  fill: #ffffff;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-32 path {
+  fill: #ffffff;
+}
+
+.emotion-34 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  color: #1552DD;
+  width: 1.75rem;
+  height: 1.75rem;
+  background-color: #E7E8FF;
+  padding: 0;
+  border-radius: 2.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-34:focus-visible:not(:disabled) {
+  background-color: #D6D8FF;
+}
+
+.emotion-34:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-34:hover:not(:disabled) {
+  background-color: #D6D8FF;
+}
+
+.emotion-34:active:not(:disabled) {
+  background-color: #B9C0FF;
+}
+
+.emotion-36 {
+  fill: #1552DD;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-36 path {
+  fill: #1552DD;
+}
+
+.emotion-38 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  color: #1552DD;
+  width: 1.75rem;
+  height: 1.75rem;
+  background-color: rgba(84,94,255,0);
+  padding: 0;
+  border-radius: 2.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-38:focus-visible:not(:disabled) {
+  background-color: rgba(84,94,255,0.06);
+}
+
+.emotion-38:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-38:hover:not(:disabled) {
+  background-color: rgba(84,94,255,0.06);
+}
+
+.emotion-38:active:not(:disabled) {
+  background-color: rgba(84,94,255,0.14);
+}
+
+.emotion-43 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  color: #ffffff;
+  width: 1.75rem;
+  height: 1.75rem;
+  background-color: #175bf5;
+  padding: 0;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-43:focus-visible:not(:disabled) {
+  background-color: #1552DD;
+}
+
+.emotion-43:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-43:hover:not(:disabled) {
+  background-color: #1552DD;
+}
+
+.emotion-43:active:not(:disabled) {
+  background-color: #1249C4;
+}
+
+.emotion-47 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  color: #1552DD;
+  width: 1.75rem;
+  height: 1.75rem;
+  background-color: #E7E8FF;
+  padding: 0;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-47:focus-visible:not(:disabled) {
+  background-color: #D6D8FF;
+}
+
+.emotion-47:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-47:hover:not(:disabled) {
+  background-color: #D6D8FF;
+}
+
+.emotion-47:active:not(:disabled) {
+  background-color: #B9C0FF;
+}
+
+.emotion-51 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  color: #1552DD;
+  width: 1.75rem;
+  height: 1.75rem;
+  background-color: rgba(84,94,255,0);
+  padding: 0;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-51:focus-visible:not(:disabled) {
+  background-color: rgba(84,94,255,0.06);
+}
+
+.emotion-51:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-51:hover:not(:disabled) {
+  background-color: rgba(84,94,255,0.06);
+}
+
+.emotion-51:active:not(:disabled) {
   background-color: rgba(84,94,255,0.14);
 }
 
@@ -585,6 +829,182 @@ exports[`Storyshots Design System/Button/IconButton IconButton Types 1`] = `
             >
               <span
                 className="emotion-10"
+              />
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="emotion-2"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-3"
+        >
+          <button
+            className="emotion-30"
+            data-testid="icon-button"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="emotion-5"
+              onClick={[Function]}
+            >
+              <span
+                className="emotion-32"
+              />
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-3"
+        >
+          <button
+            className="emotion-34"
+            data-testid="icon-button"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="emotion-5"
+              onClick={[Function]}
+            >
+              <span
+                className="emotion-36"
+              />
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-3"
+        >
+          <button
+            className="emotion-38"
+            data-testid="icon-button"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="emotion-5"
+              onClick={[Function]}
+            >
+              <span
+                className="emotion-36"
+              />
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="emotion-2"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-3"
+        >
+          <button
+            className="emotion-43"
+            data-testid="icon-button"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="emotion-5"
+              onClick={[Function]}
+            >
+              <span
+                className="emotion-32"
+              />
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-3"
+        >
+          <button
+            className="emotion-47"
+            data-testid="icon-button"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="emotion-5"
+              onClick={[Function]}
+            >
+              <span
+                className="emotion-36"
+              />
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-3"
+        >
+          <button
+            className="emotion-51"
+            data-testid="icon-button"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="emotion-5"
+              onClick={[Function]}
+            >
+              <span
+                className="emotion-36"
               />
             </span>
           </button>
