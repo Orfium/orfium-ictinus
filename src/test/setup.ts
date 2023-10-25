@@ -3,6 +3,11 @@ import { createSerializer } from '@emotion/jest';
 
 expect.addSnapshotSerializer(createSerializer());
 
+// @ts-ignore
+globalThis.jest = vi;
+// @ts-ignore
+globalThis.jest.requireActual = async (path: string) => await vi.importActual(path);
+
 global.ResizeObserver = vi.fn().mockImplementation(() => ({
   observe: vi.fn(),
   unobserve: vi.fn(),

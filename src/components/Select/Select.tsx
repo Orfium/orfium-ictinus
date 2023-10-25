@@ -363,7 +363,6 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
                 {...restInputProps}
                 onClick={() => setIsOpen(true)}
                 status={status}
-                label=""
                 value={textFieldValue}
                 ref={combinedRefs}
                 autoComplete="off"

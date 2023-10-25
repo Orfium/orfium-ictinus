@@ -6,9 +6,9 @@ import { createSerializer } from '@emotion/jest';
 import initStoryshots, { multiSnapshotWithOptions } from '@storybook/addon-storyshots';
 import { ReactElement } from 'react';
 
-vi.mock('react-dom', () => ({
+jest.mock('react-dom', () => ({
   // @ts-ignore
-  ...vi.requireActual('react-dom'),
+  ...jest.requireActual('react-dom'),
   createPortal: (node: any) => node,
 }));
 
