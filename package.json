@@ -110,6 +110,7 @@
     "url-loader": "^4.1.0"
   },
   "dependencies": {
+    "@storybook/testing-library": "^0.2.2",
     "@tippyjs/react": "^4.2.5",
     "dayjs": "^1.8.34",
     "emotion-reset": "^3.0.1",
@@ -131,6 +132,7 @@
   },
   "resolutions": {
     "react-test-renderer": "18.1.0",
+    "@testing-library/user-event": "^13.5.0",
     "**/trim": "^1.0.0",
     "**/glob-parent": "^6.0.1",
     "**/postcss": "^8.4.31",
