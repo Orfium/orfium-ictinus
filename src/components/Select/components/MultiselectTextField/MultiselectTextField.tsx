@@ -146,7 +146,7 @@ const MultiselectTextField = React.forwardRef<HTMLInputElement, Props & InputPro
         >
           <div css={inputContainer()}>
             {chips}
-            {/* <input
+            <input
               readOnly={isLocked}
               onKeyDown={handleKeyDown}
               css={inputStyle({
@@ -163,8 +163,8 @@ const MultiselectTextField = React.forwardRef<HTMLInputElement, Props & InputPro
               {...omit(rest, 'dataTestId')}
               value={value}
               ref={ref}
-            /> */}
-            {/* {label && (
+            />
+            {label && (
               <Label
                 size={'md'}
                 htmlFor={id}
@@ -173,12 +173,14 @@ const MultiselectTextField = React.forwardRef<HTMLInputElement, Props & InputPro
                 isAnimated={hasValue}
                 hasError={status.type === 'error'}
               />
-            )} */}
+            )}
           </div>
 
           {!isDisabled && (
             <div css={rightIconsContainer()}>
-              {isLoading && <ProgressIndicator type="circular" dataTestPrefixId='multi_select_textfield'/>}
+              {isLoading && (
+                <ProgressIndicator type="circular" dataTestPrefixId="multi_select_textfield" />
+              )}
               <div css={rightIconStyles({ isClickable: hasValue && !isLocked })}>{icon}</div>
             </div>
           )}

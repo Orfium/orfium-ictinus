@@ -1,6 +1,7 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { isUndefined } from 'lodash';
 import { Theme } from 'theme';
+import { rem } from 'theme/utils';
 
 import { getProgressIndicatorTokens } from 'components/ProgressIndicator/ProgressIndicator.tokens';
 import { ProgressIndicatorProps } from 'components/ProgressIndicator/ProgressIndicator.types';
@@ -16,7 +17,7 @@ export const progressBarContainer =
         'label value'
         'bar bar';
       grid-template-columns: 1fr auto;
-      gap: 4px;
+      gap: ${rem(4)};
       width: 100%;
 
       &:not([aria-valuenow]) {
@@ -39,17 +40,6 @@ export const progressBarContainer =
       }
     `;
   };
-
-/**
-   * 
-   * @param param0 
-   *  border-radius: ${hasBorderRadius
-        ? isUndefined(value)
-          ? tokens('borderRadius')
-          : `0 ${tokens('borderRadius')} ${tokens('borderRadius')} 0`
-        : 0};
-   * @returns 
-   */
 
 export const barStyles =
   ({ hasBorderRadius }: Pick<ProgressIndicatorProps, 'hasBorderRadius'>) =>
