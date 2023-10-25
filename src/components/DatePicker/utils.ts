@@ -1,4 +1,4 @@
-import { within, userEvent } from '@storybook/testing-library';
+import { within, fireEvent as TLFireEvent } from '@storybook/testing-library';
 import { fireEvent } from '@testing-library/react';
 import { KEYBOARD_EVENT_KEYS } from 'hooks/useKeyboardEvents';
 import dayjs, { Dayjs } from 'utils/date';
@@ -22,7 +22,7 @@ export const initDates = (value: { from?: Date; to?: Date }): Range => {
 export const openDatePicker = async ({ canvasElement }: { canvasElement: HTMLElement }) => {
   const canvas = within(canvasElement);
   const calendarButton = canvas.getByTestId('calendar_button');
-  userEvent.click(calendarButton);
+  TLFireEvent.click(calendarButton);
 };
 
 export const clickOnElement = (element: HTMLElement, key: string, charCode: number) =>
