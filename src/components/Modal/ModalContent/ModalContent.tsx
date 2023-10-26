@@ -30,7 +30,7 @@ export type ModalContentProps = {
   dataTestId?: TestId;
 };
 
-const ModalContent: React.FC<ModalContentProps> = ({
+const ModalContent: React.FCC<ModalContentProps> = ({
   label,
   heading,
   message,

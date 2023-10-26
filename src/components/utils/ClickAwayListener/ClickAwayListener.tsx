@@ -25,7 +25,7 @@ type ClickAwayListenerProps = {
   cssStyles?: { [key: string]: unknown };
 };
 
-const ClickAwayListener: React.FC<ClickAwayListenerProps> = ({
+const ClickAwayListener: React.FCC<ClickAwayListenerProps> = ({
   onClick,
   CustomHtmlTag = 'div',
   ariaRole = undefined,

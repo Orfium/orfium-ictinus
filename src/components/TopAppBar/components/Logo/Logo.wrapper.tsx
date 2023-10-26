@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FCC } from 'react';
 
 import Styles from './Logo.style';
 
@@ -12,7 +12,7 @@ interface LogoWrapperProps {
   logoIcon?: JSX.Element;
 }
 
-const LogoWrapper: FC<LogoWrapperProps> = ({ logoIcon }) => (
+const LogoWrapper: FCC<LogoWrapperProps> = ({ logoIcon }) => (
   <div css={Styles.wrapper}>{logoIcon || <PlaceHolder />}</div>
 );
 

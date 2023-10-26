@@ -73,7 +73,7 @@ const CustomYAxisTick = ({ colors, y, width, payload }: YAxisProp) => {
 
 const WrappedChart = Wrapper(RechartsBarChart);
 
-const BarChart: React.FC<BarChartProps> = ({ data }) => {
+const BarChart: React.FCC<BarChartProps> = ({ data }) => {
   const theme = useTheme();
 
   const barColors = useMemo(
@@ -81,9 +81,16 @@ const BarChart: React.FC<BarChartProps> = ({ data }) => {
     [data, theme.globals.oldColors.flat.darkBlue]
   );
 
-  const findMaxInData = useCallback((operator) => max(data.map(operator)), [data]);
+  const findMaxInData = useCallback(
+    (operator: (obj: Data) => number | undefined) => max(data.map(operator)),
+    [data]
+  );
 
-  const setColoringOptions = useCallback((op) => getColoringOptions(data, op), [data]);
+  const setColoringOptions = useCallback(
+    // @ts-ignore @TODO Ignoring this as this component will be under further investigation of what we need to keep
+    (op: (obj: Data) => boolean | string) => getColoringOptions(data, op),
+    [data]
+  );
 
   const maxLabelLength = findMaxInData((obj: Data) => obj.name.length);
 
@@ -108,7 +115,7 @@ const BarChart: React.FC<BarChartProps> = ({ data }) => {
       barCategoryGap="20%"
       maxBarSize={32}
     >
-      <CartesianGrid offset={{ left: 0 }} horizontal={false} />
+      <CartesianGrid horizontal={false} />
       <XAxis
         type="number"
         axisLine={false}

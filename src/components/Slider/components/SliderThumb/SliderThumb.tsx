@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { FC, useMemo } from 'react';
+import { FCC, useMemo } from 'react';
 import { IThumbProps } from 'react-range/lib/types';
 
 import { Thumb } from './SliderThumb.style';
@@ -12,7 +12,7 @@ export interface SliderThumbProps {
   restProps: IThumbProps;
 }
 
-const SliderThumb: FC<SliderThumbProps & TestProps> = ({
+const SliderThumb: FCC<SliderThumbProps & TestProps> = ({
   isDisabled,
   value,
   initialValue,

@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FCC } from 'react';
 
 import { SidebarMenuIcon, LogoPlaceholder, UserMenu } from './components';
 import Search from './components/Search';
@@ -6,7 +6,7 @@ import Styles from './TopAppBar.style';
 import { TopAppBarProps } from './TopAppBar.types';
 import { useBreakpoints } from '../../index';
 
-const TopAppBar: FC<TopAppBarProps> = ({
+const TopAppBar: FCC<TopAppBarProps> = ({
   searchPlaceholder = 'Search',
   searchDefaultValue = '',
   logoIcon,

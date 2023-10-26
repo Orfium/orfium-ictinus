@@ -8,7 +8,7 @@ type Props = {
   isInverted?: boolean;
 };
 
-const TooltipContent: React.FC<Props> = ({ isInverted }) => {
+const TooltipContent: React.FCC<Props> = ({ isInverted }) => {
   return (
     <div css={containerStyles(isInverted)}>
       <div css={illustrationStyles(isInverted)}>

@@ -13,7 +13,7 @@ export type IndeterminateLoaderProps = {
   color?: string;
 };
 
-const IndeterminateLoader: React.FC<IndeterminateLoaderProps> = ({ dataTestId, color }) => {
+const IndeterminateLoader: React.FCC<IndeterminateLoaderProps> = ({ dataTestId, color }) => {
   return (
     <div css={LoaderContainer()} data-testid={generateTestDataId('dots-loading', dataTestId)}>
       <div css={LoaderLine()} />

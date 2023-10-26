@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FCC } from 'react';
 
 import { customInputStyle, searchWrapper } from './Search.style';
 import { useTheme } from '../../../../index';
@@ -13,7 +13,7 @@ export type SearchProps = {
   isSearchDisabled?: boolean;
 } & { isDark?: boolean };
 
-const Search: FC<SearchProps> = ({
+const Search: FCC<SearchProps> = ({
   searchPlaceholder = 'Search',
   searchDefaultValue = '',
   onSearchHandler,

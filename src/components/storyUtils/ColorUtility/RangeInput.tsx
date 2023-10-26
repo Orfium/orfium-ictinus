@@ -1,13 +1,13 @@
-import React, { FC } from 'react';
+import React, { FCC } from 'react';
 
 interface RangeInputProps {
   onChange: (amount: number) => void;
   value: number;
 }
-const RangeInput: FC<RangeInputProps> = ({ onChange, value }) => {
+const RangeInput: FCC<RangeInputProps> = ({ onChange, value }) => {
   return (
     <input
-      onChange={event => {
+      onChange={(event) => {
         onChange(Number(event.target.value));
       }}
       readOnly={false}

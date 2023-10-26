@@ -8,7 +8,7 @@ export type DotsLoaderProps = {
   color?: string;
 };
 
-const DotsLoader: React.FC<DotsLoaderProps> = ({ dataTestId, color }) => {
+const DotsLoader: React.FCC<DotsLoaderProps> = ({ dataTestId, color }) => {
   return (
     <div css={dotsWrapper} data-testid={generateTestDataId('dots-loading', dataTestId)}>
       <div css={dotsContainer(color)} />

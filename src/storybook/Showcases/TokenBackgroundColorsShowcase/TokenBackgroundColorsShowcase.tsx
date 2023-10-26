@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 import { get, map } from 'lodash';
-import React, { FC } from 'react';
+import React, { FCC } from 'react';
 
 import {
   colorStyle,
@@ -19,7 +19,7 @@ type Props = {
 /**
  * Showcase component used on colors documents of storybook such as backgroundColor, backdrop and borderColor
  */
-const TokenBackgroundColorsShowcase: FC<Props> = ({ tokenType = 'backgroundColor' }) => {
+const TokenBackgroundColorsShowcase: FCC<Props> = ({ tokenType = 'backgroundColor' }) => {
   const typePicker = () => colorsFigma[tokenType];
 
   const deepMap = (

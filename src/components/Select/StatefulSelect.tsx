@@ -11,7 +11,7 @@ const StatefulSelect = forwardRef<HTMLInputElement, SelectProps>(
     );
 
     const callback = useCallback(
-      (option) => {
+      (option: any) => {
         setInputValue(option);
         onChange(option);
       },

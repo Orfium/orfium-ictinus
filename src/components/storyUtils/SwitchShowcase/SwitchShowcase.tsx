@@ -9,7 +9,7 @@ interface Props {
   isDisabled?: boolean;
 }
 
-const SwitchShowcase: React.FC<Props> = ({
+const SwitchShowcase: React.FCC<Props> = ({
   hasLabel = true,
   label = 'Label showcase text',
   labelPlacement,

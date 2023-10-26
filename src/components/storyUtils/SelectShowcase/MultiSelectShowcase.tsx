@@ -36,7 +36,7 @@ export const dummyUndefinedData = new Array(15).fill(undefined).map((__, index) 
   label: `Test option ${index}`,
 }));
 
-const SelectShowcase: React.FC<
+const SelectShowcase: React.FCC<
   Pick<SelectProps, 'isDisabled' | 'hasSelectAllOption' | 'isCreatable' | 'status'>
 > = ({ isDisabled = false, hasSelectAllOption = false, isCreatable = false, status }) => {
   const [asyncOptions, setAsyncOptions] = useState<SelectOption[]>(dummyUndefinedData);

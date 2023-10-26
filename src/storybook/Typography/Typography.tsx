@@ -1,4 +1,4 @@
-import React, { FC, useMemo } from 'react';
+import React, { FCC, useMemo } from 'react';
 
 import TypographyComponent, { TypographyVariant } from '../../components/Typography';
 
@@ -7,7 +7,7 @@ export type TypographyProps = {
   variant: TypographyVariant;
 };
 
-const Typography: FC<TypographyProps> = ({ children, variant, ...rest }) => {
+const Typography: FCC<TypographyProps> = ({ children, variant, ...rest }) => {
   const id = useMemo(
     () => children?.toLowerCase && children?.toLowerCase().split(' ').join('-'),
     [children]
