@@ -16,7 +16,7 @@ import Overview from '../../storybook/Overview';
 import { useState } from 'react';
 
 <Meta
-  title="Updated Components/Fields/DatePicker"
+  title="Design System/Fields/DatePicker"
   component={DatePicker}
   parameters={{
     design: [
@@ -220,10 +220,7 @@ Some disable dates functionality
 DatePicker and DateRangePicker inherit all TextField statuses behavior.
 
 <Preview>
-  <Story
-    name="DatePicker and DateRangePicker Statuses"
-    parameters={{ decorators: [withKnobs] }}
-  >
+  <Story name="DatePicker and DateRangePicker Statuses" parameters={{ decorators: [withKnobs] }}>
     <Stack vertical height={600}>
       <Function>
         {() => {
