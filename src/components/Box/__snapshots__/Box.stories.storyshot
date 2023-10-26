@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Design System/Box Box Background 1`] = `
+exports[`Storyshots Updated Components/Box Box Background 1`] = `
 .emotion-0 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -57,7 +57,7 @@ exports[`Storyshots Design System/Box Box Background 1`] = `
 </div>
 `;
 
-exports[`Storyshots Design System/Box Box Horizontal Padding 1`] = `
+exports[`Storyshots Updated Components/Box Box Horizontal Padding 1`] = `
 .emotion-0 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -93,7 +93,7 @@ exports[`Storyshots Design System/Box Box Horizontal Padding 1`] = `
 </div>
 `;
 
-exports[`Storyshots Design System/Box Box Padding (All sides) 1`] = `
+exports[`Storyshots Updated Components/Box Box Padding (All sides) 1`] = `
 .emotion-0 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -152,7 +152,7 @@ exports[`Storyshots Design System/Box Box Padding (All sides) 1`] = `
 </div>
 `;
 
-exports[`Storyshots Design System/Box Box Vertical Padding 1`] = `
+exports[`Storyshots Updated Components/Box Box Vertical Padding 1`] = `
 .emotion-0 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -183,6 +183,90 @@ exports[`Storyshots Design System/Box Box Vertical Padding 1`] = `
       className="emotion-2"
     >
       Padding Vertical 7
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Updated Components/Box Overview 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  margin: -16px;
+}
+
+.emotion-3 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.375rem;
+  font-size: 1rem;
+  letter-spacing: 0.015625rem;
+  color: #1B214F;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <p
+        className="emotion-3"
+      >
+        <div
+          style={
+            Object {
+              "paddingBottom": "16px",
+            }
+          }
+        >
+          The Box component is a helper component that lets you write these common less-reusable elements more briefly inline.
+        </div>
+        <div
+          style={
+            Object {
+              "paddingBottom": "16px",
+            }
+          }
+        >
+          One of the most common needs when building web apps is creating layout elements that have certain layout.
+        </div>
+        <div
+          style={
+            Object {
+              "paddingBottom": "16px",
+            }
+          }
+        >
+          The mentality is that we use all CSS props based on
+           
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+          >
+            https://developer.mozilla.org/en-US/docs/Web/CSS
+          </a>
+          .
+        </div>
+        <div>
+          Only exceptions are margin and padding that use them in acronyms like m and p and direction t|r|b|l ending with m + t | r | l | b = value
+        </div>
+      </p>
     </div>
   </div>
 </div>
