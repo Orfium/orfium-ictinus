@@ -4,11 +4,11 @@ import Select from './Select';
 import Stack from '../storyUtils/Stack';
 import { SelectShowcase, MultiSelectShowcase } from '../storyUtils/SelectShowcase';
 import EdgeCasesSelectShowcase from '../storyUtils/EdgeCasesSelectShowcase';
-import Typography from '../Typography';
 import { FIGMA_URL, Function } from '../../utils/common';
 import { useState } from 'react';
 import { StatefulSelect } from './index';
 import SectionHeader from '../../storybook/SectionHeader';
+import Overview from '../../storybook/Overview';
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
   { value: 'strawberry', label: 'Strawberry' },
@@ -97,25 +97,25 @@ const defaultValue = options[0];
     },
   }}
 >
-  <Typography>
+  <Overview>
     A universal Select component that is a clickable element that can hold many forms.
-  </Typography>
+  </Overview>
 </Story>
+
+## Props
+
+<Props of={Select} />
 
 ## Usage
 
 <UsageGuidelines
   guidelines={[
-    'If you need to select and enter an item from a dropdown list that features more than seven items, use searchable select instead. This is the default prop.',
-    'If you need to be able to enter free text entry in addition to choosing form a predefined list, use searchable select instead',
-    'If you need to enter more than one values from a predefined list, use multiselect instead',
-    `If you need to enter more than one values from a predefine list and as free text, use multiselect instead`,
+    'If you need to select and enter an item from a dropdown list that features more than seven items, use searchable select.',
+    'If you need to be able to enter free text entry in addition to choosing form a predefined list, use searchable select',
+    'If you need to enter more than one values from a predefined list, use multiselect',
+    `If you need to enter more than one values from a predefine list and as free text, use multiselect`,
   ]}
 />
-
-## Props
-
-<Props of={Select} />
 
 ## Variants
 

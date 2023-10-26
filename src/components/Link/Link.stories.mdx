@@ -2,11 +2,11 @@ import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
 import { boolean, select, withKnobs } from '@storybook/addon-knobs';
 import Link from './Link';
 import Stack from '../storyUtils/Stack';
-import Typography from '../Typography';
 import { BASE_SHADE } from '../../theme/palette';
 import { FIGMA_URL } from '../../utils/common';
 import { getIconSelectorKnob } from '../../utils/stories';
 import SectionHeader from '../../storybook/SectionHeader';
+import Overview from '../../storybook/Overview';
 
 <Meta
   title="Updated Components/Link"
@@ -39,10 +39,10 @@ import SectionHeader from '../../storybook/SectionHeader';
     },
   }}
 >
-  <Typography>
+  <Overview>
     A link is a navigational component that takes a user to another URL, an element within the page,
     or a file.
-  </Typography>
+  </Overview>
 </Story>
 
 ## Props
@@ -58,6 +58,7 @@ import SectionHeader from '../../storybook/SectionHeader';
     'Use to download a file',
     'Use to show a secondary action (e.g. "Cancel")',
   ]}
+  policies={['To show a primary action (like “Save”), use a button instead. ']}
 />
 
 <Tip>To show a primary action (like “Save”), use a Button instead. </Tip>

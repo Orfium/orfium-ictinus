@@ -2,9 +2,9 @@ import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
 import { boolean, select, text, withKnobs, number } from '@storybook/addon-knobs';
 import TextArea from './TextArea';
 import Stack from '../storyUtils/Stack';
-import Typography from '../Typography';
 import { FIGMA_URL, Function } from '../../utils/common';
 import SectionHeader from '../../storybook/SectionHeader';
+import Overview from '../../storybook/Overview';
 import { useState } from 'react';
 
 <Meta
@@ -43,10 +43,10 @@ import { useState } from 'react';
     },
   }}
 >
-  <Typography>
+  <Overview>
     A universal TextArea component used for the case where large string of text is needed as an
     input.
-  </Typography>
+  </Overview>
 </Story>
 
 ## Props
@@ -56,9 +56,9 @@ import { useState } from 'react';
 ## Usage
 
 <UsageGuidelines
-  guidelines={[
+  guidelines={['When you need to enter a large string of text']}
+  policies={[
     'If you need to enter a short string of text in a single line, use text input instead',
-    'TextArea hint may be either text (on the left) or character counter (on the right)',
   ]}
 />
 

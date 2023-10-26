@@ -11,10 +11,10 @@ import {
   dateFormatOptions,
 } from './constants';
 import Stack from '../storyUtils/Stack';
-import Typography from '../Typography';
 import OverlayComponent from './OverlayComponent';
 import { FIGMA_URL, Function } from '../../utils/common';
 import SectionHeader from '../../storybook/SectionHeader';
+import Overview from '../../storybook/Overview';
 import { useState } from 'react';
 
 <Meta
@@ -53,11 +53,11 @@ import { useState } from 'react';
     },
   }}
 >
-  <Typography>
+  <Overview>
     A universal DatePicker component that allows the user to select a single date or a range of
     dates. User may either type the date in the suggested format (text input) or click on the
     ‘calendar’ icon to the right to open the date picker modal.
-  </Typography>
+  </Overview>
 </Story>
 
 ## Props
@@ -66,11 +66,10 @@ import { useState } from 'react';
 
 ## Usage
 
-```js
-import { DatePicker } from '@orfium/ictinus';
-
-<DatePicker disableFutureDates={false} disableFutureDates={false} onChange={console.log} />;
-```
+<UsageGuidelines
+  guidelines={['Use when you need to enter a single date']}
+  policies={['If you need to enter a date range, use date range picker instead']}
+/>
 
 ## Variants
 

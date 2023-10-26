@@ -3,10 +3,10 @@ import { text, number, select, boolean, withKnobs } from '@storybook/addon-knobs
 import Tooltip from './Tooltip';
 import { hoverOnTooltips } from './utils';
 import Stack from '../storyUtils/Stack';
-import Typography from '../Typography';
 import TooltipShowcase from '../storyUtils/TooltipShowcase';
 import { FIGMA_URL, Function } from '../../utils/common';
 import SectionHeader from '../../storybook/SectionHeader';
+import Overview from '../../storybook/Overview';
 import Button from '../Button';
 
 <Meta
@@ -39,10 +39,10 @@ import Button from '../Button';
     },
   }}
 >
-  <Typography>
+  <Overview>
     Tooltips provide brief, helpful information when a user hovers or focuses on the trigger
     element.
-  </Typography>
+  </Overview>
 </Story>
 
 ## Props
@@ -57,6 +57,8 @@ import Button from '../Button';
     'To provide additional context for unlabeled icon buttons',
     'Use text tooltips to offer additional context that does not support links or actions',
     'Use interactive tooltips for more complex layouts and to offer simple actions within the tooltip',
+  ]}
+  policies={[
     'Do not display critical information in a tooltip',
     'Do not use tooltips to display information unrelated to the triggered element',
   ]}

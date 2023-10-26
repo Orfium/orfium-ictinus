@@ -3,12 +3,12 @@ import { boolean, number, select, text, withKnobs } from '@storybook/addon-knobs
 import { linkTo } from '@storybook/addon-links';
 import NumberField from './NumberField';
 import Stack from '../storyUtils/Stack';
-import Typography from '../Typography';
 import Icon from '../Icon';
 import iconSelector from '../Icon/assets/iconSelector';
 import Loader from '../Loader';
 import { FIGMA_URL } from '../../utils/common';
 import SectionHeader from '../../storybook/SectionHeader';
+import Overview from '../../storybook/Overview';
 
 <Meta
   title="Updated Components/Fields/NumberField"
@@ -40,10 +40,10 @@ import SectionHeader from '../../storybook/SectionHeader';
     },
   }}
 >
-  <Typography>
+  <Overview>
     A universal NumberField that only allows for numerical characters, designed to handle numerical
     data entry.
-  </Typography>
+  </Overview>
 </Story>
 
 ## Props
@@ -54,10 +54,12 @@ import SectionHeader from '../../storybook/SectionHeader';
 
 <UsageGuidelines
   guidelines={[
-    'Number input may be an absolute number or decimals',
-    'Number field may feature suffix (e.g. “%”) or increments',
-    'It also supports input masking to enforce a specific format for the numeric input',
-    'If the user is required to enter non-numeric data, such as text or dates use TextField or DatePicker instead.',
+    'When the user needs to input quantitative data, such as measurements, quantities, or numerical parameters.',
+    'When the user benefits from being able to manually adjust the value in small increments, using the stepper buttons',
+  ]}
+  policies={[
+    'If the user is required to enter non-numerical data, such as text or dates, use text input or date picker instead.',
+    'If the user does not need to use a stepper, use a regular text input field.',
   ]}
 />
 

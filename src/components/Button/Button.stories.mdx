@@ -1,13 +1,13 @@
 import { Meta, Props, Story } from '@storybook/addon-docs';
 import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 import Button from './Button';
-import Typography from '../Typography';
 import Stack from '../storyUtils/Stack';
 import LinkTo from '@storybook/addon-links/react';
 
 import { FIGMA_URL } from '../../utils/common';
 import LoadingButtonShowcase from '../storyUtils/LoadingButtonShowcase';
 import SectionHeader from '../../storybook/SectionHeader';
+import Overview from '../../storybook/Overview';
 import { getIconSelectorKnob } from '../../utils/stories';
 
 <Meta
@@ -61,19 +61,26 @@ import { getIconSelectorKnob } from '../../utils/stories';
     },
   }}
 >
-  <Typography>
+  <Overview>
     A universal Button component that is a clickable element that can hold many forms.
-  </Typography>
+  </Overview>
 </Story>
 
 ## Usage
 
 <UsageGuidelines
   guidelines={[
-    'Buttons may contain icon, on the left or the right side',
-    'Replace text with a loader if action is submitted, but still processing',
-    'Button width is set by it’s content, avoid changing it width',
-    'Use only one primary button, and any remaining calls to action should be represented as lower emphasis buttons',
+    'Use a button to indicate an action the user can take that affects the website’s front-end or back-end',
+    'Use a button to allow the user to save, edit and delete a form, dialog, modal window, card, toolbar',
+    'Use a button in empty states to indicate next steps a user should take',
+  ]}
+  policies={[
+    'If the action the user takes does not affect the website, use a link',
+    'If you are directing a user to a an external url, use a link with an external icon',
+    'If you are directing a user to a different location within the same page, use an anchor link instead',
+    'If you want to show alternate content while still in the same page, use tabs instead',
+    'If you need text to precede or follow the action, use a link (e.g. “don’t have an account? Sign up”)',
+    'If you need to use a longer label that cannot be shortened, use a link',
   ]}
 />
 

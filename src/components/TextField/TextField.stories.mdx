@@ -3,7 +3,6 @@ import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 import { linkTo } from '@storybook/addon-links';
 import TextField from './TextField';
 import Stack from '../storyUtils/Stack';
-import Typography from '../Typography';
 import Icon from '../Icon';
 import iconSelector from '../Icon/assets/iconSelector';
 import Loader from '../Loader';
@@ -13,6 +12,7 @@ import {
 } from '../../components/storyUtils/TextFieldShowcases';
 import { FIGMA_URL } from '../../utils/common';
 import SectionHeader from '../../storybook/SectionHeader';
+import Overview from '../../storybook/Overview';
 
 <Meta
   title="Updated Components/Fields/TextField"
@@ -44,11 +44,11 @@ import SectionHeader from '../../storybook/SectionHeader';
     },
   }}
 >
-  <Typography>
+  <Overview>
     A universal TextField component which provides a wide range of features such as statuses, inline
     suffixes such as icons and components, and a multi-input functionality with the help of the Chip
     component.
-  </Typography>
+  </Overview>
 </Story>
 
 ## Props
@@ -59,11 +59,11 @@ import SectionHeader from '../../storybook/SectionHeader';
 
 <UsageGuidelines
   guidelines={[
-    'Do not display TextFields in the same row unless they are related (e.g. “First Name” / “Last Name”)',
-    'Explicitly mark optional fields as such',
+    'When the user needs to enter input in the system in the form of a simple text string (Single TextField) or multiple string values (Multi TextField)',
     'When possible, try to choose input width that is relevant to the content being entered into the input field',
     'Avoid truncating field label and input as much as possible',
   ]}
+  policies={['If you need to enter a predefined input from a list, use select instead']}
 />
 
 <Tip>

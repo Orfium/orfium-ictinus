@@ -3,6 +3,7 @@ import Box from './Box';
 import Stack from '../storyUtils/Stack';
 
 import SectionHeader from '../../storybook/SectionHeader';
+import Overview from '../../storybook/Overview';
 
 <Meta title="Updated Components/Box" component={Box} />
 
@@ -23,25 +24,27 @@ import SectionHeader from '../../storybook/SectionHeader';
     },
   }}
 >
-  <Typography style={{ paddingBottom: '16px' }}>
-    The Box component is a helper component that lets you write these common less-reusable elements
-    more briefly inline.
-  </Typography>
-  <Typography style={{ paddingBottom: '16px' }}>
-    One of the most common needs when building web apps is creating layout elements that have
-    certain layout.
-  </Typography>
-  <Typography style={{ paddingBottom: '16px' }}>
-    The mentality is that we use all CSS props based on{' '}
-    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">
-      https://developer.mozilla.org/en-US/docs/Web/CSS
-    </a>
-    .
-  </Typography>
-  <Typography>
-    Only exceptions are margin and padding that use them in acronyms like m and p and direction
-    t|r|b|l ending with m + t | r | l | b = value
-  </Typography>
+  <Overview>
+    <Typography style={{ paddingBottom: '16px' }}>
+      The Box component is a helper component that lets you write these common less-reusable
+      elements more briefly inline.
+    </Typography>
+    <Typography style={{ paddingBottom: '16px' }}>
+      One of the most common needs when building web apps is creating layout elements that have
+      certain layout.
+    </Typography>
+    <Typography style={{ paddingBottom: '16px' }}>
+      The mentality is that we use all CSS props based on{' '}
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">
+        https://developer.mozilla.org/en-US/docs/Web/CSS
+      </a>
+      .
+    </Typography>
+    <Typography>
+      Only exceptions are margin and padding that use them in acronyms like m and p and direction
+      t|r|b|l ending with m + t | r | l | b = value
+    </Typography>
+  </Overview>
 </Story>
 
 ## Usage
@@ -49,8 +52,10 @@ import SectionHeader from '../../storybook/SectionHeader';
 <UsageGuidelines
   guidelines={[
     'Box can be containers for all your components',
-    `Don't overdo it! We suggest to use it for up to 5 props. If more use styled-components`,
     'Use only values that comes from the theme config',
+  ]}
+  policies={[
+    `Don't overdo it! We suggest to use it for up to 5 props. If more use styled-components`,
   ]}
 />
 
