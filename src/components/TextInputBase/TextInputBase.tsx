@@ -1,6 +1,6 @@
 import { CSSObject } from '@emotion/serialize';
 import useTheme from 'hooks/useTheme';
-import React, { FC } from 'react';
+import React, { FCC } from 'react';
 import isEqual from 'react-fast-compare';
 
 import { hintMessageStyle, textFieldStyle, wrapperStyle } from './TextInputBase.style';
@@ -42,7 +42,7 @@ export type TextInputBaseProps = {
 
 /** This Component is a wrapper for all primitives that hold text like Select, TextArea, TextInput. Here we keep the
  * logic of all the hover, focus status etc and the styling of these centralized **/
-const TextInputBase: FC<
+const TextInputBase: FCC<
   Omit<TextInputBaseProps, 'value' | 'label' | 'placeholder' | 'suffix' | 'isRequired'>
 > = ({
   isDisabled,

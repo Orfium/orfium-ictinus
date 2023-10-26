@@ -1,4 +1,3 @@
-import { ReactNode } from 'react';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -13,11 +12,10 @@ export type NotificationsContainerPositions =
 export type NotificationsContainerProps = {
   /** Notifications Container position */
   position: NotificationsContainerPositions;
-  children: ReactNode;
   parent?: HTMLElement | null;
 };
 
-const NotificationsContainer: React.FC<NotificationsContainerProps> = (props) => {
+const NotificationsContainer: React.FCC<NotificationsContainerProps> = (props) => {
   const { children, position, parent = document.body } = props;
 
   if (parent === null) {

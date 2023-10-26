@@ -1,5 +1,4 @@
 import userEvent from '@testing-library/user-event';
-import React from 'react';
 
 import { render, screen, selectDropdownOption, waitFor } from '../../test';
 import StatefulSelect from './StatefulSelect';

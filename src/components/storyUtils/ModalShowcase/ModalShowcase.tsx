@@ -8,7 +8,7 @@ type ModalShowcaseProps = {
   contentProps?: ModalContentProps;
 };
 
-const ModalShowcase: React.FC<ModalShowcaseProps> = ({ children, contentProps }) => {
+const ModalShowcase: React.FCC<ModalShowcaseProps> = ({ children, contentProps }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (

@@ -8,7 +8,7 @@ export type TableRowProps = {
   onClick?: () => void;
 };
 
-const TableRow: React.FC<TableRowProps> = ({
+const TableRow: React.FCC<TableRowProps> = ({
   isNested,
   isSelected,
   children,

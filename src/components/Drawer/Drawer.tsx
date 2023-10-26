@@ -17,7 +17,7 @@ export type DrawerProps = {
   renderHeader?: () => React.ReactNode;
 };
 
-const Drawer: React.FC<DrawerProps> = (props) => {
+const Drawer: React.FCC<DrawerProps> = (props) => {
   const breakpoints = useBreakpoints();
   const isSmallDesktop = breakpoints.des1200 && !breakpoints.des1440;
 

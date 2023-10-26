@@ -16,7 +16,7 @@ export type NotificationVisualProps = {
   dataTestId?: TestId;
 } & NotificationActions;
 
-const NotificationVisual: React.FC<NotificationVisualProps> = ({
+const NotificationVisual: React.FCC<NotificationVisualProps> = ({
   title,
   primaryCTALabel = 'OK',
   primaryCTA,

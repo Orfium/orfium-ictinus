@@ -20,7 +20,9 @@ export const descriptionStyle =
       align-items: center;
       gap: 4px;
       color: ${theme.tokens.colors.get(
-        colorCategory === 'inverted' ? 'textColor.inverted.secondary' : 'textColor.light.secondary'
+        colorCategory === 'inverted'
+          ? 'textColor.inverted.secondary'
+          : 'textColor.default.secondary' // light doesnt exist
       )};
       font-weight: 500;
       margin-bottom: 36px;

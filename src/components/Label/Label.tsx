@@ -15,7 +15,7 @@ export type LabelProps = {
   size?: string;
 };
 
-const Label: React.FC<LabelProps> = ({
+const Label: React.FCC<LabelProps> = ({
   hasError = false,
   htmlFor,
   label,

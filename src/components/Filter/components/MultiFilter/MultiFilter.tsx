@@ -16,7 +16,7 @@ type Props = Pick<FilterProps, 'selectedItems' | 'items' | 'isLoading' | 'hasSel
   searchValue: string;
 };
 
-const MultiFilter: React.FC<Props> = ({
+const MultiFilter: React.FCC<Props> = ({
   selectedItems,
   items,
   onInput,

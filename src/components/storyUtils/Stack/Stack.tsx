@@ -9,7 +9,7 @@ type StackProps = {
   width?: number;
 };
 
-const Stack: React.FC<StackProps> = ({
+const Stack: React.FCC<StackProps> = ({
   isVertical = false,
   isInverted = false,
   height,

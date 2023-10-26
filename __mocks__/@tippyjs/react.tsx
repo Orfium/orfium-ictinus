@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Tippy: React.FC<{ content: string }> = props => {
+const Tippy: React.FCC<{ content: string }> = (props) => {
   const { children, content, ...rest } = props;
 
   return (

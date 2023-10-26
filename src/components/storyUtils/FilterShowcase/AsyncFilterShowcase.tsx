@@ -12,7 +12,7 @@ type AsyncFilterShowcaseProps = {
   minCharactersToSearch?: number;
 };
 
-export const AsyncFilterShowcase: React.FC<AsyncFilterShowcaseProps> = ({
+export const AsyncFilterShowcase: React.FCC<AsyncFilterShowcaseProps> = ({
   minCharactersToSearch = 0,
 }) => {
   const defaultValue = { value: 18, label: 'Default value' };

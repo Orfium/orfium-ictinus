@@ -10,14 +10,14 @@ import {
 
 const defaultContextData = {
   typesShadesColor: {},
-  calculateColorBetweenColorAndType: (color: string, type: typeof mainTypes[number]) => {},
+  calculateColorBetweenColorAndType: (color: string, type: (typeof mainTypes)[number]) => {},
 };
 
 type ContextProps = {
   typesShadesColor: TypesShadeAndColors;
   calculateColorBetweenColorAndType: (
     color: string,
-    type: typeof mainTypes[number]
+    type: (typeof mainTypes)[number]
   ) => ColorShapeFromComponent;
 };
 
@@ -35,7 +35,7 @@ const useTypeColorToColorMatch = () => {
   return React.useContext<ContextProps>(TypeColorToColorMatchContext);
 };
 
-export type TypesShadeAndColors = Record<typeof mainTypes[number], ColorShapeFromComponent>;
+export type TypesShadeAndColors = Record<(typeof mainTypes)[number], ColorShapeFromComponent>;
 
 /**
  * Apply for each type passed what color it is and shade (shade now is auto applied at 500)
@@ -43,7 +43,7 @@ export type TypesShadeAndColors = Record<typeof mainTypes[number], ColorShapeFro
  * return e.g { primary: { shade: 500, color: 'orange'}, info: { shade: 500, color: 'darkBlue'}}
  */
 const calculateTypesShadeAndColors = (
-  types: Record<typeof mainTypes[number], GeneratedColorShades>,
+  types: Record<(typeof mainTypes)[number], GeneratedColorShades>,
   palette: FlatPalette
 ) => {
   // for each mainType
@@ -72,7 +72,7 @@ const calculateTypesShadeAndColors = (
 };
 
 /** @TODO revisit this provider and remove if obsolete */
-const TypeColorToColorMatchProvider: React.FC = ({ children }) => {
+const TypeColorToColorMatchProvider: React.FCC = ({ children }) => {
   const theme = useTheme();
   const types = pick(theme.globals.oldColors, mainTypes);
 
@@ -82,7 +82,7 @@ const TypeColorToColorMatchProvider: React.FC = ({ children }) => {
 
   /** @TODO revisit this and remove if obsolete */
   const calculateColorBetweenColorAndType = React.useCallback(
-    (color, type) => {
+    (color: string, type: (typeof mainTypes)[number]) => {
       const calculatedColor = color ? calculateActualColorFromComponentProp(color) : undefined;
 
       return calculatedColor ? calculatedColor : typesShadesColor[type];

@@ -12,10 +12,10 @@ export type BreadcrumbProps = {
   data?: BreadcrumbItemData[];
 };
 
-const isLastItem = (dataItems: React.ReactNode[], itemIndex: number) =>
+const isLastItem = (dataItems: (React.ReactNode | BreadcrumbItemData)[], itemIndex: number) =>
   itemIndex === dataItems.length - 1;
 
-const Breadcrumb: React.FC<BreadcrumbProps> = ({ children, data = [] }) => {
+const Breadcrumb: React.FCC<BreadcrumbProps> = ({ children, data = [] }) => {
   const passDataToRouterLink = React.useCallback(
     (dataItem: BreadcrumbItemData, index: number) => {
       const { to, label } = dataItem;
