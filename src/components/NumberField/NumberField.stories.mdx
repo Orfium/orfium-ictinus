@@ -63,18 +63,31 @@ import Overview from '../../storybook/Overview';
   ]}
 />
 
-## Variants
+<SubsectionHeader title="Variants" />
 
-### NumberField with number format
+### NumberField with Placeholder
+
+NumberField with or without Placeholder
+
+<Preview>
+  <Story name="NumberField with Placeholder">
+    <Stack>
+      <NumberField label={'NumberField'} />
+      <NumberField label={'NumberField'} placeholder={'Placeholder'} />
+    </Stack>
+  </Story>
+</Preview>
+
+### NumberField with Format Options
 
 Formatting options for the value displayed in the number field can be configured based on
 [Intl.NumberFormatOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat)
 
 <Preview>
-  <Story name="NumberField with number format">
+  <Story name="NumberField with Format Options">
     <Stack>
       <NumberField
-        label={'Label'}
+        label={'NumberField'}
         formatOptions={{
           minimumFractionDigits: number('minimumFractionDigits', 2),
           maximumFractionDigits: number('maximumFractionDigits', 2),
@@ -96,20 +109,20 @@ NumberField can have a stepper with increment and decrement buttons. Step defaul
 <Preview>
   <Story name="NumberField with Stepper">
     <Stack>
-      <NumberField label={'Label'} hasStepper step={number('Step', undefined)} />
+      <NumberField label={'NumberField'} hasStepper step={number('Step', undefined)} />
     </Stack>
   </Story>
 </Preview>
 
-## NumberField with min and max values
+## NumberField with min/max values
 
-NumberField can have min and max values provided as props.
+NumberField can have min/max values provided as props.
 
 <Preview>
-  <Story name="NumberField with min and max values">
+  <Story name="NumberField with min/max values">
     <Stack>
       <NumberField
-        label={'Label'}
+        label={'NumberField'}
         minValue={number('minValue', undefined)}
         maxValue={number('maxValue', undefined)}
         suffix={<div style={{ color: 'gray' }}>%</div>}
@@ -118,53 +131,51 @@ NumberField can have min and max values provided as props.
   </Story>
 </Preview>
 
-### NumberField with Label and Placeholder
-
-NumberField with label options. Label that will float, with or without Placeholder
-
-<Preview>
-  <Story name="NumberField with Label and Placeholder">
-    <Stack>
-      <NumberField label={'Label'} />
-      <NumberField label={'Label'} placeholder={'Placeholder'} />
-    </Stack>
-  </Story>
-</Preview>
-
-### NumberField with Statuses
+### NumberField Statuses
 
 NumberField inherits all TextField statuses behavior.
 
 <Preview>
-  <Story name="NumberField with Label, Placeholder and Statuses">
+  <Story name="NumberField Statuses">
     <Stack>
       <NumberField
-        label={'Label'}
+        label={'Normal'}
         status={{
           type: 'normal',
           hintMessage: text('Custom Hint Message', 'Hint in Text Field'),
         }}
       />
       <NumberField
-        label={'Label'}
+        label={'Error'}
         status={{
           type: 'error',
           hintMessage: text('Custom Error Message', 'Error in Text Field'),
         }}
       />
       <NumberField
-        label={'Label'}
+        label={'Read-only'}
         status={{
           type: 'read-only',
           hintMessage: text('Custom Hint Message', 'Hint in Text Field'),
         }}
       />
+    </Stack>
+  </Story>
+</Preview>
+
+### Disabled NumberField
+
+Disabled NumberField.
+
+<Preview>
+  <Story name="Disabled NumberField">
+    <Stack>
       <NumberField
-        label={'Label'}
         isDisabled
+        label={'NumberField'}
         status={{
           type: 'normal',
-          hintMessage: text('Custom Hint Message', 'Hint in Text Field'),
+          hintMessage: 'This field is disabled',
         }}
       />
     </Stack>
@@ -177,7 +188,7 @@ NumberField inherits all TextField statuses behavior.
   <Story name="Playground" parameters={{ decorators: [withKnobs] }}>
     <Stack>
       <NumberField
-        label={text('Label', 'Label')}
+        label={text('Label', 'NumberField')}
         isDisabled={boolean('isDisabled', false)}
         isRequired={boolean('isRequired', false)}
         hasStepper={boolean('hasStepper', false)}

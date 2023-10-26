@@ -39,7 +39,7 @@ const SelectShowcase: React.FC<SelectShowcaseProps> = ({ minCharactersToSearch =
     >
       <Select
         isAsync
-        label={'Flavour'}
+        label={'Select'}
         options={options}
         selectedOption={selectedOption}
         onChange={setSelectedOption}

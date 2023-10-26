@@ -72,14 +72,14 @@ import Overview from '../../storybook/Overview';
   (scroll down for more details)
 </Tip>
 
-## Variants
+<SubsectionHeader title="Variants" />
 
-### TextField with Label and Placeholder
+### TextField with Placeholder
 
-Regular TextField with label options. Label that will float, with or without Placeholder
+Single TextField with or without Placeholder
 
 <Preview>
-  <Story name="TextField with Label and Placeholder">
+  <Story name="TextField with Placeholder">
     <Stack>
       <TextField label={'Label'} />
       <TextField label={'Label'} placeholder={'Placeholder'} />
@@ -87,7 +87,7 @@ Regular TextField with label options. Label that will float, with or without Pla
   </Story>
 </Preview>
 
-### Masked TextField
+### TextField with Mask option
 
 TextField with mask option. When used, placeholder prop is not available.
 The mask rules are the following:
@@ -106,29 +106,36 @@ The mask rules are the following:
 </Tip>
 
 <Preview>
-  <Story name="Masked TextField (DontTest)">
+  <Story name="TextField with Mask option (DontTest)">
     <Stack>
       <TextFieldShowCase
-        label="Masked TextField"
-        mask={text('Mask', '+(999) 999')}
+        label="Currency Example"
+        mask={'$ 999999'}
         isDisabled={boolean('isDisabled', false)}
-        hasSuffix={boolean('hasSuffixIcon', false)}
-        suffix={select('Suffix icon name', ['', ...Object.keys(iconSelector)], 'info')}
         status={{
           type: select('Status', ['error', 'normal', 'read-only'], 'normal'),
-          hintMessage: text('Hint/Error message', 'Message in Text Field'),
+          hintMessage: text('Hint/Error message', ''),
+        }}
+      />
+      <TextFieldShowCase
+        label="Percentage Example"
+        mask={'99,99 %'}
+        isDisabled={boolean('isDisabled', false)}
+        status={{
+          type: select('Status', ['error', 'normal', 'read-only'], 'normal'),
+          hintMessage: text('Hint/Error message', ''),
         }}
       />
     </Stack>
   </Story>
 </Preview>
 
-### TextField with Icons
+### TextField with Icon
 
 TextField with icon options right of the text, either as external image or one of the available ictinus Icons.
 
 <Preview>
-  <Story name="TextField with Icons">
+  <Story name="TextField with Icon">
     <Stack>
       <TextField
         label={'Label'}
@@ -146,31 +153,22 @@ TextField with icon options right of the text, either as external image or one o
   </Story>
 </Preview>
 
-### Disabled TextField
+### MultiTextField
 
-Disabled TextField.
+MultiTextField enables a user to enter one or individual entries as free text.
 
 <Preview>
-  <Story name="Disabled TextField">
-    <Stack>
-      <TextField
-        isDisabled
-        label={'Label'}
-        status={{
-          type: 'normal',
-          hintMessage: 'This field is disabled',
-        }}
-      />
-    </Stack>
+  <Story name="MultiTextField">
+    <MultiTextFieldShowcase />
   </Story>
 </Preview>
 
-### TextField with different Statuses
+### TextField Statuses
 
 TextField with different Statuses.
 
 <Preview>
-  <Story name="TextField with different Statuses" parameters={{ decorators: [withKnobs] }}>
+  <Story name="TextField Statuses" parameters={{ decorators: [withKnobs] }}>
     <Stack>
       <TextField
         label={'Normal'}
@@ -197,13 +195,22 @@ TextField with different Statuses.
   </Story>
 </Preview>
 
-### MultiTextField
+### Disabled TextField
 
-MultiTextField enables a user to enter one or individual entries as free text.
+Disabled TextField.
 
 <Preview>
-  <Story name="MultiTextField">
-    <MultiTextFieldShowcase />
+  <Story name="Disabled TextField">
+    <Stack>
+      <TextField
+        isDisabled
+        label={'Label'}
+        status={{
+          type: 'normal',
+          hintMessage: 'This field is disabled',
+        }}
+      />
+    </Stack>
   </Story>
 </Preview>
 
