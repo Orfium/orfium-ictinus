@@ -13,7 +13,7 @@ export type ListSectionProps = {
   rowSize?: ListRowSize;
 } & SectionProps<unknown>;
 
-const ListSection: React.FC<ListSectionProps> = (props) => <AriaSection {...props} />;
+const ListSection: React.FCC<ListSectionProps> = (props) => <AriaSection {...props} />;
 
 // @ts-ignore hack to pass the aria generator to the component as needed
 ListSection.getCollectionNode = AriaSection.getCollectionNode;

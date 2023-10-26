@@ -11,7 +11,7 @@ type User = {
   address: { street: string; city: string; zipcode: string };
 };
 
-const TableFilterShowcase: React.FC = () => {
+const TableFilterShowcase: React.FCC = () => {
   const [users, setUsers] = React.useState<User[]>([]);
   const [search, setSearch] = React.useState('');
 

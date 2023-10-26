@@ -23,7 +23,7 @@ export type TableCellProps = {
   onClick?: () => void;
 };
 
-const TableCell: React.FC<TableCellProps> = React.memo(
+const TableCell: React.FCC<TableCellProps> = React.memo(
   ({
     textAlign = 'left',
     component = 'td',

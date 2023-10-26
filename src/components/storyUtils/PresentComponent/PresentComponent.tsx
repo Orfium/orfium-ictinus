@@ -5,7 +5,7 @@ type PresentComponentProps = {
   width?: string;
 };
 
-const PresentComponent: React.FC<PresentComponentProps> = ({ name, width = 'auto', children }) => {
+const PresentComponent: React.FCC<PresentComponentProps> = ({ name, width = 'auto', children }) => {
   return (
     <div
       style={{

@@ -15,7 +15,7 @@ type ExpandedButtonCellProps = {
   index?: number;
 };
 
-const ExpandedButtonCell: React.FC<ExpandedButtonCellProps> = ({
+const ExpandedButtonCell: React.FCC<ExpandedButtonCellProps> = ({
   isExpandedExists,
   isChecked,
   toggleIsChecked,

@@ -1,10 +1,10 @@
-import React, { FC } from 'react';
+import React, { FCC } from 'react';
 
 type Props = {
   data: { title: string; description: string }[];
 };
 
-const OverviewShowcase: FC<Props> = ({ data }) => {
+const OverviewShowcase: FCC<Props> = ({ data }) => {
   return (
     <div
       css={{

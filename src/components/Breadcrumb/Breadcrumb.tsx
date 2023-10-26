@@ -8,7 +8,7 @@ import { BreadcrumbProps, BreadcrumbItem as BreadcrumbItemType } from './Breadcr
 import BreadcrumbItem from './BreadcrumbItem';
 import Link from 'components/Link';
 
-const isLastItem = (dataItems: React.ReactNode[], itemIndex: number) =>
+const isLastItem = (dataItems: BreadcrumbItemType[], itemIndex: number) =>
   itemIndex === dataItems.length - 1;
 
 const Breadcrumb = React.forwardRef<HTMLOListElement, BreadcrumbProps>(

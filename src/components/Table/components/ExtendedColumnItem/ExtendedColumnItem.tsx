@@ -13,7 +13,7 @@ export type ExtendedColumnItemProps = {
   sorting?: Sort;
 };
 
-const ExtendedColumnItem: React.FC<ExtendedColumnItemProps> = ({ item, sorting, isNumerical }) => {
+const ExtendedColumnItem: React.FCC<ExtendedColumnItemProps> = ({ item, sorting, isNumerical }) => {
   const theme = useTheme();
 
   const itemContentLowerCase = !isItemString(item)

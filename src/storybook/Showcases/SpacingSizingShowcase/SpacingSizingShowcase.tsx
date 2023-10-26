@@ -61,14 +61,14 @@ const SpacingSizingShowcase = () => {
             <span
               css={{
                 fontWeight: theme.globals.typography.fontWeight.get('medium'),
-                color: theme.tokens.colors.get('textColor.light.primary'),
+                color: theme.tokens.colors.get('textColor.default.primary'),
               }}
             >
               spacing.{index}
             </span>
             <span
               css={{
-                color: theme.tokens.colors.get('textColor.light.secondary'),
+                color: theme.tokens.colors.get('textColor.default.secondary'),
                 fontSize: '14px',
                 fontWeight: theme.globals.typography.fontWeight.get('regular'),
               }}
