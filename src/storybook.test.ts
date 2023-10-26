@@ -1,18 +1,21 @@
+import path from 'path';
+import { Story } from '@storybook/react';
+import { render } from '@testing-library/react';
+
 import { createSerializer } from '@emotion/jest';
 import initStoryshots, { multiSnapshotWithOptions } from '@storybook/addon-storyshots';
 import { ReactElement } from 'react';
-import { render } from '@testing-library/react';
+
 jest.mock('react-dom', () => ({
   // @ts-ignore
   ...jest.requireActual('react-dom'),
   createPortal: (node: any) => node,
 }));
-import { Story } from '@storybook/react';
-import * as path from 'path';
+
 import {
-  StoryshotsTestMethod,
   TestMethodOptions,
 } from '@storybook/addon-storyshots/dist/ts3.9/api/StoryshotsOptions';
+
 
 /** Every time we run the tests, the dynamic attribute values that are generated for each element cause tests to fail.
  * A quick solution is to update snapshots every time we run the tests (jest -u) and then push the updated snapshots to git.
@@ -69,19 +72,21 @@ interface StoryshotMethod extends Omit<TestMethodOptions, 'context'> {
 }
 
 initStoryshots({
-  storyNameRegex: /^(?!.*DontTest).*/,
   framework: 'react',
+  integrityOptions: { cwd: __dirname },
   renderer: render,
   snapshotSerializers: [reactTestingLibrarySerializer, createSerializer()],
-  storyKindRegex: /^((?!.*?DontTest).)*$/,
-  integrityOptions: { cwd: __dirname },
-  test: (story: StoryshotMethod) => {
+  storyNameRegex: /^(?!.*DontTest).*/,
+  test: (story) => {
+    // FIXME Workaround for https://github.com/storybookjs/storybook/issues/16692
     const fileName = path.resolve(__dirname, '..', story.context.fileName);
+
     return multiSnapshotWithOptions((story: Story) => ({
       createNodeMock: createNodeMock(story),
     }))({
       ...story,
+      options: {},
       context: { ...story.context, fileName },
-    }) as StoryshotsTestMethod;
+    });
   },
 });

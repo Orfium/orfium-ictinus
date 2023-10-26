@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 
 import { iconStyle, WrapperStyle } from './UsageGuidelines.style';
 
-export const UsageGuidelines: React.FC<{ guidelines: string[]; policies?: string[] }> = ({
+export const UsageGuidelines: React.FCC<{ guidelines: string[]; policies?: string[] }> = ({
   guidelines,
   policies,
 }) => {

@@ -16,7 +16,7 @@ type DonutChartShowCaseProps = {
   chartUnits?: string;
 };
 
-const DonutChartShowCase: React.FC<DonutChartShowCaseProps> = ({ chartValue, chartUnits }) => {
+const DonutChartShowCase: React.FCC<DonutChartShowCaseProps> = ({ chartValue, chartUnits }) => {
   return (
     <div style={{ width: 200, height: 200 }}>
       <DonutChart data={data} value={chartValue} units={chartUnits} />

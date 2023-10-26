@@ -43,7 +43,7 @@ export type MenuProps = {
 } & TestProps &
   EventProps;
 
-const Menu: React.FC<MenuProps> = (props) => {
+const Menu: React.FCC<MenuProps> = (props) => {
   const {
     items,
     onSelect,

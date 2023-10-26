@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FCC, useState } from 'react';
 
 import TextField from '../TextField';
 import TopAppBar from '../TopAppBar';
@@ -32,7 +32,7 @@ const DEFAULT_ON_CLICK = () => {
   alert('Toggles a menu!');
 };
 
-const TopAppBarShowcase: FC<Props> = ({
+const TopAppBarShowcase: FCC<Props> = ({
   hasLogo = false,
   hasAdditionalTools = false,
   hasSearchHandler = false,

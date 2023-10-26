@@ -22,7 +22,7 @@ export type ModalProps = {
   isContentPadded?: boolean;
 };
 
-const Modal: React.FC<ModalProps> = ({
+const Modal: React.FCC<ModalProps> = ({
   isOpen = false,
   onClose,
   dataTestId,

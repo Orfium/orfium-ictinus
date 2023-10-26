@@ -9,7 +9,7 @@ type Props = {
   dataTestIdPrefix?: string;
 };
 
-const Stepper: React.FC<Props> = ({ isDisabled, dataTestIdPrefix }) => {
+const Stepper: React.FCC<Props> = ({ isDisabled, dataTestIdPrefix }) => {
   const dataTestId = dataTestIdPrefix ? `${dataTestIdPrefix}_number` : 'number';
 
   return (

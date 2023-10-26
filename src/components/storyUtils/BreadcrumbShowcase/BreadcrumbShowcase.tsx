@@ -16,7 +16,7 @@ const createNewDataConfig = (routeId: number) => ({
 
 const browserHistory = createBrowserHistory();
 
-const BreadcrumbShowcase: React.FC<Props> = ({ initData = [] }) => {
+const BreadcrumbShowcase: React.FCC<Props> = ({ initData = [] }) => {
   const [data, setData] = useState<BreadcrumbItemData[]>(initData);
 
   const clickHandler = () => {

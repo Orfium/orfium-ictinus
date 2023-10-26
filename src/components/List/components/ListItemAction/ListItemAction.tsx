@@ -1,10 +1,10 @@
-import React, { FC } from 'react';
+import React, { FCC } from 'react';
 
 import { listItemActionWrapper } from './ListItemAction.style';
 
-export type ListItemActionProps = {};
+export type ListItemActionProps = NonNullable<unknown>;
 
-const ListItemAction: FC<ListItemActionProps> = (props) => {
+const ListItemAction: FCC<ListItemActionProps> = (props) => {
   return <div css={listItemActionWrapper()}>{props.children}</div>;
 };
 

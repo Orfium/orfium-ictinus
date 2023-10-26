@@ -4,7 +4,7 @@ import Button from '../../Button';
 import Card from '../../Card';
 import { showcaseContainerStyle } from '../CardShowcase/CardShowcase.style';
 
-const LoadingButtonShowcase: React.FC = () => {
+const LoadingButtonShowcase: React.FCC = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleClick = () => {

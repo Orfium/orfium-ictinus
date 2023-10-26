@@ -7,7 +7,7 @@ type CustomTooltipProps = {
   fill: string;
 };
 
-const CustomTooltip: React.FC<CustomTooltipProps> = ({ content, fill }) => {
+const CustomTooltip: React.FCC<CustomTooltipProps> = ({ content, fill }) => {
   const wrapperRef = useRef<null | HTMLDivElement>(null);
   const [isActive, setIsActive] = useState(false);
   const [isTruncated, setIsTrancated] = useState(false);

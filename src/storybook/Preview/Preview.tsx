@@ -1,5 +1,5 @@
 import { Preview as SBPreview } from '@storybook/addon-docs';
-import React, { FC } from 'react';
+import React, { FCC } from 'react';
 
 import useTheme from '../../hooks/useTheme';
 
@@ -7,16 +7,19 @@ export type PreviewProps = {
   isInverted?: boolean;
 };
 
-const Preview: FC<PreviewProps> = ({ children, isInverted }) => {
+const Preview: FCC<PreviewProps> = ({ children, isInverted }) => {
   const theme = useTheme();
 
   return (
+    // @ts-ignore
     <SBPreview
       css={{
-        background: theme.tokens.colors.get(isInverted ? 'backgroundColor.inverted' : 'backgroundColor.tinted'),
+        background: theme.tokens.colors.get(
+          isInverted ? 'backgroundColor.inverted' : 'backgroundColor.tinted'
+        ),
       }}
     >
-      {children}
+      <>{children}</>
     </SBPreview>
   );
 };

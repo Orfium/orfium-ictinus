@@ -7,7 +7,7 @@ import { DrawerProps } from '../Drawer';
 
 type NavigationProps = DrawerProps;
 
-const Navigation: React.FC<NavigationProps> = ({ menuItems, isExpanded }) => {
+const Navigation: React.FCC<NavigationProps> = ({ menuItems, isExpanded }) => {
   const [openMenuItems, setOpenMenuItems] = useState<string[]>([]); // we identify open menuitems by their url
   const [currentMenuItem] = useLocationToGetCurrentMenuItem(menuItems, setOpenMenuItems);
 

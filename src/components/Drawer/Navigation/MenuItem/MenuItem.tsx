@@ -25,7 +25,7 @@ export type MenuItemProps = {
   toggleMenuItem: (newUrl: string) => void;
 } & DrawerMenuItem;
 
-const MenuItem: React.FC<MenuItemProps> = memo(
+const MenuItem: React.FCC<MenuItemProps> = memo(
   ({ isCurrent, isExpanded, name, url, iconName, options, toggleMenuItem, state: linkState }) => {
     const theme = useTheme();
 
