@@ -12,7 +12,7 @@ export type TruncatedContentProps = {
   placement?: 'top' | 'bottom' | 'right' | 'left';
 };
 
-const TruncatedContent: React.FC<TruncatedContentProps> = ({
+const TruncatedContent: React.FCC<TruncatedContentProps> = ({
   children,
   isAlwaysVisible = false,
   tooltipContent,

@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FCC } from 'react';
 
 import { descriptionStyles, listItemTextWrapperStyles } from './ListItemText.style';
 
@@ -6,7 +6,7 @@ export type ListItemTextProps = {
   description?: string | JSX.Element;
 };
 
-const ListItemText: FC<ListItemTextProps> = (props) => {
+const ListItemText: FCC<ListItemTextProps> = (props) => {
   return (
     <div css={listItemTextWrapperStyles(false, false)}>
       <span>{props.children}</span>

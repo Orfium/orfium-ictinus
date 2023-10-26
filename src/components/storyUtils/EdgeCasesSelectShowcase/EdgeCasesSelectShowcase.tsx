@@ -15,7 +15,7 @@ const handleSelectedOption = (selectedOption: any) => {
   console.log('On option change', selectedOption);
 };
 
-const EdgeCasesSelectShowcase: React.FC = () => {
+const EdgeCasesSelectShowcase: React.FCC = () => {
   return (
     <div css={showcaseContainer()}>
       <div style={{ width: 250 }}>

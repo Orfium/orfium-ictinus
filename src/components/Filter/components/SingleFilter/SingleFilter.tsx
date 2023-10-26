@@ -18,7 +18,7 @@ type Props = Pick<
   isDefaultOptionVisible: boolean;
 };
 
-const SingleFilter: React.FC<Props> = ({
+const SingleFilter: React.FCC<Props> = ({
   isSearchable,
   dataTestId,
   searchValue,

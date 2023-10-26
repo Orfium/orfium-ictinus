@@ -1,5 +1,6 @@
 import React from 'react';
 import { TooltipProps } from 'recharts';
+import { NameType, ValueType } from 'recharts/types/component/DefaultTooltipContent';
 
 import {
   tooltipHrStyle,
@@ -8,7 +9,7 @@ import {
   tooltipUlStyle,
 } from './CustomTooltip.style';
 
-const CustomTooltip: React.FC<TooltipProps> = ({ label, payload }) => {
+const CustomTooltip: React.FCC<TooltipProps<ValueType, NameType>> = ({ label, payload }) => {
   return (
     <div className="custom-tooltip" css={tooltipStyle()}>
       <p className="label" style={{ margin: '0px' }}>
