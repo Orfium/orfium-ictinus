@@ -7,7 +7,11 @@ const handleSelect = jest.fn();
 const handleClear = jest.fn();
 
 describe('Tag', () => {
-  test('that on selectable Tag the onSelect handler is being called', () => {
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
+  test('that on selectable Tag the onSelect handler is being called when clicked', () => {
     const { getByTestId } = render(
       <Tag onSelect={handleSelect} dataTestPrefixId="test">
         Tag
@@ -18,6 +22,25 @@ describe('Tag', () => {
     expect(tag).toBeInTheDocument();
 
     fireEvent.click(tag);
+
+    expect(handleSelect).toHaveBeenCalledTimes(1);
+  });
+
+  test('that on selectable Tag the onSelect handler is being called when Enter is pressed', () => {
+    const { getByTestId } = render(
+      <Tag onSelect={handleSelect} dataTestPrefixId="test">
+        Tag
+      </Tag>
+    );
+
+    const tag = getByTestId('test_tag_container');
+    expect(tag).toBeInTheDocument();
+
+    fireEvent.focus(tag);
+
+    fireEvent.keyDown(tag, {
+      key: 'Enter',
+    });
 
     expect(handleSelect).toHaveBeenCalledTimes(1);
   });
@@ -35,7 +58,7 @@ describe('Tag', () => {
     expect(tagCheck).toBeInTheDocument();
   });
 
-  test('that on clearable Tag the onClear handler is being called', () => {
+  test('that on clearable Tag the onClear handler is being called when clicked', () => {
     const { getByTestId } = render(
       <Tag onClear={handleClear} dataTestPrefixId="test">
         Tag
@@ -48,6 +71,24 @@ describe('Tag', () => {
     expect(tagClear).toBeInTheDocument();
 
     fireEvent.click(tagClear);
+
+    expect(handleClear).toHaveBeenCalledTimes(1);
+  });
+
+  test('that on clearable Tag the onClear handler is being called when Enter is pressed', () => {
+    const { getByTestId } = render(
+      <Tag onClear={handleClear} dataTestPrefixId="test">
+        Tag
+      </Tag>
+    );
+    const tag = getByTestId('test_tag_container');
+    expect(tag).toBeInTheDocument();
+
+    fireEvent.focus(tag);
+
+    fireEvent.keyDown(tag, {
+      key: 'Enter',
+    });
 
     expect(handleClear).toHaveBeenCalledTimes(1);
   });
