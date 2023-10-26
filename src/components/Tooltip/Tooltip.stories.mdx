@@ -3,6 +3,7 @@ import { text, number, select, boolean, withKnobs } from '@storybook/addon-knobs
 import Tooltip from './Tooltip';
 import { hoverOnTooltips } from './utils';
 import Stack from '../storyUtils/Stack';
+import Typography from '../Typography';
 import TooltipShowcase from '../storyUtils/TooltipShowcase';
 import { FIGMA_URL, Function } from '../../utils/common';
 import SectionHeader from '../../storybook/SectionHeader';
@@ -30,7 +31,19 @@ import Button from '../Button';
 
 ## Overview
 
-Tooltips provide brief, helpful information when a user hovers or focuses on the trigger element.
+<Story
+  name="Overview"
+  parameters={{
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+>
+  <Typography>
+    Tooltips provide brief, helpful information when a user hovers or focuses on the trigger
+    element.
+  </Typography>
+</Story>
 
 ## Props
 

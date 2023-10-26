@@ -2,6 +2,7 @@ import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
 import List, { ListItem, ListItemAction, ListItemText } from '../index';
 import { FIGMA_URL, Function } from '../../../utils/common';
 import SectionHeader from '../../../storybook/SectionHeader';
+import Typography from '../../Typography';
 import Radio from '../../Radio';
 import CheckBox from '../../CheckBox';
 import Switch from '../../Switch';
@@ -33,7 +34,18 @@ import { useState } from 'react';
 
 ## Overview
 
-The ListItem component represents an individual item in the List. It can contain either ListItemText or ListItemAction, both, or custom component.
+<Story
+  name="Overview"
+  parameters={{
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+>
+  <Typography>
+    The ListItem component represents an individual item in the List. It can contain eitherListItemText or ListItemAction, both, or custom component.
+  </Typography>
+</Story>
 
 ## Usage
 

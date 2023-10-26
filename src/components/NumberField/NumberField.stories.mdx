@@ -3,6 +3,7 @@ import { boolean, number, select, text, withKnobs } from '@storybook/addon-knobs
 import { linkTo } from '@storybook/addon-links';
 import NumberField from './NumberField';
 import Stack from '../storyUtils/Stack';
+import Typography from '../Typography';
 import Icon from '../Icon';
 import iconSelector from '../Icon/assets/iconSelector';
 import Loader from '../Loader';
@@ -31,7 +32,19 @@ import SectionHeader from '../../storybook/SectionHeader';
 
 ## Overview
 
-A universal NumberField that only allows for numerical characters, designed to handle numerical data entry.
+<Story
+  name="Overview"
+  parameters={{
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+>
+  <Typography>
+    A universal NumberField that only allows for numerical characters, designed to handle numerical
+    data entry.
+  </Typography>
+</Story>
 
 ## Props
 

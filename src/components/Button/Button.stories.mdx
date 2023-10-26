@@ -1,6 +1,7 @@
 import { Meta, Props, Story } from '@storybook/addon-docs';
 import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 import Button from './Button';
+import Typography from '../Typography';
 import Stack from '../storyUtils/Stack';
 import LinkTo from '@storybook/addon-links/react';
 
@@ -52,7 +53,18 @@ import { getIconSelectorKnob } from '../../utils/stories';
 
 ## Overview
 
-A universal Button component that is a clickable element that can hold many forms.
+<Story
+  name="Overview"
+  parameters={{
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+>
+  <Typography>
+    A universal Button component that is a clickable element that can hold many forms.
+  </Typography>
+</Story>
 
 ## Usage
 

@@ -4,6 +4,7 @@ import Select from './Select';
 import Stack from '../storyUtils/Stack';
 import { SelectShowcase, MultiSelectShowcase } from '../storyUtils/SelectShowcase';
 import EdgeCasesSelectShowcase from '../storyUtils/EdgeCasesSelectShowcase';
+import Typography from '../Typography';
 import { FIGMA_URL, Function } from '../../utils/common';
 import { useState } from 'react';
 import { StatefulSelect } from './index';
@@ -88,7 +89,18 @@ const defaultValue = options[0];
 
 ## Overview
 
-A universal Select component that is a clickable element that can hold many forms.
+<Story
+  name="Overview"
+  parameters={{
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+>
+  <Typography>
+    A universal Select component that is a clickable element that can hold many forms.
+  </Typography>
+</Story>
 
 ## Usage
 

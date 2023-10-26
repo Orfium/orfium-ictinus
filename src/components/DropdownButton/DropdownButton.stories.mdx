@@ -1,5 +1,6 @@
 import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
 import DropdownButton from './DropdownButton';
+import Typography from '../Typography';
 import Stack from '../storyUtils/Stack';
 import { FIGMA_URL } from '../../utils/common';
 import SectionHeader from '../../storybook/SectionHeader';
@@ -32,7 +33,23 @@ import SectionHeader from '../../storybook/SectionHeader';
 
 ## Overview
 
-A DropdownButton is a dual-function menu button that comes with a CTA and a dropdown with actions
+<Story
+  name="Overview"
+  parameters={{
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+>
+  <Typography>
+    A DropdownButton is a dual-function menu button that comes with a CTA and a dropdown with
+    actions
+  </Typography>
+</Story>
+
+## Props
+
+<Props of={DropdownButton} />
 
 ## Usage
 
@@ -49,10 +66,6 @@ A DropdownButton is a dual-function menu button that comes with a CTA and a drop
   <a href="?path=/docs/design-system-menu--menu-with-selection-handler--overview">Menu</a>{' '}
   component.
 </Tip>
-
-## Props
-
-<Props of={DropdownButton} />
 
 ## Variants
 

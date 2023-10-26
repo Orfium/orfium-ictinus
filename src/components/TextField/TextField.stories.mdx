@@ -3,6 +3,7 @@ import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 import { linkTo } from '@storybook/addon-links';
 import TextField from './TextField';
 import Stack from '../storyUtils/Stack';
+import Typography from '../Typography';
 import Icon from '../Icon';
 import iconSelector from '../Icon/assets/iconSelector';
 import Loader from '../Loader';
@@ -35,8 +36,20 @@ import SectionHeader from '../../storybook/SectionHeader';
 
 ## Overview
 
-A universal TextField component which provides a wide range of features such as statuses, inline suffixes
-such as icons and components, and a multi-input functionality with the help of the Chip component.
+<Story
+  name="Overview"
+  parameters={{
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+>
+  <Typography>
+    A universal TextField component which provides a wide range of features such as statuses, inline
+    suffixes such as icons and components, and a multi-input functionality with the help of the Chip
+    component.
+  </Typography>
+</Story>
 
 ## Props
 

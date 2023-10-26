@@ -1,5 +1,6 @@
 import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
 import { select, withKnobs } from '@storybook/addon-knobs';
+import Typography from '../Typography';
 import Avatar from './Avatar';
 import AvatarStack from './AvatarStack';
 import Stack from '../storyUtils/Stack';
@@ -31,7 +32,19 @@ import SectionHeader from '../../storybook/SectionHeader';
 
 ## Overview
 
-A universal Avatar component can be found around ictinus on menus or can be a standalone component as well. It renders either images, letter or icon from our library
+<Story
+  name="Overview"
+  parameters={{
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+>
+  <Typography>
+    A universal Avatar component can be found around ictinus on menus or can be a standalone
+    component as well. It renders either images, letter or icon from our library
+  </Typography>
+</Story>
 
 ## Props
 

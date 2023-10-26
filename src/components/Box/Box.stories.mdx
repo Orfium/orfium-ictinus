@@ -15,11 +15,34 @@ import SectionHeader from '../../storybook/SectionHeader';
 
 ## Overview
 
-The Box component is a helper component that lets you write these common less-reusable elements more briefly inline.
-
-One of the most common needs when building web apps is creating layout elements that have certain layout.
-
-The mentality is that we use all CSS props based on https://developer.mozilla.org/en-US/docs/Web/CSS. Only exceptions are `margin`, `padding` that use them in acronyms like `m` and `p` and direction `t|r|b|l` ending with `m{t|r|l|b}={value}`
+<Story
+  name="Overview"
+  parameters={{
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+>
+  <Typography style={{ paddingBottom: '16px' }}>
+    The Box component is a helper component that lets you write these common less-reusable elements
+    more briefly inline.
+  </Typography>
+  <Typography style={{ paddingBottom: '16px' }}>
+    One of the most common needs when building web apps is creating layout elements that have
+    certain layout.
+  </Typography>
+  <Typography style={{ paddingBottom: '16px' }}>
+    The mentality is that we use all CSS props based on{' '}
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">
+      https://developer.mozilla.org/en-US/docs/Web/CSS
+    </a>
+    .
+  </Typography>
+  <Typography>
+    Only exceptions are margin and padding that use them in acronyms like m and p and direction
+    t|r|b|l ending with m + t | r | l | b = value
+  </Typography>
+</Story>
 
 ## Usage
 

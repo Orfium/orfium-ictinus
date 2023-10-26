@@ -11,6 +11,7 @@ import {
   dateFormatOptions,
 } from './constants';
 import Stack from '../storyUtils/Stack';
+import Typography from '../Typography';
 import OverlayComponent from './OverlayComponent';
 import { FIGMA_URL, Function } from '../../utils/common';
 import SectionHeader from '../../storybook/SectionHeader';
@@ -44,8 +45,20 @@ import { useState } from 'react';
 
 ## Overview
 
-A universal DatePicker component that allows the user to select a single date or a range of dates.
-User may either type the date in the suggested format (text input) or click on the ‘calendar’ icon to the right to open the date picker modal
+<Story
+  name="Overview"
+  parameters={{
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+>
+  <Typography>
+    A universal DatePicker component that allows the user to select a single date or a range of
+    dates. User may either type the date in the suggested format (text input) or click on the
+    ‘calendar’ icon to the right to open the date picker modal.
+  </Typography>
+</Story>
 
 ## Props
 
