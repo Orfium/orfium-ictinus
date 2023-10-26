@@ -129,7 +129,7 @@ export const parameters = {
     ),
     components: {
       h1: ({ children }: any) => (
-        <Box mx={'6'}>
+        <Box>
           {/*// @ts-ignore*/}
           <Typography css={SBTypographyWrapper} variant={'headline01'}>
             {children}
@@ -137,7 +137,7 @@ export const parameters = {
         </Box>
       ),
       h2: ({ children }: any) => (
-        <Box mx={'6'}>
+        <Box>
           {/*// @ts-ignore*/}
           <Typography css={SBTypographyWrapper} variant={'headline02'}>
             {children}
@@ -145,7 +145,7 @@ export const parameters = {
         </Box>
       ),
       h3: ({ children }: any) => (
-        <Box mx={'6'}>
+        <Box>
           {/*// @ts-ignore*/}
           <Typography css={SBTypographyWrapper} variant={'headline03'}>
             {children}
@@ -153,7 +153,7 @@ export const parameters = {
         </Box>
       ),
       h4: ({ children }: any) => (
-        <Box mx={'6'}>
+        <Box>
           {/*// @ts-ignore*/}
           <Typography css={SBTypographyWrapper} variant={'headline04'}>
             {children}
@@ -161,7 +161,7 @@ export const parameters = {
         </Box>
       ),
       p: ({ children }: any) => (
-        <Box mx={'6'}>
+        <Box>
           <Typography variant={'body01'}>{children}</Typography>
         </Box>
       ),
