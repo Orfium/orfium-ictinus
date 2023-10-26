@@ -22,7 +22,7 @@ type ContentCellProps = {
   index?: number;
 };
 
-const ContentCell: React.FC<ContentCellProps> = ({
+const ContentCell: React.FCC<ContentCellProps> = ({
   columns,
   isPadded,
   columnWidth,

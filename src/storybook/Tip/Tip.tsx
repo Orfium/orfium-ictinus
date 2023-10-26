@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import React, { FC } from 'react';
+import React, { FCC } from 'react';
 
 import Typography from '../../components/Typography';
 
@@ -7,7 +7,7 @@ export type TipProps = {
   title: string;
 };
 
-const Tip: FC<TipProps> = ({ title = 'Tip', children }) => {
+const Tip: FCC<TipProps> = ({ title = 'Tip', children }) => {
   return (
     <div
       css={css`

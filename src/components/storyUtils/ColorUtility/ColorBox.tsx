@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FCC } from 'react';
 
 import { colorWrapper, contentWrapper } from './ColorUtility.style';
 import RangeInput from './RangeInput';
@@ -10,7 +10,7 @@ interface ColorBoxProps {
   updateValue: React.Dispatch<React.SetStateAction<number>>;
   colorStatus: 'darken' | 'lighten';
 }
-const ColorBox: FC<ColorBoxProps> = ({ colorStatus, utilityValue, updateValue, color }) => {
+const ColorBox: FCC<ColorBoxProps> = ({ colorStatus, utilityValue, updateValue, color }) => {
   return (
     <div css={colorWrapper(color)}>
       <RangeInput onChange={updateValue} value={utilityValue} />

@@ -8,7 +8,7 @@ export type SeparatorProps = {
   isLastItem?: boolean;
 };
 
-const Separator: React.FC<SeparatorProps> = (props) => {
+const Separator: React.FCC<SeparatorProps> = (props) => {
   const { isLastItem = false } = props;
   if (isLastItem) return null;
 

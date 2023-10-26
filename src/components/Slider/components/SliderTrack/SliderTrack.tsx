@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { FC, useMemo } from 'react';
+import { FCC, useMemo } from 'react';
 import { getTrackBackground } from 'react-range';
 import { ITrackProps } from 'react-range/lib/types';
 
@@ -15,7 +15,7 @@ export type SliderTrackProps = {
   restProps: ITrackProps;
 };
 
-const SliderTrack: FC<SliderTrackProps & TestProps> = ({
+const SliderTrack: FCC<SliderTrackProps & TestProps> = ({
   values,
   isDisabled,
   isSelector,

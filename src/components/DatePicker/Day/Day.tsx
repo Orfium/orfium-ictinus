@@ -18,7 +18,7 @@ export type DayProps = {
   tabIndex?: number;
 };
 
-const Day: React.FC<DayProps> = ({
+const Day: React.FCC<DayProps> = ({
   day,
   month,
   year,
@@ -39,7 +39,7 @@ const Day: React.FC<DayProps> = ({
   }, [year, month, day]);
 
   const onDayClick = React.useCallback(
-    (e) => {
+    (e: React.MouseEvent | React.KeyboardEvent) => {
       e.preventDefault();
       if (onSelect && date) {
         onSelect(date);

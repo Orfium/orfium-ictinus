@@ -13,7 +13,7 @@ type SelectShowcaseProps = {
   minCharactersToSearch?: number;
 };
 
-const SelectShowcase: React.FC<SelectShowcaseProps> = ({ minCharactersToSearch = 0 }) => {
+const SelectShowcase: React.FCC<SelectShowcaseProps> = ({ minCharactersToSearch = 0 }) => {
   const [selectedOption, setSelectedOption] = useState<SelectOption>();
   const [options, setOptions] = useState<SelectOption[]>(dummyUnrefinedData);
   const [isLoading, setIsLoading] = React.useState(false);

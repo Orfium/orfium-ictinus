@@ -5,7 +5,7 @@ import { barStyle, barWrapperStyle, loaderWrapperStyle } from './ButtonLoader.st
 
 export type ButtonLoaderProps = TestProps;
 
-const ButtonLoader: React.FC<ButtonLoaderProps> = ({ dataTestId }) => {
+const ButtonLoader: React.FCC<ButtonLoaderProps> = ({ dataTestId }) => {
   return (
     <div css={loaderWrapperStyle()} data-testid={dataTestId}>
       <div css={barWrapperStyle()}>

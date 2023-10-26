@@ -9,7 +9,7 @@ interface Props {
   onChange?: (values: number[]) => void;
 }
 
-const SliderShowcase: React.FC<Props> = (props) => {
+const SliderShowcase: React.FCC<Props> = (props) => {
   const [values, setValues] = useState<[number] | [number, number]>(
     props.isSelector ? [0] : [0, 100]
   );

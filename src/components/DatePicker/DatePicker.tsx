@@ -13,7 +13,7 @@ import { TestProps } from '../../utils/types';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import PositionInScreen from '../utils/PositionInScreen';
 
-const DatePicker: React.FC<DatePickerProps & TestProps> = ({
+const DatePicker: React.FCC<DatePickerProps & TestProps> = ({
   isRangePicker = false,
   onChange = () => {},
   disableDates,
@@ -121,7 +121,7 @@ const DatePicker: React.FC<DatePickerProps & TestProps> = ({
   }, [isOpen]);
 
   const handleClear = useCallback(
-    (e?) => {
+    (e?: React.KeyboardEvent) => {
       if (!isClearable && filterConfig?.filterType !== 'added') {
         return false;
       }
@@ -133,12 +133,12 @@ const DatePicker: React.FC<DatePickerProps & TestProps> = ({
         return onChange(EMPTY_STATE);
       }
 
-      if (e.keyCode === 27) {
+      if (e?.keyCode === 27) {
         // if escape
         return setIsOpen(false);
       }
 
-      if (e.keyCode === 8) {
+      if (e?.keyCode === 8) {
         //backspace
         if (isRangePicker) {
           if (value.from && value.to) {

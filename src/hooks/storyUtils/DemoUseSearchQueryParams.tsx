@@ -1,9 +1,9 @@
-import React, { FC, useEffect } from 'react';
+import React, { FCC, useEffect } from 'react';
 import { withRouter, RouterProps } from 'react-router-dom';
 
 import { useSearchQueryParams } from '../';
 
-const DemoUseSearchQueryParams: FC<{ initialEntries: string } & RouterProps> = (props) => {
+const DemoUseSearchQueryParams: FCC<{ initialEntries: string } & RouterProps> = (props) => {
   const searchQueryParams = useSearchQueryParams();
   const url = decodeURIComponent(props.initialEntries.replace(/&amp;/g, '&'));
 

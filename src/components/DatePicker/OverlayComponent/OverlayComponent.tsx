@@ -32,7 +32,7 @@ export type Range = {
   from?: Dayjs;
   to?: Dayjs;
 };
-const OverlayComponent: React.FC<OverlayComponentProps> = ({
+const OverlayComponent: React.FCC<OverlayComponentProps> = ({
   selectedOption,
   setSelectedOption = () => {},
   isRangePicker = false,

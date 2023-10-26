@@ -76,7 +76,7 @@ const viewPorts = {
   },
 };
 
-const Wrapper: React.FC = ({ children }) => {
+const Wrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <Box flex={1} flexDirection={'column'} p={'3'} position={'relative'}>
       {children}
@@ -123,6 +123,7 @@ export const parameters = {
     page: DocsPage,
     inlineStories: true,
     container: ({ children, context }: any) => (
+      // @ts-ignore
       <DocsContainer context={context}>
         <ThemeProvider>{children}</ThemeProvider>
       </DocsContainer>

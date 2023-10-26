@@ -19,7 +19,7 @@ export type InlineNotificationProps = {
   dataTestId?: TestId;
 } & Pick<NotificationActions, 'primaryCTALabel' | 'primaryCTA'>;
 
-const InlineNotification: React.FC<InlineNotificationProps> = ({
+const InlineNotification: React.FCC<InlineNotificationProps> = ({
   hasIcon = false,
   message,
   type,

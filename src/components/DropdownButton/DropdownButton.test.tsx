@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, screen } from '../../test';
 import DropdownButton from './DropdownButton';
 import userEvent from '@testing-library/user-event';

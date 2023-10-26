@@ -4,7 +4,7 @@ import React, { ReactNode, useRef, useState } from 'react';
 import Button from '../../Button';
 import NotificationsContainer from '../../Notification/NotificationsContainer';
 
-const NotificationShowcase: React.FC<{ id?: string }> = ({ children, id }) => {
+const NotificationShowcase: React.FCC<{ id?: string }> = ({ children, id }) => {
   const [hasShow, setHasShow] = useState<boolean>(false);
 
   return (

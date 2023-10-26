@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 import { get } from 'lodash';
-import React, { FC, useCallback } from 'react';
+import React, { FCC, useCallback } from 'react';
 import globalColorsFigma from 'theme/globals/constants/colors';
 import colorsFigma from 'theme/tokens/semantic/variables/colors';
 import { DotKeys } from 'theme/tokens/utils';
@@ -21,7 +21,7 @@ type Props = {
 /**
  * Showcase component used on the `Colors` document
  */
-const TokenColorsShowcase: FC<Props> = ({ type = 'globals' }) => {
+const TokenColorsShowcase: FCC<Props> = ({ type = 'globals' }) => {
   const isGlobal = type === 'globals';
 
   const states = isGlobal
