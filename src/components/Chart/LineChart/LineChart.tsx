@@ -23,7 +23,7 @@ export type LineChartProps = {
 
 const WrappedChart = Wrapper(AreaChart);
 
-const LineChart: React.FC<LineChartProps> = ({
+const LineChart: React.FCC<LineChartProps> = ({
   data,
   labelX,
   labelY,

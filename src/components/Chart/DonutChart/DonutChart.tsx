@@ -21,7 +21,7 @@ export type DonutChartProps = {
 
 const WrappedChart = Wrapper(PieChart);
 
-const DonutChart: React.FC<DonutChartProps> = ({ data, value, units }) => {
+const DonutChart: React.FCC<DonutChartProps> = ({ data, value, units }) => {
   const Colors = useMemo(() => {
     return data.map((obj) => obj?.color || '');
   }, [data]);

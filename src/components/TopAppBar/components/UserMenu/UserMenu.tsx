@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FCC } from 'react';
 
 import Styles from './UserMenu.style';
 import Menu from '../../../Menu';
@@ -11,7 +11,13 @@ export type UserMenuProps = {
   onSelect: (selectedItem: string | number) => void;
 } & { isDark?: boolean };
 
-const UserMenu: FC<UserMenuProps> = ({ items, userAvatar, userName, onSelect, isDark = false }) => (
+const UserMenu: FCC<UserMenuProps> = ({
+  items,
+  userAvatar,
+  userName,
+  onSelect,
+  isDark = false,
+}) => (
   <Menu
     items={items}
     color={isDark ? 'neutralBlack-500' : 'neutralWhite-100'}

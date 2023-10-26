@@ -17,7 +17,7 @@ interface Props {
   buttonType?: 'primary' | 'secondary';
   hasSelectAllOption: boolean;
 }
-const MultiFilterShowcase: React.FC<Props> = ({
+const MultiFilterShowcase: React.FCC<Props> = ({
   styleType,
   filterType,
   items = dummyUnrefinedData,

@@ -14,9 +14,9 @@ const DisplayLocation = () => {
 };
 
 interface Props {
-  renderHeader?: () => React.FC;
+  renderHeader?: () => React.ReactNode;
 }
-const DrawerShowcase: React.FC<Props> = ({ renderHeader }) => {
+const DrawerShowcase: React.FCC<Props> = ({ renderHeader }) => {
   const theme = useTheme();
   const [hasExpanded, setHasExpanded] = useState<boolean>(true);
 

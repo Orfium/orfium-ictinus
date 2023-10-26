@@ -21,7 +21,7 @@ export type BannerProps = {
   dataTestId?: TestId;
 } & Pick<NotificationActions, 'primaryCTALabel' | 'primaryCTA'>;
 
-const Banner: React.FC<BannerProps> = ({
+const Banner: React.FCC<BannerProps> = ({
   hasIcon = false,
   title,
   message,

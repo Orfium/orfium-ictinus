@@ -32,6 +32,7 @@ export type DropdownButtonProps = TestProps & {
   items?: string[];
   /** Dropdown menu position when open */
   menuPosition?: MenuPositionAllowed;
+  children?: React.ReactNode;
 };
 
 const DropdownButton = React.forwardRef<HTMLButtonElement, DropdownButtonProps>((props, ref) => {

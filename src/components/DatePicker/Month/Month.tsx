@@ -33,7 +33,7 @@ export type MonthProps = {
   isFirstCalendar?: boolean;
 };
 
-const Month: React.FC<MonthProps> = ({
+const Month: React.FCC<MonthProps> = ({
   year,
   month,
   onDaySelect,

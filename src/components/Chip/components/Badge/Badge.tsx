@@ -11,7 +11,7 @@ type TestProps = {
 
 export type BadgeProps = Pick<ChipProps, 'fill' | 'isSelected' | 'badgeNumber'> & TestProps;
 
-const Badge: React.FC<BadgeProps> = ({ fill, isSelected, badgeNumber, dataTestId }) => {
+const Badge: React.FCC<BadgeProps> = ({ fill, isSelected, badgeNumber, dataTestId }) => {
   return (
     <div
       data-testid={generateTestDataId('badge', dataTestId)}
