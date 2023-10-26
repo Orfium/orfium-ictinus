@@ -80,8 +80,8 @@ Single TextField with or without Placeholder
 <Preview>
   <Story name="TextField with Placeholder">
     <Stack>
-      <TextField label={'Label'} />
-      <TextField label={'Label'} placeholder={'Placeholder'} />
+      <TextField label={'TextField'} />
+      <TextField label={'TextField'} placeholder={'Placeholder'} />
     </Stack>
   </Story>
 </Preview>
@@ -131,23 +131,13 @@ The mask rules are the following:
 
 ### TextField with Icon
 
-TextField with icon options right of the text, either as external image or one of the available ictinus Icons.
+TextField with icon options right of the text.
 
 <Preview>
   <Story name="TextField with Icon">
     <Stack>
-      <TextField
-        label={'Label'}
-        suffix={
-          <img
-            style={{ background: 'red' }}
-            src="https://brandmark.io/logo-rank/random/pepsi.png"
-            width="16"
-            height="16"
-          />
-        }
-      />
-      <TextField label={'Label'} suffix={'keyword'} />
+      <TextField label={'TextField'} suffix={'search'} />
+      <TextField label={'TextField'} suffix={'calendarEmpty'} />
     </Stack>
   </Story>
 </Preview>
@@ -203,7 +193,7 @@ Disabled TextField.
     <Stack>
       <TextField
         isDisabled
-        label={'Label'}
+        label={'TextField'}
         status={{
           type: 'normal',
           hintMessage: 'This field is disabled',
@@ -219,7 +209,7 @@ Disabled TextField.
   <Story name="Playground" parameters={{ decorators: [withKnobs] }}>
     <Stack>
       <TextFieldShowCase
-        label={text('Label', 'Label')}
+        label={text('Label', 'TextField')}
         placeholder={text('Placeholder', 'Placeholder')}
         isDisabled={boolean('isDisabled', false)}
         hasSuffix={boolean('hasSuffixIcon', false)}
