@@ -6,7 +6,7 @@ export const TypographyWrapper = (theme: Theme) =>
   css`
     margin-top: 35px;
     display: grid;
-    &:after {
+    &:not(#variants):after {
       content: '';
       margin: 16px 0;
       background: ${theme.tokens.colors.get('borderColor.decorative.muted')};
