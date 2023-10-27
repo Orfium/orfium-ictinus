@@ -43,7 +43,7 @@ const useGetTagUtils = ({
           dataTestId={`${dataTestPrefixId}_tag_prefix`}
           size={12}
           name={'checkmark'}
-          color={tokens(`textColor.${color}` as const)}
+          color={tokens('textColor.blue')}
         />
       );
 
@@ -61,12 +61,12 @@ const useGetTagUtils = ({
             onClick={onClear}
             size={12}
             name="close"
-            color={tokens(`textColor.${color}` as const)}
+            color={tokens('textColor.blue')}
             dataTestId={`${dataTestPrefixId}_tag_suffix`}
           />
         </div>
       ) : null,
-    [color, dataTestPrefixId, isClearable, onClear, tokens]
+    [dataTestPrefixId, isClearable, onClear, tokens]
   );
 
   return {
