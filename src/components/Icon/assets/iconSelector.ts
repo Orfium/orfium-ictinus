@@ -160,6 +160,7 @@ import Statements from './statements.svg';
 import SuccessIcon from './success.svg';
 import TagIcon from './tag.svg';
 import Television from './television.svg';
+import ThumbsUpIcon from './thumbsUp.svg';
 import ThunderIcon from './thunder.svg';
 import TicTacToeArrowIcon from './tic-tac-toe-arrow.svg';
 import TimeOutIcon from './time-out.svg';
@@ -330,6 +331,7 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   statements: Statements,
   success: SuccessIcon,
   television: Television,
+  thumbsUp: ThumbsUpIcon,
   thunder: ThunderIcon,
   ticTacToeArrow: TicTacToeArrowIcon,
   timeOut: TimeOutIcon,

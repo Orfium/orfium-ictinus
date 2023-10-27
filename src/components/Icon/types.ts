@@ -147,6 +147,7 @@ export type AcceptedIconNames =
   | 'statements'
   | 'success'
   | 'television'
+  | 'thumbsUp'
   | 'thunder'
   | 'ticTacToeArrow'
   | 'timeOut'
