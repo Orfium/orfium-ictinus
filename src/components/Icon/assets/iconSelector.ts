@@ -45,6 +45,7 @@ import CloseIcon from './close.svg';
 import CmsProcessIcon from './cms-process.svg';
 import CompositionIconV2 from './composition-v2.svg';
 import CompositionIcon from './composition.svg';
+import CompositionRecordingIcon from './compositionRecording.svg';
 import ConcertIcon from './concert.svg';
 import ConfirmedMatchesIcon from './confirmed-matches.svg';
 import ConflictsIcon from './conflicts.svg';
@@ -159,6 +160,7 @@ import Statements from './statements.svg';
 import SuccessIcon from './success.svg';
 import TagIcon from './tag.svg';
 import Television from './television.svg';
+import ThumbsUpIcon from './thumbsUp.svg';
 import ThunderIcon from './thunder.svg';
 import TicTacToeArrowIcon from './tic-tac-toe-arrow.svg';
 import TimeOutIcon from './time-out.svg';
@@ -239,6 +241,7 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   closeTag: CloseTagIcon,
   cmsProcess: CmsProcessIcon,
   composition: CompositionIcon,
+  compositionRecording: CompositionRecordingIcon,
   compositionV2: CompositionIconV2,
   concert: ConcertIcon,
   confirmedMatches: ConfirmedMatchesIcon,
@@ -328,6 +331,7 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   statements: Statements,
   success: SuccessIcon,
   television: Television,
+  thumbsUp: ThumbsUpIcon,
   thunder: ThunderIcon,
   ticTacToeArrow: TicTacToeArrowIcon,
   timeOut: TimeOutIcon,
