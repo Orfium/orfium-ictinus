@@ -55,6 +55,7 @@ export type AcceptedIconNames =
   | 'closeTag'
   | 'cmsProcess'
   | 'composition'
+  | 'compositionRecording'
   | 'compositionV2'
   | 'confirmedMatches'
   | 'conflicts'

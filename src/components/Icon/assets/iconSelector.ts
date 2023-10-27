@@ -45,6 +45,7 @@ import CloseIcon from './close.svg';
 import CmsProcessIcon from './cms-process.svg';
 import CompositionIconV2 from './composition-v2.svg';
 import CompositionIcon from './composition.svg';
+import CompositionRecordingIcon from './compositionRecording.svg';
 import ConcertIcon from './concert.svg';
 import ConfirmedMatchesIcon from './confirmed-matches.svg';
 import ConflictsIcon from './conflicts.svg';
@@ -239,6 +240,7 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   closeTag: CloseTagIcon,
   cmsProcess: CmsProcessIcon,
   composition: CompositionIcon,
+  compositionRecording: CompositionRecordingIcon,
   compositionV2: CompositionIconV2,
   concert: ConcertIcon,
   confirmedMatches: ConfirmedMatchesIcon,
