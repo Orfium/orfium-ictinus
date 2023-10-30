@@ -24,7 +24,7 @@ export const progressBarContainer =
         .fill {
           width: 50%;
           border-radius: ${tokens('borderRadius')};
-          animation: indeterminate 1.5s infinite ease-in-out;
+          animation: indeterminate 1.7s infinite ease-in-out;
           will-change: transform;
         }
       }
@@ -35,7 +35,7 @@ export const progressBarContainer =
         }
 
         to {
-          transform: translateX(250px);
+          transform: translateX(200%);
         }
       }
     `;
@@ -49,7 +49,7 @@ export const barStyles =
     return css`
       grid-area: bar;
       background-color: ${tokens('track')};
-      height: ${tokens('horizontalHeight')};
+      height: ${tokens('height.progressBar')};
       border-radius: ${hasBorderRadius ? tokens('borderRadius') : 0};
       overflow: hidden;
       will-change: transform;

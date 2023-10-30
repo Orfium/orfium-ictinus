@@ -20,11 +20,17 @@ const ProgressCircle = React.forwardRef<
   const theme = useTheme();
   const tokens = getProgressIndicatorTokens(theme);
 
-  /** @TODO add tokens to these values */
-  const center = 16;
-  const circleSize = useMemo(() => (size === 'normal' ? 24 : 16), [size]);
-  const circleStroke = useMemo(() => (size === 'normal' ? 2 : 1.5), [size]);
-  const r = 16 - circleStroke;
+  const center = rem(16);
+  const circleSize = useMemo(
+    () => (size === 'normal' ? 24 : tokens('sizing.circular')),
+    [size, tokens]
+  );
+  const circleStroke = useMemo(
+    () => (size === 'normal' ? 2 : tokens('borderWidth.circular.small')),
+    [size, tokens]
+  );
+
+  const r = 16 - Number.parseFloat(circleStroke);
   const c = 2 * r * Math.PI;
 
   const hasError = status === 'error';
@@ -46,10 +52,9 @@ const ProgressCircle = React.forwardRef<
               cy={center}
               r={rem(14)}
               stroke={hasError ? tokens('error') : tokens('active')}
-              strokeDasharray={`${c} ${c}`}
-              strokeDashoffset={c - (percentage / 100) * c}
+              strokeDasharray={`${rem(c)} ${rem(c)}`}
+              strokeDashoffset={rem(c - (percentage / 100) * c)}
               strokeLinecap="round"
-              transform="rotate(-90 16 16)"
               css={animationStyles(isUndefined(value))}
               data-testid={`${dataTestPrefixId}_circular_progress_value`}
             />
