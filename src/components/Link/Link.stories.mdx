@@ -1,9 +1,10 @@
 import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
 import { boolean, select, withKnobs } from '@storybook/addon-knobs';
+import { Link as ReactRouterLink, MemoryRouter as Router } from 'react-router-dom';
 import Link from './Link';
 import Stack from '../storyUtils/Stack';
 import { BASE_SHADE } from '../../theme/palette';
-import { FIGMA_URL } from '../../utils/common';
+import { FIGMA_URL, Function } from '../../utils/common';
 import { getIconSelectorKnob } from '../../utils/stories';
 import SectionHeader from '../../storybook/SectionHeader';
 
@@ -128,6 +129,28 @@ Block: Used without a body of copy; without underline text decoration
       <Link href="#" size={3} iconName={getIconSelectorKnob('iconName', 'externalLink')}>
         Link
       </Link>
+    </Stack>
+  </Story>
+</Preview>
+
+### Third-party Routing Library
+
+You can achieve the integration with third-party routing libraries with the `component` prop. Below is an example with the usage of `react-router-dom`'s Link component
+
+<Preview>
+  <Story name="Third-party Routing Library">
+    <Stack isVertical>
+      <Function>
+        {() => {
+          return (
+            <Router>
+              <Link component={ReactRouterLink} to="/">
+                Link
+              </Link>
+            </Router>
+          );
+        }}
+      </Function>
     </Stack>
   </Story>
 </Preview>

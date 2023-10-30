@@ -1,21 +1,19 @@
 import useTheme from 'hooks/useTheme';
-import React, { AnchorHTMLAttributes } from 'react';
+import React from 'react';
 
 import { linkContainer } from './Link.style';
 import { LinkTokens, getLinkTokens } from './Link.tokens';
 import { LinkProps } from './Link.types';
 import Icon from 'components/Icon';
 
-const Link = React.forwardRef<
-  HTMLAnchorElement,
-  AnchorHTMLAttributes<HTMLAnchorElement> & LinkProps
->((props, ref) => {
+const Link = React.forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
   const {
     type = 'primary',
     placement = 'block',
     size = 1,
     iconName,
     isDisabled,
+    component,
     dataTestPrefixId = '',
     children,
     ...rest
@@ -25,8 +23,10 @@ const Link = React.forwardRef<
 
   const tokens = getLinkTokens(theme);
 
+  const Component = component ?? 'a';
+
   return (
-    <a
+    <Component
       css={linkContainer({ placement, type, size, isDisabled })}
       ref={ref}
       data-testid={`${dataTestPrefixId}_link`}
@@ -42,7 +42,7 @@ const Link = React.forwardRef<
           dataTestId={`${dataTestPrefixId}_link_icon`}
         />
       )}
-    </a>
+    </Component>
   );
 });
 
