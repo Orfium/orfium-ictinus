@@ -61,6 +61,26 @@ such as icons and components, and a multi-input functionality with the help of t
 
 ## Variants
 
+### TextField sizes
+
+There are 2 Textfield sizes: `normal` and `compact`.
+
+<Tip>
+  Compact TextField doesn't support placeholder (only in masked version using the mask prop) and
+  multi-textfield functionality. To use these, please use normal-size TextField.
+</Tip>
+
+<Preview>
+  <Story name="TextField sizes">
+    <Stack>
+      <TextField label={'Label'} />
+    </Stack>
+    <Stack>
+      <TextField label={'Label'} size="compact" />
+    </Stack>
+  </Story>
+</Preview>
+
 ### TextField with Label and Placeholder
 
 Regular TextField with label options. Label that will float, with or without Placeholder
@@ -201,6 +221,7 @@ MultiTextField enables a user to enter one or individual entries as free text.
     <Stack>
       <TextFieldShowCase
         label={text('Label', 'Label')}
+        size={select('size', ['normal', 'compact'], 'normal')}
         placeholder={text('Placeholder', 'Placeholder')}
         isDisabled={boolean('isDisabled', false)}
         hasSuffix={boolean('hasSuffixIcon', false)}

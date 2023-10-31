@@ -64,7 +64,7 @@ const wrapperStyleSwitch = ({
  * in custom implementation needed eg: datepicker
  * */
 export const wrapperStyle =
-  ({ isDisabled, status, isInteractive, sx }: Partial<TextInputBaseProps>) =>
+  ({ isDisabled, status, isInteractive, size = 'normal', sx }: Partial<TextInputBaseProps>) =>
   (theme: Theme): SerializedStyles => {
     const colorScheme = theme.colorScheme;
     const isLocked = !isDisabled && status?.type === 'read-only';
@@ -91,8 +91,8 @@ export const wrapperStyle =
       userSelect: 'none',
       opacity: isDisabled ? theme.tokens.disabledState.get('default') : 1,
       cursor: isDisabled ? 'not-allowed' : 'text',
-      height: tokens('container'),
-      minWidth: rem(tokens('minWidth.small.normal')),
+      height: tokens(`container.${size}` as const),
+      minWidth: rem(tokens(`minWidth.small.${size}` as const)),
       ...wrapperStyleSwitch({
         theme,
         colorScheme,
@@ -131,6 +131,7 @@ export const inputStyle =
   ({
     label,
     placeholder,
+    size = 'normal',
     isLocked,
     isDisabled,
     sx,
@@ -138,17 +139,14 @@ export const inputStyle =
   (theme: Theme): SerializedStyles => {
     const tokens = getTextInputBaseTokens(theme);
 
-    return css(body02(theme), {
+    return css(generateStylesFromTokens(tokens(`input.${size}` as const)), {
       background: 'transparent',
       border: 'none',
       color: tokens('textColor.inputColor'),
       padding: 0,
       display: 'block',
       position: 'relative',
-      /**
-       * TODO revisit this when field components are implemented, Label is part of (Multi)TextField component
-       */
-      top: label ? rem(7) : undefined,
+      top: label && size === 'normal' ? rem(7) : undefined,
       zIndex: 1,
       textOverflow: 'ellipsis',
       width: 0,
@@ -156,7 +154,9 @@ export const inputStyle =
 
       '&::placeholder': {
         color: 'transparent',
-        ...(!label && placeholder ? generateStylesFromTokens(tokens('normal.input')) : {}),
+        ...(!label && placeholder
+          ? generateStylesFromTokens(tokens(`input.${size}` as const))
+          : {}),
       },
 
       '&:focus': {
@@ -173,10 +173,15 @@ export const inputStyle =
       },
 
       '&:focus-within, &:not(:placeholder-shown)': {
-        '& + label': {
-          fontWeight: `${theme.globals.typography.fontWeight.get('bold')} !important`,
-          transform: `translate(${LABEL_TRANSFORM_LEFT_SPACING}, -35%) scale(0.8)`,
-        },
+        '& + label':
+          size === 'normal'
+            ? {
+                fontWeight: `${theme.globals.typography.fontWeight.get('bold')} !important`,
+                transform: `translate(${LABEL_TRANSFORM_LEFT_SPACING}, -35%) scale(0.8)`,
+              }
+            : {
+                display: 'none',
+              },
       },
 
       '&:focus-within': {

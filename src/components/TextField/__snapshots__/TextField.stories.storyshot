@@ -860,7 +860,7 @@ exports[`Storyshots Design System/TextField Playground 1`] = `
         <div
           style={
             Object {
-              "width": "500px",
+              "width": "300px",
             }
           }
         >
@@ -907,6 +907,454 @@ exports[`Storyshots Design System/TextField Playground 1`] = `
               >
                 Message in Text Field
               </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/TextField TextField sizes 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: 3.25rem;
+  min-width: 8.75rem;
+  background-color: #ffffff;
+}
+
+.emotion-3:hover {
+  background-color: #F5F5FF;
+}
+
+.emotion-3:focus-within {
+  box-shadow: 0 0 0 0.125rem #175bf5;
+  background-color: #F5F5FF;
+}
+
+.emotion-4 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0 0 0 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.emotion-4>div {
+  position: relative;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-6 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #1B214F;
+  padding: 0;
+  display: block;
+  position: relative;
+  top: 0.4375rem;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-6::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-6::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-6:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-6::placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus {
+  outline: none;
+}
+
+.emotion-6:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-6:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-6:focus-within+label,
+.emotion-6:not(:placeholder-shown)+label {
+  font-weight: 700!important;
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+}
+
+.emotion-6:focus-within+label {
+  color: #1552DD;
+}
+
+.emotion-6:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-7 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, 0);
+  -moz-transform: translate(0.1875rem, 0);
+  -ms-transform: translate(0.1875rem, 0);
+  transform: translate(0.1875rem, 0);
+  color: #686BB3;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0.1875rem;
+  margin: auto;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: 1.75rem;
+  min-width: 4.375rem;
+  background-color: #ffffff;
+}
+
+.emotion-9:hover {
+  background-color: #F5F5FF;
+}
+
+.emotion-9:focus-within {
+  box-shadow: 0 0 0 0.125rem #175bf5;
+  background-color: #F5F5FF;
+}
+
+.emotion-12 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #1B214F;
+  padding: 0;
+  display: block;
+  position: relative;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-12::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-12::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-12:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-12::placeholder {
+  color: transparent;
+}
+
+.emotion-12:focus {
+  outline: none;
+}
+
+.emotion-12:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-12:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-12:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-12:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-12:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-12:focus-within+label,
+.emotion-12:not(:placeholder-shown)+label {
+  display: none;
+}
+
+.emotion-12:focus-within+label {
+  color: #1552DD;
+}
+
+.emotion-12:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-13 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, 0);
+  -moz-transform: translate(0.1875rem, 0);
+  -ms-transform: translate(0.1875rem, 0);
+  transform: translate(0.1875rem, 0);
+  color: #686BB3;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0.1875rem;
+  margin: auto;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          onClick={[Function]}
+        >
+          <div
+            className="emotion-3"
+          >
+            <div
+              className="emotion-4"
+            >
+              <div
+                className="emotion-5"
+              >
+                <input
+                  aria-invalid={false}
+                  className="emotion-6"
+                  data-testid="input"
+                  disabled={false}
+                  id="textfield__00"
+                  placeholder="Label"
+                  required={false}
+                />
+                <label
+                  className="emotion-7"
+                  htmlFor="textfield__00"
+                >
+                  Label
+                   
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="emotion-2"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          onClick={[Function]}
+        >
+          <div
+            className="emotion-9"
+          >
+            <div
+              className="emotion-4"
+            >
+              <div
+                className="emotion-5"
+              >
+                <input
+                  aria-invalid={false}
+                  className="emotion-12"
+                  data-testid="input"
+                  disabled={false}
+                  id="textfield__00"
+                  placeholder=" "
+                  required={false}
+                />
+                <label
+                  className="emotion-13"
+                  htmlFor="textfield__00"
+                >
+                  Label
+                   
+                </label>
+              </div>
             </div>
           </div>
         </div>

@@ -160,7 +160,6 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
             />
             {label && (
               <Label
-                size={'md'}
                 htmlFor={id}
                 label={label}
                 isRequired={isRequired}

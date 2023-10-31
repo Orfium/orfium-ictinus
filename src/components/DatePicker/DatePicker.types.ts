@@ -24,7 +24,7 @@ export type DatePickerProps = {
   /** Calendar options for DateRangePicker */
   options?: ExtraOption[];
   /** Props of the TextField input */
-  inputProps?: TextFieldProps;
+  inputProps?: Omit<TextFieldProps, 'size'>;
   /** The format of the date displayed in the input field */
   dateFormatOverride?: DateFormatType;
   /** if the datepicker can be clear with backspace */
