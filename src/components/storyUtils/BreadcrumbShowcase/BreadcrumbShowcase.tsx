@@ -28,7 +28,7 @@ const BreadcrumbShowcase: React.FCC<Props> = ({ initData = [] }) => {
 
   useEffect(() => {
     const unregister = browserHistory.listen((match) => {
-      const currentIndex = data.findIndex((item) => item.to === match.pathname);
+      const currentIndex = data.findIndex((item) => item.href === match.pathname);
       const updatedBreadcrumbData = data.slice(0, currentIndex + 1);
       setData(updatedBreadcrumbData);
     });
@@ -38,7 +38,7 @@ const BreadcrumbShowcase: React.FCC<Props> = ({ initData = [] }) => {
 
   const routes = data.map((item) => {
     return (
-      <Route key={uniqueId('route_')} path={item.to}>
+      <Route key={uniqueId('route_')} path={item.href}>
         {() => <div style={{ marginTop: '8px' }}>Current: {item.label}</div>}
       </Route>
     );

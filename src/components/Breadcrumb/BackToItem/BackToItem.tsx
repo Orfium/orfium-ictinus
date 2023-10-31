@@ -7,13 +7,13 @@ import Link from 'components/Link';
 
 const GO_BACK_TO = 'Go back to';
 
-const BackToItem: React.FC<BreadcrumbItem & TestProps> = ({ to, label, dataTestPrefixId = '' }) => {
+const BackToItem: React.FC<BreadcrumbItem & TestProps> = ({ href, label, dataTestPrefixId = '' }) => {
   return (
     <div css={backToContainerStyles()}>
       <div css={backToStyles()}>{GO_BACK_TO}</div>
       <Link
         size={2}
-        href={to}
+        href={href}
         dataTestPrefixId={`${dataTestPrefixId}_breadcrumb_go_back_to_${label}`}
       >
         {label}
