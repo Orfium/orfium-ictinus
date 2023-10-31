@@ -107,6 +107,46 @@ A universal Select component that is a clickable element that can hold many form
 
 ## Variants
 
+### Select sizes
+
+Simple select component with clearable data and searchable input
+
+<Preview>
+  <Story name="Select sizes">
+    <Stack height={300}>
+      <Function>
+        {() => {
+          const [selectedOption, setSelectedOption] = useState(defaultValue);
+          return (
+            <Select
+              label={'Label'}
+              options={options}
+              isSearchable={false}
+              selectedOption={selectedOption}
+              onChange={setSelectedOption}
+            />
+          );
+        }}
+      </Function>
+      <Function>
+        {() => {
+          const [selectedOption, setSelectedOption] = useState(defaultValue);
+          return (
+            <Select
+              label={'Label'}
+              options={options}
+              size={'compact'}
+              isSearchable={false}
+              selectedOption={selectedOption}
+              onChange={setSelectedOption}
+            />
+          );
+        }}
+      </Function>
+    </Stack>
+  </Story>
+</Preview>
+
 ### Simple Select
 
 Simple select component with clearable data and searchable input

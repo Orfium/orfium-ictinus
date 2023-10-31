@@ -10,7 +10,7 @@ import ListItemWrapper from './components/ListItemWrapper/ListItemWrapper';
 import { ListItemWrapperStyled } from './components/ListItemWrapper/ListItemWrapper.style';
 import { groupedUlStyle, listStyle, wrapperStyle } from './List.style';
 import { ListSelected, ListSelection } from './types';
-import { COMPACT_LIST_ITEM_HEIGHT, NORMAL_LIST_ITEM_HEIGHT } from './utils';
+import { LIST_ITEM_HEIGHT } from './utils';
 import Window from './Window';
 import useCombinedRefs from '../../hooks/useCombinedRefs';
 import { SelectOption } from '../Select';
@@ -76,11 +76,7 @@ const List = React.forwardRef<HTMLUListElement, ListProps>((props, ref) => {
             css={listStyle({ width, height })}
             id={listBoxProps.id}
             isVirtualizationEnabled={isVirtualized}
-            rowHeight={
-              first?.props.rowSize === 'compact'
-                ? COMPACT_LIST_ITEM_HEIGHT
-                : NORMAL_LIST_ITEM_HEIGHT
-            }
+            rowHeight={LIST_ITEM_HEIGHT[first?.props.rowSize ?? 'normal']}
             ref={combinedRefs}
           >
             {Array.from(state.collection).map((item) => {

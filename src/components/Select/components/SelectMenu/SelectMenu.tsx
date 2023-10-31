@@ -1,13 +1,13 @@
-import { CSSObject } from '@emotion/react';
 import useCombinedRefs from 'hooks/useCombinedRefs';
 import { flatMap, head } from 'lodash';
 import uniqueId from 'lodash/uniqueId';
 import React, { forwardRef, useCallback, useEffect, useRef } from 'react';
+import { ComponentSizes } from 'types';
 
 import { menuStyle, optionStyle } from './SelectMenu.style';
 import { SelectOption } from '../../types';
 import List, { ListItem, ListItemText, ListSection, ListSelection } from 'components/List';
-import { COMPACT_LIST_ITEM_HEIGHT, MAX_NON_VIRTUALIZED_ITEMS_SELECT } from 'components/List/utils';
+import { LIST_ITEM_HEIGHT, MAX_NON_VIRTUALIZED_ITEMS_SELECT } from 'components/List/utils';
 import { SELECT_ALL_OPTION } from 'components/Select/constants';
 import { TextInputBaseProps } from 'components/TextInputBase';
 
@@ -17,9 +17,8 @@ export type SelectMenuProps = {
   selectedOption: SelectOption;
   isLoading?: boolean;
   isVirtualized?: boolean;
-  searchTerm?: string;
   hasSelectAllOption?: boolean;
-  sx?: CSSObject;
+  size?: ComponentSizes;
 } & Pick<TextInputBaseProps, 'status'>;
 
 const SelectMenu = forwardRef<HTMLUListElement, SelectMenuProps>((props, ref) => {
@@ -29,12 +28,12 @@ const SelectMenu = forwardRef<HTMLUListElement, SelectMenuProps>((props, ref) =>
     selectedOption,
     isLoading,
     isVirtualized,
-    searchTerm,
+    size = 'normal',
     hasSelectAllOption = false,
   } = props;
   const myRef = useRef<HTMLUListElement>(null);
   const combinedRefs = useCombinedRefs(myRef, ref);
-  const minListHeightWithCompactListItem = 5 * COMPACT_LIST_ITEM_HEIGHT; // 40 is the height of compact list item and we want to show 5 on render
+  const listHeight = MAX_NON_VIRTUALIZED_ITEMS_SELECT * LIST_ITEM_HEIGHT[size]; // 40 is the height of compact list item and we want to show 5 on render
 
   const executeScroll = () =>
     myRef.current?.scrollIntoView &&
@@ -64,14 +63,18 @@ const SelectMenu = forwardRef<HTMLUListElement, SelectMenuProps>((props, ref) =>
       <List
         label={uniqueId('menu_list')}
         ref={combinedRefs}
-        height={minListHeightWithCompactListItem}
+        height={listHeight}
         isVirtualized={isVirtualized && filteredOptions.length > MAX_NON_VIRTUALIZED_ITEMS_SELECT}
         onSelectionChange={onSelectionChange}
         selectedKeys={[selectedOption.value]}
         disabledKeys={filteredOptions.filter((o) => o.isDisabled).map((o) => o.value)}
       >
         {hasSelectAllOption ? (
-          <ListItem key={SELECT_ALL_OPTION.value} textValue={SELECT_ALL_OPTION.label}>
+          <ListItem
+            rowSize={size}
+            key={SELECT_ALL_OPTION.value}
+            textValue={SELECT_ALL_OPTION.label}
+          >
             <ListItemText>{SELECT_ALL_OPTION.label}</ListItemText>
           </ListItem>
         ) : null}
@@ -80,7 +83,7 @@ const SelectMenu = forwardRef<HTMLUListElement, SelectMenuProps>((props, ref) =>
             return (
               <ListSection key={option.value} title={option.value}>
                 {option.options.map((o) => (
-                  <ListItem key={o.value} textValue={o.label}>
+                  <ListItem rowSize={size} key={o.value} textValue={o.label}>
                     <ListItemText description={o.helperText}>{o.label}</ListItemText>
                   </ListItem>
                 ))}
@@ -89,7 +92,7 @@ const SelectMenu = forwardRef<HTMLUListElement, SelectMenuProps>((props, ref) =>
           }
 
           return (
-            <ListItem key={option.value} textValue={option.label}>
+            <ListItem rowSize={size} key={option.value} textValue={option.label}>
               <ListItemText description={option.helperText}>{option.label}</ListItemText>
             </ListItem>
           );
@@ -100,7 +103,7 @@ const SelectMenu = forwardRef<HTMLUListElement, SelectMenuProps>((props, ref) =>
     );
 
   return (
-    <div css={menuStyle(props)} tabIndex={-1}>
+    <div css={menuStyle({ ...props, height: listHeight })} tabIndex={-1}>
       {isLoading ? (
         <div css={optionStyle({ isSelected: false, hasNoResultsExist: true })}>Loading...</div>
       ) : (

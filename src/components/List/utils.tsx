@@ -1,4 +1,5 @@
 import React from 'react';
+import { ComponentSizes } from 'types';
 
 // @TODO this needs to be used on Select/Filter level now to have such functionality
 // import Highlighter from 'react-highlight-words';
@@ -7,9 +8,7 @@ import React from 'react';
 export const MAX_NON_VIRTUALIZED_ITEMS_FILTER = 6;
 export const MAX_NON_VIRTUALIZED_ITEMS_SELECT = 5;
 
-/** Min-max heights for VList */
-export const MAX_LARGE_HEIGHT = 277;
-export const MAX_SMALL_HEIGHT = 265;
-
-export const COMPACT_LIST_ITEM_HEIGHT = 40;
-export const NORMAL_LIST_ITEM_HEIGHT = 52;
+export const LIST_ITEM_HEIGHT: Record<ComponentSizes, number> = {
+  compact: 40,
+  normal: 52,
+};
