@@ -180,6 +180,7 @@ exports[`Storyshots Updated Components/Fields/DatePicker DatePicker 1`] = `
 }
 
 .emotion-7:focus-within+label {
+  font-weight: 700!important;
   color: #1552DD;
 }
 
@@ -380,7 +381,7 @@ exports[`Storyshots Updated Components/Fields/DatePicker DatePicker 1`] = `
 </div>
 `;
 
-exports[`Storyshots Updated Components/Fields/DatePicker DatePicker and DateRangePicker Statuses 1`] = `
+exports[`Storyshots Updated Components/Fields/DatePicker DatePicker and DateRangePicker statuses 1`] = `
 .emotion-0 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -560,6 +561,7 @@ exports[`Storyshots Updated Components/Fields/DatePicker DatePicker and DateRang
 }
 
 .emotion-7:focus-within+label {
+  font-weight: 700!important;
   color: #1552DD;
 }
 
@@ -908,6 +910,7 @@ exports[`Storyshots Updated Components/Fields/DatePicker DatePicker and DateRang
 }
 
 .emotion-31:focus-within+label {
+  font-weight: 700!important;
   color: #1552DD;
 }
 
@@ -1189,386 +1192,6 @@ exports[`Storyshots Updated Components/Fields/DatePicker DatePicker and DateRang
                     >
                       Hint Message
                     </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Updated Components/Fields/DatePicker DatePicker with Disabled Dates 1`] = `
-.emotion-0 {
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  position: relative;
-  padding: 0.25rem;
-}
-
-.emotion-1 {
-  margin: 1rem;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  height: 37.5rem;
-}
-
-.emotion-3 {
-  overflow: inherit;
-  text-overflow: inherit;
-  width: 100%;
-  height: inherit;
-  position: relative;
-}
-
-.emotion-3 #unique-tooltip-id {
-  display: none!important;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #b9cdfc;
-  border-radius: 0.25rem;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  opacity: 1;
-  cursor: text;
-  height: 3.25rem;
-  min-width: 10rem;
-  background-color: #ffffff;
-}
-
-.emotion-4:hover {
-  background-color: #F5F5FF;
-}
-
-.emotion-4:focus-within {
-  box-shadow: 0 0 0 0.125rem #175bf5;
-  background-color: #F5F5FF;
-}
-
-.emotion-5 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  vertical-align: top;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
-  padding: 0 0 0 0.75rem;
-}
-
-.emotion-5>div {
-  position: relative;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-7 {
-  font-family: Roboto;
-  font-weight: 400;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-  background: transparent;
-  border: none;
-  color: #1B214F;
-  padding: 0;
-  display: block;
-  position: relative;
-  top: 0.4375rem;
-  z-index: 1;
-  text-overflow: ellipsis;
-  width: 0;
-  min-width: 100%;
-}
-
-.emotion-7::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.emotion-7::-moz-placeholder {
-  color: transparent;
-}
-
-.emotion-7:-ms-input-placeholder {
-  color: transparent;
-}
-
-.emotion-7::placeholder {
-  color: transparent;
-}
-
-.emotion-7:focus {
-  outline: none;
-}
-
-.emotion-7:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.emotion-7:focus::-moz-placeholder {
-  color: transparent;
-}
-
-.emotion-7:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-.emotion-7:focus::placeholder {
-  color: transparent;
-}
-
-.emotion-7:not(:focus):placeholder-shown+label {
-  font-weight: normal;
-}
-
-.emotion-7:focus-within+label,
-.emotion-7:not(:placeholder-shown)+label {
-  font-weight: 700!important;
-  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
-  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
-  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
-  transform: translate(0.1875rem, -35%) scale(0.8);
-}
-
-.emotion-7:focus-within+label {
-  color: #1552DD;
-}
-
-.emotion-7:disabled {
-  cursor: not-allowed;
-}
-
-.emotion-8 {
-  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
-  transition: transform 0.25s,opacity 0.25s ease-in-out;
-  transform-origin: 0 0;
-  width: 100%;
-  position: absolute;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-transform: translate(0.1875rem, -95%) scale(0.8);
-  -moz-transform: translate(0.1875rem, -95%) scale(0.8);
-  -ms-transform: translate(0.1875rem, -95%) scale(0.8);
-  transform: translate(0.1875rem, -95%) scale(0.8);
-  color: #686BB3;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  top: 0;
-  bottom: 0;
-  right: 0.1875rem;
-  margin: auto;
-  white-space: nowrap;
-  font-family: Roboto;
-  font-weight: 400;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-}
-
-.emotion-9 {
-  min-width: 2.75rem;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  cursor: unset;
-}
-
-.emotion-10 {
-  cursor: pointer;
-  width: 2.25rem;
-  height: 2.25rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-10:focus-visible,
-.emotion-10:hover {
-  background: rgba(84,94,255,0.06);
-  border-radius: 6.25rem;
-}
-
-.emotion-11 {
-  padding: 0.125rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-12 {
-  fill: #686BB3;
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.emotion-12 path {
-  fill: #686BB3;
-}
-
-<div
-  className="emotion-0"
->
-  <div
-    className="emotion-1"
-  >
-    <div
-      className="emotion-2"
-    >
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div>
-          <div
-            onKeyDown={[Function]}
-          >
-            <div
-              className="emotion-3"
-            >
-              <div>
-                <div
-                  onClick={[Function]}
-                >
-                  <div
-                    className="emotion-4"
-                  >
-                    <div
-                      className="emotion-5"
-                    >
-                      <div
-                        className="emotion-6"
-                      >
-                        <input
-                          aria-invalid={false}
-                          className="emotion-7"
-                          data-testid="input"
-                          disabled={false}
-                          id="textfield__00"
-                          onChange={[Function]}
-                          onKeyDown={[Function]}
-                          placeholder="Select Date"
-                          required={false}
-                          value="11/03/2020"
-                        />
-                        <label
-                          className="emotion-8"
-                          htmlFor="textfield__00"
-                        >
-                          Select Date
-                           
-                        </label>
-                      </div>
-                      <div
-                        aria-hidden={false}
-                        className="emotion-9"
-                      >
-                        <div
-                          className="emotion-10"
-                          data-testid="calendar_button"
-                          onClick={[Function]}
-                          onKeyDown={[Function]}
-                          tabIndex={0}
-                        >
-                          <span
-                            className="emotion-11"
-                            onClick={[Function]}
-                          >
-                            <span
-                              className="emotion-12"
-                            />
-                          </span>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -1983,6 +1606,387 @@ exports[`Storyshots Updated Components/Fields/DatePicker DatePicker with Filter 
 </div>
 `;
 
+exports[`Storyshots Updated Components/Fields/DatePicker DatePicker with disabled dates 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 37.5rem;
+}
+
+.emotion-3 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
+  position: relative;
+}
+
+.emotion-3 #unique-tooltip-id {
+  display: none!important;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: 3.25rem;
+  min-width: 10rem;
+  background-color: #ffffff;
+}
+
+.emotion-4:hover {
+  background-color: #F5F5FF;
+}
+
+.emotion-4:focus-within {
+  box-shadow: 0 0 0 0.125rem #175bf5;
+  background-color: #F5F5FF;
+}
+
+.emotion-5 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0 0 0 0.75rem;
+}
+
+.emotion-5>div {
+  position: relative;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-7 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #1B214F;
+  padding: 0;
+  display: block;
+  position: relative;
+  top: 0.4375rem;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-7::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-7:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::placeholder {
+  color: transparent;
+}
+
+.emotion-7:focus {
+  outline: none;
+}
+
+.emotion-7:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-7:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-7:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-7:focus-within+label,
+.emotion-7:not(:placeholder-shown)+label {
+  font-weight: 700!important;
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+}
+
+.emotion-7:focus-within+label {
+  font-weight: 700!important;
+  color: #1552DD;
+}
+
+.emotion-7:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-8 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, -95%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -95%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -95%) scale(0.8);
+  transform: translate(0.1875rem, -95%) scale(0.8);
+  color: #686BB3;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0.1875rem;
+  margin: auto;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-9 {
+  min-width: 2.75rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  cursor: unset;
+}
+
+.emotion-10 {
+  cursor: pointer;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-10:focus-visible,
+.emotion-10:hover {
+  background: rgba(84,94,255,0.06);
+  border-radius: 6.25rem;
+}
+
+.emotion-11 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-12 {
+  fill: #686BB3;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-12 path {
+  fill: #686BB3;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div>
+          <div
+            onKeyDown={[Function]}
+          >
+            <div
+              className="emotion-3"
+            >
+              <div>
+                <div
+                  onClick={[Function]}
+                >
+                  <div
+                    className="emotion-4"
+                  >
+                    <div
+                      className="emotion-5"
+                    >
+                      <div
+                        className="emotion-6"
+                      >
+                        <input
+                          aria-invalid={false}
+                          className="emotion-7"
+                          data-testid="input"
+                          disabled={false}
+                          id="textfield__00"
+                          onChange={[Function]}
+                          onKeyDown={[Function]}
+                          placeholder="Select Date"
+                          required={false}
+                          value="11/03/2020"
+                        />
+                        <label
+                          className="emotion-8"
+                          htmlFor="textfield__00"
+                        >
+                          Select Date
+                           
+                        </label>
+                      </div>
+                      <div
+                        aria-hidden={false}
+                        className="emotion-9"
+                      >
+                        <div
+                          className="emotion-10"
+                          data-testid="calendar_button"
+                          onClick={[Function]}
+                          onKeyDown={[Function]}
+                          tabIndex={0}
+                        >
+                          <span
+                            className="emotion-11"
+                            onClick={[Function]}
+                          >
+                            <span
+                              className="emotion-12"
+                            />
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Updated Components/Fields/DatePicker DateRangePicker 1`] = `
 .emotion-0 {
   -webkit-flex-direction: column;
@@ -2163,6 +2167,7 @@ exports[`Storyshots Updated Components/Fields/DatePicker DateRangePicker 1`] = `
 }
 
 .emotion-7:focus-within+label {
+  font-weight: 700!important;
   color: #1552DD;
 }
 
@@ -2363,7 +2368,7 @@ exports[`Storyshots Updated Components/Fields/DatePicker DateRangePicker 1`] = `
 </div>
 `;
 
-exports[`Storyshots Updated Components/Fields/DatePicker DateRangePicker with Preset Options 1`] = `
+exports[`Storyshots Updated Components/Fields/DatePicker DateRangePicker with preset options 1`] = `
 .emotion-0 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -2543,6 +2548,7 @@ exports[`Storyshots Updated Components/Fields/DatePicker DateRangePicker with Pr
 }
 
 .emotion-7:focus-within+label {
+  font-weight: 700!important;
   color: #1552DD;
 }
 
@@ -2917,6 +2923,7 @@ exports[`Storyshots Updated Components/Fields/DatePicker Disabled DatePicker & D
 }
 
 .emotion-7:focus-within+label {
+  font-weight: 700!important;
   color: #1552DD;
 }
 
@@ -3370,6 +3377,7 @@ exports[`Storyshots Updated Components/Fields/DatePicker Playground 1`] = `
 }
 
 .emotion-6:focus-within+label {
+  font-weight: 700!important;
   color: #1552DD;
 }
 

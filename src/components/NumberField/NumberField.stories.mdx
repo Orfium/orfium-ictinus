@@ -4,7 +4,6 @@ import { linkTo } from '@storybook/addon-links';
 import NumberField from './NumberField';
 import Stack from '../storyUtils/Stack';
 import Icon from '../Icon';
-import iconSelector from '../Icon/assets/iconSelector';
 import Loader from '../Loader';
 import { FIGMA_URL } from '../../utils/common';
 import Overview from '../../storybook/Overview';
@@ -64,12 +63,12 @@ import Overview from '../../storybook/Overview';
 
 <SubsectionHeader title="Variants" />
 
-### NumberField with Placeholder
+### NumberField with placeholder
 
-NumberField with or without Placeholder
+NumberField with or without placeholder
 
 <Preview>
-  <Story name="NumberField with Placeholder">
+  <Story name="NumberField with placeholder">
     <Stack>
       <NumberField label={'NumberField'} />
       <NumberField label={'NumberField'} placeholder={'Placeholder'} />
@@ -77,13 +76,13 @@ NumberField with or without Placeholder
   </Story>
 </Preview>
 
-### NumberField with Format Options
+### NumberField with format options
 
 Formatting options for the value displayed in the number field can be configured based on
 [Intl.NumberFormatOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat)
 
 <Preview>
-  <Story name="NumberField with Format Options">
+  <Story name="NumberField with format options">
     <Stack>
       <NumberField
         label={'NumberField'}
@@ -96,7 +95,7 @@ Formatting options for the value displayed in the number field can be configured
   </Story>
 </Preview>
 
-### NumberField with Stepper
+### NumberField with stepper
 
 NumberField can have a stepper with increment and decrement buttons. Step defaults to 1 if not provided.
 
@@ -106,7 +105,7 @@ NumberField can have a stepper with increment and decrement buttons. Step defaul
 </Tip>
 
 <Preview>
-  <Story name="NumberField with Stepper">
+  <Story name="NumberField with stepper">
     <Stack>
       <NumberField label={'NumberField'} hasStepper step={number('Step', undefined)} />
     </Stack>
@@ -130,12 +129,12 @@ NumberField can have min/max values provided as props.
   </Story>
 </Preview>
 
-### NumberField Statuses
+### NumberField statuses
 
 NumberField inherits all TextField statuses behavior.
 
 <Preview>
-  <Story name="NumberField Statuses">
+  <Story name="NumberField statuses">
     <Stack>
       <NumberField
         label={'Normal'}
@@ -198,7 +197,6 @@ Disabled NumberField.
           minimumFractionDigits: number('minimumFractionDigits', 2),
           maximumFractionDigits: number('maximumFractionDigits', 2),
         }}
-        suffix={select('Suffix icon name', ['', ...Object.keys(iconSelector)], 'info')}
         status={{
           type: select('Status', ['error', 'normal', 'read-only'], 'normal'),
           hintMessage: text('Hint/Error message', 'Message in Number Field'),
