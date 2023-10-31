@@ -6,26 +6,19 @@ import { ProgressIndicatorProps } from './ProgressIndicator.types';
 
 const ProgressIndicator = React.forwardRef<HTMLDivElement, ProgressIndicatorProps>(
   (
-    {
-      type = 'linear',
-      value,
-      status = 'normal',
-      size = 'normal',
-      hasBorderRadius = true,
-      dataTestPrefixId,
-    },
+    { type = 'linear', value, status = 'normal', hasBorderRadius = true, dataTestPrefixId },
     ref
   ) => {
     return type === 'linear' ? (
-      <ProgressBar value={value} hasBorderRadius={hasBorderRadius} status={status} ref={ref} dataTestPrefixId={dataTestPrefixId} />
-    ) : (
-      <ProgressCircle
+      <ProgressBar
         value={value}
-        size={size}
+        hasBorderRadius={hasBorderRadius}
         status={status}
         ref={ref}
         dataTestPrefixId={dataTestPrefixId}
       />
+    ) : (
+      <ProgressCircle value={value} status={status} ref={ref} dataTestPrefixId={dataTestPrefixId} />
     );
   }
 );

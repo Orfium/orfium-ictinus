@@ -174,19 +174,6 @@ For the linear indicator, the border-radius of the outer bar can be deactivated,
   </Story>
 </Preview>
 
-### Circular Progress Indicator - Sizes
-
-For the circular progress indicator we have 2 size, `small` and `normal`.
-
-<Preview>
-  <Story name="Circular Progress Indicator - Sizes">
-    <Stack>
-      <ProgressIndicator type={'circle'} size="small" />
-      <ProgressIndicator type={'circle'} />
-    </Stack>
-  </Story>
-</Preview>
-
 ### Circular Progress Indicator - Error States
 
 The status of the progress indicator can be `normal` or `error`.
@@ -194,7 +181,6 @@ The status of the progress indicator can be `normal` or `error`.
 <Preview>
   <Story name="Circular Progress Indicator - Error States">
     <Stack>
-      <ProgressIndicator type={'circle'} size="small" value={60} status="error" />
       <ProgressIndicator type={'circle'} value={60} status="error" />
     </Stack>
     <Stack width={300}>
@@ -212,14 +198,12 @@ The status of the progress indicator can be `normal` or `error`.
         type={select('type', ['linear', 'circular'], 'linear')}
         status={select('status', ['normal', 'error'], 'normal')}
         hasBorderRadius={boolean('hasBorderRadius [for linear only]', true)}
-        size={select('size [for circular only]', ['small', 'normal'], 'normal')}
       />
       <ProgressIndicator
         value={number('value', undefined)}
         type={select('type', ['linear', 'circular'], 'linear')}
         status={select('status', ['normal', 'error'], 'normal')}
         hasBorderRadius={boolean('hasBorderRadius [for linear only]', true)}
-        size={select('size [for circular only]', ['small', 'normal'], 'normal')}
       />
     </Stack>
   </Story>

@@ -26,27 +26,18 @@ const progressIndicator = {
     type: 'borderRadius',
     description: 'Sets 100% borderRadius for progress indicator container',
   },
-  width: {
-    progressBar: {
-      value: '{sizing.21}',
-      type: 'sizing',
-      description: 'Sets minimium width for progress bar',
-    },
-  },
   sizing: {
     circular: {
       value: '{sizing.4}',
       type: 'sizing',
-      description: 'Sets minimum size for circular progress indicator',
+      description: 'Sets fixed size for circular progress indicator',
     },
   },
   borderWidth: {
     circular: {
-      small: {
-        value: '1.5px',
-        type: 'borderWidth',
-        description: 'Sets minimum border width for circular progress indicator',
-      },
+      value: '1.5px',
+      type: 'borderWidth',
+      description: 'Sets fixed border width for circular progress indicator',
     },
   },
 } as const;

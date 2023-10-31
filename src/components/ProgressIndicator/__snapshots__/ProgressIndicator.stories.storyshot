@@ -35,7 +35,7 @@ exports[`Storyshots Design System/Progress Indicator Circular Progress Indicator
   transition: stroke-dashoffset 0.5s;
 }
 
-.emotion-6 {
+.emotion-5 {
   display: grid;
   grid-template-areas: 'label value' 'bar bar';
   grid-template-columns: 1fr auto;
@@ -43,7 +43,7 @@ exports[`Storyshots Design System/Progress Indicator Circular Progress Indicator
   width: 100%;
 }
 
-.emotion-6:not([aria-valuenow]) .fill {
+.emotion-5:not([aria-valuenow]) .fill {
   width: 50%;
   border-radius: 6.25rem;
   -webkit-animation: indeterminate 1.7s infinite ease-in-out;
@@ -51,7 +51,7 @@ exports[`Storyshots Design System/Progress Indicator Circular Progress Indicator
   will-change: transform;
 }
 
-.emotion-7 {
+.emotion-6 {
   grid-area: bar;
   background-color: #e7eefe;
   height: 0.25rem;
@@ -60,7 +60,7 @@ exports[`Storyshots Design System/Progress Indicator Circular Progress Indicator
   will-change: transform;
 }
 
-.emotion-8 {
+.emotion-7 {
   background: #FF176B;
   height: 100%;
   border-radius: 0 6.25rem 6.25rem 0;
@@ -99,58 +99,19 @@ exports[`Storyshots Design System/Progress Indicator Circular Progress Indicator
             data-testid="undefined_circular_progress_container"
             fill="none"
             height="1rem"
-            strokeWidth="1.5px"
+            strokeWidth={1.5}
             viewBox="0 0 32 32"
             width="1rem"
           >
             <circle
               className="emotion-3"
-              cx="1rem"
-              cy="1rem"
+              cx={16}
+              cy={16}
               data-testid="undefined_circular_progress_value"
-              r="0.875rem"
+              r={14}
               stroke="#FF176B"
-              strokeDasharray="5.6941366846315rem 5.6941366846315rem"
-              strokeDashoffset="2.2776546738526rem"
-              strokeLinecap="round"
-            />
-          </svg>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          aria-valuemax={100}
-          aria-valuemin={0}
-          aria-valuenow={60}
-          aria-valuetext="60%"
-          className="react-aria-ProgressBar"
-          data-rac=""
-          id="react-aria-generated-id"
-          role="progressbar"
-        >
-          <svg
-            data-testid="undefined_circular_progress_container"
-            fill="none"
-            height={24}
-            strokeWidth={2}
-            viewBox="0 0 32 32"
-            width={24}
-          >
-            <circle
-              className="emotion-3"
-              cx="1rem"
-              cy="1rem"
-              data-testid="undefined_circular_progress_value"
-              r="0.875rem"
-              stroke="#FF176B"
-              strokeDasharray="5.497787143782138rem 5.497787143782138rem"
-              strokeDashoffset="2.199114857512855rem"
+              strokeDasharray="91.106186954104 91.106186954104"
+              strokeDashoffset={36.4424747816416}
               strokeLinecap="round"
             />
           </svg>
@@ -173,17 +134,17 @@ exports[`Storyshots Design System/Progress Indicator Circular Progress Indicator
           aria-valuemin={0}
           aria-valuenow={60}
           aria-valuetext="60%"
-          className="emotion-6"
+          className="emotion-5"
           data-rac=""
           id="react-aria-generated-id"
           role="progressbar"
         >
           <div
-            className="bar emotion-7"
+            className="bar emotion-6"
             data-testid="undefined_linear_progress_container"
           >
             <div
-              className="fill emotion-8"
+              className="fill emotion-7"
               data-testid="undefined_linear_progress_value"
             />
           </div>
@@ -258,145 +219,20 @@ exports[`Storyshots Design System/Progress Indicator Circular Progress Indicator
           <svg
             data-testid="undefined_circular_progress_container"
             fill="none"
-            height={24}
-            strokeWidth={2}
-            viewBox="0 0 32 32"
-            width={24}
-          >
-            <circle
-              className="emotion-3"
-              cx="1rem"
-              cy="1rem"
-              data-testid="undefined_circular_progress_value"
-              r="0.875rem"
-              stroke="#175bf5"
-              strokeDasharray="5.497787143782138rem 5.497787143782138rem"
-              strokeDashoffset="1.3744467859455343rem"
-              strokeLinecap="round"
-            />
-          </svg>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Design System/Progress Indicator Circular Progress Indicator - Sizes 1`] = `
-.emotion-0 {
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  position: relative;
-  padding: 0.25rem;
-}
-
-.emotion-1 {
-  margin: 1rem;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-3 {
-  -webkit-transition: stroke-dashoffset 0.5s;
-  transition: stroke-dashoffset 0.5s;
-  -webkit-animation: rotating 2s linear infinite;
-  animation: rotating 2s linear infinite;
-}
-
-<div
-  className="emotion-0"
->
-  <div
-    className="emotion-1"
-  >
-    <div
-      className="emotion-2"
-    >
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          aria-valuemax={100}
-          aria-valuemin={0}
-          className="react-aria-ProgressBar"
-          data-rac=""
-          id="react-aria-generated-id"
-          role="progressbar"
-        >
-          <svg
-            data-testid="undefined_circular_progress_container"
-            fill="none"
             height="1rem"
-            strokeWidth="1.5px"
+            strokeWidth={1.5}
             viewBox="0 0 32 32"
             width="1rem"
           >
             <circle
               className="emotion-3"
-              cx="1rem"
-              cy="1rem"
+              cx={16}
+              cy={16}
               data-testid="undefined_circular_progress_value"
-              r="0.875rem"
+              r={14}
               stroke="#175bf5"
-              strokeDasharray="5.6941366846315rem 5.6941366846315rem"
-              strokeDashoffset="1.4235341711578755rem"
-              strokeLinecap="round"
-            />
-          </svg>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          aria-valuemax={100}
-          aria-valuemin={0}
-          className="react-aria-ProgressBar"
-          data-rac=""
-          id="react-aria-generated-id"
-          role="progressbar"
-        >
-          <svg
-            data-testid="undefined_circular_progress_container"
-            fill="none"
-            height={24}
-            strokeWidth={2}
-            viewBox="0 0 32 32"
-            width={24}
-          >
-            <circle
-              className="emotion-3"
-              cx="1rem"
-              cy="1rem"
-              data-testid="undefined_circular_progress_value"
-              r="0.875rem"
-              stroke="#175bf5"
-              strokeDasharray="5.497787143782138rem 5.497787143782138rem"
-              strokeDashoffset="1.3744467859455343rem"
+              strokeDasharray="91.106186954104 91.106186954104"
+              strokeDashoffset={22.776546738526008}
               strokeLinecap="round"
             />
           </svg>
@@ -487,20 +323,20 @@ exports[`Storyshots Design System/Progress Indicator Circular Progress Indicator
             <svg
               data-testid="undefined_circular_progress_container"
               fill="none"
-              height={24}
-              strokeWidth={2}
+              height="1rem"
+              strokeWidth={1.5}
               viewBox="0 0 32 32"
-              width={24}
+              width="1rem"
             >
               <circle
                 className="emotion-3"
-                cx="1rem"
-                cy="1rem"
+                cx={16}
+                cy={16}
                 data-testid="undefined_circular_progress_value"
-                r="0.875rem"
+                r={14}
                 stroke="#175bf5"
-                strokeDasharray="5.497787143782138rem 5.497787143782138rem"
-                strokeDashoffset="5.497787143782138rem"
+                strokeDasharray="91.106186954104 91.106186954104"
+                strokeDashoffset={91.106186954104}
                 strokeLinecap="round"
               />
             </svg>
