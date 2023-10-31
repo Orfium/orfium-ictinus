@@ -7,7 +7,7 @@ import { getProgressIndicatorTokens } from 'components/ProgressIndicator/Progres
 import { ProgressIndicatorProps } from 'components/ProgressIndicator/ProgressIndicator.types';
 
 export const progressBarContainer =
-  () =>
+  ({ isBlock }: Pick<ProgressIndicatorProps, 'isBlock'>) =>
   (theme: Theme): SerializedStyles => {
     const tokens = getProgressIndicatorTokens(theme);
 
@@ -23,7 +23,7 @@ export const progressBarContainer =
       &:not([aria-valuenow]) {
         .fill {
           width: 50%;
-          border-radius: ${tokens('borderRadius')};
+          border-radius: ${isBlock ? 0 : tokens('borderRadius')};
           animation: indeterminate 1.7s infinite ease-in-out;
           will-change: transform;
         }
@@ -42,33 +42,39 @@ export const progressBarContainer =
   };
 
 export const barStyles =
-  ({ hasBorderRadius }: Pick<ProgressIndicatorProps, 'hasBorderRadius'>) =>
+  ({ isBlock }: Pick<ProgressIndicatorProps, 'isBlock'>) =>
   (theme: Theme): SerializedStyles => {
     const tokens = getProgressIndicatorTokens(theme);
 
     return css`
       grid-area: bar;
-      background-color: ${tokens('track')};
-      height: ${tokens('height.progressBar')};
-      border-radius: ${hasBorderRadius ? tokens('borderRadius') : 0};
+      background-color: ${tokens('backgroundColor.track')};
+      height: ${isBlock ? tokens('height.linearBlock') : tokens('height.linear')};
+      border-radius: ${isBlock ? 0 : tokens('borderRadius')};
       overflow: hidden;
       will-change: transform;
     `;
   };
 
 export const fillStyles =
-  ({ status, value }: Pick<ProgressIndicatorProps, 'status' | 'value'>) =>
+  ({ status, value, isBlock }: Pick<ProgressIndicatorProps, 'status' | 'value' | 'isBlock'>) =>
   (theme: Theme): SerializedStyles => {
     const tokens = getProgressIndicatorTokens(theme);
 
     const hasError = status === 'error';
 
+    const getBorderRadius = () => {
+      if (isBlock) return 0;
+
+      if (isUndefined(value)) return tokens('borderRadius');
+
+      return `0 ${tokens('borderRadius')} ${tokens('borderRadius')} 0`;
+    };
+
     return css`
-      background: ${hasError ? tokens('error') : tokens('active')};
+      background: ${hasError ? tokens('backgroundColor.error') : tokens('backgroundColor.active')};
       height: 100%;
-      border-radius: ${isUndefined(value)
-        ? tokens('borderRadius')
-        : `0 ${tokens('borderRadius')} ${tokens('borderRadius')} 0`};
+      border-radius: ${getBorderRadius()};
       width: ${value}%;
       transition: width 0.5s;
     `;

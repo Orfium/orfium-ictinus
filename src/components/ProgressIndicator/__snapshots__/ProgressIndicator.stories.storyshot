@@ -1,6 +1,110 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Design System/Progress Indicator Circular Progress Indicator - Error States 1`] = `
+exports[`Storyshots Design System/Progress Indicator Block ProgressIndicator 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  display: grid;
+  grid-template-areas: 'label value' 'bar bar';
+  grid-template-columns: 1fr auto;
+  gap: 0.25rem;
+  width: 100%;
+}
+
+.emotion-3:not([aria-valuenow]) .fill {
+  width: 50%;
+  border-radius: 0;
+  -webkit-animation: indeterminate 1.7s infinite ease-in-out;
+  animation: indeterminate 1.7s infinite ease-in-out;
+  will-change: transform;
+}
+
+.emotion-4 {
+  grid-area: bar;
+  background-color: #e7eefe;
+  height: 0.5rem;
+  border-radius: 0;
+  overflow: hidden;
+  will-change: transform;
+}
+
+.emotion-5 {
+  background: #175bf5;
+  height: 100%;
+  border-radius: 0;
+  width: %;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          aria-valuemax={100}
+          aria-valuemin={0}
+          className="emotion-3"
+          data-rac=""
+          id="react-aria-generated-id"
+          role="progressbar"
+        >
+          <div
+            className="bar emotion-4"
+            data-testid="undefined_linear_progress_container"
+          >
+            <div
+              className="fill emotion-5"
+              data-testid="undefined_linear_progress_value"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Progress Indicator Circular ProgressIndicator - Error states 1`] = `
 .emotion-0 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -113,6 +217,7 @@ exports[`Storyshots Design System/Progress Indicator Circular Progress Indicator
               strokeDasharray="91.106186954104 91.106186954104"
               strokeDashoffset={36.4424747816416}
               strokeLinecap="round"
+              transform="rotate(-90 16 16)"
             />
           </svg>
         </div>
@@ -155,7 +260,7 @@ exports[`Storyshots Design System/Progress Indicator Circular Progress Indicator
 </div>
 `;
 
-exports[`Storyshots Design System/Progress Indicator Circular Progress Indicator - Indeterminate 1`] = `
+exports[`Storyshots Design System/Progress Indicator Circular ProgressIndicator - indeterminate 1`] = `
 .emotion-0 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -234,6 +339,7 @@ exports[`Storyshots Design System/Progress Indicator Circular Progress Indicator
               strokeDasharray="91.106186954104 91.106186954104"
               strokeDashoffset={22.776546738526008}
               strokeLinecap="round"
+              transform="rotate(-90 16 16)"
             />
           </svg>
         </div>
@@ -243,7 +349,7 @@ exports[`Storyshots Design System/Progress Indicator Circular Progress Indicator
 </div>
 `;
 
-exports[`Storyshots Design System/Progress Indicator Circular Progress Indicator with percentage 1`] = `
+exports[`Storyshots Design System/Progress Indicator Circular ProgressIndicator with percentage 1`] = `
 .emotion-0 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -338,6 +444,7 @@ exports[`Storyshots Design System/Progress Indicator Circular Progress Indicator
                 strokeDasharray="91.106186954104 91.106186954104"
                 strokeDashoffset={91.106186954104}
                 strokeLinecap="round"
+                transform="rotate(-90 16 16)"
               />
             </svg>
           </div>
@@ -355,159 +462,7 @@ exports[`Storyshots Design System/Progress Indicator Circular Progress Indicator
 </div>
 `;
 
-exports[`Storyshots Design System/Progress Indicator Linear Progress Indicator - Border Radius 1`] = `
-.emotion-0 {
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  position: relative;
-  padding: 0.25rem;
-}
-
-.emotion-1 {
-  margin: 1rem;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-3 {
-  display: grid;
-  grid-template-areas: 'label value' 'bar bar';
-  grid-template-columns: 1fr auto;
-  gap: 0.25rem;
-  width: 100%;
-}
-
-.emotion-3:not([aria-valuenow]) .fill {
-  width: 50%;
-  border-radius: 6.25rem;
-  -webkit-animation: indeterminate 1.7s infinite ease-in-out;
-  animation: indeterminate 1.7s infinite ease-in-out;
-  will-change: transform;
-}
-
-.emotion-4 {
-  grid-area: bar;
-  background-color: #e7eefe;
-  height: 0.25rem;
-  border-radius: 6.25rem;
-  overflow: hidden;
-  will-change: transform;
-}
-
-.emotion-5 {
-  background: #175bf5;
-  height: 100%;
-  border-radius: 6.25rem;
-  width: %;
-  -webkit-transition: width 0.5s;
-  transition: width 0.5s;
-}
-
-.emotion-7 {
-  grid-area: bar;
-  background-color: #e7eefe;
-  height: 0.25rem;
-  border-radius: 0;
-  overflow: hidden;
-  will-change: transform;
-}
-
-<div
-  className="emotion-0"
->
-  <div
-    className="emotion-1"
-  >
-    <div
-      className="emotion-2"
-    >
-      <div
-        style={
-          Object {
-            "margin": 5,
-            "width": "18.75rem",
-          }
-        }
-      >
-        <div
-          aria-valuemax={100}
-          aria-valuemin={0}
-          className="emotion-3"
-          data-rac=""
-          id="react-aria-generated-id"
-          role="progressbar"
-        >
-          <div
-            className="bar emotion-4"
-            data-testid="undefined_linear_progress_container"
-          >
-            <div
-              className="fill emotion-5"
-              data-testid="undefined_linear_progress_value"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-            "width": "18.75rem",
-          }
-        }
-      >
-        <div
-          style={
-            Object {
-              "alignItems": "center",
-              "border": "1px solid #B9C0FF",
-              "display": "flex",
-              "height": "24px",
-            }
-          }
-        >
-          <div
-            aria-valuemax={100}
-            aria-valuemin={0}
-            className="emotion-3"
-            data-rac=""
-            id="react-aria-generated-id"
-            role="progressbar"
-          >
-            <div
-              className="bar emotion-7"
-              data-testid="undefined_linear_progress_container"
-            >
-              <div
-                className="fill emotion-5"
-                data-testid="undefined_linear_progress_value"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Design System/Progress Indicator Linear Progress Indicator - Indeterminate 1`] = `
+exports[`Storyshots Design System/Progress Indicator Linear Progress Indicator - indeterminate 1`] = `
 .emotion-0 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -612,7 +567,7 @@ exports[`Storyshots Design System/Progress Indicator Linear Progress Indicator -
 </div>
 `;
 
-exports[`Storyshots Design System/Progress Indicator Linear Progress Indicator with percentage 1`] = `
+exports[`Storyshots Design System/Progress Indicator Linear ProgressIndicator with percentage 1`] = `
 .emotion-0 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;

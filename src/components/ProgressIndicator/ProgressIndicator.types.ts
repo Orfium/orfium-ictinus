@@ -7,6 +7,6 @@ export type ProgressIndicatorProps = {
   value?: number;
   /** The status of the progress indicator */
   status?: 'normal' | 'error';
-  /** Whether the progress indicator has border-radius. Only applies for the linear variation */
-  hasBorderRadius?: boolean;
+  /** Whether the progress indicator is block-positioned. Only applies for the linear variation */
+  isBlock?: boolean;
 } & TestProps;

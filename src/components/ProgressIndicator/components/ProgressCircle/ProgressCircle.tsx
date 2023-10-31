@@ -43,10 +43,11 @@ const ProgressCircle = React.forwardRef<
               cx={center}
               cy={center}
               r={14}
-              stroke={hasError ? tokens('error') : tokens('active')}
+              stroke={hasError ? tokens('backgroundColor.error') : tokens('backgroundColor.active')}
               strokeDasharray={`${c} ${c}`}
               strokeDashoffset={c - (percentage / 100) * c}
               strokeLinecap="round"
+              transform="rotate(-90 16 16)"
               css={animationStyles(isUndefined(value))}
               data-testid={`${dataTestPrefixId}_circular_progress_value`}
             />

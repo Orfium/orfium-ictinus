@@ -7,22 +7,22 @@ import { ProgressIndicatorProps } from 'components/ProgressIndicator/ProgressInd
 
 const ProgressBar = React.forwardRef<
   HTMLDivElement,
-  Pick<ProgressIndicatorProps, 'value' | 'status' | 'hasBorderRadius' | 'dataTestPrefixId'>
->(({ value, status, hasBorderRadius, dataTestPrefixId }, ref) => {
+  Pick<ProgressIndicatorProps, 'value' | 'status' | 'isBlock' | 'dataTestPrefixId'>
+>(({ value, status, isBlock = false, dataTestPrefixId }, ref) => {
   const props = {
     ...(isUndefined(value) ? { isIndeterminate: true } : { value }),
   };
 
   return (
-    <AriaProgressBar {...props} css={progressBarContainer()} ref={ref}>
+    <AriaProgressBar {...props} css={progressBarContainer({ isBlock })} ref={ref}>
       {() => (
         <div
-          css={barStyles({ hasBorderRadius })}
+          css={barStyles({ isBlock })}
           className="bar"
           data-testid={`${dataTestPrefixId}_linear_progress_container`}
         >
           <div
-            css={fillStyles({ status, value })}
+            css={fillStyles({ status, value, isBlock })}
             className="fill"
             data-testid={`${dataTestPrefixId}_linear_progress_value`}
           />

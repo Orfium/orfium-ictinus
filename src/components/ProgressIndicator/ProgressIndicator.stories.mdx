@@ -55,12 +55,12 @@ Progress indicators communicate to the user the current progress of a given task
 
 ## Variants
 
-### Linear Progress Indicator with percentage
+### Linear ProgressIndicator with percentage
 
 The `value` prop, if provided, makes the progress indicator determinate.
 
 <Preview>
-  <Story name="Linear Progress Indicator with percentage">
+  <Story name="Linear ProgressIndicator with percentage">
     <Stack width={300}>
       <Function>
         {() => {
@@ -97,44 +97,34 @@ The `value` prop, if provided, makes the progress indicator determinate.
   </Story>
 </Preview>
 
-### Linear Progress Indicator - Indeterminate
+### Linear ProgressIndicator - indeterminate
 
 If the `value` prop is not provided, the progress indicator becomes indeterminate.
 
 <Preview>
-  <Story name="Linear Progress Indicator - Indeterminate">
+  <Story name="Linear Progress Indicator - indeterminate">
     <Stack width={300}>
       <ProgressIndicator />
     </Stack>
   </Story>
 </Preview>
 
-### Linear Progress Indicator - Border Radius
+### Block ProgressIndicator
 
-For the linear indicator, the border-radius of the outer bar can be deactivated, in case e.g. the progress indicator is rendered inside a container.
+The Linear Progress Indicator can be block-positioned, for usage in page loaders etc.
 
 <Preview>
-  <Story name="Linear Progress Indicator - Border Radius">
-    <Stack width={300} isVertical>
-      <ProgressIndicator />
-      <div
-        style={{
-          border: '1px solid #B9C0FF',
-          height: '24px',
-          display: 'flex',
-          alignItems: 'center',
-        }}
-      >
-        <ProgressIndicator hasBorderRadius={false} />
-      </div>
+  <Story name="Block ProgressIndicator">
+    <Stack isVertical>
+      <ProgressIndicator isBlock />
     </Stack>
   </Story>
 </Preview>
 
-### Circular Progress Indicator with percentage
+### Circular ProgressIndicator with percentage
 
 <Preview>
-  <Story name="Circular Progress Indicator with percentage">
+  <Story name="Circular ProgressIndicator with percentage">
     <Stack>
       <Function>
         {() => {
@@ -164,22 +154,22 @@ For the linear indicator, the border-radius of the outer bar can be deactivated,
   </Story>
 </Preview>
 
-### Circular Progress Indicator - Indeterminate
+### Circular ProgressIndicator - indeterminate
 
 <Preview>
-  <Story name="Circular Progress Indicator - Indeterminate">
+  <Story name="Circular ProgressIndicator - indeterminate">
     <Stack>
       <ProgressIndicator type={'circle'} />
     </Stack>
   </Story>
 </Preview>
 
-### Circular Progress Indicator - Error States
+### Circular ProgressIndicator - Error states
 
 The status of the progress indicator can be `normal` or `error`.
 
 <Preview>
-  <Story name="Circular Progress Indicator - Error States">
+  <Story name="Circular ProgressIndicator - Error states">
     <Stack>
       <ProgressIndicator type={'circle'} value={60} status="error" />
     </Stack>
@@ -197,13 +187,13 @@ The status of the progress indicator can be `normal` or `error`.
       <ProgressIndicator
         type={select('type', ['linear', 'circular'], 'linear')}
         status={select('status', ['normal', 'error'], 'normal')}
-        hasBorderRadius={boolean('hasBorderRadius [for linear only]', true)}
+        isBlock={boolean('isBlock [for linear only]', false)}
       />
       <ProgressIndicator
         value={number('value', undefined)}
         type={select('type', ['linear', 'circular'], 'linear')}
         status={select('status', ['normal', 'error'], 'normal')}
-        hasBorderRadius={boolean('hasBorderRadius [for linear only]', true)}
+        isBlock={boolean('isBlock [for linear only]', false)}
       />
     </Stack>
   </Story>
