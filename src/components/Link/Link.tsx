@@ -25,11 +25,14 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
 
   const Component = component ?? 'a';
 
+  const componentProps = component ? { to: props.href } : {};
+
   return (
     <Component
       css={linkContainer({ placement, type, size, isDisabled })}
       ref={ref}
       data-testid={`${dataTestPrefixId}_link`}
+      {...componentProps}
       {...rest}
     >
       <span>{children}</span>

@@ -6,8 +6,6 @@ import { AcceptedIconNames } from 'components/Icon';
 type LinkSizes = 1 | 2 | 3;
 
 export type LinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
-  /** This prop might be needed in case of props forwarding using third-party libraries */
-  to?: any;
   /** The type of the Link in terms of style */
   type?: 'primary' | 'inverted';
   /** The placement of the link */
