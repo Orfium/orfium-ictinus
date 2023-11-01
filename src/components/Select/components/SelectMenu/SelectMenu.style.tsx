@@ -39,7 +39,8 @@ export const menuStyle =
     status,
     isVirtualized,
     height,
-  }: SelectMenuProps & Omit<TextFieldProps, 'ref' | 'label' | 'sx'> & { height: number }) =>
+    sx,
+  }: SelectMenuProps & Omit<TextFieldProps, 'ref' | 'label'> & { height: number }) =>
   (theme: Theme): SerializedStyles =>
     css`
       background-color: ${theme.globals.oldColors.white};
@@ -53,4 +54,5 @@ export const menuStyle =
       // TODO we need a technique to identify menu position left or right
       min-width: 100%;
       max-width: ${rem(620)};
+      ${sx};
     `;
