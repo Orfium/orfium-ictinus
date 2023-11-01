@@ -27,6 +27,13 @@ export const rightIconsContainer =
       align-items: center;
     `;
 
+export const progressIndicatorStyles =
+  () =>
+  (theme: Theme): SerializedStyles =>
+    css`
+      padding-right: ${theme.globals.spacing.get('3')};
+    `;
+
 export const rightIconStyles =
   ({ isClickable }: { isClickable: boolean }) =>
   (theme: Theme): SerializedStyles => {
