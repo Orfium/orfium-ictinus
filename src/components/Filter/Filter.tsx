@@ -43,6 +43,10 @@ const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
   const [searchValue, setSearchValue] = React.useState('');
   const [filterLabel, setFilterLabel] = React.useState(selectedItem?.label ?? defaultValue.label);
 
+  React.useEffect(() => {
+    setFilterLabel(selectedItem?.label ?? defaultValue.label);
+  }, [defaultValue.label, selectedItem?.label]);
+
   const hasSelectedValue =
     Boolean(selectedItem?.value) && selectedItem?.value !== defaultValue.value;
 
