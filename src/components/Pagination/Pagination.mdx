@@ -1,0 +1,35 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
+import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
+import Pagination from './Pagination';
+import { FIGMA_URL } from '../../utils/common';
+import * as PaginationStories from './Pagination.stories';
+
+<Meta of={PaginationStories} />
+
+# Pagination
+
+The pagination component that will be controlled by the parent on any product
+
+## Usage
+
+```js
+import { Pagination } from '@orfium/ictinus';
+
+<Pagination count={3} page={1} />;
+```
+
+## Props
+
+<ArgTypes of={Pagination} />
+
+# Pagination
+
+Simple pagination with all buttons
+
+<Canvas of={PaginationStories.PaginationStory} />
+
+# Pagination Without all buttons
+
+Simple pagination without jumping on first or last page
+
+<Canvas of={PaginationStories.PaginationWithoutAllButtons} />

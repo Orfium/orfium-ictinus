@@ -49,7 +49,7 @@ describe('TruncatedContent', () => {
     function sleep(sleepMS) {
       return new Promise((resolve) => {
         setTimeout(() => {
-          resolve();
+          resolve(null);
         }, sleepMS);
       });
     }

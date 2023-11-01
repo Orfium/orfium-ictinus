@@ -1,0 +1,81 @@
+import { Meta, Canvas, ArgTypes, Story } from '@storybook/blocks';
+import { boolean, number, select, text, withKnobs } from '@storybook/addon-knobs';
+import { linkTo } from '@storybook/addon-links';
+import NumberField from './NumberField';
+import Stack from '../storyUtils/Stack';
+import Icon from '../Icon';
+import iconSelector from '../Icon/assets/iconSelector';
+import Loader from '../Loader';
+import { FIGMA_URL } from '../../utils/common';
+import SectionHeader from '../../storybook/SectionHeader';
+import * as NumberFieldStories from './NumberField.stories';
+
+<Meta of={NumberFieldStories} />
+
+<SectionHeader title={'NumberField'} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
+
+## Overview
+
+A universal NumberField that only allows for numerical characters, designed to handle numerical data entry.
+
+## Props
+
+<ArgTypes of={NumberField} />
+
+## Usage
+
+<UsageGuidelines
+  guidelines={[
+    'Number input may be an absolute number or decimals',
+    'Number field may feature suffix (e.g. “%”) or increments',
+    'It also supports input masking to enforce a specific format for the numeric input',
+    'If the user is required to enter non-numeric data, such as text or dates use TextField or DatePicker instead.',
+  ]}
+/>
+
+## Variants
+
+### NumberField with number format
+
+Formatting options for the value displayed in the number field can be configured based on
+[Intl.NumberFormatOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat)
+
+<Canvas of={NumberFieldStories.NumberFieldWithNumberFormat} />
+
+### NumberField with Stepper
+
+NumberField can have a stepper with increment and decrement buttons. Step defaults to 1 if not provided.
+
+<Tip>
+  \[Accessibility] - Once the NumberField is focused, Stepper keyboard navigation is supported with
+  the arrowUp and arrowDown keys.
+</Tip>
+
+<Canvas of={NumberFieldStories.NumberFieldWithStepper} />
+
+## NumberField with min and max values
+
+NumberField can have min and max values provided as props.
+
+<Canvas of={NumberFieldStories.NumberFieldWithMinAndMaxValues} />
+
+### NumberField with Label and Placeholder
+
+NumberField with label options. Label that will float, with or without Placeholder
+
+<Canvas of={NumberFieldStories.NumberFieldWithLabelAndPlaceholder} />
+
+### NumberField with Statuses
+
+NumberField inherits all TextField statuses behavior.
+
+<Canvas of={NumberFieldStories.NumberFieldWithLabelPlaceholderAndStatuses} />
+
+### Playground
+
+<Canvas of={NumberFieldStories.Playground} />

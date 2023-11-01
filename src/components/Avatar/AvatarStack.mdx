@@ -1,0 +1,35 @@
+import { Meta, Canvas, ArgTypes, Story } from '@storybook/blocks';
+import { select, withKnobs } from '@storybook/addon-knobs';
+import Avatar from './Avatar';
+import AvatarStack from './AvatarStack';
+import Stack from '../storyUtils/Stack';
+import { BASE_SHADE } from '../../theme/palette';
+import { FIGMA_URL } from '../../utils/common';
+import SectionHeader from '../../storybook/SectionHeader';
+import * as AvatarStackStories from './AvatarStack.stories';
+
+<Meta of={AvatarStackStories} />
+
+<SectionHeader title={'Avatar Stack'} />
+
+A universal AvatarStack component that renders its children as a stack.
+
+## Usage
+
+```js
+import { Avatar, AvatarStack } from '@orfium/ictinus';
+
+<AvatarStack>
+  <Avatar />
+  <Avatar />
+  <Avatar />
+</AvatarStack>;
+```
+
+## Props
+
+<ArgTypes of={AvatarStack} />
+
+### Avatar Stack
+
+<Canvas of={AvatarStackStories.AvatarStack} />

@@ -1,0 +1,29 @@
+import { Meta, Canvas } from '@storybook/blocks';
+import { withKnobs, text } from '@storybook/addon-knobs';
+import { MemoryRouter } from 'react-router-dom';
+import DemoUseSearchQueryParams from './storyUtils/DemoUseSearchQueryParams.tsx';
+import * as UseSearchQueryParamsStories from './useSearchQueryParams.stories';
+
+<Meta of={UseSearchQueryParamsStories} />
+
+# useSearchQueryParams
+
+# Usage
+
+```
+import { useSearchQueryParams } from '@orfium/ictinus/dist/hooks';
+
+const MyComponent: FCC = () => {
+  // URL => https://orfium-product.com/mypath?page=1&size=12&library=react&testing=yolo
+  const searchQueryParams = useSearchQueryParams();
+
+  // console.log(searchQueryParams)
+  // { "page": "1", "size": "12", "library": "react", "testing": "yolo" }
+};
+```
+
+# useSearchQueryParams demo
+
+This demo represents how the url will be taken into an object. You can play with **knobs** as well for different types of url
+
+<Canvas of={UseSearchQueryParamsStories.UseSearchQueryParams} />

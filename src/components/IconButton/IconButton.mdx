@@ -1,0 +1,36 @@
+import { Meta, Canvas, ArgTypes, Story } from '@storybook/blocks';
+import { select } from '@storybook/addon-knobs';
+import IconButton from './IconButton';
+import Stack from '../storyUtils/Stack';
+import iconSelector from '../Icon/assets/iconSelector';
+import { FIGMA_URL } from '../../utils/common';
+import SectionHeader from '../../storybook/SectionHeader';
+import * as IconButtonStories from './IconButton.stories';
+
+<Meta of={IconButtonStories} />
+
+<SectionHeader title={'IconButton'} />
+
+A universal IconButton component that with the help of Button hold the icon inside it and makes it clickable and easily accessible.
+
+## Usage
+
+```js
+import { IconButton } from '@orfium/ictinus';
+
+<IconButton onClick={() => {}} name={'add'} />;
+```
+
+## Props
+
+<ArgTypes of={IconButton} />
+
+# IconButton Types
+
+IconButton with different types `primary, secondary, tertiary` and different shape types `circle, square`
+
+<Canvas of={IconButtonStories.IconButtonTypes} />
+
+# IconButton Playground
+
+<Canvas of={IconButtonStories.IconButtonPlayground} />

@@ -1,3 +1,5 @@
+import type { SelectOption } from './types';
+
 export const options = [
   { value: 'chocolate', label: 'Chocolate' },
   { value: 'strawberry', label: 'Strawberry' },
@@ -6,14 +8,14 @@ export const options = [
   { value: 'citrus3', label: 'Citrus3' },
   { value: 'citrus4', label: 'Citrus4' },
   { value: 'vanilla', label: 'Vanilla', isDisabled: true },
-];
+] as SelectOption[];
 export const optionsWithHelperInDisabled = [
   { value: 'chocolate', label: 'Chocolate' },
   { value: 'strawberry', label: 'Strawberry' },
   { value: 'banana', label: 'Banana' },
   { value: 'citrus', label: 'Citrus' },
   { value: 'why_Disabled', label: 'Why Disabled?', helperText: 'this is why!', isDisabled: true },
-];
+] as SelectOption[];
 export const groupOptions = [
   {
     value: 'Sweet',
@@ -42,5 +44,5 @@ export const groupOptions = [
     label: 'Group 6',
     options: [{ value: '7', label: 'Option 9' }],
   },
-];
+] as SelectOption[];
 export const defaultValue = options[0];

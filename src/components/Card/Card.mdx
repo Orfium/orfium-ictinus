@@ -1,0 +1,33 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
+import { select, boolean } from '@storybook/addon-knobs';
+import CardShowcase from '../storyUtils/CardShowcase';
+import Card from './Card';
+import Stack from '../storyUtils/Stack';
+import { FIGMA_URL } from '../../utils/common';
+import * as CardStories from './Card.stories';
+
+<Meta of={CardStories} />
+
+# Card
+
+A universal Card component that is wrapper for other components
+
+## Usage
+
+```js
+import { Card } from '@orfium/ictinus';
+
+<Card elevated={'01'}>
+  <div>Content</div>
+</Card>;
+```
+
+## Props
+
+<ArgTypes of={Card} />
+
+### Card with Elevation
+
+Card with Elevation
+
+<Canvas of={CardStories.CardWithElevation} />

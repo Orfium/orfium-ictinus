@@ -40,9 +40,9 @@ const Box = forwardRef<HTMLDivElement, BoxProps>(({ children, ...rest }, ref) =>
   };
 
   return (
-    <div ref={ref} css={[css(propsToCss)]} {...props}>
+    <span ref={ref} css={[css(propsToCss)]} {...props}>
       {children}
-    </div>
+    </span>
   );
 });
 

@@ -1,0 +1,30 @@
+import { Meta, ArgTypes } from '@storybook/blocks';
+import ThemeProvider from './ThemeProvider';
+import Button from '../Button';
+import Test from './Test';
+import * as ThemeProviderStories from './ThemeProvider.stories';
+
+<Meta of={ThemeProviderStories} />
+
+# ThemeProvider
+
+A component that will hold all components as childs. These component is the first one you will use and is responsible to setup the theme.
+
+## Usage
+
+```
+import { ThemeProvider } from '@orfium/ictinus';
+
+<ThemeProvider theme={{ palette: { primary: '#2D2D46' } }}>...</ThemeProvider>;
+```
+
+## Props
+
+<ArgTypes of={ThemeProvider} />
+
+# Theme with button
+
+This is a demo of how you wrap a component on this provider. Because preview is also automatically wrapped in the provider
+some things like dark mode switcher will not work as intended.
+
+<Canvas of={ThemeProviderStories.SettingUpAButtonExample} />

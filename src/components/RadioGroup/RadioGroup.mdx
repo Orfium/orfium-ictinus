@@ -1,0 +1,45 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
+import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
+import Radio from '../Radio';
+import RadioGroup from './RadioGroup';
+import * as RadioGroupStories from './RadioGroup.stories';
+
+<Meta of={RadioGroupStories} />
+
+# RadioGroup
+
+A utility component for easily creating radio groups.
+`value` represents the current value of the `RadioGroup` as a whole.
+If the `value` prop is defined it means the `RadioGroup` is controlled.
+If the `defaultValue` prop is defined it means the `RadioGroup` is not controlled.
+`RadioGroup` does **not** wrap the children in any DOM element, that's left as a user implementation
+
+## Usage
+
+```jsx
+import { RadioGroup } from '@orfium/ictinus';
+
+<RadioGroup
+  value={value}
+  name="group"
+  onChange={(e) => {
+    console.log(e.target.value);
+  }}
+>
+  <Radio value="a" />
+  <Radio value="b" />
+  <Radio value="c" />
+</RadioGroup>;
+```
+
+## Props
+
+<ArgTypes of={RadioGroup} />
+
+# Self controlled radio group
+
+<Canvas of={RadioGroupStories.RadioWithOptions} />
+
+# Self controlled radio group with onChange handler
+
+<Canvas of={RadioGroupStories.RadioWithOptionsWithOnChangeHandler} />

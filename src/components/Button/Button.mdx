@@ -1,0 +1,82 @@
+import { Meta, ArgTypes, Canvas } from '@storybook/blocks';
+import { boolean, select, withKnobs } from '@storybook/addon-knobs';
+import Button from './Button';
+import Stack from '../storyUtils/Stack';
+import LinkTo from '@storybook/addon-links/react';
+import * as ButtonStories from './Button.stories';
+
+import SectionHeader from '../../storybook/SectionHeader';
+
+<Meta of={ButtonStories} />
+
+<SectionHeader title={'Button'} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
+
+## Overview
+
+A universal Button component that is a clickable element that can hold many forms.
+
+## Usage
+
+<UsageGuidelines
+  guidelines={[
+    'Buttons may contain icon, on the left or the right side',
+    'Replace text with a loader if action is submitted, but still processing',
+    'Button width is set by it’s content, avoid changing it width',
+    'Use only one primary button, and any remaining calls to action should be represented as lower emphasis buttons',
+  ]}
+/>
+
+<Tip>
+  If you need to use icon as button with no text, check out{' '}
+  <LinkTo kind="/Design System/Button/IconButton">Icon button</LinkTo> component
+</Tip>
+
+## Props
+
+<ArgTypes of={Button} />
+
+## Variants
+
+### Button Types
+
+Button types based on the system approved literals for `primary, secondary, tertiary, danger, inverted, invertedAlt`
+
+<Canvas of={ButtonStories.ButtonTypes} />
+
+### Inverted Button Types
+
+Button types based on the system approved literals for `primary, secondary, tertiary, danger, inverted, invertedAlt`
+
+<Canvas isInverted of={ButtonStories.InvertedButtonTypes} />
+
+### Loading Button
+
+Button Loading variations based on the `isLoading` boolean prop.
+
+<Canvas of={ButtonStories.LoadingButton} />
+
+### Buttons with Icons
+
+Buttons with icons. 3 different variations based on the icon's placement.
+
+<Canvas of={ButtonStories.ButtonsWithIcons} />
+
+### Buttons with Avatars
+
+An avatar can be placed instead of a left icon. Only for `primary, secondary, tertiary` buttons.
+Can be only combined with a right icon, not with a left icon at the same time.
+
+<Canvas of={ButtonStories.ButtonsWithAvatars} />
+
+### Block Button
+
+<Canvas of={ButtonStories.BlockButton} />
+
+### Button Playground
+
+<Canvas of={ButtonStories.ButtonPlayground} />

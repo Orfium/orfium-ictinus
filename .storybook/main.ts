@@ -1,7 +1,7 @@
 import '@babel/polyfill';
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
 function getPackageDir(filepath: string) {
   let currDir = path.dirname(require.resolve(filepath));
@@ -21,16 +21,16 @@ function getPackageDir(filepath: string) {
 
 module.exports = {
   stories: [
-    '../docs/WELCOME.stories.@(md|mdx)',
-    '../docs/GETTING_STARTED.stories.@(md|mdx)',
-    '../docs/system/THEME.stories.@(md|mdx)',
-    '../docs/system/COLOR-UTILITY.stories.@(md|mdx)',
-    '../docs/guides/*.stories.@(md|mdx)',
-    '../docs/tokens/TOKENS.stories.@(md|mdx)',
-    '../docs/tokens/globals/*.stories.@(md|mdx)',
-    '../docs/tokens/*.stories.@(md|mdx)',
-    '../docs/system/*.stories.@(md|mdx)',
-    '../src/**/*.stories.@(ts|tsx|mdx)',
+    '../docs/WELCOME.mdx',
+    '../docs/GETTING_STARTED.mdx',
+    '../docs/system/THEME.mdx',
+    '../docs/system/COLOR-UTILITY.mdx',
+    '../docs/guides/*.mdx',
+    '../docs/tokens/TOKENS.mdx',
+    '../docs/tokens/globals/*.mdx',
+    '../docs/tokens/*.mdx',
+    '../docs/system/*.mdx',
+    '../src/**/*.@(mdx|stories.@(ts|tsx))',
   ],
 
   addons: [
@@ -84,20 +84,19 @@ module.exports = {
   //
   //   return config;
   // },
-  features: {
-    storyStoreV7: false,
-  },
   env: (config: any) => ({
     ...config,
     STORYBOOK_ENV: 'true',
   }),
 
   docs: {
-    autodocs: true,
-  },
+    inlineStories: true,
+    defaultName: 'Overview',
 
-  core: {
-    builder: '@storybook/builder-vite',
+    story: {
+      canvas: { sourceState: 'shown' },
+      source: { type: 'code' },
+    },
   },
 
   typescript: {

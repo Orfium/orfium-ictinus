@@ -1,0 +1,29 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
+import * as LoaderStories from './Loader.stories';
+
+import Loader from './Loader';
+import { FIGMA_URL } from '../../utils/common';
+
+<Meta of={LoaderStories} />
+
+# Loader
+
+A universal Loader component with different types.
+
+## Usage
+
+```js
+import { Loader } from '@orfium/ictinus';
+
+<Loader type="dots" />;
+```
+
+## Props
+
+<ArgTypes of={Loader} />
+
+### Loader Types
+
+Available Loader components.
+
+<Canvas of={LoaderStories.LoaderTypes} />

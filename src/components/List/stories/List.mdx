@@ -1,0 +1,66 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
+import List from '../index';
+import SectionHeader from '../../../storybook/SectionHeader';
+import * as ListStories from './List.stories';
+
+<Meta of={ListStories} />
+
+<SectionHeader title={'List'} />
+
+- [Overview](#overview)
+- [Usage](#usage)
+- [Props](#props)
+- [Variants](#variants)
+- [References](#references)
+
+## Overview
+
+The List component is a versatile UI element used to display a collection of items. The List component provides flexibility and customization options to suit various user interface needs.
+
+## Usage
+
+<UsageGuidelines
+  guidelines={[
+    'It can render ONLY individual ListItem components or group items using ListSection',
+    'The List can be used as standalone list, Select, Filter or Menu',
+    'Height is mandatory when is virtual list as the height needs to be caluclated in order to do the proper virtualization',
+  ]}
+/>
+
+```js
+import { List } from '@orfium/ictinus';
+
+const MyComponent = () => {
+  return <List>{/* Add ListSection(s) or ListItem(s) here */}</List>;
+};
+```
+
+## Props
+
+<ArgTypes of={List} />
+
+## Variants
+
+### List
+
+<Canvas of={ListStories.ListStory} />
+
+### Group List
+
+<Canvas of={ListStories.GroupList} />
+
+### Virtualized List with knobs
+
+Virtualized List component for large amounts of items.
+
+<Canvas of={ListStories.VirtualizedList} />
+
+### References
+
+All references for a complete `<List>` with all component mentioned throughout the `<List>` section.
+
+- [List](?path=/docs/design-system-list-list--list)
+- [ListSection](?path=/docs/design-system-list-listsection--normal-list-section)
+- [ListItem](?path=/docs/design-system-list-listitem--list-item-compilations)
+- [ListItemText](?path=/docs/design-system-list-listitemtext--list-item-text-normal)
+- [ListItemAction](?path=/docs/design-system-list-listitemaction--page)

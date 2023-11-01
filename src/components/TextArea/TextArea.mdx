@@ -1,0 +1,75 @@
+import { Meta, Canvas, ArgTypes, Story } from '@storybook/blocks';
+import { boolean, select, text, withKnobs, number } from '@storybook/addon-knobs';
+import TextArea from './TextArea';
+import Stack from '../storyUtils/Stack';
+import { FIGMA_URL, Function } from '../../utils/common';
+import SectionHeader from '../../storybook/SectionHeader';
+import { useState } from 'react';
+import * as TextAreaStories from './TextArea.stories';
+
+<Meta of={TextAreaStories} />
+
+<SectionHeader title={'TextArea'} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
+
+# Overview
+
+A universal TextArea component used for the case where large string of text is needed as an input.
+
+## Props
+
+<ArgTypes of={TextArea} />
+
+## Usage
+
+<UsageGuidelines
+  guidelines={[
+    'If you need to enter a short string of text in a single line, use text input instead',
+    'TextArea hint may be either text (on the left) or character counter (on the right)',
+  ]}
+/>
+
+## Variants
+
+### TextArea with labels
+
+TextArea with label, with or without placeholder
+
+<Canvas of={TextAreaStories.TextAreaWithLabels} />
+
+### Resizable TextArea
+
+TextArea and how to change size with cols and rows
+
+<Canvas of={TextAreaStories.ResizableTextArea} />
+
+### TextArea with Counter
+
+TextArea with maximum characters indicated by a counter.
+
+<Tip>
+  TextArea is a controlled component, so in order for the counter to work, the value prop must be
+  passed to the component.
+</Tip>
+
+<Canvas of={TextAreaStories.TextAreaWithCounter} />
+
+### TextArea Statuses
+
+TextArea with 3 available statuses: Normal, Error and Read-only.
+
+<Canvas of={TextAreaStories.TextAreaStatuses} />
+
+### Disabled TextArea
+
+Regular TextArea disabled with label
+
+<Canvas of={TextAreaStories.DisabledTextArea} />
+
+### Playground
+
+<Canvas of={TextAreaStories.Playground} />

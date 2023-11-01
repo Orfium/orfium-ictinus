@@ -132,55 +132,55 @@ const preview: SBPreview = {
     },
     chromatic: { delay: 2000 },
     viewMode: 'docs',
-
     layout: 'centered',
     docs: {
-      page: DocsPage,
       story: {
         inline: true,
       },
-      container: ({ children, context }: any) => (
+      container: (props: any) => (
         // @ts-ignore
-        <DocsContainer context={context}>
-          <ThemeProvider>{children}</ThemeProvider>
+        <DocsContainer {...props}>
+          <ThemeProvider>{props.children}</ThemeProvider>
         </DocsContainer>
       ),
       components: {
-        h1: ({ children }: any) => (
+        h1: ({ children, rest }: any) => (
           <Box mx={'6'}>
             {/*// @ts-ignore*/}
-            <Typography css={SBTypographyWrapper} variant={'headline01'}>
+            <Typography {...rest} css={SBTypographyWrapper} variant={'headline01'}>
               {children}
             </Typography>
           </Box>
         ),
-        h2: ({ children }: any) => (
+        h2: ({ children, rest }: any) => (
           <Box mx={'6'}>
             {/*// @ts-ignore*/}
-            <Typography css={SBTypographyWrapper} variant={'headline02'}>
+            <Typography {...rest} css={SBTypographyWrapper} variant={'headline02'}>
               {children}
             </Typography>
           </Box>
         ),
-        h3: ({ children }: any) => (
+        h3: ({ children, rest }: any) => (
           <Box mx={'6'}>
             {/*// @ts-ignore*/}
-            <Typography css={SBTypographyWrapper} variant={'headline03'}>
+            <Typography {...rest} css={SBTypographyWrapper} variant={'headline03'}>
               {children}
             </Typography>
           </Box>
         ),
-        h4: ({ children }: any) => (
+        h4: ({ children, rest }: any) => (
           <Box mx={'6'}>
             {/*// @ts-ignore*/}
-            <Typography css={SBTypographyWrapper} variant={'headline04'}>
+            <Typography {...rest} css={SBTypographyWrapper} variant={'headline04'}>
               {children}
             </Typography>
           </Box>
         ),
-        p: ({ children }: any) => (
+        p: ({ children, rest }: any) => (
           <Box mx={'6'}>
-            <Typography variant={'body01'}>{children}</Typography>
+            <Typography {...rest} variant={'body01'}>
+              {children}
+            </Typography>
           </Box>
         ),
         span: ({ children }: any) => <Typography variant={'body01'}>{children}</Typography>,

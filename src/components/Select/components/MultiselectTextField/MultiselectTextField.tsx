@@ -15,6 +15,7 @@ import {
   textInputBaseOverrides,
 } from './MultiselectTextField.style';
 import Chip from 'components/Chip';
+import type { AcceptedIconNames } from 'components/Icon';
 import Icon from 'components/Icon';
 import Label from 'components/Label';
 import Loader from 'components/Loader';
@@ -119,7 +120,13 @@ const MultiselectTextField = React.forwardRef<HTMLInputElement, Props & InputPro
     const icon = useMemo(() => {
       if (suffix) {
         if (typeof suffix === 'string') {
-          return <Icon name={suffix} size={20} color={theme.utils.getColor('lightGrey', 650)} />;
+          return (
+            <Icon
+              name={suffix as AcceptedIconNames}
+              size={20}
+              color={theme.utils.getColor('lightGrey', 650)}
+            />
+          );
         }
 
         return suffix;

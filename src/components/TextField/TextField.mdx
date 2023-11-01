@@ -1,0 +1,106 @@
+import { Meta, Canvas, ArgTypes, Story } from '@storybook/blocks';
+import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
+import { linkTo } from '@storybook/addon-links';
+import TextField from './TextField';
+import Stack from '../storyUtils/Stack';
+import Icon from '../Icon';
+import iconSelector from '../Icon/assets/iconSelector';
+import Loader from '../Loader';
+import {
+  MultiTextFieldShowcase,
+  TextFieldShowCase,
+} from '../../components/storyUtils/TextFieldShowcases';
+import { FIGMA_URL } from '../../utils/common';
+import SectionHeader from '../../storybook/SectionHeader';
+import * as TextFieldStories from './TextField.stories';
+
+<Meta of={TextFieldStories} />
+
+<SectionHeader title={'TextField'} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
+
+## Overview
+
+A universal TextField component which provides a wide range of features such as statuses, inline suffixes
+such as icons and components, and a multi-input functionality with the help of the Chip component.
+
+## Props
+
+<ArgTypes of={TextField} />
+
+## Usage
+
+<UsageGuidelines
+  guidelines={[
+    'Do not display TextFields in the same row unless they are related (e.g. “First Name” / “Last Name”)',
+    'Explicitly mark optional fields as such',
+    'When possible, try to choose input width that is relevant to the content being entered into the input field',
+    'Avoid truncating field label and input as much as possible',
+  ]}
+/>
+
+<Tip>
+  When the user needs to enter more than one individual values at a given field that are not
+  selected from a predefined list, MultiTextField is more suitable. <br />
+  (scroll down for more details)
+</Tip>
+
+## Variants
+
+### TextField with Label and Placeholder
+
+Regular TextField with label options. Label that will float, with or without Placeholder
+
+<Canvas of={TextFieldStories.TextFieldWithLabelAndPlaceholder} />
+
+### Masked TextField
+
+TextField with mask option. When used, placeholder prop is not available.
+The mask rules are the following:
+
+<UsageGuidelines
+  guidelines={[
+    " '9' => [0-9] (Numeric)",
+    " 'a' => [A-Za-z] (Alphabetical)",
+    " '*' => [A-Za-z0-9] (Alphanumeric)",
+  ]}
+/>
+
+<Tip>
+  In case number 9 is needed as a constant inside the mask, use '\9'. For example Georgian phone
+  number format would be +\9\9\9 999 999999 (example: +999 123 123456){' '}
+</Tip>
+
+<Canvas of={TextFieldStories.MaskedTextFieldDontTest} />
+
+### TextField with Icons
+
+TextField with icon options right of the text, either as external image or one of the available ictinus Icons.
+
+<Canvas of={TextFieldStories.TextFieldWithIcons} />
+
+### Disabled TextField
+
+Disabled TextField.
+
+<Canvas of={TextFieldStories.DisabledTextField} />
+
+### TextField with different Statuses
+
+TextField with different Statuses.
+
+<Canvas of={TextFieldStories.TextFieldWithDifferentStatuses} />
+
+### MultiTextField
+
+MultiTextField enables a user to enter one or individual entries as free text.
+
+<Canvas of={TextFieldStories.MultiTextField} />
+
+### Playground
+
+<Canvas of={TextFieldStories.Playground} />

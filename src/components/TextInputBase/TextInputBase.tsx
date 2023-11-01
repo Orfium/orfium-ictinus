@@ -17,7 +17,7 @@ export type TextInputBaseProps = {
   /** The placeholder of the input that will be used. This is shown if no label exists */
   placeholder?: string;
   /** An optional suffix (element or icon-name) to show to the left */
-  suffix?: AcceptedIconNames | JSX.Element | null;
+  suffix?: AcceptedIconNames | React.ReactNode | null;
   /** If the text field value is required */
   isRequired?: boolean;
   /** If the text field is disabled */
