@@ -1,0 +1,834 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Design System/Progress Indicator Block ProgressIndicator 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  display: grid;
+  grid-template-areas: 'label value' 'bar bar';
+  grid-template-columns: 1fr auto;
+  gap: 0.25rem;
+  width: 100%;
+}
+
+.emotion-3:not([aria-valuenow]) .fill {
+  width: 50%;
+  border-radius: 0;
+  -webkit-animation: indeterminate 1.7s infinite ease-in-out;
+  animation: indeterminate 1.7s infinite ease-in-out;
+  will-change: transform;
+}
+
+.emotion-4 {
+  grid-area: bar;
+  background-color: #e7eefe;
+  height: 0.5rem;
+  border-radius: 0;
+  overflow: hidden;
+  will-change: transform;
+}
+
+.emotion-5 {
+  background: #175bf5;
+  height: 100%;
+  border-radius: 0;
+  width: %;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          aria-valuemax={100}
+          aria-valuemin={0}
+          className="emotion-3"
+          data-rac=""
+          id="react-aria-generated-id"
+          role="progressbar"
+        >
+          <div
+            className="bar emotion-4"
+            data-testid="undefined_linear_progress_container"
+          >
+            <div
+              className="fill emotion-5"
+              data-testid="undefined_linear_progress_value"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Progress Indicator Circular ProgressIndicator - Error states 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  -webkit-transition: stroke-dashoffset 0.5s;
+  transition: stroke-dashoffset 0.5s;
+}
+
+.emotion-5 {
+  display: grid;
+  grid-template-areas: 'label value' 'bar bar';
+  grid-template-columns: 1fr auto;
+  gap: 0.25rem;
+  width: 100%;
+}
+
+.emotion-5:not([aria-valuenow]) .fill {
+  width: 50%;
+  border-radius: 6.25rem;
+  -webkit-animation: indeterminate 1.7s infinite ease-in-out;
+  animation: indeterminate 1.7s infinite ease-in-out;
+  will-change: transform;
+}
+
+.emotion-6 {
+  grid-area: bar;
+  background-color: #e7eefe;
+  height: 0.25rem;
+  border-radius: 6.25rem;
+  overflow: hidden;
+  will-change: transform;
+}
+
+.emotion-7 {
+  background: #FF176B;
+  height: 100%;
+  border-radius: 0 6.25rem 6.25rem 0;
+  width: 60%;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          aria-valuemax={100}
+          aria-valuemin={0}
+          aria-valuenow={60}
+          aria-valuetext="60%"
+          className="react-aria-ProgressBar"
+          data-rac=""
+          id="react-aria-generated-id"
+          role="progressbar"
+        >
+          <svg
+            data-testid="undefined_circular_progress_container"
+            fill="none"
+            height="1rem"
+            strokeWidth={1.5}
+            viewBox="0 0 32 32"
+            width="1rem"
+          >
+            <circle
+              className="emotion-3"
+              cx={16}
+              cy={16}
+              data-testid="undefined_circular_progress_value"
+              r={14}
+              stroke="#FF176B"
+              strokeDasharray="91.106186954104 91.106186954104"
+              strokeDashoffset={36.4424747816416}
+              strokeLinecap="round"
+              transform="rotate(-90 16 16)"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      className="emotion-2"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+            "width": "18.75rem",
+          }
+        }
+      >
+        <div
+          aria-valuemax={100}
+          aria-valuemin={0}
+          aria-valuenow={60}
+          aria-valuetext="60%"
+          className="emotion-5"
+          data-rac=""
+          id="react-aria-generated-id"
+          role="progressbar"
+        >
+          <div
+            className="bar emotion-6"
+            data-testid="undefined_linear_progress_container"
+          >
+            <div
+              className="fill emotion-7"
+              data-testid="undefined_linear_progress_value"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Progress Indicator Circular ProgressIndicator - indeterminate 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  -webkit-transition: stroke-dashoffset 0.5s;
+  transition: stroke-dashoffset 0.5s;
+  -webkit-animation: rotating 2s linear infinite;
+  animation: rotating 2s linear infinite;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          aria-valuemax={100}
+          aria-valuemin={0}
+          className="react-aria-ProgressBar"
+          data-rac=""
+          id="react-aria-generated-id"
+          role="progressbar"
+        >
+          <svg
+            data-testid="undefined_circular_progress_container"
+            fill="none"
+            height="1rem"
+            strokeWidth={1.5}
+            viewBox="0 0 32 32"
+            width="1rem"
+          >
+            <circle
+              className="emotion-3"
+              cx={16}
+              cy={16}
+              data-testid="undefined_circular_progress_value"
+              r={14}
+              stroke="#175bf5"
+              strokeDasharray="91.106186954104 91.106186954104"
+              strokeDashoffset={22.776546738526008}
+              strokeLinecap="round"
+              transform="rotate(-90 16 16)"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Progress Indicator Circular ProgressIndicator with percentage 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  -webkit-transition: stroke-dashoffset 0.5s;
+  transition: stroke-dashoffset 0.5s;
+}
+
+.emotion-4 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  color: #1B214F;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "gap": "32px",
+            }
+          }
+        >
+          <div
+            aria-valuemax={100}
+            aria-valuemin={0}
+            className="react-aria-ProgressBar"
+            data-rac=""
+            id="react-aria-generated-id"
+            role="progressbar"
+          >
+            <svg
+              data-testid="undefined_circular_progress_container"
+              fill="none"
+              height="1rem"
+              strokeWidth={1.5}
+              viewBox="0 0 32 32"
+              width="1rem"
+            >
+              <circle
+                className="emotion-3"
+                cx={16}
+                cy={16}
+                data-testid="undefined_circular_progress_value"
+                r={14}
+                stroke="#175bf5"
+                strokeDasharray="91.106186954104 91.106186954104"
+                strokeDashoffset={91.106186954104}
+                strokeLinecap="round"
+                transform="rotate(-90 16 16)"
+              />
+            </svg>
+          </div>
+          <p
+            className="emotion-4"
+          >
+            Loading: 
+            0
+            %
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Progress Indicator Linear Progress Indicator - indeterminate 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  display: grid;
+  grid-template-areas: 'label value' 'bar bar';
+  grid-template-columns: 1fr auto;
+  gap: 0.25rem;
+  width: 100%;
+}
+
+.emotion-3:not([aria-valuenow]) .fill {
+  width: 50%;
+  border-radius: 6.25rem;
+  -webkit-animation: indeterminate 1.7s infinite ease-in-out;
+  animation: indeterminate 1.7s infinite ease-in-out;
+  will-change: transform;
+}
+
+.emotion-4 {
+  grid-area: bar;
+  background-color: #e7eefe;
+  height: 0.25rem;
+  border-radius: 6.25rem;
+  overflow: hidden;
+  will-change: transform;
+}
+
+.emotion-5 {
+  background: #175bf5;
+  height: 100%;
+  border-radius: 6.25rem;
+  width: %;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+            "width": "18.75rem",
+          }
+        }
+      >
+        <div
+          aria-valuemax={100}
+          aria-valuemin={0}
+          className="emotion-3"
+          data-rac=""
+          id="react-aria-generated-id"
+          role="progressbar"
+        >
+          <div
+            className="bar emotion-4"
+            data-testid="undefined_linear_progress_container"
+          >
+            <div
+              className="fill emotion-5"
+              data-testid="undefined_linear_progress_value"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Progress Indicator Linear ProgressIndicator with percentage 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  display: grid;
+  grid-template-areas: 'label value' 'bar bar';
+  grid-template-columns: 1fr auto;
+  gap: 0.25rem;
+  width: 100%;
+}
+
+.emotion-3:not([aria-valuenow]) .fill {
+  width: 50%;
+  border-radius: 6.25rem;
+  -webkit-animation: indeterminate 1.7s infinite ease-in-out;
+  animation: indeterminate 1.7s infinite ease-in-out;
+  will-change: transform;
+}
+
+.emotion-4 {
+  grid-area: bar;
+  background-color: #e7eefe;
+  height: 0.25rem;
+  border-radius: 6.25rem;
+  overflow: hidden;
+  will-change: transform;
+}
+
+.emotion-5 {
+  background: #175bf5;
+  height: 100%;
+  border-radius: 0 6.25rem 6.25rem 0;
+  width: 0%;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+}
+
+.emotion-6 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  color: #1B214F;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+            "width": "18.75rem",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "flexDirection": "column",
+              "gap": "32px",
+            }
+          }
+        >
+          <div
+            aria-valuemax={100}
+            aria-valuemin={0}
+            aria-valuenow={0}
+            aria-valuetext="0%"
+            className="emotion-3"
+            data-rac=""
+            id="react-aria-generated-id"
+            role="progressbar"
+          >
+            <div
+              className="bar emotion-4"
+              data-testid="undefined_linear_progress_container"
+            >
+              <div
+                className="fill emotion-5"
+                data-testid="undefined_linear_progress_value"
+              />
+            </div>
+          </div>
+          <p
+            className="emotion-6"
+          >
+            Loading: 
+            0
+            %
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Progress Indicator Playground 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  display: grid;
+  grid-template-areas: 'label value' 'bar bar';
+  grid-template-columns: 1fr auto;
+  gap: 0.25rem;
+  width: 100%;
+}
+
+.emotion-3:not([aria-valuenow]) .fill {
+  width: 50%;
+  border-radius: 6.25rem;
+  -webkit-animation: indeterminate 1.7s infinite ease-in-out;
+  animation: indeterminate 1.7s infinite ease-in-out;
+  will-change: transform;
+}
+
+.emotion-4 {
+  grid-area: bar;
+  background-color: #e7eefe;
+  height: 0.25rem;
+  border-radius: 6.25rem;
+  overflow: hidden;
+  will-change: transform;
+}
+
+.emotion-5 {
+  background: #175bf5;
+  height: 100%;
+  border-radius: 6.25rem;
+  width: %;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+            "width": "18.75rem",
+          }
+        }
+      >
+        <div
+          aria-valuemax={100}
+          aria-valuemin={0}
+          className="emotion-3"
+          data-rac=""
+          id="react-aria-generated-id"
+          role="progressbar"
+        >
+          <div
+            className="bar emotion-4"
+            data-testid="undefined_linear_progress_container"
+          >
+            <div
+              className="fill emotion-5"
+              data-testid="undefined_linear_progress_value"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+            "width": "18.75rem",
+          }
+        }
+      >
+        <div
+          aria-valuemax={100}
+          aria-valuemin={0}
+          className="emotion-3"
+          data-rac=""
+          id="react-aria-generated-id"
+          role="progressbar"
+        >
+          <div
+            className="bar emotion-4"
+            data-testid="undefined_linear_progress_container"
+          >
+            <div
+              className="fill emotion-5"
+              data-testid="undefined_linear_progress_value"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
