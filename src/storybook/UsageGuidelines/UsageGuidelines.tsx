@@ -1,9 +1,11 @@
 import React, { useMemo } from 'react';
 
 import { iconStyle, WrapperStyle } from './UsageGuidelines.style';
-import Icon from '../../components/Icon';
 
-export const UsageGuidelines: React.FCC<{ guidelines: string[] }> = ({ guidelines }) => {
+export const UsageGuidelines: React.FCC<{ guidelines: string[]; policies?: string[] }> = ({
+  guidelines,
+  policies,
+}) => {
   const guidelinesElements = useMemo(
     () =>
       guidelines.map((guideline, index) => (
@@ -16,7 +18,24 @@ export const UsageGuidelines: React.FCC<{ guidelines: string[] }> = ({ guideline
     [guidelines]
   );
 
-  return <article>{guidelinesElements}</article>;
+  const policiesElements = useMemo(
+    () =>
+      policies?.map((policy, index) => (
+        // eslint-disable-next-line react/no-array-index-key
+        <span css={WrapperStyle} key={index}>
+          <span css={iconStyle}>❌</span>
+          <span>{policy}</span>
+        </span>
+      )),
+    [policies]
+  );
+
+  return (
+    <article>
+      {guidelinesElements}
+      {policiesElements}
+    </article>
+  );
 };
 
 export default UsageGuidelines;
