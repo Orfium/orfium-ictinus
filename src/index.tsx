@@ -63,7 +63,7 @@ export { default as TopNavBar } from './components/TopAppBar';
 export { default as useTheme } from './hooks/useTheme';
 export { default as useBreakpoints } from './hooks/useBreakpoints';
 export { default as useEscape } from './hooks/useEscape';
-export { default as useTypeColorToColorMatch } from './hooks/useTypeColorToColorMatch';
+export { useTypeColorToColorMatch } from './hooks/useTypeColorToColorMatch';
 export { default as Filter } from './components/Filter';
 export { default as TruncatedContent } from './components/TruncatedContent';
 
