@@ -1,4 +1,4 @@
-import { css } from '@emotion/react';
+import { CSSObject, css } from '@emotion/react';
 import { rem } from 'theme/utils';
 
 import { Theme } from '../../../theme';
@@ -7,10 +7,11 @@ export type MenuPositionAllowed = 'left' | 'right';
 
 export type MenuOptions = {
   menuPosition?: MenuPositionAllowed;
+  sx?: CSSObject;
 };
 
 export const optionsStyle =
-  ({ menuPosition }: MenuOptions) =>
+  ({ menuPosition, sx }: MenuOptions) =>
   (theme: Theme) =>
     css`
       max-height: ${rem(253)};
@@ -26,4 +27,6 @@ export const optionsStyle =
       box-shadow: ${theme.globals.elevation['02']};
       border-radius: ${rem(4)};
       z-index: 1;
+
+      ${sx}
     `;

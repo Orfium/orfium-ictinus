@@ -5,7 +5,7 @@ import Stack from '../storyUtils/Stack';
 import LinkTo from '@storybook/addon-links/react';
 
 import { FIGMA_URL } from '../../utils/common';
-import LoadingButtonShowcase from '../storyUtils/LoadingButtonShowcase';
+import { LoadingButtonShowcase, ButtonShowcase } from '../storyUtils/ButtonShowcases';
 import Overview from '../../storybook/Overview';
 import { getIconSelectorKnob } from '../../utils/stories';
 
@@ -94,12 +94,13 @@ import { getIconSelectorKnob } from '../../utils/stories';
 
 <SubsectionHeader title="Variants" />
 
-### Button types
+### Button Types and Sizes
 
-Button types based on the system approved literals for `primary, secondary, tertiary, danger, inverted, invertedAlt`
+Button Types based on the system approved literals for `primary`, `secondary`, `tertiary` and `danger`.<br/>
+There are 2 Button Sizes: `normal` and `compact`.
 
 <Preview>
-  <Story name="Button types">
+  <Story name="Button Types and Sizes">
     <Stack>
       <Button type="primary">Primary</Button>
       <Button type="secondary">Secondary</Button>
@@ -120,15 +121,44 @@ Button types based on the system approved literals for `primary, secondary, tert
         Danger
       </Button>
     </Stack>
+    <Stack>
+      <Button size="compact" type="primary">
+        Primary
+      </Button>
+      <Button size="compact" type="secondary">
+        Secondary
+      </Button>
+      <Button size="compact" type="tertiary">
+        Tertiary
+      </Button>
+      <Button size="compact" type="danger">
+        Danger
+      </Button>
+    </Stack>
+    <Stack>
+      <Button size="compact" type="primary" isDisabled>
+        Primary
+      </Button>
+      <Button size="compact" type="secondary" isDisabled>
+        Secondary
+      </Button>
+      <Button size="compact" type="tertiary" isDisabled>
+        Tertiary
+      </Button>
+      <Button size="compact" type="danger" isDisabled>
+        Danger
+      </Button>
+    </Stack>
   </Story>
 </Preview>
 
-### Inverted Button types
+### Inverted Button Types and Sizes
 
-Button types based on the system approved literals for `primary, secondary, tertiary, danger, inverted, invertedAlt`
+Inverted Button Types based on the system approved literals for `inverted` and `invertedAlt`<br/>
+There are 2 Inverted Button Sizes: `normal` and `compact`.
 
 <Preview isInverted>
-  <Story name="Inverted Button types">
+  <Story name="Inverted Button Types and Sizes">
     <Stack>
       <Button type="inverted">Inverted</Button>
       <Button type="invertedAlt">InvertedAlt</Button>
@@ -138,6 +168,22 @@ Button types based on the system approved literals for `primary, secondary, tert
         Inverted
       </Button>
       <Button type="invertedAlt" isDisabled>
+        InvertedAlt
+      </Button>
+    </Stack>
+    <Stack>
+      <Button size="compact" type="inverted">
+        Inverted
+      </Button>
+      <Button size="compact" type="invertedAlt">
+        InvertedAlt
+      </Button>
+    </Stack>
+    <Stack>
+      <Button size="compact" type="inverted" isDisabled>
+        Inverted
+      </Button>
+      <Button size="compact" type="invertedAlt" isDisabled>
         InvertedAlt
       </Button>
     </Stack>
@@ -158,11 +204,13 @@ Button Loading variations based on the `isLoading` boolean prop.
 
 Buttons with icons. 3 different variations based on the icon's placement.
 
+<Tip>Compact variant doesn't support icons</Tip>
+
 <Preview>
   <Story name="Buttons with icons" parameters={{ decorators: [withKnobs] }}>
     <Stack>
       <Button
-        iconLeftName={getIconSelectorKnob('iconLeftName')}
+        iconLeftName={getIconSelectorKnob('iconLeftName', 'edit')}
         type={select(
           'type',
           ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
@@ -172,8 +220,8 @@ Buttons with icons. 3 different variations based on the icon's placement.
         Only left Icon
       </Button>
       <Button
-        iconLeftName={getIconSelectorKnob('iconLeftName')}
-        iconRightName={getIconSelectorKnob('iconRightName')}
+        iconLeftName={getIconSelectorKnob('iconLeftName', 'edit')}
+        iconRightName={getIconSelectorKnob('iconRightName', 'download')}
         type={select(
           'type',
           ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
@@ -183,7 +231,7 @@ Buttons with icons. 3 different variations based on the icon's placement.
         Both Icons
       </Button>
       <Button
-        iconRightName={getIconSelectorKnob('iconRightName')}
+        iconRightName={getIconSelectorKnob('iconRightName', 'download')}
         type={select(
           'type',
           ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
@@ -201,6 +249,8 @@ Buttons with icons. 3 different variations based on the icon's placement.
 An avatar can be placed instead of a left icon. Only for `primary, secondary, tertiary` buttons.
 Can be only combined with a right icon, not with a left icon at the same time.
 
+<Tip>Compact variant doesn't support Avatars</Tip>
+
 <Preview>
   <Story name="Buttons with Avatars" parameters={{ decorators: [withKnobs] }}>
     <Stack>
@@ -217,29 +267,6 @@ Can be only combined with a right icon, not with a left icon at the same time.
         Img Avatar
       </Button>
       <Button avatar={{}} type={select('type', ['primary', 'secondary', 'tertiary'], 'primary')}>
-        Empty Avatar
-      </Button>
-    </Stack>
-    <Stack>
-      <Button
-        avatar={{ label: 'PR' }}
-        iconRightName={getIconSelectorKnob('iconRightName')}
-        type={select('type', ['primary', 'secondary', 'tertiary'], 'primary')}
-      >
-        Text Avatar
-      </Button>
-      <Button
-        avatar={{ src: 'https://mui.com/static/images/avatar/1.jpg' }}
-        iconRightName={getIconSelectorKnob('iconRightName')}
-        type={select('type', ['primary', 'secondary', 'tertiary'], 'primary')}
-      >
-        Img Avatar
-      </Button>
-      <Button
-        avatar={{}}
-        iconRightName={getIconSelectorKnob('iconRightName')}
-        type={select('type', ['primary', 'secondary', 'tertiary'], 'primary')}
-      >
         Empty Avatar
       </Button>
     </Stack>
@@ -263,13 +290,12 @@ Can be only combined with a right icon, not with a left icon at the same time.
       </Button>
       <Button
         isBlock
-        iconLeftName={getIconSelectorKnob('iconLeftName')}
-        iconRightName={getIconSelectorKnob('iconRightName')}
         type={select(
           'type',
           ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
           'primary'
         )}
+        size="compact"
       >
         Hello world
       </Button>
@@ -286,12 +312,36 @@ Can be only combined with a right icon, not with a left icon at the same time.
       </Button>
       <Button
         isBlock
+        isLoading
+        type={select(
+          'type',
+          ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
+          'primary'
+        )}
+        size="compact"
+      >
+        Hello world
+      </Button>
+      <Button
+        isBlock
         isDisabled
         type={select(
           'type',
           ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
           'primary'
         )}
+      >
+        Hello world
+      </Button>
+      <Button
+        isBlock
+        isDisabled
+        type={select(
+          'type',
+          ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
+          'primary'
+        )}
+        size="compact"
       >
         Hello world
       </Button>
@@ -304,13 +354,18 @@ Can be only combined with a right icon, not with a left icon at the same time.
 <Preview>
   <Story name="Playground" parameters={{ decorators: [withKnobs] }}>
     <Stack isVertical>
-      <Button
-        isBlock
+      <ButtonShowcase
+        buttonLabel={text('Button Label', 'Label')}
         type={select(
           'type',
           ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
           'primary'
         )}
+        hasAvatar={boolean('hasAvatar', false)}
+        avatar={{
+          label: text('Avatar Label'),
+        }}
+        size={select('size', ['compact', 'normal'], 'normal')}
         iconLeftName={getIconSelectorKnob('iconLeftName')}
         iconRightName={getIconSelectorKnob('iconRightName')}
         isLoading={boolean('isLoading', false)}
@@ -318,7 +373,7 @@ Can be only combined with a right icon, not with a left icon at the same time.
         isBlock={boolean('isBlock', false)}
       >
         Hello world
-      </Button>
+      </ButtonShowcase>
     </Stack>
   </Story>
 </Preview>
