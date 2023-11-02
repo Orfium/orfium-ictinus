@@ -1,10 +1,7 @@
 import { select, withKnobs } from '@storybook/addon-knobs';
 import Avatar from './Avatar';
-import AvatarStack from './AvatarStack';
 import Stack from '../storyUtils/Stack';
-import { BASE_SHADE } from '../../theme/palette';
 import { FIGMA_URL } from '../../utils/common';
-import SectionHeader from '../../storybook/SectionHeader';
 
 export default {
   title: 'Design System/Avatar/Avatar',
