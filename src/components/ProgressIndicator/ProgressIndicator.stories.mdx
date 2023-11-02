@@ -7,9 +7,10 @@ import Stack from '../storyUtils/Stack';
 import { FIGMA_URL, Function } from '../../utils/common';
 import { useState, useEffect } from 'react';
 import SectionHeader from '../../storybook/SectionHeader';
+import Overview from '../../storybook/Overview';
 
 <Meta
-  title="Design System/Progress Indicator"
+  title="Updated Components/Progress Indicator"
   component={ProgressIndicator}
   parameters={{
     design: [
@@ -31,7 +32,18 @@ import SectionHeader from '../../storybook/SectionHeader';
 
 ## Overview
 
-Progress indicators communicate to the user the current progress of a given task.
+<Story
+  name="Overview"
+  parameters={{
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+>
+  <Overview>
+    Progress indicators communicate to the user the current progress of a given task.
+  </Overview>
+</Story>
 
 ## Props
 
@@ -53,7 +65,7 @@ Progress indicators communicate to the user the current progress of a given task
   ]}
 />
 
-## Variants
+<SubsectionHeader title="Variants" />
 
 ### Linear ProgressIndicator with percentage
 

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Design System/TextField Disabled TextField 1`] = `
+exports[`Storyshots Updated Components/Fields/TextField Disabled TextField 1`] = `
 .emotion-0 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -163,6 +163,7 @@ exports[`Storyshots Design System/TextField Disabled TextField 1`] = `
 }
 
 .emotion-6:focus-within+label {
+  font-weight: 700!important;
   color: #1552DD;
 }
 
@@ -268,14 +269,14 @@ exports[`Storyshots Design System/TextField Disabled TextField 1`] = `
                   data-testid="input"
                   disabled={true}
                   id="textfield__00"
-                  placeholder="Label"
+                  placeholder="TextField"
                   required={false}
                 />
                 <label
                   className="emotion-7"
                   htmlFor="textfield__00"
                 >
-                  Label
+                  TextField
                    
                 </label>
               </div>
@@ -298,7 +299,7 @@ exports[`Storyshots Design System/TextField Disabled TextField 1`] = `
 </div>
 `;
 
-exports[`Storyshots Design System/TextField MultiTextField 1`] = `
+exports[`Storyshots Updated Components/Fields/TextField MultiTextField 1`] = `
 .emotion-0 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -475,6 +476,7 @@ exports[`Storyshots Design System/TextField MultiTextField 1`] = `
 }
 
 .emotion-5:focus-within+label {
+  font-weight: 700!important;
   color: #1552DD;
 }
 
@@ -603,7 +605,56 @@ exports[`Storyshots Design System/TextField MultiTextField 1`] = `
 </div>
 `;
 
-exports[`Storyshots Design System/TextField Playground 1`] = `
+exports[`Storyshots Updated Components/Fields/TextField Overview 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  margin: -16px;
+}
+
+.emotion-3 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.375rem;
+  font-size: 1rem;
+  letter-spacing: 0.015625rem;
+  color: #1B214F;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <p
+        className="emotion-3"
+        id="a-universal-textfield-component-which-provides-a-wide-range-of-features-such-as-statuses,-inline-suffixes-such-as-icons-and-components,-and-a-multi-input-functionality-with-the-help-of-the-chip-component."
+      >
+        A universal TextField component which provides a wide range of features such as statuses, inline suffixes such as icons and components, and a multi-input functionality with the help of the Chip component.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Updated Components/Fields/TextField Playground 1`] = `
 .emotion-0 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -771,6 +822,7 @@ exports[`Storyshots Design System/TextField Playground 1`] = `
 }
 
 .emotion-6:focus-within+label {
+  font-weight: 700!important;
   color: #1552DD;
 }
 
@@ -892,7 +944,7 @@ exports[`Storyshots Design System/TextField Playground 1`] = `
                     className="emotion-7"
                     htmlFor="textfield__00"
                   >
-                    Label
+                    TextField
                      
                   </label>
                 </div>
@@ -916,7 +968,7 @@ exports[`Storyshots Design System/TextField Playground 1`] = `
 </div>
 `;
 
-exports[`Storyshots Design System/TextField TextField sizes 1`] = `
+exports[`Storyshots Updated Components/Fields/TextField TextField sizes 1`] = `
 .emotion-0 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -1084,6 +1136,7 @@ exports[`Storyshots Design System/TextField TextField sizes 1`] = `
 }
 
 .emotion-6:focus-within+label {
+  font-weight: 700!important;
   color: #1552DD;
 }
 
@@ -1224,6 +1277,7 @@ exports[`Storyshots Design System/TextField TextField sizes 1`] = `
 }
 
 .emotion-12:focus-within+label {
+  font-weight: 700!important;
   color: #1552DD;
 }
 
@@ -1364,382 +1418,7 @@ exports[`Storyshots Design System/TextField TextField sizes 1`] = `
 </div>
 `;
 
-exports[`Storyshots Design System/TextField TextField with Icons 1`] = `
-.emotion-0 {
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  position: relative;
-  padding: 0.25rem;
-}
-
-.emotion-1 {
-  margin: 1rem;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #b9cdfc;
-  border-radius: 0.25rem;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  opacity: 1;
-  cursor: text;
-  height: 3.25rem;
-  min-width: 8.75rem;
-  background-color: #ffffff;
-}
-
-.emotion-3:hover {
-  background-color: #F5F5FF;
-}
-
-.emotion-3:focus-within {
-  box-shadow: 0 0 0 0.125rem #175bf5;
-  background-color: #F5F5FF;
-}
-
-.emotion-4 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  vertical-align: top;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
-  padding: 0 0 0 0.75rem;
-}
-
-.emotion-4>div {
-  position: relative;
-}
-
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-6 {
-  font-family: Roboto;
-  font-weight: 400;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-  background: transparent;
-  border: none;
-  color: #1B214F;
-  padding: 0;
-  display: block;
-  position: relative;
-  top: 0.4375rem;
-  z-index: 1;
-  text-overflow: ellipsis;
-  width: 0;
-  min-width: 100%;
-}
-
-.emotion-6::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.emotion-6::-moz-placeholder {
-  color: transparent;
-}
-
-.emotion-6:-ms-input-placeholder {
-  color: transparent;
-}
-
-.emotion-6::placeholder {
-  color: transparent;
-}
-
-.emotion-6:focus {
-  outline: none;
-}
-
-.emotion-6:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.emotion-6:focus::-moz-placeholder {
-  color: transparent;
-}
-
-.emotion-6:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-.emotion-6:focus::placeholder {
-  color: transparent;
-}
-
-.emotion-6:not(:focus):placeholder-shown+label {
-  font-weight: normal;
-}
-
-.emotion-6:focus-within+label,
-.emotion-6:not(:placeholder-shown)+label {
-  font-weight: 700!important;
-  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
-  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
-  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
-  transform: translate(0.1875rem, -35%) scale(0.8);
-}
-
-.emotion-6:focus-within+label {
-  color: #1552DD;
-}
-
-.emotion-6:disabled {
-  cursor: not-allowed;
-}
-
-.emotion-7 {
-  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
-  transition: transform 0.25s,opacity 0.25s ease-in-out;
-  transform-origin: 0 0;
-  width: 100%;
-  position: absolute;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-transform: translate(0.1875rem, 0);
-  -moz-transform: translate(0.1875rem, 0);
-  -ms-transform: translate(0.1875rem, 0);
-  transform: translate(0.1875rem, 0);
-  color: #686BB3;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  top: 0;
-  bottom: 0;
-  right: 0.1875rem;
-  margin: auto;
-  white-space: nowrap;
-  font-family: Roboto;
-  font-weight: 400;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-}
-
-.emotion-8 {
-  min-width: 2.75rem;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  cursor: unset;
-}
-
-.emotion-15 {
-  padding: 0.125rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-16 {
-  fill: #5f6c85;
-  width: 1rem;
-  height: 1rem;
-}
-
-.emotion-16 path {
-  fill: #5f6c85;
-}
-
-<div
-  className="emotion-0"
->
-  <div
-    className="emotion-1"
-  >
-    <div
-      className="emotion-2"
-    >
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          onClick={[Function]}
-        >
-          <div
-            className="emotion-3"
-          >
-            <div
-              className="emotion-4"
-            >
-              <div
-                className="emotion-5"
-              >
-                <input
-                  aria-invalid={false}
-                  className="emotion-6"
-                  data-testid="input"
-                  disabled={false}
-                  id="textfield__00"
-                  placeholder="Label"
-                  required={false}
-                />
-                <label
-                  className="emotion-7"
-                  htmlFor="textfield__00"
-                >
-                  Label
-                   
-                </label>
-              </div>
-              <div
-                aria-hidden={false}
-                className="emotion-8"
-              >
-                <img
-                  height="16"
-                  src="https://brandmark.io/logo-rank/random/pepsi.png"
-                  style={
-                    Object {
-                      "background": "red",
-                    }
-                  }
-                  width="16"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          onClick={[Function]}
-        >
-          <div
-            className="emotion-3"
-          >
-            <div
-              className="emotion-4"
-            >
-              <div
-                className="emotion-5"
-              >
-                <input
-                  aria-invalid={false}
-                  className="emotion-6"
-                  data-testid="input"
-                  disabled={false}
-                  id="textfield__00"
-                  placeholder="Label"
-                  required={false}
-                />
-                <label
-                  className="emotion-7"
-                  htmlFor="textfield__00"
-                >
-                  Label
-                   
-                </label>
-              </div>
-              <div
-                aria-hidden={false}
-                className="emotion-8"
-              >
-                <span
-                  className="emotion-15"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="emotion-16"
-                  />
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Design System/TextField TextField with Label and Placeholder 1`] = `
+exports[`Storyshots Updated Components/Fields/TextField TextField statuses 1`] = `
 .emotion-0 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -1907,386 +1586,7 @@ exports[`Storyshots Design System/TextField TextField with Label and Placeholder
 }
 
 .emotion-6:focus-within+label {
-  color: #1552DD;
-}
-
-.emotion-6:disabled {
-  cursor: not-allowed;
-}
-
-.emotion-7 {
-  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
-  transition: transform 0.25s,opacity 0.25s ease-in-out;
-  transform-origin: 0 0;
-  width: 100%;
-  position: absolute;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-transform: translate(0.1875rem, 0);
-  -moz-transform: translate(0.1875rem, 0);
-  -ms-transform: translate(0.1875rem, 0);
-  transform: translate(0.1875rem, 0);
-  color: #686BB3;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  top: 0;
-  bottom: 0;
-  right: 0.1875rem;
-  margin: auto;
-  white-space: nowrap;
-  font-family: Roboto;
-  font-weight: 400;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-}
-
-.emotion-11 {
-  font-family: Roboto;
-  font-weight: 400;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-  background: transparent;
-  border: none;
-  color: #1B214F;
-  padding: 0;
-  display: block;
-  position: relative;
-  top: 0.4375rem;
-  z-index: 1;
-  text-overflow: ellipsis;
-  width: 0;
-  min-width: 100%;
-}
-
-.emotion-11::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.emotion-11::-moz-placeholder {
-  color: transparent;
-}
-
-.emotion-11:-ms-input-placeholder {
-  color: transparent;
-}
-
-.emotion-11::placeholder {
-  color: transparent;
-}
-
-.emotion-11:focus {
-  outline: none;
-}
-
-.emotion-11:focus::-webkit-input-placeholder {
-  color: #686BB3;
-}
-
-.emotion-11:focus::-moz-placeholder {
-  color: #686BB3;
-}
-
-.emotion-11:focus:-ms-input-placeholder {
-  color: #686BB3;
-}
-
-.emotion-11:focus::placeholder {
-  color: #686BB3;
-}
-
-.emotion-11:not(:focus):placeholder-shown+label {
-  font-weight: normal;
-}
-
-.emotion-11:focus-within+label,
-.emotion-11:not(:placeholder-shown)+label {
   font-weight: 700!important;
-  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
-  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
-  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
-  transform: translate(0.1875rem, -35%) scale(0.8);
-}
-
-.emotion-11:focus-within+label {
-  color: #1552DD;
-}
-
-.emotion-11:disabled {
-  cursor: not-allowed;
-}
-
-<div
-  className="emotion-0"
->
-  <div
-    className="emotion-1"
-  >
-    <div
-      className="emotion-2"
-    >
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          onClick={[Function]}
-        >
-          <div
-            className="emotion-3"
-          >
-            <div
-              className="emotion-4"
-            >
-              <div
-                className="emotion-5"
-              >
-                <input
-                  aria-invalid={false}
-                  className="emotion-6"
-                  data-testid="input"
-                  disabled={false}
-                  id="textfield__00"
-                  placeholder="Label"
-                  required={false}
-                />
-                <label
-                  className="emotion-7"
-                  htmlFor="textfield__00"
-                >
-                  Label
-                   
-                </label>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          onClick={[Function]}
-        >
-          <div
-            className="emotion-3"
-          >
-            <div
-              className="emotion-4"
-            >
-              <div
-                className="emotion-5"
-              >
-                <input
-                  aria-invalid={false}
-                  className="emotion-11"
-                  data-testid="input"
-                  disabled={false}
-                  id="textfield__00"
-                  placeholder="Placeholder "
-                  required={false}
-                />
-                <label
-                  className="emotion-7"
-                  htmlFor="textfield__00"
-                >
-                  Label
-                   
-                </label>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Design System/TextField TextField with different Statuses 1`] = `
-.emotion-0 {
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  position: relative;
-  padding: 0.25rem;
-}
-
-.emotion-1 {
-  margin: 1rem;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #b9cdfc;
-  border-radius: 0.25rem;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  opacity: 1;
-  cursor: text;
-  height: 3.25rem;
-  min-width: 8.75rem;
-  background-color: #ffffff;
-}
-
-.emotion-3:hover {
-  background-color: #F5F5FF;
-}
-
-.emotion-3:focus-within {
-  box-shadow: 0 0 0 0.125rem #175bf5;
-  background-color: #F5F5FF;
-}
-
-.emotion-4 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  vertical-align: top;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
-  padding: 0 0 0 0.75rem;
-  padding-right: 0.75rem;
-}
-
-.emotion-4>div {
-  position: relative;
-}
-
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-6 {
-  font-family: Roboto;
-  font-weight: 400;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-  background: transparent;
-  border: none;
-  color: #1B214F;
-  padding: 0;
-  display: block;
-  position: relative;
-  top: 0.4375rem;
-  z-index: 1;
-  text-overflow: ellipsis;
-  width: 0;
-  min-width: 100%;
-}
-
-.emotion-6::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.emotion-6::-moz-placeholder {
-  color: transparent;
-}
-
-.emotion-6:-ms-input-placeholder {
-  color: transparent;
-}
-
-.emotion-6::placeholder {
-  color: transparent;
-}
-
-.emotion-6:focus {
-  outline: none;
-}
-
-.emotion-6:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.emotion-6:focus::-moz-placeholder {
-  color: transparent;
-}
-
-.emotion-6:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-.emotion-6:focus::placeholder {
-  color: transparent;
-}
-
-.emotion-6:not(:focus):placeholder-shown+label {
-  font-weight: normal;
-}
-
-.emotion-6:focus-within+label,
-.emotion-6:not(:placeholder-shown)+label {
-  font-weight: 700!important;
-  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
-  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
-  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
-  transform: translate(0.1875rem, -35%) scale(0.8);
-}
-
-.emotion-6:focus-within+label {
   color: #1552DD;
 }
 
@@ -2607,6 +1907,7 @@ exports[`Storyshots Design System/TextField TextField with different Statuses 1`
 }
 
 .emotion-20:focus-within+label {
+  font-weight: 700!important;
   color: #1552DD;
 }
 
@@ -2823,6 +2124,762 @@ exports[`Storyshots Design System/TextField TextField with different Statuses 1`
             >
               Normal Message
             </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Updated Components/Fields/TextField TextField with icon 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: 3.25rem;
+  min-width: 8.75rem;
+  background-color: #ffffff;
+}
+
+.emotion-3:hover {
+  background-color: #F5F5FF;
+}
+
+.emotion-3:focus-within {
+  box-shadow: 0 0 0 0.125rem #175bf5;
+  background-color: #F5F5FF;
+}
+
+.emotion-4 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0 0 0 0.75rem;
+}
+
+.emotion-4>div {
+  position: relative;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-6 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #1B214F;
+  padding: 0;
+  display: block;
+  position: relative;
+  top: 0.4375rem;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-6::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-6::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-6:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-6::placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus {
+  outline: none;
+}
+
+.emotion-6:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-6:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-6:focus-within+label,
+.emotion-6:not(:placeholder-shown)+label {
+  font-weight: 700!important;
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+}
+
+.emotion-6:focus-within+label {
+  font-weight: 700!important;
+  color: #1552DD;
+}
+
+.emotion-6:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-7 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, 0);
+  -moz-transform: translate(0.1875rem, 0);
+  -ms-transform: translate(0.1875rem, 0);
+  transform: translate(0.1875rem, 0);
+  color: #686BB3;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0.1875rem;
+  margin: auto;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-8 {
+  min-width: 2.75rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  cursor: unset;
+}
+
+.emotion-9 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-10 {
+  fill: #5f6c85;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-10 path {
+  fill: #5f6c85;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          onClick={[Function]}
+        >
+          <div
+            className="emotion-3"
+          >
+            <div
+              className="emotion-4"
+            >
+              <div
+                className="emotion-5"
+              >
+                <input
+                  aria-invalid={false}
+                  className="emotion-6"
+                  data-testid="input"
+                  disabled={false}
+                  id="textfield__00"
+                  placeholder="TextField"
+                  required={false}
+                />
+                <label
+                  className="emotion-7"
+                  htmlFor="textfield__00"
+                >
+                  TextField
+                   
+                </label>
+              </div>
+              <div
+                aria-hidden={false}
+                className="emotion-8"
+              >
+                <span
+                  className="emotion-9"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="emotion-10"
+                  />
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          onClick={[Function]}
+        >
+          <div
+            className="emotion-3"
+          >
+            <div
+              className="emotion-4"
+            >
+              <div
+                className="emotion-5"
+              >
+                <input
+                  aria-invalid={false}
+                  className="emotion-6"
+                  data-testid="input"
+                  disabled={false}
+                  id="textfield__00"
+                  placeholder="TextField"
+                  required={false}
+                />
+                <label
+                  className="emotion-7"
+                  htmlFor="textfield__00"
+                >
+                  TextField
+                   
+                </label>
+              </div>
+              <div
+                aria-hidden={false}
+                className="emotion-8"
+              >
+                <span
+                  className="emotion-9"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="emotion-10"
+                  />
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Updated Components/Fields/TextField TextField with placeholder 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: 3.25rem;
+  min-width: 8.75rem;
+  background-color: #ffffff;
+}
+
+.emotion-3:hover {
+  background-color: #F5F5FF;
+}
+
+.emotion-3:focus-within {
+  box-shadow: 0 0 0 0.125rem #175bf5;
+  background-color: #F5F5FF;
+}
+
+.emotion-4 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0 0 0 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.emotion-4>div {
+  position: relative;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-6 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #1B214F;
+  padding: 0;
+  display: block;
+  position: relative;
+  top: 0.4375rem;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-6::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-6::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-6:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-6::placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus {
+  outline: none;
+}
+
+.emotion-6:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-6:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-6:focus-within+label,
+.emotion-6:not(:placeholder-shown)+label {
+  font-weight: 700!important;
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+}
+
+.emotion-6:focus-within+label {
+  font-weight: 700!important;
+  color: #1552DD;
+}
+
+.emotion-6:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-7 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, 0);
+  -moz-transform: translate(0.1875rem, 0);
+  -ms-transform: translate(0.1875rem, 0);
+  transform: translate(0.1875rem, 0);
+  color: #686BB3;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0.1875rem;
+  margin: auto;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-11 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #1B214F;
+  padding: 0;
+  display: block;
+  position: relative;
+  top: 0.4375rem;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-11::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-11::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-11:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-11::placeholder {
+  color: transparent;
+}
+
+.emotion-11:focus {
+  outline: none;
+}
+
+.emotion-11:focus::-webkit-input-placeholder {
+  color: #686BB3;
+}
+
+.emotion-11:focus::-moz-placeholder {
+  color: #686BB3;
+}
+
+.emotion-11:focus:-ms-input-placeholder {
+  color: #686BB3;
+}
+
+.emotion-11:focus::placeholder {
+  color: #686BB3;
+}
+
+.emotion-11:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-11:focus-within+label,
+.emotion-11:not(:placeholder-shown)+label {
+  font-weight: 700!important;
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+}
+
+.emotion-11:focus-within+label {
+  font-weight: 700!important;
+  color: #1552DD;
+}
+
+.emotion-11:disabled {
+  cursor: not-allowed;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          onClick={[Function]}
+        >
+          <div
+            className="emotion-3"
+          >
+            <div
+              className="emotion-4"
+            >
+              <div
+                className="emotion-5"
+              >
+                <input
+                  aria-invalid={false}
+                  className="emotion-6"
+                  data-testid="input"
+                  disabled={false}
+                  id="textfield__00"
+                  placeholder="TextField"
+                  required={false}
+                />
+                <label
+                  className="emotion-7"
+                  htmlFor="textfield__00"
+                >
+                  TextField
+                   
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          onClick={[Function]}
+        >
+          <div
+            className="emotion-3"
+          >
+            <div
+              className="emotion-4"
+            >
+              <div
+                className="emotion-5"
+              >
+                <input
+                  aria-invalid={false}
+                  className="emotion-11"
+                  data-testid="input"
+                  disabled={false}
+                  id="textfield__00"
+                  placeholder="Placeholder "
+                  required={false}
+                />
+                <label
+                  className="emotion-7"
+                  htmlFor="textfield__00"
+                >
+                  TextField
+                   
+                </label>
+              </div>
+            </div>
           </div>
         </div>
       </div>

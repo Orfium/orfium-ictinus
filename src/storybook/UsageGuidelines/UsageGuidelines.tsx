@@ -11,7 +11,7 @@ export const UsageGuidelines: React.FCC<{ guidelines: string[]; policies?: strin
       guidelines.map((guideline, index) => (
         // eslint-disable-next-line react/no-array-index-key
         <span css={WrapperStyle} key={index}>
-          <span css={iconStyle}>➡️</span>
+          <span css={iconStyle}>✅</span>
           <span>{guideline}</span>
         </span>
       )),
