@@ -1,22 +1,27 @@
+import useTheme from 'hooks/useTheme';
 import React from 'react';
 
-import { breadcrumbItemStyles } from './BreadcrumbItem.style';
-import Separator from 'components/Breadcrumb/Separator/Separator';
+import { breadcrumbItemStyles, breadcrumbListStyles } from './BreadcrumbItem.style';
+import { getBreadcrumbTokens } from '../Breadcrumb.tokens';
+import Icon from 'components/Icon';
 
 export type BreadcrumbItemProps = {
   /** Defines the child element that will be rendered inside the list element */
   childComponent: React.ReactNode;
   /** Defines if the current item of the breadcrumb is the last one */
   isLastItem?: boolean;
-  /** Defines the label of the current level of breadcrumb */
 };
 
-const BreadcrumbItem: React.FCC<BreadcrumbItemProps> = ({ childComponent, isLastItem = false }) => {
+const BreadcrumbItem: React.FC<BreadcrumbItemProps> = ({ childComponent, isLastItem = false }) => {
+  const theme = useTheme();
+  const tokens = getBreadcrumbTokens(theme);
+
   return (
-    <li>
-      <div css={breadcrumbItemStyles({ isActive: isLastItem })}>
+    <li css={breadcrumbListStyles()}>
+      <div css={breadcrumbItemStyles({ isLastItem })}>
         {childComponent}
-        <Separator isLastItem={isLastItem} />
+        {/** @TODO Revisit icon size once Icon component is refactored for v5 */}
+        {!isLastItem && <Icon name={'triangleRight'} color={tokens('defaultColor')} size={12} />}
       </div>
     </li>
   );
