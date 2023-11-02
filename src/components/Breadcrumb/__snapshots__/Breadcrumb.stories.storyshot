@@ -813,3 +813,302 @@ exports[`Storyshots Updated Components/Breadcrumb Playground 1`] = `
   </div>
 </div>
 `;
+
+exports[`Storyshots Updated Components/Breadcrumb Third-party Routing Library 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  color: #1552DD;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0.25rem solid rgba(84,94,255,0);
+  opacity: 1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  pointer-events: default;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-6:hover {
+  color: #1B214F;
+}
+
+.emotion-6:hover path {
+  fill: #1B214F;
+}
+
+.emotion-6:visited {
+  color: #6c28cc;
+}
+
+.emotion-6:visited path {
+  fill: #6c28cc;
+}
+
+.emotion-6:focus-visible {
+  border: 0.25rem solid #9347ff;
+}
+
+.emotion-7 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-8 {
+  fill: #686BB3;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-8 path {
+  fill: #686BB3;
+}
+
+.emotion-25 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #686BB3;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <ol
+          aria-label="Breadcrumb"
+          className="emotion-3"
+          data-testid="_breadcrumb"
+        >
+          <li
+            className="emotion-4"
+          >
+            <div
+              className="emotion-5"
+            >
+              <a
+                className="emotion-6"
+                data-testid="_breadcrumb_link_Level 1_link"
+                href="/first-level"
+                onClick={[Function]}
+              >
+                <span>
+                  Level 1
+                </span>
+              </a>
+              <span
+                className="emotion-7"
+                onClick={[Function]}
+              >
+                <span
+                  className="emotion-8"
+                />
+              </span>
+            </div>
+          </li>
+          <li
+            className="emotion-4"
+          >
+            <div
+              className="emotion-5"
+            >
+              <a
+                className="emotion-6"
+                data-testid="_breadcrumb_link_Level 2_link"
+                href="/second-level"
+                onClick={[Function]}
+              >
+                <span>
+                  Level 2
+                </span>
+              </a>
+              <span
+                className="emotion-7"
+                onClick={[Function]}
+              >
+                <span
+                  className="emotion-8"
+                />
+              </span>
+            </div>
+          </li>
+          <li
+            className="emotion-4"
+          >
+            <div
+              className="emotion-5"
+            >
+              <a
+                className="emotion-6"
+                data-testid="_breadcrumb_link_Level 3_link"
+                href="/third-level"
+                onClick={[Function]}
+              >
+                <span>
+                  Level 3
+                </span>
+              </a>
+              <span
+                className="emotion-7"
+                onClick={[Function]}
+              >
+                <span
+                  className="emotion-8"
+                />
+              </span>
+            </div>
+          </li>
+          <li
+            className="emotion-4"
+          >
+            <div
+              className="emotion-5"
+            >
+              <a
+                className="emotion-6"
+                data-testid="_breadcrumb_link_Level 4_link"
+                href="/forth-level"
+                onClick={[Function]}
+              >
+                <span>
+                  Level 4
+                </span>
+              </a>
+              <span
+                className="emotion-7"
+                onClick={[Function]}
+              >
+                <span
+                  className="emotion-8"
+                />
+              </span>
+            </div>
+          </li>
+          <li
+            className="emotion-4"
+          >
+            <div
+              className="emotion-25"
+            >
+              <span
+                data-testid="_breadcrumb_Level 5"
+              >
+                Level 5
+              </span>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,4 +1,4 @@
-import { isEmpty } from 'lodash';
+import { isEmpty, omit } from 'lodash';
 import * as React from 'react';
 import { generateUniqueKey } from 'utils/helpers';
 
@@ -15,16 +15,16 @@ const Breadcrumb = React.forwardRef<HTMLOListElement, BreadcrumbProps>(
   ({ items = [], backTo, dataTestPrefixId = '' }, ref) => {
     const passDataToRouterLink = React.useCallback(
       (item: BreadcrumbItemType, index: number) => {
-        const { to, label } = item;
+        const { label, href } = item;
 
         const isLast = isLastItem(items, index);
 
-        return to && !isLast ? (
+        return !isLast ? (
           <Link
             size={2}
-            key={to}
-            href={to}
+            key={href}
             dataTestPrefixId={`${dataTestPrefixId}_breadcrumb_link_${label}`}
+            {...omit(item, 'label')}
           >
             {label}
           </Link>
@@ -54,7 +54,7 @@ const Breadcrumb = React.forwardRef<HTMLOListElement, BreadcrumbProps>(
 
       if (backTo) {
         return (
-          <BackToItem to={backTo.to} label={backTo.label} dataTestPrefixId={dataTestPrefixId} />
+          <BackToItem href={backTo.href} label={backTo.label} dataTestPrefixId={dataTestPrefixId} />
         );
       }
 

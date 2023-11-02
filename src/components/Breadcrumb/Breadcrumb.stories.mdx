@@ -1,5 +1,5 @@
 import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Link as RouterLink } from 'react-router-dom';
 import BreadcrumbShowcase from '../storyUtils/BreadcrumbShowcase/BreadcrumbShowcase.tsx';
 import Stack from '../storyUtils/Stack';
 import Breadcrumb from './Breadcrumb';
@@ -64,14 +64,46 @@ import Overview from '../../storybook/Overview';
 <Preview>
   <Story name="Basic Breadcrumbs">
     <Stack>
+      <Breadcrumb
+        items={[
+          { href: '/first-level', label: 'Level 1' },
+          { href: '/second-level', label: 'Level 2' },
+          { href: '/third-level', label: 'Level 3' },
+          { href: '/forth-level', label: 'Level 4' },
+          { href: '/fifth-level', label: 'Level 5' },
+        ]}
+      />
+    </Stack>
+  </Story>
+</Preview>
+
+### Go Back To
+
+Instead of providing list of levels (`items`), `backTo` prop offers the capability of using Breadcrumb as a Go Back To Link.
+
+<Preview>
+  <Story name="Go Back To">
+    <Stack>
+      <Breadcrumb backTo={{ href: '/first-level', label: 'Level 1' }} />
+    </Stack>
+  </Story>
+</Preview>
+
+### Third-party Routing Library
+
+`BreadcrumbItem` prop type includes Link's `href` and `component` props. Using these you can achieve the integration with third-party routing libraries.
+
+<Preview>
+  <Story name="Third-party Routing Library">
+    <Stack>
       <Router>
         <Breadcrumb
           items={[
-            { to: '/first-level', label: 'Level 1' },
-            { to: '/second-level', label: 'Level 2' },
-            { to: '/third-level', label: 'Level 3' },
-            { to: '/forth-level', label: 'Level 4' },
-            { to: '/fifth-level', label: 'Level 5' },
+            { href: '/first-level', label: 'Level 1', component: RouterLink },
+            { href: '/second-level', label: 'Level 2', component: RouterLink },
+            { href: '/third-level', label: 'Level 3', component: RouterLink },
+            { href: '/forth-level', label: 'Level 4', component: RouterLink },
+            { href: '/fifth-level', label: 'Level 5', component: RouterLink },
           ]}
         />
         <Switch>
@@ -96,18 +128,6 @@ import Overview from '../../storybook/Overview';
   </Story>
 </Preview>
 
-### Go Back To
-
-Instead of providing list of levels (`items`), `backTo` prop offers the capability of using Breadcrumb as a Go Back To Link.
-
-<Preview>
-  <Story name="Go Back To">
-    <Stack>
-      <Breadcrumb backTo={{ to: '/first-level', label: 'Level 1' }} />
-    </Stack>
-  </Story>
-</Preview>
-
 ### Playground
 
 <Preview>
@@ -115,8 +135,8 @@ Instead of providing list of levels (`items`), `backTo` prop offers the capabili
     <Stack>
       <BreadcrumbShowcase
         initData={[
-          { to: '/first-level', label: 'Level 1' },
-          { to: '/second-level', label: 'Level 2' },
+          { href: '/first-level', label: 'Level 1' },
+          { href: '/second-level', label: 'Level 2' },
         ]}
       />
     </Stack>
