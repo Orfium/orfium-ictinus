@@ -1,0 +1,975 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Design System/Link LinkWithIcon smoke-test 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  color: #1552DD;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0.25rem solid rgba(84,94,255,0);
+  opacity: 1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  pointer-events: default;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.375rem;
+  font-size: 1rem;
+  letter-spacing: 0.00625rem;
+}
+
+.emotion-3:hover {
+  color: #1B214F;
+}
+
+.emotion-3:hover path {
+  fill: #1B214F;
+}
+
+.emotion-3:visited {
+  color: #6c28cc;
+}
+
+.emotion-3:visited path {
+  fill: #6c28cc;
+}
+
+.emotion-3:focus-visible {
+  border: 0.25rem solid #9347ff;
+}
+
+.emotion-4 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-5 {
+  fill: #1552DD;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-5 path {
+  fill: #1552DD;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  color: #1552DD;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0.25rem solid rgba(84,94,255,0);
+  opacity: 1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  pointer-events: default;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-6:hover {
+  color: #1B214F;
+}
+
+.emotion-6:hover path {
+  fill: #1B214F;
+}
+
+.emotion-6:visited {
+  color: #6c28cc;
+}
+
+.emotion-6:visited path {
+  fill: #6c28cc;
+}
+
+.emotion-6:focus-visible {
+  border: 0.25rem solid #9347ff;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  color: #1552DD;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0.25rem solid rgba(84,94,255,0);
+  opacity: 1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  pointer-events: default;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-9:hover {
+  color: #1B214F;
+}
+
+.emotion-9:hover path {
+  fill: #1B214F;
+}
+
+.emotion-9:visited {
+  color: #6c28cc;
+}
+
+.emotion-9:visited path {
+  fill: #6c28cc;
+}
+
+.emotion-9:focus-visible {
+  border: 0.25rem solid #9347ff;
+}
+
+<html>
+  <head />
+  <body>
+    <span
+      class="emotion-0"
+    >
+      <span
+        class="emotion-1"
+      >
+        <div
+          class="emotion-2"
+        >
+          <div
+            style="margin: 5px;"
+          >
+            <a
+              class="emotion-3"
+              data-testid="_link"
+              href="#"
+            >
+              <span>
+                Link
+              </span>
+              <span
+                class="emotion-4"
+                data-testid="_link_icon"
+              >
+                <svg
+                  class="emotion-5"
+                  viewBox="0 0 18 18"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                  <g
+                    fill="none"
+                    fill-rule="evenodd"
+                    stroke="none"
+                    stroke-width="1"
+                  >
+                    <g
+                      fill="#121212"
+                      transform="translate(-414.000000, -1102.000000)"
+                    >
+                      <g
+                        transform="translate(411.000000, 1099.000000)"
+                      >
+                        <path
+                          d="M19,19 L5,19 L5,5 L12,5 L12,3 L5,3 C3.89,3 3,3.9 3,5 L3,19 C3,20.1 3.89,21 5,21 L19,21 C20.1,21 21,20.1 21,19 L21,12 L19,12 L19,19 Z M14,3 L14,5 L17.59,5 L7.76,14.83 L9.17,16.24 L19,6.41 L19,10 L21,10 L21,3 L14,3 Z"
+                        />
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </span>
+            </a>
+          </div>
+          <div
+            style="margin: 5px;"
+          >
+            <a
+              class="emotion-6"
+              data-testid="_link"
+              href="#"
+            >
+              <span>
+                Link
+              </span>
+              <span
+                class="emotion-4"
+                data-testid="_link_icon"
+              >
+                <svg
+                  class="emotion-5"
+                  viewBox="0 0 18 18"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                  <g
+                    fill="none"
+                    fill-rule="evenodd"
+                    stroke="none"
+                    stroke-width="1"
+                  >
+                    <g
+                      fill="#121212"
+                      transform="translate(-414.000000, -1102.000000)"
+                    >
+                      <g
+                        transform="translate(411.000000, 1099.000000)"
+                      >
+                        <path
+                          d="M19,19 L5,19 L5,5 L12,5 L12,3 L5,3 C3.89,3 3,3.9 3,5 L3,19 C3,20.1 3.89,21 5,21 L19,21 C20.1,21 21,20.1 21,19 L21,12 L19,12 L19,19 Z M14,3 L14,5 L17.59,5 L7.76,14.83 L9.17,16.24 L19,6.41 L19,10 L21,10 L21,3 L14,3 Z"
+                        />
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </span>
+            </a>
+          </div>
+          <div
+            style="margin: 5px;"
+          >
+            <a
+              class="emotion-9"
+              data-testid="_link"
+              href="#"
+            >
+              <span>
+                Link
+              </span>
+              <span
+                class="emotion-4"
+                data-testid="_link_icon"
+              >
+                <svg
+                  class="emotion-5"
+                  viewBox="0 0 18 18"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                  <g
+                    fill="none"
+                    fill-rule="evenodd"
+                    stroke="none"
+                    stroke-width="1"
+                  >
+                    <g
+                      fill="#121212"
+                      transform="translate(-414.000000, -1102.000000)"
+                    >
+                      <g
+                        transform="translate(411.000000, 1099.000000)"
+                      >
+                        <path
+                          d="M19,19 L5,19 L5,5 L12,5 L12,3 L5,3 C3.89,3 3,3.9 3,5 L3,19 C3,20.1 3.89,21 5,21 L19,21 C20.1,21 21,20.1 21,19 L21,12 L19,12 L19,19 Z M14,3 L14,5 L17.59,5 L7.76,14.83 L9.17,16.24 L19,6.41 L19,10 L21,10 L21,3 L14,3 Z"
+                        />
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </span>
+    </span>
+  </body>
+</html>
+`;
+
+exports[`Design System/Link Placement smoke-test 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 0.25rem;
+  color: #1552DD;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0.25rem solid rgba(84,94,255,0);
+  opacity: 1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  pointer-events: default;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.375rem;
+  font-size: 1rem;
+  letter-spacing: 0.00625rem;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-3:hover {
+  color: #1B214F;
+}
+
+.emotion-3:hover path {
+  fill: #1B214F;
+}
+
+.emotion-3:visited {
+  color: #6c28cc;
+}
+
+.emotion-3:visited path {
+  fill: #6c28cc;
+}
+
+.emotion-3:focus-visible {
+  border: 0.25rem solid #9347ff;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  color: #1552DD;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0.25rem solid rgba(84,94,255,0);
+  opacity: 1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  pointer-events: default;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.375rem;
+  font-size: 1rem;
+  letter-spacing: 0.00625rem;
+}
+
+.emotion-4:hover {
+  color: #1B214F;
+}
+
+.emotion-4:hover path {
+  fill: #1B214F;
+}
+
+.emotion-4:visited {
+  color: #6c28cc;
+}
+
+.emotion-4:visited path {
+  fill: #6c28cc;
+}
+
+.emotion-4:focus-visible {
+  border: 0.25rem solid #9347ff;
+}
+
+<html>
+  <head />
+  <body>
+    <span
+      class="emotion-0"
+    >
+      <span
+        class="emotion-1"
+      >
+        <div
+          class="emotion-2"
+        >
+          <div
+            style="margin: 5px;"
+          >
+            <div>
+              This is an 
+              <a
+                class="emotion-3"
+                data-testid="_link"
+                href="#"
+              >
+                <span>
+                  inline Link
+                </span>
+              </a>
+              .
+            </div>
+          </div>
+          <div
+            style="margin: 5px;"
+          >
+            <div>
+              This is a
+              <a
+                class="emotion-4"
+                data-testid="_link"
+                href="#"
+              >
+                <span>
+                  block Link
+                </span>
+              </a>
+              .
+            </div>
+          </div>
+        </div>
+      </span>
+    </span>
+  </body>
+</html>
+`;
+
+exports[`Design System/Link Playground smoke-test 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  color: #1552DD;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0.25rem solid rgba(84,94,255,0);
+  opacity: 1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  pointer-events: default;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.375rem;
+  font-size: 1rem;
+  letter-spacing: 0.00625rem;
+}
+
+.emotion-3:hover {
+  color: #1B214F;
+}
+
+.emotion-3:hover path {
+  fill: #1B214F;
+}
+
+.emotion-3:visited {
+  color: #6c28cc;
+}
+
+.emotion-3:visited path {
+  fill: #6c28cc;
+}
+
+.emotion-3:focus-visible {
+  border: 0.25rem solid #9347ff;
+}
+
+<html>
+  <head />
+  <body>
+    <span
+      class="emotion-0"
+    >
+      <span
+        class="emotion-1"
+      >
+        <div
+          class="emotion-2"
+        >
+          <div
+            style="margin: 5px;"
+          >
+            <a
+              class="emotion-3"
+              data-testid="_link"
+              href="#"
+            >
+              <span>
+                Link
+              </span>
+            </a>
+          </div>
+        </div>
+      </span>
+    </span>
+  </body>
+</html>
+`;
+
+exports[`Design System/Link Sizes smoke-test 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  color: #1552DD;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0.25rem solid rgba(84,94,255,0);
+  opacity: 1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  pointer-events: default;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.375rem;
+  font-size: 1rem;
+  letter-spacing: 0.00625rem;
+}
+
+.emotion-3:hover {
+  color: #1B214F;
+}
+
+.emotion-3:hover path {
+  fill: #1B214F;
+}
+
+.emotion-3:visited {
+  color: #6c28cc;
+}
+
+.emotion-3:visited path {
+  fill: #6c28cc;
+}
+
+.emotion-3:focus-visible {
+  border: 0.25rem solid #9347ff;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  color: #1552DD;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0.25rem solid rgba(84,94,255,0);
+  opacity: 1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  pointer-events: default;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-4:hover {
+  color: #1B214F;
+}
+
+.emotion-4:hover path {
+  fill: #1B214F;
+}
+
+.emotion-4:visited {
+  color: #6c28cc;
+}
+
+.emotion-4:visited path {
+  fill: #6c28cc;
+}
+
+.emotion-4:focus-visible {
+  border: 0.25rem solid #9347ff;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  color: #1552DD;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0.25rem solid rgba(84,94,255,0);
+  opacity: 1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  pointer-events: default;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-5:hover {
+  color: #1B214F;
+}
+
+.emotion-5:hover path {
+  fill: #1B214F;
+}
+
+.emotion-5:visited {
+  color: #6c28cc;
+}
+
+.emotion-5:visited path {
+  fill: #6c28cc;
+}
+
+.emotion-5:focus-visible {
+  border: 0.25rem solid #9347ff;
+}
+
+<html>
+  <head />
+  <body>
+    <span
+      class="emotion-0"
+    >
+      <span
+        class="emotion-1"
+      >
+        <div
+          class="emotion-2"
+        >
+          <div
+            style="margin: 5px;"
+          >
+            <a
+              class="emotion-3"
+              data-testid="_link"
+              href="#"
+            >
+              <span>
+                Size 1
+              </span>
+            </a>
+          </div>
+          <div
+            style="margin: 5px;"
+          >
+            <a
+              class="emotion-4"
+              data-testid="_link"
+              href="#"
+            >
+              <span>
+                Size 2
+              </span>
+            </a>
+          </div>
+          <div
+            style="margin: 5px;"
+          >
+            <a
+              class="emotion-5"
+              data-testid="_link"
+              href="#"
+            >
+              <span>
+                Size 3
+              </span>
+            </a>
+          </div>
+        </div>
+      </span>
+    </span>
+  </body>
+</html>
+`;
+
+exports[`Design System/Link Style smoke-test 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  color: #1552DD;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0.25rem solid rgba(84,94,255,0);
+  opacity: 1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  pointer-events: default;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.375rem;
+  font-size: 1rem;
+  letter-spacing: 0.00625rem;
+}
+
+.emotion-3:hover {
+  color: #1B214F;
+}
+
+.emotion-3:hover path {
+  fill: #1B214F;
+}
+
+.emotion-3:visited {
+  color: #6c28cc;
+}
+
+.emotion-3:visited path {
+  fill: #6c28cc;
+}
+
+.emotion-3:focus-visible {
+  border: 0.25rem solid #9347ff;
+}
+
+<html>
+  <head />
+  <body>
+    <span
+      class="emotion-0"
+    >
+      <span
+        class="emotion-1"
+      >
+        <div
+          class="emotion-2"
+        >
+          <div
+            style="margin: 5px;"
+          >
+            <a
+              class="emotion-3"
+              data-testid="_link"
+              href="#"
+            >
+              <span>
+                Primary
+              </span>
+            </a>
+          </div>
+        </div>
+      </span>
+    </span>
+  </body>
+</html>
+`;

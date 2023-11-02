@@ -1,0 +1,6101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Design System/Select AsyncSelect smoke-test 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  width: 25%;
+  height: 21.875rem;
+}
+
+.emotion-3 {
+  position: relative;
+  min-width: 8.75rem;
+}
+
+.emotion-4 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
+  position: relative;
+}
+
+.emotion-4 #unique-tooltip-id {
+  display: none!important;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: 3.25rem;
+  min-width: 8.75rem;
+  background-color: #ffffff;
+}
+
+.emotion-5:hover {
+  background-color: #F5F5FF;
+}
+
+.emotion-5:focus-within {
+  box-shadow: 0 0 0 0.125rem #175bf5;
+  background-color: #F5F5FF;
+}
+
+.emotion-6 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0 0 0 0.75rem;
+}
+
+.emotion-6>div {
+  position: relative;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-8 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #1B214F;
+  padding: 0;
+  display: block;
+  position: relative;
+  top: 0.4375rem;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-8::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8::placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus {
+  outline: none;
+}
+
+.emotion-8:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-8:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-8:focus-within+label,
+.emotion-8:not(:placeholder-shown)+label {
+  font-weight: 700!important;
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+}
+
+.emotion-8:focus-within+label {
+  color: #1552DD;
+}
+
+.emotion-8:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-9 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, 0);
+  -moz-transform: translate(0.1875rem, 0);
+  -ms-transform: translate(0.1875rem, 0);
+  transform: translate(0.1875rem, 0);
+  color: #686BB3;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0.1875rem;
+  margin: auto;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-10 {
+  min-width: 2.75rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  cursor: unset;
+}
+
+.emotion-11 {
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.emotion-12 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-13 {
+  fill: #5f6c85;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-13 path {
+  fill: #5f6c85;
+}
+
+<html>
+  <head />
+  <body>
+    <span
+      class="emotion-0"
+    >
+      <span
+        class="emotion-1"
+      >
+        <div
+          class="emotion-2"
+        >
+          <div>
+            <div
+              class="emotion-3"
+            >
+              <div
+                class="emotion-4"
+              >
+                <div>
+                  <div
+                    class="emotion-5"
+                    data-testid="select-input"
+                  >
+                    <div
+                      class="emotion-6"
+                    >
+                      <div
+                        class="emotion-7"
+                      >
+                        <input
+                          aria-controls="select_25"
+                          aria-expanded="false"
+                          aria-invalid="false"
+                          autocomplete="off"
+                          class="emotion-8"
+                          data-testid="input_select-input"
+                          id="textfield_26"
+                          placeholder="Flavour"
+                          role="combobox"
+                          value=""
+                        />
+                        <label
+                          class="emotion-9"
+                          for="textfield_26"
+                        >
+                          Flavour 
+                        </label>
+                      </div>
+                      <div
+                        aria-hidden="false"
+                        class="emotion-10"
+                      >
+                        <div
+                          class="emotion-11"
+                        >
+                          <span
+                            class="emotion-12"
+                            data-testid="select-right-icon"
+                          >
+                            <svg
+                              class="emotion-13"
+                              viewBox="0 0 24 24"
+                              xmlns="http://www.w3.org/2000/svg"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                            >
+                              <g
+                                fill="none"
+                                fill-rule="evenodd"
+                                id="\\uD83D\\uDD36-Symbols"
+                                stroke="none"
+                                stroke-width="1"
+                              >
+                                <g
+                                  id="Search"
+                                >
+                                  <path
+                                    d="M10,2 C14.418278,2 18,5.581722 18,10 C18,11.8482015 17.3732643,13.550021 16.3207287,14.9045228 L21.7071068,20.2928932 L20.2928932,21.7071068 L14.9045228,16.3207287 C13.550021,17.3732643 11.8482015,18 10,18 C5.581722,18 2,14.418278 2,10 C2,5.581722 5.581722,2 10,2 Z M10,4 C6.6862915,4 4,6.6862915 4,10 C4,13.3137085 6.6862915,16 10,16 C13.3137085,16 16,13.3137085 16,10 C16,6.6862915 13.3137085,4 10,4 Z"
+                                  />
+                                </g>
+                              </g>
+                            </svg>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </span>
+    </span>
+  </body>
+</html>
+`;
+
+exports[`Design System/Select AsyncSelectWithMinCharacters smoke-test 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  width: 25%;
+  height: 21.875rem;
+}
+
+.emotion-3 {
+  position: relative;
+  min-width: 8.75rem;
+}
+
+.emotion-4 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
+  position: relative;
+}
+
+.emotion-4 #unique-tooltip-id {
+  display: none!important;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: 3.25rem;
+  min-width: 8.75rem;
+  background-color: #ffffff;
+}
+
+.emotion-5:hover {
+  background-color: #F5F5FF;
+}
+
+.emotion-5:focus-within {
+  box-shadow: 0 0 0 0.125rem #175bf5;
+  background-color: #F5F5FF;
+}
+
+.emotion-6 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0 0 0 0.75rem;
+}
+
+.emotion-6>div {
+  position: relative;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-8 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #1B214F;
+  padding: 0;
+  display: block;
+  position: relative;
+  top: 0.4375rem;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-8::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8::placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus {
+  outline: none;
+}
+
+.emotion-8:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-8:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-8:focus-within+label,
+.emotion-8:not(:placeholder-shown)+label {
+  font-weight: 700!important;
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+}
+
+.emotion-8:focus-within+label {
+  color: #1552DD;
+}
+
+.emotion-8:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-9 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, 0);
+  -moz-transform: translate(0.1875rem, 0);
+  -ms-transform: translate(0.1875rem, 0);
+  transform: translate(0.1875rem, 0);
+  color: #686BB3;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0.1875rem;
+  margin: auto;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-10 {
+  min-width: 2.75rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  cursor: unset;
+}
+
+.emotion-11 {
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.emotion-12 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-13 {
+  fill: #5f6c85;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-13 path {
+  fill: #5f6c85;
+}
+
+<html>
+  <head />
+  <body>
+    <span
+      class="emotion-0"
+    >
+      <span
+        class="emotion-1"
+      >
+        <div
+          class="emotion-2"
+        >
+          <div>
+            <div
+              class="emotion-3"
+            >
+              <div
+                class="emotion-4"
+              >
+                <div>
+                  <div
+                    class="emotion-5"
+                    data-testid="select-input"
+                  >
+                    <div
+                      class="emotion-6"
+                    >
+                      <div
+                        class="emotion-7"
+                      >
+                        <input
+                          aria-controls="select_27"
+                          aria-expanded="false"
+                          aria-invalid="false"
+                          autocomplete="off"
+                          class="emotion-8"
+                          data-testid="input_select-input"
+                          id="textfield_28"
+                          placeholder="Flavour"
+                          role="combobox"
+                          value=""
+                        />
+                        <label
+                          class="emotion-9"
+                          for="textfield_28"
+                        >
+                          Flavour 
+                        </label>
+                      </div>
+                      <div
+                        aria-hidden="false"
+                        class="emotion-10"
+                      >
+                        <div
+                          class="emotion-11"
+                        >
+                          <span
+                            class="emotion-12"
+                            data-testid="select-right-icon"
+                          >
+                            <svg
+                              class="emotion-13"
+                              viewBox="0 0 24 24"
+                              xmlns="http://www.w3.org/2000/svg"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                            >
+                              <g
+                                fill="none"
+                                fill-rule="evenodd"
+                                id="\\uD83D\\uDD36-Symbols"
+                                stroke="none"
+                                stroke-width="1"
+                              >
+                                <g
+                                  id="Search"
+                                >
+                                  <path
+                                    d="M10,2 C14.418278,2 18,5.581722 18,10 C18,11.8482015 17.3732643,13.550021 16.3207287,14.9045228 L21.7071068,20.2928932 L20.2928932,21.7071068 L14.9045228,16.3207287 C13.550021,17.3732643 11.8482015,18 10,18 C5.581722,18 2,14.418278 2,10 C2,5.581722 5.581722,2 10,2 Z M10,4 C6.6862915,4 4,6.6862915 4,10 C4,13.3137085 6.6862915,16 10,16 C13.3137085,16 16,13.3137085 16,10 C16,6.6862915 13.3137085,4 10,4 Z"
+                                  />
+                                </g>
+                              </g>
+                            </svg>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </span>
+    </span>
+  </body>
+</html>
+`;
+
+exports[`Design System/Select DisabledOptionWithHelperText smoke-test 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 21.875rem;
+}
+
+.emotion-3 {
+  position: relative;
+  min-width: 8.75rem;
+}
+
+.emotion-4 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
+  position: relative;
+}
+
+.emotion-4 #unique-tooltip-id {
+  display: none!important;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: 3.25rem;
+  min-width: 8.75rem;
+  background-color: #ffffff;
+}
+
+.emotion-5:hover {
+  background-color: #F5F5FF;
+}
+
+.emotion-5:focus-within {
+  box-shadow: 0 0 0 0.125rem #175bf5;
+  background-color: #F5F5FF;
+}
+
+.emotion-6 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0 0 0 0.75rem;
+}
+
+.emotion-6>div {
+  position: relative;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-8 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #1B214F;
+  padding: 0;
+  display: block;
+  position: relative;
+  top: 0.4375rem;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-8::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8::placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus {
+  outline: none;
+}
+
+.emotion-8:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-8:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-8:focus-within+label,
+.emotion-8:not(:placeholder-shown)+label {
+  font-weight: 700!important;
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+}
+
+.emotion-8:focus-within+label {
+  color: #1552DD;
+}
+
+.emotion-8:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-9 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, -95%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -95%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -95%) scale(0.8);
+  transform: translate(0.1875rem, -95%) scale(0.8);
+  color: #686BB3;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0.1875rem;
+  margin: auto;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-10 {
+  min-width: 2.75rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  cursor: unset;
+}
+
+.emotion-11 {
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.emotion-12 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-13 {
+  fill: #5f6c85;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-13 path {
+  fill: #5f6c85;
+}
+
+<html>
+  <head />
+  <body>
+    <span
+      class="emotion-0"
+    >
+      <span
+        class="emotion-1"
+      >
+        <div
+          class="emotion-2"
+        >
+          <div
+            style="margin: 5px;"
+          >
+            <div>
+              <div
+                class="emotion-3"
+              >
+                <div
+                  class="emotion-4"
+                >
+                  <div>
+                    <div
+                      class="emotion-5"
+                      data-testid="select-input"
+                    >
+                      <div
+                        class="emotion-6"
+                      >
+                        <div
+                          class="emotion-7"
+                        >
+                          <input
+                            aria-controls="select_23"
+                            aria-expanded="false"
+                            aria-invalid="false"
+                            autocomplete="off"
+                            class="emotion-8"
+                            data-testid="input_select-input"
+                            id="textfield_24"
+                            placeholder="Flavour"
+                            readonly=""
+                            role="combobox"
+                            value="Chocolate"
+                          />
+                          <label
+                            class="emotion-9"
+                            for="textfield_24"
+                          >
+                            Flavour 
+                          </label>
+                        </div>
+                        <div
+                          aria-hidden="false"
+                          class="emotion-10"
+                        >
+                          <div
+                            class="emotion-11"
+                          >
+                            <span
+                              class="emotion-12"
+                              data-testid="select-right-icon"
+                            >
+                              <svg
+                                class="emotion-13"
+                                fill="none"
+                                viewBox="0 0 12 6"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M0.853481 0.853541C0.538516 0.538554 0.761603 0 1.20705 0H10.793C11.2384 0 11.4615 0.538554 11.1465 0.853541L6.35357 5.64683C6.1583 5.84211 5.8417 5.84211 5.64643 5.64683L0.853481 0.853541Z"
+                                  fill="#0E0E17"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </span>
+    </span>
+  </body>
+</html>
+`;
+
+exports[`Design System/Select DisabledSelect smoke-test 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  position: relative;
+  min-width: 8.75rem;
+}
+
+.emotion-4 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
+  position: relative;
+}
+
+.emotion-4 #unique-tooltip-id {
+  display: none!important;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 50%;
+  cursor: not-allowed;
+  height: 3.25rem;
+  min-width: 8.75rem;
+  background-color: #ffffff;
+}
+
+.emotion-5:focus-within {
+  box-shadow: 0 0 0 0.125rem transparent;
+}
+
+.emotion-6 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0 0 0 0.75rem;
+}
+
+.emotion-6>div {
+  position: relative;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-8 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #1B214F;
+  padding: 0;
+  display: block;
+  position: relative;
+  top: 0.4375rem;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-8::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8::placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus {
+  outline: none;
+}
+
+.emotion-8:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-8:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-8:focus-within+label,
+.emotion-8:not(:placeholder-shown)+label {
+  font-weight: 700!important;
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+}
+
+.emotion-8:focus-within+label {
+  color: #1552DD;
+}
+
+.emotion-8:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-9 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, 0);
+  -moz-transform: translate(0.1875rem, 0);
+  -ms-transform: translate(0.1875rem, 0);
+  transform: translate(0.1875rem, 0);
+  color: #686BB3;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0.1875rem;
+  margin: auto;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-10 {
+  min-width: 2.75rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  cursor: unset;
+}
+
+.emotion-11 {
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.emotion-12 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-13 {
+  fill: #5f6c85;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-13 path {
+  fill: #5f6c85;
+}
+
+.emotion-14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.25rem;
+  opacity: 50%;
+  color: #686BB3;
+  padding: 0.5rem 0 0;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-14 span {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  padding: 0;
+}
+
+<html>
+  <head />
+  <body>
+    <span
+      class="emotion-0"
+    >
+      <span
+        class="emotion-1"
+      >
+        <div
+          class="emotion-2"
+        >
+          <div
+            style="margin: 5px;"
+          >
+            <div>
+              <div
+                class="emotion-3"
+              >
+                <div
+                  class="emotion-4"
+                >
+                  <div>
+                    <div
+                      class="emotion-5"
+                      data-testid="select-input"
+                    >
+                      <div
+                        class="emotion-6"
+                      >
+                        <div
+                          class="emotion-7"
+                        >
+                          <input
+                            aria-controls="select_21"
+                            aria-describedby="textfield_22_hintMessage"
+                            aria-expanded="false"
+                            aria-invalid="false"
+                            autocomplete="off"
+                            class="emotion-8"
+                            data-testid="input_select-input"
+                            disabled=""
+                            id="textfield_22"
+                            placeholder="Label"
+                            role="combobox"
+                            value=""
+                          />
+                          <label
+                            class="emotion-9"
+                            for="textfield_22"
+                          >
+                            Label 
+                          </label>
+                        </div>
+                        <div
+                          aria-hidden="false"
+                          class="emotion-10"
+                        >
+                          <div
+                            class="emotion-11"
+                          >
+                            <span
+                              class="emotion-12"
+                              data-testid="select-right-icon"
+                            >
+                              <svg
+                                class="emotion-13"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                              >
+                                <g
+                                  fill="none"
+                                  fill-rule="evenodd"
+                                  id="\\uD83D\\uDD36-Symbols"
+                                  stroke="none"
+                                  stroke-width="1"
+                                >
+                                  <g
+                                    id="Search"
+                                  >
+                                    <path
+                                      d="M10,2 C14.418278,2 18,5.581722 18,10 C18,11.8482015 17.3732643,13.550021 16.3207287,14.9045228 L21.7071068,20.2928932 L20.2928932,21.7071068 L14.9045228,16.3207287 C13.550021,17.3732643 11.8482015,18 10,18 C5.581722,18 2,14.418278 2,10 C2,5.581722 5.581722,2 10,2 Z M10,4 C6.6862915,4 4,6.6862915 4,10 C4,13.3137085 6.6862915,16 10,16 C13.3137085,16 16,13.3137085 16,10 C16,6.6862915 13.3137085,4 10,4 Z"
+                                    />
+                                  </g>
+                                </g>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="emotion-14"
+                      data-testid="error-select-input"
+                    >
+                      <span
+                        id="textfield_22_hintMessage"
+                      >
+                        This field is disabled
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </span>
+    </span>
+  </body>
+</html>
+`;
+
+exports[`Design System/Select MultiSelect smoke-test 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  row-gap: 3rem;
+  margin-bottom: 3rem;
+  height: 21.875rem;
+}
+
+.emotion-3 {
+  width: 45%;
+}
+
+.emotion-4 {
+  position: relative;
+  min-width: 8.75rem;
+}
+
+.emotion-5 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
+  position: relative;
+}
+
+.emotion-5 #unique-tooltip-id {
+  display: none!important;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: unset;
+  min-width: 8.75rem;
+  background-color: #ffffff;
+  min-height: 3.25rem!important;
+}
+
+.emotion-6:hover {
+  background-color: #F5F5FF;
+}
+
+.emotion-6:focus-within {
+  box-shadow: 0 0 0 0.125rem #175bf5;
+  background-color: #F5F5FF;
+}
+
+.emotion-6 label {
+  font-weight: 700;
+  -webkit-transform: translate(0.1875rem, -82%) scale(0.8)!important;
+  -moz-transform: translate(0.1875rem, -82%) scale(0.8)!important;
+  -ms-transform: translate(0.1875rem, -82%) scale(0.8)!important;
+  transform: translate(0.1875rem, -82%) scale(0.8)!important;
+  bottom: auto;
+}
+
+.emotion-7 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 1.3125rem 2.5rem 0.3125rem 0.75rem;
+}
+
+.emotion-7>div {
+  position: relative;
+}
+
+.emotion-8 {
+  position: static;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  row-gap: 0.25rem;
+  z-index: 2;
+}
+
+.emotion-9 {
+  position: relative;
+  margin-right: 0.25rem;
+}
+
+.emotion-9>div {
+  height: 1.25rem;
+  border-radius: 0.25rem;
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 1.5rem;
+  border-radius: 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: normal;
+  box-sizing: border-box;
+  padding: 0.25rem 0.5rem;
+  background-color: #f3f5f8;
+  color: black;
+  border: 0.0625rem solid #7a8bab;
+  cursor: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-10:hover:not(:disabled) {
+  background: #e7ebf2;
+}
+
+.emotion-10:focus-visible:not(:disabled) {
+  outline: none;
+}
+
+.emotion-10>:not(:last-child) {
+  margin-right: 0.25rem;
+}
+
+.emotion-11 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: unset;
+}
+
+.emotion-12 {
+  cursor: pointer;
+}
+
+.emotion-13 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-14 {
+  fill: #0f0f17;
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.emotion-14 path {
+  fill: #0f0f17;
+}
+
+.emotion-45 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #1B214F;
+  padding: 0;
+  display: block;
+  position: relative;
+  top: unset;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 20%;
+  -webkit-flex: 1 1 0%;
+  -ms-flex: 1 1 0%;
+  flex: 1 1 0%;
+}
+
+.emotion-45::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-45::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-45:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-45::placeholder {
+  color: transparent;
+}
+
+.emotion-45:focus {
+  outline: none;
+}
+
+.emotion-45:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-45:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-45:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-45:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-45:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-45:focus-within+label,
+.emotion-45:not(:placeholder-shown)+label {
+  font-weight: 700!important;
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+}
+
+.emotion-45:focus-within+label {
+  color: #1552DD;
+}
+
+.emotion-45:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-45:focus+label,
+.emotion-45:not(:placeholder-shown)+label {
+  -webkit-transform: translate(0.1875rem, -82%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -82%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -82%) scale(0.8);
+  transform: translate(0.1875rem, -82%) scale(0.8);
+}
+
+.emotion-46 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, -95%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -95%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -95%) scale(0.8);
+  transform: translate(0.1875rem, -95%) scale(0.8);
+  color: #686BB3;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0.1875rem;
+  margin: auto;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-47 {
+  position: absolute!important;
+  bottom: 0;
+  right: 0.25rem;
+  top: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-48 {
+  width: 2.25rem;
+  height: 2.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.emotion-48:focus-visible,
+.emotion-48:hover {
+  background: rgba(84,94,255,0.06);
+  border-radius: 6.25rem;
+}
+
+.emotion-50 {
+  fill: #5f6c85;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-50 path {
+  fill: #5f6c85;
+}
+
+.emotion-51 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.25rem;
+  opacity: 1;
+  color: #686BB3;
+  padding: 0.5rem 0 0;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-51 span {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  padding: 0;
+}
+
+.emotion-55 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: unset;
+  min-width: 8.75rem;
+  background-color: #ffffff;
+  min-height: 3.25rem!important;
+}
+
+.emotion-55:hover {
+  background-color: #F5F5FF;
+}
+
+.emotion-55:focus-within {
+  box-shadow: 0 0 0 0.125rem #175bf5;
+  background-color: #F5F5FF;
+}
+
+.emotion-55 input:focus label {
+  font-weight: 700;
+  -webkit-transform: translate(0.1875rem, -82%) scale(0.8)!important;
+  -moz-transform: translate(0.1875rem, -82%) scale(0.8)!important;
+  -ms-transform: translate(0.1875rem, -82%) scale(0.8)!important;
+  transform: translate(0.1875rem, -82%) scale(0.8)!important;
+  bottom: auto;
+}
+
+.emotion-55 label {
+  -webkit-transform: translate(0.1875rem, -8px);
+  -moz-transform: translate(0.1875rem, -8px);
+  -ms-transform: translate(0.1875rem, -8px);
+  transform: translate(0.1875rem, -8px);
+}
+
+.emotion-59 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, 0);
+  -moz-transform: translate(0.1875rem, 0);
+  -ms-transform: translate(0.1875rem, 0);
+  transform: translate(0.1875rem, 0);
+  color: #686BB3;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0.1875rem;
+  margin: auto;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-61 {
+  width: 2.25rem;
+  height: 2.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  cursor: auto;
+}
+
+.emotion-61:focus-visible,
+.emotion-61:hover {
+  background: rgba(84,94,255,0.06);
+  border-radius: 6.25rem;
+}
+
+<html>
+  <head />
+  <body>
+    <span
+      class="emotion-0"
+    >
+      <span
+        class="emotion-1"
+      >
+        <div
+          class="emotion-2"
+        >
+          <div
+            class="emotion-3"
+          >
+            <div>
+              <div
+                class="emotion-4"
+              >
+                <div
+                  class="emotion-5"
+                >
+                  <div>
+                    <div
+                      class="emotion-6"
+                      data-testid="select-input"
+                    >
+                      <div
+                        class="emotion-7"
+                      >
+                        <div
+                          class="emotion-8"
+                        >
+                          <span
+                            class="emotion-9"
+                          >
+                            <div
+                              aria-readonly="true"
+                              class="emotion-10"
+                              data-testid="chip-chip_0"
+                            >
+                              <div
+                                aria-label="chip_35"
+                              >
+                                <div
+                                  class="emotion-11"
+                                  title="Strawberry"
+                                >
+                                  Strawberry
+                                </div>
+                              </div>
+                              <div
+                                aria-hidden="false"
+                                class="emotion-12"
+                              >
+                                <span
+                                  class="emotion-13"
+                                  data-testid="chip-delete-chip_0"
+                                >
+                                  <svg
+                                    class="emotion-14"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                  >
+                                    <g
+                                      fill="none"
+                                      fill-rule="evenodd"
+                                      id="\\uD83D\\uDD36-Symbols"
+                                      stroke="none"
+                                      stroke-width="1"
+                                    >
+                                      <g
+                                        id="Close"
+                                      >
+                                        <path
+                                          d="M17.6568542,4.92893219 L19.0710678,6.34314575 L13.4139322,11.9999322 L19.0710678,17.6568542 L17.6568542,19.0710678 L11.9999322,13.4139322 L6.34314575,19.0710678 L4.92893219,17.6568542 L10.5849322,11.9999322 L4.92893219,6.34314575 L6.34314575,4.92893219 L11.9999322,10.5849322 L17.6568542,4.92893219 Z"
+                                        />
+                                      </g>
+                                    </g>
+                                  </svg>
+                                </span>
+                              </div>
+                            </div>
+                          </span>
+                          <span
+                            class="emotion-9"
+                          >
+                            <div
+                              aria-readonly="true"
+                              class="emotion-10"
+                              data-testid="chip-chip_1"
+                            >
+                              <div
+                                aria-label="chip_36"
+                              >
+                                <div
+                                  class="emotion-11"
+                                  title="Banana"
+                                >
+                                  Banana
+                                </div>
+                              </div>
+                              <div
+                                aria-hidden="false"
+                                class="emotion-12"
+                              >
+                                <span
+                                  class="emotion-13"
+                                  data-testid="chip-delete-chip_1"
+                                >
+                                  <svg
+                                    class="emotion-14"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                  >
+                                    <g
+                                      fill="none"
+                                      fill-rule="evenodd"
+                                      id="\\uD83D\\uDD36-Symbols"
+                                      stroke="none"
+                                      stroke-width="1"
+                                    >
+                                      <g
+                                        id="Close"
+                                      >
+                                        <path
+                                          d="M17.6568542,4.92893219 L19.0710678,6.34314575 L13.4139322,11.9999322 L19.0710678,17.6568542 L17.6568542,19.0710678 L11.9999322,13.4139322 L6.34314575,19.0710678 L4.92893219,17.6568542 L10.5849322,11.9999322 L4.92893219,6.34314575 L6.34314575,4.92893219 L11.9999322,10.5849322 L17.6568542,4.92893219 Z"
+                                        />
+                                      </g>
+                                    </g>
+                                  </svg>
+                                </span>
+                              </div>
+                            </div>
+                          </span>
+                          <span
+                            class="emotion-9"
+                          >
+                            <div
+                              aria-readonly="true"
+                              class="emotion-10"
+                              data-testid="chip-chip_2"
+                            >
+                              <div
+                                aria-label="chip_37"
+                              >
+                                <div
+                                  class="emotion-11"
+                                  title="Citrus"
+                                >
+                                  Citrus
+                                </div>
+                              </div>
+                              <div
+                                aria-hidden="false"
+                                class="emotion-12"
+                              >
+                                <span
+                                  class="emotion-13"
+                                  data-testid="chip-delete-chip_2"
+                                >
+                                  <svg
+                                    class="emotion-14"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                  >
+                                    <g
+                                      fill="none"
+                                      fill-rule="evenodd"
+                                      id="\\uD83D\\uDD36-Symbols"
+                                      stroke="none"
+                                      stroke-width="1"
+                                    >
+                                      <g
+                                        id="Close"
+                                      >
+                                        <path
+                                          d="M17.6568542,4.92893219 L19.0710678,6.34314575 L13.4139322,11.9999322 L19.0710678,17.6568542 L17.6568542,19.0710678 L11.9999322,13.4139322 L6.34314575,19.0710678 L4.92893219,17.6568542 L10.5849322,11.9999322 L4.92893219,6.34314575 L6.34314575,4.92893219 L11.9999322,10.5849322 L17.6568542,4.92893219 Z"
+                                        />
+                                      </g>
+                                    </g>
+                                  </svg>
+                                </span>
+                              </div>
+                            </div>
+                          </span>
+                          <span
+                            class="emotion-9"
+                          >
+                            <div
+                              aria-readonly="true"
+                              class="emotion-10"
+                              data-testid="chip-chip_3"
+                            >
+                              <div
+                                aria-label="chip_38"
+                              >
+                                <div
+                                  class="emotion-11"
+                                  title="Sorbet"
+                                >
+                                  Sorbet
+                                </div>
+                              </div>
+                              <div
+                                aria-hidden="false"
+                                class="emotion-12"
+                              >
+                                <span
+                                  class="emotion-13"
+                                  data-testid="chip-delete-chip_3"
+                                >
+                                  <svg
+                                    class="emotion-14"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                  >
+                                    <g
+                                      fill="none"
+                                      fill-rule="evenodd"
+                                      id="\\uD83D\\uDD36-Symbols"
+                                      stroke="none"
+                                      stroke-width="1"
+                                    >
+                                      <g
+                                        id="Close"
+                                      >
+                                        <path
+                                          d="M17.6568542,4.92893219 L19.0710678,6.34314575 L13.4139322,11.9999322 L19.0710678,17.6568542 L17.6568542,19.0710678 L11.9999322,13.4139322 L6.34314575,19.0710678 L4.92893219,17.6568542 L10.5849322,11.9999322 L4.92893219,6.34314575 L6.34314575,4.92893219 L11.9999322,10.5849322 L17.6568542,4.92893219 Z"
+                                        />
+                                      </g>
+                                    </g>
+                                  </svg>
+                                </span>
+                              </div>
+                            </div>
+                          </span>
+                          <span
+                            class="emotion-9"
+                          >
+                            <div
+                              aria-readonly="true"
+                              class="emotion-10"
+                              data-testid="chip-chip_4"
+                            >
+                              <div
+                                aria-label="chip_39"
+                              >
+                                <div
+                                  class="emotion-11"
+                                  title="Cookie Dough"
+                                >
+                                  Cookie Dough
+                                </div>
+                              </div>
+                              <div
+                                aria-hidden="false"
+                                class="emotion-12"
+                              >
+                                <span
+                                  class="emotion-13"
+                                  data-testid="chip-delete-chip_4"
+                                >
+                                  <svg
+                                    class="emotion-14"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                  >
+                                    <g
+                                      fill="none"
+                                      fill-rule="evenodd"
+                                      id="\\uD83D\\uDD36-Symbols"
+                                      stroke="none"
+                                      stroke-width="1"
+                                    >
+                                      <g
+                                        id="Close"
+                                      >
+                                        <path
+                                          d="M17.6568542,4.92893219 L19.0710678,6.34314575 L13.4139322,11.9999322 L19.0710678,17.6568542 L17.6568542,19.0710678 L11.9999322,13.4139322 L6.34314575,19.0710678 L4.92893219,17.6568542 L10.5849322,11.9999322 L4.92893219,6.34314575 L6.34314575,4.92893219 L11.9999322,10.5849322 L17.6568542,4.92893219 Z"
+                                        />
+                                      </g>
+                                    </g>
+                                  </svg>
+                                </span>
+                              </div>
+                            </div>
+                          </span>
+                          <span
+                            class="emotion-9"
+                          >
+                            <div
+                              aria-readonly="true"
+                              class="emotion-10"
+                              data-testid="chip-chip_5"
+                            >
+                              <div
+                                aria-label="chip_40"
+                              >
+                                <div
+                                  class="emotion-11"
+                                  title="Buttered Pecan"
+                                >
+                                  Buttered Pecan
+                                </div>
+                              </div>
+                              <div
+                                aria-hidden="false"
+                                class="emotion-12"
+                              >
+                                <span
+                                  class="emotion-13"
+                                  data-testid="chip-delete-chip_5"
+                                >
+                                  <svg
+                                    class="emotion-14"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                  >
+                                    <g
+                                      fill="none"
+                                      fill-rule="evenodd"
+                                      id="\\uD83D\\uDD36-Symbols"
+                                      stroke="none"
+                                      stroke-width="1"
+                                    >
+                                      <g
+                                        id="Close"
+                                      >
+                                        <path
+                                          d="M17.6568542,4.92893219 L19.0710678,6.34314575 L13.4139322,11.9999322 L19.0710678,17.6568542 L17.6568542,19.0710678 L11.9999322,13.4139322 L6.34314575,19.0710678 L4.92893219,17.6568542 L10.5849322,11.9999322 L4.92893219,6.34314575 L6.34314575,4.92893219 L11.9999322,10.5849322 L17.6568542,4.92893219 Z"
+                                        />
+                                      </g>
+                                    </g>
+                                  </svg>
+                                </span>
+                              </div>
+                            </div>
+                          </span>
+                          <input
+                            aria-controls="select_33"
+                            aria-describedby="multiTextfield_34_hintMessage"
+                            aria-expanded="false"
+                            aria-invalid="false"
+                            autocomplete="off"
+                            class="emotion-45"
+                            data-testid="input_select-input"
+                            id="multiTextfield_34"
+                            role="combobox"
+                            value=""
+                          />
+                          <label
+                            class="emotion-46"
+                            for="multiTextfield_34"
+                          >
+                            Multi Select 
+                          </label>
+                        </div>
+                        <div
+                          class="emotion-47"
+                        >
+                          <div
+                            class="emotion-48"
+                          >
+                            <span
+                              class="emotion-13"
+                              data-testid="select-right-icon"
+                            >
+                              <svg
+                                class="emotion-50"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                              >
+                                <g
+                                  fill="none"
+                                  fill-rule="evenodd"
+                                  id="\\uD83D\\uDD36-Symbols"
+                                  stroke="none"
+                                  stroke-width="1"
+                                >
+                                  <g
+                                    id="Close"
+                                  >
+                                    <path
+                                      d="M17.6568542,4.92893219 L19.0710678,6.34314575 L13.4139322,11.9999322 L19.0710678,17.6568542 L17.6568542,19.0710678 L11.9999322,13.4139322 L6.34314575,19.0710678 L4.92893219,17.6568542 L10.5849322,11.9999322 L4.92893219,6.34314575 L6.34314575,4.92893219 L11.9999322,10.5849322 L17.6568542,4.92893219 Z"
+                                    />
+                                  </g>
+                                </g>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="emotion-51"
+                      data-testid="error-select-input"
+                    >
+                      <span
+                        id="multiTextfield_34_hintMessage"
+                      >
+                        Message in Text Field
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="emotion-3"
+          >
+            <div>
+              <div
+                class="emotion-4"
+              >
+                <div
+                  class="emotion-5"
+                >
+                  <div>
+                    <div
+                      class="emotion-55"
+                      data-testid="select-input"
+                    >
+                      <div
+                        class="emotion-7"
+                      >
+                        <div
+                          class="emotion-8"
+                        >
+                          <input
+                            aria-controls="select_41"
+                            aria-describedby="multiTextfield_42_hintMessage"
+                            aria-expanded="false"
+                            aria-invalid="false"
+                            autocomplete="off"
+                            class="emotion-45"
+                            data-testid="input_select-input"
+                            id="multiTextfield_42"
+                            placeholder="Multi Select - Async"
+                            role="combobox"
+                            value=""
+                          />
+                          <label
+                            class="emotion-59"
+                            for="multiTextfield_42"
+                          >
+                            Multi Select - Async 
+                          </label>
+                        </div>
+                        <div
+                          class="emotion-47"
+                        >
+                          <div
+                            class="emotion-61"
+                          >
+                            <span
+                              class="emotion-13"
+                              data-testid="select-right-icon"
+                            >
+                              <svg
+                                class="emotion-50"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                              >
+                                <g
+                                  fill="none"
+                                  fill-rule="evenodd"
+                                  id="\\uD83D\\uDD36-Symbols"
+                                  stroke="none"
+                                  stroke-width="1"
+                                >
+                                  <g
+                                    id="Search"
+                                  >
+                                    <path
+                                      d="M10,2 C14.418278,2 18,5.581722 18,10 C18,11.8482015 17.3732643,13.550021 16.3207287,14.9045228 L21.7071068,20.2928932 L20.2928932,21.7071068 L14.9045228,16.3207287 C13.550021,17.3732643 11.8482015,18 10,18 C5.581722,18 2,14.418278 2,10 C2,5.581722 5.581722,2 10,2 Z M10,4 C6.6862915,4 4,6.6862915 4,10 C4,13.3137085 6.6862915,16 10,16 C13.3137085,16 16,13.3137085 16,10 C16,6.6862915 13.3137085,4 10,4 Z"
+                                    />
+                                  </g>
+                                </g>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="emotion-51"
+                      data-testid="error-select-input"
+                    >
+                      <span
+                        id="multiTextfield_42_hintMessage"
+                      >
+                        Message in Text Field
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </span>
+    </span>
+  </body>
+</html>
+`;
+
+exports[`Design System/Select NotSearchableSelect smoke-test 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 21.875rem;
+}
+
+.emotion-3 {
+  position: relative;
+  min-width: 8.75rem;
+}
+
+.emotion-4 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
+  position: relative;
+}
+
+.emotion-4 #unique-tooltip-id {
+  display: none!important;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: 3.25rem;
+  min-width: 8.75rem;
+  background-color: #ffffff;
+}
+
+.emotion-5:hover {
+  background-color: #F5F5FF;
+}
+
+.emotion-5:focus-within {
+  box-shadow: 0 0 0 0.125rem #175bf5;
+  background-color: #F5F5FF;
+}
+
+.emotion-6 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0 0 0 0.75rem;
+}
+
+.emotion-6>div {
+  position: relative;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-8 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #1B214F;
+  padding: 0;
+  display: block;
+  position: relative;
+  top: 0.4375rem;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-8::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8::placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus {
+  outline: none;
+}
+
+.emotion-8:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-8:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-8:focus-within+label,
+.emotion-8:not(:placeholder-shown)+label {
+  font-weight: 700!important;
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+}
+
+.emotion-8:focus-within+label {
+  color: #1552DD;
+}
+
+.emotion-8:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-9 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, -95%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -95%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -95%) scale(0.8);
+  transform: translate(0.1875rem, -95%) scale(0.8);
+  color: #686BB3;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0.1875rem;
+  margin: auto;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-10 {
+  min-width: 2.75rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  cursor: unset;
+}
+
+.emotion-11 {
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.emotion-12 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-13 {
+  fill: #5f6c85;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-13 path {
+  fill: #5f6c85;
+}
+
+<html>
+  <head />
+  <body>
+    <span
+      class="emotion-0"
+    >
+      <span
+        class="emotion-1"
+      >
+        <div
+          class="emotion-2"
+        >
+          <div
+            style="margin: 5px;"
+          >
+            <div>
+              <div
+                class="emotion-3"
+              >
+                <div
+                  class="emotion-4"
+                >
+                  <div>
+                    <div
+                      class="emotion-5"
+                      data-testid="select-input"
+                    >
+                      <div
+                        class="emotion-6"
+                      >
+                        <div
+                          class="emotion-7"
+                        >
+                          <input
+                            aria-controls="select_19"
+                            aria-expanded="false"
+                            aria-invalid="false"
+                            autocomplete="off"
+                            class="emotion-8"
+                            data-testid="input_select-input"
+                            id="textfield_20"
+                            placeholder="Flavour"
+                            readonly=""
+                            role="combobox"
+                            value="Chocolate"
+                          />
+                          <label
+                            class="emotion-9"
+                            for="textfield_20"
+                          >
+                            Flavour 
+                          </label>
+                        </div>
+                        <div
+                          aria-hidden="false"
+                          class="emotion-10"
+                        >
+                          <div
+                            class="emotion-11"
+                          >
+                            <span
+                              class="emotion-12"
+                              data-testid="select-right-icon"
+                            >
+                              <svg
+                                class="emotion-13"
+                                fill="none"
+                                viewBox="0 0 12 6"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M0.853481 0.853541C0.538516 0.538554 0.761603 0 1.20705 0H10.793C11.2384 0 11.4615 0.538554 11.1465 0.853541L6.35357 5.64683C6.1583 5.84211 5.8417 5.84211 5.64643 5.64683L0.853481 0.853541Z"
+                                  fill="#0E0E17"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </span>
+    </span>
+  </body>
+</html>
+`;
+
+exports[`Design System/Select SelectWithEdgeCase smoke-test 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 32px;
+  height: 25rem;
+}
+
+.emotion-3 {
+  position: relative;
+  min-width: 8.75rem;
+}
+
+.emotion-4 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
+  position: relative;
+}
+
+.emotion-4 #unique-tooltip-id {
+  display: none!important;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: 3.25rem;
+  min-width: 8.75rem;
+  background-color: #ffffff;
+}
+
+.emotion-5:hover {
+  background-color: #F5F5FF;
+}
+
+.emotion-5:focus-within {
+  box-shadow: 0 0 0 0.125rem #175bf5;
+  background-color: #F5F5FF;
+}
+
+.emotion-6 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0 0 0 0.75rem;
+}
+
+.emotion-6>div {
+  position: relative;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-8 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #1B214F;
+  padding: 0;
+  display: block;
+  position: relative;
+  top: 0.4375rem;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-8::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8::placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus {
+  outline: none;
+}
+
+.emotion-8:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-8:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-8:focus-within+label,
+.emotion-8:not(:placeholder-shown)+label {
+  font-weight: 700!important;
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+}
+
+.emotion-8:focus-within+label {
+  color: #1552DD;
+}
+
+.emotion-8:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-9 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, -95%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -95%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -95%) scale(0.8);
+  transform: translate(0.1875rem, -95%) scale(0.8);
+  color: #686BB3;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0.1875rem;
+  margin: auto;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-10 {
+  min-width: 2.75rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  cursor: unset;
+}
+
+.emotion-11 {
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.emotion-12 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-13 {
+  fill: #5f6c85;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-13 path {
+  fill: #5f6c85;
+}
+
+<html>
+  <head />
+  <body>
+    <span
+      class="emotion-0"
+    >
+      <span
+        class="emotion-1"
+      >
+        <div
+          class="emotion-2"
+        >
+          <div
+            style="width: 250px;"
+          >
+            <div>
+              <div
+                class="emotion-3"
+              >
+                <div
+                  class="emotion-4"
+                >
+                  <div>
+                    <div
+                      class="emotion-5"
+                      data-testid="select-input"
+                    >
+                      <div
+                        class="emotion-6"
+                      >
+                        <div
+                          class="emotion-7"
+                        >
+                          <input
+                            aria-controls="select_29"
+                            aria-expanded="false"
+                            aria-invalid="false"
+                            autocomplete="off"
+                            class="emotion-8"
+                            data-testid="input_select-input"
+                            id="textfield_30"
+                            placeholder="Flavour"
+                            role="combobox"
+                            value="Chocolate"
+                          />
+                          <label
+                            class="emotion-9"
+                            for="textfield_30"
+                          >
+                            Flavour 
+                          </label>
+                        </div>
+                        <div
+                          aria-hidden="false"
+                          class="emotion-10"
+                        >
+                          <div
+                            class="emotion-11"
+                          >
+                            <span
+                              class="emotion-12"
+                              data-testid="select-right-icon"
+                            >
+                              <svg
+                                class="emotion-13"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                              >
+                                <g
+                                  fill="none"
+                                  fill-rule="evenodd"
+                                  id="\\uD83D\\uDD36-Symbols"
+                                  stroke="none"
+                                  stroke-width="1"
+                                >
+                                  <g
+                                    id="Close"
+                                  >
+                                    <path
+                                      d="M17.6568542,4.92893219 L19.0710678,6.34314575 L13.4139322,11.9999322 L19.0710678,17.6568542 L17.6568542,19.0710678 L11.9999322,13.4139322 L6.34314575,19.0710678 L4.92893219,17.6568542 L10.5849322,11.9999322 L4.92893219,6.34314575 L6.34314575,4.92893219 L11.9999322,10.5849322 L17.6568542,4.92893219 Z"
+                                    />
+                                  </g>
+                                </g>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="emotion-3"
+            >
+              <div
+                class="emotion-4"
+              >
+                <div>
+                  <div
+                    class="emotion-5"
+                    data-testid="select-input"
+                  >
+                    <div
+                      class="emotion-6"
+                    >
+                      <div
+                        class="emotion-7"
+                      >
+                        <input
+                          aria-controls="select_31"
+                          aria-expanded="false"
+                          aria-invalid="false"
+                          autocomplete="off"
+                          class="emotion-8"
+                          data-testid="input_select-input"
+                          id="textfield_32"
+                          placeholder="Flavour"
+                          role="combobox"
+                          value="Chocolate"
+                        />
+                        <label
+                          class="emotion-9"
+                          for="textfield_32"
+                        >
+                          Flavour 
+                        </label>
+                      </div>
+                      <div
+                        aria-hidden="false"
+                        class="emotion-10"
+                      >
+                        <div
+                          class="emotion-11"
+                        >
+                          <span
+                            class="emotion-12"
+                            data-testid="select-right-icon"
+                          >
+                            <svg
+                              class="emotion-13"
+                              viewBox="0 0 24 24"
+                              xmlns="http://www.w3.org/2000/svg"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                            >
+                              <g
+                                fill="none"
+                                fill-rule="evenodd"
+                                id="\\uD83D\\uDD36-Symbols"
+                                stroke="none"
+                                stroke-width="1"
+                              >
+                                <g
+                                  id="Close"
+                                >
+                                  <path
+                                    d="M17.6568542,4.92893219 L19.0710678,6.34314575 L13.4139322,11.9999322 L19.0710678,17.6568542 L17.6568542,19.0710678 L11.9999322,13.4139322 L6.34314575,19.0710678 L4.92893219,17.6568542 L10.5849322,11.9999322 L4.92893219,6.34314575 L6.34314575,4.92893219 L11.9999322,10.5849322 L17.6568542,4.92893219 Z"
+                                  />
+                                </g>
+                              </g>
+                            </svg>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </span>
+    </span>
+  </body>
+</html>
+`;
+
+exports[`Design System/Select SelectWithHighlight smoke-test 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 21.875rem;
+}
+
+.emotion-3 {
+  position: relative;
+  min-width: 8.75rem;
+}
+
+.emotion-4 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
+  position: relative;
+}
+
+.emotion-4 #unique-tooltip-id {
+  display: none!important;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: 3.25rem;
+  min-width: 8.75rem;
+  background-color: #ffffff;
+}
+
+.emotion-5:hover {
+  background-color: #F5F5FF;
+}
+
+.emotion-5:focus-within {
+  box-shadow: 0 0 0 0.125rem #175bf5;
+  background-color: #F5F5FF;
+}
+
+.emotion-6 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0 0 0 0.75rem;
+}
+
+.emotion-6>div {
+  position: relative;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-8 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #1B214F;
+  padding: 0;
+  display: block;
+  position: relative;
+  top: 0.4375rem;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-8::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8::placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus {
+  outline: none;
+}
+
+.emotion-8:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-8:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-8:focus-within+label,
+.emotion-8:not(:placeholder-shown)+label {
+  font-weight: 700!important;
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+}
+
+.emotion-8:focus-within+label {
+  color: #1552DD;
+}
+
+.emotion-8:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-9 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, -95%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -95%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -95%) scale(0.8);
+  transform: translate(0.1875rem, -95%) scale(0.8);
+  color: #686BB3;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0.1875rem;
+  margin: auto;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-10 {
+  min-width: 2.75rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  cursor: unset;
+}
+
+.emotion-11 {
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.emotion-12 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-13 {
+  fill: #5f6c85;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-13 path {
+  fill: #5f6c85;
+}
+
+<html>
+  <head />
+  <body>
+    <span
+      class="emotion-0"
+    >
+      <span
+        class="emotion-1"
+      >
+        <div
+          class="emotion-2"
+        >
+          <div
+            style="margin: 5px;"
+          >
+            <div>
+              <div
+                class="emotion-3"
+              >
+                <div
+                  class="emotion-4"
+                >
+                  <div>
+                    <div
+                      class="emotion-5"
+                      data-testid="select-input"
+                    >
+                      <div
+                        class="emotion-6"
+                      >
+                        <div
+                          class="emotion-7"
+                        >
+                          <input
+                            aria-controls="select_15"
+                            aria-expanded="false"
+                            aria-invalid="false"
+                            autocomplete="off"
+                            class="emotion-8"
+                            data-testid="input_select-input"
+                            id="textfield_16"
+                            placeholder="Flavour"
+                            role="combobox"
+                            value="Chocolate"
+                          />
+                          <label
+                            class="emotion-9"
+                            for="textfield_16"
+                          >
+                            Flavour 
+                          </label>
+                        </div>
+                        <div
+                          aria-hidden="false"
+                          class="emotion-10"
+                        >
+                          <div
+                            class="emotion-11"
+                          >
+                            <span
+                              class="emotion-12"
+                              data-testid="select-right-icon"
+                            >
+                              <svg
+                                class="emotion-13"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                              >
+                                <g
+                                  fill="none"
+                                  fill-rule="evenodd"
+                                  id="\\uD83D\\uDD36-Symbols"
+                                  stroke="none"
+                                  stroke-width="1"
+                                >
+                                  <g
+                                    id="Close"
+                                  >
+                                    <path
+                                      d="M17.6568542,4.92893219 L19.0710678,6.34314575 L13.4139322,11.9999322 L19.0710678,17.6568542 L17.6568542,19.0710678 L11.9999322,13.4139322 L6.34314575,19.0710678 L4.92893219,17.6568542 L10.5849322,11.9999322 L4.92893219,6.34314575 L6.34314575,4.92893219 L11.9999322,10.5849322 L17.6568542,4.92893219 Z"
+                                    />
+                                  </g>
+                                </g>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </span>
+    </span>
+  </body>
+</html>
+`;
+
+exports[`Design System/Select SelectWithStatuses smoke-test 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 21.875rem;
+}
+
+.emotion-3 {
+  position: relative;
+  min-width: 8.75rem;
+}
+
+.emotion-4 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
+  position: relative;
+}
+
+.emotion-4 #unique-tooltip-id {
+  display: none!important;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: 3.25rem;
+  min-width: 8.75rem;
+  background-color: #ffffff;
+}
+
+.emotion-5:hover {
+  background-color: #F5F5FF;
+}
+
+.emotion-5:focus-within {
+  box-shadow: 0 0 0 0.125rem #175bf5;
+  background-color: #F5F5FF;
+}
+
+.emotion-6 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0 0 0 0.75rem;
+}
+
+.emotion-6>div {
+  position: relative;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-8 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #1B214F;
+  padding: 0;
+  display: block;
+  position: relative;
+  top: 0.4375rem;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-8::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8::placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus {
+  outline: none;
+}
+
+.emotion-8:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-8:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-8:focus-within+label,
+.emotion-8:not(:placeholder-shown)+label {
+  font-weight: 700!important;
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+}
+
+.emotion-8:focus-within+label {
+  color: #1552DD;
+}
+
+.emotion-8:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-9 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, -95%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -95%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -95%) scale(0.8);
+  transform: translate(0.1875rem, -95%) scale(0.8);
+  color: #686BB3;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0.1875rem;
+  margin: auto;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-10 {
+  min-width: 2.75rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  cursor: unset;
+}
+
+.emotion-11 {
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.emotion-12 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-13 {
+  fill: #5f6c85;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-13 path {
+  fill: #5f6c85;
+}
+
+.emotion-14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.25rem;
+  opacity: 1;
+  color: #686BB3;
+  padding: 0.5rem 0 0;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-14 span {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  padding: 0;
+}
+
+.emotion-17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.125rem #F882AC;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: 3.25rem;
+  min-width: 8.75rem;
+  background-color: #FFE7F0;
+}
+
+.emotion-17:hover {
+  background-color: #FFB8D1;
+}
+
+.emotion-17:focus-within {
+  box-shadow: 0 0 0 0.125rem #175bf5;
+  background-color: #F5F5FF;
+}
+
+.emotion-21 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, -95%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -95%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -95%) scale(0.8);
+  transform: translate(0.1875rem, -95%) scale(0.8);
+  color: #FF176B;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0.1875rem;
+  margin: auto;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-26 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.25rem;
+  opacity: 1;
+  color: #CB205D;
+  padding: 0.5rem 0 0;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-26 span {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  padding: 0;
+}
+
+.emotion-28 {
+  fill: #CB205D;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-28 path {
+  fill: #CB205D;
+}
+
+.emotion-31 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: 3.25rem;
+  min-width: 8.75rem;
+  background-color: #F5F5FF;
+}
+
+.emotion-31:hover {
+  background-color: #F5F5FF;
+}
+
+.emotion-31:focus-within {
+  box-shadow: 0 0 0 0.125rem #b9cdfc;
+  background-color: #F5F5FF;
+}
+
+.emotion-34 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #1B214F;
+  padding: 0;
+  display: block;
+  position: relative;
+  top: 0.4375rem;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-34::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-34::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-34:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-34::placeholder {
+  color: transparent;
+}
+
+.emotion-34:focus {
+  outline: none;
+}
+
+.emotion-34:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-34:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-34:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-34:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-34:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-34:focus-within+label,
+.emotion-34:not(:placeholder-shown)+label {
+  font-weight: 700!important;
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+}
+
+.emotion-34:focus-within+label {
+  color: #1552DD;
+}
+
+.emotion-34:disabled {
+  cursor: text;
+}
+
+.emotion-38 {
+  fill: #5f6c85;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-38 path {
+  fill: #5f6c85;
+}
+
+<html>
+  <head />
+  <body>
+    <span
+      class="emotion-0"
+    >
+      <span
+        class="emotion-1"
+      >
+        <div
+          class="emotion-2"
+        >
+          <div
+            style="margin: 5px;"
+          >
+            <div>
+              <div
+                class="emotion-3"
+              >
+                <div
+                  class="emotion-4"
+                >
+                  <div>
+                    <div
+                      class="emotion-5"
+                      data-testid="select-input"
+                    >
+                      <div
+                        class="emotion-6"
+                      >
+                        <div
+                          class="emotion-7"
+                        >
+                          <input
+                            aria-controls="select_7"
+                            aria-describedby="textfield_8_hintMessage"
+                            aria-expanded="false"
+                            aria-invalid="false"
+                            autocomplete="off"
+                            class="emotion-8"
+                            data-testid="input_select-input"
+                            id="textfield_8"
+                            placeholder="Normal"
+                            role="combobox"
+                            value="Chocolate"
+                          />
+                          <label
+                            class="emotion-9"
+                            for="textfield_8"
+                          >
+                            Normal 
+                          </label>
+                        </div>
+                        <div
+                          aria-hidden="false"
+                          class="emotion-10"
+                        >
+                          <div
+                            class="emotion-11"
+                          >
+                            <span
+                              class="emotion-12"
+                              data-testid="select-right-icon"
+                            >
+                              <svg
+                                class="emotion-13"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                              >
+                                <g
+                                  fill="none"
+                                  fill-rule="evenodd"
+                                  id="\\uD83D\\uDD36-Symbols"
+                                  stroke="none"
+                                  stroke-width="1"
+                                >
+                                  <g
+                                    id="Close"
+                                  >
+                                    <path
+                                      d="M17.6568542,4.92893219 L19.0710678,6.34314575 L13.4139322,11.9999322 L19.0710678,17.6568542 L17.6568542,19.0710678 L11.9999322,13.4139322 L6.34314575,19.0710678 L4.92893219,17.6568542 L10.5849322,11.9999322 L4.92893219,6.34314575 L6.34314575,4.92893219 L11.9999322,10.5849322 L17.6568542,4.92893219 Z"
+                                    />
+                                  </g>
+                                </g>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="emotion-14"
+                      data-testid="error-select-input"
+                    >
+                      <span
+                        id="textfield_8_hintMessage"
+                      >
+                        Hint Message
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            style="margin: 5px;"
+          >
+            <div>
+              <div
+                class="emotion-3"
+              >
+                <div
+                  class="emotion-4"
+                >
+                  <div>
+                    <div
+                      class="emotion-17"
+                      data-testid="select-input"
+                    >
+                      <div
+                        class="emotion-6"
+                      >
+                        <div
+                          class="emotion-7"
+                        >
+                          <input
+                            aria-controls="select_9"
+                            aria-describedby="textfield_10_hintMessage"
+                            aria-expanded="false"
+                            aria-invalid="true"
+                            autocomplete="off"
+                            class="emotion-8"
+                            data-testid="input_select-input"
+                            id="textfield_10"
+                            placeholder="Error"
+                            role="combobox"
+                            value="Chocolate"
+                          />
+                          <label
+                            class="emotion-21"
+                            for="textfield_10"
+                          >
+                            Error 
+                          </label>
+                        </div>
+                        <div
+                          aria-hidden="false"
+                          class="emotion-10"
+                        >
+                          <div
+                            class="emotion-11"
+                          >
+                            <span
+                              class="emotion-12"
+                              data-testid="select-right-icon"
+                            >
+                              <svg
+                                class="emotion-13"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                              >
+                                <g
+                                  fill="none"
+                                  fill-rule="evenodd"
+                                  id="\\uD83D\\uDD36-Symbols"
+                                  stroke="none"
+                                  stroke-width="1"
+                                >
+                                  <g
+                                    id="Close"
+                                  >
+                                    <path
+                                      d="M17.6568542,4.92893219 L19.0710678,6.34314575 L13.4139322,11.9999322 L19.0710678,17.6568542 L17.6568542,19.0710678 L11.9999322,13.4139322 L6.34314575,19.0710678 L4.92893219,17.6568542 L10.5849322,11.9999322 L4.92893219,6.34314575 L6.34314575,4.92893219 L11.9999322,10.5849322 L17.6568542,4.92893219 Z"
+                                    />
+                                  </g>
+                                </g>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="emotion-26"
+                      data-testid="error-select-input"
+                    >
+                      <span
+                        class="emotion-12"
+                      >
+                        <svg
+                          class="emotion-28"
+                          fill="none"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g
+                            id="warning"
+                          >
+                            <path
+                              d="M9.9966 13.9851C10.2284 13.9851 10.4238 13.9067 10.5829 13.7499C10.742 13.5931 10.8215 13.3988 10.8215 13.167C10.8215 12.9352 10.7431 12.7397 10.5863 12.5807C10.4295 12.4216 10.2352 12.3421 10.0034 12.3421C9.7716 12.3421 9.57617 12.4205 9.4171 12.5773C9.25804 12.7341 9.1785 12.9283 9.1785 13.1601C9.1785 13.3919 9.2569 13.5874 9.41371 13.7465C9.57051 13.9055 9.76481 13.9851 9.9966 13.9851ZM10.0197 10.7976C10.2495 10.7976 10.4461 10.7159 10.6094 10.5525C10.7727 10.389 10.8544 10.1925 10.8544 9.96268V6.85584C10.8544 6.62608 10.7726 6.42948 10.6091 6.26605C10.4457 6.10262 10.249 6.0209 10.0192 6.0209C9.78931 6.0209 9.59274 6.10262 9.42944 6.26605C9.26613 6.42948 9.18448 6.62608 9.18448 6.85584V9.96268C9.18448 10.1925 9.26622 10.389 9.42969 10.5525C9.59317 10.7159 9.78983 10.7976 10.0197 10.7976ZM10.0013 18C8.89481 18 7.85478 17.79 6.88122 17.3701C5.90763 16.9502 5.06076 16.3803 4.34059 15.6604C3.62041 14.9405 3.05026 14.094 2.63016 13.1208C2.21005 12.1476 2 11.1078 2 10.0013C2 8.8915 2.21035 7.84835 2.63105 6.87186C3.05175 5.89538 3.62269 5.04596 4.34387 4.32362C5.06506 3.60129 5.91159 3.03343 6.88345 2.62006C7.8553 2.20669 8.89371 2 9.9987 2C11.1084 2 12.1514 2.2066 13.1278 2.61981C14.1042 3.03301 14.9536 3.60072 15.6761 4.32292C16.3986 5.04513 16.9666 5.8944 17.3799 6.87073C17.7933 7.84706 18 8.89025 18 10.0003C18 11.1104 17.7934 12.15 17.3802 13.1192C16.967 14.0884 16.3994 14.9337 15.6773 15.6552C14.9553 16.3766 14.1062 16.9478 13.1301 17.3687C12.1541 17.7896 11.1111 18 10.0013 18Z"
+                              fill="#54587F"
+                              id="Vector"
+                            />
+                          </g>
+                        </svg>
+                      </span>
+                      <span
+                        id="textfield_10_hintMessage"
+                      >
+                        Error Message
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            style="margin: 5px;"
+          >
+            <div>
+              <div
+                class="emotion-3"
+              >
+                <div
+                  class="emotion-4"
+                >
+                  <div>
+                    <div
+                      class="emotion-31"
+                      data-testid="select-input"
+                    >
+                      <div
+                        class="emotion-6"
+                      >
+                        <div
+                          class="emotion-7"
+                        >
+                          <input
+                            aria-controls="select_11"
+                            aria-describedby="textfield_12_hintMessage"
+                            aria-expanded="false"
+                            aria-invalid="false"
+                            autocomplete="off"
+                            class="emotion-34"
+                            data-testid="input_select-input"
+                            disabled=""
+                            id="textfield_12"
+                            placeholder="Read-only"
+                            readonly=""
+                            role="combobox"
+                            value="Chocolate"
+                          />
+                          <label
+                            class="emotion-9"
+                            for="textfield_12"
+                          >
+                            Read-only 
+                          </label>
+                        </div>
+                        <div
+                          aria-hidden="false"
+                          class="emotion-10"
+                        >
+                          <span
+                            class="emotion-12"
+                          >
+                            <svg
+                              class="emotion-38"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <g
+                                id="Global Icons/Lock"
+                              >
+                                <path
+                                  d="M18 8.66667H17V6.7619C17 4.13333 14.76 2 12 2C9.24 2 7 4.13333 7 6.7619V8.66667H6C4.9 8.66667 4 9.52381 4 10.5714V20.0952C4 21.1429 4.9 22 6 22H18C19.1 22 20 21.1429 20 20.0952V10.5714C20 9.52381 19.1 8.66667 18 8.66667ZM12 17.2381C10.9 17.2381 10 16.381 10 15.3333C10 14.2857 10.9 13.4286 12 13.4286C13.1 13.4286 14 14.2857 14 15.3333C14 16.381 13.1 17.2381 12 17.2381ZM15.1 8.66667H8.9V6.7619C8.9 5.13333 10.29 3.80952 12 3.80952C13.71 3.80952 15.1 5.13333 15.1 6.7619V8.66667Z"
+                                  fill="black"
+                                  id="Vector"
+                                />
+                              </g>
+                            </svg>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="emotion-14"
+                      data-testid="error-select-input"
+                    >
+                      <span
+                        id="textfield_12_hintMessage"
+                      >
+                        Hint Message
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </span>
+    </span>
+  </body>
+</html>
+`;
+
+exports[`Design System/Select SelectWithUncontrolledState smoke-test 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 21.875rem;
+}
+
+.emotion-3 {
+  position: relative;
+  min-width: 8.75rem;
+}
+
+.emotion-4 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
+  position: relative;
+}
+
+.emotion-4 #unique-tooltip-id {
+  display: none!important;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: 3.25rem;
+  min-width: 8.75rem;
+  background-color: #ffffff;
+}
+
+.emotion-5:hover {
+  background-color: #F5F5FF;
+}
+
+.emotion-5:focus-within {
+  box-shadow: 0 0 0 0.125rem #175bf5;
+  background-color: #F5F5FF;
+}
+
+.emotion-6 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0 0 0 0.75rem;
+}
+
+.emotion-6>div {
+  position: relative;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-8 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #1B214F;
+  padding: 0;
+  display: block;
+  position: relative;
+  top: 0.4375rem;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-8::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8::placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus {
+  outline: none;
+}
+
+.emotion-8:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-8:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-8:focus-within+label,
+.emotion-8:not(:placeholder-shown)+label {
+  font-weight: 700!important;
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+}
+
+.emotion-8:focus-within+label {
+  color: #1552DD;
+}
+
+.emotion-8:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-9 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, -95%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -95%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -95%) scale(0.8);
+  transform: translate(0.1875rem, -95%) scale(0.8);
+  color: #686BB3;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0.1875rem;
+  margin: auto;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-10 {
+  min-width: 2.75rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  cursor: unset;
+}
+
+.emotion-11 {
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.emotion-12 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-13 {
+  fill: #5f6c85;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-13 path {
+  fill: #5f6c85;
+}
+
+.emotion-14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.25rem;
+  opacity: 1;
+  color: #686BB3;
+  padding: 0.5rem 0 0;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-14 span {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  padding: 0;
+}
+
+<html>
+  <head />
+  <body>
+    <span
+      class="emotion-0"
+    >
+      <span
+        class="emotion-1"
+      >
+        <div
+          class="emotion-2"
+        >
+          <div
+            style="margin: 5px;"
+          >
+            <div>
+              <div
+                class="emotion-3"
+              >
+                <div
+                  class="emotion-4"
+                >
+                  <div>
+                    <div
+                      class="emotion-5"
+                      data-testid="select-input"
+                    >
+                      <div
+                        class="emotion-6"
+                      >
+                        <div
+                          class="emotion-7"
+                        >
+                          <input
+                            aria-controls="select_13"
+                            aria-describedby="textfield_14_hintMessage"
+                            aria-expanded="false"
+                            aria-invalid="false"
+                            autocomplete="off"
+                            class="emotion-8"
+                            data-testid="input_select-input"
+                            id="textfield_14"
+                            placeholder="Label"
+                            role="combobox"
+                            value="Chocolate"
+                          />
+                          <label
+                            class="emotion-9"
+                            for="textfield_14"
+                          >
+                            Label 
+                          </label>
+                        </div>
+                        <div
+                          aria-hidden="false"
+                          class="emotion-10"
+                        >
+                          <div
+                            class="emotion-11"
+                          >
+                            <span
+                              class="emotion-12"
+                              data-testid="select-right-icon"
+                            >
+                              <svg
+                                class="emotion-13"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                              >
+                                <g
+                                  fill="none"
+                                  fill-rule="evenodd"
+                                  id="\\uD83D\\uDD36-Symbols"
+                                  stroke="none"
+                                  stroke-width="1"
+                                >
+                                  <g
+                                    id="Close"
+                                  >
+                                    <path
+                                      d="M17.6568542,4.92893219 L19.0710678,6.34314575 L13.4139322,11.9999322 L19.0710678,17.6568542 L17.6568542,19.0710678 L11.9999322,13.4139322 L6.34314575,19.0710678 L4.92893219,17.6568542 L10.5849322,11.9999322 L4.92893219,6.34314575 L6.34314575,4.92893219 L11.9999322,10.5849322 L17.6568542,4.92893219 Z"
+                                    />
+                                  </g>
+                                </g>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="emotion-14"
+                      data-testid="error-select-input"
+                    >
+                      <span
+                        id="textfield_14_hintMessage"
+                      >
+                        This is a select with uncontrolled value, see code for more
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </span>
+    </span>
+  </body>
+</html>
+`;
+
+exports[`Design System/Select SimpleGroupSelect smoke-test 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 21.875rem;
+}
+
+.emotion-3 {
+  position: relative;
+  min-width: 8.75rem;
+}
+
+.emotion-4 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
+  position: relative;
+}
+
+.emotion-4 #unique-tooltip-id {
+  display: none!important;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: 3.25rem;
+  min-width: 8.75rem;
+  background-color: #ffffff;
+}
+
+.emotion-5:hover {
+  background-color: #F5F5FF;
+}
+
+.emotion-5:focus-within {
+  box-shadow: 0 0 0 0.125rem #175bf5;
+  background-color: #F5F5FF;
+}
+
+.emotion-6 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0 0 0 0.75rem;
+}
+
+.emotion-6>div {
+  position: relative;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-8 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #1B214F;
+  padding: 0;
+  display: block;
+  position: relative;
+  top: 0.4375rem;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-8::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8::placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus {
+  outline: none;
+}
+
+.emotion-8:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-8:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-8:focus-within+label,
+.emotion-8:not(:placeholder-shown)+label {
+  font-weight: 700!important;
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+}
+
+.emotion-8:focus-within+label {
+  color: #1552DD;
+}
+
+.emotion-8:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-9 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, -95%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -95%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -95%) scale(0.8);
+  transform: translate(0.1875rem, -95%) scale(0.8);
+  color: #686BB3;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0.1875rem;
+  margin: auto;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-10 {
+  min-width: 2.75rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  cursor: unset;
+}
+
+.emotion-11 {
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.emotion-12 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-13 {
+  fill: #5f6c85;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-13 path {
+  fill: #5f6c85;
+}
+
+<html>
+  <head />
+  <body>
+    <span
+      class="emotion-0"
+    >
+      <span
+        class="emotion-1"
+      >
+        <div
+          class="emotion-2"
+        >
+          <div
+            style="margin: 5px;"
+          >
+            <div>
+              <div
+                class="emotion-3"
+              >
+                <div
+                  class="emotion-4"
+                >
+                  <div>
+                    <div
+                      class="emotion-5"
+                      data-testid="select-input"
+                    >
+                      <div
+                        class="emotion-6"
+                      >
+                        <div
+                          class="emotion-7"
+                        >
+                          <input
+                            aria-controls="select_17"
+                            aria-expanded="false"
+                            aria-invalid="false"
+                            autocomplete="off"
+                            class="emotion-8"
+                            data-testid="input_select-input"
+                            id="textfield_18"
+                            placeholder="Group Select"
+                            role="combobox"
+                            value="Chocolate"
+                          />
+                          <label
+                            class="emotion-9"
+                            for="textfield_18"
+                          >
+                            Group Select 
+                          </label>
+                        </div>
+                        <div
+                          aria-hidden="false"
+                          class="emotion-10"
+                        >
+                          <div
+                            class="emotion-11"
+                          >
+                            <span
+                              class="emotion-12"
+                              data-testid="select-right-icon"
+                            >
+                              <svg
+                                class="emotion-13"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                              >
+                                <g
+                                  fill="none"
+                                  fill-rule="evenodd"
+                                  id="\\uD83D\\uDD36-Symbols"
+                                  stroke="none"
+                                  stroke-width="1"
+                                >
+                                  <g
+                                    id="Close"
+                                  >
+                                    <path
+                                      d="M17.6568542,4.92893219 L19.0710678,6.34314575 L13.4139322,11.9999322 L19.0710678,17.6568542 L17.6568542,19.0710678 L11.9999322,13.4139322 L6.34314575,19.0710678 L4.92893219,17.6568542 L10.5849322,11.9999322 L4.92893219,6.34314575 L6.34314575,4.92893219 L11.9999322,10.5849322 L17.6568542,4.92893219 Z"
+                                    />
+                                  </g>
+                                </g>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </span>
+    </span>
+  </body>
+</html>
+`;
+
+exports[`Design System/Select SimpleSelect smoke-test 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 18.75rem;
+}
+
+.emotion-3 {
+  position: relative;
+  min-width: 8.75rem;
+}
+
+.emotion-4 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
+  position: relative;
+}
+
+.emotion-4 #unique-tooltip-id {
+  display: none!important;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: 3.25rem;
+  min-width: 8.75rem;
+  background-color: #ffffff;
+}
+
+.emotion-5:hover {
+  background-color: #F5F5FF;
+}
+
+.emotion-5:focus-within {
+  box-shadow: 0 0 0 0.125rem #175bf5;
+  background-color: #F5F5FF;
+}
+
+.emotion-6 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0 0 0 0.75rem;
+}
+
+.emotion-6>div {
+  position: relative;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-8 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #1B214F;
+  padding: 0;
+  display: block;
+  position: relative;
+  top: 0.4375rem;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-8::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8::placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus {
+  outline: none;
+}
+
+.emotion-8:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-8:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-8:focus-within+label,
+.emotion-8:not(:placeholder-shown)+label {
+  font-weight: 700!important;
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+}
+
+.emotion-8:focus-within+label {
+  color: #1552DD;
+}
+
+.emotion-8:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-9 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, -95%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -95%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -95%) scale(0.8);
+  transform: translate(0.1875rem, -95%) scale(0.8);
+  color: #686BB3;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0.1875rem;
+  margin: auto;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-10 {
+  min-width: 2.75rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  cursor: unset;
+}
+
+.emotion-11 {
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.emotion-12 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-13 {
+  fill: #5f6c85;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-13 path {
+  fill: #5f6c85;
+}
+
+<html>
+  <head />
+  <body>
+    <span
+      class="emotion-0"
+    >
+      <span
+        class="emotion-1"
+      >
+        <div
+          class="emotion-2"
+        >
+          <div
+            style="margin: 5px;"
+          >
+            <div>
+              <div
+                class="emotion-3"
+              >
+                <div
+                  class="emotion-4"
+                >
+                  <div>
+                    <div
+                      class="emotion-5"
+                      data-testid="select-input"
+                    >
+                      <div
+                        class="emotion-6"
+                      >
+                        <div
+                          class="emotion-7"
+                        >
+                          <input
+                            aria-controls="select_1"
+                            aria-expanded="false"
+                            aria-invalid="false"
+                            autocomplete="off"
+                            class="emotion-8"
+                            data-testid="input_select-input"
+                            id="textfield_2"
+                            placeholder="Flavour"
+                            role="combobox"
+                            value="Chocolate"
+                          />
+                          <label
+                            class="emotion-9"
+                            for="textfield_2"
+                          >
+                            Flavour 
+                          </label>
+                        </div>
+                        <div
+                          aria-hidden="false"
+                          class="emotion-10"
+                        >
+                          <div
+                            class="emotion-11"
+                          >
+                            <span
+                              class="emotion-12"
+                              data-testid="select-right-icon"
+                            >
+                              <svg
+                                class="emotion-13"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                              >
+                                <g
+                                  fill="none"
+                                  fill-rule="evenodd"
+                                  id="\\uD83D\\uDD36-Symbols"
+                                  stroke="none"
+                                  stroke-width="1"
+                                >
+                                  <g
+                                    id="Close"
+                                  >
+                                    <path
+                                      d="M17.6568542,4.92893219 L19.0710678,6.34314575 L13.4139322,11.9999322 L19.0710678,17.6568542 L17.6568542,19.0710678 L11.9999322,13.4139322 L6.34314575,19.0710678 L4.92893219,17.6568542 L10.5849322,11.9999322 L4.92893219,6.34314575 L6.34314575,4.92893219 L11.9999322,10.5849322 L17.6568542,4.92893219 Z"
+                                    />
+                                  </g>
+                                </g>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            style="margin: 5px;"
+          >
+            <div>
+              <div
+                class="emotion-3"
+              >
+                <div
+                  class="emotion-4"
+                >
+                  <div>
+                    <div
+                      class="emotion-5"
+                      data-testid="select-input"
+                    >
+                      <div
+                        class="emotion-6"
+                      >
+                        <div
+                          class="emotion-7"
+                        >
+                          <input
+                            aria-controls="select_3"
+                            aria-expanded="false"
+                            aria-invalid="false"
+                            autocomplete="off"
+                            class="emotion-8"
+                            data-testid="input_select-input"
+                            id="textfield_4"
+                            placeholder="Flavour"
+                            role="combobox"
+                            value="Chocolate"
+                          />
+                          <label
+                            class="emotion-9"
+                            for="textfield_4"
+                          >
+                            Flavour 
+                          </label>
+                        </div>
+                        <div
+                          aria-hidden="false"
+                          class="emotion-10"
+                        >
+                          <div
+                            class="emotion-11"
+                          >
+                            <span
+                              class="emotion-12"
+                              data-testid="select-right-icon"
+                            >
+                              <svg
+                                class="emotion-13"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                              >
+                                <g
+                                  fill="none"
+                                  fill-rule="evenodd"
+                                  id="\\uD83D\\uDD36-Symbols"
+                                  stroke="none"
+                                  stroke-width="1"
+                                >
+                                  <g
+                                    id="Close"
+                                  >
+                                    <path
+                                      d="M17.6568542,4.92893219 L19.0710678,6.34314575 L13.4139322,11.9999322 L19.0710678,17.6568542 L17.6568542,19.0710678 L11.9999322,13.4139322 L6.34314575,19.0710678 L4.92893219,17.6568542 L10.5849322,11.9999322 L4.92893219,6.34314575 L6.34314575,4.92893219 L11.9999322,10.5849322 L17.6568542,4.92893219 Z"
+                                    />
+                                  </g>
+                                </g>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            style="margin: 5px;"
+          >
+            <div>
+              <div
+                class="emotion-3"
+              >
+                <div
+                  class="emotion-4"
+                >
+                  <div>
+                    <div
+                      class="emotion-5"
+                      data-testid="select-input"
+                    >
+                      <div
+                        class="emotion-6"
+                      >
+                        <div
+                          class="emotion-7"
+                        >
+                          <input
+                            aria-controls="select_5"
+                            aria-expanded="false"
+                            aria-invalid="false"
+                            autocomplete="off"
+                            class="emotion-8"
+                            data-testid="input_select-input"
+                            id="textfield_6"
+                            placeholder="Flavour"
+                            role="combobox"
+                            value="Chocolate"
+                          />
+                          <label
+                            class="emotion-9"
+                            for="textfield_6"
+                          >
+                            Flavour 
+                          </label>
+                        </div>
+                        <div
+                          aria-hidden="false"
+                          class="emotion-10"
+                        >
+                          <div
+                            class="emotion-11"
+                          >
+                            <span
+                              class="emotion-12"
+                              data-testid="select-right-icon"
+                            >
+                              <svg
+                                class="emotion-13"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                              >
+                                <g
+                                  fill="none"
+                                  fill-rule="evenodd"
+                                  id="\\uD83D\\uDD36-Symbols"
+                                  stroke="none"
+                                  stroke-width="1"
+                                >
+                                  <g
+                                    id="Close"
+                                  >
+                                    <path
+                                      d="M17.6568542,4.92893219 L19.0710678,6.34314575 L13.4139322,11.9999322 L19.0710678,17.6568542 L17.6568542,19.0710678 L11.9999322,13.4139322 L6.34314575,19.0710678 L4.92893219,17.6568542 L10.5849322,11.9999322 L4.92893219,6.34314575 L6.34314575,4.92893219 L11.9999322,10.5849322 L17.6568542,4.92893219 Z"
+                                    />
+                                  </g>
+                                </g>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </span>
+    </span>
+  </body>
+</html>
+`;

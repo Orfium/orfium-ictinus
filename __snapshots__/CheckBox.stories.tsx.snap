@@ -1,0 +1,1949 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Design System/CheckBox CheckBoxStory smoke-test 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  opacity: 1;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 3rem;
+  height: 3rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
+
+.emotion-4:before {
+  display: none;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  content: ' ';
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+}
+
+.emotion-4:hover:before {
+  display: block;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.emotion-5 {
+  border: 0;
+  border-radius: 0.125rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-5+label {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+}
+
+.emotion-5+label:before {
+  content: '';
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #b7c3d8;
+  border-radius: 0.25rem;
+}
+
+.emotion-5:disabled+label {
+  cursor: not-allowed;
+}
+
+.emotion-6 span {
+  padding: 0;
+}
+
+.emotion-6 svg {
+  position: absolute;
+  top: 0;
+  display: none;
+}
+
+.emotion-7 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-8 {
+  fill: white;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.emotion-8 path {
+  fill: white;
+}
+
+.emotion-11 {
+  border: 0;
+  border-radius: 0.125rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-11+label {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+}
+
+.emotion-11+label:before {
+  content: '';
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #175bf5;
+  border-radius: 0.25rem;
+}
+
+.emotion-11:disabled+label {
+  cursor: not-allowed;
+}
+
+.emotion-12 span {
+  padding: 0;
+}
+
+.emotion-12 svg {
+  position: absolute;
+  top: 0;
+  display: block;
+}
+
+.emotion-15 {
+  opacity: 0.3;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-16 {
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 3rem;
+  height: 3rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
+
+.emotion-16:before {
+  display: none;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  content: ' ';
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+}
+
+<html>
+  <head />
+  <body>
+    <span
+      class="emotion-0"
+    >
+      <span
+        class="emotion-1"
+      >
+        <div
+          class="emotion-2"
+        >
+          <div
+            style="margin: 5px;"
+          >
+            <span
+              class="emotion-3"
+            >
+              <span
+                class="emotion-4"
+              >
+                <input
+                  class="emotion-5"
+                  data-testid="checkbox"
+                  id="styled-checkbox-1"
+                  type="checkbox"
+                />
+                <label
+                  class="emotion-6"
+                  for="styled-checkbox-1"
+                >
+                  <span
+                    class="emotion-7"
+                  >
+                    <svg
+                      class="emotion-8"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <g
+                        fill="none"
+                        fill-rule="evenodd"
+                        id="\\uD83D\\uDD36-Symbols"
+                        stroke="none"
+                        stroke-width="1"
+                      >
+                        <g
+                          id="Checkmark"
+                        >
+                          <path
+                            d="M16.1742639,3.56546017 L17.5665405,4.95773677 L9.21853983,13.3054602 L14.0871995,18.1742639 L12.6949229,19.5665405 L6.43453983,13.3061575 L6.43653983,13.3044602 L6.43589028,13.3038338 L16.1742639,3.56546017 Z"
+                            transform="translate(12.000540, 11.566000) scale(-1, 1) rotate(-90.000000) translate(-12.000540, -11.566000)"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </span>
+                </label>
+              </span>
+            </span>
+          </div>
+          <div
+            style="margin: 5px;"
+          >
+            <span
+              class="emotion-3"
+            >
+              <span
+                class="emotion-4"
+              >
+                <input
+                  checked=""
+                  class="emotion-11"
+                  data-testid="checkbox"
+                  id="styled-checkbox-2"
+                  type="checkbox"
+                />
+                <label
+                  class="emotion-12"
+                  for="styled-checkbox-2"
+                >
+                  <span
+                    class="emotion-7"
+                  >
+                    <svg
+                      class="emotion-8"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <g
+                        fill="none"
+                        fill-rule="evenodd"
+                        id="\\uD83D\\uDD36-Symbols"
+                        stroke="none"
+                        stroke-width="1"
+                      >
+                        <g
+                          id="Checkmark"
+                        >
+                          <path
+                            d="M16.1742639,3.56546017 L17.5665405,4.95773677 L9.21853983,13.3054602 L14.0871995,18.1742639 L12.6949229,19.5665405 L6.43453983,13.3061575 L6.43653983,13.3044602 L6.43589028,13.3038338 L16.1742639,3.56546017 Z"
+                            transform="translate(12.000540, 11.566000) scale(-1, 1) rotate(-90.000000) translate(-12.000540, -11.566000)"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </span>
+                </label>
+              </span>
+            </span>
+          </div>
+          <div
+            style="margin: 5px;"
+          >
+            <span
+              class="emotion-15"
+            >
+              <span
+                class="emotion-16"
+              >
+                <input
+                  checked=""
+                  class="emotion-11"
+                  data-testid="checkbox"
+                  disabled=""
+                  id="styled-checkbox-3"
+                  type="checkbox"
+                />
+                <label
+                  class="emotion-12"
+                  for="styled-checkbox-3"
+                >
+                  <span
+                    class="emotion-7"
+                  >
+                    <svg
+                      class="emotion-8"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <g
+                        fill="none"
+                        fill-rule="evenodd"
+                        id="\\uD83D\\uDD36-Symbols"
+                        stroke="none"
+                        stroke-width="1"
+                      >
+                        <g
+                          id="Checkmark"
+                        >
+                          <path
+                            d="M16.1742639,3.56546017 L17.5665405,4.95773677 L9.21853983,13.3054602 L14.0871995,18.1742639 L12.6949229,19.5665405 L6.43453983,13.3061575 L6.43653983,13.3044602 L6.43589028,13.3038338 L16.1742639,3.56546017 Z"
+                            transform="translate(12.000540, 11.566000) scale(-1, 1) rotate(-90.000000) translate(-12.000540, -11.566000)"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </span>
+                </label>
+              </span>
+            </span>
+          </div>
+          <div
+            style="margin: 5px;"
+          >
+            <span
+              class="emotion-3"
+            >
+              <span
+                class="emotion-4"
+              >
+                <input
+                  checked=""
+                  class="emotion-11"
+                  data-testid="checkbox"
+                  id="styled-checkbox-4"
+                  type="checkbox"
+                />
+                <label
+                  class="emotion-12"
+                  for="styled-checkbox-4"
+                >
+                  <span
+                    class="emotion-7"
+                  >
+                    <svg
+                      class="emotion-8"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <g
+                        fill="none"
+                        fill-rule="evenodd"
+                        id="\\uD83D\\uDD36-Symbols"
+                        stroke="none"
+                        stroke-width="1"
+                      >
+                        <g
+                          id="Minus"
+                        >
+                          <rect
+                            height="2"
+                            id="minus"
+                            width="16"
+                            x="4"
+                            y="11"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </span>
+                </label>
+              </span>
+            </span>
+          </div>
+          <div
+            style="margin: 5px;"
+          >
+            <span
+              class="emotion-15"
+            >
+              <span
+                class="emotion-16"
+              >
+                <input
+                  checked=""
+                  class="emotion-11"
+                  data-testid="checkbox"
+                  disabled=""
+                  id="styled-checkbox-5"
+                  type="checkbox"
+                />
+                <label
+                  class="emotion-12"
+                  for="styled-checkbox-5"
+                >
+                  <span
+                    class="emotion-7"
+                  >
+                    <svg
+                      class="emotion-8"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <g
+                        fill="none"
+                        fill-rule="evenodd"
+                        id="\\uD83D\\uDD36-Symbols"
+                        stroke="none"
+                        stroke-width="1"
+                      >
+                        <g
+                          id="Minus"
+                        >
+                          <rect
+                            height="2"
+                            id="minus"
+                            width="16"
+                            x="4"
+                            y="11"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </span>
+                </label>
+              </span>
+            </span>
+          </div>
+          <div
+            style="margin: 5px;"
+          >
+            <span
+              class="emotion-3"
+            >
+              <span
+                class="emotion-4"
+              >
+                <input
+                  class="emotion-5"
+                  data-testid="checkbox"
+                  id="styled-checkbox-6"
+                  type="checkbox"
+                />
+                <label
+                  class="emotion-6"
+                  for="styled-checkbox-6"
+                >
+                  <span
+                    class="emotion-7"
+                  >
+                    <svg
+                      class="emotion-8"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <g
+                        fill="none"
+                        fill-rule="evenodd"
+                        id="\\uD83D\\uDD36-Symbols"
+                        stroke="none"
+                        stroke-width="1"
+                      >
+                        <g
+                          id="Minus"
+                        >
+                          <rect
+                            height="2"
+                            id="minus"
+                            width="16"
+                            x="4"
+                            y="11"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </span>
+                </label>
+              </span>
+            </span>
+          </div>
+          <div
+            style="margin: 5px;"
+          >
+            <span
+              class="emotion-15"
+            >
+              <span
+                class="emotion-16"
+              >
+                <input
+                  class="emotion-5"
+                  data-testid="checkbox"
+                  disabled=""
+                  id="styled-checkbox-7"
+                  type="checkbox"
+                />
+                <label
+                  class="emotion-6"
+                  for="styled-checkbox-7"
+                >
+                  <span
+                    class="emotion-7"
+                  >
+                    <svg
+                      class="emotion-8"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <g
+                        fill="none"
+                        fill-rule="evenodd"
+                        id="\\uD83D\\uDD36-Symbols"
+                        stroke="none"
+                        stroke-width="1"
+                      >
+                        <g
+                          id="Minus"
+                        >
+                          <rect
+                            height="2"
+                            id="minus"
+                            width="16"
+                            x="4"
+                            y="11"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </span>
+                </label>
+              </span>
+            </span>
+          </div>
+        </div>
+      </span>
+    </span>
+  </body>
+</html>
+`;
+
+exports[`Design System/CheckBox CheckBoxWithLabel smoke-test 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  opacity: 1;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 3rem;
+  height: 3rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
+
+.emotion-4:before {
+  display: none;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  content: ' ';
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+}
+
+.emotion-4:hover:before {
+  display: block;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.emotion-5 {
+  border: 0;
+  border-radius: 0.125rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-5+label {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+}
+
+.emotion-5+label:before {
+  content: '';
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #b7c3d8;
+  border-radius: 0.25rem;
+}
+
+.emotion-5:disabled+label {
+  cursor: not-allowed;
+}
+
+.emotion-6 span {
+  padding: 0;
+}
+
+.emotion-6 svg {
+  position: absolute;
+  top: 0;
+  display: none;
+}
+
+.emotion-7 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-8 {
+  fill: white;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.emotion-8 path {
+  fill: white;
+}
+
+.emotion-9 {
+  padding-left: 0.25rem;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: #191927;
+  white-space: nowrap;
+}
+
+.emotion-12 {
+  border: 0;
+  border-radius: 0.125rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-12+label {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+}
+
+.emotion-12+label:before {
+  content: '';
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #175bf5;
+  border-radius: 0.25rem;
+}
+
+.emotion-12:disabled+label {
+  cursor: not-allowed;
+}
+
+.emotion-13 span {
+  padding: 0;
+}
+
+.emotion-13 svg {
+  position: absolute;
+  top: 0;
+  display: block;
+}
+
+.emotion-17 {
+  opacity: 0.3;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-18 {
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 3rem;
+  height: 3rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
+
+.emotion-18:before {
+  display: none;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  content: ' ';
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+}
+
+.emotion-55 {
+  border: 0;
+  border-radius: 0.125rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-55+label {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+}
+
+.emotion-55+label:before {
+  content: '';
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: inherit;
+  box-shadow: inset 0px 0px 0px 0.125rem #b7c3d8;
+  border-radius: 0.25rem;
+}
+
+.emotion-55:disabled+label {
+  cursor: not-allowed;
+}
+
+<html>
+  <head />
+  <body>
+    <span
+      class="emotion-0"
+    >
+      <span
+        class="emotion-1"
+      >
+        <div>
+          <div
+            class="emotion-2"
+          >
+            <div
+              style="margin: 5px;"
+            >
+              <span
+                class="emotion-3"
+              >
+                <span
+                  class="emotion-4"
+                >
+                  <input
+                    class="emotion-5"
+                    data-testid="checkbox"
+                    id="styled-checkbox-8"
+                    type="checkbox"
+                  />
+                  <label
+                    class="emotion-6"
+                    for="styled-checkbox-8"
+                  >
+                    <span
+                      class="emotion-7"
+                    >
+                      <svg
+                        class="emotion-8"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <g
+                          fill="none"
+                          fill-rule="evenodd"
+                          id="\\uD83D\\uDD36-Symbols"
+                          stroke="none"
+                          stroke-width="1"
+                        >
+                          <g
+                            id="Checkmark"
+                          >
+                            <path
+                              d="M16.1742639,3.56546017 L17.5665405,4.95773677 L9.21853983,13.3054602 L14.0871995,18.1742639 L12.6949229,19.5665405 L6.43453983,13.3061575 L6.43653983,13.3044602 L6.43589028,13.3038338 L16.1742639,3.56546017 Z"
+                              transform="translate(12.000540, 11.566000) scale(-1, 1) rotate(-90.000000) translate(-12.000540, -11.566000)"
+                            />
+                          </g>
+                        </g>
+                      </svg>
+                    </span>
+                  </label>
+                </span>
+                <span
+                  class="emotion-9"
+                >
+                  Not checked single
+                </span>
+              </span>
+            </div>
+            <div
+              style="margin: 5px;"
+            >
+              <span
+                class="emotion-3"
+              >
+                <span
+                  class="emotion-4"
+                >
+                  <input
+                    checked=""
+                    class="emotion-12"
+                    data-testid="checkbox"
+                    id="styled-checkbox-9"
+                    type="checkbox"
+                  />
+                  <label
+                    class="emotion-13"
+                    for="styled-checkbox-9"
+                  >
+                    <span
+                      class="emotion-7"
+                    >
+                      <svg
+                        class="emotion-8"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <g
+                          fill="none"
+                          fill-rule="evenodd"
+                          id="\\uD83D\\uDD36-Symbols"
+                          stroke="none"
+                          stroke-width="1"
+                        >
+                          <g
+                            id="Checkmark"
+                          >
+                            <path
+                              d="M16.1742639,3.56546017 L17.5665405,4.95773677 L9.21853983,13.3054602 L14.0871995,18.1742639 L12.6949229,19.5665405 L6.43453983,13.3061575 L6.43653983,13.3044602 L6.43589028,13.3038338 L16.1742639,3.56546017 Z"
+                              transform="translate(12.000540, 11.566000) scale(-1, 1) rotate(-90.000000) translate(-12.000540, -11.566000)"
+                            />
+                          </g>
+                        </g>
+                      </svg>
+                    </span>
+                  </label>
+                </span>
+                <span
+                  class="emotion-9"
+                >
+                  Checked Single
+                </span>
+              </span>
+            </div>
+            <div
+              style="margin: 5px;"
+            >
+              <span
+                class="emotion-17"
+              >
+                <span
+                  class="emotion-18"
+                >
+                  <input
+                    checked=""
+                    class="emotion-12"
+                    data-testid="checkbox"
+                    disabled=""
+                    id="styled-checkbox-10"
+                    type="checkbox"
+                  />
+                  <label
+                    class="emotion-13"
+                    for="styled-checkbox-10"
+                  >
+                    <span
+                      class="emotion-7"
+                    >
+                      <svg
+                        class="emotion-8"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <g
+                          fill="none"
+                          fill-rule="evenodd"
+                          id="\\uD83D\\uDD36-Symbols"
+                          stroke="none"
+                          stroke-width="1"
+                        >
+                          <g
+                            id="Checkmark"
+                          >
+                            <path
+                              d="M16.1742639,3.56546017 L17.5665405,4.95773677 L9.21853983,13.3054602 L14.0871995,18.1742639 L12.6949229,19.5665405 L6.43453983,13.3061575 L6.43653983,13.3044602 L6.43589028,13.3038338 L16.1742639,3.56546017 Z"
+                              transform="translate(12.000540, 11.566000) scale(-1, 1) rotate(-90.000000) translate(-12.000540, -11.566000)"
+                            />
+                          </g>
+                        </g>
+                      </svg>
+                    </span>
+                  </label>
+                </span>
+                <span
+                  class="emotion-9"
+                >
+                  Disabled single
+                </span>
+              </span>
+            </div>
+            <div
+              style="margin: 5px;"
+            >
+              <span
+                class="emotion-3"
+              >
+                <span
+                  class="emotion-4"
+                >
+                  <input
+                    checked=""
+                    class="emotion-12"
+                    data-testid="checkbox"
+                    id="styled-checkbox-11"
+                    type="checkbox"
+                  />
+                  <label
+                    class="emotion-13"
+                    for="styled-checkbox-11"
+                  >
+                    <span
+                      class="emotion-7"
+                    >
+                      <svg
+                        class="emotion-8"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <g
+                          fill="none"
+                          fill-rule="evenodd"
+                          id="\\uD83D\\uDD36-Symbols"
+                          stroke="none"
+                          stroke-width="1"
+                        >
+                          <g
+                            id="Minus"
+                          >
+                            <rect
+                              height="2"
+                              id="minus"
+                              width="16"
+                              x="4"
+                              y="11"
+                            />
+                          </g>
+                        </g>
+                      </svg>
+                    </span>
+                  </label>
+                </span>
+                <span
+                  class="emotion-9"
+                >
+                  Checked intermediate
+                </span>
+              </span>
+            </div>
+            <div
+              style="margin: 5px;"
+            >
+              <span
+                class="emotion-17"
+              >
+                <span
+                  class="emotion-18"
+                >
+                  <input
+                    checked=""
+                    class="emotion-12"
+                    data-testid="checkbox"
+                    disabled=""
+                    id="styled-checkbox-12"
+                    type="checkbox"
+                  />
+                  <label
+                    class="emotion-13"
+                    for="styled-checkbox-12"
+                  >
+                    <span
+                      class="emotion-7"
+                    >
+                      <svg
+                        class="emotion-8"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <g
+                          fill="none"
+                          fill-rule="evenodd"
+                          id="\\uD83D\\uDD36-Symbols"
+                          stroke="none"
+                          stroke-width="1"
+                        >
+                          <g
+                            id="Minus"
+                          >
+                            <rect
+                              height="2"
+                              id="minus"
+                              width="16"
+                              x="4"
+                              y="11"
+                            />
+                          </g>
+                        </g>
+                      </svg>
+                    </span>
+                  </label>
+                </span>
+                <span
+                  class="emotion-9"
+                >
+                  Disabled checked intermediate
+                </span>
+              </span>
+            </div>
+            <div
+              style="margin: 5px;"
+            >
+              <span
+                class="emotion-3"
+              >
+                <span
+                  class="emotion-4"
+                >
+                  <input
+                    class="emotion-5"
+                    data-testid="checkbox"
+                    id="styled-checkbox-13"
+                    type="checkbox"
+                  />
+                  <label
+                    class="emotion-6"
+                    for="styled-checkbox-13"
+                  >
+                    <span
+                      class="emotion-7"
+                    >
+                      <svg
+                        class="emotion-8"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <g
+                          fill="none"
+                          fill-rule="evenodd"
+                          id="\\uD83D\\uDD36-Symbols"
+                          stroke="none"
+                          stroke-width="1"
+                        >
+                          <g
+                            id="Minus"
+                          >
+                            <rect
+                              height="2"
+                              id="minus"
+                              width="16"
+                              x="4"
+                              y="11"
+                            />
+                          </g>
+                        </g>
+                      </svg>
+                    </span>
+                  </label>
+                </span>
+                <span
+                  class="emotion-9"
+                >
+                  Not checked intermediate
+                </span>
+              </span>
+            </div>
+            <div
+              style="margin: 5px;"
+            >
+              <span
+                class="emotion-17"
+              >
+                <span
+                  class="emotion-18"
+                >
+                  <input
+                    class="emotion-5"
+                    data-testid="checkbox"
+                    disabled=""
+                    id="styled-checkbox-14"
+                    type="checkbox"
+                  />
+                  <label
+                    class="emotion-6"
+                    for="styled-checkbox-14"
+                  >
+                    <span
+                      class="emotion-7"
+                    >
+                      <svg
+                        class="emotion-8"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <g
+                          fill="none"
+                          fill-rule="evenodd"
+                          id="\\uD83D\\uDD36-Symbols"
+                          stroke="none"
+                          stroke-width="1"
+                        >
+                          <g
+                            id="Minus"
+                          >
+                            <rect
+                              height="2"
+                              id="minus"
+                              width="16"
+                              x="4"
+                              y="11"
+                            />
+                          </g>
+                        </g>
+                      </svg>
+                    </span>
+                  </label>
+                </span>
+                <span
+                  class="emotion-9"
+                >
+                  Disabled not checked intermediate
+                </span>
+              </span>
+            </div>
+          </div>
+          <div
+            class="emotion-2"
+          >
+            <div
+              style="margin: 5px;"
+            >
+              <span
+                class="emotion-3"
+              >
+                <span
+                  class="emotion-4"
+                >
+                  <input
+                    class="emotion-55"
+                    data-testid="checkbox"
+                    id="styled-checkbox-15"
+                    type="checkbox"
+                  />
+                  <label
+                    class="emotion-6"
+                    for="styled-checkbox-15"
+                  >
+                    <span
+                      class="emotion-7"
+                    >
+                      <svg
+                        class="emotion-8"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <g
+                          fill="none"
+                          fill-rule="evenodd"
+                          id="\\uD83D\\uDD36-Symbols"
+                          stroke="none"
+                          stroke-width="1"
+                        >
+                          <g
+                            id="Checkmark"
+                          >
+                            <path
+                              d="M16.1742639,3.56546017 L17.5665405,4.95773677 L9.21853983,13.3054602 L14.0871995,18.1742639 L12.6949229,19.5665405 L6.43453983,13.3061575 L6.43653983,13.3044602 L6.43589028,13.3038338 L16.1742639,3.56546017 Z"
+                              transform="translate(12.000540, 11.566000) scale(-1, 1) rotate(-90.000000) translate(-12.000540, -11.566000)"
+                            />
+                          </g>
+                        </g>
+                      </svg>
+                    </span>
+                  </label>
+                </span>
+                <span
+                  class="emotion-9"
+                >
+                  Not checked single
+                </span>
+              </span>
+            </div>
+            <div
+              style="margin: 5px;"
+            >
+              <span
+                class="emotion-3"
+              >
+                <span
+                  class="emotion-4"
+                >
+                  <input
+                    checked=""
+                    class="emotion-12"
+                    data-testid="checkbox"
+                    id="styled-checkbox-16"
+                    type="checkbox"
+                  />
+                  <label
+                    class="emotion-13"
+                    for="styled-checkbox-16"
+                  >
+                    <span
+                      class="emotion-7"
+                    >
+                      <svg
+                        class="emotion-8"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <g
+                          fill="none"
+                          fill-rule="evenodd"
+                          id="\\uD83D\\uDD36-Symbols"
+                          stroke="none"
+                          stroke-width="1"
+                        >
+                          <g
+                            id="Checkmark"
+                          >
+                            <path
+                              d="M16.1742639,3.56546017 L17.5665405,4.95773677 L9.21853983,13.3054602 L14.0871995,18.1742639 L12.6949229,19.5665405 L6.43453983,13.3061575 L6.43653983,13.3044602 L6.43589028,13.3038338 L16.1742639,3.56546017 Z"
+                              transform="translate(12.000540, 11.566000) scale(-1, 1) rotate(-90.000000) translate(-12.000540, -11.566000)"
+                            />
+                          </g>
+                        </g>
+                      </svg>
+                    </span>
+                  </label>
+                </span>
+                <span
+                  class="emotion-9"
+                >
+                  Checked Single
+                </span>
+              </span>
+            </div>
+            <div
+              style="margin: 5px;"
+            >
+              <span
+                class="emotion-17"
+              >
+                <span
+                  class="emotion-18"
+                >
+                  <input
+                    checked=""
+                    class="emotion-12"
+                    data-testid="checkbox"
+                    disabled=""
+                    id="styled-checkbox-17"
+                    type="checkbox"
+                  />
+                  <label
+                    class="emotion-13"
+                    for="styled-checkbox-17"
+                  >
+                    <span
+                      class="emotion-7"
+                    >
+                      <svg
+                        class="emotion-8"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <g
+                          fill="none"
+                          fill-rule="evenodd"
+                          id="\\uD83D\\uDD36-Symbols"
+                          stroke="none"
+                          stroke-width="1"
+                        >
+                          <g
+                            id="Checkmark"
+                          >
+                            <path
+                              d="M16.1742639,3.56546017 L17.5665405,4.95773677 L9.21853983,13.3054602 L14.0871995,18.1742639 L12.6949229,19.5665405 L6.43453983,13.3061575 L6.43653983,13.3044602 L6.43589028,13.3038338 L16.1742639,3.56546017 Z"
+                              transform="translate(12.000540, 11.566000) scale(-1, 1) rotate(-90.000000) translate(-12.000540, -11.566000)"
+                            />
+                          </g>
+                        </g>
+                      </svg>
+                    </span>
+                  </label>
+                </span>
+                <span
+                  class="emotion-9"
+                >
+                  Disabled single
+                </span>
+              </span>
+            </div>
+            <div
+              style="margin: 5px;"
+            >
+              <span
+                class="emotion-3"
+              >
+                <span
+                  class="emotion-4"
+                >
+                  <input
+                    checked=""
+                    class="emotion-12"
+                    data-testid="checkbox"
+                    id="styled-checkbox-18"
+                    type="checkbox"
+                  />
+                  <label
+                    class="emotion-13"
+                    for="styled-checkbox-18"
+                  >
+                    <span
+                      class="emotion-7"
+                    >
+                      <svg
+                        class="emotion-8"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <g
+                          fill="none"
+                          fill-rule="evenodd"
+                          id="\\uD83D\\uDD36-Symbols"
+                          stroke="none"
+                          stroke-width="1"
+                        >
+                          <g
+                            id="Minus"
+                          >
+                            <rect
+                              height="2"
+                              id="minus"
+                              width="16"
+                              x="4"
+                              y="11"
+                            />
+                          </g>
+                        </g>
+                      </svg>
+                    </span>
+                  </label>
+                </span>
+                <span
+                  class="emotion-9"
+                >
+                  Checked intermediate
+                </span>
+              </span>
+            </div>
+            <div
+              style="margin: 5px;"
+            >
+              <span
+                class="emotion-17"
+              >
+                <span
+                  class="emotion-18"
+                >
+                  <input
+                    checked=""
+                    class="emotion-12"
+                    data-testid="checkbox"
+                    disabled=""
+                    id="styled-checkbox-19"
+                    type="checkbox"
+                  />
+                  <label
+                    class="emotion-13"
+                    for="styled-checkbox-19"
+                  >
+                    <span
+                      class="emotion-7"
+                    >
+                      <svg
+                        class="emotion-8"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <g
+                          fill="none"
+                          fill-rule="evenodd"
+                          id="\\uD83D\\uDD36-Symbols"
+                          stroke="none"
+                          stroke-width="1"
+                        >
+                          <g
+                            id="Minus"
+                          >
+                            <rect
+                              height="2"
+                              id="minus"
+                              width="16"
+                              x="4"
+                              y="11"
+                            />
+                          </g>
+                        </g>
+                      </svg>
+                    </span>
+                  </label>
+                </span>
+                <span
+                  class="emotion-9"
+                >
+                  Disabled checked intermediate
+                </span>
+              </span>
+            </div>
+            <div
+              style="margin: 5px;"
+            >
+              <span
+                class="emotion-3"
+              >
+                <span
+                  class="emotion-4"
+                >
+                  <input
+                    class="emotion-55"
+                    data-testid="checkbox"
+                    id="styled-checkbox-20"
+                    type="checkbox"
+                  />
+                  <label
+                    class="emotion-6"
+                    for="styled-checkbox-20"
+                  >
+                    <span
+                      class="emotion-7"
+                    >
+                      <svg
+                        class="emotion-8"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <g
+                          fill="none"
+                          fill-rule="evenodd"
+                          id="\\uD83D\\uDD36-Symbols"
+                          stroke="none"
+                          stroke-width="1"
+                        >
+                          <g
+                            id="Minus"
+                          >
+                            <rect
+                              height="2"
+                              id="minus"
+                              width="16"
+                              x="4"
+                              y="11"
+                            />
+                          </g>
+                        </g>
+                      </svg>
+                    </span>
+                  </label>
+                </span>
+                <span
+                  class="emotion-9"
+                >
+                  Not checked intermediate
+                </span>
+              </span>
+            </div>
+            <div
+              style="margin: 5px;"
+            >
+              <span
+                class="emotion-17"
+              >
+                <span
+                  class="emotion-18"
+                >
+                  <input
+                    class="emotion-55"
+                    data-testid="checkbox"
+                    disabled=""
+                    id="styled-checkbox-21"
+                    type="checkbox"
+                  />
+                  <label
+                    class="emotion-6"
+                    for="styled-checkbox-21"
+                  >
+                    <span
+                      class="emotion-7"
+                    >
+                      <svg
+                        class="emotion-8"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <g
+                          fill="none"
+                          fill-rule="evenodd"
+                          id="\\uD83D\\uDD36-Symbols"
+                          stroke="none"
+                          stroke-width="1"
+                        >
+                          <g
+                            id="Minus"
+                          >
+                            <rect
+                              height="2"
+                              id="minus"
+                              width="16"
+                              x="4"
+                              y="11"
+                            />
+                          </g>
+                        </g>
+                      </svg>
+                    </span>
+                  </label>
+                </span>
+                <span
+                  class="emotion-9"
+                >
+                  Disabled not checked intermediate
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </span>
+    </span>
+  </body>
+</html>
+`;
+
+exports[`Design System/CheckBox CheckBoxWithProps smoke-test 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  opacity: 1;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 3rem;
+  height: 3rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
+
+.emotion-4:before {
+  display: none;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  content: ' ';
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+}
+
+.emotion-4:hover:before {
+  display: block;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.emotion-5 {
+  border: 0;
+  border-radius: 0.125rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-5+label {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+}
+
+.emotion-5+label:before {
+  content: '';
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #b7c3d8;
+  border-radius: 0.25rem;
+}
+
+.emotion-5:disabled+label {
+  cursor: not-allowed;
+}
+
+.emotion-6 span {
+  padding: 0;
+}
+
+.emotion-6 svg {
+  position: absolute;
+  top: 0;
+  display: none;
+}
+
+.emotion-7 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-8 {
+  fill: white;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.emotion-8 path {
+  fill: white;
+}
+
+<html>
+  <head />
+  <body>
+    <span
+      class="emotion-0"
+    >
+      <span
+        class="emotion-1"
+      >
+        <div
+          class="emotion-2"
+        >
+          <div
+            style="margin: 5px;"
+          >
+            <span
+              class="emotion-3"
+            >
+              <span
+                class="emotion-4"
+              >
+                <input
+                  class="emotion-5"
+                  data-testid="checkbox"
+                  id="styled-checkbox-22"
+                  type="checkbox"
+                />
+                <label
+                  class="emotion-6"
+                  for="styled-checkbox-22"
+                >
+                  <span
+                    class="emotion-7"
+                  >
+                    <svg
+                      class="emotion-8"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <g
+                        fill="none"
+                        fill-rule="evenodd"
+                        id="\\uD83D\\uDD36-Symbols"
+                        stroke="none"
+                        stroke-width="1"
+                      >
+                        <g
+                          id="Checkmark"
+                        >
+                          <path
+                            d="M16.1742639,3.56546017 L17.5665405,4.95773677 L9.21853983,13.3054602 L14.0871995,18.1742639 L12.6949229,19.5665405 L6.43453983,13.3061575 L6.43653983,13.3044602 L6.43589028,13.3038338 L16.1742639,3.56546017 Z"
+                            transform="translate(12.000540, 11.566000) scale(-1, 1) rotate(-90.000000) translate(-12.000540, -11.566000)"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </span>
+                </label>
+              </span>
+            </span>
+          </div>
+        </div>
+      </span>
+    </span>
+  </body>
+</html>
+`;

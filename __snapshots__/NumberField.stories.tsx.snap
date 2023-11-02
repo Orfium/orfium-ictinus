@@ -1,0 +1,2642 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Design System/NumberField NumberFieldWithLabelAndPlaceholder smoke-test 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: 3.25rem;
+  min-width: 8.75rem;
+  background-color: #ffffff;
+}
+
+.emotion-3:hover {
+  background-color: #F5F5FF;
+}
+
+.emotion-3:focus-within {
+  box-shadow: 0 0 0 0.125rem #175bf5;
+  background-color: #F5F5FF;
+}
+
+.emotion-4 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0 0 0 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.emotion-4>div {
+  position: relative;
+}
+
+.emotion-5 {
+  width: 100%;
+}
+
+.emotion-7 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #1B214F;
+  padding: 0;
+  display: block;
+  position: relative;
+  top: 0.4375rem;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-7::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-7:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::placeholder {
+  color: transparent;
+}
+
+.emotion-7:focus {
+  outline: none;
+}
+
+.emotion-7:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-7:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-7:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-7:focus-within+label,
+.emotion-7:not(:placeholder-shown)+label {
+  font-weight: 700!important;
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+}
+
+.emotion-7:focus-within+label {
+  color: #1552DD;
+}
+
+.emotion-7:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-8 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, 0);
+  -moz-transform: translate(0.1875rem, 0);
+  -ms-transform: translate(0.1875rem, 0);
+  transform: translate(0.1875rem, 0);
+  color: #686BB3;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0.1875rem;
+  margin: auto;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-13 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #1B214F;
+  padding: 0;
+  display: block;
+  position: relative;
+  top: 0.4375rem;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-13::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-13::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-13:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-13::placeholder {
+  color: transparent;
+}
+
+.emotion-13:focus {
+  outline: none;
+}
+
+.emotion-13:focus::-webkit-input-placeholder {
+  color: #686BB3;
+}
+
+.emotion-13:focus::-moz-placeholder {
+  color: #686BB3;
+}
+
+.emotion-13:focus:-ms-input-placeholder {
+  color: #686BB3;
+}
+
+.emotion-13:focus::placeholder {
+  color: #686BB3;
+}
+
+.emotion-13:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-13:focus-within+label,
+.emotion-13:not(:placeholder-shown)+label {
+  font-weight: 700!important;
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+}
+
+.emotion-13:focus-within+label {
+  color: #1552DD;
+}
+
+.emotion-13:disabled {
+  cursor: not-allowed;
+}
+
+<html>
+  <head />
+  <body>
+    <span
+      class="emotion-0"
+    >
+      <span
+        class="emotion-1"
+      >
+        <div
+          class="emotion-2"
+        >
+          <div
+            style="margin: 5px;"
+          >
+            <div>
+              <div
+                class="emotion-3"
+              >
+                <div
+                  class="emotion-4"
+                >
+                  <div
+                    class="emotion-5"
+                  >
+                    <div
+                      class="react-aria-NumberField"
+                      data-rac=""
+                    >
+                      <div
+                        class="emotion-6"
+                        data-rac=""
+                        role="group"
+                      >
+                        <input
+                          aria-invalid="false"
+                          aria-roledescription="Number field"
+                          autocomplete="off"
+                          autocorrect="off"
+                          class="emotion-7"
+                          data-rac=""
+                          data-testid="input"
+                          id="numberfield_4"
+                          inputmode="numeric"
+                          placeholder="Label"
+                          spellcheck="false"
+                          type="text"
+                          value=""
+                        />
+                        <label
+                          class="emotion-8"
+                          for="numberfield_4"
+                        >
+                          Label 
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            style="margin: 5px;"
+          >
+            <div>
+              <div
+                class="emotion-3"
+              >
+                <div
+                  class="emotion-4"
+                >
+                  <div
+                    class="emotion-5"
+                  >
+                    <div
+                      class="react-aria-NumberField"
+                      data-rac=""
+                    >
+                      <div
+                        class="emotion-6"
+                        data-rac=""
+                        role="group"
+                      >
+                        <input
+                          aria-invalid="false"
+                          aria-roledescription="Number field"
+                          autocomplete="off"
+                          autocorrect="off"
+                          class="emotion-13"
+                          data-rac=""
+                          data-testid="input"
+                          id="numberfield_5"
+                          inputmode="numeric"
+                          placeholder="Placeholder "
+                          spellcheck="false"
+                          type="text"
+                          value=""
+                        />
+                        <label
+                          class="emotion-8"
+                          for="numberfield_5"
+                        >
+                          Label 
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </span>
+    </span>
+  </body>
+</html>
+`;
+
+exports[`Design System/NumberField NumberFieldWithLabelPlaceholderAndStatuses smoke-test 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: 3.25rem;
+  min-width: 8.75rem;
+  background-color: #ffffff;
+}
+
+.emotion-3:hover {
+  background-color: #F5F5FF;
+}
+
+.emotion-3:focus-within {
+  box-shadow: 0 0 0 0.125rem #175bf5;
+  background-color: #F5F5FF;
+}
+
+.emotion-4 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0 0 0 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.emotion-4>div {
+  position: relative;
+}
+
+.emotion-5 {
+  width: 100%;
+}
+
+.emotion-7 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #1B214F;
+  padding: 0;
+  display: block;
+  position: relative;
+  top: 0.4375rem;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-7::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-7:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::placeholder {
+  color: transparent;
+}
+
+.emotion-7:focus {
+  outline: none;
+}
+
+.emotion-7:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-7:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-7:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-7:focus-within+label,
+.emotion-7:not(:placeholder-shown)+label {
+  font-weight: 700!important;
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+}
+
+.emotion-7:focus-within+label {
+  color: #1552DD;
+}
+
+.emotion-7:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-8 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, 0);
+  -moz-transform: translate(0.1875rem, 0);
+  -ms-transform: translate(0.1875rem, 0);
+  transform: translate(0.1875rem, 0);
+  color: #686BB3;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0.1875rem;
+  margin: auto;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.25rem;
+  opacity: 1;
+  color: #686BB3;
+  padding: 0.5rem 0 0;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-9 span {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  padding: 0;
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.125rem #F882AC;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: 3.25rem;
+  min-width: 8.75rem;
+  background-color: #FFE7F0;
+}
+
+.emotion-10:hover {
+  background-color: #FFB8D1;
+}
+
+.emotion-10:focus-within {
+  box-shadow: 0 0 0 0.125rem #175bf5;
+  background-color: #F5F5FF;
+}
+
+.emotion-15 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, 0);
+  -moz-transform: translate(0.1875rem, 0);
+  -ms-transform: translate(0.1875rem, 0);
+  transform: translate(0.1875rem, 0);
+  color: #FF176B;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0.1875rem;
+  margin: auto;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.25rem;
+  opacity: 1;
+  color: #CB205D;
+  padding: 0.5rem 0 0;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-16 span {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  padding: 0;
+}
+
+.emotion-17 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-18 {
+  fill: #CB205D;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-18 path {
+  fill: #CB205D;
+}
+
+.emotion-19 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: 3.25rem;
+  min-width: 8.75rem;
+  background-color: #F5F5FF;
+}
+
+.emotion-19:hover {
+  background-color: #F5F5FF;
+}
+
+.emotion-19:focus-within {
+  box-shadow: 0 0 0 0.125rem #b9cdfc;
+  background-color: #F5F5FF;
+}
+
+.emotion-20 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0 0 0 0.75rem;
+}
+
+.emotion-20>div {
+  position: relative;
+}
+
+.emotion-23 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #1B214F;
+  padding: 0;
+  display: block;
+  position: relative;
+  top: 0.4375rem;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-23::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-23::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-23:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-23::placeholder {
+  color: transparent;
+}
+
+.emotion-23:focus {
+  outline: none;
+}
+
+.emotion-23:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-23:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-23:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-23:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-23:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-23:focus-within+label,
+.emotion-23:not(:placeholder-shown)+label {
+  font-weight: 700!important;
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+}
+
+.emotion-23:focus-within+label {
+  color: #1552DD;
+}
+
+.emotion-23:disabled {
+  cursor: text;
+}
+
+.emotion-25 {
+  min-width: 2.75rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  cursor: unset;
+}
+
+.emotion-27 {
+  fill: #5f6c85;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-27 path {
+  fill: #5f6c85;
+}
+
+.emotion-29 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 50%;
+  cursor: not-allowed;
+  height: 3.25rem;
+  min-width: 8.75rem;
+  background-color: #ffffff;
+}
+
+.emotion-29:focus-within {
+  box-shadow: 0 0 0 0.125rem transparent;
+}
+
+.emotion-35 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.25rem;
+  opacity: 50%;
+  color: #686BB3;
+  padding: 0.5rem 0 0;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-35 span {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  padding: 0;
+}
+
+<html>
+  <head />
+  <body>
+    <span
+      class="emotion-0"
+    >
+      <span
+        class="emotion-1"
+      >
+        <div
+          class="emotion-2"
+        >
+          <div
+            style="margin: 5px;"
+          >
+            <div>
+              <div
+                class="emotion-3"
+              >
+                <div
+                  class="emotion-4"
+                >
+                  <div
+                    class="emotion-5"
+                  >
+                    <div
+                      class="react-aria-NumberField"
+                      data-rac=""
+                    >
+                      <div
+                        class="emotion-6"
+                        data-rac=""
+                        role="group"
+                      >
+                        <input
+                          aria-describedby="numberfield_6_hintMessage"
+                          aria-invalid="false"
+                          aria-roledescription="Number field"
+                          autocomplete="off"
+                          autocorrect="off"
+                          class="emotion-7"
+                          data-rac=""
+                          data-testid="input"
+                          id="numberfield_6"
+                          inputmode="numeric"
+                          placeholder="Label"
+                          spellcheck="false"
+                          type="text"
+                          value=""
+                        />
+                        <label
+                          class="emotion-8"
+                          for="numberfield_6"
+                        >
+                          Label 
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="emotion-9"
+                data-testid="error"
+              >
+                <span
+                  id="numberfield_6_hintMessage"
+                >
+                  Hint in Text Field
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            style="margin: 5px;"
+          >
+            <div>
+              <div
+                class="emotion-10"
+              >
+                <div
+                  class="emotion-4"
+                >
+                  <div
+                    class="emotion-5"
+                  >
+                    <div
+                      class="react-aria-NumberField"
+                      data-rac=""
+                    >
+                      <div
+                        class="emotion-6"
+                        data-rac=""
+                        role="group"
+                      >
+                        <input
+                          aria-describedby="numberfield_7_hintMessage"
+                          aria-invalid="true"
+                          aria-roledescription="Number field"
+                          autocomplete="off"
+                          autocorrect="off"
+                          class="emotion-7"
+                          data-invalid="true"
+                          data-rac=""
+                          data-testid="input"
+                          id="numberfield_7"
+                          inputmode="numeric"
+                          placeholder="Label"
+                          spellcheck="false"
+                          type="text"
+                          value=""
+                        />
+                        <label
+                          class="emotion-15"
+                          for="numberfield_7"
+                        >
+                          Label 
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="emotion-16"
+                data-testid="error"
+              >
+                <span
+                  class="emotion-17"
+                >
+                  <svg
+                    class="emotion-18"
+                    fill="none"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g
+                      id="warning"
+                    >
+                      <path
+                        d="M9.9966 13.9851C10.2284 13.9851 10.4238 13.9067 10.5829 13.7499C10.742 13.5931 10.8215 13.3988 10.8215 13.167C10.8215 12.9352 10.7431 12.7397 10.5863 12.5807C10.4295 12.4216 10.2352 12.3421 10.0034 12.3421C9.7716 12.3421 9.57617 12.4205 9.4171 12.5773C9.25804 12.7341 9.1785 12.9283 9.1785 13.1601C9.1785 13.3919 9.2569 13.5874 9.41371 13.7465C9.57051 13.9055 9.76481 13.9851 9.9966 13.9851ZM10.0197 10.7976C10.2495 10.7976 10.4461 10.7159 10.6094 10.5525C10.7727 10.389 10.8544 10.1925 10.8544 9.96268V6.85584C10.8544 6.62608 10.7726 6.42948 10.6091 6.26605C10.4457 6.10262 10.249 6.0209 10.0192 6.0209C9.78931 6.0209 9.59274 6.10262 9.42944 6.26605C9.26613 6.42948 9.18448 6.62608 9.18448 6.85584V9.96268C9.18448 10.1925 9.26622 10.389 9.42969 10.5525C9.59317 10.7159 9.78983 10.7976 10.0197 10.7976ZM10.0013 18C8.89481 18 7.85478 17.79 6.88122 17.3701C5.90763 16.9502 5.06076 16.3803 4.34059 15.6604C3.62041 14.9405 3.05026 14.094 2.63016 13.1208C2.21005 12.1476 2 11.1078 2 10.0013C2 8.8915 2.21035 7.84835 2.63105 6.87186C3.05175 5.89538 3.62269 5.04596 4.34387 4.32362C5.06506 3.60129 5.91159 3.03343 6.88345 2.62006C7.8553 2.20669 8.89371 2 9.9987 2C11.1084 2 12.1514 2.2066 13.1278 2.61981C14.1042 3.03301 14.9536 3.60072 15.6761 4.32292C16.3986 5.04513 16.9666 5.8944 17.3799 6.87073C17.7933 7.84706 18 8.89025 18 10.0003C18 11.1104 17.7934 12.15 17.3802 13.1192C16.967 14.0884 16.3994 14.9337 15.6773 15.6552C14.9553 16.3766 14.1062 16.9478 13.1301 17.3687C12.1541 17.7896 11.1111 18 10.0013 18Z"
+                        fill="#54587F"
+                        id="Vector"
+                      />
+                    </g>
+                  </svg>
+                </span>
+                <span
+                  id="numberfield_7_hintMessage"
+                >
+                  Error in Text Field
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            style="margin: 5px;"
+          >
+            <div>
+              <div
+                class="emotion-19"
+              >
+                <div
+                  class="emotion-20"
+                >
+                  <div
+                    class="emotion-5"
+                  >
+                    <div
+                      class="react-aria-NumberField"
+                      data-rac=""
+                    >
+                      <div
+                        class="emotion-6"
+                        data-rac=""
+                        role="group"
+                      >
+                        <input
+                          aria-describedby="numberfield_8_hintMessage"
+                          aria-invalid="false"
+                          aria-roledescription="Number field"
+                          autocomplete="off"
+                          autocorrect="off"
+                          class="emotion-23"
+                          data-disabled="true"
+                          data-rac=""
+                          data-testid="input"
+                          disabled=""
+                          id="numberfield_8"
+                          inputmode="numeric"
+                          placeholder="Label"
+                          readonly=""
+                          spellcheck="false"
+                          type="text"
+                          value=""
+                        />
+                        <label
+                          class="emotion-8"
+                          for="numberfield_8"
+                        >
+                          Label 
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    aria-hidden="false"
+                    class="emotion-25"
+                  >
+                    <span
+                      class="emotion-17"
+                    >
+                      <svg
+                        class="emotion-27"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g
+                          id="Global Icons/Lock"
+                        >
+                          <path
+                            d="M18 8.66667H17V6.7619C17 4.13333 14.76 2 12 2C9.24 2 7 4.13333 7 6.7619V8.66667H6C4.9 8.66667 4 9.52381 4 10.5714V20.0952C4 21.1429 4.9 22 6 22H18C19.1 22 20 21.1429 20 20.0952V10.5714C20 9.52381 19.1 8.66667 18 8.66667ZM12 17.2381C10.9 17.2381 10 16.381 10 15.3333C10 14.2857 10.9 13.4286 12 13.4286C13.1 13.4286 14 14.2857 14 15.3333C14 16.381 13.1 17.2381 12 17.2381ZM15.1 8.66667H8.9V6.7619C8.9 5.13333 10.29 3.80952 12 3.80952C13.71 3.80952 15.1 5.13333 15.1 6.7619V8.66667Z"
+                            fill="black"
+                            id="Vector"
+                          />
+                        </g>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="emotion-9"
+                data-testid="error"
+              >
+                <span
+                  id="numberfield_8_hintMessage"
+                >
+                  Hint in Text Field
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            style="margin: 5px;"
+          >
+            <div>
+              <div
+                class="emotion-29"
+              >
+                <div
+                  class="emotion-4"
+                >
+                  <div
+                    class="emotion-5"
+                  >
+                    <div
+                      class="react-aria-NumberField"
+                      data-rac=""
+                    >
+                      <div
+                        class="emotion-6"
+                        data-rac=""
+                        role="group"
+                      >
+                        <input
+                          aria-describedby="numberfield_9_hintMessage"
+                          aria-invalid="false"
+                          aria-roledescription="Number field"
+                          autocomplete="off"
+                          autocorrect="off"
+                          class="emotion-7"
+                          data-disabled="true"
+                          data-rac=""
+                          data-testid="input"
+                          disabled=""
+                          id="numberfield_9"
+                          inputmode="numeric"
+                          placeholder="Label"
+                          spellcheck="false"
+                          type="text"
+                          value=""
+                        />
+                        <label
+                          class="emotion-8"
+                          for="numberfield_9"
+                        >
+                          Label 
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="emotion-35"
+                data-testid="error"
+              >
+                <span
+                  id="numberfield_9_hintMessage"
+                >
+                  Hint in Text Field
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </span>
+    </span>
+  </body>
+</html>
+`;
+
+exports[`Design System/NumberField NumberFieldWithMinAndMaxValues smoke-test 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: 3.25rem;
+  min-width: 8.75rem;
+  background-color: #ffffff;
+}
+
+.emotion-3:hover {
+  background-color: #F5F5FF;
+}
+
+.emotion-3:focus-within {
+  box-shadow: 0 0 0 0.125rem #175bf5;
+  background-color: #F5F5FF;
+}
+
+.emotion-4 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0 0 0 0.75rem;
+}
+
+.emotion-4>div {
+  position: relative;
+}
+
+.emotion-5 {
+  width: 100%;
+}
+
+.emotion-7 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #1B214F;
+  padding: 0;
+  display: block;
+  position: relative;
+  top: 0.4375rem;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-7::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-7:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::placeholder {
+  color: transparent;
+}
+
+.emotion-7:focus {
+  outline: none;
+}
+
+.emotion-7:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-7:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-7:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-7:focus-within+label,
+.emotion-7:not(:placeholder-shown)+label {
+  font-weight: 700!important;
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+}
+
+.emotion-7:focus-within+label {
+  color: #1552DD;
+}
+
+.emotion-7:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-8 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, 0);
+  -moz-transform: translate(0.1875rem, 0);
+  -ms-transform: translate(0.1875rem, 0);
+  transform: translate(0.1875rem, 0);
+  color: #686BB3;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0.1875rem;
+  margin: auto;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-9 {
+  min-width: 2.75rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  cursor: unset;
+}
+
+<html>
+  <head />
+  <body>
+    <span
+      class="emotion-0"
+    >
+      <span
+        class="emotion-1"
+      >
+        <div
+          class="emotion-2"
+        >
+          <div
+            style="margin: 5px;"
+          >
+            <div>
+              <div
+                class="emotion-3"
+              >
+                <div
+                  class="emotion-4"
+                >
+                  <div
+                    class="emotion-5"
+                  >
+                    <div
+                      class="react-aria-NumberField"
+                      data-rac=""
+                    >
+                      <div
+                        class="emotion-6"
+                        data-rac=""
+                        role="group"
+                      >
+                        <input
+                          aria-invalid="false"
+                          aria-roledescription="Number field"
+                          autocomplete="off"
+                          autocorrect="off"
+                          class="emotion-7"
+                          data-rac=""
+                          data-testid="input"
+                          id="numberfield_3"
+                          inputmode="numeric"
+                          placeholder="Label"
+                          spellcheck="false"
+                          type="text"
+                          value=""
+                        />
+                        <label
+                          class="emotion-8"
+                          for="numberfield_3"
+                        >
+                          Label 
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    aria-hidden="false"
+                    class="emotion-9"
+                  >
+                    <div
+                      style="color: gray;"
+                    >
+                      %
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </span>
+    </span>
+  </body>
+</html>
+`;
+
+exports[`Design System/NumberField NumberFieldWithNumberFormat smoke-test 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: 3.25rem;
+  min-width: 8.75rem;
+  background-color: #ffffff;
+}
+
+.emotion-3:hover {
+  background-color: #F5F5FF;
+}
+
+.emotion-3:focus-within {
+  box-shadow: 0 0 0 0.125rem #175bf5;
+  background-color: #F5F5FF;
+}
+
+.emotion-4 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0 0 0 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.emotion-4>div {
+  position: relative;
+}
+
+.emotion-5 {
+  width: 100%;
+}
+
+.emotion-7 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #1B214F;
+  padding: 0;
+  display: block;
+  position: relative;
+  top: 0.4375rem;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-7::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-7:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::placeholder {
+  color: transparent;
+}
+
+.emotion-7:focus {
+  outline: none;
+}
+
+.emotion-7:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-7:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-7:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-7:focus-within+label,
+.emotion-7:not(:placeholder-shown)+label {
+  font-weight: 700!important;
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+}
+
+.emotion-7:focus-within+label {
+  color: #1552DD;
+}
+
+.emotion-7:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-8 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, 0);
+  -moz-transform: translate(0.1875rem, 0);
+  -ms-transform: translate(0.1875rem, 0);
+  transform: translate(0.1875rem, 0);
+  color: #686BB3;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0.1875rem;
+  margin: auto;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+<html>
+  <head />
+  <body>
+    <span
+      class="emotion-0"
+    >
+      <span
+        class="emotion-1"
+      >
+        <div
+          class="emotion-2"
+        >
+          <div
+            style="margin: 5px;"
+          >
+            <div>
+              <div
+                class="emotion-3"
+              >
+                <div
+                  class="emotion-4"
+                >
+                  <div
+                    class="emotion-5"
+                  >
+                    <div
+                      class="react-aria-NumberField"
+                      data-rac=""
+                    >
+                      <div
+                        class="emotion-6"
+                        data-rac=""
+                        role="group"
+                      >
+                        <input
+                          aria-invalid="false"
+                          aria-roledescription="Number field"
+                          autocomplete="off"
+                          autocorrect="off"
+                          class="emotion-7"
+                          data-rac=""
+                          data-testid="input"
+                          id="numberfield_1"
+                          inputmode="numeric"
+                          placeholder="Label"
+                          spellcheck="false"
+                          type="text"
+                          value=""
+                        />
+                        <label
+                          class="emotion-8"
+                          for="numberfield_1"
+                        >
+                          Label 
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </span>
+    </span>
+  </body>
+</html>
+`;
+
+exports[`Design System/NumberField NumberFieldWithStepper smoke-test 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: 3.25rem;
+  min-width: 8.75rem;
+  background-color: #ffffff;
+}
+
+.emotion-3:hover {
+  background-color: #F5F5FF;
+}
+
+.emotion-3:focus-within {
+  box-shadow: 0 0 0 0.125rem #175bf5;
+  background-color: #F5F5FF;
+}
+
+.emotion-4 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0 0 0 0.75rem;
+}
+
+.emotion-4>div {
+  position: relative;
+}
+
+.emotion-5 {
+  width: 100%;
+}
+
+.emotion-6 {
+  width: calc(100% - 2.75rem);
+}
+
+.emotion-7 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #1B214F;
+  padding: 0;
+  display: block;
+  position: relative;
+  top: 0.4375rem;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-7::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-7:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::placeholder {
+  color: transparent;
+}
+
+.emotion-7:focus {
+  outline: none;
+}
+
+.emotion-7:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-7:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-7:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-7:focus-within+label,
+.emotion-7:not(:placeholder-shown)+label {
+  font-weight: 700!important;
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+}
+
+.emotion-7:focus-within+label {
+  color: #1552DD;
+}
+
+.emotion-7:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-8 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, 0);
+  -moz-transform: translate(0.1875rem, 0);
+  -ms-transform: translate(0.1875rem, 0);
+  transform: translate(0.1875rem, 0);
+  color: #686BB3;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0.1875rem;
+  margin: auto;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 2.75rem;
+  position: absolute;
+  right: 0;
+  top: -0.9375rem;
+  z-index: 1;
+}
+
+.emotion-10 {
+  background: transparent;
+  border: none;
+  height: calc(3.25rem / 2);
+}
+
+.emotion-10:hover {
+  cursor: pointer;
+  background: rgba(84,94,255,0.06);
+}
+
+.emotion-11 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-12 {
+  fill: #54587F;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-12 path {
+  fill: #54587F;
+}
+
+<html>
+  <head />
+  <body>
+    <span
+      class="emotion-0"
+    >
+      <span
+        class="emotion-1"
+      >
+        <div
+          class="emotion-2"
+        >
+          <div
+            style="margin: 5px;"
+          >
+            <div>
+              <div
+                class="emotion-3"
+              >
+                <div
+                  class="emotion-4"
+                >
+                  <div
+                    class="emotion-5"
+                  >
+                    <div
+                      class="react-aria-NumberField"
+                      data-rac=""
+                    >
+                      <div
+                        class="emotion-6"
+                        data-rac=""
+                        role="group"
+                      >
+                        <input
+                          aria-invalid="false"
+                          aria-roledescription="Number field"
+                          autocomplete="off"
+                          autocorrect="off"
+                          class="emotion-7"
+                          data-rac=""
+                          data-testid="input"
+                          id="numberfield_2"
+                          inputmode="numeric"
+                          placeholder="Label"
+                          spellcheck="false"
+                          type="text"
+                          value=""
+                        />
+                        <label
+                          class="emotion-8"
+                          for="numberfield_2"
+                        >
+                          Label 
+                        </label>
+                        <div
+                          class="emotion-9"
+                        >
+                          <button
+                            aria-controls="numberfield_2"
+                            aria-label="Increase"
+                            class="emotion-10"
+                            data-rac=""
+                            data-testid="number_increment"
+                            slot="increment"
+                            tabindex="-1"
+                            type="button"
+                          >
+                            <span
+                              class="emotion-11"
+                            >
+                              <svg
+                                class="emotion-12"
+                                fill="none"
+                                viewBox="0 0 12 6"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M11.1464 5.14645C11.4614 5.46143 11.2383 6 10.7929 6L1.20711 6C0.761654 6 0.53857 5.46143 0.853553 5.14645L5.64645 0.353553C5.84171 0.158291 6.15829 0.158291 6.35355 0.353553L11.1464 5.14645Z"
+                                  fill="#0E0E17"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </span>
+                          </button>
+                          <button
+                            aria-controls="numberfield_2"
+                            aria-label="Decrease"
+                            class="emotion-10"
+                            data-rac=""
+                            data-testid="number_decrement"
+                            slot="decrement"
+                            tabindex="-1"
+                            type="button"
+                          >
+                            <span
+                              class="emotion-11"
+                            >
+                              <svg
+                                class="emotion-12"
+                                fill="none"
+                                viewBox="0 0 12 6"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M0.853481 0.853541C0.538516 0.538554 0.761603 0 1.20705 0H10.793C11.2384 0 11.4615 0.538554 11.1465 0.853541L6.35357 5.64683C6.1583 5.84211 5.8417 5.84211 5.64643 5.64683L0.853481 0.853541Z"
+                                  fill="#0E0E17"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </span>
+    </span>
+  </body>
+</html>
+`;
+
+exports[`Design System/NumberField Playground smoke-test 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: 3.25rem;
+  min-width: 8.75rem;
+  background-color: #ffffff;
+}
+
+.emotion-3:hover {
+  background-color: #F5F5FF;
+}
+
+.emotion-3:focus-within {
+  box-shadow: 0 0 0 0.125rem #175bf5;
+  background-color: #F5F5FF;
+}
+
+.emotion-4 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0 0 0 0.75rem;
+}
+
+.emotion-4>div {
+  position: relative;
+}
+
+.emotion-5 {
+  width: 100%;
+}
+
+.emotion-7 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #1B214F;
+  padding: 0;
+  display: block;
+  position: relative;
+  top: 0.4375rem;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-7::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-7:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::placeholder {
+  color: transparent;
+}
+
+.emotion-7:focus {
+  outline: none;
+}
+
+.emotion-7:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-7:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-7:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-7:focus-within+label,
+.emotion-7:not(:placeholder-shown)+label {
+  font-weight: 700!important;
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+}
+
+.emotion-7:focus-within+label {
+  color: #1552DD;
+}
+
+.emotion-7:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-8 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, 0);
+  -moz-transform: translate(0.1875rem, 0);
+  -ms-transform: translate(0.1875rem, 0);
+  transform: translate(0.1875rem, 0);
+  color: #686BB3;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0.1875rem;
+  margin: auto;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-9 {
+  min-width: 2.75rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  cursor: unset;
+}
+
+.emotion-10 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-11 {
+  fill: #5f6c85;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-11 path {
+  fill: #5f6c85;
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.25rem;
+  opacity: 1;
+  color: #686BB3;
+  padding: 0.5rem 0 0;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-12 span {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  padding: 0;
+}
+
+<html>
+  <head />
+  <body>
+    <span
+      class="emotion-0"
+    >
+      <span
+        class="emotion-1"
+      >
+        <div
+          class="emotion-2"
+        >
+          <div
+            style="margin: 5px;"
+          >
+            <div>
+              <div
+                class="emotion-3"
+              >
+                <div
+                  class="emotion-4"
+                >
+                  <div
+                    class="emotion-5"
+                  >
+                    <div
+                      class="react-aria-NumberField"
+                      data-rac=""
+                    >
+                      <div
+                        class="emotion-6"
+                        data-rac=""
+                        role="group"
+                      >
+                        <input
+                          aria-describedby="numberfield_10_hintMessage"
+                          aria-invalid="false"
+                          aria-roledescription="Number field"
+                          autocomplete="off"
+                          autocorrect="off"
+                          class="emotion-7"
+                          data-rac=""
+                          data-testid="input"
+                          id="numberfield_10"
+                          inputmode="numeric"
+                          placeholder="Label"
+                          spellcheck="false"
+                          type="text"
+                          value=""
+                        />
+                        <label
+                          class="emotion-8"
+                          for="numberfield_10"
+                        >
+                          Label 
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    aria-hidden="false"
+                    class="emotion-9"
+                  >
+                    <span
+                      class="emotion-10"
+                    >
+                      <svg
+                        class="emotion-11"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g
+                          id="Global Icons/Info"
+                        >
+                          <g
+                            id="ð¨ Icon color"
+                          >
+                            <path
+                              d="M13 6.5C13.8284 6.5 14.5 7.17157 14.5 8C14.5 8.82843 13.8284 9.5 13 9.5C12.1716 9.5 11.5 8.82843 11.5 8C11.5 7.17157 12.1716 6.5 13 6.5Z"
+                              fill="black"
+                            />
+                            <path
+                              d="M14.5 10.5V17H11.5V10.5H14.5Z"
+                              fill="black"
+                            />
+                            <path
+                              clip-rule="evenodd"
+                              d="M22 12C22 7.02944 17.9706 3 13 3C8.02944 3 4 7.02944 4 12C4 16.9706 8.02944 21 13 21C17.9706 21 22 16.9706 22 12ZM13 4.5C17.1421 4.5 20.5 7.85786 20.5 12C20.5 16.1421 17.1421 19.5 13 19.5C8.85786 19.5 5.5 16.1421 5.5 12C5.5 7.85786 8.85786 4.5 13 4.5Z"
+                              fill="black"
+                              fill-rule="evenodd"
+                            />
+                          </g>
+                        </g>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="emotion-12"
+                data-testid="error"
+              >
+                <span
+                  id="numberfield_10_hintMessage"
+                >
+                  Message in Number Field
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </span>
+    </span>
+  </body>
+</html>
+`;

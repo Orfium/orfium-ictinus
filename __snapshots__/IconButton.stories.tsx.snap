@@ -1,0 +1,451 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Design System/Button/IconButton IconButtonPlayground smoke-test 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-4 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #ffffff;
+  background-color: #175bf5;
+  padding: 0.5rem;
+  border-radius: 2.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-4:focus-visible:not(:disabled) {
+  background-color: #1552DD;
+}
+
+.emotion-4:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-4:hover:not(:disabled) {
+  background-color: #1552DD;
+}
+
+.emotion-4:active:not(:disabled) {
+  background-color: #1249C4;
+}
+
+.emotion-5 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-6 {
+  fill: #ffffff;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-6 path {
+  fill: #ffffff;
+}
+
+<html>
+  <head />
+  <body>
+    <span
+      class="emotion-0"
+    >
+      <span
+        class="emotion-1"
+      >
+        <div
+          class="emotion-2"
+        >
+          <div
+            style="margin: 5px;"
+          >
+            <div
+              class="emotion-3"
+            >
+              <button
+                class="emotion-4"
+                data-testid="icon-button"
+                type="button"
+              >
+                <span
+                  class="emotion-5"
+                >
+                  <svg
+                    class="emotion-6"
+                    height="12px"
+                    viewBox="0 0 12 6"
+                    width="12px"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      fill-rule="evenodd"
+                      id="Page-1"
+                      stroke="none"
+                      stroke-width="1"
+                    >
+                      <polygon
+                        fill-rule="nonzero"
+                        id="thin_check"
+                        points="1.35355339 3.64644661 0.646446609 4.35355339 5 8.70710678 12.8702016 0.836905201 12.1630948 0.12979842 5 7.29289322"
+                      />
+                    </g>
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </span>
+    </span>
+  </body>
+</html>
+`;
+
+exports[`Design System/Button/IconButton IconButtonTypes smoke-test 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-4 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #ffffff;
+  background-color: #175bf5;
+  padding: 0.5rem;
+  border-radius: 2.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-4:focus-visible:not(:disabled) {
+  background-color: #1552DD;
+}
+
+.emotion-4:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-4:hover:not(:disabled) {
+  background-color: #1552DD;
+}
+
+.emotion-4:active:not(:disabled) {
+  background-color: #1249C4;
+}
+
+.emotion-5 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-6 {
+  fill: #ffffff;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-6 path {
+  fill: #ffffff;
+}
+
+.emotion-8 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #1552DD;
+  background-color: #E7E8FF;
+  padding: 0.5rem;
+  border-radius: 2.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-8:focus-visible:not(:disabled) {
+  background-color: #D6D8FF;
+}
+
+.emotion-8:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-8:hover:not(:disabled) {
+  background-color: #D6D8FF;
+}
+
+.emotion-8:active:not(:disabled) {
+  background-color: #B9C0FF;
+}
+
+.emotion-10 {
+  fill: #1552DD;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-10 path {
+  fill: #1552DD;
+}
+
+.emotion-12 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #1552DD;
+  background-color: rgba(84,94,255,0);
+  padding: 0.5rem;
+  border-radius: 2.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-12:focus-visible:not(:disabled) {
+  background-color: rgba(84,94,255,0.06);
+}
+
+.emotion-12:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-12:hover:not(:disabled) {
+  background-color: rgba(84,94,255,0.06);
+}
+
+.emotion-12:active:not(:disabled) {
+  background-color: rgba(84,94,255,0.14);
+}
+
+<html>
+  <head />
+  <body>
+    <span
+      class="emotion-0"
+    >
+      <span
+        class="emotion-1"
+      >
+        <div
+          class="emotion-2"
+        >
+          <div
+            style="margin: 5px;"
+          >
+            <div
+              class="emotion-3"
+            >
+              <button
+                class="emotion-4"
+                data-testid="icon-button"
+                type="button"
+              >
+                <span
+                  class="emotion-5"
+                >
+                  <svg
+                    class="emotion-6"
+                    viewBox="0 0 16 16"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      fill="none"
+                      fill-rule="evenodd"
+                      stroke="none"
+                      stroke-width="1"
+                    >
+                      <path
+                        d="M8,10.8 C8.77319865,10.8 9.4,11.4268014 9.4,12.2 C9.4,12.9731986 8.77319865,13.6 8,13.6 C7.22680135,13.6 6.6,12.9731986 6.6,12.2 C6.6,11.4268014 7.22680135,10.8 8,10.8 Z M8,6.6 C8.77319865,6.6 9.4,7.22680135 9.4,8 C9.4,8.77319865 8.77319865,9.4 8,9.4 C7.22680135,9.4 6.6,8.77319865 6.6,8 C6.6,7.22680135 7.22680135,6.6 8,6.6 Z M8,2.4 C8.77319865,2.4 9.4,3.02680135 9.4,3.8 C9.4,4.57319865 8.77319865,5.2 8,5.2 C7.22680135,5.2 6.6,4.57319865 6.6,3.8 C6.6,3.02680135 7.22680135,2.4 8,2.4 Z"
+                      />
+                    </g>
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+          <div
+            style="margin: 5px;"
+          >
+            <div
+              class="emotion-3"
+            >
+              <button
+                class="emotion-8"
+                data-testid="icon-button"
+                type="button"
+              >
+                <span
+                  class="emotion-5"
+                >
+                  <svg
+                    class="emotion-10"
+                    viewBox="0 0 16 16"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      fill="none"
+                      fill-rule="evenodd"
+                      stroke="none"
+                      stroke-width="1"
+                    >
+                      <path
+                        d="M8,10.8 C8.77319865,10.8 9.4,11.4268014 9.4,12.2 C9.4,12.9731986 8.77319865,13.6 8,13.6 C7.22680135,13.6 6.6,12.9731986 6.6,12.2 C6.6,11.4268014 7.22680135,10.8 8,10.8 Z M8,6.6 C8.77319865,6.6 9.4,7.22680135 9.4,8 C9.4,8.77319865 8.77319865,9.4 8,9.4 C7.22680135,9.4 6.6,8.77319865 6.6,8 C6.6,7.22680135 7.22680135,6.6 8,6.6 Z M8,2.4 C8.77319865,2.4 9.4,3.02680135 9.4,3.8 C9.4,4.57319865 8.77319865,5.2 8,5.2 C7.22680135,5.2 6.6,4.57319865 6.6,3.8 C6.6,3.02680135 7.22680135,2.4 8,2.4 Z"
+                      />
+                    </g>
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+          <div
+            style="margin: 5px;"
+          >
+            <div
+              class="emotion-3"
+            >
+              <button
+                class="emotion-12"
+                data-testid="icon-button"
+                type="button"
+              >
+                <span
+                  class="emotion-5"
+                >
+                  <svg
+                    class="emotion-10"
+                    viewBox="0 0 16 16"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      fill="none"
+                      fill-rule="evenodd"
+                      stroke="none"
+                      stroke-width="1"
+                    >
+                      <path
+                        d="M8,10.8 C8.77319865,10.8 9.4,11.4268014 9.4,12.2 C9.4,12.9731986 8.77319865,13.6 8,13.6 C7.22680135,13.6 6.6,12.9731986 6.6,12.2 C6.6,11.4268014 7.22680135,10.8 8,10.8 Z M8,6.6 C8.77319865,6.6 9.4,7.22680135 9.4,8 C9.4,8.77319865 8.77319865,9.4 8,9.4 C7.22680135,9.4 6.6,8.77319865 6.6,8 C6.6,7.22680135 7.22680135,6.6 8,6.6 Z M8,2.4 C8.77319865,2.4 9.4,3.02680135 9.4,3.8 C9.4,4.57319865 8.77319865,5.2 8,5.2 C7.22680135,5.2 6.6,4.57319865 6.6,3.8 C6.6,3.02680135 7.22680135,2.4 8,2.4 Z"
+                      />
+                    </g>
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </span>
+    </span>
+  </body>
+</html>
+`;

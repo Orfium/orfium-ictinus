@@ -1,0 +1,148 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Design System/ExpandCollapse ExpandCollapseStory smoke-test 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  -webkit-transition: opacity 0ms ease,-webkit-transform 0ms ease;
+  transition: opacity 0ms ease,transform 0ms ease;
+  opacity: 0;
+  -webkit-transform: translateY(-0.625rem);
+  -moz-transform: translateY(-0.625rem);
+  -ms-transform: translateY(-0.625rem);
+  transform: translateY(-0.625rem);
+}
+
+<html>
+  <head />
+  <body>
+    <span
+      class="emotion-0"
+    >
+      <span
+        class="emotion-1"
+      >
+        <div>
+          <div
+            data-testid="expand-collapse"
+          >
+            <span>
+              Text
+            </span>
+            <button>
+               expand
+            </button>
+            <div
+              class="emotion-2"
+              style="height: 0px;"
+            >
+              <div>
+                <div>
+                  Some
+                </div>
+                <div>
+                  content
+                </div>
+                <div>
+                  here
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            data-testid="expand-collapse"
+          >
+            <span>
+              Text
+            </span>
+            <button>
+              expand/collapse
+            </button>
+            <div
+              class="emotion-2"
+              style="height: 0px;"
+            >
+              <div>
+                <div>
+                  Some
+                </div>
+                <div>
+                  content
+                </div>
+                <div>
+                  here
+                </div>
+                <div
+                  data-testid="expand-collapse"
+                >
+                  <span>
+                    Text
+                  </span>
+                  <button>
+                    expand/collapse
+                  </button>
+                  <div
+                    class="emotion-2"
+                    style="height: 0px;"
+                  >
+                    <div>
+                      <div>
+                        Some
+                      </div>
+                      <div>
+                        content
+                      </div>
+                      <div>
+                        here
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            data-testid="expand-collapse"
+          >
+            <span>
+              Text
+            </span>
+            <button>
+              expand/collapse
+            </button>
+            <div
+              class="emotion-2"
+              style="height: 0px;"
+            >
+              <div>
+                <div>
+                  Some
+                </div>
+                <div>
+                  content
+                </div>
+                <div>
+                  here
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </span>
+    </span>
+  </body>
+</html>
+`;
