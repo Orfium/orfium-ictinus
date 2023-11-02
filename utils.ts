@@ -1,5 +1,3 @@
-import { JSDOM } from 'jsdom';
-
 const isBrowser = typeof document !== 'undefined';
 
 function last(arr) {
@@ -248,7 +246,6 @@ export function getStyleElements(document): Array<HTMLStyleElement> {
   //     'jest-emotion requires jsdom. See https://jestjs.io/docs/en/configuration#testenvironment-string for more information.'
   //   );
   // }
-  console.log(isBrowser, globalThis);
   return Array.from<HTMLStyleElement>(document.querySelectorAll('style[data-emotion="css"]'));
 }
 

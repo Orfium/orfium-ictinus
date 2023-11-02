@@ -18,6 +18,7 @@ import {
   hasIntersection,
 } from './utils';
 import { JSDOM } from 'jsdom';
+import { isObject, has } from 'lodash';
 
 function getNodes(node, nodes = []) {
   if (Array.isArray(node)) {
@@ -203,16 +204,8 @@ export function createSerializer({
       : '';
     clean(converted, classNames);
 
-    console.log({ classNames, converted, nodes, convertEmotionElements });
-
     nodes.forEach(cache.add, cache);
-    const printedVal = printer(
-      { wrapperHTML: val.wrapperHTML, innerHTML: converted },
-      config,
-      indentation,
-      depth,
-      refs
-    );
+    const printedVal = printer(converted, config, indentation, depth, refs);
     nodes.forEach(cache.delete, cache);
 
     const classNamesOutput = replaceClassNames(
@@ -228,19 +221,16 @@ export function createSerializer({
 
   return {
     test(val) {
-      console.log({
-        val,
-        isTransformed: !isTransformed(val),
-        isReact: isReactElement(val),
-        DOMElements,
-        isDomVal: isDOMElement(val),
-        expression:
-          val && !isTransformed(val) && (isReactElement(val) || (DOMElements && isDOMElement(val))),
-      });
-      return val && cache.size <= 0 && !isTransformed(val);
-      // return (
-      //   val && !isTransformed(val) && (isReactElement(val) || (DOMElements && isDOMElement(val)))
-      // );
+      const { document } = new JSDOM(val.innerHTML).window;
+
+      return (
+        isObject(val) &&
+        has(val, 'innerHTML') &&
+        cache.size <= 0 &&
+        !isTransformed(document.firstChild) &&
+        DOMElements &&
+        isDOMElement(document.firstChild)
+      );
     },
     serialize,
   };
