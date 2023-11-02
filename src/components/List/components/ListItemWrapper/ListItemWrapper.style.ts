@@ -3,18 +3,18 @@ import styled from '@emotion/styled';
 import { rem } from 'theme/utils';
 
 import { ListRowSize } from '../../types';
-import { COMPACT_LIST_ITEM_HEIGHT, NORMAL_LIST_ITEM_HEIGHT } from '../../utils';
+import { LIST_ITEM_HEIGHT } from '../../utils';
 import { getListItemTokens } from 'components/List/List.tokens';
 import { body02, label02, body03, label03 } from 'components/Typography/Typography.config.styles';
 
 export const ListItemWrapperStyled = styled('li', { target: '' })<{
   rowSize?: ListRowSize;
   isDisabled: boolean;
-}>(({ rowSize, isDisabled, theme }) => {
+}>(({ rowSize = 'normal', isDisabled, theme }) => {
   const tokens = getListItemTokens(theme);
 
   const isCompact = rowSize === 'compact';
-  const height = isCompact ? rem(COMPACT_LIST_ITEM_HEIGHT) : rem(NORMAL_LIST_ITEM_HEIGHT);
+  const height = rem(LIST_ITEM_HEIGHT[rowSize]);
   const padding = css`0 ${tokens('paddingHorizontal')}`;
   const itemTypographyStyle = isCompact ? body03(theme) : body02(theme);
 

@@ -68,5 +68,5 @@ export type SelectProps = {
   hasSelectAllOption?: boolean;
 } & (MultiSelectProps | SingleSelectProps) &
   Omit<TextFieldProps, 'onChange' | 'mask'> &
-  Omit<InputProps, 'onChange'> &
+  Omit<InputProps, 'onChange' | 'size'> &
   TestProps;

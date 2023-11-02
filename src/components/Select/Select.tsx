@@ -30,6 +30,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
     selectedOption,
     isMulti,
     options,
+    size = 'normal',
     isAsync = false,
     isLoading = false,
     asyncSearch = () => {},
@@ -269,11 +270,11 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
       <div css={suffixContainer(isOpen, isSearchable)}>
         {isLoading ? (
           <Box py={'2'} display={'flex'} alignItems={'center'}>
-            <ProgressIndicator type="circular" dataTestPrefixId='select'/>
+            <ProgressIndicator type="circular" dataTestPrefixId="select" />
           </Box>
         ) : (
           <Icon
-            size={isSearchable ? 20 : 12}
+            size={size === 'normal' ? 16 : 12}
             name={suffixNameSelector}
             color={theme.utils.getColor('lightGrey', 650)}
             onClick={handleIconClick}
@@ -282,7 +283,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
         )}
       </div>
     ),
-    [isOpen, isLoading, isSearchable, suffixNameSelector, theme.utils, handleIconClick]
+    [isOpen, isSearchable, isLoading, size, suffixNameSelector, theme.utils, handleIconClick]
   );
 
   const handleClick = () => {
@@ -364,6 +365,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
                 onClick={() => setIsOpen(true)}
                 status={status}
                 value={textFieldValue}
+                size={size}
                 ref={combinedRefs}
                 autoComplete="off"
                 role={'combobox'}
@@ -381,7 +383,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
             status={status}
             isLoading={isLoading}
             isVirtualized={isVirtualized}
-            searchTerm={hasHighlightSearch ? searchValue : undefined}
+            size={size}
             hasSelectAllOption={isMulti && hasSelectAllOption && !hasNoOptionsAndIsCreatable}
           />
         </PositionInScreen>
