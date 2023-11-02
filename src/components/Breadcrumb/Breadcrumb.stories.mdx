@@ -5,9 +5,10 @@ import Stack from '../storyUtils/Stack';
 import Breadcrumb from './Breadcrumb';
 import { FIGMA_URL } from '../../utils/common';
 import SectionHeader from '../../storybook/SectionHeader';
+import Overview from '../../storybook/Overview';
 
 <Meta
-  title="Original Components/Breadcrumb"
+  title="Updated Components/Breadcrumb"
   component={() => true}
   parameters={{
     design: [
@@ -29,7 +30,19 @@ import SectionHeader from '../../storybook/SectionHeader';
 
 ## Overview
 
-Breadcrumbs consist of a list of links that help a user visualize a page's location within the hierarchical structure of a website and allow navigation up to any of its levels.
+<Story
+  name="Overview"
+  parameters={{
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+>
+  <Overview>
+    Breadcrumbs consist of a list of links that help a user visualize a page's location within the
+    hierarchical structure of a website and allow navigation up to any of its levels.
+  </Overview>
+</Story>
 
 ## Props
 
@@ -44,7 +57,7 @@ Breadcrumbs consist of a list of links that help a user visualize a page's locat
   ]}
 />
 
-## Variants
+<SubsectionHeader title="Variants" />
 
 ### Basic Breadcrumbs
 
