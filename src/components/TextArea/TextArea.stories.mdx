@@ -3,11 +3,11 @@ import { boolean, select, text, withKnobs, number } from '@storybook/addon-knobs
 import TextArea from './TextArea';
 import Stack from '../storyUtils/Stack';
 import { FIGMA_URL, Function } from '../../utils/common';
-import SectionHeader from '../../storybook/SectionHeader';
+import Overview from '../../storybook/Overview';
 import { useState } from 'react';
 
 <Meta
-  title="Design System/TextArea"
+  title="Updated Components/Fields/TextArea"
   component={TextArea}
   parameters={{
     design: [
@@ -34,7 +34,19 @@ import { useState } from 'react';
 
 # Overview
 
-A universal TextArea component used for the case where large string of text is needed as an input.
+<Story
+  name="Overview"
+  parameters={{
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+>
+  <Overview>
+    A universal TextArea component used for the case where large string of text is needed as an
+    input.
+  </Overview>
+</Story>
 
 ## Props
 
@@ -43,24 +55,24 @@ A universal TextArea component used for the case where large string of text is n
 ## Usage
 
 <UsageGuidelines
-  guidelines={[
+  guidelines={['When you need to enter a large string of text']}
+  policies={[
     'If you need to enter a short string of text in a single line, use text input instead',
-    'TextArea hint may be either text (on the left) or character counter (on the right)',
   ]}
 />
 
-## Variants
+<SubsectionHeader title="Variants" />
 
-### TextArea with labels
+### TextArea with placeholder
 
-TextArea with label, with or without placeholder
+TextArea with or without placeholder
 
 <Preview>
-  <Story name="TextArea with labels">
+  <Story name="TextArea with placeholder">
     <Stack>
-      <TextArea label={'Label'} cols={10} rows={5} isResizeEnabled={false} />
+      <TextArea label={'TextArea'} cols={10} rows={5} isResizeEnabled={false} />
       <TextArea
-        label={'Label'}
+        label={'TextArea'}
         cols={10}
         rows={5}
         placeholder={'Placeholder'}
@@ -70,19 +82,19 @@ TextArea with label, with or without placeholder
   </Story>
 </Preview>
 
-### Resizable TextArea
+### TextArea with resizing option
 
 TextArea and how to change size with cols and rows
 
 <Preview>
-  <Story name="Resizable TextArea">
+  <Story name="TextArea with resizing option">
     <Stack>
-      <TextArea label={'Label'} cols={10} rows={5} />
+      <TextArea label={'TextArea'} cols={10} rows={5} />
     </Stack>
   </Story>
 </Preview>
 
-### TextArea with Counter
+### TextArea with counter
 
 TextArea with maximum characters indicated by a counter.
 
@@ -92,7 +104,7 @@ TextArea with maximum characters indicated by a counter.
 </Tip>
 
 <Preview>
-  <Story name="TextArea with Counter">
+  <Story name="TextArea with counter">
     <Stack>
       <Function>
         {() => {
@@ -100,7 +112,7 @@ TextArea with maximum characters indicated by a counter.
           const handleChange = (e) => setValue(e.target.value);
           return (
             <TextArea
-              label={'Label'}
+              label={'TextArea'}
               value={value}
               onChange={handleChange}
               cols={10}
@@ -115,12 +127,12 @@ TextArea with maximum characters indicated by a counter.
   </Story>
 </Preview>
 
-### TextArea Statuses
+### TextArea statuses
 
 TextArea with 3 available statuses: Normal, Error and Read-only.
 
 <Preview>
-  <Story name="TextArea Statuses" parameters={{ decorators: [withKnobs] }}>
+  <Story name="TextArea statuses" parameters={{ decorators: [withKnobs] }}>
     <Stack>
       <Stack>
         <TextArea
@@ -167,7 +179,7 @@ Regular TextArea disabled with label
     <Stack>
       <TextArea
         isDisabled
-        label={'Label'}
+        label={'TextArea'}
         cols={10}
         rows={5}
         status={{
@@ -191,7 +203,7 @@ Regular TextArea disabled with label
           return (
             <TextArea
               value={value}
-              label={text('Label', 'Label')}
+              label={text('Label', 'TextArea')}
               onChange={handleChange}
               placeholder={text('Placeholder', 'Placeholder')}
               isDisabled={boolean('isDisabled', false)}

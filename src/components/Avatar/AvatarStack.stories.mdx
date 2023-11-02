@@ -5,10 +5,10 @@ import AvatarStack from './AvatarStack';
 import Stack from '../storyUtils/Stack';
 import { BASE_SHADE } from '../../theme/palette';
 import { FIGMA_URL } from '../../utils/common';
-import SectionHeader from '../../storybook/SectionHeader';
+import Overview from '../../storybook/Overview';
 
 <Meta
-  title="Design System/Avatar/AvatarStack"
+  title="Updated Components/Avatar/AvatarStack"
   component={Avatar}
   parameters={{
     design: [
@@ -23,25 +23,48 @@ import SectionHeader from '../../storybook/SectionHeader';
 
 <SectionHeader title={'Avatar Stack'} />
 
-A universal AvatarStack component that renders its children as a stack.
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
 
-## Usage
+## Overview
 
-```js
-import { Avatar, AvatarStack } from '@orfium/ictinus';
-
-<AvatarStack>
-  <Avatar />
-  <Avatar />
-  <Avatar />
-</AvatarStack>;
-```
+<Story
+  name="Overview"
+  parameters={{
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+>
+  <Overview>A universal AvatarStack component that renders its children as a stack.</Overview>
+</Story>
 
 ## Props
 
 <Props of={AvatarStack} />
 
+## Usage
+
+<UsageGuidelines
+  guidelines={[
+    'When you need to show a visual representation of users related to a specific value in the data set',
+  ]}
+  policies={[
+    'Don’t use when the the max amount of users related to the value is one: use an avatar instead',
+  ]}
+/>
+
+## Props
+
+<Props of={AvatarStack} />
+
+<SubsectionHeader title="Variants" />
+
 ### Avatar Stack
+
+Avatar Stacks in different sizes
 
 <Preview>
   <Story name="Avatar Stack">

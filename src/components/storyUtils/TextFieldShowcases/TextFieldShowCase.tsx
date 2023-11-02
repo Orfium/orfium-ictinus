@@ -41,7 +41,7 @@ const TextFieldShowCase: FC<Props> = ({
   };
 
   return (
-    <div style={{ width: '500px' }}>
+    <div style={{ width: '200px' }}>
       {isMaskedTextField ? (
         <TextField mask={mask} {...commonProps} />
       ) : (
