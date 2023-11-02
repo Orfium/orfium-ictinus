@@ -58,12 +58,13 @@ import Overview from '../../storybook/Overview';
 
 <SubsectionHeader title="Variants" />
 
-### IconButton types
+### IconButton Types and Sizes
 
-IconButton with different types `primary, secondary, tertiary` and different shape types `circle, square`
+IconButton with different types `primary, secondary, tertiary` and different shape types `circle, square` <br/>
+There are 2 IconButton sizes, `normal` and `compact`.
 
 <Preview>
-  <Story name="IconButton types">
+  <Story name="IconButton Types and Sizes">
     <Stack>
       <IconButton name="dotsVertical" />
       <IconButton name="dotsVertical" type="secondary" />
@@ -73,6 +74,16 @@ IconButton with different types `primary, secondary, tertiary` and different sha
       <IconButton name="dotsVertical" shape="square" />
       <IconButton name="dotsVertical" type="secondary" shape="square" />
       <IconButton name="dotsVertical" type="tertiary" shape="square" />
+    </Stack>
+    <Stack>
+      <IconButton name="dotsVertical" size="compact" />
+      <IconButton name="dotsVertical" type="secondary" size="compact" />
+      <IconButton name="dotsVertical" type="tertiary" size="compact" />
+    </Stack>
+    <Stack>
+      <IconButton name="dotsVertical" shape="square" size="compact" />
+      <IconButton name="dotsVertical" type="secondary" shape="square" size="compact" />
+      <IconButton name="dotsVertical" type="tertiary" shape="square" size="compact" />
     </Stack>
   </Story>
 </Preview>
@@ -90,6 +101,7 @@ IconButton with different types `primary, secondary, tertiary` and different sha
             .map((iconName) => iconName),
           'check'
         )}
+        size={select('size', ['compact', 'normal'], 'normal')}
         type={select('type', ['primary', 'secondary', 'tertiary'], 'primary')}
         shape={select('shape', ['circle', 'square'], 'circle')}
       />

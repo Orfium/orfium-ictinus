@@ -68,7 +68,9 @@ import Overview from '../../storybook/Overview';
 
 <SubsectionHeader title="Variants" />
 
-### Button with dropdownButton
+### Button with dropdown
+
+There are 2 Button with DropdownButton Sizes, `normal` and `compact`.
 
 <Preview>
   <Story name="Button with dropdown">
@@ -96,11 +98,39 @@ import Overview from '../../storybook/Overview';
       >
         Click Here
       </DropdownButton>
+      <DropdownButton
+        size="compact"
+        items={['Item 1', 'Item 2']}
+        onButtonClick={() => console.log('click')}
+        onOptionSelect={(option) => console.log(option)}
+      >
+        Click Here
+      </DropdownButton>
+      <DropdownButton
+        size="compact"
+        type="secondary"
+        items={['Item 1', 'Item 2']}
+        onButtonClick={() => console.log('click')}
+        onOptionSelect={(option) => console.log(option)}
+      >
+        Click Here
+      </DropdownButton>
+      <DropdownButton
+        size="compact"
+        type="tertiary"
+        items={['Item 1', 'Item 2']}
+        onButtonClick={() => console.log('click')}
+        onOptionSelect={(option) => console.log(option)}
+      >
+        Click Here
+      </DropdownButton>
     </Stack>
   </Story>
 </Preview>
 
 ### IconButton with dropdown
+
+There are 2 IconButton with DropdownButton Sizes, `normal` and `compact`.
 
 <Preview>
   <Story name="IconButton with dropdown">
@@ -115,6 +145,23 @@ import Overview from '../../storybook/Overview';
         onOptionSelect={(option) => console.log(option)}
       />
       <DropdownButton
+        type="tertiary"
+        items={['Item 1', 'Item 2']}
+        onOptionSelect={(option) => console.log(option)}
+      />
+      <DropdownButton
+        size="compact"
+        items={['Item 1', 'Item 2']}
+        onOptionSelect={(option) => console.log(option)}
+      />
+      <DropdownButton
+        size="compact"
+        type="secondary"
+        items={['Item 1', 'Item 2']}
+        onOptionSelect={(option) => console.log(option)}
+      />
+      <DropdownButton
+        size="compact"
         type="tertiary"
         items={['Item 1', 'Item 2']}
         onOptionSelect={(option) => console.log(option)}

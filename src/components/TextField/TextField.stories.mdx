@@ -72,6 +72,26 @@ import Overview from '../../storybook/Overview';
 
 <SubsectionHeader title="Variants" />
 
+### TextField sizes
+
+There are 2 Textfield sizes: `normal` and `compact`.
+
+<Tip>
+  Compact TextField doesn't support placeholder (only in masked version using the mask prop) and
+  multi-textfield functionality. To use these, please use normal-size TextField.
+</Tip>
+
+<Preview>
+  <Story name="TextField sizes">
+    <Stack>
+      <TextField label={'Label'} />
+    </Stack>
+    <Stack>
+      <TextField label={'Label'} size="compact" />
+    </Stack>
+  </Story>
+</Preview>
+
 ### TextField with placeholder
 
 Single TextField with or without Placeholder
@@ -209,6 +229,7 @@ Disabled TextField.
     <Stack>
       <TextFieldShowCase
         label={text('Label', 'TextField')}
+        size={select('size', ['normal', 'compact'], 'normal')}
         placeholder={text('Placeholder', 'Placeholder')}
         isDisabled={boolean('isDisabled', false)}
         hasSuffix={boolean('hasSuffixIcon', false)}

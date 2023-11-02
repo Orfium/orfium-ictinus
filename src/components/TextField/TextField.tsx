@@ -14,7 +14,7 @@ import TextInputBase, { TextInputBaseProps } from 'components/TextInputBase';
 import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
 
 export type InputProps = Partial<
-  Omit<InputHTMLAttributes<HTMLInputElement>, 'readOnly' | 'disabled'>
+  Omit<InputHTMLAttributes<HTMLInputElement>, 'readOnly' | 'disabled' | 'size'>
 >;
 
 type MaskProps = { mask?: never } | { mask?: string | (string | RegExp)[]; placeholder?: never };
@@ -53,6 +53,7 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
     suffix = null,
     label,
     placeholder = '',
+    size = 'normal',
     isRequired = false,
     isDisabled,
     isReadOnly,
@@ -79,6 +80,7 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
     id,
     suffix,
     status,
+    size,
     isDisabled,
     ref,
     sx,
@@ -87,8 +89,10 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
   const inputProps = {
     // eslint-disable-next-line @typescript-eslint/naming-convention
     readOnly: isLocked || isReadOnly,
-    css: inputStyle({ label, placeholder, isLocked, isDisabled }),
-    placeholder: placeholder ? `${placeholder} ${isRequired ? '*' : ''}` : label,
+    css: inputStyle({ label, placeholder, isLocked, isDisabled, size }),
+    ...(size === 'normal'
+      ? { placeholder: placeholder ? `${placeholder} ${isRequired ? '*' : ''}` : label }
+      : { placeholder: ' ' }),
     // eslint-disable-next-line @typescript-eslint/naming-convention
     required: isRequired,
     id: id,
@@ -139,6 +143,7 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
             <Label
               htmlFor={id}
               label={label}
+              size={size}
               isRequired={isRequired}
               isAnimated={Boolean(rest.value)}
               hasError={!isDisabled && status?.type === 'error'}

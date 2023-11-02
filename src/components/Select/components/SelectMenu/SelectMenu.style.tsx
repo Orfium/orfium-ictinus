@@ -6,9 +6,6 @@ import { rem } from 'theme/utils';
 import { SelectMenuProps } from './SelectMenu';
 import { TextFieldProps } from 'components/TextField/TextField';
 
-export const MAX_LARGE_HEIGHT = 277;
-export const MAX_SMALL_HEIGHT = 265;
-
 export const optionStyle =
   ({
     isSelected,
@@ -38,7 +35,12 @@ export const optionStyle =
   };
 
 export const menuStyle =
-  ({ status, isVirtualized, sx }: SelectMenuProps & Omit<TextFieldProps, 'ref' | 'label' | 'sx'>) =>
+  ({
+    status,
+    isVirtualized,
+    height,
+    sx,
+  }: SelectMenuProps & Omit<TextFieldProps, 'ref' | 'label'> & { height: number }) =>
   (theme: Theme): SerializedStyles =>
     css`
       background-color: ${theme.globals.oldColors.white};
@@ -47,7 +49,7 @@ export const menuStyle =
       top: ${status?.type !== 'normal' ? '70%' : '110%'};
       z-index: 500;
       position: absolute;
-      max-height: ${rem(MAX_LARGE_HEIGHT)};
+      max-height: ${rem(height)};
       overflow-y: ${isVirtualized ? 'hidden' : 'auto'};
       // TODO we need a technique to identify menu position left or right
       min-width: 100%;

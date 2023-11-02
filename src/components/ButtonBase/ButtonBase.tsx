@@ -5,7 +5,7 @@ import { buttonBaseStyle, buttonWrapperStyle } from './ButtonBase.style';
 import { ClickEvent } from '../../hooks/useLoading';
 import { CommonButtonProps } from '../../utils/common';
 import { generateTestDataId } from '../../utils/helpers';
-import { TestProps } from '../../utils/types';
+import { ComponentSizes, TestProps } from '../../utils/types';
 import { ButtonTypes } from 'components/Button/Button.types';
 import ButtonLoader from 'components/Button/ButtonLoader';
 import { IconButtonShape } from 'components/IconButton';
@@ -18,6 +18,8 @@ export type EventButtonProps = {
 export type ButtonBaseProps = {
   /** The type of the button */
   type?: ButtonTypes;
+  /** The size of button */
+  size?: ComponentSizes;
   /** This property will make the button fit to its parent width. Defaults to false */
   isBlock?: boolean;
   /** Property indicating if the component is loading */
@@ -42,6 +44,7 @@ export type ButtonBaseProps = {
 const ButtonBase = React.forwardRef<HTMLButtonElement, ButtonBaseProps>((props, ref) => {
   const {
     type = 'primary',
+    size = 'normal',
     isBlock = false,
     isDisabled = false,
     isLoading = false,
@@ -66,6 +69,7 @@ const ButtonBase = React.forwardRef<HTMLButtonElement, ButtonBaseProps>((props, 
         data-testid={generateTestDataId(testIdName, dataTestId)}
         css={buttonBaseStyle({
           type,
+          size,
           isLoading,
           isBlock,
           isDisabled,
