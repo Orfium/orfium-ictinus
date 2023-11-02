@@ -1,11 +1,11 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
 import List, { ListSection, ListItem, ListItemText } from '../index';
 import { FIGMA_URL, Function } from '../../../utils/common';
-import SectionHeader from '../../../storybook/SectionHeader';
+import Overview from '../../../storybook/Overview';
 import Stack from '../../storyUtils/Stack';
 
 <Meta
-  title="Design System/List/ListSection"
+  title="Updated Components/List/ListSection"
   component={ListSection}
   parameters={{
     design: [
@@ -28,7 +28,16 @@ import Stack from '../../storyUtils/Stack';
 
 ## Overview
 
-The ListSection component is used to group related items within the List.
+<Story
+  name="Overview"
+  parameters={{
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+>
+  <Overview>The ListSection component is used to group related items within the List.</Overview>
+</Story>
 
 ## Usage
 
@@ -64,7 +73,7 @@ const MyComponent = () => {
 
 <Props of={ListSection} />
 
-## Variants
+<SubsectionHeader title="Variants" />
 
 ### Normal ListSection
 

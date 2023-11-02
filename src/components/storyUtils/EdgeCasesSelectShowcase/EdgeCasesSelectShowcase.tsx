@@ -20,7 +20,7 @@ const EdgeCasesSelectShowcase: React.FCC = () => {
     <div css={showcaseContainer()}>
       <div style={{ width: 250 }}>
         <StatefulSelect
-          label={'Flavour'}
+          label={'Select'}
           options={[
             ...options,
             {
@@ -34,7 +34,7 @@ const EdgeCasesSelectShowcase: React.FCC = () => {
         />
       </div>
       <StatefulSelect
-        label={'Flavour'}
+        label={'Select'}
         options={options}
         selectedOption={defaultValue}
         onChange={handleSelectedOption}

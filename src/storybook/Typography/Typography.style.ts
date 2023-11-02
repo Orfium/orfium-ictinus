@@ -8,7 +8,7 @@ export const TypographyWrapper = (theme: Theme) =>
     display: grid;
     &:after {
       content: '';
-      margin-top: 8px;
+      margin: 16px 0;
       background: ${theme.tokens.colors.get('borderColor.decorative.muted')};
       height: 1px;
     }
