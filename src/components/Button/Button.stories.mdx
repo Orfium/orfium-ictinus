@@ -5,7 +5,7 @@ import Stack from '../storyUtils/Stack';
 import LinkTo from '@storybook/addon-links/react';
 
 import { FIGMA_URL } from '../../utils/common';
-import LoadingButtonShowcase from '../storyUtils/LoadingButtonShowcase';
+import { LoadingButtonShowcase, ButtonShowcase } from '../storyUtils/ButtonShowcases';
 import Overview from '../../storybook/Overview';
 import { getIconSelectorKnob } from '../../utils/stories';
 
@@ -354,13 +354,17 @@ Can be only combined with a right icon, not with a left icon at the same time.
 <Preview>
   <Story name="Playground" parameters={{ decorators: [withKnobs] }}>
     <Stack isVertical>
-      <Button
-        isBlock
+      <ButtonShowcase
+        buttonLabel={text('Button Label', 'Label')}
         type={select(
           'type',
           ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
           'primary'
         )}
+        hasAvatar={boolean('hasAvatar', false)}
+        avatar={{
+          label: text('Avatar Label'),
+        }}
         size={select('size', ['compact', 'normal'], 'normal')}
         iconLeftName={getIconSelectorKnob('iconLeftName')}
         iconRightName={getIconSelectorKnob('iconRightName')}
@@ -369,7 +373,7 @@ Can be only combined with a right icon, not with a left icon at the same time.
         isBlock={boolean('isBlock', false)}
       >
         Hello world
-      </Button>
+      </ButtonShowcase>
     </Stack>
   </Story>
 </Preview>
