@@ -5,10 +5,10 @@ import AvatarStack from './AvatarStack';
 import Stack from '../storyUtils/Stack';
 import { BASE_SHADE } from '../../theme/palette';
 import { FIGMA_URL } from '../../utils/common';
-import SectionHeader from '../../storybook/SectionHeader';
+import Overview from '../../storybook/Overview';
 
 <Meta
-  title="Design System/Avatar/Avatar"
+  title="Updated Components/Avatar/Avatar"
   component={Avatar}
   parameters={{
     design: [
@@ -31,7 +31,19 @@ import SectionHeader from '../../storybook/SectionHeader';
 
 ## Overview
 
-A universal Avatar component can be found around ictinus on menus or can be a standalone component as well. It renders either images, letter or icon from our library
+<Story
+  name="Overview"
+  parameters={{
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+>
+  <Overview>
+    A universal Avatar component can be found around ictinus on menus or can be a standalone
+    component as well. It renders either images, letter or icon from our library
+  </Overview>
+</Story>
 
 ## Props
 
@@ -40,18 +52,13 @@ A universal Avatar component can be found around ictinus on menus or can be a st
 ## Usage
 
 <UsageGuidelines
-  guidelines={[
-    'Buttons may contain icon, on the left or the right side',
-    'Use 8 px spacing between buttons',
-    'Replace text with a loader if action is submitted, but still processing',
-    'Button width is set by it’s content, avoid changing it width',
-    'Use only one primary button, and any remaining calls to action should be represented as lower emphasis buttons',
+  guidelines={['Use an avatar to consistently represent a person, group, or project']}
+  policies={[
+    'Don’t use when the the max amount of users related to the value is one: use an avatar instead',
   ]}
 />
 
-<Tip>If you need to use icon as button with no text, check out component</Tip>
-
-## Variants
+<SubsectionHeader title="Variants" />
 
 ### Avatar with icon
 

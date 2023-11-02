@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Design System/List/ListSection Compact ListSection 1`] = `
+exports[`Storyshots Updated Components/List/ListSection Compact ListSection 1`] = `
 .emotion-0 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -385,7 +385,7 @@ exports[`Storyshots Design System/List/ListSection Compact ListSection 1`] = `
 </div>
 `;
 
-exports[`Storyshots Design System/List/ListSection Normal ListSection 1`] = `
+exports[`Storyshots Updated Components/List/ListSection Normal ListSection 1`] = `
 .emotion-0 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -765,6 +765,55 @@ exports[`Storyshots Design System/List/ListSection Normal ListSection 1`] = `
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Updated Components/List/ListSection Overview 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  margin: -16px;
+}
+
+.emotion-3 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.375rem;
+  font-size: 1rem;
+  letter-spacing: 0.015625rem;
+  color: #1B214F;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <p
+        className="emotion-3"
+        id="the-listsection-component-is-used-to-group-related-items-within-the-list."
+      >
+        The ListSection component is used to group related items within the List.
+      </p>
     </div>
   </div>
 </div>
