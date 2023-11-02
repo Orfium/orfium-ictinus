@@ -49,12 +49,12 @@ const field = {
       default: {
         value: '{sem.colors.palette.tertiary.lightest}',
         type: 'color',
-        description: 'Sets backgroundColor for _block increment (default state)',
+        description: 'Sets backgroundColor for field increment (default state)',
       },
       focused: {
         value: '{sem.colors.palette.tertiary.light}',
         type: 'color',
-        description: 'Sets backgroundColor for _block increment (focused state)',
+        description: 'Sets backgroundColor for field increment (focused state)',
       },
     },
   },
@@ -62,18 +62,29 @@ const field = {
     value: '{spacing.4}',
     type: 'spacing',
     description: 'sets vertical padding between an input field container and its hint (if used)',
+    compact: {
+      value: '{spacing.3}',
+      type: 'spacing',
+      description:
+        'sets vertical padding between a compact input field container and its hint (if used)',
+    },
   },
-  normal: {
-    input: {
+  input: {
+    normal: {
       value: '{sem.typography.normal.body02}',
       type: 'typography',
-      description: 'Sets text for field prefix/input/suffix/placeholder',
+      description: 'Sets text for normal field prefix/input/suffix/placeholder',
     },
-    label: {
-      value: '{sem.typography.normal.label03}',
+    compact: {
+      value: '{sem.typography.normal.body03}',
       type: 'typography',
-      description: 'Sets text for input field label',
+      description: 'Sets text for compact field prefix/input/suffix/placeholder',
     },
+  },
+  label: {
+    value: '{sem.typography.normal.label03}',
+    type: 'typography',
+    description: 'Sets text for input field label',
   },
   hint: {
     value: '{sem.typography.normal.body03}',
@@ -198,21 +209,33 @@ const field = {
     value: '{spacing.5}',
     type: 'spacing',
     description: 'Sets left padding between content and container',
+    compact: {
+      value: '{spacing.4}',
+      type: 'spacing',
+      description: 'Sets left padding for compact field',
+    },
   },
   paddingContentRight: {
     value: '{spacing.0}',
     type: 'spacing',
     description: 'Sets right padding between content and addOn',
+    compact: {
+      value: '{spacing.0}',
+      type: 'spacing',
+      description: 'Sets right padding between content and addOn for compact field',
+    },
   },
   container: {
-    value: '{sizing.13}',
-    type: 'sizing',
-    description: 'Sets fixed height for field content container',
-  },
-  containerCompact: {
-    value: '{sizing.7}',
-    type: 'sizing',
-    description: 'Sets fixed height for compact field content container',
+    normal: {
+      value: '{sizing.13}',
+      type: 'sizing',
+      description: 'Sets fixed height for field content container',
+    },
+    compact: {
+      value: '{sizing.7}',
+      type: 'sizing',
+      description: 'Sets fixed height for compact field content container',
+    },
   },
   borderWidth: {
     '1': {
@@ -240,13 +263,6 @@ const field = {
     value: '{spacing.6}',
     type: 'spacing',
     description: 'Sets top and bottom padding for text area',
-  },
-  compact: {
-    input: {
-      value: '{sem.typography.normal.body03}',
-      type: 'typography',
-      description: 'Sets text for input field label',
-    },
   },
   hintIconSize: {
     value: '{sem.icon.size.2}',

@@ -2,6 +2,7 @@ import { CSSObject } from '@emotion/serialize';
 import useTheme from 'hooks/useTheme';
 import React, { FCC } from 'react';
 import isEqual from 'react-fast-compare';
+import { ComponentSizes } from 'types';
 
 import { hintMessageStyle, textFieldStyle, wrapperStyle } from './TextInputBase.style';
 import { getTextInputBaseTokens } from './TextInputBase.tokens';
@@ -15,6 +16,8 @@ export type TextInputBaseProps = {
   label: string;
   /** The placeholder of the input that will be used. This is shown if no label exists */
   placeholder?: string;
+  /** The size of input */
+  size?: ComponentSizes;
   /** An optional suffix (element or icon-name) to show to the left */
   suffix?: AcceptedIconNames | JSX.Element | null;
   /** If the text field value is required */
@@ -48,6 +51,7 @@ const TextInputBase: FCC<
   isDisabled,
   dataTestId,
   status = { type: 'normal' },
+  size = 'normal',
   isInteractive = true,
   children,
   sx,
@@ -61,7 +65,7 @@ const TextInputBase: FCC<
       data-testid={generateTestDataId('error', dataTestId)}
       css={hintMessageStyle({ status, isDisabled })}
     >
-      {!isDisabled && status.type === 'error' && (
+      {!isDisabled && status.type === 'error' && size === 'normal' && (
         <Icon color={tokens('textColor.errorHintColor')} name={'warning'} size={12} />
       )}
       <span id={status.id}>{status.hintMessage}</span>
@@ -75,6 +79,7 @@ const TextInputBase: FCC<
         css={wrapperStyle({
           isDisabled,
           status,
+          size,
           sx,
           isInteractive,
         })}
