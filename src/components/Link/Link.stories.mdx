@@ -5,10 +5,10 @@ import Stack from '../storyUtils/Stack';
 import { BASE_SHADE } from '../../theme/palette';
 import { FIGMA_URL } from '../../utils/common';
 import { getIconSelectorKnob } from '../../utils/stories';
-import SectionHeader from '../../storybook/SectionHeader';
+import Overview from '../../storybook/Overview';
 
 <Meta
-  title="Design System/Link"
+  title="Updated Components/Link"
   component={Link}
   parameters={{
     design: [
@@ -30,7 +30,19 @@ import SectionHeader from '../../storybook/SectionHeader';
 
 ## Overview
 
-A link is a navigational component that takes a user to another URL, an element within the page, or a file.
+<Story
+  name="Overview"
+  parameters={{
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+>
+  <Overview>
+    A link is a navigational component that takes a user to another URL, an element within the page,
+    or a file.
+  </Overview>
+</Story>
 
 ## Props
 
@@ -45,6 +57,7 @@ A link is a navigational component that takes a user to another URL, an element 
     'Use to download a file',
     'Use to show a secondary action (e.g. "Cancel")',
   ]}
+  policies={['To show a primary action (like “Save”), use a button instead. ']}
 />
 
 <Tip>To show a primary action (like “Save”), use a Button instead. </Tip>
@@ -53,12 +66,12 @@ A link is a navigational component that takes a user to another URL, an element 
 
 <Props of={Link} />
 
-## Variants
+<SubsectionHeader title="Variants" />
 
-### Style
+### Link styles
 
 <Preview>
-  <Story name="Style">
+  <Story name="Link styles">
     <Stack isVertical>
       <Link href="#">Primary</Link>
     </Stack>
@@ -70,13 +83,13 @@ A link is a navigational component that takes a user to another URL, an element 
   </Story>
 </Preview>
 
-### Placement
+### Link placement
 
 Inline: Used within a body of copy; always with underline text decoration for better discoverability <br/>
 Block: Used without a body of copy; without underline text decoration
 
 <Preview>
-  <Story name="Placement">
+  <Story name="Link placement">
     <Stack isVertical>
       <div>
         This is an{' '}
@@ -96,10 +109,10 @@ Block: Used without a body of copy; without underline text decoration
   </Story>
 </Preview>
 
-### Sizes
+### Link sizes
 
 <Preview>
-  <Story name="Sizes">
+  <Story name="Link sizes">
     <Stack isVertical>
       <Link href="#" size={1}>
         Size 1
@@ -114,10 +127,10 @@ Block: Used without a body of copy; without underline text decoration
   </Story>
 </Preview>
 
-### Link with Icon
+### Link with icon
 
 <Preview>
-  <Story name="Link with Icon" parameters={{ decorators: [withKnobs] }}>
+  <Story name="Link with icon" parameters={{ decorators: [withKnobs] }}>
     <Stack isVertical>
       <Link href="#" size={1} iconName={getIconSelectorKnob('iconName', 'externalLink')}>
         Link

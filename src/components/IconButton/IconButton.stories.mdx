@@ -4,10 +4,10 @@ import IconButton from './IconButton';
 import Stack from '../storyUtils/Stack';
 import iconSelector from '../Icon/assets/iconSelector';
 import { FIGMA_URL } from '../../utils/common';
-import SectionHeader from '../../storybook/SectionHeader';
+import Overview from '../../storybook/Overview';
 
 <Meta
-  title="Design System/Button/IconButton"
+  title="Updated Components/Buttons/IconButton"
   component={IconButton}
   parameters={{
     design: [
@@ -27,21 +27,38 @@ import SectionHeader from '../../storybook/SectionHeader';
 
 <SectionHeader title={'IconButton'} />
 
-A universal IconButton component that with the help of Button hold the icon inside it and makes it clickable and easily accessible.
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
 
-## Usage
+## Overview
 
-```js
-import { IconButton } from '@orfium/ictinus';
-
-<IconButton onClick={() => {}} name={'add'} />;
-```
+<Story
+  name="Overview"
+  parameters={{
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+>
+  <Overview>
+    A universal IconButton component that with the help of Button hold the icon inside it and makes
+    it clickable and easily accessible.
+  </Overview>
+</Story>
 
 ## Props
 
 <Props of={IconButton} />
 
-# IconButton Types and Sizes
+## Usage
+
+<Tip>Upon hovering, it is recommended to always display a label tooltip for an icon button.</Tip>
+
+<SubsectionHeader title="Variants" />
+
+### IconButton Types and Sizes
 
 IconButton with different types `primary, secondary, tertiary` and different shape types `circle, square` <br/>
 There are 2 IconButton sizes, `normal` and `compact`.
@@ -71,10 +88,10 @@ There are 2 IconButton sizes, `normal` and `compact`.
   </Story>
 </Preview>
 
-# IconButton Playground
+### Playground
 
 <Preview>
-  <Story name="IconButton Playground">
+  <Story name="Playground">
     <Stack>
       <IconButton
         name={select(

@@ -2,9 +2,9 @@ import { Meta, Props, Story } from '@storybook/addon-docs';
 import Box from './Box';
 import Stack from '../storyUtils/Stack';
 
-import SectionHeader from '../../storybook/SectionHeader';
+import Overview from '../../storybook/Overview';
 
-<Meta title="Design System/Box" component={Box} />
+<Meta title="Updated Components/Box" component={Box} />
 
 <SectionHeader title={'Box'} />
 
@@ -15,19 +15,46 @@ import SectionHeader from '../../storybook/SectionHeader';
 
 ## Overview
 
-The Box component is a helper component that lets you write these common less-reusable elements more briefly inline.
-
-One of the most common needs when building web apps is creating layout elements that have certain layout.
-
-The mentality is that we use all CSS props based on https://developer.mozilla.org/en-US/docs/Web/CSS. Only exceptions are `margin`, `padding` that use them in acronyms like `m` and `p` and direction `t|r|b|l` ending with `m{t|r|l|b}={value}`
+<Story
+  name="Overview"
+  parameters={{
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+>
+  <Overview>
+    <Typography style={{ paddingBottom: '16px' }}>
+      The Box component is a helper component that lets you write these common less-reusable
+      elements more briefly inline.
+    </Typography>
+    <Typography style={{ paddingBottom: '16px' }}>
+      One of the most common needs when building web apps is creating layout elements that have
+      certain layout.
+    </Typography>
+    <Typography style={{ paddingBottom: '16px' }}>
+      The mentality is that we use all CSS props based on{' '}
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">
+        https://developer.mozilla.org/en-US/docs/Web/CSS
+      </a>
+      .
+    </Typography>
+    <Typography>
+      Only exceptions are margin and padding that use them in acronyms like m and p and direction
+      t|r|b|l ending with m + t | r | l | b = value
+    </Typography>
+  </Overview>
+</Story>
 
 ## Usage
 
 <UsageGuidelines
   guidelines={[
     'Box can be containers for all your components',
-    `Don't overdo it! We suggest to use it for up to 5 props. If more use styled-components`,
     'Use only values that comes from the theme config',
+  ]}
+  policies={[
+    `Don't overdo it! We suggest to use it for up to 5 props. If more use styled-components`,
   ]}
 />
 
@@ -35,16 +62,14 @@ The mentality is that we use all CSS props based on https://developer.mozilla.or
 
 <Props of={Box} />
 
-## Variants
+<SubsectionHeader title="Variants" />
 
-Most common use of box can be represented below with spacing, background colors etc.
-
-### Box Padding (All sides)
+### Box padding (All sides)
 
 All application below comes with a default margin bottom '5' which is 12px
 
 <Preview>
-  <Story name="Box Padding (All sides)">
+  <Story name="Box padding (All sides)">
     <Box backgroundColor={'default'} p={'3'} mb={'5'}>
       Padding 3
     </Box>
@@ -57,24 +82,24 @@ All application below comes with a default margin bottom '5' which is 12px
   </Story>
 </Preview>
 
-### Box Horizontal Padding
+### Box horizontal padding
 
 Padding is the same as "margin" in the application, you can also use `mx` for margin.
 
 <Preview>
-  <Story name="Box Horizontal Padding">
+  <Story name="Box horizontal padding">
     <Box backgroundColor={'default'} px={'7'}>
       Padding Horizontal 7
     </Box>
   </Story>
 </Preview>
 
-### Box Vertical Padding
+### Box vertical padding
 
 Padding is the same as "margin" in the application, you can also use `my` for margin.
 
 <Preview>
-  <Story name="Box Vertical Padding">
+  <Story name="Box vertical padding">
     <Box backgroundColor={'default'} py={'7'}>
       Padding Vertical 7
     </Box>

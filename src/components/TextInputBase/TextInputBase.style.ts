@@ -181,6 +181,7 @@ export const inputStyle =
 
       '&:focus-within': {
         '& + label': {
+          fontWeight: `${theme.globals.typography.fontWeight.get('bold')} !important`,
           color: tokens('textColor.labelActive'),
         },
       },

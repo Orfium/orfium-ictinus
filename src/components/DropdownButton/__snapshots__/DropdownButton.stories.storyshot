@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Design System/Button/DropdownButton Button with Dropdown 1`] = `
+exports[`Storyshots Updated Components/Buttons/DropdownButton Button with dropdown 1`] = `
 .emotion-0 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -28,7 +28,7 @@ exports[`Storyshots Design System/Button/DropdownButton Button with Dropdown 1`]
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  height: 6.25rem;
+  height: 9.375rem;
 }
 
 .emotion-3 {
@@ -968,7 +968,7 @@ exports[`Storyshots Design System/Button/DropdownButton Button with Dropdown 1`]
 </div>
 `;
 
-exports[`Storyshots Design System/Button/DropdownButton IconButton with Dropdown 1`] = `
+exports[`Storyshots Updated Components/Buttons/DropdownButton IconButton with dropdown 1`] = `
 .emotion-0 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -996,7 +996,7 @@ exports[`Storyshots Design System/Button/DropdownButton IconButton with Dropdown
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  height: 6.25rem;
+  height: 9.375rem;
 }
 
 .emotion-3 {
@@ -1514,6 +1514,55 @@ exports[`Storyshots Design System/Button/DropdownButton IconButton with Dropdown
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Updated Components/Buttons/DropdownButton Overview 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  margin: -16px;
+}
+
+.emotion-3 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.375rem;
+  font-size: 1rem;
+  letter-spacing: 0.015625rem;
+  color: #1B214F;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <p
+        className="emotion-3"
+        id="a-dropdownbutton-is-a-dual-function-menu-button-that-comes-with-a-cta-and-a-dropdown-with-actions"
+      >
+        A DropdownButton is a dual-function menu button that comes with a CTA and a dropdown with actions
+      </p>
     </div>
   </div>
 </div>

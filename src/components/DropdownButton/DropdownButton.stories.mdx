@@ -2,10 +2,10 @@ import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
 import DropdownButton from './DropdownButton';
 import Stack from '../storyUtils/Stack';
 import { FIGMA_URL } from '../../utils/common';
-import SectionHeader from '../../storybook/SectionHeader';
+import Overview from '../../storybook/Overview';
 
 <Meta
-  title="Design System/Button/DropdownButton"
+  title="Updated Components/Buttons/DropdownButton"
   component={DropdownButton}
   parameters={{
     design: [
@@ -32,7 +32,23 @@ import SectionHeader from '../../storybook/SectionHeader';
 
 ## Overview
 
-A DropdownButton is a dual-function menu button that comes with a CTA and a dropdown with actions
+<Story
+  name="Overview"
+  parameters={{
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+>
+  <Overview>
+    A DropdownButton is a dual-function menu button that comes with a CTA and a dropdown with
+    actions
+  </Overview>
+</Story>
+
+## Props
+
+<Props of={DropdownButton} />
 
 ## Usage
 
@@ -50,19 +66,15 @@ A DropdownButton is a dual-function menu button that comes with a CTA and a drop
   component.
 </Tip>
 
-## Props
+<SubsectionHeader title="Variants" />
 
-<Props of={DropdownButton} />
-
-## Variants
-
-### Button with DropdownButton
+### Button with dropdown
 
 There are 2 Button with DropdownButton Sizes, `normal` and `compact`.
 
 <Preview>
-  <Story name="Button with Dropdown">
-    <Stack height={100}>
+  <Story name="Button with dropdown">
+    <Stack height={150}>
       <DropdownButton
         items={['Item 1', 'Item 2']}
         onButtonClick={() => console.log('click')}
@@ -116,13 +128,13 @@ There are 2 Button with DropdownButton Sizes, `normal` and `compact`.
   </Story>
 </Preview>
 
-### IconButton with Dropdown
+### IconButton with dropdown
 
 There are 2 IconButton with DropdownButton Sizes, `normal` and `compact`.
 
 <Preview>
-  <Story name="IconButton with Dropdown">
-    <Stack height={100}>
+  <Story name="IconButton with dropdown">
+    <Stack height={150}>
       <DropdownButton
         items={['Item 1', 'Item 2']}
         onOptionSelect={(option) => console.log(option)}

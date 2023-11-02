@@ -7,10 +7,11 @@ import { FIGMA_URL, Function } from '../../utils/common';
 import SectionHeader from '../../storybook/SectionHeader';
 import TagShowcase from '../../storybook/Showcases/TagShowcase';
 import { getIconSelectorKnob } from '../../utils/stories';
+import Overview from '../../storybook/Overview';
 import { useState } from 'react';
 
 <Meta
-  title="Design System/Tag"
+  title="Updated Components/Tag"
   component={Tag}
   parameters={{
     design: [
@@ -33,7 +34,16 @@ import { useState } from 'react';
 
 ## Overview
 
-A universal Tag that is used to highlight system-generated metadata.
+<Story
+  name="Overview"
+  parameters={{
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+>
+  <Overview>A universal Tag that is used to highlight system-generated metadata.</Overview>
+</Story>
 
 ## Props
 
@@ -54,7 +64,7 @@ A universal Tag that is used to highlight system-generated metadata.
   ]}
 />
 
-## Variants
+<SubsectionHeader title="Variants" />
 
 ### Read-only Tag
 
@@ -151,12 +161,12 @@ Tag can also be clearable. To enable this functionality, provide the `onClear` p
   </Story>
 </Preview>
 
-### Tag Sizes
+### Tag sizes
 
 There are two Tag sizes: `normal` and `small`.
 
 <Preview>
-  <Story name="Tag Sizes">
+  <Story name="Tag sizes">
     <Stack>
       <Typography>Read-only Tag</Typography>
     </Stack>

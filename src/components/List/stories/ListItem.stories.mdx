@@ -1,7 +1,7 @@
 import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
 import List, { ListItem, ListItemAction, ListItemText } from '../index';
 import { FIGMA_URL, Function } from '../../../utils/common';
-import SectionHeader from '../../../storybook/SectionHeader';
+import Overview from '../../../storybook/Overview';
 import Radio from '../../Radio';
 import CheckBox from '../../CheckBox';
 import Switch from '../../Switch';
@@ -10,7 +10,7 @@ import Box from '../../Box';
 import { useState } from 'react';
 
 <Meta
-  title="Design System/List/ListItem"
+  title="Updated Components/List/ListItem"
   component={ListItem}
   parameters={{
     design: [
@@ -33,7 +33,19 @@ import { useState } from 'react';
 
 ## Overview
 
-The ListItem component represents an individual item in the List. It can contain either ListItemText or ListItemAction, both, or custom component.
+<Story
+  name="Overview"
+  parameters={{
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+>
+  <Overview>
+    The ListItem component represents an individual item in the List. It can contain
+    eitherListItemText or ListItemAction, both, or custom component.
+  </Overview>
+</Story>
 
 ## Usage
 
@@ -62,12 +74,12 @@ const MyComponent = () => {
 
 <Props of={ListItem} />
 
-## Variants
+<SubsectionHeader title="Variants" />
 
-### List Item Compilations
+### ListItem compilations
 
 <Preview>
-  <Story name="List Item Compilations">
+  <Story name="ListItem compilations">
     <Function>
       {() => {
         const [selectedKeys, setSelectedKeys] = useState(new Set());

@@ -1,11 +1,11 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
 import List, { ListItemText, ListItem } from '../index';
 import { FIGMA_URL, Function } from '../../../utils/common';
-import SectionHeader from '../../../storybook/SectionHeader';
+import Overview from '../../../storybook/Overview';
 import Stack from '../../storyUtils/Stack';
 
 <Meta
-  title="Design System/List/ListItemText"
+  title="Updated Components/List/ListItemText"
   component={ListItemText}
   parameters={{
     design: [
@@ -28,7 +28,19 @@ import Stack from '../../storyUtils/Stack';
 
 ## Overview
 
-The ListItemText component is used within a ListItem to display textual content with a primary and a secondary text.
+<Story
+  name="Overview"
+  parameters={{
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+>
+  <Overview>
+    The ListItemText component is used within a ListItem to display textual content with a primary
+    and a secondary text.
+  </Overview>
+</Story>
 
 ## Usage
 
@@ -57,7 +69,7 @@ const MyComponent = () => {
 
 <Props of={ListItemText} />
 
-## Variants
+<SubsectionHeader title="Variants" />
 
 ### ListItemText normal
 

@@ -1,10 +1,10 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
 import List, { ListSection, ListItemText, ListItem } from '../index';
 import { FIGMA_URL, Function } from '../../../utils/common';
-import SectionHeader from '../../../storybook/SectionHeader';
+import Overview from '../../../storybook/Overview';
 
 <Meta
-  title="Design System/List/List"
+  title="Updated Components/List/List"
   component={List}
   parameters={{
     design: [
@@ -27,7 +27,19 @@ import SectionHeader from '../../../storybook/SectionHeader';
 
 ## Overview
 
-The List component is a versatile UI element used to display a collection of items. The List component provides flexibility and customization options to suit various user interface needs.
+<Story
+  name="Overview"
+  parameters={{
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+>
+  <Overview>
+    The List component is a versatile UI element used to display a collection of items. The List
+    component provides flexibility and customization options to suit various user interface needs.
+  </Overview>
+</Story>
 
 ## Usage
 
@@ -51,7 +63,7 @@ const MyComponent = () => {
 
 <Props of={List} />
 
-## Variants
+<SubsectionHeader title="Variants" />
 
 ### List
 
