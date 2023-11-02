@@ -46,7 +46,7 @@ const BreadcrumbShowcase: React.FCC<Props> = ({ initData = [] }) => {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
-      <Button onClick={clickHandler}>Add data to Breadcrumb</Button>
+      <Button onClick={clickHandler}>Add more levels to Breadcrumb</Button>
       <Router history={browserHistory}>
         <Breadcrumb items={data} />
         <Switch>{routes}</Switch>
