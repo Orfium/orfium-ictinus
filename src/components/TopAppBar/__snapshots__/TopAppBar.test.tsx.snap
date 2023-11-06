@@ -657,51 +657,55 @@ exports[`TopAppBar should render correctly 1`] = `
         role="button"
       >
         <div
-          class="emotion-6"
+          data-testid="userMenu"
         >
-          <button
-            class="emotion-7"
-            data-testid="button"
-            type="button"
+          <div
+            class="emotion-6"
           >
-            <span
-              class="emotion-8"
+            <button
+              class="emotion-7"
+              data-testid="button"
+              type="button"
             >
               <span
-                class="emotion-9"
+                class="emotion-8"
               >
-                <div
-                  class="emotion-10"
+                <span
+                  class="emotion-9"
                 >
-                  <img
-                    src="https://mui.com/static/images/avatar/1.jpg"
-                  />
-                </div>
-              </span>
-              <span
-                class="emotion-11"
-              >
-                <span>
-                  <span
-                    class="emotion-12"
+                  <div
+                    class="emotion-10"
                   >
-                    Tom Cruise
+                    <img
+                      src="https://mui.com/static/images/avatar/1.jpg"
+                    />
+                  </div>
+                </span>
+                <span
+                  class="emotion-11"
+                >
+                  <span>
+                    <span
+                      class="emotion-12"
+                    >
+                      Tom Cruise
+                    </span>
+                  </span>
+                </span>
+                <span
+                  class="emotion-9"
+                >
+                  <span
+                    class="emotion-14"
+                  >
+                    <span
+                      class="emotion-15"
+                    />
                   </span>
                 </span>
               </span>
-              <span
-                class="emotion-9"
-              >
-                <span
-                  class="emotion-14"
-                >
-                  <span
-                    class="emotion-15"
-                  />
-                </span>
-              </span>
-            </span>
-          </button>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -1366,51 +1370,55 @@ exports[`TopAppBar should render correctly on dark 1`] = `
         role="button"
       >
         <div
-          class="emotion-6"
+          data-testid="userMenu"
         >
-          <button
-            class="emotion-7"
-            data-testid="button"
-            type="button"
+          <div
+            class="emotion-6"
           >
-            <span
-              class="emotion-8"
+            <button
+              class="emotion-7"
+              data-testid="button"
+              type="button"
             >
               <span
-                class="emotion-9"
+                class="emotion-8"
               >
-                <div
-                  class="emotion-10"
+                <span
+                  class="emotion-9"
                 >
-                  <img
-                    src="https://mui.com/static/images/avatar/1.jpg"
-                  />
-                </div>
-              </span>
-              <span
-                class="emotion-11"
-              >
-                <span>
-                  <span
-                    class="emotion-12"
+                  <div
+                    class="emotion-10"
                   >
-                    Tom Cruise
+                    <img
+                      src="https://mui.com/static/images/avatar/1.jpg"
+                    />
+                  </div>
+                </span>
+                <span
+                  class="emotion-11"
+                >
+                  <span>
+                    <span
+                      class="emotion-12"
+                    >
+                      Tom Cruise
+                    </span>
+                  </span>
+                </span>
+                <span
+                  class="emotion-9"
+                >
+                  <span
+                    class="emotion-14"
+                  >
+                    <span
+                      class="emotion-15"
+                    />
                   </span>
                 </span>
               </span>
-              <span
-                class="emotion-9"
-              >
-                <span
-                  class="emotion-14"
-                >
-                  <span
-                    class="emotion-15"
-                  />
-                </span>
-              </span>
-            </span>
-          </button>
+            </button>
+          </div>
         </div>
       </div>
     </div>

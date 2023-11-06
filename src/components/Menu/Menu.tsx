@@ -81,47 +81,49 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
 
   return (
     <ClickAwayListener onClick={() => setOpen(false)}>
-      <PositionInScreen
-        visible={open}
-        offsetY={8}
-        parent={
-          <Button
-            size={size}
-            onClick={() => setOpen(!open)}
-            type={buttonType}
-            color={color}
-            disabled={disabled}
-            filled={filled}
-            iconRight={
-              rightIconName ? <Icon name={rightIconName} color={iconColor} size={iconSize} /> : null
-            }
-            iconLeft={
-              !isEmpty(avatar) ? (
-                <Avatar size={'sm'} src={avatar?.src} color={avatar?.color} iconName={'user'}>
-                  {avatar?.letter}
-                </Avatar>
-              ) : leftIconName ? (
-                <Icon name={leftIconName} color={iconColor} size={iconSize} />
-              ) : null
-            }
-          >
-            <span>{buttonText}</span>
-          </Button>
-        }
-      >
-        <div css={optionsStyle({ menuPosition })(theme)}>
-          {items && (
-            <List
-              data={items}
-              rowSize={'small'}
-              handleOptionClick={(option: string) => {
-                setOpen(false);
-                onSelect(option);
-              }}
-            />
-          )}
-        </div>
-      </PositionInScreen>
+      <div data-testid={dataTestId}>
+        <PositionInScreen
+          visible={open}
+          offsetY={8}
+          parent={
+            <Button
+              size={size}
+              onClick={() => setOpen(!open)}
+              type={buttonType}
+              color={color}
+              disabled={disabled}
+              filled={filled}
+              iconRight={
+                rightIconName ? <Icon name={rightIconName} color={iconColor} size={iconSize} /> : null
+              }
+              iconLeft={
+                !isEmpty(avatar) ? (
+                  <Avatar size={'sm'} src={avatar?.src} color={avatar?.color} iconName={'user'}>
+                    {avatar?.letter}
+                  </Avatar>
+                ) : leftIconName ? (
+                  <Icon name={leftIconName} color={iconColor} size={iconSize} />
+                ) : null
+              }
+            >
+              <span>{buttonText}</span>
+            </Button>
+          }
+        >
+          <div css={optionsStyle({ menuPosition })(theme)}>
+            {items && (
+              <List
+                data={items}
+                rowSize={'small'}
+                handleOptionClick={(option: string) => {
+                  setOpen(false);
+                  onSelect(option);
+                }}
+              />
+            )}
+          </div>
+        </PositionInScreen>
+      </div>
     </ClickAwayListener>
   );
 };
