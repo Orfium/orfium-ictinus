@@ -166,8 +166,15 @@ exports[`TopAppBar should render correctly 1`] = `
 }
 
 .emotion-6 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
   position: relative;
-  display: inline-block;
+}
+
+.emotion-6 #unique-tooltip-id {
+  display: none!important;
 }
 
 .emotion-7 {
@@ -468,8 +475,15 @@ exports[`TopAppBar should render correctly 1`] = `
 }
 
 .emotion-6 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
   position: relative;
-  display: inline-block;
+}
+
+.emotion-6 #unique-tooltip-id {
+  display: none!important;
 }
 
 .emotion-7 {
@@ -635,46 +649,49 @@ exports[`TopAppBar should render correctly 1`] = `
     >
       <div>
         <div
-          class="emotion-6"
           data-testid="userMenu"
         >
           <div
-            class="emotion-7"
+            class="emotion-6"
           >
-            <button
-              class="emotion-8"
-              data-testid="button"
-              type="button"
+            <div
+              class="emotion-7"
             >
-              <span
-                class="emotion-9"
+              <button
+                class="emotion-8"
+                data-testid="button"
+                type="button"
               >
-                <div
-                  class="emotion-10"
-                  data-testid="_avatar"
+                <span
+                  class="emotion-9"
                 >
-                  <img
-                    src="https://mui.com/static/images/avatar/1.jpg"
-                  />
-                </div>
-                <span>
+                  <div
+                    class="emotion-10"
+                    data-testid="_avatar"
+                  >
+                    <img
+                      src="https://mui.com/static/images/avatar/1.jpg"
+                    />
+                  </div>
                   <span>
-                    <span
-                      class="emotion-11"
-                    >
-                      Tom Cruise
+                    <span>
+                      <span
+                        class="emotion-11"
+                      >
+                        Tom Cruise
+                      </span>
                     </span>
                   </span>
-                </span>
-                <span
-                  class="emotion-12"
-                >
                   <span
-                    class="emotion-13"
-                  />
+                    class="emotion-12"
+                  >
+                    <span
+                      class="emotion-13"
+                    />
+                  </span>
                 </span>
-              </span>
-            </button>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -849,8 +866,15 @@ exports[`TopAppBar should render correctly on dark 1`] = `
 }
 
 .emotion-6 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
   position: relative;
-  display: inline-block;
+}
+
+.emotion-6 #unique-tooltip-id {
+  display: none!important;
 }
 
 .emotion-7 {
@@ -1151,8 +1175,15 @@ exports[`TopAppBar should render correctly on dark 1`] = `
 }
 
 .emotion-6 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
   position: relative;
-  display: inline-block;
+}
+
+.emotion-6 #unique-tooltip-id {
+  display: none!important;
 }
 
 .emotion-7 {
@@ -1318,46 +1349,49 @@ exports[`TopAppBar should render correctly on dark 1`] = `
     >
       <div>
         <div
-          class="emotion-6"
           data-testid="userMenu"
         >
           <div
-            class="emotion-7"
+            class="emotion-6"
           >
-            <button
-              class="emotion-8"
-              data-testid="button"
-              type="button"
+            <div
+              class="emotion-7"
             >
-              <span
-                class="emotion-9"
+              <button
+                class="emotion-8"
+                data-testid="button"
+                type="button"
               >
-                <div
-                  class="emotion-10"
-                  data-testid="_avatar"
+                <span
+                  class="emotion-9"
                 >
-                  <img
-                    src="https://mui.com/static/images/avatar/1.jpg"
-                  />
-                </div>
-                <span>
+                  <div
+                    class="emotion-10"
+                    data-testid="_avatar"
+                  >
+                    <img
+                      src="https://mui.com/static/images/avatar/1.jpg"
+                    />
+                  </div>
                   <span>
-                    <span
-                      class="emotion-11"
-                    >
-                      Tom Cruise
+                    <span>
+                      <span
+                        class="emotion-11"
+                      >
+                        Tom Cruise
+                      </span>
                     </span>
                   </span>
-                </span>
-                <span
-                  class="emotion-12"
-                >
                   <span
-                    class="emotion-13"
-                  />
+                    class="emotion-12"
+                  >
+                    <span
+                      class="emotion-13"
+                    />
+                  </span>
                 </span>
-              </span>
-            </button>
+              </button>
+            </div>
           </div>
         </div>
       </div>
