@@ -1,13 +1,6 @@
-import { css } from '@emotion/react';
-
 import { Theme } from '../../theme';
 import { RequiredProperties } from '../../utils/common';
 import { Props } from '../Button/Button';
-
-export const wrapperStyle = () => () => css`
-  position: relative;
-  display: inline-block;
-`;
 
 export const buttonSpanStyle = ({
   size,
