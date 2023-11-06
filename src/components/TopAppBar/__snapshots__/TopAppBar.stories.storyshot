@@ -204,8 +204,15 @@ exports[`Storyshots Design System/TopNavBar playground 1`] = `
 }
 
 .emotion-10 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
   position: relative;
-  display: inline-block;
+}
+
+.emotion-10 #unique-tooltip-id {
+  display: none!important;
 }
 
 .emotion-11 {
@@ -418,7 +425,6 @@ exports[`Storyshots Design System/TopNavBar playground 1`] = `
           >
             <div
               className="emotion-10"
-              data-testid="userMenu"
             >
               <button
                 className="emotion-11"
@@ -797,8 +803,15 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
 }
 
 .emotion-22 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
   position: relative;
-  display: inline-block;
+}
+
+.emotion-22 #unique-tooltip-id {
+  display: none!important;
 }
 
 .emotion-23 {
@@ -1075,7 +1088,6 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
           >
             <div
               className="emotion-22"
-              data-testid="userMenu"
             >
               <button
                 className="emotion-23"
@@ -1336,8 +1348,15 @@ exports[`Storyshots Design System/TopNavBar with Dark theme enabled 1`] = `
 }
 
 .emotion-10 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
   position: relative;
-  display: inline-block;
+}
+
+.emotion-10 #unique-tooltip-id {
+  display: none!important;
 }
 
 .emotion-11 {
@@ -1550,7 +1569,6 @@ exports[`Storyshots Design System/TopNavBar with Dark theme enabled 1`] = `
           >
             <div
               className="emotion-10"
-              data-testid="userMenu"
             >
               <button
                 className="emotion-11"
@@ -1811,8 +1829,15 @@ exports[`Storyshots Design System/TopNavBar with Logo Placeholder 1`] = `
 }
 
 .emotion-10 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
   position: relative;
-  display: inline-block;
+}
+
+.emotion-10 #unique-tooltip-id {
+  display: none!important;
 }
 
 .emotion-11 {
@@ -2025,7 +2050,6 @@ exports[`Storyshots Design System/TopNavBar with Logo Placeholder 1`] = `
           >
             <div
               className="emotion-10"
-              data-testid="userMenu"
             >
               <button
                 className="emotion-11"
