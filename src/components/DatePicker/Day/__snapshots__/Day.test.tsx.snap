@@ -1,0 +1,312 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Day > should render correctly 1`] = `
+.emotion-0 {
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  width: 2.25rem;
+  font-weight: bold;
+  opacity: 1;
+}
+
+.emotion-0:focus-visible {
+  background-color: #F5F5FF;
+  border-radius: 6.25rem;
+}
+
+.emotion-1 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  border: 0.0625rem solid #175bf5;
+  border-radius: 6.25rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.emotion-1:hover {
+  border-radius: 6.25rem;
+  background: #F5F5FF;
+}
+
+<div>
+  <table>
+    <tbody>
+      <tr>
+        <td
+          style="padding: 0px;"
+        >
+          <div
+            class="emotion-0"
+            data-testid="3_11_2020"
+          >
+            <div
+              class="emotion-1"
+            >
+              3
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Day > should render disabled correctly 1`] = `
+.emotion-0 {
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  width: 2.25rem;
+  font-weight: bold;
+  opacity: 0.5;
+}
+
+.emotion-0:focus-visible {
+  background-color: #F5F5FF;
+  border-radius: 6.25rem;
+}
+
+.emotion-1 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  border: 0.0625rem solid #175bf5;
+  border-radius: 6.25rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background: transparent;
+}
+
+<div>
+  <table>
+    <tbody>
+      <tr>
+        <td
+          style="padding: 0px;"
+        >
+          <div
+            class="emotion-0"
+            data-testid="3_11_2020"
+          >
+            <div
+              class="emotion-1"
+            >
+              3
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Day > should render isFirst, isLast correctly 1`] = `
+.emotion-0 {
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  width: 2.25rem;
+  font-weight: bold;
+  opacity: 1;
+  background: #175bf5;
+}
+
+.emotion-0:focus-visible {
+  background-color: #F5F5FF;
+  border-radius: 6.25rem;
+}
+
+.emotion-0:after {
+  z-index: -1;
+  content: ' ';
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  left: initial;
+  right: 0;
+  border-bottom-right-radius: false;
+  border-top-right-radius: false;
+  border-bottom-left-radius: false;
+  border-top-left-radius: false;
+}
+
+.emotion-1 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  border: 0.0625rem solid #175bf5;
+  border-radius: 6.25rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.emotion-1:hover {
+  border-radius: 6.25rem;
+  background: #F5F5FF;
+}
+
+<div>
+  <table>
+    <tbody>
+      <tr>
+        <td
+          style="padding: 0px;"
+        >
+          <div
+            class="emotion-0"
+            data-testid="3_11_2020"
+          >
+            <div
+              class="emotion-1"
+            >
+              3
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Day > should render isFirst, isLast correctly 2`] = `
+.emotion-0 {
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  width: 2.25rem;
+  font-weight: bold;
+  opacity: 1;
+  background: #175bf5;
+}
+
+.emotion-0:focus-visible {
+  background-color: #F5F5FF;
+  border-radius: 6.25rem;
+}
+
+.emotion-0:after {
+  z-index: -1;
+  content: ' ';
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: initial;
+  border-bottom-right-radius: false;
+  border-top-right-radius: false;
+  border-bottom-left-radius: false;
+  border-top-left-radius: false;
+}
+
+.emotion-1 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  border: 0.0625rem solid #175bf5;
+  border-radius: 6.25rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.emotion-1:hover {
+  border-radius: 6.25rem;
+  background: #F5F5FF;
+}
+
+<div>
+  <table>
+    <tbody>
+      <tr>
+        <td
+          style="padding: 0px;"
+        >
+          <div
+            class="emotion-0"
+            data-testid="3_11_2020"
+          >
+            <div
+              class="emotion-1"
+            >
+              3
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

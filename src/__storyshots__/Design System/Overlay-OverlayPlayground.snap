@@ -1,0 +1,271 @@
+.emotion-0 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-1 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #ffffff;
+  background-color: #175bf5;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-1:focus-visible:not(:disabled) {
+  background-color: #1552DD;
+}
+
+.emotion-1:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-1:hover:not(:disabled) {
+  background-color: #1552DD;
+}
+
+.emotion-1:active:not(:disabled) {
+  background-color: #1249C4;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2500;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.75);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow-y: auto;
+  background-color: white;
+  width: 100%;
+  height: auto;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  padding: 0.5rem 0.5rem 0 0;
+}
+
+.emotion-7 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #1552DD;
+  background-color: rgba(84,94,255,0);
+  padding: 0.5rem;
+  border-radius: 2.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-7:focus-visible:not(:disabled) {
+  background-color: rgba(84,94,255,0.06);
+}
+
+.emotion-7:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-7:hover:not(:disabled) {
+  background-color: rgba(84,94,255,0.06);
+}
+
+.emotion-7:active:not(:disabled) {
+  background-color: rgba(84,94,255,0.14);
+}
+
+.emotion-8 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-9 {
+  fill: #1552DD;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-9 path {
+  fill: #1552DD;
+}
+
+.emotion-10 {
+  padding: 2rem;
+}
+
+<div>
+  <div>
+    <div
+      class="emotion-0"
+    >
+      <button
+        class="emotion-1"
+        data-testid="button"
+        type="button"
+      >
+        <span
+          class="emotion-2"
+        >
+          <span>
+            Open Overlay
+          </span>
+        </span>
+      </button>
+    </div>
+    <div
+      class="emotion-3"
+      data-testid="overlay-container"
+    >
+      <div
+        style="display: flex; height: 100%; width: 33%;"
+      >
+        <div
+          class="emotion-4"
+        >
+          <div
+            class="emotion-5"
+          >
+            <div
+              class="emotion-0"
+            >
+              <button
+                class="emotion-7"
+                data-testid="icon-button-overlay-close"
+                type="button"
+              >
+                <span
+                  class="emotion-8"
+                >
+                  <svg
+                    class="emotion-9"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      fill="none"
+                      fill-rule="evenodd"
+                      id="\\uD83D\\uDD36-Symbols"
+                      stroke="none"
+                      stroke-width="1"
+                    >
+                      <g
+                        id="Close"
+                      >
+                        <path
+                          d="M17.6568542,4.92893219 L19.0710678,6.34314575 L13.4139322,11.9999322 L19.0710678,17.6568542 L17.6568542,19.0710678 L11.9999322,13.4139322 L6.34314575,19.0710678 L4.92893219,17.6568542 L10.5849322,11.9999322 L4.92893219,6.34314575 L6.34314575,4.92893219 L11.9999322,10.5849322 L17.6568542,4.92893219 Z"
+                        />
+                      </g>
+                    </g>
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+          <div
+            class="emotion-10"
+          >
+            <div
+              style="display: flex; background-color: rgb(243, 245, 248);"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Gravida dictum fusce ut placerat. Leo a diam sollicitudin tempor id eu. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Auctor neque vitae tempus quam. Pharetra et ultrices neque ornare aenean. Pulvinar mattis nunc sed blandit libero volutpat sed. Bibendum at varius vel pharetra vel turpis nunc eget. Pulvinar sapien et ligula ullamcorper malesuada proin. Sagittis nisl rhoncus mattis rhoncus urna neque viverra justo. Lorem ipsum dolor sit amet. Fames ac turpis egestas sed tempus urna. Scelerisque felis imperdiet proin fermentum. Sed vulputate odio ut enim blandit volutpat maecenas. Velit egestas dui id ornare arcu odio. Augue ut lectus arcu bibendum. Vestibulum lorem sed risus ultricies. Lobortis feugiat vivamus at augue. Sagittis id consectetur purus ut faucibus pulvinar. Amet mauris commodo quis imperdiet massa tincidunt nunc. Sit amet massa vitae tortor condimentum. Dignissim enim sit amet venenatis urna cursus eget. Cras pulvinar mattis nunc sed blandit libero. Eu volutpat odio facilisis mauris sit amet massa. Lacus suspendisse faucibus interdum posuere lorem ipsum dolor sit amet. Nunc id cursus metus aliquam eleifend mi in nulla. Sit amet purus gravida quis. Urna neque viverra justo nec ultrices dui sapien eget mi. Eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum. Tellus molestie nunc non blandit massa enim. Pretium vulputate sapien nec sagittis aliquam malesuada bibendum. Nec dui nunc mattis enim ut tellus elementum sagittis. Cras semper auctor neque vitae tempus quam. Sit amet venenatis urna cursus eget nunc. Sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc. Tellus orci ac auctor augue mauris augue neque gravida. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis. Praesent tristique magna sit amet purus. Odio ut sem nulla pharetra diam sit amet nisl suscipit. Ipsum dolor sit amet consectetur adipiscing elit pellentesque. Commodo sed egestas egestas fringilla phasellus faucibus scelerisque. Ornare suspendisse sed nisi lacus sed viverra tellus in hac. Leo a diam sollicitudin tempor id eu nisl nunc mi. Sit amet tellus cras adipiscing enim eu turpis. Ullamcorper sit amet risus nullam eget felis eget. Consectetur lorem donec massa sapien faucibus et molestie ac feugiat. Scelerisque felis imperdiet proin fermentum leo. Suspendisse interdum consectetur libero id faucibus nisl tincidunt eget. Arcu risus quis varius quam quisque id diam vel quam. Eget nullam non nisi est sit amet facilisis magna etiam. Gravida in fermentum et sollicitudin. Amet volutpat consequat mauris nunc congue. Cum sociis natoque penatibus et magnis dis parturient. Dictum fusce ut placerat orci nulla pellentesque. Nec dui nunc mattis enim ut tellus elementum sagittis vitae. Mauris cursus mattis molestie a. Sed lectus vestibulum mattis ullamcorper velit sed. Morbi tempus iaculis urna id volutpat.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

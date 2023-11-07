@@ -1,0 +1,350 @@
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: 3.25rem;
+  min-width: 8.75rem;
+  background-color: #ffffff;
+}
+
+.emotion-1:hover {
+  background-color: #F5F5FF;
+}
+
+.emotion-1:focus-within {
+  box-shadow: 0 0 0 0.125rem #175bf5;
+  background-color: #F5F5FF;
+}
+
+.emotion-2 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0 0 0 0.75rem;
+}
+
+.emotion-2>div {
+  position: relative;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-4 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #1B214F;
+  padding: 0;
+  display: block;
+  position: relative;
+  top: 0.4375rem;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-4::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-4::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-4:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-4::placeholder {
+  color: transparent;
+}
+
+.emotion-4:focus {
+  outline: none;
+}
+
+.emotion-4:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-4:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-4:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-4:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-4:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-4:focus-within+label,
+.emotion-4:not(:placeholder-shown)+label {
+  font-weight: 700!important;
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+}
+
+.emotion-4:focus-within+label {
+  color: #1552DD;
+}
+
+.emotion-4:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-5 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, 0);
+  -moz-transform: translate(0.1875rem, 0);
+  -ms-transform: translate(0.1875rem, 0);
+  transform: translate(0.1875rem, 0);
+  color: #686BB3;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0.1875rem;
+  margin: auto;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-6 {
+  min-width: 2.75rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  cursor: unset;
+}
+
+.emotion-13 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-14 {
+  fill: #5f6c85;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-14 path {
+  fill: #5f6c85;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      style="margin: 5px;"
+    >
+      <div>
+        <div
+          class="emotion-1"
+        >
+          <div
+            class="emotion-2"
+          >
+            <div
+              class="emotion-3"
+            >
+              <input
+                aria-invalid="false"
+                class="emotion-4"
+                data-testid="input"
+                id="textfield__00"
+                placeholder="Label"
+              />
+              <label
+                class="emotion-5"
+                for="textfield__00"
+              >
+                Label
+                 
+              </label>
+            </div>
+            <div
+              aria-hidden="false"
+              class="emotion-6"
+            >
+              <img
+                height="16"
+                src="https://brandmark.io/logo-rank/random/pepsi.png"
+                style="background: red;"
+                width="16"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div>
+        <div
+          class="emotion-1"
+        >
+          <div
+            class="emotion-2"
+          >
+            <div
+              class="emotion-3"
+            >
+              <input
+                aria-invalid="false"
+                class="emotion-4"
+                data-testid="input"
+                id="textfield__00"
+                placeholder="Label"
+              />
+              <label
+                class="emotion-5"
+                for="textfield__00"
+              >
+                Label
+                 
+              </label>
+            </div>
+            <div
+              aria-hidden="false"
+              class="emotion-6"
+            >
+              <span
+                class="emotion-13"
+              >
+                <svg
+                  class="emotion-14"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                  <g
+                    fill="none"
+                    fill-rule="evenodd"
+                    id="\\uD83D\\uDD36-Symbols"
+                    stroke="none"
+                    stroke-width="1"
+                  >
+                    <g
+                      fill="#232323"
+                      id="Keyword"
+                    >
+                      <path
+                        d="M15.7038518,2 C19.1804706,2 22,4.84920353 22,8.36758353 C22,11.8836471 19.1804706,14.7351659 15.7038518,14.7351659 C15.1921471,14.7351659 14.6987576,14.6657024 14.2236847,14.5499271 L14.2236847,14.5499271 L13.3319212,15.4518094 L10.0945565,15.4518094 L10.0945565,18.7259047 L6.85719176,18.7259047 L6.85719176,22 L2,22 L2,17.0888565 L9.51073176,9.49059294 C9.44662588,9.12590471 9.40770471,8.75195412 9.40770471,8.36758353 C9.40770471,4.84920353 12.2260894,2 15.7038518,2 Z M17.3511529,4.77626588 C16.4032965,4.77626588 15.6340224,5.55311176 15.6340224,6.51288 C15.6340224,7.47149059 16.4032965,8.24949294 17.3511529,8.24949294 C18.3001541,8.24949294 19.0682847,7.47149059 19.0682847,6.51288 C19.0682847,5.55311176 18.3001541,4.77626588 17.3511529,4.77626588 Z"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,232 @@
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: auto;
+  min-width: 8.75rem;
+  background-color: #ffffff;
+  width: auto;
+}
+
+.emotion-1:hover {
+  background-color: #F5F5FF;
+}
+
+.emotion-1:focus-within {
+  box-shadow: 0 0 0 0.125rem #175bf5;
+  background-color: #F5F5FF;
+}
+
+.emotion-2 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 1rem 0.75rem;
+}
+
+.emotion-2>div {
+  position: relative;
+}
+
+.emotion-3 {
+  width: 100%;
+}
+
+.emotion-4 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #1B214F;
+  padding: 0;
+  display: block;
+  position: relative;
+  top: 0.4375rem;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 15rem;
+  min-width: 15rem;
+  resize: both;
+}
+
+.emotion-4::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-4::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-4:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-4::placeholder {
+  color: transparent;
+}
+
+.emotion-4:focus {
+  outline: none;
+}
+
+.emotion-4:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-4:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-4:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-4:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-4:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-4:focus-within+label,
+.emotion-4:not(:placeholder-shown)+label {
+  -webkit-transform: translate(0.1875rem, -4px) scale(0.8);
+  -moz-transform: translate(0.1875rem, -4px) scale(0.8);
+  -ms-transform: translate(0.1875rem, -4px) scale(0.8);
+  transform: translate(0.1875rem, -4px) scale(0.8);
+  font-weight: 700;
+}
+
+.emotion-4:focus-within+label {
+  color: #1552DD;
+}
+
+.emotion-4:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-4+label {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-5 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, 0);
+  -moz-transform: translate(0.1875rem, 0);
+  -ms-transform: translate(0.1875rem, 0);
+  transform: translate(0.1875rem, 0);
+  color: #686BB3;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0.1875rem;
+  margin: auto;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        class="emotion-1"
+      >
+        <div
+          class="emotion-2"
+        >
+          <div
+            class="emotion-3"
+          >
+            <textarea
+              aria-multiline="true"
+              class="emotion-4"
+              cols="10"
+              placeholder="Label"
+              role="textbox"
+              rows="5"
+            />
+            <label
+              class="emotion-5"
+            >
+              Label
+               
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

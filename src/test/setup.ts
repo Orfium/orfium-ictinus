@@ -3,10 +3,10 @@ import { createSerializer } from '@emotion/jest';
 
 expect.addSnapshotSerializer(createSerializer());
 
-// @ts-ignore
-globalThis.jest = vi;
-// @ts-ignore
-globalThis.jest.requireActual = async (path: string) => await vi.importActual(path);
+// // @ts-ignore
+// globalThis.jest = vi;
+// // @ts-ignore
+// globalThis.jest.requireActual = async (path: string) => await vi.importActual(path);
 
 global.ResizeObserver = vi.fn().mockImplementation(() => ({
   observe: vi.fn(),
@@ -50,9 +50,4 @@ vi.stubGlobal('matchMedia', (query: string) => ({
   addEventListener: vi.fn(),
   removeEventListener: vi.fn(),
   dispatchEvent: vi.fn(),
-}));
-
-vi.mock('@react-aria/ssr', async () => ({
-  ...(await vi.importActual<any>('@react-aria/ssr')),
-  useSSRSafeId: () => 'react-aria-generated-id',
 }));

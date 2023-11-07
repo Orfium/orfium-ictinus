@@ -1,0 +1,168 @@
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: default;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: #5f6c85;
+}
+
+.emotion-3 {
+  margin: auto 1rem;
+  cursor: default;
+}
+
+.emotion-4 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-5 {
+  fill: #5f6c85;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-5 path {
+  fill: #5f6c85;
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: default;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #175bf5;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      style="margin: 5px;"
+    >
+      <ol
+        aria-label="Breadcrumb"
+        class="emotion-1"
+      >
+        <li>
+          <div
+            class="emotion-2"
+          >
+            <div>
+              Level 1
+            </div>
+            <span
+              class="emotion-3"
+            >
+              <span
+                class="emotion-4"
+              >
+                <svg
+                  class="emotion-5"
+                  fill="none"
+                  viewBox="0 0 6 12"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M0.853554 11.1464C0.538571 11.4614 0 11.2383 0 10.7929L0 1.20711C0 0.761654 0.538571 0.53857 0.853553 0.853553L5.64645 5.64645C5.84171 5.84171 5.84171 6.15829 5.64645 6.35355L0.853554 11.1464Z"
+                    fill="#0E0E17"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </span>
+          </div>
+        </li>
+        <li>
+          <div
+            class="emotion-2"
+          >
+            <div>
+              Level 2
+            </div>
+            <span
+              class="emotion-3"
+            >
+              <span
+                class="emotion-4"
+              >
+                <svg
+                  class="emotion-5"
+                  fill="none"
+                  viewBox="0 0 6 12"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M0.853554 11.1464C0.538571 11.4614 0 11.2383 0 10.7929L0 1.20711C0 0.761654 0.538571 0.53857 0.853553 0.853553L5.64645 5.64645C5.84171 5.84171 5.84171 6.15829 5.64645 6.35355L0.853554 11.1464Z"
+                    fill="#0E0E17"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </span>
+          </div>
+        </li>
+        <li>
+          <div
+            class="emotion-10"
+          >
+            <div>
+              Level 3
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>

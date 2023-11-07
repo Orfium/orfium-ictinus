@@ -1,0 +1,267 @@
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-1 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-2 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #ffffff;
+  background-color: #175bf5;
+  padding: 0.5rem;
+  border-radius: 2.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-2:focus-visible:not(:disabled) {
+  background-color: #1552DD;
+}
+
+.emotion-2:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-2:hover:not(:disabled) {
+  background-color: #1552DD;
+}
+
+.emotion-2:active:not(:disabled) {
+  background-color: #1249C4;
+}
+
+.emotion-3 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-4 {
+  fill: #ffffff;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-4 path {
+  fill: #ffffff;
+}
+
+.emotion-6 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #1552DD;
+  background-color: #E7E8FF;
+  padding: 0.5rem;
+  border-radius: 2.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-6:focus-visible:not(:disabled) {
+  background-color: #D6D8FF;
+}
+
+.emotion-6:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-6:hover:not(:disabled) {
+  background-color: #D6D8FF;
+}
+
+.emotion-6:active:not(:disabled) {
+  background-color: #B9C0FF;
+}
+
+.emotion-8 {
+  fill: #1552DD;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-8 path {
+  fill: #1552DD;
+}
+
+.emotion-10 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #1552DD;
+  background-color: rgba(84,94,255,0);
+  padding: 0.5rem;
+  border-radius: 2.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-10:focus-visible:not(:disabled) {
+  background-color: rgba(84,94,255,0.06);
+}
+
+.emotion-10:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-10:hover:not(:disabled) {
+  background-color: rgba(84,94,255,0.06);
+}
+
+.emotion-10:active:not(:disabled) {
+  background-color: rgba(84,94,255,0.14);
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        class="emotion-1"
+      >
+        <button
+          class="emotion-2"
+          data-testid="icon-button"
+          type="button"
+        >
+          <span
+            class="emotion-3"
+          >
+            <svg
+              class="emotion-4"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <g
+                fill="none"
+                fill-rule="evenodd"
+                stroke="none"
+                stroke-width="1"
+              >
+                <path
+                  d="M8,10.8 C8.77319865,10.8 9.4,11.4268014 9.4,12.2 C9.4,12.9731986 8.77319865,13.6 8,13.6 C7.22680135,13.6 6.6,12.9731986 6.6,12.2 C6.6,11.4268014 7.22680135,10.8 8,10.8 Z M8,6.6 C8.77319865,6.6 9.4,7.22680135 9.4,8 C9.4,8.77319865 8.77319865,9.4 8,9.4 C7.22680135,9.4 6.6,8.77319865 6.6,8 C6.6,7.22680135 7.22680135,6.6 8,6.6 Z M8,2.4 C8.77319865,2.4 9.4,3.02680135 9.4,3.8 C9.4,4.57319865 8.77319865,5.2 8,5.2 C7.22680135,5.2 6.6,4.57319865 6.6,3.8 C6.6,3.02680135 7.22680135,2.4 8,2.4 Z"
+                />
+              </g>
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        class="emotion-1"
+      >
+        <button
+          class="emotion-6"
+          data-testid="icon-button"
+          type="button"
+        >
+          <span
+            class="emotion-3"
+          >
+            <svg
+              class="emotion-8"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <g
+                fill="none"
+                fill-rule="evenodd"
+                stroke="none"
+                stroke-width="1"
+              >
+                <path
+                  d="M8,10.8 C8.77319865,10.8 9.4,11.4268014 9.4,12.2 C9.4,12.9731986 8.77319865,13.6 8,13.6 C7.22680135,13.6 6.6,12.9731986 6.6,12.2 C6.6,11.4268014 7.22680135,10.8 8,10.8 Z M8,6.6 C8.77319865,6.6 9.4,7.22680135 9.4,8 C9.4,8.77319865 8.77319865,9.4 8,9.4 C7.22680135,9.4 6.6,8.77319865 6.6,8 C6.6,7.22680135 7.22680135,6.6 8,6.6 Z M8,2.4 C8.77319865,2.4 9.4,3.02680135 9.4,3.8 C9.4,4.57319865 8.77319865,5.2 8,5.2 C7.22680135,5.2 6.6,4.57319865 6.6,3.8 C6.6,3.02680135 7.22680135,2.4 8,2.4 Z"
+                />
+              </g>
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        class="emotion-1"
+      >
+        <button
+          class="emotion-10"
+          data-testid="icon-button"
+          type="button"
+        >
+          <span
+            class="emotion-3"
+          >
+            <svg
+              class="emotion-8"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <g
+                fill="none"
+                fill-rule="evenodd"
+                stroke="none"
+                stroke-width="1"
+              >
+                <path
+                  d="M8,10.8 C8.77319865,10.8 9.4,11.4268014 9.4,12.2 C9.4,12.9731986 8.77319865,13.6 8,13.6 C7.22680135,13.6 6.6,12.9731986 6.6,12.2 C6.6,11.4268014 7.22680135,10.8 8,10.8 Z M8,6.6 C8.77319865,6.6 9.4,7.22680135 9.4,8 C9.4,8.77319865 8.77319865,9.4 8,9.4 C7.22680135,9.4 6.6,8.77319865 6.6,8 C6.6,7.22680135 7.22680135,6.6 8,6.6 Z M8,2.4 C8.77319865,2.4 9.4,3.02680135 9.4,3.8 C9.4,4.57319865 8.77319865,5.2 8,5.2 C7.22680135,5.2 6.6,4.57319865 6.6,3.8 C6.6,3.02680135 7.22680135,2.4 8,2.4 Z"
+                />
+              </g>
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
