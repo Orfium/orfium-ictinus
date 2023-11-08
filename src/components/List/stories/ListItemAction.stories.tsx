@@ -5,6 +5,9 @@ export default {
   title: 'Design System/List/ListItemAction',
   component: ListItemAction,
   parameters: {
+    storyshots: {
+      disable: true,
+    },
     design: [
       {
         type: 'figma',

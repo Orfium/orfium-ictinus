@@ -12,14 +12,15 @@
     "noEmit": false,
     "jsx": "react-jsx",
     "module": "ESNext",
-    "types": ["node","@emotion/react/types/css-prop"],
+    "types": ["@emotion/react/types/css-prop"],
+    "allowUnreachableCode": false,
     /* Linting */
-//    "strict": true,
-//    "noUnusedLocals": true,
-//    "noUnusedParameters": true,
+    //    "strict": true,
+    //    "noUnusedLocals": true,
+    //    "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "jsxImportSource": "@emotion/react",
+    "jsxImportSource": "@emotion/react"
   },
-  "include": ["src"],
+  "include": ["src", "__mocks__", "vite.config.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

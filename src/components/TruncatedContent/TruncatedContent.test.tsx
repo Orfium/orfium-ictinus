@@ -1,4 +1,4 @@
-import { waitFor } from '@testing-library/react';
+import { fireEvent, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 
@@ -16,10 +16,12 @@ describe('TruncatedContent', () => {
   beforeAll(() => {
     Object.defineProperty(HTMLElement.prototype, 'scrollWidth', {
       value: 180,
+      configurable: true,
     });
 
     Object.defineProperty(HTMLElement.prototype, 'offsetWidth', {
       value: 100,
+      configurable: true,
     });
   });
 
@@ -34,7 +36,7 @@ describe('TruncatedContent', () => {
   });
 
   test('will truncate content and show tooltip', async () => {
-    const { getByTestId, getByText, debug } = render(
+    const { getByTestId, getByText } = render(
       <div style={{ width: 100 }}>
         <TruncatedContent tooltipContent={tooltipText}>
           <span data-testid="long-text">{longText}</span>
@@ -45,20 +47,7 @@ describe('TruncatedContent', () => {
     const text = getByTestId('long-text');
     expect(text).toBeInTheDocument();
 
-    debug();
-    function sleep(sleepMS) {
-      return new Promise((resolve) => {
-        setTimeout(() => {
-          resolve(null);
-        }, sleepMS);
-      });
-    }
-
-    await userEvent.hover(text);
-    await sleep(800);
-    await waitFor(() => expect(getByText(tooltipText)).toBeInTheDocument(), {
-      timeout: 1000,
-      interval: 250,
-    });
+    userEvent.hover(text);
+    await waitFor(() => expect(getByText(tooltipText)).toBeInTheDocument());
   });
 });

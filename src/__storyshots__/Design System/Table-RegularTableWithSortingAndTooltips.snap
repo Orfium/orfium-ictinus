@@ -106,6 +106,32 @@
 }
 
 .emotion-7 {
+  background-color: #1B214F;
+  border: 0.0625rem solid rgba(84,94,255,0);
+  box-shadow: 0rem 0.25rem 0.5rem 0rem #10306612;
+}
+
+.emotion-7 .tippy-content {
+  background-color: #1B214F;
+  max-width: 16rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  color: #ffffff;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  text-align: start;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.emotion-7 .tippy-arrow::before {
+  color: #1B214F;
+}
+
+.emotion-8 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -121,17 +147,17 @@
   justify-content: center;
 }
 
-.emotion-8 {
+.emotion-9 {
   fill: #444d5f;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-8 path {
+.emotion-9 path {
   fill: #444d5f;
 }
 
-.emotion-9 {
+.emotion-10 {
   -webkit-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out;
   transform-origin: center;
@@ -144,17 +170,17 @@
   transform: rotate(180deg);
 }
 
-.emotion-11 {
+.emotion-12 {
   fill: #030303;
   width: 0.5rem;
   height: 0.5rem;
 }
 
-.emotion-11 path {
+.emotion-12 path {
   fill: #030303;
 }
 
-.emotion-12 {
+.emotion-13 {
   position: relative;
   text-align: left;
   padding: 0.25rem 0.5rem;
@@ -165,7 +191,7 @@
   font-size: 0.875rem;
 }
 
-.emotion-21 {
+.emotion-23 {
   position: relative;
   text-align: right;
   padding: 0.25rem 0.5rem;
@@ -179,59 +205,59 @@
   height: 4rem;
 }
 
-.emotion-21:hover {
+.emotion-23:hover {
   background-color: #f3f5f8;
 }
 
-.emotion-21:hover>div>span {
+.emotion-23:hover>div>span {
   color: black;
   font-weight: 700;
 }
 
-.emotion-25 {
+.emotion-27 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-27 {
+.emotion-29 {
   fill: #444d5f;
   width: 0.5rem;
   height: 0.5rem;
 }
 
-.emotion-27 path {
+.emotion-29 path {
   fill: #444d5f;
 }
 
-.emotion-31 {
+.emotion-34 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   border-bottom: 0.0625rem solid #cfd7e5;
 }
 
-.emotion-31 td:first-of-type {
+.emotion-34 td:first-of-type {
   padding-left: 1rem;
 }
 
-.emotion-31 td:last-child {
+.emotion-34 td:last-child {
   padding-right: 1rem;
 }
 
-.emotion-32 {
+.emotion-35 {
   position: relative;
   text-align: left;
   padding: 0.25rem 0.5rem;
   width: initial;
 }
 
-.emotion-33 {
+.emotion-36 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.emotion-41 {
+.emotion-44 {
   position: relative;
   text-align: right;
   padding: 0.25rem 0.5rem;
@@ -265,50 +291,58 @@
               <div
                 class="emotion-6"
               >
-                <span
+                <div
                   class="emotion-7"
-                  data-testid="table_icon_tooltip_title"
+                  placement="bottom"
                 >
-                  <svg
+                  <span
                     class="emotion-8"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
+                    data-testid="table_icon_tooltip_title"
                   >
-                    <g
-                      id="Global Icons/Info"
+                    <svg
+                      class="emotion-9"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <g
-                        id="ð¨ Icon color"
+                        id="Global Icons/Info"
                       >
-                        <path
-                          d="M13 6.5C13.8284 6.5 14.5 7.17157 14.5 8C14.5 8.82843 13.8284 9.5 13 9.5C12.1716 9.5 11.5 8.82843 11.5 8C11.5 7.17157 12.1716 6.5 13 6.5Z"
-                          fill="black"
-                        />
-                        <path
-                          d="M14.5 10.5V17H11.5V10.5H14.5Z"
-                          fill="black"
-                        />
-                        <path
-                          clip-rule="evenodd"
-                          d="M22 12C22 7.02944 17.9706 3 13 3C8.02944 3 4 7.02944 4 12C4 16.9706 8.02944 21 13 21C17.9706 21 22 16.9706 22 12ZM13 4.5C17.1421 4.5 20.5 7.85786 20.5 12C20.5 16.1421 17.1421 19.5 13 19.5C8.85786 19.5 5.5 16.1421 5.5 12C5.5 7.85786 8.85786 4.5 13 4.5Z"
-                          fill="black"
-                          fill-rule="evenodd"
-                        />
+                        <g
+                          id="ð¨ Icon color"
+                        >
+                          <path
+                            d="M13 6.5C13.8284 6.5 14.5 7.17157 14.5 8C14.5 8.82843 13.8284 9.5 13 9.5C12.1716 9.5 11.5 8.82843 11.5 8C11.5 7.17157 12.1716 6.5 13 6.5Z"
+                            fill="black"
+                          />
+                          <path
+                            d="M14.5 10.5V17H11.5V10.5H14.5Z"
+                            fill="black"
+                          />
+                          <path
+                            clip-rule="evenodd"
+                            d="M22 12C22 7.02944 17.9706 3 13 3C8.02944 3 4 7.02944 4 12C4 16.9706 8.02944 21 13 21C17.9706 21 22 16.9706 22 12ZM13 4.5C17.1421 4.5 20.5 7.85786 20.5 12C20.5 16.1421 17.1421 19.5 13 19.5C8.85786 19.5 5.5 16.1421 5.5 12C5.5 7.85786 8.85786 4.5 13 4.5Z"
+                            fill="black"
+                            fill-rule="evenodd"
+                          />
+                        </g>
                       </g>
-                    </g>
-                  </svg>
-                </span>
+                    </svg>
+                  </span>
+                </div>
+                <div>
+                  Tooltip Content
+                </div>
               </div>
               <div
-                class="emotion-9"
+                class="emotion-10"
               >
                 <span
-                  class="emotion-7"
+                  class="emotion-8"
                   data-testid="table_icon_sort_title_asc"
                 >
                   <svg
-                    class="emotion-11"
+                    class="emotion-12"
                     fill="none"
                     viewBox="0 0 12 6"
                     xmlns="http://www.w3.org/2000/svg"
@@ -326,7 +360,7 @@
           </div>
         </th>
         <th
-          class="emotion-12"
+          class="emotion-13"
           data-testid="ictinus_name"
         >
           <div
@@ -336,7 +370,7 @@
           </div>
         </th>
         <th
-          class="emotion-12"
+          class="emotion-13"
           data-testid="ictinus_surname"
         >
           <div
@@ -354,46 +388,54 @@
               <div
                 class="emotion-6"
               >
-                <span
+                <div
                   class="emotion-7"
-                  data-testid="table_icon_tooltip_surname"
+                  placement="right"
                 >
-                  <svg
+                  <span
                     class="emotion-8"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
+                    data-testid="table_icon_tooltip_surname"
                   >
-                    <g
-                      id="Global Icons/Info"
+                    <svg
+                      class="emotion-9"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <g
-                        id="ð¨ Icon color"
+                        id="Global Icons/Info"
                       >
-                        <path
-                          d="M13 6.5C13.8284 6.5 14.5 7.17157 14.5 8C14.5 8.82843 13.8284 9.5 13 9.5C12.1716 9.5 11.5 8.82843 11.5 8C11.5 7.17157 12.1716 6.5 13 6.5Z"
-                          fill="black"
-                        />
-                        <path
-                          d="M14.5 10.5V17H11.5V10.5H14.5Z"
-                          fill="black"
-                        />
-                        <path
-                          clip-rule="evenodd"
-                          d="M22 12C22 7.02944 17.9706 3 13 3C8.02944 3 4 7.02944 4 12C4 16.9706 8.02944 21 13 21C17.9706 21 22 16.9706 22 12ZM13 4.5C17.1421 4.5 20.5 7.85786 20.5 12C20.5 16.1421 17.1421 19.5 13 19.5C8.85786 19.5 5.5 16.1421 5.5 12C5.5 7.85786 8.85786 4.5 13 4.5Z"
-                          fill="black"
-                          fill-rule="evenodd"
-                        />
+                        <g
+                          id="ð¨ Icon color"
+                        >
+                          <path
+                            d="M13 6.5C13.8284 6.5 14.5 7.17157 14.5 8C14.5 8.82843 13.8284 9.5 13 9.5C12.1716 9.5 11.5 8.82843 11.5 8C11.5 7.17157 12.1716 6.5 13 6.5Z"
+                            fill="black"
+                          />
+                          <path
+                            d="M14.5 10.5V17H11.5V10.5H14.5Z"
+                            fill="black"
+                          />
+                          <path
+                            clip-rule="evenodd"
+                            d="M22 12C22 7.02944 17.9706 3 13 3C8.02944 3 4 7.02944 4 12C4 16.9706 8.02944 21 13 21C17.9706 21 22 16.9706 22 12ZM13 4.5C17.1421 4.5 20.5 7.85786 20.5 12C20.5 16.1421 17.1421 19.5 13 19.5C8.85786 19.5 5.5 16.1421 5.5 12C5.5 7.85786 8.85786 4.5 13 4.5Z"
+                            fill="black"
+                            fill-rule="evenodd"
+                          />
+                        </g>
                       </g>
-                    </g>
-                  </svg>
-                </span>
+                    </svg>
+                  </span>
+                </div>
+                <div>
+                  Tooltip Content
+                </div>
               </div>
             </div>
           </div>
         </th>
         <th
-          class="emotion-21"
+          class="emotion-23"
           data-testid="ictinus_age"
         >
           <div
@@ -409,14 +451,14 @@
               class="emotion-5"
             >
               <div
-                class="emotion-25"
+                class="emotion-27"
               >
                 <span
-                  class="emotion-7"
+                  class="emotion-8"
                   data-testid="table_icon_sort_age"
                 >
                   <svg
-                    class="emotion-27"
+                    class="emotion-29"
                     fill="none"
                     height="8"
                     viewBox="0 0 7 8"
@@ -441,40 +483,48 @@
               <div
                 class="emotion-6"
               >
-                <span
+                <div
                   class="emotion-7"
-                  data-testid="table_icon_tooltip_age"
+                  placement="right"
                 >
-                  <svg
+                  <span
                     class="emotion-8"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
+                    data-testid="table_icon_tooltip_age"
                   >
-                    <g
-                      id="Global Icons/Info"
+                    <svg
+                      class="emotion-9"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <g
-                        id="ð¨ Icon color"
+                        id="Global Icons/Info"
                       >
-                        <path
-                          d="M13 6.5C13.8284 6.5 14.5 7.17157 14.5 8C14.5 8.82843 13.8284 9.5 13 9.5C12.1716 9.5 11.5 8.82843 11.5 8C11.5 7.17157 12.1716 6.5 13 6.5Z"
-                          fill="black"
-                        />
-                        <path
-                          d="M14.5 10.5V17H11.5V10.5H14.5Z"
-                          fill="black"
-                        />
-                        <path
-                          clip-rule="evenodd"
-                          d="M22 12C22 7.02944 17.9706 3 13 3C8.02944 3 4 7.02944 4 12C4 16.9706 8.02944 21 13 21C17.9706 21 22 16.9706 22 12ZM13 4.5C17.1421 4.5 20.5 7.85786 20.5 12C20.5 16.1421 17.1421 19.5 13 19.5C8.85786 19.5 5.5 16.1421 5.5 12C5.5 7.85786 8.85786 4.5 13 4.5Z"
-                          fill="black"
-                          fill-rule="evenodd"
-                        />
+                        <g
+                          id="ð¨ Icon color"
+                        >
+                          <path
+                            d="M13 6.5C13.8284 6.5 14.5 7.17157 14.5 8C14.5 8.82843 13.8284 9.5 13 9.5C12.1716 9.5 11.5 8.82843 11.5 8C11.5 7.17157 12.1716 6.5 13 6.5Z"
+                            fill="black"
+                          />
+                          <path
+                            d="M14.5 10.5V17H11.5V10.5H14.5Z"
+                            fill="black"
+                          />
+                          <path
+                            clip-rule="evenodd"
+                            d="M22 12C22 7.02944 17.9706 3 13 3C8.02944 3 4 7.02944 4 12C4 16.9706 8.02944 21 13 21C17.9706 21 22 16.9706 22 12ZM13 4.5C17.1421 4.5 20.5 7.85786 20.5 12C20.5 16.1421 17.1421 19.5 13 19.5C8.85786 19.5 5.5 16.1421 5.5 12C5.5 7.85786 8.85786 4.5 13 4.5Z"
+                            fill="black"
+                            fill-rule="evenodd"
+                          />
+                        </g>
                       </g>
-                    </g>
-                  </svg>
-                </span>
+                    </svg>
+                  </span>
+                </div>
+                <div>
+                  Tooltip Content
+                </div>
               </div>
             </div>
           </div>
@@ -483,14 +533,14 @@
     </thead>
     <tbody>
       <tr
-        class="emotion-31"
+        class="emotion-34"
       >
         <td
-          class="emotion-32"
+          class="emotion-35"
           data-testid="ictinus_table_row_1_cell_1"
         >
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-36 emotion-37"
           >
             <span
               data-column="[object Object]"
@@ -500,11 +550,11 @@
           </div>
         </td>
         <td
-          class="emotion-32"
+          class="emotion-35"
           data-testid="ictinus_table_row_1_cell_2"
         >
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-36 emotion-37"
           >
             <span
               data-column="Name"
@@ -514,11 +564,11 @@
           </div>
         </td>
         <td
-          class="emotion-32"
+          class="emotion-35"
           data-testid="ictinus_table_row_1_cell_3"
         >
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-36 emotion-37"
           >
             <span
               data-column="[object Object]"
@@ -528,11 +578,11 @@
           </div>
         </td>
         <td
-          class="emotion-41"
+          class="emotion-44"
           data-testid="ictinus_table_row_1_cell_4"
         >
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-36 emotion-37"
           >
             <span
               data-column="[object Object]"
@@ -543,14 +593,14 @@
         </td>
       </tr>
       <tr
-        class="emotion-31"
+        class="emotion-34"
       >
         <td
-          class="emotion-32"
+          class="emotion-35"
           data-testid="ictinus_table_row_2_cell_1"
         >
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-36 emotion-37"
           >
             <span
               data-column="[object Object]"
@@ -560,11 +610,11 @@
           </div>
         </td>
         <td
-          class="emotion-32"
+          class="emotion-35"
           data-testid="ictinus_table_row_2_cell_2"
         >
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-36 emotion-37"
           >
             <span
               data-column="Name"
@@ -574,11 +624,11 @@
           </div>
         </td>
         <td
-          class="emotion-32"
+          class="emotion-35"
           data-testid="ictinus_table_row_2_cell_3"
         >
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-36 emotion-37"
           >
             <span
               data-column="[object Object]"
@@ -588,11 +638,11 @@
           </div>
         </td>
         <td
-          class="emotion-41"
+          class="emotion-44"
           data-testid="ictinus_table_row_2_cell_4"
         >
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-36 emotion-37"
           >
             <span
               data-column="[object Object]"
@@ -603,14 +653,14 @@
         </td>
       </tr>
       <tr
-        class="emotion-31"
+        class="emotion-34"
       >
         <td
-          class="emotion-32"
+          class="emotion-35"
           data-testid="ictinus_table_row_3_cell_1"
         >
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-36 emotion-37"
           >
             <span
               data-column="[object Object]"
@@ -620,11 +670,11 @@
           </div>
         </td>
         <td
-          class="emotion-32"
+          class="emotion-35"
           data-testid="ictinus_table_row_3_cell_2"
         >
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-36 emotion-37"
           >
             <span
               data-column="Name"
@@ -634,11 +684,11 @@
           </div>
         </td>
         <td
-          class="emotion-32"
+          class="emotion-35"
           data-testid="ictinus_table_row_3_cell_3"
         >
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-36 emotion-37"
           >
             <span
               data-column="[object Object]"
@@ -648,11 +698,11 @@
           </div>
         </td>
         <td
-          class="emotion-41"
+          class="emotion-44"
           data-testid="ictinus_table_row_3_cell_4"
         >
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-36 emotion-37"
           >
             <span
               data-column="[object Object]"
@@ -663,14 +713,14 @@
         </td>
       </tr>
       <tr
-        class="emotion-31"
+        class="emotion-34"
       >
         <td
-          class="emotion-32"
+          class="emotion-35"
           data-testid="ictinus_table_row_4_cell_1"
         >
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-36 emotion-37"
           >
             <span
               data-column="[object Object]"
@@ -680,11 +730,11 @@
           </div>
         </td>
         <td
-          class="emotion-32"
+          class="emotion-35"
           data-testid="ictinus_table_row_4_cell_2"
         >
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-36 emotion-37"
           >
             <span
               data-column="Name"
@@ -694,11 +744,11 @@
           </div>
         </td>
         <td
-          class="emotion-32"
+          class="emotion-35"
           data-testid="ictinus_table_row_4_cell_3"
         >
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-36 emotion-37"
           >
             <span
               data-column="[object Object]"
@@ -708,11 +758,11 @@
           </div>
         </td>
         <td
-          class="emotion-41"
+          class="emotion-44"
           data-testid="ictinus_table_row_4_cell_4"
         >
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-36 emotion-37"
           >
             <span
               data-column="[object Object]"
@@ -723,14 +773,14 @@
         </td>
       </tr>
       <tr
-        class="emotion-31"
+        class="emotion-34"
       >
         <td
-          class="emotion-32"
+          class="emotion-35"
           data-testid="ictinus_table_row_5_cell_1"
         >
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-36 emotion-37"
           >
             <span
               data-column="[object Object]"
@@ -740,11 +790,11 @@
           </div>
         </td>
         <td
-          class="emotion-32"
+          class="emotion-35"
           data-testid="ictinus_table_row_5_cell_2"
         >
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-36 emotion-37"
           >
             <span
               data-column="Name"
@@ -754,11 +804,11 @@
           </div>
         </td>
         <td
-          class="emotion-32"
+          class="emotion-35"
           data-testid="ictinus_table_row_5_cell_3"
         >
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-36 emotion-37"
           >
             <span
               data-column="[object Object]"
@@ -768,11 +818,11 @@
           </div>
         </td>
         <td
-          class="emotion-41"
+          class="emotion-44"
           data-testid="ictinus_table_row_5_cell_4"
         >
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-36 emotion-37"
           >
             <span
               data-column="[object Object]"
@@ -783,14 +833,14 @@
         </td>
       </tr>
       <tr
-        class="emotion-31"
+        class="emotion-34"
       >
         <td
-          class="emotion-32"
+          class="emotion-35"
           data-testid="ictinus_table_row_6_cell_1"
         >
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-36 emotion-37"
           >
             <span
               data-column="[object Object]"
@@ -800,11 +850,11 @@
           </div>
         </td>
         <td
-          class="emotion-32"
+          class="emotion-35"
           data-testid="ictinus_table_row_6_cell_2"
         >
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-36 emotion-37"
           >
             <span
               data-column="Name"
@@ -814,11 +864,11 @@
           </div>
         </td>
         <td
-          class="emotion-32"
+          class="emotion-35"
           data-testid="ictinus_table_row_6_cell_3"
         >
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-36 emotion-37"
           >
             <span
               data-column="[object Object]"
@@ -828,11 +878,11 @@
           </div>
         </td>
         <td
-          class="emotion-41"
+          class="emotion-44"
           data-testid="ictinus_table_row_6_cell_4"
         >
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-36 emotion-37"
           >
             <span
               data-column="[object Object]"
@@ -843,14 +893,14 @@
         </td>
       </tr>
       <tr
-        class="emotion-31"
+        class="emotion-34"
       >
         <td
-          class="emotion-32"
+          class="emotion-35"
           data-testid="ictinus_table_row_7_cell_1"
         >
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-36 emotion-37"
           >
             <span
               data-column="[object Object]"
@@ -860,11 +910,11 @@
           </div>
         </td>
         <td
-          class="emotion-32"
+          class="emotion-35"
           data-testid="ictinus_table_row_7_cell_2"
         >
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-36 emotion-37"
           >
             <span
               data-column="Name"
@@ -874,11 +924,11 @@
           </div>
         </td>
         <td
-          class="emotion-32"
+          class="emotion-35"
           data-testid="ictinus_table_row_7_cell_3"
         >
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-36 emotion-37"
           >
             <span
               data-column="[object Object]"
@@ -888,11 +938,11 @@
           </div>
         </td>
         <td
-          class="emotion-41"
+          class="emotion-44"
           data-testid="ictinus_table_row_7_cell_4"
         >
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-36 emotion-37"
           >
             <span
               data-column="[object Object]"
@@ -903,14 +953,14 @@
         </td>
       </tr>
       <tr
-        class="emotion-31"
+        class="emotion-34"
       >
         <td
-          class="emotion-32"
+          class="emotion-35"
           data-testid="ictinus_table_row_8_cell_1"
         >
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-36 emotion-37"
           >
             <span
               data-column="[object Object]"
@@ -920,11 +970,11 @@
           </div>
         </td>
         <td
-          class="emotion-32"
+          class="emotion-35"
           data-testid="ictinus_table_row_8_cell_2"
         >
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-36 emotion-37"
           >
             <span
               data-column="Name"
@@ -934,11 +984,11 @@
           </div>
         </td>
         <td
-          class="emotion-32"
+          class="emotion-35"
           data-testid="ictinus_table_row_8_cell_3"
         >
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-36 emotion-37"
           >
             <span
               data-column="[object Object]"
@@ -948,11 +998,11 @@
           </div>
         </td>
         <td
-          class="emotion-41"
+          class="emotion-44"
           data-testid="ictinus_table_row_8_cell_4"
         >
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-36 emotion-37"
           >
             <span
               data-column="[object Object]"

@@ -47,43 +47,6 @@ module.exports = {
 
   staticDirs: ['../public'],
 
-  // webpackFinal: async (config: any) => {
-  //   // do mutation to the config
-  //   // Edit config with care. Make sure to preserve the following config options:
-  //   // * entry
-  //   // * output
-  //
-  //   const rules = config.module.rules;
-  //   const fileLoaderRule = rules.find((rule: any) => rule.test.test('.svg'));
-  //   fileLoaderRule.exclude = /\.svg$/;
-  //
-  //   // config.module.rules[0].use[0].options.presets = [
-  //   //   ...config.module.rules[0].use[0].options.presets,
-  //   //   require.resolve('@emotion/babel-preset-css-prop'),
-  //   // ];
-  //
-  //   rules.push({
-  //     test: /\.(png|jpe?g|gif)$/i,
-  //     use: [
-  //       {
-  //         loader: 'file-loader',
-  //       },
-  //     ],
-  //   });
-  //   rules.push({
-  //     test: /\.svg$/,
-  //     issuer: /\.tsx?$/,
-  //     use: ['@svgr/webpack'],
-  //   });
-  //
-  //   config.module.rules.push({
-  //     test: /\.svg$/,
-  //     issuer: /\.style.ts?$/,
-  //     use: ['url-loader'],
-  //   });
-  //
-  //   return config;
-  // },
   env: (config: any) => ({
     ...config,
     STORYBOOK_ENV: 'true',

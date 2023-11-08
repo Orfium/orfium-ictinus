@@ -62,6 +62,7 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>((props, re
     placeholder,
   })(theme);
 
+  // eslint-disable-next-line @typescript-eslint/naming-convention
   const shouldShowCounter = maxCharacters && status?.type != 'error';
 
   const counter = shouldShowCounter ? (

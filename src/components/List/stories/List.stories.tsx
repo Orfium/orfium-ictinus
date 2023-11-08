@@ -42,6 +42,7 @@ export const ListStory = {
 export const GroupList = {
   render: () => (
     <Function>
+      {/* @TODO */}
       {() => {
         return (
           <List label={'group list'}>
