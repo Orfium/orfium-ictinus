@@ -2,7 +2,7 @@ import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
 import List, { ListItem, ListItemAction, ListItemText } from '../index';
 import { FIGMA_URL, Function } from '../../../utils/common';
 import Overview from '../../../storybook/Overview';
-import Radio from '../../Radio';
+import { Radio, RadioGroup } from '../../Controls';
 import CheckBox from '../../CheckBox';
 import Switch from '../../Switch';
 import Avatar from '../../Avatar';
@@ -83,6 +83,7 @@ const MyComponent = () => {
     <Function>
       {() => {
         const [selectedKeys, setSelectedKeys] = useState(new Set());
+        const [selectedRadio, setSelectedRadio] = useState('');
         return (
           <>
             <Box mb={'3'}>
@@ -108,20 +109,28 @@ const MyComponent = () => {
               </List>
             </Box>
             <Box mb={'3'}>
-              <List label={'list'} selectedKeys={selectedKeys} onSelectionChange={setSelectedKeys}>
-                <ListItem key={'5'}>
-                  <ListItemAction>
-                    <Radio isChecked={selectedKeys.has(`5`)} />
-                  </ListItemAction>
-                  <ListItemText>Option Radio</ListItemText>
-                </ListItem>
-                <ListItem key={'6'} rowSize={'compact'}>
-                  <ListItemAction>
-                    <Radio isChecked={selectedKeys.has(`6`)} />
-                  </ListItemAction>
-                  <ListItemText>Option Radio (compact)</ListItemText>
-                </ListItem>
-              </List>
+              <RadioGroup value={selectedRadio} onChange={setSelectedRadio}>
+                <div>
+                  <List
+                    label={'list'}
+                    selectedKeys={selectedKeys}
+                    onSelectionChange={setSelectedKeys}
+                  >
+                    <ListItem key={'5'}>
+                      <ListItemAction>
+                        <Radio value="5" />
+                      </ListItemAction>
+                      <ListItemText>Option Radio</ListItemText>
+                    </ListItem>
+                    <ListItem key={'6'} rowSize={'compact'}>
+                      <ListItemAction>
+                        <Radio value="6" />
+                      </ListItemAction>
+                      <ListItemText>Option Radio (compact)</ListItemText>
+                    </ListItem>
+                  </List>
+                </div>
+              </RadioGroup>
             </Box>
             <Box mb={'3'}>
               <List label={'list'} selectedKeys={selectedKeys} onSelectionChange={setSelectedKeys}>
@@ -210,7 +219,9 @@ const MyComponent = () => {
               </ListItem>
               <ListItem key={'6'}>
                 <ListItemAction>
-                  <Radio isDisabled />
+                  <RadioGroup>
+                    <Radio value="6" isDisabled />
+                  </RadioGroup>
                 </ListItemAction>
                 <ListItemText>This Radio Option is disabled</ListItemText>
               </ListItem>

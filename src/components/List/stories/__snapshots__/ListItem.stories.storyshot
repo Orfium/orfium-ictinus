@@ -439,116 +439,72 @@ exports[`Storyshots Updated Components/List/ListItem Disabled ListItem 1`] = `
   fill: white;
 }
 
-.emotion-28 {
-  position: relative;
-  border-radius: 50%;
-  width: 2.25rem;
-  height: 2.25rem;
-  color: #175bf5;
-  border: 0;
-  opacity: 0.5;
-  cursor: pointer;
-  margin: 0;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  outline: 0;
+.emotion-29 label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  -moz-appearance: none;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-appearance: none;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.emotion-29 {
-  top: 0;
-  left: 0;
-  width: 100%;
-  cursor: inherit;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  z-index: 1;
-  position: absolute;
-  opacity: 0;
-}
-
-.emotion-29:disabled {
-  cursor: default;
-}
-
-.emotion-30 {
+  gap: 0.75rem;
   position: relative;
-  border-radius: 50%;
-  width: 1.5rem;
-  height: 1.5rem;
-  -webkit-transition: box-shadow 0.3s ease;
-  transition: box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
-.emotion-31 {
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  position: absolute;
-}
-
-.emotion-31:before {
+.emotion-29 label:before {
   content: '';
   display: inline-block;
-  box-sizing: border-box;
-  margin: 0.125rem 0.75rem 0.125rem 0.125rem;
-  border: solid 2px #c3cddf;
-  border-radius: 50%;
   width: 1.25rem;
   height: 1.25rem;
-  vertical-align: top;
-  -webkit-transition: border-color 0.2s;
-  transition: border-color 0.2s;
+  box-sizing: border-box;
+  border: 0.125rem solid #b9cdfc;
+  border-radius: 6.25rem;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  background: rgba(84,94,255,0);
 }
 
-.emotion-31:after {
+.emotion-29 label:hover::before {
+  background: rgba(84,94,255,0.06);
+  box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
+}
+
+.emotion-29 label[data-selected='true']:before {
+  border-color: #175bf5;
+  border-radius: 50%;
+}
+
+.emotion-29 label[data-selected='true']:hover::before {
+  background: none;
+  box-shadow: none;
+}
+
+.emotion-29 label[data-selected='true']:after {
   content: '';
   display: block;
   position: absolute;
-  top: 0.0625rem;
-  left: 0.0625rem;
   border-radius: 50%;
   width: 0.75rem;
   height: 0.75rem;
-  background-color: #c3cddf;
-  -webkit-transform: translate(5px, 5px) scale(0);
-  -moz-transform: translate(5px, 5px) scale(0);
-  -ms-transform: translate(5px, 5px) scale(0);
-  transform: translate(5px, 5px) scale(0);
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
+  background: #175bf5;
+  left: 4px;
+  -webkit-animation: circle 0.15s ease-in-out;
+  animation: circle 0.15s ease-in-out;
 }
 
-.emotion-32 {
-  position: absolute;
-  border-radius: 50%;
-  width: 1.5rem;
-  height: 1.5rem;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+.emotion-29 label[data-disabled='true'] {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-29 label[data-disabled='true']:hover::before {
+  background: none;
+  box-shadow: none;
 }
 
 <div
@@ -864,34 +820,66 @@ exports[`Storyshots Updated Components/List/ListItem Disabled ListItem 1`] = `
                 <div
                   className="emotion-9"
                 >
-                  <span
+                  <div
+                    aria-orientation="vertical"
                     className="emotion-28"
-                    data-testid="radio-input"
+                    data-testid="undefined_radio_group_container"
+                    id="react-aria-generated-id"
+                    onBlur={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    role="radiogroup"
                   >
-                    <input
-                      checked={false}
+                    <div
                       className="emotion-29"
-                      disabled={true}
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      onMouseLeave={[Function]}
-                      onMouseOver={[Function]}
-                      required={false}
-                      type="radio"
-                      value="on"
-                    />
-                    <span
-                      className="emotion-30"
+                      data-testid="undefined_radio_6_container"
                     >
-                      <span
-                        className="emotion-31"
-                      />
-                      <span
-                        className="emotion-32"
-                      />
-                    </span>
-                  </span>
+                      <label
+                        data-disabled={true}
+                        data-selected={false}
+                      >
+                        <div
+                          onBlur={null}
+                          onFocus={null}
+                          style={
+                            Object {
+                              "border": 0,
+                              "clip": "rect(0 0 0 0)",
+                              "clipPath": "inset(50%)",
+                              "height": "1px",
+                              "margin": "-1px",
+                              "overflow": "hidden",
+                              "padding": 0,
+                              "position": "absolute",
+                              "whiteSpace": "nowrap",
+                              "width": "1px",
+                            }
+                          }
+                        >
+                          <input
+                            checked={false}
+                            disabled={true}
+                            name="react-aria-generated-id"
+                            onChange={[Function]}
+                            onClick={[Function]}
+                            onDragStart={[Function]}
+                            onKeyDown={[Function]}
+                            onKeyUp={[Function]}
+                            onMouseDown={[Function]}
+                            onMouseEnter={[Function]}
+                            onMouseLeave={[Function]}
+                            onMouseUp={[Function]}
+                            onTouchCancel={[Function]}
+                            onTouchEnd={[Function]}
+                            onTouchMove={[Function]}
+                            onTouchStart={[Function]}
+                            type="radio"
+                            value="6"
+                          />
+                        </div>
+                      </label>
+                    </div>
+                  </div>
                 </div>
                 <div
                   className="emotion-6"
@@ -1136,7 +1124,7 @@ exports[`Storyshots Updated Components/List/ListItem ListItem compilations 1`] =
   color: #686BB3;
 }
 
-.emotion-22 {
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1154,119 +1142,75 @@ exports[`Storyshots Updated Components/List/ListItem ListItem compilations 1`] =
   justify-content: center;
 }
 
-.emotion-23 {
-  position: relative;
-  border-radius: 50%;
-  width: 2.25rem;
-  height: 2.25rem;
-  color: #175bf5;
-  border: 0;
-  opacity: 1;
-  cursor: pointer;
-  margin: 0;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  outline: 0;
+.emotion-24 label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  -moz-appearance: none;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-appearance: none;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.emotion-24 {
-  top: 0;
-  left: 0;
-  width: 100%;
-  cursor: inherit;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  z-index: 1;
-  position: absolute;
-  opacity: 0;
-}
-
-.emotion-24:disabled {
-  cursor: default;
-}
-
-.emotion-25 {
+  gap: 0.75rem;
   position: relative;
-  border-radius: 50%;
-  width: 1.5rem;
-  height: 1.5rem;
-  -webkit-transition: box-shadow 0.3s ease;
-  transition: box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
-.emotion-26 {
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  position: absolute;
-}
-
-.emotion-26:before {
+.emotion-24 label:before {
   content: '';
   display: inline-block;
-  box-sizing: border-box;
-  margin: 0.125rem 0.75rem 0.125rem 0.125rem;
-  border: solid 2px #b7c3d8;
-  border-radius: 50%;
   width: 1.25rem;
   height: 1.25rem;
-  vertical-align: top;
-  -webkit-transition: border-color 0.2s;
-  transition: border-color 0.2s;
+  box-sizing: border-box;
+  border: 0.125rem solid #b9cdfc;
+  border-radius: 6.25rem;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  background: rgba(84,94,255,0);
 }
 
-.emotion-26:after {
+.emotion-24 label:hover::before {
+  background: rgba(84,94,255,0.06);
+  box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
+}
+
+.emotion-24 label[data-selected='true']:before {
+  border-color: #175bf5;
+  border-radius: 50%;
+}
+
+.emotion-24 label[data-selected='true']:hover::before {
+  background: none;
+  box-shadow: none;
+}
+
+.emotion-24 label[data-selected='true']:after {
   content: '';
   display: block;
   position: absolute;
-  top: 0.0625rem;
-  left: 0.0625rem;
   border-radius: 50%;
   width: 0.75rem;
   height: 0.75rem;
-  background-color: #b7c3d8;
-  -webkit-transform: translate(5px, 5px) scale(0);
-  -moz-transform: translate(5px, 5px) scale(0);
-  -ms-transform: translate(5px, 5px) scale(0);
-  transform: translate(5px, 5px) scale(0);
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
+  background: #175bf5;
+  left: 4px;
+  -webkit-animation: circle 0.15s ease-in-out;
+  animation: circle 0.15s ease-in-out;
 }
 
-.emotion-27 {
-  position: absolute;
-  border-radius: 50%;
-  width: 1.5rem;
-  height: 1.5rem;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+.emotion-24 label[data-disabled='true'] {
+  opacity: 50%;
+  cursor: not-allowed;
 }
 
-.emotion-42 {
+.emotion-24 label[data-disabled='true']:hover::before {
+  background: none;
+  box-shadow: none;
+}
+
+.emotion-35 {
   opacity: 1;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -1282,7 +1226,7 @@ exports[`Storyshots Updated Components/List/ListItem ListItem compilations 1`] =
   display: flex;
 }
 
-.emotion-43 {
+.emotion-36 {
   border-radius: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1301,7 +1245,7 @@ exports[`Storyshots Updated Components/List/ListItem ListItem compilations 1`] =
   position: relative;
 }
 
-.emotion-43:before {
+.emotion-36:before {
   display: none;
   border-radius: 100%;
   -webkit-transition: all 0.2s;
@@ -1312,12 +1256,12 @@ exports[`Storyshots Updated Components/List/ListItem ListItem compilations 1`] =
   position: absolute;
 }
 
-.emotion-43:hover:before {
+.emotion-36:hover:before {
   display: block;
   background: rgba(0, 0, 0, 0.05);
 }
 
-.emotion-44 {
+.emotion-37 {
   border: 0;
   border-radius: 0.125rem;
   width: 1.5rem;
@@ -1326,13 +1270,13 @@ exports[`Storyshots Updated Components/List/ListItem ListItem compilations 1`] =
   opacity: 0;
 }
 
-.emotion-44+label {
+.emotion-37+label {
   position: relative;
   cursor: pointer;
   padding: 0;
 }
 
-.emotion-44+label:before {
+.emotion-37+label:before {
   content: '';
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -1345,21 +1289,21 @@ exports[`Storyshots Updated Components/List/ListItem ListItem compilations 1`] =
   border-radius: 0.25rem;
 }
 
-.emotion-44:disabled+label {
+.emotion-37:disabled+label {
   cursor: not-allowed;
 }
 
-.emotion-45 span {
+.emotion-38 span {
   padding: 0;
 }
 
-.emotion-45 svg {
+.emotion-38 svg {
   position: absolute;
   top: 0;
   display: none;
 }
 
-.emotion-46 {
+.emotion-39 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1375,17 +1319,17 @@ exports[`Storyshots Updated Components/List/ListItem ListItem compilations 1`] =
   justify-content: center;
 }
 
-.emotion-47 {
+.emotion-40 {
   fill: white;
   width: 1.5rem;
   height: 1.5rem;
 }
 
-.emotion-47 path {
+.emotion-40 path {
   fill: white;
 }
 
-.emotion-64 {
+.emotion-57 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1395,7 +1339,7 @@ exports[`Storyshots Updated Components/List/ListItem ListItem compilations 1`] =
   display: flex;
 }
 
-.emotion-64 .react-switch-handle {
+.emotion-57 .react-switch-handle {
   cursor: unset!important;
   border: 2px solid #b7c3d8!important;
   box-sizing: border-box!important;
@@ -1405,23 +1349,23 @@ exports[`Storyshots Updated Components/List/ListItem ListItem compilations 1`] =
   transform: translateX(0)!important;
 }
 
-.emotion-64 .react-switch-handle:hover {
+.emotion-57 .react-switch-handle:hover {
   box-shadow: rgba(14,14,23,0.1) 0 0 0 5px;
   background: #dbe1eb!important;
 }
 
-.emotion-64 .react-switch-bg {
+.emotion-57 .react-switch-bg {
   cursor: unset!important;
   margin-right: 0!important;
   margin-left: 0!important;
 }
 
-.emotion-64 .react-switch-bg:hover~.react-switch-handle {
+.emotion-57 .react-switch-bg:hover~.react-switch-handle {
   box-shadow: rgba(14,14,23,0.1) 0 0 0 5px;
   background: #dbe1eb!important;
 }
 
-.emotion-74 {
+.emotion-67 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1461,19 +1405,19 @@ exports[`Storyshots Updated Components/List/ListItem ListItem compilations 1`] =
   letter-spacing: 0.00625rem;
 }
 
-.emotion-74 img {
+.emotion-67 img {
   border-radius: 6.25rem;
   width: 100%;
   height: 100%;
 }
 
-.emotion-76 {
+.emotion-69 {
   fill: #1249C4;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-76 path {
+.emotion-69 path {
   fill: #1249C4;
 }
 
@@ -1715,171 +1659,230 @@ exports[`Storyshots Updated Components/List/ListItem ListItem compilations 1`] =
       className="emotion-2"
     >
       <div
-        className="emotion-3"
+        aria-orientation="vertical"
+        className="emotion-19"
+        data-testid="undefined_radio_group_container"
+        id="react-aria-generated-id"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        role="radiogroup"
       >
-        <div
-          data-testid="ictinus_list"
-        >
+        <div>
           <div
-            style={
-              Object {
-                "height": "100%",
-              }
-            }
+            className="emotion-3"
           >
-            <ul
-              aria-labelledby="react-aria-generated-id"
-              className="emotion-4"
-              id="react-aria-generated-id"
-              onBlur={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyDownCapture={[Function]}
-              onMouseDown={[Function]}
-              onScroll={[Function]}
-              role="listbox"
-              style={
-                Object {
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "listStyle": "none",
-                  "overflowY": "auto",
-                  "padding": 0,
-                  "position": "relative",
-                }
-              }
-              tabIndex={0}
+            <div
+              data-testid="ictinus_list"
             >
-              <li
-                aria-selected={false}
-                className="emotion-5 "
-                data-key="5"
-                data-testid="ictinus_list_item_5"
-                id="react-aria-generated-id-option-5"
-                onBlur={[Function]}
-                onClick={[Function]}
-                onDragStart={[Function]}
-                onDragStartCapture={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onMouseDown={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchCancel={[Function]}
-                onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-                role="option"
-                tabIndex={-1}
+              <div
+                style={
+                  Object {
+                    "height": "100%",
+                  }
+                }
               >
-                <div
-                  className="emotion-22"
+                <ul
+                  aria-labelledby="react-aria-generated-id"
+                  className="emotion-4"
+                  id="react-aria-generated-id"
+                  onBlur={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyDownCapture={[Function]}
+                  onMouseDown={[Function]}
+                  onScroll={[Function]}
+                  role="listbox"
+                  style={
+                    Object {
+                      "display": "flex",
+                      "flexDirection": "column",
+                      "height": "100%",
+                      "listStyle": "none",
+                      "overflowY": "auto",
+                      "padding": 0,
+                      "position": "relative",
+                    }
+                  }
+                  tabIndex={0}
                 >
-                  <span
-                    className="emotion-23"
-                    data-testid="radio-input"
+                  <li
+                    aria-selected={false}
+                    className="emotion-5 "
+                    data-key="5"
+                    data-testid="ictinus_list_item_5"
+                    id="react-aria-generated-id-option-5"
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onDragStart={[Function]}
+                    onDragStartCapture={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchCancel={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    role="option"
+                    tabIndex={-1}
                   >
-                    <input
-                      checked={false}
-                      className="emotion-24"
-                      disabled={false}
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      onMouseLeave={[Function]}
-                      onMouseOver={[Function]}
-                      required={false}
-                      type="radio"
-                      value="on"
-                    />
-                    <span
-                      className="emotion-25"
+                    <div
+                      className="emotion-23"
                     >
-                      <span
-                        className="emotion-26"
-                      />
-                      <span
-                        className="emotion-27"
-                      />
-                    </span>
-                  </span>
-                </div>
-                <div
-                  className="emotion-6"
-                >
-                  <span>
-                    Option Radio
-                  </span>
-                </div>
-              </li>
-              <li
-                aria-selected={false}
-                className="emotion-7 "
-                data-key="6"
-                data-testid="ictinus_list_item_6"
-                id="react-aria-generated-id-option-6"
-                onBlur={[Function]}
-                onClick={[Function]}
-                onDragStart={[Function]}
-                onDragStartCapture={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onMouseDown={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchCancel={[Function]}
-                onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-                role="option"
-                tabIndex={-1}
-              >
-                <div
-                  className="emotion-22"
-                >
-                  <span
-                    className="emotion-23"
-                    data-testid="radio-input"
+                      <div
+                        className="emotion-24"
+                        data-testid="undefined_radio_5_container"
+                      >
+                        <label
+                          data-disabled={false}
+                          data-selected={false}
+                        >
+                          <div
+                            onBlur={null}
+                            onFocus={null}
+                            style={
+                              Object {
+                                "border": 0,
+                                "clip": "rect(0 0 0 0)",
+                                "clipPath": "inset(50%)",
+                                "height": "1px",
+                                "margin": "-1px",
+                                "overflow": "hidden",
+                                "padding": 0,
+                                "position": "absolute",
+                                "whiteSpace": "nowrap",
+                                "width": "1px",
+                              }
+                            }
+                          >
+                            <input
+                              checked={false}
+                              disabled={false}
+                              name="react-aria-generated-id"
+                              onChange={[Function]}
+                              onClick={[Function]}
+                              onDragStart={[Function]}
+                              onFocus={[Function]}
+                              onKeyDown={[Function]}
+                              onKeyUp={[Function]}
+                              onMouseDown={[Function]}
+                              onMouseEnter={[Function]}
+                              onMouseLeave={[Function]}
+                              onMouseUp={[Function]}
+                              onTouchCancel={[Function]}
+                              onTouchEnd={[Function]}
+                              onTouchMove={[Function]}
+                              onTouchStart={[Function]}
+                              tabIndex={-1}
+                              type="radio"
+                              value="5"
+                            />
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                    <div
+                      className="emotion-6"
+                    >
+                      <span>
+                        Option Radio
+                      </span>
+                    </div>
+                  </li>
+                  <li
+                    aria-selected={false}
+                    className="emotion-7 "
+                    data-key="6"
+                    data-testid="ictinus_list_item_6"
+                    id="react-aria-generated-id-option-6"
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onDragStart={[Function]}
+                    onDragStartCapture={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchCancel={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    role="option"
+                    tabIndex={-1}
                   >
-                    <input
-                      checked={false}
-                      className="emotion-24"
-                      disabled={false}
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      onMouseLeave={[Function]}
-                      onMouseOver={[Function]}
-                      required={false}
-                      type="radio"
-                      value="on"
-                    />
-                    <span
-                      className="emotion-25"
+                    <div
+                      className="emotion-23"
                     >
-                      <span
-                        className="emotion-26"
-                      />
-                      <span
-                        className="emotion-27"
-                      />
-                    </span>
-                  </span>
-                </div>
-                <div
-                  className="emotion-6"
-                >
-                  <span>
-                    Option Radio (compact)
-                  </span>
-                </div>
-              </li>
-            </ul>
+                      <div
+                        className="emotion-24"
+                        data-testid="undefined_radio_6_container"
+                      >
+                        <label
+                          data-disabled={false}
+                          data-selected={false}
+                        >
+                          <div
+                            onBlur={null}
+                            onFocus={null}
+                            style={
+                              Object {
+                                "border": 0,
+                                "clip": "rect(0 0 0 0)",
+                                "clipPath": "inset(50%)",
+                                "height": "1px",
+                                "margin": "-1px",
+                                "overflow": "hidden",
+                                "padding": 0,
+                                "position": "absolute",
+                                "whiteSpace": "nowrap",
+                                "width": "1px",
+                              }
+                            }
+                          >
+                            <input
+                              checked={false}
+                              disabled={false}
+                              name="react-aria-generated-id"
+                              onChange={[Function]}
+                              onClick={[Function]}
+                              onDragStart={[Function]}
+                              onFocus={[Function]}
+                              onKeyDown={[Function]}
+                              onKeyUp={[Function]}
+                              onMouseDown={[Function]}
+                              onMouseEnter={[Function]}
+                              onMouseLeave={[Function]}
+                              onMouseUp={[Function]}
+                              onTouchCancel={[Function]}
+                              onTouchEnd={[Function]}
+                              onTouchMove={[Function]}
+                              onTouchStart={[Function]}
+                              tabIndex={-1}
+                              type="radio"
+                              value="6"
+                            />
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                    <div
+                      className="emotion-6"
+                    >
+                      <span>
+                        Option Radio (compact)
+                      </span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1949,18 +1952,18 @@ exports[`Storyshots Updated Components/List/ListItem ListItem compilations 1`] =
                 tabIndex={-1}
               >
                 <div
-                  className="emotion-22"
+                  className="emotion-23"
                 >
                   <span
-                    className="emotion-42"
+                    className="emotion-35"
                   >
                     <span
-                      className="emotion-43"
+                      className="emotion-36"
                       onClick={[Function]}
                     >
                       <input
                         checked={false}
-                        className="emotion-44"
+                        className="emotion-37"
                         data-testid="checkbox"
                         disabled={false}
                         id="styled-checkbox-_00"
@@ -1969,15 +1972,15 @@ exports[`Storyshots Updated Components/List/ListItem ListItem compilations 1`] =
                         type="checkbox"
                       />
                       <label
-                        className="emotion-45"
+                        className="emotion-38"
                         htmlFor="styled-checkbox-_00"
                       >
                         <span
-                          className="emotion-46"
+                          className="emotion-39"
                           onClick={[Function]}
                         >
                           <span
-                            className="emotion-47"
+                            className="emotion-40"
                           />
                         </span>
                       </label>
@@ -2017,18 +2020,18 @@ exports[`Storyshots Updated Components/List/ListItem ListItem compilations 1`] =
                 tabIndex={-1}
               >
                 <div
-                  className="emotion-22"
+                  className="emotion-23"
                 >
                   <span
-                    className="emotion-42"
+                    className="emotion-35"
                   >
                     <span
-                      className="emotion-43"
+                      className="emotion-36"
                       onClick={[Function]}
                     >
                       <input
                         checked={false}
-                        className="emotion-44"
+                        className="emotion-37"
                         data-testid="checkbox"
                         disabled={false}
                         id="styled-checkbox-_00"
@@ -2037,15 +2040,15 @@ exports[`Storyshots Updated Components/List/ListItem ListItem compilations 1`] =
                         type="checkbox"
                       />
                       <label
-                        className="emotion-45"
+                        className="emotion-38"
                         htmlFor="styled-checkbox-_00"
                       >
                         <span
-                          className="emotion-46"
+                          className="emotion-39"
                           onClick={[Function]}
                         >
                           <span
-                            className="emotion-47"
+                            className="emotion-40"
                           />
                         </span>
                       </label>
@@ -2137,10 +2140,10 @@ exports[`Storyshots Updated Components/List/ListItem ListItem compilations 1`] =
                   </span>
                 </div>
                 <div
-                  className="emotion-22"
+                  className="emotion-23"
                 >
                   <div
-                    className="emotion-64"
+                    className="emotion-57"
                   >
                     <div
                       style={
@@ -2270,10 +2273,10 @@ exports[`Storyshots Updated Components/List/ListItem ListItem compilations 1`] =
                   </span>
                 </div>
                 <div
-                  className="emotion-22"
+                  className="emotion-23"
                 >
                   <div
-                    className="emotion-64"
+                    className="emotion-57"
                   >
                     <div
                       style={
@@ -2441,18 +2444,18 @@ exports[`Storyshots Updated Components/List/ListItem ListItem compilations 1`] =
                 tabIndex={-1}
               >
                 <div
-                  className="emotion-22"
+                  className="emotion-23"
                 >
                   <div
-                    className="emotion-74"
+                    className="emotion-67"
                     data-testid="_avatar"
                   >
                     <span
-                      className="emotion-46"
+                      className="emotion-39"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-76"
+                        className="emotion-69"
                       />
                     </span>
                   </div>
@@ -2490,18 +2493,18 @@ exports[`Storyshots Updated Components/List/ListItem ListItem compilations 1`] =
                 tabIndex={-1}
               >
                 <div
-                  className="emotion-22"
+                  className="emotion-23"
                 >
                   <div
-                    className="emotion-74"
+                    className="emotion-67"
                     data-testid="_avatar"
                   >
                     <span
-                      className="emotion-46"
+                      className="emotion-39"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-76"
+                        className="emotion-69"
                       />
                     </span>
                   </div>
