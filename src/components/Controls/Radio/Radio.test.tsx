@@ -1,20 +1,21 @@
 import React from 'react';
 
-import { render, fireEvent, act } from '../../../test';
+import { render } from 'test';
 
 import RadioGroup from './components/RadioGroup';
 import Radio from './Radio';
 import userEvent from '@testing-library/user-event';
+import { Mock } from 'vitest';
 
 describe('Radio', () => {
-  let mockOnClick: jest.Mock<any, any>;
+  let mockOnClick: Mock<any, any>;
 
   beforeEach(() => {
-    mockOnClick = jest.fn();
+    mockOnClick = vi.fn();
   });
 
   afterEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   it('it renders the RadioGroup and Radios correctly', () => {
