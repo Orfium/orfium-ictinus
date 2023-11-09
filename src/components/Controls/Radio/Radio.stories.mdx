@@ -1,0 +1,317 @@
+import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
+import Radio from './Radio';
+import RadioGroup from './components/RadioGroup';
+import { List, ListItem } from '../../List';
+import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
+import Stack from '../../storyUtils/Stack';
+import { FIGMA_URL, Function } from '../../../utils/common';
+import { useState } from 'react';
+import Overview from '../../../storybook/Overview';
+
+<Meta
+  title="Updated Components/Controls/Radio"
+  component={Radio}
+  parameters={{
+    design: [
+      {
+        type: 'figma',
+        name: 'Radio',
+        url: `${FIGMA_URL}?node-id=10283%3A104364`,
+      },
+    ],
+  }}
+/>
+
+<SectionHeader title={'Radio'} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
+
+## Overview
+
+<Story
+  name="Overview"
+  parameters={{
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+>
+  <Overview>A components that allows the user to select a single option from a group.</Overview>
+</Story>
+
+<SubsectionHeader title="Props" />
+
+### Radio
+
+<Props of={Radio} />
+
+### RadioGroup
+
+<Props of={RadioGroup} />
+
+## Usage
+
+<UsageGuidelines
+  guidelines={[
+    'Use radio buttons in cases where the user must select a single option out of a group to proceed.',
+  ]}
+  policies={[
+    'If you need to be able to make more than one choices, use a checkbox instead.',
+    'If you need to initiate an immediate state change (e.g. toggle light theme), use a switch instead.',
+    'If you need to initiate an action, use a button instead.',
+  ]}
+/>
+
+<SubsectionHeader title="Variants" />
+
+### RadioGroup
+
+In order to create a group or radio buttons, use the `RadioGroup` wrapper component.
+
+<Tip>To style the RadioGroup container based on your usage case's needs, use the sx prop</Tip>
+
+<Preview>
+  <Story name="RadioGroup">
+    <Stack>
+      <Function>
+        {() => {
+          const [selected, setSelected] = useState('');
+          return (
+            <RadioGroup
+              value={selected}
+              onChange={setSelected}
+              sx={{ display: 'flex', flexDirection: 'column', gap: '32px' }}
+            >
+              <Radio value="option 1">Option 1</Radio>
+              <Radio value="option 2">Option 2</Radio>
+              <Radio value="option 3">Option 3</Radio>
+            </RadioGroup>
+          );
+        }}
+      </Function>
+    </Stack>
+  </Story>
+</Preview>
+
+### Radio label placement
+
+Label can be placed either `left` or `right` of the radio button.
+
+<Tip>
+  The labelConfig prop of each Radio includes an sx prop in order to add custom styles on the
+  container that wraps the radio input and the label
+</Tip>
+
+<Preview>
+  <Story name="Radio label placement">
+    <Stack>
+      <Function>
+        {() => {
+          const [selected1, setSelected1] = useState('');
+          const [selected2, setSelected2] = useState('');
+          return (
+            <div style={{ display: 'flex', gap: '72px', alignItems: 'center' }}>
+              <RadioGroup
+                value={selected1}
+                onChange={setSelected1}
+                sx={{ display: 'flex', flexDirection: 'column', gap: '32px' }}
+              >
+                <Radio value="option 1">Option 1</Radio>
+                <Radio value="option 2">Option 2</Radio>
+                <Radio value="option 3">Option 3</Radio>
+              </RadioGroup>
+              <RadioGroup
+                value={selected2}
+                onChange={setSelected2}
+                sx={{ display: 'flex', flexDirection: 'column', gap: '32px' }}
+              >
+                <Radio value="option 1" labelConfig={{ placement: 'left' }}>
+                  Option 1
+                </Radio>
+                <Radio value="option 2" labelConfig={{ placement: 'left' }}>
+                  Option 2
+                </Radio>
+                <Radio value="option 3" labelConfig={{ placement: 'left' }}>
+                  Option 3
+                </Radio>
+              </RadioGroup>
+            </div>
+          );
+        }}
+      </Function>
+    </Stack>
+  </Story>
+</Preview>
+
+### Radio label sizes
+
+Label can be either a string or a custom component. In the case of the string, there are 2 sizes (declared inside the labelConfig), `normal` and `large`
+
+<Preview>
+  <Story name="Radio label sizes">
+    <Stack>
+      <Function>
+        {() => {
+          const [selected1, setSelected1] = useState('');
+          const [selected2, setSelected2] = useState('');
+          return (
+            <div style={{ display: 'flex', gap: '72px', alignItems: 'center' }}>
+              <RadioGroup
+                value={selected1}
+                onChange={setSelected1}
+                sx={{ display: 'flex', flexDirection: 'column', gap: '32px' }}
+              >
+                <Radio value="option 1">Normal Option 1</Radio>
+                <Radio value="option 2">Normal Option 2</Radio>
+                <Radio value="option 3">Normal Option 3</Radio>
+              </RadioGroup>
+              <RadioGroup
+                value={selected2}
+                onChange={setSelected2}
+                sx={{ display: 'flex', flexDirection: 'column', gap: '32px' }}
+              >
+                <Radio value="option 1" labelConfig={{ size: 'large' }}>
+                  Large Option 1
+                </Radio>
+                <Radio value="option 2" labelConfig={{ size: 'large' }}>
+                  Large Option 2
+                </Radio>
+                <Radio value="option 3" labelConfig={{ size: 'large' }}>
+                  Large Option 3
+                </Radio>
+              </RadioGroup>
+            </div>
+          );
+        }}
+      </Function>
+    </Stack>
+  </Story>
+</Preview>
+
+### Radio with helptext
+
+Radio can include a helptext under the label.
+
+<Preview>
+  <Story name="Radio with helptext">
+    <Stack>
+      <Function>
+        {() => {
+          const [selected, setSelected] = useState('');
+          return (
+            <RadioGroup
+              value={selected}
+              onChange={setSelected}
+              sx={{ display: 'flex', flexDirection: 'column', gap: '32px' }}
+            >
+              <Radio value="option 1">Option 1</Radio>
+              <Radio
+                value="option 2"
+                labelConfig={{ helpText: 'This is the help text of option 2' }}
+              >
+                Option 2
+              </Radio>
+              <Radio value="option 3">Option 3</Radio>
+            </RadioGroup>
+          );
+        }}
+      </Function>
+    </Stack>
+  </Story>
+</Preview>
+
+### Disabled Radio
+
+<Preview>
+  <Story name="Disabled Radio">
+    <Stack>
+      <Function>
+        {() => {
+          const [selected, setSelected] = useState('');
+          return (
+            <RadioGroup
+              value={selected}
+              onChange={(value) => {
+                console.log('clicked');
+                setSelected(value);
+              }}
+              sx={{ display: 'flex', flexDirection: 'column', gap: '32px' }}
+            >
+              <Radio value="option 1" isDisabled>
+                Option 1
+              </Radio>
+              <Radio
+                value="option 2"
+                labelConfig={{ helpText: 'This option is disabled' }}
+                isDisabled
+              >
+                Option 2
+              </Radio>
+              <Radio value="option 3" isDisabled>
+                Option 3
+              </Radio>
+            </RadioGroup>
+          );
+        }}
+      </Function>
+    </Stack>
+  </Story>
+</Preview>
+
+### Playground
+
+<Preview>
+  <Story name="Playground" parameters={{ decorators: [withKnobs] }}>
+    <Stack>
+      <Function>
+        {() => {
+          const [selected, setSelected] = useState('');
+          return (
+            <RadioGroup
+              value={selected}
+              onChange={setSelected}
+              sx={{ display: 'flex', flexDirection: 'column', gap: '32px' }}
+            >
+              <Radio
+                value="option 1"
+                labelConfig={{
+                  placement: select('Label placement', ['left', 'right'], 'right'),
+                  size: select('Label size', ['normal', 'large'], 'normal'),
+                  helpText: text('Help text', ''),
+                }}
+                isDisabled={boolean('isDisabled', false)}
+              >
+                Option 1
+              </Radio>
+              <Radio
+                value="option 2"
+                labelConfig={{
+                  placement: select('Label placement', ['left', 'right'], 'right'),
+                  size: select('Label size', ['normal', 'large'], 'normal'),
+                  helpText: text('Help text', ''),
+                }}
+                isDisabled={boolean('isDisabled', false)}
+              >
+                Option 2
+              </Radio>
+              <Radio
+                value="option 3"
+                labelConfig={{
+                  placement: select('Label placement', ['left', 'right'], 'right'),
+                  size: select('Label size', ['normal', 'large'], 'normal'),
+                  helpText: text('Help text', ''),
+                }}
+                isDisabled={boolean('isDisabled', false)}
+              >
+                Option 3
+              </Radio>
+            </RadioGroup>
+          );
+        }}
+      </Function>
+    </Stack>
+  </Story>
+</Preview>
