@@ -5,8 +5,6 @@ import { Theme } from '../../theme';
 
 export type LinkTokens = DotKeys<typeof link>;
 
-export const getLinkTokens = (
-  theme: Theme
-): ((path: LinkTokens, fn?: (val: string) => any) => any) => {
-  return getComponentTokens(link, theme);
+export const getLinkTokens = (theme: Theme) => {
+  return getComponentTokens<LinkTokens>(link, theme);
 };
