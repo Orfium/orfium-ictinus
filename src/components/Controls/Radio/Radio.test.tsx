@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { render, fireEvent, act } from '../../../test';
+import { render } from '../../../test';
 
 import RadioGroup from './components/RadioGroup';
 import Radio from './Radio';
