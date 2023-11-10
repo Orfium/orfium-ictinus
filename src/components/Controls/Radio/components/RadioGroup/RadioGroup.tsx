@@ -39,4 +39,4 @@ const RadioGroup = React.forwardRef<HTMLDivElement, Props>((props, ref) => {
 
 RadioGroup.displayName = 'RadioGroup';
 
-export default React.memo(RadioGroup);
+export default RadioGroup;
