@@ -2,8 +2,9 @@ import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
 import List, { ListItem, ListItemAction, ListItemText } from '../index';
 import { FIGMA_URL, Function } from '../../../utils/common';
 import Overview from '../../../storybook/Overview';
-import { Radio, RadioGroup } from '../../Controls';
+import { Radio } from '../../Controls';
 import CheckBox from '../../CheckBox';
+import Typography from '../../Typography';
 import Switch from '../../Switch';
 import Avatar from '../../Avatar';
 import Box from '../../Box';
@@ -78,6 +79,28 @@ const MyComponent = () => {
 
 ### ListItem compilations
 
+<Tip>
+  In case you want to use Radio button inside the ListItem, additional props should be provided to
+  the Radio:
+  <br />
+  <br />
+  <Typography component="span" isBold>
+    isSelected
+  </Typography>: indicates if the Radio (inside the selected ListItem) is selected.
+  <br />
+  <br />
+  <Typography component="span" isBold>
+    onClick
+  </Typography>
+  : wrapped inside the inputProps object prop, the onClick handler is needed for stopping event propagation
+  and for updating the List's state.
+  <br />
+  <br />
+  <Typography component="span" isItalic>
+    Check the code of the following example for more details on the implementation.
+  </Typography>
+</Tip>
+
 <Preview>
   <Story name="ListItem compilations">
     <Function>
@@ -109,28 +132,38 @@ const MyComponent = () => {
               </List>
             </Box>
             <Box mb={'3'}>
-              <RadioGroup value={selectedRadio} onChange={setSelectedRadio}>
-                <div>
-                  <List
-                    label={'list'}
-                    selectedKeys={selectedKeys}
-                    onSelectionChange={setSelectedKeys}
-                  >
-                    <ListItem key={'5'}>
-                      <ListItemAction>
-                        <Radio value="5" />
-                      </ListItemAction>
-                      <ListItemText>Option Radio</ListItemText>
-                    </ListItem>
-                    <ListItem key={'6'} rowSize={'compact'}>
-                      <ListItemAction>
-                        <Radio value="6" />
-                      </ListItemAction>
-                      <ListItemText>Option Radio (compact)</ListItemText>
-                    </ListItem>
-                  </List>
-                </div>
-              </RadioGroup>
+              <List label={'list'} selectedKeys={selectedKeys} onSelectionChange={setSelectedKeys}>
+                <ListItem key={'5'}>
+                  <ListItemAction>
+                    <Radio
+                      value="cherry"
+                      isSelected={selectedKeys.has(`5`)}
+                      inputProps={{
+                        onClick: (e) => {
+                          e.stopPropagation();
+                          setSelectedKeys(new Set(['5']));
+                        },
+                      }}
+                    />
+                  </ListItemAction>
+                  <ListItemText>Option Radio</ListItemText>
+                </ListItem>
+                <ListItem key={'6'} rowSize={'compact'}>
+                  <ListItemAction>
+                    <Radio
+                      value="banana"
+                      isSelected={selectedKeys.has(`6`)}
+                      inputProps={{
+                        onClick: (e) => {
+                          e.stopPropagation();
+                          setSelectedKeys(new Set(['6']));
+                        },
+                      }}
+                    />
+                  </ListItemAction>
+                  <ListItemText>Option Radio (compact)</ListItemText>
+                </ListItem>
+              </List>
             </Box>
             <Box mb={'3'}>
               <List label={'list'} selectedKeys={selectedKeys} onSelectionChange={setSelectedKeys}>
@@ -219,9 +252,7 @@ const MyComponent = () => {
               </ListItem>
               <ListItem key={'6'}>
                 <ListItemAction>
-                  <RadioGroup>
-                    <Radio value="6" isDisabled />
-                  </RadioGroup>
+                  <Radio value="6" isDisabled />
                 </ListItemAction>
                 <ListItemText>This Radio Option is disabled</ListItemText>
               </ListItem>

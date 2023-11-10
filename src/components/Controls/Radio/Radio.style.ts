@@ -5,7 +5,11 @@ import { getControlsTokens } from '../Controls.tokens';
 import { LabelConfig } from '../Controls.types';
 
 export const radioContainerStyles =
-  ({ placement = 'right', sx }: Pick<LabelConfig, 'placement' | 'sx'>) =>
+  ({
+    placement = 'right',
+    sx,
+    isFocusVisible,
+  }: Pick<LabelConfig, 'placement' | 'sx'> & { isFocusVisible?: boolean }) =>
   (theme: Theme): SerializedStyles => {
     const tokens = getControlsTokens(theme);
 
@@ -29,6 +33,12 @@ export const radioContainerStyles =
           border-radius: ${tokens('radio.borderRadius')};
           transition: all 200ms;
           background: ${tokens('radio.backgroundColor.default')};
+
+          ${isFocusVisible &&
+          `
+            background: ${theme.tokens.state.get('backgroundColor.hover')};
+            box-shadow: 0px 0px 0px 8px ${theme.tokens.state.get('backgroundColor.hover')};
+          `}
         }
 
         &:hover::before {

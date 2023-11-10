@@ -1,8 +1,6 @@
 import useCombinedRefs from 'hooks/useCombinedRefs';
 import * as React from 'react';
-import { useRadio, VisuallyHidden } from 'react-aria';
-import isEqual from 'react-fast-compare';
-import { RadioGroupState } from 'react-stately';
+import { mergeProps, RadioAria, useFocusRing, useRadio, VisuallyHidden } from 'react-aria';
 import { TestProps } from 'utils/types';
 
 import { useRadioGroupContent } from './components/RadioGroup';
@@ -10,40 +8,40 @@ import { radioContainerStyles } from './Radio.style';
 import ControlLabel from '../ControlLabel';
 import { LabelConfig } from '../Controls.types';
 
-export type Props = {
+export type Props = RadioAria & {
   /** Id property of the radio input */
   id?: string;
   /** The value of the radio input */
   value: string;
   /** Label configuration; includes placement, size, helpText and sx */
   labelConfig?: LabelConfig;
-  /** Whether the radio input is disabled */
-  isDisabled?: boolean;
   children?: React.ReactNode;
 } & TestProps;
 
 const Radio = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
-  const { id, value, isDisabled, labelConfig = {}, dataTestPrefixId, children } = props;
+  const { id, value, labelConfig = {}, dataTestPrefixId, children } = props;
   const { placement = 'right', size = 'normal', helpText, sx } = labelConfig;
 
   const inputRef = React.useRef(null);
   const combinedRefs = useCombinedRefs(inputRef, ref);
 
-  const state = useRadioGroupContent() as RadioGroupState;
+  const state = useRadioGroupContent();
 
-  const inputProps = useRadio(props, state, inputRef);
+  const { inputProps, isSelected, isDisabled } = state
+    ? // eslint-disable-next-line react-hooks/rules-of-hooks
+      useRadio(props, state, inputRef)
+    : props;
 
-  const isSelected = inputProps.isSelected;
-  const isRadioDisabled = isDisabled || inputProps.isDisabled;
+  const { isFocusVisible, focusProps } = useFocusRing();
 
   return (
     <div
       data-testid={`${dataTestPrefixId}_radio_${value.split(' ').join('_')}_container`}
-      css={radioContainerStyles({ placement, sx })}
+      css={radioContainerStyles({ placement, sx, isFocusVisible })}
     >
-      <label data-selected={isSelected} data-disabled={isRadioDisabled}>
+      <label data-selected={isSelected} data-disabled={isDisabled}>
         <VisuallyHidden>
-          <input id={id} {...inputProps.inputProps} ref={combinedRefs} />
+          <input id={id} {...mergeProps(inputProps, focusProps)} ref={combinedRefs} tabIndex={0} />
         </VisuallyHidden>
         {children && (
           <ControlLabel
@@ -61,4 +59,4 @@ const Radio = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
 
 Radio.displayName = 'Radio';
 
-export default React.memo(Radio, isEqual);
+export default Radio;
