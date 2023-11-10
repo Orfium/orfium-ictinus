@@ -8,7 +8,7 @@ import { radioContainerStyles } from './Radio.style';
 import ControlLabel from '../ControlLabel';
 import { LabelConfig } from '../Controls.types';
 
-export type Props = RadioAria & {
+export type Props = Partial<RadioAria> & {
   /** Id property of the radio input */
   id?: string;
   /** The value of the radio input */
