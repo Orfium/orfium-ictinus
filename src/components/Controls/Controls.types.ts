@@ -7,6 +7,6 @@ export type LabelConfig = {
   size?: 'normal' | 'large';
   /** Helptext rendered under the label */
   helpText?: string;
-  /** Styles that will apply on the container that holds the radio input and the label */
+  /** Styles that will apply on the container that holds the control input and the label */
   sx?: CSSObject;
 };
