@@ -11,7 +11,7 @@ import TableRowWrapper from './components/TableRowWrapper';
 import { tableCTAStyle, tableRowHeadersStyle, tableStyle } from './Table.style';
 import { ExtendedColumn, Sort, SortingOrder } from './types';
 import { isItemString } from './utils';
-import CheckBox from '../CheckBox';
+import { CheckBox } from '../Controls';
 
 export type ContentComponent<T> = (data: Cell<T>) => React.ReactNode;
 export type Cell<T> = {
@@ -208,18 +208,17 @@ function Table<T>({
                   index={0}
                 >
                   <CheckBox
-                    isChecked={Boolean(selectedIds && selectedIds.length > 0)}
-                    isIntermediate={
+                    isSelected={Boolean(selectedIds && selectedIds.length > 0)}
+                    isIndeterminate={
                       selectedIds && selectedIds.length > 0 && selectedIds?.length !== data.length
                     }
-                    onClick={() => {
+                    onChange={() => {
                       if (selectedIds?.length === data.length) {
                         setSelectedIds([]);
                       } else {
                         setSelectedIds(data.map(({ id }) => id));
                       }
                     }}
-                    isFilled={false}
                   />
                 </TableCell>
               )}

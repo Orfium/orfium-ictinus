@@ -5,7 +5,7 @@ import ExpandedButtonCell from './components/ExpandedButtonCell';
 import { borderedRowStyle, expandableRowStyle } from './RenderRowOrNestedRow.style';
 import useToggle from '../../../../hooks/useToggle';
 import { isComponentFunctionType } from '../../../../utils/helpers';
-import CheckBox from '../../../CheckBox';
+import { CheckBox } from '../../../Controls';
 import { Row } from '../../Table';
 import { tableStyle } from '../../Table.style';
 import { TableRowContext } from '../../TableRowContext';
@@ -61,10 +61,9 @@ const RenderRowWithCells = React.memo(
           >
             <div onClick={(e) => e.stopPropagation()}>
               <CheckBox
-                dataTestIdSuffix={'row-check'}
-                isChecked={isRowSelected}
-                onClick={tChange}
-                isFilled={false}
+                dataTestPrefixId={'row-check'}
+                isSelected={isRowSelected}
+                onChange={tChange}
               />
             </div>
           </TableCell>

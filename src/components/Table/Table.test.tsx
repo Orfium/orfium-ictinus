@@ -1,7 +1,7 @@
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import '@testing-library/jest-dom';
-import { fireEvent, render, within, screen } from 'test';
+import { fireEvent, render, within, screen } from '../../test';
 
 import Table from './Table';
 
@@ -59,9 +59,9 @@ describe('Table', () => {
 
     const row = getAllByText('Title')[0].closest('tr') as HTMLElement;
     const rowUtils = within(row);
-    const checkbox = await rowUtils.findByTestId('checkbox-row-check');
+    const checkbox = await rowUtils.findAllByTestId('row-check_undefined_checkbox');
 
-    fireEvent.click(checkbox);
+    userEvent.click(checkbox[0]);
 
     expect(onCheck).toHaveBeenCalledTimes(1);
     expect(onCheck).toHaveBeenCalledWith([data[0].id]);
@@ -82,9 +82,9 @@ describe('Table', () => {
 
     const row = getByText(topLeftText).closest('tr') as HTMLElement;
     const rowUtils = within(row);
-    const checkbox = await rowUtils.findByTestId('checkbox');
+    const checkbox = await rowUtils.findAllByTestId('undefined_undefined_checkbox');
 
-    fireEvent.click(checkbox);
+    userEvent.click(checkbox[0]);
 
     expect(onCheck).toHaveBeenCalledTimes(1);
     expect(onCheck).toHaveBeenCalledWith(data.map(({ id }) => id));
