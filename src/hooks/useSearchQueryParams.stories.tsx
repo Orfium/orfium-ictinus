@@ -21,9 +21,6 @@ export const UseSearchQueryParams = {
     () => {
       const value = text('given url', '/test?page=1&size=12&library=react&testing=yolo');
 
-      // @TODO FIX THIS
-      return null;
-
       return (
         <MemoryRouter initialEntries={[value]}>
           <DemoUseSearchQueryParams />
