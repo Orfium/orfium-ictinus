@@ -342,104 +342,95 @@ exports[`Storyshots Updated Components/List/ListItem Disabled ListItem 1`] = `
 }
 
 .emotion-19 {
-  opacity: 0.3;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.emotion-20 {
-  border-radius: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 3rem;
-  height: 3rem;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  position: relative;
-}
-
-.emotion-20:before {
-  display: none;
-  border-radius: 100%;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  content: ' ';
-  width: 3rem;
-  height: 3rem;
-  position: absolute;
-}
-
-.emotion-21 {
-  border: 0;
-  border-radius: 0.125rem;
-  width: 1.5rem;
-  height: 1.5rem;
-  position: absolute;
-  opacity: 0;
-}
-
-.emotion-21+label {
-  position: relative;
-  cursor: pointer;
-  padding: 0;
-}
-
-.emotion-21+label:before {
-  content: '';
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  display: inline-block;
-  vertical-align: text-top;
-  width: 1.5rem;
-  height: 1.5rem;
-  background: inherit;
-  box-shadow: inset 0px 0px 0px 0.125rem #b7c3d8;
-  border-radius: 0.25rem;
-}
-
-.emotion-21:disabled+label {
+  gap: 0.75rem;
+  opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-22 span {
-  padding: 0;
+.emotion-20 {
+  display: block;
+  cursor: pointer;
+  position: relative;
 }
 
-.emotion-22 svg {
-  position: absolute;
-  top: 0;
-  display: none;
+.emotion-20>span:nth-of-type(2) {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  width: 1.25rem;
+  height: 1.25rem;
+  box-sizing: border-box;
+  border: 0.125rem solid #b9cdfc;
+  border-radius: 0.25rem;
 }
 
-.emotion-24 {
-  fill: white;
-  width: 1.5rem;
-  height: 1.5rem;
+.emotion-20 svg {
+  visibility: hidden;
+  opacity: 0;
 }
 
-.emotion-24 path {
-  fill: white;
+.emotion-20:hover,
+.emotion-20[data-focus-visible='true'] {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  background: rgba(84,94,255,0.06);
+  box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
+  border-radius: 100%;
 }
 
-.emotion-28 label {
+.emotion-20[data-selected='true']:hover,
+.emotion-20[data-indeterminate='true']:hover {
+  background: none;
+  box-shadow: none;
+}
+
+.emotion-20[data-selected='true']>span:last-child,
+.emotion-20[data-indeterminate='true']>span:last-child {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border-color: #175bf5;
+  background: #175bf5;
+}
+
+.emotion-20[data-selected='true'] svg,
+.emotion-20[data-indeterminate='true'] svg {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.emotion-20[data-disabled='true'] {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-20[data-disabled='true']:hover {
+  background: none;
+  box-shadow: none;
+}
+
+.emotion-22 {
+  fill: #ffffff;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-22 path {
+  fill: #ffffff;
+}
+
+.emotion-26 label {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -456,7 +447,7 @@ exports[`Storyshots Updated Components/List/ListItem Disabled ListItem 1`] = `
   cursor: pointer;
 }
 
-.emotion-28 label:before {
+.emotion-26 label:before {
   content: '';
   display: inline-block;
   width: 1.25rem;
@@ -469,22 +460,22 @@ exports[`Storyshots Updated Components/List/ListItem Disabled ListItem 1`] = `
   background: rgba(84,94,255,0);
 }
 
-.emotion-28 label:hover::before {
+.emotion-26 label:hover::before {
   background: rgba(84,94,255,0.06);
   box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
 }
 
-.emotion-28 label[data-selected='true']:before {
+.emotion-26 label[data-selected='true']:before {
   border-color: #175bf5;
   border-radius: 50%;
 }
 
-.emotion-28 label[data-selected='true']:hover::before {
+.emotion-26 label[data-selected='true']:hover::before {
   background: none;
   box-shadow: none;
 }
 
-.emotion-28 label[data-selected='true']:after {
+.emotion-26 label[data-selected='true']:after {
   content: '';
   display: block;
   position: absolute;
@@ -497,12 +488,12 @@ exports[`Storyshots Updated Components/List/ListItem Disabled ListItem 1`] = `
   animation: circle 0.15s ease-in-out;
 }
 
-.emotion-28 label[data-disabled='true'] {
+.emotion-26 label[data-disabled='true'] {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-28 label[data-disabled='true']:hover::before {
+.emotion-26 label[data-disabled='true']:hover::before {
   background: none;
   box-shadow: none;
 }
@@ -760,38 +751,77 @@ exports[`Storyshots Updated Components/List/ListItem Disabled ListItem 1`] = `
                 <div
                   className="emotion-9"
                 >
-                  <span
+                  <div
                     className="emotion-19"
                   >
-                    <span
+                    <label
                       className="emotion-20"
+                      data-disabled={true}
+                      data-rac=""
+                      data-testid="undefined_undefined_checkbox"
                       onClick={[Function]}
+                      onDragStart={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
                     >
-                      <input
-                        checked={false}
-                        className="emotion-21"
-                        data-testid="checkbox"
-                        disabled={true}
-                        id="styled-checkbox-_00"
-                        onChange={[Function]}
+                      <span
+                        onBlur={null}
+                        onFocus={null}
+                        style={
+                          Object {
+                            "border": 0,
+                            "clip": "rect(0 0 0 0)",
+                            "clipPath": "inset(50%)",
+                            "height": "1px",
+                            "margin": "-1px",
+                            "overflow": "hidden",
+                            "padding": 0,
+                            "position": "absolute",
+                            "whiteSpace": "nowrap",
+                            "width": "1px",
+                          }
+                        }
+                      >
+                        <input
+                          checked={false}
+                          data-testid="undefined_undefined_checkbox"
+                          disabled={true}
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onClick={[Function]}
+                          onDragStart={[Function]}
+                          onFocus={[Function]}
+                          onKeyDown={[Function]}
+                          onKeyUp={[Function]}
+                          onMouseDown={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                          onMouseUp={[Function]}
+                          onTouchCancel={[Function]}
+                          onTouchEnd={[Function]}
+                          onTouchMove={[Function]}
+                          onTouchStart={[Function]}
+                          type="checkbox"
+                        />
+                      </span>
+                      <span
+                        className="emotion-14"
                         onClick={[Function]}
-                        type="checkbox"
-                      />
-                      <label
-                        className="emotion-22"
-                        htmlFor="styled-checkbox-_00"
                       >
                         <span
-                          className="emotion-14"
-                          onClick={[Function]}
-                        >
-                          <span
-                            className="emotion-24"
-                          />
-                        </span>
-                      </label>
-                    </span>
-                  </span>
+                          className="emotion-22"
+                        />
+                      </span>
+                    </label>
+                  </div>
                 </div>
                 <div
                   className="emotion-6"
@@ -821,7 +851,7 @@ exports[`Storyshots Updated Components/List/ListItem Disabled ListItem 1`] = `
                   className="emotion-9"
                 >
                   <div
-                    className="emotion-28"
+                    className="emotion-26"
                     data-testid="undefined_radio_6_container"
                   >
                     <label
@@ -1184,99 +1214,83 @@ exports[`Storyshots Updated Components/List/ListItem ListItem compilations 1`] =
 }
 
 .emotion-34 {
-  opacity: 1;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.75rem;
 }
 
 .emotion-35 {
-  border-radius: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 3rem;
-  height: 3rem;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-}
-
-.emotion-35:before {
-  display: none;
-  border-radius: 100%;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  content: ' ';
-  width: 3rem;
-  height: 3rem;
-  position: absolute;
-}
-
-.emotion-35:hover:before {
   display: block;
-  background: rgba(0, 0, 0, 0.05);
-}
-
-.emotion-36 {
-  border: 0;
-  border-radius: 0.125rem;
-  width: 1.5rem;
-  height: 1.5rem;
-  position: absolute;
-  opacity: 0;
-}
-
-.emotion-36+label {
-  position: relative;
   cursor: pointer;
-  padding: 0;
+  position: relative;
 }
 
-.emotion-36+label:before {
-  content: '';
+.emotion-35>span:nth-of-type(2) {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  display: inline-block;
-  vertical-align: text-top;
-  width: 1.5rem;
-  height: 1.5rem;
-  background: inherit;
-  box-shadow: inset 0px 0px 0px 0.125rem #b7c3d8;
+  width: 1.25rem;
+  height: 1.25rem;
+  box-sizing: border-box;
+  border: 0.125rem solid #b9cdfc;
   border-radius: 0.25rem;
 }
 
-.emotion-36:disabled+label {
+.emotion-35 svg {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.emotion-35:hover,
+.emotion-35[data-focus-visible='true'] {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  background: rgba(84,94,255,0.06);
+  box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
+  border-radius: 100%;
+}
+
+.emotion-35[data-selected='true']:hover,
+.emotion-35[data-indeterminate='true']:hover {
+  background: none;
+  box-shadow: none;
+}
+
+.emotion-35[data-selected='true']>span:last-child,
+.emotion-35[data-indeterminate='true']>span:last-child {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border-color: #175bf5;
+  background: #175bf5;
+}
+
+.emotion-35[data-selected='true'] svg,
+.emotion-35[data-indeterminate='true'] svg {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.emotion-35[data-disabled='true'] {
+  opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-37 span {
-  padding: 0;
+.emotion-35[data-disabled='true']:hover {
+  background: none;
+  box-shadow: none;
 }
 
-.emotion-37 svg {
-  position: absolute;
-  top: 0;
-  display: none;
-}
-
-.emotion-38 {
+.emotion-36 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1292,17 +1306,17 @@ exports[`Storyshots Updated Components/List/ListItem ListItem compilations 1`] =
   justify-content: center;
 }
 
-.emotion-39 {
-  fill: white;
-  width: 1.5rem;
-  height: 1.5rem;
+.emotion-37 {
+  fill: #ffffff;
+  width: 1rem;
+  height: 1rem;
 }
 
-.emotion-39 path {
-  fill: white;
+.emotion-37 path {
+  fill: #ffffff;
 }
 
-.emotion-56 {
+.emotion-52 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1312,7 +1326,7 @@ exports[`Storyshots Updated Components/List/ListItem ListItem compilations 1`] =
   display: flex;
 }
 
-.emotion-56 .react-switch-handle {
+.emotion-52 .react-switch-handle {
   cursor: unset!important;
   border: 2px solid #b7c3d8!important;
   box-sizing: border-box!important;
@@ -1322,23 +1336,23 @@ exports[`Storyshots Updated Components/List/ListItem ListItem compilations 1`] =
   transform: translateX(0)!important;
 }
 
-.emotion-56 .react-switch-handle:hover {
+.emotion-52 .react-switch-handle:hover {
   box-shadow: rgba(14,14,23,0.1) 0 0 0 5px;
   background: #dbe1eb!important;
 }
 
-.emotion-56 .react-switch-bg {
+.emotion-52 .react-switch-bg {
   cursor: unset!important;
   margin-right: 0!important;
   margin-left: 0!important;
 }
 
-.emotion-56 .react-switch-bg:hover~.react-switch-handle {
+.emotion-52 .react-switch-bg:hover~.react-switch-handle {
   box-shadow: rgba(14,14,23,0.1) 0 0 0 5px;
   background: #dbe1eb!important;
 }
 
-.emotion-66 {
+.emotion-62 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1378,19 +1392,19 @@ exports[`Storyshots Updated Components/List/ListItem ListItem compilations 1`] =
   letter-spacing: 0.00625rem;
 }
 
-.emotion-66 img {
+.emotion-62 img {
   border-radius: 6.25rem;
   width: 100%;
   height: 100%;
 }
 
-.emotion-68 {
+.emotion-64 {
   fill: #1249C4;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-68 path {
+.emotion-64 path {
   fill: #1249C4;
 }
 
@@ -1880,38 +1894,77 @@ exports[`Storyshots Updated Components/List/ListItem ListItem compilations 1`] =
                 <div
                   className="emotion-22"
                 >
-                  <span
+                  <div
                     className="emotion-34"
                   >
-                    <span
+                    <label
                       className="emotion-35"
+                      data-rac=""
+                      data-testid="undefined_7_checkbox"
                       onClick={[Function]}
+                      onDragStart={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
                     >
-                      <input
-                        checked={false}
+                      <span
+                        onBlur={null}
+                        onFocus={null}
+                        style={
+                          Object {
+                            "border": 0,
+                            "clip": "rect(0 0 0 0)",
+                            "clipPath": "inset(50%)",
+                            "height": "1px",
+                            "margin": "-1px",
+                            "overflow": "hidden",
+                            "padding": 0,
+                            "position": "absolute",
+                            "whiteSpace": "nowrap",
+                            "width": "1px",
+                          }
+                        }
+                      >
+                        <input
+                          checked={false}
+                          data-testid="undefined_7_checkbox"
+                          disabled={false}
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onClick={[Function]}
+                          onDragStart={[Function]}
+                          onFocus={[Function]}
+                          onKeyDown={[Function]}
+                          onKeyUp={[Function]}
+                          onMouseDown={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                          onMouseUp={[Function]}
+                          onTouchCancel={[Function]}
+                          onTouchEnd={[Function]}
+                          onTouchMove={[Function]}
+                          onTouchStart={[Function]}
+                          type="checkbox"
+                          value="7"
+                        />
+                      </span>
+                      <span
                         className="emotion-36"
-                        data-testid="checkbox"
-                        disabled={false}
-                        id="styled-checkbox-_00"
-                        onChange={[Function]}
                         onClick={[Function]}
-                        type="checkbox"
-                      />
-                      <label
-                        className="emotion-37"
-                        htmlFor="styled-checkbox-_00"
                       >
                         <span
-                          className="emotion-38"
-                          onClick={[Function]}
-                        >
-                          <span
-                            className="emotion-39"
-                          />
-                        </span>
-                      </label>
-                    </span>
-                  </span>
+                          className="emotion-37"
+                        />
+                      </span>
+                    </label>
+                  </div>
                 </div>
                 <div
                   className="emotion-6"
@@ -1948,38 +2001,77 @@ exports[`Storyshots Updated Components/List/ListItem ListItem compilations 1`] =
                 <div
                   className="emotion-22"
                 >
-                  <span
+                  <div
                     className="emotion-34"
                   >
-                    <span
+                    <label
                       className="emotion-35"
+                      data-rac=""
+                      data-testid="undefined_8_checkbox"
                       onClick={[Function]}
+                      onDragStart={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
                     >
-                      <input
-                        checked={false}
+                      <span
+                        onBlur={null}
+                        onFocus={null}
+                        style={
+                          Object {
+                            "border": 0,
+                            "clip": "rect(0 0 0 0)",
+                            "clipPath": "inset(50%)",
+                            "height": "1px",
+                            "margin": "-1px",
+                            "overflow": "hidden",
+                            "padding": 0,
+                            "position": "absolute",
+                            "whiteSpace": "nowrap",
+                            "width": "1px",
+                          }
+                        }
+                      >
+                        <input
+                          checked={false}
+                          data-testid="undefined_8_checkbox"
+                          disabled={false}
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onClick={[Function]}
+                          onDragStart={[Function]}
+                          onFocus={[Function]}
+                          onKeyDown={[Function]}
+                          onKeyUp={[Function]}
+                          onMouseDown={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                          onMouseUp={[Function]}
+                          onTouchCancel={[Function]}
+                          onTouchEnd={[Function]}
+                          onTouchMove={[Function]}
+                          onTouchStart={[Function]}
+                          type="checkbox"
+                          value="8"
+                        />
+                      </span>
+                      <span
                         className="emotion-36"
-                        data-testid="checkbox"
-                        disabled={false}
-                        id="styled-checkbox-_00"
-                        onChange={[Function]}
                         onClick={[Function]}
-                        type="checkbox"
-                      />
-                      <label
-                        className="emotion-37"
-                        htmlFor="styled-checkbox-_00"
                       >
                         <span
-                          className="emotion-38"
-                          onClick={[Function]}
-                        >
-                          <span
-                            className="emotion-39"
-                          />
-                        </span>
-                      </label>
-                    </span>
-                  </span>
+                          className="emotion-37"
+                        />
+                      </span>
+                    </label>
+                  </div>
                 </div>
                 <div
                   className="emotion-6"
@@ -2069,7 +2161,7 @@ exports[`Storyshots Updated Components/List/ListItem ListItem compilations 1`] =
                   className="emotion-22"
                 >
                   <div
-                    className="emotion-56"
+                    className="emotion-52"
                   >
                     <div
                       style={
@@ -2202,7 +2294,7 @@ exports[`Storyshots Updated Components/List/ListItem ListItem compilations 1`] =
                   className="emotion-22"
                 >
                   <div
-                    className="emotion-56"
+                    className="emotion-52"
                   >
                     <div
                       style={
@@ -2373,15 +2465,15 @@ exports[`Storyshots Updated Components/List/ListItem ListItem compilations 1`] =
                   className="emotion-22"
                 >
                   <div
-                    className="emotion-66"
+                    className="emotion-62"
                     data-testid="_avatar"
                   >
                     <span
-                      className="emotion-38"
+                      className="emotion-36"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-68"
+                        className="emotion-64"
                       />
                     </span>
                   </div>
@@ -2422,15 +2514,15 @@ exports[`Storyshots Updated Components/List/ListItem ListItem compilations 1`] =
                   className="emotion-22"
                 >
                   <div
-                    className="emotion-66"
+                    className="emotion-62"
                     data-testid="_avatar"
                   >
                     <span
-                      className="emotion-38"
+                      className="emotion-36"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-68"
+                        className="emotion-64"
                       />
                     </span>
                   </div>
