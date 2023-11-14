@@ -1,0 +1,149 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
+import Switch from './Switch';
+import Stack from '../../storyUtils/Stack';
+import { FIGMA_URL, Function } from '../../../utils/common';
+import { boolean, select, withKnobs, text } from '@storybook/addon-knobs';
+import { useState } from 'react';
+import Overview from '../../../storybook/Overview';
+
+<Meta title="Updated Components/Controls/Switch" component={Switch} />
+
+<SectionHeader title={'Switch'} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
+
+## Overview
+
+<Story
+  name="Overview"
+  parameters={{
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+>
+  <Overview>Enables the user to set the state of a single setting to 'on' or 'off'.</Overview>
+</Story>
+
+## Props
+
+<Props of={Switch} />
+
+## Usage
+
+<UsageGuidelines
+  guidelines={[
+    'Use switches for binary choices only (e.g. “enable/disable”)',
+    'When the item that is being toggled has a default state (e.g. deactivated by default)',
+  ]}
+  policies={[
+    'If you have more than two choices, use a checkbox or a radio button instead',
+    'If you can select 1+ items, use checkboxes',
+    'If you can select exactly 1 item, use radio buttons',
+  ]}
+/>
+
+<SubsectionHeader title="Variants" />
+
+### Simple Switch
+
+<Preview>
+  <Story name="Simple Switch">
+    <Stack>
+      <Function>
+        {() => {
+          const [selected, setSelected] = useState(false);
+          return (
+            <Switch isSelected={selected} onChange={setSelected}>
+              Option
+            </Switch>
+          );
+        }}
+      </Function>
+    </Stack>
+  </Story>
+</Preview>
+
+### Switch label placement
+
+Label can be placed either `left` or `right` of the switch.
+
+<Tip>
+  The labelConfig prop of each Switch includes an sx prop in order to add custom styles on the
+  container that wraps the switch input and the label
+</Tip>
+
+<Preview>
+  <Story name="Switch label placement">
+    <Stack height={50}>
+      <Switch>Option</Switch>
+    </Stack>
+    <Stack>
+      <Switch labelConfig={{ placement: 'left' }}>Option</Switch>
+    </Stack>
+  </Story>
+</Preview>
+
+### Switch label sizes
+
+Label can be either a string or a custom component. In the case of the string, there are 2 sizes (declared inside the labelConfig), `normal` and `large`
+
+<Preview>
+  <Story name="Switch label sizes">
+    <Stack height={50}>
+      <Switch>Normal Option</Switch>
+    </Stack>
+    <Stack>
+      <Switch labelConfig={{ size: 'large' }}>Large Option</Switch>
+    </Stack>
+  </Story>
+</Preview>
+
+### Switch with helptext
+
+Switch can include a helptext under the label.
+
+<Preview>
+  <Story name="Switch with helptext">
+    <Stack>
+      <Switch labelConfig={{ helpText: 'This is the helptext of the option' }}>Option</Switch>
+    </Stack>
+  </Story>
+</Preview>
+
+### Disabled Switch
+
+<Preview>
+  <Story name="Disabled Switch">
+    <Stack height={50}>
+      <Switch isDisabled>Option</Switch>
+    </Stack>
+    <Stack>
+      <Switch labelConfig={{ helpText: 'This option is disabled' }} isDisabled>
+        Option
+      </Switch>
+    </Stack>
+  </Story>
+</Preview>
+
+### Playground
+
+<Preview>
+  <Story name="Playground" parameters={{ decorators: [withKnobs] }}>
+    <Stack>
+      <Switch
+        labelConfig={{
+          placement: select('Label placement', ['left', 'right'], 'right'),
+          size: select('Label size', ['normal', 'large'], 'normal'),
+          helpText: text('Help text', ''),
+        }}
+        isDisabled={boolean('isDisabled', false)}
+      >
+        Option
+      </Switch>
+    </Stack>
+  </Story>
+</Preview>
