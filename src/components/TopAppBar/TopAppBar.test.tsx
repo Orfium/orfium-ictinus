@@ -5,6 +5,12 @@ import { createMockMediaMatcher } from '../../hooks/useBreakpoints.test';
 import { DEFAULT_USER_MENU } from '../storyUtils/TopAppBarShowcase';
 import TopAppBar from './TopAppBar';
 
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}));
+
 describe('TopAppBar', () => {
   let onMenuIconClickMock: jest.Mock;
   let onSearchHandler: jest.Mock;

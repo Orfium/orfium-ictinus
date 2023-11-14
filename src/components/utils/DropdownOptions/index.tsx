@@ -13,11 +13,11 @@ export const optionsStyle = ({ menuPosition }: MenuOptions) => (theme: Theme) =>
   max-height: ${rem(253)};
   overflow-y: auto;
   position: absolute;
-  top: ${rem(48)};
   left: ${menuPosition === 'left' ? 0 : 'initial'};
   right: 0;
   min-width: ${rem(150)};
-  width: 100%;
+  max-width: ${rem(620)};
+  width: fit-content;
   height: auto;
   background-color: ${theme.palette.white};
   box-shadow: ${theme.elevation['02']};
