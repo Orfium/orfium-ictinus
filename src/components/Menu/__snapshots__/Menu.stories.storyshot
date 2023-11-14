@@ -31,8 +31,15 @@ exports[`Storyshots Original Components/Menu Disabled Menu 1`] = `
 }
 
 .emotion-3 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
   position: relative;
-  display: inline-block;
+}
+
+.emotion-3 #unique-tooltip-id {
+  display: none!important;
 }
 
 .emotion-4 {
@@ -181,43 +188,45 @@ exports[`Storyshots Original Components/Menu Disabled Menu 1`] = `
         }
       >
         <div>
-          <div
-            className="emotion-3"
-          >
+          <div>
             <div
-              className="emotion-4"
+              className="emotion-3"
             >
-              <button
-                className="emotion-5"
-                data-testid="button"
-                disabled={true}
-                onClick={[Function]}
-                type="button"
+              <div
+                className="emotion-4"
               >
-                <span
-                  className="emotion-6"
+                <button
+                  className="emotion-5"
+                  data-testid="button"
+                  disabled={true}
+                  onClick={[Function]}
+                  type="button"
                 >
-                  <div
-                    className="emotion-7"
-                    data-testid="_avatar"
+                  <span
+                    className="emotion-6"
                   >
-                    TC
-                  </div>
-                  <span>
+                    <div
+                      className="emotion-7"
+                      data-testid="_avatar"
+                    >
+                      TC
+                    </div>
                     <span>
-                      Tom Cruise
+                      <span>
+                        Tom Cruise
+                      </span>
+                    </span>
+                    <span
+                      className="emotion-8"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-9"
+                      />
                     </span>
                   </span>
-                  <span
-                    className="emotion-8"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="emotion-9"
-                    />
-                  </span>
-                </span>
-              </button>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -258,8 +267,15 @@ exports[`Storyshots Original Components/Menu Menu with avatar and different butt
 }
 
 .emotion-3 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
   position: relative;
-  display: inline-block;
+}
+
+.emotion-3 #unique-tooltip-id {
+  display: none!important;
 }
 
 .emotion-4 {
@@ -418,150 +434,45 @@ exports[`Storyshots Original Components/Menu Menu with avatar and different butt
         }
       >
         <div>
-          <div
-            className="emotion-3"
-          >
+          <div>
             <div
-              className="emotion-4"
+              className="emotion-3"
             >
-              <button
-                className="emotion-5"
-                data-testid="button"
-                disabled={false}
-                onClick={[Function]}
-                type="button"
+              <div
+                className="emotion-4"
               >
-                <span
-                  className="emotion-6"
+                <button
+                  className="emotion-5"
+                  data-testid="button"
+                  disabled={false}
+                  onClick={[Function]}
+                  type="button"
                 >
-                  <div
-                    className="emotion-7"
-                    data-testid="_avatar"
-                  >
-                    TC
-                  </div>
-                  <span>
-                    <span>
-                      Tom Cruise
-                    </span>
-                  </span>
                   <span
-                    className="emotion-8"
-                    onClick={[Function]}
+                    className="emotion-6"
                   >
-                    <span
-                      className="emotion-9"
-                    />
-                  </span>
-                </span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div>
-          <div
-            className="emotion-3"
-          >
-            <div
-              className="emotion-4"
-            >
-              <button
-                className="emotion-5"
-                data-testid="button"
-                disabled={false}
-                onClick={[Function]}
-                type="button"
-              >
-                <span
-                  className="emotion-6"
-                >
-                  <div
-                    className="emotion-7"
-                    data-testid="_avatar"
-                  >
-                    <img
-                      src="https://mui.com/static/images/avatar/1.jpg"
-                    />
-                  </div>
-                  <span>
+                    <div
+                      className="emotion-7"
+                      data-testid="_avatar"
+                    >
+                      TC
+                    </div>
                     <span>
-                      Tom Cruise
+                      <span>
+                        Tom Cruise
+                      </span>
                     </span>
-                  </span>
-                  <span
-                    className="emotion-8"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="emotion-9"
-                    />
-                  </span>
-                </span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div>
-          <div
-            className="emotion-3"
-          >
-            <div
-              className="emotion-4"
-            >
-              <button
-                className="emotion-5"
-                data-testid="button"
-                disabled={false}
-                onClick={[Function]}
-                type="button"
-              >
-                <span
-                  className="emotion-6"
-                >
-                  <div
-                    className="emotion-7"
-                    data-testid="_avatar"
-                  >
                     <span
                       className="emotion-8"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-23"
+                        className="emotion-9"
                       />
                     </span>
-                  </div>
-                  <span>
-                    <span>
-                      Tom Cruise
-                    </span>
                   </span>
-                  <span
-                    className="emotion-8"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="emotion-9"
-                    />
-                  </span>
-                </span>
-              </button>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -574,50 +485,163 @@ exports[`Storyshots Original Components/Menu Menu with avatar and different butt
         }
       >
         <div>
-          <div
-            className="emotion-3"
-          >
+          <div>
             <div
-              className="emotion-4"
+              className="emotion-3"
             >
-              <button
-                className="emotion-5"
-                data-testid="button"
-                disabled={false}
-                onClick={[Function]}
-                type="button"
+              <div
+                className="emotion-4"
               >
-                <span
-                  className="emotion-6"
+                <button
+                  className="emotion-5"
+                  data-testid="button"
+                  disabled={false}
+                  onClick={[Function]}
+                  type="button"
                 >
-                  <div
-                    className="emotion-7"
-                    data-testid="_avatar"
+                  <span
+                    className="emotion-6"
                   >
+                    <div
+                      className="emotion-7"
+                      data-testid="_avatar"
+                    >
+                      <img
+                        src="https://mui.com/static/images/avatar/1.jpg"
+                      />
+                    </div>
+                    <span>
+                      <span>
+                        Tom Cruise
+                      </span>
+                    </span>
                     <span
                       className="emotion-8"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-23"
+                        className="emotion-9"
                       />
                     </span>
-                  </div>
-                  <span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div>
+          <div>
+            <div
+              className="emotion-3"
+            >
+              <div
+                className="emotion-4"
+              >
+                <button
+                  className="emotion-5"
+                  data-testid="button"
+                  disabled={false}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <span
+                    className="emotion-6"
+                  >
+                    <div
+                      className="emotion-7"
+                      data-testid="_avatar"
+                    >
+                      <span
+                        className="emotion-8"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="emotion-23"
+                        />
+                      </span>
+                    </div>
                     <span>
-                      Tom Cruise
+                      <span>
+                        Tom Cruise
+                      </span>
+                    </span>
+                    <span
+                      className="emotion-8"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-9"
+                      />
                     </span>
                   </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div>
+          <div>
+            <div
+              className="emotion-3"
+            >
+              <div
+                className="emotion-4"
+              >
+                <button
+                  className="emotion-5"
+                  data-testid="button"
+                  disabled={false}
+                  onClick={[Function]}
+                  type="button"
+                >
                   <span
-                    className="emotion-8"
-                    onClick={[Function]}
+                    className="emotion-6"
                   >
+                    <div
+                      className="emotion-7"
+                      data-testid="_avatar"
+                    >
+                      <span
+                        className="emotion-8"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="emotion-23"
+                        />
+                      </span>
+                    </div>
+                    <span>
+                      <span>
+                        Tom Cruise
+                      </span>
+                    </span>
                     <span
-                      className="emotion-9"
-                    />
+                      className="emotion-8"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-9"
+                      />
+                    </span>
                   </span>
-                </span>
-              </button>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -658,8 +682,15 @@ exports[`Storyshots Original Components/Menu Menu with option icon and different
 }
 
 .emotion-3 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
   position: relative;
-  display: inline-block;
+}
+
+.emotion-3 #unique-tooltip-id {
+  display: none!important;
 }
 
 .emotion-4 {
@@ -818,50 +849,52 @@ exports[`Storyshots Original Components/Menu Menu with option icon and different
         }
       >
         <div>
-          <div
-            className="emotion-3"
-          >
+          <div>
             <div
-              className="emotion-4"
+              className="emotion-3"
             >
-              <button
-                className="emotion-5"
-                data-testid="button"
-                disabled={false}
-                onClick={[Function]}
-                type="button"
+              <div
+                className="emotion-4"
               >
-                <span
-                  className="emotion-6"
+                <button
+                  className="emotion-5"
+                  data-testid="button"
+                  disabled={false}
+                  onClick={[Function]}
+                  type="button"
                 >
-                  <div
-                    className="emotion-7"
-                    data-testid="_avatar"
+                  <span
+                    className="emotion-6"
                   >
+                    <div
+                      className="emotion-7"
+                      data-testid="_avatar"
+                    >
+                      <span
+                        className="emotion-8"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="emotion-9"
+                        />
+                      </span>
+                    </div>
+                    <span>
+                      <span>
+                        More
+                      </span>
+                    </span>
                     <span
                       className="emotion-8"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-9"
+                        className="emotion-11"
                       />
                     </span>
-                  </div>
-                  <span>
-                    <span>
-                      More
-                    </span>
                   </span>
-                  <span
-                    className="emotion-8"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="emotion-11"
-                    />
-                  </span>
-                </span>
-              </button>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -874,50 +907,52 @@ exports[`Storyshots Original Components/Menu Menu with option icon and different
         }
       >
         <div>
-          <div
-            className="emotion-3"
-          >
+          <div>
             <div
-              className="emotion-4"
+              className="emotion-3"
             >
-              <button
-                className="emotion-5"
-                data-testid="button"
-                disabled={false}
-                onClick={[Function]}
-                type="button"
+              <div
+                className="emotion-4"
               >
-                <span
-                  className="emotion-6"
+                <button
+                  className="emotion-5"
+                  data-testid="button"
+                  disabled={false}
+                  onClick={[Function]}
+                  type="button"
                 >
-                  <div
-                    className="emotion-7"
-                    data-testid="_avatar"
+                  <span
+                    className="emotion-6"
                   >
+                    <div
+                      className="emotion-7"
+                      data-testid="_avatar"
+                    >
+                      <span
+                        className="emotion-8"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="emotion-9"
+                        />
+                      </span>
+                    </div>
+                    <span>
+                      <span>
+                        More
+                      </span>
+                    </span>
                     <span
                       className="emotion-8"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-9"
+                        className="emotion-11"
                       />
                     </span>
-                  </div>
-                  <span>
-                    <span>
-                      More
-                    </span>
                   </span>
-                  <span
-                    className="emotion-8"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="emotion-11"
-                    />
-                  </span>
-                </span>
-              </button>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -930,50 +965,52 @@ exports[`Storyshots Original Components/Menu Menu with option icon and different
         }
       >
         <div>
-          <div
-            className="emotion-3"
-          >
+          <div>
             <div
-              className="emotion-4"
+              className="emotion-3"
             >
-              <button
-                className="emotion-5"
-                data-testid="button"
-                disabled={false}
-                onClick={[Function]}
-                type="button"
+              <div
+                className="emotion-4"
               >
-                <span
-                  className="emotion-6"
+                <button
+                  className="emotion-5"
+                  data-testid="button"
+                  disabled={false}
+                  onClick={[Function]}
+                  type="button"
                 >
-                  <div
-                    className="emotion-7"
-                    data-testid="_avatar"
+                  <span
+                    className="emotion-6"
                   >
+                    <div
+                      className="emotion-7"
+                      data-testid="_avatar"
+                    >
+                      <span
+                        className="emotion-8"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="emotion-9"
+                        />
+                      </span>
+                    </div>
+                    <span>
+                      <span>
+                        More
+                      </span>
+                    </span>
                     <span
                       className="emotion-8"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-9"
+                        className="emotion-11"
                       />
                     </span>
-                  </div>
-                  <span>
-                    <span>
-                      More
-                    </span>
                   </span>
-                  <span
-                    className="emotion-8"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="emotion-11"
-                    />
-                  </span>
-                </span>
-              </button>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -1000,8 +1037,15 @@ exports[`Storyshots Original Components/Menu Menu with selection handler 1`] = `
 }
 
 .emotion-2 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
   position: relative;
-  display: inline-block;
+}
+
+.emotion-2 #unique-tooltip-id {
+  display: none!important;
 }
 
 .emotion-3 {
@@ -1075,29 +1119,31 @@ exports[`Storyshots Original Components/Menu Menu with selection handler 1`] = `
         </b>
       </div>
       <div>
-        <div
-          className="emotion-2"
-        >
+        <div>
           <div
-            className="emotion-3"
+            className="emotion-2"
           >
-            <button
-              className="emotion-4"
-              data-testid="button"
-              disabled={false}
-              onClick={[Function]}
-              type="button"
+            <div
+              className="emotion-3"
             >
-              <span
-                className="emotion-5"
+              <button
+                className="emotion-4"
+                data-testid="button"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
               >
-                <span>
+                <span
+                  className="emotion-5"
+                >
                   <span>
-                    More
+                    <span>
+                      More
+                    </span>
                   </span>
                 </span>
-              </span>
-            </button>
+              </button>
+            </div>
           </div>
         </div>
       </div>
