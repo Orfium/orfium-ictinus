@@ -1,6 +1,7 @@
 import useCombinedRefs from 'hooks/useCombinedRefs';
 import * as React from 'react';
 import { mergeProps, RadioAria, useFocusRing, useRadio, VisuallyHidden } from 'react-aria';
+import { RadioGroupState } from 'react-stately';
 import { TestProps } from 'utils/types';
 
 import { useRadioGroupContent } from './components/RadioGroup';
@@ -27,10 +28,9 @@ const Radio = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
 
   const state = useRadioGroupContent();
 
-  const { inputProps, isSelected, isDisabled } = state
-    ? // eslint-disable-next-line react-hooks/rules-of-hooks
-      useRadio(props, state, inputRef)
-    : props;
+  const radioProps = useRadio(props, state ?? ({} as RadioGroupState), inputRef);
+
+  const { inputProps, isSelected, isDisabled } = state ? radioProps : props;
 
   const { isFocusVisible, focusProps } = useFocusRing();
 
