@@ -1,0 +1,1739 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Updated Components/Controls/Switch Disabled Switch 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 3.125rem;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.emotion-3 .bar {
+  width: 2.25rem;
+  height: 0.5rem;
+  background: #D6D8FF;
+  position: absolute;
+  border-radius: 6.25rem;
+}
+
+.emotion-3 .indicator {
+  width: 2.25rem;
+  height: 1.25rem;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.emotion-3 .indicator:before {
+  content: '';
+  box-sizing: border-box;
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  background: #ffffff;
+  border: 0.125rem solid #b9cdfc;
+  border-radius: 100%;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.emotion-3[data-hovered] .indicator:before,
+.emotion-3[data-focus-visible='true'] .indicator:before {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
+  border-radius: 100%;
+}
+
+.emotion-3[data-selected] .indicator:before {
+  -webkit-transform: translateX(80%);
+  -moz-transform: translateX(80%);
+  -ms-transform: translateX(80%);
+  transform: translateX(80%);
+  background: #175bf5;
+  border-color: #175bf5;
+}
+
+.emotion-3[data-disabled] {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.emotion-5 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #1B214F;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-10 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  color: #686BB3;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <label
+          className="emotion-3"
+          data-disabled={true}
+          data-rac=""
+          data-testid="undefined_undefined_switch"
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+        >
+          <span
+            onBlur={null}
+            onFocus={null}
+            style={
+              Object {
+                "border": 0,
+                "clip": "rect(0 0 0 0)",
+                "clipPath": "inset(50%)",
+                "height": "1px",
+                "margin": "-1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "absolute",
+                "whiteSpace": "nowrap",
+                "width": "1px",
+              }
+            }
+          >
+            <input
+              checked={false}
+              disabled={true}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="switch"
+              type="checkbox"
+            />
+          </span>
+          <div
+            className="bar"
+          />
+          <div
+            className="indicator"
+          />
+          <div
+            className="emotion-4"
+          >
+            <div
+              className="emotion-5"
+              data-testid="undefined_radio_undefined_label"
+            >
+              Option
+            </div>
+          </div>
+        </label>
+      </div>
+    </div>
+    <div
+      className="emotion-6"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <label
+          className="emotion-3"
+          data-disabled={true}
+          data-rac=""
+          data-testid="undefined_undefined_switch"
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+        >
+          <span
+            onBlur={null}
+            onFocus={null}
+            style={
+              Object {
+                "border": 0,
+                "clip": "rect(0 0 0 0)",
+                "clipPath": "inset(50%)",
+                "height": "1px",
+                "margin": "-1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "absolute",
+                "whiteSpace": "nowrap",
+                "width": "1px",
+              }
+            }
+          >
+            <input
+              checked={false}
+              disabled={true}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="switch"
+              type="checkbox"
+            />
+          </span>
+          <div
+            className="bar"
+          />
+          <div
+            className="indicator"
+          />
+          <div
+            className="emotion-4"
+          >
+            <div
+              className="emotion-5"
+              data-testid="undefined_radio_undefined_label"
+            >
+              Option
+            </div>
+            <div
+              className="emotion-10"
+              data-testid="undefined_radio_undefined_helpText"
+            >
+              This option is disabled
+            </div>
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Updated Components/Controls/Switch Overview 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  margin: -16px;
+}
+
+.emotion-3 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.375rem;
+  font-size: 1rem;
+  letter-spacing: 0.015625rem;
+  color: #1B214F;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <p
+        className="emotion-3"
+        id="enables-the-user-to-set-the-state-of-a-single-setting-to-'on'-or-'off'."
+      >
+        Enables the user to set the state of a single setting to 'on' or 'off'.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Updated Components/Controls/Switch Playground 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.emotion-3 .bar {
+  width: 2.25rem;
+  height: 0.5rem;
+  background: #D6D8FF;
+  position: absolute;
+  border-radius: 6.25rem;
+}
+
+.emotion-3 .indicator {
+  width: 2.25rem;
+  height: 1.25rem;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.emotion-3 .indicator:before {
+  content: '';
+  box-sizing: border-box;
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  background: #ffffff;
+  border: 0.125rem solid #b9cdfc;
+  border-radius: 100%;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.emotion-3[data-hovered] .indicator:before,
+.emotion-3[data-focus-visible='true'] .indicator:before {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
+  border-radius: 100%;
+}
+
+.emotion-3[data-selected] .indicator:before {
+  -webkit-transform: translateX(80%);
+  -moz-transform: translateX(80%);
+  -ms-transform: translateX(80%);
+  transform: translateX(80%);
+  background: #175bf5;
+  border-color: #175bf5;
+}
+
+.emotion-3[data-disabled] {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.emotion-5 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #1B214F;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <label
+          className="emotion-3"
+          data-rac=""
+          data-testid="undefined_undefined_switch"
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+        >
+          <span
+            onBlur={null}
+            onFocus={null}
+            style={
+              Object {
+                "border": 0,
+                "clip": "rect(0 0 0 0)",
+                "clipPath": "inset(50%)",
+                "height": "1px",
+                "margin": "-1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "absolute",
+                "whiteSpace": "nowrap",
+                "width": "1px",
+              }
+            }
+          >
+            <input
+              checked={false}
+              disabled={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="switch"
+              type="checkbox"
+            />
+          </span>
+          <div
+            className="bar"
+          />
+          <div
+            className="indicator"
+          />
+          <div
+            className="emotion-4"
+          >
+            <div
+              className="emotion-5"
+              data-testid="undefined_radio_undefined_label"
+            >
+              Option
+            </div>
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Updated Components/Controls/Switch Simple Switch 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.emotion-3 .bar {
+  width: 2.25rem;
+  height: 0.5rem;
+  background: #D6D8FF;
+  position: absolute;
+  border-radius: 6.25rem;
+}
+
+.emotion-3 .indicator {
+  width: 2.25rem;
+  height: 1.25rem;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.emotion-3 .indicator:before {
+  content: '';
+  box-sizing: border-box;
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  background: #ffffff;
+  border: 0.125rem solid #b9cdfc;
+  border-radius: 100%;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.emotion-3[data-hovered] .indicator:before,
+.emotion-3[data-focus-visible='true'] .indicator:before {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
+  border-radius: 100%;
+}
+
+.emotion-3[data-selected] .indicator:before {
+  -webkit-transform: translateX(80%);
+  -moz-transform: translateX(80%);
+  -ms-transform: translateX(80%);
+  transform: translateX(80%);
+  background: #175bf5;
+  border-color: #175bf5;
+}
+
+.emotion-3[data-disabled] {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.emotion-5 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #1B214F;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <label
+          className="emotion-3"
+          data-rac=""
+          data-testid="undefined_undefined_switch"
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+        >
+          <span
+            onBlur={null}
+            onFocus={null}
+            style={
+              Object {
+                "border": 0,
+                "clip": "rect(0 0 0 0)",
+                "clipPath": "inset(50%)",
+                "height": "1px",
+                "margin": "-1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "absolute",
+                "whiteSpace": "nowrap",
+                "width": "1px",
+              }
+            }
+          >
+            <input
+              checked={false}
+              disabled={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="switch"
+              type="checkbox"
+            />
+          </span>
+          <div
+            className="bar"
+          />
+          <div
+            className="indicator"
+          />
+          <div
+            className="emotion-4"
+          >
+            <div
+              className="emotion-5"
+              data-testid="undefined_radio_undefined_label"
+            >
+              Option
+            </div>
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Updated Components/Controls/Switch Switch label placement 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 3.125rem;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.emotion-3 .bar {
+  width: 2.25rem;
+  height: 0.5rem;
+  background: #D6D8FF;
+  position: absolute;
+  border-radius: 6.25rem;
+}
+
+.emotion-3 .indicator {
+  width: 2.25rem;
+  height: 1.25rem;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.emotion-3 .indicator:before {
+  content: '';
+  box-sizing: border-box;
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  background: #ffffff;
+  border: 0.125rem solid #b9cdfc;
+  border-radius: 100%;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.emotion-3[data-hovered] .indicator:before,
+.emotion-3[data-focus-visible='true'] .indicator:before {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
+  border-radius: 100%;
+}
+
+.emotion-3[data-selected] .indicator:before {
+  -webkit-transform: translateX(80%);
+  -moz-transform: translateX(80%);
+  -ms-transform: translateX(80%);
+  transform: translateX(80%);
+  background: #175bf5;
+  border-color: #175bf5;
+}
+
+.emotion-3[data-disabled] {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.emotion-5 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #1B214F;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.emotion-7 .bar {
+  width: 2.25rem;
+  height: 0.5rem;
+  background: #D6D8FF;
+  position: absolute;
+  border-radius: 6.25rem;
+}
+
+.emotion-7 .indicator {
+  width: 2.25rem;
+  height: 1.25rem;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.emotion-7 .indicator:before {
+  content: '';
+  box-sizing: border-box;
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  background: #ffffff;
+  border: 0.125rem solid #b9cdfc;
+  border-radius: 100%;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.emotion-7[data-hovered] .indicator:before,
+.emotion-7[data-focus-visible='true'] .indicator:before {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
+  border-radius: 100%;
+}
+
+.emotion-7[data-selected] .indicator:before {
+  -webkit-transform: translateX(80%);
+  -moz-transform: translateX(80%);
+  -ms-transform: translateX(80%);
+  transform: translateX(80%);
+  background: #175bf5;
+  border-color: #175bf5;
+}
+
+.emotion-7[data-disabled] {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <label
+          className="emotion-3"
+          data-rac=""
+          data-testid="undefined_undefined_switch"
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+        >
+          <span
+            onBlur={null}
+            onFocus={null}
+            style={
+              Object {
+                "border": 0,
+                "clip": "rect(0 0 0 0)",
+                "clipPath": "inset(50%)",
+                "height": "1px",
+                "margin": "-1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "absolute",
+                "whiteSpace": "nowrap",
+                "width": "1px",
+              }
+            }
+          >
+            <input
+              checked={false}
+              disabled={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="switch"
+              type="checkbox"
+            />
+          </span>
+          <div
+            className="bar"
+          />
+          <div
+            className="indicator"
+          />
+          <div
+            className="emotion-4"
+          >
+            <div
+              className="emotion-5"
+              data-testid="undefined_radio_undefined_label"
+            >
+              Option
+            </div>
+          </div>
+        </label>
+      </div>
+    </div>
+    <div
+      className="emotion-6"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <label
+          className="emotion-7"
+          data-rac=""
+          data-testid="undefined_undefined_switch"
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+        >
+          <span
+            onBlur={null}
+            onFocus={null}
+            style={
+              Object {
+                "border": 0,
+                "clip": "rect(0 0 0 0)",
+                "clipPath": "inset(50%)",
+                "height": "1px",
+                "margin": "-1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "absolute",
+                "whiteSpace": "nowrap",
+                "width": "1px",
+              }
+            }
+          >
+            <input
+              checked={false}
+              disabled={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="switch"
+              type="checkbox"
+            />
+          </span>
+          <div
+            className="bar"
+          />
+          <div
+            className="indicator"
+          />
+          <div
+            className="emotion-4"
+          >
+            <div
+              className="emotion-5"
+              data-testid="undefined_radio_undefined_label"
+            >
+              Option
+            </div>
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Updated Components/Controls/Switch Switch label sizes 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 3.125rem;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.emotion-3 .bar {
+  width: 2.25rem;
+  height: 0.5rem;
+  background: #D6D8FF;
+  position: absolute;
+  border-radius: 6.25rem;
+}
+
+.emotion-3 .indicator {
+  width: 2.25rem;
+  height: 1.25rem;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.emotion-3 .indicator:before {
+  content: '';
+  box-sizing: border-box;
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  background: #ffffff;
+  border: 0.125rem solid #b9cdfc;
+  border-radius: 100%;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.emotion-3[data-hovered] .indicator:before,
+.emotion-3[data-focus-visible='true'] .indicator:before {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
+  border-radius: 100%;
+}
+
+.emotion-3[data-selected] .indicator:before {
+  -webkit-transform: translateX(80%);
+  -moz-transform: translateX(80%);
+  -ms-transform: translateX(80%);
+  transform: translateX(80%);
+  background: #175bf5;
+  border-color: #175bf5;
+}
+
+.emotion-3[data-disabled] {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.emotion-5 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #1B214F;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-9 {
+  font-family: Roboto;
+  font-weight: 700;
+  line-height: 1.75rem;
+  font-size: 1.25rem;
+  letter-spacing: 0rem;
+  color: #1B214F;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <label
+          className="emotion-3"
+          data-rac=""
+          data-testid="undefined_undefined_switch"
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+        >
+          <span
+            onBlur={null}
+            onFocus={null}
+            style={
+              Object {
+                "border": 0,
+                "clip": "rect(0 0 0 0)",
+                "clipPath": "inset(50%)",
+                "height": "1px",
+                "margin": "-1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "absolute",
+                "whiteSpace": "nowrap",
+                "width": "1px",
+              }
+            }
+          >
+            <input
+              checked={false}
+              disabled={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="switch"
+              type="checkbox"
+            />
+          </span>
+          <div
+            className="bar"
+          />
+          <div
+            className="indicator"
+          />
+          <div
+            className="emotion-4"
+          >
+            <div
+              className="emotion-5"
+              data-testid="undefined_radio_undefined_label"
+            >
+              Normal Option
+            </div>
+          </div>
+        </label>
+      </div>
+    </div>
+    <div
+      className="emotion-6"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <label
+          className="emotion-3"
+          data-rac=""
+          data-testid="undefined_undefined_switch"
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+        >
+          <span
+            onBlur={null}
+            onFocus={null}
+            style={
+              Object {
+                "border": 0,
+                "clip": "rect(0 0 0 0)",
+                "clipPath": "inset(50%)",
+                "height": "1px",
+                "margin": "-1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "absolute",
+                "whiteSpace": "nowrap",
+                "width": "1px",
+              }
+            }
+          >
+            <input
+              checked={false}
+              disabled={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="switch"
+              type="checkbox"
+            />
+          </span>
+          <div
+            className="bar"
+          />
+          <div
+            className="indicator"
+          />
+          <div
+            className="emotion-4"
+          >
+            <div
+              className="emotion-9"
+              data-testid="undefined_radio_undefined_label"
+            >
+              Large Option
+            </div>
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Updated Components/Controls/Switch Switch with helptext 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.emotion-3 .bar {
+  width: 2.25rem;
+  height: 0.5rem;
+  background: #D6D8FF;
+  position: absolute;
+  border-radius: 6.25rem;
+}
+
+.emotion-3 .indicator {
+  width: 2.25rem;
+  height: 1.25rem;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.emotion-3 .indicator:before {
+  content: '';
+  box-sizing: border-box;
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  background: #ffffff;
+  border: 0.125rem solid #b9cdfc;
+  border-radius: 100%;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.emotion-3[data-hovered] .indicator:before,
+.emotion-3[data-focus-visible='true'] .indicator:before {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
+  border-radius: 100%;
+}
+
+.emotion-3[data-selected] .indicator:before {
+  -webkit-transform: translateX(80%);
+  -moz-transform: translateX(80%);
+  -ms-transform: translateX(80%);
+  transform: translateX(80%);
+  background: #175bf5;
+  border-color: #175bf5;
+}
+
+.emotion-3[data-disabled] {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.emotion-5 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #1B214F;
+}
+
+.emotion-6 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  color: #686BB3;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <label
+          className="emotion-3"
+          data-rac=""
+          data-testid="undefined_undefined_switch"
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+        >
+          <span
+            onBlur={null}
+            onFocus={null}
+            style={
+              Object {
+                "border": 0,
+                "clip": "rect(0 0 0 0)",
+                "clipPath": "inset(50%)",
+                "height": "1px",
+                "margin": "-1px",
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "absolute",
+                "whiteSpace": "nowrap",
+                "width": "1px",
+              }
+            }
+          >
+            <input
+              checked={false}
+              disabled={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="switch"
+              type="checkbox"
+            />
+          </span>
+          <div
+            className="bar"
+          />
+          <div
+            className="indicator"
+          />
+          <div
+            className="emotion-4"
+          >
+            <div
+              className="emotion-5"
+              data-testid="undefined_radio_undefined_label"
+            >
+              Option
+            </div>
+            <div
+              className="emotion-6"
+              data-testid="undefined_radio_undefined_helpText"
+            >
+              This is the helptext of the option
+            </div>
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+`;
