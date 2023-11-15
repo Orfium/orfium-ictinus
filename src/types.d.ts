@@ -4,6 +4,8 @@ declare module 'react' {
   type FCC<T = Record<string, unknown>> = FC<PropsWithChildren<T>>;
 }
 
+declare module '*.json';
+
 // bypass jest warnings
 declare global {
   namespace jest {
