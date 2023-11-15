@@ -148,7 +148,7 @@
     "react-router-dom": "^5.2.0"
   },
   "scripts": {
-    "prepare": "yarn build && husky install",
+    "prepare": "yarn build:lib && husky install",
     "start": "start-storybook -p 6006",
     "prebuild": "rimraf dist",
     "build:lib": "rollup -c --bundleConfigAsCjs",
