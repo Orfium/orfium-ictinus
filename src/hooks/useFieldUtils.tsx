@@ -2,8 +2,7 @@ import React, { useCallback, useMemo } from 'react';
 
 import useCombinedRefs from './useCombinedRefs';
 import useTheme from './useTheme';
-import { AcceptedIconNames } from 'components/Icon';
-import Icon from 'components/Icon';
+import Icon, { AcceptedIconNames } from 'components/Icon';
 import { TextFieldProps } from 'components/TextField';
 import {
   TextInputBaseTokens,

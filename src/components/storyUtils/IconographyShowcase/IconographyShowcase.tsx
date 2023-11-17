@@ -1,7 +1,7 @@
-import React, { FCC, useMemo, useState } from 'react';
+import { uniqueId } from 'lodash';
+import React, { FCC, useState } from 'react';
 
-import { AcceptedIconNames } from 'components/Icon';
-import Icon from 'components/Icon';
+import Icon, { AcceptedIconNames } from 'components/Icon';
 import { iconsSet as icons } from 'components/Icon/constants';
 import SearchField from 'components/SearchField';
 import Typography from 'components/Typography';
@@ -10,7 +10,6 @@ const IconographyShowcase: FCC = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const [iconsSet, setIconSet] = useState(icons);
-  const [hasResults, setHasResults] = useState(true);
 
   React.useEffect(() => {
     const newIconSet = {};
@@ -56,17 +55,17 @@ const IconographyShowcase: FCC = () => {
 
       <div>
         {totalResults ? (
-          Object.keys(iconsSet).map((set, index) => {
+          Object.keys(iconsSet).map((set) => {
             return iconsSet[set].icons.length > 0 ? (
               <div
-                key={index}
+                key={`${uniqueId(iconsSet[set].title)}`}
                 css={{ display: 'flex', flexDirection: 'column', gap: '48px', padding: '32px 0' }}
               >
                 <Typography variant="headline03" type="secondary">
                   {iconsSet[set].title}
                 </Typography>
                 <div css={{ display: 'flex', flexWrap: 'wrap', rowGap: '48px' }}>
-                  {iconsSet[set].icons.map((icon: AcceptedIconNames, index: number) => {
+                  {iconsSet[set].icons.map((icon: AcceptedIconNames) => {
                     return (
                       <div
                         style={{
@@ -76,7 +75,7 @@ const IconographyShowcase: FCC = () => {
                           gap: '8px',
                           flexBasis: '16.6%',
                         }}
-                        key={index}
+                        key={`${uniqueId(iconsSet[set].title)}_${icon}`}
                       >
                         <div
                           style={{
