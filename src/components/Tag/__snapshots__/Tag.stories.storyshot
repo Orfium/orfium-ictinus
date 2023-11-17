@@ -92,29 +92,22 @@ exports[`Storyshots Updated Components/Tag Clearable Tag 1`] = `
 }
 
 .emotion-5 {
-  padding: 0.125rem;
+  width: 1rem;
+  height: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  cursor: pointer;
 }
 
 .emotion-6 {
-  fill: #1249C4;
-  width: 0.75rem;
-  height: 0.75rem;
+  width: 1rem;
+  height: 1rem;
 }
 
 .emotion-6 path {
-  fill: #1249C4;
+  fill: #1249C4!important;
 }
 
 <div
@@ -147,15 +140,16 @@ exports[`Storyshots Updated Components/Tag Clearable Tag 1`] = `
             className="emotion-4"
             tabIndex={-1}
           >
-            <span
+            <div
               className="emotion-5"
               data-testid="undefined_tag_suffix"
+              hasHover={false}
               onClick={[Function]}
             >
               <span
                 className="emotion-6"
               />
-            </span>
+            </div>
           </div>
         </div>
       </div>
@@ -673,29 +667,21 @@ exports[`Storyshots Updated Components/Tag Read-only Tag with icon 1`] = `
 }
 
 .emotion-4 {
-  padding: 0.125rem;
+  width: 0.75rem;
+  height: 0.75rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
 .emotion-5 {
-  fill: #1249C4;
   width: 0.75rem;
   height: 0.75rem;
 }
 
 .emotion-5 path {
-  fill: #1249C4;
+  fill: #1249C4!important;
 }
 
 .emotion-6 {
@@ -765,13 +751,12 @@ exports[`Storyshots Updated Components/Tag Read-only Tag with icon 1`] = `
 }
 
 .emotion-11 {
-  fill: #CB205D;
   width: 0.75rem;
   height: 0.75rem;
 }
 
 .emotion-11 path {
-  fill: #CB205D;
+  fill: #CB205D!important;
 }
 
 .emotion-12 {
@@ -808,13 +793,12 @@ exports[`Storyshots Updated Components/Tag Read-only Tag with icon 1`] = `
 }
 
 .emotion-14 {
-  fill: #6c28cc;
   width: 0.75rem;
   height: 0.75rem;
 }
 
 .emotion-14 path {
-  fill: #6c28cc;
+  fill: #6c28cc!important;
 }
 
 .emotion-15 {
@@ -851,13 +835,12 @@ exports[`Storyshots Updated Components/Tag Read-only Tag with icon 1`] = `
 }
 
 .emotion-17 {
-  fill: #0C7D61;
   width: 0.75rem;
   height: 0.75rem;
 }
 
 .emotion-17 path {
-  fill: #0C7D61;
+  fill: #0C7D61!important;
 }
 
 <div
@@ -884,14 +867,13 @@ exports[`Storyshots Updated Components/Tag Read-only Tag with icon 1`] = `
           onKeyDown={[Function]}
           tabIndex={-1}
         >
-          <span
+          <div
             className="emotion-4"
-            onClick={[Function]}
           >
             <span
               className="emotion-5"
             />
-          </span>
+          </div>
           Label
         </div>
       </div>
@@ -910,14 +892,13 @@ exports[`Storyshots Updated Components/Tag Read-only Tag with icon 1`] = `
           onKeyDown={[Function]}
           tabIndex={-1}
         >
-          <span
+          <div
             className="emotion-4"
-            onClick={[Function]}
           >
             <span
               className="emotion-5"
             />
-          </span>
+          </div>
           Label
         </div>
       </div>
@@ -936,14 +917,13 @@ exports[`Storyshots Updated Components/Tag Read-only Tag with icon 1`] = `
           onKeyDown={[Function]}
           tabIndex={-1}
         >
-          <span
+          <div
             className="emotion-4"
-            onClick={[Function]}
           >
             <span
               className="emotion-11"
             />
-          </span>
+          </div>
           Label
         </div>
       </div>
@@ -962,14 +942,13 @@ exports[`Storyshots Updated Components/Tag Read-only Tag with icon 1`] = `
           onKeyDown={[Function]}
           tabIndex={-1}
         >
-          <span
+          <div
             className="emotion-4"
-            onClick={[Function]}
           >
             <span
               className="emotion-14"
             />
-          </span>
+          </div>
           Label
         </div>
       </div>
@@ -988,14 +967,13 @@ exports[`Storyshots Updated Components/Tag Read-only Tag with icon 1`] = `
           onKeyDown={[Function]}
           tabIndex={-1}
         >
-          <span
+          <div
             className="emotion-4"
-            onClick={[Function]}
           >
             <span
               className="emotion-17"
             />
-          </span>
+          </div>
           Label
         </div>
       </div>
@@ -1119,29 +1097,21 @@ exports[`Storyshots Updated Components/Tag Selectable Tag 1`] = `
 }
 
 .emotion-5 {
-  padding: 0.125rem;
+  width: 1rem;
+  height: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
 .emotion-6 {
-  fill: #1249C4;
-  width: 0.75rem;
-  height: 0.75rem;
+  width: 1rem;
+  height: 1rem;
 }
 
 .emotion-6 path {
-  fill: #1249C4;
+  fill: #1249C4!important;
 }
 
 <div
@@ -1188,15 +1158,14 @@ exports[`Storyshots Updated Components/Tag Selectable Tag 1`] = `
           onKeyDown={[Function]}
           tabIndex={0}
         >
-          <span
+          <div
             className="emotion-5"
             data-testid="undefined_tag_prefix"
-            onClick={[Function]}
           >
             <span
               className="emotion-6"
             />
-          </span>
+          </div>
           Label
         </div>
       </div>
@@ -1659,29 +1628,21 @@ exports[`Storyshots Updated Components/Tag Tag sizes 1`] = `
 }
 
 .emotion-21 {
-  padding: 0.125rem;
+  width: 1rem;
+  height: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
 .emotion-22 {
-  fill: #1249C4;
-  width: 0.75rem;
-  height: 0.75rem;
+  width: 1rem;
+  height: 1rem;
 }
 
 .emotion-22 path {
-  fill: #1249C4;
+  fill: #1249C4!important;
 }
 
 .emotion-24 {
@@ -1827,6 +1788,16 @@ exports[`Storyshots Updated Components/Tag Tag sizes 1`] = `
 .emotion-32:hover {
   background: rgba(84,94,255,0.06);
   border-radius: 6.25rem;
+}
+
+.emotion-33 {
+  width: 1rem;
+  height: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
 }
 
 .emotion-36 {
@@ -2133,15 +2104,14 @@ exports[`Storyshots Updated Components/Tag Tag sizes 1`] = `
           onKeyDown={[Function]}
           tabIndex={0}
         >
-          <span
+          <div
             className="emotion-21"
             data-testid="undefined_tag_prefix"
-            onClick={[Function]}
           >
             <span
               className="emotion-22"
             />
-          </span>
+          </div>
           Normal
         </div>
       </div>
@@ -2184,15 +2154,14 @@ exports[`Storyshots Updated Components/Tag Tag sizes 1`] = `
           onKeyDown={[Function]}
           tabIndex={0}
         >
-          <span
+          <div
             className="emotion-21"
             data-testid="undefined_tag_prefix"
-            onClick={[Function]}
           >
             <span
               className="emotion-22"
             />
-          </span>
+          </div>
           Small
         </div>
       </div>
@@ -2238,15 +2207,16 @@ exports[`Storyshots Updated Components/Tag Tag sizes 1`] = `
             className="emotion-32"
             tabIndex={-1}
           >
-            <span
-              className="emotion-21"
+            <div
+              className="emotion-33"
               data-testid="undefined_tag_suffix"
+              hasHover={false}
               onClick={[Function]}
             >
               <span
                 className="emotion-22"
               />
-            </span>
+            </div>
           </div>
         </div>
       </div>
@@ -2275,15 +2245,16 @@ exports[`Storyshots Updated Components/Tag Tag sizes 1`] = `
             className="emotion-32"
             tabIndex={-1}
           >
-            <span
-              className="emotion-21"
+            <div
+              className="emotion-33"
               data-testid="undefined_tag_suffix"
+              hasHover={false}
               onClick={[Function]}
             >
               <span
                 className="emotion-22"
               />
-            </span>
+            </div>
           </div>
         </div>
       </div>

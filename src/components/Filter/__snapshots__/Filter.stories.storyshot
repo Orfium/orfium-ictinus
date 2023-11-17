@@ -175,29 +175,21 @@ exports[`Storyshots Original Components/Filter Added Filter 1`] = `
 }
 
 .emotion-12 {
-  padding: 0.125rem;
+  width: 0.875rem;
+  height: 0.875rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
 .emotion-13 {
-  fill: #0f0f17;
-  width: 0.4375rem;
-  height: 0.4375rem;
+  width: 0.875rem;
+  height: 0.875rem;
 }
 
 .emotion-13 path {
-  fill: #0f0f17;
+  fill: #0f0f17!important;
 }
 
 .emotion-14 {
@@ -246,14 +238,23 @@ exports[`Storyshots Original Components/Filter Added Filter 1`] = `
   border: solid 0.0625rem #cfd7e5;
 }
 
+.emotion-16 {
+  width: 1.1875rem;
+  height: 1.1875rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
 .emotion-17 {
-  fill: #5b5b71;
   width: 1.1875rem;
   height: 1.1875rem;
 }
 
 .emotion-17 path {
-  fill: #5b5b71;
+  fill: #5b5b71!important;
 }
 
 <div
@@ -324,14 +325,13 @@ exports[`Storyshots Original Components/Filter Added Filter 1`] = `
                           </span>
                         </span>
                       </div>
-                      <span
+                      <div
                         className="emotion-12"
-                        onClick={[Function]}
                       >
                         <span
                           className="emotion-13"
                         />
-                      </span>
+                      </div>
                     </div>
                   </div>
                   <span
@@ -340,14 +340,15 @@ exports[`Storyshots Original Components/Filter Added Filter 1`] = `
                   <div
                     className="emotion-15"
                   >
-                    <span
-                      className="emotion-12"
+                    <div
+                      className="emotion-16"
+                      hasHover={false}
                       onClick={[Function]}
                     >
                       <span
                         className="emotion-17"
                       />
-                    </span>
+                    </div>
                   </div>
                 </button>
               </div>
@@ -411,14 +412,13 @@ exports[`Storyshots Original Components/Filter Added Filter 1`] = `
                           </span>
                         </span>
                       </div>
-                      <span
+                      <div
                         className="emotion-12"
-                        onClick={[Function]}
                       >
                         <span
                           className="emotion-13"
                         />
-                      </span>
+                      </div>
                     </div>
                   </div>
                   <span
@@ -427,14 +427,15 @@ exports[`Storyshots Original Components/Filter Added Filter 1`] = `
                   <div
                     className="emotion-15"
                   >
-                    <span
-                      className="emotion-12"
+                    <div
+                      className="emotion-16"
+                      hasHover={false}
                       onClick={[Function]}
                     >
                       <span
                         className="emotion-17"
                       />
-                    </span>
+                    </div>
                   </div>
                 </button>
               </div>
@@ -597,29 +598,21 @@ exports[`Storyshots Original Components/Filter Async Filter 1`] = `
 }
 
 .emotion-10 {
-  padding: 0.125rem;
+  width: 0.875rem;
+  height: 0.875rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
 .emotion-11 {
-  fill: #0f0f17;
-  width: 0.4375rem;
-  height: 0.4375rem;
+  width: 0.875rem;
+  height: 0.875rem;
 }
 
 .emotion-11 path {
-  fill: #0f0f17;
+  fill: #0f0f17!important;
 }
 
 <div
@@ -668,14 +661,13 @@ exports[`Storyshots Original Components/Filter Async Filter 1`] = `
                     </span>
                   </span>
                 </div>
-                <span
+                <div
                   className="emotion-10"
-                  onClick={[Function]}
                 >
                   <span
                     className="emotion-11"
                   />
-                </span>
+                </div>
               </div>
             </div>
           </button>
@@ -830,29 +822,21 @@ exports[`Storyshots Original Components/Filter Async Filter with min characters 
 }
 
 .emotion-10 {
-  padding: 0.125rem;
+  width: 0.875rem;
+  height: 0.875rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
 .emotion-11 {
-  fill: #0f0f17;
-  width: 0.4375rem;
-  height: 0.4375rem;
+  width: 0.875rem;
+  height: 0.875rem;
 }
 
 .emotion-11 path {
-  fill: #0f0f17;
+  fill: #0f0f17!important;
 }
 
 <div
@@ -901,14 +885,13 @@ exports[`Storyshots Original Components/Filter Async Filter with min characters 
                     </span>
                   </span>
                 </div>
-                <span
+                <div
                   className="emotion-10"
-                  onClick={[Function]}
                 >
                   <span
                     className="emotion-11"
                   />
-                </span>
+                </div>
               </div>
             </div>
           </button>
@@ -1111,29 +1094,21 @@ exports[`Storyshots Original Components/Filter MultiFilter 1`] = `
 }
 
 .emotion-14 {
-  padding: 0.125rem;
+  width: 0.875rem;
+  height: 0.875rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
 .emotion-15 {
-  fill: #0f0f17;
-  width: 0.4375rem;
-  height: 0.4375rem;
+  width: 0.875rem;
+  height: 0.875rem;
 }
 
 .emotion-15 path {
-  fill: #0f0f17;
+  fill: #0f0f17!important;
 }
 
 .emotion-27 {
@@ -1209,14 +1184,13 @@ exports[`Storyshots Original Components/Filter MultiFilter 1`] = `
                               </span>
                             </span>
                           </div>
-                          <span
+                          <div
                             className="emotion-14"
-                            onClick={[Function]}
                           >
                             <span
                               className="emotion-15"
                             />
-                          </span>
+                          </div>
                         </div>
                       </div>
                     </button>
@@ -1270,14 +1244,13 @@ exports[`Storyshots Original Components/Filter MultiFilter 1`] = `
                               </span>
                             </span>
                           </div>
-                          <span
+                          <div
                             className="emotion-14"
-                            onClick={[Function]}
                           >
                             <span
                               className="emotion-15"
                             />
-                          </span>
+                          </div>
                         </div>
                       </div>
                     </button>
@@ -1331,14 +1304,13 @@ exports[`Storyshots Original Components/Filter MultiFilter 1`] = `
                               </span>
                             </span>
                           </div>
-                          <span
+                          <div
                             className="emotion-14"
-                            onClick={[Function]}
                           >
                             <span
                               className="emotion-15"
                             />
-                          </span>
+                          </div>
                         </div>
                       </div>
                     </button>
@@ -1512,29 +1484,21 @@ exports[`Storyshots Original Components/Filter Playground 1`] = `
 }
 
 .emotion-11 {
-  padding: 0.125rem;
+  width: 0.875rem;
+  height: 0.875rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
 .emotion-12 {
-  fill: #0f0f17;
-  width: 0.4375rem;
-  height: 0.4375rem;
+  width: 0.875rem;
+  height: 0.875rem;
 }
 
 .emotion-12 path {
-  fill: #0f0f17;
+  fill: #0f0f17!important;
 }
 
 <div
@@ -1592,14 +1556,13 @@ exports[`Storyshots Original Components/Filter Playground 1`] = `
                       </span>
                     </span>
                   </div>
-                  <span
+                  <div
                     className="emotion-11"
-                    onClick={[Function]}
                   >
                     <span
                       className="emotion-12"
                     />
-                  </span>
+                  </div>
                 </div>
               </div>
             </button>
@@ -1783,29 +1746,21 @@ exports[`Storyshots Original Components/Filter Preset Filter 1`] = `
 }
 
 .emotion-12 {
-  padding: 0.125rem;
+  width: 0.875rem;
+  height: 0.875rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
 .emotion-13 {
-  fill: #0f0f17;
-  width: 0.4375rem;
-  height: 0.4375rem;
+  width: 0.875rem;
+  height: 0.875rem;
 }
 
 .emotion-13 path {
-  fill: #0f0f17;
+  fill: #0f0f17!important;
 }
 
 .emotion-29 {
@@ -1936,14 +1891,13 @@ exports[`Storyshots Original Components/Filter Preset Filter 1`] = `
                           </span>
                         </span>
                       </div>
-                      <span
+                      <div
                         className="emotion-12"
-                        onClick={[Function]}
                       >
                         <span
                           className="emotion-13"
                         />
-                      </span>
+                      </div>
                     </div>
                   </div>
                 </button>
@@ -2008,14 +1962,13 @@ exports[`Storyshots Original Components/Filter Preset Filter 1`] = `
                           </span>
                         </span>
                       </div>
-                      <span
+                      <div
                         className="emotion-12"
-                        onClick={[Function]}
                       >
                         <span
                           className="emotion-13"
                         />
-                      </span>
+                      </div>
                     </div>
                   </div>
                 </button>
@@ -2087,14 +2040,13 @@ exports[`Storyshots Original Components/Filter Preset Filter 1`] = `
                           </span>
                         </span>
                       </div>
-                      <span
+                      <div
                         className="emotion-12"
-                        onClick={[Function]}
                       >
                         <span
                           className="emotion-13"
                         />
-                      </span>
+                      </div>
                     </div>
                   </div>
                 </button>
@@ -2159,14 +2111,13 @@ exports[`Storyshots Original Components/Filter Preset Filter 1`] = `
                           </span>
                         </span>
                       </div>
-                      <span
+                      <div
                         className="emotion-12"
-                        onClick={[Function]}
                       >
                         <span
                           className="emotion-13"
                         />
-                      </span>
+                      </div>
                     </div>
                   </div>
                 </button>
@@ -2352,29 +2303,21 @@ exports[`Storyshots Original Components/Filter Searchable Filter 1`] = `
 }
 
 .emotion-12 {
-  padding: 0.125rem;
+  width: 0.875rem;
+  height: 0.875rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
 .emotion-13 {
-  fill: #0f0f17;
-  width: 0.4375rem;
-  height: 0.4375rem;
+  width: 0.875rem;
+  height: 0.875rem;
 }
 
 .emotion-13 path {
-  fill: #0f0f17;
+  fill: #0f0f17!important;
 }
 
 <div
@@ -2442,14 +2385,13 @@ exports[`Storyshots Original Components/Filter Searchable Filter 1`] = `
                           </span>
                         </span>
                       </div>
-                      <span
+                      <div
                         className="emotion-12"
-                        onClick={[Function]}
                       >
                         <span
                           className="emotion-13"
                         />
-                      </span>
+                      </div>
                     </div>
                   </div>
                 </button>

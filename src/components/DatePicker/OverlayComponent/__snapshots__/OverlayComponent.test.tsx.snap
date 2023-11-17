@@ -99,6 +99,18 @@ exports[`OverlayComponent should render correctly 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #1552DD;
   width: 2.25rem;
   height: 2.25rem;
@@ -129,29 +141,21 @@ exports[`OverlayComponent should render correctly 1`] = `
 }
 
 .emotion-9 {
-  padding: 0.125rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
 .emotion-10 {
-  fill: #1552DD;
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .emotion-10 path {
-  fill: #1552DD;
+  fill: #1552DD!important;
 }
 
 .emotion-11 {
@@ -199,6 +203,18 @@ exports[`OverlayComponent should render correctly 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #1552DD;
   height: auto;
   background-color: rgba(84,94,255,0);
@@ -526,6 +542,18 @@ exports[`OverlayComponent should render correctly 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #ffffff;
   height: auto;
   background-color: #175bf5;
@@ -652,6 +680,18 @@ exports[`OverlayComponent should render correctly 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #1552DD;
   width: 2.25rem;
   height: 2.25rem;
@@ -682,29 +722,21 @@ exports[`OverlayComponent should render correctly 1`] = `
 }
 
 .emotion-9 {
-  padding: 0.125rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
 .emotion-10 {
-  fill: #1552DD;
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .emotion-10 path {
-  fill: #1552DD;
+  fill: #1552DD!important;
 }
 
 .emotion-11 {
@@ -752,6 +784,18 @@ exports[`OverlayComponent should render correctly 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #1552DD;
   height: auto;
   background-color: rgba(84,94,255,0);
@@ -1079,6 +1123,18 @@ exports[`OverlayComponent should render correctly 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #ffffff;
   height: auto;
   background-color: #175bf5;
@@ -1138,13 +1194,13 @@ exports[`OverlayComponent should render correctly 1`] = `
                     data-testid="icon-button-month_back"
                     type="button"
                   >
-                    <span
+                    <div
                       class="emotion-9"
                     >
                       <span
                         class="emotion-10"
                       />
-                    </span>
+                    </div>
                   </button>
                 </div>
               </div>
@@ -1188,13 +1244,13 @@ exports[`OverlayComponent should render correctly 1`] = `
                       data-testid="icon-button-month_forward"
                       type="button"
                     >
-                      <span
+                      <div
                         class="emotion-9"
                       >
                         <span
                           class="emotion-10"
                         />
-                      </span>
+                      </div>
                     </button>
                   </div>
                 </div>
@@ -1912,6 +1968,18 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #1552DD;
   width: 2.25rem;
   height: 2.25rem;
@@ -1942,29 +2010,21 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
 }
 
 .emotion-13 {
-  padding: 0.125rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
 .emotion-14 {
-  fill: #1552DD;
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .emotion-14 path {
-  fill: #1552DD;
+  fill: #1552DD!important;
 }
 
 .emotion-15 {
@@ -2011,6 +2071,18 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #1552DD;
   height: auto;
   background-color: rgba(84,94,255,0);
@@ -2371,6 +2443,18 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #ffffff;
   height: auto;
   background-color: #175bf5;
@@ -2519,6 +2603,18 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #1552DD;
   width: 2.25rem;
   height: 2.25rem;
@@ -2549,29 +2645,21 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
 }
 
 .emotion-13 {
-  padding: 0.125rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
 .emotion-14 {
-  fill: #1552DD;
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .emotion-14 path {
-  fill: #1552DD;
+  fill: #1552DD!important;
 }
 
 .emotion-15 {
@@ -2618,6 +2706,18 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #1552DD;
   height: auto;
   background-color: rgba(84,94,255,0);
@@ -2978,6 +3078,18 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #ffffff;
   height: auto;
   background-color: #175bf5;
@@ -3057,13 +3169,13 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                     data-testid="icon-button-month_back"
                     type="button"
                   >
-                    <span
+                    <div
                       class="emotion-13"
                     >
                       <span
                         class="emotion-14"
                       />
-                    </span>
+                    </div>
                   </button>
                 </div>
               </div>
@@ -3690,13 +3802,13 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
                       data-testid="icon-button-month_forward"
                       type="button"
                     >
-                      <span
+                      <div
                         class="emotion-13"
                       >
                         <span
                           class="emotion-14"
                         />
-                      </span>
+                      </div>
                     </button>
                   </div>
                 </div>

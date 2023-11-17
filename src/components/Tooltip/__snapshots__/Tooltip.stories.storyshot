@@ -59,6 +59,18 @@ exports[`Storyshots Updated Components/Tooltip Interactive Tooltip 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #ffffff;
   height: auto;
   background-color: #175bf5;
@@ -179,7 +191,7 @@ exports[`Storyshots Updated Components/Tooltip Interactive Tooltip 1`] = `
 }
 
 .emotion-10:hover path {
-  fill: #ffffff;
+  fill: #ffffff!important;
 }
 
 .emotion-10:visited {
@@ -187,7 +199,7 @@ exports[`Storyshots Updated Components/Tooltip Interactive Tooltip 1`] = `
 }
 
 .emotion-10:visited path {
-  fill: #dbc1ff;
+  fill: #dbc1ff!important;
 }
 
 .emotion-10:focus-visible {
@@ -195,29 +207,21 @@ exports[`Storyshots Updated Components/Tooltip Interactive Tooltip 1`] = `
 }
 
 .emotion-11 {
-  padding: 0.125rem;
+  width: 0.75rem;
+  height: 0.75rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
 .emotion-12 {
-  fill: #1de9b6;
   width: 0.75rem;
   height: 0.75rem;
 }
 
 .emotion-12 path {
-  fill: #1de9b6;
+  fill: #1de9b6!important;
 }
 
 .emotion-13 {
@@ -257,6 +261,18 @@ exports[`Storyshots Updated Components/Tooltip Interactive Tooltip 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #1B214F;
   height: auto;
   background-color: #1de9b6;
@@ -357,7 +373,7 @@ exports[`Storyshots Updated Components/Tooltip Interactive Tooltip 1`] = `
 }
 
 .emotion-21:hover path {
-  fill: #1B214F;
+  fill: #1B214F!important;
 }
 
 .emotion-21:visited {
@@ -365,7 +381,7 @@ exports[`Storyshots Updated Components/Tooltip Interactive Tooltip 1`] = `
 }
 
 .emotion-21:visited path {
-  fill: #6c28cc;
+  fill: #6c28cc!important;
 }
 
 .emotion-21:focus-visible {
@@ -373,13 +389,12 @@ exports[`Storyshots Updated Components/Tooltip Interactive Tooltip 1`] = `
 }
 
 .emotion-23 {
-  fill: #1552DD;
   width: 0.75rem;
   height: 0.75rem;
 }
 
 .emotion-23 path {
-  fill: #1552DD;
+  fill: #1552DD!important;
 }
 
 <div
@@ -459,15 +474,14 @@ exports[`Storyshots Updated Components/Tooltip Interactive Tooltip 1`] = `
                 <span>
                   Learn more
                 </span>
-                <span
+                <div
                   className="emotion-11"
                   data-testid="_link_icon"
-                  onClick={[Function]}
                 >
                   <span
                     className="emotion-12"
                   />
-                </span>
+                </div>
               </a>
             </div>
           </div>
@@ -545,15 +559,14 @@ exports[`Storyshots Updated Components/Tooltip Interactive Tooltip 1`] = `
                 <span>
                   Learn more
                 </span>
-                <span
+                <div
                   className="emotion-11"
                   data-testid="_link_icon"
-                  onClick={[Function]}
                 >
                   <span
                     className="emotion-23"
                   />
-                </span>
+                </div>
               </a>
             </div>
           </div>
@@ -682,6 +695,18 @@ exports[`Storyshots Updated Components/Tooltip Playground 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #ffffff;
   height: auto;
   background-color: #175bf5;
@@ -818,7 +843,7 @@ exports[`Storyshots Updated Components/Tooltip Playground 1`] = `
 }
 
 .emotion-14:hover path {
-  fill: #ffffff;
+  fill: #ffffff!important;
 }
 
 .emotion-14:visited {
@@ -826,7 +851,7 @@ exports[`Storyshots Updated Components/Tooltip Playground 1`] = `
 }
 
 .emotion-14:visited path {
-  fill: #dbc1ff;
+  fill: #dbc1ff!important;
 }
 
 .emotion-14:focus-visible {
@@ -834,29 +859,21 @@ exports[`Storyshots Updated Components/Tooltip Playground 1`] = `
 }
 
 .emotion-15 {
-  padding: 0.125rem;
+  width: 0.75rem;
+  height: 0.75rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
 .emotion-16 {
-  fill: #1de9b6;
   width: 0.75rem;
   height: 0.75rem;
 }
 
 .emotion-16 path {
-  fill: #1de9b6;
+  fill: #1de9b6!important;
 }
 
 <div
@@ -984,15 +1001,14 @@ exports[`Storyshots Updated Components/Tooltip Playground 1`] = `
                   <span>
                     Learn more
                   </span>
-                  <span
+                  <div
                     className="emotion-15"
                     data-testid="_link_icon"
-                    onClick={[Function]}
                   >
                     <span
                       className="emotion-16"
                     />
-                  </span>
+                  </div>
                 </a>
               </div>
             </div>
@@ -1073,6 +1089,18 @@ exports[`Storyshots Updated Components/Tooltip Text Tooltip 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #ffffff;
   height: auto;
   background-color: #175bf5;
@@ -1164,6 +1192,18 @@ exports[`Storyshots Updated Components/Tooltip Text Tooltip 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #1B214F;
   height: auto;
   background-color: #1de9b6;
@@ -1381,6 +1421,18 @@ exports[`Storyshots Updated Components/Tooltip Tooltip placement 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #ffffff;
   height: auto;
   background-color: #175bf5;

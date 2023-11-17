@@ -225,7 +225,7 @@ exports[`Storyshots Updated Components/Fields/DatePicker DatePicker 1`] = `
 
 .emotion-9 {
   min-width: 2.75rem;
-  overflow: hidden;
+  overflow: visible;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -242,53 +242,31 @@ exports[`Storyshots Updated Components/Fields/DatePicker DatePicker 1`] = `
 }
 
 .emotion-10 {
-  cursor: pointer;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  cursor: pointer;
 }
 
-.emotion-10:focus-visible,
-.emotion-10:hover {
+.emotion-10:hover,
+.emotion-10:focus-visible {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border-radius: 100%;
   background: rgba(84,94,255,0.06);
-  border-radius: 6.25rem;
+  box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
 }
 
 .emotion-11 {
-  padding: 0.125rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-12 {
-  fill: #686BB3;
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-12 path {
-  fill: #686BB3;
+.emotion-11 path {
+  fill: #686BB3!important;
 }
 
 <div
@@ -360,12 +338,7 @@ exports[`Storyshots Updated Components/Fields/DatePicker DatePicker 1`] = `
                         >
                           <span
                             className="emotion-11"
-                            onClick={[Function]}
-                          >
-                            <span
-                              className="emotion-12"
-                            />
-                          </span>
+                          />
                         </div>
                       </div>
                     </div>
@@ -606,7 +579,7 @@ exports[`Storyshots Updated Components/Fields/DatePicker DatePicker and DateRang
 
 .emotion-9 {
   min-width: 2.75rem;
-  overflow: hidden;
+  overflow: visible;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -623,56 +596,34 @@ exports[`Storyshots Updated Components/Fields/DatePicker DatePicker and DateRang
 }
 
 .emotion-10 {
-  cursor: pointer;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  cursor: pointer;
 }
 
-.emotion-10:focus-visible,
-.emotion-10:hover {
+.emotion-10:hover,
+.emotion-10:focus-visible {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border-radius: 100%;
   background: rgba(84,94,255,0.06);
-  border-radius: 6.25rem;
+  box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
 }
 
 .emotion-11 {
-  padding: 0.125rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-12 {
-  fill: #686BB3;
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-12 path {
-  fill: #686BB3;
+.emotion-11 path {
+  fill: #686BB3!important;
 }
 
-.emotion-13 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -692,7 +643,7 @@ exports[`Storyshots Updated Components/Fields/DatePicker DatePicker and DateRang
   letter-spacing: 0.015625rem;
 }
 
-.emotion-13 span {
+.emotion-12 span {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -700,7 +651,7 @@ exports[`Storyshots Updated Components/Fields/DatePicker DatePicker and DateRang
   padding: 0;
 }
 
-.emotion-15 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -725,16 +676,16 @@ exports[`Storyshots Updated Components/Fields/DatePicker DatePicker and DateRang
   background-color: #FFE7F0;
 }
 
-.emotion-15:hover {
+.emotion-14:hover {
   background-color: #FFB8D1;
 }
 
-.emotion-15:focus-within {
+.emotion-14:focus-within {
   box-shadow: 0 0 0 0.125rem #175bf5;
   background-color: #F5F5FF;
 }
 
-.emotion-19 {
+.emotion-18 {
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
@@ -769,7 +720,7 @@ exports[`Storyshots Updated Components/Fields/DatePicker DatePicker and DateRang
   letter-spacing: 0.015625rem;
 }
 
-.emotion-24 {
+.emotion-22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -789,7 +740,7 @@ exports[`Storyshots Updated Components/Fields/DatePicker DatePicker and DateRang
   letter-spacing: 0.015625rem;
 }
 
-.emotion-24 span {
+.emotion-22 span {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -797,17 +748,25 @@ exports[`Storyshots Updated Components/Fields/DatePicker DatePicker and DateRang
   padding: 0;
 }
 
+.emotion-23 {
+  width: 1rem;
+  height: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-24 {
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-24 path {
+  fill: #CB205D!important;
+}
+
 .emotion-26 {
-  fill: #CB205D;
-  width: 0.75rem;
-  height: 0.75rem;
-}
-
-.emotion-26 path {
-  fill: #CB205D;
-}
-
-.emotion-28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -832,16 +791,16 @@ exports[`Storyshots Updated Components/Fields/DatePicker DatePicker and DateRang
   background-color: #F5F5FF;
 }
 
-.emotion-28:hover {
+.emotion-26:hover {
   background-color: #F5F5FF;
 }
 
-.emotion-28:focus-within {
+.emotion-26:focus-within {
   box-shadow: 0 0 0 0.125rem #b9cdfc;
   background-color: #F5F5FF;
 }
 
-.emotion-31 {
+.emotion-29 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -860,48 +819,48 @@ exports[`Storyshots Updated Components/Fields/DatePicker DatePicker and DateRang
   min-width: 100%;
 }
 
-.emotion-31::-webkit-input-placeholder {
+.emotion-29::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-31::-moz-placeholder {
+.emotion-29::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-31:-ms-input-placeholder {
+.emotion-29:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-31::placeholder {
+.emotion-29::placeholder {
   color: transparent;
 }
 
-.emotion-31:focus {
+.emotion-29:focus {
   outline: none;
 }
 
-.emotion-31:focus::-webkit-input-placeholder {
+.emotion-29:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-31:focus::-moz-placeholder {
+.emotion-29:focus::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-31:focus:-ms-input-placeholder {
+.emotion-29:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-31:focus::placeholder {
+.emotion-29:focus::placeholder {
   color: transparent;
 }
 
-.emotion-31:not(:focus):placeholder-shown+label {
+.emotion-29:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-31:focus-within+label,
-.emotion-31:not(:placeholder-shown)+label {
+.emotion-29:focus-within+label,
+.emotion-29:not(:placeholder-shown)+label {
   font-weight: 700!important;
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -909,23 +868,22 @@ exports[`Storyshots Updated Components/Fields/DatePicker DatePicker and DateRang
   transform: translate(0.1875rem, -35%) scale(0.8);
 }
 
-.emotion-31:focus-within+label {
+.emotion-29:focus-within+label {
   font-weight: 700!important;
   color: #1552DD;
 }
 
-.emotion-31:disabled {
+.emotion-29:disabled {
   cursor: text;
 }
 
-.emotion-35 {
-  fill: #5f6c85;
-  width: 1rem;
-  height: 1rem;
-}
-
-.emotion-35 path {
-  fill: #5f6c85;
+.emotion-32 {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 <div
@@ -998,18 +956,13 @@ exports[`Storyshots Updated Components/Fields/DatePicker DatePicker and DateRang
                         >
                           <span
                             className="emotion-11"
-                            onClick={[Function]}
-                          >
-                            <span
-                              className="emotion-12"
-                            />
-                          </span>
+                          />
                         </div>
                       </div>
                     </div>
                   </div>
                   <div
-                    className="emotion-13"
+                    className="emotion-12"
                     data-testid="error"
                   >
                     <span
@@ -1043,7 +996,7 @@ exports[`Storyshots Updated Components/Fields/DatePicker DatePicker and DateRang
                   onClick={[Function]}
                 >
                   <div
-                    className="emotion-15"
+                    className="emotion-14"
                   >
                     <div
                       className="emotion-5"
@@ -1065,7 +1018,7 @@ exports[`Storyshots Updated Components/Fields/DatePicker DatePicker and DateRang
                           value="11/03/2020"
                         />
                         <label
-                          className="emotion-19"
+                          className="emotion-18"
                           htmlFor="textfield__00"
                         >
                           Error
@@ -1085,28 +1038,22 @@ exports[`Storyshots Updated Components/Fields/DatePicker DatePicker and DateRang
                         >
                           <span
                             className="emotion-11"
-                            onClick={[Function]}
-                          >
-                            <span
-                              className="emotion-12"
-                            />
-                          </span>
+                          />
                         </div>
                       </div>
                     </div>
                   </div>
                   <div
-                    className="emotion-24"
+                    className="emotion-22"
                     data-testid="error"
                   >
-                    <span
-                      className="emotion-11"
-                      onClick={[Function]}
+                    <div
+                      className="emotion-23"
                     >
                       <span
-                        className="emotion-26"
+                        className="emotion-24"
                       />
-                    </span>
+                    </div>
                     <span
                       id="textfield__00_hintMessage"
                     >
@@ -1138,7 +1085,7 @@ exports[`Storyshots Updated Components/Fields/DatePicker DatePicker and DateRang
                   onClick={[Function]}
                 >
                   <div
-                    className="emotion-28"
+                    className="emotion-26"
                   >
                     <div
                       className="emotion-5"
@@ -1149,7 +1096,7 @@ exports[`Storyshots Updated Components/Fields/DatePicker DatePicker and DateRang
                         <input
                           aria-describedby="textfield__00_hintMessage"
                           aria-invalid={false}
-                          className="emotion-31"
+                          className="emotion-29"
                           data-testid="input"
                           disabled={true}
                           id="textfield__00"
@@ -1172,19 +1119,18 @@ exports[`Storyshots Updated Components/Fields/DatePicker DatePicker and DateRang
                         aria-hidden={false}
                         className="emotion-9"
                       >
-                        <span
-                          className="emotion-11"
-                          onClick={[Function]}
+                        <div
+                          className="emotion-32"
                         >
                           <span
-                            className="emotion-35"
+                            className="emotion-11"
                           />
-                        </span>
+                        </div>
                       </div>
                     </div>
                   </div>
                   <div
-                    className="emotion-13"
+                    className="emotion-12"
                     data-testid="error"
                   >
                     <span
@@ -1354,29 +1300,21 @@ exports[`Storyshots Updated Components/Fields/DatePicker DatePicker with Filter 
 }
 
 .emotion-10 {
-  padding: 0.125rem;
+  width: 0.875rem;
+  height: 0.875rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
 .emotion-11 {
-  fill: #0f0f17;
   width: 0.875rem;
   height: 0.875rem;
 }
 
 .emotion-11 path {
-  fill: #0f0f17;
+  fill: #0f0f17!important;
 }
 
 .emotion-14 {
@@ -1522,14 +1460,13 @@ exports[`Storyshots Updated Components/Fields/DatePicker DatePicker with Filter 
                             </div>
                           </span>
                         </div>
-                        <span
+                        <div
                           className="emotion-10"
-                          onClick={[Function]}
                         >
                           <span
                             className="emotion-11"
                           />
-                        </span>
+                        </div>
                       </div>
                     </div>
                   </button>
@@ -1584,14 +1521,13 @@ exports[`Storyshots Updated Components/Fields/DatePicker DatePicker with Filter 
                             </span>
                           </span>
                         </div>
-                        <span
+                        <div
                           className="emotion-10"
-                          onClick={[Function]}
                         >
                           <span
                             className="emotion-11"
                           />
-                        </span>
+                        </div>
                       </div>
                     </div>
                   </button>
@@ -1831,7 +1767,7 @@ exports[`Storyshots Updated Components/Fields/DatePicker DatePicker with disable
 
 .emotion-9 {
   min-width: 2.75rem;
-  overflow: hidden;
+  overflow: visible;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1848,53 +1784,31 @@ exports[`Storyshots Updated Components/Fields/DatePicker DatePicker with disable
 }
 
 .emotion-10 {
-  cursor: pointer;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  cursor: pointer;
 }
 
-.emotion-10:focus-visible,
-.emotion-10:hover {
+.emotion-10:hover,
+.emotion-10:focus-visible {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border-radius: 100%;
   background: rgba(84,94,255,0.06);
-  border-radius: 6.25rem;
+  box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
 }
 
 .emotion-11 {
-  padding: 0.125rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-12 {
-  fill: #686BB3;
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-12 path {
-  fill: #686BB3;
+.emotion-11 path {
+  fill: #686BB3!important;
 }
 
 <div
@@ -1966,12 +1880,7 @@ exports[`Storyshots Updated Components/Fields/DatePicker DatePicker with disable
                         >
                           <span
                             className="emotion-11"
-                            onClick={[Function]}
-                          >
-                            <span
-                              className="emotion-12"
-                            />
-                          </span>
+                          />
                         </div>
                       </div>
                     </div>
@@ -2212,7 +2121,7 @@ exports[`Storyshots Updated Components/Fields/DatePicker DateRangePicker 1`] = `
 
 .emotion-9 {
   min-width: 2.75rem;
-  overflow: hidden;
+  overflow: visible;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2229,53 +2138,31 @@ exports[`Storyshots Updated Components/Fields/DatePicker DateRangePicker 1`] = `
 }
 
 .emotion-10 {
-  cursor: pointer;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  cursor: pointer;
 }
 
-.emotion-10:focus-visible,
-.emotion-10:hover {
+.emotion-10:hover,
+.emotion-10:focus-visible {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border-radius: 100%;
   background: rgba(84,94,255,0.06);
-  border-radius: 6.25rem;
+  box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
 }
 
 .emotion-11 {
-  padding: 0.125rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-12 {
-  fill: #686BB3;
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-12 path {
-  fill: #686BB3;
+.emotion-11 path {
+  fill: #686BB3!important;
 }
 
 <div
@@ -2347,12 +2234,7 @@ exports[`Storyshots Updated Components/Fields/DatePicker DateRangePicker 1`] = `
                         >
                           <span
                             className="emotion-11"
-                            onClick={[Function]}
-                          >
-                            <span
-                              className="emotion-12"
-                            />
-                          </span>
+                          />
                         </div>
                       </div>
                     </div>
@@ -2593,7 +2475,7 @@ exports[`Storyshots Updated Components/Fields/DatePicker DateRangePicker with pr
 
 .emotion-9 {
   min-width: 2.75rem;
-  overflow: hidden;
+  overflow: visible;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2610,53 +2492,31 @@ exports[`Storyshots Updated Components/Fields/DatePicker DateRangePicker with pr
 }
 
 .emotion-10 {
-  cursor: pointer;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  cursor: pointer;
 }
 
-.emotion-10:focus-visible,
-.emotion-10:hover {
+.emotion-10:hover,
+.emotion-10:focus-visible {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border-radius: 100%;
   background: rgba(84,94,255,0.06);
-  border-radius: 6.25rem;
+  box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
 }
 
 .emotion-11 {
-  padding: 0.125rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-12 {
-  fill: #686BB3;
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-12 path {
-  fill: #686BB3;
+.emotion-11 path {
+  fill: #686BB3!important;
 }
 
 <div
@@ -2728,12 +2588,7 @@ exports[`Storyshots Updated Components/Fields/DatePicker DateRangePicker with pr
                         >
                           <span
                             className="emotion-11"
-                            onClick={[Function]}
-                          >
-                            <span
-                              className="emotion-12"
-                            />
-                          </span>
+                          />
                         </div>
                       </div>
                     </div>
@@ -2968,7 +2823,7 @@ exports[`Storyshots Updated Components/Fields/DatePicker Disabled DatePicker & D
 
 .emotion-9 {
   min-width: 2.75rem;
-  overflow: hidden;
+  overflow: visible;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2985,56 +2840,34 @@ exports[`Storyshots Updated Components/Fields/DatePicker Disabled DatePicker & D
 }
 
 .emotion-10 {
-  cursor: pointer;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  cursor: pointer;
 }
 
-.emotion-10:focus-visible,
-.emotion-10:hover {
+.emotion-10:hover,
+.emotion-10:focus-visible {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border-radius: 100%;
   background: rgba(84,94,255,0.06);
-  border-radius: 6.25rem;
+  box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
 }
 
 .emotion-11 {
-  padding: 0.125rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-12 {
-  fill: #686BB3;
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-12 path {
-  fill: #686BB3;
+.emotion-11 path {
+  fill: #686BB3!important;
 }
 
-.emotion-13 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3054,7 +2887,7 @@ exports[`Storyshots Updated Components/Fields/DatePicker Disabled DatePicker & D
   letter-spacing: 0.015625rem;
 }
 
-.emotion-13 span {
+.emotion-12 span {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -3132,18 +2965,13 @@ exports[`Storyshots Updated Components/Fields/DatePicker Disabled DatePicker & D
                         >
                           <span
                             className="emotion-11"
-                            onClick={[Function]}
-                          >
-                            <span
-                              className="emotion-12"
-                            />
-                          </span>
+                          />
                         </div>
                       </div>
                     </div>
                   </div>
                   <div
-                    className="emotion-13"
+                    className="emotion-12"
                     data-testid="error"
                   >
                     <span
@@ -3422,7 +3250,7 @@ exports[`Storyshots Updated Components/Fields/DatePicker Playground 1`] = `
 
 .emotion-8 {
   min-width: 2.75rem;
-  overflow: hidden;
+  overflow: visible;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3439,53 +3267,31 @@ exports[`Storyshots Updated Components/Fields/DatePicker Playground 1`] = `
 }
 
 .emotion-9 {
-  cursor: pointer;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  cursor: pointer;
 }
 
-.emotion-9:focus-visible,
-.emotion-9:hover {
+.emotion-9:hover,
+.emotion-9:focus-visible {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border-radius: 100%;
   background: rgba(84,94,255,0.06);
-  border-radius: 6.25rem;
+  box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
 }
 
 .emotion-10 {
-  padding: 0.125rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-11 {
-  fill: #686BB3;
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-11 path {
-  fill: #686BB3;
+.emotion-10 path {
+  fill: #686BB3!important;
 }
 
 <div
@@ -3547,12 +3353,7 @@ exports[`Storyshots Updated Components/Fields/DatePicker Playground 1`] = `
                     >
                       <span
                         className="emotion-10"
-                        onClick={[Function]}
-                      >
-                        <span
-                          className="emotion-11"
-                        />
-                      </span>
+                      />
                     </div>
                   </div>
                 </div>

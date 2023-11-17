@@ -224,7 +224,7 @@ exports[`Storyshots Updated Components/Fields/Select Disabled Select 1`] = `
 
 .emotion-10 {
   min-width: 2.75rem;
-  overflow: hidden;
+  overflow: visible;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -260,29 +260,22 @@ exports[`Storyshots Updated Components/Fields/Select Disabled Select 1`] = `
 }
 
 .emotion-12 {
-  padding: 0.125rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  cursor: pointer;
 }
 
 .emotion-13 {
-  fill: #5f6c85;
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .emotion-13 path {
-  fill: #5f6c85;
+  fill: #686BB3!important;
 }
 
 .emotion-14 {
@@ -384,15 +377,16 @@ exports[`Storyshots Updated Components/Fields/Select Disabled Select 1`] = `
                       <div
                         className="emotion-11"
                       >
-                        <span
+                        <div
                           className="emotion-12"
                           data-testid="select-right-icon"
+                          hasHover={false}
                           onClick={[Function]}
                         >
                           <span
                             className="emotion-13"
                           />
-                        </span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -619,29 +613,22 @@ exports[`Storyshots Updated Components/Fields/Select MultiSelect 1`] = `
 }
 
 .emotion-13 {
-  padding: 0.125rem;
+  width: 0.875rem;
+  height: 0.875rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  cursor: pointer;
 }
 
 .emotion-14 {
-  fill: #0f0f17;
   width: 0.875rem;
   height: 0.875rem;
 }
 
 .emotion-14 path {
-  fill: #0f0f17;
+  fill: #0f0f17!important;
 }
 
 .emotion-45 {
@@ -770,7 +757,7 @@ exports[`Storyshots Updated Components/Fields/Select MultiSelect 1`] = `
 .emotion-47 {
   position: absolute!important;
   bottom: 0;
-  right: 0.25rem;
+  right: 0.5rem;
   top: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -783,40 +770,34 @@ exports[`Storyshots Updated Components/Fields/Select MultiSelect 1`] = `
 }
 
 .emotion-48 {
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
   cursor: pointer;
 }
 
-.emotion-48:focus-visible,
-.emotion-48:hover {
+.emotion-48:hover,
+.emotion-48:focus-visible {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border-radius: 100%;
   background: rgba(84,94,255,0.06);
-  border-radius: 6.25rem;
+  box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
 }
 
-.emotion-50 {
-  fill: #5f6c85;
+.emotion-49 {
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-50 path {
-  fill: #5f6c85;
+.emotion-49 path {
+  fill: #5f6c85!important;
 }
 
-.emotion-51 {
+.emotion-50 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -836,7 +817,7 @@ exports[`Storyshots Updated Components/Fields/Select MultiSelect 1`] = `
   letter-spacing: 0.015625rem;
 }
 
-.emotion-51 span {
+.emotion-50 span {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -844,7 +825,7 @@ exports[`Storyshots Updated Components/Fields/Select MultiSelect 1`] = `
   padding: 0;
 }
 
-.emotion-55 {
+.emotion-54 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -870,16 +851,16 @@ exports[`Storyshots Updated Components/Fields/Select MultiSelect 1`] = `
   min-height: 3.25rem!important;
 }
 
-.emotion-55:hover {
+.emotion-54:hover {
   background-color: #F5F5FF;
 }
 
-.emotion-55:focus-within {
+.emotion-54:focus-within {
   box-shadow: 0 0 0 0.125rem #175bf5;
   background-color: #F5F5FF;
 }
 
-.emotion-55 input:focus label {
+.emotion-54 input:focus label {
   font-weight: 700;
   -webkit-transform: translate(0.1875rem, -82%) scale(0.8)!important;
   -moz-transform: translate(0.1875rem, -82%) scale(0.8)!important;
@@ -888,14 +869,14 @@ exports[`Storyshots Updated Components/Fields/Select MultiSelect 1`] = `
   bottom: auto;
 }
 
-.emotion-55 label {
+.emotion-54 label {
   -webkit-transform: translate(0.1875rem, -8px);
   -moz-transform: translate(0.1875rem, -8px);
   -ms-transform: translate(0.1875rem, -8px);
   transform: translate(0.1875rem, -8px);
 }
 
-.emotion-59 {
+.emotion-58 {
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
@@ -930,28 +911,13 @@ exports[`Storyshots Updated Components/Fields/Select MultiSelect 1`] = `
   letter-spacing: 0.015625rem;
 }
 
-.emotion-61 {
-  width: 2.25rem;
-  height: 2.25rem;
+.emotion-60 {
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  cursor: auto;
-}
-
-.emotion-61:focus-visible,
-.emotion-61:hover {
-  background: rgba(84,94,255,0.06);
-  border-radius: 6.25rem;
 }
 
 <div
@@ -1008,15 +974,16 @@ exports[`Storyshots Updated Components/Fields/Select MultiSelect 1`] = `
                             aria-hidden={false}
                             className="emotion-12"
                           >
-                            <span
+                            <div
                               className="emotion-13"
                               data-testid="chip-delete-chip_0"
+                              hasHover={false}
                               onClick={[Function]}
                             >
                               <span
                                 className="emotion-14"
                               />
-                            </span>
+                            </div>
                           </div>
                         </div>
                       </span>
@@ -1042,15 +1009,16 @@ exports[`Storyshots Updated Components/Fields/Select MultiSelect 1`] = `
                             aria-hidden={false}
                             className="emotion-12"
                           >
-                            <span
+                            <div
                               className="emotion-13"
                               data-testid="chip-delete-chip_1"
+                              hasHover={false}
                               onClick={[Function]}
                             >
                               <span
                                 className="emotion-14"
                               />
-                            </span>
+                            </div>
                           </div>
                         </div>
                       </span>
@@ -1076,15 +1044,16 @@ exports[`Storyshots Updated Components/Fields/Select MultiSelect 1`] = `
                             aria-hidden={false}
                             className="emotion-12"
                           >
-                            <span
+                            <div
                               className="emotion-13"
                               data-testid="chip-delete-chip_2"
+                              hasHover={false}
                               onClick={[Function]}
                             >
                               <span
                                 className="emotion-14"
                               />
-                            </span>
+                            </div>
                           </div>
                         </div>
                       </span>
@@ -1110,15 +1079,16 @@ exports[`Storyshots Updated Components/Fields/Select MultiSelect 1`] = `
                             aria-hidden={false}
                             className="emotion-12"
                           >
-                            <span
+                            <div
                               className="emotion-13"
                               data-testid="chip-delete-chip_3"
+                              hasHover={false}
                               onClick={[Function]}
                             >
                               <span
                                 className="emotion-14"
                               />
-                            </span>
+                            </div>
                           </div>
                         </div>
                       </span>
@@ -1144,15 +1114,16 @@ exports[`Storyshots Updated Components/Fields/Select MultiSelect 1`] = `
                             aria-hidden={false}
                             className="emotion-12"
                           >
-                            <span
+                            <div
                               className="emotion-13"
                               data-testid="chip-delete-chip_4"
+                              hasHover={false}
                               onClick={[Function]}
                             >
                               <span
                                 className="emotion-14"
                               />
-                            </span>
+                            </div>
                           </div>
                         </div>
                       </span>
@@ -1178,15 +1149,16 @@ exports[`Storyshots Updated Components/Fields/Select MultiSelect 1`] = `
                             aria-hidden={false}
                             className="emotion-12"
                           >
-                            <span
+                            <div
                               className="emotion-13"
                               data-testid="chip-delete-chip_5"
+                              hasHover={false}
                               onClick={[Function]}
                             >
                               <span
                                 className="emotion-14"
                               />
-                            </span>
+                            </div>
                           </div>
                         </div>
                       </span>
@@ -1221,22 +1193,18 @@ exports[`Storyshots Updated Components/Fields/Select MultiSelect 1`] = `
                     >
                       <div
                         className="emotion-48"
+                        data-testid="select-right-icon"
+                        onClick={[Function]}
                       >
                         <span
-                          className="emotion-13"
-                          data-testid="select-right-icon"
-                          onClick={[Function]}
-                        >
-                          <span
-                            className="emotion-50"
-                          />
-                        </span>
+                          className="emotion-49"
+                        />
                       </div>
                     </div>
                   </div>
                 </div>
                 <div
-                  className="emotion-51"
+                  className="emotion-50"
                   data-testid="error-select-input"
                 >
                   <span
@@ -1264,7 +1232,7 @@ exports[`Storyshots Updated Components/Fields/Select MultiSelect 1`] = `
             >
               <div>
                 <div
-                  className="emotion-55"
+                  className="emotion-54"
                   data-testid="select-input"
                 >
                   <div
@@ -1294,7 +1262,7 @@ exports[`Storyshots Updated Components/Fields/Select MultiSelect 1`] = `
                         value=""
                       />
                       <label
-                        className="emotion-59"
+                        className="emotion-58"
                         htmlFor="multiTextfield__00"
                       >
                         Multi Select - Async
@@ -1305,23 +1273,18 @@ exports[`Storyshots Updated Components/Fields/Select MultiSelect 1`] = `
                       className="emotion-47"
                     >
                       <div
-                        className="emotion-61"
+                        className="emotion-60"
+                        data-testid="select-right-icon"
                       >
                         <span
-                          className="emotion-13"
-                          data-testid="select-right-icon"
-                          onClick={[Function]}
-                        >
-                          <span
-                            className="emotion-50"
-                          />
-                        </span>
+                          className="emotion-49"
+                        />
                       </div>
                     </div>
                   </div>
                 </div>
                 <div
-                  className="emotion-51"
+                  className="emotion-50"
                   data-testid="error-select-input"
                 >
                   <span
@@ -1619,7 +1582,7 @@ exports[`Storyshots Updated Components/Fields/Select Playground 1`] = `
 
 .emotion-10 {
   min-width: 2.75rem;
-  overflow: hidden;
+  overflow: visible;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1655,29 +1618,22 @@ exports[`Storyshots Updated Components/Fields/Select Playground 1`] = `
 }
 
 .emotion-12 {
-  padding: 0.125rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  cursor: pointer;
 }
 
 .emotion-13 {
-  fill: #5f6c85;
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .emotion-13 path {
-  fill: #5f6c85;
+  fill: #686BB3!important;
 }
 
 .emotion-14 {
@@ -1780,15 +1736,16 @@ exports[`Storyshots Updated Components/Fields/Select Playground 1`] = `
                       <div
                         className="emotion-11"
                       >
-                        <span
+                        <div
                           className="emotion-12"
                           data-testid="select-right-icon"
+                          hasHover={false}
                           onClick={[Function]}
                         >
                           <span
                             className="emotion-13"
                           />
-                        </span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -2043,7 +2000,7 @@ exports[`Storyshots Updated Components/Fields/Select Searchable Select 1`] = `
 
 .emotion-10 {
   min-width: 2.75rem;
-  overflow: hidden;
+  overflow: visible;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2079,29 +2036,22 @@ exports[`Storyshots Updated Components/Fields/Select Searchable Select 1`] = `
 }
 
 .emotion-12 {
-  padding: 0.125rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  cursor: pointer;
 }
 
 .emotion-13 {
-  fill: #5f6c85;
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .emotion-13 path {
-  fill: #5f6c85;
+  fill: #686BB3!important;
 }
 
 <div
@@ -2175,15 +2125,16 @@ exports[`Storyshots Updated Components/Fields/Select Searchable Select 1`] = `
                       <div
                         className="emotion-11"
                       >
-                        <span
+                        <div
                           className="emotion-12"
                           data-testid="select-right-icon"
+                          hasHover={false}
                           onClick={[Function]}
                         >
                           <span
                             className="emotion-13"
                           />
-                        </span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -2428,7 +2379,7 @@ exports[`Storyshots Updated Components/Fields/Select Select sizes 1`] = `
 
 .emotion-10 {
   min-width: 2.75rem;
-  overflow: hidden;
+  overflow: visible;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2464,29 +2415,22 @@ exports[`Storyshots Updated Components/Fields/Select Select sizes 1`] = `
 }
 
 .emotion-12 {
-  padding: 0.125rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  cursor: pointer;
 }
 
 .emotion-13 {
-  fill: #5f6c85;
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .emotion-13 path {
-  fill: #5f6c85;
+  fill: #686BB3!important;
 }
 
 .emotion-16 {
@@ -2630,14 +2574,23 @@ exports[`Storyshots Updated Components/Fields/Select Select sizes 1`] = `
   letter-spacing: 0.015625rem;
 }
 
+.emotion-23 {
+  width: 1rem;
+  height: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
 .emotion-24 {
-  fill: #5f6c85;
-  width: 0.75rem;
-  height: 0.75rem;
+  width: 1rem;
+  height: 1rem;
 }
 
 .emotion-24 path {
-  fill: #5f6c85;
+  fill: #686BB3!important;
 }
 
 <div
@@ -2711,15 +2664,16 @@ exports[`Storyshots Updated Components/Fields/Select Select sizes 1`] = `
                       <div
                         className="emotion-11"
                       >
-                        <span
+                        <div
                           className="emotion-12"
                           data-testid="select-right-icon"
+                          hasHover={false}
                           onClick={[Function]}
                         >
                           <span
                             className="emotion-13"
                           />
-                        </span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -2791,15 +2745,16 @@ exports[`Storyshots Updated Components/Fields/Select Select sizes 1`] = `
                       <div
                         className="emotion-11"
                       >
-                        <span
-                          className="emotion-12"
+                        <div
+                          className="emotion-23"
                           data-testid="select-right-icon"
+                          hasHover={false}
                           onClick={[Function]}
                         >
                           <span
                             className="emotion-24"
                           />
-                        </span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -3044,7 +2999,7 @@ exports[`Storyshots Updated Components/Fields/Select Select statuses 1`] = `
 
 .emotion-10 {
   min-width: 2.75rem;
-  overflow: hidden;
+  overflow: visible;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3080,29 +3035,22 @@ exports[`Storyshots Updated Components/Fields/Select Select statuses 1`] = `
 }
 
 .emotion-12 {
-  padding: 0.125rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  cursor: pointer;
 }
 
 .emotion-13 {
-  fill: #5f6c85;
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .emotion-13 path {
-  fill: #5f6c85;
+  fill: #686BB3!important;
 }
 
 .emotion-14 {
@@ -3230,14 +3178,22 @@ exports[`Storyshots Updated Components/Fields/Select Select statuses 1`] = `
   padding: 0;
 }
 
+.emotion-27 {
+  width: 1rem;
+  height: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-28 {
-  fill: #CB205D;
-  width: 0.75rem;
-  height: 0.75rem;
+  width: 1rem;
+  height: 1rem;
 }
 
 .emotion-28 path {
-  fill: #CB205D;
+  fill: #CB205D!important;
 }
 
 .emotion-31 {
@@ -3351,6 +3307,15 @@ exports[`Storyshots Updated Components/Fields/Select Select statuses 1`] = `
   cursor: text;
 }
 
+.emotion-37 {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 <div
   className="emotion-0"
 >
@@ -3423,15 +3388,16 @@ exports[`Storyshots Updated Components/Fields/Select Select statuses 1`] = `
                       <div
                         className="emotion-11"
                       >
-                        <span
+                        <div
                           className="emotion-12"
                           data-testid="select-right-icon"
+                          hasHover={false}
                           onClick={[Function]}
                         >
                           <span
                             className="emotion-13"
                           />
-                        </span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -3514,15 +3480,16 @@ exports[`Storyshots Updated Components/Fields/Select Select statuses 1`] = `
                       <div
                         className="emotion-11"
                       >
-                        <span
+                        <div
                           className="emotion-12"
                           data-testid="select-right-icon"
+                          hasHover={false}
                           onClick={[Function]}
                         >
                           <span
                             className="emotion-13"
                           />
-                        </span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -3531,14 +3498,13 @@ exports[`Storyshots Updated Components/Fields/Select Select statuses 1`] = `
                   className="emotion-26"
                   data-testid="error-select-input"
                 >
-                  <span
-                    className="emotion-12"
-                    onClick={[Function]}
+                  <div
+                    className="emotion-27"
                   >
                     <span
                       className="emotion-28"
                     />
-                  </span>
+                  </div>
                   <span
                     id="textfield__00_hintMessage"
                   >
@@ -3609,14 +3575,13 @@ exports[`Storyshots Updated Components/Fields/Select Select statuses 1`] = `
                       aria-hidden={false}
                       className="emotion-10"
                     >
-                      <span
-                        className="emotion-12"
-                        onClick={[Function]}
+                      <div
+                        className="emotion-37"
                       >
                         <span
                           className="emotion-13"
                         />
-                      </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -3860,7 +3825,7 @@ exports[`Storyshots Updated Components/Fields/Select Select with async search 1`
 
 .emotion-10 {
   min-width: 2.75rem;
-  overflow: hidden;
+  overflow: visible;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3896,29 +3861,22 @@ exports[`Storyshots Updated Components/Fields/Select Select with async search 1`
 }
 
 .emotion-12 {
-  padding: 0.125rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  cursor: pointer;
 }
 
 .emotion-13 {
-  fill: #5f6c85;
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .emotion-13 path {
-  fill: #5f6c85;
+  fill: #686BB3!important;
 }
 
 <div
@@ -3986,15 +3944,16 @@ exports[`Storyshots Updated Components/Fields/Select Select with async search 1`
                     <div
                       className="emotion-11"
                     >
-                      <span
+                      <div
                         className="emotion-12"
                         data-testid="select-right-icon"
+                        hasHover={false}
                         onClick={[Function]}
                       >
                         <span
                           className="emotion-13"
                         />
-                      </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -4235,7 +4194,7 @@ exports[`Storyshots Updated Components/Fields/Select Select with edge case 1`] =
 
 .emotion-10 {
   min-width: 2.75rem;
-  overflow: hidden;
+  overflow: visible;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4271,29 +4230,22 @@ exports[`Storyshots Updated Components/Fields/Select Select with edge case 1`] =
 }
 
 .emotion-12 {
-  padding: 0.125rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  cursor: pointer;
 }
 
 .emotion-13 {
-  fill: #5f6c85;
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .emotion-13 path {
-  fill: #5f6c85;
+  fill: #686BB3!important;
 }
 
 <div
@@ -4367,15 +4319,16 @@ exports[`Storyshots Updated Components/Fields/Select Select with edge case 1`] =
                       <div
                         className="emotion-11"
                       >
-                        <span
+                        <div
                           className="emotion-12"
                           data-testid="select-right-icon"
+                          hasHover={false}
                           onClick={[Function]}
                         >
                           <span
                             className="emotion-13"
                           />
-                        </span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -4440,15 +4393,16 @@ exports[`Storyshots Updated Components/Fields/Select Select with edge case 1`] =
                     <div
                       className="emotion-11"
                     >
-                      <span
+                      <div
                         className="emotion-12"
                         data-testid="select-right-icon"
+                        hasHover={false}
                         onClick={[Function]}
                       >
                         <span
                           className="emotion-13"
                         />
-                      </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -4692,7 +4646,7 @@ exports[`Storyshots Updated Components/Fields/Select Select with uncontrolled st
 
 .emotion-10 {
   min-width: 2.75rem;
-  overflow: hidden;
+  overflow: visible;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4728,29 +4682,22 @@ exports[`Storyshots Updated Components/Fields/Select Select with uncontrolled st
 }
 
 .emotion-12 {
-  padding: 0.125rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  cursor: pointer;
 }
 
 .emotion-13 {
-  fill: #5f6c85;
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .emotion-13 path {
-  fill: #5f6c85;
+  fill: #686BB3!important;
 }
 
 .emotion-14 {
@@ -4853,15 +4800,16 @@ exports[`Storyshots Updated Components/Fields/Select Select with uncontrolled st
                       <div
                         className="emotion-11"
                       >
-                        <span
+                        <div
                           className="emotion-12"
                           data-testid="select-right-icon"
+                          hasHover={false}
                           onClick={[Function]}
                         >
                           <span
                             className="emotion-13"
                           />
-                        </span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -5116,7 +5064,7 @@ exports[`Storyshots Updated Components/Fields/Select Simple Select 1`] = `
 
 .emotion-10 {
   min-width: 2.75rem;
-  overflow: hidden;
+  overflow: visible;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5152,29 +5100,22 @@ exports[`Storyshots Updated Components/Fields/Select Simple Select 1`] = `
 }
 
 .emotion-12 {
-  padding: 0.125rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  cursor: pointer;
 }
 
 .emotion-13 {
-  fill: #5f6c85;
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .emotion-13 path {
-  fill: #5f6c85;
+  fill: #686BB3!important;
 }
 
 <div
@@ -5248,15 +5189,16 @@ exports[`Storyshots Updated Components/Fields/Select Simple Select 1`] = `
                       <div
                         className="emotion-11"
                       >
-                        <span
+                        <div
                           className="emotion-12"
                           data-testid="select-right-icon"
+                          hasHover={false}
                           onClick={[Function]}
                         >
                           <span
                             className="emotion-13"
                           />
-                        </span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -5501,7 +5443,7 @@ exports[`Storyshots Updated Components/Fields/Select Simple Select with groups 1
 
 .emotion-10 {
   min-width: 2.75rem;
-  overflow: hidden;
+  overflow: visible;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5537,29 +5479,22 @@ exports[`Storyshots Updated Components/Fields/Select Simple Select with groups 1
 }
 
 .emotion-12 {
-  padding: 0.125rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  cursor: pointer;
 }
 
 .emotion-13 {
-  fill: #5f6c85;
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .emotion-13 path {
-  fill: #5f6c85;
+  fill: #686BB3!important;
 }
 
 <div
@@ -5633,15 +5568,16 @@ exports[`Storyshots Updated Components/Fields/Select Simple Select with groups 1
                       <div
                         className="emotion-11"
                       >
-                        <span
+                        <div
                           className="emotion-12"
                           data-testid="select-right-icon"
+                          hasHover={false}
                           onClick={[Function]}
                         >
                           <span
                             className="emotion-13"
                           />
-                        </span>
+                        </div>
                       </div>
                     </div>
                   </div>

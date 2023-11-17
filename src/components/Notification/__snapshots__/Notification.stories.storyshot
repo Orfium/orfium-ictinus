@@ -29,6 +29,18 @@ exports[`Storyshots Original Components/Notification Banner Notification 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #ffffff;
   height: auto;
   background-color: #175bf5;
@@ -73,6 +85,15 @@ exports[`Storyshots Original Components/Notification Banner Notification 1`] = `
   gap: 0.5rem;
 }
 
+.emotion-5 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  color: #686BB3;
+}
+
 <div
   className="emotion-0"
 >
@@ -94,37 +115,46 @@ exports[`Storyshots Original Components/Notification Banner Notification 1`] = `
       <div
         style={
           Object {
-            "height": "100%",
-            "width": "100%",
+            "alignItems": "center",
+            "display": "flex",
+            "flexDirection": "row",
+            "gap": "8px",
+            "justifyContent": "center",
+            "width": 1024,
           }
         }
       >
         <div
-          className="emotion-2"
+          style={
+            Object {
+              "height": "100%",
+              "width": "100%",
+            }
+          }
         >
-          <button
-            className="emotion-3"
-            data-testid="button"
-            disabled={false}
-            onClick={[Function]}
-            type="button"
+          <div
+            className="emotion-2"
           >
-            <span
-              className="emotion-4"
+            <button
+              className="emotion-3"
+              data-testid="button"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
             >
-              <span>
-                Show Notifications
+              <span
+                className="emotion-4"
+              >
+                <span>
+                  Show Notifications
+                </span>
               </span>
-            </span>
-          </button>
+            </button>
+          </div>
         </div>
       </div>
-      <p
-        style={
-          Object {
-            "paddingTop": "8px",
-          }
-        }
+      <span
+        className="emotion-5"
       />
     </div>
   </div>
@@ -201,29 +231,21 @@ exports[`Storyshots Original Components/Notification Inline Notification 1`] = `
 }
 
 .emotion-6 {
-  padding: 0.125rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
 .emotion-7 {
-  fill: #36C152;
   width: 1.25rem;
   height: 1.25rem;
 }
 
 .emotion-7 path {
-  fill: #36C152;
+  fill: #36C152!important;
 }
 
 .emotion-8 {
@@ -243,19 +265,40 @@ exports[`Storyshots Original Components/Notification Inline Notification 1`] = `
   font-weight: 500;
 }
 
-.emotion-17 {
+.emotion-10 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  color: #686BB3;
+}
+
+.emotion-18 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-18 {
+.emotion-19 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #1552DD;
   height: auto;
   background-color: rgba(84,94,255,0);
@@ -267,24 +310,24 @@ exports[`Storyshots Original Components/Notification Inline Notification 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-18:focus-visible:not(:disabled) {
+.emotion-19:focus-visible:not(:disabled) {
   background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-18:disabled {
+.emotion-19:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-18:hover:not(:disabled) {
+.emotion-19:hover:not(:disabled) {
   background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-18:active:not(:disabled) {
+.emotion-19:active:not(:disabled) {
   background-color: rgba(84,94,255,0.14);
 }
 
-.emotion-19 {
+.emotion-20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -300,19 +343,18 @@ exports[`Storyshots Original Components/Notification Inline Notification 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-20 {
+.emotion-21 {
   cursor: pointer;
   margin-left: 1rem;
 }
 
-.emotion-22 {
-  fill: #5f6c85;
+.emotion-23 {
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-22 path {
-  fill: #5f6c85;
+.emotion-23 path {
+  fill: #5f6c85!important;
 }
 
 <div
@@ -344,133 +386,49 @@ exports[`Storyshots Original Components/Notification Inline Notification 1`] = `
           }
         >
           <div
-            className="emotion-3"
-            data-testid="inline"
-          >
-            <div
-              className="emotion-4"
-            >
-              <div
-                className="emotion-5"
-              >
-                <span
-                  className="emotion-6"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="emotion-7"
-                  />
-                </span>
-              </div>
-              <div
-                className="emotion-8"
-                data-testid="inline-message"
-              >
-                Informative Message
-              </div>
-            </div>
-            <div
-              className="emotion-9"
-            />
-          </div>
-          <p
             style={
               Object {
-                "paddingTop": "8px",
+                "alignItems": "center",
+                "display": "flex",
+                "flexDirection": "row",
+                "gap": "8px",
+                "justifyContent": "center",
+                "width": 768,
               }
             }
-          />
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          style={
-            Object {
-              "alignItems": "center",
-              "display": "flex",
-              "flexDirection": "column",
-              "justifyContent": "center",
-              "padding": "1rem",
-              "width": 768,
-            }
-          }
-        >
-          <div
-            className="emotion-3"
-            data-testid="inline"
           >
             <div
-              className="emotion-4"
+              className="emotion-3"
+              data-testid="inline"
             >
               <div
-                className="emotion-5"
+                className="emotion-4"
               >
-                <span
-                  className="emotion-6"
-                  onClick={[Function]}
+                <div
+                  className="emotion-5"
                 >
-                  <span
-                    className="emotion-7"
-                  />
-                </span>
-              </div>
-              <div
-                className="emotion-8"
-                data-testid="inline-message"
-              >
-                Informative Message
-              </div>
-            </div>
-            <div
-              className="emotion-9"
-            >
-              <div
-                className="emotion-17"
-              >
-                <button
-                  className="emotion-18"
-                  data-testid="button"
-                  disabled={false}
-                  onClick={[Function]}
-                  type="button"
-                >
-                  <span
-                    className="emotion-19"
+                  <div
+                    className="emotion-6"
                   >
-                    <span>
-                      Action
-                    </span>
-                  </span>
-                </button>
-              </div>
-              <span
-                className="emotion-20"
-                data-testid="notification-close"
-                onClick={[Function]}
-              >
-                <span
-                  className="emotion-6"
-                  onClick={[Function]}
+                    <span
+                      className="emotion-7"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="emotion-8"
+                  data-testid="inline-message"
                 >
-                  <span
-                    className="emotion-22"
-                  />
-                </span>
-              </span>
+                  Informative Message
+                </div>
+              </div>
+              <div
+                className="emotion-9"
+              />
             </div>
           </div>
-          <p
-            style={
-              Object {
-                "paddingTop": "8px",
-              }
-            }
+          <span
+            className="emotion-10"
           />
         </div>
       </div>
@@ -494,61 +452,82 @@ exports[`Storyshots Original Components/Notification Inline Notification 1`] = `
           }
         >
           <div
-            className="emotion-3"
-            data-testid="inline"
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "flexDirection": "row",
+                "gap": "8px",
+                "justifyContent": "center",
+                "width": 768,
+              }
+            }
           >
             <div
-              className="emotion-4"
+              className="emotion-3"
+              data-testid="inline"
             >
               <div
-                className="emotion-5"
+                className="emotion-4"
               >
-                <span
-                  className="emotion-6"
-                  onClick={[Function]}
+                <div
+                  className="emotion-5"
                 >
-                  <span
-                    className="emotion-7"
-                  />
-                </span>
-              </div>
-              <div
-                className="emotion-8"
-                data-testid="inline-message"
-              >
-                Informative Message
-              </div>
-            </div>
-            <div
-              className="emotion-9"
-            >
-              <div
-                className="emotion-17"
-              >
-                <button
-                  className="emotion-18"
-                  data-testid="button"
-                  disabled={false}
-                  onClick={[Function]}
-                  type="button"
-                >
-                  <span
-                    className="emotion-19"
+                  <div
+                    className="emotion-6"
                   >
-                    <span>
-                      Action
+                    <span
+                      className="emotion-7"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="emotion-8"
+                  data-testid="inline-message"
+                >
+                  Informative Message
+                </div>
+              </div>
+              <div
+                className="emotion-9"
+              >
+                <div
+                  className="emotion-18"
+                >
+                  <button
+                    className="emotion-19"
+                    data-testid="button"
+                    disabled={false}
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <span
+                      className="emotion-20"
+                    >
+                      <span>
+                        Action
+                      </span>
                     </span>
-                  </span>
-                </button>
+                  </button>
+                </div>
+                <span
+                  className="emotion-21"
+                  data-testid="notification-close"
+                  onClick={[Function]}
+                >
+                  <div
+                    className="emotion-6"
+                  >
+                    <span
+                      className="emotion-23"
+                    />
+                  </div>
+                </span>
               </div>
             </div>
           </div>
-          <p
-            style={
-              Object {
-                "paddingTop": "8px",
-              }
-            }
+          <span
+            className="emotion-10"
           />
         </div>
       </div>
@@ -572,56 +551,149 @@ exports[`Storyshots Original Components/Notification Inline Notification 1`] = `
           }
         >
           <div
-            className="emotion-3"
-            data-testid="inline"
-          >
-            <div
-              className="emotion-4"
-            >
-              <div
-                className="emotion-5"
-              >
-                <span
-                  className="emotion-6"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="emotion-7"
-                  />
-                </span>
-              </div>
-              <div
-                className="emotion-8"
-                data-testid="inline-message"
-              >
-                Informative Message
-              </div>
-            </div>
-            <div
-              className="emotion-9"
-            >
-              <span
-                className="emotion-20"
-                data-testid="notification-close"
-                onClick={[Function]}
-              >
-                <span
-                  className="emotion-6"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="emotion-22"
-                  />
-                </span>
-              </span>
-            </div>
-          </div>
-          <p
             style={
               Object {
-                "paddingTop": "8px",
+                "alignItems": "center",
+                "display": "flex",
+                "flexDirection": "row",
+                "gap": "8px",
+                "justifyContent": "center",
+                "width": 768,
               }
             }
+          >
+            <div
+              className="emotion-3"
+              data-testid="inline"
+            >
+              <div
+                className="emotion-4"
+              >
+                <div
+                  className="emotion-5"
+                >
+                  <div
+                    className="emotion-6"
+                  >
+                    <span
+                      className="emotion-7"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="emotion-8"
+                  data-testid="inline-message"
+                >
+                  Informative Message
+                </div>
+              </div>
+              <div
+                className="emotion-9"
+              >
+                <div
+                  className="emotion-18"
+                >
+                  <button
+                    className="emotion-19"
+                    data-testid="button"
+                    disabled={false}
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <span
+                      className="emotion-20"
+                    >
+                      <span>
+                        Action
+                      </span>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <span
+            className="emotion-10"
+          />
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "flexDirection": "column",
+              "justifyContent": "center",
+              "padding": "1rem",
+              "width": 768,
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "flexDirection": "row",
+                "gap": "8px",
+                "justifyContent": "center",
+                "width": 768,
+              }
+            }
+          >
+            <div
+              className="emotion-3"
+              data-testid="inline"
+            >
+              <div
+                className="emotion-4"
+              >
+                <div
+                  className="emotion-5"
+                >
+                  <div
+                    className="emotion-6"
+                  >
+                    <span
+                      className="emotion-7"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="emotion-8"
+                  data-testid="inline-message"
+                >
+                  Informative Message
+                </div>
+              </div>
+              <div
+                className="emotion-9"
+              >
+                <span
+                  className="emotion-21"
+                  data-testid="notification-close"
+                  onClick={[Function]}
+                >
+                  <div
+                    className="emotion-6"
+                  >
+                    <span
+                      className="emotion-23"
+                    />
+                  </div>
+                </span>
+              </div>
+            </div>
+          </div>
+          <span
+            className="emotion-10"
           />
         </div>
       </div>
@@ -659,6 +731,18 @@ exports[`Storyshots Original Components/Notification Playground 1 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #ffffff;
   height: auto;
   background-color: #175bf5;
@@ -703,6 +787,15 @@ exports[`Storyshots Original Components/Notification Playground 1 1`] = `
   gap: 0.5rem;
 }
 
+.emotion-5 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  color: #686BB3;
+}
+
 <div
   className="emotion-0"
 >
@@ -724,37 +817,46 @@ exports[`Storyshots Original Components/Notification Playground 1 1`] = `
       <div
         style={
           Object {
-            "height": "100%",
-            "width": "100%",
+            "alignItems": "center",
+            "display": "flex",
+            "flexDirection": "row",
+            "gap": "8px",
+            "justifyContent": "center",
+            "width": 768,
           }
         }
       >
         <div
-          className="emotion-2"
+          style={
+            Object {
+              "height": "100%",
+              "width": "100%",
+            }
+          }
         >
-          <button
-            className="emotion-3"
-            data-testid="button"
-            disabled={false}
-            onClick={[Function]}
-            type="button"
+          <div
+            className="emotion-2"
           >
-            <span
-              className="emotion-4"
+            <button
+              className="emotion-3"
+              data-testid="button"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
             >
-              <span>
-                Show Notifications
+              <span
+                className="emotion-4"
+              >
+                <span>
+                  Show Notifications
+                </span>
               </span>
-            </span>
-          </button>
+            </button>
+          </div>
         </div>
       </div>
-      <p
-        style={
-          Object {
-            "paddingTop": "8px",
-          }
-        }
+      <span
+        className="emotion-5"
       />
     </div>
   </div>
@@ -790,6 +892,18 @@ exports[`Storyshots Original Components/Notification Playground 2 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #ffffff;
   height: auto;
   background-color: #175bf5;
@@ -834,6 +948,15 @@ exports[`Storyshots Original Components/Notification Playground 2 1`] = `
   gap: 0.5rem;
 }
 
+.emotion-5 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  color: #686BB3;
+}
+
 <div
   className="emotion-0"
 >
@@ -855,37 +978,46 @@ exports[`Storyshots Original Components/Notification Playground 2 1`] = `
       <div
         style={
           Object {
-            "height": "100%",
-            "width": "100%",
+            "alignItems": "center",
+            "display": "flex",
+            "flexDirection": "row",
+            "gap": "8px",
+            "justifyContent": "center",
+            "width": 768,
           }
         }
       >
         <div
-          className="emotion-2"
+          style={
+            Object {
+              "height": "100%",
+              "width": "100%",
+            }
+          }
         >
-          <button
-            className="emotion-3"
-            data-testid="button"
-            disabled={false}
-            onClick={[Function]}
-            type="button"
+          <div
+            className="emotion-2"
           >
-            <span
-              className="emotion-4"
+            <button
+              className="emotion-3"
+              data-testid="button"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
             >
-              <span>
-                Show Notifications
+              <span
+                className="emotion-4"
+              >
+                <span>
+                  Show Notifications
+                </span>
               </span>
-            </span>
-          </button>
+            </button>
+          </div>
         </div>
       </div>
-      <p
-        style={
-          Object {
-            "paddingTop": "8px",
-          }
-        }
+      <span
+        className="emotion-5"
       />
     </div>
   </div>
@@ -921,6 +1053,18 @@ exports[`Storyshots Original Components/Notification Playground 3 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #ffffff;
   height: auto;
   background-color: #175bf5;
@@ -965,6 +1109,15 @@ exports[`Storyshots Original Components/Notification Playground 3 1`] = `
   gap: 0.5rem;
 }
 
+.emotion-5 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  color: #686BB3;
+}
+
 <div
   className="emotion-0"
 >
@@ -986,37 +1139,46 @@ exports[`Storyshots Original Components/Notification Playground 3 1`] = `
       <div
         style={
           Object {
-            "height": "100%",
-            "width": "100%",
+            "alignItems": "center",
+            "display": "flex",
+            "flexDirection": "row",
+            "gap": "8px",
+            "justifyContent": "center",
+            "width": 768,
           }
         }
       >
         <div
-          className="emotion-2"
+          style={
+            Object {
+              "height": "100%",
+              "width": "100%",
+            }
+          }
         >
-          <button
-            className="emotion-3"
-            data-testid="button"
-            disabled={false}
-            onClick={[Function]}
-            type="button"
+          <div
+            className="emotion-2"
           >
-            <span
-              className="emotion-4"
+            <button
+              className="emotion-3"
+              data-testid="button"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
             >
-              <span>
-                Show Notifications
+              <span
+                className="emotion-4"
+              >
+                <span>
+                  Show Notifications
+                </span>
               </span>
-            </span>
-          </button>
+            </button>
+          </div>
         </div>
       </div>
-      <p
-        style={
-          Object {
-            "paddingTop": "8px",
-          }
-        }
+      <span
+        className="emotion-5"
       />
     </div>
   </div>
@@ -1052,6 +1214,18 @@ exports[`Storyshots Original Components/Notification Snackbar Notification 1`] =
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #ffffff;
   height: auto;
   background-color: #175bf5;
@@ -1096,6 +1270,15 @@ exports[`Storyshots Original Components/Notification Snackbar Notification 1`] =
   gap: 0.5rem;
 }
 
+.emotion-5 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  color: #686BB3;
+}
+
 <div
   className="emotion-0"
 >
@@ -1117,37 +1300,46 @@ exports[`Storyshots Original Components/Notification Snackbar Notification 1`] =
       <div
         style={
           Object {
-            "height": "100%",
-            "width": "100%",
+            "alignItems": "center",
+            "display": "flex",
+            "flexDirection": "row",
+            "gap": "8px",
+            "justifyContent": "center",
+            "width": 768,
           }
         }
       >
         <div
-          className="emotion-2"
+          style={
+            Object {
+              "height": "100%",
+              "width": "100%",
+            }
+          }
         >
-          <button
-            className="emotion-3"
-            data-testid="button"
-            disabled={false}
-            onClick={[Function]}
-            type="button"
+          <div
+            className="emotion-2"
           >
-            <span
-              className="emotion-4"
+            <button
+              className="emotion-3"
+              data-testid="button"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
             >
-              <span>
-                Show Notifications
+              <span
+                className="emotion-4"
+              >
+                <span>
+                  Show Notifications
+                </span>
               </span>
-            </span>
-          </button>
+            </button>
+          </div>
         </div>
       </div>
-      <p
-        style={
-          Object {
-            "paddingTop": "8px",
-          }
-        }
+      <span
+        className="emotion-5"
       />
     </div>
   </div>
@@ -1183,6 +1375,18 @@ exports[`Storyshots Original Components/Notification Toast Notification 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #ffffff;
   height: auto;
   background-color: #175bf5;
@@ -1227,6 +1431,15 @@ exports[`Storyshots Original Components/Notification Toast Notification 1`] = `
   gap: 0.5rem;
 }
 
+.emotion-5 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  color: #686BB3;
+}
+
 <div
   className="emotion-0"
 >
@@ -1248,37 +1461,46 @@ exports[`Storyshots Original Components/Notification Toast Notification 1`] = `
       <div
         style={
           Object {
-            "height": "100%",
-            "width": "100%",
+            "alignItems": "center",
+            "display": "flex",
+            "flexDirection": "row",
+            "gap": "8px",
+            "justifyContent": "center",
+            "width": 768,
           }
         }
       >
         <div
-          className="emotion-2"
+          style={
+            Object {
+              "height": "100%",
+              "width": "100%",
+            }
+          }
         >
-          <button
-            className="emotion-3"
-            data-testid="button"
-            disabled={false}
-            onClick={[Function]}
-            type="button"
+          <div
+            className="emotion-2"
           >
-            <span
-              className="emotion-4"
+            <button
+              className="emotion-3"
+              data-testid="button"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
             >
-              <span>
-                Show Notifications
+              <span
+                className="emotion-4"
+              >
+                <span>
+                  Show Notifications
+                </span>
               </span>
-            </span>
-          </button>
+            </button>
+          </div>
         </div>
       </div>
-      <p
-        style={
-          Object {
-            "paddingTop": "8px",
-          }
-        }
+      <span
+        className="emotion-5"
       />
     </div>
   </div>

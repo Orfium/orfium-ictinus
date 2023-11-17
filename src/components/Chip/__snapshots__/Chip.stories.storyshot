@@ -89,29 +89,22 @@ exports[`Storyshots Original Components/Chip Interactive Chips 1`] = `
 }
 
 .emotion-5 {
-  padding: 0.125rem;
+  width: 0.875rem;
+  height: 0.875rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  cursor: pointer;
 }
 
 .emotion-6 {
-  fill: #0f0f17;
   width: 0.875rem;
   height: 0.875rem;
 }
 
 .emotion-6 path {
-  fill: #0f0f17;
+  fill: #0f0f17!important;
 }
 
 .emotion-7 {
@@ -228,15 +221,16 @@ exports[`Storyshots Original Components/Chip Interactive Chips 1`] = `
             aria-hidden={false}
             className="emotion-4"
           >
-            <span
+            <div
               className="emotion-5"
               data-testid="chip-delete"
+              hasHover={false}
               onClick={[Function]}
             >
               <span
                 className="emotion-6"
               />
-            </span>
+            </div>
           </div>
         </button>
       </div>

@@ -316,32 +316,15 @@ exports[`Storyshots Updated Components/List/ListItem Disabled ListItem 1`] = `
 }
 
 .emotion-14 {
-  padding: 0.125rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-15 {
-  fill: #1249C4;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-15 path {
+.emotion-14 path {
   fill: #1249C4;
 }
 
-.emotion-19 {
+.emotion-18 {
   opacity: 0.3;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -357,7 +340,7 @@ exports[`Storyshots Updated Components/List/ListItem Disabled ListItem 1`] = `
   display: flex;
 }
 
-.emotion-20 {
+.emotion-19 {
   border-radius: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -376,7 +359,7 @@ exports[`Storyshots Updated Components/List/ListItem Disabled ListItem 1`] = `
   position: relative;
 }
 
-.emotion-20:before {
+.emotion-19:before {
   display: none;
   border-radius: 100%;
   -webkit-transition: all 0.2s;
@@ -387,7 +370,7 @@ exports[`Storyshots Updated Components/List/ListItem Disabled ListItem 1`] = `
   position: absolute;
 }
 
-.emotion-21 {
+.emotion-20 {
   border: 0;
   border-radius: 0.125rem;
   width: 1.5rem;
@@ -396,13 +379,13 @@ exports[`Storyshots Updated Components/List/ListItem Disabled ListItem 1`] = `
   opacity: 0;
 }
 
-.emotion-21+label {
+.emotion-20+label {
   position: relative;
   cursor: pointer;
   padding: 0;
 }
 
-.emotion-21+label:before {
+.emotion-20+label:before {
   content: '';
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -415,31 +398,39 @@ exports[`Storyshots Updated Components/List/ListItem Disabled ListItem 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-21:disabled+label {
+.emotion-20:disabled+label {
   cursor: not-allowed;
 }
 
-.emotion-22 span {
+.emotion-21 span {
   padding: 0;
 }
 
-.emotion-22 svg {
+.emotion-21 div {
   position: absolute;
   top: 0;
   display: none;
 }
 
-.emotion-24 {
-  fill: white;
+.emotion-22 {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-23 {
   width: 1.5rem;
   height: 1.5rem;
 }
 
-.emotion-24 path {
-  fill: white;
+.emotion-23 path {
+  fill: white!important;
 }
 
-.emotion-28 {
+.emotion-27 {
   position: relative;
   border-radius: 50%;
   width: 2.25rem;
@@ -474,7 +465,7 @@ exports[`Storyshots Updated Components/List/ListItem Disabled ListItem 1`] = `
   -webkit-tap-highlight-color: transparent;
 }
 
-.emotion-29 {
+.emotion-28 {
   top: 0;
   left: 0;
   width: 100%;
@@ -487,11 +478,11 @@ exports[`Storyshots Updated Components/List/ListItem Disabled ListItem 1`] = `
   opacity: 0;
 }
 
-.emotion-29:disabled {
+.emotion-28:disabled {
   cursor: default;
 }
 
-.emotion-30 {
+.emotion-29 {
   position: relative;
   border-radius: 50%;
   width: 1.5rem;
@@ -500,7 +491,7 @@ exports[`Storyshots Updated Components/List/ListItem Disabled ListItem 1`] = `
   transition: box-shadow 0.3s ease;
 }
 
-.emotion-31 {
+.emotion-30 {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   border-radius: 50%;
@@ -510,7 +501,7 @@ exports[`Storyshots Updated Components/List/ListItem Disabled ListItem 1`] = `
   position: absolute;
 }
 
-.emotion-31:before {
+.emotion-30:before {
   content: '';
   display: inline-block;
   box-sizing: border-box;
@@ -524,7 +515,7 @@ exports[`Storyshots Updated Components/List/ListItem Disabled ListItem 1`] = `
   transition: border-color 0.2s;
 }
 
-.emotion-31:after {
+.emotion-30:after {
   content: '';
   display: block;
   position: absolute;
@@ -542,7 +533,7 @@ exports[`Storyshots Updated Components/List/ListItem Disabled ListItem 1`] = `
   transition: transform 0.2s;
 }
 
-.emotion-32 {
+.emotion-31 {
   position: absolute;
   border-radius: 50%;
   width: 1.5rem;
@@ -769,12 +760,7 @@ exports[`Storyshots Updated Components/List/ListItem Disabled ListItem 1`] = `
                   >
                     <span
                       className="emotion-14"
-                      onClick={[Function]}
-                    >
-                      <span
-                        className="emotion-15"
-                      />
-                    </span>
+                    />
                   </div>
                 </div>
                 <div
@@ -805,15 +791,15 @@ exports[`Storyshots Updated Components/List/ListItem Disabled ListItem 1`] = `
                   className="emotion-9"
                 >
                   <span
-                    className="emotion-19"
+                    className="emotion-18"
                   >
                     <span
-                      className="emotion-20"
+                      className="emotion-19"
                       onClick={[Function]}
                     >
                       <input
                         checked={false}
-                        className="emotion-21"
+                        className="emotion-20"
                         data-testid="checkbox"
                         disabled={true}
                         id="styled-checkbox-_00"
@@ -822,17 +808,16 @@ exports[`Storyshots Updated Components/List/ListItem Disabled ListItem 1`] = `
                         type="checkbox"
                       />
                       <label
-                        className="emotion-22"
+                        className="emotion-21"
                         htmlFor="styled-checkbox-_00"
                       >
-                        <span
-                          className="emotion-14"
-                          onClick={[Function]}
+                        <div
+                          className="emotion-22"
                         >
                           <span
-                            className="emotion-24"
+                            className="emotion-23"
                           />
-                        </span>
+                        </div>
                       </label>
                     </span>
                   </span>
@@ -865,12 +850,12 @@ exports[`Storyshots Updated Components/List/ListItem Disabled ListItem 1`] = `
                   className="emotion-9"
                 >
                   <span
-                    className="emotion-28"
+                    className="emotion-27"
                     data-testid="radio-input"
                   >
                     <input
                       checked={false}
-                      className="emotion-29"
+                      className="emotion-28"
                       disabled={true}
                       onBlur={[Function]}
                       onChange={[Function]}
@@ -882,13 +867,13 @@ exports[`Storyshots Updated Components/List/ListItem Disabled ListItem 1`] = `
                       value="on"
                     />
                     <span
-                      className="emotion-30"
+                      className="emotion-29"
                     >
                       <span
-                        className="emotion-31"
+                        className="emotion-30"
                       />
                       <span
-                        className="emotion-32"
+                        className="emotion-31"
                       />
                     </span>
                   </span>
@@ -1353,36 +1338,28 @@ exports[`Storyshots Updated Components/List/ListItem ListItem compilations 1`] =
   padding: 0;
 }
 
-.emotion-45 svg {
+.emotion-45 div {
   position: absolute;
   top: 0;
   display: none;
 }
 
 .emotion-46 {
-  padding: 0.125rem;
+  width: 1.5rem;
+  height: 1.5rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
 .emotion-47 {
-  fill: white;
   width: 1.5rem;
   height: 1.5rem;
 }
 
 .emotion-47 path {
-  fill: white;
+  fill: white!important;
 }
 
 .emotion-64 {
@@ -1467,13 +1444,12 @@ exports[`Storyshots Updated Components/List/ListItem ListItem compilations 1`] =
   height: 100%;
 }
 
-.emotion-76 {
-  fill: #1249C4;
+.emotion-75 {
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-76 path {
+.emotion-75 path {
   fill: #1249C4;
 }
 
@@ -1972,14 +1948,13 @@ exports[`Storyshots Updated Components/List/ListItem ListItem compilations 1`] =
                         className="emotion-45"
                         htmlFor="styled-checkbox-_00"
                       >
-                        <span
+                        <div
                           className="emotion-46"
-                          onClick={[Function]}
                         >
                           <span
                             className="emotion-47"
                           />
-                        </span>
+                        </div>
                       </label>
                     </span>
                   </span>
@@ -2040,14 +2015,13 @@ exports[`Storyshots Updated Components/List/ListItem ListItem compilations 1`] =
                         className="emotion-45"
                         htmlFor="styled-checkbox-_00"
                       >
-                        <span
+                        <div
                           className="emotion-46"
-                          onClick={[Function]}
                         >
                           <span
                             className="emotion-47"
                           />
-                        </span>
+                        </div>
                       </label>
                     </span>
                   </span>
@@ -2448,13 +2422,8 @@ exports[`Storyshots Updated Components/List/ListItem ListItem compilations 1`] =
                     data-testid="_avatar"
                   >
                     <span
-                      className="emotion-46"
-                      onClick={[Function]}
-                    >
-                      <span
-                        className="emotion-76"
-                      />
-                    </span>
+                      className="emotion-75"
+                    />
                   </div>
                 </div>
                 <div
@@ -2497,13 +2466,8 @@ exports[`Storyshots Updated Components/List/ListItem ListItem compilations 1`] =
                     data-testid="_avatar"
                   >
                     <span
-                      className="emotion-46"
-                      onClick={[Function]}
-                    >
-                      <span
-                        className="emotion-76"
-                      />
-                    </span>
+                      className="emotion-75"
+                    />
                   </div>
                 </div>
                 <div

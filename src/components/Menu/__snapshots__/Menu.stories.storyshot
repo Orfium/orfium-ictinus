@@ -55,6 +55,18 @@ exports[`Storyshots Original Components/Menu Disabled Menu 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #ffffff;
   height: auto;
   background-color: #175bf5;
@@ -146,29 +158,21 @@ exports[`Storyshots Original Components/Menu Disabled Menu 1`] = `
 }
 
 .emotion-8 {
-  padding: 0.125rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
 .emotion-9 {
-  fill: #ffffff;
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .emotion-9 path {
-  fill: #ffffff;
+  fill: #ffffff!important;
 }
 
 <div
@@ -216,14 +220,13 @@ exports[`Storyshots Original Components/Menu Disabled Menu 1`] = `
                         Tom Cruise
                       </span>
                     </span>
-                    <span
+                    <div
                       className="emotion-8"
-                      onClick={[Function]}
                     >
                       <span
                         className="emotion-9"
                       />
-                    </span>
+                    </div>
                   </span>
                 </button>
               </div>
@@ -291,6 +294,18 @@ exports[`Storyshots Original Components/Menu Menu with avatar and different butt
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #ffffff;
   height: auto;
   background-color: #175bf5;
@@ -382,38 +397,29 @@ exports[`Storyshots Original Components/Menu Menu with avatar and different butt
 }
 
 .emotion-8 {
-  padding: 0.125rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
 .emotion-9 {
-  fill: #ffffff;
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .emotion-9 path {
-  fill: #ffffff;
+  fill: #ffffff!important;
 }
 
-.emotion-23 {
-  fill: #1249C4;
+.emotion-22 {
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-23 path {
+.emotion-22 path {
   fill: #1249C4;
 }
 
@@ -462,14 +468,13 @@ exports[`Storyshots Original Components/Menu Menu with avatar and different butt
                         Tom Cruise
                       </span>
                     </span>
-                    <span
+                    <div
                       className="emotion-8"
-                      onClick={[Function]}
                     >
                       <span
                         className="emotion-9"
                       />
-                    </span>
+                    </div>
                   </span>
                 </button>
               </div>
@@ -515,14 +520,13 @@ exports[`Storyshots Original Components/Menu Menu with avatar and different butt
                         Tom Cruise
                       </span>
                     </span>
-                    <span
+                    <div
                       className="emotion-8"
-                      onClick={[Function]}
                     >
                       <span
                         className="emotion-9"
                       />
-                    </span>
+                    </div>
                   </span>
                 </button>
               </div>
@@ -560,27 +564,21 @@ exports[`Storyshots Original Components/Menu Menu with avatar and different butt
                       data-testid="_avatar"
                     >
                       <span
-                        className="emotion-8"
-                        onClick={[Function]}
-                      >
-                        <span
-                          className="emotion-23"
-                        />
-                      </span>
+                        className="emotion-22"
+                      />
                     </div>
                     <span>
                       <span>
                         Tom Cruise
                       </span>
                     </span>
-                    <span
+                    <div
                       className="emotion-8"
-                      onClick={[Function]}
                     >
                       <span
                         className="emotion-9"
                       />
-                    </span>
+                    </div>
                   </span>
                 </button>
               </div>
@@ -618,27 +616,21 @@ exports[`Storyshots Original Components/Menu Menu with avatar and different butt
                       data-testid="_avatar"
                     >
                       <span
-                        className="emotion-8"
-                        onClick={[Function]}
-                      >
-                        <span
-                          className="emotion-23"
-                        />
-                      </span>
+                        className="emotion-22"
+                      />
                     </div>
                     <span>
                       <span>
                         Tom Cruise
                       </span>
                     </span>
-                    <span
+                    <div
                       className="emotion-8"
-                      onClick={[Function]}
                     >
                       <span
                         className="emotion-9"
                       />
-                    </span>
+                    </div>
                   </span>
                 </button>
               </div>
@@ -706,6 +698,18 @@ exports[`Storyshots Original Components/Menu Menu with option icon and different
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #ffffff;
   height: auto;
   background-color: #175bf5;
@@ -797,39 +801,30 @@ exports[`Storyshots Original Components/Menu Menu with option icon and different
 }
 
 .emotion-8 {
-  padding: 0.125rem;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-8 path {
+  fill: #1249C4;
+}
+
+.emotion-9 {
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
-.emotion-9 {
-  fill: #1249C4;
-  width: 1rem;
-  height: 1rem;
+.emotion-10 {
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
-.emotion-9 path {
-  fill: #1249C4;
-}
-
-.emotion-11 {
-  fill: #ffffff;
-  width: 1rem;
-  height: 1rem;
-}
-
-.emotion-11 path {
-  fill: #ffffff;
+.emotion-10 path {
+  fill: #ffffff!important;
 }
 
 <div
@@ -872,26 +867,20 @@ exports[`Storyshots Original Components/Menu Menu with option icon and different
                     >
                       <span
                         className="emotion-8"
-                        onClick={[Function]}
-                      >
-                        <span
-                          className="emotion-9"
-                        />
-                      </span>
+                      />
                     </div>
                     <span>
                       <span>
                         More
                       </span>
                     </span>
-                    <span
-                      className="emotion-8"
-                      onClick={[Function]}
+                    <div
+                      className="emotion-9"
                     >
                       <span
-                        className="emotion-11"
+                        className="emotion-10"
                       />
-                    </span>
+                    </div>
                   </span>
                 </button>
               </div>
@@ -930,26 +919,20 @@ exports[`Storyshots Original Components/Menu Menu with option icon and different
                     >
                       <span
                         className="emotion-8"
-                        onClick={[Function]}
-                      >
-                        <span
-                          className="emotion-9"
-                        />
-                      </span>
+                      />
                     </div>
                     <span>
                       <span>
                         More
                       </span>
                     </span>
-                    <span
-                      className="emotion-8"
-                      onClick={[Function]}
+                    <div
+                      className="emotion-9"
                     >
                       <span
-                        className="emotion-11"
+                        className="emotion-10"
                       />
-                    </span>
+                    </div>
                   </span>
                 </button>
               </div>
@@ -988,26 +971,20 @@ exports[`Storyshots Original Components/Menu Menu with option icon and different
                     >
                       <span
                         className="emotion-8"
-                        onClick={[Function]}
-                      >
-                        <span
-                          className="emotion-9"
-                        />
-                      </span>
+                      />
                     </div>
                     <span>
                       <span>
                         More
                       </span>
                     </span>
-                    <span
-                      className="emotion-8"
-                      onClick={[Function]}
+                    <div
+                      className="emotion-9"
                     >
                       <span
-                        className="emotion-11"
+                        className="emotion-10"
                       />
-                    </span>
+                    </div>
                   </span>
                 </button>
               </div>
@@ -1061,6 +1038,18 @@ exports[`Storyshots Original Components/Menu Menu with selection handler 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #ffffff;
   height: auto;
   background-color: #175bf5;

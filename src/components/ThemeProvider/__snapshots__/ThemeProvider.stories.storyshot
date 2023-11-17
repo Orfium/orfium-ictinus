@@ -29,6 +29,18 @@ exports[`Storyshots Original Components/ThemeProvider Setting up a button exampl
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #ffffff;
   height: auto;
   background-color: #175bf5;

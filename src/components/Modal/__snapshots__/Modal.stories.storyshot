@@ -43,6 +43,18 @@ exports[`Storyshots Original Components/Modal Modal 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #ffffff;
   height: auto;
   background-color: #175bf5;
@@ -87,6 +99,15 @@ exports[`Storyshots Original Components/Modal Modal 1`] = `
   gap: 0.5rem;
 }
 
+.emotion-6 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  color: #686BB3;
+}
+
 <div
   className="emotion-0"
 >
@@ -118,44 +139,53 @@ exports[`Storyshots Original Components/Modal Modal 1`] = `
           <div
             style={
               Object {
-                "height": "100%",
-                "width": "100%",
+                "alignItems": "center",
+                "display": "flex",
+                "flexDirection": "row",
+                "gap": "8px",
+                "justifyContent": "center",
+                "width": 768,
               }
             }
           >
             <div
-              className="emotion-3"
-            >
-              <button
-                className="emotion-4"
-                data-testid="button"
-                disabled={false}
-                onClick={[Function]}
-                type="button"
-              >
-                <span
-                  className="emotion-5"
-                >
-                  <span>
-                    Open Modal
-                  </span>
-                </span>
-              </button>
-            </div>
-            <div
               style={
                 Object {
-                  "height": "1800px",
+                  "height": "100%",
+                  "width": "100%",
                 }
               }
-            />
+            >
+              <div
+                className="emotion-3"
+              >
+                <button
+                  className="emotion-4"
+                  data-testid="button"
+                  disabled={false}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <span
+                    className="emotion-5"
+                  >
+                    <span>
+                      Open Modal
+                    </span>
+                  </span>
+                </button>
+              </div>
+              <div
+                style={
+                  Object {
+                    "height": "1800px",
+                  }
+                }
+              />
+            </div>
           </div>
-          <p
-            style={
-              Object {
-                "paddingTop": "8px",
-              }
-            }
+          <span
+            className="emotion-6"
           />
         </div>
       </div>
@@ -207,6 +237,18 @@ exports[`Storyshots Original Components/Modal Modal Content 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #ffffff;
   height: auto;
   background-color: #175bf5;
@@ -251,6 +293,15 @@ exports[`Storyshots Original Components/Modal Modal Content 1`] = `
   gap: 0.5rem;
 }
 
+.emotion-6 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  color: #686BB3;
+}
+
 <div
   className="emotion-0"
 >
@@ -282,44 +333,53 @@ exports[`Storyshots Original Components/Modal Modal Content 1`] = `
           <div
             style={
               Object {
-                "height": "100%",
-                "width": "100%",
+                "alignItems": "center",
+                "display": "flex",
+                "flexDirection": "row",
+                "gap": "8px",
+                "justifyContent": "center",
+                "width": 768,
               }
             }
           >
             <div
-              className="emotion-3"
-            >
-              <button
-                className="emotion-4"
-                data-testid="button"
-                disabled={false}
-                onClick={[Function]}
-                type="button"
-              >
-                <span
-                  className="emotion-5"
-                >
-                  <span>
-                    Open Modal
-                  </span>
-                </span>
-              </button>
-            </div>
-            <div
               style={
                 Object {
-                  "height": "1800px",
+                  "height": "100%",
+                  "width": "100%",
                 }
               }
-            />
+            >
+              <div
+                className="emotion-3"
+              >
+                <button
+                  className="emotion-4"
+                  data-testid="button"
+                  disabled={false}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <span
+                    className="emotion-5"
+                  >
+                    <span>
+                      Open Modal
+                    </span>
+                  </span>
+                </button>
+              </div>
+              <div
+                style={
+                  Object {
+                    "height": "1800px",
+                  }
+                }
+              />
+            </div>
           </div>
-          <p
-            style={
-              Object {
-                "paddingTop": "8px",
-              }
-            }
+          <span
+            className="emotion-6"
           />
         </div>
       </div>

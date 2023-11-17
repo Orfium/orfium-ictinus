@@ -670,29 +670,21 @@ exports[`Storyshots Updated Components/Fields/NumberField NumberField statuses 1
 }
 
 .emotion-17 {
-  padding: 0.125rem;
+  width: 1rem;
+  height: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
 .emotion-18 {
-  fill: #CB205D;
-  width: 0.75rem;
-  height: 0.75rem;
+  width: 1rem;
+  height: 1rem;
 }
 
 .emotion-18 path {
-  fill: #CB205D;
+  fill: #CB205D!important;
 }
 
 .emotion-19 {
@@ -832,7 +824,7 @@ exports[`Storyshots Updated Components/Fields/NumberField NumberField statuses 1
 
 .emotion-25 {
   min-width: 2.75rem;
-  overflow: hidden;
+  overflow: visible;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -848,14 +840,22 @@ exports[`Storyshots Updated Components/Fields/NumberField NumberField statuses 1
   cursor: unset;
 }
 
+.emotion-26 {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-27 {
-  fill: #5f6c85;
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .emotion-27 path {
-  fill: #5f6c85;
+  fill: #686BB3!important;
 }
 
 <div
@@ -1052,14 +1052,13 @@ exports[`Storyshots Updated Components/Fields/NumberField NumberField statuses 1
             className="emotion-16"
             data-testid="error"
           >
-            <span
+            <div
               className="emotion-17"
-              onClick={[Function]}
             >
               <span
                 className="emotion-18"
               />
-            </span>
+            </div>
             <span
               id="numberfield__00_hintMessage"
             >
@@ -1155,14 +1154,13 @@ exports[`Storyshots Updated Components/Fields/NumberField NumberField statuses 1
                 aria-hidden={false}
                 className="emotion-25"
               >
-                <span
-                  className="emotion-17"
-                  onClick={[Function]}
+                <div
+                  className="emotion-26"
                 >
                   <span
                     className="emotion-27"
                   />
-                </span>
+                </div>
               </div>
             </div>
           </div>
@@ -1693,7 +1691,7 @@ exports[`Storyshots Updated Components/Fields/NumberField NumberField with min/m
 
 .emotion-9 {
   min-width: 2.75rem;
-  overflow: hidden;
+  overflow: visible;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2512,6 +2510,18 @@ exports[`Storyshots Updated Components/Fields/NumberField NumberField with stepp
 }
 
 .emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   background: transparent;
   border: none;
   height: calc(3.25rem / 2);
@@ -2523,29 +2533,21 @@ exports[`Storyshots Updated Components/Fields/NumberField NumberField with stepp
 }
 
 .emotion-11 {
-  padding: 0.125rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
 .emotion-12 {
-  fill: #54587F;
-  width: 0.75rem;
-  height: 0.75rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .emotion-12 path {
-  fill: #54587F;
+  fill: #686BB3!important;
 }
 
 <div
@@ -2665,14 +2667,13 @@ exports[`Storyshots Updated Components/Fields/NumberField NumberField with stepp
                         tabIndex={-1}
                         type="button"
                       >
-                        <span
+                        <div
                           className="emotion-11"
-                          onClick={[Function]}
                         >
                           <span
                             className="emotion-12"
                           />
-                        </span>
+                        </div>
                       </button>
                       <button
                         aria-controls="react-aria-generated-id"
@@ -2701,14 +2702,13 @@ exports[`Storyshots Updated Components/Fields/NumberField NumberField with stepp
                         tabIndex={-1}
                         type="button"
                       >
-                        <span
+                        <div
                           className="emotion-11"
-                          onClick={[Function]}
                         >
                           <span
                             className="emotion-12"
                           />
-                        </span>
+                        </div>
                       </button>
                     </div>
                   </div>

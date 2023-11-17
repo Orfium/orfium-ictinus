@@ -106,29 +106,21 @@ exports[`Storyshots Original Components/Toast Generic Toast 1`] = `
 }
 
 .emotion-8 {
-  padding: 0.125rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
 .emotion-9 {
-  fill: #fff;
   width: 1.25rem;
   height: 1.25rem;
 }
 
 .emotion-9 path {
-  fill: #fff;
+  fill: #fff!important;
 }
 
 .emotion-10 {
@@ -165,6 +157,15 @@ exports[`Storyshots Original Components/Toast Generic Toast 1`] = `
   background: #175bf5;
 }
 
+.emotion-36 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  color: #686BB3;
+}
+
 <div
   className="emotion-0"
 >
@@ -184,230 +185,233 @@ exports[`Storyshots Original Components/Toast Generic Toast 1`] = `
       }
     >
       <div
-        className="emotion-2"
+        style={
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+            "flexDirection": "row",
+            "gap": "8px",
+            "justifyContent": "center",
+            "width": 768,
+          }
+        }
       >
         <div
-          style={
-            Object {
-              "margin": 5,
-            }
-          }
+          className="emotion-2"
         >
           <div
-            className="emotion-3"
+            style={
+              Object {
+                "margin": 5,
+              }
+            }
           >
             <div
-              className="emotion-4"
+              className="emotion-3"
             >
               <div
-                className="emotion-5"
+                className="emotion-4"
               >
-                <div>
-                  Secondary colored Toast
+                <div
+                  className="emotion-5"
+                >
+                  <div>
+                    Secondary colored Toast
+                  </div>
+                </div>
+                <div
+                  className="emotion-6"
+                >
+                  <span
+                    className="emotion-7"
+                    data-testid="toast-expand"
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="emotion-8"
+                    >
+                      <span
+                        className="emotion-9"
+                      />
+                    </div>
+                  </span>
+                  <span
+                    className="emotion-10"
+                    data-testid="toast-close"
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="emotion-8"
+                    >
+                      <span
+                        className="emotion-9"
+                      />
+                    </div>
+                  </span>
                 </div>
               </div>
               <div
-                className="emotion-6"
-              >
-                <span
-                  className="emotion-7"
-                  data-testid="toast-expand"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="emotion-8"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="emotion-9"
-                    />
-                  </span>
-                </span>
-                <span
-                  className="emotion-10"
-                  data-testid="toast-close"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="emotion-8"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="emotion-9"
-                    />
-                  </span>
-                </span>
-              </div>
+                className="emotion-13"
+                data-testid="expanded-container"
+              />
             </div>
-            <div
-              className="emotion-13"
-              data-testid="expanded-container"
-            />
           </div>
-        </div>
-        <div
-          style={
-            Object {
-              "margin": 5,
-            }
-          }
-        >
           <div
-            className="emotion-3"
+            style={
+              Object {
+                "margin": 5,
+              }
+            }
           >
             <div
-              className="emotion-15"
+              className="emotion-3"
             >
               <div
-                className="emotion-5"
+                className="emotion-15"
               >
-                <div>
-                  Primary colored Toast
+                <div
+                  className="emotion-5"
+                >
+                  <div>
+                    Primary colored Toast
+                  </div>
+                </div>
+                <div
+                  className="emotion-6"
+                >
+                  <span
+                    className="emotion-7"
+                    data-testid="toast-expand"
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="emotion-8"
+                    >
+                      <span
+                        className="emotion-9"
+                      />
+                    </div>
+                  </span>
+                  <span
+                    className="emotion-10"
+                    data-testid="toast-close"
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="emotion-8"
+                    >
+                      <span
+                        className="emotion-9"
+                      />
+                    </div>
+                  </span>
                 </div>
               </div>
               <div
-                className="emotion-6"
-              >
-                <span
-                  className="emotion-7"
-                  data-testid="toast-expand"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="emotion-8"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="emotion-9"
-                    />
-                  </span>
-                </span>
-                <span
-                  className="emotion-10"
-                  data-testid="toast-close"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="emotion-8"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="emotion-9"
-                    />
-                  </span>
-                </span>
-              </div>
+                className="emotion-13"
+                data-testid="expanded-container"
+              />
             </div>
-            <div
-              className="emotion-13"
-              data-testid="expanded-container"
-            />
           </div>
-        </div>
-        <div
-          style={
-            Object {
-              "margin": 5,
-            }
-          }
-        >
           <div
-            className="emotion-3"
+            style={
+              Object {
+                "margin": 5,
+              }
+            }
           >
             <div
-              className="emotion-15"
+              className="emotion-3"
             >
               <div
-                className="emotion-5"
+                className="emotion-15"
               >
-                <div>
-                  Default colored Toast
+                <div
+                  className="emotion-5"
+                >
+                  <div>
+                    Default colored Toast
+                  </div>
+                </div>
+                <div
+                  className="emotion-6"
+                >
+                  <span
+                    className="emotion-7"
+                    data-testid="toast-expand"
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="emotion-8"
+                    >
+                      <span
+                        className="emotion-9"
+                      />
+                    </div>
+                  </span>
+                  <span
+                    className="emotion-10"
+                    data-testid="toast-close"
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="emotion-8"
+                    >
+                      <span
+                        className="emotion-9"
+                      />
+                    </div>
+                  </span>
                 </div>
               </div>
               <div
-                className="emotion-6"
+                className="emotion-13"
+                data-testid="expanded-container"
               >
-                <span
-                  className="emotion-7"
-                  data-testid="toast-expand"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="emotion-8"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="emotion-9"
-                    />
-                  </span>
-                </span>
-                <span
-                  className="emotion-10"
-                  data-testid="toast-close"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="emotion-8"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="emotion-9"
-                    />
-                  </span>
-                </span>
-              </div>
-            </div>
-            <div
-              className="emotion-13"
-              data-testid="expanded-container"
-            >
-              <div>
-                <h1>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est porttitor
-                </h1>
-                <ul>
-                  <li>
-                    <h1>
-                      Lorem ipsum dolor sit amet
-                    </h1>
-                  </li>
-                  <li>
-                    <h1>
-                      consectetur adipiscing elit
-                    </h1>
-                  </li>
-                  <li>
-                    <h1>
-                      Sed viverra neque
-                    </h1>
-                  </li>
-                  <li>
-                    <h1>
-                      neque nec
-                    </h1>
-                  </li>
-                  <li>
-                    <h1>
-                      est porttitor
-                    </h1>
-                  </li>
-                  <li>
-                    <h1>
-                      dolor sit amet
-                    </h1>
-                  </li>
-                </ul>
+                <div>
+                  <h1>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est porttitor
+                  </h1>
+                  <ul>
+                    <li>
+                      <h1>
+                        Lorem ipsum dolor sit amet
+                      </h1>
+                    </li>
+                    <li>
+                      <h1>
+                        consectetur adipiscing elit
+                      </h1>
+                    </li>
+                    <li>
+                      <h1>
+                        Sed viverra neque
+                      </h1>
+                    </li>
+                    <li>
+                      <h1>
+                        neque nec
+                      </h1>
+                    </li>
+                    <li>
+                      <h1>
+                        est porttitor
+                      </h1>
+                    </li>
+                    <li>
+                      <h1>
+                        dolor sit amet
+                      </h1>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <p
-        style={
-          Object {
-            "paddingTop": "8px",
-          }
-        }
+      <span
+        className="emotion-36"
       />
     </div>
   </div>

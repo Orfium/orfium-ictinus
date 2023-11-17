@@ -88,29 +88,21 @@ exports[`Storyshots Original Components/TopNavBar playground 1`] = `
 }
 
 .emotion-5 {
-  padding: 0.125rem;
+  width: 1.5rem;
+  height: 1.5rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
 .emotion-6 {
-  fill: #e7eefe;
   width: 1.5rem;
   height: 1.5rem;
 }
 
 .emotion-6 path {
-  fill: #e7eefe;
+  fill: #175bf5!important;
 }
 
 .emotion-7 {
@@ -236,6 +228,18 @@ exports[`Storyshots Original Components/TopNavBar playground 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #1552DD;
   height: auto;
   background-color: rgba(84,94,255,0);
@@ -330,14 +334,22 @@ exports[`Storyshots Original Components/TopNavBar playground 1`] = `
   font-weight: 500;
 }
 
+.emotion-17 {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-18 {
-  fill: #1552DD;
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .emotion-18 path {
-  fill: #1552DD;
+  fill: #1552DD!important;
 }
 
 <div
@@ -366,14 +378,13 @@ exports[`Storyshots Original Components/TopNavBar playground 1`] = `
             data-testid="menu-handler"
             onClick={[Function]}
           >
-            <span
+            <div
               className="emotion-5"
-              onClick={[Function]}
             >
               <span
                 className="emotion-6"
               />
-            </span>
+            </div>
           </div>
           <div
             className="emotion-7"
@@ -431,14 +442,13 @@ exports[`Storyshots Original Components/TopNavBar playground 1`] = `
                           </span>
                         </span>
                       </span>
-                      <span
-                        className="emotion-5"
-                        onClick={[Function]}
+                      <div
+                        className="emotion-17"
                       >
                         <span
                           className="emotion-18"
                         />
-                      </span>
+                      </div>
                     </span>
                   </button>
                 </div>
@@ -540,29 +550,21 @@ exports[`Storyshots Original Components/TopNavBar with Additional Tools 1`] = `
 }
 
 .emotion-5 {
-  padding: 0.125rem;
+  width: 1.5rem;
+  height: 1.5rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
 .emotion-6 {
-  fill: #e7eefe;
   width: 1.5rem;
   height: 1.5rem;
 }
 
 .emotion-6 path {
-  fill: #e7eefe;
+  fill: #175bf5!important;
 }
 
 .emotion-7 {
@@ -869,6 +871,18 @@ exports[`Storyshots Original Components/TopNavBar with Additional Tools 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #1552DD;
   height: auto;
   background-color: rgba(84,94,255,0);
@@ -963,14 +977,22 @@ exports[`Storyshots Original Components/TopNavBar with Additional Tools 1`] = `
   font-weight: 500;
 }
 
+.emotion-32 {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-33 {
-  fill: #1552DD;
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .emotion-33 path {
-  fill: #1552DD;
+  fill: #1552DD!important;
 }
 
 <div
@@ -999,14 +1021,13 @@ exports[`Storyshots Original Components/TopNavBar with Additional Tools 1`] = `
             data-testid="menu-handler"
             onClick={[Function]}
           >
-            <span
+            <div
               className="emotion-5"
-              onClick={[Function]}
             >
               <span
                 className="emotion-6"
               />
-            </span>
+            </div>
           </div>
           <div
             className="emotion-7"
@@ -1161,14 +1182,13 @@ exports[`Storyshots Original Components/TopNavBar with Additional Tools 1`] = `
                           </span>
                         </span>
                       </span>
-                      <span
-                        className="emotion-5"
-                        onClick={[Function]}
+                      <div
+                        className="emotion-32"
                       >
                         <span
                           className="emotion-33"
                         />
-                      </span>
+                      </div>
                     </span>
                   </button>
                 </div>
@@ -1270,29 +1290,21 @@ exports[`Storyshots Original Components/TopNavBar with Dark theme enabled 1`] = 
 }
 
 .emotion-5 {
-  padding: 0.125rem;
+  width: 1.5rem;
+  height: 1.5rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
 .emotion-6 {
-  fill: #e7eefe;
   width: 1.5rem;
   height: 1.5rem;
 }
 
 .emotion-6 path {
-  fill: #e7eefe;
+  fill: #175bf5!important;
 }
 
 .emotion-7 {
@@ -1418,6 +1430,18 @@ exports[`Storyshots Original Components/TopNavBar with Dark theme enabled 1`] = 
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #1552DD;
   height: auto;
   background-color: rgba(84,94,255,0);
@@ -1512,14 +1536,22 @@ exports[`Storyshots Original Components/TopNavBar with Dark theme enabled 1`] = 
   font-weight: 500;
 }
 
+.emotion-17 {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-18 {
-  fill: #1552DD;
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .emotion-18 path {
-  fill: #1552DD;
+  fill: #1552DD!important;
 }
 
 <div
@@ -1548,14 +1580,13 @@ exports[`Storyshots Original Components/TopNavBar with Dark theme enabled 1`] = 
             data-testid="menu-handler"
             onClick={[Function]}
           >
-            <span
+            <div
               className="emotion-5"
-              onClick={[Function]}
             >
               <span
                 className="emotion-6"
               />
-            </span>
+            </div>
           </div>
           <div
             className="emotion-7"
@@ -1613,14 +1644,13 @@ exports[`Storyshots Original Components/TopNavBar with Dark theme enabled 1`] = 
                           </span>
                         </span>
                       </span>
-                      <span
-                        className="emotion-5"
-                        onClick={[Function]}
+                      <div
+                        className="emotion-17"
                       >
                         <span
                           className="emotion-18"
                         />
-                      </span>
+                      </div>
                     </span>
                   </button>
                 </div>
@@ -1722,29 +1752,21 @@ exports[`Storyshots Original Components/TopNavBar with Logo Placeholder 1`] = `
 }
 
 .emotion-5 {
-  padding: 0.125rem;
+  width: 1.5rem;
+  height: 1.5rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
 .emotion-6 {
-  fill: #e7eefe;
   width: 1.5rem;
   height: 1.5rem;
 }
 
 .emotion-6 path {
-  fill: #e7eefe;
+  fill: #175bf5!important;
 }
 
 .emotion-7 {
@@ -1870,6 +1892,18 @@ exports[`Storyshots Original Components/TopNavBar with Logo Placeholder 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #1552DD;
   height: auto;
   background-color: rgba(84,94,255,0);
@@ -1964,14 +1998,22 @@ exports[`Storyshots Original Components/TopNavBar with Logo Placeholder 1`] = `
   font-weight: 500;
 }
 
+.emotion-17 {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-18 {
-  fill: #1552DD;
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .emotion-18 path {
-  fill: #1552DD;
+  fill: #1552DD!important;
 }
 
 <div
@@ -2000,14 +2042,13 @@ exports[`Storyshots Original Components/TopNavBar with Logo Placeholder 1`] = `
             data-testid="menu-handler"
             onClick={[Function]}
           >
-            <span
+            <div
               className="emotion-5"
-              onClick={[Function]}
             >
               <span
                 className="emotion-6"
               />
-            </span>
+            </div>
           </div>
           <div
             className="emotion-7"
@@ -2065,14 +2106,13 @@ exports[`Storyshots Original Components/TopNavBar with Logo Placeholder 1`] = `
                           </span>
                         </span>
                       </span>
-                      <span
-                        className="emotion-5"
-                        onClick={[Function]}
+                      <div
+                        className="emotion-17"
                       >
                         <span
                           className="emotion-18"
                         />
-                      </span>
+                      </div>
                     </span>
                   </button>
                 </div>

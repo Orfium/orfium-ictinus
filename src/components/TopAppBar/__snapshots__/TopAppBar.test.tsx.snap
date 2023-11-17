@@ -190,6 +190,18 @@ exports[`TopAppBar should render correctly 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #1552DD;
   height: auto;
   background-color: rgba(84,94,255,0);
@@ -285,29 +297,21 @@ exports[`TopAppBar should render correctly 1`] = `
 }
 
 .emotion-12 {
-  padding: 0.125rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
 .emotion-13 {
-  fill: #1552DD;
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .emotion-13 path {
-  fill: #1552DD;
+  fill: #1552DD!important;
 }
 
 .emotion-0 {
@@ -499,6 +503,18 @@ exports[`TopAppBar should render correctly 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #1552DD;
   height: auto;
   background-color: rgba(84,94,255,0);
@@ -594,29 +610,21 @@ exports[`TopAppBar should render correctly 1`] = `
 }
 
 .emotion-12 {
-  padding: 0.125rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
 .emotion-13 {
-  fill: #1552DD;
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .emotion-13 path {
-  fill: #1552DD;
+  fill: #1552DD!important;
 }
 
 <div>
@@ -682,13 +690,13 @@ exports[`TopAppBar should render correctly 1`] = `
                       </span>
                     </span>
                   </span>
-                  <span
+                  <div
                     class="emotion-12"
                   >
                     <span
                       class="emotion-13"
                     />
-                  </span>
+                  </div>
                 </span>
               </button>
             </div>
@@ -890,6 +898,18 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #1552DD;
   height: auto;
   background-color: rgba(84,94,255,0);
@@ -985,29 +1005,21 @@ exports[`TopAppBar should render correctly on dark 1`] = `
 }
 
 .emotion-12 {
-  padding: 0.125rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
 .emotion-13 {
-  fill: #1552DD;
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .emotion-13 path {
-  fill: #1552DD;
+  fill: #1552DD!important;
 }
 
 .emotion-0 {
@@ -1199,6 +1211,18 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #1552DD;
   height: auto;
   background-color: rgba(84,94,255,0);
@@ -1294,29 +1318,21 @@ exports[`TopAppBar should render correctly on dark 1`] = `
 }
 
 .emotion-12 {
-  padding: 0.125rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
 .emotion-13 {
-  fill: #1552DD;
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .emotion-13 path {
-  fill: #1552DD;
+  fill: #1552DD!important;
 }
 
 <div>
@@ -1382,13 +1398,13 @@ exports[`TopAppBar should render correctly on dark 1`] = `
                       </span>
                     </span>
                   </span>
-                  <span
+                  <div
                     class="emotion-12"
                   >
                     <span
                       class="emotion-13"
                     />
-                  </span>
+                  </div>
                 </span>
               </button>
             </div>
