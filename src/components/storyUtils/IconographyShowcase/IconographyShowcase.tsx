@@ -66,7 +66,7 @@ const IconographyShowcase: FCC = () => {
                   {iconsSet[set].title}
                 </Typography>
                 <div css={{ display: 'flex', flexWrap: 'wrap', rowGap: '48px' }}>
-                  {iconsSet[set].icons.map((icon, index) => {
+                  {iconsSet[set].icons.map((icon: AcceptedIconNames, index: number) => {
                     return (
                       <div
                         style={{
@@ -86,7 +86,7 @@ const IconographyShowcase: FCC = () => {
                             alignItems: 'center',
                           }}
                         >
-                          <Icon name={icon as AcceptedIconNames} />
+                          <Icon name={icon} />
                         </div>
                         <Typography variant="label03" type="secondary">
                           {icon}

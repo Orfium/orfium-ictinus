@@ -74,7 +74,7 @@ export const textInputBaseOverrides =
     return {
       wrapper: {
         height: 'unset',
-        minHeight: `${tokens('container')} !important`,
+        minHeight: `${tokens('container.compact')} !important`,
         ...(hasValue
           ? { label: labelStyles }
           : {

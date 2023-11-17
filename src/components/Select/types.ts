@@ -1,7 +1,7 @@
 import { InputHTMLAttributes } from 'react';
 
 import { TestProps } from '../../utils/types';
-import { OwnProps as IconProps } from '../Icon';
+import { IconProps } from '../Icon';
 import { TextFieldProps } from '../TextField';
 
 export type SelectOptionValues = {
