@@ -1,30 +1,51 @@
+import { css } from '@emotion/react';
 import { rem } from 'theme/utils';
 
+import { IconProps } from './Icon';
 import { Theme } from '../../theme';
-import { colorShades } from '../../theme/palette';
-import { AcceptedColorComponentTypes, fillPickerBasedOnType } from '../../utils/themeFunctions';
 
-type iconStyleProps = {
-  /** Property indicating the color of the icon. Defaults to primary */
-  color: AcceptedColorComponentTypes | string;
-  /** Property indicating the size of the icon. Defaults to 16 */
-  size: number;
-  /** Property indicating the color's variant of the icon. */
-  variant?: typeof colorShades[number];
-};
+export const iconContainerStyles =
+  ({
+    hasHover,
+    isInteractive,
+    size = 20,
+  }: Pick<IconProps, 'hasHover' | 'size'> & { isInteractive?: boolean }) =>
+  (theme: Theme) => {
+    const iconSize = typeof size === 'number' || size.includes('px') ? rem(size) : size;
 
-export const iconStyle = ({ color, size, variant }: iconStyleProps) => (theme: Theme) => ({
-  fill: fillPickerBasedOnType(color, variant)(theme),
-  width: rem(size),
-  height: rem(size),
-  path: {
-    fill: fillPickerBasedOnType(color, variant)(theme),
-  },
-});
+    return css`
+      width: ${iconSize};
+      height: ${iconSize};
+      display: flex;
 
-export const iconContainerStyle = () => ({
-  padding: rem(2),
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-});
+      ${isInteractive &&
+      `
+        cursor: pointer;
+      `}
+
+      ${hasHover &&
+      `
+        &:hover, &:focus-visible {
+          transition: all 0.2s;
+          border-radius: 100%;
+          background: ${theme.tokens.state.get('backgroundColor.hover')};
+          box-shadow: 0px 0px 0px 8px ${theme.tokens.state.get('backgroundColor.hover')};
+        }
+      `}
+    `;
+  };
+
+export const iconStyles =
+  ({ color, size = 20 }: Pick<IconProps, 'color' | 'size'>) =>
+  () => {
+    const iconSize = typeof size === 'number' || size.includes('px') ? rem(size) : size;
+
+    return css`
+      width: ${iconSize};
+      height: ${iconSize};
+
+      path {
+        fill: ${color} !important;
+      }
+    `;
+  };

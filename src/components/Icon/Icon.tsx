@@ -1,39 +1,51 @@
+import useTheme from 'hooks/useTheme';
 import * as React from 'react';
+import { DivProps } from 'utils/common';
 
 import iconSelector from './assets/iconSelector';
-import { iconContainerStyle, iconStyle } from './Icon.style';
+import { iconContainerStyles, iconStyles } from './Icon.style';
 import { AcceptedIconNames } from './types';
-import { colorShades } from '../../theme/palette';
-import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 import { TestProps } from '../../utils/types';
 
-export type OwnProps = {
+export type IconProps = {
   /** This property defines witch icon to use */
   name: AcceptedIconNames;
   /** Property indicating the color of the icon. Defaults to primary */
-  color?: AcceptedColorComponentTypes | string;
+  color?: string;
   /** Property indicating the size of the icon. Defaults to 16 */
-  size?: number;
-  /** Callback fired when the `span` is clicked. */
-  onClick?: React.MouseEventHandler<HTMLSpanElement>;
+  size?: string | number;
+  /** Whether the icon has a onHover style. Defaults to true if onClick is provided */
+  hasHover?: boolean;
+} & DivProps &
+  TestProps;
 
-  /** Property indicating the color's variant of the icon. */
-  variant?: (typeof colorShades)[number];
-};
+const Icon = React.forwardRef<HTMLDivElement, IconProps>((props, ref) => {
+  const theme = useTheme();
+  const {
+    name,
+    color = theme.tokens.colors.get('textColor.default.secondary'),
+    size = 20,
+    onClick,
+    dataTestId,
+    ...rest
+  } = props;
+  const isInteractive = Boolean(onClick);
+  const { hasHover = isInteractive } = props;
+  const Icon = iconSelector[name];
 
-export type IconProps = OwnProps & TestProps;
+  return (
+    <div
+      onClick={onClick}
+      css={iconContainerStyles({ size, hasHover, isInteractive })}
+      data-testid={dataTestId}
+      ref={ref}
+      {...rest}
+    >
+      <Icon css={iconStyles({ color, size })} />
+    </div>
+  );
+});
 
-const Icon = React.forwardRef<HTMLSpanElement, IconProps>(
-  ({ variant, name, color = 'primary', size = 16, dataTestId, onClick = () => {} }, ref) => {
-    const Icon = iconSelector[name];
-
-    return (
-      <span ref={ref} css={iconContainerStyle()} onClick={onClick} data-testid={dataTestId}>
-        <Icon css={iconStyle({ color, size, variant })} />
-      </span>
-    );
-  }
-);
 Icon.displayName = 'Icon';
 
 export default Icon;

@@ -1,12 +1,14 @@
 import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
+import { number, text, withKnobs } from '@storybook/addon-knobs';
 import Icon from './Icon';
 import Stack from '../storyUtils/Stack';
-import PresentComponent from '../storyUtils/PresentComponent';
-import iconSelector from './assets/iconSelector';
+import IconographyShowcase from '../storyUtils/IconographyShowcase';
 import { FIGMA_URL } from '../../utils/common';
+import Overview from '../../storybook/Overview';
+import { getIconSelectorKnob } from '../../utils/stories';
 
 <Meta
-  title="Original Components/Icon"
+  title="Updated Components/Icon"
   component={Icon}
   parameters={{
     design: [
@@ -19,94 +21,64 @@ import { FIGMA_URL } from '../../utils/common';
   }}
 />
 
-# Icon
+<SectionHeader title={'Icon'} />
 
-A universal Icon component to select and style the icons encapsulated in the design system.
+- [Overview](#overview)
+- [Props](#props)
+- [Collection](#collection)
+- [Variants](#variants)
 
-## Usage
+## Overview
 
-```js
-import { Icon } from '@orfium/ictinus';
-
-<Icon name={'add'} color={'primary'} size={14} />;
-```
+<Story
+  name="Overview"
+  parameters={{
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+>
+  <Overview>
+    A component that includes a collection of icons that can be either decorative or interactive.
+  </Overview>
+</Story>
 
 ## Props
 
 <Props of={Icon} />
 
-### Icons Gallery
-
-All the icons available for use.
+## Collection
 
 <Preview>
-  <Story name="Icons Gallery">
+  <Story name="Collection">
+    <IconographyShowcase />
+  </Story>
+</Preview>
+
+<SubsectionHeader title="Variants" />
+
+### Interactive Icon
+
+To make the icon interactive, provide the `onClick` prop. The `hasHover` prop defaults to `true` if the `onClick` prop is provided.
+
+<Preview>
+  <Story name="Interactive Icon">
     <Stack>
-      {Object.keys(iconSelector)
-        .sort((a, b) => a.localeCompare(b))
-        .map((iconName) => (
-          <PresentComponent key={iconName} name={iconName} width={150}>
-            <Icon name={iconName} color={'darkGrey'} />
-          </PresentComponent>
-        ))}
+      <Icon name="moreOptions" onClick={() => console.log('click')} size={12} />
     </Stack>
   </Story>
 </Preview>
 
-### Icon with color
-
-Icon with color.
+### Playground
 
 <Preview>
-  <Story name="Icon with color">
-    <Stack>
-      <PresentComponent name={'primary'}>
-        <Icon name={'add'} color={'primary'} />
-      </PresentComponent>
-      <PresentComponent name={'secondary'}>
-        <Icon name={'add'} color={'secondary'} />
-      </PresentComponent>
-      <PresentComponent name={'success'}>
-        <Icon name={'add'} color={'success'} />
-      </PresentComponent>
-      <PresentComponent name={'error'}>
-        <Icon name={'add'} color={'error'} />
-      </PresentComponent>
-      <PresentComponent name={'info'}>
-        <Icon name={'add'} color={'info'} />
-      </PresentComponent>
-      <PresentComponent name={'warning'}>
-        <Icon name={'add'} color={'warning'} />
-      </PresentComponent>
-      <PresentComponent name={'primary'}>
-        <Icon name={'add'} color={'primary'} />
-      </PresentComponent>
-      <PresentComponent name={'secondary'}>
-        <Icon name={'add'} color={'secondary'} />
-      </PresentComponent>
-      <PresentComponent name={'custom'}>
-        <Icon name={'add'} color={'#de5798'} />
-      </PresentComponent>
-    </Stack>
-  </Story>
-</Preview>
-
-### Icon with size
-
-Icon with size.
-
-<Preview>
-  <Story name="Icon with size">
-    <Stack>
-      <PresentComponent name={'default'}>
-        <Icon name={'add'} />
-      </PresentComponent>
-      <PresentComponent name={'20'}>
-        <Icon name={'add'} size={20} />
-      </PresentComponent>
-      <PresentComponent name={'46'}>
-        <Icon name={'add'} size={46} />
-      </PresentComponent>
+  <Story name="Playground" parameters={{ decorators: [withKnobs] }}>
+    <Stack isVertical>
+      <Icon
+        name={getIconSelectorKnob('name', 'informational')}
+        size={number('size', undefined)}
+        color={text('color', undefined)}
+      />
     </Stack>
   </Story>
 </Preview>

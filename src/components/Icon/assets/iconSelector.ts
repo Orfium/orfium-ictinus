@@ -1,357 +1,301 @@
-import AccountIcon from './account.svg';
-import ActionsIcon from './actions.svg';
-import AddIcon from './add.svg';
-import AlertIcon from './alert.svg';
-import AnalyticsIcon from './analytics.svg';
-import AnalyticsVideosIcon from './analyticsVideos.svg';
-import AncientIcon from './ancient-building.svg';
-import ArrowLeftIcon from './arrow-left.svg';
-import ArrowRightIcon from './arrow-right.svg';
-import ArtistIcon from './artist.svg';
-import AssetMatchingIcon from './asset-matching.svg';
-import AssetIcon from './asset.svg';
-import AutoIcon from './auto.svg';
-import Broadcast from './broadcast.svg';
-import CalendarEmptyIcon from './calendar-empty.svg';
-import CalendarFilledIcon from './calendar-filled.svg';
-import CatalogFilesIcon from './catalog-files.svg';
-import CatalogOverviewIcon from './catalog-overview.svg';
-import CatalogIcon from './catalog.svg';
-import ChannelIcon from './channel.svg';
-import ChatBubble from './chat-bubble.svg';
-import CheckIcon from './check.svg';
-import CheckedListIcon from './checked-list.svg';
-import CheckmarkIcon from './checkmark.svg';
-import ChevronExtraSmallDownIcon from './chevron-extra-small-down.svg';
-import ChevronExtraSmallLeftIcon from './chevron-extra-small-left.svg';
-import ChevronExtraSmallRightIcon from './chevron-extra-small-right.svg';
-import ChevronExtraSmallUpIcon from './chevron-extra-small-up.svg';
-import ChevronLargeDownIcon from './chevron-large-down.svg';
-import ChevronLargeLeftIcon from './chevron-large-left.svg';
-import ChevronLargeRightIcon from './chevron-large-right.svg';
-import ChevronLargeUpIcon from './chevron-large-up.svg';
-import ChevronSmallDownIcon from './chevron-small-down.svg';
-import ChevronSmallLeftIcon from './chevron-small-left.svg';
-import ChevronSmallRightIcon from './chevron-small-right.svg';
-import ChevronSmallUpIcon from './chevron-small-up.svg';
-import ClaimListIcon from './claimList.svg';
-import ClockOutlined from './clock-outlined.svg';
-import ClockIcon from './clock.svg';
-import CloseTagIcon from './close-tag.svg';
-import CloseIcon from './close.svg';
-import CmsProcessIcon from './cms-process.svg';
-import CompositionIconV2 from './composition-v2.svg';
-import CompositionIcon from './composition.svg';
-import ConcertIcon from './concert.svg';
-import ConfirmedMatchesIcon from './confirmed-matches.svg';
-import ConflictsIcon from './conflicts.svg';
-import CopyIcon from './copy.svg';
-import DashboardIcon from './dashboard.svg';
-import DatasetIcon from './dataset.svg';
-import ArrowDownIcon from './dd-arrow.svg';
-import DeleteIcon from './delete.svg';
-import DeliveryIcon from './delivery.svg';
-import DetailsIcon from './details.svg';
-import DigitalUse from './digitalUse.svg';
-import Distribution from './distribution.svg';
-import DotsVerticalIcon from './dots-vertical.svg';
-import DownloadIcon from './download.svg';
-import DuplicateIcon from './duplicate.svg';
-import Duplicate2Icon from './duplicate2.svg';
-import EarningsIcon from './earnings.svg';
-import EarningsIcon2 from './earnings2.svg';
-import EditIcon from './edit.svg';
-import EntitiesIcon from './entities.svg';
-import Entity from './entity.svg';
-import ErrorIcon from './error.svg';
-import ExpensesIcon from './expenses.svg';
-import ExternalLinkIconV2 from './external-link-v2.svg';
-import ExternalLinkIcon from './external-link.svg';
-/**
- * In the current design system the collection of "FatArrowIcon"
- * has been renamed into "ArrowIcon" collection. For backwards
- * compatibility reasons, the naming of the previous version has been
- * preserved and the icons have been updated with the current code.
- */
-import FatArrowDownIcon from './fat-arrow-down.svg';
-import FatArrowLeftIcon from './fat-arrow-left.svg';
-import FatArrowRightIcon from './fat-arrow-right.svg';
-import FatArrowUpIcon from './fat-arrow-up.svg';
-import FileIcon from './file.svg';
-import FinancialChartIcon from './financial-chart.svg';
-import GeneretedReportsIcon from './generatedReports.svg';
-import GenericFileIcon from './generic-file.svg';
-import GenericOrderingIcon from './generic-ordering.svg';
-import GlobalItemIcon from './global-item.svg';
-import HeartFillIcon from './heart-fill.svg';
-import HeartStrokeIcon from './heart-stroke.svg';
-import HelpIcon from './help.svg';
-import HourglassIcon from './hourglass.svg';
-import IncomeIcon from './income.svg';
-import InfoFilledIcon from './info-filled.svg';
-import InfoIcon from './info.svg';
-import IssuesIcon from './issues.svg';
-import KeywordIcon from './keyword.svg';
-import LegalFilesIcon from './legal-files.svg';
-import LicenceIcon from './licence.svg';
-import LicencedVideoIcon from './licensedVideo.svg';
-import LinkedIcon from './linked.svg';
-import LockIcon from './lock.svg';
-import MailIcon from './mail.svg';
-import ManualIcon from './manual.svg';
-import MenuIcon from './menu.svg';
-import Microphone from './microphone.svg';
-// MinusIcon code has been updated from current design system
-import MinusIcon from './minus.svg';
-import MoreOptionsHorizontalIcon from './more-options-horizontal.svg';
-import MoreOptionsVerticalIcon from './more-options-vertical.svg';
-import MusicNoteIcon from './music-note.svg';
-import MyEarnings from './myEarnings.svg';
-import NotificationsIcon from './notifications.svg';
-import Notifications2Icon from './notifications2.svg';
-import OneWay from './one-way.svg';
-import OthersIcon from './others.svg';
-import OwnershipValidationIcon from './ownership-validation.svg';
-import PageFirstIcon from './page-first.svg';
-import PageLastIcon from './page-last.svg';
-import ArrowToRightIcon from './pagination-end.svg';
-import ArrowToLeftIcon from './pagination-start.svg';
-import PauseIcon from './pause.svg';
-import PercentageIcon from './percentage.svg';
-import PlayCount from './play-count.svg';
-import PlayIcon from './play.svg';
-import PlusIcon from './plus.svg';
-import PoliciesIcon from './policies.svg';
-import ProcessManagementIcon from './process-management.svg';
-import ProcessIcon from './process.svg';
-import ProcessedLogs from './processed-logs.svg';
-import Proposed from './proposed.svg';
-import PublicPerformanceIcon from './publicPerformance.svg';
-import PublisherIcon from './publisher.svg';
-import RecordLabelIconV2 from './record-label-v2.svg';
-import RecordLabelIcon from './record-label.svg';
-import Recording from './recording.svg';
-import ReferenceFileIcon from './reference-file.svg';
-import RefreshIcon from './refresh.svg';
-import RelationsIcon from './relations.svg';
-import RestartIcon from './restart.svg';
-import RestoreIcon from './restore.svg';
-import ResultIcon from './result.svg';
-import ResumeIcon from './resume.svg';
-import RoyaltyShares from './royaltyShares.svg';
-import SearchMusicIcon from './search-music.svg';
-import SearchThunderIcon from './search-thunder.svg';
-import SearchIcon from './search.svg';
-import SettingsIcon from './settings.svg';
-import SightIcon from './sight.svg';
-import SortAscendingIcon from './sort-ascending.svg';
-import SortDescendingIcon from './sort-descending.svg';
-import StampIcon from './stamp.svg';
-import StarIcon from './star.svg';
-import Statements from './statements.svg';
-import SuccessIcon from './success.svg';
-import Television from './television.svg';
-import ThunderIcon from './thunder.svg';
-import TicTacToeArrowIcon from './tic-tac-toe-arrow.svg';
-import TimeOutIcon from './time-out.svg';
-import TrainingIcon from './training.svg';
-import TriangleDownIcon from './triangle-down.svg';
-import TriangleLeftIcon from './triangle-left.svg';
-import TriangleRightIcon from './triangle-right.svg';
-import TriangleUpIcon from './triangle-up.svg';
-import TrophyIcon from './trophy.svg';
-import TVCinemaIcon from './TVCinema.svg';
-import TVRadioIcon from './TVRadio.svg';
-import UnpairedV2 from './unpaired-v2.svg';
-import Unpaired from './unpaired.svg';
-import UpdateIcon from './update.svg';
-import UploadIcon from './upload.svg';
-import UserAvatarIcon from './user-avatar.svg';
-import UserIcon from './user.svg';
-import UserCheck from './userCheck.svg';
-import UsersIcon from './users.svg';
-import Users2Icon from './users2.svg';
-import VideoCondirmationIcon from './videoConfirmation.svg';
-import ViewIcon from './view.svg';
-import WarningIcon from './warning.svg';
-import WorksIcon from './works.svg';
-import WriterIcon from './writer.svg';
-import YoutubeIcon from './youtube.svg';
+/** Audio Controls */
+import Forward from './audioControls/forward.svg';
+import Next from './audioControls/next.svg';
+import Pause from './audioControls/pause.svg';
+import Play from './audioControls/play.svg';
+import Previous from './audioControls/previous.svg';
+import Resume from './audioControls/resume.svg';
+import Rewind from './audioControls/rewind.svg';
+import Stop from './audioControls/stop.svg';
+/** Basic Actions */
+import Check from './basicActions/check.svg';
+import Close from './basicActions/close.svg';
+import ColumnChooser from './basicActions/columnChooser.svg';
+import Convert from './basicActions/convert.svg';
+import Copy from './basicActions/copy.svg';
+import Delete from './basicActions/delete.svg';
+import Download from './basicActions/download.svg';
+import Edit from './basicActions/edit.svg';
+import File from './basicActions/file.svg';
+import Issue from './basicActions/issue.svg';
+import Legal from './basicActions/legal.svg';
+import Login from './basicActions/login.svg';
+import Logout from './basicActions/logout.svg';
+import MediaFile from './basicActions/mediaFile.svg';
+import Minus from './basicActions/minus.svg';
+import Plus from './basicActions/plus.svg';
+import Policy from './basicActions/policy.svg';
+import Redo from './basicActions/redo.svg';
+import Refresh from './basicActions/refresh.svg';
+import Report from './basicActions/report.svg';
+import Restore from './basicActions/restore.svg';
+import Review from './basicActions/review.svg';
+import Search from './basicActions/search.svg';
+import Sort from './basicActions/sort.svg';
+import SortAscending from './basicActions/sortAscending.svg';
+import SortDescending from './basicActions/sortDescending.svg';
+import ThumbsDown from './basicActions/thumbsDown.svg';
+import ThumbsUp from './basicActions/thumbsUp.svg';
+import Undo from './basicActions/undo.svg';
+import Update from './basicActions/update.svg';
+import Upload from './basicActions/upload.svg';
+/** Data and Finance */
+import Analytics from './dataAndFinance/analytics.svg';
+import Dashboard from './dataAndFinance/dashboard.svg';
+import Dataset from './dataAndFinance/dataset.svg';
+import Earnings from './dataAndFinance/earnings.svg';
+import Income from './dataAndFinance/income.svg';
+import Insight from './dataAndFinance/insight.svg';
+import Invoice from './dataAndFinance/invoice.svg';
+import TrendingDown from './dataAndFinance/trendingDown.svg';
+import TrendingUp from './dataAndFinance/trendingUp.svg';
+/** Generic */
+import Calendar from './generic/calendar.svg';
+import Chat from './generic/chat.svg';
+import Delivery from './generic/delivery.svg';
+import ExternalLink from './generic/externalLink.svg';
+import Filter from './generic/filter.svg';
+import Language from './generic/language.svg';
+import Location from './generic/location.svg';
+import Mail from './generic/mail.svg';
+import Manual from './generic/manual.svg';
+import MoreOptions from './generic/moreOptions.svg';
+import Notification from './generic/notification.svg';
+import Settings from './generic/settings.svg';
+/** Music Business */
+import Album from './musicBusiness/album.svg';
+import Artist from './musicBusiness/artist.svg';
+import Asset from './musicBusiness/asset.svg';
+import Broadcast from './musicBusiness/broadcast.svg';
+import Catalog from './musicBusiness/catalog.svg';
+import Channel from './musicBusiness/channel.svg';
+import Cinema from './musicBusiness/cinema.svg';
+import Claim from './musicBusiness/claim.svg';
+import Composition from './musicBusiness/composition.svg';
+import Concert from './musicBusiness/concert.svg';
+import Conflict from './musicBusiness/conflict.svg';
+import CueSheet from './musicBusiness/cueSheet.svg';
+import Digital from './musicBusiness/digital.svg';
+import Distribution from './musicBusiness/distribution.svg';
+import License from './musicBusiness/license.svg';
+import Playcount from './musicBusiness/playcount.svg';
+import PublicPerformance from './musicBusiness/publicPerformance.svg';
+import Publisher from './musicBusiness/publisher.svg';
+import Radio from './musicBusiness/radio.svg';
+import Recording from './musicBusiness/recording.svg';
+import RecordLabel from './musicBusiness/recordLabel.svg';
+import Television from './musicBusiness/television.svg';
+import Usage from './musicBusiness/usage.svg';
+import Work from './musicBusiness/work.svg';
+import Writer from './musicBusiness/writer.svg';
+import YouTube from './musicBusiness/youTube.svg';
+/** Navigation */
+import Apps from './navigation/apps.svg';
+import ArrowDown from './navigation/arrowDown.svg';
+import ArrowLeft from './navigation/arrowLeft.svg';
+import ArrowRight from './navigation/arrowRight.svg';
+import ArrowUp from './navigation/arrowUp.svg';
+import ChevronDown from './navigation/chevronDown.svg';
+import ChevronLeft from './navigation/chevronLeft.svg';
+import ChevronRight from './navigation/chevronRight.svg';
+import ChevronUp from './navigation/chevronUp.svg';
+import Menu from './navigation/menu.svg';
+import PageFirst from './navigation/pageFirst.svg';
+import PageLast from './navigation/pageLast.svg';
+import TriangleDown from './navigation/triangleDown.svg';
+import TriangleLeft from './navigation/triangleLeft.svg';
+import TriangleRight from './navigation/triangleRight.svg';
+import TriangleUp from './navigation/triangleUp.svg';
+/** Toggled Actions */
+import Audio from './toggledActions/audio.svg';
+import AudioOff from './toggledActions/audioOff.svg';
+import Bookmark from './toggledActions/bookmark.svg';
+import BookmarkOff from './toggledActions/bookmarkOff.svg';
+import Eye from './toggledActions/eye.svg';
+import EyeOff from './toggledActions/eyeOff.svg';
+import Favorite from './toggledActions/favorite.svg';
+import FavoriteOff from './toggledActions/favoriteOff.svg';
+import Flag from './toggledActions/flag.svg';
+import FlagOff from './toggledActions/flagOff.svg';
+import Freeze from './toggledActions/freeze.svg';
+import Image from './toggledActions/image.svg';
+import ImageOff from './toggledActions/imageOff.svg';
+import Link from './toggledActions/link.svg';
+import Lock from './toggledActions/lock.svg';
+import Pair from './toggledActions/pair.svg';
+import Unfreeze from './toggledActions/unfreeze.svg';
+import Unlink from './toggledActions/unlink.svg';
+import Unlock from './toggledActions/unlock.svg';
+import Unpair from './toggledActions/unpair.svg';
+import Video from './toggledActions/video.svg';
+import VideoOff from './toggledActions/videoOff.svg';
+/** Users and Status */
+import Account from './usersAndStatus/account.svg';
+import Entities from './usersAndStatus/entities.svg';
+import Error from './usersAndStatus/error.svg';
+import Help from './usersAndStatus/help.svg';
+import Informational from './usersAndStatus/informational.svg';
+import Organization from './usersAndStatus/organization.svg';
+import Pending from './usersAndStatus/pending.svg';
+import Role from './usersAndStatus/role.svg';
+import StatusIndicator from './usersAndStatus/statusIndicator.svg';
+import Success from './usersAndStatus/success.svg';
+import Unverified from './usersAndStatus/unverified.svg';
+import User from './usersAndStatus/user.svg';
+import Users from './usersAndStatus/users.svg';
+import Verified from './usersAndStatus/verified.svg';
+import Warning from './usersAndStatus/warning.svg';
+/** Types */
 import { AcceptedIconNames } from '../types';
 
 const iconSelector: { [key in AcceptedIconNames]: string } = {
-  account: AccountIcon,
-  actions: ActionsIcon,
-  add: AddIcon,
-  alert: AlertIcon,
-  analytics: AnalyticsIcon,
-  analyticsVideos: AnalyticsVideosIcon,
-  ancient: AncientIcon,
-  arrowDown: ArrowDownIcon,
-  arrowLeft: ArrowLeftIcon,
-  arrowRight: ArrowRightIcon,
-  arrowToLeft: ArrowToLeftIcon,
-  arrowToRight: ArrowToRightIcon,
-  artist: ArtistIcon,
-  asset: AssetIcon,
-  assetMatching: AssetMatchingIcon,
-  auto: AutoIcon,
+  /** Audio Controls */
+  forward: Forward,
+  next: Next,
+  pause: Pause,
+  play: Play,
+  previous: Previous,
+  resume: Resume,
+  rewind: Rewind,
+  stop: Stop,
+  /** Basic Actions */
+  check: Check,
+  close: Close,
+  columnChooser: ColumnChooser,
+  convert: Convert,
+  copy: Copy,
+  delete: Delete,
+  download: Download,
+  edit: Edit,
+  file: File,
+  issue: Issue,
+  legal: Legal,
+  login: Login,
+  logout: Logout,
+  mediaFile: MediaFile,
+  minus: Minus,
+  plus: Plus,
+  policy: Policy,
+  redo: Redo,
+  refresh: Refresh,
+  report: Report,
+  restore: Restore,
+  review: Review,
+  search: Search,
+  sort: Sort,
+  sortAscending: SortAscending,
+  sortDescending: SortDescending,
+  thumbsDown: ThumbsDown,
+  thumbsUp: ThumbsUp,
+  undo: Undo,
+  update: Update,
+  upload: Upload,
+  /** Data and Finance */
+  analytics: Analytics,
+  dashboard: Dashboard,
+  dataset: Dataset,
+  earnings: Earnings,
+  income: Income,
+  insight: Insight,
+  invoice: Invoice,
+  trendingDown: TrendingDown,
+  trendingUp: TrendingUp,
+  /** Generic */
+  calendar: Calendar,
+  chat: Chat,
+  delivery: Delivery,
+  externalLink: ExternalLink,
+  filter: Filter,
+  language: Language,
+  location: Location,
+  mail: Mail,
+  manual: Manual,
+  moreOptions: MoreOptions,
+  notification: Notification,
+  settings: Settings,
+  /** Music Business */
+  album: Album,
+  artist: Artist,
+  asset: Asset,
   broadcast: Broadcast,
-  calendarEmpty: CalendarEmptyIcon,
-  calendarFilled: CalendarFilledIcon,
-  catalog: CatalogIcon,
-  channel: ChannelIcon,
-  catalogOverview: CatalogOverviewIcon,
-  catalogFiles: CatalogFilesIcon,
-  chatBubble: ChatBubble,
-  check: CheckIcon,
-  checkedList: CheckedListIcon,
-  checkmark: CheckmarkIcon, // "check" copy (smaller)
-  chevronExtraSmallDown: ChevronExtraSmallDownIcon, // "arrowDown" copy
-  chevronExtraSmallLeft: ChevronExtraSmallLeftIcon, // "arrowLeft" copy
-  chevronExtraSmallRight: ChevronExtraSmallRightIcon, // "arrowRight" copy
-  chevronExtraSmallUp: ChevronExtraSmallUpIcon,
-  chevronLargeDown: ChevronLargeDownIcon, // "arrowDown" copy (smaller)
-  chevronLargeLeft: ChevronLargeLeftIcon, // "arrowLeft" copy (smaller)
-  chevronLargeRight: ChevronLargeRightIcon, // "arrowRight" copy (smaller)
-  chevronLargeUp: ChevronLargeUpIcon,
-  chevronSmallDown: ChevronSmallDownIcon, // "arrowDown" copy (smaller)
-  chevronSmallLeft: ChevronSmallLeftIcon, // "arrowLeft" copy (smaller)
-  chevronSmallRight: ChevronSmallRightIcon, // "arrowRight" copy (smaller)
-  chevronSmallUp: ChevronSmallUpIcon,
-  claimList: ClaimListIcon,
-  clock: ClockIcon,
-  close: CloseIcon,
-  closeTag: CloseTagIcon,
-  cmsProcess: CmsProcessIcon,
-  composition: CompositionIcon,
-  compositionV2: CompositionIconV2,
-  concert: ConcertIcon,
-  confirmedMatches: ConfirmedMatchesIcon,
-  conflicts: ConflictsIcon,
-  copy: CopyIcon,
-  dashboard: DashboardIcon,
-  dataset: DatasetIcon,
-  delete: DeleteIcon,
-  delivery: DeliveryIcon, // "expenses" copy
-  details: DetailsIcon,
-  digitalUse: DigitalUse,
-  dotsVertical: DotsVerticalIcon,
-  download: DownloadIcon,
-  duplicate: DuplicateIcon,
-  duplicate2: Duplicate2Icon,
-  earnings: EarningsIcon,
-  earnings2: EarningsIcon2,
-  edit: EditIcon,
-  entities: EntitiesIcon,
-  error: ErrorIcon, // "closeTag" copy (larger)
-  expenses: ExpensesIcon,
-  externalLink: ExternalLinkIcon,
-  externalLinkV2: ExternalLinkIconV2,
-  fatArrowDown: FatArrowDownIcon,
-  fatArrowLeft: FatArrowLeftIcon,
-  fatArrowRight: FatArrowRightIcon,
-  fatArrowUp: FatArrowUpIcon,
-  file: FileIcon,
-  financialChart: FinancialChartIcon,
-  generatedReports: GeneretedReportsIcon,
-  genericFile: GenericFileIcon,
-  genericOrdering: GenericOrderingIcon,
-  globalItem: GlobalItemIcon,
-  heartFill: HeartFillIcon,
-  heartStroke: HeartStrokeIcon,
-  help: HelpIcon,
-  hourglass: HourglassIcon,
-  income: IncomeIcon,
-  infoFilled: InfoFilledIcon,
-  info: InfoIcon,
-  issues: IssuesIcon,
-  keyword: KeywordIcon,
-  legalFiles: LegalFilesIcon,
-  licence: LicenceIcon,
-  licencedVideo: LicencedVideoIcon,
-  linked: LinkedIcon,
-  lock: LockIcon,
-  mail: MailIcon,
-  manual: ManualIcon,
-  menu: MenuIcon,
-  microphone: Microphone,
-  minus: MinusIcon,
-  moreOptionsHorizontal: MoreOptionsHorizontalIcon,
-  moreOptionsVertical: MoreOptionsVerticalIcon, // "dotsVertical" copy (larger)
-  musicNote: MusicNoteIcon,
-  myEarnings: MyEarnings,
-  notifications: NotificationsIcon,
-  notifications2: Notifications2Icon,
-  oneWay: OneWay,
-  others: OthersIcon,
-  ownershipValidation: OwnershipValidationIcon,
-  pageFirst: PageFirstIcon, // "arrowToLeft" copy
-  pageLast: PageLastIcon, // "arrowToRight" copy
-  percentage: PercentageIcon,
-  play: PlayIcon,
-  plus: PlusIcon,
-  policies: PoliciesIcon,
-  process: ProcessIcon,
-  publicPerformance: PublicPerformanceIcon,
-  processManagement: ProcessManagementIcon, // "ticTacToeArrow" copy
-  publisher: PublisherIcon,
-  recording: Recording,
-  recordLabel: RecordLabelIcon,
-  recordLabelV2: RecordLabelIconV2,
-  referenceFile: ReferenceFileIcon,
-  relations: RelationsIcon,
-  restore: RestoreIcon,
-  result: ResultIcon,
-  search: SearchIcon,
-  searchMusic: SearchMusicIcon,
-  searchThunder: SearchThunderIcon,
-  settings: SettingsIcon,
-  sight: SightIcon,
-  sortAscending: SortAscendingIcon,
-  sortDescending: SortDescendingIcon,
-  stamp: StampIcon,
-  statements: Statements,
-  success: SuccessIcon,
-  television: Television,
-  thunder: ThunderIcon,
-  ticTacToeArrow: TicTacToeArrowIcon,
-  timeOut: TimeOutIcon,
-  training: TrainingIcon,
-  triangleDown: TriangleDownIcon,
-  triangleLeft: TriangleLeftIcon,
-  triangleRight: TriangleRightIcon,
-  triangleUp: TriangleUpIcon,
-  trophy: TrophyIcon,
-  TVCinema: TVCinemaIcon,
-  TVRadio: TVRadioIcon,
-  update: UpdateIcon,
-  upload: UploadIcon,
-  user: UserIcon,
-  users: UsersIcon,
-  users2: Users2Icon,
-  userAvatar: UserAvatarIcon, // "user" copy (smaller)
-  videoConfirmation: VideoCondirmationIcon,
-  view: ViewIcon,
-  warning: WarningIcon,
-  works: WorksIcon,
-  writer: WriterIcon,
-  youtube: YoutubeIcon,
-  refresh: RefreshIcon,
-  star: StarIcon,
-  pause: PauseIcon,
-  restart: RestartIcon,
-  resume: ResumeIcon,
-  entity: Entity,
-  playCount: PlayCount,
-  processedLogs: ProcessedLogs,
-  proposed: Proposed,
-  unpaired: Unpaired,
-  unpairedV2: UnpairedV2,
-  clockOutlined: ClockOutlined,
-  userCheck: UserCheck,
+  catalog: Catalog,
+  channel: Channel,
+  cinema: Cinema,
+  claim: Claim,
+  composition: Composition,
+  concert: Concert,
+  conflict: Conflict,
+  cueSheet: CueSheet,
+  digital: Digital,
   distribution: Distribution,
-  royaltyShares: RoyaltyShares,
+  license: License,
+  playcount: Playcount,
+  publicPerformance: PublicPerformance,
+  publisher: Publisher,
+  radio: Radio,
+  recording: Recording,
+  recordLabel: RecordLabel,
+  television: Television,
+  usage: Usage,
+  work: Work,
+  writer: Writer,
+  youTube: YouTube,
+  /** Navigation */
+  apps: Apps,
+  arrowDown: ArrowDown,
+  arrowLeft: ArrowLeft,
+  arrowRight: ArrowRight,
+  arrowUp: ArrowUp,
+  chevronDown: ChevronDown,
+  chevronLeft: ChevronLeft,
+  chevronRight: ChevronRight,
+  chevronUp: ChevronUp,
+  menu: Menu,
+  pageFirst: PageFirst,
+  pageLast: PageLast,
+  triangleDown: TriangleDown,
+  triangleLeft: TriangleLeft,
+  triangleRight: TriangleRight,
+  triangleUp: TriangleUp,
+  /** Toggled Actions */
+  audio: Audio,
+  audioOff: AudioOff,
+  bookmark: Bookmark,
+  bookmarkOff: BookmarkOff,
+  eye: Eye,
+  eyeOff: EyeOff,
+  favorite: Favorite,
+  favoriteOff: FavoriteOff,
+  flag: Flag,
+  flagOff: FlagOff,
+  freeze: Freeze,
+  image: Image,
+  imageOff: ImageOff,
+  link: Link,
+  lock: Lock,
+  pair: Pair,
+  unfreeze: Unfreeze,
+  unlink: Unlink,
+  unlock: Unlock,
+  unpair: Unpair,
+  video: Video,
+  videoOff: VideoOff,
+  /** Users and Status */
+  account: Account,
+  entities: Entities,
+  error: Error,
+  help: Help,
+  informational: Informational,
+  organization: Organization,
+  pending: Pending,
+  role: Role,
+  statusIndicator: StatusIndicator,
+  success: Success,
+  unverified: Unverified,
+  user: User,
+  users: Users,
+  verified: Verified,
+  warning: Warning,
 };
 
 export default iconSelector;

@@ -1,0 +1,120 @@
+import React, { FCC, useMemo, useState } from 'react';
+
+import { AcceptedIconNames } from 'components/Icon';
+import Icon from 'components/Icon';
+import { iconsSet as icons } from 'components/Icon/constants';
+import SearchField from 'components/SearchField';
+import Typography from 'components/Typography';
+
+const IconographyShowcase: FCC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const [iconsSet, setIconSet] = useState(icons);
+  const [hasResults, setHasResults] = useState(true);
+
+  React.useEffect(() => {
+    const newIconSet = {};
+
+    Object.keys(iconsSet).forEach((set) => {
+      newIconSet[set] = {
+        ...icons[set],
+        icons: icons[set].icons.filter((name: string) =>
+          name.toLowerCase().includes(searchTerm.toLowerCase())
+        ),
+      };
+    });
+
+    setIconSet(newIconSet as typeof iconsSet);
+  }, [searchTerm]);
+
+  const totalResults = Object.values(iconsSet).reduce((acc, obj) => acc + obj.icons.length, 0);
+
+  return (
+    <div
+      css={{
+        display: 'flex',
+        flexDirection: 'column',
+      }}
+    >
+      <div
+        css={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+        }}
+      >
+        <div css={{ width: '100%' }}>
+          <SearchField
+            label="Search icon"
+            placeholder="Search icon"
+            value={searchTerm}
+            onChange={(e: any) => setSearchTerm(e.target.value)}
+            onClear={() => setSearchTerm('')}
+          />
+        </div>
+      </div>
+
+      <div>
+        {totalResults ? (
+          Object.keys(iconsSet).map((set, index) => {
+            return iconsSet[set].icons.length > 0 ? (
+              <div
+                key={index}
+                css={{ display: 'flex', flexDirection: 'column', gap: '48px', padding: '32px 0' }}
+              >
+                <Typography variant="headline03" type="secondary">
+                  {iconsSet[set].title}
+                </Typography>
+                <div css={{ display: 'flex', flexWrap: 'wrap', rowGap: '48px' }}>
+                  {iconsSet[set].icons.map((icon, index) => {
+                    return (
+                      <div
+                        style={{
+                          display: 'flex',
+                          flexDirection: 'column',
+                          alignItems: 'center',
+                          gap: '8px',
+                          flexBasis: '16.6%',
+                        }}
+                        key={index}
+                      >
+                        <div
+                          style={{
+                            display: 'flex',
+                            gap: '8px',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                          }}
+                        >
+                          <Icon name={icon as AcceptedIconNames} />
+                        </div>
+                        <Typography variant="label03" type="secondary">
+                          {icon}
+                        </Typography>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            ) : null;
+          })
+        ) : (
+          <div
+            css={{
+              padding: '48px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <Typography variant="label01" type="secondary">
+              No results
+            </Typography>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default IconographyShowcase;
