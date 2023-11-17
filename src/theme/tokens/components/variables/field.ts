@@ -43,6 +43,18 @@ const field = {
         },
       },
     },
+    iconSize: {
+      normal: {
+        value: '{sem.icon.size.3}',
+        type: 'sizing',
+        description: 'Sets size for normal addOn icon',
+      },
+      compact: {
+        value: '{sem.icon.size.2}',
+        type: 'sizing',
+        description: 'Sets size for compact addOn icon',
+      },
+    },
   },
   stepper: {
     backgroundColor: {
@@ -294,6 +306,11 @@ const field = {
         value: '160px',
         type: 'sizing',
         description: "Sets 'medium' minimum width for base field (normal size)",
+      },
+      compact: {
+        value: '90px',
+        type: 'sizing',
+        description: "Sets 'medium' minimum width for base field (compact size)",
       },
     },
     extraLarge: {
