@@ -18,6 +18,6 @@ function copyFolderSync(from, to) {
 }
 
 copyFolderSync(
-  path.resolve(__dirname, '../src/components/Icon/assets/**/'),
-  path.resolve(__dirname, '../dist/components/Icon/assets/**/')
+  path.resolve(__dirname, '../src/components/Icon/assets'),
+  path.resolve(__dirname, '../dist/components/Icon/assets')
 );
