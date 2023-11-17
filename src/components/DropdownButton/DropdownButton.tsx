@@ -91,7 +91,7 @@ const DropdownButton = React.forwardRef<HTMLButtonElement, DropdownButtonProps>(
             <IconButton
               type={type}
               size={size}
-              name="dotsVertical"
+              name="moreOptions"
               onClick={handleIconButtonClick}
               dataTestPrefixId={generateTestDataId('icon-dropdown', dataTestPrefixId)}
             />

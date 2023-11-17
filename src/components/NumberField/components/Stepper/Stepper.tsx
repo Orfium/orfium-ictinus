@@ -1,8 +1,10 @@
+import useTheme from 'hooks/useTheme';
 import React from 'react';
 import { Button } from 'react-aria-components';
 
 import { buttonWrapperStyle, stepperContainerStyle } from './Stepper.style';
 import Icon from 'components/Icon';
+import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
 
 type Props = {
   isDisabled?: boolean;
@@ -12,6 +14,9 @@ type Props = {
 const Stepper: React.FCC<Props> = ({ isDisabled, dataTestIdPrefix }) => {
   const dataTestId = dataTestIdPrefix ? `${dataTestIdPrefix}_number` : 'number';
 
+  const theme = useTheme();
+  const tokens = getTextInputBaseTokens(theme);
+
   return (
     <div css={stepperContainerStyle()}>
       <Button
@@ -20,8 +25,11 @@ const Stepper: React.FCC<Props> = ({ isDisabled, dataTestIdPrefix }) => {
         css={buttonWrapperStyle()}
         data-testid={`${dataTestId}_increment`}
       >
-        {/** @TODO add tokens instead of hex color */}
-        <Icon name="triangleUp" color="#54587F" size={12} />
+        <Icon
+          name="triangleUp"
+          color={tokens('addOn.iconColor')}
+          size={theme.tokens.icon.get('size.3')}
+        />
       </Button>
       <Button
         isDisabled={isDisabled}
@@ -29,8 +37,11 @@ const Stepper: React.FCC<Props> = ({ isDisabled, dataTestIdPrefix }) => {
         css={buttonWrapperStyle()}
         data-testid={`${dataTestId}_decrement`}
       >
-        {/** @TODO add tokens instead of hex color */}
-        <Icon name="triangleDown" color="#54587F" size={12} />
+        <Icon
+          name="triangleDown"
+          color={tokens('addOn.iconColor')}
+          size={theme.tokens.icon.get('size.3')}
+        />
       </Button>
     </div>
   );

@@ -41,6 +41,8 @@ const Snackbar: React.FCC<SnackbarProps> = ({
 
   const hasActions = (primaryCTA && primaryCTALabel) || (secondaryCTA && secondaryCTALabel);
 
+  const theme = useTheme();
+
   return (
     // @TODO remove the below or change to data-
     // eslint-disable-next-line react/no-unknown-property
@@ -48,7 +50,11 @@ const Snackbar: React.FCC<SnackbarProps> = ({
       <div css={topContainer()}>
         <div css={infoContainer()}>
           <div css={iconContainer()}>
-            <Icon name={typeToIconName(type)} color={type} size={20} />
+            <Icon
+              name={typeToIconName(type)}
+              color={theme.globals.oldColors[type][500]}
+              size={20}
+            />
           </div>
           <div css={boldMessageContainer()}>{message}</div>
         </div>

@@ -66,7 +66,11 @@ const TextInputBase: FCC<
       css={hintMessageStyle({ status, isDisabled })}
     >
       {!isDisabled && status.type === 'error' && size === 'normal' && (
-        <Icon color={tokens('textColor.errorHintColor')} name={'warning'} size={12} />
+        <Icon
+          color={tokens('textColor.errorHintColor')}
+          name={'warning'}
+          size={tokens('hintIconSize')}
+        />
       )}
       <span id={status.id}>{status.hintMessage}</span>
     </div>

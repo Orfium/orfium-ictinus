@@ -108,7 +108,7 @@ export const markerStyle = ({ isChecked }: CheckboxProps): SerializedStyles => {
       padding: 0;
     }
 
-    svg {
+    div {
       position: absolute;
       top: 0;
       display: ${isChecked ? 'block' : 'none'};

@@ -156,7 +156,7 @@ TextField with icon options right of the text.
   <Story name="TextField with icon">
     <Stack>
       <TextField label={'TextField'} suffix={'search'} />
-      <TextField label={'TextField'} suffix={'calendarEmpty'} />
+      <TextField label={'TextField'} suffix={'calendar'} />
     </Stack>
   </Story>
 </Preview>
@@ -233,7 +233,7 @@ Disabled TextField.
         placeholder={text('Placeholder', 'Placeholder')}
         isDisabled={boolean('isDisabled', false)}
         hasSuffix={boolean('hasSuffixIcon', false)}
-        suffix={select('Suffix icon name', ['', ...Object.keys(iconSelector)], 'info')}
+        suffix={select('Suffix icon name', ['', ...Object.keys(iconSelector)], 'informational')}
         status={{
           type: select('Status', ['error', 'normal', 'read-only'], 'normal'),
           hintMessage: text('Hint/Error message', 'Message in Text Field'),

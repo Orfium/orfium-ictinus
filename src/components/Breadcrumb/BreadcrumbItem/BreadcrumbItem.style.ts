@@ -17,6 +17,7 @@ export const breadcrumbItemStyles =
 
     return css`
       display: flex;
+      align-items: center;
       gap: ${tokens('padding')};
 
       ${isLastItem && generateStylesFromTokens(tokens('defaultText'))}

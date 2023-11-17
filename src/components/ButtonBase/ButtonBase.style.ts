@@ -51,6 +51,9 @@ export const buttonBaseStyle =
     };
 
     const baseButtonStyles = {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
       color: tokens(`${type}.textColor` as const),
       width: getButtonWidth(),
       height: getButtonHeight(),

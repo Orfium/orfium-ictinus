@@ -13,10 +13,10 @@ import {
 import { generateTestDataId } from '../../utils/helpers';
 import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 import { TestId } from '../../utils/types';
-import Icon from '../Icon';
 import { NotificationStyleType, NotificationTypes } from '../Notification/Notification';
 import { actionContainer } from '../Notification/Notification.style';
 import { typeToIconName } from '../Notification/subcomponents/CompactNotification/CompactNotification';
+import Icon from 'components/Icon';
 
 export type ToastProps = {
   /** The informative message of the Toast */
@@ -71,7 +71,7 @@ const Toast: React.FCC<ToastProps> = ({
             onClick={() => setIsExpandedState(!isExpandedState)}
             data-testid={generateTestDataId('toast-expand', dataTestId)}
           >
-            <Icon name="chevronLargeDown" color="#fff" size={20} />
+            <Icon name="chevronDown" color="#fff" size={20} />
           </span>
 
           <span

@@ -12,9 +12,9 @@ import useTheme from '../../../../hooks/useTheme';
 import { generateTestDataId } from '../../../../utils/helpers';
 import { TestId } from '../../../../utils/types';
 import Button from '../../../Button';
-import Icon from '../../../Icon';
 import { NotificationActions, NotificationStyleType, NotificationTypes } from '../../Notification';
 import { iconContainer, actionContainer } from '../../Notification.style';
+import Icon from 'components/Icon';
 import { AcceptedIconNames } from 'components/Icon/types';
 
 export type CompactNotificationVariants = 'inline' | 'banner' | 'card';
@@ -41,7 +41,7 @@ export type CompactNotificationProps = {
 } & NotificationActions;
 
 export const typeToIconName = (type: NotificationTypes): AcceptedIconNames =>
-  type === 'warning' ? 'alert' : type;
+  type === 'info' ? 'informational' : type;
 
 const CompactNotification: React.FCC<CompactNotificationProps> = ({
   hasIcon = false,
@@ -56,6 +56,7 @@ const CompactNotification: React.FCC<CompactNotificationProps> = ({
   dataTestId,
 }) => {
   const { utils } = useTheme();
+  const theme = useTheme();
 
   return (
     <div
@@ -66,7 +67,11 @@ const CompactNotification: React.FCC<CompactNotificationProps> = ({
       <div css={infoContainer()}>
         {hasIcon && (
           <div css={iconContainer()}>
-            <Icon name={typeToIconName(type)} color={type} size={20} />
+            <Icon
+              name={typeToIconName(type)}
+              color={theme.globals.oldColors[type][500]}
+              size={20}
+            />
           </div>
         )}
         {variant === 'banner' && (

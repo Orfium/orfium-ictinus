@@ -1,11 +1,10 @@
 import useTheme from 'hooks/useTheme';
 import React from 'react';
 
-import Icon from '../Icon';
-import { AcceptedIconNames } from '../Icon/types';
 import { ButtonTokens, getButtonTokens } from 'components/Button/Button.tokens';
 import { PrimitiveButtonTypes } from 'components/Button/Button.types';
 import ButtonBase, { ButtonBaseProps } from 'components/ButtonBase/ButtonBase';
+import Icon, { AcceptedIconNames } from 'components/Icon';
 
 export type IconButtonShape = 'circle' | 'square';
 
@@ -36,8 +35,7 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>((props, 
       shape={shape}
       dataTestPrefixId={dataTestPrefixId ? `${dataTestPrefixId}-icon-` : 'icon-'}
     >
-      {/** @TODO revisit icon sizes when Icon component is implemented */}
-      <Icon size={size === 'compact' ? 12 : 16} name={name} color={iconColor} />
+      <Icon size={tokens(`${size}.iconSize` as ButtonTokens)} name={name} color={iconColor} />
     </ButtonBase>
   );
 });

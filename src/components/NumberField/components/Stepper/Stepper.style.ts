@@ -23,6 +23,10 @@ export const buttonWrapperStyle =
     const tokens = getTextInputBaseTokens(theme);
 
     return css`
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
       background: transparent;
       border: none;
       height: calc(${tokens('container.normal')} / 2);

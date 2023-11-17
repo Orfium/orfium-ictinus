@@ -3,7 +3,6 @@ import React, { useCallback, InputHTMLAttributes, useMemo } from 'react';
 import { rem } from 'theme/utils';
 import dayjs, { Dayjs } from 'utils/date';
 
-import { iconStyles } from './DatePickInput.style';
 import { generateTestDataId, getLocaleFormat } from '../../../utils/helpers';
 import { TestProps } from '../../../utils/types';
 import FilterBase from '../../Filter/components/FilterBase';
@@ -91,20 +90,19 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
 
     const renderIconButton = useMemo(
       () => (
-        <div
+        <Icon
           tabIndex={0}
-          css={iconStyles()}
+          name="calendar"
+          size={tokens('addOn.iconSize.normal')}
+          color={tokens('addOn.iconColor')}
           onClick={handleIconClick}
+          dataTestId="calendar_button"
           onKeyDown={(e) => {
             if (e.code === 'Enter') {
               handleIconClick();
             }
           }}
-          data-testid="calendar_button"
-        >
-          {/** @TODO: Replace this with Interactive Icon once is implemented */}
-          <Icon name="calendarEmpty" size={20} color={tokens('addOn.iconColor')} />
-        </div>
+        />
       ),
       [handleIconClick, tokens]
     );
@@ -135,7 +133,7 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
             isOpen={isOpen}
             hasSelectedValue={Boolean(selectedDay.from && `${formattedFrom} - ${formattedTo}`)}
             label={!selectedDay.from ? labels.selectDate : ''}
-            iconName={selectedDay.from ? 'calendarFilled' : 'calendarEmpty'}
+            iconName={'calendar'}
           />
         );
       }

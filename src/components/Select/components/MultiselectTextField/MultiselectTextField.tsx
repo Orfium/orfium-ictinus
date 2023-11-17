@@ -131,6 +131,7 @@ const MultiselectTextField = React.forwardRef<HTMLInputElement, Props & InputPro
           name={iconName}
           color={theme.utils.getColor('lightGrey', 650)}
           onClick={hasValue && !isLocked ? onClearAllOptions : undefined}
+          hasHover={false}
           dataTestId="select-right-icon"
         />
       );

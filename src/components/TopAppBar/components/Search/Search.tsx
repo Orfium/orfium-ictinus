@@ -2,8 +2,8 @@ import React, { FCC } from 'react';
 
 import { customInputStyle, searchWrapper } from './Search.style';
 import { useTheme } from '../../../../index';
-import Icon from '../../../Icon';
 import { iconWrapperStyle } from '../../../TextField/TextField.style';
+import Icon from 'components/Icon';
 
 export type SearchProps = {
   searchPlaceholder: string;
@@ -30,7 +30,7 @@ const Search: FCC<SearchProps> = ({
           name={'search'}
           color={isDark ? theme.globals.oldColors.white : theme.utils.getColor('lightGrey', 650)}
           size={20}
-        />{' '}
+        />
       </div>
       <input
         readOnly={false}

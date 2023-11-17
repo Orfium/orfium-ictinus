@@ -20,7 +20,7 @@ export const suffixContainerStyle =
   (): SerializedStyles => {
     return css`
       min-width: ${rem(44)};
-      overflow: hidden;
+      overflow: visible;
       display: flex;
       align-items: center;
       justify-content: center;
