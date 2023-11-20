@@ -10,13 +10,14 @@ type Props = {
 } & Partial<
   Pick<
     TextInputBaseProps,
-    'placeholder' | 'label' | 'status' | 'isRequired' | 'isDisabled' | 'suffix'
+    'placeholder' | 'label' | 'status' | 'isRequired' | 'isDisabled' | 'suffix' | 'size'
   >
 >;
 
 const TextFieldShowCase: FC<Props> = ({
   mask,
   label = '',
+  size = 'normal',
   status = { type: 'normal' },
   placeholder = undefined,
   isDisabled = false,
@@ -34,6 +35,7 @@ const TextFieldShowCase: FC<Props> = ({
   const commonProps = {
     label,
     value,
+    size,
     isDisabled,
     isRequired,
     onChange: handleChange,
@@ -42,7 +44,7 @@ const TextFieldShowCase: FC<Props> = ({
   };
 
   return (
-    <div style={{ width: '500px' }}>
+    <div style={{ width: '300px' }}>
       {isMaskedTextField ? (
         <TextField mask={mask} {...commonProps} />
       ) : (

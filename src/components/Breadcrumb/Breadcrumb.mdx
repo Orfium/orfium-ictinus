@@ -1,62 +1,65 @@
 import { Meta, Canvas, ArgTypes, Story } from '@storybook/blocks';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import BreadcrumbShowcase from '../storyUtils/BreadcrumbShowcase/BreadcrumbShowcase.tsx';
-import Stack from '../storyUtils/Stack';
 import Breadcrumb from './Breadcrumb';
-import { FIGMA_URL } from '../../utils/common';
 import * as BreadcrumbStories from './Breadcrumb.stories';
+import SectionHeader from '../../storybook/SectionHeader';
+import Overview from '../../storybook/Overview';
 
 <Meta of={BreadcrumbStories} />
 
-# Breadcrumb
+<SectionHeader title={'Breadcrumb'} />
 
-A Breadcrumb component that can be configured either by adding children components (Usage 1) or bypassing the data property (Usage 2).
-It contains a collapsed view. In case components overcome the maximum value of Breadcrumb items which is hardcoded to 4.
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
 
-## 1
+## Overview
 
-```js
-import { Breadcrumb } from '@orfium/ictinus';
-
-<Breadcrumb>
-  <div>content 1</div>
-  <div>content 2</div>
-  <div>content 3</div>
-</Breadcrumb>;
-```
-
-## 2
-
-```js
-import { Breadcrumb } from '@orfium/ictinus';
-
-<Breadcrumb data={[{ to: '/path', label: 'label' }]} />;
-```
+<Story
+  name="Overview"
+  parameters={{
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+>
+  <Overview>
+    Breadcrumbs consist of a list of links that help a user visualize a page's location within the
+    hierarchical structure of a website and allow navigation up to any of its levels.
+  </Overview>
+</Story>
 
 ## Props
 
 <ArgTypes of={Breadcrumb} />
 
-# Simple Breadcrumbs (up to 3 levels)
+## Usage
 
-A simple Breadcrumbs example
+<UsageGuidelines
+  guidelines={[
+    'Include a breadcrumb in pages to show the hierarchy of parent and child pages and allow the user to navigate to a previous level.',
+    'Breadcrumbs can only show relationships between a parent page and a child page. If your page needs to link to a sibling, not a parent or child in relation to it, use tabs or navigation instead.',
+  ]}
+/>
 
-<Canvas of={BreadcrumbStories.SimpleBreadcrumbs} />
+<SubsectionHeader title="Variants" />
 
-# Active Breadcrumbs
+### Basic Breadcrumbs
 
-Active Breadcrumbs
+<Canvas of={BreadcrumbStories.BasicBreadcrumbs} />
 
-<Canvas of={BreadcrumbStories.ActiveBreadcrumbs} />
+### Go Back To
 
-# Active Breadcrumbs with inactive last breadcrumb
+Instead of providing list of levels (`items`), `backTo` prop offers the capability of using Breadcrumb as a Go Back To Link.
 
-Active Breadcrumbs with inactive last breadcrumb
+<Canvas of={BreadcrumbStories.GoBackTo} />
 
-<Canvas of={BreadcrumbStories.ActiveBreadcrumbsWithInactiveLastBreadcrumb} />
+### Third-party Routing Library
 
-# Breadcrumb showcase
+`BreadcrumbItem` prop type includes Link's `href` and `component` props. Using these you can achieve the integration with third-party routing libraries.
 
-A Breadcrumb showcase
+<Canvas of={BreadcrumbStories.ThirdPartyRoutingLibrary} />
 
-<Canvas of={BreadcrumbStories.BreadcrumbShowcaseStory} />
+### Playground
+
+<Canvas of={BreadcrumbStories.Playground} />

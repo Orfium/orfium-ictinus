@@ -12,7 +12,7 @@ import NotificationShowcase, {
 } from '../storyUtils/NotificationShowcase';
 
 export default {
-  title: 'Design System/Notification',
+  title: 'Original Components/Notification',
   component: InlineNotification,
 };
 

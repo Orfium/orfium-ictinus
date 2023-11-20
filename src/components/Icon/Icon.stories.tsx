@@ -6,7 +6,7 @@ import { FIGMA_URL } from '../../utils/common';
 import { AcceptedIconNames } from './types';
 
 export default {
-  title: 'Design System/Icon',
+  title: 'Original Components/Icon',
   component: Icon,
 
   parameters: {

@@ -35,7 +35,7 @@ export type TextAreaProps = {
   onKeyDown?: React.KeyboardEventHandler<HTMLTextAreaElement | HTMLInputElement>;
   /** Callback fired when the `input` value typed is changed */
   onInput?: React.EventHandler<any>;
-} & React.HTMLProps<HTMLTextAreaElement> &
+} & Omit<React.HTMLProps<HTMLTextAreaElement>, 'size'> &
   Pick<TextInputBaseProps, 'status' | 'label'> &
   TestProps;
 

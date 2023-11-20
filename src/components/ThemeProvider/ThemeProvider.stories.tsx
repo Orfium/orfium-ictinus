@@ -3,7 +3,7 @@ import Button from '../Button';
 import Test from './Test';
 
 export default {
-  title: 'Design System/ThemeProvider',
+  title: 'Original Components/ThemeProvider',
   component: ThemeProvider,
 };
 

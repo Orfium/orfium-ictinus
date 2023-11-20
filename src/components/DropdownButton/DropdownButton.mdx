@@ -1,9 +1,7 @@
 import { Meta, Canvas, ArgTypes, Story } from '@storybook/blocks';
 import DropdownButton from './DropdownButton';
-import Stack from '../storyUtils/Stack';
-import { FIGMA_URL } from '../../utils/common';
-import SectionHeader from '../../storybook/SectionHeader';
 import * as DropdownButtonStories from './DropdownButton.stories';
+import Overview from '../../storybook/Overview';
 
 <Meta of={DropdownButtonStories} />
 
@@ -16,7 +14,13 @@ import * as DropdownButtonStories from './DropdownButton.stories';
 
 ## Overview
 
-A DropdownButton is a dual-function menu button that comes with a CTA and a dropdown with actions
+<Overview>
+  A DropdownButton is a dual-function menu button that comes with a CTA and a dropdown with actions
+</Overview>
+
+## Props
+
+<ArgTypes of={DropdownButton} />
 
 ## Usage
 
@@ -34,16 +38,16 @@ A DropdownButton is a dual-function menu button that comes with a CTA and a drop
   component.
 </Tip>
 
-## Props
-
-<ArgTypes of={DropdownButton} />
-
-## Variants
+<SubsectionHeader title="Variants" />
 
 ### Button with DropdownButton
+
+There are 2 Button with DropdownButton Sizes, `normal` and `compact`.
 
 <Canvas of={DropdownButtonStories.ButtonWithDropdown} />
 
 ### IconButton with Dropdown
+
+There are 2 IconButton with DropdownButton Sizes, `normal` and `compact`.
 
 <Canvas of={DropdownButtonStories.IconButtonWithDropdown} />

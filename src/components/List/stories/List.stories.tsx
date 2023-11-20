@@ -3,9 +3,8 @@ import { FIGMA_URL, Function } from '../../../utils/common';
 import SectionHeader from '../../../storybook/SectionHeader';
 
 export default {
-  title: 'Design System/List/List',
+  title: 'Updated Components/List/List',
   component: List,
-
   parameters: {
     design: [
       {

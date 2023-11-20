@@ -8,7 +8,7 @@ import { FIGMA_URL } from '../../utils/common';
 import { AvatarColors } from '../Avatar';
 
 export default {
-  title: 'Design System/TopNavBar',
+  title: 'Original Components/TopNavBar',
   component: TopAppBar,
 
   parameters: {

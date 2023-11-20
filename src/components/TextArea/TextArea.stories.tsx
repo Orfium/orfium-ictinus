@@ -6,7 +6,7 @@ import SectionHeader from '../../storybook/SectionHeader';
 import { useState } from 'react';
 
 export default {
-  title: 'Design System/TextArea',
+  title: 'Updated Components/Fields/TextArea',
   component: TextArea,
 
   parameters: {
@@ -25,12 +25,12 @@ export default {
   },
 };
 
-export const TextAreaWithLabels = {
+export const TextAreaWithPlaceholder = {
   render: () => (
     <Stack>
-      <TextArea label={'Label'} cols={10} rows={5} isResizeEnabled={false} />
+      <TextArea label={'TextArea'} cols={10} rows={5} isResizeEnabled={false} />
       <TextArea
-        label={'Label'}
+        label={'TextArea'}
         cols={10}
         rows={5}
         placeholder={'Placeholder'}
@@ -39,17 +39,16 @@ export const TextAreaWithLabels = {
     </Stack>
   ),
 
-  name: 'TextArea with labels',
+  name: 'TextArea with placeholder',
 };
-
-export const ResizableTextArea = {
+export const TextAreaWithResizingOption = {
   render: () => (
     <Stack>
-      <TextArea label={'Label'} cols={10} rows={5} />
+      <TextArea label={'TextArea'} cols={10} rows={5} />
     </Stack>
   ),
 
-  name: 'Resizable TextArea',
+  name: 'TextArea with resizing option',
 };
 
 export const TextAreaWithCounter = {
@@ -59,10 +58,9 @@ export const TextAreaWithCounter = {
         {() => {
           const [value, setValue] = useState('');
           const handleChange = (e) => setValue(e.target.value);
-
           return (
             <TextArea
-              label={'Label'}
+              label={'TextArea'}
               value={value}
               onChange={handleChange}
               cols={10}
@@ -75,8 +73,7 @@ export const TextAreaWithCounter = {
       </Function>
     </Stack>
   ),
-
-  name: 'TextArea with Counter',
+  name: 'TextArea with counter',
 };
 
 export const TextAreaStatuses = {
@@ -116,12 +113,8 @@ export const TextAreaStatuses = {
       </Stack>
     </Stack>
   ),
-
-  name: 'TextArea Statuses',
-
-  parameters: {
-    decorators: [withKnobs],
-  },
+  parameters: { decorators: [withKnobs] },
+  name: 'TextArea statuses',
 };
 
 export const DisabledTextArea = {
@@ -129,7 +122,7 @@ export const DisabledTextArea = {
     <Stack>
       <TextArea
         isDisabled
-        label={'Label'}
+        label={'TextArea'}
         cols={10}
         rows={5}
         status={{
@@ -139,7 +132,6 @@ export const DisabledTextArea = {
       />
     </Stack>
   ),
-
   name: 'Disabled TextArea',
 };
 
@@ -150,11 +142,10 @@ export const Playground = {
         {() => {
           const [value, setValue] = useState('');
           const handleChange = (e) => setValue(e.target.value);
-
           return (
             <TextArea
               value={value}
-              label={text('Label', 'Label')}
+              label={text('Label', 'TextArea')}
               onChange={handleChange}
               placeholder={text('Placeholder', 'Placeholder')}
               isDisabled={boolean('isDisabled', false)}
@@ -172,10 +163,5 @@ export const Playground = {
       </Function>
     </Stack>
   ),
-
   name: 'Playground',
-
-  parameters: {
-    decorators: [withKnobs],
-  },
 };

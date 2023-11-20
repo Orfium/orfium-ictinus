@@ -18,7 +18,7 @@ import Chip from 'components/Chip';
 import type { AcceptedIconNames } from 'components/Icon';
 import Icon from 'components/Icon';
 import Label from 'components/Label';
-import Loader from 'components/Loader';
+import ProgressIndicator from 'components/ProgressIndicator';
 import type { SelectOption } from 'components/Select';
 import type { InputProps, TextFieldProps } from 'components/TextField/TextField';
 import TextInputBase from 'components/TextInputBase';
@@ -173,7 +173,6 @@ const MultiselectTextField = React.forwardRef<HTMLInputElement, Props & InputPro
             />
             {label && (
               <Label
-                size="md"
                 htmlFor={id}
                 label={label}
                 isRequired={isRequired}
@@ -185,7 +184,9 @@ const MultiselectTextField = React.forwardRef<HTMLInputElement, Props & InputPro
 
           {!isDisabled && (
             <div css={rightIconsContainer()}>
-              {isLoading && <Loader />}
+              {isLoading && (
+                <ProgressIndicator type="circular" dataTestPrefixId="multi_select_textfield" />
+              )}
               <div css={rightIconStyles({ isClickable: hasValue && !isLocked })}>{icon}</div>
             </div>
           )}

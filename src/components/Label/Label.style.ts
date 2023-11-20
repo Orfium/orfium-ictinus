@@ -11,7 +11,11 @@ import { generateStylesFromTokens } from 'components/Typography/utils';
 export const LABEL_TRANSFORM_LEFT_SPACING = rem(3);
 
 export const labelStyle =
-  ({ isAnimated, hasError }: Pick<LabelProps, 'isAnimated' | 'hasError'>) =>
+  ({
+    isAnimated,
+    hasError,
+    size = 'normal',
+  }: Pick<LabelProps, 'isAnimated' | 'hasError' | 'size'>) =>
   (theme: Theme): SerializedStyles => {
     const tokens = getTextInputBaseTokens(theme);
 
@@ -35,6 +39,6 @@ export const labelStyle =
       margin: auto;
       white-space: nowrap;
 
-      ${generateStylesFromTokens(tokens('normal.input'))}
+      ${generateStylesFromTokens(tokens(`input.${size}` as const))}
     `;
   };

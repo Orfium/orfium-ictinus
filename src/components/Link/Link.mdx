@@ -19,7 +19,10 @@ import * as LinkStories from './Link.stories';
 
 ## Overview
 
-A link is a navigational component that takes a user to another URL, an element within the page, or a file.
+<Overview>
+  A link is a navigational component that takes a user to another URL, an element within the page,
+  or a file.
+</Overview>
 
 ## Props
 
@@ -34,34 +37,37 @@ A link is a navigational component that takes a user to another URL, an element 
     'Use to download a file',
     'Use to show a secondary action (e.g. "Cancel")',
   ]}
+  policies={['To show a primary action (like “Save”), use a button instead. ']}
 />
 
 <Tip>To show a primary action (like “Save”), use a Button instead. </Tip>
 
-## Props
+<SubsectionHeader title="Variants" />
 
-<ArgTypes of={Link} />
+### Link Styles
 
-## Variants
+<Canvas of={LinkStories.LinkStyles} />
 
-### Style
+### Link placement
 
-<Canvas of={LinkStories.Style} />
-
-### Placement
-
-Inline: Used within a body of copy; always with underline text decoration for better discoverability <br />
+Inline: Used within a body of copy; always with underline text decoration for better discoverability <br/>
 Block: Used without a body of copy; without underline text decoration
 
 <Canvas of={LinkStories.Placement} />
 
-### Sizes
+### Link Sizes
 
 <Canvas of={LinkStories.Sizes} />
 
 ### Link with Icon
 
 <Canvas of={LinkStories.LinkWithIcon} />
+
+### Third-party Routing Library
+
+You can achieve the integration with third-party routing libraries with the `component` prop. Below is an example with the usage of `react-router-dom`'s Link component
+
+<Canvas of={LinkStories.ThirdPartyRoutingLibrary} />
 
 ### Playground
 

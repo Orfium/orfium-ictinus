@@ -5,9 +5,8 @@ import Stack from '../storyUtils/Stack';
 import { FIGMA_URL } from '../../utils/common';
 
 export default {
-  title: 'Design System/Radio',
+  title: 'Original Components/Controls/Radio',
   component: Radio,
-
   parameters: {
     design: [
       {
@@ -75,9 +74,7 @@ export const RadioPlayground = {
       isFilled={boolean('isFilled', false)}
     />
   ),
-
   name: 'Radio Playground',
-
   parameters: {
     decorators: [withKnobs],
   },

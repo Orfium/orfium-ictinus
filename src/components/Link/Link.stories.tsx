@@ -1,13 +1,12 @@
 import { boolean, select, withKnobs } from '@storybook/addon-knobs';
 import Link from './Link';
 import Stack from '../storyUtils/Stack';
-import { BASE_SHADE } from '../../theme/palette';
 import { FIGMA_URL } from '../../utils/common';
 import { getIconSelectorKnob } from '../../utils/stories';
-import SectionHeader from '../../storybook/SectionHeader';
+import { Link as ReactRouterLink, MemoryRouter as Router } from 'react-router-dom';
 
 export default {
-  title: 'Design System/Link',
+  title: 'Updated Components/Link',
   component: Link,
 
   parameters: {
@@ -21,14 +20,21 @@ export default {
   },
 };
 
-export const Style = {
+export const LinkStyles = {
   render: () => (
-    <Stack isVertical>
-      <Link href="#">Primary</Link>
-    </Stack>
+    <>
+      <Stack isVertical>
+        <Link href="#">Primary</Link>
+      </Stack>
+      <Stack isInverted>
+        <Link href="#" type="inverted">
+          Inverted
+        </Link>
+      </Stack>
+    </>
   ),
 
-  name: 'Style',
+  name: 'Link Styles',
 };
 
 export const Placement = {
@@ -51,7 +57,7 @@ export const Placement = {
     </Stack>
   ),
 
-  name: 'Placement',
+  name: 'Link Placement',
 };
 
 export const Sizes = {
@@ -69,7 +75,7 @@ export const Sizes = {
     </Stack>
   ),
 
-  name: 'Sizes',
+  name: 'Link Sizes',
 };
 
 export const LinkWithIcon = {
@@ -88,6 +94,21 @@ export const LinkWithIcon = {
   ),
 
   name: 'Link with Icon',
+
+  parameters: {
+    decorators: [withKnobs],
+  },
+};
+export const ThirdPartyRoutingLibrary = {
+  render: () => (
+    <Router>
+      <Link component={ReactRouterLink} href="/">
+        Link
+      </Link>
+    </Router>
+  ),
+
+  name: 'Third-party Routing Library',
 
   parameters: {
     decorators: [withKnobs],

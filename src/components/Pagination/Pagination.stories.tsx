@@ -3,7 +3,7 @@ import Pagination from './Pagination';
 import { FIGMA_URL } from '../../utils/common';
 
 export default {
-  title: 'Design System/Pagination',
+  title: 'Original Components/Pagination',
   component: Pagination,
 
   parameters: {

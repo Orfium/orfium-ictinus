@@ -4,7 +4,7 @@ import Toast from './Toast';
 import Stack from '../storyUtils/Stack';
 
 export default {
-  title: 'Design System/Toast',
+  title: 'Original Components/Toast',
   component: Toast,
 };
 

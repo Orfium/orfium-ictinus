@@ -1,9 +1,10 @@
-import { fireEvent, screen } from '@testing-library/react';
+import { fireEvent, within } from '@storybook/testing-library';
 
-export const hoverOnTooltips = async () => {
-  const buttons = screen.getAllByTestId('button');
+export const hoverOnTooltips = async ({ canvasElement }: { canvasElement: HTMLElement }) => {
+  const canvas = within(canvasElement);
+  const buttons = canvas.getAllByTestId('button');
 
   buttons.forEach((button) => {
-    fireEvent.focus(button);
+    fireEvent.mouseEnter(button);
   });
 };

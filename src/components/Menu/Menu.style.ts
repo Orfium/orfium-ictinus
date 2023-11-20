@@ -1,14 +1,6 @@
-import { css } from '@emotion/react';
-
 import type { Theme } from '../../theme';
 import type { RequiredProperties } from '../../utils/common';
 import type { ButtonProps } from '../Button/Button';
-
-export const wrapperStyle = () => () =>
-  css`
-    position: relative;
-    display: inline-block;
-  `;
 
 const getButtonMargin =
   ({ iconLeftName, iconRightName }: Pick<ButtonProps, 'iconLeftName' | 'iconRightName'>) =>

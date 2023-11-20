@@ -4,7 +4,7 @@ import { FIGMA_URL } from '../../utils/common';
 import SectionHeader from '../../storybook/SectionHeader';
 
 export default {
-  title: 'Design System/Button/DropdownButton',
+  title: 'Updated Components/Buttons/DropdownButton',
   component: DropdownButton,
 
   parameters: {
@@ -26,6 +26,7 @@ export default {
 export const ButtonWithDropdown = {
   render: () => (
     <Stack>
+      {' '}
       <DropdownButton
         items={['Item 1', 'Item 2']}
         onButtonClick={() => console.log('click')}
@@ -42,6 +43,32 @@ export const ButtonWithDropdown = {
         Click Here
       </DropdownButton>
       <DropdownButton
+        type="tertiary"
+        items={['Item 1', 'Item 2']}
+        onButtonClick={() => console.log('click')}
+        onOptionSelect={(option) => console.log(option)}
+      >
+        Click Here
+      </DropdownButton>
+      <DropdownButton
+        size="compact"
+        items={['Item 1', 'Item 2']}
+        onButtonClick={() => console.log('click')}
+        onOptionSelect={(option) => console.log(option)}
+      >
+        Click Here
+      </DropdownButton>
+      <DropdownButton
+        size="compact"
+        type="secondary"
+        items={['Item 1', 'Item 2']}
+        onButtonClick={() => console.log('click')}
+        onOptionSelect={(option) => console.log(option)}
+      >
+        Click Here
+      </DropdownButton>
+      <DropdownButton
+        size="compact"
         type="tertiary"
         items={['Item 1', 'Item 2']}
         onButtonClick={() => console.log('click')}
@@ -68,6 +95,23 @@ export const IconButtonWithDropdown = {
         onOptionSelect={(option) => console.log(option)}
       />
       <DropdownButton
+        type="tertiary"
+        items={['Item 1', 'Item 2']}
+        onOptionSelect={(option) => console.log(option)}
+      />
+      <DropdownButton
+        size="compact"
+        items={['Item 1', 'Item 2']}
+        onOptionSelect={(option) => console.log(option)}
+      />
+      <DropdownButton
+        size="compact"
+        type="secondary"
+        items={['Item 1', 'Item 2']}
+        onOptionSelect={(option) => console.log(option)}
+      />
+      <DropdownButton
+        size="compact"
         type="tertiary"
         items={['Item 1', 'Item 2']}
         onOptionSelect={(option) => console.log(option)}

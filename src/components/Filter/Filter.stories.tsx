@@ -10,7 +10,7 @@ import Stack from '../storyUtils/Stack';
 import { FIGMA_URL } from '../../utils/common';
 
 export default {
-  title: 'Design System/Filter',
+  title: 'Original Components/Filter',
   component: Filter,
 
   parameters: {

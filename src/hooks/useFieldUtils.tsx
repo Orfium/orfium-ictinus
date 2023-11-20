@@ -11,6 +11,7 @@ import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.t
 const useFieldUtils = ({
   id,
   suffix,
+  size = 'normal',
   status,
   isDisabled,
   ref,
@@ -32,14 +33,14 @@ const useFieldUtils = ({
       return (
         <Icon
           name={iconName as AcceptedIconNames}
-          size={16}
+          size={size === 'normal' ? 16 : 12}
           color={theme.utils.getColor('lightGrey', 650)}
         />
       );
     }
 
     return suffix;
-  }, [isDisabled, isLocked, suffix, theme.utils]);
+  }, [isDisabled, isLocked, size, suffix, theme.utils]);
 
   const handleContainerClick = () => {
     if (!isLocked && !isDisabled) {

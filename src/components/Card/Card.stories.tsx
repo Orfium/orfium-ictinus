@@ -5,7 +5,7 @@ import Stack from '../storyUtils/Stack';
 import { FIGMA_URL } from '../../utils/common';
 
 export default {
-  title: 'Design System/Card',
+  title: 'Original Components/Card',
   component: Card,
 
   parameters: {

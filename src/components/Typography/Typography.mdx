@@ -1,9 +1,8 @@
-import { Meta, Canvas, ArgTypes, Story } from '@storybook/blocks';
-import Typography from './Typography';
-import Stack from '../storyUtils/Stack';
-import { FIGMA_URL } from '../../utils/common';
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
 import SectionHeader from '../../storybook/SectionHeader';
 import * as TypographyStories from './Typography.stories';
+import Typography from './Typography';
+import Overview from '../../storybook/Overview';
 
 <Meta of={TypographyStories} />
 
@@ -16,27 +15,25 @@ import * as TypographyStories from './Typography.stories';
 
 ## Overview
 
-A global component that is used to represent any text
+<Overview>A global component that is used to represent any text.</Overview>
 
 ## Usage
 
 <UsageGuidelines
   guidelines={[
-    'Never include more than one H1 title per web page.',
     'Headline: Used for short, high-emphasis text and to establish content hierarchy within the page',
     'Title: Used for short, medium-emphasis text that is smaller than a headline and for text within components',
     'Label: Used for medium emphasis text and potentially longer text strings than a title and for text within components',
     'Body: Used for long passages of copy (regular emphasis) and for text within components',
   ]}
+  policies={['Never include more than one H1 title per web page.']}
 />
 
 ## Props
 
 <ArgTypes of={Typography} />
 
-## Variants
-
-### Variants
+<SubsectionHeader title="Variants" />
 
 General use of Typography based on available variants
 

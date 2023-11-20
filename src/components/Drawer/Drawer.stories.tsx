@@ -3,7 +3,7 @@ import Drawer from './Drawer';
 import { FIGMA_URL } from '../../utils/common';
 
 export default {
-  title: 'Design System/Drawer',
+  title: 'Original Components/Drawer',
   component: Drawer,
 
   parameters: {

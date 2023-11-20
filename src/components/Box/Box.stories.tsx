@@ -3,7 +3,7 @@ import Box from './Box';
 import SectionHeader from '../../storybook/SectionHeader';
 
 export default {
-  title: 'Design System/Box',
+  title: 'Updated Components/Box',
   component: Box,
 };
 
@@ -13,7 +13,7 @@ export const BoxPaddingAllSides = {
       Padding 3
     </Box>
   ),
-  name: 'Box Padding (All sides)',
+  name: 'Box padding (All sides)',
 };
 
 export const BoxHorizontalPadding = {
@@ -22,7 +22,7 @@ export const BoxHorizontalPadding = {
       Padding Horizontal 7
     </Box>
   ),
-  name: 'Box Horizontal Padding',
+  name: 'Box horizontal padding',
 };
 
 export const BoxVerticalPadding = {
@@ -31,7 +31,7 @@ export const BoxVerticalPadding = {
       Padding Vertical 7
     </Box>
   ),
-  name: 'Box Vertical Padding',
+  name: 'Box vertical padding',
 };
 
 export const BoxBackground = {
@@ -40,5 +40,5 @@ export const BoxBackground = {
       Background Inverted
     </Box>
   ),
-  name: 'Box Background',
+  name: 'Box background',
 };

@@ -4,7 +4,7 @@ import SectionHeader from '../../../storybook/SectionHeader';
 import Stack from '../../storyUtils/Stack';
 
 export default {
-  title: 'Design System/List/ListSection',
+  title: 'Updated Components/List/ListSection',
   component: ListSection,
 
   parameters: {

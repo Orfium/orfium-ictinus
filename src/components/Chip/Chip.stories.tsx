@@ -7,7 +7,7 @@ import Chip from './Chip';
 import { FIGMA_URL } from '../../utils/common';
 
 export default {
-  title: 'Design System/Chip',
+  title: 'Original Components/Chip',
   component: Chip,
 
   parameters: {

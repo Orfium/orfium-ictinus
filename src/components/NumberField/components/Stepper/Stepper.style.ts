@@ -26,7 +26,7 @@ export const buttonWrapperStyle =
     return css`
       background: transparent;
       border: none;
-      height: calc(${tokens('container')} / 2);
+      height: calc(${tokens('container.normal')} / 2);
 
       &:hover {
         cursor: pointer;

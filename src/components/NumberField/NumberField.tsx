@@ -16,6 +16,7 @@ export type NumberFieldProps = Omit<
   TextFieldProps,
   | 'mask'
   | 'maskChar'
+  | 'size'
   | 'value'
   | 'onChange'
   | 'isMulti'

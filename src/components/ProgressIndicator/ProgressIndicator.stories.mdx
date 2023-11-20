@@ -1,0 +1,212 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
+import { select, number, boolean, withKnobs } from '@storybook/addon-knobs';
+
+import ProgressIndicator from './ProgressIndicator';
+import Typography from '../Typography';
+import Stack from '../storyUtils/Stack';
+import { FIGMA_URL, Function } from '../../utils/common';
+import { useState, useEffect } from 'react';
+import SectionHeader from '../../storybook/SectionHeader';
+import Overview from '../../storybook/Overview';
+
+<Meta
+  title="Updated Components/Progress Indicator"
+  component={ProgressIndicator}
+  parameters={{
+    design: [
+      {
+        type: 'figma',
+        name: 'ProgressIndicator',
+        url: `${FIGMA_URL}?node-id=10283%3A104361`,
+      },
+    ],
+  }}
+/>
+
+<SectionHeader title={'Progress Indicator'} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
+
+## Overview
+
+<Story
+  name="Overview"
+  parameters={{
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+>
+  <Overview>
+    Progress indicators communicate to the user the current progress of a given task.
+  </Overview>
+</Story>
+
+## Props
+
+<Props of={ProgressIndicator} />
+
+## Usage
+
+<UsageGuidelines
+  guidelines={[
+    'Use determinate indicators when you can display how long a process will take',
+    'Use indeterminate indicators when progress of a given task is not detectable',
+    'Use indeterminate indicators when progress of a given task is very fast (under 2s)',
+    'When you need to indicate progress for all instances of a given process (e.g. file upload)',
+    'When submitting a form or saving updates (appears on top of the screen)',
+  ]}
+  policies={[
+    'Do not use progress indicators as visual decoration. Create a custom component instead',
+    'Do not use progress indicators as data visualization. Create a custom component instead or use an existing chart, if available',
+  ]}
+/>
+
+<SubsectionHeader title="Variants" />
+
+### Linear ProgressIndicator with percentage
+
+The `value` prop, if provided, makes the progress indicator determinate.
+
+<Preview>
+  <Story name="Linear ProgressIndicator with percentage">
+    <Stack width={300}>
+      <Function>
+        {() => {
+          const [value, setValue] = useState(0);
+          useEffect(() => {
+            const interval = setInterval(
+              () =>
+                setValue((value) => {
+                  if (value + 20 > 100) return 0;
+                  return value + 20;
+                }),
+              1000
+            );
+            return () => {
+              clearInterval(interval);
+            };
+          }, []);
+          return (
+            <div
+              style={{
+                display: 'flex',
+                gap: '32px',
+                alignItems: 'center',
+                flexDirection: 'column',
+              }}
+            >
+              <ProgressIndicator value={value} />
+              <Typography variant="body03">Loading: {value}%</Typography>
+            </div>
+          );
+        }}
+      </Function>
+    </Stack>
+  </Story>
+</Preview>
+
+### Linear ProgressIndicator - indeterminate
+
+If the `value` prop is not provided, the progress indicator becomes indeterminate.
+
+<Preview>
+  <Story name="Linear Progress Indicator - indeterminate">
+    <Stack width={300}>
+      <ProgressIndicator />
+    </Stack>
+  </Story>
+</Preview>
+
+### Block ProgressIndicator
+
+The Linear Progress Indicator can be block-positioned, for usage in page loaders etc.
+
+<Preview>
+  <Story name="Block ProgressIndicator">
+    <Stack isVertical>
+      <ProgressIndicator isBlock />
+    </Stack>
+  </Story>
+</Preview>
+
+### Circular ProgressIndicator with percentage
+
+<Preview>
+  <Story name="Circular ProgressIndicator with percentage">
+    <Stack>
+      <Function>
+        {() => {
+          const [value, setValue] = useState(0);
+          useEffect(() => {
+            const interval = setInterval(
+              () =>
+                setValue((value) => {
+                  if (value + 20 > 100) return 0;
+                  return value + 20;
+                }),
+              1000
+            );
+            return () => {
+              clearInterval(interval);
+            };
+          }, []);
+          return (
+            <div style={{ display: 'flex', gap: '32px', alignItems: 'center' }}>
+              <ProgressIndicator type={'circle'} value={value} />
+              <Typography variant="body03">Loading: {value}%</Typography>
+            </div>
+          );
+        }}
+      </Function>
+    </Stack>
+  </Story>
+</Preview>
+
+### Circular ProgressIndicator - indeterminate
+
+<Preview>
+  <Story name="Circular ProgressIndicator - indeterminate">
+    <Stack>
+      <ProgressIndicator type={'circle'} />
+    </Stack>
+  </Story>
+</Preview>
+
+### Circular ProgressIndicator - Error states
+
+The status of the progress indicator can be `normal` or `error`.
+
+<Preview>
+  <Story name="Circular ProgressIndicator - Error states">
+    <Stack>
+      <ProgressIndicator type={'circle'} value={60} status="error" />
+    </Stack>
+    <Stack width={300}>
+      <ProgressIndicator value={60} status="error" />
+    </Stack>
+  </Story>
+</Preview>
+
+### Playground
+
+<Preview>
+  <Story name="Playground" parameters={{ decorators: [withKnobs] }}>
+    <Stack width={300} isVertical>
+      <ProgressIndicator
+        type={select('type', ['linear', 'circular'], 'linear')}
+        status={select('status', ['normal', 'error'], 'normal')}
+        isBlock={boolean('isBlock [for linear only]', false)}
+      />
+      <ProgressIndicator
+        value={number('value', undefined)}
+        type={select('type', ['linear', 'circular'], 'linear')}
+        status={select('status', ['normal', 'error'], 'normal')}
+        isBlock={boolean('isBlock [for linear only]', false)}
+      />
+    </Stack>
+  </Story>
+</Preview>

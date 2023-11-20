@@ -1,9 +1,8 @@
-import type { SerializedStyles } from '@emotion/react';
-import { css } from '@emotion/react';
+import { css, SerializedStyles } from '@emotion/react';
 
-import type { ButtonBaseProps } from './ButtonBase';
-import type { Theme } from '../../theme';
-import { getButtonTokens, getIconButtonTokens, getTextButtonTokens } from '../Button/Button.tokens';
+import { ButtonBaseProps } from './ButtonBase';
+import { Theme } from '../../theme';
+import { getButtonTokens, getTextButtonTokens } from '../Button/Button.tokens';
 import { generateStylesFromTokens } from 'components/Typography/utils';
 
 export const buttonWrapperStyle = ({
@@ -14,6 +13,7 @@ export const buttonWrapperStyle = ({
 export const buttonBaseStyle =
   ({
     type = 'primary',
+    size = 'normal',
     isBlock,
     isLoading,
     isDisabled,
@@ -23,21 +23,41 @@ export const buttonBaseStyle =
   }: Omit<ButtonBaseProps, 'htmlType' | 'ref'>) =>
   (theme: Theme): SerializedStyles => {
     const tokens = getButtonTokens(theme);
-    const iconButtonTokens = getIconButtonTokens(theme);
     const textButtonTokens = getTextButtonTokens(theme);
+
+    const getButtonWidth = () => {
+      if (isBlock) return '100%';
+
+      if (isIconButton) return tokens(`${size}.size` as const);
+
+      return undefined;
+    };
+
+    const getButtonHeight = () => {
+      if (isIconButton) return tokens(`${size}.size` as const);
+
+      if (size === 'compact') return tokens('compact.size');
+
+      return 'auto';
+    };
+
+    const getButtonPadding = () => {
+      if (isIconButton) return 0;
+
+      const paddingVertical = size === 'normal' ? textButtonTokens('normal.paddingVertical') : 0;
+      const paddingHorizontal = textButtonTokens(`${size}.paddingHorizontal` as const);
+
+      return `${paddingVertical} ${paddingHorizontal}`;
+    };
 
     const baseButtonStyles = {
       color: tokens(`${type}.textColor` as const),
-      width: isBlock ? '100%' : undefined,
+      width: getButtonWidth(),
+      height: getButtonHeight(),
       backgroundColor: tokens(
         `${type}.backgroundColor.${isLoading ? 'active' : 'default'}` as const
       ),
-      padding: isIconButton
-        ? iconButtonTokens('padding')
-        : `${textButtonTokens('normal.paddingVertical')} ${textButtonTokens(
-            'normal.paddingHorizontal'
-          )}`,
-
+      padding: getButtonPadding(),
       borderRadius:
         isIconButton && shape === 'circle'
           ? tokens('borderRadius.rounded')
@@ -69,7 +89,7 @@ export const buttonBaseStyle =
         : {};
 
     return css`
-      ${generateStylesFromTokens(tokens('text.normal'))};
+      ${generateStylesFromTokens(tokens(`text.${size}` as const))};
       ${baseButtonStyles};
       ${loadingStyles};
       ${sx?.container};

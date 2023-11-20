@@ -1,15 +1,10 @@
 import { boolean, number, select, text, withKnobs } from '@storybook/addon-knobs';
-import { linkTo } from '@storybook/addon-links';
 import NumberField from './NumberField';
 import Stack from '../storyUtils/Stack';
-import Icon from '../Icon';
-import iconSelector from '../Icon/assets/iconSelector';
-import Loader from '../Loader';
 import { FIGMA_URL } from '../../utils/common';
-import SectionHeader from '../../storybook/SectionHeader';
 
 export default {
-  title: 'Design System/NumberField',
+  title: 'Updated Components/Fields/NumberField',
   component: NumberField,
 
   parameters: {
@@ -22,11 +17,21 @@ export default {
   },
 };
 
-export const NumberFieldWithNumberFormat = {
+export const NumberFieldWithPlaceholder = {
+  render: () => (
+    <Stack>
+      <NumberField label={'NumberField'} />
+      <NumberField label={'NumberField'} placeholder={'Placeholder'} />
+    </Stack>
+  ),
+
+  name: 'NumberField with placeholder',
+};
+export const NumberFieldWithFormatOptions = {
   render: () => (
     <Stack>
       <NumberField
-        label={'Label'}
+        label={'NumberField'}
         formatOptions={{
           minimumFractionDigits: number('minimumFractionDigits', 2),
           maximumFractionDigits: number('maximumFractionDigits', 2),
@@ -35,7 +40,7 @@ export const NumberFieldWithNumberFormat = {
     </Stack>
   ),
 
-  name: 'NumberField with number format',
+  name: 'NumberField with format options',
 };
 
 export const NumberFieldWithStepper = {
@@ -68,63 +73,61 @@ export const NumberFieldWithMinAndMaxValues = {
     </Stack>
   ),
 
-  name: 'NumberField with min and max values',
+  name: 'NumberField with min/max values',
 };
 
-export const NumberFieldWithLabelAndPlaceholder = {
-  render: () => (
-    <Stack>
-      <NumberField label={'Label'} />
-      <NumberField label={'Label'} placeholder={'Placeholder'} />
-    </Stack>
-  ),
-
-  name: 'NumberField with Label and Placeholder',
-};
-
-export const NumberFieldWithLabelPlaceholderAndStatuses = {
+export const NumberFieldStatuses = {
   render: () => (
     <Stack>
       <NumberField
-        label={'Label'}
+        label={'Normal'}
         status={{
           type: 'normal',
           hintMessage: text('Custom Hint Message', 'Hint in Text Field'),
         }}
       />
       <NumberField
-        label={'Label'}
+        label={'Error'}
         status={{
           type: 'error',
           hintMessage: text('Custom Error Message', 'Error in Text Field'),
         }}
       />
       <NumberField
-        label={'Label'}
+        label={'Read-only'}
         status={{
           type: 'read-only',
-          hintMessage: text('Custom Hint Message', 'Hint in Text Field'),
-        }}
-      />
-      <NumberField
-        label={'Label'}
-        isDisabled
-        status={{
-          type: 'normal',
           hintMessage: text('Custom Hint Message', 'Hint in Text Field'),
         }}
       />
     </Stack>
   ),
 
-  name: 'NumberField with Label, Placeholder and Statuses',
+  name: 'NumberField statuses',
+};
+
+export const DisabledNumberField = {
+  render: () => (
+    <Stack>
+      <NumberField
+        isDisabled
+        label={'NumberField'}
+        status={{
+          type: 'normal',
+          hintMessage: 'This field is disabled',
+        }}
+      />
+    </Stack>
+  ),
+
+  name: 'NumberField statuses',
 };
 
 export const Playground = {
   render: () => (
     <Stack>
       <NumberField
-        label={text('Label', 'Label')}
+        label={text('Label', 'NumberField')}
         isDisabled={boolean('isDisabled', false)}
         isRequired={boolean('isRequired', false)}
         hasStepper={boolean('hasStepper', false)}
@@ -135,7 +138,6 @@ export const Playground = {
           minimumFractionDigits: number('minimumFractionDigits', 2),
           maximumFractionDigits: number('maximumFractionDigits', 2),
         }}
-        suffix={select('Suffix icon name', ['', ...Object.keys(iconSelector)], 'info')}
         status={{
           type: select('Status', ['error', 'normal', 'read-only'], 'normal'),
           hintMessage: text('Hint/Error message', 'Message in Number Field'),

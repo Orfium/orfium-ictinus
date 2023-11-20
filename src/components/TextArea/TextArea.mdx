@@ -1,11 +1,8 @@
-import { Meta, Canvas, ArgTypes, Story } from '@storybook/blocks';
-import { boolean, select, text, withKnobs, number } from '@storybook/addon-knobs';
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
 import TextArea from './TextArea';
-import Stack from '../storyUtils/Stack';
-import { FIGMA_URL, Function } from '../../utils/common';
 import SectionHeader from '../../storybook/SectionHeader';
-import { useState } from 'react';
 import * as TextAreaStories from './TextArea.stories';
+import Overview from '../../storybook/Overview';
 
 <Meta of={TextAreaStories} />
 
@@ -18,7 +15,9 @@ import * as TextAreaStories from './TextArea.stories';
 
 # Overview
 
-A universal TextArea component used for the case where large string of text is needed as an input.
+<Overview>
+  A universal TextArea component used for the case where large string of text is needed as an input.
+</Overview>
 
 ## Props
 
@@ -27,27 +26,27 @@ A universal TextArea component used for the case where large string of text is n
 ## Usage
 
 <UsageGuidelines
-  guidelines={[
+  guidelines={['When you need to enter a large string of text']}
+  policies={[
     'If you need to enter a short string of text in a single line, use text input instead',
-    'TextArea hint may be either text (on the left) or character counter (on the right)',
   ]}
 />
 
-## Variants
+<SubsectionHeader title="Variants" />
 
-### TextArea with labels
+### TextArea with placeholder
 
-TextArea with label, with or without placeholder
+TextArea with or without placeholder
 
-<Canvas of={TextAreaStories.TextAreaWithLabels} />
+<Canvas of={TextAreaStories.TextAreaWithPlaceholder} />
 
-### Resizable TextArea
+### TextArea with resizing option
 
 TextArea and how to change size with cols and rows
 
-<Canvas of={TextAreaStories.ResizableTextArea} />
+<Canvas of={TextAreaStories.TextAreaWithResizingOption} />
 
-### TextArea with Counter
+### TextArea with counter
 
 TextArea with maximum characters indicated by a counter.
 
@@ -58,7 +57,7 @@ TextArea with maximum characters indicated by a counter.
 
 <Canvas of={TextAreaStories.TextAreaWithCounter} />
 
-### TextArea Statuses
+### TextArea statuses
 
 TextArea with 3 available statuses: Normal, Error and Read-only.
 

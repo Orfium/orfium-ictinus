@@ -4,7 +4,7 @@ import OverlayShowcase from '../storyUtils/OverlayShowcase';
 import Stack from '../storyUtils/Stack';
 
 export default {
-  title: 'Design System/Overlay',
+  title: 'Original Components/Overlay',
   component: Overlay,
 };
 

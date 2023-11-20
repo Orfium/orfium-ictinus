@@ -3,7 +3,7 @@ import ExpandCollapse from './ExpandCollapse';
 import { Fragment } from 'react';
 
 export default {
-  title: 'Design System/ExpandCollapse',
+  title: 'Original Components/ExpandCollapse',
   component: ExpandCollapse,
 };
 

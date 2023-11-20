@@ -1,21 +1,16 @@
 import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
-import { linkTo } from '@storybook/addon-links';
 import TextField from './TextField';
 import Stack from '../storyUtils/Stack';
-import Icon from '../Icon';
 import iconSelector from '../Icon/assets/iconSelector';
-import Loader from '../Loader';
 import {
   MultiTextFieldShowcase,
   TextFieldShowCase,
 } from '../../components/storyUtils/TextFieldShowcases';
 import { FIGMA_URL } from '../../utils/common';
-import SectionHeader from '../../storybook/SectionHeader';
 
 export default {
-  title: 'Design System/TextField',
+  title: 'Updated Components/Fields/TextField',
   component: TextField,
-
   parameters: {
     design: [
       {
@@ -26,78 +21,72 @@ export default {
   },
 };
 
-export const TextFieldWithLabelAndPlaceholder = {
+export const TextFieldSizes = {
   render: () => (
-    <Stack>
-      <TextField label={'Label'} />
-      <TextField label={'Label'} placeholder={'Placeholder'} />
-    </Stack>
+    <>
+      <Stack>
+        <TextField label={'Label'} />
+      </Stack>
+      <Stack>
+        <TextField label={'Label'} size="compact" />
+      </Stack>
+    </>
   ),
-
-  name: 'TextField with Label and Placeholder',
+  name: 'TextField sizes',
 };
 
-export const MaskedTextFieldDontTest = {
+export const TextFieldWithPlaceholder = {
+  render: () => (
+    <Stack>
+      <TextField label={'TextField'} />
+      <TextField label={'TextField'} placeholder={'Placeholder'} />
+    </Stack>
+  ),
+  name: 'TextField with placeholder',
+};
+
+export const TextFieldWithMaskOption = {
   render: () => (
     <Stack>
       <TextFieldShowCase
-        label="Masked TextField"
-        mask={text('Mask', '+(999) 999')}
+        label="Currency Example"
+        mask={'$ 999999'}
         isDisabled={boolean('isDisabled', false)}
-        hasSuffix={boolean('hasSuffixIcon', false)}
-        suffix={select('Suffix icon name', ['', ...Object.keys(iconSelector)], 'info')}
         status={{
           type: select('Status', ['error', 'normal', 'read-only'], 'normal'),
-          hintMessage: text('Hint/Error message', 'Message in Text Field'),
+          hintMessage: text('Hint/Error message', ''),
         }}
       />
-    </Stack>
-  ),
-
-  name: 'Masked TextField (DontTest)',
-};
-
-export const TextFieldWithIcons = {
-  render: () => (
-    <Stack>
-      <TextField
-        label={'Label'}
-        suffix={
-          <img
-            style={{
-              background: 'red',
-            }}
-            src="https://brandmark.io/logo-rank/random/pepsi.png"
-            width="16"
-            height="16"
-          />
-        }
-      />
-      <TextField label={'Label'} suffix={'keyword'} />
-    </Stack>
-  ),
-
-  name: 'TextField with Icons',
-};
-
-export const DisabledTextField = {
-  render: () => (
-    <Stack>
-      <TextField
-        isDisabled
-        label={'Label'}
+      <TextFieldShowCase
+        label="Percentage Example"
+        mask={'99,99 %'}
+        isDisabled={boolean('isDisabled', false)}
         status={{
-          type: 'normal',
-          hintMessage: 'This field is disabled',
+          type: select('Status', ['error', 'normal', 'read-only'], 'normal'),
+          hintMessage: text('Hint/Error message', ''),
         }}
       />
     </Stack>
   ),
-
-  name: 'Disabled TextField',
+  name: 'TextField with mask option',
 };
 
-export const TextFieldWithDifferentStatuses = {
+export const TextFieldWithIcon = {
+  render: () => (
+    <Stack>
+      <TextField label={'TextField'} suffix={'search'} />
+      <TextField label={'TextField'} suffix={'calendarEmpty'} />
+    </Stack>
+  ),
+  name: 'TextField with icon',
+};
+
+export const MultiTextField = {
+  render: () => <MultiTextFieldShowcase />,
+  name: 'MultiTextField',
+};
+
+export const TextFieldStatuses = {
   render: () => (
     <Stack>
       <TextField
@@ -123,25 +112,34 @@ export const TextFieldWithDifferentStatuses = {
       />
     </Stack>
   ),
-
-  name: 'TextField with different Statuses',
-
   parameters: {
     decorators: [withKnobs],
   },
+  name: 'TextField statuses',
 };
 
-export const MultiTextField = {
-  render: () => <MultiTextFieldShowcase />,
-  name: 'MultiTextField',
+export const DisabledTextField = {
+  render: () => (
+    <Stack>
+      <TextField
+        isDisabled
+        label={'TextField'}
+        status={{
+          type: 'normal',
+          hintMessage: 'This field is disabled',
+        }}
+      />
+    </Stack>
+  ),
+  name: 'Disabled TextField',
 };
 
 export const Playground = {
   render: () => (
     <Stack>
       <TextFieldShowCase
-        mask={text('Mask', 'Mask')}
-        label={text('Label', 'Label')}
+        label={text('Label', 'TextField')}
+        size={select('size', ['normal', 'compact'], 'normal')}
         placeholder={text('Placeholder', 'Placeholder')}
         isDisabled={boolean('isDisabled', false)}
         hasSuffix={boolean('hasSuffixIcon', false)}
@@ -153,10 +151,8 @@ export const Playground = {
       />
     </Stack>
   ),
-
-  name: 'Playground',
-
   parameters: {
     decorators: [withKnobs],
   },
+  name: 'Playground',
 };

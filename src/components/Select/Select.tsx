@@ -17,8 +17,8 @@ import Icon from '../Icon';
 import TextField from '../TextField';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import handleSearch from '../utils/handleSearch';
-import Loader from 'components/Loader';
 import MultiTextFieldBase from 'components/MultiTextFieldBase/MultiTextFieldBase';
+import ProgressIndicator from 'components/ProgressIndicator';
 import PositionInScreen from 'components/utils/PositionInScreen';
 
 export const emptyValue: SelectOption = { label: '', value: '' };
@@ -30,6 +30,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
     selectedOption,
     isMulti,
     options,
+    size = 'normal',
     isAsync = false,
     isLoading = false,
     asyncSearch = () => {},
@@ -268,22 +269,22 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
   const suffixRender = useMemo(
     () => (
       <div css={suffixContainer(isOpen, isSearchable)}>
-        {isLoading && (
-          <Box py="2" display="flex" alignItems="center">
-            <Loader />
+        {isLoading ? (
+          <Box py={'2'} display={'flex'} alignItems={'center'}>
+            <ProgressIndicator type="circular" dataTestPrefixId="select" />
           </Box>
+        ) : (
+          <Icon
+            size={size === 'normal' ? 16 : 12}
+            name={suffixNameSelector}
+            color={theme.utils.getColor('lightGrey', 650)}
+            onClick={handleIconClick}
+            dataTestId="select-right-icon"
+          />
         )}
-
-        <Icon
-          size={isSearchable ? 20 : 12}
-          name={suffixNameSelector}
-          color={theme.utils.getColor('lightGrey', 650)}
-          onClick={handleIconClick}
-          dataTestId="select-right-icon"
-        />
       </div>
     ),
-    [isOpen, isLoading, isSearchable, suffixNameSelector, theme.utils, handleIconClick]
+    [isOpen, isSearchable, isLoading, size, suffixNameSelector, theme.utils, handleIconClick]
   );
 
   const handleClick = () => {
@@ -364,6 +365,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
                 onClick={() => setIsOpen(true)}
                 status={status}
                 value={textFieldValue}
+                size={size}
                 ref={combinedRefs}
                 autoComplete="off"
                 role="combobox"
@@ -381,7 +383,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
             status={status}
             isLoading={isLoading}
             isVirtualized={isVirtualized}
-            searchTerm={hasHighlightSearch ? searchValue : undefined}
+            size={size}
             hasSelectAllOption={isMulti && hasSelectAllOption && !hasNoOptionsAndIsCreatable}
           />
         </PositionInScreen>

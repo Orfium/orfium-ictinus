@@ -37,7 +37,7 @@ export type DatePickInputProps = {
   /** The selected day */
   selectedDay: Range;
   /** Props for styling the input */
-  inputProps?: TextFieldProps;
+  inputProps?: Omit<TextFieldProps, 'size' | 'mask'>;
   /** Overrides the default date format */
   dateFormatOverride?: DateFormatType;
   /** Defines whether the component is open */

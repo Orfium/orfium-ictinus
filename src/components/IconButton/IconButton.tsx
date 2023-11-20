@@ -24,7 +24,7 @@ export type IconButtonProps = Omit<
 };
 
 const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>((props, ref) => {
-  const { name, type = 'primary', shape = 'circle', dataTestPrefixId } = props;
+  const { name, size = 'normal', type = 'primary', shape = 'circle', dataTestPrefixId } = props;
   const theme = useTheme();
   const tokens = getButtonTokens(theme);
 
@@ -38,7 +38,8 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>((props, 
       shape={shape}
       dataTestPrefixId={dataTestPrefixId ? `${dataTestPrefixId}-icon-` : 'icon-'}
     >
-      <Icon name={name} color={iconColor} />
+      {/** @TODO revisit icon sizes when Icon component is implemented */}
+      <Icon size={size === 'compact' ? 12 : 16} name={name} color={iconColor} />
     </ButtonBase>
   );
 });

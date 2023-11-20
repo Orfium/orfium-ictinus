@@ -11,13 +11,14 @@ import {
   chipStyle,
   inputContainer,
   inputOverrides,
+  progressIndicatorStyles,
   rightIconsContainer,
   rightIconStyles,
   textInputBaseOverrides,
 } from './MultiTextFieldBase.style';
 import Chip from 'components/Chip';
 import Label from 'components/Label';
-import Loader from 'components/Loader';
+import ProgressIndicator from 'components/ProgressIndicator';
 import type { SelectOption } from 'components/Select';
 import type { InputProps, TextFieldProps } from 'components/TextField/TextField';
 import TextInputBase from 'components/TextInputBase';
@@ -160,7 +161,6 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
             />
             {label && (
               <Label
-                size="md"
                 htmlFor={id}
                 label={label}
                 isRequired={isRequired}
@@ -172,9 +172,14 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
 
           {!isDisabled && (
             <div css={rightIconsContainer()}>
-              {isLoading && <Loader />}
-              {icon && (
-                <div css={rightIconStyles({ isClickable: hasValue && !isLocked })}>{icon}</div>
+              {isLoading ? (
+                <div css={progressIndicatorStyles()}>
+                  <ProgressIndicator type="circular" dataTestPrefixId="multi_textdield_base" />
+                </div>
+              ) : (
+                icon && (
+                  <div css={rightIconStyles({ isClickable: hasValue && !isLocked })}>{icon}</div>
+                )
               )}
             </div>
           )}

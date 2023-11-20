@@ -2,7 +2,8 @@ import type { ClickEvent } from 'hooks/useLoading';
 import useTheme from 'hooks/useTheme';
 import { head } from 'lodash';
 import React, { useCallback } from 'react';
-import type { TestProps } from 'utils/types';
+import { rem } from 'theme/utils';
+import type { ComponentSizes, TestProps } from 'utils/types';
 
 import {
   buttonSpanStyle,
@@ -21,6 +22,8 @@ import type { MenuPositionAllowed} from 'components/utils/DropdownOptions';
 import { optionsStyle } from 'components/utils/DropdownOptions';
 
 export type DropdownButtonProps = TestProps & {
+  /** The size of the DropdownButton */
+  size?: ComponentSizes;
   /** The Dropdown Items' CTA */
   onOptionSelect: (option: string | number) => void;
   /** The type of the Dropdown Button */
@@ -36,6 +39,7 @@ export type DropdownButtonProps = TestProps & {
 
 const DropdownButton = React.forwardRef<HTMLButtonElement, DropdownButtonProps>((props, ref) => {
   const {
+    size = 'normal',
     onButtonClick,
     onOptionSelect,
     menuPosition = 'left',
@@ -88,6 +92,7 @@ const DropdownButton = React.forwardRef<HTMLButtonElement, DropdownButtonProps>(
           <div css={iconButtonWrapper({ type, isOpen })}>
             <IconButton
               type={type}
+              size={size}
               name="dotsVertical"
               onClick={handleIconButtonClick}
               dataTestPrefixId={generateTestDataId('icon-dropdown', dataTestPrefixId)}
@@ -98,6 +103,7 @@ const DropdownButton = React.forwardRef<HTMLButtonElement, DropdownButtonProps>(
             <div css={buttonSpanStyle({ type })}>
               <Button
                 type={type}
+                size={size}
                 ref={ref}
                 onClick={handleButtonClick}
                 dataTestPrefixId={generateTestDataId('dropdown', dataTestPrefixId)}
@@ -108,6 +114,7 @@ const DropdownButton = React.forwardRef<HTMLButtonElement, DropdownButtonProps>(
             <div css={iconButtonSpanStyle({ isOpen, type })}>
               <IconButton
                 type={type}
+                size={size}
                 name="triangleDown"
                 shape="square"
                 onClick={handleIconButtonClick}
@@ -117,7 +124,12 @@ const DropdownButton = React.forwardRef<HTMLButtonElement, DropdownButtonProps>(
           </div>
         )}
         {isOpen && (
-          <div css={optionsStyle({ menuPosition })(theme)}>
+          <div
+            css={optionsStyle({
+              menuPosition,
+              sx: { top: size === 'compact' ? rem(34) : rem(42) },
+            })(theme)}
+          >
             {items && (
               <List
                 label="dropdown-button"

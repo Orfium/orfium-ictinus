@@ -9,7 +9,7 @@ import Box from '../../Box';
 import { Key, useState } from 'react';
 
 export default {
-  title: 'Design System/List/ListItem',
+  title: 'Updated Components/List/ListItem',
   component: ListItem,
 
   parameters: {

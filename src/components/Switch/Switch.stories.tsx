@@ -4,7 +4,7 @@ import SwitchShowcase from '../storyUtils/SwitchShowcase';
 import { boolean, select, withKnobs, text } from '@storybook/addon-knobs';
 
 export default {
-  title: 'Design System/Switch',
+  title: 'Original Components/Controls/Switch',
   component: Switch,
 };
 

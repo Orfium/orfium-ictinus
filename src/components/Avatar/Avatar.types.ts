@@ -5,11 +5,11 @@ export type AvatarColors = 'blue' | 'teal' | 'purple' | 'red' | 'orange';
 export type AvatarSizes = 1 | 2 | 3 | 4 | 5 | 6;
 
 export type AvatarProps = {
-  /** The size of the avatar
+  /** The size of the Avatar
    *  @default 1
    * */
   size?: AvatarSizes;
-  /** the color of the button based on our colors eg. red-500
+  /** The color of the Avatar
    *  @default 'blue'
    * */
   color?: AvatarColors;

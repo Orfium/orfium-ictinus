@@ -6,7 +6,7 @@ import ModalComponent from './Modal';
 import { FIGMA_URL } from '../../utils/common';
 
 export default {
-  title: 'Design System/Modal',
+  title: 'Original Components/Modal',
   component: ModalComponent,
 
   parameters: {

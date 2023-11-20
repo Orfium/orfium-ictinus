@@ -10,7 +10,7 @@ import { options, optionsWithHelperInDisabled, groupOptions, defaultValue } from
 import SectionHeader from '../../storybook/SectionHeader';
 
 export default {
-  title: 'Design System/Select',
+  title: 'Updated Components/Fields/Select',
   component: Select,
 
   parameters: {
@@ -34,24 +34,19 @@ export default {
   },
 };
 
-export const SimpleSelect = {
+export const SelectSizes = {
   render: () => (
     <Stack height={300}>
       <Function>
         {() => {
-          const [selectedOption, setSelectedOption] = useState<SelectOption | SelectOption[]>(
-            defaultValue
-          );
-
+          const [selectedOption, setSelectedOption] = useState(defaultValue);
           return (
-            // @ts-ignore
             <Select
-              label={'Flavour'}
+              label={'Label'}
               options={options}
+              isSearchable={false}
               selectedOption={selectedOption}
               onChange={setSelectedOption}
-              isCreatable={boolean('isCreatable', false)}
-              isVirtualized={boolean('isVirtualized', true)}
             />
           );
         }}
@@ -59,29 +54,36 @@ export const SimpleSelect = {
       <Function>
         {() => {
           const [selectedOption, setSelectedOption] = useState(defaultValue);
-
           return (
             <Select
-              label={'Flavour'}
+              label={'Label'}
               options={options}
+              size={'compact'}
+              isSearchable={false}
               selectedOption={selectedOption}
               onChange={setSelectedOption}
-              isCreatable={boolean('isCreatable', false)}
             />
           );
         }}
       </Function>
+    </Stack>
+  ),
+
+  name: 'Select Sizes',
+};
+export const SimpleSelect = {
+  render: () => (
+    <Stack height={350}>
       <Function>
         {() => {
           const [selectedOption, setSelectedOption] = useState(defaultValue);
-
           return (
             <Select
-              label={'Flavour'}
-              options={options}
+              isSearchable={false}
               selectedOption={selectedOption}
               onChange={setSelectedOption}
-              isCreatable={boolean('isCreatable', false)}
+              label={'Select'}
+              options={options}
             />
           );
         }}
@@ -92,13 +94,100 @@ export const SimpleSelect = {
   name: 'Simple Select',
 };
 
-export const SelectWithStatuses = {
+export const SearchableSelect = {
+  render: () => (
+    <Stack height={300}>
+      <Function>
+        {() => {
+          const [selectedOption, setSelectedOption] = useState(defaultValue);
+          return (
+            <Select
+              label={'Select'}
+              options={options}
+              selectedOption={selectedOption}
+              onChange={setSelectedOption}
+              isCreatable={boolean('isCreatable', false)}
+              isVirtualized={boolean('isVirtualized', true)}
+            />
+          );
+        }}
+      </Function>
+    </Stack>
+  ),
+
+  name: 'Searchable Select',
+};
+export const SelectWithUncontrolledState = {
+  render: () => (
+    <Stack height={350}>
+      <StatefulSelect
+        label={'Select'}
+        status={{
+          type: 'normal',
+          hintMessage: text(
+            'Custom Hint Message',
+            'This is a select with uncontrolled value, see code for more'
+          ),
+        }}
+        options={options}
+        selectedOption={defaultValue}
+      />
+    </Stack>
+  ),
+  parameters: {
+    decorators: [withKnobs],
+  },
+  name: 'Select with uncontrolled state',
+};
+export const SimpleSelectWithGroups = {
   render: () => (
     <Stack height={350}>
       <Function>
         {() => {
           const [selectedOption, setSelectedOption] = useState(defaultValue);
-
+          return (
+            <Select
+              label={'Group Select'}
+              hasHighlightSearch
+              selectedOption={selectedOption}
+              onChange={setSelectedOption}
+              options={groupOptions}
+            />
+          );
+        }}
+      </Function>
+    </Stack>
+  ),
+  name: 'Simple Select with groups',
+};
+export const SelectWithAsyncSearch = {
+  render: () => <SelectShowcase />,
+  name: 'Select with async search',
+};
+export const SelectWithEdgeCase = {
+  render: () => <EdgeCasesSelectShowcase />,
+  name: 'Select with edge case',
+};
+export const MultiSelect = {
+  render: () => (
+    <MultiSelectShowcase
+      isDisabled={boolean('isDisabled', false)}
+      status={{
+        type: select('Status', ['error', 'normal', 'read-only'], 'normal'),
+        hintMessage: text('Hint/Error message', 'Message in Text Field'),
+      }}
+      hasSelectAllOption={boolean('hasSelectAllOption', false)}
+      isCreatable={boolean('isCreatable', false)}
+    />
+  ),
+  name: 'MultiSelect',
+};
+export const SelectStatuses = {
+  render: () => (
+    <Stack height={350}>
+      <Function>
+        {() => {
+          const [selectedOption, setSelectedOption] = useState(defaultValue);
           return (
             <Select
               label={'Normal'}
@@ -118,7 +207,6 @@ export const SelectWithStatuses = {
       <Function>
         {() => {
           const [selectedOption, setSelectedOption] = useState(defaultValue);
-
           return (
             <Select
               label={'Error'}
@@ -138,7 +226,6 @@ export const SelectWithStatuses = {
       <Function>
         {() => {
           const [selectedOption, setSelectedOption] = useState(defaultValue);
-
           return (
             <Select
               label={'Read-only'}
@@ -157,110 +244,10 @@ export const SelectWithStatuses = {
       </Function>
     </Stack>
   ),
-
-  name: 'Select with Statuses',
-
   parameters: {
     decorators: [withKnobs],
   },
-};
-
-export const SelectWithUncontrolledState = {
-  render: () => (
-    <Stack height={350}>
-      <StatefulSelect
-        label={'Label'}
-        status={{
-          type: 'normal',
-
-          hintMessage: text(
-            'Custom Hint Message',
-            'This is a select with uncontrolled value, see code for more'
-          ),
-        }}
-        options={options}
-        selectedOption={defaultValue}
-      />
-    </Stack>
-  ),
-
-  name: 'Select with uncontrolled state',
-
-  parameters: {
-    decorators: [withKnobs],
-  },
-};
-
-export const SelectWithHighlight = {
-  render: () => (
-    <Stack height={350}>
-      <Function>
-        {() => {
-          const [selectedOption, setSelectedOption] = useState(defaultValue);
-
-          return (
-            <Select
-              hasHighlightSearch
-              selectedOption={selectedOption}
-              onChange={setSelectedOption}
-              label={'Flavour'}
-              options={options}
-            />
-          );
-        }}
-      </Function>
-    </Stack>
-  ),
-
-  name: 'Select with Highlight',
-};
-
-export const SimpleGroupSelect = {
-  render: () => (
-    <Stack height={350}>
-      <Function>
-        {() => {
-          const [selectedOption, setSelectedOption] = useState(defaultValue);
-
-          return (
-            <Select
-              label={'Group Select'}
-              hasHighlightSearch
-              selectedOption={selectedOption}
-              onChange={setSelectedOption}
-              options={groupOptions}
-            />
-          );
-        }}
-      </Function>
-    </Stack>
-  ),
-
-  name: 'Simple Group Select',
-};
-
-export const NotSearchableSelect = {
-  render: () => (
-    <Stack height={350}>
-      <Function>
-        {() => {
-          const [selectedOption, setSelectedOption] = useState(defaultValue);
-
-          return (
-            <Select
-              isSearchable={false}
-              selectedOption={selectedOption}
-              onChange={setSelectedOption}
-              label={'Flavour'}
-              options={options}
-            />
-          );
-        }}
-      </Function>
-    </Stack>
-  ),
-
-  name: 'Not Searchable Select',
+  name: 'Select statuses',
 };
 
 export const DisabledSelect = {
@@ -268,12 +255,9 @@ export const DisabledSelect = {
     <Stack>
       <Select
         isDisabled
-        label={'Label'}
+        label={'Select'}
         options={options}
-        status={{
-          type: 'normal',
-          hintMessage: 'This field is disabled',
-        }}
+        status={{ type: 'normal', hintMessage: 'This field is disabled' }}
       />
     </Stack>
   ),
@@ -281,20 +265,24 @@ export const DisabledSelect = {
   name: 'Disabled Select',
 };
 
-export const DisabledOptionWithHelperText = {
+export const Playground = {
   render: () => (
     <Stack height={350}>
       <Function>
         {() => {
           const [selectedOption, setSelectedOption] = useState(defaultValue);
-
           return (
             <Select
-              isSearchable={false}
+              label={text('Label', 'Select')}
+              status={{
+                type: select('Status', ['error', 'normal', 'read-only'], 'normal'),
+                hintMessage: text('Hint/Error message', 'Message in Text Field'),
+              }}
+              isSearchable={boolean('isSearchable', false)}
+              isDisabled={boolean('isDisabled', false)}
+              options={options}
               selectedOption={selectedOption}
               onChange={setSelectedOption}
-              label={'Flavour'}
-              options={optionsWithHelperInDisabled}
             />
           );
         }}
@@ -302,36 +290,5 @@ export const DisabledOptionWithHelperText = {
     </Stack>
   ),
 
-  name: 'Disabled option with helper text',
-};
-
-export const AsyncSelect = {
-  render: () => <SelectShowcase />,
-  name: 'Async Select',
-};
-
-export const AsyncSelectWithMinCharacters = {
-  render: () => <SelectShowcase minCharactersToSearch={3} />,
-  name: 'Async Select with min characters',
-};
-
-export const SelectWithEdgeCase = {
-  render: () => <EdgeCasesSelectShowcase />,
-  name: 'Select with edge case',
-};
-
-export const MultiSelect = {
-  render: () => (
-    <MultiSelectShowcase
-      isDisabled={boolean('isDisabled', false)}
-      status={{
-        type: select('Status', ['error', 'normal', 'read-only'], 'normal'),
-        hintMessage: text('Hint/Error message', 'Message in Text Field'),
-      }}
-      hasSelectAllOption={boolean('hasSelectAllOption', false)}
-      isCreatable={boolean('isCreatable', false)}
-    />
-  ),
-
-  name: 'MultiSelect',
+  name: 'Playground',
 };

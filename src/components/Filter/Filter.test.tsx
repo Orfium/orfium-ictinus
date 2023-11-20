@@ -90,7 +90,7 @@ describe('Generic Filter', () => {
     ).not.toBeInTheDocument();
   });
 
-  it('should display loading dots when isLoading is true', async () => {
+  it('should display progress indicator when isLoading is true', async () => {
     renderFilter({ isSearchable: true, isLoading: true });
 
     const button = screen.getByTestId('filter');
@@ -99,7 +99,7 @@ describe('Generic Filter', () => {
     const selectInput = screen.getByTestId('filter-input');
     userEvent.type(selectInput, 'test');
 
-    await waitFor(() => expect(screen.getByTestId('dots-loading')).toBeVisible());
+    await waitFor(() => expect(screen.getByTestId('search_circular_progress_container')).toBeVisible());
   });
 
   it('should call onAsyncSearch when typing', async () => {

@@ -2,7 +2,7 @@ import { ListItemAction } from '../index';
 import { FIGMA_URL } from '../../../utils/common';
 
 export default {
-  title: 'Design System/List/ListItemAction',
+  title: 'Updated Components/List/ListItemAction',
   component: ListItemAction,
   parameters: {
     storyshots: {

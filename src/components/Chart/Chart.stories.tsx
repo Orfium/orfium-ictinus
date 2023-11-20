@@ -6,7 +6,7 @@ import { color } from './LineChart/story.utils';
 import { initData } from './LineChart/mockedData';
 
 export default {
-  title: 'Design System/Chart',
+  title: 'Original Components/Chart',
 };
 
 export const LineChartStory = {

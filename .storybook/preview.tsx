@@ -5,7 +5,7 @@ import { DocsContainer, DocsPage } from '@storybook/addon-docs';
 import ThemeProvider from '../src/components/ThemeProvider';
 import styled from '@emotion/styled';
 import Typography from '../src/storybook/Typography';
-import { UsageGuidelines, Tip, Preview } from '../src/storybook';
+import { UsageGuidelines, SubsectionHeader, SectionHeader, Tip, Preview } from '../src/storybook';
 import { TypographyWrapper as SBTypographyWrapper } from '../src/storybook/Typography/Typography.style';
 import Box from '../src/components/Box';
 import { Preview as SBPreview } from '@storybook/react';
@@ -189,6 +189,8 @@ const preview: SBPreview = {
         UsageGuidelines,
         Tip,
         Preview,
+        SubsectionHeader,
+        SectionHeader,
       },
     },
   },

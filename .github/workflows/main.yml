@@ -8,7 +8,7 @@ on:
     branches:
       - "**"
 env:
-  NODE_VERSION: '18.13'
+  NODE_VERSION: '18.17'
   PROJECT: designlab
   # ^ Is important to note that the above is used as:
   #   * SENTRY project to deploy so naming must match

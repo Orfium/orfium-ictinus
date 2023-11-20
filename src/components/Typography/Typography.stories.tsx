@@ -4,7 +4,7 @@ import { FIGMA_URL } from '../../utils/common';
 import SectionHeader from '../../storybook/SectionHeader';
 
 export default {
-  title: 'Design System/Typography',
+  title: 'Updated Components/Typography',
   component: Typography,
 
   parameters: {
@@ -65,7 +65,7 @@ export const FontSpacingVariations = {
     </Stack>
   ),
 
-  name: 'Font Spacing Variations',
+  name: 'Font spacing variations',
 };
 
 export const TypesDefault = {

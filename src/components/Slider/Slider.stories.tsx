@@ -5,7 +5,7 @@ import { boolean, select, withKnobs, text } from '@storybook/addon-knobs';
 import SliderShowcase from '../storyUtils/SliderShowcase/SliderShowcase';
 
 export default {
-  title: 'Design System/Slider',
+  title: 'Original Components/Slider',
   component: Slider,
 };
 
@@ -51,9 +51,7 @@ export const SelectorSliderWithIncrementsDontTest = {
       hasIncrements={true}
     />
   ),
-
   name: 'Selector Slider with Increments (DontTest)',
-
   parameters: {
     decorators: [withKnobs],
   },

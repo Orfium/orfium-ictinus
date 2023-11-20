@@ -15,11 +15,10 @@ export const sxProp =
     const tokens = getTextInputBaseTokens(theme);
 
     return {
-      wrapper: { width: 'auto', height: 'auto' },
+      wrapper: { width: 'auto', height: 'auto', minWidth: rem(tokens('minWidth.large.normal')) },
       textField: { padding: `${tokens('paddingVertical')} ${tokens('paddingContentLeft')}` },
       input: {
-        width: rem(tokens('minWidth.large.normal')),
-        minWidth: rem(tokens('minWidth.large.normal')),
+        maxWidth: '100%',
         resize: !isResizeEnabled ? 'none' : 'both',
 
         '& + label': {

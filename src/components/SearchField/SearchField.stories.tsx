@@ -4,7 +4,7 @@ import SearchFieldShowcase from './SearchFieldShowcase';
 import { FIGMA_URL } from '../../utils/common';
 
 export default {
-  title: 'Design System/SearchField',
+  title: 'Original Components/SearchField',
   component: SearchField,
 
   parameters: {

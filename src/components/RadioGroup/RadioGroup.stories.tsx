@@ -3,7 +3,7 @@ import Radio from '../Radio';
 import RadioGroup from './RadioGroup';
 
 export default {
-  title: 'Design System/RadioGroup',
+  title: 'Original Components/Controls/RadioGroup',
   component: RadioGroup,
 };
 

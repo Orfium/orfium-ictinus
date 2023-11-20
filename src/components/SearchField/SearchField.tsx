@@ -14,7 +14,7 @@ import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.t
 export type SearchFieldProps = {
   /** A callback that's called when the user clicks the 'clear' icon */
   onClear: () => void;
-} & TextFieldProps &
+} & Omit<TextFieldProps, 'size'> &
   TestProps;
 
 const SearchField = React.forwardRef<HTMLInputElement, SearchFieldProps>((props, ref) => {
@@ -28,7 +28,7 @@ const SearchField = React.forwardRef<HTMLInputElement, SearchFieldProps>((props,
   const sx = {
     wrapper: {
       borderRadius: rem(100),
-      height: tokens('container'),
+      height: tokens('container.normal'),
     },
   };
 

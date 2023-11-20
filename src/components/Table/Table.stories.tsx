@@ -4,7 +4,7 @@ import TableFilterShowcase from '../storyUtils/TableFilterShowcase';
 import { FIGMA_URL } from '../../utils/common';
 
 export default {
-  title: 'Design System/Table',
+  title: 'Original Components/Table',
   component: Table,
 
   parameters: {
