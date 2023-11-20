@@ -22,25 +22,47 @@ export const rightIconsContainer =
     css`
       position: absolute !important;
       bottom: 0;
-      right: ${theme.globals.spacing.get('5')};
+      right: ${theme.globals.spacing.get('3')};
       top: 0;
       display: flex;
       align-items: center;
     `;
 
+export const progressIndicatorStyles =
+  () =>
+  (theme: Theme): SerializedStyles =>
+    css`
+      padding-right: ${theme.globals.spacing.get('3')};
+    `;
+
 export const rightIconStyles =
   ({ isClickable }: { isClickable: boolean }) =>
-  (): SerializedStyles =>
-    css`
+  (theme: Theme): SerializedStyles => {
+    return css`
+      /** @TODO: revisit these styles when Interactive Icon is implemented */
+      width: ${rem(36)};
+      height: ${rem(36)};
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
       cursor: ${isClickable ? 'pointer' : 'auto'};
+
+      /** @TODO: revisit these styles when Interactive Icon is implemented */
+      &:focus-visible,
+      &:hover {
+        background: ${theme.tokens.state.get('backgroundColor.hover')};
+        border-radius: ${theme.globals.borderRadius.get('7')};
+      }
     `;
+  };
 
 export const chipStyle =
   () =>
   (theme: Theme): SerializedStyles =>
     css`
       position: relative;
-      margin-right: ${theme.globals.spacing.get('2')};
+      margin-right: ${theme.globals.spacing.get('3')};
       & > div {
         height: ${rem(20)};
         border-radius: ${rem(4)};
@@ -55,27 +77,43 @@ export const inputContainer =
       width: 100%;
       display: flex;
       flex-wrap: wrap;
-      row-gap: ${theme.globals.spacing.get('2')};
+      row-gap: ${theme.globals.spacing.get('3')};
       z-index: 2;
     `;
 
 /** TextField overrides */
 
 export const textInputBaseOverrides =
-  ({ hasValue, isLoading }: { hasValue: boolean; isLoading?: boolean }) =>
+  ({
+    hasValue,
+    isLoading,
+    hasLabel,
+    isResponsive,
+    isTextfield,
+  }: {
+    hasValue: boolean;
+    isLoading?: boolean;
+    hasLabel?: boolean;
+    isResponsive?: boolean;
+    isTextfield?: boolean;
+  }) =>
   (theme: Theme) => {
-    const tokens = getTextInputBaseTokens(theme);
-
     const labelStyles = {
-      fontWeight: `${theme.globals.typography.fontWeight.get('bold')} !important` as any,
+      fontWeight: `${theme.globals.typography.fontWeight.get('bold')}`,
       transform: `translate(${LABEL_TRANSFORM_LEFT_SPACING}, -82%) scale(0.8) !important`,
       bottom: 'auto',
     };
 
+    const paddingTop = hasLabel ? 21 : 13;
+    const paddingBottom = hasLabel ? 5 : 13;
+
+    const tokens = getTextInputBaseTokens(theme);
+
     return {
       wrapper: {
         height: 'unset',
-        minHeight: `${tokens('container')} !important`,
+        // TODO - fix this
+        minHeight: `${rem(52)} !important`,
         ...(hasValue
           ? { label: labelStyles }
           : {
@@ -93,8 +131,12 @@ export const textInputBaseOverrides =
         // so we can override the existing TextFieldInputBase paddings to
         // perfectly position and align the content inside.
         padding: isLoading
-          ? `${rem(21)} ${rem(80)} ${rem(5)} ${theme.globals.spacing.get('5')}`
-          : `${rem(21)} ${rem(40)} ${rem(5)} ${theme.globals.spacing.get('5')}`,
+          ? `${rem(paddingTop)} ${rem(80)} ${rem(paddingBottom)} ${tokens('paddingContentLeft')}`
+          : `${rem(paddingTop)} ${rem(40)} ${rem(paddingBottom)} ${tokens('paddingContentLeft')}`,
+        ...(isResponsive
+          ? { width: 'max-content', minWidth: rem(tokens('minWidth.large.normal')) }
+          : {}),
+        ...(isTextfield ? { minWidth: rem(tokens('minWidth.large.normal')), width: '100%' } : {}),
       },
     };
   };

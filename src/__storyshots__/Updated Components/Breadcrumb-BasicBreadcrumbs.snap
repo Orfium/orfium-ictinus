@@ -1,0 +1,303 @@
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  color: #1552DD;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0.25rem solid rgba(84,94,255,0);
+  opacity: 1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  pointer-events: default;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-4:hover {
+  color: #1B214F;
+}
+
+.emotion-4:hover path {
+  fill: #1B214F;
+}
+
+.emotion-4:visited {
+  color: #6c28cc;
+}
+
+.emotion-4:visited path {
+  fill: #6c28cc;
+}
+
+.emotion-4:focus-visible {
+  border: 0.25rem solid #9347ff;
+}
+
+.emotion-5 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-6 {
+  fill: #686BB3;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-6 path {
+  fill: #686BB3;
+}
+
+.emotion-23 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #686BB3;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      style="margin: 5px;"
+    >
+      <ol
+        aria-label="Breadcrumb"
+        class="emotion-1"
+        data-testid="_breadcrumb"
+      >
+        <li
+          class="emotion-2"
+        >
+          <div
+            class="emotion-3"
+          >
+            <a
+              class="emotion-4"
+              data-testid="_breadcrumb_link_Level 1_link"
+              href="/first-level"
+            >
+              <span>
+                Level 1
+              </span>
+            </a>
+            <span
+              class="emotion-5"
+            >
+              <svg
+                class="emotion-6"
+                fill="none"
+                viewBox="0 0 6 12"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M0.853554 11.1464C0.538571 11.4614 0 11.2383 0 10.7929L0 1.20711C0 0.761654 0.538571 0.53857 0.853553 0.853553L5.64645 5.64645C5.84171 5.84171 5.84171 6.15829 5.64645 6.35355L0.853554 11.1464Z"
+                  fill="#0E0E17"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </span>
+          </div>
+        </li>
+        <li
+          class="emotion-2"
+        >
+          <div
+            class="emotion-3"
+          >
+            <a
+              class="emotion-4"
+              data-testid="_breadcrumb_link_Level 2_link"
+              href="/second-level"
+            >
+              <span>
+                Level 2
+              </span>
+            </a>
+            <span
+              class="emotion-5"
+            >
+              <svg
+                class="emotion-6"
+                fill="none"
+                viewBox="0 0 6 12"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M0.853554 11.1464C0.538571 11.4614 0 11.2383 0 10.7929L0 1.20711C0 0.761654 0.538571 0.53857 0.853553 0.853553L5.64645 5.64645C5.84171 5.84171 5.84171 6.15829 5.64645 6.35355L0.853554 11.1464Z"
+                  fill="#0E0E17"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </span>
+          </div>
+        </li>
+        <li
+          class="emotion-2"
+        >
+          <div
+            class="emotion-3"
+          >
+            <a
+              class="emotion-4"
+              data-testid="_breadcrumb_link_Level 3_link"
+              href="/third-level"
+            >
+              <span>
+                Level 3
+              </span>
+            </a>
+            <span
+              class="emotion-5"
+            >
+              <svg
+                class="emotion-6"
+                fill="none"
+                viewBox="0 0 6 12"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M0.853554 11.1464C0.538571 11.4614 0 11.2383 0 10.7929L0 1.20711C0 0.761654 0.538571 0.53857 0.853553 0.853553L5.64645 5.64645C5.84171 5.84171 5.84171 6.15829 5.64645 6.35355L0.853554 11.1464Z"
+                  fill="#0E0E17"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </span>
+          </div>
+        </li>
+        <li
+          class="emotion-2"
+        >
+          <div
+            class="emotion-3"
+          >
+            <a
+              class="emotion-4"
+              data-testid="_breadcrumb_link_Level 4_link"
+              href="/forth-level"
+            >
+              <span>
+                Level 4
+              </span>
+            </a>
+            <span
+              class="emotion-5"
+            >
+              <svg
+                class="emotion-6"
+                fill="none"
+                viewBox="0 0 6 12"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M0.853554 11.1464C0.538571 11.4614 0 11.2383 0 10.7929L0 1.20711C0 0.761654 0.538571 0.53857 0.853553 0.853553L5.64645 5.64645C5.84171 5.84171 5.84171 6.15829 5.64645 6.35355L0.853554 11.1464Z"
+                  fill="#0E0E17"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </span>
+          </div>
+        </li>
+        <li
+          class="emotion-2"
+        >
+          <div
+            class="emotion-23"
+          >
+            <span
+              data-testid="_breadcrumb_Level 5"
+            >
+              Level 5
+            </span>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>

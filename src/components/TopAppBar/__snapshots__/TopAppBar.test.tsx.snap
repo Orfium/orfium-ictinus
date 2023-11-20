@@ -166,8 +166,15 @@ exports[`TopAppBar > should render correctly 1`] = `
 }
 
 .emotion-6 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
   position: relative;
-  display: inline-block;
+}
+
+.emotion-6 #unique-tooltip-id {
+  display: none!important;
 }
 
 .emotion-7 {
@@ -184,6 +191,7 @@ exports[`TopAppBar > should render correctly 1`] = `
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
   color: #1552DD;
+  height: auto;
   background-color: rgba(84,94,255,0);
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
@@ -332,66 +340,69 @@ exports[`TopAppBar > should render correctly 1`] = `
     >
       <div>
         <div
-          class="emotion-6"
           data-testid="userMenu"
         >
           <div
-            class="emotion-7"
+            class="emotion-6"
           >
-            <button
-              class="emotion-8"
-              data-testid="button"
-              type="button"
+            <div
+              class="emotion-7"
             >
-              <span
-                class="emotion-9"
+              <button
+                class="emotion-8"
+                data-testid="button"
+                type="button"
               >
-                <div
-                  class="emotion-10"
-                  data-testid="_avatar"
+                <span
+                  class="emotion-9"
                 >
-                  <img
-                    src="https://mui.com/static/images/avatar/1.jpg"
-                  />
-                </div>
-                <span>
+                  <div
+                    class="emotion-10"
+                    data-testid="_avatar"
+                  >
+                    <img
+                      src="https://mui.com/static/images/avatar/1.jpg"
+                    />
+                  </div>
                   <span>
-                    <span
-                      class="emotion-11"
-                    >
-                      Tom Cruise
+                    <span>
+                      <span
+                        class="emotion-11"
+                      >
+                        Tom Cruise
+                      </span>
                     </span>
                   </span>
-                </span>
-                <span
-                  class="emotion-12"
-                >
-                  <svg
-                    class="emotion-13"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  <span
+                    class="emotion-12"
                   >
-                    <g
-                      fill="none"
-                      fill-rule="evenodd"
-                      id="\\\\uD83D\\\\uDD36-Symbols"
-                      stroke="none"
-                      stroke-width="1"
+                    <svg
+                      class="emotion-13"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
                     >
                       <g
-                        id="Chevron_Large_Down"
+                        fill="none"
+                        fill-rule="evenodd"
+                        id="\\\\uD83D\\\\uDD36-Symbols"
+                        stroke="none"
+                        stroke-width="1"
                       >
-                        <path
-                          d="M15.1900068,4.62555888 L16.6042204,6.03977245 L10.2398322,12.4035589 L16.6042204,18.7678394 L15.1900068,20.182053 L7.41183221,12.4038784 L15.1900068,4.62555888 Z"
-                          transform="translate(12.008026, 12.403806) scale(-1, 1) rotate(-90.000000) translate(-12.008026, -12.403806)"
-                        />
+                        <g
+                          id="Chevron_Large_Down"
+                        >
+                          <path
+                            d="M15.1900068,4.62555888 L16.6042204,6.03977245 L10.2398322,12.4035589 L16.6042204,18.7678394 L15.1900068,20.182053 L7.41183221,12.4038784 L15.1900068,4.62555888 Z"
+                            transform="translate(12.008026, 12.403806) scale(-1, 1) rotate(-90.000000) translate(-12.008026, -12.403806)"
+                          />
+                        </g>
                       </g>
-                    </g>
-                  </svg>
+                    </svg>
+                  </span>
                 </span>
-              </span>
-            </button>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -566,8 +577,15 @@ exports[`TopAppBar > should render correctly on dark 1`] = `
 }
 
 .emotion-6 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
   position: relative;
-  display: inline-block;
+}
+
+.emotion-6 #unique-tooltip-id {
+  display: none!important;
 }
 
 .emotion-7 {
@@ -584,6 +602,7 @@ exports[`TopAppBar > should render correctly on dark 1`] = `
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
   color: #1552DD;
+  height: auto;
   background-color: rgba(84,94,255,0);
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
@@ -732,66 +751,69 @@ exports[`TopAppBar > should render correctly on dark 1`] = `
     >
       <div>
         <div
-          class="emotion-6"
           data-testid="userMenu"
         >
           <div
-            class="emotion-7"
+            class="emotion-6"
           >
-            <button
-              class="emotion-8"
-              data-testid="button"
-              type="button"
+            <div
+              class="emotion-7"
             >
-              <span
-                class="emotion-9"
+              <button
+                class="emotion-8"
+                data-testid="button"
+                type="button"
               >
-                <div
-                  class="emotion-10"
-                  data-testid="_avatar"
+                <span
+                  class="emotion-9"
                 >
-                  <img
-                    src="https://mui.com/static/images/avatar/1.jpg"
-                  />
-                </div>
-                <span>
+                  <div
+                    class="emotion-10"
+                    data-testid="_avatar"
+                  >
+                    <img
+                      src="https://mui.com/static/images/avatar/1.jpg"
+                    />
+                  </div>
                   <span>
-                    <span
-                      class="emotion-11"
-                    >
-                      Tom Cruise
+                    <span>
+                      <span
+                        class="emotion-11"
+                      >
+                        Tom Cruise
+                      </span>
                     </span>
                   </span>
-                </span>
-                <span
-                  class="emotion-12"
-                >
-                  <svg
-                    class="emotion-13"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  <span
+                    class="emotion-12"
                   >
-                    <g
-                      fill="none"
-                      fill-rule="evenodd"
-                      id="\\\\uD83D\\\\uDD36-Symbols"
-                      stroke="none"
-                      stroke-width="1"
+                    <svg
+                      class="emotion-13"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
                     >
                       <g
-                        id="Chevron_Large_Down"
+                        fill="none"
+                        fill-rule="evenodd"
+                        id="\\\\uD83D\\\\uDD36-Symbols"
+                        stroke="none"
+                        stroke-width="1"
                       >
-                        <path
-                          d="M15.1900068,4.62555888 L16.6042204,6.03977245 L10.2398322,12.4035589 L16.6042204,18.7678394 L15.1900068,20.182053 L7.41183221,12.4038784 L15.1900068,4.62555888 Z"
-                          transform="translate(12.008026, 12.403806) scale(-1, 1) rotate(-90.000000) translate(-12.008026, -12.403806)"
-                        />
+                        <g
+                          id="Chevron_Large_Down"
+                        >
+                          <path
+                            d="M15.1900068,4.62555888 L16.6042204,6.03977245 L10.2398322,12.4035589 L16.6042204,18.7678394 L15.1900068,20.182053 L7.41183221,12.4038784 L15.1900068,4.62555888 Z"
+                            transform="translate(12.008026, 12.403806) scale(-1, 1) rotate(-90.000000) translate(-12.008026, -12.403806)"
+                          />
+                        </g>
                       </g>
-                    </g>
-                  </svg>
+                    </svg>
+                  </span>
                 </span>
-              </span>
-            </button>
+              </button>
+            </div>
           </div>
         </div>
       </div>

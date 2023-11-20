@@ -1,0 +1,306 @@
+.emotion-0 {
+  border: 0.0625rem solid #E7E8FF;
+  border-radius: 0.25rem;
+  width: undefinedpx;
+  box-shadow: 0rem 0.25rem 0.5rem 0rem #10306612;
+}
+
+.emotion-1 {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-radius: 0.25rem;
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  overflow-x: hidden;
+  background: #ffffff;
+}
+
+.emotion-2 {
+  background-color: rgba(84,94,255,0);
+  opacity: 1;
+  cursor: initial;
+}
+
+.emotion-2>div {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-2 span[role='presentation'] {
+  padding: 0 0.75rem;
+  min-height: 3.25rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  font-weight: 700;
+}
+
+.emotion-2[role='option'] {
+  padding: 0 0.75rem;
+  min-height: 3.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.75rem;
+}
+
+.emotion-2[role='option']:hover {
+  background-color: rgba(84,94,255,0.06);
+  cursor: pointer;
+}
+
+.emotion-2[data-focus-visible] {
+  background-color: rgba(84,94,255,0.06);
+}
+
+.emotion-2[aria-selected='true'] {
+  background-color: rgba(84,94,255,0.06);
+}
+
+.emotion-2[aria-selected='true']>div {
+  color: #1552DD;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-2[aria-selected='true'][data-focus-visible] {
+  background-color: rgba(84,94,255,0.06);
+}
+
+.emotion-3 {
+  padding: 0;
+  list-style: none;
+}
+
+.emotion-5 {
+  color: #1B214F;
+  font-weight: initial;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-5 strong {
+  font-weight: bold;
+}
+
+.emotion-5 span {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      data-testid="ictinus_list"
+    >
+      <div
+        style="height: 100%;"
+      >
+        <ul
+          aria-labelledby="react-aria-:rk:"
+          class="emotion-1"
+          id="react-aria-:ri:"
+          role="listbox"
+          style="overflow-y: auto; position: relative; display: flex; flex-direction: column; height: 100%; list-style: none; padding: 0px;"
+          tabindex="0"
+        >
+          <li
+            class="emotion-2 "
+            role="presentation"
+          >
+            <span
+              id="react-aria-:rm:"
+              role="presentation"
+            >
+              Group 0
+            </span>
+            <ul
+              aria-labelledby="react-aria-:rm:"
+              class="emotion-3"
+              role="group"
+            >
+              <li
+                aria-selected="false"
+                class="emotion-2 "
+                data-key="Group_0_1"
+                data-testid="ictinus_list_item_Group_0_1"
+                id="react-aria-:ri:-option-Group_0_1"
+                role="option"
+                tabindex="-1"
+              >
+                <div
+                  class="emotion-5"
+                >
+                  <span>
+                    Item 1
+                  </span>
+                </div>
+              </li>
+              <li
+                aria-selected="false"
+                class="emotion-2 "
+                data-key="Group_0_2"
+                data-testid="ictinus_list_item_Group_0_2"
+                id="react-aria-:ri:-option-Group_0_2"
+                role="option"
+                tabindex="-1"
+              >
+                <div
+                  class="emotion-5"
+                >
+                  <span>
+                    Item 2
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li
+            class="emotion-2 "
+            role="presentation"
+          >
+            <span
+              id="react-aria-:rr:"
+              role="presentation"
+            >
+              Group 1
+            </span>
+            <ul
+              aria-labelledby="react-aria-:rr:"
+              class="emotion-3"
+              role="group"
+            >
+              <li
+                aria-selected="false"
+                class="emotion-2 "
+                data-key="Group_1_1"
+                data-testid="ictinus_list_item_Group_1_1"
+                id="react-aria-:ri:-option-Group_1_1"
+                role="option"
+                tabindex="-1"
+              >
+                <div
+                  class="emotion-5"
+                >
+                  <span>
+                    Item 1
+                  </span>
+                </div>
+              </li>
+              <li
+                aria-selected="false"
+                class="emotion-2 "
+                data-key="Group_1_2"
+                data-testid="ictinus_list_item_Group_1_2"
+                id="react-aria-:ri:-option-Group_1_2"
+                role="option"
+                tabindex="-1"
+              >
+                <div
+                  class="emotion-5"
+                >
+                  <span>
+                    Item 2
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li
+            class="emotion-2 "
+            role="presentation"
+          >
+            <span
+              id="react-aria-:r10:"
+              role="presentation"
+            >
+              Group 2
+            </span>
+            <ul
+              aria-labelledby="react-aria-:r10:"
+              class="emotion-3"
+              role="group"
+            >
+              <li
+                aria-selected="false"
+                class="emotion-2 "
+                data-key="Group_2_1"
+                data-testid="ictinus_list_item_Group_2_1"
+                id="react-aria-:ri:-option-Group_2_1"
+                role="option"
+                tabindex="-1"
+              >
+                <div
+                  class="emotion-5"
+                >
+                  <span>
+                    Item 1
+                  </span>
+                </div>
+              </li>
+              <li
+                aria-selected="false"
+                class="emotion-2 "
+                data-key="Group_2_2"
+                data-testid="ictinus_list_item_Group_2_2"
+                id="react-aria-:ri:-option-Group_2_2"
+                role="option"
+                tabindex="-1"
+              >
+                <div
+                  class="emotion-5"
+                >
+                  <span>
+                    Item 2
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

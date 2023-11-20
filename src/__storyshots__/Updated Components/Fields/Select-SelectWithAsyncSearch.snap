@@ -1,0 +1,351 @@
+.emotion-0 {
+  width: 25%;
+  height: 21.875rem;
+}
+
+.emotion-1 {
+  position: relative;
+  min-width: 8.75rem;
+}
+
+.emotion-2 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
+  position: relative;
+}
+
+.emotion-2 #unique-tooltip-id {
+  display: none!important;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: 3.25rem;
+  min-width: 8.75rem;
+  background-color: #ffffff;
+}
+
+.emotion-3:hover {
+  background-color: #F5F5FF;
+}
+
+.emotion-3:focus-within {
+  box-shadow: 0 0 0 0.125rem #175bf5;
+  background-color: #F5F5FF;
+}
+
+.emotion-4 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0 0 0 0.75rem;
+}
+
+.emotion-4>div {
+  position: relative;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-6 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #1B214F;
+  padding: 0;
+  display: block;
+  position: relative;
+  top: 0.4375rem;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-6::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-6::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-6:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-6::placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus {
+  outline: none;
+}
+
+.emotion-6:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-6:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-6:focus-within+label,
+.emotion-6:not(:placeholder-shown)+label {
+  font-weight: 700!important;
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+}
+
+.emotion-6:focus-within+label {
+  font-weight: 700!important;
+  color: #1552DD;
+}
+
+.emotion-6:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-7 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, 0);
+  -moz-transform: translate(0.1875rem, 0);
+  -ms-transform: translate(0.1875rem, 0);
+  transform: translate(0.1875rem, 0);
+  color: #686BB3;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0.1875rem;
+  margin: auto;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-8 {
+  min-width: 2.75rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  cursor: unset;
+}
+
+.emotion-9 {
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.emotion-10 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-11 {
+  fill: #5f6c85;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-11 path {
+  fill: #5f6c85;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <div>
+      <div
+        class="emotion-1"
+      >
+        <div
+          class="emotion-2"
+        >
+          <div>
+            <div
+              class="emotion-3"
+              data-testid="select-input"
+            >
+              <div
+                class="emotion-4"
+              >
+                <div
+                  class="emotion-5"
+                >
+                  <input
+                    aria-controls="select__00"
+                    aria-expanded="false"
+                    aria-invalid="false"
+                    autocomplete="off"
+                    class="emotion-6"
+                    data-testid="input_select-input"
+                    id="textfield__00"
+                    placeholder="Select"
+                    role="combobox"
+                    value=""
+                  />
+                  <label
+                    class="emotion-7"
+                    for="textfield__00"
+                  >
+                    Select
+                     
+                  </label>
+                </div>
+                <div
+                  aria-hidden="false"
+                  class="emotion-8"
+                >
+                  <div
+                    class="emotion-9"
+                  >
+                    <span
+                      class="emotion-10"
+                      data-testid="select-right-icon"
+                    >
+                      <svg
+                        class="emotion-11"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <g
+                          fill="none"
+                          fill-rule="evenodd"
+                          id="\\uD83D\\uDD36-Symbols"
+                          stroke="none"
+                          stroke-width="1"
+                        >
+                          <g
+                            id="Search"
+                          >
+                            <path
+                              d="M10,2 C14.418278,2 18,5.581722 18,10 C18,11.8482015 17.3732643,13.550021 16.3207287,14.9045228 L21.7071068,20.2928932 L20.2928932,21.7071068 L14.9045228,16.3207287 C13.550021,17.3732643 11.8482015,18 10,18 C5.581722,18 2,14.418278 2,10 C2,5.581722 5.581722,2 10,2 Z M10,4 C6.6862915,4 4,6.6862915 4,10 C4,13.3137085 6.6862915,16 10,16 C13.3137085,16 16,13.3137085 16,10 C16,6.6862915 13.3137085,4 10,4 Z"
+                            />
+                          </g>
+                        </g>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

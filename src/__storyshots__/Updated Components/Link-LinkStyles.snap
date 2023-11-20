@@ -1,0 +1,159 @@
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  color: #1552DD;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0.25rem solid rgba(84,94,255,0);
+  opacity: 1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  pointer-events: default;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.375rem;
+  font-size: 1rem;
+  letter-spacing: 0.00625rem;
+}
+
+.emotion-1:hover {
+  color: #1B214F;
+}
+
+.emotion-1:hover path {
+  fill: #1B214F;
+}
+
+.emotion-1:visited {
+  color: #6c28cc;
+}
+
+.emotion-1:visited path {
+  fill: #6c28cc;
+}
+
+.emotion-1:focus-visible {
+  border: 0.25rem solid #9347ff;
+}
+
+.emotion-2 {
+  background: #1B214F;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  color: #1de9b6;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0.25rem solid rgba(84,94,255,0);
+  opacity: 1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  pointer-events: default;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.375rem;
+  font-size: 1rem;
+  letter-spacing: 0.00625rem;
+}
+
+.emotion-3:hover {
+  color: #ffffff;
+}
+
+.emotion-3:hover path {
+  fill: #ffffff;
+}
+
+.emotion-3:visited {
+  color: #dbc1ff;
+}
+
+.emotion-3:visited path {
+  fill: #dbc1ff;
+}
+
+.emotion-3:focus-visible {
+  border: 0.25rem solid #9347ff;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      style="margin: 5px;"
+    >
+      <a
+        class="emotion-1"
+        data-testid="_link"
+        href="#"
+      >
+        <span>
+          Primary
+        </span>
+      </a>
+    </div>
+  </div>
+  <div
+    class="emotion-2"
+  >
+    <div
+      style="margin: 5px;"
+    >
+      <a
+        class="emotion-3"
+        data-testid="_link"
+        href="#"
+      >
+        <span>
+          Inverted
+        </span>
+      </a>
+    </div>
+  </div>
+</div>

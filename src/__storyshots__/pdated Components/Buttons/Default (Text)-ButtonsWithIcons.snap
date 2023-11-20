@@ -1,0 +1,278 @@
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-1 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-2 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #ffffff;
+  height: auto;
+  background-color: #175bf5;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-2:focus-visible:not(:disabled) {
+  background-color: #1552DD;
+}
+
+.emotion-2:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-2:hover:not(:disabled) {
+  background-color: #1552DD;
+}
+
+.emotion-2:active:not(:disabled) {
+  background-color: #1249C4;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.emotion-4 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-5 {
+  fill: #ffffff;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-5 path {
+  fill: #ffffff;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        class="emotion-1"
+      >
+        <button
+          class="emotion-2"
+          data-testid="button"
+          type="button"
+        >
+          <span
+            class="emotion-3"
+          >
+            <span
+              class="emotion-4"
+            >
+              <svg
+                class="emotion-5"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <g
+                  fill="none"
+                  fill-rule="evenodd"
+                  stroke="none"
+                  stroke-width="1"
+                >
+                  <g
+                    fill="#121212"
+                    transform="translate(-103.000000, -1103.000000)"
+                  >
+                    <g
+                      transform="translate(99.000000, 1099.000000)"
+                    >
+                      <path
+                        d="M5.5483871,15.2 L8.8,18.4516129 L4,20 L5.5483871,15.2 Z M14.5300387,6.08406684 L17.9240966,9.47812475 L10.1177789,17.2844425 L6.72372099,13.8903846 L14.5300387,6.08406684 Z M16.6666667,4.22222222 C16.962963,3.92592593 17.4074074,3.92592593 17.7037037,4.22222222 L17.7037037,4.22222222 L19.7777778,6.2962963 C20.0740741,6.59259259 20.0740741,7.03703704 19.7777778,7.33333333 L19.7777778,7.33333333 L19.1111111,8 L16,4.88888889 Z"
+                      />
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </span>
+            <span>
+              Only left Icon
+            </span>
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        class="emotion-1"
+      >
+        <button
+          class="emotion-2"
+          data-testid="button"
+          type="button"
+        >
+          <span
+            class="emotion-3"
+          >
+            <span
+              class="emotion-4"
+            >
+              <svg
+                class="emotion-5"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <g
+                  fill="none"
+                  fill-rule="evenodd"
+                  stroke="none"
+                  stroke-width="1"
+                >
+                  <g
+                    fill="#121212"
+                    transform="translate(-103.000000, -1103.000000)"
+                  >
+                    <g
+                      transform="translate(99.000000, 1099.000000)"
+                    >
+                      <path
+                        d="M5.5483871,15.2 L8.8,18.4516129 L4,20 L5.5483871,15.2 Z M14.5300387,6.08406684 L17.9240966,9.47812475 L10.1177789,17.2844425 L6.72372099,13.8903846 L14.5300387,6.08406684 Z M16.6666667,4.22222222 C16.962963,3.92592593 17.4074074,3.92592593 17.7037037,4.22222222 L17.7037037,4.22222222 L19.7777778,6.2962963 C20.0740741,6.59259259 20.0740741,7.03703704 19.7777778,7.33333333 L19.7777778,7.33333333 L19.1111111,8 L16,4.88888889 Z"
+                      />
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </span>
+            <span>
+              Both Icons
+            </span>
+            <span
+              class="emotion-4"
+            >
+              <svg
+                class="emotion-5"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <g
+                  fill="none"
+                  fill-rule="evenodd"
+                  id="\\uD83D\\uDD36-Symbols"
+                  stroke="none"
+                  stroke-width="1"
+                >
+                  <g
+                    id="Download"
+                  >
+                    <path
+                      d="M20,18 L20,20 L4,20 L4,18 L20,18 Z M13,4 L13.0006407,12.172 L14.8284271,10.3431458 L16.2426407,11.7573593 L12,16 L7.75735931,11.7573593 L9.17157288,10.3431458 L11.0006407,12.173 L11,4 L13,4 Z"
+                    />
+                  </g>
+                </g>
+              </svg>
+            </span>
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        class="emotion-1"
+      >
+        <button
+          class="emotion-2"
+          data-testid="button"
+          type="button"
+        >
+          <span
+            class="emotion-3"
+          >
+            <span>
+              Only Right Icon
+            </span>
+            <span
+              class="emotion-4"
+            >
+              <svg
+                class="emotion-5"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <g
+                  fill="none"
+                  fill-rule="evenodd"
+                  id="\\uD83D\\uDD36-Symbols"
+                  stroke="none"
+                  stroke-width="1"
+                >
+                  <g
+                    id="Download"
+                  >
+                    <path
+                      d="M20,18 L20,20 L4,20 L4,18 L20,18 Z M13,4 L13.0006407,12.172 L14.8284271,10.3431458 L16.2426407,11.7573593 L12,16 L7.75735931,11.7573593 L9.17157288,10.3431458 L11.0006407,12.173 L11,4 L13,4 Z"
+                    />
+                  </g>
+                </g>
+              </svg>
+            </span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

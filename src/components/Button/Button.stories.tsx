@@ -7,7 +7,7 @@ import { LoadingButtonShowcase, ButtonShowcase } from '../storyUtils/ButtonShowc
 import { getIconSelectorKnob } from '../../utils/stories';
 
 export default {
-  title: 'pdated Components/Buttons/Default (Text)',
+  title: 'Updated Components/Buttons/Default (Text)',
   component: Button,
 
   parameters: {

@@ -1,0 +1,363 @@
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-1 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-2 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #1B214F;
+  height: auto;
+  background-color: #1de9b6;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-2:focus-visible:not(:disabled) {
+  background-color: #00C6A2;
+}
+
+.emotion-2:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-2:hover:not(:disabled) {
+  background-color: #00C6A2;
+}
+
+.emotion-2:active:not(:disabled) {
+  background-color: #0C7D61;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.emotion-5 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #1de9b6;
+  height: auto;
+  background-color: rgba(84,94,255,0);
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-5:focus-visible:not(:disabled) {
+  background-color: rgba(84,94,255,0.06);
+}
+
+.emotion-5:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-5:hover:not(:disabled) {
+  background-color: rgba(84,94,255,0.06);
+}
+
+.emotion-5:active:not(:disabled) {
+  background-color: rgba(84,94,255,0.14);
+}
+
+.emotion-16 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  color: #1B214F;
+  height: 1.75rem;
+  background-color: #1de9b6;
+  padding: 0 0.5rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-16:focus-visible:not(:disabled) {
+  background-color: #00C6A2;
+}
+
+.emotion-16:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-16:hover:not(:disabled) {
+  background-color: #00C6A2;
+}
+
+.emotion-16:active:not(:disabled) {
+  background-color: #0C7D61;
+}
+
+.emotion-19 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  color: #1de9b6;
+  height: 1.75rem;
+  background-color: rgba(84,94,255,0);
+  padding: 0 0.5rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-19:focus-visible:not(:disabled) {
+  background-color: rgba(84,94,255,0.06);
+}
+
+.emotion-19:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-19:hover:not(:disabled) {
+  background-color: rgba(84,94,255,0.06);
+}
+
+.emotion-19:active:not(:disabled) {
+  background-color: rgba(84,94,255,0.14);
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        class="emotion-1"
+      >
+        <button
+          class="emotion-2"
+          data-testid="button"
+          type="button"
+        >
+          <span
+            class="emotion-3"
+          >
+            <span>
+              Inverted
+            </span>
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        class="emotion-1"
+      >
+        <button
+          class="emotion-5"
+          data-testid="button"
+          type="button"
+        >
+          <span
+            class="emotion-3"
+          >
+            <span>
+              InvertedAlt
+            </span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        class="emotion-1"
+      >
+        <button
+          class="emotion-2"
+          data-testid="button"
+          disabled=""
+          type="button"
+        >
+          <span
+            class="emotion-3"
+          >
+            <span>
+              Inverted
+            </span>
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        class="emotion-1"
+      >
+        <button
+          class="emotion-5"
+          data-testid="button"
+          disabled=""
+          type="button"
+        >
+          <span
+            class="emotion-3"
+          >
+            <span>
+              InvertedAlt
+            </span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        class="emotion-1"
+      >
+        <button
+          class="emotion-16"
+          data-testid="button"
+          type="button"
+        >
+          <span
+            class="emotion-3"
+          >
+            <span>
+              Inverted
+            </span>
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        class="emotion-1"
+      >
+        <button
+          class="emotion-19"
+          data-testid="button"
+          type="button"
+        >
+          <span
+            class="emotion-3"
+          >
+            <span>
+              InvertedAlt
+            </span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        class="emotion-1"
+      >
+        <button
+          class="emotion-16"
+          data-testid="button"
+          disabled=""
+          type="button"
+        >
+          <span
+            class="emotion-3"
+          >
+            <span>
+              Inverted
+            </span>
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        class="emotion-1"
+      >
+        <button
+          class="emotion-19"
+          data-testid="button"
+          disabled=""
+          type="button"
+        >
+          <span
+            class="emotion-3"
+          >
+            <span>
+              InvertedAlt
+            </span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
