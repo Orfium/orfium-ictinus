@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { ReactFCC } from 'utils/types';
 
-const useClickAwayListener = (ref: React.MutableRefObject<any>, onClick: () => void) => {
-  const handleClickOutside = (event: any) => {
+const useClickAwayListener = (ref: React.MutableRefObject<any>, onClick: (event: MouseEvent) => void) => {
+  const handleClickOutside = (event: MouseEvent) => {
     if (ref.current && !ref.current.contains(event.target)) {
-      onClick();
+      onClick(event);
     }
   };
 
