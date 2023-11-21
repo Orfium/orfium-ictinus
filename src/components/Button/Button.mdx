@@ -1,5 +1,6 @@
 import { Meta, ArgTypes, Canvas } from '@storybook/blocks';
-import ButtonStories from './Button';
+import Button from './Button';
+import * as ButtonStories from './Button.stories';
 import LinkTo from '@storybook/addon-links/react';
 
 import Overview from '../../storybook/Overview';
@@ -15,18 +16,9 @@ import Overview from '../../storybook/Overview';
 
 ## Overview
 
-<Story
-  name="Overview"
-  parameters={{
-    previewTabs: {
-      canvas: { hidden: true },
-    },
-  }}
->
-  <Overview>
-    A universal Button component that is a clickable element that can hold many forms.
-  </Overview>
-</Story>
+<Overview>
+  A universal Button component that is a clickable element that can hold many forms.
+</Overview>
 
 ## Usage
 

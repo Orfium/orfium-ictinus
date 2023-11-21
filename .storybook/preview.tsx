@@ -1,12 +1,16 @@
 // THIS DECORATOR MUST GO FIRST, OR THE STORY SOURCE GENERATES INCORRECTLY
 // Add prop tables to components (based on component type interfaces)
 import React from 'react';
-import { DocsContainer, DocsPage } from '@storybook/addon-docs';
+import { DocsContainer } from '@storybook/addon-docs';
 import ThemeProvider from '../src/components/ThemeProvider';
 import styled from '@emotion/styled';
 import Typography from '../src/storybook/Typography';
+import Link from '../src/storybook/Link';
 import { UsageGuidelines, SubsectionHeader, SectionHeader, Tip, Preview } from '../src/storybook';
-import { TypographyWrapper as SBTypographyWrapper } from '../src/storybook/Typography/Typography.style';
+import {
+  TypographyResetFontSmooth,
+  TypographyWrapper as SBTypographyWrapper,
+} from '../src/storybook/Typography/Typography.style';
 import Box from '../src/components/Box';
 import { Preview as SBPreview } from '@storybook/react';
 
@@ -118,12 +122,13 @@ const preview: SBPreview = {
         method: 'alphabetical',
         order: [
           'Welcome',
-          'Getting Started',
-          'Guide',
           'System',
+          'Guide',
           'Design Tokens',
           'Design System',
-          ['*', ['*', 'Docs']],
+          'Updated Components',
+          'Original Components',
+          // ['*', ['*', 'Docs']],
           'Hooks',
         ],
         locales: 'en-US',
@@ -145,46 +150,71 @@ const preview: SBPreview = {
       ),
       components: {
         h1: ({ children, rest }: any) => (
-          <Box mx={'6'}>
+          <Box>
             {/*// @ts-ignore*/}
-            <Typography {...rest} css={SBTypographyWrapper} variant={'headline01'}>
+            <Typography
+              {...rest}
+              css={[SBTypographyWrapper, TypographyResetFontSmooth]}
+              variant={'headline01'}
+            >
               {children}
             </Typography>
           </Box>
         ),
         h2: ({ children, rest }: any) => (
-          <Box mx={'6'}>
+          <Box>
             {/*// @ts-ignore*/}
-            <Typography {...rest} css={SBTypographyWrapper} variant={'headline02'}>
+            <Typography
+              {...rest}
+              css={[SBTypographyWrapper, TypographyResetFontSmooth]}
+              variant={'headline02'}
+            >
               {children}
             </Typography>
           </Box>
         ),
         h3: ({ children, rest }: any) => (
-          <Box mx={'6'}>
+          <Box>
             {/*// @ts-ignore*/}
-            <Typography {...rest} css={SBTypographyWrapper} variant={'headline03'}>
+            <Typography
+              {...rest}
+              css={[SBTypographyWrapper, TypographyResetFontSmooth]}
+              variant={'headline03'}
+            >
               {children}
             </Typography>
           </Box>
         ),
         h4: ({ children, rest }: any) => (
-          <Box mx={'6'}>
+          <Box>
             {/*// @ts-ignore*/}
-            <Typography {...rest} css={SBTypographyWrapper} variant={'headline04'}>
+            <Typography
+              {...rest}
+              css={[SBTypographyWrapper, TypographyResetFontSmooth]}
+              variant={'headline04'}
+            >
               {children}
             </Typography>
           </Box>
         ),
         p: ({ children, rest }: any) => (
-          <Box mx={'6'}>
-            <Typography {...rest} variant={'body01'}>
+          <Box>
+            <Typography {...rest} css={TypographyResetFontSmooth} variant={'body01'}>
               {children}
             </Typography>
           </Box>
         ),
-        span: ({ children }: any) => <Typography variant={'body01'}>{children}</Typography>,
-        div: ({ children }: any) => <Typography variant={'body01'}>{children}</Typography>,
+        span: ({ children }: any) => (
+          <Typography css={TypographyResetFontSmooth} variant={'body01'}>
+            {children}
+          </Typography>
+        ),
+        div: ({ children }: any) => (
+          <Typography css={TypographyResetFontSmooth} variant={'body01'}>
+            {children}
+          </Typography>
+        ),
+        a: ({ children, rest }: any) => <Link>{children}</Link>,
         input: inputEmpty,
         UsageGuidelines,
         Tip,

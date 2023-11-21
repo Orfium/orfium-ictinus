@@ -12,4 +12,7 @@ export const sectionHeaderWrapper = () => (): SerializedStyles =>
     display: flex;
     align-items: center;
     padding: 0 32px;
+    h1 {
+      margin: 0;
+    }
   `;

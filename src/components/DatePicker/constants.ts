@@ -31,7 +31,7 @@ export const CALENDAR_DEFAULT_OPTIONS: ExtraOption[] = [
 
 export const mockDate = currentDay;
 export const rangePickerOptions = [true, false];
-export const filterTypeOptions = ['preset', 'added'];
+export const filterTypeOptions = ['preset', 'added'] as const;
 
 export const disableDates = {
   days: [

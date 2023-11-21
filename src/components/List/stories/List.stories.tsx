@@ -1,6 +1,5 @@
 import List, { ListSection, ListItemText, ListItem } from '../index';
 import { FIGMA_URL, Function } from '../../../utils/common';
-import SectionHeader from '../../../storybook/SectionHeader';
 
 export default {
   title: 'Updated Components/List/List',

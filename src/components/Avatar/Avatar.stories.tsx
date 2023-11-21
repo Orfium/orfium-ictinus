@@ -4,7 +4,7 @@ import Stack from '../storyUtils/Stack';
 import { FIGMA_URL } from '../../utils/common';
 
 export default {
-  title: 'Design System/Avatar/Avatar',
+  title: 'Updated Components/Avatar/Avatar',
   component: Avatar,
 
   parameters: {
