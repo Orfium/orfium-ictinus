@@ -1,0 +1,342 @@
+.emotion-0 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
+  position: relative;
+}
+
+.emotion-0 #unique-tooltip-id {
+  display: none!important;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: 3.25rem;
+  min-width: 10rem;
+  background-color: #ffffff;
+}
+
+.emotion-1:hover {
+  background-color: #F5F5FF;
+}
+
+.emotion-1:focus-within {
+  box-shadow: 0 0 0 0.125rem #175bf5;
+  background-color: #F5F5FF;
+}
+
+.emotion-2 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0 0 0 0.75rem;
+}
+
+.emotion-2>div {
+  position: relative;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-4 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #1B214F;
+  padding: 0;
+  display: block;
+  position: relative;
+  top: 0.4375rem;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-4::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-4::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-4:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-4::placeholder {
+  color: transparent;
+}
+
+.emotion-4:focus {
+  outline: none;
+}
+
+.emotion-4:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-4:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-4:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-4:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-4:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-4:focus-within+label,
+.emotion-4:not(:placeholder-shown)+label {
+  font-weight: 700!important;
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+}
+
+.emotion-4:focus-within+label {
+  font-weight: 700!important;
+  color: #1552DD;
+}
+
+.emotion-4:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-5 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, -95%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -95%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -95%) scale(0.8);
+  transform: translate(0.1875rem, -95%) scale(0.8);
+  color: #686BB3;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0.1875rem;
+  margin: auto;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-6 {
+  min-width: 2.75rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  cursor: unset;
+}
+
+.emotion-7 {
+  cursor: pointer;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-7:focus-visible,
+.emotion-7:hover {
+  background: rgba(84,94,255,0.06);
+  border-radius: 6.25rem;
+}
+
+.emotion-8 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-9 {
+  fill: #686BB3;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-9 path {
+  fill: #686BB3;
+}
+
+<div>
+  <div>
+    <div>
+      <div
+        class="emotion-0"
+      >
+        <div>
+          <div>
+            <div
+              class="emotion-1"
+            >
+              <div
+                class="emotion-2"
+              >
+                <div
+                  class="emotion-3"
+                >
+                  <input
+                    aria-invalid="false"
+                    class="emotion-4"
+                    data-testid="input"
+                    id="textfield__00"
+                    placeholder="Custom Date"
+                    value="11/03/2020"
+                  />
+                  <label
+                    class="emotion-5"
+                    for="textfield__00"
+                  >
+                    Custom Date
+                     
+                  </label>
+                </div>
+                <div
+                  aria-hidden="false"
+                  class="emotion-6"
+                >
+                  <div
+                    class="emotion-7"
+                    data-testid="calendar_button"
+                    tabindex="0"
+                  >
+                    <span
+                      class="emotion-8"
+                    >
+                      <svg
+                        class="emotion-9"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g
+                          fill-rule="evenodd"
+                          id="\\uD83D\\uDD36-Symbols"
+                          stroke-width="1"
+                        >
+                          <g
+                            id="Calendar/Empty"
+                          >
+                            <rect
+                              id="boundingbox"
+                              x="0"
+                              y="0"
+                            />
+                            <path
+                              d="M5,8 L5,20 L19,20 L19,8 L5,8 Z M3,22 L3,4 L6,4 L6,2 L8,2 L8,4 L16,4 L16,2 L18,2 L18,4 L21,4 L21,22 L3,22 Z"
+                              fill="#232323"
+                              id="calendar-empty"
+                            />
+                          </g>
+                        </g>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

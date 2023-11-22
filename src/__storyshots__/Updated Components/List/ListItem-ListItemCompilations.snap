@@ -2,14 +2,14 @@
   margin-bottom: 0.25rem;
 }
 
-.emotion-1 {
+.emotion-2 {
   border: 0.0625rem solid #E7E8FF;
   border-radius: 0.25rem;
   width: undefinedpx;
   box-shadow: 0rem 0.25rem 0.5rem 0rem #10306612;
 }
 
-.emotion-2 {
+.emotion-3 {
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
@@ -21,13 +21,13 @@
   background: #ffffff;
 }
 
-.emotion-3 {
+.emotion-4 {
   background-color: rgba(84,94,255,0);
   opacity: 1;
   cursor: initial;
 }
 
-.emotion-3>div {
+.emotion-4>div {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -35,7 +35,7 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-3 span[role='presentation'] {
+.emotion-4 span[role='presentation'] {
   padding: 0 0.75rem;
   min-height: 3.25rem;
   -webkit-align-items: center;
@@ -54,7 +54,7 @@
   font-weight: 700;
 }
 
-.emotion-3[role='option'] {
+.emotion-4[role='option'] {
   padding: 0 0.75rem;
   min-height: 3.25rem;
   display: -webkit-box;
@@ -67,20 +67,20 @@
   gap: 0.75rem;
 }
 
-.emotion-3[role='option']:hover {
+.emotion-4[role='option']:hover {
   background-color: rgba(84,94,255,0.06);
   cursor: pointer;
 }
 
-.emotion-3[data-focus-visible] {
+.emotion-4[data-focus-visible] {
   background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-3[aria-selected='true'] {
+.emotion-4[aria-selected='true'] {
   background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-3[aria-selected='true']>div {
+.emotion-4[aria-selected='true']>div {
   color: #1552DD;
   font-family: Roboto;
   font-weight: 500;
@@ -89,11 +89,11 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-3[aria-selected='true'][data-focus-visible] {
+.emotion-4[aria-selected='true'][data-focus-visible] {
   background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-4 {
+.emotion-5 {
   color: #1B214F;
   font-weight: initial;
   white-space: nowrap;
@@ -116,24 +116,24 @@
   justify-content: center;
 }
 
-.emotion-4 strong {
+.emotion-5 strong {
   font-weight: bold;
 }
 
-.emotion-4 span {
+.emotion-5 span {
   display: block;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.emotion-5 {
+.emotion-6 {
   background-color: rgba(84,94,255,0);
   opacity: 1;
   cursor: initial;
 }
 
-.emotion-5>div {
+.emotion-6>div {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1rem;
@@ -141,7 +141,7 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-5 span[role='presentation'] {
+.emotion-6 span[role='presentation'] {
   padding: 0 0.75rem;
   min-height: 2.5rem;
   -webkit-align-items: center;
@@ -160,7 +160,7 @@
   font-weight: 700;
 }
 
-.emotion-5[role='option'] {
+.emotion-6[role='option'] {
   padding: 0 0.75rem;
   min-height: 2.5rem;
   display: -webkit-box;
@@ -173,20 +173,20 @@
   gap: 0.75rem;
 }
 
-.emotion-5[role='option']:hover {
+.emotion-6[role='option']:hover {
   background-color: rgba(84,94,255,0.06);
   cursor: pointer;
 }
 
-.emotion-5[data-focus-visible] {
+.emotion-6[data-focus-visible] {
   background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-5[aria-selected='true'] {
+.emotion-6[aria-selected='true'] {
   background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-5[aria-selected='true']>div {
+.emotion-6[aria-selected='true']>div {
   color: #1552DD;
   font-family: Roboto;
   font-weight: 500;
@@ -195,11 +195,11 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-5[aria-selected='true'][data-focus-visible] {
+.emotion-6[aria-selected='true'][data-focus-visible] {
   background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-12 {
+.emotion-14 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1rem;
@@ -208,7 +208,7 @@
   color: #686BB3;
 }
 
-.emotion-20 {
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -226,7 +226,7 @@
   justify-content: center;
 }
 
-.emotion-21 {
+.emotion-24 {
   position: relative;
   border-radius: 50%;
   width: 2.25rem;
@@ -261,7 +261,7 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-.emotion-22 {
+.emotion-25 {
   top: 0;
   left: 0;
   width: 100%;
@@ -274,11 +274,11 @@
   opacity: 0;
 }
 
-.emotion-22:disabled {
+.emotion-25:disabled {
   cursor: default;
 }
 
-.emotion-23 {
+.emotion-26 {
   position: relative;
   border-radius: 50%;
   width: 1.5rem;
@@ -287,7 +287,7 @@
   transition: box-shadow 0.3s ease;
 }
 
-.emotion-24 {
+.emotion-27 {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   border-radius: 50%;
@@ -297,7 +297,7 @@
   position: absolute;
 }
 
-.emotion-24:before {
+.emotion-27:before {
   content: '';
   display: inline-block;
   box-sizing: border-box;
@@ -311,7 +311,7 @@
   transition: border-color 0.2s;
 }
 
-.emotion-24:after {
+.emotion-27:after {
   content: '';
   display: block;
   position: absolute;
@@ -329,7 +329,7 @@
   transition: transform 0.2s;
 }
 
-.emotion-25 {
+.emotion-28 {
   position: absolute;
   border-radius: 50%;
   width: 1.5rem;
@@ -338,7 +338,7 @@
   transition: all 0.2s ease;
 }
 
-.emotion-40 {
+.emotion-44 {
   opacity: 1;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -354,7 +354,7 @@
   display: flex;
 }
 
-.emotion-41 {
+.emotion-45 {
   border-radius: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -373,7 +373,7 @@
   position: relative;
 }
 
-.emotion-41:before {
+.emotion-45:before {
   display: none;
   border-radius: 100%;
   -webkit-transition: all 0.2s;
@@ -384,12 +384,12 @@
   position: absolute;
 }
 
-.emotion-41:hover:before {
+.emotion-45:hover:before {
   display: block;
   background: rgba(0, 0, 0, 0.05);
 }
 
-.emotion-42 {
+.emotion-46 {
   border: 0;
   border-radius: 0.125rem;
   width: 1.5rem;
@@ -398,13 +398,13 @@
   opacity: 0;
 }
 
-.emotion-42+label {
+.emotion-46+label {
   position: relative;
   cursor: pointer;
   padding: 0;
 }
 
-.emotion-42+label:before {
+.emotion-46+label:before {
   content: '';
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -417,21 +417,21 @@
   border-radius: 0.25rem;
 }
 
-.emotion-42:disabled+label {
+.emotion-46:disabled+label {
   cursor: not-allowed;
 }
 
-.emotion-43 span {
+.emotion-47 span {
   padding: 0;
 }
 
-.emotion-43 svg {
+.emotion-47 svg {
   position: absolute;
   top: 0;
   display: none;
 }
 
-.emotion-44 {
+.emotion-48 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -447,17 +447,17 @@
   justify-content: center;
 }
 
-.emotion-45 {
+.emotion-49 {
   fill: white;
   width: 1.5rem;
   height: 1.5rem;
 }
 
-.emotion-45 path {
+.emotion-49 path {
   fill: white;
 }
 
-.emotion-62 {
+.emotion-67 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -467,7 +467,7 @@
   display: flex;
 }
 
-.emotion-62 .react-switch-handle {
+.emotion-67 .react-switch-handle {
   cursor: unset!important;
   border: 2px solid #b7c3d8!important;
   box-sizing: border-box!important;
@@ -477,23 +477,23 @@
   transform: translateX(0)!important;
 }
 
-.emotion-62 .react-switch-handle:hover {
+.emotion-67 .react-switch-handle:hover {
   box-shadow: rgba(14,14,23,0.1) 0 0 0 5px;
   background: #dbe1eb!important;
 }
 
-.emotion-62 .react-switch-bg {
+.emotion-67 .react-switch-bg {
   cursor: unset!important;
   margin-right: 0!important;
   margin-left: 0!important;
 }
 
-.emotion-62 .react-switch-bg:hover~.react-switch-handle {
+.emotion-67 .react-switch-bg:hover~.react-switch-handle {
   box-shadow: rgba(14,14,23,0.1) 0 0 0 5px;
   background: #dbe1eb!important;
 }
 
-.emotion-74 {
+.emotion-80 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -533,28 +533,28 @@
   letter-spacing: 0.00625rem;
 }
 
-.emotion-74 img {
+.emotion-80 img {
   border-radius: 6.25rem;
   width: 100%;
   height: 100%;
 }
 
-.emotion-76 {
+.emotion-82 {
   fill: #1249C4;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-76 path {
+.emotion-82 path {
   fill: #1249C4;
 }
 
 <div>
-  <span
-    class="emotion-0"
+  <div
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-1"
+      class="emotion-2"
     >
       <div
         data-testid="ictinus_list"
@@ -564,7 +564,7 @@
         >
           <ul
             aria-labelledby="react-aria-:r1l:"
-            class="emotion-2"
+            class="emotion-3"
             id="react-aria-:r1j:"
             role="listbox"
             style="overflow-y: auto; position: relative; display: flex; flex-direction: column; height: 100%; list-style: none; padding: 0px;"
@@ -572,7 +572,7 @@
           >
             <li
               aria-selected="false"
-              class="emotion-3 "
+              class="emotion-4 "
               data-key="1"
               data-testid="ictinus_list_item_1"
               id="react-aria-:r1j:-option-1"
@@ -580,7 +580,7 @@
               tabindex="-1"
             >
               <div
-                class="emotion-4"
+                class="emotion-5"
               >
                 <span>
                   Text only
@@ -589,7 +589,7 @@
             </li>
             <li
               aria-selected="false"
-              class="emotion-5 "
+              class="emotion-6 "
               data-key="2"
               data-testid="ictinus_list_item_2"
               id="react-aria-:r1j:-option-2"
@@ -597,7 +597,7 @@
               tabindex="-1"
             >
               <div
-                class="emotion-4"
+                class="emotion-5"
               >
                 <span>
                   Text only (compact)
@@ -608,12 +608,12 @@
         </div>
       </div>
     </div>
-  </span>
-  <span
-    class="emotion-0"
+  </div>
+  <div
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-1"
+      class="emotion-2"
     >
       <div
         data-testid="ictinus_list"
@@ -623,7 +623,7 @@
         >
           <ul
             aria-labelledby="react-aria-:r1t:"
-            class="emotion-2"
+            class="emotion-3"
             id="react-aria-:r1r:"
             role="listbox"
             style="overflow-y: auto; position: relative; display: flex; flex-direction: column; height: 100%; list-style: none; padding: 0px;"
@@ -631,7 +631,7 @@
           >
             <li
               aria-selected="false"
-              class="emotion-3 "
+              class="emotion-4 "
               data-key="3"
               data-testid="ictinus_list_item_3"
               id="react-aria-:r1r:-option-3"
@@ -639,13 +639,13 @@
               tabindex="-1"
             >
               <div
-                class="emotion-4"
+                class="emotion-5"
               >
                 <span>
                   Text
                 </span>
                 <p
-                  class="emotion-12"
+                  class="emotion-14"
                 >
                   with Secondary Help Text
                 </p>
@@ -653,7 +653,7 @@
             </li>
             <li
               aria-selected="false"
-              class="emotion-5 "
+              class="emotion-6 "
               data-key="4"
               data-testid="ictinus_list_item_4"
               id="react-aria-:r1r:-option-4"
@@ -661,13 +661,13 @@
               tabindex="-1"
             >
               <div
-                class="emotion-4"
+                class="emotion-5"
               >
                 <span>
                   Text (compact)
                 </span>
                 <p
-                  class="emotion-12"
+                  class="emotion-14"
                 >
                   with Secondary Help Text
                 </p>
@@ -677,12 +677,12 @@
         </div>
       </div>
     </div>
-  </span>
-  <span
-    class="emotion-0"
+  </div>
+  <div
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-1"
+      class="emotion-2"
     >
       <div
         data-testid="ictinus_list"
@@ -692,7 +692,7 @@
         >
           <ul
             aria-labelledby="react-aria-:r25:"
-            class="emotion-2"
+            class="emotion-3"
             id="react-aria-:r23:"
             role="listbox"
             style="overflow-y: auto; position: relative; display: flex; flex-direction: column; height: 100%; list-style: none; padding: 0px;"
@@ -700,7 +700,7 @@
           >
             <li
               aria-selected="false"
-              class="emotion-3 "
+              class="emotion-4 "
               data-key="5"
               data-testid="ictinus_list_item_5"
               id="react-aria-:r23:-option-5"
@@ -708,31 +708,31 @@
               tabindex="-1"
             >
               <div
-                class="emotion-20"
+                class="emotion-23"
               >
                 <span
-                  class="emotion-21"
+                  class="emotion-24"
                   data-testid="radio-input"
                 >
                   <input
-                    class="emotion-22"
+                    class="emotion-25"
                     type="radio"
                     value="on"
                   />
                   <span
-                    class="emotion-23"
+                    class="emotion-26"
                   >
                     <span
-                      class="emotion-24"
+                      class="emotion-27"
                     />
                     <span
-                      class="emotion-25"
+                      class="emotion-28"
                     />
                   </span>
                 </span>
               </div>
               <div
-                class="emotion-4"
+                class="emotion-5"
               >
                 <span>
                   Option Radio
@@ -741,7 +741,7 @@
             </li>
             <li
               aria-selected="false"
-              class="emotion-5 "
+              class="emotion-6 "
               data-key="6"
               data-testid="ictinus_list_item_6"
               id="react-aria-:r23:-option-6"
@@ -749,31 +749,31 @@
               tabindex="-1"
             >
               <div
-                class="emotion-20"
+                class="emotion-23"
               >
                 <span
-                  class="emotion-21"
+                  class="emotion-24"
                   data-testid="radio-input"
                 >
                   <input
-                    class="emotion-22"
+                    class="emotion-25"
                     type="radio"
                     value="on"
                   />
                   <span
-                    class="emotion-23"
+                    class="emotion-26"
                   >
                     <span
-                      class="emotion-24"
+                      class="emotion-27"
                     />
                     <span
-                      class="emotion-25"
+                      class="emotion-28"
                     />
                   </span>
                 </span>
               </div>
               <div
-                class="emotion-4"
+                class="emotion-5"
               >
                 <span>
                   Option Radio (compact)
@@ -784,12 +784,12 @@
         </div>
       </div>
     </div>
-  </span>
-  <span
-    class="emotion-0"
+  </div>
+  <div
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-1"
+      class="emotion-2"
     >
       <div
         data-testid="ictinus_list"
@@ -799,7 +799,7 @@
         >
           <ul
             aria-labelledby="react-aria-:r2d:"
-            class="emotion-2"
+            class="emotion-3"
             id="react-aria-:r2b:"
             role="listbox"
             style="overflow-y: auto; position: relative; display: flex; flex-direction: column; height: 100%; list-style: none; padding: 0px;"
@@ -807,7 +807,7 @@
           >
             <li
               aria-selected="false"
-              class="emotion-3 "
+              class="emotion-4 "
               data-key="7"
               data-testid="ictinus_list_item_7"
               id="react-aria-:r2b:-option-7"
@@ -815,29 +815,29 @@
               tabindex="-1"
             >
               <div
-                class="emotion-20"
+                class="emotion-23"
               >
                 <span
-                  class="emotion-40"
+                  class="emotion-44"
                 >
                   <span
-                    class="emotion-41"
+                    class="emotion-45"
                   >
                     <input
-                      class="emotion-42"
+                      class="emotion-46"
                       data-testid="checkbox"
                       id="styled-checkbox-_00"
                       type="checkbox"
                     />
                     <label
-                      class="emotion-43"
+                      class="emotion-47"
                       for="styled-checkbox-_00"
                     >
                       <span
-                        class="emotion-44"
+                        class="emotion-48"
                       >
                         <svg
-                          class="emotion-45"
+                          class="emotion-49"
                           viewBox="0 0 24 24"
                           xmlns="http://www.w3.org/2000/svg"
                           xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -865,7 +865,7 @@
                 </span>
               </div>
               <div
-                class="emotion-4"
+                class="emotion-5"
               >
                 <span>
                   Option Checkbox
@@ -874,7 +874,7 @@
             </li>
             <li
               aria-selected="false"
-              class="emotion-5 "
+              class="emotion-6 "
               data-key="8"
               data-testid="ictinus_list_item_8"
               id="react-aria-:r2b:-option-8"
@@ -882,29 +882,29 @@
               tabindex="-1"
             >
               <div
-                class="emotion-20"
+                class="emotion-23"
               >
                 <span
-                  class="emotion-40"
+                  class="emotion-44"
                 >
                   <span
-                    class="emotion-41"
+                    class="emotion-45"
                   >
                     <input
-                      class="emotion-42"
+                      class="emotion-46"
                       data-testid="checkbox"
                       id="styled-checkbox-_00"
                       type="checkbox"
                     />
                     <label
-                      class="emotion-43"
+                      class="emotion-47"
                       for="styled-checkbox-_00"
                     >
                       <span
-                        class="emotion-44"
+                        class="emotion-48"
                       >
                         <svg
-                          class="emotion-45"
+                          class="emotion-49"
                           viewBox="0 0 24 24"
                           xmlns="http://www.w3.org/2000/svg"
                           xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -932,7 +932,7 @@
                 </span>
               </div>
               <div
-                class="emotion-4"
+                class="emotion-5"
               >
                 <span>
                   Option Checkbox (compact)
@@ -943,12 +943,12 @@
         </div>
       </div>
     </div>
-  </span>
-  <span
-    class="emotion-0"
+  </div>
+  <div
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-1"
+      class="emotion-2"
     >
       <div
         data-testid="ictinus_list"
@@ -958,7 +958,7 @@
         >
           <ul
             aria-labelledby="react-aria-:r2l:"
-            class="emotion-2"
+            class="emotion-3"
             id="react-aria-:r2j:"
             role="listbox"
             style="overflow-y: auto; position: relative; display: flex; flex-direction: column; height: 100%; list-style: none; padding: 0px;"
@@ -966,7 +966,7 @@
           >
             <li
               aria-selected="false"
-              class="emotion-3 "
+              class="emotion-4 "
               data-key="9"
               data-testid="ictinus_list_item_9"
               id="react-aria-:r2j:-option-9"
@@ -974,17 +974,17 @@
               tabindex="-1"
             >
               <div
-                class="emotion-4"
+                class="emotion-5"
               >
                 <span>
                   Option Switch
                 </span>
               </div>
               <div
-                class="emotion-20"
+                class="emotion-23"
               >
                 <div
-                  class="emotion-62 emotion-63"
+                  class="emotion-67 emotion-68"
                 >
                   <div
                     style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 4px; transition: opacity 0.25s; user-select: none;"
@@ -1010,7 +1010,7 @@
             </li>
             <li
               aria-selected="false"
-              class="emotion-5 "
+              class="emotion-6 "
               data-key="10"
               data-testid="ictinus_list_item_10"
               id="react-aria-:r2j:-option-10"
@@ -1018,17 +1018,17 @@
               tabindex="-1"
             >
               <div
-                class="emotion-4"
+                class="emotion-5"
               >
                 <span>
                   Option Switch (compact)
                 </span>
               </div>
               <div
-                class="emotion-20"
+                class="emotion-23"
               >
                 <div
-                  class="emotion-62 emotion-63"
+                  class="emotion-67 emotion-68"
                 >
                   <div
                     style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 4px; transition: opacity 0.25s; user-select: none;"
@@ -1056,12 +1056,12 @@
         </div>
       </div>
     </div>
-  </span>
-  <span
-    class="emotion-0"
+  </div>
+  <div
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-1"
+      class="emotion-2"
     >
       <div
         data-testid="ictinus_list"
@@ -1071,7 +1071,7 @@
         >
           <ul
             aria-labelledby="react-aria-:r2t:"
-            class="emotion-2"
+            class="emotion-3"
             id="react-aria-:r2r:"
             role="listbox"
             style="overflow-y: auto; position: relative; display: flex; flex-direction: column; height: 100%; list-style: none; padding: 0px;"
@@ -1079,7 +1079,7 @@
           >
             <li
               aria-selected="false"
-              class="emotion-3 "
+              class="emotion-4 "
               data-key="11"
               data-testid="ictinus_list_item_11"
               id="react-aria-:r2r:-option-11"
@@ -1087,17 +1087,17 @@
               tabindex="-1"
             >
               <div
-                class="emotion-20"
+                class="emotion-23"
               >
                 <div
-                  class="emotion-74"
+                  class="emotion-80"
                   data-testid="_avatar"
                 >
                   <span
-                    class="emotion-44"
+                    class="emotion-48"
                   >
                     <svg
-                      class="emotion-76"
+                      class="emotion-82"
                       fill="none"
                       viewBox="0 0 14 17"
                       xmlns="http://www.w3.org/2000/svg"
@@ -1115,7 +1115,7 @@
                 </div>
               </div>
               <div
-                class="emotion-4"
+                class="emotion-5"
               >
                 <span>
                   Option Icon/Avatar
@@ -1124,7 +1124,7 @@
             </li>
             <li
               aria-selected="false"
-              class="emotion-5 "
+              class="emotion-6 "
               data-key="12"
               data-testid="ictinus_list_item_12"
               id="react-aria-:r2r:-option-12"
@@ -1132,17 +1132,17 @@
               tabindex="-1"
             >
               <div
-                class="emotion-20"
+                class="emotion-23"
               >
                 <div
-                  class="emotion-74"
+                  class="emotion-80"
                   data-testid="_avatar"
                 >
                   <span
-                    class="emotion-44"
+                    class="emotion-48"
                   >
                     <svg
-                      class="emotion-76"
+                      class="emotion-82"
                       fill="none"
                       viewBox="0 0 14 17"
                       xmlns="http://www.w3.org/2000/svg"
@@ -1160,7 +1160,7 @@
                 </div>
               </div>
               <div
-                class="emotion-4"
+                class="emotion-5"
               >
                 <span>
                   Option Icon/Avatar (compact)
@@ -1171,5 +1171,5 @@
         </div>
       </div>
     </div>
-  </span>
+  </div>
 </div>

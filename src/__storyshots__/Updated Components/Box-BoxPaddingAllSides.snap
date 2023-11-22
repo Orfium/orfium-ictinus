@@ -4,10 +4,32 @@
   margin-bottom: 0.75rem;
 }
 
+.emotion-2 {
+  background-color: #ffffff;
+  padding: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.emotion-4 {
+  background-color: #ffffff;
+  padding: 2.75rem;
+  margin-bottom: 0.75rem;
+}
+
 <div>
-  <span
-    class="emotion-0"
+  <div
+    class="emotion-0 emotion-1"
   >
     Padding 3
-  </span>
+  </div>
+  <div
+    class="emotion-2 emotion-1"
+  >
+    Padding 7
+  </div>
+  <div
+    class="emotion-4 emotion-1"
+  >
+    Padding 12
+  </div>
 </div>

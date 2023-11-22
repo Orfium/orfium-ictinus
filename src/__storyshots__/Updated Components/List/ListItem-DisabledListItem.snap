@@ -2,14 +2,14 @@
   margin-bottom: 0.25rem;
 }
 
-.emotion-1 {
+.emotion-2 {
   border: 0.0625rem solid #E7E8FF;
   border-radius: 0.25rem;
   width: undefinedpx;
   box-shadow: 0rem 0.25rem 0.5rem 0rem #10306612;
 }
 
-.emotion-2 {
+.emotion-3 {
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
@@ -21,13 +21,13 @@
   background: #ffffff;
 }
 
-.emotion-3 {
+.emotion-4 {
   background-color: rgba(84,94,255,0);
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.emotion-3>div {
+.emotion-4>div {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -35,7 +35,7 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-3 span[role='presentation'] {
+.emotion-4 span[role='presentation'] {
   padding: 0 0.75rem;
   min-height: 3.25rem;
   -webkit-align-items: center;
@@ -54,7 +54,7 @@
   font-weight: 700;
 }
 
-.emotion-3[role='option'] {
+.emotion-4[role='option'] {
   padding: 0 0.75rem;
   min-height: 3.25rem;
   display: -webkit-box;
@@ -67,19 +67,19 @@
   gap: 0.75rem;
 }
 
-.emotion-3[role='option']:hover {
+.emotion-4[role='option']:hover {
   cursor: initial;
 }
 
-.emotion-3[data-focus-visible] {
+.emotion-4[data-focus-visible] {
   background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-3[aria-selected='true'] {
+.emotion-4[aria-selected='true'] {
   background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-3[aria-selected='true']>div {
+.emotion-4[aria-selected='true']>div {
   color: #1552DD;
   font-family: Roboto;
   font-weight: 500;
@@ -88,11 +88,11 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-3[aria-selected='true'][data-focus-visible] {
+.emotion-4[aria-selected='true'][data-focus-visible] {
   background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-4 {
+.emotion-5 {
   color: #1B214F;
   font-weight: initial;
   white-space: nowrap;
@@ -115,18 +115,18 @@
   justify-content: center;
 }
 
-.emotion-4 strong {
+.emotion-5 strong {
   font-weight: bold;
 }
 
-.emotion-4 span {
+.emotion-5 span {
   display: block;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.emotion-7 {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -144,7 +144,7 @@
   justify-content: center;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -154,7 +154,7 @@
   display: flex;
 }
 
-.emotion-8 .react-switch-handle {
+.emotion-9 .react-switch-handle {
   cursor: not-allowed!important;
   border: 0!important;
   box-sizing: border-box!important;
@@ -164,29 +164,29 @@
   transform: translateX(1rem)!important;
 }
 
-.emotion-8 .react-switch-handle:hover {
+.emotion-9 .react-switch-handle:hover {
   box-shadow: 0;
   background: !important;
 }
 
-.emotion-8 .react-switch-bg {
+.emotion-9 .react-switch-bg {
   cursor: not-allowed!important;
   margin-right: 0!important;
   margin-left: 0!important;
 }
 
-.emotion-8 .react-switch-bg:hover~.react-switch-handle {
+.emotion-9 .react-switch-bg:hover~.react-switch-handle {
   box-shadow: 0;
   background: !important;
 }
 
-.emotion-10 {
+.emotion-11 {
   background-color: rgba(84,94,255,0);
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.emotion-10>div {
+.emotion-11>div {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1rem;
@@ -194,7 +194,7 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-10 span[role='presentation'] {
+.emotion-11 span[role='presentation'] {
   padding: 0 0.75rem;
   min-height: 2.5rem;
   -webkit-align-items: center;
@@ -213,7 +213,7 @@
   font-weight: 700;
 }
 
-.emotion-10[role='option'] {
+.emotion-11[role='option'] {
   padding: 0 0.75rem;
   min-height: 2.5rem;
   display: -webkit-box;
@@ -226,19 +226,19 @@
   gap: 0.75rem;
 }
 
-.emotion-10[role='option']:hover {
+.emotion-11[role='option']:hover {
   cursor: initial;
 }
 
-.emotion-10[data-focus-visible] {
+.emotion-11[data-focus-visible] {
   background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-10[aria-selected='true'] {
+.emotion-11[aria-selected='true'] {
   background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-10[aria-selected='true']>div {
+.emotion-11[aria-selected='true']>div {
   color: #1552DD;
   font-family: Roboto;
   font-weight: 500;
@@ -247,11 +247,11 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-10[aria-selected='true'][data-focus-visible] {
+.emotion-11[aria-selected='true'][data-focus-visible] {
   background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-12 {
+.emotion-13 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -291,13 +291,13 @@
   letter-spacing: 0.00625rem;
 }
 
-.emotion-12 img {
+.emotion-13 img {
   border-radius: 6.25rem;
   width: 100%;
   height: 100%;
 }
 
-.emotion-13 {
+.emotion-14 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -313,17 +313,17 @@
   justify-content: center;
 }
 
-.emotion-14 {
+.emotion-15 {
   fill: #1249C4;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-14 path {
+.emotion-15 path {
   fill: #1249C4;
 }
 
-.emotion-18 {
+.emotion-19 {
   opacity: 0.3;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -339,7 +339,7 @@
   display: flex;
 }
 
-.emotion-19 {
+.emotion-20 {
   border-radius: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -358,7 +358,7 @@
   position: relative;
 }
 
-.emotion-19:before {
+.emotion-20:before {
   display: none;
   border-radius: 100%;
   -webkit-transition: all 0.2s;
@@ -369,7 +369,7 @@
   position: absolute;
 }
 
-.emotion-20 {
+.emotion-21 {
   border: 0;
   border-radius: 0.125rem;
   width: 1.5rem;
@@ -378,13 +378,13 @@
   opacity: 0;
 }
 
-.emotion-20+label {
+.emotion-21+label {
   position: relative;
   cursor: pointer;
   padding: 0;
 }
 
-.emotion-20+label:before {
+.emotion-21+label:before {
   content: '';
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -397,31 +397,31 @@
   border-radius: 0.25rem;
 }
 
-.emotion-20:disabled+label {
+.emotion-21:disabled+label {
   cursor: not-allowed;
 }
 
-.emotion-21 span {
+.emotion-22 span {
   padding: 0;
 }
 
-.emotion-21 svg {
+.emotion-22 svg {
   position: absolute;
   top: 0;
   display: none;
 }
 
-.emotion-23 {
+.emotion-24 {
   fill: white;
   width: 1.5rem;
   height: 1.5rem;
 }
 
-.emotion-23 path {
+.emotion-24 path {
   fill: white;
 }
 
-.emotion-27 {
+.emotion-28 {
   position: relative;
   border-radius: 50%;
   width: 2.25rem;
@@ -456,7 +456,7 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-.emotion-28 {
+.emotion-29 {
   top: 0;
   left: 0;
   width: 100%;
@@ -469,11 +469,11 @@
   opacity: 0;
 }
 
-.emotion-28:disabled {
+.emotion-29:disabled {
   cursor: default;
 }
 
-.emotion-29 {
+.emotion-30 {
   position: relative;
   border-radius: 50%;
   width: 1.5rem;
@@ -482,7 +482,7 @@
   transition: box-shadow 0.3s ease;
 }
 
-.emotion-30 {
+.emotion-31 {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   border-radius: 50%;
@@ -492,7 +492,7 @@
   position: absolute;
 }
 
-.emotion-30:before {
+.emotion-31:before {
   content: '';
   display: inline-block;
   box-sizing: border-box;
@@ -506,7 +506,7 @@
   transition: border-color 0.2s;
 }
 
-.emotion-30:after {
+.emotion-31:after {
   content: '';
   display: block;
   position: absolute;
@@ -524,7 +524,7 @@
   transition: transform 0.2s;
 }
 
-.emotion-31 {
+.emotion-32 {
   position: absolute;
   border-radius: 50%;
   width: 1.5rem;
@@ -534,11 +534,11 @@
 }
 
 <div>
-  <span
-    class="emotion-0"
+  <div
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-1"
+      class="emotion-2"
     >
       <div
         data-testid="ictinus_list"
@@ -548,7 +548,7 @@
         >
           <ul
             aria-labelledby="react-aria-:r35:"
-            class="emotion-2"
+            class="emotion-3"
             id="react-aria-:r33:"
             role="listbox"
             style="overflow-y: auto; position: relative; display: flex; flex-direction: column; height: 100%; list-style: none; padding: 0px;"
@@ -557,14 +557,14 @@
             <li
               aria-disabled="true"
               aria-selected="false"
-              class="emotion-3 "
+              class="emotion-4 "
               data-key="1"
               data-testid="ictinus_list_item_1"
               id="react-aria-:r33:-option-1"
               role="option"
             >
               <div
-                class="emotion-4"
+                class="emotion-5"
               >
                 <span>
                   This text option is disabled
@@ -574,24 +574,24 @@
             <li
               aria-disabled="true"
               aria-selected="false"
-              class="emotion-3 "
+              class="emotion-4 "
               data-key="3"
               data-testid="ictinus_list_item_3"
               id="react-aria-:r33:-option-3"
               role="option"
             >
               <div
-                class="emotion-4"
+                class="emotion-5"
               >
                 <span>
                   This Switch Option is disabled
                 </span>
               </div>
               <div
-                class="emotion-7"
+                class="emotion-8"
               >
                 <div
-                  class="emotion-8 emotion-9"
+                  class="emotion-9 emotion-10"
                 >
                   <div
                     style="position: relative; display: inline-block; text-align: left; opacity: 0.5; direction: ltr; border-radius: 4px; transition: opacity 0.25s; user-select: none;"
@@ -620,24 +620,24 @@
             <li
               aria-disabled="true"
               aria-selected="false"
-              class="emotion-10 "
+              class="emotion-11 "
               data-key="4"
               data-testid="ictinus_list_item_4"
               id="react-aria-:r33:-option-4"
               role="option"
             >
               <div
-                class="emotion-7"
+                class="emotion-8"
               >
                 <div
-                  class="emotion-12"
+                  class="emotion-13"
                   data-testid="_avatar"
                 >
                   <span
-                    class="emotion-13"
+                    class="emotion-14"
                   >
                     <svg
-                      class="emotion-14"
+                      class="emotion-15"
                       fill="none"
                       viewBox="0 0 14 17"
                       xmlns="http://www.w3.org/2000/svg"
@@ -655,7 +655,7 @@
                 </div>
               </div>
               <div
-                class="emotion-4"
+                class="emotion-5"
               >
                 <span>
                   This Avatar Option is disabled
@@ -665,37 +665,37 @@
             <li
               aria-disabled="true"
               aria-selected="false"
-              class="emotion-3 "
+              class="emotion-4 "
               data-key="5"
               data-testid="ictinus_list_item_5"
               id="react-aria-:r33:-option-5"
               role="option"
             >
               <div
-                class="emotion-7"
+                class="emotion-8"
               >
                 <span
-                  class="emotion-18"
+                  class="emotion-19"
                 >
                   <span
-                    class="emotion-19"
+                    class="emotion-20"
                   >
                     <input
-                      class="emotion-20"
+                      class="emotion-21"
                       data-testid="checkbox"
                       disabled=""
                       id="styled-checkbox-_00"
                       type="checkbox"
                     />
                     <label
-                      class="emotion-21"
+                      class="emotion-22"
                       for="styled-checkbox-_00"
                     >
                       <span
-                        class="emotion-13"
+                        class="emotion-14"
                       >
                         <svg
-                          class="emotion-23"
+                          class="emotion-24"
                           viewBox="0 0 24 24"
                           xmlns="http://www.w3.org/2000/svg"
                           xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -723,7 +723,7 @@
                 </span>
               </div>
               <div
-                class="emotion-4"
+                class="emotion-5"
               >
                 <span>
                   This Checkbox Option is disabled
@@ -733,39 +733,39 @@
             <li
               aria-disabled="true"
               aria-selected="false"
-              class="emotion-3 "
+              class="emotion-4 "
               data-key="6"
               data-testid="ictinus_list_item_6"
               id="react-aria-:r33:-option-6"
               role="option"
             >
               <div
-                class="emotion-7"
+                class="emotion-8"
               >
                 <span
-                  class="emotion-27"
+                  class="emotion-28"
                   data-testid="radio-input"
                 >
                   <input
-                    class="emotion-28"
+                    class="emotion-29"
                     disabled=""
                     type="radio"
                     value="on"
                   />
                   <span
-                    class="emotion-29"
+                    class="emotion-30"
                   >
                     <span
-                      class="emotion-30"
+                      class="emotion-31"
                     />
                     <span
-                      class="emotion-31"
+                      class="emotion-32"
                     />
                   </span>
                 </span>
               </div>
               <div
-                class="emotion-4"
+                class="emotion-5"
               >
                 <span>
                   This Radio Option is disabled
@@ -776,5 +776,5 @@
         </div>
       </div>
     </div>
-  </span>
+  </div>
 </div>
