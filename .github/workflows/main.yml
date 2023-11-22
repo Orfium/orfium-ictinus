@@ -36,7 +36,7 @@ jobs:
 
       - run: |
           yarn install
-          yarn test --clearCache
+          yarn test
 
       - name: Running tests
         run: yarn test --passWithNoTests --watchAll=false
