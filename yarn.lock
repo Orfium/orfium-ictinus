@@ -3911,6 +3911,25 @@
     "@storybook/global" "^5.0.0"
     "@storybook/preview-api" "7.5.3"
 
+"@storybook/addon-interactions@^7.5.3":
+  version "7.5.3"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-interactions/-/addon-interactions-7.5.3.tgz#5aef96b3fa24aaafb88c0fc501f6a7e8cfa2a342"
+  integrity sha512-gD3cU8sYSM/mdbA9ooYIb4c689JkDsJbZ17vfYJ5RjNkSmqKehybdpZOfkj27sVIyFtmscSi75t+pzK4Pv4rZw==
+  dependencies:
+    "@storybook/client-logger" "7.5.3"
+    "@storybook/components" "7.5.3"
+    "@storybook/core-common" "7.5.3"
+    "@storybook/core-events" "7.5.3"
+    "@storybook/global" "^5.0.0"
+    "@storybook/instrumenter" "7.5.3"
+    "@storybook/manager-api" "7.5.3"
+    "@storybook/preview-api" "7.5.3"
+    "@storybook/theming" "7.5.3"
+    "@storybook/types" "7.5.3"
+    jest-mock "^27.0.6"
+    polished "^4.2.2"
+    ts-dedent "^2.2.0"
+
 "@storybook/addon-knobs@^7.0.2":
   version "7.0.2"
   resolved "https://registry.yarnpkg.com/@storybook/addon-knobs/-/addon-knobs-7.0.2.tgz#f28fd180d8a283df6eb67f8f2578f1563b7b7615"
@@ -4402,6 +4421,17 @@
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/@storybook/global/-/global-5.0.0.tgz#b793d34b94f572c1d7d9e0f44fac4e0dbc9572ed"
   integrity sha512-FcOqPAXACP0I3oJ/ws6/rrPT9WGhu915Cg8D02a9YxLo0DE9zI+a9A5gRGvmQ09fiWPukqI8ZAEoQEdWUKMQdQ==
+
+"@storybook/instrumenter@7.5.3":
+  version "7.5.3"
+  resolved "https://registry.yarnpkg.com/@storybook/instrumenter/-/instrumenter-7.5.3.tgz#de875ba10db3b5a06a1acbc27a8b1f8fb1d875ff"
+  integrity sha512-p6b+/6ohTCKxWn00bXT8KBqVjXUOxeILnJtLlG83USLQCpI+XVkpmK57HYuydqEwy/1XjG+4S4ntPk9VVz3u7w==
+  dependencies:
+    "@storybook/channels" "7.5.3"
+    "@storybook/client-logger" "7.5.3"
+    "@storybook/core-events" "7.5.3"
+    "@storybook/global" "^5.0.0"
+    "@storybook/preview-api" "7.5.3"
 
 "@storybook/manager-api@7.5.3", "@storybook/manager-api@^7.5.3":
   version "7.5.3"
@@ -10514,6 +10544,14 @@ jest-message-util@^29.7.0:
     pretty-format "^29.7.0"
     slash "^3.0.0"
     stack-utils "^2.0.3"
+
+jest-mock@^27.0.6:
+  version "27.5.1"
+  resolved "https://registry.yarnpkg.com/jest-mock/-/jest-mock-27.5.1.tgz#19948336d49ef4d9c52021d34ac7b5f36ff967d6"
+  integrity sha512-K4jKbY1d4ENhbrG2zuPWaQBvDly+iZ2yAW+T1fATN78hc0sInwn7wZB8XtlNnvHug5RMwV897Xm4LqmPM4e2Og==
+  dependencies:
+    "@jest/types" "^27.5.1"
+    "@types/node" "*"
 
 jest-mock@^29.7.0:
   version "29.7.0"

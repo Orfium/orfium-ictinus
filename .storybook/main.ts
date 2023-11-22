@@ -33,6 +33,7 @@ module.exports = {
 
   addons: [
     // '@storybook/addon-actions/register',
+    '@storybook/addon-interactions',
     '@storybook/addon-links',
     '@storybook/addon-viewport',
     '@storybook/addon-knobs',
