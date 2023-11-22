@@ -14,6 +14,7 @@ export const UseSearchQueryParams = {
     query: {
       q: 'search',
     },
+    chromatic: { disableSnapshot: true },
   },
 
   decorators: [
