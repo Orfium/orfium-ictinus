@@ -1,3 +1,4 @@
+import { Unstyled } from '@storybook/blocks';
 import type { FCC } from 'react';
 import React, { useMemo } from 'react';
 
@@ -15,8 +16,8 @@ const Link: FCC<TypographyProps> = ({ children, ...rest }) => {
   );
 
   return (
-    <LinkComponent css={[LinkWrapper, LinkResetFontSmooth]} id={id} {...rest}>
-      {children}
+    <LinkComponent placement="inline" css={[LinkWrapper, LinkResetFontSmooth]} id={id} {...rest}>
+      <Unstyled>{children}</Unstyled>
     </LinkComponent>
   );
 };

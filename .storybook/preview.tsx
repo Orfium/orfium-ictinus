@@ -13,6 +13,7 @@ import {
 } from '../src/storybook/Typography/Typography.style';
 import Box from '../src/components/Box';
 import { Preview as SBPreview } from '@storybook/react';
+import { Unstyled } from '@storybook/blocks';
 
 const viewPorts = {
   desktop1920: {
@@ -128,7 +129,7 @@ const preview: SBPreview = {
           'Design System',
           'Updated Components',
           'Original Components',
-          // ['*', ['*', 'Docs']],
+          ['*', ['*', 'Docs']],
           'Hooks',
         ],
         locales: 'en-US',
@@ -137,7 +138,6 @@ const preview: SBPreview = {
     },
     chromatic: { delay: 2000 },
     viewMode: 'docs',
-    layout: 'centered',
     docs: {
       story: {
         inline: true,
@@ -198,7 +198,7 @@ const preview: SBPreview = {
           </Box>
         ),
         p: ({ children, rest }: any) => (
-          <Box>
+          <Box my={'6'}>
             <Typography {...rest} css={TypographyResetFontSmooth} variant={'body01'}>
               {children}
             </Typography>
@@ -214,7 +214,12 @@ const preview: SBPreview = {
             {children}
           </Typography>
         ),
-        a: ({ children, rest }: any) => <Link>{children}</Link>,
+        a: ({ children }: any) => <Link>{children}</Link>,
+        code: ({ children }) => (
+          <Unstyled>
+            <code>{children}</code>
+          </Unstyled>
+        ),
         input: inputEmpty,
         UsageGuidelines,
         Tip,

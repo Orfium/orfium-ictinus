@@ -14,9 +14,4 @@ const theme = create({
 
 addons.setConfig({
   theme,
-  viewMode: 'docs',
-  previewTabs: {
-    'storybook/docs/panel': { index: -1 },
-    canvas: { title: 'Sandbox' },
-  },
 });

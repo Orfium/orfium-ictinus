@@ -2,7 +2,7 @@ import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 import DatePicker from './DatePicker';
 import Stack from '../storyUtils/Stack';
 import { CALENDAR_DEFAULT_OPTIONS } from './constants';
-import { currentDay } from './utils';
+import { currentDay, openDatePicker } from './utils';
 import {
   rangePickerOptions,
   filterTypeOptions,
@@ -12,6 +12,7 @@ import {
 } from './constants';
 import { FIGMA_URL, Function } from '../../utils/common';
 import { useState } from 'react';
+import { hoverOnTooltips } from '../Tooltip/utils';
 
 export default {
   title: 'Updated Components/Fields/DatePicker',
@@ -53,6 +54,9 @@ export const DatePickerStory = {
   ),
   parameters: {
     decorators: [withKnobs],
+    docs: {
+      story: { autoplay: true, play: openDatePicker },
+    },
   },
   name: 'Datepicker',
 };
@@ -79,6 +83,9 @@ export const DateRangePicker = {
   ),
   parameters: {
     decorators: [withKnobs],
+    docs: {
+      story: { autoplay: true, play: openDatePicker },
+    },
   },
   name: 'DateRangePicker',
 };

@@ -18,4 +18,8 @@ export const TypographyResetFontSmooth = (theme: Theme) =>
     font-smooth: initial !important;
     -webkit-font-smoothing: initial !important;
     -moz-osx-font-zsmoothing: initial !important;
+
+    .sb-unstyled {
+      display: inline;
+    }
   `;

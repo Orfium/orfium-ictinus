@@ -1,9 +1,5 @@
-import { Meta, Canvas, ArgTypes, Story } from '@storybook/blocks';
-import { select } from '@storybook/addon-knobs';
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
 import IconButton from './IconButton';
-import Stack from '../storyUtils/Stack';
-import iconSelector from '../Icon/assets/iconSelector';
-import { FIGMA_URL } from '../../utils/common';
 import SectionHeader from '../../storybook/SectionHeader';
 import * as IconButtonStories from './IconButton.stories';
 
@@ -18,19 +14,8 @@ import * as IconButtonStories from './IconButton.stories';
 
 ## Overview
 
-<Story
-  name="Overview"
-  parameters={{
-    previewTabs: {
-      canvas: { hidden: true },
-    },
-  }}
->
-  <Overview>
-    A universal IconButton component that with the help of Button hold the icon inside it and makes
-    it clickable and easily accessible.
-  </Overview>
-</Story>
+A universal IconButton component that with the help of Button hold the icon inside it and makes
+it clickable and easily accessible.
 
 ## Props
 

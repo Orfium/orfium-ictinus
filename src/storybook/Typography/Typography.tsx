@@ -1,3 +1,4 @@
+import { Unstyled } from '@storybook/blocks';
 import type { FCC } from 'react';
 import React, { useMemo } from 'react';
 
@@ -16,9 +17,11 @@ const Typography: FCC<TypographyProps> = ({ children, variant, ...rest }) => {
   );
 
   return (
-    <TypographyComponent id={id} variant={variant} {...rest}>
-      {children}
-    </TypographyComponent>
+    <Unstyled>
+      <TypographyComponent id={id} variant={variant} {...rest}>
+        {children}
+      </TypographyComponent>
+    </Unstyled>
   );
 };
 

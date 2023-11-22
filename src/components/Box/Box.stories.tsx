@@ -9,9 +9,17 @@ export default {
 
 export const BoxPaddingAllSides = {
   render: () => (
-    <Box backgroundColor={'default'} p={'3'} mb={'5'}>
-      Padding 3
-    </Box>
+    <>
+      <Box backgroundColor={'default'} p={'3'} mb={'5'}>
+        Padding 3
+      </Box>
+      <Box backgroundColor={'default'} p={'7'} mb={'5'}>
+        Padding 7
+      </Box>
+      <Box backgroundColor={'default'} p={'12'} mb={'5'}>
+        Padding 12
+      </Box>
+    </>
   ),
   name: 'Box padding (All sides)',
 };

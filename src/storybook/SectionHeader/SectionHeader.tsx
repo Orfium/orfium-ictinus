@@ -1,3 +1,4 @@
+import { Unstyled } from '@storybook/blocks';
 import type { FCC } from 'react';
 import React from 'react';
 
@@ -10,9 +11,11 @@ export type SectionHeaderProps = {
 
 const SectionHeader: FCC<SectionHeaderProps> = ({ title = '' }) => {
   return (
-    <div css={sectionHeaderWrapper()}>
-      <Typography variant="headline01">{title}</Typography>
-    </div>
+    <Unstyled>
+      <div css={sectionHeaderWrapper()}>
+        <Typography variant="headline01">{title}</Typography>
+      </div>
+    </Unstyled>
   );
 };
 

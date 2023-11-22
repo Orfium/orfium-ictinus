@@ -4,6 +4,7 @@ import useTheme from 'hooks/useTheme';
 import { omit } from 'lodash';
 import React, { forwardRef } from 'react';
 
+import { BoxWrapper } from './Box.style';
 import type { StyledBoxProps } from './Box.types';
 import { cssResolver, omitedCSSprops, pickCSSProperties, pickNonCSSProps } from './Box.utilities';
 
@@ -40,9 +41,9 @@ const Box = forwardRef<HTMLDivElement, BoxProps>(({ children, ...rest }, ref) =>
   };
 
   return (
-    <span ref={ref} css={[css(propsToCss)]} {...props}>
+    <BoxWrapper ref={ref} css={[css(propsToCss)]} {...props}>
       {children}
-    </span>
+    </BoxWrapper>
   );
 });
 
