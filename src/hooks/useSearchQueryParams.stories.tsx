@@ -23,7 +23,7 @@ export const UseSearchQueryParams = {
 
       return (
         <MemoryRouter initialEntries={[value]}>
-          <DemoUseSearchQueryParams />
+          <DemoUseSearchQueryParams initialEntries={value}/>
         </MemoryRouter>
       );
     },

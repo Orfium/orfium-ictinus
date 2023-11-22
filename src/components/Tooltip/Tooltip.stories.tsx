@@ -50,11 +50,8 @@ export const TextTooltip = {
       </Stack>
     </>
   ),
-  parameters: {
-    docs: {
-      story: { autoplay: true, play: hoverOnTooltips },
-    },
-  },
+  autoplay: true,
+  play: hoverOnTooltips,
   name: 'Text Tooltip',
 };
 
@@ -69,11 +66,8 @@ export const InteractiveTooltip = {
       </Stack>
     </>
   ),
-  parameters: {
-    docs: {
-      story: { autoplay: true, play: hoverOnTooltips },
-    },
-  },
+  autoplay: true,
+  play: hoverOnTooltips,
   name: 'Interactive Tooltip',
 };
 
@@ -112,11 +106,8 @@ export const TooltipPlacement = {
       </Function>
     </Stack>
   ),
-  parameters: {
-    docs: {
-      story: { autoplay: true, play: hoverOnTooltips },
-    },
-  },
+  autoplay: true,
+  play: hoverOnTooltips,
   name: 'Tooltip placement',
 };
 
@@ -159,10 +150,7 @@ export const Playground = {
       </Function>
     </Stack>
   ),
-  parameters: {
-    docs: {
-      story: { autoplay: true, play: hoverOnTooltips },
-    },
-  },
+  autoplay: true,
+  play: hoverOnTooltips,
   name: 'Playground',
 };

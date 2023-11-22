@@ -1,9 +1,8 @@
 import { Meta, ArgTypes, Canvas } from '@storybook/blocks';
 import Button from './Button';
 import * as ButtonStories from './Button.stories';
-import LinkTo from '@storybook/addon-links/react';
 
-import Overview from '../../storybook/Overview';
+import Link from '../../storybook/Link';
 
 <Meta of={ButtonStories} />
 
@@ -38,7 +37,8 @@ A universal Button component that is a clickable element that can hold many form
 
 <Tip>
   If you need to use icon as button with no text, check out{' '}
-  <LinkTo kind="/Updated Components/Buttons/IconButton">Icon button</LinkTo> component
+  <Link href="../?path=/docs/updated-components-buttons-iconbutton--overview">Icon button</Link>{' '}
+  component
 </Tip>
 
 ## Props

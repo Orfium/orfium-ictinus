@@ -25,7 +25,7 @@ export default {
 
 export const ButtonWithDropdown = {
   render: () => (
-    <Stack>
+    <Stack height={150}>
       {' '}
       <DropdownButton
         items={['Item 1', 'Item 2']}
@@ -84,7 +84,7 @@ export const ButtonWithDropdown = {
 
 export const IconButtonWithDropdown = {
   render: () => (
-    <Stack>
+    <Stack height={150}>
       <DropdownButton
         items={['Item 1', 'Item 2']}
         onOptionSelect={(option) => console.log(option)}

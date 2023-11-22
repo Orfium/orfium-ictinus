@@ -214,11 +214,10 @@ const preview: SBPreview = {
             {children}
           </Typography>
         ),
-        a: ({ children }: any) => <Link>{children}</Link>,
-        code: ({ children }) => (
-          <Unstyled>
-            <code>{children}</code>
-          </Unstyled>
+        a: ({ href, children, ...args }: any) => (
+          <Link href={href} {...args}>
+            {children}
+          </Link>
         ),
         input: inputEmpty,
         UsageGuidelines,

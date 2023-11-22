@@ -12,7 +12,6 @@ import {
 } from './constants';
 import { FIGMA_URL, Function } from '../../utils/common';
 import { useState } from 'react';
-import { hoverOnTooltips } from '../Tooltip/utils';
 
 export default {
   title: 'Updated Components/Fields/DatePicker',
@@ -35,7 +34,7 @@ export default {
 
 export const DatePickerStory = {
   render: () => (
-    <Stack isVertical height={600}>
+    <Stack height={600}>
       <Function>
         {() => {
           const [date, setDate] = useState({ from: currentDay.toDate(), to: currentDay.toDate() });
@@ -54,16 +53,15 @@ export const DatePickerStory = {
   ),
   parameters: {
     decorators: [withKnobs],
-    docs: {
-      story: { autoplay: true, play: openDatePicker },
-    },
   },
+  autoPlay: true,
+  play: openDatePicker,
   name: 'Datepicker',
 };
 
 export const DateRangePicker = {
   render: () => (
-    <Stack isVertical height={600}>
+    <Stack height={600}>
       <Function>
         {() => {
           const [date, setDate] = useState({ from: currentDay.toDate(), to: currentDay.toDate() });
@@ -83,16 +81,15 @@ export const DateRangePicker = {
   ),
   parameters: {
     decorators: [withKnobs],
-    docs: {
-      story: { autoplay: true, play: openDatePicker },
-    },
   },
+  autoPlay: true,
+  play: openDatePicker,
   name: 'DateRangePicker',
 };
 
 export const DateRangePickerWithPresetOptions = {
   render: () => (
-    <Stack isVertical height={600}>
+    <Stack height={600}>
       <Function>
         {() => {
           const [date, setDate] = useState({ from: currentDay.toDate(), to: currentDay.toDate() });
@@ -119,7 +116,7 @@ export const DateRangePickerWithPresetOptions = {
 
 export const DatePickerWithFilter = {
   render: () => (
-    <Stack isVertical height={600}>
+    <Stack height={600}>
       <Function>
         {() => {
           const [date, setDate] = useState({ from: undefined, to: undefined });
@@ -177,7 +174,7 @@ export const DatePickerWithDisabledDates = {
 
 export const DatePickerAndDateRangePickerStatuses = {
   render: () => (
-    <Stack isVertical height={600}>
+    <Stack height={600}>
       <Function>
         {() => {
           const [date, setDate] = useState({ from: currentDay.toDate(), to: currentDay.toDate() });
