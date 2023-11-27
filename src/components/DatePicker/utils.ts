@@ -1,4 +1,4 @@
-import { fireEvent } from '@testing-library/react';
+import { fireEvent } from '@storybook/testing-library';
 import { KEYBOARD_EVENT_KEYS } from 'hooks/useKeyboardEvents';
 import type { Dayjs } from 'utils/date';
 import dayjs from 'utils/date';
