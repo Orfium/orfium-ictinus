@@ -1,15 +1,15 @@
-import type { FCC} from 'react';
+import type { FCC } from 'react';
 import React, { useState } from 'react';
 
 import TextField from '../TextField';
 import TopAppBar from '../TopAppBar';
 import type { TopAppBarProps } from '../TopAppBar/TopAppBar.types';
 
-interface Props extends TopAppBarProps {
+type Props = {
   hasLogo?: boolean;
   hasAdditionalTools?: boolean;
   hasSearchHandler?: boolean;
-}
+} & Partial<TopAppBarProps>;
 
 export const DEFAULT_USER_MENU = {
   userName: 'Tom Cruise',

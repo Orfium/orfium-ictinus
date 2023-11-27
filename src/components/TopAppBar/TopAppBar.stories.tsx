@@ -24,15 +24,7 @@ export const WithLogoPlaceholder = {
         padding: 10,
       }}
     >
-      <TopAppBarShowcase
-        onMenuIconClick={() => {}}
-        userMenu={{
-          items: [],
-          userName: '',
-          userAvatar: { src: undefined, letter: null },
-          onSelect: () => {},
-        }}
-      />
+      <TopAppBarShowcase />
     </div>
   ),
 
@@ -46,16 +38,7 @@ export const WithAdditionalTools = {
         padding: 10,
       }}
     >
-      <TopAppBarShowcase
-        hasAdditionalTools={true}
-        onMenuIconClick={() => {}}
-        userMenu={{
-          items: [],
-          userName: '',
-          userAvatar: { src: undefined, letter: null },
-          onSelect: () => {},
-        }}
-      />
+      <TopAppBarShowcase hasAdditionalTools={true} />
     </div>
   ),
 
@@ -69,16 +52,7 @@ export const WithDarkThemeEnabled = {
         padding: 10,
       }}
     >
-      <TopAppBarShowcase
-        isDark={true}
-        onMenuIconClick={() => {}}
-        userMenu={{
-          items: [],
-          userName: '',
-          userAvatar: { src: undefined, letter: null },
-          onSelect: () => {},
-        }}
-      />
+      <TopAppBarShowcase isDark={true} />
     </div>
   ),
 
@@ -98,13 +72,6 @@ export const Playground = {
         hasSearchHandler={boolean('hasSearchHandler', false)}
         hasAdditionalTools={boolean('hasAdditionalTools', false)}
         hasLogo={boolean('hasLogo', false)}
-        onMenuIconClick={() => {}}
-        userMenu={{
-          items: [],
-          userName: '',
-          userAvatar: { src: undefined, letter: null },
-          onSelect: () => {},
-        }}
       />
     </div>
   ),
