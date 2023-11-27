@@ -37,9 +37,8 @@ const plugins = [
 export default defineConfig(({ mode }: { mode: string }): UserConfig => {
   // Load env file based on `mode` in the current working directory.
   // Set the third parameter to '' to load all env regardless of the `REACT_APP_` prefix.
-  const env = loadEnv(mode, process.cwd(), 'REACT_APP_');
+  const env = loadEnv(mode, process.cwd(), '');
   console.log(mode);
-  console.log(env);
 
   return {
     // eslint-disable-next-line @typescript-eslint/naming-convention
