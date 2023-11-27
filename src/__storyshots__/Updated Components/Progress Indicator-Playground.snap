@@ -3,9 +3,9 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
@@ -13,11 +13,6 @@
 }
 
 .emotion-1 {
-  -webkit-transition: stroke-dashoffset 0.5s;
-  transition: stroke-dashoffset 0.5s;
-}
-
-.emotion-3 {
   display: grid;
   grid-template-areas: 'label value' 'bar bar';
   grid-template-columns: 1fr auto;
@@ -25,7 +20,7 @@
   width: 100%;
 }
 
-.emotion-3:not([aria-valuenow]) .fill {
+.emotion-1:not([aria-valuenow]) .fill {
   width: 50%;
   border-radius: 6.25rem;
   -webkit-animation: indeterminate 1.7s infinite ease-in-out;
@@ -33,7 +28,7 @@
   will-change: transform;
 }
 
-.emotion-4 {
+.emotion-2 {
   grid-area: bar;
   background-color: #e7eefe;
   height: 0.25rem;
@@ -42,11 +37,11 @@
   will-change: transform;
 }
 
-.emotion-5 {
-  background: #FF176B;
+.emotion-3 {
+  background: #175bf5;
   height: 100%;
-  border-radius: 0 6.25rem 6.25rem 0;
-  width: 60%;
+  border-radius: 6.25rem;
+  width: %;
   -webkit-transition: width 0.5s;
   transition: width 0.5s;
 }
@@ -56,64 +51,44 @@
     class="emotion-0"
   >
     <div
-      style="margin: 5px;"
+      style="margin: 5px; width: 18.75rem;"
     >
       <div
         aria-valuemax="100"
         aria-valuemin="0"
-        aria-valuenow="60"
-        aria-valuetext="60%"
-        class="react-aria-ProgressBar"
+        class="emotion-1"
         data-rac=""
         id="react-aria-:r82:"
         role="progressbar"
       >
-        <svg
-          data-testid="undefined_circular_progress_container"
-          fill="none"
-          height="1rem"
-          stroke-width="1.5"
-          viewBox="0 0 32 32"
-          width="1rem"
+        <div
+          class="bar emotion-2"
+          data-testid="undefined_linear_progress_container"
         >
-          <circle
-            class="emotion-1"
-            cx="16"
-            cy="16"
-            data-testid="undefined_circular_progress_value"
-            r="14"
-            stroke="#FF176B"
-            stroke-dasharray="91.106186954104 91.106186954104"
-            stroke-dashoffset="36.4424747816416"
-            stroke-linecap="round"
-            transform="rotate(-90 16 16)"
+          <div
+            class="fill emotion-3"
+            data-testid="undefined_linear_progress_value"
           />
-        </svg>
+        </div>
       </div>
     </div>
-  </div>
-  <div
-    class="emotion-0"
-  >
     <div
       style="margin: 5px; width: 18.75rem;"
     >
       <div
         aria-valuemax="100"
         aria-valuemin="0"
-        aria-valuenow="60"
-        aria-valuetext="60%"
-        class="emotion-3"
+        class="emotion-1"
         data-rac=""
         id="react-aria-:r85:"
         role="progressbar"
       >
         <div
-          class="bar emotion-4"
+          class="bar emotion-2"
           data-testid="undefined_linear_progress_container"
         >
           <div
-            class="fill emotion-5"
+            class="fill emotion-3"
             data-testid="undefined_linear_progress_value"
           />
         </div>

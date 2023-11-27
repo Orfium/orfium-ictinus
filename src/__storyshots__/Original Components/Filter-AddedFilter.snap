@@ -1,5 +1,471 @@
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: inherit;
+  position: relative;
+}
+
+.emotion-2 #unique-tooltip-id {
+  display: none!important;
+}
+
+.emotion-3 {
+  position: relative;
+  display: inline-block;
+  height: 2.25rem;
+}
+
+.emotion-4 {
+  background: none;
+  border: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+  min-width: 6.875rem;
+}
+
+.emotion-4:hover>div {
+  background-color: #f3f5f8;
+}
+
+.emotion-4:active>div {
+  background-color: #e7ebf2;
+}
+
+.emotion-4:focus-visible>div {
+  border: 0.1875rem solid #F814E1;
+}
+
+.emotion-4:focus-visible>span {
+  border-top: 0.1875rem solid #F814E1;
+  border-bottom: 0.1875rem solid #F814E1;
+}
+
+.emotion-5 {
+  font-size: 0.8125rem;
+  cursor: pointer;
+  height: 100%;
+  opacity: 1;
+  -webkit-transition: all 150ms linear;
+  transition: all 150ms linear;
+  color: #0f0f17;
+  background-color: #fefefe;
+  border: solid 0.0625rem #cfd7e5;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 0.25rem 0 1rem;
+  border-radius: 1.5rem;
+  border-right: 0!important;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.emotion-5:hover {
+  border: solid 0.0625rem #cfd7e5;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.25rem;
+  height: 100%;
+}
+
+.emotion-7 {
+  line-height: 0.9375rem;
+  margin-left: 0;
+}
+
+.emotion-8 {
+  font-weight: 400;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-8 div {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+}
+
+.emotion-8 span {
+  font-weight: 700;
+}
+
+.emotion-9 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.emotion-10 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-11 {
+  fill: #0f0f17;
+  width: 0.4375rem;
+  height: 0.4375rem;
+}
+
+.emotion-11 path {
+  fill: #0f0f17;
+}
+
+.emotion-12 {
+  height: 100%;
+  width: 0.0625rem;
+  position: relative;
+  min-width: 0.0625rem;
+  -webkit-transition: all 150ms linear;
+  transition: all 150ms linear;
+  background-color: #cfd7e5;
+  border-top: solid 0.0625rem #cfd7e5;
+  border-bottom: solid 0.0625rem #cfd7e5;
+}
+
+.emotion-13 {
+  font-size: 0.8125rem;
+  cursor: pointer;
+  height: 100%;
+  opacity: 1;
+  -webkit-transition: all 150ms linear;
+  transition: all 150ms linear;
+  color: #0f0f17;
+  background-color: #fefefe;
+  border: solid 0.0625rem #cfd7e5;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 2.125rem;
+  border-left: 0!important;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+}
+
+.emotion-13:hover {
+  border: solid 0.0625rem #cfd7e5;
+}
+
+.emotion-15 {
+  fill: #5b5b71;
+  width: 1.1875rem;
+  height: 1.1875rem;
+}
+
+.emotion-15 path {
+  fill: #5b5b71;
+}
+
 <div>
   <h2>
     Added
   </h2>
+  <div
+    class="emotion-0"
+  >
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        class="emotion-1"
+      >
+        <div>
+          filled
+          (
+          primary
+          ): 
+        </div>
+        <div>
+          <div
+            class="emotion-2"
+          >
+            <div
+              class="emotion-3"
+            >
+              <button
+                class="emotion-4"
+                data-testid="filter"
+              >
+                <div
+                  class="emotion-5"
+                >
+                  <div
+                    class="emotion-6"
+                  >
+                    <div
+                      class="emotion-7"
+                    >
+                      <span
+                        class="emotion-8"
+                      >
+                        <div
+                          data-testid="filter-label"
+                        >
+                          Label
+                           
+                          : 
+                        </div>
+                        <span
+                          class="emotion-9"
+                          data-testid="filter-selected-item-label"
+                        >
+                          Default value
+                        </span>
+                      </span>
+                    </div>
+                    <span
+                      class="emotion-10"
+                    >
+                      <svg
+                        class="emotion-11"
+                        fill="none"
+                        viewBox="0 0 12 6"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M0.853481 0.853541C0.538516 0.538554 0.761603 0 1.20705 0H10.793C11.2384 0 11.4615 0.538554 11.1465 0.853541L6.35357 5.64683C6.1583 5.84211 5.8417 5.84211 5.64643 5.64683L0.853481 0.853541Z"
+                          fill="#0E0E17"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <span
+                  class="emotion-12"
+                />
+                <div
+                  class="emotion-13"
+                >
+                  <span
+                    class="emotion-10"
+                  >
+                    <svg
+                      class="emotion-15"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <g
+                        fill="none"
+                        fill-rule="evenodd"
+                        id="\\uD83D\\uDD36-Symbols"
+                        stroke="none"
+                        stroke-width="1"
+                      >
+                        <g
+                          id="Close_tag"
+                        >
+                          <path
+                            d="M12,4 C16.418278,4 20,7.581722 20,12 C20,16.418278 16.418278,20 12,20 C7.581722,20 4,16.418278 4,12 C4,7.581722 7.581722,4 12,4 Z M14.4748737,8.1109127 L11.9999127,10.5849127 L9.52512627,8.1109127 L8.1109127,9.52512627 L10.5849127,11.9999127 L8.1109127,14.4748737 L9.52512627,15.8890873 L11.9999127,13.4139127 L14.4748737,15.8890873 L15.8890873,14.4748737 L13.4139127,11.9999127 L15.8890873,9.52512627 L14.4748737,8.1109127 Z"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </span>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        class="emotion-1"
+      >
+        <div>
+          filled
+          (
+          secondary
+          ): 
+        </div>
+        <div>
+          <div
+            class="emotion-2"
+          >
+            <div
+              class="emotion-3"
+            >
+              <button
+                class="emotion-4"
+                data-testid="filter"
+              >
+                <div
+                  class="emotion-5"
+                >
+                  <div
+                    class="emotion-6"
+                  >
+                    <div
+                      class="emotion-7"
+                    >
+                      <span
+                        class="emotion-8"
+                      >
+                        <div
+                          data-testid="filter-label"
+                        >
+                          Label
+                           
+                          : 
+                        </div>
+                        <span
+                          class="emotion-9"
+                          data-testid="filter-selected-item-label"
+                        >
+                          Default value
+                        </span>
+                      </span>
+                    </div>
+                    <span
+                      class="emotion-10"
+                    >
+                      <svg
+                        class="emotion-11"
+                        fill="none"
+                        viewBox="0 0 12 6"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M0.853481 0.853541C0.538516 0.538554 0.761603 0 1.20705 0H10.793C11.2384 0 11.4615 0.538554 11.1465 0.853541L6.35357 5.64683C6.1583 5.84211 5.8417 5.84211 5.64643 5.64683L0.853481 0.853541Z"
+                          fill="#0E0E17"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <span
+                  class="emotion-12"
+                />
+                <div
+                  class="emotion-13"
+                >
+                  <span
+                    class="emotion-10"
+                  >
+                    <svg
+                      class="emotion-15"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <g
+                        fill="none"
+                        fill-rule="evenodd"
+                        id="\\uD83D\\uDD36-Symbols"
+                        stroke="none"
+                        stroke-width="1"
+                      >
+                        <g
+                          id="Close_tag"
+                        >
+                          <path
+                            d="M12,4 C16.418278,4 20,7.581722 20,12 C20,16.418278 16.418278,20 12,20 C7.581722,20 4,16.418278 4,12 C4,7.581722 7.581722,4 12,4 Z M14.4748737,8.1109127 L11.9999127,10.5849127 L9.52512627,8.1109127 L8.1109127,9.52512627 L10.5849127,11.9999127 L8.1109127,14.4748737 L9.52512627,15.8890873 L11.9999127,13.4139127 L14.4748737,15.8890873 L15.8890873,14.4748737 L13.4139127,11.9999127 L15.8890873,9.52512627 L14.4748737,8.1109127 Z"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </span>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h2>
+    Transparent
+  </h2>
+  <div>
+    Transparent Styles are not available for added filters
+  </div>
 </div>

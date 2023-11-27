@@ -1,4 +1,4 @@
-import { withKnobs } from '@storybook/addon-knobs';
+import { boolean, number, select, withKnobs } from '@storybook/addon-knobs';
 
 import ProgressIndicator from './ProgressIndicator';
 import Typography from '../Typography';
@@ -134,14 +134,19 @@ export const CircularProgressIndicatorErrorStates = {
 
 export const Playground = {
   render: () => (
-    <>
-      <Stack>
-        <ProgressIndicator type={'circular'} value={60} status="error" />
-      </Stack>
-      <Stack width={300}>
-        <ProgressIndicator value={60} status="error" />
-      </Stack>
-    </>
+    <Stack width={300} isVertical>
+      <ProgressIndicator
+        type={select('type', ['linear', 'circular'], 'linear')}
+        status={select('status', ['normal', 'error'], 'normal')}
+        isBlock={boolean('isBlock [for linear only]', false)}
+      />
+      <ProgressIndicator
+        value={number('value', undefined)}
+        type={select('type', ['linear', 'circular'], 'linear')}
+        status={select('status', ['normal', 'error'], 'normal')}
+        isBlock={boolean('isBlock [for linear only]', false)}
+      />
+    </Stack>
   ),
   parameters: {
     decorators: [withKnobs],

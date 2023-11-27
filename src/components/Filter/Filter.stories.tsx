@@ -55,12 +55,35 @@ export default {
 };
 
 export const PresetFilter = {
-  render: () => <h2>Preset</h2>,
+  render: () => (
+    <>
+      <h2>Preset</h2>
+      <Stack isVertical>
+        <FilterShowcase styleType="filled" filterType={'preset'} />
+        <FilterShowcase styleType="filled" filterType={'preset'} buttonType={'secondary'} />
+      </Stack>
+      <h2>Transparent</h2>
+      <Stack isVertical>
+        <FilterShowcase styleType="transparent" filterType={'preset'} />
+        <FilterShowcase styleType="transparent" filterType={'preset'} buttonType={'secondary'} />
+      </Stack>
+    </>
+  ),
   name: 'Preset Filter',
 };
 
 export const AddedFilter = {
-  render: () => <h2>Added</h2>,
+  render: () => (
+    <>
+      <h2>Added</h2>
+      <Stack isVertical>
+        <FilterShowcase styleType="filled" filterType={'added'} />
+        <FilterShowcase styleType="filled" filterType={'added'} buttonType={'secondary'} />
+      </Stack>
+      <h2>Transparent</h2>
+      <div>Transparent Styles are not available for added filters</div>
+    </>
+  ),
   name: 'Added Filter',
 };
 

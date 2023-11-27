@@ -29,9 +29,7 @@ export const OverlayPlayground = {
       hasPlayground
     />
   ),
-
   name: 'Overlay Playground',
-
   parameters: {
     decorators: [withKnobs],
   },

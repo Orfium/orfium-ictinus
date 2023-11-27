@@ -1,11 +1,7 @@
 import TopAppBar from './TopAppBar';
-import Stack from '../storyUtils/Stack';
-import TextField from '../TextField';
 import TopAppBarShowcase from '../storyUtils/TopAppBarShowcase';
 import { boolean } from '@storybook/addon-knobs';
-import UserMenu from './components/UserMenu/UserMenu';
 import { FIGMA_URL } from '../../utils/common';
-import { AvatarColors } from '../Avatar';
 
 export default {
   title: 'Original Components/TopNavBar',

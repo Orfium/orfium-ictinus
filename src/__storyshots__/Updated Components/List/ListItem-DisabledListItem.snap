@@ -156,12 +156,12 @@
 
 .emotion-9 .react-switch-handle {
   cursor: not-allowed!important;
-  border: 0!important;
+  border: 2px solid #b7c3d8!important;
   box-sizing: border-box!important;
-  -webkit-transform: translateX(1rem)!important;
-  -moz-transform: translateX(1rem)!important;
-  -ms-transform: translateX(1rem)!important;
-  transform: translateX(1rem)!important;
+  -webkit-transform: translateX(0)!important;
+  -moz-transform: translateX(0)!important;
+  -ms-transform: translateX(0)!important;
+  transform: translateX(0)!important;
 }
 
 .emotion-9 .react-switch-handle:hover {
@@ -598,15 +598,14 @@
                   >
                     <div
                       class="react-switch-bg"
-                      style="height: 8px; width: 36px; margin: 6px; position: relative; background: rgb(185, 205, 252); border-radius: 4px; cursor: default; transition: background 0.25s;"
+                      style="height: 8px; width: 36px; margin: 6px; position: relative; background: rgb(219, 225, 235); border-radius: 4px; cursor: default; transition: background 0.25s;"
                     />
                     <div
                       class="react-switch-handle"
-                      style="height: 20px; width: 20px; background: rgb(23, 91, 245); display: inline-block; cursor: default; border-radius: 50%; position: absolute; transform: translateX(28px); top: 0px; outline: 0; border: 0px; transition: background-color 0.25s, transform 0.25s, box-shadow 0.15s;"
+                      style="height: 20px; width: 20px; background: rgb(243, 245, 248); display: inline-block; cursor: default; border-radius: 50%; position: absolute; transform: translateX(0px); top: 0px; outline: 0; border: 0px; transition: background-color 0.25s, transform 0.25s, box-shadow 0.15s;"
                     />
                     <input
-                      aria-checked="true"
-                      checked=""
+                      aria-checked="false"
                       data-testid="switch"
                       disabled=""
                       role="switch"

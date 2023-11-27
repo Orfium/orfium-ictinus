@@ -4,10 +4,30 @@
   margin-bottom: 0.75rem;
 }
 
+.emotion-2 {
+  background-color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+.emotion-4 {
+  background-color: rgba(84,94,255,0);
+  margin-bottom: 0.75rem;
+}
+
 <div>
   <div
     class="emotion-0 emotion-1"
   >
     Background Inverted
+  </div>
+  <div
+    class="emotion-2 emotion-1"
+  >
+    Background Light
+  </div>
+  <div
+    class="emotion-4 emotion-1"
+  >
+    Background Transparent
   </div>
 </div>

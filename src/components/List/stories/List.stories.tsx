@@ -74,7 +74,7 @@ export const VirtualizedList = {
             {new Array(1000).fill(undefined).map((__, index) => {
               return (
                 <ListItem key={`Item ${index}`}>
-                  <ListItemText>Item{index}</ListItemText>
+                  <ListItemText>Item {index}</ListItemText>
                 </ListItem>
               );
             })}

@@ -139,7 +139,7 @@ export const DisabledListItem = {
               <ListItem key={'3'} textValue={'Option Switch'}>
                 <ListItemText>This Switch Option is disabled</ListItemText>
                 <ListItemAction>
-                  <Switch isDisabled isChecked onChange={() => {}} />
+                  <Switch isDisabled isChecked={false} onChange={() => {}} />
                 </ListItemAction>
               </ListItem>
               <ListItem key={'4'} rowSize={'compact'} textValue={'Option Icon/Avatar'}>

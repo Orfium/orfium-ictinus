@@ -46,7 +46,7 @@ export const NumberFieldWithFormatOptions = {
 export const NumberFieldWithStepper = {
   render: () => (
     <Stack>
-      <NumberField label={'Label'} hasStepper step={number('Step', undefined)} />
+      <NumberField label={'NumberField'} hasStepper step={number('Step', undefined)} />
     </Stack>
   ),
 
