@@ -2,7 +2,8 @@ import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 import DatePicker from './DatePicker';
 import Stack from '../storyUtils/Stack';
 import { CALENDAR_DEFAULT_OPTIONS } from './constants';
-import { currentDay, openDatePicker } from './utils';
+import { currentDay } from './utils';
+import { openDatePicker } from './play-utils';
 import {
   rangePickerOptions,
   filterTypeOptions,

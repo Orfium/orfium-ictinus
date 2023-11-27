@@ -1,4 +1,3 @@
-import { within, userEvent as TLUserEvent } from '@storybook/testing-library';
 import { fireEvent } from '@testing-library/react';
 import { KEYBOARD_EVENT_KEYS } from 'hooks/useKeyboardEvents';
 import type { Dayjs } from 'utils/date';
@@ -18,12 +17,6 @@ export const initDates = (value: { from?: Date; to?: Date }): Range => {
     from: value.from ? dayjs(value.from) : undefined,
     to: value.to ? dayjs(value.to) : undefined,
   };
-};
-
-export const openDatePicker = async ({ canvasElement }: { canvasElement: HTMLElement }) => {
-  const canvas = within(canvasElement);
-  const calendarButton = canvas.getByTestId('calendar_button');
-  await TLUserEvent.click(calendarButton);
 };
 
 export const clickOnElement = (element: HTMLElement, key: string, charCode: number) =>
