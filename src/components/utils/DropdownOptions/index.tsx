@@ -1,4 +1,5 @@
-import { CSSObject, css } from '@emotion/react';
+import type { CSSObject} from '@emotion/react';
+import { css } from '@emotion/react';
 import { rem } from 'theme/utils';
 
 import type { Theme } from '../../../theme';

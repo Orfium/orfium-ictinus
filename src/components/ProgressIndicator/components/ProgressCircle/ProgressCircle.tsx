@@ -5,7 +5,7 @@ import { ProgressBar as AriaProgressBar } from 'react-aria-components';
 
 import { animationStyles } from './ProgressCircle.style';
 import { getProgressIndicatorTokens } from 'components/ProgressIndicator/ProgressIndicator.tokens';
-import { ProgressIndicatorProps } from 'components/ProgressIndicator/ProgressIndicator.types';
+import type { ProgressIndicatorProps } from 'components/ProgressIndicator/ProgressIndicator.types';
 
 const ProgressCircle = React.forwardRef<
   HTMLDivElement,

@@ -126,7 +126,7 @@ describe('Table', () => {
     expect(within(surnameHeader).getByTestId('table_icon_tooltip_surname')).toBeInTheDocument();
   });
 
-  test('that onSort is called with correct parameters', () => {
+  test('that onSort is called with correct parameters', async () => {
     const onSort = vi.fn();
 
     render(
@@ -149,12 +149,12 @@ describe('Table', () => {
       />
     );
 
-    userEvent.click(screen.getByTestId('header_title'));
+    await userEvent.click(screen.getByTestId('header_title'));
 
     expect(onSort).toHaveBeenLastCalledWith('title', 'desc');
   });
 
-  test('that the tooltip is showed when hovering over the icon', () => {
+  test('that the tooltip is showed when hovering over the icon', async () => {
     render(
       <Table
         columns={[
@@ -175,12 +175,12 @@ describe('Table', () => {
 
     const tooltipIcon = screen.getByTestId('table_icon_tooltip_title');
 
-    userEvent.hover(tooltipIcon);
+    await userEvent.hover(tooltipIcon);
 
     expect(screen.getByText(tooltip.content)).toBeVisible();
   });
 
-  test('that the order of the icons is correct when column is numerical', () => {
+  test('that the order of the icons is correct when column is numerical', async () => {
     const onSort = vi.fn();
 
     render(
@@ -220,7 +220,7 @@ describe('Table', () => {
 
     const headerAge = screen.getByTestId('header_age');
 
-    userEvent.click(headerAge);
+    await userEvent.click(headerAge);
 
     const ageElements = within(headerAge).queryAllByTestId(new RegExp('table_icon'));
 

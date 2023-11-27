@@ -3,7 +3,7 @@ import useTheme from 'hooks/useTheme';
 import type { FCC } from 'react';
 import React from 'react';
 import isEqual from 'react-fast-compare';
-import { ComponentSizes } from 'types';
+import type { ComponentSizes } from 'types';
 
 import { hintMessageStyle, textFieldStyle, wrapperStyle } from './TextInputBase.style';
 import { getTextInputBaseTokens } from './TextInputBase.tokens';
@@ -67,7 +67,7 @@ const TextInputBase: FCC<
       css={hintMessageStyle({ status, isDisabled })}
     >
       {!isDisabled && status.type === 'error' && size === 'normal' && (
-        <Icon color={tokens('textColor.errorHintColor')} name={'warning'} size={12} />
+        <Icon color={tokens('textColor.errorHintColor')} name="warning" size={12} />
       )}
       <span id={status.id}>{status.hintMessage}</span>
     </div>

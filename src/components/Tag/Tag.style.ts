@@ -1,9 +1,10 @@
-import { css, SerializedStyles } from '@emotion/react';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
 import { rem } from 'theme/utils';
 
 import { getTagTokens } from './Tag.tokens';
-import { TagProps } from './Tag.types';
-import { Theme } from '../../theme';
+import type { TagProps } from './Tag.types';
+import type { Theme } from '../../theme';
 import { generateStylesFromTokens } from 'components/Typography/utils';
 
 export const tagContainerStyles =

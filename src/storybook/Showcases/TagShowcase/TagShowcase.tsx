@@ -1,6 +1,8 @@
-import React, { FC, useState } from 'react';
+import type { FC} from 'react';
+import React, { useState } from 'react';
 
-import Tag, { TagProps } from 'components/Tag';
+import type { TagProps } from 'components/Tag';
+import Tag from 'components/Tag';
 
 type Props = Pick<TagProps, 'color' | 'size' | 'iconName'> & {
   hasIcon?: boolean;

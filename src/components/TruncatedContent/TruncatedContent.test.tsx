@@ -47,7 +47,7 @@ describe('TruncatedContent', () => {
     const text = getByTestId('long-text');
     expect(text).toBeInTheDocument();
 
-    userEvent.hover(text);
+    await userEvent.hover(text);
     await waitFor(() => expect(getByText(tooltipText)).toBeInTheDocument());
   });
 });

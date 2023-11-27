@@ -1,6 +1,6 @@
 import userEvent from '@testing-library/user-event';
 
-import { render, screen, selectDropdownOption, waitFor } from '../../test';
+import { render, screen, selectDropdownOption, sleep, waitFor } from '../../test';
 import StatefulSelect from './StatefulSelect';
 import { fireEvent } from '@testing-library/react';
 import { SELECT_ALL_OPTION } from './constants';
@@ -63,23 +63,23 @@ describe('Generic Select', () => {
 
     it('should revert input value back to “default”, when clear icon is clicked', async () => {
       selectInput = screen.getByPlaceholderText('Country') as HTMLInputElement;
-      userEvent.type(selectInput, 'Greece');
+      await userEvent.type(selectInput, 'Greece');
 
       expect(selectInput.value).toBe('Greece');
 
       clearIcon = screen.getByTestId('select-right-icon');
-      userEvent.click(clearIcon);
+      await userEvent.click(clearIcon);
 
       expect(selectInput.value).not.toBe('Greece');
     });
 
     it('should revert input value back to “default”, when Backspace is clicked', async () => {
       selectInput = screen.getByPlaceholderText('Country') as HTMLInputElement;
-      userEvent.type(selectInput, 'Greece');
+      await userEvent.type(selectInput, 'Greece');
 
       expect(selectInput.value).toBe('Greece');
 
-      userEvent.type(selectInput, '{Backspace}');
+      await userEvent.type(selectInput, '{Backspace}');
 
       expect(selectInput.value).not.toBe('Greece');
     });
@@ -116,9 +116,13 @@ describe('Generic Select', () => {
 
       selectInput = screen.getByPlaceholderText('Country') as HTMLInputElement;
 
-      userEvent.type(selectInput, 'Greece');
+      await userEvent.type(selectInput, 'Greece');
 
-      await waitFor(() => expect(screen.getByTestId('select_circular_progress_container')).toBeVisible());
+      await sleep(500);
+
+      await waitFor(() =>
+        expect(screen.getByTestId('select_circular_progress_container')).toBeVisible()
+      );
     });
 
     it('should call asyncSearch when typing', async () => {
@@ -168,7 +172,7 @@ describe('Generic Select', () => {
 
       selectInput = screen.getByPlaceholderText('Countries') as HTMLInputElement;
 
-      userEvent.click(selectInput);
+      await userEvent.click(selectInput);
 
       await waitFor(() => expect(screen.getByText('Greece')).toBeVisible());
       await waitFor(() => expect(screen.getByText('Europe')).toBeVisible());
@@ -180,7 +184,7 @@ describe('Generic Select', () => {
       // reset mocked time
       vi.useRealTimers();
     });
-    it.skip('down arrow should open menu', async () => {
+    it('down arrow should open menu', async () => {
       const { getByTestId, container } = render(
         <div>
           <StatefulSelect
@@ -257,7 +261,6 @@ describe('Generic Select', () => {
     });
 
     it('on type more than 1 character in input and enter selects the first from the list', async () => {
-      vi.useFakeTimers();
       const handleSubmit = vi.fn();
 
       const { getByTestId } = render(
@@ -284,11 +287,8 @@ describe('Generic Select', () => {
       expect(handleSubmit).toBeCalledTimes(1);
 
       await userEvent.type(select, 'zi');
-      fireEvent.keyDown(select, {
-        key: 'Enter',
-      });
 
-      vi.runAllTimers();
+      await userEvent.keyboard('{enter}');
 
       expect(handleSubmit).toBeCalledTimes(2);
       expect(handleSubmit).toBeCalledWith(dropdownList[1]);
@@ -336,7 +336,7 @@ describe('Multi Select', () => {
     await selectDropdownOption(selectInput, dropdownList[0].label);
     await selectDropdownOption(selectInput, dropdownList[1].label);
 
-    userEvent.click(selectInput);
+    await userEvent.click(selectInput);
 
     expect(screen.getByTestId('ictinus_list').innerHTML).not.toContain(dropdownList[0].label);
     expect(screen.getByTestId('ictinus_list').innerHTML).not.toContain(dropdownList[1].label);
@@ -346,10 +346,10 @@ describe('Multi Select', () => {
     await selectDropdownOption(selectInput, dropdownList[0].label);
     await selectDropdownOption(selectInput, dropdownList[1].label);
 
-    userEvent.click(screen.getByTestId('chip-delete-chip_1'));
-    userEvent.click(screen.getByTestId('chip-delete-chip_0'));
+    await userEvent.click(screen.getByTestId('chip-delete-chip_1'));
+    await userEvent.click(screen.getByTestId('chip-delete-chip_0'));
 
-    userEvent.click(selectInput);
+    await userEvent.click(selectInput);
 
     expect(screen.getByTestId('ictinus_list').innerHTML).toContain(dropdownList[0].label);
     expect(screen.getByTestId('ictinus_list').innerHTML).toContain(dropdownList[1].label);
@@ -360,40 +360,40 @@ describe('Multi Select', () => {
     await selectDropdownOption(selectInput, dropdownList[1].label);
     await selectDropdownOption(selectInput, dropdownList[2].label);
 
-    userEvent.click(screen.getByTestId('select-right-icon'));
+    await userEvent.click(screen.getByTestId('select-right-icon'));
 
     expect(screen.queryByTestId('chip-chip_0')).not.toBeInTheDocument();
   });
 
   it('selects all options when Select All is clicked', async () => {
-    userEvent.click(selectInput);
-    userEvent.click(screen.getByTestId(`ictinus_list_item_${SELECT_ALL_OPTION.value}`));
+    await userEvent.click(selectInput);
+    await userEvent.click(screen.getByTestId(`ictinus_list_item_${SELECT_ALL_OPTION.value}`));
 
     chips = await screen.findAllByTestId(/chip-chip_/);
 
     expect(chips.length).toEqual(dropdownList.length);
 
-    userEvent.click(selectInput);
+    await userEvent.click(selectInput);
 
     expect(screen.getByText('No options')).toBeInTheDocument();
   });
 
   it('creates a new item if not found on the results', async () => {
-    userEvent.click(selectInput);
-    userEvent.type(selectInput, 'New item');
+    await userEvent.click(selectInput);
+    await userEvent.type(selectInput, 'New item');
 
     expect(screen.getByTestId('ictinus_list').innerHTML).toContain('Create "New item"');
 
     /** Create new Item */
     newOption = screen.getByText('Create "New item"');
-    userEvent.click(newOption);
+    await userEvent.click(newOption);
     newChip = screen.getByTestId('chip-chip_0');
 
     expect(newChip).toBeVisible();
     expect(newChip.innerHTML).toContain('New item');
 
     /** Delete created Item */
-    userEvent.click(screen.getByTestId('chip-delete-chip_0'));
+    await userEvent.click(screen.getByTestId('chip-delete-chip_0'));
     expect(screen.queryByTestId('New item')).not.toBeInTheDocument();
   });
 
@@ -404,8 +404,8 @@ describe('Multi Select', () => {
     expect(screen.getByTestId('chip-chip_0')).toBeVisible();
     expect(screen.getByTestId('chip-chip_1')).toBeVisible();
 
-    userEvent.click(selectInput);
-    userEvent.type(selectInput, '{Backspace}');
+    await userEvent.click(selectInput);
+    await userEvent.type(selectInput, '{Backspace}');
 
     expect(screen.queryByTestId('chip-chip_1')).not.toBeInTheDocument();
   });

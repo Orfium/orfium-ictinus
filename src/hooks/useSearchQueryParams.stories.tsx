@@ -24,7 +24,8 @@ export const UseSearchQueryParams = {
 
       return (
         <MemoryRouter initialEntries={[value]}>
-          <DemoUseSearchQueryParams initialEntries={value}/>
+          {/*// @ts-ignore*/}
+          <DemoUseSearchQueryParams initialEntries={value} />
         </MemoryRouter>
       );
     },
