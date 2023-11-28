@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { showcaseContainerStyle } from './CardShowcase.style';
-import { Elevation } from '../../../theme/globals/elevation';
-import { SpacingKey } from '../../../theme/globals/spacing';
+import type { Elevation } from '../../../theme/globals/elevation';
+import type { SpacingKey } from '../../../theme/globals/spacing';
 import Card from '../../Card';
 
 type CardShowcaseProps = {
