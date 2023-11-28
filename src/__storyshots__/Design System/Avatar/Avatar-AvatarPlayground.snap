@@ -1,0 +1,142 @@
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 6.25rem;
+  border: 0.0625rem solid;
+  border-color: #b9cdfc;
+  box-sizing: border-box;
+  background-color: #e7eefe;
+  color: #1249C4;
+  overflow: hidden;
+  position: relative;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 0.875rem;
+  font-size: 0.625rem;
+  letter-spacing: 0.00625rem;
+}
+
+.emotion-1 img {
+  border-radius: 6.25rem;
+  width: 100%;
+  height: 100%;
+}
+
+.emotion-4 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-5 {
+  fill: #1249C4;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-5 path {
+  fill: #1249C4;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        class="emotion-1"
+        data-testid="_avatar"
+      >
+        JN
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        class="emotion-1"
+        data-testid="_avatar"
+      >
+        <img
+          src="https://mui.com/static/images/avatar/1.jpg"
+        />
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        class="emotion-1"
+        data-testid="_avatar"
+      >
+        <span
+          class="emotion-4"
+        >
+          <svg
+            class="emotion-5"
+            fill="none"
+            viewBox="0 0 14 17"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6.96625 6.55647C8.77677 6.55647 10.2445 5.08876 10.2445 3.27824C10.2445 1.46772 8.77677 0 6.96625 0C5.15573 0 3.68801 1.46772 3.68801 3.27824C3.68801 5.08876 5.15573 6.55647 6.96625 6.55647Z"
+              fill="#54587F"
+            />
+            <path
+              d="M0 12.2113C0 12.1401 0.0171683 12.0699 0.0515269 12.0076C1.31285 9.7198 3.95046 8.09435 7 8.09435C10.0495 8.09435 12.6872 9.7198 13.9485 12.0076C13.9828 12.0699 14 12.1401 14 12.2113C14 12.2824 13.9828 12.3528 13.9483 12.4151C12.687 14.6941 10.0518 16.0044 7.00244 16.0044C3.95304 16.0044 1.31314 14.6941 0.0516988 12.4151C0.0172363 12.3528 0 12.2824 0 12.2113Z"
+              fill="#54587F"
+            />
+          </svg>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
