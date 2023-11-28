@@ -1,4 +1,4 @@
-import { CSSObject } from '@emotion/serialize';
+import type { CSSObject } from '@emotion/serialize';
 import React, { useRef } from 'react';
 
 import { useWrapperWidth, usePositionInScreen } from './hooks';
