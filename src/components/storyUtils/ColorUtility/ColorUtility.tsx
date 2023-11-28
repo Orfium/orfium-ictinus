@@ -27,7 +27,7 @@ const ColorUtility = ({ defaultColor }: { defaultColor?: string }) => {
         <div css={{ flexDirection: 'column', marginRight: '8px' }}>
           <div css={inputWrapper}>
             <TextField
-              label={'Color'}
+              label="Color"
               value={colorInput}
               placeholder={color.normal || DEFAULT_COLOR}
               onChange={updateColor}
@@ -37,13 +37,13 @@ const ColorUtility = ({ defaultColor }: { defaultColor?: string }) => {
             <div css={contentWrapper}>normal : {color.normal}</div>
           </div>
           <ColorBox
-            colorStatus={'lighten'}
+            colorStatus="lighten"
             color={color.lighten}
             utilityValue={utilityValues.lighten}
             updateValue={setLightenValue}
           />
           <ColorBox
-            colorStatus={'darken'}
+            colorStatus="darken"
             color={color.darken}
             utilityValue={utilityValues.darken}
             updateValue={setDarkenValue}

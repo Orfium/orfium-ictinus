@@ -1,14 +1,15 @@
-import React, { FCC, useState } from 'react';
+import type { FCC } from 'react';
+import React, { useState } from 'react';
 
 import TextField from '../TextField';
 import TopAppBar from '../TopAppBar';
-import { TopAppBarProps } from '../TopAppBar/TopAppBar.types';
+import type { TopAppBarProps } from '../TopAppBar/TopAppBar.types';
 
-interface Props extends TopAppBarProps {
+type Props = {
   hasLogo?: boolean;
   hasAdditionalTools?: boolean;
   hasSearchHandler?: boolean;
-}
+} & Partial<TopAppBarProps>;
 
 export const DEFAULT_USER_MENU = {
   userName: 'Tom Cruise',
@@ -22,9 +23,9 @@ export const DEFAULT_USER_MENU = {
 
 const DEFAULT_ADDITIONAL_TOOLS = (
   <>
-    <TextField label={'Label'} />
-    <TextField label={'Label'} />
-    <TextField label={'Label'} />
+    <TextField label="Label" />
+    <TextField label="Label" />
+    <TextField label="Label" />
   </>
 );
 
@@ -44,7 +45,7 @@ const TopAppBarShowcase: FCC<Props> = ({
 }) => {
   const [state, setState] = useState('');
   const logoIcon = hasLogo && (
-    <img src={'https://cdn.orfium.com/dist/0c5279a27dfc65b6b41b52634cbe7b80.svg'} alt={'logo'} />
+    <img src="https://cdn.orfium.com/dist/0c5279a27dfc65b6b41b52634cbe7b80.svg" alt="logo" />
   );
 
   const onSearchHandler = (event: React.ChangeEvent<HTMLInputElement>) => {

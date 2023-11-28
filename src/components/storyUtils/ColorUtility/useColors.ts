@@ -1,5 +1,6 @@
 import { shade, tint } from 'polished';
-import { ChangeEvent, useCallback, useEffect, useState } from 'react';
+import type { ChangeEvent} from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 import { validateColor } from './utils';
 
