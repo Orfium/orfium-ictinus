@@ -8,7 +8,7 @@ import {
   modalContentContainer,
 } from './ModalContent.style';
 import { generateTestDataId } from '../../../utils/helpers';
-import { TestId } from '../../../utils/types';
+import type { TestId } from '../../../utils/types';
 import Button from '../../Button';
 
 export type ModalContentProps = {
@@ -42,7 +42,7 @@ const ModalContent: React.FCC<ModalContentProps> = ({
 }) => {
   return (
     <div
-      role={'dialog'}
+      role="dialog"
       css={modalContentContainer}
       data-testid={generateTestDataId('modal-content', dataTestId)}
     >
@@ -61,12 +61,12 @@ const ModalContent: React.FCC<ModalContentProps> = ({
       </p>
       <div css={actionsContainer}>
         {Boolean(secondaryCTA && secondaryCTALabel) && (
-          <Button onClick={secondaryCTA} dataTestId={'modal-content-secondaryCTA'}>
+          <Button onClick={secondaryCTA} dataTestId="modal-content-secondaryCTA">
             {secondaryCTALabel}
           </Button>
         )}
         {Boolean(primaryCTA && primaryCTALabel) && (
-          <Button onClick={primaryCTA} dataTestId={'modal-content-primaryCTA'}>
+          <Button onClick={primaryCTA} dataTestId="modal-content-primaryCTA">
             {primaryCTALabel}
           </Button>
         )}

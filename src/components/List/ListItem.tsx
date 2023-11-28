@@ -1,7 +1,7 @@
 import { Item as AriaItem } from '@react-stately/collections';
 import React from 'react';
 
-import { ListRowSize } from './types';
+import type { ListRowSize } from './types';
 
 export type ListItemProps = {
   /** A string representation of the item's unique key. */
@@ -11,7 +11,7 @@ export type ListItemProps = {
   /** @default normal */
   rowSize?: ListRowSize;
 };
-const ListItem: React.FCC<ListItemProps> = (props) => (
+const ListItem: React.FC<React.PropsWithChildren<ListItemProps>> = (props) => (
   <AriaItem {...props} key={String(props.key)}>
     {props.children}
   </AriaItem>

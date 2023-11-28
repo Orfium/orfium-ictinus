@@ -1,6 +1,7 @@
-import dayjs, { Dayjs } from 'utils/date';
+import type { Dayjs } from 'utils/date';
+import dayjs from 'utils/date';
 
-import { DisabledDates } from '../DatePicker.types';
+import type { DisabledDates } from '../DatePicker.types';
 import { currentDay } from '../utils';
 
 export const calculateDisabledDays = (

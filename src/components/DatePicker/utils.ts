@@ -1,9 +1,9 @@
-import { within, fireEvent as TLFireEvent } from '@storybook/testing-library';
-import { fireEvent } from '@testing-library/react';
+import { fireEvent } from '@storybook/testing-library';
 import { KEYBOARD_EVENT_KEYS } from 'hooks/useKeyboardEvents';
-import dayjs, { Dayjs } from 'utils/date';
+import type { Dayjs } from 'utils/date';
+import dayjs from 'utils/date';
 
-import { Range } from './OverlayComponent/OverlayComponent';
+import type { Range } from './OverlayComponent/OverlayComponent';
 
 const fakeDate = dayjs('11-03-2020 12:00:00');
 const getDefaultDate = (date?: undefined | Dayjs) =>
@@ -17,12 +17,6 @@ export const initDates = (value: { from?: Date; to?: Date }): Range => {
     from: value.from ? dayjs(value.from) : undefined,
     to: value.to ? dayjs(value.to) : undefined,
   };
-};
-
-export const openDatePicker = async ({ canvasElement }: { canvasElement: HTMLElement }) => {
-  const canvas = within(canvasElement);
-  const calendarButton = canvas.getByTestId('calendar_button');
-  TLFireEvent.click(calendarButton);
 };
 
 export const clickOnElement = (element: HTMLElement, key: string, charCode: number) =>

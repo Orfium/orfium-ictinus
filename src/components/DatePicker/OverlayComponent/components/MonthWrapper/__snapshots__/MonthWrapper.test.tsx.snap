@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`MonthWrapper should render correctly 1`] = `
+exports[`MonthWrapper > should render correctly 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -105,462 +105,7 @@ exports[`MonthWrapper should render correctly 1`] = `
   height: 1rem;
 }
 
-.emotion-6 path {
-  fill: #1552DD;
-}
-
-.emotion-7 {
-  padding: 0;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  text-align: center;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-}
-
-.emotion-8 {
-  margin: 0 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  cursor: pointer;
-  font-weight: 500;
-  color: #0f0f17;
-}
-
-.emotion-10 {
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-  color: #1552DD;
-  height: auto;
-  background-color: rgba(84,94,255,0);
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-10:focus-visible:not(:disabled) {
-  background-color: rgba(84,94,255,0.06);
-}
-
-.emotion-10:disabled {
-  opacity: 50%;
-  cursor: not-allowed;
-}
-
-.emotion-10:hover:not(:disabled) {
-  background-color: rgba(84,94,255,0.06);
-}
-
-.emotion-10:active:not(:disabled) {
-  background-color: rgba(84,94,255,0.14);
-}
-
-.emotion-11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-.emotion-12 {
-  cursor: pointer;
-  margin: auto 0.3125rem;
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  z-index: 10;
-}
-
-.emotion-17 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-around;
-  -ms-flex-pack: space-around;
-  -webkit-justify-content: space-around;
-  justify-content: space-around;
-}
-
-.emotion-18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  width: 2.25rem;
-  height: 2.25rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  text-align: center;
-  font-weight: 500;
-}
-
-.emotion-25 {
-  border-collapse: separate;
-  border-spacing: 0 0.75rem;
-}
-
-.emotion-26 {
-  vertical-align: middle;
-  text-align: center;
-  cursor: pointer;
-  position: relative;
-  background: #ffffff;
-}
-
-.emotion-32 {
-  vertical-align: middle;
-  text-align: center;
-  cursor: pointer;
-  position: relative;
-  width: 2.25rem;
-  opacity: 1;
-}
-
-.emotion-32:focus-visible {
-  background-color: #F5F5FF;
-  border-radius: 6.25rem;
-}
-
-.emotion-33 {
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-  border: 0.0625rem solid rgba(84,94,255,0);
-  width: 2.25rem;
-  height: 2.25rem;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  background: transparent;
-}
-
-.emotion-33:hover {
-  border-radius: 6.25rem;
-  background: #F5F5FF;
-}
-
-.emotion-36 {
-  vertical-align: middle;
-  text-align: center;
-  cursor: pointer;
-  position: relative;
-  width: 2.25rem;
-  font-weight: bold;
-  opacity: 1;
-}
-
-.emotion-36:focus-visible {
-  background-color: #F5F5FF;
-  border-radius: 6.25rem;
-}
-
-.emotion-37 {
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-  border: 0.0625rem solid #175bf5;
-  border-radius: 6.25rem;
-  width: 2.25rem;
-  height: 2.25rem;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  background: transparent;
-}
-
-.emotion-37:hover {
-  border-radius: 6.25rem;
-  background: #F5F5FF;
-}
-
-.emotion-38 {
-  vertical-align: middle;
-  text-align: center;
-  cursor: pointer;
-  position: relative;
-  color: #ffffff;
-  width: 2.25rem;
-  opacity: 1;
-  background: #175bf5;
-  border-bottom-left-radius: 100%;
-  border-top-left-radius: 100%;
-}
-
-.emotion-38:focus-visible {
-  background-color: #F5F5FF;
-  border-radius: 6.25rem;
-}
-
-.emotion-38:after {
-  z-index: -1;
-  content: ' ';
-  height: 100%;
-  width: 50%;
-  position: absolute;
-  top: 0;
-  left: initial;
-  right: 0;
-  border-bottom-right-radius: false;
-  border-top-right-radius: false;
-  border-bottom-left-radius: 100%;
-  border-top-left-radius: 100%;
-}
-
-.emotion-39 {
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-  border: 0 solid rgba(84,94,255,0);
-  border-radius: 6.25rem;
-  width: 2.25rem;
-  height: 2.25rem;
-  color: #ffffff;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  background: #175bf5;
-}
-
-.emotion-39:hover {
-  border-radius: 6.25rem;
-  background: false;
-}
-
-.emotion-40 {
-  vertical-align: middle;
-  text-align: center;
-  cursor: pointer;
-  position: relative;
-  width: 2.25rem;
-  opacity: 1;
-  background: #F5F5FF;
-}
-
-.emotion-40:focus-visible {
-  background-color: #F5F5FF;
-  border-radius: 6.25rem;
-}
-
-.emotion-41 {
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-  border: 0.0625rem solid rgba(84,94,255,0);
-  width: 2.25rem;
-  height: 2.25rem;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  background: transparent;
-}
-
-.emotion-41:hover {
-  border-radius: 6.25rem;
-  background: transparent;
-}
-
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.75rem;
-  padding: 1.25rem 1.25rem;
-}
-
-.emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  position: relative;
-}
-
-.emotion-2 {
-  cursor: pointer;
-  margin: auto 0.3125rem;
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  z-index: 10;
-}
-
-.emotion-3 {
-  position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.emotion-4 {
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-  color: #1552DD;
-  width: 2.25rem;
-  height: 2.25rem;
-  background-color: rgba(84,94,255,0);
-  padding: 0;
-  border-radius: 2.25rem;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-4:focus-visible:not(:disabled) {
-  background-color: rgba(84,94,255,0.06);
-}
-
-.emotion-4:disabled {
-  opacity: 50%;
-  cursor: not-allowed;
-}
-
-.emotion-4:hover:not(:disabled) {
-  background-color: rgba(84,94,255,0.06);
-}
-
-.emotion-4:active:not(:disabled) {
-  background-color: rgba(84,94,255,0.14);
-}
-
-.emotion-5 {
-  padding: 0.125rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-6 {
-  fill: #1552DD;
-  width: 1rem;
-  height: 1rem;
-}
-
-.emotion-6 path {
+.emotion-6 * {
   fill: #1552DD;
 }
 
@@ -932,9 +477,19 @@ exports[`MonthWrapper should render correctly 1`] = `
             <span
               class="emotion-5"
             >
-              <span
+              <svg
                 class="emotion-6"
-              />
+                fill="none"
+                viewBox="0 0 6 12"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M5.14645 0.853554C5.46143 0.538571 6 0.761654 6 1.20711L6 10.7929C6 11.2383 5.46143 11.4614 5.14645 11.1464L0.353553 6.35355C0.158291 6.15829 0.158291 5.84171 0.353553 5.64645L5.14645 0.853554Z"
+                  fill="#0E0E17"
+                  fill-rule="evenodd"
+                />
+              </svg>
             </span>
           </button>
         </div>
@@ -982,9 +537,19 @@ exports[`MonthWrapper should render correctly 1`] = `
               <span
                 class="emotion-5"
               >
-                <span
+                <svg
                   class="emotion-6"
-                />
+                  fill="none"
+                  viewBox="0 0 6 12"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M0.853554 11.1464C0.538571 11.4614 0 11.2383 0 10.7929L0 1.20711C0 0.761654 0.538571 0.53857 0.853553 0.853553L5.64645 5.64645C5.84171 5.84171 5.84171 6.15829 5.64645 6.35355L0.853554 11.1464Z"
+                    fill="#0E0E17"
+                    fill-rule="evenodd"
+                  />
+                </svg>
               </span>
             </button>
           </div>

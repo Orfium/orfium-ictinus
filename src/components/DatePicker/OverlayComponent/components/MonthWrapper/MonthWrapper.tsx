@@ -1,7 +1,7 @@
 import useKeyboardEvents from 'hooks/useKeyboardEvents';
 import { head, range } from 'lodash';
 import React, { useMemo, useRef, useState } from 'react';
-import { Dayjs } from 'utils/date';
+import type { Dayjs } from 'utils/date';
 
 import {
   monthHeaderNavigationIconWrapperStyle,
@@ -10,12 +10,12 @@ import {
   monthHeaderWrapperStyle,
   monthWrapperStyle,
 } from './MonthWrapper.style';
-import { DisabledDates } from '../../../DatePicker.types';
+import type { DisabledDates } from '../../../DatePicker.types';
 import Month from '../../../Month/Month';
-import { Range } from '../../OverlayComponent';
+import type { Range } from '../../OverlayComponent';
 import Button from 'components/Button';
 import IconButton from 'components/IconButton/IconButton';
-import { SelectOption } from 'components/Select';
+import type { SelectOption } from 'components/Select';
 import SelectMenu from 'components/Select/components/SelectMenu';
 import ClickAwayListener from 'components/utils/ClickAwayListener';
 
@@ -86,7 +86,7 @@ const MonthWrapper = ({
           {(showedArrows === 'left' || showedArrows === 'both') && (
             <div css={monthHeaderNavigationIconWrapperStyle({ position: 'left' })}>
               <IconButton
-                name={'triangleLeft'}
+                name="triangleLeft"
                 type="tertiary"
                 onClick={() => handleArrow('back')}
                 dataTestId="month_back"
@@ -129,7 +129,7 @@ const MonthWrapper = ({
             {(showedArrows === 'right' || showedArrows === 'both') && (
               <div css={monthHeaderNavigationIconWrapperStyle({ position: 'right' })}>
                 <IconButton
-                  name={'triangleRight'}
+                  name="triangleRight"
                   type="tertiary"
                   onClick={() => handleArrow('forward')}
                   dataTestId="month_forward"
