@@ -1,7 +1,7 @@
 import { getContrast } from 'polished';
 
-import { TextColorTypes } from './index';
-import { GradientPaletteConfig, NeutralPaletteConfig } from './palette.config';
+import type { TextColorTypes } from './index';
+import type { GradientPaletteConfig, NeutralPaletteConfig } from './palette.config';
 import { getColorErrors } from './utils';
 import { errorHandler } from '../utils/helpers';
 

@@ -1,5 +1,6 @@
-import { colorShades, MAX_SHADE, MIN_SHADE } from '../palette';
-import { ColorScheme } from '../types';
+import type { colorShades} from '../palette';
+import { MAX_SHADE, MIN_SHADE } from '../palette';
+import type { ColorScheme } from '../types';
 
 type GetShadeWithStepProps = {
   shade: typeof colorShades[number] | 0;

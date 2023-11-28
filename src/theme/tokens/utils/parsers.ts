@@ -1,9 +1,9 @@
 import { get } from 'lodash';
 import globals from 'theme/globals';
-import { Theme } from 'theme/types';
+import type { Theme } from 'theme/types';
 
-import { Token, TokensObject } from './types';
-import { ColorsKey } from '../../globals/colors';
+import type { Token, TokensObject } from './types';
+import type { ColorsKey } from '../../globals/colors';
 
 /**
  *
