@@ -156,10 +156,7 @@ export const Playground = {
             label: 'Banana',
           },
         ],
-        {
-          value: 'banana',
-          label: 'Banana',
-        }
+        undefined
       )}
       defaultValue={
         (select(
