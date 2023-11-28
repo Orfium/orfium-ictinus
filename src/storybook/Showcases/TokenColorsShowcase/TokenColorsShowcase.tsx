@@ -1,9 +1,10 @@
 import { css } from '@emotion/react';
 import { get } from 'lodash';
-import React, { FCC, useCallback } from 'react';
+import type { FCC} from 'react';
+import React, { useCallback } from 'react';
 import globalColorsFigma from 'theme/globals/constants/colors';
 import colorsFigma from 'theme/tokens/semantic/variables/colors';
-import { DotKeys } from 'theme/tokens/utils';
+import type { DotKeys } from 'theme/tokens/utils';
 
 import {
   colorStyle,
@@ -56,14 +57,14 @@ const TokenColorsShowcase: FCC<Props> = ({ type = 'globals' }) => {
 
       return (
         <div css={descriptionStyle}>
-          <Typography variant={'body02'} type={'secondary'}>
+          <Typography variant="body02" type="secondary">
             {get(colorsObj, colorKey).description}
           </Typography>
-          <Typography variant={'label03'} component={'span'} type={'active'}>
+          <Typography variant="label03" component="span" type="active">
             ${`palette.${key}.${state}`}
           </Typography>
           {' = '}
-          <Typography variant={'label03'} component={'span'} type={'active'}>
+          <Typography variant="label03" component="span" type="active">
             {get(colorsObj, colorKey).value}
           </Typography>
         </div>
@@ -74,7 +75,7 @@ const TokenColorsShowcase: FCC<Props> = ({ type = 'globals' }) => {
 
   return (
     <div css={{}}>
-      <Card elevated={'03'} radius={'4'}>
+      <Card elevated="03" radius="4">
         {colors.map((type) => (
           <div key={type.key} css={typeWrapperStyle}>
             <div
@@ -82,7 +83,7 @@ const TokenColorsShowcase: FCC<Props> = ({ type = 'globals' }) => {
                 padding: 15px;
               `}
             >
-              <Typography variant={'headline04'} type={'secondary'}>
+              <Typography variant="headline04" type="secondary">
                 {type.key}
               </Typography>
               <div css={stateWrapperStyle}>

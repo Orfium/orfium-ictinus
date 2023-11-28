@@ -1,4 +1,5 @@
-import { css, SerializedStyles } from '@emotion/react';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
 
 export const WrapperStyle = (): SerializedStyles => css`
   margin: 15px 0;
