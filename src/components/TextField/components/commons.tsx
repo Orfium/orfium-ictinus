@@ -1,4 +1,5 @@
-import React, { FCC, MouseEvent } from 'react';
+import type { FCC, MouseEvent } from 'react';
+import React from 'react';
 
 import { iconWrapperStyle } from '../TextField.style';
 

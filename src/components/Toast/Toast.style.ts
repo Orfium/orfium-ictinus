@@ -1,11 +1,12 @@
-import { css, SerializedStyles } from '@emotion/react';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
 import { rem } from 'theme/utils';
 
 import { isNotificationTypes } from './Toast';
-import { Theme } from '../../theme';
+import type { Theme } from '../../theme';
 import { transition, flexCenter } from '../../theme/functions';
-import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
-import { NotificationStyleType } from '../Notification/Notification';
+import type { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
+import type { NotificationStyleType } from '../Notification/Notification';
 
 const maxHeightOptions = {
   notification: `max-height: ${rem(294)};`,

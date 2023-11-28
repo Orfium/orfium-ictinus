@@ -1,12 +1,14 @@
-import { css, SerializedStyles } from '@emotion/react';
-import { Theme } from 'theme';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
+import type { Theme } from 'theme';
 import { rem } from 'theme/utils';
 
-import { TextInputBaseProps } from './TextInputBase';
-import { getTextInputBaseTokens, TextInputBaseTokens } from './TextInputBase.tokens';
-import { ColorScheme } from '../../theme/types';
+import type { TextInputBaseProps } from './TextInputBase';
+import type { TextInputBaseTokens } from './TextInputBase.tokens';
+import { getTextInputBaseTokens } from './TextInputBase.tokens';
+import type { ColorScheme } from '../../theme/types';
 import { LABEL_TRANSFORM_LEFT_SPACING } from 'components/Label/Label.style';
-import { body02, body03 } from 'components/Typography/Typography.config.styles';
+import { body03 } from 'components/Typography/Typography.config.styles';
 import { generateStylesFromTokens } from 'components/Typography/utils';
 
 // TODO:MERGE: remove theme as prop and do it as (theme) => ({}) because emotion should pass
