@@ -1,9 +1,9 @@
 import React from 'react';
 import { generateTestDataId } from 'utils/helpers';
-import { TestId } from 'utils/types';
+import type { TestId } from 'utils/types';
 
 import { badgeStyle } from './Badge.style';
-import { ChipProps } from '../../Chip.types';
+import type { ChipProps } from '../../Chip.types';
 
 type TestProps = {
   dataTestId?: TestId;

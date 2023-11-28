@@ -1,7 +1,7 @@
-import { ClickEvent } from '../../hooks/useLoading';
-import { flatColors } from '../../theme/palette';
-import { CommonButtonProps } from '../../utils/common';
-import { TestProps } from '../../utils/types';
+import type { ClickEvent } from '../../hooks/useLoading';
+import type { flatColors } from '../../theme/palette';
+import type { CommonButtonProps } from '../../utils/common';
+import type { TestProps } from '../../utils/types';
 
 export const READ_ONLY = 'read-only' as const;
 export const INTERACTIVE = 'interactive' as const;

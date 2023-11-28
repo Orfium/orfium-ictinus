@@ -13,7 +13,7 @@ import {
   subMenuIconStyle,
   menuLinkStyle,
 } from '../Navigation.style';
-import { DrawerMenuItem } from 'components/Drawer/types';
+import type { DrawerMenuItem } from 'components/Drawer/types';
 import ExpandCollapse from 'components/ExpandCollapse';
 import Icon from 'components/Icon';
 
@@ -51,7 +51,7 @@ const MenuItem: React.FCC<MenuItemProps> = memo(
             variant={isCurrent ? shade : BASE_SHADE}
           />
         </div>
-        <span className={'menu-item-text'} css={menuItemTextStyle(isCurrent)}>
+        <span className="menu-item-text" css={menuItemTextStyle(isCurrent)}>
           {name}
         </span>
       </React.Fragment>
@@ -66,7 +66,7 @@ const MenuItem: React.FCC<MenuItemProps> = memo(
             textAndControl={(handleClick) => {
               return (
                 <button
-                  type={'button'}
+                  type="button"
                   css={menuItemStyle()}
                   data-testid={url}
                   onClick={handleClick}
@@ -93,7 +93,7 @@ const MenuItem: React.FCC<MenuItemProps> = memo(
                           isActive={subMenuItem?.isActive}
                           key={subMenuItem.url}
                           css={subMenuLinkStyle()}
-                          id={'submenu-item-link'}
+                          id="submenu-item-link"
                         >
                           <div css={subMenuIconStyle()}>
                             <Icon
@@ -102,7 +102,7 @@ const MenuItem: React.FCC<MenuItemProps> = memo(
                               size={20}
                             />
                           </div>
-                          <span className={'submenu-item-text'}>{subMenuItem.name}</span>
+                          <span className="submenu-item-text">{subMenuItem.name}</span>
                         </NavLink>
                       )
                   )}
