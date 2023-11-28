@@ -1,31 +1,15 @@
-import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
 import Switch from './Switch';
 import Stack from '../storyUtils/Stack';
 import SwitchShowcase from '../storyUtils/SwitchShowcase';
 import { boolean, select, withKnobs, text } from '@storybook/addon-knobs';
 
-<Meta title="Original Components/Controls/Switch" component={Switch} />
+export default {
+  title: 'Original Components/Controls/Switch',
+  component: Switch,
+};
 
-# Switch
-
-An interactive Switch component meant to serve as an alternative way of toggling between states.
-
-## Usage
-
-```js
-import { Switch } from '@orfium/ictinus';
-
-<Switch />;
-```
-
-## Props
-
-<Props of={Switch} />
-
-### Simple Switch
-
-<Preview>
-  <Story name="Simple Switch" parameters={{ decorators: [withKnobs] }}>
+export const SimpleSwitch = {
+  render: () => (
     <Stack>
       <SwitchShowcase
         hasLabel={boolean('hasLabel', true)}
@@ -34,5 +18,11 @@ import { Switch } from '@orfium/ictinus';
         labelPlacement={select('labelPlacement', ['left', 'right'], 'left')}
       />
     </Stack>
-  </Story>
-</Preview>
+  ),
+
+  name: 'Simple Switch',
+
+  parameters: {
+    decorators: [withKnobs],
+  },
+};

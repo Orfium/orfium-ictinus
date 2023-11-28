@@ -1,6 +1,6 @@
-import { TestProps } from 'utils/types';
+import type { TestProps } from 'utils/types';
 
-import { AcceptedIconNames } from 'components/Icon';
+import type { AcceptedIconNames } from 'components/Icon';
 
 export type TagColors = 'neutral' | 'blue' | 'red' | 'purple' | 'teal';
 
