@@ -1,6 +1,6 @@
-import { TestProps } from 'utils/types';
+import type { TestProps } from 'utils/types';
 
-import { LinkProps } from 'components/Link/Link.types';
+import type { LinkProps } from 'components/Link/Link.types';
 
 export type BreadcrumbItem = {
   /** Defines the label used for a link breadcrumb item */

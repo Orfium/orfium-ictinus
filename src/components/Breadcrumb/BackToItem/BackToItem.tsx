@@ -1,8 +1,8 @@
 import React from 'react';
-import { TestProps } from 'utils/types';
+import type { TestProps } from 'utils/types';
 
 import { backToContainerStyles, backToStyles } from './BackToItem.style';
-import { BreadcrumbItem } from '../Breadcrumb.types';
+import type { BreadcrumbItem } from '../Breadcrumb.types';
 import Link from 'components/Link';
 
 const GO_BACK_TO = 'Go back to';
