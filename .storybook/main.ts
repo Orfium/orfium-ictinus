@@ -32,12 +32,11 @@ module.exports = {
   ],
 
   addons: [
-    // '@storybook/addon-actions/register',
     '@storybook/addon-interactions',
     '@storybook/addon-links',
     '@storybook/addon-viewport',
     '@storybook/addon-knobs',
-    '@storybook/addon-a11y', // '@storybook/addon-storysource/register',
+    '@storybook/addon-a11y',
     '@storybook/addon-docs',
     'storybook-addon-pseudo-states',
     '@storybook/addon-designs',
