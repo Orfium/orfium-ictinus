@@ -1,6 +1,6 @@
-import { Dayjs } from 'dayjs';
+import type { Dayjs } from 'dayjs';
 
-import { Range } from './OverlayComponent';
+import type { Range } from './OverlayComponent';
 import { currentDay } from '../utils';
 
 export const getLeftCalendarDate = (selectedDays: Range): Dayjs => {

@@ -3,7 +3,7 @@ import { last, merge } from 'lodash';
 import omit from 'lodash/omit';
 import React, { useMemo, useRef } from 'react';
 import { generateUniqueID, generateUniqueKey } from 'utils/helpers';
-import { TestProps } from 'utils/types';
+import type { TestProps } from 'utils/types';
 
 import useMultiTextFieldBaseUtils from './hooks';
 import {
@@ -19,8 +19,8 @@ import {
 import Chip from 'components/Chip';
 import Label from 'components/Label';
 import ProgressIndicator from 'components/ProgressIndicator';
-import { SelectOption } from 'components/Select';
-import { InputProps, TextFieldProps } from 'components/TextField/TextField';
+import type { SelectOption } from 'components/Select';
+import type { InputProps, TextFieldProps } from 'components/TextField/TextField';
 import TextInputBase from 'components/TextInputBase';
 import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
 
@@ -174,7 +174,7 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
             <div css={rightIconsContainer()}>
               {isLoading ? (
                 <div css={progressIndicatorStyles()}>
-                  <ProgressIndicator type="circular" dataTestPrefixId='multi_textdield_base' />
+                  <ProgressIndicator type="circular" dataTestPrefixId="multi_textdield_base" />
                 </div>
               ) : (
                 icon && (

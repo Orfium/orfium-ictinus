@@ -1,8 +1,8 @@
 import React from 'react';
-import { TestProps } from 'utils/types';
+import type { TestProps } from 'utils/types';
 
 import { ListItemWrapperStyled } from './ListItemWrapper.style';
-import { ListRowSize } from '../../types';
+import type { ListRowSize } from '../../types';
 
 export type ListItemProps = {
   /** Whether the text of the ListItem is highlighted or not. eg: Filter - Default Value */
