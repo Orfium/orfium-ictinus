@@ -1,8 +1,9 @@
-import { css, SerializedStyles } from '@emotion/react';
-import { Theme } from 'theme';
-import { FontSpacing } from 'theme/tokens/semantic/typography';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
+import type { Theme } from 'theme';
+import type { FontSpacing } from 'theme/tokens/semantic/typography';
 
-import { TypographyVariant, TextColorTypes } from './Typography';
+import type { TypographyVariant, TextColorTypes } from './Typography';
 import {
   headline01,
   headline02,
@@ -21,8 +22,8 @@ import {
   body03,
   body04,
 } from './Typography.config.styles';
-import colorsFigma from '../../theme/tokens/semantic/variables/colors';
-import { DotKeys } from '../../theme/tokens/utils';
+import type colorsFigma from '../../theme/tokens/semantic/variables/colors';
+import type { DotKeys } from '../../theme/tokens/utils';
 
 export const typographyWrapper =
   ({

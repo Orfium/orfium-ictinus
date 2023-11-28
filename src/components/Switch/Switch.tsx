@@ -4,7 +4,7 @@ import ReactSwitch from 'react-switch';
 
 import { Label, SwitchWrapper, Container } from './Switch.style';
 import { useTheme } from '../../index';
-import { TestProps } from '../../utils/types';
+import type { TestProps } from '../../utils/types';
 
 export type SwitchProps = {
   label?: string;
@@ -17,7 +17,7 @@ export type SwitchProps = {
   isDisabled?: boolean;
 } & TestProps;
 
-const Switch: React.FCC<SwitchProps> = ({
+const Switch: React.FC<SwitchProps> = ({
   isDisabled = false,
   label,
   isChecked,

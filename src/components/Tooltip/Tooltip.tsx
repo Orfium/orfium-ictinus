@@ -2,7 +2,7 @@ import Tippy from '@tippyjs/react';
 import React from 'react';
 
 import { tooltipStyle } from './Tooltip.style';
-import { TooltipProps } from './Tooltip.types';
+import type { TooltipProps } from './Tooltip.types';
 
 const Tooltip = React.forwardRef<HTMLDivElement, TooltipProps>(
   (
