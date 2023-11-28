@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import { visualContainer, descriptionContainer } from './NotificationVisual.style';
 import { generateTestDataId } from '../../../utils/helpers';
-import { TestId } from '../../../utils/types';
-import { NotificationActions } from '../Notification';
+import type { TestId } from '../../../utils/types';
+import type { NotificationActions } from '../Notification';
 import { boldMessageContainer } from '../Notification.style';
 import NotificationActionsArea from '../subcomponents/NotificationActionsArea';
 
