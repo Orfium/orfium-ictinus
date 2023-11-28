@@ -1,7 +1,7 @@
 import React from 'react';
 
 import BarChart from '../../Chart/BarChart';
-import { Data } from '../../Chart/BarChart/BarChart';
+import type { Data } from '../../Chart/BarChart/BarChart';
 
 const data: Data[] = [
   {

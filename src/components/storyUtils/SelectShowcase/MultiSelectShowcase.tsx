@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
 import { container, wrapper } from './MultiSelectShowcase.style';
-import Select, { SelectOption, SelectProps } from '../../Select';
+import type { SelectOption, SelectProps } from '../../Select';
+import Select from '../../Select';
 
 type Props = {
   isDisabled?: boolean;
@@ -61,7 +62,7 @@ const SelectShowcase: React.FCC<
       <div css={wrapper()}>
         <Select
           isMulti
-          label={'Multi Select'}
+          label="Multi Select"
           options={options}
           selectedOption={value}
           onChange={setValue}
@@ -76,7 +77,7 @@ const SelectShowcase: React.FCC<
           isMulti
           isAsync
           status={status}
-          label={'Multi Select - Async'}
+          label="Multi Select - Async"
           options={asyncOptions}
           asyncSearch={mockedApiCall}
           isLoading={isLoading}

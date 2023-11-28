@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { containerStyles, illustrationStyles } from './TooltipContent.style';
-import Illustration from '../assets/TooltipShowcaseIllustration.svg';
+import Illustration from '../assets/TooltipShowcaseIllustration.svg?react';
 import Link from 'components/Link';
 
 type Props = {

@@ -1,5 +1,6 @@
-import { SerializedStyles, css } from '@emotion/react';
-import { Theme } from 'theme';
+import type { SerializedStyles} from '@emotion/react';
+import { css } from '@emotion/react';
+import type { Theme } from 'theme';
 import { rem } from 'theme/utils';
 
 import { generateStylesFromTokens } from 'components/Typography/utils';
