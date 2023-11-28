@@ -1,7 +1,7 @@
 import useKeyboardEvents from 'hooks/useKeyboardEvents';
 import React from 'react';
 
-import { MonthProps } from '../Month';
+import type { MonthProps } from '../Month';
 import { currentDay } from 'components/DatePicker/utils';
 
 type Props = Omit<MonthProps, 'onDaySelect' | 'disabledDates'>;

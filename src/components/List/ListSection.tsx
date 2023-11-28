@@ -1,8 +1,9 @@
 import { Section as AriaSection } from '@react-stately/collections';
-import { SectionProps } from '@react-types/shared';
-import React, { ReactNode } from 'react';
+import type { SectionProps } from '@react-types/shared';
+import type { ReactNode } from 'react';
+import React from 'react';
 
-import { ListRowSize } from './types';
+import type { ListRowSize } from './types';
 
 export type ListSectionProps = {
   /** Rendered contents of the section, e.g. a header. */
@@ -13,7 +14,9 @@ export type ListSectionProps = {
   rowSize?: ListRowSize;
 } & SectionProps<unknown>;
 
-const ListSection: React.FCC<ListSectionProps> = (props) => <AriaSection {...props} />;
+const ListSection: React.FC<React.PropsWithChildren<ListSectionProps>> = (props) => (
+  <AriaSection {...props} />
+);
 
 // @ts-ignore hack to pass the aria generator to the component as needed
 ListSection.getCollectionNode = AriaSection.getCollectionNode;

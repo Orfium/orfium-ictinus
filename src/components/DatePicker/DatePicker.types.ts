@@ -1,7 +1,7 @@
-import { Dayjs } from 'utils/date';
+import type { Dayjs } from 'utils/date';
 
-import { FilterType, StyleType } from '../Filter/types';
-import { TextFieldProps } from '../TextField/TextField';
+import type { FilterType, StyleType } from '../Filter/types';
+import type { TextFieldProps } from '../TextField/TextField';
 
 export type DisabledDates = {
   daysOfWeek?: number[];

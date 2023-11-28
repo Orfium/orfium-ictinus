@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useCallback, useState } from 'react';
-import { Dayjs } from 'utils/date';
+import type { Dayjs } from 'utils/date';
 
 import MonthWrapper from './components/MonthWrapper/MonthWrapper';
 import {
@@ -14,7 +14,7 @@ import {
 import { getRightCalendarDate, getLeftCalendarDate } from './utils';
 import Button from '../../Button';
 import { APPLY, CLEAR_ALL } from '../constants';
-import { DisabledDates, ExtraOption } from '../DatePicker.types';
+import type { DisabledDates, ExtraOption } from '../DatePicker.types';
 
 export type OverlayComponentProps = {
   selectedOption?: string;
@@ -99,12 +99,12 @@ const OverlayComponent: React.FCC<OverlayComponentProps> = ({
         </div>
 
         <div css={buttonsWrapperStyle()}>
-          <Button onClick={onClearAll} dataTestId={'cancel'} type="tertiary">
+          <Button onClick={onClearAll} dataTestId="cancel" type="tertiary">
             {CLEAR_ALL}
           </Button>
           <Button
             onClick={onApply}
-            dataTestId={'apply'}
+            dataTestId="apply"
             isDisabled={Boolean(!selectedDays.from || !selectedDays.to)}
           >
             {APPLY}

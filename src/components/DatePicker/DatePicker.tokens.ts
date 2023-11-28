@@ -1,8 +1,9 @@
 import date from 'theme/tokens/components/variables/date';
 import datePicker from 'theme/tokens/components/variables/datePicker';
-import { getComponentTokens, DotKeys } from 'theme/tokens/utils';
+import type { DotKeys } from 'theme/tokens/utils';
+import { getComponentTokens } from 'theme/tokens/utils';
 
-import { Theme } from '../../theme';
+import type { Theme } from '../../theme';
 
 export type DateTokens = DotKeys<typeof date>;
 export type DatePickerTokens = DotKeys<typeof datePicker>;
