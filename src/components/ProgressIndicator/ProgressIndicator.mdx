@@ -1,0 +1,77 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
+
+import ProgressIndicator from './ProgressIndicator';
+import * as ProgressIndicatorStories from './ProgressIndicator.stories';
+import SectionHeader from '../../storybook/SectionHeader';
+import Overview from '../../storybook/Overview';
+
+<Meta of={ProgressIndicatorStories} />
+
+<SectionHeader title={'Progress Indicator'} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
+
+## Overview
+
+Progress indicators communicate to the user the current progress of a given task.
+
+## Props
+
+<ArgTypes of={ProgressIndicator} />
+
+## Usage
+
+<UsageGuidelines
+  guidelines={[
+    'Use determinate indicators when you can display how long a process will take',
+    'Use indeterminate indicators when progress of a given task is not detectable',
+    'Use indeterminate indicators when progress of a given task is very fast (under 2s)',
+    'When you need to indicate progress for all instances of a given process (e.g. file upload)',
+    'When submitting a form or saving updates (appears on top of the screen)',
+  ]}
+  policies={[
+    'Do not use progress indicators as visual decoration. Create a custom component instead',
+    'Do not use progress indicators as data visualization. Create a custom component instead or use an existing chart, if available',
+  ]}
+/>
+
+<SubsectionHeader title="Variants" />
+
+### Linear ProgressIndicator with percentage
+
+The `value` prop, if provided, makes the progress indicator determinate.
+
+<Canvas of={ProgressIndicatorStories.LinearProgressIndicatorWithPercentage} />
+
+### Linear ProgressIndicator - indeterminate
+
+If the `value` prop is not provided, the progress indicator becomes indeterminate.
+
+<Canvas of={ProgressIndicatorStories.LinearProgressIndicatorIndeterminate} />
+
+### Block ProgressIndicator
+
+The Linear Progress Indicator can be block-positioned, for usage in page loaders etc.
+
+<Canvas of={ProgressIndicatorStories.BlockProgressIndicator} />
+
+### Circular ProgressIndicator with percentage
+
+<Canvas of={ProgressIndicatorStories.CircularProgressIndicatorWithPercentage} />
+
+### Circular ProgressIndicator - indeterminate
+
+<Canvas of={ProgressIndicatorStories.CircularProgressIndicatorIndeterminate} />
+
+### Circular ProgressIndicator - Error states
+
+The status of the progress indicator can be `normal` or `error`.
+
+<Canvas of={ProgressIndicatorStories.CircularProgressIndicatorErrorStates} />
+
+### Playground
+
+<Canvas of={ProgressIndicatorStories.Playground} />
