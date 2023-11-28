@@ -1,0 +1,593 @@
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-1 {
+  background-color: #1B214F;
+  border: 0.0625rem solid rgba(84,94,255,0);
+  box-shadow: 0rem 0.25rem 0.5rem 0rem #10306612;
+}
+
+.emotion-1 .tippy-content {
+  background-color: #1B214F;
+  max-width: 16rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  color: #ffffff;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  text-align: start;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.emotion-1 .tippy-arrow::before {
+  color: #1B214F;
+}
+
+.emotion-2 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-3 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #ffffff;
+  height: auto;
+  background-color: #175bf5;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-3:focus-visible:not(:disabled) {
+  background-color: #1552DD;
+}
+
+.emotion-3:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-3:hover:not(:disabled) {
+  background-color: #1552DD;
+}
+
+.emotion-3:active:not(:disabled) {
+  background-color: #1249C4;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.emotion-5 {
+  background-color: #1B214F;
+  border: 0.0625rem solid rgba(84,94,255,0);
+  box-shadow: 0rem 0.25rem 0.5rem 0rem #10306612;
+}
+
+.emotion-5 .tippy-content {
+  background-color: #1B214F;
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+
+.emotion-5 .tippy-arrow::before {
+  color: #1B214F;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+  color: #b9cdfc;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 8.875rem;
+  width: 12.375rem;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  background: #111530;
+}
+
+.emotion-11 {
+  text-align: center;
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  color: #1de9b6;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0.25rem solid rgba(84,94,255,0);
+  opacity: 1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  pointer-events: default;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.375rem;
+  font-size: 1rem;
+  letter-spacing: 0.00625rem;
+}
+
+.emotion-12:hover {
+  color: #ffffff;
+}
+
+.emotion-12:hover path {
+  fill: #ffffff;
+}
+
+.emotion-12:visited {
+  color: #dbc1ff;
+}
+
+.emotion-12:visited path {
+  fill: #dbc1ff;
+}
+
+.emotion-12:focus-visible {
+  border: 0.25rem solid #9347ff;
+}
+
+.emotion-13 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-14 {
+  fill: #1de9b6;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-14 * {
+  fill: #1de9b6;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        style="padding: 16px; width: 600px; height: 200px; display: flex; gap: 128px; justify-content: center; align-items: center;"
+      >
+        <div
+          class="emotion-1"
+          delay="100,100"
+          placement="right"
+        >
+          <div
+            class="emotion-2"
+          >
+            <button
+              class="emotion-3"
+              data-testid="button"
+              type="button"
+            >
+              <span
+                class="emotion-4"
+              >
+                <span>
+                  Text
+                </span>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div>
+          This is a Tooltip
+        </div>
+        <div
+          style="padding: 128px;"
+        >
+          <div
+            class="emotion-5"
+            delay="100,100"
+            placement="right"
+          >
+            <div
+              class="emotion-2"
+            >
+              <button
+                class="emotion-3"
+                data-testid="button"
+                type="button"
+              >
+                <span
+                  class="emotion-4"
+                >
+                  <span>
+                    Interactive
+                  </span>
+                </span>
+              </button>
+            </div>
+          </div>
+          <div>
+            <div
+              class="emotion-9"
+            >
+              <div
+                class="emotion-10"
+              >
+                <svg
+                  fill="none"
+                  height="123"
+                  viewBox="0 0 140 123"
+                  width="140"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.98917 63.1148C-2.94387 42.5132 -3.5774 7.72559 35.347 1.23258C79.7815 -6.1754 87.4883 22.3659 110.372 19.0796C140.707 14.728 143.463 51.4677 136.859 73.5891C130.128 96.1177 111.256 109.538 93.9094 113.863C40.9616 127.084 11.0399 91.0699 2.98917 63.1148Z"
+                    fill="url(#paint0_linear_260_876)"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M25.31 13.4465C24.1115 9.83938 25.5455 6.22127 29.102 5.24664C29.4998 5.1494 29.9972 5.02785 30.5188 5.00576C32.0838 4.93949 33.9185 5.54514 34.9554 6.76743C36.116 8.06486 36.4301 9.78001 36.521 11.4443C37.0125 17.3324 37.5283 23.3199 38.0442 29.3074C38.4577 30.9983 37.4809 32.6073 35.79 33.0206C34.0991 33.4338 32.4898 32.4569 32.0762 30.766C31.3244 28.8417 30.5395 26.9254 29.7545 25.0091C28.1846 21.1765 26.6147 17.3439 25.31 13.4465ZM41.3393 37.8764C41.8767 40.0736 40.5311 42.2902 38.3338 42.8272C36.1364 43.3642 33.9194 42.0184 33.382 39.8212C32.8446 37.6239 34.1902 35.4074 36.3875 34.8703C38.5848 34.3333 40.8018 35.6791 41.3393 37.8764Z"
+                    fill="url(#paint1_linear_260_876)"
+                    fill-rule="evenodd"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M116.379 28.1955C117.873 23.7009 116.086 19.1925 111.654 17.978C111.158 17.8569 110.539 17.7054 109.889 17.6779C107.939 17.5953 105.652 18.35 104.36 19.873C102.914 21.4897 102.523 23.6269 102.41 25.7007C101.797 33.0376 101.154 40.4984 100.512 47.9592C99.9963 50.0661 101.213 52.071 103.32 52.586C105.427 53.1009 107.433 51.8836 107.948 49.7767C108.885 47.3788 109.863 44.991 110.841 42.6032C112.797 37.8276 114.753 33.0519 116.379 28.1955ZM96.4188 58.78C95.7491 61.5179 97.4258 64.2799 100.164 64.9491C102.902 65.6183 105.664 63.9413 106.334 61.2034C107.004 58.4655 105.327 55.7035 102.589 55.0344C99.851 54.3652 97.0885 56.0422 96.4188 58.78Z"
+                    fill="url(#paint2_linear_260_876)"
+                    fill-rule="evenodd"
+                  />
+                  <g
+                    clip-path="url(#clip0_260_876)"
+                  >
+                    <path
+                      d="M109.39 69.638C109.39 69.638 115.814 88.4115 115.469 88.5983C115.124 88.7851 83.7969 84.8573 83.7969 84.8573L91.4298 68.0715"
+                      fill="#0B2D7A"
+                    />
+                    <path
+                      d="M116.39 142.494H31.2402L39.6009 78.2722H124.75L116.39 142.494Z"
+                      fill="#ABB9D2"
+                    />
+                    <path
+                      d="M52.2328 92.2519L44.105 85.236H19.6484L29.6954 142.494H116.764L107.934 92.2519H52.2328Z"
+                      fill="#CFD7E5"
+                    />
+                    <path
+                      d="M94.7357 50.7253C94.6196 48.8716 94.4559 46.9949 94.25 45.1465L99.8466 44.5174C100.065 46.4575 100.236 48.4275 100.357 50.3747L94.7357 50.7253Z"
+                      fill="#B9CDFC"
+                    />
+                    <path
+                      d="M95.9198 46.9051C97.0022 47.7368 99.0525 48.0874 100.177 47.8848L99.936 44.4099C99.936 44.4099 95.4605 46.5509 95.9198 46.9051Z"
+                      fill="#739CF9"
+                    />
+                    <path
+                      d="M95.564 47.2329C93.4074 47.0914 91.773 45.2235 91.9142 43.066L92.15 39.465C92.3028 37.1299 94.32 35.3604 96.6504 35.5133C98.9826 35.6664 100.75 37.686 100.597 40.0193L100.403 42.9839C100.239 45.493 98.0701 47.3973 95.564 47.2329Z"
+                      fill="#D0DEFD"
+                    />
+                    <path
+                      d="M92.9131 37.6134C92.9131 37.6134 92.5963 39.9623 92.3693 40.0029C91.8325 40.1015 91.1919 38.091 92.2391 36.676"
+                      fill="#175BF5"
+                    />
+                    <path
+                      d="M91.5741 35.936C91.4843 36.0171 91.4315 36.1316 91.4297 36.2532C91.4262 36.6479 91.6075 37.5378 93.195 38.0417C95.8859 38.8963 97.5438 37.6875 97.5438 37.6875L95.8859 38.8963C95.8859 38.8963 97.9574 39.2699 98.473 38.2356C98.473 38.2356 98.2443 39.3263 99.5906 39.9254C100.062 40.1351 100.05 41.1342 100.05 41.1342L100.696 40.8188C100.696 40.8188 101.542 39.6364 101.111 38.0312C100.682 36.4259 98.9764 36.1686 98.9764 36.1686C98.9764 36.1686 98.0313 34.3924 94.4322 34.6814C92.9574 34.7995 91.919 35.6241 91.5741 35.9342V35.936Z"
+                      fill="#175BF5"
+                    />
+                    <path
+                      d="M91.3373 40.3694C91.1103 41.2892 91.6664 42.7905 92.7347 42.861L93.1941 40.276C93.2258 40.1015 92.476 39.7086 92.344 39.6839C91.7773 39.58 91.4552 39.8989 91.3373 40.3694Z"
+                      fill="#D0DEFD"
+                    />
+                    <path
+                      d="M101.637 41.0178C101.743 41.9606 100.995 43.3755 99.9265 43.3051C99.9265 43.3051 99.622 40.9808 99.8085 40.6813C100.069 40.2601 100.595 40.2126 100.729 40.2055C101.304 40.1756 101.583 40.535 101.637 41.0178Z"
+                      fill="#D0DEFD"
+                    />
+                    <path
+                      d="M103.293 48.0822L89.5669 50.528C88.0709 50.7888 87.0009 52.1227 87.0695 53.6416L87.7911 69.3878C88.0498 70.5032 89.141 71.2416 90.3202 71.0988L109.389 69.638C110.237 69.5728 110.89 68.8627 110.885 68.0116L110.799 55.002C110.781 52.2707 109.266 49.735 106.816 48.5315C105.211 47.7421 104.116 47.9853 103.291 48.0857L103.293 48.0822Z"
+                      fill="#8BADFA"
+                    />
+                    <path
+                      d="M93.1973 49.8813C94.0614 50.5403 95.2828 50.8169 96.8544 50.5632C98.5141 50.2954 100.218 49.4918 101.356 48.4275L93.1973 49.8813Z"
+                      fill="#B9CDFC"
+                    />
+                    <path
+                      d="M118.808 58.9418C116.147 56.0229 112.916 53.5991 110.676 52.0795C109.526 51.3008 109.232 49.9445 108.252 49.3973C106.772 48.572 105.024 48.1756 103.395 48.477L105.015 57.2985C103.789 57.5263 102.891 57.1585 102.793 57.1155C103.955 57.6196 109.291 60.9333 112.623 64.5878L113.073 64.1734L118.412 59.306L118.808 58.9418Z"
+                      fill="#8BADFA"
+                    />
+                    <path
+                      d="M93.423 58.246L87.6715 51.5782C86.3762 52.6989 79.7218 58.9737 78.9668 59.6856L79.5863 60.3429L84.4279 65.4883L85.0017 66.0979C87.9091 63.3543 92.5501 59.0002 93.423 58.246Z"
+                      fill="#8BADFA"
+                    />
+                    <path
+                      d="M85.7848 55.7703C83.9439 55.7703 82.103 55.069 80.7004 53.6646C77.8968 50.8575 77.8968 46.2902 80.7004 43.4831C83.504 40.6761 88.0657 40.6761 90.8693 43.4831C93.6729 46.2902 93.6729 50.8575 90.8693 53.6646C89.4684 55.0672 87.6257 55.7703 85.7848 55.7703ZM85.7848 42.4364C84.2132 42.4364 82.6433 43.0355 81.4466 44.232C79.0548 46.6267 79.0548 50.5227 81.4466 52.9174C83.8383 55.3121 87.7296 55.3121 90.1214 52.9174C92.5131 50.5227 92.5131 46.6267 90.1214 44.232C88.9264 43.0355 87.3547 42.4364 85.7831 42.4364H85.7848Z"
+                      fill="#1DE9B6"
+                    />
+                    <path
+                      d="M90.8697 52.9166L90.123 53.6642L97.219 60.7689L97.9657 60.0213L90.8697 52.9166Z"
+                      fill="#1DE9B6"
+                    />
+                    <path
+                      d="M97.9064 60.1507C97.7518 59.9959 97.5011 59.9959 97.3464 60.1507C97.1918 60.3055 97.1918 60.5566 97.3464 60.7114L99.5006 62.8682C99.6552 63.0231 99.906 63.0231 100.061 62.8682C100.215 62.7134 100.215 62.4624 100.061 62.3075L97.9064 60.1507Z"
+                      fill="#3A3144"
+                    />
+                    <path
+                      d="M99.7808 63.513C99.5344 63.513 99.3021 63.4161 99.1279 63.2416L96.9737 61.0848C96.6129 60.7236 96.6129 60.1368 96.9737 59.7755C97.148 59.6011 97.3803 59.5042 97.6267 59.5042C97.873 59.5042 98.1054 59.6011 98.2796 59.7755L100.434 61.9324C100.795 62.2936 100.795 62.8804 100.434 63.2416C100.26 63.4161 100.027 63.513 99.7808 63.513Z"
+                      fill="#3A3144"
+                    />
+                    <path
+                      d="M118.627 58.7952L113.012 63.9494C111.916 64.6348 105.57 62.8181 104.776 62.4586C101.726 61.0789 101.787 61.4648 100.149 58.8251C99.7019 58.1044 98.8254 58.0851 98.3784 57.8489C98.0757 57.6886 97.8539 57.5793 97.6568 57.493C96.4442 56.9644 95.8934 58.1749 97.3084 58.8886C97.4104 58.9397 97.4879 59.0049 97.5477 59.0789C97.7448 59.3273 97.4843 59.6762 97.1904 59.5617C96.5903 59.3291 95.8124 58.9996 95.0662 58.6049C93.667 57.8648 92.2573 57.2357 91.5656 58.9978C90.5871 61.4859 93.2112 63.1793 95.0046 64.0128C94.9518 63.9987 94.8972 63.9775 94.8374 63.9511C95.075 64.0604 95.9462 64.5485 96.7153 64.9784C107.857 71.5599 110.526 72.5167 119.998 71.2956C122.217 71.0736 122.866 69.2498 122.942 66.9026C123.019 64.5044 121.567 61.7784 118.627 58.7952Z"
+                      fill="#D0DEFD"
+                    />
+                    <path
+                      d="M49.9395 35.0197L55.3372 55.0496L70.2158 51.032L66.4724 37.136L58.6917 32.655L49.9395 35.0197Z"
+                      fill="#D1FAF0"
+                    />
+                    <path
+                      d="M66.4721 37.136L58.6914 32.655L60.344 38.7906L66.4721 37.136Z"
+                      fill="#1AD1A3"
+                    />
+                    <path
+                      d="M14.1426 26.9651L25.0736 50.4769L42.5393 42.3377L34.9557 26.0259L24.4154 22.1757L14.1426 26.9651Z"
+                      fill="#D1FAF0"
+                    />
+                    <path
+                      d="M34.9563 26.0259L24.416 22.1757L27.7634 29.3774L34.9563 26.0259Z"
+                      fill="#1AD1A3"
+                    />
+                    <path
+                      d="M29.0898 55.5605L37.4478 73.5393L50.8023 67.3137L45.0033 54.8433L36.9445 51.8988L29.0898 55.5605Z"
+                      fill="#D1FAF0"
+                    />
+                    <path
+                      d="M45.0041 54.8433L36.9453 51.8989L39.5043 57.4054L45.0041 54.8433Z"
+                      fill="#1AD1A3"
+                    />
+                    <path
+                      d="M55.043 70.6707L58.8374 83.675C58.9008 83.8918 59.2405 83.8001 59.1771 83.5816L55.3827 70.5773C55.3193 70.3605 54.9796 70.4522 55.043 70.6707Z"
+                      fill="#D0DEFD"
+                    />
+                    <path
+                      d="M62.6716 71.9517L63.71 77.4618C63.7522 77.6838 64.0919 77.5904 64.0496 77.3684L63.0113 71.8583C62.969 71.6363 62.6294 71.7296 62.6716 71.9517Z"
+                      fill="#D0DEFD"
+                    />
+                    <path
+                      d="M61.7649 67.8019C61.8177 68.2354 61.8793 68.6371 62.0993 69.2592C62.175 69.4706 62.4636 69.3208 62.4126 69.0988C62.3193 68.6953 62.1662 68.2389 62.1081 67.7279C62.0835 67.5023 61.7368 67.5781 61.7632 67.8019H61.7649Z"
+                      fill="#D0DEFD"
+                    />
+                    <path
+                      d="M84.5727 85.3895L86.866 79.4195C86.9469 79.2081 86.6072 79.1164 86.5263 79.3261L84.2331 85.2961C84.1521 85.5076 84.4918 85.5992 84.5727 85.3895Z"
+                      fill="#D0DEFD"
+                    />
+                    <path
+                      d="M85.3653 73.4442L85.4797 73.1006C85.5518 72.8856 85.2122 72.7922 85.14 73.0072L85.0256 73.3508C84.9535 73.5658 85.2931 73.6592 85.3653 73.4442Z"
+                      fill="#D0DEFD"
+                    />
+                    <path
+                      d="M95.1456 87.319L97.7221 82.838C97.8348 82.6406 97.5321 82.4627 97.4177 82.66L94.8411 87.141C94.7285 87.3384 95.0312 87.5164 95.1456 87.319Z"
+                      fill="#D0DEFD"
+                    />
+                    <path
+                      d="M76.6015 82.549C76.686 81.4001 74.9806 80.0257 75.2851 78.9825C77.9426 69.8794 82.2474 67.8425 84.4297 65.4883L79.5881 60.3429C76.8144 63.2416 72.6047 69.3173 70.8412 77.8759C70.549 79.2926 69.6603 80.8204 69.5635 82.3675C69.5564 82.4803 69.5476 82.6019 69.5423 82.727C69.5371 82.8204 69.53 82.912 69.5265 83.0054H69.5318C69.4667 85.0353 69.7359 88.1736 72.0256 88.1825C73.9105 88.1895 74.3892 85.8494 74.4755 84.0115C74.5054 83.3684 74.8943 83.2256 75.3009 83.7243L75.3044 83.7278C75.461 83.9234 75.4452 84.2424 75.4646 84.4838C75.4892 84.7922 75.5332 85.4336 75.8377 85.6256C75.9873 85.719 76.2601 85.6503 76.4079 85.5428C76.5557 85.4353 76.6649 85.1675 76.6825 85.0019C76.7053 84.7886 76.7176 84.5754 76.7229 84.3622C76.7352 83.7737 76.642 83.1939 76.6103 82.6071C76.6103 82.586 76.6068 82.5666 76.6068 82.5455L76.6015 82.549Z"
+                      fill="#D0DEFD"
+                    />
+                    <path
+                      d="M81.8492 46.6143C81.1452 47.4073 80.7931 49.6099 82.3771 50.5791"
+                      stroke="white"
+                      stroke-linecap="round"
+                      stroke-width="0.931586"
+                    />
+                    <path
+                      d="M89.5754 51.1095C90.4604 50.526 91.3698 48.4896 90.0903 47.143"
+                      stroke="white"
+                      stroke-linecap="round"
+                      stroke-width="0.931586"
+                    />
+                  </g>
+                  <path
+                    d="M106.248 11.124H92.7971C89.0944 11.124 86.0938 14.1235 86.0938 17.8247V21.6856C86.0938 24.8337 88.2658 27.4727 91.1922 28.1923L89.8129 30.7955L94.3415 28.3863H106.248C109.951 28.3863 112.951 25.3868 112.951 21.6856V17.8247C112.951 14.1235 109.951 11.124 106.248 11.124V11.124Z"
+                    fill="#1DE9B6"
+                  />
+                  <path
+                    d="M102.95 17.4108L101.871 16.3328L96.1004 22.1012L97.1788 23.1792L102.95 17.4108Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M101.871 23.1791L102.949 22.1011L97.1785 16.3326L96.1001 17.4106L101.871 23.1791Z"
+                    fill="white"
+                  />
+                  <defs>
+                    <lineargradient
+                      gradientUnits="userSpaceOnUse"
+                      id="paint0_linear_260_876"
+                      x1="0.968306"
+                      x2="140.608"
+                      y1="116.683"
+                      y2="115.714"
+                    >
+                      <stop
+                        stop-color="#153D80"
+                      />
+                      <stop
+                        offset="1"
+                        stop-color="#1D55B3"
+                      />
+                    </lineargradient>
+                    <lineargradient
+                      gradientUnits="userSpaceOnUse"
+                      id="paint1_linear_260_876"
+                      x1="22.8668"
+                      x2="15.595"
+                      y1="51.8175"
+                      y2="15.4276"
+                    >
+                      <stop
+                        stop-color="#184899"
+                      />
+                      <stop
+                        offset="1"
+                        stop-color="#1C54B2"
+                      />
+                    </lineargradient>
+                    <lineargradient
+                      gradientUnits="userSpaceOnUse"
+                      id="paint2_linear_260_876"
+                      x1="56.9801"
+                      x2="68.9001"
+                      y1="64.3225"
+                      y2="11.2892"
+                    >
+                      <stop
+                        stop-color="#1C54B2"
+                      />
+                      <stop
+                        offset="1"
+                        stop-color="#918FF4"
+                        stop-opacity="0"
+                      />
+                    </lineargradient>
+                    <clippath
+                      id="clip0_260_876"
+                    >
+                      <rect
+                        fill="white"
+                        height="120.447"
+                        transform="translate(13.9805 22.0462)"
+                        width="110.769"
+                      />
+                    </clippath>
+                  </defs>
+                </svg>
+              </div>
+              <div
+                class="emotion-11"
+              >
+                It was a dark and stormy night; the rain fell in torrents
+              </div>
+              <a
+                class="emotion-12"
+                data-testid="_link"
+                href="#"
+              >
+                <span>
+                  Learn more
+                </span>
+                <span
+                  class="emotion-13"
+                  data-testid="_link_icon"
+                >
+                  <svg
+                    class="emotion-14"
+                    viewBox="0 0 18 18"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      fill="none"
+                      fill-rule="evenodd"
+                      stroke="none"
+                      stroke-width="1"
+                    >
+                      <g
+                        fill="#121212"
+                        transform="translate(-414.000000, -1102.000000)"
+                      >
+                        <g
+                          transform="translate(411.000000, 1099.000000)"
+                        >
+                          <path
+                            d="M19,19 L5,19 L5,5 L12,5 L12,3 L5,3 C3.89,3 3,3.9 3,5 L3,19 C3,20.1 3.89,21 5,21 L19,21 C20.1,21 21,20.1 21,19 L21,12 L19,12 L19,19 Z M14,3 L14,5 L17.59,5 L7.76,14.83 L9.17,16.24 L19,6.41 L19,10 L21,10 L21,3 L14,3 Z"
+                          />
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

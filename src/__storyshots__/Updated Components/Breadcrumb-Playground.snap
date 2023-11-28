@@ -1,0 +1,279 @@
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-1 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-2 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #ffffff;
+  height: auto;
+  background-color: #175bf5;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-2:focus-visible:not(:disabled) {
+  background-color: #1552DD;
+}
+
+.emotion-2:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-2:hover:not(:disabled) {
+  background-color: #1552DD;
+}
+
+.emotion-2:active:not(:disabled) {
+  background-color: #1249C4;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  color: #1552DD;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0.25rem solid rgba(84,94,255,0);
+  opacity: 1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  pointer-events: default;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-7:hover {
+  color: #1B214F;
+}
+
+.emotion-7:hover path {
+  fill: #1B214F;
+}
+
+.emotion-7:visited {
+  color: #6c28cc;
+}
+
+.emotion-7:visited path {
+  fill: #6c28cc;
+}
+
+.emotion-7:focus-visible {
+  border: 0.25rem solid #9347ff;
+}
+
+.emotion-8 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-9 {
+  fill: #686BB3;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-9 * {
+  fill: #686BB3;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #686BB3;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        style="display: flex; flex-direction: column; gap: 32px;"
+      >
+        <div
+          class="emotion-1"
+        >
+          <button
+            class="emotion-2"
+            data-testid="button"
+            type="button"
+          >
+            <span
+              class="emotion-3"
+            >
+              <span>
+                Add more levels to Breadcrumb
+              </span>
+            </span>
+          </button>
+        </div>
+        <ol
+          aria-label="Breadcrumb"
+          class="emotion-4"
+          data-testid="_breadcrumb"
+        >
+          <li
+            class="emotion-5"
+          >
+            <div
+              class="emotion-6"
+            >
+              <a
+                class="emotion-7"
+                data-testid="_breadcrumb_link_Level 1_link"
+                href="/first-level"
+              >
+                <span>
+                  Level 1
+                </span>
+              </a>
+              <span
+                class="emotion-8"
+              >
+                <svg
+                  class="emotion-9"
+                  fill="none"
+                  viewBox="0 0 6 12"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M0.853554 11.1464C0.538571 11.4614 0 11.2383 0 10.7929L0 1.20711C0 0.761654 0.538571 0.53857 0.853553 0.853553L5.64645 5.64645C5.84171 5.84171 5.84171 6.15829 5.64645 6.35355L0.853554 11.1464Z"
+                    fill="#0E0E17"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </div>
+          </li>
+          <li
+            class="emotion-5"
+          >
+            <div
+              class="emotion-11"
+            >
+              <span
+                data-testid="_breadcrumb_Level 2"
+              >
+                Level 2
+              </span>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
