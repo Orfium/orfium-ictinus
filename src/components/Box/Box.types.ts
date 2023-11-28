@@ -1,6 +1,6 @@
-import { SpacingKey } from 'theme/globals/spacing';
-import globalColors from 'theme/tokens/semantic/variables/colors';
-import { DotKeys } from 'theme/tokens/utils';
+import type { SpacingKey } from 'theme/globals/spacing';
+import type globalColors from 'theme/tokens/semantic/variables/colors';
+import type { DotKeys } from 'theme/tokens/utils';
 
 export type Responsive<T> = T | Array<T>;
 

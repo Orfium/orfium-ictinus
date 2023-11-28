@@ -1,6 +1,6 @@
 import { lighten } from 'polished';
 
-import { Data } from './BarChart';
+import type { Data } from './BarChart';
 
 const incrementFactor = 0.05;
 const lightenFactor = 0.2;

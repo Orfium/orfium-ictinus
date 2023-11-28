@@ -1,5 +1,7 @@
-import React, { FCC, useEffect } from 'react';
-import { withRouter, RouterProps } from 'react-router-dom';
+import type { FCC} from 'react';
+import React, { useEffect } from 'react';
+import type { RouterProps } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 import { useSearchQueryParams } from '../';
 

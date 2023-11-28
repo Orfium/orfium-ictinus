@@ -2,10 +2,12 @@ import useTheme from 'hooks/useTheme';
 import { keys, pick } from 'lodash';
 import * as React from 'react';
 
-import { BASE_SHADE, FlatPalette, GeneratedColorShades, mainTypes } from '../theme/palette';
+import type { FlatPalette, GeneratedColorShades} from '../theme/palette';
+import { BASE_SHADE, mainTypes } from '../theme/palette';
+import type {
+  ColorShapeFromComponent} from '../utils/themeFunctions';
 import {
-  calculateActualColorFromComponentProp,
-  ColorShapeFromComponent,
+  calculateActualColorFromComponentProp
 } from '../utils/themeFunctions';
 
 const defaultContextData = {

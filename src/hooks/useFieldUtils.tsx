@@ -2,8 +2,9 @@ import React, { useCallback, useMemo } from 'react';
 
 import useCombinedRefs from './useCombinedRefs';
 import useTheme from './useTheme';
-import Icon, { AcceptedIconNames } from 'components/Icon';
-import { TextFieldProps } from 'components/TextField';
+import type { AcceptedIconNames } from 'components/Icon';
+import Icon from 'components/Icon';
+import type { TextFieldProps } from 'components/TextField';
 import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
 
 /** A custom hook containing all the utils that are shared between field components */
