@@ -1,6 +1,7 @@
-import { css, SerializedStyles } from '@emotion/react';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
 import rem from 'polished/lib/helpers/rem';
-import { Theme } from 'theme';
+import type { Theme } from 'theme';
 
 import { getBorderColor } from 'components/Table/utils';
 

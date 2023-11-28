@@ -1,8 +1,9 @@
-import { css, SerializedStyles } from '@emotion/react';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
 import { flexCenterVertical } from 'theme/functions';
 import { rem } from 'theme/utils';
 
-import { Theme } from '../../../../theme';
+import type { Theme } from '../../../../theme';
 
 export const containerStyles = (gap: string) => (): SerializedStyles =>
   css`

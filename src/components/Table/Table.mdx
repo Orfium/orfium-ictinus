@@ -1,0 +1,72 @@
+import { Meta, Canvas, ArgTypes, Story } from '@storybook/blocks';
+import { select, number } from '@storybook/addon-knobs';
+import Table from './Table';
+import TableFilterShowcase from '../storyUtils/TableFilterShowcase';
+import { FIGMA_URL } from '../../utils/common';
+import * as TableStories from './Table.stories';
+
+<Meta of={TableStories} />
+
+# Table
+
+A universal Table component that applies Orfium basic usages. Check inline data structure for more.
+
+## Usage
+
+```js
+import { Table } from '@orfium/ictinus';
+
+<Table />;
+```
+
+## Props
+
+<ArgTypes of={Table} />
+
+### Regular Table
+
+Regular Table with simple rows
+
+<Canvas of={TableStories.RegularTableWithSimpleRows} />
+
+### Table With Sorting And Column Tooltips
+
+Regular Table with sorting and column tooltips
+
+<Canvas of={TableStories.RegularTableWithSortingAndTooltips} />
+
+### Expandable Table
+
+Table with expandable rows and nested header
+
+<Canvas of={TableStories.TableWithExpandableRows} />
+
+### Table with Expandable Rows - Expanded on Page Load
+
+Table with Expandable Rows - Expanded on Page Load
+
+<Canvas of={TableStories.TableWithExpandableRowsExpandedOnPageLoad} />
+
+### Financial Table
+
+Financial Table that has lines at the end as it requires a financial Orfium table
+
+<Canvas of={TableStories.FinancialTable} />
+
+### Fixed Header Table
+
+Fixed Header Table
+
+<Canvas of={TableStories.FixedHeaderTable} />
+
+### Expandable Table with sort, fixed Header and cta's
+
+Table with expandable rows with sort, fixed Header and cta's
+
+<Canvas of={TableStories.TableWithExpandableRowsAndSortDir} />
+
+### Table with filtered data for performance
+
+Table with filtered data for performance
+
+<Canvas of={TableStories.TableWithFilteredDataForPerformance} />
