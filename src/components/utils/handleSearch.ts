@@ -1,4 +1,4 @@
-import { ChangeEvent } from 'utils/common';
+import type { ChangeEvent } from 'utils/common';
 
 interface Props {
   event: ChangeEvent;

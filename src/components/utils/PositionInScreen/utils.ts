@@ -7,6 +7,7 @@ export const resizeObserverHandler = (callback: (args: any) => void) =>
     /** If the event is triggered by the element itself then return
      * to avoid an infinite loop
      */
+    // @ts-ignore
     if (parent?.target === parent?.contentRect) {
       return;
     }
