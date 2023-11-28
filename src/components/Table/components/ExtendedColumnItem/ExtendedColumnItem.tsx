@@ -2,7 +2,7 @@ import useTheme from 'hooks/useTheme';
 import React from 'react';
 
 import { containerStyles, contentStyles } from './ExtendedColumnItem.style';
-import { ExtendedColumn, Sort } from '../../types';
+import type { ExtendedColumn, Sort } from '../../types';
 import { hasTooltipOrSortingKey, isItemString } from '../../utils';
 import Icon from 'components/Icon';
 import Tooltip from 'components/Tooltip';
@@ -71,7 +71,7 @@ const ExtendedColumnItem: React.FCC<ExtendedColumnItemProps> = ({ item, sorting,
       >
         <Tooltip content={item?.tooltip?.content} placement={item?.tooltip.placement}>
           <Icon
-            name={'info'}
+            name="info"
             dataTestId={`table_icon_tooltip_${itemContentLowerCase}`}
             color={theme.utils.getColor('lightGrey', 750)}
           />
