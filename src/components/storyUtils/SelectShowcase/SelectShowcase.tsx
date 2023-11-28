@@ -2,9 +2,10 @@ import { css } from '@emotion/react';
 import React, { useState } from 'react';
 import { rem } from 'theme/utils';
 
-import Select, { SelectOption } from '../../Select';
+import type { SelectOption } from '../../Select';
+import Select from '../../Select';
 
-export const dummyUnrefinedData = new Array(15).fill(undefined).map((value, index) => ({
+export const dummyUnrefinedData = new Array(15).fill(undefined).map((__value, index) => ({
   value: index,
   label: `Test option ${index}`,
 }));
@@ -39,7 +40,7 @@ const SelectShowcase: React.FCC<SelectShowcaseProps> = ({ minCharactersToSearch 
     >
       <Select
         isAsync
-        label={'Select'}
+        label="Select"
         options={options}
         selectedOption={selectedOption}
         onChange={setSelectedOption}

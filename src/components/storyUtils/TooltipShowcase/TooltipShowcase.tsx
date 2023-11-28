@@ -3,7 +3,7 @@ import React from 'react';
 import TooltipContent from './components/TooltipContent/TooltipContent';
 import Tooltip from '../../Tooltip';
 import Button from 'components/Button';
-import { TooltipProps } from 'components/Tooltip/Tooltip.types';
+import type { TooltipProps } from 'components/Tooltip/Tooltip.types';
 
 const TooltipShowcase = ({
   buttonText = 'Hover here',

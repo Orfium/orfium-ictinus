@@ -2,7 +2,7 @@ import * as React from 'react';
 
 type PresentComponentProps = {
   name: string;
-  width?: string;
+  width?: string | number;
 };
 
 const PresentComponent: React.FCC<PresentComponentProps> = ({ name, width = 'auto', children }) => {

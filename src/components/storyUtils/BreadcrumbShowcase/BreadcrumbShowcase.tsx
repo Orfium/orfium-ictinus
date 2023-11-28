@@ -3,7 +3,7 @@ import { uniqueId } from 'lodash';
 import React, { useState, useEffect } from 'react';
 import { Router, Switch, Route } from 'react-router-dom';
 
-import { BreadcrumbItem } from '../../Breadcrumb/Breadcrumb.types';
+import type { BreadcrumbItem } from '../../Breadcrumb/Breadcrumb.types';
 import Breadcrumb from 'components/Breadcrumb';
 import Button from 'components/Button';
 interface Props {
