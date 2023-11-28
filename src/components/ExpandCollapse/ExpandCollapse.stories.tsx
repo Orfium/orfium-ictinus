@@ -11,8 +11,6 @@ export const ExpandCollapseStory = {
   render: () => (
     <div>
       <ExpandCollapse
-        isExpanded={boolean('isExpanded', false)}
-        onChange={() => {}}
         textAndControl={(handleClick, expanded) => {
           return (
             <Fragment>
@@ -33,8 +31,6 @@ export const ExpandCollapseStory = {
         }}
       </ExpandCollapse>
       <ExpandCollapse
-        isExpanded={boolean('isExpanded', false)}
-        onChange={() => {}}
         textAndControl={(handleClick) => {
           return (
             <Fragment>
@@ -51,8 +47,6 @@ export const ExpandCollapseStory = {
               <div>content</div>
               <div>here</div>
               <ExpandCollapse
-                isExpanded={boolean('isExpanded', false)}
-                onChange={() => {}}
                 textAndControl={(handleClick) => {
                   return (
                     <Fragment>
@@ -77,8 +71,6 @@ export const ExpandCollapseStory = {
         }}
       </ExpandCollapse>
       <ExpandCollapse
-        isExpanded={boolean('isExpanded', false)}
-        onChange={() => {}}
         textAndControl={(handleClick) => {
           return (
             <Fragment>
