@@ -1,6 +1,6 @@
 import useTheme from 'hooks/useTheme';
 import React from 'react';
-import { LabelProps, PolarAngleAxisProps } from 'recharts';
+import type { LabelProps, PolarAngleAxisProps } from 'recharts';
 
 import { flexContainer, labelUnitStyle } from './CustomLabel.style';
 
