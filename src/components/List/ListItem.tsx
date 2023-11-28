@@ -11,7 +11,7 @@ export type ListItemProps = {
   /** @default normal */
   rowSize?: ListRowSize;
 };
-const ListItem: React.FC<React.PropsWithChildren<ListItemProps>> = (props) => (
+const ListItem: React.FCC<ListItemProps> = (props) => (
   <AriaItem {...props} key={String(props.key)}>
     {props.children}
   </AriaItem>
