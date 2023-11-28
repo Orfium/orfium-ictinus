@@ -1,10 +1,11 @@
-import { css, SerializedStyles } from '@emotion/react';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
 import { isUndefined } from 'lodash';
-import { Theme } from 'theme';
+import type { Theme } from 'theme';
 import { rem } from 'theme/utils';
 
 import { getProgressIndicatorTokens } from 'components/ProgressIndicator/ProgressIndicator.tokens';
-import { ProgressIndicatorProps } from 'components/ProgressIndicator/ProgressIndicator.types';
+import type { ProgressIndicatorProps } from 'components/ProgressIndicator/ProgressIndicator.types';
 
 export const progressBarContainer =
   ({ isBlock }: Pick<ProgressIndicatorProps, 'isBlock'>) =>

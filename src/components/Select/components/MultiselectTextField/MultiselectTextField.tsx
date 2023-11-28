@@ -3,7 +3,7 @@ import omit from 'lodash/omit';
 import React, { useMemo } from 'react';
 import isEqual from 'react-fast-compare';
 import { generateUniqueKey } from 'utils/helpers';
-import { TestProps } from 'utils/types';
+import type { TestProps } from 'utils/types';
 
 import {
   chipContent,
@@ -15,11 +15,12 @@ import {
   textInputBaseOverrides,
 } from './MultiselectTextField.style';
 import Chip from 'components/Chip';
+import type { AcceptedIconNames } from 'components/Icon';
 import Icon from 'components/Icon';
 import Label from 'components/Label';
 import ProgressIndicator from 'components/ProgressIndicator';
-import { SelectOption } from 'components/Select';
-import { InputProps, TextFieldProps } from 'components/TextField/TextField';
+import type { SelectOption } from 'components/Select';
+import type { InputProps, TextFieldProps } from 'components/TextField/TextField';
 import TextInputBase from 'components/TextInputBase';
 import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
 
@@ -119,7 +120,13 @@ const MultiselectTextField = React.forwardRef<HTMLInputElement, Props & InputPro
     const icon = useMemo(() => {
       if (suffix) {
         if (typeof suffix === 'string') {
-          return <Icon name={suffix} size={20} color={theme.utils.getColor('lightGrey', 650)} />;
+          return (
+            <Icon
+              name={suffix as AcceptedIconNames}
+              size={20}
+              color={theme.utils.getColor('lightGrey', 650)}
+            />
+          );
         }
 
         return suffix;

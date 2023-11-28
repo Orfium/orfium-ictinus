@@ -1,0 +1,41 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
+import Slider from './Slider';
+import Stack from '../storyUtils/Stack';
+import SwitchShowcase from '../storyUtils/SwitchShowcase';
+import { boolean, select, withKnobs, text } from '@storybook/addon-knobs';
+import SliderShowcase from '../storyUtils/SliderShowcase/SliderShowcase';
+import * as SliderStories from './Slider.stories';
+
+<Meta of={SliderStories} />
+
+# Slider
+
+An interactive Slider component meant to serve as an alternative way of toggling between states.
+
+## Usage
+
+```js
+import { Slider } from '@orfium/ictinus';
+
+<Slider />;
+```
+
+## Props
+
+<ArgTypes of={Slider} />
+
+### Range Slider
+
+<Canvas of={SliderStories.RangeSliderDontTest} />
+
+### Range Slider with Increments
+
+<Canvas of={SliderStories.RangeSliderWithIncrementsDontTest} />
+
+### Selector Slider
+
+<Canvas of={SliderStories.SelectorSliderDontTest} />
+
+### Selector Slider with Increments
+
+<Canvas of={SliderStories.SelectorSliderWithIncrementsDontTest} />

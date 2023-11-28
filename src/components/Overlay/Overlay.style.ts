@@ -1,9 +1,10 @@
-import { css, SerializedStyles } from '@emotion/react';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
 import { transparentize } from 'polished';
-import { Theme } from 'theme';
+import type { Theme } from 'theme';
 import { flex, transition } from 'theme/functions';
 
-import { AnchorType } from './Overlay';
+import type { AnchorType } from './Overlay';
 
 const justifyContentEnd = (): SerializedStyles => css`
   justify-content: flex-end;
