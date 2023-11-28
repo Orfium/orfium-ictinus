@@ -1,0 +1,41 @@
+import { Meta, Canvas, ArgTypes, Story } from '@storybook/blocks';
+import AvatarStack from './AvatarStack';
+import SectionHeader from '../../storybook/SectionHeader';
+import * as AvatarStackStories from './AvatarStack.stories';
+import Overview from '../../storybook/Overview';
+
+<Meta of={AvatarStackStories} />
+
+<SectionHeader title={'Avatar Stack'} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
+
+## Overview
+
+A universal AvatarStack component that renders its children as a stack.
+
+## Props
+
+<ArgTypes of={AvatarStack} />
+
+## Usage
+
+<UsageGuidelines
+  guidelines={[
+    'When you need to show a visual representation of users related to a specific value in the data set',
+  ]}
+  policies={[
+    'Don’t use when the the max amount of users related to the value is one: use an avatar instead',
+  ]}
+/>
+
+<SubsectionHeader title="Variants" />
+
+### Avatar Stack
+
+Avatar Stacks in different sizes
+
+<Canvas of={AvatarStackStories.AvatarStackStory} />

@@ -1,0 +1,70 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
+import Box from './Box';
+import * as BoxStories from './Box.stories';
+
+import Overview from '../../storybook/Overview';
+import Typography from '../Typography/index';
+
+<Meta of={BoxStories} />
+
+<SectionHeader title={'Box'} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
+
+## Overview
+
+The Box component is a helper component that lets you write these common less-reusable elements
+more briefly inline.
+
+One of the most common needs when building web apps is creating layout elements that have
+certain layout.
+
+The mentality is that we use all CSS props based on [MDN CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+
+Only exceptions are margin and padding that use them in acronyms like m and p and direction t|r|b|l ending
+with m + t | r | l | b = value
+
+## Props
+
+<ArgTypes of={Box} />
+
+## Usage
+
+<UsageGuidelines
+  guidelines={[
+    'Box can be containers for all your components',
+    'Use only values that comes from the theme config',
+  ]}
+  policies={[
+    `Don't overdo it! We suggest to use it for up to 5 props. If more use styled-components`,
+  ]}
+/>
+
+<SubsectionHeader title="Variants" />
+
+### Box padding (All sides)
+
+All application below comes with a default margin bottom '5' which is 12px
+
+<Canvas of={BoxStories.BoxPaddingAllSides} />
+
+### Box horizontal padding
+
+Padding is the same as "margin" in the application, you can also use `mx` for margin.
+
+<Canvas of={BoxStories.BoxHorizontalPadding} />
+
+### Box vertical padding
+
+Padding is the same as "margin" in the application, you can also use `my` for margin.
+
+<Canvas of={BoxStories.BoxVerticalPadding} />
+
+### Box Background
+
+All application below comes with a default margin bottom '5' which is 12px
+
+<Canvas of={BoxStories.BoxBackground} />

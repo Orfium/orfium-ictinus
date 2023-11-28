@@ -1,0 +1,108 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
+import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
+import Select from './Select';
+import Stack from '../storyUtils/Stack';
+import { SelectShowcase, MultiSelectShowcase } from '../storyUtils/SelectShowcase';
+import EdgeCasesSelectShowcase from '../storyUtils/EdgeCasesSelectShowcase';
+import { FIGMA_URL, Function } from '../../utils/common';
+import { useState } from 'react';
+import { StatefulSelect } from './index';
+import { options, optionsWithHelperInDisabled, groupOptions, defaultValue } from './storyUtils';
+import SectionHeader from '../../storybook/SectionHeader';
+import * as SelectStories from './Select.stories';
+
+<Meta of={SelectStories} />
+
+<SectionHeader title={'Select'} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
+
+## Overview
+
+A universal Select component that is a clickable element that can hold many forms.
+
+## Props
+
+<ArgTypes of={Select} />
+
+## Usage
+
+<UsageGuidelines
+  guidelines={[
+    'If you need to select and enter an item from a dropdown list that features more than seven items, use searchable select.',
+    'If you need to be able to enter free text entry in addition to choosing form a predefined list, use searchable select',
+    'If you need to enter more than one values from a predefined list, use multiselect',
+  ]}
+/>
+
+<SubsectionHeader title="Variants" />
+
+### Select sizes
+
+Simple select component with clearable data and searchable input
+
+<Canvas of={SelectStories.SelectSizes} />
+
+### Simple Select
+
+<Canvas of={SelectStories.SimpleSelect} />
+
+### Searchable Select
+
+<Canvas of={SelectStories.SearchableSelect} />
+
+### Select with uncontrolled state
+
+<Canvas of={SelectStories.SelectWithUncontrolledState} />
+
+### Simple Select with groups
+
+Simple select component with grouped data and searchable input
+
+<Canvas of={SelectStories.SimpleSelectWithGroups} />
+
+### Select with async search
+
+Select that support asynchronous fetching, with loading status
+
+<Canvas of={SelectStories.SelectWithAsyncSearch} />
+
+### Select with edge case
+
+Select cases where it gets to minimum and maximum width based on options <br />
+
+1. max width of floating menu to 620 and then ellipsis <br />
+2. max width with smaller floating menu content that set to max
+3. min size (150px) for both
+
+<Canvas of={SelectStories.SelectWithEdgeCase} />
+
+### MultiSelect
+
+A Select component with multiple selected options represented as Chips. <br/>
+
+_. To initiate a MultiSelect, the `multi` prop must be set to `true`
+_. In this variation the props: `leftIcon` and `size` are deprecated (`size` is always set to `md` by default). <br/>
+_. Instead of the `selectedOption` prop we now use the `selectedOptions` prop (with type: `SelectOption[]`) .
+_. When in MultiSelect, `onClear` prop refers to the all selected options deletion and `onOptionDelete` prop refers to single option deletion
+
+<Canvas of={SelectStories.MultiSelect} />
+
+### Select statuses
+
+Select with statuses
+
+<Canvas of={SelectStories.SelectStatuses} />
+
+### Disabled Select
+
+Select disabled with label
+
+<Canvas of={SelectStories.DisabledSelect} />
+
+### Playground
+
+<Canvas of={SelectStories.Playground} />

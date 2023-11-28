@@ -1,0 +1,46 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
+import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
+import ExpandCollapse from './ExpandCollapse';
+import { Fragment } from 'react';
+import * as ExpandCollapseStories from './ExpandCollapse.stories';
+
+<Meta of={ExpandCollapseStories} />
+
+# ExpandCollapse
+
+A minimally visual component that allows to expand and collapse content
+
+## Usage
+
+```jsx
+import { ExpandCollapse } from '@orfium/ictinus';
+
+<ExpandCollapse
+  textAndControl={(handleClick) => {
+    return (
+      <Fragment>
+        <span>Text</span>
+        <button onClick={handleClick}>expand/collapse</button>
+      </Fragment>
+    );
+  }}
+>
+  {(expand) => {
+    return (
+      <div>
+        <div>Some</div>
+        <div>content</div>
+        <div>here</div>
+      </div>
+    );
+  }}
+</ExpandCollapse>;
+```
+
+## Props
+
+<ArgTypes of={ExpandCollapse} />
+
+# ExpandCollapse
+
+<Canvas of={ExpandCollapseStories.ExpandCollapseStory} />

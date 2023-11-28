@@ -1,0 +1,79 @@
+import { Meta, Canvas, ArgTypes, Story } from '@storybook/blocks';
+import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
+import * as FilterStories from './Filter.stories';
+
+import Filter from '../Filter';
+import {
+  AsyncFilterShowcase,
+  FilterShowcase,
+  MultiFilterShowcase,
+} from '../storyUtils/FilterShowcase';
+import Stack from '../storyUtils/Stack';
+import { FIGMA_URL } from '../../utils/common';
+
+<Meta of={FilterStories} />
+
+# Filter
+
+A universal Filter component that is a clickable element that can hold many forms.
+
+## Usage
+
+```js
+import { Filter } from '@orfium/ictinus';
+
+<Filter
+  styleType="filled"
+  defaultValue={{ value: 'ice cream', label: 'Ice cream' }}
+  items={[
+    { value: 'chocolate', label: 'Chocolate' },
+    { value: 'banana', label: 'Banana' },
+  ]}
+  selectedItem={{ value: 'chocolate', label: 'Chocolate' }}
+  onSelect={(option) => {
+    /* do something with the selected option */
+  }}
+  label={'Label'}
+/>;
+```
+
+## Props
+
+<ArgTypes of={Filter} />
+
+### Filters
+
+A filter with different style types and a selection handler to return selection on change and to pass selection callback.
+Here you can see our two different filter types as well.
+
+<Canvas of={FilterStories.PresetFilter} />
+
+<Canvas of={FilterStories.AddedFilter} />
+
+### Searchable Filter
+
+A filter that supports searching options
+
+<Canvas of={FilterStories.SearchableFilter} />
+
+### Filter with Async and Loading
+
+Filter that support asynchronous fetching, with loading status
+
+<Canvas of={FilterStories.AsyncFilter} />
+
+### Filter with Async, Loading and Minimum Characters to Search for
+
+Filter that support asynchronous fetching, with loading status
+
+<Canvas of={FilterStories.AsyncFilterWithMinCharacters} />
+
+# MultiFilter
+
+A filter that supports searching options
+
+<Canvas of={FilterStories.MultiFilter} />
+
+### Playground - Knobs
+
+<Canvas of={FilterStories.Playground} />

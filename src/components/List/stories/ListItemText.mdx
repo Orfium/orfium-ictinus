@@ -1,0 +1,66 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
+import { ListItemText } from '../index';
+import SectionHeader from '../../../storybook/SectionHeader';
+import * as ListItemTextStories from './ListItemText.stories';
+
+<Meta of={ListItemTextStories} />
+
+<SectionHeader title={'ListItemText'} />
+
+- [Overview](#overview)
+- [Usage](#usage)
+- [Props](#props)
+- [Variants](#variants)
+- [References](#references)
+
+## Overview
+
+The ListItemText component is used within a ListItem to display textual content with a primary and
+a secondary text.
+
+## Usage
+
+<UsageGuidelines
+  guidelines={['Always use to show text without other custom components like Icon, Button etc']}
+/>
+
+```js
+import { List, ListItem, ListItemText } from '@orfium/ictinus';
+
+const MyComponent = () => {
+  return (
+    <List>
+      <ListItem>
+        <ListItemText>Item 1</ListItemText>
+      </ListItem>
+      <ListItem>
+        <ListItemText description="This is a secondary text on this item">Item 2</ListItemText>
+      </ListItem>
+    </List>
+  );
+};
+```
+
+## Props
+
+<ArgTypes of={ListItemText} />
+
+<SubsectionHeader title="Variants" />
+
+### ListItemText normal
+
+<Canvas of={ListItemTextStories.ListItemTextNormal} />
+
+### ListItemText with secondary text
+
+<Canvas of={ListItemTextStories.ListItemTextWithSecondaryText} />
+
+### References
+
+All references for a complete `<List>` with all component mentioned throughout the `<List>` section.
+
+- [List](../?path=/docs/updated-components-list-list--overview)
+- [ListSection](../?path=/docs/updated-components-list-listsection--overview)
+- [ListItem](../?path=/docs/updated-components-list-listitem--overview)
+- [ListItemText](../?path=/docs/updated-components-list-listitemtext--overview)
+- [ListItemAction](../?path=/docs/updated-components-list-listitemaction--overview)
