@@ -20,15 +20,26 @@ export default {
 
 export const CheckBoxStory = {
   render: () => (
-    <Stack>
-      <CheckBox isChecked={false} />
-      <CheckBox isChecked={true} />
-      <CheckBox isChecked={true} isDisabled />
-      <CheckBox isChecked={true} isIntermediate />
-      <CheckBox isChecked={true} isIntermediate isDisabled />
-      <CheckBox isChecked={false} isIntermediate />
-      <CheckBox isChecked={false} isIntermediate isDisabled />
-    </Stack>
+    <>
+      <Stack>
+        <CheckBox isChecked={false} />
+        <CheckBox isChecked={true} />
+        <CheckBox isChecked={true} isDisabled />
+        <CheckBox isChecked={true} isIntermediate />
+        <CheckBox isChecked={true} isIntermediate isDisabled />
+        <CheckBox isChecked={false} isIntermediate />
+        <CheckBox isChecked={false} isIntermediate isDisabled />
+      </Stack>
+      <Stack>
+        <CheckBox isChecked={false} isFilled={false} />
+        <CheckBox isChecked={true} isFilled={false} />
+        <CheckBox isChecked={true} isFilled={false} isDisabled />
+        <CheckBox isChecked={true} isFilled={false} isIntermediate />
+        <CheckBox isChecked={true} isFilled={false} isIntermediate isDisabled />
+        <CheckBox isChecked={false} isFilled={false} isIntermediate />
+        <CheckBox isChecked={false} isFilled={false} isIntermediate isDisabled />
+      </Stack>
+    </>
   ),
 
   name: 'CheckBox',
