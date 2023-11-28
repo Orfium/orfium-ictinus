@@ -57,7 +57,7 @@ export const NumberFieldWithMinAndMaxValues = {
   render: () => (
     <Stack>
       <NumberField
-        label={'Label'}
+        label={'NumberField'}
         minValue={number('minValue', undefined)}
         maxValue={number('maxValue', undefined)}
         suffix={
