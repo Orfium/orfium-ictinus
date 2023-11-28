@@ -23,7 +23,7 @@ export type ModalProps = {
   isContentPadded?: boolean;
 };
 
-const Modal: React.FC<React.PropsWithChildren<ModalProps>> = ({
+const Modal: React.FCC<ModalProps> = ({
   isOpen = false,
   onClose,
   dataTestId,
@@ -53,12 +53,7 @@ const Modal: React.FC<React.PropsWithChildren<ModalProps>> = ({
         <div css={cardSizing}>
           <Card elevated="02" radius="3">
             <div css={closeContainer}>
-              <IconButton
-                type="tertiary"
-                name="close"
-                onClick={onClose}
-                dataTestId="modal-close"
-              />
+              <IconButton type="tertiary" name="close" onClick={onClose} dataTestId="modal-close" />
             </div>
             <div css={modalContainer({ isContentPadded })}>
               {contentProps ? <ModalContent {...contentProps} /> : children}
