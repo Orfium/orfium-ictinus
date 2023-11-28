@@ -1,7 +1,7 @@
 import uniqueId from 'lodash/uniqueId';
 import * as React from 'react';
 import dayjs from 'utils/date';
-import { TestId } from 'utils/types';
+import type { TestId } from 'utils/types';
 
 /** A function that generates a unique key by making a value randomly based on time also */
 export const generateUniqueKey = (elementType = ''): string =>

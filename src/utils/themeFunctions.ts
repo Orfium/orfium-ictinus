@@ -1,6 +1,6 @@
 import { PropsValidationError } from './errors';
 import { errorHandler } from './helpers';
-import { Theme } from '../theme';
+import type { Theme } from '../theme';
 import { BASE_SHADE, colorShades, flatColors, mainTypes } from '../theme/palette';
 
 export type AcceptedColorComponentTypes = (typeof mainTypes)[number];

@@ -1,5 +1,5 @@
 import { statesConfig } from './statesConfig';
-import { Theme } from '../index';
+import type { Theme } from '../index';
 import { rem } from '../utils';
 
 export type GetFocusProps = {

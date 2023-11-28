@@ -1,7 +1,7 @@
 import { statesConfig } from './statesConfig';
 import { getShadeWithStep } from './utils';
-import { Theme } from '../index';
-import { colorShades, flatColors } from '../palette';
+import type { Theme } from '../index';
+import type { colorShades, flatColors } from '../palette';
 
 export type GetPressedProps = {
   theme: Theme;

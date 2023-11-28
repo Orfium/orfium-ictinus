@@ -1,5 +1,6 @@
 import colorsFigma from './variables/colors';
-import { DotKeys, getTokensValue } from '../utils';
+import type { DotKeys} from '../utils';
+import { getTokensValue } from '../utils';
 
 export type SemanticColorsKey = DotKeys<typeof colorsFigma>;
 
