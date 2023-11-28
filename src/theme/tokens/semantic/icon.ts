@@ -1,5 +1,6 @@
 import iconFigma from './variables/icon';
-import { DotKeys, getTokensValue } from '../utils';
+import type { DotKeys} from '../utils';
+import { getTokensValue } from '../utils';
 
 export type SemanticIcon = {
   get: (val: DotKeys<typeof iconFigma>) => string;

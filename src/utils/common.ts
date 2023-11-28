@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { ButtonHTMLAttributes } from 'react';
+import type * as React from 'react';
+import type { ButtonHTMLAttributes } from 'react';
 
 type FunctionProps = {
   children: () => React.ReactNode;
