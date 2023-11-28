@@ -1,17 +1,20 @@
 import useTheme from 'hooks/useTheme';
-import React, { useCallback, InputHTMLAttributes, useMemo } from 'react';
+import type { InputHTMLAttributes} from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { rem } from 'theme/utils';
-import dayjs, { Dayjs } from 'utils/date';
+import type { Dayjs } from 'utils/date';
+import dayjs from 'utils/date';
 
 import { iconStyles } from './DatePickInput.style';
 import { generateTestDataId, getLocaleFormat } from '../../../utils/helpers';
-import { TestProps } from '../../../utils/types';
+import type { TestProps } from '../../../utils/types';
 import FilterBase from '../../Filter/components/FilterBase';
-import { FilterType, StyleType } from '../../Filter/types';
-import TextField, { TextFieldProps } from '../../TextField/TextField';
+import type { FilterType, StyleType } from '../../Filter/types';
+import type { TextFieldProps } from '../../TextField/TextField';
+import TextField from '../../TextField/TextField';
 import { DATE_PICKER_LABEL, DATE_RANGE_PICKER_LABEL } from '../constants';
-import { DateFormatType } from '../DatePicker.types';
-import { Range } from '../OverlayComponent/OverlayComponent';
+import type { DateFormatType } from '../DatePicker.types';
+import type { Range } from '../OverlayComponent/OverlayComponent';
 import Icon from 'components/Icon';
 import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
 
