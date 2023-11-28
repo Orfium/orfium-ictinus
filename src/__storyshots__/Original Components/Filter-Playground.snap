@@ -49,11 +49,11 @@
 }
 
 .emotion-3:hover>div {
-  background-color: #d0defd;
+  background-color: #f3f5f8;
 }
 
 .emotion-3:active>div {
-  background-color: #b9cdfc;
+  background-color: #e7ebf2;
 }
 
 .emotion-3:focus-visible>div {
@@ -72,9 +72,9 @@
   opacity: 1;
   -webkit-transition: all 150ms linear;
   transition: all 150ms linear;
-  color: black;
-  background-color: #e7eefe;
-  border: solid 0.0625rem #1451dc;
+  color: #0f0f17;
+  background-color: #fefefe;
+  border: solid 0.0625rem #cfd7e5;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -89,7 +89,7 @@
 }
 
 .emotion-4:hover {
-  border: solid 0.0625rem #1451dc;
+  border: solid 0.0625rem #cfd7e5;
 }
 
 .emotion-5 {
@@ -111,7 +111,7 @@
 }
 
 .emotion-7 {
-  font-weight: 700;
+  font-weight: 400;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -209,7 +209,7 @@
                       class="emotion-8"
                       data-testid="filter-selected-item-label"
                     >
-                      Banana
+                      Peach
                     </span>
                   </span>
                 </div>
