@@ -1,0 +1,43 @@
+import { Meta, Canvas, ArgTypes, Story } from '@storybook/blocks';
+import Icon from './Icon';
+import Stack from '../storyUtils/Stack';
+import PresentComponent from '../storyUtils/PresentComponent';
+import iconSelector from './assets/iconSelector';
+import { FIGMA_URL } from '../../utils/common';
+import * as IconStories from './Icon.stories';
+
+<Meta of={IconStories} />
+
+# Icon
+
+A universal Icon component to select and style the icons encapsulated in the design system.
+
+## Usage
+
+```js
+import { Icon } from '@orfium/ictinus';
+
+<Icon name={'add'} color={'primary'} size={14} />;
+```
+
+## Props
+
+<ArgTypes of={Icon} />
+
+### Icons Gallery
+
+All the icons available for use.
+
+<Canvas of={IconStories.IconsGallery} />
+
+### Icon with color
+
+Icon with color.
+
+<Canvas of={IconStories.IconWithColor} />
+
+### Icon with size
+
+Icon with size.
+
+<Canvas of={IconStories.IconWithSize} />

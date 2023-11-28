@@ -1,0 +1,54 @@
+import { Meta } from '@storybook/blocks';
+import SectionHeader from '../../../storybook/SectionHeader';
+
+<Meta title="Updated Components/List/ListItemAction" />
+
+<SectionHeader title={'ListItemAction'} />
+
+- [Overview](#overview)
+- [Usage](#usage)
+- [Props](#props)
+- [References](#references)
+
+## Overview
+
+The ListItemAction component represents an action or a set of actions associated with a ListItem. It can contain buttons, icons, or any other interactive elements.
+
+## Usage
+
+<UsageGuidelines guidelines={['use only for buttons, icons, or any other interactive elements']} />
+
+```
+import { List, ListItem, ListItemAction, Radio, Checkbox } from '@orfium/ictinus';
+
+const MyComponent = () => {
+  return (
+    <List>
+      <ListItem>
+        <ListItemAction>
+          <Radio isChecked={false} isDisabled={false} />
+        </ListItemAction>
+      </ListItem>
+      <ListItem>
+        <ListItemAction>
+          <Checkbox isChecked={false} isDisabled={false} />
+        </ListItemAction>
+      </ListItem>
+    </List>
+  );
+};
+```
+
+## Props
+
+No props defined for this component.
+
+### References
+
+All references for a complete `<List>` with all component mentioned throughout the `<List>` section.
+
+- [List](../?path=/docs/updated-components-list-list--overview)
+- [ListSection](../?path=/docs/updated-components-list-listsection--overview)
+- [ListItem](../?path=/docs/updated-components-list-listitem--overview)
+- [ListItemText](../?path=/docs/updated-components-list-listitemtext--overview)
+- [ListItemAction](../?path=/docs/updated-components-list-listitemaction--overview)
