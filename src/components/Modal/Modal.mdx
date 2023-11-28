@@ -1,0 +1,58 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
+import { withKnobs, text, boolean } from '@storybook/addon-knobs';
+import PresentComponent from '../storyUtils/PresentComponent';
+import ModalShowcase from '../storyUtils/ModalShowcase';
+import Stack from '../storyUtils/Stack';
+import Modal from './Modal';
+import ModalContent from './ModalContent';
+import { FIGMA_URL } from '../../utils/common';
+import * as ModalStories from './Modal.stories';
+
+<Meta of={ModalStories} />
+
+# Modal
+
+### Props
+
+<ArgTypes of={Modal} />
+
+### Usage
+
+```js
+import { Modal } from '@orfium/ictinus';
+
+<Modal isOpen={true} onClose={closeCallback}>
+  {'some content here'}
+</Modal>;
+```
+
+<Canvas of={ModalStories.Modal} />
+
+### Modal Content
+
+### Props
+
+<ArgTypes of={ModalContent} />
+
+### Usage
+
+```js
+import { Modal, ModalContent } from '@orfium/ictinus';
+
+<Modal
+  isOpen={true}
+  onClose={closeFunc}
+  contentProps={{
+    label: 'Label',
+    heading: 'Heading',
+    message:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tristique eros at fringilla fringilla. Donec volutpat lobortis euismod',
+    primaryCTALabel: 'Do Action',
+    primaryCTA: actionCallback,
+    secondaryCTALabel: 'Cancel',
+    secondaryCTA: cancelCallback,
+  }}
+></Modal>;
+```
+
+<Canvas of={ModalStories.ModalContent} />

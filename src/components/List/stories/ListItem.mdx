@@ -1,0 +1,66 @@
+import { Meta, Canvas, ArgTypes, Story } from '@storybook/blocks';
+import List, { ListItem, ListItemAction, ListItemText } from '../index';
+import SectionHeader from '../../../storybook/SectionHeader';
+import * as ListItemStories from './ListItem.stories';
+
+<Meta of={ListItemStories} />
+
+<SectionHeader title={'ListItem'} />
+
+- [Overview](#overview)
+- [Usage](#usage)
+- [Props](#props)
+- [Variants](#variants)
+- [References](#references)
+
+## Overview
+
+The ListItem component represents an individual item in the List. It can contain
+eitherListItemText or ListItemAction, both, or custom component.
+
+## Usage
+
+<UsageGuidelines
+  guidelines={[
+    '`normal` rowSize items can only show secondary help text',
+    'Use as versatile elements to serve as individual options on single or multi selection dropdown menus and lists',
+    `If the children are not plain text, then the textValue prop must also be set to a plain text representation, which will be used to identify clean text by List and ListItem.`,
+  ]}
+/>
+
+```js
+import { List, ListItem } from '@orfium/ictinus';
+
+const MyComponent = () => {
+  return (
+    <List>
+      <ListItem>...</ListItem>
+      <ListItem>...</ListItem>
+    </List>
+  );
+};
+```
+
+## Props
+
+<ArgTypes of={ListItem} />
+
+<SubsectionHeader title="Variants" />
+
+### ListItem Compilations
+
+<Canvas of={ListItemStories.ListItemCompilations} />
+
+### Disabled ListItem
+
+<Canvas of={ListItemStories.DisabledListItem} />
+
+### References
+
+All references for a complete `<List>` with all component mentioned throughout the `<List>` section.
+
+- [List](../?path=/docs/updated-components-list-list--overview)
+- [ListSection](../?path=/docs/updated-components-list-listsection--overview)
+- [ListItem](../?path=/docs/updated-components-list-listitem--overview)
+- [ListItemText](../?path=/docs/updated-components-list-listitemtext--overview)
+- [ListItemAction](../?path=/docs/updated-components-list-listitemaction--overview)

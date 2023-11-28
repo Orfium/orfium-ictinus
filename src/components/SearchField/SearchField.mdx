@@ -1,0 +1,39 @@
+import { Meta, Canvas, ArgTypes, Story } from '@storybook/blocks';
+import SearchField from './SearchField';
+import * as SearchFieldStories from './SearchField.stories';
+
+<Meta of={SearchFieldStories} />
+
+# SearchField
+
+A Search field component based on the TextInputBase's styles.
+
+## Usage
+
+```js
+import { SearchField } from '@orfium/ictinus';
+
+<SearchField onInput={console.log} />;
+```
+
+## Props
+
+<ArgTypes of={SearchField} />
+
+# Search Field
+
+Search Field
+
+<Canvas of={SearchFieldStories.SearchFieldStory} />
+
+# Search Field disabled
+
+Disabled Search Field
+
+<Canvas of={SearchFieldStories.SearchFieldDisabled} />
+
+# Search Field with placeholder
+
+Search Field with placeholder
+
+<Canvas of={SearchFieldStories.SearchFieldWithPlaceholder} />

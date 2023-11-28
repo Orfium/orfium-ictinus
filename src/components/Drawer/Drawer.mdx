@@ -1,0 +1,37 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
+import DrawerShowcase from '../storyUtils/DrawerShowcase';
+import Drawer from './Drawer';
+import { FIGMA_URL } from '../../utils/common';
+import * as DrawerStories from './Drawer.stories';
+
+<Meta of={DrawerStories} />
+
+# Drawer
+
+A universal Drawer component
+
+## Usage
+
+```js
+import { Drawer } from '@orfium/ictinus';
+
+<Drawer expanded={expanded} menuItems={menuItems} />;
+```
+
+<b>Important tip: </b>
+
+When rendering the Drawer component, the parent component should have `position: relative` in order for the Drawer to align correcly since it has `position: absolute`.
+
+## Props
+
+<ArgTypes of={Drawer} />
+
+# Drawer
+
+Drawer
+
+<Canvas of={DrawerStories.DrawerStory} />
+
+Drawer with custom component
+
+<Canvas of={DrawerStories.DrawerWithCustomComponent} />
