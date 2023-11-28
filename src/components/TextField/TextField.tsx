@@ -1,16 +1,18 @@
 import useFieldUtils from 'hooks/useFieldUtils';
 import { omit } from 'lodash';
-import React, { InputHTMLAttributes, useRef } from 'react';
+import type { InputHTMLAttributes} from 'react';
+import React, { useRef } from 'react';
 import isEqual from 'react-fast-compare';
 import InputMask from 'react-input-mask';
 import { generateUniqueID } from 'utils/helpers';
 
 import { suffixContainerStyle } from './TextField.style';
-import { TestProps } from '../../utils/types';
+import type { TestProps } from '../../utils/types';
 import Label from '../Label';
 import MultiTextFieldBase from 'components/MultiTextFieldBase/MultiTextFieldBase';
-import { SelectOption } from 'components/Select';
-import TextInputBase, { TextInputBaseProps } from 'components/TextInputBase';
+import type { SelectOption } from 'components/Select';
+import type { TextInputBaseProps } from 'components/TextInputBase';
+import TextInputBase from 'components/TextInputBase';
 import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
 
 export type InputProps = Partial<
