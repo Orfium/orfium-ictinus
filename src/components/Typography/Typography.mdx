@@ -1,0 +1,74 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
+import SectionHeader from '../../storybook/SectionHeader';
+import * as TypographyStories from './Typography.stories';
+import Typography from './Typography';
+import Overview from '../../storybook/Overview';
+
+<Meta of={TypographyStories} />
+
+<SectionHeader title={'Typography'} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
+
+## Overview
+
+A global component that is used to represent any text.
+
+## Usage
+
+<UsageGuidelines
+  guidelines={[
+    'Headline: Used for short, high-emphasis text and to establish content hierarchy within the page',
+    'Title: Used for short, medium-emphasis text that is smaller than a headline and for text within components',
+    'Label: Used for medium emphasis text and potentially longer text strings than a title and for text within components',
+    'Body: Used for long passages of copy (regular emphasis) and for text within components',
+  ]}
+  policies={['Never include more than one H1 title per web page.']}
+/>
+
+## Props
+
+<ArgTypes of={Typography} />
+
+<SubsectionHeader title="Variants" />
+
+General use of Typography based on available variants
+
+<Canvas of={TypographyStories.Variants} />
+
+### Font Spacing Variations
+
+We have 2 different font spacing variations, normal (font-family: Roboto) and mono (font-family: Roboto Mono)
+
+<Canvas of={TypographyStories.FontSpacingVariations} />
+
+### Types (default)
+
+General use of Typography based on available light types
+
+<Canvas of={TypographyStories.TypesDefault} />
+
+### Types (inverted)
+
+General use of Typography based on available inverted type.
+Inverted type is used to show content **on darker background** and **is not linked with dark variation**
+The following example is based on dark background so we can show the difference.
+
+<Canvas of={TypographyStories.TypesInverted} />
+
+### Extra style
+
+Typography extra styles like bold, italic and underline
+
+<Canvas of={TypographyStories.ExtraStyle} />
+
+### As specific element
+
+Define Typography based on custom component - below are listed by default value
+
+You can define component to be any of the following `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `p`, `span`
+
+<Canvas of={TypographyStories.AsSpecificElement} />

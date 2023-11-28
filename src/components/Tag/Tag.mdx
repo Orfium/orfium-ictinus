@@ -1,0 +1,78 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
+import Tag from './Tag';
+import SectionHeader from '../../storybook/SectionHeader';
+import * as TagStories from './Tag.stories';
+
+<Meta of={TagStories} />
+
+<SectionHeader title={'Tag'} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
+
+## Overview
+
+A universal Tag that is used to highlight system-generated metadata.
+
+## Props
+
+<ArgTypes of={Tag} />
+
+## Usage
+
+<UsageGuidelines
+  guidelines={[
+    'Use tags to show metadata that needs to be highlighted somehow',
+    'Use tags to relate secondary information about a page element (e.g. a “Writer” tag next to a name)',
+    'Use selectable tags to quickly filter existing content',
+  ]}
+  policies={[
+    'Do not use tags as standalone elements in a page; they should always relate to something else',
+    'Do not use tags for complex filtering. If you want a tag that shows a select menu upon being clicked, used filters instead',
+    'Try not to use selectable tags within tables, as they might confuse the user. Opt for read-only tag variants when possible',
+  ]}
+/>
+
+<SubsectionHeader title="Variants" />
+
+### Read-only Tag
+
+Read-only Tag comes in 5 colors: `neutral`, `blue`, `red`, `purple` and `teal`.
+
+<Canvas of={TagStories.ReadOnlyTag} />
+
+### Read-only Tag with icon
+
+An leading icon can be added to the read-only Tag.
+
+<Canvas of={TagStories.ReadOnlyTagWithIcon} />
+
+### Selectable Tag
+
+Tag can also be selectable. To enable this functionality, provide the `onSelect` prop to the component.<br/>
+The `isSelected` prop indicates whether the Tag is selected or not.
+
+<Canvas of={TagStories.SelectableTag} />
+
+### Clearable Tag
+
+Tag can also be clearable. To enable this functionality, provide the `onClear` prop to the component
+
+<Tip>
+  Tags cannot be selectable and clearable at the same time. If the onClear prop is provided, it
+  overrides the selectable functionality
+</Tip>
+
+<Canvas of={TagStories.ClearableTag} />
+
+### Tag sizes
+
+There are two Tag sizes: `normal` and `small`.
+
+<Canvas of={TagStories.TagSizes} />
+
+### Playground
+
+<Canvas of={TagStories.Playground} />

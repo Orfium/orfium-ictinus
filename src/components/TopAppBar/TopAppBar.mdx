@@ -1,0 +1,56 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
+import TopAppBar from './TopAppBar';
+import UserMenu from './components/UserMenu/UserMenu';
+import * as TopAppBarStories from './TopAppBar.stories';
+
+<Meta of={TopAppBarStories} />
+
+# TopAppBar
+
+A universal TopAppBar component.
+
+## Usage
+
+```js
+import { TopNavBar } from '@orfium/ictinus';
+
+<TopNavBar
+  isDark={false}
+  logoIcon={<Icon />}
+  onMenuIconClick={() => {}}
+  userMenu={{
+    items: ['item1', 'item2'],
+    userAvatar: { letter: 'JD', src: 'http://lorem.com/john-doe-profile.jpg' },
+    userName: 'John Doe',
+    onSelect: () => {},
+  }}
+  additionalTools={<div>Extra Information</div>}
+  onSearchHandler={() => {}}
+/>;
+```
+
+## Props
+
+<ArgTypes of={TopAppBar} />
+
+## UserMenu Props
+
+<ArgTypes of={UserMenu} />
+
+# TopAppBar with Logo Placeholder
+
+<Canvas of={TopAppBarStories.WithLogoPlaceholder} />
+
+# TopAppBar with additionalTools
+
+<Canvas of={TopAppBarStories.WithAdditionalTools} />
+
+# TopAppBar Dark Theme
+
+<Canvas of={TopAppBarStories.WithDarkThemeEnabled} />
+
+# TopAppBar Playground
+
+TopAppBar Playground
+
+<Canvas of={TopAppBarStories.Playground} />
