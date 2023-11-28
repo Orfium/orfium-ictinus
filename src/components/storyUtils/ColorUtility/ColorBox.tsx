@@ -1,4 +1,5 @@
-import React, { FCC } from 'react';
+import type { FCC } from 'react';
+import React from 'react';
 
 import { colorWrapper, contentWrapper } from './ColorUtility.style';
 import RangeInput from './RangeInput';

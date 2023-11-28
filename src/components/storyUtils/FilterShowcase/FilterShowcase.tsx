@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Filter from 'components/Filter';
-import { FilterOption, FilterType, StyleType } from 'components/Filter/types';
+import type { FilterOption, FilterType, StyleType } from 'components/Filter/types';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const dummyUnrefinedData = Array.from({ length: 15 }, (value, index) => ({

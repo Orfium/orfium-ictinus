@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import Button from '../../Button';
 import Overlay from '../../Overlay';
-import { AnchorType } from '../../Overlay/Overlay';
+import type { AnchorType } from '../../Overlay/Overlay';
 
 const OverlayShowcase: React.FCC<{ anchor: AnchorType; size: string; hasPlayground?: boolean }> = ({
   anchor,

@@ -53,7 +53,7 @@ const TableFilterShowcase: React.FCC = () => {
   return (
     <div style={{ margin: 20 }}>
       <p>search more than 3 characters </p>
-      <input placeholder={'search'} value={search} onChange={(e) => setSearch(e.target.value)} />
+      <input placeholder="search" value={search} onChange={(e) => setSearch(e.target.value)} />
       <Table data={newUsers} columns={columns} />
     </div>
   );

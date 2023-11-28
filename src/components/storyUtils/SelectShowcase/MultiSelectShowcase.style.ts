@@ -1,7 +1,8 @@
-import { css, SerializedStyles } from '@emotion/react';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
 import { rem } from 'polished';
 
-import { Theme } from '../../../theme';
+import type { Theme } from '../../../theme';
 
 export const container =
   () =>

@@ -1,10 +1,11 @@
-import React, { FC, useState } from 'react';
+import type { FC } from 'react';
+import React, { useState } from 'react';
 
 import TextField from 'components/TextField/TextField';
-import { TextInputBaseProps } from 'components/TextInputBase';
+import type { TextInputBaseProps } from 'components/TextInputBase';
 
 type Props = {
-  mask: string;
+  mask?: string;
   hasSuffix?: boolean;
 } & Partial<
   Pick<
