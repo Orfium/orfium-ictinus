@@ -1,8 +1,8 @@
-import { InputHTMLAttributes } from 'react';
+import type { InputHTMLAttributes } from 'react';
 
-import { TestProps } from '../../utils/types';
-import { OwnProps as IconProps } from '../Icon';
-import { TextFieldProps } from '../TextField';
+import type { TestProps } from '../../utils/types';
+import type { OwnProps as IconProps } from '../Icon';
+import type { TextFieldProps } from '../TextField';
 
 export type SelectOptionValues = {
   value: string | number;

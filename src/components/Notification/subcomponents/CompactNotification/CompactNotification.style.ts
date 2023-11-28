@@ -1,8 +1,9 @@
-import { css, SerializedStyles } from '@emotion/react';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
 import { rem } from 'theme/utils';
 
-import { Theme } from '../../../../theme';
-import { NotificationStyleType, NotificationTypes } from '../../Notification';
+import type { Theme } from '../../../../theme';
+import type { NotificationStyleType, NotificationTypes } from '../../Notification';
 import { notificationsContainerPerType } from '../../Notification.style';
 
 export const notificationsContainer =

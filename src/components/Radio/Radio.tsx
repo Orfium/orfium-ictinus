@@ -9,7 +9,7 @@ import {
 } from './Radio.style';
 import useTheme from '../../hooks/useTheme';
 import { generateTestDataId } from '../../utils/helpers';
-import { TestId } from '../../utils/types';
+import type { TestId } from '../../utils/types';
 import useRadioGroup from '../RadioGroup/useRadioGroup';
 
 export type RadioProps = {
@@ -106,7 +106,7 @@ const Radio = React.forwardRef<HTMLInputElement, RadioProps>((props, ref) => {
         onBlur={handleBlur}
         onMouseLeave={handleBlur}
         onMouseOver={handleFocus}
-        type={'radio'}
+        type="radio"
         onChange={handleChange}
         name={nameValue}
         value={value}

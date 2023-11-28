@@ -1,7 +1,11 @@
 import * as React from 'react';
 
-import { TestId } from '../../../utils/types';
-import { NotificationActions, NotificationStyleType, NotificationTypes } from '../Notification';
+import type { TestId } from '../../../utils/types';
+import type {
+  NotificationActions,
+  NotificationStyleType,
+  NotificationTypes,
+} from '../Notification';
 import CompactNotification from '../subcomponents/CompactNotification';
 
 export type InlineNotificationProps = {
@@ -19,7 +23,7 @@ export type InlineNotificationProps = {
   dataTestId?: TestId;
 } & Pick<NotificationActions, 'primaryCTALabel' | 'primaryCTA'>;
 
-const InlineNotification: React.FCC<InlineNotificationProps> = ({
+const InlineNotification: React.FC<InlineNotificationProps> = ({
   hasIcon = false,
   message,
   type,
