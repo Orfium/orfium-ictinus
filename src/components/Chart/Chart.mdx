@@ -1,0 +1,66 @@
+import { Meta, Canvas, ArgTypes, Story } from '@storybook/blocks';
+import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
+import LineChart from './LineChart';
+import BarChartShowCase from '../storyUtils/BarChartShowCase';
+import BarChart from './BarChart';
+import DonutChart from './DonutChart';
+import DonutChartShowCase from '../storyUtils/DonutChartShowCase';
+import { color } from './LineChart/story.utils';
+import { initData } from './LineChart/mockedData';
+import * as ChartStories from './Chart.stories';
+
+<Meta of={ChartStories} />
+
+# LineChart
+
+A universal LineChart component for showing both single line and multiple line chart.
+
+## Usage
+
+```js
+import { LineChart } from '@orfium/ictinus';
+
+<LineChart data={[]} />;
+```
+
+## Props
+
+<ArgTypes of={LineChart} />
+
+<Canvas of={ChartStories.LineChartStory} />
+
+# BarChart
+
+A universal BarChart component.
+
+## Usage
+
+```js
+import { BarChart } from '@orfium/ictinus';
+
+<BarChart data={[]} />;
+```
+
+## Props
+
+<ArgTypes of={BarChart} />
+
+<Canvas of={ChartStories.BarChart} />
+
+# DonutChart
+
+A universal DonutChart component.
+
+## Usage
+
+```js
+import { DonutChart } from '@orfium/ictinus';
+
+<DonutChart data={[]} />;
+```
+
+## Props
+
+<ArgTypes of={DonutChart} />
+
+<Canvas of={ChartStories.DonutChart} />
