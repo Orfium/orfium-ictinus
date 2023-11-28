@@ -1,8 +1,10 @@
-import { css, SerializedStyles } from '@emotion/react';
-import { Theme } from 'theme';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
+import type { Theme } from 'theme';
 
-import { ButtonTokens, getButtonTokens } from '../Button/Button.tokens';
-import { PrimitiveButtonTypes } from '../Button/Button.types';
+import type { ButtonTokens} from '../Button/Button.tokens';
+import { getButtonTokens } from '../Button/Button.tokens';
+import type { PrimitiveButtonTypes } from '../Button/Button.types';
 
 const rotateSVG = (deg: number) => {
   return {
