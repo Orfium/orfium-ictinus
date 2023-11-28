@@ -1,0 +1,98 @@
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-1 {
+  display: grid;
+  grid-template-areas: 'label value' 'bar bar';
+  grid-template-columns: 1fr auto;
+  gap: 0.25rem;
+  width: 100%;
+}
+
+.emotion-1:not([aria-valuenow]) .fill {
+  width: 50%;
+  border-radius: 6.25rem;
+  -webkit-animation: indeterminate 1.7s infinite ease-in-out;
+  animation: indeterminate 1.7s infinite ease-in-out;
+  will-change: transform;
+}
+
+.emotion-2 {
+  grid-area: bar;
+  background-color: #e7eefe;
+  height: 0.25rem;
+  border-radius: 6.25rem;
+  overflow: hidden;
+  will-change: transform;
+}
+
+.emotion-3 {
+  background: #175bf5;
+  height: 100%;
+  border-radius: 0 6.25rem 6.25rem 0;
+  width: 0%;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+}
+
+.emotion-4 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  color: #1B214F;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      style="margin: 5px; width: 18.75rem;"
+    >
+      <div
+        style="display: flex; gap: 32px; align-items: center; flex-direction: column;"
+      >
+        <div
+          aria-valuemax="100"
+          aria-valuemin="0"
+          aria-valuenow="0"
+          aria-valuetext="0%"
+          class="emotion-1"
+          data-rac=""
+          id="react-aria-:r7d:"
+          role="progressbar"
+        >
+          <div
+            class="bar emotion-2"
+            data-testid="undefined_linear_progress_container"
+          >
+            <div
+              class="fill emotion-3"
+              data-testid="undefined_linear_progress_value"
+            />
+          </div>
+        </div>
+        <p
+          class="emotion-4"
+        >
+          Loading: 
+          0
+          %
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

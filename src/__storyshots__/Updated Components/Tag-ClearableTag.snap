@@ -1,0 +1,131 @@
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 1.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  box-sizing: border-box;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  cursor: auto;
+  background: #ffffff;
+  color: #1249C4;
+  border: 0.0625rem solid;
+  border-color: #b9cdfc;
+  border-radius: 0.25rem;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-0:focus-visible {
+  background: #F5F5FF;
+  border-color: #175bf5;
+}
+
+.emotion-1 {
+  width: 1rem;
+  height: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.emotion-1:hover {
+  background: rgba(84,94,255,0.06);
+  border-radius: 6.25rem;
+}
+
+.emotion-2 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-3 {
+  fill: #1249C4;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-3 * {
+  fill: #1249C4;
+}
+
+<div>
+  <div
+    aria-label="Label"
+    aria-selected="false"
+    class="emotion-0"
+    data-testid="undefined_tag_container"
+    tabindex="0"
+  >
+    Label
+    <div
+      aria-hidden="true"
+      class="emotion-1"
+      tabindex="-1"
+    >
+      <span
+        class="emotion-2"
+        data-testid="undefined_tag_suffix"
+      >
+        <svg
+          class="emotion-3"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+        >
+          <g
+            fill="none"
+            fill-rule="evenodd"
+            id="\\uD83D\\uDD36-Symbols"
+            stroke="none"
+            stroke-width="1"
+          >
+            <g
+              id="Close"
+            >
+              <path
+                d="M17.6568542,4.92893219 L19.0710678,6.34314575 L13.4139322,11.9999322 L19.0710678,17.6568542 L17.6568542,19.0710678 L11.9999322,13.4139322 L6.34314575,19.0710678 L4.92893219,17.6568542 L10.5849322,11.9999322 L4.92893219,6.34314575 L6.34314575,4.92893219 L11.9999322,10.5849322 L17.6568542,4.92893219 Z"
+              />
+            </g>
+          </g>
+        </svg>
+      </span>
+    </div>
+  </div>
+</div>

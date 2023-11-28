@@ -1,0 +1,105 @@
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1 {
+  width: 80%;
+  font-size: 0.75rem;
+  color: #5f6c85;
+  text-align: center;
+}
+
+<div>
+  <div
+    style="width: 200px; height: 200px;"
+  >
+    <div
+      class="recharts-wrapper"
+      role="region"
+      style="position: relative; cursor: default; width: 1000px; height: 500px;"
+    >
+      <svg
+        class="recharts-surface"
+        cx="50%"
+        cy="50%"
+        height="500"
+        viewBox="0 0 1000 500"
+        width="1000"
+      >
+        <title />
+        <desc />
+        <defs>
+          <clippath
+            id="recharts11-clip"
+          >
+            <rect
+              height="490"
+              width="990"
+              x="5"
+              y="5"
+            />
+          </clippath>
+        </defs>
+        <g
+          class="recharts-layer recharts-pie"
+          tabindex="0"
+        >
+          <g
+            class="recharts-layer"
+          >
+            <g
+              class="recharts-layer recharts-pie-sector"
+              tabindex="-1"
+            />
+            <g
+              class="recharts-layer recharts-pie-sector"
+              tabindex="-1"
+            />
+          </g>
+          <g>
+            <text
+              class="recharts-text recharts-label"
+              dominant-baseline="central"
+              text-anchor="middle"
+              x="500"
+              y="250"
+            >
+              <tspan
+                alignment-baseline="middle"
+                dy="-7"
+                fill="black"
+                font-size="1rem"
+                x="50%"
+              >
+                value
+              </tspan>
+            </text>
+            <foreignobject
+              height="100"
+              width="100%"
+              y="52%"
+            >
+              <div
+                class="emotion-0"
+              >
+                <div
+                  class="emotion-1"
+                >
+                  units
+                </div>
+              </div>
+            </foreignobject>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+</div>

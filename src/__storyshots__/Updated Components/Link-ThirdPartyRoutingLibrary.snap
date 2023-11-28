@@ -1,0 +1,58 @@
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  color: #1552DD;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0.25rem solid rgba(84,94,255,0);
+  opacity: 1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  pointer-events: default;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.375rem;
+  font-size: 1rem;
+  letter-spacing: 0.00625rem;
+}
+
+.emotion-0:hover {
+  color: #1B214F;
+}
+
+.emotion-0:hover path {
+  fill: #1B214F;
+}
+
+.emotion-0:visited {
+  color: #6c28cc;
+}
+
+.emotion-0:visited path {
+  fill: #6c28cc;
+}
+
+.emotion-0:focus-visible {
+  border: 0.25rem solid #9347ff;
+}
+
+<div>
+  <a
+    class="emotion-0"
+    data-testid="_link"
+    href="/"
+  >
+    <span>
+      Link
+    </span>
+  </a>
+</div>
