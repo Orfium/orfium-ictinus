@@ -1,6 +1,7 @@
-import { SerializedStyles, css } from '@emotion/react';
+import type { SerializedStyles} from '@emotion/react';
+import { css } from '@emotion/react';
 import emotionReset from 'emotion-reset';
-import { Theme } from 'theme';
+import type { Theme } from 'theme';
 
 export const scrollbar = (theme: Theme): SerializedStyles => css`
   // for Firefox
