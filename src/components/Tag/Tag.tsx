@@ -1,9 +1,9 @@
 import React from 'react';
-import { DivProps } from 'utils/common';
+import type { DivProps } from 'utils/common';
 
 import useGetTagUtils from './hooks/useGetTagUtils';
 import { tagContainerStyles } from './Tag.style';
-import { TagProps } from './Tag.types';
+import type { TagProps } from './Tag.types';
 
 const Tag = React.forwardRef<HTMLDivElement, DivProps & TagProps>(
   (

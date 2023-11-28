@@ -1,5 +1,5 @@
-import { Theme } from 'theme';
-import { FontSpacing, SemanticTypographyKey } from 'theme/tokens/semantic/typography';
+import type { Theme } from 'theme';
+import type { FontSpacing, SemanticTypographyKey } from 'theme/tokens/semantic/typography';
 
 import { generateStylesFromTokens } from './utils';
 
