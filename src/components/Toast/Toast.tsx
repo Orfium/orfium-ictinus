@@ -39,7 +39,7 @@ export const isNotificationTypes = (type: string): type is NotificationTypes => 
   return ['success', 'error', 'warning', 'info'].includes(type);
 };
 
-const Toast: React.FC<React.PropsWithChildren<ToastProps>> = ({
+const Toast: React.FCC<ToastProps> = ({
   message,
   type = 'primary',
   styleType = 'elevated',
