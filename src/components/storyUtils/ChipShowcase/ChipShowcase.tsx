@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import Chip from '../../Chip';
-import { ChipProps } from '../../Chip/Chip.types';
+import type { ChipProps } from '../../Chip/Chip.types';
 
 const ChipShowcase: React.FCC<ChipProps> = ({ children, isChecked, ...props }) => {
   const [isSelected, setIsSelected] = useState(false);
