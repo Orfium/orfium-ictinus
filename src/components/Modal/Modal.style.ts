@@ -1,9 +1,10 @@
-import { css, SerializedStyles } from '@emotion/react';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
 import { transparentize } from 'polished';
 import { rem } from 'theme/utils';
 
-import { ModalProps } from './Modal';
-import { Theme } from '../../theme';
+import type { ModalProps } from './Modal';
+import type { Theme } from '../../theme';
 
 export const backgroundContainer = (theme: Theme): SerializedStyles => css`
   position: fixed;

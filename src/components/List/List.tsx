@@ -3,17 +3,18 @@ import { useListBox, useOption } from '@react-aria/listbox';
 import { mergeProps } from '@react-aria/utils';
 import { useListState } from '@react-stately/list';
 import React from 'react';
-import { AriaListBoxProps, useListBoxSection } from 'react-aria';
-import { TestProps } from 'utils/types';
+import type { AriaListBoxProps } from 'react-aria';
+import { useListBoxSection } from 'react-aria';
+import type { TestProps } from 'utils/types';
 
 import ListItemWrapper from './components/ListItemWrapper/ListItemWrapper';
 import { ListItemWrapperStyled } from './components/ListItemWrapper/ListItemWrapper.style';
 import { groupedUlStyle, listStyle, wrapperStyle } from './List.style';
-import { ListSelected, ListSelection } from './types';
+import type { ListSelected, ListSelection } from './types';
 import { LIST_ITEM_HEIGHT } from './utils';
 import Window from './Window';
 import useCombinedRefs from '../../hooks/useCombinedRefs';
-import { SelectOption } from '../Select';
+import type { SelectOption } from '../Select';
 
 export type ListProps = {
   /** The label that describes the List, useful to determine aria and accessibility of the list  */

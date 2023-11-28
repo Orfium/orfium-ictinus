@@ -1,6 +1,6 @@
 import useKeyboardEvents from 'hooks/useKeyboardEvents';
 import React from 'react';
-import { Dayjs } from 'utils/date';
+import type { Dayjs } from 'utils/date';
 
 import { dayStyle, dayWrapperStyle, emptyDayStyle } from './Day.style';
 import { currentDay } from '../utils';

@@ -1,8 +1,9 @@
 import listItem from 'theme/tokens/components/variables/listItem';
 import menu from 'theme/tokens/components/variables/menu';
-import { getComponentTokens, DotKeys } from 'theme/tokens/utils';
+import type { DotKeys } from 'theme/tokens/utils';
+import { getComponentTokens } from 'theme/tokens/utils';
 
-import { Theme } from '../../theme';
+import type { Theme } from '../../theme';
 
 export type ListTokens = DotKeys<typeof menu>;
 export type ListItemTokens = DotKeys<typeof listItem>;
