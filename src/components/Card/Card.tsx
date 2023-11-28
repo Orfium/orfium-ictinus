@@ -13,7 +13,12 @@ export type CardProps = {
   radius?: SpacingKey;
 };
 
-const Card: React.FCC<CardProps> = ({ elevated, isTransparent = false, radius, children }) => {
+const Card: React.FC<React.PropsWithChildren<CardProps>> = ({
+  elevated,
+  isTransparent = false,
+  radius,
+  children,
+}) => {
   return <div css={cardStyle({ elevated, isTransparent, radius })}>{children}</div>;
 };
 
