@@ -2,10 +2,10 @@ import * as React from 'react';
 
 import iconSelector from './assets/iconSelector';
 import { iconContainerStyle, iconStyle } from './Icon.style';
-import { AcceptedIconNames } from './types';
-import { colorShades } from '../../theme/palette';
-import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
-import { TestProps } from '../../utils/types';
+import type { AcceptedIconNames } from './types';
+import type { colorShades } from '../../theme/palette';
+import type { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
+import type { TestProps } from '../../utils/types';
 
 export type OwnProps = {
   /** This property defines witch icon to use */

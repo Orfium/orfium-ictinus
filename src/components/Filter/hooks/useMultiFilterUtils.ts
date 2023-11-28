@@ -1,8 +1,8 @@
 import { isEqual } from 'lodash';
 import { useCallback, useEffect, useState } from 'react';
 
-import { FilterOption } from '../types';
-import { FilterProps } from '../types';
+import type { FilterOption } from '../types';
+import type { FilterProps } from '../types';
 import { SELECT_ALL_OPTION } from 'components/Select/constants';
 
 type Props = Pick<
