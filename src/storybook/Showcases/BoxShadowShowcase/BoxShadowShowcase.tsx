@@ -41,10 +41,10 @@ const BoxShadowShowcase = () => {
               })}
             />
             <div css={{ margin: 10, flex: 1 }}>
-              <Typography isBold variant={'title01'} type={'primary'}>
+              <Typography isBold variant="title01" type="primary">
                 $boxShadow.{index}
               </Typography>
-              <Typography variant={'body02'} type={'secondary'}>
+              <Typography variant="body02" type="secondary">
                 {value}
               </Typography>
             </div>

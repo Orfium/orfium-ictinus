@@ -1,6 +1,9 @@
-import React, { FCC, useMemo } from 'react';
+import { Unstyled } from '@storybook/blocks';
+import type { FCC } from 'react';
+import React, { useMemo } from 'react';
 
-import TypographyComponent, { TypographyVariant } from '../../components/Typography';
+import type { TypographyVariant } from '../../components/Typography';
+import TypographyComponent from '../../components/Typography';
 
 export type TypographyProps = {
   children: string;
@@ -14,9 +17,11 @@ const Typography: FCC<TypographyProps> = ({ children, variant, ...rest }) => {
   );
 
   return (
-    <TypographyComponent id={id} variant={variant} {...rest}>
-      {children}
-    </TypographyComponent>
+    <Unstyled>
+      <TypographyComponent id={id} variant={variant} {...rest}>
+        {children}
+      </TypographyComponent>
+    </Unstyled>
   );
 };
 
