@@ -1,12 +1,12 @@
-import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
 import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
 import Pagination from './Pagination';
 import { FIGMA_URL } from '../../utils/common';
 
-<Meta
-  title="Original Components/Pagination"
-  component={Pagination}
-  parameters={{
+export default {
+  title: 'Original Components/Pagination',
+  component: Pagination,
+
+  parameters: {
     design: [
       {
         type: 'figma',
@@ -14,31 +14,11 @@ import { FIGMA_URL } from '../../utils/common';
         url: `${FIGMA_URL}?node-id=1621%3A445`,
       },
     ],
-  }}
-/>
+  },
+};
 
-# Pagination
-
-The pagination component that will be controlled by the parent on any product
-
-## Usage
-
-```js
-import { Pagination } from '@orfium/ictinus';
-
-<Pagination count={3} page={1} />;
-```
-
-## Props
-
-<Props of={Pagination} />
-
-# Pagination
-
-Simple pagination with all buttons
-
-<Preview>
-  <Story name="Pagination" parameters={{ decorators: [withKnobs] }}>
+export const PaginationStory = {
+  render: () => (
     <Pagination
       count={3}
       page={1}
@@ -46,15 +26,17 @@ Simple pagination with all buttons
       isNextPageDisabled={boolean('isNextPageDisabled', false)}
       isPrevPageDisabled={boolean('isPrevPageDisabled', false)}
     />
-  </Story>
-</Preview>
+  ),
 
-# Pagination Without all buttons
+  name: 'Pagination',
 
-Simple pagination without jumping on first or last page
+  parameters: {
+    decorators: [withKnobs],
+  },
+};
 
-<Preview>
-  <Story name="Pagination without all buttons" parameters={{ decorators: [withKnobs] }}>
+export const PaginationWithoutAllButtons = {
+  render: () => (
     <Pagination
       count={3}
       page={1}
@@ -62,5 +44,11 @@ Simple pagination without jumping on first or last page
       isNextPageDisabled={boolean('isNextPageDisabled', false)}
       isPrevPageDisabled={boolean('isPrevPageDisabled', false)}
     />
-  </Story>
-</Preview>
+  ),
+
+  name: 'Pagination without all buttons',
+
+  parameters: {
+    decorators: [withKnobs],
+  },
+};

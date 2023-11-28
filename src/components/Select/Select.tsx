@@ -8,10 +8,10 @@ import { generateTestDataId, generateUniqueID } from 'utils/helpers';
 import SelectMenu from './components/SelectMenu/SelectMenu';
 import { SELECT_ALL_OPTION } from './constants';
 import { suffixContainer, selectWrapper } from './Select.style';
-import { SelectOption, SelectProps } from './types';
+import type { SelectOption, SelectProps } from './types';
 import useCombinedRefs from '../../hooks/useCombinedRefs';
 import useTheme from '../../hooks/useTheme';
-import { ChangeEvent } from '../../utils/common';
+import type { ChangeEvent } from '../../utils/common';
 import Box from '../Box';
 import Icon from '../Icon';
 import TextField from '../TextField';
@@ -87,7 +87,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
 
           /** When the textField's value equals the selectedOption's label we should clear the field*/
           if (!isMulti) {
-            if (selectedOption && onChange) {
+            if (selectedOption && onChange && 'label' in selectedOption) {
               if (selectedOption.label === textFieldValue) {
                 onChange(undefined);
                 setSearchValue('');
@@ -142,7 +142,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
       setSearchValue('');
     }
 
-    if (isMulti) {
+    if (isMulti === true) {
       if (onChange && selectedOption) {
         if (isEqual(option, SELECT_ALL_OPTION)) {
           onChange(options.filter((o) => !o.isDisabled));
@@ -152,6 +152,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
       }
     } else {
       if (onChange) {
+        // @ts-ignore
         onChange(option);
       }
     }
@@ -348,7 +349,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
                 autoComplete="off"
                 {...keyboardProps}
                 onClick={() => setIsOpen(true)}
-                role={'combobox'}
+                role="combobox"
                 aria-expanded={isOpen}
                 aria-controls={selectUniqueId}
               />
@@ -357,18 +358,17 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
                 suffix={suffixRender}
                 {...keyboardProps}
                 onInput={handleOnInput}
-                readOnly={!isSearchable}
+                isReadOnly={!isSearchable}
                 isDisabled={isDisabled}
                 dataTestId={generateTestDataId('select-input', dataTestId)}
                 {...restInputProps}
-                placeholder={undefined}
                 onClick={() => setIsOpen(true)}
                 status={status}
                 value={textFieldValue}
                 size={size}
                 ref={combinedRefs}
                 autoComplete="off"
-                role={'combobox'}
+                role="combobox"
                 aria-expanded={isOpen}
                 aria-controls={selectUniqueId}
               />
@@ -379,7 +379,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
             ref={listRef}
             filteredOptions={filteredOptions}
             handleOptionClick={handleOptionClick}
-            selectedOption={isMulti || !selectedOption ? emptyValue : selectedOption}
+            selectedOption={isMulti === true || !selectedOption ? emptyValue : selectedOption}
             status={status}
             isLoading={isLoading}
             isVirtualized={isVirtualized}
