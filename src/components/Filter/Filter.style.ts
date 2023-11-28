@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 import { rem } from 'theme/utils';
 
-import { ButtonStyleProps } from './types';
+import type { ButtonStyleProps } from './types';
 import {
   borderStyleParams,
   focusBorderWidth,
@@ -11,7 +11,7 @@ import {
   HAS_SELECTED_VALUE_COLOR_SHADE,
   transparentFocusBorderWidth,
 } from './utils';
-import { Theme } from '../../theme';
+import type { Theme } from '../../theme';
 import { getFocus, getHover, getPressed } from '../../theme/states';
 
 export const wrapperStyle = () => () => {
