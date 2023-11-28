@@ -4,14 +4,14 @@ import React from 'react';
 import { render, screen } from '../../test';
 import Switch from './Switch';
 
-const mockChange = jest.fn();
+const mockChange = vi.fn();
 
 describe('Switch', () => {
-  it('will correctly call onChange when clicked', () => {
+  it('will correctly call onChange when clicked', async () => {
     render(<Switch isChecked={false} onChange={mockChange} />);
     const switchComponent = screen.getByTestId('switch');
 
-    userEvent.click(switchComponent);
+    await userEvent.click(switchComponent);
 
     expect(mockChange).toHaveBeenCalledTimes(1);
     expect(mockChange).toHaveBeenCalledWith(true, expect.anything(), undefined);

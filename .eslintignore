@@ -10,5 +10,6 @@ server
 **/*.test.ts
 **/*.test.tsx
 __mocks__
-./jest.config.js
+./vite.config.ts
 ./rollup.config.js
+!.storybook

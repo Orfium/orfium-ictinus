@@ -5,9 +5,10 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:react-hooks/recommended",
     "plugin:react/recommended",
-    "plugin:import/typescript"
+    "plugin:import/typescript",
+    "plugin:storybook/recommended"
   ],
-  "plugins": ["react", "@emotion", "@typescript-eslint", "import"],
+  "plugins": ["react", "@emotion", "@typescript-eslint", "import", "unused-imports"],
   "env": {
     "node": true,
     "browser": true,
@@ -16,11 +17,17 @@
     "es6": true
   },
   "rules": {
+    "no-unused-vars": "off", // or "@typescript-eslint/no-unused-vars": "off",
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
+    ],
+    "@typescript-eslint/consistent-type-imports": "error",
     "react/no-unknown-property": ["error", { "ignore": ["css"] }],
     /* React rules */
     "react/no-direct-mutation-state": "error",
     "react/no-unused-prop-types": "warn",
-    "react/no-unknown-property": ["error", { "ignore": ["css"] }],
     "react/self-closing-comp": [
       "warn",
       {
@@ -30,6 +37,8 @@
     ],
     "react/prop-types": "off",
     "react/button-has-type": "warn",
+
+    "@typescript-eslint/no-explicit-any": ["off"],
     "react/no-array-index-key": "warn",
     "react/no-render-return-value": 0,
     "react/boolean-prop-naming": [
@@ -41,6 +50,14 @@
     ],
     /* JSX rules */
     "react/jsx-key": "error",
+    "react/jsx-curly-brace-presence": ["error", "never"],
+    // Since we are using React 17+ we no longer need these
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/no-children-prop": "off",
+
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
     /* eslint basic rules */
     "padding-line-between-statements": [
       "error",

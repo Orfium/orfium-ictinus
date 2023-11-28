@@ -3,12 +3,12 @@ import { fireEvent, render } from '../../test';
 
 import Tag from './Tag';
 
-const handleSelect = jest.fn();
-const handleClear = jest.fn();
+const handleSelect = vi.fn();
+const handleClear = vi.fn();
 
 describe('Tag', () => {
   afterEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   test('that on selectable Tag the onSelect handler is being called when clicked', () => {

@@ -3,12 +3,13 @@ import { render } from 'test';
 
 import { fireEvent } from '../../test';
 import Radio from './Radio';
+import { Mock } from 'vitest';
 
 describe('Radio', () => {
-  let mockOnClick: jest.Mock<any, any>;
+  let mockOnClick: Mock<any, any>;
 
   beforeEach(() => {
-    mockOnClick = jest.fn();
+    mockOnClick = vi.fn();
   });
 
   it('should render correctly', () => {
