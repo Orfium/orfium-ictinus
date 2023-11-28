@@ -1,5 +1,6 @@
-import { css, SerializedStyles, keyframes } from '@emotion/react';
-import { Theme } from 'theme';
+import type { SerializedStyles} from '@emotion/react';
+import { css, keyframes } from '@emotion/react';
+import type { Theme } from 'theme';
 import { rem } from 'theme/utils';
 
 import { getButtonTokens } from '../../Button/Button.tokens';

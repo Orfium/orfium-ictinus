@@ -1,4 +1,4 @@
-import { AvatarColors, AvatarSizes } from '../Avatar.types';
+import type { AvatarColors, AvatarSizes } from '../Avatar.types';
 
 export type AvatarStackProps = {
   /** the maximum number of avatars to be displayed **/

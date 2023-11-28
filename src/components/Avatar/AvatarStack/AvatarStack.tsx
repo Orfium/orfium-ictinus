@@ -1,10 +1,10 @@
 import React, { useCallback } from 'react';
-import { DivProps } from 'utils/common';
+import type { DivProps } from 'utils/common';
 import { errorHandler, generateTestDataId } from 'utils/helpers';
-import { TestProps } from 'utils/types';
+import type { TestProps } from 'utils/types';
 
 import { avatarStackStyle, avatarWrapperStyle } from './AvatarStack.style';
-import { AvatarStackProps } from './AvatarStack.types';
+import type { AvatarStackProps } from './AvatarStack.types';
 import { errors } from './utils';
 import Avatar from '../Avatar';
 

@@ -1,6 +1,6 @@
-import { Elevation } from 'index';
+import type { Elevation } from 'index';
 import React from 'react';
-import { SpacingKey } from 'theme/globals/spacing';
+import type { SpacingKey } from 'theme/globals/spacing';
 
 import { cardStyle } from './Card.style';
 
@@ -13,7 +13,12 @@ export type CardProps = {
   radius?: SpacingKey;
 };
 
-const Card: React.FCC<CardProps> = ({ elevated, isTransparent = false, radius, children }) => {
+const Card: React.FC<React.PropsWithChildren<CardProps>> = ({
+  elevated,
+  isTransparent = false,
+  radius,
+  children,
+}) => {
   return <div css={cardStyle({ elevated, isTransparent, radius })}>{children}</div>;
 };
 

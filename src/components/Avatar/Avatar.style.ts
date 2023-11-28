@@ -1,8 +1,9 @@
-import { css, SerializedStyles } from '@emotion/react';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
 
 import { getAvatarTextTokens, getAvatarTokens } from './Avatar.tokens';
-import { AvatarColors, AvatarSizes } from './Avatar.types';
-import { Theme } from '../../theme';
+import type { AvatarColors, AvatarSizes } from './Avatar.types';
+import type { Theme } from '../../theme';
 import { flex } from '../../theme/functions';
 import { generateStylesFromTokens } from 'components/Typography/utils';
 

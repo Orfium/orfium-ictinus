@@ -1,7 +1,8 @@
-import { css, SerializedStyles } from '@emotion/react';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
 
-import { ButtonBaseProps } from './ButtonBase';
-import { Theme } from '../../theme';
+import type { ButtonBaseProps } from './ButtonBase';
+import type { Theme } from '../../theme';
 import { getButtonTokens, getTextButtonTokens } from '../Button/Button.tokens';
 import { generateStylesFromTokens } from 'components/Typography/utils';
 

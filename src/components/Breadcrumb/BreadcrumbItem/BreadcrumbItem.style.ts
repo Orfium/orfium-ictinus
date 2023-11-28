@@ -1,7 +1,8 @@
-import { css, SerializedStyles } from '@emotion/react';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
 
-import { BreadcrumbItemProps } from './BreadcrumbItem';
-import { Theme } from '../../../theme';
+import type { BreadcrumbItemProps } from './BreadcrumbItem';
+import type { Theme } from '../../../theme';
 import { getBreadcrumbTokens } from '../Breadcrumb.tokens';
 import { generateStylesFromTokens } from 'components/Typography/utils';
 

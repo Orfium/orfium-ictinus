@@ -1,8 +1,9 @@
-import { css, SerializedStyles } from '@emotion/react';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
 import { flex } from 'theme/functions';
 
 import { getBreadcrumbTokens } from './Breadcrumb.tokens';
-import { Theme } from '../../theme';
+import type { Theme } from '../../theme';
 
 export const breadcrumbStyles =
   () =>
