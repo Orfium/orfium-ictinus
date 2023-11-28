@@ -73,7 +73,6 @@ describe('Storybook Tests', () => {
             </ThemeProvider>
           );
 
-          // screen.debug(mounted.container)
           // add a slightly delay to allow a couple render cycles to complete, resulting in a more stable snapshot.
           await new Promise((resolve) => setTimeout(resolve, 1));
 
