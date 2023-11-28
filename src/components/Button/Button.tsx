@@ -1,13 +1,17 @@
 import useTheme from 'hooks/useTheme';
 import React from 'react';
-import { CommonButtonProps } from 'utils/common';
-import { TestProps } from 'utils/types';
+import type { CommonButtonProps } from 'utils/common';
+import type { TestProps } from 'utils/types';
 
 import { buttonSpanStyle } from './Button.style';
-import { ButtonTokens, getButtonTokens } from '../Button/Button.tokens';
-import ButtonBase, { ButtonBaseProps } from '../ButtonBase/ButtonBase';
-import Avatar, { AvatarProps } from 'components/Avatar';
-import Icon, { AcceptedIconNames } from 'components/Icon';
+import type { ButtonTokens} from '../Button/Button.tokens';
+import { getButtonTokens } from '../Button/Button.tokens';
+import type { ButtonBaseProps } from '../ButtonBase/ButtonBase';
+import ButtonBase from '../ButtonBase/ButtonBase';
+import type { AvatarProps } from 'components/Avatar';
+import Avatar from 'components/Avatar';
+import type { AcceptedIconNames } from 'components/Icon';
+import Icon from 'components/Icon';
 
 export type ButtonProps = ButtonBaseProps &
   TestProps &

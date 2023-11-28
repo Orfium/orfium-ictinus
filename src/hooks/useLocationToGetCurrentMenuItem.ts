@@ -1,7 +1,7 @@
 import { useLayoutEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
-import { DrawerMenuItem } from 'components/Drawer/types';
+import type { DrawerMenuItem } from 'components/Drawer/types';
 
 const useLocationToGetCurrentMenuItem = (
   menuItems: DrawerMenuItem[],
