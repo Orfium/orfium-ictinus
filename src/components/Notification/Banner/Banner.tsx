@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import { TestId } from '../../../utils/types';
-import { NotificationActions, NotificationStyleType, NotificationTypes } from '../Notification';
+import type { TestId } from '../../../utils/types';
+import type { NotificationActions, NotificationStyleType, NotificationTypes } from '../Notification';
 import CompactNotification from '../subcomponents/CompactNotification';
 
 export type BannerProps = {

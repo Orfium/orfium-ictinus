@@ -1,4 +1,4 @@
-import { TestProps } from 'utils/types';
+import type { TestProps } from 'utils/types';
 
 export type ProgressIndicatorProps = {
   /** The type of the progress indicator in terms of shape */

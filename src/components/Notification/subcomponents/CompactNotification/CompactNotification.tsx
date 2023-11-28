@@ -10,12 +10,12 @@ import {
 } from './CompactNotification.style';
 import useTheme from '../../../../hooks/useTheme';
 import { generateTestDataId } from '../../../../utils/helpers';
-import { TestId } from '../../../../utils/types';
+import type { TestId } from '../../../../utils/types';
 import Button from '../../../Button';
 import Icon from '../../../Icon';
-import { NotificationActions, NotificationStyleType, NotificationTypes } from '../../Notification';
+import type { NotificationActions, NotificationStyleType, NotificationTypes } from '../../Notification';
 import { iconContainer, actionContainer } from '../../Notification.style';
-import { AcceptedIconNames } from 'components/Icon/types';
+import type { AcceptedIconNames } from 'components/Icon/types';
 
 export type CompactNotificationVariants = 'inline' | 'banner' | 'card';
 

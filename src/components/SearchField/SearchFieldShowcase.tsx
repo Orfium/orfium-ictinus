@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 
-import SearchField, { SearchFieldProps } from './SearchField';
+import type { SearchFieldProps } from './SearchField';
+import SearchField from './SearchField';
 import Stack from '../storyUtils/Stack';
-import { TextFieldProps } from '../TextField/TextField';
+import type { TextFieldProps } from '../TextField/TextField';
 
 const SearchFieldShowcase = ({
   isDisabled,
@@ -19,7 +20,7 @@ const SearchFieldShowcase = ({
         value={value}
         onChange={(e: any) => setValue(e.target.value)}
         onClear={() => setValue('')}
-        label={''}
+        label=""
       />
     </Stack>
   );
