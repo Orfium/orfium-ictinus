@@ -21,7 +21,7 @@ describe('Checkbox Component', () => {
   });
 
   it('should invoke the onClick function', () => {
-    const mockOnClick = jest.fn();
+    const mockOnClick = vi.fn();
     wrapper = render(<CheckBox onClick={mockOnClick} dataTestIdSuffix={'with-on-click'} />);
     const { getByTestId } = wrapper;
 
@@ -33,7 +33,7 @@ describe('Checkbox Component', () => {
   });
 
   it('should NOT invoke the onClick function if the button is disabled', () => {
-    const mockOnClick = jest.fn();
+    const mockOnClick = vi.fn();
     wrapper = render(<CheckBox isDisabled onClick={mockOnClick} dataTestIdSuffix={'disabled'} />);
     const { getByTestId } = wrapper;
 
@@ -48,7 +48,7 @@ describe('Checkbox Component', () => {
 
   it('should work properly as a controlled component', async () => {
     const isChecked = true;
-    const mockOnClick = jest.fn();
+    const mockOnClick = vi.fn();
 
     wrapper = render(
       <CheckBox isChecked={isChecked} onClick={mockOnClick} dataTestIdSuffix={'controlled'} />

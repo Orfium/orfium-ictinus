@@ -18,8 +18,8 @@ describe('Inline Notification', () => {
   };
 
   test('Inline Notification renders correctly', async () => {
-    const primaryCTA = jest.fn();
-    const closeCTA = jest.fn();
+    const primaryCTA = vi.fn();
+    const closeCTA = vi.fn();
 
     const { findByText } = render(
       <InlineNotification {...data} primaryCTA={primaryCTA} closeCTA={closeCTA} />
@@ -33,8 +33,8 @@ describe('Inline Notification', () => {
   });
 
   test('Inline Notification primaryCTA works properly when clicked', async () => {
-    const primaryCTA = jest.fn();
-    const closeCTA = jest.fn();
+    const primaryCTA = vi.fn();
+    const closeCTA = vi.fn();
 
     const { findByText } = render(
       <InlineNotification {...data} primaryCTA={primaryCTA} closeCTA={closeCTA} />
@@ -49,8 +49,8 @@ describe('Inline Notification', () => {
   });
 
   test('Inline Notification closeCTA works properly when clicked', async () => {
-    const primaryCTA = jest.fn();
-    const closeCTA = jest.fn();
+    const primaryCTA = vi.fn();
+    const closeCTA = vi.fn();
 
     const { findByTestId } = render(
       <InlineNotification {...data} primaryCTA={primaryCTA} closeCTA={closeCTA} />
@@ -73,8 +73,8 @@ describe('Notifications Container', () => {
   };
 
   test('Notifications Container with 1 Banner Notification renders correctly', async () => {
-    const primaryCTA = jest.fn();
-    const closeCTA = jest.fn();
+    const primaryCTA = vi.fn();
+    const closeCTA = vi.fn();
 
     const { findByText } = render(
       <NotificationsContainer position="top-right">
@@ -90,8 +90,8 @@ describe('Notifications Container', () => {
   });
 
   test("Notifications Container Banner Notification's primaryCTA works properly when clicked", async () => {
-    const primaryCTA = jest.fn();
-    const closeCTA = jest.fn();
+    const primaryCTA = vi.fn();
+    const closeCTA = vi.fn();
 
     const { findByText } = render(
       <NotificationsContainer position="top-right">
@@ -106,8 +106,8 @@ describe('Notifications Container', () => {
   });
 
   test("Notifications Container Banner Notification's closeCTA works properly when clicked", async () => {
-    const primaryCTA = jest.fn();
-    const closeCTA = jest.fn();
+    const primaryCTA = vi.fn();
+    const closeCTA = vi.fn();
 
     const { findByTestId } = render(
       <NotificationsContainer position="top-right">
@@ -137,9 +137,9 @@ describe('Toast Notification (Toast with NotificationVisual)', () => {
   };
 
   test('Toast with NotificationVisual renders correctly', async () => {
-    const primaryCTA = jest.fn();
-    const secondaryCTA = jest.fn();
-    const closeCTA = jest.fn();
+    const primaryCTA = vi.fn();
+    const secondaryCTA = vi.fn();
+    const closeCTA = vi.fn();
 
     const { findByText } = render(
       <Toast {...toastData} closeCTA={closeCTA}>
@@ -154,9 +154,9 @@ describe('Toast Notification (Toast with NotificationVisual)', () => {
   });
 
   test('Toast with NotificationVisual expands/shrinks correctly', async () => {
-    const primaryCTA = jest.fn();
-    const secondaryCTA = jest.fn();
-    const closeCTA = jest.fn();
+    const primaryCTA = vi.fn();
+    const secondaryCTA = vi.fn();
+    const closeCTA = vi.fn();
 
     const { findByTestId, findByText } = render(
       <Toast {...toastData} closeCTA={closeCTA}>
@@ -189,9 +189,9 @@ describe('Toast Notification (Toast with NotificationVisual)', () => {
   });
 
   test('Toast with NotificationVisual closeCTA works properly', async () => {
-    const primaryCTA = jest.fn();
-    const secondaryCTA = jest.fn();
-    const closeCTA = jest.fn();
+    const primaryCTA = vi.fn();
+    const secondaryCTA = vi.fn();
+    const closeCTA = vi.fn();
 
     const { findByTestId } = render(
       <Toast {...toastData} isExpanded closeCTA={closeCTA}>
@@ -205,9 +205,9 @@ describe('Toast Notification (Toast with NotificationVisual)', () => {
   });
 
   test('Toast with NotificationVisual primaryCTA and secondaryCTA work properly', async () => {
-    const primaryCTA = jest.fn();
-    const secondaryCTA = jest.fn();
-    const closeCTA = jest.fn();
+    const primaryCTA = vi.fn();
+    const secondaryCTA = vi.fn();
+    const closeCTA = vi.fn();
 
     const { findByText } = render(
       <Toast {...toastData} isExpanded closeCTA={closeCTA}>
@@ -237,9 +237,9 @@ describe('Snackbar Notification', () => {
   };
 
   test('Snackbar Notification renders correctly', async () => {
-    const primaryCTA = jest.fn();
-    const secondaryCTA = jest.fn();
-    const closeCTA = jest.fn();
+    const primaryCTA = vi.fn();
+    const secondaryCTA = vi.fn();
+    const closeCTA = vi.fn();
 
     const { findByText } = render(
       <Snackbar {...data} primaryCTA={primaryCTA} secondaryCTA={secondaryCTA} closeCTA={closeCTA} />
@@ -259,9 +259,9 @@ describe('Snackbar Notification', () => {
   });
 
   test("Snackbar Notification's closeCTA works properly", async () => {
-    const primaryCTA = jest.fn();
-    const secondaryCTA = jest.fn();
-    const closeCTA = jest.fn();
+    const primaryCTA = vi.fn();
+    const secondaryCTA = vi.fn();
+    const closeCTA = vi.fn();
 
     const { findByTestId } = render(
       <Snackbar {...data} primaryCTA={primaryCTA} secondaryCTA={secondaryCTA} closeCTA={closeCTA} />
@@ -273,9 +273,9 @@ describe('Snackbar Notification', () => {
   });
 
   test("Snackbar Notification's primaryCTA and secondaryCTA work properly", async () => {
-    const primaryCTA = jest.fn();
-    const secondaryCTA = jest.fn();
-    const closeCTA = jest.fn();
+    const primaryCTA = vi.fn();
+    const secondaryCTA = vi.fn();
+    const closeCTA = vi.fn();
 
     const { findByText } = render(
       <Snackbar {...data} primaryCTA={primaryCTA} secondaryCTA={secondaryCTA} closeCTA={closeCTA} />

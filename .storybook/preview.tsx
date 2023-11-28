@@ -1,13 +1,19 @@
 // THIS DECORATOR MUST GO FIRST, OR THE STORY SOURCE GENERATES INCORRECTLY
 // Add prop tables to components (based on component type interfaces)
 import React from 'react';
-import { DocsContainer, DocsPage } from '@storybook/addon-docs';
+import { DocsContainer } from '@storybook/addon-docs';
 import ThemeProvider from '../src/components/ThemeProvider';
 import styled from '@emotion/styled';
 import Typography from '../src/storybook/Typography';
+import Link from '../src/storybook/Link';
 import { UsageGuidelines, SubsectionHeader, SectionHeader, Tip, Preview } from '../src/storybook';
-import { TypographyWrapper as SBTypographyWrapper } from '../src/storybook/Typography/Typography.style';
+import {
+  TypographyResetFontSmooth,
+  TypographyWrapper as SBTypographyWrapper,
+} from '../src/storybook/Typography/Typography.style';
 import Box from '../src/components/Box';
+import { Preview as SBPreview } from '@storybook/react';
+import { Unstyled } from '@storybook/blocks';
 
 const viewPorts = {
   desktop1920: {
@@ -102,80 +108,126 @@ export const decorators = [
 ];
 
 const inputEmpty = styled.input(({ theme }) => ({}));
-export const parameters = {
-  controls: {
-    expanded: true,
-    sort: 'requiredFirst',
-  },
-  viewport: {
-    viewports: viewPorts,
-  },
-  options: { showPanel: true },
-  chromatic: { delay: 2000 },
-  viewMode: 'docs',
-  previewTabs: {
-    'storybook/docs/panel': {
-      index: -1,
+const preview: SBPreview = {
+  decorators,
+  parameters: {
+    controls: {
+      expanded: true,
+      sort: 'requiredFirst',
     },
-    canvas: { title: 'Sandbox' },
-  },
-  docs: {
-    page: DocsPage,
-    inlineStories: true,
-    container: ({ children, context }: any) => (
-      // @ts-ignore
-      <DocsContainer context={context}>
-        <ThemeProvider>{children}</ThemeProvider>
-      </DocsContainer>
-    ),
-    components: {
-      h1: ({ children }: any) => (
-        <Box>
-          {/*// @ts-ignore*/}
-          <Typography css={SBTypographyWrapper} variant={'headline01'}>
+    viewport: {
+      viewports: viewPorts,
+    },
+    options: {
+      storySort: {
+        method: 'alphabetical',
+        order: [
+          'Welcome',
+          'System',
+          'Guide',
+          'Design Tokens',
+          'Design System',
+          'Updated Components',
+          'Original Components',
+          ['*', ['*', 'Docs']],
+          'Hooks',
+        ],
+        locales: 'en-US',
+      },
+      showPanel: true,
+    },
+    chromatic: { delay: 2000 },
+    viewMode: 'docs',
+    docs: {
+      story: {
+        inline: true,
+      },
+      container: (props: any) => (
+        // @ts-ignore
+        <DocsContainer {...props}>
+          <ThemeProvider>{props.children}</ThemeProvider>
+        </DocsContainer>
+      ),
+      components: {
+        h1: ({ children, rest }: any) => (
+          <Box>
+            {/*// @ts-ignore*/}
+            <Typography
+              {...rest}
+              css={[SBTypographyWrapper, TypographyResetFontSmooth]}
+              variant={'headline01'}
+            >
+              {children}
+            </Typography>
+          </Box>
+        ),
+        h2: ({ children, rest }: any) => (
+          <Box>
+            {/*// @ts-ignore*/}
+            <Typography
+              {...rest}
+              css={[SBTypographyWrapper, TypographyResetFontSmooth]}
+              variant={'headline02'}
+            >
+              {children}
+            </Typography>
+          </Box>
+        ),
+        h3: ({ children, rest }: any) => (
+          <Box>
+            {/*// @ts-ignore*/}
+            <Typography
+              {...rest}
+              css={[SBTypographyWrapper, TypographyResetFontSmooth]}
+              variant={'headline03'}
+            >
+              {children}
+            </Typography>
+          </Box>
+        ),
+        h4: ({ children, rest }: any) => (
+          <Box>
+            {/*// @ts-ignore*/}
+            <Typography
+              {...rest}
+              css={[SBTypographyWrapper, TypographyResetFontSmooth]}
+              variant={'headline04'}
+            >
+              {children}
+            </Typography>
+          </Box>
+        ),
+        p: ({ children, rest }: any) => (
+          <Box my={'6'}>
+            <Typography {...rest} css={TypographyResetFontSmooth} variant={'body01'}>
+              {children}
+            </Typography>
+          </Box>
+        ),
+        span: ({ children }: any) => (
+          <Typography css={TypographyResetFontSmooth} variant={'body01'}>
             {children}
           </Typography>
-        </Box>
-      ),
-      h2: ({ children }: any) => (
-        <Box>
-          {/*// @ts-ignore*/}
-          <Typography css={SBTypographyWrapper} variant={'headline02'}>
+        ),
+        div: ({ children }: any) => (
+          <Typography css={TypographyResetFontSmooth} variant={'body01'}>
             {children}
           </Typography>
-        </Box>
-      ),
-      h3: ({ children }: any) => (
-        <Box>
-          {/*// @ts-ignore*/}
-          <Typography css={SBTypographyWrapper} variant={'headline03'}>
+        ),
+        a: ({ href, children, ...args }: any) => (
+          <Link href={href} {...args}>
             {children}
-          </Typography>
-        </Box>
-      ),
-      h4: ({ children }: any) => (
-        <Box>
-          {/*// @ts-ignore*/}
-          <Typography css={SBTypographyWrapper} variant={'headline04'}>
-            {children}
-          </Typography>
-        </Box>
-      ),
-      p: ({ children }: any) => (
-        <Box>
-          <Typography variant={'body01'}>{children}</Typography>
-        </Box>
-      ),
-      span: ({ children }: any) => <Typography variant={'body01'}>{children}</Typography>,
-      div: ({ children }: any) => <Typography variant={'body01'}>{children}</Typography>,
-      input: inputEmpty,
-      UsageGuidelines,
-      Tip,
-      Preview,
-      SubsectionHeader,
-      SectionHeader,
+          </Link>
+        ),
+        input: inputEmpty,
+        UsageGuidelines,
+        Tip,
+        Preview,
+        SubsectionHeader,
+        SectionHeader,
+      },
     },
   },
 };
 
-export default parameters;
+export default preview;

@@ -10,7 +10,7 @@ describe('Generic Toast', () => {
   };
 
   test('Generic Toast with simple visual renders correctly', async () => {
-    const closeCTA = jest.fn();
+    const closeCTA = vi.fn();
 
     const { findByText } = render(
       <Toast {...data} closeCTA={closeCTA}>
@@ -25,7 +25,7 @@ describe('Generic Toast', () => {
   });
 
   test('Generic Toast with simple visual expands/shrinks correctly', async () => {
-    const closeCTA = jest.fn();
+    const closeCTA = vi.fn();
 
     const { findByTestId, findByText } = render(
       <Toast {...data} closeCTA={closeCTA}>
@@ -49,7 +49,7 @@ describe('Generic Toast', () => {
   });
 
   test('Generic Toast with simple visual closeCTA works properly', async () => {
-    const closeCTA = jest.fn();
+    const closeCTA = vi.fn();
 
     const { findByTestId } = render(
       <Toast {...data} closeCTA={closeCTA}>
