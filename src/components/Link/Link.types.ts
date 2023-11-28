@@ -1,7 +1,7 @@
-import { ReactComponentLike } from 'prop-types';
-import { AnchorHTMLAttributes } from 'react';
+import type { ReactComponentLike } from 'prop-types';
+import type { AnchorHTMLAttributes } from 'react';
 
-import { AcceptedIconNames } from 'components/Icon';
+import type { AcceptedIconNames } from 'components/Icon';
 
 type LinkSizes = 1 | 2 | 3;
 

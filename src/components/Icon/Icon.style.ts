@@ -1,8 +1,9 @@
 import { rem } from 'theme/utils';
 
-import { Theme } from '../../theme';
-import { colorShades } from '../../theme/palette';
-import { AcceptedColorComponentTypes, fillPickerBasedOnType } from '../../utils/themeFunctions';
+import type { Theme } from '../../theme';
+import type { colorShades } from '../../theme/palette';
+import type { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
+import { fillPickerBasedOnType } from '../../utils/themeFunctions';
 
 type iconStyleProps = {
   /** Property indicating the color of the icon. Defaults to primary */
@@ -10,17 +11,19 @@ type iconStyleProps = {
   /** Property indicating the size of the icon. Defaults to 16 */
   size: number;
   /** Property indicating the color's variant of the icon. */
-  variant?: typeof colorShades[number];
+  variant?: (typeof colorShades)[number];
 };
 
-export const iconStyle = ({ color, size, variant }: iconStyleProps) => (theme: Theme) => ({
-  fill: fillPickerBasedOnType(color, variant)(theme),
-  width: rem(size),
-  height: rem(size),
-  path: {
+export const iconStyle =
+  ({ color, size, variant }: iconStyleProps) =>
+  (theme: Theme) => ({
     fill: fillPickerBasedOnType(color, variant)(theme),
-  },
-});
+    width: rem(size),
+    height: rem(size),
+    '*': {
+      fill: fillPickerBasedOnType(color, variant)(theme),
+    },
+  });
 
 export const iconContainerStyle = () => ({
   padding: rem(2),
