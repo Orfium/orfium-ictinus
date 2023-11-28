@@ -1,6 +1,6 @@
-import React from 'react';
+import type React from 'react';
 
-import { UserMenuProps } from './components/UserMenu/UserMenu';
+import type { UserMenuProps } from './components/UserMenu/UserMenu';
 
 export interface TopAppBarProps {
   /** The placeholder of the search component */

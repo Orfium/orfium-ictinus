@@ -1,9 +1,10 @@
-import { css, SerializedStyles } from '@emotion/react';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
 import { darken, lighten } from 'polished';
 import { rem } from 'theme/utils';
 
 import { themeFunctions } from '../../../../index';
-import { Theme } from '../../../../theme';
+import type { Theme } from '../../../../theme';
 import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
 
 const getBackground = (isDark: boolean, theme: Theme) =>
