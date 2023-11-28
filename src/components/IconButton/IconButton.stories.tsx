@@ -27,7 +27,7 @@ export default {
   },
 };
 
-export const IconButtonTypes = {
+export const IconButtonTypesAndSizes = {
   render: () => (
     <>
       <Stack>
@@ -53,10 +53,10 @@ export const IconButtonTypes = {
     </>
   ),
 
-  name: 'IconButton Types',
+  name: 'IconButton Types and Sizes',
 };
 
-export const IconButtonPlayground = {
+export const Playground = {
   render: () => (
     <Stack>
       <IconButton
@@ -74,5 +74,5 @@ export const IconButtonPlayground = {
     </Stack>
   ),
 
-  name: 'IconButton Playground',
+  name: 'Playground',
 };
