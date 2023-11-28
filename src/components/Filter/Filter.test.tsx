@@ -1,15 +1,15 @@
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import { render, screen, waitFor } from 'test';
+import { render, screen, waitFor, fireEvent } from 'test';
 
 import { selectDropdownOption } from '../../test';
 import Filter from './Filter';
 import { SELECT_ALL_OPTION } from '../Select/constants';
 
-global.ResizeObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  unobserve: jest.fn(),
-  disconnect: jest.fn(),
+global.ResizeObserver = vi.fn().mockImplementation(() => ({
+  observe: vi.fn(),
+  unobserve: vi.fn(),
+  disconnect: vi.fn(),
 }));
 
 const items = [
@@ -32,7 +32,7 @@ const renderFilter = (props: Partial<Props> = {}) => {
     items,
     isSearchable: false,
     selectedItem: { label: 'option 1', value: 1 },
-    onSelect: jest.fn(),
+    onSelect: vi.fn(),
   };
 
   return render(<Filter styleType={'filled'} {...{ ...defaultProps, ...props }} />);
@@ -40,50 +40,50 @@ const renderFilter = (props: Partial<Props> = {}) => {
 
 describe('Generic Filter', () => {
   afterEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
-  it('should display a dropdown menu when the button is clicked', () => {
+  it('should display a dropdown menu when the button is clicked', async () => {
     renderFilter();
 
     const button = screen.getByTestId('filter');
 
-    userEvent.click(button);
+    await userEvent.click(button);
 
     expect(screen.getByTestId('filter-menu')).toBeInTheDocument();
   });
 
-  it('should trigger onSelect property function when one item of the dropdown is clicked', () => {
-    const onSelect = jest.fn();
+  it('should trigger onSelect property function when one item of the dropdown is clicked', async () => {
+    const onSelect = vi.fn();
     renderFilter({ onSelect });
 
     const button = screen.getByTestId('filter');
-    userEvent.click(button);
-    userEvent.click(screen.getByText(items[1].label));
+    await userEvent.click(button);
+    await userEvent.click(screen.getByText(items[1].label));
 
     expect(onSelect).toHaveBeenCalledWith(items[1]);
   });
 
-  it('should render a text input when isSearchable prop is true', () => {
+  it('should render a text input when isSearchable prop is true', async () => {
     renderFilter({ isSearchable: true });
 
     const button = screen.getByTestId('filter');
-    userEvent.click(button);
+    await userEvent.click(button);
 
     expect(screen.getByTestId('filter-input')).toBeInTheDocument();
   });
 
-  it('default value should not be rendered when a value is typed on the input text', () => {
+  it('default value should not be rendered when a value is typed on the input text', async () => {
     renderFilter({ isSearchable: true });
 
     const button = screen.getByTestId('filter');
-    userEvent.click(button);
+    await userEvent.click(button);
 
     const selectInput = screen.getByTestId('filter-input');
 
     expect(screen.getByTestId(`ictinus_list_item_${defaultFilter.value}`)).toBeInTheDocument();
 
-    userEvent.type(selectInput, 'test');
+    await userEvent.type(selectInput, 'test');
 
     expect(
       screen.queryByTestId(`ictinus_list_item_${defaultFilter.value}`)
@@ -94,21 +94,23 @@ describe('Generic Filter', () => {
     renderFilter({ isSearchable: true, isLoading: true });
 
     const button = screen.getByTestId('filter');
-    userEvent.click(button);
+    await userEvent.click(button);
 
     const selectInput = screen.getByTestId('filter-input');
-    userEvent.type(selectInput, 'test');
+    await userEvent.type(selectInput, 'test');
 
-    await waitFor(() => expect(screen.getByTestId('search_circular_progress_container')).toBeVisible());
+    await waitFor(() =>
+      expect(screen.getByTestId('search_circular_progress_container')).toBeVisible()
+    );
   });
 
   it('should call onAsyncSearch when typing', async () => {
-    const onAsyncSearch = jest.fn();
+    const onAsyncSearch = vi.fn();
 
     renderFilter({ isSearchable: true, onAsyncSearch });
 
     const button = screen.getByTestId('filter');
-    userEvent.click(button);
+    await userEvent.click(button);
 
     const selectInput = screen.getByTestId('filter-input');
     await userEvent.type(selectInput, 'tes', { delay: 500 });
@@ -117,12 +119,12 @@ describe('Generic Filter', () => {
   });
 
   it('should call onAsyncSearch when minCharactersToSearch check is satisfied', async () => {
-    const onAsyncSearch = jest.fn();
+    const onAsyncSearch = vi.fn();
 
     renderFilter({ isSearchable: true, onAsyncSearch, minCharactersToSearch: 3 });
 
     const button = screen.getByTestId('filter');
-    userEvent.click(button);
+    await userEvent.click(button);
 
     const selectInput = screen.getByTestId('filter-input');
 
@@ -146,7 +148,7 @@ describe('Multi Filter', () => {
           label={'Country'}
           items={items}
           defaultValue={defaultFilter}
-          onSelect={jest.fn()}
+          onSelect={vi.fn()}
           styleType={'filled'}
           hasSelectAllOption
         />
@@ -157,13 +159,13 @@ describe('Multi Filter', () => {
   beforeEach(async () => {
     button = screen.getByTestId('filter');
 
-    userEvent.click(button);
+    await userEvent.click(button);
 
     selectInput = (await screen.findByPlaceholderText('Search')) as HTMLInputElement;
   });
 
   afterEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   it('renders the Chips and changes label when options are clicked', async () => {
@@ -181,7 +183,7 @@ describe('Multi Filter', () => {
     await selectDropdownOption(selectInput, items[0].label);
     await selectDropdownOption(selectInput, items[1].label);
 
-    userEvent.click(selectInput);
+    await userEvent.click(selectInput);
 
     expect(screen.getByTestId('ictinus_list').innerHTML).not.toContain(items[0].label);
     expect(screen.getByTestId('ictinus_list').innerHTML).not.toContain(items[1].label);
@@ -191,10 +193,10 @@ describe('Multi Filter', () => {
     await selectDropdownOption(selectInput, items[0].label);
     await selectDropdownOption(selectInput, items[1].label);
 
-    userEvent.click(screen.getByTestId('chip-delete-chip_1'));
-    userEvent.click(screen.getByTestId('chip-delete-chip_0'));
+    await userEvent.click(screen.getByTestId('chip-delete-chip_1'));
+    await userEvent.click(screen.getByTestId('chip-delete-chip_0'));
 
-    userEvent.click(selectInput);
+    await userEvent.click(selectInput);
 
     expect(screen.getByTestId('ictinus_list').innerHTML).toContain(items[0].label);
     expect(screen.getByTestId('ictinus_list').innerHTML).toContain(items[1].label);
@@ -208,7 +210,7 @@ describe('Multi Filter', () => {
     await selectDropdownOption(selectInput, items[1].label);
     await selectDropdownOption(selectInput, items[2].label);
 
-    userEvent.click(screen.getByTestId('select-right-icon'));
+    fireEvent.click(screen.getByTestId('select-right-icon'));
 
     expect(screen.queryByTestId('chip-chip_0')).not.toBeInTheDocument();
 
@@ -217,15 +219,15 @@ describe('Multi Filter', () => {
   });
 
   it('selects all options and changes label when Select All is clicked', async () => {
-    userEvent.click(screen.getByTestId(`ictinus_list_item_${SELECT_ALL_OPTION.value}`));
+    await userEvent.click(screen.getByTestId(`ictinus_list_item_${SELECT_ALL_OPTION.value}`));
 
-    userEvent.click(button);
+    await userEvent.click(button);
 
     chips = await screen.findAllByTestId(/chip-chip_/);
 
     expect(chips.length).toEqual(items.length);
 
-    userEvent.click(selectInput);
+    await userEvent.click(selectInput);
 
     expect(screen.getByText('No options')).toBeInTheDocument();
 
