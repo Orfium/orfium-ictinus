@@ -2,14 +2,15 @@ import { renderHook } from '@testing-library/react-hooks';
 import { useLocation } from 'react-router-dom';
 
 import { useSearchQueryParams } from '../';
+import { Mock } from 'vitest';
 
-jest.mock('react-router-dom', () => ({
-  useLocation: jest.fn(),
+vi.mock('react-router-dom', () => ({
+  useLocation: vi.fn(),
 }));
 
 describe('useSearchQueryParams', () => {
   it('returns the search query params as an object of key / value strings (Record<string, string>)', () => {
-    (useLocation as jest.Mock).mockReturnValue({
+    (useLocation as Mock).mockReturnValue({
       search: 'page=1&size=12&library=react&testing=yolo',
     });
     const { result } = renderHook(() => useSearchQueryParams());
@@ -18,7 +19,7 @@ describe('useSearchQueryParams', () => {
   });
 
   it('returns an empty object ({}) if the search query params is an empty string', () => {
-    (useLocation as jest.Mock).mockReturnValue({
+    (useLocation as Mock).mockReturnValue({
       search: '',
     });
     const { result } = renderHook(() => useSearchQueryParams());

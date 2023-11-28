@@ -1,4 +1,4 @@
-import { waitFor } from '@testing-library/react';
+import { fireEvent, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 
@@ -16,10 +16,12 @@ describe('TruncatedContent', () => {
   beforeAll(() => {
     Object.defineProperty(HTMLElement.prototype, 'scrollWidth', {
       value: 180,
+      configurable: true,
     });
 
     Object.defineProperty(HTMLElement.prototype, 'offsetWidth', {
       value: 100,
+      configurable: true,
     });
   });
 
@@ -45,7 +47,7 @@ describe('TruncatedContent', () => {
     const text = getByTestId('long-text');
     expect(text).toBeInTheDocument();
 
-    userEvent.hover(text);
+    await userEvent.hover(text);
     await waitFor(() => expect(getByText(tooltipText)).toBeInTheDocument());
   });
 });

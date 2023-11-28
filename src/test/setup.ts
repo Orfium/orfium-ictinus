@@ -1,15 +1,17 @@
-import '@testing-library/jest-dom';
+import '@testing-library/jest-dom/vitest';
 import { createSerializer } from '@emotion/jest';
 
 expect.addSnapshotSerializer(createSerializer());
 
-global.ResizeObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  unobserve: jest.fn(),
-  disconnect: jest.fn(),
+vi.mock('@tippyjs/react');
+
+global.ResizeObserver = vi.fn().mockImplementation(() => ({
+  observe: vi.fn(),
+  unobserve: vi.fn(),
+  disconnect: vi.fn(),
 }));
 
-jest.mock(
+vi.mock(
   (() => {
     // This will mock the version of uuid belonging to react-tooltip
     // if it exists, otherwise use the top-level uuid module
@@ -27,33 +29,22 @@ jest.mock(
   })
 );
 
-jest.mock('@react-aria/ssr/dist/main', () => ({
-  ...jest.requireActual('@react-aria/ssr/dist/main'),
+vi.mock('@react-aria/ssr', async () => ({
+  ...(await vi.importActual<any>('@react-aria/ssr')),
   useSSRSafeId: () => 'react-aria-generated-id',
 }));
 
 // because scrollIntoView doesn't exist in jest
 window.HTMLElement.prototype.scrollIntoView = function () {};
 
-Object.defineProperty(window, 'matchMedia', {
-  // We don't need this to follow our naming conventions
+vi.stubGlobal('matchMedia', (query: string) => ({
   // eslint-disable-next-line @typescript-eslint/naming-convention
-  writable: true,
-  value: jest.fn().mockImplementation((query) => ({
-    // We don't need this to follow our naming conventions
-    // eslint-disable-next-line @typescript-eslint/naming-convention
-    matches: false,
-    media: query,
-    onchange: null,
-    addListener: jest.fn(),
-    removeListener: jest.fn(),
-    addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
-  })),
-});
-
-jest.mock('@react-aria/ssr/dist/main', () => ({
-  ...jest.requireActual('@react-aria/ssr/dist/main'),
-  useSSRSafeId: () => 'react-aria-generated-id',
+  matches: false,
+  media: query,
+  onchange: null,
+  addListener: vi.fn(), // deprecated
+  removeListener: vi.fn(), // deprecated
+  addEventListener: vi.fn(),
+  removeEventListener: vi.fn(),
+  dispatchEvent: vi.fn(),
 }));

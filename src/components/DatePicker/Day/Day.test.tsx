@@ -59,7 +59,7 @@ describe('Day', () => {
   });
 
   it('should run onDaySelect correctly', async () => {
-    const onDaySelect = jest.fn();
+    const onDaySelect = vi.fn();
 
     const { findByText } = render(
       <table>
@@ -78,7 +78,7 @@ describe('Day', () => {
   });
 
   it('should not run onDaySelect when day is disabled', async () => {
-    const onDaySelect = jest.fn();
+    const onDaySelect = vi.fn();
 
     const { findByText } = render(
       <table>
