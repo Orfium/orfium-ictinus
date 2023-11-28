@@ -2,10 +2,10 @@ import React from 'react';
 import { generateTestDataId } from 'utils/helpers';
 
 import SearchInput from './components/SearchInput';
-import { FilterProps } from '../../types';
+import type { FilterProps } from '../../types';
 import Options from '../Options/Options';
 import { menuStyle } from 'components/Filter/Filter.style';
-import { FilterOption } from 'components/Filter/types';
+import type { FilterOption } from 'components/Filter/types';
 
 type Props = Pick<
   FilterProps,

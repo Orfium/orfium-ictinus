@@ -3,7 +3,7 @@ import React, { useCallback, useState } from 'react';
 
 import MenuItem from './MenuItem/MenuItem';
 import { navigationContainerStyle } from './Navigation.style';
-import { DrawerProps } from '../Drawer';
+import type { DrawerProps } from '../Drawer';
 
 type NavigationProps = DrawerProps;
 
