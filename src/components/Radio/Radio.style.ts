@@ -1,10 +1,11 @@
-import { css, SerializedStyles } from '@emotion/react';
-import { Theme } from 'theme';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
+import type { Theme } from 'theme';
 import { BASE_SHADE } from 'theme/palette';
-import { ColorScheme } from 'theme/types';
+import type { ColorScheme } from 'theme/types';
 import { rem } from 'theme/utils';
 
-import { RadioProps } from './Radio';
+import type { RadioProps } from './Radio';
 
 const lightHoverColor = 'rgba(23, 91, 245, 0.07)';
 const darkHoverColor = 'rgba(255, 255, 255, 0.1)';

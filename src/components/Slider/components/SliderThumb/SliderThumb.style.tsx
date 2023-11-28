@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { rem, rgba } from 'polished';
-import { CSSProperties } from 'react';
+import type { CSSProperties } from 'react';
 
 import { transition } from '../../../../theme/functions';
 

@@ -1,7 +1,8 @@
 import progressIndicator from 'theme/tokens/components/variables/progressIndicator';
-import { getComponentTokens, DotKeys } from 'theme/tokens/utils';
+import type { DotKeys } from 'theme/tokens/utils';
+import { getComponentTokens } from 'theme/tokens/utils';
 
-import { Theme } from '../../theme';
+import type { Theme } from '../../theme';
 
 export type ProgressIndicatorTokens = DotKeys<typeof progressIndicator>;
 

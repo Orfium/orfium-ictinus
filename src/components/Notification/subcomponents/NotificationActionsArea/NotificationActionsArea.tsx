@@ -1,9 +1,9 @@
 import React from 'react';
-import { TestProps } from 'utils/types';
+import type { TestProps } from 'utils/types';
 
 import { generateTestDataId } from '../../../../utils/helpers';
 import Button from '../../../Button';
-import { NotificationActions } from '../../Notification';
+import type { NotificationActions } from '../../Notification';
 import { actionContainer, actionsContainer } from '../../Notification.style';
 
 type Props = NotificationActions & TestProps;
