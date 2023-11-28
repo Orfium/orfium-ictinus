@@ -1,4 +1,4 @@
-import { flatColors, paleColors } from './palette';
+import type { flatColors, paleColors } from './palette';
 
 export type FlatPaletteConfig = Partial<Record<typeof flatColors[number], string>>;
 
