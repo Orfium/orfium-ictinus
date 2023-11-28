@@ -1,13 +1,13 @@
-import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
 import Typography from './Typography';
 import Stack from '../storyUtils/Stack';
 import { FIGMA_URL } from '../../utils/common';
-import Overview from '../../storybook/Overview';
+import SectionHeader from '../../storybook/SectionHeader';
 
-<Meta
-  title="Updated Components/Typography"
-  component={Typography}
-  parameters={{
+export default {
+  title: 'Updated Components/Typography',
+  component: Typography,
+
+  parameters: {
     design: [
       {
         name: 'Typography',
@@ -15,51 +15,11 @@ import Overview from '../../storybook/Overview';
         url: `${FIGMA_URL}?node-id=14861%3A61126`,
       },
     ],
-  }}
-/>
+  },
+};
 
-<SectionHeader title={'Typography'} />
-
-- [Overview](#overview)
-- [Props](#props)
-- [Usage](#usage)
-- [Variants](#variants)
-
-## Overview
-
-<Story
-  name="Overview"
-  parameters={{
-    previewTabs: {
-      canvas: { hidden: true },
-    },
-  }}
->
-  <Overview>A global component that is used to represent any text.</Overview>
-</Story>
-
-## Usage
-
-<UsageGuidelines
-  guidelines={[
-    'Headline: Used for short, high-emphasis text and to establish content hierarchy within the page',
-    'Title: Used for short, medium-emphasis text that is smaller than a headline and for text within components',
-    'Label: Used for medium emphasis text and potentially longer text strings than a title and for text within components',
-    'Body: Used for long passages of copy (regular emphasis) and for text within components',
-  ]}
-  policies={['Never include more than one H1 title per web page.']}
-/>
-
-## Props
-
-<Props of={Typography} />
-
-<SubsectionHeader title="Variants" />
-
-General use of Typography based on available variants
-
-<Preview>
-  <Story name="Variants">
+export const Variants = {
+  render: () => (
     <Stack isVertical>
       <Typography variant={'headline01'}>Headline 01</Typography>
       <Typography variant={'headline02'}>Headline 02</Typography>
@@ -78,15 +38,13 @@ General use of Typography based on available variants
       <Typography variant={'body03'}>Body 03</Typography>
       <Typography variant={'body04'}>Body 04</Typography>
     </Stack>
-  </Story>
-</Preview>
+  ),
 
-### Font spacing variations
+  name: 'Variants',
+};
 
-We have 2 different font spacing variations, normal (font-family: Roboto) and mono (font-family: Roboto Mono)
-
-<Preview>
-  <Story name="Font spacing variations">
+export const FontSpacingVariations = {
+  render: () => (
     <Stack isVertical>
       <Typography variant={'headline01'}>Headline 01 (Normal)</Typography>
       <Typography variant={'title01'}>Title 01 (Normal)</Typography>
@@ -105,15 +63,13 @@ We have 2 different font spacing variations, normal (font-family: Roboto) and mo
         Body 01 (Mono)
       </Typography>
     </Stack>
-  </Story>
-</Preview>
+  ),
 
-### Types (default)
+  name: 'Font spacing variations',
+};
 
-General use of Typography based on available light types
-
-<Preview>
-  <Story name="Types (default)">
+export const TypesDefault = {
+  render: () => (
     <Stack isVertical>
       <Typography type={'primary'}>Primary</Typography>
       <Typography type={'secondary'}>Secondary</Typography>
@@ -121,17 +77,13 @@ General use of Typography based on available light types
       <Typography type={'active'}>Active</Typography>
       <Typography type={'visited'}>Visited</Typography>
     </Stack>
-  </Story>
-</Preview>
+  ),
 
-### Types (inverted)
+  name: 'Types (default)',
+};
 
-General use of Typography based on available inverted type.
-Inverted type is used to show content **on darker background** and **is not linked with dark variation**
-The following example is based on dark background so we can show the difference.
-
-<Preview>
-  <Story name="Types (inverted)">
+export const TypesInverted = {
+  render: () => (
     <Stack isVertical isInverted>
       <Typography type={'primary'} isInverted>
         Primary
@@ -149,31 +101,25 @@ The following example is based on dark background so we can show the difference.
         Visited
       </Typography>
     </Stack>
-  </Story>
-</Preview>
+  ),
 
-### Extra style
+  name: 'Types (inverted)',
+};
 
-Typography extra styles like bold, italic and underline
-
-<Preview>
-  <Story name="Extra style">
+export const ExtraStyle = {
+  render: () => (
     <Stack isVertical>
       <Typography isBold>Bold</Typography>
       <Typography isItalic>Italic</Typography>
       <Typography isUnderline>Underline</Typography>
     </Stack>
-  </Story>
-</Preview>
+  ),
 
-### As specific element
+  name: 'Extra style',
+};
 
-Define Typography based on custom component - below are listed by default value
-
-You can define component to be any of the following `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `p`, `span`
-
-<Preview>
-  <Story name="As specific element">
+export const AsSpecificElement = {
+  render: () => (
     <Stack isVertical>
       <Typography variant={'headline01'} component="h1">
         Headline 01 - H1
@@ -218,5 +164,7 @@ You can define component to be any of the following `h1`, `h2`, `h3`, `h4`, `h5`
         Body 03 - P
       </Typography>
     </Stack>
-  </Story>
-</Preview>
+  ),
+
+  name: 'As specific element',
+};

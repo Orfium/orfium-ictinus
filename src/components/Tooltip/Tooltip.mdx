@@ -1,0 +1,60 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
+import Tooltip from './Tooltip';
+import * as TooltipStories from './Tooltip.stories';
+import Overview from '../../storybook/Overview';
+
+<Meta of={TooltipStories} />
+
+<SectionHeader title={'Tooltip'} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
+
+## Overview
+
+Tooltips provide brief, helpful information when a user hovers or focuses on the trigger element.
+
+## Props
+
+<ArgTypes of={Tooltip} />
+
+## Usage
+
+<UsageGuidelines
+  guidelines={[
+    'To display the full string of a truncated text',
+    'To provide additional context for unlabeled icon buttons',
+    'Use text tooltips to offer additional context that does not support links or actions',
+    'Use interactive tooltips for more complex layouts and to offer simple actions within the tooltip',
+  ]}
+  policies={[
+    'Do not display critical information in a tooltip',
+    'Do not use tooltips to display information unrelated to the triggered element',
+  ]}
+/>
+
+<SubsectionHeader title="Variants" />
+
+### Text Tooltip
+
+Text Tooltip takes a string as a content prop. There are 2 variations of Text Tooltips, default and inverted.
+
+<Canvas of={TooltipStories.TextTooltip} />
+
+### Interactive Tooltip
+
+Interactive Tooltip takes a React Component as a content prop. There are 2 variations of Text Tooltips, default and inverted.
+
+<Canvas of={TooltipStories.InteractiveTooltip} />
+
+### Tooltip placement
+
+Tooltip can be placed to the top, bottom, left or right of the element.
+
+<Canvas of={TooltipStories.TooltipPlacement} />
+
+### Playground
+
+<Canvas of={TooltipStories.Playground} />

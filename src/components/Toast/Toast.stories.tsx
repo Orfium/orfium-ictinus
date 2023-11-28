@@ -1,31 +1,15 @@
-import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
 import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
 import PresentComponent from '../storyUtils/PresentComponent';
 import Toast from './Toast';
 import Stack from '../storyUtils/Stack';
 
-<Meta title="Original Components/Toast" component={Toast} />
+export default {
+  title: 'Original Components/Toast',
+  component: Toast,
+};
 
-# Toast
-
-## Usage
-
-```js
-import { Toast } from '@orfium/ictinus';
-
-<Toast message="message" type="primary" isExpanded closeCTA={closeCTA}>
-  <div>Content</div>
-</Toast>;
-```
-
-## Props
-
-<Props of={Toast} />
-
-### Generic Toast
-
-<Preview>
-  <Story name="Generic Toast" parameters={{ decorators: [withKnobs] }}>
+export const GenericToast = {
+  render: () => (
     <PresentComponent name="" width={768}>
       <Stack>
         <Toast
@@ -33,13 +17,13 @@ import { Toast } from '@orfium/ictinus';
           type="secondary"
           isExpanded
           closeCTA={() => console.log('close action clicked')}
-        ></Toast>
+        />
         <Toast
           message="Primary colored Toast"
           type="primary"
           isExpanded
           closeCTA={() => console.log('close action clicked')}
-        ></Toast>
+        />
         <Toast
           message="Default colored Toast"
           isExpanded
@@ -74,5 +58,11 @@ import { Toast } from '@orfium/ictinus';
         </Toast>
       </Stack>
     </PresentComponent>
-  </Story>
-</Preview>
+  ),
+
+  name: 'Generic Toast',
+
+  parameters: {
+    decorators: [withKnobs],
+  },
+};

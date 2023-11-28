@@ -1,15 +1,15 @@
-import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
 import { boolean, select, text, withKnobs, number } from '@storybook/addon-knobs';
 import TextArea from './TextArea';
 import Stack from '../storyUtils/Stack';
 import { FIGMA_URL, Function } from '../../utils/common';
-import Overview from '../../storybook/Overview';
+import SectionHeader from '../../storybook/SectionHeader';
 import { useState } from 'react';
 
-<Meta
-  title="Updated Components/Fields/TextArea"
-  component={TextArea}
-  parameters={{
+export default {
+  title: 'Updated Components/Fields/TextArea',
+  component: TextArea,
+
+  parameters: {
     design: [
       {
         name: 'Base Input',
@@ -22,53 +22,11 @@ import { useState } from 'react';
         url: `${FIGMA_URL}?node-id=10019%3A116508`,
       },
     ],
-  }}
-/>
+  },
+};
 
-<SectionHeader title={'TextArea'} />
-
-- [Overview](#overview)
-- [Props](#props)
-- [Usage](#usage)
-- [Variants](#variants)
-
-# Overview
-
-<Story
-  name="Overview"
-  parameters={{
-    previewTabs: {
-      canvas: { hidden: true },
-    },
-  }}
->
-  <Overview>
-    A universal TextArea component used for the case where large string of text is needed as an
-    input.
-  </Overview>
-</Story>
-
-## Props
-
-<Props of={TextArea} />
-
-## Usage
-
-<UsageGuidelines
-  guidelines={['When you need to enter a large string of text']}
-  policies={[
-    'If you need to enter a short string of text in a single line, use text input instead',
-  ]}
-/>
-
-<SubsectionHeader title="Variants" />
-
-### TextArea with placeholder
-
-TextArea with or without placeholder
-
-<Preview>
-  <Story name="TextArea with placeholder">
+export const TextAreaWithPlaceholder = {
+  render: () => (
     <Stack>
       <TextArea label={'TextArea'} cols={10} rows={5} isResizeEnabled={false} />
       <TextArea
@@ -79,32 +37,22 @@ TextArea with or without placeholder
         isResizeEnabled={false}
       />
     </Stack>
-  </Story>
-</Preview>
+  ),
 
-### TextArea with resizing option
-
-TextArea and how to change size with cols and rows
-
-<Preview>
-  <Story name="TextArea with resizing option">
+  name: 'TextArea with placeholder',
+};
+export const TextAreaWithResizingOption = {
+  render: () => (
     <Stack>
       <TextArea label={'TextArea'} cols={10} rows={5} />
     </Stack>
-  </Story>
-</Preview>
+  ),
 
-### TextArea with counter
+  name: 'TextArea with resizing option',
+};
 
-TextArea with maximum characters indicated by a counter.
-
-<Tip>
-  TextArea is a controlled component, so in order for the counter to work, the value prop must be
-  passed to the component.
-</Tip>
-
-<Preview>
-  <Story name="TextArea with counter">
+export const TextAreaWithCounter = {
+  render: () => (
     <Stack>
       <Function>
         {() => {
@@ -124,15 +72,12 @@ TextArea with maximum characters indicated by a counter.
         }}
       </Function>
     </Stack>
-  </Story>
-</Preview>
+  ),
+  name: 'TextArea with counter',
+};
 
-### TextArea statuses
-
-TextArea with 3 available statuses: Normal, Error and Read-only.
-
-<Preview>
-  <Story name="TextArea statuses" parameters={{ decorators: [withKnobs] }}>
+export const TextAreaStatuses = {
+  render: () => (
     <Stack>
       <Stack>
         <TextArea
@@ -167,15 +112,13 @@ TextArea with 3 available statuses: Normal, Error and Read-only.
         />
       </Stack>
     </Stack>
-  </Story>
-</Preview>
+  ),
+  parameters: { decorators: [withKnobs] },
+  name: 'TextArea statuses',
+};
 
-### Disabled TextArea
-
-Regular TextArea disabled with label
-
-<Preview>
-  <Story name="Disabled TextArea">
+export const DisabledTextArea = {
+  render: () => (
     <Stack>
       <TextArea
         isDisabled
@@ -188,13 +131,12 @@ Regular TextArea disabled with label
         }}
       />
     </Stack>
-  </Story>
-</Preview>
+  ),
+  name: 'Disabled TextArea',
+};
 
-### Playground
-
-<Preview>
-  <Story name="Playground" parameters={{ decorators: [withKnobs] }}>
+export const Playground = {
+  render: () => (
     <Stack>
       <Function>
         {() => {
@@ -220,5 +162,6 @@ Regular TextArea disabled with label
         }}
       </Function>
     </Stack>
-  </Story>
-</Preview>
+  ),
+  name: 'Playground',
+};
