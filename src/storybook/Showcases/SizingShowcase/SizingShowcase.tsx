@@ -23,10 +23,10 @@ const SizingShowcase = () => {
               })}
             />
             <div css={{ margin: 10, flex: 1 }}>
-              <Typography isBold variant={'title01'} type={'primary'}>
+              <Typography isBold variant="title01" type="primary">
                 $sizing.{index}
               </Typography>
-              <Typography variant={'body02'} type={'secondary'}>
+              <Typography variant="body02" type="secondary">
                 {space.value}
               </Typography>
             </div>

@@ -1,5 +1,6 @@
-import { Preview as SBPreview } from '@storybook/addon-docs';
-import React, { FCC } from 'react';
+import { Canvas as SBPreview } from '@storybook/addon-docs';
+import type { FCC } from 'react';
+import React from 'react';
 
 import useTheme from '../../hooks/useTheme';
 
@@ -7,7 +8,7 @@ export type PreviewProps = {
   isInverted?: boolean;
 };
 
-const Preview: FCC<PreviewProps> = ({ children, isInverted }) => {
+const Canvas: FCC<PreviewProps> = ({ children, isInverted }) => {
   const theme = useTheme();
 
   return (
@@ -24,4 +25,4 @@ const Preview: FCC<PreviewProps> = ({ children, isInverted }) => {
   );
 };
 
-export default Preview;
+export default Canvas;

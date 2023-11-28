@@ -1,6 +1,7 @@
 import { css } from '@emotion/react';
 import { get, map } from 'lodash';
-import React, { FCC } from 'react';
+import type { FCC } from 'react';
+import React from 'react';
 
 import {
   colorStyle,
@@ -51,7 +52,7 @@ const TokenBackgroundColorsShowcase: FCC<Props> = ({ tokenType = 'backgroundColo
 
   return (
     <div>
-      <Card elevated={'03'} radius={'4'}>
+      <Card elevated="03" radius="4">
         {types.map((type) => (
           <>
             {type.key && (
@@ -72,7 +73,7 @@ const TokenBackgroundColorsShowcase: FCC<Props> = ({ tokenType = 'backgroundColo
                   }
                 `}
               >
-                <Typography variant={'headline04'} type={'secondary'}>
+                <Typography variant="headline04" type="secondary">
                   {type.key}
                 </Typography>
               </div>
@@ -91,14 +92,14 @@ const TokenBackgroundColorsShowcase: FCC<Props> = ({ tokenType = 'backgroundColo
                   <div>
                     <Typography isBold>{inType.key}</Typography>
                     <div css={descriptionStyle}>
-                      <Typography variant={'body02'} type={'secondary'}>
+                      <Typography variant="body02" type="secondary">
                         {get(typePicker(), `${inType.key}.description`)}
                       </Typography>
-                      <Typography variant={'label03'} component={'span'} type={'active'}>
+                      <Typography variant="label03" component="span" type="active">
                         ${`semantic.${tokenType}.${inType.key}`}
                       </Typography>
                       {' = '}
-                      <Typography variant={'label03'} component={'span'} type={'active'}>
+                      <Typography variant="label03" component="span" type="active">
                         {get(typePicker(), `${inType.key}.value`)}
                       </Typography>
                     </div>
