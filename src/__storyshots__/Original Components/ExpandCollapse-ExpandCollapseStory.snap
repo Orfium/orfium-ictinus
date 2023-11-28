@@ -1,0 +1,119 @@
+.emotion-0 {
+  -webkit-transition: opacity 0ms ease,-webkit-transform 0ms ease;
+  transition: opacity 0ms ease,transform 0ms ease;
+  opacity: 0;
+  -webkit-transform: translateY(-0.625rem);
+  -moz-transform: translateY(-0.625rem);
+  -ms-transform: translateY(-0.625rem);
+  transform: translateY(-0.625rem);
+}
+
+<div>
+  <div>
+    <div
+      data-testid="expand-collapse"
+    >
+      <span>
+        Text
+      </span>
+      <button>
+         
+        expand
+      </button>
+      <div
+        class="emotion-0"
+        style="height: 0px;"
+      >
+        <div>
+          <div>
+            Some
+          </div>
+          <div>
+            content
+          </div>
+          <div>
+            here
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      data-testid="expand-collapse"
+    >
+      <span>
+        Text
+      </span>
+      <button>
+        expand/collapse
+      </button>
+      <div
+        class="emotion-0"
+        style="height: 0px;"
+      >
+        <div>
+          <div>
+            Some
+          </div>
+          <div>
+            content
+          </div>
+          <div>
+            here
+          </div>
+          <div
+            data-testid="expand-collapse"
+          >
+            <span>
+              Text
+            </span>
+            <button>
+              expand/collapse
+            </button>
+            <div
+              class="emotion-0"
+              style="height: 0px;"
+            >
+              <div>
+                <div>
+                  Some
+                </div>
+                <div>
+                  content
+                </div>
+                <div>
+                  here
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      data-testid="expand-collapse"
+    >
+      <span>
+        Text
+      </span>
+      <button>
+        expand/collapse
+      </button>
+      <div
+        class="emotion-0"
+        style="height: 0px;"
+      >
+        <div>
+          <div>
+            Some
+          </div>
+          <div>
+            content
+          </div>
+          <div>
+            here
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
