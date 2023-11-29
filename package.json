@@ -148,7 +148,8 @@
   },
   "scripts": {
     "postinstall": "patch-package",
-    "prepare": "yarn build:lib && husky install",
+    "prepublishOnly": "yarn build:lib",
+    "prepare": "husky install",
     "start": "storybook dev -p 6006",
     "prebuild": "rimraf dist",
     "build:rollOneBundleDTS": "rollup -c --bundleConfigAsCjs",
