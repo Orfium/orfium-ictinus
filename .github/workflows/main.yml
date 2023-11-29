@@ -153,7 +153,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
 
-      - run: yarn install
+      - name: Prepare library
+        run: |
+          yarn install
+          yarn build:lib
 
       - name: Release 📌
         if: "github.event_name == 'push'"
