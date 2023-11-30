@@ -295,99 +295,83 @@
 }
 
 .emotion-37 {
-  opacity: 1;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.75rem;
 }
 
 .emotion-38 {
-  border-radius: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 3rem;
-  height: 3rem;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-}
-
-.emotion-38:before {
-  display: none;
-  border-radius: 100%;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  content: ' ';
-  width: 3rem;
-  height: 3rem;
-  position: absolute;
-}
-
-.emotion-38:hover:before {
   display: block;
-  background: rgba(0, 0, 0, 0.05);
-}
-
-.emotion-39 {
-  border: 0;
-  border-radius: 0.125rem;
-  width: 1.5rem;
-  height: 1.5rem;
-  position: absolute;
-  opacity: 0;
-}
-
-.emotion-39+label {
-  position: relative;
   cursor: pointer;
-  padding: 0;
+  position: relative;
 }
 
-.emotion-39+label:before {
-  content: '';
+.emotion-38>span:nth-of-type(2) {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  display: inline-block;
-  vertical-align: text-top;
-  width: 1.5rem;
-  height: 1.5rem;
-  background: inherit;
-  box-shadow: inset 0px 0px 0px 0.125rem #b7c3d8;
+  width: 1.25rem;
+  height: 1.25rem;
+  box-sizing: border-box;
+  border: 0.125rem solid #b9cdfc;
   border-radius: 0.25rem;
 }
 
-.emotion-39:disabled+label {
+.emotion-38 svg {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.emotion-38:hover,
+.emotion-38[data-focus-visible='true'] {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  background: rgba(84,94,255,0.06);
+  box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
+  border-radius: 100%;
+}
+
+.emotion-38[data-selected='true']:hover,
+.emotion-38[data-indeterminate='true']:hover {
+  background: none;
+  box-shadow: none;
+}
+
+.emotion-38[data-selected='true']>span:last-child,
+.emotion-38[data-indeterminate='true']>span:last-child {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border-color: #175bf5;
+  background: #175bf5;
+}
+
+.emotion-38[data-selected='true'] svg,
+.emotion-38[data-indeterminate='true'] svg {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.emotion-38[data-disabled='true'] {
+  opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-40 span {
-  padding: 0;
+.emotion-38[data-disabled='true']:hover {
+  background: none;
+  box-shadow: none;
 }
 
-.emotion-40 svg {
-  position: absolute;
-  top: 0;
-  display: none;
-}
-
-.emotion-41 {
+.emotion-39 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -403,17 +387,17 @@
   justify-content: center;
 }
 
-.emotion-42 {
-  fill: white;
-  width: 1.5rem;
-  height: 1.5rem;
+.emotion-40 {
+  fill: #ffffff;
+  width: 1rem;
+  height: 1rem;
 }
 
-.emotion-42 * {
-  fill: white;
+.emotion-40 * {
+  fill: #ffffff;
 }
 
-.emotion-60 {
+.emotion-56 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -423,7 +407,7 @@
   display: flex;
 }
 
-.emotion-60 .react-switch-handle {
+.emotion-56 .react-switch-handle {
   cursor: unset!important;
   border: 2px solid #b7c3d8!important;
   box-sizing: border-box!important;
@@ -433,23 +417,23 @@
   transform: translateX(0)!important;
 }
 
-.emotion-60 .react-switch-handle:hover {
+.emotion-56 .react-switch-handle:hover {
   box-shadow: rgba(14,14,23,0.1) 0 0 0 5px;
   background: #dbe1eb!important;
 }
 
-.emotion-60 .react-switch-bg {
+.emotion-56 .react-switch-bg {
   cursor: unset!important;
   margin-right: 0!important;
   margin-left: 0!important;
 }
 
-.emotion-60 .react-switch-bg:hover~.react-switch-handle {
+.emotion-56 .react-switch-bg:hover~.react-switch-handle {
   box-shadow: rgba(14,14,23,0.1) 0 0 0 5px;
   background: #dbe1eb!important;
 }
 
-.emotion-73 {
+.emotion-69 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -489,19 +473,19 @@
   letter-spacing: 0.00625rem;
 }
 
-.emotion-73 img {
+.emotion-69 img {
   border-radius: 6.25rem;
   width: 100%;
   height: 100%;
 }
 
-.emotion-75 {
+.emotion-71 {
   fill: #1249C4;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-75 * {
+.emotion-71 * {
   fill: #1249C4;
 }
 
@@ -783,52 +767,52 @@
               <div
                 class="emotion-24"
               >
-                <span
+                <div
                   class="emotion-37"
                 >
-                  <span
+                  <label
                     class="emotion-38"
+                    data-rac=""
+                    data-testid="undefined_7_checkbox"
                   >
-                    <input
-                      class="emotion-39"
-                      data-testid="checkbox"
-                      id="styled-checkbox-_00"
-                      type="checkbox"
-                    />
-                    <label
-                      class="emotion-40"
-                      for="styled-checkbox-_00"
+                    <span
+                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
                     >
-                      <span
-                        class="emotion-41"
+                      <input
+                        data-testid="undefined_7_checkbox"
+                        type="checkbox"
+                        value="7"
+                      />
+                    </span>
+                    <span
+                      class="emotion-39"
+                    >
+                      <svg
+                        class="emotion-40"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
                       >
-                        <svg
-                          class="emotion-42"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                        <g
+                          fill="none"
+                          fill-rule="evenodd"
+                          id="\\uD83D\\uDD36-Symbols"
+                          stroke="none"
+                          stroke-width="1"
                         >
                           <g
-                            fill="none"
-                            fill-rule="evenodd"
-                            id="\\uD83D\\uDD36-Symbols"
-                            stroke="none"
-                            stroke-width="1"
+                            id="Checkmark"
                           >
-                            <g
-                              id="Checkmark"
-                            >
-                              <path
-                                d="M16.1742639,3.56546017 L17.5665405,4.95773677 L9.21853983,13.3054602 L14.0871995,18.1742639 L12.6949229,19.5665405 L6.43453983,13.3061575 L6.43653983,13.3044602 L6.43589028,13.3038338 L16.1742639,3.56546017 Z"
-                                transform="translate(12.000540, 11.566000) scale(-1, 1) rotate(-90.000000) translate(-12.000540, -11.566000)"
-                              />
-                            </g>
+                            <path
+                              d="M16.1742639,3.56546017 L17.5665405,4.95773677 L9.21853983,13.3054602 L14.0871995,18.1742639 L12.6949229,19.5665405 L6.43453983,13.3061575 L6.43653983,13.3044602 L6.43589028,13.3038338 L16.1742639,3.56546017 Z"
+                              transform="translate(12.000540, 11.566000) scale(-1, 1) rotate(-90.000000) translate(-12.000540, -11.566000)"
+                            />
                           </g>
-                        </svg>
-                      </span>
-                    </label>
-                  </span>
-                </span>
+                        </g>
+                      </svg>
+                    </span>
+                  </label>
+                </div>
               </div>
               <div
                 class="emotion-5"
@@ -850,52 +834,52 @@
               <div
                 class="emotion-24"
               >
-                <span
+                <div
                   class="emotion-37"
                 >
-                  <span
+                  <label
                     class="emotion-38"
+                    data-rac=""
+                    data-testid="undefined_8_checkbox"
                   >
-                    <input
-                      class="emotion-39"
-                      data-testid="checkbox"
-                      id="styled-checkbox-_00"
-                      type="checkbox"
-                    />
-                    <label
-                      class="emotion-40"
-                      for="styled-checkbox-_00"
+                    <span
+                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
                     >
-                      <span
-                        class="emotion-41"
+                      <input
+                        data-testid="undefined_8_checkbox"
+                        type="checkbox"
+                        value="8"
+                      />
+                    </span>
+                    <span
+                      class="emotion-39"
+                    >
+                      <svg
+                        class="emotion-40"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
                       >
-                        <svg
-                          class="emotion-42"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                        <g
+                          fill="none"
+                          fill-rule="evenodd"
+                          id="\\uD83D\\uDD36-Symbols"
+                          stroke="none"
+                          stroke-width="1"
                         >
                           <g
-                            fill="none"
-                            fill-rule="evenodd"
-                            id="\\uD83D\\uDD36-Symbols"
-                            stroke="none"
-                            stroke-width="1"
+                            id="Checkmark"
                           >
-                            <g
-                              id="Checkmark"
-                            >
-                              <path
-                                d="M16.1742639,3.56546017 L17.5665405,4.95773677 L9.21853983,13.3054602 L14.0871995,18.1742639 L12.6949229,19.5665405 L6.43453983,13.3061575 L6.43653983,13.3044602 L6.43589028,13.3038338 L16.1742639,3.56546017 Z"
-                                transform="translate(12.000540, 11.566000) scale(-1, 1) rotate(-90.000000) translate(-12.000540, -11.566000)"
-                              />
-                            </g>
+                            <path
+                              d="M16.1742639,3.56546017 L17.5665405,4.95773677 L9.21853983,13.3054602 L14.0871995,18.1742639 L12.6949229,19.5665405 L6.43453983,13.3061575 L6.43653983,13.3044602 L6.43589028,13.3038338 L16.1742639,3.56546017 Z"
+                              transform="translate(12.000540, 11.566000) scale(-1, 1) rotate(-90.000000) translate(-12.000540, -11.566000)"
+                            />
                           </g>
-                        </svg>
-                      </span>
-                    </label>
-                  </span>
-                </span>
+                        </g>
+                      </svg>
+                    </span>
+                  </label>
+                </div>
               </div>
               <div
                 class="emotion-5"
@@ -950,7 +934,7 @@
                 class="emotion-24"
               >
                 <div
-                  class="emotion-60 emotion-61"
+                  class="emotion-56 emotion-57"
                 >
                   <div
                     style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 4px; transition: opacity 0.25s; user-select: none;"
@@ -994,7 +978,7 @@
                 class="emotion-24"
               >
                 <div
-                  class="emotion-60 emotion-61"
+                  class="emotion-56 emotion-57"
                 >
                   <div
                     style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 4px; transition: opacity 0.25s; user-select: none;"
@@ -1056,14 +1040,14 @@
                 class="emotion-24"
               >
                 <div
-                  class="emotion-73"
+                  class="emotion-69"
                   data-testid="_avatar"
                 >
                   <span
-                    class="emotion-41"
+                    class="emotion-39"
                   >
                     <svg
-                      class="emotion-75"
+                      class="emotion-71"
                       fill="none"
                       viewBox="0 0 14 17"
                       xmlns="http://www.w3.org/2000/svg"
@@ -1101,14 +1085,14 @@
                 class="emotion-24"
               >
                 <div
-                  class="emotion-73"
+                  class="emotion-69"
                   data-testid="_avatar"
                 >
                   <span
-                    class="emotion-41"
+                    class="emotion-39"
                   >
                     <svg
-                      class="emotion-75"
+                      class="emotion-71"
                       fill="none"
                       viewBox="0 0 14 17"
                       xmlns="http://www.w3.org/2000/svg"

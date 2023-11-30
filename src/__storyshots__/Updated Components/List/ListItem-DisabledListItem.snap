@@ -324,104 +324,95 @@
 }
 
 .emotion-19 {
-  opacity: 0.3;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.emotion-20 {
-  border-radius: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 3rem;
-  height: 3rem;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  position: relative;
-}
-
-.emotion-20:before {
-  display: none;
-  border-radius: 100%;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  content: ' ';
-  width: 3rem;
-  height: 3rem;
-  position: absolute;
-}
-
-.emotion-21 {
-  border: 0;
-  border-radius: 0.125rem;
-  width: 1.5rem;
-  height: 1.5rem;
-  position: absolute;
-  opacity: 0;
-}
-
-.emotion-21+label {
-  position: relative;
-  cursor: pointer;
-  padding: 0;
-}
-
-.emotion-21+label:before {
-  content: '';
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  display: inline-block;
-  vertical-align: text-top;
-  width: 1.5rem;
-  height: 1.5rem;
-  background: inherit;
-  box-shadow: inset 0px 0px 0px 0.125rem #b7c3d8;
-  border-radius: 0.25rem;
-}
-
-.emotion-21:disabled+label {
+  gap: 0.75rem;
+  opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-22 span {
-  padding: 0;
+.emotion-20 {
+  display: block;
+  cursor: pointer;
+  position: relative;
 }
 
-.emotion-22 svg {
-  position: absolute;
-  top: 0;
-  display: none;
+.emotion-20>span:nth-of-type(2) {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  width: 1.25rem;
+  height: 1.25rem;
+  box-sizing: border-box;
+  border: 0.125rem solid #b9cdfc;
+  border-radius: 0.25rem;
 }
 
-.emotion-24 {
-  fill: white;
-  width: 1.5rem;
-  height: 1.5rem;
+.emotion-20 svg {
+  visibility: hidden;
+  opacity: 0;
 }
 
-.emotion-24 * {
-  fill: white;
+.emotion-20:hover,
+.emotion-20[data-focus-visible='true'] {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  background: rgba(84,94,255,0.06);
+  box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
+  border-radius: 100%;
 }
 
-.emotion-29 label {
+.emotion-20[data-selected='true']:hover,
+.emotion-20[data-indeterminate='true']:hover {
+  background: none;
+  box-shadow: none;
+}
+
+.emotion-20[data-selected='true']>span:last-child,
+.emotion-20[data-indeterminate='true']>span:last-child {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border-color: #175bf5;
+  background: #175bf5;
+}
+
+.emotion-20[data-selected='true'] svg,
+.emotion-20[data-indeterminate='true'] svg {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.emotion-20[data-disabled='true'] {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-20[data-disabled='true']:hover {
+  background: none;
+  box-shadow: none;
+}
+
+.emotion-22 {
+  fill: #ffffff;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-22 * {
+  fill: #ffffff;
+}
+
+.emotion-27 label {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -438,7 +429,7 @@
   cursor: pointer;
 }
 
-.emotion-29 label:before {
+.emotion-27 label:before {
   content: '';
   display: inline-block;
   width: 1.25rem;
@@ -451,22 +442,22 @@
   background: rgba(84,94,255,0);
 }
 
-.emotion-29 label:hover::before {
+.emotion-27 label:hover::before {
   background: rgba(84,94,255,0.06);
   box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
 }
 
-.emotion-29 label[data-selected='true']:before {
+.emotion-27 label[data-selected='true']:before {
   border-color: #175bf5;
   border-radius: 50%;
 }
 
-.emotion-29 label[data-selected='true']:hover::before {
+.emotion-27 label[data-selected='true']:hover::before {
   background: none;
   box-shadow: none;
 }
 
-.emotion-29 label[data-selected='true']:after {
+.emotion-27 label[data-selected='true']:after {
   content: '';
   display: block;
   position: absolute;
@@ -479,12 +470,12 @@
   animation: circle 0.15s ease-in-out;
 }
 
-.emotion-29 label[data-disabled='true'] {
+.emotion-27 label[data-disabled='true'] {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-29 label[data-disabled='true']:hover::before {
+.emotion-27 label[data-disabled='true']:hover::before {
   background: none;
   box-shadow: none;
 }
@@ -629,53 +620,53 @@
               <div
                 class="emotion-8"
               >
-                <span
+                <div
                   class="emotion-19"
                 >
-                  <span
+                  <label
                     class="emotion-20"
+                    data-disabled="true"
+                    data-rac=""
+                    data-testid="undefined_undefined_checkbox"
                   >
-                    <input
-                      class="emotion-21"
-                      data-testid="checkbox"
-                      disabled=""
-                      id="styled-checkbox-_00"
-                      type="checkbox"
-                    />
-                    <label
-                      class="emotion-22"
-                      for="styled-checkbox-_00"
+                    <span
+                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
                     >
-                      <span
-                        class="emotion-14"
+                      <input
+                        data-testid="undefined_undefined_checkbox"
+                        disabled=""
+                        type="checkbox"
+                      />
+                    </span>
+                    <span
+                      class="emotion-14"
+                    >
+                      <svg
+                        class="emotion-22"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
                       >
-                        <svg
-                          class="emotion-24"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                        <g
+                          fill="none"
+                          fill-rule="evenodd"
+                          id="\\uD83D\\uDD36-Symbols"
+                          stroke="none"
+                          stroke-width="1"
                         >
                           <g
-                            fill="none"
-                            fill-rule="evenodd"
-                            id="\\uD83D\\uDD36-Symbols"
-                            stroke="none"
-                            stroke-width="1"
+                            id="Checkmark"
                           >
-                            <g
-                              id="Checkmark"
-                            >
-                              <path
-                                d="M16.1742639,3.56546017 L17.5665405,4.95773677 L9.21853983,13.3054602 L14.0871995,18.1742639 L12.6949229,19.5665405 L6.43453983,13.3061575 L6.43653983,13.3044602 L6.43589028,13.3038338 L16.1742639,3.56546017 Z"
-                                transform="translate(12.000540, 11.566000) scale(-1, 1) rotate(-90.000000) translate(-12.000540, -11.566000)"
-                              />
-                            </g>
+                            <path
+                              d="M16.1742639,3.56546017 L17.5665405,4.95773677 L9.21853983,13.3054602 L14.0871995,18.1742639 L12.6949229,19.5665405 L6.43453983,13.3061575 L6.43653983,13.3044602 L6.43589028,13.3038338 L16.1742639,3.56546017 Z"
+                              transform="translate(12.000540, 11.566000) scale(-1, 1) rotate(-90.000000) translate(-12.000540, -11.566000)"
+                            />
                           </g>
-                        </svg>
-                      </span>
-                    </label>
-                  </span>
-                </span>
+                        </g>
+                      </svg>
+                    </span>
+                  </label>
+                </div>
               </div>
               <div
                 class="emotion-5"
@@ -699,13 +690,13 @@
               >
                 <div
                   aria-orientation="vertical"
-                  class="emotion-28"
+                  class="emotion-26"
                   data-testid="undefined_radio_group_container"
                   id="react-aria-:r57:"
                   role="radiogroup"
                 >
                   <div
-                    class="emotion-29"
+                    class="emotion-27"
                     data-testid="undefined_radio_6_container"
                   >
                     <label
