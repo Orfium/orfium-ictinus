@@ -1,6 +1,6 @@
-import List, { ListItem, ListItemAction, ListItemText, ListSelected } from '../index';
+import List, { ListItem, ListItemAction, ListItemText } from '../index';
 import { FIGMA_URL } from '../../../utils/common';
-import { Radio, RadioGroup, CheckBox } from '../../Controls';
+import { Radio, CheckBox } from '../../Controls';
 import Switch from '../../Switch';
 import Avatar from '../../Avatar';
 import Box from '../../Box';
@@ -48,24 +48,38 @@ export const ListItemCompilations = {
           </List>
         </Box>
         <Box mb={'3'}>
-          <RadioGroup value={selectedRadio} onChange={setSelectedRadio}>
-            <div>
-              <List label={'list'} selectedKeys={selectedKeys} onSelectionChange={setSelectedKeys}>
-                <ListItem key={'5'}>
-                  <ListItemAction>
-                    <Radio value="5" />
-                  </ListItemAction>
-                  <ListItemText>Option Radio</ListItemText>
-                </ListItem>
-                <ListItem key={'6'} rowSize={'compact'}>
-                  <ListItemAction>
-                    <Radio value="6" />
-                  </ListItemAction>
-                  <ListItemText>Option Radio (compact)</ListItemText>
-                </ListItem>
-              </List>
-            </div>
-          </RadioGroup>
+          <List label={'list'} selectedKeys={selectedKeys} onSelectionChange={setSelectedKeys}>
+            <ListItem key={'5'}>
+              <ListItemAction>
+                <Radio
+                  value="cherry"
+                  isSelected={selectedKeys.has(`5`)}
+                  inputProps={{
+                    onClick: (e) => {
+                      e.stopPropagation();
+                      setSelectedKeys(new Set(['5']));
+                    },
+                  }}
+                />
+              </ListItemAction>
+              <ListItemText>Option Radio</ListItemText>
+            </ListItem>
+            <ListItem key={'6'} rowSize={'compact'}>
+              <ListItemAction>
+                <Radio
+                  value="banana"
+                  isSelected={selectedKeys.has(`6`)}
+                  inputProps={{
+                    onClick: (e) => {
+                      e.stopPropagation();
+                      setSelectedKeys(new Set(['6']));
+                    },
+                  }}
+                />
+              </ListItemAction>
+              <ListItemText>Option Radio (compact)</ListItemText>
+            </ListItem>
+          </List>
         </Box>
         <Box mb={'3'}>
           <List label={'list'} selectedKeys={selectedKeys} onSelectionChange={setSelectedKeys}>
@@ -169,9 +183,7 @@ export const DisabledListItem = {
           </ListItem>
           <ListItem key={'6'}>
             <ListItemAction>
-              <RadioGroup>
-                <Radio value="6" isDisabled />
-              </RadioGroup>
+              <Radio value="6" isDisabled />
             </ListItemAction>
             <ListItemText>This Radio Option is disabled</ListItemText>
           </ListItem>
