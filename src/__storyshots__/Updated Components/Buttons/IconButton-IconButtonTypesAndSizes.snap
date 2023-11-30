@@ -25,6 +25,18 @@
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #ffffff;
   width: 2.25rem;
   height: 2.25rem;
@@ -55,7 +67,29 @@
 }
 
 .emotion-3 {
-  padding: 0.125rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-4 path {
+  fill: #ffffff!important;
+}
+
+.emotion-6 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -68,24 +102,6 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-}
-
-.emotion-4 {
-  fill: #ffffff;
-  width: 1rem;
-  height: 1rem;
-}
-
-.emotion-4 * {
-  fill: #ffffff;
-}
-
-.emotion-6 {
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
   color: #1552DD;
   width: 2.25rem;
   height: 2.25rem;
@@ -116,13 +132,12 @@
 }
 
 .emotion-8 {
-  fill: #1552DD;
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
-.emotion-8 * {
-  fill: #1552DD;
+.emotion-8 path {
+  fill: #1552DD!important;
 }
 
 .emotion-10 {
@@ -131,6 +146,18 @@
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #1552DD;
   width: 2.25rem;
   height: 2.25rem;
@@ -166,6 +193,18 @@
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #ffffff;
   width: 2.25rem;
   height: 2.25rem;
@@ -201,6 +240,18 @@
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #1552DD;
   width: 2.25rem;
   height: 2.25rem;
@@ -236,6 +287,18 @@
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #1552DD;
   width: 2.25rem;
   height: 2.25rem;
@@ -271,6 +334,18 @@
   line-height: 1rem;
   font-size: 0.75rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #ffffff;
   width: 1.75rem;
   height: 1.75rem;
@@ -300,14 +375,22 @@
   background-color: #1249C4;
 }
 
-.emotion-30 {
-  fill: #ffffff;
-  width: 0.75rem;
-  height: 0.75rem;
+.emotion-29 {
+  width: 1rem;
+  height: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.emotion-30 * {
-  fill: #ffffff;
+.emotion-30 {
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-30 path {
+  fill: #ffffff!important;
 }
 
 .emotion-32 {
@@ -316,6 +399,18 @@
   line-height: 1rem;
   font-size: 0.75rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #1552DD;
   width: 1.75rem;
   height: 1.75rem;
@@ -346,13 +441,12 @@
 }
 
 .emotion-34 {
-  fill: #1552DD;
-  width: 0.75rem;
-  height: 0.75rem;
+  width: 1rem;
+  height: 1rem;
 }
 
-.emotion-34 * {
-  fill: #1552DD;
+.emotion-34 path {
+  fill: #1552DD!important;
 }
 
 .emotion-36 {
@@ -361,6 +455,18 @@
   line-height: 1rem;
   font-size: 0.75rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #1552DD;
   width: 1.75rem;
   height: 1.75rem;
@@ -396,6 +502,18 @@
   line-height: 1rem;
   font-size: 0.75rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #ffffff;
   width: 1.75rem;
   height: 1.75rem;
@@ -431,6 +549,18 @@
   line-height: 1rem;
   font-size: 0.75rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #1552DD;
   width: 1.75rem;
   height: 1.75rem;
@@ -466,6 +596,18 @@
   line-height: 1rem;
   font-size: 0.75rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #1552DD;
   width: 1.75rem;
   height: 1.75rem;
@@ -510,27 +652,29 @@
           data-testid="icon-button"
           type="button"
         >
-          <span
+          <div
             class="emotion-3"
           >
             <svg
               class="emotion-4"
-              viewBox="0 0 16 16"
+              fill="none"
+              viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
             >
-              <g
-                fill="none"
-                fill-rule="evenodd"
-                stroke="none"
-                stroke-width="1"
-              >
-                <path
-                  d="M8,10.8 C8.77319865,10.8 9.4,11.4268014 9.4,12.2 C9.4,12.9731986 8.77319865,13.6 8,13.6 C7.22680135,13.6 6.6,12.9731986 6.6,12.2 C6.6,11.4268014 7.22680135,10.8 8,10.8 Z M8,6.6 C8.77319865,6.6 9.4,7.22680135 9.4,8 C9.4,8.77319865 8.77319865,9.4 8,9.4 C7.22680135,9.4 6.6,8.77319865 6.6,8 C6.6,7.22680135 7.22680135,6.6 8,6.6 Z M8,2.4 C8.77319865,2.4 9.4,3.02680135 9.4,3.8 C9.4,4.57319865 8.77319865,5.2 8,5.2 C7.22680135,5.2 6.6,4.57319865 6.6,3.8 C6.6,3.02680135 7.22680135,2.4 8,2.4 Z"
-                />
-              </g>
+              <path
+                d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                fill="#6265AD"
+              />
             </svg>
-          </span>
+          </div>
         </button>
       </div>
     </div>
@@ -545,27 +689,29 @@
           data-testid="icon-button"
           type="button"
         >
-          <span
+          <div
             class="emotion-3"
           >
             <svg
               class="emotion-8"
-              viewBox="0 0 16 16"
+              fill="none"
+              viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
             >
-              <g
-                fill="none"
-                fill-rule="evenodd"
-                stroke="none"
-                stroke-width="1"
-              >
-                <path
-                  d="M8,10.8 C8.77319865,10.8 9.4,11.4268014 9.4,12.2 C9.4,12.9731986 8.77319865,13.6 8,13.6 C7.22680135,13.6 6.6,12.9731986 6.6,12.2 C6.6,11.4268014 7.22680135,10.8 8,10.8 Z M8,6.6 C8.77319865,6.6 9.4,7.22680135 9.4,8 C9.4,8.77319865 8.77319865,9.4 8,9.4 C7.22680135,9.4 6.6,8.77319865 6.6,8 C6.6,7.22680135 7.22680135,6.6 8,6.6 Z M8,2.4 C8.77319865,2.4 9.4,3.02680135 9.4,3.8 C9.4,4.57319865 8.77319865,5.2 8,5.2 C7.22680135,5.2 6.6,4.57319865 6.6,3.8 C6.6,3.02680135 7.22680135,2.4 8,2.4 Z"
-                />
-              </g>
+              <path
+                d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                fill="#6265AD"
+              />
             </svg>
-          </span>
+          </div>
         </button>
       </div>
     </div>
@@ -580,27 +726,29 @@
           data-testid="icon-button"
           type="button"
         >
-          <span
+          <div
             class="emotion-3"
           >
             <svg
               class="emotion-8"
-              viewBox="0 0 16 16"
+              fill="none"
+              viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
             >
-              <g
-                fill="none"
-                fill-rule="evenodd"
-                stroke="none"
-                stroke-width="1"
-              >
-                <path
-                  d="M8,10.8 C8.77319865,10.8 9.4,11.4268014 9.4,12.2 C9.4,12.9731986 8.77319865,13.6 8,13.6 C7.22680135,13.6 6.6,12.9731986 6.6,12.2 C6.6,11.4268014 7.22680135,10.8 8,10.8 Z M8,6.6 C8.77319865,6.6 9.4,7.22680135 9.4,8 C9.4,8.77319865 8.77319865,9.4 8,9.4 C7.22680135,9.4 6.6,8.77319865 6.6,8 C6.6,7.22680135 7.22680135,6.6 8,6.6 Z M8,2.4 C8.77319865,2.4 9.4,3.02680135 9.4,3.8 C9.4,4.57319865 8.77319865,5.2 8,5.2 C7.22680135,5.2 6.6,4.57319865 6.6,3.8 C6.6,3.02680135 7.22680135,2.4 8,2.4 Z"
-                />
-              </g>
+              <path
+                d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                fill="#6265AD"
+              />
             </svg>
-          </span>
+          </div>
         </button>
       </div>
     </div>
@@ -619,27 +767,29 @@
           data-testid="icon-button"
           type="button"
         >
-          <span
+          <div
             class="emotion-3"
           >
             <svg
               class="emotion-4"
-              viewBox="0 0 16 16"
+              fill="none"
+              viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
             >
-              <g
-                fill="none"
-                fill-rule="evenodd"
-                stroke="none"
-                stroke-width="1"
-              >
-                <path
-                  d="M8,10.8 C8.77319865,10.8 9.4,11.4268014 9.4,12.2 C9.4,12.9731986 8.77319865,13.6 8,13.6 C7.22680135,13.6 6.6,12.9731986 6.6,12.2 C6.6,11.4268014 7.22680135,10.8 8,10.8 Z M8,6.6 C8.77319865,6.6 9.4,7.22680135 9.4,8 C9.4,8.77319865 8.77319865,9.4 8,9.4 C7.22680135,9.4 6.6,8.77319865 6.6,8 C6.6,7.22680135 7.22680135,6.6 8,6.6 Z M8,2.4 C8.77319865,2.4 9.4,3.02680135 9.4,3.8 C9.4,4.57319865 8.77319865,5.2 8,5.2 C7.22680135,5.2 6.6,4.57319865 6.6,3.8 C6.6,3.02680135 7.22680135,2.4 8,2.4 Z"
-                />
-              </g>
+              <path
+                d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                fill="#6265AD"
+              />
             </svg>
-          </span>
+          </div>
         </button>
       </div>
     </div>
@@ -654,27 +804,29 @@
           data-testid="icon-button"
           type="button"
         >
-          <span
+          <div
             class="emotion-3"
           >
             <svg
               class="emotion-8"
-              viewBox="0 0 16 16"
+              fill="none"
+              viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
             >
-              <g
-                fill="none"
-                fill-rule="evenodd"
-                stroke="none"
-                stroke-width="1"
-              >
-                <path
-                  d="M8,10.8 C8.77319865,10.8 9.4,11.4268014 9.4,12.2 C9.4,12.9731986 8.77319865,13.6 8,13.6 C7.22680135,13.6 6.6,12.9731986 6.6,12.2 C6.6,11.4268014 7.22680135,10.8 8,10.8 Z M8,6.6 C8.77319865,6.6 9.4,7.22680135 9.4,8 C9.4,8.77319865 8.77319865,9.4 8,9.4 C7.22680135,9.4 6.6,8.77319865 6.6,8 C6.6,7.22680135 7.22680135,6.6 8,6.6 Z M8,2.4 C8.77319865,2.4 9.4,3.02680135 9.4,3.8 C9.4,4.57319865 8.77319865,5.2 8,5.2 C7.22680135,5.2 6.6,4.57319865 6.6,3.8 C6.6,3.02680135 7.22680135,2.4 8,2.4 Z"
-                />
-              </g>
+              <path
+                d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                fill="#6265AD"
+              />
             </svg>
-          </span>
+          </div>
         </button>
       </div>
     </div>
@@ -689,27 +841,29 @@
           data-testid="icon-button"
           type="button"
         >
-          <span
+          <div
             class="emotion-3"
           >
             <svg
               class="emotion-8"
-              viewBox="0 0 16 16"
+              fill="none"
+              viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
             >
-              <g
-                fill="none"
-                fill-rule="evenodd"
-                stroke="none"
-                stroke-width="1"
-              >
-                <path
-                  d="M8,10.8 C8.77319865,10.8 9.4,11.4268014 9.4,12.2 C9.4,12.9731986 8.77319865,13.6 8,13.6 C7.22680135,13.6 6.6,12.9731986 6.6,12.2 C6.6,11.4268014 7.22680135,10.8 8,10.8 Z M8,6.6 C8.77319865,6.6 9.4,7.22680135 9.4,8 C9.4,8.77319865 8.77319865,9.4 8,9.4 C7.22680135,9.4 6.6,8.77319865 6.6,8 C6.6,7.22680135 7.22680135,6.6 8,6.6 Z M8,2.4 C8.77319865,2.4 9.4,3.02680135 9.4,3.8 C9.4,4.57319865 8.77319865,5.2 8,5.2 C7.22680135,5.2 6.6,4.57319865 6.6,3.8 C6.6,3.02680135 7.22680135,2.4 8,2.4 Z"
-                />
-              </g>
+              <path
+                d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                fill="#6265AD"
+              />
             </svg>
-          </span>
+          </div>
         </button>
       </div>
     </div>
@@ -728,27 +882,29 @@
           data-testid="icon-button"
           type="button"
         >
-          <span
-            class="emotion-3"
+          <div
+            class="emotion-29"
           >
             <svg
               class="emotion-30"
-              viewBox="0 0 16 16"
+              fill="none"
+              viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
             >
-              <g
-                fill="none"
-                fill-rule="evenodd"
-                stroke="none"
-                stroke-width="1"
-              >
-                <path
-                  d="M8,10.8 C8.77319865,10.8 9.4,11.4268014 9.4,12.2 C9.4,12.9731986 8.77319865,13.6 8,13.6 C7.22680135,13.6 6.6,12.9731986 6.6,12.2 C6.6,11.4268014 7.22680135,10.8 8,10.8 Z M8,6.6 C8.77319865,6.6 9.4,7.22680135 9.4,8 C9.4,8.77319865 8.77319865,9.4 8,9.4 C7.22680135,9.4 6.6,8.77319865 6.6,8 C6.6,7.22680135 7.22680135,6.6 8,6.6 Z M8,2.4 C8.77319865,2.4 9.4,3.02680135 9.4,3.8 C9.4,4.57319865 8.77319865,5.2 8,5.2 C7.22680135,5.2 6.6,4.57319865 6.6,3.8 C6.6,3.02680135 7.22680135,2.4 8,2.4 Z"
-                />
-              </g>
+              <path
+                d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                fill="#6265AD"
+              />
             </svg>
-          </span>
+          </div>
         </button>
       </div>
     </div>
@@ -763,27 +919,29 @@
           data-testid="icon-button"
           type="button"
         >
-          <span
-            class="emotion-3"
+          <div
+            class="emotion-29"
           >
             <svg
               class="emotion-34"
-              viewBox="0 0 16 16"
+              fill="none"
+              viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
             >
-              <g
-                fill="none"
-                fill-rule="evenodd"
-                stroke="none"
-                stroke-width="1"
-              >
-                <path
-                  d="M8,10.8 C8.77319865,10.8 9.4,11.4268014 9.4,12.2 C9.4,12.9731986 8.77319865,13.6 8,13.6 C7.22680135,13.6 6.6,12.9731986 6.6,12.2 C6.6,11.4268014 7.22680135,10.8 8,10.8 Z M8,6.6 C8.77319865,6.6 9.4,7.22680135 9.4,8 C9.4,8.77319865 8.77319865,9.4 8,9.4 C7.22680135,9.4 6.6,8.77319865 6.6,8 C6.6,7.22680135 7.22680135,6.6 8,6.6 Z M8,2.4 C8.77319865,2.4 9.4,3.02680135 9.4,3.8 C9.4,4.57319865 8.77319865,5.2 8,5.2 C7.22680135,5.2 6.6,4.57319865 6.6,3.8 C6.6,3.02680135 7.22680135,2.4 8,2.4 Z"
-                />
-              </g>
+              <path
+                d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                fill="#6265AD"
+              />
             </svg>
-          </span>
+          </div>
         </button>
       </div>
     </div>
@@ -798,27 +956,29 @@
           data-testid="icon-button"
           type="button"
         >
-          <span
-            class="emotion-3"
+          <div
+            class="emotion-29"
           >
             <svg
               class="emotion-34"
-              viewBox="0 0 16 16"
+              fill="none"
+              viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
             >
-              <g
-                fill="none"
-                fill-rule="evenodd"
-                stroke="none"
-                stroke-width="1"
-              >
-                <path
-                  d="M8,10.8 C8.77319865,10.8 9.4,11.4268014 9.4,12.2 C9.4,12.9731986 8.77319865,13.6 8,13.6 C7.22680135,13.6 6.6,12.9731986 6.6,12.2 C6.6,11.4268014 7.22680135,10.8 8,10.8 Z M8,6.6 C8.77319865,6.6 9.4,7.22680135 9.4,8 C9.4,8.77319865 8.77319865,9.4 8,9.4 C7.22680135,9.4 6.6,8.77319865 6.6,8 C6.6,7.22680135 7.22680135,6.6 8,6.6 Z M8,2.4 C8.77319865,2.4 9.4,3.02680135 9.4,3.8 C9.4,4.57319865 8.77319865,5.2 8,5.2 C7.22680135,5.2 6.6,4.57319865 6.6,3.8 C6.6,3.02680135 7.22680135,2.4 8,2.4 Z"
-                />
-              </g>
+              <path
+                d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                fill="#6265AD"
+              />
             </svg>
-          </span>
+          </div>
         </button>
       </div>
     </div>
@@ -837,27 +997,29 @@
           data-testid="icon-button"
           type="button"
         >
-          <span
-            class="emotion-3"
+          <div
+            class="emotion-29"
           >
             <svg
               class="emotion-30"
-              viewBox="0 0 16 16"
+              fill="none"
+              viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
             >
-              <g
-                fill="none"
-                fill-rule="evenodd"
-                stroke="none"
-                stroke-width="1"
-              >
-                <path
-                  d="M8,10.8 C8.77319865,10.8 9.4,11.4268014 9.4,12.2 C9.4,12.9731986 8.77319865,13.6 8,13.6 C7.22680135,13.6 6.6,12.9731986 6.6,12.2 C6.6,11.4268014 7.22680135,10.8 8,10.8 Z M8,6.6 C8.77319865,6.6 9.4,7.22680135 9.4,8 C9.4,8.77319865 8.77319865,9.4 8,9.4 C7.22680135,9.4 6.6,8.77319865 6.6,8 C6.6,7.22680135 7.22680135,6.6 8,6.6 Z M8,2.4 C8.77319865,2.4 9.4,3.02680135 9.4,3.8 C9.4,4.57319865 8.77319865,5.2 8,5.2 C7.22680135,5.2 6.6,4.57319865 6.6,3.8 C6.6,3.02680135 7.22680135,2.4 8,2.4 Z"
-                />
-              </g>
+              <path
+                d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                fill="#6265AD"
+              />
             </svg>
-          </span>
+          </div>
         </button>
       </div>
     </div>
@@ -872,27 +1034,29 @@
           data-testid="icon-button"
           type="button"
         >
-          <span
-            class="emotion-3"
+          <div
+            class="emotion-29"
           >
             <svg
               class="emotion-34"
-              viewBox="0 0 16 16"
+              fill="none"
+              viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
             >
-              <g
-                fill="none"
-                fill-rule="evenodd"
-                stroke="none"
-                stroke-width="1"
-              >
-                <path
-                  d="M8,10.8 C8.77319865,10.8 9.4,11.4268014 9.4,12.2 C9.4,12.9731986 8.77319865,13.6 8,13.6 C7.22680135,13.6 6.6,12.9731986 6.6,12.2 C6.6,11.4268014 7.22680135,10.8 8,10.8 Z M8,6.6 C8.77319865,6.6 9.4,7.22680135 9.4,8 C9.4,8.77319865 8.77319865,9.4 8,9.4 C7.22680135,9.4 6.6,8.77319865 6.6,8 C6.6,7.22680135 7.22680135,6.6 8,6.6 Z M8,2.4 C8.77319865,2.4 9.4,3.02680135 9.4,3.8 C9.4,4.57319865 8.77319865,5.2 8,5.2 C7.22680135,5.2 6.6,4.57319865 6.6,3.8 C6.6,3.02680135 7.22680135,2.4 8,2.4 Z"
-                />
-              </g>
+              <path
+                d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                fill="#6265AD"
+              />
             </svg>
-          </span>
+          </div>
         </button>
       </div>
     </div>
@@ -907,27 +1071,29 @@
           data-testid="icon-button"
           type="button"
         >
-          <span
-            class="emotion-3"
+          <div
+            class="emotion-29"
           >
             <svg
               class="emotion-34"
-              viewBox="0 0 16 16"
+              fill="none"
+              viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
             >
-              <g
-                fill="none"
-                fill-rule="evenodd"
-                stroke="none"
-                stroke-width="1"
-              >
-                <path
-                  d="M8,10.8 C8.77319865,10.8 9.4,11.4268014 9.4,12.2 C9.4,12.9731986 8.77319865,13.6 8,13.6 C7.22680135,13.6 6.6,12.9731986 6.6,12.2 C6.6,11.4268014 7.22680135,10.8 8,10.8 Z M8,6.6 C8.77319865,6.6 9.4,7.22680135 9.4,8 C9.4,8.77319865 8.77319865,9.4 8,9.4 C7.22680135,9.4 6.6,8.77319865 6.6,8 C6.6,7.22680135 7.22680135,6.6 8,6.6 Z M8,2.4 C8.77319865,2.4 9.4,3.02680135 9.4,3.8 C9.4,4.57319865 8.77319865,5.2 8,5.2 C7.22680135,5.2 6.6,4.57319865 6.6,3.8 C6.6,3.02680135 7.22680135,2.4 8,2.4 Z"
-                />
-              </g>
+              <path
+                d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                fill="#6265AD"
+              />
             </svg>
-          </span>
+          </div>
         </button>
       </div>
     </div>

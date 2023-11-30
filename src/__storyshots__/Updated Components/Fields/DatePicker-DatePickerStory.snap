@@ -207,7 +207,7 @@
 
 .emotion-7 {
   min-width: 2.75rem;
-  overflow: hidden;
+  overflow: visible;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -224,53 +224,31 @@
 }
 
 .emotion-8 {
-  cursor: pointer;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  cursor: pointer;
 }
 
-.emotion-8:focus-visible,
-.emotion-8:hover {
+.emotion-8:hover,
+.emotion-8:focus-visible {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border-radius: 100%;
   background: rgba(84,94,255,0.06);
-  border-radius: 6.25rem;
+  box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
 }
 
 .emotion-9 {
-  padding: 0.125rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-10 {
-  fill: #686BB3;
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-10 * {
-  fill: #686BB3;
+.emotion-9 path {
+  fill: #686BB3!important;
 }
 
 <div>
@@ -321,36 +299,17 @@
                         data-testid="calendar_button"
                         tabindex="0"
                       >
-                        <span
+                        <svg
                           class="emotion-9"
+                          fill="none"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
-                          <svg
-                            class="emotion-10"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <g
-                              fill-rule="evenodd"
-                              id="\\uD83D\\uDD36-Symbols"
-                              stroke-width="1"
-                            >
-                              <g
-                                id="Calendar/Empty"
-                              >
-                                <rect
-                                  id="boundingbox"
-                                  x="0"
-                                  y="0"
-                                />
-                                <path
-                                  d="M5,8 L5,20 L19,20 L19,8 L5,8 Z M3,22 L3,4 L6,4 L6,2 L8,2 L8,4 L16,4 L16,2 L18,2 L18,4 L21,4 L21,22 L3,22 Z"
-                                  fill="#232323"
-                                  id="calendar-empty"
-                                />
-                              </g>
-                            </g>
-                          </svg>
-                        </span>
+                          <path
+                            d="M4.48202 17.5C3.9305 17.5 3.46229 17.3264 3.07738 16.9791C2.69246 16.6318 2.5 16.2093 2.5 15.7117V5.75467C2.5 5.25707 2.69246 4.83463 3.07738 4.48735C3.46229 4.14006 3.9305 3.96642 4.48202 3.96642H4.95349V3.29616C4.95349 3.07602 5.03957 2.88829 5.21172 2.73296C5.38386 2.57765 5.59193 2.5 5.83594 2.5C6.07993 2.5 6.288 2.57765 6.46015 2.73296C6.63229 2.88829 6.71836 3.07602 6.71836 3.29616V3.96642H13.3126V3.28217C13.3126 3.06668 13.3974 2.88245 13.567 2.72947C13.7365 2.57649 13.9407 2.5 14.1796 2.5C14.4184 2.5 14.6226 2.57649 14.7921 2.72947C14.9617 2.88245 15.0465 3.06668 15.0465 3.28217V3.96642H15.518C16.0695 3.96642 16.5377 4.14006 16.9226 4.48735C17.3075 4.83463 17.5 5.25707 17.5 5.75467V15.7117C17.5 16.2093 17.3075 16.6318 16.9226 16.9791C16.5377 17.3264 16.0695 17.5 15.518 17.5H4.48202ZM4.48202 15.9356H15.518C15.58 15.9356 15.6369 15.9123 15.6886 15.8657C15.7403 15.819 15.7661 15.7677 15.7661 15.7117V8.44684H4.23386V15.7117C4.23386 15.7677 4.2597 15.819 4.3114 15.8657C4.3631 15.9123 4.41998 15.9356 4.48202 15.9356Z"
+                            fill="#6265AD"
+                          />
+                        </svg>
                       </div>
                     </div>
                   </div>

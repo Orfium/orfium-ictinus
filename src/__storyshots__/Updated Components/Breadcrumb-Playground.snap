@@ -25,6 +25,18 @@
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #ffffff;
   height: auto;
   background-color: #175bf5;
@@ -103,6 +115,10 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 0.5rem;
 }
 
@@ -138,7 +154,7 @@
 }
 
 .emotion-7:hover path {
-  fill: #1B214F;
+  fill: #1B214F!important;
 }
 
 .emotion-7:visited {
@@ -146,7 +162,7 @@
 }
 
 .emotion-7:visited path {
-  fill: #6c28cc;
+  fill: #6c28cc!important;
 }
 
 .emotion-7:focus-visible {
@@ -154,7 +170,24 @@
 }
 
 .emotion-8 {
-  padding: 0.125rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-9 {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-9 path {
+  fill: #686BB3!important;
+}
+
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -163,27 +196,6 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-9 {
-  fill: #686BB3;
-  width: 0.75rem;
-  height: 0.75rem;
-}
-
-.emotion-9 * {
-  fill: #686BB3;
-}
-
-.emotion-11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   gap: 0.5rem;
   font-family: Roboto;
   font-weight: 400;
@@ -240,23 +252,23 @@
                   Level 1
                 </span>
               </a>
-              <span
+              <div
                 class="emotion-8"
               >
                 <svg
                   class="emotion-9"
                   fill="none"
-                  viewBox="0 0 6 12"
+                  viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     clip-rule="evenodd"
-                    d="M0.853554 11.1464C0.538571 11.4614 0 11.2383 0 10.7929L0 1.20711C0 0.761654 0.538571 0.53857 0.853553 0.853553L5.64645 5.64645C5.84171 5.84171 5.84171 6.15829 5.64645 6.35355L0.853554 11.1464Z"
-                    fill="#0E0E17"
+                    d="M9.64018 13.6332C8.98886 14.176 8 13.7128 8 12.865V7.13504C8 6.2872 8.98886 5.82405 9.64018 6.36682L13.0781 9.23178C13.5579 9.63157 13.5579 10.3684 13.0781 10.7682L9.64018 13.6332Z"
+                    fill="#6265AD"
                     fill-rule="evenodd"
                   />
                 </svg>
-              </span>
+              </div>
             </div>
           </li>
           <li
