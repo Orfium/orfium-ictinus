@@ -1,10 +1,11 @@
-import { withKnobs, boolean, text } from '@storybook/addon-knobs';
+import { boolean, text, select } from '@storybook/addon-knobs';
 import CheckBox from './CheckBox';
-import Stack from '../storyUtils/Stack';
-import { FIGMA_URL } from '../../utils/common';
+import Stack from '../../storyUtils/Stack';
+import { FIGMA_URL } from '../../../utils/common';
+import { useEffect, useState } from 'react';
 
 export default {
-  title: 'Original Components/Controls/CheckBox',
+  title: 'Updated Components/Controls/CheckBox',
   component: CheckBox,
 
   parameters: {
@@ -18,103 +19,153 @@ export default {
   },
 };
 
-export const CheckBoxStory = {
+export const SimpleCheckBox = {
+  render: () => {
+    const [selected, setSelected] = useState(false);
+    return (
+      <CheckBox value="label" isSelected={selected} onChange={setSelected}>
+        Label
+      </CheckBox>
+    );
+  },
+  name: 'Simple Checkbox',
+};
+
+export const IndeterminateCheckBox = {
+  render: () => {
+    const [selected, setSelected] = useState(false);
+    const [indeterminate, setIndeterminate] = useState(false);
+    const [selected1, setSelected1] = useState(false);
+    const [selected2, setSelected2] = useState(false);
+
+    useEffect(() => {
+      if ((selected1 && !selected2) || (!selected1 && selected2)) {
+        setSelected(false);
+        setIndeterminate(true);
+      }
+      if (selected1 && selected2) {
+        setIndeterminate(false);
+        setSelected(true);
+      }
+      if (!(selected1 || selected2)) {
+        setSelected(false);
+        setIndeterminate(false);
+      }
+    }, [selected1, selected2]);
+
+    return (
+      <Stack height={140}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
+          <div>
+            <CheckBox
+              value="select all"
+              isSelected={selected}
+              isIndeterminate={indeterminate}
+              onChange={(value) => {
+                setSelected1(value);
+                setSelected2(value);
+              }}
+            >
+              Select All
+            </CheckBox>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+            <CheckBox value="option 1" isSelected={selected1} onChange={setSelected1}>
+              Option 1
+            </CheckBox>
+            <CheckBox value="option 2" isSelected={selected2} onChange={setSelected2}>
+              Option 2
+            </CheckBox>
+          </div>
+        </div>
+      </Stack>
+    );
+  },
+
+  name: 'Indeterminate CheckBox',
+};
+
+export const CheckBoxLabelPlacement = {
   render: () => (
     <>
-      <Stack>
-        <CheckBox isChecked={false} />
-        <CheckBox isChecked={true} />
-        <CheckBox isChecked={true} isDisabled />
-        <CheckBox isChecked={true} isIntermediate />
-        <CheckBox isChecked={true} isIntermediate isDisabled />
-        <CheckBox isChecked={false} isIntermediate />
-        <CheckBox isChecked={false} isIntermediate isDisabled />
+      <Stack height={50}>
+        <CheckBox value="label">Option</CheckBox>
       </Stack>
       <Stack>
-        <CheckBox isChecked={false} isFilled={false} />
-        <CheckBox isChecked={true} isFilled={false} />
-        <CheckBox isChecked={true} isFilled={false} isDisabled />
-        <CheckBox isChecked={true} isFilled={false} isIntermediate />
-        <CheckBox isChecked={true} isFilled={false} isIntermediate isDisabled />
-        <CheckBox isChecked={false} isFilled={false} isIntermediate />
-        <CheckBox isChecked={false} isFilled={false} isIntermediate isDisabled />
+        <CheckBox value="label" labelConfig={{ placement: 'left' }}>
+          Option
+        </CheckBox>
       </Stack>
     </>
   ),
 
-  name: 'CheckBox',
+  name: 'CheckBox label placement',
 };
 
-export const CheckBoxWithLabel = {
+export const CheckBoxLabelSizes = {
   render: () => (
-    <div>
-      <Stack>
-        <CheckBox isChecked={false} label={'Not checked single'} />
-        <CheckBox isChecked label={'Checked Single'} />
-        <CheckBox isChecked={true} label={'Disabled single'} isDisabled />
-        <CheckBox isChecked={true} isIntermediate label={'Checked intermediate'} />
-        <CheckBox
-          isChecked={true}
-          isIntermediate
-          label={'Disabled checked intermediate'}
-          isDisabled
-        />
-        <CheckBox isChecked={false} isIntermediate label={'Not checked intermediate'} />
-        <CheckBox
-          isChecked={false}
-          isIntermediate
-          label={'Disabled not checked intermediate'}
-          isDisabled
-        />
+    <>
+      <Stack height={50}>
+        <CheckBox value="label">Normal Option</CheckBox>
       </Stack>
       <Stack>
-        <CheckBox isChecked={false} isFilled={false} label={'Not checked single'} />
-        <CheckBox isChecked isFilled={false} label={'Checked Single'} />
-        <CheckBox isChecked={true} isFilled={false} label={'Disabled single'} isDisabled />
-        <CheckBox isChecked={true} isFilled={false} isIntermediate label={'Checked intermediate'} />
-        <CheckBox
-          isChecked={true}
-          isFilled={false}
-          isIntermediate
-          label={'Disabled checked intermediate'}
-          isDisabled
-        />
-        <CheckBox
-          isChecked={false}
-          isFilled={false}
-          isIntermediate
-          label={'Not checked intermediate'}
-        />
-        <CheckBox
-          isChecked={false}
-          isFilled={false}
-          isIntermediate
-          label={'Disabled not checked intermediate'}
-          isDisabled
-        />
+        <CheckBox value="label" labelConfig={{ size: 'large' }}>
+          Large Option
+        </CheckBox>
       </Stack>
-    </div>
+    </>
   ),
 
-  name: 'CheckBox with Label',
+  name: 'CheckBox label sizes',
 };
 
-export const CheckBoxWithProps = {
+export const CheckBoxLabelHelptext = {
+  render: () => (
+    <CheckBox value="label" labelConfig={{ helpText: 'This is the helptext of the option' }}>
+      Option
+    </CheckBox>
+  ),
+
+  name: 'CheckBox label helptext',
+};
+
+export const DisabledCheckBox = {
+  render: () => (
+    <>
+      <Stack height={50}>
+        <CheckBox value="label" isDisabled>
+          Option
+        </CheckBox>
+      </Stack>
+      <Stack>
+        <CheckBox value="label" labelConfig={{ helpText: 'This option is disabled' }} isDisabled>
+          Option
+        </CheckBox>
+      </Stack>
+    </>
+  ),
+
+  name: 'Disabled CheckBox',
+};
+
+export const Playground = {
   render: () => (
     <Stack>
       <CheckBox
-        isChecked={boolean('isChecked', false)}
-        isIntermediate={boolean('isIntermediate', false)}
-        isFilled={boolean('isFilled', true)}
-        label={text('custom label', '')}
+        value="label"
+        isSelected={boolean('isSelected', false)}
+        isIndeterminate={boolean('isIndeterminate', false)}
+        labelConfig={{
+          placement: select('Label placement', ['left', 'right'], 'right'),
+          size: select('Label size', ['normal', 'large'], 'normal'),
+          helpText: text('Help text', ''),
+        }}
         isDisabled={boolean('isDisabled', false)}
-      />
+      >
+        Option
+      </CheckBox>
     </Stack>
   ),
 
-  name: 'CheckBox with Props',
-
-  parameters: {
-    decorators: [withKnobs],
-  },
+  name: 'Playground',
 };

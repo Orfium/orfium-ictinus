@@ -1,38 +1,71 @@
 import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
-import { withKnobs, boolean, text } from '@storybook/addon-knobs';
 import CheckBox from './CheckBox';
-import Stack from '../storyUtils/Stack';
-import { FIGMA_URL } from '../../utils/common';
 import * as CheckBoxStories from './CheckBox.stories';
 
 <Meta of={CheckBoxStories} />
 
-# CheckBox
+<SectionHeader title={'CheckBox'} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
+
+## Overview
 
 A universal CheckBox component that the input component for any forms.
-
-## Usage
-
-```
-import { CheckBox } from '@orfium/ictinus';
-
-<CheckBox />;
-```
 
 ## Props
 
 <ArgTypes of={CheckBox} />
 
-# CheckBox
+## Usage
 
-Regular CheckBox
+<UsageGuidelines
+  guidelines={['Use if you have multiple options and need to select 1+ items.']}
+  policies={[
+    'If you can select exactly 1 items use radio buttons',
+    'If you can select exactly 1 item from the multiple options, use radio buttons',
+  ]}
+/>
 
-<Canvas of={CheckBoxStories.CheckBoxStory} />
+<SubsectionHeader title="Variants" />
 
-### CheckBox with Label
+### Simple CheckBox
 
-Regular CheckBox with label
+<Canvas of={CheckBoxStories.SimpleCheckBox} />
 
-<Canvas of={CheckBoxStories.CheckBoxWithLabel} />
+### Indeterminate CheckBox
 
-<Canvas of={CheckBoxStories.CheckBoxWithProps} />
+<Canvas of={CheckBoxStories.IndeterminateCheckBox} />
+
+### CheckBox label placement
+
+Label can be placed either `left` or `right` of the checkbox.
+
+<Tip>
+  The labelConfig prop of each CheckBox includes an sx prop in order to add custom styles on the
+  container that wraps the checkbox input and the label
+</Tip>
+
+<Canvas of={CheckBoxStories.CheckBoxLabelPlacement} />
+
+### CheckBox label sizes
+
+Label can be either a string or a custom component. In the case of the string, there are 2 sizes (declared inside the labelConfig), `normal` and `large`
+
+<Canvas of={CheckBoxStories.CheckBoxLabelSizes} />
+
+### CheckBox label helptext
+
+CheckBox can include a helptext under the label.
+
+<Canvas of={CheckBoxStories.CheckBoxLabelHelptext} />
+
+### Disabled CheckBox
+
+<Canvas of={CheckBoxStories.DisabledCheckBox} />
+
+### Playground
+
+<Canvas of={CheckBoxStories.Playground} />
