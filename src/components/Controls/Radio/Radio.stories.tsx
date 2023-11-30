@@ -3,6 +3,7 @@ import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 import { FIGMA_URL } from 'utils/common';
 import { RadioGroup } from '../index';
 import React, { useState } from 'react';
+import Stack from 'components/storyUtils/Stack';
 
 export default {
   title: 'Updated Components/Controls/Radio',
@@ -159,45 +160,47 @@ export const Playground = {
   render: () => {
     const [selected, setSelected] = useState('');
     return (
-      <RadioGroup
-        value={selected}
-        onChange={setSelected}
-        sx={{ display: 'flex', flexDirection: 'column', gap: '32px' }}
-      >
-        <Radio
-          value="option 1"
-          labelConfig={{
-            placement: select('Label placement', ['left', 'right'], 'right'),
-            size: select('Label size', ['normal', 'large'], 'normal'),
-            helpText: text('Help text', ''),
-          }}
-          isDisabled={boolean('isDisabled', false)}
+      <Stack>
+        <RadioGroup
+          value={selected}
+          onChange={setSelected}
+          sx={{ display: 'flex', flexDirection: 'column', gap: '32px' }}
         >
-          Option 1
-        </Radio>
-        <Radio
-          value="option 2"
-          labelConfig={{
-            placement: select('Label placement', ['left', 'right'], 'right'),
-            size: select('Label size', ['normal', 'large'], 'normal'),
-            helpText: text('Help text', ''),
-          }}
-          isDisabled={boolean('isDisabled', false)}
-        >
-          Option 2
-        </Radio>
-        <Radio
-          value="option 3"
-          labelConfig={{
-            placement: select('Label placement', ['left', 'right'], 'right'),
-            size: select('Label size', ['normal', 'large'], 'normal'),
-            helpText: text('Help text', ''),
-          }}
-          isDisabled={boolean('isDisabled', false)}
-        >
-          Option 3
-        </Radio>
-      </RadioGroup>
+          <Radio
+            value="option 1"
+            labelConfig={{
+              placement: select('Label placement', ['left', 'right'], 'right'),
+              size: select('Label size', ['normal', 'large'], 'normal'),
+              helpText: text('Help text', ''),
+            }}
+            isDisabled={boolean('isDisabled', false)}
+          >
+            Option 1
+          </Radio>
+          <Radio
+            value="option 2"
+            labelConfig={{
+              placement: select('Label placement', ['left', 'right'], 'right'),
+              size: select('Label size', ['normal', 'large'], 'normal'),
+              helpText: text('Help text', ''),
+            }}
+            isDisabled={boolean('isDisabled', false)}
+          >
+            Option 2
+          </Radio>
+          <Radio
+            value="option 3"
+            labelConfig={{
+              placement: select('Label placement', ['left', 'right'], 'right'),
+              size: select('Label size', ['normal', 'large'], 'normal'),
+              helpText: text('Help text', ''),
+            }}
+            isDisabled={boolean('isDisabled', false)}
+          >
+            Option 3
+          </Radio>
+        </RadioGroup>
+      </Stack>
     );
   },
   name: 'Playground',
