@@ -28,7 +28,7 @@ describe('Radio', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should change to checked on click', () => {
+  it('should change to checked on click', async () => {
     const { container } = render(
       <RadioGroup onChange={mockOnClick}>
         <Radio value="Test Option">Test Option</Radio>
@@ -37,7 +37,7 @@ describe('Radio', () => {
 
     const radio = container.querySelector('input[type="radio"]') as HTMLInputElement;
 
-    userEvent.click(radio);
+    await userEvent.click(radio);
 
     expect(mockOnClick).toHaveBeenCalledTimes(1);
     expect(radio.checked).toBeTruthy();
