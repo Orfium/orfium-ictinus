@@ -1,13 +1,13 @@
 import useTheme from 'hooks/useTheme';
 import React from 'react';
-import { CheckboxAria } from 'react-aria';
+import type { CheckboxAria } from 'react-aria';
 import { Checkbox as ReactAriaCheckbox } from 'react-aria-components';
-import { TestProps } from 'utils/types';
+import type { TestProps } from 'utils/types';
 
 import { checkboxStyles, checkboxWrapperStyles } from './CheckBox.style';
 import ControlLabel from 'components/Controls/ControlLabel';
 import { getControlsTokens } from 'components/Controls/Controls.tokens';
-import { LabelConfig } from 'components/Controls/Controls.types';
+import type { LabelConfig } from 'components/Controls/Controls.types';
 import Icon from 'components/Icon';
 
 export type CheckBoxProps = Partial<CheckboxAria> & {

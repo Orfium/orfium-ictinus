@@ -1,9 +1,10 @@
-import { css, SerializedStyles } from '@emotion/react';
-import { Theme } from 'theme';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
+import type { Theme } from 'theme';
 
-import { CheckBoxProps } from './CheckBox';
+import type { CheckBoxProps } from './CheckBox';
 import { getControlsTokens } from 'components/Controls/Controls.tokens';
-import { LabelConfig } from 'components/Controls/Controls.types';
+import type { LabelConfig } from 'components/Controls/Controls.types';
 
 export const checkboxWrapperStyles =
   ({
