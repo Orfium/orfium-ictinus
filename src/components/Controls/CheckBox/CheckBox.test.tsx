@@ -3,16 +3,17 @@ import React from 'react';
 import { render } from '../../../test';
 import userEvent from '@testing-library/user-event';
 import CheckBox from '../CheckBox';
+import { Mock } from 'vitest';
 
 describe('Checkbox Component', () => {
-  let mockOnChange: jest.Mock<any, any>;
+  let mockOnChange: Mock<any, any>;
 
   beforeEach(() => {
-    mockOnChange = jest.fn();
+    mockOnChange = vi.fn();
   });
 
   afterEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   it('it renders the Checkbox correctly', () => {
@@ -33,12 +34,12 @@ describe('Checkbox Component', () => {
 
     expect(input.getAttribute('data-selected')).toEqual(null);
 
-    userEvent.click(input);
+    await userEvent.click(input);
 
     expect(input.getAttribute('data-selected')).toEqual('true');
   });
 
-  it('should invoke the onChange function', () => {
+  it('should invoke the onChange function', async () => {
     const { getAllByTestId } = render(
       <CheckBox onChange={mockOnChange} value="test" dataTestPrefixId={'test'} />
     );
@@ -47,12 +48,12 @@ describe('Checkbox Component', () => {
     const input = checkbox[0];
     expect(input).toBeInTheDocument();
 
-    userEvent.click(input);
+    await userEvent.click(input);
 
     expect(mockOnChange).toHaveBeenCalledTimes(1);
   });
 
-  it('should not invoke the onChange function if the checkbox is disabled', () => {
+  it('should not invoke the onChange function if the checkbox is disabled', async () => {
     const { getAllByTestId } = render(
       <CheckBox onChange={mockOnChange} value="test" dataTestPrefixId={'test'} isDisabled />
     );
@@ -61,7 +62,7 @@ describe('Checkbox Component', () => {
     const input = checkbox[0];
     expect(input).toBeInTheDocument();
 
-    userEvent.click(input);
+    await userEvent.click(input);
 
     expect(mockOnChange).toHaveBeenCalledTimes(0);
   });
@@ -81,7 +82,7 @@ describe('Checkbox Component', () => {
     const checkbox = getAllByTestId('test_test_checkbox');
     const input = checkbox[0];
 
-    userEvent.click(input);
+    await userEvent.click(input);
 
     expect(mockOnChange).toHaveBeenCalledTimes(1);
 
