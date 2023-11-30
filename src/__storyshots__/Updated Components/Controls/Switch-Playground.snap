@@ -1,7 +1,18 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
-
-exports[`Switch > it renders the Switch correctly 1`] = `
 .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -18,7 +29,7 @@ exports[`Switch > it renders the Switch correctly 1`] = `
   cursor: pointer;
 }
 
-.emotion-0 .bar {
+.emotion-1 .bar {
   width: 2.25rem;
   height: 0.5rem;
   background: #D6D8FF;
@@ -26,14 +37,14 @@ exports[`Switch > it renders the Switch correctly 1`] = `
   border-radius: 6.25rem;
 }
 
-.emotion-0 .indicator {
+.emotion-1 .indicator {
   width: 2.25rem;
   height: 1.25rem;
   box-sizing: border-box;
   position: relative;
 }
 
-.emotion-0 .indicator:before {
+.emotion-1 .indicator:before {
   content: '';
   box-sizing: border-box;
   display: block;
@@ -46,15 +57,15 @@ exports[`Switch > it renders the Switch correctly 1`] = `
   transition: all 200ms;
 }
 
-.emotion-0[data-hovered] .indicator:before,
-.emotion-0[data-focus-visible='true'] .indicator:before {
+.emotion-1[data-hovered] .indicator:before,
+.emotion-1[data-focus-visible='true'] .indicator:before {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
   border-radius: 100%;
 }
 
-.emotion-0[data-selected] .indicator:before {
+.emotion-1[data-selected] .indicator:before {
   -webkit-transform: translateX(80%);
   -moz-transform: translateX(80%);
   -ms-transform: translateX(80%);
@@ -63,12 +74,12 @@ exports[`Switch > it renders the Switch correctly 1`] = `
   border-color: #175bf5;
 }
 
-.emotion-0[data-disabled] {
+.emotion-1[data-disabled] {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -79,7 +90,7 @@ exports[`Switch > it renders the Switch correctly 1`] = `
   gap: 0.125rem;
 }
 
-.emotion-2 {
+.emotion-3 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -89,35 +100,42 @@ exports[`Switch > it renders the Switch correctly 1`] = `
 }
 
 <div>
-  <label
+  <div
     class="emotion-0"
-    data-rac=""
-    data-testid="undefined_undefined_switch"
   >
-    <span
-      style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+    <div
+      style="margin: 5px;"
     >
-      <input
-        role="switch"
-        type="checkbox"
-      />
-    </span>
-    <div
-      class="bar"
-    />
-    <div
-      class="indicator"
-    />
-    <div
-      class="emotion-1"
-    >
-      <div
-        class="emotion-2"
-        data-testid="undefined_radio_undefined_label"
+      <label
+        class="emotion-1"
+        data-rac=""
+        data-testid="undefined_undefined_switch"
       >
-        Label
-      </div>
+        <span
+          style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+        >
+          <input
+            role="switch"
+            type="checkbox"
+          />
+        </span>
+        <div
+          class="bar"
+        />
+        <div
+          class="indicator"
+        />
+        <div
+          class="emotion-2"
+        >
+          <div
+            class="emotion-3"
+            data-testid="undefined_radio_undefined_label"
+          >
+            Option
+          </div>
+        </div>
+      </label>
     </div>
-  </label>
+  </div>
 </div>
-`;
