@@ -1,13 +1,14 @@
 import useCombinedRefs from 'hooks/useCombinedRefs';
 import * as React from 'react';
-import { mergeProps, RadioAria, useFocusRing, useRadio, VisuallyHidden } from 'react-aria';
-import { RadioGroupState } from 'react-stately';
-import { TestProps } from 'utils/types';
+import type { RadioAria } from 'react-aria';
+import { mergeProps, useFocusRing, useRadio, VisuallyHidden } from 'react-aria';
+import type { RadioGroupState } from 'react-stately';
+import type { TestProps } from 'utils/types';
 
 import { useRadioGroupContent } from './components/RadioGroup';
 import { radioContainerStyles } from './Radio.style';
 import ControlLabel from '../ControlLabel';
-import { LabelConfig } from '../Controls.types';
+import type { LabelConfig } from '../Controls.types';
 
 export type Props = Partial<RadioAria> & {
   /** Id property of the radio input */

@@ -1,8 +1,8 @@
 import React from 'react';
-import { TestProps } from 'utils/types';
+import type { TestProps } from 'utils/types';
 
 import { helpTextStyles, labelContainerStyles, labelStyles } from './ControlLabel.style';
-import { LabelConfig } from '../Controls.types';
+import type { LabelConfig } from '../Controls.types';
 
 type Props = Pick<LabelConfig, 'size' | 'helpText'> & TestProps;
 

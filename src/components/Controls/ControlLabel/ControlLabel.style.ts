@@ -1,8 +1,9 @@
-import { css, SerializedStyles } from '@emotion/react';
-import { Theme } from 'theme';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
+import type { Theme } from 'theme';
 
 import { getControlsTokens } from '../Controls.tokens';
-import { LabelConfig } from '../Controls.types';
+import type { LabelConfig } from '../Controls.types';
 import { generateStylesFromTokens } from 'components/Typography/utils';
 
 export const labelContainerStyles = () => (theme: Theme) => {

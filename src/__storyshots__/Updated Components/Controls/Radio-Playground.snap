@@ -3,13 +3,27 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 32px;
 }
 
-.emotion-1 label {
+.emotion-2 label {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -26,7 +40,7 @@
   cursor: pointer;
 }
 
-.emotion-1 label:before {
+.emotion-2 label:before {
   content: '';
   display: inline-block;
   width: 1.25rem;
@@ -39,22 +53,22 @@
   background: rgba(84,94,255,0);
 }
 
-.emotion-1 label:hover::before {
+.emotion-2 label:hover::before {
   background: rgba(84,94,255,0.06);
   box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
 }
 
-.emotion-1 label[data-selected='true']:before {
+.emotion-2 label[data-selected='true']:before {
   border-color: #175bf5;
   border-radius: 50%;
 }
 
-.emotion-1 label[data-selected='true']:hover::before {
+.emotion-2 label[data-selected='true']:hover::before {
   background: none;
   box-shadow: none;
 }
 
-.emotion-1 label[data-selected='true']:after {
+.emotion-2 label[data-selected='true']:after {
   content: '';
   display: block;
   position: absolute;
@@ -67,17 +81,17 @@
   animation: circle 0.15s ease-in-out;
 }
 
-.emotion-1 label[data-disabled='true'] {
+.emotion-2 label[data-disabled='true'] {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-1 label[data-disabled='true']:hover::before {
+.emotion-2 label[data-disabled='true']:hover::before {
   background: none;
   box-shadow: none;
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -88,7 +102,7 @@
   gap: 0.125rem;
 }
 
-.emotion-3 {
+.emotion-4 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -99,101 +113,109 @@
 
 <div>
   <div
-    aria-orientation="vertical"
     class="emotion-0"
-    data-testid="undefined_radio_group_container"
-    id="react-aria-:r1a:"
-    role="radiogroup"
   >
     <div
-      class="emotion-1"
-      data-testid="undefined_radio_option_1_container"
+      style="margin: 5px;"
     >
-      <label
-        data-disabled="false"
-        data-selected="false"
+      <div
+        aria-orientation="vertical"
+        class="emotion-1"
+        data-testid="undefined_radio_group_container"
+        id="react-aria-:r1a:"
+        role="radiogroup"
       >
         <div
-          style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+          class="emotion-2"
+          data-testid="undefined_radio_option_1_container"
         >
-          <input
-            name="react-aria-:r1f:"
-            tabindex="0"
-            type="radio"
-            value="option 1"
-          />
+          <label
+            data-disabled="false"
+            data-selected="false"
+          >
+            <div
+              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+            >
+              <input
+                name="react-aria-:r1f:"
+                tabindex="0"
+                type="radio"
+                value="option 1"
+              />
+            </div>
+            <div
+              class="emotion-3"
+            >
+              <div
+                class="emotion-4"
+                data-testid="undefined_radio_option_1_label"
+              >
+                Option 1
+              </div>
+            </div>
+          </label>
         </div>
         <div
           class="emotion-2"
+          data-testid="undefined_radio_option_2_container"
         >
-          <div
-            class="emotion-3"
-            data-testid="undefined_radio_option_1_label"
+          <label
+            data-disabled="false"
+            data-selected="false"
           >
-            Option 1
-          </div>
-        </div>
-      </label>
-    </div>
-    <div
-      class="emotion-1"
-      data-testid="undefined_radio_option_2_container"
-    >
-      <label
-        data-disabled="false"
-        data-selected="false"
-      >
-        <div
-          style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-        >
-          <input
-            name="react-aria-:r1f:"
-            tabindex="0"
-            type="radio"
-            value="option 2"
-          />
+            <div
+              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+            >
+              <input
+                name="react-aria-:r1f:"
+                tabindex="0"
+                type="radio"
+                value="option 2"
+              />
+            </div>
+            <div
+              class="emotion-3"
+            >
+              <div
+                class="emotion-4"
+                data-testid="undefined_radio_option_2_label"
+              >
+                Option 2
+              </div>
+            </div>
+          </label>
         </div>
         <div
           class="emotion-2"
+          data-testid="undefined_radio_option_3_container"
         >
-          <div
-            class="emotion-3"
-            data-testid="undefined_radio_option_2_label"
+          <label
+            data-disabled="false"
+            data-selected="false"
           >
-            Option 2
-          </div>
+            <div
+              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+            >
+              <input
+                name="react-aria-:r1f:"
+                tabindex="0"
+                type="radio"
+                value="option 3"
+              />
+            </div>
+            <div
+              class="emotion-3"
+            >
+              <div
+                class="emotion-4"
+                data-testid="undefined_radio_option_3_label"
+              >
+                Option 3
+              </div>
+            </div>
+          </label>
         </div>
-      </label>
-    </div>
-    <div
-      class="emotion-1"
-      data-testid="undefined_radio_option_3_container"
-    >
-      <label
-        data-disabled="false"
-        data-selected="false"
-      >
-        <div
-          style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-        >
-          <input
-            name="react-aria-:r1f:"
-            tabindex="0"
-            type="radio"
-            value="option 3"
-          />
-        </div>
-        <div
-          class="emotion-2"
-        >
-          <div
-            class="emotion-3"
-            data-testid="undefined_radio_option_3_label"
-          >
-            Option 3
-          </div>
-        </div>
-      </label>
+      </div>
     </div>
   </div>
 </div>
