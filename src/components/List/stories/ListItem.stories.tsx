@@ -1,8 +1,7 @@
-import List, { ListItem, ListItemAction, ListItemText, ListSelected } from '../index';
-import { FIGMA_URL, Function } from '../../../utils/common';
-import { Radio, RadioGroup } from '../../Controls';
+import List, { ListItem, ListItemAction, ListItemText } from '../index';
+import { FIGMA_URL } from '../../../utils/common';
+import { Radio, RadioGroup, Switch } from '../../Controls';
 import CheckBox from '../../CheckBox';
-import Switch from '../../Switch';
 import Avatar from '../../Avatar';
 import Box from '../../Box';
 import { useState } from 'react';
