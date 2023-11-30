@@ -1,21 +1,21 @@
 import * as React from 'react';
 import { ReactFCC } from 'utils/types';
 
-const useClickAwayListener = (ref: React.MutableRefObject<any>, onClick: (event: MouseEvent) => void) => {
+const useClickAwayListener = (ref: React.MutableRefObject<any>, onClick: (event: MouseEvent) => void, useCapture = false) => {
   const handleClickOutside = (event: MouseEvent) => {
-    if (ref.current && !ref.current.contains(event.target)) {
+    if (ref.current && !ref.current.contains(event.target as HTMLElement)) {
       onClick(event);
     }
   };
 
-  React.useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside);
+  useEffect(() => {
+    window.addEventListener('click', handleClickOutside, useCapture);
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      window.removeEventListener('click', handleClickOutside, useCapture);
     };
   });
-};
+}
 
 export type HTMLTagsAllowed = 'div' | 'li' | 'span';
 
