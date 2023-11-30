@@ -68,6 +68,37 @@ exports[`TopAppBar should render correctly 1`] = `
 }
 
 .emotion-2 {
+  cursor: pointer;
+  margin: 1.5rem 0px 1.5rem 0.25rem;
+}
+
+.emotion-3 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-4 {
+  fill: #e7eefe;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.emotion-4 path {
+  fill: #e7eefe;
+}
+
+.emotion-5 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -92,7 +123,7 @@ exports[`TopAppBar should render correctly 1`] = `
   max-width: 25rem;
 }
 
-.emotion-3 {
+.emotion-6 {
   margin: auto;
   height: 100%;
   display: -webkit-box;
@@ -110,7 +141,7 @@ exports[`TopAppBar should render correctly 1`] = `
   cursor: default;
 }
 
-.emotion-4 {
+.emotion-7 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -140,7 +171,7 @@ exports[`TopAppBar should render correctly 1`] = `
   flex-grow: 0;
 }
 
-.emotion-5 {
+.emotion-8 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -165,7 +196,7 @@ exports[`TopAppBar should render correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-6 {
+.emotion-9 {
   overflow: inherit;
   text-overflow: inherit;
   width: 100%;
@@ -173,11 +204,11 @@ exports[`TopAppBar should render correctly 1`] = `
   position: relative;
 }
 
-.emotion-6 #unique-tooltip-id {
+.emotion-9 #unique-tooltip-id {
   display: none!important;
 }
 
-.emotion-7 {
+.emotion-10 {
   font-size: 0.8125rem;
   font-weight: 500;
   color: black;
@@ -191,29 +222,29 @@ exports[`TopAppBar should render correctly 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-7:focus-visible:not(:disabled) {
+.emotion-10:focus-visible:not(:disabled) {
   outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-7:hover:not(:disabled) {
+.emotion-10:hover:not(:disabled) {
   background-color: #fdfdfd;
 }
 
-.emotion-7:active:not(:disabled) {
+.emotion-10:active:not(:disabled) {
   background-color: #fdfdfd;
 }
 
-.emotion-7:disabled {
+.emotion-10:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.emotion-7:disabled style {
+.emotion-10:disabled style {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.emotion-8 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -228,14 +259,14 @@ exports[`TopAppBar should render correctly 1`] = `
   justify-content: center;
 }
 
-.emotion-9 {
+.emotion-12 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
-.emotion-10 {
+.emotion-13 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -272,44 +303,28 @@ exports[`TopAppBar should render correctly 1`] = `
   color: black;
 }
 
-.emotion-10 img {
+.emotion-13 img {
   border-radius: 100%;
   width: 100%;
   height: 100%;
 }
 
-.emotion-11 {
+.emotion-14 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
 
-.emotion-12 {
+.emotion-15 {
   font-weight: 500;
 }
 
-.emotion-14 {
-  padding: 0.125rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-15 {
+.emotion-18 {
   fill: black;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-15 path {
+.emotion-18 path {
   fill: black;
 }
 
@@ -380,6 +395,37 @@ exports[`TopAppBar should render correctly 1`] = `
 }
 
 .emotion-2 {
+  cursor: pointer;
+  margin: 1.5rem 0px 1.5rem 0.25rem;
+}
+
+.emotion-3 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-4 {
+  fill: #e7eefe;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.emotion-4 path {
+  fill: #e7eefe;
+}
+
+.emotion-5 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -404,7 +450,7 @@ exports[`TopAppBar should render correctly 1`] = `
   max-width: 25rem;
 }
 
-.emotion-3 {
+.emotion-6 {
   margin: auto;
   height: 100%;
   display: -webkit-box;
@@ -422,7 +468,7 @@ exports[`TopAppBar should render correctly 1`] = `
   cursor: default;
 }
 
-.emotion-4 {
+.emotion-7 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -452,7 +498,7 @@ exports[`TopAppBar should render correctly 1`] = `
   flex-grow: 0;
 }
 
-.emotion-5 {
+.emotion-8 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -477,7 +523,7 @@ exports[`TopAppBar should render correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-6 {
+.emotion-9 {
   overflow: inherit;
   text-overflow: inherit;
   width: 100%;
@@ -485,11 +531,11 @@ exports[`TopAppBar should render correctly 1`] = `
   position: relative;
 }
 
-.emotion-6 #unique-tooltip-id {
+.emotion-9 #unique-tooltip-id {
   display: none!important;
 }
 
-.emotion-7 {
+.emotion-10 {
   font-size: 0.8125rem;
   font-weight: 500;
   color: black;
@@ -503,29 +549,29 @@ exports[`TopAppBar should render correctly 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-7:focus-visible:not(:disabled) {
+.emotion-10:focus-visible:not(:disabled) {
   outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-7:hover:not(:disabled) {
+.emotion-10:hover:not(:disabled) {
   background-color: #fdfdfd;
 }
 
-.emotion-7:active:not(:disabled) {
+.emotion-10:active:not(:disabled) {
   background-color: #fdfdfd;
 }
 
-.emotion-7:disabled {
+.emotion-10:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.emotion-7:disabled style {
+.emotion-10:disabled style {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.emotion-8 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -540,14 +586,14 @@ exports[`TopAppBar should render correctly 1`] = `
   justify-content: center;
 }
 
-.emotion-9 {
+.emotion-12 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
-.emotion-10 {
+.emotion-13 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -584,44 +630,28 @@ exports[`TopAppBar should render correctly 1`] = `
   color: black;
 }
 
-.emotion-10 img {
+.emotion-13 img {
   border-radius: 100%;
   width: 100%;
   height: 100%;
 }
 
-.emotion-11 {
+.emotion-14 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
 
-.emotion-12 {
+.emotion-15 {
   font-weight: 500;
 }
 
-.emotion-14 {
-  padding: 0.125rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-15 {
+.emotion-18 {
   fill: black;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-15 path {
+.emotion-18 path {
   fill: black;
 }
 
@@ -636,9 +666,21 @@ exports[`TopAppBar should render correctly 1`] = `
     >
       <div
         class="emotion-2"
+        data-testid="menu-handler"
+      >
+        <span
+          class="emotion-3"
+        >
+          <span
+            class="emotion-4"
+          />
+        </span>
+      </div>
+      <div
+        class="emotion-5"
       >
         <div
-          class="emotion-3"
+          class="emotion-6"
         >
           <strong>
             LOGO
@@ -648,10 +690,10 @@ exports[`TopAppBar should render correctly 1`] = `
       </div>
     </div>
     <div
-      class="emotion-4"
+      class="emotion-7"
     />
     <div
-      class="emotion-5"
+      class="emotion-8"
     >
       <div
         role="button"
@@ -660,21 +702,21 @@ exports[`TopAppBar should render correctly 1`] = `
           data-testid="userMenu"
         >
           <div
-            class="emotion-6"
+            class="emotion-9"
           >
             <button
-              class="emotion-7"
+              class="emotion-10"
               data-testid="button"
               type="button"
             >
               <span
-                class="emotion-8"
+                class="emotion-11"
               >
                 <span
-                  class="emotion-9"
+                  class="emotion-12"
                 >
                   <div
-                    class="emotion-10"
+                    class="emotion-13"
                   >
                     <img
                       src="https://mui.com/static/images/avatar/1.jpg"
@@ -682,24 +724,24 @@ exports[`TopAppBar should render correctly 1`] = `
                   </div>
                 </span>
                 <span
-                  class="emotion-11"
+                  class="emotion-14"
                 >
                   <span>
                     <span
-                      class="emotion-12"
+                      class="emotion-15"
                     >
                       Tom Cruise
                     </span>
                   </span>
                 </span>
                 <span
-                  class="emotion-9"
+                  class="emotion-12"
                 >
                   <span
-                    class="emotion-14"
+                    class="emotion-3"
                   >
                     <span
-                      class="emotion-15"
+                      class="emotion-18"
                     />
                   </span>
                 </span>
@@ -781,6 +823,37 @@ exports[`TopAppBar should render correctly on dark 1`] = `
 }
 
 .emotion-2 {
+  cursor: pointer;
+  margin: 1.5rem 0px 1.5rem 0.25rem;
+}
+
+.emotion-3 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-4 {
+  fill: #e7eefe;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.emotion-4 path {
+  fill: #e7eefe;
+}
+
+.emotion-5 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -805,7 +878,7 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   max-width: 25rem;
 }
 
-.emotion-3 {
+.emotion-6 {
   margin: auto;
   height: 100%;
   display: -webkit-box;
@@ -823,7 +896,7 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   cursor: default;
 }
 
-.emotion-4 {
+.emotion-7 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -853,7 +926,7 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   flex-grow: 0;
 }
 
-.emotion-5 {
+.emotion-8 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -878,7 +951,7 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-6 {
+.emotion-9 {
   overflow: inherit;
   text-overflow: inherit;
   width: 100%;
@@ -886,11 +959,11 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   position: relative;
 }
 
-.emotion-6 #unique-tooltip-id {
+.emotion-9 #unique-tooltip-id {
   display: none!important;
 }
 
-.emotion-7 {
+.emotion-10 {
   font-size: 0.8125rem;
   font-weight: 500;
   color: white;
@@ -904,29 +977,29 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-7:focus-visible:not(:disabled) {
+.emotion-10:focus-visible:not(:disabled) {
   outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-7:hover:not(:disabled) {
+.emotion-10:hover:not(:disabled) {
   background-color: #020202;
 }
 
-.emotion-7:active:not(:disabled) {
+.emotion-10:active:not(:disabled) {
   background-color: #020202;
 }
 
-.emotion-7:disabled {
+.emotion-10:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.emotion-7:disabled style {
+.emotion-10:disabled style {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.emotion-8 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -941,14 +1014,14 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   justify-content: center;
 }
 
-.emotion-9 {
+.emotion-12 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
-.emotion-10 {
+.emotion-13 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -985,44 +1058,28 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   color: black;
 }
 
-.emotion-10 img {
+.emotion-13 img {
   border-radius: 100%;
   width: 100%;
   height: 100%;
 }
 
-.emotion-11 {
+.emotion-14 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
 
-.emotion-12 {
+.emotion-15 {
   font-weight: 500;
 }
 
-.emotion-14 {
-  padding: 0.125rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-15 {
+.emotion-18 {
   fill: white;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-15 path {
+.emotion-18 path {
   fill: white;
 }
 
@@ -1093,6 +1150,37 @@ exports[`TopAppBar should render correctly on dark 1`] = `
 }
 
 .emotion-2 {
+  cursor: pointer;
+  margin: 1.5rem 0px 1.5rem 0.25rem;
+}
+
+.emotion-3 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-4 {
+  fill: #e7eefe;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.emotion-4 path {
+  fill: #e7eefe;
+}
+
+.emotion-5 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1117,7 +1205,7 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   max-width: 25rem;
 }
 
-.emotion-3 {
+.emotion-6 {
   margin: auto;
   height: 100%;
   display: -webkit-box;
@@ -1135,7 +1223,7 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   cursor: default;
 }
 
-.emotion-4 {
+.emotion-7 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1165,7 +1253,7 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   flex-grow: 0;
 }
 
-.emotion-5 {
+.emotion-8 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1190,7 +1278,7 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-6 {
+.emotion-9 {
   overflow: inherit;
   text-overflow: inherit;
   width: 100%;
@@ -1198,11 +1286,11 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   position: relative;
 }
 
-.emotion-6 #unique-tooltip-id {
+.emotion-9 #unique-tooltip-id {
   display: none!important;
 }
 
-.emotion-7 {
+.emotion-10 {
   font-size: 0.8125rem;
   font-weight: 500;
   color: white;
@@ -1216,29 +1304,29 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-7:focus-visible:not(:disabled) {
+.emotion-10:focus-visible:not(:disabled) {
   outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-7:hover:not(:disabled) {
+.emotion-10:hover:not(:disabled) {
   background-color: #020202;
 }
 
-.emotion-7:active:not(:disabled) {
+.emotion-10:active:not(:disabled) {
   background-color: #020202;
 }
 
-.emotion-7:disabled {
+.emotion-10:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.emotion-7:disabled style {
+.emotion-10:disabled style {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.emotion-8 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1253,14 +1341,14 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   justify-content: center;
 }
 
-.emotion-9 {
+.emotion-12 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
-.emotion-10 {
+.emotion-13 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1297,44 +1385,28 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   color: black;
 }
 
-.emotion-10 img {
+.emotion-13 img {
   border-radius: 100%;
   width: 100%;
   height: 100%;
 }
 
-.emotion-11 {
+.emotion-14 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
 
-.emotion-12 {
+.emotion-15 {
   font-weight: 500;
 }
 
-.emotion-14 {
-  padding: 0.125rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-15 {
+.emotion-18 {
   fill: white;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-15 path {
+.emotion-18 path {
   fill: white;
 }
 
@@ -1349,9 +1421,21 @@ exports[`TopAppBar should render correctly on dark 1`] = `
     >
       <div
         class="emotion-2"
+        data-testid="menu-handler"
+      >
+        <span
+          class="emotion-3"
+        >
+          <span
+            class="emotion-4"
+          />
+        </span>
+      </div>
+      <div
+        class="emotion-5"
       >
         <div
-          class="emotion-3"
+          class="emotion-6"
         >
           <strong>
             LOGO
@@ -1361,10 +1445,10 @@ exports[`TopAppBar should render correctly on dark 1`] = `
       </div>
     </div>
     <div
-      class="emotion-4"
+      class="emotion-7"
     />
     <div
-      class="emotion-5"
+      class="emotion-8"
     >
       <div
         role="button"
@@ -1373,21 +1457,21 @@ exports[`TopAppBar should render correctly on dark 1`] = `
           data-testid="userMenu"
         >
           <div
-            class="emotion-6"
+            class="emotion-9"
           >
             <button
-              class="emotion-7"
+              class="emotion-10"
               data-testid="button"
               type="button"
             >
               <span
-                class="emotion-8"
+                class="emotion-11"
               >
                 <span
-                  class="emotion-9"
+                  class="emotion-12"
                 >
                   <div
-                    class="emotion-10"
+                    class="emotion-13"
                   >
                     <img
                       src="https://mui.com/static/images/avatar/1.jpg"
@@ -1395,24 +1479,24 @@ exports[`TopAppBar should render correctly on dark 1`] = `
                   </div>
                 </span>
                 <span
-                  class="emotion-11"
+                  class="emotion-14"
                 >
                   <span>
                     <span
-                      class="emotion-12"
+                      class="emotion-15"
                     >
                       Tom Cruise
                     </span>
                   </span>
                 </span>
                 <span
-                  class="emotion-9"
+                  class="emotion-12"
                 >
                   <span
-                    class="emotion-14"
+                    class="emotion-3"
                   >
                     <span
-                      class="emotion-15"
+                      class="emotion-18"
                     />
                   </span>
                 </span>
