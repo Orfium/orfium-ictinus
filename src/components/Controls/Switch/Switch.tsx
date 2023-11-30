@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { SwitchAria } from 'react-aria';
+import type { SwitchAria } from 'react-aria';
 import { Switch as ReactAriaSwitch } from 'react-aria-components';
-import { TestProps } from 'utils/types';
+import type { TestProps } from 'utils/types';
 
 import { switchStyles } from './Switch.style';
 import ControlLabel from 'components/Controls/ControlLabel';
-import { LabelConfig } from 'components/Controls/Controls.types';
+import type { LabelConfig } from 'components/Controls/Controls.types';
 
 export type SwitchProps = Partial<SwitchAria> & {
   /** Id property of the radio input */
