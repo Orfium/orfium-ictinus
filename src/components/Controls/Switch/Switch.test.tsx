@@ -3,16 +3,17 @@ import React from 'react';
 
 import { render, screen } from '../../../test';
 import Switch from './Switch';
+import { Mock } from 'vitest';
 
 describe('Switch', () => {
-  let mockOnClick: jest.Mock<any, any>;
+  let mockOnClick: Mock<any, any>;
 
   beforeEach(() => {
-    mockOnClick = jest.fn();
+    mockOnClick = vi.fn();
   });
 
   afterEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   it('it renders the Switch correctly', () => {
@@ -22,31 +23,31 @@ describe('Switch', () => {
   });
 
   it('should be able to change its check condition', async () => {
-    const { getAllByTestId } = render(<Switch />);
+    render(<Switch />);
 
     const switchComponent = screen.getByTestId('undefined_undefined_switch');
 
     expect(switchComponent.getAttribute('data-selected')).toEqual(null);
 
-    userEvent.click(switchComponent);
+    await userEvent.click(switchComponent);
 
     expect(switchComponent.getAttribute('data-selected')).toEqual('true');
   });
 
-  it('should invoke the onChange function', () => {
+  it('should invoke the onChange function', async () => {
     render(<Switch isSelected={false} onChange={mockOnClick} />);
     const switchComponent = screen.getByTestId('undefined_undefined_switch');
 
-    userEvent.click(switchComponent);
+    await userEvent.click(switchComponent);
 
     expect(mockOnClick).toHaveBeenCalledTimes(1);
   });
 
-  it('should not invoke the onChange function if the switch is disabled', () => {
+  it('should not invoke the onChange function if the switch is disabled', async () => {
     render(<Switch isSelected={false} onChange={mockOnClick} isDisabled />);
     const switchComponent = screen.getByTestId('undefined_undefined_switch');
 
-    userEvent.click(switchComponent);
+    await userEvent.click(switchComponent);
 
     expect(mockOnClick).toHaveBeenCalledTimes(0);
   });
