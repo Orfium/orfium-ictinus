@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { rem } from 'polished';
-import { CSSProperties } from 'react';
+import type { CSSProperties } from 'react';
 
 export const Track = styled.div<{
   background: string;

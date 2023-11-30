@@ -1,9 +1,11 @@
-import { css, SerializedStyles } from '@emotion/react';
-import { Theme } from 'theme';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
+import type { Theme } from 'theme';
 import { flex } from 'theme/functions';
 
-import { AvatarTokens, getAvatarTokens, parseAvatarStackSize } from '../Avatar.tokens';
-import { AvatarSizes } from '../Avatar.types';
+import type { AvatarTokens} from '../Avatar.tokens';
+import { getAvatarTokens, parseAvatarStackSize } from '../Avatar.tokens';
+import type { AvatarSizes } from '../Avatar.types';
 
 export const avatarStackStyle =
   ({ size }: { size: AvatarSizes }) =>

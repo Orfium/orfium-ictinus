@@ -1,7 +1,8 @@
 import tag from 'theme/tokens/components/variables/tag';
-import { getComponentTokens, DotKeys } from 'theme/tokens/utils';
+import type { DotKeys } from 'theme/tokens/utils';
+import { getComponentTokens } from 'theme/tokens/utils';
 
-import { Theme } from '../../theme';
+import type { Theme } from '../../theme';
 
 export type TagTokens = DotKeys<typeof tag>;
 

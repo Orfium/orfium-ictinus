@@ -1,10 +1,10 @@
 import useTheme from 'hooks/useTheme';
 import React, { useMemo } from 'react';
 
-import { Props as MultiTextFieldBase } from './MultiTextFieldBase';
-import { SelectOption } from '../Select';
+import type { Props as MultiTextFieldBase } from './MultiTextFieldBase';
+import type { SelectOption } from '../Select';
 import Icon from 'components/Icon';
-import { TextFieldProps } from 'components/TextField/TextField';
+import type { TextFieldProps } from 'components/TextField/TextField';
 
 type Props = {
   hasValue: boolean;

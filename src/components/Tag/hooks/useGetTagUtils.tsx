@@ -1,10 +1,10 @@
 import useTheme from 'hooks/useTheme';
 import React, { useCallback, useMemo } from 'react';
-import { TestProps } from 'utils/types';
+import type { TestProps } from 'utils/types';
 
 import { iconStyles } from '../Tag.style';
 import { getTagTokens } from '../Tag.tokens';
-import { TagProps } from '../Tag.types';
+import type { TagProps } from '../Tag.types';
 import Icon from 'components/Icon';
 
 const useGetTagUtils = ({
@@ -42,7 +42,7 @@ const useGetTagUtils = ({
         <Icon
           dataTestId={`${dataTestPrefixId}_tag_prefix`}
           size={theme.tokens.icon.get('size.2')}
-          name={'check'}
+          name="check"
           color={tokens('textColor.blue')}
         />
       );

@@ -1,8 +1,8 @@
 import { curry, omit, pick } from 'lodash';
-import { Theme } from 'theme';
-import { SemanticColorsKey } from 'theme/tokens/semantic/colors';
+import type { Theme } from 'theme';
+import type { SemanticColorsKey } from 'theme/tokens/semantic/colors';
 
-import { StyledBoxProps } from './Box.types';
+import type { StyledBoxProps } from './Box.types';
 
 export const omitedCSSprops = [
   'p',

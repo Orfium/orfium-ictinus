@@ -25,7 +25,7 @@ describe('Multi TextField', () => {
   });
 
   it('creates a new Chip when there is input and Enter is pressed', async () => {
-    userEvent.type(input, 'New item{enter}');
+    await userEvent.type(input, 'New item{enter}');
 
     newChip = screen.getByTestId('chip-chip_2');
     expect(newChip).toBeVisible();
@@ -33,17 +33,17 @@ describe('Multi TextField', () => {
   });
 
   it('deletes the Chip when the delete button is clicked', async () => {
-    userEvent.click(screen.getByTestId('chip-delete-chip_1'));
+    await userEvent.click(screen.getByTestId('chip-delete-chip_1'));
     expect(screen.queryByTestId('chip-chip_1')).not.toBeInTheDocument();
   });
 
   it('deletes all the Chips when the Delete All button is clicked', async () => {
-    userEvent.click(screen.getByTestId('select-right-icon'));
+    await userEvent.click(screen.getByTestId('select-right-icon'));
     expect(screen.queryByTestId('chip-chip_0')).not.toBeInTheDocument();
   });
 
   it('deletes a chip when Backspace is pressed', async () => {
-    userEvent.type(input, '{backspace}');
+    await userEvent.type(input, '{backspace}');
     expect(screen.queryByTestId('chip-chip_1')).not.toBeInTheDocument();
   });
 });

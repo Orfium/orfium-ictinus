@@ -1,5 +1,6 @@
 import stateFigma from './variables/state';
-import { DotKeys, getTokensValue } from '../utils';
+import type { DotKeys} from '../utils';
+import { getTokensValue } from '../utils';
 
 export type SemanticState = {
   get: (val: DotKeys<typeof stateFigma>) => string;

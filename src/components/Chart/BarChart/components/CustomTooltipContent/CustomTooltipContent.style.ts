@@ -1,4 +1,4 @@
-import { Theme } from 'theme';
+import type { Theme } from 'theme';
 import { rem } from 'theme/utils';
 
 export const tooltipStyle = () => (theme: Theme) => {

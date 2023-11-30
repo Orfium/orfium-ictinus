@@ -21,7 +21,7 @@ const BreadcrumbItem: React.FC<BreadcrumbItemProps> = ({ childComponent, isLastI
       <div css={breadcrumbItemStyles({ isLastItem })}>
         {childComponent}
         {!isLastItem && (
-          <Icon name={'triangleRight'} color={tokens('defaultColor')} size={tokens('iconSize')} />
+          <Icon name="triangleRight" color={tokens('defaultColor')} size={tokens('iconSize')} />
         )}
       </div>
     </li>

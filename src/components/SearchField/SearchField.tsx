@@ -3,10 +3,10 @@ import React from 'react';
 import isEqual from 'react-fast-compare';
 
 import { rem } from '../../theme/utils';
-import { TestProps } from '../../utils/types';
+import type { TestProps } from '../../utils/types';
 import { IconWrapper } from '../TextField/components/commons';
 import Icon from 'components/Icon';
-import { TextFieldProps } from 'components/TextField/TextField';
+import type { TextFieldProps } from 'components/TextField/TextField';
 import TextInputBase from 'components/TextInputBase';
 import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
 import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
@@ -38,8 +38,8 @@ const SearchField = React.forwardRef<HTMLInputElement, SearchFieldProps>((props,
   return (
     <React.Fragment>
       <TextInputBase dataTestId={dataTestId} isDisabled={isDisabled} sx={sx}>
-        <IconWrapper iconPosition={'left'}>
-          <Icon name={'search'} size={20} color={theme.utils.getColor('lightGrey', 650)} />
+        <IconWrapper iconPosition="left">
+          <Icon name="search" size={20} color={theme.utils.getColor('lightGrey', 650)} />
         </IconWrapper>
 
         <div css={{ width: '100%' }}>
@@ -54,23 +54,16 @@ const SearchField = React.forwardRef<HTMLInputElement, SearchFieldProps>((props,
         </div>
 
         {isClearVisible && !isDisabled && (
-          // <IconWrapper
-          //   onClick={() => {
-          //     onClear();
-          //   }}
-          //   iconPosition={'right'}
-          // >
           <Icon
-            name={'close'}
+            name="close"
             size={20}
             color={theme.utils.getColor('lightGrey', 650)}
             onClick={() => {
               onClear();
             }}
             hasHover={false}
-            dataTestId={'search-clear'}
+            dataTestId="search-clear"
           />
-          // </IconWrapper>
         )}
       </TextInputBase>
     </React.Fragment>

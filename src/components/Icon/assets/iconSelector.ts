@@ -146,7 +146,7 @@ import Users from './usersAndStatus/users.svg';
 import Verified from './usersAndStatus/verified.svg';
 import Warning from './usersAndStatus/warning.svg';
 /** Types */
-import { AcceptedIconNames } from '../types';
+import type { AcceptedIconNames } from '../types';
 
 const iconSelector: { [key in AcceptedIconNames]: string } = {
   /** Audio Controls */

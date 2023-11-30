@@ -1,4 +1,4 @@
-import { colorSchemes, colorShades, flatColors } from '../palette';
+import type { colorSchemes, colorShades, flatColors } from '../palette';
 
 type StateConfig = {
   hover: {

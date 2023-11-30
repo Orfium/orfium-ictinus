@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 
 import { backgroundContainer, cardSizing, closeContainer, modalContainer } from './Modal.style';
-import ModalContent, { ModalContentProps } from './ModalContent/ModalContent';
+import type { ModalContentProps } from './ModalContent/ModalContent';
+import ModalContent from './ModalContent/ModalContent';
 import useEscape from '../../hooks/useEscape';
 import { generateTestDataId } from '../../utils/helpers';
-import { TestId } from '../../utils/types';
+import type { TestId } from '../../utils/types';
 import Card from '../Card';
 import IconButton from '../IconButton';
 import ClickAwayListener from '../utils/ClickAwayListener';
@@ -50,14 +51,9 @@ const Modal: React.FCC<ModalProps> = ({
     <div css={backgroundContainer} data-testid={generateTestDataId('modal-container', dataTestId)}>
       <ClickAwayListener onClick={onClose}>
         <div css={cardSizing}>
-          <Card elevated={'02'} radius={'3'}>
+          <Card elevated="02" radius="3">
             <div css={closeContainer}>
-              <IconButton
-                type="tertiary"
-                name={'close'}
-                onClick={onClose}
-                dataTestId={'modal-close'}
-              />
+              <IconButton type="tertiary" name="close" onClick={onClose} dataTestId="modal-close" />
             </div>
             <div css={modalContainer({ isContentPadded })}>
               {contentProps ? <ModalContent {...contentProps} /> : children}

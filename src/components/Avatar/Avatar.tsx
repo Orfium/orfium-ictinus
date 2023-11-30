@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 
 import UserAvatar from './assets/user-avatar.svg';
 import { avatarStyle, iconStyles } from './Avatar.style';
-import { AvatarProps } from './Avatar.types';
+import type { AvatarProps } from './Avatar.types';
 
 const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
   ({ src = '', size = 1, color = 'blue', className, dataTestPrefixId = '', children }, ref) => {

@@ -2,14 +2,15 @@ import { renderHook } from 'test';
 
 import useBreakpoints, { queriesKeys } from './useBreakpoints';
 
-export const createMockMediaMatcher = (matchesOrMapOfMatches: boolean) => (
-  qs: string | number
-) => ({
-  matches:
-    typeof matchesOrMapOfMatches === 'object' ? matchesOrMapOfMatches[qs] : matchesOrMapOfMatches,
-  addListener: () => {},
-  removeListener: () => {},
-});
+export const createMockMediaMatcher =
+  (matchesOrMapOfMatches: boolean) => (qs: string | number) => ({
+    matches:
+      typeof matchesOrMapOfMatches === 'object' && matchesOrMapOfMatches
+        ? matchesOrMapOfMatches[qs]
+        : matchesOrMapOfMatches,
+    addListener: () => {},
+    removeListener: () => {},
+  });
 
 describe('useBreakpoints', () => {
   beforeEach(() => {

@@ -4,7 +4,7 @@ import { generateUniqueKey } from 'utils/helpers';
 
 import BackToItem from './BackToItem';
 import { breadcrumbStyles } from './Breadcrumb.style';
-import { BreadcrumbProps, BreadcrumbItem as BreadcrumbItemType } from './Breadcrumb.types';
+import type { BreadcrumbProps, BreadcrumbItem as BreadcrumbItemType } from './Breadcrumb.types';
 import BreadcrumbItem from './BreadcrumbItem';
 import Link from 'components/Link';
 

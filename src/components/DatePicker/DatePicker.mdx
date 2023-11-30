@@ -1,0 +1,79 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
+import DatePicker from './DatePicker';
+import * as DatePickerStories from './DatePicker.stories';
+
+<Meta of={DatePickerStories} />
+
+<SectionHeader title={'DatePicker'} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
+
+## Overview
+
+{' '}
+
+A universal DatePicker component that allows the user to select a single date or a range of dates.
+User may either type the date in the suggested format (text input) or click on the ‘calendar’ icon
+to the right to open the date picker modal.
+
+## Props
+
+<ArgTypes of={DatePicker} />
+
+## Usage
+
+<UsageGuidelines
+  guidelines={['Use when you need to enter a single date']}
+  policies={['If you need to enter a date range, use date range picker instead']}
+/>
+
+<SubsectionHeader title="Variants" />
+
+### DatePicker
+
+Implementation of the regular DatePicker
+
+<Canvas of={DatePickerStories.DatePickerStory} />
+
+### DateRangePicker
+
+Implementation of the regular DateRangePicker
+
+<Canvas of={DatePickerStories.DateRangePicker} />
+
+### DateRangePicker with preset options
+
+Implementation of the regular DatePicker with preset options
+
+<Canvas of={DatePickerStories.DateRangePickerWithPresetOptions} />
+
+### DatePicker with Filter
+
+Implementation of the DatePicker with a Filter instead of a TextField
+
+<Canvas of={DatePickerStories.DatePickerWithFilter} />
+
+### DatePicker with disabled dates
+
+Some disable dates functionality
+
+<Canvas of={DatePickerStories.DatePickerWithDisabledDates} />
+
+### DatePicker and DateRangePicker statuses
+
+DatePicker and DateRangePicker inherit all TextField statuses behavior.
+
+<Canvas of={DatePickerStories.DatePickerAndDateRangePickerStatuses} />
+
+### Disabled DatePicker & DateRangePicker
+
+Disabled DatePicker & DateRangePicker
+
+<Canvas of={DatePickerStories.DisabledDatePickerDateRangePicker} />
+
+### Playground
+
+<Canvas of={DatePickerStories.Playground} />

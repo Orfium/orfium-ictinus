@@ -1,7 +1,7 @@
 import { Item as AriaItem } from '@react-stately/collections';
 import React from 'react';
 
-import { ListRowSize } from './types';
+import type { ListRowSize } from './types';
 
 export type ListItemProps = {
   /** A string representation of the item's unique key. */

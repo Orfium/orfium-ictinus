@@ -55,9 +55,9 @@ const ExpandedButtonCell: React.FCC<ExpandedButtonCellProps> = ({
           >
             <IconButton
               type="tertiary"
-              name={'chevronDown'}
+              name="chevronDown"
               onClick={toggleIsChecked}
-              dataTestId={'expanded-button'}
+              dataTestId="expanded-button"
             />
           </div>
         </div>

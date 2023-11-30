@@ -1,14 +1,11 @@
-import { css, SerializedStyles } from '@emotion/react';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
 import { rem } from 'theme/utils';
 
-import {
-  getAvatarTextTokens,
-  getAvatarTokens,
-  AvatarTokens,
-  parseAvatarIconSize,
-} from './Avatar.tokens';
-import { AvatarColors, AvatarProps, AvatarSizes } from './Avatar.types';
-import { Theme } from '../../theme';
+import type { AvatarTokens } from './Avatar.tokens';
+import { getAvatarTextTokens, getAvatarTokens, parseAvatarIconSize } from './Avatar.tokens';
+import type { AvatarColors, AvatarProps, AvatarSizes } from './Avatar.types';
+import type { Theme } from '../../theme';
 import { flex } from '../../theme/functions';
 import { generateStylesFromTokens } from 'components/Typography/utils';
 

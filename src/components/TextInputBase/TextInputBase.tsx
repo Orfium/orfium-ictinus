@@ -1,15 +1,16 @@
-import { CSSObject } from '@emotion/serialize';
+import type { CSSObject } from '@emotion/serialize';
 import useTheme from 'hooks/useTheme';
-import React, { FCC } from 'react';
+import type { FCC } from 'react';
+import React from 'react';
 import isEqual from 'react-fast-compare';
-import { ComponentSizes } from 'types';
+import type { ComponentSizes } from 'types';
 
 import { hintMessageStyle, textFieldStyle, wrapperStyle } from './TextInputBase.style';
 import { getTextInputBaseTokens } from './TextInputBase.tokens';
 import { generateTestDataId } from '../../utils/helpers';
-import { TestProps } from '../../utils/types';
+import type { TestProps } from '../../utils/types';
 import Icon from 'components/Icon';
-import { AcceptedIconNames } from 'components/Icon/types';
+import type { AcceptedIconNames } from 'components/Icon/types';
 
 export type TextInputBaseProps = {
   /** The label of the text field that will be used as a placeholder and a label */
@@ -19,7 +20,7 @@ export type TextInputBaseProps = {
   /** The size of input */
   size?: ComponentSizes;
   /** An optional suffix (element or icon-name) to show to the left */
-  suffix?: AcceptedIconNames | JSX.Element | null;
+  suffix?: AcceptedIconNames | React.ReactNode | null;
   /** If the text field value is required */
   isRequired?: boolean;
   /** If the text field is disabled */
@@ -68,7 +69,7 @@ const TextInputBase: FCC<
       {!isDisabled && status.type === 'error' && size === 'normal' && (
         <Icon
           color={tokens('textColor.errorHintColor')}
-          name={'warning'}
+          name="warning"
           size={tokens('hintIconSize')}
         />
       )}

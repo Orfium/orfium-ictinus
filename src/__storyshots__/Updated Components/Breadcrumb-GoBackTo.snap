@@ -1,0 +1,137 @@
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #686BB3;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  color: #1552DD;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0.25rem solid rgba(84,94,255,0);
+  opacity: 1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  pointer-events: default;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-4:hover {
+  color: #1B214F;
+}
+
+.emotion-4:hover path {
+  fill: #1B214F;
+}
+
+.emotion-4:visited {
+  color: #6c28cc;
+}
+
+.emotion-4:visited path {
+  fill: #6c28cc;
+}
+
+.emotion-4:focus-visible {
+  border: 0.25rem solid #9347ff;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      style="margin: 5px;"
+    >
+      <ol
+        aria-label="Breadcrumb"
+        class="emotion-1"
+        data-testid="_breadcrumb"
+      >
+        <div
+          class="emotion-2"
+        >
+          <div
+            class="emotion-3"
+          >
+            Go back to
+          </div>
+          <a
+            class="emotion-4"
+            data-testid="_breadcrumb_go_back_to_Level 1_link"
+            href="/first-level"
+          >
+            <span>
+              Level 1
+            </span>
+          </a>
+        </div>
+      </ol>
+    </div>
+  </div>
+</div>

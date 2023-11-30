@@ -1,0 +1,377 @@
+@keyframes animation-0 {
+  from {
+    left: -50%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-1 {
+  position: relative;
+  width: 100%;
+}
+
+.emotion-2 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #ffffff;
+  width: 100%;
+  height: auto;
+  background-color: #175bf5;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-2:focus-visible:not(:disabled) {
+  background-color: #1552DD;
+}
+
+.emotion-2:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-2:hover:not(:disabled) {
+  background-color: #1552DD;
+}
+
+.emotion-2:active:not(:disabled) {
+  background-color: #1249C4;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.emotion-5 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  color: #ffffff;
+  width: 100%;
+  height: 1.75rem;
+  background-color: #175bf5;
+  padding: 0 0.5rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-5:focus-visible:not(:disabled) {
+  background-color: #1552DD;
+}
+
+.emotion-5:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-5:hover:not(:disabled) {
+  background-color: #1552DD;
+}
+
+.emotion-5:active:not(:disabled) {
+  background-color: #1249C4;
+}
+
+.emotion-8 {
+  width: 100%;
+  position: absolute;
+}
+
+.emotion-9 {
+  width: 100%;
+  height: 0.25rem;
+  overflow: hidden;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  position: relative;
+}
+
+.emotion-9:before {
+  content: "";
+  width: 100%;
+  height: 0.125rem;
+  display: block;
+}
+
+.emotion-10 {
+  width: 50%;
+  background: linear-gradient(270deg, #F814E1 0.02%, #4945EE 100%);
+  height: 0.125rem;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  -webkit-animation: animation-0 1.5s infinite;
+  animation: animation-0 1.5s infinite;
+}
+
+.emotion-11 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #ffffff;
+  width: 100%;
+  height: auto;
+  background-color: #1249C4;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+  pointer-events: none;
+}
+
+.emotion-11:focus-visible:not(:disabled) {
+  background-color: #1552DD;
+}
+
+.emotion-11:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-11:hover:not(:disabled) {
+  background-color: #1552DD;
+}
+
+.emotion-11:active:not(:disabled) {
+  background-color: #1249C4;
+}
+
+.emotion-17 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  color: #ffffff;
+  width: 100%;
+  height: 1.75rem;
+  background-color: #1249C4;
+  padding: 0 0.5rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+  pointer-events: none;
+}
+
+.emotion-17:focus-visible:not(:disabled) {
+  background-color: #1552DD;
+}
+
+.emotion-17:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-17:hover:not(:disabled) {
+  background-color: #1552DD;
+}
+
+.emotion-17:active:not(:disabled) {
+  background-color: #1249C4;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        class="emotion-1"
+      >
+        <button
+          class="emotion-2"
+          data-testid="button"
+          type="button"
+        >
+          <span
+            class="emotion-3"
+          >
+            <span>
+              Hello world
+            </span>
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        class="emotion-1"
+      >
+        <button
+          class="emotion-5"
+          data-testid="button"
+          type="button"
+        >
+          <span
+            class="emotion-3"
+          >
+            <span>
+              Hello world
+            </span>
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        class="emotion-1"
+      >
+        <div
+          class="emotion-8"
+          data-testid="button"
+        >
+          <div
+            class="emotion-9"
+          >
+            <div
+              class="emotion-10"
+            />
+          </div>
+        </div>
+        <button
+          class="emotion-11"
+          data-testid="button"
+          type="button"
+        >
+          <span
+            class="emotion-3"
+          >
+            <span>
+              Hello world
+            </span>
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        class="emotion-1"
+      >
+        <div
+          class="emotion-8"
+          data-testid="button"
+        >
+          <div
+            class="emotion-9"
+          >
+            <div
+              class="emotion-10"
+            />
+          </div>
+        </div>
+        <button
+          class="emotion-17"
+          data-testid="button"
+          type="button"
+        >
+          <span
+            class="emotion-3"
+          >
+            <span>
+              Hello world
+            </span>
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        class="emotion-1"
+      >
+        <button
+          class="emotion-2"
+          data-testid="button"
+          disabled=""
+          type="button"
+        >
+          <span
+            class="emotion-3"
+          >
+            <span>
+              Hello world
+            </span>
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        class="emotion-1"
+      >
+        <button
+          class="emotion-5"
+          data-testid="button"
+          disabled=""
+          type="button"
+        >
+          <span
+            class="emotion-3"
+          >
+            <span>
+              Hello world
+            </span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

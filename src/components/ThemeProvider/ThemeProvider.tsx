@@ -2,13 +2,14 @@ import { ThemeProvider as EmotionThemeProvider } from '@emotion/react';
 import { Global } from '@emotion/react';
 import { ThemeSwitchProvider, useThemeSwitch } from 'hooks/useThemeSwitch';
 import { keys, merge, pick } from 'lodash';
-import React from 'react';
-import theme, { Theme, ThemeConfig } from 'theme';
+import * as React from 'react';
+import type { Theme, ThemeConfig } from 'theme';
+import theme from 'theme';
 
 import { globalStyles } from './ThemeProvider.style';
 import { TypeColorToColorMatchProvider } from '../../hooks/useTypeColorToColorMatch';
-import { ColorScheme } from '../../theme/types';
-import { DeepPartial } from '../../utils/types';
+import type { ColorScheme } from '../../theme/types';
+import type { DeepPartial } from '../../utils/types';
 import 'utils/date';
 
 export type ThemeProviderProps = {

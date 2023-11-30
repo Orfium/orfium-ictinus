@@ -1,8 +1,8 @@
 import { css } from '@emotion/react';
 import { rem } from 'theme/utils';
 
-import { IconProps } from './Icon';
-import { Theme } from '../../theme';
+import type { IconProps } from './Icon';
+import type { Theme } from '../../theme';
 
 export const iconContainerStyles =
   ({

@@ -1,7 +1,7 @@
-import { ReactComponentLike } from 'prop-types';
-import * as React from 'react';
+import type { ReactComponentLike } from 'prop-types';
+import type * as React from 'react';
 
-import { TestProps } from '../../utils/types';
+import type { TestProps } from '../../utils/types';
 
 export type SharedProps = {
   /**
@@ -46,7 +46,7 @@ export type ExternalProps = {
    *
    * @default false
    */
-  isExpanded: boolean;
+  isExpanded: true;
   /**
    * Change handler for the case when the component is controlled
    */
@@ -59,11 +59,11 @@ export type InternalProps = {
    *
    * @default false
    */
-  isExpanded: undefined;
+  isExpanded?: never;
   /**
    * Change handler for the case when the component is controlled
    */
-  onChange: undefined;
+  onChange?: never;
 };
 
 export type ExpandCollapseProps = SharedProps & (InternalProps | ExternalProps);

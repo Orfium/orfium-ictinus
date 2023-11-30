@@ -3,7 +3,7 @@ import React from 'react';
 import { ProgressBar as AriaProgressBar } from 'react-aria-components';
 
 import { barStyles, fillStyles, progressBarContainer } from './ProgressBar.style';
-import { ProgressIndicatorProps } from 'components/ProgressIndicator/ProgressIndicator.types';
+import type { ProgressIndicatorProps } from 'components/ProgressIndicator/ProgressIndicator.types';
 
 const ProgressBar = React.forwardRef<
   HTMLDivElement,

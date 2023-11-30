@@ -1,4 +1,4 @@
-import { DrawerMenuItem } from '../../Drawer';
+import type { DrawerMenuItem } from '../../Drawer';
 
 export const menuItems: DrawerMenuItem[] = [
   {

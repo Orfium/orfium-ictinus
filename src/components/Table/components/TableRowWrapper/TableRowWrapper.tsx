@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Row, Selection, TableType } from '../../Table';
+import type { Row, Selection, TableType } from '../../Table';
 import { TableRowContext } from '../../TableRowContext';
 import RenderRowOrNestedRow from '../RenderRowOrNestedRow/RenderRowOrNestedRow';
 

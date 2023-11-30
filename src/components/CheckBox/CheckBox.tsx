@@ -1,6 +1,7 @@
 import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
+import type { ChangeEvent } from 'react';
 import * as React from 'react';
-import { ChangeEvent, useEffect } from 'react';
+import { useEffect } from 'react';
 
 import {
   checkboxStyle,
@@ -11,7 +12,7 @@ import {
 } from './CheckBox.style';
 import { useTheme } from '../../index';
 import { generateTestDataId, generateUniqueID } from '../../utils/helpers';
-import { TestId } from '../../utils/types';
+import type { TestId } from '../../utils/types';
 import Icon from 'components/Icon';
 
 export type CheckboxProps = {
@@ -36,7 +37,7 @@ export type CheckboxProps = {
   id?: string;
 };
 
-const CheckBox = React.forwardRef<HTMLSpanElement, CheckboxProps>((props, ref) => {
+export const CheckBox = React.forwardRef<HTMLSpanElement, CheckboxProps>((props, ref) => {
   const {
     label,
     isChecked,
@@ -107,6 +108,6 @@ const CheckBox = React.forwardRef<HTMLSpanElement, CheckboxProps>((props, ref) =
   );
 });
 
-CheckBox.displayName = 'Checkbox';
+CheckBox.displayName = 'CheckBox';
 
 export default CheckBox;

@@ -1,10 +1,13 @@
 import useTheme from 'hooks/useTheme';
 import React from 'react';
 
-import { ButtonTokens, getButtonTokens } from 'components/Button/Button.tokens';
-import { PrimitiveButtonTypes } from 'components/Button/Button.types';
-import ButtonBase, { ButtonBaseProps } from 'components/ButtonBase/ButtonBase';
-import Icon, { AcceptedIconNames } from 'components/Icon';
+import type { ButtonTokens } from 'components/Button/Button.tokens';
+import { getButtonTokens } from 'components/Button/Button.tokens';
+import type { PrimitiveButtonTypes } from 'components/Button/Button.types';
+import type { ButtonBaseProps } from 'components/ButtonBase/ButtonBase';
+import ButtonBase from 'components/ButtonBase/ButtonBase';
+import type { AcceptedIconNames } from 'components/Icon';
+import Icon from 'components/Icon';
 
 export type IconButtonShape = 'circle' | 'square';
 

@@ -1,4 +1,5 @@
-import React, { ReactNode, useCallback } from 'react';
+import type { ReactNode } from 'react';
+import React, { useCallback } from 'react';
 
 import useTheme from '../../../../hooks/useTheme';
 import { useTypeColorToColorMatch } from '../../../../hooks/useTypeColorToColorMatch';
@@ -14,9 +15,10 @@ import {
   valueSpanStyle,
   wrapperStyle,
 } from '../../Filter.style';
-import { FilterProps } from '../../types';
+import type { FilterProps } from '../../types';
 import { getTextColor } from '../../utils';
-import Icon, { AcceptedIconNames } from 'components/Icon';
+import type { AcceptedIconNames } from 'components/Icon';
+import Icon from 'components/Icon';
 
 export type FilterBaseProps = {
   children?: ReactNode;
@@ -124,7 +126,7 @@ export const FilterBase = React.forwardRef<HTMLButtonElement, FilterBaseProps>((
             <div css={dividedButtonStyle(buttonStyleProps)}>
               <Icon
                 size={19}
-                name={'close'}
+                name="close"
                 hasHover={false}
                 color={pickIconColor(true)}
                 onClick={(e) => {

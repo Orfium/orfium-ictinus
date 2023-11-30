@@ -1,0 +1,33 @@
+import { Meta } from '@storybook/addon-docs';
+import SpacingSizingShowcase from '../../../src/storybook/Showcases/SpacingSizingShowcase';
+
+<Meta
+  title="Design Tokens/Global/Spacing"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+/>
+
+<SectionHeader title={'Spacing'} />
+
+<br />
+
+- [Overview](#overview)
+- [Tokens](#tokens)
+
+<br />
+
+## Overview
+
+Proper spacing helps create visual hierarchy within a page and directs the user towards a desired action. Spacing in general uses
+multipliers of 4 for a consistent visual effect (with the exception of spacing.0 / spacing.1 / spacing.2 that are meant to cover small edge
+cases in components. All designs should exclusively use all spacing tokens provided here.
+
+## Tokens
+
+Spacing is part of [globals](../?path=/docs/design-tokens-about--overview#globals) tier of tokens.
+
+<SpacingSizingShowcase />

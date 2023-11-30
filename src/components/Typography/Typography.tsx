@@ -1,5 +1,5 @@
 import React from 'react';
-import { FontSpacing } from 'theme/tokens/semantic/typography';
+import type { FontSpacing } from 'theme/tokens/semantic/typography';
 
 import { typographyWrapper } from './Typography.style';
 

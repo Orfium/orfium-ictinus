@@ -1,9 +1,10 @@
+import type { FCC} from 'react';
 import * as React from 'react';
-import { FCC, useMemo } from 'react';
-import { IThumbProps } from 'react-range/lib/types';
+import { useMemo } from 'react';
+import type { IThumbProps } from 'react-range/lib/types';
 
 import { Thumb } from './SliderThumb.style';
-import { TestProps } from '../../../../utils/types';
+import type { TestProps } from '../../../../utils/types';
 
 export interface SliderThumbProps {
   isDisabled: boolean;

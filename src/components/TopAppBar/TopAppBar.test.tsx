@@ -4,18 +4,19 @@ import { fireEvent, render } from 'test';
 import { createMockMediaMatcher } from '../../hooks/useBreakpoints.test';
 import { DEFAULT_USER_MENU } from '../storyUtils/TopAppBarShowcase';
 import TopAppBar from './TopAppBar';
+import { Mock } from 'vitest';
 
 describe('TopAppBar', () => {
-  let onMenuIconClickMock: jest.Mock;
-  let onSearchHandler: jest.Mock;
-  let onKeyPressHandler: jest.Mock;
+  let onMenuIconClickMock: Mock;
+  let onSearchHandler: Mock;
+  let onKeyPressHandler: Mock;
 
   beforeEach(() => {
     // @ts-ignore - set what matches will be
     window.matchMedia = createMockMediaMatcher(true);
-    onMenuIconClickMock = jest.fn();
-    onSearchHandler = jest.fn();
-    onKeyPressHandler = jest.fn();
+    onMenuIconClickMock = vi.fn();
+    onSearchHandler = vi.fn();
+    onKeyPressHandler = vi.fn();
   });
 
   it('should render correctly', () => {

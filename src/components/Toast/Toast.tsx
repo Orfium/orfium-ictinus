@@ -11,9 +11,9 @@ import {
   expandedContainer,
 } from './Toast.style';
 import { generateTestDataId } from '../../utils/helpers';
-import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
-import { TestId } from '../../utils/types';
-import { NotificationStyleType, NotificationTypes } from '../Notification/Notification';
+import type { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
+import type { TestId } from '../../utils/types';
+import type { NotificationStyleType, NotificationTypes } from '../Notification/Notification';
 import { actionContainer } from '../Notification/Notification.style';
 import { typeToIconName } from '../Notification/subcomponents/CompactNotification/CompactNotification';
 import Icon from 'components/Icon';

@@ -4,7 +4,8 @@ import { mapValues, toPairs, uniqueId, values } from 'lodash';
 import React from 'react';
 import { useState, Fragment, useRef } from 'react';
 import { flexCenter } from 'theme/functions';
-import { colorShades, flatColors, neutralColors, paleColors, BASE_SHADE } from 'theme/palette';
+import type { colorShades, flatColors, paleColors} from 'theme/palette';
+import { neutralColors, BASE_SHADE } from 'theme/palette';
 
 import {
   colorBox,

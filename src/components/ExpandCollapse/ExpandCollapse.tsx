@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { contentStyles } from './ExpandCollapse.style';
-import { ExpandCollapseProps } from './ExpandCollapse.types';
+import type { ExpandCollapseProps } from './ExpandCollapse.types';
 import { useManageContentRef } from './useManageContentRef';
 import { errors } from './utils';
 import { errorHandler, generateTestDataId } from '../../utils/helpers';

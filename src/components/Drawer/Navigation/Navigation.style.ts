@@ -1,5 +1,6 @@
-import { css, SerializedStyles } from '@emotion/react';
-import { Theme } from 'theme';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
+import type { Theme } from 'theme';
 import { flexCenter, flexCenterVertical, transition } from 'theme/functions';
 import { BASE_SHADE } from 'theme/palette';
 import { rem } from 'theme/utils';

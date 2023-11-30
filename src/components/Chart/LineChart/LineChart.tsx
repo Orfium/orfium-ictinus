@@ -4,7 +4,8 @@ import { rem } from 'theme/utils';
 
 import CustomTooltip from './components/CustomTooltip';
 import GradientLine from './components/GradientLine';
-import { Data, getKeyNames, colorPicker } from './utils';
+import type { Data } from './utils';
+import { getKeyNames, colorPicker } from './utils';
 import useTheme from '../../../hooks/useTheme';
 import Wrapper from '../Wrapper';
 
@@ -23,7 +24,7 @@ export type LineChartProps = {
 
 const WrappedChart = Wrapper(AreaChart);
 
-const LineChart: React.FCC<LineChartProps> = ({
+const LineChart: React.FC<LineChartProps> = ({
   data,
   labelX,
   labelY,

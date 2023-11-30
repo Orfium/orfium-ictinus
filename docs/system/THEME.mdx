@@ -1,0 +1,95 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta
+  title="System/Theme"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+/>
+
+# System Theme
+
+Ictinus has an internal system for storing and using parameters such as `spacing`, `colors`, `typography` etc. This system can be accessed by the wrapped app with the use of hook `useTheme()` or by accessing `theme` property from any styled component.
+
+<br />
+<br />
+
+### Theme Configuration
+
+The theme configuration is the core of the whole app as we said. This consist of `params` but also `utils` vital for the theme to function. The parameters that we store are shown below.
+
+| Property    | Type                                                                     |
+| ----------- | ------------------------------------------------------------------------ |
+| palette     | [Palette](#theme-palette)                                                |
+| typography  | [Typography](../?path=/docs/design-tokens-semantic-typography--overview) |
+| spacing     | [Spacing](../?path=/docs/design-tokens-global-spacing--overview)         |
+| elevation   | [Elevation](#theme-elevation)                                            |
+| colorScheme | string ('light' or 'dark')                                               |
+| utils       | [Utility Functions](../?path=/docs/system-utilities--overview)           |
+
+<br />
+<br />
+
+### Theme Palette
+
+Our palette consist of different colors, and types. Each of these have seven shades and you can read more [here](/?path=/story/guide-colors--page#shades)
+
+| Property  | Type                                                                                     |
+| --------- | ---------------------------------------------------------------------------------------- |
+| text      | ['primary', 'secondary', 'light'] - [Shades](/?path=/story/guide-colors--page#shades)    |
+| flat      | [colors](/?path=/story/guide-colors--page#color-palette), 'neutralBlack', 'neutralWhite' |
+| white     | string                                                                                   |
+| black     | string                                                                                   |
+| primary   | Type - [Shades](/?path=/story/guide-colors--page#shades)                                 |
+| secondary | Type - [Shades](/?path=/story/guide-colors--page#shades)                                 |
+| success   | Type - [Shades](/?path=/story/guide-colors--page#shades)                                 |
+| error     | Type - [Shades](/?path=/story/guide-colors--page#shades)                                 |
+| warning   | Type - [Shades](/?path=/story/guide-colors--page#shades)                                 |
+| info      | Type - [Shades](/?path=/story/guide-colors--page#shades)                                 |
+| light     | Type - [Shades](/?path=/story/guide-colors--page#shades)                                 |
+
+The logic is that the **_color_** represents a specific string often bound by the name provided.
+The **_type_** represents a specific functionality UI or UX wise. E.g error type is not a color per se but its a functionality UI/UX that will show the user probably in red what was the error
+
+<br />
+
+### Theme Elevation
+
+In the system it is vital to have elevation to several components. For this our design team have made 4 different variations of elevations.
+Those elevations can be found in the [Card](../?path=/docs/original-components-card--overview) component where you can define in a card the elevation that you want but you can also use a specific elevation
+from our system by reference the number of elevation.
+
+The table below shows the elevation metrics that are used
+
+| Elevation | H-Offset | V-Offset | Blur | Spread | Color                   |
+| --------- | -------- | -------- | ---- | ------ | ----------------------- |
+| 01        | 0        | 2        | 5    | 0      | rgba(16, 48, 102, 0.07) |
+| 02        | 0        | 4        | 8    | 0      | rgba(16, 48, 102, 0.07) |
+| 03        | 0        | 8        | 16   | 0      | rgba(16, 48, 102, 0.07) |
+| 04        | 0        | 16       | 24   | 0      | rgba(16, 48, 102, 0.07) |
+
+#### Usage
+
+```
+box-shadow: ${theme.globals.elevation['02']};
+```
+
+<br />
+
+### Theme Spacing
+
+As mentioned in the design spacing [section](../?path=/docs/design-tokens-global-spacing--overview) we are using specific metrics of spacings.
+
+These metrics are being translated from **_px_** to **_rem_** in order to be flexible across different screen sizes.
+
+#### Usage
+
+```
+const theme = useTheme();
+...
+css={{ padding: theme.globals.spacing.get('4') }}
+
+```

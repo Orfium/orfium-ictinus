@@ -1,9 +1,9 @@
-import { ClickEvent } from 'hooks/useLoading';
+import type { ClickEvent } from 'hooks/useLoading';
 import useTheme from 'hooks/useTheme';
 import { head } from 'lodash';
 import React, { useCallback } from 'react';
 import { rem } from 'theme/utils';
-import { ComponentSizes, TestProps } from 'utils/types';
+import type { ComponentSizes, TestProps } from 'utils/types';
 
 import {
   buttonSpanStyle,
@@ -13,11 +13,13 @@ import {
 } from './DropdownButton.style';
 import { generateTestDataId } from '../../utils/helpers';
 import Button from 'components/Button';
-import { PrimitiveButtonTypes } from 'components/Button/Button.types';
+import type { PrimitiveButtonTypes } from 'components/Button/Button.types';
 import IconButton from 'components/IconButton';
-import List, { ListItem, ListItemText, ListSelection } from 'components/List';
+import type { ListSelection } from 'components/List';
+import List, { ListItem, ListItemText } from 'components/List';
 import ClickAwayListener from 'components/utils/ClickAwayListener';
-import { MenuPositionAllowed, optionsStyle } from 'components/utils/DropdownOptions';
+import type { MenuPositionAllowed} from 'components/utils/DropdownOptions';
+import { optionsStyle } from 'components/utils/DropdownOptions';
 
 export type DropdownButtonProps = TestProps & {
   /** The size of the DropdownButton */
@@ -130,12 +132,12 @@ const DropdownButton = React.forwardRef<HTMLButtonElement, DropdownButtonProps>(
           >
             {items && (
               <List
-                label={'dropdown-button'}
+                label="dropdown-button"
                 onSelectionChange={onSelectionChange}
                 dataTestId={generateTestDataId('dropdown-button-options', dataTestPrefixId)}
               >
                 {items.map((item) => (
-                  <ListItem key={item} rowSize={'compact'}>
+                  <ListItem key={item} rowSize="compact">
                     <ListItemText>{item}</ListItemText>
                   </ListItem>
                 ))}

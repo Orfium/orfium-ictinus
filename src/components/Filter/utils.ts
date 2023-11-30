@@ -1,7 +1,8 @@
 import { rem } from 'theme/utils';
 
-import { BackgroundColorProps, BaseColorProps, BorderProps, FilterProps } from './types';
-import { colorShades, MAX_SHADE } from '../../theme/palette';
+import type { BackgroundColorProps, BaseColorProps, BorderProps, FilterProps } from './types';
+import type { colorShades} from '../../theme/palette';
+import { MAX_SHADE } from '../../theme/palette';
 import { PropsValidationError } from '../../utils/errors';
 import { defineBackgroundColor } from '../Button/utils';
 
