@@ -1,94 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Radio it renders the RadioGroup and Radios correctly 1`] = `
-.emotion-1 label {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 0.75rem;
-  position: relative;
-  cursor: pointer;
-}
-
-.emotion-1 label:before {
-  content: '';
-  display: inline-block;
-  width: 1.25rem;
-  height: 1.25rem;
-  box-sizing: border-box;
-  border: 0.125rem solid #b9cdfc;
-  border-radius: 6.25rem;
-  -webkit-transition: all 200ms;
-  transition: all 200ms;
-  background: rgba(84,94,255,0);
-}
-
-.emotion-1 label:hover::before {
-  background: rgba(84,94,255,0.06);
-  box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
-}
-
-.emotion-1 label[data-selected='true']:before {
-  border-color: #175bf5;
-  border-radius: 50%;
-}
-
-.emotion-1 label[data-selected='true']:hover::before {
-  background: none;
-  box-shadow: none;
-}
-
-.emotion-1 label[data-selected='true']:after {
-  content: '';
-  display: block;
-  position: absolute;
-  border-radius: 50%;
-  width: 0.75rem;
-  height: 0.75rem;
-  background: #175bf5;
-  left: 4px;
-  -webkit-animation: circle 0.15s ease-in-out;
-  animation: circle 0.15s ease-in-out;
-}
-
-.emotion-1 label[data-disabled='true'] {
-  opacity: 50%;
-  cursor: not-allowed;
-}
-
-.emotion-1 label[data-disabled='true']:hover::before {
-  background: none;
-  box-shadow: none;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.125rem;
-}
-
-.emotion-3 {
-  font-family: Roboto;
-  font-weight: 400;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-  color: #1B214F;
-}
-
+exports[`Radio > it renders the RadioGroup and Radios correctly 1`] = `
 .emotion-1 label {
   display: -webkit-box;
   display: -webkit-flex;
@@ -179,11 +91,10 @@ exports[`Radio it renders the RadioGroup and Radios correctly 1`] = `
 
 <div>
   <div
-    aria-describedby="react-aria-generated-id react-aria-generated-id"
     aria-orientation="vertical"
     class="emotion-0"
     data-testid="undefined_radio_group_container"
-    id="react-aria-generated-id"
+    id="react-aria-:r0:"
     role="radiogroup"
   >
     <div
@@ -198,8 +109,7 @@ exports[`Radio it renders the RadioGroup and Radios correctly 1`] = `
           style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
         >
           <input
-            aria-describedby="react-aria-generated-id"
-            name="react-aria-generated-id"
+            name="react-aria-:r5:"
             tabindex="0"
             type="radio"
             value="Test Option"

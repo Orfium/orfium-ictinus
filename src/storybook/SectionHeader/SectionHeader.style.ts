@@ -1,4 +1,5 @@
-import { css, SerializedStyles } from '@emotion/react';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
 
 export const sectionHeaderWrapper = () => (): SerializedStyles =>
   css`
@@ -11,4 +12,7 @@ export const sectionHeaderWrapper = () => (): SerializedStyles =>
     display: flex;
     align-items: center;
     padding: 0 32px;
+    h1 {
+      margin: 0;
+    }
   `;

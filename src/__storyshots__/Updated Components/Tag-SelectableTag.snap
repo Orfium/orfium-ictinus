@@ -1,0 +1,184 @@
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 1.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  box-sizing: border-box;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  background: #ffffff;
+  color: #1249C4;
+  border: 0.0625rem solid;
+  border-color: #b9cdfc;
+  border-radius: 0.25rem;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-1:hover {
+  background: #F5F5FF;
+}
+
+.emotion-1:focus-visible {
+  background: #F5F5FF;
+  border-color: #175bf5;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 1.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  box-sizing: border-box;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  background: #F5F5FF;
+  color: #1249C4;
+  border: 0.0625rem solid;
+  border-color: #b9cdfc;
+  border-radius: 0.25rem;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-2:hover {
+  background: #F5F5FF;
+}
+
+.emotion-2:focus-visible {
+  background: #F5F5FF;
+  border-color: #175bf5;
+}
+
+.emotion-3 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-4 {
+  fill: #1249C4;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-4 * {
+  fill: #1249C4;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        aria-label="Label"
+        aria-selected="false"
+        class="emotion-1"
+        data-testid="undefined_tag_container"
+        tabindex="0"
+      >
+        Label
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        aria-label="Label"
+        aria-selected="true"
+        class="emotion-2"
+        data-testid="undefined_tag_container"
+        tabindex="0"
+      >
+        <span
+          class="emotion-3"
+          data-testid="undefined_tag_prefix"
+        >
+          <svg
+            class="emotion-4"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <g
+              fill="none"
+              fill-rule="evenodd"
+              id="\\uD83D\\uDD36-Symbols"
+              stroke="none"
+              stroke-width="1"
+            >
+              <g
+                id="Checkmark"
+              >
+                <path
+                  d="M16.1742639,3.56546017 L17.5665405,4.95773677 L9.21853983,13.3054602 L14.0871995,18.1742639 L12.6949229,19.5665405 L6.43453983,13.3061575 L6.43653983,13.3044602 L6.43589028,13.3038338 L16.1742639,3.56546017 Z"
+                  transform="translate(12.000540, 11.566000) scale(-1, 1) rotate(-90.000000) translate(-12.000540, -11.566000)"
+                />
+              </g>
+            </g>
+          </svg>
+        </span>
+        Label
+      </div>
+    </div>
+  </div>
+</div>

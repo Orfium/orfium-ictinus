@@ -1,6 +1,7 @@
 import React from 'react';
 
-import Button, { ButtonProps } from '../../Button';
+import type { ButtonProps } from '../../Button';
+import Button from '../../Button';
 
 const ButtonShowcase: React.FCC<ButtonProps & { hasAvatar: boolean; buttonLabel: string }> = ({
   isBlock,

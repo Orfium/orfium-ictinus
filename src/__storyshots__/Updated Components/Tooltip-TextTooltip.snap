@@ -1,0 +1,250 @@
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-1 {
+  background-color: #1B214F;
+  border: 0.0625rem solid rgba(84,94,255,0);
+  box-shadow: 0rem 0.25rem 0.5rem 0rem #10306612;
+}
+
+.emotion-1 .tippy-content {
+  background-color: #1B214F;
+  max-width: 16rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  color: #ffffff;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  text-align: start;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.emotion-1 .tippy-arrow::before {
+  color: #1B214F;
+}
+
+.emotion-2 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-3 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #ffffff;
+  height: auto;
+  background-color: #175bf5;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-3:focus-visible:not(:disabled) {
+  background-color: #1552DD;
+}
+
+.emotion-3:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-3:hover:not(:disabled) {
+  background-color: #1552DD;
+}
+
+.emotion-3:active:not(:disabled) {
+  background-color: #1249C4;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.emotion-5 {
+  background: #1B214F;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-6 {
+  background-color: #ffffff;
+  border: 0.0625rem solid #E7E8FF;
+  box-shadow: 0rem 0.25rem 0.5rem 0rem #10306612;
+}
+
+.emotion-6 .tippy-content {
+  background-color: #ffffff;
+  max-width: 16rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  color: #1B214F;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  text-align: start;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.emotion-6 .tippy-arrow::before {
+  color: #ffffff;
+}
+
+.emotion-8 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #1B214F;
+  height: auto;
+  background-color: #1de9b6;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-8:focus-visible:not(:disabled) {
+  background-color: #00C6A2;
+}
+
+.emotion-8:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-8:hover:not(:disabled) {
+  background-color: #00C6A2;
+}
+
+.emotion-8:active:not(:disabled) {
+  background-color: #0C7D61;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        style="padding: 16px;"
+      >
+        <div
+          class="emotion-1"
+          delay="500,500"
+          placement="right"
+        >
+          <div
+            class="emotion-2"
+          >
+            <button
+              class="emotion-3"
+              data-testid="button"
+              type="button"
+            >
+              <span
+                class="emotion-4"
+              >
+                <span>
+                  Hover here
+                </span>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div>
+          This is a Tooltip
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="emotion-5"
+  >
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        style="padding: 16px;"
+      >
+        <div
+          class="emotion-6"
+          delay="500,500"
+          placement="right"
+        >
+          <div
+            class="emotion-2"
+          >
+            <button
+              class="emotion-8"
+              data-testid="button"
+              type="button"
+            >
+              <span
+                class="emotion-4"
+              >
+                <span>
+                  Hover here
+                </span>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div>
+          This is a Tooltip
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

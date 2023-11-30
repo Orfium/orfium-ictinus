@@ -4,7 +4,8 @@ import typographyCollection from 'theme/tokens/semantic/variables/typography';
 import { parseCompositionToken } from 'theme/tokens/utils';
 
 import { TableWrapperStyle } from './TypographyTokensShowcase.style';
-import Typography, { TypographyVariant } from 'components/Typography';
+import type { TypographyVariant } from 'components/Typography';
+import Typography from 'components/Typography';
 
 const TypographyTokensShowcase = () => {
   const typographyArray = map(typographyCollection.normal, (value, key) => ({ key, ...value }));
@@ -12,7 +13,7 @@ const TypographyTokensShowcase = () => {
   const parsedTypographyCompositionToken = parseCompositionToken(typographyCollection.normal);
 
   return (
-    <table css={TableWrapperStyle} width={'100%'}>
+    <table css={TableWrapperStyle} width="100%">
       <thead css={{ background: '#FFFFFF' }}>
         <tr>
           <th>Title & description</th>
@@ -30,7 +31,7 @@ const TypographyTokensShowcase = () => {
                 {key} (Mono)
               </Typography>
               <br />
-              <Typography variant={'body01'} type={'secondary'}>
+              <Typography variant="body01" type="secondary">
                 {description}
               </Typography>
             </td>

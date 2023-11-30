@@ -2,8 +2,9 @@ import useTheme from 'hooks/useTheme';
 import React, { useMemo } from 'react';
 
 import { avatarStyle } from './Avatar.style';
-import { AvatarTokens, getAvatarTokens, parseAvatarIconSize } from './Avatar.tokens';
-import { AvatarProps } from './Avatar.types';
+import type { AvatarTokens} from './Avatar.tokens';
+import { getAvatarTokens, parseAvatarIconSize } from './Avatar.tokens';
+import type { AvatarProps } from './Avatar.types';
 import Icon from '../Icon';
 
 const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
@@ -24,7 +25,7 @@ const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
       return (
         <Icon
           color={tokens(`textColor.${color}` as AvatarTokens)}
-          name={'userAvatar'}
+          name="userAvatar"
           size={parseFloat(tokens(`size.${size}` as AvatarTokens, parseAvatarIconSize))}
         />
       );

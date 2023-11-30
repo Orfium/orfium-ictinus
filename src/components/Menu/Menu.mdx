@@ -1,0 +1,48 @@
+import { Meta, Canvas, ArgTypes, Story } from '@storybook/blocks';
+import Menu from '../Menu';
+import MenuShowcase from '../storyUtils/MenuShowcase';
+import Stack from '../storyUtils/Stack';
+import { FIGMA_URL } from '../../utils/common';
+import * as MenuStories from './Menu.stories';
+
+<Meta of={MenuStories} />
+
+# Menu
+
+A universal Menu component that is a clickable element that can hold many forms.
+
+## Usage
+
+```js
+import { Menu } from '@orfium/ictinus';
+
+<Menu onClick={() => {}}>Click Me</Menu>;
+```
+
+## Props
+
+<ArgTypes of={Menu} />
+
+### Menu with selection handler
+
+A menu with a selection handler to return selection on change and to pass selection callback
+
+<Canvas of={MenuStories.MenuWithSelectionHandler} />
+
+### Menu with option icon and different colour
+
+Menu with option icon (dots) and different button colour
+
+<Canvas of={MenuStories.MenuWithOptionIconAndDifferentColour} />
+
+### Menu with avatar
+
+Menu with avatar and different button colour
+
+<Canvas of={MenuStories.MenuWithAvatarAndDifferentButtonColour} />
+
+### Menu disabled
+
+Menu disabled
+
+<Canvas of={MenuStories.DisabledMenu} />

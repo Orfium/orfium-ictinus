@@ -1,17 +1,18 @@
 import useTheme from 'hooks/useTheme';
 import { head, isEmpty } from 'lodash';
 import * as React from 'react';
-import { EventProps } from 'utils/common';
+import type { EventProps } from 'utils/common';
 
-import { wrapperStyle } from './Menu.style';
-import { TestProps } from '../../utils/types';
+import type { TestProps } from '../../utils/types';
 import Button from '../Button';
-import { AcceptedIconNames } from '../Icon/types';
+import type { AcceptedIconNames } from '../Icon/types';
 import ClickAwayListener from '../utils/ClickAwayListener';
-import { optionsStyle, MenuPositionAllowed } from '../utils/DropdownOptions';
-import { AvatarColors } from 'components/Avatar';
-import { ButtonTypes } from 'components/Button/Button.types';
+import type { MenuPositionAllowed } from '../utils/DropdownOptions';
+import { optionsStyle } from '../utils/DropdownOptions';
+import type { AvatarColors } from 'components/Avatar';
+import type { ButtonTypes } from 'components/Button/Button.types';
 import List, { ListItem, ListItemText } from 'components/List';
+import PositionInScreen from 'components/utils/PositionInScreen';
 
 export type MenuProps = {
   /** the color of the button based on our colors eg. red-500 */
@@ -43,7 +44,7 @@ export type MenuProps = {
 } & TestProps &
   EventProps;
 
-const Menu: React.FCC<MenuProps> = (props) => {
+const Menu: React.FC<MenuProps> = (props) => {
   const {
     items,
     onSelect,
@@ -61,22 +62,27 @@ const Menu: React.FCC<MenuProps> = (props) => {
 
   return (
     <ClickAwayListener onClick={() => setIsOpen(false)}>
-      <div css={wrapperStyle()} data-testid={dataTestId}>
-        <Button
-          type={buttonType}
-          onClick={() => setIsOpen(!isOpen)}
-          isDisabled={isDisabled}
-          iconRightName={rightIconName}
-          iconLeftName={leftIconName}
-          avatar={!isEmpty(avatar) ? { src: avatar?.src, label: avatar?.letter } : undefined}
+      <div data-testid={dataTestId}>
+        <PositionInScreen
+          isVisible={isOpen}
+          offsetY={8}
+          parent={
+            <Button
+              type={buttonType}
+              onClick={() => setIsOpen(!isOpen)}
+              isDisabled={isDisabled}
+              iconRightName={rightIconName}
+              iconLeftName={leftIconName}
+              avatar={!isEmpty(avatar) ? { src: avatar?.src, label: avatar?.letter } : undefined}
+            >
+              <span>{buttonText}</span>
+            </Button>
+          }
         >
-          <span>{buttonText}</span>
-        </Button>
-        {isOpen && (
           <div css={optionsStyle({ menuPosition })(theme)}>
             {items && (
               <List
-                label={'filter-options'}
+                label="filter-options"
                 onSelectionChange={(keys) => {
                   setIsOpen(false);
                   const keyFound = String(head(Array.from(keys)));
@@ -85,14 +91,14 @@ const Menu: React.FCC<MenuProps> = (props) => {
                 }}
               >
                 {items.map((item) => (
-                  <ListItem key={item} rowSize={'compact'}>
+                  <ListItem key={item} rowSize="compact">
                     <ListItemText>{item}</ListItemText>
                   </ListItem>
                 ))}
               </List>
             )}
           </div>
-        )}
+        </PositionInScreen>
       </div>
     </ClickAwayListener>
   );

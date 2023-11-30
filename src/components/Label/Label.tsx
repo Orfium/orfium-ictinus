@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ComponentSizes } from 'types';
+import type { ComponentSizes } from 'types';
 
 import { labelStyle } from './Label.style';
 

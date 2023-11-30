@@ -1,0 +1,108 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
+import TextField from './TextField';
+import SectionHeader from '../../storybook/SectionHeader';
+import * as TextFieldStories from './TextField.stories';
+import Overview from '../../storybook/Overview';
+
+<Meta of={TextFieldStories} />
+
+<SectionHeader title={'TextField'} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
+
+## Overview
+
+A universal TextField component which provides a wide range of features such as statuses, inline
+suffixes such as icons and components, and a multi-input functionality with the help of the Chip
+component.
+
+## Props
+
+<ArgTypes of={TextField} />
+
+## Usage
+
+<UsageGuidelines
+  guidelines={[
+    'When the user needs to enter input in the system in the form of a simple text string (Single TextField) or multiple string values (Multi TextField)',
+    'When possible, try to choose input width that is relevant to the content being entered into the input field',
+    'Avoid truncating field label and input as much as possible',
+  ]}
+  policies={['If you need to enter a predefined input from a list, use select instead']}
+/>
+
+<Tip>
+  When the user needs to enter more than one individual values at a given field that are not
+  selected from a predefined list, MultiTextField is more suitable. <br />
+  (scroll down for more details)
+</Tip>
+
+<SubsectionHeader title="Variants" />
+
+### TextField sizes
+
+There are 2 Textfield sizes: `normal` and `compact`.
+
+<Tip>
+  Compact TextField doesn't support placeholder (only in masked version using the mask prop) and
+  multi-textfield functionality. To use these, please use normal-size TextField.
+</Tip>
+
+<Canvas of={TextFieldStories.TextFieldSizes} />
+
+### TextField with placeholder
+
+Single TextField with or without Placeholder
+
+<Canvas of={TextFieldStories.TextFieldWithPlaceholder} />
+
+### TextField with mask option
+
+TextField with mask option. When used, placeholder prop is not available.
+The mask rules are the following:
+
+<UsageGuidelines
+  guidelines={[
+    " '9' => [0-9] (Numeric)",
+    " 'a' => [A-Za-z] (Alphabetical)",
+    " '*' => [A-Za-z0-9] (Alphanumeric)",
+  ]}
+/>
+
+<Tip>
+  In case number 9 is needed as a constant inside the mask, use '\9'. For example Georgian phone
+  number format would be +\9\9\9 999 999999 (example: +999 123 123456){' '}
+</Tip>
+
+<Canvas of={TextFieldStories.TextFieldWithMaskOption} />
+
+### TextField with icon
+
+TextField with icon options right of the text.
+
+<Canvas of={TextFieldStories.TextFieldWithIcon} />
+
+### MultiTextField
+
+MultiTextField enables a user to enter one or individual entries as free text.
+
+<Canvas of={TextFieldStories.MultiTextField} />
+
+### TextField statuses
+
+TextField with different statuses.
+
+<Canvas of={TextFieldStories.TextFieldStatuses} />
+
+### Disabled TextField
+
+Disabled TextField.
+
+<Canvas of={TextFieldStories.DisabledTextField} />
+
+### Playground
+
+<Canvas of={TextFieldStories.Playground} />

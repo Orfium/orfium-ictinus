@@ -9,7 +9,7 @@ import TableCell from './components/TableCell';
 import TableRow from './components/TableRow';
 import TableRowWrapper from './components/TableRowWrapper';
 import { tableCTAStyle, tableRowHeadersStyle, tableStyle } from './Table.style';
-import { ExtendedColumn, Sort, SortingOrder } from './types';
+import type { ExtendedColumn, Sort, SortingOrder } from './types';
 import { isItemString } from './utils';
 import { CheckBox } from '../Controls';
 
@@ -200,7 +200,7 @@ function Table<T>({
             <TableRow>
               {onCheck && (
                 <TableCell
-                  component={'th'}
+                  component="th"
                   width={50}
                   isPadded={isPadded}
                   dataTestIdPrefix={dataTestIdPrefix}
@@ -238,7 +238,7 @@ function Table<T>({
               </TableCell>
               {topRightArea && (
                 <TableCell
-                  textAlign={'right'}
+                  textAlign="right"
                   isPadded={isPadded}
                   colSpan={columnCount - (onCheck ? 2 : 1)}
                   dataTestIdPrefix={dataTestIdPrefix}
@@ -262,7 +262,7 @@ function Table<T>({
               >
                 {onCheck && (
                   <TableCell
-                    component={'th'}
+                    component="th"
                     isPaddedSticky={hasFixedCTA}
                     isSticky={hasFixedHeader}
                     width={50}
@@ -280,7 +280,7 @@ function Table<T>({
                           ? 'right'
                           : 'left'
                       }
-                      component={'th'}
+                      component="th"
                       key={`${isItemString(item) ? item : item.content.sortingKey}`}
                       isSticky={hasFixedHeader}
                       isPaddedSticky={hasFixedCTA}
@@ -313,7 +313,7 @@ function Table<T>({
                 })}
                 {hasExpandableRows && (
                   <TableCell
-                    component={'th'}
+                    component="th"
                     isSticky={hasFixedHeader}
                     isPaddedSticky={hasFixedCTA}
                     width={actionCellWidth}

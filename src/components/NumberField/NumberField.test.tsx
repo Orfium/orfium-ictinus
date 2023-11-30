@@ -21,8 +21,8 @@ describe('NumberField', () => {
     renderNumberField();
     input = screen.getByTestId('input') as HTMLInputElement;
 
-    userEvent.type(input, '12.3456');
-    userEvent.click(document.body);
+    await userEvent.type(input, '12.3456');
+    await userEvent.click(document.body);
     expect(input).toHaveValue('12.35');
   });
 
@@ -30,8 +30,8 @@ describe('NumberField', () => {
     renderNumberField({ step: 0.5 });
     input = screen.getByTestId('input') as HTMLInputElement;
 
-    userEvent.type(input, '12.21');
-    userEvent.click(document.body);
+    await userEvent.type(input, '12.21');
+    await userEvent.click(document.body);
     expect(input).toHaveValue('12.00');
   });
 
@@ -41,11 +41,11 @@ describe('NumberField', () => {
     increase = screen.getByTestId('number_increment') as HTMLButtonElement;
     decrease = screen.getByTestId('number_decrement') as HTMLButtonElement;
 
-    userEvent.type(input, '12.00');
-    userEvent.click(document.body);
-    userEvent.click(increase);
+    await userEvent.type(input, '12.00');
+    await userEvent.click(document.body);
+    await userEvent.click(increase);
     expect(input).toHaveValue('12.50');
-    userEvent.click(decrease);
+    await userEvent.click(decrease);
     expect(input).toHaveValue('12.00');
   });
 
@@ -53,15 +53,15 @@ describe('NumberField', () => {
     renderNumberField({ step: 0.5, hasStepper: true });
     input = screen.getByTestId('input') as HTMLInputElement;
 
-    userEvent.type(input, '12.00');
-    userEvent.click(document.body);
+    await userEvent.type(input, '12.00');
+    await userEvent.click(document.body);
 
-    userEvent.click(input);
+    await userEvent.click(input);
 
-    userEvent.type(input, '{arrowup}');
+    await userEvent.type(input, '{arrowup}');
     expect(input).toHaveValue('12.50');
 
-    userEvent.type(input, '{arrowdown}');
+    await userEvent.type(input, '{arrowdown}');
     expect(input).toHaveValue('12.00');
   });
 
@@ -69,14 +69,14 @@ describe('NumberField', () => {
     renderNumberField({ minValue: 10, maxValue: 20 });
     input = screen.getByTestId('input') as HTMLInputElement;
 
-    userEvent.type(input, '5');
-    userEvent.click(document.body);
+    await userEvent.type(input, '5');
+    await userEvent.click(document.body);
     expect(input).toHaveValue('10.00');
 
-    userEvent.clear(input);
+    await userEvent.clear(input);
 
-    userEvent.type(input, '25');
-    userEvent.click(document.body);
+    await userEvent.type(input, '25');
+    await userEvent.click(document.body);
     expect(input).toHaveValue('20.00');
   });
 });

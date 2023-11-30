@@ -1,8 +1,10 @@
-import { css, CSSObject } from '@emotion/react';
+import type { CSSObject } from '@emotion/react';
+import { css } from '@emotion/react';
 import useTheme from 'hooks/useTheme';
 import { omit } from 'lodash';
-import React, { forwardRef, ReactNode } from 'react';
+import React, { forwardRef } from 'react';
 
+import { BoxWrapper } from './Box.style';
 import type { StyledBoxProps } from './Box.types';
 import { cssResolver, omitedCSSprops, pickCSSProperties, pickNonCSSProps } from './Box.utilities';
 
@@ -39,9 +41,9 @@ const Box = forwardRef<HTMLDivElement, BoxProps>(({ children, ...rest }, ref) =>
   };
 
   return (
-    <div ref={ref} css={[css(propsToCss)]} {...props}>
+    <BoxWrapper ref={ref} css={[css(propsToCss)]} {...props}>
       {children}
-    </div>
+    </BoxWrapper>
   );
 });
 

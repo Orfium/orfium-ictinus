@@ -1,14 +1,14 @@
-import { CSSObject } from '@emotion/serialize';
+import type { CSSObject } from '@emotion/serialize';
 import React from 'react';
 
 import { buttonBaseStyle, buttonWrapperStyle } from './ButtonBase.style';
-import { ClickEvent } from '../../hooks/useLoading';
-import { CommonButtonProps } from '../../utils/common';
+import type { ClickEvent } from '../../hooks/useLoading';
+import type { CommonButtonProps } from '../../utils/common';
 import { generateTestDataId } from '../../utils/helpers';
-import { ComponentSizes, TestProps } from '../../utils/types';
-import { ButtonTypes } from 'components/Button/Button.types';
+import type { ComponentSizes, TestProps } from '../../utils/types';
+import type { ButtonTypes } from 'components/Button/Button.types';
 import ButtonLoader from 'components/Button/ButtonLoader';
-import { IconButtonShape } from 'components/IconButton';
+import type { IconButtonShape } from 'components/IconButton';
 
 export type EventButtonProps = {
   onClick?: (event: ClickEvent) => void;

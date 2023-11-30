@@ -1,0 +1,31 @@
+import { Meta } from '@storybook/addon-docs';
+import SizingShowcase from '../../../src/storybook/Showcases/SizingShowcase';
+
+<Meta
+  title="Design Tokens/Global/Sizing"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+/>
+
+<SectionHeader title={'Sizing'} />
+
+<br />
+
+- [Overview](#overview)
+- [Tokens](#tokens)
+
+<br />
+
+## Overview
+
+Proper sizing helps create visual hierarchy within a page and directs the user towards a desired action. Spacing in general uses multipliers of 4 for a consistent visual effect (with the exception of spacing.0). All designs should use exclusively the sizing tokens provided below.
+
+## Tokens
+
+Sizing is part of [globals](../?path=/docs/design-tokens-about--overview#globals) tier of tokens.
+
+<SizingShowcase />

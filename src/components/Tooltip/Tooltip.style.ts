@@ -1,9 +1,10 @@
-import { css, SerializedStyles } from '@emotion/react';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
 import { rem } from 'theme/utils';
 
 import { getTooltipTokens } from './Tooltip.tokens';
-import { TooltipProps } from './Tooltip.types';
-import { Theme } from '../../theme';
+import type { TooltipProps } from './Tooltip.types';
+import type { Theme } from '../../theme';
 import 'tippy.js/dist/tippy.css';
 import { generateStylesFromTokens } from 'components/Typography/utils';
 

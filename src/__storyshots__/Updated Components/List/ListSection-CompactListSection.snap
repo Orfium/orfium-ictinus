@@ -1,0 +1,277 @@
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-1 {
+  border: 0.0625rem solid #E7E8FF;
+  border-radius: 0.25rem;
+  width: undefinedpx;
+  box-shadow: 0rem 0.25rem 0.5rem 0rem #10306612;
+}
+
+.emotion-2 {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-radius: 0.25rem;
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  overflow-x: hidden;
+  background: #ffffff;
+}
+
+.emotion-3 {
+  background-color: rgba(84,94,255,0);
+  opacity: 1;
+  cursor: initial;
+}
+
+.emotion-3>div {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-3 span[role='presentation'] {
+  padding: 0 0.75rem;
+  min-height: 2.5rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  font-weight: 700;
+}
+
+.emotion-3[role='option'] {
+  padding: 0 0.75rem;
+  min-height: 2.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.75rem;
+}
+
+.emotion-3[role='option']:hover {
+  background-color: rgba(84,94,255,0.06);
+  cursor: pointer;
+}
+
+.emotion-3[data-focus-visible] {
+  background-color: rgba(84,94,255,0.06);
+}
+
+.emotion-3[aria-selected='true'] {
+  background-color: rgba(84,94,255,0.06);
+}
+
+.emotion-3[aria-selected='true']>div {
+  color: #1552DD;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-3[aria-selected='true'][data-focus-visible] {
+  background-color: rgba(84,94,255,0.06);
+}
+
+.emotion-4 {
+  padding: 0;
+  list-style: none;
+}
+
+.emotion-6 {
+  color: #1B214F;
+  font-weight: initial;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-6 strong {
+  font-weight: bold;
+}
+
+.emotion-6 span {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        class="emotion-1"
+      >
+        <div
+          data-testid="ictinus_list"
+        >
+          <div
+            style="height: 100%;"
+          >
+            <ul
+              aria-labelledby="react-aria-:r6d:"
+              class="emotion-2"
+              id="react-aria-:r6b:"
+              role="listbox"
+              style="overflow-y: auto; position: relative; display: flex; flex-direction: column; height: 100%; list-style: none; padding: 0px;"
+              tabindex="0"
+            >
+              <li
+                class="emotion-3 "
+                role="presentation"
+              >
+                <span
+                  id="react-aria-:r6f:"
+                  role="presentation"
+                >
+                  Section 1
+                </span>
+                <ul
+                  aria-labelledby="react-aria-:r6f:"
+                  class="emotion-4"
+                  role="group"
+                >
+                  <li
+                    aria-selected="false"
+                    class="emotion-3 "
+                    data-key="$.0.0"
+                    data-testid="ictinus_list_item_$.0.0"
+                    id="react-aria-:r6b:-option-$.0.0"
+                    role="option"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="emotion-6"
+                    >
+                      <span>
+                        ...
+                      </span>
+                    </div>
+                  </li>
+                  <li
+                    aria-selected="false"
+                    class="emotion-3 "
+                    data-key="$.0.1"
+                    data-testid="ictinus_list_item_$.0.1"
+                    id="react-aria-:r6b:-option-$.0.1"
+                    role="option"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="emotion-6"
+                    >
+                      <span>
+                        ...
+                      </span>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li
+                class="emotion-3 "
+                role="presentation"
+              >
+                <span
+                  id="react-aria-:r6k:"
+                  role="presentation"
+                >
+                  Section 2
+                </span>
+                <ul
+                  aria-labelledby="react-aria-:r6k:"
+                  class="emotion-4"
+                  role="group"
+                >
+                  <li
+                    aria-selected="false"
+                    class="emotion-3 "
+                    data-key="$.1.0"
+                    data-testid="ictinus_list_item_$.1.0"
+                    id="react-aria-:r6b:-option-$.1.0"
+                    role="option"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="emotion-6"
+                    >
+                      <span>
+                        ...
+                      </span>
+                    </div>
+                  </li>
+                  <li
+                    aria-selected="false"
+                    class="emotion-3 "
+                    data-key="$.1.1"
+                    data-testid="ictinus_list_item_$.1.1"
+                    id="react-aria-:r6b:-option-$.1.1"
+                    role="option"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="emotion-6"
+                    >
+                      <span>
+                        ...
+                      </span>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

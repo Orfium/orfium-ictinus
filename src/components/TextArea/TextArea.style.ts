@@ -1,9 +1,10 @@
-import { css, SerializedStyles } from '@emotion/react';
-import { CSSObject } from '@emotion/serialize';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
+import type { CSSObject } from '@emotion/serialize';
 import { rem } from 'theme/utils';
 
-import { TextAreaProps } from './TextArea';
-import { Theme } from '../../theme';
+import type { TextAreaProps } from './TextArea';
+import type { Theme } from '../../theme';
 import { LABEL_TRANSFORM_LEFT_SPACING } from 'components/Label/Label.style';
 import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
 import { body03 } from 'components/Typography/Typography.config.styles';
@@ -14,11 +15,10 @@ export const sxProp =
     const tokens = getTextInputBaseTokens(theme);
 
     return {
-      wrapper: { width: 'auto', height: 'auto' },
+      wrapper: { width: 'auto', height: 'auto', minWidth: rem(tokens('minWidth.large.normal')) },
       textField: { padding: `${tokens('paddingVertical')} ${tokens('paddingContentLeft')}` },
       input: {
-        width: rem(tokens('minWidth.large.normal')),
-        minWidth: rem(tokens('minWidth.large.normal')),
+        maxWidth: '100%',
         resize: !isResizeEnabled ? 'none' : 'both',
 
         '& + label': {

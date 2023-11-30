@@ -1,4 +1,4 @@
-import { SelectOption } from './types';
+import type { SelectOption } from './types';
 
 export const SELECT_ALL_OPTION: SelectOption = {
   value: 'select_all',

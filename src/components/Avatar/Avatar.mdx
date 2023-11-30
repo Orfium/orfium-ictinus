@@ -1,0 +1,56 @@
+import { Meta, Canvas, ArgTypes, Story } from '@storybook/blocks';
+import Avatar from './Avatar';
+import SectionHeader from '../../storybook/SectionHeader';
+import * as AvatarStories from './Avatar.stories';
+
+<Meta of={AvatarStories} />
+
+<SectionHeader title={'Avatar'} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
+
+## Overview
+
+A universal Avatar component can be found around ictinus on menus or can be a standalone component as well. It renders either images, letter or icon from our library
+
+## Props
+
+<ArgTypes of={Avatar} />
+
+## Usage
+
+<UsageGuidelines
+  guidelines={['Use an avatar to consistently represent a person, group, or project']}
+  policies={[
+    'Don’t use when the the max amount of users related to the value is one: use an avatar instead',
+  ]}
+/>
+
+<SubsectionHeader title="Variants" />
+
+### Avatar with icon
+
+Avatar with icon
+
+<Canvas of={AvatarStories.AvatarWithIcon} />
+
+### Avatar with letter
+
+Avatar with letter
+
+<Canvas of={AvatarStories.AvatarWithLetter} />
+
+### Avatar with src
+
+Avatar with src
+
+<Canvas of={AvatarStories.AvatarWithSrc} />
+
+### Avatar Playground
+
+Avatar Playground
+
+<Canvas of={AvatarStories.AvatarPlayground} />

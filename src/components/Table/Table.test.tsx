@@ -1,7 +1,6 @@
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import '@testing-library/jest-dom';
-import { fireEvent, render, within, screen } from '../../test';
+import { fireEvent, render, within, screen } from 'test';
 
 import Table from './Table';
 
@@ -47,7 +46,7 @@ describe('Table', () => {
   });
 
   test('that the onCheck returns the selected rows back when a row is selected', async () => {
-    const onCheck = jest.fn();
+    const onCheck = vi.fn();
     const { getAllByText } = render(
       <Table
         columns={['Title', 'Name', 'Surname', 'Age']}
@@ -61,14 +60,14 @@ describe('Table', () => {
     const rowUtils = within(row);
     const checkbox = await rowUtils.findAllByTestId('row-check_undefined_checkbox');
 
-    userEvent.click(checkbox[0]);
+    await userEvent.click(checkbox[0]);
 
     expect(onCheck).toHaveBeenCalledTimes(1);
     expect(onCheck).toHaveBeenCalledWith([data[0].id]);
   });
 
   test('that the onCheck on top of the table returns the selected rows back when all are selected', async () => {
-    const onCheck = jest.fn();
+    const onCheck = vi.fn();
     const topLeftText = 'topLeftText';
     const { getByText } = render(
       <Table
@@ -84,14 +83,14 @@ describe('Table', () => {
     const rowUtils = within(row);
     const checkbox = await rowUtils.findAllByTestId('undefined_undefined_checkbox');
 
-    userEvent.click(checkbox[0]);
+    await userEvent.click(checkbox[0]);
 
     expect(onCheck).toHaveBeenCalledTimes(1);
     expect(onCheck).toHaveBeenCalledWith(data.map(({ id }) => id));
   });
 
   test('that the header contains sorting and tooltip icons', () => {
-    const onSort = jest.fn();
+    const onSort = vi.fn();
 
     render(
       <Table
@@ -127,8 +126,8 @@ describe('Table', () => {
     expect(within(surnameHeader).getByTestId('table_icon_tooltip_surname')).toBeInTheDocument();
   });
 
-  test('that onSort is called with correct parameters', () => {
-    const onSort = jest.fn();
+  test('that onSort is called with correct parameters', async () => {
+    const onSort = vi.fn();
 
     render(
       <Table
@@ -150,12 +149,12 @@ describe('Table', () => {
       />
     );
 
-    userEvent.click(screen.getByTestId('header_title'));
+    await userEvent.click(screen.getByTestId('header_title'));
 
     expect(onSort).toHaveBeenLastCalledWith('title', 'desc');
   });
 
-  test('that the tooltip is showed when hovering over the icon', () => {
+  test('that the tooltip is showed when hovering over the icon', async () => {
     render(
       <Table
         columns={[
@@ -176,13 +175,13 @@ describe('Table', () => {
 
     const tooltipIcon = screen.getByTestId('table_icon_tooltip_title');
 
-    userEvent.hover(tooltipIcon);
+    await userEvent.hover(tooltipIcon);
 
     expect(screen.getByText(tooltip.content)).toBeVisible();
   });
 
-  test('that the order of the icons is correct when column is numerical', () => {
-    const onSort = jest.fn();
+  test('that the order of the icons is correct when column is numerical', async () => {
+    const onSort = vi.fn();
 
     render(
       <Table
@@ -221,7 +220,7 @@ describe('Table', () => {
 
     const headerAge = screen.getByTestId('header_age');
 
-    userEvent.click(headerAge);
+    await userEvent.click(headerAge);
 
     const ageElements = within(headerAge).queryAllByTestId(new RegExp('table_icon'));
 

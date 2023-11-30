@@ -1,8 +1,9 @@
-import { css, SerializedStyles } from '@emotion/react';
-import { Theme } from 'theme';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
+import type { Theme } from 'theme';
 import { flex } from 'theme/functions';
 
-import { BadgeProps } from './Badge';
+import type { BadgeProps } from './Badge';
 
 export const badgeStyle =
   ({ fill = 'greyScale', isSelected }: BadgeProps) =>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { ResponsiveContainer } from 'recharts';
-import { CategoricalChartProps } from 'recharts/types/chart/generateCategoricalChart';
+import type { CategoricalChartProps } from 'recharts/types/chart/generateCategoricalChart';
 
 type ChartProps = CategoricalChartProps;
 

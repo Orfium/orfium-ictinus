@@ -1,0 +1,791 @@
+.emotion-0 {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.emotion-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.emotion-2 {
+  position: relative;
+  text-align: left;
+  padding: 0.25rem 0.5rem;
+}
+
+.emotion-3 {
+  position: relative;
+  text-align: right;
+  padding: 0.25rem 0.5rem;
+}
+
+.emotion-4 {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.emotion-5 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom-width: 0.0625rem;
+  border-bottom-style: solid;
+  border-bottom-color: #cfd7e5;
+}
+
+.emotion-5 th:first-of-type {
+  padding-left: 1rem;
+}
+
+.emotion-5 th:last-child {
+  padding-right: 1rem;
+}
+
+.emotion-6 {
+  position: relative;
+  text-align: left;
+  padding: 0.25rem 0.5rem;
+  width: initial;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.emotion-7 {
+  font-weight: 500;
+  color: #444d5f;
+}
+
+.emotion-12 {
+  position: relative;
+  text-align: right;
+  padding: 0.25rem 0.5rem;
+  width: initial;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.emotion-16 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 0.0625rem solid #cfd7e5;
+}
+
+.emotion-16 td:first-of-type {
+  padding-left: 1rem;
+}
+
+.emotion-16 td:last-child {
+  padding-right: 1rem;
+}
+
+.emotion-17 {
+  position: relative;
+  text-align: left;
+  padding: 0.25rem 0.5rem;
+  width: initial;
+}
+
+.emotion-18 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-26 {
+  position: relative;
+  text-align: right;
+  padding: 0.25rem 0.5rem;
+  width: initial;
+}
+
+<div>
+  <table
+    class="emotion-0"
+  >
+    <thead>
+      <tr
+        class="emotion-1"
+      >
+        <td
+          class="emotion-2"
+          data-testid="ictinus_table_row_0_cell_1"
+        >
+          topLeftText
+        </td>
+        <td
+          class="emotion-3"
+          colspan="4"
+          data-testid="ictinus_table_row_0_cell_2"
+        >
+          <div>
+            <div>
+              top right section
+            </div>
+          </div>
+        </td>
+      </tr>
+    </thead>
+  </table>
+  <table
+    class="emotion-4"
+  >
+    <thead>
+      <tr
+        class="emotion-5"
+      >
+        <th
+          class="emotion-6"
+          data-testid="ictinus_title"
+        >
+          <div
+            class="emotion-7"
+          >
+            Title
+          </div>
+        </th>
+        <th
+          class="emotion-6"
+          data-testid="ictinus_name"
+        >
+          <div
+            class="emotion-7"
+          >
+            Name
+          </div>
+        </th>
+        <th
+          class="emotion-6"
+          data-testid="ictinus_surname"
+        >
+          <div
+            class="emotion-7"
+          >
+            Surname
+          </div>
+        </th>
+        <th
+          class="emotion-12"
+          data-testid="ictinus_age"
+        >
+          <div
+            class="emotion-7"
+          >
+            Age
+          </div>
+        </th>
+        <th
+          class="emotion-12"
+          data-testid="ictinus_sauron_age"
+        >
+          <div
+            class="emotion-7"
+          >
+            Sauron Age
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        class="emotion-16"
+      >
+        <td
+          class="emotion-17"
+          data-testid="ictinus_table_row_1_cell_1"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Title"
+            >
+              title
+            </span>
+          </div>
+        </td>
+        <td
+          class="emotion-17"
+          data-testid="ictinus_table_row_1_cell_2"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Name"
+            >
+              firstname
+            </span>
+          </div>
+        </td>
+        <td
+          class="emotion-17"
+          data-testid="ictinus_table_row_1_cell_3"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Surname"
+            >
+              lastname
+            </span>
+          </div>
+        </td>
+        <td
+          class="emotion-26"
+          data-testid="ictinus_table_row_1_cell_4"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Age"
+            >
+              42
+            </span>
+          </div>
+        </td>
+        <td
+          class="emotion-26"
+          data-testid="ictinus_table_row_1_cell_5"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Sauron Age"
+            >
+              4.2M
+            </span>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="emotion-16"
+      >
+        <td
+          class="emotion-17"
+          data-testid="ictinus_table_row_2_cell_1"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Title"
+            >
+              title
+            </span>
+          </div>
+        </td>
+        <td
+          class="emotion-17"
+          data-testid="ictinus_table_row_2_cell_2"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Name"
+            >
+              firstname
+            </span>
+          </div>
+        </td>
+        <td
+          class="emotion-17"
+          data-testid="ictinus_table_row_2_cell_3"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Surname"
+            >
+              lastname
+            </span>
+          </div>
+        </td>
+        <td
+          class="emotion-26"
+          data-testid="ictinus_table_row_2_cell_4"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Age"
+            >
+              42
+            </span>
+          </div>
+        </td>
+        <td
+          class="emotion-26"
+          data-testid="ictinus_table_row_2_cell_5"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Sauron Age"
+            >
+              4.2M
+            </span>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="emotion-16"
+      >
+        <td
+          class="emotion-17"
+          data-testid="ictinus_table_row_3_cell_1"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Title"
+            >
+              title
+            </span>
+          </div>
+        </td>
+        <td
+          class="emotion-17"
+          data-testid="ictinus_table_row_3_cell_2"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Name"
+            >
+              firstname
+            </span>
+          </div>
+        </td>
+        <td
+          class="emotion-17"
+          data-testid="ictinus_table_row_3_cell_3"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Surname"
+            >
+              lastname
+            </span>
+          </div>
+        </td>
+        <td
+          class="emotion-26"
+          data-testid="ictinus_table_row_3_cell_4"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Age"
+            >
+              42
+            </span>
+          </div>
+        </td>
+        <td
+          class="emotion-26"
+          data-testid="ictinus_table_row_3_cell_5"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Sauron Age"
+            >
+              4.2M
+            </span>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="emotion-16"
+      >
+        <td
+          class="emotion-17"
+          data-testid="ictinus_table_row_4_cell_1"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Title"
+            >
+              title
+            </span>
+          </div>
+        </td>
+        <td
+          class="emotion-17"
+          data-testid="ictinus_table_row_4_cell_2"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Name"
+            >
+              firstname
+            </span>
+          </div>
+        </td>
+        <td
+          class="emotion-17"
+          data-testid="ictinus_table_row_4_cell_3"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Surname"
+            >
+              lastname
+            </span>
+          </div>
+        </td>
+        <td
+          class="emotion-26"
+          data-testid="ictinus_table_row_4_cell_4"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Age"
+            >
+              42
+            </span>
+          </div>
+        </td>
+        <td
+          class="emotion-26"
+          data-testid="ictinus_table_row_4_cell_5"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Sauron Age"
+            >
+              4.2M
+            </span>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="emotion-16"
+      >
+        <td
+          class="emotion-17"
+          data-testid="ictinus_table_row_5_cell_1"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Title"
+            >
+              title
+            </span>
+          </div>
+        </td>
+        <td
+          class="emotion-17"
+          data-testid="ictinus_table_row_5_cell_2"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Name"
+            >
+              firstname
+            </span>
+          </div>
+        </td>
+        <td
+          class="emotion-17"
+          data-testid="ictinus_table_row_5_cell_3"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Surname"
+            >
+              lastname
+            </span>
+          </div>
+        </td>
+        <td
+          class="emotion-26"
+          data-testid="ictinus_table_row_5_cell_4"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Age"
+            >
+              42
+            </span>
+          </div>
+        </td>
+        <td
+          class="emotion-26"
+          data-testid="ictinus_table_row_5_cell_5"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Sauron Age"
+            >
+              4.2M
+            </span>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="emotion-16"
+      >
+        <td
+          class="emotion-17"
+          data-testid="ictinus_table_row_6_cell_1"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Title"
+            >
+              title
+            </span>
+          </div>
+        </td>
+        <td
+          class="emotion-17"
+          data-testid="ictinus_table_row_6_cell_2"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Name"
+            >
+              firstname
+            </span>
+          </div>
+        </td>
+        <td
+          class="emotion-17"
+          data-testid="ictinus_table_row_6_cell_3"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Surname"
+            >
+              lastname
+            </span>
+          </div>
+        </td>
+        <td
+          class="emotion-26"
+          data-testid="ictinus_table_row_6_cell_4"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Age"
+            >
+              42
+            </span>
+          </div>
+        </td>
+        <td
+          class="emotion-26"
+          data-testid="ictinus_table_row_6_cell_5"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Sauron Age"
+            >
+              4.2M
+            </span>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="emotion-16"
+      >
+        <td
+          class="emotion-17"
+          data-testid="ictinus_table_row_7_cell_1"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Title"
+            >
+              title
+            </span>
+          </div>
+        </td>
+        <td
+          class="emotion-17"
+          data-testid="ictinus_table_row_7_cell_2"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Name"
+            >
+              firstname
+            </span>
+          </div>
+        </td>
+        <td
+          class="emotion-17"
+          data-testid="ictinus_table_row_7_cell_3"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Surname"
+            >
+              lastname
+            </span>
+          </div>
+        </td>
+        <td
+          class="emotion-26"
+          data-testid="ictinus_table_row_7_cell_4"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Age"
+            >
+              42
+            </span>
+          </div>
+        </td>
+        <td
+          class="emotion-26"
+          data-testid="ictinus_table_row_7_cell_5"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Sauron Age"
+            >
+              4.2M
+            </span>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="emotion-16"
+      >
+        <td
+          class="emotion-17"
+          data-testid="ictinus_table_row_8_cell_1"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Title"
+            >
+              title
+            </span>
+          </div>
+        </td>
+        <td
+          class="emotion-17"
+          data-testid="ictinus_table_row_8_cell_2"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Name"
+            >
+              firstname
+            </span>
+          </div>
+        </td>
+        <td
+          class="emotion-17"
+          data-testid="ictinus_table_row_8_cell_3"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Surname"
+            >
+              lastname
+            </span>
+          </div>
+        </td>
+        <td
+          class="emotion-26"
+          data-testid="ictinus_table_row_8_cell_4"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Age"
+            >
+              42
+            </span>
+          </div>
+        </td>
+        <td
+          class="emotion-26"
+          data-testid="ictinus_table_row_8_cell_5"
+        >
+          <div
+            class="emotion-18 emotion-19"
+          >
+            <span
+              data-column="Sauron Age"
+            >
+              4.2M
+            </span>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

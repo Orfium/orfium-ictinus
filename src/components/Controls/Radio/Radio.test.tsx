@@ -1,20 +1,21 @@
 import React from 'react';
 
-import { render } from '../../../test';
+import { render } from 'test';
 
 import RadioGroup from './components/RadioGroup';
 import Radio from './Radio';
 import userEvent from '@testing-library/user-event';
+import { Mock } from 'vitest';
 
 describe('Radio', () => {
-  let mockOnClick: jest.Mock<any, any>;
+  let mockOnClick: Mock<any, any>;
 
   beforeEach(() => {
-    mockOnClick = jest.fn();
+    mockOnClick = vi.fn();
   });
 
   afterEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   it('it renders the RadioGroup and Radios correctly', () => {
@@ -27,7 +28,7 @@ describe('Radio', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should change to checked on click', () => {
+  it('should change to checked on click', async () => {
     const { container } = render(
       <RadioGroup onChange={mockOnClick}>
         <Radio value="Test Option">Test Option</Radio>
@@ -36,7 +37,7 @@ describe('Radio', () => {
 
     const radio = container.querySelector('input[type="radio"]') as HTMLInputElement;
 
-    userEvent.click(radio);
+    await userEvent.click(radio);
 
     expect(mockOnClick).toHaveBeenCalledTimes(1);
     expect(radio.checked).toBeTruthy();

@@ -5,6 +5,15 @@
     background: #f0f3ff !important;
   }
 
+  .css-qa4clq :where(h3:not(.sb-anchor, .sb-unstyled, .sb-unstyled h3)):first-of-type {
+      margin-top: revert !important;
+      padding: inherit;
+  }
+  .css-qa4clq :where(h2:not(.sb-anchor, .sb-unstyled, .sb-unstyled h2))
+  {
+    border: none !important;
+  }
+  .csbdocs-content :where(p:not(.sb-anchor, .sb-unstyled, .sb-unstyled p)) code,
   .sbdocs-content code {
     background: #e7eefe;
     color: #1552dd;
@@ -13,15 +22,16 @@
   ul.sbdocs.sbdocs-ul {
     margin: 24px 0;
   }
-  .sbdocs.sbdocs-li:not(:last-child) {
+  .sbdocs > ul > li:not(:last-child) {
     margin-bottom: 8px;
   }
 
-  .sbdocs.sbdocs-li,
-  .sbdocs.sbdocs-li a {
+  .sbdocs > ul > li,
+  .sbdocs > ul > li a {
     color: #1552dd;
     font-size: 18px;
     font-weight: 500;
+    text-decoration: none;
   }
 
   table.sbdocs.sbdocs-table {
@@ -44,13 +54,17 @@
     background: #f4f8ff;
     padding: 1rem 10px;
   }
+  .sbdocs.sbdocs-preview {
+    background: transparent;
+  }
 
   .docblock-argstable {
     margin-top: 0 !important;
   }
 
   /* API props styling */
-  tbody.docblock-argstable-body td > div > div span {
+  tbody.docblock-argstable-body td > div > div span,
+  tbody.docblock-argstable-body tr td:nth-of-type(2) > div:last-of-type span {
     background: #e7eefe;
     color: #1552dd;
   }

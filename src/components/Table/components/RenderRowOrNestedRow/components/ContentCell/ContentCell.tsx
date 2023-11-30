@@ -3,7 +3,7 @@ import { isComponentFunctionType } from 'utils/helpers';
 
 import { nestedHeaderStyle } from './ContentCell.style';
 import TruncatedContent from '../../../../../TruncatedContent';
-import { ContentComponent, TableType } from '../../../../Table';
+import type { ContentComponent, TableType } from '../../../../Table';
 import TableCell from '../../../TableCell';
 
 type ContentCellProps = {
@@ -57,7 +57,7 @@ const ContentCell: React.FCC<ContentCellProps> = ({
         </div>
       )}
 
-      <TruncatedContent placement={'bottom'} tooltipContent={tooltipContent}>
+      <TruncatedContent placement="bottom" tooltipContent={tooltipContent}>
         {isComponentFunctionType(content) ? (
           content({ content, colSpan })
         ) : (

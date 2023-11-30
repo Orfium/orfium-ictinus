@@ -1,3 +1,4 @@
+import { Unstyled } from '@storybook/blocks';
 import React, { useMemo } from 'react';
 
 import { iconStyle, WrapperStyle } from './UsageGuidelines.style';
@@ -32,8 +33,10 @@ export const UsageGuidelines: React.FCC<{ guidelines: string[]; policies?: strin
 
   return (
     <article>
-      {guidelinesElements}
-      {policiesElements}
+      <Unstyled>
+        {guidelinesElements}
+        {policiesElements}
+      </Unstyled>
     </article>
   );
 };

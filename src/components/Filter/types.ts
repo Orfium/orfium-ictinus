@@ -1,8 +1,8 @@
-import * as React from 'react';
+import type * as React from 'react';
 
-import { Theme } from '../../theme';
-import { ColorShapeFromComponent } from '../../utils/themeFunctions';
-import { SelectOption } from '../Select';
+import type { Theme } from '../../theme';
+import type { ColorShapeFromComponent } from '../../utils/themeFunctions';
+import type { SelectOption } from '../Select';
 
 export type FilterOption = SelectOption;
 

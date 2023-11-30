@@ -1,0 +1,79 @@
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-1 {
+  -webkit-transition: stroke-dashoffset 0.5s;
+  transition: stroke-dashoffset 0.5s;
+}
+
+.emotion-2 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  color: #1B214F;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        style="display: flex; gap: 32px; align-items: center;"
+      >
+        <div
+          aria-valuemax="100"
+          aria-valuemin="0"
+          class="react-aria-ProgressBar"
+          data-rac=""
+          id="react-aria-:r9i:"
+          role="progressbar"
+        >
+          <svg
+            data-testid="undefined_circular_progress_container"
+            fill="none"
+            height="1rem"
+            stroke-width="1.5"
+            viewBox="0 0 32 32"
+            width="1rem"
+          >
+            <circle
+              class="emotion-1"
+              cx="16"
+              cy="16"
+              data-testid="undefined_circular_progress_value"
+              r="14"
+              stroke="#175bf5"
+              stroke-dasharray="91.106186954104 91.106186954104"
+              stroke-dashoffset="91.106186954104"
+              stroke-linecap="round"
+              transform="rotate(-90 16 16)"
+            />
+          </svg>
+        </div>
+        <p
+          class="emotion-2"
+        >
+          Loading: 
+          0
+          %
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,6 +1,7 @@
-import { INTERACTIVE, ChipProps, READ_ONLY, styleType } from './Chip.types';
+import type { ChipProps, styleType } from './Chip.types';
+import { INTERACTIVE, READ_ONLY } from './Chip.types';
 import { PropsValidationError } from '../../utils/errors';
-import { TestProps } from '../../utils/types';
+import type { TestProps } from '../../utils/types';
 
 export const defaultProps = {
   isDisabled: false,

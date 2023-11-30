@@ -1,0 +1,35 @@
+import { Meta, Canvas, ArgTypes, Story } from '@storybook/blocks';
+import TruncatedContent from './TruncatedContent';
+import Table from '../Table';
+import * as TruncatedContentStories from './TruncatedContent.stories';
+
+<Meta of={TruncatedContentStories} />
+
+# Truncated Text with Tooltip
+
+A generic component that wraps around an element with a maximum width value and shows ellipsis if the text inside would
+overflow. In that case, a tooltip is shown as well.
+
+## Usage
+
+```js
+import { TruncatedContent } from '@orfium/ictinus';
+
+<TruncatedContent tooltipContent="Tooltip text" placement="left" />;
+```
+
+## Props
+
+<ArgTypes of={TruncatedContent} />
+
+# Text Truncation
+
+Regular Text with truncation and tooltip
+
+<Canvas of={TruncatedContentStories.RegularTextWithTruncationAndTooltip} />
+
+# Table With Cell Tooltips
+
+Regular Table with cell tooltips
+
+<Canvas of={TruncatedContentStories.RegularTableWithCellTooltips} />

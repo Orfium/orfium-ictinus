@@ -1,8 +1,10 @@
-import { css, SerializedStyles } from '@emotion/react';
-import { Theme } from 'theme';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
+import type { Theme } from 'theme';
 
-import { getLinkTokens, LinkTokens } from './Link.tokens';
-import { LinkProps } from './Link.types';
+import type { LinkTokens } from './Link.tokens';
+import { getLinkTokens } from './Link.tokens';
+import type { LinkProps } from './Link.types';
 import { generateStylesFromTokens } from 'components/Typography/utils';
 
 export const linkContainer =

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import Filter from 'components/Filter';
-import { FilterOption } from 'components/Filter/types';
+import type { FilterOption } from 'components/Filter/types';
 
 export const dummyUnrefinedData = new Array(15).fill(undefined).map((value, index) => ({
   value: index,
@@ -50,8 +50,8 @@ export const AsyncFilterShowcase: React.FCC<AsyncFilterShowcaseProps> = ({
       defaultValue={defaultValue}
       onAsyncSearch={handleAsyncSearch}
       onSelect={handleSelectItem}
-      styleType={'filled'}
-      label={'Async Label'}
+      styleType="filled"
+      label="Async Label"
     />
   );
 };
