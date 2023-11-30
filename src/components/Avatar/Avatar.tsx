@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 
-import UserAvatar from './assets/user-avatar.svg';
+import UserAvatar from './assets/user-avatar.svg?react';
 import { avatarStyle, iconStyles } from './Avatar.style';
 import type { AvatarProps } from './Avatar.types';
 

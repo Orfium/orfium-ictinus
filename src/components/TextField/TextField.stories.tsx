@@ -75,7 +75,7 @@ export const TextFieldWithIcon = {
   render: () => (
     <Stack>
       <TextField label={'TextField'} suffix={'search'} />
-      <TextField label={'TextField'} suffix={'calendarEmpty'} />
+      <TextField label={'TextField'} suffix={'calendar'} />
     </Stack>
   ),
   name: 'TextField with icon',
