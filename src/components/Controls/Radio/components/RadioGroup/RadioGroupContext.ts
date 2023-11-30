@@ -1,5 +1,5 @@
 import React from 'react';
-import { RadioGroupState } from 'react-stately';
+import type { RadioGroupState } from 'react-stately';
 
 export const RadioContext = React.createContext<RadioGroupState | null>(null);
 
