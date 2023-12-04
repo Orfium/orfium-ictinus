@@ -1,43 +1,36 @@
-import { Meta, Canvas, ArgTypes, Story } from '@storybook/blocks';
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
 import Icon from './Icon';
-import Stack from '../storyUtils/Stack';
-import PresentComponent from '../storyUtils/PresentComponent';
-import iconSelector from './assets/iconSelector';
-import { FIGMA_URL } from '../../utils/common';
 import * as IconStories from './Icon.stories';
 
 <Meta of={IconStories} />
 
-# Icon
+<SectionHeader title={'Icon'} />
 
-A universal Icon component to select and style the icons encapsulated in the design system.
+- [Overview](#overview)
+- [Props](#props)
+- [Collection](#collection)
+- [Variants](#variants)
 
-## Usage
+## Overview
 
-```js
-import { Icon } from '@orfium/ictinus';
-
-<Icon name={'add'} color={'primary'} size={14} />;
-```
+A component that includes a collection of icons that can be either decorative or interactive.
 
 ## Props
 
 <ArgTypes of={Icon} />
 
-### Icons Gallery
+## Collection
 
-All the icons available for use.
+<Canvas of={IconStories.Collection} />
 
-<Canvas of={IconStories.IconsGallery} />
+<SubsectionHeader title="Variants" />
 
-### Icon with color
+### Interactive Icon
 
-Icon with color.
+To make the icon interactive, provide the `onClick` prop. The `hasHover` prop defaults to `true` if the `onClick` prop is provided.
 
-<Canvas of={IconStories.IconWithColor} />
+<Canvas of={IconStories.InteractiveIcon} />
 
-### Icon with size
+### Playground
 
-Icon with size.
-
-<Canvas of={IconStories.IconWithSize} />
+<Canvas of={IconStories.Playground} />
