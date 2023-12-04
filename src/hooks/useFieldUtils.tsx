@@ -5,6 +5,7 @@ import useTheme from './useTheme';
 import type { AcceptedIconNames } from 'components/Icon';
 import Icon from 'components/Icon';
 import type { TextFieldProps } from 'components/TextField';
+import type { TextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
 import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
 
 /** A custom hook containing all the utils that are shared between field components */
@@ -33,14 +34,14 @@ const useFieldUtils = ({
       return (
         <Icon
           name={iconName as AcceptedIconNames}
-          size={size === 'normal' ? 16 : 12}
-          color={theme.utils.getColor('lightGrey', 650)}
+          size={tokens(`addOn.iconSize.${size}` as TextInputBaseTokens)}
+          color={tokens('addOn.iconColor')}
         />
       );
     }
 
     return suffix;
-  }, [isDisabled, isLocked, size, suffix, theme.utils]);
+  }, [isDisabled, isLocked, size, suffix, tokens]);
 
   const handleContainerClick = () => {
     if (!isLocked && !isDisabled) {

@@ -1,4 +1,5 @@
-import type { ForwardedRef} from 'react';
+import useTheme from 'hooks/useTheme';
+import type { ForwardedRef } from 'react';
 import React, { Fragment } from 'react';
 import { errorHandler, generateTestDataId, generateUniqueID } from 'utils/helpers';
 
@@ -33,9 +34,13 @@ const Chip = React.forwardRef<HTMLButtonElement | HTMLDivElement, ChipProps>(
 
     errorHandler<ChipProps>(errors, { styleType, isSelected, isChecked, badgeNumber, isDisabled });
 
+    const theme = useTheme();
+
     const contents = (
       <Fragment>
-        {isChecked && <Icon size={14} name="checkmark" color="darkGrey" variant={850} />}
+        {isChecked && (
+          <Icon size={14} name="check" color={theme.globals.oldColors.flat.darkGrey[850]} />
+        )}
         {thumbnail && (
           <div css={avatarStyle()}>
             <Avatar color="blue" src={thumbnail.src} dataTestPrefixId="chip">
@@ -57,14 +62,14 @@ const Chip = React.forwardRef<HTMLButtonElement | HTMLDivElement, ChipProps>(
             <Icon
               size={14}
               name="close"
-              color="darkGrey"
-              variant={850}
+              color={theme.globals.oldColors.flat.darkGrey[850]}
               onClick={(e) => {
                 e.stopPropagation();
                 if (!isDisabled) {
                   onClear();
                 }
               }}
+              hasHover={false}
               dataTestId={generateTestDataId('chip-delete', dataTestId)}
             />
           </div>

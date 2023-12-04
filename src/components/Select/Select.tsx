@@ -19,6 +19,10 @@ import ClickAwayListener from '../utils/ClickAwayListener';
 import handleSearch from '../utils/handleSearch';
 import MultiTextFieldBase from 'components/MultiTextFieldBase/MultiTextFieldBase';
 import ProgressIndicator from 'components/ProgressIndicator';
+import {
+  getTextInputBaseTokens,
+  type TextInputBaseTokens,
+} from 'components/TextInputBase/TextInputBase.tokens';
 import PositionInScreen from 'components/utils/PositionInScreen';
 
 export const emptyValue: SelectOption = { label: '', value: '' };
@@ -117,6 +121,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
   });
 
   const theme = useTheme();
+  const tokens = getTextInputBaseTokens(theme);
   const [isOpen, setIsOpen] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const combinedRefs = useCombinedRefs(inputRef, ref);
@@ -270,21 +275,22 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
     () => (
       <div css={suffixContainer(isOpen, isSearchable)}>
         {isLoading ? (
-          <Box py={'2'} display={'flex'} alignItems={'center'}>
+          <Box py="2" display="flex" alignItems="center">
             <ProgressIndicator type="circular" dataTestPrefixId="select" />
           </Box>
         ) : (
           <Icon
-            size={size === 'normal' ? 16 : 12}
+            size={tokens(`addOn.iconSize.${size}` as TextInputBaseTokens)}
             name={suffixNameSelector}
-            color={theme.utils.getColor('lightGrey', 650)}
+            color={tokens('addOn.iconColor')}
             onClick={handleIconClick}
+            hasHover={false}
             dataTestId="select-right-icon"
           />
         )}
       </div>
     ),
-    [isOpen, isSearchable, isLoading, size, suffixNameSelector, theme.utils, handleIconClick]
+    [isOpen, isSearchable, isLoading, tokens, size, suffixNameSelector, handleIconClick]
   );
 
   const handleClick = () => {

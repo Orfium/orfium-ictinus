@@ -13,7 +13,6 @@ import {
   inputOverrides,
   progressIndicatorStyles,
   rightIconsContainer,
-  rightIconStyles,
   textInputBaseOverrides,
 } from './MultiTextFieldBase.style';
 import Chip from 'components/Chip';
@@ -177,9 +176,7 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
                   <ProgressIndicator type="circular" dataTestPrefixId="multi_textdield_base" />
                 </div>
               ) : (
-                icon && (
-                  <div css={rightIconStyles({ isClickable: hasValue && !isLocked })}>{icon}</div>
-                )
+                icon
               )}
             </div>
           )}
