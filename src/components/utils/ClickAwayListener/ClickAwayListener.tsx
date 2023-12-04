@@ -5,7 +5,7 @@ import { ReactFCC } from 'utils/types';
 const useClickAwayListener = (
   ref: MutableRefObject<HTMLElement | null>,
   onClick: (event: MouseEvent) => void,
-  useCapture = false
+  useCapture = true
 ) => {
   const handleClickOutside = useCallback(
     (event: MouseEvent) => {
