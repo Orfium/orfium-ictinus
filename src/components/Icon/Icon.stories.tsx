@@ -1,4 +1,4 @@
-import { number, text } from '@storybook/addon-knobs';
+import { number, text, withKnobs } from '@storybook/addon-knobs';
 import Icon from './Icon';
 import IconographyShowcase from '../storyUtils/IconographyShowcase';
 import { FIGMA_URL } from '../../utils/common';
@@ -39,6 +39,8 @@ export const Playground = {
       color={text('color', undefined)}
     />
   ),
-
+  parameters: {
+    decorators: [withKnobs],
+  },
   name: 'Playground',
 };

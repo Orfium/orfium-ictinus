@@ -18,7 +18,7 @@ import IconButton from 'components/IconButton';
 import type { ListSelection } from 'components/List';
 import List, { ListItem, ListItemText } from 'components/List';
 import ClickAwayListener from 'components/utils/ClickAwayListener';
-import type { MenuPositionAllowed} from 'components/utils/DropdownOptions';
+import type { MenuPositionAllowed } from 'components/utils/DropdownOptions';
 import { optionsStyle } from 'components/utils/DropdownOptions';
 
 export type DropdownButtonProps = TestProps & {
@@ -93,7 +93,7 @@ const DropdownButton = React.forwardRef<HTMLButtonElement, DropdownButtonProps>(
             <IconButton
               type={type}
               size={size}
-              name="dotsVertical"
+              name="moreOptions"
               onClick={handleIconButtonClick}
               dataTestPrefixId={generateTestDataId('icon-dropdown', dataTestPrefixId)}
             />

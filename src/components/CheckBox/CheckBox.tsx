@@ -97,7 +97,7 @@ export const CheckBox = React.forwardRef<HTMLSpanElement, CheckboxProps>((props,
         />
         <label htmlFor={`styled-checkbox-${id}`} css={markerStyle({ isChecked: isCheckedState })}>
           <Icon
-            name={isIntermediate ? 'minus' : 'checkmark'}
+            name={isIntermediate ? 'minus' : 'check'}
             size={24}
             color={theme.utils.getAAColorFromSwatches(color, shade)}
           />

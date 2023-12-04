@@ -30,6 +30,9 @@ const SearchField = React.forwardRef<HTMLInputElement, SearchFieldProps>((props,
       borderRadius: rem(100),
       height: tokens('container.normal'),
     },
+    textField: {
+      padding: `0 ${tokens('paddingContentLeft')}`,
+    },
   };
 
   return (
@@ -51,19 +54,16 @@ const SearchField = React.forwardRef<HTMLInputElement, SearchFieldProps>((props,
         </div>
 
         {isClearVisible && !isDisabled && (
-          <IconWrapper
+          <Icon
+            name="close"
+            size={20}
+            color={theme.utils.getColor('lightGrey', 650)}
             onClick={() => {
               onClear();
             }}
-            iconPosition="right"
-          >
-            <Icon
-              name="close"
-              size={20}
-              color={theme.utils.getColor('lightGrey', 650)}
-              dataTestId="search-clear"
-            />
-          </IconWrapper>
+            hasHover={false}
+            dataTestId="search-clear"
+          />
         )}
       </TextInputBase>
     </React.Fragment>

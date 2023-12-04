@@ -4,7 +4,11 @@ import { cardContainer, topContainer, infoContainer, descriptionContainer } from
 import useTheme from '../../../hooks/useTheme';
 import { generateTestDataId } from '../../../utils/helpers';
 import type { TestId } from '../../../utils/types';
-import type { NotificationActions, NotificationStyleType, NotificationTypes } from '../Notification';
+import type {
+  NotificationActions,
+  NotificationStyleType,
+  NotificationTypes,
+} from '../Notification';
 import { actionContainer, iconContainer, boldMessageContainer } from '../Notification.style';
 import { typeToIconName } from '../subcomponents/CompactNotification/CompactNotification';
 import NotificationActionsArea from '../subcomponents/NotificationActionsArea';
@@ -37,9 +41,9 @@ const Snackbar: React.FCC<SnackbarProps> = ({
   closeCTA,
   dataTestId,
 }) => {
-  const { utils } = useTheme();
-
   const hasActions = (primaryCTA && primaryCTALabel) || (secondaryCTA && secondaryCTALabel);
+
+  const theme = useTheme();
 
   return (
     // @TODO remove the below or change to data-
@@ -48,7 +52,11 @@ const Snackbar: React.FCC<SnackbarProps> = ({
       <div css={topContainer()}>
         <div css={infoContainer()}>
           <div css={iconContainer()}>
-            <Icon name={typeToIconName(type)} color={type} size={20} />
+            <Icon
+              name={typeToIconName(type)}
+              color={theme.globals.oldColors[type][500]}
+              size={20}
+            />
           </div>
           <div css={boldMessageContainer()}>{message}</div>
         </div>
@@ -57,7 +65,7 @@ const Snackbar: React.FCC<SnackbarProps> = ({
           onClick={closeCTA}
           data-testid={generateTestDataId('snackbar-close', dataTestId)}
         >
-          <Icon name="close" color={utils.getColor('lightGrey', 650)} size={20} />
+          <Icon name="close" color={theme.utils.getColor('lightGrey', 650)} size={20} />
         </span>
       </div>
       <div

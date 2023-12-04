@@ -1,7 +1,7 @@
 import type { Location, LocationState } from 'history';
 import type { match } from 'react-router';
 
-import type { AcceptedIconNames } from 'components/Icon/types';
+import type { AcceptedIconNames } from 'components/Icon';
 
 export type DrawerMenuItem = {
   name: string;

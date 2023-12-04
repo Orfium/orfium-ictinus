@@ -27,14 +27,14 @@ export const linkContainer =
       &:hover {
         color: ${tokens(`textColor.${type}.hover` as LinkTokens)};
         path {
-          fill: ${tokens(`textColor.${type}.hover` as LinkTokens)};
+          fill: ${tokens(`textColor.${type}.hover` as LinkTokens)} !important;
         }
       }
 
       &:visited {
         color: ${tokens(`textColor.${type}.visited` as LinkTokens)};
         path {
-          fill: ${tokens(`textColor.${type}.visited` as LinkTokens)};
+          fill: ${tokens(`textColor.${type}.visited` as LinkTokens)} !important;
         }
       }
 
