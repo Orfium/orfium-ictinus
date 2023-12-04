@@ -1,0 +1,54 @@
+.emotion-0 {
+  width: 0.75rem;
+  height: 0.75rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.emotion-0:hover,
+.emotion-0:focus-visible {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border-radius: 100%;
+  background: rgba(84,94,255,0.06);
+  box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
+}
+
+.emotion-1 {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-1 path {
+  fill: #686BB3!important;
+}
+
+<div>
+  <div
+    class="emotion-0"
+    tabindex="0"
+  >
+    <svg
+      class="emotion-1"
+      fill="none"
+      viewBox="0 0 20 20"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+        fill="#6265AD"
+      />
+      <path
+        d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+        fill="#6265AD"
+      />
+      <path
+        d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+        fill="#6265AD"
+      />
+    </svg>
+  </div>
+</div>

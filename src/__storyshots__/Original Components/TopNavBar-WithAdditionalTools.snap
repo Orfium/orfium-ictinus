@@ -70,29 +70,21 @@
 }
 
 .emotion-3 {
-  padding: 0.125rem;
+  width: 1.5rem;
+  height: 1.5rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
 .emotion-4 {
-  fill: #e7eefe;
   width: 1.5rem;
   height: 1.5rem;
 }
 
-.emotion-4 * {
-  fill: #e7eefe;
+.emotion-4 path {
+  fill: #175bf5!important;
 }
 
 .emotion-5 {
@@ -399,6 +391,18 @@
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #1552DD;
   height: auto;
   background-color: rgba(84,94,255,0);
@@ -493,14 +497,22 @@
   font-weight: 500;
 }
 
-.emotion-31 {
-  fill: #1552DD;
-  width: 1rem;
-  height: 1rem;
+.emotion-30 {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.emotion-31 * {
-  fill: #1552DD;
+.emotion-31 {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-31 path {
+  fill: #1552DD!important;
 }
 
 <div>
@@ -519,32 +531,21 @@
           class="emotion-2"
           data-testid="menu-handler"
         >
-          <span
+          <div
             class="emotion-3"
           >
             <svg
               class="emotion-4"
-              viewBox="0 0 24 24"
+              fill="none"
+              viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
             >
-              <g
-                fill="none"
-                fill-rule="evenodd"
-                id="\\uD83D\\uDD36-Symbols"
-                stroke="none"
-                stroke-width="1"
-              >
-                <g
-                  id="Menu"
-                >
-                  <path
-                    d="M21,16 L21,18 L3,18 L3,16 L21,16 Z M21,11 L21,13 L3,13 L3,11 L21,11 Z M21,6 L21,8 L3,8 L3,6 L21,6 Z"
-                  />
-                </g>
-              </g>
+              <path
+                d="M2.93223 16C2.67568 16 2.45617 15.8979 2.27371 15.6937C2.09124 15.4895 2 15.2439 2 14.9568C2 14.6697 2.09124 14.4241 2.27371 14.2202C2.45617 14.0162 2.67568 13.9142 2.93223 13.9142H17.0678C17.3243 13.9142 17.5438 14.0163 17.7263 14.2205C17.9088 14.4247 18 14.6703 18 14.9574C18 15.2445 17.9088 15.49 17.7263 15.694C17.5438 15.898 17.3243 16 17.0678 16H2.93223ZM2.93223 11.0186C2.67568 11.0186 2.45617 10.9165 2.27371 10.7124C2.09124 10.5082 2 10.2625 2 9.97543C2 9.68833 2.09124 9.44279 2.27371 9.23882C2.45617 9.03484 2.67568 8.93286 2.93223 8.93286H17.0678C17.3243 8.93286 17.5438 9.03495 17.7263 9.23913C17.9088 9.44333 18 9.68898 18 9.97606C18 10.2632 17.9088 10.5087 17.7263 10.7127C17.5438 10.9166 17.3243 11.0186 17.0678 11.0186H2.93223ZM2.93223 6.0858C2.67568 6.0858 2.45617 5.9837 2.27371 5.7795C2.09124 5.57532 2 5.32967 2 5.04257C2 4.75549 2.09124 4.50996 2.27371 4.30599C2.45617 4.10199 2.67568 4 2.93223 4H17.0678C17.3243 4 17.5438 4.1021 17.7263 4.3063C17.9088 4.5105 18 4.75614 18 5.04323C18 5.33033 17.9088 5.57587 17.7263 5.77984C17.5438 5.98381 17.3243 6.0858 17.0678 6.0858H2.93223Z"
+                fill="#6265AD"
+              />
             </svg>
-          </span>
+          </div>
         </div>
         <div
           class="emotion-5"
@@ -685,33 +686,21 @@
                         </span>
                       </span>
                     </span>
-                    <span
-                      class="emotion-3"
+                    <div
+                      class="emotion-30"
                     >
                       <svg
                         class="emotion-31"
-                        viewBox="0 0 24 24"
+                        fill="none"
+                        viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink"
                       >
-                        <g
-                          fill="none"
-                          fill-rule="evenodd"
-                          id="\\uD83D\\uDD36-Symbols"
-                          stroke="none"
-                          stroke-width="1"
-                        >
-                          <g
-                            id="Chevron_Large_Down"
-                          >
-                            <path
-                              d="M15.1900068,4.62555888 L16.6042204,6.03977245 L10.2398322,12.4035589 L16.6042204,18.7678394 L15.1900068,20.182053 L7.41183221,12.4038784 L15.1900068,4.62555888 Z"
-                              transform="translate(12.008026, 12.403806) scale(-1, 1) rotate(-90.000000) translate(-12.008026, -12.403806)"
-                            />
-                          </g>
-                        </g>
+                        <path
+                          d="M5.29797 8.64196L9.25345 12.6836C9.36392 12.7965 9.48388 12.8774 9.61333 12.9265C9.74278 12.9755 9.87167 13 10 13C10.1339 13 10.2642 12.9755 10.3908 12.9265C10.5175 12.8774 10.6361 12.7965 10.7466 12.6836L14.702 8.64196C14.9007 8.439 15 8.21608 15 7.97322C15 7.73035 14.9007 7.50744 14.702 7.30448C14.5034 7.1015 14.2852 7.00002 14.0475 7.00002C13.8099 7.00002 13.5917 7.1015 13.3931 7.30448L10 10.7714L6.60694 7.30448C6.40831 7.1015 6.19014 7.00002 5.95246 7.00002C5.71477 7.00002 5.49661 7.1015 5.29797 7.30448C5.09932 7.50744 5 7.73035 5 7.97322C5 8.21608 5.09932 8.439 5.29797 8.64196Z"
+                          fill="#6265AD"
+                        />
                       </svg>
-                    </span>
+                    </div>
                   </span>
                 </button>
               </div>
