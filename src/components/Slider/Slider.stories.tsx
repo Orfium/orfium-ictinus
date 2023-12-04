@@ -1,7 +1,5 @@
 import Slider from './Slider';
-import Stack from '../storyUtils/Stack';
-import SwitchShowcase from '../storyUtils/SwitchShowcase';
-import { boolean, select, withKnobs, text } from '@storybook/addon-knobs';
+import { boolean, withKnobs } from '@storybook/addon-knobs';
 import SliderShowcase from '../storyUtils/SliderShowcase/SliderShowcase';
 
 export default {
