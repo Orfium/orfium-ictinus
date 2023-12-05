@@ -1,0 +1,81 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
+import Radio from './Radio';
+import * as RadioStories from './Radio.stories';
+import RadioGroup from './components/RadioGroup';
+
+<Meta of={RadioStories} />
+
+<SectionHeader title={'Radio'} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
+
+## Overview
+
+A components that allows the user to select a single option from a group.
+
+<SubsectionHeader title="Props" />
+
+### Radio
+
+<ArgTypes of={Radio} />
+
+### RadioGroup
+
+<ArgTypes of={RadioGroup} />
+
+## Usage
+
+<UsageGuidelines
+  guidelines={[
+    'Use radio buttons in cases where the user must select a single option out of a group to proceed.',
+  ]}
+  policies={[
+    'If you need to be able to make more than one choices, use a checkbox instead.',
+    'If you need to initiate an immediate state change (e.g. toggle light theme), use a switch instead.',
+    'If you need to initiate an action, use a button instead.',
+  ]}
+/>
+
+<SubsectionHeader title="Variants" />
+
+### RadioGroup
+
+In order to create a group or radio buttons, use the `RadioGroup` wrapper component.
+
+<Tip>To style the RadioGroup container based on your usage case's needs, use the sx prop</Tip>
+
+<Canvas of={RadioStories.RadioGroupStory} />
+
+### Radio label placement
+
+Label can be placed either `left` or `right` of the radio button.
+
+<Tip>
+  The labelConfig prop of each Radio includes an sx prop in order to add custom styles on the
+  container that wraps the radio input and the label
+</Tip>
+
+<Canvas of={RadioStories.RadioLabelPlacement} />
+
+### Radio label sizes
+
+Label can be either a string or a custom component. In the case of the string, there are 2 sizes (declared inside the labelConfig), `normal` and `large`
+
+<Canvas of={RadioStories.RadioLabelSizes} />
+
+### Radio with helptext
+
+Radio can include a helptext under the label.
+
+<Canvas of={RadioStories.RadioWithHelptext} />
+
+### Disabled Radio
+
+<Canvas of={RadioStories.DisabledRadio} />
+
+### Playground
+
+<Canvas of={RadioStories.Playground} />

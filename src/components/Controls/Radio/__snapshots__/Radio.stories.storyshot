@@ -1,0 +1,2659 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Updated Components/Controls/Radio Disabled Radio 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.emotion-4 label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.emotion-4 label:before {
+  content: '';
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  box-sizing: border-box;
+  border: 0.125rem solid #b9cdfc;
+  border-radius: 6.25rem;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  background: rgba(84,94,255,0);
+}
+
+.emotion-4 label:hover::before {
+  background: rgba(84,94,255,0.06);
+  box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
+}
+
+.emotion-4 label[data-selected='true']:before {
+  border-color: #175bf5;
+  border-radius: 50%;
+}
+
+.emotion-4 label[data-selected='true']:hover::before {
+  background: none;
+  box-shadow: none;
+}
+
+.emotion-4 label[data-selected='true']:after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  width: 0.75rem;
+  height: 0.75rem;
+  background: #175bf5;
+  left: 4px;
+  -webkit-animation: circle 0.15s ease-in-out;
+  animation: circle 0.15s ease-in-out;
+}
+
+.emotion-4 label[data-disabled='true'] {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-4 label[data-disabled='true']:hover::before {
+  background: none;
+  box-shadow: none;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.emotion-6 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #1B214F;
+}
+
+.emotion-10 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  color: #686BB3;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          aria-orientation="vertical"
+          className="emotion-3"
+          data-testid="undefined_radio_group_container"
+          id="react-aria-generated-id"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          role="radiogroup"
+        >
+          <div
+            className="emotion-4"
+            data-testid="undefined_radio_option_1_container"
+          >
+            <label
+              data-disabled={true}
+              data-selected={false}
+            >
+              <div
+                onBlur={null}
+                onFocus={null}
+                style={
+                  Object {
+                    "border": 0,
+                    "clip": "rect(0 0 0 0)",
+                    "clipPath": "inset(50%)",
+                    "height": "1px",
+                    "margin": "-1px",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "position": "absolute",
+                    "whiteSpace": "nowrap",
+                    "width": "1px",
+                  }
+                }
+              >
+                <input
+                  checked={false}
+                  disabled={true}
+                  name="react-aria-generated-id"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onDragStart={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchCancel={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  tabIndex={0}
+                  type="radio"
+                  value="option 1"
+                />
+              </div>
+              <div
+                className="emotion-5"
+              >
+                <div
+                  className="emotion-6"
+                  data-testid="undefined_radio_option_1_label"
+                >
+                  Option 1
+                </div>
+              </div>
+            </label>
+          </div>
+          <div
+            className="emotion-4"
+            data-testid="undefined_radio_option_2_container"
+          >
+            <label
+              data-disabled={true}
+              data-selected={false}
+            >
+              <div
+                onBlur={null}
+                onFocus={null}
+                style={
+                  Object {
+                    "border": 0,
+                    "clip": "rect(0 0 0 0)",
+                    "clipPath": "inset(50%)",
+                    "height": "1px",
+                    "margin": "-1px",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "position": "absolute",
+                    "whiteSpace": "nowrap",
+                    "width": "1px",
+                  }
+                }
+              >
+                <input
+                  checked={false}
+                  disabled={true}
+                  name="react-aria-generated-id"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onDragStart={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchCancel={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  tabIndex={0}
+                  type="radio"
+                  value="option 2"
+                />
+              </div>
+              <div
+                className="emotion-5"
+              >
+                <div
+                  className="emotion-6"
+                  data-testid="undefined_radio_option_2_label"
+                >
+                  Option 2
+                </div>
+                <div
+                  className="emotion-10"
+                  data-testid="undefined_radio_option_2_helpText"
+                >
+                  This option is disabled
+                </div>
+              </div>
+            </label>
+          </div>
+          <div
+            className="emotion-4"
+            data-testid="undefined_radio_option_3_container"
+          >
+            <label
+              data-disabled={true}
+              data-selected={false}
+            >
+              <div
+                onBlur={null}
+                onFocus={null}
+                style={
+                  Object {
+                    "border": 0,
+                    "clip": "rect(0 0 0 0)",
+                    "clipPath": "inset(50%)",
+                    "height": "1px",
+                    "margin": "-1px",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "position": "absolute",
+                    "whiteSpace": "nowrap",
+                    "width": "1px",
+                  }
+                }
+              >
+                <input
+                  checked={false}
+                  disabled={true}
+                  name="react-aria-generated-id"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onDragStart={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchCancel={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  tabIndex={0}
+                  type="radio"
+                  value="option 3"
+                />
+              </div>
+              <div
+                className="emotion-5"
+              >
+                <div
+                  className="emotion-6"
+                  data-testid="undefined_radio_option_3_label"
+                >
+                  Option 3
+                </div>
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Updated Components/Controls/Radio Overview 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  margin: -16px;
+}
+
+.emotion-3 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.375rem;
+  font-size: 1rem;
+  letter-spacing: 0.015625rem;
+  color: #1B214F;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <p
+        className="emotion-3"
+        id="a-components-that-allows-the-user-to-select-a-single-option-from-a-group."
+      >
+        A components that allows the user to select a single option from a group.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Updated Components/Controls/Radio Playground 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.emotion-4 label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.emotion-4 label:before {
+  content: '';
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  box-sizing: border-box;
+  border: 0.125rem solid #b9cdfc;
+  border-radius: 6.25rem;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  background: rgba(84,94,255,0);
+}
+
+.emotion-4 label:hover::before {
+  background: rgba(84,94,255,0.06);
+  box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
+}
+
+.emotion-4 label[data-selected='true']:before {
+  border-color: #175bf5;
+  border-radius: 50%;
+}
+
+.emotion-4 label[data-selected='true']:hover::before {
+  background: none;
+  box-shadow: none;
+}
+
+.emotion-4 label[data-selected='true']:after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  width: 0.75rem;
+  height: 0.75rem;
+  background: #175bf5;
+  left: 4px;
+  -webkit-animation: circle 0.15s ease-in-out;
+  animation: circle 0.15s ease-in-out;
+}
+
+.emotion-4 label[data-disabled='true'] {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-4 label[data-disabled='true']:hover::before {
+  background: none;
+  box-shadow: none;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.emotion-6 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #1B214F;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          aria-orientation="vertical"
+          className="emotion-3"
+          data-testid="undefined_radio_group_container"
+          id="react-aria-generated-id"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          role="radiogroup"
+        >
+          <div
+            className="emotion-4"
+            data-testid="undefined_radio_option_1_container"
+          >
+            <label
+              data-disabled={false}
+              data-selected={false}
+            >
+              <div
+                onBlur={null}
+                onFocus={null}
+                style={
+                  Object {
+                    "border": 0,
+                    "clip": "rect(0 0 0 0)",
+                    "clipPath": "inset(50%)",
+                    "height": "1px",
+                    "margin": "-1px",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "position": "absolute",
+                    "whiteSpace": "nowrap",
+                    "width": "1px",
+                  }
+                }
+              >
+                <input
+                  checked={false}
+                  disabled={false}
+                  name="react-aria-generated-id"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onDragStart={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchCancel={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  tabIndex={0}
+                  type="radio"
+                  value="option 1"
+                />
+              </div>
+              <div
+                className="emotion-5"
+              >
+                <div
+                  className="emotion-6"
+                  data-testid="undefined_radio_option_1_label"
+                >
+                  Option 1
+                </div>
+              </div>
+            </label>
+          </div>
+          <div
+            className="emotion-4"
+            data-testid="undefined_radio_option_2_container"
+          >
+            <label
+              data-disabled={false}
+              data-selected={false}
+            >
+              <div
+                onBlur={null}
+                onFocus={null}
+                style={
+                  Object {
+                    "border": 0,
+                    "clip": "rect(0 0 0 0)",
+                    "clipPath": "inset(50%)",
+                    "height": "1px",
+                    "margin": "-1px",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "position": "absolute",
+                    "whiteSpace": "nowrap",
+                    "width": "1px",
+                  }
+                }
+              >
+                <input
+                  checked={false}
+                  disabled={false}
+                  name="react-aria-generated-id"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onDragStart={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchCancel={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  tabIndex={0}
+                  type="radio"
+                  value="option 2"
+                />
+              </div>
+              <div
+                className="emotion-5"
+              >
+                <div
+                  className="emotion-6"
+                  data-testid="undefined_radio_option_2_label"
+                >
+                  Option 2
+                </div>
+              </div>
+            </label>
+          </div>
+          <div
+            className="emotion-4"
+            data-testid="undefined_radio_option_3_container"
+          >
+            <label
+              data-disabled={false}
+              data-selected={false}
+            >
+              <div
+                onBlur={null}
+                onFocus={null}
+                style={
+                  Object {
+                    "border": 0,
+                    "clip": "rect(0 0 0 0)",
+                    "clipPath": "inset(50%)",
+                    "height": "1px",
+                    "margin": "-1px",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "position": "absolute",
+                    "whiteSpace": "nowrap",
+                    "width": "1px",
+                  }
+                }
+              >
+                <input
+                  checked={false}
+                  disabled={false}
+                  name="react-aria-generated-id"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onDragStart={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchCancel={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  tabIndex={0}
+                  type="radio"
+                  value="option 3"
+                />
+              </div>
+              <div
+                className="emotion-5"
+              >
+                <div
+                  className="emotion-6"
+                  data-testid="undefined_radio_option_3_label"
+                >
+                  Option 3
+                </div>
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Updated Components/Controls/Radio Radio label placement 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.emotion-4 label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.emotion-4 label:before {
+  content: '';
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  box-sizing: border-box;
+  border: 0.125rem solid #b9cdfc;
+  border-radius: 6.25rem;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  background: rgba(84,94,255,0);
+}
+
+.emotion-4 label:hover::before {
+  background: rgba(84,94,255,0.06);
+  box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
+}
+
+.emotion-4 label[data-selected='true']:before {
+  border-color: #175bf5;
+  border-radius: 50%;
+}
+
+.emotion-4 label[data-selected='true']:hover::before {
+  background: none;
+  box-shadow: none;
+}
+
+.emotion-4 label[data-selected='true']:after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  width: 0.75rem;
+  height: 0.75rem;
+  background: #175bf5;
+  left: 4px;
+  -webkit-animation: circle 0.15s ease-in-out;
+  animation: circle 0.15s ease-in-out;
+}
+
+.emotion-4 label[data-disabled='true'] {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-4 label[data-disabled='true']:hover::before {
+  background: none;
+  box-shadow: none;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.emotion-6 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #1B214F;
+}
+
+.emotion-14 label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.emotion-14 label:before {
+  content: '';
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  box-sizing: border-box;
+  border: 0.125rem solid #b9cdfc;
+  border-radius: 6.25rem;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  background: rgba(84,94,255,0);
+}
+
+.emotion-14 label:hover::before {
+  background: rgba(84,94,255,0.06);
+  box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
+}
+
+.emotion-14 label[data-selected='true']:before {
+  border-color: #175bf5;
+  border-radius: 50%;
+}
+
+.emotion-14 label[data-selected='true']:hover::before {
+  background: none;
+  box-shadow: none;
+}
+
+.emotion-14 label[data-selected='true']:after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  width: 0.75rem;
+  height: 0.75rem;
+  background: #175bf5;
+  right: 4px;
+  -webkit-animation: circle 0.15s ease-in-out;
+  animation: circle 0.15s ease-in-out;
+}
+
+.emotion-14 label[data-disabled='true'] {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-14 label[data-disabled='true']:hover::before {
+  background: none;
+  box-shadow: none;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "gap": "72px",
+            }
+          }
+        >
+          <div
+            aria-orientation="vertical"
+            className="emotion-3"
+            data-testid="undefined_radio_group_container"
+            id="react-aria-generated-id"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            role="radiogroup"
+          >
+            <div
+              className="emotion-4"
+              data-testid="undefined_radio_option_1_container"
+            >
+              <label
+                data-disabled={false}
+                data-selected={false}
+              >
+                <div
+                  onBlur={null}
+                  onFocus={null}
+                  style={
+                    Object {
+                      "border": 0,
+                      "clip": "rect(0 0 0 0)",
+                      "clipPath": "inset(50%)",
+                      "height": "1px",
+                      "margin": "-1px",
+                      "overflow": "hidden",
+                      "padding": 0,
+                      "position": "absolute",
+                      "whiteSpace": "nowrap",
+                      "width": "1px",
+                    }
+                  }
+                >
+                  <input
+                    checked={false}
+                    disabled={false}
+                    name="react-aria-generated-id"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onClick={[Function]}
+                    onDragStart={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchCancel={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    tabIndex={0}
+                    type="radio"
+                    value="option 1"
+                  />
+                </div>
+                <div
+                  className="emotion-5"
+                >
+                  <div
+                    className="emotion-6"
+                    data-testid="undefined_radio_option_1_label"
+                  >
+                    Option 1
+                  </div>
+                </div>
+              </label>
+            </div>
+            <div
+              className="emotion-4"
+              data-testid="undefined_radio_option_2_container"
+            >
+              <label
+                data-disabled={false}
+                data-selected={false}
+              >
+                <div
+                  onBlur={null}
+                  onFocus={null}
+                  style={
+                    Object {
+                      "border": 0,
+                      "clip": "rect(0 0 0 0)",
+                      "clipPath": "inset(50%)",
+                      "height": "1px",
+                      "margin": "-1px",
+                      "overflow": "hidden",
+                      "padding": 0,
+                      "position": "absolute",
+                      "whiteSpace": "nowrap",
+                      "width": "1px",
+                    }
+                  }
+                >
+                  <input
+                    checked={false}
+                    disabled={false}
+                    name="react-aria-generated-id"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onClick={[Function]}
+                    onDragStart={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchCancel={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    tabIndex={0}
+                    type="radio"
+                    value="option 2"
+                  />
+                </div>
+                <div
+                  className="emotion-5"
+                >
+                  <div
+                    className="emotion-6"
+                    data-testid="undefined_radio_option_2_label"
+                  >
+                    Option 2
+                  </div>
+                </div>
+              </label>
+            </div>
+            <div
+              className="emotion-4"
+              data-testid="undefined_radio_option_3_container"
+            >
+              <label
+                data-disabled={false}
+                data-selected={false}
+              >
+                <div
+                  onBlur={null}
+                  onFocus={null}
+                  style={
+                    Object {
+                      "border": 0,
+                      "clip": "rect(0 0 0 0)",
+                      "clipPath": "inset(50%)",
+                      "height": "1px",
+                      "margin": "-1px",
+                      "overflow": "hidden",
+                      "padding": 0,
+                      "position": "absolute",
+                      "whiteSpace": "nowrap",
+                      "width": "1px",
+                    }
+                  }
+                >
+                  <input
+                    checked={false}
+                    disabled={false}
+                    name="react-aria-generated-id"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onClick={[Function]}
+                    onDragStart={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchCancel={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    tabIndex={0}
+                    type="radio"
+                    value="option 3"
+                  />
+                </div>
+                <div
+                  className="emotion-5"
+                >
+                  <div
+                    className="emotion-6"
+                    data-testid="undefined_radio_option_3_label"
+                  >
+                    Option 3
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+          <div
+            aria-orientation="vertical"
+            className="emotion-3"
+            data-testid="undefined_radio_group_container"
+            id="react-aria-generated-id"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            role="radiogroup"
+          >
+            <div
+              className="emotion-14"
+              data-testid="undefined_radio_option_1_container"
+            >
+              <label
+                data-disabled={false}
+                data-selected={false}
+              >
+                <div
+                  onBlur={null}
+                  onFocus={null}
+                  style={
+                    Object {
+                      "border": 0,
+                      "clip": "rect(0 0 0 0)",
+                      "clipPath": "inset(50%)",
+                      "height": "1px",
+                      "margin": "-1px",
+                      "overflow": "hidden",
+                      "padding": 0,
+                      "position": "absolute",
+                      "whiteSpace": "nowrap",
+                      "width": "1px",
+                    }
+                  }
+                >
+                  <input
+                    checked={false}
+                    disabled={false}
+                    name="react-aria-generated-id"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onClick={[Function]}
+                    onDragStart={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchCancel={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    tabIndex={0}
+                    type="radio"
+                    value="option 1"
+                  />
+                </div>
+                <div
+                  className="emotion-5"
+                >
+                  <div
+                    className="emotion-6"
+                    data-testid="undefined_radio_option_1_label"
+                  >
+                    Option 1
+                  </div>
+                </div>
+              </label>
+            </div>
+            <div
+              className="emotion-14"
+              data-testid="undefined_radio_option_2_container"
+            >
+              <label
+                data-disabled={false}
+                data-selected={false}
+              >
+                <div
+                  onBlur={null}
+                  onFocus={null}
+                  style={
+                    Object {
+                      "border": 0,
+                      "clip": "rect(0 0 0 0)",
+                      "clipPath": "inset(50%)",
+                      "height": "1px",
+                      "margin": "-1px",
+                      "overflow": "hidden",
+                      "padding": 0,
+                      "position": "absolute",
+                      "whiteSpace": "nowrap",
+                      "width": "1px",
+                    }
+                  }
+                >
+                  <input
+                    checked={false}
+                    disabled={false}
+                    name="react-aria-generated-id"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onClick={[Function]}
+                    onDragStart={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchCancel={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    tabIndex={0}
+                    type="radio"
+                    value="option 2"
+                  />
+                </div>
+                <div
+                  className="emotion-5"
+                >
+                  <div
+                    className="emotion-6"
+                    data-testid="undefined_radio_option_2_label"
+                  >
+                    Option 2
+                  </div>
+                </div>
+              </label>
+            </div>
+            <div
+              className="emotion-14"
+              data-testid="undefined_radio_option_3_container"
+            >
+              <label
+                data-disabled={false}
+                data-selected={false}
+              >
+                <div
+                  onBlur={null}
+                  onFocus={null}
+                  style={
+                    Object {
+                      "border": 0,
+                      "clip": "rect(0 0 0 0)",
+                      "clipPath": "inset(50%)",
+                      "height": "1px",
+                      "margin": "-1px",
+                      "overflow": "hidden",
+                      "padding": 0,
+                      "position": "absolute",
+                      "whiteSpace": "nowrap",
+                      "width": "1px",
+                    }
+                  }
+                >
+                  <input
+                    checked={false}
+                    disabled={false}
+                    name="react-aria-generated-id"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onClick={[Function]}
+                    onDragStart={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchCancel={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    tabIndex={0}
+                    type="radio"
+                    value="option 3"
+                  />
+                </div>
+                <div
+                  className="emotion-5"
+                >
+                  <div
+                    className="emotion-6"
+                    data-testid="undefined_radio_option_3_label"
+                  >
+                    Option 3
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Updated Components/Controls/Radio Radio label sizes 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.emotion-4 label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.emotion-4 label:before {
+  content: '';
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  box-sizing: border-box;
+  border: 0.125rem solid #b9cdfc;
+  border-radius: 6.25rem;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  background: rgba(84,94,255,0);
+}
+
+.emotion-4 label:hover::before {
+  background: rgba(84,94,255,0.06);
+  box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
+}
+
+.emotion-4 label[data-selected='true']:before {
+  border-color: #175bf5;
+  border-radius: 50%;
+}
+
+.emotion-4 label[data-selected='true']:hover::before {
+  background: none;
+  box-shadow: none;
+}
+
+.emotion-4 label[data-selected='true']:after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  width: 0.75rem;
+  height: 0.75rem;
+  background: #175bf5;
+  left: 4px;
+  -webkit-animation: circle 0.15s ease-in-out;
+  animation: circle 0.15s ease-in-out;
+}
+
+.emotion-4 label[data-disabled='true'] {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-4 label[data-disabled='true']:hover::before {
+  background: none;
+  box-shadow: none;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.emotion-6 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #1B214F;
+}
+
+.emotion-16 {
+  font-family: Roboto;
+  font-weight: 700;
+  line-height: 1.75rem;
+  font-size: 1.25rem;
+  letter-spacing: 0rem;
+  color: #1B214F;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "gap": "72px",
+            }
+          }
+        >
+          <div
+            aria-orientation="vertical"
+            className="emotion-3"
+            data-testid="undefined_radio_group_container"
+            id="react-aria-generated-id"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            role="radiogroup"
+          >
+            <div
+              className="emotion-4"
+              data-testid="undefined_radio_option_1_container"
+            >
+              <label
+                data-disabled={false}
+                data-selected={false}
+              >
+                <div
+                  onBlur={null}
+                  onFocus={null}
+                  style={
+                    Object {
+                      "border": 0,
+                      "clip": "rect(0 0 0 0)",
+                      "clipPath": "inset(50%)",
+                      "height": "1px",
+                      "margin": "-1px",
+                      "overflow": "hidden",
+                      "padding": 0,
+                      "position": "absolute",
+                      "whiteSpace": "nowrap",
+                      "width": "1px",
+                    }
+                  }
+                >
+                  <input
+                    checked={false}
+                    disabled={false}
+                    name="react-aria-generated-id"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onClick={[Function]}
+                    onDragStart={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchCancel={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    tabIndex={0}
+                    type="radio"
+                    value="option 1"
+                  />
+                </div>
+                <div
+                  className="emotion-5"
+                >
+                  <div
+                    className="emotion-6"
+                    data-testid="undefined_radio_option_1_label"
+                  >
+                    Normal Option 1
+                  </div>
+                </div>
+              </label>
+            </div>
+            <div
+              className="emotion-4"
+              data-testid="undefined_radio_option_2_container"
+            >
+              <label
+                data-disabled={false}
+                data-selected={false}
+              >
+                <div
+                  onBlur={null}
+                  onFocus={null}
+                  style={
+                    Object {
+                      "border": 0,
+                      "clip": "rect(0 0 0 0)",
+                      "clipPath": "inset(50%)",
+                      "height": "1px",
+                      "margin": "-1px",
+                      "overflow": "hidden",
+                      "padding": 0,
+                      "position": "absolute",
+                      "whiteSpace": "nowrap",
+                      "width": "1px",
+                    }
+                  }
+                >
+                  <input
+                    checked={false}
+                    disabled={false}
+                    name="react-aria-generated-id"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onClick={[Function]}
+                    onDragStart={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchCancel={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    tabIndex={0}
+                    type="radio"
+                    value="option 2"
+                  />
+                </div>
+                <div
+                  className="emotion-5"
+                >
+                  <div
+                    className="emotion-6"
+                    data-testid="undefined_radio_option_2_label"
+                  >
+                    Normal Option 2
+                  </div>
+                </div>
+              </label>
+            </div>
+            <div
+              className="emotion-4"
+              data-testid="undefined_radio_option_3_container"
+            >
+              <label
+                data-disabled={false}
+                data-selected={false}
+              >
+                <div
+                  onBlur={null}
+                  onFocus={null}
+                  style={
+                    Object {
+                      "border": 0,
+                      "clip": "rect(0 0 0 0)",
+                      "clipPath": "inset(50%)",
+                      "height": "1px",
+                      "margin": "-1px",
+                      "overflow": "hidden",
+                      "padding": 0,
+                      "position": "absolute",
+                      "whiteSpace": "nowrap",
+                      "width": "1px",
+                    }
+                  }
+                >
+                  <input
+                    checked={false}
+                    disabled={false}
+                    name="react-aria-generated-id"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onClick={[Function]}
+                    onDragStart={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchCancel={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    tabIndex={0}
+                    type="radio"
+                    value="option 3"
+                  />
+                </div>
+                <div
+                  className="emotion-5"
+                >
+                  <div
+                    className="emotion-6"
+                    data-testid="undefined_radio_option_3_label"
+                  >
+                    Normal Option 3
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+          <div
+            aria-orientation="vertical"
+            className="emotion-3"
+            data-testid="undefined_radio_group_container"
+            id="react-aria-generated-id"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            role="radiogroup"
+          >
+            <div
+              className="emotion-4"
+              data-testid="undefined_radio_option_1_container"
+            >
+              <label
+                data-disabled={false}
+                data-selected={false}
+              >
+                <div
+                  onBlur={null}
+                  onFocus={null}
+                  style={
+                    Object {
+                      "border": 0,
+                      "clip": "rect(0 0 0 0)",
+                      "clipPath": "inset(50%)",
+                      "height": "1px",
+                      "margin": "-1px",
+                      "overflow": "hidden",
+                      "padding": 0,
+                      "position": "absolute",
+                      "whiteSpace": "nowrap",
+                      "width": "1px",
+                    }
+                  }
+                >
+                  <input
+                    checked={false}
+                    disabled={false}
+                    name="react-aria-generated-id"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onClick={[Function]}
+                    onDragStart={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchCancel={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    tabIndex={0}
+                    type="radio"
+                    value="option 1"
+                  />
+                </div>
+                <div
+                  className="emotion-5"
+                >
+                  <div
+                    className="emotion-16"
+                    data-testid="undefined_radio_option_1_label"
+                  >
+                    Large Option 1
+                  </div>
+                </div>
+              </label>
+            </div>
+            <div
+              className="emotion-4"
+              data-testid="undefined_radio_option_2_container"
+            >
+              <label
+                data-disabled={false}
+                data-selected={false}
+              >
+                <div
+                  onBlur={null}
+                  onFocus={null}
+                  style={
+                    Object {
+                      "border": 0,
+                      "clip": "rect(0 0 0 0)",
+                      "clipPath": "inset(50%)",
+                      "height": "1px",
+                      "margin": "-1px",
+                      "overflow": "hidden",
+                      "padding": 0,
+                      "position": "absolute",
+                      "whiteSpace": "nowrap",
+                      "width": "1px",
+                    }
+                  }
+                >
+                  <input
+                    checked={false}
+                    disabled={false}
+                    name="react-aria-generated-id"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onClick={[Function]}
+                    onDragStart={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchCancel={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    tabIndex={0}
+                    type="radio"
+                    value="option 2"
+                  />
+                </div>
+                <div
+                  className="emotion-5"
+                >
+                  <div
+                    className="emotion-16"
+                    data-testid="undefined_radio_option_2_label"
+                  >
+                    Large Option 2
+                  </div>
+                </div>
+              </label>
+            </div>
+            <div
+              className="emotion-4"
+              data-testid="undefined_radio_option_3_container"
+            >
+              <label
+                data-disabled={false}
+                data-selected={false}
+              >
+                <div
+                  onBlur={null}
+                  onFocus={null}
+                  style={
+                    Object {
+                      "border": 0,
+                      "clip": "rect(0 0 0 0)",
+                      "clipPath": "inset(50%)",
+                      "height": "1px",
+                      "margin": "-1px",
+                      "overflow": "hidden",
+                      "padding": 0,
+                      "position": "absolute",
+                      "whiteSpace": "nowrap",
+                      "width": "1px",
+                    }
+                  }
+                >
+                  <input
+                    checked={false}
+                    disabled={false}
+                    name="react-aria-generated-id"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onClick={[Function]}
+                    onDragStart={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchCancel={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    tabIndex={0}
+                    type="radio"
+                    value="option 3"
+                  />
+                </div>
+                <div
+                  className="emotion-5"
+                >
+                  <div
+                    className="emotion-16"
+                    data-testid="undefined_radio_option_3_label"
+                  >
+                    Large Option 3
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Updated Components/Controls/Radio Radio with helptext 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.emotion-4 label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.emotion-4 label:before {
+  content: '';
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  box-sizing: border-box;
+  border: 0.125rem solid #b9cdfc;
+  border-radius: 6.25rem;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  background: rgba(84,94,255,0);
+}
+
+.emotion-4 label:hover::before {
+  background: rgba(84,94,255,0.06);
+  box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
+}
+
+.emotion-4 label[data-selected='true']:before {
+  border-color: #175bf5;
+  border-radius: 50%;
+}
+
+.emotion-4 label[data-selected='true']:hover::before {
+  background: none;
+  box-shadow: none;
+}
+
+.emotion-4 label[data-selected='true']:after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  width: 0.75rem;
+  height: 0.75rem;
+  background: #175bf5;
+  left: 4px;
+  -webkit-animation: circle 0.15s ease-in-out;
+  animation: circle 0.15s ease-in-out;
+}
+
+.emotion-4 label[data-disabled='true'] {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-4 label[data-disabled='true']:hover::before {
+  background: none;
+  box-shadow: none;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.emotion-6 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #1B214F;
+}
+
+.emotion-10 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  color: #686BB3;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          aria-orientation="vertical"
+          className="emotion-3"
+          data-testid="undefined_radio_group_container"
+          id="react-aria-generated-id"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          role="radiogroup"
+        >
+          <div
+            className="emotion-4"
+            data-testid="undefined_radio_option_1_container"
+          >
+            <label
+              data-disabled={false}
+              data-selected={false}
+            >
+              <div
+                onBlur={null}
+                onFocus={null}
+                style={
+                  Object {
+                    "border": 0,
+                    "clip": "rect(0 0 0 0)",
+                    "clipPath": "inset(50%)",
+                    "height": "1px",
+                    "margin": "-1px",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "position": "absolute",
+                    "whiteSpace": "nowrap",
+                    "width": "1px",
+                  }
+                }
+              >
+                <input
+                  checked={false}
+                  disabled={false}
+                  name="react-aria-generated-id"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onDragStart={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchCancel={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  tabIndex={0}
+                  type="radio"
+                  value="option 1"
+                />
+              </div>
+              <div
+                className="emotion-5"
+              >
+                <div
+                  className="emotion-6"
+                  data-testid="undefined_radio_option_1_label"
+                >
+                  Option 1
+                </div>
+              </div>
+            </label>
+          </div>
+          <div
+            className="emotion-4"
+            data-testid="undefined_radio_option_2_container"
+          >
+            <label
+              data-disabled={false}
+              data-selected={false}
+            >
+              <div
+                onBlur={null}
+                onFocus={null}
+                style={
+                  Object {
+                    "border": 0,
+                    "clip": "rect(0 0 0 0)",
+                    "clipPath": "inset(50%)",
+                    "height": "1px",
+                    "margin": "-1px",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "position": "absolute",
+                    "whiteSpace": "nowrap",
+                    "width": "1px",
+                  }
+                }
+              >
+                <input
+                  checked={false}
+                  disabled={false}
+                  name="react-aria-generated-id"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onDragStart={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchCancel={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  tabIndex={0}
+                  type="radio"
+                  value="option 2"
+                />
+              </div>
+              <div
+                className="emotion-5"
+              >
+                <div
+                  className="emotion-6"
+                  data-testid="undefined_radio_option_2_label"
+                >
+                  Option 2
+                </div>
+                <div
+                  className="emotion-10"
+                  data-testid="undefined_radio_option_2_helpText"
+                >
+                  This is the help text of option 2
+                </div>
+              </div>
+            </label>
+          </div>
+          <div
+            className="emotion-4"
+            data-testid="undefined_radio_option_3_container"
+          >
+            <label
+              data-disabled={false}
+              data-selected={false}
+            >
+              <div
+                onBlur={null}
+                onFocus={null}
+                style={
+                  Object {
+                    "border": 0,
+                    "clip": "rect(0 0 0 0)",
+                    "clipPath": "inset(50%)",
+                    "height": "1px",
+                    "margin": "-1px",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "position": "absolute",
+                    "whiteSpace": "nowrap",
+                    "width": "1px",
+                  }
+                }
+              >
+                <input
+                  checked={false}
+                  disabled={false}
+                  name="react-aria-generated-id"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onDragStart={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchCancel={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  tabIndex={0}
+                  type="radio"
+                  value="option 3"
+                />
+              </div>
+              <div
+                className="emotion-5"
+              >
+                <div
+                  className="emotion-6"
+                  data-testid="undefined_radio_option_3_label"
+                >
+                  Option 3
+                </div>
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Updated Components/Controls/Radio RadioGroup 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.emotion-4 label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.emotion-4 label:before {
+  content: '';
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  box-sizing: border-box;
+  border: 0.125rem solid #b9cdfc;
+  border-radius: 6.25rem;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  background: rgba(84,94,255,0);
+}
+
+.emotion-4 label:hover::before {
+  background: rgba(84,94,255,0.06);
+  box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
+}
+
+.emotion-4 label[data-selected='true']:before {
+  border-color: #175bf5;
+  border-radius: 50%;
+}
+
+.emotion-4 label[data-selected='true']:hover::before {
+  background: none;
+  box-shadow: none;
+}
+
+.emotion-4 label[data-selected='true']:after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  width: 0.75rem;
+  height: 0.75rem;
+  background: #175bf5;
+  left: 4px;
+  -webkit-animation: circle 0.15s ease-in-out;
+  animation: circle 0.15s ease-in-out;
+}
+
+.emotion-4 label[data-disabled='true'] {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-4 label[data-disabled='true']:hover::before {
+  background: none;
+  box-shadow: none;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.emotion-6 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #1B214F;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          aria-orientation="vertical"
+          className="emotion-3"
+          data-testid="undefined_radio_group_container"
+          id="react-aria-generated-id"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          role="radiogroup"
+        >
+          <div
+            className="emotion-4"
+            data-testid="undefined_radio_option_1_container"
+          >
+            <label
+              data-disabled={false}
+              data-selected={false}
+            >
+              <div
+                onBlur={null}
+                onFocus={null}
+                style={
+                  Object {
+                    "border": 0,
+                    "clip": "rect(0 0 0 0)",
+                    "clipPath": "inset(50%)",
+                    "height": "1px",
+                    "margin": "-1px",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "position": "absolute",
+                    "whiteSpace": "nowrap",
+                    "width": "1px",
+                  }
+                }
+              >
+                <input
+                  checked={false}
+                  disabled={false}
+                  name="react-aria-generated-id"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onDragStart={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchCancel={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  tabIndex={0}
+                  type="radio"
+                  value="option 1"
+                />
+              </div>
+              <div
+                className="emotion-5"
+              >
+                <div
+                  className="emotion-6"
+                  data-testid="undefined_radio_option_1_label"
+                >
+                  Option 1
+                </div>
+              </div>
+            </label>
+          </div>
+          <div
+            className="emotion-4"
+            data-testid="undefined_radio_option_2_container"
+          >
+            <label
+              data-disabled={false}
+              data-selected={false}
+            >
+              <div
+                onBlur={null}
+                onFocus={null}
+                style={
+                  Object {
+                    "border": 0,
+                    "clip": "rect(0 0 0 0)",
+                    "clipPath": "inset(50%)",
+                    "height": "1px",
+                    "margin": "-1px",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "position": "absolute",
+                    "whiteSpace": "nowrap",
+                    "width": "1px",
+                  }
+                }
+              >
+                <input
+                  checked={false}
+                  disabled={false}
+                  name="react-aria-generated-id"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onDragStart={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchCancel={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  tabIndex={0}
+                  type="radio"
+                  value="option 2"
+                />
+              </div>
+              <div
+                className="emotion-5"
+              >
+                <div
+                  className="emotion-6"
+                  data-testid="undefined_radio_option_2_label"
+                >
+                  Option 2
+                </div>
+              </div>
+            </label>
+          </div>
+          <div
+            className="emotion-4"
+            data-testid="undefined_radio_option_3_container"
+          >
+            <label
+              data-disabled={false}
+              data-selected={false}
+            >
+              <div
+                onBlur={null}
+                onFocus={null}
+                style={
+                  Object {
+                    "border": 0,
+                    "clip": "rect(0 0 0 0)",
+                    "clipPath": "inset(50%)",
+                    "height": "1px",
+                    "margin": "-1px",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "position": "absolute",
+                    "whiteSpace": "nowrap",
+                    "width": "1px",
+                  }
+                }
+              >
+                <input
+                  checked={false}
+                  disabled={false}
+                  name="react-aria-generated-id"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onDragStart={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchCancel={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  tabIndex={0}
+                  type="radio"
+                  value="option 3"
+                />
+              </div>
+              <div
+                className="emotion-5"
+              >
+                <div
+                  className="emotion-6"
+                  data-testid="undefined_radio_option_3_label"
+                >
+                  Option 3
+                </div>
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

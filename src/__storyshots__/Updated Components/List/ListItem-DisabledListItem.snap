@@ -421,116 +421,72 @@
   fill: white;
 }
 
-.emotion-28 {
-  position: relative;
-  border-radius: 50%;
-  width: 2.25rem;
-  height: 2.25rem;
-  color: #175bf5;
-  border: 0;
-  opacity: 0.5;
-  cursor: pointer;
-  margin: 0;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  outline: 0;
+.emotion-28 label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  -moz-appearance: none;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-appearance: none;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.emotion-29 {
-  top: 0;
-  left: 0;
-  width: 100%;
-  cursor: inherit;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  z-index: 1;
-  position: absolute;
-  opacity: 0;
-}
-
-.emotion-29:disabled {
-  cursor: default;
-}
-
-.emotion-30 {
+  gap: 0.75rem;
   position: relative;
-  border-radius: 50%;
-  width: 1.5rem;
-  height: 1.5rem;
-  -webkit-transition: box-shadow 0.3s ease;
-  transition: box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
-.emotion-31 {
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  position: absolute;
-}
-
-.emotion-31:before {
+.emotion-28 label:before {
   content: '';
   display: inline-block;
-  box-sizing: border-box;
-  margin: 0.125rem 0.75rem 0.125rem 0.125rem;
-  border: solid 2px #c3cddf;
-  border-radius: 50%;
   width: 1.25rem;
   height: 1.25rem;
-  vertical-align: top;
-  -webkit-transition: border-color 0.2s;
-  transition: border-color 0.2s;
+  box-sizing: border-box;
+  border: 0.125rem solid #b9cdfc;
+  border-radius: 6.25rem;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  background: rgba(84,94,255,0);
 }
 
-.emotion-31:after {
+.emotion-28 label:hover::before {
+  background: rgba(84,94,255,0.06);
+  box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
+}
+
+.emotion-28 label[data-selected='true']:before {
+  border-color: #175bf5;
+  border-radius: 50%;
+}
+
+.emotion-28 label[data-selected='true']:hover::before {
+  background: none;
+  box-shadow: none;
+}
+
+.emotion-28 label[data-selected='true']:after {
   content: '';
   display: block;
   position: absolute;
-  top: 0.0625rem;
-  left: 0.0625rem;
   border-radius: 50%;
   width: 0.75rem;
   height: 0.75rem;
-  background-color: #c3cddf;
-  -webkit-transform: translate(5px, 5px) scale(0);
-  -moz-transform: translate(5px, 5px) scale(0);
-  -ms-transform: translate(5px, 5px) scale(0);
-  transform: translate(5px, 5px) scale(0);
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
+  background: #175bf5;
+  left: 4px;
+  -webkit-animation: circle 0.15s ease-in-out;
+  animation: circle 0.15s ease-in-out;
 }
 
-.emotion-32 {
-  position: absolute;
-  border-radius: 50%;
-  width: 1.5rem;
-  height: 1.5rem;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+.emotion-28 label[data-disabled='true'] {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-28 label[data-disabled='true']:hover::before {
+  background: none;
+  box-shadow: none;
 }
 
 <div>
@@ -547,9 +503,9 @@
           style="height: 100%;"
         >
           <ul
-            aria-labelledby="react-aria-:r35:"
+            aria-labelledby="react-aria-:r4l:"
             class="emotion-3"
-            id="react-aria-:r33:"
+            id="react-aria-:r4j:"
             role="listbox"
             style="overflow-y: auto; position: relative; display: flex; flex-direction: column; height: 100%; list-style: none; padding: 0px;"
             tabindex="0"
@@ -560,7 +516,7 @@
               class="emotion-4 "
               data-key="1"
               data-testid="ictinus_list_item_1"
-              id="react-aria-:r33:-option-1"
+              id="react-aria-:r4j:-option-1"
               role="option"
             >
               <div
@@ -577,7 +533,7 @@
               class="emotion-4 "
               data-key="3"
               data-testid="ictinus_list_item_3"
-              id="react-aria-:r33:-option-3"
+              id="react-aria-:r4j:-option-3"
               role="option"
             >
               <div
@@ -622,7 +578,7 @@
               class="emotion-11 "
               data-key="4"
               data-testid="ictinus_list_item_4"
-              id="react-aria-:r33:-option-4"
+              id="react-aria-:r4j:-option-4"
               role="option"
             >
               <div
@@ -667,7 +623,7 @@
               class="emotion-4 "
               data-key="5"
               data-testid="ictinus_list_item_5"
-              id="react-aria-:r33:-option-5"
+              id="react-aria-:r4j:-option-5"
               role="option"
             >
               <div
@@ -735,33 +691,28 @@
               class="emotion-4 "
               data-key="6"
               data-testid="ictinus_list_item_6"
-              id="react-aria-:r33:-option-6"
+              id="react-aria-:r4j:-option-6"
               role="option"
             >
               <div
                 class="emotion-8"
               >
-                <span
+                <div
                   class="emotion-28"
-                  data-testid="radio-input"
+                  data-testid="undefined_radio_6_container"
                 >
-                  <input
-                    class="emotion-29"
-                    disabled=""
-                    type="radio"
-                    value="on"
-                  />
-                  <span
-                    class="emotion-30"
+                  <label
+                    data-disabled="true"
                   >
-                    <span
-                      class="emotion-31"
-                    />
-                    <span
-                      class="emotion-32"
-                    />
-                  </span>
-                </span>
+                    <div
+                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                    >
+                      <input
+                        tabindex="0"
+                      />
+                    </div>
+                  </label>
+                </div>
               </div>
               <div
                 class="emotion-5"
