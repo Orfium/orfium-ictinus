@@ -1,0 +1,71 @@
+import { Meta, Canvas, ArgTypes, Story } from '@storybook/blocks';
+import Switch from './Switch';
+import * as SwitchStories from './Switch.stories';
+
+<Meta of={SwitchStories} />
+
+<SectionHeader title={'Switch'} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
+
+## Overview
+
+Enables the user to set the state of a single setting to 'on' or 'off'.
+
+## Props
+
+<ArgTypes of={Switch} />
+
+## Usage
+
+<UsageGuidelines
+  guidelines={[
+    'Use switches for binary choices only (e.g. “enable/disable”)',
+    'When the item that is being toggled has a default state (e.g. deactivated by default)',
+  ]}
+  policies={[
+    'If you have more than two choices, use a checkbox or a radio button instead',
+    'If you can select 1+ items, use checkboxes',
+    'If you can select exactly 1 item, use radio buttons',
+  ]}
+/>
+
+<SubsectionHeader title="Variants" />
+
+### Simple Switch
+
+<Canvas of={SwitchStories.SimpleSwitch} />
+
+### Switch label placement
+
+Label can be placed either `left` or `right` of the switch.
+
+<Tip>
+  The labelConfig prop of each Switch includes an sx prop in order to add custom styles on the
+  container that wraps the switch input and the label
+</Tip>
+
+<Canvas of={SwitchStories.SwitchLabelPlacement} />
+
+### Switch label sizes
+
+Label can be either a string or a custom component. In the case of the string, there are 2 sizes (declared inside the labelConfig), `normal` and `large`
+
+<Canvas of={SwitchStories.SwitchLabelSizes} />
+
+### Switch with helptext
+
+Switch can include a helptext under the label.
+
+<Canvas of={SwitchStories.SwitchWithHelptext} />
+
+### Disabled Switch
+
+<Canvas of={SwitchStories.DisabledSwitch} />
+
+### Playground
+
+<Canvas of={SwitchStories.Playground} />
