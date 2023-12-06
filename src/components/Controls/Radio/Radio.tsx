@@ -10,7 +10,7 @@ import { radioContainerStyles } from './Radio.style';
 import ControlLabel from '../ControlLabel';
 import type { LabelConfig } from '../Controls.types';
 
-export type Props = Partial<RadioAria> & {
+export type RadioProps = Partial<RadioAria> & {
   /** Id property of the radio input */
   id?: string;
   /** The value of the radio input */
@@ -20,7 +20,7 @@ export type Props = Partial<RadioAria> & {
   children?: React.ReactNode;
 } & TestProps;
 
-const Radio = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
+const Radio = React.forwardRef<HTMLInputElement, RadioProps>((props, ref) => {
   const { id, value, labelConfig = {}, dataTestPrefixId, children } = props;
   const { placement = 'right', size = 'normal', helpText, sx } = labelConfig;
 

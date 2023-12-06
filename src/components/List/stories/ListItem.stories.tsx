@@ -1,7 +1,6 @@
 import List, { ListItem, ListItemAction, ListItemText } from '../index';
 import { FIGMA_URL } from '../../../utils/common';
-import { Radio, Switch } from '../../Controls';
-import CheckBox from '../../CheckBox';
+import { Radio, CheckBox, Switch } from '../../Controls';
 import Avatar from '../../Avatar';
 import Box from '../../Box';
 import { useState } from 'react';
@@ -84,13 +83,33 @@ export const ListItemCompilations = {
           <List label={'list'} selectedKeys={selectedKeys} onSelectionChange={setSelectedKeys}>
             <ListItem key={'7'} textValue={'Option Checkbox'}>
               <ListItemAction>
-                <CheckBox isFilled={false} isChecked={selectedKeys.has(`7`)} />
+                <CheckBox
+                  value="7"
+                  isSelected={selectedKeys.has(`7`)}
+                  onChange={() => {
+                    if (selectedKeys.has(`7`)) {
+                      setSelectedKeys(new Set([]));
+                    } else {
+                      setSelectedKeys(new Set(['7']));
+                    }
+                  }}
+                />
               </ListItemAction>
               <ListItemText>Option Checkbox</ListItemText>
             </ListItem>
             <ListItem key={'8'} rowSize={'compact'} textValue={'Option Checkbox'}>
               <ListItemAction>
-                <CheckBox isFilled={false} isChecked={selectedKeys.has(`8`)} />
+                <CheckBox
+                  value="8"
+                  isSelected={selectedKeys.has(`8`)}
+                  onChange={() => {
+                    if (selectedKeys.has(`8`)) {
+                      setSelectedKeys(new Set([]));
+                    } else {
+                      setSelectedKeys(new Set(['8']));
+                    }
+                  }}
+                />
               </ListItemAction>
               <ListItemText>Option Checkbox (compact)</ListItemText>
             </ListItem>
@@ -156,7 +175,7 @@ export const DisabledListItem = {
           </ListItem>
           <ListItem key={'5'} textValue={'Option Checkbox'}>
             <ListItemAction>
-              <CheckBox isDisabled isFilled={false} />
+              <CheckBox isDisabled />
             </ListItemAction>
             <ListItemText>This Checkbox Option is disabled</ListItemText>
           </ListItem>

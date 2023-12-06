@@ -1,0 +1,190 @@
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.emotion-1 {
+  display: block;
+  cursor: pointer;
+  position: relative;
+}
+
+.emotion-1>span:nth-of-type(2) {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  width: 1.25rem;
+  height: 1.25rem;
+  box-sizing: border-box;
+  border: 0.125rem solid #b9cdfc;
+  border-radius: 0.25rem;
+}
+
+.emotion-1 svg {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.emotion-1:hover,
+.emotion-1[data-focus-visible='true'] {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  background: rgba(84,94,255,0.06);
+  box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
+  border-radius: 100%;
+}
+
+.emotion-1[data-selected='true']>span:last-child,
+.emotion-1[data-indeterminate='true']>span:last-child {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border-color: #175bf5;
+  background: #175bf5;
+}
+
+.emotion-1[data-selected='true'] svg,
+.emotion-1[data-indeterminate='true'] svg {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.emotion-1[data-disabled='true'] {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-1[data-disabled='true']:hover {
+  background: none;
+  box-shadow: none;
+}
+
+.emotion-2 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-3 {
+  fill: #ffffff;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-3 * {
+  fill: #ffffff;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.emotion-5 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #1B214F;
+}
+
+.emotion-6 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  color: #686BB3;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <label
+      class="emotion-1"
+      data-rac=""
+      data-testid="undefined_label_checkbox"
+    >
+      <span
+        style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+      >
+        <input
+          data-testid="undefined_label_checkbox"
+          type="checkbox"
+          value="label"
+        />
+      </span>
+      <span
+        class="emotion-2"
+      >
+        <svg
+          class="emotion-3"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+        >
+          <g
+            fill="none"
+            fill-rule="evenodd"
+            id="\\uD83D\\uDD36-Symbols"
+            stroke="none"
+            stroke-width="1"
+          >
+            <g
+              id="Checkmark"
+            >
+              <path
+                d="M16.1742639,3.56546017 L17.5665405,4.95773677 L9.21853983,13.3054602 L14.0871995,18.1742639 L12.6949229,19.5665405 L6.43453983,13.3061575 L6.43653983,13.3044602 L6.43589028,13.3038338 L16.1742639,3.56546017 Z"
+                transform="translate(12.000540, 11.566000) scale(-1, 1) rotate(-90.000000) translate(-12.000540, -11.566000)"
+              />
+            </g>
+          </g>
+        </svg>
+      </span>
+    </label>
+    <div
+      class="emotion-4"
+    >
+      <div
+        class="emotion-5"
+        data-testid="undefined_radio_label_label"
+      >
+        Option
+      </div>
+      <div
+        class="emotion-6"
+        data-testid="undefined_radio_label_helpText"
+      >
+        Short text that adds context
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,8 +1,9 @@
-import { FIGMA_URL } from 'utils/common';
+import { FIGMA_URL } from '../../../utils/common';
 import Switch from './Switch';
 import { useState } from 'react';
-import Stack from 'components/storyUtils/Stack';
+import Stack from '../../storyUtils/Stack';
 import { boolean, select, text } from '@storybook/addon-knobs';
+import React from 'react';
 
 export default {
   title: 'Updated Components/Controls/Switch',
@@ -35,10 +36,10 @@ export const SwitchLabelPlacement = {
     return (
       <>
         <Stack height={50}>
-          <Switch>Option</Switch>
+          <Switch>Right Label</Switch>
         </Stack>
         <Stack>
-          <Switch labelConfig={{ placement: 'left' }}>Option</Switch>
+          <Switch labelConfig={{ placement: 'left' }}>Left Label</Switch>
         </Stack>
       </>
     );
@@ -51,10 +52,10 @@ export const SwitchLabelSizes = {
     return (
       <>
         <Stack height={50}>
-          <Switch>Normal Option</Switch>
+          <Switch>Normal Label</Switch>
         </Stack>
         <Stack>
-          <Switch labelConfig={{ size: 'large' }}>Large Option</Switch>
+          <Switch labelConfig={{ size: 'large' }}>Large Label</Switch>
         </Stack>
       </>
     );
@@ -64,7 +65,7 @@ export const SwitchLabelSizes = {
 
 export const SwitchWithHelptext = {
   render: () => {
-    return <Switch labelConfig={{ helpText: 'This is the helptext of the option' }}>Option</Switch>;
+    return <Switch labelConfig={{ helpText: 'Short text that adds context' }}>Option</Switch>;
   },
   name: 'Switch with helptext',
 };
