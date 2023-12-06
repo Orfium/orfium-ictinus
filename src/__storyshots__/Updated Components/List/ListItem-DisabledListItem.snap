@@ -146,47 +146,78 @@
 
 .emotion-9 {
   display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+  cursor: pointer;
 }
 
-.emotion-9 .react-switch-handle {
-  cursor: not-allowed!important;
-  border: 2px solid #b7c3d8!important;
-  box-sizing: border-box!important;
-  -webkit-transform: translateX(0)!important;
-  -moz-transform: translateX(0)!important;
-  -ms-transform: translateX(0)!important;
-  transform: translateX(0)!important;
+.emotion-9 .bar {
+  width: 2.25rem;
+  height: 0.5rem;
+  background: #D6D8FF;
+  position: absolute;
+  border-radius: 6.25rem;
 }
 
-.emotion-9 .react-switch-handle:hover {
-  box-shadow: 0;
-  background: !important;
+.emotion-9 .indicator {
+  width: 2.25rem;
+  height: 1.25rem;
+  box-sizing: border-box;
+  position: relative;
 }
 
-.emotion-9 .react-switch-bg {
-  cursor: not-allowed!important;
-  margin-right: 0!important;
-  margin-left: 0!important;
+.emotion-9 .indicator:before {
+  content: '';
+  box-sizing: border-box;
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  background: #ffffff;
+  border: 0.125rem solid #b9cdfc;
+  border-radius: 100%;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
 }
 
-.emotion-9 .react-switch-bg:hover~.react-switch-handle {
-  box-shadow: 0;
-  background: !important;
+.emotion-9[data-hovered] .indicator:before,
+.emotion-9[data-focus-visible='true'] .indicator:before {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
+  border-radius: 100%;
 }
 
-.emotion-11 {
+.emotion-9[data-selected] .indicator:before {
+  -webkit-transform: translateX(80%);
+  -moz-transform: translateX(80%);
+  -ms-transform: translateX(80%);
+  transform: translateX(80%);
+  background: #175bf5;
+  border-color: #175bf5;
+}
+
+.emotion-9[data-disabled] {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-10 {
   background-color: rgba(84,94,255,0);
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.emotion-11>div {
+.emotion-10>div {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1rem;
@@ -194,7 +225,7 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-11 span[role='presentation'] {
+.emotion-10 span[role='presentation'] {
   padding: 0 0.75rem;
   min-height: 2.5rem;
   -webkit-align-items: center;
@@ -213,7 +244,7 @@
   font-weight: 700;
 }
 
-.emotion-11[role='option'] {
+.emotion-10[role='option'] {
   padding: 0 0.75rem;
   min-height: 2.5rem;
   display: -webkit-box;
@@ -226,19 +257,19 @@
   gap: 0.75rem;
 }
 
-.emotion-11[role='option']:hover {
+.emotion-10[role='option']:hover {
   cursor: initial;
 }
 
-.emotion-11[data-focus-visible] {
+.emotion-10[data-focus-visible] {
   background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-11[aria-selected='true'] {
+.emotion-10[aria-selected='true'] {
   background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-11[aria-selected='true']>div {
+.emotion-10[aria-selected='true']>div {
   color: #1552DD;
   font-family: Roboto;
   font-weight: 500;
@@ -247,11 +278,11 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-11[aria-selected='true'][data-focus-visible] {
+.emotion-10[aria-selected='true'][data-focus-visible] {
   background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-13 {
+.emotion-12 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -291,13 +322,13 @@
   letter-spacing: 0.00625rem;
 }
 
-.emotion-13 img {
+.emotion-12 img {
   border-radius: 6.25rem;
   width: 100%;
   height: 100%;
 }
 
-.emotion-14 {
+.emotion-13 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -313,17 +344,17 @@
   justify-content: center;
 }
 
-.emotion-15 {
+.emotion-14 {
   fill: #1249C4;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-15 * {
+.emotion-14 * {
   fill: #1249C4;
 }
 
-.emotion-19 {
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -340,13 +371,13 @@
   cursor: not-allowed;
 }
 
-.emotion-20 {
+.emotion-19 {
   display: block;
   cursor: pointer;
   position: relative;
 }
 
-.emotion-20>span:nth-of-type(2) {
+.emotion-19>span:nth-of-type(2) {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   width: 1.25rem;
@@ -356,13 +387,13 @@
   border-radius: 0.25rem;
 }
 
-.emotion-20 svg {
+.emotion-19 svg {
   visibility: hidden;
   opacity: 0;
 }
 
-.emotion-20:hover,
-.emotion-20[data-focus-visible='true'] {
+.emotion-19:hover,
+.emotion-19[data-focus-visible='true'] {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   background: rgba(84,94,255,0.06);
@@ -370,49 +401,49 @@
   border-radius: 100%;
 }
 
-.emotion-20[data-selected='true']:hover,
-.emotion-20[data-indeterminate='true']:hover {
+.emotion-19[data-selected='true']:hover,
+.emotion-19[data-indeterminate='true']:hover {
   background: none;
   box-shadow: none;
 }
 
-.emotion-20[data-selected='true']>span:last-child,
-.emotion-20[data-indeterminate='true']>span:last-child {
+.emotion-19[data-selected='true']>span:last-child,
+.emotion-19[data-indeterminate='true']>span:last-child {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   border-color: #175bf5;
   background: #175bf5;
 }
 
-.emotion-20[data-selected='true'] svg,
-.emotion-20[data-indeterminate='true'] svg {
+.emotion-19[data-selected='true'] svg,
+.emotion-19[data-indeterminate='true'] svg {
   visibility: visible;
   opacity: 1;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
-.emotion-20[data-disabled='true'] {
+.emotion-19[data-disabled='true'] {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-20[data-disabled='true']:hover {
+.emotion-19[data-disabled='true']:hover {
   background: none;
   box-shadow: none;
 }
 
-.emotion-22 {
+.emotion-21 {
   fill: #ffffff;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-22 * {
+.emotion-21 * {
   fill: #ffffff;
 }
 
-.emotion-26 label {
+.emotion-25 label {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -429,7 +460,7 @@
   cursor: pointer;
 }
 
-.emotion-26 label:before {
+.emotion-25 label:before {
   content: '';
   display: inline-block;
   width: 1.25rem;
@@ -442,22 +473,22 @@
   background: rgba(84,94,255,0);
 }
 
-.emotion-26 label:hover::before {
+.emotion-25 label:hover::before {
   background: rgba(84,94,255,0.06);
   box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
 }
 
-.emotion-26 label[data-selected='true']:before {
+.emotion-25 label[data-selected='true']:before {
   border-color: #175bf5;
   border-radius: 50%;
 }
 
-.emotion-26 label[data-selected='true']:hover::before {
+.emotion-25 label[data-selected='true']:hover::before {
   background: none;
   box-shadow: none;
 }
 
-.emotion-26 label[data-selected='true']:after {
+.emotion-25 label[data-selected='true']:after {
   content: '';
   display: block;
   position: absolute;
@@ -470,12 +501,12 @@
   animation: circle 0.15s ease-in-out;
 }
 
-.emotion-26 label[data-disabled='true'] {
+.emotion-25 label[data-disabled='true'] {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-26 label[data-disabled='true']:hover::before {
+.emotion-25 label[data-disabled='true']:hover::before {
   background: none;
   box-shadow: none;
 }
@@ -537,36 +568,34 @@
               <div
                 class="emotion-8"
               >
-                <div
-                  class="emotion-9 emotion-10"
+                <label
+                  class="emotion-9"
+                  data-disabled="true"
+                  data-rac=""
+                  data-testid="undefined_undefined_switch"
                 >
-                  <div
-                    style="position: relative; display: inline-block; text-align: left; opacity: 0.5; direction: ltr; border-radius: 4px; transition: opacity 0.25s; user-select: none;"
+                  <span
+                    style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
                   >
-                    <div
-                      class="react-switch-bg"
-                      style="height: 8px; width: 36px; margin: 6px; position: relative; background: rgb(219, 225, 235); border-radius: 4px; cursor: default; transition: background 0.25s;"
-                    />
-                    <div
-                      class="react-switch-handle"
-                      style="height: 20px; width: 20px; background: rgb(243, 245, 248); display: inline-block; cursor: default; border-radius: 50%; position: absolute; transform: translateX(0px); top: 0px; outline: 0; border: 0px; transition: background-color 0.25s, transform 0.25s, box-shadow 0.15s;"
-                    />
                     <input
-                      aria-checked="false"
-                      data-testid="switch"
                       disabled=""
                       role="switch"
-                      style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px;"
                       type="checkbox"
                     />
-                  </div>
-                </div>
+                  </span>
+                  <div
+                    class="bar"
+                  />
+                  <div
+                    class="indicator"
+                  />
+                </label>
               </div>
             </li>
             <li
               aria-disabled="true"
               aria-selected="false"
-              class="emotion-11 "
+              class="emotion-10 "
               data-key="4"
               data-testid="ictinus_list_item_4"
               id="react-aria-:r4j:-option-4"
@@ -576,14 +605,14 @@
                 class="emotion-8"
               >
                 <div
-                  class="emotion-13"
+                  class="emotion-12"
                   data-testid="_avatar"
                 >
                   <span
-                    class="emotion-14"
+                    class="emotion-13"
                   >
                     <svg
-                      class="emotion-15"
+                      class="emotion-14"
                       fill="none"
                       viewBox="0 0 14 17"
                       xmlns="http://www.w3.org/2000/svg"
@@ -621,10 +650,10 @@
                 class="emotion-8"
               >
                 <div
-                  class="emotion-19"
+                  class="emotion-18"
                 >
                   <label
-                    class="emotion-20"
+                    class="emotion-19"
                     data-disabled="true"
                     data-rac=""
                     data-testid="undefined_undefined_checkbox"
@@ -639,10 +668,10 @@
                       />
                     </span>
                     <span
-                      class="emotion-14"
+                      class="emotion-13"
                     >
                       <svg
-                        class="emotion-22"
+                        class="emotion-21"
                         viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -689,7 +718,7 @@
                 class="emotion-8"
               >
                 <div
-                  class="emotion-26"
+                  class="emotion-25"
                   data-testid="undefined_radio_6_container"
                 >
                   <label

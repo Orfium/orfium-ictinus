@@ -1,7 +1,6 @@
 import List, { ListItem, ListItemAction, ListItemText } from '../index';
 import { FIGMA_URL } from '../../../utils/common';
-import { Radio, CheckBox } from '../../Controls';
-import Switch from '../../Switch';
+import { Radio, CheckBox, Switch } from '../../Controls';
 import Avatar from '../../Avatar';
 import Box from '../../Box';
 import { useState } from 'react';
@@ -24,7 +23,6 @@ export default {
 export const ListItemCompilations = {
   render: () => {
     const [selectedKeys, setSelectedKeys] = useState(new Set([]));
-    const [selectedRadio, setSelectedRadio] = useState('');
     return (
       <>
         <Box mb={'3'}>
@@ -122,13 +120,13 @@ export const ListItemCompilations = {
             <ListItem key={'9'} textValue={'Option Switch'}>
               <ListItemText>Option Switch</ListItemText>
               <ListItemAction>
-                <Switch isChecked={selectedKeys.has(`9`)} onChange={() => {}} />
+                <Switch isSelected={selectedKeys.has(`9`)} onChange={() => {}} />
               </ListItemAction>
             </ListItem>
             <ListItem key={'10'} rowSize={'compact'} textValue={'Option Switch'}>
               <ListItemText>Option Switch (compact)</ListItemText>
               <ListItemAction>
-                <Switch isChecked={selectedKeys.has(`10`)} onChange={() => {}} />
+                <Switch isSelected={selectedKeys.has(`10`)} onChange={() => {}} />
               </ListItemAction>
             </ListItem>
           </List>
@@ -166,7 +164,7 @@ export const DisabledListItem = {
           <ListItem key={'3'} textValue={'Option Switch'}>
             <ListItemText>This Switch Option is disabled</ListItemText>
             <ListItemAction>
-              <Switch isDisabled isChecked={false} onChange={() => {}} />
+              <Switch isDisabled isSelected={false} onChange={() => {}} />
             </ListItemAction>
           </ListItem>
           <ListItem key={'4'} rowSize={'compact'} textValue={'Option Icon/Avatar'}>

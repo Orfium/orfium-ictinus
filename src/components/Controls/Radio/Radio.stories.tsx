@@ -48,9 +48,9 @@ export const RadioLabelPlacement = {
           onChange={setSelected1}
           sx={{ display: 'flex', flexDirection: 'column', gap: '32px' }}
         >
-          <Radio value="option 1">Option 1</Radio>
-          <Radio value="option 2">Option 2</Radio>
-          <Radio value="option 3">Option 3</Radio>
+          <Radio value="option 1">Right Label 1</Radio>
+          <Radio value="option 2">Right Label 2</Radio>
+          <Radio value="option 3">Right Label 3</Radio>
         </RadioGroup>
         <RadioGroup
           value={selected2}
@@ -58,13 +58,13 @@ export const RadioLabelPlacement = {
           sx={{ display: 'flex', flexDirection: 'column', gap: '32px' }}
         >
           <Radio value="option 1" labelConfig={{ placement: 'left' }}>
-            Option 1
+            Left Label 1
           </Radio>
           <Radio value="option 2" labelConfig={{ placement: 'left' }}>
-            Option 2
+            Left Label 2
           </Radio>
           <Radio value="option 3" labelConfig={{ placement: 'left' }}>
-            Option 3
+            Left Label 3
           </Radio>
         </RadioGroup>
       </div>
@@ -84,9 +84,9 @@ export const RadioLabelSizes = {
           onChange={setSelected1}
           sx={{ display: 'flex', flexDirection: 'column', gap: '32px' }}
         >
-          <Radio value="option 1">Normal Option 1</Radio>
-          <Radio value="option 2">Normal Option 2</Radio>
-          <Radio value="option 3">Normal Option 3</Radio>
+          <Radio value="option 1">Normal Label 1</Radio>
+          <Radio value="option 2">Normal Label 2</Radio>
+          <Radio value="option 3">Normal Label 3</Radio>
         </RadioGroup>
         <RadioGroup
           value={selected2}
@@ -94,13 +94,13 @@ export const RadioLabelSizes = {
           sx={{ display: 'flex', flexDirection: 'column', gap: '32px' }}
         >
           <Radio value="option 1" labelConfig={{ size: 'large' }}>
-            Large Option 1
+            Large Label 1
           </Radio>
           <Radio value="option 2" labelConfig={{ size: 'large' }}>
-            Large Option 2
+            Large Label 2
           </Radio>
           <Radio value="option 3" labelConfig={{ size: 'large' }}>
-            Large Option 3
+            Large Label 3
           </Radio>
         </RadioGroup>
       </div>
@@ -119,7 +119,7 @@ export const RadioWithHelptext = {
         sx={{ display: 'flex', flexDirection: 'column', gap: '32px' }}
       >
         <Radio value="option 1">Option 1</Radio>
-        <Radio value="option 2" labelConfig={{ helpText: 'This is the help text of option 2' }}>
+        <Radio value="option 2" labelConfig={{ helpText: 'Short text that adds context' }}>
           Option 2
         </Radio>
         <Radio value="option 3">Option 3</Radio>
