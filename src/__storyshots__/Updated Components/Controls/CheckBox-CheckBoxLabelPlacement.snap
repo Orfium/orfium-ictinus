@@ -58,12 +58,6 @@
   border-radius: 100%;
 }
 
-.emotion-2[data-selected='true']:hover,
-.emotion-2[data-indeterminate='true']:hover {
-  background: none;
-  box-shadow: none;
-}
-
 .emotion-2[data-selected='true']>span:last-child,
 .emotion-2[data-indeterminate='true']>span:last-child {
   -webkit-transition: all 0.2s;
@@ -224,7 +218,7 @@
             class="emotion-6"
             data-testid="undefined_radio_label_label"
           >
-            Option
+            Right Label
           </div>
         </div>
       </div>
@@ -288,7 +282,7 @@
             class="emotion-6"
             data-testid="undefined_radio_label_label"
           >
-            Option
+            Left Label
           </div>
         </div>
       </div>

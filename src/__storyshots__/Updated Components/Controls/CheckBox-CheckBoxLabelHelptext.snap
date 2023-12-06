@@ -43,12 +43,6 @@
   border-radius: 100%;
 }
 
-.emotion-1[data-selected='true']:hover,
-.emotion-1[data-indeterminate='true']:hover {
-  background: none;
-  box-shadow: none;
-}
-
 .emotion-1[data-selected='true']>span:last-child,
 .emotion-1[data-indeterminate='true']>span:last-child {
   -webkit-transition: all 0.2s;
@@ -189,7 +183,7 @@
         class="emotion-6"
         data-testid="undefined_radio_label_helpText"
       >
-        This is the helptext of the option
+        Short text that adds context
       </div>
     </div>
   </div>

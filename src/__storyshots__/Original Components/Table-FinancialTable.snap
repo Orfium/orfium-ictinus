@@ -65,12 +65,6 @@
   border-radius: 100%;
 }
 
-.emotion-4[data-selected='true']:hover,
-.emotion-4[data-indeterminate='true']:hover {
-  background: none;
-  box-shadow: none;
-}
-
 .emotion-4[data-selected='true']>span:last-child,
 .emotion-4[data-indeterminate='true']>span:last-child {
   -webkit-transition: all 0.2s;

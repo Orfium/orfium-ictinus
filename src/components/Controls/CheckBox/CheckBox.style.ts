@@ -67,11 +67,6 @@ export const checkboxStyles =
 
       &[data-selected='true'],
       &[data-indeterminate='true'] {
-        &:hover {
-          background: none;
-          box-shadow: none;
-        }
-
         & > span:last-child {
           transition: all 0.2s;
 

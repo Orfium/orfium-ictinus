@@ -89,11 +89,11 @@ export const CheckBoxLabelPlacement = {
   render: () => (
     <>
       <Stack height={50}>
-        <CheckBox value="label">Option</CheckBox>
+        <CheckBox value="label">Right Label</CheckBox>
       </Stack>
       <Stack>
         <CheckBox value="label" labelConfig={{ placement: 'left' }}>
-          Option
+          Left Label
         </CheckBox>
       </Stack>
     </>
@@ -106,11 +106,11 @@ export const CheckBoxLabelSizes = {
   render: () => (
     <>
       <Stack height={50}>
-        <CheckBox value="label">Normal Option</CheckBox>
+        <CheckBox value="label">Normal Label</CheckBox>
       </Stack>
       <Stack>
         <CheckBox value="label" labelConfig={{ size: 'large' }}>
-          Large Option
+          Large Label
         </CheckBox>
       </Stack>
     </>
@@ -121,7 +121,7 @@ export const CheckBoxLabelSizes = {
 
 export const CheckBoxLabelHelptext = {
   render: () => (
-    <CheckBox value="label" labelConfig={{ helpText: 'This is the helptext of the option' }}>
+    <CheckBox value="label" labelConfig={{ helpText: 'Short text that adds context' }}>
       Option
     </CheckBox>
   ),
