@@ -1,10 +1,12 @@
 import useTheme from 'hooks/useTheme';
 import * as React from 'react';
+import { useRef } from 'react';
 import type { DivProps } from 'utils/common';
 
 import iconSelector from './assets/iconSelector';
 import { iconContainerStyles, iconStyles } from './Icon.style';
 import type { AcceptedIconNames } from './Icon.types';
+import useCombinedRefs from '../../hooks/useCombinedRefs';
 import type { TestProps } from '../../utils/types';
 
 export type IconProps = {
@@ -32,6 +34,7 @@ const Icon = React.forwardRef<HTMLDivElement, IconProps>((props, ref) => {
     dataTestId,
     ...rest
   } = props;
+  const combinedRef = useCombinedRefs<HTMLDivElement>(ref, useRef(null));
   const isInteractive = Boolean(onClick);
   const { hasHover = isInteractive } = props;
   const Icon = iconSelector[name];
@@ -41,11 +44,11 @@ const Icon = React.forwardRef<HTMLDivElement, IconProps>((props, ref) => {
       onClick={onClick}
       css={iconContainerStyles({ size, hasHover, isInteractive })}
       data-testid={dataTestId}
-      ref={ref}
+      ref={combinedRef}
       tabIndex={isInteractive ? 0 : undefined}
       onKeyDown={(e) => {
         if (e.key === 'Enter' && onClick) {
-          onClick(null);
+          combinedRef.current.click();
         }
       }}
       {...rest}
