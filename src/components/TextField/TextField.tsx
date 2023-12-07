@@ -115,6 +115,7 @@ const TextField = React.forwardRef<HTMLInputElement, Props & InputProps & TestPr
       handleKeyDown,
       handleTyping,
     } = useMultiTextFieldUtils({
+      multi,
       multiValues,
       maxMultiValues,
       onMultiValueCreate,
