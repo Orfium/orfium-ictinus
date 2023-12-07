@@ -1,0 +1,68 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
+import CheckBox from './CheckBox';
+import * as CheckBoxStories from './CheckBox.stories';
+
+<Meta of={CheckBoxStories} />
+
+<SectionHeader title={'CheckBox'} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
+
+## Overview
+
+A universal CheckBox component that the input component for any forms.
+
+## Props
+
+<ArgTypes of={CheckBox} />
+
+## Usage
+
+<UsageGuidelines
+  guidelines={['Use if you have multiple options and need to select 1+ items.']}
+  policies={['If you can select exactly 1 items use radio buttons']}
+/>
+
+<SubsectionHeader title="Variants" />
+
+### Simple CheckBox
+
+<Canvas of={CheckBoxStories.SimpleCheckBox} />
+
+### Indeterminate CheckBox
+
+<Canvas of={CheckBoxStories.IndeterminateCheckBox} />
+
+### CheckBox label placement
+
+Label can be placed either `left` or `right` of the checkbox.
+
+<Tip>
+  The labelConfig prop of each CheckBox includes an sx prop in order to add custom styles on the
+  container that wraps the checkbox input and the label
+</Tip>
+
+<Canvas of={CheckBoxStories.CheckBoxLabelPlacement} />
+
+### CheckBox label sizes
+
+Label can be either a string or a custom component. In the case of the string, there are 2 sizes (declared inside the labelConfig), `normal` and `large`
+
+<Canvas of={CheckBoxStories.CheckBoxLabelSizes} />
+
+### CheckBox label helptext
+
+CheckBox can include a helptext under the label.
+
+<Canvas of={CheckBoxStories.CheckBoxLabelHelptext} />
+
+### Disabled CheckBox
+
+<Canvas of={CheckBoxStories.DisabledCheckBox} />
+
+### Playground
+
+<Canvas of={CheckBoxStories.Playground} />
