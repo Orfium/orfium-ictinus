@@ -71,29 +71,22 @@
 }
 
 .emotion-3 {
-  padding: 0.125rem;
+  width: 0.875rem;
+  height: 0.875rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  cursor: pointer;
 }
 
 .emotion-4 {
-  fill: #0f0f17;
   width: 0.875rem;
   height: 0.875rem;
 }
 
-.emotion-4 * {
-  fill: #0f0f17;
+.emotion-4 path {
+  fill: #0f0f17!important;
 }
 
 .emotion-5 {
@@ -200,33 +193,23 @@
           aria-hidden="false"
           class="emotion-2"
         >
-          <span
+          <div
             class="emotion-3"
             data-testid="chip-delete"
+            tabindex="0"
           >
             <svg
               class="emotion-4"
-              viewBox="0 0 24 24"
+              fill="none"
+              viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
             >
-              <g
-                fill="none"
-                fill-rule="evenodd"
-                id="\\uD83D\\uDD36-Symbols"
-                stroke="none"
-                stroke-width="1"
-              >
-                <g
-                  id="Close"
-                >
-                  <path
-                    d="M17.6568542,4.92893219 L19.0710678,6.34314575 L13.4139322,11.9999322 L19.0710678,17.6568542 L17.6568542,19.0710678 L11.9999322,13.4139322 L6.34314575,19.0710678 L4.92893219,17.6568542 L10.5849322,11.9999322 L4.92893219,6.34314575 L6.34314575,4.92893219 L11.9999322,10.5849322 L17.6568542,4.92893219 Z"
-                  />
-                </g>
-              </g>
+              <path
+                d="M10.0442 11.1281L6.40819 14.7495C6.24522 14.9118 6.0561 14.9941 5.84084 14.9965C5.62558 14.9988 5.43411 14.9165 5.26642 14.7495C5.09872 14.5824 5.01487 14.396 5.01487 14.19C5.01487 13.9841 5.09872 13.7976 5.26642 13.6306L8.92076 9.99085L5.24805 6.35114C5.08507 6.18882 5.0024 6.00656 5.00005 5.80435C4.99769 5.60216 5.08035 5.41756 5.24805 5.25054C5.41574 5.08351 5.60297 5 5.80975 5C6.01653 5 6.20377 5.08351 6.37145 5.25054L10.0074 8.85364L13.6067 5.26884C13.7697 5.10651 13.9588 5.02417 14.174 5.02183C14.3893 5.01947 14.5808 5.10181 14.7485 5.26884C14.9162 5.43585 15 5.62843 15 5.84658C15 6.06473 14.9162 6.25731 14.7485 6.42433L11.1309 10.0457L14.7668 13.6672C14.9176 13.8173 14.9941 13.9995 14.9965 14.2139C14.9988 14.4283 14.9223 14.6129 14.7668 14.7678C14.6114 14.9226 14.4303 15 14.2235 15C14.0167 15 13.8356 14.9226 13.6802 14.7678L10.0442 11.1281Z"
+                fill="#6265AD"
+              />
             </svg>
-          </span>
+          </div>
         </div>
       </button>
     </div>
