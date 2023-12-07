@@ -10,7 +10,7 @@ import { getTextInputBaseTokens } from './TextInputBase.tokens';
 import { generateTestDataId } from '../../utils/helpers';
 import type { TestProps } from '../../utils/types';
 import Icon from 'components/Icon';
-import type { AcceptedIconNames } from 'components/Icon/types';
+import type { AcceptedIconNames } from 'components/Icon';
 
 export type TextInputBaseProps = {
   /** The label of the text field that will be used as a placeholder and a label */
@@ -67,7 +67,11 @@ const TextInputBase: FCC<
       css={hintMessageStyle({ status, isDisabled })}
     >
       {!isDisabled && status.type === 'error' && size === 'normal' && (
-        <Icon color={tokens('textColor.errorHintColor')} name="warning" size={12} />
+        <Icon
+          color={tokens('textColor.errorHintColor')}
+          name="warning"
+          size={tokens('hintIconSize')}
+        />
       )}
       <span id={status.id}>{status.hintMessage}</span>
     </div>

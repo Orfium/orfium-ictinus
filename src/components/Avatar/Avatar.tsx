@@ -1,18 +1,11 @@
-import useTheme from 'hooks/useTheme';
 import React, { useMemo } from 'react';
 
-import { avatarStyle } from './Avatar.style';
-import type { AvatarTokens} from './Avatar.tokens';
-import { getAvatarTokens, parseAvatarIconSize } from './Avatar.tokens';
+import UserAvatar from './assets/user-avatar.svg?react';
+import { avatarStyle, iconStyles } from './Avatar.style';
 import type { AvatarProps } from './Avatar.types';
-import Icon from '../Icon';
 
 const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
   ({ src = '', size = 1, color = 'blue', className, dataTestPrefixId = '', children }, ref) => {
-    const theme = useTheme();
-
-    const tokens = getAvatarTokens(theme);
-
     const avatarContent = useMemo(() => {
       if (src) {
         return <img src={src} />;
@@ -22,14 +15,8 @@ const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
         return children;
       }
 
-      return (
-        <Icon
-          color={tokens(`textColor.${color}` as AvatarTokens)}
-          name="userAvatar"
-          size={parseFloat(tokens(`size.${size}` as AvatarTokens, parseAvatarIconSize))}
-        />
-      );
-    }, [children, color, size, src, tokens]);
+      return <UserAvatar css={iconStyles({ size, color })} />;
+    }, [children, color, size, src]);
 
     return (
       <div

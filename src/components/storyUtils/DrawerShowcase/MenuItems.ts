@@ -4,7 +4,7 @@ export const menuItems: DrawerMenuItem[] = [
   {
     name: 'Long Menu Item Name',
     url: '/menu1',
-    iconName: 'ticTacToeArrow',
+    iconName: 'settings',
     isVisible: true,
     options: [
       {
@@ -14,28 +14,28 @@ export const menuItems: DrawerMenuItem[] = [
           test: 'hello from state',
         },
         isVisible: true,
-        iconName: 'catalogOverview',
+        iconName: 'catalog',
         options: [],
       },
       {
         name: 'SubMenu2',
         url: '/submenu2',
         isVisible: true,
-        iconName: 'ownershipValidation',
+        iconName: 'verified',
         options: [],
       },
       {
         name: 'SubMenu3',
         url: '/submenu3',
         isVisible: true,
-        iconName: 'conflicts',
+        iconName: 'conflict',
         options: [],
       },
       {
         name: 'SubMenu4',
         url: '/submenu4',
         isVisible: true,
-        iconName: 'referenceFile',
+        iconName: 'bookmark',
         options: [],
       },
     ],
@@ -50,14 +50,14 @@ export const menuItems: DrawerMenuItem[] = [
         name: 'SubMenu5',
         url: '/submenu5',
         isVisible: true,
-        iconName: 'musicNote',
+        iconName: 'asset',
         options: [],
       },
       {
         name: 'SubMenu6',
         url: '/submenu6',
         isVisible: true,
-        iconName: 'musicNote',
+        iconName: 'asset',
         options: [],
       },
     ],
@@ -65,14 +65,14 @@ export const menuItems: DrawerMenuItem[] = [
   {
     name: 'Menu3',
     url: '/menu3',
-    iconName: 'referenceFile',
+    iconName: 'bookmark',
     isVisible: true,
     options: [
       {
         name: 'SubMenu7',
         url: '/submenu7',
         isVisible: true,
-        iconName: 'musicNote',
+        iconName: 'asset',
         options: [],
       },
       {
@@ -86,7 +86,7 @@ export const menuItems: DrawerMenuItem[] = [
         name: 'SubMenu9',
         url: '/submenu9',
         isVisible: true,
-        iconName: 'conflicts',
+        iconName: 'conflict',
         options: [],
       },
     ],
@@ -94,7 +94,7 @@ export const menuItems: DrawerMenuItem[] = [
   {
     name: 'Menu4',
     url: '/menu4',
-    iconName: 'musicNote',
+    iconName: 'asset',
     isVisible: true,
     options: [],
   },
