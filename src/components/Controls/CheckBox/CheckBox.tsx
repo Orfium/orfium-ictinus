@@ -54,10 +54,9 @@ const CheckBox = React.forwardRef<HTMLInputElement, CheckBoxProps>((props, ref) 
         ref={ref}
         data-testid={`${dataTestPrefixId}_${value}_checkbox`}
       >
-        {/** @TODO replace this icon one Icon components are revisited for v5 */}
         <Icon
           name={isIndeterminate ? 'minus' : 'check'}
-          size={16}
+          size={tokens('checkbox.size')}
           color={tokens('checkbox.iconColor.pressed')}
           dataTestPrefixId={`${dataTestPrefixId}_${value}_${
             isIndeterminate ? 'minus' : 'checkmark'

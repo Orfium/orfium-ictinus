@@ -46,11 +46,15 @@
   position: relative;
 }
 
-.emotion-4>span:nth-of-type(2) {
+.emotion-4>div {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   width: 1.25rem;
   height: 1.25rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   box-sizing: border-box;
   border: 0.125rem solid #b9cdfc;
   border-radius: 0.25rem;
@@ -70,8 +74,8 @@
   border-radius: 100%;
 }
 
-.emotion-4[data-selected='true']>span:last-child,
-.emotion-4[data-indeterminate='true']>span:last-child {
+.emotion-4[data-selected='true']>div,
+.emotion-4[data-indeterminate='true']>div {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   border-color: #175bf5;
@@ -97,8 +101,8 @@
 }
 
 .emotion-5 {
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -106,8 +110,8 @@
 }
 
 .emotion-6 {
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .emotion-6 path {
@@ -269,15 +273,6 @@
 
 .emotion-17 .tippy-arrow::before {
   color: #1B214F;
-}
-
-.emotion-18 {
-  width: 1.25rem;
-  height: 1.25rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .emotion-19 {
@@ -652,7 +647,7 @@
                   placement="bottom"
                 >
                   <div
-                    class="emotion-18"
+                    class="emotion-5"
                     data-testid="table_icon_tooltip_title"
                   >
                     <svg
@@ -740,7 +735,7 @@
                   placement="right"
                 >
                   <div
-                    class="emotion-18"
+                    class="emotion-5"
                     data-testid="table_icon_tooltip_surname"
                   >
                     <svg
@@ -818,7 +813,7 @@
                   placement="right"
                 >
                   <div
-                    class="emotion-18"
+                    class="emotion-5"
                     data-testid="table_icon_tooltip_age"
                   >
                     <svg
@@ -988,7 +983,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -1153,7 +1148,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -1318,7 +1313,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -1483,7 +1478,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -1648,7 +1643,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -1813,7 +1808,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -1978,7 +1973,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -2143,7 +2138,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -2308,7 +2303,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -2473,7 +2468,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -2638,7 +2633,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -2803,7 +2798,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -2968,7 +2963,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -3133,7 +3128,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -3298,7 +3293,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -3463,7 +3458,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -3628,7 +3623,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -3793,7 +3788,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -3958,7 +3953,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -4123,7 +4118,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -4288,7 +4283,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -4453,7 +4448,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -4618,7 +4613,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -4783,7 +4778,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -4948,7 +4943,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -5113,7 +5108,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -5278,7 +5273,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -5443,7 +5438,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -5608,7 +5603,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -5773,7 +5768,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -5938,7 +5933,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -6103,7 +6098,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -6268,7 +6263,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -6433,7 +6428,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -6598,7 +6593,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -6763,7 +6758,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -6928,7 +6923,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -7093,7 +7088,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -7258,7 +7253,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -7423,7 +7418,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -7588,7 +7583,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -7753,7 +7748,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -7918,7 +7913,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -8083,7 +8078,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -8248,7 +8243,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -8413,7 +8408,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -8578,7 +8573,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -8743,7 +8738,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -8908,7 +8903,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"
@@ -9073,7 +9068,7 @@
                               type="button"
                             >
                               <div
-                                class="emotion-18"
+                                class="emotion-5"
                               >
                                 <svg
                                   class="emotion-73"

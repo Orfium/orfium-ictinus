@@ -41,11 +41,12 @@ export const checkboxStyles =
       cursor: pointer;
       position: relative;
 
-      & > span:nth-of-type(2) {
+      & > div {
         transition: all 0.2s;
 
         width: ${tokens('checkbox.size')};
         height: ${tokens('checkbox.size')};
+        align-items: center;
         box-sizing: border-box;
 
         border: ${tokens('checkbox.borderWidth')} solid ${tokens('checkbox.borderColor.default')};
@@ -67,7 +68,7 @@ export const checkboxStyles =
 
       &[data-selected='true'],
       &[data-indeterminate='true'] {
-        & > span:last-child {
+        & > div {
           transition: all 0.2s;
 
           border-color: ${tokens('checkbox.borderColor.pressed')};
