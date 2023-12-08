@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { Props as TextFieldProps } from '../TextField';
 
 type Props = Pick<
   TextFieldProps,
+  | 'multi'
   | 'multiValues'
   | 'maxMultiValues'
   | 'onMultiValueCreate'
@@ -14,6 +15,7 @@ type Props = Pick<
 >;
 
 const useMultiTextFieldUtils = ({
+  multi,
   multiValues = [],
   maxMultiValues,
   onMultiValueCreate,
@@ -25,6 +27,12 @@ const useMultiTextFieldUtils = ({
   const [values, setValues] = useState(multiValues);
   const [inputValue, setInputValue] = useState('');
 
+  useEffect(() => {
+    if (multi) {
+      setValues(multiValues);
+    }
+  }, [multiValues, multi]);
+
   const handleValueDelete = (option?: string) => {
     if (option) {
       setValues(values.filter((opt) => opt !== option));
@@ -35,6 +43,10 @@ const useMultiTextFieldUtils = ({
       if (values.length > 0) {
         const lastItem = values[values.length - 1];
         setValues(values.filter((opt) => opt !== lastItem));
+
+        if (onMultiValueDelete) {
+          onMultiValueDelete(lastItem);
+        }
       }
     }
   };
