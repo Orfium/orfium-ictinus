@@ -3,6 +3,7 @@ import Icon from './Icon';
 import IconographyShowcase from '../storyUtils/IconographyShowcase';
 import { FIGMA_URL } from '../../utils/common';
 import { getIconSelectorKnob } from '../../utils/stories';
+import Stack from 'components/storyUtils/Stack';
 
 export default {
   title: 'Updated Components/Icon',
@@ -26,7 +27,14 @@ export const Collection = {
 };
 
 export const InteractiveIcon = {
-  render: () => <Icon name="moreOptions" onClick={() => console.log('click')} size={12} />,
+  render: () => (
+    <Stack>
+      <Icon name="moreOptions" onClick={() => console.log('click')} size={12} />
+      <Icon name="moreOptions" onClick={() => console.log('click')} size={16} />
+      <Icon name="moreOptions" onClick={() => console.log('click')} size={20} />
+      <Icon name="moreOptions" onClick={() => console.log('click')} size={24} />
+    </Stack>
+  ),
 
   name: 'Interactive Icon',
 };
