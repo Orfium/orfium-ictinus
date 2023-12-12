@@ -22,11 +22,15 @@ exports[`Checkbox Component > it renders the Checkbox correctly 1`] = `
   position: relative;
 }
 
-.emotion-1>span:nth-of-type(2) {
+.emotion-1>div {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   width: 1.25rem;
   height: 1.25rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   box-sizing: border-box;
   border: 0.125rem solid #b9cdfc;
   border-radius: 0.25rem;
@@ -46,8 +50,8 @@ exports[`Checkbox Component > it renders the Checkbox correctly 1`] = `
   border-radius: 100%;
 }
 
-.emotion-1[data-selected='true']>span:last-child,
-.emotion-1[data-indeterminate='true']>span:last-child {
+.emotion-1[data-selected='true']>div,
+.emotion-1[data-indeterminate='true']>div {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   border-color: #175bf5;
@@ -73,29 +77,21 @@ exports[`Checkbox Component > it renders the Checkbox correctly 1`] = `
 }
 
 .emotion-2 {
-  padding: 0.125rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
 .emotion-3 {
-  fill: #ffffff;
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
-.emotion-3 * {
-  fill: #ffffff;
+.emotion-3 path {
+  fill: #ffffff!important;
 }
 
 <div>
@@ -116,33 +112,22 @@ exports[`Checkbox Component > it renders the Checkbox correctly 1`] = `
           value="test"
         />
       </span>
-      <span
+      <div
         class="emotion-2"
+        datatestprefixid="test_test_checkmark"
       >
         <svg
           class="emotion-3"
-          viewBox="0 0 24 24"
+          fill="none"
+          viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
         >
-          <g
-            fill="none"
-            fill-rule="evenodd"
-            id="\\\\uD83D\\\\uDD36-Symbols"
-            stroke="none"
-            stroke-width="1"
-          >
-            <g
-              id="Checkmark"
-            >
-              <path
-                d="M16.1742639,3.56546017 L17.5665405,4.95773677 L9.21853983,13.3054602 L14.0871995,18.1742639 L12.6949229,19.5665405 L6.43453983,13.3061575 L6.43653983,13.3044602 L6.43589028,13.3038338 L16.1742639,3.56546017 Z"
-                transform="translate(12.000540, 11.566000) scale(-1, 1) rotate(-90.000000) translate(-12.000540, -11.566000)"
-              />
-            </g>
-          </g>
+          <path
+            d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
+            fill="#6265AD"
+          />
         </svg>
-      </span>
+      </div>
     </label>
   </div>
 </div>

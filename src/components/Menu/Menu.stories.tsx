@@ -35,7 +35,7 @@ export const MenuWithOptionIconAndDifferentColour = {
         onSelect={() => {}}
         items={['My Profile', 'Settings', 'Billing', 'Notifications', 'Logout']}
         buttonText={'More'}
-        rightIconName={'dotsVertical'}
+        rightIconName={'moreOptions'}
         avatar={{
           src: '',
           letter: '',
@@ -45,7 +45,7 @@ export const MenuWithOptionIconAndDifferentColour = {
         onSelect={() => {}}
         items={['My Profile', 'Settings', 'Billing', 'Notifications', 'Logout']}
         buttonText={'More'}
-        rightIconName={'dotsVertical'}
+        rightIconName={'moreOptions'}
         avatar={{
           src: '',
           letter: '',
@@ -55,7 +55,7 @@ export const MenuWithOptionIconAndDifferentColour = {
         onSelect={() => {}}
         items={['My Profile', 'Settings', 'Billing', 'Notifications', 'Logout']}
         buttonText={'More'}
-        rightIconName={'dotsVertical'}
+        rightIconName={'moreOptions'}
         avatar={{
           src: '',
           letter: '',
@@ -74,7 +74,7 @@ export const MenuWithAvatarAndDifferentButtonColour = {
         onSelect={() => {}}
         items={['My Profile', 'Settings', 'Billing', 'Notifications', 'Logout']}
         buttonText={'Tom Cruise'}
-        rightIconName={'arrowDown'}
+        rightIconName={'chevronDown'}
         avatar={{
           src: '',
           letter: 'TC',
@@ -95,7 +95,7 @@ export const MenuWithAvatarAndDifferentButtonColour = {
           'Logout 1',
         ]}
         buttonText={'Tom Cruise'}
-        rightIconName={'arrowDown'}
+        rightIconName={'chevronDown'}
         avatar={{
           src: 'https://mui.com/static/images/avatar/1.jpg',
           letter: 'PV',
@@ -105,7 +105,7 @@ export const MenuWithAvatarAndDifferentButtonColour = {
         onSelect={() => {}}
         items={['My Profile', 'Settings', 'Billing', 'Notifications', 'Logout']}
         buttonText={'Tom Cruise'}
-        rightIconName={'arrowDown'}
+        rightIconName={'chevronDown'}
         avatar={{
           src: '',
           letter: '',
@@ -115,7 +115,7 @@ export const MenuWithAvatarAndDifferentButtonColour = {
         onSelect={() => {}}
         items={['My Profile', 'Settings', 'Billing', 'Notifications', 'Logout']}
         buttonText={'Tom Cruise'}
-        rightIconName={'arrowDown'}
+        rightIconName={'chevronDown'}
         avatar={{
           src: '',
           letter: '',
@@ -136,7 +136,7 @@ export const DisabledMenu = {
         items={['My Profile', 'Settings', 'Billing', 'Notifications', 'Logout']}
         buttonText={'Tom Cruise'}
         isDisabled
-        rightIconName={'arrowDown'}
+        rightIconName={'chevronDown'}
         avatar={{
           src: '',
           letter: 'TC',

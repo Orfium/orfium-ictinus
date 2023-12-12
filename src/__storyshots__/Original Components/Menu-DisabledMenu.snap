@@ -37,6 +37,18 @@
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #ffffff;
   height: auto;
   background-color: #175bf5;
@@ -128,29 +140,21 @@
 }
 
 .emotion-6 {
-  padding: 0.125rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
 .emotion-7 {
-  fill: #ffffff;
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
-.emotion-7 * {
-  fill: #ffffff;
+.emotion-7 path {
+  fill: #ffffff!important;
 }
 
 <div>
@@ -188,28 +192,21 @@
                       Tom Cruise
                     </span>
                   </span>
-                  <span
+                  <div
                     class="emotion-6"
                   >
                     <svg
                       class="emotion-7"
-                      viewBox="0 -3 13 14"
+                      fill="none"
+                      viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
                     >
-                      <g
-                        fill-rule="nonzero"
-                        id="dd-sm-dark"
-                        transform="translate(-5.000000, -9.000000)"
-                      >
-                        <polygon
-                          id="dd_arrow"
-                          points="16 6 16 15 14 15 14 8 7 8 7 6"
-                          transform="translate(11.500000, 10.500000) rotate(-225.000000) translate(-11.500000, -10.500000) "
-                        />
-                      </g>
+                      <path
+                        d="M5.29797 8.64196L9.25345 12.6836C9.36392 12.7965 9.48388 12.8774 9.61333 12.9265C9.74278 12.9755 9.87167 13 10 13C10.1339 13 10.2642 12.9755 10.3908 12.9265C10.5175 12.8774 10.6361 12.7965 10.7466 12.6836L14.702 8.64196C14.9007 8.439 15 8.21608 15 7.97322C15 7.73035 14.9007 7.50744 14.702 7.30448C14.5034 7.1015 14.2852 7.00002 14.0475 7.00002C13.8099 7.00002 13.5917 7.1015 13.3931 7.30448L10 10.7714L6.60694 7.30448C6.40831 7.1015 6.19014 7.00002 5.95246 7.00002C5.71477 7.00002 5.49661 7.1015 5.29797 7.30448C5.09932 7.50744 5 7.73035 5 7.97322C5 8.21608 5.09932 8.439 5.29797 8.64196Z"
+                        fill="#6265AD"
+                      />
                     </svg>
-                  </span>
+                  </div>
                 </span>
               </button>
             </div>

@@ -1,11 +1,9 @@
-import type { ReactNode} from 'react';
+import type { ReactNode } from 'react';
 import React, { useCallback } from 'react';
 
 import useTheme from '../../../../hooks/useTheme';
 import { useTypeColorToColorMatch } from '../../../../hooks/useTypeColorToColorMatch';
 import { generateTestDataId } from '../../../../utils/helpers';
-import Icon from '../../../Icon';
-import type { AcceptedIconNames } from '../../../Icon/types';
 import {
   buttonSpanStyle,
   buttonStyle,
@@ -19,6 +17,8 @@ import {
 } from '../../Filter.style';
 import type { FilterProps } from '../../types';
 import { getTextColor } from '../../utils';
+import type { AcceptedIconNames } from 'components/Icon';
+import Icon from 'components/Icon';
 
 export type FilterBaseProps = {
   children?: ReactNode;
@@ -116,7 +116,7 @@ export const FilterBase = React.forwardRef<HTMLButtonElement, FilterBaseProps>((
               </span>
             </div>
 
-            <Icon name={iconName} size={isDatePicker ? 14 : 7} color={pickIconColor()} />
+            <Icon name={iconName} size={14} color={pickIconColor()} />
           </div>
         </div>
 
@@ -126,7 +126,8 @@ export const FilterBase = React.forwardRef<HTMLButtonElement, FilterBaseProps>((
             <div css={dividedButtonStyle(buttonStyleProps)}>
               <Icon
                 size={19}
-                name="closeTag"
+                name="close"
+                hasHover={false}
                 color={pickIconColor(true)}
                 onClick={(e) => {
                   e.stopPropagation();

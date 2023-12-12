@@ -71,7 +71,7 @@ const Toast: React.FCC<ToastProps> = ({
             onClick={() => setIsExpandedState(!isExpandedState)}
             data-testid={generateTestDataId('toast-expand', dataTestId)}
           >
-            <Icon name="chevronLargeDown" color="#fff" size={20} />
+            <Icon name="chevronDown" color="#fff" size={20} />
           </span>
 
           <span

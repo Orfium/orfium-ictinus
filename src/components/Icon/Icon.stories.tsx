@@ -1,91 +1,54 @@
+import { number, text, withKnobs } from '@storybook/addon-knobs';
 import Icon from './Icon';
-import Stack from '../storyUtils/Stack';
-import PresentComponent from '../storyUtils/PresentComponent';
-import iconSelector from './assets/iconSelector';
+import IconographyShowcase from '../storyUtils/IconographyShowcase';
 import { FIGMA_URL } from '../../utils/common';
-import { AcceptedIconNames } from './types';
+import { getIconSelectorKnob } from '../../utils/stories';
+import Stack from 'components/storyUtils/Stack';
 
 export default {
-  title: 'Original Components/Icon',
+  title: 'Updated Components/Icon',
   component: Icon,
 
   parameters: {
     design: [
       {
         type: 'figma',
-        name: 'Icons',
-        url: `${FIGMA_URL}?node-id=99%3A3192`,
+        name: 'Icon',
+        url: `${FIGMA_URL}?node-id=3325%3A58246`,
       },
     ],
   },
 };
 
-export const IconsGallery = {
-  render: () => (
-    <Stack>
-      {Object.keys(iconSelector)
-        .sort((a, b) => a.localeCompare(b))
-        .map((iconName) => (
-          <PresentComponent key={iconName} name={iconName} width={150}>
-            <Icon name={iconName as AcceptedIconNames} color={'darkGrey'} />
-          </PresentComponent>
-        ))}
-    </Stack>
-  ),
+export const Collection = {
+  render: () => <IconographyShowcase />,
 
-  name: 'Icons Gallery',
+  name: 'Collection',
 };
 
-export const IconWithColor = {
+export const InteractiveIcon = {
   render: () => (
     <Stack>
-      <PresentComponent name={'primary'}>
-        <Icon name={'add'} color={'primary'} />
-      </PresentComponent>
-      <PresentComponent name={'secondary'}>
-        <Icon name={'add'} color={'secondary'} />
-      </PresentComponent>
-      <PresentComponent name={'success'}>
-        <Icon name={'add'} color={'success'} />
-      </PresentComponent>
-      <PresentComponent name={'error'}>
-        <Icon name={'add'} color={'error'} />
-      </PresentComponent>
-      <PresentComponent name={'info'}>
-        <Icon name={'add'} color={'info'} />
-      </PresentComponent>
-      <PresentComponent name={'warning'}>
-        <Icon name={'add'} color={'warning'} />
-      </PresentComponent>
-      <PresentComponent name={'primary'}>
-        <Icon name={'add'} color={'primary'} />
-      </PresentComponent>
-      <PresentComponent name={'secondary'}>
-        <Icon name={'add'} color={'secondary'} />
-      </PresentComponent>
-      <PresentComponent name={'custom'}>
-        <Icon name={'add'} color={'#de5798'} />
-      </PresentComponent>
+      <Icon name="moreOptions" onClick={() => console.log('click')} size={12} />
+      <Icon name="moreOptions" onClick={() => console.log('click')} size={16} />
+      <Icon name="moreOptions" onClick={() => console.log('click')} size={20} />
+      <Icon name="moreOptions" onClick={() => console.log('click')} size={24} />
     </Stack>
   ),
 
-  name: 'Icon with color',
+  name: 'Interactive Icon',
 };
 
-export const IconWithSize = {
+export const Playground = {
   render: () => (
-    <Stack>
-      <PresentComponent name={'default'}>
-        <Icon name={'add'} />
-      </PresentComponent>
-      <PresentComponent name={'20'}>
-        <Icon name={'add'} size={20} />
-      </PresentComponent>
-      <PresentComponent name={'46'}>
-        <Icon name={'add'} size={46} />
-      </PresentComponent>
-    </Stack>
+    <Icon
+      name={getIconSelectorKnob('name', 'informational')}
+      size={number('size', undefined)}
+      color={text('color', undefined)}
+    />
   ),
-
-  name: 'Icon with size',
+  parameters: {
+    decorators: [withKnobs],
+  },
+  name: 'Playground',
 };

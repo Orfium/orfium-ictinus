@@ -88,29 +88,21 @@
 }
 
 .emotion-6 {
-  padding: 0.125rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
 .emotion-7 {
-  fill: #fff;
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-7 * {
-  fill: #fff;
+.emotion-7 path {
+  fill: #fff!important;
 }
 
 .emotion-8 {
@@ -147,324 +139,268 @@
   background: #175bf5;
 }
 
+.emotion-34 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  color: #686BB3;
+}
+
 <div>
   <div
     style="display: flex; flex-direction: column; padding: 1rem; justify-content: center; align-items: center; width: 768px;"
   >
     <div
-      class="emotion-0"
+      style="display: flex; flex-direction: row; gap: 8px; justify-content: center; align-items: center; width: 768px;"
     >
       <div
-        style="margin: 5px;"
+        class="emotion-0"
       >
         <div
-          class="emotion-1"
+          style="margin: 5px;"
         >
           <div
-            class="emotion-2"
+            class="emotion-1"
           >
             <div
-              class="emotion-3"
+              class="emotion-2"
             >
-              <div>
-                Secondary colored Toast
+              <div
+                class="emotion-3"
+              >
+                <div>
+                  Secondary colored Toast
+                </div>
+              </div>
+              <div
+                class="emotion-4"
+              >
+                <span
+                  class="emotion-5"
+                  data-testid="toast-expand"
+                >
+                  <div
+                    class="emotion-6"
+                  >
+                    <svg
+                      class="emotion-7"
+                      fill="none"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5.29797 8.64196L9.25345 12.6836C9.36392 12.7965 9.48388 12.8774 9.61333 12.9265C9.74278 12.9755 9.87167 13 10 13C10.1339 13 10.2642 12.9755 10.3908 12.9265C10.5175 12.8774 10.6361 12.7965 10.7466 12.6836L14.702 8.64196C14.9007 8.439 15 8.21608 15 7.97322C15 7.73035 14.9007 7.50744 14.702 7.30448C14.5034 7.1015 14.2852 7.00002 14.0475 7.00002C13.8099 7.00002 13.5917 7.1015 13.3931 7.30448L10 10.7714L6.60694 7.30448C6.40831 7.1015 6.19014 7.00002 5.95246 7.00002C5.71477 7.00002 5.49661 7.1015 5.29797 7.30448C5.09932 7.50744 5 7.73035 5 7.97322C5 8.21608 5.09932 8.439 5.29797 8.64196Z"
+                        fill="#6265AD"
+                      />
+                    </svg>
+                  </div>
+                </span>
+                <span
+                  class="emotion-8"
+                  data-testid="toast-close"
+                >
+                  <div
+                    class="emotion-6"
+                  >
+                    <svg
+                      class="emotion-7"
+                      fill="none"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.0442 11.1281L6.40819 14.7495C6.24522 14.9118 6.0561 14.9941 5.84084 14.9965C5.62558 14.9988 5.43411 14.9165 5.26642 14.7495C5.09872 14.5824 5.01487 14.396 5.01487 14.19C5.01487 13.9841 5.09872 13.7976 5.26642 13.6306L8.92076 9.99085L5.24805 6.35114C5.08507 6.18882 5.0024 6.00656 5.00005 5.80435C4.99769 5.60216 5.08035 5.41756 5.24805 5.25054C5.41574 5.08351 5.60297 5 5.80975 5C6.01653 5 6.20377 5.08351 6.37145 5.25054L10.0074 8.85364L13.6067 5.26884C13.7697 5.10651 13.9588 5.02417 14.174 5.02183C14.3893 5.01947 14.5808 5.10181 14.7485 5.26884C14.9162 5.43585 15 5.62843 15 5.84658C15 6.06473 14.9162 6.25731 14.7485 6.42433L11.1309 10.0457L14.7668 13.6672C14.9176 13.8173 14.9941 13.9995 14.9965 14.2139C14.9988 14.4283 14.9223 14.6129 14.7668 14.7678C14.6114 14.9226 14.4303 15 14.2235 15C14.0167 15 13.8356 14.9226 13.6802 14.7678L10.0442 11.1281Z"
+                        fill="#6265AD"
+                      />
+                    </svg>
+                  </div>
+                </span>
               </div>
             </div>
             <div
-              class="emotion-4"
-            >
-              <span
-                class="emotion-5"
-                data-testid="toast-expand"
-              >
-                <span
-                  class="emotion-6"
-                >
-                  <svg
-                    class="emotion-7"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                  >
-                    <g
-                      fill="none"
-                      fill-rule="evenodd"
-                      id="\\uD83D\\uDD36-Symbols"
-                      stroke="none"
-                      stroke-width="1"
-                    >
-                      <g
-                        id="Chevron_Large_Down"
-                      >
-                        <path
-                          d="M15.1900068,4.62555888 L16.6042204,6.03977245 L10.2398322,12.4035589 L16.6042204,18.7678394 L15.1900068,20.182053 L7.41183221,12.4038784 L15.1900068,4.62555888 Z"
-                          transform="translate(12.008026, 12.403806) scale(-1, 1) rotate(-90.000000) translate(-12.008026, -12.403806)"
-                        />
-                      </g>
-                    </g>
-                  </svg>
-                </span>
-              </span>
-              <span
-                class="emotion-8"
-                data-testid="toast-close"
-              >
-                <span
-                  class="emotion-6"
-                >
-                  <svg
-                    class="emotion-7"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                  >
-                    <g
-                      fill="none"
-                      fill-rule="evenodd"
-                      id="\\uD83D\\uDD36-Symbols"
-                      stroke="none"
-                      stroke-width="1"
-                    >
-                      <g
-                        id="Close"
-                      >
-                        <path
-                          d="M17.6568542,4.92893219 L19.0710678,6.34314575 L13.4139322,11.9999322 L19.0710678,17.6568542 L17.6568542,19.0710678 L11.9999322,13.4139322 L6.34314575,19.0710678 L4.92893219,17.6568542 L10.5849322,11.9999322 L4.92893219,6.34314575 L6.34314575,4.92893219 L11.9999322,10.5849322 L17.6568542,4.92893219 Z"
-                        />
-                      </g>
-                    </g>
-                  </svg>
-                </span>
-              </span>
-            </div>
+              class="emotion-11"
+              data-testid="expanded-container"
+            />
           </div>
-          <div
-            class="emotion-11"
-            data-testid="expanded-container"
-          />
         </div>
-      </div>
-      <div
-        style="margin: 5px;"
-      >
         <div
-          class="emotion-1"
+          style="margin: 5px;"
         >
           <div
-            class="emotion-13"
+            class="emotion-1"
           >
             <div
-              class="emotion-3"
+              class="emotion-13"
             >
-              <div>
-                Primary colored Toast
+              <div
+                class="emotion-3"
+              >
+                <div>
+                  Primary colored Toast
+                </div>
+              </div>
+              <div
+                class="emotion-4"
+              >
+                <span
+                  class="emotion-5"
+                  data-testid="toast-expand"
+                >
+                  <div
+                    class="emotion-6"
+                  >
+                    <svg
+                      class="emotion-7"
+                      fill="none"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5.29797 8.64196L9.25345 12.6836C9.36392 12.7965 9.48388 12.8774 9.61333 12.9265C9.74278 12.9755 9.87167 13 10 13C10.1339 13 10.2642 12.9755 10.3908 12.9265C10.5175 12.8774 10.6361 12.7965 10.7466 12.6836L14.702 8.64196C14.9007 8.439 15 8.21608 15 7.97322C15 7.73035 14.9007 7.50744 14.702 7.30448C14.5034 7.1015 14.2852 7.00002 14.0475 7.00002C13.8099 7.00002 13.5917 7.1015 13.3931 7.30448L10 10.7714L6.60694 7.30448C6.40831 7.1015 6.19014 7.00002 5.95246 7.00002C5.71477 7.00002 5.49661 7.1015 5.29797 7.30448C5.09932 7.50744 5 7.73035 5 7.97322C5 8.21608 5.09932 8.439 5.29797 8.64196Z"
+                        fill="#6265AD"
+                      />
+                    </svg>
+                  </div>
+                </span>
+                <span
+                  class="emotion-8"
+                  data-testid="toast-close"
+                >
+                  <div
+                    class="emotion-6"
+                  >
+                    <svg
+                      class="emotion-7"
+                      fill="none"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.0442 11.1281L6.40819 14.7495C6.24522 14.9118 6.0561 14.9941 5.84084 14.9965C5.62558 14.9988 5.43411 14.9165 5.26642 14.7495C5.09872 14.5824 5.01487 14.396 5.01487 14.19C5.01487 13.9841 5.09872 13.7976 5.26642 13.6306L8.92076 9.99085L5.24805 6.35114C5.08507 6.18882 5.0024 6.00656 5.00005 5.80435C4.99769 5.60216 5.08035 5.41756 5.24805 5.25054C5.41574 5.08351 5.60297 5 5.80975 5C6.01653 5 6.20377 5.08351 6.37145 5.25054L10.0074 8.85364L13.6067 5.26884C13.7697 5.10651 13.9588 5.02417 14.174 5.02183C14.3893 5.01947 14.5808 5.10181 14.7485 5.26884C14.9162 5.43585 15 5.62843 15 5.84658C15 6.06473 14.9162 6.25731 14.7485 6.42433L11.1309 10.0457L14.7668 13.6672C14.9176 13.8173 14.9941 13.9995 14.9965 14.2139C14.9988 14.4283 14.9223 14.6129 14.7668 14.7678C14.6114 14.9226 14.4303 15 14.2235 15C14.0167 15 13.8356 14.9226 13.6802 14.7678L10.0442 11.1281Z"
+                        fill="#6265AD"
+                      />
+                    </svg>
+                  </div>
+                </span>
               </div>
             </div>
             <div
-              class="emotion-4"
-            >
-              <span
-                class="emotion-5"
-                data-testid="toast-expand"
-              >
-                <span
-                  class="emotion-6"
-                >
-                  <svg
-                    class="emotion-7"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                  >
-                    <g
-                      fill="none"
-                      fill-rule="evenodd"
-                      id="\\uD83D\\uDD36-Symbols"
-                      stroke="none"
-                      stroke-width="1"
-                    >
-                      <g
-                        id="Chevron_Large_Down"
-                      >
-                        <path
-                          d="M15.1900068,4.62555888 L16.6042204,6.03977245 L10.2398322,12.4035589 L16.6042204,18.7678394 L15.1900068,20.182053 L7.41183221,12.4038784 L15.1900068,4.62555888 Z"
-                          transform="translate(12.008026, 12.403806) scale(-1, 1) rotate(-90.000000) translate(-12.008026, -12.403806)"
-                        />
-                      </g>
-                    </g>
-                  </svg>
-                </span>
-              </span>
-              <span
-                class="emotion-8"
-                data-testid="toast-close"
-              >
-                <span
-                  class="emotion-6"
-                >
-                  <svg
-                    class="emotion-7"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                  >
-                    <g
-                      fill="none"
-                      fill-rule="evenodd"
-                      id="\\uD83D\\uDD36-Symbols"
-                      stroke="none"
-                      stroke-width="1"
-                    >
-                      <g
-                        id="Close"
-                      >
-                        <path
-                          d="M17.6568542,4.92893219 L19.0710678,6.34314575 L13.4139322,11.9999322 L19.0710678,17.6568542 L17.6568542,19.0710678 L11.9999322,13.4139322 L6.34314575,19.0710678 L4.92893219,17.6568542 L10.5849322,11.9999322 L4.92893219,6.34314575 L6.34314575,4.92893219 L11.9999322,10.5849322 L17.6568542,4.92893219 Z"
-                        />
-                      </g>
-                    </g>
-                  </svg>
-                </span>
-              </span>
-            </div>
+              class="emotion-11"
+              data-testid="expanded-container"
+            />
           </div>
-          <div
-            class="emotion-11"
-            data-testid="expanded-container"
-          />
         </div>
-      </div>
-      <div
-        style="margin: 5px;"
-      >
         <div
-          class="emotion-1"
+          style="margin: 5px;"
         >
           <div
-            class="emotion-13"
+            class="emotion-1"
           >
             <div
-              class="emotion-3"
+              class="emotion-13"
             >
-              <div>
-                Default colored Toast
+              <div
+                class="emotion-3"
+              >
+                <div>
+                  Default colored Toast
+                </div>
+              </div>
+              <div
+                class="emotion-4"
+              >
+                <span
+                  class="emotion-5"
+                  data-testid="toast-expand"
+                >
+                  <div
+                    class="emotion-6"
+                  >
+                    <svg
+                      class="emotion-7"
+                      fill="none"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5.29797 8.64196L9.25345 12.6836C9.36392 12.7965 9.48388 12.8774 9.61333 12.9265C9.74278 12.9755 9.87167 13 10 13C10.1339 13 10.2642 12.9755 10.3908 12.9265C10.5175 12.8774 10.6361 12.7965 10.7466 12.6836L14.702 8.64196C14.9007 8.439 15 8.21608 15 7.97322C15 7.73035 14.9007 7.50744 14.702 7.30448C14.5034 7.1015 14.2852 7.00002 14.0475 7.00002C13.8099 7.00002 13.5917 7.1015 13.3931 7.30448L10 10.7714L6.60694 7.30448C6.40831 7.1015 6.19014 7.00002 5.95246 7.00002C5.71477 7.00002 5.49661 7.1015 5.29797 7.30448C5.09932 7.50744 5 7.73035 5 7.97322C5 8.21608 5.09932 8.439 5.29797 8.64196Z"
+                        fill="#6265AD"
+                      />
+                    </svg>
+                  </div>
+                </span>
+                <span
+                  class="emotion-8"
+                  data-testid="toast-close"
+                >
+                  <div
+                    class="emotion-6"
+                  >
+                    <svg
+                      class="emotion-7"
+                      fill="none"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.0442 11.1281L6.40819 14.7495C6.24522 14.9118 6.0561 14.9941 5.84084 14.9965C5.62558 14.9988 5.43411 14.9165 5.26642 14.7495C5.09872 14.5824 5.01487 14.396 5.01487 14.19C5.01487 13.9841 5.09872 13.7976 5.26642 13.6306L8.92076 9.99085L5.24805 6.35114C5.08507 6.18882 5.0024 6.00656 5.00005 5.80435C4.99769 5.60216 5.08035 5.41756 5.24805 5.25054C5.41574 5.08351 5.60297 5 5.80975 5C6.01653 5 6.20377 5.08351 6.37145 5.25054L10.0074 8.85364L13.6067 5.26884C13.7697 5.10651 13.9588 5.02417 14.174 5.02183C14.3893 5.01947 14.5808 5.10181 14.7485 5.26884C14.9162 5.43585 15 5.62843 15 5.84658C15 6.06473 14.9162 6.25731 14.7485 6.42433L11.1309 10.0457L14.7668 13.6672C14.9176 13.8173 14.9941 13.9995 14.9965 14.2139C14.9988 14.4283 14.9223 14.6129 14.7668 14.7678C14.6114 14.9226 14.4303 15 14.2235 15C14.0167 15 13.8356 14.9226 13.6802 14.7678L10.0442 11.1281Z"
+                        fill="#6265AD"
+                      />
+                    </svg>
+                  </div>
+                </span>
               </div>
             </div>
             <div
-              class="emotion-4"
+              class="emotion-11"
+              data-testid="expanded-container"
             >
-              <span
-                class="emotion-5"
-                data-testid="toast-expand"
-              >
-                <span
-                  class="emotion-6"
-                >
-                  <svg
-                    class="emotion-7"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                  >
-                    <g
-                      fill="none"
-                      fill-rule="evenodd"
-                      id="\\uD83D\\uDD36-Symbols"
-                      stroke="none"
-                      stroke-width="1"
-                    >
-                      <g
-                        id="Chevron_Large_Down"
-                      >
-                        <path
-                          d="M15.1900068,4.62555888 L16.6042204,6.03977245 L10.2398322,12.4035589 L16.6042204,18.7678394 L15.1900068,20.182053 L7.41183221,12.4038784 L15.1900068,4.62555888 Z"
-                          transform="translate(12.008026, 12.403806) scale(-1, 1) rotate(-90.000000) translate(-12.008026, -12.403806)"
-                        />
-                      </g>
-                    </g>
-                  </svg>
-                </span>
-              </span>
-              <span
-                class="emotion-8"
-                data-testid="toast-close"
-              >
-                <span
-                  class="emotion-6"
-                >
-                  <svg
-                    class="emotion-7"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                  >
-                    <g
-                      fill="none"
-                      fill-rule="evenodd"
-                      id="\\uD83D\\uDD36-Symbols"
-                      stroke="none"
-                      stroke-width="1"
-                    >
-                      <g
-                        id="Close"
-                      >
-                        <path
-                          d="M17.6568542,4.92893219 L19.0710678,6.34314575 L13.4139322,11.9999322 L19.0710678,17.6568542 L17.6568542,19.0710678 L11.9999322,13.4139322 L6.34314575,19.0710678 L4.92893219,17.6568542 L10.5849322,11.9999322 L4.92893219,6.34314575 L6.34314575,4.92893219 L11.9999322,10.5849322 L17.6568542,4.92893219 Z"
-                        />
-                      </g>
-                    </g>
-                  </svg>
-                </span>
-              </span>
-            </div>
-          </div>
-          <div
-            class="emotion-11"
-            data-testid="expanded-container"
-          >
-            <div>
-              <h1>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est porttitor
-              </h1>
-              <ul>
-                <li>
-                  <h1>
-                    Lorem ipsum dolor sit amet
-                  </h1>
-                </li>
-                <li>
-                  <h1>
-                    consectetur adipiscing elit
-                  </h1>
-                </li>
-                <li>
-                  <h1>
-                    Sed viverra neque
-                  </h1>
-                </li>
-                <li>
-                  <h1>
-                    neque nec
-                  </h1>
-                </li>
-                <li>
-                  <h1>
-                    est porttitor
-                  </h1>
-                </li>
-                <li>
-                  <h1>
-                    dolor sit amet
-                  </h1>
-                </li>
-              </ul>
+              <div>
+                <h1>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est porttitor
+                </h1>
+                <ul>
+                  <li>
+                    <h1>
+                      Lorem ipsum dolor sit amet
+                    </h1>
+                  </li>
+                  <li>
+                    <h1>
+                      consectetur adipiscing elit
+                    </h1>
+                  </li>
+                  <li>
+                    <h1>
+                      Sed viverra neque
+                    </h1>
+                  </li>
+                  <li>
+                    <h1>
+                      neque nec
+                    </h1>
+                  </li>
+                  <li>
+                    <h1>
+                      est porttitor
+                    </h1>
+                  </li>
+                  <li>
+                    <h1>
+                      dolor sit amet
+                    </h1>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <p
-      style="padding-top: 8px;"
+    <span
+      class="emotion-34"
     />
   </div>
 </div>

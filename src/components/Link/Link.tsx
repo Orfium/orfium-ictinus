@@ -37,12 +37,11 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
       {...rest}
     >
       <span>{children}</span>
-      {/** @TODO Set the right size for the icon based on tokens once Icon component is refactored */}
       {iconName && (
         <Icon
           name={iconName}
           color={tokens(`textColor.${type}.default` as LinkTokens)}
-          size={12}
+          size={tokens('iconSize')}
           dataTestId={`${dataTestPrefixId}_link_icon`}
         />
       )}

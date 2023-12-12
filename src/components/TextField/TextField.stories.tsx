@@ -75,7 +75,7 @@ export const TextFieldWithIcon = {
   render: () => (
     <Stack>
       <TextField label={'TextField'} suffix={'search'} />
-      <TextField label={'TextField'} suffix={'calendarEmpty'} />
+      <TextField label={'TextField'} suffix={'calendar'} />
     </Stack>
   ),
   name: 'TextField with icon',
@@ -143,7 +143,7 @@ export const Playground = {
         placeholder={text('Placeholder', 'Placeholder')}
         isDisabled={boolean('isDisabled', false)}
         hasSuffix={boolean('hasSuffixIcon', false)}
-        suffix={select('Suffix icon name', ['', ...Object.keys(iconSelector)], 'info')}
+        suffix={select('Suffix icon name', ['', ...Object.keys(iconSelector)], 'informational')}
         status={{
           type: select('Status', ['error', 'normal', 'read-only'], 'normal'),
           hintMessage: text('Hint/Error message', 'Message in Text Field'),

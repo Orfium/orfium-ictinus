@@ -70,13 +70,12 @@ const useMultiTextFieldBaseUtils = ({
     };
 
   const icon = useMemo(() => {
-    const handleClick = () => {
-      if (!hasValue || isLocked) {
-        return undefined;
-      }
-
-      return onClearAllOptions();
-    };
+    const handleClick =
+      iconName === 'close'
+        ? () => {
+            return onClearAllOptions();
+          }
+        : undefined;
 
     if (iconName) {
       return (
@@ -91,7 +90,7 @@ const useMultiTextFieldBaseUtils = ({
     }
 
     return undefined;
-  }, [hasValue, iconName, isLocked, onClearAllOptions, theme.utils]);
+  }, [iconName, onClearAllOptions, theme.utils]);
 
   return { inputPlaceholder, handleKeyDown, icon, hasLabel, TextfieldRef };
 };

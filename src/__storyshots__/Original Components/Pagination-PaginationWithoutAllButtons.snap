@@ -33,6 +33,18 @@
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #1552DD;
   width: 2.25rem;
   height: 2.25rem;
@@ -63,29 +75,21 @@
 }
 
 .emotion-3 {
-  padding: 0.125rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
 .emotion-4 {
-  fill: #1552DD;
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
-.emotion-4 * {
-  fill: #1552DD;
+.emotion-4 path {
+  fill: #1552DD!important;
 }
 
 <div>
@@ -101,30 +105,21 @@
         disabled=""
         type="button"
       >
-        <span
+        <div
           class="emotion-3"
         >
           <svg
             class="emotion-4"
-            viewBox="0 0 24 24"
+            fill="none"
+            viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
           >
-            <g
-              fill-rule="evenodd"
-              id="arrow_left"
-              stroke="none"
-              stroke-width="1"
-            >
-              <polygon
-                fill-rule="nonzero"
-                id="Path"
-                points="21 6 21 17 19 17 19 7.999 10 8 10 6"
-                transform="translate(15.500000, 11.500000) rotate(-135.000000) translate(-15.500000, -11.500000) "
-              />
-            </g>
+            <path
+              d="M11.3581 14.702L7.31643 10.7466C7.20353 10.6361 7.12257 10.5161 7.07355 10.3867C7.02452 10.2572 7 10.1283 7 10C7 9.86608 7.02452 9.7358 7.07355 9.60915C7.12257 9.48249 7.20353 9.36392 7.31643 9.25345L11.3581 5.29797C11.561 5.09932 11.7839 5 12.0268 5C12.2697 5 12.4926 5.09932 12.6955 5.29797C12.8985 5.49661 13 5.71477 13 5.95246C13 6.19014 12.8985 6.40831 12.6955 6.60694L9.22859 10L12.6955 13.3931C12.8985 13.5917 13 13.8099 13 14.0475C13 14.2852 12.8985 14.5034 12.6955 14.702C12.4926 14.9007 12.2697 15 12.0268 15C11.7839 15 11.561 14.9007 11.3581 14.702Z"
+              fill="#6265AD"
+            />
           </svg>
-        </span>
+        </div>
       </button>
     </div>
     <div>
@@ -141,30 +136,21 @@
         data-testid="icon-button"
         type="button"
       >
-        <span
+        <div
           class="emotion-3"
         >
           <svg
             class="emotion-4"
-            viewBox="0 0 24 24"
+            fill="none"
+            viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
           >
-            <g
-              fill-rule="evenodd"
-              id="arrow_right"
-              stroke="none"
-              stroke-width="1"
-            >
-              <polygon
-                fill-rule="nonzero"
-                id="Path"
-                points="15 6 15 17 13 17 13 7.999 4 8 4 6"
-                transform="translate(9.500000, 11.500000) scale(-1, 1) rotate(-135.000000) translate(-9.500000, -11.500000) "
-              />
-            </g>
+            <path
+              d="M8.64194 14.702L12.6836 10.7466C12.7965 10.6361 12.8774 10.5161 12.9264 10.3867C12.9755 10.2572 13 10.1283 13 10C13 9.86608 12.9755 9.7358 12.9264 9.60915C12.8774 9.48249 12.7965 9.36392 12.6836 9.25345L8.64194 5.29797C8.43898 5.09932 8.21607 5 7.9732 5C7.73034 5 7.50742 5.09932 7.30446 5.29797C7.10149 5.49661 7 5.71477 7 5.95246C7 6.19014 7.10149 6.40831 7.30446 6.60694L10.7714 10L7.30446 13.3931C7.10149 13.5917 7 13.8099 7 14.0475C7 14.2852 7.10149 14.5034 7.30446 14.702C7.50742 14.9007 7.73034 15 7.9732 15C8.21607 15 8.43898 14.9007 8.64194 14.702Z"
+              fill="#6265AD"
+            />
           </svg>
-        </span>
+        </div>
       </button>
     </div>
   </div>
