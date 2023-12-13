@@ -186,25 +186,13 @@
 }
 
 .emotion-9 {
-  overflow: inherit;
-  text-overflow: inherit;
-  width: 100%;
-  height: inherit;
-  position: relative;
-}
-
-.emotion-9 #unique-tooltip-id {
-  display: none!important;
-}
-
-.emotion-10 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-11 {
+.emotion-10 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -233,24 +221,24 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-11:focus-visible:not(:disabled) {
+.emotion-10:focus-visible:not(:disabled) {
   background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-11:disabled {
+.emotion-10:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-11:hover:not(:disabled) {
+.emotion-10:hover:not(:disabled) {
   background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-11:active:not(:disabled) {
+.emotion-10:active:not(:disabled) {
   background-color: rgba(84,94,255,0.14);
 }
 
-.emotion-12 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -266,7 +254,7 @@
   gap: 0.5rem;
 }
 
-.emotion-13 {
+.emotion-12 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -306,17 +294,13 @@
   letter-spacing: 0.00625rem;
 }
 
-.emotion-13 img {
+.emotion-12 img {
   border-radius: 6.25rem;
   width: 100%;
   height: 100%;
 }
 
-.emotion-14 {
-  font-weight: 500;
-}
-
-.emotion-15 {
+.emotion-13 {
   width: 1.25rem;
   height: 1.25rem;
   display: -webkit-box;
@@ -325,12 +309,12 @@
   display: flex;
 }
 
-.emotion-16 {
+.emotion-14 {
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-16 path {
+.emotion-14 path {
   fill: #1552DD!important;
 }
 
@@ -385,61 +369,47 @@
       <div
         class="emotion-8"
       >
-        <div>
-          <div
-            data-testid="userMenu"
+        <div
+          class="emotion-9"
+        >
+          <button
+            aria-haspopup="true"
+            aria-label="Menu"
+            class="emotion-10"
+            data-testid="button-userMenu"
+            type="button"
           >
-            <div
-              class="emotion-9"
+            <span
+              class="emotion-11"
             >
               <div
-                class="emotion-10"
+                class="emotion-12"
+                data-testid="_avatar"
               >
-                <button
-                  class="emotion-11"
-                  data-testid="button"
-                  type="button"
-                >
-                  <span
-                    class="emotion-12"
-                  >
-                    <div
-                      class="emotion-13"
-                      data-testid="_avatar"
-                    >
-                      <img
-                        src="https://mui.com/static/images/avatar/1.jpg"
-                      />
-                    </div>
-                    <span>
-                      <span>
-                        <span
-                          class="emotion-14"
-                        >
-                          Tom Cruise
-                        </span>
-                      </span>
-                    </span>
-                    <div
-                      class="emotion-15"
-                    >
-                      <svg
-                        class="emotion-16"
-                        fill="none"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M5.29797 8.64196L9.25345 12.6836C9.36392 12.7965 9.48388 12.8774 9.61333 12.9265C9.74278 12.9755 9.87167 13 10 13C10.1339 13 10.2642 12.9755 10.3908 12.9265C10.5175 12.8774 10.6361 12.7965 10.7466 12.6836L14.702 8.64196C14.9007 8.439 15 8.21608 15 7.97322C15 7.73035 14.9007 7.50744 14.702 7.30448C14.5034 7.1015 14.2852 7.00002 14.0475 7.00002C13.8099 7.00002 13.5917 7.1015 13.3931 7.30448L10 10.7714L6.60694 7.30448C6.40831 7.1015 6.19014 7.00002 5.95246 7.00002C5.71477 7.00002 5.49661 7.1015 5.29797 7.30448C5.09932 7.50744 5 7.73035 5 7.97322C5 8.21608 5.09932 8.439 5.29797 8.64196Z"
-                          fill="#6265AD"
-                        />
-                      </svg>
-                    </div>
-                  </span>
-                </button>
+                <img
+                  src="https://mui.com/static/images/avatar/1.jpg"
+                />
               </div>
-            </div>
-          </div>
+              <span>
+                Tom Cruise
+              </span>
+              <div
+                class="emotion-13"
+              >
+                <svg
+                  class="emotion-14"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.29797 8.64196L9.25345 12.6836C9.36392 12.7965 9.48388 12.8774 9.61333 12.9265C9.74278 12.9755 9.87167 13 10 13C10.1339 13 10.2642 12.9755 10.3908 12.9265C10.5175 12.8774 10.6361 12.7965 10.7466 12.6836L14.702 8.64196C14.9007 8.439 15 8.21608 15 7.97322C15 7.73035 14.9007 7.50744 14.702 7.30448C14.5034 7.1015 14.2852 7.00002 14.0475 7.00002C13.8099 7.00002 13.5917 7.1015 13.3931 7.30448L10 10.7714L6.60694 7.30448C6.40831 7.1015 6.19014 7.00002 5.95246 7.00002C5.71477 7.00002 5.49661 7.1015 5.29797 7.30448C5.09932 7.50744 5 7.73035 5 7.97322C5 8.21608 5.09932 8.439 5.29797 8.64196Z"
+                    fill="#6265AD"
+                  />
+                </svg>
+              </div>
+            </span>
+          </button>
         </div>
       </div>
     </div>

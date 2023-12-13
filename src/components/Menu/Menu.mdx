@@ -1,48 +1,52 @@
 import { Meta, Canvas, ArgTypes, Story } from '@storybook/blocks';
-import Menu from '../Menu';
-import MenuShowcase from '../storyUtils/MenuShowcase';
-import Stack from '../storyUtils/Stack';
-import { FIGMA_URL } from '../../utils/common';
+import Menu from './Menu';
 import * as MenuStories from './Menu.stories';
 
 <Meta of={MenuStories} />
 
-# Menu
+<SectionHeader title={'Menu'} />
 
-A universal Menu component that is a clickable element that can hold many forms.
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
 
-## Usage
+## Overview
 
-```js
-import { Menu } from '@orfium/ictinus';
-
-<Menu onClick={() => {}}>Click Me</Menu>;
-```
+A menu displays a list of choices on a temporary surface when the user interacts with its trigger element. A menu can take children as custom component or any `ListItem` from `List` by defining `parentType={'Menu'}` on the `ListItem`
 
 ## Props
 
 <ArgTypes of={Menu} />
 
-### Menu with selection handler
+## Usage
 
-A menu with a selection handler to return selection on change and to pass selection callback
+<UsageGuidelines
+  guidelines={['Use menu for list of selections that can be accessible via arrows']}
+/>
 
-<Canvas of={MenuStories.MenuWithSelectionHandler} />
+### Menu different triggers
 
-### Menu with option icon and different colour
+A menu can be triggered by different elements
 
-Menu with option icon (dots) and different button colour
+<Canvas of={MenuStories.MenuTriggers} />
 
-<Canvas of={MenuStories.MenuWithOptionIconAndDifferentColour} />
+### Menu different row sizes
 
-### Menu with avatar
+A menu can have different row sizes as `List` does
 
-Menu with avatar and different button colour
+<Canvas of={MenuStories.MenuComponents} />
 
-<Canvas of={MenuStories.MenuWithAvatarAndDifferentButtonColour} />
+### Menu with divider
 
-### Menu disabled
+A menu can have specific MenuItemDivider
 
-Menu disabled
+<Tip>To style the divider and bypass the default style include an `sx` prop</Tip>
 
-<Canvas of={MenuStories.DisabledMenu} />
+<Canvas of={MenuStories.MenuItemDividerStory} />
+
+### Menu with disabled items
+
+A menu can have specific disabled items
+
+<Canvas of={MenuStories.MenuDisabledKeys} />
