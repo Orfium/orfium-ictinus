@@ -123,7 +123,7 @@ const DatePicker: React.FC<DatePickerProps & TestProps> = ({
 
   const handleClear = useCallback(
     (e?: React.KeyboardEvent) => {
-      if (!isClearable && filterConfig?.filterType !== 'added') {
+      if (!isClearable && !filterConfig.filterType) {
         return false;
       }
 
