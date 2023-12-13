@@ -1,6 +1,6 @@
 import List, { ListItem, ListItemAction, ListItemText } from '../index';
 import { FIGMA_URL } from '../../../utils/common';
-import { Radio, CheckBox, Switch } from '../../Controls';
+import { Radio, CheckBox, Switch, RadioGroup } from '../../Controls';
 import Avatar from '../../Avatar';
 import Box from '../../Box';
 import { useState } from 'react';
@@ -23,6 +23,7 @@ export default {
 export const ListItemCompilations = {
   render: () => {
     const [selectedKeys, setSelectedKeys] = useState(new Set([]));
+    console.log({ selectedKeys, value: selectedKeys.has(`cherry`) ? 'cherry' : null });
     return (
       <>
         <Box mb={'3'}>
@@ -49,31 +50,31 @@ export const ListItemCompilations = {
           <List label={'list'} selectedKeys={selectedKeys} onSelectionChange={setSelectedKeys}>
             <ListItem key={'5'}>
               <ListItemAction>
-                <Radio
-                  value="cherry"
-                  isSelected={selectedKeys.has(`5`)}
-                  inputProps={{
-                    onClick: (e) => {
-                      e.stopPropagation();
-                      setSelectedKeys(new Set(['5']));
-                    },
+                <RadioGroup
+                  value={selectedKeys.has(`5`) ? 'cherry' : null}
+                  sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '32px',
                   }}
-                />
+                >
+                  <Radio value="cherry" />
+                </RadioGroup>
               </ListItemAction>
               <ListItemText>Option Radio</ListItemText>
             </ListItem>
             <ListItem key={'6'} rowSize={'compact'}>
               <ListItemAction>
-                <Radio
-                  value="banana"
-                  isSelected={selectedKeys.has(`6`)}
-                  inputProps={{
-                    onClick: (e) => {
-                      e.stopPropagation();
-                      setSelectedKeys(new Set(['6']));
-                    },
+                <RadioGroup
+                  value={selectedKeys.has(`6`) ? 'cherry' : null}
+                  sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '32px',
                   }}
-                />
+                >
+                  <Radio value="cherry" />
+                </RadioGroup>
               </ListItemAction>
               <ListItemText>Option Radio (compact)</ListItemText>
             </ListItem>
@@ -181,7 +182,9 @@ export const DisabledListItem = {
           </ListItem>
           <ListItem key={'6'}>
             <ListItemAction>
-              <Radio value="6" isDisabled />
+              <RadioGroup isDisabled>
+                <Radio value="6" />
+              </RadioGroup>
             </ListItemAction>
             <ListItemText>This Radio Option is disabled</ListItemText>
           </ListItem>

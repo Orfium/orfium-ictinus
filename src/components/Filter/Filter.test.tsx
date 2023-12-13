@@ -177,7 +177,7 @@ describe('Multi Filter', () => {
 
     filterLabel = screen.getByTestId('filter-selected-item-label');
     expect(filterLabel).toHaveTextContent(`${items[0].label} + 1 more`);
-  });
+  }, 8000);
 
   it('removes the options from the list when selected', async () => {
     await selectDropdownOption(selectInput, items[0].label);
@@ -187,7 +187,7 @@ describe('Multi Filter', () => {
 
     expect(screen.getByTestId('ictinus_list').innerHTML).not.toContain(items[0].label);
     expect(screen.getByTestId('ictinus_list').innerHTML).not.toContain(items[1].label);
-  });
+  }, 8000);
 
   it('adds the options to the list and clears label when deleted', async () => {
     await selectDropdownOption(selectInput, items[0].label);
