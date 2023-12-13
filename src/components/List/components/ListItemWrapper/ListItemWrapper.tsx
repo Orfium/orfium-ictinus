@@ -33,7 +33,7 @@ const ListItemWrapper = React.forwardRef<HTMLLIElement, ListItemProps>(
   ) => {
     return (
       <ListItemWrapperStyled
-        data-testid={`ictinus_list_item_${rest['data-key'].replace(/ /g, '_')}`}
+        data-testid={`ictinus_list_item_${rest['data-key']?.replace(/ /g, '_')}`}
         {...rest}
         rowSize={rowSize}
         isDisabled={isDisabled}
