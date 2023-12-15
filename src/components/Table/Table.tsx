@@ -15,18 +15,32 @@ import CheckBox from '../CheckBox';
 
 export type ContentComponent<T> = (data: Cell<T>) => React.ReactNode;
 export type Cell<T> = {
+  /** the content of the cell to be displayed */
   content: number | string | ContentComponent<T>;
+  /** the truncated tooltip content, you can override it or it will take the content
+   * @default content
+   **/
   tooltipContent?: string;
+  /** show or not the truncated tooltip
+   * @default true if the text is truncated
+   **/
   hasTruncatedTooltip?: boolean;
+  /** the colSpan of the cell to be displayed */
   colSpan?: number;
+  /** the type of the cell to be displayed @default normal */
   type?: 'financial' | 'normal';
+  /** the alignment of the cell to be displayed */
   align?: 'left' | 'right';
+  /** the width of the cell to be displayed */
   widthPercentage?: number;
 };
 
 export type Row<T> = {
+  /** the id of the row */
   id: string | number;
+  /** the cells of the row, see Cell type for each */
   cells: Cell<T>[];
+  /** the expanded content of the row, if its expandable */
   expanded?: ({
     row,
     selected,

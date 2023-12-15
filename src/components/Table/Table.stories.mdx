@@ -3,6 +3,7 @@ import { select, number } from '@storybook/addon-knobs';
 import Table from './Table';
 import TableFilterShowcase from '../storyUtils/TableFilterShowcase';
 import { FIGMA_URL } from '../../utils/common';
+import { CellStory, RowStory } from './utils/TableStoryComponents';
 
 <Meta
   title="Design System/Table"
@@ -59,7 +60,15 @@ import { Table } from '@orfium/ictinus';
 
 <Props of={Table} />
 
-### Disclaimer 
+# Cell Type
+
+<Props of={CellStory} />
+
+# Row Type
+
+<Props of={RowStory} />
+
+### Disclaimer
 
 In case of importing data produced using useMemo or external const, follow this pattern:
 
