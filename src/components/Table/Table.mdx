@@ -1,6 +1,8 @@
 import { Meta, Canvas, ArgTypes, Story } from '@storybook/blocks';
 import { select, number } from '@storybook/addon-knobs';
 import Table from './Table';
+import { CellStory, RowStory } from './utils/TableStoryComponents';
+import TableRowWrapper from './components/TableRowWrapper/TableRowWrapper';
 import TableFilterShowcase from '../storyUtils/TableFilterShowcase';
 import { FIGMA_URL } from '../../utils/common';
 import * as TableStories from './Table.stories';
@@ -19,9 +21,17 @@ import { Table } from '@orfium/ictinus';
 <Table />;
 ```
 
-## Props
+## Table Props
 
 <ArgTypes of={Table} />
+
+## Cell Props
+
+<ArgTypes of={CellStory} />
+
+## Row Props
+
+<ArgTypes of={RowStory} />
 
 ### Regular Table
 
