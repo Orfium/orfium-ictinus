@@ -9,6 +9,10 @@ import { getListItemTokens } from '../List/List.tokens';
 import { LIST_ITEM_HEIGHT } from '../List/utils';
 import { body02, body03, label02, label03 } from '../Typography/Typography.config.styles';
 
+export const popoverStyle = css`
+  min-width: 150px;
+  background: #ffffff;
+`;
 export const MenuItemWrapper = styled(MenuItem)<{
   isDisabled?: boolean;
   isCompact?: boolean;

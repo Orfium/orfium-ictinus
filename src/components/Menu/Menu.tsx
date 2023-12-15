@@ -1,8 +1,7 @@
-import { css } from '@emotion/react';
 import * as React from 'react';
 import { MenuTrigger, Popover } from 'react-aria-components';
 
-import { MenuWrapper, MenuItemWrapper } from './Menu.style';
+import { MenuWrapper, MenuItemWrapper, popoverStyle } from './Menu.style';
 import MenuItemDivider from './MenuItemDivider';
 import type { TestProps } from '../../utils/types';
 import { listStyle } from '../List/List.style';
@@ -47,13 +46,7 @@ const Menu: React.FC<MenuProps> = ({
 
   return (
     <MenuTrigger isOpen={isOpen} onOpenChange={onClose}>
-      <Popover
-        triggerRef={triggerRef}
-        css={css`
-          min-width: 150px;
-          background: #ffffff;
-        `}
-      >
+      <Popover triggerRef={triggerRef} css={popoverStyle}>
         <MenuWrapper
           selectionMode={selectionMode}
           selectedKeys={selectedKeys}
