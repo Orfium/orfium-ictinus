@@ -12,7 +12,7 @@ export const backgroundContainer = (theme: Theme): SerializedStyles => css`
   height: 100vh;
   top: 0;
   left: 0;
-  background-color: ${transparentize(0.8, theme.palette.white)};
+  background-color: ${transparentize(0.25, theme.palette.black)};
   display: flex;
   justify-content: center;
   align-items: center;
