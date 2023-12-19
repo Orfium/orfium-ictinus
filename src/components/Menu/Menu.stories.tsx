@@ -518,7 +518,8 @@ export const MenuItemDividerStory = {
           </ListItem>
           <MenuItemDivider
             sx={{
-              backgroundColor: theme.tokens.colors.get('borderColor.interactive.error'),
+              borderBottomStyle: 'dashed',
+              borderBottomColor: theme.tokens.colors.get('borderColor.interactive.active'),
               width: '90%',
             }}
           />
