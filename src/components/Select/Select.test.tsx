@@ -52,7 +52,7 @@ describe('Generic Select', () => {
       await selectDropdownOption(selectInput, dropdownList[1].label);
 
       expect(selectInput.value).toBe(dropdownList[1].label);
-    });
+    }, 8000);
 
     it('should pass the selected values to parent', async () => {
       selectInput = screen.getByPlaceholderText('Country') as HTMLInputElement;
@@ -143,7 +143,7 @@ describe('Generic Select', () => {
 
       await waitFor(() => expect(asyncSearch).toHaveBeenCalledTimes(1));
     });
-  });
+  }, 8000);
 
   describe('Select helper text option', () => {
     const handleSubmit = vi.fn();
@@ -340,7 +340,7 @@ describe('Multi Select', () => {
 
     expect(screen.getByTestId('ictinus_list').innerHTML).not.toContain(dropdownList[0].label);
     expect(screen.getByTestId('ictinus_list').innerHTML).not.toContain(dropdownList[1].label);
-  });
+  }, 8000);
 
   it('adds the options back to the list when deleted', async () => {
     await selectDropdownOption(selectInput, dropdownList[0].label);

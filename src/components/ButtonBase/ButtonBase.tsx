@@ -1,4 +1,5 @@
 import type { CSSObject } from '@emotion/serialize';
+import { omit } from 'lodash';
 import React from 'react';
 
 import { buttonBaseStyle, buttonWrapperStyle } from './ButtonBase.style';
@@ -57,6 +58,7 @@ const ButtonBase = React.forwardRef<HTMLButtonElement, ButtonBaseProps>((props, 
     onClick,
     onBlur,
     sx,
+    ...rest
   } = props;
   const testIdName = `${dataTestPrefixId}button`;
 
@@ -64,6 +66,7 @@ const ButtonBase = React.forwardRef<HTMLButtonElement, ButtonBaseProps>((props, 
     <div css={buttonWrapperStyle({ isBlock })}>
       {isLoading && !isDisabled && <ButtonLoader dataTestId={testIdName} />}
       <button
+        {...omit(rest, ['avatar', 'iconRightName', 'iconLeftName', isIconButton ? 'name' : null])}
         ref={ref}
         type={htmlType}
         data-testid={generateTestDataId(testIdName, dataTestId)}

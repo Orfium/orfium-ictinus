@@ -1,0 +1,127 @@
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 25rem;
+}
+
+.emotion-1 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-2 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: #ffffff;
+  width: 2.25rem;
+  height: 2.25rem;
+  background-color: #175bf5;
+  padding: 0;
+  border-radius: 2.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-2:focus-visible:not(:disabled) {
+  background-color: #1552DD;
+}
+
+.emotion-2:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-2:hover:not(:disabled) {
+  background-color: #1552DD;
+}
+
+.emotion-2:active:not(:disabled) {
+  background-color: #1249C4;
+}
+
+.emotion-3 {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-4 path {
+  fill: #ffffff!important;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        class="emotion-1"
+      >
+        <button
+          aria-haspopup="true"
+          aria-label="Menu"
+          class="emotion-2"
+          data-testid="icon-button"
+          type="button"
+        >
+          <div
+            class="emotion-3"
+          >
+            <svg
+              class="emotion-4"
+              fill="none"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.93223 16C2.67568 16 2.45617 15.8979 2.27371 15.6937C2.09124 15.4895 2 15.2439 2 14.9568C2 14.6697 2.09124 14.4241 2.27371 14.2202C2.45617 14.0162 2.67568 13.9142 2.93223 13.9142H17.0678C17.3243 13.9142 17.5438 14.0163 17.7263 14.2205C17.9088 14.4247 18 14.6703 18 14.9574C18 15.2445 17.9088 15.49 17.7263 15.694C17.5438 15.898 17.3243 16 17.0678 16H2.93223ZM2.93223 11.0186C2.67568 11.0186 2.45617 10.9165 2.27371 10.7124C2.09124 10.5082 2 10.2625 2 9.97543C2 9.68833 2.09124 9.44279 2.27371 9.23882C2.45617 9.03484 2.67568 8.93286 2.93223 8.93286H17.0678C17.3243 8.93286 17.5438 9.03495 17.7263 9.23913C17.9088 9.44333 18 9.68898 18 9.97606C18 10.2632 17.9088 10.5087 17.7263 10.7127C17.5438 10.9166 17.3243 11.0186 17.0678 11.0186H2.93223ZM2.93223 6.0858C2.67568 6.0858 2.45617 5.9837 2.27371 5.7795C2.09124 5.57532 2 5.32967 2 5.04257C2 4.75549 2.09124 4.50996 2.27371 4.30599C2.45617 4.10199 2.67568 4 2.93223 4H17.0678C17.3243 4 17.5438 4.1021 17.7263 4.3063C17.9088 4.5105 18 4.75614 18 5.04323C18 5.33033 17.9088 5.57587 17.7263 5.77984C17.5438 5.98381 17.3243 6.0858 17.0678 6.0858H2.93223Z"
+                fill="#6265AD"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    />
+  </div>
+</div>
