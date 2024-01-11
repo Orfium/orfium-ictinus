@@ -3,15 +3,18 @@ import React from 'react';
 import FilterSearchField from './components/FilterSearchField';
 import Options from './components/Options';
 import { menuStyle } from './FilterMenu.style';
-import type { FilterOption, FilterProps } from 'components/Filter/Filter.types';
+import type {
+  FilterOption,
+  FilterProps,
+  MultiFilterProps,
+  SingleFilterProps,
+} from 'components/Filter/Filter.types';
 
 type Props = Pick<
   FilterProps,
-  | 'isMulti'
   | 'isSearchable'
   | 'isLoading'
   | 'onClear'
-  | 'selectedFilter'
   | 'onFilterDelete'
   | 'isVirtualized'
   | 'hasSelectAllOption'
@@ -21,7 +24,7 @@ type Props = Pick<
   handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   filteredOptions: FilterOption[];
   handleSelect: (option: FilterOption) => void;
-};
+} & (SingleFilterProps | MultiFilterProps);
 
 const FilterMenu: React.FCC<Props> = ({
   isSearchable,
@@ -40,12 +43,13 @@ const FilterMenu: React.FCC<Props> = ({
 }) => {
   return (
     <div css={menuStyle()}>
-      {(isMulti || isSearchable) && (
+      {(isMulti === true || isSearchable) && (
+        // @ts-ignore
         <FilterSearchField
           isMulti={isMulti}
           isSearchable={isSearchable}
           value={searchValue}
-          onChange={handleChange}
+          onInputChange={handleChange}
           onClear={onClear}
           onFilterDelete={onFilterDelete}
           selectedFilter={selectedFilter}
@@ -53,6 +57,7 @@ const FilterMenu: React.FCC<Props> = ({
           isLoading={isLoading}
         />
       )}
+      {/**  @ts-ignore */}
       <Options
         dataTestPrefixId={dataTestPrefixId}
         items={filteredOptions}
@@ -60,7 +65,7 @@ const FilterMenu: React.FCC<Props> = ({
         defaultValue={{ label: '', value: '' }}
         isSearchable={isSearchable}
         selectedFilter={selectedFilter}
-        onChange={handleSelect}
+        onOptionSelect={handleSelect}
         hasSelectAllOption={hasSelectAllOption}
         isMulti={isMulti}
       />

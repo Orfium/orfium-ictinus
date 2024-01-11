@@ -5,7 +5,7 @@ import type { EventProps } from 'utils/common';
 
 import type { TestProps } from '../../utils/types';
 import Button from '../Button';
-import type { AcceptedIconNames } from '../Icon/types';
+import type { AcceptedIconNames } from '../Icon/Icon.types';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import type { MenuPositionAllowed } from '../utils/DropdownOptions';
 import { optionsStyle } from '../utils/DropdownOptions';

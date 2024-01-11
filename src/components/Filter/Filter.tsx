@@ -38,18 +38,21 @@ const Filter = React.forwardRef<HTMLButtonElement, FilterProps>((props, ref) => 
     filteredOptions,
     handleFilterDelete,
     handleClear,
-  } = useFilterWithSelectionUtils({
-    isMulti,
-    setIsOpen,
-    isSearchable,
-    onChange,
-    selectedFilter,
-    onAsyncSearch,
-    isAsync,
-    minCharactersToSearch,
-    items,
-    onClear,
-  });
+  } = useFilterWithSelectionUtils(
+    // @ts-ignore
+    {
+      isMulti,
+      setIsOpen,
+      isSearchable,
+      onChange,
+      selectedFilter,
+      onAsyncSearch,
+      isAsync,
+      minCharactersToSearch,
+      items,
+      onClear,
+    }
+  );
 
   const getLabel = React.useMemo(() => {
     if (isMulti) {
@@ -72,6 +75,7 @@ const Filter = React.forwardRef<HTMLButtonElement, FilterProps>((props, ref) => 
   };
 
   const filterOverlay = filteredOptions ? (
+    // @ts-ignore
     <FilterMenu
       isMulti={isMulti}
       isVirtualized={isVirtualized}

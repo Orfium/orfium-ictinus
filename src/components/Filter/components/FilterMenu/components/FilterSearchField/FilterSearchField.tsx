@@ -3,7 +3,11 @@ import React, { useMemo } from 'react';
 import { generateTestDataId } from 'utils/helpers';
 
 import { textFieldWrapper } from './FilterSearchField.style';
-import type { FilterProps } from 'components/Filter/Filter.types';
+import type {
+  FilterProps,
+  MultiFilterProps,
+  SingleFilterProps,
+} from 'components/Filter/Filter.types';
 import Icon from 'components/Icon';
 import MultiTextFieldBase from 'components/MultiTextFieldBase';
 import ProgressIndicator from 'components/ProgressIndicator';
@@ -11,21 +15,16 @@ import TextField from 'components/TextField';
 
 export type SearchInputProps = {
   value: string;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   dataTestId?: string;
 } & Pick<
   FilterProps,
-  | 'selectedFilter'
-  | 'isMulti'
-  | 'isSearchable'
-  | 'isLoading'
-  | 'onClear'
-  | 'onFilterDelete'
-  | 'dataTestPrefixId'
->;
+  'isSearchable' | 'isLoading' | 'onClear' | 'onFilterDelete' | 'dataTestPrefixId'
+> &
+  (SingleFilterProps | MultiFilterProps);
 
 const FilterSearchField = ({
-  onChange,
+  onInputChange,
   value,
   dataTestId,
   isLoading,
@@ -59,7 +58,7 @@ const FilterSearchField = ({
         <TextField
           autoFocus
           dataTestPrefixId={`${dataTestPrefixId}_filter_search`}
-          onChange={onChange}
+          onChange={onInputChange}
           data-testid={generateTestDataId('filter-input', dataTestId)}
           status={{ type: 'normal' }}
           label="Search"
@@ -78,12 +77,11 @@ const FilterSearchField = ({
           }}
         />
       )}
-      {isMulti && (
+      {isMulti === true && (
         <MultiTextFieldBase
-          //@ts-ignore
           selectedOptions={selectedFilter || []}
           dataTestPrefixId={`${dataTestPrefixId}_filter_search`}
-          onInput={onChange}
+          onInput={onInputChange}
           onOptionDelete={onFilterDelete}
           onClearAllOptions={onClear}
           isInteractive={false}
@@ -96,7 +94,6 @@ const FilterSearchField = ({
             textField: { paddingTop: '12px', paddingBottom: '12px', width: '100%' },
             wrapper: { boxShadow: 'none', borderRadius: 0 },
           }}
-          // ref={filterInputRef}
         />
       )}
     </div>

@@ -3,6 +3,7 @@ import { rem } from 'theme/utils';
 
 export const textFieldWrapper = () =>
   css`
+    /** @TODO replace with search tokens */
     border-bottom: 1px solid #b9cdfc;
 
     label {
