@@ -1,0 +1,247 @@
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: inset 0 0 0 0.0625rem #b9cdfc;
+  border-radius: 6.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: unset;
+  min-width: 8.75rem;
+  background-color: #ffffff;
+  z-index: 1;
+  background: #F5F5FF;
+}
+
+.emotion-1:hover {
+  background: #E7E8FF;
+}
+
+.emotion-1:focus-within {
+  background: #E7E8FF;
+  outline: none;
+  box-shadow: inset 0 0 0 0.125rem #175bf5;
+}
+
+.emotion-2 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0.5rem 1rem;
+  gap: 0.5rem;
+}
+
+.emotion-2>div {
+  position: relative;
+}
+
+.emotion-3 {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-4 path {
+  fill: #686BB3!important;
+}
+
+.emotion-5 {
+  width: 100%;
+}
+
+.emotion-5 input {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-5 input::-webkit-input-placeholder {
+  color: #686BB3;
+}
+
+.emotion-5 input::-moz-placeholder {
+  color: #686BB3;
+}
+
+.emotion-5 input:-ms-input-placeholder {
+  color: #686BB3;
+}
+
+.emotion-5 input::placeholder {
+  color: #686BB3;
+}
+
+.emotion-6 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #1B214F;
+  padding: 0;
+  display: block;
+  position: relative;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-6::-webkit-input-placeholder {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-6::-moz-placeholder {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-6:-ms-input-placeholder {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-6::placeholder {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-6:focus {
+  outline: none;
+}
+
+.emotion-6:focus::-webkit-input-placeholder {
+  color: #686BB3;
+}
+
+.emotion-6:focus::-moz-placeholder {
+  color: #686BB3;
+}
+
+.emotion-6:focus:-ms-input-placeholder {
+  color: #686BB3;
+}
+
+.emotion-6:focus::placeholder {
+  color: #686BB3;
+}
+
+.emotion-6:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-6:focus-within+label,
+.emotion-6:not(:placeholder-shown)+label {
+  font-weight: 700!important;
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+}
+
+.emotion-6:focus-within+label {
+  font-weight: 700!important;
+  color: #1552DD;
+}
+
+.emotion-6:disabled {
+  cursor: not-allowed;
+}
+
+<div>
+  <div
+    class="emotion-0"
+    data-testid="search_container"
+  >
+    <div
+      class="emotion-1"
+    >
+      <div
+        class="emotion-2"
+      >
+        <div
+          class="emotion-3"
+        >
+          <svg
+            class="emotion-4"
+            fill="none"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M16.48 17.2364L11.8625 12.6022C11.4486 12.9313 10.9417 13.1893 10.3416 13.3762C9.74155 13.5631 9.14706 13.6565 8.55814 13.6565C7.00471 13.6565 5.69 13.1168 4.61399 12.0373C3.538 10.9579 3 9.63891 3 8.08047C3 6.52203 3.53779 5.20233 4.61337 4.12139C5.68893 3.04046 7.00313 2.5 8.55594 2.5C10.1088 2.5 11.4237 3.03994 12.5007 4.11983C13.5778 5.19974 14.1163 6.51922 14.1163 8.07827C14.1163 8.6853 14.0274 9.27262 13.8497 9.84025C13.6719 10.4079 13.4175 10.9052 13.0865 11.3323L17.7453 16.008C17.9151 16.1704 18 16.3696 18 16.6058C18 16.842 17.9064 17.054 17.7193 17.2418C17.5478 17.4139 17.3421 17.5 17.1023 17.5C16.8625 17.5 16.6551 17.4121 16.48 17.2364ZM8.55814 11.8706C9.62457 11.8706 10.521 11.5061 11.2473 10.7772C11.9736 10.0482 12.3368 9.14856 12.3368 8.07827C12.3368 7.00797 11.9736 6.10834 11.2473 5.37937C10.521 4.65039 9.62457 4.28591 8.55814 4.28591C7.4917 4.28591 6.59532 4.65039 5.86897 5.37937C5.14265 6.10834 4.77948 7.00797 4.77948 8.07827C4.77948 9.14856 5.14265 10.0482 5.86897 10.7772C6.59532 11.5061 7.4917 11.8706 8.55814 11.8706Z"
+              fill="#6265AD"
+            />
+          </svg>
+        </div>
+        <div
+          class="emotion-5"
+        >
+          <input
+            class="emotion-6"
+            data-testid="search_search_input"
+            placeholder="Search"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
