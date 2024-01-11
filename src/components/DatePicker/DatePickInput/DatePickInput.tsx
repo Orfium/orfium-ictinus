@@ -5,34 +5,27 @@ import { rem } from 'theme/utils';
 import type { Dayjs } from 'utils/date';
 import dayjs from 'utils/date';
 
-import { generateTestDataId, getLocaleFormat } from '../../../utils/helpers';
+import { getLocaleFormat } from '../../../utils/helpers';
 import type { TestProps } from '../../../utils/types';
-import FilterBase from '../../Filter/components/FilterBase';
-import type { FilterType, StyleType } from '../../Filter/types';
 import type { TextFieldProps } from '../../TextField/TextField';
 import TextField from '../../TextField/TextField';
 import { DATE_PICKER_LABEL, DATE_RANGE_PICKER_LABEL } from '../constants';
-import type { DateFormatType } from '../DatePicker.types';
+import type { DateFormatType, DatePickerProps } from '../DatePicker.types';
 import type { Range } from '../OverlayComponent/OverlayComponent';
+import FilterButton from 'components/Filter/components/FilterButton';
 import Icon from 'components/Icon';
 import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
 
 // TODO: Need to fix this (TextField onChange prop)
 const ON_CHANGE_MOCK = () => {};
 
-export type DatePickInputProps = {
+export type DatePickInputProps = Pick<DatePickerProps, 'filterConfig'> & {
   /** Callback for the calendar icon button of the input field */
   handleIconClick: () => void;
   /** Handles the clear action for the datepicker */
   handleClear: (event?: React.KeyboardEvent) => void;
   /** Defines whether the component selects a single date or a range */
   isRangePicker: boolean;
-  /** Style properties for the DatePicker with a filter base */
-  filterConfig?: {
-    buttonType?: 'primary' | 'secondary';
-    styleType?: StyleType;
-    filterType?: FilterType;
-  };
   /** The selected day */
   selectedDay: Range;
   /** Props for styling the input */
@@ -81,7 +74,7 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
 
     const labels = getLabels(isRangePicker, formattedTo);
 
-    const { buttonType = 'primary', styleType = 'filled', filterType } = filterConfig;
+    const { filterType, label } = filterConfig;
 
     const sx = {
       wrapper: {
@@ -118,46 +111,30 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
       return isRangePicker ? DATE_RANGE_PICKER_LABEL : DATE_PICKER_LABEL;
     }, [inputProps?.label, isRangePicker]);
 
-    const renderBase = () => {
-      if (filterType) {
-        return (
-          <FilterBase
-            isDatePicker
-            dataTestId={generateTestDataId('filter', dataTestId)}
-            isDisabled={false}
-            buttonType={buttonType}
-            styleType={styleType}
-            handleOpen={handleIconClick}
-            filterType={filterType}
-            onClear={handleClear}
-            selectedItemLabel={
-              selectedDay.from && `${labels.selectDate} : ${formattedFrom} ${labels.to}`
-            }
-            isOpen={isOpen}
-            hasSelectedValue={Boolean(selectedDay.from && `${formattedFrom} - ${formattedTo}`)}
-            label={!selectedDay.from ? labels.selectDate : ''}
-            iconName="calendar"
-          />
-        );
-      }
+    if (filterType) {
+      const filterLabel = `${label ?? labels.selectDate}`;
 
-      if (isRangePicker) {
-        return (
-          <TextField
-            ref={ref}
-            {...inputProps}
-            label={getLabel}
-            onKeyDown={handleClear}
-            dataTestId={dataTestId}
-            onChange={ON_CHANGE_MOCK}
-            value={selectedDay.from ? `${formattedFrom} - ${formattedTo}` : ''}
-            suffix={renderIconButton}
-            sx={sx}
-          />
-        );
-      }
+      const filterValue = `${selectedDay.from ? `: ${formattedFrom}` : ''} ${
+        isRangePicker && selectedDay.to ? `- ${formattedTo}` : ''
+      }`;
 
       return (
+        <div>
+          <FilterButton
+            isPopulated={Boolean(selectedDay.from && `${formattedFrom} - ${formattedTo}`)}
+            isActive={isOpen}
+            onClear={handleClear}
+            filterType={filterType}
+            onClick={handleIconClick}
+          >
+            {`${filterLabel}${filterValue}`}
+          </FilterButton>
+        </div>
+      );
+    }
+
+    return (
+      <div>
         <TextField
           ref={ref}
           {...inputProps}
@@ -169,10 +146,8 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
           suffix={renderIconButton}
           sx={sx}
         />
-      );
-    };
-
-    return <div>{renderBase()}</div>;
+      </div>
+    );
   }
 );
 

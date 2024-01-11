@@ -132,7 +132,7 @@ export const useWrapperWidth = (
     if (hasWrapperWidth) {
       setWidth(wrapperRef?.current?.getBoundingClientRect()?.width);
     }
-  }, [hasWrapperWidth, wrapperRef]);
+  }, [hasWrapperWidth, wrapperRef, wrapperRef?.current?.getBoundingClientRect()?.width]);
 
   return [width];
 };
