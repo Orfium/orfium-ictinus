@@ -5,8 +5,18 @@ import Search from './Search';
 import type { SearchProps } from './Search.types';
 import type { FilterOption } from 'components/Filter';
 
+export const LABEL = 'Friends';
+export const options = [
+  { label: 'Ross Geller', value: 'option_1' },
+  { label: 'Monica Geller', value: 'option_2' },
+  { label: 'Chandler Bing', value: 'option_3' },
+  { label: 'Joey Tribbiani', value: 'option_4' },
+  { label: 'Rachel Green', value: 'option_5' },
+  { label: 'Phoebe Buffay', value: 'option_6' },
+];
+
 const StatefulSearch = forwardRef<HTMLInputElement, Partial<SearchProps> & { hasFilter?: boolean }>(
-  ({ hasFilter, onClear, ...rest }, ref) => {
+  ({ hasFilter, onClear }, ref) => {
     const [value, setValue] = useState<string>();
 
     const [selectedFilter, setSelectedFilter] = useState<FilterOption>(undefined);
@@ -19,15 +29,8 @@ const StatefulSearch = forwardRef<HTMLInputElement, Partial<SearchProps> & { has
       ? {
           filterConfig: {
             defaultValue: { label: 'All', value: 'all' },
-            label: 'Friends',
-            items: [
-              { label: 'Ross Geller', value: 'option_1' },
-              { label: 'Monica Geller', value: 'option_2' },
-              { label: 'Chandler Bing', value: 'option_3' },
-              { label: 'Joey Tribbiani', value: 'option_4' },
-              { label: 'Rachel Green', value: 'option_5' },
-              { label: 'Phoebe Buffay', value: 'option_6' },
-            ],
+            label: LABEL,
+            items: options,
             selectedFilter,
             onChange: setSelectedFilter,
             onClear: handleFilterClear,
