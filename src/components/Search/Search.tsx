@@ -66,7 +66,11 @@ const Search = React.forwardRef<HTMLInputElement, SearchProps>((props, ref) => {
       </TextInputBase>
       {hasFilter && (
         <div css={filterStyles()}>
-          <Filter {...filterConfig} dataTestPrefixId={`${dataTestPrefixId}_search_filter`} />
+          <Filter
+            {...filterConfig}
+            isDisabled={isDisabled}
+            dataTestPrefixId={`${dataTestPrefixId}_search_filter`}
+          />
         </div>
       )}
     </div>

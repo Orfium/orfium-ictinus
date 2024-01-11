@@ -43,11 +43,11 @@ export const filterStyles =
         position: relative;
         z-index: 0;
 
-        &:hover {
+        &:hover:enabled {
           background: ${tokens('backgroundColor.focused')};
         }
 
-        &:focus-within {
+        &:focus-within:enabled {
           border-left: none;
           box-shadow: ${`inset 0 0 0 ${tokens('borderWidth.2')} ${tokens('borderColor.active')}`};
           z-index: 1;

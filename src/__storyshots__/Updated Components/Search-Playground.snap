@@ -267,17 +267,17 @@
   margin-left: -1px;
 }
 
-.emotion-15 button:hover {
+.emotion-15 button:hover:enabled {
   background: #E7E8FF;
 }
 
-.emotion-15 button:focus-within {
+.emotion-15 button:focus-within:enabled {
   border-left: none;
   box-shadow: inset 0 0 0 0.125rem #175bf5;
   z-index: 1;
 }
 
-.emotion-15 button:focus-within[data-active='false'] {
+.emotion-15 button:focus-within:enabled[data-active='false'] {
   background: #E7E8FF;
 }
 

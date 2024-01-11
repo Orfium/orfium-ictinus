@@ -230,17 +230,17 @@
   margin-left: -1px;
 }
 
-.emotion-8 button:hover {
+.emotion-8 button:hover:enabled {
   background: #E7E8FF;
 }
 
-.emotion-8 button:focus-within {
+.emotion-8 button:focus-within:enabled {
   border-left: none;
   box-shadow: inset 0 0 0 0.125rem #175bf5;
   z-index: 1;
 }
 
-.emotion-8 button:focus-within[data-active='false'] {
+.emotion-8 button:focus-within:enabled[data-active='false'] {
   background: #E7E8FF;
 }
 
