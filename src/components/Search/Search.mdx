@@ -1,0 +1,55 @@
+import { Meta, Canvas, ArgTypes, Story } from '@storybook/blocks';
+import Search from './Search';
+import * as SearchStories from './Search.stories';
+
+<Meta of={SearchStories} />
+
+<SectionHeader title={'Search'} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
+
+# Overview
+
+Search allows users to enter a query to locate specific items or information within a dataset, application, or website.
+
+## Props
+
+<ArgTypes of={Search} />
+
+## Usage
+
+<UsageGuidelines
+  guidelines={[
+    'To quickly locate specific items or information within a large dataset.',
+    'When the user may not know the exact location or categorization of the information they need.',
+    'To enhance user experience by reducing time and effort spent browsing or scrolling.',
+  ]}
+/>
+
+<SubsectionHeader title="Variants" />
+
+### Simple Search
+
+<Tip>
+  Search component has a default min-width. In order to add a different
+  width/min-width, use the sx prop (by providing the necessary css properties inside the wrapper object)
+</Tip>
+
+<Canvas of={SearchStories.SimpleSearch} />
+
+### Filtered Search
+
+To add filter to the Search component, provide the `filterConfig` object prop. This prop includes `defaultValue`, `onChange`, `label`, `items`, `onClear` and `selectedFilter` props from Filter component.
+
+<Canvas of={SearchStories.FilteredSearch} />
+
+### Disabled Search
+
+<Canvas of={SearchStories.DisabledSearch} />
+
+### Playground
+
+<Canvas of={SearchStories.Playground} />
