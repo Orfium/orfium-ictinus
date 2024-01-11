@@ -33,10 +33,23 @@ export default {
 export const SimpleSearch = {
   render: () => {
     const [value, setValue] = useState<string>();
+    const [value2, setValue2] = useState<string>();
 
     const handleClear = () => setValue('');
+    const handleClear2 = () => setValue2('');
 
-    return <Search value={value} onClear={handleClear} onInput={(e) => setValue(e.target.value)} />;
+    return (
+      <Stack isVertical>
+        <Search value={value} onClear={handleClear} onInput={(e) => setValue(e.target.value)} />
+        <Search
+          placeholder="Search with custom width"
+          sx={{ wrapper: { minWidth: 'unset', width: '300px' } }}
+          value={value2}
+          onClear={handleClear2}
+          onInput={(e) => setValue2(e.target.value)}
+        />
+      </Stack>
+    );
   },
   name: 'Simple Search',
 };
