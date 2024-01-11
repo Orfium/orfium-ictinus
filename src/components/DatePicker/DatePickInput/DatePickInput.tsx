@@ -111,15 +111,15 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
       return isRangePicker ? DATE_RANGE_PICKER_LABEL : DATE_PICKER_LABEL;
     }, [inputProps?.label, isRangePicker]);
 
-    const renderBase = () => {
-      if (filterType) {
-        const filterLabel = `${label ?? labels.selectDate}`;
+    if (filterType) {
+      const filterLabel = `${label ?? labels.selectDate}`;
 
-        const filterValue = `${selectedDay.from ? `: ${formattedFrom}` : ''} ${
-          isRangePicker && selectedDay.to ? `- ${formattedTo}` : ''
-        }`;
+      const filterValue = `${selectedDay.from ? `: ${formattedFrom}` : ''} ${
+        isRangePicker && selectedDay.to ? `- ${formattedTo}` : ''
+      }`;
 
-        return (
+      return (
+        <div>
           <FilterButton
             isPopulated={Boolean(selectedDay.from && `${formattedFrom} - ${formattedTo}`)}
             isActive={isOpen}
@@ -129,10 +129,12 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
           >
             {`${filterLabel}${filterValue}`}
           </FilterButton>
-        );
-      }
+        </div>
+      );
+    }
 
-      return (
+    return (
+      <div>
         <TextField
           ref={ref}
           {...inputProps}
@@ -144,10 +146,8 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
           suffix={renderIconButton}
           sx={sx}
         />
-      );
-    };
-
-    return <div>{renderBase()}</div>;
+      </div>
+    );
   }
 );
 

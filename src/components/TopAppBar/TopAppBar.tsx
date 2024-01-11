@@ -39,7 +39,7 @@ const TopAppBar: FC<TopAppBarProps> = ({
       </div>
       <div css={Styles.additionalToolsSection(Boolean(additionalTools))}>{additionalTools}</div>
       <div css={Styles.topAppBarSection}>
-        <UserMenu isDark={isDark} {...userMenu} />
+        <UserMenu {...userMenu} />
       </div>
     </div>
   );

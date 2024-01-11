@@ -21,7 +21,7 @@ export type TypographyVariant =
   | 'body03'
   | 'body04';
 
-export type TypographyComponent = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
+export type TypographyComponent = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'div';
 
 export type TextColorTypes = 'primary' | 'secondary' | 'error' | 'active' | 'visited';
 
@@ -32,7 +32,7 @@ export type TypographyProps = {
   variant?: TypographyVariant;
   /** The Font Spacing used in the selection of the font family */
   fontSpacing?: FontSpacing;
-  /** How you want to represent it, eg div, span or other */
+  /** How you want to represent it, eg div, span or other @defaults p */
   component?: TypographyComponent;
   /** A boolean definition of the inverted case */
   isInverted?: boolean;

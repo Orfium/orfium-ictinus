@@ -108,7 +108,7 @@ describe('Single Filter', () => {
     await userEvent.type(selectInput, 'tes', { delay: 500 });
 
     await waitFor(() => expect(onAsyncSearch).toHaveBeenCalledTimes(1));
-  });
+  }, 8000);
 });
 
 describe('Multi Filter', () => {

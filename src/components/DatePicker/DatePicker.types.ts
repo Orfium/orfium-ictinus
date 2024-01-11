@@ -36,10 +36,6 @@ export type DatePickerProps = {
   filterConfig?: {
     /** The filter's label */
     label?: string;
-    /** The type of the filter button's palette - defaults to "primary" */
-    // buttonType?: 'primary' | 'secondary';
-    /** Defines the style type of the filter button */
-    // styleType?: StyleType;
     /** This property defines the Filter's type */
     filterType?: FilterType;
   };

@@ -432,7 +432,7 @@
   fill: #ffffff!important;
 }
 
-.emotion-24 label {
+.emotion-25 label {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -449,7 +449,7 @@
   cursor: pointer;
 }
 
-.emotion-24 label:before {
+.emotion-25 label:before {
   content: '';
   display: inline-block;
   width: 1.25rem;
@@ -462,22 +462,22 @@
   background: rgba(84,94,255,0);
 }
 
-.emotion-24 label:hover::before {
+.emotion-25 label:hover::before {
   background: rgba(84,94,255,0.06);
   box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
 }
 
-.emotion-24 label[data-selected='true']:before {
+.emotion-25 label[data-selected='true']:before {
   border-color: #175bf5;
   border-radius: 50%;
 }
 
-.emotion-24 label[data-selected='true']:hover::before {
+.emotion-25 label[data-selected='true']:hover::before {
   background: none;
   box-shadow: none;
 }
 
-.emotion-24 label[data-selected='true']:after {
+.emotion-25 label[data-selected='true']:after {
   content: '';
   display: block;
   position: absolute;
@@ -490,12 +490,12 @@
   animation: circle 0.15s ease-in-out;
 }
 
-.emotion-24 label[data-disabled='true'] {
+.emotion-25 label[data-disabled='true'] {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-24 label[data-disabled='true']:hover::before {
+.emotion-25 label[data-disabled='true']:hover::before {
   background: none;
   box-shadow: none;
 }
@@ -514,9 +514,9 @@
           style="height: 100%;"
         >
           <ul
-            aria-labelledby="react-aria-:r4l:"
+            aria-labelledby="react-aria-:r51:"
             class="emotion-3"
-            id="react-aria-:r4j:"
+            id="react-aria-:r4v:"
             role="listbox"
             style="overflow-y: auto; position: relative; display: flex; flex-direction: column; height: 100%; list-style: none; padding: 0px;"
             tabindex="0"
@@ -527,7 +527,7 @@
               class="emotion-4 "
               data-key="1"
               data-testid="ictinus_list_item_1"
-              id="react-aria-:r4j:-option-1"
+              id="react-aria-:r4v:-option-1"
               role="option"
             >
               <div
@@ -544,7 +544,7 @@
               class="emotion-4 "
               data-key="3"
               data-testid="ictinus_list_item_3"
-              id="react-aria-:r4j:-option-3"
+              id="react-aria-:r4v:-option-3"
               role="option"
             >
               <div
@@ -587,7 +587,7 @@
               class="emotion-10 "
               data-key="4"
               data-testid="ictinus_list_item_4"
-              id="react-aria-:r4j:-option-4"
+              id="react-aria-:r4v:-option-4"
               role="option"
             >
               <div
@@ -628,7 +628,7 @@
               class="emotion-4 "
               data-key="5"
               data-testid="ictinus_list_item_5"
-              id="react-aria-:r4j:-option-5"
+              id="react-aria-:r4v:-option-5"
               role="option"
             >
               <div
@@ -649,6 +649,7 @@
                       <input
                         data-testid="undefined_undefined_checkbox"
                         disabled=""
+                        title=""
                         type="checkbox"
                       />
                     </span>
@@ -685,27 +686,41 @@
               class="emotion-4 "
               data-key="6"
               data-testid="ictinus_list_item_6"
-              id="react-aria-:r4j:-option-6"
+              id="react-aria-:r4v:-option-6"
               role="option"
             >
               <div
                 class="emotion-8"
               >
                 <div
+                  aria-disabled="true"
+                  aria-orientation="vertical"
                   class="emotion-24"
-                  data-testid="undefined_radio_6_container"
+                  data-testid="undefined_radio_group_container"
+                  id="react-aria-:r5d:"
+                  role="radiogroup"
                 >
-                  <label
-                    data-disabled="true"
+                  <div
+                    class="emotion-25"
+                    data-testid="undefined_radio_6_container"
                   >
-                    <div
-                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                    <label
+                      data-disabled="true"
+                      data-selected="false"
                     >
-                      <input
-                        tabindex="0"
-                      />
-                    </div>
-                  </label>
+                      <div
+                        style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                      >
+                        <input
+                          disabled=""
+                          name="react-aria-:r5i:"
+                          tabindex="0"
+                          type="radio"
+                          value="6"
+                        />
+                      </div>
+                    </label>
+                  </div>
                 </div>
               </div>
               <div

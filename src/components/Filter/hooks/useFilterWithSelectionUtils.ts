@@ -2,7 +2,12 @@ import { debounce, differenceBy, isEqual } from 'lodash';
 import { useState } from 'react';
 import React from 'react';
 
-import type { FilterOption, FilterProps } from '../Filter.types';
+import type {
+  FilterOption,
+  FilterProps,
+  MultiFilterProps,
+  SingleFilterProps,
+} from '../Filter.types';
 import { SELECT_ALL_OPTION } from 'components/Select/constants';
 
 const useFilterWithSelectionUtils = ({
@@ -18,18 +23,10 @@ const useFilterWithSelectionUtils = ({
   onClear,
 }: Pick<
   FilterProps,
-  | 'isMulti'
-  | 'isSearchable'
-  | 'onChange'
-  | 'selectedFilter'
-  | 'onAsyncSearch'
-  | 'isAsync'
-  | 'minCharactersToSearch'
-  | 'items'
-  | 'onClear'
+  'isSearchable' | 'onAsyncSearch' | 'isAsync' | 'minCharactersToSearch' | 'items' | 'onClear'
 > & {
   setIsOpen: any;
-}) => {
+} & (SingleFilterProps | MultiFilterProps)) => {
   const [searchValue, setSearchValue] = useState('');
 
   const filteredOptions: FilterOption[] = React.useMemo(() => {
@@ -56,18 +53,15 @@ const useFilterWithSelectionUtils = ({
       setSearchValue('');
     }
 
-    if (isMulti) {
+    if (isMulti === true) {
       if (onChange && selectedFilter) {
         if (isEqual(option, SELECT_ALL_OPTION)) {
-          //@ts-ignore
-          onChange(filteredOptions.filter((o) => !o.isDisabled));
+          onChange([...selectedFilter, ...filteredOptions.filter((o) => !o.isDisabled)]);
         } else {
-          //@ts-ignore
           onChange([...selectedFilter, option]);
         }
       }
     } else {
-      //@ts-ignore
       onChange(option);
     }
   };
@@ -104,8 +98,7 @@ const useFilterWithSelectionUtils = ({
       ? selectedFilter.filter((o) => o.value !== option.value)
       : [];
 
-    //@ts-ignore
-    if (onChange) onChange(items);
+    if (isMulti === true && onChange) onChange(items);
   };
 
   const handleClear = () => {

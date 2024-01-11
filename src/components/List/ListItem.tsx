@@ -10,12 +10,18 @@ export type ListItemProps = {
   textValue?: string;
   /** @default normal */
   rowSize?: ListRowSize;
+  /** The type of the parent component, usually changed when used on Menus @defaults List */
+  parentType?: 'List' | 'Menu';
 };
-const ListItem: React.FCC<ListItemProps> = (props) => (
-  <AriaItem {...props} key={String(props.key)}>
-    {props.children}
-  </AriaItem>
-);
+const ListItem: React.FCC<ListItemProps> = (props) => {
+  const Component = props.parentType === 'Menu' ? 'div' : AriaItem;
+
+  return (
+    <Component {...props} key={String(props.key)}>
+      {props.children}
+    </Component>
+  );
+};
 
 // @ts-ignore hack to pass the aria generator to the component as needed
 ListItem.getCollectionNode = AriaItem.getCollectionNode;

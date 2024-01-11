@@ -3,7 +3,12 @@ import React, { useCallback } from 'react';
 
 import { emptyStyle, optionsStyles } from './Options.style';
 import { FILTER_OPTIONS_MAX_HEIGHT } from 'components/Filter/constants';
-import type { FilterProps } from 'components/Filter/Filter.types';
+import type {
+  FilterOption,
+  FilterProps,
+  MultiFilterProps,
+  SingleFilterProps,
+} from 'components/Filter/Filter.types';
 import type { ListSelection } from 'components/List';
 import List, { ListItem, ListItemText } from 'components/List';
 import { MAX_NON_VIRTUALIZED_ITEMS_FILTER } from 'components/List/utils';
@@ -12,19 +17,17 @@ import { SELECT_ALL_OPTION } from 'components/Select/constants';
 export type Props = Pick<
   FilterProps,
   | 'items'
-  | 'onChange'
   | 'defaultValue'
-  | 'selectedFilter'
   | 'isSearchable'
   | 'isVirtualized'
-  | 'isMulti'
   | 'hasSelectAllOption'
   | 'dataTestPrefixId'
->;
+> &
+  (SingleFilterProps | MultiFilterProps) & { onOptionSelect: (option: FilterOption) => void };
 
 const Options: React.FCC<Props> = ({
   items,
-  onChange,
+  onOptionSelect,
   defaultValue,
   selectedFilter,
   isVirtualized,
@@ -40,25 +43,22 @@ const Options: React.FCC<Props> = ({
     (keys: ListSelection) => {
       const keyFound = String(head(Array.from(keys)));
       if (keyFound === SELECT_ALL_OPTION.value) {
-        //@ts-ignore
-        onChange(SELECT_ALL_OPTION);
+        onOptionSelect(SELECT_ALL_OPTION);
       } else {
         const optionFound = flatMap(items, (o) => o.options || o).find(
           (o) => String(o.value) === keyFound
         );
-        //@ts-ignore
-        if (optionFound) onChange(optionFound);
+        if (optionFound) onOptionSelect(optionFound);
       }
     },
-    [items, onChange]
+    [items, onOptionSelect]
   );
 
   return items.length ? (
     <div css={optionsStyles({ isMulti })}>
       <List
         label="filter-options"
-        //@ts-ignore
-        selectedKeys={!isMulti && selectedFilter ? [selectedFilter.value] : []}
+        selectedKeys={isMulti === false && selectedFilter ? [selectedFilter.value] : []}
         disabledKeys={items.filter((o) => o.isDisabled).map((o) => o.value)}
         onSelectionChange={onSelectionChange}
         isVirtualized={isVirtualized && isForcedVirtualized}
