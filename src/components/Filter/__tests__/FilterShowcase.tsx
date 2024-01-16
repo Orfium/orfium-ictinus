@@ -4,7 +4,7 @@ import isEqual from 'react-fast-compare';
 import Filter from '../Filter';
 import type { FilterOption, FilterProps } from '../Filter.types';
 
-const StatefulFilter = forwardRef<HTMLInputElement, FilterProps>(
+const FilterShowcase = forwardRef<HTMLInputElement, FilterProps>(
   ({ isMulti, selectedFilter, onChange = () => {}, ...rest }, ref) => {
     const [inputValue, setInputValue] = useState<FilterOption | FilterOption[]>(
       isMulti ? selectedFilter || [] : selectedFilter || undefined
@@ -31,6 +31,6 @@ const StatefulFilter = forwardRef<HTMLInputElement, FilterProps>(
   }
 );
 
-StatefulFilter.displayName = 'StatefulFilter';
+FilterShowcase.displayName = 'FilterShowcase';
 
-export default React.memo(StatefulFilter, isEqual);
+export default React.memo(FilterShowcase, isEqual);
