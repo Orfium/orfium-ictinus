@@ -24,6 +24,7 @@ type Props = Pick<
   handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   filteredOptions: FilterOption[];
   handleSelect: (option: FilterOption) => void;
+  listRef?: React.MutableRefObject<HTMLUListElement>;
 } & (SingleFilterProps | MultiFilterProps);
 
 const FilterMenu: React.FCC<Props> = ({
@@ -40,6 +41,7 @@ const FilterMenu: React.FCC<Props> = ({
   handleSelect,
   onFilterDelete,
   dataTestPrefixId,
+  listRef,
 }) => {
   return (
     <div css={menuStyle()}>
@@ -59,6 +61,7 @@ const FilterMenu: React.FCC<Props> = ({
       )}
       {/**  @ts-ignore */}
       <Options
+        listRef={listRef}
         dataTestPrefixId={dataTestPrefixId}
         items={filteredOptions}
         isVirtualized={isVirtualized}

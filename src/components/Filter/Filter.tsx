@@ -1,4 +1,7 @@
-import React, { useState } from 'react';
+import useKeyboard from 'hooks/useKeyboardEvents';
+import head from 'lodash/head';
+import omit from 'lodash/omit';
+import React, { useRef, useState } from 'react';
 
 import FilterButton from './components/FilterButton';
 import FilterMenu from './components/FilterMenu';
@@ -74,9 +77,32 @@ const Filter = React.forwardRef<HTMLButtonElement, FilterProps>((props, ref) => 
     setIsOpen(!isOpen);
   };
 
+  const listRef = useRef<HTMLUListElement | null>(null);
+
+  const { keyboardProps } = useKeyboard({
+    events: {
+      keydown: {
+        onArrowDown: () => {
+          if (isOpen) {
+            setTimeout(() => {
+              const options = listRef.current?.querySelectorAll('[role="option"]');
+              if (options && options?.length > 0) {
+                const firstOption = head(options);
+                if (firstOption instanceof HTMLElement && typeof firstOption.focus === 'function') {
+                  firstOption.focus();
+                }
+              }
+            }, 0);
+          }
+        },
+      },
+    },
+  });
+
   const filterOverlay = filteredOptions ? (
     // @ts-ignore
     <FilterMenu
+      listRef={listRef}
       isMulti={isMulti}
       isVirtualized={isVirtualized}
       isSearchable={isSearchable}
@@ -107,6 +133,7 @@ const Filter = React.forwardRef<HTMLButtonElement, FilterProps>((props, ref) => 
         parent={
           <FilterButton
             ref={ref}
+            {...omit(keyboardProps, 'onBlur')}
             isMulti={isMulti}
             isActive={isOpen}
             moreFilters={moreFilters}

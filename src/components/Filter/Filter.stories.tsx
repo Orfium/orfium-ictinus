@@ -235,7 +235,7 @@ export const MultiFilter = {
     };
 
     const handleClear1 = () => {
-      setSelectedFilters([]);
+      setSelectedFilters1([]);
       setAsyncItems(options);
     };
 
