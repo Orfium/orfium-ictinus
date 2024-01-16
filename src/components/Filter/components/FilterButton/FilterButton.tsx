@@ -33,6 +33,7 @@ export const FilterButton = React.forwardRef<HTMLButtonElement, FilterButtonProp
     moreFilters,
     dataTestPrefixId,
     isMulti,
+    ...rest
   } = props;
 
   const theme = useTheme();
@@ -60,6 +61,7 @@ export const FilterButton = React.forwardRef<HTMLButtonElement, FilterButtonProp
       disabled={isDisabled}
       data-testid={`${dataTestPrefixId}_filter_button`}
       data-active={isActive}
+      {...rest}
     >
       <div
         css={{ textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap' }}

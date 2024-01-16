@@ -133,6 +133,22 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
       );
     }
 
+    if (isRangePicker) {
+      return (
+        <TextField
+          ref={ref}
+          {...inputProps}
+          label={getLabel}
+          onKeyDown={handleClear}
+          dataTestId={dataTestId}
+          onChange={ON_CHANGE_MOCK}
+          value={selectedDay.from ? `${formattedFrom} - ${formattedTo}` : ''}
+          suffix={renderIconButton}
+          sx={sx}
+        />
+      );
+    }
+
     return (
       <div>
         <TextField

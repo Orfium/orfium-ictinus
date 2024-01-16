@@ -23,7 +23,10 @@ export type Props = Pick<
   | 'hasSelectAllOption'
   | 'dataTestPrefixId'
 > &
-  (SingleFilterProps | MultiFilterProps) & { onOptionSelect: (option: FilterOption) => void };
+  (SingleFilterProps | MultiFilterProps) & {
+    onOptionSelect: (option: FilterOption) => void;
+    listRef?: React.MutableRefObject<HTMLUListElement>;
+  };
 
 const Options: React.FCC<Props> = ({
   items,
@@ -34,6 +37,7 @@ const Options: React.FCC<Props> = ({
   hasSelectAllOption,
   isMulti,
   dataTestPrefixId,
+  listRef,
 }) => {
   const isForcedVirtualized = items.length > MAX_NON_VIRTUALIZED_ITEMS_FILTER;
 
@@ -57,6 +61,7 @@ const Options: React.FCC<Props> = ({
   return items.length ? (
     <div css={optionsStyles({ isMulti })}>
       <List
+        ref={listRef}
         label="filter-options"
         selectedKeys={isMulti === false && selectedFilter ? [selectedFilter.value] : []}
         disabledKeys={items.filter((o) => o.isDisabled).map((o) => o.value)}
