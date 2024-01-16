@@ -3,10 +3,10 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 import { createMockMediaMatcher } from '../../hooks/useBreakpoints.test';
 import { fireEvent, render } from '../../test';
-import { menuItems } from '../storyUtils/DrawerShowcase/MenuItems';
-import Drawer from './Drawer';
+import { menuItems } from '../storyUtils/NavigationShowcase/MenuItems';
+import Navigation from './Navigation';
 
-describe('Drawer', () => {
+describe('Navigation', () => {
   let queries: any;
   let isExpanded = true;
 
@@ -16,7 +16,7 @@ describe('Drawer', () => {
 
     queries = render(
       <Router>
-        <Drawer
+        <Navigation
           isExpanded={isExpanded}
           menuItems={menuItems}
           setExpanded={() => {
