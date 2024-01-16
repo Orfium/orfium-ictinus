@@ -32,6 +32,7 @@ export type BasicActionsIcons =
   | 'restore'
   | 'review'
   | 'search'
+  | 'share'
   | 'sort'
   | 'sortAscending'
   | 'sortDescending'
