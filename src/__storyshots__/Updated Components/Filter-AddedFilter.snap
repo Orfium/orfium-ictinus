@@ -1,0 +1,137 @@
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 18.75rem;
+}
+
+.emotion-1 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-3 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-4 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: #1552DD;
+  width: 2.25rem;
+  height: 2.25rem;
+  background-color: rgba(84,94,255,0);
+  padding: 0;
+  border-radius: 2.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-4:focus-visible:not(:disabled) {
+  background-color: rgba(84,94,255,0.06);
+}
+
+.emotion-4:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-4:hover:not(:disabled) {
+  background-color: rgba(84,94,255,0.06);
+}
+
+.emotion-4:active:not(:disabled) {
+  background-color: rgba(84,94,255,0.14);
+}
+
+.emotion-5 {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-6 path {
+  fill: #1552DD!important;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      style="margin: 5px;"
+    >
+      <div>
+        <div
+          class="emotion-1"
+        >
+          <div
+            class="emotion-2"
+          >
+            <div
+              class="emotion-3"
+            >
+              <button
+                class="emotion-4"
+                data-testid="icon-dropdown-icon-button"
+                type="button"
+              >
+                <div
+                  class="emotion-5"
+                >
+                  <svg
+                    class="emotion-6"
+                    fill="none"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.99973 16C9.75052 16 9.53739 15.9114 9.36033 15.7342C9.18328 15.557 9.09475 15.3439 9.09475 15.0948V10.9052H4.90525C4.65612 10.9052 4.44297 10.8166 4.26579 10.6394C4.0886 10.4621 4 10.2489 4 9.99973C4 9.75052 4.0886 9.53739 4.26579 9.36033C4.44297 9.18328 4.65612 9.09475 4.90525 9.09475H9.09475V4.90525C9.09475 4.65612 9.18337 4.44296 9.36061 4.26577C9.53786 4.08859 9.75108 4 10.0003 4C10.2495 4 10.4626 4.08859 10.6397 4.26577C10.8167 4.44296 10.9052 4.65612 10.9052 4.90525V9.09475H15.0948C15.3439 9.09475 15.557 9.18337 15.7342 9.36061C15.9114 9.53786 16 9.75108 16 10.0003C16 10.2495 15.9114 10.4626 15.7342 10.6397C15.557 10.8167 15.3439 10.9052 15.0948 10.9052H10.9052V15.0948C10.9052 15.3439 10.8166 15.557 10.6394 15.7342C10.4621 15.9114 10.2489 16 9.99973 16Z"
+                      fill="#6265AD"
+                    />
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

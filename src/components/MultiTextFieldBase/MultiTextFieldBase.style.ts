@@ -32,7 +32,7 @@ export const progressIndicatorStyles =
   () =>
   (theme: Theme): SerializedStyles =>
     css`
-      padding-right: ${theme.globals.spacing.get('3')};
+      padding-right: ${theme.globals.spacing.get('5')};
     `;
 
 export const chipStyle =
@@ -64,7 +64,6 @@ export const inputContainer =
 export const textInputBaseOverrides =
   ({
     hasValue,
-    isLoading,
     hasLabel,
     isResponsive,
     isTextfield,
@@ -108,9 +107,9 @@ export const textInputBaseOverrides =
         // ictinus spacing (the are calculated by combining internal absolute positioned component widths)
         // so we can override the existing TextFieldInputBase paddings to
         // perfectly position and align the content inside.
-        padding: isLoading
-          ? `${rem(paddingTop)} ${rem(80)} ${rem(paddingBottom)} ${tokens('paddingContentLeft')}`
-          : `${rem(paddingTop)} ${rem(40)} ${rem(paddingBottom)} ${tokens('paddingContentLeft')}`,
+        padding: `${rem(paddingTop)} ${rem(40)} ${rem(paddingBottom)} ${tokens(
+          'paddingContentLeft'
+        )}`,
         ...(isResponsive
           ? { width: 'max-content', minWidth: rem(tokens('minWidth.large.normal')) }
           : {}),

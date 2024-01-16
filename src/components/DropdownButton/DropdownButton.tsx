@@ -14,6 +14,7 @@ import {
 import { generateTestDataId } from '../../utils/helpers';
 import Button from 'components/Button';
 import type { PrimitiveButtonTypes } from 'components/Button/Button.types';
+import type { AcceptedIconNames } from 'components/Icon';
 import IconButton from 'components/IconButton';
 import type { ListSelection } from 'components/List';
 import List, { ListItem, ListItemText } from 'components/List';
@@ -32,6 +33,8 @@ export type DropdownButtonProps = TestProps & {
   onButtonClick?: (event: ClickEvent) => void;
   /** The items on the Dropdown List */
   items?: string[];
+  /** The name of the iconButton */
+  iconButtonName?: AcceptedIconNames;
   /** Dropdown menu position when open */
   menuPosition?: MenuPositionAllowed;
   children?: React.ReactNode;
@@ -46,6 +49,7 @@ const DropdownButton = React.forwardRef<HTMLButtonElement, DropdownButtonProps>(
     items,
     type = 'primary',
     dataTestPrefixId = '',
+    iconButtonName = 'moreOptions',
     children,
   } = props;
 
@@ -93,7 +97,7 @@ const DropdownButton = React.forwardRef<HTMLButtonElement, DropdownButtonProps>(
             <IconButton
               type={type}
               size={size}
-              name="moreOptions"
+              name={iconButtonName}
               onClick={handleIconButtonClick}
               dataTestPrefixId={generateTestDataId('icon-dropdown', dataTestPrefixId)}
             />
