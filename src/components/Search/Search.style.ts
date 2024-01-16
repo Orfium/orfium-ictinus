@@ -43,7 +43,7 @@ export const filterStyles =
         position: relative;
         z-index: 0;
 
-        &:hover:enabled {
+        &:hover[data-active="false"]:enabled {
           background: ${tokens('backgroundColor.focused')};
         }
 

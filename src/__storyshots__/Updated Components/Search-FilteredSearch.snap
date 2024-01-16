@@ -230,7 +230,7 @@
   margin-left: -1px;
 }
 
-.emotion-8 button:hover:enabled {
+.emotion-8 button:hover[data-active="false"]:enabled {
   background: #E7E8FF;
 }
 
