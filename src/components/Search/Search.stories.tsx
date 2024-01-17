@@ -1,4 +1,4 @@
-import { boolean, number, select, text, withKnobs } from '@storybook/addon-knobs';
+import { boolean } from '@storybook/addon-knobs';
 import Search from './Search';
 import { FIGMA_URL } from '../../utils/common';
 import { useState } from 'react';

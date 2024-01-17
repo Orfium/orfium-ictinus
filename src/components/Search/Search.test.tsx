@@ -1,5 +1,6 @@
 import { render, screen } from 'test';
-import StatefulSearch, { options, LABEL } from './StatefulSearch';
+import StatefulSearch from './StatefulSearch';
+import { options, LABEL } from './constants';
 import userEvent from '@testing-library/user-event';
 
 describe('Search', () => {
@@ -34,7 +35,15 @@ describe('Search', () => {
   });
 
   it('toggles the focus state between input and filter when navigated through keyboard', async () => {
-    render(<StatefulSearch hasFilter />);
+    render(
+      <StatefulSearch
+        filterConfig={{
+          defaultValue: { label: 'All', value: 'all' },
+          label: LABEL,
+          items: options,
+        }}
+      />
+    );
     input = screen.getByTestId('search_search_input');
     await userEvent.type(input, 'Test');
 
@@ -53,7 +62,15 @@ describe('Search', () => {
   });
 
   it('changes the value of the filter when filter option is selected', async () => {
-    render(<StatefulSearch hasFilter />);
+    render(
+      <StatefulSearch
+        filterConfig={{
+          defaultValue: { label: 'All', value: 'all' },
+          label: LABEL,
+          items: options,
+        }}
+      />
+    );
     filterButton = screen.getByTestId('search_search_filter_filter_button');
 
     await userEvent.click(filterButton);

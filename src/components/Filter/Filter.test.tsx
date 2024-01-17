@@ -2,12 +2,12 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { render, screen, waitFor } from 'test';
 
-import { selectDropdownOption } from '../../../test';
+import { selectDropdownOption } from '../../test';
 import Filter from '../Filter';
-import { SELECT_ALL_OPTION } from '../../Select/constants';
-import { options } from '../constants';
-import { FilterProps } from '../Filter.types';
-import FilterShowcase from './FilterShowcase';
+import { SELECT_ALL_OPTION } from '../Select/constants';
+import { options } from './constants';
+import { FilterProps } from './Filter.types';
+import StatefulFilter from './StatefulFilter';
 
 global.ResizeObserver = vi.fn().mockImplementation(() => ({
   observe: vi.fn(),
@@ -120,7 +120,7 @@ describe('Multi Filter', () => {
 
   beforeEach(() => {
     render(
-      <FilterShowcase
+      <StatefulFilter
         hasSelectAllOption
         isMulti
         label="Label"
