@@ -5,7 +5,7 @@ const drawer = {
     description: 'Sets backgroundColor for drawer container',
   },
   borderColor: {
-    value: '{sem.colors.borderColor.decorative.default}',
+    value: '{sem.colors.borderColor.decorative.muted}',
     type: 'color',
     description: 'Sets borderColor for drawer container',
   },
