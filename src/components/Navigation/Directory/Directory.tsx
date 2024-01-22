@@ -1,13 +1,13 @@
 import useLocationToGetCurrentMenuItem from 'hooks/useLocationToGetCurrentMenuItem';
 import React, { useCallback, useState } from 'react';
 
+import { directoryContainerStyle } from './Directory.style';
 import MenuItem from './MenuItem/MenuItem';
-import { navigationContainerStyle } from './Navigation.style';
-import type { DrawerProps } from '../Drawer';
+import type { NavigationProps } from '../Navigation';
 
-type NavigationProps = DrawerProps;
+type DirectoryProps = NavigationProps;
 
-const Navigation: React.FCC<NavigationProps> = ({ menuItems, isExpanded }) => {
+const Directory: React.FCC<DirectoryProps> = ({ menuItems, isExpanded }) => {
   const [openMenuItems, setOpenMenuItems] = useState<string[]>([]); // we identify open menuitems by their url
   const [currentMenuItem] = useLocationToGetCurrentMenuItem(menuItems, setOpenMenuItems);
 
@@ -16,7 +16,7 @@ const Navigation: React.FCC<NavigationProps> = ({ menuItems, isExpanded }) => {
   }, []);
 
   return (
-    <div css={navigationContainerStyle(isExpanded)}>
+    <div css={directoryContainerStyle(isExpanded)}>
       {menuItems.map(
         (menuItem) =>
           menuItem.isVisible && (
@@ -33,4 +33,4 @@ const Navigation: React.FCC<NavigationProps> = ({ menuItems, isExpanded }) => {
   );
 };
 
-export default Navigation;
+export default Directory;

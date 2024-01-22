@@ -1,10 +1,10 @@
-import DrawerShowcase from '../storyUtils/DrawerShowcase';
-import Drawer from './Drawer';
+import NavigationShowcase from '../storyUtils/NavigationShowcase';
+import Navigation from './Navigation';
 import { FIGMA_URL } from '../../utils/common';
 
 export default {
-  title: 'Original Components/Drawer',
-  component: Drawer,
+  title: 'Original Components/Navigation',
+  component: Navigation,
 
   parameters: {
     design: [
@@ -27,20 +27,20 @@ export default {
   },
 };
 
-export const DrawerStory = {
+export const NavigationStory = {
   render: () => (
     <div>
-      <DrawerShowcase />
+      <NavigationShowcase />
     </div>
   ),
 
-  name: 'Drawer',
+  name: 'Navigation',
 };
 
-export const DrawerWithCustomComponent = {
+export const NavigationWithCustomComponent = {
   render: () => (
     <div>
-      <DrawerShowcase
+      <NavigationShowcase
         renderHeader={() => (
           <div
             style={{
@@ -55,5 +55,5 @@ export const DrawerWithCustomComponent = {
     </div>
   ),
 
-  name: 'Drawer with custom component',
+  name: 'Navigation with custom component',
 };

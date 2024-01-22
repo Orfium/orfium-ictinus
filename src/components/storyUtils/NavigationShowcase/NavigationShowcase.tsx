@@ -5,7 +5,7 @@ import { flex } from 'theme/functions';
 
 import { menuItems } from './MenuItems';
 import Button from 'components/Button';
-import Drawer from 'components/Drawer';
+import Navigation from 'components/Navigation';
 
 const DisplayLocation = () => {
   const location = useLocation<{ test: string }>();
@@ -16,17 +16,17 @@ const DisplayLocation = () => {
 interface Props {
   renderHeader?: () => React.ReactNode;
 }
-const DrawerShowcase: React.FCC<Props> = ({ renderHeader }) => {
+const NavigationShowcase: React.FCC<Props> = ({ renderHeader }) => {
   const theme = useTheme();
   const [hasExpanded, setHasExpanded] = useState<boolean>(true);
 
   return (
     <Router>
       <Button onClick={() => setHasExpanded((hasExpanded) => !hasExpanded)}>
-        {hasExpanded ? 'Hide' : 'Show'} Drawer
+        {hasExpanded ? 'Hide' : 'Show'} Navigation
       </Button>
       <div css={[flex, 'height: 100vh']}>
-        <Drawer
+        <Navigation
           isExpanded={hasExpanded}
           menuItems={menuItems}
           setExpanded={setHasExpanded}
@@ -109,4 +109,4 @@ const DrawerShowcase: React.FCC<Props> = ({ renderHeader }) => {
   );
 };
 
-export default DrawerShowcase;
+export default NavigationShowcase;

@@ -10,7 +10,7 @@ import { getFocus, getHover, getPressed } from '../../../theme/states';
 
 const ICON_PADDING = 39;
 
-export const navigationContainerStyle = (isExpanded: boolean) => (): SerializedStyles =>
+export const directoryContainerStyle = (isExpanded: boolean) => (): SerializedStyles =>
   css`
     ${transition(10.2)};
     width: 100%;
