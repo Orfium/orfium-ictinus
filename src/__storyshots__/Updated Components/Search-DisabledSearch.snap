@@ -107,6 +107,13 @@
   color: #686BB3;
 }
 
+.emotion-5 input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+
 .emotion-6 {
   font-family: Roboto;
   font-weight: 400;
@@ -233,6 +240,7 @@
             data-testid="search_search_input"
             disabled=""
             placeholder="Search"
+            type="search"
             value=""
           />
         </div>

@@ -127,6 +127,13 @@
   color: #686BB3;
 }
 
+.emotion-6 input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+
 .emotion-7 {
   font-family: Roboto;
   font-weight: 400;
@@ -296,6 +303,7 @@
                 class="emotion-7"
                 data-testid="search_search_input"
                 placeholder="Search"
+                type="search"
                 value=""
               />
             </div>
@@ -338,6 +346,7 @@
                 class="emotion-7"
                 data-testid="search_search_input"
                 placeholder="Search with custom width"
+                type="search"
                 value=""
               />
             </div>

@@ -128,6 +128,13 @@
   color: #686BB3;
 }
 
+.emotion-6 input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+
 .emotion-7 {
   font-family: Roboto;
   font-weight: 400;
@@ -267,7 +274,7 @@
   margin-left: -1px;
 }
 
-.emotion-15 button:hover[data-active="false"]:enabled {
+.emotion-15 button:hover[data-active='false']:enabled {
   background: #E7E8FF;
 }
 
@@ -404,6 +411,7 @@
                 class="emotion-7"
                 data-testid="search_search_input"
                 placeholder="Search"
+                type="search"
                 value=""
               />
             </div>
@@ -446,6 +454,7 @@
                 class="emotion-7"
                 data-testid="search_search_input"
                 placeholder="Search"
+                type="search"
                 value=""
               />
             </div>

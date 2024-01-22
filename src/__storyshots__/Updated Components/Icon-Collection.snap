@@ -142,6 +142,13 @@
   color: #686BB3;
 }
 
+.emotion-8 input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+
 .emotion-9 {
   font-family: Roboto;
   font-weight: 400;
@@ -318,6 +325,7 @@
                   class="emotion-9"
                   data-testid="search_search_input"
                   placeholder="Search icon"
+                  type="search"
                   value=""
                 />
               </div>

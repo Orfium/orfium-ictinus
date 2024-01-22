@@ -1,3 +1,4 @@
+import useEscape from 'hooks/useEscape';
 import useTheme from 'hooks/useTheme';
 import React from 'react';
 import isEqual from 'react-fast-compare';
@@ -32,6 +33,12 @@ const Search = React.forwardRef<HTMLInputElement, SearchProps>((props, ref) => {
     filterConfig?.defaultValue && filterConfig?.label && filterConfig?.items
   );
 
+  useEscape(() => {
+    if (onClear) {
+      onClear();
+    }
+  });
+
   return (
     <div css={searchContainer()} data-testid="search_container">
       <TextInputBase
@@ -42,6 +49,7 @@ const Search = React.forwardRef<HTMLInputElement, SearchProps>((props, ref) => {
         <Icon name="search" size={tokens('iconSize')} color={tokens('textColor.default')} />
         <div css={searchInputStyles()}>
           <input
+            type="search"
             css={inputStyle({ placeholder })}
             placeholder={placeholder}
             disabled={isDisabled}

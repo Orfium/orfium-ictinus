@@ -25,6 +25,10 @@ export const searchInputStyles =
         &::placeholder {
           color: ${tokens('textColor.default')};
         }
+
+        ::-webkit-search-cancel-button {
+          appearance: none;
+        }
       }
     `;
   };
@@ -43,7 +47,7 @@ export const filterStyles =
         position: relative;
         z-index: 0;
 
-        &:hover[data-active="false"]:enabled {
+        &:hover[data-active='false']:enabled {
           background: ${tokens('backgroundColor.focused')};
         }
 
