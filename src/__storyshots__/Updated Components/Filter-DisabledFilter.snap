@@ -1,0 +1,241 @@
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-1 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: inherit;
+  position: relative;
+}
+
+.emotion-1 #unique-tooltip-id {
+  display: none!important;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  height: 2.25rem;
+  padding: 0 1rem;
+  max-width: 18.75rem;
+  gap: 0.25rem;
+  background-color: #F5F5FF;
+  color: #1552DD;
+  border: 0.0625rem solid #b9cdfc;
+  border-radius: 6.25rem;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  -webkit-transition: background-color 0.1s ease-in-out;
+  transition: background-color 0.1s ease-in-out;
+  opacity: 50%;
+}
+
+.emotion-2:not([disabled]):focus-visible,
+.emotion-2:not([disabled]):hover {
+  background-color: #E7E8FF;
+}
+
+.emotion-3 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.emotion-4 {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.emotion-5 {
+  width: 1rem;
+  height: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-6 path {
+  fill: #1552DD!important;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  height: 2.25rem;
+  padding: 0 1rem;
+  max-width: 18.75rem;
+  gap: 0.25rem;
+  background-color: #E7E8FF;
+  color: #1552DD;
+  border: 0.0625rem solid #b9cdfc;
+  border-radius: 6.25rem;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  -webkit-transition: background-color 0.1s ease-in-out;
+  transition: background-color 0.1s ease-in-out;
+  opacity: 50%;
+}
+
+.emotion-8:not([disabled]):focus-visible,
+.emotion-8:not([disabled]):hover {
+  background-color: #D6D8FF;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      style="margin: 5px;"
+    >
+      <div>
+        <div
+          class="emotion-1"
+        >
+          <button
+            class="emotion-2"
+            data-testid="ictinus_filter_filter_button"
+            disabled=""
+            type="button"
+          >
+            <div
+              class="emotion-3"
+              data-testid="ictinus_filter_filter_label"
+            >
+              Friends: All
+            </div>
+            <div
+              class="emotion-4"
+            >
+              <div
+                class="emotion-5"
+              >
+                <svg
+                  class="emotion-6"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M6.09346 8.31215C5.65924 7.79108 6.02976 7 6.70803 7H13.292C13.9702 7 14.3408 7.79109 13.9065 8.31215L10.6146 12.2625C10.2947 12.6463 9.70526 12.6463 9.38542 12.2625L6.09346 8.31215Z"
+                    fill="#6265AD"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div>
+        <div
+          class="emotion-1"
+        >
+          <button
+            class="emotion-8"
+            data-testid="ictinus_filter_filter_button"
+            disabled=""
+            type="button"
+          >
+            <div
+              class="emotion-3"
+              data-testid="ictinus_filter_filter_label"
+            >
+              Friends: Gunther
+            </div>
+            <div
+              class="emotion-4"
+            >
+              <div
+                class="emotion-5"
+              >
+                <svg
+                  class="emotion-6"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M6.09346 8.31215C5.65924 7.79108 6.02976 7 6.70803 7H13.292C13.9702 7 14.3408 7.79109 13.9065 8.31215L10.6146 12.2625C10.2947 12.6463 9.70526 12.6463 9.38542 12.2625L6.09346 8.31215Z"
+                    fill="#6265AD"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div
+              class="emotion-5"
+              datatestprefixid="ictinus_filter_filter_close"
+            >
+              <svg
+                class="emotion-6"
+                fill="none"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.0442 11.1281L6.40819 14.7495C6.24522 14.9118 6.0561 14.9941 5.84084 14.9965C5.62558 14.9988 5.43411 14.9165 5.26642 14.7495C5.09872 14.5824 5.01487 14.396 5.01487 14.19C5.01487 13.9841 5.09872 13.7976 5.26642 13.6306L8.92076 9.99085L5.24805 6.35114C5.08507 6.18882 5.0024 6.00656 5.00005 5.80435C4.99769 5.60216 5.08035 5.41756 5.24805 5.25054C5.41574 5.08351 5.60297 5 5.80975 5C6.01653 5 6.20377 5.08351 6.37145 5.25054L10.0074 8.85364L13.6067 5.26884C13.7697 5.10651 13.9588 5.02417 14.174 5.02183C14.3893 5.01947 14.5808 5.10181 14.7485 5.26884C14.9162 5.43585 15 5.62843 15 5.84658C15 6.06473 14.9162 6.25731 14.7485 6.42433L11.1309 10.0457L14.7668 13.6672C14.9176 13.8173 14.9941 13.9995 14.9965 14.2139C14.9988 14.4283 14.9223 14.6129 14.7668 14.7678C14.6114 14.9226 14.4303 15 14.2235 15C14.0167 15 13.8356 14.9226 13.6802 14.7678L10.0442 11.1281Z"
+                  fill="#6265AD"
+                />
+              </svg>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

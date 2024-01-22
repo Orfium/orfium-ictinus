@@ -129,9 +129,7 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
           {...rest}
           isInteractive={isInteractive}
           sx={merge(
-            textInputBaseOverrides({ hasValue, isLoading, hasLabel, isResponsive, isTextfield })(
-              theme
-            ),
+            textInputBaseOverrides({ hasValue, hasLabel, isResponsive, isTextfield })(theme),
             sx
           )}
         >
