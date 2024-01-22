@@ -1,196 +1,154 @@
-import { debounce } from 'lodash';
-import React, { useMemo } from 'react';
-import type { ChangeEvent } from 'utils/common';
-import { errorHandler } from 'utils/helpers';
+import useKeyboard from 'hooks/useKeyboardEvents';
+import head from 'lodash/head';
+import omit from 'lodash/omit';
+import React, { useRef, useState } from 'react';
 
-import FilterBase from './components/FilterBase';
-import MultiFilter from './components/MultiFilter/MultiFilter';
-import SingleFilter from './components/SingleFilter/SingleFilter';
-import useMultiFilterUtils from './hooks/useMultiFilterUtils';
-import type { FilterOption, FilterProps } from './types';
-import { errors } from './utils';
-import ClickAwayListener from '../utils/ClickAwayListener';
-import handleSearch from 'components/utils/handleSearch';
-import PositionInScreen from 'components/utils/PositionInScreen/PositionInScreen';
+import FilterButton from './components/FilterButton';
+import FilterMenu from './components/FilterMenu';
+import type { FilterOption, FilterProps } from './Filter.types';
+import { useFilterWithSelectionUtils } from './hooks';
+import ClickAwayListener from 'components/utils/ClickAwayListener';
+import PositionInScreen from 'components/utils/PositionInScreen';
 
 const Filter = React.forwardRef<HTMLButtonElement, FilterProps>((props, ref) => {
   const {
-    items,
-    onSelect,
-    selectedItem,
-    defaultValue,
-    styleType,
-    label = '',
-    buttonType = 'primary',
+    label = 'Filter',
     filterType = 'preset',
-    isDisabled = false,
-    dataTestId,
-    isSearchable = false,
-    minCharactersToSearch = 0,
-    onAsyncSearch,
-    isLoading = false,
+    items,
+    children,
+    onChange,
+    isMulti,
+    selectedFilter,
     isVirtualized = false,
-    isMulti = false,
-    selectedItems = [],
-    onClear = () => {},
-    onFilterDelete = () => {},
+    defaultValue,
+    isDisabled,
+    onClear,
+    isAsync,
+    onAsyncSearch,
+    isLoading,
+    isSearchable,
+    minCharactersToSearch,
     hasSelectAllOption = false,
+    dataTestPrefixId = 'ictinus_filter',
   } = props;
 
-  errorHandler<FilterProps>(errors, props);
-
   const [isOpen, setIsOpen] = React.useState(false);
-  const [searchValue, setSearchValue] = React.useState('');
-  const [filterLabel, setFilterLabel] = React.useState(selectedItem?.label ?? defaultValue.label);
-
-  React.useEffect(() => {
-    setFilterLabel(selectedItem?.label ?? defaultValue.label);
-  }, [defaultValue.label, selectedItem?.label]);
-
-  const hasSelectedValue =
-    Boolean(selectedItem?.value) && selectedItem?.value !== defaultValue.value;
-
-  const iconName = isOpen ? 'triangleUp' : 'triangleDown';
 
   const {
-    availableMultiFilters,
-    multiFilters,
-    handleOptionDelete,
-    handleClearAllOptions,
-    handleMultiSelectOptionClick,
-  } = useMultiFilterUtils({
-    isMulti,
-    selectedItems,
-    items,
-    defaultValue,
-    setFilterLabel,
-    setIsOpen,
-    onClear,
-    setSearchValue,
-    onFilterDelete,
-  });
-
-  const handleChange = (event: ChangeEvent) => {
-    const isAsync = typeof onAsyncSearch === 'function';
-
-    handleSearch({
-      event,
-      isSearchable: isSearchable || isMulti,
+    searchValue,
+    handleFilterClick,
+    handleInput,
+    filteredOptions,
+    handleFilterDelete,
+    handleClear,
+  } = useFilterWithSelectionUtils(
+    // @ts-ignore
+    {
+      isMulti,
+      setIsOpen,
+      isSearchable,
+      onChange,
+      selectedFilter,
+      onAsyncSearch,
       isAsync,
-      setSearchValue,
-      onChange: debouncedOnChange,
       minCharactersToSearch,
-    });
-  };
+      items,
+      onClear,
+    }
+  );
 
-  const filteredOptions = useMemo(() => {
-    const optionsToBeFiltered = isMulti ? availableMultiFilters : items;
-
-    if (onAsyncSearch) {
-      return optionsToBeFiltered;
+  const getLabel = React.useMemo(() => {
+    if (isMulti) {
+      return `${label}: ${selectedFilter?.length ? selectedFilter[0]?.label : defaultValue.label}`;
     }
 
-    return optionsToBeFiltered.filter(
-      (item) => !searchValue || item.label.toLowerCase().includes(searchValue.toLowerCase())
-    );
-  }, [isMulti, availableMultiFilters, items, onAsyncSearch, searchValue]);
+    return `${label}: ${(selectedFilter as FilterOption)?.label ?? defaultValue.label}`;
+  }, [defaultValue.label, isMulti, label, selectedFilter]);
 
-  const isDefaultOptionVisible =
-    !searchValue || defaultValue.label.toLowerCase().includes(searchValue.toLowerCase());
+  const [filterLabel, setFilterLabel] = useState(getLabel);
 
-  const handleOpen = () => {
-    setSearchValue('');
+  React.useEffect(() => {
+    setFilterLabel(getLabel);
+  }, [getLabel]);
+
+  const moreFilters = isMulti && selectedFilter?.length > 1 ? selectedFilter.length - 1 : undefined;
+
+  const handleClick = () => {
     setIsOpen(!isOpen);
   };
 
-  const debouncedOnChange = React.useCallback(
-    debounce((value: string) => {
-      onAsyncSearch?.(value);
-    }, 400),
-    []
+  const listRef = useRef<HTMLUListElement | null>(null);
+
+  const { keyboardProps } = useKeyboard({
+    events: {
+      keydown: {
+        onArrowDown: () => {
+          if (isOpen) {
+            setTimeout(() => {
+              const options = listRef.current?.querySelectorAll('[role="option"]');
+              if (options && options?.length > 0) {
+                const firstOption = head(options);
+                if (firstOption instanceof HTMLElement && typeof firstOption.focus === 'function') {
+                  firstOption.focus();
+                }
+              }
+            }, 0);
+          }
+        },
+      },
+    },
+  });
+
+  const filterOverlay = filteredOptions ? (
+    // @ts-ignore
+    <FilterMenu
+      listRef={listRef}
+      isMulti={isMulti}
+      isVirtualized={isVirtualized}
+      isSearchable={isSearchable}
+      searchValue={searchValue}
+      handleChange={handleInput}
+      handleSelect={handleFilterClick}
+      onFilterDelete={handleFilterDelete}
+      onClear={handleClear}
+      selectedFilter={selectedFilter}
+      filteredOptions={filteredOptions}
+      isLoading={isLoading}
+      hasSelectAllOption={hasSelectAllOption}
+      dataTestPrefixId={dataTestPrefixId}
+    />
+  ) : (
+    <div data-testid={`${dataTestPrefixId}_filter_overlay`}>
+      {children({ isOpen, setIsOpen, filterLabel, setFilterLabel })}
+    </div>
   );
-
-  const handleSelect = (option: FilterOption) => {
-    if (isMulti) {
-      handleMultiSelectOptionClick(option);
-    } else {
-      setIsOpen(false);
-      setFilterLabel(option.label);
-    }
-
-    if (isSearchable || isMulti) {
-      setSearchValue('');
-    }
-
-    onSelect(option);
-  };
-
-  const handleClear = () => {
-    if (filterType === 'added' && !isMulti) {
-      setFilterLabel(defaultValue.label);
-    }
-
-    if (onClear) {
-      onClear();
-    }
-  };
-
-  const getFilter = () =>
-    isMulti ? (
-      <MultiFilter
-        selectedItems={multiFilters}
-        items={filteredOptions}
-        onInput={handleChange}
-        onOptionDelete={handleOptionDelete}
-        onClearAllOptions={handleClearAllOptions}
-        onOptionClick={handleSelect}
-        searchValue={searchValue}
-        isLoading={isLoading}
-        hasSelectAllOption={hasSelectAllOption}
-      />
-    ) : (
-      <SingleFilter
-        isSearchable={isSearchable}
-        dataTestId={dataTestId}
-        searchValue={searchValue}
-        handleChange={handleChange}
-        isLoading={isLoading}
-        filteredOptions={filteredOptions}
-        isVirtualized={isVirtualized}
-        defaultValue={defaultValue}
-        selectedItem={selectedItem}
-        handleSelect={handleSelect}
-        isDefaultOptionVisible={isDefaultOptionVisible}
-      />
-    );
 
   return (
     <ClickAwayListener onClick={() => setIsOpen(false)}>
       <PositionInScreen
         isVisible={isOpen}
-        hasWrapperWidth
         offsetY={8}
+        hasWrapperWidth
         sx={{ container: { width: 'max-content' } }}
         parent={
-          <FilterBase
+          <FilterButton
             ref={ref}
-            dataTestId={dataTestId}
-            handleOpen={handleOpen}
-            isDisabled={isDisabled}
-            onClear={handleClear}
-            selectedItemLabel={filterLabel}
-            isOpen={isOpen}
-            hasSelectedValue={hasSelectedValue}
-            label={label as string}
-            iconName={iconName}
-            filterType={filterType}
-            buttonType={buttonType}
-            styleType={styleType}
+            {...omit(keyboardProps, 'onBlur')}
             isMulti={isMulti}
-          />
+            isActive={isOpen}
+            moreFilters={moreFilters}
+            onClear={handleClear}
+            onClick={handleClick}
+            filterType={filterType}
+            isPopulated={Boolean(isMulti ? selectedFilter?.length : selectedFilter)}
+            dataTestPrefixId={dataTestPrefixId}
+            isDisabled={isDisabled}
+          >
+            {filterLabel}
+          </FilterButton>
         }
       >
-        {isOpen && getFilter()}
+        {isOpen && filterOverlay}
       </PositionInScreen>
     </ClickAwayListener>
   );

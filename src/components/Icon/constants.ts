@@ -127,6 +127,7 @@ export const iconsSet: IconSet = {
       'columnChooser',
       'sortDescending',
       'sortAscending',
+      'share',
     ],
   },
   toggledActions: {

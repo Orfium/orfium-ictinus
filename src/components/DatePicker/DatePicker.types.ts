@@ -1,7 +1,7 @@
 import type { Dayjs } from 'utils/date';
 
-import type { FilterType, StyleType } from '../Filter/types';
 import type { TextFieldProps } from '../TextField/TextField';
+import type { FilterType } from 'components/Filter/Filter.types';
 
 export type DisabledDates = {
   daysOfWeek?: number[];
@@ -34,10 +34,8 @@ export type DatePickerProps = {
   isDefaultNow?: boolean;
   /** Style properties for the DatePicker with a filter base */
   filterConfig?: {
-    /** The type of the filter button's palette - defaults to "primary" */
-    buttonType?: 'primary' | 'secondary';
-    /** Defines the style type of the filter button */
-    styleType?: StyleType;
+    /** The filter's label */
+    label?: string;
     /** This property defines the Filter's type */
     filterType?: FilterType;
   };

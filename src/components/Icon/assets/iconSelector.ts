@@ -31,6 +31,7 @@ import Report from './basicActions/report.svg?react';
 import Restore from './basicActions/restore.svg?react';
 import Review from './basicActions/review.svg?react';
 import Search from './basicActions/search.svg?react';
+import Share from './basicActions/share.svg?react';
 import Sort from './basicActions/sort.svg?react';
 import SortAscending from './basicActions/sortAscending.svg?react';
 import SortDescending from './basicActions/sortDescending.svg?react';
@@ -182,6 +183,7 @@ const iconSelector: { [key in AcceptedIconNames]: React.FunctionComponent } = {
   restore: Restore,
   review: Review,
   search: Search,
+  share: Share,
   sort: Sort,
   sortAscending: SortAscending,
   sortDescending: SortDescending,

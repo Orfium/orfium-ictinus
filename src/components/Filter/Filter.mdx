@@ -1,79 +1,93 @@
-import { Meta, Canvas, ArgTypes, Story } from '@storybook/blocks';
-import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
 import * as FilterStories from './Filter.stories';
 
-import Filter from '../Filter';
-import {
-  AsyncFilterShowcase,
-  FilterShowcase,
-  MultiFilterShowcase,
-} from '../storyUtils/FilterShowcase';
-import Stack from '../storyUtils/Stack';
-import { FIGMA_URL } from '../../utils/common';
+import Filter from './Filter';
 
 <Meta of={FilterStories} />
 
-# Filter
+<SectionHeader title={'Filter'} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
+
+## Overview
 
 A universal Filter component that is a clickable element that can hold many forms.
-
-## Usage
-
-```js
-import { Filter } from '@orfium/ictinus';
-
-<Filter
-  styleType="filled"
-  defaultValue={{ value: 'ice cream', label: 'Ice cream' }}
-  items={[
-    { value: 'chocolate', label: 'Chocolate' },
-    { value: 'banana', label: 'Banana' },
-  ]}
-  selectedItem={{ value: 'chocolate', label: 'Chocolate' }}
-  onSelect={(option) => {
-    /* do something with the selected option */
-  }}
-  label={'Label'}
-/>;
-```
 
 ## Props
 
 <ArgTypes of={Filter} />
 
-### Filters
+## Usage
 
-A filter with different style types and a selection handler to return selection on change and to pass selection callback.
-Here you can see our two different filter types as well.
+<UsageGuidelines
+  guidelines={[
+    'Use filters for any screen with many similar elements (e.g. data tables, card based views, or any list-type page)',
+  ]}
+  policies={[
+    "Don't use filters when the data set is too small or the content is not categorized, as they could over-complicate the interface without adding value.",
+  ]}
+/>
+
+<SubsectionHeader title="Variants" />
+
+### Preset Filter
+
+Preset Filters should appear on interface on page load by default.
+
+<Tip>A given page may display up to five preset filters.</Tip>
 
 <Canvas of={FilterStories.PresetFilter} />
 
+### Added Filter
+
+In the example below a suggested use case of Added Filters is demonstrated.
+Click `Show code` for more information on the implementation.
+
 <Canvas of={FilterStories.AddedFilter} />
+
+### Simple Filter
+
+Simple Filter with no search.
+
+<Canvas of={FilterStories.SimpleFilter} />
 
 ### Searchable Filter
 
-A filter that supports searching options
+Simple Filter with search functionality.
 
 <Canvas of={FilterStories.SearchableFilter} />
 
-### Filter with Async and Loading
+### Filter with async search
 
-Filter that support asynchronous fetching, with loading status
+Simple Filter with async search functionality.
 
 <Canvas of={FilterStories.AsyncFilter} />
 
-### Filter with Async, Loading and Minimum Characters to Search for
-
-Filter that support asynchronous fetching, with loading status
-
-<Canvas of={FilterStories.AsyncFilterWithMinCharacters} />
-
-# MultiFilter
-
-A filter that supports searching options
+### Multi Filter
 
 <Canvas of={FilterStories.MultiFilter} />
 
-### Playground - Knobs
+### Filter with DatePicker
+
+Filter can also have a DatePicker or DateRangePicker as a menu.
+For more information [click here](../?path=/story/updated-components-fields-datepicker--date-picker-with-filter)
+
+<Canvas of={FilterStories.FilterWithDatePicker} />
+
+### Disabled Filter
+
+<Canvas of={FilterStories.DisabledFilter} />
+
+### Custom Filter
+
+In order to build a fully custom Filter, use the children prop. The Filter passes the necessary internal props to the children prop in order to control the functionality of the Filter externally.
+Click `Show code` for more information on the implementation.
+
+<Canvas of={FilterStories.CustomFilter} />
+
+### Playground
 
 <Canvas of={FilterStories.Playground} />
