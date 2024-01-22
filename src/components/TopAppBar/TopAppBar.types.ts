@@ -15,7 +15,7 @@ export interface TopAppBarProps {
   onKeyPressHandler?: (event: React.KeyboardEvent<HTMLInputElement>) => void;
   /** Custom product logo */
   logoIcon?: JSX.Element;
-  /** Handler for opening end closing the Drawer. Burger menu only visible from breakpoint [tab-1024] */
+  /** Handler for opening end closing the Navigation. Burger menu only visible from breakpoint [tab-1024] */
   onMenuIconClick: () => void;
   /** Whatever is needed can be placed here. It will be placed on the left side of the user menu */
   additionalTools?: JSX.Element | JSX.Element[];

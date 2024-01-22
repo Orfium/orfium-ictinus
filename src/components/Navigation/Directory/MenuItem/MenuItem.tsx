@@ -11,10 +11,10 @@ import {
   subMenuLinkStyle,
   subMenuIconStyle,
   menuLinkStyle,
-} from '../Navigation.style';
-import type { DrawerMenuItem } from 'components/Drawer/types';
+} from '../Directory.style';
 import ExpandCollapse from 'components/ExpandCollapse';
 import Icon from 'components/Icon';
+import type { NavigationMenuItem } from 'components/Navigation/types';
 
 export type MenuItemProps = {
   /** Defines the current menu item whose submenu item is currently selected */
@@ -22,7 +22,7 @@ export type MenuItemProps = {
   /** Defines if the menu item is expanded */
   isExpanded: boolean;
   toggleMenuItem: (newUrl: string) => void;
-} & DrawerMenuItem;
+} & NavigationMenuItem;
 
 const MenuItem: React.FCC<MenuItemProps> = memo(
   ({ isCurrent, isExpanded, name, url, iconName, options, toggleMenuItem, state: linkState }) => {

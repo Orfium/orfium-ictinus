@@ -5,7 +5,7 @@ import { rem } from 'theme/utils';
 
 import type { Theme } from '../../theme';
 
-export const drawerContainerStyle =
+export const navigationContainerStyle =
 (isExpanded: boolean, isDesktop: boolean, isSmallDesktop: boolean) =>
   (theme: Theme): SerializedStyles =>
     css`
