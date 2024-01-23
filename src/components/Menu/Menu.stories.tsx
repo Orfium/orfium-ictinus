@@ -29,6 +29,7 @@ export default {
         url: `${FIGMA_URL}?node-id=574%3A7239`,
       },
     ],
+    chromatic: { delay: 400 },
   },
 };
 
