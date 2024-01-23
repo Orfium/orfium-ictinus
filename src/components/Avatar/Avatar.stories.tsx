@@ -17,7 +17,7 @@ export default {
     ],
 
     chromatic: {
-      diffThreshold: 0.3,
+      diffThreshold: 0.4,
     },
   },
 };

@@ -60,6 +60,7 @@ export const FilterButton = React.forwardRef<HTMLButtonElement, FilterButtonProp
       onClick={onClick}
       disabled={isDisabled}
       data-testid={`${dataTestPrefixId}_filter_button`}
+      data-active={isActive}
       {...rest}
     >
       <div
