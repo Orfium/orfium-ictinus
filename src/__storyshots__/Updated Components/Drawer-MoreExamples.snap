@@ -1,0 +1,1125 @@
+.emotion-0 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 48px;
+}
+
+.emotion-2 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-3 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: #ffffff;
+  height: auto;
+  background-color: #175bf5;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-3:focus-visible:not(:disabled) {
+  background-color: #1552DD;
+}
+
+.emotion-3:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-3:hover:not(:disabled) {
+  background-color: #1552DD;
+}
+
+.emotion-3:active:not(:disabled) {
+  background-color: #1249C4;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2500;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  background: rgba(200, 206, 255, 0.45);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow-y: auto;
+  background-color: #ffffff;
+  box-shadow: 0rem 0.5rem 1rem 0rem #10306612;
+  border: 0.0625rem solid #E7E8FF;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.emotion-7 {
+  overflow-y: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+}
+
+.emotion-8 {
+  -webkit-flex: 0;
+  -ms-flex: 0;
+  flex: 0;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 24px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-10 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.375rem;
+  font-size: 1rem;
+  letter-spacing: 0.015625rem;
+  color: #1B214F;
+}
+
+.emotion-11 {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.emotion-11:hover,
+.emotion-11:focus-visible {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border-radius: 100%;
+  background: rgba(84,94,255,0.06);
+  box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
+}
+
+.emotion-12 {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-12 path {
+  fill: #686BB3!important;
+}
+
+.emotion-13 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 48px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.emotion-15 {
+  width: inherit;
+  height: inherit;
+  color: black;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-24 {
+  width: inherit;
+  height: inherit;
+  color: #9b9b9b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-33 {
+  padding: 24px;
+}
+
+.emotion-34 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 72px;
+}
+
+.emotion-35 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-39 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border: 1px solid rgba(200, 206, 255, 0.7);
+  border-radius: 4px;
+}
+
+.emotion-39>div:hover {
+  background: rgba(200, 206, 255, 0.3);
+}
+
+.emotion-40 {
+  cursor: pointer;
+  border-bottom: 1px solid rgba(200, 206, 255, 0.7);
+  padding: 16px;
+}
+
+.emotion-44 {
+  cursor: pointer;
+  padding: 16px;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <div
+        class="emotion-2"
+      >
+        <button
+          class="emotion-3"
+          data-testid="button"
+          type="button"
+        >
+          <span
+            class="emotion-4"
+          >
+            <span>
+              Visualization example
+            </span>
+          </span>
+        </button>
+      </div>
+      <div
+        class="emotion-5"
+      >
+        <div
+          style="display: flex; height: 100%; width: 50%;"
+        >
+          <div
+            class="emotion-6"
+            data-testid="ictinus_drawer_drawer_container"
+          >
+            <div
+              class="emotion-7"
+            >
+              <div
+                class="emotion-8"
+                data-testid="ictinus_drawer_drawer_header"
+              >
+                <div
+                  class="emotion-9"
+                >
+                  <p
+                    class="emotion-10"
+                  >
+                    Aug 2023
+                  </p>
+                  <div
+                    class="emotion-11"
+                    tabindex="0"
+                  >
+                    <svg
+                      class="emotion-12"
+                      fill="none"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.0442 11.1281L6.40819 14.7495C6.24522 14.9118 6.0561 14.9941 5.84084 14.9965C5.62558 14.9988 5.43411 14.9165 5.26642 14.7495C5.09872 14.5824 5.01487 14.396 5.01487 14.19C5.01487 13.9841 5.09872 13.7976 5.26642 13.6306L8.92076 9.99085L5.24805 6.35114C5.08507 6.18882 5.0024 6.00656 5.00005 5.80435C4.99769 5.60216 5.08035 5.41756 5.24805 5.25054C5.41574 5.08351 5.60297 5 5.80975 5C6.01653 5 6.20377 5.08351 6.37145 5.25054L10.0074 8.85364L13.6067 5.26884C13.7697 5.10651 13.9588 5.02417 14.174 5.02183C14.3893 5.01947 14.5808 5.10181 14.7485 5.26884C14.9162 5.43585 15 5.62843 15 5.84658C15 6.06473 14.9162 6.25731 14.7485 6.42433L11.1309 10.0457L14.7668 13.6672C14.9176 13.8173 14.9941 13.9995 14.9965 14.2139C14.9988 14.4283 14.9223 14.6129 14.7668 14.7678C14.6114 14.9226 14.4303 15 14.2235 15C14.0167 15 13.8356 14.9226 13.6802 14.7678L10.0442 11.1281Z"
+                        fill="#6265AD"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="emotion-13"
+                data-testid="ictinus_drawer_drawer_body"
+              >
+                <div
+                  class="emotion-14"
+                >
+                  <div
+                    style="width: 100%; height: 500px;"
+                  >
+                    <div
+                      class="recharts-wrapper"
+                      role="region"
+                      style="position: relative; cursor: default; width: 1000px; height: 500px;"
+                    >
+                      <svg
+                        class="recharts-surface"
+                        height="500"
+                        style="width: 100%; height: 100%;"
+                        viewBox="0 0 1000 500"
+                        width="1000"
+                      >
+                        <title />
+                        <desc />
+                        <defs>
+                          <clippath
+                            id="recharts13-clip"
+                          >
+                            <rect
+                              height="450"
+                              width="760"
+                              x="180"
+                              y="5"
+                            />
+                          </clippath>
+                        </defs>
+                        <g
+                          class="recharts-cartesian-grid"
+                        >
+                          <g
+                            class="recharts-cartesian-grid-vertical"
+                          >
+                            <line
+                              fill="none"
+                              height="450"
+                              stroke="#ccc"
+                              width="760"
+                              x="180"
+                              x1="180"
+                              x2="180"
+                              y="5"
+                              y1="5"
+                              y2="455"
+                            />
+                            <line
+                              fill="none"
+                              height="450"
+                              stroke="#ccc"
+                              width="760"
+                              x="180"
+                              x1="264.44444444444446"
+                              x2="264.44444444444446"
+                              y="5"
+                              y1="5"
+                              y2="455"
+                            />
+                            <line
+                              fill="none"
+                              height="450"
+                              stroke="#ccc"
+                              width="760"
+                              x="180"
+                              x1="348.8888888888889"
+                              x2="348.8888888888889"
+                              y="5"
+                              y1="5"
+                              y2="455"
+                            />
+                            <line
+                              fill="none"
+                              height="450"
+                              stroke="#ccc"
+                              width="760"
+                              x="180"
+                              x1="433.3333333333333"
+                              x2="433.3333333333333"
+                              y="5"
+                              y1="5"
+                              y2="455"
+                            />
+                            <line
+                              fill="none"
+                              height="450"
+                              stroke="#ccc"
+                              width="760"
+                              x="180"
+                              x1="517.7777777777778"
+                              x2="517.7777777777778"
+                              y="5"
+                              y1="5"
+                              y2="455"
+                            />
+                            <line
+                              fill="none"
+                              height="450"
+                              stroke="#ccc"
+                              width="760"
+                              x="180"
+                              x1="602.2222222222223"
+                              x2="602.2222222222223"
+                              y="5"
+                              y1="5"
+                              y2="455"
+                            />
+                            <line
+                              fill="none"
+                              height="450"
+                              stroke="#ccc"
+                              width="760"
+                              x="180"
+                              x1="686.6666666666666"
+                              x2="686.6666666666666"
+                              y="5"
+                              y1="5"
+                              y2="455"
+                            />
+                            <line
+                              fill="none"
+                              height="450"
+                              stroke="#ccc"
+                              width="760"
+                              x="180"
+                              x1="771.1111111111111"
+                              x2="771.1111111111111"
+                              y="5"
+                              y1="5"
+                              y2="455"
+                            />
+                            <line
+                              fill="none"
+                              height="450"
+                              stroke="#ccc"
+                              width="760"
+                              x="180"
+                              x1="855.5555555555555"
+                              x2="855.5555555555555"
+                              y="5"
+                              y1="5"
+                              y2="455"
+                            />
+                            <line
+                              fill="none"
+                              height="450"
+                              stroke="#ccc"
+                              width="760"
+                              x="180"
+                              x1="940"
+                              x2="940"
+                              y="5"
+                              y1="5"
+                              y2="455"
+                            />
+                          </g>
+                        </g>
+                        <g
+                          class="recharts-layer recharts-cartesian-axis recharts-xAxis xAxis"
+                        >
+                          <g
+                            class="recharts-cartesian-axis-ticks"
+                          >
+                            <g
+                              class="recharts-layer recharts-cartesian-axis-tick"
+                            >
+                              <text
+                                class="recharts-text recharts-cartesian-axis-tick-value"
+                                fill="#666"
+                                height="30"
+                                orientation="bottom"
+                                stroke="none"
+                                text-anchor="middle"
+                                width="760"
+                                x="180"
+                                y="485"
+                              >
+                                <tspan
+                                  dy="0.71em"
+                                  x="180"
+                                >
+                                  0
+                                </tspan>
+                              </text>
+                            </g>
+                            <g
+                              class="recharts-layer recharts-cartesian-axis-tick"
+                            >
+                              <text
+                                class="recharts-text recharts-cartesian-axis-tick-value"
+                                fill="#666"
+                                height="30"
+                                orientation="bottom"
+                                stroke="none"
+                                text-anchor="middle"
+                                width="760"
+                                x="264.44444444444446"
+                                y="485"
+                              >
+                                <tspan
+                                  dy="0.71em"
+                                  x="264.44444444444446"
+                                >
+                                  100K
+                                </tspan>
+                              </text>
+                            </g>
+                            <g
+                              class="recharts-layer recharts-cartesian-axis-tick"
+                            >
+                              <text
+                                class="recharts-text recharts-cartesian-axis-tick-value"
+                                fill="#666"
+                                height="30"
+                                orientation="bottom"
+                                stroke="none"
+                                text-anchor="middle"
+                                width="760"
+                                x="348.8888888888889"
+                                y="485"
+                              >
+                                <tspan
+                                  dy="0.71em"
+                                  x="348.8888888888889"
+                                >
+                                  200K
+                                </tspan>
+                              </text>
+                            </g>
+                            <g
+                              class="recharts-layer recharts-cartesian-axis-tick"
+                            >
+                              <text
+                                class="recharts-text recharts-cartesian-axis-tick-value"
+                                fill="#666"
+                                height="30"
+                                orientation="bottom"
+                                stroke="none"
+                                text-anchor="middle"
+                                width="760"
+                                x="433.3333333333333"
+                                y="485"
+                              >
+                                <tspan
+                                  dy="0.71em"
+                                  x="433.3333333333333"
+                                >
+                                  300K
+                                </tspan>
+                              </text>
+                            </g>
+                            <g
+                              class="recharts-layer recharts-cartesian-axis-tick"
+                            >
+                              <text
+                                class="recharts-text recharts-cartesian-axis-tick-value"
+                                fill="#666"
+                                height="30"
+                                orientation="bottom"
+                                stroke="none"
+                                text-anchor="middle"
+                                width="760"
+                                x="517.7777777777778"
+                                y="485"
+                              >
+                                <tspan
+                                  dy="0.71em"
+                                  x="517.7777777777778"
+                                >
+                                  400K
+                                </tspan>
+                              </text>
+                            </g>
+                            <g
+                              class="recharts-layer recharts-cartesian-axis-tick"
+                            >
+                              <text
+                                class="recharts-text recharts-cartesian-axis-tick-value"
+                                fill="#666"
+                                height="30"
+                                orientation="bottom"
+                                stroke="none"
+                                text-anchor="middle"
+                                width="760"
+                                x="602.2222222222223"
+                                y="485"
+                              >
+                                <tspan
+                                  dy="0.71em"
+                                  x="602.2222222222223"
+                                >
+                                  500K
+                                </tspan>
+                              </text>
+                            </g>
+                            <g
+                              class="recharts-layer recharts-cartesian-axis-tick"
+                            >
+                              <text
+                                class="recharts-text recharts-cartesian-axis-tick-value"
+                                fill="#666"
+                                height="30"
+                                orientation="bottom"
+                                stroke="none"
+                                text-anchor="middle"
+                                width="760"
+                                x="686.6666666666666"
+                                y="485"
+                              >
+                                <tspan
+                                  dy="0.71em"
+                                  x="686.6666666666666"
+                                >
+                                  600K
+                                </tspan>
+                              </text>
+                            </g>
+                            <g
+                              class="recharts-layer recharts-cartesian-axis-tick"
+                            >
+                              <text
+                                class="recharts-text recharts-cartesian-axis-tick-value"
+                                fill="#666"
+                                height="30"
+                                orientation="bottom"
+                                stroke="none"
+                                text-anchor="middle"
+                                width="760"
+                                x="771.1111111111111"
+                                y="485"
+                              >
+                                <tspan
+                                  dy="0.71em"
+                                  x="771.1111111111111"
+                                >
+                                  700K
+                                </tspan>
+                              </text>
+                            </g>
+                            <g
+                              class="recharts-layer recharts-cartesian-axis-tick"
+                            >
+                              <text
+                                class="recharts-text recharts-cartesian-axis-tick-value"
+                                fill="#666"
+                                height="30"
+                                orientation="bottom"
+                                stroke="none"
+                                text-anchor="middle"
+                                width="760"
+                                x="855.5555555555555"
+                                y="485"
+                              >
+                                <tspan
+                                  dy="0.71em"
+                                  x="855.5555555555555"
+                                >
+                                  800K
+                                </tspan>
+                              </text>
+                            </g>
+                            <g
+                              class="recharts-layer recharts-cartesian-axis-tick"
+                            >
+                              <text
+                                class="recharts-text recharts-cartesian-axis-tick-value"
+                                fill="#666"
+                                height="30"
+                                orientation="bottom"
+                                stroke="none"
+                                text-anchor="middle"
+                                width="760"
+                                x="940"
+                                y="485"
+                              >
+                                <tspan
+                                  dy="0.71em"
+                                  x="940"
+                                >
+                                  900K
+                                </tspan>
+                              </text>
+                            </g>
+                          </g>
+                        </g>
+                        <g
+                          class="recharts-layer recharts-bar"
+                        >
+                          <g
+                            class="recharts-layer recharts-bar-rectangles"
+                          >
+                            <g
+                              class="recharts-layer"
+                            >
+                              <g
+                                class="recharts-layer recharts-bar-rectangle"
+                              />
+                              <g
+                                class="recharts-layer recharts-bar-rectangle"
+                              />
+                              <g
+                                class="recharts-layer recharts-bar-rectangle"
+                              />
+                              <g
+                                class="recharts-layer recharts-bar-rectangle"
+                              />
+                              <g
+                                class="recharts-layer recharts-bar-rectangle"
+                              />
+                              <g
+                                class="recharts-layer recharts-bar-rectangle"
+                              />
+                              <g
+                                class="recharts-layer recharts-bar-rectangle"
+                              />
+                              <g
+                                class="recharts-layer recharts-bar-rectangle"
+                              />
+                              <g
+                                class="recharts-layer recharts-bar-rectangle"
+                              />
+                              <g
+                                class="recharts-layer recharts-bar-rectangle"
+                              />
+                            </g>
+                          </g>
+                        </g>
+                        <g
+                          class="recharts-layer recharts-cartesian-axis recharts-yAxis yAxis"
+                        >
+                          <g
+                            class="recharts-cartesian-axis-ticks"
+                          >
+                            <g
+                              class="recharts-layer recharts-cartesian-axis-tick"
+                            >
+                              <g>
+                                <foreignobject
+                                  height="20"
+                                  style="overflow: visible;"
+                                  width="160"
+                                  y="17.5"
+                                >
+                                  <div
+                                    class="emotion-15"
+                                  >
+                                    Orfium
+                                  </div>
+                                </foreignobject>
+                              </g>
+                            </g>
+                            <g
+                              class="recharts-layer recharts-cartesian-axis-tick"
+                            >
+                              <g>
+                                <foreignobject
+                                  height="20"
+                                  style="overflow: visible;"
+                                  width="160"
+                                  y="62.5"
+                                >
+                                  <div
+                                    class="emotion-15"
+                                  >
+                                    UMG
+                                  </div>
+                                </foreignobject>
+                              </g>
+                            </g>
+                            <g
+                              class="recharts-layer recharts-cartesian-axis-tick"
+                            >
+                              <g>
+                                <foreignobject
+                                  height="20"
+                                  style="overflow: visible;"
+                                  width="160"
+                                  y="107.5"
+                                >
+                                  <div
+                                    class="emotion-15"
+                                  >
+                                    Saregama Publishing
+                                  </div>
+                                </foreignobject>
+                              </g>
+                            </g>
+                            <g
+                              class="recharts-layer recharts-cartesian-axis-tick"
+                            >
+                              <g>
+                                <foreignobject
+                                  height="20"
+                                  style="overflow: visible;"
+                                  width="160"
+                                  y="152.5"
+                                >
+                                  <div
+                                    class="emotion-15"
+                                  >
+                                    PT. Mahar Pustaka Nusantara
+                                  </div>
+                                </foreignobject>
+                              </g>
+                            </g>
+                            <g
+                              class="recharts-layer recharts-cartesian-axis-tick"
+                            >
+                              <g>
+                                <foreignobject
+                                  height="20"
+                                  style="overflow: visible;"
+                                  width="160"
+                                  y="197.5"
+                                >
+                                  <div
+                                    class="emotion-15"
+                                  >
+                                    AdRev (3d party)
+                                  </div>
+                                </foreignobject>
+                              </g>
+                            </g>
+                            <g
+                              class="recharts-layer recharts-cartesian-axis-tick"
+                            >
+                              <g>
+                                <foreignobject
+                                  height="20"
+                                  style="overflow: visible;"
+                                  width="160"
+                                  y="242.5"
+                                >
+                                  <div
+                                    class="emotion-15"
+                                  >
+                                    Rock Mobile Corp.
+                                  </div>
+                                </foreignobject>
+                              </g>
+                            </g>
+                            <g
+                              class="recharts-layer recharts-cartesian-axis-tick"
+                            >
+                              <g>
+                                <foreignobject
+                                  height="20"
+                                  style="overflow: visible;"
+                                  width="160"
+                                  y="287.5"
+                                >
+                                  <div
+                                    class="emotion-15"
+                                  >
+                                    PT HARMONI DWISELARAS PUBLISHERINDO
+                                  </div>
+                                </foreignobject>
+                              </g>
+                            </g>
+                            <g
+                              class="recharts-layer recharts-cartesian-axis-tick"
+                            >
+                              <g>
+                                <foreignobject
+                                  height="20"
+                                  style="overflow: visible;"
+                                  width="160"
+                                  y="332.5"
+                                >
+                                  <div
+                                    class="emotion-15"
+                                  >
+                                    Karya Anak Haki
+                                  </div>
+                                </foreignobject>
+                              </g>
+                            </g>
+                            <g
+                              class="recharts-layer recharts-cartesian-axis-tick"
+                            >
+                              <g>
+                                <foreignobject
+                                  height="20"
+                                  style="overflow: visible;"
+                                  width="160"
+                                  y="377.5"
+                                >
+                                  <div
+                                    class="emotion-15"
+                                  >
+                                    Adshare (3d party)
+                                  </div>
+                                </foreignobject>
+                              </g>
+                            </g>
+                            <g
+                              class="recharts-layer recharts-cartesian-axis-tick"
+                            >
+                              <g>
+                                <foreignobject
+                                  height="20"
+                                  style="overflow: visible;"
+                                  width="160"
+                                  y="422.5"
+                                >
+                                  <div
+                                    class="emotion-24"
+                                  >
+                                    Other
+                                  </div>
+                                </foreignobject>
+                              </g>
+                            </g>
+                          </g>
+                        </g>
+                      </svg>
+                      <div
+                        class="recharts-tooltip-wrapper"
+                        role="dialog"
+                        style="visibility: hidden; pointer-events: none; position: absolute; top: 0px; left: 0px;"
+                        tabindex="-1"
+                      />
+                    </div>
+                  </div>
+                  <p
+                    class="emotion-10"
+                  >
+                    Hi! I’m copy. I provide additional context, but I’m not super vital. You could probably still understand the whole dashboard without reading me; I’m just the cherry on the top of the visualization cake.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="emotion-2"
+      >
+        <button
+          class="emotion-3"
+          data-testid="button"
+          type="button"
+        >
+          <span
+            class="emotion-4"
+          >
+            <span>
+              Second level drawer with back button
+            </span>
+          </span>
+        </button>
+      </div>
+      <div
+        class="emotion-5"
+      >
+        <div
+          style="display: flex; height: 100%; width: 50%;"
+        >
+          <div
+            class="emotion-6"
+            data-testid="ictinus_drawer_drawer_container"
+          >
+            <div
+              class="emotion-7"
+            >
+              <div
+                class="emotion-13"
+                data-testid="ictinus_drawer_drawer_body"
+              >
+                <div
+                  class="emotion-33"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    <div
+                      class="emotion-35"
+                    >
+                      <p
+                        class="emotion-10"
+                      >
+                        Select one option for more details
+                      </p>
+                      <div
+                        class="emotion-11"
+                        tabindex="0"
+                      >
+                        <svg
+                          class="emotion-12"
+                          fill="none"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10.0442 11.1281L6.40819 14.7495C6.24522 14.9118 6.0561 14.9941 5.84084 14.9965C5.62558 14.9988 5.43411 14.9165 5.26642 14.7495C5.09872 14.5824 5.01487 14.396 5.01487 14.19C5.01487 13.9841 5.09872 13.7976 5.26642 13.6306L8.92076 9.99085L5.24805 6.35114C5.08507 6.18882 5.0024 6.00656 5.00005 5.80435C4.99769 5.60216 5.08035 5.41756 5.24805 5.25054C5.41574 5.08351 5.60297 5 5.80975 5C6.01653 5 6.20377 5.08351 6.37145 5.25054L10.0074 8.85364L13.6067 5.26884C13.7697 5.10651 13.9588 5.02417 14.174 5.02183C14.3893 5.01947 14.5808 5.10181 14.7485 5.26884C14.9162 5.43585 15 5.62843 15 5.84658C15 6.06473 14.9162 6.25731 14.7485 6.42433L11.1309 10.0457L14.7668 13.6672C14.9176 13.8173 14.9941 13.9995 14.9965 14.2139C14.9988 14.4283 14.9223 14.6129 14.7668 14.7678C14.6114 14.9226 14.4303 15 14.2235 15C14.0167 15 13.8356 14.9226 13.6802 14.7678L10.0442 11.1281Z"
+                            fill="#6265AD"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div
+                      class="emotion-39"
+                    >
+                      <div
+                        class="emotion-40"
+                      >
+                        <p
+                          class="emotion-10"
+                        >
+                          Option 1
+                        </p>
+                      </div>
+                      <div
+                        class="emotion-40"
+                      >
+                        <p
+                          class="emotion-10"
+                        >
+                          Option 2
+                        </p>
+                      </div>
+                      <div
+                        class="emotion-44"
+                      >
+                        <p
+                          class="emotion-10"
+                        >
+                          Option 3
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

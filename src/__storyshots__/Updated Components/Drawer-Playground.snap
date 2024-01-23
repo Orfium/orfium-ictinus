@@ -1,0 +1,666 @@
+.emotion-0 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 48px;
+}
+
+.emotion-2 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-3 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: #ffffff;
+  height: auto;
+  background-color: #175bf5;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-3:focus-visible:not(:disabled) {
+  background-color: #1552DD;
+}
+
+.emotion-3:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-3:hover:not(:disabled) {
+  background-color: #1552DD;
+}
+
+.emotion-3:active:not(:disabled) {
+  background-color: #1249C4;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2500;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  background: rgba(200, 206, 255, 0.45);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow-y: auto;
+  background-color: #ffffff;
+  box-shadow: 0rem 0.5rem 1rem 0rem #10306612;
+  border: 0.0625rem solid #E7E8FF;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.emotion-7 {
+  overflow-y: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+}
+
+.emotion-8 {
+  -webkit-flex: 0;
+  -ms-flex: 0;
+  flex: 0;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 8px;
+  padding: 24px;
+}
+
+.emotion-10 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.375rem;
+  font-size: 1rem;
+  letter-spacing: 0.015625rem;
+  color: #1B214F;
+}
+
+.emotion-11 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.375rem;
+  font-size: 1rem;
+  letter-spacing: 0.015625rem;
+  color: #686BB3;
+}
+
+.emotion-12 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: auto;
+}
+
+.emotion-14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: 3.25rem;
+  min-width: 8.75rem;
+  background-color: #ffffff;
+}
+
+.emotion-14:hover {
+  background-color: #F5F5FF;
+}
+
+.emotion-14:focus-within {
+  box-shadow: 0 0 0 0.125rem #175bf5;
+  background-color: #F5F5FF;
+}
+
+.emotion-15 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0 0 0 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.emotion-15>div {
+  position: relative;
+}
+
+.emotion-16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-17 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #1B214F;
+  padding: 0;
+  display: block;
+  position: relative;
+  top: 0.4375rem;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-17::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-17::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-17:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-17::placeholder {
+  color: transparent;
+}
+
+.emotion-17:focus {
+  outline: none;
+}
+
+.emotion-17:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-17:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-17:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-17:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-17:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-17:focus-within+label,
+.emotion-17:not(:placeholder-shown)+label {
+  font-weight: 700!important;
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+}
+
+.emotion-17:focus-within+label {
+  font-weight: 700!important;
+  color: #1552DD;
+}
+
+.emotion-17:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-18 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, 0);
+  -moz-transform: translate(0.1875rem, 0);
+  -ms-transform: translate(0.1875rem, 0);
+  transform: translate(0.1875rem, 0);
+  color: #686BB3;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0.1875rem;
+  margin: auto;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-30 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  padding: 24px;
+}
+
+.emotion-31 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+
+.emotion-33 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: #1552DD;
+  height: auto;
+  background-color: rgba(84,94,255,0);
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-33:focus-visible:not(:disabled) {
+  background-color: rgba(84,94,255,0.06);
+}
+
+.emotion-33:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-33:hover:not(:disabled) {
+  background-color: rgba(84,94,255,0.06);
+}
+
+.emotion-33:active:not(:disabled) {
+  background-color: rgba(84,94,255,0.14);
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <div
+        class="emotion-2"
+      >
+        <button
+          class="emotion-3"
+          data-testid="button"
+          type="button"
+        >
+          <span
+            class="emotion-4"
+          >
+            <span>
+              Toggle Drawer
+            </span>
+          </span>
+        </button>
+      </div>
+      <div
+        class="emotion-5"
+      >
+        <div
+          style="display: flex; height: 100%; width: 50%;"
+        >
+          <div
+            class="emotion-6"
+            data-testid="ictinus_drawer_drawer_container"
+          >
+            <div
+              class="emotion-7"
+            >
+              <div
+                class="emotion-8"
+                data-testid="ictinus_drawer_drawer_header"
+              >
+                <div
+                  class="emotion-9"
+                >
+                  <p
+                    class="emotion-10"
+                  >
+                    Create Entity Form
+                  </p>
+                  <p
+                    class="emotion-11"
+                  >
+                    Short copy providing context
+                  </p>
+                </div>
+              </div>
+              <div
+                class="emotion-12"
+                data-testid="ictinus_drawer_drawer_body"
+              >
+                <div
+                  class="emotion-13"
+                >
+                  <div>
+                    <div
+                      class="emotion-14"
+                    >
+                      <div
+                        class="emotion-15"
+                      >
+                        <div
+                          class="emotion-16"
+                        >
+                          <input
+                            aria-invalid="false"
+                            class="emotion-17"
+                            data-testid="input"
+                            id="textfield__00"
+                            placeholder="Field 1"
+                          />
+                          <label
+                            class="emotion-18"
+                            for="textfield__00"
+                          >
+                            Field 1
+                             
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div
+                      class="emotion-14"
+                    >
+                      <div
+                        class="emotion-15"
+                      >
+                        <div
+                          class="emotion-16"
+                        >
+                          <input
+                            aria-invalid="false"
+                            class="emotion-17"
+                            data-testid="input"
+                            id="textfield__00"
+                            placeholder="Field 2"
+                          />
+                          <label
+                            class="emotion-18"
+                            for="textfield__00"
+                          >
+                            Field 2
+                             
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div
+                      class="emotion-14"
+                    >
+                      <div
+                        class="emotion-15"
+                      >
+                        <div
+                          class="emotion-16"
+                        >
+                          <input
+                            aria-invalid="false"
+                            class="emotion-17"
+                            data-testid="input"
+                            id="textfield__00"
+                            placeholder="Field 3"
+                          />
+                          <label
+                            class="emotion-18"
+                            for="textfield__00"
+                          >
+                            Field 3
+                             
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="emotion-29"
+                data-testid="ictinus_drawer_drawer_footer"
+              >
+                <div
+                  class="emotion-30"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    <div
+                      class="emotion-2"
+                    >
+                      <button
+                        class="emotion-33"
+                        data-testid="button"
+                        type="button"
+                      >
+                        <span
+                          class="emotion-4"
+                        >
+                          <span>
+                            Cancel
+                          </span>
+                        </span>
+                      </button>
+                    </div>
+                    <div
+                      class="emotion-2"
+                    >
+                      <button
+                        class="emotion-3"
+                        data-testid="button"
+                        type="button"
+                      >
+                        <span
+                          class="emotion-4"
+                        >
+                          <span>
+                            Create Entity
+                          </span>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
