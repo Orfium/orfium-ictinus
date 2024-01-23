@@ -15,7 +15,16 @@ import ClickAwayListener from 'components/utils/ClickAwayListener';
 
 const Drawer = React.forwardRef<HTMLDivElement, DrawerProps>(
   (
-    { isOpen, onClose, anchor, size, content, isBackgroundActive = false, hasCloseButton = true },
+    {
+      isOpen,
+      onClose,
+      anchor,
+      size,
+      content,
+      isBackgroundActive = false,
+      hasCloseButton = true,
+      dataTestPrefixId = 'ictinus_drawer',
+    },
     ref
   ) => {
     useEscape(() => {
@@ -24,23 +33,35 @@ const Drawer = React.forwardRef<HTMLDivElement, DrawerProps>(
       }
     });
 
-    const hasStickyHeader = content?.header?.isSticky;
+    const hasFixedHeader = content?.header?.isFixed;
 
     const header = content?.header?.content && (
-      <div css={headerStyle({ isSticky: hasStickyHeader })}>
+      <div
+        css={headerStyle({ isFixed: hasFixedHeader })}
+        data-testid={`${dataTestPrefixId}_drawer_header`}
+      >
         {content?.header?.content}
         {hasCloseButton && (
           <div css={closeIconContainer()}>
-            <Icon name="close" onClick={onClose} dataTestId="overlay-close" />
+            <Icon
+              name="close"
+              onClick={onClose}
+              dataTestId={`${dataTestPrefixId}_drawer_close_button`}
+            />
           </div>
         )}
       </div>
     );
 
-    const hasStickyFooter = content?.footer?.isSticky;
+    const hasFixedFooter = content?.footer?.isFixed;
 
     const footer = content?.footer?.content && (
-      <div css={footerStyle({ isSticky: hasStickyFooter })}>{content?.footer?.content}</div>
+      <div
+        css={footerStyle({ isFixed: hasFixedFooter })}
+        data-testid={`${dataTestPrefixId}_drawer_footer`}
+      >
+        {content?.footer?.content}
+      </div>
     );
 
     return (
@@ -53,9 +74,13 @@ const Drawer = React.forwardRef<HTMLDivElement, DrawerProps>(
           }}
           cssStyles={anchorStyle({ anchor, size, isBackgroundActive })}
         >
-          <div ref={ref} css={overlayStyle({ isOpen, anchor })}>
-            {/** Sticky Header */}
-            {hasStickyHeader && header}
+          <div
+            ref={ref}
+            css={overlayStyle({ isOpen, anchor })}
+            data-testid={`${dataTestPrefixId}_drawer_container`}
+          >
+            {/** Fixed Header */}
+            {hasFixedHeader && header}
 
             {/** Main scrollable area */}
             <div
@@ -66,13 +91,15 @@ const Drawer = React.forwardRef<HTMLDivElement, DrawerProps>(
                 height: '100%',
               }}
             >
-              {!hasStickyHeader && header}
-              <div css={{ flex: 1 }}>{content?.body?.content}</div>
-              {!hasStickyFooter && footer}
+              {!hasFixedHeader && header}
+              <div css={{ flex: 1 }} data-testid={`${dataTestPrefixId}_drawer_body`}>
+                {content?.body?.content}
+              </div>
+              {!hasFixedFooter && footer}
             </div>
 
-            {/** Sticky Footer */}
-            {hasStickyFooter && footer}
+            {/** Fixed Footer */}
+            {hasFixedFooter && footer}
           </div>
         </ClickAwayListener>
       </div>

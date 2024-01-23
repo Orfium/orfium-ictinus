@@ -1,12 +1,17 @@
-type ContentObject = {
-  content: JSX.Element;
-  isSticky?: boolean;
-};
+import type { TestProps } from 'utils/types';
 
 type DrawerContent = {
-  header?: ContentObject;
-  body?: ContentObject;
-  footer?: ContentObject;
+  header?: {
+    content: JSX.Element;
+    isFixed?: boolean;
+  };
+  body?: {
+    content: JSX.Element;
+  };
+  footer?: {
+    content: JSX.Element;
+    isFixed?: boolean;
+  };
 };
 
 export type AnchorType = 'bottom' | 'left' | 'right' | 'top';
@@ -26,4 +31,4 @@ export type DrawerProps = {
   isBackgroundActive?: boolean;
   /** If false, the close button is hidden and the user can add their own custom one. Defaults to true */
   hasCloseButton?: boolean;
-};
+} & TestProps;

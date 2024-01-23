@@ -44,9 +44,15 @@ const data: Data[] = [
   },
 ];
 
-const BarChartShowCase = () => {
+const BarChartShowCase = ({
+  width = 1000,
+  height = 500,
+}: {
+  width?: string | number;
+  height?: string | number;
+}) => {
   return (
-    <div style={{ width: 1000, height: 500 }}>
+    <div style={{ width, height }}>
       <BarChart data={data} />
     </div>
   );

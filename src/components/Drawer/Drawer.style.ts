@@ -146,9 +146,9 @@ export const closeIconContainer = () => (): SerializedStyles =>
   `;
 
 export const headerStyle =
-  ({ isSticky }: { isSticky?: boolean }) =>
+  ({ isFixed }: { isFixed?: boolean }) =>
   (): SerializedStyles => {
-    return isSticky
+    return isFixed
       ? css`
           position: sticky;
           top: 0;
@@ -159,9 +159,9 @@ export const headerStyle =
   };
 
 export const footerStyle =
-  ({ isSticky }: { isSticky?: boolean }) =>
+  ({ isFixed }: { isFixed?: boolean }) =>
   (): SerializedStyles => {
-    return isSticky
+    return isFixed
       ? css`
           position: sticky;
           bottom: 0;
