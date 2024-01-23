@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import type { AcceptedIconNames } from 'components/Icon';
 import Icon from 'components/Icon';
 import { iconsSet as icons } from 'components/Icon/constants';
-import SearchField from 'components/SearchField';
+import Search from 'components/Search';
 import Typography from 'components/Typography';
 
 const IconographyShowcase: FCC = () => {
@@ -45,9 +45,9 @@ const IconographyShowcase: FCC = () => {
         }}
       >
         <div css={{ width: '100%' }}>
-          <SearchField
-            label="Search icon"
+          <Search
             placeholder="Search icon"
+            sx={{ wrapper: { minWidth: 'unset', width: '100%' } }}
             value={searchTerm}
             onChange={(e: any) => setSearchTerm(e.target.value)}
             onClear={() => setSearchTerm('')}

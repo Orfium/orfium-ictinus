@@ -29,6 +29,7 @@ export default {
         url: `${FIGMA_URL}?node-id=574%3A7239`,
       },
     ],
+    chromatic: { delay: 400 },
   },
 };
 
@@ -261,9 +262,11 @@ export const MenuTriggers = {
   },
   name: 'Menu',
   autoplay: true,
-  play: ({ canvasElement }: { canvasElement: HTMLElement }) => {
+  play: async ({ canvasElement }: { canvasElement: HTMLElement }) => {
     const canvas = within(canvasElement);
     const buttons = canvas.getAllByTestId('button');
+
+    await new Promise((resolve) => setTimeout(resolve, 2000));
 
     buttons.forEach((button) => {
       fireEvent.click(button);
@@ -436,9 +439,11 @@ export const MenuComponents = {
   },
   name: 'Menu Components',
   autoplay: true,
-  play: ({ canvasElement }: { canvasElement: HTMLElement }) => {
+  play: async ({ canvasElement }: { canvasElement: HTMLElement }) => {
     const canvas = within(canvasElement);
     const buttons = canvas.getAllByTestId('button');
+
+    await new Promise((resolve) => setTimeout(resolve, 2000));
 
     buttons.forEach((button) => {
       fireEvent.click(button);
@@ -532,9 +537,11 @@ export const MenuItemDividerStory = {
   },
   name: 'MenuItemDivider',
   autoplay: true,
-  play: ({ canvasElement }: { canvasElement: HTMLElement }) => {
+  play: async ({ canvasElement }: { canvasElement: HTMLElement }) => {
     const canvas = within(canvasElement);
     const buttons = canvas.getAllByTestId('button');
+
+    await new Promise((resolve) => setTimeout(resolve, 2000));
 
     buttons.forEach((button) => {
       fireEvent.click(button);
@@ -592,9 +599,11 @@ export const MenuDisabledKeys = {
   },
   name: 'Menu Disabled Keys',
   autoplay: true,
-  play: ({ canvasElement }: { canvasElement: HTMLElement }) => {
+  play: async ({ canvasElement }: { canvasElement: HTMLElement }) => {
     const canvas = within(canvasElement);
     const buttons = canvas.getAllByTestId('icon-button');
+
+    await new Promise((resolve) => setTimeout(resolve, 2000));
 
     buttons.forEach((button) => {
       fireEvent.click(button);
