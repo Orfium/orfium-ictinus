@@ -1,5 +1,6 @@
 import useEscape from 'hooks/useEscape';
 import React, { useMemo } from 'react';
+import ReactDOM from 'react-dom';
 
 import { anchorStyle, backdropStyle, overlayStyle } from './Drawer.style';
 import type { DrawerProps } from './Drawer.types';
@@ -16,6 +17,7 @@ const Drawer = React.forwardRef<HTMLDivElement, React.PropsWithChildren<DrawerPr
       isBackgroundActive = false,
       dataTestPrefixId = 'ictinus_drawer',
       hasFixedLayout = false,
+      parent = document.body,
       children,
     },
     ref
@@ -28,7 +30,11 @@ const Drawer = React.forwardRef<HTMLDivElement, React.PropsWithChildren<DrawerPr
 
     const contextValue = useMemo(() => ({ hasFixedLayout, onClose }), []);
 
-    return (
+    if (parent === null) {
+      return null;
+    }
+
+    return ReactDOM.createPortal(
       <DrawerContext.Provider value={contextValue}>
         <div css={backdropStyle({ isOpen, anchor, size, isBackgroundActive })}>
           <ClickAwayListener
@@ -48,7 +54,8 @@ const Drawer = React.forwardRef<HTMLDivElement, React.PropsWithChildren<DrawerPr
             </div>
           </ClickAwayListener>
         </div>
-      </DrawerContext.Provider>
+      </DrawerContext.Provider>,
+      parent
     );
   }
 );

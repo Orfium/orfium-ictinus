@@ -29,4 +29,6 @@ export type DrawerProps = {
   isBackgroundActive?: boolean;
   /** If true, then the header and footer are fixed positioned */
   hasFixedLayout?: boolean;
+  /** The parent element, in which the drawer will be rendered. Defaults to document.body */
+  parent?: HTMLElement | null;
 } & TestProps;
