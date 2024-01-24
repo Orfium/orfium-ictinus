@@ -1,19 +1,5 @@
 import type { TestProps } from 'utils/types';
 
-type DrawerContent = {
-  header?: {
-    content: JSX.Element;
-    isFixed?: boolean;
-  };
-  body?: {
-    content: JSX.Element;
-  };
-  footer?: {
-    content: JSX.Element;
-    isFixed?: boolean;
-  };
-};
-
 export type AnchorType = 'bottom' | 'left' | 'right' | 'top';
 
 export type DrawerProps = {
