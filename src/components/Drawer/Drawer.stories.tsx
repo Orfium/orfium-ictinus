@@ -1,7 +1,7 @@
 import { boolean, number, select } from '@storybook/addon-knobs';
 import { useState } from 'react';
 import { FIGMA_URL } from '../../utils/common';
-import Drawer from './Drawer';
+import Drawer, { DrawerHeader, DrawerContent, DrawerFooter } from './index';
 import Button from 'components/Button';
 import Typography from 'components/Typography';
 import TextField from 'components/TextField';
@@ -23,55 +23,41 @@ export default {
   },
 };
 
-const drawerContent = (hasFixedHeader = false, hasFixedFooter = false) => {
-  const hasFixedHeaderOrFooter = hasFixedHeader || hasFixedFooter;
-
-  return {
-    header: {
-      content: (
-        <div css={{ display: 'flex', flexDirection: 'column', gap: '8px', padding: '24px' }}>
-          <Typography>Create Entity Form</Typography>
-          <Typography type="secondary">Short copy providing context</Typography>
-        </div>
-      ),
-      isFixed: hasFixedHeader,
-    },
-    body: {
-      content: (
-        <div
-          css={{
-            display: 'flex',
-            gap: '24px',
-            padding: '24px',
-            flexWrap: 'wrap',
-            height: hasFixedHeaderOrFooter ? '1200px' : 'auto',
-          }}
-        >
-          <TextField label="Field 1" />
-          <TextField label="Field 2" />
-          <TextField label="Field 3" />
-        </div>
-      ),
-    },
-    footer: {
-      content: (
-        <div
-          css={{
-            display: 'flex',
-            justifyContent: 'flex-end',
-            alignItems: 'flex-end',
-            padding: '24px',
-          }}
-        >
-          <div css={{ display: 'flex', gap: '8px' }}>
-            <Button type="tertiary">Cancel</Button>
-            <Button>Create Entity</Button>
-          </div>
-        </div>
-      ),
-      isFixed: hasFixedFooter,
-    },
-  };
+const drawerContent = {
+  header: (
+    <div css={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+      <Typography>Create Entity Form</Typography>
+      <Typography type="secondary">Short copy providing context</Typography>
+    </div>
+  ),
+  content: (
+    <div
+      css={{
+        display: 'flex',
+        gap: '24px',
+        flexWrap: 'wrap',
+        height: '1200px',
+      }}
+    >
+      <TextField label="Field 1" />
+      <TextField label="Field 2" />
+      <TextField label="Field 3" />
+    </div>
+  ),
+  footer: (
+    <div
+      css={{
+        display: 'flex',
+        justifyContent: 'flex-end',
+        alignItems: 'flex-end',
+      }}
+    >
+      <div css={{ display: 'flex', gap: '8px' }}>
+        <Button type="tertiary">Cancel</Button>
+        <Button>Create Entity</Button>
+      </div>
+    </div>
+  ),
 };
 
 export const Sizes = {
@@ -98,8 +84,11 @@ export const Sizes = {
             }}
             size={33}
             anchor={'left'}
-            content={drawerContent()}
-          />
+          >
+            <DrawerHeader>{drawerContent.header}</DrawerHeader>
+            <DrawerContent>{drawerContent.content}</DrawerContent>
+            <DrawerFooter>{drawerContent.footer}</DrawerFooter>
+          </Drawer>
           <Button
             onClick={() => {
               setIsOpen2(!isOpen2);
@@ -114,8 +103,11 @@ export const Sizes = {
             }}
             size={50}
             anchor={'left'}
-            content={drawerContent()}
-          />
+          >
+            <DrawerHeader>{drawerContent.header}</DrawerHeader>
+            <DrawerContent>{drawerContent.content}</DrawerContent>
+            <DrawerFooter>{drawerContent.footer}</DrawerFooter>
+          </Drawer>
           <Button
             onClick={() => {
               setIsOpen3(!isOpen3);
@@ -130,8 +122,11 @@ export const Sizes = {
             }}
             size={75}
             anchor={'left'}
-            content={drawerContent()}
-          />
+          >
+            <DrawerHeader>{drawerContent.header}</DrawerHeader>
+            <DrawerContent>{drawerContent.content}</DrawerContent>
+            <DrawerFooter>{drawerContent.footer}</DrawerFooter>
+          </Drawer>
           <Button
             onClick={() => {
               setIsOpen4(!isOpen4);
@@ -146,8 +141,11 @@ export const Sizes = {
             }}
             size={100}
             anchor={'left'}
-            content={drawerContent()}
-          />
+          >
+            <DrawerHeader>{drawerContent.header}</DrawerHeader>
+            <DrawerContent>{drawerContent.content}</DrawerContent>
+            <DrawerFooter>{drawerContent.footer}</DrawerFooter>
+          </Drawer>
         </div>
       </div>
     );
@@ -177,10 +175,13 @@ export const Placement = {
             onClose={() => {
               setIsOpen1(false);
             }}
+            anchor="top"
             size={33}
-            anchor={'top'}
-            content={drawerContent()}
-          />
+          >
+            <DrawerHeader>{drawerContent.header}</DrawerHeader>
+            <DrawerContent>{drawerContent.content}</DrawerContent>
+            <DrawerFooter>{drawerContent.footer}</DrawerFooter>
+          </Drawer>
           <Button
             onClick={() => {
               setIsOpen2(!isOpen2);
@@ -195,8 +196,11 @@ export const Placement = {
             }}
             size={33}
             anchor={'bottom'}
-            content={drawerContent()}
-          />
+          >
+            <DrawerHeader>{drawerContent.header}</DrawerHeader>
+            <DrawerContent>{drawerContent.content}</DrawerContent>
+            <DrawerFooter>{drawerContent.footer}</DrawerFooter>
+          </Drawer>
           <Button
             onClick={() => {
               setIsOpen3(!isOpen3);
@@ -211,8 +215,11 @@ export const Placement = {
             }}
             size={33}
             anchor={'left'}
-            content={drawerContent()}
-          />
+          >
+            <DrawerHeader>{drawerContent.header}</DrawerHeader>
+            <DrawerContent>{drawerContent.content}</DrawerContent>
+            <DrawerFooter>{drawerContent.footer}</DrawerFooter>
+          </Drawer>
           <Button
             onClick={() => {
               setIsOpen4(!isOpen4);
@@ -227,8 +234,11 @@ export const Placement = {
             }}
             size={33}
             anchor={'right'}
-            content={drawerContent()}
-          />
+          >
+            <DrawerHeader>{drawerContent.header}</DrawerHeader>
+            <DrawerContent>{drawerContent.content}</DrawerContent>
+            <DrawerFooter>{drawerContent.footer}</DrawerFooter>
+          </Drawer>
         </div>
       </div>
     );
@@ -258,8 +268,11 @@ export const Background = {
             }}
             size={33}
             anchor={'left'}
-            content={drawerContent()}
-          />
+          >
+            <DrawerHeader>{drawerContent.header}</DrawerHeader>
+            <DrawerContent>{drawerContent.content}</DrawerContent>
+            <DrawerFooter>{drawerContent.footer}</DrawerFooter>
+          </Drawer>
           <Button
             onClick={() => {
               setIsOpen2(!isOpen2);
@@ -275,8 +288,11 @@ export const Background = {
             }}
             size={33}
             anchor={'left'}
-            content={drawerContent()}
-          />
+          >
+            <DrawerHeader>{drawerContent.header}</DrawerHeader>
+            <DrawerContent>{drawerContent.content}</DrawerContent>
+            <DrawerFooter>{drawerContent.footer}</DrawerFooter>
+          </Drawer>
         </div>
         <div css={{ display: 'flex', gap: '48px', flexDirection: 'column', alignItems: 'center' }}>
           <Typography>Copy Paste this Text</Typography>
@@ -290,61 +306,31 @@ export const Background = {
 
 export const FixedContent = {
   render: () => {
-    const [isOpen1, setIsOpen1] = useState<boolean>(false);
-    const [isOpen2, setIsOpen2] = useState<boolean>(false);
-    const [isOpen3, setIsOpen3] = useState<boolean>(false);
+    const [isOpen, setIsOpen] = useState<boolean>(false);
 
     return (
       <div css={{ width: '100%', display: 'flex', justifyContent: 'space-between' }}>
         <div css={{ display: 'flex', gap: '48px' }}>
           <Button
             onClick={() => {
-              setIsOpen1(!isOpen1);
+              setIsOpen(!isOpen);
             }}
           >
-            Fixed Header
+            Fixed Layout
           </Button>
           <Drawer
-            isOpen={isOpen1}
+            isOpen={isOpen}
             onClose={() => {
-              setIsOpen1(false);
+              setIsOpen(false);
             }}
             size={33}
             anchor={'left'}
-            content={drawerContent(true, false)}
-          />
-          <Button
-            onClick={() => {
-              setIsOpen2(!isOpen2);
-            }}
+            hasFixedLayout
           >
-            Fixed Footer
-          </Button>
-          <Drawer
-            isOpen={isOpen2}
-            onClose={() => {
-              setIsOpen2(false);
-            }}
-            size={33}
-            anchor={'left'}
-            content={drawerContent(false, true)}
-          />
-          <Button
-            onClick={() => {
-              setIsOpen3(!isOpen3);
-            }}
-          >
-            Fixed Header/Footer
-          </Button>
-          <Drawer
-            isOpen={isOpen3}
-            onClose={() => {
-              setIsOpen3(false);
-            }}
-            size={33}
-            anchor={'left'}
-            content={drawerContent(true, true)}
-          />
+            <DrawerHeader>{drawerContent.header}</DrawerHeader>
+            <DrawerContent>{drawerContent.content}</DrawerContent>
+            <DrawerFooter>{drawerContent.footer}</DrawerFooter>
+          </Drawer>
         </div>
       </div>
     );
@@ -376,45 +362,36 @@ export const MoreExamples = {
             }}
             size={50}
             anchor={'left'}
-            hasCloseButton={false}
-            content={{
-              header: {
-                content: (
-                  <div
-                    css={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      padding: '24px',
-                      justifyContent: 'space-between',
-                    }}
-                  >
-                    <Typography>Aug 2023</Typography>
-                    <Icon name="close" onClick={() => setIsOpen1(false)} />
-                  </div>
-                ),
-              },
-              body: {
-                content: (
-                  <div
-                    css={{
-                      display: 'flex',
-                      flexDirection: 'column',
-                      gap: '48px',
-                      justifyContent: 'center',
-                      padding: '24px',
-                    }}
-                  >
-                    <BarChartShowCase width="100%" />
-                    <Typography>
-                      Hi! I’m copy. I provide additional context, but I’m not super vital. You could
-                      probably still understand the whole dashboard without reading me; I’m just the
-                      cherry on the top of the visualization cake.
-                    </Typography>
-                  </div>
-                ),
-              },
-            }}
-          />
+          >
+            <DrawerHeader>
+              <div
+                css={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                }}
+              >
+                <Typography>Aug 2023</Typography>
+              </div>
+            </DrawerHeader>
+            <DrawerContent>
+              <div
+                css={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '48px',
+                  justifyContent: 'center',
+                }}
+              >
+                <BarChartShowCase width="100%" />
+                <Typography>
+                  Hi! I’m copy. I provide additional context, but I’m not super vital. You could
+                  probably still understand the whole dashboard without reading me; I’m just the
+                  cherry on the top of the visualization cake.
+                </Typography>
+              </div>
+            </DrawerContent>
+          </Drawer>
           <Button
             onClick={() => {
               setIsOpen2(!isOpen2);
@@ -430,104 +407,99 @@ export const MoreExamples = {
             }}
             size={50}
             anchor={'left'}
-            content={{
-              body: {
-                content: (
-                  <div css={{ padding: '24px' }}>
-                    {!selectedOption && (
+          >
+            <DrawerContent>
+              <div>
+                {!selectedOption && (
+                  <div
+                    css={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      gap: '72px',
+                    }}
+                  >
+                    <div
+                      css={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'space-between',
+                      }}
+                    >
+                      <Typography>Select one option for more details</Typography>
+                      <Icon
+                        name="close"
+                        onClick={() => {
+                          setSelectedOption(undefined);
+                          setIsOpen2(false);
+                        }}
+                      />
+                    </div>
+                    <div
+                      css={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        border: '1px solid rgba(200, 206, 255, 0.7)',
+                        borderRadius: '4px',
+                        '&>div:hover': {
+                          background: 'rgba(200, 206, 255, 0.3)',
+                        },
+                      }}
+                    >
                       <div
                         css={{
-                          display: 'flex',
-                          flexDirection: 'column',
-                          gap: '72px',
+                          cursor: 'pointer',
+                          borderBottom: '1px solid rgba(200, 206, 255, 0.7)',
+                          padding: '16px',
                         }}
+                        onClick={() => setSelectedOption(1)}
                       >
-                        <div
-                          css={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'space-between',
-                          }}
-                        >
-                          <Typography>Select one option for more details</Typography>
-                          <Icon
-                            name="close"
-                            onClick={() => {
-                              setSelectedOption(undefined);
-                              setIsOpen2(false);
-                            }}
-                          />
-                        </div>
-                        <div
-                          css={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            border: '1px solid rgba(200, 206, 255, 0.7)',
-                            borderRadius: '4px',
-                            '&>div:hover': {
-                              background: 'rgba(200, 206, 255, 0.3)',
-                            },
-                          }}
-                        >
-                          <div
-                            css={{
-                              cursor: 'pointer',
-                              borderBottom: '1px solid rgba(200, 206, 255, 0.7)',
-                              padding: '16px',
-                            }}
-                            onClick={() => setSelectedOption(1)}
-                          >
-                            <Typography>Option 1</Typography>
-                          </div>
-                          <div
-                            css={{
-                              cursor: 'pointer',
-                              borderBottom: '1px solid rgba(200, 206, 255, 0.7)',
-                              padding: '16px',
-                            }}
-                            onClick={() => setSelectedOption(2)}
-                          >
-                            <Typography>Option 2</Typography>
-                          </div>
-                          <div
-                            css={{ cursor: 'pointer', padding: '16px' }}
-                            onClick={() => setSelectedOption(3)}
-                          >
-                            <Typography>Option 3</Typography>
-                          </div>
-                        </div>
+                        <Typography>Option 1</Typography>
                       </div>
-                    )}
-                    {selectedOption && (
                       <div
                         css={{
-                          display: 'flex',
-                          flexDirection: 'column',
-                          gap: '72px',
+                          cursor: 'pointer',
+                          borderBottom: '1px solid rgba(200, 206, 255, 0.7)',
+                          padding: '16px',
                         }}
+                        onClick={() => setSelectedOption(2)}
                       >
-                        <div
-                          css={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '24px',
-                          }}
-                        >
-                          <Icon name="arrowLeft" onClick={() => setSelectedOption(undefined)} />
-                          <Typography>Option {selectedOption}</Typography>
-                        </div>
-                        <div css={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-                          <Typography>
-                            These are the details for the option {selectedOption}
-                          </Typography>
-                        </div>
+                        <Typography>Option 2</Typography>
                       </div>
-                    )}
+                      <div
+                        css={{ cursor: 'pointer', padding: '16px' }}
+                        onClick={() => setSelectedOption(3)}
+                      >
+                        <Typography>Option 3</Typography>
+                      </div>
+                    </div>
                   </div>
-                ),
-              },
-            }}
-          />
+                )}
+                {selectedOption && (
+                  <div
+                    css={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      gap: '72px',
+                    }}
+                  >
+                    <div
+                      css={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '24px',
+                      }}
+                    >
+                      <Icon name="arrowLeft" onClick={() => setSelectedOption(undefined)} />
+                      <Typography>Option {selectedOption}</Typography>
+                    </div>
+                    <div css={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+                      <Typography>These are the details for the option {selectedOption}</Typography>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </DrawerContent>
+          </Drawer>
         </div>
       </div>
     );
@@ -557,12 +529,12 @@ export const Playground = {
             }}
             size={number('size', 50)}
             anchor={select('anchor', ['top', 'right', 'bottom', 'left'], 'left')}
-            hasCloseButton={boolean('hasCloseButton', false)}
-            content={drawerContent(
-              boolean('hasFixedHeader', false),
-              boolean('hasFixedFooter', false)
-            )}
-          />
+            hasFixedLayout={boolean('hasFixedLayout', false)}
+          >
+            <DrawerHeader>{drawerContent.header}</DrawerHeader>
+            <DrawerContent>{drawerContent.content}</DrawerContent>
+            <DrawerFooter>{drawerContent.footer}</DrawerFooter>
+          </Drawer>
         </div>
       </div>
     );

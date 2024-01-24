@@ -2,7 +2,6 @@ import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import type { Theme } from 'theme';
 import { flex, transition } from 'theme/functions';
-import { rem } from 'theme/utils';
 
 import { getDrawerTokens } from './Drawer.tokens';
 import type { AnchorType, DrawerProps } from './Drawer.types';
@@ -120,14 +119,14 @@ export const anchorStyle = ({
 };
 
 export const overlayStyle =
-  ({ isOpen, anchor }: { isOpen: boolean; anchor: AnchorType }) =>
+  ({ isOpen, anchor, hasFixedLayout }: Pick<DrawerProps, 'isOpen' | 'anchor' | 'hasFixedLayout'>) =>
   (theme: Theme): SerializedStyles => {
     const tokens = getDrawerTokens(theme);
 
     return css`
       ${flex};
       flex-direction: column;
-      overflow-y: auto;
+      overflow-y: ${hasFixedLayout ? undefined : 'auto'};
       background-color: ${tokens('backgroundColor')};
       box-shadow: ${tokens('boxShadow')};
       border: ${tokens('borderWidth')} solid ${tokens('borderColor')};
@@ -138,33 +137,59 @@ export const overlayStyle =
     `;
   };
 
-export const closeIconContainer = () => (): SerializedStyles =>
-  css`
-    position: absolute;
-    top: ${rem(8)};
-    right: ${rem(8)};
-  `;
+export const closeIconContainer =
+  () =>
+  (theme: Theme): SerializedStyles => {
+    const tokens = getDrawerTokens(theme);
+
+    return css`
+      position: absolute;
+      top: ${tokens('padding')};
+      right: ${tokens('padding')};
+    `;
+  };
 
 export const headerStyle =
   ({ isFixed }: { isFixed?: boolean }) =>
-  (): SerializedStyles => {
+  (theme: Theme): SerializedStyles => {
+    const tokens = getDrawerTokens(theme);
+
     return isFixed
       ? css`
+          padding: ${tokens('padding')};
           position: sticky;
           top: 0;
         `
       : css`
+          padding: ${tokens('padding')};
           flex: 0;
         `;
   };
 
+export const contentStyle =
+  ({ hasFixedHeader }: { hasFixedHeader?: boolean }) =>
+  (theme: Theme): SerializedStyles => {
+    const tokens = getDrawerTokens(theme);
+
+    return css`
+      flex: 1;
+      overflow-y: ${hasFixedHeader ? 'auto' : undefined};
+      padding: ${tokens('padding')};
+    `;
+  };
+
 export const footerStyle =
   ({ isFixed }: { isFixed?: boolean }) =>
-  (): SerializedStyles => {
+  (theme: Theme): SerializedStyles => {
+    const tokens = getDrawerTokens(theme);
+
     return isFixed
       ? css`
           position: sticky;
           bottom: 0;
+          padding: ${tokens('padding')};
         `
-      : css``;
+      : css`
+          padding: ${tokens('padding')};
+        `;
   };

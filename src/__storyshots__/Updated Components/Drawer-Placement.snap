@@ -139,24 +139,13 @@
 }
 
 .emotion-7 {
-  overflow-y: auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 100%;
-}
-
-.emotion-8 {
+  padding: 1.5rem;
   -webkit-flex: 0;
   -ms-flex: 0;
   flex: 0;
 }
 
-.emotion-9 {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -165,10 +154,9 @@
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 8px;
-  padding: 24px;
 }
 
-.emotion-10 {
+.emotion-9 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.375rem;
@@ -177,7 +165,7 @@
   color: #1B214F;
 }
 
-.emotion-11 {
+.emotion-10 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.375rem;
@@ -186,13 +174,13 @@
   color: #686BB3;
 }
 
-.emotion-12 {
+.emotion-11 {
   position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
+  top: 1.5rem;
+  right: 1.5rem;
 }
 
-.emotion-13 {
+.emotion-12 {
   width: 1.25rem;
   height: 1.25rem;
   display: -webkit-box;
@@ -202,8 +190,8 @@
   cursor: pointer;
 }
 
-.emotion-13:hover,
-.emotion-13:focus-visible {
+.emotion-12:hover,
+.emotion-12:focus-visible {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   border-radius: 100%;
@@ -211,36 +199,36 @@
   box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
 }
 
-.emotion-14 {
+.emotion-13 {
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-14 path {
+.emotion-13 path {
   fill: #686BB3!important;
 }
 
-.emotion-15 {
+.emotion-14 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  padding: 1.5rem;
 }
 
-.emotion-16 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: 24px;
-  padding: 24px;
   -webkit-box-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  height: auto;
+  height: 1200px;
 }
 
-.emotion-17 {
+.emotion-16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -265,16 +253,16 @@
   background-color: #ffffff;
 }
 
-.emotion-17:hover {
+.emotion-16:hover {
   background-color: #F5F5FF;
 }
 
-.emotion-17:focus-within {
+.emotion-16:focus-within {
   box-shadow: 0 0 0 0.125rem #175bf5;
   background-color: #F5F5FF;
 }
 
-.emotion-18 {
+.emotion-17 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -295,11 +283,11 @@
   padding-right: 0.75rem;
 }
 
-.emotion-18>div {
+.emotion-17>div {
   position: relative;
 }
 
-.emotion-19 {
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -309,7 +297,7 @@
   flex: 1;
 }
 
-.emotion-20 {
+.emotion-19 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -328,48 +316,48 @@
   min-width: 100%;
 }
 
-.emotion-20::-webkit-input-placeholder {
+.emotion-19::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-20::-moz-placeholder {
+.emotion-19::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-20:-ms-input-placeholder {
+.emotion-19:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-20::placeholder {
+.emotion-19::placeholder {
   color: transparent;
 }
 
-.emotion-20:focus {
+.emotion-19:focus {
   outline: none;
 }
 
-.emotion-20:focus::-webkit-input-placeholder {
+.emotion-19:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-20:focus::-moz-placeholder {
+.emotion-19:focus::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-20:focus:-ms-input-placeholder {
+.emotion-19:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-20:focus::placeholder {
+.emotion-19:focus::placeholder {
   color: transparent;
 }
 
-.emotion-20:not(:focus):placeholder-shown+label {
+.emotion-19:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-20:focus-within+label,
-.emotion-20:not(:placeholder-shown)+label {
+.emotion-19:focus-within+label,
+.emotion-19:not(:placeholder-shown)+label {
   font-weight: 700!important;
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -377,16 +365,16 @@
   transform: translate(0.1875rem, -35%) scale(0.8);
 }
 
-.emotion-20:focus-within+label {
+.emotion-19:focus-within+label {
   font-weight: 700!important;
   color: #1552DD;
 }
 
-.emotion-20:disabled {
+.emotion-19:disabled {
   cursor: not-allowed;
 }
 
-.emotion-21 {
+.emotion-20 {
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
@@ -421,7 +409,11 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-33 {
+.emotion-31 {
+  padding: 1.5rem;
+}
+
+.emotion-32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -434,10 +426,9 @@
   -webkit-box-align: flex-end;
   -ms-flex-align: flex-end;
   align-items: flex-end;
-  padding: 24px;
 }
 
-.emotion-34 {
+.emotion-33 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -445,7 +436,7 @@
   gap: 8px;
 }
 
-.emotion-36 {
+.emotion-35 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -474,24 +465,24 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-36:focus-visible:not(:disabled) {
+.emotion-35:focus-visible:not(:disabled) {
   background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-36:disabled {
+.emotion-35:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-36:hover:not(:disabled) {
+.emotion-35:hover:not(:disabled) {
   background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-36:active:not(:disabled) {
+.emotion-35:active:not(:disabled) {
   background-color: rgba(84,94,255,0.14);
 }
 
-.emotion-44 {
+.emotion-43 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -525,7 +516,7 @@
   flex-direction: column;
 }
 
-.emotion-45 {
+.emotion-44 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -554,7 +545,7 @@
   transition: all 0.3s ease-in-out;
 }
 
-.emotion-83 {
+.emotion-81 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -581,7 +572,7 @@
   transition: all 0.2s ease-in-out;
 }
 
-.emotion-84 {
+.emotion-82 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -610,7 +601,7 @@
   transition: all 0.3s ease-in-out;
 }
 
-.emotion-122 {
+.emotion-119 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -641,7 +632,7 @@
   justify-content: flex-end;
 }
 
-.emotion-123 {
+.emotion-120 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -709,181 +700,176 @@
             >
               <div
                 class="emotion-8"
-                data-testid="ictinus_drawer_drawer_header"
               >
-                <div
+                <p
                   class="emotion-9"
                 >
-                  <p
-                    class="emotion-10"
-                  >
-                    Create Entity Form
-                  </p>
-                  <p
-                    class="emotion-11"
-                  >
-                    Short copy providing context
-                  </p>
-                </div>
-                <div
-                  class="emotion-12"
+                  Create Entity Form
+                </p>
+                <p
+                  class="emotion-10"
                 >
-                  <div
-                    class="emotion-13"
-                    data-testid="ictinus_drawer_drawer_close_button"
-                    tabindex="0"
-                  >
-                    <svg
-                      class="emotion-14"
-                      fill="none"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M10.0442 11.1281L6.40819 14.7495C6.24522 14.9118 6.0561 14.9941 5.84084 14.9965C5.62558 14.9988 5.43411 14.9165 5.26642 14.7495C5.09872 14.5824 5.01487 14.396 5.01487 14.19C5.01487 13.9841 5.09872 13.7976 5.26642 13.6306L8.92076 9.99085L5.24805 6.35114C5.08507 6.18882 5.0024 6.00656 5.00005 5.80435C4.99769 5.60216 5.08035 5.41756 5.24805 5.25054C5.41574 5.08351 5.60297 5 5.80975 5C6.01653 5 6.20377 5.08351 6.37145 5.25054L10.0074 8.85364L13.6067 5.26884C13.7697 5.10651 13.9588 5.02417 14.174 5.02183C14.3893 5.01947 14.5808 5.10181 14.7485 5.26884C14.9162 5.43585 15 5.62843 15 5.84658C15 6.06473 14.9162 6.25731 14.7485 6.42433L11.1309 10.0457L14.7668 13.6672C14.9176 13.8173 14.9941 13.9995 14.9965 14.2139C14.9988 14.4283 14.9223 14.6129 14.7668 14.7678C14.6114 14.9226 14.4303 15 14.2235 15C14.0167 15 13.8356 14.9226 13.6802 14.7678L10.0442 11.1281Z"
-                        fill="#6265AD"
-                      />
-                    </svg>
-                  </div>
-                </div>
+                  Short copy providing context
+                </p>
               </div>
               <div
-                class="emotion-15"
-                data-testid="ictinus_drawer_drawer_body"
+                class="emotion-11"
               >
                 <div
-                  class="emotion-16"
+                  class="emotion-12"
+                  data-testid="ictinus_drawer_close_button"
+                  tabindex="0"
                 >
-                  <div>
+                  <svg
+                    class="emotion-13"
+                    fill="none"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10.0442 11.1281L6.40819 14.7495C6.24522 14.9118 6.0561 14.9941 5.84084 14.9965C5.62558 14.9988 5.43411 14.9165 5.26642 14.7495C5.09872 14.5824 5.01487 14.396 5.01487 14.19C5.01487 13.9841 5.09872 13.7976 5.26642 13.6306L8.92076 9.99085L5.24805 6.35114C5.08507 6.18882 5.0024 6.00656 5.00005 5.80435C4.99769 5.60216 5.08035 5.41756 5.24805 5.25054C5.41574 5.08351 5.60297 5 5.80975 5C6.01653 5 6.20377 5.08351 6.37145 5.25054L10.0074 8.85364L13.6067 5.26884C13.7697 5.10651 13.9588 5.02417 14.174 5.02183C14.3893 5.01947 14.5808 5.10181 14.7485 5.26884C14.9162 5.43585 15 5.62843 15 5.84658C15 6.06473 14.9162 6.25731 14.7485 6.42433L11.1309 10.0457L14.7668 13.6672C14.9176 13.8173 14.9941 13.9995 14.9965 14.2139C14.9988 14.4283 14.9223 14.6129 14.7668 14.7678C14.6114 14.9226 14.4303 15 14.2235 15C14.0167 15 13.8356 14.9226 13.6802 14.7678L10.0442 11.1281Z"
+                      fill="#6265AD"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="emotion-14"
+              data-testid="ictinus_drawer_content"
+            >
+              <div
+                class="emotion-15"
+              >
+                <div>
+                  <div
+                    class="emotion-16"
+                  >
                     <div
                       class="emotion-17"
                     >
                       <div
                         class="emotion-18"
                       >
-                        <div
+                        <input
+                          aria-invalid="false"
                           class="emotion-19"
+                          data-testid="input"
+                          id="textfield__00"
+                          placeholder="Field 1"
+                        />
+                        <label
+                          class="emotion-20"
+                          for="textfield__00"
                         >
-                          <input
-                            aria-invalid="false"
-                            class="emotion-20"
-                            data-testid="input"
-                            id="textfield__00"
-                            placeholder="Field 1"
-                          />
-                          <label
-                            class="emotion-21"
-                            for="textfield__00"
-                          >
-                            Field 1
-                             
-                          </label>
-                        </div>
+                          Field 1
+                           
+                        </label>
                       </div>
                     </div>
                   </div>
-                  <div>
+                </div>
+                <div>
+                  <div
+                    class="emotion-16"
+                  >
                     <div
                       class="emotion-17"
                     >
                       <div
                         class="emotion-18"
                       >
-                        <div
+                        <input
+                          aria-invalid="false"
                           class="emotion-19"
+                          data-testid="input"
+                          id="textfield__00"
+                          placeholder="Field 2"
+                        />
+                        <label
+                          class="emotion-20"
+                          for="textfield__00"
                         >
-                          <input
-                            aria-invalid="false"
-                            class="emotion-20"
-                            data-testid="input"
-                            id="textfield__00"
-                            placeholder="Field 2"
-                          />
-                          <label
-                            class="emotion-21"
-                            for="textfield__00"
-                          >
-                            Field 2
-                             
-                          </label>
-                        </div>
+                          Field 2
+                           
+                        </label>
                       </div>
                     </div>
                   </div>
-                  <div>
+                </div>
+                <div>
+                  <div
+                    class="emotion-16"
+                  >
                     <div
                       class="emotion-17"
                     >
                       <div
                         class="emotion-18"
                       >
-                        <div
+                        <input
+                          aria-invalid="false"
                           class="emotion-19"
+                          data-testid="input"
+                          id="textfield__00"
+                          placeholder="Field 3"
+                        />
+                        <label
+                          class="emotion-20"
+                          for="textfield__00"
                         >
-                          <input
-                            aria-invalid="false"
-                            class="emotion-20"
-                            data-testid="input"
-                            id="textfield__00"
-                            placeholder="Field 3"
-                          />
-                          <label
-                            class="emotion-21"
-                            for="textfield__00"
-                          >
-                            Field 3
-                             
-                          </label>
-                        </div>
+                          Field 3
+                           
+                        </label>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
+            <div
+              class="emotion-31"
+              data-testid="ictinus_drawer_footer"
+            >
               <div
                 class="emotion-32"
-                data-testid="ictinus_drawer_drawer_footer"
               >
                 <div
                   class="emotion-33"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-2"
                   >
-                    <div
-                      class="emotion-2"
+                    <button
+                      class="emotion-35"
+                      data-testid="button"
+                      type="button"
                     >
-                      <button
-                        class="emotion-36"
-                        data-testid="button"
-                        type="button"
+                      <span
+                        class="emotion-4"
                       >
-                        <span
-                          class="emotion-4"
-                        >
-                          <span>
-                            Cancel
-                          </span>
+                        <span>
+                          Cancel
                         </span>
-                      </button>
-                    </div>
-                    <div
-                      class="emotion-2"
+                      </span>
+                    </button>
+                  </div>
+                  <div
+                    class="emotion-2"
+                  >
+                    <button
+                      class="emotion-3"
+                      data-testid="button"
+                      type="button"
                     >
-                      <button
-                        class="emotion-3"
-                        data-testid="button"
-                        type="button"
+                      <span
+                        class="emotion-4"
                       >
-                        <span
-                          class="emotion-4"
-                        >
-                          <span>
-                            Create Entity
-                          </span>
+                        <span>
+                          Create Entity
                         </span>
-                      </button>
-                    </div>
+                      </span>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -909,13 +895,13 @@
         </button>
       </div>
       <div
-        class="emotion-44"
+        class="emotion-43"
       >
         <div
           style="display: flex; height: 33%; width: 100%;"
         >
           <div
-            class="emotion-45"
+            class="emotion-44"
             data-testid="ictinus_drawer_drawer_container"
           >
             <div
@@ -923,181 +909,176 @@
             >
               <div
                 class="emotion-8"
-                data-testid="ictinus_drawer_drawer_header"
               >
-                <div
+                <p
                   class="emotion-9"
                 >
-                  <p
-                    class="emotion-10"
-                  >
-                    Create Entity Form
-                  </p>
-                  <p
-                    class="emotion-11"
-                  >
-                    Short copy providing context
-                  </p>
-                </div>
-                <div
-                  class="emotion-12"
+                  Create Entity Form
+                </p>
+                <p
+                  class="emotion-10"
                 >
-                  <div
-                    class="emotion-13"
-                    data-testid="ictinus_drawer_drawer_close_button"
-                    tabindex="0"
-                  >
-                    <svg
-                      class="emotion-14"
-                      fill="none"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M10.0442 11.1281L6.40819 14.7495C6.24522 14.9118 6.0561 14.9941 5.84084 14.9965C5.62558 14.9988 5.43411 14.9165 5.26642 14.7495C5.09872 14.5824 5.01487 14.396 5.01487 14.19C5.01487 13.9841 5.09872 13.7976 5.26642 13.6306L8.92076 9.99085L5.24805 6.35114C5.08507 6.18882 5.0024 6.00656 5.00005 5.80435C4.99769 5.60216 5.08035 5.41756 5.24805 5.25054C5.41574 5.08351 5.60297 5 5.80975 5C6.01653 5 6.20377 5.08351 6.37145 5.25054L10.0074 8.85364L13.6067 5.26884C13.7697 5.10651 13.9588 5.02417 14.174 5.02183C14.3893 5.01947 14.5808 5.10181 14.7485 5.26884C14.9162 5.43585 15 5.62843 15 5.84658C15 6.06473 14.9162 6.25731 14.7485 6.42433L11.1309 10.0457L14.7668 13.6672C14.9176 13.8173 14.9941 13.9995 14.9965 14.2139C14.9988 14.4283 14.9223 14.6129 14.7668 14.7678C14.6114 14.9226 14.4303 15 14.2235 15C14.0167 15 13.8356 14.9226 13.6802 14.7678L10.0442 11.1281Z"
-                        fill="#6265AD"
-                      />
-                    </svg>
-                  </div>
-                </div>
+                  Short copy providing context
+                </p>
               </div>
               <div
-                class="emotion-15"
-                data-testid="ictinus_drawer_drawer_body"
+                class="emotion-11"
               >
                 <div
-                  class="emotion-16"
+                  class="emotion-12"
+                  data-testid="ictinus_drawer_close_button"
+                  tabindex="0"
                 >
-                  <div>
+                  <svg
+                    class="emotion-13"
+                    fill="none"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10.0442 11.1281L6.40819 14.7495C6.24522 14.9118 6.0561 14.9941 5.84084 14.9965C5.62558 14.9988 5.43411 14.9165 5.26642 14.7495C5.09872 14.5824 5.01487 14.396 5.01487 14.19C5.01487 13.9841 5.09872 13.7976 5.26642 13.6306L8.92076 9.99085L5.24805 6.35114C5.08507 6.18882 5.0024 6.00656 5.00005 5.80435C4.99769 5.60216 5.08035 5.41756 5.24805 5.25054C5.41574 5.08351 5.60297 5 5.80975 5C6.01653 5 6.20377 5.08351 6.37145 5.25054L10.0074 8.85364L13.6067 5.26884C13.7697 5.10651 13.9588 5.02417 14.174 5.02183C14.3893 5.01947 14.5808 5.10181 14.7485 5.26884C14.9162 5.43585 15 5.62843 15 5.84658C15 6.06473 14.9162 6.25731 14.7485 6.42433L11.1309 10.0457L14.7668 13.6672C14.9176 13.8173 14.9941 13.9995 14.9965 14.2139C14.9988 14.4283 14.9223 14.6129 14.7668 14.7678C14.6114 14.9226 14.4303 15 14.2235 15C14.0167 15 13.8356 14.9226 13.6802 14.7678L10.0442 11.1281Z"
+                      fill="#6265AD"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="emotion-14"
+              data-testid="ictinus_drawer_content"
+            >
+              <div
+                class="emotion-15"
+              >
+                <div>
+                  <div
+                    class="emotion-16"
+                  >
                     <div
                       class="emotion-17"
                     >
                       <div
                         class="emotion-18"
                       >
-                        <div
+                        <input
+                          aria-invalid="false"
                           class="emotion-19"
+                          data-testid="input"
+                          id="textfield__00"
+                          placeholder="Field 1"
+                        />
+                        <label
+                          class="emotion-20"
+                          for="textfield__00"
                         >
-                          <input
-                            aria-invalid="false"
-                            class="emotion-20"
-                            data-testid="input"
-                            id="textfield__00"
-                            placeholder="Field 1"
-                          />
-                          <label
-                            class="emotion-21"
-                            for="textfield__00"
-                          >
-                            Field 1
-                             
-                          </label>
-                        </div>
+                          Field 1
+                           
+                        </label>
                       </div>
                     </div>
                   </div>
-                  <div>
+                </div>
+                <div>
+                  <div
+                    class="emotion-16"
+                  >
                     <div
                       class="emotion-17"
                     >
                       <div
                         class="emotion-18"
                       >
-                        <div
+                        <input
+                          aria-invalid="false"
                           class="emotion-19"
+                          data-testid="input"
+                          id="textfield__00"
+                          placeholder="Field 2"
+                        />
+                        <label
+                          class="emotion-20"
+                          for="textfield__00"
                         >
-                          <input
-                            aria-invalid="false"
-                            class="emotion-20"
-                            data-testid="input"
-                            id="textfield__00"
-                            placeholder="Field 2"
-                          />
-                          <label
-                            class="emotion-21"
-                            for="textfield__00"
-                          >
-                            Field 2
-                             
-                          </label>
-                        </div>
+                          Field 2
+                           
+                        </label>
                       </div>
                     </div>
                   </div>
-                  <div>
+                </div>
+                <div>
+                  <div
+                    class="emotion-16"
+                  >
                     <div
                       class="emotion-17"
                     >
                       <div
                         class="emotion-18"
                       >
-                        <div
+                        <input
+                          aria-invalid="false"
                           class="emotion-19"
+                          data-testid="input"
+                          id="textfield__00"
+                          placeholder="Field 3"
+                        />
+                        <label
+                          class="emotion-20"
+                          for="textfield__00"
                         >
-                          <input
-                            aria-invalid="false"
-                            class="emotion-20"
-                            data-testid="input"
-                            id="textfield__00"
-                            placeholder="Field 3"
-                          />
-                          <label
-                            class="emotion-21"
-                            for="textfield__00"
-                          >
-                            Field 3
-                             
-                          </label>
-                        </div>
+                          Field 3
+                           
+                        </label>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
+            <div
+              class="emotion-31"
+              data-testid="ictinus_drawer_footer"
+            >
               <div
                 class="emotion-32"
-                data-testid="ictinus_drawer_drawer_footer"
               >
                 <div
                   class="emotion-33"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-2"
                   >
-                    <div
-                      class="emotion-2"
+                    <button
+                      class="emotion-35"
+                      data-testid="button"
+                      type="button"
                     >
-                      <button
-                        class="emotion-36"
-                        data-testid="button"
-                        type="button"
+                      <span
+                        class="emotion-4"
                       >
-                        <span
-                          class="emotion-4"
-                        >
-                          <span>
-                            Cancel
-                          </span>
+                        <span>
+                          Cancel
                         </span>
-                      </button>
-                    </div>
-                    <div
-                      class="emotion-2"
+                      </span>
+                    </button>
+                  </div>
+                  <div
+                    class="emotion-2"
+                  >
+                    <button
+                      class="emotion-3"
+                      data-testid="button"
+                      type="button"
                     >
-                      <button
-                        class="emotion-3"
-                        data-testid="button"
-                        type="button"
+                      <span
+                        class="emotion-4"
                       >
-                        <span
-                          class="emotion-4"
-                        >
-                          <span>
-                            Create Entity
-                          </span>
+                        <span>
+                          Create Entity
                         </span>
-                      </button>
-                    </div>
+                      </span>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -1123,13 +1104,13 @@
         </button>
       </div>
       <div
-        class="emotion-83"
+        class="emotion-81"
       >
         <div
           style="display: flex; height: 100%; width: 33%;"
         >
           <div
-            class="emotion-84"
+            class="emotion-82"
             data-testid="ictinus_drawer_drawer_container"
           >
             <div
@@ -1137,181 +1118,176 @@
             >
               <div
                 class="emotion-8"
-                data-testid="ictinus_drawer_drawer_header"
               >
-                <div
+                <p
                   class="emotion-9"
                 >
-                  <p
-                    class="emotion-10"
-                  >
-                    Create Entity Form
-                  </p>
-                  <p
-                    class="emotion-11"
-                  >
-                    Short copy providing context
-                  </p>
-                </div>
-                <div
-                  class="emotion-12"
+                  Create Entity Form
+                </p>
+                <p
+                  class="emotion-10"
                 >
-                  <div
-                    class="emotion-13"
-                    data-testid="ictinus_drawer_drawer_close_button"
-                    tabindex="0"
-                  >
-                    <svg
-                      class="emotion-14"
-                      fill="none"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M10.0442 11.1281L6.40819 14.7495C6.24522 14.9118 6.0561 14.9941 5.84084 14.9965C5.62558 14.9988 5.43411 14.9165 5.26642 14.7495C5.09872 14.5824 5.01487 14.396 5.01487 14.19C5.01487 13.9841 5.09872 13.7976 5.26642 13.6306L8.92076 9.99085L5.24805 6.35114C5.08507 6.18882 5.0024 6.00656 5.00005 5.80435C4.99769 5.60216 5.08035 5.41756 5.24805 5.25054C5.41574 5.08351 5.60297 5 5.80975 5C6.01653 5 6.20377 5.08351 6.37145 5.25054L10.0074 8.85364L13.6067 5.26884C13.7697 5.10651 13.9588 5.02417 14.174 5.02183C14.3893 5.01947 14.5808 5.10181 14.7485 5.26884C14.9162 5.43585 15 5.62843 15 5.84658C15 6.06473 14.9162 6.25731 14.7485 6.42433L11.1309 10.0457L14.7668 13.6672C14.9176 13.8173 14.9941 13.9995 14.9965 14.2139C14.9988 14.4283 14.9223 14.6129 14.7668 14.7678C14.6114 14.9226 14.4303 15 14.2235 15C14.0167 15 13.8356 14.9226 13.6802 14.7678L10.0442 11.1281Z"
-                        fill="#6265AD"
-                      />
-                    </svg>
-                  </div>
-                </div>
+                  Short copy providing context
+                </p>
               </div>
               <div
-                class="emotion-15"
-                data-testid="ictinus_drawer_drawer_body"
+                class="emotion-11"
               >
                 <div
-                  class="emotion-16"
+                  class="emotion-12"
+                  data-testid="ictinus_drawer_close_button"
+                  tabindex="0"
                 >
-                  <div>
+                  <svg
+                    class="emotion-13"
+                    fill="none"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10.0442 11.1281L6.40819 14.7495C6.24522 14.9118 6.0561 14.9941 5.84084 14.9965C5.62558 14.9988 5.43411 14.9165 5.26642 14.7495C5.09872 14.5824 5.01487 14.396 5.01487 14.19C5.01487 13.9841 5.09872 13.7976 5.26642 13.6306L8.92076 9.99085L5.24805 6.35114C5.08507 6.18882 5.0024 6.00656 5.00005 5.80435C4.99769 5.60216 5.08035 5.41756 5.24805 5.25054C5.41574 5.08351 5.60297 5 5.80975 5C6.01653 5 6.20377 5.08351 6.37145 5.25054L10.0074 8.85364L13.6067 5.26884C13.7697 5.10651 13.9588 5.02417 14.174 5.02183C14.3893 5.01947 14.5808 5.10181 14.7485 5.26884C14.9162 5.43585 15 5.62843 15 5.84658C15 6.06473 14.9162 6.25731 14.7485 6.42433L11.1309 10.0457L14.7668 13.6672C14.9176 13.8173 14.9941 13.9995 14.9965 14.2139C14.9988 14.4283 14.9223 14.6129 14.7668 14.7678C14.6114 14.9226 14.4303 15 14.2235 15C14.0167 15 13.8356 14.9226 13.6802 14.7678L10.0442 11.1281Z"
+                      fill="#6265AD"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="emotion-14"
+              data-testid="ictinus_drawer_content"
+            >
+              <div
+                class="emotion-15"
+              >
+                <div>
+                  <div
+                    class="emotion-16"
+                  >
                     <div
                       class="emotion-17"
                     >
                       <div
                         class="emotion-18"
                       >
-                        <div
+                        <input
+                          aria-invalid="false"
                           class="emotion-19"
+                          data-testid="input"
+                          id="textfield__00"
+                          placeholder="Field 1"
+                        />
+                        <label
+                          class="emotion-20"
+                          for="textfield__00"
                         >
-                          <input
-                            aria-invalid="false"
-                            class="emotion-20"
-                            data-testid="input"
-                            id="textfield__00"
-                            placeholder="Field 1"
-                          />
-                          <label
-                            class="emotion-21"
-                            for="textfield__00"
-                          >
-                            Field 1
-                             
-                          </label>
-                        </div>
+                          Field 1
+                           
+                        </label>
                       </div>
                     </div>
                   </div>
-                  <div>
+                </div>
+                <div>
+                  <div
+                    class="emotion-16"
+                  >
                     <div
                       class="emotion-17"
                     >
                       <div
                         class="emotion-18"
                       >
-                        <div
+                        <input
+                          aria-invalid="false"
                           class="emotion-19"
+                          data-testid="input"
+                          id="textfield__00"
+                          placeholder="Field 2"
+                        />
+                        <label
+                          class="emotion-20"
+                          for="textfield__00"
                         >
-                          <input
-                            aria-invalid="false"
-                            class="emotion-20"
-                            data-testid="input"
-                            id="textfield__00"
-                            placeholder="Field 2"
-                          />
-                          <label
-                            class="emotion-21"
-                            for="textfield__00"
-                          >
-                            Field 2
-                             
-                          </label>
-                        </div>
+                          Field 2
+                           
+                        </label>
                       </div>
                     </div>
                   </div>
-                  <div>
+                </div>
+                <div>
+                  <div
+                    class="emotion-16"
+                  >
                     <div
                       class="emotion-17"
                     >
                       <div
                         class="emotion-18"
                       >
-                        <div
+                        <input
+                          aria-invalid="false"
                           class="emotion-19"
+                          data-testid="input"
+                          id="textfield__00"
+                          placeholder="Field 3"
+                        />
+                        <label
+                          class="emotion-20"
+                          for="textfield__00"
                         >
-                          <input
-                            aria-invalid="false"
-                            class="emotion-20"
-                            data-testid="input"
-                            id="textfield__00"
-                            placeholder="Field 3"
-                          />
-                          <label
-                            class="emotion-21"
-                            for="textfield__00"
-                          >
-                            Field 3
-                             
-                          </label>
-                        </div>
+                          Field 3
+                           
+                        </label>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
+            <div
+              class="emotion-31"
+              data-testid="ictinus_drawer_footer"
+            >
               <div
                 class="emotion-32"
-                data-testid="ictinus_drawer_drawer_footer"
               >
                 <div
                   class="emotion-33"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-2"
                   >
-                    <div
-                      class="emotion-2"
+                    <button
+                      class="emotion-35"
+                      data-testid="button"
+                      type="button"
                     >
-                      <button
-                        class="emotion-36"
-                        data-testid="button"
-                        type="button"
+                      <span
+                        class="emotion-4"
                       >
-                        <span
-                          class="emotion-4"
-                        >
-                          <span>
-                            Cancel
-                          </span>
+                        <span>
+                          Cancel
                         </span>
-                      </button>
-                    </div>
-                    <div
-                      class="emotion-2"
+                      </span>
+                    </button>
+                  </div>
+                  <div
+                    class="emotion-2"
+                  >
+                    <button
+                      class="emotion-3"
+                      data-testid="button"
+                      type="button"
                     >
-                      <button
-                        class="emotion-3"
-                        data-testid="button"
-                        type="button"
+                      <span
+                        class="emotion-4"
                       >
-                        <span
-                          class="emotion-4"
-                        >
-                          <span>
-                            Create Entity
-                          </span>
+                        <span>
+                          Create Entity
                         </span>
-                      </button>
-                    </div>
+                      </span>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -1337,13 +1313,13 @@
         </button>
       </div>
       <div
-        class="emotion-122"
+        class="emotion-119"
       >
         <div
           style="display: flex; height: 100%; width: 33%;"
         >
           <div
-            class="emotion-123"
+            class="emotion-120"
             data-testid="ictinus_drawer_drawer_container"
           >
             <div
@@ -1351,181 +1327,176 @@
             >
               <div
                 class="emotion-8"
-                data-testid="ictinus_drawer_drawer_header"
               >
-                <div
+                <p
                   class="emotion-9"
                 >
-                  <p
-                    class="emotion-10"
-                  >
-                    Create Entity Form
-                  </p>
-                  <p
-                    class="emotion-11"
-                  >
-                    Short copy providing context
-                  </p>
-                </div>
-                <div
-                  class="emotion-12"
+                  Create Entity Form
+                </p>
+                <p
+                  class="emotion-10"
                 >
-                  <div
-                    class="emotion-13"
-                    data-testid="ictinus_drawer_drawer_close_button"
-                    tabindex="0"
-                  >
-                    <svg
-                      class="emotion-14"
-                      fill="none"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M10.0442 11.1281L6.40819 14.7495C6.24522 14.9118 6.0561 14.9941 5.84084 14.9965C5.62558 14.9988 5.43411 14.9165 5.26642 14.7495C5.09872 14.5824 5.01487 14.396 5.01487 14.19C5.01487 13.9841 5.09872 13.7976 5.26642 13.6306L8.92076 9.99085L5.24805 6.35114C5.08507 6.18882 5.0024 6.00656 5.00005 5.80435C4.99769 5.60216 5.08035 5.41756 5.24805 5.25054C5.41574 5.08351 5.60297 5 5.80975 5C6.01653 5 6.20377 5.08351 6.37145 5.25054L10.0074 8.85364L13.6067 5.26884C13.7697 5.10651 13.9588 5.02417 14.174 5.02183C14.3893 5.01947 14.5808 5.10181 14.7485 5.26884C14.9162 5.43585 15 5.62843 15 5.84658C15 6.06473 14.9162 6.25731 14.7485 6.42433L11.1309 10.0457L14.7668 13.6672C14.9176 13.8173 14.9941 13.9995 14.9965 14.2139C14.9988 14.4283 14.9223 14.6129 14.7668 14.7678C14.6114 14.9226 14.4303 15 14.2235 15C14.0167 15 13.8356 14.9226 13.6802 14.7678L10.0442 11.1281Z"
-                        fill="#6265AD"
-                      />
-                    </svg>
-                  </div>
-                </div>
+                  Short copy providing context
+                </p>
               </div>
               <div
-                class="emotion-15"
-                data-testid="ictinus_drawer_drawer_body"
+                class="emotion-11"
               >
                 <div
-                  class="emotion-16"
+                  class="emotion-12"
+                  data-testid="ictinus_drawer_close_button"
+                  tabindex="0"
                 >
-                  <div>
+                  <svg
+                    class="emotion-13"
+                    fill="none"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10.0442 11.1281L6.40819 14.7495C6.24522 14.9118 6.0561 14.9941 5.84084 14.9965C5.62558 14.9988 5.43411 14.9165 5.26642 14.7495C5.09872 14.5824 5.01487 14.396 5.01487 14.19C5.01487 13.9841 5.09872 13.7976 5.26642 13.6306L8.92076 9.99085L5.24805 6.35114C5.08507 6.18882 5.0024 6.00656 5.00005 5.80435C4.99769 5.60216 5.08035 5.41756 5.24805 5.25054C5.41574 5.08351 5.60297 5 5.80975 5C6.01653 5 6.20377 5.08351 6.37145 5.25054L10.0074 8.85364L13.6067 5.26884C13.7697 5.10651 13.9588 5.02417 14.174 5.02183C14.3893 5.01947 14.5808 5.10181 14.7485 5.26884C14.9162 5.43585 15 5.62843 15 5.84658C15 6.06473 14.9162 6.25731 14.7485 6.42433L11.1309 10.0457L14.7668 13.6672C14.9176 13.8173 14.9941 13.9995 14.9965 14.2139C14.9988 14.4283 14.9223 14.6129 14.7668 14.7678C14.6114 14.9226 14.4303 15 14.2235 15C14.0167 15 13.8356 14.9226 13.6802 14.7678L10.0442 11.1281Z"
+                      fill="#6265AD"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="emotion-14"
+              data-testid="ictinus_drawer_content"
+            >
+              <div
+                class="emotion-15"
+              >
+                <div>
+                  <div
+                    class="emotion-16"
+                  >
                     <div
                       class="emotion-17"
                     >
                       <div
                         class="emotion-18"
                       >
-                        <div
+                        <input
+                          aria-invalid="false"
                           class="emotion-19"
+                          data-testid="input"
+                          id="textfield__00"
+                          placeholder="Field 1"
+                        />
+                        <label
+                          class="emotion-20"
+                          for="textfield__00"
                         >
-                          <input
-                            aria-invalid="false"
-                            class="emotion-20"
-                            data-testid="input"
-                            id="textfield__00"
-                            placeholder="Field 1"
-                          />
-                          <label
-                            class="emotion-21"
-                            for="textfield__00"
-                          >
-                            Field 1
-                             
-                          </label>
-                        </div>
+                          Field 1
+                           
+                        </label>
                       </div>
                     </div>
                   </div>
-                  <div>
+                </div>
+                <div>
+                  <div
+                    class="emotion-16"
+                  >
                     <div
                       class="emotion-17"
                     >
                       <div
                         class="emotion-18"
                       >
-                        <div
+                        <input
+                          aria-invalid="false"
                           class="emotion-19"
+                          data-testid="input"
+                          id="textfield__00"
+                          placeholder="Field 2"
+                        />
+                        <label
+                          class="emotion-20"
+                          for="textfield__00"
                         >
-                          <input
-                            aria-invalid="false"
-                            class="emotion-20"
-                            data-testid="input"
-                            id="textfield__00"
-                            placeholder="Field 2"
-                          />
-                          <label
-                            class="emotion-21"
-                            for="textfield__00"
-                          >
-                            Field 2
-                             
-                          </label>
-                        </div>
+                          Field 2
+                           
+                        </label>
                       </div>
                     </div>
                   </div>
-                  <div>
+                </div>
+                <div>
+                  <div
+                    class="emotion-16"
+                  >
                     <div
                       class="emotion-17"
                     >
                       <div
                         class="emotion-18"
                       >
-                        <div
+                        <input
+                          aria-invalid="false"
                           class="emotion-19"
+                          data-testid="input"
+                          id="textfield__00"
+                          placeholder="Field 3"
+                        />
+                        <label
+                          class="emotion-20"
+                          for="textfield__00"
                         >
-                          <input
-                            aria-invalid="false"
-                            class="emotion-20"
-                            data-testid="input"
-                            id="textfield__00"
-                            placeholder="Field 3"
-                          />
-                          <label
-                            class="emotion-21"
-                            for="textfield__00"
-                          >
-                            Field 3
-                             
-                          </label>
-                        </div>
+                          Field 3
+                           
+                        </label>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
+            <div
+              class="emotion-31"
+              data-testid="ictinus_drawer_footer"
+            >
               <div
                 class="emotion-32"
-                data-testid="ictinus_drawer_drawer_footer"
               >
                 <div
                   class="emotion-33"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-2"
                   >
-                    <div
-                      class="emotion-2"
+                    <button
+                      class="emotion-35"
+                      data-testid="button"
+                      type="button"
                     >
-                      <button
-                        class="emotion-36"
-                        data-testid="button"
-                        type="button"
+                      <span
+                        class="emotion-4"
                       >
-                        <span
-                          class="emotion-4"
-                        >
-                          <span>
-                            Cancel
-                          </span>
+                        <span>
+                          Cancel
                         </span>
-                      </button>
-                    </div>
-                    <div
-                      class="emotion-2"
+                      </span>
+                    </button>
+                  </div>
+                  <div
+                    class="emotion-2"
+                  >
+                    <button
+                      class="emotion-3"
+                      data-testid="button"
+                      type="button"
                     >
-                      <button
-                        class="emotion-3"
-                        data-testid="button"
-                        type="button"
+                      <span
+                        class="emotion-4"
                       >
-                        <span
-                          class="emotion-4"
-                        >
-                          <span>
-                            Create Entity
-                          </span>
+                        <span>
+                          Create Entity
                         </span>
-                      </button>
-                    </div>
+                      </span>
+                    </button>
                   </div>
                 </div>
               </div>

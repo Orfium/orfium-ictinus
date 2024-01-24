@@ -19,6 +19,11 @@ const drawer = {
     type: 'boxShadow',
     description: 'Sets boxShadow for drawer container',
   },
+  padding: {
+    value: '{spacing.8}',
+    type: 'spacing',
+    description: 'Sets default horizontal and vertical padding for drawer content',
+  },
 } as const;
 
 export default drawer;

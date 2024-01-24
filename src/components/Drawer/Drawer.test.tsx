@@ -2,6 +2,7 @@ import React from 'react';
 
 import { render, fireEvent } from '../../test';
 import Drawer from './Drawer';
+import { DrawerHeader } from './components';
 
 describe('Drawer', () => {
   const content = 'content';
@@ -10,12 +11,11 @@ describe('Drawer', () => {
     const closeCTA = vi.fn();
 
     const { findByText, findByTestId } = render(
-      <Drawer
-        isOpen={true}
-        size={33}
-        onClose={closeCTA}
-        content={{ body: { content: <div>{content}</div> } }}
-      />
+      <Drawer isOpen={true} size={33} onClose={closeCTA}>
+        <DrawerHeader>
+          <div>{content}</div>
+        </DrawerHeader>
+      </Drawer>
     );
 
     const drawerContainer = await findByTestId('ictinus_drawer_drawer_container');
@@ -29,15 +29,14 @@ describe('Drawer', () => {
     const closeCTA = vi.fn();
 
     const { findByTestId } = render(
-      <Drawer
-        isOpen={true}
-        size={33}
-        onClose={closeCTA}
-        content={{ header: { content: <div>{content}</div> } }}
-      />
+      <Drawer isOpen={true} size={33} onClose={closeCTA}>
+        <DrawerHeader>
+          <div>{content}</div>
+        </DrawerHeader>
+      </Drawer>
     );
 
-    const closeButton = await findByTestId('ictinus_drawer_drawer_close_button');
+    const closeButton = await findByTestId('ictinus_drawer_close_button');
     fireEvent.click(closeButton);
 
     expect(closeCTA).toHaveBeenCalledTimes(1);
@@ -47,12 +46,11 @@ describe('Drawer', () => {
     const closeCTA = vi.fn();
 
     render(
-      <Drawer
-        isOpen={true}
-        size={33}
-        onClose={closeCTA}
-        content={{ body: { content: <div>{content}</div> } }}
-      />
+      <Drawer isOpen={true} size={33} onClose={closeCTA}>
+        <DrawerHeader>
+          <div>{content}</div>
+        </DrawerHeader>
+      </Drawer>
     );
 
     fireEvent.keyDown(document.body, {

@@ -25,10 +25,8 @@ export type DrawerProps = {
   anchor?: AnchorType;
   /** Drawer size are relative to the viewport (percentage) */
   size: number;
-  /** The content of the Drawer */
-  content?: DrawerContent;
   /** Whether tha background behind the Drawer is interactive. Defaults to false */
   isBackgroundActive?: boolean;
-  /** If false, the close button is hidden and the user can add their own custom one. Defaults to true */
-  hasCloseButton?: boolean;
+  /** If true, then the header and footer are fixed positioned */
+  hasFixedLayout?: boolean;
 } & TestProps;

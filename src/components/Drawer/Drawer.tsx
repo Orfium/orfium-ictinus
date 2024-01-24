@@ -1,29 +1,22 @@
 import useEscape from 'hooks/useEscape';
-import React from 'react';
+import React, { useMemo } from 'react';
 
-import {
-  anchorStyle,
-  backdropStyle,
-  closeIconContainer,
-  footerStyle,
-  headerStyle,
-  overlayStyle,
-} from './Drawer.style';
+import { anchorStyle, backdropStyle, overlayStyle } from './Drawer.style';
 import type { DrawerProps } from './Drawer.types';
-import Icon from 'components/Icon';
+import { DrawerContext } from './DrawerContext';
 import ClickAwayListener from 'components/utils/ClickAwayListener';
 
-const Drawer = React.forwardRef<HTMLDivElement, DrawerProps>(
+const Drawer = React.forwardRef<HTMLDivElement, React.PropsWithChildren<DrawerProps>>(
   (
     {
       isOpen,
       onClose,
       anchor,
       size,
-      content,
       isBackgroundActive = false,
-      hasCloseButton = true,
       dataTestPrefixId = 'ictinus_drawer',
+      hasFixedLayout = false,
+      children,
     },
     ref
   ) => {
@@ -33,76 +26,29 @@ const Drawer = React.forwardRef<HTMLDivElement, DrawerProps>(
       }
     });
 
-    const hasFixedHeader = content?.header?.isFixed;
-
-    const header = content?.header?.content && (
-      <div
-        css={headerStyle({ isFixed: hasFixedHeader })}
-        data-testid={`${dataTestPrefixId}_drawer_header`}
-      >
-        {content?.header?.content}
-        {hasCloseButton && (
-          <div css={closeIconContainer()}>
-            <Icon
-              name="close"
-              onClick={onClose}
-              dataTestId={`${dataTestPrefixId}_drawer_close_button`}
-            />
-          </div>
-        )}
-      </div>
-    );
-
-    const hasFixedFooter = content?.footer?.isFixed;
-
-    const footer = content?.footer?.content && (
-      <div
-        css={footerStyle({ isFixed: hasFixedFooter })}
-        data-testid={`${dataTestPrefixId}_drawer_footer`}
-      >
-        {content?.footer?.content}
-      </div>
-    );
+    const contextValue = useMemo(() => ({ hasFixedLayout, onClose }), []);
 
     return (
-      <div css={backdropStyle({ isOpen, anchor, size, isBackgroundActive })}>
-        <ClickAwayListener
-          onClick={() => {
-            if (!isBackgroundActive) {
-              onClose();
-            }
-          }}
-          cssStyles={anchorStyle({ anchor, size, isBackgroundActive })}
-        >
-          <div
-            ref={ref}
-            css={overlayStyle({ isOpen, anchor })}
-            data-testid={`${dataTestPrefixId}_drawer_container`}
+      <DrawerContext.Provider value={contextValue}>
+        <div css={backdropStyle({ isOpen, anchor, size, isBackgroundActive })}>
+          <ClickAwayListener
+            onClick={() => {
+              if (!isBackgroundActive) {
+                onClose();
+              }
+            }}
+            cssStyles={anchorStyle({ anchor, size, isBackgroundActive })}
           >
-            {/** Fixed Header */}
-            {hasFixedHeader && header}
-
-            {/** Main scrollable area */}
             <div
-              css={{
-                overflowY: 'auto',
-                display: 'flex',
-                flexDirection: 'column',
-                height: '100%',
-              }}
+              ref={ref}
+              css={overlayStyle({ isOpen, anchor, hasFixedLayout })}
+              data-testid={`${dataTestPrefixId}_drawer_container`}
             >
-              {!hasFixedHeader && header}
-              <div css={{ flex: 1 }} data-testid={`${dataTestPrefixId}_drawer_body`}>
-                {content?.body?.content}
-              </div>
-              {!hasFixedFooter && footer}
+              {children}
             </div>
-
-            {/** Fixed Footer */}
-            {hasFixedFooter && footer}
-          </div>
-        </ClickAwayListener>
-      </div>
+          </ClickAwayListener>
+        </div>
+      </DrawerContext.Provider>
     );
   }
 );

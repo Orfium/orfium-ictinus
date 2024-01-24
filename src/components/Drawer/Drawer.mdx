@@ -21,8 +21,8 @@ A panel which slides out from the edge of the screen and displays over the curre
 <ArgTypes of={Drawer} />
 
 <Tip>
-  The content prop consists of `header`, `body` and `footer`. These 3 modules are all options and
-  also header and footer have a `isFixed` optional prop.
+  You can also use the `DrawerHeader`, `DrawerContent` and `DrawerFooter` components provided by the
+  library to build your Drawer content.
 </Tip>
 
 ## Usage
@@ -64,17 +64,11 @@ By default the background of the drawer has a backdrop. If the `isBackgroundActi
 
 ### Fixed content
 
-The drawer content consists of `header`, `body` and `footer`. These 3 modules are all options and also have a `isFixed` optional prop.
+If you are using the `DrawerHeader`, `DrawerContent` and `DrawerFooter` components provided by the library, then by using the `hasFixedLayout` prop you can make the header and footer fixed positioned.
 
 <Tip>
-  In order to create your own custom drawer content with custom styles, you can use only the body
-  module and style it accordingly to create a new custom layout.
-</Tip>
-
-<Tip>
-  Inside the drawer a close button is rendered by default if header content is provided. To add your
-  own close button based on your custom content layout, either skip the header module entirely or
-  use the hasCloseButton prop (with value = false).
+  If you want only the header or the footer fixed, then skip the `DrawerHeader` or `DrawerFooter`
+  components by including your header or footer code-block inside the `DrawerContent`
 </Tip>
 
 <Canvas of={DrawerStories.FixedContent} />
