@@ -1,10 +1,10 @@
 import useEscape from 'hooks/useEscape';
-import React, { useMemo } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 
 import { anchorStyle, backdropStyle, overlayStyle } from './Drawer.style';
 import type { DrawerProps } from './Drawer.types';
-import { DrawerContext } from './DrawerContext';
+import { DrawerContextProvider } from './DrawerContext';
 import ClickAwayListener from 'components/utils/ClickAwayListener';
 
 const Drawer = React.forwardRef<HTMLDivElement, React.PropsWithChildren<DrawerProps>>(
@@ -28,14 +28,12 @@ const Drawer = React.forwardRef<HTMLDivElement, React.PropsWithChildren<DrawerPr
       }
     });
 
-    const contextValue = useMemo(() => ({ hasFixedLayout, onClose }), []);
-
     if (parent === null) {
       return null;
     }
 
     return ReactDOM.createPortal(
-      <DrawerContext.Provider value={contextValue}>
+      <DrawerContextProvider hasFixedLayout={hasFixedLayout} onClose={onClose}>
         <div css={backdropStyle({ isOpen, anchor, size, isBackgroundActive })}>
           <ClickAwayListener
             onClick={() => {
@@ -54,7 +52,7 @@ const Drawer = React.forwardRef<HTMLDivElement, React.PropsWithChildren<DrawerPr
             </div>
           </ClickAwayListener>
         </div>
-      </DrawerContext.Provider>,
+      </DrawerContextProvider>,
       parent
     );
   }

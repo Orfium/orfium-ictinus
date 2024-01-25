@@ -1,5 +1,6 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
+import { rem } from 'polished';
 import type { Theme } from 'theme';
 import { flex, transition } from 'theme/functions';
 
@@ -150,7 +151,7 @@ export const closeIconContainer =
   };
 
 export const headerStyle =
-  ({ isFixed }: { isFixed?: boolean }) =>
+  ({ isFixed, hasBoxShadow }: { isFixed?: boolean; hasBoxShadow?: boolean }) =>
   (theme: Theme): SerializedStyles => {
     const tokens = getDrawerTokens(theme);
 
@@ -159,6 +160,8 @@ export const headerStyle =
           padding: ${tokens('padding')};
           position: sticky;
           top: 0;
+          box-shadow: ${hasBoxShadow ? theme.globals.boxShadow.get('2') : undefined};
+          transition: box-shadow 0.2s ease-in-out;
         `
       : css`
           padding: ${tokens('padding')};
@@ -174,12 +177,13 @@ export const contentStyle =
     return css`
       flex: 1;
       overflow-y: ${hasFixedHeader ? 'auto' : undefined};
-      padding: ${tokens('padding')};
+      /** Padding-top and Padding-bottom are -1px because of extra 1px-height elements added for scrollbar observation */
+      padding: calc(${tokens('padding')} - ${rem(1)}) ${tokens('padding')};
     `;
   };
 
 export const footerStyle =
-  ({ isFixed }: { isFixed?: boolean }) =>
+  ({ isFixed, hasBoxShadow }: { isFixed?: boolean; hasBoxShadow?: boolean }) =>
   (theme: Theme): SerializedStyles => {
     const tokens = getDrawerTokens(theme);
 
@@ -188,6 +192,8 @@ export const footerStyle =
           position: sticky;
           bottom: 0;
           padding: ${tokens('padding')};
+          box-shadow: ${hasBoxShadow ? theme.globals.boxShadow.get('5') : undefined};
+          transition: box-shadow 0.2s ease-in-out;
         `
       : css`
           padding: ${tokens('padding')};

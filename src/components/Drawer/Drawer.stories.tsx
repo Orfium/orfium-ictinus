@@ -83,7 +83,7 @@ export const Sizes = {
               setIsOpen1(false);
             }}
             size={33}
-            anchor={'left'}
+            anchor={'right'}
           >
             <DrawerHeader>{drawerContent.header}</DrawerHeader>
             <DrawerContent>{drawerContent.content}</DrawerContent>
@@ -102,7 +102,7 @@ export const Sizes = {
               setIsOpen2(false);
             }}
             size={50}
-            anchor={'left'}
+            anchor={'right'}
           >
             <DrawerHeader>{drawerContent.header}</DrawerHeader>
             <DrawerContent>{drawerContent.content}</DrawerContent>
@@ -121,7 +121,7 @@ export const Sizes = {
               setIsOpen3(false);
             }}
             size={75}
-            anchor={'left'}
+            anchor={'right'}
           >
             <DrawerHeader>{drawerContent.header}</DrawerHeader>
             <DrawerContent>{drawerContent.content}</DrawerContent>
@@ -140,7 +140,7 @@ export const Sizes = {
               setIsOpen4(false);
             }}
             size={100}
-            anchor={'left'}
+            anchor={'right'}
           >
             <DrawerHeader>{drawerContent.header}</DrawerHeader>
             <DrawerContent>{drawerContent.content}</DrawerContent>
@@ -324,7 +324,7 @@ export const FixedContent = {
               setIsOpen(false);
             }}
             size={33}
-            anchor={'left'}
+            anchor={'right'}
             hasFixedLayout
           >
             <DrawerHeader>{drawerContent.header}</DrawerHeader>
@@ -361,7 +361,7 @@ export const MoreExamples = {
               setIsOpen1(false);
             }}
             size={50}
-            anchor={'left'}
+            anchor={'right'}
           >
             <DrawerHeader>
               <div
@@ -406,7 +406,7 @@ export const MoreExamples = {
               setIsOpen2(false);
             }}
             size={50}
-            anchor={'left'}
+            anchor={'right'}
           >
             <DrawerContent>
               <div>

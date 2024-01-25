@@ -5,10 +5,13 @@ import { footerStyle } from '../../Drawer.style';
 import { useDrawerContext } from '../../DrawerContext';
 
 const DrawerFooter: FCC<TestProps> = ({ children, dataTestPrefixId = 'ictinus_drawer' }) => {
-  const { hasFixedLayout } = useDrawerContext();
+  const [{ hasFixedLayout, isScrollbarOnBottom }] = useDrawerContext();
 
   return (
-    <div data-testid={`${dataTestPrefixId}_footer`} css={footerStyle({ isFixed: hasFixedLayout })}>
+    <div
+      data-testid={`${dataTestPrefixId}_footer`}
+      css={footerStyle({ isFixed: hasFixedLayout, hasBoxShadow: !isScrollbarOnBottom })}
+    >
       {children}
     </div>
   );
