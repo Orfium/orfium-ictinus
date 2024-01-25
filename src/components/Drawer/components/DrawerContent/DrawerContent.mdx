@@ -1,0 +1,48 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
+import DrawerContent from './DrawerContent';
+import SectionHeader from '../../../../storybook/SectionHeader';
+
+<Meta title="Updated Components/Drawer/DrawerContent" />
+
+<SectionHeader title={'DrawerContent'} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [References](#references)
+
+## Overview
+
+This component can be rendered as a child to Drawer component and creates a body content for the Drawer.
+
+## Props
+
+<ArgTypes of={DrawerContent} />
+
+## Usage
+
+This component creates a body content for the Drawer. If the `hasFixedLayout` prop is provided to the Drawer component, then this component becomes scrollable.
+
+```
+import Drawer, { DrawerContent } from '@orfium/ictinus';
+
+const MyComponent = () => {
+  return (
+    <Drawer isOpen={true} onClose={() => console.log('close')} size={33} anchor={'left'}>
+      <DrawerContent>
+        <div>This is the drawer's content</div>
+      </DrawerContent>
+    </Drawer>
+  );
+};
+
+```
+
+### References
+
+All references for a complete `<Drawer>` with all component mentioned throughout the `<Drawer>` section.
+
+- [Drawer](../?path=/docs/updated-components-drawer-drawer--overview)
+- [DrawerHeader](../?path=/docs/updated-components-drawer-drawerheader--overview)
+- [DrawerContent](../?path=/docs/updated-components-drawer-drawercontent--overview)
+- [DrawerFooter](../?path=/docs/updated-components-drawer-drawerfooter--overview)

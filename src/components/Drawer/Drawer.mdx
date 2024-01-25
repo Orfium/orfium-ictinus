@@ -71,6 +71,11 @@ If you are using the `DrawerHeader`, `DrawerContent` and `DrawerFooter` componen
   components by including your header or footer code-block inside the `DrawerContent`
 </Tip>
 
+<Tip>
+  Drawer component uses an internal context state to handle and share the `hasFixedLayout` and
+  `onClose` props. In order to use the context state you can import `useDrawerContext` hook.
+</Tip>
+
 <Canvas of={DrawerStories.FixedContent} />
 
 ### More examples
@@ -82,3 +87,12 @@ Here are some common use cases of the drawer component.
 ### Playground
 
 <Canvas of={DrawerStories.Playground} />
+
+### References
+
+All references for a complete `<Drawer>` with all component mentioned throughout the `<Drawer>` section.
+
+- [Drawer](../?path=/docs/updated-components-drawer-drawer--overview)
+- [DrawerHeader](../?path=/docs/updated-components-drawer-drawerheader--overview)
+- [DrawerContent](../?path=/docs/updated-components-drawer-drawercontent--overview)
+- [DrawerFooter](../?path=/docs/updated-components-drawer-drawerfooter--overview)

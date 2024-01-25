@@ -9,7 +9,7 @@ import BarChartShowCase from 'components/storyUtils/BarChartShowCase';
 import Icon from 'components/Icon';
 
 export default {
-  title: 'Updated Components/Drawer',
+  title: 'Updated Components/Drawer/Drawer',
   component: Drawer,
   parameters: {
     design: [

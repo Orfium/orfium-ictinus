@@ -1,8 +1,8 @@
 import type { FCC } from 'react';
 import type { TestProps } from 'utils/types';
 
-import { footerStyle } from '../Drawer.style';
-import { useDrawerContext } from '../DrawerContext';
+import { footerStyle } from '../../Drawer.style';
+import { useDrawerContext } from '../../DrawerContext';
 
 const DrawerFooter: FCC<TestProps> = ({ children, dataTestPrefixId = 'ictinus_drawer' }) => {
   const { hasFixedLayout } = useDrawerContext();
