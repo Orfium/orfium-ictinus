@@ -12,7 +12,6 @@ import {
   infoContainer,
   notificationsContainer,
   headContainer,
-  primaryActionContainer,
   alternativeActionContainer,
   messageContainer,
 } from './CompactNotification.style';
@@ -94,7 +93,6 @@ const CompactNotification: React.FC<Props> = ({
       <div css={actionsContainer()}>
         {primaryCTA && primaryCTALabel && (
           <Button
-            css={primaryActionContainer()}
             type={'link'}
             size={'sm'}
             onClick={primaryCTA}
@@ -104,14 +102,15 @@ const CompactNotification: React.FC<Props> = ({
           </Button>
         )}
         {alternativeCTA && alternativeCTALabel && (
-          <Button
-            css={alternativeActionContainer()}
-            size="sm"
-            onClick={alternativeCTA}
-            data-testid={generateTestDataId('notification-secondary', dataTestId)}
-          >
-            {alternativeCTALabel}
-          </Button>
+          <span css={alternativeActionContainer()}>
+            <Button
+              size="sm"
+              onClick={alternativeCTA}
+              data-testid={generateTestDataId('notification-secondary', dataTestId)}
+            >
+              {alternativeCTALabel}
+            </Button>
+          </span>
         )}
         {closeCTA && (
           <span
