@@ -13,6 +13,7 @@ import {
   notificationsContainer,
   headContainer,
   primaryActionContainer,
+  alternativeActionContainer,
   messageContainer,
 } from './CompactNotification.style';
 import { AcceptedIconNames } from 'components/Icon/types';
@@ -38,6 +39,10 @@ export type Props = {
   title?: string;
   /** The data test id if needed */
   dataTestId?: TestId;
+  /** The alternative call-to-action label of the Notification */
+  alternativeCTALabel?: string;
+  /** The alternative call-to-action of the Notification */
+  alternativeCTA?: () => void;
 } & NotificationActions;
 
 export const typeToIconName = (type: NotificationTypes): AcceptedIconNames =>
@@ -49,6 +54,8 @@ const CompactNotification: React.FC<Props> = ({
   variant,
   type,
   styleType = 'elevated',
+  alternativeCTALabel,
+  alternativeCTA = undefined,
   primaryCTALabel,
   primaryCTA,
   closeCTA,
@@ -94,6 +101,16 @@ const CompactNotification: React.FC<Props> = ({
             data-testid={generateTestDataId('notification-primary', dataTestId)}
           >
             {primaryCTALabel}
+          </Button>
+        )}
+        {alternativeCTA && alternativeCTALabel && (
+          <Button
+            css={alternativeActionContainer()}
+            size="sm"
+            onClick={alternativeCTA}
+            data-testid={generateTestDataId('notification-secondary', dataTestId)}
+          >
+            {alternativeCTALabel}
           </Button>
         )}
         {closeCTA && (
