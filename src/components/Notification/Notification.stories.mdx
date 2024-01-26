@@ -142,6 +142,18 @@ import { NotificationsContainer, Banner } from '@orfium/ictinus';
             primaryCTA={() => console.log('action clicked')}
             styleType={select('styleType', ['outlined', 'elevated'], 'elevated')}
             closeCTA={() => console.log('close action clicked')}
+          /> 
+          <Banner
+            withIcon={boolean('icon', true)}
+            title={text('title', 'With secondary action:')}
+            message={text('message', 'This banner has two actions!')}
+            type={select('type', ['success', 'error', 'info', 'warning'], 'warning')}
+            primaryCTALabel={text('primaryCTALabel', 'Primary action')}
+            primaryCTA={() => console.log('Primary action clicked')}
+            alternativeCTALabel={text('alternativeCTALabel', 'Alternative action')}
+            alternativeCTA={() => console.log('Alternative action clicked')}
+            styleType={select('styleType', ['outlined', 'elevated'], 'elevated')}
+            closeCTA={() => console.log('close action clicked')}
           />
           <Banner
             withIcon={boolean('icon', true)}

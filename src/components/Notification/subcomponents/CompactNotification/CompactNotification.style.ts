@@ -46,3 +46,9 @@ export const headContainer = () => (theme: Theme): SerializedStyles => css`
 export const primaryActionContainer = () => (): SerializedStyles => css`
   cursor: pointer;
 `;
+
+export const alternativeActionContainer = () => (theme: Theme): SerializedStyles => css`
+  cursor: pointer;
+  margin-left: ${theme.spacing.md};
+`;
+

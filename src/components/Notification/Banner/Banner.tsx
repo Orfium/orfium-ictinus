@@ -19,6 +19,10 @@ export type Props = {
   closeCTA?: () => void;
   /** The data test id if needed */
   dataTestId?: TestId;
+  /** The alternative call-to-action label of the Notification */
+  alternativeCTALabel?: string;
+  /** The alternative call-to-action of the Notification */
+  alternativeCTA?: () => void;
 } & Pick<NotificationActions, 'primaryCTALabel' | 'primaryCTA'>;
 
 const Banner: React.FC<Props> = ({
@@ -27,6 +31,8 @@ const Banner: React.FC<Props> = ({
   message,
   type,
   styleType = 'elevated',
+  alternativeCTALabel,
+  alternativeCTA = undefined,
   primaryCTALabel,
   primaryCTA = undefined,
   closeCTA = undefined,
@@ -40,6 +46,8 @@ const Banner: React.FC<Props> = ({
       variant="banner"
       type={type}
       styleType={styleType}
+      alternativeCTALabel={alternativeCTALabel}
+      alternativeCTA={alternativeCTA}
       primaryCTALabel={primaryCTALabel}
       primaryCTA={primaryCTA}
       closeCTA={closeCTA}
