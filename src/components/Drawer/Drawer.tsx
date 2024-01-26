@@ -1,5 +1,5 @@
 import useEscape from 'hooks/useEscape';
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 
 import { anchorStyle, backdropStyle, overlayStyle } from './Drawer.style';
@@ -27,6 +27,14 @@ const Drawer = React.forwardRef<HTMLDivElement, React.PropsWithChildren<DrawerPr
         onClose();
       }
     });
+
+    useEffect(() => {
+      if (isOpen) {
+        parent.style.overflow = 'hidden';
+      } else {
+        parent.style.overflow = 'unset';
+      }
+    }, [isOpen, parent.style]);
 
     if (parent === null) {
       return null;

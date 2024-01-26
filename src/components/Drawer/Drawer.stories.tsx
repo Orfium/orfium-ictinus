@@ -25,6 +25,53 @@ export default {
 };
 
 const drawerContent = {
+  header: <Typography variant="headline05">Here's some interesting text for you</Typography>,
+  content: (
+    <Typography>
+      Journeying Kingdom pardon. Surround sat lost Smeagol's everyone rights. Today is my 111th
+      birthday! Stirring are Homely sweet athletic breeze throws older keeping! Cheese King's echoes
+      they. Reference fiery day bother sight fighters Dwarves fond tinkers! Escort defending stealth
+      come gift approaches Thrain cost! Shattered eaves Havens afford coins blessed fresh fond
+      survive. Spilled captain Morgoth. Probably pits enchanting breathe returned wolf's staying
+      Wood-elves. It must be taken deep into Mordor and cast back into the fiery chasm from whence
+      it came. Racket branch lowest regrouping Longshanks disappeared. Fountains Isen when face
+      can't six? Tender veiling goodness Silvan travelers withdraw shrink shall tad manage same
+      bandy. Meriadoc wife anything feels earth. God ginger tomato's alliances industry travelers?
+      Possessed grandfather might Théoden's hunt waits scattered glory inside. Grog Balin allow
+      sweeter. Thirst given stars Gimli summit levels statute dealing? Nab works Isildur's shows.
+      Position peace Bain. Advance greedily showed track required left dealings any round
+      magnificence Bagshot Row burns. Sell nowhere descend tongue whatever wood dreamed Shirkers
+      touch glowers here? 14th suffer wreathed perceived warts corks sadness lived fighters s Front
+      group! One does not simply walk into Mordor. Map Théodred's swamp first-born so. We'll pa
+      echoes pointing sacrifice Pippin correctly gonna escape necks rip started? Destruction judged
+      wander nice whom Luthien just ginger aiding amongst jewel western. Prosaic kindled barter Ori
+      burned thanks generous. Drive Haradrim sponge fronts humble high storeroom! South Shadowfax
+      board lifetime reproductions 1400 extraordinary contains farms dogs 400 seams. Assault hangs
+      owe liked Took's streets gifted law wept. Have hithlain leathery pace pointy Bifur precisely.
+      Shines cozy coat standing overflowing maid Théoden's overfond deeply. That is no trinket you
+      carry. Andûril ambushed deadly. Again decisions traitors Bagshot Row liar cursed spreads abyss
+      dreamt. Arkenstone eaten balanced gold unleash rat taking. Crumbles Goblin-town lthilien
+      herald. Disguised barge halfling inferno Uruk-hai blunt show riddle! Alive worthy Greenway
+      111th swung expecting. Age weasel J.R.R. Tolkien utter grip petty shelter fouler bits learn.
+      You shall not pass! Precedes gaining Lobelia Sackville-Baggins. Throw since what'll gaining
+      earth keys weight Ettenmoors twitching itself. Scout officially made winter's bestowing threw
+      attention Greyhame drown. Able-bodied pocketses examine finest every taught injuries uh Lindir
+      fashioning fast knocks? Someone unfought tree mission six Arod wise still it beyond undimmed
+      capable. Curtain poisonous elevenses Noldorin swept closer few warmongering. There is one
+      Dwarf yet in Moria who still draws breath. Wandered looking cooked Lindir tender trust
+      smuggler. Bars sad alas attached power unwise cloaked child Midsummer's Eve suspicious noise?
+      Bank lurking folk Ettenmoors lasts urged gonna use? Cair sawing hoot civil travel halt cause
+      wrath nothing today few clearly.
+    </Typography>
+  ),
+  footer: (
+    <div css={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <Typography variant="headline01">The End</Typography>
+    </div>
+  ),
+};
+
+const drawerFormContent = {
   header: (
     <div css={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
       <Typography>Create Entity Form</Typography>
@@ -335,9 +382,9 @@ export const FixedContent = {
             anchor={'right'}
             hasFixedLayout
           >
-            <DrawerHeader>{drawerContent.header}</DrawerHeader>
-            <DrawerContent>{drawerContent.content}</DrawerContent>
-            <DrawerFooter>{drawerContent.footer}</DrawerFooter>
+            <DrawerHeader>{drawerFormContent.header}</DrawerHeader>
+            <DrawerContent>{drawerFormContent.content}</DrawerContent>
+            <DrawerFooter>{drawerFormContent.footer}</DrawerFooter>
           </Drawer>
         </div>
       </div>
@@ -546,9 +593,9 @@ export const Playground = {
             anchor={select('anchor', ['top', 'right', 'bottom', 'left'], 'left')}
             hasFixedLayout={boolean('hasFixedLayout', false)}
           >
-            <DrawerHeader>{drawerContent.header}</DrawerHeader>
-            <DrawerContent>{drawerContent.content}</DrawerContent>
-            <DrawerFooter>{drawerContent.footer}</DrawerFooter>
+            <DrawerHeader>{drawerFormContent.header}</DrawerHeader>
+            <DrawerContent>{drawerFormContent.content}</DrawerContent>
+            <DrawerFooter>{drawerFormContent.footer}</DrawerFooter>
           </Drawer>
         </div>
       </div>

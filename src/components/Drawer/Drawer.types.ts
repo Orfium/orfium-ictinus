@@ -11,7 +11,7 @@ export type DrawerProps = {
   anchor?: AnchorType;
   /** Drawer size are relative to the viewport (percentage) */
   size: number;
-  /** Whether tha background behind the Drawer is interactive. Defaults to false */
+  /** Whether the background behind the Drawer is interactive. Defaults to false */
   isBackgroundActive?: boolean;
   /** If true, then the header and footer are fixed positioned */
   hasFixedLayout?: boolean;
