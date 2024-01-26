@@ -7,6 +7,7 @@ import Typography from 'components/Typography';
 import TextField from 'components/TextField';
 import BarChartShowCase from 'components/storyUtils/BarChartShowCase';
 import Icon from 'components/Icon';
+import { fireEvent, within } from '@storybook/testing-library';
 
 export default {
   title: 'Updated Components/Drawer/Drawer',
@@ -19,7 +20,7 @@ export default {
         url: `${FIGMA_URL}?node-id=3325%3A58246`,
       },
     ],
-    chromatic: { diffThreshold: 0.3 },
+    chromatic: { delay: 400 },
   },
 };
 
@@ -151,6 +152,13 @@ export const Sizes = {
     );
   },
   name: 'Sizes',
+  autoPlay: true,
+  play: ({ canvasElement }: { canvasElement: HTMLElement }) => {
+    const canvas = within(canvasElement);
+    const buttons = canvas.getAllByTestId('button');
+
+    fireEvent.click(buttons[0]);
+  },
 };
 
 export const Placement = {
@@ -336,6 +344,13 @@ export const FixedContent = {
     );
   },
   name: 'Fixed content',
+  autoPlay: true,
+  play: ({ canvasElement }: { canvasElement: HTMLElement }) => {
+    const canvas = within(canvasElement);
+    const buttons = canvas.getAllByTestId('button');
+
+    fireEvent.click(buttons[0]);
+  },
 };
 
 export const MoreExamples = {
