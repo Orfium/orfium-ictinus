@@ -2,6 +2,15 @@ import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import type { Theme } from 'theme';
 
+import {
+  body01,
+  headline01,
+  headline02,
+  headline03,
+  headline04,
+  headline05,
+} from '../Typography/Typography.config.styles';
+
 export const scrollbar = (theme: Theme): SerializedStyles => css`
   // for Firefox
   * {
@@ -38,8 +47,27 @@ export const globalStyles = (theme: Theme): SerializedStyles => css`
     font-size: 16px;
     font-weight: normal;
   }
+  body {
+    ${body01(theme)};
+  }
 
   #root {
+  }
+
+  h1 {
+    ${headline01(theme)}
+  }
+  h2 {
+    ${headline02(theme)}
+  }
+  h3 {
+    ${headline03(theme)}
+  }
+  h4 {
+    ${headline04(theme)}
+  }
+  h5 {
+    ${headline05(theme)}
   }
 
   // default outline for all focused elements defined by the design team
