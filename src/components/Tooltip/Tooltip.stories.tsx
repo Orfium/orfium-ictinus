@@ -1,4 +1,4 @@
-import { boolean, number, select, text, withKnobs } from '@storybook/addon-knobs';
+import { boolean, number, select, text } from '@storybook/addon-knobs';
 import Tooltip from './Tooltip';
 import Stack from '../storyUtils/Stack';
 import { hoverOnTooltips } from './utils';

@@ -1,0 +1,61 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
+import DrawerFooter from './DrawerFooter';
+import SectionHeader from '../../../../storybook/SectionHeader';
+
+<Meta title="Updated Components/Drawer/DrawerFooter" />
+
+<SectionHeader title={'DrawerFooter'} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [References](#references)
+
+## Overview
+
+This component can be rendered as a child to Drawer component and creates a footer for the Drawer.
+
+## Props
+
+<ArgTypes of={DrawerFooter} />
+
+## Usage
+
+When DrawerFooter is used, it creates a fixed footer inside the Drawer container. This component uses Drawer's context to receive the `hasFixedLayout` boolean state, in order to create the footer functionality expected.
+
+```
+import Drawer, { DrawerFooter } from '@orfium/ictinus';
+
+const MyComponent = () => {
+  return (
+    <Drawer isOpen={true} hasFixedLayout={true} onClose={() => console.log('close')} size={33} anchor={'left'}>
+      <DrawerFooter>
+        <div>This is the footer content</div>
+      </DrawerFooter>
+    </Drawer>
+  );
+};
+
+```
+
+In order to use the drawer context state, import the `useDrawerContext` hook.
+
+```
+import { useDrawerContext } from '@orfium/ictinus';
+
+const CustomFooter = () => {
+  const { hasFixedLayout, onClose } = useDrawerContext();
+
+  return <div>Custom Footer</div>;
+};
+
+```
+
+### References
+
+All references for a complete `<Drawer>` with all component mentioned throughout the `<Drawer>` section.
+
+- [Drawer](../?path=/docs/updated-components-drawer-drawer--overview)
+- [DrawerHeader](../?path=/docs/updated-components-drawer-drawerheader--overview)
+- [DrawerContent](../?path=/docs/updated-components-drawer-drawercontent--overview)
+- [DrawerFooter](../?path=/docs/updated-components-drawer-drawerfooter--overview)

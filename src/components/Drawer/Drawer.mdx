@@ -1,0 +1,98 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
+import Drawer from './Drawer';
+import SectionHeader from '../../storybook/SectionHeader';
+import * as DrawerStories from './Drawer.stories';
+
+<Meta of={DrawerStories} />
+
+<SectionHeader title={'Drawer'} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
+
+## Overview
+
+A panel which slides out from the edge of the screen and displays over the current page the user is in.
+
+## Props
+
+<ArgTypes of={Drawer} />
+
+<Tip>
+  You can also use the `DrawerHeader`, `DrawerContent` and `DrawerFooter` components provided by the
+  library to build your Drawer content.
+</Tip>
+
+## Usage
+
+<UsageGuidelines
+  guidelines={[
+    'When you need a form or action to be performed while still keeping context of the main task',
+    'When you need the same form in multiple places',
+    'To view more contextual information and actions on a given item without leaving the page',
+  ]}
+  policies={[
+    'If you need to provide a transient notification that the user does not need to interact with, use a toast instead',
+    'If you need to display significant amounts of content, take the user to a different page instead',
+    'If you need to feature three levels of information, use an internal page instead',
+  ]}
+/>
+
+<SubsectionHeader title="Variants" />
+
+### Sizes
+
+Drawer widths are relative to the viewport (percentage). Suggested percentages: 33%, 50%, 75%, 100% of the screen.
+
+<Tip>Use the size prop to pass any value between 0 - 100</Tip>
+
+<Canvas of={DrawerStories.Sizes} />
+
+### Placement
+
+Drawers can be anchored to the `left`, `right`, `top` and `bottom` of the viewport.
+
+<Canvas of={DrawerStories.Placement} />
+
+### Background
+
+By default the background of the drawer has a backdrop. If the `isBackgroundActive` prop is provided then the background becomes interactive, in case the user needs e.g. to copy/paste from the background screen.
+
+<Canvas of={DrawerStories.Background} />
+
+### Fixed content
+
+If you are using the `DrawerHeader`, `DrawerContent` and `DrawerFooter` components provided by the library, then by using the `hasFixedLayout` prop you can make the header and footer fixed positioned.
+
+<Tip>
+  If you want only the header or the footer fixed, then skip the `DrawerHeader` or `DrawerFooter`
+  components by including your header or footer code-block inside the `DrawerContent`
+</Tip>
+
+<Tip>
+  Drawer component uses an internal context state to handle and share the `hasFixedLayout` and
+  `onClose` props. In order to use the context state you can import `useDrawerContext` hook.
+</Tip>
+
+<Canvas of={DrawerStories.FixedContent} />
+
+### More examples
+
+Here are some common use cases of the drawer component.
+
+<Canvas of={DrawerStories.MoreExamples} />
+
+### Playground
+
+<Canvas of={DrawerStories.Playground} />
+
+### References
+
+All references for a complete `<Drawer>` with all component mentioned throughout the `<Drawer>` section.
+
+- [Drawer](../?path=/docs/updated-components-drawer-drawer--overview)
+- [DrawerHeader](../?path=/docs/updated-components-drawer-drawerheader--overview)
+- [DrawerContent](../?path=/docs/updated-components-drawer-drawercontent--overview)
+- [DrawerFooter](../?path=/docs/updated-components-drawer-drawerfooter--overview)
