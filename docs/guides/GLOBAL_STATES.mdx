@@ -1,5 +1,4 @@
 import Button from '../../src/components/Button';
-import Chip from '../../src/components/Chip';
 import TextField from '../../src/components/TextField';
 import Filter from '../../src/components/Filter';
 import ThemeWrapper from '../../src/components/storyUtils/ThemeWrapper';
@@ -58,9 +57,6 @@ Play around to see the styles in action
 <ThemeWrapper>
   <Stack>
     <Button dataTestId={'size-lg'}>Hello world</Button>
-    <Chip styleType={'interactive'} onClear={() => {}} fill={'blue'}>
-      Label
-    </Chip>
     <TextField label={'Label'} />
     <Filter
       defaultValue={{ value: 'ice cream', label: 'Ice cream' }}
@@ -80,9 +76,6 @@ Play around to see the styles in action
     <Button dataTestId={'size-lg'} isDisabled>
       Hello world
     </Button>
-    <Chip styleType={'interactive'} onClear={() => {}} fill={'blue'} isDisabled>
-      Label
-    </Chip>
     <TextField label={'Label'} isDisabled />
     <Filter
       isDisabled

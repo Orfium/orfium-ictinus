@@ -298,9 +298,9 @@ describe('Generic Select', () => {
 
 describe('Multi Select', () => {
   let selectInput: HTMLInputElement;
-  let chips: HTMLElement[];
+  let tags: HTMLElement[];
   let newOption: HTMLElement;
-  let newChip: HTMLElement;
+  let newTag: HTMLElement;
 
   beforeEach(() => {
     render(
@@ -324,12 +324,12 @@ describe('Multi Select', () => {
     vi.clearAllMocks();
   });
 
-  it('renders the Chips when options are clicked', async () => {
+  it('renders the Tags when options are clicked', async () => {
     await selectDropdownOption(selectInput, dropdownList[0].label);
-    expect(screen.getByTestId('chip-chip_0')).toBeVisible();
+    expect(screen.getByTestId('tag_0_tag_container')).toBeVisible();
     await selectDropdownOption(selectInput, dropdownList[1].label);
 
-    expect(screen.getByTestId('chip-chip_1')).toBeVisible();
+    expect(screen.getByTestId('tag_1_tag_container')).toBeVisible();
   });
 
   it('removes the options from the list when selected', async () => {
@@ -346,8 +346,8 @@ describe('Multi Select', () => {
     await selectDropdownOption(selectInput, dropdownList[0].label);
     await selectDropdownOption(selectInput, dropdownList[1].label);
 
-    await userEvent.click(screen.getByTestId('chip-delete-chip_1'));
-    await userEvent.click(screen.getByTestId('chip-delete-chip_0'));
+    await userEvent.click(screen.getByTestId('tag_1_tag_suffix'));
+    await userEvent.click(screen.getByTestId('tag_0_tag_suffix'));
 
     await userEvent.click(selectInput);
 
@@ -362,16 +362,16 @@ describe('Multi Select', () => {
 
     await userEvent.click(screen.getByTestId('select-right-icon'));
 
-    expect(screen.queryByTestId('chip-chip_0')).not.toBeInTheDocument();
+    expect(screen.queryByTestId('tag_0_tag_container')).not.toBeInTheDocument();
   });
 
   it('selects all options when Select All is clicked', async () => {
     await userEvent.click(selectInput);
     await userEvent.click(screen.getByTestId(`ictinus_list_item_${SELECT_ALL_OPTION.value}`));
 
-    chips = await screen.findAllByTestId(/chip-chip_/);
+    tags = await screen.findAllByTestId(/tag_container/);
 
-    expect(chips.length).toEqual(dropdownList.length);
+    expect(tags.length).toEqual(dropdownList.length);
 
     await userEvent.click(selectInput);
 
@@ -387,26 +387,26 @@ describe('Multi Select', () => {
     /** Create new Item */
     newOption = screen.getByText('Create "New item"');
     await userEvent.click(newOption);
-    newChip = screen.getByTestId('chip-chip_0');
+    newTag = screen.getByTestId('tag_0_tag_container');
 
-    expect(newChip).toBeVisible();
-    expect(newChip.innerHTML).toContain('New item');
+    expect(newTag).toBeVisible();
+    expect(newTag.innerHTML).toContain('New item');
 
     /** Delete created Item */
-    await userEvent.click(screen.getByTestId('chip-delete-chip_0'));
+    await userEvent.click(screen.getByTestId('tag_0_tag_suffix'));
     expect(screen.queryByTestId('New item')).not.toBeInTheDocument();
   });
 
-  it('should delete the last chip when Backspace is clicked', async () => {
+  it('should delete the last tag when Backspace is clicked', async () => {
     await selectDropdownOption(selectInput, dropdownList[0].label);
     await selectDropdownOption(selectInput, dropdownList[1].label);
 
-    expect(screen.getByTestId('chip-chip_0')).toBeVisible();
-    expect(screen.getByTestId('chip-chip_1')).toBeVisible();
+    expect(screen.getByTestId('tag_0_tag_container')).toBeVisible();
+    expect(screen.getByTestId('tag_1_tag_container')).toBeVisible();
 
     await userEvent.click(selectInput);
     await userEvent.type(selectInput, '{Backspace}');
 
-    expect(screen.queryByTestId('chip-chip_1')).not.toBeInTheDocument();
+    expect(screen.queryByTestId('tag_1_tag_container')).not.toBeInTheDocument();
   });
 });
