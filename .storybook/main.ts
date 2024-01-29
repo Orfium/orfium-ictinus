@@ -1,5 +1,7 @@
 import fs from 'fs';
 import path from 'path';
+import turbosnap from 'vite-plugin-turbosnap';
+import { mergeConfig } from 'vite';
 
 function getPackageDir(filepath: string) {
   let currDir = path.dirname(require.resolve(filepath));
@@ -69,5 +71,19 @@ module.exports = {
   framework: {
     name: '@storybook/react-vite',
     options: {},
+  },
+  async viteFinal(config, { configType }) {
+    return mergeConfig(config, {
+      plugins:
+        configType === 'PRODUCTION'
+          ? [
+              // https://github.com/chromaui/chromatic-cli/issues/904
+              turbosnap({
+                // This should be the base path of your storybook.  In monorepos, you may only need process.cwd().
+                rootDir: config.root ?? process.cwd(),
+              }),
+            ]
+          : [],
+    });
   },
 };
