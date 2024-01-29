@@ -201,7 +201,6 @@ export const Sizes = {
   name: 'Sizes',
   autoPlay: true,
   play: ({ canvasElement }: { canvasElement: HTMLElement }) => {
-    document.body.style.height = '100vh';
     const canvas = within(canvasElement);
     const buttons = canvas.getAllByTestId('button');
 
@@ -394,7 +393,6 @@ export const FixedContent = {
   name: 'Fixed content',
   autoPlay: true,
   play: ({ canvasElement }: { canvasElement: HTMLElement }) => {
-    document.body.style.height = '100vh';
     const canvas = within(canvasElement);
     const buttons = canvas.getAllByTestId('button');
 
