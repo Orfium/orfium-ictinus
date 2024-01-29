@@ -72,8 +72,8 @@ export { default as Snackbar } from './components/Notification/Snackbar';
 export * from './components/Notification/Snackbar';
 export * from './components/Notification/Notification';
 
-export { default as Overlay } from './components/Overlay';
-export * from './components/Overlay';
+export { default as Drawer } from './components/Drawer';
+export * from './components/Drawer';
 export { default as Pagination } from './components/Pagination';
 export * from './components/Pagination';
 export { Radio } from './components/Controls';
