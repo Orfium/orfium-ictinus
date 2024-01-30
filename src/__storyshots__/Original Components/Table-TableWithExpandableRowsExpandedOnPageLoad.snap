@@ -327,12 +327,12 @@
   cursor: not-allowed;
 }
 
-.emotion-47:hover:not(:disabled),
-.emotion-47[aria-expanded="true"] {
+.emotion-47:hover:not(:disabled) {
   background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-47:active:not(:disabled) {
+.emotion-47:active:not(:disabled),
+.emotion-47[aria-expanded="true"] {
   background-color: rgba(84,94,255,0.14);
 }
 
