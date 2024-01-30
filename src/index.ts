@@ -13,7 +13,7 @@ export type { Elevation } from './theme/globals/elevation';
 export type { Overrides } from './theme/overrides';
 export type { Palette } from './theme/palette';
 export type { Spacing } from './theme/globals/spacing';
-export type { Typography } from './theme/globals/typography';
+export type { Typography as GlobalsTypography } from './theme/globals/typography';
 export type { AcceptedColorComponentTypes } from './utils/themeFunctions';
 export type { Theme } from './theme';
 
@@ -110,6 +110,8 @@ export { default as Filter } from './components/Filter';
 export * from './components/Filter';
 export { default as TruncatedContent } from './components/TruncatedContent';
 export * from './components/TruncatedContent';
+export { default as Typography } from './components/Typography';
+export * from './components/Typography';
 
 // hooks
 export { default as useTheme } from './hooks/useTheme';
