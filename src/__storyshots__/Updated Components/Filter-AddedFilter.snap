@@ -64,12 +64,12 @@
   cursor: not-allowed;
 }
 
-.emotion-4:hover:not(:disabled),
-.emotion-4[aria-expanded="true"] {
+.emotion-4:hover:not(:disabled) {
   background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-4:active:not(:disabled) {
+.emotion-4:active:not(:disabled),
+.emotion-4[aria-expanded="true"] {
   background-color: rgba(84,94,255,0.14);
 }
 

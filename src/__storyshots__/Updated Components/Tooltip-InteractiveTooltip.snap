@@ -73,12 +73,12 @@
   cursor: not-allowed;
 }
 
-.emotion-3:hover:not(:disabled),
-.emotion-3[aria-expanded="true"] {
+.emotion-3:hover:not(:disabled) {
   background-color: #1552DD;
 }
 
-.emotion-3:active:not(:disabled) {
+.emotion-3:active:not(:disabled),
+.emotion-3[aria-expanded="true"] {
   background-color: #1249C4;
 }
 
@@ -278,12 +278,12 @@
   cursor: not-allowed;
 }
 
-.emotion-14:hover:not(:disabled),
-.emotion-14[aria-expanded="true"] {
+.emotion-14:hover:not(:disabled) {
   background-color: #00C6A2;
 }
 
-.emotion-14:active:not(:disabled) {
+.emotion-14:active:not(:disabled),
+.emotion-14[aria-expanded="true"] {
   background-color: #0C7D61;
 }
 
