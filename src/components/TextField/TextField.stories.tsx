@@ -141,6 +141,7 @@ export const Playground = {
         label={text('Label', 'TextField')}
         size={select('size', ['normal', 'compact'], 'normal')}
         placeholder={text('Placeholder', 'Placeholder')}
+        isRequired={boolean('isRequired', false)}
         isDisabled={boolean('isDisabled', false)}
         hasSuffix={boolean('hasSuffixIcon', false)}
         suffix={select('Suffix icon name', ['', ...Object.keys(iconSelector)], 'informational')}
