@@ -66,7 +66,8 @@
   cursor: not-allowed;
 }
 
-.emotion-2:hover:not(:disabled) {
+.emotion-2:hover:not(:disabled),
+.emotion-2[aria-expanded="true"] {
   background-color: rgba(84,94,255,0.06);
 }
 

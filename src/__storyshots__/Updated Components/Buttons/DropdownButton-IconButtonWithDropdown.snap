@@ -64,7 +64,8 @@
   cursor: not-allowed;
 }
 
-.emotion-4:hover:not(:disabled) {
+.emotion-4:hover:not(:disabled),
+.emotion-4[aria-expanded="true"] {
   background-color: #1552DD;
 }
 
@@ -129,7 +130,8 @@
   cursor: not-allowed;
 }
 
-.emotion-10:hover:not(:disabled) {
+.emotion-10:hover:not(:disabled),
+.emotion-10[aria-expanded="true"] {
   background-color: #D6D8FF;
 }
 
@@ -185,7 +187,8 @@
   cursor: not-allowed;
 }
 
-.emotion-16:hover:not(:disabled) {
+.emotion-16:hover:not(:disabled),
+.emotion-16[aria-expanded="true"] {
   background-color: rgba(84,94,255,0.06);
 }
 
@@ -232,7 +235,8 @@
   cursor: not-allowed;
 }
 
-.emotion-22:hover:not(:disabled) {
+.emotion-22:hover:not(:disabled),
+.emotion-22[aria-expanded="true"] {
   background-color: #1552DD;
 }
 
@@ -297,7 +301,8 @@
   cursor: not-allowed;
 }
 
-.emotion-28:hover:not(:disabled) {
+.emotion-28:hover:not(:disabled),
+.emotion-28[aria-expanded="true"] {
   background-color: #D6D8FF;
 }
 
@@ -353,7 +358,8 @@
   cursor: not-allowed;
 }
 
-.emotion-34:hover:not(:disabled) {
+.emotion-34:hover:not(:disabled),
+.emotion-34[aria-expanded="true"] {
   background-color: rgba(84,94,255,0.06);
 }
 

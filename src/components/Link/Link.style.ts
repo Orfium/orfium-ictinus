@@ -24,7 +24,7 @@ export const linkContainer =
       text-decoration: none;
       border: ${tokens('borderWidth.1')} solid ${tokens('borderColor.default')};
 
-      &:hover {
+      &:hover, &[aria-expanded="true"] {
         color: ${tokens(`textColor.${type}.hover` as LinkTokens)};
         path {
           fill: ${tokens(`textColor.${type}.hover` as LinkTokens)} !important;

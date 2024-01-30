@@ -57,7 +57,8 @@
   cursor: not-allowed;
 }
 
-.emotion-2:hover:not(:disabled) {
+.emotion-2:hover:not(:disabled),
+.emotion-2[aria-expanded="true"] {
   background-color: #1552DD;
 }
 
@@ -119,7 +120,8 @@
   cursor: not-allowed;
 }
 
-.emotion-5:hover:not(:disabled) {
+.emotion-5:hover:not(:disabled),
+.emotion-5[aria-expanded="true"] {
   background-color: #D6D8FF;
 }
 
@@ -165,7 +167,8 @@
   cursor: not-allowed;
 }
 
-.emotion-8:hover:not(:disabled) {
+.emotion-8:hover:not(:disabled),
+.emotion-8[aria-expanded="true"] {
   background-color: rgba(84,94,255,0.06);
 }
 
@@ -211,7 +214,8 @@
   cursor: not-allowed;
 }
 
-.emotion-11:hover:not(:disabled) {
+.emotion-11:hover:not(:disabled),
+.emotion-11[aria-expanded="true"] {
   background-color: #FFB8D1;
 }
 
@@ -257,7 +261,8 @@
   cursor: not-allowed;
 }
 
-.emotion-28:hover:not(:disabled) {
+.emotion-28:hover:not(:disabled),
+.emotion-28[aria-expanded="true"] {
   background-color: #1552DD;
 }
 
@@ -303,7 +308,8 @@
   cursor: not-allowed;
 }
 
-.emotion-31:hover:not(:disabled) {
+.emotion-31:hover:not(:disabled),
+.emotion-31[aria-expanded="true"] {
   background-color: #D6D8FF;
 }
 
@@ -349,7 +355,8 @@
   cursor: not-allowed;
 }
 
-.emotion-34:hover:not(:disabled) {
+.emotion-34:hover:not(:disabled),
+.emotion-34[aria-expanded="true"] {
   background-color: rgba(84,94,255,0.06);
 }
 
@@ -395,7 +402,8 @@
   cursor: not-allowed;
 }
 
-.emotion-37:hover:not(:disabled) {
+.emotion-37:hover:not(:disabled),
+.emotion-37[aria-expanded="true"] {
   background-color: #FFB8D1;
 }
 
