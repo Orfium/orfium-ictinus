@@ -77,7 +77,7 @@ export const buttonBaseStyle =
         opacity: theme.tokens.disabledState.get('default'),
         cursor: 'not-allowed',
       },
-      ':hover:not(:disabled)': {
+      ':hover:not(:disabled), &[aria-expanded="true"]': {
         backgroundColor: tokens(`${type}.backgroundColor.hover` as const),
       },
       ':active:not(:disabled)': {

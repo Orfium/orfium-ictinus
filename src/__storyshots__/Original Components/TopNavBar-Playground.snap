@@ -230,7 +230,8 @@
   cursor: not-allowed;
 }
 
-.emotion-10:hover:not(:disabled) {
+.emotion-10:hover:not(:disabled),
+.emotion-10[aria-expanded="true"] {
   background-color: rgba(84,94,255,0.06);
 }
 

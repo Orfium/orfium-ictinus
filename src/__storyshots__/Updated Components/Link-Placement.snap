@@ -41,11 +41,13 @@
   text-decoration: underline;
 }
 
-.emotion-1:hover {
+.emotion-1:hover,
+.emotion-1[aria-expanded="true"] {
   color: #1B214F;
 }
 
-.emotion-1:hover path {
+.emotion-1:hover path,
+.emotion-1[aria-expanded="true"] path {
   fill: #1B214F!important;
 }
 
@@ -88,11 +90,13 @@
   letter-spacing: 0.00625rem;
 }
 
-.emotion-2:hover {
+.emotion-2:hover,
+.emotion-2[aria-expanded="true"] {
   color: #1B214F;
 }
 
-.emotion-2:hover path {
+.emotion-2:hover path,
+.emotion-2[aria-expanded="true"] path {
   fill: #1B214F!important;
 }
 
