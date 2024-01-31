@@ -1,6 +1,11 @@
 import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
 import DatePicker from './DatePicker';
 import * as DatePickerStories from './DatePicker.stories';
+import {
+  DateRangeDummyStory,
+  DisabledDatesDummyStory,
+  ExtraOptionDummyStory,
+} from '../storyUtils/componentsForTypes';
 
 <Meta of={DatePickerStories} />
 
@@ -22,6 +27,18 @@ to the right to open the date picker modal.
 ## Props
 
 <ArgTypes of={DatePicker} />
+
+#### DisabledDates Prop
+
+<ArgTypes of={DisabledDatesDummyStory} />
+
+#### DateRange Prop
+
+<ArgTypes of={DateRangeDummyStory} />
+
+#### ExtraOption Prop
+
+<ArgTypes of={ExtraOptionDummyStory} />
 
 ## Usage
 

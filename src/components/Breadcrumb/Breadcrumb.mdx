@@ -2,7 +2,7 @@ import { Meta, Canvas, ArgTypes, Story } from '@storybook/blocks';
 import Breadcrumb from './Breadcrumb';
 import * as BreadcrumbStories from './Breadcrumb.stories';
 import SectionHeader from '../../storybook/SectionHeader';
-import Overview from '../../storybook/Overview';
+import { BreadcrumbItemDummyStory } from '../storyUtils/componentsForTypes';
 
 <Meta of={BreadcrumbStories} />
 
@@ -21,6 +21,10 @@ hierarchical structure of a website and allow navigation up to any of its levels
 ## Props
 
 <ArgTypes of={Breadcrumb} />
+
+#### BreadcrumbItem Prop
+
+<ArgTypes of={BreadcrumbItemDummyStory} />
 
 ## Usage
 

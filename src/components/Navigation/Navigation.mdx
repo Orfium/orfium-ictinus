@@ -5,9 +5,20 @@ import * as NavigationStories from './Navigation.stories';
 
 <Meta of={NavigationStories} />
 
-# Navigation
+<SectionHeader title={'Navigation'} isPending />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
+
+## Overview
 
 A universal Navigation component
+
+## Props
+
+<ArgTypes of={Navigation} />
 
 ## Usage
 
@@ -17,20 +28,17 @@ import { Navigation } from '@orfium/ictinus';
 <Navigation expanded={expanded} menuItems={menuItems} />;
 ```
 
-<b>Important tip: </b>
+<Tip>
+  When rendering the Navigation component, the parent component should have `position: relative` in
+  order for the Navigation to align correcly since it has `position: absolute`.
+</Tip>
 
-When rendering the Navigation component, the parent component should have `position: relative` in order for the Navigation to align correcly since it has `position: absolute`.
+<SubsectionHeader title="Variants" />
 
-## Props
-
-<ArgTypes of={Navigation} />
-
-# Navigation
-
-Navigation
+### Navigation
 
 <Canvas of={NavigationStories.NavigationStory} />
 
-Navigation with custom component
+### Navigation with custom component
 
 <Canvas of={NavigationStories.NavigationWithCustomComponent} />
