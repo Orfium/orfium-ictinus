@@ -91,7 +91,8 @@ exports[`MonthWrapper > should render correctly 1`] = `
   background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-4:active:not(:disabled) {
+.emotion-4:active:not(:disabled),
+.emotion-4[aria-expanded="true"] {
   background-color: rgba(84,94,255,0.14);
 }
 
@@ -194,7 +195,8 @@ exports[`MonthWrapper > should render correctly 1`] = `
   background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-10:active:not(:disabled) {
+.emotion-10:active:not(:disabled),
+.emotion-10[aria-expanded="true"] {
   background-color: rgba(84,94,255,0.14);
 }
 

@@ -61,7 +61,8 @@
   background-color: #00C6A2;
 }
 
-.emotion-2:active:not(:disabled) {
+.emotion-2:active:not(:disabled),
+.emotion-2[aria-expanded="true"] {
   background-color: #0C7D61;
 }
 
@@ -123,7 +124,8 @@
   background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-5:active:not(:disabled) {
+.emotion-5:active:not(:disabled),
+.emotion-5[aria-expanded="true"] {
   background-color: rgba(84,94,255,0.14);
 }
 
@@ -169,7 +171,8 @@
   background-color: #00C6A2;
 }
 
-.emotion-16:active:not(:disabled) {
+.emotion-16:active:not(:disabled),
+.emotion-16[aria-expanded="true"] {
   background-color: #0C7D61;
 }
 
@@ -215,7 +218,8 @@
   background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-19:active:not(:disabled) {
+.emotion-19:active:not(:disabled),
+.emotion-19[aria-expanded="true"] {
   background-color: rgba(84,94,255,0.14);
 }
 

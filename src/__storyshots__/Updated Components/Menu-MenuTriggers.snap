@@ -63,7 +63,8 @@
   background-color: #1552DD;
 }
 
-.emotion-2:active:not(:disabled) {
+.emotion-2:active:not(:disabled),
+.emotion-2[aria-expanded="true"] {
   background-color: #1249C4;
 }
 
@@ -127,7 +128,8 @@
   background-color: #1552DD;
 }
 
-.emotion-6:active:not(:disabled) {
+.emotion-6:active:not(:disabled),
+.emotion-6[aria-expanded="true"] {
   background-color: #1249C4;
 }
 
@@ -174,11 +176,13 @@
   letter-spacing: 0.00625rem;
 }
 
-.emotion-8:hover {
+.emotion-8:hover,
+.emotion-8[aria-expanded="true"] {
   color: #1B214F;
 }
 
-.emotion-8:hover path {
+.emotion-8:hover path,
+.emotion-8[aria-expanded="true"] path {
   fill: #1B214F!important;
 }
 

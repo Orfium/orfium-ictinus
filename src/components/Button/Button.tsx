@@ -4,7 +4,7 @@ import type { CommonButtonProps } from 'utils/common';
 import type { TestProps } from 'utils/types';
 
 import { buttonSpanStyle } from './Button.style';
-import type { ButtonTokens} from '../Button/Button.tokens';
+import type { ButtonTokens } from '../Button/Button.tokens';
 import { getButtonTokens } from '../Button/Button.tokens';
 import type { ButtonBaseProps } from '../ButtonBase/ButtonBase';
 import ButtonBase from '../ButtonBase/ButtonBase';

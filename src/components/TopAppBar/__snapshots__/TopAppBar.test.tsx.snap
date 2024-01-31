@@ -214,7 +214,8 @@ exports[`TopAppBar > should render correctly 1`] = `
   background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-7:active:not(:disabled) {
+.emotion-7:active:not(:disabled),
+.emotion-7[aria-expanded="true"] {
   background-color: rgba(84,94,255,0.14);
 }
 
@@ -587,7 +588,8 @@ exports[`TopAppBar > should render correctly on dark 1`] = `
   background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-7:active:not(:disabled) {
+.emotion-7:active:not(:disabled),
+.emotion-7[aria-expanded="true"] {
   background-color: rgba(84,94,255,0.14);
 }
 

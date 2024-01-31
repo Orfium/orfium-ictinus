@@ -77,7 +77,8 @@
   background-color: #1552DD;
 }
 
-.emotion-3:active:not(:disabled) {
+.emotion-3:active:not(:disabled),
+.emotion-3[aria-expanded="true"] {
   background-color: #1249C4;
 }
 
@@ -168,11 +169,13 @@
   letter-spacing: 0.00625rem;
 }
 
-.emotion-8:hover {
+.emotion-8:hover,
+.emotion-8[aria-expanded="true"] {
   color: #ffffff;
 }
 
-.emotion-8:hover path {
+.emotion-8:hover path,
+.emotion-8[aria-expanded="true"] path {
   fill: #ffffff!important;
 }
 
@@ -279,7 +282,8 @@
   background-color: #00C6A2;
 }
 
-.emotion-14:active:not(:disabled) {
+.emotion-14:active:not(:disabled),
+.emotion-14[aria-expanded="true"] {
   background-color: #0C7D61;
 }
 
@@ -350,11 +354,13 @@
   letter-spacing: 0.00625rem;
 }
 
-.emotion-19:hover {
+.emotion-19:hover,
+.emotion-19[aria-expanded="true"] {
   color: #1B214F;
 }
 
-.emotion-19:hover path {
+.emotion-19:hover path,
+.emotion-19[aria-expanded="true"] path {
   fill: #1B214F!important;
 }
 

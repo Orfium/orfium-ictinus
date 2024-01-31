@@ -6,7 +6,7 @@ import type { Theme } from 'theme';
 import { LABEL_TRANSFORM_LEFT_SPACING } from 'components/Label/Label.style';
 import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
 
-export const chipContent =
+export const tagContent =
   ({ maxWidth }: { maxWidth?: number }) =>
   (): SerializedStyles =>
     css`
@@ -35,16 +35,12 @@ export const progressIndicatorStyles =
       padding-right: ${theme.globals.spacing.get('5')};
     `;
 
-export const chipStyle =
+export const tagStyle =
   () =>
   (theme: Theme): SerializedStyles =>
     css`
       position: relative;
       margin-right: ${theme.globals.spacing.get('3')};
-      & > div {
-        height: ${rem(20)};
-        border-radius: ${rem(4)};
-      }
     `;
 
 export const inputContainer =

@@ -16,7 +16,7 @@ export type { Elevation } from './theme/globals/elevation';
 export type { Overrides } from './theme/overrides';
 export type { Palette } from './theme/palette';
 export type { Spacing } from './theme/globals/spacing';
-export type { Typography } from './theme/globals/typography';
+export type { Typography as GlobalsTypography } from './theme/globals/typography';
 export type { AcceptedColorComponentTypes } from './utils/themeFunctions';
 export type { Theme } from './theme';
 export type { TestProps } from './utils/types';
@@ -41,8 +41,6 @@ export * from './components/Chart/DonutChart';
 
 export { CheckBox } from './components/Controls';
 export * from './components/Controls/CheckBox';
-export { default as Chip } from './components/Chip';
-export * from './components/Chip';
 export { default as DatePicker } from './components/DatePicker';
 export * from './components/DatePicker';
 export { default as Navigation } from './components/Navigation';
@@ -114,6 +112,8 @@ export { default as Filter } from './components/Filter';
 export * from './components/Filter';
 export { default as TruncatedContent } from './components/TruncatedContent';
 export * from './components/TruncatedContent';
+export { default as Typography } from './components/Typography';
+export * from './components/Typography';
 
 // hooks
 export { default as useTheme } from './hooks/useTheme';

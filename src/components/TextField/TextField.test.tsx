@@ -8,8 +8,8 @@ export const values = ['Value 1', 'Value 2'];
 
 describe('Multi TextField', () => {
   let input: HTMLInputElement;
-  let chips: HTMLElement[];
-  let newChip: HTMLElement;
+  let tags: HTMLElement[];
+  let newTag: HTMLElement;
 
   beforeEach(() => {
     render(<MultiTextFieldShowcase values={values} />);
@@ -20,31 +20,31 @@ describe('Multi TextField', () => {
   });
 
   it('renders the initial values', async () => {
-    chips = await screen.findAllByTestId(/chip-chip_/);
-    expect(chips.length).toEqual(values.length);
+    tags = await screen.findAllByTestId(/tag_container/);
+    expect(tags.length).toEqual(values.length);
   });
 
-  it('creates a new Chip when there is input and Enter is pressed', async () => {
+  it('creates a new Tag when there is input and Enter is pressed', async () => {
     await userEvent.type(input, 'New item{enter}');
 
-    newChip = screen.getByTestId('chip-chip_2');
-    expect(newChip).toBeVisible();
-    expect(newChip.innerHTML).toContain('New item');
+    newTag = screen.getByTestId('tag_2_tag_container');
+    expect(newTag).toBeVisible();
+    expect(newTag.innerHTML).toContain('New item');
   });
 
-  it('deletes the Chip when the delete button is clicked', async () => {
-    await userEvent.click(screen.getByTestId('chip-delete-chip_1'));
-    expect(screen.queryByTestId('chip-chip_1')).not.toBeInTheDocument();
+  it('deletes the Tag when the delete button is clicked', async () => {
+    await userEvent.click(screen.getByTestId('tag_1_tag_suffix'));
+    expect(screen.queryByTestId('tag_1_tag_container')).not.toBeInTheDocument();
   });
 
-  it('deletes all the Chips when the Delete All button is clicked', async () => {
+  it('deletes all the Tags when the Delete All button is clicked', async () => {
     await userEvent.click(screen.getByTestId('select-right-icon'));
-    expect(screen.queryByTestId('chip-chip_0')).not.toBeInTheDocument();
+    expect(screen.queryByTestId('tag_0_tag_container')).not.toBeInTheDocument();
   });
 
-  it('deletes a chip when Backspace is pressed', async () => {
+  it('deletes a tag when Backspace is pressed', async () => {
     await userEvent.type(input, '{backspace}');
-    expect(screen.queryByTestId('chip-chip_1')).not.toBeInTheDocument();
+    expect(screen.queryByTestId('tag_1_tag_container')).not.toBeInTheDocument();
   });
 });
 

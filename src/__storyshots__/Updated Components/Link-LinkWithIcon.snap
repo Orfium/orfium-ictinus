@@ -39,11 +39,13 @@
   letter-spacing: 0.00625rem;
 }
 
-.emotion-1:hover {
+.emotion-1:hover,
+.emotion-1[aria-expanded="true"] {
   color: #1B214F;
 }
 
-.emotion-1:hover path {
+.emotion-1:hover path,
+.emotion-1[aria-expanded="true"] path {
   fill: #1B214F!important;
 }
 
@@ -104,11 +106,13 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-4:hover {
+.emotion-4:hover,
+.emotion-4[aria-expanded="true"] {
   color: #1B214F;
 }
 
-.emotion-4:hover path {
+.emotion-4:hover path,
+.emotion-4[aria-expanded="true"] path {
   fill: #1B214F!important;
 }
 
@@ -151,11 +155,13 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-7:hover {
+.emotion-7:hover,
+.emotion-7[aria-expanded="true"] {
   color: #1B214F;
 }
 
-.emotion-7:hover path {
+.emotion-7:hover path,
+.emotion-7[aria-expanded="true"] path {
   fill: #1B214F!important;
 }
 
