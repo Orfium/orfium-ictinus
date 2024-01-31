@@ -13,7 +13,6 @@ import type { PaletteConfig } from './palette.config';
 import type { SemanticColors } from './tokens/semantic/colors';
 import type { SemanticDisabledState } from './tokens/semantic/disabledState';
 import type { SemanticIcon } from './tokens/semantic/icon';
-import type { SemanticPalette } from './tokens/semantic/palette';
 import type { SemanticState } from './tokens/semantic/state';
 import type { SemanticTypography } from './tokens/semantic/typography';
 
@@ -29,9 +28,6 @@ export type ThemeConfig = {
 };
 
 export type SemanticTheme = {
-  /** @TODO remove palette when all components are revisited for v5 */
-  palette: SemanticPalette;
-
   colors: SemanticColors;
   disabledState: SemanticDisabledState;
   icon: SemanticIcon;
