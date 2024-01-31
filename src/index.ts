@@ -8,6 +8,9 @@ import * as spacing from './theme/globals/spacing';
 import * as typography from './theme/globals/typography';
 import * as overrides from './theme/overrides';
 import * as palette from './theme/palette';
+import ClickAwayListener from 'components/utils/ClickAwayListener';
+export * from './theme/functions';
+export { generateUniqueID, generateTestDataId, generateUniqueKey } from './utils/helpers';
 
 export type { Elevation } from './theme/globals/elevation';
 export type { Overrides } from './theme/overrides';
@@ -16,6 +19,7 @@ export type { Spacing } from './theme/globals/spacing';
 export type { Typography } from './theme/globals/typography';
 export type { AcceptedColorComponentTypes } from './utils/themeFunctions';
 export type { Theme } from './theme';
+export type { TestProps } from './utils/types';
 
 export { default as Avatar } from './components/Avatar';
 export * from './components/Avatar';
@@ -120,4 +124,14 @@ export { default as useEscape } from './hooks/useEscape';
 export * from './hooks/useEscape';
 
 export { default as themeConfig } from './theme';
-export { themeFunctions, palette, spacing, typography, elevation, overrides, queriesSizes, rem };
+export {
+  ClickAwayListener,
+  themeFunctions,
+  palette,
+  spacing,
+  typography,
+  elevation,
+  overrides,
+  queriesSizes,
+  rem,
+};
