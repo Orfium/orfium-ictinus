@@ -61,7 +61,8 @@
   background-color: #5E8DF8;
 }
 
-.emotion-2:active:not(:disabled) {
+.emotion-2:active:not(:disabled),
+.emotion-2[aria-expanded="true"] {
   background-color: #194DCC;
 }
 
@@ -123,7 +124,8 @@
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-5:active:not(:disabled) {
+.emotion-5:active:not(:disabled),
+.emotion-5[aria-expanded="true"] {
   background-color: rgba(200,206,255,0.45);
 }
 
@@ -169,7 +171,8 @@
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-8:active:not(:disabled) {
+.emotion-8:active:not(:disabled),
+.emotion-8[aria-expanded="true"] {
   background-color: rgba(200,206,255,0.30);
 }
 
@@ -215,7 +218,8 @@
   background-color: #FFEBF1;
 }
 
-.emotion-11:active:not(:disabled) {
+.emotion-11:active:not(:disabled),
+.emotion-11[aria-expanded="true"] {
   background-color: #FFD6E5;
 }
 
@@ -261,7 +265,8 @@
   background-color: #5E8DF8;
 }
 
-.emotion-28:active:not(:disabled) {
+.emotion-28:active:not(:disabled),
+.emotion-28[aria-expanded="true"] {
   background-color: #194DCC;
 }
 
@@ -307,7 +312,8 @@
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-31:active:not(:disabled) {
+.emotion-31:active:not(:disabled),
+.emotion-31[aria-expanded="true"] {
   background-color: rgba(200,206,255,0.45);
 }
 
@@ -353,7 +359,8 @@
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-34:active:not(:disabled) {
+.emotion-34:active:not(:disabled),
+.emotion-34[aria-expanded="true"] {
   background-color: rgba(200,206,255,0.30);
 }
 
@@ -399,7 +406,8 @@
   background-color: #FFEBF1;
 }
 
-.emotion-37:active:not(:disabled) {
+.emotion-37:active:not(:disabled),
+.emotion-37[aria-expanded="true"] {
   background-color: #FFD6E5;
 }
 

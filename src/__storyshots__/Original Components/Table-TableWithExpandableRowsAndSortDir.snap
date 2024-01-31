@@ -532,7 +532,8 @@
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-71:active:not(:disabled) {
+.emotion-71:active:not(:disabled),
+.emotion-71[aria-expanded="true"] {
   background-color: rgba(200,206,255,0.30);
 }
 

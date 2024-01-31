@@ -145,7 +145,8 @@
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-17:active:not(:disabled) {
+.emotion-17:active:not(:disabled),
+.emotion-17[aria-expanded="true"] {
   background-color: rgba(200,206,255,0.30);
 }
 

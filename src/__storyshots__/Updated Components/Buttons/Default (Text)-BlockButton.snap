@@ -70,7 +70,8 @@
   background-color: #5E8DF8;
 }
 
-.emotion-2:active:not(:disabled) {
+.emotion-2:active:not(:disabled),
+.emotion-2[aria-expanded="true"] {
   background-color: #194DCC;
 }
 
@@ -133,7 +134,8 @@
   background-color: #5E8DF8;
 }
 
-.emotion-5:active:not(:disabled) {
+.emotion-5:active:not(:disabled),
+.emotion-5[aria-expanded="true"] {
   background-color: #194DCC;
 }
 
@@ -213,7 +215,8 @@
   background-color: #5E8DF8;
 }
 
-.emotion-11:active:not(:disabled) {
+.emotion-11:active:not(:disabled),
+.emotion-11[aria-expanded="true"] {
   background-color: #194DCC;
 }
 
@@ -261,7 +264,8 @@
   background-color: #5E8DF8;
 }
 
-.emotion-17:active:not(:disabled) {
+.emotion-17:active:not(:disabled),
+.emotion-17[aria-expanded="true"] {
   background-color: #194DCC;
 }
 

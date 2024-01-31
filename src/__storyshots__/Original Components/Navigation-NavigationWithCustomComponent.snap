@@ -47,7 +47,8 @@
   background-color: #5E8DF8;
 }
 
-.emotion-1:active:not(:disabled) {
+.emotion-1:active:not(:disabled),
+.emotion-1[aria-expanded="true"] {
   background-color: #194DCC;
 }
 

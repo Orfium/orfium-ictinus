@@ -136,7 +136,8 @@ exports[`OverlayComponent > should render correctly 1`] = `
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-8:active:not(:disabled) {
+.emotion-8:active:not(:disabled),
+.emotion-8[aria-expanded="true"] {
   background-color: rgba(200,206,255,0.30);
 }
 
@@ -239,7 +240,8 @@ exports[`OverlayComponent > should render correctly 1`] = `
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-14:active:not(:disabled) {
+.emotion-14:active:not(:disabled),
+.emotion-14[aria-expanded="true"] {
   background-color: rgba(200,206,255,0.30);
 }
 
@@ -585,7 +587,8 @@ exports[`OverlayComponent > should render correctly 1`] = `
   background-color: #5E8DF8;
 }
 
-.emotion-107:active:not(:disabled) {
+.emotion-107:active:not(:disabled),
+.emotion-107[aria-expanded="true"] {
   background-color: #194DCC;
 }
 
@@ -1451,7 +1454,8 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-12:active:not(:disabled) {
+.emotion-12:active:not(:disabled),
+.emotion-12[aria-expanded="true"] {
   background-color: rgba(200,206,255,0.30);
 }
 
@@ -1553,7 +1557,8 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-18:active:not(:disabled) {
+.emotion-18:active:not(:disabled),
+.emotion-18[aria-expanded="true"] {
   background-color: rgba(200,206,255,0.30);
 }
 
@@ -1932,7 +1937,8 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
   background-color: #5E8DF8;
 }
 
-.emotion-193:active:not(:disabled) {
+.emotion-193:active:not(:disabled),
+.emotion-193[aria-expanded="true"] {
   background-color: #194DCC;
 }
 

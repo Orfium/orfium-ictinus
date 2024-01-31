@@ -81,11 +81,13 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-4:hover {
+.emotion-4:hover,
+.emotion-4[aria-expanded="true"] {
   color: #111530;
 }
 
-.emotion-4:hover path {
+.emotion-4:hover path,
+.emotion-4[aria-expanded="true"] path {
   fill: #111530!important;
 }
 

@@ -79,7 +79,7 @@ export const buttonBaseStyle =
       ':hover:not(:disabled)': {
         backgroundColor: tokens(`${type}.backgroundColor.hover` as const),
       },
-      ':active:not(:disabled)': {
+      ':active:not(:disabled), &[aria-expanded="true"]': {
         backgroundColor: tokens(`${type}.backgroundColor.active` as const),
       },
     };

@@ -61,7 +61,8 @@
   background-color: #5E8DF8;
 }
 
-.emotion-2:active:not(:disabled) {
+.emotion-2:active:not(:disabled),
+.emotion-2[aria-expanded="true"] {
   background-color: #194DCC;
 }
 
@@ -149,11 +150,13 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-7:hover {
+.emotion-7:hover,
+.emotion-7[aria-expanded="true"] {
   color: #111530;
 }
 
-.emotion-7:hover path {
+.emotion-7:hover path,
+.emotion-7[aria-expanded="true"] path {
   fill: #111530!important;
 }
 
