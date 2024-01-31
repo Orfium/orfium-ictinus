@@ -59,6 +59,7 @@ const MenuItem: React.FCC<MenuItemProps> = memo(
       <React.Fragment>
         {hasSubMenus ? (
           <ExpandCollapse
+            // @ts-ignore
             isExpanded={isExpanded}
             onChange={() => toggleMenuItem(url)}
             textAndControl={(handleClick) => {
