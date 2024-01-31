@@ -1,7 +1,12 @@
 import type { FilterProps, SingleFilterProps } from 'components/Filter';
 import type { TextFieldProps } from 'components/TextField';
 
-type SearchFilterConfig = {
+export type filterConfig = Pick<
+  FilterProps & SingleFilterProps,
+  'selectedFilter' | 'onChange' | 'onClear' | 'defaultValue' | 'label' | 'items'
+>;
+
+export type SearchFilterConfig = {
   filterConfig?: Pick<
     FilterProps & SingleFilterProps,
     'selectedFilter' | 'onChange' | 'onClear' | 'defaultValue' | 'label' | 'items'

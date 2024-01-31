@@ -1,6 +1,7 @@
 import { Meta, Canvas, ArgTypes, Story } from '@storybook/blocks';
 import Search from './Search';
 import * as SearchStories from './Search.stories';
+import { SearchFilterConfigDummyStory } from '../storyUtils/componentsForTypes';
 
 <Meta of={SearchStories} />
 
@@ -18,6 +19,10 @@ Search allows users to enter a query to locate specific items or information wit
 ## Props
 
 <ArgTypes of={Search} />
+
+#### Filter Config Props
+
+<ArgTypes of={SearchFilterConfigDummyStory} />
 
 ## Usage
 
