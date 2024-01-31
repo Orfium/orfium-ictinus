@@ -1,7 +1,7 @@
 const state = {
   hover: {
     '1': {
-      value: '{sizing.6}',
+      value: '{sizing.7}',
       type: 'sizing',
       description: 'Sets extra small hover size',
     },
@@ -21,18 +21,18 @@ const state = {
       description: 'Sets lage hover size',
     },
   },
-  backgroundColor: {
-    hover: {
-      value: '{colors.transparent.default.2}',
-      type: 'color',
-      description: 'Sets color for hover state',
-    },
-  },
   borderRadius: {
     hover: {
       value: '{borderRadius.7}',
       type: 'borderRadius',
       description: 'Sets border radius for circular hover shape',
+    },
+  },
+  backgroundColor: {
+    hover: {
+      value: '{colors.transparent.2}',
+      type: 'color',
+      description: 'Sets transparent overlay for interactive icon on hover',
     },
   },
 } as const;

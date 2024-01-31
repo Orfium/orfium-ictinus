@@ -1,9 +1,4 @@
 const search = {
-  paddingVertical: {
-    value: '{spacing.4}',
-    type: 'spacing',
-    description: 'sets both top and bottom padding for search bar',
-  },
   paddingVerticalInline: {
     value: '{spacing.6}',
     type: 'spacing',
@@ -12,12 +7,12 @@ const search = {
   },
   backgroundColor: {
     default: {
-      value: '{sem.colors.palette.secondary.light}',
+      value: '{sem.colors.backgroundColor.default}',
       type: 'color',
       description: 'Sets backgroundColor for default search component',
     },
     focused: {
-      value: '{sem.colors.palette.secondary.main}',
+      value: '{sem.colors.palette.tertiary.light}',
       type: 'color',
       description: 'Sets backgroundColor for focused search component',
     },
@@ -26,12 +21,6 @@ const search = {
     value: '{sem.icon.size.3}',
     type: 'sizing',
     description: 'Sets icon size for search',
-  },
-  heightInlineCompact: {
-    value: '{sem.icon.size.3}',
-    type: 'sizing',
-    description:
-      'Sets fixed size for inline search, compact variant (_block used in menus with compact list items)',
   },
   paddingHorizontalRounded: {
     value: '{spacing.6}',
@@ -100,6 +89,18 @@ const search = {
     value: '{sem.typography.normal.body02}',
     type: 'typography',
     description: 'Sets text for search component',
+  },
+  height: {
+    normal: {
+      value: '{sizing.9}',
+      type: 'sizing',
+      description: 'Sets height for search (normal size variant)',
+    },
+  },
+  gap: {
+    value: '{spacing.4}',
+    type: 'spacing',
+    description: 'Sets gap for search field',
   },
 } as const;
 

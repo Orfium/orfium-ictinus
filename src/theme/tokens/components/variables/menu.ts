@@ -5,7 +5,7 @@ const menu = {
     description: 'Background color for menu container',
   },
   borderColor: {
-    value: '{sem.colors.borderColor.decorative.muted}',
+    value: '{sem.colors.borderColor.decorative.default}',
     type: 'color',
     description: 'Border color for menu container',
   },

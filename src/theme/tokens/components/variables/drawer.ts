@@ -5,7 +5,7 @@ const drawer = {
     description: 'Sets backgroundColor for drawer container',
   },
   borderColor: {
-    value: '{sem.colors.borderColor.decorative.muted}',
+    value: '{sem.colors.borderColor.decorative.default}',
     type: 'color',
     description: 'Sets borderColor for drawer container',
   },
@@ -19,10 +19,15 @@ const drawer = {
     type: 'boxShadow',
     description: 'Sets boxShadow for drawer container',
   },
+  backdropColor: {
+    value: '{sem.colors.backdrop.default}',
+    type: 'color',
+    description: 'Sets color for content backdrop appearing behind drawer (if used)',
+  },
   padding: {
     value: '{spacing.8}',
     type: 'spacing',
-    description: 'Sets default horizontal and vertical padding for drawer content',
+    description: 'Sets padding for drawer',
   },
 } as const;
 

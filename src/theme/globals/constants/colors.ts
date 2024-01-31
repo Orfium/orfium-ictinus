@@ -13,144 +13,46 @@ const colors = {
       type: 'color',
     },
   },
-  orange: {
-    '1': {
-      value: '#FFE6CF',
-      type: 'color',
-    },
-    '2': {
-      value: '#FFC187',
-      type: 'color',
-    },
-    '3': {
-      value: '#FCA144',
-      type: 'color',
-    },
-    '4': {
-      value: '#FA8002',
-      type: 'color',
-    },
-    '5': {
-      value: '#E37400',
-      type: 'color',
-    },
-  },
-  red: {
-    '1': {
-      value: '#FFE7F0',
-      type: 'color',
-    },
-    '2': {
-      value: '#FFB8D1',
-      type: 'color',
-    },
-    '3': {
-      value: '#F882AC',
-      type: 'color',
-    },
-    '4': {
-      value: '#FF176B',
-      type: 'color',
-      description: 'AA compliant against white and red.1',
-    },
-    '5': {
-      value: '#CB205D',
-      type: 'color',
-      description: 'AA compliant against white and red.1',
-    },
-  },
-  tinted: {
-    '1': {
-      value: '#ffffff',
-      type: 'color',
-    },
-    '2': {
-      value: '#F5F5FF',
-      type: 'color',
-    },
-    '3': {
-      value: '#E7E8FF',
-      type: 'color',
-    },
-    '4': {
-      value: '#D6D8FF',
-      type: 'color',
-    },
-    '5': {
-      value: '#B9C0FF',
-      type: 'color',
-      description: 'AA compliant against white and tinted.1',
-    },
-  },
   blue: {
     '1': {
-      value: '#e7eefe',
+      value: '#E9EFFB',
       type: 'color',
     },
     '2': {
-      value: '#b9cdfc',
+      value: '#DAE4FB',
       type: 'color',
     },
     '3': {
-      value: '#175bf5',
-      type: 'color',
-      description: 'AA compliant against white and blue.1',
-    },
-    '4': {
-      value: '#1552DD',
-      type: 'color',
-      description: 'AA compliant against white and blue.1',
-    },
-    '5': {
-      value: '#1249C4',
-      type: 'color',
-      description: 'AA compliant against white and blue.1',
-    },
-  },
-  teal: {
-    '1': {
-      value: '#d1faf0',
-      type: 'color',
-    },
-    '2': {
-      value: '#8ef4da',
-      type: 'color',
-    },
-    '3': {
-      value: '#1de9b6',
+      value: '#B8CCFA',
       type: 'color',
     },
     '4': {
-      value: '#00C6A2',
+      value: '#8EAAEC',
       type: 'color',
     },
     '5': {
-      value: '#0C7D61',
-      type: 'color',
-      description: 'AA compliant against white and teal.1',
-    },
-  },
-  purple: {
-    '1': {
-      value: '#f3eaff',
+      value: '#5E8DF8',
       type: 'color',
     },
-    '2': {
-      value: '#dbc1ff',
+    '6': {
+      value: '#175BF5',
       type: 'color',
     },
-    '3': {
-      value: '#b784ff',
+    '7': {
+      value: '#194DCC',
       type: 'color',
     },
-    '4': {
-      value: '#9347ff',
+    '8': {
+      value: '#173DA0',
       type: 'color',
     },
-    '5': {
-      value: '#6c28cc',
+    '9': {
+      value: '#173382',
       type: 'color',
-      description: 'AA compliant against white and purple.1',
+    },
+    '10': {
+      value: '#12204E',
+      type: 'color',
     },
   },
   neutral: {
@@ -159,70 +61,234 @@ const colors = {
       type: 'color',
     },
     '2': {
-      value: '#F4F8FF',
+      value: '#F2F4FF',
       type: 'color',
     },
     '3': {
-      value: '#686BB3',
+      value: '#B3B5CC',
       type: 'color',
-      description: 'AA compliant against white',
     },
     '4': {
-      value: '#1B214F',
+      value: '#52567a',
       type: 'color',
     },
     '5': {
+      value: '#262C59',
+      type: 'color',
+    },
+    '6': {
       value: '#111530',
       type: 'color',
-      description: 'AA compliant against white',
     },
   },
   transparent: {
-    default: {
-      '1': {
-        value: 'rgba(84,94,255,0)',
-        type: 'color',
-      },
-      '2': {
-        value: 'rgba(84,94,255,0.06)',
-        type: 'color',
-      },
-      '3': {
-        value: 'rgba(84,94,255,0.14)',
-        type: 'color',
-      },
-      '4': {
-        value: 'rgba(84,94,255,0.24)',
-        type: 'color',
-      },
-      '5': {
-        value: 'rgba(26,30,95,0.40)',
-        type: 'color',
-        description: 'AA compliant against white',
-      },
+    '1': {
+      value: 'rgba(200,206,255,0)',
+      type: 'color',
     },
-    alt: {
-      '1': {
-        value: 'rgba(255,255,255,0)',
-        type: 'color',
-      },
-      '2': {
-        value: 'rgba(255,255,255,0.06)',
-        type: 'color',
-      },
-      '3': {
-        value: 'rgba(255,255,255,0.14)',
-        type: 'color',
-      },
-      '4': {
-        value: 'rgba(255,255,255,0.24)',
-        type: 'color',
-      },
-      '5': {
-        value: 'rgba(255,255,255,0.40)',
-        type: 'color',
-        description: 'AA compliant against white',
-      },
+    '2': {
+      value: 'rgba(200,206,255,0.20)',
+      type: 'color',
+    },
+    '3': {
+      value: 'rgba(200,206,255,0.30)',
+      type: 'color',
+    },
+    '4': {
+      value: 'rgba(200,206,255,0.45)',
+      type: 'color',
+    },
+    '5': {
+      value: 'rgba(200,206,255,0.70)',
+      type: 'color',
+    },
+    '6': {
+      value: 'rgba(76,86,164,0)',
+      type: 'color',
+    },
+    '7': {
+      value: 'rgba(76,86,164,0.20)',
+      type: 'color',
+    },
+    '8': {
+      value: 'rgba(76,86,164,0.30)',
+      type: 'color',
+    },
+    '9': {
+      value: 'rgba(76,86,164,0.45)',
+      type: 'color',
+    },
+    '10': {
+      value: 'rgba(76,86,164,0.70)',
+      type: 'color',
+    },
+  },
+  red: {
+    '1': {
+      value: '#FFEBF1',
+      type: 'color',
+    },
+    '2': {
+      value: '#FFD6E5',
+      type: 'color',
+    },
+    '3': {
+      value: '#FFB2CE',
+      type: 'color',
+    },
+    '4': {
+      value: '#FF80AD',
+      type: 'color',
+    },
+    '5': {
+      value: '#FF4D8D',
+      type: 'color',
+    },
+    '6': {
+      value: '#D4165F',
+      type: 'color',
+    },
+    '7': {
+      value: '#BF1250',
+      type: 'color',
+    },
+    '8': {
+      value: '#831650',
+      type: 'color',
+    },
+    '9': {
+      value: '#601649',
+      type: 'color',
+    },
+    '10': {
+      value: '#33123A',
+      type: 'color',
+    },
+  },
+  orange: {
+    '1': {
+      value: '#FFF0D1',
+      type: 'color',
+    },
+    '2': {
+      value: '#FFE2A8',
+      type: 'color',
+    },
+    '3': {
+      value: '#FFC95C',
+      type: 'color',
+    },
+    '4': {
+      value: '#F5A300',
+      type: 'color',
+    },
+    '5': {
+      value: '#D67D00',
+      type: 'color',
+    },
+    '6': {
+      value: '#9E4214',
+      type: 'color',
+    },
+    '7': {
+      value: '#8B391D',
+      type: 'color',
+    },
+    '8': {
+      value: '#66301E',
+      type: 'color',
+    },
+    '9': {
+      value: '#4D2A24',
+      type: 'color',
+    },
+    '10': {
+      value: '#29201E',
+      type: 'color',
+    },
+  },
+  purple: {
+    '1': {
+      value: '#F3EBFF',
+      type: 'color',
+    },
+    '2': {
+      value: '#EBDBFF',
+      type: 'color',
+    },
+    '3': {
+      value: '#D8BDFF',
+      type: 'color',
+    },
+    '4': {
+      value: '#BD8FFF',
+      type: 'color',
+    },
+    '5': {
+      value: '#A566FF',
+      type: 'color',
+    },
+    '6': {
+      value: '#7531DE',
+      type: 'color',
+    },
+    '7': {
+      value: '#5F33AC',
+      type: 'color',
+    },
+    '8': {
+      value: '#492A89',
+      type: 'color',
+    },
+    '9': {
+      value: '#38246E',
+      type: 'color',
+    },
+    '10': {
+      value: '#211A47',
+      type: 'color',
+    },
+  },
+  teal: {
+    '1': {
+      value: '#DCF9F2',
+      type: 'color',
+    },
+    '2': {
+      value: '#BFF4E7',
+      type: 'color',
+    },
+    '3': {
+      value: '#86EAD1',
+      type: 'color',
+    },
+    '4': {
+      value: '#3CDDB4',
+      type: 'color',
+    },
+    '5': {
+      value: '#1EBE96',
+      type: 'color',
+    },
+    '6': {
+      value: '#107962',
+      type: 'color',
+    },
+    '7': {
+      value: '#11695B',
+      type: 'color',
+    },
+    '8': {
+      value: '#0F514C',
+      type: 'color',
+    },
+    '9': {
+      value: '#104042',
+      type: 'color',
+    },
+    '10': {
+      value: '#0E2834',
+      type: 'color',
     },
   },
 } as const;

@@ -35,17 +35,17 @@ const filter = {
   },
   backgroundColor: {
     default: {
-      value: '{sem.colors.palette.secondary.light}',
+      value: '{sem.colors.palette.secondary.main}',
       type: 'color',
       description: 'Sets backgroundColor for filter default state',
     },
     hover: {
-      value: '{sem.colors.palette.secondary.main}',
+      value: '{sem.colors.palette.secondary.light}',
       type: 'color',
       description: 'Sets backgroundColor for hovered filter state',
     },
     active: {
-      value: '{sem.colors.palette.primary.main}',
+      value: '{sem.colors.palette.primary.dark}',
       type: 'color',
       description: 'Sets backgroundColor for active filter state',
     },
@@ -55,7 +55,7 @@ const filter = {
       description: 'Sets backgroundColor for active filter component',
     },
     populatedHovered: {
-      value: '{sem.colors.palette.secondary.dark}',
+      value: '{sem.colors.palette.secondary.light}',
       type: 'color',
       description: 'Sets backgroundColor for active hovered filter component',
     },

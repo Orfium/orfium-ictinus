@@ -109,7 +109,7 @@ const listItem = {
   },
   backgroundColor: {
     default: {
-      value: '{sem.colors.palette.tertiary.lightest}',
+      value: '{sem.colors.palette.tertiary.main}',
       type: 'color',
       description: 'Sets backgroundColor for default list item',
     },

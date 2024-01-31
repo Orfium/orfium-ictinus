@@ -25,7 +25,7 @@ const controls = {
       },
       pressed: {
         type: 'color',
-        value: '{sem.colors.borderColor.interactive.active}',
+        value: '{sem.colors.borderColor.decorative.transparent}',
         description: 'Sets borderColor for an pressed checkbox',
       },
     },
@@ -78,7 +78,7 @@ const controls = {
       },
       active: {
         type: 'color',
-        value: '{sem.colors.borderColor.interactive.active}',
+        value: '{sem.colors.palette.primary.main}',
         description: 'Sets borderColor for an pressed radio button',
       },
     },
@@ -119,7 +119,7 @@ const controls = {
       },
       thumb: {
         default: {
-          value: '{sem.colors.palette.secondary.lightest}',
+          value: '{sem.colors.backgroundColor.default}',
           type: 'color',
           description: 'Sets backgroundColor for default switch thumb state',
         },

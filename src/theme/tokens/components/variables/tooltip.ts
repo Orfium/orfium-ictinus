@@ -31,7 +31,7 @@ const tooltip = {
         "Sets backgroundColor for tooltip container (including direction 'triangle' indicator)",
     },
     inverted: {
-      value: '{sem.colors.backgroundColor.default}',
+      value: '{sem.colors.backgroundColor.alt}',
       type: 'color',
       description:
         "Sets backgroundColor for tooltip container with light color (including direction 'triangle' indicator)",
@@ -44,7 +44,7 @@ const tooltip = {
       description: 'Sets borderColor for tooltip (default variant)',
     },
     inverted: {
-      value: '{sem.colors.borderColor.decorative.muted}',
+      value: '{sem.colors.borderColor.decorative.default}',
       type: 'color',
       description: 'Sets borderColor for tooltip (inverted variant)',
     },
