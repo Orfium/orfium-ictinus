@@ -13,13 +13,13 @@
 }
 
 .emotion-1 {
-  background-color: #1B214F;
-  border: 0.0625rem solid rgba(84,94,255,0);
-  box-shadow: 0rem 0.25rem 0.5rem 0rem #10306612;
+  background-color: #111530;
+  border: 0.0625rem solid rgba(200,206,255,0);
+  box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(200,206,255,0.45);
 }
 
 .emotion-1 .tippy-content {
-  background-color: #1B214F;
+  background-color: #111530;
   max-width: 16rem;
   padding: 0.5rem;
   border-radius: 0.25rem;
@@ -35,7 +35,7 @@
 }
 
 .emotion-1 .tippy-arrow::before {
-  color: #1B214F;
+  color: #111530;
 }
 
 .emotion-2 {
@@ -65,7 +65,7 @@
   justify-content: center;
   color: #ffffff;
   height: auto;
-  background-color: #175bf5;
+  background-color: #175BF5;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   border: none;
@@ -75,7 +75,7 @@
 }
 
 .emotion-3:focus-visible:not(:disabled) {
-  background-color: #1552DD;
+  background-color: #5E8DF8;
 }
 
 .emotion-3:disabled {
@@ -84,11 +84,11 @@
 }
 
 .emotion-3:hover:not(:disabled) {
-  background-color: #1552DD;
+  background-color: #5E8DF8;
 }
 
 .emotion-3:active:not(:disabled) {
-  background-color: #1249C4;
+  background-color: #194DCC;
 }
 
 .emotion-4 {
@@ -108,7 +108,7 @@
 }
 
 .emotion-5 {
-  background: #1B214F;
+  background: #111530;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -123,17 +123,17 @@
 }
 
 .emotion-6 {
-  background-color: #ffffff;
-  border: 0.0625rem solid #E7E8FF;
-  box-shadow: 0rem 0.25rem 0.5rem 0rem #10306612;
+  background-color: #F2F4FF;
+  border: 0.0625rem solid rgba(200,206,255,0.70);
+  box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(200,206,255,0.45);
 }
 
 .emotion-6 .tippy-content {
-  background-color: #ffffff;
+  background-color: #F2F4FF;
   max-width: 16rem;
   padding: 0.5rem;
   border-radius: 0.25rem;
-  color: #1B214F;
+  color: #111530;
   font-family: Roboto;
   font-weight: 400;
   line-height: 1rem;
@@ -145,53 +145,7 @@
 }
 
 .emotion-6 .tippy-arrow::before {
-  color: #ffffff;
-}
-
-.emotion-8 {
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  color: #1B214F;
-  height: auto;
-  background-color: #1de9b6;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-8:focus-visible:not(:disabled) {
-  background-color: #00C6A2;
-}
-
-.emotion-8:disabled {
-  opacity: 50%;
-  cursor: not-allowed;
-}
-
-.emotion-8:hover:not(:disabled) {
-  background-color: #00C6A2;
-}
-
-.emotion-8:active:not(:disabled) {
-  background-color: #0C7D61;
+  color: #F2F4FF;
 }
 
 <div>
@@ -251,7 +205,7 @@
             class="emotion-2"
           >
             <button
-              class="emotion-8"
+              class="emotion-3"
               data-testid="button"
               type="button"
             >

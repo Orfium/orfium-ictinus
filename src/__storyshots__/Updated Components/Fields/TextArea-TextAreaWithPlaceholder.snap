@@ -24,7 +24,7 @@
   position: relative;
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #b9cdfc;
+  box-shadow: 0 0 0 0.0625rem #DAE4FB;
   border-radius: 0.25rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -34,17 +34,17 @@
   cursor: text;
   height: auto;
   min-width: 15rem;
-  background-color: #ffffff;
+  background-color: rgba(200,206,255,0.30);
   width: auto;
 }
 
 .emotion-1:hover {
-  background-color: #F5F5FF;
+  background-color: rgba(200,206,255,0.20);
 }
 
 .emotion-1:focus-within {
-  box-shadow: 0 0 0 0.125rem #175bf5;
-  background-color: #F5F5FF;
+  box-shadow: 0 0 0 0.125rem #5E8DF8;
+  background-color: rgba(200,206,255,0.30);
 }
 
 .emotion-2 {
@@ -83,7 +83,7 @@
   letter-spacing: 0.015625rem;
   background: transparent;
   border: none;
-  color: #1B214F;
+  color: #111530;
   padding: 0;
   display: block;
   position: relative;
@@ -147,7 +147,7 @@
 
 .emotion-4:focus-within+label {
   font-weight: 700!important;
-  color: #1552DD;
+  color: #194DCC;
 }
 
 .emotion-4:disabled {
@@ -175,7 +175,7 @@
   -moz-transform: translate(0.1875rem, 0);
   -ms-transform: translate(0.1875rem, 0);
   transform: translate(0.1875rem, 0);
-  color: #686BB3;
+  color: #52567a;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -204,7 +204,7 @@
   letter-spacing: 0.015625rem;
   background: transparent;
   border: none;
-  color: #1B214F;
+  color: #111530;
   padding: 0;
   display: block;
   position: relative;
@@ -238,19 +238,19 @@
 }
 
 .emotion-9:focus::-webkit-input-placeholder {
-  color: #686BB3;
+  color: #52567a;
 }
 
 .emotion-9:focus::-moz-placeholder {
-  color: #686BB3;
+  color: #52567a;
 }
 
 .emotion-9:focus:-ms-input-placeholder {
-  color: #686BB3;
+  color: #52567a;
 }
 
 .emotion-9:focus::placeholder {
-  color: #686BB3;
+  color: #52567a;
 }
 
 .emotion-9:not(:focus):placeholder-shown+label {
@@ -268,7 +268,7 @@
 
 .emotion-9:focus-within+label {
   font-weight: 700!important;
-  color: #1552DD;
+  color: #194DCC;
 }
 
 .emotion-9:disabled {

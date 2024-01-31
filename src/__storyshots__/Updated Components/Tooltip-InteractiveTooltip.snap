@@ -13,19 +13,19 @@
 }
 
 .emotion-1 {
-  background-color: #1B214F;
-  border: 0.0625rem solid rgba(84,94,255,0);
-  box-shadow: 0rem 0.25rem 0.5rem 0rem #10306612;
+  background-color: #111530;
+  border: 0.0625rem solid rgba(200,206,255,0);
+  box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(200,206,255,0.45);
 }
 
 .emotion-1 .tippy-content {
-  background-color: #1B214F;
+  background-color: #111530;
   padding: 1rem;
   border-radius: 0.25rem;
 }
 
 .emotion-1 .tippy-arrow::before {
-  color: #1B214F;
+  color: #111530;
 }
 
 .emotion-2 {
@@ -55,7 +55,7 @@
   justify-content: center;
   color: #ffffff;
   height: auto;
-  background-color: #175bf5;
+  background-color: #175BF5;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   border: none;
@@ -65,7 +65,7 @@
 }
 
 .emotion-3:focus-visible:not(:disabled) {
-  background-color: #1552DD;
+  background-color: #5E8DF8;
 }
 
 .emotion-3:disabled {
@@ -74,11 +74,11 @@
 }
 
 .emotion-3:hover:not(:disabled) {
-  background-color: #1552DD;
+  background-color: #5E8DF8;
 }
 
 .emotion-3:active:not(:disabled) {
-  background-color: #1249C4;
+  background-color: #194DCC;
 }
 
 .emotion-4 {
@@ -110,7 +110,7 @@
   -ms-flex-align: center;
   align-items: center;
   gap: 1rem;
-  color: #b9cdfc;
+  color: #B3B5CC;
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -134,7 +134,7 @@
   -webkit-justify-content: center;
   justify-content: center;
   border-radius: 0.5rem;
-  background: #111530;
+  background: #262C59;
 }
 
 .emotion-7 {
@@ -147,10 +147,10 @@
   display: -ms-flexbox;
   display: flex;
   gap: 0.25rem;
-  color: #1de9b6;
+  color: #8EAAEC;
   -webkit-text-decoration: none;
   text-decoration: none;
-  border: 0.25rem solid rgba(84,94,255,0);
+  border: 0.25rem solid rgba(200,206,255,0);
   opacity: 1;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -177,20 +177,20 @@
 }
 
 .emotion-8:visited {
-  color: #dbc1ff;
+  color: #BD8FFF;
 }
 
 .emotion-8:visited path {
-  fill: #dbc1ff!important;
+  fill: #BD8FFF!important;
 }
 
 .emotion-8:focus-visible {
-  border: 0.25rem solid #9347ff;
+  border: 0.25rem solid #A566FF;
 }
 
 .emotion-9 {
-  width: 0.75rem;
-  height: 0.75rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -198,16 +198,16 @@
 }
 
 .emotion-10 {
-  width: 0.75rem;
-  height: 0.75rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .emotion-10 path {
-  fill: #1de9b6!important;
+  fill: #8EAAEC!important;
 }
 
 .emotion-11 {
-  background: #1B214F;
+  background: #111530;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -222,65 +222,19 @@
 }
 
 .emotion-12 {
-  background-color: #ffffff;
-  border: 0.0625rem solid #E7E8FF;
-  box-shadow: 0rem 0.25rem 0.5rem 0rem #10306612;
+  background-color: #F2F4FF;
+  border: 0.0625rem solid rgba(200,206,255,0.70);
+  box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(200,206,255,0.45);
 }
 
 .emotion-12 .tippy-content {
-  background-color: #ffffff;
+  background-color: #F2F4FF;
   padding: 1rem;
   border-radius: 0.25rem;
 }
 
 .emotion-12 .tippy-arrow::before {
-  color: #ffffff;
-}
-
-.emotion-14 {
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  color: #1B214F;
-  height: auto;
-  background-color: #1de9b6;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-14:focus-visible:not(:disabled) {
-  background-color: #00C6A2;
-}
-
-.emotion-14:disabled {
-  opacity: 50%;
-  cursor: not-allowed;
-}
-
-.emotion-14:hover:not(:disabled) {
-  background-color: #00C6A2;
-}
-
-.emotion-14:active:not(:disabled) {
-  background-color: #0C7D61;
+  color: #F2F4FF;
 }
 
 .emotion-16 {
@@ -296,7 +250,7 @@
   -ms-flex-align: center;
   align-items: center;
   gap: 1rem;
-  color: #686BB3;
+  color: #52567a;
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -320,7 +274,6 @@
   -webkit-justify-content: center;
   justify-content: center;
   border-radius: 0.5rem;
-  background: #F4F8FF;
 }
 
 .emotion-19 {
@@ -329,10 +282,10 @@
   display: -ms-flexbox;
   display: flex;
   gap: 0.25rem;
-  color: #1552DD;
+  color: #194DCC;
   -webkit-text-decoration: none;
   text-decoration: none;
-  border: 0.25rem solid rgba(84,94,255,0);
+  border: 0.25rem solid rgba(200,206,255,0);
   opacity: 1;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -351,32 +304,32 @@
 }
 
 .emotion-19:hover {
-  color: #1B214F;
+  color: #111530;
 }
 
 .emotion-19:hover path {
-  fill: #1B214F!important;
+  fill: #111530!important;
 }
 
 .emotion-19:visited {
-  color: #6c28cc;
+  color: #5F33AC;
 }
 
 .emotion-19:visited path {
-  fill: #6c28cc!important;
+  fill: #5F33AC!important;
 }
 
 .emotion-19:focus-visible {
-  border: 0.25rem solid #9347ff;
+  border: 0.25rem solid #A566FF;
 }
 
 .emotion-21 {
-  width: 0.75rem;
-  height: 0.75rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .emotion-21 path {
-  fill: #1552DD!important;
+  fill: #194DCC!important;
 }
 
 <div>
@@ -714,7 +667,7 @@
             class="emotion-2"
           >
             <button
-              class="emotion-14"
+              class="emotion-3"
               data-testid="button"
               type="button"
             >

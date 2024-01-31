@@ -49,7 +49,7 @@ exports[`PaletteShowcase > should render correctly 1`] = `
   justify-content: center;
   color: #ffffff;
   height: auto;
-  background-color: #175bf5;
+  background-color: #175BF5;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   border: none;
@@ -59,7 +59,7 @@ exports[`PaletteShowcase > should render correctly 1`] = `
 }
 
 .emotion-2:focus-visible:not(:disabled) {
-  background-color: #1552DD;
+  background-color: #5E8DF8;
 }
 
 .emotion-2:disabled {
@@ -68,11 +68,11 @@ exports[`PaletteShowcase > should render correctly 1`] = `
 }
 
 .emotion-2:hover:not(:disabled) {
-  background-color: #1552DD;
+  background-color: #5E8DF8;
 }
 
 .emotion-2:active:not(:disabled) {
-  background-color: #1249C4;
+  background-color: #194DCC;
 }
 
 .emotion-3 {
@@ -14192,7 +14192,7 @@ exports[`PaletteShowcase > should render correctly 1`] = `
   position: relative;
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #b9cdfc;
+  box-shadow: 0 0 0 0.0625rem #DAE4FB;
   border-radius: 0.25rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -14202,16 +14202,16 @@ exports[`PaletteShowcase > should render correctly 1`] = `
   cursor: text;
   height: 3.25rem;
   min-width: 8.75rem;
-  background-color: #ffffff;
+  background-color: rgba(200,206,255,0.30);
 }
 
 .emotion-773:hover {
-  background-color: #F5F5FF;
+  background-color: rgba(200,206,255,0.20);
 }
 
 .emotion-773:focus-within {
-  box-shadow: 0 0 0 0.125rem #175bf5;
-  background-color: #F5F5FF;
+  box-shadow: 0 0 0 0.125rem #5E8DF8;
+  background-color: rgba(200,206,255,0.30);
 }
 
 .emotion-774 {
@@ -14257,7 +14257,7 @@ exports[`PaletteShowcase > should render correctly 1`] = `
   letter-spacing: 0.015625rem;
   background: transparent;
   border: none;
-  color: #1B214F;
+  color: #111530;
   padding: 0;
   display: block;
   position: relative;
@@ -14289,19 +14289,19 @@ exports[`PaletteShowcase > should render correctly 1`] = `
 }
 
 .emotion-776:focus::-webkit-input-placeholder {
-  color: #686BB3;
+  color: #52567a;
 }
 
 .emotion-776:focus::-moz-placeholder {
-  color: #686BB3;
+  color: #52567a;
 }
 
 .emotion-776:focus:-ms-input-placeholder {
-  color: #686BB3;
+  color: #52567a;
 }
 
 .emotion-776:focus::placeholder {
-  color: #686BB3;
+  color: #52567a;
 }
 
 .emotion-776:not(:focus):placeholder-shown+label {
@@ -14319,7 +14319,7 @@ exports[`PaletteShowcase > should render correctly 1`] = `
 
 .emotion-776:focus-within+label {
   font-weight: 700!important;
-  color: #1552DD;
+  color: #194DCC;
 }
 
 .emotion-776:disabled {
@@ -14340,7 +14340,7 @@ exports[`PaletteShowcase > should render correctly 1`] = `
   -moz-transform: translate(0.1875rem, -95%) scale(0.8);
   -ms-transform: translate(0.1875rem, -95%) scale(0.8);
   transform: translate(0.1875rem, -95%) scale(0.8);
-  color: #686BB3;
+  color: #52567a;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;

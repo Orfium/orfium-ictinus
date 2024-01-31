@@ -10,7 +10,7 @@ exports[`MonthWrapper > should render correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 0.75rem;
-  padding: 1.25rem 1.25rem;
+  padding: 1.25rem;
 }
 
 .emotion-1 {
@@ -66,10 +66,10 @@ exports[`MonthWrapper > should render correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #1552DD;
+  color: #194DCC;
   width: 2.25rem;
   height: 2.25rem;
-  background-color: rgba(84,94,255,0);
+  background-color: rgba(200,206,255,0);
   padding: 0;
   border-radius: 2.25rem;
   border: none;
@@ -79,7 +79,7 @@ exports[`MonthWrapper > should render correctly 1`] = `
 }
 
 .emotion-4:focus-visible:not(:disabled) {
-  background-color: rgba(84,94,255,0.06);
+  background-color: rgba(200,206,255,0.20);
 }
 
 .emotion-4:disabled {
@@ -88,11 +88,11 @@ exports[`MonthWrapper > should render correctly 1`] = `
 }
 
 .emotion-4:hover:not(:disabled) {
-  background-color: rgba(84,94,255,0.06);
+  background-color: rgba(200,206,255,0.20);
 }
 
 .emotion-4:active:not(:disabled) {
-  background-color: rgba(84,94,255,0.14);
+  background-color: rgba(200,206,255,0.30);
 }
 
 .emotion-5 {
@@ -110,7 +110,7 @@ exports[`MonthWrapper > should render correctly 1`] = `
 }
 
 .emotion-6 path {
-  fill: #1552DD!important;
+  fill: #194DCC!important;
 }
 
 .emotion-7 {
@@ -170,9 +170,9 @@ exports[`MonthWrapper > should render correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #1552DD;
+  color: #194DCC;
   height: auto;
-  background-color: rgba(84,94,255,0);
+  background-color: rgba(200,206,255,0);
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   border: none;
@@ -182,7 +182,7 @@ exports[`MonthWrapper > should render correctly 1`] = `
 }
 
 .emotion-10:focus-visible:not(:disabled) {
-  background-color: rgba(84,94,255,0.06);
+  background-color: rgba(200,206,255,0.20);
 }
 
 .emotion-10:disabled {
@@ -191,11 +191,11 @@ exports[`MonthWrapper > should render correctly 1`] = `
 }
 
 .emotion-10:hover:not(:disabled) {
-  background-color: rgba(84,94,255,0.06);
+  background-color: rgba(200,206,255,0.20);
 }
 
 .emotion-10:active:not(:disabled) {
-  background-color: rgba(84,94,255,0.14);
+  background-color: rgba(200,206,255,0.30);
 }
 
 .emotion-11 {
@@ -251,6 +251,7 @@ exports[`MonthWrapper > should render correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  color: #52567a;
   width: 2.25rem;
   height: 2.25rem;
   font-size: 0.875rem;
@@ -269,7 +270,7 @@ exports[`MonthWrapper > should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  background: #ffffff;
+  background: rgba(200,206,255,0);
 }
 
 .emotion-32 {
@@ -277,12 +278,13 @@ exports[`MonthWrapper > should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
+  color: #111530;
   width: 2.25rem;
   opacity: 1;
 }
 
 .emotion-32:focus-visible {
-  background-color: #F5F5FF;
+  background-color: rgba(200,206,255,0.20);
   border-radius: 6.25rem;
 }
 
@@ -292,9 +294,10 @@ exports[`MonthWrapper > should render correctly 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
-  border: 0.0625rem solid rgba(84,94,255,0);
+  border: 0.0625rem solid rgba(200,206,255,0);
   width: 2.25rem;
   height: 2.25rem;
+  color: #111530;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -313,7 +316,7 @@ exports[`MonthWrapper > should render correctly 1`] = `
 
 .emotion-33:hover {
   border-radius: 6.25rem;
-  background: #F5F5FF;
+  background: rgba(200,206,255,0.20);
 }
 
 .emotion-36 {
@@ -321,13 +324,14 @@ exports[`MonthWrapper > should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
+  color: #111530;
   width: 2.25rem;
   font-weight: bold;
   opacity: 1;
 }
 
 .emotion-36:focus-visible {
-  background-color: #F5F5FF;
+  background-color: rgba(200,206,255,0.20);
   border-radius: 6.25rem;
 }
 
@@ -337,10 +341,11 @@ exports[`MonthWrapper > should render correctly 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
-  border: 0.0625rem solid #175bf5;
+  border: 0.0625rem solid #5E8DF8;
   border-radius: 6.25rem;
   width: 2.25rem;
   height: 2.25rem;
+  color: #111530;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -359,7 +364,7 @@ exports[`MonthWrapper > should render correctly 1`] = `
 
 .emotion-37:hover {
   border-radius: 6.25rem;
-  background: #F5F5FF;
+  background: rgba(200,206,255,0.20);
 }
 
 .emotion-38 {
@@ -370,13 +375,13 @@ exports[`MonthWrapper > should render correctly 1`] = `
   color: #ffffff;
   width: 2.25rem;
   opacity: 1;
-  background: #175bf5;
+  background: #194DCC;
   border-bottom-left-radius: 100%;
   border-top-left-radius: 100%;
 }
 
 .emotion-38:focus-visible {
-  background-color: #F5F5FF;
+  background-color: rgba(200,206,255,0.20);
   border-radius: 6.25rem;
 }
 
@@ -401,7 +406,7 @@ exports[`MonthWrapper > should render correctly 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
-  border: 0 solid rgba(84,94,255,0);
+  border: 0 solid rgba(200,206,255,0);
   border-radius: 6.25rem;
   width: 2.25rem;
   height: 2.25rem;
@@ -419,7 +424,7 @@ exports[`MonthWrapper > should render correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  background: #175bf5;
+  background: #194DCC;
 }
 
 .emotion-39:hover {
@@ -432,13 +437,14 @@ exports[`MonthWrapper > should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
+  color: #111530;
   width: 2.25rem;
   opacity: 1;
-  background: #F5F5FF;
+  background: rgba(200,206,255,0.20);
 }
 
 .emotion-40:focus-visible {
-  background-color: #F5F5FF;
+  background-color: rgba(200,206,255,0.20);
   border-radius: 6.25rem;
 }
 
@@ -448,9 +454,10 @@ exports[`MonthWrapper > should render correctly 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
-  border: 0.0625rem solid rgba(84,94,255,0);
+  border: 0.0625rem solid rgba(200,206,255,0);
   width: 2.25rem;
   height: 2.25rem;
+  color: #111530;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;

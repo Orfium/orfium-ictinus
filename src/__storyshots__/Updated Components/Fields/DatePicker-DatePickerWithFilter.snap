@@ -39,9 +39,9 @@
   padding: 0 1rem;
   max-width: 18.75rem;
   gap: 0.25rem;
-  background-color: #F5F5FF;
-  color: #1552DD;
-  border: 0.0625rem solid #b9cdfc;
+  background-color: rgba(200,206,255,0.30);
+  color: #194DCC;
+  border: 0.0625rem solid #DAE4FB;
   border-radius: 6.25rem;
   font-family: Roboto;
   font-weight: 500;
@@ -55,7 +55,7 @@
 
 .emotion-2:not([disabled]):focus-visible,
 .emotion-2:not([disabled]):hover {
-  background-color: #E7E8FF;
+  background-color: rgba(200,206,255,0.20);
 }
 
 .emotion-3 {
@@ -92,40 +92,7 @@
 }
 
 .emotion-6 path {
-  fill: #1552DD!important;
-}
-
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  height: 2.25rem;
-  padding: 0 1rem;
-  max-width: 18.75rem;
-  gap: 0.25rem;
-  background-color: #E7E8FF;
-  color: #1552DD;
-  border: 0.0625rem solid #b9cdfc;
-  border-radius: 6.25rem;
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-  -webkit-transition: background-color 0.1s ease-in-out;
-  transition: background-color 0.1s ease-in-out;
-  opacity: 1;
-}
-
-.emotion-8:not([disabled]):focus-visible,
-.emotion-8:not([disabled]):hover {
-  background-color: #D6D8FF;
+  fill: #194DCC!important;
 }
 
 .emotion-13 {
@@ -143,8 +110,8 @@
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   border-radius: 100%;
-  background: rgba(84,94,255,0.06);
-  box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
+  background: rgba(200,206,255,0.20);
+  box-shadow: 0px 0px 0px 8px rgba(200,206,255,0.20);
 }
 
 <div>
@@ -209,7 +176,7 @@
           >
             <div>
               <button
-                class="emotion-8"
+                class="emotion-2"
                 data-active="false"
                 data-testid="undefined_filter_button"
                 type="button"

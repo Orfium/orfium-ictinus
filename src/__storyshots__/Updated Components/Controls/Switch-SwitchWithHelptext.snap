@@ -18,7 +18,7 @@
 .emotion-0 .bar {
   width: 2.25rem;
   height: 0.5rem;
-  background: #D6D8FF;
+  background: rgba(200,206,255,0.45);
   position: absolute;
   border-radius: 6.25rem;
 }
@@ -37,7 +37,7 @@
   width: 1.25rem;
   height: 1.25rem;
   background: #ffffff;
-  border: 0.125rem solid #b9cdfc;
+  border: 0.125rem solid #DAE4FB;
   border-radius: 100%;
   -webkit-transition: all 200ms;
   transition: all 200ms;
@@ -47,7 +47,7 @@
 .emotion-0[data-focus-visible='true'] .indicator:before {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
+  box-shadow: 0px 0px 0px 8px rgba(200,206,255,0.20);
   border-radius: 100%;
 }
 
@@ -56,8 +56,8 @@
   -moz-transform: translateX(80%);
   -ms-transform: translateX(80%);
   transform: translateX(80%);
-  background: #175bf5;
-  border-color: #175bf5;
+  background: #175BF5;
+  border-color: #5E8DF8;
 }
 
 .emotion-0[data-disabled] {
@@ -82,7 +82,7 @@
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
-  color: #1B214F;
+  color: #111530;
 }
 
 .emotion-3 {
@@ -91,7 +91,7 @@
   line-height: 1rem;
   font-size: 0.75rem;
   letter-spacing: 0.015625rem;
-  color: #686BB3;
+  color: #52567a;
 }
 
 <div>

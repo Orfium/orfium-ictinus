@@ -13,10 +13,10 @@
 }
 
 .emotion-1 {
-  border: 0.0625rem solid #E7E8FF;
+  border: 0.0625rem solid rgba(200,206,255,0.70);
   border-radius: 0.25rem;
   width: undefinedpx;
-  box-shadow: 0rem 0.25rem 0.5rem 0rem #10306612;
+  box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(200,206,255,0.45);
 }
 
 .emotion-2 {
@@ -32,7 +32,7 @@
 }
 
 .emotion-3 {
-  background-color: rgba(84,94,255,0);
+  background-color: rgba(200,206,255,0);
   opacity: 1;
   cursor: initial;
 }
@@ -78,20 +78,20 @@
 }
 
 .emotion-3[role='option']:hover {
-  background-color: rgba(84,94,255,0.06);
+  background-color: rgba(200,206,255,0.20);
   cursor: pointer;
 }
 
 .emotion-3[data-focus-visible] {
-  background-color: rgba(84,94,255,0.06);
+  background-color: rgba(200,206,255,0.20);
 }
 
 .emotion-3[aria-selected='true'] {
-  background-color: rgba(84,94,255,0.06);
+  background-color: rgba(200,206,255,0.20);
 }
 
 .emotion-3[aria-selected='true']>div {
-  color: #1552DD;
+  color: #194DCC;
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -100,11 +100,11 @@
 }
 
 .emotion-3[aria-selected='true'][data-focus-visible] {
-  background-color: rgba(84,94,255,0.06);
+  background-color: rgba(200,206,255,0.20);
 }
 
 .emotion-4 {
-  color: #1B214F;
+  color: #111530;
   font-weight: initial;
   white-space: nowrap;
   overflow: hidden;
@@ -143,7 +143,7 @@
   line-height: 1rem;
   font-size: 0.75rem;
   letter-spacing: 0.015625rem;
-  color: #686BB3;
+  color: #52567a;
 }
 
 <div>

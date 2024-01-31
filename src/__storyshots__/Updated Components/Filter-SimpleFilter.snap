@@ -41,9 +41,9 @@
   padding: 0 1rem;
   max-width: 18.75rem;
   gap: 0.25rem;
-  background-color: #F5F5FF;
-  color: #1552DD;
-  border: 0.0625rem solid #b9cdfc;
+  background-color: rgba(200,206,255,0.30);
+  color: #194DCC;
+  border: 0.0625rem solid #DAE4FB;
   border-radius: 6.25rem;
   font-family: Roboto;
   font-weight: 500;
@@ -57,7 +57,7 @@
 
 .emotion-2:not([disabled]):focus-visible,
 .emotion-2:not([disabled]):hover {
-  background-color: #E7E8FF;
+  background-color: rgba(200,206,255,0.20);
 }
 
 .emotion-3 {
@@ -94,7 +94,7 @@
 }
 
 .emotion-6 path {
-  fill: #1552DD!important;
+  fill: #194DCC!important;
 }
 
 <div>

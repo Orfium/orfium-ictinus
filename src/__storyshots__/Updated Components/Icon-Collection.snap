@@ -45,7 +45,7 @@
   position: relative;
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: inset 0 0 0 0.0625rem #b9cdfc;
+  box-shadow: inset 0 0 0 0.0625rem #DAE4FB;
   border-radius: 6.25rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -53,22 +53,22 @@
   user-select: none;
   opacity: 1;
   cursor: text;
-  height: unset;
+  height: 2.25rem;
   min-width: unset;
-  background-color: #ffffff;
+  background-color: rgba(200,206,255,0.30);
   z-index: 1;
-  background: #F5F5FF;
+  background: #ffffff;
   width: 100%;
 }
 
 .emotion-4:hover {
-  background: #E7E8FF;
+  background: rgba(200,206,255,0.20);
 }
 
 .emotion-4:focus-within {
-  background: #E7E8FF;
+  background: rgba(200,206,255,0.20);
   outline: none;
-  box-shadow: inset 0 0 0 0.125rem #175bf5;
+  box-shadow: inset 0 0 0 0.125rem #5E8DF8;
 }
 
 .emotion-5 {
@@ -88,8 +88,10 @@
   width: -webkit-fill-available;
   width: -moz-available;
   width: fill-available;
-  padding: 0.5rem 1rem;
+  padding: 0 0 0 0.75rem;
   gap: 0.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 .emotion-5>div {
@@ -111,7 +113,7 @@
 }
 
 .emotion-7 path {
-  fill: #686BB3!important;
+  fill: #52567a!important;
 }
 
 .emotion-8 {
@@ -127,19 +129,19 @@
 }
 
 .emotion-8 input::-webkit-input-placeholder {
-  color: #686BB3;
+  color: #52567a;
 }
 
 .emotion-8 input::-moz-placeholder {
-  color: #686BB3;
+  color: #52567a;
 }
 
 .emotion-8 input:-ms-input-placeholder {
-  color: #686BB3;
+  color: #52567a;
 }
 
 .emotion-8 input::placeholder {
-  color: #686BB3;
+  color: #52567a;
 }
 
 .emotion-8 input::-webkit-search-cancel-button {
@@ -157,7 +159,7 @@
   letter-spacing: 0.015625rem;
   background: transparent;
   border: none;
-  color: #1B214F;
+  color: #111530;
   padding: 0;
   display: block;
   position: relative;
@@ -204,19 +206,19 @@
 }
 
 .emotion-9:focus::-webkit-input-placeholder {
-  color: #686BB3;
+  color: #52567a;
 }
 
 .emotion-9:focus::-moz-placeholder {
-  color: #686BB3;
+  color: #52567a;
 }
 
 .emotion-9:focus:-ms-input-placeholder {
-  color: #686BB3;
+  color: #52567a;
 }
 
 .emotion-9:focus::placeholder {
-  color: #686BB3;
+  color: #52567a;
 }
 
 .emotion-9:not(:focus):placeholder-shown+label {
@@ -234,7 +236,7 @@
 
 .emotion-9:focus-within+label {
   font-weight: 700!important;
-  color: #1552DD;
+  color: #194DCC;
 }
 
 .emotion-9:disabled {
@@ -259,7 +261,7 @@
   line-height: 2rem;
   font-size: 1.5rem;
   letter-spacing: 0rem;
-  color: #686BB3;
+  color: #52567a;
 }
 
 .emotion-12 {
@@ -280,7 +282,7 @@
   line-height: 1rem;
   font-size: 0.75rem;
   letter-spacing: 0.015625rem;
-  color: #686BB3;
+  color: #52567a;
 }
 
 <div>

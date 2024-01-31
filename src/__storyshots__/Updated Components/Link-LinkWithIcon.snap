@@ -18,10 +18,10 @@
   display: -ms-flexbox;
   display: flex;
   gap: 0.25rem;
-  color: #1552DD;
+  color: #194DCC;
   -webkit-text-decoration: none;
   text-decoration: none;
-  border: 0.25rem solid rgba(84,94,255,0);
+  border: 0.25rem solid rgba(200,206,255,0);
   opacity: 1;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -40,28 +40,28 @@
 }
 
 .emotion-1:hover {
-  color: #1B214F;
+  color: #111530;
 }
 
 .emotion-1:hover path {
-  fill: #1B214F!important;
+  fill: #111530!important;
 }
 
 .emotion-1:visited {
-  color: #6c28cc;
+  color: #5F33AC;
 }
 
 .emotion-1:visited path {
-  fill: #6c28cc!important;
+  fill: #5F33AC!important;
 }
 
 .emotion-1:focus-visible {
-  border: 0.25rem solid #9347ff;
+  border: 0.25rem solid #A566FF;
 }
 
 .emotion-2 {
-  width: 0.75rem;
-  height: 0.75rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -69,12 +69,12 @@
 }
 
 .emotion-3 {
-  width: 0.75rem;
-  height: 0.75rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .emotion-3 path {
-  fill: #1552DD!important;
+  fill: #194DCC!important;
 }
 
 .emotion-4 {
@@ -83,10 +83,10 @@
   display: -ms-flexbox;
   display: flex;
   gap: 0.25rem;
-  color: #1552DD;
+  color: #194DCC;
   -webkit-text-decoration: none;
   text-decoration: none;
-  border: 0.25rem solid rgba(84,94,255,0);
+  border: 0.25rem solid rgba(200,206,255,0);
   opacity: 1;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -105,23 +105,41 @@
 }
 
 .emotion-4:hover {
-  color: #1B214F;
+  color: #111530;
 }
 
 .emotion-4:hover path {
-  fill: #1B214F!important;
+  fill: #111530!important;
 }
 
 .emotion-4:visited {
-  color: #6c28cc;
+  color: #5F33AC;
 }
 
 .emotion-4:visited path {
-  fill: #6c28cc!important;
+  fill: #5F33AC!important;
 }
 
 .emotion-4:focus-visible {
-  border: 0.25rem solid #9347ff;
+  border: 0.25rem solid #A566FF;
+}
+
+.emotion-5 {
+  width: 1rem;
+  height: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-6 path {
+  fill: #194DCC!important;
 }
 
 .emotion-7 {
@@ -130,10 +148,10 @@
   display: -ms-flexbox;
   display: flex;
   gap: 0.25rem;
-  color: #1552DD;
+  color: #194DCC;
   -webkit-text-decoration: none;
   text-decoration: none;
-  border: 0.25rem solid rgba(84,94,255,0);
+  border: 0.25rem solid rgba(200,206,255,0);
   opacity: 1;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -152,23 +170,41 @@
 }
 
 .emotion-7:hover {
-  color: #1B214F;
+  color: #111530;
 }
 
 .emotion-7:hover path {
-  fill: #1B214F!important;
+  fill: #111530!important;
 }
 
 .emotion-7:visited {
-  color: #6c28cc;
+  color: #5F33AC;
 }
 
 .emotion-7:visited path {
-  fill: #6c28cc!important;
+  fill: #5F33AC!important;
 }
 
 .emotion-7:focus-visible {
-  border: 0.25rem solid #9347ff;
+  border: 0.25rem solid #A566FF;
+}
+
+.emotion-8 {
+  width: 0.75rem;
+  height: 0.75rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-9 {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-9 path {
+  fill: #194DCC!important;
 }
 
 <div>
@@ -216,11 +252,11 @@
           Link
         </span>
         <div
-          class="emotion-2"
+          class="emotion-5"
           data-testid="_link_icon"
         >
           <svg
-            class="emotion-3"
+            class="emotion-6"
             fill="none"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
@@ -245,11 +281,11 @@
           Link
         </span>
         <div
-          class="emotion-2"
+          class="emotion-8"
           data-testid="_link_icon"
         >
           <svg
-            class="emotion-3"
+            class="emotion-9"
             fill="none"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"

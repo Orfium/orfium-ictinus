@@ -32,7 +32,7 @@
   position: relative;
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #b9cdfc;
+  box-shadow: 0 0 0 0.0625rem #DAE4FB;
   border-radius: 0.25rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -42,16 +42,16 @@
   cursor: text;
   height: 3.25rem;
   min-width: 8.75rem;
-  background-color: #ffffff;
+  background-color: rgba(200,206,255,0.30);
 }
 
 .emotion-3:hover {
-  background-color: #F5F5FF;
+  background-color: rgba(200,206,255,0.20);
 }
 
 .emotion-3:focus-within {
-  box-shadow: 0 0 0 0.125rem #175bf5;
-  background-color: #F5F5FF;
+  box-shadow: 0 0 0 0.125rem #5E8DF8;
+  background-color: rgba(200,206,255,0.30);
 }
 
 .emotion-4 {
@@ -96,7 +96,7 @@
   letter-spacing: 0.015625rem;
   background: transparent;
   border: none;
-  color: #1B214F;
+  color: #111530;
   padding: 0;
   display: block;
   position: relative;
@@ -158,7 +158,7 @@
 
 .emotion-6:focus-within+label {
   font-weight: 700!important;
-  color: #1552DD;
+  color: #194DCC;
 }
 
 .emotion-6:disabled {
@@ -179,7 +179,7 @@
   -moz-transform: translate(0.1875rem, 0);
   -ms-transform: translate(0.1875rem, 0);
   transform: translate(0.1875rem, 0);
-  color: #686BB3;
+  color: #52567a;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -253,7 +253,7 @@
 }
 
 .emotion-11 path {
-  fill: #686BB3!important;
+  fill: #52567a!important;
 }
 
 <div>

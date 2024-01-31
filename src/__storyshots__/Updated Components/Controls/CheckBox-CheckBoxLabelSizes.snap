@@ -44,7 +44,7 @@
   -ms-flex-align: center;
   align-items: center;
   box-sizing: border-box;
-  border: 0.125rem solid #b9cdfc;
+  border: 0.125rem solid #DAE4FB;
   border-radius: 0.25rem;
 }
 
@@ -57,8 +57,8 @@
 .emotion-2[data-focus-visible='true'] {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  background: rgba(84,94,255,0.06);
-  box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
+  background: rgba(200,206,255,0.20);
+  box-shadow: 0px 0px 0px 8px rgba(200,206,255,0.20);
   border-radius: 100%;
 }
 
@@ -66,8 +66,8 @@
 .emotion-2[data-indeterminate='true']>div {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  border-color: #175bf5;
-  background: #175bf5;
+  border-color: rgba(200,206,255,0);
+  background: #175BF5;
 }
 
 .emotion-2[data-selected='true'] svg,
@@ -123,7 +123,7 @@
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
-  color: #1B214F;
+  color: #111530;
 }
 
 .emotion-7 {
@@ -146,7 +146,7 @@
   line-height: 1.75rem;
   font-size: 1.25rem;
   letter-spacing: 0rem;
-  color: #1B214F;
+  color: #111530;
 }
 
 <div>
