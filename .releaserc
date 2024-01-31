@@ -1,5 +1,5 @@
 {
-    "branches": [{name: 'v3.x', range: '3.x', channel: '3.x'}, "master", { name: "next", prerelease: true }],
+    "branches": [{name: 'v4.x', range: '4.x', channel: '4.x'}, "master", { name: "next", prerelease: true }],
     "plugins": [
       ["@semantic-release/commit-analyzer", {
         "preset": "angular",
