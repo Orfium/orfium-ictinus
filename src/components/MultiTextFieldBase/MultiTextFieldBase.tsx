@@ -7,18 +7,18 @@ import type { TestProps } from 'utils/types';
 
 import useMultiTextFieldBaseUtils from './hooks';
 import {
-  chipContent,
-  chipStyle,
+  tagContent,
+  tagStyle,
   inputContainer,
   inputOverrides,
   progressIndicatorStyles,
   rightIconsContainer,
   textInputBaseOverrides,
 } from './MultiTextFieldBase.style';
-import Chip from 'components/Chip';
 import Label from 'components/Label';
 import ProgressIndicator from 'components/ProgressIndicator';
 import type { SelectOption } from 'components/Select';
+import Tag from 'components/Tag';
 import type { InputProps, TextFieldProps } from 'components/TextField/TextField';
 import TextInputBase from 'components/TextInputBase';
 import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
@@ -30,7 +30,7 @@ export type Props = {
   onInput?: React.EventHandler<any>;
   /** Value of the `input` element */
   value?: string | number;
-  /** Callback fired when the Delete button of each Chip is clicked */
+  /** Callback fired when the Delete button of each Tag is clicked */
   onOptionDelete: (option?: SelectOption | string) => void;
   /** Callback fired when the Delete button of the whole MultiSelect is clicked */
   onClearAllOptions: () => void;
@@ -88,32 +88,31 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
         onKeyDown,
       });
 
-    const chips = useMemo(
+    const tags = useMemo(
       () => (
         <>
           {selectedOptions?.map((option: any, index: number) => (
             <span
-              key={generateUniqueKey('chip' + (typeof option === 'string' ? option : option.label))}
-              css={chipStyle()}
+              key={generateUniqueKey('tag' + (typeof option === 'string' ? option : option.label))}
+              css={tagStyle()}
             >
-              <Chip
+              <Tag
                 onClear={
                   !(status?.type === 'read-only' || isDisabled)
                     ? () => onOptionDelete(option)
                     : undefined
                 }
-                fill="lightGrey"
-                dataTestId={`chip_${index}`}
+                dataTestPrefixId={`tag_${index}`}
               >
                 <div
                   title={typeof option === 'string' ? option : option.label}
-                  css={chipContent({
+                  css={tagContent({
                     maxWidth: TextfieldRef.current?.getBoundingClientRect().width,
                   })}
                 >
                   {typeof option === 'string' ? option : option.label}
                 </div>
-              </Chip>
+              </Tag>
             </span>
           ))}
         </>
@@ -134,7 +133,7 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
           )}
         >
           <div css={inputContainer()}>
-            {chips}
+            {tags}
             <input
               readOnly={isLocked || isReadOnly}
               onKeyDown={handleKeyDown(last<SelectOption | string>(selectedOptions))}

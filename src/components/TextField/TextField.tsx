@@ -38,9 +38,9 @@ export type TextFieldProps = {
   isReadOnly?: boolean;
   /** [For MultiTextField] If true, the user can add multiple tags as an input */
   isMulti?: boolean;
-  /** [For MultiTextField] The values of the tags (chips) */
+  /** [For MultiTextField] The values of the tags */
   tags?: string[];
-  /** [For MultiTextField] A callback for when a Chip value is deleted */
+  /** [For MultiTextField] A callback for when a Tag value is deleted */
   onMultiValueDelete?: (value: string) => void;
   /** [For MultiTextField] A callback for when all values are deleted  */
   onMultiValueClearAll?: () => void;

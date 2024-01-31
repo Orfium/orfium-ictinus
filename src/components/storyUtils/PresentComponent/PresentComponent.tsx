@@ -4,7 +4,7 @@ import Typography from 'components/Typography';
 
 type PresentComponentProps = {
   name: string;
-  width?: string;
+  width?: string | number;
   isVertical?: boolean;
 };
 

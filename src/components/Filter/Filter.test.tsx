@@ -114,7 +114,7 @@ describe('Single Filter', () => {
 describe('Multi Filter', () => {
   let selectInput: HTMLInputElement;
   let filterLabel: HTMLElement;
-  let chips: HTMLElement[];
+  let tags: HTMLElement[];
   let button: HTMLElement;
   let moreOptionsTag: HTMLDivElement;
 
@@ -142,12 +142,12 @@ describe('Multi Filter', () => {
     vi.clearAllMocks();
   });
 
-  it('renders the Chips and changes label when options are clicked', async () => {
+  it('renders the Tags and changes label when options are clicked', async () => {
     await selectDropdownOption(selectInput, options[0].label);
     await selectDropdownOption(selectInput, options[1].label);
 
-    expect(screen.getByTestId('chip-chip_0')).toBeVisible();
-    expect(screen.getByTestId('chip-chip_1')).toBeVisible();
+    expect(screen.getByTestId('tag_0_tag_container')).toBeVisible();
+    expect(screen.getByTestId('tag_1_tag_container')).toBeVisible();
 
     await userEvent.click(button);
 
@@ -169,8 +169,8 @@ describe('Multi Filter', () => {
     await selectDropdownOption(selectInput, options[0].label);
     await selectDropdownOption(selectInput, options[1].label);
 
-    await userEvent.click(screen.getByTestId('chip-delete-chip_1'));
-    await userEvent.click(screen.getByTestId('chip-delete-chip_0'));
+    await userEvent.click(screen.getByTestId('tag_1_tag_suffix'));
+    await userEvent.click(screen.getByTestId('tag_0_tag_suffix'));
 
     await userEvent.click(selectInput);
 
@@ -188,7 +188,7 @@ describe('Multi Filter', () => {
 
     await userEvent.click(screen.getByTestId('select-right-icon'));
 
-    expect(screen.queryByTestId('chip-chip_0')).not.toBeInTheDocument();
+    expect(screen.queryByTestId('tag_0_tag_container')).not.toBeInTheDocument();
 
     filterLabel = screen.getByTestId('ictinus_filter_filter_label');
     expect(filterLabel).toHaveTextContent(`Label: ${defaultFilter.label}`);
@@ -197,9 +197,9 @@ describe('Multi Filter', () => {
   it('selects all options and changes label when Select All is clicked', async () => {
     await userEvent.click(screen.getByTestId(`ictinus_list_item_${SELECT_ALL_OPTION.value}`));
 
-    chips = await screen.findAllByTestId(/chip-chip_/);
+    tags = await screen.findAllByTestId(/tag_container/);
 
-    expect(chips.length).toEqual(options.length);
+    expect(tags.length).toEqual(options.length);
 
     await userEvent.click(selectInput);
 

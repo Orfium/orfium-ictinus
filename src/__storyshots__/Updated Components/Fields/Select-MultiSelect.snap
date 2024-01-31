@@ -122,54 +122,42 @@
   margin-right: 0.25rem;
 }
 
-.emotion-7>div {
-  height: 1.25rem;
-  border-radius: 0.25rem;
-}
-
 .emotion-8 {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   height: 1.5rem;
-  border-radius: 1.5rem;
-  font-size: 0.75rem;
-  font-weight: 500;
-  line-height: normal;
-  box-sizing: border-box;
-  padding: 0.25rem 0.5rem;
-  background-color: #f3f5f8;
-  color: black;
-  border: 0.0625rem solid #7a8bab;
-  cursor: auto;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  box-sizing: border-box;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  cursor: auto;
+  background: #ffffff;
+  color: #1249C4;
+  border: 0.0625rem solid;
+  border-color: #b9cdfc;
+  border-radius: 0.25rem;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
 }
 
-.emotion-8:hover:not(:disabled) {
-  background: #e7ebf2;
-}
-
-.emotion-8:focus-visible:not(:disabled) {
-  outline: none;
-}
-
-.emotion-8>:not(:last-child) {
-  margin-right: 0.25rem;
+.emotion-8:focus-visible {
+  background: #F5F5FF;
+  border-color: #175bf5;
 }
 
 .emotion-9 {
@@ -180,12 +168,31 @@
 }
 
 .emotion-10 {
+  width: 1rem;
+  height: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   cursor: pointer;
 }
 
+.emotion-10:hover {
+  background: rgba(84,94,255,0.06);
+  border-radius: 6.25rem;
+}
+
 .emotion-11 {
-  width: 0.875rem;
-  height: 0.875rem;
+  width: 1rem;
+  height: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -194,12 +201,12 @@
 }
 
 .emotion-12 {
-  width: 0.875rem;
-  height: 0.875rem;
+  width: 1rem;
+  height: 1rem;
 }
 
 .emotion-12 path {
-  fill: #0f0f17!important;
+  fill: #1249C4!important;
 }
 
 .emotion-43 {
@@ -520,27 +527,26 @@
                       class="emotion-7"
                     >
                       <div
-                        aria-readonly="true"
+                        aria-label="[object Object]"
+                        aria-selected="false"
                         class="emotion-8"
-                        data-testid="chip-chip_0"
+                        data-testid="tag_0_tag_container"
+                        tabindex="0"
                       >
                         <div
-                          aria-label="chip__00"
+                          class="emotion-9"
+                          title="Strawberry"
                         >
-                          <div
-                            class="emotion-9"
-                            title="Strawberry"
-                          >
-                            Strawberry
-                          </div>
+                          Strawberry
                         </div>
                         <div
-                          aria-hidden="false"
+                          aria-hidden="true"
                           class="emotion-10"
+                          tabindex="-1"
                         >
                           <div
                             class="emotion-11"
-                            data-testid="chip-delete-chip_0"
+                            data-testid="tag_0_tag_suffix"
                             tabindex="0"
                           >
                             <svg
@@ -562,27 +568,26 @@
                       class="emotion-7"
                     >
                       <div
-                        aria-readonly="true"
+                        aria-label="[object Object]"
+                        aria-selected="false"
                         class="emotion-8"
-                        data-testid="chip-chip_1"
+                        data-testid="tag_1_tag_container"
+                        tabindex="0"
                       >
                         <div
-                          aria-label="chip__00"
+                          class="emotion-9"
+                          title="Banana"
                         >
-                          <div
-                            class="emotion-9"
-                            title="Banana"
-                          >
-                            Banana
-                          </div>
+                          Banana
                         </div>
                         <div
-                          aria-hidden="false"
+                          aria-hidden="true"
                           class="emotion-10"
+                          tabindex="-1"
                         >
                           <div
                             class="emotion-11"
-                            data-testid="chip-delete-chip_1"
+                            data-testid="tag_1_tag_suffix"
                             tabindex="0"
                           >
                             <svg
@@ -604,27 +609,26 @@
                       class="emotion-7"
                     >
                       <div
-                        aria-readonly="true"
+                        aria-label="[object Object]"
+                        aria-selected="false"
                         class="emotion-8"
-                        data-testid="chip-chip_2"
+                        data-testid="tag_2_tag_container"
+                        tabindex="0"
                       >
                         <div
-                          aria-label="chip__00"
+                          class="emotion-9"
+                          title="Citrus"
                         >
-                          <div
-                            class="emotion-9"
-                            title="Citrus"
-                          >
-                            Citrus
-                          </div>
+                          Citrus
                         </div>
                         <div
-                          aria-hidden="false"
+                          aria-hidden="true"
                           class="emotion-10"
+                          tabindex="-1"
                         >
                           <div
                             class="emotion-11"
-                            data-testid="chip-delete-chip_2"
+                            data-testid="tag_2_tag_suffix"
                             tabindex="0"
                           >
                             <svg
@@ -646,27 +650,26 @@
                       class="emotion-7"
                     >
                       <div
-                        aria-readonly="true"
+                        aria-label="[object Object]"
+                        aria-selected="false"
                         class="emotion-8"
-                        data-testid="chip-chip_3"
+                        data-testid="tag_3_tag_container"
+                        tabindex="0"
                       >
                         <div
-                          aria-label="chip__00"
+                          class="emotion-9"
+                          title="Sorbet"
                         >
-                          <div
-                            class="emotion-9"
-                            title="Sorbet"
-                          >
-                            Sorbet
-                          </div>
+                          Sorbet
                         </div>
                         <div
-                          aria-hidden="false"
+                          aria-hidden="true"
                           class="emotion-10"
+                          tabindex="-1"
                         >
                           <div
                             class="emotion-11"
-                            data-testid="chip-delete-chip_3"
+                            data-testid="tag_3_tag_suffix"
                             tabindex="0"
                           >
                             <svg
@@ -688,27 +691,26 @@
                       class="emotion-7"
                     >
                       <div
-                        aria-readonly="true"
+                        aria-label="[object Object]"
+                        aria-selected="false"
                         class="emotion-8"
-                        data-testid="chip-chip_4"
+                        data-testid="tag_4_tag_container"
+                        tabindex="0"
                       >
                         <div
-                          aria-label="chip__00"
+                          class="emotion-9"
+                          title="Cookie Dough"
                         >
-                          <div
-                            class="emotion-9"
-                            title="Cookie Dough"
-                          >
-                            Cookie Dough
-                          </div>
+                          Cookie Dough
                         </div>
                         <div
-                          aria-hidden="false"
+                          aria-hidden="true"
                           class="emotion-10"
+                          tabindex="-1"
                         >
                           <div
                             class="emotion-11"
-                            data-testid="chip-delete-chip_4"
+                            data-testid="tag_4_tag_suffix"
                             tabindex="0"
                           >
                             <svg
@@ -730,27 +732,26 @@
                       class="emotion-7"
                     >
                       <div
-                        aria-readonly="true"
+                        aria-label="[object Object]"
+                        aria-selected="false"
                         class="emotion-8"
-                        data-testid="chip-chip_5"
+                        data-testid="tag_5_tag_container"
+                        tabindex="0"
                       >
                         <div
-                          aria-label="chip__00"
+                          class="emotion-9"
+                          title="Buttered Pecan"
                         >
-                          <div
-                            class="emotion-9"
-                            title="Buttered Pecan"
-                          >
-                            Buttered Pecan
-                          </div>
+                          Buttered Pecan
                         </div>
                         <div
-                          aria-hidden="false"
+                          aria-hidden="true"
                           class="emotion-10"
+                          tabindex="-1"
                         >
                           <div
                             class="emotion-11"
-                            data-testid="chip-delete-chip_5"
+                            data-testid="tag_5_tag_suffix"
                             tabindex="0"
                           >
                             <svg
