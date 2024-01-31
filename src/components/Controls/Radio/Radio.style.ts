@@ -65,7 +65,7 @@ export const radioContainerStyles =
             border-radius: 50%;
             width: ${tokens('radio.size.circle')};
             height: ${tokens('radio.size.circle')};
-            background: ${tokens('radio.borderColor.active')};
+            background: ${tokens('radio.backgroundColor.active')};
             ${placement === 'right' ? 'left' : 'right'}: 4px;
             animation: circle 0.15s ease-in-out;
           }

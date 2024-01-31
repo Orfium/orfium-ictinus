@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 
 import type { ButtonBaseProps } from './ButtonBase';
 import type { Theme } from '../../theme';
-import { getButtonTokens, getTextButtonTokens } from '../Button/Button.tokens';
+import { getButtonTokens } from '../Button/Button.tokens';
 import { generateStylesFromTokens } from 'components/Typography/utils';
 
 export const buttonWrapperStyle = ({
@@ -24,7 +24,6 @@ export const buttonBaseStyle =
   }: Omit<ButtonBaseProps, 'htmlType' | 'ref'>) =>
   (theme: Theme): SerializedStyles => {
     const tokens = getButtonTokens(theme);
-    const textButtonTokens = getTextButtonTokens(theme);
 
     const getButtonWidth = () => {
       if (isBlock) return '100%';
@@ -45,8 +44,8 @@ export const buttonBaseStyle =
     const getButtonPadding = () => {
       if (isIconButton) return 0;
 
-      const paddingVertical = size === 'normal' ? textButtonTokens('normal.paddingVertical') : 0;
-      const paddingHorizontal = textButtonTokens(`${size}.paddingHorizontal` as const);
+      const paddingVertical = size === 'normal' ? tokens('normal.paddingVertical') : 0;
+      const paddingHorizontal = tokens(`${size}.paddingHorizontal` as const);
 
       return `${paddingVertical} ${paddingHorizontal}`;
     };

@@ -92,7 +92,7 @@ const FilterSearchField = ({
           isLoading={isLoading}
           sx={{
             textField: { paddingTop: '12px', paddingBottom: '12px', width: '100%' },
-            wrapper: { boxShadow: 'none', borderRadius: 0 },
+            wrapper: { boxShadow: 'none', borderRadius: 0, background: 'white' },
           }}
         />
       )}

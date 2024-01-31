@@ -77,7 +77,7 @@ export const getSX =
 
     return {
       wrapper: {
-        height: 'unset',
+        height: tokens('height.normal'),
         ...(hasFilter && { minWidth: rem(240) }),
         zIndex: 1,
         borderRadius: hasFilter
@@ -99,7 +99,8 @@ export const getSX =
       },
       textField: {
         gap: rem(8),
-        padding: `${tokens('paddingVertical')} ${tokens('paddingHorizontalRounded')}`,
+        paddingRight: tokens('paddingHorizontalRounded'),
+        paddingLeft: tokens('paddingHorizontalRounded'),
         ...sx?.textField,
       },
     };

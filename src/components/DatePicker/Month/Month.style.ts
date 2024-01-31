@@ -2,7 +2,7 @@ import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import type { Theme } from 'theme';
 
-import { getDateTokens } from '../DatePicker.tokens';
+import { getDatePickerTokens } from '../DatePicker.tokens';
 
 export const weekDaysWrapperStyle = (): SerializedStyles =>
   css`
@@ -13,15 +13,15 @@ export const weekDaysWrapperStyle = (): SerializedStyles =>
 export const weekDayStyle =
   () =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getDateTokens(theme);
+    const tokens = getDatePickerTokens(theme);
 
     return css`
       display: flex;
       align-items: center;
       justify-content: center;
-      color: ${tokens('textColor.weekday')};
-      width: ${tokens('size')};
-      height: ${tokens('size')};
+      color: ${tokens('date.textColor.weekday')};
+      width: ${tokens('dateSize')};
+      height: ${tokens('dateSize')};
       font-size: ${theme.globals.typography.fontSize.get('3')};
       line-height: ${theme.globals.typography.lineHeight.get('4')};
       text-align: center;
@@ -32,7 +32,7 @@ export const weekDayStyle =
 export const datesWrapperStyle =
   () =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getDateTokens(theme);
+    const tokens = getDatePickerTokens(theme);
 
     return css`
       border-collapse: separate;

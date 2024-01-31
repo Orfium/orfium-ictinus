@@ -3,19 +3,19 @@ import { css } from '@emotion/react';
 import type { Theme } from 'theme';
 
 import { flex } from '../../../theme/functions';
-import { getDatePickerTokens, getDateTokens } from '../DatePicker.tokens';
+import { getDatePickerTokens } from '../DatePicker.tokens';
 import { getListItemTokens } from 'components/List/List.tokens';
 import { label02 } from 'components/Typography/Typography.config.styles';
 
 export const overlayWrapperStyle =
   () =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getDateTokens(theme);
+    const tokens = getDatePickerTokens(theme);
 
     return css`
       ${flex};
-      border: ${tokens('borderWidth')} solid ${tokens('container.borderColor')};
-      border-radius: ${tokens('container.borderRadius')};
+      border: ${tokens('date.borderWidth')} solid ${tokens('container.borderColor')};
+      border-radius: ${tokens('date.container.borderRadius')};
       width: fit-content;
     `;
   };
@@ -23,10 +23,10 @@ export const overlayWrapperStyle =
 export const optionsWrapperStyle =
   () =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getDateTokens(theme);
+    const tokens = getDatePickerTokens(theme);
 
     return css`
-      border-right: ${tokens('borderWidth')} solid ${tokens('container.borderColor')};
+      border-right: ${tokens('date.borderWidth')} solid ${tokens('container.borderColor')};
     `;
   };
 
@@ -72,16 +72,15 @@ export const monthsWrapperStyle = (): SerializedStyles => {
 export const buttonsWrapperStyle =
   () =>
   (theme: Theme): SerializedStyles => {
-    const dateTokens = getDateTokens(theme);
-    const datePickerTokens = getDatePickerTokens(theme);
+    const tokens = getDatePickerTokens(theme);
 
     return css`
       display: flex;
       justify-content: flex-end;
-      height: ${datePickerTokens('actionsContainer')};
+      height: ${tokens('actionsContainer')};
       align-items: center;
-      gap: ${dateTokens('actionsSpacing')};
-      padding: 0 ${dateTokens('horizontalPadding')};
-      border-top: ${dateTokens('borderWidth')} solid ${dateTokens('container.borderColor')};
+      gap: ${tokens('actionsSpacing')};
+      padding: 0 ${tokens('padding')};
+      border-top: ${tokens('date.borderWidth')} solid ${tokens('container.borderColor')};
     `;
   };
