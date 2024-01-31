@@ -9,13 +9,7 @@ export default {
 
 export const SettingUpAButtonExample = {
   render: () => (
-    <ThemeProvider
-      theme={{
-        palette: {
-          primary: '#2D2D46',
-        },
-      }}
-    >
+    <ThemeProvider>
       <Button>Hello world</Button>
     </ThemeProvider>
   ),

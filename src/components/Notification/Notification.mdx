@@ -8,7 +8,23 @@ import * as NotificationStories from './Notification.stories';
 
 <Meta of={NotificationStories} />
 
-# Notification
+<SectionHeader title={'Notifications'} isPending />
+
+- [Overview](#overview)
+- [Inline Notification](#inline-notification)
+- [Banner Notification](#banner-notification)
+- [Toast Notification](#toast-notification)
+- [Snackbar Notification](#snackbar-notification)
+
+## Overview
+
+the “Notification” group contains all elements that can be used to inform the user on the outcome of an action they previously took.
+Notification variants include:
+
+1. Inline: For use within forms and content containers. Use in close proximity to the element they are referring to
+2. Banner: For use above all content containers - use for more important, global notifications that need to appear above all content
+3. Toast: Use interchangeably as needed when conveying feedback on actions the user took that utilize immediate feedback within the same page
+4. Snackbar: Highly disruptive notification variant, used to help user confirm they want to do a -usually- destructive action (e.g. “Are you sure you want to leave?”)
 
 ## Inline Notification
 
