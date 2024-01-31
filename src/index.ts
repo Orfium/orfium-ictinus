@@ -37,8 +37,6 @@ export * from './components/Chart/DonutChart';
 
 export { CheckBox } from './components/Controls';
 export * from './components/Controls/CheckBox';
-export { default as Chip } from './components/Chip';
-export * from './components/Chip';
 export { default as DatePicker } from './components/DatePicker';
 export * from './components/DatePicker';
 export { default as Navigation } from './components/Navigation';
