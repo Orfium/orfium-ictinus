@@ -48,22 +48,6 @@ const LoadingButtonShowcase: React.FCC = () => {
             Danger
           </Button>
         </div>
-        <div css={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '24px' }}>
-          <Button type="inverted" isLoading>
-            Inverted
-          </Button>
-          <Button size="compact" type="inverted" isLoading>
-            Inverted
-          </Button>
-        </div>
-        <div css={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '24px' }}>
-          <Button type="invertedAlt" isLoading>
-            InvertedAlt
-          </Button>
-          <Button size="compact" type="invertedAlt" isLoading>
-            InvertedAlt
-          </Button>
-        </div>
       </div>
       <div>Press the Button below to trigger loading for 4s</div>
       <div css={{ display: 'flex', gap: '32px', alignItems: 'flex-end' }}>

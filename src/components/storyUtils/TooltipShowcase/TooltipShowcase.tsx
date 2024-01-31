@@ -24,7 +24,7 @@ const TooltipShowcase = ({
         isInteractive
         isInverted={isInverted}
       >
-        <Button type={isInverted ? 'inverted' : 'primary'}>{buttonText}</Button>
+        <Button>{buttonText}</Button>
       </Tooltip>
     </div>
   );

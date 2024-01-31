@@ -42,7 +42,7 @@ export const TextTooltip = {
             return (
               <div style={{ padding: '16px' }}>
                 <Tooltip content={'This is a Tooltip'} placement={'right'} isInverted>
-                  <Button type="inverted">Hover here</Button>
+                  <Button>Hover here</Button>
                 </Tooltip>
               </div>
             );
