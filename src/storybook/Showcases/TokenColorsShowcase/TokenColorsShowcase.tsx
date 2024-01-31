@@ -1,17 +1,14 @@
 import { css } from '@emotion/react';
+import useTheme from 'hooks/useTheme';
 import { get } from 'lodash';
-import type { FCC} from 'react';
-import React, { useCallback } from 'react';
-import globalColorsFigma from 'theme/globals/constants/colors';
-import colorsFigma from 'theme/tokens/semantic/variables/colors';
+import type { FCC } from 'react';
+import React from 'react';
+import globalColors from 'theme/globals/constants/colors';
+import semColors from 'theme/tokens/semantic/variables/colors';
 import type { DotKeys } from 'theme/tokens/utils';
 
-import {
-  colorStyle,
-  descriptionStyle,
-  stateWrapperStyle,
-  typeWrapperStyle,
-} from './TokenColorsShowcase.style';
+import { colorStyle, descriptionStyle, typeWrapperStyle } from './TokenColorsShowcase.style';
+import { getColors } from './utils';
 import Card from 'components/Card';
 import Typography from 'components/Typography';
 
@@ -25,103 +22,80 @@ type Props = {
 const TokenColorsShowcase: FCC<Props> = ({ type = 'globals' }) => {
   const isGlobal = type === 'globals';
 
-  const states = isGlobal
-    ? ['1', '2', '3', '4', '5']
-    : ['lightest', 'light', 'main', 'dark', 'darkest'];
+  const colorsObjFigma = isGlobal ? globalColors : semColors;
 
-  const colorKeys = isGlobal
-    ? [
-        'blue',
-        'tinted',
-        'transparent.default',
-        'transparent.alt',
-        'teal',
-        'purple',
-        'orange',
-        'red',
-        'neutral',
-        'gradient',
-      ]
-    : ['primary', 'secondary', 'tertiary', 'inverted', 'warning', 'upsell', 'error'];
+  const colorsObj = getColors(colorsObjFigma);
 
-  const colorsObj = isGlobal ? globalColorsFigma : colorsFigma.palette;
+  const theme = useTheme();
 
-  const colors = colorKeys.map((val) => {
-    return { key: val, ...get(colorsObj, val) };
-  });
+  const renderDescription = (category: string, path: string) => {
+    const fullPath = `${category}.${path}`;
 
-  const renderDescription = useCallback(
-    (key: string, state: string) => {
-      const colorKey = key.split('.');
-      colorKey.push(state);
-
-      return (
-        <div css={descriptionStyle}>
-          <Typography variant="body02" type="secondary">
-            {get(colorsObj, colorKey).description}
-          </Typography>
+    return (
+      <div css={descriptionStyle}>
+        <Typography variant="body02" type="secondary">
+          {get(colorsObjFigma, fullPath, { value: '', description: '' }).description}
+        </Typography>
+        <div>
           <Typography variant="label03" component="span" type="active">
-            ${`palette.${key}.${state}`}
+            ${fullPath}
           </Typography>
           {' = '}
           <Typography variant="label03" component="span" type="active">
-            {get(colorsObj, colorKey).value}
+            {get(colorsObjFigma, fullPath, { value: '', description: '' }).value}
           </Typography>
+          {!isGlobal && (
+            <>
+              {' = '}
+              <Typography variant="label03" component="span" type="active">
+                {theme.tokens.colors.get(`${category}.${path}` as DotKeys<typeof semColors>)}
+              </Typography>
+            </>
+          )}
         </div>
-      );
-    },
-    [colorsObj]
+      </div>
+    );
+  };
+
+  const colorTokens = ({ color, variant }) => (
+    <div
+      key={`${color}_${variant}`}
+      css={css`
+        display: flex;
+        padding: 24px 0;
+      `}
+    >
+      <div
+        css={(theme) => css`
+          ${colorStyle(theme)};
+          background: ${isGlobal
+            ? theme.globals.colors.get(
+                `${color}.${colorsObj[color][variant]}` as DotKeys<typeof globalColors>
+              )
+            : theme.tokens.colors.get(
+                `${color}.${colorsObj[color][variant]}` as DotKeys<typeof semColors>
+              )};
+        `}
+      />
+      <div>
+        <Typography css={{ margin: '0 0 16px 0' }} isBold>
+          {colorsObj[color][variant]}
+        </Typography>
+        <div css={descriptionStyle}>{renderDescription(color, colorsObj[color][variant])}</div>
+      </div>
+    </div>
   );
 
   return (
-    <div css={{}}>
+    <div>
       <Card elevated="03" radius="4">
-        {colors.map((type) => (
-          <div key={type.key} css={typeWrapperStyle}>
-            <div
-              css={css`
-                padding: 15px;
-              `}
-            >
-              <Typography variant="headline04" type="secondary">
-                {type.key}
-              </Typography>
-              <div css={stateWrapperStyle}>
-                {states
-                  .filter((state) => {
-                    const colorKey = type.key.split('.');
-                    colorKey.push(state);
+        {Object.keys(colorsObj).map((color) => (
+          <div key={`${color}_section`} css={typeWrapperStyle()}>
+            <Typography variant="headline04" type="secondary" id={color}>
+              {color}
+            </Typography>
 
-                    return get(colorsObj, colorKey);
-                  })
-                  .map((state) => (
-                    <div
-                      key={`palette.${type.key}.${state}`}
-                      css={css`
-                        display: flex;
-                        margin: 15px 0;
-                      `}
-                    >
-                      <div
-                        css={(theme) => css`
-                          ${colorStyle(theme)};
-                          background: ${isGlobal
-                            ? theme.globals.colors.get(
-                                `${type.key}.${state}` as DotKeys<typeof globalColorsFigma>
-                              )
-                            : theme.tokens.colors.get(
-                                `palette.${type.key}.${state}` as DotKeys<typeof colorsFigma>
-                              )};
-                        `}
-                      />
-                      <div>
-                        <Typography isBold>{state}</Typography>
-                        <div css={descriptionStyle}>{renderDescription(type.key, state)}</div>
-                      </div>
-                    </div>
-                  ))}
-              </div>
-            </div>
+            {Object.keys(colorsObj[color]).map((variant) => colorTokens({ color, variant }))}
           </div>
         ))}
       </Card>
