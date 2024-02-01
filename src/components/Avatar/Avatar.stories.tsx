@@ -94,7 +94,7 @@ export const AvatarWithColor = {
     </>
   ),
 
-  name: 'Avatar with letter',
+  name: 'Avatar with color',
 };
 
 export const AvatarWithSrc = {
