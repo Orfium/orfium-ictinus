@@ -177,6 +177,39 @@
   letter-spacing: 0.015625rem;
 }
 
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 1.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  box-sizing: border-box;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  cursor: auto;
+  background: #FFF0D1;
+  color: #8B391D;
+  border: 0.0625rem solid;
+  border-color: #FFC95C;
+  border-radius: 0.25rem;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
 <div>
   <div
     class="emotion-0"
@@ -240,6 +273,19 @@
         aria-label="Label"
         aria-selected="false"
         class="emotion-5"
+        data-testid="undefined_tag_container"
+        tabindex="-1"
+      >
+        Label
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        aria-label="Label"
+        aria-selected="false"
+        class="emotion-6"
         data-testid="undefined_tag_container"
         tabindex="-1"
       >

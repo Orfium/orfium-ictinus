@@ -186,7 +186,40 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-9 {
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 1.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  box-sizing: border-box;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  cursor: auto;
+  background: #FFF0D1;
+  color: #8B391D;
+  border: 0.0625rem solid;
+  border-color: #FFC95C;
+  border-radius: 0.25rem;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -219,7 +252,7 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-10 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -252,7 +285,7 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-11 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -285,7 +318,7 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-12 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -318,7 +351,7 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-13 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -351,7 +384,7 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-17 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -364,78 +397,111 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 1.5rem;
+  height: 1.25rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   box-sizing: border-box;
   gap: 0.25rem;
-  padding: 0.25rem 0.5rem;
-  cursor: pointer;
-  background: rgba(200,206,255,0.30);
-  color: #194DCC;
+  padding: 0rem 0.25rem;
+  cursor: auto;
+  background: #FFF0D1;
+  color: #8B391D;
   border: 0.0625rem solid;
-  border-color: #DAE4FB;
-  border-radius: 0.25rem;
+  border-color: #FFC95C;
+  border-radius: 0.125rem;
   font-family: Roboto;
   font-weight: 500;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
+  line-height: 1rem;
+  font-size: 0.75rem;
   letter-spacing: 0.015625rem;
-}
-
-.emotion-17:hover {
-  background: rgba(200,206,255,0.20);
-}
-
-.emotion-17:focus-visible {
-  background: rgba(200,206,255,0.20);
-  border-color: #5E8DF8;
-}
-
-.emotion-18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 1.5rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  box-sizing: border-box;
-  gap: 0.25rem;
-  padding: 0.25rem 0.5rem;
-  cursor: pointer;
-  background: rgba(200,206,255,0.20);
-  color: #194DCC;
-  border: 0.0625rem solid;
-  border-color: #DAE4FB;
-  border-radius: 0.25rem;
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-}
-
-.emotion-18:hover {
-  background: rgba(200,206,255,0.20);
-}
-
-.emotion-18:focus-visible {
-  background: rgba(200,206,255,0.20);
-  border-color: #5E8DF8;
 }
 
 .emotion-19 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 1.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  box-sizing: border-box;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  background: rgba(200,206,255,0.30);
+  color: #194DCC;
+  border: 0.0625rem solid;
+  border-color: #DAE4FB;
+  border-radius: 0.25rem;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-19:hover {
+  background: rgba(200,206,255,0.20);
+}
+
+.emotion-19:focus-visible {
+  background: rgba(200,206,255,0.20);
+  border-color: #5E8DF8;
+}
+
+.emotion-20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 1.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  box-sizing: border-box;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  background: rgba(200,206,255,0.20);
+  color: #194DCC;
+  border: 0.0625rem solid;
+  border-color: #DAE4FB;
+  border-radius: 0.25rem;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-20:hover {
+  background: rgba(200,206,255,0.20);
+}
+
+.emotion-20:focus-visible {
+  background: rgba(200,206,255,0.20);
+  border-color: #5E8DF8;
+}
+
+.emotion-21 {
   width: 1rem;
   height: 1rem;
   display: -webkit-box;
@@ -444,16 +510,16 @@
   display: flex;
 }
 
-.emotion-20 {
+.emotion-22 {
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-20 path {
+.emotion-22 path {
   fill: #194DCC!important;
 }
 
-.emotion-22 {
+.emotion-24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -486,16 +552,16 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-22:hover {
+.emotion-24:hover {
   background: rgba(200,206,255,0.20);
 }
 
-.emotion-22:focus-visible {
+.emotion-24:focus-visible {
   background: rgba(200,206,255,0.20);
   border-color: #5E8DF8;
 }
 
-.emotion-23 {
+.emotion-25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -528,16 +594,16 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-23:hover {
+.emotion-25:hover {
   background: rgba(200,206,255,0.20);
 }
 
-.emotion-23:focus-visible {
+.emotion-25:focus-visible {
   background: rgba(200,206,255,0.20);
   border-color: #5E8DF8;
 }
 
-.emotion-29 {
+.emotion-31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -570,12 +636,12 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-29:focus-visible {
+.emotion-31:focus-visible {
   background: rgba(200,206,255,0.20);
   border-color: #5E8DF8;
 }
 
-.emotion-30 {
+.emotion-32 {
   width: 1rem;
   height: 1rem;
   display: -webkit-box;
@@ -593,12 +659,12 @@
   cursor: pointer;
 }
 
-.emotion-30:hover {
+.emotion-32:hover {
   background: rgba(200,206,255,0.20);
   border-radius: 6.25rem;
 }
 
-.emotion-31 {
+.emotion-33 {
   width: 1rem;
   height: 1rem;
   display: -webkit-box;
@@ -608,7 +674,7 @@
   cursor: pointer;
 }
 
-.emotion-34 {
+.emotion-36 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -641,7 +707,7 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-34:focus-visible {
+.emotion-36:focus-visible {
   background: rgba(200,206,255,0.20);
   border-color: #5E8DF8;
 }
@@ -728,23 +794,23 @@
         Normal
       </div>
     </div>
-  </div>
-  <div
-    class="emotion-0"
-  >
     <div
       style="margin: 5px;"
     >
       <div
-        aria-label="Small"
+        aria-label="Normal"
         aria-selected="false"
-        class="emotion-9"
+        class="emotion-8"
         data-testid="undefined_tag_container"
         tabindex="-1"
       >
-        Small
+        Normal
       </div>
     </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
     <div
       style="margin: 5px;"
     >
@@ -797,6 +863,32 @@
         Small
       </div>
     </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        aria-label="Small"
+        aria-selected="false"
+        class="emotion-14"
+        data-testid="undefined_tag_container"
+        tabindex="-1"
+      >
+        Small
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        aria-label="Small"
+        aria-selected="false"
+        class="emotion-15"
+        data-testid="undefined_tag_container"
+        tabindex="-1"
+      >
+        Small
+      </div>
+    </div>
   </div>
   <div
     class="emotion-0"
@@ -820,7 +912,7 @@
       <div
         aria-label="Normal"
         aria-selected="false"
-        class="emotion-17"
+        class="emotion-19"
         data-testid="undefined_tag_container"
         tabindex="0"
       >
@@ -833,16 +925,16 @@
       <div
         aria-label="Normal"
         aria-selected="true"
-        class="emotion-18"
+        class="emotion-20"
         data-testid="undefined_tag_container"
         tabindex="0"
       >
         <div
-          class="emotion-19"
+          class="emotion-21"
           data-testid="undefined_tag_prefix"
         >
           <svg
-            class="emotion-20"
+            class="emotion-22"
             fill="none"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
@@ -866,7 +958,7 @@
       <div
         aria-label="Small"
         aria-selected="false"
-        class="emotion-22"
+        class="emotion-24"
         data-testid="undefined_tag_container"
         tabindex="0"
       >
@@ -879,16 +971,16 @@
       <div
         aria-label="Small"
         aria-selected="true"
-        class="emotion-23"
+        class="emotion-25"
         data-testid="undefined_tag_container"
         tabindex="0"
       >
         <div
-          class="emotion-19"
+          class="emotion-21"
           data-testid="undefined_tag_prefix"
         >
           <svg
-            class="emotion-20"
+            class="emotion-22"
             fill="none"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
@@ -925,23 +1017,23 @@
       <div
         aria-label="Normal"
         aria-selected="false"
-        class="emotion-29"
+        class="emotion-31"
         data-testid="undefined_tag_container"
         tabindex="0"
       >
         Normal
         <div
           aria-hidden="true"
-          class="emotion-30"
+          class="emotion-32"
           tabindex="-1"
         >
           <div
-            class="emotion-31"
+            class="emotion-33"
             data-testid="undefined_tag_suffix"
             tabindex="0"
           >
             <svg
-              class="emotion-20"
+              class="emotion-22"
               fill="none"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
@@ -965,23 +1057,23 @@
       <div
         aria-label="Small"
         aria-selected="false"
-        class="emotion-34"
+        class="emotion-36"
         data-testid="undefined_tag_container"
         tabindex="0"
       >
         Small
         <div
           aria-hidden="true"
-          class="emotion-30"
+          class="emotion-32"
           tabindex="-1"
         >
           <div
-            class="emotion-31"
+            class="emotion-33"
             data-testid="undefined_tag_suffix"
             tabindex="0"
           >
             <svg
-              class="emotion-20"
+              class="emotion-22"
               fill="none"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"

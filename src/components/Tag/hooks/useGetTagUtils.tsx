@@ -41,26 +41,23 @@ const useGetTagUtils = ({
       return (
         <Icon
           dataTestId={`${dataTestPrefixId}_tag_prefix`}
-          size={theme.tokens.icon.get('size.2')}
+          size={tokens('iconSize')}
           name="check"
           color={tokens('textColor.blue')}
         />
       );
 
     if (!isInteractive && iconName)
-      return <Icon size={12} name={iconName} color={tokens(`textColor.${color}` as const)} />;
+      return (
+        <Icon
+          size={tokens('iconSize')}
+          name={iconName}
+          color={tokens(`textColor.${color}` as const)}
+        />
+      );
 
     return null;
-  }, [
-    color,
-    dataTestPrefixId,
-    iconName,
-    isInteractive,
-    isSelectable,
-    isSelected,
-    theme.tokens.icon,
-    tokens,
-  ]);
+  }, [color, dataTestPrefixId, iconName, isInteractive, isSelectable, isSelected, tokens]);
 
   const suffix = useMemo(
     () =>
@@ -69,14 +66,14 @@ const useGetTagUtils = ({
           <Icon
             onClick={onClear}
             hasHover={false}
-            size={theme.tokens.icon.get('size.2')}
+            size={tokens('iconSize')}
             name="close"
             color={tokens('textColor.blue')}
             dataTestId={`${dataTestPrefixId}_tag_suffix`}
           />
         </div>
       ) : null,
-    [dataTestPrefixId, isClearable, onClear, theme.tokens.icon, tokens]
+    [dataTestPrefixId, isClearable, onClear, tokens]
   );
 
   return {

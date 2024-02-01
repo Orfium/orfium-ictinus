@@ -50,32 +50,6 @@ const tag = {
       description: 'Sets border radius for condensed tags',
     },
   },
-  label: {
-    default: {
-      normal: {
-        value: '{sem.typography.normal.label02}',
-        type: 'typography',
-        description: 'Sets text for normal tag labels',
-      },
-      small: {
-        value: '{sem.typography.normal.label03}',
-        type: 'typography',
-        description: 'Sets text for small tag labels',
-      },
-    },
-    code: {
-      normal: {
-        value: '{sem.typography.mono.body02}',
-        type: 'typography',
-        description: 'Sets text for code tag labels',
-      },
-      small: {
-        value: '{sem.typography.mono.body03}',
-        type: 'typography',
-        description: 'Sets text for  small code tag labels ',
-      },
-    },
-  },
   backgroundColor: {
     readOnly: {
       blue: {
@@ -211,6 +185,37 @@ const tag = {
         description: 'Sets default borderColor for tag variant',
       },
     },
+  },
+  label: {
+    default: {
+      normal: {
+        value: '{sem.typography.normal.label02}',
+        type: 'typography',
+        description: "Sets text for tag label ('normal' size)",
+      },
+      small: {
+        value: '{sem.typography.normal.label03}',
+        type: 'typography',
+        description: "Sets text for tag label ('small' size)",
+      },
+    },
+    code: {
+      normal: {
+        value: '{sem.typography.mono.body02}',
+        type: 'typography',
+        description: "Sets text for code tag label ('normal' size)",
+      },
+      small: {
+        value: '{sem.typography.mono.body03}',
+        type: 'typography',
+        description: "Sets text for code tag label ('small' size)",
+      },
+    },
+  },
+  iconSize: {
+    value: '{sem.icon.size.2}',
+    type: 'sizing',
+    description: 'Sets size for tag icon (if used)',
   },
 } as const;
 

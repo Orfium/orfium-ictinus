@@ -2,7 +2,7 @@ import type { TestProps } from 'utils/types';
 
 import type { AcceptedIconNames } from 'components/Icon';
 
-export type TagColors = 'neutral' | 'blue' | 'red' | 'purple' | 'teal';
+export type TagColors = 'neutral' | 'blue' | 'red' | 'purple' | 'teal' | 'orange';
 
 export type TagSizes = 'normal' | 'small';
 
