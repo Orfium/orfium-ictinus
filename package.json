@@ -4,8 +4,10 @@
   "main": "./dist/index.umd.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "type": "module",
   "license": "MIT",
+  "bin": {
+    "ictinus-migrate-v5": "./bin/migrate.mjs"
+  },
   "sideEffects": false,
   "devDependencies": {
     "@amanda-mitchell/semantic-release-npm-multiple": "^3.9.0",
@@ -110,6 +112,7 @@
     "dayjs": "^1.8.34",
     "emotion-reset": "^3.0.1",
     "eslint-plugin-unused-imports": "^3.0.0",
+    "jscodeshift": "^0.15.1",
     "lodash": "^4.17.19",
     "patch-package": "^8.0.0",
     "pluralize": "^8.0.0",
@@ -123,6 +126,7 @@
     "react-media": "^2.0.0-rc.1",
     "react-range": "^1.8.12",
     "react-stately": "^3.28.0",
+    "react-textarea-autosize": "^8.5.3",
     "react-window": "^1.8.6",
     "recharts": "^2.8.0",
     "tslib": "^2.4.1",
@@ -153,7 +157,8 @@
     "start": "storybook dev -p 6006",
     "prebuild": "rimraf dist",
     "build:rollOneBundleDTS": "rollup -c --bundleConfigAsCjs",
-    "build:lib": "vite build && yarn build:rollOneBundleDTS",
+    "build:codemods": "rollup -c --bundleConfigAsCjs",
+    "build:lib": "vite build && yarn build:rollOneBundleDTS && tsc --project tsconfig.codemods.json",
     "build": "storybook build -o build/",
     "lint": "eslint \"src/**/*.{ts,tsx}\"",
     "test": "vitest --run",
