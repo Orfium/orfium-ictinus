@@ -7,10 +7,7 @@ export type filterConfig = Pick<
 >;
 
 export type SearchFilterConfig = {
-  filterConfig?: Pick<
-    FilterProps & SingleFilterProps,
-    'selectedFilter' | 'onChange' | 'onClear' | 'defaultValue' | 'label' | 'items'
-  >;
+  filterConfig?: filterConfig;
 };
 
 export type SearchProps = {
