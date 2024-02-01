@@ -1,15 +1,12 @@
 import { Meta, Canvas, ArgTypes, Story } from '@storybook/blocks';
-import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
 import LineChart from './LineChart';
-import BarChartShowCase from '../storyUtils/BarChartShowCase';
 import BarChart from './BarChart';
 import DonutChart from './DonutChart';
-import DonutChartShowCase from '../storyUtils/DonutChartShowCase';
-import { color } from './LineChart/story.utils';
-import { initData } from './LineChart/mockedData';
 import * as ChartStories from './Chart.stories';
 
 <Meta of={ChartStories} />
+
+<SectionHeader title={'Charts'} isPending />
 
 # LineChart
 

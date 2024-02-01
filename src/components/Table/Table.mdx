@@ -1,25 +1,20 @@
-import { Meta, Canvas, ArgTypes, Story } from '@storybook/blocks';
-import { select, number } from '@storybook/addon-knobs';
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
 import Table from './Table';
 import { CellStory, RowStory } from './utils/TableStoryComponents';
-import TableRowWrapper from './components/TableRowWrapper/TableRowWrapper';
-import TableFilterShowcase from '../storyUtils/TableFilterShowcase';
-import { FIGMA_URL } from '../../utils/common';
 import * as TableStories from './Table.stories';
 
 <Meta of={TableStories} />
 
-# Table
+<SectionHeader title={'Table'} isPending />
+
+- [Overview](#overview)
+- [Props](#table-props)
+- [Usage](#usage)
+- [Variants](#variants)
+
+## Overview
 
 A universal Table component that applies Orfium basic usages. Check inline data structure for more.
-
-## Usage
-
-```js
-import { Table } from '@orfium/ictinus';
-
-<Table />;
-```
 
 ## Table Props
 
@@ -32,6 +27,16 @@ import { Table } from '@orfium/ictinus';
 ## Row Type
 
 <ArgTypes of={RowStory} />
+
+## Usage
+
+```js
+import { Table } from '@orfium/ictinus';
+
+<Table />;
+```
+
+<SubsectionHeader title="Variants" />
 
 ### Regular Table
 

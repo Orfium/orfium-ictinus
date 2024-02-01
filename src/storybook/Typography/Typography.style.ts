@@ -5,6 +5,7 @@ import type { Theme } from '../../theme';
 export const TypographyWrapper = (theme: Theme) =>
   css`
     margin-top: 35px;
+    margin-bottom: 10px;
     display: grid;
     &:after {
       content: '';

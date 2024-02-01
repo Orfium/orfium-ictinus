@@ -7,11 +7,13 @@ import type { TextFieldProps } from '../TextField';
 export type SelectOptionValues = {
   value: string | number;
   label: string;
+  /** refer to Icon component for more details */
   iconProps?: IconProps;
 };
 
 export type SelectOptionBase = {
   isDisabled?: boolean;
+  /** helper text that show under item text */
   helperText?: string;
   // @TODO remove this as it is not used?
   tooltipInfo?: string;

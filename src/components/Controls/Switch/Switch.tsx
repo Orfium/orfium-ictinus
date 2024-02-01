@@ -8,9 +8,9 @@ import ControlLabel from 'components/Controls/ControlLabel';
 import type { LabelConfig } from 'components/Controls/Controls.types';
 
 export type SwitchProps = Partial<SwitchAria> & {
-  /** Id property of the radio input */
+  /** Id property of the switch element */
   id?: string;
-  /** The value of the radio input */
+  /** The value of the switch element */
   value?: string;
   /** Callback for when the element's selection state changes. */
   onChange?: (isSelected: boolean) => void;

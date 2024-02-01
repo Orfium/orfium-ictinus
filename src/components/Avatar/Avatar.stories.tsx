@@ -64,6 +64,39 @@ export const AvatarWithLetter = {
   name: 'Avatar with letter',
 };
 
+export const AvatarWithColor = {
+  render: () => (
+    <>
+      <Stack height={60}>
+        <Avatar size={2} color={'blue'} />
+        <Avatar size={2} color={'red'} />
+        <Avatar size={2} color={'purple'} />
+        <Avatar size={2} color={'teal'} />
+        <Avatar size={2} color={'orange'} />
+      </Stack>
+      <Stack>
+        <Avatar size={2} color={'blue'}>
+          AZ
+        </Avatar>
+        <Avatar size={2} color={'red'}>
+          AZ
+        </Avatar>
+        <Avatar size={2} color={'purple'}>
+          AZ
+        </Avatar>
+        <Avatar size={2} color={'teal'}>
+          AZ
+        </Avatar>
+        <Avatar size={2} color={'orange'}>
+          AZ
+        </Avatar>
+      </Stack>
+    </>
+  ),
+
+  name: 'Avatar with color',
+};
+
 export const AvatarWithSrc = {
   render: () => (
     <Stack>

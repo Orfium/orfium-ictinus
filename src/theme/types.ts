@@ -55,8 +55,17 @@ export type Theme = {
   colorScheme: ColorScheme;
   overrides: Overrides;
   utils: {
+    /**
+     * @deprecated deprecated since v5.0.0. Use `theme.globals.colors.get('')` instead.
+     */
     getColor: GetColor;
+    /**
+     * @deprecated deprecated since v5.0.0. Use `theme.globals.colors.get('')` instead.
+     */
     getAAColorFromSwatches: GetAAColorFromSwatches;
+    /**
+     * @deprecated deprecated since v5.0.0. Use `theme.globals.colors.get('')` instead.
+     */
     getAAColor: GetAAColor;
   };
 };

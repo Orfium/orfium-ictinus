@@ -1,22 +1,24 @@
 import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
-import { withKnobs, text, boolean } from '@storybook/addon-knobs';
-import PresentComponent from '../storyUtils/PresentComponent';
-import ModalShowcase from '../storyUtils/ModalShowcase';
-import Stack from '../storyUtils/Stack';
 import Modal from './Modal';
 import ModalContent from './ModalContent';
-import { FIGMA_URL } from '../../utils/common';
 import * as ModalStories from './Modal.stories';
 
 <Meta of={ModalStories} />
 
-# Modal
+<SectionHeader title={'Modal'} isPending />
 
-### Props
+- [Overview](#overview)
+- [Props](#props)
+
+## Overview
+
+A modal is used to reveal critical information, show information without losing context, or when the system requires a user response.
+
+## Props
 
 <ArgTypes of={Modal} />
 
-### Usage
+## Usage
 
 ```js
 import { Modal } from '@orfium/ictinus';

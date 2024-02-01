@@ -1,16 +1,23 @@
 import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
-import { select, boolean } from '@storybook/addon-knobs';
-import CardShowcase from '../storyUtils/CardShowcase';
 import Card from './Card';
-import Stack from '../storyUtils/Stack';
-import { FIGMA_URL } from '../../utils/common';
 import * as CardStories from './Card.stories';
 
 <Meta of={CardStories} />
 
-# Card
+<SectionHeader title={'Card'} isPending />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
+
+## Overview
 
 A universal Card component that is wrapper for other components
+
+## Props
+
+<ArgTypes of={Card} />
 
 ## Usage
 
@@ -22,9 +29,7 @@ import { Card } from '@orfium/ictinus';
 </Card>;
 ```
 
-## Props
-
-<ArgTypes of={Card} />
+<SubsectionHeader title="Variants" />
 
 ### Card with Elevation
 
