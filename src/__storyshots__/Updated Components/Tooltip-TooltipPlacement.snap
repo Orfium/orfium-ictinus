@@ -13,13 +13,13 @@
 }
 
 .emotion-1 {
-  background-color: #1B214F;
-  border: 0.0625rem solid rgba(84,94,255,0);
-  box-shadow: 0rem 0.25rem 0.5rem 0rem #10306612;
+  background-color: #111530;
+  border: 0.0625rem solid rgba(200,206,255,0);
+  box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(200,206,255,0.45);
 }
 
 .emotion-1 .tippy-content {
-  background-color: #1B214F;
+  background-color: #111530;
   max-width: 16rem;
   padding: 0.5rem;
   border-radius: 0.25rem;
@@ -35,7 +35,7 @@
 }
 
 .emotion-1 .tippy-arrow::before {
-  color: #1B214F;
+  color: #111530;
 }
 
 .emotion-2 {
@@ -65,7 +65,7 @@
   justify-content: center;
   color: #ffffff;
   height: auto;
-  background-color: #175bf5;
+  background-color: #175BF5;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   border: none;
@@ -75,7 +75,7 @@
 }
 
 .emotion-3:focus-visible:not(:disabled) {
-  background-color: #1552DD;
+  background-color: #5E8DF8;
 }
 
 .emotion-3:disabled {
@@ -84,12 +84,12 @@
 }
 
 .emotion-3:hover:not(:disabled) {
-  background-color: #1552DD;
+  background-color: #5E8DF8;
 }
 
 .emotion-3:active:not(:disabled),
 .emotion-3[aria-expanded="true"] {
-  background-color: #1249C4;
+  background-color: #194DCC;
 }
 
 .emotion-4 {

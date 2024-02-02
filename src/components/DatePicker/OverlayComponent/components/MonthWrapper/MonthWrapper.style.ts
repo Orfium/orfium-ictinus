@@ -3,18 +3,18 @@ import { css } from '@emotion/react';
 import type { Theme } from 'theme';
 import { rem } from 'theme/utils';
 
-import { getDateTokens } from 'components/DatePicker/DatePicker.tokens';
+import { getDatePickerTokens } from 'components/DatePicker/DatePicker.tokens';
 
 export const monthWrapperStyle =
   () =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getDateTokens(theme);
+    const tokens = getDatePickerTokens(theme);
 
     return css`
       display: flex;
       flex-direction: column;
       gap: ${tokens('rowPadding')};
-      padding: ${tokens('verticalPadding')} ${tokens('horizontalPadding')};
+      padding: ${tokens('padding')};
     `;
   };
 

@@ -33,9 +33,8 @@ export const descriptionStyle =
         margin-bottom: 4px;
       }
       span {
-        background: ${colorCategory === 'inverted'
-          ? theme.tokens.colors.get('backgroundColor.inverted')
-          : theme.utils.getColor('blue', 50)};
+        background: ${theme.tokens.colors.get('palette.secondary.light')};
+        border-radius: 4px;
         padding: 4px;
       }
     `;

@@ -58,3 +58,23 @@ export const TableWrapperStyle = (): SerializedStyles => css`
     }
   }
 `;
+
+export const innerTableStyle = () => css`
+  & {
+    padding: 0 !important;
+    border: none !important;
+  }
+
+  tr {
+    border: none !important;
+  }
+
+  table {
+    border: none !important;
+  }
+
+  td {
+    border: none !important;
+    border-left: 1px solid #e4e7ff !important;
+  }
+`;

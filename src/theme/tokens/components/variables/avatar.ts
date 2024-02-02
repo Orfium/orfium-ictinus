@@ -1,81 +1,149 @@
 const avatar = {
+  label: {
+    '1': {
+      value: {
+        fontFamily: '{fontFamily.roboto}',
+        fontWeight: '{fontWeight.medium}',
+        lineHeight: '{lineHeight.1}',
+        fontSize: '{fontSize.1}',
+        letterSpacing: '{letterSpacing.1}',
+      },
+      type: 'typography',
+      description: 'used for the extra small avatar size with initials',
+    },
+    '2': {
+      value: {
+        fontFamily: '{fontFamily.roboto}',
+        fontWeight: '{fontWeight.medium}',
+        lineHeight: '{lineHeight.3}',
+        fontSize: '{fontSize.2}',
+        letterSpacing: '{letterSpacing.2}',
+      },
+      type: 'typography',
+      description: 'used for the small avatar size with initials',
+    },
+    '3': {
+      value: {
+        fontFamily: '{fontFamily.roboto}',
+        fontWeight: '{fontWeight.medium}',
+        lineHeight: '{lineHeight.4}',
+        fontSize: '{fontSize.3}',
+        letterSpacing: '{letterSpacing.2}',
+      },
+      type: 'typography',
+      description: 'used for the medium avatar size with initials',
+    },
+    '4': {
+      value: {
+        fontFamily: '{fontFamily.roboto}',
+        fontWeight: '{fontWeight.medium}',
+        lineHeight: '{lineHeight.5}',
+        fontSize: '{fontSize.4}',
+        letterSpacing: '{letterSpacing.1}',
+      },
+      type: 'typography',
+      description: 'used for the large avatar size with initials',
+    },
+    '5': {
+      value: {
+        fontFamily: '{fontFamily.roboto}',
+        fontWeight: '{fontWeight.medium}',
+        lineHeight: '{lineHeight.8}',
+        fontSize: '{fontSize.8}',
+        letterSpacing: '{letterSpacing.0}',
+      },
+      type: 'typography',
+      description: 'used for the extra large avatar size with initials',
+    },
+    '6': {
+      value: {
+        fontFamily: '{fontFamily.roboto}',
+        fontWeight: '{fontWeight.medium}',
+        lineHeight: '{lineHeight.10}',
+        fontSize: '{fontSize.10}',
+        letterSpacing: '{letterSpacing.0}',
+      },
+      type: 'typography',
+      description: 'used for the extra extra large avatar size with initials',
+    },
+  },
   backgroundColor: {
     blue: {
-      value: '{colors.blue.1}',
+      value: '{sem.colors.palette.primaryAlt.main}',
       type: 'color',
       description: 'Sets red background variation for avatar',
     },
     teal: {
-      value: '{colors.teal.1}',
+      value: '{sem.colors.palette.success.main}',
       type: 'color',
       description: 'Sets teal background variation for avatar',
     },
     purple: {
-      value: '{colors.purple.1}',
+      value: '{sem.colors.palette.upsell.main}',
       type: 'color',
       description: 'Sets purple background variation for avatar',
     },
     red: {
-      value: '{colors.red.1}',
+      value: '{sem.colors.palette.error.main}',
       type: 'color',
       description: 'Sets red background variation for avatar',
     },
     orange: {
-      value: '{colors.orange.1}',
+      value: '{sem.colors.palette.warning.main}',
       type: 'color',
       description: 'Sets orange background variation for avatar',
     },
   },
   textColor: {
     blue: {
-      value: '{colors.blue.5}',
+      value: '{sem.colors.textColor.default.active}',
       type: 'color',
       description: 'Sets red text color for blue variant',
     },
     teal: {
-      value: '{colors.teal.5}',
+      value: '{sem.colors.textColor.default.success}',
       type: 'color',
       description: 'Sets red text color for teal variant',
     },
     purple: {
-      value: '{colors.purple.5}',
+      value: '{sem.colors.textColor.default.visited}',
       type: 'color',
       description: 'Sets red text color for purple variant',
     },
     red: {
-      value: '{colors.red.5}',
+      value: '{sem.colors.textColor.default.error}',
       type: 'color',
       description: 'Sets red text color for red variant',
     },
     orange: {
-      value: '{colors.orange.5}',
+      value: '{sem.colors.textColor.default.warning}',
       type: 'color',
       description: 'Sets red text color for orange variant',
     },
   },
   borderColor: {
     blue: {
-      value: '{colors.blue.2}',
+      value: '{sem.colors.palette.primaryAlt.dark}',
       type: 'color',
       description: 'Sets borderColor for blue variant',
     },
     teal: {
-      value: '{colors.teal.4}',
+      value: '{sem.colors.palette.success.dark}',
       type: 'color',
       description: 'Sets borderColor for teal variant',
     },
     purple: {
-      value: '{colors.purple.2}',
+      value: '{sem.colors.palette.upsell.dark}',
       type: 'color',
       description: 'Sets borderColor for purple variant',
     },
     red: {
-      value: '{colors.red.2}',
+      value: '{sem.colors.palette.error.dark}',
       type: 'color',
       description: 'Sets borderColor for red variant',
     },
     orange: {
-      value: '{colors.orange.2}',
+      value: '{sem.colors.palette.warning.dark}',
       type: 'color',
       description: 'Sets borderColor for orange variant',
     },

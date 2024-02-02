@@ -1,4 +1,4 @@
-import type { SerializedStyles} from '@emotion/react';
+import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import emotionReset from 'emotion-reset';
 import type { Theme } from 'theme';
@@ -13,11 +13,6 @@ import {
 } from '../Typography/Typography.config.styles';
 
 export const scrollbar = (theme: Theme): SerializedStyles => css`
-  // for Firefox
-  * {
-    scrollbar-width: thin;
-  }
-
   // for Chrome
   ::-webkit-scrollbar {
     width: ${theme.globals.spacing.get('4')};
@@ -29,12 +24,19 @@ export const scrollbar = (theme: Theme): SerializedStyles => css`
   }
 
   ::-webkit-scrollbar-thumb {
-    background: ${theme.utils.getColor('lightGrey', 350)};
+    background: ${theme.tokens.colors.get('palette.primary.light')};
     border-radius: ${theme.globals.spacing.get('9')};
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: ${theme.utils.getColor('lightGrey', 500)};
+    background: ${theme.tokens.colors.get('palette.primary.main')};
+  }
+
+  // for Firefox
+  @-moz-document url-prefix() {
+    * {
+      scrollbar-width: thin;
+    }
   }
 `;
 

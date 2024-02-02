@@ -9,7 +9,7 @@ exports[`OverlayComponent > should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  border: 0.0625rem solid #E7E8FF;
+  border: 0.0625rem solid rgba(200,206,255,0.70);
   border-radius: 0.25rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -55,7 +55,7 @@ exports[`OverlayComponent > should render correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 0.75rem;
-  padding: 1.25rem 1.25rem;
+  padding: 1.25rem;
 }
 
 .emotion-5 {
@@ -111,10 +111,10 @@ exports[`OverlayComponent > should render correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #1552DD;
+  color: #194DCC;
   width: 2.25rem;
   height: 2.25rem;
-  background-color: rgba(84,94,255,0);
+  background-color: rgba(200,206,255,0);
   padding: 0;
   border-radius: 2.25rem;
   border: none;
@@ -124,7 +124,7 @@ exports[`OverlayComponent > should render correctly 1`] = `
 }
 
 .emotion-8:focus-visible:not(:disabled) {
-  background-color: rgba(84,94,255,0.06);
+  background-color: rgba(200,206,255,0.20);
 }
 
 .emotion-8:disabled {
@@ -133,12 +133,12 @@ exports[`OverlayComponent > should render correctly 1`] = `
 }
 
 .emotion-8:hover:not(:disabled) {
-  background-color: rgba(84,94,255,0.06);
+  background-color: rgba(200,206,255,0.20);
 }
 
 .emotion-8:active:not(:disabled),
 .emotion-8[aria-expanded="true"] {
-  background-color: rgba(84,94,255,0.14);
+  background-color: rgba(200,206,255,0.30);
 }
 
 .emotion-9 {
@@ -156,7 +156,7 @@ exports[`OverlayComponent > should render correctly 1`] = `
 }
 
 .emotion-10 path {
-  fill: #1552DD!important;
+  fill: #194DCC!important;
 }
 
 .emotion-11 {
@@ -216,9 +216,9 @@ exports[`OverlayComponent > should render correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #1552DD;
+  color: #194DCC;
   height: auto;
-  background-color: rgba(84,94,255,0);
+  background-color: rgba(200,206,255,0);
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   border: none;
@@ -228,7 +228,7 @@ exports[`OverlayComponent > should render correctly 1`] = `
 }
 
 .emotion-14:focus-visible:not(:disabled) {
-  background-color: rgba(84,94,255,0.06);
+  background-color: rgba(200,206,255,0.20);
 }
 
 .emotion-14:disabled {
@@ -237,12 +237,12 @@ exports[`OverlayComponent > should render correctly 1`] = `
 }
 
 .emotion-14:hover:not(:disabled) {
-  background-color: rgba(84,94,255,0.06);
+  background-color: rgba(200,206,255,0.20);
 }
 
 .emotion-14:active:not(:disabled),
 .emotion-14[aria-expanded="true"] {
-  background-color: rgba(84,94,255,0.14);
+  background-color: rgba(200,206,255,0.30);
 }
 
 .emotion-15 {
@@ -298,6 +298,7 @@ exports[`OverlayComponent > should render correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  color: #52567a;
   width: 2.25rem;
   height: 2.25rem;
   font-size: 0.875rem;
@@ -316,7 +317,7 @@ exports[`OverlayComponent > should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  background: #ffffff;
+  background: rgba(200,206,255,0);
 }
 
 .emotion-36 {
@@ -324,12 +325,13 @@ exports[`OverlayComponent > should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
+  color: #111530;
   width: 2.25rem;
   opacity: 1;
 }
 
 .emotion-36:focus-visible {
-  background-color: #F5F5FF;
+  background-color: rgba(200,206,255,0.20);
   border-radius: 6.25rem;
 }
 
@@ -339,9 +341,10 @@ exports[`OverlayComponent > should render correctly 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
-  border: 0.0625rem solid rgba(84,94,255,0);
+  border: 0.0625rem solid rgba(200,206,255,0);
   width: 2.25rem;
   height: 2.25rem;
+  color: #111530;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -360,7 +363,7 @@ exports[`OverlayComponent > should render correctly 1`] = `
 
 .emotion-37:hover {
   border-radius: 6.25rem;
-  background: #F5F5FF;
+  background: rgba(200,206,255,0.20);
 }
 
 .emotion-40 {
@@ -368,13 +371,14 @@ exports[`OverlayComponent > should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
+  color: #111530;
   width: 2.25rem;
   font-weight: bold;
   opacity: 1;
 }
 
 .emotion-40:focus-visible {
-  background-color: #F5F5FF;
+  background-color: rgba(200,206,255,0.20);
   border-radius: 6.25rem;
 }
 
@@ -384,10 +388,11 @@ exports[`OverlayComponent > should render correctly 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
-  border: 0.0625rem solid #175bf5;
+  border: 0.0625rem solid #175BF5;
   border-radius: 6.25rem;
   width: 2.25rem;
   height: 2.25rem;
+  color: #111530;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -406,7 +411,7 @@ exports[`OverlayComponent > should render correctly 1`] = `
 
 .emotion-41:hover {
   border-radius: 6.25rem;
-  background: #F5F5FF;
+  background: rgba(200,206,255,0.20);
 }
 
 .emotion-42 {
@@ -417,13 +422,13 @@ exports[`OverlayComponent > should render correctly 1`] = `
   color: #ffffff;
   width: 2.25rem;
   opacity: 1;
-  background: #175bf5;
+  background: #194DCC;
   border-bottom-left-radius: 100%;
   border-top-left-radius: 100%;
 }
 
 .emotion-42:focus-visible {
-  background-color: #F5F5FF;
+  background-color: rgba(200,206,255,0.20);
   border-radius: 6.25rem;
 }
 
@@ -448,7 +453,7 @@ exports[`OverlayComponent > should render correctly 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
-  border: 0 solid rgba(84,94,255,0);
+  border: 0 solid rgba(200,206,255,0);
   border-radius: 6.25rem;
   width: 2.25rem;
   height: 2.25rem;
@@ -466,7 +471,7 @@ exports[`OverlayComponent > should render correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  background: #175bf5;
+  background: #194DCC;
 }
 
 .emotion-43:hover {
@@ -479,13 +484,14 @@ exports[`OverlayComponent > should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
+  color: #111530;
   width: 2.25rem;
   opacity: 1;
-  background: #F5F5FF;
+  background: rgba(200,206,255,0.20);
 }
 
 .emotion-44:focus-visible {
-  background-color: #F5F5FF;
+  background-color: rgba(200,206,255,0.20);
   border-radius: 6.25rem;
 }
 
@@ -495,9 +501,10 @@ exports[`OverlayComponent > should render correctly 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
-  border: 0.0625rem solid rgba(84,94,255,0);
+  border: 0.0625rem solid rgba(200,206,255,0);
   width: 2.25rem;
   height: 2.25rem;
+  color: #111530;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -535,7 +542,7 @@ exports[`OverlayComponent > should render correctly 1`] = `
   align-items: center;
   gap: 0.5rem;
   padding: 0 1.25rem;
-  border-top: 0.0625rem solid #E7E8FF;
+  border-top: 0.0625rem solid rgba(200,206,255,0.70);
 }
 
 .emotion-107 {
@@ -558,7 +565,7 @@ exports[`OverlayComponent > should render correctly 1`] = `
   justify-content: center;
   color: #ffffff;
   height: auto;
-  background-color: #175bf5;
+  background-color: #175BF5;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   border: none;
@@ -568,7 +575,7 @@ exports[`OverlayComponent > should render correctly 1`] = `
 }
 
 .emotion-107:focus-visible:not(:disabled) {
-  background-color: #1552DD;
+  background-color: #5E8DF8;
 }
 
 .emotion-107:disabled {
@@ -577,12 +584,12 @@ exports[`OverlayComponent > should render correctly 1`] = `
 }
 
 .emotion-107:hover:not(:disabled) {
-  background-color: #1552DD;
+  background-color: #5E8DF8;
 }
 
 .emotion-107:active:not(:disabled),
 .emotion-107[aria-expanded="true"] {
-  background-color: #1249C4;
+  background-color: #194DCC;
 }
 
 <div>
@@ -1298,7 +1305,7 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  border: 0.0625rem solid #E7E8FF;
+  border: 0.0625rem solid rgba(200,206,255,0.70);
   border-radius: 0.25rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -1324,7 +1331,7 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
 }
 
 .emotion-3 {
-  border-right: 0.0625rem solid #E7E8FF;
+  border-right: 0.0625rem solid rgba(200,206,255,0.70);
 }
 
 .emotion-4 {
@@ -1342,7 +1349,7 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
 }
 
 .emotion-4:hover {
-  background-color: rgba(84,94,255,0.06);
+  background-color: rgba(200,206,255,0.20);
 }
 
 .emotion-7 {
@@ -1366,7 +1373,7 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 0.75rem;
-  padding: 1.25rem 1.25rem;
+  padding: 1.25rem;
 }
 
 .emotion-9 {
@@ -1422,10 +1429,10 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #1552DD;
+  color: #194DCC;
   width: 2.25rem;
   height: 2.25rem;
-  background-color: rgba(84,94,255,0);
+  background-color: rgba(200,206,255,0);
   padding: 0;
   border-radius: 2.25rem;
   border: none;
@@ -1435,7 +1442,7 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
 }
 
 .emotion-12:focus-visible:not(:disabled) {
-  background-color: rgba(84,94,255,0.06);
+  background-color: rgba(200,206,255,0.20);
 }
 
 .emotion-12:disabled {
@@ -1444,12 +1451,12 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
 }
 
 .emotion-12:hover:not(:disabled) {
-  background-color: rgba(84,94,255,0.06);
+  background-color: rgba(200,206,255,0.20);
 }
 
 .emotion-12:active:not(:disabled),
 .emotion-12[aria-expanded="true"] {
-  background-color: rgba(84,94,255,0.14);
+  background-color: rgba(200,206,255,0.30);
 }
 
 .emotion-13 {
@@ -1467,7 +1474,7 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
 }
 
 .emotion-14 path {
-  fill: #1552DD!important;
+  fill: #194DCC!important;
 }
 
 .emotion-15 {
@@ -1526,9 +1533,9 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #1552DD;
+  color: #194DCC;
   height: auto;
-  background-color: rgba(84,94,255,0);
+  background-color: rgba(200,206,255,0);
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   border: none;
@@ -1538,7 +1545,7 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
 }
 
 .emotion-18:focus-visible:not(:disabled) {
-  background-color: rgba(84,94,255,0.06);
+  background-color: rgba(200,206,255,0.20);
 }
 
 .emotion-18:disabled {
@@ -1547,12 +1554,12 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
 }
 
 .emotion-18:hover:not(:disabled) {
-  background-color: rgba(84,94,255,0.06);
+  background-color: rgba(200,206,255,0.20);
 }
 
 .emotion-18:active:not(:disabled),
 .emotion-18[aria-expanded="true"] {
-  background-color: rgba(84,94,255,0.14);
+  background-color: rgba(200,206,255,0.30);
 }
 
 .emotion-19 {
@@ -1595,6 +1602,7 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  color: #52567a;
   width: 2.25rem;
   height: 2.25rem;
   font-size: 0.875rem;
@@ -1613,7 +1621,7 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  background: #ffffff;
+  background: rgba(200,206,255,0);
 }
 
 .emotion-35 {
@@ -1621,12 +1629,13 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
+  color: #111530;
   width: 2.25rem;
   opacity: 1;
 }
 
 .emotion-35:focus-visible {
-  background-color: #F5F5FF;
+  background-color: rgba(200,206,255,0.20);
   border-radius: 6.25rem;
 }
 
@@ -1636,9 +1645,10 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
-  border: 0.0625rem solid rgba(84,94,255,0);
+  border: 0.0625rem solid rgba(200,206,255,0);
   width: 2.25rem;
   height: 2.25rem;
+  color: #111530;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1657,7 +1667,7 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
 
 .emotion-36:hover {
   border-radius: 6.25rem;
-  background: #F5F5FF;
+  background: rgba(200,206,255,0.20);
 }
 
 .emotion-39 {
@@ -1665,13 +1675,14 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
+  color: #111530;
   width: 2.25rem;
   font-weight: bold;
   opacity: 1;
 }
 
 .emotion-39:focus-visible {
-  background-color: #F5F5FF;
+  background-color: rgba(200,206,255,0.20);
   border-radius: 6.25rem;
 }
 
@@ -1681,10 +1692,11 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
-  border: 0.0625rem solid #175bf5;
+  border: 0.0625rem solid #175BF5;
   border-radius: 6.25rem;
   width: 2.25rem;
   height: 2.25rem;
+  color: #111530;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1703,7 +1715,7 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
 
 .emotion-40:hover {
   border-radius: 6.25rem;
-  background: #F5F5FF;
+  background: rgba(200,206,255,0.20);
 }
 
 .emotion-41 {
@@ -1714,13 +1726,13 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
   color: #ffffff;
   width: 2.25rem;
   opacity: 1;
-  background: #175bf5;
+  background: #194DCC;
   border-bottom-left-radius: 100%;
   border-top-left-radius: 100%;
 }
 
 .emotion-41:focus-visible {
-  background-color: #F5F5FF;
+  background-color: rgba(200,206,255,0.20);
   border-radius: 6.25rem;
 }
 
@@ -1745,7 +1757,7 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
-  border: 0 solid rgba(84,94,255,0);
+  border: 0 solid rgba(200,206,255,0);
   border-radius: 6.25rem;
   width: 2.25rem;
   height: 2.25rem;
@@ -1763,7 +1775,7 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  background: #175bf5;
+  background: #194DCC;
 }
 
 .emotion-42:hover {
@@ -1776,13 +1788,14 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
+  color: #111530;
   width: 2.25rem;
   opacity: 1;
-  background: #F5F5FF;
+  background: rgba(200,206,255,0.20);
 }
 
 .emotion-43:focus-visible {
-  background-color: #F5F5FF;
+  background-color: rgba(200,206,255,0.20);
   border-radius: 6.25rem;
 }
 
@@ -1792,9 +1805,10 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
-  border: 0.0625rem solid rgba(84,94,255,0);
+  border: 0.0625rem solid rgba(200,206,255,0);
   width: 2.25rem;
   height: 2.25rem;
+  color: #111530;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1837,13 +1851,13 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
   color: #ffffff;
   width: 2.25rem;
   opacity: 1;
-  background: #175bf5;
+  background: #194DCC;
   border-bottom-right-radius: 100%;
   border-top-right-radius: 100%;
 }
 
 .emotion-155:focus-visible {
-  background-color: #F5F5FF;
+  background-color: rgba(200,206,255,0.20);
   border-radius: 6.25rem;
 }
 
@@ -1878,7 +1892,7 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
   align-items: center;
   gap: 0.5rem;
   padding: 0 1.25rem;
-  border-top: 0.0625rem solid #E7E8FF;
+  border-top: 0.0625rem solid rgba(200,206,255,0.70);
 }
 
 .emotion-193 {
@@ -1901,7 +1915,7 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
   justify-content: center;
   color: #ffffff;
   height: auto;
-  background-color: #175bf5;
+  background-color: #175BF5;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   border: none;
@@ -1911,7 +1925,7 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
 }
 
 .emotion-193:focus-visible:not(:disabled) {
-  background-color: #1552DD;
+  background-color: #5E8DF8;
 }
 
 .emotion-193:disabled {
@@ -1920,12 +1934,12 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
 }
 
 .emotion-193:hover:not(:disabled) {
-  background-color: #1552DD;
+  background-color: #5E8DF8;
 }
 
 .emotion-193:active:not(:disabled),
 .emotion-193[aria-expanded="true"] {
-  background-color: #1249C4;
+  background-color: #194DCC;
 }
 
 <div>

@@ -59,7 +59,7 @@ const field = {
   stepper: {
     backgroundColor: {
       default: {
-        value: '{sem.colors.palette.tertiary.lightest}',
+        value: '{sem.colors.palette.tertiary.main}',
         type: 'color',
         description: 'Sets backgroundColor for field increment (default state)',
       },
@@ -120,7 +120,7 @@ const field = {
   },
   backgroundColor: {
     default: {
-      value: '{sem.colors.palette.secondary.lightest}',
+      value: '{sem.colors.palette.secondary.main}',
       type: 'color',
       description: 'Sets backgroundColor for default input field container',
     },
@@ -131,11 +131,11 @@ const field = {
     },
     focused: {
       type: 'color',
-      value: '{sem.colors.palette.secondary.light}',
+      value: '{sem.colors.palette.secondary.main}',
       description: 'Sets backgroundColor for focused input field container',
     },
     error: {
-      value: '{sem.colors.palette.error.lightest}',
+      value: '{sem.colors.palette.error.light}',
       type: 'color',
       description: 'Sets backgroundColor for error input field container',
     },

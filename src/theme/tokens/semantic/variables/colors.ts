@@ -6,307 +6,297 @@ const colors = {
       description: 'light backgroundColor variant',
     },
     transparent: {
-      value: '{colors.transparent.default.1}',
+      value: '{colors.transparent.1}',
       type: 'color',
       description: 'transparent backgroundColor variant',
     },
-    tinted: {
+    alt: {
       value: '{colors.neutral.2}',
       type: 'color',
-      description: 'tinted backgroundColor. Use as backgroundColor in pages',
+      description: 'tinted backgroundColor variant',
     },
     inverted: {
-      value: '{colors.neutral.4}',
+      value: '{colors.neutral.6}',
       type: 'color',
-      description: 'invertedBackgroundColor variant',
+      description: 'invertedBackgroundColor default variant',
     },
     invertedAlt: {
       value: '{colors.neutral.5}',
       type: 'color',
-      description: 'invertedBackgroundColor, dark variant',
+      description: 'invertedBackgroundColor, alt variant',
     },
   },
   backdrop: {
-    transparent: {
-      value: '{colors.transparent.default.1}',
-      type: 'color',
-      description: 'backdrop shade, transparent variant',
-    },
-    dark: {
-      value: '{colors.transparent.default.5}',
+    default: {
+      value: '{colors.transparent.5}',
       type: 'color',
       description: 'backdrop shade, dark variant',
     },
   },
   palette: {
     error: {
-      lightest: {
+      light: {
         type: 'color',
         value: '{colors.red.1}',
       },
-      light: {
+      main: {
         type: 'color',
         value: '{colors.red.2}',
       },
-      main: {
+      dark: {
         type: 'color',
         value: '{colors.red.3}',
       },
-      dark: {
-        type: 'color',
-        value: '{colors.red.4}',
-      },
-      darkest: {
-        type: 'color',
-        value: '{colors.red.5}',
-      },
     },
     warning: {
-      lightest: {
+      light: {
         type: 'color',
         value: '{colors.orange.1}',
       },
-      light: {
+      main: {
         type: 'color',
         value: '{colors.orange.2}',
       },
-      main: {
+      dark: {
         type: 'color',
         value: '{colors.orange.3}',
       },
-      dark: {
-        type: 'color',
-        value: '{colors.orange.4}',
-      },
-      darkest: {
-        type: 'color',
-        value: '{colors.orange.5}',
-      },
     },
     primary: {
-      lightest: {
-        type: 'color',
-        value: '{colors.blue.1}',
-      },
       light: {
         type: 'color',
-        value: '{colors.blue.2}',
+        value: '{colors.blue.5}',
       },
       main: {
         type: 'color',
-        value: '{colors.blue.3}',
+        value: '{colors.blue.6}',
       },
       dark: {
         type: 'color',
-        value: '{colors.blue.4}',
-      },
-      darkest: {
-        type: 'color',
-        value: '{colors.blue.5}',
-        description: 'Used to indicate active state',
+        value: '{colors.blue.7}',
       },
     },
     secondary: {
-      lightest: {
-        type: 'color',
-        value: '{colors.tinted.1}',
-      },
       light: {
         type: 'color',
-        value: '{colors.tinted.2}',
+        value: '{colors.transparent.2}',
       },
       main: {
         type: 'color',
-        value: '{colors.tinted.3}',
+        value: '{colors.transparent.3}',
       },
       dark: {
         type: 'color',
-        value: '{colors.tinted.4}',
-      },
-      darkest: {
-        type: 'color',
-        value: '{colors.tinted.5}',
+        value: '{colors.transparent.4}',
       },
     },
-    inverted: {
-      lightest: {
+    success: {
+      light: {
         type: 'color',
         value: '{colors.teal.1}',
       },
-      light: {
+      main: {
         type: 'color',
         value: '{colors.teal.2}',
       },
-      main: {
+      dark: {
         type: 'color',
         value: '{colors.teal.3}',
       },
-      dark: {
-        type: 'color',
-        value: '{colors.teal.4}',
-      },
-      darkest: {
-        type: 'color',
-        value: '{colors.teal.5}',
-      },
     },
     tertiary: {
-      lightest: {
-        value: '{colors.transparent.default.1}',
-        type: 'color',
-      },
       light: {
-        value: '{colors.transparent.default.2}',
+        value: '{colors.transparent.2}',
         type: 'color',
       },
       main: {
-        value: '{colors.transparent.default.3}',
+        value: '{colors.transparent.1}',
         type: 'color',
       },
       dark: {
+        value: '{colors.transparent.3}',
         type: 'color',
-        value: '{colors.transparent.default.4}',
-      },
-      darkest: {
-        type: 'color',
-        value: '{colors.transparent.default.5}',
-      },
-    },
-    tertiaryAlt: {
-      lightest: {
-        value: '{colors.transparent.alt.1}',
-        type: 'color',
-      },
-      light: {
-        value: '{colors.transparent.alt.2}',
-        type: 'color',
-      },
-      main: {
-        value: '{colors.transparent.alt.3}',
-        type: 'color',
-      },
-      dark: {
-        type: 'color',
-        value: '{colors.transparent.alt.4}',
-      },
-      darkest: {
-        type: 'color',
-        value: '{colors.transparent.alt.5}',
       },
     },
     upsell: {
-      lightest: {
+      light: {
         value: '{colors.purple.1}',
         type: 'color',
       },
-      light: {
+      main: {
         value: '{colors.purple.2}',
         type: 'color',
       },
-      main: {
+      dark: {
         value: '{colors.purple.3}',
         type: 'color',
       },
-      dark: {
+    },
+    primaryAlt: {
+      light: {
+        value: '{colors.blue.1}',
         type: 'color',
-        value: '{colors.purple.4}',
       },
-      darkest: {
+      main: {
+        value: '{colors.blue.2}',
         type: 'color',
-        value: '{colors.purple.5}',
+      },
+      dark: {
+        value: '{colors.blue.3}',
+        type: 'color',
       },
     },
   },
   textColor: {
     default: {
       primary: {
-        value: '{colors.neutral.4}',
+        value: '{colors.neutral.6}',
         type: 'color',
         description: 'Sets color for primary text',
       },
       secondary: {
-        value: '{colors.neutral.3}',
+        value: '{colors.neutral.4}',
         type: 'color',
         description: 'Sets color for secondary text',
       },
       error: {
-        value: '{colors.red.5}',
+        value: '{colors.red.7}',
         type: 'color',
-        description: 'Sets color for error text. AA compliant against white and error.lightest',
+        description: 'Sets color for error text',
       },
       active: {
-        value: '{colors.blue.4}',
+        value: '{colors.blue.7}',
         type: 'color',
         description: 'Sets color for active text',
       },
       visited: {
-        value: '{colors.purple.5}',
+        value: '{colors.purple.7}',
         type: 'color',
         description: 'Sets color for visited text (link)',
+      },
+      warning: {
+        value: '{colors.orange.7}',
+        type: 'color',
+        description: 'Sets color for warning text',
+      },
+      success: {
+        value: '{colors.teal.7}',
+        type: 'color',
+        description: 'Sets color for success text',
       },
     },
     inverted: {
       visited: {
-        value: '{colors.purple.2}',
+        value: '{colors.purple.4}',
         type: 'color',
         description: 'Sets color for visited text (link)',
       },
       primary: {
         value: '{colors.neutral.1}',
         type: 'color',
-        description: 'Sets color for primary text',
+        description: 'Sets color for inverted primary text',
       },
       secondary: {
-        value: '{colors.blue.2}',
+        value: '{colors.neutral.3}',
         type: 'color',
-        description: 'Sets color for secondary text',
+        description: 'Sets color for inverted secondary text',
       },
       error: {
-        value: '{colors.red.2}',
+        value: '{colors.red.4}',
         type: 'color',
-        description: 'Sets color for error text',
+        description: 'Sets color for inverted error text',
       },
       active: {
-        value: '{colors.teal.3}',
+        value: '{colors.blue.4}',
         type: 'color',
-        description: 'Sets color for active text',
+        description: 'Sets color for inverted active text',
+      },
+      warning: {
+        value: '{colors.orange.4}',
+        type: 'color',
+      },
+      success: {
+        value: '{colors.teal.4}',
+        type: 'color',
+        description: 'Sets color for inverted success text',
       },
     },
   },
   borderColor: {
     decorative: {
       transparent: {
-        value: '{colors.transparent.default.1}',
+        value: '{colors.transparent.1}',
         type: 'color',
         description: 'transparent borderColor variant',
       },
-      muted: {
-        value: '{colors.tinted.3}',
+      default: {
+        value: '{colors.transparent.5}',
         type: 'color',
         description: 'Default decorative borderColor',
+      },
+      inverted: {
+        value: '{colors.transparent.10}',
+        type: 'color',
+        description: 'Inverted decorative borderColor',
       },
     },
     interactive: {
       default: {
-        value: '{colors.blue.2}',
+        value: '{colors.blue.4}',
         type: 'color',
         description: 'Used in default component state',
       },
       active: {
-        value: '{colors.blue.3}',
+        value: '{colors.blue.6}',
         type: 'color',
         description: 'Used in active component state',
       },
       error: {
-        value: '{colors.red.3}',
+        value: '{colors.red.5}',
         type: 'color',
-        description: 'Used in error component state',
+        description: 'Sets borderColor for error',
       },
-      focused: {
-        value: '{colors.purple.4}',
+      upsell: {
+        value: '{colors.purple.5}',
         type: 'color',
-        description: 'Used in focused component state',
+        description: 'Sets borderColor for upsell',
       },
+      warning: {
+        value: '{colors.orange.5}',
+        type: 'color',
+        description: 'Sets borderColor for warning',
+      },
+      success: {
+        value: '{colors.teal.5}',
+        type: 'color',
+        description: 'Sets borderColor for success',
+      },
+    },
+  },
+  indicators: {
+    brand: {
+      value: '{colors.blue.5}',
+      type: 'color',
+    },
+    success: {
+      value: '{colors.teal.5}',
+      type: 'color',
+    },
+    pending: {
+      value: '{colors.purple.4}',
+      type: 'color',
+    },
+    warning: {
+      value: '{colors.orange.4}',
+      type: 'color',
+    },
+    error: {
+      value: '{colors.red.5}',
+      type: 'color',
+    },
+    inactive: {
+      value: '{colors.neutral.3}',
+      type: 'color',
     },
   },
 } as const;

@@ -25,7 +25,7 @@ const controls = {
       },
       pressed: {
         type: 'color',
-        value: '{sem.colors.borderColor.interactive.active}',
+        value: '{sem.colors.borderColor.decorative.transparent}',
         description: 'Sets borderColor for an pressed checkbox',
       },
     },
@@ -78,7 +78,7 @@ const controls = {
       },
       active: {
         type: 'color',
-        value: '{sem.colors.borderColor.interactive.active}',
+        value: '{sem.colors.palette.primary.main}',
         description: 'Sets borderColor for an pressed radio button',
       },
     },
@@ -113,13 +113,13 @@ const controls = {
     },
     backgroundColor: {
       track: {
-        value: '{sem.colors.palette.secondary.dark}',
+        value: '{sem.colors.palette.primaryAlt.dark}',
         type: 'color',
         description: 'Sets backgroundColor for switch track',
       },
       thumb: {
         default: {
-          value: '{sem.colors.palette.secondary.lightest}',
+          value: '{sem.colors.backgroundColor.default}',
           type: 'color',
           description: 'Sets backgroundColor for default switch thumb state',
         },
@@ -177,20 +177,20 @@ const controls = {
     },
   },
   label: {
-    normal: {
-      value: '{sem.typography.normal.body02}',
-      type: 'typography',
-      description: 'Sets text for normal control label',
-    },
-    large: {
-      value: '{sem.typography.normal.headline04}',
-      type: 'typography',
-      description: 'Sets text for large control label',
-    },
     gap: {
       value: '{spacing.2}',
       type: 'spacing',
       description: 'Sets gap for label/input in controls ',
+    },
+    normal: {
+      value: '{sem.typography.normal.body02}',
+      type: 'typography',
+      description: "Sets text style for control 'normal' label ",
+    },
+    large: {
+      value: '{sem.typography.normal.headline04}',
+      type: 'typography',
+      description: "Sets text style for 'large' control label",
     },
   },
   textColor: {
@@ -208,7 +208,7 @@ const controls = {
   helpText: {
     value: '{sem.typography.normal.body03}',
     type: 'typography',
-    description: 'Sets text for optional help text in control label',
+    description: 'Sets text style for control help text (if shown)',
   },
 } as const;
 

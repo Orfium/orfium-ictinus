@@ -24,7 +24,7 @@
   position: relative;
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #b9cdfc;
+  box-shadow: 0 0 0 0.0625rem #8EAAEC;
   border-radius: 0.25rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -34,16 +34,16 @@
   cursor: text;
   height: 3.25rem;
   min-width: 8.75rem;
-  background-color: #ffffff;
+  background-color: rgba(200,206,255,0.30);
 }
 
 .emotion-1:hover {
-  background-color: #F5F5FF;
+  background-color: rgba(200,206,255,0.20);
 }
 
 .emotion-1:focus-within {
-  box-shadow: 0 0 0 0.125rem #175bf5;
-  background-color: #F5F5FF;
+  box-shadow: 0 0 0 0.125rem #175BF5;
+  background-color: rgba(200,206,255,0.30);
 }
 
 .emotion-2 {
@@ -89,7 +89,7 @@
   letter-spacing: 0.015625rem;
   background: transparent;
   border: none;
-  color: #1B214F;
+  color: #111530;
   padding: 0;
   display: block;
   position: relative;
@@ -121,19 +121,19 @@
 }
 
 .emotion-4:focus::-webkit-input-placeholder {
-  color: #686BB3;
+  color: #52567a;
 }
 
 .emotion-4:focus::-moz-placeholder {
-  color: #686BB3;
+  color: #52567a;
 }
 
 .emotion-4:focus:-ms-input-placeholder {
-  color: #686BB3;
+  color: #52567a;
 }
 
 .emotion-4:focus::placeholder {
-  color: #686BB3;
+  color: #52567a;
 }
 
 .emotion-4:not(:focus):placeholder-shown+label {
@@ -151,7 +151,7 @@
 
 .emotion-4:focus-within+label {
   font-weight: 700!important;
-  color: #1552DD;
+  color: #194DCC;
 }
 
 .emotion-4:disabled {
@@ -172,7 +172,7 @@
   -moz-transform: translate(0.1875rem, 0);
   -ms-transform: translate(0.1875rem, 0);
   transform: translate(0.1875rem, 0);
-  color: #686BB3;
+  color: #52567a;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -204,7 +204,7 @@
   align-items: center;
   gap: 0.25rem;
   opacity: 1;
-  color: #686BB3;
+  color: #52567a;
   padding: 0.5rem 0 0;
   font-family: Roboto;
   font-weight: 400;

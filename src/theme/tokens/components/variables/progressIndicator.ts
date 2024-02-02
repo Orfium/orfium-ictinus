@@ -18,7 +18,7 @@ const progressIndicator = {
       description: 'Sets backgroundColor for progress indicator track',
     },
     active: {
-      value: '{colors.blue.3}',
+      value: '{colors.blue.5}',
       type: 'color',
       description: 'Sets backgroundColor for active indicator',
     },

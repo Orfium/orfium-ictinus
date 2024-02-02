@@ -67,7 +67,7 @@ export const tagContainerStyles =
         border-color: ${isInteractive ? tokens('borderColor.interactive.focused') : null};
       }
 
-      ${generateStylesFromTokens(tokens(`label.${size}` as const))}
+      ${generateStylesFromTokens(tokens(`label.default.${size}` as const))}
     `;
   };
 

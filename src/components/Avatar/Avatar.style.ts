@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 import { rem } from 'theme/utils';
 
 import type { AvatarTokens } from './Avatar.tokens';
-import { getAvatarTextTokens, getAvatarTokens, parseAvatarIconSize } from './Avatar.tokens';
+import { getAvatarTokens, parseAvatarIconSize } from './Avatar.tokens';
 import type { AvatarColors, AvatarProps, AvatarSizes } from './Avatar.types';
 import type { Theme } from '../../theme';
 import { flex } from '../../theme/functions';
@@ -27,7 +27,6 @@ export const avatarStyle =
   ({ size, color }: { size: AvatarSizes; color: AvatarColors }) =>
   (theme: Theme): SerializedStyles => {
     const tokens = getAvatarTokens(theme);
-    const typographyTokens = getAvatarTextTokens(theme);
 
     return css`
       ${flex};
@@ -46,7 +45,7 @@ export const avatarStyle =
       user-select: none;
       justify-content: center;
 
-      ${generateStylesFromTokens(typographyTokens(`${size}` as const))};
+      ${generateStylesFromTokens(tokens(`label.${size}` as const))};
 
       img {
         border-radius: ${tokens('borderRadius')};

@@ -31,6 +31,7 @@ export const ReadOnlyTag = {
       <Tag color="red">Label</Tag>
       <Tag color="purple">Label</Tag>
       <Tag color="teal">Label</Tag>
+      <Tag color="orange">Label</Tag>
     </Stack>
   ),
   name: 'Read-only Tag',
@@ -39,17 +40,20 @@ export const ReadOnlyTag = {
 export const ReadOnlyTagWithIcon = {
   render: () => (
     <Stack>
-      <Tag iconName={'dashboard'}>Label</Tag>
-      <Tag iconName={'dashboard'} color="blue">
+      <Tag iconName={'bookmark'}>Label</Tag>
+      <Tag iconName={'bookmark'} color="blue">
         Label
       </Tag>
-      <Tag iconName={'dashboard'} color="red">
+      <Tag iconName={'bookmark'} color="red">
         Label
       </Tag>
-      <Tag iconName={'dashboard'} color="purple">
+      <Tag iconName={'bookmark'} color="purple">
         Label
       </Tag>
-      <Tag iconName={'dashboard'} color="teal">
+      <Tag iconName={'bookmark'} color="teal">
+        Label
+      </Tag>
+      <Tag iconName={'bookmark'} color="orange">
         Label
       </Tag>
     </Stack>
@@ -108,6 +112,7 @@ export const TagSizes = {
         <Tag color="red">Normal</Tag>
         <Tag color="purple">Normal</Tag>
         <Tag color="teal">Normal</Tag>
+        <Tag color="orange">Normal</Tag>
       </Stack>
       <Stack>
         <Tag size="small">Small</Tag>
@@ -121,6 +126,9 @@ export const TagSizes = {
           Small
         </Tag>
         <Tag size="small" color="teal">
+          Small
+        </Tag>
+        <Tag size="small" color="orange">
           Small
         </Tag>
       </Stack>
@@ -207,7 +215,7 @@ export const Playground = {
       text={text('text', 'Label')}
       type={select('type', ['read-only', 'selectable', 'clearable'], 'read-only')}
       size={select('size', ['normal', 'small'], 'normal')}
-      color={select('color', ['neutral', 'blue', 'red', 'purple', 'teal'], 'neutral')}
+      color={select('color', ['neutral', 'blue', 'red', 'purple', 'teal', 'orange'], 'neutral')}
       hasIcon={boolean('hasIcon (only for Read-only)', false)}
       iconName={getIconSelectorKnob('iconLeftName (only for Read-only)')}
     />

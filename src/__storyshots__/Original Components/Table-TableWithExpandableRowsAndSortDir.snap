@@ -56,7 +56,7 @@
   -ms-flex-align: center;
   align-items: center;
   box-sizing: border-box;
-  border: 0.125rem solid #b9cdfc;
+  border: 0.125rem solid #8EAAEC;
   border-radius: 0.25rem;
 }
 
@@ -69,8 +69,8 @@
 .emotion-4[data-focus-visible='true'] {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  background: rgba(84,94,255,0.06);
-  box-shadow: 0px 0px 0px 8px rgba(84,94,255,0.06);
+  background: rgba(200,206,255,0.20);
+  box-shadow: 0px 0px 0px 8px rgba(200,206,255,0.20);
   border-radius: 100%;
 }
 
@@ -78,8 +78,8 @@
 .emotion-4[data-indeterminate='true']>div {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  border-color: #175bf5;
-  background: #175bf5;
+  border-color: rgba(200,206,255,0);
+  background: #175BF5;
 }
 
 .emotion-4[data-selected='true'] svg,
@@ -250,13 +250,13 @@
 }
 
 .emotion-17 {
-  background-color: #1B214F;
-  border: 0.0625rem solid rgba(84,94,255,0);
-  box-shadow: 0rem 0.25rem 0.5rem 0rem #10306612;
+  background-color: #111530;
+  border: 0.0625rem solid rgba(200,206,255,0);
+  box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(200,206,255,0.45);
 }
 
 .emotion-17 .tippy-content {
-  background-color: #1B214F;
+  background-color: #111530;
   max-width: 16rem;
   padding: 0.5rem;
   border-radius: 0.25rem;
@@ -272,7 +272,7 @@
 }
 
 .emotion-17 .tippy-arrow::before {
-  color: #1B214F;
+  color: #111530;
 }
 
 .emotion-19 {
@@ -507,10 +507,10 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #1552DD;
+  color: #194DCC;
   width: 2.25rem;
   height: 2.25rem;
-  background-color: rgba(84,94,255,0);
+  background-color: rgba(200,206,255,0);
   padding: 0;
   border-radius: 2.25rem;
   border: none;
@@ -520,7 +520,7 @@
 }
 
 .emotion-71:focus-visible:not(:disabled) {
-  background-color: rgba(84,94,255,0.06);
+  background-color: rgba(200,206,255,0.20);
 }
 
 .emotion-71:disabled {
@@ -529,12 +529,12 @@
 }
 
 .emotion-71:hover:not(:disabled) {
-  background-color: rgba(84,94,255,0.06);
+  background-color: rgba(200,206,255,0.20);
 }
 
 .emotion-71:active:not(:disabled),
 .emotion-71[aria-expanded="true"] {
-  background-color: rgba(84,94,255,0.14);
+  background-color: rgba(200,206,255,0.30);
 }
 
 .emotion-73 {
@@ -543,7 +543,7 @@
 }
 
 .emotion-73 path {
-  fill: #1552DD!important;
+  fill: #194DCC!important;
 }
 
 <div>

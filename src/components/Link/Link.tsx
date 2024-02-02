@@ -41,7 +41,7 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
         <Icon
           name={iconName}
           color={tokens(`textColor.${type}.default` as LinkTokens)}
-          size={tokens('iconSize')}
+          size={tokens(`iconSize.${size}`)}
           dataTestId={`${dataTestPrefixId}_link_icon`}
         />
       )}

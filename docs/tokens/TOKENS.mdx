@@ -12,6 +12,8 @@ import { Meta } from '@storybook/addon-docs';
 
 <SectionHeader title={'Design Tokens'} />
 
+<br />
+
 Design tokens are a way of abstracting visual design attributes such as color, typography, spacing, and other aspects of design, into reusable, platform-independent variables. They are a central source of truth for the design system that defines the visual language of a product or brand.
 
 ## Theming with design tokens
@@ -20,17 +22,21 @@ We use design tokens to create consistency and coherence in Ictinus design syste
 
 We split our logic in 3 tiers where each of them are reference to each other.
 
-- [Globals](#globals)
-- [Theme](#theme-(you-can-see-it-as-semantic-for-now))
-- [Components](#components)
+- [Global Tier](#global-tier)
+- [Theme Tier](<#theme-tier-(you-can-see-it-as-semantic-for-now)>)
+- [Component Tier](#components-tier)
 
 <br />
 
-#### Globals
+### Global Tier
 
-We define here everything that we think is a **constant** and it will not change if you need to change theme. Globals can be Spacing, Typography, BorderRadius etc
+• Contains the foundations of the design system: all possible colors, spacings, typography styles, border radius, and more
 
-A good example of this can be spacing where we have it like the below
+• Always remains constant, regardless of theme being used
+
+• All theme and component tokens ultimately link back to global tier tokens
+
+• Global token names are deliberately context-free (should not describe what they will be used for)
 
 ```
 const spacing = {
@@ -52,14 +58,23 @@ const spacing = {
 ...
 ```
 
-Where in our system we will use this as `globals.spacing.1` and will return 1px
+<Note>Examples of global spacing tokens</Note>
 
-#### Theme (you can see it as Semantic for now)
+### Theme Tier (you can see it as Semantic for now)
 
-Theme holds attributes that are fetched from globals only in order to create a new attribute that will be changed if a new theme is applied.
-The attributes values here can be anything that can be changed in a theme change. We are using semantic as a baseline for now.
+• Also called semantic tier
 
-A good example of this can be textColor where we create a new attribute to hold all new ref such as `light.primary`
+• All theme attributes are fetched from the global tier
+
+• We can use theme tokens to create themes for any attribute we want to render themeable
+
+• Examples of themeable attributes include:
+
+1. Color themes
+2. Sizing and spacing per breakpoint
+3. Language localization examples
+
+• Theme tier tokens are always contextual (should describe what the token is used for)
 
 ```
 const textColor = {
@@ -78,11 +93,15 @@ const textColor = {
 }
 ```
 
-#### Components
+<Note>Example of theme tokens used to define ‘primary’ and ‘secondary’ text colors</Note>
 
-Component tokens are holding all the token attributes that each component is using. Also Component holds specific attributes for components like we saw `Theme` did. Those attributes values can be from `Globals` or `Theme` tokens
+### Component Tier
 
-An example of this can be show below
+• Always reference component-specific attributes
+
+• Attributes are always fetched from the theme (‘semantic’) tier
+
+• Names should be contextual and start with component name
 
 ```
 const avatar = {
@@ -103,3 +122,8 @@ const avatar = {
   ...
 }
 ```
+
+<Note>
+  Example of component tokens used to define background color and foreground color for the variant
+  of the avatar component
+</Note>

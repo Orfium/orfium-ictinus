@@ -7,12 +7,12 @@ const button = {
         description: 'Sets backgroundColor for primary default button',
       },
       hover: {
-        value: '{sem.colors.palette.primary.dark}',
+        value: '{sem.colors.palette.primary.light}',
         type: 'color',
         description: 'Sets backgroundColor for primary hovered button',
       },
       active: {
-        value: '{sem.colors.palette.primary.darkest}',
+        value: '{sem.colors.palette.primary.dark}',
         type: 'color',
         description: 'Sets backgroundColor for primary active (pressed) button',
       },
@@ -31,12 +31,12 @@ const button = {
         description: 'Sets backgroundColor for secondary default button',
       },
       hover: {
-        value: '{sem.colors.palette.secondary.dark}',
+        value: '{sem.colors.palette.secondary.light}',
         type: 'color',
         description: 'Sets backgroundColor for secondary hovered button',
       },
       active: {
-        value: '{sem.colors.palette.secondary.darkest}',
+        value: '{sem.colors.palette.secondary.dark}',
         type: 'color',
         description: 'Sets backgroundColor for secondary active button',
       },
@@ -51,7 +51,7 @@ const button = {
     backgroundColor: {
       default: {
         type: 'color',
-        value: '{sem.colors.palette.tertiary.lightest}',
+        value: '{sem.colors.palette.tertiary.main}',
         description: 'Sets backgroundColor for tertiary default button',
       },
       hover: {
@@ -60,9 +60,8 @@ const button = {
         description: 'Sets backgroundColor for tertiary hovered button',
       },
       active: {
-        value: '{sem.colors.palette.tertiary.main}',
+        value: '{sem.colors.palette.tertiary.dark}',
         type: 'color',
-        description: 'Sets backgroundColor for tertiary active button',
       },
     },
     textColor: {
@@ -71,34 +70,10 @@ const button = {
       description: 'Sets text and icon color tertiary button',
     },
   },
-  invertedAlt: {
-    backgroundColor: {
-      default: {
-        type: 'color',
-        value: '{sem.colors.palette.tertiary.lightest}',
-        description: 'Sets backgroundColor for invertedAlt default button',
-      },
-      hover: {
-        value: '{sem.colors.palette.tertiary.light}',
-        type: 'color',
-        description: 'Sets backgroundColor for invertedAlt hovered button',
-      },
-      active: {
-        value: '{sem.colors.palette.tertiary.main}',
-        type: 'color',
-        description: 'Sets backgroundColor for invertedAlt active button',
-      },
-    },
-    textColor: {
-      value: '{sem.colors.textColor.inverted.active}',
-      type: 'color',
-      description: 'Sets text and icon color for invertedAlt button',
-    },
-  },
   danger: {
     backgroundColor: {
       default: {
-        value: '{sem.colors.palette.error.lightest}',
+        value: '{sem.colors.palette.error.main}',
         type: 'color',
         description: 'Sets backgroundColor for danger default button',
       },
@@ -117,30 +92,6 @@ const button = {
       type: 'color',
       value: '{sem.colors.textColor.default.error}',
       description: 'Sets text and icon color for danger button',
-    },
-  },
-  inverted: {
-    backgroundColor: {
-      default: {
-        value: '{sem.colors.palette.inverted.main}',
-        type: 'color',
-        description: 'Sets backgroundColor for inverted default button',
-      },
-      hover: {
-        value: '{sem.colors.palette.inverted.dark}',
-        type: 'color',
-        description: 'Sets backgroundColor for inverted hovered button',
-      },
-      active: {
-        value: '{sem.colors.palette.inverted.darkest}',
-        type: 'color',
-        description: 'Sets backgroundColor for inverted active (pressed) button',
-      },
-    },
-    textColor: {
-      type: 'color',
-      value: '{sem.colors.textColor.default.primary}',
-      description: 'Sets text and icon color for inverted button',
     },
   },
   borderRadius: {
@@ -185,6 +136,11 @@ const button = {
       type: 'sizing',
       description: "Sets size for iconButton ('compact' variant)",
     },
+    paddingHorizontal: {
+      value: '{spacing.4}',
+      type: 'spacing',
+      description: "Sets left and right padding for textButton ('compact' variant)",
+    },
   },
   normal: {
     iconSize: {
@@ -196,6 +152,21 @@ const button = {
       value: '{sizing.9}',
       type: 'sizing',
       description: 'Sets size for iconButtons',
+    },
+    gap: {
+      value: '{spacing.4}',
+      type: 'spacing',
+      description: 'Sets content padding for textButton',
+    },
+    paddingVertical: {
+      value: '{spacing.4}',
+      type: 'spacing',
+      description: 'Sets top and bottom padding for textButton',
+    },
+    paddingHorizontal: {
+      value: '{spacing.6}',
+      type: 'spacing',
+      description: 'Sets left and right padding for textButton',
     },
   },
   loadingBar: {

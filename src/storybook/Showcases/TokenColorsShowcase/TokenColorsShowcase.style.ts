@@ -9,11 +9,12 @@ export const typeWrapperStyle =
     css`
       margin: 0;
       flex-direction: column;
+      padding: 16px;
 
       h4 {
         padding-bottom: 10px;
         text-transform: capitalize;
-        border-bottom: 1px solid ${theme.tokens.colors.get('borderColor.decorative.muted')};
+        border-bottom: 1px solid ${theme.tokens.colors.get('borderColor.decorative.default')};
       }
     `;
 export const stateWrapperStyle = () => (): SerializedStyles => css``;
@@ -22,7 +23,7 @@ export const colorStyle = (theme: Theme): SerializedStyles =>
     width: 80px;
     height: 80px;
     margin: 0 15px;
-    border: 1px solid ${theme.tokens.colors.get('borderColor.decorative.muted')};
+    border: 1px solid ${theme.tokens.colors.get('borderColor.decorative.default')};
     border-radius: 100%;
   `;
 

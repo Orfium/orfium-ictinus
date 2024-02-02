@@ -98,43 +98,6 @@ export const ButtonTypes = {
   name: 'Button Types and Sizes',
 };
 
-export const InvertedButtonTypes = {
-  render: () => (
-    <>
-      <Stack>
-        <Button type="inverted">Inverted</Button>
-        <Button type="invertedAlt">InvertedAlt</Button>
-      </Stack>
-      <Stack>
-        <Button type="inverted" isDisabled>
-          Inverted
-        </Button>
-        <Button type="invertedAlt" isDisabled>
-          InvertedAlt
-        </Button>
-      </Stack>
-      <Stack>
-        <Button size="compact" type="inverted">
-          Inverted
-        </Button>
-        <Button size="compact" type="invertedAlt">
-          InvertedAlt
-        </Button>
-      </Stack>
-      <Stack>
-        <Button size="compact" type="inverted" isDisabled>
-          Inverted
-        </Button>
-        <Button size="compact" type="invertedAlt" isDisabled>
-          InvertedAlt
-        </Button>
-      </Stack>
-    </>
-  ),
-
-  name: 'Inverted Button Types and Sizes',
-};
-
 export const LoadingButton = {
   render: () => <LoadingButtonShowcase />,
   name: 'Loading Button',
@@ -145,11 +108,7 @@ export const ButtonsWithIcons = {
     <Stack>
       <Button
         iconLeftName={getIconSelectorKnob('iconLeftName', 'edit')}
-        type={select(
-          'type',
-          ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
-          'primary'
-        )}
+        type={select('type', ['primary', 'secondary', 'tertiary', 'danger'], 'primary')}
       >
         Only left Icon
       </Button>
@@ -158,7 +117,7 @@ export const ButtonsWithIcons = {
         iconRightName={getIconSelectorKnob('iconRightName', 'download')}
         type={select(
           'type',
-          ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
+          ['primary', 'secondary', 'tertiary', 'danger'],
           'primary'
         )}
       >
@@ -168,7 +127,7 @@ export const ButtonsWithIcons = {
         iconRightName={getIconSelectorKnob('iconRightName', 'download')}
         type={select(
           'type',
-          ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
+          ['primary', 'secondary', 'tertiary', 'danger'],
           'primary'
         )}
       >
@@ -219,7 +178,7 @@ export const BlockButton = {
         isBlock
         type={select(
           'type',
-          ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
+          ['primary', 'secondary', 'tertiary', 'danger'],
           'primary'
         )}
       >
@@ -229,7 +188,7 @@ export const BlockButton = {
         isBlock
         type={select(
           'type',
-          ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
+          ['primary', 'secondary', 'tertiary', 'danger'],
           'primary'
         )}
         size="compact"
@@ -241,7 +200,7 @@ export const BlockButton = {
         isLoading
         type={select(
           'type',
-          ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
+          ['primary', 'secondary', 'tertiary', 'danger'],
           'primary'
         )}
       >
@@ -252,7 +211,7 @@ export const BlockButton = {
         isLoading
         type={select(
           'type',
-          ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
+          ['primary', 'secondary', 'tertiary', 'danger'],
           'primary'
         )}
         size="compact"
@@ -264,7 +223,7 @@ export const BlockButton = {
         isDisabled
         type={select(
           'type',
-          ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
+          ['primary', 'secondary', 'tertiary', 'danger'],
           'primary'
         )}
       >
@@ -275,7 +234,7 @@ export const BlockButton = {
         isDisabled
         type={select(
           'type',
-          ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
+          ['primary', 'secondary', 'tertiary', 'danger'],
           'primary'
         )}
         size="compact"
@@ -299,7 +258,7 @@ export const ButtonPlayground = {
         buttonLabel={text('Button Label', 'Label')}
         type={select(
           'type',
-          ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
+          ['primary', 'secondary', 'tertiary', 'danger'],
           'primary'
         )}
         hasAvatar={boolean('hasAvatar', false)}

@@ -1,0 +1,29 @@
+import { Meta } from '@storybook/addon-docs';
+import TextColorShowcase from '../../src/storybook/Showcases/TextColorShowcase';
+import OverviewShowcase from '../../src/storybook/Showcases/OverviewShowcase';
+import { overviewTableText } from '../../src/storybook/Typography/constants';
+
+<Meta
+  title="Design Tokens/Semantic/Text Color"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+/>
+
+<SectionHeader title={'Text Color'} />
+
+<br />
+
+- [Overview](#overview)
+- [Text Color](#text-color)
+
+## Overview
+
+Sets AA compliant colors for copy (tested against respective light/inverted backgroundColor tokens)
+
+## Text Color
+
+<TextColorShowcase />

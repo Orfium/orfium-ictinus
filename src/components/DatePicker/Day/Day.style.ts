@@ -2,7 +2,7 @@ import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import type { Theme } from 'theme';
 
-import { getDateTokens } from '../DatePicker.tokens';
+import { getDatePickerTokens } from '../DatePicker.tokens';
 import { label02 } from 'components/Typography/Typography.config.styles';
 
 type DayStyleProps = {
@@ -25,30 +25,30 @@ export const dayWrapperStyle =
     isDisabled,
   }: DayStyleProps & { isToday: boolean }) =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getDateTokens(theme);
+    const tokens = getDatePickerTokens(theme);
 
     return css`
       vertical-align: middle;
       text-align: center;
       cursor: pointer;
       position: relative;
-      color: ${isSelected ? tokens('textColor.active') : tokens('textColor.default')};
-      width: ${tokens('size')};
+      color: ${isSelected ? tokens('date.textColor.active') : tokens('date.textColor.default')};
+      width: ${tokens('dateSize')};
       font-weight: ${isToday && 'bold'};
       opacity: ${isDisabled ? 0.5 : 1};
       background: ${isLast || isFirst
-        ? tokens('backgroundColor.active')
+        ? tokens('date.backgroundColor.active')
         : (isSelected || isBetween) &&
           typeof isBetween !== 'undefined' &&
-          tokens('backgroundColor.focused')};
+          tokens('date.backgroundColor.focused')};
       border-bottom-right-radius: ${isLast && isSelected && '100%'};
       border-top-right-radius: ${isLast && isSelected && '100%'};
       border-bottom-left-radius: ${isFirst && isSelected && '100%'};
       border-top-left-radius: ${isFirst && isSelected && '100%'};
 
       &:focus-visible {
-        background-color: ${tokens('backgroundColor.focused')};
-        border-radius: ${tokens('borderRadius.2')};
+        background-color: ${tokens('date.backgroundColor.focused')};
+        border-radius: ${tokens('date.borderRadius.2')};
       }
 
       ${(isSelected || isLast || isFirst) &&
@@ -72,7 +72,7 @@ export const dayWrapperStyle =
 export const emptyDayStyle =
   ({ isBetween }: { isBetween: boolean }) =>
   (theme: Theme) => {
-    const tokens = getDateTokens(theme);
+    const tokens = getDatePickerTokens(theme);
 
     return css`
       vertical-align: middle;
@@ -80,35 +80,35 @@ export const emptyDayStyle =
       cursor: pointer;
       position: relative;
       background: ${isBetween
-        ? tokens('backgroundColor.focused')
-        : tokens('backgroundColor.default')};
+        ? tokens('date.backgroundColor.focused')
+        : tokens('date.backgroundColor.default')};
     `;
   };
 
 export const dayStyle =
   ({ isSelected, isToday, isDisabled, isBetween }: DayStyleProps) =>
   (theme: Theme) => {
-    const tokens = getDateTokens(theme);
+    const tokens = getDatePickerTokens(theme);
 
     return css`
       ${label02(theme)};
-      border: ${isSelected ? 0 : tokens('borderWidth')} solid
-        ${isToday ? tokens('borderColor.present') : tokens('borderColor.default')};
-      border-radius: ${(isToday || isSelected) && tokens('borderRadius.2')};
-      width: ${tokens('size')};
-      height: ${tokens('size')};
-      color: ${isSelected ? tokens('textColor.active') : tokens('textColor.default')};
+      border: ${isSelected ? 0 : tokens('date.borderWidth')} solid
+        ${isToday ? tokens('date.borderColor.present') : tokens('date.borderColor.default')};
+      border-radius: ${(isToday || isSelected) && tokens('date.borderRadius.2')};
+      width: ${tokens('dateSize')};
+      height: ${tokens('dateSize')};
+      color: ${isSelected ? tokens('date.textColor.active') : tokens('date.textColor.default')};
       box-sizing: border-box;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: ${isSelected ? tokens('backgroundColor.active') : 'transparent'};
+      background: ${isSelected ? tokens('date.backgroundColor.active') : 'transparent'};
 
       ${!isDisabled &&
       `&:hover {
-            border-radius: ${tokens('borderRadius.2')};
+            border-radius: ${tokens('date.borderRadius.2')};
             background: ${
-              !isSelected && (!isBetween ? tokens('backgroundColor.focused') : 'transparent')
+              !isSelected && (!isBetween ? tokens('date.backgroundColor.focused') : 'transparent')
             };
           }`}
     `;

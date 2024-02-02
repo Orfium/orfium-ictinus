@@ -42,7 +42,7 @@ const link = {
   },
   borderColor: {
     focused: {
-      value: '{sem.colors.borderColor.interactive.focused}',
+      value: '{sem.colors.borderColor.interactive.upsell}',
       type: 'color',
       description: 'Sets borderColor for focused link state',
     },
@@ -123,9 +123,28 @@ const link = {
     },
   },
   iconSize: {
-    value: '{sem.icon.size.1}',
-    type: 'sizing',
-    description: 'Sets size for optional link icon',
+    '1': {
+      value: '{sem.icon.size.3}',
+      type: 'sizing',
+      description: 'Sets size for optional link icon (large)',
+    },
+    '2': {
+      value: '{sem.icon.size.2}',
+      type: 'sizing',
+      description: 'Sets size of optional link icon (medium)',
+    },
+    '3': {
+      value: '{sem.icon.size.1}',
+      type: 'sizing',
+      description: 'Sets size for optional link icon',
+    },
+  },
+  borederWidth: {
+    '1': {
+      value: '{borderWidth.1}',
+      type: 'borderWidth',
+      description: 'Setes border width for default and active state',
+    },
   },
 } as const;
 

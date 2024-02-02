@@ -6,7 +6,7 @@ import ThemeProvider from '../src/components/ThemeProvider';
 import styled from '@emotion/styled';
 import Typography from '../src/storybook/Typography';
 import Link from '../src/storybook/Link';
-import { UsageGuidelines, SubsectionHeader, SectionHeader, Tip, Preview } from '../src/storybook';
+import { UsageGuidelines, SubsectionHeader, SectionHeader, Tip, Note, Preview } from '../src/storybook';
 import {
   TypographyResetFontSmooth,
   TypographyWrapper as SBTypographyWrapper,
@@ -222,6 +222,7 @@ const preview: SBPreview = {
         input: inputEmpty,
         UsageGuidelines,
         Tip,
+        Note,
         Preview,
         SubsectionHeader,
         SectionHeader,
