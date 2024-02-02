@@ -1,0 +1,71 @@
+import { Meta } from '@storybook/addon-docs';
+import { Layout, Grid, ExamplesContainer } from '../../src/storybook/Showcases/LayoutShowcase';
+
+<Meta
+  title="System/Layout"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+/>
+
+<SectionHeader title={'Layout'} />
+
+## Structure
+
+<Layout hasLeftSlider />
+
+Layout
+
+1. Wraps the layout
+2. Can contain header, sider, content, footer
+3. Can be placed within another layout
+
+Header
+
+1. Wraps page header
+2. Optional section
+3. Typically contains top navigation but can nest any combination of elements
+4. Must be placed within layout
+
+Sider
+
+1. Wraps page sider
+2. Optional section
+3. Located typically on the left or right side of the webpage
+4. Used for additional navigation or information
+5. Can nest any combination of elements
+6. Must be placed within layout
+
+Content
+
+1. Wraps page content
+2. Must be placed within layout
+
+Footer
+
+1. Wraps page footer
+2. Optional section
+3. Typically contains pagination for a table or list but can nest any combination of elements
+4. Must be placed within layout
+
+## Examples
+
+<ExamplesContainer>
+  <Layout hasLeftSlider />
+  <Layout />
+  <Layout hasRightSlider />
+  <Layout hasLeftSlider hasRightSlider />
+</ExamplesContainer>
+
+## Content grid examples
+
+<Grid containers={[100]} />
+<Grid containers={[66, 33]} />
+<Grid containers={[75, 25]} />
+<Grid containers={[33, 66]} />
+<Grid containers={[33, 33, 33]} />
+<Grid containers={[50, 50]} />
+<Grid containers={[25, 25, 25, 25]} />
