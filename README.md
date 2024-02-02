@@ -18,7 +18,7 @@ $ npm install @orfium/ictinus
 ```text
 $ yarn add @orfium/ictinus
 ```
-Please note that react >= 16.0.0 and react-dom >= 16.0.0 are peer dependencies. Also that emotion 11 is being used and that
+Please note that react >= 18.2.0 and react-dom >= 18.2.0 are peer dependencies. Also that emotion 11 is being used and that
 will not work in older emotion projects.
 
 if you want the next version you can always use the next tag.
