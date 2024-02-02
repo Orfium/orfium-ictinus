@@ -1,6 +1,5 @@
 import { Meta } from '@storybook/addon-docs';
 import TypographyTokensShowcase from '../../src/storybook/Showcases/TypographyTokensShowcase';
-import TextColorShowcase from '../../src/storybook/Showcases/TextColorShowcase';
 import OverviewShowcase from '../../src/storybook/Showcases/OverviewShowcase';
 import { overviewTableText } from '../../src/storybook/Typography/constants';
 
@@ -19,10 +18,7 @@ import { overviewTableText } from '../../src/storybook/Typography/constants';
 <br />
 
 - [Overview](#overview)
-- [Text style tokens](#text-style-tokens)
-- [Text color](#textcolor)
-
-<br />
+- [Text Style tokens](#text-style-tokens)
 
 ## Overview
 
@@ -30,18 +26,6 @@ Typography tokens are used to represent all text needs. There are four major sty
 
 <OverviewShowcase data={overviewTableText} />
 
-<br />
-
-## Text style tokens
+## Text Style tokens
 
 <TypographyTokensShowcase />
-
-<br />
-
-## textColor
-
-Sets AA compliant colors for copy (tested against respective light/inverted backgroundColor tokens)
-
-<br />
-
-<TextColorShowcase />
