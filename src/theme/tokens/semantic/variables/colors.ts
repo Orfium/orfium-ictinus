@@ -242,12 +242,12 @@ const colors = {
     },
     interactive: {
       default: {
-        value: '{colors.blue.2}',
+        value: '{colors.blue.4}',
         type: 'color',
         description: 'Used in default component state',
       },
       active: {
-        value: '{colors.blue.5}',
+        value: '{colors.blue.6}',
         type: 'color',
         description: 'Used in active component state',
       },
