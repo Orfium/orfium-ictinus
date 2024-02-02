@@ -1,5 +1,5 @@
-import type { Location, LocationState } from 'history';
-import type { match } from 'react-router';
+import type { Location } from 'history';
+import type { Params } from 'react-router-dom';
 
 import type { AcceptedIconNames } from 'components/Icon';
 
@@ -9,8 +9,8 @@ export type NavigationMenuItem = {
   state?: Record<string, any> | null;
   isVisible: boolean;
   iconName: AcceptedIconNames;
-  isActive?<Params extends { [K in keyof Params]?: string }, S = LocationState>(
-    match: match<Params> | null,
+  isActive?<S = Location['state']>(
+    params: Readonly<Params<string>>,
     location: Location<S>
   ): boolean;
   options: NavigationMenuItem[];

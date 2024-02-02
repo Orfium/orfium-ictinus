@@ -1,17 +1,18 @@
-import type { FCC} from 'react';
+import type { FCC } from 'react';
 import React, { useEffect } from 'react';
 import type { RouterProps } from 'react-router-dom';
-import { withRouter } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import { useSearchQueryParams } from '../';
 
 const DemoUseSearchQueryParams: FCC<{ initialEntries: string } & RouterProps> = (props) => {
   const searchQueryParams = useSearchQueryParams();
+  const navigate = useNavigate();
   const url = decodeURIComponent(props.initialEntries.replace(/&amp;/g, '&'));
 
   useEffect(() => {
-    props.history.push(decodeURI(url));
-  }, [props.history, url]);
+    navigate(decodeURI(url));
+  }, [navigate, url]);
 
   return (
     <div>
@@ -26,5 +27,4 @@ const DemoUseSearchQueryParams: FCC<{ initialEntries: string } & RouterProps> = 
   );
 };
 
-// @ts-ignore
-export default withRouter(DemoUseSearchQueryParams) as React.ComponentType;
+export default DemoUseSearchQueryParams;

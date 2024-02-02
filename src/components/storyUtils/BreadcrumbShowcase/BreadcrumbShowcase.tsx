@@ -1,7 +1,6 @@
-import { createBrowserHistory } from 'history';
 import { uniqueId } from 'lodash';
-import React, { useState, useEffect } from 'react';
-import { Router, Switch, Route } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 
 import type { BreadcrumbItem } from '../../Breadcrumb/Breadcrumb.types';
 import Breadcrumb from 'components/Breadcrumb';
@@ -15,10 +14,9 @@ const createNewDataConfig = (routeId: number) => ({
   label: `Level ${routeId}`,
 });
 
-const browserHistory = createBrowserHistory();
-
 const BreadcrumbShowcase: React.FCC<Props> = ({ initData = [] }) => {
   const [data, setData] = useState<BreadcrumbItem[]>(initData);
+  const location = useLocation();
 
   const clickHandler = () => {
     const newDataConfig: BreadcrumbItem = createNewDataConfig(data.length + 1);
@@ -27,30 +25,26 @@ const BreadcrumbShowcase: React.FCC<Props> = ({ initData = [] }) => {
   };
 
   useEffect(() => {
-    const unregister = browserHistory.listen((match) => {
-      const currentIndex = data.findIndex((item) => item.href === match.pathname);
-      const updatedBreadcrumbData = data.slice(0, currentIndex + 1);
+    const currentIndex = data.findIndex((item) => item.href === location.pathname);
+    const updatedBreadcrumbData = data.slice(0, currentIndex + 1);
+    if (updatedBreadcrumbData.length > 0) {
       setData(updatedBreadcrumbData);
-    });
+    }
+  }, [location.pathname, data]);
 
-    return () => unregister();
-  });
-
-  const routes = data.map((item) => {
-    return (
-      <Route key={uniqueId('route_')} path={item.href}>
-        {() => <div style={{ marginTop: '8px' }}>Current: {item.label}</div>}
-      </Route>
-    );
-  });
+  const routes = data.map((item) => (
+    <Route
+      key={uniqueId('route_')}
+      path={item.href}
+      element={<div style={{ marginTop: '8px' }}>Current: {item.label}</div>}
+    />
+  ));
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
       <Button onClick={clickHandler}>Add more levels to Breadcrumb</Button>
-      <Router history={browserHistory}>
-        <Breadcrumb items={data} />
-        <Switch>{routes}</Switch>
-      </Router>
+      <Breadcrumb items={data} />
+      <Routes>{routes}</Routes>
     </div>
   );
 };

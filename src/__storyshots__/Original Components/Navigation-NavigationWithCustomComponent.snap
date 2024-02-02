@@ -604,7 +604,7 @@
               style="height: 0px;"
             >
               <a
-                class="emotion-15"
+                class="({ isActive, isPending }) => isPending ? \"pending\" : isActive ? \"active\" : \"\" emotion-15"
                 data-testid="/submenu1"
                 href="/submenu1"
                 id="submenu-item-link"
@@ -635,7 +635,7 @@
                 </span>
               </a>
               <a
-                class="emotion-15"
+                class="({ isActive, isPending }) => isPending ? \"pending\" : isActive ? \"active\" : \"\" emotion-15"
                 data-testid="/submenu2"
                 href="/submenu2"
                 id="submenu-item-link"
@@ -666,7 +666,7 @@
                 </span>
               </a>
               <a
-                class="emotion-15"
+                class="({ isActive, isPending }) => isPending ? \"pending\" : isActive ? \"active\" : \"\" emotion-15"
                 data-testid="/submenu3"
                 href="/submenu3"
                 id="submenu-item-link"
@@ -697,7 +697,7 @@
                 </span>
               </a>
               <a
-                class="emotion-15"
+                class="({ isActive, isPending }) => isPending ? \"pending\" : isActive ? \"active\" : \"\" emotion-15"
                 data-testid="/submenu4"
                 href="/submenu4"
                 id="submenu-item-link"
@@ -790,7 +790,7 @@
               style="height: 0px;"
             >
               <a
-                class="emotion-15"
+                class="({ isActive, isPending }) => isPending ? \"pending\" : isActive ? \"active\" : \"\" emotion-15"
                 data-testid="/submenu5"
                 href="/submenu5"
                 id="submenu-item-link"
@@ -821,7 +821,7 @@
                 </span>
               </a>
               <a
-                class="emotion-15"
+                class="({ isActive, isPending }) => isPending ? \"pending\" : isActive ? \"active\" : \"\" emotion-15"
                 data-testid="/submenu6"
                 href="/submenu6"
                 id="submenu-item-link"
@@ -914,7 +914,7 @@
               style="height: 0px;"
             >
               <a
-                class="emotion-15"
+                class="({ isActive, isPending }) => isPending ? \"pending\" : isActive ? \"active\" : \"\" emotion-15"
                 data-testid="/submenu7"
                 href="/submenu7"
                 id="submenu-item-link"
@@ -945,7 +945,7 @@
                 </span>
               </a>
               <a
-                class="emotion-15"
+                class="({ isActive, isPending }) => isPending ? \"pending\" : isActive ? \"active\" : \"\" emotion-15"
                 data-testid="/submenu8"
                 href="/submenu8"
                 id="submenu-item-link"
@@ -976,7 +976,7 @@
                 </span>
               </a>
               <a
-                class="emotion-15"
+                class="({ isActive, isPending }) => isPending ? \"pending\" : isActive ? \"active\" : \"\" emotion-15"
                 data-testid="/submenu9"
                 href="/submenu9"
                 id="submenu-item-link"
@@ -1009,7 +1009,7 @@
             </div>
           </div>
           <a
-            class="emotion-69"
+            class="({ isActive, isPending }) => isPending ? \"pending\" : isActive ? \"active\" : \"\" emotion-69"
             data-testid="/menu4"
             href="/menu4"
           >
