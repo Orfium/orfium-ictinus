@@ -48,17 +48,6 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   gap: 0.25rem;
   color: #194DCC;
   -webkit-text-decoration: none;
@@ -81,25 +70,25 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-4:hover,
-.emotion-4[aria-expanded="true"] {
+.emotion-3:hover,
+.emotion-3[aria-expanded="true"] {
   color: #111530;
 }
 
-.emotion-4:hover path,
-.emotion-4[aria-expanded="true"] path {
+.emotion-3:hover path,
+.emotion-3[aria-expanded="true"] path {
   fill: #111530!important;
 }
 
-.emotion-4:visited {
+.emotion-3:visited {
   color: #5F33AC;
 }
 
-.emotion-4:visited path {
+.emotion-3:visited path {
   fill: #5F33AC!important;
 }
 
-.emotion-4:focus-visible {
+.emotion-3:focus-visible {
   border: 0.25rem solid #A566FF;
 }
 
@@ -118,18 +107,13 @@
         <div
           class="emotion-2"
         >
-          <div
-            class="emotion-3"
-          >
-            Go back to
-          </div>
           <a
-            class="emotion-4"
+            class="emotion-3"
             data-testid="_breadcrumb_go_back_to_Level 1_link"
             href="/first-level"
           >
             <span>
-              Level 1
+              Go back to Level 1
             </span>
           </a>
         </div>
