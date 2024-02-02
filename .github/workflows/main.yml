@@ -62,6 +62,9 @@ jobs:
             elif [[ ${{ github.ref }} == "refs/heads/next" ]]; then
               TARGET=next
             fi
+            elif [[ ${{ github.ref }} == "refs/heads/v4.x" ]]; then
+              TARGET=v4
+            fi
           else
             if [ ! -f .github/workflows/teardown.yml ]; then
               echo "Set up the teardown flow and try again!"
