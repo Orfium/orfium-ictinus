@@ -1,6 +1,6 @@
 import useTheme from 'hooks/useTheme';
 import React, { useState, Fragment } from 'react';
-import { BrowserRouter as Router, NavLink, Route, Switch, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, NavLink, Routes, Route, useLocation } from 'react-router-dom';
 import { flex } from 'theme/functions';
 
 import { menuItems } from './MenuItems';
@@ -8,7 +8,7 @@ import Button from 'components/Button';
 import Navigation from 'components/Navigation';
 
 const DisplayLocation = () => {
-  const location = useLocation<{ test: string }>();
+  const location = useLocation();
 
   return <div>Link State: {location?.state?.test}</div>;
 };
@@ -35,10 +35,10 @@ const NavigationShowcase: React.FCC<Props> = ({ renderHeader }) => {
         <div
           css={[
             flex,
-            `padding: 50px;flex-direction: column; align-items: center; background-color: ${theme.utils.getColor(
+            `padding: 50px; flex-direction: column; align-items: center; background-color: ${theme.utils.getColor(
               'lightGrey',
               50
-            )}; width: 100%;  `,
+            )}; width: 100%;`,
           ]}
         >
           <div css={[flex, 'flex-direction: column']}>
@@ -47,61 +47,61 @@ const NavigationShowcase: React.FCC<Props> = ({ renderHeader }) => {
             </span>
             {menuItems.map((menuItem) => {
               const hasSubMenus = menuItem.options.length > 0;
-              if (!hasSubMenus) {
-                return (
-                  <NavLink
-                    css={['text-decoration: none; color: inherit; margin: 5px']}
-                    key={menuItem.url}
-                    exact
-                    to={menuItem.url}
-                  >
-                    {menuItem.name}
-                  </NavLink>
-                );
-              } else
-                return menuItem.options.map((subMenuItem) => (
+
+              return hasSubMenus ? (
+                menuItem.options.map((subMenuItem) => (
                   <NavLink
                     css={['text-decoration: none; color: inherit; margin: 5px']}
                     key={subMenuItem.url}
-                    exact
                     to={subMenuItem.url}
                   >
                     {subMenuItem.name}
                   </NavLink>
-                ));
+                ))
+              ) : (
+                <NavLink
+                  css={['text-decoration: none; color: inherit; margin: 5px']}
+                  key={menuItem.url}
+                  to={menuItem.url}
+                >
+                  {menuItem.name}
+                </NavLink>
+              );
             })}
           </div>
           <br />
           <br /> Current Route:
-          <Switch>
-            <Route path="/menu1">
-              {() => (
+          <Routes>
+            <Route
+              path="/menu1"
+              element={
                 <Fragment>
                   <div>/menu1</div>
                   <DisplayLocation />
                 </Fragment>
-              )}
-            </Route>
-            <Route path="/submenu1">
-              {() => (
+              }
+            />
+            <Route
+              path="/submenu1"
+              element={
                 <Fragment>
                   <div>/submenu1</div>
                   <DisplayLocation />
                 </Fragment>
-              )}
-            </Route>
-            <Route path="/submenu2">{() => <div>/submenu2</div>}</Route>
-            <Route path="/submenu3">{() => <div>/submenu3</div>}</Route>
-            <Route path="/submenu4">{() => <div>/submenu4</div>}</Route>
-            <Route path="/menu2">{() => <div>/menu2</div>}</Route>
-            <Route path="/submenu5">{() => <div>/submenu5</div>}</Route>
-            <Route path="/submenu6">{() => <div>/submenu6</div>}</Route>
-            <Route path="/menu3">{() => <div>/menu3</div>}</Route>
-            <Route path="/submenu7">{() => <div>/submenu7</div>}</Route>
-            <Route path="/submenu8">{() => <div>/submenu8</div>}</Route>
-            <Route path="/submenu9">{() => <div>/submenu9</div>}</Route>
-            <Route path="/menu4">{() => <div>/menu4</div>}</Route>
-          </Switch>
+              }
+            />
+            <Route path="/submenu2" element={<div>/submenu2</div>} />
+            <Route path="/submenu3" element={<div>/submenu3</div>} />
+            <Route path="/submenu4" element={<div>/submenu4</div>} />
+            <Route path="/menu2" element={<div>/menu2</div>} />
+            <Route path="/submenu5" element={<div>/submenu5</div>} />
+            <Route path="/submenu6" element={<div>/submenu6</div>} />
+            <Route path="/menu3" element={<div>/menu3</div>} />
+            <Route path="/submenu7" element={<div>/submenu7</div>} />
+            <Route path="/submenu8" element={<div>/submenu8</div>} />
+            <Route path="/submenu9" element={<div>/submenu9</div>} />
+            <Route path="/menu4" element={<div>/menu4</div>} />
+          </Routes>
           <br />
         </div>
       </div>

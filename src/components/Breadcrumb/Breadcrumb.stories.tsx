@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Switch, Link as RouterLink } from 'react-router-dom';
+import { MemoryRouter as Router, Route, Routes, Link as RouterLink } from 'react-router-dom';
 import BreadcrumbShowcase from '../storyUtils/BreadcrumbShowcase/BreadcrumbShowcase';
 import Stack from '../storyUtils/Stack';
 import Breadcrumb from './Breadcrumb';
@@ -58,23 +58,28 @@ export const ThirdPartyRoutingLibrary = {
             { href: '/fifth-level', label: 'Level 5', component: RouterLink },
           ]}
         />
-        <Switch>
-          <Route path="/first-level">
-            {() => <div style={{ marginTop: '8px' }}>Current: Level 1</div>}
-          </Route>
-          <Route path="/second-level">
-            {() => <div style={{ marginTop: '8px' }}>Current: Level 2</div>}
-          </Route>
-          <Route path="/third-level">
-            {() => <div style={{ marginTop: '8px' }}>Current: Level 3</div>}
-          </Route>
-          <Route path="/forth-level">
-            {() => <div style={{ marginTop: '8px' }}>Current: Level 4</div>}
-          </Route>
-          <Route path="/fifth-level">
-            {() => <div style={{ marginTop: '8px' }}>Current: Level 5</div>}
-          </Route>
-        </Switch>
+        <Routes>
+          <Route
+            path="/first-level"
+            element={<div style={{ marginTop: '8px' }}>Current: Level 1</div>}
+          />
+          <Route
+            path="/second-level"
+            element={<div style={{ marginTop: '8px' }}>Current: Level 2</div>}
+          />
+          <Route
+            path="/third-level"
+            element={<div style={{ marginTop: '8px' }}>Current: Level 3</div>}
+          />
+          <Route
+            path="/forth-level"
+            element={<div style={{ marginTop: '8px' }}>Current: Level 4</div>}
+          />
+          <Route
+            path="/fifth-level"
+            element={<div style={{ marginTop: '8px' }}>Current: Level 5</div>}
+          />
+        </Routes>
       </Router>
     </Stack>
   ),
@@ -85,12 +90,14 @@ export const ThirdPartyRoutingLibrary = {
 export const Playground = {
   render: () => (
     <Stack>
-      <BreadcrumbShowcase
-        initData={[
-          { href: '/first-level', label: 'Level 1' },
-          { href: '/second-level', label: 'Level 2' },
-        ]}
-      />
+      <Router>
+        <BreadcrumbShowcase
+          initData={[
+            { href: '/first-level', label: 'Level 1' },
+            { href: '/second-level', label: 'Level 2' },
+          ]}
+        />
+      </Router>
     </Stack>
   ),
   name: 'Playground',

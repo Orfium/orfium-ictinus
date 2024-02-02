@@ -77,14 +77,12 @@ const MenuItem: React.FCC<MenuItemProps> = memo(
                     (subMenuItem) =>
                       subMenuItem.isVisible && (
                         <NavLink
-                          exact
-                          to={{
-                            pathname: subMenuItem.url,
-                            state: subMenuItem.state,
-                          }}
+                          to={subMenuItem.url}
+                          state={subMenuItem.state}
                           data-testid={subMenuItem.url}
-                          activeClassName="active"
-                          isActive={subMenuItem?.isActive}
+                          className={({ isActive, isPending }) =>
+                            isPending ? 'pending' : isActive ? 'active' : ''
+                          }
                           key={subMenuItem.url}
                           css={subMenuLinkStyle()}
                           id="submenu-item-link"
@@ -106,13 +104,12 @@ const MenuItem: React.FCC<MenuItemProps> = memo(
           </ExpandCollapse>
         ) : (
           <NavLink
-            exact
-            to={{
-              pathname: url,
-              state: linkState,
-            }}
+            to={url}
+            state={linkState}
             data-testid={url}
-            activeClassName="active"
+            className={({ isActive, isPending }) =>
+              isPending ? 'pending' : isActive ? 'active' : ''
+            }
             key={url}
             css={menuLinkStyle()}
           >
