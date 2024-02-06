@@ -131,7 +131,7 @@ const preview: SBPreview = {
           'Getting Started',
           ['Welcome', 'Installation', 'Development', '*'],
           'Foundations',
-          ['Theme', 'Design Tokens', 'Layout', 'Colors [v4]', '*'],
+          ['Theme', 'Design Tokens', 'Layout', 'Accessibility', 'Colors [v4]', '*'],
           'Utilities',
           ['Theme Utilities', '*', 'Hooks'],
           'Updated Components',
