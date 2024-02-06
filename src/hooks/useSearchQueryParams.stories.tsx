@@ -3,12 +3,12 @@ import { MemoryRouter } from 'react-router-dom';
 import DemoUseSearchQueryParams from './storyUtils/DemoUseSearchQueryParams';
 
 export default {
-  title: 'Hooks/useSearchQueryParams',
+  title: 'Utilities/Hooks/useSearchQueryParams',
   component: () => true,
 };
 
 export const UseSearchQueryParams = {
-  name: 'useSearchQueryParams',
+  name: 'Demo',
 
   parameters: {
     query: {

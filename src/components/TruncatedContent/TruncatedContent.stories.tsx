@@ -2,7 +2,7 @@ import TruncatedContent from './TruncatedContent';
 import Table from '../Table';
 
 export default {
-  title: 'System/Truncated Text with Tooltip',
+  title: 'Utilities/Truncated Text with Tooltip',
   component: TruncatedContent,
 };
 
