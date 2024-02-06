@@ -6,14 +6,20 @@ import ThemeProvider from '../src/components/ThemeProvider';
 import styled from '@emotion/styled';
 import Typography from '../src/storybook/Typography';
 import Link from '../src/storybook/Link';
-import { UsageGuidelines, SubsectionHeader, SectionHeader, Tip, Note, Preview } from '../src/storybook';
+import {
+  UsageGuidelines,
+  SubsectionHeader,
+  SectionHeader,
+  Tip,
+  Note,
+  Preview,
+} from '../src/storybook';
 import {
   TypographyResetFontSmooth,
   TypographyWrapper as SBTypographyWrapper,
 } from '../src/storybook/Typography/Typography.style';
 import Box from '../src/components/Box';
 import { Preview as SBPreview } from '@storybook/react';
-import { Unstyled } from '@storybook/blocks';
 
 const viewPorts = {
   desktop1920: {
@@ -122,15 +128,15 @@ const preview: SBPreview = {
       storySort: {
         method: 'alphabetical',
         order: [
-          'Welcome',
-          'System',
-          'Guide',
-          'Design Tokens',
-          'Design System',
+          'Getting Started',
+          ['Welcome', 'Installation', 'Development', '*'],
+          'Foundations',
+          ['Theme', 'Design Tokens', 'Layout', 'Colors [v4]', '*'],
+          'Utilities',
+          ['Theme Utilities', '*', 'Hooks'],
           'Updated Components',
           'Original Components',
           ['*', ['*', 'Docs']],
-          'Hooks',
         ],
         locales: 'en-US',
       },
