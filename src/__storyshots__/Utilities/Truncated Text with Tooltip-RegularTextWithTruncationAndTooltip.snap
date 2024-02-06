@@ -1,0 +1,17 @@
+.emotion-0 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+<div>
+  <div
+    style="width: 150px;"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      This is a long text that will overflow
+    </div>
+  </div>
+</div>

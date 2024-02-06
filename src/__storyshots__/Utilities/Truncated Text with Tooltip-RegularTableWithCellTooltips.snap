@@ -1,0 +1,177 @@
+.emotion-0 {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.emotion-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom-width: 0.0625rem;
+  border-bottom-style: solid;
+  border-bottom-color: #cfd7e5;
+}
+
+.emotion-1 th:first-of-type {
+  padding-left: 1rem;
+}
+
+.emotion-1 th:last-child {
+  padding-right: 1rem;
+}
+
+.emotion-2 {
+  position: relative;
+  text-align: left;
+  padding: 0.25rem 0.5rem;
+  width: initial;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.emotion-3 {
+  font-weight: 500;
+  color: #444d5f;
+}
+
+.emotion-10 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 0.0625rem solid #cfd7e5;
+}
+
+.emotion-10 td:first-of-type {
+  padding-left: 1rem;
+}
+
+.emotion-10 td:last-child {
+  padding-right: inherit;
+}
+
+.emotion-11 {
+  position: relative;
+  text-align: left;
+  padding: 0.25rem 0.5rem;
+  width: initial;
+}
+
+.emotion-12 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+<div>
+  <table
+    class="emotion-0"
+  >
+    <thead>
+      <tr
+        class="emotion-1"
+      >
+        <th
+          class="emotion-2"
+          data-testid="ictinus_column_1"
+        >
+          <div
+            class="emotion-3"
+          >
+            Column 1
+          </div>
+        </th>
+        <th
+          class="emotion-2"
+          data-testid="ictinus_column_2"
+        >
+          <div
+            class="emotion-3"
+          >
+            Column 2
+          </div>
+        </th>
+        <th
+          class="emotion-2"
+          data-testid="ictinus_column_3"
+        >
+          <div
+            class="emotion-3"
+          >
+            Column 3
+          </div>
+        </th>
+        <th
+          class="emotion-2"
+          data-testid="ictinus_column_4"
+        >
+          <div
+            class="emotion-3"
+          >
+            Column 4
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        class="emotion-10"
+      >
+        <td
+          class="emotion-11"
+          data-testid="ictinus_table_row_1_cell_1"
+        >
+          <div
+            class="emotion-12 emotion-13"
+          >
+            <span
+              data-column="Column 1"
+            >
+              Generated tooltip from the element's text content
+            </span>
+          </div>
+        </td>
+        <td
+          class="emotion-11"
+          data-testid="ictinus_table_row_1_cell_2"
+        >
+          <div
+            class="emotion-12 emotion-13"
+          >
+            <span
+              data-column="Column 2"
+            >
+              No tooltip
+            </span>
+          </div>
+        </td>
+        <td
+          class="emotion-11"
+          data-testid="ictinus_table_row_1_cell_3"
+        >
+          <div
+            class="emotion-12 emotion-13"
+          >
+            <span>
+              JSX Content without tooltip
+            </span>
+          </div>
+        </td>
+        <td
+          class="emotion-11"
+          data-testid="ictinus_table_row_1_cell_4"
+        >
+          <div
+            class="emotion-12 emotion-13"
+          >
+            <span>
+              JSX Content with forced tooltip
+            </span>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
