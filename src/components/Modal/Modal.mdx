@@ -5,11 +5,14 @@ import * as ModalStories from './Modal.stories';
 
 <Meta of={ModalStories} />
 
-<SectionHeader title={'Modal'} isPending />
-
-- [Overview](#overview)
-- [Props](#props)
-
+<SectionHeader
+  title={'Modal'}
+  isPending
+  sections={[
+    { title: 'Overview', href: '#overview' },
+    { title: 'Props', href: '#props' },
+  ]}
+/>
 ## Overview
 
 A modal is used to reveal critical information, show information without losing context, or when the system requires a user response.
