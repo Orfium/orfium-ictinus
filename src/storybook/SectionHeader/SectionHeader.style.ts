@@ -9,6 +9,7 @@ export const sectionHeaderWrapper = () => (): SerializedStyles =>
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
+    border-radius: 4px;
     display: flex;
     align-items: center;
     padding: 0 32px;
