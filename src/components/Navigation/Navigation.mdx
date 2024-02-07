@@ -5,12 +5,16 @@ import * as NavigationStories from './Navigation.stories';
 
 <Meta of={NavigationStories} />
 
-<SectionHeader title={'Navigation'} isPending />
-
-- [Overview](#overview)
-- [Props](#props)
-- [Usage](#usage)
-- [Variants](#variants)
+<SectionHeader
+  title={'Navigation'}
+  isPending
+  sections={[
+    { title: 'Overview', href: '#overview' },
+    { title: 'Props', href: '#props' },
+    { title: 'Usage', href: '#usage' },
+    { title: 'Variants', href: '#variants' },
+  ]}
+/>
 
 ## Overview
 

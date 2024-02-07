@@ -1,5 +1,6 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
+import type { Theme } from 'theme';
 
 export const sectionHeaderWrapper = () => (): SerializedStyles =>
   css`
@@ -11,9 +12,25 @@ export const sectionHeaderWrapper = () => (): SerializedStyles =>
     background-position: right;
     border-radius: 4px;
     display: flex;
-    align-items: center;
-    padding: 0 32px;
+    flex-direction: column;
+    justify-content: center;
+    padding: 32px;
+    box-sizing: border-box;
     h1 {
       margin: 0;
     }
   `;
+
+export const sectionHeaderContainer = () => (): SerializedStyles =>
+  css`
+    display: flex;
+    align-items: center;
+  `;
+
+export const sectionHeaderLinksDivider =
+  () =>
+  (theme: Theme): SerializedStyles =>
+    css`
+      padding: 0 12px;
+      color: ${theme.tokens.colors.get('textColor.default.active')};
+    `;

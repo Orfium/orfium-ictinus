@@ -6,16 +6,25 @@ import Link from '../../storybook/Link';
 
 <Meta of={ButtonStories} />
 
-<SectionHeader title={'Button'} />
-
-- [Overview](#overview)
-- [Props](#props)
-- [Usage](#usage)
-- [Variants](#variants)
+<SectionHeader
+  title={'Button'}
+  sections={[
+    { title: 'Overview', href: '#overview' },
+    { title: 'Props', href: '#props' },
+    { title: 'Usage', href: '#usage' },
+    { title: 'Variants', href: '#variants' },
+  ]}
+/>
 
 ## Overview
 
 A universal Button component that is a clickable element that can hold many forms.
+
+## Props
+
+<ArgTypes of={Button} />
+
+<SubsectionHeader title="Variants" />
 
 ## Usage
 
@@ -40,12 +49,6 @@ A universal Button component that is a clickable element that can hold many form
   <Link href="../?path=/docs/updated-components-buttons-iconbutton--overview">Icon button</Link>{' '}
   component
 </Tip>
-
-## Props
-
-<ArgTypes of={Button} />
-
-<SubsectionHeader title="Variants" />
 
 ### Button Types and Sizes
 

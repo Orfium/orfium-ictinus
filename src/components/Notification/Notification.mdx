@@ -8,13 +8,16 @@ import * as NotificationStories from './Notification.stories';
 
 <Meta of={NotificationStories} />
 
-<SectionHeader title={'Notifications'} isPending />
-
-- [Overview](#overview)
-- [Inline Notification](#inline-notification)
-- [Banner Notification](#banner-notification)
-- [Toast Notification](#toast-notification)
-- [Snackbar Notification](#snackbar-notification)
+<SectionHeader
+  title={'Notifications'}
+  isPending
+  sections={[
+    { title: 'Inline Notification', href: '#inline-notification' },
+    { title: 'Banner Notification', href: '#banner-notification' },
+    { title: 'Toast Notification', href: '#toast-notification' },
+    { title: 'Snackbar Notification', href: '#snackbar-notification' },
+  ]}
+/>
 
 ## Overview
 
