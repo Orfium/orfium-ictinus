@@ -129,7 +129,7 @@ const preview: SBPreview = {
         method: 'alphabetical',
         order: [
           'Getting Started',
-          ['Welcome', 'Installation', 'Development', '*'],
+          ['Welcome', 'Installation', 'Development', 'Migration', '*'],
           'Foundations',
           ['Theme', 'Design Tokens', 'Layout', 'Accessibility', 'Colors [v4]', '*'],
           'Utilities',
@@ -209,6 +209,15 @@ const preview: SBPreview = {
               {children}
             </Typography>
           </Box>
+        ),
+        li: ({ children, rest }: any) => (
+          <li>
+            <Box my={'6'}>
+              <Typography {...rest} css={TypographyResetFontSmooth} variant={'body01'}>
+                {children}
+              </Typography>
+            </Box>
+          </li>
         ),
         span: ({ children }: any) => (
           <Typography css={TypographyResetFontSmooth} variant={'body01'}>
