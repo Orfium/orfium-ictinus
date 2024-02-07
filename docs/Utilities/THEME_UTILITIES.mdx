@@ -1,0 +1,108 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta
+  title="Utilities/Theme Utilities"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+/>
+
+<SectionHeader title={'Theme Utilities'} />
+
+## Get Functions
+
+In order to retrieve styles from the library's tiers (global, theme), some specific `get` utils can be used.
+
+<SubsectionHeader title={'Standalone Function'} variant={'headline04'} />
+
+```
+import { themeConfig } from '@orfium/ictinus'
+
+...
+
+themeConfig('semantic').globals.borderWidth.get('1');
+// returns '0.0625rem'
+
+themeConfig('semantic').tokens.colors.get('backdrop.default');
+// returns 'rgba(200,206,255,0.70)'
+
+```
+
+On the example above, the theme (`semantic`) is specified as a parameter.
+
+<SubsectionHeader title={'Hook'} variant={'headline04'} />
+
+```
+import { useTheme } from '@orfium/ictinus'
+
+...
+
+const theme = useTheme();
+
+theme.globals.borderWidth.get('1');
+// returns '0.0625rem'
+
+theme.tokens.colors.get('backdrop.default');
+// returns 'rgba(200,206,255,0.70)'
+
+```
+
+## List of get Functions
+
+<SubsectionHeader title={'Global'} variant={'headline04'} />
+
+| Property                     | Get function                            |
+| ---------------------------- | --------------------------------------- |
+| Border Radius                | globals.borderRadius.get()              |
+| Border Width                 | globals.borderWidth.get()               |
+| Box Shadow                   | globals.boxShadow.get()                 |
+| Colors                       | globals.colors.get()                    |
+| Elevation                    | globals.elevation.get()                 |
+| Opacity                      | globals.opacity.get()                   |
+| Sizing                       | globals.sizing.get()                    |
+| Spacing                      | globals.spacing.get()                   |
+| Typography - Font Size       | globals.typography.fontSize.get()       |
+| Typography - Font Weight     | globals.typography.fontWeight.get()     |
+| Typography - Font Family     | globals.typography.fontFamily.get()     |
+| Typography - Line Height     | globals.typography.lineHeight.get()     |
+| Typography - Letter Spacing  | globals.typography.letterSpacing.get()  |
+| Typography - Text Case       | globals.typography.textCase.get()       |
+| Typography - Text Decoration | globals.typography.textDecoration.get() |
+
+<SubsectionHeader title={'Theme (Semantic)'} variant={'headline04'} />
+
+| Property       | Get function               |
+| -------------- | -------------------------- |
+| Colors         | tokens.colors.get()        |
+| Disabled State | tokens.disabledState.get() |
+| Icon           | tokens.icon.get()          |
+| State          | tokens.state.get()         |
+| Typography     | tokens.typography.get()    |
+
+For `Typography` the return value is an object with css properties as keys and their css values as values.
+
+```
+import { useTheme } from '@orfium/ictinus'
+
+...
+
+const theme = useTheme();
+
+theme.tokens.typography.get('normal.body04');
+
+/**
+ * returns
+ *  {
+      "fontFamily": "Roboto",
+      "fontWeight": 400,
+      "lineHeight": "0.875rem",
+      "fontSize": "0.625rem",
+      "letterSpacing": "0.00625rem"
+    }
+ *
+ */
+
+```

@@ -1,0 +1,63 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta
+  title="Foundations/Theme"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+/>
+
+<SectionHeader title={'Theme'} />
+
+- [Introduction](#introduction)
+- [Theme Configuration](#theme-configuration)
+- [Development](#development)
+
+## Introduction
+
+Ictinus has an internal system for storing and using theme parameters such as `colors`, `spacing`, `typography` etc. The goal of this system is to provide consistency to an application and improve user experience by creating familiarity and predictability in navigation and interactions.
+
+## Theme Configuration
+
+The theme consists of `global` and `semantic` (referred as `theme`) configurations, both accessible by the application using the library.
+
+<SubsectionHeader title="Global" variant={'headline04'} />
+
+Global tier includes styles with raw css values that can be used to style elements and components. This tier is the base for all the other tiers (semantic etc) and includes all possible styles that can be used within the library. Checkout the Global Tier section of [Design Tokens](../?path=/docs/foundations-design-tokens-about--overview) for more information.
+
+| Property                     | Type                                                                                     |
+| ---------------------------- | ---------------------------------------------------------------------------------------- |
+| Border Radius                | [Documentation](../?path=/docs/foundations-design-tokens-global-border-radius--overview) |
+| Border Width                 | Sets the width of the borders of an element                                              |
+| Box Shadow                   | [Documenation](../?path=/docs/foundations-design-tokens-global-box-shadow--overview)     |
+| Colors                       | [Documentation](../?path=/docs/foundations-design-tokens-global-colors--overview)        |
+| Elevation                    | Refers to the perceived depth or distance of an element in the z-axis                    |
+| Opacity                      | Controls the transparency of an element                                                  |
+| Sizing                       | [Documentation](../?path=/docs/foundations-design-tokens-global-sizing--overview)        |
+| Spacing                      | [Documentation](../?path=/docs/foundations-design-tokens-global-spacing--overview)       |
+| Typography - Font Size       | Sets the size of the text within an element                                              |
+| Typography - Font Weight     | Defines the thickness or boldness of the text characters                                 |
+| Typography - Font Family     | Specifies the typeface or font family for the text within an element                     |
+| Typography - Line Height     | Sets the vertical spacing between lines of text within an element                        |
+| Typography - Letter Spacing  | Controls the space between characters in text                                            |
+| Typography - Text Case       | Control the capitalization of text                                                       |
+| Typography - Text Decoration | Adds visual enhancements to text                                                         |
+
+<SubsectionHeader title="Semantic (Theme)" variant={'headline04'} />
+
+The semantic (theme) tier includes styles that are fetched from the global tier in order to create a specific theme. Checkout the Theme Tier section of [Design Tokens](../?path=/docs/foundations-design-tokens-about--overview) for more information.
+
+| Property       | Type                                                                                 |
+| -------------- | ------------------------------------------------------------------------------------ |
+| Colors         | [Documenation](../?path=/docs/foundations-design-tokens-semantic-colors--overview)   |
+| Disabled State | Sets the theme's opacity for disabled elements such as inputs etc.                   |
+| Icon           | Sets the theme's possible icon sizes                                                 |
+| State          | Sets various styles for the theme's different states (such as hover etc)             |
+| Typography     | [Typography](../?path=/docs/foundations-design-tokens-semantic-typography--overview) |
+
+## Development
+
+For more information on the code implementation of the above [click here](../?path=/docs/utilities-theme-utilities--overview)

@@ -1,7 +1,7 @@
 import { Meta } from '@storybook/addon-docs';
 
 <Meta
-  title="Getting Started"
+  title="Getting Started/Installation"
   parameters={{
     viewMode: 'docs',
     previewTabs: {
@@ -10,9 +10,7 @@ import { Meta } from '@storybook/addon-docs';
   }}
 />
 
-<SectionHeader title={'Getting started 🚀'} />
-
-<SubsectionHeader title="📦 Installation" />
+<SectionHeader title={'Installation'} />
 
 ```text
 $ npm install @orfium/ictinus
@@ -22,7 +20,7 @@ $ npm install @orfium/ictinus
 $ yarn add @orfium/ictinus
 ```
 
-if you want the next version you can always use the next tag.
+If you want the next version you can always use the next tag.
 Remember: this is a release candidate, we encourage you to lock version on installation to avoid any changes
 
 ```text
@@ -51,7 +49,7 @@ import { Select, Button } from '@orfium/ictinus';
 
 <SubsectionHeader title="✨ Extra" />
 
-### Theme usage
+<SubsectionHeader title="Theme usage" variant={'headline04'} />
 
 Now you can can have access to the library's theme config by using the hook provided
 
@@ -61,12 +59,15 @@ import { useTheme } from '@orfium/ictinus';
 const theme = useTheme();
 ```
 
-### Theme config and overrides
+<SubsectionHeader title="Theme config and overrides" variant={'headline04'} />
 
 Ictinus is a set of reusable React components that implements Ictinus design language. This tool is used for building applications
 that fully adopts the Ictinus design language and use the components out of the box.
 
-### Emotion Project - Merge theme configs from different providers
+<SubsectionHeader
+  title="Emotion Project - Merge theme configs from different providers"
+  variant={'headline04'}
+/>
 
 If you are already using emotion and you have defined a different provider you still have to define Ictinus ThemeProvider as well. You must put the theme config example at the top of the providers and yours afterwards.
 

@@ -1,8 +1,8 @@
 import { Meta } from '@storybook/addon-docs';
-import TokenColorsShowcase from '../../src/storybook/Showcases/TokenColorsShowcase';
+import TokenColorsShowcase from '../../../../src/storybook/Showcases/TokenColorsShowcase';
 
 <Meta
-  title="Design Tokens/Semantic/Colors"
+  title="Foundations/Design Tokens/Semantic/Colors"
   parameters={{
     viewMode: 'docs',
     previewTabs: {
@@ -11,9 +11,7 @@ import TokenColorsShowcase from '../../src/storybook/Showcases/TokenColorsShowca
   }}
 />
 
-<SectionHeader title={'Palette'} />
-
-<br />
+<SectionHeader title={'Colors'} />
 
 - [Overview](#overview)
 - [Tokens](#tokens)
@@ -25,7 +23,5 @@ Palette colors are a set of predefined colors using colors from the [global colo
 ## Tokens
 
 Based on these types describe above we are defining each palette token below. Each token is shown with reference on tokens and value used from [global colors](../?path=/docs/design-tokens-global-colors--overview).
-
-<br />
 
 <TokenColorsShowcase type={'tokens'} />

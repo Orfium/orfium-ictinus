@@ -21,15 +21,9 @@ function getPackageDir(filepath: string) {
 
 module.exports = {
   stories: [
-    '../docs/WELCOME.mdx',
-    '../docs/GETTING_STARTED.mdx',
-    '../docs/system/THEME.mdx',
-    '../docs/system/COLOR-UTILITY.mdx',
-    '../docs/guides/*.mdx',
-    '../docs/tokens/TOKENS.mdx',
-    '../docs/tokens/globals/*.mdx',
-    '../docs/tokens/*.mdx',
-    '../docs/system/*.mdx',
+    '../docs/GettingStarted/**/*.mdx',
+    '../docs/Foundations/**/*.mdx',
+    '../docs/Utilities/**/*.mdx',
     '../src/**/*.@(mdx|stories.@(ts|tsx))',
   ],
 
