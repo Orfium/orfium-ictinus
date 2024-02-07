@@ -13,8 +13,9 @@
     border: none !important;
   }
   .csbdocs-content :where(p:not(.sb-anchor, .sb-unstyled, .sb-unstyled p)) code,
-  .sbdocs-content code {
-    background: #e7eefe;
+  .sbdocs-content code,
+  .sbdocs ul li:has(code) code {
+    background: #f7fafc;
     color: #1552dd;
     padding: 3px 5px;
   }
@@ -25,11 +26,11 @@
     margin-bottom: 8px;
   }
 
-  .sbdocs > ul > li,
-  .sbdocs > ul > li a {
+  .sbdocs ul li:has(a) {
     color: #1552dd;
-    font-size: 18px;
-    font-weight: 500;
+  }
+
+  .sbdocs ul li:has(a) a {
     text-decoration: none;
   }
 
