@@ -10,10 +10,13 @@ import { Meta } from '@storybook/addon-docs';
   }}
 />
 
-<SectionHeader title={'About'} />
-
-- [Overview of Changes](#overview-of-changes)
-- [Migration through Codemod](#migration-through-codemod)
+<SectionHeader
+  title={'About'}
+  sections={[
+    { title: 'Overview of Changes', href: '#overview-of-changes' },
+    { title: 'Migration through Codemod', href: '#migration-through-codemod' },
+  ]}
+/>
 
 We're excited to announce the migration to Version 5 of our Design System! This update brings a host of improvements and changes aimed at enhancing usability, accessibility, and extensibility. Here's everything you need to know:
 
