@@ -74,23 +74,17 @@ import { Meta } from '@storybook/addon-docs';
 
 - `Loader` renamed to `ProgressIndicator`
 
-- `type` changed and if you were using `dots` or `indeterminate` use `linear` and if you were using `spinner` change to `circular`
+- `type` changed: if you were using `dots` or `indeterminate` use `linear` and if you were using `spinner` change to `circular`
 
 - `color` - deprecated
 
 <SubsectionHeader title={'Pagination'} variant="headline03" />
 
-- `Pagination` properties that changed
+- `nextPageDisabled` changed to `isNextPageDisabled`
 
-- `nextPageDisabled` change to `isNextPageDisabled`
+- `nextPageDisabled` changed to `isPrevPageDisabled`
 
-- `nextPageDisabled` change to `isPrevPageDisabled`
-
-- `hideEnhancedPaginationButtons` change to `isEnhancedPaginationVisible`
-
-<SubsectionHeader title={'Menu'} variant="headline03" />
-
-- TODO pending codemod
+- `hideEnhancedPaginationButtons` changed to `isEnhancedPaginationVisible`
 
 <SubsectionHeader title={'Button'} variant="headline03" />
 
@@ -100,13 +94,13 @@ import { Meta } from '@storybook/addon-docs';
 
 - `filled` - deprecated
 
-- `loading` change to `isLoading`
+- `loading` changed to `isLoading`
 
 - `disabled` changed to `isDisabled`
 
-- `buttonType` change to `type`
+- `buttonType` changed to `type`
 
-- `type` change to `htmlType`
+- `type` changed to `htmlType`
 
 - `iconLeft` changed to `iconLeftName`
 
@@ -122,13 +116,13 @@ import { Meta } from '@storybook/addon-docs';
 
 - `iconSize` - deprecated
 
-- `loading` change to `isLoading`
+- `loading` changed to `isLoading`
 
 - `disabled` changed to `isDisabled`
 
 - `buttonType` change to `type`
 
-- `type` change to `htmlType`
+- `type` changed to `htmlType`
 
 <SubsectionHeader title={'Avatar'} variant="headline03" />
 
@@ -152,7 +146,7 @@ import { Meta } from '@storybook/addon-docs';
 
 - `label` - deprecated and replaced by `labelConfig` as `labelConfig={{ helpText: }}`
 
-- `checked` change to `isSelected`
+- `checked` changed to `isSelected`
 
 <SubsectionHeader title={'Radio'} variant="headline03" />
 
@@ -204,19 +198,19 @@ import { Meta } from '@storybook/addon-docs';
 
 - `creatable` renamed to `isCreatable`
 
-- `onClear` - (TODO what happened?)
+- `onClear` - deprecated, component calls `onChange` with undefined (SingleSelect) or empty array (MultiSelect)
 
-- `onOptionDelete` -- (TODO what happened?)
+- `onOptionDelete` - deprecated, component calls `onChange` with the updated array of selected values. 
 
 - `selectedOptions` renamed to singular for both cases `selectedOption`
 
-- `multiValuesHandler` - TODO what happened?
+- `multiValuesHandler` - deprecated
 
 - `onClearAllValues` - deprecated, replace with onClear
 
-- `onMultiValueCreate` - TODO ???
+- `onMultiValueCreate` - deprecated
 
-- `maxMultiValues` - TODO ???
+- `maxMultiValues` - deprecated
 
 - `multiValues` - deprecated, replaced by `options`
 
@@ -296,7 +290,7 @@ import { Meta } from '@storybook/addon-docs';
 
 - `variant` - deprecated
 
-- name changes based on the following
+Icon name changes from v4 to v5:
 
 - `chevronLargeRight` replaced with `chevronRight`
 
@@ -354,4 +348,4 @@ import { Meta } from '@storybook/addon-docs';
 
 <SubsectionHeader title={'SeachField'} variant="headline03" />
 
-- renamed to `Search`
+- Component renamed to `Search`
