@@ -12,13 +12,22 @@ import ThemeWrapper from '../../src/components/storyUtils/ThemeWrapper';
   }}
 />
 
-<SectionHeader title={'Colors'} isPending />
+<SectionHeader
+  title={'Colors'}
+  isPending
+  sections={[
+    { title: 'Palette', href: '#palette' },
+    { title: 'Shades', href: '#shades' },
+    { title: 'Color Palette', href: '#color-palette' },
+    { title: 'Color States', href: '#color-states' },
+  ]}
+/>
 
-### PALETTE
+### Palette
 
 The palette is a collection of colors that has being designed with colors that work harmoniously with each other
 
-### SHADES
+### Shades
 
 All the colors in palette are created with the same principle.
 
@@ -55,7 +64,7 @@ This way we get the following colors for magenta
 }
 ```
 
-### COLOR PALETTE
+### Color Palette
 
 The color palette have some text color for each shade either black or white. This text color was picked based on the best accessibility for the end user.
 
@@ -63,7 +72,7 @@ The color palette have some text color for each shade either black or white. Thi
   <PaletteShowcase />
 </ThemeWrapper>
 
-### COLOR STATES
+### Color States
 
 Each color state must follow some rules for lighten or darken the basic color. Rules are as follows
 

@@ -10,11 +10,14 @@ import { Meta } from '@storybook/addon-docs';
   }}
 />
 
-<SectionHeader title={'Theme'} />
-
-- [Introduction](#introduction)
-- [Theme Configuration](#theme-configuration)
-- [Development](#development)
+<SectionHeader
+  title={'Theme'}
+  sections={[
+    { title: 'Introduction', href: '#introduction' },
+    { title: 'Theme Configuration', href: '#theme-configuration' },
+    { title: 'Development', href: '#development' },
+  ]}
+/>
 
 ## Introduction
 

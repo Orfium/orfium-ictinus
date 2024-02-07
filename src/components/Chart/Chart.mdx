@@ -6,7 +6,15 @@ import * as ChartStories from './Chart.stories';
 
 <Meta of={ChartStories} />
 
-<SectionHeader title={'Charts'} isPending />
+<SectionHeader
+  title={'Charts'}
+  isPending
+  sections={[
+    { title: 'LineChart', href: '#linechart' },
+    { title: 'BarChart', href: '#barchart' },
+    { title: 'DonutChart', href: '#donutchart' },
+  ]}
+/>
 
 # LineChart
 
