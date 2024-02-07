@@ -1,0 +1,354 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta
+  title="Getting Started/Migration [v4 to v5]/Components Changelog"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+/>
+
+<SectionHeader title={'Components Changelog'} />
+
+- [New components](#overview-of-changes)
+- [Updates on existing components](#updates-on-existing-components)
+
+## New components ⭐️
+
+- [Box](../?path=/docs/updated-components-box--overview)
+
+- [Tag](../?path=/docs/updated-components-tag--overview)
+
+- [Link](../?path=/docs/updated-components-link--overview)
+
+- [DropdownButton](../?path=/docs/updated-components-buttons-dropdownbutton--overview)
+
+- [NumberField](../?path=/docs/updated-components-fields-numberfield--overview)
+
+- [Typography](../?path=/docs/updated-components-typography--overview)
+
+- [ListItemText (part of List)](../?path=/docs/updated-components-list-listitemtext--overview)
+
+- [ListItemAction (part of List)](../?path=/docs/updated-components-list-listitemaction--overview)
+
+- [ListSection (part of List)](../?path=/docs/updated-components-list-listsection--overview)
+
+- [MenuItemDivider (part of Menu)](../?path=/story/updated-components-menu--menu-item-divider-story)
+
+- [Search](../?path=/docs/updated-components-search--overview)
+
+- [TextField with masked option](../?path=/story/updated-components-fields-textfield--text-field-with-mask-option)
+
+## Updates on existing components
+
+- All properties of components that are boolean are now e.g `loading=true` becomes `isLoading=true`
+
+<SubsectionHeader title={'Drawer'} variant="headline03" />
+
+- `Drawer` was renamed to `Navigation` due to its functionality.
+
+- `expanded` changed to `isExpanded`
+
+<SubsectionHeader title={'Overlay'} variant="headline03" />
+
+- `Overlay` renamed to `Drawer`
+
+- `open` changed to `isOpen`
+
+- `size` property turned to number
+
+<SubsectionHeader title={'List'} variant="headline03" />
+
+- `List` is now getting children. This applies to all components using lists as well like `Menu`. Out-of-the-box items are available `ListItemText`, `ListSection`, `ListItemAction`
+
+<SubsectionHeader title={'Menu'} variant="headline03" />
+
+- `Menu` is now getting children. Children can be custom or items from `List`. Out-of-the-box items are available `ListItemText`, `ListSection`, `ListItemAction`
+
+<SubsectionHeader title={'Loader'} variant="headline03" />
+
+- `Loader` renamed to `ProgressIndicator`
+
+- `type` changed and if you were using `dots` or `indeterminate` use `linear` and if you were using `spinner` change to `circular`
+
+- `color` - deprecated
+
+<SubsectionHeader title={'Pagination'} variant="headline03" />
+
+- `Pagination` properties that changed
+
+- `nextPageDisabled` change to `isNextPageDisabled`
+
+- `nextPageDisabled` change to `isPrevPageDisabled`
+
+- `hideEnhancedPaginationButtons` change to `isEnhancedPaginationVisible`
+
+<SubsectionHeader title={'Menu'} variant="headline03" />
+
+- TODO pending codemod
+
+<SubsectionHeader title={'Button'} variant="headline03" />
+
+- `color` - deprecated
+
+- `transparent` - deprecated
+
+- `filled` - deprecated
+
+- `loading` change to `isLoading`
+
+- `disabled` changed to `isDisabled`
+
+- `buttonType` change to `type`
+
+- `type` change to `htmlType`
+
+- `iconLeft` changed to `iconLeftName`
+
+- `iconRight` changed to `iconRightName`
+
+<SubsectionHeader title={'IconButton'} variant="headline03" />
+
+- `color` - deprecated
+
+- `transparent` - deprecated
+
+- `filled` - deprecated
+
+- `iconSize` - deprecated
+
+- `loading` change to `isLoading`
+
+- `disabled` changed to `isDisabled`
+
+- `buttonType` change to `type`
+
+- `type` change to `htmlType`
+
+<SubsectionHeader title={'Avatar'} variant="headline03" />
+
+- `size` changed from `xs`, `sm`, `md`, `lg` to `1-6` see more on components tokens and globals sizing tokens
+
+- size `1` = `xs`
+
+- size `2` = `sm`
+
+- size `2` = `md`
+
+- size `4` = `lg`
+
+- `color` changed from `color-shade` to string from the color palette. Shade is now handled internally so you must remove it and leave only color. The only colors now are `blue`, `teal`, `purple`, `red`, `orange`. For any lightGrey or any color not in that replace it with blue
+
+- `iconName` deprecated and replaced by `src`
+
+<SubsectionHeader title={'Checkbox'} variant="headline03" />
+
+- `filled` - deprecated
+
+- `label` - deprecated and replaced by `labelConfig` as `labelConfig={{ helpText: }}`
+
+- `checked` change to `isSelected`
+
+<SubsectionHeader title={'Radio'} variant="headline03" />
+
+- `checked` replaced by `RadioGroup value`
+
+- `filled` - deprecated
+
+- `name` - deprecated
+
+- `onChange` replaced by `RadioGroup onChange`
+
+- `disabled` replaced by `RadioGroup isDisabled`
+
+- `required` - deprecated
+
+<SubsectionHeader title={'RadioGroup'} variant="headline03" />
+
+- `defaultValue` - deprecated
+
+- `name` - deprecated
+
+<SubsectionHeader title={'Select'} variant="headline03" />
+
+- `defaultValue` - deprecated
+
+- `rightIcon` - deprecated
+
+- `leftIcon` - deprecated
+
+- `locked` - deprecated
+
+- `hintMsg` - deprecated and replaced by an object that defines this `{ type: <old status>; hintMessage?: <old hintMsg>; }`
+
+- `lean` - deprecated
+
+- `styleType` - deprecated
+
+- `dark` - deprecated
+
+- `status` - deprecated
+
+- `hasMinWidthCompat` - deprecated
+
+- `highlightSearch` renamed to `hasHighlightSearch`
+
+- `multi` renamed to `isMulti`
+
+- `disabled` renamed to `isDisabled`
+
+- `creatable` renamed to `isCreatable`
+
+- `onClear` - (TODO what happened?)
+
+- `onOptionDelete` -- (TODO what happened?)
+
+- `selectedOptions` renamed to singular for both cases `selectedOption`
+
+- `multiValuesHandler` - TODO what happened?
+
+- `onClearAllValues` - deprecated, replace with onClear
+
+- `onMultiValueCreate` - TODO ???
+
+- `maxMultiValues` - TODO ???
+
+- `multiValues` - deprecated, replaced by `options`
+
+- `handleSelectedOption` - deprecated and replaced by `onChange`
+
+<SubsectionHeader title={'Switch'} variant="headline03" />
+
+- `labelPlacement` - deprecated and replaced by `labelConfig { placement: <old placement> }`
+
+- `label` - deprecated and now is on `children`
+
+- `checked` is now `isSelected`
+
+<SubsectionHeader title={'TextArea'} variant="headline03" />
+
+- `hintMsg` - deprecated and replaced by an object that defines this `{ type: "error" | "normal" | "read-only"; hintMessage?: string; id?: string; }`
+
+- `styleType` - deprecated
+
+- `required` renamed to `isRequired`
+
+- `disabled` renamed to `isDisabled`
+
+- `resizeEnabled` renamed to `isResizeEnabled`
+
+- `status` - deprecated
+
+<SubsectionHeader title={'TextField'} variant="headline03" />
+
+- `rightIcon` - deprecated
+
+- `leftIcon` - deprecated
+
+- `locked` - deprecated
+
+- `lean` - deprecated
+
+- `status` - deprecated
+
+- `multi` renamed to `isMulti`
+
+- `disabled` renamed to `isDisabled`
+
+- `readOnly` renamed to `isReadOnly`
+
+- `hintMsg` - deprecated and replaced by an object that defines this` { type: <old status>; hintMessage?: <old hintMsg>; }`
+
+- `styleType` - deprecated
+
+- `required` renamed to `isRequired`
+
+- `disabled` renamed to `isDisabled`
+
+<SubsectionHeader title={'Filter'} variant="headline03" />
+
+- `multi` renamed to `isMulti`
+
+- `disabled` renamed to `isDisabled`
+
+- `selectedItem` renamed to `selectedFilter`
+
+- `styleType` - deprecated
+
+- `handleSelectedOption` - deprecated and replaced by `onChange`
+
+<SubsectionHeader title={'Tooltip'} variant="headline03" />
+
+- `interactive` renamed to `isInteractive`
+
+- `delay` renamed to `delayIn`
+
+- `size` - deprecated
+
+- `isTransparent` - deprecated
+
+<SubsectionHeader title={'Icon'} variant="headline03" />
+
+- `variant` - deprecated
+
+- name changes based on the following
+
+- `chevronLargeRight` replaced with `chevronRight`
+
+- `chevronSmallRight` replaced with `chevronRight`
+
+- `arrowDown` replaced with `chevronDown`
+
+- `arrowRight` replaced with `chevronRight`
+
+- `dotsVertical` replaced with `moreOptions`
+
+- `restart` replaced with `redo`
+
+- `alert` replaced with `warning`
+
+- `auto` replaced with `settings`
+
+- `calendarFilled` replaced with `calendar`
+
+- `conflicts` replaced with `conflict`
+
+- `digitalUse` replaced with `digital`
+
+- `earnings2` replaced with `earnings`
+
+- `entity` replaced with `entities`
+
+- `externalLinkV2` replaced with `link`
+
+- `fatArrowLeft` replaced with `arrowLeft`
+
+- `fatArrowRight` replaced with `arrowRight`
+
+- `globalItem` replaced with `review`
+
+- `infoFilled` replaced with `info`
+
+- `licence` replaced with `license`
+
+- `musicNote` replaced with `asset`
+
+- `triangleWarning` replaced with `warning`
+
+- `view` replaced with `eye`
+
+<SubsectionHeader title={'InlineNotification'} variant="headline03" />
+
+- `withIcon` renamed to `hasIcon`
+
+<SubsectionHeader title={'Table'} variant="headline03" />
+
+- `padded` renamed to `isPadded`
+
+- `fixedHeader` renamed to `hasFixedHeader`
+
+<SubsectionHeader title={'SeachField'} variant="headline03" />
+
+- renamed to `Search`
