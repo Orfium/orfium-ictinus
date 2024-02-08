@@ -22,9 +22,10 @@ export const linkContainer =
       gap: ${tokens('padding')};
       color: ${tokens(`textColor.${type}.default` as LinkTokens)};
       text-decoration: none;
-      border: ${tokens('borderWidth.1')} solid ${tokens('borderColor.default')};
+      position: relative;
 
-      &:hover, &[aria-expanded="true"] {
+      &:hover,
+      &[aria-expanded='true'] {
         color: ${tokens(`textColor.${type}.hover` as LinkTokens)};
         path {
           fill: ${tokens(`textColor.${type}.hover` as LinkTokens)} !important;
@@ -38,7 +39,11 @@ export const linkContainer =
         }
       }
 
-      &:focus-visible {
+      &:focus-visible:after {
+        content: '';
+        position: absolute;
+        inset: -3px -6px;
+        border-radius: ${theme.globals.borderRadius.get('2')};
         border: ${tokens('borderWidth.2')} solid ${tokens('borderColor.focused')};
       }
 
