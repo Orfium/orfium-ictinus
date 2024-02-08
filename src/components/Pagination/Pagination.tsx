@@ -45,7 +45,7 @@ const Pagination = ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        color: theme.utils.getColor('darkGrey', 850),
+        color: theme.tokens.colors.get('textColor.default.primary'),
         '> *': { padding: theme.globals.spacing.get('4') },
       }}
     >
