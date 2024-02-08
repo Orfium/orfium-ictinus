@@ -1,20 +1,20 @@
 import React from 'react';
+import type { BorderRadiusKey } from 'theme/globals/borderRadius';
+import type { BoxShadowKey } from 'theme/globals/boxShadow';
 
 import { showcaseContainerStyle } from './CardShowcase.style';
-import type { Elevation } from '../../../theme/globals/elevation';
-import type { SpacingKey } from '../../../theme/globals/spacing';
 import Card from '../../Card';
 
 type CardShowcaseProps = {
-  elevated?: keyof Elevation;
+  elevation?: BoxShadowKey;
   isTransparent?: boolean;
-  radius?: SpacingKey;
+  radius?: BorderRadiusKey;
 };
 
-const CardShowcase: React.FCC<CardShowcaseProps> = ({ elevated, isTransparent, radius }) => {
+const CardShowcase: React.FCC<CardShowcaseProps> = ({ elevation, isTransparent, radius }) => {
   const CardContent = () => (
     <div css={{ padding: '16px' }}>
-      <div>{`Card with ${elevated ? elevated : 'no'} elevation`}</div>
+      <div>{`Card with ${elevation ? elevation : 'no'} elevation`}</div>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tristique eros at
         fringilla fringilla. Donec volutpat lobortis euismod
@@ -24,9 +24,8 @@ const CardShowcase: React.FCC<CardShowcaseProps> = ({ elevated, isTransparent, r
 
   return (
     <div css={showcaseContainerStyle}>
-      <p>(Card inside a lightGrey container to test the transparency/radius/elevation props)</p>
       <div css={{ width: '749px' }}>
-        <Card elevated={elevated} isTransparent={isTransparent} radius={radius}>
+        <Card elevation={elevation} isTransparent={isTransparent} radius={radius}>
           <CardContent />
         </Card>
       </div>

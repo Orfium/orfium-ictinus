@@ -88,7 +88,7 @@ const TokenColorsShowcase: FCC<Props> = ({ type = 'globals' }) => {
 
   return (
     <div>
-      <Card elevated="03" radius="4">
+      <Card elevation="2" radius="4">
         {Object.keys(colorsObj).map((color) => (
           <div key={`${color}_section`} css={typeWrapperStyle()}>
             <Typography variant="headline04" type="secondary" id={color}>
