@@ -16,18 +16,13 @@ import Copy from './basicActions/copy.svg?react';
 import Delete from './basicActions/delete.svg?react';
 import Download from './basicActions/download.svg?react';
 import Edit from './basicActions/edit.svg?react';
-import File from './basicActions/file.svg?react';
-import Issue from './basicActions/issue.svg?react';
-import Legal from './basicActions/legal.svg?react';
 import Login from './basicActions/login.svg?react';
 import Logout from './basicActions/logout.svg?react';
 import MediaFile from './basicActions/mediaFile.svg?react';
 import Minus from './basicActions/minus.svg?react';
 import Plus from './basicActions/plus.svg?react';
-import Policy from './basicActions/policy.svg?react';
 import Redo from './basicActions/redo.svg?react';
 import Refresh from './basicActions/refresh.svg?react';
-import Report from './basicActions/report.svg?react';
 import Restore from './basicActions/restore.svg?react';
 import Review from './basicActions/review.svg?react';
 import Search from './basicActions/search.svg?react';
@@ -55,13 +50,18 @@ import Calendar from './generic/calendar.svg?react';
 import Chat from './generic/chat.svg?react';
 import Delivery from './generic/delivery.svg?react';
 import ExternalLink from './generic/externalLink.svg?react';
+import File from './generic/file.svg?react';
 import Filter from './generic/filter.svg?react';
+import Issue from './generic/issue.svg?react';
 import Language from './generic/language.svg?react';
+import Legal from './generic/legal.svg?react';
 import Location from './generic/location.svg?react';
 import Mail from './generic/mail.svg?react';
 import Manual from './generic/manual.svg?react';
 import MoreOptions from './generic/moreOptions.svg?react';
 import Notification from './generic/notification.svg?react';
+import Policy from './generic/policy.svg?react';
+import Report from './generic/report.svg?react';
 import Settings from './generic/settings.svg?react';
 /** Music Business */
 import Album from './musicBusiness/album.svg?react';
@@ -168,18 +168,13 @@ const iconSelector: { [key in AcceptedIconNames]: React.FunctionComponent } = {
   delete: Delete,
   download: Download,
   edit: Edit,
-  file: File,
-  issue: Issue,
-  legal: Legal,
   login: Login,
   logout: Logout,
   mediaFile: MediaFile,
   minus: Minus,
   plus: Plus,
-  policy: Policy,
   redo: Redo,
   refresh: Refresh,
-  report: Report,
   restore: Restore,
   review: Review,
   search: Search,
@@ -207,13 +202,18 @@ const iconSelector: { [key in AcceptedIconNames]: React.FunctionComponent } = {
   chat: Chat,
   delivery: Delivery,
   externalLink: ExternalLink,
+  file: File,
   filter: Filter,
+  issue: Issue,
   language: Language,
+  legal: Legal,
   location: Location,
   mail: Mail,
   manual: Manual,
   moreOptions: MoreOptions,
   notification: Notification,
+  policy: Policy,
+  report: Report,
   settings: Settings,
   /** Music Business */
   album: Album,
