@@ -99,7 +99,7 @@ export const BannerNotification = {
             closeCTA={() => console.log('close action clicked')}
           />
           <Banner
-            title={'Title'}
+            title={text('title', 'This is the heading:')}
             hasIcon={boolean('icon', true)}
             message={
               <div

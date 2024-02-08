@@ -33,9 +33,7 @@ const NotificationActionsArea: React.FCC<Props> = ({
           css={actionContainer()}
           data-testid={generateTestDataId(`${dataTestPrefixId}-primary`, dataTestId)}
         >
-          <Button type="tertiary" onClick={primaryCTA}>
-            {primaryCTALabel}
-          </Button>
+          <Button onClick={primaryCTA}>{primaryCTALabel}</Button>
         </div>
       )}
     </div>
