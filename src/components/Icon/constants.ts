@@ -96,6 +96,7 @@ export const iconsSet: IconSet = {
       'policy',
       'legal',
       'report',
+      'tag'
     ],
   },
   basicActions: {

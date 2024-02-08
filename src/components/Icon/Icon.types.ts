@@ -65,7 +65,8 @@ export type GenericIcons =
   | 'notification'
   | 'policy'
   | 'report'
-  | 'settings';
+  | 'settings'
+  | 'tag';
 
 export type MusicBusinessIcons =
   | 'album'

@@ -63,6 +63,7 @@ import Notification from './generic/notification.svg?react';
 import Policy from './generic/policy.svg?react';
 import Report from './generic/report.svg?react';
 import Settings from './generic/settings.svg?react';
+import Tag from './generic/tag.svg?react';
 /** Music Business */
 import Album from './musicBusiness/album.svg?react';
 import Artist from './musicBusiness/artist.svg?react';
@@ -215,6 +216,7 @@ const iconSelector: { [key in AcceptedIconNames]: React.FunctionComponent } = {
   policy: Policy,
   report: Report,
   settings: Settings,
+  tag: Tag,
   /** Music Business */
   album: Album,
   artist: Artist,
