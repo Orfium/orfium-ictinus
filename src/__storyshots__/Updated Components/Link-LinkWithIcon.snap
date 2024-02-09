@@ -21,7 +21,7 @@
   color: #194DCC;
   -webkit-text-decoration: none;
   text-decoration: none;
-  border: 0.25rem solid rgba(200,206,255,0);
+  position: relative;
   opacity: 1;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -40,12 +40,12 @@
 }
 
 .emotion-1:hover,
-.emotion-1[aria-expanded="true"] {
+.emotion-1[aria-expanded='true'] {
   color: #111530;
 }
 
 .emotion-1:hover path,
-.emotion-1[aria-expanded="true"] path {
+.emotion-1[aria-expanded='true'] path {
   fill: #111530!important;
 }
 
@@ -57,7 +57,11 @@
   fill: #5F33AC!important;
 }
 
-.emotion-1:focus-visible {
+.emotion-1:focus-visible:after {
+  content: '';
+  position: absolute;
+  inset: -3px -6px;
+  border-radius: 0.25rem;
   border: 0.25rem solid #A566FF;
 }
 
@@ -88,7 +92,7 @@
   color: #194DCC;
   -webkit-text-decoration: none;
   text-decoration: none;
-  border: 0.25rem solid rgba(200,206,255,0);
+  position: relative;
   opacity: 1;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -107,12 +111,12 @@
 }
 
 .emotion-4:hover,
-.emotion-4[aria-expanded="true"] {
+.emotion-4[aria-expanded='true'] {
   color: #111530;
 }
 
 .emotion-4:hover path,
-.emotion-4[aria-expanded="true"] path {
+.emotion-4[aria-expanded='true'] path {
   fill: #111530!important;
 }
 
@@ -124,7 +128,11 @@
   fill: #5F33AC!important;
 }
 
-.emotion-4:focus-visible {
+.emotion-4:focus-visible:after {
+  content: '';
+  position: absolute;
+  inset: -3px -6px;
+  border-radius: 0.25rem;
   border: 0.25rem solid #A566FF;
 }
 
@@ -155,7 +163,7 @@
   color: #194DCC;
   -webkit-text-decoration: none;
   text-decoration: none;
-  border: 0.25rem solid rgba(200,206,255,0);
+  position: relative;
   opacity: 1;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -174,12 +182,12 @@
 }
 
 .emotion-7:hover,
-.emotion-7[aria-expanded="true"] {
+.emotion-7[aria-expanded='true'] {
   color: #111530;
 }
 
 .emotion-7:hover path,
-.emotion-7[aria-expanded="true"] path {
+.emotion-7[aria-expanded='true'] path {
   fill: #111530!important;
 }
 
@@ -191,7 +199,11 @@
   fill: #5F33AC!important;
 }
 
-.emotion-7:focus-visible {
+.emotion-7:focus-visible:after {
+  content: '';
+  position: absolute;
+  inset: -3px -6px;
+  border-radius: 0.25rem;
   border: 0.25rem solid #A566FF;
 }
 
