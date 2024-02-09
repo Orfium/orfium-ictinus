@@ -151,6 +151,14 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
       if (onChange && selectedOption) {
         if (isEqual(option, SELECT_ALL_OPTION)) {
           onChange(options.filter((o) => !o.isDisabled));
+        } else if (option.isCreated) {
+          const newOption: SelectOption = {
+            value: option.value,
+            label: option.value.toString(),
+            isCreated: true,
+          };
+
+          onChange([...selectedOption, newOption]);
         } else {
           onChange([...selectedOption, option]);
         }
