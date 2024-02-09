@@ -12,6 +12,7 @@ export const TipWrapper = styled.div`
   align-items: center;
   line-height: 135%;
   margin: 32px 0;
+  border-radius: 4px;
 
   h4 {
     margin: 0 0 8px 0;
