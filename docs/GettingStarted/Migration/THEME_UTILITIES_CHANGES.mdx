@@ -1,0 +1,97 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta
+  title="Getting Started/Migration [v4 to v5]/Theme Utilities Changelog"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+/>
+
+<SectionHeader title={'Theme Utilities Changelog'} />
+
+### Importation changes from deep inside to the root level
+
+Anything coming from
+
+`@orfium/ictinus/other/path/insidecan`
+
+now be accessed only from the root. So cases such as
+
+`import useBreakpoints from '@orfium/ictinus/dist/hooks/useBreakpoints';`
+
+are now
+
+`import { useBreakpoints } from '@orfium/ictinus'`;
+
+### Theme access moved to globals
+
+All old objects coming from the `theme` are now part of the `global` and accessible through `theme.globals`
+
+Each attribute comes with a `.get()` function that is strongly typed and returns exactly what it can provide.
+
+Example: `theme.globals.{wanted metric}.get()`
+
+Some old to new transition examples
+
+- `theme.typography.fontSizes[10]` → `theme.globals.fontSize.get('')`
+
+- `theme.spacing.xl` → `theme.globals.spacing.get('')`
+
+For more information [click here](../?path=/docs/utilities-theme-utilities--overview)
+
+### Global migration properties - old to new
+
+#### Spacing
+
+- `theme.spacing.xsm` (4px) → `theme.globals.spacing.get('3')`
+
+- `theme.spacing.sm` (8px) → `theme.globals.spacing.get('4')`
+
+- `theme.spacing.md` (16px) → `theme.globals.spacing.get('6')`
+
+- `theme.spacing.lg` (24px) → `theme.globals.spacing.get('8')`
+
+- `theme.spacing.xl` (32px) → `theme.globals.spacing.get('9')`
+
+#### Typography
+
+- `theme.typography.weights.regular` → `theme.globals.typography.fontWeight.get('regular')`
+
+- `theme.typography.weights.medium` → `theme.globals.typography.fontWeight.get('medium')`
+
+- `theme.typography.weights.bold` → `theme.globals.typography.fontWeight.get('bold')`
+
+- `theme.typography.fontSizes['12']` → use `<Typography/ >` component or `theme.globals.typography.fontSize.get('2')`
+
+- `theme.typography.fontSizes['13']` - deprecated use 14px or 12px
+
+- `theme.typography.fontSizes['14']` → use `<Typography/>` component or `theme.globals.typography.fontSize.get('3')`
+
+- `theme.typography.fontSizes[16]` → use `<Typography/>` component or `theme.globals.typography.fontSize.get('4')`
+
+- `theme.typography.fontSizes[15]` - deprecated use 16px
+
+- `theme.typography.fontSizes[20]` - deprecated use 18px - use `<Typography/>` component or `theme.globals.typography.fontSize.get('5')`
+
+- `theme.typography.fontSizes[22]` - deprecated use 20px - use `<Typography/>` component or `theme.globals.typography.fontSize.get('6')`
+
+- `theme.typography.fontSizes['24']` → use `<Typography/>` component or `theme.globals.typography.fontSize.get('8')`
+
+- `theme.typography.fontSizes['28']` → use `<Typography/>` component or `theme.globals.typography.fontSize.get('9')`
+
+- `theme.typography.fontSizes['32']` → use `<Typography/>` component or `theme.globals.typography.fontSize.get('10')`
+
+#### Elevation
+
+- `theme.elevation['01']`
+
+- `theme.elevation['02']`
+
+### Colors
+
+- `theme.utils.getColor('blue', 50)` - deprecated since v5.0.0. Use `theme.globals.colors.get('')` instead.
+
+- `theme.palette` - deprecated since v5.0.0. Use `theme.globals.colors.get('')` instead
