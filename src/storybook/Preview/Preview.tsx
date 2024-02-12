@@ -16,7 +16,7 @@ const Canvas: FCC<PreviewProps> = ({ children, isInverted }) => {
     <SBPreview
       css={{
         background: theme.tokens.colors.get(
-          isInverted ? 'backgroundColor.inverted' : 'backgroundColor.tinted'
+          isInverted ? 'backgroundColor.inverted' : 'backgroundColor.default'
         ),
       }}
     >

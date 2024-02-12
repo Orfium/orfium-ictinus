@@ -1,4 +1,4 @@
-import type { SerializedStyles} from '@emotion/react';
+import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import type { Theme } from 'theme';
 import { rem } from 'theme/utils';
@@ -16,8 +16,8 @@ export const illustrationStyles =
       justify-content: center;
       border-radius: ${theme.globals.borderRadius.get('3')};
       background: ${isInverted
-        ? theme.tokens.colors.get('backgroundColor.tinted')
-        : theme.tokens.colors.get('backgroundColor.invertedAlt')};
+        ? theme.tokens.colors.get('backgroundColor.default')
+        : theme.tokens.colors.get('backgroundColor.inverted')};
     `;
   };
 
