@@ -16,8 +16,8 @@ export const notificationsContainer =
       overflow: hidden;
       width: 100%;
       min-height: ${rem(46)};
-      border-radius: ${theme.globals.spacing.get('3')};
-      color: ${theme.utils.getColor('darkGrey', 850)};
+      border-radius: ${theme.globals.borderRadius.get('2')};
+      color: ${theme.tokens.colors.get('textColor.default.primary')};
       font-size: ${theme.globals.typography.fontSize.get('3')};
       ${notificationsContainerPerType(type, styleType, theme)};
     `;
