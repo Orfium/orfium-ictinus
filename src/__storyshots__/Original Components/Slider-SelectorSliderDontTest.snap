@@ -13,18 +13,22 @@
 }
 
 .emotion-2 {
+  opacity: inherit;
+}
+
+.emotion-3 {
   height: 0.1875rem;
   border-radius: 4px;
-  background: linear-gradient(to right, #175bf5 0%, #175bf5 0%, #b9cdfc 0%, #b9cdfc 100%);
+  background: linear-gradient(to right, #175BF5 0%, #175BF5 0%, #DAE4FB 0%, #DAE4FB 100%);
   cursor: unset!important;
 }
 
-.emotion-4 {
+.emotion-5 {
   height: 1rem;
   width: 1rem;
   border-radius: 100px;
   background-color: #fff;
-  border: 2px solid #175bf5;
+  border: 2px solid #175BF5;
   position: absolute;
   z-index: 0;
   cursor: -webkit-grab;
@@ -41,7 +45,7 @@
   cursor: unset!important;
 }
 
-.emotion-4::after {
+.emotion-5::after {
   content: '';
   height: 1rem;
   width: 1rem;
@@ -58,7 +62,7 @@
   transition: all 0.15s ease-in-out;
 }
 
-.emotion-4:hover::after {
+.emotion-5:hover::after {
   border-color: rgba(14,14,23,0.1);
 }
 
@@ -71,21 +75,25 @@
       data-testid="slider_component"
     >
       <div
-        class="emotion-2 emotion-3"
-        data-testid="track_component"
-        style="transform: scale(1); cursor: pointer;"
+        class="emotion-2"
       >
         <div
-          aria-valuemax="100"
-          aria-valuemin="0"
-          aria-valuenow="0"
-          class="emotion-4 emotion-5"
-          data-testid="thumb_0"
-          draggable="false"
-          role="slider"
-          style="position: absolute; z-index: 0; cursor: grab; user-select: none; transform: translate(0px, 0px);"
-          tabindex="0"
-        />
+          class="emotion-3 emotion-4"
+          data-testid="track_component"
+          style="transform: scale(1); cursor: pointer;"
+        >
+          <div
+            aria-valuemax="100"
+            aria-valuemin="0"
+            aria-valuenow="0"
+            class="emotion-5 emotion-6"
+            data-testid="thumb_0"
+            draggable="false"
+            role="slider"
+            style="position: absolute; z-index: 0; cursor: grab; user-select: none; transform: translate(0px, 0px);"
+            tabindex="0"
+          />
+        </div>
       </div>
     </div>
   </div>

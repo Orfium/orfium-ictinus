@@ -1,4 +1,4 @@
-import type { FCC} from 'react';
+import type { FCC } from 'react';
 import * as React from 'react';
 import { useMemo } from 'react';
 import type { IMarkProps } from 'react-range/lib/types';
@@ -29,14 +29,14 @@ const SliderMark: FCC<SliderMarkProps & TestProps> = ({
   const backgroundStyle = useMemo(() => {
     if (!isSelector) {
       return index * 20 < values[0] || index * 20 > values[1]
-        ? theme.utils.getColor('blue', isDisabled ? 250 : 150)
-        : theme.utils.getColor('blue', isDisabled ? 250 : 500);
+        ? theme.tokens.colors.get('palette.primaryAlt.main')
+        : theme.tokens.colors.get('palette.primary.main');
     }
 
     return index * 20 > values[0]
-      ? theme.utils.getColor('blue', isDisabled ? 250 : 150)
-      : theme.utils.getColor('blue', isDisabled ? 250 : 500);
-  }, [isDisabled, index, isSelector, theme.utils, values]);
+      ? theme.tokens.colors.get('palette.primaryAlt.main')
+      : theme.tokens.colors.get('palette.primary.main');
+  }, [isSelector, index, values, theme.tokens.colors]);
 
   const labelValue = useMemo(() => (STEP_WITH_INCREMENTS * index).toString(), [index]);
 

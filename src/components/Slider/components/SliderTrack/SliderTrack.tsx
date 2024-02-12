@@ -1,4 +1,4 @@
-import type { FCC} from 'react';
+import type { FCC } from 'react';
 import * as React from 'react';
 import { useMemo } from 'react';
 import { getTrackBackground } from 'react-range';
@@ -32,20 +32,20 @@ const SliderTrack: FCC<SliderTrackProps & TestProps> = ({
         values,
         colors: isSelector
           ? [
-              theme.utils.getColor('blue', isDisabled ? 250 : 500),
-              theme.utils.getColor('blue', isDisabled ? 250 : 150),
+              theme.tokens.colors.get('palette.primary.main'),
+              theme.tokens.colors.get('palette.primaryAlt.main'),
             ]
           : [
-              theme.utils.getColor('blue', isDisabled ? 250 : 150),
-              theme.utils.getColor('blue', isDisabled ? 250 : 500),
-              theme.utils.getColor('blue', isDisabled ? 250 : 150),
+              theme.tokens.colors.get('palette.primaryAlt.main'),
+              theme.tokens.colors.get('palette.primary.main'),
+              theme.tokens.colors.get('palette.primaryAlt.main'),
             ],
         min: MIN,
         max: MAX,
         // eslint-disable-next-line @typescript-eslint/naming-convention
         rtl: false,
       }),
-    [isDisabled, isSelector, theme.utils, values]
+    [isSelector, theme.tokens.colors, values]
   );
 
   return (
