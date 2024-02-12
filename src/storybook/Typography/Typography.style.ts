@@ -10,7 +10,7 @@ export const TypographyWrapper = (theme: Theme) =>
     &:after {
       content: '';
       margin: 16px 0 0;
-      background: ${theme.tokens.colors.get('borderColor.decorative.muted')};
+      background: ${theme.tokens.colors.get('borderColor.decorative.default')};
       height: 1px;
     }
   `;

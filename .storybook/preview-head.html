@@ -13,8 +13,9 @@
     border: none !important;
   }
   .csbdocs-content :where(p:not(.sb-anchor, .sb-unstyled, .sb-unstyled p)) code,
-  .sbdocs-content code {
-    background: #e7eefe;
+  .sbdocs-content code,
+  .sbdocs ul li:has(code) code {
+    background: #f7fafc;
     color: #1552dd;
     padding: 3px 5px;
   }
@@ -25,12 +26,20 @@
     margin-bottom: 8px;
   }
 
-  .sbdocs > ul > li,
-  .sbdocs > ul > li a {
+  .sbdocs ul li:has(a) {
     color: #1552dd;
-    font-size: 18px;
-    font-weight: 500;
+  }
+
+  .sbdocs ul li:has(a) a {
     text-decoration: none;
+  }
+
+  .sbdocs ol {
+    list-style: auto;
+
+    li::marker {
+      font-size: 16px;
+    }
   }
 
   table.sbdocs.sbdocs-table {
@@ -55,22 +64,39 @@
   }
   .sbdocs.sbdocs-preview {
     background: transparent;
+    border-color: #bdc7ff;
   }
 
-  .docblock-argstable {
-    margin-top: 0 !important;
+  .sbdocs table {
+    outline: 1px solid #bdc7ff;
+    border-radius: 4px;
+
+    td,
+    th {
+      padding-top: 12px !important;
+      padding-bottom: 12px !important;
+    }
+
+    tbody {
+      filter: none !important;
+    }
+
+    thead > tr,
+    tbody > tr:nth-child(even) > td {
+      background: #f2f4ff !important;
+    }
+
+    tr,
+    td,
+    th {
+      border: none !important;
+      text-align: unset;
+    }
   }
 
   .docblock-source {
     margin-bottom: 16px !important;
     background: #f2f4ff !important;
     box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(200, 206, 255, 0.45) !important;
-  }
-
-  /* API props styling */
-  tbody.docblock-argstable-body td > div > div span,
-  tbody.docblock-argstable-body tr td:nth-of-type(2) > div:last-of-type span {
-    background: #e7eefe;
-    color: #1552dd;
   }
 </style>

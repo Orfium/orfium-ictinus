@@ -52,7 +52,7 @@
   color: #194DCC;
   -webkit-text-decoration: none;
   text-decoration: none;
-  border: 0.25rem solid rgba(200,206,255,0);
+  position: relative;
   opacity: 1;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -71,12 +71,12 @@
 }
 
 .emotion-3:hover,
-.emotion-3[aria-expanded="true"] {
+.emotion-3[aria-expanded='true'] {
   color: #111530;
 }
 
 .emotion-3:hover path,
-.emotion-3[aria-expanded="true"] path {
+.emotion-3[aria-expanded='true'] path {
   fill: #111530!important;
 }
 
@@ -88,7 +88,11 @@
   fill: #5F33AC!important;
 }
 
-.emotion-3:focus-visible {
+.emotion-3:focus-visible:after {
+  content: '';
+  position: absolute;
+  inset: -3px -6px;
+  border-radius: 0.25rem;
   border: 0.25rem solid #A566FF;
 }
 
