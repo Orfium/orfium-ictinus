@@ -29,7 +29,11 @@ const Search: FCC<SearchProps> = ({
       <div css={iconWrapperStyle({ iconPosition: 'left' })}>
         <Icon
           name="search"
-          color={isDark ? theme.globals.oldColors.white : theme.utils.getColor('lightGrey', 650)}
+          color={
+            isDark
+              ? theme.tokens.colors.get('textColor.inverted.primary')
+              : theme.tokens.colors.get('textColor.default.secondary')
+          }
           size={20}
         />{' '}
       </div>
