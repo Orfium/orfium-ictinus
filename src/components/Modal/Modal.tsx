@@ -1,3 +1,4 @@
+import { useTheme } from 'index';
 import React, { useEffect } from 'react';
 
 import { backgroundContainer, cardSizing, closeContainer, modalContainer } from './Modal.style';
@@ -35,6 +36,8 @@ const Modal: React.FCC<ModalProps> = ({
     onClose();
   });
 
+  const theme = useTheme();
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -53,7 +56,13 @@ const Modal: React.FCC<ModalProps> = ({
         <div css={cardSizing}>
           <Card elevated="02" radius="3">
             <div css={closeContainer}>
-              <IconButton type="tertiary" name="close" onClick={onClose} dataTestId="modal-close" />
+              <IconButton
+                type="tertiary"
+                name="close"
+                onClick={onClose}
+                color={theme.tokens.colors.get('textColor.default.secondary')}
+                dataTestId="modal-close"
+              />
             </div>
             <div css={modalContainer({ isContentPadded })}>
               {contentProps ? <ModalContent {...contentProps} /> : children}

@@ -13,4 +13,9 @@ export const cardStyle =
         ? theme.tokens.colors.get('backgroundColor.transparent')
         : theme.tokens.colors.get('backgroundColor.default')};
       border-radius: ${radius ? theme.globals.spacing.get(radius) : 0};
+      outline: ${isTransparent
+        ? undefined
+        : `${theme.globals.borderWidth.get('1')} solid ${theme.tokens.colors.get(
+            'borderColor.decorative.default'
+          )}`};
     `;

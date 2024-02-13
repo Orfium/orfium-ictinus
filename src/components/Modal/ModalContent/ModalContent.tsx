@@ -61,7 +61,7 @@ const ModalContent: React.FCC<ModalContentProps> = ({
       </p>
       <div css={actionsContainer}>
         {Boolean(secondaryCTA && secondaryCTALabel) && (
-          <Button onClick={secondaryCTA} dataTestId="modal-content-secondaryCTA">
+          <Button onClick={secondaryCTA} type="tertiary" dataTestId="modal-content-secondaryCTA">
             {secondaryCTALabel}
           </Button>
         )}
