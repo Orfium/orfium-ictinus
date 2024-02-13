@@ -8,4 +8,5 @@ export const isItemString = (prop: string | ExtendedColumn): prop is string =>
 export const hasTooltipOrSortingKey = (prop: ExtendedColumn): boolean =>
   Boolean(prop.isSortable || prop.tooltip);
 
-export const getBorderColor = (theme: Theme): string => theme.utils.getColor('lightGrey', 200);
+export const getBorderColor = (theme: Theme): string =>
+  theme.tokens.colors.get('borderColor.decorative.default');

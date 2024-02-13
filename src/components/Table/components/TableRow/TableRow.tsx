@@ -24,12 +24,12 @@ const TableRow: React.FCC<TableRowProps> = ({
       }}
       css={[
         {
-          backgroundColor: isSelected ? theme.utils.getColor('blue', 50) : undefined,
+          backgroundColor: isSelected ? theme.tokens.colors.get('palette.secondary.light') : undefined,
           paddingTop: theme.globals.spacing.get('3'),
           paddingBottom: theme.globals.spacing.get('3'),
           cursor: onClick && 'pointer',
           '&:hover': {
-            backgroundColor: onClick && theme.utils.getColor('lightGrey', 50),
+            backgroundColor: onClick && theme.tokens.colors.get('palette.secondary.main'),
           },
 
           '> td': {
