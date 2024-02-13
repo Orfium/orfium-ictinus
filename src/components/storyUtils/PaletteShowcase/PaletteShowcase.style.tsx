@@ -30,6 +30,7 @@ export const colorNameBox = (
   padding: 10px;
   display: flex;
   flex-direction: column;
+  /** @TODO: these colors will be removed once ColorsV4 Docs and Showcases are removed */
   color: ${shade && colorName
     ? //@ts-ignore
       theme.utils.getAAColorFromSwatches(colorName, shade)

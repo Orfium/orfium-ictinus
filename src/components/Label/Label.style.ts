@@ -1,7 +1,6 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import type { Theme } from 'theme';
-import { BASE_SHADE } from 'theme/palette';
 import { rem } from 'theme/utils';
 
 import type { LabelProps } from './Label';
@@ -28,9 +27,7 @@ export const labelStyle =
       transform: ${!isAnimated
         ? `translate(${LABEL_TRANSFORM_LEFT_SPACING}, 0)`
         : `translate(${LABEL_TRANSFORM_LEFT_SPACING}, -95%) scale(0.8);`};
-      color: ${hasError
-        ? theme.utils.getColor('error', BASE_SHADE, 'normal')
-        : tokens('textColor.inputColorAlt')};
+      color: ${hasError ? tokens('textColor.errorHintColor') : tokens('textColor.inputColorAlt')};
       align-items: center;
       display: flex;
       top: 0;

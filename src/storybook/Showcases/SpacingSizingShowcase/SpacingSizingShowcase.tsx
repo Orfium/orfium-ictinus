@@ -39,7 +39,7 @@ const SpacingSizingShowcase = () => {
               css={{
                 width: `${space.value}`,
                 height: '32px',
-                backgroundColor: theme.utils.getColor('lightPurple', 550),
+                backgroundColor: theme.globals.colors.get('blue.4'),
               }}
             />
             <div
