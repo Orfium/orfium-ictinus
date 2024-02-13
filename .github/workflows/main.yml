@@ -129,7 +129,7 @@ jobs:
     needs:
       - deploy-app
     runs-on: ubuntu-latest
-    if: (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/next') && github.event_name == 'push'
+    if: (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/next'  || github.ref == 'refs/heads/v4.x') && github.event_name == 'push'
 
     permissions:
       packages: write
