@@ -87,7 +87,7 @@
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   width: 19.25rem;
-  background-color: white;
+  background-color: #ffffff;
   overflow: hidden;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
@@ -100,7 +100,7 @@
   min-height: 100%;
   z-index: 100;
   position: absolute;
-  border-right: 0.0625rem solid #cfd7e5;
+  border-right: 0.0625rem solid rgba(200,206,255,0.70);
 }
 
 .emotion-5 {
@@ -140,7 +140,7 @@
   -ms-flex-align: center;
   align-items: center;
   height: 2.75rem;
-  color: #0f0f17;
+  color: #111530;
   cursor: default;
   width: 100%;
   font-size: 1rem;
@@ -158,11 +158,11 @@
 }
 
 .emotion-6:hover {
-  background-color: #f3f5f8;
+  background-color: rgba(200,206,255,0.20);
 }
 
 .emotion-6:focus-visible {
-  outline: #F814E1 auto 0.0625rem;
+  outline: rgba(200,206,255,0.20);
 }
 
 .emotion-7 {
@@ -172,26 +172,6 @@
   -o-transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  width: 1.5rem;
-  height: 1.5rem;
   opacity: 1;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -199,13 +179,9 @@
   transform: rotate(0deg);
 }
 
-.emotion-7 path {
-  background-color: #444d5f;
-}
-
 .emotion-8 {
-  width: 0.625rem;
-  height: 0.625rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -213,12 +189,12 @@
 }
 
 .emotion-9 {
-  width: 0.625rem;
-  height: 0.625rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .emotion-9 path {
-  fill: #5f6c85!important;
+  fill: #111530!important;
 }
 
 .emotion-10 {
@@ -255,24 +231,6 @@
   flex-shrink: 0;
 }
 
-.emotion-11 {
-  width: 1.25rem;
-  height: 1.25rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-12 {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.emotion-12 path {
-  fill: #282e39!important;
-}
-
 .emotion-13 {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
@@ -280,6 +238,7 @@
   -o-transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  color: #111530;
   font-weight: initial;
 }
 
@@ -309,7 +268,7 @@
   -ms-flex-align: center;
   align-items: center;
   height: 2.75rem;
-  color: #0f0f17;
+  color: #111530;
   cursor: default;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
@@ -319,7 +278,7 @@
   transition: all 0.2s ease-in-out;
   box-sizing: border-box;
   font-size: 0.875rem;
-  color: #0f0f17;
+  color: #111530;
   margin: 0.25rem 0 0.25rem 0;
   padding-left: 2.4375rem;
   -webkit-text-decoration: none;
@@ -327,21 +286,21 @@
 }
 
 .emotion-15:hover {
-  background-color: #f3f5f8;
+  background-color: rgba(200,206,255,0.20)!important;
 }
 
 .emotion-15.active:hover {
-  background-color: #b9cdfc!important;
+  background-color: rgba(200,206,255,0.30)!important;
 }
 
 .emotion-15.active {
   font-weight: 700;
-  background-color: #d0defd!important;
-  color: black;
+  background-color: rgba(200,206,255,0.20)!important;
+  color: #194DCC;
 }
 
 .emotion-15.active path {
-  fill: #175bf5!important;
+  fill: #194DCC!important;
 }
 
 .emotion-15:focus-visible {
@@ -375,15 +334,6 @@
   flex-shrink: 0;
 }
 
-.emotion-18 {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.emotion-18 path {
-  fill: #5f6c85!important;
-}
-
 .emotion-69 {
   display: -webkit-box;
   display: -moz-box;
@@ -400,7 +350,7 @@
   -ms-flex-align: center;
   align-items: center;
   height: 2.75rem;
-  color: #0f0f17;
+  color: #111530;
   cursor: default;
   width: 100%;
   font-size: 1rem;
@@ -420,11 +370,11 @@
 }
 
 .emotion-69:hover {
-  background-color: #f3f5f8;
+  background-color: rgba(200,206,255,0.20);
 }
 
 .emotion-69:focus-visible {
-  outline: #F814E1 auto 0.0625rem;
+  outline: rgba(200,206,255,0.20);
 }
 
 .emotion-70 {
@@ -434,35 +384,11 @@
   -o-transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  width: 1.5rem;
-  height: 1.5rem;
   opacity: 0;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
-}
-
-.emotion-70 path {
-  background-color: #444d5f;
 }
 
 .emotion-77 {
@@ -578,10 +504,10 @@
                 class="emotion-10"
               >
                 <div
-                  class="emotion-11"
+                  class="emotion-8"
                 >
                   <svg
-                    class="emotion-12"
+                    class="emotion-9"
                     fill="none"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -613,10 +539,10 @@
                   class="emotion-16"
                 >
                   <div
-                    class="emotion-11"
+                    class="emotion-8"
                   >
                     <svg
-                      class="emotion-18"
+                      class="emotion-9"
                       fill="none"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -644,10 +570,10 @@
                   class="emotion-16"
                 >
                   <div
-                    class="emotion-11"
+                    class="emotion-8"
                   >
                     <svg
-                      class="emotion-18"
+                      class="emotion-9"
                       fill="none"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -675,10 +601,10 @@
                   class="emotion-16"
                 >
                   <div
-                    class="emotion-11"
+                    class="emotion-8"
                   >
                     <svg
-                      class="emotion-18"
+                      class="emotion-9"
                       fill="none"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -706,10 +632,10 @@
                   class="emotion-16"
                 >
                   <div
-                    class="emotion-11"
+                    class="emotion-8"
                   >
                     <svg
-                      class="emotion-18"
+                      class="emotion-9"
                       fill="none"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -764,10 +690,10 @@
                 class="emotion-10"
               >
                 <div
-                  class="emotion-11"
+                  class="emotion-8"
                 >
                   <svg
-                    class="emotion-12"
+                    class="emotion-9"
                     fill="none"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -799,10 +725,10 @@
                   class="emotion-16"
                 >
                   <div
-                    class="emotion-11"
+                    class="emotion-8"
                   >
                     <svg
-                      class="emotion-18"
+                      class="emotion-9"
                       fill="none"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -830,10 +756,10 @@
                   class="emotion-16"
                 >
                   <div
-                    class="emotion-11"
+                    class="emotion-8"
                   >
                     <svg
-                      class="emotion-18"
+                      class="emotion-9"
                       fill="none"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -886,10 +812,10 @@
                 class="emotion-10"
               >
                 <div
-                  class="emotion-11"
+                  class="emotion-8"
                 >
                   <svg
-                    class="emotion-12"
+                    class="emotion-9"
                     fill="none"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -923,10 +849,10 @@
                   class="emotion-16"
                 >
                   <div
-                    class="emotion-11"
+                    class="emotion-8"
                   >
                     <svg
-                      class="emotion-18"
+                      class="emotion-9"
                       fill="none"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -954,10 +880,10 @@
                   class="emotion-16"
                 >
                   <div
-                    class="emotion-11"
+                    class="emotion-8"
                   >
                     <svg
-                      class="emotion-18"
+                      class="emotion-9"
                       fill="none"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -985,10 +911,10 @@
                   class="emotion-16"
                 >
                   <div
-                    class="emotion-11"
+                    class="emotion-8"
                   >
                     <svg
-                      class="emotion-18"
+                      class="emotion-9"
                       fill="none"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -1038,10 +964,10 @@
               class="emotion-10"
             >
               <div
-                class="emotion-11"
+                class="emotion-8"
               >
                 <svg
-                  class="emotion-12"
+                  class="emotion-9"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
