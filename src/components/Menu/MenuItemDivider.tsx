@@ -18,7 +18,7 @@ const MenuItemDivider: FC<Props> = ({ sx }) => {
       css={[
         css`
           height: ${rem(1)};
-          border-color: ${theme.tokens.colors.get('borderColor.interactive.default')};
+          border-color: ${theme.tokens.colors.get('borderColor.decorative.default')};
           width: 100%;
           margin: auto;
           border-bottom-width: ${rem(1)};

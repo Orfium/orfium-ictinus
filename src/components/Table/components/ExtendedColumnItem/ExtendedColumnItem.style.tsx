@@ -17,5 +17,5 @@ export const contentStyles =
   (theme: Theme): SerializedStyles =>
     css`
       font-weight: ${theme.globals.typography.fontWeight.get('medium')};
-      color: ${theme.tokens.colors.get('textColor.default.primary')};
+      color: ${theme.tokens.colors.get('textColor.default.secondary')};
     `;
