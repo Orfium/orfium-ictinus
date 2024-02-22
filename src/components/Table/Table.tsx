@@ -15,7 +15,7 @@ import { CheckBox } from '../Controls';
 
 export type ContentComponent<T> = (data: Cell<T>) => React.ReactNode;
 export type Cell<T> = {
-  /** the content of the cell to be displayed */
+  /** the content of the cell to be displayed. You can pass also custom component. `ContentComponent: (data: Cell<T>) => React.ReactNode`. The type defines that will be a function that returns cell to use cell data.  */
   content: number | string | ContentComponent<T>;
   /** the truncated tooltip content, you can override it or it will take the content @default content */
   tooltipContent?: string;
