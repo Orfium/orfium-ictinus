@@ -36,11 +36,10 @@ const ExtendedColumnItem: React.FCC<ExtendedColumnItemProps> = ({ item, sorting,
       >
         <Icon
           name="triangleDown"
-          size={8}
           dataTestId={`table_icon_sort_${itemContentLowerCase}_${
             sorting.order === 'desc' ? 'desc' : 'asc'
           }`}
-          color={theme.utils.getColor('neutralBlack', 500)}
+          color={theme.tokens.colors.get('textColor.default.secondary')}
         />
       </div>
     ) : (
@@ -52,9 +51,8 @@ const ExtendedColumnItem: React.FCC<ExtendedColumnItemProps> = ({ item, sorting,
       >
         <Icon
           name="sort"
-          size={8}
           dataTestId={`table_icon_sort_${itemContentLowerCase}`}
-          color={theme.utils.getColor('lightGrey', 750)}
+          color={theme.tokens.colors.get('textColor.default.secondary')}
         />
       </div>
     ));
@@ -73,7 +71,7 @@ const ExtendedColumnItem: React.FCC<ExtendedColumnItemProps> = ({ item, sorting,
           <Icon
             name="informational"
             dataTestId={`table_icon_tooltip_${itemContentLowerCase}`}
-            color={theme.utils.getColor('lightGrey', 750)}
+            color={theme.tokens.colors.get('textColor.default.secondary')}
           />
         </Tooltip>
       </div>

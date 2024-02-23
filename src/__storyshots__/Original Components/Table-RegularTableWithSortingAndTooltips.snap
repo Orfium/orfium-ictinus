@@ -11,7 +11,7 @@
   padding-bottom: 1rem;
   border-bottom-width: 0.0625rem;
   border-bottom-style: solid;
-  border-bottom-color: #cfd7e5;
+  border-bottom-color: rgba(200,206,255,0.70);
 }
 
 .emotion-1 th:first-of-type {
@@ -42,7 +42,7 @@
 }
 
 .emotion-2:hover {
-  background-color: #f3f5f8;
+  background-color: rgba(200,206,255,0.20);
 }
 
 .emotion-2:hover>div>span {
@@ -74,7 +74,7 @@
 
 .emotion-4 {
   font-weight: 500;
-  color: #444d5f;
+  color: #52567a;
 }
 
 .emotion-5 {
@@ -146,7 +146,7 @@
 }
 
 .emotion-9 path {
-  fill: #444d5f!important;
+  fill: #52567a!important;
 }
 
 .emotion-10 {
@@ -160,24 +160,6 @@
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
-}
-
-.emotion-11 {
-  width: 0.5rem;
-  height: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-12 {
-  width: 0.5rem;
-  height: 0.5rem;
-}
-
-.emotion-12 path {
-  fill: #030303!important;
 }
 
 .emotion-13 {
@@ -206,7 +188,7 @@
 }
 
 .emotion-23:hover {
-  background-color: #f3f5f8;
+  background-color: rgba(200,206,255,0.20);
 }
 
 .emotion-23:hover>div>span {
@@ -220,19 +202,10 @@
   width: fit-content;
 }
 
-.emotion-29 {
-  width: 0.5rem;
-  height: 0.5rem;
-}
-
-.emotion-29 path {
-  fill: #444d5f!important;
-}
-
 .emotion-34 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-  border-bottom: 0.0625rem solid #cfd7e5;
+  border-bottom: 0.0625rem solid rgba(200,206,255,0.70);
 }
 
 .emotion-34 td:first-of-type {
@@ -322,11 +295,11 @@
                 class="emotion-10"
               >
                 <div
-                  class="emotion-11"
+                  class="emotion-8"
                   data-testid="table_icon_sort_title_asc"
                 >
                   <svg
-                    class="emotion-12"
+                    class="emotion-9"
                     fill="none"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -423,11 +396,11 @@
                 class="emotion-27"
               >
                 <div
-                  class="emotion-11"
+                  class="emotion-8"
                   data-testid="table_icon_sort_age"
                 >
                   <svg
-                    class="emotion-29"
+                    class="emotion-9"
                     fill="none"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"

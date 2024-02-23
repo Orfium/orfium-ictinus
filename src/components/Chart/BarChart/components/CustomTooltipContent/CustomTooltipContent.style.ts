@@ -6,8 +6,8 @@ export const tooltipStyle = () => (theme: Theme) => {
     fontSize: theme.globals.typography.fontSize.get('3'),
     padding: `${theme.globals.spacing.get('4')} ${theme.globals.spacing.get('6')}`,
     margin: theme.globals.spacing.get('4'),
-    color: theme.globals.oldColors.white,
-    background: theme.utils.getColor('darkGrey', 750),
+    color: theme.globals.colors.get('neutral.1'),
+    background: theme.tokens.colors.get('backgroundColor.inverted'),
     opacity: '90%',
     borderRadius: theme.globals.spacing.get('3'),
     minWidth: rem(200),
@@ -20,7 +20,7 @@ export const tooltipHrStyle = () => (theme: Theme) => {
     margin: `${theme.globals.spacing.get('6')} 0px`,
     height: '1px',
     borderWidth: 0,
-    backgroundColor: theme.globals.oldColors.white,
+    backgroundColor: theme.tokens.colors.get('backgroundColor.default'),
     opacity: '10%',
   };
 };
@@ -32,7 +32,7 @@ export const tooltipUlStyle = () => () => {
 export const tooltipLiStyle = () => (theme: Theme) => {
   return {
     listStyleType: 'none',
-    color: theme.globals.oldColors.white,
+    color: theme.globals.colors.get('neutral.1'),
     width: '100%',
     display: 'flex',
     justifyContent: 'space-between',

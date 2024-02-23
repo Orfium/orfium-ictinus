@@ -1,4 +1,5 @@
 import * as React from 'react';
+import type { SemanticColorsKey } from 'theme/tokens/semantic/colors';
 
 import {
   actionsContainer,
@@ -18,7 +19,7 @@ import type {
   NotificationStyleType,
   NotificationTypes,
 } from '../../Notification';
-import { iconContainer, actionContainer } from '../../Notification.style';
+import { iconContainer, actionContainer, typeToColorStyle } from '../../Notification.style';
 import type { AcceptedIconNames } from 'components/Icon';
 
 export type CompactNotificationVariants = 'inline' | 'banner' | 'card';
@@ -72,8 +73,10 @@ const CompactNotification: React.FCC<CompactNotificationProps> = ({
           <div css={iconContainer()}>
             <Icon
               name={typeToIconName(type)}
-              color={theme.globals.oldColors[type][500]}
-              size={20}
+              color={theme.tokens.colors.get(
+                `textColor.default.${typeToColorStyle(type)}` as SemanticColorsKey
+              )}
+              size={24}
             />
           </div>
         )}
@@ -109,7 +112,11 @@ const CompactNotification: React.FCC<CompactNotificationProps> = ({
             onClick={closeCTA}
             data-testid={generateTestDataId('notification-close', dataTestId)}
           >
-            <Icon name="close" color={theme.utils.getColor('lightGrey', 650)} size={20} />
+            <Icon
+              name="close"
+              color={theme.tokens.colors.get('textColor.default.secondary')}
+              size={16}
+            />
           </span>
         )}
       </div>

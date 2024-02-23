@@ -16,7 +16,15 @@ const LoadingButtonShowcase: React.FCC = () => {
   };
 
   const CardContent = () => (
-    <div css={{ display: 'flex', flexDirection: 'column', gap: '48px', alignItems: 'center' }}>
+    <div
+      css={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '48px',
+        alignItems: 'center',
+        padding: '24px',
+      }}
+    >
       <div css={{ display: 'flex', gap: '32px' }}>
         <div css={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '24px' }}>
           <Button isLoading>Primary</Button>
@@ -67,7 +75,7 @@ const LoadingButtonShowcase: React.FCC = () => {
 
   return (
     <div css={showcaseContainerStyle}>
-      <Card>
+      <Card isTransparent>
         <CardContent />
       </Card>
     </div>

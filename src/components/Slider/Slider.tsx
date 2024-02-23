@@ -133,23 +133,26 @@ const Slider: React.FC<SliderProps & TestProps> = ({
 
   return (
     <Container data-testid={`${dataTestPrefixId ?? ''}slider_component`}>
-      <Range
-        step={hasIncrements ? STEP_WITH_INCREMENTS : STEP}
-        min={MIN}
-        max={MAX}
-        disabled={isDisabled}
-        values={values}
-        onChange={onChange}
-        onFinalChange={onBlur}
-        renderMark={handleRenderMark}
-        renderTrack={handleRenderTrack}
-        renderThumb={handleRenderThumb}
-      />
+      <div css={{ opacity: isDisabled ? theme.tokens.disabledState.get('default') : 'inherit' }}>
+        <Range
+          step={hasIncrements ? STEP_WITH_INCREMENTS : STEP}
+          min={MIN}
+          max={MAX}
+          disabled={isDisabled}
+          values={values}
+          onChange={onChange}
+          onFinalChange={onBlur}
+          renderMark={handleRenderMark}
+          renderTrack={handleRenderTrack}
+          renderThumb={handleRenderThumb}
+        />
+      </div>
       {!isSelector && !hasIncrements && values.length === 2 && (
         <InputsContainer>
           <InputContainer>
             <TextField
               label="Start"
+              size="compact"
               isDisabled={isDisabled}
               value={values[0]}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
@@ -163,16 +166,12 @@ const Slider: React.FC<SliderProps & TestProps> = ({
                 }
               }}
               suffix={<>%</>}
-              sx={{
-                textField: {
-                  color: theme.utils.getColor('lightGrey', 650),
-                },
-              }}
             />
           </InputContainer>
           <InputContainer>
             <TextField
               label="End"
+              size="compact"
               isDisabled={isDisabled}
               value={values[1]}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
@@ -186,11 +185,6 @@ const Slider: React.FC<SliderProps & TestProps> = ({
                 }
               }}
               suffix={<>%</>}
-              sx={{
-                textField: {
-                  color: theme.utils.getColor('lightGrey', 650),
-                },
-              }}
             />
           </InputContainer>
         </InputsContainer>

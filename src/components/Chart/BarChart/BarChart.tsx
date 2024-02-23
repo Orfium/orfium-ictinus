@@ -128,7 +128,7 @@ const BarChart: React.FCC<BarChartProps> = ({ data }) => {
         }}
       />
       <Tooltip
-        cursor={{ fill: theme.utils.getColor('lightGrey', 50) }}
+        cursor={{ fill: theme.tokens.colors.get('backgroundColor.alt') }}
         content={<CustomTooltipContent />}
       />
       <Bar dataKey="value">

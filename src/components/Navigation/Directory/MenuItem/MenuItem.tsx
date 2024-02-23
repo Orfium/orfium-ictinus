@@ -1,4 +1,3 @@
-import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
 import React, { memo, useMemo } from 'react';
 import { NavLink } from 'react-router-dom';
 
@@ -28,23 +27,24 @@ const MenuItem: React.FCC<MenuItemProps> = memo(
   ({ isCurrent, isExpanded, name, url, iconName, options, toggleMenuItem, state: linkState }) => {
     const theme = useTheme();
 
-    const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
-    const { color, shade } = calculateColorBetweenColorAndType('', 'primary');
-
     const hasSubMenus = useMemo(() => options.length > 0, [options.length]);
 
     const MenuItemContent = (
       <React.Fragment>
         <div css={arrowContainerStyle(isExpanded, hasSubMenus)}>
-          <Icon name="triangleRight" color={theme.utils.getColor('lightGrey', 650)} size={10} />
+          <Icon
+            name="triangleRight"
+            color={theme.tokens.colors.get('textColor.default.primary')}
+            size={20}
+          />
         </div>
-        <div css={menuIconStyle(isCurrent)}>
+        <div css={menuIconStyle()}>
           <Icon
             name={iconName}
             color={
               isCurrent
-                ? theme.utils.getAAColorFromSwatches(color, shade)
-                : theme.utils.getColor('lightGrey', 850)
+                ? theme.tokens.colors.get('textColor.default.active')
+                : theme.tokens.colors.get('textColor.default.primary')
             }
             size={20}
           />
@@ -90,7 +90,7 @@ const MenuItem: React.FCC<MenuItemProps> = memo(
                           <div css={subMenuIconStyle()}>
                             <Icon
                               name={subMenuItem.iconName}
-                              color={theme.utils.getColor('lightGrey', 650)}
+                              color={theme.tokens.colors.get('textColor.default.primary')}
                               size={20}
                             />
                           </div>

@@ -1,6 +1,5 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
-import { transparentize } from 'polished';
 import { rem } from 'theme/utils';
 
 import type { ModalProps } from './Modal';
@@ -13,7 +12,7 @@ export const backgroundContainer = (theme: Theme): SerializedStyles => css`
   height: 100vh;
   top: 0;
   left: 0;
-  background-color: ${transparentize(0.8, theme.globals.oldColors.white)};
+  background-color: ${theme.tokens.colors.get('backdrop.default')};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,9 +44,4 @@ export const closeContainer = (theme: Theme) => css`
   justify-content: flex-end;
   padding: ${theme.globals.spacing.get('4')} ${theme.globals.spacing.get('4')} 0 0;
   box-sizing: border-box;
-
-  //TODO: REMOVE THIS AFTER BUTTONS REFACTOR
-  svg {
-    color: ${theme.utils.getColor('lightGrey', 650)};
-  }
 `;

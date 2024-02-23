@@ -22,9 +22,13 @@ export const WithLogoPlaceholder = {
     <div
       style={{
         padding: 10,
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '24px',
       }}
     >
       <TopAppBarShowcase />
+      <TopAppBarShowcase hasSearchHandler />
     </div>
   ),
 
@@ -48,12 +52,16 @@ export const WithAdditionalTools = {
 export const WithDarkThemeEnabled = {
   render: () => (
     <div
-      style={{
-        padding: 10,
-      }}
-    >
-      <TopAppBarShowcase isDark={true} />
-    </div>
+    style={{
+      padding: 10,
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '24px',
+    }}
+  >
+    <TopAppBarShowcase isDark />
+    <TopAppBarShowcase isDark hasSearchHandler />
+  </div>
   ),
 
   name: 'with Dark theme enabled',

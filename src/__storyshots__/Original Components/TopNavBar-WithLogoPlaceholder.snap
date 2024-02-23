@@ -21,14 +21,14 @@
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  background-color: white;
+  background-color: #ffffff;
   height: 3.875rem;
   padding: 0 1rem;
   box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
 }
 
 .emotion-0>*:not(:last-of-type) {
-  color: #0f0f17;
+  color: #111530;
 }
 
 .emotion-1 {
@@ -319,9 +319,232 @@
   fill: #194DCC!important;
 }
 
+.emotion-16 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+.emotion-22 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 32.5rem;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 2.25rem;
+  background-color: #F2F4FF;
+  padding-left: 1rem;
+  border-radius: 0.25rem;
+}
+
+.emotion-22[aria-disabled='true'] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.emotion-22:hover {
+  background: #e3e7ff;
+}
+
+.emotion-22:focus-within {
+  background: #F2F4FF;
+}
+
+.emotion-23 {
+  line-height: 0.8;
+  height: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: unset;
+  margin-left: inherit;
+  margin-right: 0.5rem;
+}
+
+.emotion-25 {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-25 path {
+  fill: #52567a!important;
+}
+
+.emotion-26 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #111530;
+  padding: 0;
+  display: block;
+  position: relative;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+  border-radius: 0.25rem;
+  color: undefined;
+}
+
+.emotion-26::-webkit-input-placeholder {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-26::-moz-placeholder {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-26:-ms-input-placeholder {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-26::placeholder {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-26:focus {
+  outline: none;
+}
+
+.emotion-26:focus::-webkit-input-placeholder {
+  color: #52567a;
+}
+
+.emotion-26:focus::-moz-placeholder {
+  color: #52567a;
+}
+
+.emotion-26:focus:-ms-input-placeholder {
+  color: #52567a;
+}
+
+.emotion-26:focus::placeholder {
+  color: #52567a;
+}
+
+.emotion-26:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-26:focus-within+label,
+.emotion-26:not(:placeholder-shown)+label {
+  font-weight: 700!important;
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+}
+
+.emotion-26:focus-within+label {
+  font-weight: 700!important;
+  color: #194DCC;
+}
+
+.emotion-26:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-26:focus {
+  color: undefined;
+  outline: none;
+}
+
+.emotion-26::-webkit-input-placeholder {
+  color: undefined;
+  outline: none;
+}
+
+.emotion-26::-moz-placeholder {
+  color: undefined;
+  outline: none;
+}
+
+.emotion-26:-ms-input-placeholder {
+  color: undefined;
+  outline: none;
+}
+
+.emotion-26::placeholder {
+  color: undefined;
+  outline: none;
+}
+
 <div>
   <div
-    style="padding: 10px;"
+    style="padding: 10px; display: flex; flex-direction: column; gap: 24px;"
   >
     <div
       aria-label="Top Application Banner"
@@ -413,6 +636,134 @@
           </button>
         </div>
       </div>
+    </div>
+    <div
+      aria-label="Top Application Banner"
+      class="emotion-0"
+      role="banner"
+    >
+      <div
+        class="emotion-16"
+      >
+        <div
+          class="emotion-2"
+          data-testid="menu-handler"
+        >
+          <div
+            class="emotion-3"
+          >
+            <svg
+              class="emotion-4"
+              fill="none"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.93223 16C2.67568 16 2.45617 15.8979 2.27371 15.6937C2.09124 15.4895 2 15.2439 2 14.9568C2 14.6697 2.09124 14.4241 2.27371 14.2202C2.45617 14.0162 2.67568 13.9142 2.93223 13.9142H17.0678C17.3243 13.9142 17.5438 14.0163 17.7263 14.2205C17.9088 14.4247 18 14.6703 18 14.9574C18 15.2445 17.9088 15.49 17.7263 15.694C17.5438 15.898 17.3243 16 17.0678 16H2.93223ZM2.93223 11.0186C2.67568 11.0186 2.45617 10.9165 2.27371 10.7124C2.09124 10.5082 2 10.2625 2 9.97543C2 9.68833 2.09124 9.44279 2.27371 9.23882C2.45617 9.03484 2.67568 8.93286 2.93223 8.93286H17.0678C17.3243 8.93286 17.5438 9.03495 17.7263 9.23913C17.9088 9.44333 18 9.68898 18 9.97606C18 10.2632 17.9088 10.5087 17.7263 10.7127C17.5438 10.9166 17.3243 11.0186 17.0678 11.0186H2.93223ZM2.93223 6.0858C2.67568 6.0858 2.45617 5.9837 2.27371 5.7795C2.09124 5.57532 2 5.32967 2 5.04257C2 4.75549 2.09124 4.50996 2.27371 4.30599C2.45617 4.10199 2.67568 4 2.93223 4H17.0678C17.3243 4 17.5438 4.1021 17.7263 4.3063C17.9088 4.5105 18 4.75614 18 5.04323C18 5.33033 17.9088 5.57587 17.7263 5.77984C17.5438 5.98381 17.3243 6.0858 17.0678 6.0858H2.93223Z"
+                fill="#6265AD"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="emotion-5"
+        >
+          <div
+            class="emotion-6"
+          >
+            <strong>
+              LOGO
+            </strong>
+            PLACEHOLDER
+          </div>
+        </div>
+        <div
+          aria-disabled="false"
+          class="emotion-22"
+        >
+          <div
+            class="emotion-23"
+          >
+            <div
+              class="emotion-13"
+            >
+              <svg
+                class="emotion-25"
+                fill="none"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.48 17.2364L11.8625 12.6022C11.4486 12.9313 10.9417 13.1893 10.3416 13.3762C9.74155 13.5631 9.14706 13.6565 8.55814 13.6565C7.00471 13.6565 5.69 13.1168 4.61399 12.0373C3.538 10.9579 3 9.63891 3 8.08047C3 6.52203 3.53779 5.20233 4.61337 4.12139C5.68893 3.04046 7.00313 2.5 8.55594 2.5C10.1088 2.5 11.4237 3.03994 12.5007 4.11983C13.5778 5.19974 14.1163 6.51922 14.1163 8.07827C14.1163 8.6853 14.0274 9.27262 13.8497 9.84025C13.6719 10.4079 13.4175 10.9052 13.0865 11.3323L17.7453 16.008C17.9151 16.1704 18 16.3696 18 16.6058C18 16.842 17.9064 17.054 17.7193 17.2418C17.5478 17.4139 17.3421 17.5 17.1023 17.5C16.8625 17.5 16.6551 17.4121 16.48 17.2364ZM8.55814 11.8706C9.62457 11.8706 10.521 11.5061 11.2473 10.7772C11.9736 10.0482 12.3368 9.14856 12.3368 8.07827C12.3368 7.00797 11.9736 6.10834 11.2473 5.37937C10.521 4.65039 9.62457 4.28591 8.55814 4.28591C7.4917 4.28591 6.59532 4.65039 5.86897 5.37937C5.14265 6.10834 4.77948 7.00797 4.77948 8.07827C4.77948 9.14856 5.14265 10.0482 5.86897 10.7772C6.59532 11.5061 7.4917 11.8706 8.55814 11.8706Z"
+                  fill="#6265AD"
+                />
+              </svg>
+            </div>
+             
+          </div>
+          <input
+            class="emotion-26"
+            data-testid="top-nav-search"
+            id="top-nav-search"
+            placeholder="Search"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        class="emotion-7"
+      />
+      <div
+        class="emotion-8"
+      >
+        <div
+          class="emotion-9"
+        >
+          <button
+            aria-haspopup="true"
+            aria-label="Menu"
+            class="emotion-10"
+            data-testid="button-userMenu"
+            type="button"
+          >
+            <span
+              class="emotion-11"
+            >
+              <div
+                class="emotion-12"
+                data-testid="_avatar"
+              >
+                <img
+                  src="https://mui.com/static/images/avatar/1.jpg"
+                />
+              </div>
+              <span>
+                Tom Cruise
+              </span>
+              <div
+                class="emotion-13"
+              >
+                <svg
+                  class="emotion-14"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.29797 8.64196L9.25345 12.6836C9.36392 12.7965 9.48388 12.8774 9.61333 12.9265C9.74278 12.9755 9.87167 13 10 13C10.1339 13 10.2642 12.9755 10.3908 12.9265C10.5175 12.8774 10.6361 12.7965 10.7466 12.6836L14.702 8.64196C14.9007 8.439 15 8.21608 15 7.97322C15 7.73035 14.9007 7.50744 14.702 7.30448C14.5034 7.1015 14.2852 7.00002 14.0475 7.00002C13.8099 7.00002 13.5917 7.1015 13.3931 7.30448L10 10.7714L6.60694 7.30448C6.40831 7.1015 6.19014 7.00002 5.95246 7.00002C5.71477 7.00002 5.49661 7.1015 5.29797 7.30448C5.09932 7.50744 5 7.73035 5 7.97322C5 8.21608 5.09932 8.439 5.29797 8.64196Z"
+                    fill="#6265AD"
+                  />
+                </svg>
+              </div>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      style="margin-top: 50px;"
+    >
+      Search value: 
     </div>
   </div>
 </div>

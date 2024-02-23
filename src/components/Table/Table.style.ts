@@ -17,7 +17,7 @@ export const tableCTAStyle =
       tableLayout: 'fixed',
       position: isFixed ? 'sticky' : undefined,
       top: isFixed ? 0 : undefined,
-      background: isFixed ? theme.globals.oldColors.white : undefined,
+      background: isFixed ? theme.tokens.colors.get('backgroundColor.default') : undefined,
       zIndex: isFixed ? 3 : undefined,
     });
 

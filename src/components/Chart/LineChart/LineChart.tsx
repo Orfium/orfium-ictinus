@@ -77,7 +77,7 @@ const LineChart: React.FC<LineChartProps> = ({
         />
       )}
       <Tooltip
-        cursor={{ stroke: theme.utils.getColor('lightGrey', 650), strokeWidth: 1 }}
+        cursor={{ stroke: theme.tokens.colors.get('backgroundColor.inverted'), strokeWidth: 1 }}
         content={<CustomTooltip />}
       />
       {colors.map(([dataLabel, color]) => (

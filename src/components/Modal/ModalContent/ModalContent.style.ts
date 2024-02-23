@@ -11,7 +11,7 @@ export const modalContentContainer = (theme: Theme): SerializedStyles => css`
   flex-direction: column;
   flex-wrap: wrap;
   text-align: left;
-  color: ${theme.utils.getColor('lightGrey', 700, 'flat')};
+  color: ${theme.tokens.colors.get('textColor.default.primary')};
   font-weight: ${theme.globals.typography.fontWeight.get('regular')};
 `;
 
@@ -22,14 +22,14 @@ export const labelContainer = (theme: Theme): SerializedStyles => css`
 
 export const headingContainer = (theme: Theme): SerializedStyles => css`
   font-size: ${theme.globals.typography.fontSize.get('9')};
-  color: ${theme.utils.getColor('darkGrey', 850)};
+  color: ${theme.tokens.colors.get('textColor.default.primary')};
   font-weight: ${theme.globals.typography.fontWeight.get('medium')};
   margin: 0 0 ${theme.globals.spacing.get('9')} 0;
 `;
 
 export const messageContainer = (theme: Theme): SerializedStyles => css`
   font-size: ${theme.globals.typography.fontSize.get('4')};
-  color: ${theme.utils.getColor('lightGrey', 750)};
+  color: ${theme.tokens.colors.get('textColor.default.secondary')};
   max-height: ${rem(430)};
   overflow-y: hidden;
   margin: 0;

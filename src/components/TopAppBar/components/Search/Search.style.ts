@@ -8,7 +8,9 @@ import type { Theme } from '../../../../theme';
 import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
 
 const getBackground = (isDark: boolean, theme: Theme) =>
-  isDark ? theme.utils.getColor('darkGrey', 650) : theme.utils.getColor('lightGrey', 50);
+  isDark
+    ? theme.tokens.colors.get('backgroundColor.invertedAlt')
+    : theme.tokens.colors.get('backgroundColor.alt');
 
 export const searchWrapper =
   (isDark: boolean) =>
@@ -47,20 +49,16 @@ export const customInputStyle = (searchPlaceholder: string, isDark: boolean) => 
 
   const rest = `
     border-radius: ${rem(4)};
-      color: ${
-        isDark ? theme.utils.getColor('darkGrey', 50) : theme.utils.getColor('lightGrey', 750)
-      };
+      color: ${isDark ? theme.tokens.colors.get('textColor.inverted.secondary') : undefined};
 
   
     &:focus {
-      color: ${isDark ? theme.globals.oldColors.white : theme.utils.getColor('darkGrey', 850)};
+      color: ${isDark ? theme.tokens.colors.get('textColor.inverted.primary') : undefined};
       outline: none;
     }
    
     &::placeholder {
-        color: ${
-          isDark ? theme.utils.getColor('darkGrey', 50) : theme.utils.getColor('lightGrey', 850)
-        };
+        color: ${isDark ? theme.tokens.colors.get('textColor.inverted.secondary') : undefined};
        outline: none;
       }
 

@@ -35,9 +35,8 @@ const NavigationShowcase: React.FCC<Props> = ({ renderHeader }) => {
         <div
           css={[
             flex,
-            `padding: 50px; flex-direction: column; align-items: center; background-color: ${theme.utils.getColor(
-              'lightGrey',
-              50
+            `padding: 50px; flex-direction: column; align-items: center; background-color: ${theme.tokens.colors.get(
+              'backgroundColor.alt'
             )}; width: 100%;`,
           ]}
         >

@@ -17,7 +17,7 @@ export const illustrationStyles =
       border-radius: ${theme.globals.borderRadius.get('3')};
       background: ${isInverted
         ? theme.tokens.colors.get('backgroundColor.default')
-        : theme.tokens.colors.get('backgroundColor.inverted')};
+        : theme.tokens.colors.get('backgroundColor.invertedAlt')};
     `;
   };
 

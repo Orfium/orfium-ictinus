@@ -17,7 +17,7 @@ export const Mark = styled.div<{
 
   :hover {
     background: ${({ theme, isDisabled }) =>
-      !isDisabled ? theme.utils.getColor('blue', 600) : undefined};
+      !isDisabled ? theme.tokens.colors.get('palette.primary.main') : undefined};
 
     ::before {
       content: '${({ labelValue }) => labelValue}';

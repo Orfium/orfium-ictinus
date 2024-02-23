@@ -1,5 +1,7 @@
+import { useTheme } from 'index';
 import * as React from 'react';
 import { useState } from 'react';
+import type { SemanticColorsKey } from 'theme/tokens/semantic/colors';
 
 import {
   toastContainer,
@@ -15,7 +17,7 @@ import type { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 import type { TestId } from '../../utils/types';
 import Icon from '../Icon';
 import type { NotificationStyleType, NotificationTypes } from '../Notification/Notification';
-import { actionContainer } from '../Notification/Notification.style';
+import { actionContainer, typeToColorStyle } from '../Notification/Notification.style';
 import { typeToIconName } from '../Notification/subcomponents/CompactNotification/CompactNotification';
 
 export type ToastProps = {
@@ -51,6 +53,8 @@ const Toast: React.FCC<ToastProps> = ({
 }) => {
   const [isExpandedState, setIsExpandedState] = useState(isExpanded);
 
+  const theme = useTheme();
+
   return (
     <div
       css={toastContainer(type, styleType)}
@@ -60,7 +64,13 @@ const Toast: React.FCC<ToastProps> = ({
         <div css={infoContainer()}>
           {isNotificationTypes(type) && (
             <div css={infoIconContainer()}>
-              <Icon name={typeToIconName(type)} color="#fff" size={20} />
+              <Icon
+                name={typeToIconName(type)}
+                color={theme.tokens.colors.get(
+                  `textColor.default.${typeToColorStyle(type)}` as SemanticColorsKey
+                )}
+                size={24}
+              />
             </div>
           )}
           <div>{message}</div>
@@ -71,7 +81,15 @@ const Toast: React.FCC<ToastProps> = ({
             onClick={() => setIsExpandedState(!isExpandedState)}
             data-testid={generateTestDataId('toast-expand', dataTestId)}
           >
-            <Icon name="chevronDown" color="#fff" size={20} />
+            <Icon
+              name="chevronDown"
+              color={
+                isNotificationTypes(type)
+                  ? theme.tokens.colors.get('textColor.default.secondary')
+                  : '#ffffff'
+              }
+              size={24}
+            />
           </span>
 
           <span
@@ -79,7 +97,15 @@ const Toast: React.FCC<ToastProps> = ({
             onClick={closeCTA}
             data-testid={generateTestDataId('toast-close', dataTestId)}
           >
-            <Icon name="close" color="#fff" size={20} />
+            <Icon
+              name="close"
+              color={
+                isNotificationTypes(type)
+                  ? theme.tokens.colors.get('textColor.default.secondary')
+                  : '#ffffff'
+              }
+              size={24}
+            />
           </span>
         </div>
       </div>

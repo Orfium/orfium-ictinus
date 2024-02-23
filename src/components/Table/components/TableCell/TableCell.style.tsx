@@ -10,17 +10,18 @@ const activeStateStyles = (): SerializedStyles => css`
   }
 `;
 
-export const parentStyles = ({ isActive }: { isActive: boolean }) => (
-  theme: Theme
-): SerializedStyles => css`
-  cursor: pointer;
-  position: relative;
-  height: ${rem(64)};
+export const parentStyles =
+  ({ isActive }: { isActive: boolean }) =>
+  (theme: Theme): SerializedStyles =>
+    css`
+      cursor: pointer;
+      position: relative;
+      height: ${rem(64)};
 
-  ${isActive && activeStateStyles()}
+      ${isActive && activeStateStyles()}
 
-  &:hover {
-    ${activeStateStyles()};
-    background-color: ${theme.utils.getColor('lightGrey', 50)};
-  }
-`;
+      &:hover {
+        ${activeStateStyles()};
+        background-color: ${theme.tokens.colors.get('palette.secondary.light')};
+      }
+    `;

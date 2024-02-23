@@ -5,7 +5,7 @@
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background: white;
+  background: #ffffff;
   z-index: 3;
 }
 
@@ -143,7 +143,7 @@
   padding-bottom: 1rem;
   border-bottom-width: 0rem;
   border-bottom-style: solid;
-  border-bottom-color: #cfd7e5;
+  border-bottom-color: rgba(200,206,255,0.70);
 }
 
 .emotion-11 {
@@ -161,7 +161,7 @@
   position: -webkit-sticky;
   position: sticky;
   background: white;
-  box-shadow: inset 0px -1px 0px 0px #cfd7e5;
+  box-shadow: inset 0px -1px 0px 0px rgba(200,206,255,0.70);
 }
 
 .emotion-12 {
@@ -182,11 +182,11 @@
   position: -webkit-sticky;
   position: sticky;
   background: white;
-  box-shadow: inset 0px -1px 0px 0px #cfd7e5;
+  box-shadow: inset 0px -1px 0px 0px rgba(200,206,255,0.70);
 }
 
 .emotion-12:hover {
-  background-color: #f3f5f8;
+  background-color: rgba(200,206,255,0.20);
 }
 
 .emotion-12:hover>div>span {
@@ -218,7 +218,7 @@
 
 .emotion-14 {
   font-weight: 500;
-  color: #444d5f;
+  color: #52567a;
 }
 
 .emotion-15 {
@@ -281,31 +281,13 @@
 }
 
 .emotion-19 path {
-  fill: #444d5f!important;
+  fill: #52567a!important;
 }
 
 .emotion-20 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-}
-
-.emotion-21 {
-  width: 0.5rem;
-  height: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-22 {
-  width: 0.5rem;
-  height: 0.5rem;
-}
-
-.emotion-22 path {
-  fill: #444d5f!important;
 }
 
 .emotion-23 {
@@ -323,7 +305,7 @@
   position: -webkit-sticky;
   position: sticky;
   background: white;
-  box-shadow: inset 0px -1px 0px 0px #cfd7e5;
+  box-shadow: inset 0px -1px 0px 0px rgba(200,206,255,0.70);
 }
 
 .emotion-33 {
@@ -344,11 +326,11 @@
   position: -webkit-sticky;
   position: sticky;
   background: white;
-  box-shadow: inset 0px -1px 0px 0px #cfd7e5;
+  box-shadow: inset 0px -1px 0px 0px rgba(200,206,255,0.70);
 }
 
 .emotion-33:hover {
-  background-color: #f3f5f8;
+  background-color: rgba(200,206,255,0.20);
 }
 
 .emotion-33:hover>div>span {
@@ -371,7 +353,7 @@
   position: -webkit-sticky;
   position: sticky;
   background: white;
-  box-shadow: inset 0px -1px 0px 0px #cfd7e5;
+  box-shadow: inset 0px -1px 0px 0px rgba(200,206,255,0.70);
 }
 
 .emotion-45 {
@@ -402,7 +384,7 @@
   display: -ms-flexbox;
   display: flex;
   border-top: none;
-  border-bottom: 0.0625rem solid #cfd7e5;
+  border-bottom: 0.0625rem solid rgba(200,206,255,0.70);
 }
 
 .emotion-48 {
@@ -419,7 +401,7 @@
 }
 
 .emotion-49:hover {
-  background-color: #f3f5f8;
+  background-color: rgba(200,206,255,0.30);
 }
 
 .emotion-49 td:first-of-type {
@@ -675,11 +657,11 @@
                 class="emotion-20"
               >
                 <div
-                  class="emotion-21"
+                  class="emotion-5"
                   data-testid="table_icon_sort_title"
                 >
                   <svg
-                    class="emotion-22"
+                    class="emotion-19"
                     fill="none"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -782,11 +764,11 @@
                 class="emotion-20"
               >
                 <div
-                  class="emotion-21"
+                  class="emotion-5"
                   data-testid="table_icon_sort_age"
                 >
                   <svg
-                    class="emotion-22"
+                    class="emotion-19"
                     fill="none"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"

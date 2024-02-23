@@ -35,7 +35,7 @@ export const descriptionStyle = (theme: Theme): SerializedStyles =>
       margin-bottom: 4px;
     }
     span {
-      background: ${theme.utils.getColor('blue', 50)};
+      background: ${theme.tokens.colors.get('palette.secondary.main')};
       padding: 4px;
     }
   `;
