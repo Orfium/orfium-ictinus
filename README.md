@@ -4,7 +4,7 @@ An internal UI kit library that is opinionated. Primary focus is to solve UI dup
 
 <hr />
 
-![Static Badge](https://img.shields.io/badge/documentation-8A2BE2?link=https%3A%2F%2Fdesignlab-v4.orfium.com%2F%3Fpath%3D%2Fstory%2Fguide-introduction--page)
+[![Static Badge](https://img.shields.io/badge/documentation-8A2BE2?)](https://designlab-v4.orfium.com/)
 ![npm](https://img.shields.io/npm/v/@orfium/ictinus)
 [![pan](https://github.com/Orfium/orfium-ictinus/workflows/CI/badge.svg)](https://github.com/Orfium/orfium-ictinus/actions)
 ![min size](https://img.shields.io/bundlephobia/min/@orfium/ictinus)
