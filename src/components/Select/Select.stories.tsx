@@ -1,13 +1,12 @@
-import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
+import { withKnobs, boolean, select, text } from '@storybook/addon-knobs';
 import Select from './Select';
 import Stack from '../storyUtils/Stack';
 import { SelectShowcase, MultiSelectShowcase } from '../storyUtils/SelectShowcase';
 import EdgeCasesSelectShowcase from '../storyUtils/EdgeCasesSelectShowcase';
 import { FIGMA_URL, Function } from '../../utils/common';
 import { useState } from 'react';
-import { SelectOption, StatefulSelect } from './index';
-import { options, optionsWithHelperInDisabled, groupOptions, defaultValue } from './storyUtils';
-import SectionHeader from '../../storybook/SectionHeader';
+import { StatefulSelect } from './index';
+import { options, groupOptions, defaultValue } from './storyUtils';
 
 export default {
   title: 'Updated Components/Fields/Select',
