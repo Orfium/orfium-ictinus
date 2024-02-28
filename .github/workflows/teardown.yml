@@ -3,10 +3,17 @@ on:
   pull_request:
     types: [closed]
 
-concurrency:
+concurrency: 
   group: ${{ github.ref }}
   cancel-in-progress: false
-  
+
+permissions:
+  packages: write
+  contents: write
+  issues: write
+  pull-requests: write
+  id-token: write
+
 jobs:
   delete-review-app:
     uses: Orfium/orfium-github-actions/.github/workflows/teardown-frontend.yml@master
