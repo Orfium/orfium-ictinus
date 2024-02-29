@@ -3,7 +3,7 @@ import { map } from 'lodash';
 import { rem } from 'polished';
 import React from 'react';
 import { WrapperStyle } from 'storybook/styles/OverviewCard.style';
-import type { SemanticBoxShadowsKey } from 'theme/tokens/semantic/boxShadow';
+import type { SemanticBoxShadowKey } from 'theme/tokens/semantic/boxShadow';
 import boxShadow from 'theme/tokens/semantic/variables/boxShadow';
 
 import Typography from 'components/Typography';
@@ -26,7 +26,7 @@ const BoxShadowShowcase = () => {
   return (
     <div css={WrapperStyle}>
       {spaces.map((space, index) => {
-        const value = theme.tokens.boxShadow.get(String(index) as SemanticBoxShadowsKey);
+        const value = theme.tokens.boxShadow.get(String(index) as SemanticBoxShadowKey);
 
         return (
           <div key={value} css={{ display: 'flex', flex: '0 0 100%', alignItems: 'center' }}>
