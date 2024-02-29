@@ -102,20 +102,19 @@ const textColor = {
 
 ```
 const avatar = {
-  color: {
-    red: {
-      backgroundColor: {
-        value: '{sem.palette.accents.red.main}',
-        type: 'color',
-      },
-      foregroundColor: {
-        value: '{sem.palette.accents.red.contrast}',
-        type: 'color',
-        description: 'Used for both icon and initials color in avatar',
-      },
+  backgroundColor: {
+    blue: {
+      value: '{sem.colors.palette.primaryAlt.base}',
+      type: 'color',
+      description: 'Sets red background variation for avatar',
+    },
+    teal: {
+      value: '{sem.colors.palette.success.base}',
+      type: 'color',
+      description: 'Sets teal background variation for avatar',
     },
     ...
-  },
+  }
   ...
 }
 ```

@@ -32,13 +32,13 @@ const SliderTrack: FCC<SliderTrackProps & TestProps> = ({
         values,
         colors: isSelector
           ? [
-              theme.tokens.colors.get('palette.primary.main'),
-              theme.tokens.colors.get('palette.primaryAlt.main'),
+              theme.tokens.colors.get('palette.primary.base'),
+              theme.tokens.colors.get('palette.primaryAlt.base'),
             ]
           : [
-              theme.tokens.colors.get('palette.primaryAlt.main'),
-              theme.tokens.colors.get('palette.primary.main'),
-              theme.tokens.colors.get('palette.primaryAlt.main'),
+              theme.tokens.colors.get('palette.primaryAlt.base'),
+              theme.tokens.colors.get('palette.primary.base'),
+              theme.tokens.colors.get('palette.primaryAlt.base'),
             ],
         min: MIN,
         max: MAX,

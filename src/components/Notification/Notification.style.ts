@@ -32,7 +32,7 @@ export const notificationsContainerPerType = (
       `
     : `
     background: ${theme.tokens.colors.get(
-      `palette.${typeToBackgroundStyle(type)}.light` as SemanticColorsKey
+      `palette.${typeToBackgroundStyle(type)}.muted` as SemanticColorsKey
     )};
 `}
 `;

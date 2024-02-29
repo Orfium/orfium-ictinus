@@ -33,7 +33,7 @@ export const descriptionStyle =
         margin-bottom: 4px;
       }
       span {
-        background: ${theme.tokens.colors.get('palette.secondary.light')};
+        background: ${theme.tokens.colors.get('palette.secondary.muted')};
         border-radius: 4px;
         padding: 4px;
       }

@@ -48,11 +48,11 @@ export const menuItemStyle =
       text-decoration: none;
 
       &:hover {
-        background-color: ${theme.tokens.colors.get('palette.tertiary.light')};
+        background-color: ${theme.tokens.colors.get('palette.tertiary.muted')};
       }
 
       &:focus-visible {
-        outline: ${theme.tokens.colors.get('palette.tertiary.light')};
+        outline: ${theme.tokens.colors.get('palette.tertiary.muted')};
       }
     `;
 
@@ -88,14 +88,14 @@ export const subMenuLinkStyle =
       padding-left: ${rem(ICON_PADDING)};
 
       &:hover {
-        background-color: ${theme.tokens.colors.get('palette.tertiary.light')} !important;
+        background-color: ${theme.tokens.colors.get('palette.tertiary.muted')} !important;
       }
       &.active:hover {
-        background-color: ${theme.tokens.colors.get('palette.tertiary.dark')} !important;
+        background-color: ${theme.tokens.colors.get('palette.tertiary.contrast')} !important;
       }
       &.active {
         font-weight: ${theme.globals.typography.fontWeight.get('bold')};
-        background-color: ${theme.tokens.colors.get('palette.tertiary.light')} !important;
+        background-color: ${theme.tokens.colors.get('palette.tertiary.muted')} !important;
         color: ${theme.tokens.colors.get('textColor.default.active')};
 
         path {
