@@ -1,6 +1,5 @@
 import type { BorderRadius } from './globals/borderRadius';
 import type { BorderWidth } from './globals/borderWidth';
-import type { BoxShadow } from './globals/boxShadow';
 import type { Colors } from './globals/colors';
 import type { Elevation } from './globals/elevation';
 import type { Opacity } from './globals/opacity';
@@ -10,6 +9,7 @@ import type { Typography } from './globals/typography';
 import type { Overrides } from './overrides';
 import type { GetAAColor, GetAAColorFromSwatches, GetColor, Palette } from './palette';
 import type { PaletteConfig } from './palette.config';
+import type { SemanticBoxShadow } from './tokens/semantic/boxShadow';
 import type { SemanticColors } from './tokens/semantic/colors';
 import type { SemanticDisabledState } from './tokens/semantic/disabledState';
 import type { SemanticIcon } from './tokens/semantic/icon';
@@ -33,6 +33,7 @@ export type SemanticTheme = {
   icon: SemanticIcon;
   state: SemanticState;
   typography: SemanticTypography;
+  boxShadow: SemanticBoxShadow;
 };
 
 /** Will add more themes in the future (e.g.: DarkTheme) */
@@ -47,7 +48,6 @@ export type Theme = {
     elevation: Elevation;
     borderRadius: BorderRadius;
     borderWidth: BorderWidth;
-    boxShadow: BoxShadow;
     opacity: Opacity;
     sizing: Sizing;
   };

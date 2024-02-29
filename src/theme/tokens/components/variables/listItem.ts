@@ -29,93 +29,15 @@ const listItem = {
     type: 'spacing',
     description: 'Left and right padding for list items',
   },
-  default: {
-    value: '{sem.typography.normal.body02}',
-    type: 'typography',
-    backgroundColor: {
-      value: 'neutral.light}',
-      type: 'color',
-    },
-    textColor: {
-      value: '{sem.colors.textColor.primary.primary}',
-      type: 'color',
-    },
-    iconColor: {
-      value: '{sem.colors.textColor.primary.secondary}',
-      type: 'color',
-    },
-    secondaryTextColor: {
-      value: '{sem.colors.textColor.primary.secondary}',
-      type: 'color',
-      description: "Use for 'loading' and 'No results found' states",
-    },
-    description: 'Sets text for default list item copy',
-  },
-  defaultCompact: {
-    value: '{sem.typography.normal.body03}',
-    type: 'typography',
-    backgroundColor: {
-      value: 'neutral.light}',
-      type: 'color',
-    },
-    textColor: {
-      value: '{sem.colors.textColor.primary.primary}',
-      type: 'color',
-    },
-    iconColor: {
-      value: '{sem.colors.textColor.primary.secondary}',
-      type: 'color',
-    },
-    secondaryTextColor: {
-      value: '{sem.colors.textColor.primary.secondary}',
-      type: 'color',
-      description: "Use for 'loading' and 'No results found' states",
-    },
-    description: "Sets text for default list item copy ('compact' variant)",
-  },
-  active: {
-    value: '{sem.typography.normal.label02}',
-    type: 'typography',
-    backgroundColor: {
-      value: '{sem.interaction.white.selected}',
-      type: 'color',
-    },
-    textColor: {
-      value: '{sem.colors.textColor.primary.primary}',
-      type: 'color',
-    },
-    iconColor: {
-      value: '{sem.colors.textColor.primary.secondary}',
-      type: 'color',
-    },
-    description: 'Sets text for active list item copy',
-  },
-  activeCompact: {
-    value: '{sem.typography.normal.label03}',
-    type: 'typography',
-    backgroundColor: {
-      value: '{sem.interaction.white.selected}',
-      type: 'color',
-    },
-    textColor: {
-      value: '{sem.colors.textColor.primary.primary}',
-      type: 'color',
-    },
-    iconColor: {
-      value: '{sem.colors.textColor.primary.secondary}',
-      type: 'color',
-    },
-    description: "Sets text for active list item copy ('compact')",
-  },
   backgroundColor: {
     default: {
-      value: '{sem.colors.palette.tertiary.main}',
+      value: '{sem.colors.palette.tertiary.base}',
       type: 'color',
       description: 'Sets backgroundColor for default list item',
     },
     active: {
       type: 'color',
-      value: '{sem.colors.palette.tertiary.light}',
+      value: '{sem.colors.palette.tertiary.muted}',
       description: 'Sets backgroundColor for active list item',
     },
   },
@@ -137,10 +59,30 @@ const listItem = {
       description: 'Sets textColor for active list item copy',
     },
   },
+  default: {
+    value: '{sem.typography.normal.body02}',
+    type: 'typography',
+    description: "Sets text style for default list item ('normal' size variant)",
+  },
+  defaultCompact: {
+    value: '{sem.typography.normal.body03}',
+    type: 'typography',
+    description: "Sets text style for default list item ('compact' size variant)",
+  },
+  active: {
+    value: '{sem.typography.normal.label02}',
+    type: 'typography',
+    description: "Sets text style for active list item ('normal' size variant)",
+  },
+  activeCompact: {
+    value: '{sem.typography.normal.label03}',
+    type: 'typography',
+    description: "Sets text style for active list item ('compact' size variant)",
+  },
   secondaryText: {
     value: '{sem.typography.normal.body03}',
     type: 'typography',
-    description: 'Sets text for secondary copy in list item',
+    description: "Sets text style for secondary copy ('help text') in list items, if shown",
   },
 } as const;
 

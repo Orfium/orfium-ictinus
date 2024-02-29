@@ -2,17 +2,17 @@ const button = {
   primary: {
     backgroundColor: {
       default: {
-        value: '{sem.colors.palette.primary.main}',
+        value: '{sem.colors.palette.primary.base}',
         type: 'color',
         description: 'Sets backgroundColor for primary default button',
       },
       hover: {
-        value: '{sem.colors.palette.primary.light}',
+        value: '{sem.colors.palette.primary.muted}',
         type: 'color',
         description: 'Sets backgroundColor for primary hovered button',
       },
       active: {
-        value: '{sem.colors.palette.primary.dark}',
+        value: '{sem.colors.palette.primary.contrast}',
         type: 'color',
         description: 'Sets backgroundColor for primary active (pressed) button',
       },
@@ -26,17 +26,17 @@ const button = {
   secondary: {
     backgroundColor: {
       default: {
-        value: '{sem.colors.palette.secondary.main}',
+        value: '{sem.colors.palette.secondary.base}',
         type: 'color',
         description: 'Sets backgroundColor for secondary default button',
       },
       hover: {
-        value: '{sem.colors.palette.secondary.light}',
+        value: '{sem.colors.palette.secondary.muted}',
         type: 'color',
         description: 'Sets backgroundColor for secondary hovered button',
       },
       active: {
-        value: '{sem.colors.palette.secondary.dark}',
+        value: '{sem.colors.palette.secondary.contrast}',
         type: 'color',
         description: 'Sets backgroundColor for secondary active button',
       },
@@ -51,16 +51,16 @@ const button = {
     backgroundColor: {
       default: {
         type: 'color',
-        value: '{sem.colors.palette.tertiary.main}',
+        value: '{sem.colors.palette.tertiary.base}',
         description: 'Sets backgroundColor for tertiary default button',
       },
       hover: {
-        value: '{sem.colors.palette.tertiary.light}',
+        value: '{sem.colors.palette.tertiary.muted}',
         type: 'color',
         description: 'Sets backgroundColor for tertiary hovered button',
       },
       active: {
-        value: '{sem.colors.palette.tertiary.dark}',
+        value: '{sem.colors.palette.tertiary.contrast}',
         type: 'color',
       },
     },
@@ -73,17 +73,17 @@ const button = {
   danger: {
     backgroundColor: {
       default: {
-        value: '{sem.colors.palette.error.main}',
+        value: '{sem.colors.palette.error.base}',
         type: 'color',
         description: 'Sets backgroundColor for danger default button',
       },
       hover: {
-        value: '{sem.colors.palette.error.light}',
+        value: '{sem.colors.palette.error.muted}',
         type: 'color',
         description: 'Sets backgroundColor for danger hovered button',
       },
       active: {
-        value: '{sem.colors.palette.error.main}',
+        value: '{sem.colors.palette.error.contrast}',
         type: 'color',
         description: 'Sets backgroundColor for danger active button',
       },
@@ -111,18 +111,6 @@ const button = {
       type: 'borderRadius',
       description:
         "Sets border radius for nested 'textButton' and 'iconButton' components within a dropdownButton",
-    },
-  },
-  text: {
-    normal: {
-      value: '{sem.typography.normal.label02}',
-      type: 'typography',
-      description: 'Sets text for text button',
-    },
-    compact: {
-      value: '{sem.typography.normal.label03}',
-      type: 'typography',
-      description: "Sets text for text button ('compact' variant)",
     },
   },
   compact: {
@@ -173,6 +161,18 @@ const button = {
     value: '{colors.gradient.1}',
     type: 'color',
     description: "Sets gradient for 'loading' bar in buttons",
+  },
+  text: {
+    normal: {
+      value: '{sem.typography.normal.label02}',
+      type: 'typography',
+      description: 'Sets text for text button',
+    },
+    compact: {
+      value: '{sem.typography.normal.label03}',
+      type: 'typography',
+      description: "Sets text for text button ('compact' variant)",
+    },
   },
 } as const;
 

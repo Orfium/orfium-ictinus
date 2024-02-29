@@ -3,7 +3,7 @@ const colors = {
     default: {
       value: '{colors.neutral.1}',
       type: 'color',
-      description: 'light backgroundColor variant',
+      description: 'default backgroundColor variant',
     },
     transparent: {
       value: '{colors.transparent.1}',
@@ -13,7 +13,7 @@ const colors = {
     alt: {
       value: '{colors.neutral.2}',
       type: 'color',
-      description: 'tinted backgroundColor variant',
+      description: 'alt backgroundColor variant',
     },
     inverted: {
       value: '{colors.neutral.6}',
@@ -30,118 +30,118 @@ const colors = {
     default: {
       value: '{colors.transparent.5}',
       type: 'color',
-      description: 'backdrop shade, dark variant',
+      description: 'backdrop shade',
     },
   },
   palette: {
     error: {
-      light: {
+      muted: {
         type: 'color',
         value: '{colors.red.1}',
       },
-      main: {
+      base: {
         type: 'color',
         value: '{colors.red.2}',
       },
-      dark: {
+      contrast: {
         type: 'color',
         value: '{colors.red.3}',
       },
     },
     warning: {
-      light: {
+      muted: {
         type: 'color',
         value: '{colors.orange.1}',
       },
-      main: {
+      base: {
         type: 'color',
         value: '{colors.orange.2}',
       },
-      dark: {
+      contrast: {
         type: 'color',
         value: '{colors.orange.3}',
       },
     },
     primary: {
-      light: {
+      muted: {
         type: 'color',
         value: '{colors.blue.5}',
       },
-      main: {
+      base: {
         type: 'color',
         value: '{colors.blue.6}',
       },
-      dark: {
+      contrast: {
         type: 'color',
         value: '{colors.blue.7}',
       },
     },
     secondary: {
-      light: {
+      muted: {
         type: 'color',
         value: '{colors.transparent.2}',
       },
-      main: {
+      base: {
         type: 'color',
         value: '{colors.transparent.3}',
       },
-      dark: {
+      contrast: {
         type: 'color',
         value: '{colors.transparent.4}',
       },
     },
     success: {
-      light: {
+      muted: {
         type: 'color',
         value: '{colors.teal.1}',
       },
-      main: {
+      base: {
         type: 'color',
         value: '{colors.teal.2}',
       },
-      dark: {
+      contrast: {
         type: 'color',
         value: '{colors.teal.3}',
       },
     },
     tertiary: {
-      light: {
+      muted: {
         value: '{colors.transparent.2}',
         type: 'color',
       },
-      main: {
+      base: {
         value: '{colors.transparent.1}',
         type: 'color',
       },
-      dark: {
+      contrast: {
         value: '{colors.transparent.3}',
         type: 'color',
       },
     },
     upsell: {
-      light: {
+      muted: {
         value: '{colors.purple.1}',
         type: 'color',
       },
-      main: {
+      base: {
         value: '{colors.purple.2}',
         type: 'color',
       },
-      dark: {
+      contrast: {
         value: '{colors.purple.3}',
         type: 'color',
       },
     },
     primaryAlt: {
-      light: {
+      muted: {
         value: '{colors.blue.1}',
         type: 'color',
       },
-      main: {
+      base: {
         value: '{colors.blue.2}',
         type: 'color',
       },
-      dark: {
+      contrast: {
         value: '{colors.blue.3}',
         type: 'color',
       },
