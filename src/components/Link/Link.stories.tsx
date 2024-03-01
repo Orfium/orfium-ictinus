@@ -116,23 +116,26 @@ export const ThirdPartyRoutingLibrary = {
 };
 
 export const Playground = {
-  render: () => (
-    <Stack isVertical>
-      <Link
-        href="#"
-        size={select('size', [1, 2, 3], 1)}
-        type={select('type', ['primary', 'inverted'], 'primary')}
-        placement={select('placement', ['block', 'inline'], 'block')}
-        isDisabled={boolean('isDisabled', false)}
-      >
-        Link
-      </Link>
-    </Stack>
-  ),
+  render: (args) => {
+    const { size, iconName, isDisabled, placement, type } = args;
+    return (
+      <Stack isVertical>
+        <Link
+          href="#"
+          size={size}
+          iconName={iconName}
+          type={type}
+          placement={placement}
+          isDisabled={isDisabled}
+        >
+          Link
+        </Link>
+      </Stack>
+    );
+  },
 
   name: 'Playground',
-
   parameters: {
-    decorators: [withKnobs],
+    controls: { include: ['size', 'iconName', 'type', 'placement', 'isDisabled'], expanded: false },
   },
 };
