@@ -35,6 +35,10 @@ export const LinkStyles = {
   ),
 
   name: 'Link Styles',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const Placement = {
@@ -58,6 +62,10 @@ export const Placement = {
   ),
 
   name: 'Link Placement',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const Sizes = {
@@ -76,6 +84,10 @@ export const Sizes = {
   ),
 
   name: 'Link Sizes',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const LinkWithIcon = {
@@ -96,7 +108,7 @@ export const LinkWithIcon = {
   name: 'Link with Icon',
 
   parameters: {
-    decorators: [withKnobs],
+    controls: { disable: true },
   },
 };
 export const ThirdPartyRoutingLibrary = {
@@ -111,7 +123,7 @@ export const ThirdPartyRoutingLibrary = {
   name: 'Third-party Routing Library',
 
   parameters: {
-    decorators: [withKnobs],
+    controls: { disable: true },
   },
 };
 
@@ -135,6 +147,7 @@ export const Playground = {
   },
 
   name: 'Playground',
+
   parameters: {
     controls: { include: ['size', 'iconName', 'type', 'placement', 'isDisabled'], expanded: false },
   },
