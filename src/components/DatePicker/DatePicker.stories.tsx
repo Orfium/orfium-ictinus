@@ -1,16 +1,8 @@
-import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 import DatePicker from './DatePicker';
 import Stack from '../storyUtils/Stack';
-import { CALENDAR_DEFAULT_OPTIONS } from './constants';
 import { currentDay } from './utils';
 import { openDatePicker } from './play-utils';
-import {
-  rangePickerOptions,
-  filterTypeOptions,
-  disableDates,
-  options,
-  dateFormatOptions,
-} from './constants';
+import { options, CALENDAR_DEFAULT_OPTIONS } from './constants';
 import { FIGMA_URL, Function } from '../../utils/common';
 import { useState } from 'react';
 
@@ -31,57 +23,83 @@ export default {
       },
     ],
   },
+
+  args: {
+    filterType: 'preset',
+    hintMessage: 'Hint message',
+    label: 'Custom Date',
+    status: 'normal',
+  },
+
+  argTypes: {
+    disableDates: { type: 'select', options: Object.keys(options), mapping: options },
+    filterType: { type: 'select', options: ['preset', 'added'] },
+    status: { type: 'select', options: ['normal', 'error', 'read-only'] },
+  },
 };
 
 export const DatePickerStory = {
-  render: () => (
-    <Stack height={600}>
-      <Function>
-        {() => {
-          const [date, setDate] = useState({ from: currentDay.toDate(), to: currentDay.toDate() });
-          return (
-            <DatePicker
-              value={date}
-              onChange={setDate}
-              isClearable={true}
-              disableDates={select('disableDates', options, options[0])}
-              dateFormatOverride={select('dateFormat', dateFormatOptions, dateFormatOptions[1])}
-            />
-          );
-        }}
-      </Function>
-    </Stack>
-  ),
-  parameters: {
-    decorators: [withKnobs],
+  render: (args) => {
+    const { dateFormatOverride, disableDates } = args;
+    return (
+      <Stack height={600}>
+        <Function>
+          {() => {
+            const [date, setDate] = useState({
+              from: currentDay.toDate(),
+              to: currentDay.toDate(),
+            });
+            return (
+              <DatePicker
+                value={date}
+                onChange={setDate}
+                isClearable={true}
+                disableDates={disableDates}
+                dateFormatOverride={dateFormatOverride}
+              />
+            );
+          }}
+        </Function>
+      </Stack>
+    );
   },
   autoPlay: true,
   play: openDatePicker,
   name: 'Datepicker',
+
+  parameters: {
+    controls: { include: ['dateFormatOverride', 'disableDates'] },
+  },
 };
 
 export const DateRangePicker = {
-  render: () => (
-    <Stack height={600}>
-      <Function>
-        {() => {
-          const [date, setDate] = useState({ from: currentDay.toDate(), to: currentDay.toDate() });
-          return (
-            <DatePicker
-              isRangePicker
-              value={date}
-              onChange={setDate}
-              isClearable={true}
-              disableDates={select('disableDates', options, options[0])}
-              dateFormatOverride={select('dateFormat', dateFormatOptions, dateFormatOptions[1])}
-            />
-          );
-        }}
-      </Function>
-    </Stack>
-  ),
+  render: (args) => {
+    const { dateFormatOverride, disableDates } = args;
+    return (
+      <Stack height={600}>
+        <Function>
+          {() => {
+            const [date, setDate] = useState({
+              from: currentDay.toDate(),
+              to: currentDay.toDate(),
+            });
+            return (
+              <DatePicker
+                isRangePicker
+                value={date}
+                onChange={setDate}
+                isClearable={true}
+                disableDates={disableDates}
+                dateFormatOverride={dateFormatOverride}
+              />
+            );
+          }}
+        </Function>
+      </Stack>
+    );
+  },
   parameters: {
-    decorators: [withKnobs],
+    controls: { include: ['dateFormatOverride', 'disableDates'] },
   },
   autoPlay: true,
   play: openDatePicker,
@@ -89,224 +107,275 @@ export const DateRangePicker = {
 };
 
 export const DateRangePickerWithPresetOptions = {
-  render: () => (
-    <Stack height={600}>
-      <Function>
-        {() => {
-          const [date, setDate] = useState({ from: currentDay.toDate(), to: currentDay.toDate() });
-          return (
-            <DatePicker
-              isRangePicker
-              value={date}
-              onChange={setDate}
-              options={CALENDAR_DEFAULT_OPTIONS}
-              isClearable={true}
-              disableDates={select('disableDates', options, options[0])}
-              dateFormatOverride={select('dateFormat', dateFormatOptions, dateFormatOptions[1])}
-            />
-          );
-        }}
-      </Function>
-    </Stack>
-  ),
+  render: (args) => {
+    const { disableDates, dateFormatOverride } = args;
+    return (
+      <Stack height={600}>
+        <Function>
+          {() => {
+            const [date, setDate] = useState({
+              from: currentDay.toDate(),
+              to: currentDay.toDate(),
+            });
+            return (
+              <DatePicker
+                isRangePicker
+                value={date}
+                onChange={setDate}
+                options={CALENDAR_DEFAULT_OPTIONS}
+                isClearable={true}
+                disableDates={disableDates}
+                dateFormatOverride={dateFormatOverride}
+              />
+            );
+          }}
+        </Function>
+      </Stack>
+    );
+  },
   parameters: {
-    decorators: [withKnobs],
+    controls: { include: ['dateFormatOverride', 'disableDates'] },
   },
   name: 'DateRangePicker with preset options',
 };
 
 export const DatePickerWithFilter = {
-  render: () => (
-    <Stack height={600}>
-      <Function>
-        {() => {
-          const [date, setDate] = useState({ from: undefined, to: undefined });
-          return (
-            <DatePicker
-              isRangePicker={select('isRangePicker', rangePickerOptions, rangePickerOptions[0])}
-              filterConfig={{
-                filterType: select('filterType', filterTypeOptions, filterTypeOptions[0]),
-              }}
-              value={date}
-              onChange={setDate}
-            />
-          );
-        }}
-      </Function>
-      <Function>
-        {() => {
-          const [date, setDate] = useState({ from: currentDay.toDate(), to: currentDay.toDate() });
-          return (
-            <DatePicker
-              value={date}
-              onChange={setDate}
-              isRangePicker={select('isRangePicker', rangePickerOptions, rangePickerOptions[0])}
-              filterConfig={{
-                filterType: select('filterType', filterTypeOptions, filterTypeOptions[0]),
-              }}
-            />
-          );
-        }}
-      </Function>
-    </Stack>
-  ),
+  render: (args) => {
+    const { isRangePicker, filterType } = args;
+    return (
+      <Stack height={600}>
+        <Function>
+          {() => {
+            const [date, setDate] = useState({ from: undefined, to: undefined });
+            return (
+              <DatePicker
+                isRangePicker={isRangePicker}
+                filterConfig={{
+                  filterType,
+                }}
+                value={date}
+                onChange={setDate}
+              />
+            );
+          }}
+        </Function>
+        <Function>
+          {() => {
+            const [date, setDate] = useState({
+              from: currentDay.toDate(),
+              to: currentDay.toDate(),
+            });
+            return (
+              <DatePicker
+                value={date}
+                onChange={setDate}
+                isRangePicker={isRangePicker}
+                filterConfig={{
+                  filterType,
+                }}
+              />
+            );
+          }}
+        </Function>
+      </Stack>
+    );
+  },
   parameters: {
-    decorators: [withKnobs],
+    controls: { include: ['isRangePicker', 'filterType'] },
   },
   name: 'DatePicker with Filter',
 };
 
 export const DatePickerWithDisabledDates = {
-  render: () => (
-    <Stack height={600}>
+  render: (args) => {
+    const { disableDates } = args;
+    return (
+      <Stack height={600}>
+        <Function>
+          {() => {
+            const [date, setDate] = useState({
+              from: currentDay.toDate(),
+              to: currentDay.toDate(),
+            });
+            return <DatePicker disableDates={disableDates} value={date} onChange={setDate} />;
+          }}
+        </Function>
+      </Stack>
+    );
+  },
+  name: 'DatePicker with disabled dates',
+  parameters: {
+    controls: { include: ['disableDates'] },
+  },
+};
+
+export const DatePickerAndDateRangePickerStatuses = {
+  render: (args) => {
+    const { isRangePicker, disableDates, dateFormatOverride, hintMessage } = args;
+    return (
+      <Stack height={600}>
+        <Function>
+          {() => {
+            const [date, setDate] = useState({
+              from: currentDay.toDate(),
+              to: currentDay.toDate(),
+            });
+            return (
+              <DatePicker
+                value={date}
+                isRangePicker={isRangePicker}
+                onChange={setDate}
+                isClearable={true}
+                disableDates={disableDates}
+                dateFormatOverride={dateFormatOverride}
+                inputProps={{
+                  label: 'Normal',
+                  status: {
+                    type: 'normal',
+                    hintMessage,
+                  },
+                }}
+              />
+            );
+          }}
+        </Function>
+        <Function>
+          {() => {
+            const [date, setDate] = useState({
+              from: currentDay.toDate(),
+              to: currentDay.toDate(),
+            });
+            return (
+              <DatePicker
+                value={date}
+                isRangePicker={isRangePicker}
+                onChange={setDate}
+                isClearable={true}
+                disableDates={disableDates}
+                dateFormatOverride={dateFormatOverride}
+                inputProps={{
+                  label: 'Error',
+                  status: {
+                    type: 'error',
+                    hintMessage,
+                  },
+                }}
+              />
+            );
+          }}
+        </Function>
+        <Function>
+          {() => {
+            const [date, setDate] = useState({
+              from: currentDay.toDate(),
+              to: currentDay.toDate(),
+            });
+            return (
+              <DatePicker
+                value={date}
+                isRangePicker={isRangePicker}
+                onChange={setDate}
+                isClearable={true}
+                disableDates={disableDates}
+                dateFormatOverride={dateFormatOverride}
+                inputProps={{
+                  label: 'Read-only',
+                  status: {
+                    type: 'read-only',
+                    hintMessage,
+                  },
+                }}
+              />
+            );
+          }}
+        </Function>
+      </Stack>
+    );
+  },
+  parameters: {
+    controls: { include: ['dateFormatOverride', 'disableDates', 'isRangePicker', 'hintMessage'] },
+  },
+  name: 'DatePicker and DateRangePicker statuses',
+};
+
+export const DisabledDatePickerDateRangePicker = {
+  render: (args) => {
+    const { isRangePicker } = args;
+    return (
+      <Stack>
+        <Function>
+          {() => {
+            const [date, setDate] = useState({
+              from: currentDay.toDate(),
+              to: currentDay.toDate(),
+            });
+            return (
+              <DatePicker
+                value={date}
+                isRangePicker={isRangePicker}
+                onChange={setDate}
+                isClearable={true}
+                inputProps={{
+                  label: 'Normal',
+                  status: {
+                    type: 'normal',
+                    hintMessage: 'This field is disabled',
+                  },
+                  isDisabled: true,
+                }}
+              />
+            );
+          }}
+        </Function>
+      </Stack>
+    );
+  },
+  parameters: {
+    controls: { include: ['isRangePicker'] },
+  },
+  name: 'Disabled DatePicker & DateRangePicker',
+};
+
+export const Playground = {
+  render: (args) => {
+    const { disableDates, label, hintMessage, isRangePicker, status } = args;
+    return (
       <Function>
         {() => {
           const [date, setDate] = useState({
             from: currentDay.toDate(),
             to: currentDay.toDate(),
           });
-          return <DatePicker disableDates={disableDates} value={date} onChange={setDate} />;
-        }}
-      </Function>
-    </Stack>
-  ),
-  name: 'DatePicker with disabled dates',
-};
-
-export const DatePickerAndDateRangePickerStatuses = {
-  render: () => (
-    <Stack height={600}>
-      <Function>
-        {() => {
-          const [date, setDate] = useState({ from: currentDay.toDate(), to: currentDay.toDate() });
           return (
             <DatePicker
-              value={date}
-              isRangePicker={boolean('isRangePicker', false)}
-              onChange={setDate}
-              isClearable={true}
-              disableDates={select('disableDates', options, options[0])}
-              dateFormatOverride={select('dateFormat', dateFormatOptions, dateFormatOptions[1])}
+              disableDates={disableDates}
               inputProps={{
-                label: 'Normal',
+                label,
                 status: {
-                  type: 'normal',
-                  hintMessage: text('Custom Hint Message', 'Hint Message'),
+                  type: status,
+                  hintMessage,
                 },
               }}
+              isRangePicker={isRangePicker}
+              value={date}
+              onChange={setDate}
             />
           );
         }}
       </Function>
-      <Function>
-        {() => {
-          const [date, setDate] = useState({ from: currentDay.toDate(), to: currentDay.toDate() });
-          return (
-            <DatePicker
-              value={date}
-              isRangePicker={boolean('isRangePicker', false)}
-              onChange={setDate}
-              isClearable={true}
-              disableDates={select('disableDates', options, options[0])}
-              dateFormatOverride={select('dateFormat', dateFormatOptions, dateFormatOptions[1])}
-              inputProps={{
-                label: 'Error',
-                status: {
-                  type: 'error',
-                  hintMessage: text('Custom Error Message', 'Error Message'),
-                },
-              }}
-            />
-          );
-        }}
-      </Function>
-      <Function>
-        {() => {
-          const [date, setDate] = useState({ from: currentDay.toDate(), to: currentDay.toDate() });
-          return (
-            <DatePicker
-              value={date}
-              isRangePicker={boolean('isRangePicker', false)}
-              onChange={setDate}
-              isClearable={true}
-              disableDates={select('disableDates', options, options[0])}
-              dateFormatOverride={select('dateFormat', dateFormatOptions, dateFormatOptions[1])}
-              inputProps={{
-                label: 'Read-only',
-                status: {
-                  type: 'read-only',
-                  hintMessage: text('Custom Hint Message', 'Hint Message'),
-                },
-              }}
-            />
-          );
-        }}
-      </Function>
-    </Stack>
-  ),
-  parameters: {
-    decorators: [withKnobs],
+    );
   },
-  name: 'DatePicker and DateRangePicker statuses',
-};
-
-export const DisabledDatePickerDateRangePicker = {
-  render: () => (
-    <Stack>
-      <Function>
-        {() => {
-          const [date, setDate] = useState({ from: currentDay.toDate(), to: currentDay.toDate() });
-          return (
-            <DatePicker
-              value={date}
-              isRangePicker={boolean('isRangePicker', false)}
-              onChange={setDate}
-              isClearable={true}
-              inputProps={{
-                label: 'Normal',
-                status: {
-                  type: 'normal',
-                  hintMessage: 'This field is disabled',
-                },
-                isDisabled: true,
-              }}
-            />
-          );
-        }}
-      </Function>
-    </Stack>
-  ),
-  name: 'Disabled DatePicker & DateRangePicker',
-};
-
-export const Playground = {
-  render: () => (
-    <Function>
-      {() => {
-        const [date, setDate] = useState({
-          from: currentDay.toDate(),
-          to: currentDay.toDate(),
-        });
-        return (
-          <DatePicker
-            disableDates={select('disableDates', options, options[0])}
-            inputProps={{
-              label: text('label', 'Custom Date'),
-              status: {
-                type: select('status', ['normal', 'error', 'read-only'], 'normal'),
-                hintMessage: text('hintMessage', ''),
-              },
-            }}
-            isRangePicker={boolean('isRangePicker', false)}
-            value={date}
-            onChange={setDate}
-          />
-        );
-      }}
-    </Function>
-  ),
   parameters: {
-    decorators: [withKnobs],
+    controls: {
+      include: [
+        'dateFormatOverride',
+        'disableDates',
+        'isRangePicker',
+        'hintMessage',
+        'label',
+        'status',
+      ],
+    },
   },
   name: 'Playground',
 };

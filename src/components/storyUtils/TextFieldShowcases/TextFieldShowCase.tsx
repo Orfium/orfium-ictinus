@@ -6,7 +6,6 @@ import type { TextInputBaseProps } from 'components/TextInputBase';
 
 type Props = {
   mask?: string;
-  hasSuffix?: boolean;
 } & Partial<
   Pick<
     TextInputBaseProps,
@@ -21,7 +20,6 @@ const TextFieldShowCase: FC<Props> = ({
   status = { type: 'normal' },
   placeholder = undefined,
   isDisabled = false,
-  hasSuffix = false,
   suffix,
   isRequired = false,
 }) => {
@@ -39,7 +37,7 @@ const TextFieldShowCase: FC<Props> = ({
     isDisabled,
     isRequired,
     onChange: handleChange,
-    suffix: hasSuffix ? suffix : undefined,
+    suffix,
     status,
   };
 
