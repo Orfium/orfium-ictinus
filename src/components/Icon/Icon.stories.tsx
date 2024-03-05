@@ -1,8 +1,6 @@
-import { number, text, withKnobs } from '@storybook/addon-knobs';
 import Icon from './Icon';
 import IconographyShowcase from '../storyUtils/IconographyShowcase';
 import { FIGMA_URL } from '../../utils/common';
-import { getIconSelectorKnob } from '../../utils/stories';
 import Stack from 'components/storyUtils/Stack';
 
 export default {
@@ -18,12 +16,27 @@ export default {
       },
     ],
   },
+
+  args: {
+    name: 'informational',
+  },
+
+  argTypes: {
+    size: { type: 'number' },
+    color: {
+      control: { type: 'color' },
+    },
+  },
 };
 
 export const Collection = {
   render: () => <IconographyShowcase />,
 
   name: 'Collection',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const InteractiveIcon = {
@@ -37,18 +50,19 @@ export const InteractiveIcon = {
   ),
 
   name: 'Interactive Icon',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const Playground = {
-  render: () => (
-    <Icon
-      name={getIconSelectorKnob('name', 'informational')}
-      size={number('size', undefined)}
-      color={text('color', undefined)}
-    />
-  ),
+  render: (args) => {
+    const { name, size, color } = args;
+    return <Icon name={name} size={size} color={color} />;
+  },
   parameters: {
-    decorators: [withKnobs],
+    controls: { include: ['name', 'size', 'color'] },
   },
   name: 'Playground',
 };
