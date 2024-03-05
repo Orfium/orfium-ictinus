@@ -1,16 +1,15 @@
-import type { FC} from 'react';
+import type { FC } from 'react';
 import React, { useState } from 'react';
 
 import type { TagProps } from 'components/Tag';
 import Tag from 'components/Tag';
 
 type Props = Pick<TagProps, 'color' | 'size' | 'iconName'> & {
-  hasIcon?: boolean;
   text: string;
   type: 'read-only' | 'clearable' | 'selectable';
 };
 
-const TagShowcase: FC<Props> = ({ color, size, hasIcon, iconName, type, text }) => {
+const TagShowcase: FC<Props> = ({ color, size, iconName, type, text }) => {
   const [isSelected, setIsSelected] = useState(false);
 
   const restProps =
@@ -23,13 +22,11 @@ const TagShowcase: FC<Props> = ({ color, size, hasIcon, iconName, type, text }) 
           isSelected,
           onSelect: () => setIsSelected((isSelected) => !isSelected),
         }
-      : {
-          ...(hasIcon ? { iconName } : {}),
-        };
+      : {};
 
   return (
     <div>
-      <Tag color={color} size={size} {...restProps}>
+      <Tag color={color} size={size} iconName={iconName} {...restProps}>
         {text}
       </Tag>
     </div>

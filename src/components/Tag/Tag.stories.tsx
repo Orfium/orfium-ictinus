@@ -4,13 +4,20 @@ import { FIGMA_URL, Function } from '../../utils/common';
 import Stack from 'components/storyUtils/Stack';
 import { useState } from 'react';
 import TagShowcase from '../../storybook/Showcases/TagShowcase';
-import { boolean, select, text } from '@storybook/addon-knobs';
 import Typography from '../Typography';
-import { getIconSelectorKnob } from '../../utils/stories';
 
 export default {
   title: 'Updated Components/Tag',
   component: Tag,
+
+  args: {
+    text: 'Label',
+  },
+
+  argTypes: {
+    type: { type: 'select', options: ['read-only', 'selectable', 'clearable'] },
+  },
+
   parameters: {
     design: [
       {
@@ -35,6 +42,9 @@ export const ReadOnlyTag = {
     </Stack>
   ),
   name: 'Read-only Tag',
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const ReadOnlyTagWithIcon = {
@@ -59,6 +69,9 @@ export const ReadOnlyTagWithIcon = {
     </Stack>
   ),
   name: 'Read-only Tag with icon',
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const SelectableTag = {
@@ -93,6 +106,9 @@ export const SelectableTag = {
     </Stack>
   ),
   name: 'Selectable Tag',
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const ClearableTag = {
@@ -207,18 +223,18 @@ export const TagSizes = {
     </>
   ),
   name: 'Tag sizes',
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const Playground = {
-  render: () => (
-    <TagShowcase
-      text={text('text', 'Label')}
-      type={select('type', ['read-only', 'selectable', 'clearable'], 'read-only')}
-      size={select('size', ['normal', 'small'], 'normal')}
-      color={select('color', ['neutral', 'blue', 'red', 'purple', 'teal', 'orange'], 'neutral')}
-      hasIcon={boolean('hasIcon (only for Read-only)', false)}
-      iconName={getIconSelectorKnob('iconLeftName (only for Read-only)')}
-    />
-  ),
+  render: (args) => {
+    const { text, type, size, color, iconName } = args;
+    return <TagShowcase text={text} type={type} size={size} color={color} iconName={iconName} />;
+  },
   name: 'Playground',
+  parameters: {
+    controls: { include: ['text', 'type', 'size', 'color', 'iconName'] },
+  },
 };
