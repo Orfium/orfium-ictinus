@@ -15,6 +15,9 @@ export default {
         url: `${FIGMA_URL}?node-id=3325%3A58246`,
       },
     ],
+    controls: {
+      disable: true,
+    },
   },
 };
 

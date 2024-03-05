@@ -1,10 +1,12 @@
 import Box from './Box';
 
-import SectionHeader from '../../storybook/SectionHeader';
-
 export default {
   title: 'Updated Components/Box',
   component: Box,
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const BoxPaddingAllSides = {
