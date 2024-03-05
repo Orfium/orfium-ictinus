@@ -1,5 +1,3 @@
-import { boolean, number, select, withKnobs } from '@storybook/addon-knobs';
-
 import ProgressIndicator from './ProgressIndicator';
 import Typography from '../Typography';
 import Stack from '../storyUtils/Stack';
@@ -57,6 +55,9 @@ export const LinearProgressIndicatorWithPercentage = {
     </Stack>
   ),
   name: 'Linear ProgressIndicator with percentage',
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const LinearProgressIndicatorIndeterminate = {
@@ -66,6 +67,9 @@ export const LinearProgressIndicatorIndeterminate = {
     </Stack>
   ),
   name: 'Linear ProgressIndicator - indeterminate',
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const BlockProgressIndicator = {
@@ -75,6 +79,9 @@ export const BlockProgressIndicator = {
     </Stack>
   ),
   name: 'Block ProgressIndicator',
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const CircularProgressIndicatorWithPercentage = {
@@ -107,6 +114,9 @@ export const CircularProgressIndicatorWithPercentage = {
     </Stack>
   ),
   name: 'Circular ProgressIndicator with percentage',
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const CircularProgressIndicatorIndeterminate = {
@@ -116,6 +126,9 @@ export const CircularProgressIndicatorIndeterminate = {
     </Stack>
   ),
   name: 'Circular ProgressIndicator - indeterminate',
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const CircularProgressIndicatorErrorStates = {
@@ -130,26 +143,23 @@ export const CircularProgressIndicatorErrorStates = {
     </>
   ),
   name: 'Circular ProgressIndicator - Error states',
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const Playground = {
-  render: () => (
-    <Stack width={300} isVertical>
-      <ProgressIndicator
-        type={select('type', ['linear', 'circular'], 'linear')}
-        status={select('status', ['normal', 'error'], 'normal')}
-        isBlock={boolean('isBlock [for linear only]', false)}
-      />
-      <ProgressIndicator
-        value={number('value', undefined)}
-        type={select('type', ['linear', 'circular'], 'linear')}
-        status={select('status', ['normal', 'error'], 'normal')}
-        isBlock={boolean('isBlock [for linear only]', false)}
-      />
-    </Stack>
-  ),
+  render: (args) => {
+    const { type, status, isBlock, value } = args;
+    return (
+      <Stack width={300} isVertical>
+        <ProgressIndicator type={type} status={status} isBlock={isBlock} />
+        <ProgressIndicator value={value} type={type} status={status} isBlock={isBlock} />
+      </Stack>
+    );
+  },
   parameters: {
-    decorators: [withKnobs],
+    controls: { include: ['type', 'status', 'isBlock', 'value'] },
   },
   name: 'Playground',
 };
