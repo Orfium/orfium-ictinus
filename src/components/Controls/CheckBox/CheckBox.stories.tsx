@@ -1,4 +1,3 @@
-import { boolean, text, select } from '@storybook/addon-knobs';
 import CheckBox from './CheckBox';
 import Stack from '../../storyUtils/Stack';
 import { FIGMA_URL } from '../../../utils/common';
@@ -17,6 +16,15 @@ export default {
       },
     ],
   },
+
+  args: {
+    helpText: '',
+  },
+
+  argTypes: {
+    placement: { type: 'radio', options: ['right', 'left'] },
+    size: { type: 'radio', options: ['normal', 'large'] },
+  },
 };
 
 export const SimpleCheckBox = {
@@ -29,6 +37,10 @@ export const SimpleCheckBox = {
     );
   },
   name: 'Simple Checkbox',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const IndeterminateCheckBox = {
@@ -83,6 +95,10 @@ export const IndeterminateCheckBox = {
   },
 
   name: 'Indeterminate CheckBox',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const CheckBoxLabelPlacement = {
@@ -100,6 +116,10 @@ export const CheckBoxLabelPlacement = {
   ),
 
   name: 'CheckBox label placement',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const CheckBoxLabelSizes = {
@@ -117,6 +137,10 @@ export const CheckBoxLabelSizes = {
   ),
 
   name: 'CheckBox label sizes',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const CheckBoxLabelHelptext = {
@@ -127,6 +151,10 @@ export const CheckBoxLabelHelptext = {
   ),
 
   name: 'CheckBox label helptext',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const DisabledCheckBox = {
@@ -146,26 +174,39 @@ export const DisabledCheckBox = {
   ),
 
   name: 'Disabled CheckBox',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const Playground = {
-  render: () => (
-    <Stack>
-      <CheckBox
-        value="label"
-        isSelected={boolean('isSelected', false)}
-        isIndeterminate={boolean('isIndeterminate', false)}
-        labelConfig={{
-          placement: select('Label placement', ['left', 'right'], 'right'),
-          size: select('Label size', ['normal', 'large'], 'normal'),
-          helpText: text('Help text', ''),
-        }}
-        isDisabled={boolean('isDisabled', false)}
-      >
-        Option
-      </CheckBox>
-    </Stack>
-  ),
+  render: (args) => {
+    const { isSelected, isIndeterminate, isDisabled, placement, size, helpText } = args;
+    return (
+      <Stack>
+        <CheckBox
+          value="label"
+          isDisabled={isDisabled}
+          isSelected={isSelected}
+          isIndeterminate={isIndeterminate}
+          labelConfig={{
+            placement,
+            size,
+            helpText,
+          }}
+        >
+          Option
+        </CheckBox>
+      </Stack>
+    );
+  },
 
   name: 'Playground',
+
+  parameters: {
+    controls: {
+      include: ['isSelected', 'isIndeterminate', 'isDisabled', 'placement', 'size', 'helpText'],
+    },
+  },
 };

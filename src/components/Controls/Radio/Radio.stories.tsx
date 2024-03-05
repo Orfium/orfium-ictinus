@@ -1,5 +1,4 @@
 import Radio from './Radio';
-import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 import { FIGMA_URL } from 'utils/common';
 import { RadioGroup } from '../index';
 import React, { useState } from 'react';
@@ -8,6 +7,16 @@ import Stack from 'components/storyUtils/Stack';
 export default {
   title: 'Updated Components/Controls/Radio',
   component: Radio,
+
+  args: {
+    helpText: '',
+  },
+
+  argTypes: {
+    placement: { type: 'radio', options: ['right', 'left'] },
+    size: { type: 'radio', options: ['normal', 'large'] },
+  },
+
   parameters: {
     design: [
       {
@@ -35,6 +44,10 @@ export const RadioGroupStory = {
     );
   },
   name: 'RadioGroup',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const RadioLabelPlacement = {
@@ -71,6 +84,10 @@ export const RadioLabelPlacement = {
     );
   },
   name: 'Radio label placement',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const RadioLabelSizes = {
@@ -107,6 +124,10 @@ export const RadioLabelSizes = {
     );
   },
   name: 'Radio label sizes',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const RadioWithHelptext = {
@@ -127,6 +148,10 @@ export const RadioWithHelptext = {
     );
   },
   name: 'Radio with helptext',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const DisabledRadio = {
@@ -154,11 +179,16 @@ export const DisabledRadio = {
     );
   },
   name: 'Disabled Radio',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const Playground = {
-  render: () => {
+  render: (args) => {
     const [selected, setSelected] = useState('');
+    const { placement, size, helpText, isDisabled } = args;
     return (
       <Stack>
         <RadioGroup
@@ -169,33 +199,33 @@ export const Playground = {
           <Radio
             value="option 1"
             labelConfig={{
-              placement: select('Label placement', ['left', 'right'], 'right'),
-              size: select('Label size', ['normal', 'large'], 'normal'),
-              helpText: text('Help text', ''),
+              placement,
+              size,
+              helpText,
             }}
-            isDisabled={boolean('isDisabled', false)}
+            isDisabled={isDisabled}
           >
             Option 1
           </Radio>
           <Radio
             value="option 2"
             labelConfig={{
-              placement: select('Label placement', ['left', 'right'], 'right'),
-              size: select('Label size', ['normal', 'large'], 'normal'),
-              helpText: text('Help text', ''),
+              placement,
+              size,
+              helpText,
             }}
-            isDisabled={boolean('isDisabled', false)}
+            isDisabled={isDisabled}
           >
             Option 2
           </Radio>
           <Radio
             value="option 3"
             labelConfig={{
-              placement: select('Label placement', ['left', 'right'], 'right'),
-              size: select('Label size', ['normal', 'large'], 'normal'),
-              helpText: text('Help text', ''),
+              placement,
+              size,
+              helpText,
             }}
-            isDisabled={boolean('isDisabled', false)}
+            isDisabled={isDisabled}
           >
             Option 3
           </Radio>
@@ -204,4 +234,10 @@ export const Playground = {
     );
   },
   name: 'Playground',
+
+  parameters: {
+    controls: {
+      include: ['isDisabled', 'placement', 'size', 'helpText'],
+    },
+  },
 };

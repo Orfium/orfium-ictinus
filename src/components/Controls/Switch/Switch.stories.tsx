@@ -2,12 +2,21 @@ import { FIGMA_URL } from '../../../utils/common';
 import Switch from './Switch';
 import { useState } from 'react';
 import Stack from '../../storyUtils/Stack';
-import { boolean, select, text } from '@storybook/addon-knobs';
 import React from 'react';
 
 export default {
   title: 'Updated Components/Controls/Switch',
   component: Switch,
+
+  args: {
+    helpText: '',
+  },
+
+  argTypes: {
+    placement: { type: 'radio', options: ['right', 'left'] },
+    size: { type: 'radio', options: ['normal', 'large'] },
+  },
+
   parameters: {
     design: [
       {
@@ -29,6 +38,10 @@ export const SimpleSwitch = {
     );
   },
   name: 'Simple Switch',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const SwitchLabelPlacement = {
@@ -45,6 +58,10 @@ export const SwitchLabelPlacement = {
     );
   },
   name: 'Switch label placement',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const SwitchLabelSizes = {
@@ -61,6 +78,10 @@ export const SwitchLabelSizes = {
     );
   },
   name: 'Switch label sizes',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const SwitchWithHelptext = {
@@ -68,6 +89,10 @@ export const SwitchWithHelptext = {
     return <Switch labelConfig={{ helpText: 'Short text that adds context' }}>Option</Switch>;
   },
   name: 'Switch with helptext',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const DisabledSwitch = {
@@ -86,19 +111,24 @@ export const DisabledSwitch = {
     );
   },
   name: 'Disabled Switch',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const Playground = {
-  render: () => {
+  render: (args) => {
+    const { isDisabled, placement, size, helpText } = args;
     return (
       <Stack>
         <Switch
           labelConfig={{
-            placement: select('Label placement', ['left', 'right'], 'right'),
-            size: select('Label size', ['normal', 'large'], 'normal'),
-            helpText: text('Help text', ''),
+            placement,
+            size,
+            helpText,
           }}
-          isDisabled={boolean('isDisabled', false)}
+          isDisabled={isDisabled}
         >
           Option
         </Switch>
@@ -106,4 +136,10 @@ export const Playground = {
     );
   },
   name: 'Playground',
+
+  parameters: {
+    controls: {
+      include: ['isDisabled', 'placement', 'size', 'helpText'],
+    },
+  },
 };
