@@ -1,4 +1,3 @@
-import { boolean, select, withKnobs } from '@storybook/addon-knobs';
 import Link from './Link';
 import Stack from '../storyUtils/Stack';
 import { FIGMA_URL } from '../../utils/common';
@@ -149,6 +148,6 @@ export const Playground = {
   name: 'Playground',
 
   parameters: {
-    controls: { include: ['size', 'iconName', 'type', 'placement', 'isDisabled'], expanded: false },
+    controls: { include: ['size', 'iconName', 'type', 'placement', 'isDisabled'] },
   },
 };
