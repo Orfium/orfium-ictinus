@@ -1,4 +1,3 @@
-import { boolean } from '@storybook/addon-knobs';
 import Search from './Search';
 import { FIGMA_URL } from '../../utils/common';
 import { useState } from 'react';
@@ -52,6 +51,9 @@ export const SimpleSearch = {
     );
   },
   name: 'Simple Search',
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const DisabledSearch = {
@@ -70,6 +72,9 @@ export const DisabledSearch = {
     );
   },
   name: 'Disabled Search',
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const FilteredSearch = {
@@ -107,10 +112,13 @@ export const FilteredSearch = {
     );
   },
   name: 'Filtered Search',
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const Playground = {
-  render: () => {
+  render: (args) => {
     const [value, setValue] = useState<string>();
     const [selectedFilter, setSelectedFilter] = useState<FilterOption>(undefined);
 
@@ -118,16 +126,18 @@ export const Playground = {
 
     const handleFilterClear = () => setSelectedFilter(undefined);
 
+    const { isDisabled } = args;
+
     return (
       <Stack height={350}>
         <Search
-          isDisabled={boolean('isDisabled', false)}
+          isDisabled={isDisabled}
           value={value}
           onClear={handleClear}
           onInput={(e) => setValue(e.target.value)}
         />
         <Search
-          isDisabled={boolean('isDisabled', false)}
+          isDisabled={isDisabled}
           value={value}
           onClear={handleClear}
           onInput={(e) => setValue(e.target.value)}
@@ -151,4 +161,7 @@ export const Playground = {
     );
   },
   name: 'Playground',
+  parameters: {
+    controls: { include: ['isDisabled'] },
+  },
 };
