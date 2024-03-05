@@ -1,7 +1,6 @@
 import DropdownButton from './DropdownButton';
 import Stack from '../storyUtils/Stack';
 import { FIGMA_URL } from '../../utils/common';
-import SectionHeader from '../../storybook/SectionHeader';
 
 export default {
   title: 'Updated Components/Buttons/DropdownButton',
@@ -20,6 +19,9 @@ export default {
         url: `${FIGMA_URL}?node-id=8167%3A146863`,
       },
     ],
+    controls: {
+      disable: true,
+    },
   },
 };
 

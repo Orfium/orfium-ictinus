@@ -3,8 +3,6 @@ import IconButton from './IconButton';
 import Stack from '../storyUtils/Stack';
 import iconSelector from '../Icon/assets/iconSelector';
 import { FIGMA_URL } from '../../utils/common';
-import SectionHeader from '../../storybook/SectionHeader';
-import { getIconSelectorKnob } from '../../utils/stories';
 import { AcceptedIconNames } from '../Icon';
 
 export default {
@@ -54,25 +52,26 @@ export const IconButtonTypesAndSizes = {
   ),
 
   name: 'IconButton Types and Sizes',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const Playground = {
-  render: () => (
-    <Stack>
-      <IconButton
-        name={select(
-          'name',
-          Object.keys(iconSelector)
-            .sort((a, b) => a.localeCompare(b))
-            .map((iconName) => iconName) as AcceptedIconNames[],
-          'check'
-        )}
-        size={select('size', ['compact', 'normal'], 'normal')}
-        type={select('type', ['primary', 'secondary', 'tertiary'], 'primary')}
-        shape={select('shape', ['circle', 'square'], 'circle')}
-      />
-    </Stack>
-  ),
+  render: (args) => {
+    /** @TODO: change IconButton property name to iconName */
+    const { name = 'moreOptions', size, type, shape } = args;
+    return (
+      <Stack>
+        <IconButton name={name} size={size} type={type} shape={shape} />
+      </Stack>
+    );
+  },
 
   name: 'Playground',
+
+  parameters: {
+    controls: { include: ['name', 'size', 'type', 'shape'] },
+  },
 };
