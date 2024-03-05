@@ -1,4 +1,3 @@
-import { boolean, number, select } from '@storybook/addon-knobs';
 import { useState } from 'react';
 import { FIGMA_URL } from '../../utils/common';
 import Drawer, { DrawerHeader, DrawerContent, DrawerFooter } from './index';
@@ -206,6 +205,9 @@ export const Sizes = {
 
     fireEvent.click(buttons[0]);
   },
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const Placement = {
@@ -299,6 +301,9 @@ export const Placement = {
     );
   },
   name: 'Placement',
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const Background = {
@@ -357,6 +362,9 @@ export const Background = {
     );
   },
   name: 'Background',
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const FixedContent = {
@@ -397,6 +405,9 @@ export const FixedContent = {
     const buttons = canvas.getAllByTestId('button');
 
     fireEvent.click(buttons[0]);
+  },
+  parameters: {
+    controls: { disable: true },
   },
 };
 
@@ -567,11 +578,15 @@ export const MoreExamples = {
     );
   },
   name: 'More Examples',
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const Playground = {
-  render: () => {
+  render: (args) => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
+    const { isBackgroundActive, size, anchor, hasFixedLayout } = args;
 
     return (
       <div css={{ width: '100%', display: 'flex', justifyContent: 'space-between' }}>
@@ -585,13 +600,13 @@ export const Playground = {
           </Button>
           <Drawer
             isOpen={isOpen}
-            isBackgroundActive={boolean('isBackgroundActive', false)}
+            isBackgroundActive={isBackgroundActive}
             onClose={() => {
               setIsOpen(false);
             }}
-            size={number('size', 50)}
-            anchor={select('anchor', ['top', 'right', 'bottom', 'left'], 'left')}
-            hasFixedLayout={boolean('hasFixedLayout', false)}
+            size={size}
+            anchor={anchor}
+            hasFixedLayout={hasFixedLayout}
           >
             <DrawerHeader>{drawerFormContent.header}</DrawerHeader>
             <DrawerContent>{drawerFormContent.content}</DrawerContent>
@@ -602,4 +617,8 @@ export const Playground = {
     );
   },
   name: 'Playground',
+
+  parameters: {
+    controls: { include: ['isBackgroundActive', 'size', 'anchor', 'hasFixedLayout'] },
+  },
 };
