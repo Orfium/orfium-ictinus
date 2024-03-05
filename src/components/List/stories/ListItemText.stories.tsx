@@ -1,6 +1,5 @@
 import List, { ListItemText, ListItem } from '../index';
 import { FIGMA_URL, Function } from '../../../utils/common';
-import SectionHeader from '../../../storybook/SectionHeader';
 import Stack from '../../storyUtils/Stack';
 
 export default {
@@ -15,6 +14,7 @@ export default {
         url: `${FIGMA_URL}?node-id=22406-71589`,
       },
     ],
+    controls: { disable: true },
   },
 };
 
