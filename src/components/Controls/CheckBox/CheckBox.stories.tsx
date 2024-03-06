@@ -19,6 +19,8 @@ export default {
 
   args: {
     helpText: '',
+    placement: 'right',
+    size: 'normal',
   },
 
   argTypes: {

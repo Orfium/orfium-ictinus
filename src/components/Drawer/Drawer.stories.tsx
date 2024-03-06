@@ -21,6 +21,10 @@ export default {
     ],
     chromatic: { delay: 400 },
   },
+
+  args: {
+    anchor: 'right',
+  },
 };
 
 const drawerContent = {

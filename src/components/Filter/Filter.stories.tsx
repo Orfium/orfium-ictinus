@@ -1,4 +1,3 @@
-import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
 import { FilterOption } from './Filter.types';
 import Stack from '../storyUtils/Stack';
 import { FIGMA_URL } from '../../utils/common';

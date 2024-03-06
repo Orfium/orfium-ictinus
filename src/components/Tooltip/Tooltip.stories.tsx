@@ -20,6 +20,7 @@ export default {
 
   args: {
     content: 'This is a Tooltip',
+    placement: 'right',
   },
 
   argTypes: {

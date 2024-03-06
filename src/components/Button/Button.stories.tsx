@@ -10,6 +10,8 @@ export default {
 
   args: {
     label: 'Label',
+    type: 'primary',
+    size: 'normal',
   },
 
   argTypes: {
@@ -139,6 +141,11 @@ export const ButtonsWithIcons = {
 
   parameters: {
     controls: { include: ['type', 'iconLeftName', 'iconRightName'] },
+  },
+
+  args: {
+    iconLeftName: 'edit',
+    iconRightName: 'download',
   },
 };
 

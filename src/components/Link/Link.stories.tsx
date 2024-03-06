@@ -1,7 +1,6 @@
 import Link from './Link';
 import Stack from '../storyUtils/Stack';
 import { FIGMA_URL } from '../../utils/common';
-import { getIconSelectorKnob } from '../../utils/stories';
 import { Link as ReactRouterLink, MemoryRouter as Router } from 'react-router-dom';
 
 export default {
@@ -17,6 +16,8 @@ export default {
       },
     ],
   },
+
+  args: { iconName: 'externalLink', placement: 'block', size: 1 },
 };
 
 export const LinkStyles = {
@@ -90,24 +91,27 @@ export const Sizes = {
 };
 
 export const LinkWithIcon = {
-  render: () => (
-    <Stack isVertical>
-      <Link href="#" size={1} iconName={getIconSelectorKnob('iconName', 'externalLink')}>
-        Link
-      </Link>
-      <Link href="#" size={2} iconName={getIconSelectorKnob('iconName', 'externalLink')}>
-        Link
-      </Link>
-      <Link href="#" size={3} iconName={getIconSelectorKnob('iconName', 'externalLink')}>
-        Link
-      </Link>
-    </Stack>
-  ),
+  render: (args) => {
+    const { iconName } = args;
+    return (
+      <Stack isVertical>
+        <Link href="#" size={1} iconName={iconName}>
+          Link
+        </Link>
+        <Link href="#" size={2} iconName={iconName}>
+          Link
+        </Link>
+        <Link href="#" size={3} iconName={iconName}>
+          Link
+        </Link>
+      </Stack>
+    );
+  },
 
   name: 'Link with Icon',
 
   parameters: {
-    controls: { disable: true },
+    controls: { include: ['iconName'] },
   },
 };
 export const ThirdPartyRoutingLibrary = {

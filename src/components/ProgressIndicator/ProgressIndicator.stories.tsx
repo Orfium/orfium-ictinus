@@ -16,6 +16,11 @@ export default {
       },
     ],
   },
+
+  args: {
+    status: 'normal',
+    type: 'linear',
+  },
 };
 
 export const LinearProgressIndicatorWithPercentage = {

@@ -12,6 +12,9 @@ export default {
 
   args: {
     text: 'Label',
+    size: 'normal',
+    type: 'read-only',
+    color: 'neutral',
   },
 
   argTypes: {

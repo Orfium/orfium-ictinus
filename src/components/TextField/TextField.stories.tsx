@@ -22,6 +22,7 @@ export default {
   args: {
     hintMessage: 'Hint Message',
     label: 'TextField',
+    size: 'normal',
   },
 
   argTypes: {

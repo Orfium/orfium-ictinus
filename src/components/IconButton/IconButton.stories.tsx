@@ -1,9 +1,6 @@
-import { select } from '@storybook/addon-knobs';
 import IconButton from './IconButton';
 import Stack from '../storyUtils/Stack';
-import iconSelector from '../Icon/assets/iconSelector';
 import { FIGMA_URL } from '../../utils/common';
-import { AcceptedIconNames } from '../Icon';
 
 export default {
   title: 'Updated Components/Buttons/IconButton',
@@ -22,6 +19,12 @@ export default {
         url: `${FIGMA_URL}?node-id=8167%3A146863`,
       },
     ],
+  },
+
+  args: {
+    shape: 'circle',
+    size: 'normal',
+    type: 'primary',
   },
 };
 
