@@ -1,5 +1,4 @@
 import Slider from './Slider';
-import { boolean, withKnobs } from '@storybook/addon-knobs';
 import SliderShowcase from '../storyUtils/SliderShowcase/SliderShowcase';
 
 export default {
@@ -8,49 +7,50 @@ export default {
 };
 
 export const RangeSliderDontTest = {
-  render: () => <SliderShowcase isSelector={false} isDisabled={boolean('isDisabled', false)} />,
+  render: (args) => {
+    const { isDisabled } = args;
+    return <SliderShowcase isSelector={false} isDisabled={isDisabled} />;
+  },
+
   name: 'Range Slider (DontTest)',
 
   parameters: {
-    decorators: [withKnobs],
+    controls: { include: ['isDisabled'] },
   },
 };
 
 export const RangeSliderWithIncrementsDontTest = {
-  render: () => (
-    <SliderShowcase
-      isSelector={false}
-      isDisabled={boolean('isDisabled', false)}
-      hasIncrements={true}
-    />
-  ),
+  render: (args) => {
+    const { isDisabled } = args;
+    return <SliderShowcase isSelector={false} isDisabled={isDisabled} hasIncrements={true} />;
+  },
 
   name: 'Range Slider with Increments (DontTest)',
 
   parameters: {
-    decorators: [withKnobs],
+    controls: { include: ['isDisabled'] },
   },
 };
 
 export const SelectorSliderDontTest = {
-  render: () => <SliderShowcase isSelector={true} isDisabled={boolean('isDisabled', false)} />,
+  render: (args) => {
+    const { isDisabled } = args;
+    return <SliderShowcase isSelector={true} isDisabled={isDisabled} />;
+  },
   name: 'Selector Slider (DontTest)',
 
   parameters: {
-    decorators: [withKnobs],
+    controls: { include: ['isDisabled'] },
   },
 };
 
 export const SelectorSliderWithIncrementsDontTest = {
-  render: () => (
-    <SliderShowcase
-      isDisabled={boolean('isDisabled', false)}
-      isSelector={true}
-      hasIncrements={true}
-    />
-  ),
+  render: (args) => {
+    const { isDisabled } = args;
+    return <SliderShowcase isDisabled={isDisabled} isSelector={true} hasIncrements={true} />;
+  },
   name: 'Selector Slider with Increments (DontTest)',
   parameters: {
-    decorators: [withKnobs],
+    controls: { include: ['isDisabled'] },
   },
 };

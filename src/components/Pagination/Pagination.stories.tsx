@@ -1,4 +1,3 @@
-import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
 import Pagination from './Pagination';
 import { FIGMA_URL } from '../../utils/common';
 
@@ -18,37 +17,47 @@ export default {
 };
 
 export const PaginationStory = {
-  render: () => (
-    <Pagination
-      count={3}
-      page={1}
-      isEnhancedPaginationVisible={boolean('isEnhancedPaginationVisible', true)}
-      isNextPageDisabled={boolean('isNextPageDisabled', false)}
-      isPrevPageDisabled={boolean('isPrevPageDisabled', false)}
-    />
-  ),
+  render: (args) => {
+    const { isEnhancedPaginationVisible, isNextPageDisabled, isPrevPageDisabled } = args;
+    return (
+      <Pagination
+        count={3}
+        page={1}
+        isEnhancedPaginationVisible={isEnhancedPaginationVisible}
+        isNextPageDisabled={isNextPageDisabled}
+        isPrevPageDisabled={isPrevPageDisabled}
+      />
+    );
+  },
 
   name: 'Pagination',
 
   parameters: {
-    decorators: [withKnobs],
+    controls: {
+      include: ['isEnhancedPaginationVisible', 'isNextPageDisabled', 'isPrevPageDisabled'],
+    },
   },
 };
 
 export const PaginationWithoutAllButtons = {
-  render: () => (
-    <Pagination
-      count={3}
-      page={1}
-      isEnhancedPaginationVisible={false}
-      isNextPageDisabled={boolean('isNextPageDisabled', false)}
-      isPrevPageDisabled={boolean('isPrevPageDisabled', false)}
-    />
-  ),
+  render: (args) => {
+    const { isNextPageDisabled, isPrevPageDisabled } = args;
+    return (
+      <Pagination
+        count={3}
+        page={1}
+        isEnhancedPaginationVisible={false}
+        isNextPageDisabled={isNextPageDisabled}
+        isPrevPageDisabled={isPrevPageDisabled}
+      />
+    );
+  },
 
   name: 'Pagination without all buttons',
 
   parameters: {
-    decorators: [withKnobs],
+    controls: {
+      include: ['isNextPageDisabled', 'isPrevPageDisabled'],
+    },
   },
 };
