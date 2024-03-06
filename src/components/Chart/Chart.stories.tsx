@@ -11,8 +11,16 @@ export default {
     labelX: { type: 'string' },
     labelY: { type: 'string' },
     isLegendVisible: { type: 'boolean' },
-    value: { type: 'number' },
+    value: { type: 'string' },
     units: { type: 'string' },
+  },
+
+  args: {
+    value: 'value',
+    units: 'units',
+    labelX: 'Dates',
+    labelY: 'Values',
+    isLegendVisible: true,
   },
 };
 

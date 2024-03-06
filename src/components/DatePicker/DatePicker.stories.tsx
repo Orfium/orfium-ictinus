@@ -26,7 +26,7 @@ export default {
 
   args: {
     filterType: 'preset',
-    hintMessage: 'Hint message',
+    hintMessage: 'Hint Message',
     label: 'Custom Date',
     status: 'normal',
   },
@@ -140,18 +140,16 @@ export const DateRangePickerWithPresetOptions = {
 };
 
 export const DatePickerWithFilter = {
-  render: (args) => {
-    const { isRangePicker, filterType } = args;
+  render: () => {
     return (
       <Stack height={600}>
         <Function>
           {() => {
-            const [date, setDate] = useState({ from: undefined, to: undefined });
+            const [date, setDate] = useState({ from: currentDay.toDate(), to: undefined });
             return (
               <DatePicker
-                isRangePicker={isRangePicker}
                 filterConfig={{
-                  filterType,
+                  filterType: 'preset',
                 }}
                 value={date}
                 onChange={setDate}
@@ -169,9 +167,9 @@ export const DatePickerWithFilter = {
               <DatePicker
                 value={date}
                 onChange={setDate}
-                isRangePicker={isRangePicker}
+                isRangePicker
                 filterConfig={{
-                  filterType,
+                  filterType: 'preset',
                 }}
               />
             );
@@ -181,7 +179,7 @@ export const DatePickerWithFilter = {
     );
   },
   parameters: {
-    controls: { include: ['isRangePicker', 'filterType'] },
+    controls: { disable: true },
   },
   name: 'DatePicker with Filter',
 };

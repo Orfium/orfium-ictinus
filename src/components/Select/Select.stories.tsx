@@ -34,6 +34,7 @@ export default {
   args: {
     hintMessage: 'Hint Message',
     label: 'Select',
+    isSearchable: false,
   },
 
   argTypes: {

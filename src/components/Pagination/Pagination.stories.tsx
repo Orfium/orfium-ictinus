@@ -14,6 +14,10 @@ export default {
       },
     ],
   },
+
+  args: {
+    isEnhancedPaginationVisible: true,
+  },
 };
 
 export const PaginationStory = {

@@ -17,7 +17,7 @@ export default {
     ],
   },
 
-  args: { iconName: 'externalLink', placement: 'block', size: 1 },
+  args: { placement: 'block', size: 1 },
 };
 
 export const LinkStyles = {
@@ -109,6 +109,10 @@ export const LinkWithIcon = {
   },
 
   name: 'Link with Icon',
+
+  args: {
+    iconName: 'externalLink',
+  },
 
   parameters: {
     controls: { include: ['iconName'] },
