@@ -53,7 +53,7 @@ const tag = {
   backgroundColor: {
     readOnly: {
       blue: {
-        value: '{sem.colors.palette.primaryAlt.light}',
+        value: '{sem.colors.palette.primaryAlt.muted}',
         type: 'color',
         description: 'Sets backgroundColor for tag variant',
       },
@@ -63,38 +63,38 @@ const tag = {
         description: 'Sets backgroundColor for tag variant',
       },
       purple: {
-        value: '{sem.colors.palette.upsell.light}',
+        value: '{sem.colors.palette.upsell.muted}',
         type: 'color',
         description: 'Sets backgroundColor for tag variant',
       },
       red: {
-        value: '{sem.colors.palette.error.light}',
+        value: '{sem.colors.palette.error.muted}',
         type: 'color',
         description: 'Sets backgroundColor for tag variant',
       },
       teal: {
-        value: '{sem.colors.palette.success.light}',
+        value: '{sem.colors.palette.success.muted}',
         type: 'color',
         description: 'Sets backgroundColor for tag variant',
       },
       code: {
-        value: '{sem.colors.palette.secondary.dark}',
+        value: '{sem.colors.palette.secondary.contrast}',
         type: 'color',
         description: 'Sets backgroundColor for code tag variant',
       },
       orange: {
-        value: '{sem.colors.palette.warning.light}',
+        value: '{sem.colors.palette.warning.muted}',
         type: 'color',
       },
     },
     interactive: {
       default: {
-        value: '{sem.colors.palette.secondary.main}',
+        value: '{sem.colors.palette.secondary.base}',
         type: 'color',
         description: 'Sets default backgroundColor for interactive tag variant',
       },
       focused: {
-        value: '{sem.colors.palette.secondary.light}',
+        value: '{sem.colors.palette.secondary.muted}',
         type: 'color',
         description: 'Sets focused backgroundColor for interactive tag variant',
       },
@@ -144,32 +144,32 @@ const tag = {
   borderColor: {
     readOnly: {
       blue: {
-        value: '{sem.colors.palette.primaryAlt.dark}',
+        value: '{sem.colors.borderColor.decorative.default}',
         type: 'color',
         description: 'Sets borderColor for white and blue read-only tag variants',
       },
       neutral: {
-        value: '{sem.colors.palette.secondary.dark}',
+        value: '{sem.colors.palette.secondary.contrast}',
         type: 'color',
         description: 'Sets borderColor for white and neutral read-only tag variants',
       },
       purple: {
-        value: '{sem.colors.palette.upsell.dark}',
+        value: '{sem.colors.palette.upsell.contrast}',
         type: 'color',
         description: 'Sets borderColor for tag variant',
       },
       red: {
-        value: '{sem.colors.palette.error.dark}',
+        value: '{sem.colors.palette.error.contrast}',
         type: 'color',
         description: 'Sets borderColor for tag variant',
       },
       teal: {
-        value: '{sem.colors.palette.success.dark}',
+        value: '{sem.colors.palette.success.contrast}',
         type: 'color',
         description: 'Sets borderColor for tag variant',
       },
       orange: {
-        value: '{sem.colors.palette.warning.dark}',
+        value: '{sem.colors.palette.warning.contrast}',
         type: 'color',
       },
     },

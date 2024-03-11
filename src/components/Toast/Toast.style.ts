@@ -33,7 +33,7 @@ const toastContainerPerType = (
 
   return styleType === 'outlined'
     ? `border: ${theme.globals.borderWidth.get('2')} solid ${borderColor}`
-    : `box-shadow: ${theme.globals.boxShadow.get('2')}
+    : `box-shadow: ${theme.tokens.boxShadow.get('2')}
 `;
 };
 
@@ -64,7 +64,7 @@ export const topContainer =
       height: ${rem(58)};
       background: ${isNotificationTypes(type)
         ? theme.tokens.colors.get(
-            `palette.${typeToBackgroundStyle(type)}.light` as SemanticColorsKey
+            `palette.${typeToBackgroundStyle(type)}.muted` as SemanticColorsKey
           )
         : /** @TODO: remove this when Toast component is either removed or refactored */
           theme.utils.getColor(type, 500, 'normal')};

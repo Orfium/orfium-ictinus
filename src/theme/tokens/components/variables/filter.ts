@@ -4,10 +4,6 @@ const filter = {
     type: 'borderRadius',
     description: 'Sets borderRadius for filter',
   },
-  text: {
-    value: '{sem.typography.normal.label02}',
-    type: 'typography',
-  },
   height: {
     value: '{sizing.9}',
     type: 'sizing',
@@ -35,27 +31,27 @@ const filter = {
   },
   backgroundColor: {
     default: {
-      value: '{sem.colors.palette.secondary.main}',
+      value: '{sem.colors.palette.secondary.base}',
       type: 'color',
       description: 'Sets backgroundColor for filter default state',
     },
     hover: {
-      value: '{sem.colors.palette.secondary.light}',
+      value: '{sem.colors.palette.secondary.muted}',
       type: 'color',
       description: 'Sets backgroundColor for hovered filter state',
     },
     active: {
-      value: '{sem.colors.palette.primary.dark}',
+      value: '{sem.colors.palette.primary.contrast}',
       type: 'color',
       description: 'Sets backgroundColor for active filter state',
     },
     populated: {
-      value: '{sem.colors.palette.secondary.main}',
+      value: '{sem.colors.palette.secondary.base}',
       type: 'color',
       description: 'Sets backgroundColor for active filter component',
     },
     populatedHovered: {
-      value: '{sem.colors.palette.secondary.light}',
+      value: '{sem.colors.palette.secondary.muted}',
       type: 'color',
       description: 'Sets backgroundColor for active hovered filter component',
     },
@@ -90,6 +86,11 @@ const filter = {
       type: 'borderWidth',
       description: 'Sets filter border width',
     },
+  },
+  text: {
+    value: '{sem.typography.normal.label02}',
+    type: 'typography',
+    description: 'Sets text style for filter text',
   },
 } as const;
 

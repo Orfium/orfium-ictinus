@@ -29,13 +29,13 @@ const SliderMark: FCC<SliderMarkProps & TestProps> = ({
   const backgroundStyle = useMemo(() => {
     if (!isSelector) {
       return index * 20 < values[0] || index * 20 > values[1]
-        ? theme.tokens.colors.get('palette.primaryAlt.main')
-        : theme.tokens.colors.get('palette.primary.main');
+        ? theme.tokens.colors.get('palette.primaryAlt.base')
+        : theme.tokens.colors.get('palette.primary.base');
     }
 
     return index * 20 > values[0]
-      ? theme.tokens.colors.get('palette.primaryAlt.main')
-      : theme.tokens.colors.get('palette.primary.main');
+      ? theme.tokens.colors.get('palette.primaryAlt.base')
+      : theme.tokens.colors.get('palette.primary.base');
   }, [isSelector, index, values, theme.tokens.colors]);
 
   const labelValue = useMemo(() => (STEP_WITH_INCREMENTS * index).toString(), [index]);

@@ -15,7 +15,7 @@ const drawer = {
     description: 'Sets borderWidth for drawer container',
   },
   boxShadow: {
-    value: '{boxShadow.3}',
+    value: '{sem.boxShadow.3}',
     type: 'boxShadow',
     description: 'Sets boxShadow for drawer container',
   },

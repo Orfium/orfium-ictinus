@@ -1,10 +1,9 @@
 import { css } from '@emotion/react';
 import useTheme from 'hooks/useTheme';
 import { mapValues, toPairs, uniqueId, values } from 'lodash';
-import React from 'react';
-import { useState, Fragment, useRef } from 'react';
+import React, { useState, Fragment, useRef } from 'react';
 import { flexCenter } from 'theme/functions';
-import type { colorShades, flatColors, paleColors} from 'theme/palette';
+import type { colorShades, flatColors, paleColors } from 'theme/palette';
 import { neutralColors, BASE_SHADE } from 'theme/palette';
 
 import {
@@ -22,8 +21,8 @@ const PaletteShowcase = () => {
   const colorUtilRef = useRef<HTMLDivElement>(null);
   const [paletteColor, setPaletteColor] = useState<string | undefined>(undefined);
 
-  type Palette = [typeof flatColors[number], string[]];
-  type PalePalette = [typeof paleColors[number], string[]];
+  type Palette = [(typeof flatColors)[number], string[]];
+  type PalePalette = [(typeof paleColors)[number], string[]];
   // @ts-ignore
   const palette = toPairs(mapValues(theme.globals.oldColors.flat, values)) as Palette[];
   // @ts-ignore
@@ -89,7 +88,7 @@ const PaletteShowcase = () => {
                       theme,
                       color,
                       colorName,
-                      shade: ((index + 1) * 50) as typeof colorShades[number],
+                      shade: ((index + 1) * 50) as (typeof colorShades)[number],
                       isSelectedColor: paletteColor === color,
                     })}
                   >

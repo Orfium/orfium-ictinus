@@ -12,7 +12,7 @@ const search = {
       description: 'Sets backgroundColor for default search component',
     },
     focused: {
-      value: '{sem.colors.palette.tertiary.light}',
+      value: '{sem.colors.palette.tertiary.muted}',
       type: 'color',
       description: 'Sets backgroundColor for focused search component',
     },
@@ -85,11 +85,6 @@ const search = {
       description: 'Sets borderWidth for active search component',
     },
   },
-  text: {
-    value: '{sem.typography.normal.body02}',
-    type: 'typography',
-    description: 'Sets text for search component',
-  },
   height: {
     normal: {
       value: '{sizing.9}',
@@ -101,6 +96,11 @@ const search = {
     value: '{spacing.4}',
     type: 'spacing',
     description: 'Sets gap for search field',
+  },
+  text: {
+    value: '{sem.typography.normal.body02}',
+    type: 'typography',
+    description: 'Sets text style for search copy',
   },
 } as const;
 
