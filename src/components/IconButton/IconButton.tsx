@@ -18,13 +18,13 @@ export type IconButtonProps = Omit<
   /** This property defines the type of the IconButton */
   type?: PrimitiveButtonTypes;
   /** This property defines witch icon to use */
-  name: AcceptedIconNames;
+  iconName: AcceptedIconNames;
   /** This property defines the shape of the IconButton */
   shape?: IconButtonShape;
 };
 
 const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>((props, ref) => {
-  const { name, size = 'normal', type = 'primary', shape = 'circle', dataTestPrefixId } = props;
+  const { iconName, size = 'normal', type = 'primary', shape = 'circle', dataTestPrefixId } = props;
   const theme = useTheme();
   const tokens = getButtonTokens(theme);
 
@@ -38,7 +38,7 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>((props, 
       shape={shape}
       dataTestPrefixId={dataTestPrefixId ? `${dataTestPrefixId}-icon-` : 'icon-'}
     >
-      <Icon size={tokens(`${size}.iconSize` as ButtonTokens)} name={name} color={iconColor} />
+      <Icon size={tokens(`${size}.iconSize` as ButtonTokens)} name={iconName} color={iconColor} />
     </ButtonBase>
   );
 });
