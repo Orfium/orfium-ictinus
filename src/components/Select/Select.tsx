@@ -165,8 +165,18 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
       }
     } else {
       if (onChange) {
-        // @ts-ignore
-        onChange(option);
+        if (option.isCreated) {
+          const newOption: SelectOption = {
+            value: option.value,
+            label: option.value.toString(),
+            isCreated: true,
+          };
+          // @ts-ignore
+          onChange(newOption);
+        } else {
+          // @ts-ignore
+          onChange(option);
+        }
       }
     }
 
