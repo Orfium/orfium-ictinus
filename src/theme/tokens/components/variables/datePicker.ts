@@ -1,11 +1,6 @@
 const datePicker = {
-  label: {
-    value: '{sem.typography.normal.label02}',
-    type: 'typography',
-    description: 'Sets text style for labels in date picker',
-  },
   boxShadow: {
-    value: '{boxShadow.3}',
+    value: '{sem.boxShadow.3}',
     type: 'boxShadow',
     description: "Sets box shadow for date picker's container",
   },
@@ -36,17 +31,17 @@ const datePicker = {
     },
     backgroundColor: {
       default: {
-        value: '{sem.colors.palette.tertiary.main}',
+        value: '{sem.colors.palette.tertiary.base}',
         type: 'color',
         description: 'Sets backgroundColor for _block date (default state)',
       },
       focused: {
-        value: '{sem.colors.palette.tertiary.light}',
+        value: '{sem.colors.palette.tertiary.muted}',
         type: 'color',
         description: 'Sets backgroundColor for _block date (default state)',
       },
       active: {
-        value: '{sem.colors.palette.primary.dark}',
+        value: '{sem.colors.palette.primary.contrast}',
         type: 'color',
         description: 'Sets backgroundColor for _block date (active state)',
       },
@@ -137,6 +132,18 @@ const datePicker = {
     value: '{sizing.21}',
     type: 'sizing',
     description: 'Sets fixed width for date picker fields',
+  },
+  label: {
+    normal: {
+      value: '{sem.typography.normal.label02}',
+      type: 'typography',
+      description: 'Sets normal text style for date picker labels',
+    },
+    compact: {
+      value: '{sem.typography.normal.label03}',
+      type: 'typography',
+      description: 'Sets compact text style for date picker labels',
+    },
   },
 } as const;
 

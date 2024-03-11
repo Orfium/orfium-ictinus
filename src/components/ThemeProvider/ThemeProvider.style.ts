@@ -24,12 +24,12 @@ export const scrollbar = (theme: Theme): SerializedStyles => css`
   }
 
   ::-webkit-scrollbar-thumb {
-    background: ${theme.tokens.colors.get('palette.primary.light')};
+    background: ${theme.tokens.colors.get('palette.primary.muted')};
     border-radius: ${theme.globals.spacing.get('9')};
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: ${theme.tokens.colors.get('palette.primary.main')};
+    background: ${theme.tokens.colors.get('palette.primary.base')};
   }
 
   // for Firefox
