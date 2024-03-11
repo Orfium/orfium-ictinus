@@ -160,7 +160,7 @@ export const headerStyle =
           padding: ${tokens('padding')};
           position: sticky;
           top: 0;
-          box-shadow: ${hasBoxShadow ? theme.globals.boxShadow.get('2') : undefined};
+          box-shadow: ${hasBoxShadow ? theme.tokens.boxShadow.get('2') : undefined};
           transition: box-shadow 0.2s ease-in-out;
         `
       : css`
@@ -192,7 +192,7 @@ export const footerStyle =
           position: sticky;
           bottom: 0;
           padding: ${tokens('padding')};
-          box-shadow: ${hasBoxShadow ? theme.globals.boxShadow.get('5') : undefined};
+          box-shadow: ${hasBoxShadow ? theme.tokens.boxShadow.get('5') : undefined};
           transition: box-shadow 0.2s ease-in-out;
         `
       : css`

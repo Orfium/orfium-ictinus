@@ -1,3 +1,4 @@
+import boxShadow from './boxShadow';
 import colors from './colors';
 import disabledState from './disabledState';
 import icon from './icon';
@@ -10,6 +11,7 @@ const semantic = {
   icon,
   state,
   typography,
+  boxShadow,
 };
 
 export default semantic;

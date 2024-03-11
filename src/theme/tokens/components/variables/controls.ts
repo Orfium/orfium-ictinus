@@ -12,7 +12,7 @@ const controls = {
         description: "Sets background color for checkbox's default state",
       },
       pressed: {
-        value: '{sem.colors.palette.primary.main}',
+        value: '{sem.colors.palette.primary.base}',
         type: 'color',
         description: 'Sets background color for an pressed checkbox',
       },
@@ -66,7 +66,7 @@ const controls = {
       },
       active: {
         type: 'color',
-        value: '{sem.colors.palette.primary.main}',
+        value: '{sem.colors.palette.primary.base}',
         description: 'Sets backgroundColor for a pressed radio button',
       },
     },
@@ -78,7 +78,7 @@ const controls = {
       },
       active: {
         type: 'color',
-        value: '{sem.colors.palette.primary.main}',
+        value: '{sem.colors.palette.primary.base}',
         description: 'Sets borderColor for an pressed radio button',
       },
     },
@@ -113,7 +113,7 @@ const controls = {
     },
     backgroundColor: {
       track: {
-        value: '{sem.colors.palette.primaryAlt.dark}',
+        value: '{sem.colors.palette.primaryAlt.contrast}',
         type: 'color',
         description: 'Sets backgroundColor for switch track',
       },
@@ -124,7 +124,7 @@ const controls = {
           description: 'Sets backgroundColor for default switch thumb state',
         },
         active: {
-          value: '{sem.colors.palette.primary.main}',
+          value: '{sem.colors.palette.primary.base}',
           type: 'color',
           description: 'Sets backgroundColor for active switch thumb state',
         },
