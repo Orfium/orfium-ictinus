@@ -13,8 +13,8 @@ export const Thumb = styled.div<{
   width: ${rem(16)};
   border-radius: 100px;
   background-color: ${({ theme, isChanged }) =>
-    isChanged ? theme.tokens.colors.get('palette.primary.main') : '#fff'};
-  border: 2px solid ${({ theme }) => theme.tokens.colors.get('palette.primary.main')};
+    isChanged ? theme.tokens.colors.get('palette.primary.base') : '#fff'};
+  border: 2px solid ${({ theme }) => theme.tokens.colors.get('palette.primary.base')};
   ${({ restStyleProps }) => ({ ...restStyleProps })};
   box-sizing: border-box;
   cursor: ${({ isDisabled }) => (isDisabled ? 'not-allowed' : 'unset')} !important;

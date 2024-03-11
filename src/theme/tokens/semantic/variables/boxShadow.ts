@@ -1,21 +1,22 @@
 const boxShadow = {
   '0': {
     value: {
-      x: '0px',
-      y: '0px',
-      blur: '0px',
-      spread: '0px',
+      x: '0',
+      y: '0',
+      blur: '0',
+      spread: '0',
       color: 'rgba(200,206,255,0.45)',
-      type: 'innerShadow',
+      type: 'dropShadow',
     },
     type: 'boxShadow',
+    description: 'No shadow variant',
   },
   '1': {
     value: {
-      x: '0px',
-      y: '2px',
-      blur: '4px',
-      spread: '0px',
+      x: '0',
+      y: '2',
+      blur: '4',
+      spread: '0',
       color: 'rgba(200,206,255,0.45)',
       type: 'dropShadow',
     },
@@ -34,10 +35,10 @@ const boxShadow = {
   },
   '3': {
     value: {
-      x: '0px',
-      y: '8px',
-      blur: '16px',
-      spread: '0px',
+      x: '0',
+      y: '8',
+      blur: '16',
+      spread: '0',
       color: 'rgba(200,206,255,0.45)',
       type: 'dropShadow',
     },
@@ -45,10 +46,10 @@ const boxShadow = {
   },
   '4': {
     value: {
-      x: '0px',
-      y: '16px',
-      blur: '24px',
-      spread: '0px',
+      x: '0',
+      y: '16',
+      blur: '24',
+      spread: '0',
       color: 'rgba(200,206,255,0.45)',
       type: 'dropShadow',
     },
@@ -56,15 +57,15 @@ const boxShadow = {
   },
   '5': {
     value: {
-      x: '0px',
-      y: '-2px',
-      blur: '4px',
-      spread: '0px',
+      x: '0',
+      y: '-2',
+      blur: '4',
+      spread: '0',
       color: 'rgba(200,206,255,0.45)',
       type: 'dropShadow',
     },
     type: 'boxShadow',
-    description: 'used for sticky/fixed components',
+    description: 'Used for sticky/fixed components',
   },
 } as const;
 

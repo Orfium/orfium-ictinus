@@ -1,6 +1,5 @@
 import borderRadius from './borderRadius';
 import borderWidth from './borderWidth';
-import boxShadow from './boxShadow';
 import colors from './colors';
 import elevation from './elevation';
 import oldColors from './oldColors';
@@ -17,7 +16,6 @@ const globals = {
   elevation,
   borderRadius,
   borderWidth,
-  boxShadow,
   opacity,
   sizing,
 };

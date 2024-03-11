@@ -15,7 +15,7 @@ const menu = {
     description: 'Applies to menu container',
   },
   boxShadow: {
-    value: '{boxShadow.2}',
+    value: '{sem.boxShadow.2}',
     type: 'boxShadow',
     description: 'Applies to menu container',
   },

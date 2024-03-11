@@ -22,6 +22,6 @@ export const parentStyles =
 
       &:hover {
         ${activeStateStyles()};
-        background-color: ${theme.tokens.colors.get('palette.secondary.light')};
+        background-color: ${theme.tokens.colors.get('palette.secondary.muted')};
       }
     `;
