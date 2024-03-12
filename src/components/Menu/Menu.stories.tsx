@@ -54,7 +54,7 @@ export const MenuTriggers = {
     return (
       <Stack height={400}>
         <IconButton
-          name={'menu'}
+          iconName={'menu'}
           ref={btn1.btnRef}
           aria-label="Menu"
           onClick={btn1.handleBtnClick}
@@ -568,7 +568,7 @@ export const MenuDisabledKeys = {
     return (
       <Stack height={400}>
         <IconButton
-          name={'menu'}
+          iconName={'menu'}
           ref={btn1.btnRef}
           aria-label="Menu"
           onClick={btn1.handleBtnClick}

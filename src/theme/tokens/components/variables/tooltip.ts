@@ -50,14 +50,9 @@ const tooltip = {
     },
   },
   boxShadow: {
-    value: '{boxShadow.2}',
+    value: '{sem.boxShadow.2}',
     type: 'boxShadow',
     description: 'Sets boxShadow for inverted tooltip variant',
-  },
-  text: {
-    value: '{sem.typography.normal.body03}',
-    type: 'typography',
-    description: 'Sets text for tooltip',
   },
   textColor: {
     default: {
@@ -70,6 +65,11 @@ const tooltip = {
       type: 'color',
       description: 'Sets textColor for tooltip',
     },
+  },
+  text: {
+    value: '{sem.typography.normal.body03}',
+    type: 'typography',
+    description: 'Sets text style for default tooltip',
   },
 } as const;
 

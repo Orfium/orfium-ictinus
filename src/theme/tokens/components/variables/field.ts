@@ -59,12 +59,12 @@ const field = {
   stepper: {
     backgroundColor: {
       default: {
-        value: '{sem.colors.palette.tertiary.main}',
+        value: '{sem.colors.palette.tertiary.base}',
         type: 'color',
         description: 'Sets backgroundColor for field increment (default state)',
       },
       focused: {
-        value: '{sem.colors.palette.tertiary.light}',
+        value: '{sem.colors.palette.tertiary.muted}',
         type: 'color',
         description: 'Sets backgroundColor for field increment (focused state)',
       },
@@ -81,71 +81,34 @@ const field = {
         'sets vertical padding between a compact input field container and its hint (if used)',
     },
   },
-  input: {
-    normal: {
-      value: '{sem.typography.normal.body02}',
-      type: 'typography',
-      description: 'Sets text for normal field prefix/input/suffix/placeholder',
-    },
-    compact: {
-      value: '{sem.typography.normal.body03}',
-      type: 'typography',
-      description: 'Sets text for compact field prefix/input/suffix/placeholder',
-    },
-  },
-  label: {
-    value: '{sem.typography.normal.label03}',
-    type: 'typography',
-    description: 'Sets text for input field label',
-  },
-  hint: {
-    value: '{sem.typography.normal.body03}',
-    type: 'typography',
-    errorHintColor: {
-      value: '{sem.colors.textColor.main.error}',
-      type: 'color',
-      description: 'Sets textColor for a field error hint',
-    },
-    hintColor: {
-      value: '{sem.colors.textColor.main.secondary}',
-      type: 'color',
-      description: 'Sets text color for a field hint',
-    },
-    description: 'Sets text for input field hint',
-    iconSize: {
-      value: '{sem.icon.size.2}',
-      type: 'sizing',
-      description: 'Sets icon size for error hint icon in fields',
-    },
-  },
   backgroundColor: {
     default: {
-      value: '{sem.colors.palette.secondary.main}',
+      value: '{sem.colors.palette.secondary.base}',
       type: 'color',
       description: 'Sets backgroundColor for default input field container',
     },
     hover: {
       type: 'color',
-      value: '{sem.colors.palette.secondary.light}',
+      value: '{sem.colors.palette.secondary.muted}',
       description: 'Sets backgroundColor for hovered input field container',
     },
     focused: {
       type: 'color',
-      value: '{sem.colors.palette.secondary.main}',
+      value: '{sem.colors.palette.secondary.base}',
       description: 'Sets backgroundColor for focused input field container',
     },
     error: {
-      value: '{sem.colors.palette.error.light}',
+      value: '{sem.colors.palette.error.muted}',
       type: 'color',
       description: 'Sets backgroundColor for error input field container',
     },
     errorHover: {
-      value: '{sem.colors.palette.error.light}',
+      value: '{sem.colors.palette.error.muted}',
       type: 'color',
       description: 'Sets backgroundColor for hoveredError input field container',
     },
     readOnly: {
-      value: '{sem.colors.palette.secondary.light}',
+      value: '{sem.colors.palette.secondary.muted}',
       type: 'color',
       description: 'Sets backgroundColor for read only input field container',
     },
@@ -320,6 +283,28 @@ const field = {
         description: "Sets 'large' minimum width for base field (normal size)",
       },
     },
+  },
+  input: {
+    normal: {
+      value: '{sem.typography.normal.body02}',
+      type: 'typography',
+      description: "Sets text style for field prefix/input/suffix/placeholder ('normal' size)",
+    },
+    compact: {
+      value: '{sem.typography.normal.body03}',
+      type: 'typography',
+      description: "Sets text style for field prefix/input/suffix/placeholder ('compact' size)",
+    },
+  },
+  label: {
+    value: '{sem.typography.normal.label03}',
+    type: 'typography',
+    description: 'Sets text style for field label',
+  },
+  hint: {
+    value: '{sem.typography.normal.body03}',
+    type: 'typography',
+    description: 'Sets text style for field hint (if shown)',
   },
 } as const;
 

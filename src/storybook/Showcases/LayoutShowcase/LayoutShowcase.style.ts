@@ -19,7 +19,7 @@ export const containerStyle = () => css`
 
 export const siderStyle = () => (theme: Theme) =>
   css`
-    background: ${theme.tokens.colors.get('palette.upsell.dark')};
+    background: ${theme.tokens.colors.get('palette.upsell.contrast')};
     min-width: 97px;
     max-width: 97px;
     display: flex;
@@ -35,7 +35,7 @@ export const mainContainerStyle = () => css`
 
 export const headerFooterStyle = () => (theme: Theme) =>
   css`
-    background: ${theme.tokens.colors.get('palette.warning.main')};
+    background: ${theme.tokens.colors.get('palette.warning.base')};
     min-height: 40px;
     max-height: 40px;
     display: flex;
@@ -45,7 +45,7 @@ export const headerFooterStyle = () => (theme: Theme) =>
 
 export const contentStyle = () => (theme: Theme) =>
   css`
-    background: ${theme.tokens.colors.get('palette.success.main')};
+    background: ${theme.tokens.colors.get('palette.success.base')};
     height: 100%;
     display: flex;
     align-items: center;
@@ -64,7 +64,7 @@ export const gridContainerStyle = () =>
 
 export const gridStyle = (width: number) => (theme: Theme) =>
   css`
-    background: ${theme.tokens.colors.get('palette.secondary.main')};
+    background: ${theme.tokens.colors.get('palette.secondary.base')};
     color: ${theme.tokens.colors.get('textColor.default.secondary')};
     font-size: 28px;
     font-weight: bold;
