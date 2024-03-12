@@ -66,7 +66,7 @@ const ButtonBase = React.forwardRef<HTMLButtonElement, ButtonBaseProps>((props, 
     <div css={buttonWrapperStyle({ isBlock })}>
       {isLoading && !isDisabled && <ButtonLoader dataTestId={testIdName} />}
       <button
-        {...omit(rest, ['avatar', 'iconRightName', 'iconLeftName', isIconButton ? 'name' : null])}
+        {...omit(rest, ['avatar', 'iconRightName', 'iconLeftName', 'iconName'])}
         ref={ref}
         type={htmlType}
         data-testid={generateTestDataId(testIdName, dataTestId)}

@@ -58,7 +58,7 @@ const Modal: React.FCC<ModalProps> = ({
             <div css={closeContainer}>
               <IconButton
                 type="tertiary"
-                name="close"
+                iconName="close"
                 onClick={onClose}
                 color={theme.tokens.colors.get('textColor.default.secondary')}
                 dataTestId="modal-close"
