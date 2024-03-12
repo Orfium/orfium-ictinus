@@ -97,7 +97,7 @@ const DropdownButton = React.forwardRef<HTMLButtonElement, DropdownButtonProps>(
             <IconButton
               type={type}
               size={size}
-              name={iconButtonName}
+              iconName={iconButtonName}
               onClick={handleIconButtonClick}
               dataTestPrefixId={generateTestDataId('icon-dropdown', dataTestPrefixId)}
             />
@@ -119,7 +119,7 @@ const DropdownButton = React.forwardRef<HTMLButtonElement, DropdownButtonProps>(
               <IconButton
                 type={type}
                 size={size}
-                name="triangleDown"
+                iconName="triangleDown"
                 shape="square"
                 onClick={handleIconButtonClick}
                 dataTestPrefixId={generateTestDataId('dropdown-toggle', dataTestPrefixId)}

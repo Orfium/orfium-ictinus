@@ -86,7 +86,7 @@ const MonthWrapper = ({
           {(showedArrows === 'left' || showedArrows === 'both') && (
             <div css={monthHeaderNavigationIconWrapperStyle({ position: 'left' })}>
               <IconButton
-                name="triangleLeft"
+                iconName="triangleLeft"
                 type="tertiary"
                 onClick={() => handleArrow('back')}
                 dataTestId="month_back"
@@ -129,7 +129,7 @@ const MonthWrapper = ({
             {(showedArrows === 'right' || showedArrows === 'both') && (
               <div css={monthHeaderNavigationIconWrapperStyle({ position: 'right' })}>
                 <IconButton
-                  name="triangleRight"
+                  iconName="triangleRight"
                   type="tertiary"
                   onClick={() => handleArrow('forward')}
                   dataTestId="month_forward"
