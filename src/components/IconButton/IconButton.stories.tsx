@@ -31,24 +31,24 @@ export const IconButtonTypesAndSizes = {
   render: () => (
     <>
       <Stack>
-        <IconButton name="moreOptions" />
-        <IconButton name="moreOptions" type="secondary" />
-        <IconButton name="moreOptions" type="tertiary" />
+        <IconButton iconName="moreOptions" />
+        <IconButton iconName="moreOptions" type="secondary" />
+        <IconButton iconName="moreOptions" type="tertiary" />
       </Stack>
       <Stack>
-        <IconButton name="moreOptions" shape="square" />
-        <IconButton name="moreOptions" type="secondary" shape="square" />
-        <IconButton name="moreOptions" type="tertiary" shape="square" />
+        <IconButton iconName="moreOptions" shape="square" />
+        <IconButton iconName="moreOptions" type="secondary" shape="square" />
+        <IconButton iconName="moreOptions" type="tertiary" shape="square" />
       </Stack>
       <Stack>
-        <IconButton name="moreOptions" size="compact" />
-        <IconButton name="moreOptions" type="secondary" size="compact" />
-        <IconButton name="moreOptions" type="tertiary" size="compact" />
+        <IconButton iconName="moreOptions" size="compact" />
+        <IconButton iconName="moreOptions" type="secondary" size="compact" />
+        <IconButton iconName="moreOptions" type="tertiary" size="compact" />
       </Stack>
       <Stack>
-        <IconButton name="moreOptions" shape="square" size="compact" />
-        <IconButton name="moreOptions" type="secondary" shape="square" size="compact" />
-        <IconButton name="moreOptions" type="tertiary" shape="square" size="compact" />
+        <IconButton iconName="moreOptions" shape="square" size="compact" />
+        <IconButton iconName="moreOptions" type="secondary" shape="square" size="compact" />
+        <IconButton iconName="moreOptions" type="tertiary" shape="square" size="compact" />
       </Stack>
     </>
   ),
@@ -60,7 +60,7 @@ export const Playground = {
   render: () => (
     <Stack>
       <IconButton
-        name={select(
+        iconName={select(
           'name',
           Object.keys(iconSelector)
             .sort((a, b) => a.localeCompare(b))
