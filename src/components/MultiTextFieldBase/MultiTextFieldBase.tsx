@@ -161,7 +161,7 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
                 label={label}
                 isRequired={isRequired}
                 isAnimated={hasValue}
-                hasError={status?.type === 'error'}
+                hasError={!isDisabled && status?.type === 'error'}
               />
             )}
           </div>

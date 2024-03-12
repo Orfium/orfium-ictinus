@@ -110,7 +110,7 @@ const NumberField = React.forwardRef<HTMLInputElement, NumberFieldProps>((props,
                 label={label}
                 isRequired={isRequired}
                 isAnimated={Boolean(value)}
-                hasError={status?.type === 'error'}
+                hasError={!isDisabled && status?.type === 'error'}
               />
               {hasStepper && (
                 <Stepper
