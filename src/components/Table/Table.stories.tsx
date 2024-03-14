@@ -1,4 +1,3 @@
-import { select, number } from '@storybook/addon-knobs';
 import Table from './Table';
 import TableFilterShowcase from '../storyUtils/TableFilterShowcase';
 import { FIGMA_URL } from '../../utils/common';
@@ -40,6 +39,7 @@ export default {
         url: `${FIGMA_URL}?node-id=7848%3A131938`,
       },
     ],
+    controls: { disable: true },
   },
 };
 
@@ -444,7 +444,7 @@ export const TableWithExpandableRows = {
   render: () => (
     <Table
       columns={['Title', 'Name', 'Surname', 'Age']}
-      type={select('type', ['normal', 'nested-header'], 'normal')}
+      type={'normal'}
       isPadded
       hasFixedHeader
       hasFixedCTA
@@ -480,7 +480,7 @@ export const TableWithExpandableRows = {
 
         expanded: () => <div>Hey i am an expandable content</div>,
       }))}
-      actionWidth={number('Action Width', 3)}
+      actionWidth={3}
     />
   ),
 
@@ -526,7 +526,7 @@ export const TableWithExpandableRowsExpandedOnPageLoad = {
 
         expanded: () => <div>Hey i am an expandable content</div>,
       }))}
-      actionWidth={number('Action Width', 3)}
+      actionWidth={3}
       isInitiallyExpanded
     />
   ),
@@ -894,7 +894,7 @@ export const TableWithExpandableRowsAndSortDir = {
 
         expanded: () => <div>Hey i am an expandable content</div>,
       }))}
-      actionWidth={number('Action Width', 3)}
+      actionWidth={3}
     />
   ),
 

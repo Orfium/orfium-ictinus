@@ -1,4 +1,3 @@
-import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
 import LineChart from './LineChart';
 import BarChartShowCase from '../storyUtils/BarChartShowCase';
 import DonutChartShowCase from '../storyUtils/DonutChartShowCase';
@@ -7,23 +6,42 @@ import { initData } from './LineChart/mockedData';
 
 export default {
   title: 'Original Components/Chart',
+
+  argTypes: {
+    labelX: { type: 'string' },
+    labelY: { type: 'string' },
+    isLegendVisible: { type: 'boolean' },
+    value: { type: 'string' },
+    units: { type: 'string' },
+  },
+
+  args: {
+    value: 'value',
+    units: 'units',
+    labelX: 'Dates',
+    labelY: 'Values',
+    isLegendVisible: true,
+  },
 };
 
 export const LineChartStory = {
-  render: () => (
-    <LineChart
-      data={initData}
-      labelX={text('labelX', 'Dates')}
-      labelY={text('labelY', 'Values')}
-      isLegendVisible={boolean('show legend', true)}
-      color={color}
-    />
-  ),
+  render: (args) => {
+    const { labelX, labelY, isLegendVisible } = args;
+    return (
+      <LineChart
+        data={initData}
+        labelX={labelX}
+        labelY={labelY}
+        isLegendVisible={isLegendVisible}
+        color={color}
+      />
+    );
+  },
 
   name: 'LineChart',
 
   parameters: {
-    decorators: [withKnobs],
+    controls: { include: ['labelX', 'labelY', 'isLegendVisible'] },
   },
 };
 
@@ -32,21 +50,20 @@ export const BarChart = {
   name: 'BarChart',
 
   parameters: {
-    decorators: [withKnobs],
+    controls: { disable: true },
   },
 };
 
 export const DonutChart = {
-  render: () => (
-    <DonutChartShowCase
-      chartValue={text('chartValue', 'value')}
-      chartUnits={text('chartUnits', 'units')}
-    />
-  ),
+  render: (args) => {
+    const { value, units } = args;
+
+    return <DonutChartShowCase chartValue={value} chartUnits={units} />;
+  },
 
   name: 'DonutChart',
 
   parameters: {
-    decorators: [withKnobs],
+    controls: { include: ['value', 'units'] },
   },
 };

@@ -121,19 +121,19 @@
 }
 
 .emotion-4:focus::-webkit-input-placeholder {
-  color: #52567a;
+  color: transparent;
 }
 
 .emotion-4:focus::-moz-placeholder {
-  color: #52567a;
+  color: transparent;
 }
 
 .emotion-4:focus:-ms-input-placeholder {
-  color: #52567a;
+  color: transparent;
 }
 
 .emotion-4:focus::placeholder {
-  color: #52567a;
+  color: transparent;
 }
 
 .emotion-4:not(:focus):placeholder-shown+label {
@@ -247,7 +247,7 @@
                   class="emotion-4"
                   data-testid="input"
                   id="textfield__00"
-                  placeholder="Placeholder "
+                  placeholder="TextField"
                   value=""
                 />
                 <label
@@ -267,7 +267,7 @@
             <span
               id="textfield__00_hintMessage"
             >
-              Message in Text Field
+              Hint Message
             </span>
           </div>
         </div>

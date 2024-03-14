@@ -1,4 +1,3 @@
-import { boolean, number, select, text, withKnobs } from '@storybook/addon-knobs';
 import NumberField from './NumberField';
 import Stack from '../storyUtils/Stack';
 import { FIGMA_URL } from '../../utils/common';
@@ -15,6 +14,17 @@ export default {
       },
     ],
   },
+
+  args: {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+    hintMessage: 'Hint Message',
+    label: 'NumberField',
+  },
+
+  argTypes: {
+    status: { type: 'select', options: ['normal', 'error', 'read-only'] },
+  },
 };
 
 export const NumberFieldWithPlaceholder = {
@@ -26,84 +36,114 @@ export const NumberFieldWithPlaceholder = {
   ),
 
   name: 'NumberField with placeholder',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 export const NumberFieldWithFormatOptions = {
-  render: () => (
-    <Stack>
-      <NumberField
-        label={'NumberField'}
-        formatOptions={{
-          minimumFractionDigits: number('minimumFractionDigits', 2),
-          maximumFractionDigits: number('maximumFractionDigits', 2),
-        }}
-      />
-    </Stack>
-  ),
+  render: (args) => {
+    const { minimumFractionDigits, maximumFractionDigits } = args;
+    return (
+      <Stack>
+        <NumberField
+          label={'NumberField'}
+          formatOptions={{
+            minimumFractionDigits: minimumFractionDigits,
+            maximumFractionDigits: maximumFractionDigits,
+          }}
+        />
+      </Stack>
+    );
+  },
 
   name: 'NumberField with format options',
+
+  parameters: {
+    controls: { include: ['minimumFractionDigits', 'maximumFractionDigits'] },
+  },
 };
 
 export const NumberFieldWithStepper = {
-  render: () => (
-    <Stack>
-      <NumberField label={'NumberField'} hasStepper step={number('Step', undefined)} />
-    </Stack>
-  ),
+  render: (args) => {
+    const { step } = args;
+    return (
+      <Stack>
+        <NumberField label={'NumberField'} hasStepper step={step} />
+      </Stack>
+    );
+  },
 
   name: 'NumberField with Stepper',
+
+  parameters: {
+    controls: { include: ['step'] },
+  },
 };
 
 export const NumberFieldWithMinAndMaxValues = {
-  render: () => (
-    <Stack>
-      <NumberField
-        label={'NumberField'}
-        minValue={number('minValue', undefined)}
-        maxValue={number('maxValue', undefined)}
-        suffix={
-          <div
-            style={{
-              color: 'gray',
-            }}
-          >
-            %
-          </div>
-        }
-      />
-    </Stack>
-  ),
+  render: (args) => {
+    const { minValue, maxValue } = args;
+    return (
+      <Stack>
+        <NumberField
+          label={'NumberField'}
+          minValue={minValue}
+          maxValue={maxValue}
+          suffix={
+            <div
+              style={{
+                color: 'gray',
+              }}
+            >
+              %
+            </div>
+          }
+        />
+      </Stack>
+    );
+  },
 
   name: 'NumberField with min/max values',
+  parameters: {
+    controls: { include: ['minValue', 'maxValue'] },
+  },
 };
 
 export const NumberFieldStatuses = {
-  render: () => (
-    <Stack>
-      <NumberField
-        label={'Normal'}
-        status={{
-          type: 'normal',
-          hintMessage: text('Custom Hint Message', 'Hint in Text Field'),
-        }}
-      />
-      <NumberField
-        label={'Error'}
-        status={{
-          type: 'error',
-          hintMessage: text('Custom Error Message', 'Error in Text Field'),
-        }}
-      />
-      <NumberField
-        label={'Read-only'}
-        status={{
-          type: 'read-only',
-          hintMessage: text('Custom Hint Message', 'Hint in Text Field'),
-        }}
-      />
-    </Stack>
-  ),
+  render: (args) => {
+    const { hintMessage } = args;
+    return (
+      <Stack>
+        <NumberField
+          label={'Normal'}
+          status={{
+            type: 'normal',
+            hintMessage,
+          }}
+        />
+        <NumberField
+          label={'Error'}
+          status={{
+            type: 'error',
+            hintMessage,
+          }}
+        />
+        <NumberField
+          label={'Read-only'}
+          status={{
+            type: 'read-only',
+            hintMessage,
+          }}
+        />
+      </Stack>
+    );
+  },
 
   name: 'NumberField statuses',
+  parameters: {
+    controls: { include: ['hintMessage'] },
+  },
 };
 
 export const DisabledNumberField = {
@@ -120,35 +160,68 @@ export const DisabledNumberField = {
     </Stack>
   ),
 
-  name: 'NumberField statuses',
+  name: ' Disabled NumberField',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const Playground = {
-  render: () => (
-    <Stack>
-      <NumberField
-        label={text('Label', 'NumberField')}
-        isDisabled={boolean('isDisabled', false)}
-        isRequired={boolean('isRequired', false)}
-        hasStepper={boolean('hasStepper', false)}
-        minValue={number('minValue', undefined)}
-        maxValue={number('maxValue', undefined)}
-        step={number('step', undefined)}
-        formatOptions={{
-          minimumFractionDigits: number('minimumFractionDigits', 2),
-          maximumFractionDigits: number('maximumFractionDigits', 2),
-        }}
-        status={{
-          type: select('Status', ['error', 'normal', 'read-only'], 'normal'),
-          hintMessage: text('Hint/Error message', 'Message in Number Field'),
-        }}
-      />
-    </Stack>
-  ),
+  render: (args) => {
+    const {
+      label,
+      isDisabled,
+      hintMessage,
+      status,
+      isRequired,
+      hasStepper,
+      minValue,
+      maxValue,
+      step,
+      minimumFractionDigits,
+      maximumFractionDigits,
+    } = args;
+    return (
+      <Stack>
+        <NumberField
+          label={label}
+          isDisabled={isDisabled}
+          isRequired={isRequired}
+          hasStepper={hasStepper}
+          minValue={minValue}
+          maxValue={maxValue}
+          step={step}
+          formatOptions={{
+            minimumFractionDigits,
+            maximumFractionDigits,
+          }}
+          status={{
+            type: status,
+            hintMessage,
+          }}
+        />
+      </Stack>
+    );
+  },
 
   name: 'Playground',
 
   parameters: {
-    decorators: [withKnobs],
+    controls: {
+      include: [
+        'label',
+        'isDisabled',
+        'hintMessage',
+        'status',
+        'isRequired',
+        'hasStepper',
+        'minValue',
+        'maxValue',
+        'step',
+        'minimumFractionDigits',
+        'maximumFractionDigits',
+      ],
+    },
   },
 };

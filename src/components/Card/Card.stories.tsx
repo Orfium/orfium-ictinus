@@ -1,4 +1,3 @@
-import { select, boolean } from '@storybook/addon-knobs';
 import CardShowcase from '../storyUtils/CardShowcase';
 import Card from './Card';
 import Stack from '../storyUtils/Stack';
@@ -17,22 +16,26 @@ export default {
       },
     ],
   },
+
+  args: {
+    elevated: '01',
+    radius: '0',
+  },
 };
 
 export const CardWithElevation = {
-  render: () => (
-    <Stack>
-      <CardShowcase
-        elevated={select('elevated', [undefined, '01', '02', '03', '04'], '01')}
-        isTransparent={boolean('isTransparent', false)}
-        radius={select(
-          'radius',
-          [undefined, '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
-          '0'
-        )}
-      />
-    </Stack>
-  ),
+  render: (args) => {
+    const { elevated, isTransparent, radius } = args;
+    return (
+      <Stack>
+        <CardShowcase elevated={elevated} isTransparent={isTransparent} radius={radius} />
+      </Stack>
+    );
+  },
 
   name: 'Card with elevation',
+
+  controls: {
+    include: ['elevated', 'isTransparent', 'radius'],
+  },
 };

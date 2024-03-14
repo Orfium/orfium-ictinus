@@ -1,5 +1,5 @@
-import List, { ListItem, ListItemAction, ListItemText } from '../index';
-import { FIGMA_URL, Function } from '../../../utils/common';
+import { ListItemAction } from '../index';
+import { FIGMA_URL } from '../../../utils/common';
 
 export default {
   title: 'Updated Components/List/ListItemAction',
@@ -15,5 +15,6 @@ export default {
         url: `${FIGMA_URL}?node-id=22406-71589`,
       },
     ],
+    controls: { disable: true },
   },
 };

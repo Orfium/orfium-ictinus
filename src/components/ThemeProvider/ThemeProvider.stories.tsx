@@ -5,6 +5,8 @@ import Test from './Test';
 export default {
   title: 'Original Components/ThemeProvider',
   component: ThemeProvider,
+
+  parameters: { controls: { disable: true } },
 };
 
 export const SettingUpAButtonExample = {

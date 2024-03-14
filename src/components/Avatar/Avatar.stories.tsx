@@ -1,4 +1,3 @@
-import { select, withKnobs } from '@storybook/addon-knobs';
 import Avatar from './Avatar';
 import Stack from '../storyUtils/Stack';
 import { FIGMA_URL } from '../../utils/common';
@@ -35,6 +34,10 @@ export const AvatarWithIcon = {
   ),
 
   name: 'Avatar with icon',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const AvatarWithLetter = {
@@ -62,6 +65,10 @@ export const AvatarWithLetter = {
   ),
 
   name: 'Avatar with letter',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const AvatarWithColor = {
@@ -95,6 +102,10 @@ export const AvatarWithColor = {
   ),
 
   name: 'Avatar with color',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const AvatarWithSrc = {
@@ -122,32 +133,29 @@ export const AvatarWithSrc = {
   ),
 
   name: 'Avatar with src',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const AvatarPlayground = {
-  render: () => (
-    <Stack>
-      <Avatar
-        size={select('size', [1, 2, 3, 4, 5, 6], 1)}
-        color={select('color', ['blue', 'teal', 'purple', 'red', 'orange'], 'blue')}
-      >
-        JN
-      </Avatar>
-      <Avatar
-        size={select('size', [1, 2, 3, 4, 5, 6], 1)}
-        src={'https://mui.com/static/images/avatar/1.jpg'}
-        color={select('color', ['blue', 'teal', 'purple', 'red', 'orange'], 'blue')}
-      />
-      <Avatar
-        size={select('size', [1, 2, 3, 4, 5, 6], 1)}
-        color={select('color', ['blue', 'teal', 'purple', 'red', 'orange'], 'blue')}
-      />
-    </Stack>
-  ),
+  render: (args) => {
+    const { size, color } = args;
+    return (
+      <Stack>
+        <Avatar size={size} color={color}>
+          JN
+        </Avatar>
+        <Avatar size={size} src={'https://mui.com/static/images/avatar/1.jpg'} color={color} />
+        <Avatar size={size} color={color} />
+      </Stack>
+    );
+  },
 
-  name: 'Avatar Playground',
+  name: 'Playground',
 
   parameters: {
-    decorators: [withKnobs],
+    controls: { include: ['size', 'color'] },
   },
 };

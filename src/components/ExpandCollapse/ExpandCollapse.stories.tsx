@@ -1,10 +1,13 @@
-import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
 import ExpandCollapse from './ExpandCollapse';
 import { Fragment } from 'react';
 
 export default {
   title: 'Original Components/ExpandCollapse',
   component: ExpandCollapse,
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const ExpandCollapseStory = {
