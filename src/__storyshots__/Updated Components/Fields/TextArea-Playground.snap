@@ -117,19 +117,19 @@
 }
 
 .emotion-4:focus::-webkit-input-placeholder {
-  color: #52567a;
+  color: transparent;
 }
 
 .emotion-4:focus::-moz-placeholder {
-  color: #52567a;
+  color: transparent;
 }
 
 .emotion-4:focus:-ms-input-placeholder {
-  color: #52567a;
+  color: transparent;
 }
 
 .emotion-4:focus::placeholder {
-  color: #52567a;
+  color: transparent;
 }
 
 .emotion-4:not(:focus):placeholder-shown+label {
@@ -244,7 +244,7 @@
               aria-multiline="true"
               class="emotion-4"
               cols="10"
-              placeholder="Placeholder "
+              placeholder="TextArea"
               role="textbox"
               rows="5"
             />
@@ -262,7 +262,7 @@
         data-testid="error"
       >
         <span>
-          Hint in Text Area
+          Hint Message
         </span>
       </div>
     </div>

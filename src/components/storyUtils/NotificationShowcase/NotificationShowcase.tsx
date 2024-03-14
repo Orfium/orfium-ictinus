@@ -1,8 +1,8 @@
-import { select } from '@storybook/addon-knobs';
-import type { ReactNode} from 'react';
+import type { ReactNode } from 'react';
 import React, { useState } from 'react';
 
 import Button from '../../Button';
+import type { NotificationsContainerPositions } from '../../Notification/NotificationsContainer';
 import NotificationsContainer from '../../Notification/NotificationsContainer';
 
 const NotificationShowcase: React.FCC<{ id?: string }> = ({ children, id }) => {
@@ -19,8 +19,9 @@ const NotificationShowcase: React.FCC<{ id?: string }> = ({ children, id }) => {
 export const NotificationContainerWithinDOMElement = (props: {
   children: ReactNode;
   id: string;
+  position: NotificationsContainerPositions;
 }) => {
-  const { children, id } = props;
+  const { children, id, position } = props;
   const [divEl, setDivEl] = useState<HTMLDivElement | null>(null);
 
   return (
@@ -31,14 +32,7 @@ export const NotificationContainerWithinDOMElement = (props: {
       id={id}
       style={{ width: '928px', height: '500px', position: 'relative' }}
     >
-      <NotificationsContainer
-        parent={divEl}
-        position={select(
-          'position',
-          ['top-right', 'top-left', 'bottom-left', 'bottom-right'],
-          'bottom-right'
-        )}
-      >
+      <NotificationsContainer parent={divEl} position={position}>
         {children}
       </NotificationsContainer>
     </div>

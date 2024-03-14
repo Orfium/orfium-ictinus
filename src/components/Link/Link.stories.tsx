@@ -1,8 +1,6 @@
-import { boolean, select, withKnobs } from '@storybook/addon-knobs';
 import Link from './Link';
 import Stack from '../storyUtils/Stack';
 import { FIGMA_URL } from '../../utils/common';
-import { getIconSelectorKnob } from '../../utils/stories';
 import { Link as ReactRouterLink, MemoryRouter as Router } from 'react-router-dom';
 
 export default {
@@ -18,6 +16,8 @@ export default {
       },
     ],
   },
+
+  args: { placement: 'block', size: 1 },
 };
 
 export const LinkStyles = {
@@ -35,6 +35,10 @@ export const LinkStyles = {
   ),
 
   name: 'Link Styles',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const Placement = {
@@ -58,6 +62,10 @@ export const Placement = {
   ),
 
   name: 'Link Placement',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const Sizes = {
@@ -76,27 +84,38 @@ export const Sizes = {
   ),
 
   name: 'Link Sizes',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const LinkWithIcon = {
-  render: () => (
-    <Stack isVertical>
-      <Link href="#" size={1} iconName={getIconSelectorKnob('iconName', 'externalLink')}>
-        Link
-      </Link>
-      <Link href="#" size={2} iconName={getIconSelectorKnob('iconName', 'externalLink')}>
-        Link
-      </Link>
-      <Link href="#" size={3} iconName={getIconSelectorKnob('iconName', 'externalLink')}>
-        Link
-      </Link>
-    </Stack>
-  ),
+  render: (args) => {
+    const { iconName } = args;
+    return (
+      <Stack isVertical>
+        <Link href="#" size={1} iconName={iconName}>
+          Link
+        </Link>
+        <Link href="#" size={2} iconName={iconName}>
+          Link
+        </Link>
+        <Link href="#" size={3} iconName={iconName}>
+          Link
+        </Link>
+      </Stack>
+    );
+  },
 
   name: 'Link with Icon',
 
+  args: {
+    iconName: 'externalLink',
+  },
+
   parameters: {
-    decorators: [withKnobs],
+    controls: { include: ['iconName'] },
   },
 };
 export const ThirdPartyRoutingLibrary = {
@@ -111,28 +130,32 @@ export const ThirdPartyRoutingLibrary = {
   name: 'Third-party Routing Library',
 
   parameters: {
-    decorators: [withKnobs],
+    controls: { disable: true },
   },
 };
 
 export const Playground = {
-  render: () => (
-    <Stack isVertical>
-      <Link
-        href="#"
-        size={select('size', [1, 2, 3], 1)}
-        type={select('type', ['primary', 'inverted'], 'primary')}
-        placement={select('placement', ['block', 'inline'], 'block')}
-        isDisabled={boolean('isDisabled', false)}
-      >
-        Link
-      </Link>
-    </Stack>
-  ),
+  render: (args) => {
+    const { size, iconName, isDisabled, placement, type } = args;
+    return (
+      <Stack isVertical>
+        <Link
+          href="#"
+          size={size}
+          iconName={iconName}
+          type={type}
+          placement={placement}
+          isDisabled={isDisabled}
+        >
+          Link
+        </Link>
+      </Stack>
+    );
+  },
 
   name: 'Playground',
 
   parameters: {
-    decorators: [withKnobs],
+    controls: { include: ['size', 'iconName', 'type', 'placement', 'isDisabled'] },
   },
 };

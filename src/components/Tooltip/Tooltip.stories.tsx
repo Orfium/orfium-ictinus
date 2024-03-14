@@ -1,4 +1,3 @@
-import { boolean, number, select, text } from '@storybook/addon-knobs';
 import Tooltip from './Tooltip';
 import Stack from '../storyUtils/Stack';
 import { hoverOnTooltips } from './utils';
@@ -17,6 +16,15 @@ export default {
       },
     ],
     chromatic: { delay: 400 },
+  },
+
+  args: {
+    content: 'This is a Tooltip',
+    placement: 'right',
+  },
+
+  argTypes: {
+    content: { type: 'string' },
   },
 };
 
@@ -54,6 +62,10 @@ export const TextTooltip = {
   autoplay: true,
   play: hoverOnTooltips,
   name: 'Text Tooltip',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const InteractiveTooltip = {
@@ -70,6 +82,10 @@ export const InteractiveTooltip = {
   autoplay: true,
   play: hoverOnTooltips,
   name: 'Interactive Tooltip',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const TooltipPlacement = {
@@ -110,48 +126,57 @@ export const TooltipPlacement = {
   autoplay: true,
   play: hoverOnTooltips,
   name: 'Tooltip placement',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const Playground = {
-  render: () => (
-    <Stack>
-      <Function>
-        {() => {
-          return (
-            <div
-              style={{
-                padding: '16px',
-                width: '600px',
-                height: '200px',
-                display: 'flex',
-                gap: '128px',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-            >
-              <Tooltip
-                content={text('Tooltip Text', 'This is a Tooltip')}
-                placement={select('placement', ['top', 'right', 'bottom', 'left'], 'right')}
-                isInverted={boolean('isInverted', false)}
-                delayIn={number('delayIn', 100)}
-                delayOut={number('delayOut', 100)}
+  render: (args) => {
+    const { content, placement, isInverted, delayIn, delayOut } = args;
+    return (
+      <Stack isInverted={isInverted} height={500}>
+        <Function>
+          {() => {
+            return (
+              <div
+                style={{
+                  padding: '16px',
+                  display: 'flex',
+                  gap: '128px',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
               >
-                <Button>Text</Button>
-              </Tooltip>
-              <TooltipShowcase
-                buttonText={'Interactive'}
-                isInverted={boolean('isInverted', false)}
-                delayIn={number('delayIn', 100)}
-                delayOut={number('delayOut', 100)}
-                placement={select('placement', ['top', 'right', 'bottom', 'left'], 'right')}
-              />
-            </div>
-          );
-        }}
-      </Function>
-    </Stack>
-  ),
+                <Tooltip
+                  content={content}
+                  placement={placement}
+                  isInverted={isInverted}
+                  delayIn={delayIn}
+                  delayOut={delayOut}
+                >
+                  <Button>Text</Button>
+                </Tooltip>
+                <TooltipShowcase
+                  buttonText={'Interactive'}
+                  placement={placement}
+                  isInverted={isInverted}
+                  delayIn={delayIn}
+                  delayOut={delayOut}
+                />
+              </div>
+            );
+          }}
+        </Function>
+      </Stack>
+    );
+  },
   autoplay: true,
   play: hoverOnTooltips,
   name: 'Playground',
+
+  parameters: {
+    controls: { include: ['content', 'placement', 'isInverted', 'delayIn', 'delayOut'] },
+  },
 };

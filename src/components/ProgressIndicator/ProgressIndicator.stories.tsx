@@ -1,5 +1,3 @@
-import { boolean, number, select, withKnobs } from '@storybook/addon-knobs';
-
 import ProgressIndicator from './ProgressIndicator';
 import Typography from '../Typography';
 import Stack from '../storyUtils/Stack';
@@ -17,6 +15,17 @@ export default {
         url: `${FIGMA_URL}?node-id=10283%3A104361`,
       },
     ],
+  },
+
+  args: {
+    status: 'normal',
+    type: 'linear',
+  },
+
+  argTypes: {
+    value: {
+      name: 'value (0-100)',
+    },
   },
 };
 
@@ -57,6 +66,9 @@ export const LinearProgressIndicatorWithPercentage = {
     </Stack>
   ),
   name: 'Linear ProgressIndicator with percentage',
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const LinearProgressIndicatorIndeterminate = {
@@ -66,6 +78,9 @@ export const LinearProgressIndicatorIndeterminate = {
     </Stack>
   ),
   name: 'Linear ProgressIndicator - indeterminate',
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const BlockProgressIndicator = {
@@ -75,6 +90,9 @@ export const BlockProgressIndicator = {
     </Stack>
   ),
   name: 'Block ProgressIndicator',
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const CircularProgressIndicatorWithPercentage = {
@@ -107,6 +125,9 @@ export const CircularProgressIndicatorWithPercentage = {
     </Stack>
   ),
   name: 'Circular ProgressIndicator with percentage',
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const CircularProgressIndicatorIndeterminate = {
@@ -116,6 +137,9 @@ export const CircularProgressIndicatorIndeterminate = {
     </Stack>
   ),
   name: 'Circular ProgressIndicator - indeterminate',
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const CircularProgressIndicatorErrorStates = {
@@ -130,26 +154,34 @@ export const CircularProgressIndicatorErrorStates = {
     </>
   ),
   name: 'Circular ProgressIndicator - Error states',
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const Playground = {
-  render: () => (
-    <Stack width={300} isVertical>
-      <ProgressIndicator
-        type={select('type', ['linear', 'circular'], 'linear')}
-        status={select('status', ['normal', 'error'], 'normal')}
-        isBlock={boolean('isBlock [for linear only]', false)}
-      />
-      <ProgressIndicator
-        value={number('value', undefined)}
-        type={select('type', ['linear', 'circular'], 'linear')}
-        status={select('status', ['normal', 'error'], 'normal')}
-        isBlock={boolean('isBlock [for linear only]', false)}
-      />
-    </Stack>
-  ),
+  render: (args) => {
+    const { type, status, isBlock, value } = args;
+    return (
+      <Stack width={400} isVertical>
+        <div css={{ display: 'flex', gap: '16px', flexDirection: 'column', marginBottom: '48px' }}>
+          <ProgressIndicator type={type} status={status} isBlock={isBlock} />
+          <Typography>Indeterminate State</Typography>
+        </div>
+        <div css={{ display: 'flex', gap: '16px', flexDirection: 'column' }}>
+          <ProgressIndicator value={value} type={type} status={status} isBlock={isBlock} />
+          <div css={{ display: 'flex', flexDirection: 'column' }}>
+            <Typography>Determinate State</Typography>
+            <Typography variant="body03">
+              Use the "value" control to create the determinate state
+            </Typography>
+          </div>
+        </div>
+      </Stack>
+    );
+  },
   parameters: {
-    decorators: [withKnobs],
+    controls: { include: ['type', 'status', 'isBlock', 'value (0-100)'] },
   },
   name: 'Playground',
 };

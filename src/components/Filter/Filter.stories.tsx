@@ -1,4 +1,3 @@
-import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
 import { FilterOption } from './Filter.types';
 import Stack from '../storyUtils/Stack';
 import { FIGMA_URL } from '../../utils/common';
@@ -24,6 +23,15 @@ export default {
       },
     ],
   },
+
+  args: {
+    singleFilterLabel: 'Single Filter',
+    multiFilterLabel: 'Multi Filter',
+  },
+
+  argTypes: {
+    filterType: { type: 'select', options: ['preset', 'added'] },
+  },
 };
 
 export const PresetFilter = {
@@ -46,6 +54,10 @@ export const PresetFilter = {
     );
   },
   name: 'Preset Filter',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const AddedFilter = {
@@ -112,6 +124,10 @@ export const AddedFilter = {
     );
   },
   name: 'Added Filter',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const SimpleFilter = {
@@ -134,6 +150,10 @@ export const SimpleFilter = {
     );
   },
   name: 'Simple Filter',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const SearchableFilter = {
@@ -157,6 +177,10 @@ export const SearchableFilter = {
     );
   },
   name: 'Searchable Filter',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const AsyncFilter = {
@@ -204,6 +228,10 @@ export const AsyncFilter = {
     );
   },
   name: 'Filter with async search',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const MultiFilter = {
@@ -271,11 +299,19 @@ export const MultiFilter = {
     );
   },
   name: 'Multi Filter',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const FilterWithDatePicker = {
   ...DatePickerStories.DatePickerWithFilter,
   name: 'Filter with Date Picker',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const DisabledFilter = {
@@ -303,6 +339,10 @@ export const DisabledFilter = {
     );
   },
   name: 'Disabled Filter',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const CustomFilter = {
@@ -363,43 +403,70 @@ export const CustomFilter = {
     );
   },
   name: 'Custom Filter',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const Playground = {
-  render: () => {
+  render: (args) => {
     const [selectedFilter, setSelectedFilter] = React.useState<FilterOption>();
     const [selectedFilters, setSelectedFilters] = React.useState<FilterOption[]>([]);
+    const {
+      isSearchable,
+      filterType,
+      singleFilterLabel,
+      multiFilterLabel,
+      isDisabled,
+      isVirtualized,
+      hasSelectAllOption,
+    } = args;
 
     return (
       <Stack height={400}>
         <Filter
-          isSearchable={boolean('isSearchable', false)}
+          isSearchable={isSearchable}
           selectedFilter={selectedFilter}
-          filterType={select('filterType', ['preset', 'added'], 'preset')}
+          filterType={filterType}
           onChange={setSelectedFilter}
           onClear={() => setSelectedFilter(undefined)}
           defaultValue={{ label: 'All', value: 'all' }}
-          label={text('Label (Single Filter)', 'Single Filter')}
+          label={singleFilterLabel}
           items={options}
-          isDisabled={boolean('isDisabled', false)}
-          isVirtualized={boolean('isVirtualized', false)}
+          isDisabled={isDisabled}
+          isVirtualized={isVirtualized}
         />
         <Filter
           isMulti
-          isSearchable={boolean('isSearchable', false)}
-          hasSelectAllOption={boolean('hasSelectAllOption', false)}
-          filterType={select('filterType', ['preset', 'added'], 'preset')}
+          isSearchable={isSearchable}
+          hasSelectAllOption={hasSelectAllOption}
+          filterType={filterType}
           selectedFilter={selectedFilters}
           onChange={setSelectedFilters}
           onClear={() => setSelectedFilters([])}
           defaultValue={{ label: 'All', value: 'all' }}
-          label={text('Label (Multi Filter)', 'Multi Filter')}
+          label={multiFilterLabel}
           items={options}
-          isDisabled={boolean('isDisabled', false)}
-          isVirtualized={boolean('isVirtualized', false)}
+          isDisabled={isDisabled}
+          isVirtualized={isVirtualized}
         />
       </Stack>
     );
   },
   name: 'Playground',
+
+  parameters: {
+    controls: {
+      include: [
+        'isSearchable',
+        'filterType',
+        'singleFilterLabel',
+        'multiFilterLabel',
+        'isDisabled',
+        'isVirtualized',
+        'hasSelectAllOption',
+      ],
+    },
+  },
 };

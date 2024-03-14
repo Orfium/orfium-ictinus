@@ -20,6 +20,10 @@ export const RegularTextWithTruncationAndTooltip = {
   ),
 
   name: 'Regular Text with truncation and tooltip',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const RegularTableWithCellTooltips = {

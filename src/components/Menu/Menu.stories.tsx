@@ -30,6 +30,7 @@ export default {
       },
     ],
     chromatic: { delay: 400 },
+    controls: { disable: true },
   },
 };
 

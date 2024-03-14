@@ -1,11 +1,6 @@
-import { select } from '@storybook/addon-knobs';
 import IconButton from './IconButton';
 import Stack from '../storyUtils/Stack';
-import iconSelector from '../Icon/assets/iconSelector';
 import { FIGMA_URL } from '../../utils/common';
-import SectionHeader from '../../storybook/SectionHeader';
-import { getIconSelectorKnob } from '../../utils/stories';
-import { AcceptedIconNames } from '../Icon';
 
 export default {
   title: 'Updated Components/Buttons/IconButton',
@@ -24,6 +19,13 @@ export default {
         url: `${FIGMA_URL}?node-id=8167%3A146863`,
       },
     ],
+  },
+
+  args: {
+    shape: 'circle',
+    size: 'normal',
+    type: 'primary',
+    iconName: 'check',
   },
 };
 
@@ -54,25 +56,25 @@ export const IconButtonTypesAndSizes = {
   ),
 
   name: 'IconButton Types and Sizes',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const Playground = {
-  render: () => (
-    <Stack>
-      <IconButton
-        iconName={select(
-          'name',
-          Object.keys(iconSelector)
-            .sort((a, b) => a.localeCompare(b))
-            .map((iconName) => iconName) as AcceptedIconNames[],
-          'check'
-        )}
-        size={select('size', ['compact', 'normal'], 'normal')}
-        type={select('type', ['primary', 'secondary', 'tertiary'], 'primary')}
-        shape={select('shape', ['circle', 'square'], 'circle')}
-      />
-    </Stack>
-  ),
+  render: (args) => {
+    const { iconName, size, type, shape } = args;
+    return (
+      <Stack>
+        <IconButton iconName={iconName} size={size} type={type} shape={shape} />
+      </Stack>
+    );
+  },
 
   name: 'Playground',
+
+  parameters: {
+    controls: { include: ['iconName', 'size', 'type', 'shape'] },
+  },
 };

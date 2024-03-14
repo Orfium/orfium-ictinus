@@ -118,7 +118,6 @@ const preview: SBPreview = {
   decorators,
   parameters: {
     controls: {
-      expanded: true,
       sort: 'requiredFirst',
     },
     viewport: {

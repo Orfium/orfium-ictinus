@@ -236,6 +236,34 @@
   fill: #52567a!important;
 }
 
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.25rem;
+  opacity: 1;
+  color: #52567a;
+  padding: 0.5rem 0 0;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-9 span {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  padding: 0;
+}
+
 <div>
   <div>
     <div>
@@ -254,6 +282,7 @@
                   class="emotion-3"
                 >
                   <input
+                    aria-describedby="textfield__00_hintMessage"
                     aria-invalid="false"
                     class="emotion-4"
                     data-testid="input"
@@ -292,6 +321,16 @@
                   </div>
                 </div>
               </div>
+            </div>
+            <div
+              class="emotion-9"
+              data-testid="error"
+            >
+              <span
+                id="textfield__00_hintMessage"
+              >
+                Hint Message
+              </span>
             </div>
           </div>
         </div>

@@ -1,8 +1,6 @@
-import { boolean, select, text, withKnobs, number } from '@storybook/addon-knobs';
 import TextArea from './TextArea';
 import Stack from '../storyUtils/Stack';
 import { FIGMA_URL, Function } from '../../utils/common';
-import SectionHeader from '../../storybook/SectionHeader';
 import { useState } from 'react';
 
 export default {
@@ -23,6 +21,15 @@ export default {
       },
     ],
   },
+
+  args: {
+    hintMessage: 'Hint Message',
+    label: 'TextArea',
+  },
+
+  argTypes: {
+    status: { type: 'select', options: ['normal', 'error', 'read-only'] },
+  },
 };
 
 export const TextAreaWithPlaceholder = {
@@ -40,6 +47,10 @@ export const TextAreaWithPlaceholder = {
   ),
 
   name: 'TextArea with placeholder',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 export const TextAreaWithResizingOption = {
   render: () => (
@@ -49,6 +60,10 @@ export const TextAreaWithResizingOption = {
   ),
 
   name: 'TextArea with resizing option',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const TextAreaWithCounter = {
@@ -74,46 +89,53 @@ export const TextAreaWithCounter = {
     </Stack>
   ),
   name: 'TextArea with counter',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const TextAreaStatuses = {
-  render: () => (
-    <Stack>
+  render: (args) => {
+    const { hintMessage } = args;
+    return (
       <Stack>
-        <TextArea
-          label={'Normal'}
-          cols={10}
-          rows={5}
-          isResizeEnabled={false}
-          status={{
-            type: 'normal',
-            hintMessage: text('Custom Hint Message', 'Hint in Text Area'),
-          }}
-        />
-        <TextArea
-          label={'Error'}
-          cols={10}
-          rows={5}
-          isResizeEnabled={false}
-          status={{
-            type: 'error',
-            hintMessage: text('Custom Error Message', 'Error in Text Area'),
-          }}
-        />
-        <TextArea
-          label={'Read-only'}
-          cols={10}
-          rows={5}
-          isResizeEnabled={false}
-          status={{
-            type: 'read-only',
-            hintMessage: text('Custom Hint Message', 'Hint in Text Area'),
-          }}
-        />
+        <Stack>
+          <TextArea
+            label={'Normal'}
+            cols={10}
+            rows={5}
+            isResizeEnabled={false}
+            status={{
+              type: 'normal',
+              hintMessage,
+            }}
+          />
+          <TextArea
+            label={'Error'}
+            cols={10}
+            rows={5}
+            isResizeEnabled={false}
+            status={{
+              type: 'error',
+              hintMessage,
+            }}
+          />
+          <TextArea
+            label={'Read-only'}
+            cols={10}
+            rows={5}
+            isResizeEnabled={false}
+            status={{
+              type: 'read-only',
+              hintMessage,
+            }}
+          />
+        </Stack>
       </Stack>
-    </Stack>
-  ),
-  parameters: { decorators: [withKnobs] },
+    );
+  },
+  parameters: { controls: { include: ['hintMessage'] } },
   name: 'TextArea statuses',
 };
 
@@ -133,35 +155,56 @@ export const DisabledTextArea = {
     </Stack>
   ),
   name: 'Disabled TextArea',
+
+  parameters: {
+    controls: { disable: true },
+  },
 };
 
 export const Playground = {
-  render: () => (
-    <Stack>
-      <Function>
-        {() => {
-          const [value, setValue] = useState('');
-          const handleChange = (e) => setValue(e.target.value);
-          return (
-            <TextArea
-              value={value}
-              label={text('Label', 'TextArea')}
-              onChange={handleChange}
-              placeholder={text('Placeholder', 'Placeholder')}
-              isDisabled={boolean('isDisabled', false)}
-              isResizeEnabled={boolean('isResizeEnabled', true)}
-              maxCharacters={number('maxCharacters', undefined)}
-              cols={10}
-              rows={5}
-              status={{
-                type: select('status', ['error', 'normal', 'read-only'], 'normal'),
-                hintMessage: text('custom hint message', 'Hint in Text Area'),
-              }}
-            />
-          );
-        }}
-      </Function>
-    </Stack>
-  ),
+  render: (args) => {
+    const { label, placeholder, isDisabled, isResizeEnabled, maxCharacters, status, hintMessage } =
+      args;
+    return (
+      <Stack>
+        <Function>
+          {() => {
+            const [value, setValue] = useState('');
+            const handleChange = (e) => setValue(e.target.value);
+            return (
+              <TextArea
+                value={value}
+                label={label}
+                onChange={handleChange}
+                placeholder={placeholder}
+                isDisabled={isDisabled}
+                isResizeEnabled={isResizeEnabled}
+                maxCharacters={maxCharacters}
+                cols={10}
+                rows={5}
+                status={{
+                  type: status,
+                  hintMessage,
+                }}
+              />
+            );
+          }}
+        </Function>
+      </Stack>
+    );
+  },
   name: 'Playground',
+  parameters: {
+    controls: {
+      include: [
+        'label',
+        'placeholder',
+        'isDisabled',
+        'isResizeEnabled',
+        'maxCharacters',
+        'status',
+        'hintMessage',
+      ],
+    },
+  },
 };

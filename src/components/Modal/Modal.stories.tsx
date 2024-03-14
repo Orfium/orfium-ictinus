@@ -1,4 +1,3 @@
-import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 import PresentComponent from '../storyUtils/PresentComponent';
 import ModalShowcase from '../storyUtils/ModalShowcase';
 import Stack from '../storyUtils/Stack';
@@ -18,58 +17,63 @@ export default {
       },
     ],
   },
+
+  args: {
+    message:
+      'This is just a text inside the modal. This text serves really no purpose but for some reason here you are, continuing reading it. You are just like Alice in Wonderland, trying to see where this will lead you.',
+    label: 'Label',
+    heading: 'Heading',
+    primaryCTALabel: 'Do Action',
+    secondaryCTALabel: 'Secondary Action',
+  },
 };
 
 export const Modal = {
-  render: () => (
-    <Stack>
-      <PresentComponent name="" width={768}>
-        <ModalShowcase>
-          <div>
-            {text(
-              'message',
-              'This is just a text inside the modal. This text serves really no purpose but for some reason here you are, continuing reading it. You are just like Alice in Wonderland, trying to see where this will lead you.'
-            )}
-          </div>
-        </ModalShowcase>
-      </PresentComponent>
-    </Stack>
-  ),
+  render: (args) => {
+    const { message } = args;
+    return (
+      <Stack>
+        <PresentComponent name="" width={768}>
+          <ModalShowcase>
+            <div>{message}</div>
+          </ModalShowcase>
+        </PresentComponent>
+      </Stack>
+    );
+  },
 
   name: 'Modal',
 
   parameters: {
-    decorators: [withKnobs],
+    controls: { include: ['message'] },
   },
 };
 
 export const ModalContent = {
-  render: () => (
-    <Stack>
-      <PresentComponent name="" width={768}>
-        <ModalShowcase
-          contentProps={{
-            label: text('label', 'Label'),
-            heading: text('heading', 'Heading'),
-
-            message: text(
-              'message',
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tristique eros at fringilla fringilla. Donec volutpat lobortis euismod'
-            ),
-
-            primaryCTALabel: text('primaryCTALabel', 'Do Action'),
-            primaryCTA: () => console.log('primaryCTA'),
-            secondaryCTALabel: text('secondaryCTALabel', 'Secondary Action'),
-            secondaryCTA: () => console.log('secondaryCTA'),
-          }}
-        />
-      </PresentComponent>
-    </Stack>
-  ),
+  render: (args) => {
+    const { label, heading, message, primaryCTALabel, secondaryCTALabel } = args;
+    return (
+      <Stack>
+        <PresentComponent name="" width={768}>
+          <ModalShowcase
+            contentProps={{
+              label,
+              heading,
+              message,
+              primaryCTALabel,
+              primaryCTA: () => console.log('primaryCTA'),
+              secondaryCTALabel,
+              secondaryCTA: () => console.log('secondaryCTA'),
+            }}
+          />
+        </PresentComponent>
+      </Stack>
+    );
+  },
 
   name: 'Modal Content',
 
   parameters: {
-    decorators: [withKnobs],
+    controls: { include: ['label', 'heading', 'message', 'primaryCTALabel', 'secondaryCTALabel'] },
   },
 };

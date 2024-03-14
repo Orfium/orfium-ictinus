@@ -28,7 +28,6 @@
     "@storybook/addon-designs": "^7.0.7",
     "@storybook/addon-docs": "^7.6.11",
     "@storybook/addon-interactions": "^7.6.11",
-    "@storybook/addon-knobs": "^7.0.2",
     "@storybook/addon-links": "^7.6.11",
     "@storybook/addon-mdx-gfm": "^7.6.11",
     "@storybook/addon-storysource": "^7.6.11",
@@ -107,6 +106,7 @@
     "vitest": "^0.34.6"
   },
   "dependencies": {
+    "@storybook/addon-controls": "^7.6.17",
     "@tippyjs/react": "^4.2.5",
     "dayjs": "^1.8.34",
     "emotion-reset": "^3.0.1",
@@ -137,7 +137,8 @@
     "**/trim": "^1.0.0",
     "**/glob-parent": "^6.0.1",
     "**/postcss": "^8.4.31",
-    "**/trim-newlines": "^3.0.1"
+    "**/trim-newlines": "^3.0.1",
+    "string-width": "^4"
   },
   "peerDependencies": {
     "@emotion/react": "^11.11.1",
