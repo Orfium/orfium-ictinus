@@ -16,7 +16,7 @@ export default {
 
   argTypes: {
     placement: { type: 'radio', options: ['right', 'left'] },
-    size: { type: 'radio', options: ['normal', 'large'] },
+    size: { name: 'size (applies to Label)', type: 'radio', options: ['normal', 'large'] },
   },
 
   parameters: {
@@ -141,7 +141,7 @@ export const Playground = {
 
   parameters: {
     controls: {
-      include: ['isDisabled', 'placement', 'size', 'helpText'],
+      include: ['isDisabled', 'placement', 'size (applies to Label)', 'helpText'],
     },
   },
 };

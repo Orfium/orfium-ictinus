@@ -21,6 +21,12 @@ export default {
     status: 'normal',
     type: 'linear',
   },
+
+  argTypes: {
+    value: {
+      name: 'value (0-100)',
+    },
+  },
 };
 
 export const LinearProgressIndicatorWithPercentage = {
@@ -157,14 +163,25 @@ export const Playground = {
   render: (args) => {
     const { type, status, isBlock, value } = args;
     return (
-      <Stack width={300} isVertical>
-        <ProgressIndicator type={type} status={status} isBlock={isBlock} />
-        <ProgressIndicator value={value} type={type} status={status} isBlock={isBlock} />
+      <Stack width={400} isVertical>
+        <div css={{ display: 'flex', gap: '16px', flexDirection: 'column', marginBottom: '48px' }}>
+          <ProgressIndicator type={type} status={status} isBlock={isBlock} />
+          <Typography>Indeterminate State</Typography>
+        </div>
+        <div css={{ display: 'flex', gap: '16px', flexDirection: 'column' }}>
+          <ProgressIndicator value={value} type={type} status={status} isBlock={isBlock} />
+          <div css={{ display: 'flex', flexDirection: 'column' }}>
+            <Typography>Determinate State</Typography>
+            <Typography variant="body03">
+              Use the "value" control to create the determinate state
+            </Typography>
+          </div>
+        </div>
       </Stack>
     );
   },
   parameters: {
-    controls: { include: ['type', 'status', 'isBlock', 'value'] },
+    controls: { include: ['type', 'status', 'isBlock', 'value (0-100)'] },
   },
   name: 'Playground',
 };

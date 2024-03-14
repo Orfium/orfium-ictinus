@@ -35,6 +35,7 @@ export default {
     disableDates: { type: 'select', options: Object.keys(options), mapping: options },
     filterType: { type: 'select', options: ['preset', 'added'] },
     status: { type: 'select', options: ['normal', 'error', 'read-only'] },
+    isDisabled: { type: 'boolean' },
   },
 };
 
@@ -336,7 +337,7 @@ export const DisabledDatePickerDateRangePicker = {
 
 export const Playground = {
   render: (args) => {
-    const { disableDates, label, hintMessage, isRangePicker, status } = args;
+    const { disableDates, label, hintMessage, isRangePicker, status, isDisabled } = args;
     return (
       <Function>
         {() => {
@@ -353,6 +354,7 @@ export const Playground = {
                   type: status,
                   hintMessage,
                 },
+                isDisabled,
               }}
               isRangePicker={isRangePicker}
               value={date}
@@ -372,6 +374,7 @@ export const Playground = {
         'hintMessage',
         'label',
         'status',
+        'isDisabled',
       ],
     },
   },
