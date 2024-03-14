@@ -171,7 +171,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
             label: option.value.toString(),
             isCreated: true,
           };
-          // @ts-ignore
+          // @ts-ignore because TS doesnt recognize both (single-select) and (multi-select) option that we set
           onChange(newOption);
         } else {
           // @ts-ignore
