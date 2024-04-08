@@ -1,7 +1,7 @@
 import React from 'react';
 
 import db from './db.json';
-import Table from '../../Table';
+import TableV4 from '../../TableV4';
 // @ts-ignore
 
 type User = {
@@ -54,7 +54,7 @@ const TableFilterShowcase: React.FCC = () => {
     <div style={{ margin: 20 }}>
       <p>search more than 3 characters </p>
       <input placeholder="search" value={search} onChange={(e) => setSearch(e.target.value)} />
-      <Table data={newUsers} columns={columns} />
+      <TableV4 data={newUsers} columns={columns} />
     </div>
   );
 };

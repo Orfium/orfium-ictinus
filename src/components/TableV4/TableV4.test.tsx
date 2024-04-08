@@ -2,13 +2,13 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { fireEvent, render, within, screen } from 'test';
 
-import Table from './Table';
+import TableV4 from './TableV4';
 
 const tooltip = {
   content: 'Tooltip Content',
 };
 
-describe('Table', () => {
+describe('TableV4', () => {
   const data = new Array(50).fill(null).map((item, index) => ({
     id: index + 1,
     cells: [
@@ -23,7 +23,7 @@ describe('Table', () => {
 
   test('the expandable table that shows the content when clicking', async () => {
     const { getAllByText, findByText } = render(
-      <Table
+      <TableV4
         columns={['Title', 'Name', 'Surname', 'Age']}
         type="nested-header"
         isPadded
@@ -48,7 +48,7 @@ describe('Table', () => {
   test('that the onCheck returns the selected rows back when a row is selected', async () => {
     const onCheck = vi.fn();
     const { getAllByText } = render(
-      <Table
+      <TableV4
         columns={['Title', 'Name', 'Surname', 'Age']}
         type="nested-header"
         onCheck={onCheck}
@@ -70,7 +70,7 @@ describe('Table', () => {
     const onCheck = vi.fn();
     const topLeftText = 'topLeftText';
     const { getByText } = render(
-      <Table
+      <TableV4
         columns={['Title', 'Name', 'Surname', 'Age']}
         type="nested-header"
         onCheck={onCheck}
@@ -93,7 +93,7 @@ describe('Table', () => {
     const onSort = vi.fn();
 
     render(
-      <Table
+      <TableV4
         columns={[
           {
             content: {
@@ -130,7 +130,7 @@ describe('Table', () => {
     const onSort = vi.fn();
 
     render(
-      <Table
+      <TableV4
         columns={[
           {
             content: {
@@ -156,7 +156,7 @@ describe('Table', () => {
 
   test('that the tooltip is showed when hovering over the icon', async () => {
     render(
-      <Table
+      <TableV4
         columns={[
           {
             content: {
@@ -184,7 +184,7 @@ describe('Table', () => {
     const onSort = vi.fn();
 
     render(
-      <Table
+      <TableV4
         columns={[
           {
             content: {

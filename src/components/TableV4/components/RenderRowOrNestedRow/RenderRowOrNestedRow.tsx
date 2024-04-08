@@ -6,9 +6,9 @@ import { borderedRowStyle, expandableRowStyle } from './RenderRowOrNestedRow.sty
 import useToggle from '../../../../hooks/useToggle';
 import { isComponentFunctionType } from '../../../../utils/helpers';
 import { CheckBox } from '../../../Controls';
-import type { Row } from '../../Table';
-import { tableStyle } from '../../Table.style';
 import { TableRowContext } from '../../TableRowContext';
+import type { Row } from '../../TableV4';
+import { tableStyle } from '../../TableV4.style';
 import TableCell from '../TableCell';
 import TableRow from '../TableRow';
 

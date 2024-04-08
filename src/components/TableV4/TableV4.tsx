@@ -8,7 +8,7 @@ import ExtendedColumnItem from './components/ExtendedColumnItem';
 import TableCell from './components/TableCell';
 import TableRow from './components/TableRow';
 import TableRowWrapper from './components/TableRowWrapper';
-import { tableCTAStyle, tableRowHeadersStyle, tableStyle } from './Table.style';
+import { tableCTAStyle, tableRowHeadersStyle, tableStyle } from './TableV4.style';
 import type { ExtendedColumn, Sort, SortingOrder } from './types';
 import { isItemString } from './utils';
 import { CheckBox } from '../Controls';
@@ -101,7 +101,7 @@ const getColumnCount = (
   return columns.length + 1;
 };
 
-function Table<T>({
+function TableV4<T>({
   data,
   columns,
   type = 'normal',
@@ -364,4 +364,4 @@ function Table<T>({
   );
 }
 
-export default memo(Table, isEqual);
+export default memo(TableV4, isEqual);

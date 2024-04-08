@@ -1,7 +1,7 @@
 import React from 'react';
 
-import type { Row, Selection, TableType } from '../../Table';
 import { TableRowContext } from '../../TableRowContext';
+import type { Row, Selection, TableType } from '../../TableV4';
 import RenderRowOrNestedRow from '../RenderRowOrNestedRow/RenderRowOrNestedRow';
 
 export type TableRowWrapperProps<T> = {
