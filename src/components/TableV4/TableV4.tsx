@@ -53,7 +53,7 @@ export type Selection = string | number;
 
 export type TableType = 'normal' | 'nested-header';
 
-export type TableProps<T> = {
+export type TablePropsV4<T> = {
   /** The data for the table that needs to display. */
   data: Row<T>[];
   /** An array of titles or objects to define columns. */
@@ -117,7 +117,7 @@ function TableV4<T>({
   actionWidth,
   isInitiallyExpanded = false,
   dataTestIdPrefix,
-}: TableProps<T>) {
+}: TablePropsV4<T>) {
   const breakpoints = useBreakpoints();
   const actionCellWidth = actionWidth ? `${actionWidth}%` : breakpoints.des1920 ? '5%' : '7%';
 
