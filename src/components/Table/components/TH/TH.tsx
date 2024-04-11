@@ -8,11 +8,13 @@ type Props = {
   colSpan?: number;
   /** Size of Row */
   rowSize: RowSize;
+  /** Width of the cell */
+  width?: number;
 };
 
-const TH: React.FCC<Props> = ({ rowSize = 'sm', children, ...rest }) => {
+const TH: React.FCC<Props> = ({ width, rowSize = 'sm', children, ...rest }) => {
   return (
-    <th css={thContainer({ rowSize })} {...rest}>
+    <th css={thContainer({ rowSize, width })} {...rest}>
       {children}
     </th>
   );

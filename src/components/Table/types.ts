@@ -30,9 +30,12 @@ export type DisplayColumn = {
   header: string;
   /** Whether the toggle visibility functionality is disabled for this column */
   isAlwaysVisible?: boolean;
+  /** The width of the column (value is percentage number e.g. 25) */
+  width?: number;
 };
 
 export type GroupColumn = {
+  /** The id of the group of columns */
   id: string;
   /** The label of the column on the table */
   header: string;

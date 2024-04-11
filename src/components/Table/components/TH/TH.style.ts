@@ -8,9 +8,10 @@ import { generateStylesFromTokens } from 'components/Typography/utils';
 /** @TODO replace all css with tokens */
 
 export const thContainer =
-  ({ rowSize }: Pick<TableProps<any>, 'rowSize'>) =>
+  ({ rowSize, width }: Pick<TableProps<any>, 'rowSize'> & { width?: number }) =>
   (theme: Theme): SerializedStyles => {
     return css`
+      width: ${width ? `${width}%` : undefined};
       height: ${getMinHeight(rowSize)(theme)};
       align-content: center;
       box-sizing: border-box;

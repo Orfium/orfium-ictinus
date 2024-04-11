@@ -18,6 +18,7 @@ const getColumns = (columns: any[]) => {
   columns.forEach((column) => {
     if ('columns' in column) {
       const groupConfig = {
+        id: column.id,
         header: column.header,
         columns: getColumns(column.columns),
       };
@@ -27,6 +28,7 @@ const getColumns = (columns: any[]) => {
         columnHelper.accessor(column.id as any, {
           header: column.header,
           cell: (info) => info.getValue(),
+          size: column.width,
         })
       );
     }
