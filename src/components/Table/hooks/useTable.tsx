@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import type { HeaderGroup, RowModel } from '@tanstack/react-table';
 import { createColumnHelper, getCoreRowModel, useReactTable } from '@tanstack/react-table';
 import React from 'react';
@@ -15,19 +16,27 @@ const getColumns = (columns: any[]) => {
   const columnHelper = createColumnHelper();
 
   columns.forEach((column) => {
-    tColumns.push(
-      columnHelper.accessor(column.id as any, {
+    if ('columns' in column) {
+      const groupConfig = {
         header: column.header,
-        cell: (info) => info.getValue(),
-      })
-    );
+        columns: getColumns(column.columns),
+      };
+      tColumns.push(columnHelper.group(groupConfig));
+    } else {
+      tColumns.push(
+        columnHelper.accessor(column.id as any, {
+          header: column.header,
+          cell: (info) => info.getValue(),
+        })
+      );
+    }
   });
 
   return tColumns;
 };
 
-const useTable = <TData,>({ data, columns }: UseTableProps<TData>): ReturnValue<TData> => {
-  const tColumns = getColumns(columns);
+const useTable = <TData,>({ data, columns, ...rest }: UseTableProps<TData>): ReturnValue<TData> => {
+  const tColumns = React.useMemo(() => getColumns(columns), [columns]);
   const tData = React.useMemo(() => data.map((row) => row.cells), []);
 
   const table = useReactTable<TData>({
@@ -35,6 +44,7 @@ const useTable = <TData,>({ data, columns }: UseTableProps<TData>): ReturnValue<
     data: tData,
     columns: tColumns,
     getCoreRowModel: getCoreRowModel(),
+    ...rest,
   });
 
   return {

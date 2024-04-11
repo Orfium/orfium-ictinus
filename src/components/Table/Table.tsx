@@ -1,16 +1,32 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import { flexRender } from '@tanstack/react-table';
 import React from 'react';
 
 import type { TableProps } from '.';
-import { TBody, TH, TD, THead, TR } from './components';
+import { TBody, TH, TD, THead, TR, TTitle } from './components';
 import useTable from './hooks/useTable';
 import { tableContainer, tableStyles } from './Table.style';
 
-const Table = <TData,>({ data, columns, rowSize = 'sm' }: TableProps<TData>) => {
-  const table = useTable<TData>({ data, columns });
+const Table = <TData,>({ data, columns, rowSize = 'sm', columnsConfig }: TableProps<TData>) => {
+  const { columnVisibility, setColumnVisibility } = columnsConfig ?? {};
+
+  const hasColumnVisibilityConfig = Boolean(columnVisibility && setColumnVisibility);
+
+  const table = useTable<TData>({
+    data,
+    columns,
+    /** Column Visibility */
+    ...(hasColumnVisibilityConfig && {
+      state: {
+        columnVisibility,
+      },
+      onColumnVisibilityChange: setColumnVisibility,
+    }),
+  });
 
   return (
     <div css={tableContainer()}>
+      {hasColumnVisibilityConfig && <TTitle columnsConfig={columnsConfig} columns={columns} />}
       <table css={tableStyles()}>
         <THead>
           {table.getHeaderGroups().map((headerGroup) => (
