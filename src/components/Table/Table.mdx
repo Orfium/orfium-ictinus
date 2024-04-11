@@ -1,7 +1,11 @@
 import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
 import Table from './Table';
 import * as TableStories from './Table.stories';
-import { DisplayColumnStory } from './utils/TableStoryComponents';
+import {
+  GroupColumnStory,
+  DisplayColumnStory,
+  ColumnsConfigType,
+} from './utils/TableStoryComponents';
 
 <Meta of={TableStories} />
 
@@ -23,12 +27,30 @@ A universal Table component that applies Orfium basic usages.
 
 <ArgTypes of={Table} />
 
+## GroupColumn Type
+
+<ArgTypes of={GroupColumnStory} />
+
 ## DisplayColumn Type
 
 <ArgTypes of={DisplayColumnStory} />
+
+## ColumnsConfig Type
+
+This type includes all the configuration for the columns
+
+<ArgTypes of={ColumnsConfigType} />
 
 <SubsectionHeader title="Variants" />
 
 ### Table Sizes
 
 <Canvas of={TableStories.TableSizes} />
+
+### Column Groups
+
+<Canvas of={TableStories.ColumnGroups} />
+
+### Column Chooser
+
+<Canvas of={TableStories.ColumnChooser} />
