@@ -16,7 +16,7 @@ const Table = <TData,>({ data, columns, rowSize = 'sm' }: TableProps<TData>) => 
           {table.getHeaderGroups().map((headerGroup) => (
             <TR key={headerGroup.id}>
               {headerGroup.headers.map((header) => (
-                <TH key={header.id} colSpan={header.colSpan} rowSize={rowSize}>
+                <TH key={header.id} colSpan={header.colSpan} rowSize={rowSize} width={header.getSize()}>
                   {header.isPlaceholder
                     ? null
                     : flexRender(header.column.columnDef.header, header.getContext())}

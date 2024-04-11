@@ -15,6 +15,9 @@ export const tableContainer =
 
 export const tableStyles = (): SerializedStyles => {
   return css`
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
     thead > tr > th:last-child,
     tbody > tr > td:last-child {
       border-right: none;

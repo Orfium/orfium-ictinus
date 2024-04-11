@@ -16,6 +16,8 @@ export type DisplayColumn = {
   id: string;
   /** The label of the column on the table */
   header: string;
+  /** The width of the column (value is percentage number e.g. 25) */
+  width?: number;
 };
 
 /** Rows & Cells  */
