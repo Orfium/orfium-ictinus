@@ -3,7 +3,7 @@ import { isComponentFunctionType } from 'utils/helpers';
 
 import { nestedHeaderStyle } from './ContentCell.style';
 import TruncatedContent from '../../../../../TruncatedContent';
-import type { ContentComponent, TableType } from '../../../../Table';
+import type { ContentComponent, TableType } from '../../../../TableV4';
 import TableCell from '../../../TableCell';
 
 type ContentCellProps = {

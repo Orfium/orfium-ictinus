@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 import rem from 'polished/lib/helpers/rem';
 import type { Theme } from 'theme';
 
-import { getBorderColor } from 'components/Table/utils';
+import { getBorderColor } from 'components/TableV4/utils';
 
 export const borderedRowStyle =
   ({ isBordered, isCustomCell }: { isBordered: boolean; isCustomCell?: boolean }) =>

@@ -1,10 +1,10 @@
-import Table from './Table';
+import TableV4 from './TableV4';
 import TableFilterShowcase from '../storyUtils/TableFilterShowcase';
 import { FIGMA_URL } from '../../utils/common';
 
 export default {
-  title: 'Original Components/Table',
-  component: Table,
+  title: 'Original Components/TableV4',
+  component: TableV4,
 
   parameters: {
     design: [
@@ -45,7 +45,7 @@ export default {
 
 export const RegularTableWithSimpleRows = {
   render: () => (
-    <Table
+    <TableV4
       columns={['Title', 'Name', 'Surname', 'Age', 'Sauron Age']}
       dataTestIdPrefix="ictinus"
       isPadded
@@ -241,7 +241,7 @@ export const RegularTableWithSimpleRows = {
 
 export const RegularTableWithSortingAndTooltips = {
   render: () => (
-    <Table
+    <TableV4
       columns={[
         {
           content: {
@@ -442,7 +442,7 @@ export const RegularTableWithSortingAndTooltips = {
 
 export const TableWithExpandableRows = {
   render: () => (
-    <Table
+    <TableV4
       columns={['Title', 'Name', 'Surname', 'Age']}
       type={'normal'}
       isPadded
@@ -489,7 +489,7 @@ export const TableWithExpandableRows = {
 
 export const TableWithExpandableRowsExpandedOnPageLoad = {
   render: () => (
-    <Table
+    <TableV4
       columns={['Title', 'Name', 'Surname', 'Age']}
       padded
       fixedHeader
@@ -536,7 +536,7 @@ export const TableWithExpandableRowsExpandedOnPageLoad = {
 
 export const FinancialTable = {
   render: () => (
-    <Table
+    <TableV4
       columns={['Title', 'Name', 'Surname', 'Age']}
       onCheck={console.log}
       isPadded
@@ -633,7 +633,7 @@ export const FinancialTable = {
 
 export const FixedHeaderTable = {
   render: () => (
-    <Table
+    <TableV4
       columns={['Title', 'Name', 'Surname', 'Age']}
       onCheck={console.log}
       isPadded
@@ -816,7 +816,7 @@ export const FixedHeaderTable = {
 
 export const TableWithExpandableRowsAndSortDir = {
   render: () => (
-    <Table
+    <TableV4
       columns={[
         {
           content: {

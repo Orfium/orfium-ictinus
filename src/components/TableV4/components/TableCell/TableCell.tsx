@@ -4,7 +4,7 @@ import * as React from 'react';
 
 import { parentStyles } from './TableCell.style';
 import { getTestId } from './utils';
-import { getBorderColor } from 'components/Table/utils';
+import { getBorderColor } from 'components/TableV4/utils';
 
 export type TableCellProps = {
   textAlign?: 'left' | 'right';

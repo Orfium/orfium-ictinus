@@ -1,6 +1,6 @@
 import type React from 'react';
 
-import type { Cell, Row } from '../Table';
+import type { Cell, Row } from '../TableV4';
 import type { ExtendedColumn } from '../types';
 
 /** This is just a dummy component to be used in Storybook for showing the Row type on props */
