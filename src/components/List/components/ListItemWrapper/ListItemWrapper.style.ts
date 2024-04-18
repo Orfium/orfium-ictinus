@@ -4,22 +4,19 @@ import { rem } from 'theme/utils';
 
 import type { ListRowSize } from '../../types';
 import { LIST_ITEM_HEIGHT } from '../../utils';
-import { getListItemTokens } from 'components/List/List.tokens';
 import { body02, label02, body03, label03 } from 'components/Typography/Typography.config.styles';
 
 export const ListItemWrapperStyled = styled('li', { target: '' })<{
   rowSize?: ListRowSize;
   isDisabled: boolean;
 }>(({ rowSize = 'normal', isDisabled, theme }) => {
-  const tokens = getListItemTokens(theme);
-
   const isCompact = rowSize === 'compact';
   const height = rem(LIST_ITEM_HEIGHT[rowSize]);
-  const padding = css`0 ${tokens('paddingHorizontal')}`;
+  const padding = css`0 ${theme.dimension.spacing.get('md')}`;
   const itemTypographyStyle = isCompact ? body03(theme) : body02(theme);
 
   return css`
-    background-color: ${tokens('backgroundColor.default')};
+    background-color: ${theme.tokens.colors.get('palette.tertiary.base')};
 
     & > div {
       ${itemTypographyStyle}
@@ -41,24 +38,26 @@ export const ListItemWrapperStyled = styled('li', { target: '' })<{
       gap: ${rem(12)};
 
       &:hover {
-        background-color: ${!isDisabled ? tokens('backgroundColor.active') : undefined};
+        background-color: ${!isDisabled
+          ? theme.tokens.colors.get('palette.tertiary.muted')
+          : undefined};
         cursor: ${!isDisabled ? 'pointer' : 'initial'};
       }
     }
 
     &[data-focus-visible] {
-      background-color: ${tokens('backgroundColor.active')};
+      background-color: ${theme.tokens.colors.get('palette.tertiary.muted')};
     }
 
     &[aria-selected='true'] {
-      background-color: ${tokens('backgroundColor.active')};
+      background-color: ${theme.tokens.colors.get('palette.tertiary.muted')};
       & > div {
-        color: ${tokens('textColor.active')};
+        color: ${theme.tokens.colors.get('textColor.default.active')};
         ${isCompact ? label03(theme) : label02(theme)}
       }
 
       &[data-focus-visible] {
-        background-color: ${tokens('backgroundColor.active')};
+        background-color: ${theme.tokens.colors.get('palette.tertiary.muted')};
       }
     }
 
