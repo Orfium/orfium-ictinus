@@ -2,7 +2,6 @@ import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import { rem } from 'theme/utils';
 
-import { getTooltipTokens } from './Tooltip.tokens';
 import type { TooltipProps } from './Tooltip.types';
 import type { Theme } from '../../theme';
 import 'tippy.js/dist/tippy.css';
@@ -14,10 +13,8 @@ export const tooltipStyle =
     isInteractive = false,
   }: Pick<TooltipProps, 'isInverted' | 'isInteractive'>) =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getTooltipTokens(theme);
-
-    const backgroundColor = tokens(
-      `backgroundColor.${isInverted ? 'inverted' : 'default'}` as const
+    const backgroundColor = theme.tokens.colors.get(
+      isInverted ? 'backgroundColor.alt' : 'backgroundColor.inverted'
     );
 
     const textWrap = {
@@ -28,19 +25,23 @@ export const tooltipStyle =
 
     return css`
       background-color: ${backgroundColor};
-      border: ${tokens('borderWidth.default')} solid
-        ${tokens(`borderColor.${isInverted ? 'inverted' : 'default'}` as const)};
-      box-shadow: ${tokens('boxShadow')};
+      border: ${theme.dimension.borderWidth.get('default')} solid
+        ${theme.tokens.colors.get(
+          isInverted ? 'borderColor.decorative.default' : 'borderColor.decorative.transparent'
+        )};
+      box-shadow: ${theme.tokens.boxShadow.get('2')};
 
       .tippy-content {
         background-color: ${backgroundColor};
         max-width: ${!isInteractive && rem(256)};
-        padding: ${tokens(`padding.${isInteractive ? 'interactive' : 'text'}` as const)};
-        border-radius: ${tokens('borderRadius')};
+        padding: ${theme.dimension.spacing.get(isInteractive ? 'lg' : 'sm')};
+        border-radius: ${theme.dimension.borderRadius.get('md')};
         color: ${!isInteractive &&
-        tokens(`textColor.${isInverted ? 'inverted' : 'default'}` as const)};
+        theme.tokens.colors.get(
+          isInverted ? 'textColor.default.primary' : 'textColor.inverted.primary'
+        )};
 
-        ${!isInteractive && generateStylesFromTokens(tokens('text'))};
+        ${!isInteractive && generateStylesFromTokens(theme.tokens.typography.get('normal.body03'))};
 
         ${!isInteractive && textWrap};
       }
