@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo } from 'react';
+import React, { useMemo } from 'react';
 
 import useCombinedRefs from './useCombinedRefs';
 import useTheme from './useTheme';
@@ -15,7 +15,6 @@ const useFieldUtils = ({
   status,
   isDisabled,
   ref,
-  sx,
 }: Partial<TextFieldProps> & { ref: React.ForwardedRef<HTMLInputElement> }) => {
   const theme = useTheme();
   const tokens = getTextInputBaseTokens(theme);
@@ -48,28 +47,11 @@ const useFieldUtils = ({
     }
   };
 
-  const textInputBaseSx = useCallback(
-    (hasSx: boolean) => {
-      if (hasSx) {
-        return {
-          textField: {
-            // paddingRight: tokens('paddingContentLeft'),
-          },
-          ...sx,
-        };
-      }
-
-      return { ...sx };
-    },
-    [sx, tokens]
-  );
-
   return {
     isLocked,
     hintMessageId,
     suffixContent,
     handleContainerClick,
-    textInputBaseSx,
     combinedRefs,
   };
 };
