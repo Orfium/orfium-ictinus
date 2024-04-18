@@ -5,7 +5,6 @@ import useTheme from './useTheme';
 import type { AcceptedIconNames } from 'components/Icon';
 import Icon from 'components/Icon';
 import type { TextFieldProps } from 'components/TextField';
-import type { TextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
 import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
 
 /** A custom hook containing all the utils that are shared between field components */
@@ -34,8 +33,8 @@ const useFieldUtils = ({
       return (
         <Icon
           name={iconName as AcceptedIconNames}
-          size={tokens(`addOn.iconSize.${size}` as TextInputBaseTokens)}
-          color={tokens('addOn.iconColor')}
+          size={theme.dimension.sizing.get(`icon.${size === 'compact' ? 'sm' : 'md'}`)}
+          color={theme.tokens.colors.get('textColor.default.secondary')}
         />
       );
     }
@@ -54,7 +53,7 @@ const useFieldUtils = ({
       if (hasSx) {
         return {
           textField: {
-            paddingRight: tokens('paddingContentLeft'),
+            // paddingRight: tokens('paddingContentLeft'),
           },
           ...sx,
         };
