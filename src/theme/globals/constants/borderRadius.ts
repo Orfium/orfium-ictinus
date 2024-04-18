@@ -35,7 +35,7 @@ const borderRadius = {
     description: 'Corner radius = 48px',
   },
   '7': {
-    value: '100px',
+    value: '9999px',
     type: 'borderRadius',
     description: 'Corner radius = 100px used for circles and pill shaped elements',
   },
