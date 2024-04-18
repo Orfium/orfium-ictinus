@@ -4,7 +4,6 @@ import { rem } from 'polished';
 import type { Theme } from 'theme';
 import { flex, transition } from 'theme/functions';
 
-import { getDrawerTokens } from './Drawer.tokens';
 import type { AnchorType, DrawerProps } from './Drawer.types';
 
 const getStyleBasedOnAnchor = (anchor: AnchorType) => {
@@ -122,15 +121,14 @@ export const anchorStyle = ({
 export const overlayStyle =
   ({ isOpen, anchor, hasFixedLayout }: Pick<DrawerProps, 'isOpen' | 'anchor' | 'hasFixedLayout'>) =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getDrawerTokens(theme);
-
     return css`
       ${flex};
       flex-direction: column;
       overflow-y: ${hasFixedLayout ? undefined : 'auto'};
-      background-color: ${tokens('backgroundColor')};
-      box-shadow: ${tokens('boxShadow')};
-      border: ${tokens('borderWidth')} solid ${tokens('borderColor')};
+      background-color: ${theme.tokens.colors.get('backgroundColor.default')};
+      box-shadow: ${theme.tokens.boxShadow.get('3')};
+      border: ${theme.dimension.borderWidth.get('default')} solid
+        ${theme.tokens.colors.get('borderColor.decorative.default')};
       width: 100%;
       height: 100%;
       transform: ${transformBasedOnProps(isOpen, anchor)};
@@ -141,30 +139,26 @@ export const overlayStyle =
 export const closeIconContainer =
   () =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getDrawerTokens(theme);
-
     return css`
       position: absolute;
-      top: ${tokens('padding')};
-      right: ${tokens('padding')};
+      top: ${theme.dimension.spacing.get('2xl')};
+      right: ${theme.dimension.spacing.get('2xl')};
     `;
   };
 
 export const headerStyle =
   ({ isFixed, hasBoxShadow }: { isFixed?: boolean; hasBoxShadow?: boolean }) =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getDrawerTokens(theme);
-
     return isFixed
       ? css`
-          padding: ${tokens('padding')};
+          padding: ${theme.dimension.spacing.get('2xl')};
           position: sticky;
           top: 0;
           box-shadow: ${hasBoxShadow ? theme.tokens.boxShadow.get('2') : undefined};
           transition: box-shadow 0.2s ease-in-out;
         `
       : css`
-          padding: ${tokens('padding')};
+          padding: ${theme.dimension.spacing.get('2xl')};
           flex: 0;
         `;
   };
@@ -172,30 +166,27 @@ export const headerStyle =
 export const contentStyle =
   ({ hasFixedHeader }: { hasFixedHeader?: boolean }) =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getDrawerTokens(theme);
-
     return css`
       flex: 1;
       overflow-y: ${hasFixedHeader ? 'auto' : undefined};
       /** Padding-top and Padding-bottom are -1px because of extra 1px-height elements added for scrollbar observation */
-      padding: calc(${tokens('padding')} - ${rem(1)}) ${tokens('padding')};
+      padding: calc(${theme.dimension.spacing.get('2xl')} - ${rem(1)})
+        ${theme.dimension.spacing.get('2xl')};
     `;
   };
 
 export const footerStyle =
   ({ isFixed, hasBoxShadow }: { isFixed?: boolean; hasBoxShadow?: boolean }) =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getDrawerTokens(theme);
-
     return isFixed
       ? css`
           position: sticky;
           bottom: 0;
-          padding: ${tokens('padding')};
+          padding: ${theme.dimension.spacing.get('2xl')};
           box-shadow: ${hasBoxShadow ? theme.tokens.boxShadow.get('5') : undefined};
           transition: box-shadow 0.2s ease-in-out;
         `
       : css`
-          padding: ${tokens('padding')};
+          padding: ${theme.dimension.spacing.get('2xl')};
         `;
   };
