@@ -4,37 +4,33 @@ import type { Theme } from 'theme';
 
 import { flex } from '../../../theme/functions';
 import { getDatePickerTokens } from '../DatePicker.tokens';
-import { getListItemTokens } from 'components/List/List.tokens';
 import { label02 } from 'components/Typography/Typography.config.styles';
 
 export const overlayWrapperStyle =
   () =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getDatePickerTokens(theme);
-
     return css`
       ${flex};
-      border: ${tokens('date.borderWidth')} solid ${tokens('container.borderColor')};
-      border-radius: ${tokens('date.container.borderRadius')};
+      border: ${theme.dimension.borderWidth.get('default')} solid
+        ${theme.tokens.colors.get('borderColor.decorative.default')};
+      border-radius: ${theme.dimension.borderRadius.get('md')};
       width: fit-content;
+      background-color: ${theme.tokens.colors.get('backgroundColor.default')};
     `;
   };
 
 export const optionsWrapperStyle =
   () =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getDatePickerTokens(theme);
-
     return css`
-      border-right: ${tokens('date.borderWidth')} solid ${tokens('container.borderColor')};
+      border-right: ${theme.dimension.borderWidth.get('default')} solid
+        ${theme.tokens.colors.get('borderColor.decorative.default')};
     `;
   };
 
 export const optionStyle =
   ({ isSelected }: { isSelected?: boolean }) =>
   (theme: Theme): SerializedStyles => {
-    const listItemTokens = getListItemTokens(theme);
-
     return css`
       ${label02(theme)};
       white-space: nowrap;
@@ -42,13 +38,15 @@ export const optionStyle =
       font-weight: ${isSelected
         ? theme.globals.typography.fontWeight.get('medium')
         : theme.globals.typography.fontWeight.get('regular')};
-      color: ${isSelected && listItemTokens('textColor.active')};
+      color: ${isSelected && theme.tokens.colors.get('textColor.default.active')};
       cursor: pointer;
-      background-color: ${isSelected ? listItemTokens('backgroundColor.active') : 'transparent'};
+      background-color: ${isSelected
+        ? theme.tokens.colors.get('palette.tertiary.muted')
+        : 'transparent'};
       position: relative;
 
       &:hover {
-        background-color: ${listItemTokens('backgroundColor.active')};
+        background-color: ${theme.tokens.colors.get('palette.tertiary.muted')};
       }
     `;
   };
@@ -79,8 +77,9 @@ export const buttonsWrapperStyle =
       justify-content: flex-end;
       height: ${tokens('actionsContainer')};
       align-items: center;
-      gap: ${tokens('actionsSpacing')};
-      padding: 0 ${tokens('padding')};
-      border-top: ${tokens('date.borderWidth')} solid ${tokens('container.borderColor')};
+      gap: ${theme.dimension.spacing.get('sm')};
+      padding: 0 ${theme.dimension.spacing.get('xl')};
+      border-top: ${theme.dimension.borderWidth.get('default')} solid
+        ${theme.tokens.colors.get('borderColor.decorative.default')};
     `;
   };

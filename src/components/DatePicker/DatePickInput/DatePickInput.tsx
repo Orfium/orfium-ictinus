@@ -89,8 +89,8 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
         <Icon
           tabIndex={0}
           name="calendar"
-          size={tokens('addOn.iconSize.normal')}
-          color={tokens('addOn.iconColor')}
+          size={theme.dimension.sizing.get('icon.md')}
+          color={theme.tokens.colors.get('textColor.default.secondary')}
           onClick={handleIconClick}
           dataTestId="calendar_button"
           onKeyDown={(e) => {
@@ -100,7 +100,7 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
           }}
         />
       ),
-      [handleIconClick, tokens]
+      [handleIconClick, theme.dimension.sizing, theme.tokens.colors]
     );
 
     const getLabel = useMemo(() => {
