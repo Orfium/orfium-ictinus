@@ -43,21 +43,23 @@ export const ColumnAndRowSizing = {
   },
 };
 
-export const ColumnGroups = {
-  render: (args) => {
-    const { rowSize } = args;
+/** Story for Group Headers */
 
-    return <Table<SimpleData> data={simpleData} columns={groupedColumns} rowSize={rowSize} />;
-  },
+// export const ColumnGroups = {
+//   render: (args) => {
+//     const { rowSize } = args;
 
-  name: 'Column Groups',
+//     return <Table<SimpleData> data={simpleData} columns={groupedColumns} rowSize={rowSize} />;
+//   },
 
-  parameters: {
-    controls: {
-      disable: true,
-    },
-  },
-};
+//   name: 'Column Groups',
+
+//   parameters: {
+//     controls: {
+//       disable: true,
+//     },
+//   },
+// };
 
 export const ColumnChooser = {
   render: (args) => {
@@ -65,20 +67,14 @@ export const ColumnChooser = {
 
     const columns = [
       {
-        id: 'personalDetails',
-        header: 'Personal Details',
-        columns: [
-          {
-            id: 'firstName',
-            header: 'First Name',
-            isAlwaysVisible: isAlwaysVisible.includes('firstName'),
-          },
-          {
-            id: 'lastName',
-            header: 'Last Name',
-            isAlwaysVisible: isAlwaysVisible.includes('lastName'),
-          },
-        ],
+        id: 'firstName',
+        header: 'First Name',
+        isAlwaysVisible: isAlwaysVisible.includes('firstName'),
+      },
+      {
+        id: 'lastName',
+        header: 'Last Name',
+        isAlwaysVisible: isAlwaysVisible.includes('lastName'),
       },
       { id: 'age', header: 'Age', isAlwaysVisible: isAlwaysVisible.includes('age') },
       { id: 'job', header: 'Job', isAlwaysVisible: isAlwaysVisible.includes('job') },

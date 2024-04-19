@@ -2,7 +2,8 @@ import type { TableOptions } from '@tanstack/react-table';
 
 export type TableProps<TData> = {
   /** The Columns configuration of the Table */
-  columns: (DisplayColumn | GroupColumn)[];
+  // Columns Type for Group Headers: columns: (DisplayColumn | GroupColumn)[];
+  columns: DisplayColumn[];
   /** The Data of the Table */
   data: TableData<TData>;
   /** Size of Row */
