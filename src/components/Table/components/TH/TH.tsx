@@ -1,4 +1,5 @@
 import React from 'react';
+import isEqual from 'react-fast-compare';
 
 import { thContainer } from './TH.style';
 import type { RowSize } from 'components/Table/types';
@@ -20,4 +21,4 @@ const TH: React.FCC<Props> = ({ width, rowSize = 'sm', children, ...rest }) => {
   );
 };
 
-export default TH;
+export default React.memo(TH, isEqual);
