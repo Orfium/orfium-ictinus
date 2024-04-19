@@ -22,7 +22,7 @@
 
 .emotion-1:not([aria-valuenow]) .fill {
   width: 50%;
-  border-radius: 0;
+  border-radius: 0rem;
   -webkit-animation: indeterminate 1.7s infinite ease-in-out;
   animation: indeterminate 1.7s infinite ease-in-out;
   will-change: transform;
@@ -32,7 +32,7 @@
   grid-area: bar;
   background-color: #E9EFFB;
   height: 0.5rem;
-  border-radius: 0;
+  border-radius: 0rem;
   overflow: hidden;
   will-change: transform;
 }
