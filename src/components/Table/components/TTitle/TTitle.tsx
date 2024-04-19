@@ -1,4 +1,5 @@
 import React from 'react';
+import isEqual from 'react-fast-compare';
 
 import ColumnChooser from './components/ColumnChooser';
 import { tTitleContainer } from './TTitle.style';
@@ -15,4 +16,4 @@ const TTitle: React.FCC<Props> = ({ columns, columnsConfig, children }) => {
   );
 };
 
-export default TTitle;
+export default React.memo(TTitle, isEqual);

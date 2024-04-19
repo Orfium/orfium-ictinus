@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 import { flexRender } from '@tanstack/react-table';
 import React from 'react';
+import isEqual from 'react-fast-compare';
 
 import type { TableProps } from '.';
 import { TBody, TH, TD, THead, TR, TTitle } from './components';
@@ -32,7 +33,12 @@ const Table = <TData,>({ data, columns, rowSize = 'sm', columnsConfig }: TablePr
           {table.getHeaderGroups().map((headerGroup) => (
             <TR key={headerGroup.id}>
               {headerGroup.headers.map((header) => (
-                <TH key={header.id} colSpan={header.colSpan} rowSize={rowSize} width={header.getSize()}>
+                <TH
+                  key={header.id}
+                  colSpan={header.colSpan}
+                  rowSize={rowSize}
+                  width={header.getSize()}
+                >
                   {header.isPlaceholder
                     ? null
                     : flexRender(header.column.columnDef.header, header.getContext())}
@@ -61,4 +67,4 @@ const Table = <TData,>({ data, columns, rowSize = 'sm', columnsConfig }: TablePr
   );
 };
 
-export default Table;
+export default React.memo(Table, isEqual);

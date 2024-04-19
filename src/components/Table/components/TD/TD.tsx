@@ -1,5 +1,6 @@
 import type { RowSize } from 'index';
 import React from 'react';
+import isEqual from 'react-fast-compare';
 
 import { tdContainer, tdContent } from './TD.style';
 
@@ -18,4 +19,4 @@ const TD: React.FCC<Props> = ({ colSpan, rowSize = 'sm', children, ...rest }) =>
   );
 };
 
-export default TD;
+export default React.memo(TD, isEqual);

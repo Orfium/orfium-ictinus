@@ -14,6 +14,7 @@ export const thContainer =
       width: ${width ? `${width}%` : undefined};
       height: ${getMinHeight(rowSize)(theme)};
       align-content: center;
+      text-align: left;
       box-sizing: border-box;
       padding: 8px 16px;
       border-bottom: 1px solid ${theme.tokens.colors.get('borderColor.decorative.default')};
