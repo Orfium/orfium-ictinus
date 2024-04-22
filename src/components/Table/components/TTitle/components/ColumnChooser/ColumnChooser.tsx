@@ -28,6 +28,10 @@ const ColumnChooser: React.FC<Props> = ({ columns, columnsConfig }) => {
     )
   );
 
+  const disabledKeys = options
+    .filter((option) => option.isAlwaysVisible)
+    .map((option) => option.id);
+
   const btnRef = useRef(null);
 
   const handleBtnClick = (e) => {
@@ -78,6 +82,7 @@ const ColumnChooser: React.FC<Props> = ({ columns, columnsConfig }) => {
           selectedKeys={selectedKeys}
           css={[listStyle({}), menuStyle()]}
           onSelectionChange={handleSelectionChange}
+          disabledKeys={disabledKeys}
         >
           {options.map((col, index) => {
             const key = col.id;
