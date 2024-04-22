@@ -3,26 +3,17 @@ import { get } from 'lodash';
 import { rem } from 'polished';
 import React from 'react';
 import { WrapperStyle } from 'storybook/styles/OverviewCard.style';
-import type { DimensionBorderRadiusKey } from 'theme/dimension/borderRadius';
-import dimensionBorderRadius from 'theme/dimension/variables/borderRadius';
-import type { BorderRadiusKey } from 'theme/globals/borderRadius';
-import globalBorderRadius from 'theme/globals/constants/borderRadius';
+import type { DimensionBorderWidthKey } from 'theme/dimension/borderWidth';
+import dimensionBorderWidth from 'theme/dimension/variables/borderWidth';
 import { convertRemToPixels } from 'theme/utils';
 
 import { getAllPaths } from '../TokenColorsShowcase/utils';
 import Typography from 'components/Typography';
 
-type Props = {
-  type?: 'global' | 'dimension';
-};
-
-const RadiusShowcase = ({ type = 'global' }: Props) => {
-  const isGlobal = type === 'global';
-  const borderRadiusObject = isGlobal ? globalBorderRadius : dimensionBorderRadius;
-
+const BorderWidthShowcase = () => {
   const theme = useTheme();
 
-  const keys = getAllPaths(borderRadiusObject);
+  const keys = getAllPaths(dimensionBorderWidth);
 
   const boxSize = 64;
 
@@ -36,9 +27,9 @@ const RadiusShowcase = ({ type = 'global' }: Props) => {
                 height: rem(boxSize),
                 width: rem(boxSize),
                 background: 'linear-gradient(45deg, #a8b1ff 0%, #cad0ff 100%)',
-                borderRadius: isGlobal
-                  ? theme.globals.borderRadius.get(key as BorderRadiusKey)
-                  : theme.dimension.borderRadius.get(key as DimensionBorderRadiusKey),
+                border: `${theme.dimension.borderWidth.get(
+                  key as DimensionBorderWidthKey
+                )} solid ${theme.tokens.colors.get('borderColor.interactive.upsell')}`,
                 margin: 'auto',
               })}
             />
@@ -47,16 +38,14 @@ const RadiusShowcase = ({ type = 'global' }: Props) => {
                 $borderRadius.{key}
               </Typography>
               <Typography variant="body02" type="secondary" component="div">
-                {get(borderRadiusObject, key).value}
-                {!isGlobal
-                  ? ` = ${convertRemToPixels(
-                      theme.dimension.borderRadius.get(key as DimensionBorderRadiusKey)
-                    )}px`
-                  : ``}
+                {`${get(dimensionBorderWidth, key).value} =
+                ${convertRemToPixels(
+                  theme.dimension.borderWidth.get(key as DimensionBorderWidthKey)
+                )}px`}
               </Typography>
-              {get(borderRadiusObject, key).description && (
+              {get(dimensionBorderWidth, key).description && (
                 <Typography variant="body02" type="secondary" component="div">
-                  {get(borderRadiusObject, key).description}
+                  {get(dimensionBorderWidth, key).description}
                 </Typography>
               )}
             </div>
@@ -67,4 +56,4 @@ const RadiusShowcase = ({ type = 'global' }: Props) => {
   );
 };
 
-export default RadiusShowcase;
+export default BorderWidthShowcase;

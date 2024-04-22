@@ -1,20 +1,36 @@
 import useTheme from 'hooks/useTheme';
-import { map } from 'lodash';
+import { get } from 'lodash';
 import React from 'react';
 import { WrapperStyle } from 'storybook/styles/OverviewCard.style';
-import spacing from 'theme/globals/constants/spacing';
+import type { DimensionSpacingKey } from 'theme/dimension/spacing';
+import dimensionSpacing from 'theme/dimension/variables/spacing';
+import globalSpacing from 'theme/globals/constants/spacing';
+import type { SpacingKey } from 'theme/globals/spacing';
+import { convertRemToPixels } from 'theme/utils';
 
-const SpacingSizingShowcase = () => {
-  const spaces = map(spacing);
+import { getAllPaths } from '../TokenColorsShowcase/utils';
+import Typography from 'components/Typography';
+
+type Props = {
+  type?: 'global' | 'dimension';
+};
+
+const SpacingSizingShowcase = ({ type = 'global' }: Props) => {
+  const isGlobal = type === 'global';
+  const spacingObject = isGlobal ? globalSpacing : dimensionSpacing;
+
   const theme = useTheme();
+
+  const keys = getAllPaths(spacingObject);
 
   return (
     <div css={WrapperStyle}>
-      {spaces.map((space, index) => (
+      {keys.map((key) => (
         <div
-          key={`spacing_${index}`}
+          key={key}
           css={{
             display: 'flex',
+            alignItems: 'center',
             flexDirection: 'column',
             gap: '16px',
           }}
@@ -22,9 +38,9 @@ const SpacingSizingShowcase = () => {
           <div
             css={{
               display: 'flex',
-              justifyContent: 'start',
               alignItems: 'start',
               width: '108px',
+              justifyContent: 'center',
             }}
           >
             <div
@@ -32,14 +48,16 @@ const SpacingSizingShowcase = () => {
                 width: '32px',
                 height: '32px',
                 borderRadius: '50%',
-                backgroundColor: theme.globals.colors.get('blue.2'),
+                backgroundColor: theme.tokens.colors.get('palette.upsell.muted'),
               }}
             />
             <div
               css={{
-                width: `${space.value}`,
+                width: isGlobal
+                  ? theme.globals.spacing.get(key as SpacingKey)
+                  : theme.dimension.spacing.get(key as DimensionSpacingKey),
                 height: '32px',
-                backgroundColor: theme.globals.colors.get('blue.4'),
+                backgroundColor: theme.tokens.colors.get('palette.primary.muted'),
               }}
             />
             <div
@@ -47,7 +65,7 @@ const SpacingSizingShowcase = () => {
                 width: '32px',
                 height: '32px',
                 borderRadius: '50%',
-                backgroundColor: theme.globals.colors.get('blue.2'),
+                backgroundColor: theme.tokens.colors.get('palette.upsell.muted'),
               }}
             />
           </div>
@@ -55,26 +73,21 @@ const SpacingSizingShowcase = () => {
             css={{
               display: 'flex',
               flexDirection: 'column',
-              gap: '8px',
+              alignItems: 'center',
+              paddingBottom: '32px',
             }}
           >
-            <span
-              css={{
-                fontWeight: theme.globals.typography.fontWeight.get('medium'),
-                color: theme.tokens.colors.get('textColor.default.primary'),
-              }}
-            >
-              spacing.{index}
-            </span>
-            <span
-              css={{
-                color: theme.tokens.colors.get('textColor.default.secondary'),
-                fontSize: '14px',
-                fontWeight: theme.globals.typography.fontWeight.get('regular'),
-              }}
-            >
-              {space.value}
-            </span>
+            <Typography isBold variant="title01" type="primary">
+              $spacing.{key}
+            </Typography>
+            <Typography variant="body02" type="secondary" component="div">
+              {get(spacingObject, key).value}
+              {!isGlobal
+                ? ` = ${convertRemToPixels(
+                    theme.dimension.spacing.get(key as DimensionSpacingKey)
+                  )}px`
+                : ``}
+            </Typography>
           </div>
         </div>
       ))}
