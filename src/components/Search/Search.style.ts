@@ -15,15 +15,13 @@ export const searchContainer = (): SerializedStyles => {
 export const searchInputStyles =
   () =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getSearchTokens(theme);
-
     return css`
       width: 100%;
       input {
-        ${generateStylesFromTokens(tokens('text'))};
+        ${generateStylesFromTokens(theme.tokens.typography.get('normal.body02'))};
 
         &::placeholder {
-          color: ${tokens('textColor.default')};
+          color: ${theme.tokens.colors.get('textColor.default.secondary')};
         }
 
         ::-webkit-search-cancel-button {
@@ -36,28 +34,30 @@ export const searchInputStyles =
 export const filterStyles =
   () =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getSearchTokens(theme);
-
     return css`
       button {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
         border: none;
-        box-shadow: ${`inset 0 0 0 ${tokens('borderWidth.1')} ${tokens('borderColor.default')}`};
+        box-shadow: ${`inset 0 0 0 ${theme.dimension.borderWidth.get(
+          'default'
+        )} ${theme.tokens.colors.get('borderColor.interactive.default')}`};
         position: relative;
         z-index: 0;
 
         &:hover[data-active='false']:enabled {
-          background: ${tokens('backgroundColor.focused')};
+          background: ${theme.tokens.colors.get('palette.tertiary.muted')};
         }
 
         &:focus-within:enabled {
           border-left: none;
-          box-shadow: ${`inset 0 0 0 ${tokens('borderWidth.2')} ${tokens('borderColor.active')}`};
+          box-shadow: ${`inset 0 0 0 ${theme.dimension.borderWidth.get(
+            'active'
+          )} ${theme.tokens.colors.get('borderColor.interactive.active')}`};
           z-index: 1;
 
           &[data-active='false'] {
-            background: ${tokens('backgroundColor.focused')};
+            background: ${theme.tokens.colors.get('palette.tertiary.muted')};
           }
         }
 
@@ -81,26 +81,32 @@ export const getSX =
         ...(hasFilter && { minWidth: rem(240) }),
         zIndex: 1,
         borderRadius: hasFilter
-          ? `${tokens('borderRadius.rounded')} 0 0 ${tokens('borderRadius.rounded')}`
-          : tokens('borderRadius.rounded'),
-        background: tokens('backgroundColor.default'),
-        boxShadow: `inset 0 0 0 ${tokens('borderWidth.1')} ${tokens('borderColor.default')}`,
+          ? `${theme.dimension.borderRadius.get('circle')} 0 0 ${theme.dimension.borderRadius.get(
+              'circle'
+            )}`
+          : theme.dimension.borderRadius.get('circle'),
+        background: theme.tokens.colors.get('backgroundColor.default'),
+        boxShadow: `inset 0 0 0 ${theme.dimension.borderWidth.get(
+          'default'
+        )} ${theme.tokens.colors.get('borderColor.interactive.default')}`,
         ...(!isDisabled && {
           '&:hover': {
-            background: tokens('backgroundColor.focused'),
+            background: theme.tokens.colors.get('palette.tertiary.muted'),
           },
           '&:focus-within': {
-            background: tokens('backgroundColor.focused'),
+            background: theme.tokens.colors.get('palette.tertiary.muted'),
             outline: 'none',
-            boxShadow: `inset 0 0 0 ${tokens('borderWidth.2')} ${tokens('borderColor.active')}`,
+            boxShadow: `inset 0 0 0 ${theme.dimension.borderWidth.get(
+              'active'
+            )} ${theme.tokens.colors.get('borderColor.interactive.active')}`,
           },
         }),
         ...sx?.wrapper,
       },
       textField: {
         gap: rem(8),
-        paddingRight: tokens('paddingHorizontalRounded'),
-        paddingLeft: tokens('paddingHorizontalRounded'),
+        paddingRight: theme.dimension.spacing.get('lg'),
+        paddingLeft: theme.dimension.spacing.get('lg'),
         ...sx?.textField,
       },
     };

@@ -44,12 +44,12 @@ const FilterSearchField = ({
       ) : (
         <Icon
           /** @TODO replace tokens with search tokens once Search component is revisited */
-          size={theme.tokens.icon.get('size.3')}
+          size={theme.dimension.sizing.get('icon.md')}
           name="search"
           color={theme.tokens.colors.get('textColor.default.secondary')}
         />
       ),
-    [isLoading, theme.tokens.colors, theme.tokens.icon]
+    [isLoading, theme.dimension.sizing, theme.tokens.colors]
   );
 
   return (

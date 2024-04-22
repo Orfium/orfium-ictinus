@@ -16,7 +16,7 @@ export const sxProp =
 
     return {
       wrapper: { width: 'auto', height: 'auto', minWidth: rem(tokens('minWidth.large.normal')) },
-      textField: { padding: `${tokens('paddingVertical')} ${tokens('paddingContentLeft')}` },
+      textField: { padding: `${tokens('addOn.padding.textArea')}` },
       input: {
         maxWidth: '100%',
         resize: !isResizeEnabled ? 'none' : 'both',
@@ -38,15 +38,13 @@ export const sxProp =
 export const hintMessageStyle =
   ({ isDisabled }: Pick<TextAreaProps, 'isDisabled'>) =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getTextInputBaseTokens(theme);
-
     return css(
       {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'flex-end',
-        padding: `${tokens('hintPadding')} 0 0`,
-        color: tokens('textColor.inputColorAlt'),
+        padding: `${theme.dimension.spacing.get('sm')} 0 0`,
+        color: theme.tokens.colors.get('textColor.default.secondary'),
         span: {
           alignItems: 'stretch',
           padding: 0,

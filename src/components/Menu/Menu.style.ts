@@ -3,9 +3,7 @@ import styled from '@emotion/styled';
 import { rem } from 'polished';
 import { Menu, MenuItem } from 'react-aria-components';
 
-import { getMenuTokens } from './Menu.tokens';
 import type { ListRowSize } from '../List';
-import { getListItemTokens } from '../List/List.tokens';
 import { LIST_ITEM_HEIGHT } from '../List/utils';
 import { body02, body03, label02, label03 } from '../Typography/Typography.config.styles';
 
@@ -18,13 +16,12 @@ export const MenuItemWrapper = styled(MenuItem)<{
   isCompact?: boolean;
   rowSize?: ListRowSize;
 }>(({ rowSize, isCompact, isDisabled, theme }) => {
-  const listItemTokens = getListItemTokens(theme);
   const height = rem(LIST_ITEM_HEIGHT[rowSize]);
-  const padding = css`0 ${listItemTokens('paddingHorizontal')}`;
+  const padding = css`0 ${theme.dimension.spacing.get('md')}`;
   const itemTypographyStyle = isCompact ? body03(theme) : body02(theme);
 
   return css`
-    background-color: ${listItemTokens('backgroundColor.default')};
+    background-color: ${theme.tokens.colors.get('palette.tertiary.base')};
 
     & > div {
       ${itemTypographyStyle}
@@ -42,7 +39,9 @@ export const MenuItemWrapper = styled(MenuItem)<{
     flex-direction: row;
 
     &:hover {
-      background-color: ${!isDisabled ? listItemTokens('backgroundColor.active') : undefined};
+      background-color: ${!isDisabled
+        ? theme.tokens.colors.get('palette.tertiary.muted')
+        : undefined};
       cursor: ${!isDisabled ? 'pointer' : 'initial'};
     }
     span[role='presentation'] {
@@ -55,18 +54,18 @@ export const MenuItemWrapper = styled(MenuItem)<{
     }
 
     &[data-focus-visible] {
-      background-color: ${listItemTokens('backgroundColor.active')};
+      background-color: ${theme.tokens.colors.get('palette.tertiary.muted')};
     }
 
     &[aria-selected='true'] {
-      background-color: ${listItemTokens('backgroundColor.active')};
+      background-color: ${theme.tokens.colors.get('palette.tertiary.muted')};
       & > div {
-        color: ${listItemTokens('textColor.active')};
+        color: ${theme.tokens.colors.get('textColor.default.active')};
         ${isCompact ? label03(theme) : label02(theme)}
       }
 
       &[data-focus-visible] {
-        background-color: ${listItemTokens('backgroundColor.active')};
+        background-color: ${theme.tokens.colors.get('palette.tertiary.muted')};
       }
     }
 
@@ -76,13 +75,11 @@ export const MenuItemWrapper = styled(MenuItem)<{
 });
 
 export const MenuWrapper = styled(Menu)(({ theme }) => {
-  const tokens = getMenuTokens(theme);
-
   return css`
-    background-color: ${tokens('backgroundColor')};
-    border-color: ${tokens('borderColor')};
-    border-radius: ${tokens('borderRadius')};
-    box-shadow: ${tokens('boxShadow')};
-    border-width: ${tokens('borderWidth')};
+    background-color: ${theme.tokens.colors.get('backgroundColor.default')};
+    border-color: ${theme.tokens.colors.get('borderColor.decorative.default')};
+    border-radius: ${theme.dimension.borderRadius.get('md')};
+    box-shadow: ${theme.tokens.boxShadow.get('2')};
+    border-width: ${theme.dimension.borderWidth.get('default')};
   `;
 });

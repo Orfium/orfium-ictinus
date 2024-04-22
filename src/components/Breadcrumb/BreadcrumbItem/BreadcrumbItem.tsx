@@ -2,7 +2,6 @@ import useTheme from 'hooks/useTheme';
 import React from 'react';
 
 import { breadcrumbItemStyles, breadcrumbListStyles } from './BreadcrumbItem.style';
-import { getBreadcrumbTokens } from '../Breadcrumb.tokens';
 import Icon from 'components/Icon';
 
 export type BreadcrumbItemProps = {
@@ -14,14 +13,17 @@ export type BreadcrumbItemProps = {
 
 const BreadcrumbItem: React.FC<BreadcrumbItemProps> = ({ childComponent, isLastItem = false }) => {
   const theme = useTheme();
-  const tokens = getBreadcrumbTokens(theme);
 
   return (
     <li css={breadcrumbListStyles()}>
       <div css={breadcrumbItemStyles({ isLastItem })}>
         {childComponent}
         {!isLastItem && (
-          <Icon name="triangleRight" color={tokens('defaultColor')} size={tokens('iconSize')} />
+          <Icon
+            name="triangleRight"
+            color={theme.tokens.colors.get('textColor.default.secondary')}
+            size={theme.dimension.sizing.get('icon.md')}
+          />
         )}
       </div>
     </li>

@@ -10,8 +10,6 @@ import type { ProgressIndicatorProps } from 'components/ProgressIndicator/Progre
 export const progressBarContainer =
   ({ isBlock }: Pick<ProgressIndicatorProps, 'isBlock'>) =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getProgressIndicatorTokens(theme);
-
     return css`
       display: grid;
       grid-template-areas:
@@ -24,7 +22,9 @@ export const progressBarContainer =
       &:not([aria-valuenow]) {
         .fill {
           width: 50%;
-          border-radius: ${isBlock ? 0 : tokens('borderRadius')};
+          border-radius: ${isBlock
+            ? theme.dimension.borderRadius.get('none')
+            : theme.dimension.borderRadius.get('circle')};
           animation: indeterminate 1.7s infinite ease-in-out;
           will-change: transform;
         }
@@ -49,9 +49,11 @@ export const barStyles =
 
     return css`
       grid-area: bar;
-      background-color: ${tokens('backgroundColor.track')};
+      background-color: ${theme.tokens.colors.get('palette.primaryAlt.muted')};
       height: ${isBlock ? tokens('height.linearBlock') : tokens('height.linear')};
-      border-radius: ${isBlock ? 0 : tokens('borderRadius')};
+      border-radius: ${isBlock
+        ? theme.dimension.borderRadius.get('none')
+        : theme.dimension.borderRadius.get('circle')};
       overflow: hidden;
       will-change: transform;
     `;
@@ -60,20 +62,22 @@ export const barStyles =
 export const fillStyles =
   ({ status, value, isBlock }: Pick<ProgressIndicatorProps, 'status' | 'value' | 'isBlock'>) =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getProgressIndicatorTokens(theme);
-
     const hasError = status === 'error';
 
     const getBorderRadius = () => {
       if (isBlock) return 0;
 
-      if (isUndefined(value)) return tokens('borderRadius');
+      if (isUndefined(value)) return theme.dimension.borderRadius.get('circle');
 
-      return `0 ${tokens('borderRadius')} ${tokens('borderRadius')} 0`;
+      return `0 ${theme.dimension.borderRadius.get('circle')} ${theme.dimension.borderRadius.get(
+        'circle'
+      )} 0`;
     };
 
     return css`
-      background: ${hasError ? tokens('backgroundColor.error') : tokens('backgroundColor.active')};
+      background: ${hasError
+        ? theme.tokens.colors.get('textColor.inverted.error')
+        : theme.tokens.colors.get('palette.primary.muted')};
       height: 100%;
       border-radius: ${getBorderRadius()};
       width: ${value}%;

@@ -19,10 +19,7 @@ import ClickAwayListener from '../utils/ClickAwayListener';
 import handleSearch from '../utils/handleSearch';
 import MultiTextFieldBase from 'components/MultiTextFieldBase/MultiTextFieldBase';
 import ProgressIndicator from 'components/ProgressIndicator';
-import {
-  getTextInputBaseTokens,
-  type TextInputBaseTokens,
-} from 'components/TextInputBase/TextInputBase.tokens';
+import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
 import PositionInScreen from 'components/utils/PositionInScreen';
 
 export const emptyValue: SelectOption = { label: '', value: '' };
@@ -298,9 +295,9 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
           </Box>
         ) : (
           <Icon
-            size={tokens(`addOn.iconSize.${size}` as TextInputBaseTokens)}
+            size={theme.dimension.sizing.get(`icon.${size === 'compact' ? 'sm' : 'md'}`)}
             name={suffixNameSelector}
-            color={tokens('addOn.iconColor')}
+            color={theme.tokens.colors.get('textColor.default.secondary')}
             onClick={handleIconClick}
             hasHover={false}
             dataTestId="select-right-icon"
@@ -308,7 +305,16 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
         )}
       </div>
     ),
-    [isOpen, isSearchable, isLoading, tokens, size, suffixNameSelector, handleIconClick]
+    [
+      isOpen,
+      isSearchable,
+      isLoading,
+      theme.dimension.sizing,
+      theme.tokens.colors,
+      size,
+      suffixNameSelector,
+      handleIconClick,
+    ]
   );
 
   const handleClick = () => {

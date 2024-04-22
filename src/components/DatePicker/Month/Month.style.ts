@@ -19,7 +19,7 @@ export const weekDayStyle =
       display: flex;
       align-items: center;
       justify-content: center;
-      color: ${tokens('date.textColor.weekday')};
+      color: ${theme.tokens.colors.get('textColor.default.secondary')};
       width: ${tokens('dateSize')};
       height: ${tokens('dateSize')};
       font-size: ${theme.globals.typography.fontSize.get('3')};
@@ -32,10 +32,8 @@ export const weekDayStyle =
 export const datesWrapperStyle =
   () =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getDatePickerTokens(theme);
-
     return css`
       border-collapse: separate;
-      border-spacing: 0 ${tokens('rowPadding')};
+      border-spacing: 0 ${theme.dimension.spacing.get('md')};
     `;
   };

@@ -3,7 +3,6 @@ import { css } from '@emotion/react';
 import type { Theme } from 'theme';
 
 import type { CheckBoxProps } from './CheckBox';
-import { getControlsTokens } from 'components/Controls/Controls.tokens';
 import type { LabelConfig } from 'components/Controls/Controls.types';
 
 export const checkboxWrapperStyles =
@@ -13,13 +12,11 @@ export const checkboxWrapperStyles =
     isDisabled,
   }: Pick<LabelConfig, 'placement' | 'sx'> & Pick<CheckBoxProps, 'isDisabled'>) =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getControlsTokens(theme);
-
     return css`
       display: flex;
       flex-direction: ${placement === 'right' ? 'row' : 'row-reverse'};
       align-items: center;
-      gap: ${tokens('checkbox.padding')};
+      gap: ${theme.dimension.spacing.get('md')};
 
       ${isDisabled &&
       `
@@ -34,8 +31,6 @@ export const checkboxWrapperStyles =
 export const checkboxStyles =
   () =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getControlsTokens(theme);
-
     return css`
       display: block;
       cursor: pointer;
@@ -44,13 +39,14 @@ export const checkboxStyles =
       & > div {
         transition: all 0.2s;
 
-        width: ${tokens('checkbox.size')};
-        height: ${tokens('checkbox.size')};
+        width: ${theme.dimension.sizing.get('icon.md')};
+        height: ${theme.dimension.sizing.get('icon.md')};
         align-items: center;
         box-sizing: border-box;
 
-        border: ${tokens('checkbox.borderWidth')} solid ${tokens('checkbox.borderColor.default')};
-        border-radius: ${tokens('checkbox.borderRadius')};
+        border: ${theme.dimension.borderWidth.get('active')} solid
+          ${theme.tokens.colors.get('borderColor.interactive.default')};
+        border-radius: ${theme.dimension.borderRadius.get('md')};
       }
 
       svg {
@@ -71,8 +67,8 @@ export const checkboxStyles =
         & > div {
           transition: all 0.2s;
 
-          border-color: ${tokens('checkbox.borderColor.pressed')};
-          background: ${tokens('checkbox.backgroundColor.pressed')};
+          border-color: ${theme.tokens.colors.get('borderColor.decorative.transparent')};
+          background: ${theme.tokens.colors.get('palette.primary.base')};
         }
 
         svg {

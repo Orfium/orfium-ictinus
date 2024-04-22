@@ -57,31 +57,22 @@ const NumberField = React.forwardRef<HTMLInputElement, NumberFieldProps>((props,
     maxValue,
     status = { type: 'normal' },
     dataTestPrefixId,
+    sx,
     ...rest
   } = props;
 
-  const {
-    isLocked,
-    hintMessageId,
-    handleContainerClick,
-    suffixContent,
-    combinedRefs,
-    textInputBaseSx,
-  } = useFieldUtils({
-    id,
-    suffix,
-    status,
-    isDisabled,
-    ref,
-  });
+  const { isLocked, hintMessageId, handleContainerClick, suffixContent, combinedRefs } =
+    useFieldUtils({
+      id,
+      suffix,
+      status,
+      isDisabled,
+      ref,
+    });
 
   return (
     <div onClick={handleContainerClick}>
-      <TextInputBase
-        {...props}
-        status={{ ...status, id: hintMessageId }}
-        sx={textInputBaseSx(!suffixContent && !hasStepper)}
-      >
+      <TextInputBase {...props} status={{ ...status, id: hintMessageId }} sx={sx}>
         <div css={{ width: '100%' }}>
           <ReactAriaNumberField
             value={value}

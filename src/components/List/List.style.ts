@@ -3,38 +3,34 @@ import { css } from '@emotion/react';
 import type { Theme } from 'theme';
 import { rem } from 'theme/utils';
 
-import { getListTokens } from './List.tokens';
-
 export const wrapperStyle =
   ({ width, isSearchable }: { width: number | undefined; isSearchable?: boolean }) =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getListTokens(theme);
-
     return css`
       border: ${isSearchable
         ? 'initial'
-        : `${tokens('borderWidth')} solid ${tokens('borderColor')}`};
-      border-radius: ${isSearchable ? 'initial' : tokens('borderRadius')};
+        : `${theme.dimension.borderWidth.get('default')} solid ${theme.tokens.colors.get(
+            'borderColor.decorative.default'
+          )}`};
+      border-radius: ${isSearchable ? 'initial' : theme.dimension.borderRadius.get('md')};
       width: ${`${width}px` || '100%'};
-      box-shadow: ${tokens('boxShadow')};
+      box-shadow: ${theme.tokens.boxShadow.get('2')};
     `;
   };
 
 export const listStyle =
   ({ width, height, isSearchable }: { width?: number; height?: number; isSearchable?: boolean }) =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getListTokens(theme);
-
     return css`
       padding-left: 0;
       margin-top: 0;
       margin-bottom: 0;
-      border-radius: ${isSearchable ? 'initial' : tokens('borderRadius')};
+      border-radius: ${isSearchable ? 'initial' : theme.dimension.borderRadius.get('md')};
       width: ${width ? rem(width) : '100%'};
       height: ${height ? rem(height) : 'auto'};
       overflow: auto;
       overflow-x: hidden;
-      background: ${tokens('backgroundColor')};
+      background: ${theme.tokens.colors.get('backgroundColor.default')};
     `;
   };
 
