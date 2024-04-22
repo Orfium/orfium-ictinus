@@ -3,13 +3,13 @@ import React, { useMemo } from 'react';
 import { ChangeEvent } from 'utils/common';
 import { errorHandler } from 'utils/helpers';
 
-import ClickAwayListener from '../utils/ClickAwayListener';
 import FilterBase from './components/FilterBase';
 import MultiFilter from './components/MultiFilter/MultiFilter';
 import SingleFilter from './components/SingleFilter/SingleFilter';
 import useMultiFilterUtils from './hooks/useMultiFilterUtils';
 import { FilterOption, Props } from './types';
 import { errors } from './utils';
+import ClickAwayListener from '../utils/ClickAwayListener';
 import handleSearch from 'components/utils/handleSearch';
 import PositionInScreen from 'components/utils/PositionInScreen/PositionInScreen';
 
@@ -190,7 +190,7 @@ const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
           />
         }
       >
-        {isOpen && getFilter()}
+        {getFilter()}
       </PositionInScreen>
     </ClickAwayListener>
   );
