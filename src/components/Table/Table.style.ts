@@ -2,6 +2,8 @@ import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import type { Theme } from 'theme';
 
+/** @TODO replace all css with tokens */
+
 export const tableContainer =
   () =>
   (theme: Theme): SerializedStyles => {
