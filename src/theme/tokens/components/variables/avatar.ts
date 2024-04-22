@@ -1,126 +1,35 @@
 const avatar = {
-  backgroundColor: {
-    blue: {
-      value: '{sem.colors.palette.primaryAlt.base}',
-      type: 'color',
-      description: 'Sets red background variation for avatar',
-    },
-    teal: {
-      value: '{sem.colors.palette.success.base}',
-      type: 'color',
-      description: 'Sets teal background variation for avatar',
-    },
-    purple: {
-      value: '{sem.colors.palette.upsell.base}',
-      type: 'color',
-      description: 'Sets purple background variation for avatar',
-    },
-    red: {
-      value: '{sem.colors.palette.error.base}',
-      type: 'color',
-      description: 'Sets red background variation for avatar',
-    },
-    orange: {
-      value: '{sem.colors.palette.warning.base}',
-      type: 'color',
-      description: 'Sets orange background variation for avatar',
-    },
-  },
-  textColor: {
-    blue: {
-      value: '{sem.colors.textColor.default.active}',
-      type: 'color',
-      description: 'Sets red text color for blue variant',
-    },
-    teal: {
-      value: '{sem.colors.textColor.default.success}',
-      type: 'color',
-      description: 'Sets red text color for teal variant',
-    },
-    purple: {
-      value: '{sem.colors.textColor.default.visited}',
-      type: 'color',
-      description: 'Sets red text color for purple variant',
-    },
-    red: {
-      value: '{sem.colors.textColor.default.error}',
-      type: 'color',
-      description: 'Sets red text color for red variant',
-    },
-    orange: {
-      value: '{sem.colors.textColor.default.warning}',
-      type: 'color',
-      description: 'Sets red text color for orange variant',
-    },
-  },
-  borderColor: {
-    blue: {
-      value: '{sem.colors.palette.primaryAlt.contrast}',
-      type: 'color',
-      description: 'Sets borderColor for blue variant',
-    },
-    teal: {
-      value: '{sem.colors.palette.success.contrast}',
-      type: 'color',
-      description: 'Sets borderColor for teal variant',
-    },
-    purple: {
-      value: '{sem.colors.palette.upsell.contrast}',
-      type: 'color',
-      description: 'Sets borderColor for purple variant',
-    },
-    red: {
-      value: '{sem.colors.palette.error.contrast}',
-      type: 'color',
-      description: 'Sets borderColor for red variant',
-    },
-    orange: {
-      value: '{sem.colors.palette.warning.contrast}',
-      type: 'color',
-      description: 'Sets borderColor for orange variant',
-    },
-  },
   size: {
     '1': {
       value: '{sizing.5}',
       type: 'sizing',
-      description: 'Sets size for extra small avatar',
+      description: 'Sets avatar size 1',
     },
     '2': {
       value: '{sizing.6}',
       type: 'sizing',
-      description: 'Sets size for small avatar',
+      description: 'Sets avatar size 2',
     },
     '3': {
       value: '{sizing.8}',
       type: 'sizing',
-      description: 'Sets size for medium avatar',
+      description: 'Sets avatar size 3',
     },
     '4': {
       value: '{sizing.12}',
       type: 'sizing',
-      description: 'Sets size for large avatar',
+      description: 'Sets avatar size 4',
     },
     '5': {
       value: '{sizing.15}',
       type: 'sizing',
-      description: 'Sets size for extra large avatar',
+      description: 'Sets avatar size 5',
     },
     '6': {
       value: '{sizing.18}',
       type: 'sizing',
-      description: 'Sets size for extra extra large avatar',
+      description: 'Sets avatar size 6',
     },
-  },
-  borderRadius: {
-    value: '{borderRadius.7}',
-    type: 'borderRadius',
-    description: 'Sets avatar border radius',
-  },
-  borderWidth: {
-    value: '{borderWidth.1}',
-    type: 'borderWidth',
-    description: "Sets avatar's border width",
   },
   label: {
     '1': {
