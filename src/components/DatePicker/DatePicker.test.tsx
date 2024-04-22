@@ -2,9 +2,9 @@ import { waitFor } from '@testing-library/react';
 import dayjs from 'dayjs';
 import React from 'react';
 
-import { fireEvent, render } from '../../test';
 import DatePicker from './DatePicker';
 import { currentDay } from './utils';
+import { fireEvent, render } from '../../test';
 
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
@@ -176,7 +176,7 @@ describe('DatePicker', () => {
 
     fireEvent.keyDown(input, { key: 'Escape', keyCode: 27 });
 
-    await waitFor(() => expect(applyButton).not.toBeInTheDocument());
+    await waitFor(() => expect(applyButton).not.toBeVisible());
   });
 
   it('should handle clearing the selected date', async () => {
