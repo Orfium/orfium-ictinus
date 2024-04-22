@@ -13,11 +13,18 @@
 }
 
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
   -webkit-transition: stroke-dashoffset 0.5s;
   transition: stroke-dashoffset 0.5s;
 }
 
-.emotion-3 {
+.emotion-4 {
   display: grid;
   grid-template-areas: 'label value' 'bar bar';
   grid-template-columns: 1fr auto;
@@ -25,27 +32,27 @@
   width: 100%;
 }
 
-.emotion-3:not([aria-valuenow]) .fill {
+.emotion-4:not([aria-valuenow]) .fill {
   width: 50%;
-  border-radius: 6.25rem;
+  border-radius: 624.9375rem;
   -webkit-animation: indeterminate 1.7s infinite ease-in-out;
   animation: indeterminate 1.7s infinite ease-in-out;
   will-change: transform;
 }
 
-.emotion-4 {
+.emotion-5 {
   grid-area: bar;
   background-color: #E9EFFB;
   height: 0.25rem;
-  border-radius: 6.25rem;
+  border-radius: 624.9375rem;
   overflow: hidden;
   will-change: transform;
 }
 
-.emotion-5 {
+.emotion-6 {
   background: #FF80AD;
   height: 100%;
-  border-radius: 0 6.25rem 6.25rem 0;
+  border-radius: 0 624.9375rem 624.9375rem 0;
   width: 60%;
   -webkit-transition: width 0.5s;
   transition: width 0.5s;
@@ -63,7 +70,7 @@
         aria-valuemin="0"
         aria-valuenow="60"
         aria-valuetext="60%"
-        class="react-aria-ProgressBar"
+        class="emotion-1"
         data-rac=""
         id="react-aria-:rae:"
         role="progressbar"
@@ -72,19 +79,19 @@
           data-testid="undefined_circular_progress_container"
           fill="none"
           height="1rem"
-          stroke-width="1.5"
+          stroke-width="NaN"
           viewBox="0 0 32 32"
           width="1rem"
         >
           <circle
-            class="emotion-1"
+            class="emotion-2"
             cx="16"
             cy="16"
             data-testid="undefined_circular_progress_value"
             r="14"
             stroke="#FF80AD"
-            stroke-dasharray="91.106186954104 91.106186954104"
-            stroke-dashoffset="36.4424747816416"
+            stroke-dasharray="NaN NaN"
+            stroke-dashoffset="NaN"
             stroke-linecap="round"
             transform="rotate(-90 16 16)"
           />
@@ -103,17 +110,17 @@
         aria-valuemin="0"
         aria-valuenow="60"
         aria-valuetext="60%"
-        class="emotion-3"
+        class="emotion-4"
         data-rac=""
         id="react-aria-:rah:"
         role="progressbar"
       >
         <div
-          class="bar emotion-4"
+          class="bar emotion-5"
           data-testid="undefined_linear_progress_container"
         >
           <div
-            class="fill emotion-5"
+            class="fill emotion-6"
             data-testid="undefined_linear_progress_value"
           />
         </div>

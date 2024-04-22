@@ -13,6 +13,13 @@
 }
 
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
   -webkit-transition: stroke-dashoffset 0.5s;
   transition: stroke-dashoffset 0.5s;
   -webkit-animation: rotating 2s linear infinite;
@@ -29,7 +36,7 @@
       <div
         aria-valuemax="100"
         aria-valuemin="0"
-        class="react-aria-ProgressBar"
+        class="emotion-1"
         data-rac=""
         id="react-aria-:rab:"
         role="progressbar"
@@ -38,19 +45,19 @@
           data-testid="undefined_circular_progress_container"
           fill="none"
           height="1rem"
-          stroke-width="1.5"
+          stroke-width="NaN"
           viewBox="0 0 32 32"
           width="1rem"
         >
           <circle
-            class="emotion-1"
+            class="emotion-2"
             cx="16"
             cy="16"
             data-testid="undefined_circular_progress_value"
             r="14"
             stroke="#5E8DF8"
-            stroke-dasharray="91.106186954104 91.106186954104"
-            stroke-dashoffset="22.776546738526008"
+            stroke-dasharray="NaN NaN"
+            stroke-dashoffset="NaN"
             stroke-linecap="round"
             transform="rotate(-90 16 16)"
           />
