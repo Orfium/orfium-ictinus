@@ -1,0 +1,41 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
+import Table from './Table';
+import * as TableStories from './Table.stories';
+import { DisplayColumnStory } from './utils/TableStoryComponents';
+
+<Meta of={TableStories} />
+
+<SectionHeader
+  title={'Table'}
+  sections={[
+    { title: 'Overview', href: '#overview' },
+    { title: 'Props', href: '#table-props' },
+    { title: 'Usage', href: '#usage' },
+    { title: 'Variants', href: '#variants' },
+  ]}
+/>
+
+## Overview
+
+A universal Table component that applies Orfium basic usages.
+
+## Table Props
+
+<ArgTypes of={Table} />
+
+## DisplayColumn Type
+
+<ArgTypes of={DisplayColumnStory} />
+
+<SubsectionHeader title="Variants" />
+
+### Column and Row Sizing
+
+<Tip>In order to adjust the cell height, use the rowSize prop</Tip>
+
+<Tip>
+  In order to adjust the cell width, set the width for every column inside the DisplayColumn
+  configuration object (value is percentage)
+</Tip>
+
+<Canvas of={TableStories.ColumnAndRowSizing} />
