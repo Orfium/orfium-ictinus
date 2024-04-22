@@ -38,6 +38,19 @@ const ColumnChooser: React.FC<Props> = ({ columns, columnsConfig }) => {
     setBtnOpen((isOpen) => !isOpen);
   };
 
+  const handleSelectionChange = (keys) => {
+    const keysArray = Array.from(keys);
+    setSelectedKeys(keys);
+
+    columnsConfig.setColumnVisibility(
+      options.reduce((obj, item) => {
+        obj[item.id] = keysArray.includes(item.id);
+
+        return obj;
+      }, {})
+    );
+  };
+
   return (
     <>
       <Button
@@ -64,6 +77,7 @@ const ColumnChooser: React.FC<Props> = ({ columns, columnsConfig }) => {
           selectionMode="multiple"
           selectedKeys={selectedKeys}
           css={[listStyle({}), menuStyle()]}
+          onSelectionChange={handleSelectionChange}
         >
           {options.map((col, index) => {
             const key = col.id;
@@ -88,27 +102,6 @@ const ColumnChooser: React.FC<Props> = ({ columns, columnsConfig }) => {
                       <Switch
                         isDisabled={col.isAlwaysVisible}
                         isSelected={selectedKeys?.has(key)}
-                        onChange={(isSelected) => {
-                          columnsConfig.setColumnVisibility({
-                            ...columnsConfig.columnVisibility,
-                            [col.id]: isSelected,
-                          });
-
-                          setSelectedKeys((state) => {
-                            const newState = new Set(state);
-                            if (isSelected) {
-                              return newState.add(key);
-                            }
-                            newState.delete(key);
-
-                            columnsConfig.setColumnVisibility({
-                              ...columnsConfig.columnVisibility,
-                              [col.id]: isSelected,
-                            });
-
-                            return newState;
-                          });
-                        }}
                       />
                     </ListItemAction>
                   </ListItem>

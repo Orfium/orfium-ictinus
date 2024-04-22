@@ -1,13 +1,9 @@
 export const flattenColumns = (columns) => {
-  let flattenedColumns = [];
-
-  columns.forEach((column) => {
+  return columns.reduce((flattenedColumns, column) => {
     if (column.columns) {
-      flattenedColumns = flattenedColumns.concat(flattenColumns(column.columns));
+      return flattenedColumns.concat(flattenColumns(column.columns));
     } else {
-      flattenedColumns.push(column);
+      return flattenedColumns.concat(column);
     }
-  });
-
-  return flattenedColumns;
+  }, []);
 };

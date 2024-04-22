@@ -11,11 +11,9 @@ type ReturnValue<TData> = {
 };
 
 const getColumns = (columns: any[]) => {
-  const tColumns = [];
-
   const columnHelper = createColumnHelper();
 
-  columns.forEach((column) => {
+  return columns.reduce((tColumns, column) => {
     if ('columns' in column) {
       const groupConfig = {
         id: column.id,
@@ -32,9 +30,9 @@ const getColumns = (columns: any[]) => {
         })
       );
     }
-  });
 
-  return tColumns;
+    return tColumns;
+  }, []);
 };
 
 const useTable = <TData,>({ data, columns, ...rest }: UseTableProps<TData>): ReturnValue<TData> => {

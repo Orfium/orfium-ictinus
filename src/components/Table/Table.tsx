@@ -67,4 +67,4 @@ const Table = <TData,>({ data, columns, rowSize = 'sm', columnsConfig }: TablePr
   );
 };
 
-export default React.memo(Table, isEqual);
+export default React.memo(Table, isEqual) as typeof Table;
