@@ -3,11 +3,7 @@ import { CSSObject } from '@emotion/serialize';
 import { rem } from 'polished';
 
 export const container =
-  (
-    withOverflow?: boolean,
-    visible?: boolean,
-    sx?: { container?: CSSObject; itemContainer?: CSSObject }
-  ) =>
+  (withOverflow?: boolean, sx?: { container?: CSSObject; itemContainer?: CSSObject }) =>
   (): SerializedStyles =>
     css({
       overflow: withOverflow ? 'hidden' : 'inherit',
@@ -15,10 +11,6 @@ export const container =
       width: '100%',
       height: 'inherit',
       position: 'relative',
-
-      '#unique-tooltip-id': {
-        display: visible ? 'block !important' : 'none !important',
-      },
       ...sx?.container,
     });
 
@@ -26,17 +18,20 @@ export const itemContainer =
   (
     clientX: number,
     clientY: number,
+    visible: boolean,
     width?: number,
     sx?: { container?: CSSObject; itemContainer?: CSSObject }
   ) =>
   (): SerializedStyles =>
     css({
+      overflow: visible ? 'visible' : 'hidden',
       position: 'absolute',
-      opacity: '1 !important',
       top: rem(clientY),
       left: rem(clientX),
       zIndex: 999999999,
       width: width ? rem(width) : `fit-content`,
       height: 'fit-content',
+      visibility: visible ? 'visible' : 'hidden',
+      opacity: `${visible ? 1 : 0} !important`,
       ...sx?.itemContainer,
     });

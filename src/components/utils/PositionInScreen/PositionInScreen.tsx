@@ -1,5 +1,5 @@
 import { CSSObject } from '@emotion/serialize';
-import React, { useRef } from 'react';
+import React, { useState } from 'react';
 import { ReactFCC } from 'utils/types';
 
 import { useWrapperWidth, usePositionInScreen } from './hooks';
@@ -17,7 +17,7 @@ type Props = {
   /** Additional offset-y */
   offsetY?: number;
   /** The parent element */
-  parent: React.ReactElement;
+  parent: React.ReactElement; // This is not really a parent, more of a trigger
   /** Sx prop to override specific properties */
   sx?: {
     container?: CSSObject;
@@ -35,8 +35,8 @@ const PositionInScreen: ReactFCC<Props> = ({
   sx,
   children,
 }) => {
-  const wrapperRef = useRef(null);
-  const itemRef = useRef(null);
+  const [wrapperRef, setWrapperRef] = useState<HTMLDivElement | null>(null);
+  const [itemRef, setItemRef] = useState<HTMLDivElement | null>(null);
 
   const [wrapperWidth] = useWrapperWidth(hasWrapperWidth, wrapperRef);
   const { x, y } = usePositionInScreen(wrapperRef, itemRef, offsetX, offsetY, visible);
@@ -44,13 +44,22 @@ const PositionInScreen: ReactFCC<Props> = ({
   const showTooltip = visible && x !== -1 && y !== -1;
 
   return (
-    <div css={container(withOverflow, showTooltip, sx)} ref={wrapperRef}>
+    <div
+      css={container(withOverflow, sx)}
+      ref={(ref) => {
+        setWrapperRef(ref);
+      }}
+    >
       {parent}
-      {showTooltip && (
-        <div css={itemContainer(x, y, wrapperWidth, sx)} id={'unique-tooltip-id'} ref={itemRef}>
-          {children}
-        </div>
-      )}
+      <div
+        css={itemContainer(x, y, showTooltip, wrapperWidth, sx)}
+        className={'unique-tooltip-id'}
+        ref={(ref) => {
+          setItemRef(ref);
+        }}
+      >
+        {children}
+      </div>
     </div>
   );
 };

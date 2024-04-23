@@ -211,10 +211,6 @@ exports[`Storyshots Design System/TopNavBar playground 1`] = `
   position: relative;
 }
 
-.emotion-10 #unique-tooltip-id {
-  display: none!important;
-}
-
 .emotion-11 {
   font-size: 0.8125rem;
   font-weight: 500;
@@ -333,6 +329,100 @@ exports[`Storyshots Design System/TopNavBar playground 1`] = `
 
 .emotion-19 path {
   fill: black;
+}
+
+.emotion-20 {
+  overflow: hidden;
+  position: absolute;
+  top: 0.5rem;
+  left: 0rem;
+  z-index: 999999999;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  visibility: hidden;
+  opacity: 0!important;
+}
+
+.emotion-21 {
+  max-height: 15.8125rem;
+  overflow-y: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  min-width: 9.375rem;
+  max-width: 38.75rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: auto;
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
+  border-radius: 0.25rem;
+  z-index: 1;
+}
+
+.emotion-22 {
+  border: 1px solid #edefff;
+  border-radius: 0.25rem;
+  width: undefinedpx;
+}
+
+.emotion-23 {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-radius: 0.25rem;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.emotion-24 {
+  height: 2.875rem;
+  font-size: 0.875rem;
+  background-color: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0px 1rem 0px 1rem;
+  cursor: pointer;
+}
+
+.emotion-24:hover {
+  background-color: #f6f7ff;
+}
+
+.emotion-25 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-25>div {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 <div
@@ -475,6 +565,96 @@ exports[`Storyshots Design System/TopNavBar playground 1`] = `
                     </span>
                   </span>
                 </button>
+                <div
+                  className="unique-tooltip-id emotion-20"
+                >
+                  <div
+                    className="emotion-21"
+                  >
+                    <div
+                      className="emotion-22"
+                    >
+                      <div
+                        data-testid="ictinus_list"
+                      >
+                        <ul
+                          className="emotion-23"
+                        >
+                          <li>
+                            <div
+                              className="emotion-24"
+                              data-testid="ictinus_list_item_0"
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                            >
+                              <div
+                                className="emotion-25"
+                              >
+                                My Profile
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div
+                              className="emotion-24"
+                              data-testid="ictinus_list_item_1"
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                            >
+                              <div
+                                className="emotion-25"
+                              >
+                                Settings
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div
+                              className="emotion-24"
+                              data-testid="ictinus_list_item_2"
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                            >
+                              <div
+                                className="emotion-25"
+                              >
+                                Billing
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div
+                              className="emotion-24"
+                              data-testid="ictinus_list_item_3"
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                            >
+                              <div
+                                className="emotion-25"
+                              >
+                                Notifications
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div
+                              className="emotion-24"
+                              data-testid="ictinus_list_item_4"
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                            >
+                              <div
+                                className="emotion-25"
+                              >
+                                Logout
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -814,10 +994,6 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   position: relative;
 }
 
-.emotion-22 #unique-tooltip-id {
-  display: none!important;
-}
-
 .emotion-23 {
   font-size: 0.8125rem;
   font-weight: 500;
@@ -936,6 +1112,100 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
 
 .emotion-31 path {
   fill: black;
+}
+
+.emotion-32 {
+  overflow: hidden;
+  position: absolute;
+  top: 0.5rem;
+  left: 0rem;
+  z-index: 999999999;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  visibility: hidden;
+  opacity: 0!important;
+}
+
+.emotion-33 {
+  max-height: 15.8125rem;
+  overflow-y: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  min-width: 9.375rem;
+  max-width: 38.75rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: auto;
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
+  border-radius: 0.25rem;
+  z-index: 1;
+}
+
+.emotion-34 {
+  border: 1px solid #edefff;
+  border-radius: 0.25rem;
+  width: undefinedpx;
+}
+
+.emotion-35 {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-radius: 0.25rem;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.emotion-36 {
+  height: 2.875rem;
+  font-size: 0.875rem;
+  background-color: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0px 1rem 0px 1rem;
+  cursor: pointer;
+}
+
+.emotion-36:hover {
+  background-color: #f6f7ff;
+}
+
+.emotion-37 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-37>div {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 <div
@@ -1142,6 +1412,96 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
                     </span>
                   </span>
                 </button>
+                <div
+                  className="unique-tooltip-id emotion-32"
+                >
+                  <div
+                    className="emotion-33"
+                  >
+                    <div
+                      className="emotion-34"
+                    >
+                      <div
+                        data-testid="ictinus_list"
+                      >
+                        <ul
+                          className="emotion-35"
+                        >
+                          <li>
+                            <div
+                              className="emotion-36"
+                              data-testid="ictinus_list_item_0"
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                            >
+                              <div
+                                className="emotion-37"
+                              >
+                                My Profile
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div
+                              className="emotion-36"
+                              data-testid="ictinus_list_item_1"
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                            >
+                              <div
+                                className="emotion-37"
+                              >
+                                Settings
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div
+                              className="emotion-36"
+                              data-testid="ictinus_list_item_2"
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                            >
+                              <div
+                                className="emotion-37"
+                              >
+                                Billing
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div
+                              className="emotion-36"
+                              data-testid="ictinus_list_item_3"
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                            >
+                              <div
+                                className="emotion-37"
+                              >
+                                Notifications
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div
+                              className="emotion-36"
+                              data-testid="ictinus_list_item_4"
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                            >
+                              <div
+                                className="emotion-37"
+                              >
+                                Logout
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1363,10 +1723,6 @@ exports[`Storyshots Design System/TopNavBar with Dark theme enabled 1`] = `
   position: relative;
 }
 
-.emotion-10 #unique-tooltip-id {
-  display: none!important;
-}
-
 .emotion-11 {
   font-size: 0.8125rem;
   font-weight: 500;
@@ -1485,6 +1841,100 @@ exports[`Storyshots Design System/TopNavBar with Dark theme enabled 1`] = `
 
 .emotion-19 path {
   fill: white;
+}
+
+.emotion-20 {
+  overflow: hidden;
+  position: absolute;
+  top: 0.5rem;
+  left: 0rem;
+  z-index: 999999999;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  visibility: hidden;
+  opacity: 0!important;
+}
+
+.emotion-21 {
+  max-height: 15.8125rem;
+  overflow-y: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  min-width: 9.375rem;
+  max-width: 38.75rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: auto;
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
+  border-radius: 0.25rem;
+  z-index: 1;
+}
+
+.emotion-22 {
+  border: 1px solid #edefff;
+  border-radius: 0.25rem;
+  width: undefinedpx;
+}
+
+.emotion-23 {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-radius: 0.25rem;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.emotion-24 {
+  height: 2.875rem;
+  font-size: 0.875rem;
+  background-color: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0px 1rem 0px 1rem;
+  cursor: pointer;
+}
+
+.emotion-24:hover {
+  background-color: #f6f7ff;
+}
+
+.emotion-25 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-25>div {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 <div
@@ -1627,6 +2077,96 @@ exports[`Storyshots Design System/TopNavBar with Dark theme enabled 1`] = `
                     </span>
                   </span>
                 </button>
+                <div
+                  className="unique-tooltip-id emotion-20"
+                >
+                  <div
+                    className="emotion-21"
+                  >
+                    <div
+                      className="emotion-22"
+                    >
+                      <div
+                        data-testid="ictinus_list"
+                      >
+                        <ul
+                          className="emotion-23"
+                        >
+                          <li>
+                            <div
+                              className="emotion-24"
+                              data-testid="ictinus_list_item_0"
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                            >
+                              <div
+                                className="emotion-25"
+                              >
+                                My Profile
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div
+                              className="emotion-24"
+                              data-testid="ictinus_list_item_1"
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                            >
+                              <div
+                                className="emotion-25"
+                              >
+                                Settings
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div
+                              className="emotion-24"
+                              data-testid="ictinus_list_item_2"
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                            >
+                              <div
+                                className="emotion-25"
+                              >
+                                Billing
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div
+                              className="emotion-24"
+                              data-testid="ictinus_list_item_3"
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                            >
+                              <div
+                                className="emotion-25"
+                              >
+                                Notifications
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div
+                              className="emotion-24"
+                              data-testid="ictinus_list_item_4"
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                            >
+                              <div
+                                className="emotion-25"
+                              >
+                                Logout
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1848,10 +2388,6 @@ exports[`Storyshots Design System/TopNavBar with Logo Placeholder 1`] = `
   position: relative;
 }
 
-.emotion-10 #unique-tooltip-id {
-  display: none!important;
-}
-
 .emotion-11 {
   font-size: 0.8125rem;
   font-weight: 500;
@@ -1970,6 +2506,100 @@ exports[`Storyshots Design System/TopNavBar with Logo Placeholder 1`] = `
 
 .emotion-19 path {
   fill: black;
+}
+
+.emotion-20 {
+  overflow: hidden;
+  position: absolute;
+  top: 0.5rem;
+  left: 0rem;
+  z-index: 999999999;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  visibility: hidden;
+  opacity: 0!important;
+}
+
+.emotion-21 {
+  max-height: 15.8125rem;
+  overflow-y: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  min-width: 9.375rem;
+  max-width: 38.75rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: auto;
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
+  border-radius: 0.25rem;
+  z-index: 1;
+}
+
+.emotion-22 {
+  border: 1px solid #edefff;
+  border-radius: 0.25rem;
+  width: undefinedpx;
+}
+
+.emotion-23 {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-radius: 0.25rem;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.emotion-24 {
+  height: 2.875rem;
+  font-size: 0.875rem;
+  background-color: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0px 1rem 0px 1rem;
+  cursor: pointer;
+}
+
+.emotion-24:hover {
+  background-color: #f6f7ff;
+}
+
+.emotion-25 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-25>div {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 <div
@@ -2112,6 +2742,96 @@ exports[`Storyshots Design System/TopNavBar with Logo Placeholder 1`] = `
                     </span>
                   </span>
                 </button>
+                <div
+                  className="unique-tooltip-id emotion-20"
+                >
+                  <div
+                    className="emotion-21"
+                  >
+                    <div
+                      className="emotion-22"
+                    >
+                      <div
+                        data-testid="ictinus_list"
+                      >
+                        <ul
+                          className="emotion-23"
+                        >
+                          <li>
+                            <div
+                              className="emotion-24"
+                              data-testid="ictinus_list_item_0"
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                            >
+                              <div
+                                className="emotion-25"
+                              >
+                                My Profile
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div
+                              className="emotion-24"
+                              data-testid="ictinus_list_item_1"
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                            >
+                              <div
+                                className="emotion-25"
+                              >
+                                Settings
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div
+                              className="emotion-24"
+                              data-testid="ictinus_list_item_2"
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                            >
+                              <div
+                                className="emotion-25"
+                              >
+                                Billing
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div
+                              className="emotion-24"
+                              data-testid="ictinus_list_item_3"
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                            >
+                              <div
+                                className="emotion-25"
+                              >
+                                Notifications
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div
+                              className="emotion-24"
+                              data-testid="ictinus_list_item_4"
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                            >
+                              <div
+                                className="emotion-25"
+                              >
+                                Logout
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

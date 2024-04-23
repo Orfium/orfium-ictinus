@@ -204,10 +204,6 @@ exports[`TopAppBar should render correctly 1`] = `
   position: relative;
 }
 
-.emotion-9 #unique-tooltip-id {
-  display: none!important;
-}
-
 .emotion-10 {
   font-size: 0.8125rem;
   font-weight: 500;
@@ -326,6 +322,100 @@ exports[`TopAppBar should render correctly 1`] = `
 
 .emotion-18 path {
   fill: black;
+}
+
+.emotion-19 {
+  overflow: hidden;
+  position: absolute;
+  top: 0.5rem;
+  left: 0rem;
+  z-index: 999999999;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  visibility: hidden;
+  opacity: 0!important;
+}
+
+.emotion-20 {
+  max-height: 15.8125rem;
+  overflow-y: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  min-width: 9.375rem;
+  max-width: 38.75rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: auto;
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
+  border-radius: 0.25rem;
+  z-index: 1;
+}
+
+.emotion-21 {
+  border: 1px solid #edefff;
+  border-radius: 0.25rem;
+  width: undefinedpx;
+}
+
+.emotion-22 {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-radius: 0.25rem;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.emotion-23 {
+  height: 2.875rem;
+  font-size: 0.875rem;
+  background-color: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0px 1rem 0px 1rem;
+  cursor: pointer;
+}
+
+.emotion-23:hover {
+  background-color: #f6f7ff;
+}
+
+.emotion-24 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-24>div {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .emotion-0 {
@@ -531,10 +621,6 @@ exports[`TopAppBar should render correctly 1`] = `
   position: relative;
 }
 
-.emotion-9 #unique-tooltip-id {
-  display: none!important;
-}
-
 .emotion-10 {
   font-size: 0.8125rem;
   font-weight: 500;
@@ -655,6 +741,100 @@ exports[`TopAppBar should render correctly 1`] = `
   fill: black;
 }
 
+.emotion-19 {
+  overflow: hidden;
+  position: absolute;
+  top: 0.5rem;
+  left: 0rem;
+  z-index: 999999999;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  visibility: hidden;
+  opacity: 0!important;
+}
+
+.emotion-20 {
+  max-height: 15.8125rem;
+  overflow-y: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  min-width: 9.375rem;
+  max-width: 38.75rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: auto;
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
+  border-radius: 0.25rem;
+  z-index: 1;
+}
+
+.emotion-21 {
+  border: 1px solid #edefff;
+  border-radius: 0.25rem;
+  width: undefinedpx;
+}
+
+.emotion-22 {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-radius: 0.25rem;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.emotion-23 {
+  height: 2.875rem;
+  font-size: 0.875rem;
+  background-color: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0px 1rem 0px 1rem;
+  cursor: pointer;
+}
+
+.emotion-23:hover {
+  background-color: #f6f7ff;
+}
+
+.emotion-24 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-24>div {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
 <div>
   <div
     aria-label="Top Application Banner"
@@ -747,6 +927,86 @@ exports[`TopAppBar should render correctly 1`] = `
                 </span>
               </span>
             </button>
+            <div
+              class="unique-tooltip-id emotion-19"
+            >
+              <div
+                class="emotion-20"
+              >
+                <div
+                  class="emotion-21"
+                >
+                  <div
+                    data-testid="ictinus_list"
+                  >
+                    <ul
+                      class="emotion-22"
+                    >
+                      <li>
+                        <div
+                          class="emotion-23"
+                          data-testid="ictinus_list_item_0"
+                        >
+                          <div
+                            class="emotion-24"
+                          >
+                            My Profile
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div
+                          class="emotion-23"
+                          data-testid="ictinus_list_item_1"
+                        >
+                          <div
+                            class="emotion-24"
+                          >
+                            Settings
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div
+                          class="emotion-23"
+                          data-testid="ictinus_list_item_2"
+                        >
+                          <div
+                            class="emotion-24"
+                          >
+                            Billing
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div
+                          class="emotion-23"
+                          data-testid="ictinus_list_item_3"
+                        >
+                          <div
+                            class="emotion-24"
+                          >
+                            Notifications
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div
+                          class="emotion-23"
+                          data-testid="ictinus_list_item_4"
+                        >
+                          <div
+                            class="emotion-24"
+                          >
+                            Logout
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -959,10 +1219,6 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   position: relative;
 }
 
-.emotion-9 #unique-tooltip-id {
-  display: none!important;
-}
-
 .emotion-10 {
   font-size: 0.8125rem;
   font-weight: 500;
@@ -1081,6 +1337,100 @@ exports[`TopAppBar should render correctly on dark 1`] = `
 
 .emotion-18 path {
   fill: white;
+}
+
+.emotion-19 {
+  overflow: hidden;
+  position: absolute;
+  top: 0.5rem;
+  left: 0rem;
+  z-index: 999999999;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  visibility: hidden;
+  opacity: 0!important;
+}
+
+.emotion-20 {
+  max-height: 15.8125rem;
+  overflow-y: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  min-width: 9.375rem;
+  max-width: 38.75rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: auto;
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
+  border-radius: 0.25rem;
+  z-index: 1;
+}
+
+.emotion-21 {
+  border: 1px solid #edefff;
+  border-radius: 0.25rem;
+  width: undefinedpx;
+}
+
+.emotion-22 {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-radius: 0.25rem;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.emotion-23 {
+  height: 2.875rem;
+  font-size: 0.875rem;
+  background-color: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0px 1rem 0px 1rem;
+  cursor: pointer;
+}
+
+.emotion-23:hover {
+  background-color: #f6f7ff;
+}
+
+.emotion-24 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-24>div {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .emotion-0 {
@@ -1286,10 +1636,6 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   position: relative;
 }
 
-.emotion-9 #unique-tooltip-id {
-  display: none!important;
-}
-
 .emotion-10 {
   font-size: 0.8125rem;
   font-weight: 500;
@@ -1410,6 +1756,100 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   fill: white;
 }
 
+.emotion-19 {
+  overflow: hidden;
+  position: absolute;
+  top: 0.5rem;
+  left: 0rem;
+  z-index: 999999999;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  visibility: hidden;
+  opacity: 0!important;
+}
+
+.emotion-20 {
+  max-height: 15.8125rem;
+  overflow-y: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  min-width: 9.375rem;
+  max-width: 38.75rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: auto;
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
+  border-radius: 0.25rem;
+  z-index: 1;
+}
+
+.emotion-21 {
+  border: 1px solid #edefff;
+  border-radius: 0.25rem;
+  width: undefinedpx;
+}
+
+.emotion-22 {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-radius: 0.25rem;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.emotion-23 {
+  height: 2.875rem;
+  font-size: 0.875rem;
+  background-color: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0px 1rem 0px 1rem;
+  cursor: pointer;
+}
+
+.emotion-23:hover {
+  background-color: #f6f7ff;
+}
+
+.emotion-24 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-24>div {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
 <div>
   <div
     aria-label="Top Application Banner"
@@ -1502,6 +1942,86 @@ exports[`TopAppBar should render correctly on dark 1`] = `
                 </span>
               </span>
             </button>
+            <div
+              class="unique-tooltip-id emotion-19"
+            >
+              <div
+                class="emotion-20"
+              >
+                <div
+                  class="emotion-21"
+                >
+                  <div
+                    data-testid="ictinus_list"
+                  >
+                    <ul
+                      class="emotion-22"
+                    >
+                      <li>
+                        <div
+                          class="emotion-23"
+                          data-testid="ictinus_list_item_0"
+                        >
+                          <div
+                            class="emotion-24"
+                          >
+                            My Profile
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div
+                          class="emotion-23"
+                          data-testid="ictinus_list_item_1"
+                        >
+                          <div
+                            class="emotion-24"
+                          >
+                            Settings
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div
+                          class="emotion-23"
+                          data-testid="ictinus_list_item_2"
+                        >
+                          <div
+                            class="emotion-24"
+                          >
+                            Billing
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div
+                          class="emotion-23"
+                          data-testid="ictinus_list_item_3"
+                        >
+                          <div
+                            class="emotion-24"
+                          >
+                            Notifications
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div
+                          class="emotion-23"
+                          data-testid="ictinus_list_item_4"
+                        >
+                          <div
+                            class="emotion-24"
+                          >
+                            Logout
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

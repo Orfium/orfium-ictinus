@@ -1,13 +1,13 @@
 import head from 'lodash/head';
-import { useEffect, useState } from 'react';
+import { useLayoutEffect, useState } from 'react';
 
 import { resizeObserverHandler } from './utils';
 
 const useHeights = (
   /** Ref of the parent element */
-  parentRef: React.MutableRefObject<any>,
+  parentRef: HTMLDivElement | null,
   /** Ref of the item to be positioned */
-  itemRef: React.MutableRefObject<any>
+  itemRef: HTMLDivElement | null
 ): { parentHeight: number; childHeight: number } => {
   const [parentHeight, setParentHeight] = useState(0);
   const [childHeight, setChildHeight] = useState(0);
@@ -18,12 +18,12 @@ const useHeights = (
    * and will increase/decrease as more Chips (Selected Options) are added/deleted.
    * Therefore the parentHeight is stored on the useState above.
    */
-  useEffect(() => {
-    if (!parentRef.current) return;
+  useLayoutEffect(() => {
+    if (!parentRef) return;
 
     const parentResizeObserver = resizeObserverHandler(setParentHeight);
 
-    parentResizeObserver.observe(parentRef.current);
+    parentResizeObserver.observe(parentRef);
 
     return () => parentResizeObserver.disconnect();
   }, [parentRef]);
@@ -33,26 +33,26 @@ const useHeights = (
    * This is necessary for the case where the SelectMenu is rendered above the TextField, we need to track the
    * dynamic height of the SelectMenu in order to keep the gap between SelectMenu and TextField fixed.
    */
-  useEffect(() => {
-    const dropdownElement = head(itemRef.current?.children);
+  useLayoutEffect(() => {
+    const dropdownElement = head(itemRef?.children);
 
     if (!dropdownElement) return;
 
     const childResizeObserver = resizeObserverHandler(setChildHeight);
 
-    childResizeObserver.observe(dropdownElement as Element);
+    childResizeObserver.observe(dropdownElement);
 
     return () => childResizeObserver.disconnect();
-  }, [itemRef, itemRef.current?.children]);
+  }, [itemRef]);
 
   return { parentHeight, childHeight };
 };
 
 export const usePositionInScreen = (
   /** Ref of the parent element */
-  parentRef: React.MutableRefObject<any>,
+  parentRef: HTMLDivElement | null,
   /** Ref of the item to be positioned */
-  itemRef: React.MutableRefObject<any>,
+  itemRef: HTMLDivElement | null,
   /** Additional offset-x */
   offsetX: number,
   /** Additional offset-y */
@@ -67,19 +67,18 @@ export const usePositionInScreen = (
 
   const { parentHeight, childHeight } = useHeights(parentRef, itemRef);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     // x,y are cordinates in screen
     // width is wrapper elements dimensions
     const {
       x: parentX,
       y: parentY,
       width: parentWidth,
-    } = parentRef?.current ? parentRef?.current?.getBoundingClientRect() : { x: 0, y: 0, width: 0 };
+    } = parentRef ? parentRef?.getBoundingClientRect() : { x: 0, y: 0, width: 0 };
 
     // width is the element's that's going to be positioned dimensions
-    const { width } = itemRef?.current
-      ? itemRef?.current?.children[0]?.getBoundingClientRect()
-      : { width: 0 };
+    const { width } =
+      itemRef && itemRef.children[0] ? itemRef.children[0].getBoundingClientRect() : { width: 0 };
 
     // If the item-to-be-positioned is out of screen height
     const itemYOutOfScreenHeight = parentY + parentHeight + childHeight > window.innerHeight;
@@ -124,13 +123,13 @@ export const useWrapperWidth = (
   /** Whether the item to be positioned uses the parent's wrapper width */
   hasWrapperWidth: boolean,
   /** Ref of the wrapper */
-  wrapperRef: React.MutableRefObject<any>
+  wrapperRef: HTMLDivElement | null
 ): (number | undefined)[] => {
-  const [width, setWidth] = useState();
+  const [width, setWidth] = useState<number | undefined>();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (hasWrapperWidth) {
-      setWidth(wrapperRef?.current?.getBoundingClientRect()?.width);
+      setWidth(wrapperRef?.getBoundingClientRect()?.width);
     }
   }, [hasWrapperWidth, wrapperRef]);
 
