@@ -23,7 +23,6 @@ export const tdContainer =
       height: ${getMinHeight(rowSize)(theme)};
       padding: 8px 16px;
       border-bottom: 1px solid ${theme.tokens.colors.get('borderColor.decorative.default')};
-      border-right: 1px solid ${theme.tokens.colors.get('borderColor.decorative.default')};
       box-sizing: border-box;
       align-content: center;
     `;

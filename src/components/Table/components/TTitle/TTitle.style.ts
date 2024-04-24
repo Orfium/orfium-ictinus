@@ -9,5 +9,7 @@ export const tTitleContainer =
     return css`
       padding: 8px 16px;
       border-bottom: 1px solid ${theme.tokens.colors.get('borderColor.decorative.default')};
+      display: flex;
+      justify-content: space-between;
     `;
   };

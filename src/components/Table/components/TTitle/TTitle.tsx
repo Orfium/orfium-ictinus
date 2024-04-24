@@ -1,10 +1,19 @@
 import React from 'react';
 import isEqual from 'react-fast-compare';
 
+import ColumnChooser from './components/ColumnChooser';
 import { tTitleContainer } from './TTitle.style';
+import type { TableProps } from 'components/Table/types';
 
-const TTitle: React.FCC = ({ children }) => {
-  return <div css={tTitleContainer()}>{children}</div>;
+type Props = Pick<TableProps<any>, 'columnsConfig' | 'columns'>;
+
+const TTitle: React.FCC<Props> = ({ columns, columnsConfig, children }) => {
+  return (
+    <div css={tTitleContainer()}>
+      <div>{children}</div>
+      <ColumnChooser columns={columns} columnsConfig={columnsConfig} />
+    </div>
+  );
 };
 
 export default React.memo(TTitle, isEqual);
