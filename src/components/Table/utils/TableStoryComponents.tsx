@@ -3,7 +3,7 @@ import type React from 'react';
 import type { ColumnsConfig, DisplayColumn, GroupColumn, TableData } from '../types';
 
 /** This is just a dummy component to be used in Storybook for showing the Row type on props */
-export const ColumnsConfigType: React.FC<ColumnsConfig> = () => null;
+export const ColumnsConfigStory: React.FC<ColumnsConfig> = () => null;
 
 /** This is just a dummy component to be used in Storybook for showing the Row type on props */
 export const GroupColumnStory: React.FC<GroupColumn> = () => null;

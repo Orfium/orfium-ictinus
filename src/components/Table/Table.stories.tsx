@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import Table from './Table';
-import { SimpleData, groupedColumns, simpleColumns, simpleData } from './constants';
+import { SimpleData, simpleColumns, simpleData } from './constants';
+import Typography from 'components/Typography';
+import { SortingState } from '@tanstack/react-table';
 
 export default {
   title: 'Updated Components/Table/Table',
@@ -8,6 +10,7 @@ export default {
 
   args: {
     rowSize: 'sm',
+    isMultiSortable: false,
   },
 
   argTypes: {
@@ -102,6 +105,78 @@ export const ColumnChooser = {
   parameters: {
     controls: {
       include: ['Row Size', 'isAlwaysVisible'],
+    },
+  },
+};
+
+export const Sorting = {
+  render: (args) => {
+    const { rowSize, isAlwaysVisible = [], isMultiSortable } = args;
+
+    const [sorting, setSorting] = useState<SortingState>();
+
+    const columns = [
+      {
+        id: 'firstName',
+        header: 'First Name',
+        isAlwaysVisible: isAlwaysVisible.includes('firstName'),
+        isSortable: true,
+      },
+      {
+        id: 'lastName',
+        header: 'Last Name',
+        isAlwaysVisible: isAlwaysVisible.includes('lastName'),
+      },
+      {
+        id: 'age',
+        header: 'Age',
+        isAlwaysVisible: isAlwaysVisible.includes('age'),
+        isSortable: true,
+      },
+      { id: 'job', header: 'Job', isAlwaysVisible: isAlwaysVisible.includes('job') },
+    ];
+
+    const [columnVisibility, setColumnVisibility] = useState<Record<string, boolean>>({
+      firstName: true,
+      lastName: true,
+      age: true,
+      job: true,
+    });
+
+    return (
+      <div>
+        <Table<SimpleData>
+          data={simpleData}
+          columns={columns}
+          rowSize={rowSize}
+          columnsConfig={{
+            columnVisibility,
+            setColumnVisibility,
+          }}
+          sorting={{
+            sortingColumn: sorting,
+            handleSorting: setSorting,
+            isMultiSortable,
+          }}
+        />
+
+        {sorting?.map((sort) => {
+          return (
+            <>
+              <Typography>Sorting Column: {sort.id}</Typography>
+              <Typography>Sorting Direction: {sort.desc ? 'Desc' : 'Asc'}</Typography>
+            </>
+          );
+        })}
+      </div>
+    );
+  },
+
+  name: 'Sorting',
+
+  parameters: {
+    controls: {
+      include: ['Row Size', 'isAlwaysVisible', 'isMultiSortable'],
     },
   },
 };
