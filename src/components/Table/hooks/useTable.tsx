@@ -27,6 +27,7 @@ const getColumns = (columns: any[]) => {
           header: column.header,
           cell: (info) => info.getValue(),
           size: column.width,
+          enableSorting: column.isSortable ?? false,
         })
       );
     }
@@ -35,7 +36,12 @@ const getColumns = (columns: any[]) => {
   }, []);
 };
 
-const useTable = <TData,>({ data, columns, ...rest }: UseTableProps<TData>): ReturnValue<TData> => {
+const useTable = <TData,>({
+  data,
+  columns,
+  sorting,
+  ...rest
+}: UseTableProps<TData>): ReturnValue<TData> => {
   const tColumns = React.useMemo(() => getColumns(columns), [columns]);
   const tData = React.useMemo(() => data.map((row) => row.cells), []);
 
@@ -44,6 +50,15 @@ const useTable = <TData,>({ data, columns, ...rest }: UseTableProps<TData>): Ret
     data: tData,
     columns: tColumns,
     getCoreRowModel: getCoreRowModel(),
+    /** Sorting */
+    ...(sorting && {
+      manualSorting: true,
+      state: {
+        sorting: sorting.sortingColumn,
+      },
+      onSortingChange: sorting.handleSorting,
+      enableMultiSort: sorting.isMultiSortable ?? false,
+    }),
     ...rest,
   });
 

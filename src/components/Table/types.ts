@@ -1,4 +1,4 @@
-import type { TableOptions } from '@tanstack/react-table';
+import type { SortingState, OnChangeFn } from '@tanstack/react-table';
 
 export type TableProps<TData> = {
   /** The Columns configuration of the Table */
@@ -10,12 +10,23 @@ export type TableProps<TData> = {
   rowSize?: RowSize;
   /** Columns Configuration */
   columnsConfig?: ColumnsConfig;
+  /** Sorting Configuration */
+  sorting?: SortingConfig;
 };
 
-export type UseTableProps<TData> = Pick<TableProps<TData>, 'columns' | 'data'> &
-  Partial<Omit<TableOptions<TData>, 'columns' | 'data'>>;
+export type UseTableProps<TData> = Pick<TableProps<TData>, 'columns' | 'data' | 'sorting'> &
+  Partial<Omit<TableProps<TData>, 'columns' | 'data'>>;
 
 /** Columns */
+
+export type SortingConfig = {
+  /** The Sorting Column State */
+  sortingColumn: SortingState;
+  /** Callback to change the Sorting Column State */
+  handleSorting: OnChangeFn<SortingState>;
+  /** Whether multi-sorting is enabled */
+  isMultiSortable?: boolean;
+};
 
 export type ColumnsConfig = {
   /** State that indicates which columns are visible: an object where every key is a column id and the value is a boolean indicating whether it is visible or not */
@@ -31,6 +42,8 @@ export type DisplayColumn = {
   header: string;
   /** Whether the toggle visibility functionality is disabled for this column */
   isAlwaysVisible?: boolean;
+  /** Whether the column is sortable */
+  isSortable?: boolean;
   /** The width of the column (value is percentage number e.g. 25) */
   width?: number;
 };

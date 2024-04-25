@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/naming-convention */
 import { flexRender } from '@tanstack/react-table';
 import React from 'react';
 import isEqual from 'react-fast-compare';
@@ -8,7 +7,13 @@ import { TBody, TH, TD, THead, TR, TTitle } from './components';
 import useTable from './hooks/useTable';
 import { tableContainer, tableStyles } from './Table.style';
 
-const Table = <TData,>({ data, columns, rowSize = 'sm', columnsConfig }: TableProps<TData>) => {
+const Table = <TData,>({
+  data,
+  columns,
+  rowSize = 'sm',
+  columnsConfig,
+  sorting,
+}: TableProps<TData>) => {
   const { columnVisibility, setColumnVisibility } = columnsConfig ?? {};
 
   const hasColumnVisibilityConfig = Boolean(columnVisibility && setColumnVisibility);
@@ -23,6 +28,7 @@ const Table = <TData,>({ data, columns, rowSize = 'sm', columnsConfig }: TablePr
       },
       onColumnVisibilityChange: setColumnVisibility,
     }),
+    sorting,
   });
 
   return (
@@ -38,6 +44,11 @@ const Table = <TData,>({ data, columns, rowSize = 'sm', columnsConfig }: TablePr
                   colSpan={header.colSpan}
                   rowSize={rowSize}
                   width={header.getSize()}
+                  {...(header.column.getCanSort() && {
+                    isSorted: header.column.getIsSorted().toString(),
+                    onSort: header.column.toggleSorting,
+                    isMultiSortable: header.column.getCanMultiSort(),
+                  })}
                 >
                   {header.isPlaceholder
                     ? null
