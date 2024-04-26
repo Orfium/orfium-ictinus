@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import { Row, TableType } from './Table';
+import { ExtendedColumn } from 'components/Table/types';
 
 export type TableRowContextProps<T extends { [key: string]: unknown }> = {
   row: Row<T>;
@@ -9,7 +10,7 @@ export type TableRowContextProps<T extends { [key: string]: unknown }> = {
   onSelectionChangeExist: boolean;
   isRowSelected: boolean;
   columnCount: number;
-  columns: string[];
+  columns: (string | ExtendedColumn)[];
   fixedHeader: boolean;
   tChange: () => void;
   type: TableType;

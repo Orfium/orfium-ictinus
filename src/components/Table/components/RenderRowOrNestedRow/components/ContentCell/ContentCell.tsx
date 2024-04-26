@@ -1,13 +1,14 @@
 import React from 'react';
 import { isComponentFunctionType } from 'utils/helpers';
 
+import { nestedHeaderStyle } from './ContentCell.style';
 import TruncatedContent from '../../../../../TruncatedContent';
 import { ContentComponent, TableType } from '../../../../Table';
 import TableCell from '../../../TableCell';
-import { nestedHeaderStyle } from './ContentCell.style';
+import { ExtendedColumn } from 'components/Table/types';
 
 type Props = {
-  columns: string[];
+  columns: (string | ExtendedColumn)[];
   padded: boolean;
   tooltipContent?: string;
   columnWidth?: number;
@@ -38,6 +39,7 @@ const ContentCell: React.FC<Props> = ({
   index,
 }) => {
   const isNumeral = !Number.isNaN(Number(content));
+  const col = columns[cellCounter];
 
   return (
     <TableCell
@@ -53,7 +55,7 @@ const ContentCell: React.FC<Props> = ({
       {rowType === 'nested-header' && (
         <div css={nestedHeaderStyle()}>
           {/* nested header render */}
-          {columns[cellCounter]}
+          {typeof col === 'string' ? col : col.content.label}
         </div>
       )}
 
@@ -64,7 +66,7 @@ const ContentCell: React.FC<Props> = ({
         {isComponentFunctionType(content) ? (
           content({ content, colSpan })
         ) : (
-          <span data-column={columns[cellCounter]}>{content}</span>
+          <span data-column={col}>{content}</span>
         )}
       </TruncatedContent>
     </TableCell>
