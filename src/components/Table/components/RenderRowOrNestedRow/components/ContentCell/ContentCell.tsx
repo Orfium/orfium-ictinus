@@ -42,6 +42,7 @@ const ContentCell: React.FC<Props> = ({
   const isNumeral = !Number.isNaN(Number(content));
   const [contentElementRef, setContentElementRef] = useState<HTMLSpanElement | null>(null);
   const col = columns[cellCounter];
+  const columnName = typeof col === 'string' ? col : col.content.label;
 
   return (
     <TableCell
@@ -57,7 +58,7 @@ const ContentCell: React.FC<Props> = ({
       {rowType === 'nested-header' && (
         <div css={nestedHeaderStyle()}>
           {/* nested header render */}
-          {typeof col === 'string' ? col : col.content.label}
+          {columnName}
         </div>
       )}
 
@@ -73,7 +74,7 @@ const ContentCell: React.FC<Props> = ({
           ref={(el) => {
             setContentElementRef(el);
           }}
-          data-column={col}
+          data-column={columnName}
         >
           {isComponentFunctionType(content) ? content({ content, colSpan }) : content}
         </span>
