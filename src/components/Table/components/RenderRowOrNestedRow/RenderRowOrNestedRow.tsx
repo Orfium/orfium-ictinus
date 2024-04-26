@@ -79,13 +79,7 @@ const RenderRowWithCells = React.memo(
               cellCounter={index}
               columnWidth={columnsWithWidth[index]}
               columns={columns}
-              tooltipContent={
-                hasTruncatedTooltip
-                  ? isComponentFunctionType(content)
-                    ? tooltipContent
-                    : tooltipContent ?? content.toString()
-                  : undefined
-              }
+              tooltipContent={hasTruncatedTooltip ? tooltipContent : null}
               padded={padded}
               colSpan={colSpan}
               content={content}

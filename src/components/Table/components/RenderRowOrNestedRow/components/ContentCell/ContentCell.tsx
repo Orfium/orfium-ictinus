@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { isComponentFunctionType } from 'utils/helpers';
 
 import { nestedHeaderStyle } from './ContentCell.style';
@@ -10,7 +10,8 @@ import { ExtendedColumn } from 'components/Table/types';
 type Props = {
   columns: (string | ExtendedColumn)[];
   padded: boolean;
-  tooltipContent?: string;
+  // null value means we explicitly do not want any tooltips to be shown
+  tooltipContent: string | undefined | null;
   columnWidth?: number;
   content: number | string | ContentComponent<any>;
   colSpan?: number;
@@ -39,6 +40,7 @@ const ContentCell: React.FC<Props> = ({
   index,
 }) => {
   const isNumeral = !Number.isNaN(Number(content));
+  const [contentElementRef, setContentElementRef] = useState<HTMLSpanElement | null>(null);
   const col = columns[cellCounter];
 
   return (
@@ -61,13 +63,20 @@ const ContentCell: React.FC<Props> = ({
 
       <TruncatedContent
         placement={'bottom'}
-        tooltipContent={tooltipContent}
+        tooltipContent={
+          tooltipContent === null
+            ? undefined
+            : tooltipContent ?? contentElementRef?.textContent ?? ''
+        }
       >
-        {isComponentFunctionType(content) ? (
-          content({ content, colSpan })
-        ) : (
-          <span data-column={col}>{content}</span>
-        )}
+        <span
+          ref={(el) => {
+            setContentElementRef(el);
+          }}
+          data-column={col}
+        >
+          {isComponentFunctionType(content) ? content({ content, colSpan }) : content}
+        </span>
       </TruncatedContent>
     </TableCell>
   );

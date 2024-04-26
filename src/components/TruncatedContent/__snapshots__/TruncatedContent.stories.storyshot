@@ -212,8 +212,12 @@ exports[`Storyshots System/Truncated Text with Tooltip Regular Table with cell t
               onMouseEnter={[Function]}
               onMouseLeave={[Function]}
             >
-              <span>
-                JSX Content without tooltip
+              <span
+                data-column="Column 3"
+              >
+                <span>
+                  JSX Content without tooltip
+                </span>
               </span>
             </div>
           </td>
@@ -226,8 +230,12 @@ exports[`Storyshots System/Truncated Text with Tooltip Regular Table with cell t
               onMouseEnter={[Function]}
               onMouseLeave={[Function]}
             >
-              <span>
-                JSX Content with forced tooltip
+              <span
+                data-column="Column 4"
+              >
+                <span>
+                  JSX Content with forced tooltip
+                </span>
               </span>
             </div>
           </td>
