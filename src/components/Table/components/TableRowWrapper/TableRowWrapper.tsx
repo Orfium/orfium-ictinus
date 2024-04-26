@@ -3,6 +3,7 @@ import React from 'react';
 import { Row, Selection, TableType } from '../../Table';
 import { TableRowContext } from '../../TableRowContext';
 import RenderRowOrNestedRow from '../RenderRowOrNestedRow/RenderRowOrNestedRow';
+import { ExtendedColumn } from 'components/Table/types';
 
 type TableRowWrapperProps<T> = {
   row: Row<T>;
@@ -12,7 +13,7 @@ type TableRowWrapperProps<T> = {
   padded: boolean;
   onSelectionChangeExist: boolean;
   columnCount: number;
-  columns: string[];
+  columns: (string | ExtendedColumn)[];
   fixedHeader: boolean;
   type: TableType;
   expanded: boolean;

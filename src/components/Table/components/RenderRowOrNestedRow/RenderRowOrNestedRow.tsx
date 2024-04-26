@@ -1,5 +1,8 @@
 import * as React from 'react';
 
+import ContentCell from './components/ContentCell';
+import ExpandedButtonCell from './components/ExpandedButtonCell';
+import { borderedRowStyle, expandableRowStyle } from './RenderRowOrNestedRow.style';
 import useToggle from '../../../../hooks/useToggle';
 import { isComponentFunctionType } from '../../../../utils/helpers';
 import CheckBox from '../../../CheckBox';
@@ -8,9 +11,6 @@ import { tableStyle } from '../../Table.style';
 import { TableRowContext } from '../../TableRowContext';
 import TableCell from '../TableCell';
 import TableRow from '../TableRow';
-import ContentCell from './components/ContentCell';
-import ExpandedButtonCell from './components/ExpandedButtonCell';
-import { borderedRowStyle, expandableRowStyle } from './RenderRowOrNestedRow.style';
 
 const RenderRowWithCells = React.memo(
   ({
@@ -59,7 +59,7 @@ const RenderRowWithCells = React.memo(
             rowIndex={rowIndex}
             index={0}
           >
-            <div onClick={e => e.stopPropagation()}>
+            <div onClick={(e) => e.stopPropagation()}>
               <CheckBox
                 dataTestIdSuffix={'row-check'}
                 checked={isRowSelected}
