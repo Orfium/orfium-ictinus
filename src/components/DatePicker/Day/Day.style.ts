@@ -32,23 +32,25 @@ export const dayWrapperStyle =
       text-align: center;
       cursor: pointer;
       position: relative;
-      color: ${isSelected ? tokens('date.textColor.active') : tokens('date.textColor.default')};
+      color: ${isSelected
+        ? theme.tokens.colors.get('textColor.inverted.primary')
+        : theme.tokens.colors.get('textColor.default.primary')};
       width: ${tokens('dateSize')};
       font-weight: ${isToday && 'bold'};
       opacity: ${isDisabled ? 0.5 : 1};
       background: ${isLast || isFirst
-        ? tokens('date.backgroundColor.active')
+        ? theme.tokens.colors.get('palette.primary.contrast')
         : (isSelected || isBetween) &&
           typeof isBetween !== 'undefined' &&
-          tokens('date.backgroundColor.focused')};
+          theme.tokens.colors.get('palette.tertiary.muted')};
       border-bottom-right-radius: ${isLast && isSelected && '100%'};
       border-top-right-radius: ${isLast && isSelected && '100%'};
       border-bottom-left-radius: ${isFirst && isSelected && '100%'};
       border-top-left-radius: ${isFirst && isSelected && '100%'};
 
       &:focus-visible {
-        background-color: ${tokens('date.backgroundColor.focused')};
-        border-radius: ${tokens('date.borderRadius.2')};
+        background-color: ${theme.tokens.colors.get('palette.tertiary.muted')};
+        border-radius: ${theme.dimension.borderRadius.get('circle')};
       }
 
       ${(isSelected || isLast || isFirst) &&
@@ -72,16 +74,14 @@ export const dayWrapperStyle =
 export const emptyDayStyle =
   ({ isBetween }: { isBetween: boolean }) =>
   (theme: Theme) => {
-    const tokens = getDatePickerTokens(theme);
-
     return css`
       vertical-align: middle;
       text-align: center;
       cursor: pointer;
       position: relative;
       background: ${isBetween
-        ? tokens('date.backgroundColor.focused')
-        : tokens('date.backgroundColor.default')};
+        ? theme.tokens.colors.get('palette.tertiary.muted')
+        : theme.tokens.colors.get('palette.tertiary.base')};
     `;
   };
 
@@ -92,23 +92,30 @@ export const dayStyle =
 
     return css`
       ${label02(theme)};
-      border: ${isSelected ? 0 : tokens('date.borderWidth')} solid
-        ${isToday ? tokens('date.borderColor.present') : tokens('date.borderColor.default')};
-      border-radius: ${(isToday || isSelected) && tokens('date.borderRadius.2')};
+      border: ${isSelected ? 0 : theme.dimension.borderWidth.get('default')} solid
+        ${isToday
+          ? theme.tokens.colors.get('borderColor.interactive.active')
+          : theme.tokens.colors.get('borderColor.decorative.transparent')};
+      border-radius: ${(isToday || isSelected) && theme.dimension.borderRadius.get('circle')};
       width: ${tokens('dateSize')};
       height: ${tokens('dateSize')};
-      color: ${isSelected ? tokens('date.textColor.active') : tokens('date.textColor.default')};
+      color: ${isSelected
+        ? theme.tokens.colors.get('textColor.inverted.primary')
+        : theme.tokens.colors.get('textColor.default.primary')};
       box-sizing: border-box;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: ${isSelected ? tokens('date.backgroundColor.active') : 'transparent'};
+      background: ${isSelected
+        ? theme.tokens.colors.get('palette.primary.contrast')
+        : 'transparent'};
 
       ${!isDisabled &&
       `&:hover {
-            border-radius: ${tokens('date.borderRadius.2')};
+            border-radius: ${theme.dimension.borderRadius.get('circle')};
             background: ${
-              !isSelected && (!isBetween ? tokens('date.backgroundColor.focused') : 'transparent')
+              !isSelected &&
+              (!isBetween ? theme.tokens.colors.get('palette.tertiary.muted') : 'transparent')
             };
           }`}
     `;

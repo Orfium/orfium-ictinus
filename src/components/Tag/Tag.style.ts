@@ -1,7 +1,9 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
+import type { SemanticTypographyKey } from 'theme/tokens/semantic/typography';
 import { rem } from 'theme/utils';
 
+import { tagColorToSemColor } from './constants';
 import { getTagTokens } from './Tag.tokens';
 import type { TagProps } from './Tag.types';
 import type { Theme } from '../../theme';
@@ -25,13 +27,15 @@ export const tagContainerStyles =
 
     const getBackgroundColor = () => {
       if (isInteractive) {
-        if (isSelected) return tokens('backgroundColor.interactive.focused');
+        if (isSelected) return theme.tokens.colors.get('palette.secondary.muted');
 
-        return tokens('backgroundColor.interactive.default');
+        return theme.tokens.colors.get('palette.secondary.base');
       }
 
-      return tokens(`backgroundColor.readOnly.${color}` as const);
+      return theme.tokens.colors.get(tagColorToSemColor[color].fill);
     };
+
+    const typography: SemanticTypographyKey = size === 'normal' ? 'normal.label02' : 'normal.label03';
 
     return css`
       display: flex;
@@ -41,33 +45,37 @@ export const tagContainerStyles =
       height: ${tokens(`${size}.height` as const)};
       width: fit-content;
       box-sizing: border-box;
-      gap: ${tokens('paddingContent')};
+      gap: ${theme.dimension.spacing.get('xs')};
 
-      padding: ${`${tokens(`${size}.paddingVertical` as const)}  ${tokens(
-        `${size}.paddingHorizontal` as const
+      padding: ${`${theme.dimension.spacing.get('2xs')}  ${theme.dimension.spacing.get(
+        size === 'normal' ? 'sm' : 'xs'
       )}`};
 
       cursor: ${isSelectable ? 'pointer' : 'auto'};
       background: ${getBackgroundColor()};
-      color: ${isInteractive ? tokens('textColor.blue') : tokens(`textColor.${color}` as const)};
-      border: ${tokens('borderWidth')} solid;
+      color: ${isInteractive
+        ? theme.tokens.colors.get(tagColorToSemColor.blue.text)
+        : theme.tokens.colors.get(tagColorToSemColor[color].text)};
+      border: ${theme.dimension.borderWidth.get('default')} solid;
 
       border-color: ${isInteractive
-        ? tokens('borderColor.interactive.default')
-        : tokens(`borderColor.readOnly.${color}` as const)};
+        ? theme.tokens.colors.get('borderColor.interactive.default')
+        : theme.tokens.colors.get(tagColorToSemColor[color].border)};
 
-      border-radius: ${tokens(`borderRadius.${size}` as const)};
+      border-radius: ${theme.dimension.borderRadius.get(size === 'normal' ? 'md' : 'sm')};
 
       &:hover {
-        background: ${isSelectable ? tokens('backgroundColor.interactive.focused') : null};
+        background: ${isSelectable ? theme.tokens.colors.get('palette.secondary.muted') : null};
       }
 
       &:focus-visible {
-        background: ${isInteractive ? tokens('backgroundColor.interactive.focused') : null};
-        border-color: ${isInteractive ? tokens('borderColor.interactive.focused') : null};
+        background: ${isInteractive ? theme.tokens.colors.get('palette.secondary.muted') : null};
+        border-color: ${isInteractive
+          ? theme.tokens.colors.get('borderColor.interactive.active')
+          : null};
       }
 
-      ${generateStylesFromTokens(tokens(`label.default.${size}` as const))}
+      ${generateStylesFromTokens(theme.tokens.typography.get(typography))}
     `;
   };
 

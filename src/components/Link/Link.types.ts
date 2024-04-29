@@ -3,7 +3,7 @@ import type { AnchorHTMLAttributes } from 'react';
 
 import type { AcceptedIconNames } from 'components/Icon';
 
-type LinkSizes = 1 | 2 | 3;
+export type LinkSizes = 1 | 2 | 3;
 
 export type LinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
   /** The type of the Link in terms of style */

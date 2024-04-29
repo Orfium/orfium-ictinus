@@ -4,7 +4,6 @@ import { Button } from 'react-aria-components';
 
 import { buttonWrapperStyle, stepperContainerStyle } from './Stepper.style';
 import Icon from 'components/Icon';
-import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
 
 type Props = {
   isDisabled?: boolean;
@@ -15,7 +14,6 @@ const Stepper: React.FCC<Props> = ({ isDisabled, dataTestIdPrefix }) => {
   const dataTestId = dataTestIdPrefix ? `${dataTestIdPrefix}_number` : 'number';
 
   const theme = useTheme();
-  const tokens = getTextInputBaseTokens(theme);
 
   return (
     <div css={stepperContainerStyle()}>
@@ -27,8 +25,8 @@ const Stepper: React.FCC<Props> = ({ isDisabled, dataTestIdPrefix }) => {
       >
         <Icon
           name="triangleUp"
-          color={tokens('addOn.iconColor')}
-          size={theme.tokens.icon.get('size.3')}
+          color={theme.tokens.colors.get('textColor.default.secondary')}
+          size={theme.dimension.sizing.get('icon.md')}
         />
       </Button>
       <Button
@@ -39,8 +37,8 @@ const Stepper: React.FCC<Props> = ({ isDisabled, dataTestIdPrefix }) => {
       >
         <Icon
           name="triangleDown"
-          color={tokens('addOn.iconColor')}
-          size={theme.tokens.icon.get('size.3')}
+          color={theme.tokens.colors.get('textColor.default.secondary')}
+          size={theme.dimension.sizing.get('icon.md')}
         />
       </Button>
     </div>
