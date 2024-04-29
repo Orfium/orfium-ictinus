@@ -1,3 +1,4 @@
+import type { CSSObject } from '@emotion/react';
 import React from 'react';
 import isEqual from 'react-fast-compare';
 import type { DivProps } from 'utils/common';
@@ -17,6 +18,8 @@ type Props = {
   onSort?: (desc?: boolean, isMulti?: boolean) => void;
   /** Whether multi-sorting is enabled */
   isMultiSortable?: boolean;
+  /** Style overrides */
+  sx?: CSSObject;
 };
 
 const TH: React.FCC<Props & Pick<DivProps, 'onClick'>> = ({
@@ -25,12 +28,13 @@ const TH: React.FCC<Props & Pick<DivProps, 'onClick'>> = ({
   children,
   onSort,
   isMultiSortable,
+  sx,
   ...rest
 }) => {
   const isSortable = Boolean(onSort);
 
   return (
-    <th css={thContainer({ rowSize, width })} {...rest}>
+    <th css={thContainer({ rowSize, width, sx })} {...rest}>
       <div css={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
         <div>{children}</div>
         {isSortable && <THOptions onSort={onSort} isMultiSortable={isMultiSortable} />}

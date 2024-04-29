@@ -1,3 +1,4 @@
+import type { CSSObject } from '@emotion/react';
 import type { SortingState, OnChangeFn } from '@tanstack/react-table';
 
 export type TableProps<TData> = {
@@ -12,6 +13,17 @@ export type TableProps<TData> = {
   columnsConfig?: ColumnsConfig;
   /** Sorting Configuration */
   sorting?: SortingConfig;
+  /** Whether the table has a sticky header and scrollable tbody */
+  hasStickyHeader?: boolean;
+  /** Style overrides for Table component and subcomponents */
+  sx?: {
+    table?: CSSObject;
+    thead?: CSSObject;
+    tbody?: CSSObject;
+    th?: CSSObject;
+    tr?: CSSObject;
+    td?: CSSObject;
+  };
 };
 
 export type UseTableProps<TData> = Pick<TableProps<TData>, 'columns' | 'data' | 'sorting'> &

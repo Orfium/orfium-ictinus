@@ -1,5 +1,5 @@
 import { flexRender } from '@tanstack/react-table';
-import React from 'react';
+import React, { useRef } from 'react';
 import isEqual from 'react-fast-compare';
 
 import type { TableProps } from '.';
@@ -13,10 +13,23 @@ const Table = <TData,>({
   rowSize = 'sm',
   columnsConfig,
   sorting,
+  hasStickyHeader = false,
+  sx,
 }: TableProps<TData>) => {
   const { columnVisibility, setColumnVisibility } = columnsConfig ?? {};
 
   const hasColumnVisibilityConfig = Boolean(columnVisibility && setColumnVisibility);
+
+  /** If true, the scrollbar of tbody is visible */
+  const [hasScrollbar, setHasScrollbar] = React.useState(false);
+
+  const tBodyRef = useRef<HTMLTableSectionElement>();
+
+  React.useEffect(() => {
+    if (tBodyRef?.current) {
+      setHasScrollbar(tBodyRef?.current?.scrollHeight > tBodyRef?.current?.clientHeight);
+    }
+  }, [tBodyRef.current]);
 
   const table = useTable<TData>({
     data,
@@ -34,10 +47,10 @@ const Table = <TData,>({
   return (
     <div css={tableContainer()}>
       {hasColumnVisibilityConfig && <TTitle columnsConfig={columnsConfig} columns={columns} />}
-      <table css={tableStyles()}>
-        <THead>
+      <table css={tableStyles({ sx: sx?.table })}>
+        <THead hasStickyHeader={hasStickyHeader} hasScrollbar={hasScrollbar} sx={sx?.thead}>
           {table.getHeaderGroups().map((headerGroup) => (
-            <TR key={headerGroup.id}>
+            <TR key={headerGroup.id} sx={sx?.tr}>
               {headerGroup.headers.map((header) => (
                 <TH
                   key={header.id}
@@ -49,6 +62,7 @@ const Table = <TData,>({
                     onSort: header.column.toggleSorting,
                     isMultiSortable: header.column.getCanMultiSort(),
                   })}
+                  sx={sx?.th}
                 >
                   {header.isPlaceholder
                     ? null
@@ -58,13 +72,13 @@ const Table = <TData,>({
             </TR>
           ))}
         </THead>
-        <TBody>
+        <TBody hasStickyHeader={hasStickyHeader} ref={tBodyRef} sx={sx?.tbody}>
           {table.getRowModel().rows.map((row) => {
             return (
-              <TR key={row.id}>
+              <TR key={row.id} sx={sx?.tr}>
                 {row.getVisibleCells().map((cell) => {
                   return (
-                    <TD key={cell.id} rowSize={rowSize}>
+                    <TD key={cell.id} rowSize={rowSize} width={cell.column.getSize()} sx={sx?.td}>
                       {flexRender(cell.column.columnDef.cell, cell.getContext())}
                     </TD>
                   );
