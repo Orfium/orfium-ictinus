@@ -121,7 +121,11 @@
 }
 
 .emotion-8 {
-  width: 150%;
+  box-shadow: 0 1px 0 0 rgba(200,206,255,0.70);
+}
+
+.emotion-10 {
+  width: 100%;
   height: 2.75rem;
   -webkit-align-content: center;
   -ms-flex-line-pack: center;
@@ -129,8 +133,6 @@
   text-align: left;
   box-sizing: border-box;
   padding: 8px 16px;
-  border-bottom: 1px solid rgba(200,206,255,0.70);
-  border-right: 1px solid rgba(200,206,255,0.70);
   color: #52567a;
   font-family: Roboto;
   font-weight: 400;
@@ -139,7 +141,16 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-9 {
+.emotion-10 [data-header-role='options'] {
+  opacity: 0;
+}
+
+.emotion-10:hover [data-header-role='options'],
+.emotion-10:focus-visible [data-header-role='options'] {
+  opacity: 1;
+}
+
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -151,11 +162,26 @@
   gap: 8px;
 }
 
-.emotion-11 {
+.emotion-12 {
+  text-wrap: nowrap;
+}
+
+.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.emotion-15 {
   font-family: Roboto;
   font-weight: 500;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
+  line-height: 1rem;
+  font-size: 0.75rem;
   letter-spacing: 0.015625rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -170,8 +196,8 @@
   -webkit-justify-content: center;
   justify-content: center;
   color: #194DCC;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 1.75rem;
+  height: 1.75rem;
   background-color: rgba(200,206,255,0);
   padding: 0;
   border-radius: 2.25rem;
@@ -181,25 +207,44 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-11:focus-visible:not(:disabled) {
+.emotion-15:focus-visible:not(:disabled) {
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-11:disabled {
+.emotion-15:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-11:hover:not(:disabled) {
+.emotion-15:hover:not(:disabled) {
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-11:active:not(:disabled),
-.emotion-11[aria-expanded="true"] {
+.emotion-15:active:not(:disabled),
+.emotion-15[aria-expanded="true"] {
   background-color: rgba(200,206,255,0.30);
 }
 
-.emotion-24 {
+.emotion-16 {
+  width: 1rem;
+  height: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-17 {
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-17 path {
+  fill: #194DCC!important;
+}
+
+.emotion-42 {
+  width: 100%;
   height: 2.75rem;
   padding: 8px 16px;
   border-bottom: 1px solid rgba(200,206,255,0.70);
@@ -209,7 +254,7 @@
   align-content: center;
 }
 
-.emotion-25 {
+.emotion-43 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -221,6 +266,10 @@
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
+}
+
+.emotion-95 {
+  margin-top: 32px;
 }
 
 <div>
@@ -270,342 +319,438 @@
       <table
         class="emotion-7"
       >
-        <thead>
-          <tr>
+        <thead
+          class="emotion-8"
+        >
+          <tr
+            class="emotion-9"
+          >
             <th
-              class="emotion-8"
+              class="emotion-10"
               colspan="1"
-              issorted="false"
             >
               <div
-                class="emotion-9"
+                class="emotion-11"
               >
-                <div>
+                <div
+                  class="emotion-12"
+                >
                   First Name
                 </div>
                 <div
-                  class="emotion-2"
+                  class="emotion-13"
+                  data-header-role="options"
                 >
-                  <button
-                    aria-haspopup="true"
-                    aria-label="Menu"
-                    class="emotion-11"
-                    data-testid="icon-button"
-                    type="button"
+                  <div
+                    class="emotion-2"
                   >
-                    <div
-                      class="emotion-5"
+                    <button
+                      class="emotion-15"
+                      data-testid="icon-button"
+                      type="button"
                     >
-                      <svg
-                        class="emotion-6"
-                        fill="none"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        class="emotion-16"
                       >
-                        <path
-                          clip-rule="evenodd"
-                          d="M6.09346 8.31215C5.65924 7.79108 6.02976 7 6.70803 7H13.292C13.9702 7 14.3408 7.79109 13.9065 8.31215L10.6146 12.2625C10.2947 12.6463 9.70526 12.6463 9.38542 12.2625L6.09346 8.31215Z"
-                          fill="#6265AD"
-                          fill-rule="evenodd"
-                        />
-                      </svg>
-                    </div>
-                  </button>
+                        <svg
+                          class="emotion-17"
+                          fill="none"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M15.7443 9.22808L10.6663 4.26717C10.5687 4.17185 10.464 4.10349 10.3522 4.06209C10.2403 4.0207 10.1253 4 10.007 4C9.88872 4 9.77366 4.0207 9.66182 4.06209C9.54995 4.10349 9.44524 4.17185 9.34768 4.26717L4.24311 9.25406C4.07261 9.42063 3.99179 9.61079 4.00066 9.82454C4.00954 10.0383 4.09922 10.2284 4.26971 10.395C4.44513 10.5616 4.64544 10.6436 4.87063 10.6412C5.09582 10.6388 5.29366 10.5543 5.46416 10.3878L9.18064 6.75696V15.1927C9.18064 15.4151 9.26145 15.6053 9.42307 15.7632C9.58469 15.9211 9.77933 16 10.007 16C10.2346 16 10.4293 15.9211 10.5909 15.7632C10.7525 15.6053 10.8333 15.4151 10.8333 15.1927V6.75696L14.5764 10.4138C14.7469 10.5803 14.9403 10.6593 15.1566 10.6506C15.373 10.6419 15.5688 10.5543 15.7443 10.3878C15.9148 10.2164 16 10.0219 16 9.80432C16 9.58672 15.9148 9.39464 15.7443 9.22808Z"
+                            fill="#6265AD"
+                          />
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                  <div
+                    class="emotion-2"
+                  >
+                    <button
+                      aria-haspopup="true"
+                      aria-label="Menu"
+                      class="emotion-15"
+                      data-testid="icon-button"
+                      type="button"
+                    >
+                      <div
+                        class="emotion-16"
+                      >
+                        <svg
+                          class="emotion-17"
+                          fill="none"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                            fill="#6265AD"
+                          />
+                          <path
+                            d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                            fill="#6265AD"
+                          />
+                          <path
+                            d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                            fill="#6265AD"
+                          />
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
                 </div>
               </div>
             </th>
             <th
-              class="emotion-8"
+              class="emotion-10"
               colspan="1"
             >
               <div
-                class="emotion-9"
+                class="emotion-11"
               >
-                <div>
+                <div
+                  class="emotion-12"
+                >
                   Last Name
                 </div>
               </div>
             </th>
             <th
-              class="emotion-8"
+              class="emotion-10"
               colspan="1"
-              issorted="false"
             >
               <div
-                class="emotion-9"
+                class="emotion-11"
               >
-                <div>
+                <div
+                  class="emotion-12"
+                >
                   Age
                 </div>
                 <div
-                  class="emotion-2"
+                  class="emotion-13"
+                  data-header-role="options"
                 >
-                  <button
-                    aria-haspopup="true"
-                    aria-label="Menu"
-                    class="emotion-11"
-                    data-testid="icon-button"
-                    type="button"
+                  <div
+                    class="emotion-2"
                   >
-                    <div
-                      class="emotion-5"
+                    <button
+                      class="emotion-15"
+                      data-testid="icon-button"
+                      type="button"
                     >
-                      <svg
-                        class="emotion-6"
-                        fill="none"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        class="emotion-16"
                       >
-                        <path
-                          clip-rule="evenodd"
-                          d="M6.09346 8.31215C5.65924 7.79108 6.02976 7 6.70803 7H13.292C13.9702 7 14.3408 7.79109 13.9065 8.31215L10.6146 12.2625C10.2947 12.6463 9.70526 12.6463 9.38542 12.2625L6.09346 8.31215Z"
-                          fill="#6265AD"
-                          fill-rule="evenodd"
-                        />
-                      </svg>
-                    </div>
-                  </button>
+                        <svg
+                          class="emotion-17"
+                          fill="none"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M15.7443 9.22808L10.6663 4.26717C10.5687 4.17185 10.464 4.10349 10.3522 4.06209C10.2403 4.0207 10.1253 4 10.007 4C9.88872 4 9.77366 4.0207 9.66182 4.06209C9.54995 4.10349 9.44524 4.17185 9.34768 4.26717L4.24311 9.25406C4.07261 9.42063 3.99179 9.61079 4.00066 9.82454C4.00954 10.0383 4.09922 10.2284 4.26971 10.395C4.44513 10.5616 4.64544 10.6436 4.87063 10.6412C5.09582 10.6388 5.29366 10.5543 5.46416 10.3878L9.18064 6.75696V15.1927C9.18064 15.4151 9.26145 15.6053 9.42307 15.7632C9.58469 15.9211 9.77933 16 10.007 16C10.2346 16 10.4293 15.9211 10.5909 15.7632C10.7525 15.6053 10.8333 15.4151 10.8333 15.1927V6.75696L14.5764 10.4138C14.7469 10.5803 14.9403 10.6593 15.1566 10.6506C15.373 10.6419 15.5688 10.5543 15.7443 10.3878C15.9148 10.2164 16 10.0219 16 9.80432C16 9.58672 15.9148 9.39464 15.7443 9.22808Z"
+                            fill="#6265AD"
+                          />
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                  <div
+                    class="emotion-2"
+                  >
+                    <button
+                      aria-haspopup="true"
+                      aria-label="Menu"
+                      class="emotion-15"
+                      data-testid="icon-button"
+                      type="button"
+                    >
+                      <div
+                        class="emotion-16"
+                      >
+                        <svg
+                          class="emotion-17"
+                          fill="none"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                            fill="#6265AD"
+                          />
+                          <path
+                            d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                            fill="#6265AD"
+                          />
+                          <path
+                            d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                            fill="#6265AD"
+                          />
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
                 </div>
               </div>
             </th>
             <th
-              class="emotion-8"
+              class="emotion-10"
               colspan="1"
             >
               <div
-                class="emotion-9"
+                class="emotion-11"
               >
-                <div>
+                <div
+                  class="emotion-12"
+                >
                   Job
                 </div>
               </div>
             </th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
+        <tbody
+          class="emotion-40"
+        >
+          <tr
+            class="emotion-9"
+          >
             <td
-              class="emotion-24"
+              class="emotion-42"
             >
               <div
-                class="emotion-25"
+                class="emotion-43"
               >
                 Rachel
               </div>
             </td>
             <td
-              class="emotion-24"
+              class="emotion-42"
             >
               <div
-                class="emotion-25"
+                class="emotion-43"
               >
                 Berry
               </div>
             </td>
             <td
-              class="emotion-24"
+              class="emotion-42"
             >
               <div
-                class="emotion-25"
+                class="emotion-43"
               >
                 30
               </div>
             </td>
             <td
-              class="emotion-24"
+              class="emotion-42"
             >
               <div
-                class="emotion-25"
+                class="emotion-43"
               >
                 Fashion Executive
               </div>
             </td>
           </tr>
-          <tr>
+          <tr
+            class="emotion-9"
+          >
             <td
-              class="emotion-24"
+              class="emotion-42"
             >
               <div
-                class="emotion-25"
+                class="emotion-43"
               >
                 Ross
               </div>
             </td>
             <td
-              class="emotion-24"
+              class="emotion-42"
             >
               <div
-                class="emotion-25"
+                class="emotion-43"
               >
                 Geller
               </div>
             </td>
             <td
-              class="emotion-24"
+              class="emotion-42"
             >
               <div
-                class="emotion-25"
+                class="emotion-43"
               >
                 32
               </div>
             </td>
             <td
-              class="emotion-24"
+              class="emotion-42"
             >
               <div
-                class="emotion-25"
+                class="emotion-43"
               >
                 Paleontologist
               </div>
             </td>
           </tr>
-          <tr>
+          <tr
+            class="emotion-9"
+          >
             <td
-              class="emotion-24"
+              class="emotion-42"
             >
               <div
-                class="emotion-25"
+                class="emotion-43"
               >
                 Monica
               </div>
             </td>
             <td
-              class="emotion-24"
+              class="emotion-42"
             >
               <div
-                class="emotion-25"
+                class="emotion-43"
               >
                 Geller
               </div>
             </td>
             <td
-              class="emotion-24"
+              class="emotion-42"
             >
               <div
-                class="emotion-25"
+                class="emotion-43"
               >
                 31
               </div>
             </td>
             <td
-              class="emotion-24"
+              class="emotion-42"
             >
               <div
-                class="emotion-25"
+                class="emotion-43"
               >
                 Chef
               </div>
             </td>
           </tr>
-          <tr>
+          <tr
+            class="emotion-9"
+          >
             <td
-              class="emotion-24"
+              class="emotion-42"
             >
               <div
-                class="emotion-25"
+                class="emotion-43"
               >
                 Chandler
               </div>
             </td>
             <td
-              class="emotion-24"
+              class="emotion-42"
             >
               <div
-                class="emotion-25"
+                class="emotion-43"
               >
                 Bing
               </div>
             </td>
             <td
-              class="emotion-24"
+              class="emotion-42"
             >
               <div
-                class="emotion-25"
+                class="emotion-43"
               >
                 32
               </div>
             </td>
             <td
-              class="emotion-24"
+              class="emotion-42"
             >
               <div
-                class="emotion-25"
+                class="emotion-43"
               >
                 ?
               </div>
             </td>
           </tr>
-          <tr>
+          <tr
+            class="emotion-9"
+          >
             <td
-              class="emotion-24"
+              class="emotion-42"
             >
               <div
-                class="emotion-25"
+                class="emotion-43"
               >
                 Joey
               </div>
             </td>
             <td
-              class="emotion-24"
+              class="emotion-42"
             >
               <div
-                class="emotion-25"
+                class="emotion-43"
               >
                 Tribbiani
               </div>
             </td>
             <td
-              class="emotion-24"
+              class="emotion-42"
             >
               <div
-                class="emotion-25"
+                class="emotion-43"
               >
                 30
               </div>
             </td>
             <td
-              class="emotion-24"
+              class="emotion-42"
             >
               <div
-                class="emotion-25"
+                class="emotion-43"
               >
                 Actor
               </div>
             </td>
           </tr>
-          <tr>
+          <tr
+            class="emotion-9"
+          >
             <td
-              class="emotion-24"
+              class="emotion-42"
             >
               <div
-                class="emotion-25"
+                class="emotion-43"
               >
                 Phoebe
               </div>
             </td>
             <td
-              class="emotion-24"
+              class="emotion-42"
             >
               <div
-                class="emotion-25"
+                class="emotion-43"
               >
                 Buffay
               </div>
             </td>
             <td
-              class="emotion-24"
+              class="emotion-42"
             >
               <div
-                class="emotion-25"
+                class="emotion-43"
               >
                 31
               </div>
             </td>
             <td
-              class="emotion-24"
+              class="emotion-42"
             >
               <div
-                class="emotion-25"
+                class="emotion-43"
               >
                 Massage Therapist
               </div>
@@ -614,5 +759,8 @@
         </tbody>
       </table>
     </div>
+    <div
+      class="emotion-95"
+    />
   </div>
 </div>

@@ -58,9 +58,10 @@ const Table = <TData,>({
                   rowSize={rowSize}
                   width={header.getSize()}
                   {...(header.column.getCanSort() && {
-                    isSorted: header.column.getIsSorted().toString(),
+                    colSortingState: sorting?.sortingColumn?.find((col) => col.id === header.id),
                     onSort: header.column.toggleSorting,
                     isMultiSortable: header.column.getCanMultiSort(),
+                    resetSorting: header.column.clearSorting,
                   })}
                   sx={sx?.th}
                 >

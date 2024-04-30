@@ -12,9 +12,11 @@ type Props = {
   isMultiSortable?: boolean;
   /** Sorting Callback */
   onSort: (desc?: boolean, isMulti?: boolean) => void;
+  /** External callback for when the Dropdown Button is clicked */
+  onButtonClick?: (value: boolean) => void;
 };
 
-const THOptions: React.FC<Props> = ({ isMultiSortable, onSort }) => {
+const THOptions: React.FC<Props> = ({ isMultiSortable, onSort, onButtonClick }) => {
   const [isBtnOpen, setBtnOpen] = React.useState<boolean>(false);
 
   const btnRef = useRef(null);
@@ -24,7 +26,11 @@ const THOptions: React.FC<Props> = ({ isMultiSortable, onSort }) => {
       e?.preventDefault();
     }
 
-    setBtnOpen((isOpen) => !isOpen);
+    setBtnOpen((isOpen) => {
+      onButtonClick(!isOpen);
+
+      return !isOpen;
+    });
   };
 
   const handleSelectionChange = (_key) => {
@@ -34,12 +40,9 @@ const THOptions: React.FC<Props> = ({ isMultiSortable, onSort }) => {
 
     onSort(isDesc, isMultiSortable);
 
-    switch (key) {
-      case 'sortAscending':
-      case 'sortDescending':
-        return setBtnOpen(false);
-      default:
-        return null;
+    if (key === 'sortAscending' || key === 'sortDescending') {
+      onButtonClick(false);
+      setBtnOpen(false);
     }
   };
 
@@ -47,19 +50,26 @@ const THOptions: React.FC<Props> = ({ isMultiSortable, onSort }) => {
     <>
       <IconButton
         ref={btnRef}
-        iconName="triangleDown"
+        iconName="moreOptions"
         aria-label="Menu"
         onClick={handleBtnClick}
         aria-controls={isBtnOpen ? 'basic-menu' : undefined}
         aria-haspopup="true"
         aria-expanded={isBtnOpen ? 'true' : undefined}
         type="tertiary"
+        size="compact"
       />
       <Popover
         triggerRef={btnRef}
         css={popoverStyle}
         isOpen={isBtnOpen}
-        onOpenChange={() => setBtnOpen((isOpen) => !isOpen)}
+        onOpenChange={() => {
+          setBtnOpen((isOpen) => {
+            onButtonClick(!isOpen);
+
+            return !isOpen;
+          });
+        }}
         shouldCloseOnInteractOutside={() => true}
         crossOffset={72}
       >
