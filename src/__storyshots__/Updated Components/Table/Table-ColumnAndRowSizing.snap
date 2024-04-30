@@ -21,6 +21,10 @@
 }
 
 .emotion-2 {
+  box-shadow: 0px 1px 1px rgba(200,206,255,0.70);
+}
+
+.emotion-3 {
   width: 150%;
   height: 2.75rem;
   -webkit-align-content: center;
@@ -29,8 +33,6 @@
   text-align: left;
   box-sizing: border-box;
   padding: 8px 16px;
-  border-bottom: 1px solid rgba(200,206,255,0.70);
-  border-right: 1px solid rgba(200,206,255,0.70);
   color: #52567a;
   font-family: Roboto;
   font-weight: 400;
@@ -39,7 +41,16 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-3 {
+.emotion-3 [data-header-role='options'] {
+  opacity: 0;
+}
+
+.emotion-3:hover [data-header-role='options'],
+.emotion-3:focus-visible [data-header-role='options'] {
+  opacity: 1;
+}
+
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -51,7 +62,11 @@
   gap: 8px;
 }
 
-.emotion-10 {
+.emotion-5 {
+  text-wrap: nowrap;
+}
+
+.emotion-15 {
   height: 2.75rem;
   padding: 8px 16px;
   border-bottom: 1px solid rgba(200,206,255,0.70);
@@ -61,7 +76,7 @@
   align-content: center;
 }
 
-.emotion-11 {
+.emotion-16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -82,52 +97,62 @@
     <table
       class="emotion-1"
     >
-      <thead>
+      <thead
+        class="emotion-2"
+      >
         <tr>
           <th
-            class="emotion-2"
+            class="emotion-3"
             colspan="1"
           >
             <div
-              class="emotion-3"
+              class="emotion-4"
             >
-              <div>
+              <div
+                class="emotion-5"
+              >
                 First Name
               </div>
             </div>
           </th>
           <th
-            class="emotion-2"
+            class="emotion-3"
             colspan="1"
           >
             <div
-              class="emotion-3"
+              class="emotion-4"
             >
-              <div>
+              <div
+                class="emotion-5"
+              >
                 Last Name
               </div>
             </div>
           </th>
           <th
-            class="emotion-2"
+            class="emotion-3"
             colspan="1"
           >
             <div
-              class="emotion-3"
+              class="emotion-4"
             >
-              <div>
+              <div
+                class="emotion-5"
+              >
                 Age
               </div>
             </div>
           </th>
           <th
-            class="emotion-2"
+            class="emotion-3"
             colspan="1"
           >
             <div
-              class="emotion-3"
+              class="emotion-4"
             >
-              <div>
+              <div
+                class="emotion-5"
+              >
                 Job
               </div>
             </div>
@@ -137,37 +162,37 @@
       <tbody>
         <tr>
           <td
-            class="emotion-10"
+            class="emotion-15"
           >
             <div
-              class="emotion-11"
+              class="emotion-16"
             >
               Rachel
             </div>
           </td>
           <td
-            class="emotion-10"
+            class="emotion-15"
           >
             <div
-              class="emotion-11"
+              class="emotion-16"
             >
               Berry
             </div>
           </td>
           <td
-            class="emotion-10"
+            class="emotion-15"
           >
             <div
-              class="emotion-11"
+              class="emotion-16"
             >
               30
             </div>
           </td>
           <td
-            class="emotion-10"
+            class="emotion-15"
           >
             <div
-              class="emotion-11"
+              class="emotion-16"
             >
               Fashion Executive
             </div>
@@ -175,37 +200,37 @@
         </tr>
         <tr>
           <td
-            class="emotion-10"
+            class="emotion-15"
           >
             <div
-              class="emotion-11"
+              class="emotion-16"
             >
               Ross
             </div>
           </td>
           <td
-            class="emotion-10"
+            class="emotion-15"
           >
             <div
-              class="emotion-11"
+              class="emotion-16"
             >
               Geller
             </div>
           </td>
           <td
-            class="emotion-10"
+            class="emotion-15"
           >
             <div
-              class="emotion-11"
+              class="emotion-16"
             >
               32
             </div>
           </td>
           <td
-            class="emotion-10"
+            class="emotion-15"
           >
             <div
-              class="emotion-11"
+              class="emotion-16"
             >
               Paleontologist
             </div>
@@ -213,37 +238,37 @@
         </tr>
         <tr>
           <td
-            class="emotion-10"
+            class="emotion-15"
           >
             <div
-              class="emotion-11"
+              class="emotion-16"
             >
               Monica
             </div>
           </td>
           <td
-            class="emotion-10"
+            class="emotion-15"
           >
             <div
-              class="emotion-11"
+              class="emotion-16"
             >
               Geller
             </div>
           </td>
           <td
-            class="emotion-10"
+            class="emotion-15"
           >
             <div
-              class="emotion-11"
+              class="emotion-16"
             >
               31
             </div>
           </td>
           <td
-            class="emotion-10"
+            class="emotion-15"
           >
             <div
-              class="emotion-11"
+              class="emotion-16"
             >
               Chef
             </div>
@@ -251,37 +276,37 @@
         </tr>
         <tr>
           <td
-            class="emotion-10"
+            class="emotion-15"
           >
             <div
-              class="emotion-11"
+              class="emotion-16"
             >
               Chandler
             </div>
           </td>
           <td
-            class="emotion-10"
+            class="emotion-15"
           >
             <div
-              class="emotion-11"
+              class="emotion-16"
             >
               Bing
             </div>
           </td>
           <td
-            class="emotion-10"
+            class="emotion-15"
           >
             <div
-              class="emotion-11"
+              class="emotion-16"
             >
               32
             </div>
           </td>
           <td
-            class="emotion-10"
+            class="emotion-15"
           >
             <div
-              class="emotion-11"
+              class="emotion-16"
             >
               ?
             </div>
@@ -289,37 +314,37 @@
         </tr>
         <tr>
           <td
-            class="emotion-10"
+            class="emotion-15"
           >
             <div
-              class="emotion-11"
+              class="emotion-16"
             >
               Joey
             </div>
           </td>
           <td
-            class="emotion-10"
+            class="emotion-15"
           >
             <div
-              class="emotion-11"
+              class="emotion-16"
             >
               Tribbiani
             </div>
           </td>
           <td
-            class="emotion-10"
+            class="emotion-15"
           >
             <div
-              class="emotion-11"
+              class="emotion-16"
             >
               30
             </div>
           </td>
           <td
-            class="emotion-10"
+            class="emotion-15"
           >
             <div
-              class="emotion-11"
+              class="emotion-16"
             >
               Actor
             </div>
@@ -327,37 +352,37 @@
         </tr>
         <tr>
           <td
-            class="emotion-10"
+            class="emotion-15"
           >
             <div
-              class="emotion-11"
+              class="emotion-16"
             >
               Phoebe
             </div>
           </td>
           <td
-            class="emotion-10"
+            class="emotion-15"
           >
             <div
-              class="emotion-11"
+              class="emotion-16"
             >
               Buffay
             </div>
           </td>
           <td
-            class="emotion-10"
+            class="emotion-15"
           >
             <div
-              class="emotion-11"
+              class="emotion-16"
             >
               31
             </div>
           </td>
           <td
-            class="emotion-10"
+            class="emotion-15"
           >
             <div
-              class="emotion-11"
+              class="emotion-16"
             >
               Massage Therapist
             </div>

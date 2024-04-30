@@ -160,14 +160,18 @@ export const Sorting = {
           }}
         />
 
-        {sorting?.map((sort) => {
-          return (
-            <>
-              <Typography>Sorting Column: {sort.id}</Typography>
-              <Typography>Sorting Direction: {sort.desc ? 'Desc' : 'Asc'}</Typography>
-            </>
-          );
-        })}
+        <div css={{ marginTop: '32px' }}>
+          {sorting?.map((sort) => {
+            return (
+              <div css={{ marginBottom: '16px' }}>
+                <Typography type="secondary">Sorting Column: {sort.id}</Typography>
+                <Typography type="secondary">
+                  Sorting Direction: {sort.desc ? 'Desc' : 'Asc'}
+                </Typography>
+              </div>
+            );
+          })}
+        </div>
       </div>
     );
   },

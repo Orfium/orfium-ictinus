@@ -8,7 +8,11 @@ import { generateStylesFromTokens } from 'components/Typography/utils';
 /** @TODO replace all css with tokens */
 
 export const thContainer =
-  ({ rowSize, width }: Pick<TableProps<any>, 'rowSize'> & { width?: number }) =>
+  ({
+    rowSize,
+    width,
+    hasVisibleOptions,
+  }: Pick<TableProps<any>, 'rowSize'> & { width?: number; hasVisibleOptions?: boolean }) =>
   (theme: Theme): SerializedStyles => {
     return css`
       width: ${width ? `${width}%` : undefined};
@@ -17,9 +21,26 @@ export const thContainer =
       text-align: left;
       box-sizing: border-box;
       padding: 8px 16px;
-      border-bottom: 1px solid ${theme.tokens.colors.get('borderColor.decorative.default')};
-      border-right: 1px solid ${theme.tokens.colors.get('borderColor.decorative.default')};
       color: ${theme.tokens.colors.get('textColor.default.secondary')};
       ${generateStylesFromTokens(theme.tokens.typography.get('normal.body02'))};
+
+      [data-header-role='options'] {
+        opacity: ${hasVisibleOptions ? 1 : 0};
+      }
+
+      &:hover,
+      &:focus-visible {
+        [data-header-role='options'] {
+          opacity: 1;
+        }
+      }
     `;
   };
+
+export const optionsContainer = (): SerializedStyles => {
+  return css`
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  `;
+};
