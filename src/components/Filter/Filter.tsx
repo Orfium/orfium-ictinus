@@ -8,7 +8,7 @@ import MultiFilter from './components/MultiFilter/MultiFilter';
 import SingleFilter from './components/SingleFilter/SingleFilter';
 import useMultiFilterUtils from './hooks/useMultiFilterUtils';
 import { FilterOption, Props } from './types';
-import { errors } from './utils';
+import { errors, getInitialFilterLabel } from './utils';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import handleSearch from 'components/utils/handleSearch';
 import PositionInScreen from 'components/utils/PositionInScreen/PositionInScreen';
@@ -41,11 +41,16 @@ const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
 
   const [isOpen, setIsOpen] = React.useState(false);
   const [searchValue, setSearchValue] = React.useState('');
-  const [filterLabel, setFilterLabel] = React.useState(selectedItem?.label ?? defaultValue.label);
+  const [filterLabel, setFilterLabel] = React.useState<string>(
+    getInitialFilterLabel(defaultValue, multi, selectedItem, selectedItems)
+  );
 
   React.useEffect(() => {
-    setFilterLabel(selectedItem?.label ?? defaultValue.label);
-  }, [defaultValue.label, selectedItem?.label]);
+    /** Run this useEffect only for single Filter, multi Filter updates the label on every multi filter chip addition/deletion/clear all */
+    if (!multi) {
+      setFilterLabel(getInitialFilterLabel(defaultValue, multi, selectedItem, selectedItems));
+    }
+  }, [defaultValue, filterLabel, multi, selectedItem, selectedItems]);
 
   const hasSelectedValue =
     Boolean(selectedItem?.value) && selectedItem?.value !== defaultValue.value;
