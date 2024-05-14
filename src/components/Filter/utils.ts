@@ -3,7 +3,7 @@ import { rem } from 'theme/utils';
 import { colorShades, MAX_SHADE } from '../../theme/palette';
 import { PropsValidationError } from '../../utils/errors';
 import { defineBackgroundColor } from '../Button/utils';
-import { BackgroundColorProps, BaseColorProps, BorderProps, Props } from './types';
+import { BackgroundColorProps, BaseColorProps, BorderProps, FilterOption, Props } from './types';
 
 export const FILTER_OPTIONS_MAX_HEIGHT = 253;
 export const HAS_SELECTED_VALUE_COLOR_SHADE = 50;
@@ -98,3 +98,27 @@ export const errors = [
     error: new PropsValidationError('This filterType and styleType is not supported'),
   },
 ];
+
+/** This callback returns the initial label of the Filter for all combinations */
+export const getInitialFilterLabel = (
+  defaultItem: FilterOption,
+  multi: boolean,
+  item?: FilterOption,
+  items?: FilterOption[]
+) => {
+  if (multi) {
+    if (items && items.length > 0) {
+      if (items.length === 1) {
+        return items[0].label;
+      } else {
+        return `${items[0].label} + ${items.length - 1} more`;
+      }
+    }
+  }
+
+  if (item && !multi) {
+    return item.label;
+  }
+
+  return defaultItem.label;
+};
