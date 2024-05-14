@@ -14,11 +14,23 @@ type Props = {
   width?: number;
   /** Style overrides */
   sx?: CSSObject;
+  /** Column Id */
+  columnId?: string;
 };
 
-const TD: React.FCC<Props> = ({ colSpan, rowSize = 'sm', width, sx, children, ...rest }) => {
+const TD: React.FCC<Props> = ({
+  colSpan,
+  rowSize = 'sm',
+  width,
+  sx,
+  children,
+  columnId,
+  ...rest
+}) => {
+  const isCheckbox = columnId === 'checkbox_select';
+
   return (
-    <td css={tdContainer({ rowSize, width, sx })} colSpan={colSpan} {...rest}>
+    <td css={tdContainer({ rowSize, width, isCheckbox, sx })} colSpan={colSpan} {...rest}>
       <div css={tdContent()}>{children}</div>
     </td>
   );

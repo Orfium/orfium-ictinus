@@ -2,12 +2,13 @@ import { flexRender } from '@tanstack/react-table';
 import React, { useRef } from 'react';
 import isEqual from 'react-fast-compare';
 
-import type { TableProps } from '.';
-import { TBody, TH, TD, THead, TR, TTitle } from './components';
+import { TBody, TD, TH, THead, TR, TTitle, type TableProps } from '.';
 import useTable from './hooks/useTable';
 import { tableContainer, tableStyles } from './Table.style';
 
 const Table = <TData,>({
+  type = 'read-only',
+  rowsConfig,
   data,
   columns,
   rowSize = 'sm',
@@ -16,14 +17,11 @@ const Table = <TData,>({
   hasStickyHeader = false,
   sx,
 }: TableProps<TData>) => {
-  const { columnVisibility, setColumnVisibility } = columnsConfig ?? {};
-
-  const hasColumnVisibilityConfig = Boolean(columnVisibility && setColumnVisibility);
-
   /** If true, the scrollbar of tbody is visible */
   const [hasScrollbar, setHasScrollbar] = React.useState(false);
 
   const tBodyRef = useRef<HTMLTableSectionElement>();
+  const containerRef = useRef(null);
 
   React.useEffect(() => {
     if (tBodyRef?.current) {
@@ -32,27 +30,35 @@ const Table = <TData,>({
   }, [tBodyRef.current]);
 
   const table = useTable<TData>({
+    type,
     data,
     columns,
-    /** Column Visibility */
-    ...(hasColumnVisibilityConfig && {
-      state: {
-        columnVisibility,
-      },
-      onColumnVisibilityChange: setColumnVisibility,
-    }),
     sorting,
+    rowsConfig,
+    columnsConfig,
   });
 
+  const hasTitle = Boolean(columnsConfig || rowsConfig);
+
   return (
-    <div css={tableContainer()}>
-      {hasColumnVisibilityConfig && <TTitle columnsConfig={columnsConfig} columns={columns} />}
+    <div css={tableContainer()} ref={containerRef}>
+      {hasTitle && (
+        <TTitle
+          type={type}
+          columnsConfig={columnsConfig}
+          columns={columns}
+          rowsConfig={rowsConfig}
+          containerRef={containerRef}
+          rowsCount={table.getRowModel().rows.length}
+        />
+      )}
       <table css={tableStyles({ sx: sx?.table })}>
         <THead hasStickyHeader={hasStickyHeader} hasScrollbar={hasScrollbar} sx={sx?.thead}>
           {table.getHeaderGroups().map((headerGroup) => (
             <TR key={headerGroup.id} sx={sx?.tr}>
               {headerGroup.headers.map((header) => (
                 <TH
+                  id={header.id}
                   key={header.id}
                   colSpan={header.colSpan}
                   rowSize={rowSize}
@@ -79,7 +85,13 @@ const Table = <TData,>({
               <TR key={row.id} sx={sx?.tr}>
                 {row.getVisibleCells().map((cell) => {
                   return (
-                    <TD key={cell.id} rowSize={rowSize} width={cell.column.getSize()} sx={sx?.td}>
+                    <TD
+                      columnId={cell.column.id}
+                      key={cell.id}
+                      rowSize={rowSize}
+                      width={cell.column.getSize()}
+                      sx={sx?.td}
+                    >
                       {flexRender(cell.column.columnDef.cell, cell.getContext())}
                     </TD>
                   );

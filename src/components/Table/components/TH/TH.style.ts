@@ -9,18 +9,20 @@ import { generateStylesFromTokens } from 'components/Typography/utils';
 
 export const thContainer =
   ({
+    isCheckbox,
     rowSize,
     width,
     hasVisibleOptions,
     sx,
   }: Pick<TableProps<any>, 'rowSize'> & {
+    isCheckbox?: boolean;
     width?: number;
     hasVisibleOptions?: boolean;
     sx?: CSSObject;
   }) =>
   (theme: Theme): SerializedStyles => {
     return css`
-      width: ${width ? `${width}%` : '100%'};
+      width: ${isCheckbox ? '52px' : width ? `${width}%` : '100%'};
       height: ${getMinHeight(rowSize)(theme)};
       align-content: center;
       text-align: left;

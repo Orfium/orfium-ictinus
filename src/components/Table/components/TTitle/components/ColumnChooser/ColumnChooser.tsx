@@ -11,11 +11,14 @@ import { MenuItemWrapper, MenuWrapper, popoverStyle } from 'components/Menu/Menu
 import MenuItemDivider from 'components/Menu/MenuItemDivider';
 import type { TableProps } from 'components/Table/types';
 
-type Props = Pick<TableProps<any>, 'columns' | 'columnsConfig'>;
+type Props = Pick<TableProps<any>, 'columns' | 'columnsConfig'> & {
+  /** Element that that serves as the positioning boundary of the ColumnChooser Menu */
+  containerRef: React.MutableRefObject<any>;
+};
 
 /** @TODO create a generic Popover component */
 
-const ColumnChooser: React.FC<Props> = ({ columns, columnsConfig }) => {
+const ColumnChooser: React.FC<Props> = ({ columns, columnsConfig, containerRef }) => {
   const [isBtnOpen, setBtnOpen] = React.useState<boolean>(false);
 
   const options = flattenColumns(columns);
@@ -64,7 +67,9 @@ const ColumnChooser: React.FC<Props> = ({ columns, columnsConfig }) => {
         aria-controls={isBtnOpen ? 'basic-menu' : undefined}
         aria-haspopup="true"
         aria-expanded={isBtnOpen ? 'true' : undefined}
-        iconLeftName="columnChooser"
+        /** @TODO add iconLeft functionality to compact Button */
+        // iconLeftName="columnChooser"
+        size="compact"
         type="secondary"
       >
         Edit Columns
@@ -75,6 +80,9 @@ const ColumnChooser: React.FC<Props> = ({ columns, columnsConfig }) => {
         isOpen={isBtnOpen}
         onOpenChange={() => setBtnOpen((isOpen) => !isOpen)}
         shouldCloseOnInteractOutside={() => true}
+        boundaryElement={containerRef.current}
+        /** @TODO adjust this when compact Button with iconLeft is implemented */
+        crossOffset={-31}
       >
         <MenuWrapper
           aria-label="Menu"
