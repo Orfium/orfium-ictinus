@@ -41,12 +41,16 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-3 [data-header-role='options'] {
+.emotion-3 [data-header-role='options'] button {
   opacity: 0;
 }
 
-.emotion-3:hover [data-header-role='options'],
-.emotion-3:focus-visible [data-header-role='options'] {
+.emotion-3:hover [data-header-role='options'] button,
+.emotion-3:focus-visible [data-header-role='options'] button {
+  opacity: 1;
+}
+
+.emotion-3 button:focus-visible {
   opacity: 1;
 }
 

@@ -141,12 +141,16 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-9 [data-header-role='options'] {
+.emotion-9 [data-header-role='options'] button {
   opacity: 0;
 }
 
-.emotion-9:hover [data-header-role='options'],
-.emotion-9:focus-visible [data-header-role='options'] {
+.emotion-9:hover [data-header-role='options'] button,
+.emotion-9:focus-visible [data-header-role='options'] button {
+  opacity: 1;
+}
+
+.emotion-9 button:focus-visible {
   opacity: 1;
 }
 

@@ -25,14 +25,22 @@ export const thContainer =
       ${generateStylesFromTokens(theme.tokens.typography.get('normal.body02'))};
 
       [data-header-role='options'] {
-        opacity: ${hasVisibleOptions ? 1 : 0};
+        button {
+          opacity: ${hasVisibleOptions ? 1 : 0};
+        }
       }
 
       &:hover,
       &:focus-visible {
         [data-header-role='options'] {
-          opacity: 1;
+          button {
+            opacity: 1;
+          }
         }
+      }
+
+      button:focus-visible {
+        opacity: 1;
       }
     `;
   };
