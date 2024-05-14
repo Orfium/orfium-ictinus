@@ -4,6 +4,8 @@ import { SimpleData, moreData, simpleColumns, simpleData } from './constants';
 import Typography from 'components/Typography';
 import { SortingState } from '@tanstack/react-table';
 import { concat } from 'lodash';
+import Button from 'components/Button';
+import DropdownButton from 'components/DropdownButton';
 
 export default {
   title: 'Updated Components/Table/Table',
@@ -208,6 +210,61 @@ export const StickyHeader = {
   parameters: {
     controls: {
       include: ['Row Size', 'Tbody Max height'],
+    },
+  },
+};
+
+export const RowSelection = {
+  render: (args) => {
+    const { rowSize } = args;
+
+    const [rowSelection, setRowSelection] = useState<Record<number, boolean>>({
+      1: true,
+      5: true,
+      7: true,
+    });
+
+    return (
+      <Table<SimpleData>
+        data={concat(simpleData, moreData)}
+        columns={simpleColumns}
+        rowSize={rowSize}
+        type="interactive"
+        rowsConfig={{
+          rowSelection,
+          setRowSelection,
+          defaultAction: <Button size="compact">Default Action</Button>,
+          bulkActions: (
+            <div
+              css={{
+                display: 'flex',
+                alignContent: 'center',
+                justifyContent: 'center',
+                gap: '8px',
+              }}
+            >
+              <Button size="compact">Bulk 1</Button>
+              <Button size="compact">Bulk 2</Button>
+              <DropdownButton
+                size="compact"
+                items={['Bulk 4', 'Bulk 5', 'Bulk 6']}
+                onButtonClick={() => console.log('click')}
+                onOptionSelect={() => console.log('option')}
+              >
+                Bulk 3
+              </DropdownButton>
+            </div>
+          ),
+        }}
+      />
+    );
+  },
+
+  name: 'Row Selection',
+
+  parameters: {
+    controls: {
+      include: ['Row Size'],
     },
   },
 };
