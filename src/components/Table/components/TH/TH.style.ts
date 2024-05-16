@@ -12,7 +12,12 @@ export const thContainer =
     rowSize,
     width,
     hasVisibleOptions,
-  }: Pick<TableProps<any>, 'rowSize'> & { width?: number; hasVisibleOptions?: boolean }) =>
+    isSortable,
+  }: Pick<TableProps<any>, 'rowSize'> & {
+    width?: number;
+    hasVisibleOptions?: boolean;
+    isSortable?: boolean;
+  }) =>
   (theme: Theme): SerializedStyles => {
     return css`
       width: ${width ? `${width}%` : undefined};
@@ -21,7 +26,9 @@ export const thContainer =
       text-align: left;
       box-sizing: border-box;
       padding: 8px 16px;
-      color: ${theme.tokens.colors.get('textColor.default.secondary')};
+      color: ${theme.tokens.colors.get(
+        `textColor.default.${hasVisibleOptions ? 'primary' : 'secondary'}`
+      )};
       ${generateStylesFromTokens(theme.tokens.typography.get('normal.body02'))};
 
       [data-header-role='options'] {
@@ -32,6 +39,9 @@ export const thContainer =
 
       &:hover,
       &:focus-visible {
+        color: ${isSortable && theme.tokens.colors.get('textColor.default.primary')};
+        ${isSortable && generateStylesFromTokens(theme.tokens.typography.get('normal.label02'))};
+
         [data-header-role='options'] {
           button {
             opacity: 1;

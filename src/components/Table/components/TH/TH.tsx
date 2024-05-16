@@ -5,7 +5,6 @@ import type { DivProps } from 'utils/common';
 
 import { THOptions } from './components';
 import { thContainer, optionsContainer } from './TH.style';
-import type { PrimitiveButtonTypes } from 'components/Button/Button.types';
 import type { AcceptedIconNames } from 'components/Icon';
 import IconButton from 'components/IconButton';
 import type { RowSize } from 'components/Table/types';
@@ -62,15 +61,7 @@ const TH: React.FCC<Props & Pick<DivProps, 'onClick'>> = ({
       return 'arrowDown';
     };
 
-    const getIconType = (): PrimitiveButtonTypes => {
-      if (isDesc === true || isDesc === false) return 'secondary';
-
-      return 'tertiary';
-    };
-
-    return (
-      <IconButton iconName={getIcon()} type={getIconType()} size="compact" onClick={handleClick} />
-    );
+    return <IconButton iconName={getIcon()} type="tertiary" size="compact" onClick={handleClick} />;
   };
 
   return (
@@ -79,6 +70,7 @@ const TH: React.FCC<Props & Pick<DivProps, 'onClick'>> = ({
         rowSize,
         width,
         hasVisibleOptions: hasVisibleOptions || Boolean(colSortingState),
+        isSortable,
       })}
       {...rest}
     >

@@ -145,6 +145,16 @@
   opacity: 0;
 }
 
+.emotion-9:hover,
+.emotion-9:focus-visible {
+  color: #111530;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
 .emotion-9:hover [data-header-role='options'] button,
 .emotion-9:focus-visible [data-header-role='options'] button {
   opacity: 1;
@@ -245,6 +255,36 @@
 
 .emotion-16 path {
   fill: #194DCC!important;
+}
+
+.emotion-21 {
+  width: 150%;
+  height: 2.75rem;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  text-align: left;
+  box-sizing: border-box;
+  padding: 8px 16px;
+  color: #52567a;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-21 [data-header-role='options'] button {
+  opacity: 0;
+}
+
+.emotion-21:hover [data-header-role='options'] button,
+.emotion-21:focus-visible [data-header-role='options'] button {
+  opacity: 1;
+}
+
+.emotion-21 button:focus-visible {
+  opacity: 1;
 }
 
 .emotion-39 {
@@ -406,7 +446,7 @@
               </div>
             </th>
             <th
-              class="emotion-9"
+              class="emotion-21"
               colspan="1"
             >
               <div
@@ -499,7 +539,7 @@
               </div>
             </th>
             <th
-              class="emotion-9"
+              class="emotion-21"
               colspan="1"
             >
               <div
