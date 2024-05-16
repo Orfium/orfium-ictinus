@@ -20,6 +20,8 @@ const Table = <TData,>({
   /** If true, the scrollbar of tbody is visible */
   const [hasScrollbar, setHasScrollbar] = React.useState(false);
 
+  const isSelectable = Boolean(type === 'interactive' && rowsConfig.rowSelection);
+
   const tBodyRef = useRef<HTMLTableSectionElement>();
   const containerRef = useRef(null);
 
@@ -82,7 +84,17 @@ const Table = <TData,>({
         <TBody hasStickyHeader={hasStickyHeader} ref={tBodyRef} sx={sx?.tbody}>
           {table.getRowModel().rows.map((row) => {
             return (
-              <TR key={row.id} sx={sx?.tr}>
+              <TR
+                key={row.id}
+                sx={sx?.tr}
+                {...(isSelectable && {
+                  isSelectable,
+                  isSelected: row.getIsSelected(),
+                  onClick: (e) => {
+                    row.toggleSelected();
+                  },
+                })}
+              >
                 {row.getVisibleCells().map((cell) => {
                   return (
                     <TD
