@@ -1,5 +1,5 @@
 import { toPairs } from 'lodash';
-import { useMedia } from 'react-media';
+import { useMediaQuery } from 'react-responsive';
 
 export const queriesKeys = [
   'des1920',
@@ -13,7 +13,7 @@ export const queriesKeys = [
   'mob320',
 ] as const;
 
-export const queriesSizes: Record<typeof queriesKeys[number], string> = {
+export const queriesSizes: Record<(typeof queriesKeys)[number], string> = {
   des1920: '1920',
   des1440: '1440',
   des1366: '1366',
@@ -26,13 +26,17 @@ export const queriesSizes: Record<typeof queriesKeys[number], string> = {
 };
 
 const queries = toPairs(queriesSizes).reduce((acc, size) => {
-  acc[size[0]] = `(min-width: ${size[1]}px)`;
+  acc[size[0]] = { minWidth: size[1] };
 
   return acc;
-}, {} as Record<typeof queriesKeys[number], string>);
+}, {} as Record<(typeof queriesKeys)[number], string>);
 
 const useBreakpoints = () => {
-  return useMedia<Record<typeof queriesKeys[number], string>>({ queries });
+  return toPairs(queries).reduce((acc, [key, value]) => {
+    acc[key] = useMediaQuery({ query: value });
+
+    return acc;
+  }, {} as Record<(typeof queriesKeys)[number], boolean>);
 };
 
 export default useBreakpoints;
