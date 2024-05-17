@@ -1,40 +1,39 @@
-import { renderHook } from 'test';
+import { renderHook } from '@testing-library/react-hooks';
+import { useMediaQuery } from 'react-responsive';
+import type { Mock } from 'vitest';
+import useBreakpoints, { queriesKeys, queriesSizes } from './useBreakpoints';
 
-import useBreakpoints, { queriesKeys } from './useBreakpoints';
+vi.mock('react-responsive');
 
-export const createMockMediaMatcher =
-  (matchesOrMapOfMatches: boolean) => (qs: string | number) => ({
-    matches:
-      typeof matchesOrMapOfMatches === 'object' && matchesOrMapOfMatches
-        ? matchesOrMapOfMatches[qs]
-        : matchesOrMapOfMatches,
-    addListener: () => {},
-    removeListener: () => {},
-  });
+const useMediaQueryMock = useMediaQuery as Mock;
 
 describe('useBreakpoints', () => {
   beforeEach(() => {
-    // @ts-ignore - set what matches will be
-    window.matchMedia = createMockMediaMatcher(true);
-  });
-  it('should render the correct matches keys', () => {
-    const { result } = renderHook(() => useBreakpoints());
-    const keys = Object.keys(result.current);
-
-    expect(keys).toStrictEqual(queriesKeys);
+    useMediaQueryMock.mockClear();
   });
 
-  it('should check that match is true', () => {
+  it('should return an object with boolean values for each breakpoint', () => {
+    // Mock useMediaQuery to return true for all breakpoints
+    useMediaQueryMock.mockReturnValue(true);
+
     const { result } = renderHook(() => useBreakpoints());
 
-    expect(result.current.des1200).toBeTruthy();
+    // Expect all breakpoints to be true
+    queriesKeys.forEach((key) => {
+      expect(result.current[key]).toBe(true);
+    });
   });
 
-  it('should check that match is true', () => {
-    // @ts-ignore - set what matches will be
-    window.matchMedia = createMockMediaMatcher(false);
+  it('should return an object with boolean values for each breakpoint (some false)', () => {
+    // Mock useMediaQuery to return true only for 'des1920'
+    useMediaQueryMock.mockImplementation(({ query }) => query.minWidth === queriesSizes['des1920']);
+
     const { result } = renderHook(() => useBreakpoints());
 
-    expect(result.current.des1200).toBeFalsy();
+    // Expect 'des1920' to be true, others to be false
+    expect(result.current['des1920']).toBe(true);
+    queriesKeys.slice(1).forEach((key) => {
+      expect(result.current[key]).toBe(false);
+    });
   });
 });
