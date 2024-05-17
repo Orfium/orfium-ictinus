@@ -80,6 +80,7 @@ export const wrapperStyle =
 
     return css({
       display: 'flex',
+      flex: 1,
       alignItems: 'center',
       position: 'relative',
       transition: `background-color 0.25s, box-shadow 0.25s, border-color 0.25s`,
