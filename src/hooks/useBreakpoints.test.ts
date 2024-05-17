@@ -26,7 +26,7 @@ describe('useBreakpoints', () => {
 
   it('should return an object with boolean values for each breakpoint (some false)', () => {
     // Mock useMediaQuery to return true only for 'des1920'
-    useMediaQueryMock.mockImplementation(({ query }) => query.minWidth === queriesSizes['des1920']);
+    useMediaQueryMock.mockImplementation((query) => query.minWidth === queriesSizes['des1920']);
 
     const { result } = renderHook(() => useBreakpoints());
 
