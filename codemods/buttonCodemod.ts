@@ -19,8 +19,8 @@ const transform: Transform = (file, api) => {
         // If the attribute is one of the ones that changed, update it
         if (attr.name === 'loading') attr.name = 'isLoading';
         if (attr.name === 'disabled') attr.name = 'isDisabled';
-        if (attr.name === 'type') attr.name = 'htmlType';
-        if (attr.name === 'buttonType') attr.name = 'type';
+        if (attr.name === 'buttonType') attr.name = 'htmlType';
+        if (attr.name === 'type') attr.name = 'buttonType';
         if (attr.name === 'iconLeft') attr.name = 'iconLeftName';
         if (attr.name === 'iconRight') attr.name = 'iconRightName';
       });
