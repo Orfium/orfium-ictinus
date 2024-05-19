@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import Table from './Table';
 import { SimpleData, simpleColumns, simpleData } from './constants';
 import Typography from 'components/Typography';
@@ -143,36 +143,51 @@ export const Sorting = {
       job: true,
     });
 
-    return (
-      <div>
-        <Table<SimpleData>
-          data={simpleData}
-          columns={columns}
-          rowSize={rowSize}
-          columnsConfig={{
-            columnVisibility,
-            setColumnVisibility,
-          }}
-          sorting={{
-            sortingColumn: sorting,
-            handleSorting: setSorting,
-            isMultiSortable,
-          }}
-        />
+    const sortDataByKey = (data, key, order = 'asc') => {
+      const returnData = [...data];
 
-        <div css={{ marginTop: '32px' }}>
-          {sorting?.map((sort) => {
-            return (
-              <div css={{ marginBottom: '16px' }}>
-                <Typography type="secondary">Sorting Column: {sort.id}</Typography>
-                <Typography type="secondary">
-                  Sorting Direction: {sort.desc ? 'Desc' : 'Asc'}
-                </Typography>
-              </div>
-            );
-          })}
-        </div>
-      </div>
+      return returnData.sort((a, b) => {
+        const valueA = a[key];
+        const valueB = b[key];
+
+        const comparison =
+          key === 'age'
+            ? parseInt(valueA, 10) - parseInt(valueB, 10)
+            : valueA < valueB
+            ? -1
+            : valueA > valueB
+            ? 1
+            : 0;
+
+        return order === 'desc' ? -comparison : comparison;
+      });
+    };
+
+    const ddata = useMemo(() => {
+      const { id, desc } = sorting?.length ? sorting[0] : {};
+
+      if (id) {
+        return sortDataByKey(simpleData, id, desc ? 'desc' : 'asc');
+      } else {
+        return simpleData;
+      }
+    }, [sorting, simpleData]);
+
+    return (
+      <Table<SimpleData>
+        data={ddata}
+        columns={columns}
+        rowSize={rowSize}
+        columnsConfig={{
+          columnVisibility,
+          setColumnVisibility,
+        }}
+        sorting={{
+          sortingColumn: sorting,
+          handleSorting: setSorting,
+          isMultiSortable,
+        }}
+      />
     );
   },
 

@@ -59,8 +59,6 @@ export type GroupColumn = {
 
 /** Rows & Cells  */
 
-export type TableData<TData> = {
-  cells: TData;
-}[];
+export type TableData<TData> = TData[];
 
 export type RowSize = 'sm' | 'md' | 'lg';
