@@ -1,0 +1,694 @@
+.emotion-0 {
+  display: inline-block;
+  border: 1px solid rgba(200,206,255,0.70);
+  border-radius: 4px;
+  background: #ffffff;
+}
+
+.emotion-1 {
+  padding: 8px 16px;
+  border-bottom: 1px solid rgba(200,206,255,0.70);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  height: 44px;
+  box-sizing: border-box;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.emotion-3 {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.emotion-3 thead>tr>th:last-child,
+.emotion-3 tbody>tr>td:last-child {
+  border-right: none;
+}
+
+.emotion-3 tbody>tr:last-child>td {
+  border-bottom: none;
+}
+
+.emotion-4 {
+  box-shadow: 0 1px 0 0 rgba(200,206,255,0.70);
+}
+
+.emotion-6 {
+  width: 100%;
+  height: 2.75rem;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  text-align: left;
+  box-sizing: border-box;
+  padding: 8px 16px;
+  color: #52567a;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-6 [data-header-role='options'] button {
+  opacity: 0;
+}
+
+.emotion-6:hover [data-header-role='options'] button,
+.emotion-6:focus-visible [data-header-role='options'] button {
+  opacity: 1;
+}
+
+.emotion-6 button:focus-visible {
+  opacity: 1;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.emotion-8 {
+  text-wrap: nowrap;
+}
+
+.emotion-18 {
+  width: 52px;
+  height: 2.75rem;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  text-align: left;
+  box-sizing: border-box;
+  padding: 8px 16px;
+  color: #52567a;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-18 [data-header-role='options'] button {
+  opacity: 0;
+}
+
+.emotion-18:hover [data-header-role='options'] button,
+.emotion-18:focus-visible [data-header-role='options'] button {
+  opacity: 1;
+}
+
+.emotion-18 button:focus-visible {
+  opacity: 1;
+}
+
+.emotion-22 {
+  cursor: pointer;
+}
+
+.emotion-22:hover {
+  background: rgba(200,206,255,0.20);
+}
+
+.emotion-23 {
+  width: 100%;
+  height: 2.75rem;
+  padding: 8px 16px;
+  border-bottom: 1px solid rgba(200,206,255,0.70);
+  box-sizing: border-box;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+.emotion-24 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-31 {
+  width: 52px;
+  height: 2.75rem;
+  padding: 8px 16px;
+  border-bottom: 1px solid rgba(200,206,255,0.70);
+  box-sizing: border-box;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+.emotion-33 {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.emotion-33:hover,
+.emotion-33:focus-visible {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border-radius: 100%;
+  background: rgba(200,206,255,0.20);
+  box-shadow: 0px 0px 0px 8px rgba(200,206,255,0.20);
+}
+
+.emotion-34 {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-34 path {
+  fill: #52567a!important;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <div
+        class="emotion-2"
+      />
+      <div />
+    </div>
+    <table
+      class="emotion-3"
+    >
+      <thead
+        class="emotion-4"
+      >
+        <tr
+          class="emotion-5"
+        >
+          <th
+            class="emotion-6"
+            colspan="1"
+          >
+            <div
+              class="emotion-7"
+            >
+              <div
+                class="emotion-8"
+              >
+                First Name
+              </div>
+            </div>
+          </th>
+          <th
+            class="emotion-6"
+            colspan="1"
+          >
+            <div
+              class="emotion-7"
+            >
+              <div
+                class="emotion-8"
+              >
+                Last Name
+              </div>
+            </div>
+          </th>
+          <th
+            class="emotion-6"
+            colspan="1"
+          >
+            <div
+              class="emotion-7"
+            >
+              <div
+                class="emotion-8"
+              >
+                Age
+              </div>
+            </div>
+          </th>
+          <th
+            class="emotion-6"
+            colspan="1"
+          >
+            <div
+              class="emotion-7"
+            >
+              <div
+                class="emotion-8"
+              >
+                Job
+              </div>
+            </div>
+          </th>
+          <th
+            class="emotion-18"
+            colspan="1"
+          >
+            <div
+              class="emotion-7"
+            >
+              <div
+                class="emotion-8"
+              />
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="emotion-21"
+      >
+        <tr
+          class="emotion-22"
+        >
+          <td
+            class="emotion-23"
+          >
+            <div
+              class="emotion-24"
+            >
+              Rachel
+            </div>
+          </td>
+          <td
+            class="emotion-23"
+          >
+            <div
+              class="emotion-24"
+            >
+              Berry
+            </div>
+          </td>
+          <td
+            class="emotion-23"
+          >
+            <div
+              class="emotion-24"
+            >
+              30
+            </div>
+          </td>
+          <td
+            class="emotion-23"
+          >
+            <div
+              class="emotion-24"
+            >
+              Fashion Executive
+            </div>
+          </td>
+          <td
+            class="emotion-31"
+          >
+            <div
+              class="emotion-24"
+            >
+              <div
+                class="emotion-33"
+                tabindex="0"
+              >
+                <svg
+                  class="emotion-34"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M9.64018 13.6332C8.98886 14.176 8 13.7128 8 12.865V7.13504C8 6.2872 8.98886 5.82405 9.64018 6.36682L13.0781 9.23178C13.5579 9.63157 13.5579 10.3684 13.0781 10.7682L9.64018 13.6332Z"
+                    fill="#6265AD"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr
+          class="emotion-22"
+        >
+          <td
+            class="emotion-23"
+          >
+            <div
+              class="emotion-24"
+            >
+              Ross
+            </div>
+          </td>
+          <td
+            class="emotion-23"
+          >
+            <div
+              class="emotion-24"
+            >
+              Geller
+            </div>
+          </td>
+          <td
+            class="emotion-23"
+          >
+            <div
+              class="emotion-24"
+            >
+              32
+            </div>
+          </td>
+          <td
+            class="emotion-23"
+          >
+            <div
+              class="emotion-24"
+            >
+              Paleontologist
+            </div>
+          </td>
+          <td
+            class="emotion-31"
+          >
+            <div
+              class="emotion-24"
+            >
+              <div
+                class="emotion-33"
+                tabindex="0"
+              >
+                <svg
+                  class="emotion-34"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M9.64018 13.6332C8.98886 14.176 8 13.7128 8 12.865V7.13504C8 6.2872 8.98886 5.82405 9.64018 6.36682L13.0781 9.23178C13.5579 9.63157 13.5579 10.3684 13.0781 10.7682L9.64018 13.6332Z"
+                    fill="#6265AD"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr
+          class="emotion-22"
+        >
+          <td
+            class="emotion-23"
+          >
+            <div
+              class="emotion-24"
+            >
+              Monica
+            </div>
+          </td>
+          <td
+            class="emotion-23"
+          >
+            <div
+              class="emotion-24"
+            >
+              Geller
+            </div>
+          </td>
+          <td
+            class="emotion-23"
+          >
+            <div
+              class="emotion-24"
+            >
+              31
+            </div>
+          </td>
+          <td
+            class="emotion-23"
+          >
+            <div
+              class="emotion-24"
+            >
+              Chef
+            </div>
+          </td>
+          <td
+            class="emotion-31"
+          >
+            <div
+              class="emotion-24"
+            >
+              <div
+                class="emotion-33"
+                tabindex="0"
+              >
+                <svg
+                  class="emotion-34"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M9.64018 13.6332C8.98886 14.176 8 13.7128 8 12.865V7.13504C8 6.2872 8.98886 5.82405 9.64018 6.36682L13.0781 9.23178C13.5579 9.63157 13.5579 10.3684 13.0781 10.7682L9.64018 13.6332Z"
+                    fill="#6265AD"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr
+          class="emotion-22"
+        >
+          <td
+            class="emotion-23"
+          >
+            <div
+              class="emotion-24"
+            >
+              Chandler
+            </div>
+          </td>
+          <td
+            class="emotion-23"
+          >
+            <div
+              class="emotion-24"
+            >
+              Bing
+            </div>
+          </td>
+          <td
+            class="emotion-23"
+          >
+            <div
+              class="emotion-24"
+            >
+              32
+            </div>
+          </td>
+          <td
+            class="emotion-23"
+          >
+            <div
+              class="emotion-24"
+            >
+              ?
+            </div>
+          </td>
+          <td
+            class="emotion-31"
+          >
+            <div
+              class="emotion-24"
+            >
+              <div
+                class="emotion-33"
+                tabindex="0"
+              >
+                <svg
+                  class="emotion-34"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M9.64018 13.6332C8.98886 14.176 8 13.7128 8 12.865V7.13504C8 6.2872 8.98886 5.82405 9.64018 6.36682L13.0781 9.23178C13.5579 9.63157 13.5579 10.3684 13.0781 10.7682L9.64018 13.6332Z"
+                    fill="#6265AD"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr
+          class="emotion-22"
+        >
+          <td
+            class="emotion-23"
+          >
+            <div
+              class="emotion-24"
+            >
+              Joey
+            </div>
+          </td>
+          <td
+            class="emotion-23"
+          >
+            <div
+              class="emotion-24"
+            >
+              Tribbiani
+            </div>
+          </td>
+          <td
+            class="emotion-23"
+          >
+            <div
+              class="emotion-24"
+            >
+              30
+            </div>
+          </td>
+          <td
+            class="emotion-23"
+          >
+            <div
+              class="emotion-24"
+            >
+              Actor
+            </div>
+          </td>
+          <td
+            class="emotion-31"
+          >
+            <div
+              class="emotion-24"
+            >
+              <div
+                class="emotion-33"
+                tabindex="0"
+              >
+                <svg
+                  class="emotion-34"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M9.64018 13.6332C8.98886 14.176 8 13.7128 8 12.865V7.13504C8 6.2872 8.98886 5.82405 9.64018 6.36682L13.0781 9.23178C13.5579 9.63157 13.5579 10.3684 13.0781 10.7682L9.64018 13.6332Z"
+                    fill="#6265AD"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr
+          class="emotion-22"
+        >
+          <td
+            class="emotion-23"
+          >
+            <div
+              class="emotion-24"
+            >
+              Phoebe
+            </div>
+          </td>
+          <td
+            class="emotion-23"
+          >
+            <div
+              class="emotion-24"
+            >
+              Buffay
+            </div>
+          </td>
+          <td
+            class="emotion-23"
+          >
+            <div
+              class="emotion-24"
+            >
+              31
+            </div>
+          </td>
+          <td
+            class="emotion-23"
+          >
+            <div
+              class="emotion-24"
+            >
+              Massage Therapist
+            </div>
+          </td>
+          <td
+            class="emotion-31"
+          >
+            <div
+              class="emotion-24"
+            >
+              <div
+                class="emotion-33"
+                tabindex="0"
+              >
+                <svg
+                  class="emotion-34"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M9.64018 13.6332C8.98886 14.176 8 13.7128 8 12.865V7.13504C8 6.2872 8.98886 5.82405 9.64018 6.36682L13.0781 9.23178C13.5579 9.63157 13.5579 10.3684 13.0781 10.7682L9.64018 13.6332Z"
+                    fill="#6265AD"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
