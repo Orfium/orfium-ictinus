@@ -16,9 +16,11 @@ type Props = Pick<TableProps<any>, 'columns' | 'columnsConfig'>;
 /** @TODO create a generic Popover component */
 
 const ColumnChooser: React.FC<Props> = ({ columns, columnsConfig }) => {
-  const [isBtnOpen, setBtnOpen] = React.useState<boolean>(false);
+  const [isBtnOpen, setIsBtnOpen] = React.useState<boolean>(false);
 
   const options = flattenColumns(columns);
+
+  const menuRef = useRef(null);
 
   const [selectedKeys, setSelectedKeys] = React.useState(
     new Set<string>(
@@ -39,7 +41,7 @@ const ColumnChooser: React.FC<Props> = ({ columns, columnsConfig }) => {
       e?.preventDefault();
     }
 
-    setBtnOpen((isOpen) => !isOpen);
+    setIsBtnOpen((isOpen) => !isOpen);
   };
 
   const handleSelectionChange = (keys) => {
@@ -66,6 +68,11 @@ const ColumnChooser: React.FC<Props> = ({ columns, columnsConfig }) => {
         aria-expanded={isBtnOpen ? 'true' : undefined}
         iconLeftName="columnChooser"
         type="secondary"
+        onKeyDown={(e) => {
+          if (e.key === 'ArrowDown') {
+            menuRef.current.focus();
+          }
+        }}
       >
         Edit Columns
       </Button>
@@ -73,10 +80,11 @@ const ColumnChooser: React.FC<Props> = ({ columns, columnsConfig }) => {
         triggerRef={btnRef}
         css={popoverStyle}
         isOpen={isBtnOpen}
-        onOpenChange={() => setBtnOpen((isOpen) => !isOpen)}
+        onOpenChange={() => setIsBtnOpen((isOpen) => !isOpen)}
         shouldCloseOnInteractOutside={() => true}
       >
         <MenuWrapper
+          ref={menuRef}
           aria-label="Menu"
           selectionMode="multiple"
           selectedKeys={selectedKeys}

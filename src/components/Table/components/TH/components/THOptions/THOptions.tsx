@@ -17,16 +17,17 @@ type Props = {
 };
 
 const THOptions: React.FC<Props> = ({ isMultiSortable, onSort, onButtonClick }) => {
-  const [isBtnOpen, setBtnOpen] = React.useState<boolean>(false);
+  const [isBtnOpen, setIsBtnOpen] = React.useState<boolean>(false);
 
   const btnRef = useRef(null);
+  const listRef = useRef(null);
 
   const handleBtnClick = (e) => {
     if (e?.preventDefault) {
       e?.preventDefault();
     }
 
-    setBtnOpen((isOpen) => {
+    setIsBtnOpen((isOpen) => {
       onButtonClick(!isOpen);
 
       return !isOpen;
@@ -42,7 +43,7 @@ const THOptions: React.FC<Props> = ({ isMultiSortable, onSort, onButtonClick }) 
 
     if (key === 'sortAscending' || key === 'sortDescending') {
       onButtonClick(false);
-      setBtnOpen(false);
+      setIsBtnOpen(false);
     }
   };
 
@@ -58,13 +59,18 @@ const THOptions: React.FC<Props> = ({ isMultiSortable, onSort, onButtonClick }) 
         aria-expanded={isBtnOpen ? 'true' : undefined}
         type="tertiary"
         size="compact"
+        onKeyDown={(e) => {
+          if (e.key === 'ArrowDown') {
+            listRef.current.focus();
+          }
+        }}
       />
       <Popover
         triggerRef={btnRef}
         css={popoverStyle}
         isOpen={isBtnOpen}
         onOpenChange={() => {
-          setBtnOpen((isOpen) => {
+          setIsBtnOpen((isOpen) => {
             onButtonClick(!isOpen);
 
             return !isOpen;
@@ -74,6 +80,7 @@ const THOptions: React.FC<Props> = ({ isMultiSortable, onSort, onButtonClick }) 
         crossOffset={72}
       >
         <MenuWrapper
+          ref={listRef}
           aria-label="Menu"
           selectionMode="multiple"
           css={[listStyle({}), menuStyle()]}
