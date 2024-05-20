@@ -29,7 +29,7 @@ type Props = {
   sx?: CSSObject;
 };
 
-const TH: React.FCC<Props & Pick<DivProps, 'onClick'>> = ({
+const TH: React.FCC<Props & Pick<DivProps, 'onClick' | 'id'>> = ({
   width,
   rowSize = 'sm',
   children,
@@ -38,9 +38,11 @@ const TH: React.FCC<Props & Pick<DivProps, 'onClick'>> = ({
   colSortingState,
   resetSorting,
   sx,
+  id,
   ...rest
 }) => {
   const isSortable = Boolean(onSort);
+  const isCheckbox = id === 'checkbox_select';
 
   const [hasVisibleOptions, setHasVisibleOptions] = React.useState(false);
 
@@ -71,6 +73,7 @@ const TH: React.FCC<Props & Pick<DivProps, 'onClick'>> = ({
   return (
     <th
       css={thContainer({
+        isCheckbox,
         rowSize,
         width,
         hasVisibleOptions: hasVisibleOptions || Boolean(colSortingState),

@@ -11,5 +11,7 @@ export const tTitleContainer =
       border-bottom: 1px solid ${theme.tokens.colors.get('borderColor.decorative.default')};
       display: flex;
       justify-content: space-between;
+      height: 44px;
+      box-sizing: border-box;
     `;
   };

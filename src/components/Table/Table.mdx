@@ -1,7 +1,11 @@
 import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
 import Table from './Table';
 import * as TableStories from './Table.stories';
-import { DisplayColumnStory, ColumnsConfigStory } from './utils/TableStoryComponents';
+import {
+  DisplayColumnStory,
+  ColumnsConfigStory,
+  RowsConfigStory,
+} from './utils/TableStoryComponents';
 
 <Meta of={TableStories} />
 
@@ -32,6 +36,12 @@ A universal Table component that applies Orfium basic usages.
 This type includes all the configuration for the columns
 
 <ArgTypes of={ColumnsConfigStory} />
+
+## RowsConfig Type
+
+This type includes all the configuration for the rows
+
+<ArgTypes of={RowsConfigStory} />
 
 <SubsectionHeader title="Variants" />
 
@@ -76,3 +86,14 @@ In order to sort your table, use the `sorting` prop. This is an object that cons
 </Tip>
 
 <Canvas of={TableStories.StickyHeader} />
+
+### Row Selection
+
+In order to enable row Selection, do the following steps:
+
+- Use prop `type` = `interactive`.
+- Use the `rowsConfig` object prop and more specificaly `rowSelection` and `setRowSelection` keys. The `rowSelection` is an object where the key is the row index (from 0 to rows.length - 1) and value is a boolean indicating if the row is selected. Check the implementation below for more clientInformation.
+
+You can also pass a `defaultAction` and/or `bulkActions` inside the `rowsConfig`, which are visible once at least 1 row is selected.
+
+<Canvas of={TableStories.RowSelection} />

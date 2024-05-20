@@ -20,10 +20,20 @@ export const tdContainer =
   ({
     rowSize,
     width,
+    isCheckbox,
     sx,
-  }: Pick<TableProps<any>, 'rowSize'> & { width?: number; isLastCell?: boolean; sx?: CSSObject }) =>
+  }: Pick<TableProps<any>, 'rowSize'> & {
+    isCheckbox?: boolean;
+    width?: number;
+    isLastCell?: boolean;
+    sx?: CSSObject;
+  }) =>
   (theme: Theme): SerializedStyles => {
     const getWidth = () => {
+      if (isCheckbox) {
+        return '52px';
+      }
+
       if (width) {
         return `${width}%`;
       }

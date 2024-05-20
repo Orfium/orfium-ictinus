@@ -1,7 +1,9 @@
 import type { CSSObject } from '@emotion/react';
-import type { SortingState, OnChangeFn } from '@tanstack/react-table';
+import type { SortingState, OnChangeFn, RowSelectionState } from '@tanstack/react-table';
 
 export type TableProps<TData> = {
+  /** If table is interactive, rows are selectable with actions */
+  type?: 'interactive' | 'read-only';
   /** The Columns configuration of the Table */
   // Columns Type for Group Headers: columns: (DisplayColumn | GroupColumn)[];
   columns: DisplayColumn[];
@@ -11,6 +13,8 @@ export type TableProps<TData> = {
   rowSize?: RowSize;
   /** Columns Configuration */
   columnsConfig?: ColumnsConfig;
+  /** Rows Configuration */
+  rowsConfig?: RowsConfig;
   /** Sorting Configuration */
   sorting?: SortingConfig;
   /** Whether the table has a sticky header and scrollable tbody */
@@ -26,7 +30,10 @@ export type TableProps<TData> = {
   };
 };
 
-export type UseTableProps<TData> = Pick<TableProps<TData>, 'columns' | 'data' | 'sorting'> &
+export type UseTableProps<TData> = Pick<
+  TableProps<TData>,
+  'columns' | 'data' | 'sorting' | 'rowsConfig' | 'columnsConfig'
+> &
   Partial<Omit<TableProps<TData>, 'columns' | 'data'>>;
 
 /** Columns */
@@ -70,6 +77,19 @@ export type GroupColumn = {
 };
 
 /** Rows & Cells  */
+
+export type RowsConfig = {
+  /** Whether a rows counter should be displayed, regardless of row selection functionality */
+  hasRowsCount?: boolean;
+  /** State which indicated which rows are selected */
+  rowSelection?: RowSelectionState;
+  /** Callback for row selection state change */
+  setRowSelection?: (state: RowSelectionState) => void;
+  /** Default action for rows */
+  defaultAction?: JSX.Element;
+  /** Bulk actions for rows */
+  bulkActions?: JSX.Element;
+};
 
 export type TableData<TData> = TData[];
 
