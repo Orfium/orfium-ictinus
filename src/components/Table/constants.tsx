@@ -27,37 +27,29 @@ export const groupedColumns = [
 
 export const simpleData = [
   {
-    cells: {
-      firstName: 'Rachel',
-      lastName: 'Berry',
-      age: '30',
-      job: 'Fashion Executive',
-    },
+    firstName: 'Rachel',
+    lastName: 'Berry',
+    age: '30',
+    job: 'Fashion Executive',
   },
   {
-    cells: {
-      firstName: 'Ross',
-      lastName: 'Geller',
-      age: '32',
-      job: 'Paleontologist',
-    },
+    firstName: 'Ross',
+    lastName: 'Geller',
+    age: '32',
+    job: 'Paleontologist',
   },
-  { cells: { firstName: 'Monica', lastName: 'Geller', age: '31', job: 'Chef' } },
-  { cells: { firstName: 'Chandler', lastName: 'Bing', age: '32', job: '?' } },
+  { firstName: 'Monica', lastName: 'Geller', age: '31', job: 'Chef' },
+  { firstName: 'Chandler', lastName: 'Bing', age: '32', job: '?' },
   {
-    cells: {
-      firstName: 'Joey',
-      lastName: 'Tribbiani',
-      age: '30',
-      job: 'Actor',
-    },
+    firstName: 'Joey',
+    lastName: 'Tribbiani',
+    age: '30',
+    job: 'Actor',
   },
   {
-    cells: {
-      firstName: 'Phoebe',
-      lastName: 'Buffay',
-      age: '31',
-      job: 'Massage Therapist',
-    },
+    firstName: 'Phoebe',
+    lastName: 'Buffay',
+    age: '31',
+    job: 'Massage Therapist',
   },
 ];

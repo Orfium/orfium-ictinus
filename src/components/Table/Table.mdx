@@ -1,7 +1,7 @@
 import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
 import Table from './Table';
 import * as TableStories from './Table.stories';
-import { DisplayColumnStory, ColumnsConfigType } from './utils/TableStoryComponents';
+import { DisplayColumnStory, ColumnsConfigStory } from './utils/TableStoryComponents';
 
 <Meta of={TableStories} />
 
@@ -31,7 +31,7 @@ A universal Table component that applies Orfium basic usages.
 
 This type includes all the configuration for the columns
 
-<ArgTypes of={ColumnsConfigType} />
+<ArgTypes of={ColumnsConfigStory} />
 
 <SubsectionHeader title="Variants" />
 
@@ -49,3 +49,21 @@ This type includes all the configuration for the columns
 ### Column Chooser
 
 <Canvas of={TableStories.ColumnChooser} />
+
+### Sorting
+
+In order to sort your table, use the `sorting` prop. This is an object that consists of:
+
+- `sortingColumn` is an array of objects; every object has a `id` key, which indicates the column's id, and a `desc` Boolean, indicating the descending or ascending order.
+- `handleSorting` is callback to change the sortingColumn state.
+- `isMultiSortable` enables multi-sorting.
+
+<Tip>
+  UI-wise, sorting options are shown by hovering on the column head; either by pressing the arrow
+  IconButton on the left you can toggle the sorting state (the click order is asc -> desc ->
+  no-sorting) or by pressing the more options IconButton on the right of the header.
+</Tip>
+
+<Tip>To check the multi sorting feature, enable the isMultiSortable prop through the Controls</Tip>
+
+<Canvas of={TableStories.Sorting} />

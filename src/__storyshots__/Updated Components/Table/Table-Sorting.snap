@@ -1,0 +1,784 @@
+.emotion-0 {
+  display: inline-block;
+  border: 1px solid rgba(200,206,255,0.70);
+  border-radius: 4px;
+  background: #ffffff;
+}
+
+.emotion-1 {
+  padding: 8px 16px;
+  border-bottom: 1px solid rgba(200,206,255,0.70);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-2 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-3 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: #194DCC;
+  height: auto;
+  background-color: rgba(200,206,255,0.30);
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-3:focus-visible:not(:disabled) {
+  background-color: rgba(200,206,255,0.20);
+}
+
+.emotion-3:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-3:hover:not(:disabled) {
+  background-color: rgba(200,206,255,0.20);
+}
+
+.emotion-3:active:not(:disabled),
+.emotion-3[aria-expanded="true"] {
+  background-color: rgba(200,206,255,0.45);
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.emotion-5 {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-6 path {
+  fill: #194DCC!important;
+}
+
+.emotion-7 {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.emotion-7 thead>tr>th:last-child,
+.emotion-7 tbody>tr>td:last-child {
+  border-right: none;
+}
+
+.emotion-7 tbody>tr:last-child>td {
+  border-bottom: none;
+}
+
+.emotion-8 {
+  box-shadow: 0px 1px 1px rgba(200,206,255,0.70);
+}
+
+.emotion-9 {
+  width: 150%;
+  height: 2.75rem;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  text-align: left;
+  box-sizing: border-box;
+  padding: 8px 16px;
+  color: #52567a;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-9 [data-header-role='options'] button {
+  opacity: 0;
+}
+
+.emotion-9:hover,
+.emotion-9:focus-visible {
+  color: #111530;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-9:hover [data-header-role='options'] button,
+.emotion-9:focus-visible [data-header-role='options'] button {
+  opacity: 1;
+}
+
+.emotion-9 button:focus-visible {
+  opacity: 1;
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.emotion-11 {
+  text-wrap: nowrap;
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.emotion-14 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: #194DCC;
+  width: 1.75rem;
+  height: 1.75rem;
+  background-color: rgba(200,206,255,0);
+  padding: 0;
+  border-radius: 2.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-14:focus-visible:not(:disabled) {
+  background-color: rgba(200,206,255,0.20);
+}
+
+.emotion-14:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-14:hover:not(:disabled) {
+  background-color: rgba(200,206,255,0.20);
+}
+
+.emotion-14:active:not(:disabled),
+.emotion-14[aria-expanded="true"] {
+  background-color: rgba(200,206,255,0.30);
+}
+
+.emotion-15 {
+  width: 1rem;
+  height: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-16 {
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-16 path {
+  fill: #194DCC!important;
+}
+
+.emotion-21 {
+  width: 150%;
+  height: 2.75rem;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  text-align: left;
+  box-sizing: border-box;
+  padding: 8px 16px;
+  color: #52567a;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-21 [data-header-role='options'] button {
+  opacity: 0;
+}
+
+.emotion-21:hover [data-header-role='options'] button,
+.emotion-21:focus-visible [data-header-role='options'] button {
+  opacity: 1;
+}
+
+.emotion-21 button:focus-visible {
+  opacity: 1;
+}
+
+.emotion-39 {
+  height: 2.75rem;
+  padding: 8px 16px;
+  border-bottom: 1px solid rgba(200,206,255,0.70);
+  box-sizing: border-box;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+.emotion-40 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <div />
+      <div
+        class="emotion-2"
+      >
+        <button
+          aria-haspopup="true"
+          aria-label="Menu"
+          class="emotion-3"
+          data-testid="button"
+          type="button"
+        >
+          <span
+            class="emotion-4"
+          >
+            <div
+              class="emotion-5"
+            >
+              <svg
+                class="emotion-6"
+                fill="none"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2.5 15.25V4.75C2.5 4.14583 2.65737 3.61979 2.9721 3.17188C3.28683 2.72396 3.66518 2.5 4.10714 2.5H15.8929C16.3348 2.5 16.7132 2.72396 17.0279 3.17188C17.3426 3.61979 17.5 4.14583 17.5 4.75V15.25C17.5 15.8542 17.3426 16.3802 17.0279 16.8281C16.7132 17.276 16.3348 17.5 15.8929 17.5H4.10714C3.66518 17.5 3.28683 17.276 2.9721 16.8281C2.65737 16.3802 2.5 15.8542 2.5 15.25ZM8.57143 15.9375H11.4286V4.0625H8.57143V15.9375ZM13.0357 15.9375H15.8929V4.0625H13.0357V15.9375Z"
+                  fill="#6265AD"
+                />
+              </svg>
+            </div>
+            <span>
+              Edit Columns
+            </span>
+          </span>
+        </button>
+      </div>
+    </div>
+    <table
+      class="emotion-7"
+    >
+      <thead
+        class="emotion-8"
+      >
+        <tr>
+          <th
+            class="emotion-9"
+            colspan="1"
+          >
+            <div
+              class="emotion-10"
+            >
+              <div
+                class="emotion-11"
+              >
+                First Name
+              </div>
+              <div
+                class="emotion-12"
+                data-header-role="options"
+              >
+                <div
+                  class="emotion-2"
+                >
+                  <button
+                    class="emotion-14"
+                    data-testid="icon-button"
+                    type="button"
+                  >
+                    <div
+                      class="emotion-15"
+                    >
+                      <svg
+                        class="emotion-16"
+                        fill="none"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M15.7443 9.22808L10.6663 4.26717C10.5687 4.17185 10.464 4.10349 10.3522 4.06209C10.2403 4.0207 10.1253 4 10.007 4C9.88872 4 9.77366 4.0207 9.66182 4.06209C9.54995 4.10349 9.44524 4.17185 9.34768 4.26717L4.24311 9.25406C4.07261 9.42063 3.99179 9.61079 4.00066 9.82454C4.00954 10.0383 4.09922 10.2284 4.26971 10.395C4.44513 10.5616 4.64544 10.6436 4.87063 10.6412C5.09582 10.6388 5.29366 10.5543 5.46416 10.3878L9.18064 6.75696V15.1927C9.18064 15.4151 9.26145 15.6053 9.42307 15.7632C9.58469 15.9211 9.77933 16 10.007 16C10.2346 16 10.4293 15.9211 10.5909 15.7632C10.7525 15.6053 10.8333 15.4151 10.8333 15.1927V6.75696L14.5764 10.4138C14.7469 10.5803 14.9403 10.6593 15.1566 10.6506C15.373 10.6419 15.5688 10.5543 15.7443 10.3878C15.9148 10.2164 16 10.0219 16 9.80432C16 9.58672 15.9148 9.39464 15.7443 9.22808Z"
+                          fill="#6265AD"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+                <div
+                  class="emotion-2"
+                >
+                  <button
+                    aria-haspopup="true"
+                    aria-label="Menu"
+                    class="emotion-14"
+                    data-testid="icon-button"
+                    type="button"
+                  >
+                    <div
+                      class="emotion-15"
+                    >
+                      <svg
+                        class="emotion-16"
+                        fill="none"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                          fill="#6265AD"
+                        />
+                        <path
+                          d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                          fill="#6265AD"
+                        />
+                        <path
+                          d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                          fill="#6265AD"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </th>
+          <th
+            class="emotion-21"
+            colspan="1"
+          >
+            <div
+              class="emotion-10"
+            >
+              <div
+                class="emotion-11"
+              >
+                Last Name
+              </div>
+            </div>
+          </th>
+          <th
+            class="emotion-9"
+            colspan="1"
+          >
+            <div
+              class="emotion-10"
+            >
+              <div
+                class="emotion-11"
+              >
+                Age
+              </div>
+              <div
+                class="emotion-12"
+                data-header-role="options"
+              >
+                <div
+                  class="emotion-2"
+                >
+                  <button
+                    class="emotion-14"
+                    data-testid="icon-button"
+                    type="button"
+                  >
+                    <div
+                      class="emotion-15"
+                    >
+                      <svg
+                        class="emotion-16"
+                        fill="none"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M15.7443 9.22808L10.6663 4.26717C10.5687 4.17185 10.464 4.10349 10.3522 4.06209C10.2403 4.0207 10.1253 4 10.007 4C9.88872 4 9.77366 4.0207 9.66182 4.06209C9.54995 4.10349 9.44524 4.17185 9.34768 4.26717L4.24311 9.25406C4.07261 9.42063 3.99179 9.61079 4.00066 9.82454C4.00954 10.0383 4.09922 10.2284 4.26971 10.395C4.44513 10.5616 4.64544 10.6436 4.87063 10.6412C5.09582 10.6388 5.29366 10.5543 5.46416 10.3878L9.18064 6.75696V15.1927C9.18064 15.4151 9.26145 15.6053 9.42307 15.7632C9.58469 15.9211 9.77933 16 10.007 16C10.2346 16 10.4293 15.9211 10.5909 15.7632C10.7525 15.6053 10.8333 15.4151 10.8333 15.1927V6.75696L14.5764 10.4138C14.7469 10.5803 14.9403 10.6593 15.1566 10.6506C15.373 10.6419 15.5688 10.5543 15.7443 10.3878C15.9148 10.2164 16 10.0219 16 9.80432C16 9.58672 15.9148 9.39464 15.7443 9.22808Z"
+                          fill="#6265AD"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+                <div
+                  class="emotion-2"
+                >
+                  <button
+                    aria-haspopup="true"
+                    aria-label="Menu"
+                    class="emotion-14"
+                    data-testid="icon-button"
+                    type="button"
+                  >
+                    <div
+                      class="emotion-15"
+                    >
+                      <svg
+                        class="emotion-16"
+                        fill="none"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                          fill="#6265AD"
+                        />
+                        <path
+                          d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                          fill="#6265AD"
+                        />
+                        <path
+                          d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                          fill="#6265AD"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </th>
+          <th
+            class="emotion-21"
+            colspan="1"
+          >
+            <div
+              class="emotion-10"
+            >
+              <div
+                class="emotion-11"
+              >
+                Job
+              </div>
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td
+            class="emotion-39"
+          >
+            <div
+              class="emotion-40"
+            >
+              Rachel
+            </div>
+          </td>
+          <td
+            class="emotion-39"
+          >
+            <div
+              class="emotion-40"
+            >
+              Berry
+            </div>
+          </td>
+          <td
+            class="emotion-39"
+          >
+            <div
+              class="emotion-40"
+            >
+              30
+            </div>
+          </td>
+          <td
+            class="emotion-39"
+          >
+            <div
+              class="emotion-40"
+            >
+              Fashion Executive
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td
+            class="emotion-39"
+          >
+            <div
+              class="emotion-40"
+            >
+              Ross
+            </div>
+          </td>
+          <td
+            class="emotion-39"
+          >
+            <div
+              class="emotion-40"
+            >
+              Geller
+            </div>
+          </td>
+          <td
+            class="emotion-39"
+          >
+            <div
+              class="emotion-40"
+            >
+              32
+            </div>
+          </td>
+          <td
+            class="emotion-39"
+          >
+            <div
+              class="emotion-40"
+            >
+              Paleontologist
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td
+            class="emotion-39"
+          >
+            <div
+              class="emotion-40"
+            >
+              Monica
+            </div>
+          </td>
+          <td
+            class="emotion-39"
+          >
+            <div
+              class="emotion-40"
+            >
+              Geller
+            </div>
+          </td>
+          <td
+            class="emotion-39"
+          >
+            <div
+              class="emotion-40"
+            >
+              31
+            </div>
+          </td>
+          <td
+            class="emotion-39"
+          >
+            <div
+              class="emotion-40"
+            >
+              Chef
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td
+            class="emotion-39"
+          >
+            <div
+              class="emotion-40"
+            >
+              Chandler
+            </div>
+          </td>
+          <td
+            class="emotion-39"
+          >
+            <div
+              class="emotion-40"
+            >
+              Bing
+            </div>
+          </td>
+          <td
+            class="emotion-39"
+          >
+            <div
+              class="emotion-40"
+            >
+              32
+            </div>
+          </td>
+          <td
+            class="emotion-39"
+          >
+            <div
+              class="emotion-40"
+            >
+              ?
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td
+            class="emotion-39"
+          >
+            <div
+              class="emotion-40"
+            >
+              Joey
+            </div>
+          </td>
+          <td
+            class="emotion-39"
+          >
+            <div
+              class="emotion-40"
+            >
+              Tribbiani
+            </div>
+          </td>
+          <td
+            class="emotion-39"
+          >
+            <div
+              class="emotion-40"
+            >
+              30
+            </div>
+          </td>
+          <td
+            class="emotion-39"
+          >
+            <div
+              class="emotion-40"
+            >
+              Actor
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td
+            class="emotion-39"
+          >
+            <div
+              class="emotion-40"
+            >
+              Phoebe
+            </div>
+          </td>
+          <td
+            class="emotion-39"
+          >
+            <div
+              class="emotion-40"
+            >
+              Buffay
+            </div>
+          </td>
+          <td
+            class="emotion-39"
+          >
+            <div
+              class="emotion-40"
+            >
+              31
+            </div>
+          </td>
+          <td
+            class="emotion-39"
+          >
+            <div
+              class="emotion-40"
+            >
+              Massage Therapist
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
