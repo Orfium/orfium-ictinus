@@ -91,8 +91,6 @@ export type RowsConfig = {
   bulkActions?: JSX.Element;
 };
 
-export type TableData<TData> = {
-  cells: TData;
-}[];
+export type TableData<TData> = TData[];
 
 export type RowSize = 'sm' | 'md' | 'lg';

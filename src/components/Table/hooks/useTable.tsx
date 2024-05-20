@@ -93,8 +93,6 @@ const useTable = <TData,>({
 
   const tColumns = getColumns(columns, hasCheckboxes);
 
-  const tData = React.useMemo(() => data.map((row) => row.cells), [data]);
-
   const state = React.useMemo(() => {
     return {
       ...(sorting && { sorting: sorting.sortingColumn }),
@@ -103,9 +101,16 @@ const useTable = <TData,>({
     };
   }, [columnsConfig, isTableInteractive, rowSelection, sorting]);
 
+  /** Since tanstack's useTable doesn't detect array object mutations, we need to manually create new data array (new ref) to trigger a re-render */
+  const [tableData, setTableData] = React.useState(data);
+
+  React.useEffect(() => {
+    setTableData([...data]);
+  }, [sorting?.sortingColumn]);
+
   const table = useReactTable<TData>({
     /** Basic Functionality */
-    data: tData,
+    data: tableData,
     columns: tColumns,
     getCoreRowModel: getCoreRowModel(),
 

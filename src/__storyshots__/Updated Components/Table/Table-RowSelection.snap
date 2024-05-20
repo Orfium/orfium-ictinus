@@ -271,12 +271,16 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-29 [data-header-role='options'] {
+.emotion-29 [data-header-role='options'] button {
   opacity: 0;
 }
 
-.emotion-29:hover [data-header-role='options'],
-.emotion-29:focus-visible [data-header-role='options'] {
+.emotion-29:hover [data-header-role='options'] button,
+.emotion-29:focus-visible [data-header-role='options'] button {
+  opacity: 1;
+}
+
+.emotion-29 button:focus-visible {
   opacity: 1;
 }
 
@@ -406,12 +410,16 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-36 [data-header-role='options'] {
+.emotion-36 [data-header-role='options'] button {
   opacity: 0;
 }
 
-.emotion-36:hover [data-header-role='options'],
-.emotion-36:focus-visible [data-header-role='options'] {
+.emotion-36:hover [data-header-role='options'] button,
+.emotion-36:focus-visible [data-header-role='options'] button {
+  opacity: 1;
+}
+
+.emotion-36 button:focus-visible {
   opacity: 1;
 }
 

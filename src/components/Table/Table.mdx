@@ -62,6 +62,20 @@ This type includes all the configuration for the rows
 
 ### Sorting
 
+In order to sort your table, use the `sorting` prop. This is an object that consists of:
+
+- `sortingColumn` is an array of objects; every object has a `id` key, which indicates the column's id, and a `desc` Boolean, indicating the descending or ascending order.
+- `handleSorting` is callback to change the sortingColumn state.
+- `isMultiSortable` enables multi-sorting.
+
+<Tip>
+  UI-wise, sorting options are shown by hovering on the column head; either by pressing the arrow
+  IconButton on the left you can toggle the sorting state (the click order is asc -> desc ->
+  no-sorting) or by pressing the more options IconButton on the right of the header.
+</Tip>
+
+<Tip>To check the multi sorting feature, enable the isMultiSortable prop through the Controls</Tip>
+
 <Canvas of={TableStories.Sorting} />
 
 ### Sticky Header
