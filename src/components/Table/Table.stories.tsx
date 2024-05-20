@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 import Table from './Table';
 import { SimpleData, moreData, simpleColumns, simpleData } from './constants';
 import Typography from 'components/Typography';
-import { SortingState } from '@tanstack/react-table';
+import { ExpandedState, SortingState } from '@tanstack/react-table';
 import { concat } from 'lodash';
 import Button from 'components/Button';
 import DropdownButton from 'components/DropdownButton';
@@ -39,7 +39,7 @@ export const ColumnAndRowSizing = {
       { id: 'job', header: 'Job', width: jobWidth },
     ];
 
-    return <Table<SimpleData> data={simpleData} columns={columns} rowSize={rowSize} />;
+    return <Table<SimpleData> data={simpleData()} columns={columns} rowSize={rowSize} />;
   },
 
   name: 'Column And Row Sizing',
@@ -97,7 +97,7 @@ export const ColumnChooser = {
 
     return (
       <Table<SimpleData>
-        data={simpleData}
+        data={simpleData()}
         columns={columns}
         rowSize={rowSize}
         columnsConfig={{ columnVisibility, setColumnVisibility }}
@@ -152,8 +152,8 @@ export const Sorting = {
       const returnData = [...data];
 
       return returnData.sort((a, b) => {
-        const valueA = a[key];
-        const valueB = b[key];
+        const valueA = a.cells[key];
+        const valueB = b.cells[key];
 
         const comparison =
           key === 'age'
@@ -172,9 +172,9 @@ export const Sorting = {
       const { id, desc } = sorting?.length ? sorting[0] : {};
 
       if (id) {
-        return sortDataByKey(simpleData, id, desc ? 'desc' : 'asc');
+        return sortDataByKey(simpleData(), id, desc ? 'desc' : 'asc');
       } else {
-        return simpleData;
+        return simpleData();
       }
     }, [sorting, simpleData]);
 
@@ -211,7 +211,7 @@ export const StickyHeader = {
 
     return (
       <Table<SimpleData>
-        data={concat(simpleData, moreData)}
+        data={concat(simpleData(), moreData)}
         columns={simpleColumns}
         rowSize={rowSize}
         hasStickyHeader
@@ -241,7 +241,7 @@ export const RowSelection = {
 
     return (
       <Table<SimpleData>
-        data={concat(simpleData, moreData)}
+        data={concat(simpleData(), moreData)}
         columns={simpleColumns}
         rowSize={rowSize}
         type="interactive"
@@ -276,6 +276,35 @@ export const RowSelection = {
   },
 
   name: 'Row Selection',
+
+  parameters: {
+    controls: {
+      include: ['Row Size'],
+    },
+  },
+};
+
+export const RowDetails = {
+  render: (args) => {
+    const { rowSize } = args;
+
+    const [expanded, setExpanded] = useState<ExpandedState>({});
+
+    return (
+      <Table<SimpleData>
+        type="interactive"
+        data={simpleData(true)}
+        columns={simpleColumns}
+        rowSize={rowSize}
+        rowsConfig={{
+          expanded,
+          setExpanded,
+        }}
+      />
+    );
+  },
+
+  name: 'Row Details',
 
   parameters: {
     controls: {

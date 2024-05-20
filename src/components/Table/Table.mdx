@@ -97,3 +97,16 @@ In order to enable row Selection, do the following steps:
 You can also pass a `defaultAction` and/or `bulkActions` inside the `rowsConfig`, which are visible once at least 1 row is selected.
 
 <Canvas of={TableStories.RowSelection} />
+
+### Row Details
+
+In order to enable row expansion functionality, do the following steps:
+
+1. Inside the `rowsConfig` object prop, use:
+
+- `expanded` prop is an object state indicating which rows are expanded; keys are row IDs and values are booleans (whether is expanded or not)
+- `setExpanded` is a state change callback for `expanded`.
+
+2. In `data` prop, use the `details` key for every row.
+
+<Canvas of={TableStories.RowDetails} />
