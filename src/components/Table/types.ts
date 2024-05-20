@@ -1,5 +1,10 @@
 import type { CSSObject } from '@emotion/react';
-import type { SortingState, OnChangeFn, RowSelectionState } from '@tanstack/react-table';
+import type {
+  SortingState,
+  OnChangeFn,
+  RowSelectionState,
+  ExpandedState,
+} from '@tanstack/react-table';
 
 export type TableProps<TData> = {
   /** If table is interactive, rows are selectable with actions */
@@ -89,8 +94,17 @@ export type RowsConfig = {
   defaultAction?: JSX.Element;
   /** Bulk actions for rows */
   bulkActions?: JSX.Element;
+  /** Expanded State */
+  expanded?: ExpandedState;
+  /** Callback for expanded state change */
+  setExpanded?: OnChangeFn<ExpandedState>;
 };
 
-export type TableData<TData> = TData[];
+export type TableData<TData> = {
+  /** The visible cells of the row */
+  cells: TData;
+  /** Details component which is displayed when clicking the arrow button */
+  details?: JSX.Element;
+}[];
 
 export type RowSize = 'sm' | 'md' | 'lg';

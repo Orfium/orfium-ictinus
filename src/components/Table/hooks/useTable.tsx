@@ -1,10 +1,19 @@
 /* eslint-disable @typescript-eslint/naming-convention */
-import type { HeaderGroup, RowModel } from '@tanstack/react-table';
-import { createColumnHelper, getCoreRowModel, useReactTable } from '@tanstack/react-table';
+import type { Column, HeaderGroup, RowModel } from '@tanstack/react-table';
+import {
+  createColumnHelper,
+  getCoreRowModel,
+  getExpandedRowModel,
+  useReactTable,
+} from '@tanstack/react-table';
+import useTheme from 'hooks/useTheme';
+import { concat } from 'lodash';
 import React from 'react';
+import type { Theme } from 'theme';
 
 import type { UseTableProps } from '../types';
 import { CheckBox } from 'components/Controls';
+import Icon from 'components/Icon';
 
 type ReturnValue<TData> = {
   getHeaderGroups: () => HeaderGroup<TData>[];
@@ -13,12 +22,18 @@ type ReturnValue<TData> = {
   getIsSomeRowsSelected: () => boolean;
   getToggleAllRowsSelectedHandler: () => (event: unknown) => void;
   toggleAllRowsSelected: (value: boolean) => void;
+  getAllLeafColumns: () => Column<TData, unknown>[];
 };
 
-const getColumns = (columns: any[], hasCheckboxes: boolean) => {
+const getColumns = (
+  columns: any[],
+  hasCheckboxes: boolean,
+  hasRowDetails: boolean,
+  theme: Theme
+) => {
   const columnHelper = createColumnHelper();
 
-  const base = hasCheckboxes
+  const prefix = hasCheckboxes
     ? [
         {
           id: 'checkbox_select',
@@ -53,12 +68,36 @@ const getColumns = (columns: any[], hasCheckboxes: boolean) => {
       ]
     : [];
 
-  return columns.reduce((tColumns, column) => {
+  const suffix = hasRowDetails
+    ? [
+        {
+          id: 'details_iconButton',
+          header: () => {
+            return <></>;
+          },
+          cell: ({ row }) => {
+            return (
+              <Icon
+                name={row.getIsExpanded() ? 'triangleDown' : 'triangleRight'}
+                size="20px"
+                color={theme.tokens.colors.get('textColor.default.secondary')}
+                onClick={() => {
+                  const isExpanded = row.getIsExpanded();
+                  row.toggleExpanded(!isExpanded);
+                }}
+              />
+            );
+          },
+        },
+      ]
+    : [];
+
+  const base = columns.reduce((tColumns, column) => {
     if ('columns' in column) {
       const groupConfig = {
         id: column.id,
         header: column.header,
-        columns: getColumns(column.columns, false),
+        columns: getColumns(column.columns, false, false, theme),
       };
       tColumns.push(columnHelper.group(groupConfig));
     } else {
@@ -73,7 +112,9 @@ const getColumns = (columns: any[], hasCheckboxes: boolean) => {
     }
 
     return tColumns;
-  }, base);
+  }, prefix);
+
+  return concat(base, suffix);
 };
 
 const useTable = <TData,>({
@@ -85,27 +126,32 @@ const useTable = <TData,>({
   columnsConfig,
   ...rest
 }: UseTableProps<TData>): ReturnValue<TData> => {
+  const theme = useTheme();
+
   const isTableInteractive = type === 'interactive';
 
-  const { rowSelection, setRowSelection } = rowsConfig ?? {};
+  const { rowSelection, setRowSelection, expanded, setExpanded } = rowsConfig ?? {};
+
+  const hasRowDetails = data.some((row) => row.details);
 
   const hasCheckboxes = Boolean(rowSelection && isTableInteractive);
 
-  const tColumns = getColumns(columns, hasCheckboxes);
+  const tColumns = getColumns(columns, hasCheckboxes, hasRowDetails, theme);
 
   const state = React.useMemo(() => {
     return {
       ...(sorting && { sorting: sorting.sortingColumn }),
       ...(rowSelection && isTableInteractive && { rowSelection }),
       ...(columnsConfig && { columnVisibility: columnsConfig.columnVisibility }),
+      ...(expanded && { expanded }),
     };
-  }, [columnsConfig, isTableInteractive, rowSelection, sorting]);
+  }, [columnsConfig, expanded, isTableInteractive, rowSelection, sorting]);
 
   /** Since tanstack's useTable doesn't detect array object mutations, we need to manually create new data array (new ref) to trigger a re-render */
-  const [tableData, setTableData] = React.useState(data);
+  const [tableData, setTableData] = React.useState(data.map((data) => data.cells));
 
   React.useEffect(() => {
-    setTableData([...data]);
+    setTableData(data.map((data) => data.cells));
   }, [sorting?.sortingColumn]);
 
   const table = useReactTable<TData>({
@@ -133,6 +179,13 @@ const useTable = <TData,>({
         onRowSelectionChange: setRowSelection,
       }),
 
+    /** Row Details */
+    ...(expanded &&
+      setExpanded && {
+        getExpandedRowModel: getExpandedRowModel(),
+        onExpandedChange: setExpanded,
+      }),
+
     /** Column Visibility */
     ...(columnsConfig && {
       onColumnVisibilityChange: columnsConfig.setColumnVisibility,
@@ -148,6 +201,7 @@ const useTable = <TData,>({
     getIsSomeRowsSelected: table.getIsSomeRowsSelected,
     getToggleAllRowsSelectedHandler: table.getToggleAllRowsSelectedHandler,
     toggleAllRowsSelected: table.toggleAllRowsSelected,
+    getAllLeafColumns: table.getAllLeafColumns,
   };
 };
 
