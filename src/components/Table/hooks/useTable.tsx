@@ -26,7 +26,7 @@ const getColumns = (columns: any[]) => {
         columnHelper.accessor(column.id as any, {
           header: column.header,
           cell: (info) => info.getValue(),
-          size: column.width,
+          size: column.width ?? 'auto',
           enableSorting: column.isSortable ?? false,
         })
       );

@@ -1,4 +1,4 @@
-import type { SerializedStyles } from '@emotion/react';
+import type { CSSObject, SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import type { Theme } from 'theme';
 
@@ -15,7 +15,7 @@ export const tableContainer =
     `;
   };
 
-export const tableStyles = (): SerializedStyles => {
+export const tableStyles = ({ sx }: { sx?: CSSObject }): SerializedStyles => {
   return css`
     width: 100%;
     border-collapse: collapse;
@@ -28,5 +28,7 @@ export const tableStyles = (): SerializedStyles => {
     tbody > tr:last-child > td {
       border-bottom: none;
     }
+
+    ${sx};
   `;
 };

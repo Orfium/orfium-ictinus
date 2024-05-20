@@ -1,8 +1,9 @@
 import { useMemo, useState } from 'react';
 import Table from './Table';
-import { SimpleData, simpleColumns, simpleData } from './constants';
+import { SimpleData, moreData, simpleColumns, simpleData } from './constants';
 import Typography from 'components/Typography';
 import { SortingState } from '@tanstack/react-table';
+import { concat } from 'lodash';
 
 export default {
   title: 'Updated Components/Table/Table',
@@ -11,6 +12,7 @@ export default {
   args: {
     rowSize: 'sm',
     isMultiSortable: false,
+    maxHeight: 280,
   },
 
   argTypes: {
@@ -20,6 +22,7 @@ export default {
     ageWidth: { control: 'number', name: 'Age Width' },
     jobWidth: { control: 'number', name: 'Job Width' },
     rowSize: { name: 'Row Size' },
+    maxHeight: { name: 'Tbody Max height' },
   },
 };
 
@@ -196,6 +199,30 @@ export const Sorting = {
   parameters: {
     controls: {
       include: ['Row Size', 'isAlwaysVisible', 'isMultiSortable'],
+    },
+  },
+};
+
+export const StickyHeader = {
+  render: (args) => {
+    const { rowSize, maxHeight } = args;
+
+    return (
+      <Table<SimpleData>
+        data={concat(simpleData, moreData)}
+        columns={simpleColumns}
+        rowSize={rowSize}
+        hasStickyHeader
+        sx={{ tbody: { maxHeight: `${maxHeight}px` } }}
+      />
+    );
+  },
+
+  name: 'Sticky Header',
+
+  parameters: {
+    controls: {
+      include: ['Row Size', 'Tbody Max height'],
     },
   },
 };

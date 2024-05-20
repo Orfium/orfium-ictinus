@@ -53,3 +53,60 @@ export const simpleData = [
     job: 'Massage Therapist',
   },
 ];
+
+export const moreData = [
+  {
+    firstName: 'Gunther',
+    lastName: 'N/A',
+    age: '35',
+    job: 'Central Perk Manager',
+  },
+  {
+    firstName: 'Janice',
+    lastName: 'Litman-Foralnik',
+    age: '35',
+    job: 'Personal Shopper',
+  },
+  {
+    firstName: 'Richard',
+    lastName: 'Burke',
+    age: '50',
+    job: 'Ophthalmologist',
+  },
+  {
+    firstName: 'Estelle',
+    lastName: 'Leonard',
+    age: 'N/A',
+    job: 'Talent Agent',
+  },
+  {
+    firstName: 'Mike',
+    lastName: 'Hannigan',
+    age: '31',
+    job: 'N/A',
+  },
+  {
+    firstName: 'Charlie',
+    lastName: 'Wheeler',
+    age: '28',
+    job: 'Paleontologist',
+  },
+  {
+    firstName: 'Emily',
+    lastName: 'Waltham',
+    age: '28',
+    job: 'N/A',
+  },
+  {
+    firstName: 'Carol',
+    lastName: 'Willick',
+    age: '35',
+    job: 'N/A',
+  },
+  {
+    firstName: 'Frank',
+    lastName: 'Buffay Jr.',
+    age: '29',
+    job: 'N/A',
+  },
+];

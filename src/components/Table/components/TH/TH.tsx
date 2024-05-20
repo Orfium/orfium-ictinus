@@ -1,3 +1,4 @@
+import type { CSSObject } from '@emotion/react';
 import type { ColumnSort } from '@tanstack/react-table';
 import React from 'react';
 import isEqual from 'react-fast-compare';
@@ -24,6 +25,8 @@ type Props = {
   colSortingState?: ColumnSort;
   /** Callback to reset sorting for this column */
   resetSorting?: () => void;
+  /** Style overrides */
+  sx?: CSSObject;
 };
 
 const TH: React.FCC<Props & Pick<DivProps, 'onClick'>> = ({
@@ -34,6 +37,7 @@ const TH: React.FCC<Props & Pick<DivProps, 'onClick'>> = ({
   isMultiSortable,
   colSortingState,
   resetSorting,
+  sx,
   ...rest
 }) => {
   const isSortable = Boolean(onSort);
@@ -71,6 +75,7 @@ const TH: React.FCC<Props & Pick<DivProps, 'onClick'>> = ({
         width,
         hasVisibleOptions: hasVisibleOptions || Boolean(colSortingState),
         isSortable,
+        sx,
       })}
       {...rest}
     >

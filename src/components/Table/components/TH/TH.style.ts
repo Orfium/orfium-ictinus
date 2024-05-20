@@ -1,4 +1,4 @@
-import type { SerializedStyles, Theme } from '@emotion/react';
+import type { CSSObject, SerializedStyles, Theme } from '@emotion/react';
 import { css } from '@emotion/react';
 
 import { getMinHeight } from '../TD/TD.style';
@@ -13,14 +13,16 @@ export const thContainer =
     width,
     hasVisibleOptions,
     isSortable,
+    sx,
   }: Pick<TableProps<any>, 'rowSize'> & {
     width?: number;
     hasVisibleOptions?: boolean;
     isSortable?: boolean;
+    sx?: CSSObject;
   }) =>
   (theme: Theme): SerializedStyles => {
     return css`
-      width: ${width ? `${width}%` : undefined};
+      width: ${width ? `${width}%` : '100%'};
       height: ${getMinHeight(rowSize)(theme)};
       align-content: center;
       text-align: left;
@@ -52,6 +54,8 @@ export const thContainer =
       button:focus-visible {
         opacity: 1;
       }
+
+      ${sx};
     `;
   };
 
