@@ -32,25 +32,33 @@
 }
 
 .emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+}
+
+.emotion-4 {
   width: 100%;
   border-collapse: collapse;
   table-layout: fixed;
 }
 
-.emotion-3 thead>tr>th:last-child,
-.emotion-3 tbody>tr>td:last-child {
+.emotion-4 thead>tr>th:last-child,
+.emotion-4 tbody>tr>td:last-child {
   border-right: none;
 }
 
-.emotion-3 tbody>tr:last-child>td {
+.emotion-4 tbody>tr:last-child>td {
   border-bottom: none;
 }
 
-.emotion-4 {
+.emotion-5 {
   box-shadow: 0 1px 0 0 rgba(200,206,255,0.70);
 }
 
-.emotion-6 {
+.emotion-7 {
   width: 100%;
   height: 2.75rem;
   -webkit-align-content: center;
@@ -67,20 +75,20 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-6 [data-header-role='options'] button {
+.emotion-7 [data-header-role='options'] button {
   opacity: 0;
 }
 
-.emotion-6:hover [data-header-role='options'] button,
-.emotion-6:focus-visible [data-header-role='options'] button {
+.emotion-7:hover [data-header-role='options'] button,
+.emotion-7:focus-visible [data-header-role='options'] button {
   opacity: 1;
 }
 
-.emotion-6 button:focus-visible {
+.emotion-7 button:focus-visible {
   opacity: 1;
 }
 
-.emotion-7 {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -92,11 +100,11 @@
   gap: 8px;
 }
 
-.emotion-8 {
+.emotion-9 {
   text-wrap: nowrap;
 }
 
-.emotion-18 {
+.emotion-19 {
   width: 52px;
   height: 2.75rem;
   -webkit-align-content: center;
@@ -113,28 +121,28 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-18 [data-header-role='options'] button {
+.emotion-19 [data-header-role='options'] button {
   opacity: 0;
 }
 
-.emotion-18:hover [data-header-role='options'] button,
-.emotion-18:focus-visible [data-header-role='options'] button {
+.emotion-19:hover [data-header-role='options'] button,
+.emotion-19:focus-visible [data-header-role='options'] button {
   opacity: 1;
 }
 
-.emotion-18 button:focus-visible {
+.emotion-19 button:focus-visible {
   opacity: 1;
-}
-
-.emotion-22 {
-  cursor: pointer;
-}
-
-.emotion-22:hover {
-  background: rgba(200,206,255,0.20);
 }
 
 .emotion-23 {
+  cursor: pointer;
+}
+
+.emotion-23:hover {
+  background: rgba(200,206,255,0.20);
+}
+
+.emotion-24 {
   width: 100%;
   height: 2.75rem;
   padding: 8px 16px;
@@ -145,7 +153,7 @@
   align-content: center;
 }
 
-.emotion-24 {
+.emotion-25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -159,7 +167,7 @@
   justify-content: space-between;
 }
 
-.emotion-31 {
+.emotion-32 {
   width: 52px;
   height: 2.75rem;
   padding: 8px 16px;
@@ -170,7 +178,7 @@
   align-content: center;
 }
 
-.emotion-33 {
+.emotion-34 {
   width: 1.25rem;
   height: 1.25rem;
   display: -webkit-box;
@@ -180,8 +188,8 @@
   cursor: pointer;
 }
 
-.emotion-33:hover,
-.emotion-33:focus-visible {
+.emotion-34:hover,
+.emotion-34:focus-visible {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   border-radius: 100%;
@@ -189,12 +197,12 @@
   box-shadow: 0px 0px 0px 8px rgba(200,206,255,0.20);
 }
 
-.emotion-34 {
+.emotion-35 {
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-34 path {
+.emotion-35 path {
   fill: #52567a!important;
 }
 
@@ -208,141 +216,143 @@
       <div
         class="emotion-2"
       />
-      <div />
+      <div
+        class="emotion-3"
+      />
     </div>
     <table
-      class="emotion-3"
+      class="emotion-4"
     >
       <thead
-        class="emotion-4"
+        class="emotion-5"
       >
         <tr
-          class="emotion-5"
+          class="emotion-6"
         >
           <th
-            class="emotion-6"
+            class="emotion-7"
             colspan="1"
           >
             <div
-              class="emotion-7"
+              class="emotion-8"
             >
               <div
-                class="emotion-8"
+                class="emotion-9"
               >
                 First Name
               </div>
             </div>
           </th>
           <th
-            class="emotion-6"
+            class="emotion-7"
             colspan="1"
           >
             <div
-              class="emotion-7"
+              class="emotion-8"
             >
               <div
-                class="emotion-8"
+                class="emotion-9"
               >
                 Last Name
               </div>
             </div>
           </th>
           <th
-            class="emotion-6"
+            class="emotion-7"
             colspan="1"
           >
             <div
-              class="emotion-7"
+              class="emotion-8"
             >
               <div
-                class="emotion-8"
+                class="emotion-9"
               >
                 Age
               </div>
             </div>
           </th>
           <th
-            class="emotion-6"
+            class="emotion-7"
             colspan="1"
           >
             <div
-              class="emotion-7"
+              class="emotion-8"
             >
               <div
-                class="emotion-8"
+                class="emotion-9"
               >
                 Job
               </div>
             </div>
           </th>
           <th
-            class="emotion-18"
+            class="emotion-19"
             colspan="1"
           >
             <div
-              class="emotion-7"
+              class="emotion-8"
             >
               <div
-                class="emotion-8"
+                class="emotion-9"
               />
             </div>
           </th>
         </tr>
       </thead>
       <tbody
-        class="emotion-21"
+        class="emotion-22"
       >
         <tr
-          class="emotion-22"
+          class="emotion-23"
         >
           <td
-            class="emotion-23"
+            class="emotion-24"
           >
             <div
-              class="emotion-24"
+              class="emotion-25"
             >
               Rachel
             </div>
           </td>
           <td
-            class="emotion-23"
+            class="emotion-24"
           >
             <div
-              class="emotion-24"
+              class="emotion-25"
             >
               Berry
             </div>
           </td>
           <td
-            class="emotion-23"
+            class="emotion-24"
           >
             <div
-              class="emotion-24"
+              class="emotion-25"
             >
               30
             </div>
           </td>
           <td
-            class="emotion-23"
+            class="emotion-24"
           >
             <div
-              class="emotion-24"
+              class="emotion-25"
             >
               Fashion Executive
             </div>
           </td>
           <td
-            class="emotion-31"
+            class="emotion-32"
           >
             <div
-              class="emotion-24"
+              class="emotion-25"
             >
               <div
-                class="emotion-33"
+                class="emotion-34"
                 tabindex="0"
               >
                 <svg
-                  class="emotion-34"
+                  class="emotion-35"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -359,56 +369,56 @@
           </td>
         </tr>
         <tr
-          class="emotion-22"
+          class="emotion-23"
         >
           <td
-            class="emotion-23"
+            class="emotion-24"
           >
             <div
-              class="emotion-24"
+              class="emotion-25"
             >
               Ross
             </div>
           </td>
           <td
-            class="emotion-23"
+            class="emotion-24"
           >
             <div
-              class="emotion-24"
+              class="emotion-25"
             >
               Geller
             </div>
           </td>
           <td
-            class="emotion-23"
+            class="emotion-24"
           >
             <div
-              class="emotion-24"
+              class="emotion-25"
             >
               32
             </div>
           </td>
           <td
-            class="emotion-23"
+            class="emotion-24"
           >
             <div
-              class="emotion-24"
+              class="emotion-25"
             >
               Paleontologist
             </div>
           </td>
           <td
-            class="emotion-31"
+            class="emotion-32"
           >
             <div
-              class="emotion-24"
+              class="emotion-25"
             >
               <div
-                class="emotion-33"
+                class="emotion-34"
                 tabindex="0"
               >
                 <svg
-                  class="emotion-34"
+                  class="emotion-35"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -425,56 +435,56 @@
           </td>
         </tr>
         <tr
-          class="emotion-22"
+          class="emotion-23"
         >
           <td
-            class="emotion-23"
+            class="emotion-24"
           >
             <div
-              class="emotion-24"
+              class="emotion-25"
             >
               Monica
             </div>
           </td>
           <td
-            class="emotion-23"
+            class="emotion-24"
           >
             <div
-              class="emotion-24"
+              class="emotion-25"
             >
               Geller
             </div>
           </td>
           <td
-            class="emotion-23"
+            class="emotion-24"
           >
             <div
-              class="emotion-24"
+              class="emotion-25"
             >
               31
             </div>
           </td>
           <td
-            class="emotion-23"
+            class="emotion-24"
           >
             <div
-              class="emotion-24"
+              class="emotion-25"
             >
               Chef
             </div>
           </td>
           <td
-            class="emotion-31"
+            class="emotion-32"
           >
             <div
-              class="emotion-24"
+              class="emotion-25"
             >
               <div
-                class="emotion-33"
+                class="emotion-34"
                 tabindex="0"
               >
                 <svg
-                  class="emotion-34"
+                  class="emotion-35"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -491,56 +501,56 @@
           </td>
         </tr>
         <tr
-          class="emotion-22"
+          class="emotion-23"
         >
           <td
-            class="emotion-23"
+            class="emotion-24"
           >
             <div
-              class="emotion-24"
+              class="emotion-25"
             >
               Chandler
             </div>
           </td>
           <td
-            class="emotion-23"
+            class="emotion-24"
           >
             <div
-              class="emotion-24"
+              class="emotion-25"
             >
               Bing
             </div>
           </td>
           <td
-            class="emotion-23"
+            class="emotion-24"
           >
             <div
-              class="emotion-24"
+              class="emotion-25"
             >
               32
             </div>
           </td>
           <td
-            class="emotion-23"
+            class="emotion-24"
           >
             <div
-              class="emotion-24"
+              class="emotion-25"
             >
               ?
             </div>
           </td>
           <td
-            class="emotion-31"
+            class="emotion-32"
           >
             <div
-              class="emotion-24"
+              class="emotion-25"
             >
               <div
-                class="emotion-33"
+                class="emotion-34"
                 tabindex="0"
               >
                 <svg
-                  class="emotion-34"
+                  class="emotion-35"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -557,56 +567,56 @@
           </td>
         </tr>
         <tr
-          class="emotion-22"
+          class="emotion-23"
         >
           <td
-            class="emotion-23"
+            class="emotion-24"
           >
             <div
-              class="emotion-24"
+              class="emotion-25"
             >
               Joey
             </div>
           </td>
           <td
-            class="emotion-23"
+            class="emotion-24"
           >
             <div
-              class="emotion-24"
+              class="emotion-25"
             >
               Tribbiani
             </div>
           </td>
           <td
-            class="emotion-23"
+            class="emotion-24"
           >
             <div
-              class="emotion-24"
+              class="emotion-25"
             >
               30
             </div>
           </td>
           <td
-            class="emotion-23"
+            class="emotion-24"
           >
             <div
-              class="emotion-24"
+              class="emotion-25"
             >
               Actor
             </div>
           </td>
           <td
-            class="emotion-31"
+            class="emotion-32"
           >
             <div
-              class="emotion-24"
+              class="emotion-25"
             >
               <div
-                class="emotion-33"
+                class="emotion-34"
                 tabindex="0"
               >
                 <svg
-                  class="emotion-34"
+                  class="emotion-35"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -623,56 +633,56 @@
           </td>
         </tr>
         <tr
-          class="emotion-22"
+          class="emotion-23"
         >
           <td
-            class="emotion-23"
+            class="emotion-24"
           >
             <div
-              class="emotion-24"
+              class="emotion-25"
             >
               Phoebe
             </div>
           </td>
           <td
-            class="emotion-23"
+            class="emotion-24"
           >
             <div
-              class="emotion-24"
+              class="emotion-25"
             >
               Buffay
             </div>
           </td>
           <td
-            class="emotion-23"
+            class="emotion-24"
           >
             <div
-              class="emotion-24"
+              class="emotion-25"
             >
               31
             </div>
           </td>
           <td
-            class="emotion-23"
+            class="emotion-24"
           >
             <div
-              class="emotion-24"
+              class="emotion-25"
             >
               Massage Therapist
             </div>
           </td>
           <td
-            class="emotion-31"
+            class="emotion-32"
           >
             <div
-              class="emotion-24"
+              class="emotion-25"
             >
               <div
-                class="emotion-33"
+                class="emotion-34"
                 tabindex="0"
               >
                 <svg
-                  class="emotion-34"
+                  class="emotion-35"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
