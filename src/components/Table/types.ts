@@ -13,7 +13,7 @@ export type TableProps<TData> = {
   // Columns Type for Group Headers: columns: (DisplayColumn | GroupColumn)[];
   columns: DisplayColumn[];
   /** The Data of the Table */
-  data: TableData<TData>;
+  data: TableRow<TData>[];
   /** Size of Row */
   rowSize?: RowSize;
   /** Columns Configuration */
@@ -100,11 +100,11 @@ export type RowsConfig = {
   setExpanded?: OnChangeFn<ExpandedState>;
 };
 
-export type TableData<TData> = {
+export type TableRow<TData> = {
   /** The visible cells of the row */
   cells: TData;
   /** Details component which is displayed when clicking the arrow button */
   details?: JSX.Element;
-}[];
+};
 
 export type RowSize = 'sm' | 'md' | 'lg';
