@@ -42,7 +42,7 @@ export const SimpleSearch = {
         <Search value={value} onClear={handleClear} onInput={(e) => setValue(e.target.value)} />
         <Search
           placeholder="Search with custom width"
-          sx={{ wrapper: { minWidth: 'unset', width: '300px' } }}
+          sx={{ wrapper: { minWidth: '300px', flex: 0 } }}
           value={value2}
           onClear={handleClear2}
           onInput={(e) => setValue2(e.target.value)}
