@@ -12,7 +12,7 @@ const runCodemods = (targetPath) => {
   const codemodsPath = path.join(dirname, '../dist/codemods');
 
   const codemods = fs.readdirSync(codemodsPath)
-    .filter(file => file.endsWith('.js'));
+    .filter(file => file.endsWith('.cjs'));
 
   codemods.forEach(codemod => {
     const codemodPath = path.join(codemodsPath, codemod);
