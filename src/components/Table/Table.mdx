@@ -5,6 +5,7 @@ import {
   DisplayColumnStory,
   ColumnsConfigStory,
   RowsConfigStory,
+  PaginationConfigStory,
 } from './utils/TableStoryComponents';
 
 <Meta of={TableStories} />
@@ -42,6 +43,12 @@ This type includes all the configuration for the columns
 This type includes all the configuration for the rows
 
 <ArgTypes of={RowsConfigStory} />
+
+## PaginationConfig Type
+
+This type includes all the configuration for the pagination
+
+<ArgTypes of={PaginationConfigStory} />
 
 <SubsectionHeader title="Variants" />
 
@@ -110,3 +117,7 @@ In order to enable row expansion functionality, do the following steps:
 2. In `data` prop, use the `details` key for every row.
 
 <Canvas of={TableStories.RowDetails} />
+
+### Pagination
+
+<Canvas of={TableStories.Pagination} />

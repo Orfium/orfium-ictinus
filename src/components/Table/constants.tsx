@@ -199,4 +199,44 @@ export const moreData = [
       job: 'N/A',
     },
   },
+  {
+    cells: {
+      firstName: 'Barry',
+      lastName: 'Farber',
+      age: '30',
+      job: 'Orthodontist',
+    },
+  },
+  {
+    cells: {
+      firstName: 'Mr. Heckles',
+      lastName: 'N/A',
+      age: '60',
+      job: 'Retired',
+    },
+  },
+  {
+    cells: {
+      firstName: 'Tags',
+      lastName: 'Jones',
+      age: '24',
+      job: 'Assistant',
+    },
+  },
+  {
+    cells: {
+      firstName: 'Pete',
+      lastName: 'Becker',
+      age: '32',
+      job: 'Software Engineer',
+    },
+  },
+  {
+    cells: {
+      firstName: 'Paul',
+      lastName: 'Stevens',
+      age: '50',
+      job: 'Lawyer',
+    },
+  },
 ];

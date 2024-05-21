@@ -1,11 +1,11 @@
 import { useMemo, useState } from 'react';
 import Table from './Table';
 import { SimpleData, moreData, simpleColumns, simpleData } from './constants';
-import Typography from 'components/Typography';
 import { ExpandedState, SortingState } from '@tanstack/react-table';
-import { concat } from 'lodash';
+import { chunk, concat } from 'lodash';
 import Button from 'components/Button';
 import DropdownButton from 'components/DropdownButton';
+import { SelectOption } from 'components/Select';
 
 export default {
   title: 'Updated Components/Table/Table',
@@ -15,6 +15,10 @@ export default {
     rowSize: 'sm',
     isMultiSortable: false,
     maxHeight: 280,
+    isNextPageDisabled: false,
+    isPrevPageDisabled: false,
+    isEnhancedPaginationVisible: true,
+    hasItemsPerPageCount: true,
   },
 
   argTypes: {
@@ -25,6 +29,7 @@ export default {
     jobWidth: { control: 'number', name: 'Job Width' },
     rowSize: { name: 'Row Size' },
     maxHeight: { name: 'Tbody Max height' },
+    hasItemsPerPageCount: { name: 'Show items-per-page count' },
   },
 };
 
@@ -309,6 +314,71 @@ export const RowDetails = {
   parameters: {
     controls: {
       include: ['Row Size'],
+    },
+  },
+};
+
+export const Pagination = {
+  render: (args) => {
+    const {
+      rowSize,
+      hasStickyHeader,
+      isNextPageDisabled,
+      isPrevPageDisabled,
+      isEnhancedPaginationVisible,
+      hasItemsPerPageCount,
+      maxHeight,
+    } = args;
+
+    const [currentPage, setCurrentPage] = useState(1);
+
+    const [itemsPerPage, setItemsPerPage] = useState<SelectOption>({
+      value: 10,
+      label: '10 rows per page',
+    });
+
+    const data = chunk(concat(simpleData(), moreData), Number(itemsPerPage.value));
+
+    return (
+      <Table<SimpleData>
+        data={data[currentPage - 1]}
+        columns={simpleColumns}
+        rowSize={rowSize}
+        hasStickyHeader={hasStickyHeader}
+        sx={hasStickyHeader ? { tbody: { maxHeight: `${maxHeight}px` } } : undefined}
+        pagination={{
+          isEnhancedPaginationVisible,
+          page: currentPage,
+          onChange: setCurrentPage,
+          totalPages: data.length,
+          ...(hasItemsPerPageCount && {
+            itemsPerPage,
+            itemsPerPageOptions: [
+              { value: 5, label: '5 rows per page' },
+              { value: 10, label: '10 rows per page' },
+            ],
+          }),
+          onItemsPerPageChange: setItemsPerPage,
+          isNextPageDisabled,
+          isPrevPageDisabled,
+        }}
+      />
+    );
+  },
+
+  name: 'Pagination',
+
+  parameters: {
+    controls: {
+      include: [
+        'Row Size',
+        'hasStickyHeader',
+        'isPrevPageDisabled',
+        'isNextPageDisabled',
+        'isEnhancedPaginationVisible',
+        'Show items-per-page count',
+        'Tbody Max height',
+      ],
     },
   },
 };

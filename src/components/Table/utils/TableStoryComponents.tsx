@@ -1,6 +1,13 @@
 import type React from 'react';
 
-import type { ColumnsConfig, DisplayColumn, GroupColumn, TableData, RowsConfig } from '../types';
+import type {
+  ColumnsConfig,
+  DisplayColumn,
+  GroupColumn,
+  TableData,
+  RowsConfig,
+  PaginationConfig,
+} from '../types';
 
 /** This is just a dummy component to be used in Storybook for showing the Row type on props */
 export const ColumnsConfigStory: React.FC<ColumnsConfig> = () => null;
@@ -16,3 +23,6 @@ export const RowsConfigStory: React.FC<RowsConfig> = () => null;
 
 /** This is just a dummy component to be used in Storybook for showing the Cell type on props */
 export const TableDataStory: React.FC<TableData<any>> = () => null;
+
+/** This is just a dummy component to be used in Storybook for showing the PaginationConfig type on props */
+export const PaginationConfigStory: React.FC<PaginationConfig> = () => null;
