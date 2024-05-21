@@ -23,7 +23,7 @@ export type CheckBoxProps = Partial<CheckboxAria> & {
   children?: React.ReactNode;
 } & TestProps;
 
-const CheckBox = React.forwardRef<HTMLInputElement, CheckBoxProps>((props, ref) => {
+const CheckBox = React.forwardRef<HTMLLabelElement, CheckBoxProps>((props, ref) => {
   const {
     id,
     value,

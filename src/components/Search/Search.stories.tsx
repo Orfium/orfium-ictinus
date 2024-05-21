@@ -1,5 +1,5 @@
 import Search from './Search';
-import { FIGMA_URL } from '../../utils/common';
+import { FIGMA_URL } from 'utils/common';
 import { useState } from 'react';
 import { FilterOption } from 'components/Filter';
 import Stack from 'components/storyUtils/Stack';

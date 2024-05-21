@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FIGMA_URL } from '../../utils/common';
+import { FIGMA_URL } from 'utils/common';
 import Drawer, { DrawerHeader, DrawerContent, DrawerFooter } from './index';
 import Button from 'components/Button';
 import Typography from 'components/Typography';

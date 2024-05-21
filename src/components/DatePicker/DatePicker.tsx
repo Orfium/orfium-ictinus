@@ -2,6 +2,7 @@ import useKeyboardEvents from 'hooks/useKeyboardEvents';
 import React, { useCallback, memo, useMemo, useState } from 'react';
 import isEqual from 'react-fast-compare';
 import type { Dayjs } from 'utils/date';
+import type { TestProps } from 'utils/types';
 
 import { EMPTY_STATE } from './constants';
 import { datePickerStyles } from './DatePicker.style';
@@ -10,7 +11,6 @@ import DatePickInput from './DatePickInput';
 import type { Range } from './OverlayComponent/OverlayComponent';
 import OverlayComponent from './OverlayComponent/OverlayComponent';
 import { initDates } from './utils';
-import type { TestProps } from '../../utils/types';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import PositionInScreen from '../utils/PositionInScreen';
 

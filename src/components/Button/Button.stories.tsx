@@ -1,7 +1,7 @@
 import Button from './Button';
 import Stack from '../storyUtils/Stack';
 
-import { FIGMA_URL } from '../../utils/common';
+import { FIGMA_URL } from 'utils/common';
 import { LoadingButtonShowcase, ButtonShowcase } from '../storyUtils/ButtonShowcases';
 
 export default {

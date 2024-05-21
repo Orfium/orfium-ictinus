@@ -1,7 +1,7 @@
 import CardShowcase from '../storyUtils/CardShowcase';
 import Card from './Card';
 import Stack from '../storyUtils/Stack';
-import { FIGMA_URL } from '../../utils/common';
+import { FIGMA_URL } from 'utils/common';
 
 export default {
   title: 'Original Components/Card',

@@ -1,5 +1,5 @@
 import List, { ListSection, ListItem, ListItemText } from '../index';
-import { FIGMA_URL, Function } from '../../../utils/common';
+import { FIGMA_URL, Function } from 'utils/common';
 import Stack from '../../storyUtils/Stack';
 
 export default {
