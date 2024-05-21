@@ -2,7 +2,7 @@ import { flexRender } from '@tanstack/react-table';
 import React, { useRef } from 'react';
 import isEqual from 'react-fast-compare';
 
-import { TBody, TD, TH, THead, TR, TTitle, type TableProps } from '.';
+import { TBody, TD, TH, THead, TPagination, TR, TTitle, type TableProps } from '.';
 import useTable from './hooks/useTable';
 import { tableContainer, tableStyles } from './Table.style';
 
@@ -15,12 +15,13 @@ const Table = <TData,>({
   columnsConfig,
   sorting,
   hasStickyHeader = false,
+  pagination,
   sx,
 }: TableProps<TData>) => {
   /** If true, the scrollbar of tbody is visible */
   const [hasScrollbar, setHasScrollbar] = React.useState(false);
 
-  const isSelectable = Boolean(type === 'interactive' && rowsConfig.rowSelection);
+  const isSelectable = Boolean(type === 'interactive' && rowsConfig?.rowSelection);
   const isExpandable = Boolean(rowsConfig?.expanded);
 
   const tBodyRef = useRef<HTMLTableSectionElement>();
@@ -39,6 +40,7 @@ const Table = <TData,>({
     sorting,
     rowsConfig,
     columnsConfig,
+    pagination,
   });
 
   const hasTitle = Boolean(columnsConfig || rowsConfig);
@@ -130,6 +132,9 @@ const Table = <TData,>({
           })}
         </TBody>
       </table>
+      {pagination && (
+        <TPagination pagination={pagination} isSticky={hasStickyHeader && hasScrollbar} />
+      )}
     </div>
   );
 };

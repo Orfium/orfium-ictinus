@@ -6,6 +6,8 @@ import type {
   ExpandedState,
 } from '@tanstack/react-table';
 
+import type { SelectOption } from 'components/Select';
+
 export type TableProps<TData> = {
   /** If table is interactive, rows are selectable with actions */
   type?: 'interactive' | 'read-only';
@@ -24,6 +26,8 @@ export type TableProps<TData> = {
   sorting?: SortingConfig;
   /** Whether the table has a sticky header and scrollable tbody */
   hasStickyHeader?: boolean;
+  /** Pagination config */
+  pagination?: PaginationConfig;
   /** Style overrides for Table component and subcomponents */
   sx?: {
     table?: CSSObject;
@@ -98,6 +102,29 @@ export type RowsConfig = {
   expanded?: ExpandedState;
   /** Callback for expanded state change */
   setExpanded?: OnChangeFn<ExpandedState>;
+};
+
+/** Pagination */
+
+export type PaginationConfig = {
+  /** The current page displayed */
+  page: number;
+  /** Total pages count */
+  totalPages: number;
+  /** OnChange callback for next/prev buttons */
+  onChange: (page: number) => void;
+  /** Whether go-to-first-page and go-to-last-page buttons are visible */
+  isEnhancedPaginationVisible?: boolean;
+  /** Manually disable next page */
+  isNextPageDisabled?: boolean;
+  /** Manually disable previous page */
+  isPrevPageDisabled?: boolean;
+  /** Show items per page list options */
+  itemsPerPageOptions?: SelectOption[];
+  /** Show items per page list selected option */
+  itemsPerPage?: SelectOption;
+  /** Show items per page list change callback */
+  onItemsPerPageChange?: (option: SelectOption) => void;
 };
 
 export type TableData<TData> = {

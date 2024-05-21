@@ -124,6 +124,7 @@ const useTable = <TData,>({
   sorting,
   rowsConfig,
   columnsConfig,
+  pagination,
   ...rest
 }: UseTableProps<TData>): ReturnValue<TData> => {
   const theme = useTheme();
@@ -132,7 +133,7 @@ const useTable = <TData,>({
 
   const { rowSelection, setRowSelection, expanded, setExpanded } = rowsConfig ?? {};
 
-  const hasRowDetails = data.some((row) => row.details);
+  const hasRowDetails = data.some((row) => row.details) && Boolean(expanded);
 
   const hasCheckboxes = Boolean(rowSelection && isTableInteractive);
 
@@ -152,7 +153,7 @@ const useTable = <TData,>({
 
   React.useEffect(() => {
     setTableData(data.map((data) => data.cells));
-  }, [sorting?.sortingColumn]);
+  }, [sorting?.sortingColumn, pagination?.page, pagination?.itemsPerPage]);
 
   const table = useReactTable<TData>({
     /** Basic Functionality */
