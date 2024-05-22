@@ -6,7 +6,7 @@ import type {
   ExpandedState,
 } from '@tanstack/react-table';
 
-import type { SelectOption } from 'components/Select';
+import type { SelectOptionValues } from 'components/Select';
 
 export type TableProps<TData> = {
   /** If table is interactive, rows are selectable with actions */
@@ -120,11 +120,11 @@ export type PaginationConfig = {
   /** Manually disable previous page */
   isPrevPageDisabled?: boolean;
   /** Show items per page list options */
-  itemsPerPageOptions?: SelectOption[];
+  itemsPerPageOptions?: Omit<SelectOptionValues, 'iconProps'>[];
   /** Show items per page list selected option */
-  itemsPerPage?: SelectOption;
+  itemsPerPage?: Omit<SelectOptionValues, 'iconProps'>;
   /** Show items per page list change callback */
-  onItemsPerPageChange?: (option: SelectOption) => void;
+  onItemsPerPageChange?: (option: Omit<SelectOptionValues, 'iconProps'>) => void;
 };
 
 export type TableData<TData> = {
