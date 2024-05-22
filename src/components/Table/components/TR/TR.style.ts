@@ -4,10 +4,16 @@ import type { Theme } from 'theme';
 import type { TRProps } from './TR';
 
 export const trContainer =
-  ({ isSelected, isSelectable, sx }: Pick<TRProps, 'sx' | 'isSelectable' | 'isSelected'>) =>
+  ({
+    isExpandable,
+    isSelected,
+    isExpanded,
+    isSelectable,
+    sx,
+  }: Pick<TRProps, 'sx' | 'isSelectable' | 'isSelected' | 'isExpandable' | 'isExpanded'>) =>
   (theme: Theme): SerializedStyles => {
     return css`
-      ${isSelectable &&
+      ${(isSelectable || isExpandable) &&
       `
          cursor: pointer;
          &:hover {
@@ -16,7 +22,7 @@ export const trContainer =
       
       `}
 
-      ${isSelected &&
+      ${(isSelected || isExpanded) &&
       `
       background: ${theme.tokens.colors.get('palette.tertiary.contrast')};
       `}

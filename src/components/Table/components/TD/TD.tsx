@@ -3,7 +3,7 @@ import type { RowSize } from 'index';
 import React from 'react';
 import isEqual from 'react-fast-compare';
 
-import { tdContainer, tdContent } from './TD.style';
+import { simpleTdContainer, tdContainer, tdContent } from './TD.style';
 
 type Props = {
   /** The html colSpan attribute */
@@ -16,11 +16,14 @@ type Props = {
   sx?: CSSObject;
   /** Column Id */
   columnId?: string;
+  /** Whether is a row details td element */
+  isDetails?: boolean;
 };
 
 const TD: React.FCC<Props> = ({
   colSpan,
   rowSize = 'sm',
+  isDetails = false,
   width,
   sx,
   children,
@@ -28,9 +31,18 @@ const TD: React.FCC<Props> = ({
   ...rest
 }) => {
   const isCheckbox = columnId === 'checkbox_select';
+  const isExpandedButton = columnId === 'details_iconButton';
 
-  return (
-    <td css={tdContainer({ rowSize, width, isCheckbox, sx })} colSpan={colSpan} {...rest}>
+  return isDetails ? (
+    <td colSpan={colSpan} css={simpleTdContainer()}>
+      {children}
+    </td>
+  ) : (
+    <td
+      css={tdContainer({ rowSize, width, isCheckbox, isExpandedButton, sx })}
+      colSpan={colSpan}
+      {...rest}
+    >
       <div css={tdContent()}>{children}</div>
     </td>
   );

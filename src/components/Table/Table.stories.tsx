@@ -1,11 +1,11 @@
 import { useMemo, useState } from 'react';
 import Table from './Table';
 import { SimpleData, moreData, simpleColumns, simpleData } from './constants';
-import Typography from 'components/Typography';
-import { SortingState } from '@tanstack/react-table';
+import { ExpandedState, SortingState } from '@tanstack/react-table';
 import { concat } from 'lodash';
 import Button from 'components/Button';
 import DropdownButton from 'components/DropdownButton';
+import { TableColumn } from './types';
 
 export default {
   title: 'Updated Components/Table/Table',
@@ -32,14 +32,14 @@ export const ColumnAndRowSizing = {
   render: (args) => {
     const { rowSize, firstNameWidth, lastNameWidth, ageWidth, jobWidth } = args;
 
-    const columns = [
+    const columns: TableColumn<SimpleData>[] = [
       { id: 'firstName', header: 'First Name', width: firstNameWidth },
       { id: 'lastName', header: 'Last Name', width: lastNameWidth },
       { id: 'age', header: 'Age', width: ageWidth },
       { id: 'job', header: 'Job', width: jobWidth },
     ];
 
-    return <Table<SimpleData> data={simpleData} columns={columns} rowSize={rowSize} />;
+    return <Table<SimpleData> data={simpleData()} columns={columns} rowSize={rowSize} />;
   },
 
   name: 'Column And Row Sizing',
@@ -73,7 +73,7 @@ export const ColumnChooser = {
   render: (args) => {
     const { rowSize, isAlwaysVisible = [] } = args;
 
-    const columns = [
+    const columns: TableColumn<SimpleData>[] = [
       {
         id: 'firstName',
         header: 'First Name',
@@ -97,7 +97,7 @@ export const ColumnChooser = {
 
     return (
       <Table<SimpleData>
-        data={simpleData}
+        data={simpleData()}
         columns={columns}
         rowSize={rowSize}
         columnsConfig={{ columnVisibility, setColumnVisibility }}
@@ -120,7 +120,7 @@ export const Sorting = {
 
     const [sorting, setSorting] = useState<SortingState>();
 
-    const columns = [
+    const columns: TableColumn<SimpleData>[] = [
       {
         id: 'firstName',
         header: 'First Name',
@@ -152,8 +152,8 @@ export const Sorting = {
       const returnData = [...data];
 
       return returnData.sort((a, b) => {
-        const valueA = a[key];
-        const valueB = b[key];
+        const valueA = a.cells[key];
+        const valueB = b.cells[key];
 
         const comparison =
           key === 'age'
@@ -169,12 +169,12 @@ export const Sorting = {
     };
 
     const ddata = useMemo(() => {
-      const { id, desc } = sorting?.length ? sorting[0] : {};
+      const { id = undefined, desc = undefined } = sorting?.length ? sorting[0] : {};
 
       if (id) {
-        return sortDataByKey(simpleData, id, desc ? 'desc' : 'asc');
+        return sortDataByKey(simpleData(), id, desc ? 'desc' : 'asc');
       } else {
-        return simpleData;
+        return simpleData();
       }
     }, [sorting, simpleData]);
 
@@ -211,8 +211,8 @@ export const StickyHeader = {
 
     return (
       <Table<SimpleData>
-        data={concat(simpleData, moreData)}
-        columns={simpleColumns}
+        data={concat(simpleData(), moreData)}
+        columns={simpleColumns as TableColumn<SimpleData>[]}
         rowSize={rowSize}
         hasStickyHeader
         sx={{ tbody: { maxHeight: `${maxHeight}px` } }}
@@ -241,8 +241,8 @@ export const RowSelection = {
 
     return (
       <Table<SimpleData>
-        data={concat(simpleData, moreData)}
-        columns={simpleColumns}
+        data={concat(simpleData(), moreData)}
+        columns={simpleColumns as TableColumn<SimpleData>[]}
         rowSize={rowSize}
         type="interactive"
         rowsConfig={{
@@ -276,6 +276,35 @@ export const RowSelection = {
   },
 
   name: 'Row Selection',
+
+  parameters: {
+    controls: {
+      include: ['Row Size'],
+    },
+  },
+};
+
+export const RowDetails = {
+  render: (args) => {
+    const { rowSize } = args;
+
+    const [expanded, setExpanded] = useState<ExpandedState>({});
+
+    return (
+      <Table<SimpleData>
+        type="interactive"
+        data={simpleData(true)}
+        columns={simpleColumns as TableColumn<SimpleData>[]}
+        rowSize={rowSize}
+        rowsConfig={{
+          expanded,
+          setExpanded,
+        }}
+      />
+    );
+  },
+
+  name: 'Row Details',
 
   parameters: {
     controls: {

@@ -43,6 +43,7 @@ const TH: React.FCC<Props & Pick<DivProps, 'onClick' | 'id'>> = ({
 }) => {
   const isSortable = Boolean(onSort);
   const isCheckbox = id === 'checkbox_select';
+  const isExpandedButton = id === 'details_iconButton'
 
   const [hasVisibleOptions, setHasVisibleOptions] = React.useState(false);
 
@@ -74,6 +75,7 @@ const TH: React.FCC<Props & Pick<DivProps, 'onClick' | 'id'>> = ({
     <th
       css={thContainer({
         isCheckbox,
+        isExpandedButton,
         rowSize,
         width,
         hasVisibleOptions: hasVisibleOptions || Boolean(colSortingState),

@@ -21,6 +21,7 @@ const Table = <TData,>({
   const [hasScrollbar, setHasScrollbar] = React.useState(false);
 
   const isSelectable = Boolean(type === 'interactive' && rowsConfig.rowSelection);
+  const isExpandable = Boolean(rowsConfig?.expanded);
 
   const tBodyRef = useRef<HTMLTableSectionElement>();
   const containerRef = useRef(null);
@@ -82,33 +83,49 @@ const Table = <TData,>({
           ))}
         </THead>
         <TBody hasStickyHeader={hasStickyHeader} ref={tBodyRef} sx={sx?.tbody}>
-          {table.getRowModel().rows.map((row) => {
+          {table.getRowModel().rows.map((row, index) => {
             return (
-              <TR
-                key={row.id}
-                sx={sx?.tr}
-                {...(isSelectable && {
-                  isSelectable,
-                  isSelected: row.getIsSelected(),
-                  onClick: (e) => {
-                    row.toggleSelected();
-                  },
-                })}
-              >
-                {row.getVisibleCells().map((cell) => {
-                  return (
-                    <TD
-                      columnId={cell.column.id}
-                      key={cell.id}
-                      rowSize={rowSize}
-                      width={cell.column.getSize()}
-                      sx={sx?.td}
-                    >
-                      {flexRender(cell.column.columnDef.cell, cell.getContext())}
+              <>
+                <TR
+                  key={row.id}
+                  sx={sx?.tr}
+                  {...((isSelectable || isExpandable) && {
+                    isSelectable,
+                    isExpandable,
+                    isSelected: row.getIsSelected(),
+                    isExpanded: row.getIsExpanded(),
+                    onClick: (e) => {
+                      if (isExpandable) {
+                        const isExpanded = row.getIsExpanded();
+                        row.toggleExpanded(!isExpanded);
+                      } else if (isSelectable) {
+                        row.toggleSelected();
+                      }
+                    },
+                  })}
+                >
+                  {row.getVisibleCells().map((cell) => {
+                    return (
+                      <TD
+                        columnId={cell.column.id}
+                        key={cell.id}
+                        rowSize={rowSize}
+                        width={cell.column.getSize()}
+                        sx={sx?.td}
+                      >
+                        {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                      </TD>
+                    );
+                  })}
+                </TR>
+                {row.getIsExpanded() && (
+                  <TR>
+                    <TD colSpan={table.getAllLeafColumns().length} isDetails>
+                      {data[index].details}
                     </TD>
-                  );
-                })}
-              </TR>
+                  </TR>
+                )}
+              </>
             );
           })}
         </TBody>

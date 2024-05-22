@@ -10,6 +10,7 @@ import { generateStylesFromTokens } from 'components/Typography/utils';
 export const thContainer =
   ({
     isCheckbox,
+    isExpandedButton,
     rowSize,
     width,
     hasVisibleOptions,
@@ -17,6 +18,7 @@ export const thContainer =
     sx,
   }: Pick<TableProps<any>, 'rowSize'> & {
     isCheckbox?: boolean;
+    isExpandedButton?: boolean;
     width?: number;
     hasVisibleOptions?: boolean;
     isSortable?: boolean;
@@ -24,7 +26,7 @@ export const thContainer =
   }) =>
   (theme: Theme): SerializedStyles => {
     return css`
-      width: ${isCheckbox ? '52px' : width ? `${width}%` : '100%'};
+      width: ${isCheckbox || isExpandedButton ? '52px' : width ? `${width}%` : '100%'};
       height: ${getMinHeight(rowSize)(theme)};
       align-content: center;
       text-align: left;

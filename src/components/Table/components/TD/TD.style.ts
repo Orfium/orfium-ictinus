@@ -16,21 +16,31 @@ export const getMinHeight = (rowSize: RowSize) => (theme: Theme) => {
   }
 };
 
+export const simpleTdContainer =
+  () =>
+  (theme: Theme): SerializedStyles => {
+    return css`
+      border-bottom: 1px solid ${theme.tokens.colors.get('borderColor.decorative.default')};
+    `;
+  };
+
 export const tdContainer =
   ({
     rowSize,
     width,
     isCheckbox,
+    isExpandedButton,
     sx,
   }: Pick<TableProps<any>, 'rowSize'> & {
     isCheckbox?: boolean;
+    isExpandedButton?: boolean;
     width?: number;
     isLastCell?: boolean;
     sx?: CSSObject;
   }) =>
   (theme: Theme): SerializedStyles => {
     const getWidth = () => {
-      if (isCheckbox) {
+      if (isCheckbox || isExpandedButton) {
         return '52px';
       }
 
