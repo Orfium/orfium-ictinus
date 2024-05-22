@@ -2,10 +2,11 @@ import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
 import Table from './Table';
 import * as TableStories from './Table.stories';
 import {
-  DisplayColumnStory,
+  TableColumnStory,
   ColumnsConfigStory,
   RowsConfigStory,
   PaginationConfigStory,
+  TableRowStory,
 } from './utils/TableStoryComponents';
 
 <Meta of={TableStories} />
@@ -28,9 +29,9 @@ A universal Table component that applies Orfium basic usages.
 
 <ArgTypes of={Table} />
 
-## DisplayColumn Type
+## TableColumn Type
 
-<ArgTypes of={DisplayColumnStory} />
+<ArgTypes of={TableColumnStory} />
 
 ## ColumnsConfig Type
 
@@ -43,6 +44,10 @@ This type includes all the configuration for the columns
 This type includes all the configuration for the rows
 
 <ArgTypes of={RowsConfigStory} />
+
+## TableRow Type
+
+<ArgTypes of={TableRowStory} />
 
 ## PaginationConfig Type
 
