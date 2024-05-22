@@ -1,7 +1,7 @@
 import React from 'react';
+import { generateTestDataId } from 'utils/helpers';
 import type { TestProps } from 'utils/types';
 
-import { generateTestDataId } from '../../../../utils/helpers';
 import Button from '../../../Button';
 import type { NotificationActions } from '../../Notification';
 import { actionContainer, actionsContainer } from '../../Notification.style';

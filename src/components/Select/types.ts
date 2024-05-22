@@ -1,6 +1,6 @@
 import type { InputHTMLAttributes } from 'react';
+import type { TestProps } from 'utils/types';
 
-import type { TestProps } from '../../utils/types';
 import type { IconProps } from '../Icon';
 import type { TextFieldProps } from '../TextField';
 

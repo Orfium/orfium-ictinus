@@ -6,7 +6,6 @@ import type { TestProps } from 'utils/types';
 
 import { checkboxStyles, checkboxWrapperStyles } from './CheckBox.style';
 import ControlLabel from 'components/Controls/ControlLabel';
-import { getControlsTokens } from 'components/Controls/Controls.tokens';
 import type { LabelConfig } from 'components/Controls/Controls.types';
 import Icon from 'components/Icon';
 
@@ -24,7 +23,7 @@ export type CheckBoxProps = Partial<CheckboxAria> & {
   children?: React.ReactNode;
 } & TestProps;
 
-const CheckBox = React.forwardRef<HTMLInputElement, CheckBoxProps>((props, ref) => {
+const CheckBox = React.forwardRef<HTMLLabelElement, CheckBoxProps>((props, ref) => {
   const {
     id,
     value,
@@ -39,7 +38,6 @@ const CheckBox = React.forwardRef<HTMLInputElement, CheckBoxProps>((props, ref) 
   const { placement = 'right', size = 'normal', helpText, sx } = labelConfig;
 
   const theme = useTheme();
-  const tokens = getControlsTokens(theme);
 
   return (
     <div css={checkboxWrapperStyles({ placement, sx, isDisabled })}>
@@ -56,8 +54,8 @@ const CheckBox = React.forwardRef<HTMLInputElement, CheckBoxProps>((props, ref) 
       >
         <Icon
           name={isIndeterminate ? 'minus' : 'check'}
-          size={tokens('checkbox.size')}
-          color={tokens('checkbox.iconColor.pressed')}
+          size={theme.dimension.sizing.get('icon.md')}
+          color={theme.tokens.colors.get('textColor.inverted.primary')}
           dataTestPrefixId={`${dataTestPrefixId}_${value}_${
             isIndeterminate ? 'minus' : 'checkmark'
           }`}

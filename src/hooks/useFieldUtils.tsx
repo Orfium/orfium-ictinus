@@ -1,11 +1,10 @@
-import React, { useCallback, useMemo } from 'react';
+import React, { useMemo } from 'react';
 
 import useCombinedRefs from './useCombinedRefs';
 import useTheme from './useTheme';
 import type { AcceptedIconNames } from 'components/Icon';
 import Icon from 'components/Icon';
 import type { TextFieldProps } from 'components/TextField';
-import type { TextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
 import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
 
 /** A custom hook containing all the utils that are shared between field components */
@@ -16,7 +15,6 @@ const useFieldUtils = ({
   status,
   isDisabled,
   ref,
-  sx,
 }: Partial<TextFieldProps> & { ref: React.ForwardedRef<HTMLInputElement> }) => {
   const theme = useTheme();
   const tokens = getTextInputBaseTokens(theme);
@@ -34,8 +32,8 @@ const useFieldUtils = ({
       return (
         <Icon
           name={iconName as AcceptedIconNames}
-          size={tokens(`addOn.iconSize.${size}` as TextInputBaseTokens)}
-          color={tokens('addOn.iconColor')}
+          size={theme.dimension.sizing.get(`icon.${size === 'compact' ? 'sm' : 'md'}`)}
+          color={theme.tokens.colors.get('textColor.default.secondary')}
         />
       );
     }
@@ -49,28 +47,11 @@ const useFieldUtils = ({
     }
   };
 
-  const textInputBaseSx = useCallback(
-    (hasSx: boolean) => {
-      if (hasSx) {
-        return {
-          textField: {
-            paddingRight: tokens('paddingContentLeft'),
-          },
-          ...sx,
-        };
-      }
-
-      return { ...sx };
-    },
-    [sx, tokens]
-  );
-
   return {
     isLocked,
     hintMessageId,
     suffixContent,
     handleContainerClick,
-    textInputBaseSx,
     combinedRefs,
   };
 };

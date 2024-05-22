@@ -1,6 +1,6 @@
 import Menu from '../Menu';
 import Stack from '../storyUtils/Stack';
-import { FIGMA_URL } from '../../utils/common';
+import { FIGMA_URL } from 'utils/common';
 import { ListItem, ListItemAction, ListItemText, ListSection } from '../List';
 import * as React from 'react';
 import { useCallback, useRef, useState } from 'react';

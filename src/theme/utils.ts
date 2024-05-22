@@ -1,9 +1,9 @@
 import { get } from 'lodash';
 import { shade, tint, rem as polishedRem } from 'polished';
+import { PropsValidationError } from 'utils/errors';
 
 import type { GeneratedColorShades, Palette } from './palette';
 import type { FlatPaletteConfig, PaletteConfig, TextPaletteConfig } from './palette.config';
-import { PropsValidationError } from '../utils/errors';
 
 const BASE_PERCENTAGE = 10;
 const SHADES = 18;
@@ -11,6 +11,13 @@ const SHADES = 18;
 const EXCLUDED = ['white', 'black', 'pale', 'neutral', 'gradient'];
 
 export const convertPointsToPixels = (pt: number): number => (96 / 72) * pt;
+
+export const convertRemToPixels = (rem) => {
+  return (
+    rem.toString().replace('rem', '') *
+    parseFloat(getComputedStyle(document.documentElement).fontSize)
+  );
+};
 
 export const colorShadesCreator = (
   base: string,

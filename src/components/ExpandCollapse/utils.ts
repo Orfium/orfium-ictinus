@@ -1,5 +1,6 @@
+import { PropsValidationError } from 'utils/errors';
+
 import type { ExpandCollapseProps } from './ExpandCollapse.types';
-import { PropsValidationError } from '../../utils/errors';
 
 export const errors = [
   {

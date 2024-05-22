@@ -1,7 +1,6 @@
 import type { ReactComponentLike } from 'prop-types';
 import type * as React from 'react';
-
-import type { TestProps } from '../../utils/types';
+import type { TestProps } from 'utils/types';
 
 export type SharedProps = {
   /**

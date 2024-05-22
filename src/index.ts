@@ -27,6 +27,8 @@ export { default as AvatarStack } from './components/Avatar/AvatarStack';
 export * from './components/Avatar/AvatarStack';
 export { default as Breadcrumb } from './components/Breadcrumb';
 export * from './components/Breadcrumb';
+export { default as Box } from './components/Box';
+export * from './components/Box';
 export { default as Button } from './components/Button';
 export * from './components/Button';
 export { default as Card } from './components/Card';

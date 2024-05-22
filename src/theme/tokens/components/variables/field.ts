@@ -12,192 +12,22 @@ const field = {
         description: 'Sets fixed height for _block addOn (compact variant)',
       },
     },
-    iconColor: {
-      value: '{sem.colors.textColor.default.secondary}',
-      type: 'color',
-      description: 'Sets color for _block addOn icon',
-    },
     padding: {
       normal: {
-        right: {
-          value: '{spacing.5}',
-          type: 'spacing',
-          description: 'Sets right padding for _block addOn (normal variant)',
-        },
-        left: {
-          value: '{spacing.4}',
-          type: 'spacing',
-          description: 'Sets left padding for _block addOn (normal variant)',
-        },
+        value: '{spacing.0} {spacing.5} {spacing.0} {spacing.4}',
+        type: 'spacing',
+        description: "Sets horizontal/vertical padding for 'normal' field--addOn",
       },
       compact: {
-        right: {
-          value: '{spacing.4}',
-          type: 'spacing',
-          description: 'Sets right padding for _block addOn (compact variant)',
-        },
-        left: {
-          value: '{spacing.3}',
-          type: 'spacing',
-          description: 'Sets right padding for _block addOn (compact variant)',
-        },
+        value: '{spacing.0} {spacing.4} {spacing.0} {spacing.3}',
+        type: 'spacing',
+        description: "Sets horizontal/vertical padding for 'compact' field--addOn",
       },
-    },
-    iconSize: {
-      normal: {
-        value: '{sem.icon.size.3}',
-        type: 'sizing',
-        description: 'Sets size for normal addOn icon',
+      textArea: {
+        value: '{spacing.6} {spacing.5} {spacing.6} {spacing.5}',
+        type: 'spacing',
+        description: 'Sets horizontal/vertical padding for text area',
       },
-      compact: {
-        value: '{sem.icon.size.2}',
-        type: 'sizing',
-        description: 'Sets size for compact addOn icon',
-      },
-    },
-  },
-  stepper: {
-    backgroundColor: {
-      default: {
-        value: '{sem.colors.palette.tertiary.base}',
-        type: 'color',
-        description: 'Sets backgroundColor for field increment (default state)',
-      },
-      focused: {
-        value: '{sem.colors.palette.tertiary.muted}',
-        type: 'color',
-        description: 'Sets backgroundColor for field increment (focused state)',
-      },
-    },
-  },
-  hintPadding: {
-    value: '{spacing.4}',
-    type: 'spacing',
-    description: 'sets vertical padding between an input field container and its hint (if used)',
-    compact: {
-      value: '{spacing.3}',
-      type: 'spacing',
-      description:
-        'sets vertical padding between a compact input field container and its hint (if used)',
-    },
-  },
-  backgroundColor: {
-    default: {
-      value: '{sem.colors.palette.secondary.base}',
-      type: 'color',
-      description: 'Sets backgroundColor for default input field container',
-    },
-    hover: {
-      type: 'color',
-      value: '{sem.colors.palette.secondary.muted}',
-      description: 'Sets backgroundColor for hovered input field container',
-    },
-    focused: {
-      type: 'color',
-      value: '{sem.colors.palette.secondary.base}',
-      description: 'Sets backgroundColor for focused input field container',
-    },
-    error: {
-      value: '{sem.colors.palette.error.muted}',
-      type: 'color',
-      description: 'Sets backgroundColor for error input field container',
-    },
-    errorHover: {
-      value: '{sem.colors.palette.error.muted}',
-      type: 'color',
-      description: 'Sets backgroundColor for hoveredError input field container',
-    },
-    readOnly: {
-      value: '{sem.colors.palette.secondary.muted}',
-      type: 'color',
-      description: 'Sets backgroundColor for read only input field container',
-    },
-  },
-  borderColor: {
-    default: {
-      type: 'color',
-      value: '{sem.colors.borderColor.interactive.default}',
-      description: 'Sets borderColor for default/hovered input field container',
-    },
-    focused: {
-      type: 'color',
-      value: '{sem.colors.borderColor.interactive.active}',
-      description: 'Sets borderColor for focused input field container',
-    },
-    error: {
-      type: 'color',
-      value: '{sem.colors.borderColor.interactive.error}',
-      description: 'Sets borderColor for error input field container',
-    },
-    readOnly: {
-      type: 'color',
-      value: '{sem.colors.borderColor.interactive.default}',
-      description: 'Sets borderColor for read only input field container',
-    },
-  },
-  textColor: {
-    inputColor: {
-      value: '{sem.colors.textColor.default.primary}',
-      type: 'color',
-      description: 'Sets textColor for a field input',
-    },
-    inputColorAlt: {
-      type: 'color',
-      value: '{sem.colors.textColor.default.secondary}',
-      description:
-        'Sets textColor for field label, hint, text placehodler and locked field contnet ',
-    },
-    errorHintColor: {
-      type: 'color',
-      value: '{sem.colors.textColor.default.error}',
-      description: 'Sets textColor for error input field hint',
-    },
-    labelActive: {
-      type: 'color',
-      value: '{sem.colors.textColor.default.active}',
-      description: 'Sets textColor for an active field label',
-    },
-    labelError: {
-      type: 'color',
-      value: '{sem.colors.textColor.default.error}',
-      description: 'Sets textColor for an error field label',
-    },
-  },
-  iconColor: {
-    default: {
-      value: '{sem.colors.textColor.default.secondary}',
-      type: 'color',
-      description: 'Sets color for a field icon/suffix (if used)',
-    },
-    errorIcon: {
-      value: '{sem.colors.textColor.default.error}',
-      type: 'color',
-      description: 'Sets color for an error input field icon',
-    },
-    textAreaIconColor: {
-      value: '{sem.colors.textColor.inverted.secondary}',
-      type: 'color',
-      description: "Sets backgroundColor for a text area field's 'resize' icon",
-    },
-  },
-  paddingContentLeft: {
-    value: '{spacing.5}',
-    type: 'spacing',
-    description: 'Sets left padding between content and container',
-    compact: {
-      value: '{spacing.4}',
-      type: 'spacing',
-      description: 'Sets left padding for compact field',
-    },
-  },
-  paddingContentRight: {
-    value: '{spacing.0}',
-    type: 'spacing',
-    description: 'Sets right padding between content and addOn',
-    compact: {
-      value: '{spacing.0}',
-      type: 'spacing',
-      description: 'Sets right padding between content and addOn for compact field',
     },
   },
   container: {
@@ -211,38 +41,6 @@ const field = {
       type: 'sizing',
       description: 'Sets fixed height for compact field content container',
     },
-  },
-  borderWidth: {
-    '1': {
-      value: '{borderWidth.1}',
-      type: 'borderWidth',
-      description: "Sets border width for slider's input field",
-    },
-    '2': {
-      value: '{borderWidth.2}',
-      type: 'borderWidth',
-      description: "Sets border width for slider's input field for focused and error state",
-    },
-  },
-  borderRadius: {
-    value: '{borderRadius.2}',
-    type: 'borderRadius',
-    description: 'Sets field border radius',
-  },
-  hintGap: {
-    value: '{spacing.3}',
-    type: 'spacing',
-    description: 'Sets spacing between icon and hint text',
-  },
-  paddingVertical: {
-    value: '{spacing.6}',
-    type: 'spacing',
-    description: 'Sets top and bottom padding for text area',
-  },
-  hintIconSize: {
-    value: '{sem.icon.size.2}',
-    type: 'sizing',
-    description: 'Sets icon size for field error hint icon',
   },
   minWidth: {
     small: {
@@ -284,27 +82,12 @@ const field = {
       },
     },
   },
-  input: {
-    normal: {
-      value: '{sem.typography.normal.body02}',
-      type: 'typography',
-      description: "Sets text style for field prefix/input/suffix/placeholder ('normal' size)",
+  content: {
+    padding: {
+      value: '{spacing.0} {spacing.0} {spacing.0} {spacing.5}',
+      type: 'spacing',
+      description: 'Sets horizontal/vertical padding for field content',
     },
-    compact: {
-      value: '{sem.typography.normal.body03}',
-      type: 'typography',
-      description: "Sets text style for field prefix/input/suffix/placeholder ('compact' size)",
-    },
-  },
-  label: {
-    value: '{sem.typography.normal.label03}',
-    type: 'typography',
-    description: 'Sets text style for field label',
-  },
-  hint: {
-    value: '{sem.typography.normal.body03}',
-    type: 'typography',
-    description: 'Sets text style for field hint (if shown)',
   },
 } as const;
 

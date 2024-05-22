@@ -1,10 +1,10 @@
 import * as React from 'react';
 import type { SemanticColorsKey } from 'theme/tokens/semantic/colors';
+import { generateTestDataId } from 'utils/helpers';
+import type { TestId } from 'utils/types';
 
 import { cardContainer, topContainer, infoContainer, descriptionContainer } from './Snackbar.style';
 import useTheme from '../../../hooks/useTheme';
-import { generateTestDataId } from '../../../utils/helpers';
-import type { TestId } from '../../../utils/types';
 import type {
   NotificationActions,
   NotificationStyleType,

@@ -19,7 +19,7 @@ export type SwitchProps = Partial<SwitchAria> & {
   children?: React.ReactNode;
 } & TestProps;
 
-const Switch = React.forwardRef<HTMLInputElement, SwitchProps>((props, ref) => {
+const Switch = React.forwardRef<HTMLLabelElement, SwitchProps>((props, ref) => {
   const {
     id,
     value,

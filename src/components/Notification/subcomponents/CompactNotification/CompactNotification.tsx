@@ -1,5 +1,7 @@
 import * as React from 'react';
 import type { SemanticColorsKey } from 'theme/tokens/semantic/colors';
+import { generateTestDataId } from 'utils/helpers';
+import type { TestId } from 'utils/types';
 
 import {
   actionsContainer,
@@ -10,8 +12,6 @@ import {
   messageContainer,
 } from './CompactNotification.style';
 import useTheme from '../../../../hooks/useTheme';
-import { generateTestDataId } from '../../../../utils/helpers';
-import type { TestId } from '../../../../utils/types';
 import Button from '../../../Button';
 import Icon from '../../../Icon';
 import type {
