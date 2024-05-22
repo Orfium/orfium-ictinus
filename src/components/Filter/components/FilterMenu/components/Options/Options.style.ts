@@ -30,12 +30,12 @@ export const emptyStyle = () => (theme: Theme) => {
   const tokens = getListItemTokens(theme);
 
   return css`
-    color: ${tokens('textColor.secondary')};
+    color: ${theme.tokens.colors.get('textColor.default.secondary')};
     height: ${tokens('height')};
-    padding: 0 ${tokens('paddingHorizontal')};
+    padding: 0 ${theme.dimension.spacing.get('md')};
 
     ${flexCenter};
 
-    ${generateStylesFromTokens(tokens('default'))};
+    ${generateStylesFromTokens(theme.tokens.typography.get('normal.body02'))};
   `;
 };

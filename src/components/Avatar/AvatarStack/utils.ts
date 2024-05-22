@@ -1,5 +1,6 @@
+import { PropsValidationError } from 'utils/errors';
+
 import type { AvatarStackProps } from './AvatarStack.types';
-import { PropsValidationError } from '../../../utils/errors';
 
 export const errors = [
   {

@@ -3,7 +3,7 @@ import Stack from '../storyUtils/Stack';
 import { currentDay } from './utils';
 import { openDatePicker } from './play-utils';
 import { options, CALENDAR_DEFAULT_OPTIONS } from './constants';
-import { FIGMA_URL, Function } from '../../utils/common';
+import { FIGMA_URL, Function } from 'utils/common';
 import { useState } from 'react';
 
 export default {

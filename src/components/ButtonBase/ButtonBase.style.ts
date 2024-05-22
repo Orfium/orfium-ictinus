@@ -2,6 +2,7 @@ import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 
 import type { ButtonBaseProps } from './ButtonBase';
+import { buttonColorToSemColor, typographySizes } from './constants';
 import type { Theme } from '../../theme';
 import { getButtonTokens } from '../Button/Button.tokens';
 import { generateStylesFromTokens } from 'components/Typography/utils';
@@ -28,59 +29,42 @@ export const buttonBaseStyle =
     const getButtonWidth = () => {
       if (isBlock) return '100%';
 
-      if (isIconButton) return tokens(`${size}.size` as const);
+      if (isIconButton) return tokens(`${size}.size`);
 
       return undefined;
-    };
-
-    const getButtonHeight = () => {
-      if (isIconButton) return tokens(`${size}.size` as const);
-
-      if (size === 'compact') return tokens('compact.size');
-
-      return 'auto';
-    };
-
-    const getButtonPadding = () => {
-      if (isIconButton) return 0;
-
-      const paddingVertical = size === 'normal' ? tokens('normal.paddingVertical') : 0;
-      const paddingHorizontal = tokens(`${size}.paddingHorizontal` as const);
-
-      return `${paddingVertical} ${paddingHorizontal}`;
     };
 
     const baseButtonStyles = {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      color: tokens(`${type}.textColor` as const),
+      color: theme.tokens.colors.get(buttonColorToSemColor[type].text),
       width: getButtonWidth(),
-      height: getButtonHeight(),
-      backgroundColor: tokens(
-        `${type}.backgroundColor.${isLoading ? 'active' : 'default'}` as const
+      height: tokens(`${size}.size`),
+      backgroundColor: theme.tokens.colors.get(
+        buttonColorToSemColor[type][isLoading ? 'activeFill' : 'defaultFill']
       ),
-      padding: getButtonPadding(),
+      padding: tokens(`${size}.padding`),
       borderRadius:
         isIconButton && shape === 'circle'
-          ? tokens('borderRadius.rounded')
-          : tokens('borderRadius.square'),
+          ? theme.dimension.borderRadius.get('circle')
+          : theme.dimension.borderRadius.get('md'),
       border: 'none',
       cursor: 'pointer',
       transition: 'background-color,border 150ms linear',
 
       ':focus-visible:not(:disabled)': {
-        backgroundColor: tokens(`${type}.backgroundColor.hover` as const),
+        backgroundColor: theme.tokens.colors.get(buttonColorToSemColor[type].hoverFill),
       },
       ':disabled': {
         opacity: theme.tokens.disabledState.get('default'),
         cursor: 'not-allowed',
       },
       ':hover:not(:disabled)': {
-        backgroundColor: tokens(`${type}.backgroundColor.hover` as const),
+        backgroundColor: theme.tokens.colors.get(buttonColorToSemColor[type].hoverFill),
       },
       ':active:not(:disabled), &[aria-expanded="true"]': {
-        backgroundColor: tokens(`${type}.backgroundColor.active` as const),
+        backgroundColor: theme.tokens.colors.get(buttonColorToSemColor[type].activeFill),
       },
     };
 
@@ -92,7 +76,7 @@ export const buttonBaseStyle =
         : {};
 
     return css`
-      ${generateStylesFromTokens(tokens(`text.${size}` as const))};
+      ${generateStylesFromTokens(theme.tokens.typography.get(typographySizes[size]))};
       ${baseButtonStyles};
       ${loadingStyles};
       ${sx?.container};

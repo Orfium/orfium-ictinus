@@ -1,6 +1,6 @@
 import Table from './Table';
 import TableFilterShowcase from '../storyUtils/TableFilterShowcase';
-import { FIGMA_URL } from '../../utils/common';
+import { FIGMA_URL } from 'utils/common';
 
 export default {
   title: 'Original Components/Table',

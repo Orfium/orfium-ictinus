@@ -1,0 +1,30 @@
+import { Meta } from '@storybook/addon-docs';
+import RadiusShowcase from '../../../../src/storybook/Showcases/RadiusShowcase';
+
+<Meta
+  title="Foundations/Design Tokens/Dimension/Border Radius"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+/>
+
+<SectionHeader
+  title={'Border Radius'}
+  sections={[
+    { title: 'Overview', href: '#overview' },
+    { title: 'Tokens', href: '#tokens' },
+  ]}
+/>
+
+## Overview
+
+Dimension border radius tokens define the curvature of the corners of an element's border, by pointing to the global border-radius tokens.
+
+For more information on the code implementation of the dimension border radius tokens and how to fetch them to your code [click here](../?path=/docs/utilities-theme-utilities--overview)
+
+## Tokens
+
+<RadiusShowcase type={'dimension'} />

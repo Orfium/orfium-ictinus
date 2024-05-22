@@ -5,7 +5,7 @@ import {
   MultiTextFieldShowcase,
   TextFieldShowCase,
 } from '../../components/storyUtils/TextFieldShowcases';
-import { FIGMA_URL } from '../../utils/common';
+import { FIGMA_URL } from 'utils/common';
 
 export default {
   title: 'Updated Components/Fields/TextField',

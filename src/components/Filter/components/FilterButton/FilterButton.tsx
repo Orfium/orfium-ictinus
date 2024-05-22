@@ -81,16 +81,20 @@ export const FilterButton = React.forwardRef<HTMLButtonElement, FilterButtonProp
       <div css={iconStyles({ isActive })}>
         <Icon
           name="triangleDown"
-          size={tokens('icon')}
-          color={tokens(isActive ? 'textColor.active' : 'textColor.default')}
+          size={theme.dimension.sizing.get('icon.sm')}
+          color={theme.tokens.colors.get(
+            isActive ? 'textColor.inverted.primary' : 'textColor.default.active'
+          )}
         />
       </div>
 
       {(isAdded || isPopulated) && (
         <Icon
           name="close"
-          size={tokens('icon')}
-          color={tokens(isActive ? 'textColor.active' : 'textColor.default')}
+          size={theme.dimension.sizing.get('icon.sm')}
+          color={theme.tokens.colors.get(
+            isActive ? 'textColor.inverted.primary' : 'textColor.default.active'
+          )}
           onClick={handleIconClick}
           dataTestPrefixId={`${dataTestPrefixId}_filter_close`}
         />

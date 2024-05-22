@@ -1,7 +1,6 @@
 import React from 'react';
 import { fireEvent, render } from 'test';
 
-import { createMockMediaMatcher } from '../../hooks/useBreakpoints.test';
 import { DEFAULT_USER_MENU } from '../storyUtils/TopAppBarShowcase';
 import TopAppBar from './TopAppBar';
 import { Mock } from 'vitest';
@@ -12,8 +11,6 @@ describe('TopAppBar', () => {
   let onKeyPressHandler: Mock;
 
   beforeEach(() => {
-    // @ts-ignore - set what matches will be
-    window.matchMedia = createMockMediaMatcher(true);
     onMenuIconClickMock = vi.fn();
     onSearchHandler = vi.fn();
     onKeyPressHandler = vi.fn();
@@ -34,9 +31,6 @@ describe('TopAppBar', () => {
   });
 
   it('should call onMenuClick One Time', async () => {
-    // @ts-ignore - set what matches will be
-    window.matchMedia = createMockMediaMatcher(false);
-
     const { findByTestId } = render(
       <TopAppBar onMenuIconClick={onMenuIconClickMock} userMenu={DEFAULT_USER_MENU} />
     );
@@ -47,9 +41,6 @@ describe('TopAppBar', () => {
     expect(onMenuIconClickMock).toHaveBeenCalledTimes(1);
   });
   it('should call onKeyPressHandler One Time', async () => {
-    // @ts-ignore - set what matches will be
-    window.matchMedia = createMockMediaMatcher(false);
-
     const { findByTestId } = render(
       <TopAppBar
         onMenuIconClick={onMenuIconClickMock}

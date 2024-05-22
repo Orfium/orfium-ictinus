@@ -1,21 +1,18 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 
-import { getDatePickerTokens } from './DatePicker.tokens';
 import type { Theme } from '../../theme';
 
 export const datePickerStyles =
   () =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getDatePickerTokens(theme);
-
     return css`
       position: absolute;
-      background-color: ${tokens('date.backgroundColor.default')};
+      background-color: ${theme.tokens.colors.get('palette.tertiary.base')};
       z-index: 10;
       margin-top: ${theme.globals.spacing.get('4')};
-      box-shadow: ${tokens('boxShadow')};
-      border-radius: ${tokens('date.container.borderRadius')};
-      border-color: ${tokens('container.borderColor')};
+      box-shadow: ${theme.tokens.boxShadow.get('3')};
+      border-radius: ${theme.dimension.borderRadius.get('md')};
+      border-color: ${theme.tokens.colors.get('borderColor.decorative.default')};
     `;
   };

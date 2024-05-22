@@ -2,9 +2,9 @@ import useTheme from 'hooks/useTheme';
 import { isUndefined } from 'lodash';
 import React from 'react';
 import { ProgressBar as AriaProgressBar } from 'react-aria-components';
+import { convertRemToPixels } from 'theme/utils';
 
 import { animationStyles } from './ProgressCircle.style';
-import { getProgressIndicatorTokens } from 'components/ProgressIndicator/ProgressIndicator.tokens';
 import type { ProgressIndicatorProps } from 'components/ProgressIndicator/ProgressIndicator.types';
 
 const ProgressCircle = React.forwardRef<
@@ -17,42 +17,45 @@ const ProgressCircle = React.forwardRef<
   };
 
   const theme = useTheme();
-  const tokens = getProgressIndicatorTokens(theme);
 
   const center = 16;
-  const circleSize = tokens('sizing.circular');
-  const circleStroke = Number.parseFloat(tokens('borderWidth.circular'));
+  const circleSize = theme.dimension.sizing.get('icon.sm');
+  const circleStroke = convertRemToPixels(
+    Number.parseFloat(theme.dimension.borderWidth.get('active'))
+  );
   const r = 16 - circleStroke;
   const c = 2 * r * Math.PI;
 
   const hasError = status === 'error';
 
   return (
-    <AriaProgressBar {...props} ref={ref}>
+    <AriaProgressBar {...props} ref={ref} css={{ display: 'flex' }}>
       {({ percentage = value ?? 75 }) => (
-        <>
-          <svg
-            width={circleSize}
-            height={circleSize}
-            viewBox="0 0 32 32"
-            fill="none"
-            strokeWidth={circleStroke}
-            data-testid={`${dataTestPrefixId}_circular_progress_container`}
-          >
-            <circle
-              cx={center}
-              cy={center}
-              r={14}
-              stroke={hasError ? tokens('backgroundColor.error') : tokens('backgroundColor.active')}
-              strokeDasharray={`${c} ${c}`}
-              strokeDashoffset={c - (percentage / 100) * c}
-              strokeLinecap="round"
-              transform="rotate(-90 16 16)"
-              css={animationStyles(isUndefined(value))}
-              data-testid={`${dataTestPrefixId}_circular_progress_value`}
-            />
-          </svg>
-        </>
+        <svg
+          width={circleSize}
+          height={circleSize}
+          viewBox="0 0 32 32"
+          fill="none"
+          strokeWidth={circleStroke}
+          data-testid={`${dataTestPrefixId}_circular_progress_container`}
+        >
+          <circle
+            cx={center}
+            cy={center}
+            r={14}
+            stroke={
+              hasError
+                ? theme.tokens.colors.get('textColor.inverted.error')
+                : theme.tokens.colors.get('palette.primary.muted')
+            }
+            strokeDasharray={`${c} ${c}`}
+            strokeDashoffset={c - (percentage / 100) * c}
+            strokeLinecap="round"
+            transform="rotate(-90 16 16)"
+            css={animationStyles(isUndefined(value))}
+            data-testid={`${dataTestPrefixId}_circular_progress_value`}
+          />
+        </svg>
       )}
     </AriaProgressBar>
   );

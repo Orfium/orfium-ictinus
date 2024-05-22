@@ -2,7 +2,7 @@ import PresentComponent from '../storyUtils/PresentComponent';
 import ModalShowcase from '../storyUtils/ModalShowcase';
 import Stack from '../storyUtils/Stack';
 import ModalComponent from './Modal';
-import { FIGMA_URL } from '../../utils/common';
+import { FIGMA_URL } from 'utils/common';
 
 export default {
   title: 'Original Components/Modal',

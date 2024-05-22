@@ -1,6 +1,6 @@
 import TopAppBar from './TopAppBar';
 import TopAppBarShowcase from '../storyUtils/TopAppBarShowcase';
-import { FIGMA_URL } from '../../utils/common';
+import { FIGMA_URL } from 'utils/common';
 
 export default {
   title: 'Original Components/TopNavBar',

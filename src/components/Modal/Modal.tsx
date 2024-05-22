@@ -1,12 +1,12 @@
 import { useTheme } from 'index';
 import React, { useEffect } from 'react';
+import { generateTestDataId } from 'utils/helpers';
+import type { TestId } from 'utils/types';
 
 import { backgroundContainer, cardSizing, closeContainer, modalContainer } from './Modal.style';
 import type { ModalContentProps } from './ModalContent/ModalContent';
 import ModalContent from './ModalContent/ModalContent';
 import useEscape from '../../hooks/useEscape';
-import { generateTestDataId } from '../../utils/helpers';
-import type { TestId } from '../../utils/types';
 import Card from '../Card';
 import IconButton from '../IconButton';
 import ClickAwayListener from '../utils/ClickAwayListener';

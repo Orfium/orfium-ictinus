@@ -68,6 +68,29 @@ exports[`TopAppBar > should render correctly 1`] = `
 }
 
 .emotion-2 {
+  cursor: pointer;
+  margin: 1.5rem 0px 1.5rem 0.25rem;
+}
+
+.emotion-3 {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.emotion-4 path {
+  fill: #175bf5!important;
+}
+
+.emotion-5 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -92,7 +115,7 @@ exports[`TopAppBar > should render correctly 1`] = `
   max-width: 25rem;
 }
 
-.emotion-3 {
+.emotion-6 {
   margin: auto;
   height: 100%;
   display: -webkit-box;
@@ -110,7 +133,7 @@ exports[`TopAppBar > should render correctly 1`] = `
   cursor: default;
 }
 
-.emotion-4 {
+.emotion-7 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -140,7 +163,7 @@ exports[`TopAppBar > should render correctly 1`] = `
   flex-grow: 0;
 }
 
-.emotion-5 {
+.emotion-8 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -165,14 +188,14 @@ exports[`TopAppBar > should render correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-6 {
+.emotion-9 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-7 {
+.emotion-10 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -191,9 +214,9 @@ exports[`TopAppBar > should render correctly 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   color: #194DCC;
-  height: auto;
+  height: 2.25rem;
   background-color: rgba(200,206,255,0);
-  padding: 0.5rem 1rem;
+  padding: 0rem 1rem 0rem 1rem;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
@@ -201,25 +224,25 @@ exports[`TopAppBar > should render correctly 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-7:focus-visible:not(:disabled) {
+.emotion-10:focus-visible:not(:disabled) {
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-7:disabled {
+.emotion-10:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-7:hover:not(:disabled) {
+.emotion-10:hover:not(:disabled) {
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-7:active:not(:disabled),
-.emotion-7[aria-expanded="true"] {
+.emotion-10:active:not(:disabled),
+.emotion-10[aria-expanded="true"] {
   background-color: rgba(200,206,255,0.30);
 }
 
-.emotion-8 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -235,7 +258,7 @@ exports[`TopAppBar > should render correctly 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-9 {
+.emotion-12 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -245,7 +268,7 @@ exports[`TopAppBar > should render correctly 1`] = `
   display: flex;
   width: 1.25rem;
   height: 1.25rem;
-  border-radius: 6.25rem;
+  border-radius: 624.9375rem;
   border: 0.0625rem solid;
   border-color: #B8CCFA;
   box-sizing: border-box;
@@ -275,13 +298,13 @@ exports[`TopAppBar > should render correctly 1`] = `
   letter-spacing: 0.00625rem;
 }
 
-.emotion-9 img {
-  border-radius: 6.25rem;
+.emotion-12 img {
+  border-radius: 624.9375rem;
   width: 100%;
   height: 100%;
 }
 
-.emotion-10 {
+.emotion-13 {
   width: 1.25rem;
   height: 1.25rem;
   display: -webkit-box;
@@ -290,12 +313,12 @@ exports[`TopAppBar > should render correctly 1`] = `
   display: flex;
 }
 
-.emotion-11 {
+.emotion-14 {
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-11 path {
+.emotion-14 path {
   fill: #194DCC!important;
 }
 
@@ -310,9 +333,29 @@ exports[`TopAppBar > should render correctly 1`] = `
     >
       <div
         class="emotion-2"
+        data-testid="menu-handler"
       >
         <div
           class="emotion-3"
+        >
+          <svg
+            class="emotion-4"
+            fill="none"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M2.93223 16C2.67568 16 2.45617 15.8979 2.27371 15.6937C2.09124 15.4895 2 15.2439 2 14.9568C2 14.6697 2.09124 14.4241 2.27371 14.2202C2.45617 14.0162 2.67568 13.9142 2.93223 13.9142H17.0678C17.3243 13.9142 17.5438 14.0163 17.7263 14.2205C17.9088 14.4247 18 14.6703 18 14.9574C18 15.2445 17.9088 15.49 17.7263 15.694C17.5438 15.898 17.3243 16 17.0678 16H2.93223ZM2.93223 11.0186C2.67568 11.0186 2.45617 10.9165 2.27371 10.7124C2.09124 10.5082 2 10.2625 2 9.97543C2 9.68833 2.09124 9.44279 2.27371 9.23882C2.45617 9.03484 2.67568 8.93286 2.93223 8.93286H17.0678C17.3243 8.93286 17.5438 9.03495 17.7263 9.23913C17.9088 9.44333 18 9.68898 18 9.97606C18 10.2632 17.9088 10.5087 17.7263 10.7127C17.5438 10.9166 17.3243 11.0186 17.0678 11.0186H2.93223ZM2.93223 6.0858C2.67568 6.0858 2.45617 5.9837 2.27371 5.7795C2.09124 5.57532 2 5.32967 2 5.04257C2 4.75549 2.09124 4.50996 2.27371 4.30599C2.45617 4.10199 2.67568 4 2.93223 4H17.0678C17.3243 4 17.5438 4.1021 17.7263 4.3063C17.9088 4.5105 18 4.75614 18 5.04323C18 5.33033 17.9088 5.57587 17.7263 5.77984C17.5438 5.98381 17.3243 6.0858 17.0678 6.0858H2.93223Z"
+              fill="#6265AD"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="emotion-5"
+      >
+        <div
+          class="emotion-6"
         >
           <strong>
             LOGO
@@ -322,26 +365,26 @@ exports[`TopAppBar > should render correctly 1`] = `
       </div>
     </div>
     <div
-      class="emotion-4"
+      class="emotion-7"
     />
     <div
-      class="emotion-5"
+      class="emotion-8"
     >
       <div
-        class="emotion-6"
+        class="emotion-9"
       >
         <button
           aria-haspopup="true"
           aria-label="Menu"
-          class="emotion-7"
+          class="emotion-10"
           data-testid="button-userMenu"
           type="button"
         >
           <span
-            class="emotion-8"
+            class="emotion-11"
           >
             <div
-              class="emotion-9"
+              class="emotion-12"
               data-testid="_avatar"
             >
               <img
@@ -352,10 +395,10 @@ exports[`TopAppBar > should render correctly 1`] = `
               Tom Cruise
             </span>
             <div
-              class="emotion-10"
+              class="emotion-13"
             >
               <svg
-                class="emotion-11"
+                class="emotion-14"
                 fill="none"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -442,6 +485,29 @@ exports[`TopAppBar > should render correctly on dark 1`] = `
 }
 
 .emotion-2 {
+  cursor: pointer;
+  margin: 1.5rem 0px 1.5rem 0.25rem;
+}
+
+.emotion-3 {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.emotion-4 path {
+  fill: #175bf5!important;
+}
+
+.emotion-5 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -466,7 +532,7 @@ exports[`TopAppBar > should render correctly on dark 1`] = `
   max-width: 25rem;
 }
 
-.emotion-3 {
+.emotion-6 {
   margin: auto;
   height: 100%;
   display: -webkit-box;
@@ -484,7 +550,7 @@ exports[`TopAppBar > should render correctly on dark 1`] = `
   cursor: default;
 }
 
-.emotion-4 {
+.emotion-7 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -514,7 +580,7 @@ exports[`TopAppBar > should render correctly on dark 1`] = `
   flex-grow: 0;
 }
 
-.emotion-5 {
+.emotion-8 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -539,14 +605,14 @@ exports[`TopAppBar > should render correctly on dark 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-6 {
+.emotion-9 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-7 {
+.emotion-10 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -565,9 +631,9 @@ exports[`TopAppBar > should render correctly on dark 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   color: #194DCC;
-  height: auto;
+  height: 2.25rem;
   background-color: rgba(200,206,255,0);
-  padding: 0.5rem 1rem;
+  padding: 0rem 1rem 0rem 1rem;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
@@ -575,25 +641,25 @@ exports[`TopAppBar > should render correctly on dark 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-7:focus-visible:not(:disabled) {
+.emotion-10:focus-visible:not(:disabled) {
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-7:disabled {
+.emotion-10:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-7:hover:not(:disabled) {
+.emotion-10:hover:not(:disabled) {
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-7:active:not(:disabled),
-.emotion-7[aria-expanded="true"] {
+.emotion-10:active:not(:disabled),
+.emotion-10[aria-expanded="true"] {
   background-color: rgba(200,206,255,0.30);
 }
 
-.emotion-8 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -609,7 +675,7 @@ exports[`TopAppBar > should render correctly on dark 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-9 {
+.emotion-12 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -619,7 +685,7 @@ exports[`TopAppBar > should render correctly on dark 1`] = `
   display: flex;
   width: 1.25rem;
   height: 1.25rem;
-  border-radius: 6.25rem;
+  border-radius: 624.9375rem;
   border: 0.0625rem solid;
   border-color: #B8CCFA;
   box-sizing: border-box;
@@ -649,13 +715,13 @@ exports[`TopAppBar > should render correctly on dark 1`] = `
   letter-spacing: 0.00625rem;
 }
 
-.emotion-9 img {
-  border-radius: 6.25rem;
+.emotion-12 img {
+  border-radius: 624.9375rem;
   width: 100%;
   height: 100%;
 }
 
-.emotion-10 {
+.emotion-13 {
   width: 1.25rem;
   height: 1.25rem;
   display: -webkit-box;
@@ -664,12 +730,12 @@ exports[`TopAppBar > should render correctly on dark 1`] = `
   display: flex;
 }
 
-.emotion-11 {
+.emotion-14 {
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-11 path {
+.emotion-14 path {
   fill: #194DCC!important;
 }
 
@@ -684,9 +750,29 @@ exports[`TopAppBar > should render correctly on dark 1`] = `
     >
       <div
         class="emotion-2"
+        data-testid="menu-handler"
       >
         <div
           class="emotion-3"
+        >
+          <svg
+            class="emotion-4"
+            fill="none"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M2.93223 16C2.67568 16 2.45617 15.8979 2.27371 15.6937C2.09124 15.4895 2 15.2439 2 14.9568C2 14.6697 2.09124 14.4241 2.27371 14.2202C2.45617 14.0162 2.67568 13.9142 2.93223 13.9142H17.0678C17.3243 13.9142 17.5438 14.0163 17.7263 14.2205C17.9088 14.4247 18 14.6703 18 14.9574C18 15.2445 17.9088 15.49 17.7263 15.694C17.5438 15.898 17.3243 16 17.0678 16H2.93223ZM2.93223 11.0186C2.67568 11.0186 2.45617 10.9165 2.27371 10.7124C2.09124 10.5082 2 10.2625 2 9.97543C2 9.68833 2.09124 9.44279 2.27371 9.23882C2.45617 9.03484 2.67568 8.93286 2.93223 8.93286H17.0678C17.3243 8.93286 17.5438 9.03495 17.7263 9.23913C17.9088 9.44333 18 9.68898 18 9.97606C18 10.2632 17.9088 10.5087 17.7263 10.7127C17.5438 10.9166 17.3243 11.0186 17.0678 11.0186H2.93223ZM2.93223 6.0858C2.67568 6.0858 2.45617 5.9837 2.27371 5.7795C2.09124 5.57532 2 5.32967 2 5.04257C2 4.75549 2.09124 4.50996 2.27371 4.30599C2.45617 4.10199 2.67568 4 2.93223 4H17.0678C17.3243 4 17.5438 4.1021 17.7263 4.3063C17.9088 4.5105 18 4.75614 18 5.04323C18 5.33033 17.9088 5.57587 17.7263 5.77984C17.5438 5.98381 17.3243 6.0858 17.0678 6.0858H2.93223Z"
+              fill="#6265AD"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="emotion-5"
+      >
+        <div
+          class="emotion-6"
         >
           <strong>
             LOGO
@@ -696,26 +782,26 @@ exports[`TopAppBar > should render correctly on dark 1`] = `
       </div>
     </div>
     <div
-      class="emotion-4"
+      class="emotion-7"
     />
     <div
-      class="emotion-5"
+      class="emotion-8"
     >
       <div
-        class="emotion-6"
+        class="emotion-9"
       >
         <button
           aria-haspopup="true"
           aria-label="Menu"
-          class="emotion-7"
+          class="emotion-10"
           data-testid="button-userMenu"
           type="button"
         >
           <span
-            class="emotion-8"
+            class="emotion-11"
           >
             <div
-              class="emotion-9"
+              class="emotion-12"
               data-testid="_avatar"
             >
               <img
@@ -726,10 +812,10 @@ exports[`TopAppBar > should render correctly on dark 1`] = `
               Tom Cruise
             </span>
             <div
-              class="emotion-10"
+              class="emotion-13"
             >
               <svg
-                class="emotion-11"
+                class="emotion-14"
                 fill="none"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"

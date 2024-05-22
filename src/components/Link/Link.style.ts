@@ -17,25 +17,37 @@ export const linkContainer =
   (theme: Theme): SerializedStyles => {
     const tokens = getLinkTokens(theme);
 
+    const isInverted = type === 'inverted';
+
     return css`
       display: ${placement === 'inline' ? 'inline-flex' : 'flex'};
-      gap: ${tokens('padding')};
-      color: ${tokens(`textColor.${type}.default` as LinkTokens)};
+      gap: ${theme.dimension.spacing.get('xs')};
+      color: ${theme.tokens.colors.get(
+        isInverted ? 'textColor.inverted.active' : 'textColor.default.active'
+      )};
       text-decoration: none;
       position: relative;
 
       &:hover,
       &[aria-expanded='true'] {
-        color: ${tokens(`textColor.${type}.hover` as LinkTokens)};
+        color: ${theme.tokens.colors.get(
+          isInverted ? 'textColor.inverted.primary' : 'textColor.default.primary'
+        )};
         path {
-          fill: ${tokens(`textColor.${type}.hover` as LinkTokens)} !important;
+          fill: ${theme.tokens.colors.get(
+            isInverted ? 'textColor.inverted.primary' : 'textColor.default.primary'
+          )} !important;
         }
       }
 
       &:visited {
-        color: ${tokens(`textColor.${type}.visited` as LinkTokens)};
+        color: ${theme.tokens.colors.get(
+          isInverted ? 'textColor.inverted.visited' : 'textColor.default.visited'
+        )};
         path {
-          fill: ${tokens(`textColor.${type}.visited` as LinkTokens)} !important;
+          fill: ${theme.tokens.colors.get(
+            isInverted ? 'textColor.inverted.visited' : 'textColor.default.visited'
+          )} !important;
         }
       }
 
@@ -44,7 +56,8 @@ export const linkContainer =
         position: absolute;
         inset: -3px -6px;
         border-radius: ${theme.globals.borderRadius.get('2')};
-        border: ${tokens('borderWidth.2')} solid ${tokens('borderColor.focused')};
+        border: ${theme.dimension.borderWidth.get('focused')} solid
+          ${theme.tokens.colors.get('borderColor.interactive.upsell')};
       }
 
       opacity: ${isDisabled ? theme.tokens.disabledState.get('default') : 1};

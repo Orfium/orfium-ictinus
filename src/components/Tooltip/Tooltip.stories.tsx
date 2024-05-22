@@ -1,7 +1,7 @@
 import Tooltip from './Tooltip';
 import Stack from '../storyUtils/Stack';
 import { hoverOnTooltips } from './utils';
-import { FIGMA_URL, Function } from '../../utils/common';
+import { FIGMA_URL, Function } from 'utils/common';
 import Button from '../Button';
 import TooltipShowcase from '../storyUtils/TooltipShowcase';
 

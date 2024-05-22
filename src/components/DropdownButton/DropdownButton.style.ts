@@ -2,9 +2,8 @@ import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import type { Theme } from 'theme';
 
-import type { ButtonTokens} from '../Button/Button.tokens';
-import { getButtonTokens } from '../Button/Button.tokens';
 import type { PrimitiveButtonTypes } from '../Button/Button.types';
+import { buttonColorToSemColor } from 'components/ButtonBase/constants';
 
 const rotateSVG = (deg: number) => {
   return {
@@ -43,12 +42,10 @@ export const buttonSpanStyle =
   };
 
 const getIconButtonActiveState = (theme: Theme, type: PrimitiveButtonTypes) => {
-  const tokens = getButtonTokens(theme);
-
   return {
-    backgroundColor: tokens(`${type}.backgroundColor.active` as ButtonTokens),
+    backgroundColor: theme.tokens.colors.get(buttonColorToSemColor[type].activeFill),
     ':hover:not(:disabled)': {
-      backgroundColor: tokens(`${type}.backgroundColor.active` as ButtonTokens),
+      backgroundColor: theme.tokens.colors.get(buttonColorToSemColor[type].activeFill),
     },
   };
 };

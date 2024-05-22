@@ -1,6 +1,6 @@
 import Typography from './Typography';
 import Stack from '../storyUtils/Stack';
-import { FIGMA_URL } from '../../utils/common';
+import { FIGMA_URL } from 'utils/common';
 import SectionHeader from '../../storybook/SectionHeader';
 
 export default {

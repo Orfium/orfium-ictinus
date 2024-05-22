@@ -4,11 +4,10 @@ import type { FCC } from 'react';
 import React from 'react';
 import isEqual from 'react-fast-compare';
 import type { ComponentSizes } from 'types';
+import { generateTestDataId } from 'utils/helpers';
+import type { TestProps } from 'utils/types';
 
 import { hintMessageStyle, textFieldStyle, wrapperStyle } from './TextInputBase.style';
-import { getTextInputBaseTokens } from './TextInputBase.tokens';
-import { generateTestDataId } from '../../utils/helpers';
-import type { TestProps } from '../../utils/types';
 import Icon from 'components/Icon';
 import type { AcceptedIconNames } from 'components/Icon';
 
@@ -32,7 +31,7 @@ export type TextInputBaseProps = {
     id?: string;
   };
   /** value of the input */
-  value?: string | number;
+  value?: string | number | null;
   /** Sx prop to override specific properties */
   sx?: {
     wrapper?: CSSObject;
@@ -59,8 +58,6 @@ const TextInputBase: FCC<
 }) => {
   const theme = useTheme();
 
-  const tokens = getTextInputBaseTokens(theme);
-
   const hintMessageToShow = status.hintMessage && (
     <div
       data-testid={generateTestDataId('error', dataTestId)}
@@ -68,9 +65,9 @@ const TextInputBase: FCC<
     >
       {!isDisabled && status.type === 'error' && size === 'normal' && (
         <Icon
-          color={tokens('textColor.errorHintColor')}
+          color={theme.tokens.colors.get('textColor.default.error')}
           name="warning"
-          size={tokens('hintIconSize')}
+          size={theme.dimension.sizing.get('icon.sm')}
         />
       )}
       <span id={status.id}>{status.hintMessage}</span>
