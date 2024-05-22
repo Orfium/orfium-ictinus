@@ -1,7 +1,7 @@
 .emotion-0 {
   display: inline-block;
-  border: 1px solid rgba(200,206,255,0.70);
-  border-radius: 4px;
+  border: 0.0625rem solid rgba(200,206,255,0.70);
+  border-radius: 0.25rem;
   background: #ffffff;
 }
 
@@ -21,7 +21,7 @@
 }
 
 .emotion-2 {
-  box-shadow: 0 1px 0 0 rgba(200,206,255,0.70);
+  box-shadow: 0 0.0625rem 0 0 rgba(200,206,255,0.70);
 }
 
 .emotion-4 {
@@ -32,7 +32,7 @@
   align-content: center;
   text-align: left;
   box-sizing: border-box;
-  padding: 8px 16px;
+  padding: 0.5rem 1rem;
   color: #52567a;
   font-family: Roboto;
   font-weight: 400;
@@ -63,7 +63,7 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 .emotion-6 {
@@ -73,8 +73,8 @@
 .emotion-18 {
   width: 100%;
   height: 2.75rem;
-  padding: 8px 16px;
-  border-bottom: 1px solid rgba(200,206,255,0.70);
+  padding: 0.5rem 1rem;
+  border-bottom: 0.0625rem solid rgba(200,206,255,0.70);
   box-sizing: border-box;
   -webkit-align-content: center;
   -ms-flex-line-pack: center;
@@ -110,11 +110,11 @@
   background: #ffffff;
   height: 2.75rem;
   width: 100%;
-  padding: 8px 16px;
+  padding: 0.5rem 2rem;
   box-sizing: border-box;
-  border-top: 1px solid rgba(200,206,255,0.70);
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
+  border-top: 0.0625rem solid rgba(200,206,255,0.70);
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
 }
 
 .emotion-108 {
@@ -126,7 +126,7 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 .emotion-109 {
@@ -151,6 +151,9 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -197,7 +200,7 @@
   width: -webkit-fill-available;
   width: -moz-available;
   width: fill-available;
-  padding: 0 0 0 0.75rem;
+  padding: 0rem 0rem 0rem 0.75rem;
 }
 
 .emotion-112>div {
@@ -340,7 +343,6 @@
 }
 
 .emotion-117 {
-  padding: 0.5rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -386,7 +388,7 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 32px;
+  gap: 2rem;
 }
 
 .emotion-121 {
@@ -394,7 +396,7 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
 }
 
 .emotion-122 {
@@ -451,8 +453,8 @@
   width: 1.75rem;
   height: 1.75rem;
   background-color: rgba(200,206,255,0);
-  padding: 0;
-  border-radius: 2.25rem;
+  padding: 0rem 0.5rem 0rem 0.5rem;
+  border-radius: 624.9375rem;
   border: none;
   cursor: pointer;
   -webkit-transition: background-color,border 150ms linear;
