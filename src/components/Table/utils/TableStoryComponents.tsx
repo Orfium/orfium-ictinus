@@ -1,6 +1,6 @@
 import type React from 'react';
 
-import type { TableRow, ColumnsConfig, TableColumn, RowsConfig } from '../types';
+import type { TableRow, ColumnsConfig, TableColumn, RowsConfig, PaginationConfig } from '../types';
 
 /** This is just a dummy component to be used in Storybook for showing the ColumnsConfig type on props */
 export const ColumnsConfigStory: React.FC<ColumnsConfig<unknown>> = () => null;
@@ -16,3 +16,6 @@ export const RowsConfigStory: React.FC<RowsConfig> = () => null;
 
 /** This is just a dummy component to be used in Storybook for showing the TableRow type on props */
 export const TableRowStory: React.FC<TableRow<unknown>> = () => null;
+
+/** This is just a dummy component to be used in Storybook for showing the PaginationConfig type on props */
+export const PaginationConfigStory: React.FC<PaginationConfig> = () => null;

@@ -57,7 +57,7 @@ const TTitle: React.FCC<Props> = ({
         )}
       </div>
 
-      <div>
+      <div css={{ display: 'flex', gap: '16px' }}>
         {hasVisibleActions && defaultAction}
         {columnsConfig && (
           <ColumnChooser

@@ -235,26 +235,34 @@
   fill: #ffffff!important;
 }
 
-.emotion-26 {
+.emotion-23 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+}
+
+.emotion-27 {
   width: 100%;
   border-collapse: collapse;
   table-layout: fixed;
 }
 
-.emotion-26 thead>tr>th:last-child,
-.emotion-26 tbody>tr>td:last-child {
+.emotion-27 thead>tr>th:last-child,
+.emotion-27 tbody>tr>td:last-child {
   border-right: none;
 }
 
-.emotion-26 tbody>tr:last-child>td {
+.emotion-27 tbody>tr:last-child>td {
   border-bottom: none;
 }
 
-.emotion-27 {
+.emotion-28 {
   box-shadow: 0 1px 0 0 rgba(200,206,255,0.70);
 }
 
-.emotion-29 {
+.emotion-30 {
   width: 52px;
   height: 2.75rem;
   -webkit-align-content: center;
@@ -271,20 +279,20 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-29 [data-header-role='options'] button {
+.emotion-30 [data-header-role='options'] button {
   opacity: 0;
 }
 
-.emotion-29:hover [data-header-role='options'] button,
-.emotion-29:focus-visible [data-header-role='options'] button {
+.emotion-30:hover [data-header-role='options'] button,
+.emotion-30:focus-visible [data-header-role='options'] button {
   opacity: 1;
 }
 
-.emotion-29 button:focus-visible {
+.emotion-30 button:focus-visible {
   opacity: 1;
 }
 
-.emotion-30 {
+.emotion-31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -296,11 +304,11 @@
   gap: 8px;
 }
 
-.emotion-31 {
+.emotion-32 {
   text-wrap: nowrap;
 }
 
-.emotion-32 {
+.emotion-33 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -315,13 +323,13 @@
   gap: 0.75rem;
 }
 
-.emotion-33 {
+.emotion-34 {
   display: block;
   cursor: pointer;
   position: relative;
 }
 
-.emotion-33>div {
+.emotion-34>div {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   width: 1.25rem;
@@ -335,13 +343,13 @@
   border-radius: 0.25rem;
 }
 
-.emotion-33 svg {
+.emotion-34 svg {
   visibility: hidden;
   opacity: 0;
 }
 
-.emotion-33:hover,
-.emotion-33[data-focus-visible='true'] {
+.emotion-34:hover,
+.emotion-34[data-focus-visible='true'] {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   background: rgba(200,206,255,0.20);
@@ -349,33 +357,33 @@
   border-radius: 100%;
 }
 
-.emotion-33[data-selected='true']>div,
-.emotion-33[data-indeterminate='true']>div {
+.emotion-34[data-selected='true']>div,
+.emotion-34[data-indeterminate='true']>div {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   border-color: rgba(200,206,255,0);
   background: #175BF5;
 }
 
-.emotion-33[data-selected='true'] svg,
-.emotion-33[data-indeterminate='true'] svg {
+.emotion-34[data-selected='true'] svg,
+.emotion-34[data-indeterminate='true'] svg {
   visibility: visible;
   opacity: 1;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
-.emotion-33[data-disabled='true'] {
+.emotion-34[data-disabled='true'] {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-33[data-disabled='true']:hover {
+.emotion-34[data-disabled='true']:hover {
   background: none;
   box-shadow: none;
 }
 
-.emotion-34 {
+.emotion-35 {
   width: 1.25rem;
   height: 1.25rem;
   display: -webkit-box;
@@ -384,16 +392,16 @@
   display: flex;
 }
 
-.emotion-35 {
+.emotion-36 {
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-35 path {
+.emotion-36 path {
   fill: #ffffff!important;
 }
 
-.emotion-36 {
+.emotion-37 {
   width: 100%;
   height: 2.75rem;
   -webkit-align-content: center;
@@ -410,28 +418,28 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-36 [data-header-role='options'] button {
+.emotion-37 [data-header-role='options'] button {
   opacity: 0;
 }
 
-.emotion-36:hover [data-header-role='options'] button,
-.emotion-36:focus-visible [data-header-role='options'] button {
+.emotion-37:hover [data-header-role='options'] button,
+.emotion-37:focus-visible [data-header-role='options'] button {
   opacity: 1;
 }
 
-.emotion-36 button:focus-visible {
+.emotion-37 button:focus-visible {
   opacity: 1;
-}
-
-.emotion-49 {
-  cursor: pointer;
-}
-
-.emotion-49:hover {
-  background: rgba(200,206,255,0.20);
 }
 
 .emotion-50 {
+  cursor: pointer;
+}
+
+.emotion-50:hover {
+  background: rgba(200,206,255,0.20);
+}
+
+.emotion-51 {
   width: 52px;
   height: 2.75rem;
   padding: 8px 16px;
@@ -442,7 +450,7 @@
   align-content: center;
 }
 
-.emotion-51 {
+.emotion-52 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -456,7 +464,7 @@
   justify-content: space-between;
 }
 
-.emotion-56 {
+.emotion-57 {
   width: 100%;
   height: 2.75rem;
   padding: 8px 16px;
@@ -467,12 +475,12 @@
   align-content: center;
 }
 
-.emotion-64 {
+.emotion-65 {
   cursor: pointer;
   background: rgba(200,206,255,0.30);
 }
 
-.emotion-64:hover {
+.emotion-65:hover {
   background: rgba(200,206,255,0.20);
 }
 
@@ -600,7 +608,9 @@
           </div>
         </div>
       </div>
-      <div>
+      <div
+        class="emotion-23"
+      >
         <div
           class="emotion-6"
         >
@@ -621,29 +631,29 @@
       </div>
     </div>
     <table
-      class="emotion-26"
+      class="emotion-27"
     >
       <thead
-        class="emotion-27"
+        class="emotion-28"
       >
         <tr
-          class="emotion-28"
+          class="emotion-29"
         >
           <th
-            class="emotion-29"
+            class="emotion-30"
             colspan="1"
           >
             <div
-              class="emotion-30"
+              class="emotion-31"
             >
               <div
-                class="emotion-31"
+                class="emotion-32"
               >
                 <div
-                  class="emotion-32"
+                  class="emotion-33"
                 >
                   <label
-                    class="emotion-33"
+                    class="emotion-34"
                     data-indeterminate="true"
                     data-rac=""
                     data-testid="undefined_undefined_checkbox"
@@ -658,11 +668,11 @@
                       />
                     </span>
                     <div
-                      class="emotion-34"
+                      class="emotion-35"
                       datatestprefixid="undefined_undefined_minus"
                     >
                       <svg
-                        class="emotion-35"
+                        class="emotion-36"
                         fill="none"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -679,56 +689,56 @@
             </div>
           </th>
           <th
-            class="emotion-36"
+            class="emotion-37"
             colspan="1"
           >
             <div
-              class="emotion-30"
+              class="emotion-31"
             >
               <div
-                class="emotion-31"
+                class="emotion-32"
               >
                 First Name
               </div>
             </div>
           </th>
           <th
-            class="emotion-36"
+            class="emotion-37"
             colspan="1"
           >
             <div
-              class="emotion-30"
+              class="emotion-31"
             >
               <div
-                class="emotion-31"
+                class="emotion-32"
               >
                 Last Name
               </div>
             </div>
           </th>
           <th
-            class="emotion-36"
+            class="emotion-37"
             colspan="1"
           >
             <div
-              class="emotion-30"
+              class="emotion-31"
             >
               <div
-                class="emotion-31"
+                class="emotion-32"
               >
                 Age
               </div>
             </div>
           </th>
           <th
-            class="emotion-36"
+            class="emotion-37"
             colspan="1"
           >
             <div
-              class="emotion-30"
+              class="emotion-31"
             >
               <div
-                class="emotion-31"
+                class="emotion-32"
               >
                 Job
               </div>
@@ -737,25 +747,25 @@
         </tr>
       </thead>
       <tbody
-        class="emotion-48"
+        class="emotion-49"
       >
         <tr
-          class="emotion-49"
+          class="emotion-50"
         >
           <td
-            class="emotion-50"
+            class="emotion-51"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               <div
                 class="px-1"
               >
                 <div
-                  class="emotion-32"
+                  class="emotion-33"
                 >
                   <label
-                    class="emotion-33"
+                    class="emotion-34"
                     data-rac=""
                     data-testid="undefined_undefined_checkbox"
                   >
@@ -769,11 +779,11 @@
                       />
                     </span>
                     <div
-                      class="emotion-34"
+                      class="emotion-35"
                       datatestprefixid="undefined_undefined_checkmark"
                     >
                       <svg
-                        class="emotion-35"
+                        class="emotion-36"
                         fill="none"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -790,59 +800,59 @@
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               Rachel
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               Berry
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               30
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               Fashion Executive
             </div>
           </td>
         </tr>
         <tr
-          class="emotion-64"
+          class="emotion-65"
         >
           <td
-            class="emotion-50"
+            class="emotion-51"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               <div
                 class="px-1"
               >
                 <div
-                  class="emotion-32"
+                  class="emotion-33"
                 >
                   <label
-                    class="emotion-33"
+                    class="emotion-34"
                     data-rac=""
                     data-selected="true"
                     data-testid="undefined_undefined_checkbox"
@@ -858,11 +868,11 @@
                       />
                     </span>
                     <div
-                      class="emotion-34"
+                      class="emotion-35"
                       datatestprefixid="undefined_undefined_checkmark"
                     >
                       <svg
-                        class="emotion-35"
+                        class="emotion-36"
                         fill="none"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -879,59 +889,59 @@
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               Ross
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               Geller
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               32
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               Paleontologist
             </div>
           </td>
         </tr>
         <tr
-          class="emotion-49"
+          class="emotion-50"
         >
           <td
-            class="emotion-50"
+            class="emotion-51"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               <div
                 class="px-1"
               >
                 <div
-                  class="emotion-32"
+                  class="emotion-33"
                 >
                   <label
-                    class="emotion-33"
+                    class="emotion-34"
                     data-rac=""
                     data-testid="undefined_undefined_checkbox"
                   >
@@ -945,11 +955,11 @@
                       />
                     </span>
                     <div
-                      class="emotion-34"
+                      class="emotion-35"
                       datatestprefixid="undefined_undefined_checkmark"
                     >
                       <svg
-                        class="emotion-35"
+                        class="emotion-36"
                         fill="none"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -966,59 +976,59 @@
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               Monica
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               Geller
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               31
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               Chef
             </div>
           </td>
         </tr>
         <tr
-          class="emotion-49"
+          class="emotion-50"
         >
           <td
-            class="emotion-50"
+            class="emotion-51"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               <div
                 class="px-1"
               >
                 <div
-                  class="emotion-32"
+                  class="emotion-33"
                 >
                   <label
-                    class="emotion-33"
+                    class="emotion-34"
                     data-rac=""
                     data-testid="undefined_undefined_checkbox"
                   >
@@ -1032,11 +1042,11 @@
                       />
                     </span>
                     <div
-                      class="emotion-34"
+                      class="emotion-35"
                       datatestprefixid="undefined_undefined_checkmark"
                     >
                       <svg
-                        class="emotion-35"
+                        class="emotion-36"
                         fill="none"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -1053,59 +1063,59 @@
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               Chandler
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               Bing
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               32
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               ?
             </div>
           </td>
         </tr>
         <tr
-          class="emotion-49"
+          class="emotion-50"
         >
           <td
-            class="emotion-50"
+            class="emotion-51"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               <div
                 class="px-1"
               >
                 <div
-                  class="emotion-32"
+                  class="emotion-33"
                 >
                   <label
-                    class="emotion-33"
+                    class="emotion-34"
                     data-rac=""
                     data-testid="undefined_undefined_checkbox"
                   >
@@ -1119,11 +1129,11 @@
                       />
                     </span>
                     <div
-                      class="emotion-34"
+                      class="emotion-35"
                       datatestprefixid="undefined_undefined_checkmark"
                     >
                       <svg
-                        class="emotion-35"
+                        class="emotion-36"
                         fill="none"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -1140,59 +1150,59 @@
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               Joey
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               Tribbiani
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               30
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               Actor
             </div>
           </td>
         </tr>
         <tr
-          class="emotion-64"
+          class="emotion-65"
         >
           <td
-            class="emotion-50"
+            class="emotion-51"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               <div
                 class="px-1"
               >
                 <div
-                  class="emotion-32"
+                  class="emotion-33"
                 >
                   <label
-                    class="emotion-33"
+                    class="emotion-34"
                     data-rac=""
                     data-selected="true"
                     data-testid="undefined_undefined_checkbox"
@@ -1208,11 +1218,11 @@
                       />
                     </span>
                     <div
-                      class="emotion-34"
+                      class="emotion-35"
                       datatestprefixid="undefined_undefined_checkmark"
                     >
                       <svg
-                        class="emotion-35"
+                        class="emotion-36"
                         fill="none"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -1229,59 +1239,59 @@
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               Phoebe
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               Buffay
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               31
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               Massage Therapist
             </div>
           </td>
         </tr>
         <tr
-          class="emotion-49"
+          class="emotion-50"
         >
           <td
-            class="emotion-50"
+            class="emotion-51"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               <div
                 class="px-1"
               >
                 <div
-                  class="emotion-32"
+                  class="emotion-33"
                 >
                   <label
-                    class="emotion-33"
+                    class="emotion-34"
                     data-rac=""
                     data-testid="undefined_undefined_checkbox"
                   >
@@ -1295,11 +1305,11 @@
                       />
                     </span>
                     <div
-                      class="emotion-34"
+                      class="emotion-35"
                       datatestprefixid="undefined_undefined_checkmark"
                     >
                       <svg
-                        class="emotion-35"
+                        class="emotion-36"
                         fill="none"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -1316,59 +1326,59 @@
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               Gunther
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               N/A
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               35
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               Central Perk Manager
             </div>
           </td>
         </tr>
         <tr
-          class="emotion-64"
+          class="emotion-65"
         >
           <td
-            class="emotion-50"
+            class="emotion-51"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               <div
                 class="px-1"
               >
                 <div
-                  class="emotion-32"
+                  class="emotion-33"
                 >
                   <label
-                    class="emotion-33"
+                    class="emotion-34"
                     data-rac=""
                     data-selected="true"
                     data-testid="undefined_undefined_checkbox"
@@ -1384,11 +1394,11 @@
                       />
                     </span>
                     <div
-                      class="emotion-34"
+                      class="emotion-35"
                       datatestprefixid="undefined_undefined_checkmark"
                     >
                       <svg
-                        class="emotion-35"
+                        class="emotion-36"
                         fill="none"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -1405,59 +1415,59 @@
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               Janice
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               Litman-Foralnik
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               35
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               Personal Shopper
             </div>
           </td>
         </tr>
         <tr
-          class="emotion-49"
+          class="emotion-50"
         >
           <td
-            class="emotion-50"
+            class="emotion-51"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               <div
                 class="px-1"
               >
                 <div
-                  class="emotion-32"
+                  class="emotion-33"
                 >
                   <label
-                    class="emotion-33"
+                    class="emotion-34"
                     data-rac=""
                     data-testid="undefined_undefined_checkbox"
                   >
@@ -1471,11 +1481,11 @@
                       />
                     </span>
                     <div
-                      class="emotion-34"
+                      class="emotion-35"
                       datatestprefixid="undefined_undefined_checkmark"
                     >
                       <svg
-                        class="emotion-35"
+                        class="emotion-36"
                         fill="none"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -1492,59 +1502,59 @@
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               Richard
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               Burke
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               50
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               Ophthalmologist
             </div>
           </td>
         </tr>
         <tr
-          class="emotion-49"
+          class="emotion-50"
         >
           <td
-            class="emotion-50"
+            class="emotion-51"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               <div
                 class="px-1"
               >
                 <div
-                  class="emotion-32"
+                  class="emotion-33"
                 >
                   <label
-                    class="emotion-33"
+                    class="emotion-34"
                     data-rac=""
                     data-testid="undefined_undefined_checkbox"
                   >
@@ -1558,11 +1568,11 @@
                       />
                     </span>
                     <div
-                      class="emotion-34"
+                      class="emotion-35"
                       datatestprefixid="undefined_undefined_checkmark"
                     >
                       <svg
-                        class="emotion-35"
+                        class="emotion-36"
                         fill="none"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -1579,59 +1589,59 @@
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               Estelle
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               Leonard
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               N/A
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               Talent Agent
             </div>
           </td>
         </tr>
         <tr
-          class="emotion-49"
+          class="emotion-50"
         >
           <td
-            class="emotion-50"
+            class="emotion-51"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               <div
                 class="px-1"
               >
                 <div
-                  class="emotion-32"
+                  class="emotion-33"
                 >
                   <label
-                    class="emotion-33"
+                    class="emotion-34"
                     data-rac=""
                     data-testid="undefined_undefined_checkbox"
                   >
@@ -1645,11 +1655,11 @@
                       />
                     </span>
                     <div
-                      class="emotion-34"
+                      class="emotion-35"
                       datatestprefixid="undefined_undefined_checkmark"
                     >
                       <svg
-                        class="emotion-35"
+                        class="emotion-36"
                         fill="none"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -1666,59 +1676,59 @@
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               Mike
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               Hannigan
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               31
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               N/A
             </div>
           </td>
         </tr>
         <tr
-          class="emotion-49"
+          class="emotion-50"
         >
           <td
-            class="emotion-50"
+            class="emotion-51"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               <div
                 class="px-1"
               >
                 <div
-                  class="emotion-32"
+                  class="emotion-33"
                 >
                   <label
-                    class="emotion-33"
+                    class="emotion-34"
                     data-rac=""
                     data-testid="undefined_undefined_checkbox"
                   >
@@ -1732,11 +1742,11 @@
                       />
                     </span>
                     <div
-                      class="emotion-34"
+                      class="emotion-35"
                       datatestprefixid="undefined_undefined_checkmark"
                     >
                       <svg
-                        class="emotion-35"
+                        class="emotion-36"
                         fill="none"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -1753,59 +1763,59 @@
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               Charlie
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               Wheeler
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               28
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               Paleontologist
             </div>
           </td>
         </tr>
         <tr
-          class="emotion-49"
+          class="emotion-50"
         >
           <td
-            class="emotion-50"
+            class="emotion-51"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               <div
                 class="px-1"
               >
                 <div
-                  class="emotion-32"
+                  class="emotion-33"
                 >
                   <label
-                    class="emotion-33"
+                    class="emotion-34"
                     data-rac=""
                     data-testid="undefined_undefined_checkbox"
                   >
@@ -1819,11 +1829,11 @@
                       />
                     </span>
                     <div
-                      class="emotion-34"
+                      class="emotion-35"
                       datatestprefixid="undefined_undefined_checkmark"
                     >
                       <svg
-                        class="emotion-35"
+                        class="emotion-36"
                         fill="none"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -1840,59 +1850,59 @@
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               Emily
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               Waltham
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               28
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               N/A
             </div>
           </td>
         </tr>
         <tr
-          class="emotion-49"
+          class="emotion-50"
         >
           <td
-            class="emotion-50"
+            class="emotion-51"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               <div
                 class="px-1"
               >
                 <div
-                  class="emotion-32"
+                  class="emotion-33"
                 >
                   <label
-                    class="emotion-33"
+                    class="emotion-34"
                     data-rac=""
                     data-testid="undefined_undefined_checkbox"
                   >
@@ -1906,11 +1916,11 @@
                       />
                     </span>
                     <div
-                      class="emotion-34"
+                      class="emotion-35"
                       datatestprefixid="undefined_undefined_checkmark"
                     >
                       <svg
-                        class="emotion-35"
+                        class="emotion-36"
                         fill="none"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -1927,59 +1937,59 @@
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               Carol
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               Willick
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               35
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               N/A
             </div>
           </td>
         </tr>
         <tr
-          class="emotion-49"
+          class="emotion-50"
         >
           <td
-            class="emotion-50"
+            class="emotion-51"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               <div
                 class="px-1"
               >
                 <div
-                  class="emotion-32"
+                  class="emotion-33"
                 >
                   <label
-                    class="emotion-33"
+                    class="emotion-34"
                     data-rac=""
                     data-testid="undefined_undefined_checkbox"
                   >
@@ -1993,11 +2003,11 @@
                       />
                     </span>
                     <div
-                      class="emotion-34"
+                      class="emotion-35"
                       datatestprefixid="undefined_undefined_checkmark"
                     >
                       <svg
-                        class="emotion-35"
+                        class="emotion-36"
                         fill="none"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -2014,39 +2024,474 @@
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               Frank
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               Buffay Jr.
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               29
             </div>
           </td>
           <td
-            class="emotion-56"
+            class="emotion-57"
           >
             <div
-              class="emotion-51"
+              class="emotion-52"
             >
               N/A
+            </div>
+          </td>
+        </tr>
+        <tr
+          class="emotion-50"
+        >
+          <td
+            class="emotion-51"
+          >
+            <div
+              class="emotion-52"
+            >
+              <div
+                class="px-1"
+              >
+                <div
+                  class="emotion-33"
+                >
+                  <label
+                    class="emotion-34"
+                    data-rac=""
+                    data-testid="undefined_undefined_checkbox"
+                  >
+                    <span
+                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                    >
+                      <input
+                        data-testid="undefined_undefined_checkbox"
+                        title=""
+                        type="checkbox"
+                      />
+                    </span>
+                    <div
+                      class="emotion-35"
+                      datatestprefixid="undefined_undefined_checkmark"
+                    >
+                      <svg
+                        class="emotion-36"
+                        fill="none"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
+                          fill="#6265AD"
+                        />
+                      </svg>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td
+            class="emotion-57"
+          >
+            <div
+              class="emotion-52"
+            >
+              Barry
+            </div>
+          </td>
+          <td
+            class="emotion-57"
+          >
+            <div
+              class="emotion-52"
+            >
+              Farber
+            </div>
+          </td>
+          <td
+            class="emotion-57"
+          >
+            <div
+              class="emotion-52"
+            >
+              30
+            </div>
+          </td>
+          <td
+            class="emotion-57"
+          >
+            <div
+              class="emotion-52"
+            >
+              Orthodontist
+            </div>
+          </td>
+        </tr>
+        <tr
+          class="emotion-50"
+        >
+          <td
+            class="emotion-51"
+          >
+            <div
+              class="emotion-52"
+            >
+              <div
+                class="px-1"
+              >
+                <div
+                  class="emotion-33"
+                >
+                  <label
+                    class="emotion-34"
+                    data-rac=""
+                    data-testid="undefined_undefined_checkbox"
+                  >
+                    <span
+                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                    >
+                      <input
+                        data-testid="undefined_undefined_checkbox"
+                        title=""
+                        type="checkbox"
+                      />
+                    </span>
+                    <div
+                      class="emotion-35"
+                      datatestprefixid="undefined_undefined_checkmark"
+                    >
+                      <svg
+                        class="emotion-36"
+                        fill="none"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
+                          fill="#6265AD"
+                        />
+                      </svg>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td
+            class="emotion-57"
+          >
+            <div
+              class="emotion-52"
+            >
+              Mr. Heckles
+            </div>
+          </td>
+          <td
+            class="emotion-57"
+          >
+            <div
+              class="emotion-52"
+            >
+              N/A
+            </div>
+          </td>
+          <td
+            class="emotion-57"
+          >
+            <div
+              class="emotion-52"
+            >
+              60
+            </div>
+          </td>
+          <td
+            class="emotion-57"
+          >
+            <div
+              class="emotion-52"
+            >
+              Retired
+            </div>
+          </td>
+        </tr>
+        <tr
+          class="emotion-50"
+        >
+          <td
+            class="emotion-51"
+          >
+            <div
+              class="emotion-52"
+            >
+              <div
+                class="px-1"
+              >
+                <div
+                  class="emotion-33"
+                >
+                  <label
+                    class="emotion-34"
+                    data-rac=""
+                    data-testid="undefined_undefined_checkbox"
+                  >
+                    <span
+                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                    >
+                      <input
+                        data-testid="undefined_undefined_checkbox"
+                        title=""
+                        type="checkbox"
+                      />
+                    </span>
+                    <div
+                      class="emotion-35"
+                      datatestprefixid="undefined_undefined_checkmark"
+                    >
+                      <svg
+                        class="emotion-36"
+                        fill="none"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
+                          fill="#6265AD"
+                        />
+                      </svg>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td
+            class="emotion-57"
+          >
+            <div
+              class="emotion-52"
+            >
+              Tags
+            </div>
+          </td>
+          <td
+            class="emotion-57"
+          >
+            <div
+              class="emotion-52"
+            >
+              Jones
+            </div>
+          </td>
+          <td
+            class="emotion-57"
+          >
+            <div
+              class="emotion-52"
+            >
+              24
+            </div>
+          </td>
+          <td
+            class="emotion-57"
+          >
+            <div
+              class="emotion-52"
+            >
+              Assistant
+            </div>
+          </td>
+        </tr>
+        <tr
+          class="emotion-50"
+        >
+          <td
+            class="emotion-51"
+          >
+            <div
+              class="emotion-52"
+            >
+              <div
+                class="px-1"
+              >
+                <div
+                  class="emotion-33"
+                >
+                  <label
+                    class="emotion-34"
+                    data-rac=""
+                    data-testid="undefined_undefined_checkbox"
+                  >
+                    <span
+                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                    >
+                      <input
+                        data-testid="undefined_undefined_checkbox"
+                        title=""
+                        type="checkbox"
+                      />
+                    </span>
+                    <div
+                      class="emotion-35"
+                      datatestprefixid="undefined_undefined_checkmark"
+                    >
+                      <svg
+                        class="emotion-36"
+                        fill="none"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
+                          fill="#6265AD"
+                        />
+                      </svg>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td
+            class="emotion-57"
+          >
+            <div
+              class="emotion-52"
+            >
+              Pete
+            </div>
+          </td>
+          <td
+            class="emotion-57"
+          >
+            <div
+              class="emotion-52"
+            >
+              Becker
+            </div>
+          </td>
+          <td
+            class="emotion-57"
+          >
+            <div
+              class="emotion-52"
+            >
+              32
+            </div>
+          </td>
+          <td
+            class="emotion-57"
+          >
+            <div
+              class="emotion-52"
+            >
+              Software Engineer
+            </div>
+          </td>
+        </tr>
+        <tr
+          class="emotion-50"
+        >
+          <td
+            class="emotion-51"
+          >
+            <div
+              class="emotion-52"
+            >
+              <div
+                class="px-1"
+              >
+                <div
+                  class="emotion-33"
+                >
+                  <label
+                    class="emotion-34"
+                    data-rac=""
+                    data-testid="undefined_undefined_checkbox"
+                  >
+                    <span
+                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                    >
+                      <input
+                        data-testid="undefined_undefined_checkbox"
+                        title=""
+                        type="checkbox"
+                      />
+                    </span>
+                    <div
+                      class="emotion-35"
+                      datatestprefixid="undefined_undefined_checkmark"
+                    >
+                      <svg
+                        class="emotion-36"
+                        fill="none"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
+                          fill="#6265AD"
+                        />
+                      </svg>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td
+            class="emotion-57"
+          >
+            <div
+              class="emotion-52"
+            >
+              Paul
+            </div>
+          </td>
+          <td
+            class="emotion-57"
+          >
+            <div
+              class="emotion-52"
+            >
+              Stevens
+            </div>
+          </td>
+          <td
+            class="emotion-57"
+          >
+            <div
+              class="emotion-52"
+            >
+              50
+            </div>
+          </td>
+          <td
+            class="emotion-57"
+          >
+            <div
+              class="emotion-52"
+            >
+              Lawyer
             </div>
           </td>
         </tr>

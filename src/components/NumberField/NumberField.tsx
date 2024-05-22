@@ -122,7 +122,7 @@ const NumberField = React.forwardRef<HTMLInputElement, NumberFieldProps>((props,
           </ReactAriaNumberField>
         </div>
         {suffixContent && !hasStepper && (
-          <div aria-hidden={!suffixContent} css={suffixContainerStyle()}>
+          <div aria-hidden={!suffixContent} css={suffixContainerStyle({})}>
             {suffixContent}
           </div>
         )}
