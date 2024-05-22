@@ -2,7 +2,6 @@ import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import type { Theme } from 'theme';
 
-import { getControlsTokens } from '../Controls.tokens';
 import type { LabelConfig } from '../Controls.types';
 
 export const radioContainerStyles =
@@ -12,14 +11,12 @@ export const radioContainerStyles =
     isFocusVisible,
   }: Pick<LabelConfig, 'placement' | 'sx'> & { isFocusVisible?: boolean }) =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getControlsTokens(theme);
-
     return css`
       label {
         display: flex;
         flex-direction: ${placement === 'right' ? 'row' : 'row-reverse'};
         align-items: center;
-        gap: ${tokens('radio.padding')};
+        gap: ${theme.dimension.spacing.get('md')};
 
         position: relative;
         cursor: pointer;
@@ -27,13 +24,14 @@ export const radioContainerStyles =
         &:before {
           content: '';
           display: inline-block;
-          width: ${tokens('radio.size.ring')};
-          height: ${tokens('radio.size.ring')};
+          width: ${theme.dimension.sizing.get('icon.md')};
+          height: ${theme.dimension.sizing.get('icon.md')};
           box-sizing: border-box;
-          border: ${tokens('radio.borderWidth')} solid ${tokens('radio.borderColor.default')};
-          border-radius: ${tokens('radio.borderRadius')};
+          border: ${theme.dimension.borderWidth.get('active')} solid
+            ${theme.tokens.colors.get('borderColor.interactive.default')};
+          border-radius: ${theme.dimension.borderRadius.get('circle')};
           transition: all 200ms;
-          background: ${tokens('radio.backgroundColor.default')};
+          background: ${theme.tokens.colors.get('backgroundColor.transparent')};
 
           ${isFocusVisible &&
           `
@@ -49,7 +47,7 @@ export const radioContainerStyles =
 
         &[data-selected='true'] {
           &:before {
-            border-color: ${tokens('radio.borderColor.active')};
+            border-color: ${theme.tokens.colors.get('palette.primary.base')};
             border-radius: 50%;
           }
 
@@ -63,9 +61,9 @@ export const radioContainerStyles =
             display: block;
             position: absolute;
             border-radius: 50%;
-            width: ${tokens('radio.size.circle')};
-            height: ${tokens('radio.size.circle')};
-            background: ${tokens('radio.backgroundColor.active')};
+            width: ${theme.dimension.sizing.get('icon.xs')};
+            height: ${theme.dimension.sizing.get('icon.xs')};
+            background: ${theme.tokens.colors.get('palette.primary.base')};
             ${placement === 'right' ? 'left' : 'right'}: 4px;
             animation: circle 0.15s ease-in-out;
           }

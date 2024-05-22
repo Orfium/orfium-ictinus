@@ -17,16 +17,11 @@ export const selectWrapper =
     `;
   };
 
-export const suffixContainer =
-  (isOpen: boolean, isSearchable: boolean) =>
-  (theme: Theme): SerializedStyles => {
-    const tokens = getTextInputBaseTokens(theme);
-
-    return css`
-      padding: ${tokens('addOn.padding.normal.left')};
-      display: flex;
-      cursor: pointer;
-      transform: rotate(${isOpen && !isSearchable ? '180' : '0'}deg);
-      ${transition(0.2)}
-    `;
-  };
+export const suffixContainer = (isOpen: boolean, isSearchable: boolean) => (): SerializedStyles => {
+  return css`
+    display: flex;
+    cursor: pointer;
+    transform: rotate(${isOpen && !isSearchable ? '180' : '0'}deg);
+    ${transition(0.2)}
+  `;
+};

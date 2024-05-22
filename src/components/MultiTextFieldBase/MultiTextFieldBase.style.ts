@@ -103,8 +103,8 @@ export const textInputBaseOverrides =
         // ictinus spacing (the are calculated by combining internal absolute positioned component widths)
         // so we can override the existing TextFieldInputBase paddings to
         // perfectly position and align the content inside.
-        padding: `${rem(paddingTop)} ${rem(40)} ${rem(paddingBottom)} ${tokens(
-          'paddingContentLeft'
+        padding: `${rem(paddingTop)} ${rem(40)} ${rem(paddingBottom)} ${theme.globals.spacing.get(
+          '5'
         )}`,
         ...(isResponsive
           ? { width: 'max-content', minWidth: rem(tokens('minWidth.large.normal')) }

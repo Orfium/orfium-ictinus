@@ -2,8 +2,8 @@ import useTheme from 'hooks/useTheme';
 import React, { useCallback, useMemo } from 'react';
 import type { TestProps } from 'utils/types';
 
+import { tagColorToSemColor } from '../constants';
 import { iconStyles } from '../Tag.style';
-import { getTagTokens } from '../Tag.tokens';
 import type { TagProps } from '../Tag.types';
 import Icon from 'components/Icon';
 
@@ -16,8 +16,6 @@ const useGetTagUtils = ({
   dataTestPrefixId,
 }: Pick<TagProps, 'iconName' | 'color' | 'onSelect' | 'onClear' | 'isSelected'> & TestProps) => {
   const theme = useTheme();
-
-  const tokens = getTagTokens(theme);
 
   const isSelectable = onSelect && !onClear;
   const isClearable = Boolean(onClear);
@@ -41,23 +39,32 @@ const useGetTagUtils = ({
       return (
         <Icon
           dataTestId={`${dataTestPrefixId}_tag_prefix`}
-          size={tokens('iconSize')}
+          size={theme.dimension.sizing.get('icon.sm')}
           name="check"
-          color={tokens('textColor.blue')}
+          color={theme.tokens.colors.get('textColor.default.active')}
         />
       );
 
     if (!isInteractive && iconName)
       return (
         <Icon
-          size={tokens('iconSize')}
+          size={theme.dimension.sizing.get('icon.sm')}
           name={iconName}
-          color={tokens(`textColor.${color}` as const)}
+          color={theme.tokens.colors.get(tagColorToSemColor[color].text)}
         />
       );
 
     return null;
-  }, [color, dataTestPrefixId, iconName, isInteractive, isSelectable, isSelected, tokens]);
+  }, [
+    color,
+    dataTestPrefixId,
+    iconName,
+    isInteractive,
+    isSelectable,
+    isSelected,
+    theme.dimension.sizing,
+    theme.tokens.colors,
+  ]);
 
   const suffix = useMemo(
     () =>
@@ -66,14 +73,14 @@ const useGetTagUtils = ({
           <Icon
             onClick={onClear}
             hasHover={false}
-            size={tokens('iconSize')}
+            size={theme.dimension.sizing.get('icon.sm')}
             name="close"
-            color={tokens('textColor.blue')}
+            color={theme.tokens.colors.get('textColor.default.active')}
             dataTestId={`${dataTestPrefixId}_tag_suffix`}
           />
         </div>
       ) : null,
-    [dataTestPrefixId, isClearable, onClear, tokens]
+    [dataTestPrefixId, isClearable, onClear, theme.dimension.sizing, theme.tokens.colors]
   );
 
   return {

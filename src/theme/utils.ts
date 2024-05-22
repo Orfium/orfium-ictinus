@@ -12,6 +12,13 @@ const EXCLUDED = ['white', 'black', 'pale', 'neutral', 'gradient'];
 
 export const convertPointsToPixels = (pt: number): number => (96 / 72) * pt;
 
+export const convertRemToPixels = (rem) => {
+  return (
+    rem.toString().replace('rem', '') *
+    parseFloat(getComputedStyle(document.documentElement).fontSize)
+  );
+};
+
 export const colorShadesCreator = (
   base: string,
   per: number = BASE_PERCENTAGE,

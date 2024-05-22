@@ -15,6 +15,7 @@ import { Meta } from '@storybook/addon-docs';
   sections={[
     { title: 'Global Tier', href: '#global-tier' },
     { title: 'Theme Tier', href: '#theme-tier-(you-can-see-it-as-semantic-for-now)' },
+    { title: 'Dimension Tier', href: '#dimension-tier' },
     { title: 'Component Tier', href: '#component-tier' },
   ]}
 />
@@ -92,6 +93,31 @@ const textColor = {
 
 <Note>Example of theme tokens used to define ‘primary’ and ‘secondary’ text colors</Note>
 
+### Dimension Tier
+
+• Define various aspects of layout, spacing, sizing, and other dimensional properties within the user interface.
+
+• All theme attributes are fetched from the global tier
+
+```
+const dimensionBorderWidth = {
+  default: {
+    value: '{borderWidth.1}',
+    type: 'borderWidth',
+    description: "Sets 'default' border width for components",
+  },
+  active: {
+    value: '{borderWidth.2}',
+    type: 'borderWidth',
+    description: "Sets 'active' border width for components ",
+  }
+  ...
+}
+
+```
+
+<Note>Example of dimension tokens used to define the border width of elements</Note>
+
 ### Component Tier
 
 • Always reference component-specific attributes
@@ -118,8 +144,3 @@ const avatar = {
   ...
 }
 ```
-
-<Note>
-  Example of component tokens used to define background color and foreground color for the variant
-  of the avatar component
-</Note>

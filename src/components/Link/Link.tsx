@@ -1,9 +1,8 @@
 import useTheme from 'hooks/useTheme';
 import React from 'react';
 
+import { iconSize } from './constants';
 import { linkContainer } from './Link.style';
-import type { LinkTokens } from './Link.tokens';
-import { getLinkTokens } from './Link.tokens';
 import type { LinkProps } from './Link.types';
 import Icon from 'components/Icon';
 
@@ -22,11 +21,11 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
 
   const theme = useTheme();
 
-  const tokens = getLinkTokens(theme);
-
   const Component = component ?? 'a';
 
   const componentProps = component ? { to: props.href } : {};
+
+  const isInverted = type === 'inverted';
 
   return (
     <Component
@@ -40,8 +39,10 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
       {iconName && (
         <Icon
           name={iconName}
-          color={tokens(`textColor.${type}.default` as LinkTokens)}
-          size={tokens(`iconSize.${size}`)}
+          color={theme.tokens.colors.get(
+            isInverted ? 'textColor.inverted.active' : 'textColor.default.active'
+          )}
+          size={theme.dimension.sizing.get(iconSize[size])}
           dataTestId={`${dataTestPrefixId}_link_icon`}
         />
       )}

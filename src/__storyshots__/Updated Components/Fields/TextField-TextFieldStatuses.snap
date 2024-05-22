@@ -17,6 +17,9 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -63,8 +66,7 @@
   width: -webkit-fill-available;
   width: -moz-available;
   width: fill-available;
-  padding: 0 0 0 0.75rem;
-  padding-right: 0.75rem;
+  padding: 0rem 0rem 0rem 0.75rem;
 }
 
 .emotion-2>div {
@@ -226,6 +228,9 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -243,7 +248,7 @@
   cursor: text;
   height: 3.25rem;
   min-width: 8.75rem;
-  background-color: #FFEBF1;
+  background-color: #FFD6E5;
 }
 
 .emotion-7:hover {
@@ -341,6 +346,9 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -368,30 +376,6 @@
 .emotion-15:focus-within {
   box-shadow: 0 0 0 0.125rem #8EAAEC;
   background-color: rgba(200,206,255,0.30);
-}
-
-.emotion-16 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  vertical-align: top;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
-  padding: 0 0 0 0.75rem;
-}
-
-.emotion-16>div {
-  position: relative;
 }
 
 .emotion-18 {
@@ -622,7 +606,7 @@
           class="emotion-15"
         >
           <div
-            class="emotion-16"
+            class="emotion-2"
           >
             <div
               class="emotion-3"

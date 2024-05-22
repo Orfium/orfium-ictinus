@@ -1,5 +1,6 @@
 import { get } from 'lodash';
 
+import dimension from './dimension';
 import globals from './globals';
 import overrides from './overrides';
 import { getAAColor, getAAColorFromSwatches, getColor } from './palette';
@@ -11,6 +12,7 @@ const defaultTheme = (theming: ColorScheme): Theme => {
     globals,
     colorScheme: theming,
     overrides,
+    dimension,
     tokens: {
       ...get(tokens, theming || 'semantic', tokens.semantic),
     },

@@ -5,7 +5,6 @@ import type { Theme } from 'theme';
 import { rem } from 'theme/utils';
 
 import type { SelectMenuProps } from './SelectMenu';
-import { getListItemTokens } from 'components/List/List.tokens';
 import type { TextFieldProps } from 'components/TextField/TextField';
 
 export const optionStyle =
@@ -17,8 +16,6 @@ export const optionStyle =
     'ref' | 'label'
   >) =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getListItemTokens(theme);
-
     return css`
       padding: ${theme.globals.spacing.get('6')};
       font-size: ${theme.globals.typography.fontSize.get('4')};
@@ -26,7 +23,9 @@ export const optionStyle =
         ? darken(0.07, theme.globals.oldColors.white)
         : theme.globals.oldColors.white};
       cursor: default;
-      color: ${hasNoResultsExist ? tokens('textColor.secondary') : 'initial'};
+      color: ${hasNoResultsExist
+        ? theme.tokens.colors.get('textColor.default.secondary')
+        : 'initial'};
       text-align: ${hasNoResultsExist ? 'center' : 'initial'};
       text-overflow: ellipsis;
       white-space: nowrap;

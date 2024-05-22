@@ -1,17 +1,14 @@
-import type { SerializedStyles} from '@emotion/react';
+import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import type { Theme } from 'index';
 
-import { getListItemTokens } from 'components/List/List.tokens';
 import { generateStylesFromTokens } from 'components/Typography/utils';
 
 export const listItemTextWrapperStyles =
   (isGroupItem?: boolean, isHighlighted?: boolean) =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getListItemTokens(theme);
-
     return css`
-      color: ${tokens('textColor.default')};
+      color: ${theme.tokens.colors.get('textColor.default.primary')};
       font-weight: ${isGroupItem || isHighlighted ? 'bold' : 'initial'};
 
       white-space: nowrap;
@@ -39,10 +36,8 @@ export const listItemTextWrapperStyles =
 export const descriptionStyles =
   () =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getListItemTokens(theme);
-
     return css`
-      ${generateStylesFromTokens(tokens('secondaryText'))};
-      color: ${tokens('textColor.secondary')};
+      ${generateStylesFromTokens(theme.tokens.typography.get('normal.body03'))};
+      color: ${theme.tokens.colors.get('textColor.default.secondary')};
     `;
   };
