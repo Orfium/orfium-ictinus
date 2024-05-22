@@ -5,7 +5,7 @@ import isEqual from 'react-fast-compare';
 import type { DivProps } from 'utils/common';
 
 import { THOptions } from './components';
-import { thContainer, optionsContainer } from './TH.style';
+import { thContainer, optionsContainer, thContent } from './TH.style';
 import type { AcceptedIconNames } from 'components/Icon';
 import IconButton from 'components/IconButton';
 import type { RowSize } from 'components/Table/types';
@@ -43,7 +43,7 @@ const TH: React.FCC<Props & Pick<DivProps, 'onClick' | 'id'>> = ({
 }) => {
   const isSortable = Boolean(onSort);
   const isCheckbox = id === 'checkbox_select';
-  const isExpandedButton = id === 'details_iconButton'
+  const isExpandedButton = id === 'details_iconButton';
 
   const [hasVisibleOptions, setHasVisibleOptions] = React.useState(false);
 
@@ -84,7 +84,7 @@ const TH: React.FCC<Props & Pick<DivProps, 'onClick' | 'id'>> = ({
       })}
       {...rest}
     >
-      <div css={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+      <div css={thContent()}>
         <div css={{ textWrap: 'nowrap' }}>{children}</div>
         {isSortable && (
           <div css={optionsContainer()} data-header-role="options">

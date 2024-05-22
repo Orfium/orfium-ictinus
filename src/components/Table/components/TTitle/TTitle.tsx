@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import isEqual from 'react-fast-compare';
 
 import ColumnChooser from './components/ColumnChooser';
-import { tTitleContainer } from './TTitle.style';
+import { actionsContent, titleContent, tTitleContainer } from './TTitle.style';
 import type { TableProps } from 'components/Table/types';
 import Typography from 'components/Typography';
 
@@ -48,7 +48,7 @@ const TTitle: React.FCC<Props> = ({
 
   return (
     <div css={tTitleContainer()}>
-      <div css={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+      <div css={titleContent()}>
         {hasTitle && (
           <>
             {title}
@@ -57,7 +57,7 @@ const TTitle: React.FCC<Props> = ({
         )}
       </div>
 
-      <div css={{ display: 'flex', gap: '16px' }}>
+      <div css={actionsContent()}>
         {hasVisibleActions && defaultAction}
         {columnsConfig && (
           <ColumnChooser
