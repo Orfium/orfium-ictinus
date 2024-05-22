@@ -1,9 +1,7 @@
-import type { SerializedStyles} from '@emotion/react';
+import type { SerializedStyles } from '@emotion/react';
 import { css, keyframes } from '@emotion/react';
 import type { Theme } from 'theme';
 import { rem } from 'theme/utils';
-
-import { getButtonTokens } from '../../Button/Button.tokens';
 
 export const loaderWrapperStyle = (): SerializedStyles => {
   return css({
@@ -15,14 +13,12 @@ export const loaderWrapperStyle = (): SerializedStyles => {
 export const barWrapperStyle =
   () =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getButtonTokens(theme);
-
     return css({
       width: '100%',
       height: rem(4),
       overflow: 'hidden',
-      borderTopLeftRadius: tokens('borderRadius.square'),
-      borderTopRightRadius: tokens('borderRadius.square'),
+      borderTopLeftRadius: theme.dimension.borderRadius.get('md'),
+      borderTopRightRadius: theme.dimension.borderRadius.get('md'),
       position: 'relative',
 
       ':before': {

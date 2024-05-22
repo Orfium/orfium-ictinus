@@ -5,7 +5,6 @@ import path from 'path';
 import { optimizeLodashImports } from '@optimize-lodash/rollup-plugin';
 import react from '@vitejs/plugin-react';
 import { defineConfig, loadEnv } from 'vite';
-import type { UserConfig } from 'vite';
 import type * as vite from 'vite';
 import dts from 'vite-plugin-dts';
 import svgr from 'vite-plugin-svgr';
@@ -34,7 +33,7 @@ const plugins = [
   optimizeLodashImports() as vite.Plugin,
 ];
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }: { mode: string }): UserConfig => {
+export default defineConfig(({ mode }) => {
   // Load env file based on `mode` in the current working directory.
   // Set the third parameter to '' to load all env regardless of the `REACT_APP_` prefix.
   const env = loadEnv(mode, process.cwd(), '');

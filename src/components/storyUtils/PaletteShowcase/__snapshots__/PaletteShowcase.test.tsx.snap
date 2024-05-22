@@ -48,9 +48,9 @@ exports[`PaletteShowcase > should render correctly 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   color: #ffffff;
-  height: auto;
+  height: 2.25rem;
   background-color: #175BF5;
-  padding: 0.5rem 1rem;
+  padding: 0rem 1rem 0rem 1rem;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
@@ -14186,6 +14186,9 @@ exports[`PaletteShowcase > should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -14232,8 +14235,7 @@ exports[`PaletteShowcase > should render correctly 1`] = `
   width: -webkit-fill-available;
   width: -moz-available;
   width: fill-available;
-  padding: 0 0 0 0.75rem;
-  padding-right: 0.75rem;
+  padding: 0rem 0rem 0rem 0.75rem;
 }
 
 .emotion-774>div {

@@ -1,3 +1,10 @@
+import type { DimensionBorderRadius } from './dimension/borderRadius';
+import type { DimensionBorderWidth } from './dimension/borderWidth';
+import type { DimensionMinHeight } from './dimension/minHeight';
+import type { DimensionOpacity } from './dimension/opacity';
+import type { DimensionSizing } from './dimension/sizing';
+import type { DimensionSpacing } from './dimension/spacing';
+import type { DimensionState } from './dimension/state';
 import type { BorderRadius } from './globals/borderRadius';
 import type { BorderWidth } from './globals/borderWidth';
 import type { Colors } from './globals/colors';
@@ -12,7 +19,6 @@ import type { PaletteConfig } from './palette.config';
 import type { SemanticBoxShadow } from './tokens/semantic/boxShadow';
 import type { SemanticColors } from './tokens/semantic/colors';
 import type { SemanticDisabledState } from './tokens/semantic/disabledState';
-import type { SemanticIcon } from './tokens/semantic/icon';
 import type { SemanticState } from './tokens/semantic/state';
 import type { SemanticTypography } from './tokens/semantic/typography';
 
@@ -30,10 +36,19 @@ export type ThemeConfig = {
 export type SemanticTheme = {
   colors: SemanticColors;
   disabledState: SemanticDisabledState;
-  icon: SemanticIcon;
   state: SemanticState;
   typography: SemanticTypography;
   boxShadow: SemanticBoxShadow;
+};
+
+export type Dimension = {
+  borderRadius: DimensionBorderRadius;
+  borderWidth: DimensionBorderWidth;
+  minHeight: DimensionMinHeight;
+  opacity: DimensionOpacity;
+  sizing: DimensionSizing;
+  spacing: DimensionSpacing;
+  state: DimensionState;
 };
 
 /** Will add more themes in the future (e.g.: DarkTheme) */
@@ -51,6 +66,7 @@ export type Theme = {
     opacity: Opacity;
     sizing: Sizing;
   };
+  dimension: Dimension;
   tokens: Tokens;
   colorScheme: ColorScheme;
   overrides: Overrides;

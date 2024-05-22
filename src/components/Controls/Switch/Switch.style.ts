@@ -14,21 +14,21 @@ export const switchStyles =
       display: flex;
       flex-direction: ${placement === 'right' ? 'row' : 'row-reverse'};
       align-items: center;
-      gap: ${tokens('switch.padding')};
+      gap: ${theme.dimension.spacing.get('md')};
       position: relative;
       cursor: pointer;
 
       .bar {
         width: ${tokens('switch.width.track')};
         height: ${tokens('switch.height.track')};
-        background: ${tokens('switch.backgroundColor.track')};
+        background: ${theme.tokens.colors.get('palette.primaryAlt.contrast')};
         position: absolute;
-        border-radius: ${tokens('switch.borderRadius')};
+        border-radius: ${theme.dimension.borderRadius.get('circle')};
       }
 
       .indicator {
         width: ${tokens('switch.width.track')};
-        height: ${tokens('switch.size.thumb')};
+        height: ${theme.dimension.sizing.get('icon.md')};
         box-sizing: border-box;
         position: relative;
 
@@ -36,11 +36,11 @@ export const switchStyles =
           content: '';
           box-sizing: border-box;
           display: block;
-          width: ${tokens('switch.size.thumb')};
-          height: ${tokens('switch.size.thumb')};
-          background: ${tokens('switch.backgroundColor.thumb.default')};
-          border: ${tokens('switch.borderWidth')} solid
-            ${tokens('switch.borderColor.thumb.default')};
+          width: ${theme.dimension.sizing.get('icon.md')};
+          height: ${theme.dimension.sizing.get('icon.md')};
+          background: ${theme.tokens.colors.get('backgroundColor.default')};
+          border: ${theme.dimension.borderWidth.get('active')} solid
+            ${theme.tokens.colors.get('borderColor.interactive.default')};
           border-radius: 100%;
           transition: all 200ms;
         }
@@ -61,8 +61,8 @@ export const switchStyles =
         .indicator {
           &:before {
             transform: translateX(80%);
-            background: ${tokens('switch.backgroundColor.thumb.active')};
-            border-color: ${tokens('switch.borderColor.thumb.active')};
+            background: ${theme.tokens.colors.get('palette.primary.base')};
+            border-color: ${theme.tokens.colors.get('borderColor.interactive.active')};
           }
         }
       }

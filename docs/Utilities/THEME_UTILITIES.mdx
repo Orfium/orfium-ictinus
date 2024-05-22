@@ -14,7 +14,7 @@ import { Meta } from '@storybook/addon-docs';
 
 ## Get Functions
 
-In order to retrieve styles from the library's tiers (global, theme), some specific `get` utils can be used.
+In order to retrieve styles from the library's tiers (global, theme, dimension), some specific `get` utils can be used.
 
 <SubsectionHeader title={'Standalone Function'} variant={'headline04'} />
 
@@ -50,28 +50,28 @@ theme.tokens.colors.get('backdrop.default');
 
 ```
 
-## List of get Functions
+## List of get Functions for all tiers
 
 #### Global
 
 <div className="documentation-table">
 
-| Property                     | Get function                            |
-| ---------------------------- | --------------------------------------- |
-| Border Radius                | globals.borderRadius.get()              |
-| Border Width                 | globals.borderWidth.get()               |
-| Colors                       | globals.colors.get()                    |
-| Elevation                    | globals.elevation.get()                 |
-| Opacity                      | globals.opacity.get()                   |
-| Sizing                       | globals.sizing.get()                    |
-| Spacing                      | globals.spacing.get()                   |
-| Typography - Font Size       | globals.typography.fontSize.get()       |
-| Typography - Font Weight     | globals.typography.fontWeight.get()     |
-| Typography - Font Family     | globals.typography.fontFamily.get()     |
-| Typography - Line Height     | globals.typography.lineHeight.get()     |
-| Typography - Letter Spacing  | globals.typography.letterSpacing.get()  |
-| Typography - Text Case       | globals.typography.textCase.get()       |
-| Typography - Text Decoration | globals.typography.textDecoration.get() |
+| Property                     | Get function                                  |
+| ---------------------------- | --------------------------------------------- |
+| Border Radius                | theme.globals.borderRadius.get()              |
+| Border Width                 | theme.globals.borderWidth.get()               |
+| Colors                       | theme.globals.colors.get()                    |
+| Elevation                    | theme.globals.elevation.get()                 |
+| Opacity                      | theme.globals.opacity.get()                   |
+| Sizing                       | theme.globals.sizing.get()                    |
+| Spacing                      | theme.globals.spacing.get()                   |
+| Typography - Font Size       | theme.globals.typography.fontSize.get()       |
+| Typography - Font Weight     | theme.globals.typography.fontWeight.get()     |
+| Typography - Font Family     | theme.globals.typography.fontFamily.get()     |
+| Typography - Line Height     | theme.globals.typography.lineHeight.get()     |
+| Typography - Letter Spacing  | theme.globals.typography.letterSpacing.get()  |
+| Typography - Text Case       | theme.globals.typography.textCase.get()       |
+| Typography - Text Decoration | theme.globals.typography.textDecoration.get() |
 
 </div>
 
@@ -79,14 +79,14 @@ theme.tokens.colors.get('backdrop.default');
 
 <div className="documentation-table">
 
-| Property       | Get function               |
-| -------------- | -------------------------- |
-| Colors         | tokens.colors.get()        |
-| Disabled State | tokens.disabledState.get() |
-| Icon           | tokens.icon.get()          |
-| State          | tokens.state.get()         |
-| Typography     | tokens.typography.get()    |
-| Box Shadow     | tokens.boxShadow.get()    |
+| Property       | Get function                     |
+| -------------- | -------------------------------- |
+| Colors         | theme.tokens.colors.get()        |
+| Disabled State | theme.tokens.disabledState.get() |
+| Icon           | theme.tokens.icon.get()          |
+| State          | theme.tokens.state.get()         |
+| Typography     | theme.tokens.typography.get()    |
+| Box Shadow     | theme.tokens.boxShadow.get()     |
 
 </div>
 
@@ -114,3 +114,19 @@ theme.tokens.typography.get('normal.body04');
  */
 
 ```
+
+#### Dimension
+
+<div className="documentation-table">
+
+| Property       | Get function                       |
+| -------------- | ---------------------------------- |
+| Border Radius  | theme.dimension.borderRadius.get() |
+| Border Width   | theme.dimension.borderWidth.get()  |
+| Minimum Height | theme.dimension.minHeight.get()    |
+| Opacity        | theme.dimension.opacity.get()      |
+| Sizing         | theme.dimension.sizing.get()       |
+| Spacing        | theme.dimension.spacing.get()      |
+| State          | theme.dimension.state.get()        |
+
+</div>

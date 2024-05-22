@@ -25,7 +25,7 @@ Ictinus has an internal system for storing and using theme parameters such as `c
 
 ## Theme Configuration
 
-The theme consists of `global` and `semantic` (referred as `theme`) configurations, both accessible by the application using the library.
+The theme consists of `global`, `semantic` (referred as `theme`) and `dimension` configurations, all accessible by the application using the library.
 
 <SubsectionHeader title="Global" variant={'headline04'} />
 
@@ -58,14 +58,32 @@ The semantic (theme) tier includes styles that are fetched from the global tier 
 
 <div className="documentation-table">
 
-| Property       | Type                                                                                   |
-| -------------- | -------------------------------------------------------------------------------------- |
-| Colors         | [Documenation](../?path=/docs/foundations-design-tokens-semantic-colors--overview)     |
-| Disabled State | Sets the theme's opacity for disabled elements such as inputs etc.                     |
-| Icon           | Sets the theme's possible icon sizes                                                   |
-| State          | Sets various styles for the theme's different states (such as hover etc)               |
-| Typography     | [Typography](../?path=/docs/foundations-design-tokens-semantic-typography--overview)   |
-| Box Shadow     | [Documenation](../?path=/docs/foundations-design-tokens-semantic-box-shadow--overview) |
+| Property       | Type                                                                                    |
+| -------------- | --------------------------------------------------------------------------------------- |
+| Colors         | [Documentation](../?path=/docs/foundations-design-tokens-semantic-colors--overview)     |
+| Disabled State | Sets the theme's opacity for disabled elements such as inputs etc.                      |
+| Icon           | Sets the theme's possible icon sizes                                                    |
+| State          | Sets various styles for the theme's different states (such as hover etc)                |
+| Typography     | [Typography](../?path=/docs/foundations-design-tokens-semantic-typography--overview)    |
+| Box Shadow     | [Documentation](../?path=/docs/foundations-design-tokens-semantic-box-shadow--overview) |
+
+</div>
+
+<SubsectionHeader title="Dimension" variant={'headline04'} />
+
+The dimension tier includes styles that are fetched from the global tier in order to define aspects of layout . Checkout the Dimension Tier section of [Design Tokens](../?path=/docs/foundations-design-tokens-about--overview) for more information.
+
+<div className="documentation-table">
+
+| Property       | Type                                                                                         |
+| -------------- | -------------------------------------------------------------------------------------------- |
+| Border Radius  | [Documentation](../?path=/docs/foundations-design-tokens-dimension-border-radius--overview)  |
+| Border Width   | [Documentation](../?path=/docs/foundations-design-tokens-dimension-border-width--overview)   |
+| Minimum Height | [Documentation](../?path=/docs/foundations-design-tokens-dimension-minimum-height--overview) |
+| Opacity        | [Documentation](../?path=/docs/foundations-design-tokens-dimension-opacity--overview)        |
+| Sizing         | [Documentation](../?path=/docs/foundations-design-tokens-dimension-sizing--overview)         |
+| Spacing        | [Documentation](../?path=/docs/foundations-design-tokens-dimension-spacing--overview)        |
+| State          | [Documentation](../?path=/docs/foundations-design-tokens-dimension-state--overview)          |
 
 </div>
 

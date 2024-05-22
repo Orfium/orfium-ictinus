@@ -60,7 +60,7 @@ const sizing = {
     type: 'sizing',
   },
   '15': {
-    value: '64px',
+    value: '60px',
     type: 'sizing',
   },
   '16': {

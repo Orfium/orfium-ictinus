@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-import { createMockMediaMatcher } from '../../hooks/useBreakpoints.test';
 import { fireEvent, render } from '../../test';
 import { menuItems } from '../storyUtils/NavigationShowcase/MenuItems';
 import Navigation from './Navigation';
@@ -11,9 +10,6 @@ describe('Navigation', () => {
   let isExpanded = true;
 
   beforeEach(async () => {
-    // @ts-ignore - set what matches will be
-    window.matchMedia = createMockMediaMatcher(true);
-
     queries = render(
       <Router>
         <Navigation

@@ -3,11 +3,10 @@ import React from 'react';
 
 import Icon from '../Icon';
 import type { AcceptedIconNames } from '../Icon';
-import type { ButtonTokens } from 'components/Button/Button.tokens';
-import { getButtonTokens } from 'components/Button/Button.tokens';
 import type { PrimitiveButtonTypes } from 'components/Button/Button.types';
 import type { ButtonBaseProps } from 'components/ButtonBase/ButtonBase';
 import ButtonBase from 'components/ButtonBase/ButtonBase';
+import { buttonColorToSemColor } from 'components/ButtonBase/constants';
 
 export type IconButtonShape = 'circle' | 'square';
 
@@ -26,9 +25,8 @@ export type IconButtonProps = Omit<
 const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>((props, ref) => {
   const { iconName, size = 'normal', type = 'primary', shape = 'circle', dataTestPrefixId } = props;
   const theme = useTheme();
-  const tokens = getButtonTokens(theme);
 
-  const iconColor = tokens(`${type}.textColor` as ButtonTokens);
+  const iconColor = theme.tokens.colors.get(buttonColorToSemColor[type].text);
 
   return (
     <ButtonBase
@@ -38,7 +36,11 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>((props, 
       shape={shape}
       dataTestPrefixId={dataTestPrefixId ? `${dataTestPrefixId}-icon-` : 'icon-'}
     >
-      <Icon size={tokens(`${size}.iconSize` as ButtonTokens)} name={iconName} color={iconColor} />
+      <Icon
+        size={theme.dimension.sizing.get(`icon.${size === 'compact' ? 'sm' : 'md'}`)}
+        name={iconName}
+        color={iconColor}
+      />
     </ButtonBase>
   );
 });

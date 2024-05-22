@@ -32,12 +32,18 @@ const parseColorToken = (token: Token) => {
 const parseGenericToken = (token: Token) => {
   const { value } = token;
 
-  const valueArray = value.slice(1, -1).split('.');
+  const pathArray = value.split(' ');
+  const valueArray = [];
 
-  const category = valueArray[0];
-  const item = valueArray[1];
+  pathArray.map((path) => {
+    const a = path.slice(1, -1).split('.');
+    const category = a[0];
+    const item = a[1];
 
-  return get(globals, category)?.get(item) ?? '';
+    valueArray.push(get(globals, category)?.get(item) ?? '');
+  });
+
+  return valueArray.join(' ');
 };
 
 export const parseToken = (token: Token) => {
@@ -89,21 +95,28 @@ export const parseComponentToken =
 
     /** If comp tokens return a constant value not referring to global or semantic tokens
      * we return the exact value and it's up to the component's styles to parse the value
-     * accordingly 
+     * accordingly
      */
     if (!path.startsWith('{')) return path;
 
-    const pathKeys = path.slice(1, -1).split('.');
+    const pathArray = path.split(' ');
+    const valuesArray = [];
 
-    if (pathKeys[0] === 'sem') {
-      const category = pathKeys[1]; // backdrop | backgroundColor | borderColor | disabledState | palette | textColor | typography
-      const rest = pathKeys.slice(2).join('.');
+    pathArray.map((path) => {
+      const pathKeys = path.slice(1, -1).split('.');
 
-      return theme.tokens[category].get(rest, fn);
-    }
+      if (pathKeys[0] === 'sem') {
+        const category = pathKeys[1]; // backdrop | backgroundColor | borderColor | disabledState | palette | textColor | typography
+        const rest = pathKeys.slice(2).join('.');
 
-    const category = pathKeys[0];
-    const rest = pathKeys.slice(1).join('.');
+        valuesArray.push(theme.tokens[category].get(rest, fn));
+      } else {
+        const category = pathKeys[0];
+        const rest = pathKeys.slice(1).join('.');
 
-    return theme.globals[category].get(rest, fn);
+        valuesArray.push(theme.globals[category].get(rest, fn));
+      }
+    });
+
+    return valuesArray.length === 1 ? valuesArray[0] : valuesArray.join(' ');
   };

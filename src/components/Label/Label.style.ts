@@ -1,10 +1,10 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import type { Theme } from 'theme';
+import type { SemanticTypographyKey } from 'theme/tokens/semantic/typography';
 import { rem } from 'theme/utils';
 
 import type { LabelProps } from './Label';
-import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
 import { generateStylesFromTokens } from 'components/Typography/utils';
 
 export const LABEL_TRANSFORM_LEFT_SPACING = rem(3);
@@ -16,7 +16,7 @@ export const labelStyle =
     size = 'normal',
   }: Pick<LabelProps, 'isAnimated' | 'hasError' | 'size'>) =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getTextInputBaseTokens(theme);
+    const typography: SemanticTypographyKey = size === 'normal' ? 'normal.body02' : 'normal.body03';
 
     return css`
       transition: transform 0.25s, opacity 0.25s ease-in-out;
@@ -27,7 +27,9 @@ export const labelStyle =
       transform: ${!isAnimated
         ? `translate(${LABEL_TRANSFORM_LEFT_SPACING}, 0)`
         : `translate(${LABEL_TRANSFORM_LEFT_SPACING}, -95%) scale(0.8);`};
-      color: ${hasError ? tokens('textColor.errorHintColor') : tokens('textColor.inputColorAlt')};
+      color: ${hasError
+        ? theme.tokens.colors.get('textColor.default.error')
+        : theme.tokens.colors.get('textColor.default.secondary')};
       align-items: center;
       display: flex;
       top: 0;
@@ -36,6 +38,6 @@ export const labelStyle =
       margin: auto;
       white-space: nowrap;
 
-      ${generateStylesFromTokens(tokens(`input.${size}` as const))}
+      ${generateStylesFromTokens(theme.tokens.typography.get(typography))}
     `;
   };

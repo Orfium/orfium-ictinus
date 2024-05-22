@@ -20,18 +20,18 @@ export const buttonStyles =
 
     const getBackgroundColor = (hasHover = false) => {
       if (isActive) {
-        return tokens('backgroundColor.active');
+        return theme.tokens.colors.get('palette.primary.contrast');
       }
 
       if (isPopulated) {
-        if (hasHover) return tokens('backgroundColor.populatedHovered');
+        if (hasHover) return theme.tokens.colors.get('palette.secondary.muted');
 
-        return tokens('backgroundColor.populated');
+        return theme.tokens.colors.get('palette.secondary.base');
       }
 
-      if (hasHover) return tokens('backgroundColor.hover');
+      if (hasHover) return theme.tokens.colors.get('palette.secondary.muted');
 
-      return tokens('backgroundColor.default');
+      return theme.tokens.colors.get('palette.secondary.base');
     };
 
     return css`
@@ -41,18 +41,21 @@ export const buttonStyles =
       cursor: ${isDisabled ? 'not-allowed' : 'pointer'};
 
       height: ${tokens('height')};
-      padding: 0 ${tokens('horizontalPadding')};
+      padding: 0 ${theme.dimension.spacing.get('md')} 0 ${theme.dimension.spacing.get('lg')};
 
       max-width: ${rem(FILTER_WIDTH[isMulti ? 'multi' : 'single'].maxWidth)};
 
-      gap: ${tokens('addedPadding')};
+      gap: ${theme.dimension.spacing.get('xs')};
 
       background-color: ${getBackgroundColor()};
-      color: ${tokens(isActive ? 'textColor.active' : 'textColor.default')};
-      border: ${tokens('borderWidth.1')} solid ${tokens('borderColor.default')};
-      border-radius: ${tokens('borderRadius')};
+      color: ${theme.tokens.colors.get(
+        isActive ? 'textColor.inverted.primary' : 'textColor.default.active'
+      )};
+      border: ${theme.dimension.borderWidth.get('default')} solid
+        ${theme.tokens.colors.get('borderColor.interactive.default')};
+      border-radius: ${theme.dimension.borderRadius.get('circle')};
 
-      ${generateStylesFromTokens(tokens('text'))};
+      ${generateStylesFromTokens(theme.tokens.typography.get('normal.label02'))};
 
       &:not([disabled]) {
         &:focus-visible,

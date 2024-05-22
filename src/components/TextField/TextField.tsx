@@ -1,6 +1,6 @@
 import useFieldUtils from 'hooks/useFieldUtils';
 import { omit } from 'lodash';
-import type { InputHTMLAttributes} from 'react';
+import type { InputHTMLAttributes } from 'react';
 import React, { useRef } from 'react';
 import isEqual from 'react-fast-compare';
 import InputMask from 'react-input-mask';
@@ -71,22 +71,15 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
   } = props;
   const id = useRef(userDefinedId || generateUniqueID('textfield_')).current;
 
-  const {
-    isLocked,
-    hintMessageId,
-    handleContainerClick,
-    textInputBaseSx,
-    suffixContent,
-    combinedRefs,
-  } = useFieldUtils({
-    id,
-    suffix,
-    status,
-    size,
-    isDisabled,
-    ref,
-    sx,
-  });
+  const { isLocked, hintMessageId, handleContainerClick, suffixContent, combinedRefs } =
+    useFieldUtils({
+      id,
+      suffix,
+      status,
+      size,
+      isDisabled,
+      ref,
+    });
 
   const inputProps = {
     // eslint-disable-next-line @typescript-eslint/naming-convention
@@ -125,11 +118,7 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
           ref={combinedRefs}
         />
       ) : (
-        <TextInputBase
-          {...props}
-          status={{ ...status, id: hintMessageId }}
-          sx={textInputBaseSx(!suffixContent)}
-        >
+        <TextInputBase {...props} status={{ ...status, id: hintMessageId }} sx={sx}>
           <div css={{ display: 'flex', flex: 1 }}>
             {mask ? (
               <InputMask

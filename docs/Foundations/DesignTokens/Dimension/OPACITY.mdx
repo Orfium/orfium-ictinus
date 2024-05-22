@@ -1,0 +1,30 @@
+import { Meta } from '@storybook/addon-docs';
+import OpacityShowcase from '../../../../src/storybook/Showcases/OpacityShowcase';
+
+<Meta
+  title="Foundations/Design Tokens/Dimension/Opacity"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+/>
+
+<SectionHeader
+  title={'Opacity'}
+  sections={[
+    { title: 'Overview', href: '#overview' },
+    { title: 'Tokens', href: '#tokens' },
+  ]}
+/>
+
+## Overview
+
+Dimension Opacity tokens set define the transparency level of UI elements.
+
+For more information on the code implementation of the dimension opacity tokens and how to fetch them to your code [click here](../?path=/docs/utilities-theme-utilities--overview)
+
+## Tokens
+
+<OpacityShowcase />

@@ -59,8 +59,6 @@ const TextInputBase: FCC<
 }) => {
   const theme = useTheme();
 
-  const tokens = getTextInputBaseTokens(theme);
-
   const hintMessageToShow = status.hintMessage && (
     <div
       data-testid={generateTestDataId('error', dataTestId)}
@@ -68,9 +66,9 @@ const TextInputBase: FCC<
     >
       {!isDisabled && status.type === 'error' && size === 'normal' && (
         <Icon
-          color={tokens('textColor.errorHintColor')}
+          color={theme.tokens.colors.get('textColor.default.error')}
           name="warning"
-          size={tokens('hintIconSize')}
+          size={theme.dimension.sizing.get('icon.sm')}
         />
       )}
       <span id={status.id}>{status.hintMessage}</span>

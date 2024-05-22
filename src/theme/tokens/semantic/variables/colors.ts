@@ -271,6 +271,11 @@ const colors = {
         type: 'color',
         description: 'Sets borderColor for success',
       },
+      focused: {
+        value: '{colors.purple.5}',
+        type: 'color',
+        description: 'Sets focused container borderColor for component',
+      },
     },
   },
   indicators: {

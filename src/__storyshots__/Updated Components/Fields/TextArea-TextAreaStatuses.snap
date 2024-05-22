@@ -17,6 +17,9 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -64,7 +67,7 @@
   width: -webkit-fill-available;
   width: -moz-available;
   width: fill-available;
-  padding: 1rem 0.75rem;
+  padding: 1rem 0.75rem 1rem 0.75rem;
 }
 
 .emotion-3>div {
@@ -229,6 +232,9 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -246,7 +252,7 @@
   cursor: text;
   height: auto;
   min-width: 15rem;
-  background-color: #FFEBF1;
+  background-color: #FFD6E5;
   width: auto;
 }
 
@@ -345,6 +351,9 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
