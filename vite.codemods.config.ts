@@ -23,12 +23,16 @@ export default defineConfig({
     }),
   ],
   build: {
+    lib: {
+      entry: codemodsEntries,
+      formats: ['cjs'],
+    },
     rollupOptions: {
       input: codemodsEntries,
       output: {
         dir: path.resolve(__dirname, 'dist/codemods'),
-        format: 'es',
-        entryFileNames: '[name].js',
+        format: 'cjs',
+        entryFileNames: '[name].cjs',
       },
       external: ['react', 'react-dom', 'emotion-reset', /@emotion\/styled/, /@emotion\/react/],
     },
