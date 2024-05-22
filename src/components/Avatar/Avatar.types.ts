@@ -1,4 +1,4 @@
-import type { DivProps } from '../../utils/common';
+import type { DivProps } from 'utils/common';
 
 export type AvatarColors = 'blue' | 'teal' | 'purple' | 'red' | 'orange';
 

@@ -2,10 +2,10 @@ import type { FCC } from 'react';
 import * as React from 'react';
 import { useMemo } from 'react';
 import type { IMarkProps } from 'react-range/lib/types';
+import type { TestProps } from 'utils/types';
 
 import { Mark, MarkHoverCircle } from './SliderMark.style';
 import useTheme from '../../../../hooks/useTheme';
-import type { TestProps } from '../../../../utils/types';
 import { STEP_WITH_INCREMENTS } from '../../Slider';
 
 export type SliderMarkProps = {

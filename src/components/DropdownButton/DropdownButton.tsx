@@ -3,6 +3,7 @@ import useTheme from 'hooks/useTheme';
 import { head } from 'lodash';
 import React, { useCallback } from 'react';
 import { rem } from 'theme/utils';
+import { generateTestDataId } from 'utils/helpers';
 import type { ComponentSizes, TestProps } from 'utils/types';
 
 import {
@@ -11,7 +12,6 @@ import {
   iconButtonWrapper,
   wrapperStyle,
 } from './DropdownButton.style';
-import { generateTestDataId } from '../../utils/helpers';
 import Button from 'components/Button';
 import type { PrimitiveButtonTypes } from 'components/Button/Button.types';
 import type { AcceptedIconNames } from 'components/Icon';

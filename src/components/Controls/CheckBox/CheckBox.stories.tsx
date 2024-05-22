@@ -1,6 +1,6 @@
 import CheckBox from './CheckBox';
 import Stack from '../../storyUtils/Stack';
-import { FIGMA_URL } from '../../../utils/common';
+import { FIGMA_URL } from 'utils/common';
 import { useEffect, useState } from 'react';
 
 export default {

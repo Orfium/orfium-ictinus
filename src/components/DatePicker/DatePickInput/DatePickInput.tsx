@@ -4,9 +4,9 @@ import React, { useCallback, useMemo } from 'react';
 import { rem } from 'theme/utils';
 import type { Dayjs } from 'utils/date';
 import dayjs from 'utils/date';
+import { getLocaleFormat } from 'utils/helpers';
+import type { TestProps } from 'utils/types';
 
-import { getLocaleFormat } from '../../../utils/helpers';
-import type { TestProps } from '../../../utils/types';
 import type { TextFieldProps } from '../../TextField/TextField';
 import TextField from '../../TextField/TextField';
 import { DATE_PICKER_LABEL, DATE_RANGE_PICKER_LABEL } from '../constants';

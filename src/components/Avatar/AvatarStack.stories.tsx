@@ -1,7 +1,7 @@
 import Avatar from './Avatar';
 import AvatarStack from './AvatarStack';
 import Stack from '../storyUtils/Stack';
-import { FIGMA_URL } from '../../utils/common';
+import { FIGMA_URL } from 'utils/common';
 
 export default {
   title: 'Updated Components/Avatar/AvatarStack',

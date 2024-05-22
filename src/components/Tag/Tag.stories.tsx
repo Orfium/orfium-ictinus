@@ -1,6 +1,6 @@
 import Tag from './Tag';
 
-import { FIGMA_URL, Function } from '../../utils/common';
+import { FIGMA_URL, Function } from 'utils/common';
 import Stack from 'components/storyUtils/Stack';
 import { useState } from 'react';
 import TagShowcase from '../../storybook/Showcases/TagShowcase';

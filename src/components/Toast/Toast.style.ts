@@ -2,11 +2,11 @@ import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import type { SemanticColorsKey } from 'theme/tokens/semantic/colors';
 import { rem } from 'theme/utils';
+import type { AcceptedColorComponentTypes } from 'utils/themeFunctions';
 
 import { isNotificationTypes } from './Toast';
 import type { Theme } from '../../theme';
 import { transition, flexCenter } from '../../theme/functions';
-import type { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 import type { NotificationStyleType } from '../Notification/Notification';
 import {
   typeToBackgroundStyle,

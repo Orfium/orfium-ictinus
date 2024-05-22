@@ -2,7 +2,7 @@ import Select from './Select';
 import Stack from '../storyUtils/Stack';
 import { SelectShowcase, MultiSelectShowcase } from '../storyUtils/SelectShowcase';
 import EdgeCasesSelectShowcase from '../storyUtils/EdgeCasesSelectShowcase';
-import { FIGMA_URL, Function } from '../../utils/common';
+import { FIGMA_URL, Function } from 'utils/common';
 import { useState } from 'react';
 import { StatefulSelect } from './index';
 import { options, groupOptions, defaultValue } from './storyUtils';

@@ -1,7 +1,7 @@
 import ProgressIndicator from './ProgressIndicator';
 import Typography from '../Typography';
 import Stack from '../storyUtils/Stack';
-import { FIGMA_URL, Function } from '../../utils/common';
+import { FIGMA_URL, Function } from 'utils/common';
 import { useState, useEffect } from 'react';
 
 export default {

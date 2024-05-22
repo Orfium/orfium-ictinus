@@ -1,5 +1,5 @@
 import List, { ListItem, ListItemAction, ListItemText } from '../index';
-import { FIGMA_URL } from '../../../utils/common';
+import { FIGMA_URL } from 'utils/common';
 import { Radio, CheckBox, Switch, RadioGroup } from '../../Controls';
 import Avatar from '../../Avatar';
 import Box from '../../Box';

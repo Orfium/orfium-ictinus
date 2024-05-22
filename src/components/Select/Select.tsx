@@ -3,6 +3,7 @@ import { differenceBy, head } from 'lodash';
 import debounce from 'lodash/debounce';
 import React, { useCallback, useMemo, useRef, useState } from 'react';
 import isEqual from 'react-fast-compare';
+import type { ChangeEvent } from 'utils/common';
 import { generateTestDataId, generateUniqueID } from 'utils/helpers';
 
 import SelectMenu from './components/SelectMenu/SelectMenu';
@@ -11,7 +12,6 @@ import { suffixContainer, selectWrapper } from './Select.style';
 import type { SelectOption, SelectProps } from './types';
 import useCombinedRefs from '../../hooks/useCombinedRefs';
 import useTheme from '../../hooks/useTheme';
-import type { ChangeEvent } from '../../utils/common';
 import Box from '../Box';
 import Icon from '../Icon';
 import TextField from '../TextField';

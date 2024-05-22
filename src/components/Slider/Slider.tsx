@@ -1,13 +1,13 @@
 import React, { useRef } from 'react';
 import { Range } from 'react-range';
 import type { IMarkProps, IThumbProps, ITrackProps } from 'react-range/lib/types';
+import type { TestProps } from 'utils/types';
 
 import SliderMark from './components/SliderMark';
 import SliderThumb from './components/SliderThumb';
 import SliderTrack from './components/SliderTrack';
 import { Container, InputContainer, InputsContainer } from './Slider.style';
 import useTheme from '../../hooks/useTheme';
-import type { TestProps } from '../../utils/types';
 import TextField from '../TextField';
 
 export type SliderProps = {

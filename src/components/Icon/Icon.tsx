@@ -2,12 +2,12 @@ import useTheme from 'hooks/useTheme';
 import * as React from 'react';
 import { useRef } from 'react';
 import type { DivProps } from 'utils/common';
+import type { TestProps } from 'utils/types';
 
 import iconSelector from './assets/iconSelector';
 import { iconContainerStyles, iconStyles } from './Icon.style';
 import type { AcceptedIconNames } from './Icon.types';
 import useCombinedRefs from '../../hooks/useCombinedRefs';
-import type { TestProps } from '../../utils/types';
 
 export type IconProps = {
   /** This property defines witch icon to use */

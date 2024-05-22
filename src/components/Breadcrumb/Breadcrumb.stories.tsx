@@ -2,7 +2,7 @@ import { MemoryRouter as Router, Route, Routes, Link as RouterLink } from 'react
 import BreadcrumbShowcase from '../storyUtils/BreadcrumbShowcase/BreadcrumbShowcase';
 import Stack from '../storyUtils/Stack';
 import Breadcrumb from './Breadcrumb';
-import { FIGMA_URL } from '../../utils/common';
+import { FIGMA_URL } from 'utils/common';
 
 export default {
   title: 'Updated Components/Breadcrumb',
