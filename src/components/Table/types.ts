@@ -11,13 +11,13 @@ export type TableProps<TData> = {
   type?: 'interactive' | 'read-only';
   /** The Columns configuration of the Table */
   // Columns Type for Group Headers: columns: (DisplayColumn | GroupColumn)[];
-  columns: DisplayColumn[];
+  columns: TableColumn<TData>[];
   /** The Data of the Table */
   data: TableRow<TData>[];
   /** Size of Row */
   rowSize?: RowSize;
   /** Columns Configuration */
-  columnsConfig?: ColumnsConfig;
+  columnsConfig?: ColumnsConfig<TData>;
   /** Rows Configuration */
   rowsConfig?: RowsConfig;
   /** Sorting Configuration */
@@ -52,16 +52,16 @@ export type SortingConfig = {
   isMultiSortable?: boolean;
 };
 
-export type ColumnsConfig = {
+export type ColumnsConfig<TData> = {
   /** State that indicates which columns are visible: an object where every key is a column id and the value is a boolean indicating whether it is visible or not */
-  columnVisibility?: Record<string, boolean>;
+  columnVisibility?: Record<keyof TData, boolean>;
   /** Callback for visibility state change */
-  setColumnVisibility?: (state: Record<string, boolean>) => void;
+  setColumnVisibility?: (state: Record<keyof TData, boolean>) => void;
 };
 
-export type DisplayColumn = {
+export type TableColumn<TData> = {
   /** The id of the column; must be the same as the column key in the Data type */
-  id: string;
+  id: keyof TData;
   /** The label of the column on the table */
   header: string;
   /** Whether the toggle visibility functionality is disabled for this column */
@@ -72,14 +72,14 @@ export type DisplayColumn = {
   width?: number;
 };
 
-export type GroupColumn = {
-  /** The id of the group of columns */
-  id: string;
-  /** The label of the column on the table */
-  header: string;
-  /** Sub columns of the group */
-  columns: (DisplayColumn | GroupColumn)[];
-};
+// export type GroupColumn<TData> = {
+//   /** The id of the group of columns */
+//   id: keyof TData;
+//   /** The label of the column on the table */
+//   header: string;
+//   /** Sub columns of the group */
+//   columns: (DisplayColumn<TData> | GroupColumn<TData>)[];
+// };
 
 /** Rows & Cells  */
 
@@ -102,7 +102,7 @@ export type RowsConfig = {
 
 export type TableRow<TData> = {
   /** The visible cells of the row */
-  cells: TData;
+  cells: Record<keyof TData, string | JSX.Element>;
   /** Details component which is displayed when clicking the arrow button */
   details?: JSX.Element;
 };

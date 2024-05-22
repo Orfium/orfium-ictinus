@@ -1,3 +1,4 @@
+import type { TableRow } from './types';
 import Typography from 'components/Typography';
 
 export type SimpleData = {
@@ -79,7 +80,7 @@ const quotes = {
   },
 };
 
-export const simpleData = (isDetailed?: boolean) => [
+export const simpleData = (isDetailed?: boolean): TableRow<SimpleData>[] => [
   {
     cells: {
       firstName: 'Rachel',
