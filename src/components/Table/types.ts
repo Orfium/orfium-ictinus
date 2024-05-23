@@ -104,9 +104,11 @@ export type RowsConfig = {
   setExpanded?: OnChangeFn<ExpandedState>;
 };
 
+export type TableCells<TData> = Record<keyof TData, string | JSX.Element>;
+
 export type TableRow<TData> = {
   /** The visible cells of the row */
-  cells: Record<keyof TData, string | JSX.Element>;
+  cells: TableCells<TData>;
   /** Details component which is displayed when clicking the arrow button */
   details?: JSX.Element;
 };

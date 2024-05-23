@@ -11,18 +11,18 @@ import { concat } from 'lodash';
 import React from 'react';
 import type { Theme } from 'theme';
 
-import type { UseTableProps } from '../types';
+import type { TableCells, UseTableProps } from '../types';
 import { CheckBox } from 'components/Controls';
 import Icon from 'components/Icon';
 
 type ReturnValue<TData> = {
   getHeaderGroups: () => HeaderGroup<TData>[];
-  getRowModel: () => RowModel<TData>;
+  getRowModel: () => RowModel<TableCells<TData>>;
   getIsAllRowsSelected: () => boolean;
   getIsSomeRowsSelected: () => boolean;
   getToggleAllRowsSelectedHandler: () => (event: unknown) => void;
   toggleAllRowsSelected: (value: boolean) => void;
-  getAllLeafColumns: () => Column<TData, unknown>[];
+  getAllLeafColumns: () => Column<TableCells<TData>, unknown>[];
 };
 
 const getColumns = (
@@ -79,7 +79,7 @@ const getColumns = (
             return (
               <Icon
                 name={row.getIsExpanded() ? 'triangleDown' : 'triangleRight'}
-                size="20px"
+                size={theme.dimension.sizing.get('icon.md')}
                 color={theme.tokens.colors.get('textColor.default.secondary')}
                 onClick={() => {
                   const isExpanded = row.getIsExpanded();
@@ -155,7 +155,7 @@ const useTable = <TData,>({
     setTableData(data.map((data) => data.cells));
   }, [sorting?.sortingColumn, pagination?.page, pagination?.itemsPerPage]);
 
-  const table = useReactTable<TData>({
+  const table = useReactTable<TableCells<TData>>({
     /** Basic Functionality */
     data: tableData,
     columns: tColumns,

@@ -2,16 +2,15 @@ import type { CSSObject, SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import type { Theme } from 'theme';
 
-/** @TODO replace all css with tokens */
-
 export const tableContainer =
   () =>
   (theme: Theme): SerializedStyles => {
     return css`
       display: inline-block;
-      border: 1px solid ${theme.tokens.colors.get('borderColor.decorative.default')};
-      border-radius: 4px;
-      background: ${theme.globals.colors.get('neutral.1')};
+      border: ${theme.dimension.borderWidth.get('default')} solid
+        ${theme.tokens.colors.get('borderColor.decorative.default')};
+      border-radius: ${theme.dimension.borderRadius.get('md')};
+      background: ${theme.tokens.colors.get('backgroundColor.default')};
     `;
   };
 

@@ -1,26 +1,17 @@
 import type { CSSObject, SerializedStyles, Theme } from '@emotion/react';
 import { css } from '@emotion/react';
 
-import type { RowSize, TableProps } from 'components/Table';
+import { ACTIONS_CELL_WIDTH } from '../../constants';
+import type { TableProps } from 'components/Table';
 
-/** @TODO replace all css with tokens */
-
-export const getMinHeight = (rowSize: RowSize) => (theme: Theme) => {
-  switch (rowSize) {
-    case 'md':
-      return theme.globals.sizing.get('13');
-    case 'lg':
-      return theme.globals.sizing.get('15');
-    default: /** sm and default */
-      return theme.globals.sizing.get('11');
-  }
-};
+import { rem } from '~/theme/utils';
 
 export const simpleTdContainer =
   () =>
   (theme: Theme): SerializedStyles => {
     return css`
-      border-bottom: 1px solid ${theme.tokens.colors.get('borderColor.decorative.default')};
+      border-bottom: ${theme.dimension.borderWidth.get('default')} solid
+        ${theme.tokens.colors.get('borderColor.decorative.default')};
     `;
   };
 
@@ -41,7 +32,7 @@ export const tdContainer =
   (theme: Theme): SerializedStyles => {
     const getWidth = () => {
       if (isCheckbox || isExpandedButton) {
-        return '52px';
+        return rem(ACTIONS_CELL_WIDTH);
       }
 
       if (width) {
@@ -53,9 +44,10 @@ export const tdContainer =
 
     return css`
       width: ${getWidth()};
-      height: ${getMinHeight(rowSize)(theme)};
-      padding: 8px 16px;
-      border-bottom: 1px solid ${theme.tokens.colors.get('borderColor.decorative.default')};
+      height: ${theme.dimension.minHeight.get(`tableRow.${rowSize}`)};
+      padding: ${theme.dimension.spacing.get('sm')} ${theme.dimension.spacing.get('lg')};
+      border-bottom: ${theme.dimension.borderWidth.get('default')} solid
+        ${theme.tokens.colors.get('borderColor.decorative.default')};
       box-sizing: border-box;
       align-content: center;
 
