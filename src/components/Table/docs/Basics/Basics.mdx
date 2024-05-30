@@ -1,0 +1,131 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
+import Table from '../../Table';
+import * as BasicsStories from './Basics.stories';
+
+<Meta of={BasicsStories} />
+
+<SectionHeader
+  title={'Basics'}
+  sections={[
+    { title: 'Introduction', href: '#introduction' },
+    { title: 'Usage', href: '#usage' },
+    { title: 'Props', href: '#table-props' },
+    { title: 'Variants', href: '#variants' },
+  ]}
+/>
+
+## Introduction
+
+Ictinus Table monolith component provides all the necessary functionality for tables, such as sorting, row selection and more.
+This implementation is based on the [Tanstask](https://tanstack.com/table/latest/docs/introduction) table.
+
+<SubsectionHeader title="Usage" />
+
+### Table
+
+This a basic example in order to render a simple table. For more features, see the examples in the other sections.
+
+```js
+import { Table } from '@orfium/ictinus';
+
+<Table data={data} columns={columns} />;
+```
+
+### Columns
+
+Columns should have the following structure:
+
+<Tip>
+  For more columns configuration use the columnsConfig prop, more information
+  [here](../?path=/docs/updated-components-table-table-columns--overview)
+</Tip>
+
+```ts
+import type { TableColumn } from '@orfium/ictinus';
+
+type DataType = {
+  firstName: string;
+  lastName: string | undefined;
+  age: number | undefined;
+  job: string | undefined | JSX.Element;
+};
+
+const columns: TableColumn<DataType>[] = [
+  { id: 'firstName', header: 'First Name' },
+  { id: 'lastName', header: 'Last Name' },
+  { id: 'age', header: 'Age', contentAlign: 'right' },
+  { id: 'job', header: 'Job' },
+];
+```
+
+### Data
+
+Data (cell values) can be `string`, `number`, `JSX.Element` or `undefined`, defined in a type that is passed to the `TableRow` and `TableColumn` types.
+
+<Tip>
+  For more data (rows) configuration use the rowsConfig prop, more information
+  [here](../?path=/docs/updated-components-table-table-rows--overview)
+</Tip>
+
+<Tip>
+  If you want to add a column with optional cells (values), add `undefined` to the type, don't make
+  the key optional. Refer to lastName, age and job keys as examples below
+</Tip>
+
+```ts
+import { Tag } from '@orfium/ictinus';
+import type { TableRow } from '@orfium/ictinus';
+
+type DataType = {
+  firstName: string;
+  lastName: string | undefined;
+  age: number | undefined;
+  job: string | undefined | JSX.Element;
+};
+
+const data: TableRow<DataType>[] = [
+  {
+    cells: {
+      firstName: 'Rachel',
+      lastName: 'Berry',
+      age: 30,
+      job: <Tag>Fashion Executive</Tag>,
+    },
+    details: ... /** For expandable rows, check the Row Details section for more info */
+  },
+  {
+    cells: {
+      firstName: 'Ross',
+      lastName: 'Geller',
+      age: 30,
+      job: <Tag>Paleontologist</Tag>,
+    },
+    details: ... /** For expandable rows, check the Row Details section for more info */
+  },
+  ...
+];
+```
+
+<SubsectionHeader title="Props" />
+
+### Table Props
+
+The props of the Table component.
+
+See [TableColumn](../?path=/docs/updated-components-table-table-columns--overview#Props), [TableRow](../?path=/docs/updated-components-table-table-rows--overview#Props), [ColumnsConfig](../?path=/docs/updated-components-table-table-columns--overview#Props), [RowsConfig](../?path=/docs/updated-components-table-table-rows--overview#Props), and [PaginationConfig](../?path=/docs/updated-components-table-table-rows--overview#Props) for more info.
+
+<ArgTypes of={Table} />
+
+<SubsectionHeader title="Variants" />
+
+### Basic Example
+
+The following example renders columns and rows with simple data.
+
+<Tip>
+  For more information on the columns and cells structure, click
+  [here](../?path=/docs/updated-components-table-table-rows-and-cells--overview). For the data
+  structure, click [here](../?path=/docs/updated-components-table-table-rows--overview)
+</Tip>
+
+<Canvas of={BasicsStories.BasicExample} />
