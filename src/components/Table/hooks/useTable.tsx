@@ -11,18 +11,17 @@ import { concat } from 'lodash';
 import React from 'react';
 import type { Theme } from 'theme';
 
-import type { TableCells, UseTableProps } from '../types';
 import { CheckBox } from 'components/Controls';
 import Icon from 'components/Icon';
 
 type ReturnValue<TData> = {
   getHeaderGroups: () => HeaderGroup<TData>[];
-  getRowModel: () => RowModel<TableCells<TData>>;
+  getRowModel: () => RowModel<TData>;
   getIsAllRowsSelected: () => boolean;
   getIsSomeRowsSelected: () => boolean;
   getToggleAllRowsSelectedHandler: () => (event: unknown) => void;
   toggleAllRowsSelected: (value: boolean) => void;
-  getAllLeafColumns: () => Column<TableCells<TData>, unknown>[];
+  getAllLeafColumns: () => Column<TData, unknown>[];
 };
 
 const getColumns = (
@@ -64,6 +63,9 @@ const getColumns = (
               </div>
             );
           },
+          meta: {
+            contentAlign: 'left',
+          },
         },
       ]
     : [];
@@ -88,6 +90,9 @@ const getColumns = (
               />
             );
           },
+          meta: {
+            contentAlign: 'left',
+          },
         },
       ]
     : [];
@@ -106,7 +111,11 @@ const getColumns = (
           header: column.header,
           cell: (info) => info.getValue(),
           size: column.width ?? 'auto',
+          minSize: column.width,
           enableSorting: column.isSortable ?? false,
+          meta: {
+            contentAlign: column.contentAlign ?? 'left',
+          },
         })
       );
     }
@@ -126,7 +135,7 @@ const useTable = <TData,>({
   columnsConfig,
   pagination,
   ...rest
-}: UseTableProps<TData>): ReturnValue<TData> => {
+}): ReturnValue<TData> => {
   const theme = useTheme();
 
   const isTableInteractive = type === 'interactive';
@@ -153,9 +162,9 @@ const useTable = <TData,>({
 
   React.useEffect(() => {
     setTableData(data.map((data) => data.cells));
-  }, [sorting?.sortingColumn, pagination?.page, pagination?.itemsPerPage]);
+  }, [sorting?.sortingColumn, pagination?.page, pagination?.showItems]);
 
-  const table = useReactTable<TableCells<TData>>({
+  const table = useReactTable<TData>({
     /** Basic Functionality */
     data: tableData,
     columns: tColumns,

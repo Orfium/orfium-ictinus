@@ -18,6 +18,8 @@ type Props = {
   columnId?: string;
   /** Whether is a row details td element */
   isDetails?: boolean;
+  /** Metadata for the td element */
+  metaData?: any;
 };
 
 const TD: React.FCC<Props> = ({
@@ -28,10 +30,13 @@ const TD: React.FCC<Props> = ({
   sx,
   children,
   columnId,
+  metaData,
   ...rest
 }) => {
   const isCheckbox = columnId === 'checkbox_select';
   const isExpandedButton = columnId === 'details_iconButton';
+
+  const { contentAlign = 'left' } = metaData ?? {};
 
   return isDetails ? (
     <td colSpan={colSpan} css={simpleTdContainer()}>
@@ -43,7 +48,7 @@ const TD: React.FCC<Props> = ({
       colSpan={colSpan}
       {...rest}
     >
-      <div css={tdContent()}>{children}</div>
+      <div css={tdContent({ contentAlign })}>{children}</div>
     </td>
   );
 };

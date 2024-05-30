@@ -1,7 +1,7 @@
 import type { CSSObject, SerializedStyles, Theme } from '@emotion/react';
 import { css } from '@emotion/react';
 
-import { ACTIONS_CELL_WIDTH } from '../../constants';
+import { ACTIONS_CELL_WIDTH, contentAlignToFlex } from '../../constants';
 import type { TableProps } from 'components/Table';
 import { generateStylesFromTokens } from 'components/Typography/utils';
 
@@ -33,7 +33,6 @@ export const thContainer =
         : '100%'};
       height: ${theme.dimension.minHeight.get(`tableRow.${rowSize}`)};
       align-content: center;
-      text-align: left;
       box-sizing: border-box;
       padding: ${theme.dimension.spacing.get('sm')} ${theme.dimension.spacing.get('lg')};
       color: ${theme.tokens.colors.get(
@@ -68,11 +67,12 @@ export const thContainer =
   };
 
 export const thContent =
-  () =>
+  ({ contentAlign }: { contentAlign: string }) =>
   (theme: Theme): SerializedStyles => {
     return css`
       display: flex;
       align-items: center;
+      justify-content: ${contentAlignToFlex[contentAlign]};
       gap: ${theme.dimension.spacing.get('sm')};
     `;
   };
