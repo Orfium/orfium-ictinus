@@ -27,7 +27,7 @@ const Switch = React.forwardRef<HTMLInputElement, SwitchProps>((props, ref) => {
     isDisabled,
     onChange,
     labelConfig = {},
-    dataTestPrefixId,
+    dataTestPrefixId = 'ictinus',
     children,
   } = props;
   const { placement = 'right', size = 'normal', helpText, sx } = labelConfig;
@@ -40,7 +40,7 @@ const Switch = React.forwardRef<HTMLInputElement, SwitchProps>((props, ref) => {
       isDisabled={isDisabled}
       onChange={onChange}
       css={switchStyles({ placement, sx })}
-      data-testid={`${dataTestPrefixId}_${value}_switch`}
+      data-testid={`${dataTestPrefixId}${value ? `_${value}` : ''}_switch`}
       ref={ref}
     >
       <div className="bar" />
@@ -49,7 +49,7 @@ const Switch = React.forwardRef<HTMLInputElement, SwitchProps>((props, ref) => {
         <ControlLabel
           size={size}
           helpText={helpText}
-          dataTestPrefixId={`${dataTestPrefixId}_radio_${value?.split(' ').join('_')}`}
+          dataTestPrefixId={`${dataTestPrefixId}_switch_${value?.split(' ').join('_')}`}
         >
           {children}
         </ControlLabel>

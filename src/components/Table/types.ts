@@ -8,6 +8,8 @@ import type {
 
 import type { SelectOptionValues } from 'components/Select';
 
+import type { TestProps } from '~/utils/types';
+
 export type NoUndefined<T> = {
   [K in keyof T]-?: Exclude<T[K], undefined>;
 };
@@ -43,7 +45,7 @@ export type TableProps<TData extends NoUndefined<TData>> = {
     tr?: CSSObject;
     td?: CSSObject;
   };
-};
+} & TestProps;
 
 export type UseTableProps<TData extends NoUndefined<TData>> = Pick<
   TableProps<TData>,

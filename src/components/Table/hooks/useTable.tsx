@@ -28,7 +28,8 @@ const getColumns = (
   columns: any[],
   hasCheckboxes: boolean,
   hasRowDetails: boolean,
-  theme: Theme
+  theme: Theme,
+  dataTestPrefixId: string
 ) => {
   const columnHelper = createColumnHelper();
 
@@ -45,6 +46,7 @@ const getColumns = (
                   const selected = table.getIsAllRowsSelected(); // get selected status of current row.
                   table.toggleAllRowsSelected(!selected);
                 }}
+                dataTestPrefixId={`${dataTestPrefixId}_table_select_all`}
               />
             );
           },
@@ -59,6 +61,7 @@ const getColumns = (
                     const selected = row.getIsSelected(); // get selected status of current row.
                     row.toggleSelected(!selected); // reverse selected status of current row.
                   }}
+                  dataTestPrefixId={`${dataTestPrefixId}_table_select_${row.id}`}
                 />
               </div>
             );
@@ -87,6 +90,7 @@ const getColumns = (
                   const isExpanded = row.getIsExpanded();
                   row.toggleExpanded(!isExpanded);
                 }}
+                dataTestId={`${dataTestPrefixId}_table_expand_${row.id}`}
               />
             );
           },
@@ -102,7 +106,7 @@ const getColumns = (
       const groupConfig = {
         id: column.id,
         header: column.header,
-        columns: getColumns(column.columns, false, false, theme),
+        columns: getColumns(column.columns, false, false, theme, dataTestPrefixId),
       };
       tColumns.push(columnHelper.group(groupConfig));
     } else {
@@ -134,6 +138,7 @@ const useTable = <TData,>({
   rowsConfig,
   columnsConfig,
   pagination,
+  dataTestPrefixId,
   ...rest
 }): ReturnValue<TData> => {
   const theme = useTheme();
@@ -146,7 +151,7 @@ const useTable = <TData,>({
 
   const hasCheckboxes = Boolean(rowSelection && isTableInteractive);
 
-  const tColumns = getColumns(columns, hasCheckboxes, hasRowDetails, theme);
+  const tColumns = getColumns(columns, hasCheckboxes, hasRowDetails, theme, dataTestPrefixId);
 
   const state = React.useMemo(() => {
     return {

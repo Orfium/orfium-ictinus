@@ -58,7 +58,7 @@ describe('TableV4', () => {
 
     const row = getAllByText('Title')[0].closest('tr') as HTMLElement;
     const rowUtils = within(row);
-    const checkbox = await rowUtils.findAllByTestId('row-check_undefined_checkbox');
+    const checkbox = await rowUtils.findAllByTestId('row-check_checkbox');
 
     await userEvent.click(checkbox[0]);
 
@@ -81,7 +81,7 @@ describe('TableV4', () => {
 
     const row = getByText(topLeftText).closest('tr') as HTMLElement;
     const rowUtils = within(row);
-    const checkbox = await rowUtils.findAllByTestId('undefined_undefined_checkbox');
+    const checkbox = await rowUtils.findAllByTestId('ictinus_checkbox');
 
     await userEvent.click(checkbox[0]);
 

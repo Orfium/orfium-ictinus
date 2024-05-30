@@ -7,6 +7,8 @@ import IconButton from 'components/IconButton';
 import { listStyle } from 'components/List/List.style';
 import { MenuWrapper, popoverStyle } from 'components/Menu/Menu.style';
 
+import type { TestProps } from '~/utils/types';
+
 type Props = {
   /** Whether multi-sorting is enabled */
   isMultiSortable?: boolean;
@@ -14,9 +16,14 @@ type Props = {
   onSort: (desc?: boolean, isMulti?: boolean) => void;
   /** External callback for when the Dropdown Button is clicked */
   onButtonClick?: (value: boolean) => void;
-};
+} & TestProps;
 
-const THOptions: React.FC<Props> = ({ isMultiSortable, onSort, onButtonClick }) => {
+const THOptions: React.FC<Props> = ({
+  isMultiSortable,
+  dataTestPrefixId,
+  onSort,
+  onButtonClick,
+}) => {
   const [isBtnOpen, setIsBtnOpen] = React.useState<boolean>(false);
 
   const btnRef = useRef(null);
@@ -64,6 +71,7 @@ const THOptions: React.FC<Props> = ({ isMultiSortable, onSort, onButtonClick }) 
             listRef.current.focus();
           }
         }}
+        dataTestPrefixId={`${dataTestPrefixId}_more_options`}
       />
       <Popover
         triggerRef={btnRef}
@@ -87,8 +95,8 @@ const THOptions: React.FC<Props> = ({ isMultiSortable, onSort, onButtonClick }) 
           onSelectionChange={handleSelectionChange}
           disabledKeys={[]}
         >
-          <SortingOption isDescending />
-          <SortingOption />
+          <SortingOption isDescending dataTestId={`${dataTestPrefixId}_more_options_desc`} />
+          <SortingOption dataTestId={`${dataTestPrefixId}_more_options_asc`} />
         </MenuWrapper>
       </Popover>
     </>
