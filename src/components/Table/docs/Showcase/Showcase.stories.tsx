@@ -117,8 +117,6 @@ export const Playground = {
           sortingColumn
         );
 
-    console.log(data);
-
     return (
       <Table
         data={data}
