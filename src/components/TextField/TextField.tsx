@@ -5,9 +5,9 @@ import React, { useRef } from 'react';
 import isEqual from 'react-fast-compare';
 import InputMask from 'react-input-mask';
 import { generateUniqueID } from 'utils/helpers';
+import type { TestProps } from 'utils/types';
 
 import { suffixContainerStyle } from './TextField.style';
-import type { TestProps } from '../../utils/types';
 import Label from '../Label';
 import MultiTextFieldBase from 'components/MultiTextFieldBase/MultiTextFieldBase';
 import type { SelectOption } from 'components/Select';

@@ -1,6 +1,6 @@
 import { FilterOption } from './Filter.types';
 import Stack from '../storyUtils/Stack';
-import { FIGMA_URL } from '../../utils/common';
+import { FIGMA_URL } from 'utils/common';
 import Filter from './Filter';
 import React from 'react';
 import Button from 'components/Button';

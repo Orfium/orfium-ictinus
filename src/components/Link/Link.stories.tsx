@@ -1,6 +1,6 @@
 import Link from './Link';
 import Stack from '../storyUtils/Stack';
-import { FIGMA_URL } from '../../utils/common';
+import { FIGMA_URL } from 'utils/common';
 import { Link as ReactRouterLink, MemoryRouter as Router } from 'react-router-dom';
 
 export default {

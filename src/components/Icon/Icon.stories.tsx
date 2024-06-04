@@ -1,6 +1,6 @@
 import Icon from './Icon';
 import IconographyShowcase from '../storyUtils/IconographyShowcase';
-import { FIGMA_URL } from '../../utils/common';
+import { FIGMA_URL } from 'utils/common';
 import Stack from 'components/storyUtils/Stack';
 
 export default {

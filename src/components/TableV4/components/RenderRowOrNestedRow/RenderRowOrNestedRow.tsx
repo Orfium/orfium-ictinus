@@ -1,10 +1,10 @@
+import useToggle from 'hooks/useToggle';
 import * as React from 'react';
+import { isComponentFunctionType } from 'utils/helpers';
 
 import ContentCell from './components/ContentCell';
 import ExpandedButtonCell from './components/ExpandedButtonCell';
 import { borderedRowStyle, expandableRowStyle } from './RenderRowOrNestedRow.style';
-import useToggle from '../../../../hooks/useToggle';
-import { isComponentFunctionType } from '../../../../utils/helpers';
 import { CheckBox } from '../../../Controls';
 import { TableRowContext } from '../../TableRowContext';
 import type { Row } from '../../TableV4';

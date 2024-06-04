@@ -17,6 +17,29 @@ const transform: Transform = (file, api) => {
         }
 
         // If the attribute is one of the ones that changed, update it
+        if (attr.name === 'size') {
+          const sizeValue = attrPath.node.value.value;
+          if (sizeValue === 'sm' && attrPath.node.value.type === 'StringLiteral') {
+            attrPath.node.value.value = 'compact';
+          } else if (
+            attrPath.node.value.type === 'JSXExpressionContainer' &&
+            attrPath.node.value.expression.value === 'sm'
+          ) {
+            attrPath.node.value.expression.value = 'compact';
+          } else if (attrPath.node.value.type === 'StringLiteral') {
+            attrPath.node.value.value = 'normal';
+          } else if (attrPath.node.value.type === 'JSXExpressionContainer') {
+            attrPath.node.value.expression.value = 'normal';
+          }
+        }
+        if (attr.name === 'type') {
+          const sizeValue = attrPath.node.value.value;
+          if (sizeValue === 'link' && attrPath.node.value.type === 'Literal') {
+            attrPath.node.value.value = 'tertiary';
+          }
+        }
+
+        // If the attribute is one of the ones that changed, update it
         if (attr.name === 'loading') attr.name = 'isLoading';
         if (attr.name === 'disabled') attr.name = 'isDisabled';
         if (attr.name === 'name') attr.name = 'iconName';
