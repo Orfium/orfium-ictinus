@@ -25,6 +25,8 @@ type Props = {
   colSortingState?: ColumnSort;
   /** Callback to reset sorting for this column */
   resetSorting?: () => void;
+  /** Metadata for the th element */
+  metaData?: any;
   /** Style overrides */
   sx?: CSSObject;
 };
@@ -39,6 +41,7 @@ const TH: React.FCC<Props & Pick<DivProps, 'onClick' | 'id'>> = ({
   resetSorting,
   sx,
   id,
+  metaData,
   ...rest
 }) => {
   const isSortable = Boolean(onSort);
@@ -48,6 +51,8 @@ const TH: React.FCC<Props & Pick<DivProps, 'onClick' | 'id'>> = ({
   const [hasVisibleOptions, setHasVisibleOptions] = React.useState(false);
 
   const { desc: isDesc } = colSortingState ?? {};
+
+  const { contentAlign = 'left' } = metaData;
 
   const sortIcon = () => {
     const handleClick = () => {
@@ -84,7 +89,7 @@ const TH: React.FCC<Props & Pick<DivProps, 'onClick' | 'id'>> = ({
       })}
       {...rest}
     >
-      <div css={thContent()}>
+      <div css={thContent({ contentAlign })}>
         <div css={{ textWrap: 'nowrap' }}>{children}</div>
         {isSortable && (
           <div css={optionsContainer()} data-header-role="options">

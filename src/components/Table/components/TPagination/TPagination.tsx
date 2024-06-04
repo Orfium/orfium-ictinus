@@ -22,9 +22,9 @@ const TPagination: React.FC<TPaginationProps> = ({ pagination, isSticky }) => {
     page,
     totalPages,
     onChange,
-    itemsPerPageOptions,
-    itemsPerPage,
-    onItemsPerPageChange,
+    showItems,
+    showItemsOptions,
+    onShowItemsChange,
     isEnhancedPaginationVisible,
     isNextPageDisabled,
     isPrevPageDisabled,
@@ -34,14 +34,14 @@ const TPagination: React.FC<TPaginationProps> = ({ pagination, isSticky }) => {
   return (
     <div css={paginationContainer({ isSticky })}>
       <div css={itemsPerPageContainer()}>
-        {itemsPerPage && itemsPerPageOptions && (
+        {showItems && showItemsOptions && (
           <Select
             label=""
             size="compact"
-            options={itemsPerPageOptions}
-            selectedOption={itemsPerPage}
+            options={showItemsOptions}
+            selectedOption={showItems}
             isSearchable={false}
-            onChange={onItemsPerPageChange}
+            onChange={onShowItemsChange}
           />
         )}
       </div>

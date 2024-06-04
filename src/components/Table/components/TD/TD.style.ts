@@ -1,8 +1,8 @@
 import type { CSSObject, SerializedStyles, Theme } from '@emotion/react';
 import { css } from '@emotion/react';
 
-import { ACTIONS_CELL_WIDTH } from '../../constants';
-import type { TableProps } from 'components/Table';
+import { ACTIONS_CELL_WIDTH, contentAlignToFlex } from '../../constants';
+import type { ContentAlign, TableProps } from 'components/Table';
 
 import { rem } from '~/theme/utils';
 
@@ -55,10 +55,10 @@ export const tdContainer =
     `;
   };
 
-export const tdContent = (): SerializedStyles => {
+export const tdContent = ({ contentAlign }: { contentAlign: ContentAlign }): SerializedStyles => {
   return css`
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: ${contentAlignToFlex[contentAlign]};
   `;
 };
