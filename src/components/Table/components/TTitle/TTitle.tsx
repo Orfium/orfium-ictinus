@@ -6,12 +6,14 @@ import { actionsContent, titleContent, tTitleContainer } from './TTitle.style';
 import type { TableProps } from 'components/Table/types';
 import Typography from 'components/Typography';
 
+import type { TestProps } from '~/utils/types';
+
 type Props = Pick<TableProps<any>, 'columnsConfig' | 'columns' | 'rowsConfig' | 'type'> & {
   /** Element that that serves as the positioning boundary of the ColumnChooser Menu */
   containerRef: React.MutableRefObject<any>;
   /** Number of rows */
   rowsCount?: number;
-};
+} & TestProps;
 
 const TTitle: React.FCC<Props> = ({
   type = 'read-only',
@@ -20,6 +22,7 @@ const TTitle: React.FCC<Props> = ({
   rowsConfig,
   rowsCount,
   containerRef,
+  dataTestPrefixId,
 }) => {
   const { hasRowsCount, rowSelection, bulkActions, defaultAction } = rowsConfig ?? {};
 
@@ -36,14 +39,18 @@ const TTitle: React.FCC<Props> = ({
 
   const title = useMemo(
     () => (
-      <div>
-        <Typography type={isSelectable ? 'active' : 'primary'} variant="label02">
+      <div data-testid={`${dataTestPrefixId}_title`}>
+        <Typography
+          type={isSelectable ? 'active' : 'primary'}
+          variant="label02"
+          data-testid={`${dataTestPrefixId}_title_items_count`}
+        >
           {itemsToDisplay}
         </Typography>
         <Typography variant="label02"> items {isSelectable ? 'selected' : ''}</Typography>
       </div>
     ),
-    [isSelectable, itemsToDisplay]
+    [dataTestPrefixId, isSelectable, itemsToDisplay]
   );
 
   return (
@@ -64,6 +71,7 @@ const TTitle: React.FCC<Props> = ({
             columns={columns}
             columnsConfig={columnsConfig}
             containerRef={containerRef}
+            dataTestPrefixId={dataTestPrefixId}
           />
         )}
       </div>

@@ -32,7 +32,7 @@ const CheckBox = React.forwardRef<HTMLInputElement, CheckBoxProps>((props, ref) 
     isIndeterminate,
     isDisabled,
     labelConfig = {},
-    dataTestPrefixId,
+    dataTestPrefixId = 'ictinus',
     children,
   } = props;
   const { placement = 'right', size = 'normal', helpText, sx } = labelConfig;
@@ -50,14 +50,14 @@ const CheckBox = React.forwardRef<HTMLInputElement, CheckBoxProps>((props, ref) 
         isDisabled={isDisabled}
         value={value}
         ref={ref}
-        data-testid={`${dataTestPrefixId}_${value}_checkbox`}
+        data-testid={`${dataTestPrefixId}${value ? `_${value}` : ''}_checkbox`}
       >
         <Icon
           name={isIndeterminate ? 'minus' : 'check'}
           size={theme.dimension.sizing.get('icon.md')}
           color={theme.tokens.colors.get('textColor.inverted.primary')}
-          dataTestPrefixId={`${dataTestPrefixId}_${value}_${
-            isIndeterminate ? 'minus' : 'checkmark'
+          dataTestId={`${dataTestPrefixId}${value ? `_${value}` : ''}_${
+            isIndeterminate ? 'minus' : isSelected ? 'checkmark' : 'unselected'
           }`}
         />
       </ReactAriaCheckbox>
@@ -65,7 +65,7 @@ const CheckBox = React.forwardRef<HTMLInputElement, CheckBoxProps>((props, ref) 
         <ControlLabel
           size={size}
           helpText={helpText}
-          dataTestPrefixId={`${dataTestPrefixId}_radio_${value?.split(' ').join('_')}`}
+          dataTestPrefixId={`${dataTestPrefixId}_checkbox_${value?.split(' ').join('_')}`}
         >
           {children}
         </ControlLabel>

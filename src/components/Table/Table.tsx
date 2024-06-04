@@ -18,6 +18,7 @@ const Table = <TData extends NoUndefined<TData>>({
   hasStickyHeader = false,
   pagination,
   sx,
+  dataTestPrefixId = 'ictinus',
 }: TableProps<TData>) => {
   /** If true, the scrollbar of tbody is visible */
   const [hasScrollbar, setHasScrollbar] = React.useState(false);
@@ -42,12 +43,17 @@ const Table = <TData extends NoUndefined<TData>>({
     rowsConfig,
     columnsConfig,
     pagination,
+    dataTestPrefixId,
   });
 
   const hasTitle = Boolean(columnsConfig || rowsConfig);
 
   return (
-    <div css={tableContainer()} ref={containerRef}>
+    <div
+      css={tableContainer()}
+      ref={containerRef}
+      data-testid={`${dataTestPrefixId}_table_container`}
+    >
       {hasTitle && (
         <TTitle
           type={type}
@@ -56,9 +62,10 @@ const Table = <TData extends NoUndefined<TData>>({
           rowsConfig={rowsConfig}
           containerRef={containerRef}
           rowsCount={table.getRowModel().rows.length}
+          dataTestPrefixId={dataTestPrefixId}
         />
       )}
-      <table css={tableStyles({ sx: sx?.table })}>
+      <table css={tableStyles({ sx: sx?.table })} data-testid={`${dataTestPrefixId}_table`}>
         <THead hasStickyHeader={hasStickyHeader} hasScrollbar={hasScrollbar} sx={sx?.thead}>
           {table.getHeaderGroups().map((headerGroup) => (
             <TR key={headerGroup.id} sx={sx?.tr}>
@@ -77,6 +84,7 @@ const Table = <TData extends NoUndefined<TData>>({
                     resetSorting: header.column.clearSorting,
                   })}
                   sx={sx?.th}
+                  dataTestPrefixId={dataTestPrefixId}
                 >
                   {header.isPlaceholder
                     ? null
@@ -112,11 +120,13 @@ const Table = <TData extends NoUndefined<TData>>({
                     return (
                       <TD
                         columnId={cell.column.id}
+                        rowId={cell.id}
                         key={cell.id}
                         rowSize={rowSize}
                         width={cell.column.getSize()}
                         metaData={cell.column.columnDef.meta}
                         sx={sx?.td}
+                        dataTestPrefixId={dataTestPrefixId}
                       >
                         {flexRender(cell.column.columnDef.cell, cell.getContext())}
                       </TD>
@@ -125,7 +135,12 @@ const Table = <TData extends NoUndefined<TData>>({
                 </TR>
                 {row.getIsExpanded() && (
                   <TR>
-                    <TD colSpan={table.getAllLeafColumns().length} isDetails>
+                    <TD
+                      rowId={row.id}
+                      colSpan={table.getAllLeafColumns().length}
+                      isDetails
+                      dataTestPrefixId={dataTestPrefixId}
+                    >
                       {data[index].details}
                     </TD>
                   </TR>
@@ -136,7 +151,11 @@ const Table = <TData extends NoUndefined<TData>>({
         </TBody>
       </table>
       {pagination && (
-        <TPagination pagination={pagination} isSticky={hasStickyHeader && hasScrollbar} />
+        <TPagination
+          pagination={pagination}
+          isSticky={hasStickyHeader && hasScrollbar}
+          dataTestPrefixId={dataTestPrefixId}
+        />
       )}
     </div>
   );
