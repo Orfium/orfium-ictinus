@@ -1,7 +1,7 @@
 import type { CSSObject } from '@emotion/react';
 import { css } from '@emotion/react';
 import useTheme from 'hooks/useTheme';
-import { omit } from 'lodash';
+import { omit } from 'lodash-es';
 import React, { forwardRef } from 'react';
 
 import { BoxWrapper } from './Box.style';

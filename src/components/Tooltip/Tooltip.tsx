@@ -1,12 +1,14 @@
-import Tippy from '@tippyjs/react';
+import { uniqueId } from 'lodash-es';
 import React from 'react';
+import { Tooltip as ReactTooltip } from 'react-tooltip';
 
-import { tooltipStyle } from './Tooltip.style';
 import type { TooltipProps } from './Tooltip.types';
+import { tooltipStyle } from 'components/Tooltip/Tooltip.style';
 
 const Tooltip = React.forwardRef<HTMLDivElement, TooltipProps>(
   (
     {
+      id = uniqueId('tooltip'),
       children,
       content,
       placement = 'right',
@@ -18,17 +20,21 @@ const Tooltip = React.forwardRef<HTMLDivElement, TooltipProps>(
     ref
   ) => {
     return (
-      <Tippy
-        css={tooltipStyle({ isInverted, isInteractive })}
-        content={content}
-        placement={placement}
-        interactive={isInteractive}
-        arrow={!isInteractive}
-        delay={[delayIn, delayOut]}
-        ref={ref}
-      >
-        {children}
-      </Tippy>
+      <div css={tooltipStyle({ isInverted, isInteractive })}>
+        <span data-tooltip-id={id} ref={ref}>
+          {children}
+        </span>
+        <ReactTooltip
+          id={id}
+          place={placement}
+          delayShow={delayIn}
+          delayHide={delayOut}
+          clickable={isInteractive}
+          className="tooltip"
+        >
+          {content}
+        </ReactTooltip>
+      </div>
     );
   }
 );

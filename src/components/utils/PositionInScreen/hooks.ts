@@ -1,4 +1,4 @@
-import head from 'lodash/head';
+import { head } from 'lodash-es';
 import { useEffect, useState } from 'react';
 
 import { resizeObserverHandler } from './utils';
