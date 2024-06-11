@@ -1,907 +1,385 @@
+import { useMemo, useState } from 'react';
 import Table from './Table';
-import TableFilterShowcase from '../storyUtils/TableFilterShowcase';
-import { FIGMA_URL } from 'utils/common';
+import { SimpleData, moreData, simpleColumns, simpleData } from './constants';
+import { ExpandedState, SortingState } from '@tanstack/react-table';
+import { chunk, concat } from 'lodash';
+import Button from 'components/Button';
+import DropdownButton from 'components/DropdownButton';
+import { SelectOption } from 'components/Select';
+import { TableColumn } from './types';
 
 export default {
-  title: 'Original Components/Table',
+  title: 'Updated Components/Table/Table',
   component: Table,
 
-  parameters: {
-    design: [
-      {
-        type: 'figma',
-        name: 'Table Cell',
-        url: `${FIGMA_URL}?node-id=10283%3A104367`,
-      },
-      {
-        type: 'figma',
-        name: 'Table Header',
-        url: `${FIGMA_URL}?node-id=10283%3A104369`,
-      },
-      {
-        type: 'figma',
-        name: 'Table Title',
-        url: `${FIGMA_URL}?node-id=10283%3A104366`,
-      },
-      {
-        type: 'figma',
-        name: 'Documentation: Examples',
-        url: `${FIGMA_URL}?node-id=921%3A155`,
-      },
-      {
-        type: 'figma',
-        name: 'Documentation: Sorting',
-        url: `${FIGMA_URL}?node-id=7428%3A117692`,
-      },
-      {
-        type: 'figma',
-        name: 'Documentation: Spacing Row Rules',
-        url: `${FIGMA_URL}?node-id=7848%3A131938`,
-      },
-    ],
-    controls: { disable: true },
+  args: {
+    rowSize: 'sm',
+    isMultiSortable: false,
+    maxHeight: 280,
+    isNextPageDisabled: false,
+    isPrevPageDisabled: false,
+    isEnhancedPaginationVisible: true,
+    hasItemsPerPageCount: true,
+  },
+
+  argTypes: {
+    isAlwaysVisible: { control: 'multi-select', options: simpleColumns.map((col) => col.id) },
+    firstNameWidth: { control: 'number', name: 'First Name Width' },
+    lastNameWidth: { control: 'number', name: 'Last Name Width' },
+    ageWidth: { control: 'number', name: 'Age Width' },
+    jobWidth: { control: 'number', name: 'Job Width' },
+    rowSize: { name: 'Row Size' },
+    maxHeight: { name: 'Tbody Max height' },
+    hasItemsPerPageCount: { name: 'Show items-per-page count' },
   },
 };
 
-export const RegularTableWithSimpleRows = {
-  render: () => (
-    <Table
-      columns={['Title', 'Name', 'Surname', 'Age', 'Sauron Age']}
-      dataTestIdPrefix="ictinus"
-      isPadded
-      topLeftText={'topLeftText'}
-      topRightArea={() => (
-        <div>
-          <div>top right section</div>
-        </div>
-      )}
-      data={[
-        {
-          id: 1,
+export const ColumnAndRowSizing = {
+  render: (args) => {
+    const { rowSize, firstNameWidth, lastNameWidth, ageWidth, jobWidth } = args;
 
-          cells: [
-            {
-              content: 'title',
-            },
-            {
-              content: 'firstname',
-            },
-            {
-              content: 'lastname',
-            },
-            {
-              content: 42,
-            },
-            {
-              content: '4.2M',
-              align: 'right',
-            },
-          ],
-        },
-        {
-          id: 2,
+    const columns: TableColumn<SimpleData>[] = [
+      { id: 'firstName', header: 'First Name', width: firstNameWidth },
+      { id: 'lastName', header: 'Last Name', width: lastNameWidth },
+      { id: 'age', header: 'Age', width: ageWidth },
+      { id: 'job', header: 'Job', width: jobWidth },
+    ];
 
-          cells: [
-            {
-              content: 'title',
-            },
-            {
-              content: 'firstname',
-            },
-            {
-              content: 'lastname',
-            },
-            {
-              content: 42,
-            },
-            {
-              content: '4.2M',
-              align: 'right',
-            },
-          ],
-        },
-        {
-          id: 3,
+    return <Table<SimpleData> data={simpleData()} columns={columns} rowSize={rowSize} />;
+  },
 
-          cells: [
-            {
-              content: 'title',
-            },
-            {
-              content: 'firstname',
-            },
-            {
-              content: 'lastname',
-            },
-            {
-              content: 42,
-            },
-            {
-              content: '4.2M',
-              align: 'right',
-            },
-          ],
-        },
-        {
-          id: 4,
+  name: 'Column And Row Sizing',
 
-          cells: [
-            {
-              content: 'title',
-            },
-            {
-              content: 'firstname',
-            },
-            {
-              content: 'lastname',
-            },
-            {
-              content: 42,
-            },
-            {
-              content: '4.2M',
-              align: 'right',
-            },
-          ],
-        },
-        {
-          id: 5,
-
-          cells: [
-            {
-              content: 'title',
-            },
-            {
-              content: 'firstname',
-            },
-            {
-              content: 'lastname',
-            },
-            {
-              content: 42,
-            },
-            {
-              content: '4.2M',
-              align: 'right',
-            },
-          ],
-        },
-        {
-          id: 6,
-
-          cells: [
-            {
-              content: 'title',
-            },
-            {
-              content: 'firstname',
-            },
-            {
-              content: 'lastname',
-            },
-            {
-              content: 42,
-            },
-            {
-              content: '4.2M',
-              align: 'right',
-            },
-          ],
-        },
-        {
-          id: 7,
-
-          cells: [
-            {
-              content: 'title',
-            },
-            {
-              content: 'firstname',
-            },
-            {
-              content: 'lastname',
-            },
-            {
-              content: 42,
-            },
-            {
-              content: '4.2M',
-              align: 'right',
-            },
-          ],
-        },
-        {
-          id: 8,
-
-          cells: [
-            {
-              content: 'title',
-            },
-            {
-              content: 'firstname',
-            },
-            {
-              content: 'lastname',
-            },
-            {
-              content: 42,
-            },
-            {
-              content: '4.2M',
-              align: 'right',
-            },
-          ],
-        },
-      ]}
-    />
-  ),
-
-  name: 'Regular Table with simple rows',
+  parameters: {
+    controls: {
+      include: ['Row Size', 'First Name Width', 'Last Name Width', 'Age Width', 'Job Width'],
+    },
+  },
 };
 
-export const RegularTableWithSortingAndTooltips = {
-  render: () => (
-    <Table
-      columns={[
-        {
-          content: {
-            label: 'Title',
-            sortingKey: 'title',
-          },
+/** Story for Group Headers */
 
-          isSortable: true,
+// export const ColumnGroups = {
+//   render: (args) => {
+//     const { rowSize } = args;
 
-          tooltip: {
-            content: 'Tooltip Content',
-            placement: 'bottom',
-          },
-        },
-        'Name',
-        {
-          content: {
-            label: 'Surname',
-            sortingKey: 'surname',
-          },
+//     return <Table<SimpleData> data={simpleData} columns={groupedColumns} rowSize={rowSize} />;
+//   },
 
-          tooltip: {
-            content: 'Tooltip Content',
-          },
-        },
-        {
-          content: {
-            label: 'Age',
-            sortingKey: 'age',
-          },
+//   name: 'Column Groups',
 
-          isSortable: true,
+//   parameters: {
+//     controls: {
+//       disable: true,
+//     },
+//   },
+// };
 
-          tooltip: {
-            content: 'Tooltip Content',
-            placement: 'right',
-          },
-        },
-      ]}
-      dataTestIdPrefix="ictinus"
-      onSort={(column, order) => console.log(column, order)}
-      initialSort={{
-        column: 'title',
-        order: 'asc',
-      }}
-      isPadded
-      data={[
-        {
-          id: 1,
+export const ColumnChooser = {
+  render: (args) => {
+    const { rowSize, isAlwaysVisible = [] } = args;
 
-          cells: [
-            {
-              content: 'title',
-            },
-            {
-              content: 'firstname',
-            },
-            {
-              content: 'lastname',
-            },
-            {
-              content: 4.221,
-            },
-          ],
-        },
-        {
-          id: 2,
+    const columns: TableColumn<SimpleData>[] = [
+      {
+        id: 'firstName',
+        header: 'First Name',
+        isAlwaysVisible: isAlwaysVisible.includes('firstName'),
+      },
+      {
+        id: 'lastName',
+        header: 'Last Name',
+        isAlwaysVisible: isAlwaysVisible.includes('lastName'),
+      },
+      { id: 'age', header: 'Age', isAlwaysVisible: isAlwaysVisible.includes('age') },
+      { id: 'job', header: 'Job', isAlwaysVisible: isAlwaysVisible.includes('job') },
+    ];
 
-          cells: [
-            {
-              content: 'title',
-            },
-            {
-              content: 'firstname',
-            },
-            {
-              content: 'lastname',
-            },
-            {
-              content: 4.221,
-            },
-          ],
-        },
-        {
-          id: 3,
+    const [columnVisibility, setColumnVisibility] = useState<Record<string, boolean>>({
+      firstName: true,
+      lastName: true,
+      age: true,
+      job: true,
+    });
 
-          cells: [
-            {
-              content: 'title',
-            },
-            {
-              content: 'firstname',
-            },
-            {
-              content: 'lastname',
-            },
-            {
-              content: 4.221,
-            },
-          ],
-        },
-        {
-          id: 4,
+    return (
+      <Table<SimpleData>
+        data={simpleData()}
+        columns={columns}
+        rowSize={rowSize}
+        columnsConfig={{ columnVisibility, setColumnVisibility }}
+      />
+    );
+  },
 
-          cells: [
-            {
-              content: 'title',
-            },
-            {
-              content: 'firstname',
-            },
-            {
-              content: 'lastname',
-            },
-            {
-              content: 4.221,
-            },
-          ],
-        },
-        {
-          id: 5,
+  name: 'Column Chooser',
 
-          cells: [
-            {
-              content: 'title',
-            },
-            {
-              content: 'firstname',
-            },
-            {
-              content: 'lastname',
-            },
-            {
-              content: 4.221,
-            },
-          ],
-        },
-        {
-          id: 6,
-
-          cells: [
-            {
-              content: 'title',
-            },
-            {
-              content: 'firstname',
-            },
-            {
-              content: 'lastname',
-            },
-            {
-              content: 4.221,
-            },
-          ],
-        },
-        {
-          id: 7,
-
-          cells: [
-            {
-              content: 'title',
-            },
-            {
-              content: 'firstname',
-            },
-            {
-              content: 'lastname',
-            },
-            {
-              content: 4.221,
-            },
-          ],
-        },
-        {
-          id: 8,
-
-          cells: [
-            {
-              content: 'title',
-            },
-            {
-              content: 'firstname',
-            },
-            {
-              content: 'lastname',
-            },
-            {
-              content: 4.221,
-            },
-          ],
-        },
-      ]}
-    />
-  ),
-
-  name: 'Regular Table with sorting and tooltips',
+  parameters: {
+    controls: {
+      include: ['Row Size', 'isAlwaysVisible'],
+    },
+  },
 };
 
-export const TableWithExpandableRows = {
-  render: () => (
-    <Table
-      columns={['Title', 'Name', 'Surname', 'Age']}
-      type={'normal'}
-      isPadded
-      hasFixedHeader
-      hasFixedCTA
-      onCheck={(g) => console.log('on table change: ', g)}
-      topLeftText={'topLeftText'}
-      topRightArea={() => (
-        <div>
-          <div>top right section</div>
-        </div>
-      )}
-      // @ts-ignore
-      data={new Array(50).fill(null).map((item, index) => ({
-        id: index + 1,
+export const Sorting = {
+  render: (args) => {
+    const { rowSize, isAlwaysVisible = [], isMultiSortable } = args;
 
-        cells: [
-          {
-            content: (
-              <a href="www.youtube.com" onClick={(e) => e.stopPropagation()}>
-                'title'
-              </a>
-            ),
-          },
-          {
-            content: 'firstname',
-          },
-          {
-            content: 'lastname',
-          },
-          {
-            content: 4.221,
-          },
-        ],
+    const [sorting, setSorting] = useState<SortingState>();
 
-        expanded: () => <div>Hey i am an expandable content</div>,
-      }))}
-      actionWidth={3}
-    />
-  ),
+    const columns: TableColumn<SimpleData>[] = [
+      {
+        id: 'firstName',
+        header: 'First Name',
+        isAlwaysVisible: isAlwaysVisible.includes('firstName'),
+        isSortable: true,
+      },
+      {
+        id: 'lastName',
+        header: 'Last Name',
+        isAlwaysVisible: isAlwaysVisible.includes('lastName'),
+      },
+      {
+        id: 'age',
+        header: 'Age',
+        isAlwaysVisible: isAlwaysVisible.includes('age'),
+        isSortable: true,
+      },
+      { id: 'job', header: 'Job', isAlwaysVisible: isAlwaysVisible.includes('job') },
+    ];
 
-  name: 'Table with expandable rows',
+    const [columnVisibility, setColumnVisibility] = useState<Record<string, boolean>>({
+      firstName: true,
+      lastName: true,
+      age: true,
+      job: true,
+    });
+
+    const sortDataByKey = (data, key, order = 'asc') => {
+      const returnData = [...data];
+
+      return returnData.sort((a, b) => {
+        const valueA = a.cells[key];
+        const valueB = b.cells[key];
+
+        const comparison =
+          key === 'age'
+            ? parseInt(valueA, 10) - parseInt(valueB, 10)
+            : valueA < valueB
+            ? -1
+            : valueA > valueB
+            ? 1
+            : 0;
+
+        return order === 'desc' ? -comparison : comparison;
+      });
+    };
+
+    const ddata = useMemo(() => {
+      const { id = undefined, desc = undefined } = sorting?.length ? sorting[0] : {};
+
+      if (id) {
+        return sortDataByKey(simpleData(), id, desc ? 'desc' : 'asc');
+      } else {
+        return simpleData();
+      }
+    }, [sorting, simpleData]);
+
+    return (
+      <Table<SimpleData>
+        data={ddata}
+        columns={columns}
+        rowSize={rowSize}
+        columnsConfig={{
+          columnVisibility,
+          setColumnVisibility,
+        }}
+        sorting={{
+          sortingColumn: sorting,
+          handleSorting: setSorting,
+          isMultiSortable,
+        }}
+      />
+    );
+  },
+
+  name: 'Sorting',
+
+  parameters: {
+    controls: {
+      include: ['Row Size', 'isAlwaysVisible', 'isMultiSortable'],
+    },
+  },
 };
 
-export const TableWithExpandableRowsExpandedOnPageLoad = {
-  render: () => (
-    <Table
-      columns={['Title', 'Name', 'Surname', 'Age']}
-      padded
-      fixedHeader
-      fixedCTA
-      onCheck={(g) => console.log('on table change: ', g)}
-      topLeftText={'topLeftText'}
-      topRightArea={() => (
-        <div>
-          <div>top right section</div>
-        </div>
-      )}
-      // @ts-ignore
-      data={new Array(50).fill(null).map((item, index) => ({
-        id: index + 1,
+export const StickyHeader = {
+  render: (args) => {
+    const { rowSize, maxHeight } = args;
 
-        cells: [
-          {
-            content: (
-              <a href="www.youtube.com" onClick={(e) => e.stopPropagation()}>
-                'title'
-              </a>
-            ),
-          },
-          {
-            content: 'firstname',
-          },
-          {
-            content: 'lastname',
-          },
-          {
-            content: 4.221,
-          },
-        ],
+    return (
+      <Table<SimpleData>
+        data={concat(simpleData(), moreData)}
+        columns={simpleColumns as TableColumn<SimpleData>[]}
+        rowSize={rowSize}
+        hasStickyHeader
+        sx={{ tbody: { maxHeight: `${maxHeight}px` } }}
+      />
+    );
+  },
 
-        expanded: () => <div>Hey i am an expandable content</div>,
-      }))}
-      actionWidth={3}
-      isInitiallyExpanded
-    />
-  ),
+  name: 'Sticky Header',
 
-  name: 'Table with Expandable Rows - Expanded on Page Load',
+  parameters: {
+    controls: {
+      include: ['Row Size', 'Tbody Max height'],
+    },
+  },
 };
 
-export const FinancialTable = {
-  render: () => (
-    <Table
-      columns={['Title', 'Name', 'Surname', 'Age']}
-      onCheck={console.log}
-      isPadded
-      topLeftText={'topLeftText'}
-      topRightArea={() => (
-        <div>
-          <div>top right section</div>
-        </div>
-      )}
-      data={[
-        {
-          id: 1,
+export const RowSelection = {
+  render: (args) => {
+    const { rowSize } = args;
 
-          cells: [
-            {
-              content: 'title',
-            },
-            {
-              content: 'firstname',
-            },
-            {
-              type: 'financial',
-              content: 'lastname',
-            },
-            {
-              type: 'financial',
-              content: 4.221,
-            },
-          ],
-        },
-        {
-          id: 2,
+    const [rowSelection, setRowSelection] = useState<Record<number, boolean>>({
+      1: true,
+      5: true,
+      7: true,
+    });
 
-          cells: [
-            {
-              content: 'title',
-            },
-            {
-              content: 'firstname',
-            },
-            {
-              type: 'financial',
-              content: 'lastname',
-            },
-            {
-              type: 'financial',
-              content: 4.221,
-            },
-          ],
-        },
-        {
-          id: 3,
+    return (
+      <Table<SimpleData>
+        data={concat(simpleData(), moreData)}
+        columns={simpleColumns as TableColumn<SimpleData>[]}
+        rowSize={rowSize}
+        type="interactive"
+        rowsConfig={{
+          rowSelection,
+          setRowSelection,
+          defaultAction: <Button size="compact">Default Action</Button>,
+          bulkActions: (
+            <div
+              css={{
+                display: 'flex',
+                alignContent: 'center',
+                justifyContent: 'center',
+                gap: '8px',
+              }}
+            >
+              <Button size="compact">Bulk 1</Button>
+              <Button size="compact">Bulk 2</Button>
+              <DropdownButton
+                size="compact"
+                items={['Bulk 4', 'Bulk 5', 'Bulk 6']}
+                onButtonClick={() => console.log('click')}
+                onOptionSelect={() => console.log('option')}
+              >
+                Bulk 3
+              </DropdownButton>
+            </div>
+          ),
+        }}
+      />
+    );
+  },
 
-          cells: [
-            {
-              content: 'title',
-            },
-            {
-              content: 'firstname',
-            },
-            {
-              type: 'financial',
-              content: 'lastname',
-            },
-            {
-              type: 'financial',
-              content: 4.221,
-            },
-          ],
-        },
-        {
-          id: 4,
+  name: 'Row Selection',
 
-          cells: [
-            {
-              content: 'title',
-            },
-            {
-              colSpan: 2,
-              content: 'Sum',
-            },
-            {
-              type: 'financial',
-              content: 4.221,
-            },
-          ],
-        },
-      ]}
-    />
-  ),
-
-  name: 'Financial Table',
+  parameters: {
+    controls: {
+      include: ['Row Size'],
+    },
+  },
 };
 
-export const FixedHeaderTable = {
-  render: () => (
-    <Table
-      columns={['Title', 'Name', 'Surname', 'Age']}
-      onCheck={console.log}
-      isPadded
-      hasFixedHeader
-      topLeftText={'topLeftText'}
-      topRightArea={() => (
-        <div>
-          <div>top right section</div>
-        </div>
-      )}
-      data={[
-        {
-          id: 1,
+export const RowDetails = {
+  render: (args) => {
+    const { rowSize } = args;
 
-          cells: [
-            {
-              content: 'title',
-            },
-            {
-              content: 'firstname',
-            },
-            {
-              content: 'lastname',
-            },
-            {
-              content: 4.221,
-            },
-          ],
-        },
-        {
-          id: 2,
+    const [expanded, setExpanded] = useState<ExpandedState>({});
 
-          cells: [
-            {
-              content: 'title',
-            },
-            {
-              content: 'firstname',
-            },
-            {
-              content: 'lastname',
-            },
-            {
-              content: 4.221,
-            },
-          ],
-        },
-        {
-          id: 3,
+    return (
+      <Table<SimpleData>
+        type="interactive"
+        data={simpleData(true)}
+        columns={simpleColumns as TableColumn<SimpleData>[]}
+        rowSize={rowSize}
+        rowsConfig={{
+          expanded,
+          setExpanded,
+        }}
+      />
+    );
+  },
 
-          cells: [
-            {
-              content: 'title',
-            },
-            {
-              content: 'firstname',
-            },
-            {
-              content: 'lastname',
-            },
-            {
-              content: 4.221,
-            },
-          ],
-        },
-        {
-          id: 12,
+  name: 'Row Details',
 
-          cells: [
-            {
-              content: 'title',
-            },
-            {
-              content: 'firstname',
-            },
-            {
-              content: 'lastname',
-            },
-            {
-              content: 4.221,
-            },
-          ],
-        },
-        {
-          id: 13,
-
-          cells: [
-            {
-              content: 'title',
-            },
-            {
-              content: 'firstname',
-            },
-            {
-              content: 'lastname',
-            },
-            {
-              content: 4.221,
-            },
-          ],
-        },
-        {
-          id: 22,
-
-          cells: [
-            {
-              content: 'title',
-            },
-            {
-              content: 'firstname',
-            },
-            {
-              content: 'lastname',
-            },
-            {
-              content: 4.221,
-            },
-          ],
-        },
-        {
-          id: 23,
-
-          cells: [
-            {
-              content: 'title',
-            },
-            {
-              content: 'firstname',
-            },
-            {
-              content: 'lastname',
-            },
-            {
-              content: 4.221,
-            },
-          ],
-        },
-        {
-          id: 32,
-
-          cells: [
-            {
-              content: 'title',
-            },
-            {
-              content: 'firstname',
-            },
-            {
-              content: 'lastname',
-            },
-            {
-              content: 4.221,
-            },
-          ],
-        },
-        {
-          id: 33,
-
-          cells: [
-            {
-              content: 'title',
-            },
-            {
-              content: 'firstname',
-            },
-            {
-              content: 'lastname',
-            },
-            {
-              content: 4.221,
-            },
-          ],
-        },
-      ]}
-    />
-  ),
-
-  name: 'Fixed Header Table',
+  parameters: {
+    controls: {
+      include: ['Row Size'],
+    },
+  },
 };
 
-export const TableWithExpandableRowsAndSortDir = {
-  render: () => (
-    <Table
-      columns={[
-        {
-          content: {
-            label: 'Title',
-            sortingKey: 'title',
-          },
+export const Pagination = {
+  render: (args) => {
+    const {
+      rowSize,
+      hasStickyHeader,
+      isNextPageDisabled,
+      isPrevPageDisabled,
+      isEnhancedPaginationVisible,
+      hasItemsPerPageCount,
+      maxHeight,
+    } = args;
 
-          isSortable: true,
+    const [currentPage, setCurrentPage] = useState(1);
 
-          tooltip: {
-            content: 'Tooltip Content',
-            placement: 'bottom',
-          },
-        },
-        'Name',
-        {
-          content: {
-            label: 'Surname',
-            sortingKey: 'surname',
-          },
+    const [itemsPerPage, setItemsPerPage] = useState<SelectOption>({
+      value: 10,
+      label: '10 rows per page',
+    });
 
-          tooltip: {
-            content: 'Tooltip Content',
-          },
-        },
-        {
-          content: {
-            label: 'Age',
-            sortingKey: 'age',
-          },
+    const data = chunk(concat(simpleData(), moreData), Number(itemsPerPage.value));
 
-          isSortable: true,
+    return (
+      <Table<SimpleData>
+        data={data[currentPage - 1]}
+        columns={simpleColumns as TableColumn<SimpleData>[]}
+        rowSize={rowSize}
+        hasStickyHeader={hasStickyHeader}
+        sx={hasStickyHeader ? { tbody: { maxHeight: `${maxHeight}px` } } : undefined}
+        pagination={{
+          isEnhancedPaginationVisible,
+          page: currentPage,
+          onChange: setCurrentPage,
+          totalPages: data.length,
+          ...(hasItemsPerPageCount && {
+            itemsPerPage,
+            itemsPerPageOptions: [
+              { value: 5, label: '5 rows per page' },
+              { value: 10, label: '10 rows per page' },
+            ],
+          }),
+          onItemsPerPageChange: setItemsPerPage,
+          isNextPageDisabled,
+          isPrevPageDisabled,
+        }}
+      />
+    );
+  },
 
-          tooltip: {
-            content: 'Tooltip Content',
-            placement: 'right',
-          },
-        },
-      ]}
-      type={'normal'}
-      isPadded
-      hasFixedHeader
-      onSort={console.log}
-      hasFixedCTA
-      sortDir={'desc'}
-      onCheck={(g) => console.log('on table change: ', g)}
-      topLeftText={'topLeftText'}
-      topRightArea={() => (
-        <div>
-          <div>top right section</div>
-        </div>
-      )}
-      // @ts-ignore
-      data={new Array(50).fill(null).map((item, index) => ({
-        id: index + 1,
+  name: 'Pagination',
 
-        cells: [
-          {
-            content: (
-              <a href="www.youtube.com" onClick={(e) => e.stopPropagation()}>
-                'title'
-              </a>
-            ),
-          },
-          {
-            content: 'firstname',
-          },
-          {
-            content: 'lastname',
-          },
-          {
-            content: 4.221,
-          },
-        ],
-
-        expanded: () => <div>Hey i am an expandable content</div>,
-      }))}
-      actionWidth={3}
-    />
-  ),
-
-  name: 'Table with expandable rows and sortDir',
-};
-
-export const TableWithFilteredDataForPerformance = {
-  render: () => <TableFilterShowcase />,
-  name: 'Table with filtered data for performance',
+  parameters: {
+    controls: {
+      include: [
+        'Row Size',
+        'hasStickyHeader',
+        'isPrevPageDisabled',
+        'isNextPageDisabled',
+        'isEnhancedPaginationVisible',
+        'Show items-per-page count',
+        'Tbody Max height',
+      ],
+    },
+  },
 };

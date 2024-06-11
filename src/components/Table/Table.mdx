@@ -1,13 +1,18 @@
 import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
 import Table from './Table';
-import { CellStory, RowStory, ExtendedColumnStory } from './utils/TableStoryComponents';
 import * as TableStories from './Table.stories';
+import {
+  TableColumnStory,
+  ColumnsConfigStory,
+  RowsConfigStory,
+  PaginationConfigStory,
+  TableRowStory,
+} from './utils/TableStoryComponents';
 
 <Meta of={TableStories} />
 
 <SectionHeader
   title={'Table'}
-  isPending
   sections={[
     { title: 'Overview', href: '#overview' },
     { title: 'Props', href: '#table-props' },
@@ -18,78 +23,106 @@ import * as TableStories from './Table.stories';
 
 ## Overview
 
-A universal Table component that applies Orfium basic usages. Check inline data structure for more.
+A universal Table component that applies Orfium basic usages.
 
 ## Table Props
 
 <ArgTypes of={Table} />
 
-## Cell Type
+## TableColumn Type
 
-<ArgTypes of={CellStory} />
+<ArgTypes of={TableColumnStory} />
 
-## Row Type
+## ColumnsConfig Type
 
-<ArgTypes of={RowStory} />
+This type includes all the configuration for the columns
 
-## ExtendedColumn Type
+<ArgTypes of={ColumnsConfigStory} />
 
-<ArgTypes of={ExtendedColumnStory} />
+## RowsConfig Type
 
-## Usage
+This type includes all the configuration for the rows
 
-```js
-import { Table } from '@orfium/ictinus';
+<ArgTypes of={RowsConfigStory} />
 
-<Table />;
-```
+## TableRow Type
+
+<ArgTypes of={TableRowStory} />
+
+## PaginationConfig Type
+
+This type includes all the configuration for the pagination
+
+<ArgTypes of={PaginationConfigStory} />
 
 <SubsectionHeader title="Variants" />
 
-### Regular Table
+### Column and Row Sizing
 
-Regular Table with simple rows
+<Tip>In order to adjust the cell height, use the rowSize prop</Tip>
 
-<Canvas of={TableStories.RegularTableWithSimpleRows} />
+<Tip>
+  In order to adjust the cell width, set the width for every column inside the DisplayColumn
+  configuration object (value is percentage)
+</Tip>
 
-### Table With Sorting And Column Tooltips
+<Canvas of={TableStories.ColumnAndRowSizing} />
 
-Regular Table with sorting and column tooltips
+### Column Chooser
 
-<Canvas of={TableStories.RegularTableWithSortingAndTooltips} />
+<Canvas of={TableStories.ColumnChooser} />
 
-### Expandable Table
+### Sorting
 
-Table with expandable rows and nested header
+In order to sort your table, use the `sorting` prop. This is an object that consists of:
 
-<Canvas of={TableStories.TableWithExpandableRows} />
+- `sortingColumn` is an array of objects; every object has a `id` key, which indicates the column's id, and a `desc` Boolean, indicating the descending or ascending order.
+- `handleSorting` is callback to change the sortingColumn state.
+- `isMultiSortable` enables multi-sorting.
 
-### Table with Expandable Rows - Expanded on Page Load
+<Tip>
+  UI-wise, sorting options are shown by hovering on the column head; either by pressing the arrow
+  IconButton on the left you can toggle the sorting state (the click order is asc -> desc ->
+  no-sorting) or by pressing the more options IconButton on the right of the header.
+</Tip>
 
-Table with Expandable Rows - Expanded on Page Load
+<Tip>To check the multi sorting feature, enable the isMultiSortable prop through the Controls</Tip>
 
-<Canvas of={TableStories.TableWithExpandableRowsExpandedOnPageLoad} />
+<Canvas of={TableStories.Sorting} />
 
-### Financial Table
+### Sticky Header
 
-Financial Table that has lines at the end as it requires a financial Orfium table
+<Tip>
+  In order to create a table with sticky header, use the hasStickyHeader prop and also pass a
+  max-height for the tbody though the sx prop
+</Tip>
 
-<Canvas of={TableStories.FinancialTable} />
+<Canvas of={TableStories.StickyHeader} />
 
-### Fixed Header Table
+### Row Selection
 
-Fixed Header Table
+In order to enable row Selection, do the following steps:
 
-<Canvas of={TableStories.FixedHeaderTable} />
+- Use prop `type` = `interactive`.
+- Use the `rowsConfig` object prop and more specificaly `rowSelection` and `setRowSelection` keys. The `rowSelection` is an object where the key is the row index (from 0 to rows.length - 1) and value is a boolean indicating if the row is selected. Check the implementation below for more clientInformation.
 
-### Expandable Table with sort, fixed Header and cta's
+You can also pass a `defaultAction` and/or `bulkActions` inside the `rowsConfig`, which are visible once at least 1 row is selected.
 
-Table with expandable rows with sort, fixed Header and cta's
+<Canvas of={TableStories.RowSelection} />
 
-<Canvas of={TableStories.TableWithExpandableRowsAndSortDir} />
+### Row Details
 
-### Table with filtered data for performance
+In order to enable row expansion functionality, do the following steps:
 
-Table with filtered data for performance
+1. Inside the `rowsConfig` object prop, use:
 
-<Canvas of={TableStories.TableWithFilteredDataForPerformance} />
+- `expanded` prop is an object state indicating which rows are expanded; keys are row IDs and values are booleans (whether is expanded or not)
+- `setExpanded` is a state change callback for `expanded`.
+
+2. In `data` prop, use the `details` key for every row.
+
+<Canvas of={TableStories.RowDetails} />
+
+### Pagination
+
+<Canvas of={TableStories.Pagination} />

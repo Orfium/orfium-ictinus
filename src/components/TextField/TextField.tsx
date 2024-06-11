@@ -141,7 +141,7 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
             />
           </div>
           {suffixContent && (
-            <div aria-hidden={!suffixContent} css={suffixContainerStyle()}>
+            <div aria-hidden={!suffixContent} css={suffixContainerStyle({size})}>
               {suffixContent}
             </div>
           )}

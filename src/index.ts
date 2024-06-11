@@ -94,6 +94,8 @@ export { Switch } from './components/Controls';
 export * from './components/Controls/Switch';
 export { default as Table } from './components/Table';
 export * from './components/Table';
+export { default as TableV4 } from './components/TableV4';
+export * from './components/TableV4';
 export { default as Tag } from './components/Tag';
 export * from './components/Tag';
 export { default as TextField } from './components/TextField';
