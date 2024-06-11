@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 import Table from './Table';
 import { SimpleData, moreData, simpleColumns, simpleData } from './constants';
 import { ExpandedState, SortingState } from '@tanstack/react-table';
-import { chunk, concat } from 'lodash';
+import { chunk, concat } from 'lodash-es';
 import Button from 'components/Button';
 import DropdownButton from 'components/DropdownButton';
 import { SelectOption } from 'components/Select';

@@ -7,7 +7,7 @@ import {
   useReactTable,
 } from '@tanstack/react-table';
 import useTheme from 'hooks/useTheme';
-import { concat } from 'lodash';
+import { concat } from 'lodash-es';
 import React from 'react';
 import type { Theme } from 'theme';
 
