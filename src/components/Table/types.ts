@@ -8,7 +8,15 @@ import type {
 
 import type { SelectOptionValues } from 'components/Select';
 
-export type TableProps<TData> = {
+import type { TestProps } from '~/utils/types';
+
+export type NoUndefined<T> = {
+  [K in keyof T]-?: Exclude<T[K], undefined>;
+};
+
+export { SortingState, ExpandedState };
+
+export type TableProps<TData extends NoUndefined<TData>> = {
   /** If table is interactive, rows are selectable with actions */
   type?: 'interactive' | 'read-only';
   /** The Columns configuration of the Table */
@@ -37,9 +45,9 @@ export type TableProps<TData> = {
     tr?: CSSObject;
     td?: CSSObject;
   };
-};
+} & TestProps;
 
-export type UseTableProps<TData> = Pick<
+export type UseTableProps<TData extends NoUndefined<TData>> = Pick<
   TableProps<TData>,
   'columns' | 'data' | 'sorting' | 'rowsConfig' | 'columnsConfig'
 > &
@@ -63,6 +71,8 @@ export type ColumnsConfig<TData> = {
   setColumnVisibility?: (state: Record<keyof TData, boolean>) => void;
 };
 
+export type ContentAlign = 'left' | 'center' | 'right';
+
 export type TableColumn<TData> = {
   /** The id of the column; must be the same as the column key in the Data type */
   id: keyof TData;
@@ -74,6 +84,8 @@ export type TableColumn<TData> = {
   isSortable?: boolean;
   /** The width of the column (value is percentage number e.g. 25) */
   width?: number;
+  /** Content align inside the td */
+  contentAlign?: ContentAlign;
 };
 
 // export type GroupColumn<TData> = {
@@ -104,11 +116,9 @@ export type RowsConfig = {
   setExpanded?: OnChangeFn<ExpandedState>;
 };
 
-export type TableCells<TData> = Record<keyof TData, string | JSX.Element>;
-
-export type TableRow<TData> = {
+export type TableRow<TData extends NoUndefined<TData>> = {
   /** The visible cells of the row */
-  cells: TableCells<TData>;
+  cells: TData;
   /** Details component which is displayed when clicking the arrow button */
   details?: JSX.Element;
 };
@@ -131,9 +141,9 @@ export type PaginationConfig = {
   /** Manually disable previous page */
   isPrevPageDisabled?: boolean;
   /** Show items per page list options */
-  itemsPerPageOptions?: Omit<SelectOptionValues, 'iconProps'>[];
+  showItemsOptions?: Omit<SelectOptionValues, 'iconProps'>[];
   /** Show items per page list selected option */
-  itemsPerPage?: Omit<SelectOptionValues, 'iconProps'>;
+  showItems?: Omit<SelectOptionValues, 'iconProps'>;
   /** Show items per page list change callback */
-  onItemsPerPageChange?: (option: Omit<SelectOptionValues, 'iconProps'>) => void;
+  onShowItemsChange?: (option: Omit<SelectOptionValues, 'iconProps'>) => void;
 };

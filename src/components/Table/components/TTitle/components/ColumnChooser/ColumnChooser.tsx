@@ -11,14 +11,21 @@ import { MenuItemWrapper, MenuWrapper, popoverStyle } from 'components/Menu/Menu
 import MenuItemDivider from 'components/Menu/MenuItemDivider';
 import type { TableProps } from 'components/Table/types';
 
+import type { TestProps } from '~/utils/types';
+
 type Props = Pick<TableProps<any>, 'columns' | 'columnsConfig'> & {
   /** Element that that serves as the positioning boundary of the ColumnChooser Menu */
   containerRef: React.MutableRefObject<any>;
-};
+} & TestProps;
 
 /** @TODO create a generic Popover component */
 
-const ColumnChooser: React.FC<Props> = ({ columns, columnsConfig, containerRef }) => {
+const ColumnChooser: React.FC<Props> = ({
+  columns,
+  columnsConfig,
+  containerRef,
+  dataTestPrefixId,
+}) => {
   const [isBtnOpen, setIsBtnOpen] = React.useState<boolean>(false);
 
   const options = flattenColumns(columns);
@@ -78,6 +85,7 @@ const ColumnChooser: React.FC<Props> = ({ columns, columnsConfig, containerRef }
             menuRef.current.focus();
           }
         }}
+        dataTestPrefixId={`${dataTestPrefixId}_column_chooser_`}
       >
         Edit Columns
       </Button>
@@ -103,6 +111,8 @@ const ColumnChooser: React.FC<Props> = ({ columns, columnsConfig, containerRef }
           {options.map((col, index) => {
             const key = col.id;
 
+            const testIdKey = col.header.toLowerCase().split(' ').join('_');
+
             return (
               <>
                 <MenuItemWrapper
@@ -117,12 +127,14 @@ const ColumnChooser: React.FC<Props> = ({ columns, columnsConfig, containerRef }
                     textValue={col.header}
                     parentType="Menu"
                     css={{ width: '100%' }}
+                    data-testid={`${dataTestPrefixId}_column_chooser_${testIdKey}`}
                   >
                     <ListItemText>{col.header}</ListItemText>
                     <ListItemAction>
                       <Switch
                         isDisabled={col.isAlwaysVisible}
                         isSelected={selectedKeys?.has(key)}
+                        dataTestPrefixId={`${dataTestPrefixId}_column_chooser_${testIdKey}`}
                       />
                     </ListItemAction>
                   </ListItem>

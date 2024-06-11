@@ -12,19 +12,21 @@ import Select from 'components/Select';
 import type { TableProps } from 'components/Table/types';
 import Typography from 'components/Typography';
 
+import type { TestProps } from '~/utils/types';
+
 export type TPaginationProps = Pick<TableProps<any>, 'pagination'> & {
   /** Whether the pagination footer is sticky */
   isSticky?: boolean;
-};
+} & TestProps;
 
-const TPagination: React.FC<TPaginationProps> = ({ pagination, isSticky }) => {
+const TPagination: React.FC<TPaginationProps> = ({ pagination, isSticky, dataTestPrefixId }) => {
   const {
     page,
     totalPages,
     onChange,
-    itemsPerPageOptions,
-    itemsPerPage,
-    onItemsPerPageChange,
+    showItems,
+    showItemsOptions,
+    onShowItemsChange,
     isEnhancedPaginationVisible,
     isNextPageDisabled,
     isPrevPageDisabled,
@@ -34,27 +36,32 @@ const TPagination: React.FC<TPaginationProps> = ({ pagination, isSticky }) => {
   return (
     <div css={paginationContainer({ isSticky })}>
       <div css={itemsPerPageContainer()}>
-        {itemsPerPage && itemsPerPageOptions && (
+        {showItems && showItemsOptions && (
           <Select
             label=""
             size="compact"
-            options={itemsPerPageOptions}
-            selectedOption={itemsPerPage}
+            options={showItemsOptions}
+            selectedOption={showItems}
             isSearchable={false}
-            onChange={onItemsPerPageChange}
+            onChange={onShowItemsChange}
+            dataTestId={`${dataTestPrefixId}_table_show_items`}
           />
         )}
       </div>
       <div css={counterContainer()}>
-        <div css={counterWrapper()}>
+        <div css={counterWrapper()} data-testid={`${dataTestPrefixId}_table_pages_info`}>
           <Typography type="secondary" variant="body03">
             page
           </Typography>
-          <Typography variant="label03">{page}</Typography>
+          <Typography variant="label03" data-testid={`${dataTestPrefixId}_table_current_page`}>
+            {page}
+          </Typography>
           <Typography type="secondary" variant="body03">
             of
           </Typography>
-          <Typography variant="label03">{totalPages}</Typography>
+          <Typography variant="label03" data-testid={`${dataTestPrefixId}_table_total_pages`}>
+            {totalPages}
+          </Typography>
         </div>
         <div css={buttonsContainer()}>
           {isEnhancedPaginationVisible && (
@@ -65,6 +72,7 @@ const TPagination: React.FC<TPaginationProps> = ({ pagination, isSticky }) => {
               type="tertiary"
               onClick={() => onChange(1)}
               isDisabled={page === 1 || isPrevPageDisabled}
+              dataTestPrefixId={`${dataTestPrefixId}_table_go_to_first_page`}
             />
           )}
           <IconButton
@@ -74,6 +82,7 @@ const TPagination: React.FC<TPaginationProps> = ({ pagination, isSticky }) => {
             type="tertiary"
             onClick={() => onChange(page - 1)}
             isDisabled={page === 1 || isPrevPageDisabled}
+            dataTestPrefixId={`${dataTestPrefixId}_table_go_to_prev_page`}
           />
           <IconButton
             color={theme.tokens.colors.get('textColor.default.secondary')}
@@ -82,6 +91,7 @@ const TPagination: React.FC<TPaginationProps> = ({ pagination, isSticky }) => {
             type="tertiary"
             onClick={() => onChange(page + 1)}
             isDisabled={page === totalPages || isNextPageDisabled}
+            dataTestPrefixId={`${dataTestPrefixId}_table_go_to_next_page`}
           />
           {isEnhancedPaginationVisible && (
             <IconButton
@@ -91,6 +101,7 @@ const TPagination: React.FC<TPaginationProps> = ({ pagination, isSticky }) => {
               type="tertiary"
               onClick={() => onChange(totalPages)}
               isDisabled={page === totalPages || isNextPageDisabled}
+              dataTestPrefixId={`${dataTestPrefixId}_table_go_to_last_page`}
             />
           )}
         </div>

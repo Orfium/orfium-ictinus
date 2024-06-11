@@ -2,11 +2,12 @@ import { flexRender } from '@tanstack/react-table';
 import React, { useRef } from 'react';
 import isEqual from 'react-fast-compare';
 
+import type { NoUndefined } from '.';
 import { TBody, TD, TH, THead, TPagination, TR, TTitle, type TableProps } from '.';
 import useTable from './hooks/useTable';
 import { tableContainer, tableStyles } from './Table.style';
 
-const Table = <TData,>({
+const Table = <TData extends NoUndefined<TData>>({
   type = 'read-only',
   rowsConfig,
   data,
@@ -17,6 +18,7 @@ const Table = <TData,>({
   hasStickyHeader = false,
   pagination,
   sx,
+  dataTestPrefixId = 'ictinus',
 }: TableProps<TData>) => {
   /** If true, the scrollbar of tbody is visible */
   const [hasScrollbar, setHasScrollbar] = React.useState(false);
@@ -41,12 +43,17 @@ const Table = <TData,>({
     rowsConfig,
     columnsConfig,
     pagination,
+    dataTestPrefixId,
   });
 
   const hasTitle = Boolean(columnsConfig || rowsConfig);
 
   return (
-    <div css={tableContainer()} ref={containerRef}>
+    <div
+      css={tableContainer()}
+      ref={containerRef}
+      data-testid={`${dataTestPrefixId}_table_container`}
+    >
       {hasTitle && (
         <TTitle
           type={type}
@@ -55,9 +62,10 @@ const Table = <TData,>({
           rowsConfig={rowsConfig}
           containerRef={containerRef}
           rowsCount={table.getRowModel().rows.length}
+          dataTestPrefixId={dataTestPrefixId}
         />
       )}
-      <table css={tableStyles({ sx: sx?.table })}>
+      <table css={tableStyles({ sx: sx?.table })} data-testid={`${dataTestPrefixId}_table`}>
         <THead hasStickyHeader={hasStickyHeader} hasScrollbar={hasScrollbar} sx={sx?.thead}>
           {table.getHeaderGroups().map((headerGroup) => (
             <TR key={headerGroup.id} sx={sx?.tr}>
@@ -68,6 +76,7 @@ const Table = <TData,>({
                   colSpan={header.colSpan}
                   rowSize={rowSize}
                   width={header.getSize()}
+                  metaData={header.column.columnDef.meta}
                   {...(header.column.getCanSort() && {
                     colSortingState: sorting?.sortingColumn?.find((col) => col.id === header.id),
                     onSort: header.column.toggleSorting,
@@ -75,6 +84,7 @@ const Table = <TData,>({
                     resetSorting: header.column.clearSorting,
                   })}
                   sx={sx?.th}
+                  dataTestPrefixId={dataTestPrefixId}
                 >
                   {header.isPlaceholder
                     ? null
@@ -110,10 +120,13 @@ const Table = <TData,>({
                     return (
                       <TD
                         columnId={cell.column.id}
+                        rowId={cell.id}
                         key={cell.id}
                         rowSize={rowSize}
                         width={cell.column.getSize()}
+                        metaData={cell.column.columnDef.meta}
                         sx={sx?.td}
+                        dataTestPrefixId={dataTestPrefixId}
                       >
                         {flexRender(cell.column.columnDef.cell, cell.getContext())}
                       </TD>
@@ -122,7 +135,12 @@ const Table = <TData,>({
                 </TR>
                 {row.getIsExpanded() && (
                   <TR>
-                    <TD colSpan={table.getAllLeafColumns().length} isDetails>
+                    <TD
+                      rowId={row.id}
+                      colSpan={table.getAllLeafColumns().length}
+                      isDetails
+                      dataTestPrefixId={dataTestPrefixId}
+                    >
                       {data[index].details}
                     </TD>
                   </TR>
@@ -133,7 +151,11 @@ const Table = <TData,>({
         </TBody>
       </table>
       {pagination && (
-        <TPagination pagination={pagination} isSticky={hasStickyHeader && hasScrollbar} />
+        <TPagination
+          pagination={pagination}
+          isSticky={hasStickyHeader && hasScrollbar}
+          dataTestPrefixId={dataTestPrefixId}
+        />
       )}
     </div>
   );

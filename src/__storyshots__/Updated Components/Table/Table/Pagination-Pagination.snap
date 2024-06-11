@@ -1,0 +1,1361 @@
+.emotion-0 {
+  display: inline-block;
+  border: 0.0625rem solid rgba(200,206,255,0.70);
+  border-radius: 0.25rem;
+  background: #ffffff;
+}
+
+.emotion-1 {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.emotion-1 thead>tr>th:last-child,
+.emotion-1 tbody>tr>td:last-child {
+  border-right: none;
+}
+
+.emotion-1 tbody>tr:last-child>td {
+  border-bottom: none;
+}
+
+.emotion-2 {
+  box-shadow: 0 0.0625rem 0 0 rgba(200,206,255,0.70);
+}
+
+.emotion-4 {
+  width: 100%;
+  height: 2.75rem;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  box-sizing: border-box;
+  padding: 0.5rem 1rem;
+  color: #52567a;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-4 [data-header-role='options'] button {
+  opacity: 0;
+}
+
+.emotion-4:hover [data-header-role='options'] button,
+.emotion-4:focus-visible [data-header-role='options'] button {
+  opacity: 1;
+}
+
+.emotion-4 button:focus-visible {
+  opacity: 1;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+.emotion-6 {
+  text-wrap: nowrap;
+}
+
+.emotion-18 {
+  width: 100%;
+  height: 2.75rem;
+  padding: 0.5rem 1rem;
+  border-bottom: 0.0625rem solid rgba(200,206,255,0.70);
+  box-sizing: border-box;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+.emotion-19 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+.emotion-26 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 1.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  box-sizing: border-box;
+  gap: 0.25rem;
+  padding: 0.125rem 0.5rem;
+  cursor: auto;
+  background: #ffffff;
+  color: #194DCC;
+  border: 0.0625rem solid;
+  border-color: rgba(200,206,255,0.70);
+  border-radius: 0.25rem;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-117 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  background: #ffffff;
+  height: 2.75rem;
+  width: 100%;
+  padding: 0.5rem 2rem;
+  box-sizing: border-box;
+  border-top: 0.0625rem solid rgba(200,206,255,0.70);
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.emotion-118 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.emotion-119 {
+  position: relative;
+  min-width: 8.75rem;
+}
+
+.emotion-120 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
+  position: relative;
+}
+
+.emotion-120 #unique-tooltip-id {
+  display: none!important;
+}
+
+.emotion-121 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #8EAAEC;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: 1.75rem;
+  min-width: 4.375rem;
+  background-color: rgba(200,206,255,0.30);
+}
+
+.emotion-121:hover {
+  background-color: rgba(200,206,255,0.20);
+}
+
+.emotion-121:focus-within {
+  box-shadow: 0 0 0 0.125rem #175BF5;
+  background-color: rgba(200,206,255,0.30);
+}
+
+.emotion-122 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0rem 0rem 0rem 0.75rem;
+}
+
+.emotion-122>div {
+  position: relative;
+}
+
+.emotion-123 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-124 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #111530;
+  padding: 0;
+  display: block;
+  position: relative;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-124::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-124::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-124:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-124::placeholder {
+  color: transparent;
+}
+
+.emotion-124:focus {
+  outline: none;
+}
+
+.emotion-124:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-124:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-124:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-124:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-124:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-124:focus-within+label,
+.emotion-124:not(:placeholder-shown)+label {
+  display: none;
+}
+
+.emotion-124:focus-within+label {
+  font-weight: 700!important;
+  color: #194DCC;
+}
+
+.emotion-124:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-125 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, -95%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -95%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -95%) scale(0.8);
+  transform: translate(0.1875rem, -95%) scale(0.8);
+  color: #52567a;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0.1875rem;
+  margin: auto;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-126 {
+  min-width: 1.75rem;
+  overflow: visible;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  cursor: unset;
+}
+
+.emotion-127 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.emotion-128 {
+  width: 1rem;
+  height: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.emotion-129 {
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-129 path {
+  fill: #52567a!important;
+}
+
+.emotion-130 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.emotion-131 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+}
+
+.emotion-132 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  color: #52567a;
+}
+
+.emotion-133 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  color: #111530;
+}
+
+.emotion-136 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-137 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-138 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: #194DCC;
+  width: 1.75rem;
+  height: 1.75rem;
+  background-color: rgba(200,206,255,0);
+  padding: 0rem 0.5rem 0rem 0.5rem;
+  border-radius: 624.9375rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-138:focus-visible:not(:disabled) {
+  background-color: rgba(200,206,255,0.20);
+}
+
+.emotion-138:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-138:hover:not(:disabled) {
+  background-color: rgba(200,206,255,0.20);
+}
+
+.emotion-138:active:not(:disabled),
+.emotion-138[aria-expanded="true"] {
+  background-color: rgba(200,206,255,0.30);
+}
+
+.emotion-139 {
+  width: 1rem;
+  height: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-140 {
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-140 path {
+  fill: #194DCC!important;
+}
+
+<div>
+  <div
+    class="emotion-0"
+    data-testid="ictinus_table_container"
+  >
+    <table
+      class="emotion-1"
+      data-testid="ictinus_table"
+    >
+      <thead
+        class="emotion-2"
+      >
+        <tr
+          class="emotion-3"
+        >
+          <th
+            class="emotion-4"
+            colspan="1"
+            data-testid="ictinus_table_th_firstName"
+          >
+            <div
+              class="emotion-5"
+            >
+              <div
+                class="emotion-6"
+                data-testid="ictinus_table_th_firstName_title"
+              >
+                First Name
+              </div>
+            </div>
+          </th>
+          <th
+            class="emotion-4"
+            colspan="1"
+            data-testid="ictinus_table_th_lastName"
+          >
+            <div
+              class="emotion-5"
+            >
+              <div
+                class="emotion-6"
+                data-testid="ictinus_table_th_lastName_title"
+              >
+                Last Name
+              </div>
+            </div>
+          </th>
+          <th
+            class="emotion-4"
+            colspan="1"
+            data-testid="ictinus_table_th_age"
+          >
+            <div
+              class="emotion-5"
+            >
+              <div
+                class="emotion-6"
+                data-testid="ictinus_table_th_age_title"
+              >
+                Age
+              </div>
+            </div>
+          </th>
+          <th
+            class="emotion-4"
+            colspan="1"
+            data-testid="ictinus_table_th_job"
+          >
+            <div
+              class="emotion-5"
+            >
+              <div
+                class="emotion-6"
+                data-testid="ictinus_table_th_job_title"
+              >
+                Job
+              </div>
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="emotion-16"
+      >
+        <tr
+          class="emotion-3"
+        >
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_0_firstName"
+          >
+            <div
+              class="emotion-19"
+            >
+              Rachel
+            </div>
+          </td>
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_0_lastName"
+          >
+            <div
+              class="emotion-19"
+            >
+              Berry
+            </div>
+          </td>
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_0_age"
+          >
+            <div
+              class="emotion-19"
+            >
+              30
+            </div>
+          </td>
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_0_job"
+          >
+            <div
+              class="emotion-19"
+            >
+              <div
+                aria-label="Fashion Executive"
+                aria-selected="false"
+                class="emotion-26"
+                data-testid="undefined_tag_container"
+                tabindex="-1"
+              >
+                Fashion Executive
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr
+          class="emotion-3"
+        >
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_1_firstName"
+          >
+            <div
+              class="emotion-19"
+            >
+              Ross
+            </div>
+          </td>
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_1_lastName"
+          >
+            <div
+              class="emotion-19"
+            >
+              Geller
+            </div>
+          </td>
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_1_age"
+          >
+            <div
+              class="emotion-19"
+            >
+              32
+            </div>
+          </td>
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_1_job"
+          >
+            <div
+              class="emotion-19"
+            >
+              <div
+                aria-label="Paleontologist"
+                aria-selected="false"
+                class="emotion-26"
+                data-testid="undefined_tag_container"
+                tabindex="-1"
+              >
+                Paleontologist
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr
+          class="emotion-3"
+        >
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_2_firstName"
+          >
+            <div
+              class="emotion-19"
+            >
+              Monica
+            </div>
+          </td>
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_2_lastName"
+          >
+            <div
+              class="emotion-19"
+            >
+              Geller
+            </div>
+          </td>
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_2_age"
+          >
+            <div
+              class="emotion-19"
+            >
+              31
+            </div>
+          </td>
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_2_job"
+          >
+            <div
+              class="emotion-19"
+            >
+              <div
+                aria-label="Chef"
+                aria-selected="false"
+                class="emotion-26"
+                data-testid="undefined_tag_container"
+                tabindex="-1"
+              >
+                Chef
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr
+          class="emotion-3"
+        >
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_3_firstName"
+          >
+            <div
+              class="emotion-19"
+            >
+              Chandler
+            </div>
+          </td>
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_3_lastName"
+          >
+            <div
+              class="emotion-19"
+            >
+              Bing
+            </div>
+          </td>
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_3_age"
+          >
+            <div
+              class="emotion-19"
+            >
+              32
+            </div>
+          </td>
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_3_job"
+          >
+            <div
+              class="emotion-19"
+            >
+              <div
+                aria-label="?"
+                aria-selected="false"
+                class="emotion-26"
+                data-testid="undefined_tag_container"
+                tabindex="-1"
+              >
+                ?
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr
+          class="emotion-3"
+        >
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_4_firstName"
+          >
+            <div
+              class="emotion-19"
+            >
+              Joey
+            </div>
+          </td>
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_4_lastName"
+          >
+            <div
+              class="emotion-19"
+            >
+              Tribbiani
+            </div>
+          </td>
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_4_age"
+          >
+            <div
+              class="emotion-19"
+            >
+              30
+            </div>
+          </td>
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_4_job"
+          >
+            <div
+              class="emotion-19"
+            >
+              <div
+                aria-label="Actor"
+                aria-selected="false"
+                class="emotion-26"
+                data-testid="undefined_tag_container"
+                tabindex="-1"
+              >
+                Actor
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr
+          class="emotion-3"
+        >
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_5_firstName"
+          >
+            <div
+              class="emotion-19"
+            >
+              Phoebe
+            </div>
+          </td>
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_5_lastName"
+          >
+            <div
+              class="emotion-19"
+            >
+              Buffay
+            </div>
+          </td>
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_5_age"
+          >
+            <div
+              class="emotion-19"
+            >
+              31
+            </div>
+          </td>
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_5_job"
+          >
+            <div
+              class="emotion-19"
+            >
+              <div
+                aria-label="Massage Therapist"
+                aria-selected="false"
+                class="emotion-26"
+                data-testid="undefined_tag_container"
+                tabindex="-1"
+              >
+                Massage Therapist
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr
+          class="emotion-3"
+        >
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_6_firstName"
+          >
+            <div
+              class="emotion-19"
+            >
+              Gunther
+            </div>
+          </td>
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_6_lastName"
+          >
+            <div
+              class="emotion-19"
+            />
+          </td>
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_6_age"
+          >
+            <div
+              class="emotion-19"
+            >
+              35
+            </div>
+          </td>
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_6_job"
+          >
+            <div
+              class="emotion-19"
+            >
+              <div
+                aria-label="Central Perk Manager"
+                aria-selected="false"
+                class="emotion-26"
+                data-testid="undefined_tag_container"
+                tabindex="-1"
+              >
+                Central Perk Manager
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr
+          class="emotion-3"
+        >
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_7_firstName"
+          >
+            <div
+              class="emotion-19"
+            >
+              Janice
+            </div>
+          </td>
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_7_lastName"
+          >
+            <div
+              class="emotion-19"
+            >
+              Litman-Foralnik
+            </div>
+          </td>
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_7_age"
+          >
+            <div
+              class="emotion-19"
+            >
+              35
+            </div>
+          </td>
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_7_job"
+          >
+            <div
+              class="emotion-19"
+            >
+              <div
+                aria-label="Personal Shopper"
+                aria-selected="false"
+                class="emotion-26"
+                data-testid="undefined_tag_container"
+                tabindex="-1"
+              >
+                Personal Shopper
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr
+          class="emotion-3"
+        >
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_8_firstName"
+          >
+            <div
+              class="emotion-19"
+            >
+              Richard
+            </div>
+          </td>
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_8_lastName"
+          >
+            <div
+              class="emotion-19"
+            >
+              Burke
+            </div>
+          </td>
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_8_age"
+          >
+            <div
+              class="emotion-19"
+            >
+              50
+            </div>
+          </td>
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_8_job"
+          >
+            <div
+              class="emotion-19"
+            >
+              <div
+                aria-label="Ophthalmologist"
+                aria-selected="false"
+                class="emotion-26"
+                data-testid="undefined_tag_container"
+                tabindex="-1"
+              >
+                Ophthalmologist
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr
+          class="emotion-3"
+        >
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_9_firstName"
+          >
+            <div
+              class="emotion-19"
+            >
+              Estelle
+            </div>
+          </td>
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_9_lastName"
+          >
+            <div
+              class="emotion-19"
+            >
+              Leonard
+            </div>
+          </td>
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_9_age"
+          >
+            <div
+              class="emotion-19"
+            />
+          </td>
+          <td
+            class="emotion-18"
+            data-testid="ictinus_table_row_9_job"
+          >
+            <div
+              class="emotion-19"
+            >
+              <div
+                aria-label="Talent Agent"
+                aria-selected="false"
+                class="emotion-26"
+                data-testid="undefined_tag_container"
+                tabindex="-1"
+              >
+                Talent Agent
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div
+      class="emotion-117"
+    >
+      <div
+        class="emotion-118"
+      >
+        <div>
+          <div
+            class="emotion-119"
+          >
+            <div
+              class="emotion-120"
+            >
+              <div>
+                <div
+                  class="emotion-121"
+                  data-testid="select-input-ictinus_table_show_items"
+                >
+                  <div
+                    class="emotion-122"
+                  >
+                    <div
+                      class="emotion-123"
+                    >
+                      <input
+                        aria-controls="select__00"
+                        aria-expanded="false"
+                        aria-invalid="false"
+                        autocomplete="off"
+                        class="emotion-124"
+                        data-testid="input_select-input-ictinus_table_show_items"
+                        id="textfield__00"
+                        placeholder=" "
+                        readonly=""
+                        role="combobox"
+                        value="10 rows per page"
+                      />
+                      <label
+                        class="emotion-125"
+                        for="textfield__00"
+                      >
+                         
+                      </label>
+                    </div>
+                    <div
+                      aria-hidden="false"
+                      class="emotion-126"
+                    >
+                      <div
+                        class="emotion-127"
+                      >
+                        <div
+                          class="emotion-128"
+                          data-testid="select-right-icon"
+                          tabindex="0"
+                        >
+                          <svg
+                            class="emotion-129"
+                            fill="none"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              clip-rule="evenodd"
+                              d="M6.09346 8.31215C5.65924 7.79108 6.02976 7 6.70803 7H13.292C13.9702 7 14.3408 7.79109 13.9065 8.31215L10.6146 12.2625C10.2947 12.6463 9.70526 12.6463 9.38542 12.2625L6.09346 8.31215Z"
+                              fill="#6265AD"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="emotion-130"
+      >
+        <div
+          class="emotion-131"
+          data-testid="ictinus_table_pages_info"
+        >
+          <p
+            class="emotion-132"
+          >
+            page
+          </p>
+          <span
+            class="emotion-133"
+            data-testid="ictinus_table_current_page"
+          >
+            1
+          </span>
+          <p
+            class="emotion-132"
+          >
+            of
+          </p>
+          <span
+            class="emotion-133"
+            data-testid="ictinus_table_total_pages"
+          >
+            2
+          </span>
+        </div>
+        <div
+          class="emotion-136"
+        >
+          <div
+            class="emotion-137"
+          >
+            <button
+              class="emotion-138"
+              color="#52567a"
+              data-testid="ictinus_table_go_to_first_page-icon-button"
+              disabled=""
+              type="button"
+            >
+              <div
+                class="emotion-139"
+              >
+                <svg
+                  class="emotion-140"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M13.5105 14.4348L9.80374 10.7147C9.70133 10.612 9.62788 10.5013 9.58341 10.3828C9.53893 10.2643 9.51669 10.1431 9.51669 10.0192C9.51669 9.89534 9.53893 9.77449 9.58341 9.65667C9.62788 9.53885 9.70133 9.42855 9.80374 9.32578L13.5105 5.60575C13.6812 5.43445 13.8834 5.3488 14.1171 5.3488C14.3509 5.3488 14.5531 5.43445 14.7238 5.60575C14.8945 5.77703 14.9798 5.97997 14.9798 6.21457C14.9798 6.44918 14.8945 6.65212 14.7238 6.8234L11.5384 10.0203L14.7238 13.2171C14.9079 13.4019 15 13.6048 15 13.8259C15 14.047 14.9079 14.25 14.7238 14.4348C14.5397 14.6196 14.3375 14.712 14.1171 14.712C13.8968 14.712 13.6946 14.6196 13.5105 14.4348ZM5.86706 15C5.62829 15 5.42409 14.9148 5.25445 14.7445C5.08482 14.5741 5 14.3691 5 14.1296V5.87044C5 5.6309 5.08491 5.42594 5.25472 5.25556C5.42454 5.0852 5.62883 5.00002 5.86758 5.00002C6.10635 5.00002 6.31055 5.0852 6.48019 5.25556C6.64982 5.42594 6.73464 5.6309 6.73464 5.87044V14.1296C6.73464 14.3691 6.64974 14.5741 6.47993 14.7445C6.3101 14.9148 6.10581 15 5.86706 15Z"
+                    fill="#6265AD"
+                  />
+                </svg>
+              </div>
+            </button>
+          </div>
+          <div
+            class="emotion-137"
+          >
+            <button
+              class="emotion-138"
+              color="#52567a"
+              data-testid="ictinus_table_go_to_prev_page-icon-button"
+              disabled=""
+              type="button"
+            >
+              <div
+                class="emotion-139"
+              >
+                <svg
+                  class="emotion-140"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.3581 14.702L7.31643 10.7466C7.20353 10.6361 7.12257 10.5161 7.07355 10.3867C7.02452 10.2572 7 10.1283 7 10C7 9.86608 7.02452 9.7358 7.07355 9.60915C7.12257 9.48249 7.20353 9.36392 7.31643 9.25345L11.3581 5.29797C11.561 5.09932 11.7839 5 12.0268 5C12.2697 5 12.4926 5.09932 12.6955 5.29797C12.8985 5.49661 13 5.71477 13 5.95246C13 6.19014 12.8985 6.40831 12.6955 6.60694L9.22859 10L12.6955 13.3931C12.8985 13.5917 13 13.8099 13 14.0475C13 14.2852 12.8985 14.5034 12.6955 14.702C12.4926 14.9007 12.2697 15 12.0268 15C11.7839 15 11.561 14.9007 11.3581 14.702Z"
+                    fill="#6265AD"
+                  />
+                </svg>
+              </div>
+            </button>
+          </div>
+          <div
+            class="emotion-137"
+          >
+            <button
+              class="emotion-138"
+              color="#52567a"
+              data-testid="ictinus_table_go_to_next_page-icon-button"
+              type="button"
+            >
+              <div
+                class="emotion-139"
+              >
+                <svg
+                  class="emotion-140"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.64194 14.702L12.6836 10.7466C12.7965 10.6361 12.8774 10.5161 12.9264 10.3867C12.9755 10.2572 13 10.1283 13 10C13 9.86608 12.9755 9.7358 12.9264 9.60915C12.8774 9.48249 12.7965 9.36392 12.6836 9.25345L8.64194 5.29797C8.43898 5.09932 8.21607 5 7.9732 5C7.73034 5 7.50742 5.09932 7.30446 5.29797C7.10149 5.49661 7 5.71477 7 5.95246C7 6.19014 7.10149 6.40831 7.30446 6.60694L10.7714 10L7.30446 13.3931C7.10149 13.5917 7 13.8099 7 14.0475C7 14.2852 7.10149 14.5034 7.30446 14.702C7.50742 14.9007 7.73034 15 7.9732 15C8.21607 15 8.43898 14.9007 8.64194 14.702Z"
+                    fill="#6265AD"
+                  />
+                </svg>
+              </div>
+            </button>
+          </div>
+          <div
+            class="emotion-137"
+          >
+            <button
+              class="emotion-138"
+              color="#52567a"
+              data-testid="ictinus_table_go_to_last_page-icon-button"
+              type="button"
+            >
+              <div
+                class="emotion-139"
+              >
+                <svg
+                  class="emotion-140"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.48951 14.4348L10.1963 10.7147C10.2987 10.612 10.3721 10.5013 10.4166 10.3828C10.4611 10.2643 10.4833 10.1431 10.4833 10.0192C10.4833 9.89532 10.4611 9.77447 10.4166 9.65666C10.3721 9.53883 10.2987 9.42853 10.1963 9.32577L6.48951 5.60573C6.31884 5.43444 6.11662 5.34879 5.88285 5.34879C5.64909 5.34879 5.44687 5.43444 5.2762 5.60573C5.10551 5.77701 5.02017 5.97996 5.02017 6.21456C5.02017 6.44916 5.10551 6.6521 5.2762 6.82339L8.46162 10.0202L5.2762 13.2171C5.09207 13.4019 5 13.6048 5 13.8259C5 14.047 5.09207 14.25 5.2762 14.4348C5.46032 14.6195 5.66253 14.7119 5.88285 14.7119C6.10317 14.7119 6.30539 14.6195 6.48951 14.4348ZM14.1329 15C14.3717 15 14.5759 14.9148 14.7455 14.7445C14.9152 14.5741 15 14.3691 15 14.1296V5.87043C15 5.63089 14.9151 5.42593 14.7453 5.25555C14.5755 5.08518 14.3712 5 14.1324 5C13.8936 5 13.6894 5.08518 13.5198 5.25555C13.3502 5.42593 13.2654 5.63089 13.2654 5.87043V14.1296C13.2654 14.3691 13.3503 14.5741 13.5201 14.7445C13.6899 14.9148 13.8942 15 14.1329 15Z"
+                    fill="#6265AD"
+                  />
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

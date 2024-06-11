@@ -11,25 +11,25 @@ import { concat } from 'lodash-es';
 import React from 'react';
 import type { Theme } from 'theme';
 
-import type { TableCells, UseTableProps } from '../types';
 import { CheckBox } from 'components/Controls';
 import Icon from 'components/Icon';
 
 type ReturnValue<TData> = {
   getHeaderGroups: () => HeaderGroup<TData>[];
-  getRowModel: () => RowModel<TableCells<TData>>;
+  getRowModel: () => RowModel<TData>;
   getIsAllRowsSelected: () => boolean;
   getIsSomeRowsSelected: () => boolean;
   getToggleAllRowsSelectedHandler: () => (event: unknown) => void;
   toggleAllRowsSelected: (value: boolean) => void;
-  getAllLeafColumns: () => Column<TableCells<TData>, unknown>[];
+  getAllLeafColumns: () => Column<TData, unknown>[];
 };
 
 const getColumns = (
   columns: any[],
   hasCheckboxes: boolean,
   hasRowDetails: boolean,
-  theme: Theme
+  theme: Theme,
+  dataTestPrefixId: string
 ) => {
   const columnHelper = createColumnHelper();
 
@@ -46,6 +46,7 @@ const getColumns = (
                   const selected = table.getIsAllRowsSelected(); // get selected status of current row.
                   table.toggleAllRowsSelected(!selected);
                 }}
+                dataTestPrefixId={`${dataTestPrefixId}_table_select_all`}
               />
             );
           },
@@ -60,9 +61,13 @@ const getColumns = (
                     const selected = row.getIsSelected(); // get selected status of current row.
                     row.toggleSelected(!selected); // reverse selected status of current row.
                   }}
+                  dataTestPrefixId={`${dataTestPrefixId}_table_select_${row.id}`}
                 />
               </div>
             );
+          },
+          meta: {
+            contentAlign: 'left',
           },
         },
       ]
@@ -85,8 +90,12 @@ const getColumns = (
                   const isExpanded = row.getIsExpanded();
                   row.toggleExpanded(!isExpanded);
                 }}
+                dataTestId={`${dataTestPrefixId}_table_expand_${row.id}`}
               />
             );
+          },
+          meta: {
+            contentAlign: 'left',
           },
         },
       ]
@@ -97,7 +106,7 @@ const getColumns = (
       const groupConfig = {
         id: column.id,
         header: column.header,
-        columns: getColumns(column.columns, false, false, theme),
+        columns: getColumns(column.columns, false, false, theme, dataTestPrefixId),
       };
       tColumns.push(columnHelper.group(groupConfig));
     } else {
@@ -106,7 +115,11 @@ const getColumns = (
           header: column.header,
           cell: (info) => info.getValue(),
           size: column.width ?? 'auto',
+          minSize: column.width,
           enableSorting: column.isSortable ?? false,
+          meta: {
+            contentAlign: column.contentAlign ?? 'left',
+          },
         })
       );
     }
@@ -125,8 +138,9 @@ const useTable = <TData,>({
   rowsConfig,
   columnsConfig,
   pagination,
+  dataTestPrefixId,
   ...rest
-}: UseTableProps<TData>): ReturnValue<TData> => {
+}): ReturnValue<TData> => {
   const theme = useTheme();
 
   const isTableInteractive = type === 'interactive';
@@ -137,7 +151,7 @@ const useTable = <TData,>({
 
   const hasCheckboxes = Boolean(rowSelection && isTableInteractive);
 
-  const tColumns = getColumns(columns, hasCheckboxes, hasRowDetails, theme);
+  const tColumns = getColumns(columns, hasCheckboxes, hasRowDetails, theme, dataTestPrefixId);
 
   const state = React.useMemo(() => {
     return {
@@ -153,9 +167,9 @@ const useTable = <TData,>({
 
   React.useEffect(() => {
     setTableData(data.map((data) => data.cells));
-  }, [sorting?.sortingColumn, pagination?.page, pagination?.itemsPerPage]);
+  }, [sorting?.sortingColumn, pagination?.page, pagination?.showItems]);
 
-  const table = useReactTable<TableCells<TData>>({
+  const table = useReactTable<TData>({
     /** Basic Functionality */
     data: tableData,
     columns: tColumns,

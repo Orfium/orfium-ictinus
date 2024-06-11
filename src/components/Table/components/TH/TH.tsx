@@ -10,6 +10,8 @@ import type { AcceptedIconNames } from 'components/Icon';
 import IconButton from 'components/IconButton';
 import type { RowSize } from 'components/Table/types';
 
+import type { TestProps } from '~/utils/types';
+
 type Props = {
   /** The html colSpan attribute */
   colSpan?: number;
@@ -25,9 +27,11 @@ type Props = {
   colSortingState?: ColumnSort;
   /** Callback to reset sorting for this column */
   resetSorting?: () => void;
+  /** Metadata for the th element */
+  metaData?: any;
   /** Style overrides */
   sx?: CSSObject;
-};
+} & TestProps;
 
 const TH: React.FCC<Props & Pick<DivProps, 'onClick' | 'id'>> = ({
   width,
@@ -39,6 +43,8 @@ const TH: React.FCC<Props & Pick<DivProps, 'onClick' | 'id'>> = ({
   resetSorting,
   sx,
   id,
+  metaData,
+  dataTestPrefixId,
   ...rest
 }) => {
   const isSortable = Boolean(onSort);
@@ -48,6 +54,8 @@ const TH: React.FCC<Props & Pick<DivProps, 'onClick' | 'id'>> = ({
   const [hasVisibleOptions, setHasVisibleOptions] = React.useState(false);
 
   const { desc: isDesc } = colSortingState ?? {};
+
+  const { contentAlign = 'left' } = metaData;
 
   const sortIcon = () => {
     const handleClick = () => {
@@ -68,7 +76,15 @@ const TH: React.FCC<Props & Pick<DivProps, 'onClick' | 'id'>> = ({
       return 'arrowDown';
     };
 
-    return <IconButton iconName={getIcon()} type="tertiary" size="compact" onClick={handleClick} />;
+    return (
+      <IconButton
+        iconName={getIcon()}
+        type="tertiary"
+        size="compact"
+        onClick={handleClick}
+        dataTestPrefixId={`${dataTestPrefixId}_sort_${id}_${isDesc ? 'desc' : 'asc'}`}
+      />
+    );
   };
 
   return (
@@ -82,17 +98,25 @@ const TH: React.FCC<Props & Pick<DivProps, 'onClick' | 'id'>> = ({
         isSortable,
         sx,
       })}
+      data-testid={`${dataTestPrefixId}_table_th_${id}`}
       {...rest}
     >
-      <div css={thContent()}>
-        <div css={{ textWrap: 'nowrap' }}>{children}</div>
+      <div css={thContent({ contentAlign })}>
+        <div css={{ textWrap: 'nowrap' }} data-testid={`${dataTestPrefixId}_table_th_${id}_title`}>
+          {children}
+        </div>
         {isSortable && (
-          <div css={optionsContainer()} data-header-role="options">
+          <div
+            css={optionsContainer()}
+            data-header-role="options"
+            data-testid={`${dataTestPrefixId}_table_th_${id}_options`}
+          >
             {sortIcon()}
             <THOptions
               onSort={onSort}
               isMultiSortable={isMultiSortable}
               onButtonClick={(isDropdownVisible) => setHasVisibleOptions(isDropdownVisible)}
+              dataTestPrefixId={`${dataTestPrefixId}_sort_${id}`}
             />
           </div>
         )}
