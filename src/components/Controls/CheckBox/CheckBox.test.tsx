@@ -4,6 +4,11 @@ import { render } from '../../../test';
 import userEvent from '@testing-library/user-event';
 import CheckBox from '../CheckBox';
 import { Mock } from 'vitest';
+import { testHtmlAttributes } from '~/test/testUtils';
+
+test('CheckBox component should pass HTML attributes correctly', () => {
+  testHtmlAttributes(CheckBox);
+});
 
 describe('Checkbox Component', () => {
   let mockOnChange: Mock<any, any>;
