@@ -19,7 +19,7 @@ type TestProps = {
 export const testHtmlAttributes = <P extends object>(
   Component: ComponentType<P>,
   additionalProps?: P & TestProps
-): void => {
+) => {
   const attributes: P & TestProps = {
     'aria-label': 'aria-label-test',
     'data-testid': 'data-testid-test',
@@ -28,15 +28,17 @@ export const testHtmlAttributes = <P extends object>(
     ...additionalProps,
   };
 
-  const { getByTestId } = render(
+  const renderResult = render(
     <ThemeProvider>
       <Component {...attributes} />
     </ThemeProvider>
   );
 
-  const element = getByTestId(attributes['data-testid']);
+  const element = renderResult.getByTestId(attributes['data-testid']);
   expect(element).toHaveAttribute('aria-label', attributes['aria-label']);
   expect(element).toHaveAttribute('data-testid', attributes['data-testid']);
   expect(element).toHaveAttribute('id', attributes['id']);
   expect(element).toHaveClass(attributes['className']);
+
+  return renderResult;
 };
