@@ -56,6 +56,7 @@ export type GenericIcons =
   | 'file'
   | 'filter'
   | 'issue'
+  | 'keyword'
   | 'language'
   | 'legal'
   | 'location'
@@ -65,6 +66,7 @@ export type GenericIcons =
   | 'notification'
   | 'policy'
   | 'report'
+  | 'searchFilled'
   | 'settings'
   | 'tag';
 
