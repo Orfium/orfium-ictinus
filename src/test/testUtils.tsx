@@ -1,27 +1,31 @@
-// testUtils.tsx
 import { render } from '@testing-library/react';
 import type { ComponentType } from 'react';
 import React from 'react';
 
 import { ThemeProvider } from '~/index';
 
-interface TestProps {
+type TestProps = {
   'aria-label'?: string;
   'data-testid'?: string;
   title?: string;
   name?: string;
   className?: string;
   [key: string]: any;
-}
+};
 
-type t = React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
-export function testHtmlAttributes(Component: ComponentType<any>, props: TestProps = {}): void {
-  const attributes = {
+/**
+ * Test that the referred Component can have basic HTML attributes passed down
+ **/
+export const testHtmlAttributes = <P extends object>(
+  Component: ComponentType<P>,
+  additionalProps?: P & TestProps
+): void => {
+  const attributes: P & TestProps = {
     'aria-label': 'aria-label-test',
     'data-testid': 'data-testid-test',
     id: 'id-test',
     className: 'class-name-test',
-    ...props,
+    ...additionalProps,
   };
 
   const { getByTestId } = render(
@@ -35,4 +39,4 @@ export function testHtmlAttributes(Component: ComponentType<any>, props: TestPro
   expect(element).toHaveAttribute('data-testid', attributes['data-testid']);
   expect(element).toHaveAttribute('id', attributes['id']);
   expect(element).toHaveClass(attributes['className']);
-}
+};
