@@ -5,6 +5,7 @@ import React from 'react';
 import { fireEvent, render } from '../../test';
 import DatePicker from './DatePicker';
 import { currentDay, navigateOnElement } from './utils';
+import { testHtmlAttributes } from '~/test/testUtils';
 
 global.ResizeObserver = vi.fn().mockImplementation(() => ({
   observe: vi.fn(),
@@ -25,6 +26,10 @@ describe('DatePicker', () => {
       />
     );
     // Add assertions here to check if the component rendered correctly
+  });
+
+  it('should pass HTML attributes correctly', () => {
+    testHtmlAttributes(DatePicker);
   });
 
   it('should handle selecting a day in day picker mode', () => {

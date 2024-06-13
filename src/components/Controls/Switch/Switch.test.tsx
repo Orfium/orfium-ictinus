@@ -4,6 +4,7 @@ import React from 'react';
 import { render, screen } from '../../../test';
 import Switch from './Switch';
 import { Mock } from 'vitest';
+import { testHtmlAttributes } from '~/test/testUtils';
 
 describe('Switch', () => {
   let mockOnClick: Mock<any, any>;
@@ -20,6 +21,10 @@ describe('Switch', () => {
     const { container } = render(<Switch>Label</Switch>);
 
     expect(container).toMatchSnapshot();
+  });
+
+  it('should pass HTML attributes correctly', () => {
+    testHtmlAttributes(Switch);
   });
 
   it('should be able to change its check condition', async () => {
