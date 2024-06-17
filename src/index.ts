@@ -104,6 +104,8 @@ export { default as Search } from './components/Search';
 export * from './components/Search';
 export { default as TextArea } from './components/TextArea';
 export * from './components/TextArea';
+export { default as NumberField } from './components/NumberField';
+export * from './components/NumberField';
 export { default as ThemeProvider } from './components/ThemeProvider';
 export * from './components/ThemeProvider';
 export { default as Toast } from './components/Toast';
