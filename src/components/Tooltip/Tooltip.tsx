@@ -16,6 +16,7 @@ const Tooltip = React.forwardRef<HTMLDivElement, TooltipProps>(
       isInteractive = false,
       delayIn = 500,
       delayOut = 500,
+      isOpen,
     },
     ref
   ) => {
@@ -31,6 +32,7 @@ const Tooltip = React.forwardRef<HTMLDivElement, TooltipProps>(
           delayHide={delayOut}
           clickable={isInteractive}
           className="tooltip"
+          isOpen={isOpen}
         >
           {content}
         </ReactTooltip>
