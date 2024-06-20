@@ -144,6 +144,7 @@ const preview: SBPreview = {
     chromatic: { delay: 2000 },
     viewMode: 'docs',
     docs: {
+      source: { type: 'code' },
       story: {
         inline: true,
       },

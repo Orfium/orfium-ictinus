@@ -9,7 +9,7 @@ export const TipWrapper = styled.div`
   height: fit-content;
   background: #e7eefe;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   line-height: 135%;
   margin: 32px 0;
   border-radius: 4px;

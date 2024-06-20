@@ -1,0 +1,96 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
+import Table from '../../Table';
+import * as PaginationStories from './Pagination.stories';
+import {
+  TableColumnStory,
+  ColumnsConfigStory,
+  RowsConfigStory,
+  PaginationConfigStory,
+  TableRowStory,
+} from '../../utils/TableStoryComponents';
+
+<Meta of={PaginationStories} />
+
+<SectionHeader
+  title={'Pagination'}
+  sections={[
+    { title: 'Overview', href: '#overview' },
+    { title: 'Props', href: '#table-props' },
+    { title: 'Variants', href: '#variants' },
+  ]}
+/>
+
+## Overview
+
+Here you can find all the necessary types and configuration examples in order to add pagination to your monolith table component.
+
+<SubsectionHeader title="Props" />
+
+## PaginationConfig Type
+
+<ArgTypes of={PaginationConfigStory} />
+
+<SubsectionHeader title="Variants" />
+
+### Pagination
+
+1. To set the current page, use a state as the example below:
+
+```ts
+const [currentPage, setCurrentPage] = useState<number>(1);
+```
+
+2. To set the shown items per page, use a state as the example below:
+
+```ts
+import type { SelectOptionValues } from '@orfium/ictinus';
+
+const [showItems, setShowItems] = useState<Omit<SelectOptionValues, 'iconProps'>>({
+  value: 10,
+  label: '10 rows per page',
+});
+```
+
+3. Render the Table:
+
+```js
+const data = [...]; /** Your data is indicated in other examples */
+
+const showItemsOptions = [
+  { value: 5, label: '5 rows per page' },
+  { value: 10, label: '10 rows per page' },
+];
+
+<Table
+  pagination={{
+    page: currentPage,
+    onChange: setPage,
+    totalPages: data.length,
+    showItems,
+    showItemsOptions,
+    onShowItemsChange: setShowItems
+  }}
+  ...rest
+/>;
+```
+
+4. (Optional): You can also make the pagination footer sticky by adding the `hasStickyHeader` prop and a `max-height` to the tBody:
+
+```js
+<Table
+  pagination={{
+    page: currentPage,
+    onChange: setPage,
+    totalPages: data.length,
+    showItems,
+    showItemsOptions,
+    onShowItemsChange: setShowItems
+  }}
+  hasStickyHeader
+  sx={{ tbody: { maxHeight: '300px' } }}
+  ...rest
+/>;
+
+```
+
+<Canvas of={PaginationStories.Pagination} />

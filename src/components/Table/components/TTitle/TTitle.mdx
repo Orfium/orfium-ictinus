@@ -1,0 +1,29 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
+import TTitle from './TTitle';
+
+<Meta title="Updated Components/Table/Components/TTitle" />
+
+<SectionHeader
+  title={'TTitle'}
+  sections={[
+    { title: 'Overview', href: '#overview' },
+    { title: 'Usage', href: '#usage' },
+  ]}
+/>
+
+## Overview
+
+This component includes all the actions of the Table.
+
+## Usage
+
+<UsageGuidelines
+  guidelines={[
+    'Appears at the top of the table container, above the table head',
+    'Table title content changes depending on whether the table is read-only or interactive',
+    'Table title may include column chooser for both read-only and interactive tables',
+    'If table is read only, item count shows all items found in table',
+    'If table is interactive, item count shows items selected (shows 0 selected on page load)',
+    'If table is interactive, table title also displays bulk actions when user selects at least one table row',
+  ]}
+/>

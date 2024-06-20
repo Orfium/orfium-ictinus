@@ -1,0 +1,39 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
+import Table from '../../Table';
+import * as HeaderStories from './Header.stories';
+import {
+  TableColumnStory,
+  ColumnsConfigStory,
+  RowsConfigStory,
+  PaginationConfigStory,
+  TableRowStory,
+} from '../../utils/TableStoryComponents';
+
+<Meta of={HeaderStories} />
+
+<SectionHeader
+  title={'Header'}
+  sections={[
+    { title: 'Overview', href: '#overview' },
+    { title: 'Variants', href: '#variants' },
+  ]}
+/>
+
+## Overview
+
+Here you can find header features, such as sticky header functionality.
+
+<SubsectionHeader title="Variants" />
+
+### Sticky Header
+
+In order to create a table with a sticky header:
+
+1. Add the `hasStickyHeader` prop
+2. Add a `max-height` to the tBody as indicated below:
+
+```js
+<Table hasStickyHeader sx={{ tbody: { maxHeight: '300px' } }} ...rest />
+```
+
+<Canvas of={HeaderStories.StickyHeader} />

@@ -25,7 +25,7 @@ describe('Switch', () => {
   it('should be able to change its check condition', async () => {
     render(<Switch />);
 
-    const switchComponent = screen.getByTestId('undefined_undefined_switch');
+    const switchComponent = screen.getByTestId('ictinus_switch');
 
     expect(switchComponent.getAttribute('data-selected')).toEqual(null);
 
@@ -36,7 +36,7 @@ describe('Switch', () => {
 
   it('should invoke the onChange function', async () => {
     render(<Switch isSelected={false} onChange={mockOnClick} />);
-    const switchComponent = screen.getByTestId('undefined_undefined_switch');
+    const switchComponent = screen.getByTestId('ictinus_switch');
 
     await userEvent.click(switchComponent);
 
@@ -45,7 +45,7 @@ describe('Switch', () => {
 
   it('should not invoke the onChange function if the switch is disabled', async () => {
     render(<Switch isSelected={false} onChange={mockOnClick} isDisabled />);
-    const switchComponent = screen.getByTestId('undefined_undefined_switch');
+    const switchComponent = screen.getByTestId('ictinus_switch');
 
     await userEvent.click(switchComponent);
 

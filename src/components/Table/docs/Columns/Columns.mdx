@@ -1,0 +1,168 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
+import Table from '../../Table';
+import * as ColumnsStories from './Columns.stories';
+import {
+  TableColumnStory,
+  ColumnsConfigStory,
+  RowsConfigStory,
+  PaginationConfigStory,
+  TableRowStory,
+} from '../../utils/TableStoryComponents';
+
+<Meta of={ColumnsStories} />
+
+<SectionHeader
+  title={'Columns'}
+  sections={[
+    { title: 'Overview', href: '#overview' },
+    { title: 'Props', href: '#table-props' },
+    { title: 'Variants', href: '#variants' },
+  ]}
+/>
+
+## Overview
+
+Here you can find column types and features, such as column chooser and sorting.
+
+<SubsectionHeader title="Props" />
+
+## TableColumn Type
+
+<ArgTypes of={TableColumnStory} />
+
+## ColumnsConfig Type
+
+<ArgTypes of={ColumnsConfigStory} />
+
+<SubsectionHeader title="Variants" />
+
+### Column Width
+
+In order to set a custom column width:
+
+1. Set the `width` key on the columns definition. The number represents the percentage of the total width of the row.
+
+```ts
+const columns: TableColumn<SimpleData>[] = [
+  { id: 'firstName', header: 'First Name', width: 30 } /** width: 30% */,
+  { id: 'lastName', header: 'Last Name', width: 30 } /** width: 30% */,
+  { id: 'age', header: 'Age', width: 20 } /** width: 20% */,
+  { id: 'job', header: 'Job', width: 20 } /** width: 20% */,
+];
+```
+
+2. Render the Table:
+
+```js
+<Table columns={columns} ...rest />
+```
+
+<Canvas of={ColumnsStories.ColumnWidth} />
+
+### Column Chooser
+
+1. To toggle column visibility, first initiate a state as indicated in the example below:
+
+```ts
+type DataType = {
+  firstName: string;
+  lastName: string | undefined;
+  age: number | undefined;
+  job: string | undefined | JSX.Element;
+};
+
+const [columnVisibility, setColumnVisibility] = useState<Record<keyof DataType, boolean>>({
+  firstName: true,
+  lastName: true,
+  age: true,
+  job: true,
+});
+```
+
+2. In order to make some columns always-visible, use the `isAlwaysVisible` key in columns:
+
+```ts
+const columns: TableColumn<DataType>[] = [
+  {
+    id: 'firstName',
+    header: 'First Name',
+    isAlwaysVisible: true, /** optional key, defaults to false */
+  },
+  {
+    id: 'lastName',
+    header: 'Last Name',
+  },
+  ...
+];
+
+/** Now out of all columns, firstName will always be visible and disabled in the toggle columns dropdown */
+```
+
+3. Render the Table:
+
+```js
+<Table columns={columns} columnsConfig={{ columnVisibility, setColumnVisibility }} ...rest />
+```
+
+<Canvas of={ColumnsStories.ColumnChooser} />
+
+### Sorting
+
+1. In order to make some columns sortable, first use the `isSortable` key:
+
+```ts
+type DataType = {
+  firstName: string;
+  lastName: string | undefined;
+  age: number | undefined;
+  job: string | undefined | JSX.Element;
+};
+
+const columns: TableColumn<DataType>[] = [
+  {
+    id: 'firstName',
+    header: 'First Name',
+    isSortable: true,
+  },
+  {
+    id: 'lastName',
+    header: 'Last Name',
+  },
+  {
+    id: 'age',
+    header: 'Age',
+    isSortable: true,
+  },
+  { id: 'job', header: 'Job' },
+];
+```
+
+2. Then initiate a state for the sorting like this:
+
+- `sortingColumn` is an array of objects; every object has a `id` key, which indicates the column's id, and a `desc` Boolean, indicating the descending or ascending order.
+
+```ts
+const [sortingColumn, setSortingColumn] = useState<SortingState>([{ id: 'age', desc: false }]);
+```
+
+3. Render the Table. In order to enable multi-sorting, add the `isMultiSortable` prop:
+
+```js
+<Table
+  columns={columns}
+  sorting={{
+    sortingColumn,
+    handleSorting: setSortingColumn,
+    isMultiSortable,
+  }}
+  ...rest
+/>
+```
+
+<Tip>
+  UI-wise, sorting options are shown by hovering on the column head; either by pressing the arrow
+  IconButton on the left you can toggle the sorting state (the click order is asc -> desc ->
+  no-sorting) or by pressing the more options IconButton on the right of the header.
+</Tip>
+
+<Canvas of={ColumnsStories.Sorting} />

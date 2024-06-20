@@ -1,5 +1,5 @@
 import TruncatedContent from './TruncatedContent';
-import Table from '../Table';
+import TableV4 from '../TableV4';
 
 export default {
   title: 'Utilities/Truncated Text with Tooltip',
@@ -28,7 +28,7 @@ export const RegularTextWithTruncationAndTooltip = {
 
 export const RegularTableWithCellTooltips = {
   render: () => (
-    <Table
+    <TableV4
       columns={['Column 1', 'Column 2', 'Column 3', 'Column 4']}
       dataTestIdPrefix="ictinus"
       onSort={(column, order) => console.log(column, order)}
