@@ -1,6 +1,6 @@
 import type { CSSObject } from '@emotion/serialize';
 import type { ClickEvent } from 'hooks/useLoading';
-import { omit } from 'lodash';
+import { omit } from 'lodash-es';
 import React from 'react';
 import type { CommonButtonProps } from 'utils/common';
 import { generateTestDataId } from 'utils/helpers';

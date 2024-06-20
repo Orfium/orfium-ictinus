@@ -1,4 +1,4 @@
-import { get, isEmpty } from 'lodash';
+import { get, isEmpty } from 'lodash-es';
 import type { Theme } from 'theme';
 
 import { parseComponentToken, parseCompositionToken } from './parsers';

@@ -25,6 +25,7 @@ const DatePicker: React.FC<DatePickerProps & TestProps> = ({
   filterConfig,
   options,
   dataTestId,
+  placement,
 }) => {
   const value = useMemo(() => initDates(initialValue || {}), [initialValue]);
   const [isOpen, setIsOpen] = useState(false);
@@ -165,6 +166,7 @@ const DatePicker: React.FC<DatePickerProps & TestProps> = ({
       <div {...keyboardProps}>
         <PositionInScreen
           isVisible={isOpen}
+          placement={placement}
           parent={
             <DatePickInput
               filterConfig={filterConfig}

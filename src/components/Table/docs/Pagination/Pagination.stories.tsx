@@ -5,7 +5,7 @@ import { TableColumn } from '../../types';
 import { ExpandedState } from '@tanstack/react-table';
 import Button from '~/components/Button';
 import DropdownButton from '~/components/DropdownButton';
-import { chunk, concat } from 'lodash';
+import { chunk, concat } from 'lodash-es';
 import { SelectOption, SelectOptionValues } from '~/components/Select';
 
 export default {

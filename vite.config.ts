@@ -2,7 +2,6 @@
 
 import path from 'path';
 
-import { optimizeLodashImports } from '@optimize-lodash/rollup-plugin';
 import react from '@vitejs/plugin-react';
 import { defineConfig, loadEnv } from 'vite';
 import type * as vite from 'vite';
@@ -30,7 +29,6 @@ const plugins = [
     insertTypesEntry: true,
     exclude: ['__mocks__'],
   }),
-  optimizeLodashImports() as vite.Plugin,
 ];
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {

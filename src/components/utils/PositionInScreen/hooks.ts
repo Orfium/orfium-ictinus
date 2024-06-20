@@ -1,5 +1,5 @@
-import head from 'lodash/head';
-import { useEffect, useState } from 'react';
+import { head } from 'lodash-es';
+import { useEffect, useLayoutEffect, useState } from 'react';
 
 import { resizeObserverHandler } from './utils';
 
@@ -58,7 +58,9 @@ export const usePositionInScreen = (
   /** Additional offset-y */
   offsetY: number,
   /** Whether the item to be positioned is visible */
-  isVisible?: boolean
+  isVisible?: boolean,
+  /** Placement override: 'top' or 'bottom' */
+  placement?: 'top' | 'bottom'
 ): {
   x: number;
   y: number;
@@ -67,7 +69,7 @@ export const usePositionInScreen = (
 
   const { parentHeight, childHeight } = useHeights(parentRef, itemRef);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     // x,y are cordinates in screen
     // width is wrapper elements dimensions
     const {
@@ -90,17 +92,24 @@ export const usePositionInScreen = (
     let x = 0;
     let y = 0;
 
-    if (isItemYOutOfScreenHeight) {
+    if (placement === 'top') {
       // We place the element height+offsetY (px) above the parent
-      y = y - childHeight - offsetY;
-      if (parentY + y < 0) {
-        // Rare case where client height is super small. We don't exactly support this.
-        // So we render it as if it was inside the screen height
+      y = y - childHeight - parentY - offsetY;
+    } else if (placement === 'bottom') {
+      y = parentHeight + offsetY;
+    } else if (placement === undefined) {
+      if (isItemYOutOfScreenHeight) {
+        // We place the element height+offsetY (px) above the parent
+        y = y - childHeight - offsetY;
+        if (parentY + y < 0) {
+          // Rare case where client height is super small. We don't exactly support this.
+          // So we render it as if it was inside the screen height
+          y = parentHeight + offsetY;
+        }
+      } else {
+        // We place the element offsetY (px) under the parent
         y = parentHeight + offsetY;
       }
-    } else {
-      // We place the element offsetY (px) under the parent
-      y = parentHeight + offsetY;
     }
 
     // If the item-to-be-positioned is out of screen width
@@ -115,7 +124,7 @@ export const usePositionInScreen = (
     }
 
     setPosition({ x, y });
-  }, [parentRef, itemRef, isVisible, offsetY, offsetX, parentHeight, childHeight]);
+  }, [parentRef, itemRef, isVisible, offsetY, offsetX, parentHeight, childHeight, placement]);
 
   return position;
 };

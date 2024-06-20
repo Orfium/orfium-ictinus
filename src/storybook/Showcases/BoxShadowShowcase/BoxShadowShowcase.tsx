@@ -1,5 +1,5 @@
 import useTheme from 'hooks/useTheme';
-import { map } from 'lodash';
+import { map } from 'lodash-es';
 import { rem } from 'polished';
 import React from 'react';
 import { WrapperStyle } from 'storybook/styles/OverviewCard.style';

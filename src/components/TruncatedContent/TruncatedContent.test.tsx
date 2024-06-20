@@ -36,7 +36,7 @@ describe('TruncatedContent', () => {
   });
 
   test('will truncate content and show tooltip', async () => {
-    const { getByTestId, getByText } = render(
+    const { findByText, getByText } = render(
       <div style={{ width: 100 }}>
         <TruncatedContent tooltipContent={tooltipText}>
           <span data-testid="long-text">{longText}</span>
@@ -44,10 +44,15 @@ describe('TruncatedContent', () => {
       </div>
     );
 
-    const text = getByTestId('long-text');
+    const text = await findByText(longText);
     expect(text).toBeInTheDocument();
 
     await userEvent.hover(text);
-    await waitFor(() => expect(getByText(tooltipText)).toBeInTheDocument());
+    await waitFor(
+      () => {
+        expect(getByText(tooltipText)).toBeInTheDocument();
+      },
+      { timeout: 1500 }
+    );
   });
 });

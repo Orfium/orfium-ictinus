@@ -1,5 +1,5 @@
 import useTheme from 'hooks/useTheme';
-import { isUndefined } from 'lodash';
+import { isUndefined } from 'lodash-es';
 import React from 'react';
 import { ProgressBar as AriaProgressBar } from 'react-aria-components';
 import { convertRemToPixels } from 'theme/utils';

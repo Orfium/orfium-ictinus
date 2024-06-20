@@ -1,5 +1,5 @@
 import useElementSize from 'hooks/useElementSize';
-import { throttle } from 'lodash';
+import { throttle } from 'lodash-es';
 import React, { forwardRef } from 'react';
 
 import useCombinedRefs from '../../hooks/useCombinedRefs';

@@ -1,4 +1,4 @@
-import { debounce, differenceBy, isEqual } from 'lodash';
+import { debounce, differenceBy, isEqual } from 'lodash-es';
 import { useState } from 'react';
 import React from 'react';
 

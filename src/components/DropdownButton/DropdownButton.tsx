@@ -1,6 +1,6 @@
 import type { ClickEvent } from 'hooks/useLoading';
 import useTheme from 'hooks/useTheme';
-import { head } from 'lodash';
+import { head } from 'lodash-es';
 import React, { useCallback } from 'react';
 import { rem } from 'theme/utils';
 import { generateTestDataId } from 'utils/helpers';

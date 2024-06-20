@@ -56,7 +56,7 @@ const TruncatedContent: React.FCC<TruncatedContentProps> = ({
   );
 
   return showTooltip(tooltipContent, isHovered, isTruncated, isAlwaysVisible) && tooltipContent ? (
-    <Tooltip placement={placement} content={tooltipContent}>
+    <Tooltip placement={placement} content={tooltipContent} isOpen={isHovered}>
       <TruncationDiv
         ref={targetRef}
         onMouseEnter={handleMouseEnter}

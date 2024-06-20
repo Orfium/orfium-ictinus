@@ -1,9 +1,8 @@
 import type { CSSObject } from '@emotion/react';
 import useCombinedRefs from 'hooks/useCombinedRefs';
-import { flatMap, head } from 'lodash';
-import uniqueId from 'lodash/uniqueId';
+import { flatMap, head, uniqueId } from 'lodash-es';
 import React, { forwardRef, useCallback, useEffect, useRef } from 'react';
-import type { ComponentSizes } from 'types';
+import type { ComponentSizes } from 'utils/types';
 
 import { menuStyle, optionStyle } from './SelectMenu.style';
 import type { SelectOption } from '../../types';

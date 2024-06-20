@@ -1,6 +1,6 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
-import { isUndefined } from 'lodash';
+import { isUndefined } from 'lodash-es';
 import type { Theme } from 'theme';
 import { rem } from 'theme/utils';
 

@@ -5,7 +5,7 @@ import { TableColumn } from '../../types';
 import { ExpandedState } from '@tanstack/react-table';
 import Button from '~/components/Button';
 import DropdownButton from '~/components/DropdownButton';
-import { concat } from 'lodash';
+import { concat } from 'lodash-es';
 
 export default {
   title: 'Updated Components/Table/Table/Header',

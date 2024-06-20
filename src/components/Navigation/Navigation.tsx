@@ -1,5 +1,5 @@
 import useBreakpoints from 'hooks/useBreakpoints';
-import { omit } from 'lodash';
+import { omit } from 'lodash-es';
 import React from 'react';
 
 import Directory from './Directory';

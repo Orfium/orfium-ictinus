@@ -1,4 +1,4 @@
-import { flatMap, head } from 'lodash';
+import { flatMap, head } from 'lodash-es';
 import React, { useCallback } from 'react';
 
 import { emptyStyle, optionsStyles } from './Options.style';

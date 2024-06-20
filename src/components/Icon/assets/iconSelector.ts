@@ -53,6 +53,7 @@ import ExternalLink from './generic/externalLink.svg?react';
 import File from './generic/file.svg?react';
 import Filter from './generic/filter.svg?react';
 import Issue from './generic/issue.svg?react';
+import Keyword from './generic/keyword.svg?react';
 import Language from './generic/language.svg?react';
 import Legal from './generic/legal.svg?react';
 import Location from './generic/location.svg?react';
@@ -62,6 +63,7 @@ import MoreOptions from './generic/moreOptions.svg?react';
 import Notification from './generic/notification.svg?react';
 import Policy from './generic/policy.svg?react';
 import Report from './generic/report.svg?react';
+import SearchFilled from './generic/search filled.svg?react';
 import Settings from './generic/settings.svg?react';
 import Tag from './generic/tag.svg?react';
 /** Music Business */
@@ -206,6 +208,7 @@ const iconSelector: { [key in AcceptedIconNames]: React.FunctionComponent } = {
   file: File,
   filter: Filter,
   issue: Issue,
+  keyword: Keyword,
   language: Language,
   legal: Legal,
   location: Location,
@@ -215,6 +218,7 @@ const iconSelector: { [key in AcceptedIconNames]: React.FunctionComponent } = {
   notification: Notification,
   policy: Policy,
   report: Report,
+  searchFilled: SearchFilled,
   settings: Settings,
   tag: Tag,
   /** Music Business */

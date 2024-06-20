@@ -3,8 +3,8 @@ import useTheme from 'hooks/useTheme';
 import type { FCC } from 'react';
 import React from 'react';
 import isEqual from 'react-fast-compare';
-import type { ComponentSizes } from 'types';
 import { generateTestDataId } from 'utils/helpers';
+import type { ComponentSizes } from 'utils/types';
 import type { TestProps } from 'utils/types';
 
 import { hintMessageStyle, textFieldStyle, wrapperStyle } from './TextInputBase.style';
