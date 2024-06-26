@@ -29,6 +29,9 @@
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .emotion-0:focus-visible {
@@ -37,6 +40,12 @@
 }
 
 .emotion-1 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-2 {
   width: 1rem;
   height: 1rem;
   display: -webkit-box;
@@ -54,12 +63,12 @@
   cursor: pointer;
 }
 
-.emotion-1:hover {
+.emotion-2:hover {
   background: rgba(200,206,255,0.20);
   border-radius: 624.9375rem;
 }
 
-.emotion-2 {
+.emotion-3 {
   width: 1rem;
   height: 1rem;
   display: -webkit-box;
@@ -69,12 +78,12 @@
   cursor: pointer;
 }
 
-.emotion-3 {
+.emotion-4 {
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-3 path {
+.emotion-4 path {
   fill: #194DCC!important;
 }
 
@@ -86,19 +95,23 @@
     data-testid="undefined_tag_container"
     tabindex="0"
   >
-    Label
+    <div
+      class="emotion-1"
+    >
+      Label
+    </div>
     <div
       aria-hidden="true"
-      class="emotion-1"
+      class="emotion-2"
       tabindex="-1"
     >
       <div
-        class="emotion-2"
+        class="emotion-3"
         data-testid="undefined_tag_suffix"
         tabindex="0"
       >
         <svg
-          class="emotion-3"
+          class="emotion-4"
           fill="none"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"

@@ -29,6 +29,15 @@
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-1 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 <div>
@@ -40,7 +49,11 @@
       data-testid="undefined_tag_container"
       tabindex="-1"
     >
-      Label
+      <div
+        class="emotion-1"
+      >
+        Label
+      </div>
     </div>
   </div>
 </div>

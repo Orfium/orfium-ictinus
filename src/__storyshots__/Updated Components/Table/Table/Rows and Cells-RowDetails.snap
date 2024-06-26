@@ -55,6 +55,7 @@
 }
 
 .emotion-5 {
+  position: relative;
   box-shadow: 0 0.0625rem 0 0 rgba(200,206,255,0.70);
 }
 
@@ -101,6 +102,9 @@
   -webkit-justify-content: flex-start;
   justify-content: flex-start;
   gap: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .emotion-9 {
@@ -170,7 +174,19 @@
   justify-content: flex-start;
 }
 
-.emotion-32 {
+.emotion-26 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #111530;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-35 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -201,9 +217,18 @@
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.emotion-33 {
+.emotion-36 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-37 {
   width: 3.25rem;
   height: 2.75rem;
   padding: 0.5rem 1rem;
@@ -214,7 +239,7 @@
   align-content: center;
 }
 
-.emotion-35 {
+.emotion-39 {
   width: 1.25rem;
   height: 1.25rem;
   display: -webkit-box;
@@ -224,8 +249,8 @@
   cursor: pointer;
 }
 
-.emotion-35:hover,
-.emotion-35:focus-visible {
+.emotion-39:hover,
+.emotion-39:focus-visible {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   border-radius: 100%;
@@ -233,29 +258,29 @@
   box-shadow: 0px 0px 0px 8px rgba(200,206,255,0.20);
 }
 
-.emotion-36 {
+.emotion-40 {
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-36 path {
+.emotion-40 path {
   fill: #52567a!important;
 }
 
-.emotion-37 {
+.emotion-41 {
   cursor: pointer;
   background: rgba(200,206,255,0.30);
 }
 
-.emotion-37:hover {
+.emotion-41:hover {
   background: rgba(200,206,255,0.20);
 }
 
-.emotion-52 {
+.emotion-60 {
   border-bottom: 0.0625rem solid rgba(200,206,255,0.70);
 }
 
-.emotion-53 {
+.emotion-61 {
   padding: 16px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -267,7 +292,7 @@
   gap: 16px;
 }
 
-.emotion-54 {
+.emotion-62 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.375rem;
@@ -276,7 +301,7 @@
   color: #111530;
 }
 
-.emotion-55 {
+.emotion-63 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.375rem;
@@ -404,7 +429,11 @@
             <div
               class="emotion-25"
             >
-              Rachel
+              <span
+                class="emotion-26"
+              >
+                Rachel
+              </span>
             </div>
           </td>
           <td
@@ -414,7 +443,11 @@
             <div
               class="emotion-25"
             >
-              Berry
+              <span
+                class="emotion-26"
+              >
+                Berry
+              </span>
             </div>
           </td>
           <td
@@ -424,7 +457,11 @@
             <div
               class="emotion-25"
             >
-              30
+              <span
+                class="emotion-26"
+              >
+                30
+              </span>
             </div>
           </td>
           <td
@@ -437,28 +474,32 @@
               <div
                 aria-label="Fashion Executive"
                 aria-selected="false"
-                class="emotion-32"
+                class="emotion-35"
                 data-testid="undefined_tag_container"
                 tabindex="-1"
               >
-                Fashion Executive
+                <div
+                  class="emotion-36"
+                >
+                  Fashion Executive
+                </div>
               </div>
             </div>
           </td>
           <td
-            class="emotion-33"
+            class="emotion-37"
             data-testid="ictinus_table_row_0_details_iconButton"
           >
             <div
               class="emotion-25"
             >
               <div
-                class="emotion-35"
+                class="emotion-39"
                 data-testid="ictinus_table_expand_0"
                 tabindex="0"
               >
                 <svg
-                  class="emotion-36"
+                  class="emotion-40"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -475,7 +516,7 @@
           </td>
         </tr>
         <tr
-          class="emotion-37"
+          class="emotion-41"
         >
           <td
             class="emotion-24"
@@ -484,7 +525,11 @@
             <div
               class="emotion-25"
             >
-              Ross
+              <span
+                class="emotion-26"
+              >
+                Ross
+              </span>
             </div>
           </td>
           <td
@@ -494,7 +539,11 @@
             <div
               class="emotion-25"
             >
-              Geller
+              <span
+                class="emotion-26"
+              >
+                Geller
+              </span>
             </div>
           </td>
           <td
@@ -504,7 +553,11 @@
             <div
               class="emotion-25"
             >
-              32
+              <span
+                class="emotion-26"
+              >
+                32
+              </span>
             </div>
           </td>
           <td
@@ -517,28 +570,32 @@
               <div
                 aria-label="Paleontologist"
                 aria-selected="false"
-                class="emotion-32"
+                class="emotion-35"
                 data-testid="undefined_tag_container"
                 tabindex="-1"
               >
-                Paleontologist
+                <div
+                  class="emotion-36"
+                >
+                  Paleontologist
+                </div>
               </div>
             </div>
           </td>
           <td
-            class="emotion-33"
+            class="emotion-37"
             data-testid="ictinus_table_row_1_details_iconButton"
           >
             <div
               class="emotion-25"
             >
               <div
-                class="emotion-35"
+                class="emotion-39"
                 data-testid="ictinus_table_expand_1"
                 tabindex="0"
               >
                 <svg
-                  class="emotion-36"
+                  class="emotion-40"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -558,30 +615,30 @@
           class="emotion-6"
         >
           <td
-            class="emotion-52"
+            class="emotion-60"
             colspan="5"
             data-testid="ictinus_table_row_1_details"
           >
             <div
-              class="emotion-53"
+              class="emotion-61"
             >
               <span
-                class="emotion-54"
+                class="emotion-62"
               >
                 Famous Quotes
               </span>
               <p
-                class="emotion-55"
+                class="emotion-63"
               >
                 We were on a break!
               </p>
               <p
-                class="emotion-55"
+                class="emotion-63"
               >
                 Pivot! Pivot! Pivot!
               </p>
               <p
-                class="emotion-55"
+                class="emotion-63"
               >
                 Hi, I’m Ross. I’m divorced, and I have a son.
               </p>
@@ -598,7 +655,11 @@
             <div
               class="emotion-25"
             >
-              Monica
+              <span
+                class="emotion-26"
+              >
+                Monica
+              </span>
             </div>
           </td>
           <td
@@ -608,7 +669,11 @@
             <div
               class="emotion-25"
             >
-              Geller
+              <span
+                class="emotion-26"
+              >
+                Geller
+              </span>
             </div>
           </td>
           <td
@@ -618,7 +683,11 @@
             <div
               class="emotion-25"
             >
-              31
+              <span
+                class="emotion-26"
+              >
+                31
+              </span>
             </div>
           </td>
           <td
@@ -631,28 +700,32 @@
               <div
                 aria-label="Chef"
                 aria-selected="false"
-                class="emotion-32"
+                class="emotion-35"
                 data-testid="undefined_tag_container"
                 tabindex="-1"
               >
-                Chef
+                <div
+                  class="emotion-36"
+                >
+                  Chef
+                </div>
               </div>
             </div>
           </td>
           <td
-            class="emotion-33"
+            class="emotion-37"
             data-testid="ictinus_table_row_2_details_iconButton"
           >
             <div
               class="emotion-25"
             >
               <div
-                class="emotion-35"
+                class="emotion-39"
                 data-testid="ictinus_table_expand_2"
                 tabindex="0"
               >
                 <svg
-                  class="emotion-36"
+                  class="emotion-40"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -678,7 +751,11 @@
             <div
               class="emotion-25"
             >
-              Chandler
+              <span
+                class="emotion-26"
+              >
+                Chandler
+              </span>
             </div>
           </td>
           <td
@@ -688,7 +765,11 @@
             <div
               class="emotion-25"
             >
-              Bing
+              <span
+                class="emotion-26"
+              >
+                Bing
+              </span>
             </div>
           </td>
           <td
@@ -698,7 +779,11 @@
             <div
               class="emotion-25"
             >
-              32
+              <span
+                class="emotion-26"
+              >
+                32
+              </span>
             </div>
           </td>
           <td
@@ -711,28 +796,32 @@
               <div
                 aria-label="?"
                 aria-selected="false"
-                class="emotion-32"
+                class="emotion-35"
                 data-testid="undefined_tag_container"
                 tabindex="-1"
               >
-                ?
+                <div
+                  class="emotion-36"
+                >
+                  ?
+                </div>
               </div>
             </div>
           </td>
           <td
-            class="emotion-33"
+            class="emotion-37"
             data-testid="ictinus_table_row_3_details_iconButton"
           >
             <div
               class="emotion-25"
             >
               <div
-                class="emotion-35"
+                class="emotion-39"
                 data-testid="ictinus_table_expand_3"
                 tabindex="0"
               >
                 <svg
-                  class="emotion-36"
+                  class="emotion-40"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -749,7 +838,7 @@
           </td>
         </tr>
         <tr
-          class="emotion-37"
+          class="emotion-41"
         >
           <td
             class="emotion-24"
@@ -758,7 +847,11 @@
             <div
               class="emotion-25"
             >
-              Joey
+              <span
+                class="emotion-26"
+              >
+                Joey
+              </span>
             </div>
           </td>
           <td
@@ -768,7 +861,11 @@
             <div
               class="emotion-25"
             >
-              Tribbiani
+              <span
+                class="emotion-26"
+              >
+                Tribbiani
+              </span>
             </div>
           </td>
           <td
@@ -778,7 +875,11 @@
             <div
               class="emotion-25"
             >
-              30
+              <span
+                class="emotion-26"
+              >
+                30
+              </span>
             </div>
           </td>
           <td
@@ -791,28 +892,32 @@
               <div
                 aria-label="Actor"
                 aria-selected="false"
-                class="emotion-32"
+                class="emotion-35"
                 data-testid="undefined_tag_container"
                 tabindex="-1"
               >
-                Actor
+                <div
+                  class="emotion-36"
+                >
+                  Actor
+                </div>
               </div>
             </div>
           </td>
           <td
-            class="emotion-33"
+            class="emotion-37"
             data-testid="ictinus_table_row_4_details_iconButton"
           >
             <div
               class="emotion-25"
             >
               <div
-                class="emotion-35"
+                class="emotion-39"
                 data-testid="ictinus_table_expand_4"
                 tabindex="0"
               >
                 <svg
-                  class="emotion-36"
+                  class="emotion-40"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -832,30 +937,30 @@
           class="emotion-6"
         >
           <td
-            class="emotion-52"
+            class="emotion-60"
             colspan="5"
             data-testid="ictinus_table_row_4_details"
           >
             <div
-              class="emotion-53"
+              class="emotion-61"
             >
               <span
-                class="emotion-54"
+                class="emotion-62"
               >
                 Famous Quotes
               </span>
               <p
-                class="emotion-55"
+                class="emotion-63"
               >
                 How you doin'?
               </p>
               <p
-                class="emotion-55"
+                class="emotion-63"
               >
                 Joey doesn’t share food!
               </p>
               <p
-                class="emotion-55"
+                class="emotion-63"
               >
                 It's a moo point. It's like a cow's opinion; it doesn't matter. It's moo.
               </p>
@@ -872,7 +977,11 @@
             <div
               class="emotion-25"
             >
-              Phoebe
+              <span
+                class="emotion-26"
+              >
+                Phoebe
+              </span>
             </div>
           </td>
           <td
@@ -882,7 +991,11 @@
             <div
               class="emotion-25"
             >
-              Buffay
+              <span
+                class="emotion-26"
+              >
+                Buffay
+              </span>
             </div>
           </td>
           <td
@@ -892,7 +1005,11 @@
             <div
               class="emotion-25"
             >
-              31
+              <span
+                class="emotion-26"
+              >
+                31
+              </span>
             </div>
           </td>
           <td
@@ -905,28 +1022,32 @@
               <div
                 aria-label="Massage Therapist"
                 aria-selected="false"
-                class="emotion-32"
+                class="emotion-35"
                 data-testid="undefined_tag_container"
                 tabindex="-1"
               >
-                Massage Therapist
+                <div
+                  class="emotion-36"
+                >
+                  Massage Therapist
+                </div>
               </div>
             </div>
           </td>
           <td
-            class="emotion-33"
+            class="emotion-37"
             data-testid="ictinus_table_row_5_details_iconButton"
           >
             <div
               class="emotion-25"
             >
               <div
-                class="emotion-35"
+                class="emotion-39"
                 data-testid="ictinus_table_expand_5"
                 tabindex="0"
               >
                 <svg
-                  class="emotion-36"
+                  class="emotion-40"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
