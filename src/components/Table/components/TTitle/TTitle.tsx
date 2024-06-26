@@ -65,7 +65,7 @@ const TTitle: React.FCC<Props> = ({
       </div>
 
       <div css={actionsContent()}>
-        {hasVisibleActions && defaultAction}
+        {defaultAction}
         {columnsConfig && (
           <ColumnChooser
             columns={columns}

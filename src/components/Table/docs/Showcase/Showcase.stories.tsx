@@ -2,7 +2,7 @@ import type { SimpleData } from '../../constants';
 import { contentAlignOptions, moreData, simpleData, sortedData } from '../../constants';
 import Table from '~/components/Table';
 import type { ExpandedState, SortingState, TableColumn } from '../../types';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Button from '~/components/Button';
 import DropdownButton from '~/components/DropdownButton';
 import { SelectOptionValues } from '~/components/Select';
@@ -116,6 +116,11 @@ export const Playground = {
           chunk(concat(simpleData(true), moreData(true)), Number(showItems.value))[currentPage - 1],
           sortingColumn
         );
+
+    useEffect(() => {
+      setExpanded({});
+      setRowSelection({});
+    }, [currentPage]);
 
     return (
       <Table

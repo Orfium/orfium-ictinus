@@ -43,6 +43,9 @@
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .emotion-1:hover {
@@ -55,6 +58,12 @@
 }
 
 .emotion-2 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -85,18 +94,21 @@
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   background: rgba(200,206,255,0.20);
 }
 
-.emotion-2:focus-visible {
+.emotion-3:focus-visible {
   background: rgba(200,206,255,0.20);
   border-color: #175BF5;
 }
 
-.emotion-3 {
+.emotion-4 {
   width: 1rem;
   height: 1rem;
   display: -webkit-box;
@@ -105,12 +117,12 @@
   display: flex;
 }
 
-.emotion-4 {
+.emotion-5 {
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-4 path {
+.emotion-5 path {
   fill: #194DCC!important;
 }
 
@@ -128,7 +140,11 @@
         data-testid="undefined_tag_container"
         tabindex="0"
       >
-        Label
+        <div
+          class="emotion-2"
+        >
+          Label
+        </div>
       </div>
     </div>
     <div
@@ -137,16 +153,16 @@
       <div
         aria-label="Label"
         aria-selected="true"
-        class="emotion-2"
+        class="emotion-3"
         data-testid="undefined_tag_container"
         tabindex="0"
       >
         <div
-          class="emotion-3"
+          class="emotion-4"
           data-testid="undefined_tag_prefix"
         >
           <svg
-            class="emotion-4"
+            class="emotion-5"
             fill="none"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
@@ -157,7 +173,11 @@
             />
           </svg>
         </div>
-        Label
+        <div
+          class="emotion-2"
+        >
+          Label
+        </div>
       </div>
     </div>
   </div>

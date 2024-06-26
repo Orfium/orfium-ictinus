@@ -15,7 +15,7 @@ export const paginationContainer =
       background: ${theme.tokens.colors.get('backgroundColor.default')};
       height: ${rem(ACTIONS_BAR_HEIGHT)};
       width: 100%;
-      padding: ${theme.dimension.spacing.get('sm')} ${theme.dimension.spacing.get('3xl')};
+      padding: ${theme.dimension.spacing.get('sm')} ${theme.dimension.spacing.get('lg')};
       box-sizing: border-box;
       border-top: ${theme.dimension.borderWidth.get('default')} solid
         ${theme.tokens.colors.get('borderColor.decorative.default')};
