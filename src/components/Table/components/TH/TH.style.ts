@@ -5,6 +5,7 @@ import { ACTIONS_CELL_WIDTH, contentAlignToFlex } from '../../constants';
 import type { TableProps } from 'components/Table';
 import { generateStylesFromTokens } from 'components/Typography/utils';
 
+import { lineEllipsis } from '~/theme/functions';
 import { rem } from '~/theme/utils';
 
 export const thContainer =
@@ -74,6 +75,7 @@ export const thContent =
       align-items: center;
       justify-content: ${contentAlignToFlex[contentAlign]};
       gap: ${theme.dimension.spacing.get('sm')};
+      ${lineEllipsis}
     `;
   };
 
