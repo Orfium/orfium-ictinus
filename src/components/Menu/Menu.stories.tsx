@@ -1,7 +1,7 @@
 import Menu from '../Menu';
 import Stack from '../storyUtils/Stack';
 import { FIGMA_URL } from 'utils/common';
-import { ListItem, ListItemAction, ListItemText, ListSection } from '../List';
+import { ListItem, ListItemAction, ListItemText } from '../List';
 import * as React from 'react';
 import { useCallback, useRef, useState } from 'react';
 import Link from '../Link';
@@ -12,6 +12,54 @@ import Avatar from '../Avatar';
 import MenuItemDivider from './MenuItemDivider';
 import { useTheme } from '../../index';
 import { fireEvent, within } from '@storybook/testing-library';
+
+const LIST_ITEMS = [
+  'Audio Network',
+  'Audio Socket',
+  'Bensound',
+  'Cavendish',
+  'De Wolfe',
+  'Extreme Music',
+  'Jingle Punks',
+  'Lens Distortions',
+  'Music Vine',
+  'Slipstream',
+  'SongTradr',
+  'Sony Music Publishing',
+  'Soundstripe',
+  'Video Helper',
+  'WMG',
+  'Audio Network 2',
+  'Audio Socket 2',
+  'Bensound 2',
+  'Cavendish 2',
+  'De Wolfe 2',
+  'Extreme Music 2',
+  'Jingle Punks 2',
+  'Lens Distortions 2',
+  'Music Vine 2',
+  'Slipstream 2',
+  'SongTradr 2',
+  'Sony Music Publishing 2',
+  'Soundstripe 2',
+  'Video Helper 2',
+  'WMG 2',
+  'Audio Network 3',
+  'Audio Socket 3',
+  'Bensound 3',
+  'Cavendish 3',
+  'De Wolfe 3',
+  'Extreme Music 3',
+  'Jingle Punks 3',
+  'Lens Distortions 3',
+  'Music Vine 3',
+  'Slipstream 3',
+  'SongTradr 3',
+  'Sony Music Publishing 3',
+  'Soundstripe 3',
+  'Video Helper 3',
+  'WMG 3',
+];
 
 export default {
   title: 'Updated Components/Menu',
@@ -50,6 +98,7 @@ export const MenuTriggers = {
     const btn1 = factory();
     const btn2 = factory();
     const btn3 = factory();
+    const btn4 = factory();
 
     return (
       <Stack height={400}>
@@ -257,6 +306,31 @@ export const MenuTriggers = {
               </CheckBox>
             </ListItemAction>
           </ListItem>
+        </Menu>
+
+        <Button
+          ref={btn4.btnRef}
+          aria-label="Menu with many options"
+          onClick={btn4.handleBtnClick}
+          aria-controls={btn4.isBtnOpen ? 'basic-menu' : undefined}
+          aria-haspopup="true"
+          aria-expanded={btn4.isBtnOpen ? 'true' : undefined}
+        >
+          Menu with many options
+        </Button>
+        <Menu
+          triggerRef={btn4.btnRef}
+          isOpen={btn4.isBtnOpen}
+          onClose={btn4.handleBtnClick}
+          selectedKeys={btn4.selectedKeys}
+          rowSize={'compact'}
+          onSelectionChange={btn4.setSelectedKeys}
+        >
+          {LIST_ITEMS.map((item) => (
+            <ListItem key={item} textValue={item} parentType={'Menu'}>
+              <ListItemText>{item}</ListItemText>
+            </ListItem>
+          ))}
         </Menu>
       </Stack>
     );

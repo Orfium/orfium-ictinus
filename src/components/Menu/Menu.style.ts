@@ -74,12 +74,15 @@ export const MenuItemWrapper = styled(MenuItem)<{
   `;
 });
 
-export const MenuWrapper = styled(Menu)(({ theme }) => {
-  return css`
+export const MenuWrapper = styled(Menu)(
+  ({ theme }) => css`
     background-color: ${theme.tokens.colors.get('backgroundColor.default')};
     border-color: ${theme.tokens.colors.get('borderColor.decorative.default')};
     border-radius: ${theme.dimension.borderRadius.get('md')};
     box-shadow: ${theme.tokens.boxShadow.get('2')};
     border-width: ${theme.dimension.borderWidth.get('default')};
-  `;
-});
+
+    max-height: ${rem(300)};
+    overflow: auto;
+  `
+);
