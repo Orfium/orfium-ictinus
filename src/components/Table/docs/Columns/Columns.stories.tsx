@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Table from '../../Table';
+import Table, { SortingState } from '~/components/Table';
 import {
   SimpleData,
   multiSortDataByKey,
@@ -8,7 +8,6 @@ import {
   sortedData,
 } from '../../constants';
 import { TableColumn } from '../../types';
-import { SortingState } from '@tanstack/react-table';
 
 export default {
   title: 'Updated Components/Table/Table/Columns',

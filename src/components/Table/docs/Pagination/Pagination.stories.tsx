@@ -2,11 +2,8 @@ import { useState } from 'react';
 import Table from '../../Table';
 import { SimpleData, moreData, simpleColumns, simpleData } from '../../constants';
 import { TableColumn } from '../../types';
-import { ExpandedState } from '@tanstack/react-table';
-import Button from '~/components/Button';
-import DropdownButton from '~/components/DropdownButton';
 import { chunk, concat } from 'lodash';
-import { SelectOption, SelectOptionValues } from '~/components/Select';
+import { SelectOptionValues } from '~/components/Select';
 
 export default {
   title: 'Updated Components/Table/Table/Pagination',

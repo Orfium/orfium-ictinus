@@ -1,6 +1,6 @@
 import type { SimpleData } from '../../constants';
 import { contentAlignOptions, moreData, simpleData, sortedData } from '../../constants';
-import Table from '~/components/Table';
+import Table, { tableFunctionalUpdate } from '~/components/Table';
 import type { ExpandedState, SortingState, TableColumn } from '../../types';
 import { useEffect, useState } from 'react';
 import Button from '~/components/Button';
@@ -99,8 +99,6 @@ export const Playground = {
 
     const [sortingColumn, setSortingColumn] = useState<SortingState>([]);
 
-    const [rowSelection, setRowSelection] = useState<Record<number, boolean>>({});
-
     const [expanded, setExpanded] = useState<ExpandedState>({});
 
     const [currentPage, setCurrentPage] = useState(1);
@@ -117,9 +115,12 @@ export const Playground = {
           sortingColumn
         );
 
+    const [rowSelection, setRowSelection] = useState<Array<Record<string, boolean>>>(
+      Array.from({ length: data.length }, () => ({}))
+    );
+
     useEffect(() => {
       setExpanded({});
-      setRowSelection({});
     }, [currentPage]);
 
     return (
@@ -132,8 +133,19 @@ export const Playground = {
         sx={hasStickyHeader ? { tbody: { maxHeight: `${maxHeight}px` } } : undefined}
         rowsConfig={{
           ...(hasRowSelection && {
-            rowSelection,
-            setRowSelection,
+            rowSelection: rowSelection[currentPage - 1],
+            setRowSelection: (state) => {
+              /** In order to get the new value of the state, use this callback */
+              const newValue = tableFunctionalUpdate(state, rowSelection[currentPage - 1]);
+
+              const newState = [
+                ...rowSelection.slice(0, currentPage - 1),
+                newValue,
+                ...rowSelection.slice(currentPage),
+              ];
+
+              setRowSelection(newState);
+            },
             defaultAction: <Button size="compact">Default Action</Button>,
             bulkActions: (
               <div
