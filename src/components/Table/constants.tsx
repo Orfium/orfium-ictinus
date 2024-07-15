@@ -82,6 +82,33 @@ export const sortedData = (data, sorting: SortingState) => {
   }
 };
 
+export const multiSortDataByKey = (data, keys) => {
+  const returnData =
+    keys.length === 0
+      ? data
+      : data.sort((a, b) => {
+          for (const { id, desc } of keys) {
+            const valueA = a.cells[id];
+            const valueB = b.cells[id];
+
+            let comparison;
+            if (id === 'age') {
+              comparison = parseInt(valueA, 10) - parseInt(valueB, 10);
+            } else {
+              comparison = valueA < valueB ? -1 : valueA > valueB ? 1 : 0;
+            }
+
+            if (comparison !== 0) {
+              return desc ? -comparison : comparison;
+            }
+          }
+
+          return 0;
+        });
+
+  return returnData;
+};
+
 const quotes = {
   rachel: {
     1: "It's like all my life everyone has always told me, 'You're a shoe! You're a shoe! You're a shoe!' Well, what if I don't want to be a shoe? What if I want to be a purse, you know, or a hat!",

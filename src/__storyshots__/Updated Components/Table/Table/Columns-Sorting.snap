@@ -41,7 +41,8 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-4 [data-header-role='options'] button {
+.emotion-4 [data-header-role='options'],
+.emotion-4 [data-header-role='sorting-button'] {
   opacity: 0;
 }
 
@@ -55,8 +56,10 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-4:hover [data-header-role='options'] button,
-.emotion-4:focus-visible [data-header-role='options'] button {
+.emotion-4:hover [data-header-role='options'],
+.emotion-4:focus-visible [data-header-role='options'],
+.emotion-4:hover [data-header-role='sorting-button'],
+.emotion-4:focus-visible [data-header-role='sorting-button'] {
   opacity: 1;
 }
 
@@ -187,12 +190,15 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-16 [data-header-role='options'] button {
+.emotion-16 [data-header-role='options'],
+.emotion-16 [data-header-role='sorting-button'] {
   opacity: 0;
 }
 
-.emotion-16:hover [data-header-role='options'] button,
-.emotion-16:focus-visible [data-header-role='options'] button {
+.emotion-16:hover [data-header-role='options'],
+.emotion-16:focus-visible [data-header-role='options'],
+.emotion-16:hover [data-header-role='sorting-button'],
+.emotion-16:focus-visible [data-header-role='sorting-button'] {
   opacity: 1;
 }
 
@@ -216,7 +222,8 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-19 [data-header-role='options'] button {
+.emotion-19 [data-header-role='options'],
+.emotion-19 [data-header-role='sorting-button'] {
   opacity: 1;
 }
 
@@ -230,8 +237,10 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-19:hover [data-header-role='options'] button,
-.emotion-19:focus-visible [data-header-role='options'] button {
+.emotion-19:hover [data-header-role='options'],
+.emotion-19:focus-visible [data-header-role='options'],
+.emotion-19:hover [data-header-role='sorting-button'],
+.emotion-19:focus-visible [data-header-role='sorting-button'] {
   opacity: 1;
 }
 
@@ -358,6 +367,7 @@
                 >
                   <button
                     class="emotion-9"
+                    data-header-role="sorting-button"
                     data-testid="ictinus_sort_firstName_asc-icon-button"
                     type="button"
                   >
@@ -456,6 +466,7 @@
                 >
                   <button
                     class="emotion-9"
+                    data-header-role="sorting-button"
                     data-testid="ictinus_sort_age_asc-icon-button"
                     type="button"
                   >

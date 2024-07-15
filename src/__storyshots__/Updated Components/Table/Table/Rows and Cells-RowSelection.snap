@@ -279,12 +279,15 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-30 [data-header-role='options'] button {
+.emotion-30 [data-header-role='options'],
+.emotion-30 [data-header-role='sorting-button'] {
   opacity: 0;
 }
 
-.emotion-30:hover [data-header-role='options'] button,
-.emotion-30:focus-visible [data-header-role='options'] button {
+.emotion-30:hover [data-header-role='options'],
+.emotion-30:focus-visible [data-header-role='options'],
+.emotion-30:hover [data-header-role='sorting-button'],
+.emotion-30:focus-visible [data-header-role='sorting-button'] {
   opacity: 1;
 }
 
@@ -424,12 +427,15 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-37 [data-header-role='options'] button {
+.emotion-37 [data-header-role='options'],
+.emotion-37 [data-header-role='sorting-button'] {
   opacity: 0;
 }
 
-.emotion-37:hover [data-header-role='options'] button,
-.emotion-37:focus-visible [data-header-role='options'] button {
+.emotion-37:hover [data-header-role='options'],
+.emotion-37:focus-visible [data-header-role='options'],
+.emotion-37:hover [data-header-role='sorting-button'],
+.emotion-37:focus-visible [data-header-role='sorting-button'] {
   opacity: 1;
 }
 

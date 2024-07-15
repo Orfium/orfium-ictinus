@@ -1,6 +1,12 @@
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 import Table from '../../Table';
-import { SimpleData, simpleColumns, simpleData, sortedData } from '../../constants';
+import {
+  SimpleData,
+  multiSortDataByKey,
+  simpleColumns,
+  simpleData,
+  sortedData,
+} from '../../constants';
 import { TableColumn } from '../../types';
 import { SortingState } from '@tanstack/react-table';
 
@@ -117,9 +123,13 @@ export const Sorting = {
       { id: 'job', header: 'Job' },
     ];
 
+    const data = isMultiSortable
+      ? multiSortDataByKey(simpleData(), sortingColumn)
+      : sortedData(simpleData(), sortingColumn);
+
     return (
       <Table
-        data={sortedData(simpleData(), sortingColumn)}
+        data={data}
         columns={columns}
         sorting={{
           sortingColumn,

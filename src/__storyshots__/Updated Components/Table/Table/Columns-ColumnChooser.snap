@@ -145,12 +145,15 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-10 [data-header-role='options'] button {
+.emotion-10 [data-header-role='options'],
+.emotion-10 [data-header-role='sorting-button'] {
   opacity: 0;
 }
 
-.emotion-10:hover [data-header-role='options'] button,
-.emotion-10:focus-visible [data-header-role='options'] button {
+.emotion-10:hover [data-header-role='options'],
+.emotion-10:focus-visible [data-header-role='options'],
+.emotion-10:hover [data-header-role='sorting-button'],
+.emotion-10:focus-visible [data-header-role='sorting-button'] {
   opacity: 1;
 }
 
