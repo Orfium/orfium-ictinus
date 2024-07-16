@@ -1,10 +1,6 @@
-import { useState } from 'react';
 import Table from '../../Table';
 import { SimpleData, moreData, simpleColumns, simpleData } from '../../constants';
 import { TableColumn } from '../../types';
-import { ExpandedState } from '@tanstack/react-table';
-import Button from '~/components/Button';
-import DropdownButton from '~/components/DropdownButton';
 import { concat } from 'lodash-es';
 
 export default {

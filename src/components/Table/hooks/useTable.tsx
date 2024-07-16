@@ -14,6 +14,9 @@ import type { Theme } from 'theme';
 import { CheckBox } from 'components/Controls';
 import Icon from 'components/Icon';
 
+import Typography from '~/components/Typography';
+import { lineEllipsis } from '~/theme/functions';
+
 type ReturnValue<TData> = {
   getHeaderGroups: () => HeaderGroup<TData>[];
   getRowModel: () => RowModel<TData>;
@@ -113,7 +116,19 @@ const getColumns = (
       tColumns.push(
         columnHelper.accessor(column.id as any, {
           header: column.header,
-          cell: (info) => info.getValue(),
+          cell: (info) => {
+            const value = info.getValue();
+
+            if (typeof value === 'string' || typeof value === 'number') {
+              return (
+                <Typography variant="body02" component="span" css={lineEllipsis}>
+                  {value}
+                </Typography>
+              );
+            }
+
+            return value;
+          },
           size: column.width ?? 'auto',
           minSize: column.width,
           enableSorting: column.isSortable ?? false,

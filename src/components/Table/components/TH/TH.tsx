@@ -5,9 +5,8 @@ import isEqual from 'react-fast-compare';
 import type { DivProps } from 'utils/common';
 
 import { THOptions } from './components';
+import SortingButton from './components/SortingButton';
 import { thContainer, optionsContainer, thContent } from './TH.style';
-import type { AcceptedIconNames } from 'components/Icon';
-import IconButton from 'components/IconButton';
 import type { RowSize } from 'components/Table/types';
 
 import type { TestProps } from '~/utils/types';
@@ -24,7 +23,7 @@ type Props = {
   /** Whether multi-sorting is enabled */
   isMultiSortable?: boolean;
   /** The Sorting State of the column */
-  colSortingState?: ColumnSort;
+  colSortingState?: ColumnSort & { badge?: number };
   /** Callback to reset sorting for this column */
   resetSorting?: () => void;
   /** Metadata for the th element */
@@ -53,7 +52,7 @@ const TH: React.FCC<Props & Pick<DivProps, 'onClick' | 'id'>> = ({
 
   const [hasVisibleOptions, setHasVisibleOptions] = React.useState(false);
 
-  const { desc: isDesc } = colSortingState ?? {};
+  const { desc: isDesc, badge } = colSortingState ?? {};
 
   const { contentAlign = 'left' } = metaData;
 
@@ -70,19 +69,13 @@ const TH: React.FCC<Props & Pick<DivProps, 'onClick' | 'id'>> = ({
       return onSort(false, isMultiSortable);
     };
 
-    const getIcon = (): AcceptedIconNames => {
-      if (isDesc === false || isDesc === undefined) return 'arrowUp';
-
-      return 'arrowDown';
-    };
-
     return (
-      <IconButton
-        iconName={getIcon()}
-        type="tertiary"
-        size="compact"
+      <SortingButton
+        id={id}
+        isDesc={isDesc}
         onClick={handleClick}
-        dataTestPrefixId={`${dataTestPrefixId}_sort_${id}_${isDesc ? 'desc' : 'asc'}`}
+        badge={badge}
+        dataTestPrefixId={dataTestPrefixId}
       />
     );
   };

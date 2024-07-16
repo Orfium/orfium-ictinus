@@ -55,6 +55,7 @@
 }
 
 .emotion-5 {
+  position: relative;
   box-shadow: 0 0.0625rem 0 0 rgba(200,206,255,0.70);
 }
 
@@ -74,12 +75,15 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-7 [data-header-role='options'] button {
+.emotion-7 [data-header-role='options'],
+.emotion-7 [data-header-role='sorting-button'] {
   opacity: 0;
 }
 
-.emotion-7:hover [data-header-role='options'] button,
-.emotion-7:focus-visible [data-header-role='options'] button {
+.emotion-7:hover [data-header-role='options'],
+.emotion-7:focus-visible [data-header-role='options'],
+.emotion-7:hover [data-header-role='sorting-button'],
+.emotion-7:focus-visible [data-header-role='sorting-button'] {
   opacity: 1;
 }
 
@@ -101,6 +105,9 @@
   -webkit-justify-content: flex-start;
   justify-content: flex-start;
   gap: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .emotion-9 {
@@ -133,7 +140,19 @@
   justify-content: flex-start;
 }
 
-.emotion-29 {
+.emotion-23 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #111530;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -164,6 +183,15 @@
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-33 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 <div>
@@ -270,7 +298,11 @@
             <div
               class="emotion-22"
             >
-              Rachel
+              <span
+                class="emotion-23"
+              >
+                Rachel
+              </span>
             </div>
           </td>
           <td
@@ -280,7 +312,11 @@
             <div
               class="emotion-22"
             >
-              Berry
+              <span
+                class="emotion-23"
+              >
+                Berry
+              </span>
             </div>
           </td>
           <td
@@ -290,7 +326,11 @@
             <div
               class="emotion-22"
             >
-              30
+              <span
+                class="emotion-23"
+              >
+                30
+              </span>
             </div>
           </td>
           <td
@@ -303,11 +343,15 @@
               <div
                 aria-label="Fashion Executive"
                 aria-selected="false"
-                class="emotion-29"
+                class="emotion-32"
                 data-testid="undefined_tag_container"
                 tabindex="-1"
               >
-                Fashion Executive
+                <div
+                  class="emotion-33"
+                >
+                  Fashion Executive
+                </div>
               </div>
             </div>
           </td>
@@ -322,7 +366,11 @@
             <div
               class="emotion-22"
             >
-              Ross
+              <span
+                class="emotion-23"
+              >
+                Ross
+              </span>
             </div>
           </td>
           <td
@@ -332,7 +380,11 @@
             <div
               class="emotion-22"
             >
-              Geller
+              <span
+                class="emotion-23"
+              >
+                Geller
+              </span>
             </div>
           </td>
           <td
@@ -342,7 +394,11 @@
             <div
               class="emotion-22"
             >
-              32
+              <span
+                class="emotion-23"
+              >
+                32
+              </span>
             </div>
           </td>
           <td
@@ -355,11 +411,15 @@
               <div
                 aria-label="Paleontologist"
                 aria-selected="false"
-                class="emotion-29"
+                class="emotion-32"
                 data-testid="undefined_tag_container"
                 tabindex="-1"
               >
-                Paleontologist
+                <div
+                  class="emotion-33"
+                >
+                  Paleontologist
+                </div>
               </div>
             </div>
           </td>
@@ -374,7 +434,11 @@
             <div
               class="emotion-22"
             >
-              Monica
+              <span
+                class="emotion-23"
+              >
+                Monica
+              </span>
             </div>
           </td>
           <td
@@ -384,7 +448,11 @@
             <div
               class="emotion-22"
             >
-              Geller
+              <span
+                class="emotion-23"
+              >
+                Geller
+              </span>
             </div>
           </td>
           <td
@@ -394,7 +462,11 @@
             <div
               class="emotion-22"
             >
-              31
+              <span
+                class="emotion-23"
+              >
+                31
+              </span>
             </div>
           </td>
           <td
@@ -407,11 +479,15 @@
               <div
                 aria-label="Chef"
                 aria-selected="false"
-                class="emotion-29"
+                class="emotion-32"
                 data-testid="undefined_tag_container"
                 tabindex="-1"
               >
-                Chef
+                <div
+                  class="emotion-33"
+                >
+                  Chef
+                </div>
               </div>
             </div>
           </td>
@@ -426,7 +502,11 @@
             <div
               class="emotion-22"
             >
-              Chandler
+              <span
+                class="emotion-23"
+              >
+                Chandler
+              </span>
             </div>
           </td>
           <td
@@ -436,7 +516,11 @@
             <div
               class="emotion-22"
             >
-              Bing
+              <span
+                class="emotion-23"
+              >
+                Bing
+              </span>
             </div>
           </td>
           <td
@@ -446,7 +530,11 @@
             <div
               class="emotion-22"
             >
-              32
+              <span
+                class="emotion-23"
+              >
+                32
+              </span>
             </div>
           </td>
           <td
@@ -459,11 +547,15 @@
               <div
                 aria-label="?"
                 aria-selected="false"
-                class="emotion-29"
+                class="emotion-32"
                 data-testid="undefined_tag_container"
                 tabindex="-1"
               >
-                ?
+                <div
+                  class="emotion-33"
+                >
+                  ?
+                </div>
               </div>
             </div>
           </td>
@@ -478,7 +570,11 @@
             <div
               class="emotion-22"
             >
-              Joey
+              <span
+                class="emotion-23"
+              >
+                Joey
+              </span>
             </div>
           </td>
           <td
@@ -488,7 +584,11 @@
             <div
               class="emotion-22"
             >
-              Tribbiani
+              <span
+                class="emotion-23"
+              >
+                Tribbiani
+              </span>
             </div>
           </td>
           <td
@@ -498,7 +598,11 @@
             <div
               class="emotion-22"
             >
-              30
+              <span
+                class="emotion-23"
+              >
+                30
+              </span>
             </div>
           </td>
           <td
@@ -511,11 +615,15 @@
               <div
                 aria-label="Actor"
                 aria-selected="false"
-                class="emotion-29"
+                class="emotion-32"
                 data-testid="undefined_tag_container"
                 tabindex="-1"
               >
-                Actor
+                <div
+                  class="emotion-33"
+                >
+                  Actor
+                </div>
               </div>
             </div>
           </td>
@@ -530,7 +638,11 @@
             <div
               class="emotion-22"
             >
-              Phoebe
+              <span
+                class="emotion-23"
+              >
+                Phoebe
+              </span>
             </div>
           </td>
           <td
@@ -540,7 +652,11 @@
             <div
               class="emotion-22"
             >
-              Buffay
+              <span
+                class="emotion-23"
+              >
+                Buffay
+              </span>
             </div>
           </td>
           <td
@@ -550,7 +666,11 @@
             <div
               class="emotion-22"
             >
-              31
+              <span
+                class="emotion-23"
+              >
+                31
+              </span>
             </div>
           </td>
           <td
@@ -563,11 +683,15 @@
               <div
                 aria-label="Massage Therapist"
                 aria-selected="false"
-                class="emotion-29"
+                class="emotion-32"
                 data-testid="undefined_tag_container"
                 tabindex="-1"
               >
-                Massage Therapist
+                <div
+                  class="emotion-33"
+                >
+                  Massage Therapist
+                </div>
               </div>
             </div>
           </td>

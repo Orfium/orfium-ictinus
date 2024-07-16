@@ -9,6 +9,8 @@ import type { TagProps } from './Tag.types';
 import type { Theme } from '../../theme';
 import { generateStylesFromTokens } from 'components/Typography/utils';
 
+import { lineEllipsis } from '~/theme/functions';
+
 export const tagContainerStyles =
   ({
     size = 'normal',
@@ -35,7 +37,8 @@ export const tagContainerStyles =
       return theme.tokens.colors.get(tagColorToSemColor[color].fill);
     };
 
-    const typography: SemanticTypographyKey = size === 'normal' ? 'normal.label02' : 'normal.label03';
+    const typography: SemanticTypographyKey =
+      size === 'normal' ? 'normal.label02' : 'normal.label03';
 
     return css`
       display: flex;
@@ -76,6 +79,8 @@ export const tagContainerStyles =
       }
 
       ${generateStylesFromTokens(theme.tokens.typography.get(typography))}
+
+      ${lineEllipsis};
     `;
   };
 

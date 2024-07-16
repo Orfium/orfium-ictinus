@@ -5,6 +5,7 @@ import { ACTIONS_CELL_WIDTH, contentAlignToFlex } from '../../constants';
 import type { TableProps } from 'components/Table';
 import { generateStylesFromTokens } from 'components/Typography/utils';
 
+import { lineEllipsis } from '~/theme/functions';
 import { rem } from '~/theme/utils';
 
 export const thContainer =
@@ -40,10 +41,9 @@ export const thContainer =
       )};
       ${generateStylesFromTokens(theme.tokens.typography.get('normal.body02'))};
 
-      [data-header-role='options'] {
-        button {
-          opacity: ${hasVisibleOptions ? 1 : 0};
-        }
+      [data-header-role='options'],
+      [data-header-role='sorting-button'] {
+        opacity: ${hasVisibleOptions ? 1 : 0};
       }
 
       &:hover,
@@ -51,10 +51,9 @@ export const thContainer =
         color: ${isSortable && theme.tokens.colors.get('textColor.default.primary')};
         ${isSortable && generateStylesFromTokens(theme.tokens.typography.get('normal.label02'))};
 
-        [data-header-role='options'] {
-          button {
-            opacity: 1;
-          }
+        [data-header-role='options'],
+        [data-header-role='sorting-button'] {
+          opacity: 1;
         }
       }
 
@@ -74,6 +73,7 @@ export const thContent =
       align-items: center;
       justify-content: ${contentAlignToFlex[contentAlign]};
       gap: ${theme.dimension.spacing.get('sm')};
+      ${lineEllipsis}
     `;
   };
 

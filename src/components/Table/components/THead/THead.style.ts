@@ -11,6 +11,7 @@ export const tHeadContainer =
   }: Pick<THeadProps, 'hasStickyHeader' | 'sx'> & { hasScrollbar?: boolean }) =>
   (theme: Theme): SerializedStyles => {
     return css`
+      position: relative;
       box-shadow: 0 ${theme.dimension.borderWidth.get('default')} 0 0
         ${theme.tokens.colors.get('borderColor.decorative.default')};
 

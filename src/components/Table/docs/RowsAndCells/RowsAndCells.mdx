@@ -76,15 +76,34 @@ const columns: TableColumn<SimpleData>[] = [
 In order to enable row Selection, do the following steps:
 
 1. Use prop `type` = `interactive`.
-2. Use the `rowsConfig` object prop and more specificaly `rowSelection` and `setRowSelection` keys. The `rowSelection` is an object where the key is the row index (from 0 to rows.length - 1) and value is a boolean indicating if the row is selected. Check the implementation below for more information.
+2. Use the `rowsConfig` object prop and more specificaly `rowSelection` and `setRowSelection` keys.
+   The `rowSelection` is an object where the key is the row index (from 0 to rows.length - 1) and value is a boolean indicating if the row is selected.
+   Check the implementation below for more information.
+
+If you want to keep the state of the selected rows only for the current page, use the state as indicated below
 
 ```ts
+/** Single Page State */
 const [rowSelection, setRowSelection] = useState<Record<number, boolean>>({
   1: true,
   5: true,
   7: true,
 });
 ```
+
+If you want to keep the state of selected rows for all pages, use the state as indicated below (Multi-Page-State)
+
+```ts
+/** Multi Page State */
+const [rowSelection, setRowSelection] = useState<Array<Record<string, boolean>>>(
+  Array.from({ length: data.length }, () => ({}))
+);
+```
+
+<Tip>
+  In the example above we have an array (length = number of pages) and each array item is an object
+  similar to the one in the single-page-state example.
+</Tip>
 
 3. Render the Table:
 
@@ -93,7 +112,7 @@ const [rowSelection, setRowSelection] = useState<Record<number, boolean>>({
   type="interactive"
   rowsConfig={{
     rowSelection,
-    setRowSelection,
+    setRowSelection, /** if you want to use the multi-page-state, check the code of the example */
     defaultAction: <Button>Optional Default Action</Button>,
     bulkActions: <Button>Optional Bulk Actions</Button>,
   }}
@@ -102,6 +121,11 @@ const [rowSelection, setRowSelection] = useState<Record<number, boolean>>({
 ```
 
 You can also pass a `defaultAction` and/or `bulkActions` inside the `rowsConfig`, which are visible once at least 1 row is selected.
+
+<Tip>
+  For this example, the rowSelection state is persisted when changing table pages
+  (multi-page-state). Check the code for more details on the implementation.
+</Tip>
 
 <Canvas of={RowsAndCellsStories.RowSelection} />
 

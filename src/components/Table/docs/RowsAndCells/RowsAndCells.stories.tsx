@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Table from '../../Table';
+import Table, { tableFunctionalUpdate, ExpandedState } from '~/components/Table';
 import {
   SimpleData,
   contentAlignOptions,
@@ -8,10 +8,10 @@ import {
   simpleData,
 } from '../../constants';
 import { TableColumn } from '../../types';
-import { ExpandedState } from '@tanstack/react-table';
 import Button from '~/components/Button';
 import DropdownButton from '~/components/DropdownButton';
-import { concat } from 'lodash-es';
+import { SelectOptionValues } from '~/components/Select';
+import { concat, chunk } from 'lodash-es';
 
 export default {
   title: 'Updated Components/Table/Table/Rows and Cells',
@@ -91,20 +91,45 @@ export const CellContentAlignment = {
 
 export const RowSelection = {
   render: () => {
-    const [rowSelection, setRowSelection] = useState<Record<number, boolean>>({
-      1: true,
-      5: true,
-      7: true,
+    const [currentPage, setCurrentPage] = useState(1);
+
+    const [showItems, setShowItems] = useState<Omit<SelectOptionValues, 'iconProps'>>({
+      value: 10,
+      label: '10 rows per page',
     });
+
+    const data = chunk(concat(simpleData(), moreData()), Number(showItems.value));
+
+    /** The state consists of an array (length = number of pages) and each array item is an object indicating which rows are selected */
+    const [rowSelection, setRowSelection] = useState<Array<Record<string, boolean>>>(
+      Array.from({ length: data.length }, () => ({}))
+    );
 
     return (
       <Table
-        data={concat(simpleData(), moreData())}
+        data={data[currentPage - 1]}
         columns={simpleColumns as TableColumn<SimpleData>[]}
         type="interactive"
+        pagination={{
+          page: currentPage,
+          onChange: setCurrentPage,
+          totalPages: data.length,
+          onShowItemsChange: setShowItems,
+        }}
         rowsConfig={{
-          rowSelection,
-          setRowSelection,
+          rowSelection: rowSelection[currentPage - 1],
+          setRowSelection: (state) => {
+            /** In order to get the new value of the state, use this callback */
+            const newValue = tableFunctionalUpdate(state, rowSelection[currentPage - 1]);
+
+            const newState = [
+              ...rowSelection.slice(0, currentPage - 1),
+              newValue,
+              ...rowSelection.slice(currentPage),
+            ];
+
+            setRowSelection(newState);
+          },
           defaultAction: <Button size="compact">Default Action</Button>,
           bulkActions: (
             <div

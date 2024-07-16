@@ -78,7 +78,17 @@ const Table = <TData extends NoUndefined<TData>>({
                   width={header.getSize()}
                   metaData={header.column.columnDef.meta}
                   {...(header.column.getCanSort() && {
-                    colSortingState: sorting?.sortingColumn?.find((col) => col.id === header.id),
+                    colSortingState: sorting?.sortingColumn?.find((col) => col.id === header.id)
+                      ? {
+                          /** Find and pass the ColumnSort object */
+                          ...sorting?.sortingColumn?.find((col) => col.id === header.id),
+                          /** Check if multiSort and determine the position of the ColumnSort object in the Sorting Array */
+                          ...(sorting.sortingColumn.length > 1 && {
+                            badge:
+                              sorting?.sortingColumn?.findIndex((col) => col.id === header.id) + 1,
+                          }),
+                        }
+                      : undefined,
                     onSort: header.column.toggleSorting,
                     isMultiSortable: header.column.getCanMultiSort(),
                     resetSorting: header.column.clearSorting,
