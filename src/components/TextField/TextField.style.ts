@@ -3,6 +3,8 @@ import { css } from '@emotion/react';
 import type { Theme } from 'theme';
 import { rem } from 'theme/utils';
 
+import type { TextFieldProps } from '.';
+
 export const iconWrapperStyle =
   ({ iconPosition, isClickable }: { iconPosition?: 'left' | 'right'; isClickable?: boolean }) =>
   (theme: Theme): SerializedStyles =>
@@ -17,10 +19,10 @@ export const iconWrapperStyle =
     `;
 
 export const suffixContainerStyle =
-  (isClickable = false) =>
+  ({ size, isClickable }: Pick<TextFieldProps, 'size'> & { isClickable?: boolean }) =>
   (): SerializedStyles => {
     return css`
-      min-width: ${rem(44)};
+      min-width: ${rem(size === 'compact' ? 28 : 44)};
       overflow: visible;
       display: flex;
       align-items: center;

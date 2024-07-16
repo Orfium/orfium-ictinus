@@ -1,4 +1,4 @@
-import { get, isEmpty } from 'lodash';
+import { get, isEmpty } from 'lodash-es';
 
 import { parseToken } from './parsers';
 import type { Token, TokensObject } from './types';

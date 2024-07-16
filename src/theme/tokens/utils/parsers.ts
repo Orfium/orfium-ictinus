@@ -1,4 +1,4 @@
-import { get } from 'lodash';
+import { get } from 'lodash-es';
 import globals from 'theme/globals';
 import type { Theme } from 'theme/types';
 

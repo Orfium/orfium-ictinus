@@ -1,4 +1,4 @@
-import uniqueId from 'lodash/uniqueId';
+import { uniqueId } from 'lodash-es';
 import * as React from 'react';
 import dayjs from 'utils/date';
 import type { TestId } from 'utils/types';

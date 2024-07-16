@@ -1,6 +1,5 @@
 import useKeyboard from 'hooks/useKeyboardEvents';
-import { differenceBy, head } from 'lodash';
-import debounce from 'lodash/debounce';
+import { differenceBy, head, debounce } from 'lodash-es';
 import React, { useCallback, useMemo, useRef, useState } from 'react';
 import isEqual from 'react-fast-compare';
 import type { ChangeEvent } from 'utils/common';

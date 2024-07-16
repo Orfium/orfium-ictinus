@@ -5,6 +5,8 @@ import useGetTagUtils from './hooks/useGetTagUtils';
 import { tagContainerStyles } from './Tag.style';
 import type { TagProps } from './Tag.types';
 
+import { lineEllipsis } from '~/theme/functions';
+
 const Tag = React.forwardRef<HTMLDivElement, DivProps & TagProps>(
   (
     {
@@ -16,6 +18,7 @@ const Tag = React.forwardRef<HTMLDivElement, DivProps & TagProps>(
       isSelected = false,
       children,
       dataTestPrefixId,
+      dataTestId,
       ...rest
     },
     ref
@@ -30,13 +33,13 @@ const Tag = React.forwardRef<HTMLDivElement, DivProps & TagProps>(
         tabIndex={isInteractive ? 0 : -1}
         css={tagContainerStyles({ size, color, isSelectable, isClearable, isSelected })}
         ref={ref}
-        data-testid={`${dataTestPrefixId}_tag_container`}
+        data-testid={dataTestId ? dataTestId : `${dataTestPrefixId}_tag_container`}
         aria-label={children?.toString()}
         aria-selected={isSelected}
         {...rest}
       >
         {prefix}
-        {children}
+        <div css={lineEllipsis}>{children}</div>
         {suffix}
       </div>
     );

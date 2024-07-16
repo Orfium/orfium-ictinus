@@ -1,6 +1,5 @@
 import useTheme from 'hooks/useTheme';
-import { last, merge } from 'lodash';
-import omit from 'lodash/omit';
+import { last, merge, omit } from 'lodash-es';
 import React, { useMemo, useRef } from 'react';
 import { generateUniqueID, generateUniqueKey } from 'utils/helpers';
 import type { TestProps } from 'utils/types';

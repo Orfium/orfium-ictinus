@@ -1,4 +1,4 @@
-import { toPairs } from 'lodash';
+import { toPairs } from 'lodash-es';
 import React from 'react';
 
 import ColorBox from './ColorBox';

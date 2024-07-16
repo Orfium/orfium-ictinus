@@ -1,5 +1,5 @@
 import isBetween from 'dayjs/plugin/isBetween';
-import { chunk, inRange } from 'lodash';
+import { chunk, inRange } from 'lodash-es';
 import { useCallback } from 'react';
 import * as React from 'react';
 import type { Dayjs } from 'utils/date';

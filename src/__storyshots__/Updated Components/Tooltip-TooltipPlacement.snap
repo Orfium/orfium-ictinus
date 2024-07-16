@@ -12,14 +12,11 @@
   flex-wrap: wrap;
 }
 
-.emotion-1 {
+.emotion-1 .tooltip {
   background-color: #111530;
   border: 0.0625rem solid rgba(200,206,255,0);
   box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(200,206,255,0.45);
-}
-
-.emotion-1 .tippy-content {
-  background-color: #111530;
+  z-index: 1000;
   max-width: 16rem;
   padding: 0.5rem;
   border-radius: 0.25rem;
@@ -32,10 +29,6 @@
   text-align: start;
   white-space: pre-wrap;
   word-break: break-word;
-}
-
-.emotion-1 .tippy-arrow::before {
-  color: #111530;
 }
 
 .emotion-2 {
@@ -120,107 +113,107 @@
       >
         <div
           class="emotion-1"
-          delay="500,500"
-          placement="left"
         >
-          <div
-            class="emotion-2"
+          <span
+            data-testid="tooltip-button"
+            data-tooltip-id="tooltip315"
           >
-            <button
-              class="emotion-3"
-              data-testid="button"
-              type="button"
+            <div
+              class="emotion-2"
             >
-              <span
-                class="emotion-4"
+              <button
+                class="emotion-3"
+                data-testid="button"
+                type="button"
               >
-                <span>
-                  Left Tooltip
+                <span
+                  class="emotion-4"
+                >
+                  <span>
+                    Left Tooltip
+                  </span>
                 </span>
-              </span>
-            </button>
-          </div>
-        </div>
-        <div>
-          This is a Tooltip
+              </button>
+            </div>
+          </span>
         </div>
         <div
           class="emotion-1"
-          delay="500,500"
-          placement="top"
         >
-          <div
-            class="emotion-2"
+          <span
+            data-testid="tooltip-button"
+            data-tooltip-id="tooltip316"
           >
-            <button
-              class="emotion-3"
-              data-testid="button"
-              type="button"
+            <div
+              class="emotion-2"
             >
-              <span
-                class="emotion-4"
+              <button
+                class="emotion-3"
+                data-testid="button"
+                type="button"
               >
-                <span>
-                  Top Tooltip
+                <span
+                  class="emotion-4"
+                >
+                  <span>
+                    Top Tooltip
+                  </span>
                 </span>
-              </span>
-            </button>
-          </div>
-        </div>
-        <div>
-          This is a Tooltip
+              </button>
+            </div>
+          </span>
         </div>
         <div
           class="emotion-1"
-          delay="500,500"
-          placement="bottom"
         >
-          <div
-            class="emotion-2"
+          <span
+            data-testid="tooltip-button"
+            data-tooltip-id="tooltip317"
           >
-            <button
-              class="emotion-3"
-              data-testid="button"
-              type="button"
+            <div
+              class="emotion-2"
             >
-              <span
-                class="emotion-4"
+              <button
+                class="emotion-3"
+                data-testid="button"
+                type="button"
               >
-                <span>
-                  Bottom Tooltip
+                <span
+                  class="emotion-4"
+                >
+                  <span>
+                    Bottom Tooltip
+                  </span>
                 </span>
-              </span>
-            </button>
-          </div>
-        </div>
-        <div>
-          This is a Tooltip
+              </button>
+            </div>
+          </span>
         </div>
         <div
           class="emotion-1"
-          delay="500,500"
-          placement="right"
         >
-          <div
-            class="emotion-2"
+          <span
+            data-testid="tooltip-button"
+            data-tooltip-id="tooltip318"
           >
-            <button
-              class="emotion-3"
-              data-testid="button"
-              type="button"
+            <div
+              class="emotion-2"
             >
-              <span
-                class="emotion-4"
+              <button
+                class="emotion-3"
+                data-testid="button"
+                type="button"
               >
-                <span>
-                  Right Tooltip
+                <span
+                  class="emotion-4"
+                >
+                  <span>
+                    Right Tooltip
+                  </span>
                 </span>
-              </span>
-            </button>
-          </div>
-        </div>
-        <div>
-          This is a Tooltip
+              </button>
+            </div>
+          </span>
         </div>
       </div>
     </div>

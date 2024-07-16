@@ -32,6 +32,8 @@ export type DatePickerProps = {
   /** if the datepicker's default date is today instead of placeholder text */
   /** @deprecated This prop is being deprecated and is not used as you can manipulate date from value, will be removed in the future **/
   isDefaultNow?: boolean;
+  /** placement of the datepicker which will open. Either above of the parent or below. Defaults to bottom */
+  placement?: 'top' | 'bottom';
   /** Style properties for the DatePicker with a filter base */
   filterConfig?: {
     /** The filter's label */
