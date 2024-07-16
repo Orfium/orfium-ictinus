@@ -179,7 +179,9 @@
     "documentation:up": "node server/docs-server.js",
     "chromatic": "chromatic",
     "build-storybook": "yarn build",
-    "yalc:push": "yalc publish --push"
+    "yalc:push": "yalc publish --push",
+    "lint-staged": "lint-staged --verbose",
+    "tsc-check": "tsc -p ."
   },
   "keywords": [
     "Orfium",
