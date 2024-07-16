@@ -23,6 +23,7 @@ const TooltipShowcase = ({
         content={<TooltipContent isInverted={isInverted} />}
         isInteractive
         isInverted={isInverted}
+        data-testid="tooltip-button"
       >
         <Button>{buttonText}</Button>
       </Tooltip>

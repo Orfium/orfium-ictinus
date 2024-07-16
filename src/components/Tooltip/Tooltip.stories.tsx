@@ -36,7 +36,11 @@ export const TextTooltip = {
           {() => {
             return (
               <div style={{ padding: '16px' }}>
-                <Tooltip content={'This is a Tooltip'} placement={'right'}>
+                <Tooltip
+                  data-testid={'tooltip-button'}
+                  content={'This is a Tooltip'}
+                  placement={'right'}
+                >
                   <Button>Hover here</Button>
                 </Tooltip>
               </div>
@@ -49,7 +53,12 @@ export const TextTooltip = {
           {() => {
             return (
               <div style={{ padding: '16px' }}>
-                <Tooltip content={'This is a Tooltip'} placement={'right'} isInverted>
+                <Tooltip
+                  data-testid={'tooltip-button'}
+                  content={'This is a Tooltip'}
+                  placement={'right'}
+                  isInverted
+                >
                   <Button>Hover here</Button>
                 </Tooltip>
               </div>
@@ -105,16 +114,32 @@ export const TooltipPlacement = {
                 alignItems: 'center',
               }}
             >
-              <Tooltip content={'This is a Tooltip'} placement={'left'}>
+              <Tooltip
+                data-testid={'tooltip-button'}
+                content={'This is a Tooltip'}
+                placement={'left'}
+              >
                 <Button>Left Tooltip</Button>
               </Tooltip>
-              <Tooltip content={'This is a Tooltip'} placement={'top'}>
+              <Tooltip
+                data-testid={'tooltip-button'}
+                content={'This is a Tooltip'}
+                placement={'top'}
+              >
                 <Button>Top Tooltip</Button>
               </Tooltip>
-              <Tooltip content={'This is a Tooltip'} placement={'bottom'}>
+              <Tooltip
+                data-testid={'tooltip-button'}
+                content={'This is a Tooltip'}
+                placement={'bottom'}
+              >
                 <Button>Bottom Tooltip</Button>
               </Tooltip>
-              <Tooltip content={'This is a Tooltip'} placement={'right'}>
+              <Tooltip
+                data-testid={'tooltip-button'}
+                content={'This is a Tooltip'}
+                placement={'right'}
+              >
                 <Button>Right Tooltip</Button>
               </Tooltip>
             </div>
