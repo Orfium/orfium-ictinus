@@ -694,7 +694,7 @@ export const MenuWithCustomListWidthAndHeight = {
           selectedKeys={btn1.selectedKeys}
           rowSize={'compact'}
           onSelectionChange={btn1.setSelectedKeys}
-          sx={{ listProps: { height: 300, width: 190 } }}
+          sx={{ listProps: { height: 285, width: 190 } }}
         >
           {LIST_ITEMS.map((item) => (
             <ListItem key={item} textValue={item} parentType={'Menu'}>
@@ -706,4 +706,15 @@ export const MenuWithCustomListWidthAndHeight = {
     );
   },
   name: 'Menu With Custom List Width And Height',
+  autoplay: true,
+  play: async ({ canvasElement }: { canvasElement: HTMLElement }) => {
+    const canvas = within(canvasElement);
+    const buttons = canvas.getAllByTestId('button');
+
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+
+    buttons.forEach((button) => {
+      fireEvent.click(button);
+    });
+  },
 };
