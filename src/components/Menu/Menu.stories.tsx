@@ -706,15 +706,4 @@ export const MenuWithCustomListWidthAndHeight = {
     );
   },
   name: 'Menu With Custom List Width And Height',
-  autoplay: true,
-  play: async ({ canvasElement }: { canvasElement: HTMLElement }) => {
-    const canvas = within(canvasElement);
-    const buttons = canvas.getAllByTestId('icon-button');
-
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-
-    buttons.forEach((button) => {
-      fireEvent.click(button);
-    });
-  },
 };
