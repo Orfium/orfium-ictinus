@@ -1,4 +1,4 @@
-import type { ComponentSizes } from 'types';
+import type { ComponentSizes } from 'utils/types';
 
 // @TODO this needs to be used on Select/Filter level now to have such functionality
 // import Highlighter from 'react-highlight-words';

@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 import useTheme from 'hooks/useTheme';
-import { mapValues, toPairs, uniqueId, values } from 'lodash';
+import { mapValues, toPairs, uniqueId, values } from 'lodash-es';
 import React, { useState, Fragment, useRef } from 'react';
 import { flexCenter } from 'theme/functions';
 import type { colorShades, flatColors, paleColors } from 'theme/palette';

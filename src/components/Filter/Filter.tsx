@@ -1,6 +1,5 @@
 import useKeyboard from 'hooks/useKeyboardEvents';
-import head from 'lodash/head';
-import omit from 'lodash/omit';
+import { head, omit } from 'lodash-es';
 import React, { useRef, useState } from 'react';
 
 import FilterButton from './components/FilterButton';

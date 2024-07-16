@@ -1,5 +1,5 @@
 import type { Key } from 'react';
-import type { ComponentSizes } from 'types';
+import type { ComponentSizes } from 'utils/types';
 
 import type { SelectOption } from 'components/Select';
 

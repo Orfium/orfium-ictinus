@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 import useTheme from 'hooks/useTheme';
-import { get } from 'lodash';
+import { get } from 'lodash-es';
 import type { FCC } from 'react';
 import React from 'react';
 import globalColors from 'theme/globals/constants/colors';

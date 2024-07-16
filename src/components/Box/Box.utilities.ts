@@ -1,4 +1,4 @@
-import { curry, omit, pick } from 'lodash';
+import { curry, omit, pick } from 'lodash-es';
 import type { Theme } from 'theme';
 import type { SemanticColorsKey } from 'theme/tokens/semantic/colors';
 
