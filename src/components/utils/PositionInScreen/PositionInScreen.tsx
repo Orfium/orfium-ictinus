@@ -18,6 +18,7 @@ export type PositionInScreenProps = {
   offsetY?: number;
   /** The parent element */
   parent: JSX.Element;
+  placement?: 'top' | 'bottom';
   /** Sx prop to override specific properties */
   sx?: {
     container?: CSSObject;
@@ -35,12 +36,13 @@ const PositionInScreen: React.FCC<PositionInScreenProps> = ({
   offsetY = 0,
   sx,
   children,
+  placement,
 }) => {
   const wrapperRef = useRef(null);
   const itemRef = useRef(null);
 
   const [wrapperWidth] = useWrapperWidth(hasWrapperWidth, wrapperRef);
-  const { x, y } = usePositionInScreen(wrapperRef, itemRef, offsetX, offsetY, isVisible);
+  const { x, y } = usePositionInScreen(wrapperRef, itemRef, offsetX, offsetY, isVisible, placement);
 
   const hasTooltip = isVisible && x !== -1 && y !== -1;
 

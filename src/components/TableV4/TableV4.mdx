@@ -1,0 +1,95 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
+import TableV4 from './TableV4';
+import { CellStory, RowStory, ExtendedColumnStory } from './utils/TableStoryComponents';
+import * as TableStories from './TableV4.stories';
+
+<Meta of={TableStories} />
+
+<SectionHeader
+  title={'TableV4'}
+  isPending
+  sections={[
+    { title: 'Overview', href: '#overview' },
+    { title: 'Props', href: '#table-props' },
+    { title: 'Usage', href: '#usage' },
+    { title: 'Variants', href: '#variants' },
+  ]}
+/>
+
+## Overview
+
+A universal Table component that applies Orfium basic usages. Check inline data structure for more.
+
+## Table Props
+
+<ArgTypes of={TableV4} />
+
+## Cell Type
+
+<ArgTypes of={CellStory} />
+
+## Row Type
+
+<ArgTypes of={RowStory} />
+
+## ExtendedColumn Type
+
+<ArgTypes of={ExtendedColumnStory} />
+
+## Usage
+
+```js
+import { TableV4 } from '@orfium/ictinus';
+
+<TableV4 />;
+```
+
+<SubsectionHeader title="Variants" />
+
+### Regular Table
+
+Regular Table with simple rows
+
+<Canvas of={TableStories.RegularTableWithSimpleRows} />
+
+### Table With Sorting And Column Tooltips
+
+Regular Table with sorting and column tooltips
+
+<Canvas of={TableStories.RegularTableWithSortingAndTooltips} />
+
+### Expandable Table
+
+Table with expandable rows and nested header
+
+<Canvas of={TableStories.TableWithExpandableRows} />
+
+### Table with Expandable Rows - Expanded on Page Load
+
+Table with Expandable Rows - Expanded on Page Load
+
+<Canvas of={TableStories.TableWithExpandableRowsExpandedOnPageLoad} />
+
+### Financial Table
+
+Financial Table that has lines at the end as it requires a financial Orfium table
+
+<Canvas of={TableStories.FinancialTable} />
+
+### Fixed Header Table
+
+Fixed Header Table
+
+<Canvas of={TableStories.FixedHeaderTable} />
+
+### Expandable Table with sort, fixed Header and cta's
+
+Table with expandable rows with sort, fixed Header and cta's
+
+<Canvas of={TableStories.TableWithExpandableRowsAndSortDir} />
+
+### Table with filtered data for performance
+
+Table with filtered data for performance
+
+<Canvas of={TableStories.TableWithFilteredDataForPerformance} />

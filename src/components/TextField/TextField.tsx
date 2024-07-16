@@ -1,5 +1,5 @@
 import useFieldUtils from 'hooks/useFieldUtils';
-import { omit } from 'lodash';
+import { omit } from 'lodash-es';
 import type { InputHTMLAttributes } from 'react';
 import React, { useRef } from 'react';
 import isEqual from 'react-fast-compare';
@@ -141,7 +141,7 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
             />
           </div>
           {suffixContent && (
-            <div aria-hidden={!suffixContent} css={suffixContainerStyle()}>
+            <div aria-hidden={!suffixContent} css={suffixContainerStyle({size})}>
               {suffixContent}
             </div>
           )}

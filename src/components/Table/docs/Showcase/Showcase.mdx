@@ -1,0 +1,21 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
+import Table from '../../Table';
+import * as ShowcaseStories from './Showcase.stories';
+
+<Meta of={ShowcaseStories} />
+
+<SectionHeader
+  title={'Showcase'}
+  sections={[
+    { title: 'Overview', href: '#overview' },
+    { title: 'Playground', href: '#playground' },
+  ]}
+/>
+
+## Overview
+
+In the showcase below you can see all features. Go to the Controls section to toggle features.
+
+## Playground
+
+<Canvas of={ShowcaseStories.Playground} />

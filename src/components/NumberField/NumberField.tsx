@@ -1,5 +1,5 @@
 import useFieldUtils from 'hooks/useFieldUtils';
-import { omit } from 'lodash';
+import { omit } from 'lodash-es';
 import React from 'react';
 import { NumberField as ReactAriaNumberField, Group, Input } from 'react-aria-components';
 import { generateUniqueID } from 'utils/helpers';
@@ -113,7 +113,7 @@ const NumberField = React.forwardRef<HTMLInputElement, NumberFieldProps>((props,
           </ReactAriaNumberField>
         </div>
         {suffixContent && !hasStepper && (
-          <div aria-hidden={!suffixContent} css={suffixContainerStyle()}>
+          <div aria-hidden={!suffixContent} css={suffixContainerStyle({})}>
             {suffixContent}
           </div>
         )}

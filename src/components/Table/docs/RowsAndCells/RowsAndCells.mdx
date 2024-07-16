@@ -1,0 +1,177 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
+import Table from '../../Table';
+import * as RowsAndCellsStories from './RowsAndCells.stories';
+import {
+  TableColumnStory,
+  ColumnsConfigStory,
+  RowsConfigStory,
+  PaginationConfigStory,
+  TableRowStory,
+} from '../../utils/TableStoryComponents';
+
+<Meta of={RowsAndCellsStories} />
+
+<SectionHeader
+  title={'Rows and Cells'}
+  sections={[
+    { title: 'Overview', href: '#overview' },
+    { title: 'Props', href: '#table-props' },
+    { title: 'Variants', href: '#variants' },
+  ]}
+/>
+
+## Overview
+
+Here you can find rows and cell types and features, such as row selection and rows details (expandable rows).
+
+<SubsectionHeader title="Props" />
+
+## TableRow Type
+
+<ArgTypes of={TableRowStory} />
+
+## RowsConfig Type
+
+This type includes all the configuration for the rows
+
+<ArgTypes of={RowsConfigStory} />
+
+<SubsectionHeader title="Variants" />
+
+### Row Sizes
+
+To adjust the row size (row height) use the `rowSize` prop.
+
+```js
+<Table rowSize={'sm'} ...rest />
+```
+
+<Canvas of={RowsAndCellsStories.RowSizes} />
+
+### Cell Content Alignment
+
+To adjust the alignment of the content inside the cells:
+
+1. Use the `contentAlign` prop inside the columns definition:
+
+```ts
+const columns: TableColumn<SimpleData>[] = [
+  { id: 'firstName', header: 'First Name', contentAlign: 'left' },
+  { id: 'lastName', header: 'Last Name', contentAlign: 'right' },
+  { id: 'age', header: 'Age', contentAlign: 'center' },
+  { id: 'job', header: 'Job', contentAlign: 'center' },
+];
+```
+
+2. Render the Table:
+
+```js
+<Table columns={columns} ...rest />
+```
+
+<Canvas of={RowsAndCellsStories.CellContentAlignment} />
+
+### Row Selection
+
+In order to enable row Selection, do the following steps:
+
+1. Use prop `type` = `interactive`.
+2. Use the `rowsConfig` object prop and more specificaly `rowSelection` and `setRowSelection` keys.
+   The `rowSelection` is an object where the key is the row index (from 0 to rows.length - 1) and value is a boolean indicating if the row is selected.
+   Check the implementation below for more information.
+
+If you want to keep the state of the selected rows only for the current page, use the state as indicated below
+
+```ts
+/** Single Page State */
+const [rowSelection, setRowSelection] = useState<Record<number, boolean>>({
+  1: true,
+  5: true,
+  7: true,
+});
+```
+
+If you want to keep the state of selected rows for all pages, use the state as indicated below (Multi-Page-State)
+
+```ts
+/** Multi Page State */
+const [rowSelection, setRowSelection] = useState<Array<Record<string, boolean>>>(
+  Array.from({ length: data.length }, () => ({}))
+);
+```
+
+<Tip>
+  In the example above we have an array (length = number of pages) and each array item is an object
+  similar to the one in the single-page-state example.
+</Tip>
+
+3. Render the Table:
+
+```js
+<Table
+  type="interactive"
+  rowsConfig={{
+    rowSelection,
+    setRowSelection, /** if you want to use the multi-page-state, check the code of the example */
+    defaultAction: <Button>Optional Default Action</Button>,
+    bulkActions: <Button>Optional Bulk Actions</Button>,
+  }}
+  ...rest
+/>
+```
+
+You can also pass a `defaultAction` and/or `bulkActions` inside the `rowsConfig`, which are visible once at least 1 row is selected.
+
+<Tip>
+  For this example, the rowSelection state is persisted when changing table pages
+  (multi-page-state). Check the code for more details on the implementation.
+</Tip>
+
+<Canvas of={RowsAndCellsStories.RowSelection} />
+
+### Row Details (Expandable Rows)
+
+In order to enable row expansion functionality, do the following steps:
+
+1. Inside the `rowsConfig` object prop, use:
+
+- `expanded` prop is an object state indicating which rows are expanded; keys are row IDs and values are booleans (whether is expanded or not)
+- `setExpanded` is a state change callback for `expanded`.
+
+```ts
+const [expanded, setExpanded] = useState<ExpandedState>({ 1: true, 4: true });
+```
+
+2. In `data` prop, use the `details` key for every row.
+
+```ts
+const data: TableRow<SimpleData>[] = [
+  {
+    cells: {
+      firstName: 'Rachel',
+      lastName: 'Berry',
+      age: '30',
+      job: 'Fashion Executive',
+    },
+    details: getDetails('rachel') /** getDetails returns JSX. Element*/,
+  },
+  {
+    cells: {
+      firstName: 'Ross',
+      lastName: 'Geller',
+      age: '32',
+      job: 'Paleontologist',
+    },
+    details: getDetails('ross')  /** getDetails returns JSX. Element*/,
+  },
+  ...
+];
+```
+
+3. Render the Table:
+
+```js
+<Table columns={columns} data={data} rowsConfig={{ expanded, setExpanded }} />
+```
+
+<Canvas of={RowsAndCellsStories.RowDetails} />

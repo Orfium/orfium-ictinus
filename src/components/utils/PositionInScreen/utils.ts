@@ -1,4 +1,4 @@
-import head from 'lodash/head';
+import { head } from 'lodash-es';
 
 export const resizeObserverHandler = (callback: (args: any) => void) =>
   new ResizeObserver((entries) => {

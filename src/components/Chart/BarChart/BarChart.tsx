@@ -1,5 +1,5 @@
 import useTheme from 'hooks/useTheme';
-import { max } from 'lodash';
+import { max } from 'lodash-es';
 import React, { useCallback, useMemo } from 'react';
 import {
   BarChart as RechartsBarChart,
