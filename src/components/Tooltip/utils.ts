@@ -5,6 +5,6 @@ export const hoverOnTooltips = async ({ canvasElement }: { canvasElement: HTMLEl
   const buttons = canvas.getAllByTestId('button');
 
   buttons.forEach((button) => {
-    fireEvent.mouseEnter(button);
+    fireEvent.mouseOver(button);
   });
 };
