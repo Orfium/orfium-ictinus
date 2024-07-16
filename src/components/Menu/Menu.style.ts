@@ -81,8 +81,5 @@ export const MenuWrapper = styled(Menu)(
     border-radius: ${theme.dimension.borderRadius.get('md')};
     box-shadow: ${theme.tokens.boxShadow.get('2')};
     border-width: ${theme.dimension.borderWidth.get('default')};
-
-    max-height: ${rem(300)};
-    overflow: auto;
   `
 );

@@ -98,7 +98,6 @@ export const MenuTriggers = {
     const btn1 = factory();
     const btn2 = factory();
     const btn3 = factory();
-    const btn4 = factory();
 
     return (
       <Stack height={400}>
@@ -306,31 +305,6 @@ export const MenuTriggers = {
               </CheckBox>
             </ListItemAction>
           </ListItem>
-        </Menu>
-
-        <Button
-          ref={btn4.btnRef}
-          aria-label="Menu with many options"
-          onClick={btn4.handleBtnClick}
-          aria-controls={btn4.isBtnOpen ? 'basic-menu' : undefined}
-          aria-haspopup="true"
-          aria-expanded={btn4.isBtnOpen ? 'true' : undefined}
-        >
-          Menu with many options
-        </Button>
-        <Menu
-          triggerRef={btn4.btnRef}
-          isOpen={btn4.isBtnOpen}
-          onClose={btn4.handleBtnClick}
-          selectedKeys={btn4.selectedKeys}
-          rowSize={'compact'}
-          onSelectionChange={btn4.setSelectedKeys}
-        >
-          {LIST_ITEMS.map((item) => (
-            <ListItem key={item} textValue={item} parentType={'Menu'}>
-              <ListItemText>{item}</ListItemText>
-            </ListItem>
-          ))}
         </Menu>
       </Stack>
     );
@@ -673,6 +647,65 @@ export const MenuDisabledKeys = {
     );
   },
   name: 'Menu Disabled Keys',
+  autoplay: true,
+  play: async ({ canvasElement }: { canvasElement: HTMLElement }) => {
+    const canvas = within(canvasElement);
+    const buttons = canvas.getAllByTestId('icon-button');
+
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+
+    buttons.forEach((button) => {
+      fireEvent.click(button);
+    });
+  },
+};
+
+export const MenuWithCustomListWidthAndHeight = {
+  render: () => {
+    const factory = useCallback(() => {
+      const [isBtnOpen, setBtnOpen] = React.useState<boolean>(false);
+      const btnRef = useRef(null);
+      const handleBtnClick = (e) => {
+        e?.preventDefault && e?.preventDefault();
+        setBtnOpen((state) => !state);
+      };
+      const [selectedKeys, setSelectedKeys] = useState(new Set<string>([]));
+
+      return { isBtnOpen, setBtnOpen, btnRef, handleBtnClick, selectedKeys, setSelectedKeys };
+    }, []);
+    const btn1 = factory();
+
+    return (
+      <Stack height={400}>
+        <Button
+          ref={btn1.btnRef}
+          aria-label="Menu with many options"
+          onClick={btn1.handleBtnClick}
+          aria-controls={btn1.isBtnOpen ? 'basic-menu' : undefined}
+          aria-haspopup="true"
+          aria-expanded={btn1.isBtnOpen ? 'true' : undefined}
+        >
+          Menu with many options
+        </Button>
+        <Menu
+          triggerRef={btn1.btnRef}
+          isOpen={btn1.isBtnOpen}
+          onClose={btn1.handleBtnClick}
+          selectedKeys={btn1.selectedKeys}
+          rowSize={'compact'}
+          onSelectionChange={btn1.setSelectedKeys}
+          sx={{ listProps: { height: 300, width: 190 } }}
+        >
+          {LIST_ITEMS.map((item) => (
+            <ListItem key={item} textValue={item} parentType={'Menu'}>
+              <ListItemText>{item}</ListItemText>
+            </ListItem>
+          ))}
+        </Menu>
+      </Stack>
+    );
+  },
+  name: 'Menu With Custom List Width And Height',
   autoplay: true,
   play: async ({ canvasElement }: { canvasElement: HTMLElement }) => {
     const canvas = within(canvasElement);

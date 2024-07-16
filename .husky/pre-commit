@@ -1,5 +1,6 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npm test
-lint-staged && tsc -p .
+yarn test
+yarn run lint-staged 
+yarn run tsc-files
