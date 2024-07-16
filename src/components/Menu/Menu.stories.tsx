@@ -694,7 +694,7 @@ export const MenuWithCustomListWidthAndHeight = {
           selectedKeys={btn1.selectedKeys}
           rowSize={'compact'}
           onSelectionChange={btn1.setSelectedKeys}
-          sx={{ listProps: { height: 285, width: 190 } }}
+          sx={{ listProps: { maxHeight: 285, width: 190 } }}
         >
           {LIST_ITEMS.map((item) => (
             <ListItem key={item} textValue={item} parentType={'Menu'}>
