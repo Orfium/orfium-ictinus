@@ -5,7 +5,6 @@ import type { Props as MultiTextFieldBase } from './MultiTextFieldBase';
 import type { SelectOption } from '../Select';
 import Icon from 'components/Icon';
 import type { TextFieldProps } from 'components/TextField/TextField';
-import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
 
 type Props = {
   hasValue: boolean;
@@ -26,11 +25,7 @@ const useMultiTextFieldBaseUtils = ({
   onKeyDown,
 }: Props & { isLocked: boolean }) => {
   const TextfieldRef = React.useRef<HTMLDivElement>(null);
-
   const theme = useTheme();
-
-  const tokens = getTextInputBaseTokens(theme);
-
   const hasLabel = Boolean(label);
 
   const inputPlaceholder = useMemo(() => {
@@ -85,7 +80,7 @@ const useMultiTextFieldBaseUtils = ({
         <Icon
           size={20}
           name={iconName}
-          color={tokens('addOn.iconColor')}
+          color={theme.tokens.colors.get('textColor.default.secondary')}
           onClick={handleClick}
           dataTestId="select-right-icon"
         />
@@ -93,7 +88,7 @@ const useMultiTextFieldBaseUtils = ({
     }
 
     return undefined;
-  }, [iconName, onClearAllOptions, tokens]);
+  }, [iconName, onClearAllOptions, theme.tokens.colors]);
 
   return { inputPlaceholder, handleKeyDown, icon, hasLabel, TextfieldRef };
 };
