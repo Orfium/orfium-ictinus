@@ -9,6 +9,7 @@
       "hooks/*": ["./hooks/*"],
       "theme/*": ["./theme/*"],
       "utils/*": ["./utils/*"],
+      "types": ["./types.d.ts"],
       "components/*": ["./components/*"]
     },
     "lib": ["ES2020", "DOM", "DOM.Iterable", "ESNext"],
@@ -26,8 +27,10 @@
     //    "noUnusedLocals": true,
     //    "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "jsxImportSource": "@emotion/react"
+    "jsxImportSource": "@emotion/react",
+    "skipLibCheck": true
   },
   "include": ["src", "__mocks__", "codemods"],
+  "exclude": ["./dist", "node_modules"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

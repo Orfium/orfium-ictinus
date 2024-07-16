@@ -1,5 +1,5 @@
 import useKeyboardEvents from 'hooks/useKeyboardEvents';
-import { head, range } from 'lodash';
+import { head, range } from 'lodash-es';
 import React, { useMemo, useRef, useState } from 'react';
 import type { Dayjs } from 'utils/date';
 

@@ -1,5 +1,5 @@
 import useTheme from 'hooks/useTheme';
-import { get } from 'lodash';
+import { get } from 'lodash-es';
 import React from 'react';
 import { WrapperStyle } from 'storybook/styles/OverviewCard.style';
 import type { DimensionSizingKey } from 'theme/dimension/sizing';

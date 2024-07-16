@@ -1,4 +1,4 @@
-import { isEmpty, omit } from 'lodash';
+import { isEmpty, omit } from 'lodash-es';
 import * as React from 'react';
 import { generateUniqueKey } from 'utils/helpers';
 

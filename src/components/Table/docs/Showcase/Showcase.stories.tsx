@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import Button from '~/components/Button';
 import DropdownButton from '~/components/DropdownButton';
 import { SelectOptionValues } from '~/components/Select';
-import { chunk, concat } from 'lodash';
+import { chunk, concat } from 'lodash-es';
 
 export default {
   title: 'Updated Components/Table/Table/Showcase',

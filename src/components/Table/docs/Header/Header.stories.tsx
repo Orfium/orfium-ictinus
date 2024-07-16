@@ -1,7 +1,7 @@
 import Table from '../../Table';
 import { SimpleData, moreData, simpleColumns, simpleData } from '../../constants';
 import { TableColumn } from '../../types';
-import { concat } from 'lodash';
+import { concat } from 'lodash-es';
 
 export default {
   title: 'Updated Components/Table/Table/Header',

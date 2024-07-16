@@ -10,8 +10,8 @@ import {
 import { TableColumn } from '../../types';
 import Button from '~/components/Button';
 import DropdownButton from '~/components/DropdownButton';
-import { chunk, concat } from 'lodash';
 import { SelectOptionValues } from '~/components/Select';
+import { concat, chunk } from 'lodash-es';
 
 export default {
   title: 'Updated Components/Table/Table/Rows and Cells',

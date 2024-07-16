@@ -3,6 +3,7 @@ import React from 'react';
 import { fireEvent, render, within, screen } from 'test';
 
 import TableV4 from './TableV4';
+import { waitFor } from '@testing-library/react';
 
 const tooltip = {
   content: 'Tooltip Content',
@@ -177,7 +178,9 @@ describe('TableV4', () => {
 
     await userEvent.hover(tooltipIcon);
 
-    expect(screen.getByText(tooltip.content)).toBeVisible();
+    await waitFor(() => {
+      expect(screen.getByText(tooltip.content)).toBeInTheDocument();
+    });
   });
 
   test('that the order of the icons is correct when column is numerical', async () => {

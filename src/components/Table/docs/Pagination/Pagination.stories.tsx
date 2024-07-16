@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Table from '../../Table';
 import { SimpleData, moreData, simpleColumns, simpleData } from '../../constants';
 import { TableColumn } from '../../types';
-import { chunk, concat } from 'lodash';
+import { chunk, concat } from 'lodash-es';
 import { SelectOptionValues } from '~/components/Select';
 
 export default {

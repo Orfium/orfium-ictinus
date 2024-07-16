@@ -1,4 +1,4 @@
-import { map } from 'lodash';
+import { map } from 'lodash-es';
 import React from 'react';
 import typographyCollection from 'theme/tokens/semantic/variables/typography';
 import { parseCompositionToken } from 'theme/tokens/utils';

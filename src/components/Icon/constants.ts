@@ -93,10 +93,12 @@ export const iconsSet: IconSet = {
       'delivery',
       'file',
       'issue',
+      'keyword',
       'policy',
       'legal',
       'report',
-      'tag'
+      'searchFilled',
+      'tag',
     ],
   },
   basicActions: {
