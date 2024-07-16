@@ -5,7 +5,7 @@ import type { TestProps } from 'utils/types';
 import { MenuWrapper, MenuItemWrapper, popoverStyle } from './Menu.style';
 import MenuItemDivider from './MenuItemDivider';
 import { listStyle } from '../List/List.style';
-import type { ListProps, ListRowSize } from 'components/List';
+import type { ListRowSize } from 'components/List';
 
 export type MenuProps = {
   children?: React.ReactElement[] | React.ReactElement;
@@ -27,7 +27,7 @@ export type MenuProps = {
   onAction?: (item: string) => any;
   /** The selection mode of the menu */
   selectionMode?: 'single' | 'multiple';
-  sx?: { listProps?: Pick<ListProps, 'height' | 'width'> };
+  sx?: { listProps?: { maxHeight?: number; width?: number } };
 } & TestProps;
 
 const Menu: React.FC<MenuProps> = ({
