@@ -42,7 +42,6 @@ const Table = <TData extends NoUndefined<TData>>({
     sorting,
     rowsConfig,
     columnsConfig,
-    pagination,
     dataTestPrefixId,
   });
 
