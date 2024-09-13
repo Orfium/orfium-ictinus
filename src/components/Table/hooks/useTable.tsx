@@ -163,7 +163,6 @@ const useTable = <TData,>({
 
   const hasRowDetails = data.some((row) => row.details) && Boolean(expanded);
 
-  /** Since tanstack's useTable doesn't detect array object mutations, we need to manually create new data array (new ref) to trigger a re-render */
   const tableData = useMemo(() => data.map((data) => data.cells), [data]);
 
   const hasCheckboxes = Boolean(rowSelection && isTableInteractive);
