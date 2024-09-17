@@ -1,0 +1,44 @@
+import { Meta, Canvas, ArgTypes, Story, Primary, Controls } from '@storybook/blocks';
+import * as InlineAlertStories from './InlineAlert.stories';
+import { InlineAlert } from './InlineAlert';
+
+<Meta of={InlineAlertStories} />
+
+<SectionHeader
+  title="Inline Alert"
+  sections={[
+    { title: 'Overview', href: '#overview' },
+    { title: 'Props', href: '#props' },
+    { title: 'Usage', href: '#usage' },
+  ]}
+/>
+
+## Overview
+
+A message from the system to the user that offers contextual and timely information pertaining to the user's current task.
+
+<Primary />
+
+## Props
+
+<Controls />
+
+## Usage
+
+<Tip>
+  Do not forget to place the component in a parent with a container specified `container-type:
+  inline-size` to use the responsive styles.
+</Tip>
+
+<UsageGuidelines
+  guidelines={[
+    'To provide contextual information to the user pertaining to their current task.',
+    'In conjunction with form validation - When you need to learn about a feature or information that is relevant to your current activity.',
+    'When you need assistance in fixing errors, often in conjunction with form validation.',
+  ]}
+  policies={[
+    'If you need to deliver a global message from the admin to all users (e.g. maintenance update), use a broadcast message instead.',
+    `If you are immediately confirming a user's action while they remain in the same view, use a toast instead.`,
+    'If you are promoting, soliciting feedback, or informing the user about a feature, use a banner instead.',
+  ]}
+/>

@@ -70,6 +70,7 @@ const ButtonBase = React.forwardRef<HTMLButtonElement, ButtonBaseProps>((props, 
         ref={ref}
         type={htmlType}
         data-testid={generateTestDataId(testIdName, dataTestId)}
+        data-slot="button"
         css={buttonBaseStyle({
           type,
           size,
