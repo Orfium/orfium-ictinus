@@ -5,8 +5,8 @@ import type { Theme } from 'theme';
 import type { InlineAlertProps } from './InlineAlert.types';
 import { generateStylesFromTokens } from '../Typography/utils';
 
-const inlineAlertStyles = (props: InlineAlertProps) => (theme: Theme) => {
-  return css`
+const inlineAlertStyles = (props: InlineAlertProps) => (theme: Theme) =>
+  css`
     --_border-width: ${theme.dimension.borderWidth.get('default')};
     --_outline-width: ${theme.dimension.borderWidth.get('focused')};
     --_min-height: ${rem(44)};
@@ -62,27 +62,24 @@ const inlineAlertStyles = (props: InlineAlertProps) => (theme: Theme) => {
       transition: none;
     }
   `;
-};
 
-const iconStyles = () => (theme: Theme) => {
-  return css`
+const iconStyles = () => (theme: Theme) =>
+  css`
     grid-area: icon;
     margin-right: ${theme.dimension.spacing.get('md')};
     pointer-events: none;
   `;
-};
 
-const contentStyles = () => (theme: Theme) => {
-  return css`
+const contentStyles = () => (theme: Theme) =>
+  css`
     ${generateStylesFromTokens(theme.tokens.typography.get('normal.body02'))};
 
     grid-area: content;
     cursor: default;
   `;
-};
 
-const actionsStyles = () => (theme: Theme) => {
-  return css`
+const actionsStyles = () => (theme: Theme) =>
+  css`
     grid-area: actions;
     display: flex;
     align-items: flex-start;
@@ -95,15 +92,13 @@ const actionsStyles = () => (theme: Theme) => {
       margin-top: ${theme.dimension.spacing.get('sm')};
     }
   `;
-};
 
-const dismissStyles = () => (theme: Theme) => {
-  return css`
+const dismissStyles = () => (theme: Theme) =>
+  css`
     grid-area: close;
     justify-self: end;
     margin-left: ${theme.dimension.spacing.get('lg')};
   `;
-};
 
 export const getIconColor = (status: InlineAlertProps['status'], theme: Theme) => {
   switch (status) {

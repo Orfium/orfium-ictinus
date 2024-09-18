@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import Button from '../Button';
 import Link from '../Link';
 import { InlineAlert } from './InlineAlert';
+import { useState } from 'react';
 
 const Container = styled.div`
   display: inline-flex;
@@ -120,4 +121,21 @@ export const WithoutDismiss: Story = {
       Alert copy should be short, easy to understand and actionable.
     </InlineAlert>
   ),
+};
+
+export const WithTrigger: Story = {
+  render: (args) => {
+    const [show, setShow] = useState(false);
+
+    return (
+      <>
+        <Button onClick={() => setShow(!show)}>Trigger Inline Alert</Button>
+        {show && (
+          <InlineAlert status="warning" onDismiss={() => setShow(false)} hasAutoFocus {...args}>
+            Alert copy should be short, easy to understand and actionable.
+          </InlineAlert>
+        )}
+      </>
+    );
+  },
 };

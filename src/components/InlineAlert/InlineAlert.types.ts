@@ -10,4 +10,5 @@ export interface InlineAlertProps {
   children: ReactNode;
   className?: string;
   testId?: string;
+  hasAutoFocus?: boolean;
 }
