@@ -105,6 +105,7 @@ import LicenceIcon from './licence.svg';
 import LicencedVideoIcon from './licensedVideo.svg';
 import LinkedIcon from './linked.svg';
 import LockIcon from './lock.svg';
+import UnlockIcon from './unlock.svg';
 import MailIcon from './mail.svg';
 import ManualIcon from './manual.svg';
 import MenuIcon from './menu.svg';
@@ -289,6 +290,7 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   licencedVideo: LicencedVideoIcon,
   linked: LinkedIcon,
   lock: LockIcon,
+  unlock: UnlockIcon,
   mail: MailIcon,
   manual: ManualIcon,
   menu: MenuIcon,
