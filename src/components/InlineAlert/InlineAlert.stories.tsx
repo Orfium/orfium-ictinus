@@ -15,7 +15,7 @@ const Container = styled.div`
 `;
 
 const meta: Meta<typeof InlineAlert> = {
-  title: 'Updated Components/Inline Alert',
+  title: 'Updated Components/Notifications/Inline Alert',
   component: InlineAlert,
   decorators: [
     (Story) => (

@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect, useId, useMemo, useRef } from 'react';
+import React, { forwardRef, useEffect, useId, useRef } from 'react';
 import type { ReactElement, RefObject } from 'react';
 
 import { getIconColor, styles } from './InlineAlert.style';
@@ -19,19 +19,15 @@ export const InlineAlert = forwardRef<HTMLDivElement, InlineAlertProps>(
       hasAutoFocus,
       ...otherProps
     } = props;
-
     const theme = useTheme();
     const dismissId = useId();
     const domRef = useDOMRef(ref);
 
-    const actionsArray = useMemo(() => {
-      const actionElements =
-        actions && (actions as ReactElement).type === React.Fragment
-          ? (actions as ReactElement).props.children
-          : actions;
-
-      return React.Children.toArray(actionElements);
-    }, [actions]);
+    const actionElements =
+      actions && (actions as ReactElement).type === React.Fragment
+        ? (actions as ReactElement).props.children
+        : actions;
+    const actionsArray = React.Children.toArray(actionElements);
 
     const autoFocusRef = useRef(hasAutoFocus);
     useEffect(() => {
@@ -52,7 +48,7 @@ export const InlineAlert = forwardRef<HTMLDivElement, InlineAlertProps>(
         data-slot="inline-alert"
         data-testid={testId}
       >
-        {status !== 'neutral' && (
+        {status !== 'neutral' ? (
           <Icon
             role="img"
             aria-hidden="true"
@@ -60,10 +56,10 @@ export const InlineAlert = forwardRef<HTMLDivElement, InlineAlertProps>(
             css={styles.icon}
             color={getIconColor(status, theme)}
           />
-        )}
+        ) : null}
         <div css={styles.content}>{children}</div>
-        {actionsArray.length > 0 && <div css={styles.actions}>{actionsArray}</div>}
-        {onDismiss && (
+        {actionsArray.length > 0 ? <div css={styles.actions}>{actionsArray}</div> : null}
+        {onDismiss ? (
           <Icon
             role="button"
             aria-label="Dismiss notification"
@@ -73,7 +69,7 @@ export const InlineAlert = forwardRef<HTMLDivElement, InlineAlertProps>(
             onClick={onDismiss}
             size={20}
           />
-        )}
+        ) : null}
       </div>
     );
   }
