@@ -60,7 +60,7 @@
 }
 
 .emotion-7 {
-  width: 100%;
+  width: 25%;
   height: 2.75rem;
   -webkit-align-content: center;
   -ms-flex-line-pack: center;
@@ -155,7 +155,7 @@
 }
 
 .emotion-24 {
-  width: 100%;
+  width: 25%;
   height: 2.75rem;
   padding: 0.5rem 1rem;
   border-bottom: 0.0625rem solid rgba(200,206,255,0.70);
@@ -166,18 +166,7 @@
 }
 
 .emotion-25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
+  text-align: left;
 }
 
 .emotion-26 {
@@ -192,49 +181,7 @@
   text-overflow: ellipsis;
 }
 
-.emotion-35 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 1.5rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  box-sizing: border-box;
-  gap: 0.25rem;
-  padding: 0.125rem 0.5rem;
-  cursor: auto;
-  background: #ffffff;
-  color: #194DCC;
-  border: 0.0625rem solid;
-  border-color: rgba(200,206,255,0.70);
-  border-radius: 0.25rem;
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 .emotion-36 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.emotion-37 {
   width: 3.25rem;
   height: 2.75rem;
   padding: 0.5rem 1rem;
@@ -245,7 +192,7 @@
   align-content: center;
 }
 
-.emotion-39 {
+.emotion-38 {
   width: 1.25rem;
   height: 1.25rem;
   display: -webkit-box;
@@ -255,8 +202,8 @@
   cursor: pointer;
 }
 
-.emotion-39:hover,
-.emotion-39:focus-visible {
+.emotion-38:hover,
+.emotion-38:focus-visible {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   border-radius: 100%;
@@ -264,29 +211,29 @@
   box-shadow: 0px 0px 0px 8px rgba(200,206,255,0.20);
 }
 
-.emotion-40 {
+.emotion-39 {
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-40 path {
+.emotion-39 path {
   fill: #52567a!important;
 }
 
-.emotion-41 {
+.emotion-40 {
   cursor: pointer;
   background: rgba(200,206,255,0.30);
 }
 
-.emotion-41:hover {
+.emotion-40:hover {
   background: rgba(200,206,255,0.20);
 }
 
-.emotion-60 {
+.emotion-58 {
   border-bottom: 0.0625rem solid rgba(200,206,255,0.70);
 }
 
-.emotion-61 {
+.emotion-59 {
   padding: 16px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -298,7 +245,7 @@
   gap: 16px;
 }
 
-.emotion-62 {
+.emotion-60 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.375rem;
@@ -307,7 +254,7 @@
   color: #111530;
 }
 
-.emotion-63 {
+.emotion-61 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.375rem;
@@ -477,35 +424,27 @@
             <div
               class="emotion-25"
             >
-              <div
-                aria-label="Fashion Executive"
-                aria-selected="false"
-                class="emotion-35"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-26"
               >
-                <div
-                  class="emotion-36"
-                >
-                  Fashion Executive
-                </div>
-              </div>
+                Fashion Executive
+              </span>
             </div>
           </td>
           <td
-            class="emotion-37"
+            class="emotion-36"
             data-testid="ictinus_table_row_0_details_iconButton"
           >
             <div
               class="emotion-25"
             >
               <div
-                class="emotion-39"
+                class="emotion-38"
                 data-testid="ictinus_table_expand_0"
                 tabindex="0"
               >
                 <svg
-                  class="emotion-40"
+                  class="emotion-39"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -522,7 +461,7 @@
           </td>
         </tr>
         <tr
-          class="emotion-41"
+          class="emotion-40"
         >
           <td
             class="emotion-24"
@@ -573,35 +512,27 @@
             <div
               class="emotion-25"
             >
-              <div
-                aria-label="Paleontologist"
-                aria-selected="false"
-                class="emotion-35"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-26"
               >
-                <div
-                  class="emotion-36"
-                >
-                  Paleontologist
-                </div>
-              </div>
+                Paleontologist
+              </span>
             </div>
           </td>
           <td
-            class="emotion-37"
+            class="emotion-36"
             data-testid="ictinus_table_row_1_details_iconButton"
           >
             <div
               class="emotion-25"
             >
               <div
-                class="emotion-39"
+                class="emotion-38"
                 data-testid="ictinus_table_expand_1"
                 tabindex="0"
               >
                 <svg
-                  class="emotion-40"
+                  class="emotion-39"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -621,30 +552,30 @@
           class="emotion-6"
         >
           <td
-            class="emotion-60"
+            class="emotion-58"
             colspan="5"
             data-testid="ictinus_table_row_1_details"
           >
             <div
-              class="emotion-61"
+              class="emotion-59"
             >
               <span
-                class="emotion-62"
+                class="emotion-60"
               >
                 Famous Quotes
               </span>
               <p
-                class="emotion-63"
+                class="emotion-61"
               >
                 We were on a break!
               </p>
               <p
-                class="emotion-63"
+                class="emotion-61"
               >
                 Pivot! Pivot! Pivot!
               </p>
               <p
-                class="emotion-63"
+                class="emotion-61"
               >
                 Hi, I’m Ross. I’m divorced, and I have a son.
               </p>
@@ -703,35 +634,27 @@
             <div
               class="emotion-25"
             >
-              <div
-                aria-label="Chef"
-                aria-selected="false"
-                class="emotion-35"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-26"
               >
-                <div
-                  class="emotion-36"
-                >
-                  Chef
-                </div>
-              </div>
+                Chef
+              </span>
             </div>
           </td>
           <td
-            class="emotion-37"
+            class="emotion-36"
             data-testid="ictinus_table_row_2_details_iconButton"
           >
             <div
               class="emotion-25"
             >
               <div
-                class="emotion-39"
+                class="emotion-38"
                 data-testid="ictinus_table_expand_2"
                 tabindex="0"
               >
                 <svg
-                  class="emotion-40"
+                  class="emotion-39"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -799,35 +722,27 @@
             <div
               class="emotion-25"
             >
-              <div
-                aria-label="?"
-                aria-selected="false"
-                class="emotion-35"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-26"
               >
-                <div
-                  class="emotion-36"
-                >
-                  ?
-                </div>
-              </div>
+                ?
+              </span>
             </div>
           </td>
           <td
-            class="emotion-37"
+            class="emotion-36"
             data-testid="ictinus_table_row_3_details_iconButton"
           >
             <div
               class="emotion-25"
             >
               <div
-                class="emotion-39"
+                class="emotion-38"
                 data-testid="ictinus_table_expand_3"
                 tabindex="0"
               >
                 <svg
-                  class="emotion-40"
+                  class="emotion-39"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -844,7 +759,7 @@
           </td>
         </tr>
         <tr
-          class="emotion-41"
+          class="emotion-40"
         >
           <td
             class="emotion-24"
@@ -895,35 +810,27 @@
             <div
               class="emotion-25"
             >
-              <div
-                aria-label="Actor"
-                aria-selected="false"
-                class="emotion-35"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-26"
               >
-                <div
-                  class="emotion-36"
-                >
-                  Actor
-                </div>
-              </div>
+                Actor
+              </span>
             </div>
           </td>
           <td
-            class="emotion-37"
+            class="emotion-36"
             data-testid="ictinus_table_row_4_details_iconButton"
           >
             <div
               class="emotion-25"
             >
               <div
-                class="emotion-39"
+                class="emotion-38"
                 data-testid="ictinus_table_expand_4"
                 tabindex="0"
               >
                 <svg
-                  class="emotion-40"
+                  class="emotion-39"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -943,30 +850,30 @@
           class="emotion-6"
         >
           <td
-            class="emotion-60"
+            class="emotion-58"
             colspan="5"
             data-testid="ictinus_table_row_4_details"
           >
             <div
-              class="emotion-61"
+              class="emotion-59"
             >
               <span
-                class="emotion-62"
+                class="emotion-60"
               >
                 Famous Quotes
               </span>
               <p
-                class="emotion-63"
+                class="emotion-61"
               >
                 How you doin'?
               </p>
               <p
-                class="emotion-63"
+                class="emotion-61"
               >
                 Joey doesn’t share food!
               </p>
               <p
-                class="emotion-63"
+                class="emotion-61"
               >
                 It's a moo point. It's like a cow's opinion; it doesn't matter. It's moo.
               </p>
@@ -1025,35 +932,27 @@
             <div
               class="emotion-25"
             >
-              <div
-                aria-label="Massage Therapist"
-                aria-selected="false"
-                class="emotion-35"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-26"
               >
-                <div
-                  class="emotion-36"
-                >
-                  Massage Therapist
-                </div>
-              </div>
+                Massage Therapist
+              </span>
             </div>
           </td>
           <td
-            class="emotion-37"
+            class="emotion-36"
             data-testid="ictinus_table_row_5_details_iconButton"
           >
             <div
               class="emotion-25"
             >
               <div
-                class="emotion-39"
+                class="emotion-38"
                 data-testid="ictinus_table_expand_5"
                 tabindex="0"
               >
                 <svg
-                  class="emotion-40"
+                  class="emotion-39"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
