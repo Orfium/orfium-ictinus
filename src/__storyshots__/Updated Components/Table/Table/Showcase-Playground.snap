@@ -60,7 +60,7 @@
 }
 
 .emotion-7 {
-  width: 100%;
+  width: 25%;
   height: 2.75rem;
   -webkit-align-content: center;
   -ms-flex-line-pack: center;
@@ -115,7 +115,7 @@
 }
 
 .emotion-21 {
-  width: 100%;
+  width: 25%;
   height: 2.75rem;
   padding: 0.5rem 1rem;
   border-bottom: 0.0625rem solid rgba(200,206,255,0.70);
@@ -126,18 +126,7 @@
 }
 
 .emotion-22 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
+  text-align: left;
 }
 
 .emotion-23 {
@@ -147,48 +136,6 @@
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
   color: #111530;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.emotion-32 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 1.5rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  box-sizing: border-box;
-  gap: 0.25rem;
-  padding: 0.125rem 0.5rem;
-  cursor: auto;
-  background: #ffffff;
-  color: #194DCC;
-  border: 0.0625rem solid;
-  border-color: rgba(200,206,255,0.70);
-  border-radius: 0.25rem;
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.emotion-33 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -340,19 +287,11 @@
             <div
               class="emotion-22"
             >
-              <div
-                aria-label="Fashion Executive"
-                aria-selected="false"
-                class="emotion-32"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-23"
               >
-                <div
-                  class="emotion-33"
-                >
-                  Fashion Executive
-                </div>
-              </div>
+                Fashion Executive
+              </span>
             </div>
           </td>
         </tr>
@@ -408,19 +347,11 @@
             <div
               class="emotion-22"
             >
-              <div
-                aria-label="Paleontologist"
-                aria-selected="false"
-                class="emotion-32"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-23"
               >
-                <div
-                  class="emotion-33"
-                >
-                  Paleontologist
-                </div>
-              </div>
+                Paleontologist
+              </span>
             </div>
           </td>
         </tr>
@@ -476,19 +407,11 @@
             <div
               class="emotion-22"
             >
-              <div
-                aria-label="Chef"
-                aria-selected="false"
-                class="emotion-32"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-23"
               >
-                <div
-                  class="emotion-33"
-                >
-                  Chef
-                </div>
-              </div>
+                Chef
+              </span>
             </div>
           </td>
         </tr>
@@ -544,19 +467,11 @@
             <div
               class="emotion-22"
             >
-              <div
-                aria-label="?"
-                aria-selected="false"
-                class="emotion-32"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-23"
               >
-                <div
-                  class="emotion-33"
-                >
-                  ?
-                </div>
-              </div>
+                ?
+              </span>
             </div>
           </td>
         </tr>
@@ -612,19 +527,11 @@
             <div
               class="emotion-22"
             >
-              <div
-                aria-label="Actor"
-                aria-selected="false"
-                class="emotion-32"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-23"
               >
-                <div
-                  class="emotion-33"
-                >
-                  Actor
-                </div>
-              </div>
+                Actor
+              </span>
             </div>
           </td>
         </tr>
@@ -680,19 +587,11 @@
             <div
               class="emotion-22"
             >
-              <div
-                aria-label="Massage Therapist"
-                aria-selected="false"
-                class="emotion-32"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-23"
               >
-                <div
-                  class="emotion-33"
-                >
-                  Massage Therapist
-                </div>
-              </div>
+                Massage Therapist
+              </span>
             </div>
           </td>
         </tr>

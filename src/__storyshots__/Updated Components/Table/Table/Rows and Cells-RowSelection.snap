@@ -296,7 +296,7 @@
 }
 
 .emotion-19 {
-  width: 100%;
+  width: 25%;
   height: 2.75rem;
   -webkit-align-content: center;
   -ms-flex-line-pack: center;
@@ -347,22 +347,11 @@
 }
 
 .emotion-34 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
+  text-align: left;
 }
 
 .emotion-39 {
-  width: 100%;
+  width: 25%;
   height: 2.75rem;
   padding: 0.5rem 1rem;
   border-bottom: 0.0625rem solid rgba(200,206,255,0.70);
@@ -384,49 +373,7 @@
   text-overflow: ellipsis;
 }
 
-.emotion-50 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 1.5rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  box-sizing: border-box;
-  gap: 0.25rem;
-  padding: 0.125rem 0.5rem;
-  cursor: auto;
-  background: #ffffff;
-  color: #194DCC;
-  border: 0.0625rem solid;
-  border-color: rgba(200,206,255,0.70);
-  border-radius: 0.25rem;
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.emotion-51 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.emotion-230 {
+.emotion-220 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -448,7 +395,7 @@
   border-bottom-right-radius: 0.25rem;
 }
 
-.emotion-231 {
+.emotion-221 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -460,7 +407,7 @@
   gap: 0.5rem;
 }
 
-.emotion-232 {
+.emotion-222 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -472,7 +419,7 @@
   gap: 2rem;
 }
 
-.emotion-233 {
+.emotion-223 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -480,7 +427,7 @@
   gap: 0.25rem;
 }
 
-.emotion-234 {
+.emotion-224 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1rem;
@@ -489,7 +436,7 @@
   color: #52567a;
 }
 
-.emotion-235 {
+.emotion-225 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1rem;
@@ -498,14 +445,14 @@
   color: #111530;
 }
 
-.emotion-238 {
+.emotion-228 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-240 {
+.emotion-230 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1rem;
@@ -535,25 +482,25 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-240:focus-visible:not(:disabled) {
+.emotion-230:focus-visible:not(:disabled) {
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-240:disabled {
+.emotion-230:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-240:hover:not(:disabled) {
+.emotion-230:hover:not(:disabled) {
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-240:active:not(:disabled),
-.emotion-240[aria-expanded="true"] {
+.emotion-230:active:not(:disabled),
+.emotion-230[aria-expanded="true"] {
   background-color: rgba(200,206,255,0.30);
 }
 
-.emotion-241 {
+.emotion-231 {
   width: 1rem;
   height: 1rem;
   display: -webkit-box;
@@ -562,12 +509,12 @@
   display: flex;
 }
 
-.emotion-242 {
+.emotion-232 {
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-242 path {
+.emotion-232 path {
   fill: #194DCC!important;
 }
 
@@ -850,19 +797,11 @@
             <div
               class="emotion-34"
             >
-              <div
-                aria-label="Fashion Executive"
-                aria-selected="false"
-                class="emotion-50"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-41"
               >
-                <div
-                  class="emotion-51"
-                >
-                  Fashion Executive
-                </div>
-              </div>
+                Fashion Executive
+              </span>
             </div>
           </td>
         </tr>
@@ -966,19 +905,11 @@
             <div
               class="emotion-34"
             >
-              <div
-                aria-label="Paleontologist"
-                aria-selected="false"
-                class="emotion-50"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-41"
               >
-                <div
-                  class="emotion-51"
-                >
-                  Paleontologist
-                </div>
-              </div>
+                Paleontologist
+              </span>
             </div>
           </td>
         </tr>
@@ -1082,19 +1013,11 @@
             <div
               class="emotion-34"
             >
-              <div
-                aria-label="Chef"
-                aria-selected="false"
-                class="emotion-50"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-41"
               >
-                <div
-                  class="emotion-51"
-                >
-                  Chef
-                </div>
-              </div>
+                Chef
+              </span>
             </div>
           </td>
         </tr>
@@ -1198,19 +1121,11 @@
             <div
               class="emotion-34"
             >
-              <div
-                aria-label="?"
-                aria-selected="false"
-                class="emotion-50"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-41"
               >
-                <div
-                  class="emotion-51"
-                >
-                  ?
-                </div>
-              </div>
+                ?
+              </span>
             </div>
           </td>
         </tr>
@@ -1314,19 +1229,11 @@
             <div
               class="emotion-34"
             >
-              <div
-                aria-label="Actor"
-                aria-selected="false"
-                class="emotion-50"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-41"
               >
-                <div
-                  class="emotion-51"
-                >
-                  Actor
-                </div>
-              </div>
+                Actor
+              </span>
             </div>
           </td>
         </tr>
@@ -1430,19 +1337,11 @@
             <div
               class="emotion-34"
             >
-              <div
-                aria-label="Massage Therapist"
-                aria-selected="false"
-                class="emotion-50"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-41"
               >
-                <div
-                  class="emotion-51"
-                >
-                  Massage Therapist
-                </div>
-              </div>
+                Massage Therapist
+              </span>
             </div>
           </td>
         </tr>
@@ -1540,19 +1439,11 @@
             <div
               class="emotion-34"
             >
-              <div
-                aria-label="Central Perk Manager"
-                aria-selected="false"
-                class="emotion-50"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-41"
               >
-                <div
-                  class="emotion-51"
-                >
-                  Central Perk Manager
-                </div>
-              </div>
+                Central Perk Manager
+              </span>
             </div>
           </td>
         </tr>
@@ -1656,19 +1547,11 @@
             <div
               class="emotion-34"
             >
-              <div
-                aria-label="Personal Shopper"
-                aria-selected="false"
-                class="emotion-50"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-41"
               >
-                <div
-                  class="emotion-51"
-                >
-                  Personal Shopper
-                </div>
-              </div>
+                Personal Shopper
+              </span>
             </div>
           </td>
         </tr>
@@ -1772,19 +1655,11 @@
             <div
               class="emotion-34"
             >
-              <div
-                aria-label="Ophthalmologist"
-                aria-selected="false"
-                class="emotion-50"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-41"
               >
-                <div
-                  class="emotion-51"
-                >
-                  Ophthalmologist
-                </div>
-              </div>
+                Ophthalmologist
+              </span>
             </div>
           </td>
         </tr>
@@ -1882,78 +1757,70 @@
             <div
               class="emotion-34"
             >
-              <div
-                aria-label="Talent Agent"
-                aria-selected="false"
-                class="emotion-50"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-41"
               >
-                <div
-                  class="emotion-51"
-                >
-                  Talent Agent
-                </div>
-              </div>
+                Talent Agent
+              </span>
             </div>
           </td>
         </tr>
       </tbody>
     </table>
     <div
-      class="emotion-230"
+      class="emotion-220"
     >
       <div
-        class="emotion-231"
+        class="emotion-221"
       />
       <div
-        class="emotion-232"
+        class="emotion-222"
       >
         <div
-          class="emotion-233"
+          class="emotion-223"
           data-testid="ictinus_table_pages_info"
         >
           <p
-            class="emotion-234"
+            class="emotion-224"
           >
             page
           </p>
           <span
-            class="emotion-235"
+            class="emotion-225"
             data-testid="ictinus_table_current_page"
           >
             1
           </span>
           <p
-            class="emotion-234"
+            class="emotion-224"
           >
             of
           </p>
           <span
-            class="emotion-235"
+            class="emotion-225"
             data-testid="ictinus_table_total_pages"
           >
             2
           </span>
         </div>
         <div
-          class="emotion-238"
+          class="emotion-228"
         >
           <div
             class="emotion-6"
           >
             <button
-              class="emotion-240"
+              class="emotion-230"
               color="#52567a"
               data-testid="ictinus_table_go_to_prev_page-icon-button"
               disabled=""
               type="button"
             >
               <div
-                class="emotion-241"
+                class="emotion-231"
               >
                 <svg
-                  class="emotion-242"
+                  class="emotion-232"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1970,16 +1837,16 @@
             class="emotion-6"
           >
             <button
-              class="emotion-240"
+              class="emotion-230"
               color="#52567a"
               data-testid="ictinus_table_go_to_next_page-icon-button"
               type="button"
             >
               <div
-                class="emotion-241"
+                class="emotion-231"
               >
                 <svg
-                  class="emotion-242"
+                  class="emotion-232"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
