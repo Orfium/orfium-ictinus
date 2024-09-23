@@ -185,6 +185,7 @@ export type AcceptedIconNames =
   | 'clockOutlined'
   | 'userCheck'
   | 'undo'
+  | 'unlock'
   | 'bookmark'
   | 'tag'
   | 'triangleWarning'
