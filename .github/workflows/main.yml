@@ -18,6 +18,7 @@ env:
   STAGING_BRANCH: 'next'
 
 permissions:
+  deployments: write
   packages: write
   contents: read
   id-token: write
