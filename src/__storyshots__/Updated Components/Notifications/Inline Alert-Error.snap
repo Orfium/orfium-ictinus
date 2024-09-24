@@ -10,7 +10,6 @@
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 8px;
   container-type: inline-size;
   width: 100%;
 }
@@ -39,7 +38,7 @@
   font-family: sans-serif;
   min-height: var(--_min-height);
   outline: none;
-  outline-offset: 2px;
+  outline-offset: 0.125rem;
   -webkit-transition: outline-offset 150ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: outline-offset 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -219,7 +218,7 @@
     class="emotion-0 emotion-1"
   >
     <div
-      aria-describedby=":r1i:"
+      aria-describedby="react-aria-:test-id:"
       class="emotion-2"
       data-slot="inline-alert"
       role="alert"
@@ -262,7 +261,7 @@
       <div
         aria-label="Dismiss notification"
         class="emotion-8"
-        id=":r1i:"
+        id="react-aria-:test-id:"
         role="button"
         tabindex="0"
       >

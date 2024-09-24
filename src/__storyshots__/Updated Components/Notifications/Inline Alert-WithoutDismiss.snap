@@ -10,7 +10,6 @@
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 8px;
   container-type: inline-size;
   width: 100%;
 }
@@ -39,7 +38,7 @@
   font-family: sans-serif;
   min-height: var(--_min-height);
   outline: none;
-  outline-offset: 2px;
+  outline-offset: 0.125rem;
   -webkit-transition: outline-offset 150ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: outline-offset 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }

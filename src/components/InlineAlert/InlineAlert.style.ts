@@ -31,7 +31,7 @@ const inlineAlertStyles = (props: InlineAlertProps) => (theme: Theme) =>
     font-family: sans-serif;
     min-height: var(--_min-height);
     outline: none;
-    outline-offset: 2px;
+    outline-offset: ${rem(2)};
     transition: outline-offset 150ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &:focus-visible {

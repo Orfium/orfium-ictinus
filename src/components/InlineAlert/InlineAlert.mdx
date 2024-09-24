@@ -1,4 +1,4 @@
-import { Meta, Canvas, ArgTypes, Story, Primary, Controls } from '@storybook/blocks';
+import { Meta, Canvas, ArgTypes, Story, Primary } from '@storybook/blocks';
 import * as InlineAlertStories from './InlineAlert.stories';
 import { InlineAlert } from './InlineAlert';
 
@@ -10,6 +10,7 @@ import { InlineAlert } from './InlineAlert';
     { title: 'Overview', href: '#overview' },
     { title: 'Props', href: '#props' },
     { title: 'Usage', href: '#usage' },
+    { title: 'Variants', href: '#variants' },
   ]}
 />
 
@@ -21,7 +22,7 @@ A message from the system to the user that offers contextual and timely informat
 
 ## Props
 
-<Controls />
+<ArgTypes of={InlineAlert} />
 
 ## Usage
 
@@ -43,3 +44,25 @@ A message from the system to the user that offers contextual and timely informat
     'If you are promoting, soliciting feedback, or informing the user about a feature, use a banner instead.',
   ]}
 />
+
+<SubsectionHeader title="Variants" />
+
+### Neutral
+
+<Canvas of={InlineAlertStories.Neutral} />
+
+### Informational
+
+<Canvas of={InlineAlertStories.Informational} />
+
+### Error
+
+<Canvas of={InlineAlertStories.Error} />
+
+### Warning
+
+<Canvas of={InlineAlertStories.Warning} />
+
+### Success
+
+<Canvas of={InlineAlertStories.Success} />

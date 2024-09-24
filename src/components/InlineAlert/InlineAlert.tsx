@@ -1,5 +1,6 @@
-import React, { forwardRef, useEffect, useId, useRef } from 'react';
+import React, { forwardRef, useEffect, useRef } from 'react';
 import type { ReactElement, RefObject } from 'react';
+import { useId } from 'react-aria';
 
 import { getIconColor, styles } from './InlineAlert.style';
 import type { InlineAlertProps } from './InlineAlert.types';
@@ -16,6 +17,7 @@ export const InlineAlert = forwardRef<HTMLDivElement, InlineAlertProps>(
       children,
       onDismiss,
       testId,
+      dismissTestId,
       hasAutoFocus,
       ...otherProps
     } = props;
@@ -64,6 +66,7 @@ export const InlineAlert = forwardRef<HTMLDivElement, InlineAlertProps>(
             role="button"
             aria-label="Dismiss notification"
             id={onDismiss ? dismissId : undefined}
+            data-testid={dismissTestId}
             name="close"
             css={styles.dismiss}
             onClick={onDismiss}

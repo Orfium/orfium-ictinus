@@ -4,6 +4,28 @@ import { render } from '@testing-library/react';
 import { describe, expect, test } from 'vitest';
 import { ThemeProvider } from './index';
 
+/**
+ * This serializer identifies and replaces React Aria's dynamically generated IDs
+ * in snapshot tests, ensuring consistent and predictable snapshots.
+ *
+ * @example
+ * // Input:  id="react-aria-:r5:"
+ * // Output: id="react-aria-:test-id:"
+ *
+ * @example
+ * // Input:  aria-labelledby="react-aria-:r7:-label"
+ * // Output: aria-labelledby="react-aria-:test-id:-label"
+ *
+ * @note
+ * This serializer may add quotes even if they weren't in the original string.
+ */
+expect.addSnapshotSerializer({
+  test: (val) => typeof val === 'string' && /react-aria-:\w+:/.test(val),
+  print: (val) =>
+    typeof val === 'string' &&
+    val.replace(/react-aria-:\w+:([-\w$.\s]+)?/g, '"react-aria-:test-id:$1"'),
+});
+
 type StoryFile = {
   default: Meta;
   [name: string]: StoryFn | Meta;

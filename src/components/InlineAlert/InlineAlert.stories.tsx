@@ -9,7 +9,6 @@ const Container = styled.div`
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 8px;
   container-type: inline-size;
   width: 100%;
 `;
@@ -138,4 +137,12 @@ export const WithTrigger: Story = {
       </>
     );
   },
+};
+
+export const Playground: Story = {
+  render: (args) => (
+    <InlineAlert actions={<Link size={2}>Single Action</Link>} onDismiss={() => {}} {...args}>
+      Alert copy should be short, easy to understand and actionable.
+    </InlineAlert>
+  ),
 };
