@@ -1,11 +1,13 @@
 import type { ReactElement, ReactNode } from 'react';
 
+import type { TestProps } from '~/utils/types';
+
 /**
  * Represents the possible status values for an inline alert.
  */
 export type AlertStatus = 'neutral' | 'informational' | 'error' | 'warning' | 'success';
 
-export interface InlineAlertProps {
+export interface InlineAlertProps extends TestProps {
   /**
    * The status of the inline alert.
    * @default 'neutral'
@@ -41,7 +43,6 @@ export interface InlineAlertProps {
    * @default false
    */
   hasAutoFocus?: boolean;
+  /** Optional css class */
   className?: string;
-  testId?: string;
-  dismissTestId?: string;
 }

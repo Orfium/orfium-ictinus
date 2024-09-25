@@ -16,8 +16,7 @@ export const InlineAlert = forwardRef<HTMLDivElement, InlineAlertProps>(
       actions,
       children,
       onDismiss,
-      testId,
-      dismissTestId,
+      dataTestPrefixId = '',
       hasAutoFocus,
       ...otherProps
     } = props;
@@ -48,7 +47,7 @@ export const InlineAlert = forwardRef<HTMLDivElement, InlineAlertProps>(
         role={status === 'warning' || status === 'error' ? 'alert' : 'status'}
         aria-describedby={onDismiss ? dismissId : undefined}
         data-slot="inline-alert"
-        data-testid={testId}
+        data-testid={`${dataTestPrefixId}_inline_alert`}
       >
         {status !== 'neutral' ? (
           <Icon
@@ -66,7 +65,7 @@ export const InlineAlert = forwardRef<HTMLDivElement, InlineAlertProps>(
             role="button"
             aria-label="Dismiss notification"
             id={onDismiss ? dismissId : undefined}
-            data-testid={dismissTestId}
+            data-testid={`${dataTestPrefixId}_inline_alert_dismiss`}
             name="close"
             css={styles.dismiss}
             onClick={onDismiss}

@@ -221,6 +221,7 @@
       aria-describedby="react-aria-:test-id:"
       class="emotion-2"
       data-slot="inline-alert"
+      data-testid="_inline_alert"
       role="alert"
       tabindex="0"
     >
@@ -261,6 +262,7 @@
       <div
         aria-label="Dismiss notification"
         class="emotion-8"
+        data-testid="_inline_alert_dismiss"
         id="react-aria-:test-id:"
         role="button"
         tabindex="0"
