@@ -1,0 +1,283 @@
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+  container-type: inline-size;
+  width: 100%;
+}
+
+.emotion-2 {
+  --_border-width: 0.0625rem;
+  --_outline-width: 0.25rem;
+  --_min-height: 2.75rem;
+  --_min-content-width: 6.25rem;
+  box-sizing: border-box;
+  position: relative;
+  isolation: isolate;
+  padding: calc(0.75rem - var(--_border-width)) calc(0.75rem - var(--_border-width));
+  display: inline-grid;
+  grid-template-columns: auto minmax(var(--_min-content-width), 1fr) auto;
+  grid-template-areas: 'icon content actions close';
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: rgba(200,206,255,0.20);
+  border-radius: 0.25rem;
+  border: 1px solid rgba(200,206,255,0.70);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: sans-serif;
+  min-height: var(--_min-height);
+  outline: none;
+  outline-offset: 2px;
+  -webkit-transition: outline-offset 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: outline-offset 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.emotion-2:focus-visible {
+  outline-offset: 0;
+  outline: var(--_outline-width) solid #A566FF;
+}
+
+.emotion-2:has([data-slot='button']) {
+  padding: calc(0.5rem - var(--_border-width)) calc(0.75rem - var(--_border-width));
+}
+
+@container (max-width: calc(600px - 1px)) {
+  .emotion-2 {
+    grid-template-areas: 'icon content close' 'icon actions close';
+    -webkit-align-items: flex-start;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+  }
+
+  .emotion-2:has([data-slot='button']) {
+    padding: calc(0.75rem - var(--_border-width)) calc(0.75rem - var(--_border-width));
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-2 {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.emotion-3 {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  grid-area: icon;
+  margin-right: 0.75rem;
+  pointer-events: none;
+}
+
+.emotion-4 {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-4 path {
+  fill: #1EBE96!important;
+}
+
+.emotion-5 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  grid-area: content;
+  cursor: default;
+}
+
+.emotion-6 {
+  grid-area: actions;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-left: 1.25rem;
+}
+
+@container (max-width: calc(600px - 1px)) {
+  .emotion-6 {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  color: #194DCC;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  position: relative;
+  opacity: 1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  pointer-events: default;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-7:hover,
+.emotion-7[aria-expanded='true'] {
+  color: #111530;
+}
+
+.emotion-7:hover path,
+.emotion-7[aria-expanded='true'] path {
+  fill: #111530!important;
+}
+
+.emotion-7:visited {
+  color: #5F33AC;
+}
+
+.emotion-7:visited path {
+  fill: #5F33AC!important;
+}
+
+.emotion-7:focus-visible:after {
+  content: '';
+  position: absolute;
+  inset: -3px -6px;
+  border-radius: 0.25rem;
+  border: 0.25rem solid #A566FF;
+}
+
+.emotion-8 {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  grid-area: close;
+  justify-self: end;
+  margin-left: 1rem;
+}
+
+.emotion-8:hover,
+.emotion-8:focus-visible {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border-radius: 100%;
+  background: rgba(200,206,255,0.20);
+  box-shadow: 0px 0px 0px 8px rgba(200,206,255,0.20);
+}
+
+.emotion-9 {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-9 path {
+  fill: #52567a!important;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      aria-describedby=":r1k:"
+      class="emotion-2"
+      data-slot="inline-alert"
+      role="status"
+      tabindex="0"
+    >
+      <div
+        aria-hidden="true"
+        class="emotion-3"
+        role="img"
+      >
+        <svg
+          class="emotion-4"
+          fill="none"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8.89769 11.3563L7.22926 9.68784C7.06994 9.52852 6.87652 9.44761 6.64898 9.44512C6.42145 9.44263 6.22553 9.52353 6.06123 9.68784C5.89693 9.85214 5.81479 10.0468 5.81479 10.2718C5.81479 10.4969 5.89693 10.6915 6.06123 10.8558L8.23151 13.0261C8.42134 13.2183 8.64281 13.3144 8.89592 13.3144C9.14902 13.3144 9.37166 13.2183 9.56384 13.0261L13.9627 8.62732C14.122 8.468 14.2029 8.27458 14.2054 8.04704C14.2079 7.81951 14.127 7.62359 13.9627 7.45929C13.7984 7.295 13.6037 7.21285 13.3786 7.21285C13.1536 7.21285 12.9589 7.295 12.7946 7.45929L8.89769 11.3563ZM10.0013 18C8.89481 18 7.85478 17.79 6.88122 17.3701C5.90763 16.9502 5.06076 16.3803 4.34059 15.6604C3.62041 14.9405 3.05026 14.094 2.63016 13.1208C2.21005 12.1476 2 11.1078 2 10.0013C2 8.8915 2.21035 7.84835 2.63105 6.87186C3.05175 5.89538 3.62269 5.04596 4.34387 4.32362C5.06506 3.60129 5.91159 3.03343 6.88345 2.62006C7.8553 2.20669 8.89371 2 9.9987 2C11.1084 2 12.1514 2.2066 13.1278 2.61981C14.1042 3.03301 14.9536 3.60072 15.6761 4.32292C16.3986 5.04513 16.9666 5.8944 17.3799 6.87073C17.7933 7.84706 18 8.89025 18 10.0003C18 11.1104 17.7934 12.15 17.3802 13.1192C16.967 14.0884 16.3994 14.9337 15.6773 15.6552C14.9553 16.3766 14.1062 16.9478 13.1301 17.3687C12.1541 17.7896 11.1111 18 10.0013 18Z"
+            fill="#6265AD"
+          />
+        </svg>
+      </div>
+      <div
+        class="emotion-5"
+      >
+        Alert copy should be short, easy to understand and actionable.
+      </div>
+      <div
+        class="emotion-6"
+      >
+        <a
+          class="emotion-7"
+          data-testid="_link"
+        >
+          <span>
+            Single Action
+          </span>
+        </a>
+      </div>
+      <div
+        aria-label="Dismiss notification"
+        class="emotion-8"
+        id=":r1k:"
+        role="button"
+        tabindex="0"
+      >
+        <svg
+          class="emotion-9"
+          fill="none"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10.0442 11.1281L6.40819 14.7495C6.24522 14.9118 6.0561 14.9941 5.84084 14.9965C5.62558 14.9988 5.43411 14.9165 5.26642 14.7495C5.09872 14.5824 5.01487 14.396 5.01487 14.19C5.01487 13.9841 5.09872 13.7976 5.26642 13.6306L8.92076 9.99085L5.24805 6.35114C5.08507 6.18882 5.0024 6.00656 5.00005 5.80435C4.99769 5.60216 5.08035 5.41756 5.24805 5.25054C5.41574 5.08351 5.60297 5 5.80975 5C6.01653 5 6.20377 5.08351 6.37145 5.25054L10.0074 8.85364L13.6067 5.26884C13.7697 5.10651 13.9588 5.02417 14.174 5.02183C14.3893 5.01947 14.5808 5.10181 14.7485 5.26884C14.9162 5.43585 15 5.62843 15 5.84658C15 6.06473 14.9162 6.25731 14.7485 6.42433L11.1309 10.0457L14.7668 13.6672C14.9176 13.8173 14.9941 13.9995 14.9965 14.2139C14.9988 14.4283 14.9223 14.6129 14.7668 14.7678C14.6114 14.9226 14.4303 15 14.2235 15C14.0167 15 13.8356 14.9226 13.6802 14.7678L10.0442 11.1281Z"
+            fill="#6265AD"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>

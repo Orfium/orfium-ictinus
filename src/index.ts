@@ -76,6 +76,8 @@ export { default as Snackbar } from './components/Notification/Snackbar';
 export * from './components/Notification/Snackbar';
 export * from './components/Notification/Notification';
 
+export { InlineAlert } from './components/InlineAlert';
+
 export { default as Drawer } from './components/Drawer';
 export * from './components/Drawer';
 export { default as Pagination } from './components/Pagination';

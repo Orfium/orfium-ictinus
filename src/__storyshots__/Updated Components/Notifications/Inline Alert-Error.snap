@@ -1,0 +1,284 @@
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  container-type: inline-size;
+  width: 100%;
+}
+
+.emotion-2 {
+  --_border-width: 0.0625rem;
+  --_outline-width: 0.25rem;
+  --_min-height: 2.75rem;
+  --_min-content-width: 6.25rem;
+  box-sizing: border-box;
+  position: relative;
+  isolation: isolate;
+  padding: calc(0.75rem - var(--_border-width)) calc(0.75rem - var(--_border-width));
+  display: inline-grid;
+  grid-template-columns: auto minmax(var(--_min-content-width), 1fr) auto;
+  grid-template-areas: 'icon content actions close';
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: rgba(200,206,255,0.20);
+  border-radius: 0.25rem;
+  border: 1px solid rgba(200,206,255,0.70);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: sans-serif;
+  min-height: var(--_min-height);
+  outline: none;
+  outline-offset: 0.125rem;
+  -webkit-transition: outline-offset 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: outline-offset 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.emotion-2:focus-visible {
+  outline-offset: 0;
+  outline: var(--_outline-width) solid #A566FF;
+}
+
+.emotion-2:has([data-slot='button']) {
+  padding: calc(0.5rem - var(--_border-width)) calc(0.75rem - var(--_border-width));
+}
+
+@container (max-width: calc(600px - 1px)) {
+  .emotion-2 {
+    grid-template-areas: 'icon content close' 'icon actions close';
+    -webkit-align-items: flex-start;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+  }
+
+  .emotion-2:has([data-slot='button']) {
+    padding: calc(0.75rem - var(--_border-width)) calc(0.75rem - var(--_border-width));
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-2 {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.emotion-3 {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  grid-area: icon;
+  margin-right: 0.75rem;
+  pointer-events: none;
+}
+
+.emotion-4 {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-4 path {
+  fill: #FF4D8D!important;
+}
+
+.emotion-5 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  grid-area: content;
+  cursor: default;
+}
+
+.emotion-6 {
+  grid-area: actions;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-left: 1.25rem;
+}
+
+@container (max-width: calc(600px - 1px)) {
+  .emotion-6 {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  color: #194DCC;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  position: relative;
+  opacity: 1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  pointer-events: default;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-7:hover,
+.emotion-7[aria-expanded='true'] {
+  color: #111530;
+}
+
+.emotion-7:hover path,
+.emotion-7[aria-expanded='true'] path {
+  fill: #111530!important;
+}
+
+.emotion-7:visited {
+  color: #5F33AC;
+}
+
+.emotion-7:visited path {
+  fill: #5F33AC!important;
+}
+
+.emotion-7:focus-visible:after {
+  content: '';
+  position: absolute;
+  inset: -3px -6px;
+  border-radius: 0.25rem;
+  border: 0.25rem solid #A566FF;
+}
+
+.emotion-8 {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  grid-area: close;
+  justify-self: end;
+  margin-left: 1rem;
+}
+
+.emotion-8:hover,
+.emotion-8:focus-visible {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border-radius: 100%;
+  background: rgba(200,206,255,0.20);
+  box-shadow: 0px 0px 0px 8px rgba(200,206,255,0.20);
+}
+
+.emotion-9 {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-9 path {
+  fill: #52567a!important;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      aria-describedby="react-aria-:test-id:"
+      class="emotion-2"
+      data-slot="inline-alert"
+      data-testid="_inline_alert"
+      role="alert"
+      tabindex="0"
+    >
+      <div
+        aria-hidden="true"
+        class="emotion-3"
+        role="img"
+      >
+        <svg
+          class="emotion-4"
+          fill="none"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10 11.3704L12.0185 13.3889C12.2037 13.5741 12.4321 13.6667 12.7037 13.6667C12.9753 13.6667 13.2037 13.5741 13.3889 13.3889C13.5741 13.2037 13.6667 12.9753 13.6667 12.7037C13.6667 12.4321 13.5741 12.2037 13.3889 12.0185L11.3704 10L13.3889 7.98148C13.5741 7.7963 13.6667 7.5679 13.6667 7.2963C13.6667 7.02469 13.5741 6.7963 13.3889 6.61111C13.2037 6.42593 12.9753 6.33333 12.7037 6.33333C12.4321 6.33333 12.2037 6.42593 12.0185 6.61111L10 8.62963L7.98148 6.61111C7.7963 6.42593 7.5679 6.33333 7.2963 6.33333C7.02469 6.33333 6.7963 6.42593 6.61111 6.61111C6.42593 6.7963 6.33333 7.02469 6.33333 7.2963C6.33333 7.5679 6.42593 7.7963 6.61111 7.98148L8.62963 10L6.61111 12.0185C6.42593 12.2037 6.33333 12.4321 6.33333 12.7037C6.33333 12.9753 6.42593 13.2037 6.61111 13.3889C6.7963 13.5741 7.02469 13.6667 7.2963 13.6667C7.5679 13.6667 7.7963 13.5741 7.98148 13.3889L10 11.3704ZM10 18C8.88889 18 7.84877 17.7901 6.87963 17.3704C5.91049 16.9506 5.06481 16.3796 4.34259 15.6574C3.62037 14.9352 3.04938 14.0895 2.62963 13.1204C2.20988 12.1512 2 11.1111 2 10C2 8.88889 2.20988 7.84568 2.62963 6.87037C3.04938 5.89506 3.62037 5.0463 4.34259 4.32407C5.06481 3.60185 5.91049 3.03395 6.87963 2.62037C7.84877 2.20679 8.88889 2 10 2C11.1111 2 12.1543 2.20679 13.1296 2.62037C14.1049 3.03395 14.9537 3.60185 15.6759 4.32407C16.3981 5.0463 16.966 5.89506 17.3796 6.87037C17.7932 7.84568 18 8.88889 18 10C18 11.1111 17.7932 12.1512 17.3796 13.1204C16.966 14.0895 16.3981 14.9352 15.6759 15.6574C14.9537 16.3796 14.1049 16.9506 13.1296 17.3704C12.1543 17.7901 11.1111 18 10 18Z"
+            fill="#6265AD"
+          />
+        </svg>
+      </div>
+      <div
+        class="emotion-5"
+      >
+        Alert copy should be short, easy to understand and actionable.
+      </div>
+      <div
+        class="emotion-6"
+      >
+        <a
+          class="emotion-7"
+          data-testid="_link"
+        >
+          <span>
+            Single Action
+          </span>
+        </a>
+      </div>
+      <div
+        aria-label="Dismiss notification"
+        class="emotion-8"
+        data-testid="_inline_alert_dismiss"
+        id="react-aria-:test-id:"
+        role="button"
+        tabindex="0"
+      >
+        <svg
+          class="emotion-9"
+          fill="none"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10.0442 11.1281L6.40819 14.7495C6.24522 14.9118 6.0561 14.9941 5.84084 14.9965C5.62558 14.9988 5.43411 14.9165 5.26642 14.7495C5.09872 14.5824 5.01487 14.396 5.01487 14.19C5.01487 13.9841 5.09872 13.7976 5.26642 13.6306L8.92076 9.99085L5.24805 6.35114C5.08507 6.18882 5.0024 6.00656 5.00005 5.80435C4.99769 5.60216 5.08035 5.41756 5.24805 5.25054C5.41574 5.08351 5.60297 5 5.80975 5C6.01653 5 6.20377 5.08351 6.37145 5.25054L10.0074 8.85364L13.6067 5.26884C13.7697 5.10651 13.9588 5.02417 14.174 5.02183C14.3893 5.01947 14.5808 5.10181 14.7485 5.26884C14.9162 5.43585 15 5.62843 15 5.84658C15 6.06473 14.9162 6.25731 14.7485 6.42433L11.1309 10.0457L14.7668 13.6672C14.9176 13.8173 14.9941 13.9995 14.9965 14.2139C14.9988 14.4283 14.9223 14.6129 14.7668 14.7678C14.6114 14.9226 14.4303 15 14.2235 15C14.0167 15 13.8356 14.9226 13.6802 14.7678L10.0442 11.1281Z"
+            fill="#6265AD"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
