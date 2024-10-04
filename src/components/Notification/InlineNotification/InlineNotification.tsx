@@ -8,6 +8,9 @@ import type {
 } from '../Notification';
 import CompactNotification from '../subcomponents/CompactNotification';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars, unused-imports/no-unused-imports
+import type { InlineAlert } from '~/components/InlineAlert';
+
 export type InlineNotificationProps = {
   /** Show notification icon based on the type */
   hasIcon?: boolean;
@@ -23,6 +26,11 @@ export type InlineNotificationProps = {
   dataTestId?: TestId;
 } & Pick<NotificationActions, 'primaryCTALabel' | 'primaryCTA'>;
 
+/**
+ *
+ * @deprecated {@link InlineNotification} has been deprecated; use {@link InlineAlert} instead.
+ *
+ */
 const InlineNotification: React.FC<InlineNotificationProps> = ({
   hasIcon = false,
   message,

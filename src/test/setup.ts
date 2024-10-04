@@ -35,11 +35,6 @@ vi.mock(
   })
 );
 
-vi.mock('@react-aria/ssr', async () => ({
-  ...(await vi.importActual<any>('@react-aria/ssr')),
-  useSSRSafeId: () => 'react-aria-generated-id',
-}));
-
 // because scrollIntoView doesn't exist in jest
 window.HTMLElement.prototype.scrollIntoView = function () {};
 
