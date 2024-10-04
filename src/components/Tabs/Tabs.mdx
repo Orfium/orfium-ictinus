@@ -1,0 +1,69 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
+import Tabs from './Tabs';
+import * as TabsStories from './Tabs.stories';
+import { TabItemStory } from './utils/TabsStoryComponents';
+
+<Meta of={TabsStories} />
+
+<SectionHeader
+  title={'Tabs'}
+  sections={[
+    { title: 'Overview', href: '#overview' },
+    { title: 'Props', href: '#props' },
+    { title: 'Usage', href: '#usage' },
+    { title: 'Variants', href: '#variants' },
+  ]}
+/>
+
+## Overview
+
+Tabs organize content into multiple sections and allow users to navigate between them.
+
+<Tip>
+  This component is a monolith that covers most basic use cases. If you want to customize your Tabs
+  to fit your specific needs, visit the Components section to learn how you can use the tab modules
+  to create your own solutions.
+</Tip>
+
+<SubsectionHeader title="Props" />
+
+### Tabs
+
+<ArgTypes of={Tabs} />
+
+### TabItem
+
+<ArgTypes of={TabItemStory} />
+
+## Usage
+
+<UsageGuidelines
+  guidelines={['Use tabs to segregate semi-related content and show one content section at a time']}
+  policies={[
+    'If tabbed options link to differently filtered views of the same content, use filters',
+    'If content from multiple tabs should be viewed at the same time, consider using an accordion',
+    'If content sections are completely irrelevant to each other, use navigation instead',
+  ]}
+/>
+
+<SubsectionHeader title="Variants" />
+
+## Simple Tabs
+
+<Canvas of={TabsStories.SimpleTabs} />
+
+## Orientation
+
+Tabs can be horizontal or vertical. Use the `orientation` prop to toggle this feature.
+
+<Canvas of={TabsStories.TabsOrientation} />
+
+## Tabs with Counter
+
+Tabs can have counters when used e.g. for tables. Use the `counter` property in the Tab item.
+
+<Canvas of={TabsStories.TabsWithCounter} />
+
+## Playground
+
+<Canvas of={TabsStories.Playground} />
