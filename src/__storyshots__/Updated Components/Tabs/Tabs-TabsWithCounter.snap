@@ -1,0 +1,361 @@
+.emotion-0 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-1>div {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-1>div[data-selected] {
+  color: #194DCC;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-1>div[data-focus-visible]:after {
+  content: '';
+  position: absolute;
+  border-radius: 0.25rem;
+  border: 0.25rem solid #A566FF;
+}
+
+.emotion-1[data-orientation='horizontal'] {
+  gap: 1.25rem;
+}
+
+.emotion-1[data-orientation='horizontal']>div[data-focus-visible]:after {
+  inset: -8px -12px;
+}
+
+.emotion-1[data-orientation='horizontal']>div {
+  padding-bottom: 0.5rem;
+  border-bottom: 0.125rem solid rgba(200,206,255,0);
+  -webkit-transition: color ease-in-out 0.2s;
+  transition: color ease-in-out 0.2s;
+  -webkit-transition: border-bottom 0.2s;
+  transition: border-bottom 0.2s;
+}
+
+.emotion-1[data-orientation='horizontal']>div:hover {
+  border-color: #8EAAEC;
+}
+
+.emotion-1[data-orientation='horizontal']>div[data-selected] {
+  color: #194DCC;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  border-color: #175BF5;
+}
+
+.emotion-1[data-orientation='vertical'] {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.emotion-1[data-orientation='vertical']>div[data-focus-visible]:after {
+  inset: -4px -2px;
+}
+
+.emotion-1[data-orientation='vertical']>div {
+  padding: 0.5rem 0.75rem;
+  box-shadow: inset 0.125rem 0 0 0 rgba(200,206,255,0);
+  -webkit-transition: color ease-in-out 0.2s;
+  transition: color ease-in-out 0.2s;
+  -webkit-transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+}
+
+.emotion-1[data-orientation='vertical']>div[data-selected] {
+  box-shadow: inset 0.125rem 0 0 0 #175BF5;
+}
+
+.emotion-2 {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 1.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  box-sizing: border-box;
+  gap: 0.25rem;
+  padding: 0.125rem 0.5rem;
+  cursor: auto;
+  background: #ffffff;
+  color: #194DCC;
+  border: 0.0625rem solid;
+  border-color: rgba(200,206,255,0.70);
+  border-radius: 0.25rem;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: none;
+  background: #194DCC;
+  color: #ffffff;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.emotion-4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 1.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  box-sizing: border-box;
+  gap: 0.25rem;
+  padding: 0.125rem 0.5rem;
+  cursor: auto;
+  background: #ffffff;
+  color: #194DCC;
+  border: 0.0625rem solid;
+  border-color: rgba(200,206,255,0.70);
+  border-radius: 0.25rem;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: none;
+  background: #B8CCFA;
+  color: #111530;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+<div>
+  <div
+    class="emotion-0"
+    data-orientation="horizontal"
+    data-rac=""
+  >
+    <div
+      aria-orientation="horizontal"
+      class="emotion-1"
+      data-orientation="horizontal"
+      data-rac=""
+      id="react-aria-:rb0:"
+      role="tablist"
+    >
+      <div
+        aria-controls="react-aria-:rb0:-tabpanel-geller"
+        aria-selected="true"
+        class="emotion-2"
+        data-key="geller"
+        data-rac=""
+        data-selected="true"
+        data-testid="ictinus_tab_geller"
+        id="react-aria-:rb0:-tab-geller"
+        role="tab"
+        tabindex="0"
+      >
+        <span>
+          Geller
+        </span>
+        <div
+          aria-label="3"
+          aria-selected="false"
+          class="emotion-3"
+          data-testid="ictinus_tab_geller_counter_tag_container"
+          tabindex="-1"
+        >
+          <div
+            class="emotion-4"
+          >
+            3
+          </div>
+        </div>
+      </div>
+      <div
+        aria-selected="false"
+        class="emotion-2"
+        data-key="bing"
+        data-rac=""
+        data-testid="ictinus_tab_bing"
+        id="react-aria-:rb0:-tab-bing"
+        role="tab"
+        tabindex="-1"
+      >
+        <span>
+          Bing
+        </span>
+        <div
+          aria-label="8"
+          aria-selected="false"
+          class="emotion-6"
+          data-testid="ictinus_tab_bing_counter_tag_container"
+          tabindex="-1"
+        >
+          <div
+            class="emotion-4"
+          >
+            8
+          </div>
+        </div>
+      </div>
+      <div
+        aria-selected="false"
+        class="emotion-2"
+        data-key="tribbiani"
+        data-rac=""
+        data-testid="ictinus_tab_tribbiani"
+        id="react-aria-:rb0:-tab-tribbiani"
+        role="tab"
+        tabindex="-1"
+      >
+        <span>
+          Tribbiani
+        </span>
+        <div
+          aria-label="12"
+          aria-selected="false"
+          class="emotion-6"
+          data-testid="ictinus_tab_tribbiani_counter_tag_container"
+          tabindex="-1"
+        >
+          <div
+            class="emotion-4"
+          >
+            12
+          </div>
+        </div>
+      </div>
+      <div
+        aria-selected="false"
+        class="emotion-2"
+        data-key="green"
+        data-rac=""
+        data-testid="ictinus_tab_green"
+        id="react-aria-:rb0:-tab-green"
+        role="tab"
+        tabindex="-1"
+      >
+        <span>
+          Green
+        </span>
+        <div
+          aria-label="4"
+          aria-selected="false"
+          class="emotion-6"
+          data-testid="ictinus_tab_green_counter_tag_container"
+          tabindex="-1"
+        >
+          <div
+            class="emotion-4"
+          >
+            4
+          </div>
+        </div>
+      </div>
+      <div
+        aria-selected="false"
+        class="emotion-2"
+        data-key="buffay"
+        data-rac=""
+        data-testid="ictinus_tab_buffay"
+        id="react-aria-:rb0:-tab-buffay"
+        role="tab"
+        tabindex="-1"
+      >
+        <span>
+          Buffay
+        </span>
+        <div
+          aria-label="9"
+          aria-selected="false"
+          class="emotion-6"
+          data-testid="ictinus_tab_buffay_counter_tag_container"
+          tabindex="-1"
+        >
+          <div
+            class="emotion-4"
+          >
+            9
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
