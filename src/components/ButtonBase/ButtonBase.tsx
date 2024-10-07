@@ -7,6 +7,7 @@ import { generateTestDataId } from 'utils/helpers';
 import type { ComponentSizes, TestProps } from 'utils/types';
 
 import { buttonBaseStyle, buttonWrapperStyle } from './ButtonBase.style';
+import { useSlotProps } from '../utils/Slots';
 import type { ButtonTypes } from 'components/Button/Button.types';
 import ButtonLoader from 'components/Button/ButtonLoader';
 import type { IconButtonShape } from 'components/IconButton';
@@ -43,6 +44,7 @@ export type ButtonBaseProps = {
 
 //@TODO fix props to not overwrite button props
 const ButtonBase = React.forwardRef<HTMLButtonElement, ButtonBaseProps>((props, ref) => {
+  props = useSlotProps(props, 'button');
   const {
     type = 'primary',
     size = 'normal',
@@ -70,7 +72,6 @@ const ButtonBase = React.forwardRef<HTMLButtonElement, ButtonBaseProps>((props, 
         ref={ref}
         type={htmlType}
         data-testid={generateTestDataId(testIdName, dataTestId)}
-        data-slot="button"
         css={buttonBaseStyle({
           type,
           size,
