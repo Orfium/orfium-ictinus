@@ -5,12 +5,14 @@ import { useId } from 'react-aria';
 import { getIconColor, styles } from './InlineAlert.style';
 import type { InlineAlertProps } from './InlineAlert.types';
 import Icon from '../Icon';
+import { SlotProvider, useSlotProps } from '../utils/Slots';
 import { useDOMRef } from '../utils/useDOMRef';
 
 import useTheme from '~/hooks/useTheme';
 
 export const InlineAlert = forwardRef<HTMLDivElement, InlineAlertProps>(
   (props: InlineAlertProps, ref: RefObject<HTMLDivElement>) => {
+    props = useSlotProps(props, 'inline-alert');
     const {
       status = 'neutral',
       actions,
@@ -46,7 +48,6 @@ export const InlineAlert = forwardRef<HTMLDivElement, InlineAlertProps>(
         tabIndex={0}
         role={status === 'warning' || status === 'error' ? 'alert' : 'status'}
         aria-describedby={onDismiss ? dismissId : undefined}
-        data-slot="inline-alert"
         data-testid={`${dataTestPrefixId}_inline_alert`}
       >
         {status !== 'neutral' ? (
@@ -59,7 +60,18 @@ export const InlineAlert = forwardRef<HTMLDivElement, InlineAlertProps>(
           />
         ) : null}
         <div css={styles.content}>{children}</div>
-        {actionsArray.length > 0 ? <div css={styles.actions}>{actionsArray}</div> : null}
+        {actionsArray.length > 0 ? (
+          <div css={styles.actions}>
+            <SlotProvider
+              slots={{
+                button: { size: 'compact' },
+                link: { size: 2 },
+              }}
+            >
+              {actionsArray}
+            </SlotProvider>
+          </div>
+        ) : null}
         {onDismiss ? (
           <Icon
             role="button"
