@@ -6,18 +6,18 @@ import type { Theme } from '~/theme';
 export const containerStyles = (sx?: CSSObject) => (theme: Theme) =>
   css`
     display: flex;
-    & > div {
+    [role='tab'] {
       position: relative;
       width: fit-content;
       ${theme.tokens.typography.get('normal.body02')};
     }
 
-    & > div[data-selected] {
+    [role='tab'][data-selected] {
       color: ${theme.tokens.colors.get('textColor.default.active')};
       ${theme.tokens.typography.get('normal.label02')};
     }
 
-    & > div[data-focus-visible]:after {
+    [role='tab'][data-focus-visible]:after {
       content: '';
       position: absolute;
 
@@ -29,11 +29,11 @@ export const containerStyles = (sx?: CSSObject) => (theme: Theme) =>
     &[data-orientation='horizontal'] {
       gap: ${theme.globals.spacing.get('7')};
 
-      > div[data-focus-visible]:after {
+      [role='tab'][data-focus-visible]:after {
         inset: -8px -12px;
       }
 
-      & > div {
+      [role='tab'] {
         padding-bottom: ${theme.globals.spacing.get('4')};
 
         border-bottom: ${theme.globals.borderWidth.get('2')} solid
@@ -42,11 +42,11 @@ export const containerStyles = (sx?: CSSObject) => (theme: Theme) =>
         transition: border-bottom 0.2s;
       }
 
-      & > div:hover {
+      [role='tab']:hover {
         border-color: ${theme.tokens.colors.get('borderColor.interactive.default')};
       }
 
-      & > div[data-selected] {
+      [role='tab'][data-selected] {
         color: ${theme.tokens.colors.get('textColor.default.active')};
         ${theme.tokens.typography.get('normal.label02')};
 
@@ -58,11 +58,11 @@ export const containerStyles = (sx?: CSSObject) => (theme: Theme) =>
       flex-direction: column;
       gap: ${theme.globals.spacing.get('4')};
 
-      > div[data-focus-visible]:after {
+      [role='tab'][data-focus-visible]:after {
         inset: -4px -2px;
       }
 
-      & > div {
+      [role='tab'] {
         padding: ${theme.globals.spacing.get('4')} ${theme.globals.spacing.get('5')};
 
         box-shadow: inset ${theme.globals.borderWidth.get('2')} 0 0 0
@@ -72,7 +72,7 @@ export const containerStyles = (sx?: CSSObject) => (theme: Theme) =>
         transition: box-shadow 0.2s;
       }
 
-      & > div[data-selected] {
+      [role='tab'][data-selected] {
         box-shadow: inset ${theme.globals.borderWidth.get('2')} 0 0 0
           ${theme.tokens.colors.get('borderColor.interactive.active')};
       }
