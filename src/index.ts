@@ -77,6 +77,7 @@ export * from './components/Notification/Snackbar';
 export * from './components/Notification/Notification';
 
 export { InlineAlert } from './components/InlineAlert';
+export { Broadcast } from './components/Broadcast';
 
 export { default as Drawer } from './components/Drawer';
 export * from './components/Drawer';
