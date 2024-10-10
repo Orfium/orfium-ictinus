@@ -26,6 +26,7 @@ export type TabsProps = {
   onSelectionChange: (key: TabKey) => void;
   /** The items (tabs) */
   items: TabItem[];
+  children?: any;
 } & AriaAttributes &
   TestProps;
 
@@ -50,3 +51,10 @@ export type TabListProps = {
   sx?: CSSObject;
   children: any;
 } & AriaAttributes;
+
+export type TabPanelProps = {
+  /** The id of the tab the content corresponds to */
+  tabId: string;
+  /** The content of the tab panel */
+  children: any;
+};

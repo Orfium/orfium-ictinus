@@ -12,6 +12,7 @@ const Tabs = React.forwardRef<HTMLDivElement, TabsProps>((props, ref) => {
     onSelectionChange,
     items,
     dataTestPrefixId = 'ictinus',
+    children,
   } = props;
 
   return (
@@ -42,6 +43,7 @@ const Tabs = React.forwardRef<HTMLDivElement, TabsProps>((props, ref) => {
           );
         })}
       </TabList>
+      {children}
     </TabsContainer>
   );
 });

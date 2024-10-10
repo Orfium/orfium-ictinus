@@ -1,24 +1,32 @@
 import React from 'react';
-import Tabs, { Tab } from '~/components/Tabs';
+import Tabs, { TabPanel } from '~/components/Tabs';
 import { TabKey } from './types';
-import { getItems } from './constants';
+import { getContent, getItems } from './constants';
 
 export default {
   title: 'Updated Components/Tabs/Tabs',
-  component: Tab,
+  component: Tabs,
 
   argTypes: {
     orientation: { type: 'radio', options: ['horizontal', 'vertical'] },
     hasCounter: { type: 'boolean' },
   },
+
+  args: {
+    orientation: 'horizontal',
+  },
 };
 
 export const SimpleTabs = {
   render: () => {
-    const [timePeriod, setTimePeriod] = React.useState<TabKey>('geller');
+    const [selectedFriend, setSelectedFriend] = React.useState<TabKey>('geller');
 
     return (
-      <Tabs selectedKey={timePeriod} onSelectionChange={setTimePeriod} items={getItems(false)} />
+      <Tabs
+        selectedKey={selectedFriend}
+        onSelectionChange={setSelectedFriend}
+        items={getItems(false)}
+      />
     );
   },
 
@@ -29,19 +37,55 @@ export const SimpleTabs = {
   },
 };
 
+export const TabsWithContent = {
+  render: () => {
+    const [selectedFriend, setSelectedFriend] = React.useState<TabKey>('geller');
+
+    const content = getContent('horizontal');
+
+    return (
+      <Tabs
+        selectedKey={selectedFriend}
+        onSelectionChange={setSelectedFriend}
+        items={getItems(false)}
+      >
+        {Object.keys(content).map((friend) => (
+          <TabPanel key={friend} tabId={friend}>
+            {content[friend]}
+          </TabPanel>
+        ))}
+      </Tabs>
+    );
+  },
+
+  name: 'Tabs with content',
+
+  parameters: {
+    controls: { disable: true },
+  },
+};
+
 export const TabsOrientation = {
   render: (args) => {
     const { orientation } = args;
 
-    const [timePeriod, setTimePeriod] = React.useState<TabKey>('geller');
+    const [selectedFriend, setSelectedFriend] = React.useState<TabKey>('geller');
+
+    const content = getContent(orientation);
 
     return (
       <Tabs
         orientation={orientation}
-        selectedKey={timePeriod}
-        onSelectionChange={setTimePeriod}
+        selectedKey={selectedFriend}
+        onSelectionChange={setSelectedFriend}
         items={getItems(false)}
-      />
+      >
+        {Object.keys(content).map((friend) => (
+          <TabPanel key={friend} tabId={friend}>
+            {content[friend]}
+          </TabPanel>
+        ))}
+      </Tabs>
     );
   },
 
@@ -54,10 +98,22 @@ export const TabsOrientation = {
 
 export const TabsWithCounter = {
   render: () => {
-    const [timePeriod, setTimePeriod] = React.useState<TabKey>('geller');
+    const [selectedFriend, setSelectedFriend] = React.useState<TabKey>('geller');
+
+    const content = getContent('horizontal');
 
     return (
-      <Tabs selectedKey={timePeriod} onSelectionChange={setTimePeriod} items={getItems(true)} />
+      <Tabs
+        selectedKey={selectedFriend}
+        onSelectionChange={setSelectedFriend}
+        items={getItems(true)}
+      >
+        {Object.keys(content).map((friend) => (
+          <TabPanel key={friend} tabId={friend}>
+            {content[friend]}
+          </TabPanel>
+        ))}
+      </Tabs>
     );
   },
 
@@ -72,15 +128,23 @@ export const Playground = {
   render: (args) => {
     const { orientation, hasCounter } = args;
 
-    const [timePeriod, setTimePeriod] = React.useState<TabKey>('geller');
+    const [selectedFriend, setSelectedFriend] = React.useState<TabKey>('geller');
+
+    const content = getContent(orientation);
 
     return (
       <Tabs
         orientation={orientation}
-        selectedKey={timePeriod}
-        onSelectionChange={setTimePeriod}
+        selectedKey={selectedFriend}
+        onSelectionChange={setSelectedFriend}
         items={getItems(hasCounter)}
-      />
+      >
+        {Object.keys(content).map((friend) => (
+          <TabPanel key={friend} tabId={friend}>
+            {content[friend]}
+          </TabPanel>
+        ))}
+      </Tabs>
     );
   },
 
