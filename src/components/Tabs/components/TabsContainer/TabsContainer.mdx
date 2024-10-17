@@ -14,7 +14,7 @@ import TabsContainer from './TabsContainer';
 
 ## Overview
 
-TabsContainer is the root component of the Tabs. It contains the orientation and selection states.
+TabsContainer is the root component of the Tabs and TabStepper. It contains the orientation and selection states.
 
 ## Props
 
@@ -24,10 +24,12 @@ TabsContainer is the root component of the Tabs. It contains the orientation and
 
 Use a state for the selectedKey and pass the state as props to TabsContainer
 
+### Tabs
+
 <Tip>
   Check also [TabsList](../?path=/docs/updated-components-tabs-components-tablist--overview) and
   [Tab](../?path=/docs/updated-components-tabs-components-tab--overview) as they are needed for the
-  implementation.
+  implementation of Tabs
 </Tip>
 
 ```js
@@ -40,16 +42,48 @@ Use a state for the selectedKey and pass the state as props to TabsContainer
       onSelectionChange={setSelectedKey}
     >
     //   <TabList aria-label="My Tabs" sx={styleOverrides}>
-    //     <Tab key="tab_1" tabId="tab_1">
+    //     <Tab key="tab_1" id="tab_1">
     //       Tab 1
     //     </Tab>
-    //     <Tab key="tab_2" tabId="tab_2">
+    //     <Tab key="tab_2" id="tab_2">
     //       Tab 2
     //     </Tab>
-    //     <Tab key="tab_3" tabId="tab_3">
+    //     <Tab key="tab_3" id="tab_3">
     //       Tab 3
     //     </Tab>
     //   </TabList>
+    </TabsContainer>
+
+```
+
+### TabStepper
+
+<Tip>
+  Check also [TabStepList](../?path=/docs/updated-components-tabs-components-tabsteplist--overview)
+  and [TabStep](../?path=/docs/updated-components-tabs-components-tabstep--overview) as they are
+  needed for the implementation of TabStepper
+</Tip>
+
+```js
+ const [selectedKey, setSelectedKey] = React.useState<TabKey>('step_1');
+
+  return (
+    <TabsContainer
+      orientation="horizontal"
+      selectedKey={selectedKey}
+      onSelectionChange={setSelectedKey}
+    >
+    //   <TabStepList aria-label="My Tabs" sx={styleOverrides}>
+    //     <TabStep key="step_1" id="step_1">
+    //       Tab 1
+    //     </TabStep>
+    //     <TabStep key="step_2" id="step_2">
+    //       Tab 2
+    //     </TabStep>
+    //     <TabStep key="step_3" id="step_3">
+    //       Tab 3
+    //     </TabStep>
+    //   </TabStepList>
     </TabsContainer>
 
 ```
