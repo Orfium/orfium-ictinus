@@ -34,23 +34,27 @@ const TabStep = React.forwardRef<HTMLDivElement, TabStepProps>((props, ref) => {
     <ReactAriaTab id={id} {...rest} ref={ref} css={stepStyles()} data-status={status}>
       {children ?? (
         <div css={stepContainer()}>
-          <div css={stepTitle()} data-role="title" data-testid={`${dataTestPrefixId}_title`}>
-            {title}
-            {hasIcon && (
-              <Icon
-                name={iconName}
-                color={theme.tokens.colors.get(iconColor)}
-                dataTestPrefixId={`${dataTestPrefixId}_icon`}
-              />
-            )}
-          </div>
-          <div
-            css={stepSubtitle()}
-            data-role="subtitle"
-            data-testid={`${dataTestPrefixId}_subtitle`}
-          >
-            {subtitle}
-          </div>
+          {title && (
+            <div css={stepTitle()} data-role="title" data-testid={`${dataTestPrefixId}_title`}>
+              {title}
+              {hasIcon && (
+                <Icon
+                  name={iconName}
+                  color={theme.tokens.colors.get(iconColor)}
+                  dataTestPrefixId={`${dataTestPrefixId}_icon`}
+                />
+              )}
+            </div>
+          )}
+          {subtitle && (
+            <div
+              css={stepSubtitle()}
+              data-role="subtitle"
+              data-testid={`${dataTestPrefixId}_subtitle`}
+            >
+              {subtitle}
+            </div>
+          )}
         </div>
       )}
     </ReactAriaTab>

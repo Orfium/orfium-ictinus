@@ -6,6 +6,9 @@ import { flex, flexCenterVertical } from '~/theme/functions';
 export const stepStyles = () =>
   css`
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   `;
 
 export const stepContainer = () => (theme: Theme) =>
@@ -20,6 +23,7 @@ export const stepTitle = () => (theme: Theme) =>
   css`
     ${flexCenterVertical};
     justify-content: space-between;
+    gap: ${theme.globals.spacing.get('7')};
 
     ${theme.tokens.typography.get('normal.title02')}
   `;
