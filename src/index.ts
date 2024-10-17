@@ -102,6 +102,8 @@ export { default as Tag } from './components/Tag';
 export * from './components/Tag';
 export { default as Tabs } from './components/Tabs';
 export * from './components/Tabs';
+export { default as TabStepper } from './components/TabStepper';
+export * from './components/TabStepper';
 export { default as TextField } from './components/TextField';
 export * from './components/TextField';
 export { default as Search } from './components/Search';

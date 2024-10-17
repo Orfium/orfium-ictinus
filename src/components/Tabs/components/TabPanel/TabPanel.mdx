@@ -24,7 +24,7 @@ TabPanel component is used to conditionally render the content that corresponds 
 
 Use TabPanels as children of (monolith) Tabs or under Tab components in a composition to toggle content when selecting tabs.
 
-<Tip>The tabId should be the same as in the Tab component that the TabPanel corresponds to</Tip>
+<Tip>The id should be the same as in the Tab component that the TabPanel corresponds to</Tip>
 
 ```js
  const [selectedKey, setSelectedKey] = React.useState<TabKey>('tab_1');
@@ -36,18 +36,18 @@ Use TabPanels as children of (monolith) Tabs or under Tab components in a compos
     //   onSelectionChange={setSelectedKey}
     // >
     //   <TabList aria-label="My Tabs" sx={styleOverrides}>
-    //     <Tab key="tab_1" tabId="tab_1">
+    //     <Tab key="tab_1" id="tab_1">
     //       Tab 1
     //     </Tab>
-    //     <Tab key="tab_2" tabId="tab_2">
+    //     <Tab key="tab_2" id="tab_2">
     //       Tab 2
     //     </Tab>
-    //     <Tab key="tab_3" tabId="tab_3">
+    //     <Tab key="tab_3" id="tab_3">
     //       Tab 3
     //     </Tab>
-        <TabPanel tabId="tab_1">This is Tab 1 content</TabPanel>
-        <TabPanel tabId="tab_2">This is Tab 2 content</TabPanel>
-        <TabPanel tabId="tab_3">This is Tab 3 content</TabPanel>
+        <TabPanel id="tab_1">This is Tab 1 content</TabPanel>
+        <TabPanel id="tab_2">This is Tab 2 content</TabPanel>
+        <TabPanel id="tab_3">This is Tab 3 content</TabPanel>
     //   </TabList>
     // </TabsContainer>
 

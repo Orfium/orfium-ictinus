@@ -1,0 +1,61 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
+import TabStepList from './TabStepList';
+
+<Meta title="Updated Components/Tabs/Components/TabStepList" />
+
+<SectionHeader
+  title={'TabStepList'}
+  sections={[
+    { title: 'Overview', href: '#overview' },
+    { title: 'Props', href: '#props' },
+    { title: 'Usage', href: '#usage' },
+  ]}
+/>
+
+## Overview
+
+TabStepList is the wrapper of the TabStep components. Here you can use the sx prop to add custom styles for the TabSteps.
+
+## Props
+
+<ArgTypes of={TabStepList} />
+
+## Usage
+
+Use the TabStepList to add aria-label and style overrides.
+
+<Tip>
+  Check also
+  [TabsContainer](../?path=/docs/updated-components-tabs-components-tabscontainer--overview) and
+  [TabStep](../?path=/docs/updated-components-tabs-components-tabstep--overview) as they are needed
+  for the implementation.
+</Tip>
+
+<Tip>
+  When using custom tab stepper components for children, use `role='tab'` on every child tab in
+  order for the TabStepList styles to be applied.
+</Tip>
+
+```js
+ const [selectedKey, setSelectedKey] = React.useState<TabKey>('step_1');
+
+  return (
+    // <TabsContainer
+    //   orientation="horizontal"
+    //   selectedKey={selectedKey}
+    //   onSelectionChange={setSelectedKey}
+    // >
+      <TabStepList aria-label="My Tabs" sx={styleOverrides}>
+    //     <TabStep key="step_1" id="step_1">
+    //       Tab 1
+    //     </TabStep>
+    //     <TabStep key="step_2" id="step_2">
+    //       Tab 2
+    //     </TabStep>
+    //     <TabStep key="step_3" id="step_3">
+    //       Tab 3
+    //     </TabStep>
+      </TabStepList>
+    // </TabsContainer>
+
+```

@@ -1,0 +1,56 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
+import TabStep from './TabStep';
+
+<Meta title="Updated Components/Tabs/Components/TabStep" />
+
+<SectionHeader
+  title={'TabStep'}
+  sections={[
+    { title: 'Overview', href: '#overview' },
+    { title: 'Props', href: '#props' },
+    { title: 'Usage', href: '#usage' },
+  ]}
+/>
+
+## Overview
+
+TabStep component is used to render the main content of the TabsStepper.
+
+## Props
+
+<ArgTypes of={TabStep} />
+
+## Usage
+
+Use TabStep as a leaf component to render the content of the TabStep as children.
+
+<Tip>
+  Check also
+  [TabsContainer](../?path=/docs/updated-components-tabs-components-tabscontainer--overview) and
+  [TabStepList](../?path=/docs/updated-components-tabs-components-tabsteplist--overview) as they are
+  needed for the implementation.
+</Tip>
+
+```js
+ const [selectedKey, setSelectedKey] = React.useState<TabKey>('step_1');
+
+  return (
+    // <TabsContainer
+    //   orientation="horizontal"
+    //   selectedKey={selectedKey}
+    //   onSelectionChange={setSelectedKey}
+    // >
+    //   <TabStepList aria-label="My Tabs" sx={styleOverrides}>
+        <TabStep key="step_1" id="step_1">
+          Tab 1
+        </TabStep>
+        <TabStep key="step_2" id="step_2">
+          Tab 2
+        </TabStep>
+        <TabStep key="step_3" id="step_3">
+          Tab 3
+        </TabStep>
+    //   </TabStepList>
+    // </TabsContainer>
+
+```
