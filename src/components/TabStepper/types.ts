@@ -9,7 +9,7 @@ export type TabStepItem = {
   /** A unique id for the tab step item */
   id: string;
   /** The title of the step */
-  title: string;
+  title?: string;
   /** The subtitle of the step */
   subtitle?: string;
   /** The status of the step */

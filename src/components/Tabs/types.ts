@@ -32,7 +32,7 @@ export type TabsProps = {
 
 export type TabsContainerProps = {
   /** The orientation of the Tab */
-  orientation: TabOrientation;
+  orientation?: TabOrientation;
   /** The id of the selected tab */
   selectedKey: TabKey;
   /** Callback to change the selected tab */
