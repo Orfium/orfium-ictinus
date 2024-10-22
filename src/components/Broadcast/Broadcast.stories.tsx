@@ -4,12 +4,12 @@ import Button from '../Button';
 import Link from '../Link';
 import { Broadcast } from './Broadcast';
 import { useState } from 'react';
-import { rem } from '~/theme/utils';
 
 const Container = styled.div`
   display: inline-flex;
   flex-direction: column;
   container-type: inline-size;
+  gap: ${({ theme }) => theme.dimension.spacing.get('sm')};
   width: 100%;
 `;
 
@@ -108,11 +108,9 @@ export const WithTrigger: Story = {
 
     return (
       <>
-        <Button css={{ marginBottom: rem(8) }} onClick={() => setShow(!show)}>
-          Trigger Broadcast
-        </Button>
+        <Button onClick={() => setShow(!show)}>{show ? 'Hide' : 'Show'} Broadcast</Button>
         {show && (
-          <Broadcast status="warning" onDismiss={() => setShow(false)} hasAutoFocus {...args}>
+          <Broadcast status="informational" onDismiss={() => setShow(false)} hasAutoFocus {...args}>
             Broadcast copy should be short, easy to understand and actionable.
           </Broadcast>
         )}

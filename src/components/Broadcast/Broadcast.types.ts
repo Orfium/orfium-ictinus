@@ -24,11 +24,6 @@ export interface BroadcastProps extends TestProps {
    */
   actions?: ReactElement | ReactElement[];
   /**
-   * Whether to use alternative styling for the broadcast.
-   * @default false
-   */
-  isAlt?: boolean;
-  /**
    * Callback function for the dismiss button.
    * If not provided, the dismiss button will not be rendered.
    */

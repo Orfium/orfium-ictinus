@@ -21,9 +21,7 @@ const broadcastStyles = (props: BroadcastProps) => (theme: Theme) =>
     grid-template-columns: auto minmax(var(--_min-content-width), 1fr) auto;
     grid-template-areas: 'icon content actions close';
     align-items: center;
-    background: ${props.isAlt
-      ? theme.tokens.colors.get('backgroundColor.default')
-      : theme.tokens.colors.get('palette.secondary.muted')};
+    background: ${theme.tokens.colors.get('palette.secondary.muted')};
     border-radius: ${theme.dimension.borderRadius.get('md')};
     border: 1px solid ${getBorderColor(props.status, theme)};
     -webkit-font-smoothing: antialiased;
