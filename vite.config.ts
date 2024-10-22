@@ -83,6 +83,7 @@ export default defineConfig(({ mode }) => {
         include: ['src'],
         exclude: [
           ...coverageConfigDefaults.exclude,
+          '**/*.stories.tsx',
           '**/*.style.ts',
           '**/*.styles.ts',
           '**/styles.ts',
