@@ -78,14 +78,16 @@ export default defineConfig(({ mode }) => {
       environment: 'jsdom',
       setupFiles: './src/test/setup.ts',
       coverage: {
-        provider: 'v8', // or 'istanbul'
+        reporter: ['text', 'html', 'json', 'lcov'],
+        provider: 'v8',
+        include: ['src'],
         exclude: [
           ...coverageConfigDefaults.exclude,
+          '**/*.style.ts',
           '**/*.styles.ts',
           '**/styles.ts',
           '**/__mocks__/',
-          'src/config/',
-          'src/test/',
+          'test',
         ],
       },
       exclude: [...configDefaults.exclude],
