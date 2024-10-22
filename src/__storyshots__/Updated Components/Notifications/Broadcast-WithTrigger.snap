@@ -7,6 +7,7 @@
   -ms-flex-direction: column;
   flex-direction: column;
   container-type: inline-size;
+  gap: 0.5rem;
   width: 100%;
 }
 
@@ -44,7 +45,6 @@
   cursor: pointer;
   -webkit-transition: background-color,border 150ms linear;
   transition: background-color,border 150ms linear;
-  margin-bottom: 0.5rem;
 }
 
 .emotion-3:focus-visible:not(:disabled) {
@@ -98,7 +98,8 @@
           class="emotion-4"
         >
           <span>
-            Trigger Broadcast
+            Show
+             Broadcast
           </span>
         </span>
       </button>
