@@ -25,7 +25,7 @@ const inlineAlertStyles = (props: InlineAlertProps) => (theme: Theme) =>
       ? theme.tokens.colors.get('backgroundColor.default')
       : theme.tokens.colors.get('palette.secondary.muted')};
     border-radius: ${theme.dimension.borderRadius.get('md')};
-    border: 1px solid ${theme.tokens.colors.get('borderColor.decorative.default')};
+    border: var(--_border-width) solid ${theme.tokens.colors.get('borderColor.decorative.default')};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: sans-serif;

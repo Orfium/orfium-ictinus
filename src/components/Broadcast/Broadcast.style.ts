@@ -23,7 +23,7 @@ const broadcastStyles = (props: BroadcastProps) => (theme: Theme) =>
     align-items: center;
     background: ${theme.tokens.colors.get('palette.secondary.muted')};
     border-radius: ${theme.dimension.borderRadius.get('md')};
-    border: 1px solid ${getBorderColor(props.status, theme)};
+    border: var(--_border-width) solid ${getBorderColor(props.status, theme)};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: sans-serif;
