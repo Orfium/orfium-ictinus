@@ -2,10 +2,10 @@ import { css } from '@emotion/react';
 import { rem } from 'polished';
 import type { Theme } from 'theme';
 
-import type { InlineAlertProps } from './InlineAlert.types';
+import type { BroadcastProps } from './Broadcast.types';
 import { generateStylesFromTokens } from '../Typography/utils';
 
-const inlineAlertStyles = (props: InlineAlertProps) => (theme: Theme) =>
+const broadcastStyles = (props: BroadcastProps) => (theme: Theme) =>
   css`
     --_border-width: ${theme.dimension.borderWidth.get('default')};
     --_outline-width: ${theme.dimension.borderWidth.get('focused')};
@@ -21,11 +21,9 @@ const inlineAlertStyles = (props: InlineAlertProps) => (theme: Theme) =>
     grid-template-columns: auto minmax(var(--_min-content-width), 1fr) auto;
     grid-template-areas: 'icon content actions close';
     align-items: center;
-    background: ${props.isAlt
-      ? theme.tokens.colors.get('backgroundColor.default')
-      : theme.tokens.colors.get('palette.secondary.muted')};
+    background: ${theme.tokens.colors.get('palette.secondary.muted')};
     border-radius: ${theme.dimension.borderRadius.get('md')};
-    border: var(--_border-width) solid ${theme.tokens.colors.get('borderColor.decorative.default')};
+    border: var(--_border-width) solid ${getBorderColor(props.status, theme)};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: sans-serif;
@@ -100,7 +98,22 @@ const dismissStyles = () => (theme: Theme) =>
     margin-left: ${theme.dimension.spacing.get('lg')};
   `;
 
-export const getIconColor = (status: InlineAlertProps['status'], theme: Theme) => {
+const getBorderColor = (status: BroadcastProps['status'], theme: Theme) => {
+  switch (status) {
+    case 'informational':
+      return theme.tokens.colors.get('indicators.brand');
+    case 'error':
+      return theme.tokens.colors.get('textColor.default.error');
+    case 'warning':
+      return theme.tokens.colors.get('indicators.warning');
+    case 'success':
+      return theme.tokens.colors.get('indicators.success');
+    default:
+      return theme.tokens.colors.get('borderColor.decorative.default');
+  }
+};
+
+export const getIconColor = (status: BroadcastProps['status'], theme: Theme) => {
   switch (status) {
     case 'informational':
       return theme.tokens.colors.get('indicators.brand');
@@ -116,7 +129,7 @@ export const getIconColor = (status: InlineAlertProps['status'], theme: Theme) =
 };
 
 export const styles = {
-  'inline-alert': inlineAlertStyles,
+  broadcast: broadcastStyles,
   icon: iconStyles,
   content: contentStyles,
   actions: actionsStyles,
