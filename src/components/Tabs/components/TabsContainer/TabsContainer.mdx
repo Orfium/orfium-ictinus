@@ -1,0 +1,55 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
+import TabsContainer from './TabsContainer';
+
+<Meta title="Updated Components/Tabs/Components/TabsContainer" />
+
+<SectionHeader
+  title={'TabsContainer'}
+  sections={[
+    { title: 'Overview', href: '#overview' },
+    { title: 'Props', href: '#props' },
+    { title: 'Usage', href: '#usage' },
+  ]}
+/>
+
+## Overview
+
+TabsContainer is the root component of the Tabs. It contains the orientation and selection states.
+
+## Props
+
+<ArgTypes of={TabsContainer} />
+
+## Usage
+
+Use a state for the selectedKey and pass the state as props to TabsContainer
+
+<Tip>
+  Check also [TabsList](../?path=/docs/updated-components-tabs-components-tablist--overview) and
+  [Tab](../?path=/docs/updated-components-tabs-components-tab--overview) as they are needed for the
+  implementation.
+</Tip>
+
+```js
+ const [selectedKey, setSelectedKey] = React.useState<TabKey>('tab_1');
+
+  return (
+    <TabsContainer
+      orientation="horizontal"
+      selectedKey={selectedKey}
+      onSelectionChange={setSelectedKey}
+    >
+    //   <TabList aria-label="My Tabs" sx={styleOverrides}>
+    //     <Tab key="tab_1" tabId="tab_1">
+    //       Tab 1
+    //     </Tab>
+    //     <Tab key="tab_2" tabId="tab_2">
+    //       Tab 2
+    //     </Tab>
+    //     <Tab key="tab_3" tabId="tab_3">
+    //       Tab 3
+    //     </Tab>
+    //   </TabList>
+    </TabsContainer>
+
+```
