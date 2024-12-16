@@ -10,6 +10,11 @@ export const containerStyles = (sx?: CSSObject) => (theme: Theme) =>
     [role='tab'] {
       position: relative;
       width: fit-content;
+      ${theme.tokens.typography.get('normal.body01')}
+    }
+
+    [role='tab'][data-selected] {
+      ${theme.tokens.typography.get('normal.title01')}
     }
 
     [role='tab']:not([data-selected]):hover {
@@ -21,14 +26,14 @@ export const containerStyles = (sx?: CSSObject) => (theme: Theme) =>
       content: '';
       position: absolute;
 
-      border-radius: ${theme.globals.borderRadius.get('2')};
+      border-radius: ${theme.dimension.borderRadius.get('sm')};
       border: ${theme.dimension.borderWidth.get('focused')} solid
-        ${theme.tokens.colors.get('borderColor.interactive.upsell')};
+        ${theme.tokens.colors.get('borderColor.interactive.focused')};
     }
 
     [role='tab'][data-status='warning'] {
       [data-role='title'] {
-        color: ${theme.tokens.colors.get('indicators.error')};
+        color: ${theme.tokens.colors.get('textColor.default.error')};
       }
     }
 
@@ -56,7 +61,7 @@ export const containerStyles = (sx?: CSSObject) => (theme: Theme) =>
           ${theme.tokens.colors.get('borderColor.interactive.active')};
 
         &[data-status='warning'] {
-          border-color: ${theme.tokens.colors.get('indicators.error')};
+          border-color: ${theme.tokens.colors.get('borderColor.interactive.error')};
         }
 
         margin-bottom: -${theme.globals.borderWidth.get('2')};

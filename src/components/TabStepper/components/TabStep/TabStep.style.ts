@@ -16,7 +16,7 @@ export const stepContainer = () => (theme: Theme) =>
     ${flex};
     flex-direction: column;
     gap: ${theme.globals.spacing.get('3')};
-    padding: ${theme.globals.spacing.get('3')};
+    padding: ${theme.globals.spacing.get('4')};
   `;
 
 export const stepTitle = () => (theme: Theme) =>
@@ -24,8 +24,6 @@ export const stepTitle = () => (theme: Theme) =>
     ${flexCenterVertical};
     justify-content: space-between;
     gap: ${theme.globals.spacing.get('7')};
-
-    ${theme.tokens.typography.get('normal.title02')}
   `;
 
 export const stepSubtitle = () => (theme: Theme) =>

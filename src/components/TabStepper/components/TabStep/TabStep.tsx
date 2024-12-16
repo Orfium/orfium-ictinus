@@ -24,7 +24,7 @@ const TabStep = React.forwardRef<HTMLDivElement, TabStepProps>((props, ref) => {
 
   const iconColor = useMemo(() => {
     if (status === 'done') {
-      return 'textColor.default.active';
+      return 'indicators.brand';
     }
 
     return 'indicators.error';
