@@ -9,21 +9,22 @@ export const containerStyles = (sx?: CSSObject) => (theme: Theme) =>
     [role='tab'] {
       position: relative;
       width: fit-content;
-      ${theme.tokens.typography.get('normal.body02')};
+      ${theme.tokens.typography.get('normal.body01')};
+      color: ${theme.tokens.colors.get('textColor.default.primary')};
     }
 
     [role='tab'][data-selected] {
       color: ${theme.tokens.colors.get('textColor.default.active')};
-      ${theme.tokens.typography.get('normal.label02')};
+      ${theme.tokens.typography.get('normal.label01')};
     }
 
     [role='tab'][data-focus-visible]:after {
       content: '';
       position: absolute;
 
-      border-radius: ${theme.globals.borderRadius.get('2')};
+      border-radius: ${theme.dimension.borderRadius.get('sm')};
       border: ${theme.dimension.borderWidth.get('focused')} solid
-        ${theme.tokens.colors.get('borderColor.interactive.upsell')};
+        ${theme.tokens.colors.get('borderColor.interactive.focused')};
     }
 
     &[data-orientation='horizontal'] {
@@ -48,7 +49,7 @@ export const containerStyles = (sx?: CSSObject) => (theme: Theme) =>
 
       [role='tab'][data-selected] {
         color: ${theme.tokens.colors.get('textColor.default.active')};
-        ${theme.tokens.typography.get('normal.label02')};
+        ${theme.tokens.typography.get('normal.label01')};
 
         border-color: ${theme.tokens.colors.get('borderColor.interactive.active')};
       }
@@ -70,6 +71,11 @@ export const containerStyles = (sx?: CSSObject) => (theme: Theme) =>
 
         transition: color ease-in-out 0.2s;
         transition: box-shadow 0.2s;
+      }
+
+      [role='tab']:hover {
+        box-shadow: inset ${theme.globals.borderWidth.get('2')} 0 0 0
+          ${theme.tokens.colors.get('borderColor.interactive.default')};
       }
 
       [role='tab'][data-selected] {
