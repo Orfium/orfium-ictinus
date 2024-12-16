@@ -6,11 +6,8 @@
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
   container-type: inline-size;
+  gap: 0.5rem;
   width: 100%;
 }
 
@@ -32,7 +29,7 @@
   align-items: center;
   background: rgba(200,206,255,0.20);
   border-radius: 0.25rem;
-  border: var(--_border-width) solid rgba(200,206,255,0.70);
+  border: var(--_border-width) solid #BF1250;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: sans-serif;
@@ -91,7 +88,7 @@
 }
 
 .emotion-4 path {
-  fill: #5E8DF8!important;
+  fill: #FF4D8D!important;
 }
 
 .emotion-5 {
@@ -130,123 +127,59 @@
 }
 
 .emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  color: #194DCC;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   position: relative;
+  opacity: 1;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  pointer-events: default;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-7:hover,
+.emotion-7[aria-expanded='true'] {
+  color: #111530;
+}
+
+.emotion-7:hover path,
+.emotion-7[aria-expanded='true'] path {
+  fill: #111530!important;
+}
+
+.emotion-7:visited {
+  color: #5F33AC;
+}
+
+.emotion-7:visited path {
+  fill: #5F33AC!important;
+}
+
+.emotion-7:focus-visible:after {
+  content: '';
+  position: absolute;
+  inset: -3px -6px;
+  border-radius: 0.25rem;
+  border: 0.25rem solid #A566FF;
 }
 
 .emotion-8 {
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1rem;
-  font-size: 0.75rem;
-  letter-spacing: 0.015625rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  color: #194DCC;
-  height: 1.75rem;
-  background-color: rgba(200,206,255,0);
-  padding: 0rem 0.5rem 0rem 0.5rem;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-8:focus-visible:not(:disabled) {
-  background-color: rgba(200,206,255,0.20);
-}
-
-.emotion-8:disabled {
-  opacity: 50%;
-  cursor: not-allowed;
-}
-
-.emotion-8:hover:not(:disabled) {
-  background-color: rgba(200,206,255,0.20);
-}
-
-.emotion-8:active:not(:disabled),
-.emotion-8[aria-expanded="true"] {
-  background-color: rgba(200,206,255,0.30);
-}
-
-.emotion-9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-.emotion-11 {
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1rem;
-  font-size: 0.75rem;
-  letter-spacing: 0.015625rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  color: #ffffff;
-  height: 1.75rem;
-  background-color: #175BF5;
-  padding: 0rem 0.5rem 0rem 0.5rem;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-11:focus-visible:not(:disabled) {
-  background-color: #5E8DF8;
-}
-
-.emotion-11:disabled {
-  opacity: 50%;
-  cursor: not-allowed;
-}
-
-.emotion-11:hover:not(:disabled) {
-  background-color: #5E8DF8;
-}
-
-.emotion-11:active:not(:disabled),
-.emotion-11[aria-expanded="true"] {
-  background-color: #194DCC;
-}
-
-.emotion-13 {
   width: 1.25rem;
   height: 1.25rem;
   display: -webkit-box;
@@ -259,8 +192,8 @@
   margin-left: 1rem;
 }
 
-.emotion-13:hover,
-.emotion-13:focus-visible {
+.emotion-8:hover,
+.emotion-8:focus-visible {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   border-radius: 100%;
@@ -268,12 +201,12 @@
   box-shadow: 0px 0px 0px 8px rgba(200,206,255,0.20);
 }
 
-.emotion-14 {
+.emotion-9 {
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-14 path {
+.emotion-9 path {
   fill: #52567a!important;
 }
 
@@ -285,8 +218,8 @@
       aria-describedby="react-aria-:test-id:"
       class="emotion-2"
       data-slot="inline-alert"
-      data-testid="_inline_alert"
-      role="status"
+      data-testid="broadcast"
+      role="alert"
       tabindex="0"
     >
       <div
@@ -301,68 +234,39 @@
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            clip-rule="evenodd"
-            d="M6.88122 17.3701C7.85478 17.79 8.89481 18 10.0013 18C11.1111 18 12.1541 17.7896 13.1301 17.3687C14.1062 16.9478 14.9553 16.3766 15.6773 15.6552C16.3994 14.9337 16.967 14.0884 17.3802 13.1192C17.7934 12.15 18 11.1104 18 10.0003C18 8.89025 17.7933 7.84706 17.3799 6.87073C16.9666 5.8944 16.3986 5.04513 15.6761 4.32292C14.9536 3.60072 14.1042 3.03301 13.1278 2.61981C12.1514 2.2066 11.1084 2 9.9987 2C8.89371 2 7.8553 2.20669 6.88345 2.62006C5.91159 3.03343 5.06506 3.60129 4.34387 4.32362C3.62269 5.04596 3.05175 5.89538 2.63105 6.87186C2.21035 7.84835 2 8.8915 2 10.0013C2 11.1078 2.21005 12.1476 2.63016 13.1208C3.05026 14.094 3.62041 14.9405 4.34059 15.6604C5.06076 16.3803 5.90763 16.9502 6.88122 17.3701ZM10.6094 13.7549C10.4461 13.9183 10.2495 14 10.0197 14C9.78983 14 9.59317 13.9183 9.42969 13.7549C9.26622 13.5914 9.18448 13.3948 9.18448 13.1651V10.0582C9.18448 9.82847 9.26613 9.63188 9.42944 9.46844C9.59274 9.30501 9.78931 9.2233 10.0192 9.2233C10.249 9.2233 10.4457 9.30501 10.6091 9.46844C10.7726 9.63188 10.8544 9.82847 10.8544 10.0582V13.1651C10.8544 13.3948 10.7727 13.5914 10.6094 13.7549ZM9.9751 7.90001C10.5964 7.90001 11.1001 7.39633 11.1001 6.77501C11.1001 6.15369 10.5964 5.65001 9.9751 5.65001C9.35378 5.65001 8.8501 6.15369 8.8501 6.77501C8.8501 7.39633 9.35378 7.90001 9.9751 7.90001Z"
+            d="M10 11.3704L12.0185 13.3889C12.2037 13.5741 12.4321 13.6667 12.7037 13.6667C12.9753 13.6667 13.2037 13.5741 13.3889 13.3889C13.5741 13.2037 13.6667 12.9753 13.6667 12.7037C13.6667 12.4321 13.5741 12.2037 13.3889 12.0185L11.3704 10L13.3889 7.98148C13.5741 7.7963 13.6667 7.5679 13.6667 7.2963C13.6667 7.02469 13.5741 6.7963 13.3889 6.61111C13.2037 6.42593 12.9753 6.33333 12.7037 6.33333C12.4321 6.33333 12.2037 6.42593 12.0185 6.61111L10 8.62963L7.98148 6.61111C7.7963 6.42593 7.5679 6.33333 7.2963 6.33333C7.02469 6.33333 6.7963 6.42593 6.61111 6.61111C6.42593 6.7963 6.33333 7.02469 6.33333 7.2963C6.33333 7.5679 6.42593 7.7963 6.61111 7.98148L8.62963 10L6.61111 12.0185C6.42593 12.2037 6.33333 12.4321 6.33333 12.7037C6.33333 12.9753 6.42593 13.2037 6.61111 13.3889C6.7963 13.5741 7.02469 13.6667 7.2963 13.6667C7.5679 13.6667 7.7963 13.5741 7.98148 13.3889L10 11.3704ZM10 18C8.88889 18 7.84877 17.7901 6.87963 17.3704C5.91049 16.9506 5.06481 16.3796 4.34259 15.6574C3.62037 14.9352 3.04938 14.0895 2.62963 13.1204C2.20988 12.1512 2 11.1111 2 10C2 8.88889 2.20988 7.84568 2.62963 6.87037C3.04938 5.89506 3.62037 5.0463 4.34259 4.32407C5.06481 3.60185 5.91049 3.03395 6.87963 2.62037C7.84877 2.20679 8.88889 2 10 2C11.1111 2 12.1543 2.20679 13.1296 2.62037C14.1049 3.03395 14.9537 3.60185 15.6759 4.32407C16.3981 5.0463 16.966 5.89506 17.3796 6.87037C17.7932 7.84568 18 8.88889 18 10C18 11.1111 17.7932 12.1512 17.3796 13.1204C16.966 14.0895 16.3981 14.9352 15.6759 15.6574C14.9537 16.3796 14.1049 16.9506 13.1296 17.3704C12.1543 17.7901 11.1111 18 10 18Z"
             fill="#6265AD"
-            fill-rule="evenodd"
           />
         </svg>
       </div>
       <div
         class="emotion-5"
       >
-        Alert copy should be short, easy to understand and actionable.
+        Broadcast copy should be short, easy to understand and actionable.
       </div>
       <div
         class="emotion-6"
       >
-        <div
+        <a
           class="emotion-7"
+          data-slot="link"
+          data-testid="_link"
         >
-          <button
-            class="emotion-8"
-            data-slot="button"
-            data-testid="button"
-            type="button"
-          >
-            <span
-              class="emotion-9"
-            >
-              <span>
-                Tertiary
-              </span>
-            </span>
-          </button>
-        </div>
-        <div
-          class="emotion-7"
-        >
-          <button
-            class="emotion-11"
-            data-slot="button"
-            data-testid="button"
-            type="button"
-          >
-            <span
-              class="emotion-9"
-            >
-              <span>
-                Primary
-              </span>
-            </span>
-          </button>
-        </div>
+          <span>
+            Single Action
+          </span>
+        </a>
       </div>
       <div
         aria-label="Dismiss notification"
-        class="emotion-13"
-        data-testid="_inline_alert_dismiss"
+        class="emotion-8"
+        data-testid="broadcast_dismiss"
         id="react-aria-:test-id:"
         role="button"
         tabindex="0"
       >
         <svg
-          class="emotion-14"
+          class="emotion-9"
           fill="none"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
