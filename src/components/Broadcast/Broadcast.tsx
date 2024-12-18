@@ -2,17 +2,16 @@ import React, { forwardRef, useEffect, useRef } from 'react';
 import type { ReactElement, RefObject } from 'react';
 import { useId } from 'react-aria';
 
-import { getIconColor, styles } from './InlineAlert.style';
-import type { InlineAlertProps } from './InlineAlert.types';
+import { getIconColor, styles } from './Broadcast.style';
+import type { BroadcastProps } from './Broadcast.types';
 import Icon from '../Icon';
-import { SlotProvider, useSlotProps } from '../utils/Slots';
+import { SlotProvider } from '../utils/Slots';
 import { useDOMRef } from '../utils/useDOMRef';
 
 import useTheme from '~/hooks/useTheme';
 
-export const InlineAlert = forwardRef<HTMLDivElement, InlineAlertProps>(
-  (props: InlineAlertProps, ref: RefObject<HTMLDivElement>) => {
-    props = useSlotProps(props, 'inline-alert');
+export const Broadcast = forwardRef<HTMLDivElement, BroadcastProps>(
+  (props: BroadcastProps, ref: RefObject<HTMLDivElement>) => {
     const {
       status = 'neutral',
       actions,
@@ -43,12 +42,13 @@ export const InlineAlert = forwardRef<HTMLDivElement, InlineAlertProps>(
     return (
       <div
         {...otherProps}
-        css={styles['inline-alert'](props)}
+        css={styles.broadcast(props)}
         ref={domRef}
         tabIndex={0}
         role={status === 'warning' || status === 'error' ? 'alert' : 'status'}
         aria-describedby={onDismiss ? dismissId : undefined}
-        data-testid={`${dataTestPrefixId}_inline_alert`}
+        data-slot="inline-alert"
+        data-testid={`${dataTestPrefixId}broadcast`}
       >
         {status !== 'neutral' ? (
           <Icon
@@ -77,7 +77,7 @@ export const InlineAlert = forwardRef<HTMLDivElement, InlineAlertProps>(
             role="button"
             aria-label="Dismiss notification"
             id={onDismiss ? dismissId : undefined}
-            data-testid={`${dataTestPrefixId}_inline_alert_dismiss`}
+            data-testid={`${dataTestPrefixId}broadcast_dismiss`}
             name="close"
             css={styles.dismiss}
             onClick={onDismiss}
@@ -89,4 +89,4 @@ export const InlineAlert = forwardRef<HTMLDivElement, InlineAlertProps>(
   }
 );
 
-InlineAlert.displayName = 'InlineAlert';
+Broadcast.displayName = 'Broadcast';

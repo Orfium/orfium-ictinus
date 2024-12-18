@@ -8,6 +8,9 @@ import type {
 } from '../Notification';
 import CompactNotification from '../subcomponents/CompactNotification';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars, unused-imports/no-unused-imports
+import type { Broadcast } from '~/components/Broadcast';
+
 export type BannerProps = {
   /** Show notification icon based on the type */
   hasIcon?: boolean;
@@ -25,6 +28,11 @@ export type BannerProps = {
   dataTestId?: TestId;
 } & Pick<NotificationActions, 'primaryCTALabel' | 'primaryCTA'>;
 
+/**
+ *
+ * @deprecated {@link Banner} has been deprecated; use {@link Broadcast} instead.
+ *
+ */
 const Banner: React.FCC<BannerProps> = ({
   hasIcon = false,
   title,

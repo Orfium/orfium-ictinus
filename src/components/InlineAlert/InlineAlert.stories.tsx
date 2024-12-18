@@ -30,7 +30,7 @@ type Story = StoryObj<typeof InlineAlert>;
 
 export const Neutral: Story = {
   render: (args) => (
-    <InlineAlert actions={<Link size={2}>Single Action</Link>} onDismiss={() => {}} {...args}>
+    <InlineAlert actions={<Link>Single Action</Link>} onDismiss={() => {}} {...args}>
       Alert copy should be short, easy to understand and actionable.
     </InlineAlert>
   ),
@@ -40,7 +40,7 @@ export const Informational: Story = {
   render: (args) => (
     <InlineAlert
       status="informational"
-      actions={<Link size={2}>Single Action</Link>}
+      actions={<Link>Single Action</Link>}
       onDismiss={() => {}}
       {...args}
     >
@@ -51,12 +51,7 @@ export const Informational: Story = {
 
 export const Error: Story = {
   render: (args) => (
-    <InlineAlert
-      status="error"
-      actions={<Link size={2}>Single Action</Link>}
-      onDismiss={() => {}}
-      {...args}
-    >
+    <InlineAlert status="error" actions={<Link>Single Action</Link>} onDismiss={() => {}} {...args}>
       Alert copy should be short, easy to understand and actionable.
     </InlineAlert>
   ),
@@ -66,7 +61,7 @@ export const Warning: Story = {
   render: (args) => (
     <InlineAlert
       status="warning"
-      actions={<Link size={2}>Single Action</Link>}
+      actions={<Link>Single Action</Link>}
       onDismiss={() => {}}
       {...args}
     >
@@ -79,7 +74,7 @@ export const Success: Story = {
   render: (args) => (
     <InlineAlert
       status="success"
-      actions={<Link size={2}>Single Action</Link>}
+      actions={<Link>Single Action</Link>}
       onDismiss={() => {}}
       {...args}
     >
@@ -92,12 +87,7 @@ export const WithButtons: Story = {
   render: (args) => (
     <InlineAlert
       status="informational"
-      actions={[
-        <Button type="tertiary" size="compact">
-          Tertiary
-        </Button>,
-        <Button size="compact">Primary</Button>,
-      ]}
+      actions={[<Button type="tertiary">Tertiary</Button>, <Button>Primary</Button>]}
       onDismiss={() => {}}
       {...args}
     >
@@ -141,7 +131,7 @@ export const WithTrigger: Story = {
 
 export const Playground: Story = {
   render: (args) => (
-    <InlineAlert actions={<Link size={2}>Single Action</Link>} onDismiss={() => {}} {...args}>
+    <InlineAlert actions={<Link>Single Action</Link>} onDismiss={() => {}} {...args}>
       Alert copy should be short, easy to understand and actionable.
     </InlineAlert>
   ),
