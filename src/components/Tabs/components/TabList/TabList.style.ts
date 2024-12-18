@@ -28,15 +28,13 @@ export const containerStyles = (sx?: CSSObject) => (theme: Theme) =>
     }
 
     &[data-orientation='horizontal'] {
-      gap: ${theme.globals.spacing.get('7')};
+      gap: ${theme.globals.spacing.get('5')};
 
       [role='tab'][data-focus-visible]:after {
-        inset: -8px -12px;
+        inset: -3px -8px;
       }
 
       [role='tab'] {
-        padding-bottom: ${theme.globals.spacing.get('4')};
-
         border-bottom: ${theme.globals.borderWidth.get('2')} solid
           ${theme.tokens.colors.get('borderColor.decorative.transparent')};
         transition: color ease-in-out 0.2s;
@@ -64,7 +62,7 @@ export const containerStyles = (sx?: CSSObject) => (theme: Theme) =>
       }
 
       [role='tab'] {
-        padding: ${theme.globals.spacing.get('4')} ${theme.globals.spacing.get('5')};
+        padding: ${theme.globals.spacing.get('5')} ${theme.globals.spacing.get('4')};
 
         box-shadow: inset ${theme.globals.borderWidth.get('2')} 0 0 0
           ${theme.tokens.colors.get('borderColor.decorative.transparent')};
