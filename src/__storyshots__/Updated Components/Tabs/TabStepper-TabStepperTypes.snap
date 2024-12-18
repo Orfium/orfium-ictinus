@@ -1,0 +1,372 @@
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 [role='tab'] {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.375rem;
+  font-size: 1rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-2 [role='tab'][data-selected] {
+  font-family: Roboto;
+  font-weight: 700;
+  line-height: 1.375rem;
+  font-size: 1rem;
+  letter-spacing: 0.00625rem;
+}
+
+.emotion-2 [role='tab']:not([data-selected]):hover {
+  background: #F2F4FF;
+  -webkit-transition: background ease-in-out 0.2s;
+  transition: background ease-in-out 0.2s;
+}
+
+.emotion-2 [role='tab'][data-focus-visible]:after {
+  content: '';
+  position: absolute;
+  border-radius: 0.125rem;
+  border: 0.25rem solid #A566FF;
+}
+
+.emotion-2 [role='tab'][data-status='warning'] [data-role='title'] {
+  color: #BF1250;
+}
+
+.emotion-2 [role='tab'][data-selected]:not([data-status='warning']) [data-role='title'] {
+  color: #194DCC;
+}
+
+.emotion-2[data-orientation='horizontal'] {
+  gap: 1.25rem;
+  border-bottom: 0.125rem solid rgba(200,206,255,0.70);
+}
+
+.emotion-2[data-orientation='horizontal'] [role='tab'] {
+  padding: 0.25rem;
+}
+
+.emotion-2[data-orientation='horizontal'] [role='tab']:after {
+  inset: -3px -8px;
+}
+
+.emotion-2[data-orientation='horizontal'] [role='tab'][data-selected] {
+  border-bottom: 0.125rem solid #175BF5;
+  margin-bottom: -0.125rem;
+}
+
+.emotion-2[data-orientation='horizontal'] [role='tab'][data-selected][data-status='warning'] {
+  border-color: #FF4D8D;
+}
+
+.emotion-2[data-orientation='vertical'] {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1rem;
+  border-left: 0.125rem solid rgba(200,206,255,0.70);
+}
+
+.emotion-2[data-orientation='vertical'] [role='tab'][data-focus-visible]:after {
+  inset: -4px -2px;
+}
+
+.emotion-2[data-orientation='vertical'] [role='tab'] {
+  padding: 0.5rem 0.75rem;
+}
+
+.emotion-2[data-orientation='vertical'] [role='tab'][data-selected] {
+  border-left: 0.125rem solid #175BF5;
+  margin-left: -0.125rem;
+}
+
+.emotion-2[data-orientation='vertical'] [role='tab'][data-selected][data-status='warning'] {
+  border-color: #FF4D8D;
+}
+
+.emotion-3 {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.5rem;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.emotion-17 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  color: #52567a;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+      data-orientation="horizontal"
+      data-rac=""
+    >
+      <div
+        aria-orientation="horizontal"
+        class="emotion-2"
+        data-orientation="horizontal"
+        data-rac=""
+        id="react-aria-:test-id:"
+        role="tablist"
+      >
+        <div
+          aria-controls="react-aria-:test-id:-tabpanel-step_1"
+          aria-selected="true"
+          class="emotion-3"
+          data-key="step_1"
+          data-rac=""
+          data-selected="true"
+          data-status="pending"
+          id="react-aria-:test-id:-tab-step_1"
+          role="tab"
+          tabindex="0"
+        >
+          <div
+            class="emotion-4"
+          >
+            <div
+              class="emotion-5"
+              data-role="title"
+              data-testid="ictinus_tabstep_step_1_title"
+            >
+              Step 1
+            </div>
+          </div>
+        </div>
+        <div
+          aria-selected="false"
+          class="emotion-3"
+          data-key="step_2"
+          data-rac=""
+          data-status="pending"
+          id="react-aria-:test-id:-tab-step_2"
+          role="tab"
+          tabindex="-1"
+        >
+          <div
+            class="emotion-4"
+          >
+            <div
+              class="emotion-5"
+              data-role="title"
+              data-testid="ictinus_tabstep_step_2_title"
+            >
+              Step 2
+            </div>
+          </div>
+        </div>
+        <div
+          aria-selected="false"
+          class="emotion-3"
+          data-key="step_3"
+          data-rac=""
+          data-status="pending"
+          id="react-aria-:test-id:-tab-step_3"
+          role="tab"
+          tabindex="-1"
+        >
+          <div
+            class="emotion-4"
+          >
+            <div
+              class="emotion-5"
+              data-role="title"
+              data-testid="ictinus_tabstep_step_3_title"
+            >
+              Step 3
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="emotion-1"
+      data-orientation="horizontal"
+      data-rac=""
+    >
+      <div
+        aria-orientation="horizontal"
+        class="emotion-2"
+        data-orientation="horizontal"
+        data-rac=""
+        id="react-aria-:test-id:"
+        role="tablist"
+      >
+        <div
+          aria-controls="react-aria-:test-id:-tabpanel-step_1"
+          aria-selected="true"
+          class="emotion-3"
+          data-key="step_1"
+          data-rac=""
+          data-selected="true"
+          data-status="pending"
+          id="react-aria-:test-id:-tab-step_1"
+          role="tab"
+          tabindex="0"
+        >
+          <div
+            class="emotion-4"
+          >
+            <div
+              class="emotion-5"
+              data-role="title"
+              data-testid="ictinus_tabstep_step_1_title"
+            >
+              Step 1
+            </div>
+            <div
+              class="emotion-17"
+              data-role="subtitle"
+              data-testid="ictinus_tabstep_step_1_subtitle"
+            >
+              This is subtitle for step 1
+            </div>
+          </div>
+        </div>
+        <div
+          aria-selected="false"
+          class="emotion-3"
+          data-key="step_2"
+          data-rac=""
+          data-status="pending"
+          id="react-aria-:test-id:-tab-step_2"
+          role="tab"
+          tabindex="-1"
+        >
+          <div
+            class="emotion-4"
+          >
+            <div
+              class="emotion-5"
+              data-role="title"
+              data-testid="ictinus_tabstep_step_2_title"
+            >
+              Step 2
+            </div>
+            <div
+              class="emotion-17"
+              data-role="subtitle"
+              data-testid="ictinus_tabstep_step_2_subtitle"
+            >
+              This is subtitle for step 2
+            </div>
+          </div>
+        </div>
+        <div
+          aria-selected="false"
+          class="emotion-3"
+          data-key="step_3"
+          data-rac=""
+          data-status="pending"
+          id="react-aria-:test-id:-tab-step_3"
+          role="tab"
+          tabindex="-1"
+        >
+          <div
+            class="emotion-4"
+          >
+            <div
+              class="emotion-5"
+              data-role="title"
+              data-testid="ictinus_tabstep_step_3_title"
+            >
+              Step 3
+            </div>
+            <div
+              class="emotion-17"
+              data-role="subtitle"
+              data-testid="ictinus_tabstep_step_3_subtitle"
+            >
+              This is subtitle for step 3
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

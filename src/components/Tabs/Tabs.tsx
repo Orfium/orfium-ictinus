@@ -29,7 +29,7 @@ const Tabs = React.forwardRef<HTMLDivElement, TabsProps>((props, ref) => {
           const isActive = id === selectedKey;
 
           return (
-            <Tab key={id} tabId={id} data-testid={`${dataTestPrefixId}_tab_${id}`}>
+            <Tab key={id} id={id} data-testid={`${dataTestPrefixId}_tab_${id}`}>
               <span>{label}</span>
               {Boolean(counter) && (
                 <Tag

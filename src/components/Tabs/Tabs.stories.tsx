@@ -50,7 +50,7 @@ export const TabsWithContent = {
         items={getItems(false)}
       >
         {Object.keys(content).map((friend) => (
-          <TabPanel key={friend} tabId={friend}>
+          <TabPanel key={friend} id={friend}>
             {content[friend]}
           </TabPanel>
         ))}
@@ -81,7 +81,7 @@ export const TabsOrientation = {
         items={getItems(false)}
       >
         {Object.keys(content).map((friend) => (
-          <TabPanel key={friend} tabId={friend}>
+          <TabPanel key={friend} id={friend}>
             {content[friend]}
           </TabPanel>
         ))}
@@ -109,7 +109,7 @@ export const TabsWithCounter = {
         items={getItems(true)}
       >
         {Object.keys(content).map((friend) => (
-          <TabPanel key={friend} tabId={friend}>
+          <TabPanel key={friend} id={friend}>
             {content[friend]}
           </TabPanel>
         ))}
@@ -140,7 +140,7 @@ export const Playground = {
         items={getItems(hasCounter)}
       >
         {Object.keys(content).map((friend) => (
-          <TabPanel key={friend} tabId={friend}>
+          <TabPanel key={friend} id={friend}>
             {content[friend]}
           </TabPanel>
         ))}

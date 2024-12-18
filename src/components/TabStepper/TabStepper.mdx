@@ -1,0 +1,78 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
+import TabStepper from './TabStepper';
+import * as TabStepperStories from './TabStepper.stories';
+import { TabStepItemStory } from './utils/TabStepperStoryComponents';
+
+<Meta of={TabStepperStories} />
+
+<SectionHeader
+  title={'TabStepper'}
+  sections={[
+    { title: 'Overview', href: '#overview' },
+    { title: 'Props', href: '#props' },
+    { title: 'Usage', href: '#usage' },
+    { title: 'Variants', href: '#variants' },
+  ]}
+/>
+
+## Overview
+
+A TabStepper is a multi-step process that helps users to complete a task or achieve a goal by breaking it down into smaller, more manageable steps.
+
+<Tip>
+  This component is a monolith that covers most basic use cases. If you want to customize your
+  TabStepper to fit your specific needs, visit the Components section to learn how you can use the
+  tab stepper modules to create your own solutions.
+</Tip>
+
+<SubsectionHeader title="Props" />
+
+### TabStepper
+
+<ArgTypes of={TabStepper} />
+
+## TabStepItem
+
+<ArgTypes of={TabStepItemStory} />
+
+## Usage
+
+<UsageGuidelines
+  guidelines={[
+    'Steppers convey progress through numbered steps. It provides a wizard-like workflow. Steppers display progress through a sequence of logical and numbered steps. They may also be used for navigation. Steppers may display a transient feedback message after a step is saved.',
+  ]}
+  policies={[
+    'Avoid using steppers to break up sections in a short form',
+    'Dont embed steppers within steppers or use multiple steppers on one page.',
+  ]}
+/>
+
+<SubsectionHeader title="Variants" />
+
+## TabStepper types
+
+TabStepper can be simple (with only a title) or also display a subtitle.
+
+<Canvas of={TabStepperStories.TabStepperTypes} />
+
+## TabStepper with content
+
+In order to add content to your TabStepper and render it conditionally based on the selected TabStep, you can use the TabPanel component. Otherwise you can just use the TabStepper component without children and implement a custom panel functionality.
+
+<Canvas of={TabStepperStories.TabStepperWithContent} />
+
+## Orientation
+
+TabStepper can be horizontal or vertical. Use the `orientation` prop to toggle this feature.
+
+<Canvas of={TabStepperStories.TabStepperOrientation} />
+
+## TabStepper statuses
+
+There are 3 statuses for the TabStep: `pending` (the default one), `warning` and `done`. You can set the statuses thought the TabStepper's `items` prop, or the TabStep's `status` prop when creating a composition.
+
+<Canvas of={TabStepperStories.TabStepperStatuses} />
+
+## Playground
+
+<Canvas of={TabStepperStories.Playground} />
