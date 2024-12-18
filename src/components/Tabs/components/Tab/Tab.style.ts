@@ -8,4 +8,5 @@ export const containerStyles = () => (theme: Theme) =>
     cursor: pointer;
     ${flexCenterVertical};
     gap: ${theme.globals.spacing.get('4')};
+    padding: ${theme.globals.spacing.get('4')};
   `;
