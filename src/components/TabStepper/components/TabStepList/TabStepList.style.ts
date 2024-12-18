@@ -53,7 +53,7 @@ export const containerStyles = (sx?: CSSObject) => (theme: Theme) =>
       }
 
       [role='tab']:after {
-        inset: -8px -12px;
+        inset: -3px -8px;
       }
 
       [role='tab'][data-selected] {
