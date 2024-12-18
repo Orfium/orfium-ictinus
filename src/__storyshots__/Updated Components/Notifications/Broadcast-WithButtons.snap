@@ -6,11 +6,8 @@
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
   container-type: inline-size;
+  gap: 0.5rem;
   width: 100%;
 }
 
@@ -32,7 +29,7 @@
   align-items: center;
   background: rgba(200,206,255,0.20);
   border-radius: 0.25rem;
-  border: var(--_border-width) solid rgba(200,206,255,0.70);
+  border: var(--_border-width) solid #5E8DF8;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: sans-serif;
@@ -285,7 +282,7 @@
       aria-describedby="react-aria-:test-id:"
       class="emotion-2"
       data-slot="inline-alert"
-      data-testid="_inline_alert"
+      data-testid="broadcast"
       role="status"
       tabindex="0"
     >
@@ -311,7 +308,7 @@
       <div
         class="emotion-5"
       >
-        Alert copy should be short, easy to understand and actionable.
+        Broadcast copy should be short, easy to understand and actionable.
       </div>
       <div
         class="emotion-6"
@@ -356,7 +353,7 @@
       <div
         aria-label="Dismiss notification"
         class="emotion-13"
-        data-testid="_inline_alert_dismiss"
+        data-testid="broadcast_dismiss"
         id="react-aria-:test-id:"
         role="button"
         tabindex="0"
