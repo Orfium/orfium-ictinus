@@ -19,7 +19,17 @@ export const wrapperStyle =
   };
 
 export const listStyle =
-  ({ width, height, isSearchable }: { width?: number; height?: number; isSearchable?: boolean }) =>
+  ({
+    width,
+    height,
+    maxHeight,
+    isSearchable,
+  }: {
+    width?: number;
+    height?: number;
+    maxHeight?: number;
+    isSearchable?: boolean;
+  }) =>
   (theme: Theme): SerializedStyles => {
     return css`
       padding-left: 0;
@@ -28,6 +38,7 @@ export const listStyle =
       border-radius: ${isSearchable ? 'initial' : theme.dimension.borderRadius.get('md')};
       width: ${width ? rem(width) : '100%'};
       height: ${height ? rem(height) : 'auto'};
+      max-height: ${maxHeight ? rem(maxHeight) : 'auto'};
       overflow: auto;
       overflow-x: hidden;
       background: ${theme.tokens.colors.get('backgroundColor.default')};

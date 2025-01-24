@@ -16,12 +16,14 @@ const Tooltip = React.forwardRef<HTMLDivElement, TooltipProps>(
       isInteractive = false,
       delayIn = 500,
       delayOut = 500,
+      isOpen,
+      ...rest
     },
     ref
   ) => {
     return (
       <div css={tooltipStyle({ isInverted, isInteractive })}>
-        <span data-tooltip-id={id} ref={ref}>
+        <span {...rest} data-tooltip-id={id} ref={ref}>
           {children}
         </span>
         <ReactTooltip
@@ -31,6 +33,8 @@ const Tooltip = React.forwardRef<HTMLDivElement, TooltipProps>(
           delayHide={delayOut}
           clickable={isInteractive}
           className="tooltip"
+          isOpen={isOpen}
+          role="tooltip"
         >
           {content}
         </ReactTooltip>

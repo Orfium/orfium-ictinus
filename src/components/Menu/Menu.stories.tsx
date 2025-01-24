@@ -1,7 +1,7 @@
 import Menu from '../Menu';
 import Stack from '../storyUtils/Stack';
 import { FIGMA_URL } from 'utils/common';
-import { ListItem, ListItemAction, ListItemText, ListSection } from '../List';
+import { ListItem, ListItemAction, ListItemText } from '../List';
 import * as React from 'react';
 import { useCallback, useRef, useState } from 'react';
 import Link from '../Link';
@@ -12,6 +12,54 @@ import Avatar from '../Avatar';
 import MenuItemDivider from './MenuItemDivider';
 import { useTheme } from '../../index';
 import { fireEvent, within } from '@storybook/testing-library';
+
+const LIST_ITEMS = [
+  'Audio Network',
+  'Audio Socket',
+  'Bensound',
+  'Cavendish',
+  'De Wolfe',
+  'Extreme Music',
+  'Jingle Punks',
+  'Lens Distortions',
+  'Music Vine',
+  'Slipstream',
+  'SongTradr',
+  'Sony Music Publishing',
+  'Soundstripe',
+  'Video Helper',
+  'WMG',
+  'Audio Network 2',
+  'Audio Socket 2',
+  'Bensound 2',
+  'Cavendish 2',
+  'De Wolfe 2',
+  'Extreme Music 2',
+  'Jingle Punks 2',
+  'Lens Distortions 2',
+  'Music Vine 2',
+  'Slipstream 2',
+  'SongTradr 2',
+  'Sony Music Publishing 2',
+  'Soundstripe 2',
+  'Video Helper 2',
+  'WMG 2',
+  'Audio Network 3',
+  'Audio Socket 3',
+  'Bensound 3',
+  'Cavendish 3',
+  'De Wolfe 3',
+  'Extreme Music 3',
+  'Jingle Punks 3',
+  'Lens Distortions 3',
+  'Music Vine 3',
+  'Slipstream 3',
+  'SongTradr 3',
+  'Sony Music Publishing 3',
+  'Soundstripe 3',
+  'Video Helper 3',
+  'WMG 3',
+];
 
 export default {
   title: 'Updated Components/Menu',
@@ -603,6 +651,65 @@ export const MenuDisabledKeys = {
   play: async ({ canvasElement }: { canvasElement: HTMLElement }) => {
     const canvas = within(canvasElement);
     const buttons = canvas.getAllByTestId('icon-button');
+
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+
+    buttons.forEach((button) => {
+      fireEvent.click(button);
+    });
+  },
+};
+
+export const MenuWithCustomListWidthAndHeight = {
+  render: () => {
+    const factory = useCallback(() => {
+      const [isBtnOpen, setBtnOpen] = React.useState<boolean>(false);
+      const btnRef = useRef(null);
+      const handleBtnClick = (e) => {
+        e?.preventDefault && e?.preventDefault();
+        setBtnOpen((state) => !state);
+      };
+      const [selectedKeys, setSelectedKeys] = useState(new Set<string>([]));
+
+      return { isBtnOpen, setBtnOpen, btnRef, handleBtnClick, selectedKeys, setSelectedKeys };
+    }, []);
+    const btn1 = factory();
+
+    return (
+      <Stack height={400}>
+        <Button
+          ref={btn1.btnRef}
+          aria-label="Menu with many options"
+          onClick={btn1.handleBtnClick}
+          aria-controls={btn1.isBtnOpen ? 'basic-menu' : undefined}
+          aria-haspopup="true"
+          aria-expanded={btn1.isBtnOpen ? 'true' : undefined}
+        >
+          Menu with many options
+        </Button>
+        <Menu
+          triggerRef={btn1.btnRef}
+          isOpen={btn1.isBtnOpen}
+          onClose={btn1.handleBtnClick}
+          selectedKeys={btn1.selectedKeys}
+          rowSize={'compact'}
+          onSelectionChange={btn1.setSelectedKeys}
+          sx={{ listProps: { maxHeight: 285, width: 190 } }}
+        >
+          {LIST_ITEMS.map((item) => (
+            <ListItem key={item} textValue={item} parentType={'Menu'}>
+              <ListItemText>{item}</ListItemText>
+            </ListItem>
+          ))}
+        </Menu>
+      </Stack>
+    );
+  },
+  name: 'Menu With Custom List Width And Height',
+  autoplay: true,
+  play: async ({ canvasElement }: { canvasElement: HTMLElement }) => {
+    const canvas = within(canvasElement);
+    const buttons = canvas.getAllByTestId('button');
 
     await new Promise((resolve) => setTimeout(resolve, 2000));
 

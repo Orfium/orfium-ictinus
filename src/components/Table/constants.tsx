@@ -2,7 +2,6 @@
 import type { SortingState } from '@tanstack/react-table';
 
 import type { TableColumn, TableRow } from './types';
-import Tag from '../Tag';
 import Typography from 'components/Typography';
 
 export const ACTIONS_CELL_WIDTH = 52;
@@ -82,6 +81,33 @@ export const sortedData = (data, sorting: SortingState) => {
   }
 };
 
+export const multiSortDataByKey = (data, keys) => {
+  const returnData =
+    keys.length === 0
+      ? data
+      : data.sort((a, b) => {
+          for (const { id, desc } of keys) {
+            const valueA = a.cells[id];
+            const valueB = b.cells[id];
+
+            let comparison;
+            if (id === 'age') {
+              comparison = parseInt(valueA, 10) - parseInt(valueB, 10);
+            } else {
+              comparison = valueA < valueB ? -1 : valueA > valueB ? 1 : 0;
+            }
+
+            if (comparison !== 0) {
+              return desc ? -comparison : comparison;
+            }
+          }
+
+          return 0;
+        });
+
+  return returnData;
+};
+
 const quotes = {
   rachel: {
     1: "It's like all my life everyone has always told me, 'You're a shoe! You're a shoe! You're a shoe!' Well, what if I don't want to be a shoe? What if I want to be a purse, you know, or a hat!",
@@ -147,7 +173,7 @@ export const simpleData = (isDetailed?: boolean): TableRow<SimpleData>[] => [
       firstName: 'Rachel',
       lastName: 'Berry',
       age: 30,
-      job: <Tag>Fashion Executive</Tag>,
+      job: 'Fashion Executive',
     },
     ...(isDetailed && { details: getDetails('rachel') }),
   },
@@ -156,16 +182,16 @@ export const simpleData = (isDetailed?: boolean): TableRow<SimpleData>[] => [
       firstName: 'Ross',
       lastName: 'Geller',
       age: 32,
-      job: <Tag>Paleontologist</Tag>,
+      job: 'Paleontologist',
     },
     ...(isDetailed && { details: getDetails('ross') }),
   },
   {
-    cells: { firstName: 'Monica', lastName: 'Geller', age: 31, job: <Tag>Chef</Tag> },
+    cells: { firstName: 'Monica', lastName: 'Geller', age: 31, job: 'Chef' },
     ...(isDetailed && { details: getDetails('monica') }),
   },
   {
-    cells: { firstName: 'Chandler', lastName: 'Bing', age: 32, job: <Tag>?</Tag> },
+    cells: { firstName: 'Chandler', lastName: 'Bing', age: 32, job: '?' },
     ...(isDetailed && { details: getDetails('chandler') }),
   },
   {
@@ -173,7 +199,7 @@ export const simpleData = (isDetailed?: boolean): TableRow<SimpleData>[] => [
       firstName: 'Joey',
       lastName: 'Tribbiani',
       age: 30,
-      job: <Tag>Actor</Tag>,
+      job: 'Actor',
     },
     ...(isDetailed && { details: getDetails('joey') }),
   },
@@ -182,7 +208,7 @@ export const simpleData = (isDetailed?: boolean): TableRow<SimpleData>[] => [
       firstName: 'Phoebe',
       lastName: 'Buffay',
       age: 31,
-      job: <Tag>Massage Therapist</Tag>,
+      job: 'Massage Therapist',
     },
     ...(isDetailed && { details: getDetails('phoebe') }),
   },
@@ -194,7 +220,7 @@ export const moreData = (isDetailed?: boolean): TableRow<SimpleData>[] => [
       firstName: 'Gunther',
       lastName: undefined,
       age: 35,
-      job: <Tag>Central Perk Manager</Tag>,
+      job: 'Central Perk Manager',
     },
     ...(isDetailed && { details: getDetails('gunther') }),
   },
@@ -203,7 +229,7 @@ export const moreData = (isDetailed?: boolean): TableRow<SimpleData>[] => [
       firstName: 'Janice',
       lastName: 'Litman-Foralnik',
       age: 35,
-      job: <Tag>Personal Shopper</Tag>,
+      job: 'Personal Shopper',
     },
     ...(isDetailed && { details: getDetails('janice') }),
   },
@@ -212,7 +238,7 @@ export const moreData = (isDetailed?: boolean): TableRow<SimpleData>[] => [
       firstName: 'Richard',
       lastName: 'Burke',
       age: 50,
-      job: <Tag>Ophthalmologist</Tag>,
+      job: 'Ophthalmologist',
     },
     ...(isDetailed && { details: getDetails('richard') }),
   },
@@ -221,7 +247,7 @@ export const moreData = (isDetailed?: boolean): TableRow<SimpleData>[] => [
       firstName: 'Estelle',
       lastName: 'Leonard',
       age: undefined,
-      job: <Tag>Talent Agent</Tag>,
+      job: 'Talent Agent',
     },
     ...(isDetailed && { details: getDetails('estelle') }),
   },
@@ -239,7 +265,7 @@ export const moreData = (isDetailed?: boolean): TableRow<SimpleData>[] => [
       firstName: 'Charlie',
       lastName: 'Wheeler',
       age: 28,
-      job: <Tag>Paleontologist</Tag>,
+      job: 'Paleontologist',
     },
     ...(isDetailed && { details: getDetails('charlie') }),
   },
@@ -275,7 +301,7 @@ export const moreData = (isDetailed?: boolean): TableRow<SimpleData>[] => [
       firstName: 'Barry',
       lastName: 'Farber',
       age: 30,
-      job: <Tag>Orthodontist</Tag>,
+      job: 'Orthodontist',
     },
     ...(isDetailed && { details: getDetails('barry') }),
   },
@@ -284,7 +310,7 @@ export const moreData = (isDetailed?: boolean): TableRow<SimpleData>[] => [
       firstName: 'Mr. Heckles',
       lastName: undefined,
       age: 60,
-      job: <Tag>Retired</Tag>,
+      job: 'Retired',
     },
     ...(isDetailed && { details: getDetails('mrHeckles') }),
   },
@@ -293,7 +319,7 @@ export const moreData = (isDetailed?: boolean): TableRow<SimpleData>[] => [
       firstName: 'Tag',
       lastName: 'Jones',
       age: 24,
-      job: <Tag>Assistant</Tag>,
+      job: 'Assistant',
     },
     ...(isDetailed && { details: getDetails('tag') }),
   },
@@ -302,7 +328,7 @@ export const moreData = (isDetailed?: boolean): TableRow<SimpleData>[] => [
       firstName: 'Pete',
       lastName: 'Becker',
       age: 32,
-      job: <Tag>Software Engineer</Tag>,
+      job: 'Software Engineer',
     },
     ...(isDetailed && { details: getDetails('pete') }),
   },
@@ -311,7 +337,7 @@ export const moreData = (isDetailed?: boolean): TableRow<SimpleData>[] => [
       firstName: 'Paul',
       lastName: 'Stevens',
       age: 50,
-      job: <Tag>Lawyer</Tag>,
+      job: 'Lawyer',
     },
     ...(isDetailed && { details: getDetails('paul') }),
   },

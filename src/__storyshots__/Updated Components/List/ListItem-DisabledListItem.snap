@@ -16,6 +16,7 @@
   border-radius: 0.25rem;
   width: 100%;
   height: auto;
+  max-height: auto;
   overflow: auto;
   overflow-x: hidden;
   background: #ffffff;
@@ -514,9 +515,9 @@
           style="height: 100%;"
         >
           <ul
-            aria-labelledby="react-aria-:r51:"
+            aria-labelledby="react-aria-:test-id:"
             class="emotion-3"
-            id="react-aria-:r4v:"
+            id="react-aria-:test-id:"
             role="listbox"
             style="overflow-y: auto; position: relative; display: flex; flex-direction: column; height: 100%; list-style: none; padding: 0px;"
             tabindex="0"
@@ -527,7 +528,7 @@
               class="emotion-4 "
               data-key="1"
               data-testid="ictinus_list_item_1"
-              id="react-aria-:r4v:-option-1"
+              id="react-aria-:test-id:-option-1"
               role="option"
             >
               <div
@@ -544,7 +545,7 @@
               class="emotion-4 "
               data-key="3"
               data-testid="ictinus_list_item_3"
-              id="react-aria-:r4v:-option-3"
+              id="react-aria-:test-id:-option-3"
               role="option"
             >
               <div
@@ -587,7 +588,7 @@
               class="emotion-10 "
               data-key="4"
               data-testid="ictinus_list_item_4"
-              id="react-aria-:r4v:-option-4"
+              id="react-aria-:test-id:-option-4"
               role="option"
             >
               <div
@@ -628,7 +629,7 @@
               class="emotion-4 "
               data-key="5"
               data-testid="ictinus_list_item_5"
-              id="react-aria-:r4v:-option-5"
+              id="react-aria-:test-id:-option-5"
               role="option"
             >
               <div
@@ -686,7 +687,7 @@
               class="emotion-4 "
               data-key="6"
               data-testid="ictinus_list_item_6"
-              id="react-aria-:r4v:-option-6"
+              id="react-aria-:test-id:-option-6"
               role="option"
             >
               <div
@@ -697,7 +698,7 @@
                   aria-orientation="vertical"
                   class="emotion-24"
                   data-testid="undefined_radio_group_container"
-                  id="react-aria-:r5d:"
+                  id="react-aria-:test-id:"
                   role="radiogroup"
                 >
                   <div
@@ -713,7 +714,7 @@
                       >
                         <input
                           disabled=""
-                          name="react-aria-:r5i:"
+                          name="react-aria-:test-id:"
                           tabindex="0"
                           type="radio"
                           value="6"

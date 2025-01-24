@@ -43,9 +43,18 @@
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .emotion-2 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -76,9 +85,12 @@
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.emotion-3 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -109,9 +121,12 @@
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.emotion-4 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -142,9 +157,12 @@
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.emotion-5 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -175,9 +193,12 @@
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.emotion-6 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -208,6 +229,9 @@
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 <div>
@@ -224,20 +248,11 @@
         data-testid="undefined_tag_container"
         tabindex="-1"
       >
-        Label
-      </div>
-    </div>
-    <div
-      style="margin: 5px;"
-    >
-      <div
-        aria-label="Label"
-        aria-selected="false"
-        class="emotion-2"
-        data-testid="undefined_tag_container"
-        tabindex="-1"
-      >
-        Label
+        <div
+          class="emotion-2"
+        >
+          Label
+        </div>
       </div>
     </div>
     <div
@@ -250,20 +265,11 @@
         data-testid="undefined_tag_container"
         tabindex="-1"
       >
-        Label
-      </div>
-    </div>
-    <div
-      style="margin: 5px;"
-    >
-      <div
-        aria-label="Label"
-        aria-selected="false"
-        class="emotion-4"
-        data-testid="undefined_tag_container"
-        tabindex="-1"
-      >
-        Label
+        <div
+          class="emotion-2"
+        >
+          Label
+        </div>
       </div>
     </div>
     <div
@@ -276,7 +282,11 @@
         data-testid="undefined_tag_container"
         tabindex="-1"
       >
-        Label
+        <div
+          class="emotion-2"
+        >
+          Label
+        </div>
       </div>
     </div>
     <div
@@ -285,11 +295,49 @@
       <div
         aria-label="Label"
         aria-selected="false"
-        class="emotion-6"
+        class="emotion-7"
         data-testid="undefined_tag_container"
         tabindex="-1"
       >
-        Label
+        <div
+          class="emotion-2"
+        >
+          Label
+        </div>
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        aria-label="Label"
+        aria-selected="false"
+        class="emotion-9"
+        data-testid="undefined_tag_container"
+        tabindex="-1"
+      >
+        <div
+          class="emotion-2"
+        >
+          Label
+        </div>
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        aria-label="Label"
+        aria-selected="false"
+        class="emotion-11"
+        data-testid="undefined_tag_container"
+        tabindex="-1"
+      >
+        <div
+          class="emotion-2"
+        >
+          Label
+        </div>
       </div>
     </div>
   </div>

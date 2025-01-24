@@ -5,6 +5,8 @@ import useGetTagUtils from './hooks/useGetTagUtils';
 import { tagContainerStyles } from './Tag.style';
 import type { TagProps } from './Tag.types';
 
+import { lineEllipsis } from '~/theme/functions';
+
 const Tag = React.forwardRef<HTMLDivElement, DivProps & TagProps>(
   (
     {
@@ -37,7 +39,7 @@ const Tag = React.forwardRef<HTMLDivElement, DivProps & TagProps>(
         {...rest}
       >
         {prefix}
-        {children}
+        <div css={lineEllipsis}>{children}</div>
         {suffix}
       </div>
     );

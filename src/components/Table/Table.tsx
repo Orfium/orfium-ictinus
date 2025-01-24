@@ -42,7 +42,6 @@ const Table = <TData extends NoUndefined<TData>>({
     sorting,
     rowsConfig,
     columnsConfig,
-    pagination,
     dataTestPrefixId,
   });
 
@@ -67,35 +66,52 @@ const Table = <TData extends NoUndefined<TData>>({
       )}
       <table css={tableStyles({ sx: sx?.table })} data-testid={`${dataTestPrefixId}_table`}>
         <THead hasStickyHeader={hasStickyHeader} hasScrollbar={hasScrollbar} sx={sx?.thead}>
-          {table.getHeaderGroups().map((headerGroup) => (
-            <TR key={headerGroup.id} sx={sx?.tr}>
-              {headerGroup.headers.map((header) => (
-                <TH
-                  id={header.id}
-                  key={header.id}
-                  colSpan={header.colSpan}
-                  rowSize={rowSize}
-                  width={header.getSize()}
-                  metaData={header.column.columnDef.meta}
-                  {...(header.column.getCanSort() && {
-                    colSortingState: sorting?.sortingColumn?.find((col) => col.id === header.id),
-                    onSort: header.column.toggleSorting,
-                    isMultiSortable: header.column.getCanMultiSort(),
-                    resetSorting: header.column.clearSorting,
-                  })}
-                  sx={sx?.th}
-                  dataTestPrefixId={dataTestPrefixId}
-                >
-                  {header.isPlaceholder
-                    ? null
-                    : flexRender(header.column.columnDef.header, header.getContext())}
-                </TH>
-              ))}
-            </TR>
-          ))}
+          {table.getHeaderGroups().map((headerGroup) => {
+            const headers = headerGroup.headers.length - +isSelectable - +isExpandable;
+
+            return (
+              <TR key={headerGroup.id} sx={sx?.tr}>
+                {headerGroup.headers.map((header) => (
+                  <TH
+                    id={header.id}
+                    key={header.id}
+                    colSpan={header.colSpan}
+                    rowSize={rowSize}
+                    width={header.getSize() || 100 / headers}
+                    metaData={header.column.columnDef.meta}
+                    {...(header.column.getCanSort() && {
+                      colSortingState: sorting?.sortingColumn?.find((col) => col.id === header.id)
+                        ? {
+                            /** Find and pass the ColumnSort object */
+                            ...sorting?.sortingColumn?.find((col) => col.id === header.id),
+                            /** Check if multiSort and determine the position of the ColumnSort object in the Sorting Array */
+                            ...(sorting.sortingColumn.length > 1 && {
+                              badge:
+                                sorting?.sortingColumn?.findIndex((col) => col.id === header.id) +
+                                1,
+                            }),
+                          }
+                        : undefined,
+                      onSort: header.column.toggleSorting,
+                      isMultiSortable: header.column.getCanMultiSort(),
+                      resetSorting: header.column.clearSorting,
+                    })}
+                    sx={sx?.th}
+                    dataTestPrefixId={dataTestPrefixId}
+                  >
+                    {header.isPlaceholder
+                      ? null
+                      : flexRender(header.column.columnDef.header, header.getContext())}
+                  </TH>
+                ))}
+              </TR>
+            );
+          })}
         </THead>
         <TBody hasStickyHeader={hasStickyHeader} ref={tBodyRef} sx={sx?.tbody}>
           {table.getRowModel().rows.map((row, index) => {
+            const cells = row.getVisibleCells().length - +isExpandable - +isSelectable;
+
             return (
               <>
                 <TR
@@ -123,7 +139,7 @@ const Table = <TData extends NoUndefined<TData>>({
                         rowId={cell.id}
                         key={cell.id}
                         rowSize={rowSize}
-                        width={cell.column.getSize()}
+                        width={cell.column.getSize() || 100 / cells}
                         metaData={cell.column.columnDef.meta}
                         sx={sx?.td}
                         dataTestPrefixId={dataTestPrefixId}

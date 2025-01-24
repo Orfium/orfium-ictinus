@@ -8,11 +8,14 @@ import {
 } from '@tanstack/react-table';
 import useTheme from 'hooks/useTheme';
 import { concat } from 'lodash-es';
-import React from 'react';
+import React, { useMemo } from 'react';
 import type { Theme } from 'theme';
 
 import { CheckBox } from 'components/Controls';
 import Icon from 'components/Icon';
+
+import Typography from '~/components/Typography';
+import { lineEllipsis } from '~/theme/functions';
 
 type ReturnValue<TData> = {
   getHeaderGroups: () => HeaderGroup<TData>[];
@@ -113,7 +116,19 @@ const getColumns = (
       tColumns.push(
         columnHelper.accessor(column.id as any, {
           header: column.header,
-          cell: (info) => info.getValue(),
+          cell: (info) => {
+            const value = info.getValue();
+
+            if (typeof value === 'string' || typeof value === 'number') {
+              return (
+                <Typography variant="body02" component="span" css={lineEllipsis}>
+                  {value}
+                </Typography>
+              );
+            }
+
+            return value;
+          },
           size: column.width ?? 'auto',
           minSize: column.width,
           enableSorting: column.isSortable ?? false,
@@ -137,7 +152,6 @@ const useTable = <TData,>({
   sorting,
   rowsConfig,
   columnsConfig,
-  pagination,
   dataTestPrefixId,
   ...rest
 }): ReturnValue<TData> => {
@@ -148,6 +162,8 @@ const useTable = <TData,>({
   const { rowSelection, setRowSelection, expanded, setExpanded } = rowsConfig ?? {};
 
   const hasRowDetails = data.some((row) => row.details) && Boolean(expanded);
+
+  const tableData = useMemo(() => data.map((data) => data.cells), [data]);
 
   const hasCheckboxes = Boolean(rowSelection && isTableInteractive);
 
@@ -161,13 +177,6 @@ const useTable = <TData,>({
       ...(expanded && { expanded }),
     };
   }, [columnsConfig, expanded, isTableInteractive, rowSelection, sorting]);
-
-  /** Since tanstack's useTable doesn't detect array object mutations, we need to manually create new data array (new ref) to trigger a re-render */
-  const [tableData, setTableData] = React.useState(data.map((data) => data.cells));
-
-  React.useEffect(() => {
-    setTableData(data.map((data) => data.cells));
-  }, [sorting?.sortingColumn, pagination?.page, pagination?.showItems]);
 
   const table = useReactTable<TData>({
     /** Basic Functionality */

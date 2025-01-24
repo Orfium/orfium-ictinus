@@ -27,6 +27,7 @@ export type MenuProps = {
   onAction?: (item: string) => any;
   /** The selection mode of the menu */
   selectionMode?: 'single' | 'multiple';
+  sx?: { listProps?: { maxHeight?: number; width?: number } };
 } & TestProps;
 
 const Menu: React.FC<MenuProps> = ({
@@ -41,6 +42,7 @@ const Menu: React.FC<MenuProps> = ({
   onClose = () => {},
   onAction = () => {},
   dataTestId,
+  sx = { listProps: {} },
 }) => {
   const isCompact = rowSize === 'compact';
 
@@ -52,7 +54,7 @@ const Menu: React.FC<MenuProps> = ({
           selectedKeys={selectedKeys}
           disabledKeys={disabledKeys}
           onSelectionChange={onSelectionChange}
-          css={listStyle({})}
+          css={listStyle(sx.listProps)}
           data-testid={dataTestId}
           onAction={onAction}
         >

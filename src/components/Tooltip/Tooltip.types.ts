@@ -28,5 +28,7 @@ export type TooltipProps = TooltipContent & {
   /** Hide delay for tooltip */
   /** @default 500 */
   delayOut?: number;
+  /** The tooltip can be controlled or uncontrolled, this attribute can be used to handle show and hide tooltip outside tooltip  */
+  isOpen?: boolean;
   children: React.ReactElement;
 };

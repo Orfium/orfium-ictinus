@@ -1,0 +1,70 @@
+import { Meta, Canvas, ArgTypes, Story, Primary } from '@storybook/blocks';
+import * as BroadcastStories from './Broadcast.stories';
+import { Broadcast } from './Broadcast';
+
+<Meta of={BroadcastStories} />
+
+<SectionHeader
+  title="Broadcast"
+  sections={[
+    { title: 'Overview', href: '#overview' },
+    { title: 'Props', href: '#props' },
+    { title: 'Usage', href: '#usage' },
+    { title: 'Variants', href: '#variants' },
+  ]}
+/>
+
+## Overview
+
+A broadcast is used to make an announcement or provide a notification from an admin to all users within a single instance.
+
+<Primary />
+
+## Props
+
+<ArgTypes of={Broadcast} />
+
+## Usage
+
+<Tip>
+  The Broadcast component uses CSS Container Queries for responsive design. To enable this feature
+  wrap the `Broadcast` in a parent element and set the `container-type` CSS property on this parent
+  element.
+</Tip>
+
+<UsageGuidelines
+  guidelines={[
+    'To make a system-wide announcement (e.g. inform users about planned maintenance downtime).',
+    'Convey important system-wide announcements or notifications to users directly within the product interface (e.g.inform a user about their verification status upon accessing the product).',
+  ]}
+  policies={[
+    'If you need to provide a contextual and timely message to a user, use an alert instead.',
+    `If you are immediately confirming a user's action while they remain in the same view, use a toast instead.`,
+  ]}
+/>
+
+<SubsectionHeader title="Variants" />
+
+### Neutral
+
+<Canvas of={BroadcastStories.Neutral} />
+
+### Informational
+
+<Canvas of={BroadcastStories.Informational} />
+
+### Error
+
+<Canvas of={BroadcastStories.Error} />
+
+### Warning
+
+<Canvas of={BroadcastStories.Warning} />
+
+### Success
+
+<Canvas of={BroadcastStories.Success} />
+
+### Playground
+
+<Canvas of={BroadcastStories.Playground} />

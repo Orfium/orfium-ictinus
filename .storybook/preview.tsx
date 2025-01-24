@@ -13,6 +13,7 @@ import {
   Tip,
   Note,
   Preview,
+  Alert,
 } from '../src/storybook';
 import {
   TypographyResetFontSmooth,
@@ -241,6 +242,7 @@ const preview: SBPreview = {
         Preview,
         SubsectionHeader,
         SectionHeader,
+        Alert,
       },
     },
   },

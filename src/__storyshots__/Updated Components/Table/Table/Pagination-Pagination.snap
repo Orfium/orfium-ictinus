@@ -21,11 +21,12 @@
 }
 
 .emotion-2 {
+  position: relative;
   box-shadow: 0 0.0625rem 0 0 rgba(200,206,255,0.70);
 }
 
 .emotion-4 {
-  width: 100%;
+  width: 25%;
   height: 2.75rem;
   -webkit-align-content: center;
   -ms-flex-line-pack: center;
@@ -40,12 +41,15 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-4 [data-header-role='options'] button {
+.emotion-4 [data-header-role='options'],
+.emotion-4 [data-header-role='sorting-button'] {
   opacity: 0;
 }
 
-.emotion-4:hover [data-header-role='options'] button,
-.emotion-4:focus-visible [data-header-role='options'] button {
+.emotion-4:hover [data-header-role='options'],
+.emotion-4:focus-visible [data-header-role='options'],
+.emotion-4:hover [data-header-role='sorting-button'],
+.emotion-4:focus-visible [data-header-role='sorting-button'] {
   opacity: 1;
 }
 
@@ -67,6 +71,9 @@
   -webkit-justify-content: flex-start;
   justify-content: flex-start;
   gap: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .emotion-6 {
@@ -74,7 +81,7 @@
 }
 
 .emotion-18 {
-  width: 100%;
+  width: 25%;
   height: 2.75rem;
   padding: 0.5rem 1rem;
   border-bottom: 0.0625rem solid rgba(200,206,255,0.70);
@@ -85,54 +92,22 @@
 }
 
 .emotion-19 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
+  text-align: left;
 }
 
-.emotion-26 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 1.5rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  box-sizing: border-box;
-  gap: 0.25rem;
-  padding: 0.125rem 0.5rem;
-  cursor: auto;
-  background: #ffffff;
-  color: #194DCC;
-  border: 0.0625rem solid;
-  border-color: rgba(200,206,255,0.70);
-  border-radius: 0.25rem;
+.emotion-20 {
   font-family: Roboto;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  color: #111530;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.emotion-117 {
+.emotion-145 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -147,14 +122,14 @@
   background: #ffffff;
   height: 2.75rem;
   width: 100%;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1rem;
   box-sizing: border-box;
   border-top: 0.0625rem solid rgba(200,206,255,0.70);
   border-bottom-left-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
 }
 
-.emotion-118 {
+.emotion-146 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -166,12 +141,12 @@
   gap: 0.5rem;
 }
 
-.emotion-119 {
+.emotion-147 {
   position: relative;
   min-width: 8.75rem;
 }
 
-.emotion-120 {
+.emotion-148 {
   overflow: inherit;
   text-overflow: inherit;
   width: 100%;
@@ -179,11 +154,11 @@
   position: relative;
 }
 
-.emotion-120 #unique-tooltip-id {
+.emotion-148 #unique-tooltip-id {
   display: none!important;
 }
 
-.emotion-121 {
+.emotion-149 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -211,16 +186,16 @@
   background-color: rgba(200,206,255,0.30);
 }
 
-.emotion-121:hover {
+.emotion-149:hover {
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-121:focus-within {
+.emotion-149:focus-within {
   box-shadow: 0 0 0 0.125rem #175BF5;
   background-color: rgba(200,206,255,0.30);
 }
 
-.emotion-122 {
+.emotion-150 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -240,11 +215,11 @@
   padding: 0rem 0rem 0rem 0.75rem;
 }
 
-.emotion-122>div {
+.emotion-150>div {
   position: relative;
 }
 
-.emotion-123 {
+.emotion-151 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -254,7 +229,7 @@
   flex: 1;
 }
 
-.emotion-124 {
+.emotion-152 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1rem;
@@ -272,61 +247,61 @@
   min-width: 100%;
 }
 
-.emotion-124::-webkit-input-placeholder {
+.emotion-152::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-124::-moz-placeholder {
+.emotion-152::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-124:-ms-input-placeholder {
+.emotion-152:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-124::placeholder {
+.emotion-152::placeholder {
   color: transparent;
 }
 
-.emotion-124:focus {
+.emotion-152:focus {
   outline: none;
 }
 
-.emotion-124:focus::-webkit-input-placeholder {
+.emotion-152:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-124:focus::-moz-placeholder {
+.emotion-152:focus::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-124:focus:-ms-input-placeholder {
+.emotion-152:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-124:focus::placeholder {
+.emotion-152:focus::placeholder {
   color: transparent;
 }
 
-.emotion-124:not(:focus):placeholder-shown+label {
+.emotion-152:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-124:focus-within+label,
-.emotion-124:not(:placeholder-shown)+label {
+.emotion-152:focus-within+label,
+.emotion-152:not(:placeholder-shown)+label {
   display: none;
 }
 
-.emotion-124:focus-within+label {
+.emotion-152:focus-within+label {
   font-weight: 700!important;
   color: #194DCC;
 }
 
-.emotion-124:disabled {
+.emotion-152:disabled {
   cursor: not-allowed;
 }
 
-.emotion-125 {
+.emotion-153 {
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
@@ -361,7 +336,7 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-126 {
+.emotion-154 {
   min-width: 1.75rem;
   overflow: visible;
   display: -webkit-box;
@@ -379,7 +354,7 @@
   cursor: unset;
 }
 
-.emotion-127 {
+.emotion-155 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -397,7 +372,7 @@
   transition: all 0.2s ease-in-out;
 }
 
-.emotion-128 {
+.emotion-156 {
   width: 1rem;
   height: 1rem;
   display: -webkit-box;
@@ -407,16 +382,16 @@
   cursor: pointer;
 }
 
-.emotion-129 {
+.emotion-157 {
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-129 path {
+.emotion-157 path {
   fill: #52567a!important;
 }
 
-.emotion-130 {
+.emotion-158 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -428,7 +403,7 @@
   gap: 2rem;
 }
 
-.emotion-131 {
+.emotion-159 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -436,7 +411,7 @@
   gap: 0.25rem;
 }
 
-.emotion-132 {
+.emotion-160 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1rem;
@@ -445,7 +420,7 @@
   color: #52567a;
 }
 
-.emotion-133 {
+.emotion-161 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1rem;
@@ -454,21 +429,21 @@
   color: #111530;
 }
 
-.emotion-136 {
+.emotion-164 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-137 {
+.emotion-165 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-138 {
+.emotion-166 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1rem;
@@ -498,25 +473,25 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-138:focus-visible:not(:disabled) {
+.emotion-166:focus-visible:not(:disabled) {
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-138:disabled {
+.emotion-166:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-138:hover:not(:disabled) {
+.emotion-166:hover:not(:disabled) {
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-138:active:not(:disabled),
-.emotion-138[aria-expanded="true"] {
+.emotion-166:active:not(:disabled),
+.emotion-166[aria-expanded="true"] {
   background-color: rgba(200,206,255,0.30);
 }
 
-.emotion-139 {
+.emotion-167 {
   width: 1rem;
   height: 1rem;
   display: -webkit-box;
@@ -525,12 +500,12 @@
   display: flex;
 }
 
-.emotion-140 {
+.emotion-168 {
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-140 path {
+.emotion-168 path {
   fill: #194DCC!important;
 }
 
@@ -628,7 +603,11 @@
             <div
               class="emotion-19"
             >
-              Rachel
+              <span
+                class="emotion-20"
+              >
+                Rachel
+              </span>
             </div>
           </td>
           <td
@@ -638,7 +617,11 @@
             <div
               class="emotion-19"
             >
-              Berry
+              <span
+                class="emotion-20"
+              >
+                Berry
+              </span>
             </div>
           </td>
           <td
@@ -648,7 +631,11 @@
             <div
               class="emotion-19"
             >
-              30
+              <span
+                class="emotion-20"
+              >
+                30
+              </span>
             </div>
           </td>
           <td
@@ -658,15 +645,11 @@
             <div
               class="emotion-19"
             >
-              <div
-                aria-label="Fashion Executive"
-                aria-selected="false"
-                class="emotion-26"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-20"
               >
                 Fashion Executive
-              </div>
+              </span>
             </div>
           </td>
         </tr>
@@ -680,7 +663,11 @@
             <div
               class="emotion-19"
             >
-              Ross
+              <span
+                class="emotion-20"
+              >
+                Ross
+              </span>
             </div>
           </td>
           <td
@@ -690,7 +677,11 @@
             <div
               class="emotion-19"
             >
-              Geller
+              <span
+                class="emotion-20"
+              >
+                Geller
+              </span>
             </div>
           </td>
           <td
@@ -700,7 +691,11 @@
             <div
               class="emotion-19"
             >
-              32
+              <span
+                class="emotion-20"
+              >
+                32
+              </span>
             </div>
           </td>
           <td
@@ -710,15 +705,11 @@
             <div
               class="emotion-19"
             >
-              <div
-                aria-label="Paleontologist"
-                aria-selected="false"
-                class="emotion-26"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-20"
               >
                 Paleontologist
-              </div>
+              </span>
             </div>
           </td>
         </tr>
@@ -732,7 +723,11 @@
             <div
               class="emotion-19"
             >
-              Monica
+              <span
+                class="emotion-20"
+              >
+                Monica
+              </span>
             </div>
           </td>
           <td
@@ -742,7 +737,11 @@
             <div
               class="emotion-19"
             >
-              Geller
+              <span
+                class="emotion-20"
+              >
+                Geller
+              </span>
             </div>
           </td>
           <td
@@ -752,7 +751,11 @@
             <div
               class="emotion-19"
             >
-              31
+              <span
+                class="emotion-20"
+              >
+                31
+              </span>
             </div>
           </td>
           <td
@@ -762,15 +765,11 @@
             <div
               class="emotion-19"
             >
-              <div
-                aria-label="Chef"
-                aria-selected="false"
-                class="emotion-26"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-20"
               >
                 Chef
-              </div>
+              </span>
             </div>
           </td>
         </tr>
@@ -784,7 +783,11 @@
             <div
               class="emotion-19"
             >
-              Chandler
+              <span
+                class="emotion-20"
+              >
+                Chandler
+              </span>
             </div>
           </td>
           <td
@@ -794,7 +797,11 @@
             <div
               class="emotion-19"
             >
-              Bing
+              <span
+                class="emotion-20"
+              >
+                Bing
+              </span>
             </div>
           </td>
           <td
@@ -804,7 +811,11 @@
             <div
               class="emotion-19"
             >
-              32
+              <span
+                class="emotion-20"
+              >
+                32
+              </span>
             </div>
           </td>
           <td
@@ -814,15 +825,11 @@
             <div
               class="emotion-19"
             >
-              <div
-                aria-label="?"
-                aria-selected="false"
-                class="emotion-26"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-20"
               >
                 ?
-              </div>
+              </span>
             </div>
           </td>
         </tr>
@@ -836,7 +843,11 @@
             <div
               class="emotion-19"
             >
-              Joey
+              <span
+                class="emotion-20"
+              >
+                Joey
+              </span>
             </div>
           </td>
           <td
@@ -846,7 +857,11 @@
             <div
               class="emotion-19"
             >
-              Tribbiani
+              <span
+                class="emotion-20"
+              >
+                Tribbiani
+              </span>
             </div>
           </td>
           <td
@@ -856,7 +871,11 @@
             <div
               class="emotion-19"
             >
-              30
+              <span
+                class="emotion-20"
+              >
+                30
+              </span>
             </div>
           </td>
           <td
@@ -866,15 +885,11 @@
             <div
               class="emotion-19"
             >
-              <div
-                aria-label="Actor"
-                aria-selected="false"
-                class="emotion-26"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-20"
               >
                 Actor
-              </div>
+              </span>
             </div>
           </td>
         </tr>
@@ -888,7 +903,11 @@
             <div
               class="emotion-19"
             >
-              Phoebe
+              <span
+                class="emotion-20"
+              >
+                Phoebe
+              </span>
             </div>
           </td>
           <td
@@ -898,7 +917,11 @@
             <div
               class="emotion-19"
             >
-              Buffay
+              <span
+                class="emotion-20"
+              >
+                Buffay
+              </span>
             </div>
           </td>
           <td
@@ -908,7 +931,11 @@
             <div
               class="emotion-19"
             >
-              31
+              <span
+                class="emotion-20"
+              >
+                31
+              </span>
             </div>
           </td>
           <td
@@ -918,15 +945,11 @@
             <div
               class="emotion-19"
             >
-              <div
-                aria-label="Massage Therapist"
-                aria-selected="false"
-                class="emotion-26"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-20"
               >
                 Massage Therapist
-              </div>
+              </span>
             </div>
           </td>
         </tr>
@@ -940,7 +963,11 @@
             <div
               class="emotion-19"
             >
-              Gunther
+              <span
+                class="emotion-20"
+              >
+                Gunther
+              </span>
             </div>
           </td>
           <td
@@ -958,7 +985,11 @@
             <div
               class="emotion-19"
             >
-              35
+              <span
+                class="emotion-20"
+              >
+                35
+              </span>
             </div>
           </td>
           <td
@@ -968,15 +999,11 @@
             <div
               class="emotion-19"
             >
-              <div
-                aria-label="Central Perk Manager"
-                aria-selected="false"
-                class="emotion-26"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-20"
               >
                 Central Perk Manager
-              </div>
+              </span>
             </div>
           </td>
         </tr>
@@ -990,7 +1017,11 @@
             <div
               class="emotion-19"
             >
-              Janice
+              <span
+                class="emotion-20"
+              >
+                Janice
+              </span>
             </div>
           </td>
           <td
@@ -1000,7 +1031,11 @@
             <div
               class="emotion-19"
             >
-              Litman-Foralnik
+              <span
+                class="emotion-20"
+              >
+                Litman-Foralnik
+              </span>
             </div>
           </td>
           <td
@@ -1010,7 +1045,11 @@
             <div
               class="emotion-19"
             >
-              35
+              <span
+                class="emotion-20"
+              >
+                35
+              </span>
             </div>
           </td>
           <td
@@ -1020,15 +1059,11 @@
             <div
               class="emotion-19"
             >
-              <div
-                aria-label="Personal Shopper"
-                aria-selected="false"
-                class="emotion-26"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-20"
               >
                 Personal Shopper
-              </div>
+              </span>
             </div>
           </td>
         </tr>
@@ -1042,7 +1077,11 @@
             <div
               class="emotion-19"
             >
-              Richard
+              <span
+                class="emotion-20"
+              >
+                Richard
+              </span>
             </div>
           </td>
           <td
@@ -1052,7 +1091,11 @@
             <div
               class="emotion-19"
             >
-              Burke
+              <span
+                class="emotion-20"
+              >
+                Burke
+              </span>
             </div>
           </td>
           <td
@@ -1062,7 +1105,11 @@
             <div
               class="emotion-19"
             >
-              50
+              <span
+                class="emotion-20"
+              >
+                50
+              </span>
             </div>
           </td>
           <td
@@ -1072,15 +1119,11 @@
             <div
               class="emotion-19"
             >
-              <div
-                aria-label="Ophthalmologist"
-                aria-selected="false"
-                class="emotion-26"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-20"
               >
                 Ophthalmologist
-              </div>
+              </span>
             </div>
           </td>
         </tr>
@@ -1094,7 +1137,11 @@
             <div
               class="emotion-19"
             >
-              Estelle
+              <span
+                class="emotion-20"
+              >
+                Estelle
+              </span>
             </div>
           </td>
           <td
@@ -1104,7 +1151,11 @@
             <div
               class="emotion-19"
             >
-              Leonard
+              <span
+                class="emotion-20"
+              >
+                Leonard
+              </span>
             </div>
           </td>
           <td
@@ -1122,50 +1173,46 @@
             <div
               class="emotion-19"
             >
-              <div
-                aria-label="Talent Agent"
-                aria-selected="false"
-                class="emotion-26"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-20"
               >
                 Talent Agent
-              </div>
+              </span>
             </div>
           </td>
         </tr>
       </tbody>
     </table>
     <div
-      class="emotion-117"
+      class="emotion-145"
     >
       <div
-        class="emotion-118"
+        class="emotion-146"
       >
         <div>
           <div
-            class="emotion-119"
+            class="emotion-147"
           >
             <div
-              class="emotion-120"
+              class="emotion-148"
             >
               <div>
                 <div
-                  class="emotion-121"
+                  class="emotion-149"
                   data-testid="select-input-ictinus_table_show_items"
                 >
                   <div
-                    class="emotion-122"
+                    class="emotion-150"
                   >
                     <div
-                      class="emotion-123"
+                      class="emotion-151"
                     >
                       <input
                         aria-controls="select__00"
                         aria-expanded="false"
                         aria-invalid="false"
                         autocomplete="off"
-                        class="emotion-124"
+                        class="emotion-152"
                         data-testid="input_select-input-ictinus_table_show_items"
                         id="textfield__00"
                         placeholder=" "
@@ -1174,7 +1221,7 @@
                         value="10 rows per page"
                       />
                       <label
-                        class="emotion-125"
+                        class="emotion-153"
                         for="textfield__00"
                       >
                          
@@ -1182,18 +1229,18 @@
                     </div>
                     <div
                       aria-hidden="false"
-                      class="emotion-126"
+                      class="emotion-154"
                     >
                       <div
-                        class="emotion-127"
+                        class="emotion-155"
                       >
                         <div
-                          class="emotion-128"
+                          class="emotion-156"
                           data-testid="select-right-icon"
                           tabindex="0"
                         >
                           <svg
-                            class="emotion-129"
+                            class="emotion-157"
                             fill="none"
                             viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg"
@@ -1216,53 +1263,54 @@
         </div>
       </div>
       <div
-        class="emotion-130"
+        class="emotion-158"
       >
         <div
-          class="emotion-131"
+          class="emotion-159"
           data-testid="ictinus_table_pages_info"
         >
           <p
-            class="emotion-132"
+            class="emotion-160"
           >
             page
           </p>
           <span
-            class="emotion-133"
+            class="emotion-161"
             data-testid="ictinus_table_current_page"
           >
             1
           </span>
           <p
-            class="emotion-132"
+            class="emotion-160"
           >
             of
           </p>
           <span
-            class="emotion-133"
+            class="emotion-161"
             data-testid="ictinus_table_total_pages"
           >
             2
           </span>
         </div>
         <div
-          class="emotion-136"
+          class="emotion-164"
         >
           <div
-            class="emotion-137"
+            class="emotion-165"
           >
             <button
-              class="emotion-138"
+              class="emotion-166"
               color="#52567a"
+              data-slot="button"
               data-testid="ictinus_table_go_to_first_page-icon-button"
               disabled=""
               type="button"
             >
               <div
-                class="emotion-139"
+                class="emotion-167"
               >
                 <svg
-                  class="emotion-140"
+                  class="emotion-168"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1276,20 +1324,21 @@
             </button>
           </div>
           <div
-            class="emotion-137"
+            class="emotion-165"
           >
             <button
-              class="emotion-138"
+              class="emotion-166"
               color="#52567a"
+              data-slot="button"
               data-testid="ictinus_table_go_to_prev_page-icon-button"
               disabled=""
               type="button"
             >
               <div
-                class="emotion-139"
+                class="emotion-167"
               >
                 <svg
-                  class="emotion-140"
+                  class="emotion-168"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1303,19 +1352,20 @@
             </button>
           </div>
           <div
-            class="emotion-137"
+            class="emotion-165"
           >
             <button
-              class="emotion-138"
+              class="emotion-166"
               color="#52567a"
+              data-slot="button"
               data-testid="ictinus_table_go_to_next_page-icon-button"
               type="button"
             >
               <div
-                class="emotion-139"
+                class="emotion-167"
               >
                 <svg
-                  class="emotion-140"
+                  class="emotion-168"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1329,19 +1379,20 @@
             </button>
           </div>
           <div
-            class="emotion-137"
+            class="emotion-165"
           >
             <button
-              class="emotion-138"
+              class="emotion-166"
               color="#52567a"
+              data-slot="button"
               data-testid="ictinus_table_go_to_last_page-icon-button"
               type="button"
             >
               <div
-                class="emotion-139"
+                class="emotion-167"
               >
                 <svg
-                  class="emotion-140"
+                  class="emotion-168"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"

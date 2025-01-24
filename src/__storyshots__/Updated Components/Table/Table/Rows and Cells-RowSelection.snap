@@ -54,14 +54,7 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  gap: 8px;
+  gap: 1rem;
 }
 
 .emotion-6 {
@@ -134,9 +127,56 @@
   gap: 0.5rem;
 }
 
-.emotion-12 {
+.emotion-9 {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.emotion-9 thead>tr>th:last-child,
+.emotion-9 tbody>tr>td:last-child {
+  border-right: none;
+}
+
+.emotion-9 tbody>tr:last-child>td {
+  border-bottom: none;
+}
+
+.emotion-10 {
   position: relative;
-  display: inline-block;
+  box-shadow: 0 0.0625rem 0 0 rgba(200,206,255,0.70);
+}
+
+.emotion-12 {
+  width: 3.25rem;
+  height: 2.75rem;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  box-sizing: border-box;
+  padding: 0.5rem 1rem;
+  color: #52567a;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-12 [data-header-role='options'],
+.emotion-12 [data-header-role='sorting-button'] {
+  opacity: 0;
+}
+
+.emotion-12:hover [data-header-role='options'],
+.emotion-12:focus-visible [data-header-role='options'],
+.emotion-12:hover [data-header-role='sorting-button'],
+.emotion-12:focus-visible [data-header-role='sorting-button'] {
+  opacity: 1;
+}
+
+.emotion-12 button:focus-visible {
+  opacity: 1;
 }
 
 .emotion-13 {
@@ -144,32 +184,275 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .emotion-14 {
-  border-right: 0.0625rem solid transparent;
+  text-wrap: nowrap;
 }
 
-.emotion-14 button:first-of-type {
-  border-top-right-radius: unset;
-  border-bottom-right-radius: unset;
+.emotion-15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.75rem;
 }
 
-.emotion-18 button:last-child {
-  border-top-left-radius: unset;
-  border-bottom-left-radius: unset;
+.emotion-16 {
+  display: block;
+  cursor: pointer;
+  position: relative;
 }
 
-.emotion-18 svg {
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+.emotion-16>div {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  width: 1.25rem;
+  height: 1.25rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  border: 0.125rem solid #8EAAEC;
+  border-radius: 0.25rem;
 }
 
-.emotion-20 {
+.emotion-16 svg {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.emotion-16:hover,
+.emotion-16[data-focus-visible='true'] {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  background: rgba(200,206,255,0.20);
+  box-shadow: 0px 0px 0px 8px rgba(200,206,255,0.20);
+  border-radius: 100%;
+}
+
+.emotion-16[data-selected='true']>div,
+.emotion-16[data-indeterminate='true']>div {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border-color: rgba(200,206,255,0);
+  background: #175BF5;
+}
+
+.emotion-16[data-selected='true'] svg,
+.emotion-16[data-indeterminate='true'] svg {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.emotion-16[data-disabled='true'] {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-16[data-disabled='true']:hover {
+  background: none;
+  box-shadow: none;
+}
+
+.emotion-17 {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-18 {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-18 path {
+  fill: #ffffff!important;
+}
+
+.emotion-19 {
+  width: 25%;
+  height: 2.75rem;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  box-sizing: border-box;
+  padding: 0.5rem 1rem;
+  color: #52567a;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-19 [data-header-role='options'],
+.emotion-19 [data-header-role='sorting-button'] {
+  opacity: 0;
+}
+
+.emotion-19:hover [data-header-role='options'],
+.emotion-19:focus-visible [data-header-role='options'],
+.emotion-19:hover [data-header-role='sorting-button'],
+.emotion-19:focus-visible [data-header-role='sorting-button'] {
+  opacity: 1;
+}
+
+.emotion-19 button:focus-visible {
+  opacity: 1;
+}
+
+.emotion-32 {
+  cursor: pointer;
+}
+
+.emotion-32:hover {
+  background: rgba(200,206,255,0.20);
+}
+
+.emotion-33 {
+  width: 3.25rem;
+  height: 2.75rem;
+  padding: 0.5rem 1rem;
+  border-bottom: 0.0625rem solid rgba(200,206,255,0.70);
+  box-sizing: border-box;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+.emotion-34 {
+  text-align: left;
+}
+
+.emotion-39 {
+  width: 25%;
+  height: 2.75rem;
+  padding: 0.5rem 1rem;
+  border-bottom: 0.0625rem solid rgba(200,206,255,0.70);
+  box-sizing: border-box;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+.emotion-41 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #111530;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-220 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  background: #ffffff;
+  height: 2.75rem;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  box-sizing: border-box;
+  border-top: 0.0625rem solid rgba(200,206,255,0.70);
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.emotion-221 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.emotion-222 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.emotion-223 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+}
+
+.emotion-224 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  color: #52567a;
+}
+
+.emotion-225 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  color: #111530;
+}
+
+.emotion-228 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-230 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1rem;
@@ -187,37 +470,37 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #ffffff;
+  color: #194DCC;
   width: 1.75rem;
   height: 1.75rem;
-  background-color: #175BF5;
+  background-color: rgba(200,206,255,0);
   padding: 0rem 0.5rem 0rem 0.5rem;
-  border-radius: 0.25rem;
+  border-radius: 624.9375rem;
   border: none;
   cursor: pointer;
   -webkit-transition: background-color,border 150ms linear;
   transition: background-color,border 150ms linear;
 }
 
-.emotion-20:focus-visible:not(:disabled) {
-  background-color: #5E8DF8;
+.emotion-230:focus-visible:not(:disabled) {
+  background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-20:disabled {
+.emotion-230:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-20:hover:not(:disabled) {
-  background-color: #5E8DF8;
+.emotion-230:hover:not(:disabled) {
+  background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-20:active:not(:disabled),
-.emotion-20[aria-expanded="true"] {
-  background-color: #194DCC;
+.emotion-230:active:not(:disabled),
+.emotion-230[aria-expanded="true"] {
+  background-color: rgba(200,206,255,0.30);
 }
 
-.emotion-21 {
+.emotion-231 {
   width: 1rem;
   height: 1rem;
   display: -webkit-box;
@@ -226,298 +509,13 @@
   display: flex;
 }
 
-.emotion-22 {
+.emotion-232 {
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-22 path {
-  fill: #ffffff!important;
-}
-
-.emotion-23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 1rem;
-}
-
-.emotion-27 {
-  width: 100%;
-  border-collapse: collapse;
-  table-layout: fixed;
-}
-
-.emotion-27 thead>tr>th:last-child,
-.emotion-27 tbody>tr>td:last-child {
-  border-right: none;
-}
-
-.emotion-27 tbody>tr:last-child>td {
-  border-bottom: none;
-}
-
-.emotion-28 {
-  box-shadow: 0 0.0625rem 0 0 rgba(200,206,255,0.70);
-}
-
-.emotion-30 {
-  width: 3.25rem;
-  height: 2.75rem;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  box-sizing: border-box;
-  padding: 0.5rem 1rem;
-  color: #52567a;
-  font-family: Roboto;
-  font-weight: 400;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-}
-
-.emotion-30 [data-header-role='options'] button {
-  opacity: 0;
-}
-
-.emotion-30:hover [data-header-role='options'] button,
-.emotion-30:focus-visible [data-header-role='options'] button {
-  opacity: 1;
-}
-
-.emotion-30 button:focus-visible {
-  opacity: 1;
-}
-
-.emotion-31 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-  gap: 0.5rem;
-}
-
-.emotion-32 {
-  text-wrap: nowrap;
-}
-
-.emotion-33 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.emotion-34 {
-  display: block;
-  cursor: pointer;
-  position: relative;
-}
-
-.emotion-34>div {
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  width: 1.25rem;
-  height: 1.25rem;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  box-sizing: border-box;
-  border: 0.125rem solid #8EAAEC;
-  border-radius: 0.25rem;
-}
-
-.emotion-34 svg {
-  visibility: hidden;
-  opacity: 0;
-}
-
-.emotion-34:hover,
-.emotion-34[data-focus-visible='true'] {
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  background: rgba(200,206,255,0.20);
-  box-shadow: 0px 0px 0px 8px rgba(200,206,255,0.20);
-  border-radius: 100%;
-}
-
-.emotion-34[data-selected='true']>div,
-.emotion-34[data-indeterminate='true']>div {
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  border-color: rgba(200,206,255,0);
-  background: #175BF5;
-}
-
-.emotion-34[data-selected='true'] svg,
-.emotion-34[data-indeterminate='true'] svg {
-  visibility: visible;
-  opacity: 1;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-}
-
-.emotion-34[data-disabled='true'] {
-  opacity: 50%;
-  cursor: not-allowed;
-}
-
-.emotion-34[data-disabled='true']:hover {
-  background: none;
-  box-shadow: none;
-}
-
-.emotion-35 {
-  width: 1.25rem;
-  height: 1.25rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-36 {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.emotion-36 path {
-  fill: #ffffff!important;
-}
-
-.emotion-37 {
-  width: 100%;
-  height: 2.75rem;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  box-sizing: border-box;
-  padding: 0.5rem 1rem;
-  color: #52567a;
-  font-family: Roboto;
-  font-weight: 400;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-}
-
-.emotion-37 [data-header-role='options'] button {
-  opacity: 0;
-}
-
-.emotion-37:hover [data-header-role='options'] button,
-.emotion-37:focus-visible [data-header-role='options'] button {
-  opacity: 1;
-}
-
-.emotion-37 button:focus-visible {
-  opacity: 1;
-}
-
-.emotion-50 {
-  cursor: pointer;
-}
-
-.emotion-50:hover {
-  background: rgba(200,206,255,0.20);
-}
-
-.emotion-51 {
-  width: 3.25rem;
-  height: 2.75rem;
-  padding: 0.5rem 1rem;
-  border-bottom: 0.0625rem solid rgba(200,206,255,0.70);
-  box-sizing: border-box;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-}
-
-.emotion-52 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-}
-
-.emotion-57 {
-  width: 100%;
-  height: 2.75rem;
-  padding: 0.5rem 1rem;
-  border-bottom: 0.0625rem solid rgba(200,206,255,0.70);
-  box-sizing: border-box;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-}
-
-.emotion-65 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 1.5rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  box-sizing: border-box;
-  gap: 0.25rem;
-  padding: 0.125rem 0.5rem;
-  cursor: auto;
-  background: #ffffff;
-  color: #194DCC;
-  border: 0.0625rem solid;
-  border-color: rgba(200,206,255,0.70);
-  border-radius: 0.25rem;
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-}
-
-.emotion-66 {
-  cursor: pointer;
-  background: rgba(200,206,255,0.30);
-}
-
-.emotion-66:hover {
-  background: rgba(200,206,255,0.20);
+.emotion-232 path {
+  fill: #194DCC!important;
 }
 
 <div>
@@ -538,7 +536,7 @@
             class="emotion-3"
             data-testid="ictinus_title_items_count"
           >
-            3
+            0
           </span>
           <span
             class="emotion-4"
@@ -547,115 +545,16 @@
             selected
           </span>
         </div>
-        <div
-          class="emotion-5"
-        >
-          <div
-            class="emotion-6"
-          >
-            <button
-              class="emotion-7"
-              data-testid="button"
-              type="button"
-            >
-              <span
-                class="emotion-8"
-              >
-                <span>
-                  Bulk 1
-                </span>
-              </span>
-            </button>
-          </div>
-          <div
-            class="emotion-6"
-          >
-            <button
-              class="emotion-7"
-              data-testid="button"
-              type="button"
-            >
-              <span
-                class="emotion-8"
-              >
-                <span>
-                  Bulk 2
-                </span>
-              </span>
-            </button>
-          </div>
-          <div>
-            <div
-              class="emotion-12"
-            >
-              <div
-                class="emotion-13"
-              >
-                <div
-                  class="emotion-14"
-                >
-                  <div
-                    class="emotion-6"
-                  >
-                    <button
-                      class="emotion-7"
-                      data-testid="dropdownbutton"
-                      type="button"
-                    >
-                      <span
-                        class="emotion-8"
-                      >
-                        <span>
-                          Bulk 3
-                        </span>
-                      </span>
-                    </button>
-                  </div>
-                </div>
-                <div
-                  class="emotion-18"
-                >
-                  <div
-                    class="emotion-6"
-                  >
-                    <button
-                      class="emotion-20"
-                      data-testid="dropdown-toggle-icon-button"
-                      type="button"
-                    >
-                      <div
-                        class="emotion-21"
-                      >
-                        <svg
-                          class="emotion-22"
-                          fill="none"
-                          viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            clip-rule="evenodd"
-                            d="M6.09346 8.31215C5.65924 7.79108 6.02976 7 6.70803 7H13.292C13.9702 7 14.3408 7.79109 13.9065 8.31215L10.6146 12.2625C10.2947 12.6463 9.70526 12.6463 9.38542 12.2625L6.09346 8.31215Z"
-                            fill="#6265AD"
-                            fill-rule="evenodd"
-                          />
-                        </svg>
-                      </div>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
       <div
-        class="emotion-23"
+        class="emotion-5"
       >
         <div
           class="emotion-6"
         >
           <button
             class="emotion-7"
+            data-slot="button"
             data-testid="button"
             type="button"
           >
@@ -671,33 +570,32 @@
       </div>
     </div>
     <table
-      class="emotion-27"
+      class="emotion-9"
       data-testid="ictinus_table"
     >
       <thead
-        class="emotion-28"
+        class="emotion-10"
       >
         <tr
-          class="emotion-29"
+          class="emotion-11"
         >
           <th
-            class="emotion-30"
+            class="emotion-12"
             colspan="1"
             data-testid="ictinus_table_th_checkbox_select"
           >
             <div
-              class="emotion-31"
+              class="emotion-13"
             >
               <div
-                class="emotion-32"
+                class="emotion-14"
                 data-testid="ictinus_table_th_checkbox_select_title"
               >
                 <div
-                  class="emotion-33"
+                  class="emotion-15"
                 >
                   <label
-                    class="emotion-34"
-                    data-indeterminate="true"
+                    class="emotion-16"
                     data-rac=""
                     data-testid="ictinus_table_select_all_checkbox"
                   >
@@ -711,17 +609,17 @@
                       />
                     </span>
                     <div
-                      class="emotion-35"
-                      data-testid="ictinus_table_select_all_minus"
+                      class="emotion-17"
+                      data-testid="ictinus_table_select_all_unselected"
                     >
                       <svg
-                        class="emotion-36"
+                        class="emotion-18"
                         fill="none"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M4.90208 11C4.65383 11 4.44142 10.9021 4.26486 10.7063C4.08829 10.5105 4 10.275 4 9.9997C4 9.7244 4.08829 9.48897 4.26486 9.29338C4.44142 9.09779 4.65383 9 4.90208 9H15.0979C15.3462 9 15.5586 9.09789 15.7352 9.29368C15.9117 9.48949 16 9.72502 16 10.0003C16 10.2756 15.9117 10.511 15.7352 10.7066C15.5586 10.9022 15.3462 11 15.0979 11H4.90208Z"
+                          d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
                           fill="#6265AD"
                         />
                       </svg>
@@ -732,15 +630,15 @@
             </div>
           </th>
           <th
-            class="emotion-37"
+            class="emotion-19"
             colspan="1"
             data-testid="ictinus_table_th_firstName"
           >
             <div
-              class="emotion-31"
+              class="emotion-13"
             >
               <div
-                class="emotion-32"
+                class="emotion-14"
                 data-testid="ictinus_table_th_firstName_title"
               >
                 First Name
@@ -748,15 +646,15 @@
             </div>
           </th>
           <th
-            class="emotion-37"
+            class="emotion-19"
             colspan="1"
             data-testid="ictinus_table_th_lastName"
           >
             <div
-              class="emotion-31"
+              class="emotion-13"
             >
               <div
-                class="emotion-32"
+                class="emotion-14"
                 data-testid="ictinus_table_th_lastName_title"
               >
                 Last Name
@@ -764,15 +662,15 @@
             </div>
           </th>
           <th
-            class="emotion-37"
+            class="emotion-19"
             colspan="1"
             data-testid="ictinus_table_th_age"
           >
             <div
-              class="emotion-31"
+              class="emotion-13"
             >
               <div
-                class="emotion-32"
+                class="emotion-14"
                 data-testid="ictinus_table_th_age_title"
               >
                 Age
@@ -780,15 +678,15 @@
             </div>
           </th>
           <th
-            class="emotion-37"
+            class="emotion-19"
             colspan="1"
             data-testid="ictinus_table_th_job"
           >
             <div
-              class="emotion-31"
+              class="emotion-13"
             >
               <div
-                class="emotion-32"
+                class="emotion-14"
                 data-testid="ictinus_table_th_job_title"
               >
                 Job
@@ -798,26 +696,26 @@
         </tr>
       </thead>
       <tbody
-        class="emotion-49"
+        class="emotion-31"
       >
         <tr
-          class="emotion-50"
+          class="emotion-32"
         >
           <td
-            class="emotion-51"
+            class="emotion-33"
             data-testid="ictinus_table_row_0_checkbox_select"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
               <div
                 class="px-1"
               >
                 <div
-                  class="emotion-33"
+                  class="emotion-15"
                 >
                   <label
-                    class="emotion-34"
+                    class="emotion-16"
                     data-rac=""
                     data-testid="ictinus_table_select_0_checkbox"
                   >
@@ -831,11 +729,11 @@
                       />
                     </span>
                     <div
-                      class="emotion-35"
+                      class="emotion-17"
                       data-testid="ictinus_table_select_0_unselected"
                     >
                       <svg
-                        class="emotion-36"
+                        class="emotion-18"
                         fill="none"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -852,92 +750,98 @@
             </div>
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_0_firstName"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
-              Rachel
+              <span
+                class="emotion-41"
+              >
+                Rachel
+              </span>
             </div>
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_0_lastName"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
-              Berry
+              <span
+                class="emotion-41"
+              >
+                Berry
+              </span>
             </div>
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_0_age"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
-              30
+              <span
+                class="emotion-41"
+              >
+                30
+              </span>
             </div>
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_0_job"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
-              <div
-                aria-label="Fashion Executive"
-                aria-selected="false"
-                class="emotion-65"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-41"
               >
                 Fashion Executive
-              </div>
+              </span>
             </div>
           </td>
         </tr>
         <tr
-          class="emotion-66"
+          class="emotion-32"
         >
           <td
-            class="emotion-51"
+            class="emotion-33"
             data-testid="ictinus_table_row_1_checkbox_select"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
               <div
                 class="px-1"
               >
                 <div
-                  class="emotion-33"
+                  class="emotion-15"
                 >
                   <label
-                    class="emotion-34"
+                    class="emotion-16"
                     data-rac=""
-                    data-selected="true"
                     data-testid="ictinus_table_select_1_checkbox"
                   >
                     <span
                       style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
                     >
                       <input
-                        checked=""
                         data-testid="ictinus_table_select_1_checkbox"
                         title=""
                         type="checkbox"
                       />
                     </span>
                     <div
-                      class="emotion-35"
-                      data-testid="ictinus_table_select_1_checkmark"
+                      class="emotion-17"
+                      data-testid="ictinus_table_select_1_unselected"
                     >
                       <svg
-                        class="emotion-36"
+                        class="emotion-18"
                         fill="none"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -954,72 +858,80 @@
             </div>
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_1_firstName"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
-              Ross
+              <span
+                class="emotion-41"
+              >
+                Ross
+              </span>
             </div>
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_1_lastName"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
-              Geller
+              <span
+                class="emotion-41"
+              >
+                Geller
+              </span>
             </div>
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_1_age"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
-              32
+              <span
+                class="emotion-41"
+              >
+                32
+              </span>
             </div>
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_1_job"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
-              <div
-                aria-label="Paleontologist"
-                aria-selected="false"
-                class="emotion-65"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-41"
               >
                 Paleontologist
-              </div>
+              </span>
             </div>
           </td>
         </tr>
         <tr
-          class="emotion-50"
+          class="emotion-32"
         >
           <td
-            class="emotion-51"
+            class="emotion-33"
             data-testid="ictinus_table_row_2_checkbox_select"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
               <div
                 class="px-1"
               >
                 <div
-                  class="emotion-33"
+                  class="emotion-15"
                 >
                   <label
-                    class="emotion-34"
+                    class="emotion-16"
                     data-rac=""
                     data-testid="ictinus_table_select_2_checkbox"
                   >
@@ -1033,11 +945,11 @@
                       />
                     </span>
                     <div
-                      class="emotion-35"
+                      class="emotion-17"
                       data-testid="ictinus_table_select_2_unselected"
                     >
                       <svg
-                        class="emotion-36"
+                        class="emotion-18"
                         fill="none"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -1054,72 +966,80 @@
             </div>
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_2_firstName"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
-              Monica
+              <span
+                class="emotion-41"
+              >
+                Monica
+              </span>
             </div>
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_2_lastName"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
-              Geller
+              <span
+                class="emotion-41"
+              >
+                Geller
+              </span>
             </div>
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_2_age"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
-              31
+              <span
+                class="emotion-41"
+              >
+                31
+              </span>
             </div>
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_2_job"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
-              <div
-                aria-label="Chef"
-                aria-selected="false"
-                class="emotion-65"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-41"
               >
                 Chef
-              </div>
+              </span>
             </div>
           </td>
         </tr>
         <tr
-          class="emotion-50"
+          class="emotion-32"
         >
           <td
-            class="emotion-51"
+            class="emotion-33"
             data-testid="ictinus_table_row_3_checkbox_select"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
               <div
                 class="px-1"
               >
                 <div
-                  class="emotion-33"
+                  class="emotion-15"
                 >
                   <label
-                    class="emotion-34"
+                    class="emotion-16"
                     data-rac=""
                     data-testid="ictinus_table_select_3_checkbox"
                   >
@@ -1133,11 +1053,11 @@
                       />
                     </span>
                     <div
-                      class="emotion-35"
+                      class="emotion-17"
                       data-testid="ictinus_table_select_3_unselected"
                     >
                       <svg
-                        class="emotion-36"
+                        class="emotion-18"
                         fill="none"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -1154,72 +1074,80 @@
             </div>
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_3_firstName"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
-              Chandler
+              <span
+                class="emotion-41"
+              >
+                Chandler
+              </span>
             </div>
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_3_lastName"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
-              Bing
+              <span
+                class="emotion-41"
+              >
+                Bing
+              </span>
             </div>
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_3_age"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
-              32
+              <span
+                class="emotion-41"
+              >
+                32
+              </span>
             </div>
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_3_job"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
-              <div
-                aria-label="?"
-                aria-selected="false"
-                class="emotion-65"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-41"
               >
                 ?
-              </div>
+              </span>
             </div>
           </td>
         </tr>
         <tr
-          class="emotion-50"
+          class="emotion-32"
         >
           <td
-            class="emotion-51"
+            class="emotion-33"
             data-testid="ictinus_table_row_4_checkbox_select"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
               <div
                 class="px-1"
               >
                 <div
-                  class="emotion-33"
+                  class="emotion-15"
                 >
                   <label
-                    class="emotion-34"
+                    class="emotion-16"
                     data-rac=""
                     data-testid="ictinus_table_select_4_checkbox"
                   >
@@ -1233,11 +1161,11 @@
                       />
                     </span>
                     <div
-                      class="emotion-35"
+                      class="emotion-17"
                       data-testid="ictinus_table_select_4_unselected"
                     >
                       <svg
-                        class="emotion-36"
+                        class="emotion-18"
                         fill="none"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -1254,92 +1182,98 @@
             </div>
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_4_firstName"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
-              Joey
+              <span
+                class="emotion-41"
+              >
+                Joey
+              </span>
             </div>
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_4_lastName"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
-              Tribbiani
+              <span
+                class="emotion-41"
+              >
+                Tribbiani
+              </span>
             </div>
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_4_age"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
-              30
+              <span
+                class="emotion-41"
+              >
+                30
+              </span>
             </div>
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_4_job"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
-              <div
-                aria-label="Actor"
-                aria-selected="false"
-                class="emotion-65"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-41"
               >
                 Actor
-              </div>
+              </span>
             </div>
           </td>
         </tr>
         <tr
-          class="emotion-66"
+          class="emotion-32"
         >
           <td
-            class="emotion-51"
+            class="emotion-33"
             data-testid="ictinus_table_row_5_checkbox_select"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
               <div
                 class="px-1"
               >
                 <div
-                  class="emotion-33"
+                  class="emotion-15"
                 >
                   <label
-                    class="emotion-34"
+                    class="emotion-16"
                     data-rac=""
-                    data-selected="true"
                     data-testid="ictinus_table_select_5_checkbox"
                   >
                     <span
                       style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
                     >
                       <input
-                        checked=""
                         data-testid="ictinus_table_select_5_checkbox"
                         title=""
                         type="checkbox"
                       />
                     </span>
                     <div
-                      class="emotion-35"
-                      data-testid="ictinus_table_select_5_checkmark"
+                      class="emotion-17"
+                      data-testid="ictinus_table_select_5_unselected"
                     >
                       <svg
-                        class="emotion-36"
+                        class="emotion-18"
                         fill="none"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -1356,72 +1290,80 @@
             </div>
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_5_firstName"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
-              Phoebe
+              <span
+                class="emotion-41"
+              >
+                Phoebe
+              </span>
             </div>
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_5_lastName"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
-              Buffay
+              <span
+                class="emotion-41"
+              >
+                Buffay
+              </span>
             </div>
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_5_age"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
-              31
+              <span
+                class="emotion-41"
+              >
+                31
+              </span>
             </div>
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_5_job"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
-              <div
-                aria-label="Massage Therapist"
-                aria-selected="false"
-                class="emotion-65"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-41"
               >
                 Massage Therapist
-              </div>
+              </span>
             </div>
           </td>
         </tr>
         <tr
-          class="emotion-50"
+          class="emotion-32"
         >
           <td
-            class="emotion-51"
+            class="emotion-33"
             data-testid="ictinus_table_row_6_checkbox_select"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
               <div
                 class="px-1"
               >
                 <div
-                  class="emotion-33"
+                  class="emotion-15"
                 >
                   <label
-                    class="emotion-34"
+                    class="emotion-16"
                     data-rac=""
                     data-testid="ictinus_table_select_6_checkbox"
                   >
@@ -1435,11 +1377,11 @@
                       />
                     </span>
                     <div
-                      class="emotion-35"
+                      class="emotion-17"
                       data-testid="ictinus_table_select_6_unselected"
                     >
                       <svg
-                        class="emotion-36"
+                        class="emotion-18"
                         fill="none"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -1456,90 +1398,92 @@
             </div>
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_6_firstName"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
-              Gunther
+              <span
+                class="emotion-41"
+              >
+                Gunther
+              </span>
             </div>
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_6_lastName"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             />
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_6_age"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
-              35
+              <span
+                class="emotion-41"
+              >
+                35
+              </span>
             </div>
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_6_job"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
-              <div
-                aria-label="Central Perk Manager"
-                aria-selected="false"
-                class="emotion-65"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-41"
               >
                 Central Perk Manager
-              </div>
+              </span>
             </div>
           </td>
         </tr>
         <tr
-          class="emotion-66"
+          class="emotion-32"
         >
           <td
-            class="emotion-51"
+            class="emotion-33"
             data-testid="ictinus_table_row_7_checkbox_select"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
               <div
                 class="px-1"
               >
                 <div
-                  class="emotion-33"
+                  class="emotion-15"
                 >
                   <label
-                    class="emotion-34"
+                    class="emotion-16"
                     data-rac=""
-                    data-selected="true"
                     data-testid="ictinus_table_select_7_checkbox"
                   >
                     <span
                       style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
                     >
                       <input
-                        checked=""
                         data-testid="ictinus_table_select_7_checkbox"
                         title=""
                         type="checkbox"
                       />
                     </span>
                     <div
-                      class="emotion-35"
-                      data-testid="ictinus_table_select_7_checkmark"
+                      class="emotion-17"
+                      data-testid="ictinus_table_select_7_unselected"
                     >
                       <svg
-                        class="emotion-36"
+                        class="emotion-18"
                         fill="none"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -1556,72 +1500,80 @@
             </div>
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_7_firstName"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
-              Janice
+              <span
+                class="emotion-41"
+              >
+                Janice
+              </span>
             </div>
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_7_lastName"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
-              Litman-Foralnik
+              <span
+                class="emotion-41"
+              >
+                Litman-Foralnik
+              </span>
             </div>
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_7_age"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
-              35
+              <span
+                class="emotion-41"
+              >
+                35
+              </span>
             </div>
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_7_job"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
-              <div
-                aria-label="Personal Shopper"
-                aria-selected="false"
-                class="emotion-65"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-41"
               >
                 Personal Shopper
-              </div>
+              </span>
             </div>
           </td>
         </tr>
         <tr
-          class="emotion-50"
+          class="emotion-32"
         >
           <td
-            class="emotion-51"
+            class="emotion-33"
             data-testid="ictinus_table_row_8_checkbox_select"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
               <div
                 class="px-1"
               >
                 <div
-                  class="emotion-33"
+                  class="emotion-15"
                 >
                   <label
-                    class="emotion-34"
+                    class="emotion-16"
                     data-rac=""
                     data-testid="ictinus_table_select_8_checkbox"
                   >
@@ -1635,11 +1587,11 @@
                       />
                     </span>
                     <div
-                      class="emotion-35"
+                      class="emotion-17"
                       data-testid="ictinus_table_select_8_unselected"
                     >
                       <svg
-                        class="emotion-36"
+                        class="emotion-18"
                         fill="none"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -1656,72 +1608,80 @@
             </div>
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_8_firstName"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
-              Richard
+              <span
+                class="emotion-41"
+              >
+                Richard
+              </span>
             </div>
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_8_lastName"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
-              Burke
+              <span
+                class="emotion-41"
+              >
+                Burke
+              </span>
             </div>
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_8_age"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
-              50
+              <span
+                class="emotion-41"
+              >
+                50
+              </span>
             </div>
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_8_job"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
-              <div
-                aria-label="Ophthalmologist"
-                aria-selected="false"
-                class="emotion-65"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-41"
               >
                 Ophthalmologist
-              </div>
+              </span>
             </div>
           </td>
         </tr>
         <tr
-          class="emotion-50"
+          class="emotion-32"
         >
           <td
-            class="emotion-51"
+            class="emotion-33"
             data-testid="ictinus_table_row_9_checkbox_select"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
               <div
                 class="px-1"
               >
                 <div
-                  class="emotion-33"
+                  class="emotion-15"
                 >
                   <label
-                    class="emotion-34"
+                    class="emotion-16"
                     data-rac=""
                     data-testid="ictinus_table_select_9_checkbox"
                   >
@@ -1735,11 +1695,11 @@
                       />
                     </span>
                     <div
-                      class="emotion-35"
+                      class="emotion-17"
                       data-testid="ictinus_table_select_9_unselected"
                     >
                       <svg
-                        class="emotion-36"
+                        class="emotion-18"
                         fill="none"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -1756,1011 +1716,154 @@
             </div>
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_9_firstName"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
-              Estelle
+              <span
+                class="emotion-41"
+              >
+                Estelle
+              </span>
             </div>
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_9_lastName"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
-              Leonard
+              <span
+                class="emotion-41"
+              >
+                Leonard
+              </span>
             </div>
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_9_age"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             />
           </td>
           <td
-            class="emotion-57"
+            class="emotion-39"
             data-testid="ictinus_table_row_9_job"
           >
             <div
-              class="emotion-52"
+              class="emotion-34"
             >
-              <div
-                aria-label="Talent Agent"
-                aria-selected="false"
-                class="emotion-65"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
+              <span
+                class="emotion-41"
               >
                 Talent Agent
-              </div>
-            </div>
-          </td>
-        </tr>
-        <tr
-          class="emotion-50"
-        >
-          <td
-            class="emotion-51"
-            data-testid="ictinus_table_row_10_checkbox_select"
-          >
-            <div
-              class="emotion-52"
-            >
-              <div
-                class="px-1"
-              >
-                <div
-                  class="emotion-33"
-                >
-                  <label
-                    class="emotion-34"
-                    data-rac=""
-                    data-testid="ictinus_table_select_10_checkbox"
-                  >
-                    <span
-                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                    >
-                      <input
-                        data-testid="ictinus_table_select_10_checkbox"
-                        title=""
-                        type="checkbox"
-                      />
-                    </span>
-                    <div
-                      class="emotion-35"
-                      data-testid="ictinus_table_select_10_unselected"
-                    >
-                      <svg
-                        class="emotion-36"
-                        fill="none"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                          fill="#6265AD"
-                        />
-                      </svg>
-                    </div>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_10_firstName"
-          >
-            <div
-              class="emotion-52"
-            >
-              Mike
-            </div>
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_10_lastName"
-          >
-            <div
-              class="emotion-52"
-            >
-              Hannigan
-            </div>
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_10_age"
-          >
-            <div
-              class="emotion-52"
-            >
-              31
-            </div>
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_10_job"
-          >
-            <div
-              class="emotion-52"
-            />
-          </td>
-        </tr>
-        <tr
-          class="emotion-50"
-        >
-          <td
-            class="emotion-51"
-            data-testid="ictinus_table_row_11_checkbox_select"
-          >
-            <div
-              class="emotion-52"
-            >
-              <div
-                class="px-1"
-              >
-                <div
-                  class="emotion-33"
-                >
-                  <label
-                    class="emotion-34"
-                    data-rac=""
-                    data-testid="ictinus_table_select_11_checkbox"
-                  >
-                    <span
-                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                    >
-                      <input
-                        data-testid="ictinus_table_select_11_checkbox"
-                        title=""
-                        type="checkbox"
-                      />
-                    </span>
-                    <div
-                      class="emotion-35"
-                      data-testid="ictinus_table_select_11_unselected"
-                    >
-                      <svg
-                        class="emotion-36"
-                        fill="none"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                          fill="#6265AD"
-                        />
-                      </svg>
-                    </div>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_11_firstName"
-          >
-            <div
-              class="emotion-52"
-            >
-              Charlie
-            </div>
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_11_lastName"
-          >
-            <div
-              class="emotion-52"
-            >
-              Wheeler
-            </div>
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_11_age"
-          >
-            <div
-              class="emotion-52"
-            >
-              28
-            </div>
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_11_job"
-          >
-            <div
-              class="emotion-52"
-            >
-              <div
-                aria-label="Paleontologist"
-                aria-selected="false"
-                class="emotion-65"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
-              >
-                Paleontologist
-              </div>
-            </div>
-          </td>
-        </tr>
-        <tr
-          class="emotion-50"
-        >
-          <td
-            class="emotion-51"
-            data-testid="ictinus_table_row_12_checkbox_select"
-          >
-            <div
-              class="emotion-52"
-            >
-              <div
-                class="px-1"
-              >
-                <div
-                  class="emotion-33"
-                >
-                  <label
-                    class="emotion-34"
-                    data-rac=""
-                    data-testid="ictinus_table_select_12_checkbox"
-                  >
-                    <span
-                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                    >
-                      <input
-                        data-testid="ictinus_table_select_12_checkbox"
-                        title=""
-                        type="checkbox"
-                      />
-                    </span>
-                    <div
-                      class="emotion-35"
-                      data-testid="ictinus_table_select_12_unselected"
-                    >
-                      <svg
-                        class="emotion-36"
-                        fill="none"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                          fill="#6265AD"
-                        />
-                      </svg>
-                    </div>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_12_firstName"
-          >
-            <div
-              class="emotion-52"
-            >
-              Emily
-            </div>
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_12_lastName"
-          >
-            <div
-              class="emotion-52"
-            >
-              Waltham
-            </div>
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_12_age"
-          >
-            <div
-              class="emotion-52"
-            >
-              28
-            </div>
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_12_job"
-          >
-            <div
-              class="emotion-52"
-            />
-          </td>
-        </tr>
-        <tr
-          class="emotion-50"
-        >
-          <td
-            class="emotion-51"
-            data-testid="ictinus_table_row_13_checkbox_select"
-          >
-            <div
-              class="emotion-52"
-            >
-              <div
-                class="px-1"
-              >
-                <div
-                  class="emotion-33"
-                >
-                  <label
-                    class="emotion-34"
-                    data-rac=""
-                    data-testid="ictinus_table_select_13_checkbox"
-                  >
-                    <span
-                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                    >
-                      <input
-                        data-testid="ictinus_table_select_13_checkbox"
-                        title=""
-                        type="checkbox"
-                      />
-                    </span>
-                    <div
-                      class="emotion-35"
-                      data-testid="ictinus_table_select_13_unselected"
-                    >
-                      <svg
-                        class="emotion-36"
-                        fill="none"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                          fill="#6265AD"
-                        />
-                      </svg>
-                    </div>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_13_firstName"
-          >
-            <div
-              class="emotion-52"
-            >
-              Carol
-            </div>
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_13_lastName"
-          >
-            <div
-              class="emotion-52"
-            >
-              Willick
-            </div>
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_13_age"
-          >
-            <div
-              class="emotion-52"
-            >
-              35
-            </div>
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_13_job"
-          >
-            <div
-              class="emotion-52"
-            />
-          </td>
-        </tr>
-        <tr
-          class="emotion-50"
-        >
-          <td
-            class="emotion-51"
-            data-testid="ictinus_table_row_14_checkbox_select"
-          >
-            <div
-              class="emotion-52"
-            >
-              <div
-                class="px-1"
-              >
-                <div
-                  class="emotion-33"
-                >
-                  <label
-                    class="emotion-34"
-                    data-rac=""
-                    data-testid="ictinus_table_select_14_checkbox"
-                  >
-                    <span
-                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                    >
-                      <input
-                        data-testid="ictinus_table_select_14_checkbox"
-                        title=""
-                        type="checkbox"
-                      />
-                    </span>
-                    <div
-                      class="emotion-35"
-                      data-testid="ictinus_table_select_14_unselected"
-                    >
-                      <svg
-                        class="emotion-36"
-                        fill="none"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                          fill="#6265AD"
-                        />
-                      </svg>
-                    </div>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_14_firstName"
-          >
-            <div
-              class="emotion-52"
-            >
-              Frank
-            </div>
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_14_lastName"
-          >
-            <div
-              class="emotion-52"
-            >
-              Buffay Jr.
-            </div>
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_14_age"
-          >
-            <div
-              class="emotion-52"
-            >
-              29
-            </div>
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_14_job"
-          >
-            <div
-              class="emotion-52"
-            />
-          </td>
-        </tr>
-        <tr
-          class="emotion-50"
-        >
-          <td
-            class="emotion-51"
-            data-testid="ictinus_table_row_15_checkbox_select"
-          >
-            <div
-              class="emotion-52"
-            >
-              <div
-                class="px-1"
-              >
-                <div
-                  class="emotion-33"
-                >
-                  <label
-                    class="emotion-34"
-                    data-rac=""
-                    data-testid="ictinus_table_select_15_checkbox"
-                  >
-                    <span
-                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                    >
-                      <input
-                        data-testid="ictinus_table_select_15_checkbox"
-                        title=""
-                        type="checkbox"
-                      />
-                    </span>
-                    <div
-                      class="emotion-35"
-                      data-testid="ictinus_table_select_15_unselected"
-                    >
-                      <svg
-                        class="emotion-36"
-                        fill="none"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                          fill="#6265AD"
-                        />
-                      </svg>
-                    </div>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_15_firstName"
-          >
-            <div
-              class="emotion-52"
-            >
-              Barry
-            </div>
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_15_lastName"
-          >
-            <div
-              class="emotion-52"
-            >
-              Farber
-            </div>
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_15_age"
-          >
-            <div
-              class="emotion-52"
-            >
-              30
-            </div>
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_15_job"
-          >
-            <div
-              class="emotion-52"
-            >
-              <div
-                aria-label="Orthodontist"
-                aria-selected="false"
-                class="emotion-65"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
-              >
-                Orthodontist
-              </div>
-            </div>
-          </td>
-        </tr>
-        <tr
-          class="emotion-50"
-        >
-          <td
-            class="emotion-51"
-            data-testid="ictinus_table_row_16_checkbox_select"
-          >
-            <div
-              class="emotion-52"
-            >
-              <div
-                class="px-1"
-              >
-                <div
-                  class="emotion-33"
-                >
-                  <label
-                    class="emotion-34"
-                    data-rac=""
-                    data-testid="ictinus_table_select_16_checkbox"
-                  >
-                    <span
-                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                    >
-                      <input
-                        data-testid="ictinus_table_select_16_checkbox"
-                        title=""
-                        type="checkbox"
-                      />
-                    </span>
-                    <div
-                      class="emotion-35"
-                      data-testid="ictinus_table_select_16_unselected"
-                    >
-                      <svg
-                        class="emotion-36"
-                        fill="none"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                          fill="#6265AD"
-                        />
-                      </svg>
-                    </div>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_16_firstName"
-          >
-            <div
-              class="emotion-52"
-            >
-              Mr. Heckles
-            </div>
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_16_lastName"
-          >
-            <div
-              class="emotion-52"
-            />
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_16_age"
-          >
-            <div
-              class="emotion-52"
-            >
-              60
-            </div>
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_16_job"
-          >
-            <div
-              class="emotion-52"
-            >
-              <div
-                aria-label="Retired"
-                aria-selected="false"
-                class="emotion-65"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
-              >
-                Retired
-              </div>
-            </div>
-          </td>
-        </tr>
-        <tr
-          class="emotion-50"
-        >
-          <td
-            class="emotion-51"
-            data-testid="ictinus_table_row_17_checkbox_select"
-          >
-            <div
-              class="emotion-52"
-            >
-              <div
-                class="px-1"
-              >
-                <div
-                  class="emotion-33"
-                >
-                  <label
-                    class="emotion-34"
-                    data-rac=""
-                    data-testid="ictinus_table_select_17_checkbox"
-                  >
-                    <span
-                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                    >
-                      <input
-                        data-testid="ictinus_table_select_17_checkbox"
-                        title=""
-                        type="checkbox"
-                      />
-                    </span>
-                    <div
-                      class="emotion-35"
-                      data-testid="ictinus_table_select_17_unselected"
-                    >
-                      <svg
-                        class="emotion-36"
-                        fill="none"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                          fill="#6265AD"
-                        />
-                      </svg>
-                    </div>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_17_firstName"
-          >
-            <div
-              class="emotion-52"
-            >
-              Tag
-            </div>
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_17_lastName"
-          >
-            <div
-              class="emotion-52"
-            >
-              Jones
-            </div>
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_17_age"
-          >
-            <div
-              class="emotion-52"
-            >
-              24
-            </div>
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_17_job"
-          >
-            <div
-              class="emotion-52"
-            >
-              <div
-                aria-label="Assistant"
-                aria-selected="false"
-                class="emotion-65"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
-              >
-                Assistant
-              </div>
-            </div>
-          </td>
-        </tr>
-        <tr
-          class="emotion-50"
-        >
-          <td
-            class="emotion-51"
-            data-testid="ictinus_table_row_18_checkbox_select"
-          >
-            <div
-              class="emotion-52"
-            >
-              <div
-                class="px-1"
-              >
-                <div
-                  class="emotion-33"
-                >
-                  <label
-                    class="emotion-34"
-                    data-rac=""
-                    data-testid="ictinus_table_select_18_checkbox"
-                  >
-                    <span
-                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                    >
-                      <input
-                        data-testid="ictinus_table_select_18_checkbox"
-                        title=""
-                        type="checkbox"
-                      />
-                    </span>
-                    <div
-                      class="emotion-35"
-                      data-testid="ictinus_table_select_18_unselected"
-                    >
-                      <svg
-                        class="emotion-36"
-                        fill="none"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                          fill="#6265AD"
-                        />
-                      </svg>
-                    </div>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_18_firstName"
-          >
-            <div
-              class="emotion-52"
-            >
-              Pete
-            </div>
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_18_lastName"
-          >
-            <div
-              class="emotion-52"
-            >
-              Becker
-            </div>
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_18_age"
-          >
-            <div
-              class="emotion-52"
-            >
-              32
-            </div>
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_18_job"
-          >
-            <div
-              class="emotion-52"
-            >
-              <div
-                aria-label="Software Engineer"
-                aria-selected="false"
-                class="emotion-65"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
-              >
-                Software Engineer
-              </div>
-            </div>
-          </td>
-        </tr>
-        <tr
-          class="emotion-50"
-        >
-          <td
-            class="emotion-51"
-            data-testid="ictinus_table_row_19_checkbox_select"
-          >
-            <div
-              class="emotion-52"
-            >
-              <div
-                class="px-1"
-              >
-                <div
-                  class="emotion-33"
-                >
-                  <label
-                    class="emotion-34"
-                    data-rac=""
-                    data-testid="ictinus_table_select_19_checkbox"
-                  >
-                    <span
-                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                    >
-                      <input
-                        data-testid="ictinus_table_select_19_checkbox"
-                        title=""
-                        type="checkbox"
-                      />
-                    </span>
-                    <div
-                      class="emotion-35"
-                      data-testid="ictinus_table_select_19_unselected"
-                    >
-                      <svg
-                        class="emotion-36"
-                        fill="none"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                          fill="#6265AD"
-                        />
-                      </svg>
-                    </div>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_19_firstName"
-          >
-            <div
-              class="emotion-52"
-            >
-              Paul
-            </div>
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_19_lastName"
-          >
-            <div
-              class="emotion-52"
-            >
-              Stevens
-            </div>
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_19_age"
-          >
-            <div
-              class="emotion-52"
-            >
-              50
-            </div>
-          </td>
-          <td
-            class="emotion-57"
-            data-testid="ictinus_table_row_19_job"
-          >
-            <div
-              class="emotion-52"
-            >
-              <div
-                aria-label="Lawyer"
-                aria-selected="false"
-                class="emotion-65"
-                data-testid="undefined_tag_container"
-                tabindex="-1"
-              >
-                Lawyer
-              </div>
+              </span>
             </div>
           </td>
         </tr>
       </tbody>
     </table>
+    <div
+      class="emotion-220"
+    >
+      <div
+        class="emotion-221"
+      />
+      <div
+        class="emotion-222"
+      >
+        <div
+          class="emotion-223"
+          data-testid="ictinus_table_pages_info"
+        >
+          <p
+            class="emotion-224"
+          >
+            page
+          </p>
+          <span
+            class="emotion-225"
+            data-testid="ictinus_table_current_page"
+          >
+            1
+          </span>
+          <p
+            class="emotion-224"
+          >
+            of
+          </p>
+          <span
+            class="emotion-225"
+            data-testid="ictinus_table_total_pages"
+          >
+            2
+          </span>
+        </div>
+        <div
+          class="emotion-228"
+        >
+          <div
+            class="emotion-6"
+          >
+            <button
+              class="emotion-230"
+              color="#52567a"
+              data-slot="button"
+              data-testid="ictinus_table_go_to_prev_page-icon-button"
+              disabled=""
+              type="button"
+            >
+              <div
+                class="emotion-231"
+              >
+                <svg
+                  class="emotion-232"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.3581 14.702L7.31643 10.7466C7.20353 10.6361 7.12257 10.5161 7.07355 10.3867C7.02452 10.2572 7 10.1283 7 10C7 9.86608 7.02452 9.7358 7.07355 9.60915C7.12257 9.48249 7.20353 9.36392 7.31643 9.25345L11.3581 5.29797C11.561 5.09932 11.7839 5 12.0268 5C12.2697 5 12.4926 5.09932 12.6955 5.29797C12.8985 5.49661 13 5.71477 13 5.95246C13 6.19014 12.8985 6.40831 12.6955 6.60694L9.22859 10L12.6955 13.3931C12.8985 13.5917 13 13.8099 13 14.0475C13 14.2852 12.8985 14.5034 12.6955 14.702C12.4926 14.9007 12.2697 15 12.0268 15C11.7839 15 11.561 14.9007 11.3581 14.702Z"
+                    fill="#6265AD"
+                  />
+                </svg>
+              </div>
+            </button>
+          </div>
+          <div
+            class="emotion-6"
+          >
+            <button
+              class="emotion-230"
+              color="#52567a"
+              data-slot="button"
+              data-testid="ictinus_table_go_to_next_page-icon-button"
+              type="button"
+            >
+              <div
+                class="emotion-231"
+              >
+                <svg
+                  class="emotion-232"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.64194 14.702L12.6836 10.7466C12.7965 10.6361 12.8774 10.5161 12.9264 10.3867C12.9755 10.2572 13 10.1283 13 10C13 9.86608 12.9755 9.7358 12.9264 9.60915C12.8774 9.48249 12.7965 9.36392 12.6836 9.25345L8.64194 5.29797C8.43898 5.09932 8.21607 5 7.9732 5C7.73034 5 7.50742 5.09932 7.30446 5.29797C7.10149 5.49661 7 5.71477 7 5.95246C7 6.19014 7.10149 6.40831 7.30446 6.60694L10.7714 10L7.30446 13.3931C7.10149 13.5917 7 13.8099 7 14.0475C7 14.2852 7.10149 14.5034 7.30446 14.702C7.50742 14.9007 7.73034 15 7.9732 15C8.21607 15 8.43898 14.9007 8.64194 14.702Z"
+                    fill="#6265AD"
+                  />
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

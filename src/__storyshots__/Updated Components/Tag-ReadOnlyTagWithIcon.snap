@@ -43,6 +43,9 @@
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .emotion-2 {
@@ -64,6 +67,12 @@
 }
 
 .emotion-4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -94,9 +103,12 @@
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.emotion-7 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -127,18 +139,21 @@
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.emotion-9 {
+.emotion-11 {
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-9 path {
+.emotion-11 path {
   fill: #BF1250!important;
 }
 
-.emotion-10 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -169,18 +184,21 @@
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.emotion-12 {
+.emotion-15 {
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-12 path {
+.emotion-15 path {
   fill: #5F33AC!important;
 }
 
-.emotion-13 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -211,18 +229,21 @@
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.emotion-15 {
+.emotion-19 {
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-15 path {
+.emotion-19 path {
   fill: #11695B!important;
 }
 
-.emotion-16 {
+.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -253,14 +274,17 @@
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.emotion-18 {
+.emotion-23 {
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-18 path {
+.emotion-23 path {
   fill: #8B391D!important;
 }
 
@@ -295,7 +319,11 @@
             />
           </svg>
         </div>
-        Label
+        <div
+          class="emotion-4"
+        >
+          Label
+        </div>
       </div>
     </div>
     <div
@@ -304,7 +332,7 @@
       <div
         aria-label="Label"
         aria-selected="false"
-        class="emotion-4"
+        class="emotion-5"
         data-testid="undefined_tag_container"
         tabindex="-1"
       >
@@ -325,7 +353,11 @@
             />
           </svg>
         </div>
-        Label
+        <div
+          class="emotion-4"
+        >
+          Label
+        </div>
       </div>
     </div>
     <div
@@ -334,7 +366,7 @@
       <div
         aria-label="Label"
         aria-selected="false"
-        class="emotion-7"
+        class="emotion-9"
         data-testid="undefined_tag_container"
         tabindex="-1"
       >
@@ -342,7 +374,7 @@
           class="emotion-2"
         >
           <svg
-            class="emotion-9"
+            class="emotion-11"
             fill="none"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
@@ -355,37 +387,11 @@
             />
           </svg>
         </div>
-        Label
-      </div>
-    </div>
-    <div
-      style="margin: 5px;"
-    >
-      <div
-        aria-label="Label"
-        aria-selected="false"
-        class="emotion-10"
-        data-testid="undefined_tag_container"
-        tabindex="-1"
-      >
         <div
-          class="emotion-2"
+          class="emotion-4"
         >
-          <svg
-            class="emotion-12"
-            fill="none"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              clip-rule="evenodd"
-              d="M5.04261 16.8335C5.11824 17.0324 5.23468 17.1896 5.39193 17.305C5.5492 17.4205 5.72717 17.4848 5.92586 17.498C6.12453 17.5111 6.3229 17.46 6.52098 17.3445L9.7956 15.2751C9.92126 15.1957 10.0787 15.1957 10.2044 15.2751L13.479 17.3445C13.6771 17.46 13.8755 17.5111 14.0741 17.498C14.2728 17.4848 14.4508 17.4205 14.6081 17.305C14.7653 17.1896 14.8818 17.0324 14.9574 16.8335C15.033 16.6346 15.0426 16.4216 14.9862 16.1944L14.1196 12.2834C14.0866 12.1348 14.135 11.9793 14.2454 11.8793L17.1417 9.25401C17.3242 9.1122 17.4358 8.93684 17.4766 8.7279C17.5174 8.51895 17.5048 8.32224 17.4388 8.13777C17.3728 7.95329 17.2611 7.7936 17.1039 7.6587C16.9466 7.5238 16.7623 7.44317 16.551 7.41682L12.7548 7.07491C12.6088 7.06176 12.4818 6.96524 12.4249 6.82422L10.94 3.14188C10.8487 2.90848 10.7188 2.74314 10.5501 2.64587C10.3815 2.54862 10.1981 2.5 10 2.5C9.80192 2.5 9.61855 2.54862 9.44987 2.64587C9.28121 2.74314 9.15127 2.90848 9.06003 3.14188L7.57507 6.82422C7.5182 6.96524 7.39119 7.06176 7.24519 7.07491L3.44896 7.41682C3.23768 7.44317 3.0534 7.5238 2.89614 7.6587C2.73887 7.7936 2.62722 7.95329 2.56119 8.13777C2.49518 8.32224 2.48258 8.51895 2.52339 8.7279C2.5642 8.93684 2.67584 9.1122 2.85831 9.25401L5.75462 11.8793C5.86496 11.9793 5.91336 12.1348 5.88043 12.2834L5.0138 16.1944C4.95736 16.4216 4.96697 16.6346 5.04261 16.8335Z"
-              fill="#6265AD"
-              fill-rule="evenodd"
-            />
-          </svg>
+          Label
         </div>
-        Label
       </div>
     </div>
     <div
@@ -415,7 +421,11 @@
             />
           </svg>
         </div>
-        Label
+        <div
+          class="emotion-4"
+        >
+          Label
+        </div>
       </div>
     </div>
     <div
@@ -424,7 +434,7 @@
       <div
         aria-label="Label"
         aria-selected="false"
-        class="emotion-16"
+        class="emotion-17"
         data-testid="undefined_tag_container"
         tabindex="-1"
       >
@@ -432,7 +442,7 @@
           class="emotion-2"
         >
           <svg
-            class="emotion-18"
+            class="emotion-19"
             fill="none"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
@@ -445,7 +455,45 @@
             />
           </svg>
         </div>
-        Label
+        <div
+          class="emotion-4"
+        >
+          Label
+        </div>
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        aria-label="Label"
+        aria-selected="false"
+        class="emotion-21"
+        data-testid="undefined_tag_container"
+        tabindex="-1"
+      >
+        <div
+          class="emotion-2"
+        >
+          <svg
+            class="emotion-23"
+            fill="none"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M5.04261 16.8335C5.11824 17.0324 5.23468 17.1896 5.39193 17.305C5.5492 17.4205 5.72717 17.4848 5.92586 17.498C6.12453 17.5111 6.3229 17.46 6.52098 17.3445L9.7956 15.2751C9.92126 15.1957 10.0787 15.1957 10.2044 15.2751L13.479 17.3445C13.6771 17.46 13.8755 17.5111 14.0741 17.498C14.2728 17.4848 14.4508 17.4205 14.6081 17.305C14.7653 17.1896 14.8818 17.0324 14.9574 16.8335C15.033 16.6346 15.0426 16.4216 14.9862 16.1944L14.1196 12.2834C14.0866 12.1348 14.135 11.9793 14.2454 11.8793L17.1417 9.25401C17.3242 9.1122 17.4358 8.93684 17.4766 8.7279C17.5174 8.51895 17.5048 8.32224 17.4388 8.13777C17.3728 7.95329 17.2611 7.7936 17.1039 7.6587C16.9466 7.5238 16.7623 7.44317 16.551 7.41682L12.7548 7.07491C12.6088 7.06176 12.4818 6.96524 12.4249 6.82422L10.94 3.14188C10.8487 2.90848 10.7188 2.74314 10.5501 2.64587C10.3815 2.54862 10.1981 2.5 10 2.5C9.80192 2.5 9.61855 2.54862 9.44987 2.64587C9.28121 2.74314 9.15127 2.90848 9.06003 3.14188L7.57507 6.82422C7.5182 6.96524 7.39119 7.06176 7.24519 7.07491L3.44896 7.41682C3.23768 7.44317 3.0534 7.5238 2.89614 7.6587C2.73887 7.7936 2.62722 7.95329 2.56119 8.13777C2.49518 8.32224 2.48258 8.51895 2.52339 8.7279C2.5642 8.93684 2.67584 9.1122 2.85831 9.25401L5.75462 11.8793C5.86496 11.9793 5.91336 12.1348 5.88043 12.2834L5.0138 16.1944C4.95736 16.4216 4.96697 16.6346 5.04261 16.8335Z"
+              fill="#6265AD"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <div
+          class="emotion-4"
+        >
+          Label
+        </div>
       </div>
     </div>
   </div>
