@@ -31,6 +31,8 @@ export { default as Box } from './components/Box';
 export * from './components/Box';
 export { default as Button } from './components/Button';
 export * from './components/Button';
+export { default as DropdownButton } from './components/DropdownButton';
+export * from './components/DropdownButton';
 export { default as Card } from './components/Card';
 export * from './components/Card';
 
