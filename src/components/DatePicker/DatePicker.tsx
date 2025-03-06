@@ -95,13 +95,22 @@ const DatePicker: React.FC<DatePickerProps & TestProps> = ({
       // in case is range picker
       return setRange((oldState) => {
         if (oldState.from && oldState.to) {
+          // Reset range and set new start date
           return { from: startOfDay, to: undefined };
         }
 
         if (!oldState.from) {
+          // First selection - set start date
           return { ...oldState, from: startOfDay };
         }
 
+        // Second selection - determine correct order of dates
+        if (startOfDay.isBefore(oldState.from)) {
+          // If selected date is before the start date, swap them
+          return { from: startOfDay, to: oldState.from.endOf('day') };
+        }
+
+        // Normal case - selected date is after start date
         return { ...oldState, to: endOfDay };
       });
     },
