@@ -99,6 +99,47 @@ describe('DatePicker', () => {
     });
   });
 
+  it('should handle selecting a range in reverse order', () => {
+    const onChange = vi.fn();
+    const { getByTestId, getAllByText } = render(
+      <DatePicker
+        dataTestId={'input'}
+        isRangePicker
+        value={{
+          from: currentDay.toDate(),
+          to: currentDay.add(1).toDate(),
+        }}
+        onChange={onChange}
+      />
+    );
+    const calendarButton = getByTestId('calendar_button');
+    // trigger overlay
+    fireEvent.click(calendarButton);
+
+    // Select later date first
+    const laterDay = getAllByText(currentDay.add(5, 'day').format('D'))[0];
+    const earlierDay = getAllByText(currentDay.add(3, 'day').format('D'))[0];
+    const applyButton = getByTestId('button-apply');
+
+    // select days in reverse order
+    fireEvent.click(laterDay);
+    fireEvent.click(earlierDay);
+    // apply
+    fireEvent.click(applyButton);
+
+    // check if the selected days are correctly ordered in the onChange callback
+    expect(onChange).toBeCalledTimes(1);
+    const onChangeResult: { from: Date; to: Date } = onChange.mock.calls[0][0];
+
+    expect({
+      from: dayjs(onChangeResult.from).format(format),
+      to: dayjs(onChangeResult.to).format(format),
+    }).toEqual({
+      from: currentDay.add(3, 'day').format(format),
+      to: currentDay.add(5, 'day').format(format),
+    });
+  });
+
   it('should change months when arrow buttons are clicked', () => {
     const { getByTestId } = render(
       <DatePicker
