@@ -19,6 +19,7 @@ const Search = React.forwardRef<HTMLInputElement, SearchProps>((props, ref) => {
     dataTestPrefixId = 'search',
     filterConfig,
     sx,
+    children,
     ...rest
   } = props;
 
@@ -26,9 +27,7 @@ const Search = React.forwardRef<HTMLInputElement, SearchProps>((props, ref) => {
 
   const isClearVisible = value && (value as string).length > 0;
 
-  const hasFilter = Boolean(
-    filterConfig?.defaultValue && filterConfig?.label && filterConfig?.items
-  );
+  const hasFilter = Boolean(filterConfig?.defaultValue && filterConfig?.label);
 
   useEscape(() => {
     if (onClear) {
@@ -79,7 +78,9 @@ const Search = React.forwardRef<HTMLInputElement, SearchProps>((props, ref) => {
             {...filterConfig}
             isDisabled={isDisabled}
             dataTestPrefixId={`${dataTestPrefixId}_search_filter`}
-          />
+          >
+            {children}
+          </Filter>
         </div>
       )}
     </div>

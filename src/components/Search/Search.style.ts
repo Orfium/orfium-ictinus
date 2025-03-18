@@ -35,7 +35,7 @@ export const filterStyles =
   () =>
   (theme: Theme): SerializedStyles => {
     return css`
-      button {
+      > div > div > button {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
         border: none;
