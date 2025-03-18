@@ -39,6 +39,7 @@ export const styledBoxPropsKeys: Array<keyof StyledBoxProps> = [
   'display',
   'flex',
   'grid',
+  'gap',
   'gridArea',
   'gridAutoColumns',
   'gridAutoFlow',
@@ -123,16 +124,22 @@ export const cssResolver = curry(
     }
 
     if (type === 'spacing') {
-      // if is horizontal padding or margin
-      if (key === 'px' || key === 'mx') {
+      // Handle padding
+      if (key === 'px' || key === 'py') {
+        const horizontalValue = obj['px'] ? theme.globals[type].get(obj['px']) : '0';
+        const verticalValue = obj['py'] ? theme.globals[type].get(obj['py']) : '0';
+
         return {
-          [cssKey]: `0 ${theme.globals[type].get(obj[key] || '0')}`,
+          [cssKey]: `${verticalValue} ${horizontalValue}`,
         };
       }
-      // if is vertical padding or margin
-      if (key === 'py' || key === 'my') {
+      // Handle margin
+      if (key === 'mx' || key === 'my') {
+        const horizontalValue = obj['mx'] ? theme.globals[type].get(obj['mx']) : '0';
+        const verticalValue = obj['my'] ? theme.globals[type].get(obj['my']) : '0';
+
         return {
-          [cssKey]: `${theme.globals[type].get(obj[key] || '0')} 0`,
+          [cssKey]: `${verticalValue} ${horizontalValue}`,
         };
       }
 

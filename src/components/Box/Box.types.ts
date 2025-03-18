@@ -243,6 +243,7 @@ export type StyledBoxProps = {
   flex?: Flex;
   /** available values: https://developer.mozilla.org/en-US/docs/Web/CSS/grid */
   grid?: string;
+  gap?: SpacingKey;
   /** available values: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-area */
   gridArea?: string;
   /** available values: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-columns */
