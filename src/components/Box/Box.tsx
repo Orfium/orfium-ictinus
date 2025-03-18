@@ -37,6 +37,7 @@ const Box = forwardRef<HTMLDivElement, BoxProps>(({ children, ...rest }, ref) =>
     ...resolver('left', 'left', 'spacing'),
     ...resolver('bottom', 'bottom', 'spacing'),
     ...resolver('color', 'color', 'color'),
+    ...resolver('gap', 'gap', 'spacing'),
     ...resolver('backgroundColor', 'backgroundColor', 'backgroundColor'),
   };
 
