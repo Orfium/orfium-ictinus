@@ -10,7 +10,7 @@
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  height: 21.875rem;
+  height: 25rem;
 }
 
 .emotion-1 {
@@ -36,7 +36,7 @@
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   box-shadow: inset 0 0 0 0.0625rem #8EAAEC;
-  border-radius: 624.9375rem;
+  border-radius: 624.9375rem 0 0 624.9375rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -44,7 +44,7 @@
   opacity: 1;
   cursor: text;
   height: 2.25rem;
-  min-width: 8.75rem;
+  min-width: 15rem;
   background-color: rgba(200,206,255,0.30);
   z-index: 1;
   background: #ffffff;
@@ -232,47 +232,7 @@
   cursor: not-allowed;
 }
 
-.emotion-9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: inset 0 0 0 0.0625rem #8EAAEC;
-  border-radius: 624.9375rem 0 0 624.9375rem;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  opacity: 1;
-  cursor: text;
-  height: 2.25rem;
-  min-width: 15rem;
-  background-color: rgba(200,206,255,0.30);
-  z-index: 1;
-  background: #ffffff;
-}
-
-.emotion-9:hover {
-  background: rgba(200,206,255,0.20);
-}
-
-.emotion-9:focus-within {
-  background: rgba(200,206,255,0.20);
-  outline: none;
-  box-shadow: inset 0 0 0 0.125rem #175BF5;
-}
-
-.emotion-15>div>div>button {
+.emotion-8>div>div>button {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   border: none;
@@ -282,21 +242,21 @@
   margin-left: -1px;
 }
 
-.emotion-15>div>div>button:hover[data-active='false']:enabled {
+.emotion-8>div>div>button:hover[data-active='false']:enabled {
   background: rgba(200,206,255,0.20);
 }
 
-.emotion-15>div>div>button:focus-within:enabled {
+.emotion-8>div>div>button:focus-within:enabled {
   border-left: none;
   box-shadow: inset 0 0 0 0.125rem #175BF5;
   z-index: 1;
 }
 
-.emotion-15>div>div>button:focus-within:enabled[data-active='false'] {
+.emotion-8>div>div>button:focus-within:enabled[data-active='false'] {
   background: rgba(200,206,255,0.20);
 }
 
-.emotion-16 {
+.emotion-9 {
   overflow: inherit;
   text-overflow: inherit;
   width: -webkit-max-content;
@@ -306,11 +266,11 @@
   position: relative;
 }
 
-.emotion-16 #unique-tooltip-id {
+.emotion-9 #unique-tooltip-id {
   display: none!important;
 }
 
-.emotion-17 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -338,18 +298,18 @@
   opacity: 1;
 }
 
-.emotion-17:not([disabled]):focus-visible,
-.emotion-17:not([disabled]):hover {
+.emotion-10:not([disabled]):focus-visible,
+.emotion-10:not([disabled]):hover {
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-18 {
+.emotion-11 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 
-.emotion-19 {
+.emotion-12 {
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
@@ -362,7 +322,7 @@
   transition: all 0.2s ease-in-out;
 }
 
-.emotion-20 {
+.emotion-13 {
   width: 1rem;
   height: 1rem;
   display: -webkit-box;
@@ -371,12 +331,12 @@
   display: flex;
 }
 
-.emotion-21 {
+.emotion-14 {
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-21 path {
+.emotion-14 path {
   fill: #194DCC!important;
 }
 
@@ -425,76 +385,33 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div
-      style="margin: 5px;"
-    >
-      <div
-        class="emotion-1"
-        data-testid="search_container"
-      >
         <div
-          class="emotion-9"
-        >
-          <div
-            class="emotion-3"
-          >
-            <div
-              class="emotion-4"
-            >
-              <svg
-                class="emotion-5"
-                fill="none"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M16.48 17.2364L11.8625 12.6022C11.4486 12.9313 10.9417 13.1893 10.3416 13.3762C9.74155 13.5631 9.14706 13.6565 8.55814 13.6565C7.00471 13.6565 5.69 13.1168 4.61399 12.0373C3.538 10.9579 3 9.63891 3 8.08047C3 6.52203 3.53779 5.20233 4.61337 4.12139C5.68893 3.04046 7.00313 2.5 8.55594 2.5C10.1088 2.5 11.4237 3.03994 12.5007 4.11983C13.5778 5.19974 14.1163 6.51922 14.1163 8.07827C14.1163 8.6853 14.0274 9.27262 13.8497 9.84025C13.6719 10.4079 13.4175 10.9052 13.0865 11.3323L17.7453 16.008C17.9151 16.1704 18 16.3696 18 16.6058C18 16.842 17.9064 17.054 17.7193 17.2418C17.5478 17.4139 17.3421 17.5 17.1023 17.5C16.8625 17.5 16.6551 17.4121 16.48 17.2364ZM8.55814 11.8706C9.62457 11.8706 10.521 11.5061 11.2473 10.7772C11.9736 10.0482 12.3368 9.14856 12.3368 8.07827C12.3368 7.00797 11.9736 6.10834 11.2473 5.37937C10.521 4.65039 9.62457 4.28591 8.55814 4.28591C7.4917 4.28591 6.59532 4.65039 5.86897 5.37937C5.14265 6.10834 4.77948 7.00797 4.77948 8.07827C4.77948 9.14856 5.14265 10.0482 5.86897 10.7772C6.59532 11.5061 7.4917 11.8706 8.55814 11.8706Z"
-                  fill="#6265AD"
-                />
-              </svg>
-            </div>
-            <div
-              class="emotion-6"
-            >
-              <input
-                class="emotion-7"
-                data-testid="search_search_input"
-                placeholder="Search"
-                type="search"
-                value=""
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="emotion-15"
+          class="emotion-8"
         >
           <div>
             <div
-              class="emotion-16"
+              class="emotion-9"
             >
               <button
-                class="emotion-17"
+                class="emotion-10"
                 data-active="false"
                 data-testid="search_search_filter_filter_button"
                 type="button"
               >
                 <div
-                  class="emotion-18"
+                  class="emotion-11"
                   data-testid="search_search_filter_filter_label"
                 >
-                  Friends: All
+                  Filter By: None
                 </div>
                 <div
-                  class="emotion-19"
+                  class="emotion-12"
                 >
                   <div
-                    class="emotion-20"
+                    class="emotion-13"
                   >
                     <svg
-                      class="emotion-21"
+                      class="emotion-14"
                       fill="none"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"

@@ -232,7 +232,7 @@
   cursor: not-allowed;
 }
 
-.emotion-8 button {
+.emotion-8>div>div>button {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   border: none;
@@ -242,17 +242,17 @@
   margin-left: -1px;
 }
 
-.emotion-8 button:hover[data-active='false']:enabled {
+.emotion-8>div>div>button:hover[data-active='false']:enabled {
   background: rgba(200,206,255,0.20);
 }
 
-.emotion-8 button:focus-within:enabled {
+.emotion-8>div>div>button:focus-within:enabled {
   border-left: none;
   box-shadow: inset 0 0 0 0.125rem #175BF5;
   z-index: 1;
 }
 
-.emotion-8 button:focus-within:enabled[data-active='false'] {
+.emotion-8>div>div>button:focus-within:enabled[data-active='false'] {
   background: rgba(200,206,255,0.20);
 }
 
