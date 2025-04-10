@@ -1,7 +1,9 @@
 import { ThemeProvider as EmotionThemeProvider } from '@emotion/react';
 import { Global } from '@emotion/react';
 import { ThemeSwitchProvider, useThemeSwitch } from 'hooks/useThemeSwitch';
-import { keys, merge, pick } from 'lodash';
+import keys from 'lodash/keys';
+import merge from 'lodash/merge';
+import pick from 'lodash/pick';
 import React from 'react';
 import theme, { Theme, ThemeConfig } from 'theme';
 import { DeepPartial, ReactFCC } from 'utils/types';
