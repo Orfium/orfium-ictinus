@@ -1,5 +1,5 @@
 import debounce from 'lodash/debounce';
-import React, { useMemo } from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { ChangeEvent } from 'utils/common';
 import { errorHandler } from 'utils/helpers';
 
@@ -9,7 +9,6 @@ import SingleFilter from './components/SingleFilter/SingleFilter';
 import useMultiFilterUtils from './hooks/useMultiFilterUtils';
 import { FilterOption, Props } from './types';
 import { errors, getInitialFilterLabel } from './utils';
-import ClickAwayListener from '../utils/ClickAwayListener';
 import handleSearch from 'components/utils/handleSearch';
 import PositionInScreen from 'components/utils/PositionInScreen/PositionInScreen';
 
@@ -75,18 +74,28 @@ const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
     onFilterDelete,
   });
 
-  const handleChange = (event: ChangeEvent) => {
-    const isAsync = typeof onAsyncSearch === 'function';
+  const debouncedOnChange = useCallback(
+    debounce((value: string) => {
+      onAsyncSearch?.(value);
+    }, 400),
+    []
+  );
 
-    handleSearch({
-      event,
-      isSearchable: isSearchable || multi,
-      isAsync,
-      setSearchValue,
-      onChange: debouncedOnChange,
-      minCharactersToSearch,
-    });
-  };
+  const handleChange = useCallback(
+    (event: ChangeEvent) => {
+      const isAsync = typeof onAsyncSearch === 'function';
+
+      handleSearch({
+        event,
+        isSearchable: isSearchable || multi,
+        isAsync,
+        setSearchValue,
+        onChange: debouncedOnChange,
+        minCharactersToSearch,
+      });
+    },
+    [debouncedOnChange, isSearchable, minCharactersToSearch, multi, onAsyncSearch]
+  );
 
   const filteredOptions = useMemo(() => {
     const optionsToBeFiltered = multi ? availableMultiFilters : items;
@@ -107,13 +116,6 @@ const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
     setSearchValue('');
     setIsOpen(!isOpen);
   };
-
-  const debouncedOnChange = React.useCallback(
-    debounce((value: string) => {
-      onAsyncSearch?.(value);
-    }, 400),
-    []
-  );
 
   const handleSelect = (option: FilterOption) => {
     if (multi) {
@@ -170,34 +172,33 @@ const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
     );
 
   return (
-    <ClickAwayListener onClick={() => setIsOpen(false)}>
-      <PositionInScreen
-        visible={isOpen}
-        hasWrapperWidth
-        offsetY={8}
-        sx={{ container: { width: 'max-content' } }}
-        parent={
-          <FilterBase
-            ref={ref}
-            dataTestId={dataTestId}
-            handleOpen={handleOpen}
-            disabled={disabled}
-            onClear={handleClear}
-            selectedItemLabel={filterLabel}
-            open={isOpen}
-            hasSelectedValue={hasSelectedValue}
-            label={label as string}
-            iconName={iconName}
-            filterType={filterType}
-            buttonType={buttonType}
-            styleType={styleType}
-            multi={multi}
-          />
-        }
-      >
-        {getFilter()}
-      </PositionInScreen>
-    </ClickAwayListener>
+    <PositionInScreen
+      visible={isOpen}
+      setIsVisible={setIsOpen}
+      hasWrapperWidth
+      offsetY={8}
+      sx={{ container: { width: 'max-content' } }}
+      parent={
+        <FilterBase
+          ref={ref}
+          dataTestId={dataTestId}
+          handleOpen={handleOpen}
+          disabled={disabled}
+          onClear={handleClear}
+          selectedItemLabel={filterLabel}
+          open={isOpen}
+          hasSelectedValue={hasSelectedValue}
+          label={label as string}
+          iconName={iconName}
+          filterType={filterType}
+          buttonType={buttonType}
+          styleType={styleType}
+          multi={multi}
+        />
+      }
+    >
+      {getFilter()}
+    </PositionInScreen>
   );
 });
 Filter.displayName = 'Filter';

@@ -9,7 +9,6 @@ import { currentDay, initDates } from './utils';
 import { TestProps } from '../../utils/types';
 import { FilterType, StyleType } from '../Filter/types';
 import { Props as TextFieldProps } from '../TextField/TextField';
-import ClickAwayListener from '../utils/ClickAwayListener';
 import PositionInScreen from '../utils/PositionInScreen';
 
 export type DisabledDates = {
@@ -207,38 +206,37 @@ const DatePicker: React.FC<Props & TestProps> = ({
   }, [applyRangeAndClose, range]);
 
   return (
-    <ClickAwayListener onClick={onCancel}>
-      <PositionInScreen
-        visible={isOpen}
-        parent={
-          <DatePickInput
-            filterConfig={filterConfig}
-            isRangePicker={isRangePicker}
-            selectedDay={value}
-            inputProps={inputProps}
-            dateFormatOverride={dateFormatOverride}
-            handleFocus={handleFocus}
-            handleClear={handleClear}
-            isOpen={isOpen}
-            dataTestId={dataTestId}
-          />
-        }
-      >
-        <div css={datePickerStyles()}>
-          <OverlayComponent
-            selectedOption={selectedOption}
-            setSelectedOption={handleSelectedOptions}
-            extraOptions={extraOptions}
-            isRangePicker={isRangePicker}
-            onDaySelect={setRangePick}
-            selectedDays={range}
-            disabledDates={disableDates}
-            onCancel={onCancel}
-            onApply={onApply}
-          />
-        </div>
-      </PositionInScreen>
-    </ClickAwayListener>
+    <PositionInScreen
+      visible={isOpen}
+      setIsVisible={onCancel}
+      parent={
+        <DatePickInput
+          filterConfig={filterConfig}
+          isRangePicker={isRangePicker}
+          selectedDay={value}
+          inputProps={inputProps}
+          dateFormatOverride={dateFormatOverride}
+          handleFocus={handleFocus}
+          handleClear={handleClear}
+          isOpen={isOpen}
+          dataTestId={dataTestId}
+        />
+      }
+    >
+      <div css={datePickerStyles()}>
+        <OverlayComponent
+          selectedOption={selectedOption}
+          setSelectedOption={handleSelectedOptions}
+          extraOptions={extraOptions}
+          isRangePicker={isRangePicker}
+          onDaySelect={setRangePick}
+          selectedDays={range}
+          disabledDates={disableDates}
+          onCancel={onCancel}
+          onApply={onApply}
+        />
+      </div>
+    </PositionInScreen>
   );
 };
 

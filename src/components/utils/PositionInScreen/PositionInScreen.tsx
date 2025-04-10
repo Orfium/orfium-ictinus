@@ -1,13 +1,17 @@
 import { CSSObject } from '@emotion/serialize';
 import React, { useState } from 'react';
+import { createPortal } from 'react-dom';
 import { ReactFCC } from 'utils/types';
 
 import { useWrapperWidth, usePositionInScreen } from './hooks';
 import { container, itemContainer } from './PositionInScreen.style';
+import ClickAwayListener from '../../utils/ClickAwayListener';
 
 type Props = {
   /** Whether the item to be positioned is visible */
   visible: boolean;
+  /** Function to set the visibility of the item */
+  setIsVisible: (visible: boolean) => void;
   /** Configures the container's overflow */
   withOverflow?: boolean;
   /** Whether the item to be positioned uses the parent's wrapper width */
@@ -27,6 +31,7 @@ type Props = {
 
 const PositionInScreen: ReactFCC<Props> = ({
   visible,
+  setIsVisible,
   parent,
   withOverflow,
   hasWrapperWidth = false,
@@ -51,15 +56,20 @@ const PositionInScreen: ReactFCC<Props> = ({
       }}
     >
       {parent}
-      <div
-        css={itemContainer(x, y, showTooltip, wrapperWidth, sx)}
-        className={'unique-tooltip-id'}
-        ref={(ref) => {
-          setItemRef(ref);
-        }}
-      >
-        {children}
-      </div>
+      {createPortal(
+        <ClickAwayListener onClick={() => setIsVisible(false)}>
+          <div
+            css={itemContainer(x, y, showTooltip, wrapperWidth, sx)}
+            className={'unique-tooltip-id'}
+            ref={(ref) => {
+              setItemRef(ref);
+            }}
+          >
+            {children}
+          </div>
+        </ClickAwayListener>,
+        document.body
+      )}
     </div>
   );
 };
