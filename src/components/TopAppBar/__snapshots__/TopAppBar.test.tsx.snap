@@ -324,100 +324,6 @@ exports[`TopAppBar should render correctly 1`] = `
   fill: black;
 }
 
-.emotion-19 {
-  overflow: hidden;
-  position: absolute;
-  top: 0.5rem;
-  left: 0rem;
-  z-index: 999999999;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  visibility: hidden;
-  opacity: 0!important;
-}
-
-.emotion-20 {
-  max-height: 15.8125rem;
-  overflow-y: auto;
-  position: absolute;
-  left: 0;
-  right: 0;
-  min-width: 9.375rem;
-  max-width: 38.75rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: auto;
-  background-color: white;
-  box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
-  border-radius: 0.25rem;
-  z-index: 1;
-}
-
-.emotion-21 {
-  border: 1px solid #edefff;
-  border-radius: 0.25rem;
-  width: undefinedpx;
-}
-
-.emotion-22 {
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  border-radius: 0.25rem;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  overflow-x: hidden;
-}
-
-.emotion-23 {
-  height: 2.875rem;
-  font-size: 0.875rem;
-  background-color: white;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0px 1rem 0px 1rem;
-  cursor: pointer;
-}
-
-.emotion-23:hover {
-  background-color: #f6f7ff;
-}
-
-.emotion-24 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  cursor: inherit;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-24>div {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
 .emotion-0 {
   display: -webkit-box;
   display: -moz-box;
@@ -741,100 +647,6 @@ exports[`TopAppBar should render correctly 1`] = `
   fill: black;
 }
 
-.emotion-19 {
-  overflow: hidden;
-  position: absolute;
-  top: 0.5rem;
-  left: 0rem;
-  z-index: 999999999;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  visibility: hidden;
-  opacity: 0!important;
-}
-
-.emotion-20 {
-  max-height: 15.8125rem;
-  overflow-y: auto;
-  position: absolute;
-  left: 0;
-  right: 0;
-  min-width: 9.375rem;
-  max-width: 38.75rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: auto;
-  background-color: white;
-  box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
-  border-radius: 0.25rem;
-  z-index: 1;
-}
-
-.emotion-21 {
-  border: 1px solid #edefff;
-  border-radius: 0.25rem;
-  width: undefinedpx;
-}
-
-.emotion-22 {
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  border-radius: 0.25rem;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  overflow-x: hidden;
-}
-
-.emotion-23 {
-  height: 2.875rem;
-  font-size: 0.875rem;
-  background-color: white;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0px 1rem 0px 1rem;
-  cursor: pointer;
-}
-
-.emotion-23:hover {
-  background-color: #f6f7ff;
-}
-
-.emotion-24 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  cursor: inherit;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-24>div {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
 <div>
   <div
     aria-label="Top Application Banner"
@@ -876,138 +688,54 @@ exports[`TopAppBar should render correctly 1`] = `
       class="emotion-8"
     >
       <div
-        role="button"
+        data-testid="userMenu"
       >
         <div
-          data-testid="userMenu"
+          class="emotion-9"
         >
-          <div
-            class="emotion-9"
+          <button
+            class="emotion-10"
+            data-testid="button"
+            type="button"
           >
-            <button
-              class="emotion-10"
-              data-testid="button"
-              type="button"
+            <span
+              class="emotion-11"
             >
               <span
-                class="emotion-11"
+                class="emotion-12"
               >
-                <span
-                  class="emotion-12"
+                <div
+                  class="emotion-13"
                 >
-                  <div
-                    class="emotion-13"
-                  >
-                    <img
-                      src="https://mui.com/static/images/avatar/1.jpg"
-                    />
-                  </div>
-                </span>
-                <span
-                  class="emotion-14"
-                >
-                  <span>
-                    <span
-                      class="emotion-15"
-                    >
-                      Tom Cruise
-                    </span>
-                  </span>
-                </span>
-                <span
-                  class="emotion-12"
-                >
+                  <img
+                    src="https://mui.com/static/images/avatar/1.jpg"
+                  />
+                </div>
+              </span>
+              <span
+                class="emotion-14"
+              >
+                <span>
                   <span
-                    class="emotion-3"
+                    class="emotion-15"
                   >
-                    <span
-                      class="emotion-18"
-                    />
+                    Tom Cruise
                   </span>
                 </span>
               </span>
-            </button>
-            <div
-              class="unique-tooltip-id emotion-19"
-            >
-              <div
-                class="emotion-20"
+              <span
+                class="emotion-12"
               >
-                <div
-                  class="emotion-21"
+                <span
+                  class="emotion-3"
                 >
-                  <div
-                    data-testid="ictinus_list"
-                  >
-                    <ul
-                      class="emotion-22"
-                    >
-                      <li>
-                        <div
-                          class="emotion-23"
-                          data-testid="ictinus_list_item_0"
-                        >
-                          <div
-                            class="emotion-24"
-                          >
-                            My Profile
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div
-                          class="emotion-23"
-                          data-testid="ictinus_list_item_1"
-                        >
-                          <div
-                            class="emotion-24"
-                          >
-                            Settings
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div
-                          class="emotion-23"
-                          data-testid="ictinus_list_item_2"
-                        >
-                          <div
-                            class="emotion-24"
-                          >
-                            Billing
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div
-                          class="emotion-23"
-                          data-testid="ictinus_list_item_3"
-                        >
-                          <div
-                            class="emotion-24"
-                          >
-                            Notifications
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div
-                          class="emotion-23"
-                          data-testid="ictinus_list_item_4"
-                        >
-                          <div
-                            class="emotion-24"
-                          >
-                            Logout
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+                  <span
+                    class="emotion-18"
+                  />
+                </span>
+              </span>
+            </span>
+          </button>
         </div>
       </div>
     </div>
@@ -1339,100 +1067,6 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   fill: white;
 }
 
-.emotion-19 {
-  overflow: hidden;
-  position: absolute;
-  top: 0.5rem;
-  left: 0rem;
-  z-index: 999999999;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  visibility: hidden;
-  opacity: 0!important;
-}
-
-.emotion-20 {
-  max-height: 15.8125rem;
-  overflow-y: auto;
-  position: absolute;
-  left: 0;
-  right: 0;
-  min-width: 9.375rem;
-  max-width: 38.75rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: auto;
-  background-color: white;
-  box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
-  border-radius: 0.25rem;
-  z-index: 1;
-}
-
-.emotion-21 {
-  border: 1px solid #edefff;
-  border-radius: 0.25rem;
-  width: undefinedpx;
-}
-
-.emotion-22 {
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  border-radius: 0.25rem;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  overflow-x: hidden;
-}
-
-.emotion-23 {
-  height: 2.875rem;
-  font-size: 0.875rem;
-  background-color: white;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0px 1rem 0px 1rem;
-  cursor: pointer;
-}
-
-.emotion-23:hover {
-  background-color: #f6f7ff;
-}
-
-.emotion-24 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  cursor: inherit;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-24>div {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
 .emotion-0 {
   display: -webkit-box;
   display: -moz-box;
@@ -1756,100 +1390,6 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   fill: white;
 }
 
-.emotion-19 {
-  overflow: hidden;
-  position: absolute;
-  top: 0.5rem;
-  left: 0rem;
-  z-index: 999999999;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  visibility: hidden;
-  opacity: 0!important;
-}
-
-.emotion-20 {
-  max-height: 15.8125rem;
-  overflow-y: auto;
-  position: absolute;
-  left: 0;
-  right: 0;
-  min-width: 9.375rem;
-  max-width: 38.75rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: auto;
-  background-color: white;
-  box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
-  border-radius: 0.25rem;
-  z-index: 1;
-}
-
-.emotion-21 {
-  border: 1px solid #edefff;
-  border-radius: 0.25rem;
-  width: undefinedpx;
-}
-
-.emotion-22 {
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  border-radius: 0.25rem;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  overflow-x: hidden;
-}
-
-.emotion-23 {
-  height: 2.875rem;
-  font-size: 0.875rem;
-  background-color: white;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0px 1rem 0px 1rem;
-  cursor: pointer;
-}
-
-.emotion-23:hover {
-  background-color: #f6f7ff;
-}
-
-.emotion-24 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  cursor: inherit;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-24>div {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
 <div>
   <div
     aria-label="Top Application Banner"
@@ -1891,138 +1431,54 @@ exports[`TopAppBar should render correctly on dark 1`] = `
       class="emotion-8"
     >
       <div
-        role="button"
+        data-testid="userMenu"
       >
         <div
-          data-testid="userMenu"
+          class="emotion-9"
         >
-          <div
-            class="emotion-9"
+          <button
+            class="emotion-10"
+            data-testid="button"
+            type="button"
           >
-            <button
-              class="emotion-10"
-              data-testid="button"
-              type="button"
+            <span
+              class="emotion-11"
             >
               <span
-                class="emotion-11"
+                class="emotion-12"
               >
-                <span
-                  class="emotion-12"
+                <div
+                  class="emotion-13"
                 >
-                  <div
-                    class="emotion-13"
-                  >
-                    <img
-                      src="https://mui.com/static/images/avatar/1.jpg"
-                    />
-                  </div>
-                </span>
-                <span
-                  class="emotion-14"
-                >
-                  <span>
-                    <span
-                      class="emotion-15"
-                    >
-                      Tom Cruise
-                    </span>
-                  </span>
-                </span>
-                <span
-                  class="emotion-12"
-                >
+                  <img
+                    src="https://mui.com/static/images/avatar/1.jpg"
+                  />
+                </div>
+              </span>
+              <span
+                class="emotion-14"
+              >
+                <span>
                   <span
-                    class="emotion-3"
+                    class="emotion-15"
                   >
-                    <span
-                      class="emotion-18"
-                    />
+                    Tom Cruise
                   </span>
                 </span>
               </span>
-            </button>
-            <div
-              class="unique-tooltip-id emotion-19"
-            >
-              <div
-                class="emotion-20"
+              <span
+                class="emotion-12"
               >
-                <div
-                  class="emotion-21"
+                <span
+                  class="emotion-3"
                 >
-                  <div
-                    data-testid="ictinus_list"
-                  >
-                    <ul
-                      class="emotion-22"
-                    >
-                      <li>
-                        <div
-                          class="emotion-23"
-                          data-testid="ictinus_list_item_0"
-                        >
-                          <div
-                            class="emotion-24"
-                          >
-                            My Profile
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div
-                          class="emotion-23"
-                          data-testid="ictinus_list_item_1"
-                        >
-                          <div
-                            class="emotion-24"
-                          >
-                            Settings
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div
-                          class="emotion-23"
-                          data-testid="ictinus_list_item_2"
-                        >
-                          <div
-                            class="emotion-24"
-                          >
-                            Billing
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div
-                          class="emotion-23"
-                          data-testid="ictinus_list_item_3"
-                        >
-                          <div
-                            class="emotion-24"
-                          >
-                            Notifications
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div
-                          class="emotion-23"
-                          data-testid="ictinus_list_item_4"
-                        >
-                          <div
-                            class="emotion-24"
-                          >
-                            Logout
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+                  <span
+                    class="emotion-18"
+                  />
+                </span>
+              </span>
+            </span>
+          </button>
         </div>
       </div>
     </div>

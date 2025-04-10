@@ -63,54 +63,51 @@ export const usePositionInScreen = (
   x: number;
   y: number;
 } => {
+  const { parentHeight, childHeight } = useHeights(parentRef, itemRef);
   const [position, setPosition] = useState({ x: -1, y: -1 });
 
-  const { parentHeight, childHeight } = useHeights(parentRef, itemRef);
-
   useLayoutEffect(() => {
-    // x,y are cordinates in screen
-    // width is wrapper elements dimensions
-    const {
-      x: parentX,
-      y: parentY,
-      width: parentWidth,
-    } = parentRef ? parentRef?.getBoundingClientRect() : { x: 0, y: 0, width: 0 };
+    // Define a small buffer for screen edge detection
+    const SCREEN_EDGE_BUFFER = 8;
 
-    // width is the element's that's going to be positioned dimensions
-    const { width } =
-      itemRef && itemRef.children[0] ? itemRef.children[0].getBoundingClientRect() : { width: 0 };
+    // Get parent element dimensions and position
+    const parentRect: DOMRect | undefined = parentRef?.getBoundingClientRect();
+    if (!parentRect) return;
 
-    // If the item-to-be-positioned is out of screen height
-    const itemYOutOfScreenHeight = parentY + parentHeight + childHeight > window.innerHeight;
+    // Get viewport-relative coordinates
+    const parentX = parentRect.left + window.scrollX;
+    const parentY = parentRect.top + window.scrollY;
+    const parentWidth = parentRect.width;
 
-    // The element that we are positioning is absolutely positioned inside the relative
-    // container. So x,y are zero means the element will be positioned exactly on top
-    // of the parent element.
-    let x = 0;
-    let y = 0;
+    // Get positioned element dimensions
+    const childRect: DOMRect | undefined = itemRef?.children[0]?.getBoundingClientRect();
+    const childWidth = childRect?.width ?? 0;
+
+    // Check if element would overflow screen bounds (with buffer)
+    const itemYOutOfScreenHeight =
+      parentRect.top + parentHeight + childHeight > window.innerHeight - SCREEN_EDGE_BUFFER;
+    const itemXOutOfScreenWidth =
+      parentRect.left + childWidth > window.innerWidth - SCREEN_EDGE_BUFFER;
+
+    // Calculate absolute positions (viewport + scroll)
+    let x = parentX + offsetX;
+    let y = parentY;
 
     if (itemYOutOfScreenHeight) {
-      // We place the element height+offsetY (px) above the parent
+      // Position above parent if would overflow bottom
       y = y - childHeight - offsetY;
-      if (parentY + y < 0) {
-        // Rare case where client height is super small. We don't exactly support this.
-        // So we render it as if it was inside the screen height
-        y = parentHeight + offsetY;
+      if (y < SCREEN_EDGE_BUFFER) {
+        // If would overflow top, fallback to below parent
+        y = parentY + parentHeight + offsetY;
       }
     } else {
-      // We place the element offsetY (px) under the parent
-      y = parentHeight + offsetY;
+      // Position below parent
+      y = y + parentHeight + offsetY;
     }
 
-    // If the item-to-be-positioned is out of screen width
-    const itemXOutOfScreenWidth = parentX + width > window.innerWidth;
-
     if (itemXOutOfScreenWidth) {
-      // We place the element parentWidth-width-offsetX (px) at the left of the parent
-      x = x + parentWidth - width - offsetX;
-    } else {
-      // We place the element offset (px) at the right of the parent
-      x = offsetX;
+      // Align to right edge of parent if would overflow right
+      x = parentX + parentWidth - childWidth - offsetX;
     }
 
     setPosition({ x, y });
