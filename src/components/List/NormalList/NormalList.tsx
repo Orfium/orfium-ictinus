@@ -1,4 +1,4 @@
-import { isUndefined } from 'lodash';
+import isUndefined from 'lodash/isUndefined';
 import React from 'react';
 import { generateUniqueID } from 'utils/helpers';
 import { TestProps } from 'utils/types';

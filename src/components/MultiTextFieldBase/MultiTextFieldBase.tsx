@@ -1,5 +1,5 @@
 import useTheme from 'hooks/useTheme';
-import { merge } from 'lodash';
+import merge from 'lodash/merge';
 import omit from 'lodash/omit';
 import React, { useMemo } from 'react';
 import { generateUniqueID } from 'utils/helpers';

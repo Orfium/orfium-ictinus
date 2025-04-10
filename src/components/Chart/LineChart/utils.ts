@@ -1,4 +1,8 @@
-import { omit, keys, flatten, uniq, sampleSize } from 'lodash';
+import flatten from 'lodash/flatten';
+import keys from 'lodash/keys';
+import omit from 'lodash/omit';
+import sampleSize from 'lodash/sampleSize';
+import uniq from 'lodash/uniq';
 import { Theme } from 'theme';
 
 export type Data = {
@@ -13,7 +17,7 @@ type Props = {
 };
 
 export const getKeyNames = (data: Data[]): string[] => {
-  return uniq(flatten(data.map(object => keys(omit(object, 'name')))));
+  return uniq(flatten(data.map((object) => keys(omit(object, 'name')))));
 };
 
 export const colorPicker = ({ theme, uniqueKeyNames, color }: Props): Record<string, string> => {
