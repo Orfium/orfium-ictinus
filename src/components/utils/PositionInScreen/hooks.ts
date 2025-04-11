@@ -1,5 +1,5 @@
 import head from 'lodash/head';
-import { useLayoutEffect, useState } from 'react';
+import { useCallback, useLayoutEffect, useRef, useState } from 'react';
 
 import { resizeObserverHandler } from './utils';
 
@@ -62,11 +62,22 @@ export const usePositionInScreen = (
 ): {
   x: number;
   y: number;
+  maxHeight: number;
+  maxWidth: number;
+  isPositioned: boolean;
+  calculatePosition: () => void;
+  placement: 'top' | 'bottom';
+  triggerWidth: number;
 } => {
-  const { parentHeight, childHeight } = useHeights(parentRef, itemRef);
-  const [position, setPosition] = useState({ x: -1, y: -1 });
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [triggerWidth, setTriggerWidth] = useState(0);
+  const [maxHeight, setMaxHeight] = useState(0);
+  const [maxWidth, setMaxWidth] = useState(0);
+  const [isPositioned, setIsPositioned] = useState(false);
+  const [placement, setPlacement] = useState<'top' | 'bottom'>('bottom');
+  const animationFrameRef = useRef<number>(0);
 
-  useLayoutEffect(() => {
+  const calculatePosition = useCallback(() => {
     // Define a small buffer for screen edge detection
     const SCREEN_EDGE_BUFFER = 8;
 
@@ -74,46 +85,99 @@ export const usePositionInScreen = (
     const parentRect: DOMRect | undefined = parentRef?.getBoundingClientRect();
     if (!parentRect) return;
 
-    // Get viewport-relative coordinates
-    const parentX = parentRect.left + window.scrollX;
-    const parentY = parentRect.top + window.scrollY;
+    // Get viewport-relative coordinates (without scroll offset)
+    const parentX = parentRect.left;
+    const parentY = parentRect.top;
     const parentWidth = parentRect.width;
+    const parentHeight = parentRect.height;
 
     // Get positioned element dimensions
     const childRect: DOMRect | undefined = itemRef?.children[0]?.getBoundingClientRect();
     const childWidth = childRect?.width ?? 0;
+    const childHeight = childRect?.height ?? 0;
 
-    // Check if element would overflow screen bounds (with buffer)
-    const itemYOutOfScreenHeight =
-      parentRect.top + parentHeight + childHeight > window.innerHeight - SCREEN_EDGE_BUFFER;
-    const itemXOutOfScreenWidth =
-      parentRect.left + childWidth > window.innerWidth - SCREEN_EDGE_BUFFER;
-
-    // Calculate absolute positions (viewport + scroll)
+    // Calculate positions (viewport-relative, without scroll)
     let x = parentX + offsetX;
-    let y = parentY;
+    let y;
+    let currentPlacement: 'top' | 'bottom' = 'bottom';
 
-    if (itemYOutOfScreenHeight) {
-      // Position above parent if would overflow bottom
-      y = y - childHeight - offsetY;
-      if (y < SCREEN_EDGE_BUFFER) {
-        // If would overflow top, fallback to below parent
-        y = parentY + parentHeight + offsetY;
-      }
+    // Check if element would overflow screen bounds (with buffer) when placed below
+    const spaceBelow = window.innerHeight - (parentRect.bottom + offsetY) - SCREEN_EDGE_BUFFER;
+    const spaceAbove = parentRect.top - offsetY - SCREEN_EDGE_BUFFER;
+
+    // First try to place it below, if there's not enough space, try above
+    if (childHeight <= spaceBelow) {
+      // Place below - enough space
+      y = parentY + parentHeight + offsetY;
+      currentPlacement = 'bottom';
+    } else if (childHeight <= spaceAbove) {
+      // Place above - enough space above
+      y = parentY - childHeight - offsetY;
+      currentPlacement = 'top';
     } else {
-      // Position below parent
-      y = y + parentHeight + offsetY;
+      // Not enough space either way, place where there's more space and allow scrolling
+      if (spaceBelow >= spaceAbove) {
+        y = parentY + parentHeight + offsetY;
+        currentPlacement = 'bottom';
+      } else {
+        y = parentY - childHeight - offsetY;
+        currentPlacement = 'top';
+      }
     }
+
+    // Check if element would overflow screen bounds horizontally (with buffer)
+    const itemXOutOfScreenWidth = x + childWidth > window.innerWidth - SCREEN_EDGE_BUFFER;
 
     if (itemXOutOfScreenWidth) {
       // Align to right edge of parent if would overflow right
       x = parentX + parentWidth - childWidth - offsetX;
+      // Ensure we don't position outside the left edge
+      if (x < SCREEN_EDGE_BUFFER) {
+        x = SCREEN_EDGE_BUFFER;
+      }
     }
 
-    setPosition({ x, y });
-  }, [parentRef, itemRef, visible, offsetY, offsetX, parentHeight, childHeight]);
+    // Calculate maxHeight - space available from y position to bottom/top of screen based on placement
+    let availableHeight;
+    if (currentPlacement === 'top') {
+      availableHeight = parentY - SCREEN_EDGE_BUFFER;
+    } else {
+      availableHeight =
+        window.innerHeight - (parentY + parentHeight + offsetY) - SCREEN_EDGE_BUFFER;
+    }
 
-  return position;
+    // Calculate maxWidth - space available from x position to right edge of screen
+    const availableRightSpace = window.innerWidth - x - SCREEN_EDGE_BUFFER;
+
+    setPosition({ x, y });
+    setMaxHeight(availableHeight);
+    setMaxWidth(availableRightSpace);
+    setIsPositioned(true);
+    setPlacement(currentPlacement);
+    setTriggerWidth(parentWidth);
+  }, [parentRef, itemRef, offsetY, offsetX]);
+
+  useLayoutEffect(() => {
+    if (!visible) return;
+
+    animationFrameRef.current = requestAnimationFrame(() => {
+      calculatePosition();
+    });
+
+    return () => {
+      cancelAnimationFrame(animationFrameRef.current);
+    };
+  }, [calculatePosition, visible]);
+
+  return {
+    ...position,
+    maxHeight,
+    maxWidth,
+    isPositioned,
+    calculatePosition,
+    placement,
+    triggerWidth,
+  };
 };
 
 export const useWrapperWidth = (
