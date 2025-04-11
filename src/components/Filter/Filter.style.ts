@@ -240,16 +240,14 @@ export const menuStyle = () => (theme: Theme) => {
   const borderConfig = textInputConfig.types[theme.colorScheme].outlined.border;
 
   return css`
-    position: absolute;
-    left: 0;
-    height: auto;
+    overflow: auto;
+    max-height: inherit;
+
     border: ${rem(borderConfig.width)} solid
       ${theme.utils.getColor(borderConfig.color.default.name, borderConfig.color.default.shade)};
     border-radius: ${theme.spacing.xsm};
     background-color: ${theme.palette.white};
     box-shadow: ${theme.elevation['02']};
-    z-index: 500;
-    overflow: hidden;
     min-width: 100%;
     max-width: ${rem(440)};
   `;

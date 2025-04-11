@@ -1,11 +1,11 @@
 import { CSSObject } from '@emotion/serialize';
-import React, { useState } from 'react';
+import { rem } from 'polished';
+import React, { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { ReactFCC } from 'utils/types';
 
-import { useWrapperWidth, usePositionInScreen } from './hooks';
-import { container, itemContainer } from './PositionInScreen.style';
-import ClickAwayListener from '../../utils/ClickAwayListener';
+import { usePositionInScreen } from './hooks';
+import { container } from './PositionInScreen.style';
 
 type Props = {
   /** Whether the item to be positioned is visible */
@@ -40,38 +40,196 @@ const PositionInScreen: ReactFCC<Props> = ({
   sx,
   children,
 }) => {
-  const [wrapperRef, setWrapperRef] = useState<HTMLDivElement | null>(null);
-  const [itemRef, setItemRef] = useState<HTMLDivElement | null>(null);
-
-  const [wrapperWidth] = useWrapperWidth(hasWrapperWidth, wrapperRef);
-  const { x, y } = usePositionInScreen(wrapperRef, itemRef, offsetX, offsetY, visible);
-
-  const showTooltip = visible && x !== -1 && y !== -1;
+  const triggerRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div
-      css={container(withOverflow, sx)}
-      ref={(ref) => {
-        setWrapperRef(ref);
-      }}
-    >
-      {parent}
-      {createPortal(
-        <ClickAwayListener onClick={() => setIsVisible(false)}>
-          <div
-            css={itemContainer(x, y, showTooltip, wrapperWidth, sx)}
-            className={'unique-tooltip-id'}
-            ref={(ref) => {
-              setItemRef(ref);
-            }}
-          >
-            {children}
-          </div>
-        </ClickAwayListener>,
-        document.body
-      )}
-    </div>
+    <>
+      <div ref={triggerRef} css={container(withOverflow, sx)}>
+        {parent}
+      </div>
+      <Overlay
+        visible={visible}
+        setIsVisible={setIsVisible}
+        triggerRef={triggerRef}
+        offsetX={offsetX}
+        offsetY={offsetY}
+        hasWrapperWidth={hasWrapperWidth}
+      >
+        {children}
+      </Overlay>
+    </>
   );
 };
+
+type OverlayProps = {
+  triggerRef: React.RefObject<HTMLDivElement>;
+  children: React.ReactNode;
+  setIsVisible: (visible: boolean) => void;
+  sx?: { container?: CSSObject; itemContainer?: CSSObject };
+  offsetX?: number;
+  offsetY?: number;
+  visible?: boolean;
+  hasWrapperWidth?: boolean;
+};
+
+function Overlay({
+  triggerRef,
+  offsetX = 0,
+  offsetY = 0,
+  setIsVisible,
+  hasWrapperWidth,
+  visible,
+  sx,
+  children,
+}: OverlayProps) {
+  const overlayRef = useRef<HTMLDivElement>(null);
+  const [isMounted, setIsMounted] = useState(false);
+  const resizeObserverRef = useRef<ResizeObserver | null>(null);
+
+  const { x, y, isPositioned, maxHeight, maxWidth, triggerWidth, calculatePosition } =
+    usePositionInScreen(
+      triggerRef.current,
+      overlayRef.current,
+      offsetX,
+      offsetY,
+      isMounted === true
+    );
+
+  useEffect(() => {
+    if (!visible || !triggerRef.current || !isMounted) return;
+
+    let isInitialMount = true;
+
+    resizeObserverRef.current = new ResizeObserver(() => {
+      // Skip the first callback which happens immediately after observe()
+      // since the useLayoutEffect in usePositionInScreen already handles this
+      if (isInitialMount) {
+        isInitialMount = false;
+
+        return;
+      }
+
+      requestAnimationFrame(() => {
+        calculatePosition();
+      });
+    });
+
+    resizeObserverRef.current.observe(triggerRef.current);
+
+    return () => {
+      if (resizeObserverRef.current) {
+        resizeObserverRef.current.disconnect();
+      }
+    };
+  }, [visible, triggerRef, calculatePosition, isMounted]);
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      if (visible) {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener('resize', handleWindowResize);
+
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  }, [visible, setIsVisible]);
+
+  useEffect(() => {
+    if (!visible) {
+      setIsMounted(false);
+
+      return;
+    }
+
+    if (!overlayRef.current) return;
+
+    let styleElement: HTMLStyleElement | null = null;
+
+    if (visible) {
+      styleElement = document.createElement('style');
+      styleElement.type = 'text/css';
+      styleElement.appendChild(document.createTextNode(scrollLockStyles));
+      document.head.appendChild(styleElement);
+
+      document.body.setAttribute('data-scroll-locked', 'true');
+      document.body.style.pointerEvents = 'none';
+      overlayRef.current.style.pointerEvents = 'auto';
+
+      requestAnimationFrame(() => {
+        setIsMounted(true);
+      });
+    } else {
+      document.body.removeAttribute('data-scroll-locked');
+      document.body.style.pointerEvents = '';
+    }
+
+    return () => {
+      document.body.removeAttribute('data-scroll-locked');
+      document.body.style.pointerEvents = '';
+
+      setIsMounted(false);
+
+      if (styleElement) document.head.removeChild(styleElement);
+    };
+  }, [overlayRef, visible]);
+
+  useEffect(() => {
+    if (!visible) return;
+
+    const handleClickOutside = (event: MouseEvent) => {
+      if (overlayRef.current && overlayRef.current.contains(event.target as Node)) {
+        return;
+      }
+
+      setIsVisible(false);
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [visible, setIsVisible, overlayRef]);
+
+  if (!visible) return null;
+
+  return createPortal(
+    <div
+      ref={overlayRef}
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: isPositioned && triggerWidth && hasWrapperWidth ? rem(triggerWidth) : '',
+        transform: `translate(${x}px, ${y}px)`,
+        opacity: isPositioned ? 1 : 0,
+        maxWidth: isPositioned ? `${maxWidth}px` : '',
+        maxHeight: isPositioned ? `${maxHeight}px` : '',
+        zIndex: 'auto',
+      }}
+      css={sx?.itemContainer}
+    >
+      {children}
+    </div>,
+    document.body
+  );
+}
+
+const scrollLockStyles = `
+body[data-scroll-locked] {
+  overflow: hidden !important;
+  overscroll-behavior: contain;
+  position: relative !important;
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  margin-left: 0;
+  margin-top: 0;
+  margin-right: 0px !important;
+}
+`;
 
 export default PositionInScreen;
