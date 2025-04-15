@@ -198,4 +198,6 @@ export type AcceptedIconNames =
   | 'videoFillOff'
   | 'videoFillOn'
   | 'videoOutlineOff'
-  | 'videoOutlineOn';
+  | 'videoOutlineOn'
+  | 'trendingDown'
+  | 'trendingUp';

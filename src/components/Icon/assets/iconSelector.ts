@@ -105,7 +105,6 @@ import LicenceIcon from './licence.svg';
 import LicencedVideoIcon from './licensedVideo.svg';
 import LinkedIcon from './linked.svg';
 import LockIcon from './lock.svg';
-import UnlockIcon from './unlock.svg';
 import MailIcon from './mail.svg';
 import ManualIcon from './manual.svg';
 import MenuIcon from './menu.svg';
@@ -166,6 +165,8 @@ import ThunderIcon from './thunder.svg';
 import TicTacToeArrowIcon from './tic-tac-toe-arrow.svg';
 import TimeOutIcon from './time-out.svg';
 import TrainingIcon from './training.svg';
+import TrendingDownIcon from './trendingDown.svg';
+import TrendingUpIcon from './trendingUp.svg';
 import TriangleDownIcon from './triangle-down.svg';
 import TriangleLeftIcon from './triangle-left.svg';
 import TriangleRightIcon from './triangle-right.svg';
@@ -175,6 +176,7 @@ import TrophyIcon from './trophy.svg';
 import TVCinemaIcon from './TVCinema.svg';
 import TVRadioIcon from './TVRadio.svg';
 import UndoIcon from './undo.svg';
+import UnlockIcon from './unlock.svg';
 import UnpairedV2 from './unpaired-v2.svg';
 import Unpaired from './unpaired.svg';
 import UpdateIcon from './update.svg';
@@ -386,6 +388,8 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   videoFillOn: VideoFillOnIcon,
   videoOutlineOff: VideoOutlineOffIcon,
   videoOutlineOn: VideoOutlineOnIcon,
+  trendingDown: TrendingDownIcon,
+  trendingUp: TrendingUpIcon,
 };
 
 export default iconSelector;
