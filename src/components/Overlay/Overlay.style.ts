@@ -21,7 +21,8 @@ const getStyleBasedOnAnchor = (anchor: AnchorType) => {
       return justifyContentEnd();
     case 'bottom':
       return css`
-        ${justifyContentEnd()} ${flexDirectionColumn()}
+        ${justifyContentEnd()}
+        ${flexDirectionColumn()}
       `;
     default:
       return css``;
@@ -41,44 +42,53 @@ const transformBasedOnProps = (open: boolean, anchor: AnchorType) => {
   }
 };
 
-export const backdropStyle = ({ open, anchor }: { open: boolean; anchor: AnchorType }) => (
-  theme: Theme
-): SerializedStyles => css`
-  ${flex};
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  z-index: 2500;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  background-color: ${transparentize(0.25, theme.palette.black)};
-  visibility: ${open ? 'visible' : 'hidden'};
-  opacity: ${open ? 1 : 0};
-  ${transition(0.2)}
-  ${getStyleBasedOnAnchor(anchor)}
-`;
+export const backdropStyle =
+  ({ open, anchor }: { open: boolean; anchor: AnchorType }) =>
+  (theme: Theme): SerializedStyles =>
+    css`
+      ${flex};
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      z-index: 2500;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      left: 0;
+      background-color: ${transparentize(0.25, theme.palette.black)};
+      visibility: ${open ? 'visible' : 'hidden'};
+      opacity: ${open ? 1 : 0};
+      ${transition(0.2)}
+      ${getStyleBasedOnAnchor(anchor)}
+    `;
 
-export const overlayStyle = ({ open, anchor }: { open: boolean; anchor: AnchorType }) => (
-  theme: Theme
-): SerializedStyles => css`
-  ${flex}
-  flex-direction: column;
-  overflow-y: auto;
-  background-color: ${theme.palette.white};
-  width: 100%;
-  height: auto;
-  transform: ${transformBasedOnProps(open, anchor)};
-  ${transition(0.3)}
-`;
+export const overlayStyle =
+  ({ open, anchor }: { open: boolean; anchor: AnchorType }) =>
+  (theme: Theme): SerializedStyles =>
+    css`
+      ${flex}
+      flex-direction: column;
+      z-index: 2500;
+      overflow-y: auto;
+      background-color: ${theme.palette.white};
+      width: 100%;
+      height: auto;
+      transform: ${transformBasedOnProps(open, anchor)};
+      ${transition(0.3)}
+    `;
 
-export const closeIconContainer = () => (theme: Theme): SerializedStyles => css`
-  ${flex}
-  justify-content: flex-end;
-  padding: ${theme.spacing.sm} ${theme.spacing.sm} 0 0;
-`;
+export const closeIconContainer =
+  () =>
+  (theme: Theme): SerializedStyles =>
+    css`
+      ${flex}
+      justify-content: flex-end;
+      padding: ${theme.spacing.sm} ${theme.spacing.sm} 0 0;
+    `;
 
-export const contentStyle = () => (theme: Theme): SerializedStyles => css`
-  padding: ${theme.spacing.xl};
-`;
+export const contentStyle =
+  () =>
+  (theme: Theme): SerializedStyles =>
+    css`
+      padding: ${theme.spacing.xl};
+    `;
