@@ -113,6 +113,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
   ) => {
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
+    const wrapperRef = React.useRef<HTMLDivElement>(null);
     const inputRef = React.useRef<HTMLInputElement>(null);
     const combinedRefs = useCombinedRefs(inputRef, ref);
 
@@ -155,6 +156,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
         }
 
         setOpen(false);
+        requestAnimationFrame(() => wrapperRef?.current?.focus());
       }
 
       if (isSearchable) {
@@ -320,6 +322,8 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
 
     return (
       <div
+        ref={wrapperRef}
+        tabIndex={-1}
         {...(!(disabled || locked) && { onClick: handleClick })}
         css={selectWrapper({ isSearchable })}
       >
@@ -328,6 +332,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
           setIsVisible={() => {
             setOpen(false);
             setSearchValue('');
+            requestAnimationFrame(() => wrapperRef?.current?.focus());
           }}
           hasWrapperWidth
           offsetY={8}

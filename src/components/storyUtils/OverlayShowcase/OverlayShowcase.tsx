@@ -1,8 +1,18 @@
 import React, { useState } from 'react';
 
 import Button from '../../Button';
+import Filter from '../../Filter';
 import Overlay from '../../Overlay';
 import { AnchorType } from '../../Overlay/Overlay';
+import Select from '../../Select';
+
+const options = [
+  { value: 'chocolate', label: 'Chocolate' },
+  { value: 'strawberry', label: 'Strawberry' },
+  { value: 'banana', label: 'Banana' },
+  { value: 'citrus', label: 'Citrus' },
+  { value: 'vanilla', label: 'Vanilla', isDisabled: true },
+];
 
 const OverlayShowcase: React.FC<{ anchor: AnchorType; size: string; playground?: boolean }> = ({
   anchor,
@@ -11,6 +21,10 @@ const OverlayShowcase: React.FC<{ anchor: AnchorType; size: string; playground?:
 }) => {
   const [open, setOpen] = useState<boolean>(false);
   const buttonLabel = playground ? 'Open Overlay' : anchor;
+
+  const handleSelectedOption = (selectedOption) => {
+    console.log('On option change', selectedOption);
+  };
 
   return (
     <div>
@@ -23,6 +37,28 @@ const OverlayShowcase: React.FC<{ anchor: AnchorType; size: string; playground?:
         size={size}
         anchor={anchor}
       >
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '16px',
+          }}
+        >
+          <Filter
+            styleType="filled"
+            defaultValue={{ value: 'chocolate', label: 'Chocolate' }}
+            items={options}
+            onSelect={() => {}}
+            label="Filter"
+          />
+          <Select
+            isSearchable={false}
+            label="Flavour"
+            options={options}
+            handleSelectedOption={handleSelectedOption}
+            styleType="filled"
+          />
+        </div>
         <div style={{ display: 'flex', backgroundColor: '#F3F5F8' }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
           ut labore et dolore magna aliqua. Gravida dictum fusce ut placerat. Leo a diam

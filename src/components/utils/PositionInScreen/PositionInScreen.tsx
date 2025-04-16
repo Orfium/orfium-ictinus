@@ -1,4 +1,5 @@
 import { CSSObject } from '@emotion/serialize';
+import { useOverlayStack } from 'hooks/useOverlayStack';
 import { rem } from 'polished';
 import React, { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
@@ -68,7 +69,7 @@ type OverlayProps = {
   sx?: { container?: CSSObject; itemContainer?: CSSObject };
   offsetX?: number;
   offsetY?: number;
-  visible?: boolean;
+  visible: boolean;
   hasWrapperWidth?: boolean;
 };
 
@@ -83,8 +84,10 @@ function Overlay({
   children,
 }: OverlayProps) {
   const overlayRef = useRef<HTMLDivElement>(null);
+  const { overlayProps } = useOverlayStack(visible, overlayRef, () => setIsVisible(false));
   const [isMounted, setIsMounted] = useState(false);
-  const resizeObserverRef = useRef<ResizeObserver | null>(null);
+  const triggerResizeObserverRef = useRef<ResizeObserver | null>(null);
+  const overlayMutationObserverRef = useRef<MutationObserver | null>(null);
 
   const { x, y, isPositioned, maxHeight, maxWidth, triggerWidth, calculatePosition } =
     usePositionInScreen(
@@ -100,7 +103,7 @@ function Overlay({
 
     let isInitialMount = true;
 
-    resizeObserverRef.current = new ResizeObserver(() => {
+    triggerResizeObserverRef.current = new ResizeObserver(() => {
       // Skip the first callback which happens immediately after observe()
       // since the useLayoutEffect in usePositionInScreen already handles this
       if (isInitialMount) {
@@ -114,14 +117,35 @@ function Overlay({
       });
     });
 
-    resizeObserverRef.current.observe(triggerRef.current);
+    triggerResizeObserverRef.current.observe(triggerRef.current);
 
     return () => {
-      if (resizeObserverRef.current) {
-        resizeObserverRef.current.disconnect();
+      if (triggerResizeObserverRef.current) {
+        triggerResizeObserverRef.current.disconnect();
       }
     };
   }, [visible, triggerRef, calculatePosition, isMounted]);
+
+  useEffect(() => {
+    if (!visible || !overlayRef.current || !isMounted) return;
+
+    overlayMutationObserverRef.current = new MutationObserver(() => {
+      requestAnimationFrame(() => {
+        calculatePosition();
+      });
+    });
+
+    overlayMutationObserverRef.current.observe(overlayRef.current, {
+      childList: true,
+      subtree: true,
+    });
+
+    return () => {
+      if (overlayMutationObserverRef.current) {
+        overlayMutationObserverRef.current.disconnect();
+      }
+    };
+  }, [visible, overlayRef, calculatePosition, isMounted]);
 
   useEffect(() => {
     const handleWindowResize = () => {
@@ -176,28 +200,11 @@ function Overlay({
     };
   }, [overlayRef, visible]);
 
-  useEffect(() => {
-    if (!visible) return;
-
-    const handleClickOutside = (event: MouseEvent) => {
-      if (overlayRef.current && overlayRef.current.contains(event.target as Node)) {
-        return;
-      }
-
-      setIsVisible(false);
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [visible, setIsVisible, overlayRef]);
-
   if (!visible) return null;
 
   return createPortal(
     <div
+      {...overlayProps}
       ref={overlayRef}
       style={{
         position: 'fixed',
@@ -208,7 +215,7 @@ function Overlay({
         opacity: isPositioned ? 1 : 0,
         maxWidth: isPositioned ? `${maxWidth}px` : '',
         maxHeight: isPositioned ? `${maxHeight}px` : '',
-        zIndex: 'auto',
+        zIndex: '9999',
       }}
       css={sx?.itemContainer}
     >
