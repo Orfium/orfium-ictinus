@@ -135,6 +135,7 @@ const BarChart: React.FC<Props> = ({ data }) => {
         <LabelList
           dataKey="barLabel"
           position="right"
+          //@ts-ignore
           content={<CustomLabel colors={labelColoringOptions} />}
         />
         {data.map((entry, index) => (

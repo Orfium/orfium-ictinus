@@ -16,39 +16,43 @@ const positionOptions = {
   'bottom-right': `bottom:0; right: 0; align-items: flex-end;`,
 };
 
-export const notificationsContainer = (currentPosition: string, parent: HTMLElement) => (
-  theme: Theme
-): SerializedStyles => css`
-  position: ${parent === document.body ? 'fixed' : 'absolute'};
-  ${getPositionStyle(positionOptions[currentPosition])};
-  max-width: 66%;
-  display: flex;
-  flex-direction: column;
-  z-index: 2500;
-  margin: ${theme.spacing.sm} ${theme.spacing.md} ${theme.spacing.md};
-  > div {
-    margin: ${theme.spacing.sm} 0;
-  }
+export const notificationsContainer =
+  (currentPosition: string, parent: HTMLElement) =>
+  (theme: Theme): SerializedStyles =>
+    css`
+      position: ${parent === document.body ? 'fixed' : 'absolute'};
+      ${
+        //@ts-ignore
+        getPositionStyle(positionOptions[currentPosition])
+      };
+      max-width: 66%;
+      display: flex;
+      flex-direction: column;
+      z-index: 2500;
+      margin: ${theme.spacing.sm} ${theme.spacing.md} ${theme.spacing.md};
+      > div {
+        margin: ${theme.spacing.sm} 0;
+      }
 
-  div[notification-type='toast'] {
-    min-width: ${rem(336)};
-    width: 100%;
-  }
+      div[notification-type='toast'] {
+        min-width: ${rem(336)};
+        width: 100%;
+      }
 
-  div[notification-type='snackbar'] {
-    min-width: ${rem(336)};
-    width: 100%;
-  }
+      div[notification-type='snackbar'] {
+        min-width: ${rem(336)};
+        width: 100%;
+      }
 
-  div[notification-type='banner'] {
-    min-width: ${rem(490)};
-  }
+      div[notification-type='banner'] {
+        min-width: ${rem(490)};
+      }
 
-  div[notification-type='banner'] ~ div[notification-type='toast'] {
-    width: 100%;
-  }
+      div[notification-type='banner'] ~ div[notification-type='toast'] {
+        width: 100%;
+      }
 
-  div[notification-type='banner'] ~ div[notification-type='snackbar'] {
-    width: 100%;
-  }
-`;
+      div[notification-type='banner'] ~ div[notification-type='snackbar'] {
+        width: 100%;
+      }
+    `;

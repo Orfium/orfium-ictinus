@@ -209,6 +209,7 @@ exports[`Storyshots Design System/TopNavBar playground 1`] = `
   width: 100%;
   height: inherit;
   position: relative;
+  isolation: isolate;
 }
 
 .emotion-11 {
@@ -417,61 +418,57 @@ exports[`Storyshots Design System/TopNavBar playground 1`] = `
           className="emotion-9"
         >
           <div
-            role="button"
+            data-testid="userMenu"
           >
             <div
-              data-testid="userMenu"
+              className="emotion-10"
             >
-              <div
-                className="emotion-10"
+              <button
+                className="emotion-11"
+                data-testid="button"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
               >
-                <button
-                  className="emotion-11"
-                  data-testid="button"
-                  disabled={false}
-                  onClick={[Function]}
-                  type="button"
+                <span
+                  className="emotion-12"
                 >
                   <span
-                    className="emotion-12"
+                    className="emotion-13"
                   >
-                    <span
-                      className="emotion-13"
+                    <div
+                      className="emotion-14"
                     >
-                      <div
-                        className="emotion-14"
-                      >
-                        <img
-                          src="https://mui.com/static/images/avatar/1.jpg"
-                        />
-                      </div>
-                    </span>
-                    <span
-                      className="emotion-15"
-                    >
-                      <span>
-                        <span
-                          className="emotion-16"
-                        >
-                          Tom Cruise
-                        </span>
-                      </span>
-                    </span>
-                    <span
-                      className="emotion-13"
-                    >
+                      <img
+                        src="https://mui.com/static/images/avatar/1.jpg"
+                      />
+                    </div>
+                  </span>
+                  <span
+                    className="emotion-15"
+                  >
+                    <span>
                       <span
-                        className="emotion-4"
-                        onClick={[Function]}
+                        className="emotion-16"
                       >
-                        <span
-                          className="emotion-19"
-                        />
+                        Tom Cruise
                       </span>
                     </span>
                   </span>
-                </button>
-              </div>
+                  <span
+                    className="emotion-13"
+                  >
+                    <span
+                      className="emotion-4"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-19"
+                      />
+                    </span>
+                  </span>
+                </span>
+              </button>
             </div>
           </div>
         </div>
@@ -808,6 +805,7 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   width: 100%;
   height: inherit;
   position: relative;
+  isolation: isolate;
 }
 
 .emotion-23 {
@@ -1080,61 +1078,57 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
           className="emotion-21"
         >
           <div
-            role="button"
+            data-testid="userMenu"
           >
             <div
-              data-testid="userMenu"
+              className="emotion-22"
             >
-              <div
-                className="emotion-22"
+              <button
+                className="emotion-23"
+                data-testid="button"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
               >
-                <button
-                  className="emotion-23"
-                  data-testid="button"
-                  disabled={false}
-                  onClick={[Function]}
-                  type="button"
+                <span
+                  className="emotion-24"
                 >
                   <span
-                    className="emotion-24"
+                    className="emotion-25"
                   >
-                    <span
-                      className="emotion-25"
+                    <div
+                      className="emotion-26"
                     >
-                      <div
-                        className="emotion-26"
-                      >
-                        <img
-                          src="https://mui.com/static/images/avatar/1.jpg"
-                        />
-                      </div>
-                    </span>
-                    <span
-                      className="emotion-27"
-                    >
-                      <span>
-                        <span
-                          className="emotion-28"
-                        >
-                          Tom Cruise
-                        </span>
-                      </span>
-                    </span>
-                    <span
-                      className="emotion-25"
-                    >
+                      <img
+                        src="https://mui.com/static/images/avatar/1.jpg"
+                      />
+                    </div>
+                  </span>
+                  <span
+                    className="emotion-27"
+                  >
+                    <span>
                       <span
-                        className="emotion-4"
-                        onClick={[Function]}
+                        className="emotion-28"
                       >
-                        <span
-                          className="emotion-31"
-                        />
+                        Tom Cruise
                       </span>
                     </span>
                   </span>
-                </button>
-              </div>
+                  <span
+                    className="emotion-25"
+                  >
+                    <span
+                      className="emotion-4"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-31"
+                      />
+                    </span>
+                  </span>
+                </span>
+              </button>
             </div>
           </div>
         </div>
@@ -1353,6 +1347,7 @@ exports[`Storyshots Design System/TopNavBar with Dark theme enabled 1`] = `
   width: 100%;
   height: inherit;
   position: relative;
+  isolation: isolate;
 }
 
 .emotion-11 {
@@ -1561,61 +1556,57 @@ exports[`Storyshots Design System/TopNavBar with Dark theme enabled 1`] = `
           className="emotion-9"
         >
           <div
-            role="button"
+            data-testid="userMenu"
           >
             <div
-              data-testid="userMenu"
+              className="emotion-10"
             >
-              <div
-                className="emotion-10"
+              <button
+                className="emotion-11"
+                data-testid="button"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
               >
-                <button
-                  className="emotion-11"
-                  data-testid="button"
-                  disabled={false}
-                  onClick={[Function]}
-                  type="button"
+                <span
+                  className="emotion-12"
                 >
                   <span
-                    className="emotion-12"
+                    className="emotion-13"
                   >
-                    <span
-                      className="emotion-13"
+                    <div
+                      className="emotion-14"
                     >
-                      <div
-                        className="emotion-14"
-                      >
-                        <img
-                          src="https://mui.com/static/images/avatar/1.jpg"
-                        />
-                      </div>
-                    </span>
-                    <span
-                      className="emotion-15"
-                    >
-                      <span>
-                        <span
-                          className="emotion-16"
-                        >
-                          Tom Cruise
-                        </span>
-                      </span>
-                    </span>
-                    <span
-                      className="emotion-13"
-                    >
+                      <img
+                        src="https://mui.com/static/images/avatar/1.jpg"
+                      />
+                    </div>
+                  </span>
+                  <span
+                    className="emotion-15"
+                  >
+                    <span>
                       <span
-                        className="emotion-4"
-                        onClick={[Function]}
+                        className="emotion-16"
                       >
-                        <span
-                          className="emotion-19"
-                        />
+                        Tom Cruise
                       </span>
                     </span>
                   </span>
-                </button>
-              </div>
+                  <span
+                    className="emotion-13"
+                  >
+                    <span
+                      className="emotion-4"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-19"
+                      />
+                    </span>
+                  </span>
+                </span>
+              </button>
             </div>
           </div>
         </div>
@@ -1834,6 +1825,7 @@ exports[`Storyshots Design System/TopNavBar with Logo Placeholder 1`] = `
   width: 100%;
   height: inherit;
   position: relative;
+  isolation: isolate;
 }
 
 .emotion-11 {
@@ -2042,61 +2034,57 @@ exports[`Storyshots Design System/TopNavBar with Logo Placeholder 1`] = `
           className="emotion-9"
         >
           <div
-            role="button"
+            data-testid="userMenu"
           >
             <div
-              data-testid="userMenu"
+              className="emotion-10"
             >
-              <div
-                className="emotion-10"
+              <button
+                className="emotion-11"
+                data-testid="button"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
               >
-                <button
-                  className="emotion-11"
-                  data-testid="button"
-                  disabled={false}
-                  onClick={[Function]}
-                  type="button"
+                <span
+                  className="emotion-12"
                 >
                   <span
-                    className="emotion-12"
+                    className="emotion-13"
                   >
-                    <span
-                      className="emotion-13"
+                    <div
+                      className="emotion-14"
                     >
-                      <div
-                        className="emotion-14"
-                      >
-                        <img
-                          src="https://mui.com/static/images/avatar/1.jpg"
-                        />
-                      </div>
-                    </span>
-                    <span
-                      className="emotion-15"
-                    >
-                      <span>
-                        <span
-                          className="emotion-16"
-                        >
-                          Tom Cruise
-                        </span>
-                      </span>
-                    </span>
-                    <span
-                      className="emotion-13"
-                    >
+                      <img
+                        src="https://mui.com/static/images/avatar/1.jpg"
+                      />
+                    </div>
+                  </span>
+                  <span
+                    className="emotion-15"
+                  >
+                    <span>
                       <span
-                        className="emotion-4"
-                        onClick={[Function]}
+                        className="emotion-16"
                       >
-                        <span
-                          className="emotion-19"
-                        />
+                        Tom Cruise
                       </span>
                     </span>
                   </span>
-                </button>
-              </div>
+                  <span
+                    className="emotion-13"
+                  >
+                    <span
+                      className="emotion-4"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-19"
+                      />
+                    </span>
+                  </span>
+                </span>
+              </button>
             </div>
           </div>
         </div>

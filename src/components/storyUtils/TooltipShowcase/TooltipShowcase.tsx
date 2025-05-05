@@ -26,7 +26,7 @@ const CustomContent = () => {
         >
           By hover here you can see:
         </div>
-        <Chip fill="teal" shade="100">
+        <Chip fill="teal">
           <a href={'/'}>Go to homepage</a>
         </Chip>
       </div>

@@ -3,7 +3,8 @@ import path from 'path';
 import { createSerializer } from '@emotion/jest';
 import initStoryshots, { multiSnapshotWithOptions } from '@storybook/addon-storyshots';
 import { addSerializer } from 'jest-specific-snapshot';
-import { ReactElement } from 'react';
+import React, { ReactElement, ReactNode } from 'react';
+import ThemeProvider from './components/ThemeProvider';
 
 /** Every time we run the tests, the dynamic attribute values that are generated for each element cause tests to fail.
  * A quick solution is to update snapshots every time we run the tests (jest -u) and then push the updated snapshots to git.
@@ -43,8 +44,13 @@ initStoryshots({
     // FIXME Workaround for https://github.com/storybookjs/storybook/issues/16692
     const fileName = path.resolve(__dirname, '..', story.context.fileName);
 
+    const StoryWithTheme = ({ children }: { children: ReactNode }) => (
+      <ThemeProvider>{children}</ThemeProvider>
+    );
+
     return multiSnapshotWithOptions({
       createNodeMock,
+      wrapper: StoryWithTheme,
     })({
       ...story,
       options: {},
