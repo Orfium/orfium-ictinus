@@ -49,7 +49,7 @@ const calculateTypesShadeAndColors = (
   palette: flatPalette
 ) => {
   // for each mainType
-  return mainTypes.reduce((mainTypeAcc, mainType) => {
+  return mainTypes.reduce((mainTypeAcc: any, mainType) => {
     // save the base color of the the type
     const typeColor = types[mainType][BASE_SHADE]; // base color of the type
     const flatPaletteKeys = keys(palette); // the keys of the flat palette so we can iterate
@@ -58,9 +58,12 @@ const calculateTypesShadeAndColors = (
     // and return the color found in the flat colors e.g { shade: 500, color: 'orange'}
     // if nothing found then it will return empty object {}
     mainTypeAcc[mainType] = flatPaletteKeys.reduce((acc, paletteColor) => {
-      const colorShadesKeys = keys(palette[paletteColor]); // the shades of the palette color currently in the iteration
+      const colorShadesKeys = keys(palette[paletteColor as keyof flatPalette]); // the shades of the palette color currently in the iteration
       const foundShadeWithThatColor = colorShadesKeys.find(
-        (shade) => palette[paletteColor][shade].toLowerCase() === typeColor.toLowerCase()
+        (shade) =>
+          palette[paletteColor as keyof flatPalette][
+            shade as unknown as keyof generatedColorShades
+          ].toLowerCase() === typeColor.toLowerCase()
       );
 
       // return either the found color as e.g { shade: 500, color: 'orange'} or the object as it was
@@ -85,9 +88,11 @@ const TypeColorToColorMatchProvider: ReactFCC = ({ children }) => {
     (color: string, type: string) => {
       const calculatedColor = color ? calculateActualColorFromComponentProp(color) : undefined;
 
-      return calculatedColor ? calculatedColor : typesShadesColor[type];
+      return calculatedColor
+        ? calculatedColor
+        : typesShadesColor[type as keyof TypesShadeAndColors];
     },
-    [types, theme, typesShadesColor]
+    [typesShadesColor]
   );
 
   return (
