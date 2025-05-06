@@ -1,6 +1,6 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
-import { rem } from 'polished';
+import { rem, transparentize } from 'polished';
 import type { Theme } from 'theme';
 import { flex, transition } from 'theme/functions';
 
@@ -46,6 +46,7 @@ export const backdropStyle =
     size,
     isBackgroundActive,
   }: Pick<DrawerProps, 'isOpen' | 'anchor' | 'size' | 'isBackgroundActive'>) =>
+  (theme: Theme) =>
   (): SerializedStyles => {
     const getWidth = () => {
       if (anchor === 'left' || anchor === 'right') {
@@ -100,7 +101,9 @@ export const backdropStyle =
       ${getHeight()};
       z-index: 2500;
       ${getPositioning()};
-      background: ${isBackgroundActive ? undefined : `rgba(200, 206, 255, 0.45)`};
+      background: ${isBackgroundActive
+        ? undefined
+        : transparentize(0.3, theme.tokens.colors.get('backgroundColor.invertedAlt'))};
       visibility: ${isOpen ? 'visible' : 'hidden'};
       opacity: ${isOpen ? 1 : 0};
       ${transition(0.2)}

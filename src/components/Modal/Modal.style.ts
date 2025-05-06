@@ -1,5 +1,6 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
+import { transparentize } from 'polished';
 import { rem } from 'theme/utils';
 
 import type { ModalProps } from './Modal';
@@ -12,7 +13,7 @@ export const backgroundContainer = (theme: Theme): SerializedStyles => css`
   height: 100vh;
   top: 0;
   left: 0;
-  background-color: ${theme.tokens.colors.get('backdrop.default')};
+  background-color: ${transparentize(0.3, theme.tokens.colors.get('backgroundColor.invertedAlt'))};
   display: flex;
   justify-content: center;
   align-items: center;
