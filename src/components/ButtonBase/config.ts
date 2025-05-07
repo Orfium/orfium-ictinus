@@ -8,7 +8,7 @@ export const buttonSizes = [LG, MD, SM] as const;
 
 type ButtonConfig = {
   sizes: {
-    [key in typeof buttonSizes[number] | 'default']: number;
+    [key in (typeof buttonSizes)[number] | 'default']: number;
   };
   fontSize: {
     [key in typeof SM | 'default']: number;
@@ -16,8 +16,8 @@ type ButtonConfig = {
   types: {
     link: {
       color: {
-        name: typeof flatColors[number];
-        shade: typeof colorShades[number];
+        name: (typeof flatColors)[number];
+        shade: (typeof colorShades)[number];
       };
     };
     outlined: {

@@ -4473,3 +4473,3194 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   </div>
 </div>
 `;
+
+exports[`Storyshots Design System/DatePicker DatePicker Range 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
+  position: relative;
+  isolation: isolate;
+}
+
+.emotion-3 {
+  max-width: 17.5rem;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #dcdfff;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  min-width: 9.375rem;
+  height: 2.875rem;
+  background-color: white;
+}
+
+.emotion-4:hover {
+  background-color: #f6f7ff;
+}
+
+.emotion-4:focus-within {
+  box-shadow: 0 0 0 0.125rem #1451dc;
+  background-color: #edefff;
+}
+
+.emotion-5 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0 1rem;
+  cursor: text;
+}
+
+.emotion-5>div {
+  position: relative;
+}
+
+.emotion-6 {
+  width: 100%;
+}
+
+.emotion-7 {
+  background: transparent;
+  border: none;
+  color: #0f0f17;
+  display: block;
+  position: relative;
+  z-index: 1;
+  font-size: 0.9375rem;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-7+label {
+  font-size: 0.9375rem;
+  cursor: text;
+}
+
+.emotion-7:focus {
+  outline: none;
+}
+
+.emotion-7::-webkit-input-placeholder {
+  color: #757bb2;
+}
+
+.emotion-7::-moz-placeholder {
+  color: #757bb2;
+}
+
+.emotion-7:-ms-input-placeholder {
+  color: #757bb2;
+}
+
+.emotion-7::placeholder {
+  color: #757bb2;
+}
+
+.emotion-7:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-7:focus+label,
+.emotion-7:not(:placeholder-shown)+label {
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+  font-weight: 700;
+}
+
+.emotion-7:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-8 {
+  line-height: 0.8;
+  height: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: unset;
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+.emotion-9 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-10 {
+  fill: #757BB2;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-10 path {
+  fill: #757BB2;
+}
+
+.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #dcdfff;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  min-width: 9.375rem;
+  height: 1.75rem;
+  background-color: white;
+}
+
+.emotion-13:hover {
+  background-color: #f6f7ff;
+}
+
+.emotion-13:focus-within {
+  box-shadow: 0 0 0 0.125rem #1451dc;
+  background-color: #edefff;
+}
+
+.emotion-16 {
+  background: transparent;
+  border: none;
+  color: #0f0f17;
+  display: block;
+  position: relative;
+  z-index: 1;
+  font-size: 0.75rem;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-16+label {
+  font-size: 0.75rem;
+  cursor: text;
+}
+
+.emotion-16:focus {
+  outline: none;
+}
+
+.emotion-16::-webkit-input-placeholder {
+  color: #757bb2;
+}
+
+.emotion-16::-moz-placeholder {
+  color: #757bb2;
+}
+
+.emotion-16:-ms-input-placeholder {
+  color: #757bb2;
+}
+
+.emotion-16::placeholder {
+  color: #757bb2;
+}
+
+.emotion-16:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-16:focus+label,
+.emotion-16:not(:placeholder-shown)+label {
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+  font-weight: 700;
+}
+
+.emotion-16:disabled {
+  cursor: not-allowed;
+}
+
+<div
+  style={
+    Object {
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": 15,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "flex-end",
+        }
+      }
+    >
+      <button
+        className="emotion-0"
+        onClick={[Function]}
+      >
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div
+      className="emotion-1"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-2"
+        >
+          <div
+            className="emotion-3"
+          >
+            <div
+              onClick={[Function]}
+            >
+              <div
+                className="emotion-4"
+              >
+                <div
+                  className="emotion-5"
+                >
+                  <div
+                    className="emotion-6"
+                  >
+                    <input
+                      className="emotion-7"
+                      disabled={false}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      placeholder="Date (start) - Date (end) "
+                      required={false}
+                      value=""
+                    />
+                  </div>
+                  <div
+                    className="emotion-8"
+                  >
+                    <span
+                      className="emotion-9"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-10"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-2"
+        >
+          <div
+            className="emotion-3"
+          >
+            <div
+              onClick={[Function]}
+            >
+              <div
+                className="emotion-13"
+              >
+                <div
+                  className="emotion-5"
+                >
+                  <div
+                    className="emotion-6"
+                  >
+                    <input
+                      className="emotion-16"
+                      disabled={false}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      placeholder="Date (start) - Date (end) "
+                      required={false}
+                      value="11/03/2020 - 11/03/2020"
+                    />
+                  </div>
+                  <div
+                    className="emotion-8"
+                  >
+                    <span
+                      className="emotion-9"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-10"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/DatePicker DatePicker with Filter 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
+  position: relative;
+  isolation: isolate;
+}
+
+.emotion-3 {
+  max-width: 17.5rem;
+}
+
+.emotion-4 {
+  position: relative;
+  display: inline-block;
+  height: 2.25rem;
+}
+
+.emotion-5 {
+  background: none;
+  border: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+  min-width: 6.875rem;
+}
+
+.emotion-5:hover>div {
+  background-color: #f6f7ff;
+}
+
+.emotion-5:active>div {
+  background-color: #edefff;
+}
+
+.emotion-5:focus-visible>div {
+  border: 0.1875rem solid #C813D5;
+}
+
+.emotion-5:focus-visible>span {
+  border-top: 0.1875rem solid #C813D5;
+  border-bottom: 0.1875rem solid #C813D5;
+}
+
+.emotion-6 {
+  font-size: 0.8125rem;
+  cursor: pointer;
+  height: 100%;
+  opacity: 1;
+  -webkit-transition: all 150ms linear;
+  transition: all 150ms linear;
+  color: #0f0f17;
+  background-color: #fefefe;
+  border: solid 0.0625rem #dcdfff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 1rem 0 1rem;
+  border-radius: 1.5rem;
+}
+
+.emotion-6:hover {
+  border: solid 0.0625rem #dcdfff;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.25rem;
+  height: 100%;
+}
+
+.emotion-8 {
+  line-height: 0.9375rem;
+  margin-left: 0;
+}
+
+.emotion-9 {
+  font-weight: 400;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-9 div {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+}
+
+.emotion-9 span {
+  font-weight: 700;
+}
+
+.emotion-10 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-11 {
+  fill: #0f0f17;
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.emotion-11 path {
+  fill: #0f0f17;
+}
+
+.emotion-15 {
+  background: none;
+  border: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+  min-width: 6.875rem;
+}
+
+.emotion-15:hover>div {
+  background-color: #d0defd;
+}
+
+.emotion-15:active>div {
+  background-color: #b9cdfc;
+}
+
+.emotion-15:focus-visible>div {
+  border: 0.1875rem solid #C813D5;
+}
+
+.emotion-15:focus-visible>span {
+  border-top: 0.1875rem solid #C813D5;
+  border-bottom: 0.1875rem solid #C813D5;
+}
+
+.emotion-16 {
+  font-size: 0.8125rem;
+  cursor: pointer;
+  height: 100%;
+  opacity: 1;
+  -webkit-transition: all 150ms linear;
+  transition: all 150ms linear;
+  color: black;
+  background-color: #e7eefe;
+  border: solid 0.0625rem #1451dc;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 1rem 0 1rem;
+  border-radius: 1.5rem;
+}
+
+.emotion-16:hover {
+  border: solid 0.0625rem #1451dc;
+}
+
+.emotion-19 {
+  font-weight: 700;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-19 div {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+}
+
+.emotion-19 span {
+  font-weight: 700;
+}
+
+.emotion-20 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+<div
+  style={
+    Object {
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": 15,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "flex-end",
+        }
+      }
+    >
+      <button
+        className="emotion-0"
+        onClick={[Function]}
+      >
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div
+      className="emotion-1"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-2"
+        >
+          <div
+            className="emotion-3"
+          >
+            <div
+              className="emotion-4"
+              data-testid="filter"
+            >
+              <button
+                className="emotion-5"
+                data-testid="filter-filter"
+                disabled={false}
+                onClick={[Function]}
+              >
+                <div
+                  className="emotion-6"
+                >
+                  <div
+                    className="emotion-7"
+                  >
+                    <div
+                      className="emotion-8"
+                    >
+                      <span
+                        className="emotion-9"
+                      >
+                        <div
+                          data-testid="filter-label"
+                        >
+                          Select Dates
+                           
+                        </div>
+                      </span>
+                    </div>
+                    <span
+                      className="emotion-10"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-11"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-2"
+        >
+          <div
+            className="emotion-3"
+          >
+            <div
+              className="emotion-4"
+              data-testid="filter"
+            >
+              <button
+                className="emotion-15"
+                data-testid="filter-filter"
+                disabled={false}
+                onClick={[Function]}
+              >
+                <div
+                  className="emotion-16"
+                >
+                  <div
+                    className="emotion-7"
+                  >
+                    <div
+                      className="emotion-8"
+                    >
+                      <span
+                        className="emotion-19"
+                      >
+                        <span
+                          className="emotion-20"
+                          data-testid="filter-selected-item-label"
+                        >
+                          Select Dates : 11/03/2020 - 11/03/2020
+                        </span>
+                      </span>
+                    </div>
+                    <span
+                      className="emotion-10"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-11"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
+  position: relative;
+  isolation: isolate;
+}
+
+.emotion-4 {
+  max-width: 17.5rem;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #dcdfff;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  min-width: 9.375rem;
+  height: 2.875rem;
+  background-color: white;
+}
+
+.emotion-5:hover {
+  background-color: #f6f7ff;
+}
+
+.emotion-5:focus-within {
+  box-shadow: 0 0 0 0.125rem #1451dc;
+  background-color: #edefff;
+}
+
+.emotion-6 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0 1rem;
+  cursor: text;
+}
+
+.emotion-6>div {
+  position: relative;
+}
+
+.emotion-7 {
+  width: 100%;
+}
+
+.emotion-8 {
+  background: transparent;
+  border: none;
+  color: #0f0f17;
+  display: block;
+  position: relative;
+  z-index: 1;
+  font-size: 0.9375rem;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-8+label {
+  font-size: 0.9375rem;
+  cursor: text;
+}
+
+.emotion-8:focus {
+  outline: none;
+}
+
+.emotion-8::-webkit-input-placeholder {
+  color: #757bb2;
+}
+
+.emotion-8::-moz-placeholder {
+  color: #757bb2;
+}
+
+.emotion-8:-ms-input-placeholder {
+  color: #757bb2;
+}
+
+.emotion-8::placeholder {
+  color: #757bb2;
+}
+
+.emotion-8:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-8:focus+label,
+.emotion-8:not(:placeholder-shown)+label {
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+  font-weight: 700;
+}
+
+.emotion-8:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-9 {
+  line-height: 0.8;
+  height: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: unset;
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+.emotion-10 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-11 {
+  fill: #757BB2;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-11 path {
+  fill: #757BB2;
+}
+
+.emotion-32 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #e5143d;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  min-width: 9.375rem;
+  height: 2.875rem;
+  background-color: white;
+}
+
+.emotion-32:hover {
+  background-color: #f6f7ff;
+}
+
+.emotion-32:focus-within {
+  box-shadow: 0 0 0 0.125rem #e5143d;
+  background-color: #edefff;
+}
+
+.emotion-39 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #e5143d;
+  font-size: 0.75rem;
+  line-height: 1;
+  padding: 0.5rem 0 0;
+}
+
+.emotion-39 svg {
+  padding: 0 0.125rem;
+}
+
+.emotion-39 span {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  padding: 0 0.125rem;
+}
+
+.emotion-41 {
+  fill: #FF1744;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-41 path {
+  fill: #FF1744;
+}
+
+.emotion-51 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #757bb2;
+  font-size: 0.75rem;
+  line-height: 1;
+  padding: 0.5rem 0 0;
+}
+
+.emotion-51 svg {
+  padding: 0 0.125rem;
+}
+
+.emotion-51 span {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  padding: 0 0.125rem;
+}
+
+.emotion-53 {
+  fill: #757bb2;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-53 path {
+  fill: #757bb2;
+}
+
+<div
+  style={
+    Object {
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": 15,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "flex-end",
+        }
+      }
+    >
+      <button
+        className="emotion-0"
+        onClick={[Function]}
+      >
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div
+      className="emotion-1"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-1"
+        >
+          <div
+            style={
+              Object {
+                "margin": 5,
+              }
+            }
+          >
+            <div
+              className="emotion-3"
+            >
+              <div
+                className="emotion-4"
+              >
+                <div
+                  onClick={[Function]}
+                >
+                  <div
+                    className="emotion-5"
+                  >
+                    <div
+                      className="emotion-6"
+                    >
+                      <div
+                        className="emotion-7"
+                      >
+                        <input
+                          className="emotion-8"
+                          disabled={false}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          onKeyDown={[Function]}
+                          placeholder="Select date "
+                          required={false}
+                          value="11/03/2020"
+                        />
+                      </div>
+                      <div
+                        className="emotion-9"
+                      >
+                        <span
+                          className="emotion-10"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="emotion-11"
+                          />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            style={
+              Object {
+                "margin": 5,
+              }
+            }
+          >
+            <div
+              className="emotion-3"
+            >
+              <div
+                className="emotion-4"
+              >
+                <div
+                  onClick={[Function]}
+                >
+                  <div
+                    className="emotion-5"
+                  >
+                    <div
+                      className="emotion-6"
+                    >
+                      <div
+                        className="emotion-7"
+                      >
+                        <input
+                          className="emotion-8"
+                          disabled={false}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          onKeyDown={[Function]}
+                          placeholder="Select date "
+                          required={false}
+                          value="11/03/2020"
+                        />
+                      </div>
+                      <div
+                        className="emotion-9"
+                      >
+                        <span
+                          className="emotion-10"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="emotion-11"
+                          />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            style={
+              Object {
+                "margin": 5,
+              }
+            }
+          >
+            <div
+              className="emotion-3"
+            >
+              <div
+                className="emotion-4"
+              >
+                <div
+                  onClick={[Function]}
+                >
+                  <div
+                    className="emotion-5"
+                  >
+                    <div
+                      className="emotion-6"
+                    >
+                      <div
+                        className="emotion-7"
+                      >
+                        <input
+                          className="emotion-8"
+                          disabled={false}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          onKeyDown={[Function]}
+                          placeholder="Select date "
+                          required={false}
+                          value="11/03/2020"
+                        />
+                      </div>
+                      <div
+                        className="emotion-9"
+                      >
+                        <span
+                          className="emotion-10"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="emotion-11"
+                          />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            style={
+              Object {
+                "margin": 5,
+              }
+            }
+          >
+            <div
+              className="emotion-3"
+            >
+              <div
+                className="emotion-4"
+              >
+                <div
+                  onClick={[Function]}
+                >
+                  <div
+                    className="emotion-32"
+                  >
+                    <div
+                      className="emotion-6"
+                    >
+                      <div
+                        className="emotion-7"
+                      >
+                        <input
+                          className="emotion-8"
+                          disabled={false}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          onKeyDown={[Function]}
+                          placeholder="Select date "
+                          required={false}
+                          value="11/03/2020"
+                        />
+                      </div>
+                      <div
+                        className="emotion-9"
+                      >
+                        <span
+                          className="emotion-10"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="emotion-11"
+                          />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="emotion-39"
+                    data-testid="error"
+                  >
+                    <span
+                      className="emotion-10"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-41"
+                      />
+                    </span>
+                    Wrong Date
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            style={
+              Object {
+                "margin": 5,
+              }
+            }
+          >
+            <div
+              className="emotion-3"
+            >
+              <div
+                className="emotion-4"
+              >
+                <div
+                  onClick={[Function]}
+                >
+                  <div
+                    className="emotion-5"
+                  >
+                    <div
+                      className="emotion-6"
+                    >
+                      <div
+                        className="emotion-7"
+                      >
+                        <input
+                          className="emotion-8"
+                          disabled={false}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          onKeyDown={[Function]}
+                          placeholder="Select date "
+                          required={false}
+                          value="11/03/2020"
+                        />
+                      </div>
+                      <div
+                        className="emotion-9"
+                      >
+                        <span
+                          className="emotion-10"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="emotion-11"
+                          />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="emotion-51"
+                    data-testid="error"
+                  >
+                    <span
+                      className="emotion-10"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-53"
+                      />
+                    </span>
+                    Dates are important
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/DatePicker DayPicker Sizes 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
+  position: relative;
+  isolation: isolate;
+}
+
+.emotion-3 {
+  max-width: 17.5rem;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #dcdfff;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  min-width: 9.375rem;
+  height: 2.875rem;
+  background-color: white;
+}
+
+.emotion-4:hover {
+  background-color: #f6f7ff;
+}
+
+.emotion-4:focus-within {
+  box-shadow: 0 0 0 0.125rem #1451dc;
+  background-color: #edefff;
+}
+
+.emotion-5 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0 1rem;
+  cursor: text;
+}
+
+.emotion-5>div {
+  position: relative;
+}
+
+.emotion-6 {
+  width: 100%;
+}
+
+.emotion-7 {
+  background: transparent;
+  border: none;
+  color: #0f0f17;
+  display: block;
+  position: relative;
+  z-index: 1;
+  font-size: 0.9375rem;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-7+label {
+  font-size: 0.9375rem;
+  cursor: text;
+}
+
+.emotion-7:focus {
+  outline: none;
+}
+
+.emotion-7::-webkit-input-placeholder {
+  color: #757bb2;
+}
+
+.emotion-7::-moz-placeholder {
+  color: #757bb2;
+}
+
+.emotion-7:-ms-input-placeholder {
+  color: #757bb2;
+}
+
+.emotion-7::placeholder {
+  color: #757bb2;
+}
+
+.emotion-7:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-7:focus+label,
+.emotion-7:not(:placeholder-shown)+label {
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+  font-weight: 700;
+}
+
+.emotion-7:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-8 {
+  line-height: 0.8;
+  height: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: unset;
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+.emotion-9 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-10 {
+  fill: #757BB2;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-10 path {
+  fill: #757BB2;
+}
+
+.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #dcdfff;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  min-width: 9.375rem;
+  height: 1.75rem;
+  background-color: white;
+}
+
+.emotion-13:hover {
+  background-color: #f6f7ff;
+}
+
+.emotion-13:focus-within {
+  box-shadow: 0 0 0 0.125rem #1451dc;
+  background-color: #edefff;
+}
+
+.emotion-16 {
+  background: transparent;
+  border: none;
+  color: #0f0f17;
+  display: block;
+  position: relative;
+  z-index: 1;
+  font-size: 0.75rem;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-16+label {
+  font-size: 0.75rem;
+  cursor: text;
+}
+
+.emotion-16:focus {
+  outline: none;
+}
+
+.emotion-16::-webkit-input-placeholder {
+  color: #757bb2;
+}
+
+.emotion-16::-moz-placeholder {
+  color: #757bb2;
+}
+
+.emotion-16:-ms-input-placeholder {
+  color: #757bb2;
+}
+
+.emotion-16::placeholder {
+  color: #757bb2;
+}
+
+.emotion-16:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-16:focus+label,
+.emotion-16:not(:placeholder-shown)+label {
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+  font-weight: 700;
+}
+
+.emotion-16:disabled {
+  cursor: not-allowed;
+}
+
+<div
+  style={
+    Object {
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": 15,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "flex-end",
+        }
+      }
+    >
+      <button
+        className="emotion-0"
+        onClick={[Function]}
+      >
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div
+      className="emotion-1"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-2"
+        >
+          <div
+            className="emotion-3"
+          >
+            <div
+              onClick={[Function]}
+            >
+              <div
+                className="emotion-4"
+              >
+                <div
+                  className="emotion-5"
+                >
+                  <div
+                    className="emotion-6"
+                  >
+                    <input
+                      className="emotion-7"
+                      disabled={false}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      placeholder="Select date "
+                      required={false}
+                      value=""
+                    />
+                  </div>
+                  <div
+                    className="emotion-8"
+                  >
+                    <span
+                      className="emotion-9"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-10"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-2"
+        >
+          <div
+            className="emotion-3"
+          >
+            <div
+              onClick={[Function]}
+            >
+              <div
+                className="emotion-13"
+              >
+                <div
+                  className="emotion-5"
+                >
+                  <div
+                    className="emotion-6"
+                  >
+                    <input
+                      className="emotion-16"
+                      disabled={false}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      placeholder="Select date "
+                      required={false}
+                      value="11/03/2020"
+                    />
+                  </div>
+                  <div
+                    className="emotion-8"
+                  >
+                    <span
+                      className="emotion-9"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-10"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/DatePicker DayPicker with disabled dates 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
+  position: relative;
+  isolation: isolate;
+}
+
+.emotion-3 {
+  max-width: 17.5rem;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #dcdfff;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  min-width: 9.375rem;
+  height: 2.875rem;
+  background-color: white;
+}
+
+.emotion-4:hover {
+  background-color: #f6f7ff;
+}
+
+.emotion-4:focus-within {
+  box-shadow: 0 0 0 0.125rem #1451dc;
+  background-color: #edefff;
+}
+
+.emotion-5 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0 1rem;
+  cursor: text;
+}
+
+.emotion-5>div {
+  position: relative;
+}
+
+.emotion-6 {
+  width: 100%;
+}
+
+.emotion-7 {
+  background: transparent;
+  border: none;
+  color: #0f0f17;
+  display: block;
+  position: relative;
+  z-index: 1;
+  font-size: 0.9375rem;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-7+label {
+  font-size: 0.9375rem;
+  cursor: text;
+}
+
+.emotion-7:focus {
+  outline: none;
+}
+
+.emotion-7::-webkit-input-placeholder {
+  color: #757bb2;
+}
+
+.emotion-7::-moz-placeholder {
+  color: #757bb2;
+}
+
+.emotion-7:-ms-input-placeholder {
+  color: #757bb2;
+}
+
+.emotion-7::placeholder {
+  color: #757bb2;
+}
+
+.emotion-7:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-7:focus+label,
+.emotion-7:not(:placeholder-shown)+label {
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+  font-weight: 700;
+}
+
+.emotion-7:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-8 {
+  line-height: 0.8;
+  height: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: unset;
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+.emotion-9 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-10 {
+  fill: #757BB2;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-10 path {
+  fill: #757BB2;
+}
+
+<div
+  style={
+    Object {
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": 15,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "flex-end",
+        }
+      }
+    >
+      <button
+        className="emotion-0"
+        onClick={[Function]}
+      >
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div
+      className="emotion-1"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-2"
+        >
+          <div
+            className="emotion-3"
+          >
+            <div
+              onClick={[Function]}
+            >
+              <div
+                className="emotion-4"
+              >
+                <div
+                  className="emotion-5"
+                >
+                  <div
+                    className="emotion-6"
+                  >
+                    <input
+                      className="emotion-7"
+                      disabled={false}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      placeholder="Select date "
+                      required={false}
+                      value="11/03/2020"
+                    />
+                  </div>
+                  <div
+                    className="emotion-8"
+                  >
+                    <span
+                      className="emotion-9"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-10"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/DatePicker DayPicker with predefined values 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
+  position: relative;
+  isolation: isolate;
+}
+
+.emotion-2 {
+  max-width: 17.5rem;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #dcdfff;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  min-width: 9.375rem;
+  height: 2.875rem;
+  background-color: white;
+}
+
+.emotion-3:hover {
+  background-color: #f6f7ff;
+}
+
+.emotion-3:focus-within {
+  box-shadow: 0 0 0 0.125rem #1451dc;
+  background-color: #edefff;
+}
+
+.emotion-4 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0 1rem;
+  cursor: text;
+}
+
+.emotion-4>div {
+  position: relative;
+}
+
+.emotion-5 {
+  width: 100%;
+}
+
+.emotion-6 {
+  background: transparent;
+  border: none;
+  color: #0f0f17;
+  display: block;
+  position: relative;
+  z-index: 1;
+  font-size: 0.9375rem;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-6+label {
+  font-size: 0.9375rem;
+  cursor: text;
+}
+
+.emotion-6:focus {
+  outline: none;
+}
+
+.emotion-6::-webkit-input-placeholder {
+  color: #757bb2;
+}
+
+.emotion-6::-moz-placeholder {
+  color: #757bb2;
+}
+
+.emotion-6:-ms-input-placeholder {
+  color: #757bb2;
+}
+
+.emotion-6::placeholder {
+  color: #757bb2;
+}
+
+.emotion-6:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-6:focus+label,
+.emotion-6:not(:placeholder-shown)+label {
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+  font-weight: 700;
+}
+
+.emotion-6:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-7 {
+  line-height: 0.8;
+  height: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: unset;
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+.emotion-8 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-9 {
+  fill: #757BB2;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-9 path {
+  fill: #757BB2;
+}
+
+<div
+  style={
+    Object {
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": 15,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "flex-end",
+        }
+      }
+    >
+      <button
+        className="emotion-0"
+        onClick={[Function]}
+      >
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div
+      className="emotion-1"
+    >
+      <div
+        className="emotion-2"
+      >
+        <div
+          onClick={[Function]}
+        >
+          <div
+            className="emotion-3"
+          >
+            <div
+              className="emotion-4"
+            >
+              <div
+                className="emotion-5"
+              >
+                <input
+                  className="emotion-6"
+                  disabled={false}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  placeholder="Date (start) - Date (end) "
+                  required={false}
+                  value="11/04/2020 - 11/14/2020"
+                />
+              </div>
+              <div
+                className="emotion-7"
+              >
+                <span
+                  className="emotion-8"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="emotion-9"
+                  />
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/DatePicker Dynamic disableDates with all options available - Knobs 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
+  position: relative;
+  isolation: isolate;
+}
+
+.emotion-2 {
+  max-width: 17.5rem;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #dcdfff;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  min-width: 9.375rem;
+  height: 2.875rem;
+  background-color: white;
+}
+
+.emotion-3:hover {
+  background-color: #f6f7ff;
+}
+
+.emotion-3:focus-within {
+  box-shadow: 0 0 0 0.125rem #1451dc;
+  background-color: #edefff;
+}
+
+.emotion-4 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0 1rem;
+  cursor: text;
+}
+
+.emotion-4>div {
+  position: relative;
+}
+
+.emotion-5 {
+  width: 100%;
+}
+
+.emotion-6 {
+  background: transparent;
+  border: none;
+  color: #0f0f17;
+  display: block;
+  position: relative;
+  z-index: 1;
+  font-size: 0.9375rem;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-6+label {
+  font-size: 0.9375rem;
+  cursor: text;
+}
+
+.emotion-6:focus {
+  outline: none;
+}
+
+.emotion-6::-webkit-input-placeholder {
+  color: #757bb2;
+}
+
+.emotion-6::-moz-placeholder {
+  color: #757bb2;
+}
+
+.emotion-6:-ms-input-placeholder {
+  color: #757bb2;
+}
+
+.emotion-6::placeholder {
+  color: #757bb2;
+}
+
+.emotion-6:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-6:focus+label,
+.emotion-6:not(:placeholder-shown)+label {
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+  font-weight: 700;
+}
+
+.emotion-6:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-7 {
+  line-height: 0.8;
+  height: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: unset;
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+.emotion-8 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-9 {
+  fill: #757BB2;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-9 path {
+  fill: #757BB2;
+}
+
+<div
+  style={
+    Object {
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": 15,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "flex-end",
+        }
+      }
+    >
+      <button
+        className="emotion-0"
+        onClick={[Function]}
+      >
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div
+      className="emotion-1"
+    >
+      <div
+        className="emotion-2"
+      >
+        <div
+          onClick={[Function]}
+        >
+          <div
+            className="emotion-3"
+          >
+            <div
+              className="emotion-4"
+            >
+              <div
+                className="emotion-5"
+              >
+                <input
+                  className="emotion-6"
+                  disabled={false}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  placeholder="Select date "
+                  required={false}
+                  value="11/03/2020"
+                />
+              </div>
+              <div
+                className="emotion-7"
+              >
+                <span
+                  className="emotion-8"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="emotion-9"
+                  />
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/DatePicker Reset DatePicker 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
+  position: relative;
+  isolation: isolate;
+}
+
+.emotion-2 {
+  max-width: 17.5rem;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #dcdfff;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  min-width: 9.375rem;
+  height: 2.875rem;
+  background-color: white;
+}
+
+.emotion-3:hover {
+  background-color: #f6f7ff;
+}
+
+.emotion-3:focus-within {
+  box-shadow: 0 0 0 0.125rem #1451dc;
+  background-color: #edefff;
+}
+
+.emotion-4 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0 1rem;
+  cursor: text;
+}
+
+.emotion-4>div {
+  position: relative;
+}
+
+.emotion-5 {
+  width: 100%;
+}
+
+.emotion-6 {
+  background: transparent;
+  border: none;
+  color: #0f0f17;
+  display: block;
+  position: relative;
+  z-index: 1;
+  font-size: 0.9375rem;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-6+label {
+  font-size: 0.9375rem;
+  cursor: text;
+}
+
+.emotion-6:focus {
+  outline: none;
+}
+
+.emotion-6::-webkit-input-placeholder {
+  color: #757bb2;
+}
+
+.emotion-6::-moz-placeholder {
+  color: #757bb2;
+}
+
+.emotion-6:-ms-input-placeholder {
+  color: #757bb2;
+}
+
+.emotion-6::placeholder {
+  color: #757bb2;
+}
+
+.emotion-6:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-6:focus+label,
+.emotion-6:not(:placeholder-shown)+label {
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+  font-weight: 700;
+}
+
+.emotion-6:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-7 {
+  line-height: 0.8;
+  height: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: unset;
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+.emotion-8 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-9 {
+  fill: #757BB2;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-9 path {
+  fill: #757BB2;
+}
+
+.emotion-10 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  background-color: #175BF5;
+  padding: 0 1rem;
+  height: 2.875rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-10:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
+}
+
+.emotion-10:hover:not(:disabled) {
+  background-color: #1451dc;
+}
+
+.emotion-10:active:not(:disabled) {
+  background-color: #1248c4;
+}
+
+.emotion-10:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-10:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-12 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+<div
+  style={
+    Object {
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": 15,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "flex-end",
+        }
+      }
+    >
+      <button
+        className="emotion-0"
+        onClick={[Function]}
+      >
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div
+      style={
+        Object {
+          "height": "100%",
+          "width": "100%",
+        }
+      }
+    >
+      <h3>
+        Reset DatePicker value (with external component)
+      </h3>
+      <div
+        className="emotion-1"
+      >
+        <div
+          className="emotion-2"
+        >
+          <div
+            onClick={[Function]}
+          >
+            <div
+              className="emotion-3"
+            >
+              <div
+                className="emotion-4"
+              >
+                <div
+                  className="emotion-5"
+                >
+                  <input
+                    className="emotion-6"
+                    disabled={false}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder="Select date "
+                    required={false}
+                    value="11/03/2020"
+                  />
+                </div>
+                <div
+                  className="emotion-7"
+                >
+                  <span
+                    className="emotion-8"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="emotion-9"
+                    />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        className="emotion-10"
+        data-testid="button"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        <span
+          className="emotion-11"
+        >
+          <span
+            className="emotion-12"
+          >
+            Reset DatePicker value
+          </span>
+        </span>
+      </button>
+      <hr />
+      <h3>
+        Reset RangePicker value (with external component)
+      </h3>
+      <div
+        className="emotion-1"
+      >
+        <div
+          className="emotion-2"
+        >
+          <div
+            onClick={[Function]}
+          >
+            <div
+              className="emotion-3"
+            >
+              <div
+                className="emotion-4"
+              >
+                <div
+                  className="emotion-5"
+                >
+                  <input
+                    className="emotion-6"
+                    disabled={false}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder="Date (start) - Date (end) "
+                    required={false}
+                    value="Oct 27, 2020 - Nov 3, 2020"
+                  />
+                </div>
+                <div
+                  className="emotion-7"
+                >
+                  <span
+                    className="emotion-8"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="emotion-9"
+                    />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        className="emotion-10"
+        data-testid="button"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        <span
+          className="emotion-11"
+        >
+          <span
+            className="emotion-12"
+          >
+            Reset RangePicker value
+          </span>
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
