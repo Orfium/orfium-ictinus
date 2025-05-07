@@ -41,7 +41,7 @@ export const customTickFormatter = (tickValue: number, maxDomainValue: number): 
   return `${tickValue}`;
 };
 
-export const getBarColors = (data: Data[], defaultColor: string) =>
+export const getBarColors = (data: Data[], defaultColor: string): string[] =>
   data.map((obj) => {
     if (obj?.options?.color) {
       if (obj?.options?.coloringOption === 'all') {
@@ -54,8 +54,11 @@ export const getBarColors = (data: Data[], defaultColor: string) =>
     return defaultColor;
   });
 
-export const getColoringOptions = (data: Data[], operator?: (cur: Data) => string) => {
-  return data.reduce((acc, cur, index) => {
+export const getColoringOptions = (
+  data: Data[],
+  operator?: (cur: Data) => string
+): Record<string | number, string | undefined> => {
+  return data.reduce<Record<string | number, string | undefined>>((acc, cur, index) => {
     if (cur.options?.coloringOption !== 'all') {
       return acc;
     } else if (operator && operator(cur)) {

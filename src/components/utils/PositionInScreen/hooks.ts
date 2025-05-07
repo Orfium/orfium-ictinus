@@ -1,5 +1,5 @@
 import head from 'lodash/head';
-import { useLayoutEffect, useState } from 'react';
+import { useCallback, useLayoutEffect, useRef, useState } from 'react';
 
 import { resizeObserverHandler } from './utils';
 
@@ -62,61 +62,122 @@ export const usePositionInScreen = (
 ): {
   x: number;
   y: number;
+  maxHeight: number;
+  maxWidth: number;
+  isPositioned: boolean;
+  calculatePosition: () => void;
+  placement: 'top' | 'bottom';
+  triggerWidth: number;
 } => {
-  const [position, setPosition] = useState({ x: -1, y: -1 });
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [triggerWidth, setTriggerWidth] = useState(0);
+  const [maxHeight, setMaxHeight] = useState(0);
+  const [maxWidth, setMaxWidth] = useState(0);
+  const [isPositioned, setIsPositioned] = useState(false);
+  const [placement, setPlacement] = useState<'top' | 'bottom'>('bottom');
+  const animationFrameRef = useRef<number>(0);
 
-  const { parentHeight, childHeight } = useHeights(parentRef, itemRef);
+  const calculatePosition = useCallback(() => {
+    // Define a small buffer for screen edge detection
+    const SCREEN_EDGE_BUFFER = 8;
 
-  useLayoutEffect(() => {
-    // x,y are cordinates in screen
-    // width is wrapper elements dimensions
-    const {
-      x: parentX,
-      y: parentY,
-      width: parentWidth,
-    } = parentRef ? parentRef?.getBoundingClientRect() : { x: 0, y: 0, width: 0 };
+    // Get parent element dimensions and position
+    const parentRect: DOMRect | undefined = parentRef?.getBoundingClientRect();
+    if (!parentRect) return;
 
-    // width is the element's that's going to be positioned dimensions
-    const { width } =
-      itemRef && itemRef.children[0] ? itemRef.children[0].getBoundingClientRect() : { width: 0 };
+    // Get viewport-relative coordinates (without scroll offset)
+    const parentX = parentRect.left;
+    const parentY = parentRect.top;
+    const parentWidth = parentRect.width;
+    const parentHeight = parentRect.height;
 
-    // If the item-to-be-positioned is out of screen height
-    const itemYOutOfScreenHeight = parentY + parentHeight + childHeight > window.innerHeight;
+    // Get positioned element dimensions
+    const childRect: DOMRect | undefined = itemRef?.children[0]?.getBoundingClientRect();
+    const childWidth = childRect?.width ?? 0;
+    const childHeight = childRect?.height ?? 0;
 
-    // The element that we are positioning is absolutely positioned inside the relative
-    // container. So x,y are zero means the element will be positioned exactly on top
-    // of the parent element.
-    let x = 0;
-    let y = 0;
+    // Calculate positions (viewport-relative, without scroll)
+    let x = parentX + offsetX;
+    let y;
+    let currentPlacement: 'top' | 'bottom' = 'bottom';
 
-    if (itemYOutOfScreenHeight) {
-      // We place the element height+offsetY (px) above the parent
-      y = y - childHeight - offsetY;
-      if (parentY + y < 0) {
-        // Rare case where client height is super small. We don't exactly support this.
-        // So we render it as if it was inside the screen height
-        y = parentHeight + offsetY;
-      }
+    // Check if element would overflow screen bounds (with buffer) when placed below
+    const spaceBelow = window.innerHeight - (parentRect.bottom + offsetY) - SCREEN_EDGE_BUFFER;
+    const spaceAbove = parentRect.top - offsetY - SCREEN_EDGE_BUFFER;
+
+    // First try to place it below, if there's not enough space, try above
+    if (childHeight <= spaceBelow) {
+      // Place below - enough space
+      y = parentY + parentHeight + offsetY;
+      currentPlacement = 'bottom';
+    } else if (childHeight <= spaceAbove) {
+      // Place above - enough space above
+      y = parentY - childHeight - offsetY;
+      currentPlacement = 'top';
     } else {
-      // We place the element offsetY (px) under the parent
-      y = parentHeight + offsetY;
+      // Not enough space either way, place where there's more space and allow scrolling
+      if (spaceBelow >= spaceAbove) {
+        y = parentY + parentHeight + offsetY;
+        currentPlacement = 'bottom';
+      } else {
+        y = parentY - childHeight - offsetY;
+        currentPlacement = 'top';
+      }
     }
 
-    // If the item-to-be-positioned is out of screen width
-    const itemXOutOfScreenWidth = parentX + width > window.innerWidth;
+    // Check if element would overflow screen bounds horizontally (with buffer)
+    const itemXOutOfScreenWidth = x + childWidth > window.innerWidth - SCREEN_EDGE_BUFFER;
 
     if (itemXOutOfScreenWidth) {
-      // We place the element parentWidth-width-offsetX (px) at the left of the parent
-      x = x + parentWidth - width - offsetX;
-    } else {
-      // We place the element offset (px) at the right of the parent
-      x = offsetX;
+      // Align to right edge of parent if would overflow right
+      x = parentX + parentWidth - childWidth - offsetX;
+      // Ensure we don't position outside the left edge
+      if (x < SCREEN_EDGE_BUFFER) {
+        x = SCREEN_EDGE_BUFFER;
+      }
     }
 
-    setPosition({ x, y });
-  }, [parentRef, itemRef, visible, offsetY, offsetX, parentHeight, childHeight]);
+    // Calculate maxHeight - space available from y position to bottom/top of screen based on placement
+    let availableHeight;
+    if (currentPlacement === 'top') {
+      availableHeight = parentY - SCREEN_EDGE_BUFFER;
+    } else {
+      availableHeight =
+        window.innerHeight - (parentY + parentHeight + offsetY) - SCREEN_EDGE_BUFFER;
+    }
 
-  return position;
+    // Calculate maxWidth - space available from x position to right edge of screen
+    const availableRightSpace = window.innerWidth - x - SCREEN_EDGE_BUFFER;
+
+    setPosition({ x, y });
+    setMaxHeight(availableHeight);
+    setMaxWidth(availableRightSpace);
+    setIsPositioned(true);
+    setPlacement(currentPlacement);
+    setTriggerWidth(parentWidth);
+  }, [parentRef, itemRef, offsetY, offsetX]);
+
+  useLayoutEffect(() => {
+    if (!visible) return;
+
+    animationFrameRef.current = requestAnimationFrame(() => {
+      calculatePosition();
+    });
+
+    return () => {
+      cancelAnimationFrame(animationFrameRef.current);
+    };
+  }, [calculatePosition, visible]);
+
+  return {
+    ...position,
+    maxHeight,
+    maxWidth,
+    isPositioned,
+    calculatePosition,
+    placement,
+    triggerWidth,
+  };
 };
 
 export const useWrapperWidth = (

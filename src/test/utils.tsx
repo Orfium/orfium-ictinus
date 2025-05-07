@@ -11,6 +11,7 @@ export const selectDropdownOption = async (
   option: string
 ): Promise<void> => {
   userEvent.type(dropdownInput, option); // type option on the dropdown input
+  screen.debug();
   userEvent.click(screen.getByText(option)); // select the option from displayed options
 };
 

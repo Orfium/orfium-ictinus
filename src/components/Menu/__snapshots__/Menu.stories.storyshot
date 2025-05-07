@@ -28,6 +28,7 @@ exports[`Storyshots Design System/Menu Disabled Menu 1`] = `
   width: 100%;
   height: inherit;
   position: relative;
+  isolation: isolate;
 }
 
 .emotion-3 {
@@ -162,100 +163,6 @@ exports[`Storyshots Design System/Menu Disabled Menu 1`] = `
   fill: white;
 }
 
-.emotion-11 {
-  overflow: hidden;
-  position: absolute;
-  top: 0.5rem;
-  left: 0rem;
-  z-index: 999999999;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  visibility: hidden;
-  opacity: 0!important;
-}
-
-.emotion-12 {
-  max-height: 15.8125rem;
-  overflow-y: auto;
-  position: absolute;
-  left: 0;
-  right: 0;
-  min-width: 9.375rem;
-  max-width: 38.75rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: auto;
-  background-color: white;
-  box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
-  border-radius: 0.25rem;
-  z-index: 1;
-}
-
-.emotion-13 {
-  border: 1px solid #edefff;
-  border-radius: 0.25rem;
-  width: undefinedpx;
-}
-
-.emotion-14 {
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  border-radius: 0.25rem;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  overflow-x: hidden;
-}
-
-.emotion-15 {
-  height: 2.875rem;
-  font-size: 0.875rem;
-  background-color: white;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0px 1rem 0px 1rem;
-  cursor: pointer;
-}
-
-.emotion-15:hover {
-  background-color: #f6f7ff;
-}
-
-.emotion-16 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  cursor: inherit;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-16>div {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
 <div
   style={
     Object {
@@ -303,144 +210,50 @@ exports[`Storyshots Design System/Menu Disabled Menu 1`] = `
           }
         }
       >
-        <div
-          role="button"
-        >
-          <div>
-            <div
-              className="emotion-2"
+        <div>
+          <div
+            className="emotion-2"
+          >
+            <button
+              className="emotion-3"
+              data-testid="button"
+              disabled={true}
+              onClick={[Function]}
+              type="button"
             >
-              <button
-                className="emotion-3"
-                data-testid="button"
-                disabled={true}
-                onClick={[Function]}
-                type="button"
+              <span
+                className="emotion-4"
               >
                 <span
-                  className="emotion-4"
-                >
-                  <span
-                    className="emotion-5"
-                  >
-                    <div
-                      className="emotion-6"
-                    >
-                      TC
-                    </div>
-                  </span>
-                  <span
-                    className="emotion-7"
-                  >
-                    <span>
-                      Tom Cruise
-                    </span>
-                  </span>
-                  <span
-                    className="emotion-5"
-                  >
-                    <span
-                      className="emotion-9"
-                      onClick={[Function]}
-                    >
-                      <span
-                        className="emotion-10"
-                      />
-                    </span>
-                  </span>
-                </span>
-              </button>
-              <div
-                className="unique-tooltip-id emotion-11"
-              >
-                <div
-                  className="emotion-12"
+                  className="emotion-5"
                 >
                   <div
-                    className="emotion-13"
+                    className="emotion-6"
                   >
-                    <div
-                      data-testid="ictinus_list"
-                    >
-                      <ul
-                        className="emotion-14"
-                      >
-                        <li>
-                          <div
-                            className="emotion-15"
-                            data-testid="ictinus_list_item_0"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-16"
-                            >
-                              My Profile
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="emotion-15"
-                            data-testid="ictinus_list_item_1"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-16"
-                            >
-                              Settings
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="emotion-15"
-                            data-testid="ictinus_list_item_2"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-16"
-                            >
-                              Billing
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="emotion-15"
-                            data-testid="ictinus_list_item_3"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-16"
-                            >
-                              Notifications
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="emotion-15"
-                            data-testid="ictinus_list_item_4"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-16"
-                            >
-                              Logout
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
+                    TC
                   </div>
-                </div>
-              </div>
-            </div>
+                </span>
+                <span
+                  className="emotion-7"
+                >
+                  <span>
+                    Tom Cruise
+                  </span>
+                </span>
+                <span
+                  className="emotion-5"
+                >
+                  <span
+                    className="emotion-9"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="emotion-10"
+                    />
+                  </span>
+                </span>
+              </span>
+            </button>
           </div>
         </div>
       </div>
@@ -477,6 +290,7 @@ exports[`Storyshots Design System/Menu Menu with avatar and different button col
   width: 100%;
   height: inherit;
   position: relative;
+  isolation: isolate;
 }
 
 .emotion-3 {
@@ -611,111 +425,17 @@ exports[`Storyshots Design System/Menu Menu with avatar and different button col
   fill: white;
 }
 
-.emotion-11 {
-  overflow: hidden;
-  position: absolute;
-  top: 0.5rem;
-  left: 0rem;
-  z-index: 999999999;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  visibility: hidden;
-  opacity: 0!important;
-}
-
-.emotion-12 {
-  max-height: 15.8125rem;
-  overflow-y: auto;
-  position: absolute;
-  left: 0;
-  right: 0;
-  min-width: 9.375rem;
-  max-width: 38.75rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: auto;
-  background-color: white;
-  box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
-  border-radius: 0.25rem;
-  z-index: 1;
-}
-
-.emotion-13 {
-  border: 1px solid #edefff;
-  border-radius: 0.25rem;
-  width: undefinedpx;
-}
-
-.emotion-14 {
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  border-radius: 0.25rem;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  overflow-x: hidden;
-}
-
-.emotion-15 {
-  height: 2.875rem;
-  font-size: 0.875rem;
-  background-color: white;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0px 1rem 0px 1rem;
-  cursor: pointer;
-}
-
-.emotion-15:hover {
-  background-color: #f6f7ff;
-}
-
-.emotion-16 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  cursor: inherit;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-16>div {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-64 {
+.emotion-26 {
   fill: black;
   width: 0.75rem;
   height: 0.75rem;
 }
 
-.emotion-64 path {
+.emotion-26 path {
   fill: black;
 }
 
-.emotion-84 {
+.emotion-32 {
   font-size: 1rem;
   font-weight: 500;
   color: black;
@@ -729,29 +449,29 @@ exports[`Storyshots Design System/Menu Menu with avatar and different button col
   transition: background-color,border 150ms linear;
 }
 
-.emotion-84:focus-visible:not(:disabled) {
+.emotion-32:focus-visible:not(:disabled) {
   outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-84:hover:not(:disabled) {
+.emotion-32:hover:not(:disabled) {
   background-color: #e4e7ff;
 }
 
-.emotion-84:active:not(:disabled) {
+.emotion-32:active:not(:disabled) {
   background-color: #dcdfff;
 }
 
-.emotion-84:disabled {
+.emotion-32:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.emotion-84:disabled style {
+.emotion-32:disabled style {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.emotion-87 {
+.emotion-35 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -788,19 +508,19 @@ exports[`Storyshots Design System/Menu Menu with avatar and different button col
   color: black;
 }
 
-.emotion-87 img {
+.emotion-35 img {
   border-radius: 100%;
   width: 100%;
   height: 100%;
 }
 
-.emotion-93 {
+.emotion-41 {
   fill: black;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-93 path {
+.emotion-41 path {
   fill: black;
 }
 
@@ -851,144 +571,50 @@ exports[`Storyshots Design System/Menu Menu with avatar and different button col
           }
         }
       >
-        <div
-          role="button"
-        >
-          <div>
-            <div
-              className="emotion-2"
+        <div>
+          <div
+            className="emotion-2"
+          >
+            <button
+              className="emotion-3"
+              data-testid="button"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
             >
-              <button
-                className="emotion-3"
-                data-testid="button"
-                disabled={false}
-                onClick={[Function]}
-                type="button"
+              <span
+                className="emotion-4"
               >
                 <span
-                  className="emotion-4"
-                >
-                  <span
-                    className="emotion-5"
-                  >
-                    <div
-                      className="emotion-6"
-                    >
-                      TC
-                    </div>
-                  </span>
-                  <span
-                    className="emotion-7"
-                  >
-                    <span>
-                      Tom Cruise
-                    </span>
-                  </span>
-                  <span
-                    className="emotion-5"
-                  >
-                    <span
-                      className="emotion-9"
-                      onClick={[Function]}
-                    >
-                      <span
-                        className="emotion-10"
-                      />
-                    </span>
-                  </span>
-                </span>
-              </button>
-              <div
-                className="unique-tooltip-id emotion-11"
-              >
-                <div
-                  className="emotion-12"
+                  className="emotion-5"
                 >
                   <div
-                    className="emotion-13"
+                    className="emotion-6"
                   >
-                    <div
-                      data-testid="ictinus_list"
-                    >
-                      <ul
-                        className="emotion-14"
-                      >
-                        <li>
-                          <div
-                            className="emotion-15"
-                            data-testid="ictinus_list_item_0"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-16"
-                            >
-                              My Profile
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="emotion-15"
-                            data-testid="ictinus_list_item_1"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-16"
-                            >
-                              Settings
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="emotion-15"
-                            data-testid="ictinus_list_item_2"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-16"
-                            >
-                              Billing
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="emotion-15"
-                            data-testid="ictinus_list_item_3"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-16"
-                            >
-                              Notifications
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="emotion-15"
-                            data-testid="ictinus_list_item_4"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-16"
-                            >
-                              Logout
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
+                    TC
                   </div>
-                </div>
-              </div>
-            </div>
+                </span>
+                <span
+                  className="emotion-7"
+                >
+                  <span>
+                    Tom Cruise
+                  </span>
+                </span>
+                <span
+                  className="emotion-5"
+                >
+                  <span
+                    className="emotion-9"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="emotion-10"
+                    />
+                  </span>
+                </span>
+              </span>
+            </button>
           </div>
         </div>
       </div>
@@ -999,216 +625,52 @@ exports[`Storyshots Design System/Menu Menu with avatar and different button col
           }
         }
       >
-        <div
-          role="button"
-        >
-          <div>
-            <div
-              className="emotion-2"
+        <div>
+          <div
+            className="emotion-2"
+          >
+            <button
+              className="emotion-3"
+              data-testid="button"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
             >
-              <button
-                className="emotion-3"
-                data-testid="button"
-                disabled={false}
-                onClick={[Function]}
-                type="button"
+              <span
+                className="emotion-4"
               >
                 <span
-                  className="emotion-4"
-                >
-                  <span
-                    className="emotion-5"
-                  >
-                    <div
-                      className="emotion-6"
-                    >
-                      <img
-                        src="https://mui.com/static/images/avatar/1.jpg"
-                      />
-                    </div>
-                  </span>
-                  <span
-                    className="emotion-7"
-                  >
-                    <span>
-                      Tom Cruise
-                    </span>
-                  </span>
-                  <span
-                    className="emotion-5"
-                  >
-                    <span
-                      className="emotion-9"
-                      onClick={[Function]}
-                    >
-                      <span
-                        className="emotion-10"
-                      />
-                    </span>
-                  </span>
-                </span>
-              </button>
-              <div
-                className="unique-tooltip-id emotion-11"
-              >
-                <div
-                  className="emotion-12"
+                  className="emotion-5"
                 >
                   <div
-                    className="emotion-13"
+                    className="emotion-6"
                   >
-                    <div
-                      data-testid="ictinus_list"
-                    >
-                      <ul
-                        className="emotion-14"
-                      >
-                        <li>
-                          <div
-                            className="emotion-15"
-                            data-testid="ictinus_list_item_0"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-16"
-                            >
-                              My Profile
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="emotion-15"
-                            data-testid="ictinus_list_item_1"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-16"
-                            >
-                              Settings
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="emotion-15"
-                            data-testid="ictinus_list_item_2"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-16"
-                            >
-                              Billing
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="emotion-15"
-                            data-testid="ictinus_list_item_3"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-16"
-                            >
-                              Notifications
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="emotion-15"
-                            data-testid="ictinus_list_item_4"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-16"
-                            >
-                              Logout
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="emotion-15"
-                            data-testid="ictinus_list_item_5"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-16"
-                            >
-                              My Profile 1
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="emotion-15"
-                            data-testid="ictinus_list_item_6"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-16"
-                            >
-                              Settings 1
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="emotion-15"
-                            data-testid="ictinus_list_item_7"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-16"
-                            >
-                              Billing 1
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="emotion-15"
-                            data-testid="ictinus_list_item_8"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-16"
-                            >
-                              Notifications 1
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="emotion-15"
-                            data-testid="ictinus_list_item_9"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-16"
-                            >
-                              Logout 1
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
+                    <img
+                      src="https://mui.com/static/images/avatar/1.jpg"
+                    />
                   </div>
-                </div>
-              </div>
-            </div>
+                </span>
+                <span
+                  className="emotion-7"
+                >
+                  <span>
+                    Tom Cruise
+                  </span>
+                </span>
+                <span
+                  className="emotion-5"
+                >
+                  <span
+                    className="emotion-9"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="emotion-10"
+                    />
+                  </span>
+                </span>
+              </span>
+            </button>
           </div>
         </div>
       </div>
@@ -1219,151 +681,57 @@ exports[`Storyshots Design System/Menu Menu with avatar and different button col
           }
         }
       >
-        <div
-          role="button"
-        >
-          <div>
-            <div
-              className="emotion-2"
+        <div>
+          <div
+            className="emotion-2"
+          >
+            <button
+              className="emotion-3"
+              data-testid="button"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
             >
-              <button
-                className="emotion-3"
-                data-testid="button"
-                disabled={false}
-                onClick={[Function]}
-                type="button"
+              <span
+                className="emotion-4"
               >
                 <span
-                  className="emotion-4"
+                  className="emotion-5"
                 >
-                  <span
-                    className="emotion-5"
-                  >
-                    <div
-                      className="emotion-6"
-                    >
-                      <span
-                        className="emotion-9"
-                        onClick={[Function]}
-                      >
-                        <span
-                          className="emotion-64"
-                        />
-                      </span>
-                    </div>
-                  </span>
-                  <span
-                    className="emotion-7"
-                  >
-                    <span>
-                      Tom Cruise
-                    </span>
-                  </span>
-                  <span
-                    className="emotion-5"
+                  <div
+                    className="emotion-6"
                   >
                     <span
                       className="emotion-9"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-10"
+                        className="emotion-26"
                       />
                     </span>
+                  </div>
+                </span>
+                <span
+                  className="emotion-7"
+                >
+                  <span>
+                    Tom Cruise
                   </span>
                 </span>
-              </button>
-              <div
-                className="unique-tooltip-id emotion-11"
-              >
-                <div
-                  className="emotion-12"
+                <span
+                  className="emotion-5"
                 >
-                  <div
-                    className="emotion-13"
+                  <span
+                    className="emotion-9"
+                    onClick={[Function]}
                   >
-                    <div
-                      data-testid="ictinus_list"
-                    >
-                      <ul
-                        className="emotion-14"
-                      >
-                        <li>
-                          <div
-                            className="emotion-15"
-                            data-testid="ictinus_list_item_0"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-16"
-                            >
-                              My Profile
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="emotion-15"
-                            data-testid="ictinus_list_item_1"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-16"
-                            >
-                              Settings
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="emotion-15"
-                            data-testid="ictinus_list_item_2"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-16"
-                            >
-                              Billing
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="emotion-15"
-                            data-testid="ictinus_list_item_3"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-16"
-                            >
-                              Notifications
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="emotion-15"
-                            data-testid="ictinus_list_item_4"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-16"
-                            >
-                              Logout
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                    <span
+                      className="emotion-10"
+                    />
+                  </span>
+                </span>
+              </span>
+            </button>
           </div>
         </div>
       </div>
@@ -1374,151 +742,57 @@ exports[`Storyshots Design System/Menu Menu with avatar and different button col
           }
         }
       >
-        <div
-          role="button"
-        >
-          <div>
-            <div
-              className="emotion-2"
+        <div>
+          <div
+            className="emotion-2"
+          >
+            <button
+              className="emotion-32"
+              data-testid="button"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
             >
-              <button
-                className="emotion-84"
-                data-testid="button"
-                disabled={false}
-                onClick={[Function]}
-                type="button"
+              <span
+                className="emotion-4"
               >
                 <span
-                  className="emotion-4"
+                  className="emotion-5"
                 >
-                  <span
-                    className="emotion-5"
-                  >
-                    <div
-                      className="emotion-87"
-                    >
-                      <span
-                        className="emotion-9"
-                        onClick={[Function]}
-                      >
-                        <span
-                          className="emotion-64"
-                        />
-                      </span>
-                    </div>
-                  </span>
-                  <span
-                    className="emotion-7"
-                  >
-                    <span>
-                      Tom Cruise
-                    </span>
-                  </span>
-                  <span
-                    className="emotion-5"
+                  <div
+                    className="emotion-35"
                   >
                     <span
                       className="emotion-9"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-93"
+                        className="emotion-26"
                       />
                     </span>
+                  </div>
+                </span>
+                <span
+                  className="emotion-7"
+                >
+                  <span>
+                    Tom Cruise
                   </span>
                 </span>
-              </button>
-              <div
-                className="unique-tooltip-id emotion-11"
-              >
-                <div
-                  className="emotion-12"
+                <span
+                  className="emotion-5"
                 >
-                  <div
-                    className="emotion-13"
+                  <span
+                    className="emotion-9"
+                    onClick={[Function]}
                   >
-                    <div
-                      data-testid="ictinus_list"
-                    >
-                      <ul
-                        className="emotion-14"
-                      >
-                        <li>
-                          <div
-                            className="emotion-15"
-                            data-testid="ictinus_list_item_0"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-16"
-                            >
-                              My Profile
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="emotion-15"
-                            data-testid="ictinus_list_item_1"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-16"
-                            >
-                              Settings
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="emotion-15"
-                            data-testid="ictinus_list_item_2"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-16"
-                            >
-                              Billing
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="emotion-15"
-                            data-testid="ictinus_list_item_3"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-16"
-                            >
-                              Notifications
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="emotion-15"
-                            data-testid="ictinus_list_item_4"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-16"
-                            >
-                              Logout
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                    <span
+                      className="emotion-41"
+                    />
+                  </span>
+                </span>
+              </span>
+            </button>
           </div>
         </div>
       </div>
@@ -1555,6 +829,7 @@ exports[`Storyshots Design System/Menu Menu with option icon and different colou
   width: 100%;
   height: inherit;
   position: relative;
+  isolation: isolate;
 }
 
 .emotion-3 {
@@ -1699,101 +974,7 @@ exports[`Storyshots Design System/Menu Menu with option icon and different colou
   fill: white;
 }
 
-.emotion-13 {
-  overflow: hidden;
-  position: absolute;
-  top: 0.5rem;
-  left: 0rem;
-  z-index: 999999999;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  visibility: hidden;
-  opacity: 0!important;
-}
-
 .emotion-14 {
-  max-height: 15.8125rem;
-  overflow-y: auto;
-  position: absolute;
-  left: 0;
-  right: 0;
-  min-width: 9.375rem;
-  max-width: 38.75rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: auto;
-  background-color: white;
-  box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
-  border-radius: 0.25rem;
-  z-index: 1;
-}
-
-.emotion-15 {
-  border: 1px solid #edefff;
-  border-radius: 0.25rem;
-  width: undefinedpx;
-}
-
-.emotion-16 {
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  border-radius: 0.25rem;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  overflow-x: hidden;
-}
-
-.emotion-17 {
-  height: 2.875rem;
-  font-size: 0.875rem;
-  background-color: white;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0px 1rem 0px 1rem;
-  cursor: pointer;
-}
-
-.emotion-17:hover {
-  background-color: #f6f7ff;
-}
-
-.emotion-18 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  cursor: inherit;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-18>div {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-28 {
   font-size: 1rem;
   font-weight: 500;
   color: black;
@@ -1807,39 +988,39 @@ exports[`Storyshots Design System/Menu Menu with option icon and different colou
   transition: background-color,border 150ms linear;
 }
 
-.emotion-28:focus-visible:not(:disabled) {
+.emotion-14:focus-visible:not(:disabled) {
   outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-28:hover:not(:disabled) {
+.emotion-14:hover:not(:disabled) {
   background-color: #c1c1c9;
 }
 
-.emotion-28:active:not(:disabled) {
+.emotion-14:active:not(:disabled) {
   background-color: #adadb8;
 }
 
-.emotion-28:disabled {
+.emotion-14:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.emotion-28:disabled style {
+.emotion-14:disabled style {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.emotion-37 {
+.emotion-23 {
   fill: black;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-37 path {
+.emotion-23 path {
   fill: black;
 }
 
-.emotion-53 {
+.emotion-25 {
   font-size: 1rem;
   font-weight: 500;
   color: #28283e;
@@ -1853,35 +1034,35 @@ exports[`Storyshots Design System/Menu Menu with option icon and different colou
   transition: background-color,border 150ms linear;
 }
 
-.emotion-53:focus-visible:not(:disabled) {
+.emotion-25:focus-visible:not(:disabled) {
   outline: #C813D5 auto 0.125rem;
 }
 
-.emotion-53:hover:not(:disabled) {
+.emotion-25:hover:not(:disabled) {
   background-color: rgba(50,50,78,0.07);
 }
 
-.emotion-53:active:not(:disabled) {
+.emotion-25:active:not(:disabled) {
   background-color: rgba(50,50,78,0.14);
 }
 
-.emotion-53:disabled {
+.emotion-25:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.emotion-53:disabled style {
+.emotion-25:disabled style {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.emotion-62 {
+.emotion-34 {
   fill: #28283e;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-62 path {
+.emotion-34 path {
   fill: #28283e;
 }
 
@@ -1932,151 +1113,57 @@ exports[`Storyshots Design System/Menu Menu with option icon and different colou
           }
         }
       >
-        <div
-          role="button"
-        >
-          <div>
-            <div
-              className="emotion-2"
+        <div>
+          <div
+            className="emotion-2"
+          >
+            <button
+              className="emotion-3"
+              data-testid="button"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
             >
-              <button
-                className="emotion-3"
-                data-testid="button"
-                disabled={false}
-                onClick={[Function]}
-                type="button"
+              <span
+                className="emotion-4"
               >
                 <span
-                  className="emotion-4"
+                  className="emotion-5"
                 >
-                  <span
-                    className="emotion-5"
-                  >
-                    <div
-                      className="emotion-6"
-                    >
-                      <span
-                        className="emotion-7"
-                        onClick={[Function]}
-                      >
-                        <span
-                          className="emotion-8"
-                        />
-                      </span>
-                    </div>
-                  </span>
-                  <span
-                    className="emotion-9"
-                  >
-                    <span>
-                      More
-                    </span>
-                  </span>
-                  <span
-                    className="emotion-5"
+                  <div
+                    className="emotion-6"
                   >
                     <span
                       className="emotion-7"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-12"
+                        className="emotion-8"
                       />
                     </span>
+                  </div>
+                </span>
+                <span
+                  className="emotion-9"
+                >
+                  <span>
+                    More
                   </span>
                 </span>
-              </button>
-              <div
-                className="unique-tooltip-id emotion-13"
-              >
-                <div
-                  className="emotion-14"
+                <span
+                  className="emotion-5"
                 >
-                  <div
-                    className="emotion-15"
+                  <span
+                    className="emotion-7"
+                    onClick={[Function]}
                   >
-                    <div
-                      data-testid="ictinus_list"
-                    >
-                      <ul
-                        className="emotion-16"
-                      >
-                        <li>
-                          <div
-                            className="emotion-17"
-                            data-testid="ictinus_list_item_0"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-18"
-                            >
-                              My Profile
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="emotion-17"
-                            data-testid="ictinus_list_item_1"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-18"
-                            >
-                              Settings
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="emotion-17"
-                            data-testid="ictinus_list_item_2"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-18"
-                            >
-                              Billing
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="emotion-17"
-                            data-testid="ictinus_list_item_3"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-18"
-                            >
-                              Notifications
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="emotion-17"
-                            data-testid="ictinus_list_item_4"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-18"
-                            >
-                              Logout
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                    <span
+                      className="emotion-12"
+                    />
+                  </span>
+                </span>
+              </span>
+            </button>
           </div>
         </div>
       </div>
@@ -2087,151 +1174,57 @@ exports[`Storyshots Design System/Menu Menu with option icon and different colou
           }
         }
       >
-        <div
-          role="button"
-        >
-          <div>
-            <div
-              className="emotion-2"
+        <div>
+          <div
+            className="emotion-2"
+          >
+            <button
+              className="emotion-14"
+              data-testid="button"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
             >
-              <button
-                className="emotion-28"
-                data-testid="button"
-                disabled={false}
-                onClick={[Function]}
-                type="button"
+              <span
+                className="emotion-4"
               >
                 <span
-                  className="emotion-4"
+                  className="emotion-5"
                 >
-                  <span
-                    className="emotion-5"
-                  >
-                    <div
-                      className="emotion-6"
-                    >
-                      <span
-                        className="emotion-7"
-                        onClick={[Function]}
-                      >
-                        <span
-                          className="emotion-8"
-                        />
-                      </span>
-                    </div>
-                  </span>
-                  <span
-                    className="emotion-9"
-                  >
-                    <span>
-                      More
-                    </span>
-                  </span>
-                  <span
-                    className="emotion-5"
+                  <div
+                    className="emotion-6"
                   >
                     <span
                       className="emotion-7"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-37"
+                        className="emotion-8"
                       />
                     </span>
+                  </div>
+                </span>
+                <span
+                  className="emotion-9"
+                >
+                  <span>
+                    More
                   </span>
                 </span>
-              </button>
-              <div
-                className="unique-tooltip-id emotion-13"
-              >
-                <div
-                  className="emotion-14"
+                <span
+                  className="emotion-5"
                 >
-                  <div
-                    className="emotion-15"
+                  <span
+                    className="emotion-7"
+                    onClick={[Function]}
                   >
-                    <div
-                      data-testid="ictinus_list"
-                    >
-                      <ul
-                        className="emotion-16"
-                      >
-                        <li>
-                          <div
-                            className="emotion-17"
-                            data-testid="ictinus_list_item_0"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-18"
-                            >
-                              My Profile
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="emotion-17"
-                            data-testid="ictinus_list_item_1"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-18"
-                            >
-                              Settings
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="emotion-17"
-                            data-testid="ictinus_list_item_2"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-18"
-                            >
-                              Billing
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="emotion-17"
-                            data-testid="ictinus_list_item_3"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-18"
-                            >
-                              Notifications
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="emotion-17"
-                            data-testid="ictinus_list_item_4"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-18"
-                            >
-                              Logout
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                    <span
+                      className="emotion-23"
+                    />
+                  </span>
+                </span>
+              </span>
+            </button>
           </div>
         </div>
       </div>
@@ -2242,151 +1235,57 @@ exports[`Storyshots Design System/Menu Menu with option icon and different colou
           }
         }
       >
-        <div
-          role="button"
-        >
-          <div>
-            <div
-              className="emotion-2"
+        <div>
+          <div
+            className="emotion-2"
+          >
+            <button
+              className="emotion-25"
+              data-testid="button"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
             >
-              <button
-                className="emotion-53"
-                data-testid="button"
-                disabled={false}
-                onClick={[Function]}
-                type="button"
+              <span
+                className="emotion-4"
               >
                 <span
-                  className="emotion-4"
+                  className="emotion-5"
                 >
-                  <span
-                    className="emotion-5"
-                  >
-                    <div
-                      className="emotion-6"
-                    >
-                      <span
-                        className="emotion-7"
-                        onClick={[Function]}
-                      >
-                        <span
-                          className="emotion-8"
-                        />
-                      </span>
-                    </div>
-                  </span>
-                  <span
-                    className="emotion-9"
-                  >
-                    <span>
-                      More
-                    </span>
-                  </span>
-                  <span
-                    className="emotion-5"
+                  <div
+                    className="emotion-6"
                   >
                     <span
                       className="emotion-7"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-62"
+                        className="emotion-8"
                       />
                     </span>
+                  </div>
+                </span>
+                <span
+                  className="emotion-9"
+                >
+                  <span>
+                    More
                   </span>
                 </span>
-              </button>
-              <div
-                className="unique-tooltip-id emotion-13"
-              >
-                <div
-                  className="emotion-14"
+                <span
+                  className="emotion-5"
                 >
-                  <div
-                    className="emotion-15"
+                  <span
+                    className="emotion-7"
+                    onClick={[Function]}
                   >
-                    <div
-                      data-testid="ictinus_list"
-                    >
-                      <ul
-                        className="emotion-16"
-                      >
-                        <li>
-                          <div
-                            className="emotion-17"
-                            data-testid="ictinus_list_item_0"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-18"
-                            >
-                              My Profile
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="emotion-17"
-                            data-testid="ictinus_list_item_1"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-18"
-                            >
-                              Settings
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="emotion-17"
-                            data-testid="ictinus_list_item_2"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-18"
-                            >
-                              Billing
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="emotion-17"
-                            data-testid="ictinus_list_item_3"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-18"
-                            >
-                              Notifications
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="emotion-17"
-                            data-testid="ictinus_list_item_4"
-                            onClick={[Function]}
-                            onMouseDown={[Function]}
-                          >
-                            <div
-                              className="emotion-18"
-                            >
-                              Logout
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                    <span
+                      className="emotion-34"
+                    />
+                  </span>
+                </span>
+              </span>
+            </button>
           </div>
         </div>
       </div>
@@ -2409,6 +1308,7 @@ exports[`Storyshots Design System/Menu Menu with selection handler 1`] = `
   width: 100%;
   height: inherit;
   position: relative;
+  isolation: isolate;
 }
 
 .emotion-2 {
@@ -2467,100 +1367,6 @@ exports[`Storyshots Design System/Menu Menu with selection handler 1`] = `
   margin-right: 0;
 }
 
-.emotion-5 {
-  overflow: hidden;
-  position: absolute;
-  top: 0.5rem;
-  left: 0rem;
-  z-index: 999999999;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  visibility: hidden;
-  opacity: 0!important;
-}
-
-.emotion-6 {
-  max-height: 15.8125rem;
-  overflow-y: auto;
-  position: absolute;
-  left: 0;
-  right: 0;
-  min-width: 9.375rem;
-  max-width: 38.75rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: auto;
-  background-color: white;
-  box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
-  border-radius: 0.25rem;
-  z-index: 1;
-}
-
-.emotion-7 {
-  border: 1px solid #edefff;
-  border-radius: 0.25rem;
-  width: undefinedpx;
-}
-
-.emotion-8 {
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  border-radius: 0.25rem;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  overflow-x: hidden;
-}
-
-.emotion-9 {
-  height: 2.875rem;
-  font-size: 0.875rem;
-  background-color: white;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0px 1rem 0px 1rem;
-  cursor: pointer;
-}
-
-.emotion-9:hover {
-  background-color: #f6f7ff;
-}
-
-.emotion-10 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  cursor: inherit;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-10>div {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
 <div
   style={
     Object {
@@ -2605,123 +1411,29 @@ exports[`Storyshots Design System/Menu Menu with selection handler 1`] = `
           -
         </b>
       </div>
-      <div
-        role="button"
-      >
-        <div>
-          <div
-            className="emotion-1"
+      <div>
+        <div
+          className="emotion-1"
+        >
+          <button
+            className="emotion-2"
+            data-testid="button"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
           >
-            <button
-              className="emotion-2"
-              data-testid="button"
-              disabled={false}
-              onClick={[Function]}
-              type="button"
+            <span
+              className="emotion-3"
             >
               <span
-                className="emotion-3"
+                className="emotion-4"
               >
-                <span
-                  className="emotion-4"
-                >
-                  <span>
-                    More
-                  </span>
+                <span>
+                  More
                 </span>
               </span>
-            </button>
-            <div
-              className="unique-tooltip-id emotion-5"
-            >
-              <div
-                className="emotion-6"
-              >
-                <div
-                  className="emotion-7"
-                >
-                  <div
-                    data-testid="ictinus_list"
-                  >
-                    <ul
-                      className="emotion-8"
-                    >
-                      <li>
-                        <div
-                          className="emotion-9"
-                          data-testid="ictinus_list_item_0"
-                          onClick={[Function]}
-                          onMouseDown={[Function]}
-                        >
-                          <div
-                            className="emotion-10"
-                          >
-                            My Profile
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div
-                          className="emotion-9"
-                          data-testid="ictinus_list_item_1"
-                          onClick={[Function]}
-                          onMouseDown={[Function]}
-                        >
-                          <div
-                            className="emotion-10"
-                          >
-                            Settings
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div
-                          className="emotion-9"
-                          data-testid="ictinus_list_item_2"
-                          onClick={[Function]}
-                          onMouseDown={[Function]}
-                        >
-                          <div
-                            className="emotion-10"
-                          >
-                            Billing
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div
-                          className="emotion-9"
-                          data-testid="ictinus_list_item_3"
-                          onClick={[Function]}
-                          onMouseDown={[Function]}
-                        >
-                          <div
-                            className="emotion-10"
-                          >
-                            Notifications
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div
-                          className="emotion-9"
-                          data-testid="ictinus_list_item_4"
-                          onClick={[Function]}
-                          onMouseDown={[Function]}
-                        >
-                          <div
-                            className="emotion-10"
-                          >
-                            Logout
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+            </span>
+          </button>
         </div>
       </div>
     </div>

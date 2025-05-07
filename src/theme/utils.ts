@@ -35,6 +35,7 @@ export const colorShadesCreator = (
   };
 
   return all().reduce((acc, _, index) => {
+    //@ts-ignore
     acc[`${(index + 1) * 50}`] = _;
 
     return acc;
@@ -57,12 +58,17 @@ export const iterateObject = <T>(
   obj: T,
   func: (value: string, name: string) => generatedColorShades | string
 ): Record<string, unknown> =>
+  //@ts-ignore
   Object.keys(obj).reduce((acc, value) => {
+    //@ts-ignore
     if (typeof obj[value] !== 'object') {
+      //@ts-ignore
       acc[value] = func(obj[value], value);
     } else if (EXCLUDED.includes(value)) {
+      //@ts-ignore
       acc[value] = obj[value];
     } else {
+      //@ts-ignore
       acc[value] = iterateObject<TextPaletteConfigType | flatPaletteConfigType>(obj[value], func);
     }
 

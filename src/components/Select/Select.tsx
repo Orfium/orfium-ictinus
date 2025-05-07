@@ -2,6 +2,9 @@ import debounce from 'lodash/debounce';
 import React, { InputHTMLAttributes, useEffect, useMemo, KeyboardEvent } from 'react';
 import { generateTestDataId } from 'utils/helpers';
 
+import SelectMenu from './components/SelectMenu/SelectMenu';
+import useMultiselectUtils from './hooks/useMultiselectUtils';
+import { rightIconContainer, selectWrapper } from './Select.style';
 import useCombinedRefs from '../../hooks/useCombinedRefs';
 import useTheme from '../../hooks/useTheme';
 import { ChangeEvent } from '../../utils/common';
@@ -9,11 +12,7 @@ import { TestProps } from '../../utils/types';
 import Icon, { OwnProps as IconProps } from '../Icon';
 import TextField from '../TextField';
 import { Props as TextFieldProps } from '../TextField/TextField';
-import ClickAwayListener from '../utils/ClickAwayListener';
 import handleSearch from '../utils/handleSearch';
-import SelectMenu from './components/SelectMenu/SelectMenu';
-import useMultiselectUtils from './hooks/useMultiselectUtils';
-import { rightIconContainer, selectWrapper } from './Select.style';
 import Loader from 'components/Loader';
 import MultiTextFieldBase from 'components/MultiTextFieldBase/MultiTextFieldBase';
 import PositionInScreen from 'components/utils/PositionInScreen';
@@ -114,6 +113,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
   ) => {
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
+    const wrapperRef = React.useRef<HTMLDivElement>(null);
     const inputRef = React.useRef<HTMLInputElement>(null);
     const combinedRefs = useCombinedRefs(inputRef, ref);
 
@@ -156,6 +156,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
         }
 
         setOpen(false);
+        requestAnimationFrame(() => wrapperRef?.current?.focus());
       }
 
       if (isSearchable) {
@@ -320,73 +321,73 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
     };
 
     return (
-      <ClickAwayListener
-        onClick={() => {
-          setOpen(false);
-          setSearchValue('');
-        }}
+      <div
+        ref={wrapperRef}
+        tabIndex={-1}
+        {...(!(disabled || locked) && { onClick: handleClick })}
+        css={selectWrapper({ isSearchable })}
       >
-        <div
-          {...(!(disabled || locked) && { onClick: handleClick })}
-          css={selectWrapper({ isSearchable })}
+        <PositionInScreen
+          visible={open}
+          setIsVisible={() => {
+            setOpen(false);
+            setSearchValue('');
+            requestAnimationFrame(() => wrapperRef?.current?.focus());
+          }}
+          hasWrapperWidth
+          offsetY={8}
+          parent={
+            multi ? (
+              <MultiTextFieldBase
+                selectedOptions={multiSelectedOptions}
+                onInput={handleOnInput}
+                onOptionDelete={handleOptionDelete as (option?: string | SelectOption) => void}
+                onClearAllOptions={handleClearAllOptions}
+                isLoading={isLoading}
+                disabled={disabled}
+                locked={locked}
+                readOnly={!isSearchable}
+                dataTestId={generateTestDataId('select-input', dataTestId)}
+                {...restInputProps}
+                status={status}
+                value={textFieldValue}
+                ref={combinedRefs}
+                autoComplete="off"
+                onKeyDown={handleMultiKeyDown}
+              />
+            ) : (
+              <TextField
+                styleType={styleType}
+                rightIcon={rightIconRender}
+                onKeyDown={handleSingleKeyDown}
+                onInput={handleOnInput}
+                onChange={ON_CHANGE_MOCK}
+                readOnly={!isSearchable}
+                disabled={disabled}
+                locked={locked}
+                dataTestId={generateTestDataId('select-input', dataTestId)}
+                {...restInputProps}
+                status={status}
+                value={textFieldValue}
+                ref={combinedRefs}
+                autoComplete="off"
+              />
+            )
+          }
         >
-          <PositionInScreen
-            visible={open}
-            hasWrapperWidth
-            offsetY={8}
-            parent={
-              multi ? (
-                <MultiTextFieldBase
-                  selectedOptions={multiSelectedOptions}
-                  onInput={handleOnInput}
-                  onOptionDelete={handleOptionDelete as (option?: string | SelectOption) => void}
-                  onClearAllOptions={handleClearAllOptions}
-                  isLoading={isLoading}
-                  disabled={disabled}
-                  locked={locked}
-                  readOnly={!isSearchable}
-                  dataTestId={generateTestDataId('select-input', dataTestId)}
-                  {...restInputProps}
-                  status={status}
-                  value={textFieldValue}
-                  ref={combinedRefs}
-                  autoComplete="off"
-                  onKeyDown={handleMultiKeyDown}
-                />
-              ) : (
-                <TextField
-                  styleType={styleType}
-                  rightIcon={rightIconRender}
-                  onKeyDown={handleSingleKeyDown}
-                  onInput={handleOnInput}
-                  onChange={ON_CHANGE_MOCK}
-                  readOnly={!isSearchable}
-                  disabled={disabled}
-                  locked={locked}
-                  dataTestId={generateTestDataId('select-input', dataTestId)}
-                  {...restInputProps}
-                  status={status}
-                  value={textFieldValue}
-                  ref={combinedRefs}
-                  autoComplete="off"
-                />
-              )
-            }
-          >
-            <SelectMenu
-              filteredOptions={filteredOptions}
-              handleOptionClick={handleOptionClick}
-              selectedOption={inputValue.value}
-              size={restInputProps.size}
-              status={status}
-              isLoading={isLoading}
-              isVirtualized={isVirtualized}
-              searchTerm={highlightSearch ? searchValue : undefined}
-              hasSelectAllOption={multi && hasSelectAllOption && !hasNoOptionsAndIsCreatable}
-            />
-          </PositionInScreen>
-        </div>
-      </ClickAwayListener>
+          <SelectMenu
+            filteredOptions={filteredOptions}
+            handleOptionClick={handleOptionClick}
+            selectedOption={inputValue.value}
+            size={restInputProps.size}
+            status={status}
+            isLoading={isLoading}
+            isVirtualized={isVirtualized}
+            searchTerm={highlightSearch ? searchValue : undefined}
+            hasSelectAllOption={multi && hasSelectAllOption && !hasNoOptionsAndIsCreatable}
+          />
+        </PositionInScreen>
+      </div>
     );
   }
 );
