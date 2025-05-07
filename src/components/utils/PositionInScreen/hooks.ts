@@ -76,12 +76,12 @@ export const usePositionInScreen = (
       x: parentX,
       y: parentY,
       width: parentWidth,
-    } = parentRef?.current ? parentRef?.current?.getBoundingClientRect() : { x: 0, y: 0, width: 0 };
+    } = parentRef?.current && parentRef.current.getBoundingClientRect
+      ? parentRef.current.getBoundingClientRect()
+      : { x: 0, y: 0, width: 0 };
 
     // width is the element's that's going to be positioned dimensions
-    const { width } = itemRef?.current
-      ? itemRef?.current?.children[0]?.getBoundingClientRect()
-      : { width: 0 };
+    const { width } = itemRef?.current?.children?.[0]?.getBoundingClientRect() ?? { width: 0 };
 
     // If the item-to-be-positioned is out of screen height
     const isItemYOutOfScreenHeight = parentY + parentHeight + childHeight > window.innerHeight;
@@ -139,9 +139,10 @@ export const useWrapperWidth = (
 
   useEffect(() => {
     if (hasWrapperWidth) {
-      setWidth(wrapperRef?.current?.getBoundingClientRect()?.width);
+      const wrapperWidth = wrapperRef?.current?.getBoundingClientRect()?.width;
+      setWidth(wrapperWidth);
     }
-  }, [hasWrapperWidth, wrapperRef, wrapperRef?.current?.getBoundingClientRect()?.width]);
+  }, [hasWrapperWidth, wrapperRef]);
 
   return [width];
 };
