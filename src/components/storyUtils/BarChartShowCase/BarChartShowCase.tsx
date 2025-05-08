@@ -5,7 +5,7 @@ import type { Data } from '../../Chart/BarChart/BarChart';
 
 const data: Data[] = [
   {
-    name: 'Orfium',
+    name: 'Example 1',
     value: 857000,
     barLabel: '56.6%',
     options: {
@@ -18,29 +18,13 @@ const data: Data[] = [
       ],
     },
   },
-  { name: 'UMG', value: 230000, barLabel: '15.7%', options: { color: '#c8cade' } },
-  { name: 'Saregama Publishing', value: 138000, barLabel: '8.8%', options: { color: '#c8cade' } },
+  { name: 'Example 2', value: 230000, barLabel: '15.7%', options: { color: '#c8cade' } },
+  { name: 'Example 3', value: 138000, barLabel: '8.8%', options: { color: '#c8cade' } },
   {
-    name: 'PT. Mahar Pustaka Nusantara',
+    name: 'Example 4',
     value: 60908,
     barLabel: '7%',
     options: { color: '#c8cade' },
-  },
-  { name: 'AdRev (3d party)', value: 40800, barLabel: '3.2%', options: { color: '#c8cade' } },
-  { name: 'Rock Mobile Corp.', value: 30800, barLabel: '2.4%', options: { color: '#c8cade' } },
-  {
-    name: 'PT HARMONI DWISELARAS PUBLISHERINDO',
-    value: 7300,
-    barLabel: '1.9%',
-    options: { color: '#c8cade' },
-  },
-  { name: 'Karya Anak Haki', value: 4300, barLabel: '0.7%', options: { color: '#c8cade' } },
-  { name: 'Adshare (3d party)', value: 3300, barLabel: '0.6%', options: { color: '#c8cade' } },
-  {
-    name: 'Other',
-    value: 18300,
-    barLabel: '3.1%',
-    options: { color: '#9b9b9b', coloringOption: 'all' },
   },
 ];
 

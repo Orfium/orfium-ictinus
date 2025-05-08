@@ -52,7 +52,7 @@ export const backdropStyle =
       if (anchor === 'left' || anchor === 'right') {
         if (isBackgroundActive) {
           return css`
-            width: ${size}%;
+            width: ${size};
           `;
         }
       }
@@ -66,7 +66,7 @@ export const backdropStyle =
       if (anchor === 'top' || anchor === 'bottom') {
         if (isBackgroundActive) {
           return css`
-            height: ${size}%;
+            height: ${size};
           `;
         }
       }
@@ -117,8 +117,8 @@ export const anchorStyle = ({
   isBackgroundActive,
 }: Pick<DrawerProps, 'anchor' | 'size' | 'isBackgroundActive'>) => {
   return anchor === 'top' || anchor === 'bottom'
-    ? { display: 'flex', height: isBackgroundActive ? '100%' : `${size}%`, width: '100%' }
-    : { display: 'flex', height: '100%', width: isBackgroundActive ? '100%' : `${size}%` };
+    ? { display: 'flex', height: isBackgroundActive ? '100%' : size, width: '100%' }
+    : { display: 'flex', height: '100%', width: isBackgroundActive ? '100%' : size };
 };
 
 export const overlayStyle =
