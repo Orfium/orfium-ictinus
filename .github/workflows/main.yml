@@ -6,9 +6,9 @@ on:
       - 'next'
   pull_request:
     branches:
-      - "**"
+      - '**'
 env:
-  NODE_VERSION: '18.17'
+  NODE_VERSION: '20'
   PROJECT: designlab
   # ^ Is important to note that the above is used as:
   #   * SENTRY project to deploy so naming must match
@@ -160,7 +160,7 @@ jobs:
           yarn build:lib
 
       - name: Release 📌
-        if: "github.event_name == 'push'"
+        if: github.event_name == 'push'
         env:
           GITHUB_NPM_CONFIG_REGISTRY: 'https://npm.pkg.github.com/'
           GITHUB_NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
