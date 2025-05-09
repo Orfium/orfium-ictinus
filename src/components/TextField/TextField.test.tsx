@@ -1,10 +1,16 @@
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 
-import { fireEvent, render, screen } from '../../test';
+import { fireEvent, render, screen } from '~/test';
 import { MultiTextFieldShowcase, TextFieldShowCase } from '../storyUtils/TextFieldShowcases/';
+import { testHtmlAttributes } from '~/test/testUtils';
+import { TextField } from '~/index';
 
 export const values = ['Value 1', 'Value 2'];
+
+test('TextField component should pass HTML attributes correctly', () => {
+  testHtmlAttributes(TextField);
+});
 
 describe('Multi TextField', () => {
   let input: HTMLInputElement;

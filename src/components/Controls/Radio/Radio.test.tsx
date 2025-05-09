@@ -6,6 +6,7 @@ import RadioGroup from './components/RadioGroup';
 import Radio from './Radio';
 import userEvent from '@testing-library/user-event';
 import { Mock } from 'vitest';
+import { testHtmlAttributes } from '~/test/testUtils';
 
 describe('Radio', () => {
   let mockOnClick: Mock<any, any>;
@@ -26,6 +27,18 @@ describe('Radio', () => {
     );
 
     expect(container).toMatchSnapshot();
+  });
+
+  it('should pass HTML attributes correctly', () => {
+    testHtmlAttributes(RadioGroup, {
+      children: (
+        <RadioGroup>
+          <Radio value="Test Option" data-testid="radio-test">
+            Test Option
+          </Radio>
+        </RadioGroup>
+      ),
+    });
   });
 
   it('should change to checked on click', async () => {

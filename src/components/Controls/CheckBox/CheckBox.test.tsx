@@ -4,6 +4,7 @@ import { render } from '../../../test';
 import userEvent from '@testing-library/user-event';
 import CheckBox from '../CheckBox';
 import { Mock } from 'vitest';
+import { testHtmlAttributes } from '~/test/testUtils';
 
 describe('Checkbox Component', () => {
   let mockOnChange: Mock<any, any>;
@@ -20,6 +21,10 @@ describe('Checkbox Component', () => {
     const { container } = render(<CheckBox value="test" dataTestPrefixId={'test'} />);
 
     expect(container).toMatchSnapshot();
+  });
+
+  it('should pass HTML attributes correctly', () => {
+    testHtmlAttributes(CheckBox);
   });
 
   it('should be able to change its check condition', async () => {
