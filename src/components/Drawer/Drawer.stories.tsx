@@ -197,6 +197,25 @@ export const Sizes = {
             <DrawerContent>{drawerContent.content}</DrawerContent>
             <DrawerFooter>{drawerContent.footer}</DrawerFooter>
           </Drawer>
+          <Button
+            onClick={() => {
+              setIsOpen1(!isOpen1);
+            }}
+          >
+            clamp(300px, 50%, 600px)
+          </Button>
+          <Drawer
+            isOpen={isOpen1}
+            onClose={() => {
+              setIsOpen1(false);
+            }}
+            size="clamp(300px, 50%, 600px)"
+            anchor={'right'}
+          >
+            <DrawerHeader>{drawerContent.header}</DrawerHeader>
+            <DrawerContent>{drawerContent.content}</DrawerContent>
+            <DrawerFooter>{drawerContent.footer}</DrawerFooter>
+          </Drawer>
         </div>
       </div>
     );
