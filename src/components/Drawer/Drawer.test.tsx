@@ -11,7 +11,7 @@ describe('Drawer', () => {
     const closeCTA = vi.fn();
 
     const { findByText, findByTestId } = render(
-      <Drawer isOpen={true} size={33} onClose={closeCTA}>
+      <Drawer isOpen={true} size={'33%'} onClose={closeCTA}>
         <DrawerHeader>
           <div>{content}</div>
         </DrawerHeader>
@@ -29,7 +29,7 @@ describe('Drawer', () => {
     const closeCTA = vi.fn();
 
     const { findByTestId } = render(
-      <Drawer isOpen={true} size={33} onClose={closeCTA}>
+      <Drawer isOpen={true} size={'33%'} onClose={closeCTA}>
         <DrawerHeader>
           <div>{content}</div>
         </DrawerHeader>
@@ -46,7 +46,7 @@ describe('Drawer', () => {
     const closeCTA = vi.fn();
 
     render(
-      <Drawer isOpen={true} size={33} onClose={closeCTA}>
+      <Drawer isOpen={true} size={'33%'} onClose={closeCTA}>
         <DrawerHeader>
           <div>{content}</div>
         </DrawerHeader>
@@ -66,7 +66,7 @@ describe('Drawer', () => {
     const closeCTA = vi.fn();
 
     const { findByTestId } = render(
-      <Drawer isOpen={true} size={33} onClose={closeCTA}>
+      <Drawer isOpen={true} size={'33%'} onClose={closeCTA}>
         <DrawerHeader>
           <div>{content}</div>
         </DrawerHeader>
@@ -98,7 +98,7 @@ describe('Drawer', () => {
     const closeCTA = vi.fn();
 
     const { findByTestId } = render(
-      <Drawer isOpen={true} size={33} onClose={closeCTA} hasFixedLayout>
+      <Drawer isOpen={true} size={'33%'} onClose={closeCTA} hasFixedLayout>
         <DrawerHeader>
           <div>{content}</div>
         </DrawerHeader>

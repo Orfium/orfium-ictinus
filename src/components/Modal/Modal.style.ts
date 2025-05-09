@@ -1,7 +1,6 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import { transparentize } from 'polished';
-import { rem } from 'theme/utils';
 
 import type { ModalProps } from './Modal';
 import type { Theme } from '../../theme';
@@ -19,9 +18,9 @@ export const backgroundContainer = (theme: Theme): SerializedStyles => css`
   align-items: center;
 `;
 
-export const cardSizing = css`
-  max-width: ${rem(500)};
-  max-height: ${rem(684)};
+export const cardSizing = (maxWidth: string, maxHeight: string) => css`
+  max-width: ${maxWidth};
+  max-height: ${maxHeight};
 `;
 
 export const modalContainer =

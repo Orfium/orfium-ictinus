@@ -13,7 +13,7 @@ const Drawer = React.forwardRef<HTMLDivElement, React.PropsWithChildren<DrawerPr
       isOpen,
       onClose,
       anchor,
-      size,
+      size = 'auto',
       isBackgroundActive = false,
       dataTestPrefixId = 'ictinus_drawer',
       hasFixedLayout = false,

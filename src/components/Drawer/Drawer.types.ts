@@ -9,8 +9,8 @@ export type DrawerProps = {
   onClose: () => void;
   /** Side from which the overlay will appear. */
   anchor?: AnchorType;
-  /** Drawer size are relative to the viewport (percentage) */
-  size: number;
+  /** Drawer size is directly assigned to width or height css properties */
+  size?: string;
   /** Whether the background behind the Drawer is interactive. Defaults to false */
   isBackgroundActive?: boolean;
   /** If true, then the header and footer are fixed positioned */

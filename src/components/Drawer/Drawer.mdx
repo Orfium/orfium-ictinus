@@ -48,9 +48,14 @@ A panel which slides out from the edge of the screen and displays over the curre
 
 ### Sizes
 
-Drawer widths are relative to the viewport (percentage). Suggested percentages: 33%, 50%, 75%, 100% of the screen.
+The `size` prop controls the width of the Drawer when anchored to the left or right, or the height when anchored to the top or bottom
 
-<Tip>Use the size prop to pass any value between 0 - 100</Tip>
+<Tip>
+  You can also use the CSS [`clamp()`](https://developer.mozilla.org/en-US/docs/Web/CSS/clamp)
+  function for the `size` prop to set a responsive width. For example: `size="clamp(300px, 50%,
+  600px)"` will ensure the Drawer width stays between 300px and 600px, scaling responsively with the
+  viewport.
+</Tip>
 
 <Canvas of={DrawerStories.Sizes} />
 
