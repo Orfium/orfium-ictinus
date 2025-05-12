@@ -133,7 +133,7 @@ export const Sizes = {
             onClose={() => {
               setIsOpen1(false);
             }}
-            size={33}
+            size={'33%'}
             anchor={'right'}
           >
             <DrawerHeader>{drawerContent.header}</DrawerHeader>
@@ -152,7 +152,7 @@ export const Sizes = {
             onClose={() => {
               setIsOpen2(false);
             }}
-            size={50}
+            size={'50%'}
             anchor={'right'}
           >
             <DrawerHeader>{drawerContent.header}</DrawerHeader>
@@ -171,7 +171,7 @@ export const Sizes = {
             onClose={() => {
               setIsOpen3(false);
             }}
-            size={75}
+            size={'75%'}
             anchor={'right'}
           >
             <DrawerHeader>{drawerContent.header}</DrawerHeader>
@@ -190,7 +190,26 @@ export const Sizes = {
             onClose={() => {
               setIsOpen4(false);
             }}
-            size={100}
+            size={'100%'}
+            anchor={'right'}
+          >
+            <DrawerHeader>{drawerContent.header}</DrawerHeader>
+            <DrawerContent>{drawerContent.content}</DrawerContent>
+            <DrawerFooter>{drawerContent.footer}</DrawerFooter>
+          </Drawer>
+          <Button
+            onClick={() => {
+              setIsOpen1(!isOpen1);
+            }}
+          >
+            clamp(300px, 50%, 600px)
+          </Button>
+          <Drawer
+            isOpen={isOpen1}
+            onClose={() => {
+              setIsOpen1(false);
+            }}
+            size="clamp(300px, 50%, 600px)"
             anchor={'right'}
           >
             <DrawerHeader>{drawerContent.header}</DrawerHeader>
@@ -237,7 +256,7 @@ export const Placement = {
               setIsOpen1(false);
             }}
             anchor="top"
-            size={33}
+            size={'33%'}
           >
             <DrawerHeader>{drawerContent.header}</DrawerHeader>
             <DrawerContent>{drawerContent.content}</DrawerContent>
@@ -255,7 +274,7 @@ export const Placement = {
             onClose={() => {
               setIsOpen2(false);
             }}
-            size={33}
+            size={'33%'}
             anchor={'bottom'}
           >
             <DrawerHeader>{drawerContent.header}</DrawerHeader>
@@ -274,7 +293,7 @@ export const Placement = {
             onClose={() => {
               setIsOpen3(false);
             }}
-            size={33}
+            size={'33%'}
             anchor={'left'}
           >
             <DrawerHeader>{drawerContent.header}</DrawerHeader>
@@ -293,7 +312,7 @@ export const Placement = {
             onClose={() => {
               setIsOpen4(false);
             }}
-            size={33}
+            size={'33%'}
             anchor={'right'}
           >
             <DrawerHeader>{drawerContent.header}</DrawerHeader>
@@ -330,7 +349,7 @@ export const Background = {
             onClose={() => {
               setIsOpen1(false);
             }}
-            size={33}
+            size={'33%'}
             anchor={'left'}
           >
             <DrawerHeader>{drawerContent.header}</DrawerHeader>
@@ -350,7 +369,7 @@ export const Background = {
             onClose={() => {
               setIsOpen2(false);
             }}
-            size={33}
+            size={'33%'}
             anchor={'left'}
           >
             <DrawerHeader>{drawerContent.header}</DrawerHeader>
@@ -390,7 +409,7 @@ export const FixedContent = {
             onClose={() => {
               setIsOpen(false);
             }}
-            size={33}
+            size={'33%'}
             anchor={'right'}
             hasFixedLayout
           >
@@ -437,7 +456,7 @@ export const MoreExamples = {
             onClose={() => {
               setIsOpen1(false);
             }}
-            size={50}
+            size={'50%'}
             anchor={'right'}
           >
             <DrawerHeader>
@@ -482,7 +501,7 @@ export const MoreExamples = {
               setSelectedOption(undefined);
               setIsOpen2(false);
             }}
-            size={50}
+            size={'50%'}
             anchor={'right'}
           >
             <DrawerContent>

@@ -1,4 +1,4 @@
-import { useTheme } from 'index';
+import { rem, useTheme } from 'index';
 import React, { useEffect } from 'react';
 import { generateTestDataId } from 'utils/helpers';
 import type { TestId } from 'utils/types';
@@ -22,6 +22,10 @@ export type ModalProps = {
   dataTestId?: TestId;
   /** If false, the content won't have any padding */
   isContentPadded?: boolean;
+  /** Optional max width */
+  maxWidth?: string;
+  /** Optional max height */
+  maxHeight?: string;
 };
 
 const Modal: React.FCC<ModalProps> = ({
@@ -31,6 +35,8 @@ const Modal: React.FCC<ModalProps> = ({
   children,
   contentProps,
   isContentPadded = true,
+  maxWidth = `${rem(500)}`,
+  maxHeight = `${rem(684)}`,
 }) => {
   useEscape(() => {
     onClose();
@@ -53,7 +59,7 @@ const Modal: React.FCC<ModalProps> = ({
   return (
     <div css={backgroundContainer} data-testid={generateTestDataId('modal-container', dataTestId)}>
       <ClickAwayListener onClick={onClose}>
-        <div css={cardSizing}>
+        <div css={cardSizing(maxWidth, maxHeight)}>
           <Card elevated="02" radius="3">
             <div css={closeContainer}>
               <IconButton
