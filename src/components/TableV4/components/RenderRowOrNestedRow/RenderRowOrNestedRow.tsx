@@ -38,7 +38,7 @@ const RenderRowWithCells = React.memo(
     } = React.useContext(TableRowContext);
     const { expanded } = row;
     const isExpandedExists = Boolean(expanded);
-    const [lastItem] = row.cells?.slice(-1);
+    const [lastItem] = (row.cells ?? []).slice(-1);
 
     return (
       <TableRow

@@ -1,7 +1,13 @@
 name: SonarQube
 on:
-  pull_request:
   push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     name: Build
