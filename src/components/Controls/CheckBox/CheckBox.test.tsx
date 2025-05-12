@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { render } from '../../../test';
+import { render, within } from '../../../test';
 import userEvent from '@testing-library/user-event';
 import CheckBox from '../CheckBox';
 import { Mock } from 'vitest';
@@ -23,20 +23,18 @@ describe('Checkbox Component', () => {
   });
 
   it('should be able to change its check condition', async () => {
-    const { getAllByTestId } = render(<CheckBox value="test" dataTestPrefixId={'test'} />);
+    const { getByTestId, debug } = render(<CheckBox value="test" dataTestPrefixId={'test'} />);
 
-    const checkbox = getAllByTestId('test_test_checkbox') as HTMLElement[];
-    expect(checkbox).toHaveLength(2);
+    const label = getByTestId('test_test_checkbox');
+    const checkbox = within(label).getByRole('checkbox');
 
-    const input = checkbox[0];
+    expect(checkbox).toBeInTheDocument();
 
-    expect(input).toBeInTheDocument();
+    expect(label.getAttribute('data-selected')).toEqual(null);
 
-    expect(input.getAttribute('data-selected')).toEqual(null);
+    await userEvent.click(checkbox);
 
-    await userEvent.click(input);
-
-    expect(input.getAttribute('data-selected')).toEqual('true');
+    expect(checkbox).toBeChecked();
   });
 
   it('should invoke the onChange function', async () => {
