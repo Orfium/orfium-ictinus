@@ -17,6 +17,12 @@ export type TabItem = {
   counter?: number;
 };
 
+export type TabsStylesOverrides = {
+  tabsContainer?: CSSObject;
+  tabList?: CSSObject;
+  tab?: CSSObject;
+};
+
 export type TabsProps = {
   /** The orientation of the Tab */
   orientation?: TabOrientation;
@@ -27,6 +33,8 @@ export type TabsProps = {
   /** The items (tabs) */
   items: TabItem[];
   children?: any;
+  /** Style overrides for Tabs */
+  sx?: TabsStylesOverrides;
 } & AriaAttributes &
   TestProps;
 
@@ -38,12 +46,16 @@ export type TabsContainerProps = {
   /** Callback to change the selected tab */
   onSelectionChange: (key: TabKey) => void;
   children: any;
+  /** Style overrides for TabContainer */
+  sx?: CSSObject;
 } & AriaAttributes;
 
 export type TabProps = {
   /** The id of the tab; it's also used as an indicator of the tab when using selection state */
   id: string;
   children: any;
+  /** Style overrides for Tab */
+  sx?: CSSObject;
 };
 
 export type TabListProps = {
@@ -57,4 +69,6 @@ export type TabPanelProps = {
   id: string;
   /** The content of the tab panel */
   children: any;
+  /** Style overrides for TabList */
+  sx?: CSSObject;
 };

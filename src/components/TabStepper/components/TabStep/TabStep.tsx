@@ -21,7 +21,16 @@ const STATUS_ICON = {
 };
 
 const TabStep = React.forwardRef<HTMLDivElement, TabStepProps>((props, ref) => {
-  const { children, id, title, subtitle, status = 'pending', dataTestPrefixId, ...rest } = props;
+  const {
+    children,
+    id,
+    title,
+    subtitle,
+    status = 'pending',
+    dataTestPrefixId,
+    sx,
+    ...rest
+  } = props;
 
   const hasIcon = status !== 'pending';
 
@@ -30,7 +39,7 @@ const TabStep = React.forwardRef<HTMLDivElement, TabStepProps>((props, ref) => {
   const icon = status !== 'pending' ? STATUS_ICON[status] : null;
 
   return (
-    <ReactAriaTab id={id} {...rest} ref={ref} css={stepStyles()} data-status={status}>
+    <ReactAriaTab id={id} {...rest} ref={ref} css={stepStyles(sx)} data-status={status}>
       {children ?? (
         <div css={stepContainer()}>
           {title && (

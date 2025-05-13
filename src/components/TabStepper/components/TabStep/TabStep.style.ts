@@ -1,14 +1,15 @@
-import { css } from '@emotion/react';
+import { css, type CSSObject } from '@emotion/react';
 
 import type { Theme } from '~/theme';
 import { flex, flexCenterVertical } from '~/theme/functions';
 
-export const stepStyles = () =>
+export const stepStyles = (sx?: CSSObject) =>
   css`
     cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    ${sx};
   `;
 
 export const stepContainer = () => (theme: Theme) =>
