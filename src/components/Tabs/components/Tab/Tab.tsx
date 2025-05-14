@@ -5,10 +5,10 @@ import { containerStyles } from './Tab.style';
 import type { TabProps } from '../../types';
 
 const Tab = React.forwardRef<HTMLDivElement, TabProps>((props, ref) => {
-  const { children, ...rest } = props;
+  const { children, sx, ...rest } = props;
 
   return (
-    <ReactAriaTab css={containerStyles()} {...rest} ref={ref}>
+    <ReactAriaTab css={containerStyles(sx)} {...rest} ref={ref}>
       {children}
     </ReactAriaTab>
   );

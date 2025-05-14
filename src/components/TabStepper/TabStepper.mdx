@@ -1,7 +1,10 @@
 import { Meta, Canvas, ArgTypes } from '@storybook/blocks';
 import TabStepper from './TabStepper';
 import * as TabStepperStories from './TabStepper.stories';
-import { TabStepItemStory } from './utils/TabStepperStoryComponents';
+import {
+  TabStepItemStory,
+  TabStepperStylesOverridesStory,
+} from './utils/TabStepperStoryComponents';
 
 <Meta of={TabStepperStories} />
 
@@ -31,9 +34,13 @@ A TabStepper is a multi-step process that helps users to complete a task or achi
 
 <ArgTypes of={TabStepper} />
 
-## TabStepItem
+### TabStepItem
 
 <ArgTypes of={TabStepItemStory} />
+
+### TabStepperStylesOverrides
+
+<ArgTypes of={TabStepperStylesOverridesStory} />
 
 ## Usage
 

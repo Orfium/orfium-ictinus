@@ -12,6 +12,7 @@ const TabStepper = React.forwardRef<HTMLDivElement, StepperProps>((props, ref) =
     items,
     dataTestPrefixId = 'ictinus',
     children,
+    sx,
   } = props;
 
   return (
@@ -20,13 +21,15 @@ const TabStepper = React.forwardRef<HTMLDivElement, StepperProps>((props, ref) =
       selectedKey={selectedKey}
       onSelectionChange={onSelectionChange}
       ref={ref}
+      sx={sx?.tabsContainer}
     >
-      <TabStepList aria-label={props['aria-label']}>
+      <TabStepList aria-label={props['aria-label']} sx={sx?.tabStepList}>
         {items.map((item) => (
           <TabStep
             key={item.id}
             {...item}
             dataTestPrefixId={`${dataTestPrefixId}_tabstep_${item.id}`}
+            sx={sx?.tabStep}
           />
         ))}
       </TabStepList>

@@ -13,6 +13,7 @@ const Tabs = React.forwardRef<HTMLDivElement, TabsProps>((props, ref) => {
     items,
     dataTestPrefixId = 'ictinus',
     children,
+    sx,
   } = props;
 
   return (
@@ -21,15 +22,16 @@ const Tabs = React.forwardRef<HTMLDivElement, TabsProps>((props, ref) => {
       selectedKey={selectedKey}
       onSelectionChange={onSelectionChange}
       ref={ref}
+      sx={sx?.tabsContainer}
     >
-      <TabList aria-label={props['aria-label']}>
+      <TabList aria-label={props['aria-label']} sx={sx?.tabList}>
         {items.map((item) => {
           const { id, label, counter } = item;
 
           const isActive = id === selectedKey;
 
           return (
-            <Tab key={id} id={id} data-testid={`${dataTestPrefixId}_tab_${id}`}>
+            <Tab key={id} id={id} data-testid={`${dataTestPrefixId}_tab_${id}`} sx={sx?.tab}>
               <span>{label}</span>
               {Boolean(counter) && (
                 <Tag

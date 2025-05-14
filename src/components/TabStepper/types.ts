@@ -16,20 +16,30 @@ export type TabStepItem = {
   status?: 'pending' | 'done' | 'warning';
 };
 
+export type TabStepperStylesOverrides = {
+  tabsContainer?: CSSObject;
+  tabStepList?: CSSObject;
+  tabStep?: CSSObject;
+};
+
 export type StepperProps = {
   /** The items (steps) */
   items: TabStepItem[];
   children?: any;
+  /** Style overrides for TabSteps */
+  sx?: TabStepperStylesOverrides;
 } & Pick<TabsProps, 'orientation' | 'selectedKey' | 'onSelectionChange'> &
   TestProps;
 
 export type TabStepProps = {
   children?: any;
+  /** Style overrides for TabStep */
+  sx?: CSSObject;
 } & TabStepItem &
   TestProps;
 
 export type TabStepListProps = {
-  /** Style overrides for TabSteps */
+  /** Style overrides for TabStepList */
   sx?: CSSObject;
   children: any;
 } & AriaAttributes;
