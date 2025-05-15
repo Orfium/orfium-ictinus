@@ -16,7 +16,6 @@ export type NumberFieldProps = Omit<
   TextFieldProps,
   | 'mask'
   | 'maskChar'
-  | 'size'
   | 'value'
   | 'onChange'
   | 'isMulti'
@@ -46,6 +45,7 @@ const NumberField = React.forwardRef<HTMLInputElement, NumberFieldProps>((props,
     hasStepper = false,
     label,
     placeholder = '',
+    size = 'normal',
     isRequired = false,
     isDisabled,
     isReadOnly,
@@ -66,9 +66,13 @@ const NumberField = React.forwardRef<HTMLInputElement, NumberFieldProps>((props,
       id,
       suffix,
       status,
+      size,
       isDisabled,
       ref,
     });
+
+  const inputPlaceholder =
+    size === 'normal' ? (placeholder ? `${placeholder} ${isRequired ? '*' : ''}` : label) : ' ';
 
   return (
     <div onClick={handleContainerClick}>
@@ -88,8 +92,8 @@ const NumberField = React.forwardRef<HTMLInputElement, NumberFieldProps>((props,
                 readOnly={isLocked || isReadOnly}
                 disabled={isDisabled || isLocked}
                 required={isRequired}
-                placeholder={placeholder ? `${placeholder} ${isRequired ? '*' : ''}` : label}
-                css={inputStyle({ label, placeholder, isLocked, isDisabled })}
+                placeholder={inputPlaceholder}
+                css={inputStyle({ label, placeholder, isLocked, isDisabled, size })}
                 aria-invalid={status?.type === 'error'}
                 aria-describedby={hintMessageId}
                 data-testid={props.dataTestId ? `input_${props.dataTestId}` : 'input'}
@@ -99,6 +103,7 @@ const NumberField = React.forwardRef<HTMLInputElement, NumberFieldProps>((props,
               <Label
                 htmlFor={id}
                 label={label}
+                size={size}
                 isRequired={isRequired}
                 isAnimated={Boolean(value)}
                 hasError={!isDisabled && status?.type === 'error'}
@@ -113,7 +118,7 @@ const NumberField = React.forwardRef<HTMLInputElement, NumberFieldProps>((props,
           </ReactAriaNumberField>
         </div>
         {suffixContent && !hasStepper && (
-          <div aria-hidden={!suffixContent} css={suffixContainerStyle({})}>
+          <div aria-hidden={!suffixContent} css={suffixContainerStyle({ size })}>
             {suffixContent}
           </div>
         )}
