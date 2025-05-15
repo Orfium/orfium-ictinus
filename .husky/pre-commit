@@ -1,6 +1,6 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-yarn test
-yarn lint-staged 
-yarn tsc-check
+pnpm test
+pnpm lint-staged 
+pnpm check:ts

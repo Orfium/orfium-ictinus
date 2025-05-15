@@ -1,3 +1,8 @@
+import MultiTextFieldBase from 'components/MultiTextFieldBase/MultiTextFieldBase';
+import type { SelectOption } from 'components/Select';
+import type { TextInputBaseProps } from 'components/TextInputBase';
+import TextInputBase from 'components/TextInputBase';
+import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
 import useFieldUtils from 'hooks/useFieldUtils';
 import { omit } from 'lodash-es';
 import type { InputHTMLAttributes } from 'react';
@@ -6,14 +11,8 @@ import isEqual from 'react-fast-compare';
 import InputMask from 'react-input-mask';
 import { generateUniqueID } from 'utils/helpers';
 import type { TestProps } from 'utils/types';
-
-import { suffixContainerStyle } from './TextField.style';
 import Label from '../Label';
-import MultiTextFieldBase from 'components/MultiTextFieldBase/MultiTextFieldBase';
-import type { SelectOption } from 'components/Select';
-import type { TextInputBaseProps } from 'components/TextInputBase';
-import TextInputBase from 'components/TextInputBase';
-import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
+import { suffixContainerStyle } from './TextField.style';
 
 export type InputProps = Partial<
   Omit<InputHTMLAttributes<HTMLInputElement>, 'readOnly' | 'disabled' | 'size'>
@@ -121,6 +120,7 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
         <TextInputBase {...props} status={{ ...status, id: hintMessageId }} sx={sx}>
           <div css={{ display: 'flex', flex: 1 }}>
             {mask ? (
+              // @ts-ignore
               <InputMask
                 {...inputProps}
                 mask={mask}
@@ -141,7 +141,7 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
             />
           </div>
           {suffixContent && (
-            <div aria-hidden={!suffixContent} css={suffixContainerStyle({size})}>
+            <div aria-hidden={!suffixContent} css={suffixContainerStyle({ size })}>
               {suffixContent}
             </div>
           )}

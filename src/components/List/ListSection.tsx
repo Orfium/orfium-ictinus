@@ -1,7 +1,7 @@
-import { Section as AriaSection } from '@react-stately/collections';
 import type { SectionProps } from '@react-types/shared';
 import type { ReactNode } from 'react';
 import React from 'react';
+import { Section as AriaSection } from 'react-stately';
 
 import type { ListRowSize } from './types';
 
