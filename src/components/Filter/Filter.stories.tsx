@@ -348,13 +348,16 @@ export const DisabledFilter = {
 export const CustomFilter = {
   render: () => {
     const [selectedFilter, setSelectedFilter] = React.useState<FilterOption>();
+    const [selectedFilter2, setSelectedFilter2] = React.useState<FilterOption>();
     const theme = useTheme();
 
     const [value, setValue] = React.useState('');
+    const [value2, setValue2] = React.useState('');
 
     return (
       <Stack height={400}>
         <Filter
+          filterType="preset"
           label={'Custom Filter'}
           defaultValue={{ label: 'All', value: 'all' }}
           selectedFilter={selectedFilter}
@@ -389,6 +392,53 @@ export const CustomFilter = {
                     size="compact"
                     onClick={() => {
                       setSelectedFilter({ label: value, value });
+                      setIsOpen(false);
+                    }}
+                  >
+                    Enter
+                  </Button>
+                </div>
+              </div>
+            );
+          }}
+        </Filter>
+
+        <Filter
+          filterType="added"
+          label={'Custom Filter'}
+          defaultValue={{ label: 'All', value: 'all' }}
+          selectedFilter={selectedFilter2}
+          onClear={() => {
+            setSelectedFilter2(undefined);
+            setValue2('');
+          }}
+        >
+          {({ setIsOpen }) => {
+            return (
+              <div
+                css={{
+                  width: '200px',
+                  height: '100px',
+                  background: 'white',
+                  border: `1px solid ${theme.globals.colors.get('blue.2')}`,
+                  borderRadius: '4px',
+                  padding: '16px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                }}
+              >
+                <TextField
+                  label="Enter Label"
+                  size="compact"
+                  value={value2}
+                  onChange={(e) => setValue2(e.target.value)}
+                />
+                <div css={{ alignSelf: 'end' }}>
+                  <Button
+                    size="compact"
+                    onClick={() => {
+                      setSelectedFilter2({ label: value2, value: value2 });
                       setIsOpen(false);
                     }}
                   >
