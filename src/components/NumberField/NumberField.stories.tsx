@@ -27,6 +27,21 @@ export default {
   },
 };
 
+export const NumberFieldSizes = {
+  render: () => (
+    <Stack>
+      <NumberField label="Normal" size="normal" />
+      <NumberField label="Compact" size="compact" />
+    </Stack>
+  ),
+
+  name: 'NumberField sizes',
+
+  parameters: {
+    controls: { disable: true },
+  },
+};
+
 export const NumberFieldWithPlaceholder = {
   render: () => (
     <Stack>
@@ -41,6 +56,7 @@ export const NumberFieldWithPlaceholder = {
     controls: { disable: true },
   },
 };
+
 export const NumberFieldWithFormatOptions = {
   render: (args) => {
     const { minimumFractionDigits, maximumFractionDigits } = args;
