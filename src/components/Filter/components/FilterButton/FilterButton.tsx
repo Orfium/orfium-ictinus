@@ -5,7 +5,6 @@ import type { TestProps } from 'utils/types';
 
 import { buttonStyles, iconStyles } from './FilterButton.style';
 import type { EventButtonProps } from 'components/ButtonBase';
-import { getFilterTokens } from 'components/Filter/Filter.tokens';
 import type { FilterProps } from 'components/Filter/Filter.types';
 import Icon from 'components/Icon';
 import Tag from 'components/Tag';
@@ -35,9 +34,7 @@ export const FilterButton = React.forwardRef<HTMLButtonElement, FilterButtonProp
     isMulti,
     ...rest
   } = props;
-
   const theme = useTheme();
-  const tokens = getFilterTokens(theme);
 
   const isAdded = filterType === 'added';
 
@@ -88,7 +85,7 @@ export const FilterButton = React.forwardRef<HTMLButtonElement, FilterButtonProp
         />
       </div>
 
-      {(isAdded || isPopulated) && (
+      {isAdded && (
         <Icon
           name="close"
           size={theme.dimension.sizing.get('icon.sm')}
