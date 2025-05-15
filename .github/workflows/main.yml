@@ -77,7 +77,7 @@ jobs:
     needs:
       - select-deployment-target
       - test
-    uses: Orfium/orfium-github-actions/.github/workflows/deploy-frontend.yml@master
+    uses: ./.github/workflows/deploy-frontend.yml
     concurrency: ${{ github.ref }}
     with:
       target-environment: ${{ needs.select-deployment-target.outputs.target }}
