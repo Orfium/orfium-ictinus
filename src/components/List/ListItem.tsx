@@ -1,6 +1,5 @@
-import { Item as AriaItem } from '@react-stately/collections';
 import React from 'react';
-
+import { Item as AriaItem } from 'react-stately';
 import type { ListRowSize } from './types';
 
 export type ListItemProps = {

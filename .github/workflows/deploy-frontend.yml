@@ -1,0 +1,225 @@
+name: Deploy Frontend
+
+on:
+  workflow_call:
+    inputs:
+      target-environment:
+        description: Deployment Target
+        required: true
+        type: string
+      node-version:
+        description: The version of node to use
+        required: false
+        default: '20.9'
+        type: string
+    secrets:
+      ORG_PGP_TOKEN:
+        description: Org token for npm
+        required: true
+
+jobs:
+  get-environment-name:
+    runs-on: ubuntu-latest
+    outputs:
+      env-name: ${{ steps.get-env.outputs.env-name }}
+      url: ${{ steps.get-env.outputs.url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - id: get-env
+        run: |
+          set -o allexport
+          # Load optional common configuration
+          if [ -f environments/common.env ]; then
+              source environments/common.env
+          fi
+          source environments/${{ inputs.target-environment }}.env
+
+          SUBDOMAIN=$PRODUCT
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+              SUBDOMAIN=${SUBDOMAIN}-pr-${{ github.event.pull_request.number }}
+          fi
+          ENV=${{ inputs.target-environment }}
+          if [[ ${{ github.event_name }} == "pull_request" ]]; then
+            ENV=review-${{ github.event.pull_request.number }}
+          fi
+          # shellcheck disable=SC2129
+          echo "env-name=$ENV" >> "$GITHUB_OUTPUT"
+          echo "url=https://${SUBDOMAIN}.${BASE_DOMAIN}" >> "$GITHUB_OUTPUT"
+
+  deploy-front-end:
+    if: ${{ github.actor != 'dependabot[bot]' }}
+    runs-on: ubuntu-latest
+    needs:
+      - get-environment-name
+    environment:
+      name: ${{ needs.get-environment-name.outputs.env-name }}
+      url: ${{ needs.get-environment-name.outputs.url }}
+    permissions:
+      id-token: write
+      contents: read
+      deployments: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Create GitHub deployment
+        uses: chrnorm/deployment-action@v2
+        id: deployment
+        with:
+          token: '${{ github.token }}'
+          log-url: ${{ needs.get-environment-name.outputs.url }}
+          environment-url: ${{ needs.get-environment-name.outputs.url }}
+          environment: ${{ needs.get-environment-name.outputs.env-name }}
+
+      - name: Setup configuration
+        id: config
+        run: |
+          # Set default Node Version
+          NODE_VERSION=${{ inputs.node-version }}
+
+          set -o allexport
+          # Load optional common configuration
+          if [ -f environments/common.env ]; then
+              source environments/common.env
+          fi
+          source environments/${{ inputs.target-environment }}.env
+
+          SUBDOMAIN=$PRODUCT
+          STACKNAME=${PRODUCT}-${{ inputs.target-environment }}
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+              SUBDOMAIN=${SUBDOMAIN}-pr-${{ github.event.pull_request.number }}
+              STACKNAME=${PRODUCT}-pr-${{ github.event.pull_request.number }}
+          fi
+
+          # FIXME: Temporarily disable response headers policy creation for review environments (deployed for PRs) by
+          # setting CSP headers to an empty string in order to avoid hitting the limit for response headers policies.
+          # We should find a better way to do this :'(
+          if [ ${{ github.event_name }} == 'pull_request' ]; then
+              CSP_HEADER=""
+          fi
+
+          # shellcheck disable=SC2129
+          echo "version=$NODE_VERSION" >> "$GITHUB_OUTPUT"
+          echo "csp_header=$CSP_HEADER" >> "$GITHUB_OUTPUT"
+          echo "cd_role=$CD_ROLE" >> "$GITHUB_OUTPUT"
+          echo "cfn_role=$CFN_ROLE" >> "$GITHUB_OUTPUT"
+          echo "cert_arn=$CERT_ARN" >> "$GITHUB_OUTPUT"
+          echo "domain=$BASE_DOMAIN" >> "$GITHUB_OUTPUT"
+          echo "subdomain=$SUBDOMAIN" >> "$GITHUB_OUTPUT"
+          echo "product=$PRODUCT" >> "$GITHUB_OUTPUT"
+          echo "stackname=$STACKNAME" >> "$GITHUB_OUTPUT"
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ steps.config.outputs.version }}
+          cache: 'pnpm'
+
+      - name: Sets pnpm config
+        run: |
+          pnpm config set //npm.pkg.github.com/:_authToken ${{ secrets.ORG_PGP_TOKEN }}
+          pnpm config set @orfium:registry https://npm.pkg.github.com
+          pnpm config set always-auth true || echo "This fails for versions > 18.13"
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Setup env, Build app
+        run: |
+          set -o allexport
+          # Load optional common configuration
+          if [ -f environments/common.env ]; then
+              source environments/common.env
+          fi
+          source environments/${{ inputs.target-environment }}.env
+          pnpm build
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4.0.2
+        with:
+          role-to-assume: ${{ steps.config.outputs.cd_role }}
+          aws-region: 'us-east-1'
+
+      - name: Check if deployment exists and is up to date
+        id: check-stack-state
+        run: |
+          # shellcheck disable=SC2016
+          stack=$(aws cloudformation describe-stacks --query 'Stacks[?StackName==`${{ steps.config.outputs.stackname }}`] | [0]')
+          # shellcheck disable=SC2016
+          stack_status=$(jq -r '.StackStatus' <(echo "$stack"))
+          # shellcheck disable=SC2016
+          parameter_csp=$(jq -r '.Parameters[]? | select(.ParameterKey=="CSPHeaderValue") | .ParameterValue' <(echo "$stack"))
+
+          # if stack is in ROLLBACK_COMPLETE we have to delete it manually
+          if [[ "$stack_status" == "ROLLBACK_COMPLETE" ]]; then
+            echo "the stack is in ROLLBACK_COMPLETE status; please delete manually"
+            exit 1
+          fi
+
+          create_or_update_stack=1
+          if [[ -n "${stack}" && "$parameter_csp" == "${{ steps.config.outputs.csp_header }}" && ("$stack_status" == "CREATE_COMPLETE" || "$stack_status" == "UPDATE_COMPLETE") ]]; then
+            create_or_update_stack=0
+          fi
+          echo "create_or_update_stack=$create_or_update_stack" >> "$GITHUB_OUTPUT";
+
+      - name: Set up S3-Cloudfront
+        if: steps.check-stack-state.outputs.create_or_update_stack == '1'
+        id: cloudfront-app-setup
+        uses: aws-actions/aws-cloudformation-github-deploy@v1.3.0
+        with:
+          name: ${{ steps.config.outputs.stackname }}
+          role-arn: ${{ steps.config.outputs.cfn_role }}
+          template: >-
+            https://orfium-cf-templates-repository-us-east-1.s3.us-east-1.amazonaws.com/frontend-v1.0.yml
+          parameter-overrides: >-
+            CSPHeaderValue=${{ steps.config.outputs.csp_header }},
+            FeDomainName=${{ steps.config.outputs.subdomain }}.${{ steps.config.outputs.domain }},
+            CreateDNSRecord=true,
+            HostedZoneName=${{ steps.config.outputs.domain }},
+            TLSCertificateArn=${{ steps.config.outputs.cert_arn }}
+          no-fail-on-empty-changeset: '1'
+          tags: >
+            [
+              {"Key": "info:creator", "Value": "github-actions"},
+              {"Key": "info:maintainer", "Value": "devops.dpt"},
+              {"Key": "info:product", "Value": "${{ steps.config.outputs.product }}"},
+              {"Key": "info:env", "Value": "${{ inputs.target-environment }}"}
+            ]
+
+      - name: Upload to S3
+        run: |
+          STACKNAME=${{ steps.config.outputs.stackname }}
+          # We want to use literal backticks in "--query", not trying to expand to something else
+          # shellcheck disable=SC2016
+          S3_BUCKET_NAME=$(aws cloudformation describe-stacks --stack-name "$STACKNAME" --query 'Stacks[0].Outputs[?OutputKey==`S3BucketName`].OutputValue' --output text)
+          # We want to use literal backticks in "--query", not trying to expand to something else
+          # shellcheck disable=SC2016
+          DISTRIBUTION_ID=$(aws cloudformation describe-stacks --stack-name "$STACKNAME" --query 'Stacks[0].Outputs[?OutputKey==`FeCloudFrontDistributionId`].OutputValue' --output text)
+          aws s3 sync "$GITHUB_WORKSPACE/build/" "s3://${S3_BUCKET_NAME}/"
+          INVALIDATION_ID=$(aws cloudfront create-invalidation --distribution-id "$DISTRIBUTION_ID" --paths "/*" | jq -r .Invalidation.Id)
+          echo "INVALIDATION_ID is $INVALIDATION_ID"
+
+      - name: Update deployment status (success)
+        if: success()
+        uses: chrnorm/deployment-status@v2
+        with:
+          token: '${{ github.token }}'
+          environment-url: ${{ steps.deployment.outputs.environment_url }}
+          log-url: ${{ steps.deployment.outputs.environment_url }}
+          deployment-id: ${{ steps.deployment.outputs.deployment_id }}
+          state: 'success'
+
+      - name: Update deployment status (failure)
+        if: failure()
+        uses: chrnorm/deployment-status@v2
+        with:
+          token: '${{ github.token }}'
+          environment-url: ${{ steps.deployment.outputs.environment_url }}
+          log-url: ${{ steps.deployment.outputs.environment_url }}
+          deployment-id: ${{ steps.deployment.outputs.deployment_id }}
+          state: 'failure'

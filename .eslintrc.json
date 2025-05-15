@@ -38,7 +38,7 @@
     "react/prop-types": "off",
     "react/button-has-type": "warn",
 
-    "@typescript-eslint/no-explicit-any": ["off"],
+    "@typescript-eslint/no-explicit-any": "off",
     "react/no-array-index-key": "warn",
     "react/no-render-return-value": 0,
     "react/boolean-prop-naming": [
@@ -81,31 +81,8 @@
     // so that function calls with optional chaining do not throw warnings
     // https://github.com/facebook/create-react-app/issues/8107#issuecomment-565365982
     //    "no-unused-expressions": "warn",
-    "no-unused-vars": "off",
     "no-debugger": "warn",
     "no-console": "warn",
-    "import/order": [
-      "error",
-      {
-        "groups": ["builtin", "external", ["internal", "parent", "sibling", "index", "object"]],
-        "pathGroups": [
-          {
-            "pattern": "react",
-            "group": "external"
-          },
-          {
-            "pattern": "components/**",
-            "group": "internal"
-          }
-        ],
-        "pathGroupsExcludedImportTypes": ["react"],
-        "alphabetize": {
-          "order": "asc",
-          "caseInsensitive": true
-        },
-        "newlines-between": "always"
-      }
-    ],
     /* Typescript rules */
     "@typescript-eslint/naming-convention": [
       "error",
@@ -138,6 +115,11 @@
     "react": {
       "pragma": "React",
       "version": "detect"
+    },
+    "import/resolver": {
+      "typescript": {
+        "project": "./tsconfig.json"
+      }
     }
   },
   "parser": "@typescript-eslint/parser",
