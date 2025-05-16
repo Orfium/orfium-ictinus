@@ -212,6 +212,145 @@
   padding: 0;
 }
 
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #8EAAEC;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 50%;
+  cursor: not-allowed;
+  height: 1.75rem;
+  min-width: 4.375rem;
+  background-color: rgba(200,206,255,0.30);
+}
+
+.emotion-8:focus-within {
+  box-shadow: 0 0 0 0.125rem transparent;
+}
+
+.emotion-12 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #111530;
+  padding: 0;
+  display: block;
+  position: relative;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-12::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-12::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-12:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-12::placeholder {
+  color: transparent;
+}
+
+.emotion-12:focus {
+  outline: none;
+}
+
+.emotion-12:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-12:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-12:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-12:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-12:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-12:focus-within+label,
+.emotion-12:not(:placeholder-shown)+label {
+  display: none;
+}
+
+.emotion-12:focus-within+label {
+  font-weight: 700!important;
+  color: #194DCC;
+}
+
+.emotion-12:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-13 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, 0);
+  -moz-transform: translate(0.1875rem, 0);
+  -ms-transform: translate(0.1875rem, 0);
+  transform: translate(0.1875rem, 0);
+  color: #52567a;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0.1875rem;
+  margin: auto;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+}
+
 <div>
   <div
     class="emotion-0"
@@ -259,6 +398,71 @@
                   />
                   <label
                     class="emotion-6"
+                    for="numberfield__00"
+                  >
+                    NumberField
+                     
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="emotion-7"
+          data-testid="error"
+        >
+          <span
+            id="numberfield__00_hintMessage"
+          >
+            This field is disabled
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div>
+        <div
+          class="emotion-8"
+        >
+          <div
+            class="emotion-2"
+          >
+            <div
+              class="emotion-3"
+            >
+              <div
+                class="react-aria-NumberField"
+                data-rac=""
+              >
+                <div
+                  class="emotion-4"
+                  data-rac=""
+                  role="group"
+                >
+                  <input
+                    aria-describedby="numberfield__00_hintMessage"
+                    aria-invalid="false"
+                    aria-roledescription="Number field"
+                    autocomplete="off"
+                    autocorrect="off"
+                    class="emotion-12"
+                    data-disabled="true"
+                    data-rac=""
+                    data-testid="input"
+                    disabled=""
+                    id="numberfield__00"
+                    inputmode="numeric"
+                    placeholder=" "
+                    spellcheck="false"
+                    tabindex="0"
+                    type="text"
+                    value=""
+                  />
+                  <label
+                    class="emotion-13"
                     for="numberfield__00"
                   >
                     NumberField
