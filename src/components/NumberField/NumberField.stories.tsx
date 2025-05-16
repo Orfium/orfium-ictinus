@@ -27,6 +27,25 @@ export default {
   },
 };
 
+export const NumberFields = {
+  render: (args) => {
+    const { step } = args;
+
+    return (
+      <Stack>
+        <NumberField label="Normal" size="normal" />
+        <NumberField label="NumberField" hasStepper step={step} />
+        <NumberField label="Compact" size="compact" />
+        <NumberField label="Compact" size="compact" hasStepper step={step} />
+      </Stack>
+    );
+  },
+  name: 'All avalable NumberFields',
+  parameters: {
+    controls: { disable: true },
+  },
+};
+
 export const NumberFieldSizes = {
   render: () => (
     <Stack>
