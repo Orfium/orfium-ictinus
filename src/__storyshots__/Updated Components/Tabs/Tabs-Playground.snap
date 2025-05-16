@@ -180,6 +180,9 @@
 }
 
 <div>
+  <template
+    data-react-aria-hidden="true"
+  />
   <div
     class="emotion-0"
     data-orientation="horizontal"
@@ -188,6 +191,7 @@
     <div
       aria-orientation="horizontal"
       class="emotion-1"
+      data-collection="react-aria-:test-id:"
       data-orientation="horizontal"
       data-rac=""
       id="react-aria-:test-id:"
@@ -197,6 +201,7 @@
         aria-controls="react-aria-:test-id:-tabpanel-geller"
         aria-selected="true"
         class="emotion-2"
+        data-collection="react-aria-:test-id:"
         data-key="geller"
         data-rac=""
         data-selected="true"
@@ -212,6 +217,7 @@
       <div
         aria-selected="false"
         class="emotion-2"
+        data-collection="react-aria-:test-id:"
         data-key="bing"
         data-rac=""
         data-testid="ictinus_tab_bing"
@@ -226,6 +232,7 @@
       <div
         aria-selected="false"
         class="emotion-2"
+        data-collection="react-aria-:test-id:"
         data-key="tribbiani"
         data-rac=""
         data-testid="ictinus_tab_tribbiani"
@@ -240,6 +247,7 @@
       <div
         aria-selected="false"
         class="emotion-2"
+        data-collection="react-aria-:test-id:"
         data-key="green"
         data-rac=""
         data-testid="ictinus_tab_green"
@@ -254,6 +262,7 @@
       <div
         aria-selected="false"
         class="emotion-2"
+        data-collection="react-aria-:test-id:"
         data-key="buffay"
         data-rac=""
         data-testid="ictinus_tab_buffay"
