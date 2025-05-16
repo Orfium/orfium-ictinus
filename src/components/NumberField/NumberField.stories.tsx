@@ -1,6 +1,6 @@
-import NumberField from './NumberField';
-import Stack from '../storyUtils/Stack';
 import { FIGMA_URL } from 'utils/common';
+import Stack from '../storyUtils/Stack';
+import NumberField from './NumberField';
 
 export default {
   title: 'Updated Components/Fields/NumberField',
@@ -27,11 +27,32 @@ export default {
   },
 };
 
+export const NumberFieldSizes = {
+  render: () => (
+    <Stack>
+      <NumberField label="Normal" size="normal" />
+      <NumberField label="Compact" size="compact" />
+    </Stack>
+  ),
+
+  name: 'NumberField sizes',
+
+  parameters: {
+    controls: { disable: true },
+  },
+};
+
 export const NumberFieldWithPlaceholder = {
   render: () => (
     <Stack>
-      <NumberField label={'NumberField'} />
-      <NumberField label={'NumberField'} placeholder={'Placeholder'} />
+      <NumberField label="NumberField" />
+      <NumberField label="NumberField" placeholder="Placeholder" />
+      <NumberField
+        size="compact"
+        label="NumberField"
+        placeholder="Placeholder"
+        style={{ width: '100px' }}
+      />
     </Stack>
   ),
 
@@ -41,13 +62,22 @@ export const NumberFieldWithPlaceholder = {
     controls: { disable: true },
   },
 };
+
 export const NumberFieldWithFormatOptions = {
   render: (args) => {
     const { minimumFractionDigits, maximumFractionDigits } = args;
     return (
       <Stack>
         <NumberField
-          label={'NumberField'}
+          label="NumberField"
+          formatOptions={{
+            minimumFractionDigits: minimumFractionDigits,
+            maximumFractionDigits: maximumFractionDigits,
+          }}
+        />
+        <NumberField
+          size="compact"
+          label="Number"
           formatOptions={{
             minimumFractionDigits: minimumFractionDigits,
             maximumFractionDigits: maximumFractionDigits,
@@ -69,7 +99,8 @@ export const NumberFieldWithStepper = {
     const { step } = args;
     return (
       <Stack>
-        <NumberField label={'NumberField'} hasStepper step={step} />
+        <NumberField label="NumberField" hasStepper step={step} />
+        <NumberField label="Compact" size="compact" hasStepper step={step} />
       </Stack>
     );
   },
@@ -87,7 +118,22 @@ export const NumberFieldWithMinAndMaxValues = {
     return (
       <Stack>
         <NumberField
-          label={'NumberField'}
+          label="NumberField"
+          minValue={minValue}
+          maxValue={maxValue}
+          suffix={
+            <div
+              style={{
+                color: 'gray',
+              }}
+            >
+              %
+            </div>
+          }
+        />
+        <NumberField
+          size="compact"
+          label="Number"
           minValue={minValue}
           maxValue={maxValue}
           suffix={
@@ -114,29 +160,57 @@ export const NumberFieldStatuses = {
   render: (args) => {
     const { hintMessage } = args;
     return (
-      <Stack>
-        <NumberField
-          label={'Normal'}
-          status={{
-            type: 'normal',
-            hintMessage,
-          }}
-        />
-        <NumberField
-          label={'Error'}
-          status={{
-            type: 'error',
-            hintMessage,
-          }}
-        />
-        <NumberField
-          label={'Read-only'}
-          status={{
-            type: 'read-only',
-            hintMessage,
-          }}
-        />
-      </Stack>
+      <>
+        <Stack>
+          <NumberField
+            label="Normal"
+            status={{
+              type: 'normal',
+              hintMessage,
+            }}
+          />
+          <NumberField
+            label="Error"
+            status={{
+              type: 'error',
+              hintMessage,
+            }}
+          />
+          <NumberField
+            label="Read-only"
+            status={{
+              type: 'read-only',
+              hintMessage,
+            }}
+          />
+        </Stack>
+        <Stack>
+          <NumberField
+            size="compact"
+            label="Normal"
+            status={{
+              type: 'normal',
+              hintMessage,
+            }}
+          />
+          <NumberField
+            size="compact"
+            label="Error"
+            status={{
+              type: 'error',
+              hintMessage,
+            }}
+          />
+          <NumberField
+            size="compact"
+            label="Read-only"
+            status={{
+              type: 'read-only',
+              hintMessage,
+            }}
+          />
+        </Stack>
+      </>
     );
   },
 
@@ -151,7 +225,16 @@ export const DisabledNumberField = {
     <Stack>
       <NumberField
         isDisabled
-        label={'NumberField'}
+        label="NumberField"
+        status={{
+          type: 'normal',
+          hintMessage: 'This field is disabled',
+        }}
+      />
+      <NumberField
+        isDisabled
+        size="compact"
+        label="NumberField"
         status={{
           type: 'normal',
           hintMessage: 'This field is disabled',
@@ -159,9 +242,7 @@ export const DisabledNumberField = {
       />
     </Stack>
   ),
-
   name: ' Disabled NumberField',
-
   parameters: {
     controls: { disable: true },
   },
@@ -171,6 +252,7 @@ export const Playground = {
   render: (args) => {
     const {
       label,
+      size,
       isDisabled,
       hintMessage,
       status,
@@ -186,6 +268,7 @@ export const Playground = {
       <Stack>
         <NumberField
           label={label}
+          size={size}
           isDisabled={isDisabled}
           isRequired={isRequired}
           hasStepper={hasStepper}
@@ -211,6 +294,7 @@ export const Playground = {
     controls: {
       include: [
         'label',
+        'size',
         'isDisabled',
         'hintMessage',
         'status',

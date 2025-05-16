@@ -33,15 +33,20 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  opacity: 50%;
-  cursor: not-allowed;
+  opacity: 1;
+  cursor: text;
   height: 3.25rem;
   min-width: 8.75rem;
   background-color: rgba(200,206,255,0.30);
 }
 
+.emotion-1:hover {
+  background-color: rgba(200,206,255,0.20);
+}
+
 .emotion-1:focus-within {
-  box-shadow: 0 0 0 0.125rem transparent;
+  box-shadow: 0 0 0 0.125rem #175BF5;
+  background-color: rgba(200,206,255,0.30);
 }
 
 .emotion-2 {
@@ -189,34 +194,6 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 0.25rem;
-  opacity: 50%;
-  color: #52567a;
-  padding: 0.5rem 0 0;
-  font-family: Roboto;
-  font-weight: 400;
-  line-height: 1rem;
-  font-size: 0.75rem;
-  letter-spacing: 0.015625rem;
-}
-
-.emotion-7 span {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  padding: 0;
-}
-
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -233,18 +210,23 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  opacity: 50%;
-  cursor: not-allowed;
+  opacity: 1;
+  cursor: text;
   height: 1.75rem;
   min-width: 4.375rem;
   background-color: rgba(200,206,255,0.30);
 }
 
-.emotion-8:focus-within {
-  box-shadow: 0 0 0 0.125rem transparent;
+.emotion-7:hover {
+  background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-12 {
+.emotion-7:focus-within {
+  box-shadow: 0 0 0 0.125rem #175BF5;
+  background-color: rgba(200,206,255,0.30);
+}
+
+.emotion-11 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1rem;
@@ -262,61 +244,61 @@
   min-width: 100%;
 }
 
-.emotion-12::-webkit-input-placeholder {
+.emotion-11::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-12::-moz-placeholder {
+.emotion-11::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-12:-ms-input-placeholder {
+.emotion-11:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-12::placeholder {
+.emotion-11::placeholder {
   color: transparent;
 }
 
-.emotion-12:focus {
+.emotion-11:focus {
   outline: none;
 }
 
-.emotion-12:focus::-webkit-input-placeholder {
+.emotion-11:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-12:focus::-moz-placeholder {
+.emotion-11:focus::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-12:focus:-ms-input-placeholder {
+.emotion-11:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-12:focus::placeholder {
+.emotion-11:focus::placeholder {
   color: transparent;
 }
 
-.emotion-12:not(:focus):placeholder-shown+label {
+.emotion-11:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-12:focus-within+label,
-.emotion-12:not(:placeholder-shown)+label {
+.emotion-11:focus-within+label,
+.emotion-11:not(:placeholder-shown)+label {
   display: none;
 }
 
-.emotion-12:focus-within+label {
+.emotion-11:focus-within+label {
   font-weight: 700!important;
   color: #194DCC;
 }
 
-.emotion-12:disabled {
+.emotion-11:disabled {
   cursor: not-allowed;
 }
 
-.emotion-13 {
+.emotion-12 {
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
@@ -378,21 +360,19 @@
                   role="group"
                 >
                   <input
-                    aria-describedby="numberfield__00_hintMessage"
                     aria-invalid="false"
                     aria-roledescription="Number field"
                     autocomplete="off"
                     autocorrect="off"
                     class="emotion-5"
-                    data-disabled="true"
                     data-rac=""
                     data-testid="input"
-                    disabled=""
                     id="numberfield__00"
                     inputmode="numeric"
-                    placeholder="NumberField"
+                    placeholder="Normal"
                     spellcheck="false"
                     tabindex="0"
+                    title=""
                     type="text"
                     value=""
                   />
@@ -400,23 +380,13 @@
                     class="emotion-6"
                     for="numberfield__00"
                   >
-                    NumberField
+                    Normal
                      
                   </label>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div
-          class="emotion-7"
-          data-testid="error"
-        >
-          <span
-            id="numberfield__00_hintMessage"
-          >
-            This field is disabled
-          </span>
         </div>
       </div>
     </div>
@@ -425,7 +395,7 @@
     >
       <div>
         <div
-          class="emotion-8"
+          class="emotion-7"
         >
           <div
             class="emotion-2"
@@ -443,45 +413,33 @@
                   role="group"
                 >
                   <input
-                    aria-describedby="numberfield__00_hintMessage"
                     aria-invalid="false"
                     aria-roledescription="Number field"
                     autocomplete="off"
                     autocorrect="off"
-                    class="emotion-12"
-                    data-disabled="true"
+                    class="emotion-11"
                     data-rac=""
                     data-testid="input"
-                    disabled=""
                     id="numberfield__00"
                     inputmode="numeric"
                     placeholder=" "
                     spellcheck="false"
                     tabindex="0"
+                    title=""
                     type="text"
                     value=""
                   />
                   <label
-                    class="emotion-13"
+                    class="emotion-12"
                     for="numberfield__00"
                   >
-                    NumberField
+                    Compact
                      
                   </label>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div
-          class="emotion-7"
-          data-testid="error"
-        >
-          <span
-            id="numberfield__00_hintMessage"
-          >
-            This field is disabled
-          </span>
         </div>
       </div>
     </div>
