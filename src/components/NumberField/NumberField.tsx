@@ -1,16 +1,16 @@
 import useFieldUtils from 'hooks/useFieldUtils';
 import { omit } from 'lodash-es';
 import React from 'react';
-import { NumberField as ReactAriaNumberField, Group, Input } from 'react-aria-components';
+import { Group, Input, NumberField as ReactAriaNumberField } from 'react-aria-components';
 import { generateUniqueID } from 'utils/helpers';
 
-import Stepper from './components/Stepper/Stepper';
-import { groupStyles } from './NumberField.style';
-import type { TextFieldProps } from '../TextField/TextField';
 import Label from 'components/Label';
 import { suffixContainerStyle } from 'components/TextField/TextField.style';
 import TextInputBase from 'components/TextInputBase/TextInputBase';
 import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
+import type { TextFieldProps } from '../TextField/TextField';
+import Stepper from './components/Stepper/Stepper';
+import { groupStyles } from './NumberField.style';
 
 export type NumberFieldProps = Omit<
   TextFieldProps,
@@ -110,6 +110,7 @@ const NumberField = React.forwardRef<HTMLInputElement, NumberFieldProps>((props,
               />
               {hasStepper && (
                 <Stepper
+                  size={size}
                   isDisabled={isLocked || isReadOnly || isDisabled}
                   dataTestIdPrefix={dataTestPrefixId}
                 />

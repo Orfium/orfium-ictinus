@@ -5,15 +5,15 @@ import { rem } from 'theme/utils';
 
 import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
 
-export const stepperContainerStyle = (): SerializedStyles => {
+export const stepperContainerStyle = (size: 'normal' | 'compact'): SerializedStyles => {
   return css`
     display: flex;
     flex-direction: column;
-    /** @TODO add tokens instead of rem */
-    width: ${rem(44)};
     position: absolute;
     right: 0;
-    top: -${rem(15)};
+    /** @TODO add tokens instead of rem */
+    width: ${size === 'normal' ? rem(44) : rem(20)};
+    top: ${size === 'normal' ? `-${rem(15)}` : `-${rem(8)}`};
     z-index: 1;
   `;
 };
