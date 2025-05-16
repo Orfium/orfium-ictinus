@@ -1,5 +1,6 @@
 import Icon from 'components/Icon';
 import useTheme from 'hooks/useTheme';
+import { rem } from 'polished';
 import React from 'react';
 import { Button } from 'react-aria-components';
 import { buttonWrapperStyle, stepperContainerStyle } from './Stepper.style';
@@ -13,7 +14,7 @@ type Props = {
 const Stepper: React.FCC<Props> = ({ size, isDisabled, dataTestIdPrefix }) => {
   const theme = useTheme();
   const dataTestId = dataTestIdPrefix ? `${dataTestIdPrefix}_number` : 'number';
-  const compactSizeBtnStyles = size === 'compact' ? { height: '15px' } : {};
+  const compactSizeBtnStyles = size === 'compact' ? { height: rem(15) } : {};
 
   return (
     <div css={stepperContainerStyle(size)}>
