@@ -16,6 +16,7 @@ export const radioContainerStyles =
         display: flex;
         flex-direction: ${placement === 'right' ? 'row' : 'row-reverse'};
         align-items: center;
+        justify-content: ${placement === 'left' ? 'space-between' : 'unset'};
         gap: ${theme.dimension.spacing.get('md')};
 
         position: relative;

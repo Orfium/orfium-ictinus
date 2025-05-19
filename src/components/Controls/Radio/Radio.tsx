@@ -5,10 +5,11 @@ import { mergeProps, useFocusRing, useRadio, VisuallyHidden } from 'react-aria';
 import type { RadioGroupState } from 'react-stately';
 import type { TestProps } from 'utils/types';
 
+import Box from '~/components/Box';
+import { ControlHelpText, ControlLabelText } from '../ControlLabel';
+import type { LabelConfig } from '../Controls.types';
 import { useRadioGroupContent } from './components/RadioGroup';
 import { radioContainerStyles } from './Radio.style';
-import ControlLabel from '../ControlLabel';
-import type { LabelConfig } from '../Controls.types';
 
 export type RadioProps = Partial<RadioAria> & {
   /** Id property of the radio input */
@@ -45,15 +46,24 @@ const Radio = React.forwardRef<HTMLInputElement, RadioProps>((props, ref) => {
           <input id={id} {...mergeProps(inputProps, focusProps)} ref={combinedRefs} tabIndex={0} />
         </VisuallyHidden>
         {children && (
-          <ControlLabel
+          <ControlLabelText
             size={size}
-            helpText={helpText}
-            dataTestPrefixId={`${dataTestPrefixId}_radio_${value.split(' ').join('_')}`}
+            dataTestPrefixId={`${dataTestPrefixId}_radio_${value?.split(' ').join('_')}`}
           >
             {children}
-          </ControlLabel>
+          </ControlLabelText>
         )}
       </label>
+      <Box {...(placement === 'left' ? { pr: '9' } : { pl: '9' })}>
+        {helpText && (
+          <ControlHelpText
+            helpText={helpText}
+            dataTestPrefixId={`${dataTestPrefixId}_radio_${value?.split(' ').join('_')}`}
+          >
+            {helpText}
+          </ControlHelpText>
+        )}
+      </Box>
     </div>
   );
 });
