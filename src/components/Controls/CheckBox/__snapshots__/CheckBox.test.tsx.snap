@@ -7,6 +7,11 @@ exports[`Checkbox Component > it renders the Checkbox correctly 1`] = `
   width: fit-content;
 }
 
+.emotion-0 [data-disabled] {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
 .emotion-1 {
   display: block;
   cursor: pointer;
@@ -104,10 +109,6 @@ exports[`Checkbox Component > it renders the Checkbox correctly 1`] = `
   fill: #ffffff!important;
 }
 
-.emotion-8 {
-  padding-left: 2rem;
-}
-
 <div>
   <div
     class="emotion-0"
@@ -153,9 +154,6 @@ exports[`Checkbox Component > it renders the Checkbox correctly 1`] = `
         </div>
       </div>
     </label>
-    <div
-      class="emotion-8 emotion-3"
-    />
   </div>
 </div>
 `;

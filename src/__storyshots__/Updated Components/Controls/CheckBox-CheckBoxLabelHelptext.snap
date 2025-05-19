@@ -4,6 +4,11 @@
   width: fit-content;
 }
 
+.emotion-0 [data-disabled] {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
 .emotion-1 {
   display: block;
   cursor: pointer;

@@ -13,11 +13,16 @@
   height: 3.125rem;
 }
 
-.emotion-1 {
+.emotion-1 [data-disabled] {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-2 {
   cursor: pointer;
 }
 
-.emotion-1>div>div:first-of-type {
+.emotion-2>div>div:first-of-type {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -33,7 +38,7 @@
   position: relative;
 }
 
-.emotion-1 .bar {
+.emotion-2 .bar {
   width: 2.25rem;
   height: 0.5rem;
   background: #B8CCFA;
@@ -41,14 +46,14 @@
   border-radius: 624.9375rem;
 }
 
-.emotion-1 .indicator {
+.emotion-2 .indicator {
   width: 2.25rem;
   height: 1.25rem;
   box-sizing: border-box;
   position: relative;
 }
 
-.emotion-1 .indicator:before {
+.emotion-2 .indicator:before {
   content: '';
   box-sizing: border-box;
   display: block;
@@ -61,15 +66,15 @@
   transition: all 200ms;
 }
 
-.emotion-1[data-hovered] .indicator:before,
-.emotion-1[data-focus-visible='true'] .indicator:before {
+.emotion-2[data-hovered] .indicator:before,
+.emotion-2[data-focus-visible='true'] .indicator:before {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   box-shadow: 0px 0px 0px 8px rgba(200,206,255,0.20);
   border-radius: 100%;
 }
 
-.emotion-1[data-selected] .indicator:before {
+.emotion-2[data-selected] .indicator:before {
   -webkit-transform: translateX(80%);
   -moz-transform: translateX(80%);
   -ms-transform: translateX(80%);
@@ -78,12 +83,7 @@
   border-color: #175BF5;
 }
 
-.emotion-1[data-disabled] {
-  opacity: 50%;
-  cursor: not-allowed;
-}
-
-.emotion-2 {
+.emotion-3 {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -98,7 +98,7 @@
   justify-content: unset;
 }
 
-.emotion-6 {
+.emotion-7 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -107,11 +107,7 @@
   color: #111530;
 }
 
-.emotion-7 {
-  padding-left: 3rem;
-}
-
-.emotion-9 {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -141,9 +137,11 @@
     <div
       style="margin: 5px;"
     >
-      <div>
+      <div
+        class="emotion-1"
+      >
         <label
-          class="emotion-1"
+          class="emotion-2"
           data-rac=""
           data-testid="ictinus_switch"
         >
@@ -157,10 +155,10 @@
             />
           </span>
           <div
-            class="emotion-2 emotion-3"
+            class="emotion-3 emotion-4"
           >
             <div
-              class="emotion-4 emotion-3"
+              class="emotion-5 emotion-4"
             >
               <div
                 class="bar"
@@ -170,28 +168,27 @@
               />
             </div>
             <div
-              class="emotion-6"
+              class="emotion-7"
               data-testid="ictinus_switch_undefined_label"
             >
               Normal Label
             </div>
           </div>
         </label>
-        <div
-          class="emotion-7 emotion-3"
-        />
       </div>
     </div>
   </div>
   <div
-    class="emotion-9"
+    class="emotion-8"
   >
     <div
       style="margin: 5px;"
     >
-      <div>
+      <div
+        class="emotion-1"
+      >
         <label
-          class="emotion-1"
+          class="emotion-2"
           data-rac=""
           data-testid="ictinus_switch"
         >
@@ -205,10 +202,10 @@
             />
           </span>
           <div
-            class="emotion-2 emotion-3"
+            class="emotion-3 emotion-4"
           >
             <div
-              class="emotion-4 emotion-3"
+              class="emotion-5 emotion-4"
             >
               <div
                 class="bar"
@@ -225,9 +222,6 @@
             </div>
           </div>
         </label>
-        <div
-          class="emotion-7 emotion-3"
-        />
       </div>
     </div>
   </div>

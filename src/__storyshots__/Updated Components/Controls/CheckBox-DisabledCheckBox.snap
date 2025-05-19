@@ -17,6 +17,9 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.emotion-1 [data-disabled] {
   opacity: 50%;
   cursor: not-allowed;
 }
@@ -128,10 +131,6 @@
 }
 
 .emotion-10 {
-  padding-left: 2rem;
-}
-
-.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -145,7 +144,11 @@
   flex-wrap: wrap;
 }
 
-.emotion-24 {
+.emotion-20 {
+  padding-left: 2rem;
+}
+
+.emotion-22 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1rem;
@@ -212,14 +215,11 @@
             </div>
           </div>
         </label>
-        <div
-          class="emotion-10 emotion-4"
-        />
       </div>
     </div>
   </div>
   <div
-    class="emotion-12"
+    class="emotion-10"
   >
     <div
       style="margin: 5px;"
@@ -275,10 +275,11 @@
           </div>
         </label>
         <div
-          class="emotion-10 emotion-4"
+          class="emotion-20 emotion-4"
+          data-disabled="true"
         >
           <div
-            class="emotion-24"
+            class="emotion-22"
             data-testid="ictinus_checkbox_label_helpText"
           >
             This option is disabled

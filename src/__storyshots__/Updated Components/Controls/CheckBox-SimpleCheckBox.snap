@@ -4,6 +4,11 @@
   width: fit-content;
 }
 
+.emotion-0 [data-disabled] {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
 .emotion-1 {
   display: block;
   cursor: pointer;
@@ -110,10 +115,6 @@
   color: #111530;
 }
 
-.emotion-9 {
-  padding-left: 2rem;
-}
-
 <div>
   <div
     class="emotion-0"
@@ -165,8 +166,5 @@
         </div>
       </div>
     </label>
-    <div
-      class="emotion-9 emotion-3"
-    />
   </div>
 </div>

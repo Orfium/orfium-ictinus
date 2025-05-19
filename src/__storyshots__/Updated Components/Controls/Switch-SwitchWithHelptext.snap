@@ -1,8 +1,13 @@
-.emotion-0 {
+.emotion-0 [data-disabled] {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-1 {
   cursor: pointer;
 }
 
-.emotion-0>div>div:first-of-type {
+.emotion-1>div>div:first-of-type {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -18,7 +23,7 @@
   position: relative;
 }
 
-.emotion-0 .bar {
+.emotion-1 .bar {
   width: 2.25rem;
   height: 0.5rem;
   background: #B8CCFA;
@@ -26,14 +31,14 @@
   border-radius: 624.9375rem;
 }
 
-.emotion-0 .indicator {
+.emotion-1 .indicator {
   width: 2.25rem;
   height: 1.25rem;
   box-sizing: border-box;
   position: relative;
 }
 
-.emotion-0 .indicator:before {
+.emotion-1 .indicator:before {
   content: '';
   box-sizing: border-box;
   display: block;
@@ -46,15 +51,15 @@
   transition: all 200ms;
 }
 
-.emotion-0[data-hovered] .indicator:before,
-.emotion-0[data-focus-visible='true'] .indicator:before {
+.emotion-1[data-hovered] .indicator:before,
+.emotion-1[data-focus-visible='true'] .indicator:before {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   box-shadow: 0px 0px 0px 8px rgba(200,206,255,0.20);
   border-radius: 100%;
 }
 
-.emotion-0[data-selected] .indicator:before {
+.emotion-1[data-selected] .indicator:before {
   -webkit-transform: translateX(80%);
   -moz-transform: translateX(80%);
   -ms-transform: translateX(80%);
@@ -63,12 +68,7 @@
   border-color: #175BF5;
 }
 
-.emotion-0[data-disabled] {
-  opacity: 50%;
-  cursor: not-allowed;
-}
-
-.emotion-1 {
+.emotion-2 {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -83,7 +83,7 @@
   justify-content: unset;
 }
 
-.emotion-5 {
+.emotion-6 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -92,11 +92,11 @@
   color: #111530;
 }
 
-.emotion-6 {
+.emotion-7 {
   padding-left: 3rem;
 }
 
-.emotion-8 {
+.emotion-9 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1rem;
@@ -107,9 +107,11 @@
 }
 
 <div>
-  <div>
+  <div
+    class="emotion-0"
+  >
     <label
-      class="emotion-0"
+      class="emotion-1"
       data-rac=""
       data-testid="ictinus_switch"
     >
@@ -123,10 +125,10 @@
         />
       </span>
       <div
-        class="emotion-1 emotion-2"
+        class="emotion-2 emotion-3"
       >
         <div
-          class="emotion-3 emotion-2"
+          class="emotion-4 emotion-3"
         >
           <div
             class="bar"
@@ -136,7 +138,7 @@
           />
         </div>
         <div
-          class="emotion-5"
+          class="emotion-6"
           data-testid="ictinus_switch_undefined_label"
         >
           Option
@@ -144,10 +146,10 @@
       </div>
     </label>
     <div
-      class="emotion-6 emotion-2"
+      class="emotion-7 emotion-3"
     >
       <div
-        class="emotion-8"
+        class="emotion-9"
         data-testid="undefined_helpText"
       >
         Short text that adds context

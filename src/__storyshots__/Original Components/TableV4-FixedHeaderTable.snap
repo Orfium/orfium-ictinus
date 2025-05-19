@@ -26,6 +26,11 @@
   width: fit-content;
 }
 
+.emotion-3 [data-disabled] {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
 .emotion-4 {
   display: block;
   cursor: pointer;
@@ -124,28 +129,24 @@
 }
 
 .emotion-11 {
-  padding-left: 2rem;
-}
-
-.emotion-13 {
   position: relative;
   text-align: left;
   padding: 0.25rem 0.5rem;
 }
 
-.emotion-14 {
+.emotion-12 {
   position: relative;
   text-align: right;
   padding: 0.25rem 0.5rem;
 }
 
-.emotion-15 {
+.emotion-13 {
   width: 100%;
   border-collapse: collapse;
   table-layout: fixed;
 }
 
-.emotion-16 {
+.emotion-14 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   padding-top: 1rem;
@@ -155,11 +156,11 @@
   border-bottom-color: rgba(200,206,255,0.70);
 }
 
-.emotion-16 th:last-child {
+.emotion-14 th:last-child {
   padding-right: 1rem;
 }
 
-.emotion-17 {
+.emotion-15 {
   position: relative;
   text-align: left;
   padding: 0.25rem 0.5rem;
@@ -177,7 +178,7 @@
   box-shadow: inset 0px -1px 0px 0px rgba(200,206,255,0.70);
 }
 
-.emotion-18 {
+.emotion-16 {
   position: relative;
   text-align: left;
   padding: 0.25rem 0.5rem;
@@ -195,12 +196,12 @@
   box-shadow: inset 0px -1px 0px 0px rgba(200,206,255,0.70);
 }
 
-.emotion-19 {
+.emotion-17 {
   font-weight: 500;
   color: #52567a;
 }
 
-.emotion-24 {
+.emotion-22 {
   position: relative;
   text-align: right;
   padding: 0.25rem 0.5rem;
@@ -218,34 +219,34 @@
   box-shadow: inset 0px -1px 0px 0px rgba(200,206,255,0.70);
 }
 
-.emotion-26 {
+.emotion-24 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   border-bottom: 0.0625rem solid rgba(200,206,255,0.70);
 }
 
-.emotion-26 td:first-of-type {
+.emotion-24 td:first-of-type {
   padding-left: 1rem;
 }
 
-.emotion-26 td:last-child {
+.emotion-24 td:last-child {
   padding-right: 1rem;
 }
 
-.emotion-38 {
+.emotion-34 {
   position: relative;
   text-align: left;
   padding: 0.25rem 0.5rem;
   width: initial;
 }
 
-.emotion-39 {
+.emotion-35 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.emotion-47 {
+.emotion-43 {
   position: relative;
   text-align: right;
   padding: 0.25rem 0.5rem;
@@ -307,19 +308,16 @@
                 </div>
               </div>
             </label>
-            <div
-              class="emotion-11 emotion-6"
-            />
           </div>
         </th>
         <td
-          class="emotion-13"
+          class="emotion-11"
           data-testid="table_row_0_cell_1"
         >
           topLeftText
         </td>
         <td
-          class="emotion-14"
+          class="emotion-12"
           colspan="3"
           data-testid="table_row_0_cell_2"
         >
@@ -333,51 +331,51 @@
     </thead>
   </table>
   <table
-    class="emotion-15"
+    class="emotion-13"
   >
     <thead>
       <tr
-        class="emotion-16"
+        class="emotion-14"
       >
         <th
-          class="emotion-17"
+          class="emotion-15"
         />
         <th
-          class="emotion-18"
+          class="emotion-16"
           data-testid="undefined_title"
         >
           <div
-            class="emotion-19"
+            class="emotion-17"
           >
             Title
           </div>
         </th>
         <th
-          class="emotion-18"
+          class="emotion-16"
           data-testid="undefined_name"
         >
           <div
-            class="emotion-19"
+            class="emotion-17"
           >
             Name
           </div>
         </th>
         <th
-          class="emotion-18"
+          class="emotion-16"
           data-testid="undefined_surname"
         >
           <div
-            class="emotion-19"
+            class="emotion-17"
           >
             Surname
           </div>
         </th>
         <th
-          class="emotion-24"
+          class="emotion-22"
           data-testid="undefined_age"
         >
           <div
-            class="emotion-19"
+            class="emotion-17"
           >
             Age
           </div>
@@ -386,7 +384,7 @@
     </thead>
     <tbody>
       <tr
-        class="emotion-26"
+        class="emotion-24"
       >
         <th
           class="emotion-2"
@@ -436,18 +434,15 @@
                   </div>
                 </div>
               </label>
-              <div
-                class="emotion-11 emotion-6"
-              />
             </div>
           </div>
         </th>
         <td
-          class="emotion-38"
+          class="emotion-34"
           data-testid="table_row_1_cell_1"
         >
           <div
-            class="emotion-39 emotion-40"
+            class="emotion-35 emotion-36"
           >
             <span
               data-column="Title"
@@ -457,11 +452,11 @@
           </div>
         </td>
         <td
-          class="emotion-38"
+          class="emotion-34"
           data-testid="table_row_1_cell_2"
         >
           <div
-            class="emotion-39 emotion-40"
+            class="emotion-35 emotion-36"
           >
             <span
               data-column="Name"
@@ -471,11 +466,11 @@
           </div>
         </td>
         <td
-          class="emotion-38"
+          class="emotion-34"
           data-testid="table_row_1_cell_3"
         >
           <div
-            class="emotion-39 emotion-40"
+            class="emotion-35 emotion-36"
           >
             <span
               data-column="Surname"
@@ -485,11 +480,11 @@
           </div>
         </td>
         <td
-          class="emotion-47"
+          class="emotion-43"
           data-testid="table_row_1_cell_4"
         >
           <div
-            class="emotion-39 emotion-40"
+            class="emotion-35 emotion-36"
           >
             <span
               data-column="Age"
@@ -500,7 +495,7 @@
         </td>
       </tr>
       <tr
-        class="emotion-26"
+        class="emotion-24"
       >
         <th
           class="emotion-2"
@@ -550,18 +545,15 @@
                   </div>
                 </div>
               </label>
-              <div
-                class="emotion-11 emotion-6"
-              />
             </div>
           </div>
         </th>
         <td
-          class="emotion-38"
+          class="emotion-34"
           data-testid="table_row_2_cell_1"
         >
           <div
-            class="emotion-39 emotion-40"
+            class="emotion-35 emotion-36"
           >
             <span
               data-column="Title"
@@ -571,11 +563,11 @@
           </div>
         </td>
         <td
-          class="emotion-38"
+          class="emotion-34"
           data-testid="table_row_2_cell_2"
         >
           <div
-            class="emotion-39 emotion-40"
+            class="emotion-35 emotion-36"
           >
             <span
               data-column="Name"
@@ -585,11 +577,11 @@
           </div>
         </td>
         <td
-          class="emotion-38"
+          class="emotion-34"
           data-testid="table_row_2_cell_3"
         >
           <div
-            class="emotion-39 emotion-40"
+            class="emotion-35 emotion-36"
           >
             <span
               data-column="Surname"
@@ -599,11 +591,11 @@
           </div>
         </td>
         <td
-          class="emotion-47"
+          class="emotion-43"
           data-testid="table_row_2_cell_4"
         >
           <div
-            class="emotion-39 emotion-40"
+            class="emotion-35 emotion-36"
           >
             <span
               data-column="Age"
@@ -614,7 +606,7 @@
         </td>
       </tr>
       <tr
-        class="emotion-26"
+        class="emotion-24"
       >
         <th
           class="emotion-2"
@@ -664,18 +656,15 @@
                   </div>
                 </div>
               </label>
-              <div
-                class="emotion-11 emotion-6"
-              />
             </div>
           </div>
         </th>
         <td
-          class="emotion-38"
+          class="emotion-34"
           data-testid="table_row_3_cell_1"
         >
           <div
-            class="emotion-39 emotion-40"
+            class="emotion-35 emotion-36"
           >
             <span
               data-column="Title"
@@ -685,11 +674,11 @@
           </div>
         </td>
         <td
-          class="emotion-38"
+          class="emotion-34"
           data-testid="table_row_3_cell_2"
         >
           <div
-            class="emotion-39 emotion-40"
+            class="emotion-35 emotion-36"
           >
             <span
               data-column="Name"
@@ -699,11 +688,11 @@
           </div>
         </td>
         <td
-          class="emotion-38"
+          class="emotion-34"
           data-testid="table_row_3_cell_3"
         >
           <div
-            class="emotion-39 emotion-40"
+            class="emotion-35 emotion-36"
           >
             <span
               data-column="Surname"
@@ -713,11 +702,11 @@
           </div>
         </td>
         <td
-          class="emotion-47"
+          class="emotion-43"
           data-testid="table_row_3_cell_4"
         >
           <div
-            class="emotion-39 emotion-40"
+            class="emotion-35 emotion-36"
           >
             <span
               data-column="Age"
@@ -728,7 +717,7 @@
         </td>
       </tr>
       <tr
-        class="emotion-26"
+        class="emotion-24"
       >
         <th
           class="emotion-2"
@@ -778,18 +767,15 @@
                   </div>
                 </div>
               </label>
-              <div
-                class="emotion-11 emotion-6"
-              />
             </div>
           </div>
         </th>
         <td
-          class="emotion-38"
+          class="emotion-34"
           data-testid="table_row_4_cell_1"
         >
           <div
-            class="emotion-39 emotion-40"
+            class="emotion-35 emotion-36"
           >
             <span
               data-column="Title"
@@ -799,11 +785,11 @@
           </div>
         </td>
         <td
-          class="emotion-38"
+          class="emotion-34"
           data-testid="table_row_4_cell_2"
         >
           <div
-            class="emotion-39 emotion-40"
+            class="emotion-35 emotion-36"
           >
             <span
               data-column="Name"
@@ -813,11 +799,11 @@
           </div>
         </td>
         <td
-          class="emotion-38"
+          class="emotion-34"
           data-testid="table_row_4_cell_3"
         >
           <div
-            class="emotion-39 emotion-40"
+            class="emotion-35 emotion-36"
           >
             <span
               data-column="Surname"
@@ -827,11 +813,11 @@
           </div>
         </td>
         <td
-          class="emotion-47"
+          class="emotion-43"
           data-testid="table_row_4_cell_4"
         >
           <div
-            class="emotion-39 emotion-40"
+            class="emotion-35 emotion-36"
           >
             <span
               data-column="Age"
@@ -842,7 +828,7 @@
         </td>
       </tr>
       <tr
-        class="emotion-26"
+        class="emotion-24"
       >
         <th
           class="emotion-2"
@@ -892,18 +878,15 @@
                   </div>
                 </div>
               </label>
-              <div
-                class="emotion-11 emotion-6"
-              />
             </div>
           </div>
         </th>
         <td
-          class="emotion-38"
+          class="emotion-34"
           data-testid="table_row_5_cell_1"
         >
           <div
-            class="emotion-39 emotion-40"
+            class="emotion-35 emotion-36"
           >
             <span
               data-column="Title"
@@ -913,11 +896,11 @@
           </div>
         </td>
         <td
-          class="emotion-38"
+          class="emotion-34"
           data-testid="table_row_5_cell_2"
         >
           <div
-            class="emotion-39 emotion-40"
+            class="emotion-35 emotion-36"
           >
             <span
               data-column="Name"
@@ -927,11 +910,11 @@
           </div>
         </td>
         <td
-          class="emotion-38"
+          class="emotion-34"
           data-testid="table_row_5_cell_3"
         >
           <div
-            class="emotion-39 emotion-40"
+            class="emotion-35 emotion-36"
           >
             <span
               data-column="Surname"
@@ -941,11 +924,11 @@
           </div>
         </td>
         <td
-          class="emotion-47"
+          class="emotion-43"
           data-testid="table_row_5_cell_4"
         >
           <div
-            class="emotion-39 emotion-40"
+            class="emotion-35 emotion-36"
           >
             <span
               data-column="Age"
@@ -956,7 +939,7 @@
         </td>
       </tr>
       <tr
-        class="emotion-26"
+        class="emotion-24"
       >
         <th
           class="emotion-2"
@@ -1006,18 +989,15 @@
                   </div>
                 </div>
               </label>
-              <div
-                class="emotion-11 emotion-6"
-              />
             </div>
           </div>
         </th>
         <td
-          class="emotion-38"
+          class="emotion-34"
           data-testid="table_row_6_cell_1"
         >
           <div
-            class="emotion-39 emotion-40"
+            class="emotion-35 emotion-36"
           >
             <span
               data-column="Title"
@@ -1027,11 +1007,11 @@
           </div>
         </td>
         <td
-          class="emotion-38"
+          class="emotion-34"
           data-testid="table_row_6_cell_2"
         >
           <div
-            class="emotion-39 emotion-40"
+            class="emotion-35 emotion-36"
           >
             <span
               data-column="Name"
@@ -1041,11 +1021,11 @@
           </div>
         </td>
         <td
-          class="emotion-38"
+          class="emotion-34"
           data-testid="table_row_6_cell_3"
         >
           <div
-            class="emotion-39 emotion-40"
+            class="emotion-35 emotion-36"
           >
             <span
               data-column="Surname"
@@ -1055,11 +1035,11 @@
           </div>
         </td>
         <td
-          class="emotion-47"
+          class="emotion-43"
           data-testid="table_row_6_cell_4"
         >
           <div
-            class="emotion-39 emotion-40"
+            class="emotion-35 emotion-36"
           >
             <span
               data-column="Age"
@@ -1070,7 +1050,7 @@
         </td>
       </tr>
       <tr
-        class="emotion-26"
+        class="emotion-24"
       >
         <th
           class="emotion-2"
@@ -1120,18 +1100,15 @@
                   </div>
                 </div>
               </label>
-              <div
-                class="emotion-11 emotion-6"
-              />
             </div>
           </div>
         </th>
         <td
-          class="emotion-38"
+          class="emotion-34"
           data-testid="table_row_7_cell_1"
         >
           <div
-            class="emotion-39 emotion-40"
+            class="emotion-35 emotion-36"
           >
             <span
               data-column="Title"
@@ -1141,11 +1118,11 @@
           </div>
         </td>
         <td
-          class="emotion-38"
+          class="emotion-34"
           data-testid="table_row_7_cell_2"
         >
           <div
-            class="emotion-39 emotion-40"
+            class="emotion-35 emotion-36"
           >
             <span
               data-column="Name"
@@ -1155,11 +1132,11 @@
           </div>
         </td>
         <td
-          class="emotion-38"
+          class="emotion-34"
           data-testid="table_row_7_cell_3"
         >
           <div
-            class="emotion-39 emotion-40"
+            class="emotion-35 emotion-36"
           >
             <span
               data-column="Surname"
@@ -1169,11 +1146,11 @@
           </div>
         </td>
         <td
-          class="emotion-47"
+          class="emotion-43"
           data-testid="table_row_7_cell_4"
         >
           <div
-            class="emotion-39 emotion-40"
+            class="emotion-35 emotion-36"
           >
             <span
               data-column="Age"
@@ -1184,7 +1161,7 @@
         </td>
       </tr>
       <tr
-        class="emotion-26"
+        class="emotion-24"
       >
         <th
           class="emotion-2"
@@ -1234,18 +1211,15 @@
                   </div>
                 </div>
               </label>
-              <div
-                class="emotion-11 emotion-6"
-              />
             </div>
           </div>
         </th>
         <td
-          class="emotion-38"
+          class="emotion-34"
           data-testid="table_row_8_cell_1"
         >
           <div
-            class="emotion-39 emotion-40"
+            class="emotion-35 emotion-36"
           >
             <span
               data-column="Title"
@@ -1255,11 +1229,11 @@
           </div>
         </td>
         <td
-          class="emotion-38"
+          class="emotion-34"
           data-testid="table_row_8_cell_2"
         >
           <div
-            class="emotion-39 emotion-40"
+            class="emotion-35 emotion-36"
           >
             <span
               data-column="Name"
@@ -1269,11 +1243,11 @@
           </div>
         </td>
         <td
-          class="emotion-38"
+          class="emotion-34"
           data-testid="table_row_8_cell_3"
         >
           <div
-            class="emotion-39 emotion-40"
+            class="emotion-35 emotion-36"
           >
             <span
               data-column="Surname"
@@ -1283,11 +1257,11 @@
           </div>
         </td>
         <td
-          class="emotion-47"
+          class="emotion-43"
           data-testid="table_row_8_cell_4"
         >
           <div
-            class="emotion-39 emotion-40"
+            class="emotion-35 emotion-36"
           >
             <span
               data-column="Age"
@@ -1298,7 +1272,7 @@
         </td>
       </tr>
       <tr
-        class="emotion-26"
+        class="emotion-24"
       >
         <th
           class="emotion-2"
@@ -1348,18 +1322,15 @@
                   </div>
                 </div>
               </label>
-              <div
-                class="emotion-11 emotion-6"
-              />
             </div>
           </div>
         </th>
         <td
-          class="emotion-38"
+          class="emotion-34"
           data-testid="table_row_9_cell_1"
         >
           <div
-            class="emotion-39 emotion-40"
+            class="emotion-35 emotion-36"
           >
             <span
               data-column="Title"
@@ -1369,11 +1340,11 @@
           </div>
         </td>
         <td
-          class="emotion-38"
+          class="emotion-34"
           data-testid="table_row_9_cell_2"
         >
           <div
-            class="emotion-39 emotion-40"
+            class="emotion-35 emotion-36"
           >
             <span
               data-column="Name"
@@ -1383,11 +1354,11 @@
           </div>
         </td>
         <td
-          class="emotion-38"
+          class="emotion-34"
           data-testid="table_row_9_cell_3"
         >
           <div
-            class="emotion-39 emotion-40"
+            class="emotion-35 emotion-36"
           >
             <span
               data-column="Surname"
@@ -1397,11 +1368,11 @@
           </div>
         </td>
         <td
-          class="emotion-47"
+          class="emotion-43"
           data-testid="table_row_9_cell_4"
         >
           <div
-            class="emotion-39 emotion-40"
+            class="emotion-35 emotion-36"
           >
             <span
               data-column="Age"

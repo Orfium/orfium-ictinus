@@ -71,12 +71,12 @@
   animation: circle 0.15s ease-in-out;
 }
 
-.emotion-1 label[data-disabled='true'] {
+.emotion-1 [data-disabled='true'] {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-1 label[data-disabled='true']:hover::before {
+.emotion-1 [data-disabled='true']:hover::before {
   background: none;
   box-shadow: none;
 }
@@ -90,11 +90,7 @@
   color: #111530;
 }
 
-.emotion-3 {
-  padding-left: 2rem;
-}
-
-.emotion-14 label {
+.emotion-8 label {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -114,7 +110,7 @@
   cursor: pointer;
 }
 
-.emotion-14 label:before {
+.emotion-8 label:before {
   content: '';
   display: inline-block;
   width: 1.25rem;
@@ -127,22 +123,22 @@
   background: rgba(200,206,255,0);
 }
 
-.emotion-14 label:hover::before {
+.emotion-8 label:hover::before {
   background: rgba(200,206,255,0.20);
   box-shadow: 0px 0px 0px 8px rgba(200,206,255,0.20);
 }
 
-.emotion-14 label[data-selected='true']:before {
+.emotion-8 label[data-selected='true']:before {
   border-color: #175BF5;
   border-radius: 50%;
 }
 
-.emotion-14 label[data-selected='true']:hover::before {
+.emotion-8 label[data-selected='true']:hover::before {
   background: none;
   box-shadow: none;
 }
 
-.emotion-14 label[data-selected='true']:after {
+.emotion-8 label[data-selected='true']:after {
   content: '';
   display: block;
   position: absolute;
@@ -155,18 +151,14 @@
   animation: circle 0.15s ease-in-out;
 }
 
-.emotion-14 label[data-disabled='true'] {
+.emotion-8 [data-disabled='true'] {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-14 label[data-disabled='true']:hover::before {
+.emotion-8 [data-disabled='true']:hover::before {
   background: none;
   box-shadow: none;
-}
-
-.emotion-16 {
-  padding-right: 2rem;
 }
 
 <div>
@@ -205,9 +197,6 @@
             Right Label 1
           </div>
         </label>
-        <div
-          class="emotion-3 emotion-4"
-        />
       </div>
       <div
         class="emotion-1"
@@ -234,9 +223,6 @@
             Right Label 2
           </div>
         </label>
-        <div
-          class="emotion-3 emotion-4"
-        />
       </div>
       <div
         class="emotion-1"
@@ -263,9 +249,6 @@
             Right Label 3
           </div>
         </label>
-        <div
-          class="emotion-3 emotion-4"
-        />
       </div>
     </div>
     <div
@@ -276,7 +259,7 @@
       role="radiogroup"
     >
       <div
-        class="emotion-14"
+        class="emotion-8"
         data-testid="undefined_radio_option_1_container"
       >
         <label
@@ -300,12 +283,9 @@
             Left Label 1
           </div>
         </label>
-        <div
-          class="emotion-16 emotion-4"
-        />
       </div>
       <div
-        class="emotion-14"
+        class="emotion-8"
         data-testid="undefined_radio_option_2_container"
       >
         <label
@@ -329,12 +309,9 @@
             Left Label 2
           </div>
         </label>
-        <div
-          class="emotion-16 emotion-4"
-        />
       </div>
       <div
-        class="emotion-14"
+        class="emotion-8"
         data-testid="undefined_radio_option_3_container"
       >
         <label
@@ -358,9 +335,6 @@
             Left Label 3
           </div>
         </label>
-        <div
-          class="emotion-16 emotion-4"
-        />
       </div>
     </div>
   </div>

@@ -63,12 +63,12 @@ exports[`Radio > it renders the RadioGroup and Radios correctly 1`] = `
   animation: circle 0.15s ease-in-out;
 }
 
-.emotion-1 label[data-disabled='true'] {
+.emotion-1 [data-disabled='true'] {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-1 label[data-disabled='true']:hover::before {
+.emotion-1 [data-disabled='true']:hover::before {
   background: none;
   box-shadow: none;
 }
@@ -80,10 +80,6 @@ exports[`Radio > it renders the RadioGroup and Radios correctly 1`] = `
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
   color: #111530;
-}
-
-.emotion-3 {
-  padding-left: 2rem;
 }
 
 <div>
@@ -119,9 +115,6 @@ exports[`Radio > it renders the RadioGroup and Radios correctly 1`] = `
           Test Option
         </div>
       </label>
-      <div
-        class="emotion-3 emotion-4"
-      />
     </div>
   </div>
 </div>
