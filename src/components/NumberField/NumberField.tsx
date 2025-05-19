@@ -86,7 +86,7 @@ const NumberField = React.forwardRef<HTMLInputElement, NumberFieldProps>((props,
             minValue={minValue}
             maxValue={maxValue}
           >
-            <Group css={hasStepper ? groupStyles() : {}}>
+            <Group css={hasStepper ? groupStyles({ size }) : {}}>
               <Input
                 id={id}
                 readOnly={isLocked || isReadOnly}

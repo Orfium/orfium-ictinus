@@ -1,5 +1,7 @@
+import { rem } from 'polished';
 import { FIGMA_URL } from 'utils/common';
 import Stack from '../storyUtils/Stack';
+import Typography from '../Typography';
 import NumberField from './NumberField';
 
 export default {
@@ -29,12 +31,43 @@ export const NumberFields = {
     const { step } = args;
 
     return (
-      <Stack>
-        <NumberField label="Normal" size="normal" />
-        <NumberField label="NumberField" hasStepper step={step} />
-        <NumberField label="Compact" size="compact" />
-        <NumberField label="Compact" size="compact" hasStepper step={step} />
-      </Stack>
+      <>
+        <Stack>
+          <NumberField label="Normal" size="normal" />
+          <NumberField label="NumberField" hasStepper step={step} />
+          <NumberField label="Compact" size="compact" />
+          <NumberField
+            label="Compact"
+            size="compact"
+            hasStepper
+            step={step}
+            sx={{
+              wrapper: { minWidth: rem(85) },
+            }}
+          />
+        </Stack>
+        <Stack>
+          <p>
+            * In the case of a compact-sized{' '}
+            <Typography isBold component="span">
+              NumberField
+            </Typography>{' '}
+            with a stepper,it's strongly recommended to control its{' '}
+            <Typography isBold component="span">
+              min-width
+            </Typography>{' '}
+            CSS property using the{' '}
+            <Typography isBold component="span">
+              sx prop
+            </Typography>{' '}
+            and the{' '}
+            <Typography isBold component="span">
+              wrapper
+            </Typography>{' '}
+            (see example above).
+          </p>
+        </Stack>
+      </>
     );
   },
   name: 'All avalable NumberFields',

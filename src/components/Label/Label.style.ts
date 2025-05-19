@@ -39,7 +39,6 @@ export const labelStyle =
       margin: auto;
       white-space: nowrap;
       overflow: hidden;
-
       ${generateStylesFromTokens(theme.tokens.typography.get(typography))}
     `;
   };

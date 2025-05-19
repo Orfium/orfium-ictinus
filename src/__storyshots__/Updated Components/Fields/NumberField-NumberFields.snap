@@ -395,6 +395,47 @@
   letter-spacing: 0.015625rem;
 }
 
+.emotion-26 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #8EAAEC;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: 1.75rem;
+  min-width: 5.3125rem;
+  background-color: rgba(200,206,255,0.30);
+}
+
+.emotion-26:hover {
+  background-color: rgba(200,206,255,0.20);
+}
+
+.emotion-26:focus-within {
+  box-shadow: 0 0 0 0.125rem #175BF5;
+  background-color: rgba(200,206,255,0.30);
+}
+
+.emotion-29 {
+  width: calc(100% - 1.25rem);
+}
+
 .emotion-32 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -408,6 +449,16 @@
   width: 1.25rem;
   top: -0.5rem;
   z-index: 1;
+}
+
+.emotion-40 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.375rem;
+  font-size: 1rem;
+  letter-spacing: 0.015625rem;
+  font-weight: 700;
+  color: #111530;
 }
 
 <div>
@@ -640,7 +691,7 @@
     >
       <div>
         <div
-          class="emotion-20"
+          class="emotion-26"
         >
           <div
             class="emotion-2"
@@ -653,7 +704,7 @@
                 data-rac=""
               >
                 <div
-                  class="emotion-10"
+                  class="emotion-29"
                   data-rac=""
                   role="group"
                 >
@@ -751,6 +802,49 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      style="margin: 5px;"
+    >
+      <p>
+        * In the case of a compact-sized
+         
+        <span
+          class="emotion-40"
+        >
+          NumberField
+        </span>
+         
+        with a stepper,it's strongly recommended to control its
+         
+        <span
+          class="emotion-40"
+        >
+          min-width
+        </span>
+         
+        CSS property using the
+         
+        <span
+          class="emotion-40"
+        >
+          sx prop
+        </span>
+         
+        and the
+         
+        <span
+          class="emotion-40"
+        >
+          wrapper
+        </span>
+         
+        (see example above).
+      </p>
     </div>
   </div>
 </div>
