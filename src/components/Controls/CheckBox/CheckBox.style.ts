@@ -2,21 +2,14 @@ import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import type { Theme } from 'theme';
 
-import type { CheckBoxProps } from './CheckBox';
 import type { LabelConfig } from 'components/Controls/Controls.types';
+import type { CheckBoxProps } from './CheckBox';
 
 export const checkboxWrapperStyles =
-  ({
-    placement = 'right',
-    sx,
-    isDisabled,
-  }: Pick<LabelConfig, 'placement' | 'sx'> & Pick<CheckBoxProps, 'isDisabled'>) =>
+  ({ sx, isDisabled }: Pick<LabelConfig, 'sx'> & Pick<CheckBoxProps, 'isDisabled'>) =>
   (theme: Theme): SerializedStyles => {
     return css`
-      display: flex;
-      flex-direction: ${placement === 'right' ? 'row' : 'row-reverse'};
-      align-items: center;
-      gap: ${theme.dimension.spacing.get('md')};
+      width: fit-content;
 
       ${isDisabled &&
       `
@@ -36,9 +29,8 @@ export const checkboxStyles =
       cursor: pointer;
       position: relative;
 
-      & > div {
+      [data-role='checkbox-icon'] > div {
         transition: all 0.2s;
-
         width: ${theme.dimension.sizing.get('icon.md')};
         height: ${theme.dimension.sizing.get('icon.md')};
         align-items: center;
@@ -54,17 +46,19 @@ export const checkboxStyles =
         opacity: 0;
       }
 
-      &:hover,
+      &[data-hovered='true'],
       &[data-focus-visible='true'] {
-        transition: all 0.2s;
-        background: ${theme.tokens.state.get('backgroundColor.hover')};
-        box-shadow: 0px 0px 0px 8px ${theme.tokens.state.get('backgroundColor.hover')};
-        border-radius: 100%;
+        [data-role='checkbox-icon'] {
+          transition: all 0.2s;
+          background: ${theme.tokens.state.get('backgroundColor.hover')};
+          box-shadow: 0px 0px 0px 8px ${theme.tokens.state.get('backgroundColor.hover')};
+          border-radius: 100%;
+        }
       }
 
       &[data-selected='true'],
       &[data-indeterminate='true'] {
-        & > div {
+        [data-role='checkbox-icon'] > div {
           transition: all 0.2s;
 
           border-color: ${theme.tokens.colors.get('borderColor.decorative.transparent')};

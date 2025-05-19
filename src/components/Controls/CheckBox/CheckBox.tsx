@@ -4,10 +4,11 @@ import type { CheckboxAria } from 'react-aria';
 import { Checkbox as ReactAriaCheckbox } from 'react-aria-components';
 import type { TestProps } from 'utils/types';
 
-import { checkboxStyles, checkboxWrapperStyles } from './CheckBox.style';
-import ControlLabel from 'components/Controls/ControlLabel';
 import type { LabelConfig } from 'components/Controls/Controls.types';
 import Icon from 'components/Icon';
+import Box from '~/components/Box';
+import { ControlHelpText, ControlLabelText } from '../ControlLabel';
+import { checkboxStyles, checkboxWrapperStyles } from './CheckBox.style';
 
 export type CheckBoxProps = Partial<CheckboxAria> & {
   /** Id property of the checkbox input */
@@ -40,7 +41,7 @@ const CheckBox = React.forwardRef<HTMLLabelElement, CheckBoxProps>((props, ref) 
   const theme = useTheme();
 
   return (
-    <div css={checkboxWrapperStyles({ placement, sx, isDisabled })}>
+    <div css={checkboxWrapperStyles({ sx, isDisabled })}>
       <ReactAriaCheckbox
         id={id}
         css={checkboxStyles()}
@@ -52,24 +53,43 @@ const CheckBox = React.forwardRef<HTMLLabelElement, CheckBoxProps>((props, ref) 
         ref={ref}
         data-testid={`${dataTestPrefixId}${value ? `_${value}` : ''}_checkbox`}
       >
-        <Icon
-          name={isIndeterminate ? 'minus' : 'check'}
-          size={theme.dimension.sizing.get('icon.md')}
-          color={theme.tokens.colors.get('textColor.inverted.primary')}
-          dataTestId={`${dataTestPrefixId}${value ? `_${value}` : ''}_${
-            isIndeterminate ? 'minus' : isSelected ? 'checkmark' : 'unselected'
-          }`}
-        />
-      </ReactAriaCheckbox>
-      {children && (
-        <ControlLabel
-          size={size}
-          helpText={helpText}
-          dataTestPrefixId={`${dataTestPrefixId}_checkbox_${value?.split(' ').join('_')}`}
+        <Box
+          display="flex"
+          alignItems="center"
+          gap="5"
+          flexDirection={placement === 'left' ? 'row-reverse' : 'row'}
+          justifyContent={placement === 'left' ? 'space-between' : 'unset'}
         >
-          {children}
-        </ControlLabel>
-      )}
+          <Box data-role="checkbox-icon">
+            <Icon
+              name={isIndeterminate ? 'minus' : 'check'}
+              size={theme.dimension.sizing.get('icon.md')}
+              color={theme.tokens.colors.get('textColor.inverted.primary')}
+              dataTestId={`${dataTestPrefixId}${value ? `_${value}` : ''}_${
+                isIndeterminate ? 'minus' : isSelected ? 'checkmark' : 'unselected'
+              }`}
+            />
+          </Box>
+          {children && (
+            <ControlLabelText
+              size={size}
+              dataTestPrefixId={`${dataTestPrefixId}_checkbox_${value?.split(' ').join('_')}`}
+            >
+              {children}
+            </ControlLabelText>
+          )}
+        </Box>
+      </ReactAriaCheckbox>
+      <Box {...(placement === 'left' ? { pr: '9' } : { pl: '9' })}>
+        {helpText && (
+          <ControlHelpText
+            helpText={helpText}
+            dataTestPrefixId={`${dataTestPrefixId}_checkbox_${value?.split(' ').join('_')}`}
+          >
+            {helpText}
+          </ControlHelpText>
+        )}
+      </Box>
     </div>
   );
 });
