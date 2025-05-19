@@ -5,7 +5,6 @@ import NumberField from './NumberField';
 export default {
   title: 'Updated Components/Fields/NumberField',
   component: NumberField,
-
   parameters: {
     design: [
       {
@@ -14,14 +13,12 @@ export default {
       },
     ],
   },
-
   args: {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
     hintMessage: 'Hint Message',
     label: 'NumberField',
   },
-
   argTypes: {
     status: { type: 'select', options: ['normal', 'error', 'read-only'] },
   },
@@ -53,9 +50,7 @@ export const NumberFieldSizes = {
       <NumberField label="Compact" size="compact" />
     </Stack>
   ),
-
   name: 'NumberField sizes',
-
   parameters: {
     controls: { disable: true },
   },
@@ -74,9 +69,7 @@ export const NumberFieldWithPlaceholder = {
       />
     </Stack>
   ),
-
   name: 'NumberField with placeholder',
-
   parameters: {
     controls: { disable: true },
   },
@@ -105,9 +98,7 @@ export const NumberFieldWithFormatOptions = {
       </Stack>
     );
   },
-
   name: 'NumberField with format options',
-
   parameters: {
     controls: { include: ['minimumFractionDigits', 'maximumFractionDigits'] },
   },
@@ -123,9 +114,7 @@ export const NumberFieldWithStepper = {
       </Stack>
     );
   },
-
   name: 'NumberField with Stepper',
-
   parameters: {
     controls: { include: ['step'] },
   },
@@ -168,7 +157,6 @@ export const NumberFieldWithMinAndMaxValues = {
       </Stack>
     );
   },
-
   name: 'NumberField with min/max values',
   parameters: {
     controls: { include: ['minValue', 'maxValue'] },
@@ -232,7 +220,6 @@ export const NumberFieldStatuses = {
       </>
     );
   },
-
   name: 'NumberField statuses',
   parameters: {
     controls: { include: ['hintMessage'] },
@@ -261,7 +248,7 @@ export const DisabledNumberField = {
       />
     </Stack>
   ),
-  name: ' Disabled NumberField',
+  name: 'Disabled NumberField',
   parameters: {
     controls: { disable: true },
   },
@@ -306,9 +293,7 @@ export const Playground = {
       </Stack>
     );
   },
-
   name: 'Playground',
-
   parameters: {
     controls: {
       include: [
