@@ -14,18 +14,9 @@
 }
 
 .emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 0.75rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .emotion-2 {
@@ -34,7 +25,7 @@
   position: relative;
 }
 
-.emotion-2>div {
+.emotion-2 [data-role='checkbox-icon']>div {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   width: 1.25rem;
@@ -53,8 +44,8 @@
   opacity: 0;
 }
 
-.emotion-2:hover,
-.emotion-2[data-focus-visible='true'] {
+.emotion-2[data-hovered='true'] [data-role='checkbox-icon'],
+.emotion-2[data-focus-visible='true'] [data-role='checkbox-icon'] {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   background: rgba(200,206,255,0.20);
@@ -62,8 +53,8 @@
   border-radius: 100%;
 }
 
-.emotion-2[data-selected='true']>div,
-.emotion-2[data-indeterminate='true']>div {
+.emotion-2[data-selected='true'] [data-role='checkbox-icon']>div,
+.emotion-2[data-indeterminate='true'] [data-role='checkbox-icon']>div {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   border-color: rgba(200,206,255,0);
@@ -89,6 +80,25 @@
 }
 
 .emotion-3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.75rem;
+  -webkit-box-pack: unset;
+  -ms-flex-pack: unset;
+  -webkit-justify-content: unset;
+  justify-content: unset;
+}
+
+.emotion-7 {
   width: 1.25rem;
   height: 1.25rem;
   display: -webkit-box;
@@ -97,33 +107,26 @@
   display: flex;
 }
 
-.emotion-4 {
+.emotion-8 {
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-4 path {
+.emotion-8 path {
   fill: #ffffff!important;
 }
 
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.125rem;
-}
-
-.emotion-6 {
+.emotion-9 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
   color: #111530;
+}
+
+.emotion-10 {
+  padding-left: 2rem;
 }
 
 <div>
@@ -156,32 +159,40 @@
                 />
               </span>
               <div
-                class="emotion-3"
-                data-testid="ictinus_select all_unselected"
+                class="emotion-3 emotion-4"
               >
-                <svg
-                  class="emotion-4"
-                  fill="none"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
+                <div
+                  class="emotion-5 emotion-4"
+                  data-role="checkbox-icon"
                 >
-                  <path
-                    d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                    fill="#6265AD"
-                  />
-                </svg>
+                  <div
+                    class="emotion-7"
+                    data-testid="ictinus_select all_unselected"
+                  >
+                    <svg
+                      class="emotion-8"
+                      fill="none"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
+                        fill="#6265AD"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="emotion-9"
+                  data-testid="ictinus_checkbox_select_all_label"
+                >
+                  Select All
+                </div>
               </div>
             </label>
             <div
-              class="emotion-5"
-            >
-              <div
-                class="emotion-6"
-                data-testid="ictinus_checkbox_select_all_label"
-              >
-                Select All
-              </div>
-            </div>
+              class="emotion-10 emotion-4"
+            />
           </div>
         </div>
         <div
@@ -206,32 +217,40 @@
                 />
               </span>
               <div
-                class="emotion-3"
-                data-testid="ictinus_option 1_unselected"
+                class="emotion-3 emotion-4"
               >
-                <svg
-                  class="emotion-4"
-                  fill="none"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
+                <div
+                  class="emotion-5 emotion-4"
+                  data-role="checkbox-icon"
                 >
-                  <path
-                    d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                    fill="#6265AD"
-                  />
-                </svg>
+                  <div
+                    class="emotion-7"
+                    data-testid="ictinus_option 1_unselected"
+                  >
+                    <svg
+                      class="emotion-8"
+                      fill="none"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
+                        fill="#6265AD"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="emotion-9"
+                  data-testid="ictinus_checkbox_option_1_label"
+                >
+                  Option 1
+                </div>
               </div>
             </label>
             <div
-              class="emotion-5"
-            >
-              <div
-                class="emotion-6"
-                data-testid="ictinus_checkbox_option_1_label"
-              >
-                Option 1
-              </div>
-            </div>
+              class="emotion-10 emotion-4"
+            />
           </div>
           <div
             class="emotion-1"
@@ -252,32 +271,40 @@
                 />
               </span>
               <div
-                class="emotion-3"
-                data-testid="ictinus_option 2_unselected"
+                class="emotion-3 emotion-4"
               >
-                <svg
-                  class="emotion-4"
-                  fill="none"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
+                <div
+                  class="emotion-5 emotion-4"
+                  data-role="checkbox-icon"
                 >
-                  <path
-                    d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                    fill="#6265AD"
-                  />
-                </svg>
+                  <div
+                    class="emotion-7"
+                    data-testid="ictinus_option 2_unselected"
+                  >
+                    <svg
+                      class="emotion-8"
+                      fill="none"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
+                        fill="#6265AD"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="emotion-9"
+                  data-testid="ictinus_checkbox_option_2_label"
+                >
+                  Option 2
+                </div>
               </div>
             </label>
             <div
-              class="emotion-5"
-            >
-              <div
-                class="emotion-6"
-                data-testid="ictinus_checkbox_option_2_label"
-              >
-                Option 2
-              </div>
-            </div>
+              class="emotion-10 emotion-4"
+            />
           </div>
         </div>
       </div>

@@ -14,6 +14,10 @@
 }
 
 .emotion-1 {
+  cursor: pointer;
+}
+
+.emotion-1>div>div:first-of-type {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -27,7 +31,6 @@
   align-items: center;
   gap: 0.75rem;
   position: relative;
-  cursor: pointer;
 }
 
 .emotion-1 .bar {
@@ -81,17 +84,21 @@
 }
 
 .emotion-2 {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.125rem;
+  gap: 0.75rem;
+  -webkit-box-pack: unset;
+  -ms-flex-pack: unset;
+  -webkit-justify-content: unset;
+  justify-content: unset;
 }
 
-.emotion-3 {
+.emotion-6 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -100,7 +107,11 @@
   color: #111530;
 }
 
-.emotion-4 {
+.emotion-7 {
+  padding-left: 3rem;
+}
+
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -114,12 +125,12 @@
   flex-wrap: wrap;
 }
 
-.emotion-7 {
+.emotion-15 {
   font-family: Roboto;
   font-weight: 700;
-  line-height: 1.75rem;
-  font-size: 1.25rem;
-  letter-spacing: 0rem;
+  line-height: 1.375rem;
+  font-size: 1rem;
+  letter-spacing: 0.00625rem;
   color: #111530;
 }
 
@@ -130,76 +141,94 @@
     <div
       style="margin: 5px;"
     >
-      <label
-        class="emotion-1"
-        data-rac=""
-        data-testid="ictinus_switch"
-      >
-        <span
-          style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+      <div>
+        <label
+          class="emotion-1"
+          data-rac=""
+          data-testid="ictinus_switch"
         >
-          <input
-            role="switch"
-            tabindex="0"
-            type="checkbox"
-          />
-        </span>
-        <div
-          class="bar"
-        />
-        <div
-          class="indicator"
-        />
-        <div
-          class="emotion-2"
-        >
-          <div
-            class="emotion-3"
-            data-testid="ictinus_switch_undefined_label"
+          <span
+            style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
           >
-            Normal Label
+            <input
+              role="switch"
+              tabindex="0"
+              type="checkbox"
+            />
+          </span>
+          <div
+            class="emotion-2 emotion-3"
+          >
+            <div
+              class="emotion-4 emotion-3"
+            >
+              <div
+                class="bar"
+              />
+              <div
+                class="indicator"
+              />
+            </div>
+            <div
+              class="emotion-6"
+              data-testid="ictinus_switch_undefined_label"
+            >
+              Normal Label
+            </div>
           </div>
-        </div>
-      </label>
+        </label>
+        <div
+          class="emotion-7 emotion-3"
+        />
+      </div>
     </div>
   </div>
   <div
-    class="emotion-4"
+    class="emotion-9"
   >
     <div
       style="margin: 5px;"
     >
-      <label
-        class="emotion-1"
-        data-rac=""
-        data-testid="ictinus_switch"
-      >
-        <span
-          style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+      <div>
+        <label
+          class="emotion-1"
+          data-rac=""
+          data-testid="ictinus_switch"
         >
-          <input
-            role="switch"
-            tabindex="0"
-            type="checkbox"
-          />
-        </span>
-        <div
-          class="bar"
-        />
-        <div
-          class="indicator"
-        />
-        <div
-          class="emotion-2"
-        >
-          <div
-            class="emotion-7"
-            data-testid="ictinus_switch_undefined_label"
+          <span
+            style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
           >
-            Large Label
+            <input
+              role="switch"
+              tabindex="0"
+              type="checkbox"
+            />
+          </span>
+          <div
+            class="emotion-2 emotion-3"
+          >
+            <div
+              class="emotion-4 emotion-3"
+            >
+              <div
+                class="bar"
+              />
+              <div
+                class="indicator"
+              />
+            </div>
+            <div
+              class="emotion-15"
+              data-testid="ictinus_switch_undefined_label"
+            >
+              Large Label
+            </div>
           </div>
-        </div>
-      </label>
+        </label>
+        <div
+          class="emotion-7 emotion-3"
+        />
+      </div>
     </div>
   </div>
 </div>

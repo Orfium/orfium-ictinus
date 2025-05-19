@@ -21,18 +21,9 @@
 }
 
 .emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 0.75rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .emotion-4 {
@@ -41,7 +32,7 @@
   position: relative;
 }
 
-.emotion-4>div {
+.emotion-4 [data-role='checkbox-icon']>div {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   width: 1.25rem;
@@ -60,8 +51,8 @@
   opacity: 0;
 }
 
-.emotion-4:hover,
-.emotion-4[data-focus-visible='true'] {
+.emotion-4[data-hovered='true'] [data-role='checkbox-icon'],
+.emotion-4[data-focus-visible='true'] [data-role='checkbox-icon'] {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   background: rgba(200,206,255,0.20);
@@ -69,8 +60,8 @@
   border-radius: 100%;
 }
 
-.emotion-4[data-selected='true']>div,
-.emotion-4[data-indeterminate='true']>div {
+.emotion-4[data-selected='true'] [data-role='checkbox-icon']>div,
+.emotion-4[data-indeterminate='true'] [data-role='checkbox-icon']>div {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   border-color: rgba(200,206,255,0);
@@ -96,6 +87,25 @@
 }
 
 .emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.75rem;
+  -webkit-box-pack: unset;
+  -ms-flex-pack: unset;
+  -webkit-justify-content: unset;
+  justify-content: unset;
+}
+
+.emotion-9 {
   width: 1.25rem;
   height: 1.25rem;
   display: -webkit-box;
@@ -104,34 +114,38 @@
   display: flex;
 }
 
-.emotion-6 {
+.emotion-10 {
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-6 path {
+.emotion-10 path {
   fill: #ffffff!important;
 }
 
-.emotion-7 {
+.emotion-11 {
+  padding-left: 2rem;
+}
+
+.emotion-13 {
   position: relative;
   text-align: left;
   padding: 0.25rem 0.5rem;
 }
 
-.emotion-8 {
+.emotion-14 {
   position: relative;
   text-align: right;
   padding: 0.25rem 0.5rem;
 }
 
-.emotion-9 {
+.emotion-15 {
   width: 100%;
   border-collapse: collapse;
   table-layout: fixed;
 }
 
-.emotion-10 {
+.emotion-16 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   padding-top: 1rem;
@@ -141,11 +155,11 @@
   border-bottom-color: rgba(200,206,255,0.70);
 }
 
-.emotion-10 th:last-child {
+.emotion-16 th:last-child {
   padding-right: 1rem;
 }
 
-.emotion-12 {
+.emotion-18 {
   position: relative;
   text-align: left;
   padding: 0.25rem 0.5rem;
@@ -156,12 +170,12 @@
   font-size: 0.875rem;
 }
 
-.emotion-13 {
+.emotion-19 {
   font-weight: 500;
   color: #52567a;
 }
 
-.emotion-18 {
+.emotion-24 {
   position: relative;
   text-align: right;
   padding: 0.25rem 0.5rem;
@@ -172,34 +186,34 @@
   font-size: 0.875rem;
 }
 
-.emotion-20 {
+.emotion-26 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   border-bottom: 0.0625rem solid rgba(200,206,255,0.70);
 }
 
-.emotion-20 td:first-of-type {
+.emotion-26 td:first-of-type {
   padding-left: 1rem;
 }
 
-.emotion-20 td:last-child {
+.emotion-26 td:last-child {
   padding-right: 1rem;
 }
 
-.emotion-26 {
+.emotion-38 {
   position: relative;
   text-align: left;
   padding: 0.25rem 0.5rem;
   width: initial;
 }
 
-.emotion-27 {
+.emotion-39 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.emotion-32 {
+.emotion-44 {
   position: relative;
   text-align: left;
   padding: 0.25rem 0.5rem;
@@ -207,7 +221,7 @@
   border-left: 1px solid rgba(200,206,255,0.70);
 }
 
-.emotion-35 {
+.emotion-47 {
   position: relative;
   text-align: right;
   padding: 0.25rem 0.5rem;
@@ -245,32 +259,44 @@
                 />
               </span>
               <div
-                class="emotion-5"
-                data-testid="ictinus_unselected"
+                class="emotion-5 emotion-6"
               >
-                <svg
-                  class="emotion-6"
-                  fill="none"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
+                <div
+                  class="emotion-7 emotion-6"
+                  data-role="checkbox-icon"
                 >
-                  <path
-                    d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                    fill="#6265AD"
-                  />
-                </svg>
+                  <div
+                    class="emotion-9"
+                    data-testid="ictinus_unselected"
+                  >
+                    <svg
+                      class="emotion-10"
+                      fill="none"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
+                        fill="#6265AD"
+                      />
+                    </svg>
+                  </div>
+                </div>
               </div>
             </label>
+            <div
+              class="emotion-11 emotion-6"
+            />
           </div>
         </th>
         <td
-          class="emotion-7"
+          class="emotion-13"
           data-testid="table_row_0_cell_1"
         >
           topLeftText
         </td>
         <td
-          class="emotion-8"
+          class="emotion-14"
           colspan="3"
           data-testid="table_row_0_cell_2"
         >
@@ -284,51 +310,51 @@
     </thead>
   </table>
   <table
-    class="emotion-9"
+    class="emotion-15"
   >
     <thead>
       <tr
-        class="emotion-10"
+        class="emotion-16"
       >
         <th
           class="emotion-2"
         />
         <th
-          class="emotion-12"
+          class="emotion-18"
           data-testid="undefined_title"
         >
           <div
-            class="emotion-13"
+            class="emotion-19"
           >
             Title
           </div>
         </th>
         <th
-          class="emotion-12"
+          class="emotion-18"
           data-testid="undefined_name"
         >
           <div
-            class="emotion-13"
+            class="emotion-19"
           >
             Name
           </div>
         </th>
         <th
-          class="emotion-12"
+          class="emotion-18"
           data-testid="undefined_surname"
         >
           <div
-            class="emotion-13"
+            class="emotion-19"
           >
             Surname
           </div>
         </th>
         <th
-          class="emotion-18"
+          class="emotion-24"
           data-testid="undefined_age"
         >
           <div
-            class="emotion-13"
+            class="emotion-19"
           >
             Age
           </div>
@@ -337,7 +363,7 @@
     </thead>
     <tbody>
       <tr
-        class="emotion-20"
+        class="emotion-26"
       >
         <th
           class="emotion-2"
@@ -362,31 +388,43 @@
                   />
                 </span>
                 <div
-                  class="emotion-5"
-                  data-testid="row-check_unselected"
+                  class="emotion-5 emotion-6"
                 >
-                  <svg
-                    class="emotion-6"
-                    fill="none"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <div
+                    class="emotion-7 emotion-6"
+                    data-role="checkbox-icon"
                   >
-                    <path
-                      d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                      fill="#6265AD"
-                    />
-                  </svg>
+                    <div
+                      class="emotion-9"
+                      data-testid="row-check_unselected"
+                    >
+                      <svg
+                        class="emotion-10"
+                        fill="none"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
+                          fill="#6265AD"
+                        />
+                      </svg>
+                    </div>
+                  </div>
                 </div>
               </label>
+              <div
+                class="emotion-11 emotion-6"
+              />
             </div>
           </div>
         </th>
         <td
-          class="emotion-26"
+          class="emotion-38"
           data-testid="table_row_1_cell_1"
         >
           <div
-            class="emotion-27 emotion-28"
+            class="emotion-39 emotion-40"
           >
             <span
               data-column="Title"
@@ -396,11 +434,11 @@
           </div>
         </td>
         <td
-          class="emotion-26"
+          class="emotion-38"
           data-testid="table_row_1_cell_2"
         >
           <div
-            class="emotion-27 emotion-28"
+            class="emotion-39 emotion-40"
           >
             <span
               data-column="Name"
@@ -410,11 +448,11 @@
           </div>
         </td>
         <td
-          class="emotion-32"
+          class="emotion-44"
           data-testid="table_row_1_cell_3"
         >
           <div
-            class="emotion-27 emotion-28"
+            class="emotion-39 emotion-40"
           >
             <span
               data-column="Surname"
@@ -424,11 +462,11 @@
           </div>
         </td>
         <td
-          class="emotion-35"
+          class="emotion-47"
           data-testid="table_row_1_cell_4"
         >
           <div
-            class="emotion-27 emotion-28"
+            class="emotion-39 emotion-40"
           >
             <span
               data-column="Age"
@@ -439,7 +477,7 @@
         </td>
       </tr>
       <tr
-        class="emotion-20"
+        class="emotion-26"
       >
         <th
           class="emotion-2"
@@ -464,31 +502,43 @@
                   />
                 </span>
                 <div
-                  class="emotion-5"
-                  data-testid="row-check_unselected"
+                  class="emotion-5 emotion-6"
                 >
-                  <svg
-                    class="emotion-6"
-                    fill="none"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <div
+                    class="emotion-7 emotion-6"
+                    data-role="checkbox-icon"
                   >
-                    <path
-                      d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                      fill="#6265AD"
-                    />
-                  </svg>
+                    <div
+                      class="emotion-9"
+                      data-testid="row-check_unselected"
+                    >
+                      <svg
+                        class="emotion-10"
+                        fill="none"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
+                          fill="#6265AD"
+                        />
+                      </svg>
+                    </div>
+                  </div>
                 </div>
               </label>
+              <div
+                class="emotion-11 emotion-6"
+              />
             </div>
           </div>
         </th>
         <td
-          class="emotion-26"
+          class="emotion-38"
           data-testid="table_row_2_cell_1"
         >
           <div
-            class="emotion-27 emotion-28"
+            class="emotion-39 emotion-40"
           >
             <span
               data-column="Title"
@@ -498,11 +548,11 @@
           </div>
         </td>
         <td
-          class="emotion-26"
+          class="emotion-38"
           data-testid="table_row_2_cell_2"
         >
           <div
-            class="emotion-27 emotion-28"
+            class="emotion-39 emotion-40"
           >
             <span
               data-column="Name"
@@ -512,11 +562,11 @@
           </div>
         </td>
         <td
-          class="emotion-32"
+          class="emotion-44"
           data-testid="table_row_2_cell_3"
         >
           <div
-            class="emotion-27 emotion-28"
+            class="emotion-39 emotion-40"
           >
             <span
               data-column="Surname"
@@ -526,11 +576,11 @@
           </div>
         </td>
         <td
-          class="emotion-35"
+          class="emotion-47"
           data-testid="table_row_2_cell_4"
         >
           <div
-            class="emotion-27 emotion-28"
+            class="emotion-39 emotion-40"
           >
             <span
               data-column="Age"
@@ -541,7 +591,7 @@
         </td>
       </tr>
       <tr
-        class="emotion-20"
+        class="emotion-26"
       >
         <th
           class="emotion-2"
@@ -566,31 +616,43 @@
                   />
                 </span>
                 <div
-                  class="emotion-5"
-                  data-testid="row-check_unselected"
+                  class="emotion-5 emotion-6"
                 >
-                  <svg
-                    class="emotion-6"
-                    fill="none"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <div
+                    class="emotion-7 emotion-6"
+                    data-role="checkbox-icon"
                   >
-                    <path
-                      d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                      fill="#6265AD"
-                    />
-                  </svg>
+                    <div
+                      class="emotion-9"
+                      data-testid="row-check_unselected"
+                    >
+                      <svg
+                        class="emotion-10"
+                        fill="none"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
+                          fill="#6265AD"
+                        />
+                      </svg>
+                    </div>
+                  </div>
                 </div>
               </label>
+              <div
+                class="emotion-11 emotion-6"
+              />
             </div>
           </div>
         </th>
         <td
-          class="emotion-26"
+          class="emotion-38"
           data-testid="table_row_3_cell_1"
         >
           <div
-            class="emotion-27 emotion-28"
+            class="emotion-39 emotion-40"
           >
             <span
               data-column="Title"
@@ -600,11 +662,11 @@
           </div>
         </td>
         <td
-          class="emotion-26"
+          class="emotion-38"
           data-testid="table_row_3_cell_2"
         >
           <div
-            class="emotion-27 emotion-28"
+            class="emotion-39 emotion-40"
           >
             <span
               data-column="Name"
@@ -614,11 +676,11 @@
           </div>
         </td>
         <td
-          class="emotion-32"
+          class="emotion-44"
           data-testid="table_row_3_cell_3"
         >
           <div
-            class="emotion-27 emotion-28"
+            class="emotion-39 emotion-40"
           >
             <span
               data-column="Surname"
@@ -628,11 +690,11 @@
           </div>
         </td>
         <td
-          class="emotion-35"
+          class="emotion-47"
           data-testid="table_row_3_cell_4"
         >
           <div
-            class="emotion-27 emotion-28"
+            class="emotion-39 emotion-40"
           >
             <span
               data-column="Age"
@@ -643,7 +705,7 @@
         </td>
       </tr>
       <tr
-        class="emotion-20"
+        class="emotion-26"
       >
         <th
           class="emotion-2"
@@ -668,31 +730,43 @@
                   />
                 </span>
                 <div
-                  class="emotion-5"
-                  data-testid="row-check_unselected"
+                  class="emotion-5 emotion-6"
                 >
-                  <svg
-                    class="emotion-6"
-                    fill="none"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <div
+                    class="emotion-7 emotion-6"
+                    data-role="checkbox-icon"
                   >
-                    <path
-                      d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                      fill="#6265AD"
-                    />
-                  </svg>
+                    <div
+                      class="emotion-9"
+                      data-testid="row-check_unselected"
+                    >
+                      <svg
+                        class="emotion-10"
+                        fill="none"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
+                          fill="#6265AD"
+                        />
+                      </svg>
+                    </div>
+                  </div>
                 </div>
               </label>
+              <div
+                class="emotion-11 emotion-6"
+              />
             </div>
           </div>
         </th>
         <td
-          class="emotion-26"
+          class="emotion-38"
           data-testid="table_row_4_cell_1"
         >
           <div
-            class="emotion-27 emotion-28"
+            class="emotion-39 emotion-40"
           >
             <span
               data-column="Title"
@@ -702,12 +776,12 @@
           </div>
         </td>
         <td
-          class="emotion-26"
+          class="emotion-38"
           colspan="2"
           data-testid="table_row_4_cell_2"
         >
           <div
-            class="emotion-27 emotion-28"
+            class="emotion-39 emotion-40"
           >
             <span
               data-column="Name"
@@ -717,11 +791,11 @@
           </div>
         </td>
         <td
-          class="emotion-35"
+          class="emotion-47"
           data-testid="table_row_4_cell_3"
         >
           <div
-            class="emotion-27 emotion-28"
+            class="emotion-39 emotion-40"
           >
             <span
               data-column="Surname"

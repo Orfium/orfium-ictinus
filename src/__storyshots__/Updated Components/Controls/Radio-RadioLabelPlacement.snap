@@ -21,6 +21,10 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: unset;
+  -ms-flex-pack: unset;
+  -webkit-justify-content: unset;
+  justify-content: unset;
   gap: 0.75rem;
   position: relative;
   cursor: pointer;
@@ -78,17 +82,6 @@
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.125rem;
-}
-
-.emotion-3 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -97,7 +90,11 @@
   color: #111530;
 }
 
-.emotion-11 label {
+.emotion-3 {
+  padding-left: 2rem;
+}
+
+.emotion-14 label {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -109,12 +106,15 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
   gap: 0.75rem;
   position: relative;
   cursor: pointer;
 }
 
-.emotion-11 label:before {
+.emotion-14 label:before {
   content: '';
   display: inline-block;
   width: 1.25rem;
@@ -127,22 +127,22 @@
   background: rgba(200,206,255,0);
 }
 
-.emotion-11 label:hover::before {
+.emotion-14 label:hover::before {
   background: rgba(200,206,255,0.20);
   box-shadow: 0px 0px 0px 8px rgba(200,206,255,0.20);
 }
 
-.emotion-11 label[data-selected='true']:before {
+.emotion-14 label[data-selected='true']:before {
   border-color: #175BF5;
   border-radius: 50%;
 }
 
-.emotion-11 label[data-selected='true']:hover::before {
+.emotion-14 label[data-selected='true']:hover::before {
   background: none;
   box-shadow: none;
 }
 
-.emotion-11 label[data-selected='true']:after {
+.emotion-14 label[data-selected='true']:after {
   content: '';
   display: block;
   position: absolute;
@@ -155,14 +155,18 @@
   animation: circle 0.15s ease-in-out;
 }
 
-.emotion-11 label[data-disabled='true'] {
+.emotion-14 label[data-disabled='true'] {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-11 label[data-disabled='true']:hover::before {
+.emotion-14 label[data-disabled='true']:hover::before {
   background: none;
   box-shadow: none;
+}
+
+.emotion-16 {
+  padding-right: 2rem;
 }
 
 <div>
@@ -196,15 +200,14 @@
           </div>
           <div
             class="emotion-2"
+            data-testid="undefined_radio_option_1_label"
           >
-            <div
-              class="emotion-3"
-              data-testid="undefined_radio_option_1_label"
-            >
-              Right Label 1
-            </div>
+            Right Label 1
           </div>
         </label>
+        <div
+          class="emotion-3 emotion-4"
+        />
       </div>
       <div
         class="emotion-1"
@@ -226,15 +229,14 @@
           </div>
           <div
             class="emotion-2"
+            data-testid="undefined_radio_option_2_label"
           >
-            <div
-              class="emotion-3"
-              data-testid="undefined_radio_option_2_label"
-            >
-              Right Label 2
-            </div>
+            Right Label 2
           </div>
         </label>
+        <div
+          class="emotion-3 emotion-4"
+        />
       </div>
       <div
         class="emotion-1"
@@ -256,15 +258,14 @@
           </div>
           <div
             class="emotion-2"
+            data-testid="undefined_radio_option_3_label"
           >
-            <div
-              class="emotion-3"
-              data-testid="undefined_radio_option_3_label"
-            >
-              Right Label 3
-            </div>
+            Right Label 3
           </div>
         </label>
+        <div
+          class="emotion-3 emotion-4"
+        />
       </div>
     </div>
     <div
@@ -275,7 +276,7 @@
       role="radiogroup"
     >
       <div
-        class="emotion-11"
+        class="emotion-14"
         data-testid="undefined_radio_option_1_container"
       >
         <label
@@ -294,18 +295,17 @@
           </div>
           <div
             class="emotion-2"
+            data-testid="undefined_radio_option_1_label"
           >
-            <div
-              class="emotion-3"
-              data-testid="undefined_radio_option_1_label"
-            >
-              Left Label 1
-            </div>
+            Left Label 1
           </div>
         </label>
+        <div
+          class="emotion-16 emotion-4"
+        />
       </div>
       <div
-        class="emotion-11"
+        class="emotion-14"
         data-testid="undefined_radio_option_2_container"
       >
         <label
@@ -324,18 +324,17 @@
           </div>
           <div
             class="emotion-2"
+            data-testid="undefined_radio_option_2_label"
           >
-            <div
-              class="emotion-3"
-              data-testid="undefined_radio_option_2_label"
-            >
-              Left Label 2
-            </div>
+            Left Label 2
           </div>
         </label>
+        <div
+          class="emotion-16 emotion-4"
+        />
       </div>
       <div
-        class="emotion-11"
+        class="emotion-14"
         data-testid="undefined_radio_option_3_container"
       >
         <label
@@ -354,15 +353,14 @@
           </div>
           <div
             class="emotion-2"
+            data-testid="undefined_radio_option_3_label"
           >
-            <div
-              class="emotion-3"
-              data-testid="undefined_radio_option_3_label"
-            >
-              Left Label 3
-            </div>
+            Left Label 3
           </div>
         </label>
+        <div
+          class="emotion-16 emotion-4"
+        />
       </div>
     </div>
   </div>

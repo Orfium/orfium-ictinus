@@ -21,6 +21,10 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: unset;
+  -ms-flex-pack: unset;
+  -webkit-justify-content: unset;
+  justify-content: unset;
   gap: 0.75rem;
   position: relative;
   cursor: pointer;
@@ -78,17 +82,6 @@
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.125rem;
-}
-
-.emotion-3 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -97,13 +90,18 @@
   color: #111530;
 }
 
-.emotion-7 {
+.emotion-3 {
+  padding-left: 2rem;
+}
+
+.emotion-9 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1rem;
   font-size: 0.75rem;
   letter-spacing: 0.015625rem;
   color: #52567a;
+  padding-top: 0.125rem;
 }
 
 <div>
@@ -135,15 +133,14 @@
         </div>
         <div
           class="emotion-2"
+          data-testid="undefined_radio_option_1_label"
         >
-          <div
-            class="emotion-3"
-            data-testid="undefined_radio_option_1_label"
-          >
-            Option 1
-          </div>
+          Option 1
         </div>
       </label>
+      <div
+        class="emotion-3 emotion-4"
+      />
     </div>
     <div
       class="emotion-1"
@@ -166,21 +163,21 @@
         </div>
         <div
           class="emotion-2"
+          data-testid="undefined_radio_option_2_label"
         >
-          <div
-            class="emotion-3"
-            data-testid="undefined_radio_option_2_label"
-          >
-            Option 2
-          </div>
-          <div
-            class="emotion-7"
-            data-testid="undefined_radio_option_2_helpText"
-          >
-            This option is disabled
-          </div>
+          Option 2
         </div>
       </label>
+      <div
+        class="emotion-3 emotion-4"
+      >
+        <div
+          class="emotion-9"
+          data-testid="undefined_radio_option_2_helpText"
+        >
+          This option is disabled
+        </div>
+      </div>
     </div>
     <div
       class="emotion-1"
@@ -203,15 +200,14 @@
         </div>
         <div
           class="emotion-2"
+          data-testid="undefined_radio_option_3_label"
         >
-          <div
-            class="emotion-3"
-            data-testid="undefined_radio_option_3_label"
-          >
-            Option 3
-          </div>
+          Option 3
         </div>
       </label>
+      <div
+        class="emotion-3 emotion-4"
+      />
     </div>
   </div>
 </div>

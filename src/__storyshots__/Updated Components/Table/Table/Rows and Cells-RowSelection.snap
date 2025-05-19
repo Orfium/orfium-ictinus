@@ -203,18 +203,9 @@
 }
 
 .emotion-15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 0.75rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .emotion-16 {
@@ -223,7 +214,7 @@
   position: relative;
 }
 
-.emotion-16>div {
+.emotion-16 [data-role='checkbox-icon']>div {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   width: 1.25rem;
@@ -242,8 +233,8 @@
   opacity: 0;
 }
 
-.emotion-16:hover,
-.emotion-16[data-focus-visible='true'] {
+.emotion-16[data-hovered='true'] [data-role='checkbox-icon'],
+.emotion-16[data-focus-visible='true'] [data-role='checkbox-icon'] {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   background: rgba(200,206,255,0.20);
@@ -251,8 +242,8 @@
   border-radius: 100%;
 }
 
-.emotion-16[data-selected='true']>div,
-.emotion-16[data-indeterminate='true']>div {
+.emotion-16[data-selected='true'] [data-role='checkbox-icon']>div,
+.emotion-16[data-indeterminate='true'] [data-role='checkbox-icon']>div {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   border-color: rgba(200,206,255,0);
@@ -278,6 +269,25 @@
 }
 
 .emotion-17 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.75rem;
+  -webkit-box-pack: unset;
+  -ms-flex-pack: unset;
+  -webkit-justify-content: unset;
+  justify-content: unset;
+}
+
+.emotion-21 {
   width: 1.25rem;
   height: 1.25rem;
   display: -webkit-box;
@@ -286,16 +296,20 @@
   display: flex;
 }
 
-.emotion-18 {
+.emotion-22 {
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-18 path {
+.emotion-22 path {
   fill: #ffffff!important;
 }
 
-.emotion-19 {
+.emotion-23 {
+  padding-left: 2rem;
+}
+
+.emotion-25 {
   width: 25%;
   height: 2.75rem;
   -webkit-align-content: center;
@@ -311,31 +325,31 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-19 [data-header-role='options'],
-.emotion-19 [data-header-role='sorting-button'] {
+.emotion-25 [data-header-role='options'],
+.emotion-25 [data-header-role='sorting-button'] {
   opacity: 0;
 }
 
-.emotion-19:hover [data-header-role='options'],
-.emotion-19:focus-visible [data-header-role='options'],
-.emotion-19:hover [data-header-role='sorting-button'],
-.emotion-19:focus-visible [data-header-role='sorting-button'] {
+.emotion-25:hover [data-header-role='options'],
+.emotion-25:focus-visible [data-header-role='options'],
+.emotion-25:hover [data-header-role='sorting-button'],
+.emotion-25:focus-visible [data-header-role='sorting-button'] {
   opacity: 1;
 }
 
-.emotion-19 button:focus-visible {
+.emotion-25 button:focus-visible {
   opacity: 1;
 }
 
-.emotion-32 {
+.emotion-38 {
   cursor: pointer;
 }
 
-.emotion-32:hover {
+.emotion-38:hover {
   background: rgba(200,206,255,0.20);
 }
 
-.emotion-33 {
+.emotion-39 {
   width: 3.25rem;
   height: 2.75rem;
   padding: 0.5rem 1rem;
@@ -346,11 +360,11 @@
   align-content: center;
 }
 
-.emotion-34 {
+.emotion-40 {
   text-align: left;
 }
 
-.emotion-39 {
+.emotion-51 {
   width: 25%;
   height: 2.75rem;
   padding: 0.5rem 1rem;
@@ -361,7 +375,7 @@
   align-content: center;
 }
 
-.emotion-41 {
+.emotion-53 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -373,7 +387,7 @@
   text-overflow: ellipsis;
 }
 
-.emotion-220 {
+.emotion-286 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -395,7 +409,7 @@
   border-bottom-right-radius: 0.25rem;
 }
 
-.emotion-221 {
+.emotion-287 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -407,7 +421,7 @@
   gap: 0.5rem;
 }
 
-.emotion-222 {
+.emotion-288 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -419,7 +433,7 @@
   gap: 2rem;
 }
 
-.emotion-223 {
+.emotion-289 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -427,7 +441,7 @@
   gap: 0.25rem;
 }
 
-.emotion-224 {
+.emotion-290 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1rem;
@@ -436,7 +450,7 @@
   color: #52567a;
 }
 
-.emotion-225 {
+.emotion-291 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1rem;
@@ -445,14 +459,14 @@
   color: #111530;
 }
 
-.emotion-228 {
+.emotion-294 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-230 {
+.emotion-296 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1rem;
@@ -482,25 +496,25 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-230:focus-visible:not(:disabled) {
+.emotion-296:focus-visible:not(:disabled) {
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-230:disabled {
+.emotion-296:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-230:hover:not(:disabled) {
+.emotion-296:hover:not(:disabled) {
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-230:active:not(:disabled),
-.emotion-230[aria-expanded="true"] {
+.emotion-296:active:not(:disabled),
+.emotion-296[aria-expanded="true"] {
   background-color: rgba(200,206,255,0.30);
 }
 
-.emotion-231 {
+.emotion-297 {
   width: 1rem;
   height: 1rem;
   display: -webkit-box;
@@ -509,12 +523,12 @@
   display: flex;
 }
 
-.emotion-232 {
+.emotion-298 {
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-232 path {
+.emotion-298 path {
   fill: #194DCC!important;
 }
 
@@ -609,28 +623,40 @@
                       />
                     </span>
                     <div
-                      class="emotion-17"
-                      data-testid="ictinus_table_select_all_unselected"
+                      class="emotion-17 emotion-18"
                     >
-                      <svg
-                        class="emotion-18"
-                        fill="none"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        class="emotion-19 emotion-18"
+                        data-role="checkbox-icon"
                       >
-                        <path
-                          d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                          fill="#6265AD"
-                        />
-                      </svg>
+                        <div
+                          class="emotion-21"
+                          data-testid="ictinus_table_select_all_unselected"
+                        >
+                          <svg
+                            class="emotion-22"
+                            fill="none"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
+                              fill="#6265AD"
+                            />
+                          </svg>
+                        </div>
+                      </div>
                     </div>
                   </label>
+                  <div
+                    class="emotion-23 emotion-18"
+                  />
                 </div>
               </div>
             </div>
           </th>
           <th
-            class="emotion-19"
+            class="emotion-25"
             colspan="1"
             data-testid="ictinus_table_th_firstName"
           >
@@ -646,7 +672,7 @@
             </div>
           </th>
           <th
-            class="emotion-19"
+            class="emotion-25"
             colspan="1"
             data-testid="ictinus_table_th_lastName"
           >
@@ -662,7 +688,7 @@
             </div>
           </th>
           <th
-            class="emotion-19"
+            class="emotion-25"
             colspan="1"
             data-testid="ictinus_table_th_age"
           >
@@ -678,7 +704,7 @@
             </div>
           </th>
           <th
-            class="emotion-19"
+            class="emotion-25"
             colspan="1"
             data-testid="ictinus_table_th_job"
           >
@@ -696,17 +722,17 @@
         </tr>
       </thead>
       <tbody
-        class="emotion-31"
+        class="emotion-37"
       >
         <tr
-          class="emotion-32"
+          class="emotion-38"
         >
           <td
-            class="emotion-33"
+            class="emotion-39"
             data-testid="ictinus_table_row_0_checkbox_select"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <div
                 class="px-1"
@@ -729,77 +755,89 @@
                       />
                     </span>
                     <div
-                      class="emotion-17"
-                      data-testid="ictinus_table_select_0_unselected"
+                      class="emotion-17 emotion-18"
                     >
-                      <svg
-                        class="emotion-18"
-                        fill="none"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        class="emotion-19 emotion-18"
+                        data-role="checkbox-icon"
                       >
-                        <path
-                          d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                          fill="#6265AD"
-                        />
-                      </svg>
+                        <div
+                          class="emotion-21"
+                          data-testid="ictinus_table_select_0_unselected"
+                        >
+                          <svg
+                            class="emotion-22"
+                            fill="none"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
+                              fill="#6265AD"
+                            />
+                          </svg>
+                        </div>
+                      </div>
                     </div>
                   </label>
+                  <div
+                    class="emotion-23 emotion-18"
+                  />
                 </div>
               </div>
             </div>
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_0_firstName"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <span
-                class="emotion-41"
+                class="emotion-53"
               >
                 Rachel
               </span>
             </div>
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_0_lastName"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <span
-                class="emotion-41"
+                class="emotion-53"
               >
                 Berry
               </span>
             </div>
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_0_age"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <span
-                class="emotion-41"
+                class="emotion-53"
               >
                 30
               </span>
             </div>
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_0_job"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <span
-                class="emotion-41"
+                class="emotion-53"
               >
                 Fashion Executive
               </span>
@@ -807,14 +845,14 @@
           </td>
         </tr>
         <tr
-          class="emotion-32"
+          class="emotion-38"
         >
           <td
-            class="emotion-33"
+            class="emotion-39"
             data-testid="ictinus_table_row_1_checkbox_select"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <div
                 class="px-1"
@@ -837,77 +875,89 @@
                       />
                     </span>
                     <div
-                      class="emotion-17"
-                      data-testid="ictinus_table_select_1_unselected"
+                      class="emotion-17 emotion-18"
                     >
-                      <svg
-                        class="emotion-18"
-                        fill="none"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        class="emotion-19 emotion-18"
+                        data-role="checkbox-icon"
                       >
-                        <path
-                          d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                          fill="#6265AD"
-                        />
-                      </svg>
+                        <div
+                          class="emotion-21"
+                          data-testid="ictinus_table_select_1_unselected"
+                        >
+                          <svg
+                            class="emotion-22"
+                            fill="none"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
+                              fill="#6265AD"
+                            />
+                          </svg>
+                        </div>
+                      </div>
                     </div>
                   </label>
+                  <div
+                    class="emotion-23 emotion-18"
+                  />
                 </div>
               </div>
             </div>
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_1_firstName"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <span
-                class="emotion-41"
+                class="emotion-53"
               >
                 Ross
               </span>
             </div>
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_1_lastName"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <span
-                class="emotion-41"
+                class="emotion-53"
               >
                 Geller
               </span>
             </div>
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_1_age"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <span
-                class="emotion-41"
+                class="emotion-53"
               >
                 32
               </span>
             </div>
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_1_job"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <span
-                class="emotion-41"
+                class="emotion-53"
               >
                 Paleontologist
               </span>
@@ -915,14 +965,14 @@
           </td>
         </tr>
         <tr
-          class="emotion-32"
+          class="emotion-38"
         >
           <td
-            class="emotion-33"
+            class="emotion-39"
             data-testid="ictinus_table_row_2_checkbox_select"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <div
                 class="px-1"
@@ -945,77 +995,89 @@
                       />
                     </span>
                     <div
-                      class="emotion-17"
-                      data-testid="ictinus_table_select_2_unselected"
+                      class="emotion-17 emotion-18"
                     >
-                      <svg
-                        class="emotion-18"
-                        fill="none"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        class="emotion-19 emotion-18"
+                        data-role="checkbox-icon"
                       >
-                        <path
-                          d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                          fill="#6265AD"
-                        />
-                      </svg>
+                        <div
+                          class="emotion-21"
+                          data-testid="ictinus_table_select_2_unselected"
+                        >
+                          <svg
+                            class="emotion-22"
+                            fill="none"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
+                              fill="#6265AD"
+                            />
+                          </svg>
+                        </div>
+                      </div>
                     </div>
                   </label>
+                  <div
+                    class="emotion-23 emotion-18"
+                  />
                 </div>
               </div>
             </div>
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_2_firstName"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <span
-                class="emotion-41"
+                class="emotion-53"
               >
                 Monica
               </span>
             </div>
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_2_lastName"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <span
-                class="emotion-41"
+                class="emotion-53"
               >
                 Geller
               </span>
             </div>
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_2_age"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <span
-                class="emotion-41"
+                class="emotion-53"
               >
                 31
               </span>
             </div>
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_2_job"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <span
-                class="emotion-41"
+                class="emotion-53"
               >
                 Chef
               </span>
@@ -1023,14 +1085,14 @@
           </td>
         </tr>
         <tr
-          class="emotion-32"
+          class="emotion-38"
         >
           <td
-            class="emotion-33"
+            class="emotion-39"
             data-testid="ictinus_table_row_3_checkbox_select"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <div
                 class="px-1"
@@ -1053,77 +1115,89 @@
                       />
                     </span>
                     <div
-                      class="emotion-17"
-                      data-testid="ictinus_table_select_3_unselected"
+                      class="emotion-17 emotion-18"
                     >
-                      <svg
-                        class="emotion-18"
-                        fill="none"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        class="emotion-19 emotion-18"
+                        data-role="checkbox-icon"
                       >
-                        <path
-                          d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                          fill="#6265AD"
-                        />
-                      </svg>
+                        <div
+                          class="emotion-21"
+                          data-testid="ictinus_table_select_3_unselected"
+                        >
+                          <svg
+                            class="emotion-22"
+                            fill="none"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
+                              fill="#6265AD"
+                            />
+                          </svg>
+                        </div>
+                      </div>
                     </div>
                   </label>
+                  <div
+                    class="emotion-23 emotion-18"
+                  />
                 </div>
               </div>
             </div>
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_3_firstName"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <span
-                class="emotion-41"
+                class="emotion-53"
               >
                 Chandler
               </span>
             </div>
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_3_lastName"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <span
-                class="emotion-41"
+                class="emotion-53"
               >
                 Bing
               </span>
             </div>
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_3_age"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <span
-                class="emotion-41"
+                class="emotion-53"
               >
                 32
               </span>
             </div>
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_3_job"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <span
-                class="emotion-41"
+                class="emotion-53"
               >
                 ?
               </span>
@@ -1131,14 +1205,14 @@
           </td>
         </tr>
         <tr
-          class="emotion-32"
+          class="emotion-38"
         >
           <td
-            class="emotion-33"
+            class="emotion-39"
             data-testid="ictinus_table_row_4_checkbox_select"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <div
                 class="px-1"
@@ -1161,77 +1235,89 @@
                       />
                     </span>
                     <div
-                      class="emotion-17"
-                      data-testid="ictinus_table_select_4_unselected"
+                      class="emotion-17 emotion-18"
                     >
-                      <svg
-                        class="emotion-18"
-                        fill="none"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        class="emotion-19 emotion-18"
+                        data-role="checkbox-icon"
                       >
-                        <path
-                          d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                          fill="#6265AD"
-                        />
-                      </svg>
+                        <div
+                          class="emotion-21"
+                          data-testid="ictinus_table_select_4_unselected"
+                        >
+                          <svg
+                            class="emotion-22"
+                            fill="none"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
+                              fill="#6265AD"
+                            />
+                          </svg>
+                        </div>
+                      </div>
                     </div>
                   </label>
+                  <div
+                    class="emotion-23 emotion-18"
+                  />
                 </div>
               </div>
             </div>
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_4_firstName"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <span
-                class="emotion-41"
+                class="emotion-53"
               >
                 Joey
               </span>
             </div>
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_4_lastName"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <span
-                class="emotion-41"
+                class="emotion-53"
               >
                 Tribbiani
               </span>
             </div>
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_4_age"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <span
-                class="emotion-41"
+                class="emotion-53"
               >
                 30
               </span>
             </div>
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_4_job"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <span
-                class="emotion-41"
+                class="emotion-53"
               >
                 Actor
               </span>
@@ -1239,14 +1325,14 @@
           </td>
         </tr>
         <tr
-          class="emotion-32"
+          class="emotion-38"
         >
           <td
-            class="emotion-33"
+            class="emotion-39"
             data-testid="ictinus_table_row_5_checkbox_select"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <div
                 class="px-1"
@@ -1269,77 +1355,89 @@
                       />
                     </span>
                     <div
-                      class="emotion-17"
-                      data-testid="ictinus_table_select_5_unselected"
+                      class="emotion-17 emotion-18"
                     >
-                      <svg
-                        class="emotion-18"
-                        fill="none"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        class="emotion-19 emotion-18"
+                        data-role="checkbox-icon"
                       >
-                        <path
-                          d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                          fill="#6265AD"
-                        />
-                      </svg>
+                        <div
+                          class="emotion-21"
+                          data-testid="ictinus_table_select_5_unselected"
+                        >
+                          <svg
+                            class="emotion-22"
+                            fill="none"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
+                              fill="#6265AD"
+                            />
+                          </svg>
+                        </div>
+                      </div>
                     </div>
                   </label>
+                  <div
+                    class="emotion-23 emotion-18"
+                  />
                 </div>
               </div>
             </div>
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_5_firstName"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <span
-                class="emotion-41"
+                class="emotion-53"
               >
                 Phoebe
               </span>
             </div>
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_5_lastName"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <span
-                class="emotion-41"
+                class="emotion-53"
               >
                 Buffay
               </span>
             </div>
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_5_age"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <span
-                class="emotion-41"
+                class="emotion-53"
               >
                 31
               </span>
             </div>
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_5_job"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <span
-                class="emotion-41"
+                class="emotion-53"
               >
                 Massage Therapist
               </span>
@@ -1347,14 +1445,14 @@
           </td>
         </tr>
         <tr
-          class="emotion-32"
+          class="emotion-38"
         >
           <td
-            class="emotion-33"
+            class="emotion-39"
             data-testid="ictinus_table_row_6_checkbox_select"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <div
                 class="px-1"
@@ -1377,71 +1475,83 @@
                       />
                     </span>
                     <div
-                      class="emotion-17"
-                      data-testid="ictinus_table_select_6_unselected"
+                      class="emotion-17 emotion-18"
                     >
-                      <svg
-                        class="emotion-18"
-                        fill="none"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        class="emotion-19 emotion-18"
+                        data-role="checkbox-icon"
                       >
-                        <path
-                          d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                          fill="#6265AD"
-                        />
-                      </svg>
+                        <div
+                          class="emotion-21"
+                          data-testid="ictinus_table_select_6_unselected"
+                        >
+                          <svg
+                            class="emotion-22"
+                            fill="none"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
+                              fill="#6265AD"
+                            />
+                          </svg>
+                        </div>
+                      </div>
                     </div>
                   </label>
+                  <div
+                    class="emotion-23 emotion-18"
+                  />
                 </div>
               </div>
             </div>
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_6_firstName"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <span
-                class="emotion-41"
+                class="emotion-53"
               >
                 Gunther
               </span>
             </div>
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_6_lastName"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             />
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_6_age"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <span
-                class="emotion-41"
+                class="emotion-53"
               >
                 35
               </span>
             </div>
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_6_job"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <span
-                class="emotion-41"
+                class="emotion-53"
               >
                 Central Perk Manager
               </span>
@@ -1449,14 +1559,14 @@
           </td>
         </tr>
         <tr
-          class="emotion-32"
+          class="emotion-38"
         >
           <td
-            class="emotion-33"
+            class="emotion-39"
             data-testid="ictinus_table_row_7_checkbox_select"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <div
                 class="px-1"
@@ -1479,77 +1589,89 @@
                       />
                     </span>
                     <div
-                      class="emotion-17"
-                      data-testid="ictinus_table_select_7_unselected"
+                      class="emotion-17 emotion-18"
                     >
-                      <svg
-                        class="emotion-18"
-                        fill="none"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        class="emotion-19 emotion-18"
+                        data-role="checkbox-icon"
                       >
-                        <path
-                          d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                          fill="#6265AD"
-                        />
-                      </svg>
+                        <div
+                          class="emotion-21"
+                          data-testid="ictinus_table_select_7_unselected"
+                        >
+                          <svg
+                            class="emotion-22"
+                            fill="none"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
+                              fill="#6265AD"
+                            />
+                          </svg>
+                        </div>
+                      </div>
                     </div>
                   </label>
+                  <div
+                    class="emotion-23 emotion-18"
+                  />
                 </div>
               </div>
             </div>
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_7_firstName"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <span
-                class="emotion-41"
+                class="emotion-53"
               >
                 Janice
               </span>
             </div>
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_7_lastName"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <span
-                class="emotion-41"
+                class="emotion-53"
               >
                 Litman-Foralnik
               </span>
             </div>
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_7_age"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <span
-                class="emotion-41"
+                class="emotion-53"
               >
                 35
               </span>
             </div>
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_7_job"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <span
-                class="emotion-41"
+                class="emotion-53"
               >
                 Personal Shopper
               </span>
@@ -1557,14 +1679,14 @@
           </td>
         </tr>
         <tr
-          class="emotion-32"
+          class="emotion-38"
         >
           <td
-            class="emotion-33"
+            class="emotion-39"
             data-testid="ictinus_table_row_8_checkbox_select"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <div
                 class="px-1"
@@ -1587,77 +1709,89 @@
                       />
                     </span>
                     <div
-                      class="emotion-17"
-                      data-testid="ictinus_table_select_8_unselected"
+                      class="emotion-17 emotion-18"
                     >
-                      <svg
-                        class="emotion-18"
-                        fill="none"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        class="emotion-19 emotion-18"
+                        data-role="checkbox-icon"
                       >
-                        <path
-                          d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                          fill="#6265AD"
-                        />
-                      </svg>
+                        <div
+                          class="emotion-21"
+                          data-testid="ictinus_table_select_8_unselected"
+                        >
+                          <svg
+                            class="emotion-22"
+                            fill="none"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
+                              fill="#6265AD"
+                            />
+                          </svg>
+                        </div>
+                      </div>
                     </div>
                   </label>
+                  <div
+                    class="emotion-23 emotion-18"
+                  />
                 </div>
               </div>
             </div>
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_8_firstName"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <span
-                class="emotion-41"
+                class="emotion-53"
               >
                 Richard
               </span>
             </div>
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_8_lastName"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <span
-                class="emotion-41"
+                class="emotion-53"
               >
                 Burke
               </span>
             </div>
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_8_age"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <span
-                class="emotion-41"
+                class="emotion-53"
               >
                 50
               </span>
             </div>
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_8_job"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <span
-                class="emotion-41"
+                class="emotion-53"
               >
                 Ophthalmologist
               </span>
@@ -1665,14 +1799,14 @@
           </td>
         </tr>
         <tr
-          class="emotion-32"
+          class="emotion-38"
         >
           <td
-            class="emotion-33"
+            class="emotion-39"
             data-testid="ictinus_table_row_9_checkbox_select"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <div
                 class="px-1"
@@ -1695,71 +1829,83 @@
                       />
                     </span>
                     <div
-                      class="emotion-17"
-                      data-testid="ictinus_table_select_9_unselected"
+                      class="emotion-17 emotion-18"
                     >
-                      <svg
-                        class="emotion-18"
-                        fill="none"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        class="emotion-19 emotion-18"
+                        data-role="checkbox-icon"
                       >
-                        <path
-                          d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                          fill="#6265AD"
-                        />
-                      </svg>
+                        <div
+                          class="emotion-21"
+                          data-testid="ictinus_table_select_9_unselected"
+                        >
+                          <svg
+                            class="emotion-22"
+                            fill="none"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
+                              fill="#6265AD"
+                            />
+                          </svg>
+                        </div>
+                      </div>
                     </div>
                   </label>
+                  <div
+                    class="emotion-23 emotion-18"
+                  />
                 </div>
               </div>
             </div>
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_9_firstName"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <span
-                class="emotion-41"
+                class="emotion-53"
               >
                 Estelle
               </span>
             </div>
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_9_lastName"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <span
-                class="emotion-41"
+                class="emotion-53"
               >
                 Leonard
               </span>
             </div>
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_9_age"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             />
           </td>
           <td
-            class="emotion-39"
+            class="emotion-51"
             data-testid="ictinus_table_row_9_job"
           >
             <div
-              class="emotion-34"
+              class="emotion-40"
             >
               <span
-                class="emotion-41"
+                class="emotion-53"
               >
                 Talent Agent
               </span>
@@ -1769,49 +1915,49 @@
       </tbody>
     </table>
     <div
-      class="emotion-220"
+      class="emotion-286"
     >
       <div
-        class="emotion-221"
+        class="emotion-287"
       />
       <div
-        class="emotion-222"
+        class="emotion-288"
       >
         <div
-          class="emotion-223"
+          class="emotion-289"
           data-testid="ictinus_table_pages_info"
         >
           <p
-            class="emotion-224"
+            class="emotion-290"
           >
             page
           </p>
           <span
-            class="emotion-225"
+            class="emotion-291"
             data-testid="ictinus_table_current_page"
           >
             1
           </span>
           <p
-            class="emotion-224"
+            class="emotion-290"
           >
             of
           </p>
           <span
-            class="emotion-225"
+            class="emotion-291"
             data-testid="ictinus_table_total_pages"
           >
             2
           </span>
         </div>
         <div
-          class="emotion-228"
+          class="emotion-294"
         >
           <div
             class="emotion-6"
           >
             <button
-              class="emotion-230"
+              class="emotion-296"
               color="#52567a"
               data-slot="button"
               data-testid="ictinus_table_go_to_prev_page-icon-button"
@@ -1819,10 +1965,10 @@
               type="button"
             >
               <div
-                class="emotion-231"
+                class="emotion-297"
               >
                 <svg
-                  class="emotion-232"
+                  class="emotion-298"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1839,17 +1985,17 @@
             class="emotion-6"
           >
             <button
-              class="emotion-230"
+              class="emotion-296"
               color="#52567a"
               data-slot="button"
               data-testid="ictinus_table_go_to_next_page-icon-button"
               type="button"
             >
               <div
-                class="emotion-231"
+                class="emotion-297"
               >
                 <svg
-                  class="emotion-232"
+                  class="emotion-298"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
