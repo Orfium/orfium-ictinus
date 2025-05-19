@@ -70,18 +70,6 @@ export const radioContainerStyles =
           }
         }
 
-        &[data-disabled='true'] {
-          opacity: ${theme.tokens.disabledState.get('default')};
-          cursor: not-allowed;
-
-          &:hover::before {
-            background: none;
-            box-shadow: none;
-          }
-        }
-
-        ${sx};
-
         @keyframes circle {
           0% {
             transform: scale(0);
@@ -91,5 +79,17 @@ export const radioContainerStyles =
           }
         }
       }
+
+      [data-disabled='true'] {
+        opacity: ${theme.tokens.disabledState.get('default')};
+        cursor: not-allowed;
+
+        &:hover::before {
+          background: none;
+          box-shadow: none;
+        }
+      }
+
+      ${sx};
     `;
   };

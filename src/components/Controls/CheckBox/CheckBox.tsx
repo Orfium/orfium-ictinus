@@ -41,7 +41,7 @@ const CheckBox = React.forwardRef<HTMLLabelElement, CheckBoxProps>((props, ref) 
   const theme = useTheme();
 
   return (
-    <div css={checkboxWrapperStyles({ sx, isDisabled })}>
+    <div css={checkboxWrapperStyles({ sx })}>
       <ReactAriaCheckbox
         id={id}
         css={checkboxStyles()}
@@ -80,16 +80,16 @@ const CheckBox = React.forwardRef<HTMLLabelElement, CheckBoxProps>((props, ref) 
           )}
         </Box>
       </ReactAriaCheckbox>
-      <Box {...(placement === 'left' ? { pr: '9' } : { pl: '9' })}>
-        {helpText && (
+      {helpText && (
+        <Box {...(placement === 'left' ? { pr: '9' } : { pl: '9' })} data-disabled={isDisabled}>
           <ControlHelpText
             helpText={helpText}
             dataTestPrefixId={`${dataTestPrefixId}_checkbox_${value?.split(' ').join('_')}`}
           >
             {helpText}
           </ControlHelpText>
-        )}
-      </Box>
+        </Box>
+      )}
     </div>
   );
 });

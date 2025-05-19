@@ -54,16 +54,16 @@ const Radio = React.forwardRef<HTMLInputElement, RadioProps>((props, ref) => {
           </ControlLabelText>
         )}
       </label>
-      <Box {...(placement === 'left' ? { pr: '9' } : { pl: '9' })}>
-        {helpText && (
+      {helpText && (
+        <Box {...(placement === 'left' ? { pr: '9' } : { pl: '9' })} data-disabled={isDisabled}>
           <ControlHelpText
             helpText={helpText}
             dataTestPrefixId={`${dataTestPrefixId}_radio_${value?.split(' ').join('_')}`}
           >
             {helpText}
           </ControlHelpText>
-        )}
-      </Box>
+        </Box>
+      )}
     </div>
   );
 });

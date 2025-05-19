@@ -3,19 +3,17 @@ import { css } from '@emotion/react';
 import type { Theme } from 'theme';
 
 import type { LabelConfig } from 'components/Controls/Controls.types';
-import type { CheckBoxProps } from './CheckBox';
 
 export const checkboxWrapperStyles =
-  ({ sx, isDisabled }: Pick<LabelConfig, 'sx'> & Pick<CheckBoxProps, 'isDisabled'>) =>
+  ({ sx }: Pick<LabelConfig, 'sx'>) =>
   (theme: Theme): SerializedStyles => {
     return css`
       width: fit-content;
 
-      ${isDisabled &&
-      `
+      [data-disabled] {
         opacity: ${theme.tokens.disabledState.get('default')};
         cursor: not-allowed;
-      `}
+      }
 
       ${sx};
     `;

@@ -7,7 +7,7 @@ import { ControlHelpText, ControlLabelText } from 'components/Controls/ControlLa
 import type { LabelConfig } from 'components/Controls/Controls.types';
 import { rem } from 'polished';
 import Box from '~/components/Box';
-import { switchStyles } from './Switch.style';
+import { switchStyles, switchWrapperStyles } from './Switch.style';
 
 export type SwitchProps = Partial<SwitchAria> & {
   /** Id property of the switch element */
@@ -35,14 +35,14 @@ const Switch = React.forwardRef<HTMLLabelElement, SwitchProps>((props, ref) => {
   const { placement = 'right', size = 'normal', helpText, sx } = labelConfig;
 
   return (
-    <div>
+    <div css={switchWrapperStyles({ sx })}>
       <ReactAriaSwitch
         id={id}
         value={value}
         isSelected={isSelected}
         isDisabled={isDisabled}
         onChange={onChange}
-        css={switchStyles({ placement, sx })}
+        css={switchStyles({ placement })}
         data-testid={`${dataTestPrefixId}${value ? `_${value}` : ''}_switch`}
         ref={ref}
       >
@@ -66,12 +66,15 @@ const Switch = React.forwardRef<HTMLLabelElement, SwitchProps>((props, ref) => {
           )}
         </Box>
       </ReactAriaSwitch>
-      <Box
-        /** switchWidth (36px) + gap (12px) = 48px, which we don't have in our preset spacing values */
-        css={{ ...(placement === 'left' ? { paddingRight: rem(48) } : { paddingLeft: rem(48) }) }}
-      >
-        {helpText && <ControlHelpText helpText={helpText}>{helpText}</ControlHelpText>}
-      </Box>
+      {helpText && (
+        <Box
+          /** switchWidth (36px) + gap (12px) = 48px, which we don't have in our preset spacing values */
+          css={{ ...(placement === 'left' ? { paddingRight: rem(48) } : { paddingLeft: rem(48) }) }}
+          data-disabled={isDisabled}
+        >
+          <ControlHelpText helpText={helpText}>{helpText}</ControlHelpText>
+        </Box>
+      )}
     </div>
   );
 });
