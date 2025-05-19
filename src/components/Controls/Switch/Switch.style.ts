@@ -11,11 +11,13 @@ export const switchStyles =
     const tokens = getControlsTokens(theme);
 
     return css`
-      display: flex;
-      flex-direction: ${placement === 'right' ? 'row' : 'row-reverse'};
-      align-items: center;
-      gap: ${theme.dimension.spacing.get('md')};
-      position: relative;
+      & > div > div:first-of-type {
+        display: flex;
+        flex-direction: ${placement === 'right' ? 'row' : 'row-reverse'};
+        align-items: center;
+        gap: ${theme.dimension.spacing.get('md')};
+        position: relative;
+      }
       cursor: pointer;
 
       .bar {
