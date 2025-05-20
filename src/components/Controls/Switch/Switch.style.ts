@@ -2,20 +2,34 @@ import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import type { Theme } from 'theme';
 
+import type { CSSObject } from '@storybook/theming';
 import { getControlsTokens } from 'components/Controls/Controls.tokens';
 import type { LabelConfig } from 'components/Controls/Controls.types';
 
+export const switchWrapperStyles =
+  ({ sx }: { sx?: CSSObject }) =>
+  (theme: Theme): SerializedStyles => css`
+    [data-disabled] {
+      opacity: ${theme.tokens.disabledState.get('default')};
+      cursor: not-allowed;
+    }
+
+    ${sx};
+  `;
+
 export const switchStyles =
-  ({ placement = 'right', sx }: Pick<LabelConfig, 'placement' | 'sx'>) =>
+  ({ placement = 'right' }: Pick<LabelConfig, 'placement'>) =>
   (theme: Theme): SerializedStyles => {
     const tokens = getControlsTokens(theme);
 
     return css`
-      display: flex;
-      flex-direction: ${placement === 'right' ? 'row' : 'row-reverse'};
-      align-items: center;
-      gap: ${theme.dimension.spacing.get('md')};
-      position: relative;
+      & > div > div:first-of-type {
+        display: flex;
+        flex-direction: ${placement === 'right' ? 'row' : 'row-reverse'};
+        align-items: center;
+        gap: ${theme.dimension.spacing.get('md')};
+        position: relative;
+      }
       cursor: pointer;
 
       .bar {
@@ -66,12 +80,5 @@ export const switchStyles =
           }
         }
       }
-
-      &[data-disabled] {
-        opacity: ${theme.tokens.disabledState.get('default')};
-        cursor: not-allowed;
-      }
-
-      ${sx};
     `;
   };

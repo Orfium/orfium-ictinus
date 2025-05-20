@@ -250,6 +250,10 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: unset;
+  -ms-flex-pack: unset;
+  -webkit-justify-content: unset;
+  justify-content: unset;
   gap: 0.75rem;
   position: relative;
   cursor: pointer;
@@ -296,29 +300,25 @@
   animation: circle 0.15s ease-in-out;
 }
 
-.emotion-25 label[data-disabled='true'] {
+.emotion-25 [data-disabled='true'] {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-25 label[data-disabled='true']:hover::before {
+.emotion-25 [data-disabled='true']:hover::before {
   background: none;
   box-shadow: none;
 }
 
 .emotion-38 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 0.75rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-38 [data-disabled] {
+  opacity: 50%;
+  cursor: not-allowed;
 }
 
 .emotion-39 {
@@ -327,7 +327,7 @@
   position: relative;
 }
 
-.emotion-39>div {
+.emotion-39 [data-role='checkbox-icon']>div {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   width: 1.25rem;
@@ -346,8 +346,8 @@
   opacity: 0;
 }
 
-.emotion-39:hover,
-.emotion-39[data-focus-visible='true'] {
+.emotion-39[data-hovered='true'] [data-role='checkbox-icon'],
+.emotion-39[data-focus-visible='true'] [data-role='checkbox-icon'] {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   background: rgba(200,206,255,0.20);
@@ -355,8 +355,8 @@
   border-radius: 100%;
 }
 
-.emotion-39[data-selected='true']>div,
-.emotion-39[data-indeterminate='true']>div {
+.emotion-39[data-selected='true'] [data-role='checkbox-icon']>div,
+.emotion-39[data-indeterminate='true'] [data-role='checkbox-icon']>div {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   border-color: rgba(200,206,255,0);
@@ -382,6 +382,25 @@
 }
 
 .emotion-40 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.75rem;
+  -webkit-box-pack: unset;
+  -ms-flex-pack: unset;
+  -webkit-justify-content: unset;
+  justify-content: unset;
+}
+
+.emotion-44 {
   width: 1.25rem;
   height: 1.25rem;
   display: -webkit-box;
@@ -390,16 +409,25 @@
   display: flex;
 }
 
-.emotion-41 {
+.emotion-45 {
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-41 path {
+.emotion-45 path {
   fill: #ffffff!important;
 }
 
-.emotion-57 {
+.emotion-65 [data-disabled] {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-66 {
+  cursor: pointer;
+}
+
+.emotion-66>div>div:first-of-type {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -413,10 +441,9 @@
   align-items: center;
   gap: 0.75rem;
   position: relative;
-  cursor: pointer;
 }
 
-.emotion-57 .bar {
+.emotion-66 .bar {
   width: 2.25rem;
   height: 0.5rem;
   background: #B8CCFA;
@@ -424,14 +451,14 @@
   border-radius: 624.9375rem;
 }
 
-.emotion-57 .indicator {
+.emotion-66 .indicator {
   width: 2.25rem;
   height: 1.25rem;
   box-sizing: border-box;
   position: relative;
 }
 
-.emotion-57 .indicator:before {
+.emotion-66 .indicator:before {
   content: '';
   box-sizing: border-box;
   display: block;
@@ -444,15 +471,15 @@
   transition: all 200ms;
 }
 
-.emotion-57[data-hovered] .indicator:before,
-.emotion-57[data-focus-visible='true'] .indicator:before {
+.emotion-66[data-hovered] .indicator:before,
+.emotion-66[data-focus-visible='true'] .indicator:before {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   box-shadow: 0px 0px 0px 8px rgba(200,206,255,0.20);
   border-radius: 100%;
 }
 
-.emotion-57[data-selected] .indicator:before {
+.emotion-66[data-selected] .indicator:before {
   -webkit-transform: translateX(80%);
   -moz-transform: translateX(80%);
   -ms-transform: translateX(80%);
@@ -461,12 +488,22 @@
   border-color: #175BF5;
 }
 
-.emotion-57[data-disabled] {
-  opacity: 50%;
-  cursor: not-allowed;
+.emotion-67 {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.75rem;
+  -webkit-box-pack: unset;
+  -ms-flex-pack: unset;
+  -webkit-justify-content: unset;
+  justify-content: unset;
 }
 
-.emotion-68 {
+.emotion-86 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -506,18 +543,18 @@
   letter-spacing: 0.00625rem;
 }
 
-.emotion-68 img {
+.emotion-86 img {
   border-radius: 624.9375rem;
   width: 100%;
   height: 100%;
 }
 
-.emotion-69 {
+.emotion-87 {
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-69 path {
+.emotion-87 path {
   fill: #194DCC;
 }
 
@@ -835,20 +872,29 @@
                       />
                     </span>
                     <div
-                      class="emotion-40"
-                      data-testid="ictinus_7_unselected"
+                      class="emotion-40 emotion-1"
                     >
-                      <svg
-                        class="emotion-41"
-                        fill="none"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        class="emotion-42 emotion-1"
+                        data-role="checkbox-icon"
                       >
-                        <path
-                          d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                          fill="#6265AD"
-                        />
-                      </svg>
+                        <div
+                          class="emotion-44"
+                          data-testid="ictinus_7_unselected"
+                        >
+                          <svg
+                            class="emotion-45"
+                            fill="none"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
+                              fill="#6265AD"
+                            />
+                          </svg>
+                        </div>
+                      </div>
                     </div>
                   </label>
                 </div>
@@ -893,20 +939,29 @@
                       />
                     </span>
                     <div
-                      class="emotion-40"
-                      data-testid="ictinus_8_unselected"
+                      class="emotion-40 emotion-1"
                     >
-                      <svg
-                        class="emotion-41"
-                        fill="none"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        class="emotion-42 emotion-1"
+                        data-role="checkbox-icon"
                       >
-                        <path
-                          d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                          fill="#6265AD"
-                        />
-                      </svg>
+                        <div
+                          class="emotion-44"
+                          data-testid="ictinus_8_unselected"
+                        >
+                          <svg
+                            class="emotion-45"
+                            fill="none"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
+                              fill="#6265AD"
+                            />
+                          </svg>
+                        </div>
+                      </div>
                     </div>
                   </label>
                 </div>
@@ -965,27 +1020,39 @@
               <div
                 class="emotion-23"
               >
-                <label
-                  class="emotion-57"
-                  data-rac=""
-                  data-testid="ictinus_switch"
+                <div
+                  class="emotion-65"
                 >
-                  <span
-                    style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                  <label
+                    class="emotion-66"
+                    data-rac=""
+                    data-testid="ictinus_switch"
                   >
-                    <input
-                      role="switch"
-                      tabindex="0"
-                      type="checkbox"
-                    />
-                  </span>
-                  <div
-                    class="bar"
-                  />
-                  <div
-                    class="indicator"
-                  />
-                </label>
+                    <span
+                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                    >
+                      <input
+                        role="switch"
+                        tabindex="0"
+                        type="checkbox"
+                      />
+                    </span>
+                    <div
+                      class="emotion-67 emotion-1"
+                    >
+                      <div
+                        class="emotion-42 emotion-1"
+                      >
+                        <div
+                          class="bar"
+                        />
+                        <div
+                          class="indicator"
+                        />
+                      </div>
+                    </div>
+                  </label>
+                </div>
               </div>
             </li>
             <li
@@ -1008,27 +1075,39 @@
               <div
                 class="emotion-23"
               >
-                <label
-                  class="emotion-57"
-                  data-rac=""
-                  data-testid="ictinus_switch"
+                <div
+                  class="emotion-65"
                 >
-                  <span
-                    style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                  <label
+                    class="emotion-66"
+                    data-rac=""
+                    data-testid="ictinus_switch"
                   >
-                    <input
-                      role="switch"
-                      tabindex="0"
-                      type="checkbox"
-                    />
-                  </span>
-                  <div
-                    class="bar"
-                  />
-                  <div
-                    class="indicator"
-                  />
-                </label>
+                    <span
+                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                    >
+                      <input
+                        role="switch"
+                        tabindex="0"
+                        type="checkbox"
+                      />
+                    </span>
+                    <div
+                      class="emotion-67 emotion-1"
+                    >
+                      <div
+                        class="emotion-42 emotion-1"
+                      >
+                        <div
+                          class="bar"
+                        />
+                        <div
+                          class="indicator"
+                        />
+                      </div>
+                    </div>
+                  </label>
+                </div>
               </div>
             </li>
           </ul>
@@ -1071,11 +1150,11 @@
                 class="emotion-23"
               >
                 <div
-                  class="emotion-68"
+                  class="emotion-86"
                   data-testid="_avatar"
                 >
                   <svg
-                    class="emotion-69"
+                    class="emotion-87"
                     fill="none"
                     viewBox="0 0 14 17"
                     xmlns="http://www.w3.org/2000/svg"
@@ -1113,11 +1192,11 @@
                 class="emotion-23"
               >
                 <div
-                  class="emotion-68"
+                  class="emotion-86"
                   data-testid="_avatar"
                 >
                   <svg
-                    class="emotion-69"
+                    class="emotion-87"
                     fill="none"
                     viewBox="0 0 14 17"
                     xmlns="http://www.w3.org/2000/svg"

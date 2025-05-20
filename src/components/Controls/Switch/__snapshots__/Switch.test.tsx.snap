@@ -1,7 +1,16 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Switch > it renders the Switch correctly 1`] = `
-.emotion-0 {
+.emotion-0 [data-disabled] {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-1 {
+  cursor: pointer;
+}
+
+.emotion-1>div>div:first-of-type {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15,10 +24,9 @@ exports[`Switch > it renders the Switch correctly 1`] = `
   align-items: center;
   gap: 0.75rem;
   position: relative;
-  cursor: pointer;
 }
 
-.emotion-0 .bar {
+.emotion-1 .bar {
   width: 2.25rem;
   height: 0.5rem;
   background: #B8CCFA;
@@ -26,14 +34,14 @@ exports[`Switch > it renders the Switch correctly 1`] = `
   border-radius: 624.9375rem;
 }
 
-.emotion-0 .indicator {
+.emotion-1 .indicator {
   width: 2.25rem;
   height: 1.25rem;
   box-sizing: border-box;
   position: relative;
 }
 
-.emotion-0 .indicator:before {
+.emotion-1 .indicator:before {
   content: '';
   box-sizing: border-box;
   display: block;
@@ -46,15 +54,15 @@ exports[`Switch > it renders the Switch correctly 1`] = `
   transition: all 200ms;
 }
 
-.emotion-0[data-hovered] .indicator:before,
-.emotion-0[data-focus-visible='true'] .indicator:before {
+.emotion-1[data-hovered] .indicator:before,
+.emotion-1[data-focus-visible='true'] .indicator:before {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   box-shadow: 0px 0px 0px 8px rgba(200,206,255,0.20);
   border-radius: 100%;
 }
 
-.emotion-0[data-selected] .indicator:before {
+.emotion-1[data-selected] .indicator:before {
   -webkit-transform: translateX(80%);
   -moz-transform: translateX(80%);
   -ms-transform: translateX(80%);
@@ -63,23 +71,22 @@ exports[`Switch > it renders the Switch correctly 1`] = `
   border-color: #175BF5;
 }
 
-.emotion-0[data-disabled] {
-  opacity: 50%;
-  cursor: not-allowed;
-}
-
-.emotion-1 {
+.emotion-2 {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.125rem;
+  gap: 0.75rem;
+  -webkit-box-pack: unset;
+  -ms-flex-pack: unset;
+  -webkit-justify-content: unset;
+  justify-content: unset;
 }
 
-.emotion-2 {
+.emotion-6 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -89,36 +96,44 @@ exports[`Switch > it renders the Switch correctly 1`] = `
 }
 
 <div>
-  <label
+  <div
     class="emotion-0"
-    data-rac=""
-    data-testid="ictinus_switch"
   >
-    <span
-      style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-    >
-      <input
-        role="switch"
-        tabindex="0"
-        type="checkbox"
-      />
-    </span>
-    <div
-      class="bar"
-    />
-    <div
-      class="indicator"
-    />
-    <div
+    <label
       class="emotion-1"
+      data-rac=""
+      data-testid="ictinus_switch"
     >
-      <div
-        class="emotion-2"
-        data-testid="ictinus_switch_undefined_label"
+      <span
+        style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
       >
-        Label
+        <input
+          role="switch"
+          tabindex="0"
+          type="checkbox"
+        />
+      </span>
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <div
+          class="emotion-4 emotion-3"
+        >
+          <div
+            class="bar"
+          />
+          <div
+            class="indicator"
+          />
+        </div>
+        <div
+          class="emotion-6"
+          data-testid="ictinus_switch_undefined_label"
+        >
+          Label
+        </div>
       </div>
-    </div>
-  </label>
+    </label>
+  </div>
 </div>
 `;
