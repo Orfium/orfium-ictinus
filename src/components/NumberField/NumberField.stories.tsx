@@ -1,7 +1,5 @@
-import { rem } from 'polished';
 import { FIGMA_URL } from 'utils/common';
 import Stack from '../storyUtils/Stack';
-import Typography from '../Typography';
 import NumberField from './NumberField';
 
 export default {
@@ -31,43 +29,12 @@ export const NumberFields = {
     const { step } = args;
 
     return (
-      <>
-        <Stack>
-          <NumberField label="Normal" size="normal" />
-          <NumberField label="NumberField" hasStepper step={step} />
-          <NumberField label="Compact" size="compact" />
-          <NumberField
-            label="Compact"
-            size="compact"
-            hasStepper
-            step={step}
-            sx={{
-              wrapper: { minWidth: rem(85) },
-            }}
-          />
-        </Stack>
-        <Stack>
-          <p>
-            * In the case of a compact-sized{' '}
-            <Typography isBold component="span">
-              NumberField
-            </Typography>{' '}
-            with a stepper,it's strongly recommended to control its{' '}
-            <Typography isBold component="span">
-              min-width
-            </Typography>{' '}
-            CSS property using the{' '}
-            <Typography isBold component="span">
-              sx prop
-            </Typography>{' '}
-            and the{' '}
-            <Typography isBold component="span">
-              wrapper
-            </Typography>{' '}
-            (see example above).
-          </p>
-        </Stack>
-      </>
+      <Stack>
+        <NumberField label="Number" size="normal" />
+        <NumberField label="Number" hasStepper step={step} />
+        <NumberField label="Number" size="compact" />
+        <NumberField label="Number" size="compact" hasStepper step={step} />
+      </Stack>
     );
   },
   name: 'All avalable NumberFields',
@@ -79,8 +46,8 @@ export const NumberFields = {
 export const NumberFieldSizes = {
   render: () => (
     <Stack>
-      <NumberField label="Normal" size="normal" />
-      <NumberField label="Compact" size="compact" />
+      <NumberField label="Number" size="normal" />
+      <NumberField label="Number" size="compact" />
     </Stack>
   ),
   name: 'NumberField sizes',
@@ -92,11 +59,11 @@ export const NumberFieldSizes = {
 export const NumberFieldWithPlaceholder = {
   render: () => (
     <Stack>
-      <NumberField label="NumberField" />
-      <NumberField label="NumberField" placeholder="Placeholder" />
+      <NumberField label="Number" />
+      <NumberField label="Number" placeholder="Placeholder" />
       <NumberField
         size="compact"
-        label="NumberField"
+        label="Number"
         placeholder="Placeholder"
         style={{ width: '100px' }}
       />
@@ -114,7 +81,7 @@ export const NumberFieldWithFormatOptions = {
     return (
       <Stack>
         <NumberField
-          label="NumberField"
+          label="Number"
           formatOptions={{
             minimumFractionDigits: minimumFractionDigits,
             maximumFractionDigits: maximumFractionDigits,
@@ -142,7 +109,7 @@ export const NumberFieldWithStepper = {
     const { step } = args;
     return (
       <Stack>
-        <NumberField label="NumberField" hasStepper step={step} />
+        <NumberField label="Number" hasStepper step={step} />
         <NumberField label="Compact" size="compact" hasStepper step={step} />
       </Stack>
     );
@@ -159,7 +126,7 @@ export const NumberFieldWithMinAndMaxValues = {
     return (
       <Stack>
         <NumberField
-          label="NumberField"
+          label="Number"
           minValue={minValue}
           maxValue={maxValue}
           suffix={
@@ -227,7 +194,7 @@ export const NumberFieldStatuses = {
         <Stack>
           <NumberField
             size="compact"
-            label="Normal"
+            label="Number"
             status={{
               type: 'normal',
               hintMessage,
@@ -264,7 +231,7 @@ export const DisabledNumberField = {
     <Stack>
       <NumberField
         isDisabled
-        label="NumberField"
+        label="Number"
         status={{
           type: 'normal',
           hintMessage: 'This field is disabled',
@@ -273,7 +240,7 @@ export const DisabledNumberField = {
       <NumberField
         isDisabled
         size="compact"
-        label="NumberField"
+        label="Number"
         status={{
           type: 'normal',
           hintMessage: 'This field is disabled',

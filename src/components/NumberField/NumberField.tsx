@@ -1,13 +1,13 @@
-import useFieldUtils from 'hooks/useFieldUtils';
-import { omit } from 'lodash-es';
-import React from 'react';
-import { Group, Input, NumberField as ReactAriaNumberField } from 'react-aria-components';
-import { generateUniqueID } from 'utils/helpers';
-
 import Label from 'components/Label';
 import { suffixContainerStyle } from 'components/TextField/TextField.style';
 import TextInputBase from 'components/TextInputBase/TextInputBase';
 import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
+import useFieldUtils from 'hooks/useFieldUtils';
+import { omit } from 'lodash-es';
+import { rem } from 'polished';
+import React from 'react';
+import { Group, Input, NumberField as ReactAriaNumberField } from 'react-aria-components';
+import { generateUniqueID } from 'utils/helpers';
 import type { TextFieldProps } from '../TextField/TextField';
 import Stepper from './components/Stepper/Stepper';
 import { groupStyles } from './NumberField.style';
@@ -73,10 +73,12 @@ const NumberField = React.forwardRef<HTMLInputElement, NumberFieldProps>((props,
 
   const inputPlaceholder =
     size === 'normal' ? (placeholder ? `${placeholder} ${isRequired ? '*' : ''}` : label) : ' ';
+  const customStyles =
+    size === 'compact' ? { wrapper: { minWidth: rem(90), ...sx?.wrapper }, ...sx } : sx;
 
   return (
     <div onClick={handleContainerClick}>
-      <TextInputBase {...props} status={{ ...status, id: hintMessageId }} sx={sx}>
+      <TextInputBase {...props} status={{ ...status, id: hintMessageId }} sx={customStyles}>
         <div css={{ width: '100%' }}>
           <ReactAriaNumberField
             value={value}
