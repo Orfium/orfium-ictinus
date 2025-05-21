@@ -182,6 +182,7 @@
   right: 0.1875rem;
   margin: auto;
   white-space: nowrap;
+  overflow: hidden;
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -282,6 +283,7 @@
   right: 0.1875rem;
   margin: auto;
   white-space: nowrap;
+  overflow: hidden;
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -482,6 +484,360 @@
 }
 
 .emotion-25 path {
+  fill: #52567a!important;
+}
+
+.emotion-28 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #8EAAEC;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: 1.75rem;
+  min-width: 5.625rem;
+  background-color: rgba(200,206,255,0.30);
+}
+
+.emotion-28:hover {
+  background-color: rgba(200,206,255,0.20);
+}
+
+.emotion-28:focus-within {
+  box-shadow: 0 0 0 0.125rem #175BF5;
+  background-color: rgba(200,206,255,0.30);
+}
+
+.emotion-32 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #111530;
+  padding: 0;
+  display: block;
+  position: relative;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-32::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-32::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-32:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-32::placeholder {
+  color: transparent;
+}
+
+.emotion-32:focus {
+  outline: none;
+}
+
+.emotion-32:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-32:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-32:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-32:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-32:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-32:focus-within+label,
+.emotion-32:not(:placeholder-shown)+label {
+  display: none;
+}
+
+.emotion-32:focus-within+label {
+  font-weight: 700!important;
+  color: #194DCC;
+}
+
+.emotion-32:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-33 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, 0);
+  -moz-transform: translate(0.1875rem, 0);
+  -ms-transform: translate(0.1875rem, 0);
+  transform: translate(0.1875rem, 0);
+  color: #52567a;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0.1875rem;
+  margin: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-35 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.125rem #FF4D8D;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: 1.75rem;
+  min-width: 5.625rem;
+  background-color: #FFD6E5;
+}
+
+.emotion-35:hover {
+  background-color: #FFEBF1;
+}
+
+.emotion-35:focus-within {
+  box-shadow: 0 0 0 0.125rem #175BF5;
+  background-color: rgba(200,206,255,0.30);
+}
+
+.emotion-40 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, 0);
+  -moz-transform: translate(0.1875rem, 0);
+  -ms-transform: translate(0.1875rem, 0);
+  transform: translate(0.1875rem, 0);
+  color: #BF1250;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0.1875rem;
+  margin: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-42 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #8EAAEC;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: 1.75rem;
+  min-width: 5.625rem;
+  background-color: rgba(200,206,255,0.20);
+}
+
+.emotion-42:hover {
+  background-color: rgba(200,206,255,0.20);
+}
+
+.emotion-42:focus-within {
+  box-shadow: 0 0 0 0.125rem #8EAAEC;
+  background-color: rgba(200,206,255,0.30);
+}
+
+.emotion-46 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #111530;
+  padding: 0;
+  display: block;
+  position: relative;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-46::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-46::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-46:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-46::placeholder {
+  color: transparent;
+}
+
+.emotion-46:focus {
+  outline: none;
+}
+
+.emotion-46:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-46:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-46:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-46:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-46:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-46:focus-within+label,
+.emotion-46:not(:placeholder-shown)+label {
+  display: none;
+}
+
+.emotion-46:focus-within+label {
+  font-weight: 700!important;
+  color: #194DCC;
+}
+
+.emotion-46:disabled {
+  cursor: text;
+}
+
+.emotion-48 {
+  min-width: 1.75rem;
+  overflow: visible;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  cursor: unset;
+}
+
+.emotion-50 {
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-50 path {
   fill: #52567a!important;
 }
 
@@ -696,6 +1052,225 @@
               >
                 <svg
                   class="emotion-25"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.43638 18C4.88713 18 4.42709 17.8269 4.05626 17.4806C3.68542 17.1344 3.5 16.7049 3.5 16.192V9.14129C3.5 8.62847 3.68542 8.19894 4.05626 7.8527C4.42709 7.50645 4.88713 7.33332 5.43638 7.33332H5.90304V5.86205C5.90304 4.78407 6.30176 3.8709 7.0992 3.12254C7.89665 2.37418 8.86359 2 10 2C11.1364 2 12.1033 2.37418 12.9008 3.12254C13.6982 3.8709 14.097 4.78407 14.097 5.86205V7.33332H14.5636C15.1129 7.33332 15.5729 7.50645 15.9437 7.8527C16.3146 8.19894 16.5 8.62847 16.5 9.14129V16.192C16.5 16.7049 16.3146 17.1344 15.9437 17.4806C15.5729 17.8269 15.1129 18 14.5636 18H5.43638ZM10.0031 14.2483C10.4627 14.2483 10.8528 14.0976 11.1735 13.7962C11.4942 13.4948 11.6545 13.1296 11.6545 12.7005C11.6545 12.2715 11.4931 11.9072 11.1703 11.6078C10.8475 11.3083 10.4564 11.1586 9.99687 11.1586C9.53734 11.1586 9.14722 11.3093 8.82653 11.6107C8.50582 11.9121 8.34547 12.2773 8.34547 12.7064C8.34547 13.1354 8.50687 13.4997 8.82966 13.7991C9.15246 14.0985 9.54361 14.2483 10.0031 14.2483ZM7.59696 7.33332H12.403V5.86205C12.403 5.23676 12.1692 4.70036 11.7015 4.25285C11.2338 3.80534 10.6658 3.58158 9.99768 3.58158C9.32953 3.58158 8.76237 3.80534 8.29621 4.25285C7.83004 4.70036 7.59696 5.23676 7.59696 5.86205V7.33332Z"
+                    fill="#6265AD"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="emotion-7"
+          data-testid="error"
+        >
+          <span
+            id="numberfield__00_hintMessage"
+          >
+            Hint Message
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      style="margin: 5px;"
+    >
+      <div>
+        <div
+          class="emotion-28"
+        >
+          <div
+            class="emotion-2"
+          >
+            <div
+              class="emotion-3"
+            >
+              <div
+                class="react-aria-NumberField"
+                data-rac=""
+              >
+                <div
+                  class="emotion-4"
+                  data-rac=""
+                  role="group"
+                >
+                  <input
+                    aria-describedby="numberfield__00_hintMessage"
+                    aria-invalid="false"
+                    aria-roledescription="Number field"
+                    autocomplete="off"
+                    autocorrect="off"
+                    class="emotion-32"
+                    data-rac=""
+                    data-testid="input"
+                    id="numberfield__00"
+                    inputmode="numeric"
+                    placeholder=" "
+                    spellcheck="false"
+                    tabindex="0"
+                    title=""
+                    type="text"
+                    value=""
+                  />
+                  <label
+                    class="emotion-33"
+                    for="numberfield__00"
+                  >
+                    Number
+                     
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="emotion-7"
+          data-testid="error"
+        >
+          <span
+            id="numberfield__00_hintMessage"
+          >
+            Hint Message
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div>
+        <div
+          class="emotion-35"
+        >
+          <div
+            class="emotion-2"
+          >
+            <div
+              class="emotion-3"
+            >
+              <div
+                class="react-aria-NumberField"
+                data-rac=""
+              >
+                <div
+                  class="emotion-4"
+                  data-rac=""
+                  role="group"
+                >
+                  <input
+                    aria-describedby="numberfield__00_hintMessage"
+                    aria-invalid="true"
+                    aria-roledescription="Number field"
+                    autocomplete="off"
+                    autocorrect="off"
+                    class="emotion-32"
+                    data-invalid="true"
+                    data-rac=""
+                    data-testid="input"
+                    id="numberfield__00"
+                    inputmode="numeric"
+                    placeholder=" "
+                    spellcheck="false"
+                    tabindex="0"
+                    title=""
+                    type="text"
+                    value=""
+                  />
+                  <label
+                    class="emotion-40"
+                    for="numberfield__00"
+                  >
+                    Error
+                     
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="emotion-14"
+          data-testid="error"
+        >
+          <span
+            id="numberfield__00_hintMessage"
+          >
+            Hint Message
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div>
+        <div
+          class="emotion-42"
+        >
+          <div
+            class="emotion-2"
+          >
+            <div
+              class="emotion-3"
+            >
+              <div
+                class="react-aria-NumberField"
+                data-rac=""
+              >
+                <div
+                  class="emotion-4"
+                  data-rac=""
+                  role="group"
+                >
+                  <input
+                    aria-describedby="numberfield__00_hintMessage"
+                    aria-invalid="false"
+                    aria-roledescription="Number field"
+                    autocomplete="off"
+                    autocorrect="off"
+                    class="emotion-46"
+                    data-disabled="true"
+                    data-rac=""
+                    data-testid="input"
+                    disabled=""
+                    id="numberfield__00"
+                    inputmode="numeric"
+                    placeholder=" "
+                    readonly=""
+                    spellcheck="false"
+                    tabindex="0"
+                    type="text"
+                    value=""
+                  />
+                  <label
+                    class="emotion-33"
+                    for="numberfield__00"
+                  >
+                    Read-only
+                     
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="false"
+              class="emotion-48"
+            >
+              <div
+                class="emotion-15"
+              >
+                <svg
+                  class="emotion-50"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"

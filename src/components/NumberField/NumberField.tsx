@@ -1,22 +1,21 @@
-import useFieldUtils from 'hooks/useFieldUtils';
-import { omit } from 'lodash-es';
-import React from 'react';
-import { NumberField as ReactAriaNumberField, Group, Input } from 'react-aria-components';
-import { generateUniqueID } from 'utils/helpers';
-
-import Stepper from './components/Stepper/Stepper';
-import { groupStyles } from './NumberField.style';
-import type { TextFieldProps } from '../TextField/TextField';
 import Label from 'components/Label';
 import { suffixContainerStyle } from 'components/TextField/TextField.style';
 import TextInputBase from 'components/TextInputBase/TextInputBase';
 import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
+import useFieldUtils from 'hooks/useFieldUtils';
+import { omit } from 'lodash-es';
+import { rem } from 'polished';
+import React from 'react';
+import { Group, Input, NumberField as ReactAriaNumberField } from 'react-aria-components';
+import { generateUniqueID } from 'utils/helpers';
+import type { TextFieldProps } from '../TextField/TextField';
+import Stepper from './components/Stepper/Stepper';
+import { groupStyles } from './NumberField.style';
 
 export type NumberFieldProps = Omit<
   TextFieldProps,
   | 'mask'
   | 'maskChar'
-  | 'size'
   | 'value'
   | 'onChange'
   | 'isMulti'
@@ -46,6 +45,7 @@ const NumberField = React.forwardRef<HTMLInputElement, NumberFieldProps>((props,
     hasStepper = false,
     label,
     placeholder = '',
+    size = 'normal',
     isRequired = false,
     isDisabled,
     isReadOnly,
@@ -66,13 +66,19 @@ const NumberField = React.forwardRef<HTMLInputElement, NumberFieldProps>((props,
       id,
       suffix,
       status,
+      size,
       isDisabled,
       ref,
     });
 
+  const inputPlaceholder =
+    size === 'normal' ? (placeholder ? `${placeholder} ${isRequired ? '*' : ''}` : label) : ' ';
+  const customStyles =
+    size === 'compact' ? { wrapper: { minWidth: rem(90), ...sx?.wrapper }, ...sx } : sx;
+
   return (
     <div onClick={handleContainerClick}>
-      <TextInputBase {...props} status={{ ...status, id: hintMessageId }} sx={sx}>
+      <TextInputBase {...props} status={{ ...status, id: hintMessageId }} sx={customStyles}>
         <div css={{ width: '100%' }}>
           <ReactAriaNumberField
             value={value}
@@ -82,14 +88,14 @@ const NumberField = React.forwardRef<HTMLInputElement, NumberFieldProps>((props,
             minValue={minValue}
             maxValue={maxValue}
           >
-            <Group css={hasStepper ? groupStyles() : {}}>
+            <Group css={hasStepper ? groupStyles({ size }) : {}}>
               <Input
                 id={id}
                 readOnly={isLocked || isReadOnly}
                 disabled={isDisabled || isLocked}
                 required={isRequired}
-                placeholder={placeholder ? `${placeholder} ${isRequired ? '*' : ''}` : label}
-                css={inputStyle({ label, placeholder, isLocked, isDisabled })}
+                placeholder={inputPlaceholder}
+                css={inputStyle({ label, placeholder, isLocked, isDisabled, size })}
                 aria-invalid={status?.type === 'error'}
                 aria-describedby={hintMessageId}
                 data-testid={props.dataTestId ? `input_${props.dataTestId}` : 'input'}
@@ -99,12 +105,14 @@ const NumberField = React.forwardRef<HTMLInputElement, NumberFieldProps>((props,
               <Label
                 htmlFor={id}
                 label={label}
+                size={size}
                 isRequired={isRequired}
                 isAnimated={Boolean(value)}
                 hasError={!isDisabled && status?.type === 'error'}
               />
               {hasStepper && (
                 <Stepper
+                  size={size}
                   isDisabled={isLocked || isReadOnly || isDisabled}
                   dataTestIdPrefix={dataTestPrefixId}
                 />
@@ -113,7 +121,7 @@ const NumberField = React.forwardRef<HTMLInputElement, NumberFieldProps>((props,
           </ReactAriaNumberField>
         </div>
         {suffixContent && !hasStepper && (
-          <div aria-hidden={!suffixContent} css={suffixContainerStyle({})}>
+          <div aria-hidden={!suffixContent} css={suffixContainerStyle({ size })}>
             {suffixContent}
           </div>
         )}

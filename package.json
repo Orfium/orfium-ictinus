@@ -179,8 +179,10 @@
     "build-storybook": "pnpm build",
     "yalc:push": "yalc publish --push",
     "lint-staged": "lint-staged --verbose",
+    "check": "pnpm check:ts && pnpm check:linting && pnpm check:formatting",
     "check:ts": "tsc --noEmit --pretty",
-    "check:linting": "eslint src --color"
+    "check:linting": "eslint src --color",
+    "check:formatting": "prettier src --check"
   },
   "keywords": [
     "Orfium",

@@ -1,11 +1,10 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
+import { generateStylesFromTokens } from 'components/Typography/utils';
 import type { Theme } from 'theme';
 import type { SemanticTypographyKey } from 'theme/tokens/semantic/typography';
 import { rem } from 'theme/utils';
-
 import type { LabelProps } from './Label';
-import { generateStylesFromTokens } from 'components/Typography/utils';
 
 export const LABEL_TRANSFORM_LEFT_SPACING = rem(3);
 
@@ -19,7 +18,9 @@ export const labelStyle =
     const typography: SemanticTypographyKey = size === 'normal' ? 'normal.body02' : 'normal.body03';
 
     return css`
-      transition: transform 0.25s, opacity 0.25s ease-in-out;
+      transition:
+        transform 0.25s,
+        opacity 0.25s ease-in-out;
       transform-origin: 0 0;
       width: 100%;
       position: absolute;
@@ -37,7 +38,7 @@ export const labelStyle =
       right: ${rem(3)};
       margin: auto;
       white-space: nowrap;
-
+      overflow: hidden;
       ${generateStylesFromTokens(theme.tokens.typography.get(typography))}
     `;
   };
