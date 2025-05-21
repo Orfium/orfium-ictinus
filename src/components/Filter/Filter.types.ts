@@ -6,7 +6,7 @@ export type FilterOption = SelectOption;
 
 export type SingleFilterProps = {
   /** The function that is used to return the selected options */
-  onChange?: (selectedFilter?: FilterOption) => void;
+  onChange?: (selectedFilter: FilterOption) => void;
   /** If false the user can select one option */
   isMulti?: false;
   /** the value of the select if select is controlled */
