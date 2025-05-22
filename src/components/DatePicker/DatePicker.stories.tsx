@@ -1,10 +1,15 @@
-import DatePicker from './DatePicker';
-import Stack from '../storyUtils/Stack';
-import { currentDay } from './utils';
-import { openDatePicker } from './play-utils';
-import { options, CALENDAR_DEFAULT_OPTIONS } from './constants';
-import { FIGMA_URL, Function } from 'utils/common';
+import dayjs from 'dayjs';
 import { useState } from 'react';
+import { FIGMA_URL, Function } from 'utils/common';
+import Stack from '../storyUtils/Stack';
+import { CALENDAR_DEFAULT_OPTIONS, options } from './constants';
+import DatePicker from './DatePicker';
+import { openDatePicker } from './play-utils';
+import { currentDay } from './utils';
+
+const today = dayjs();
+const yesterday = dayjs().subtract(1, 'days');
+const aWeekAgo = dayjs().subtract(7, 'days');
 
 export default {
   title: 'Updated Components/Fields/DatePicker',
@@ -160,6 +165,21 @@ export const DatePickerWithFilter = {
         </Function>
         <Function>
           {() => {
+            const [date, setDate] = useState({ from: currentDay.toDate(), to: undefined });
+            return (
+              <DatePicker
+                filterConfig={{ label: 'My date', filterType: 'added' }}
+                onClear={() => {
+                  setDate({ from: undefined, to: undefined });
+                }}
+                value={date}
+                onChange={setDate}
+              />
+            );
+          }}
+        </Function>
+        <Function>
+          {() => {
             const [date, setDate] = useState({
               from: currentDay.toDate(),
               to: currentDay.toDate(),
@@ -172,6 +192,42 @@ export const DatePickerWithFilter = {
                 filterConfig={{
                   filterType: 'preset',
                 }}
+              />
+            );
+          }}
+        </Function>
+        <Function>
+          {() => {
+            const [date, setDate] = useState({
+              from: currentDay.toDate(),
+              to: currentDay.toDate(),
+            });
+            return (
+              <DatePicker
+                value={date}
+                onChange={setDate}
+                onClear={() => {
+                  setDate({ from: undefined, to: undefined });
+                }}
+                isRangePicker
+                filterConfig={{ label: 'Annotation date', filterType: 'added' }}
+                options={[
+                  {
+                    label: 'Today',
+                    value: 'today',
+                    dates: [today, today],
+                  },
+                  {
+                    label: 'Yesterday',
+                    value: 'yesterday',
+                    dates: [yesterday, yesterday],
+                  },
+                  {
+                    label: 'Last 7 days',
+                    value: 'lastWeek',
+                    dates: [aWeekAgo, today],
+                  },
+                ]}
               />
             );
           }}
