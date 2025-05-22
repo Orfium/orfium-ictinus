@@ -142,7 +142,7 @@ const DatePicker: React.FC<DatePickerProps & TestProps> = ({
         setRange(EMPTY_STATE);
 
         if (filterConfig?.filterType === 'added') {
-          onClear();
+          return onClear();
         }
 
         return onChange(EMPTY_STATE);
@@ -167,7 +167,7 @@ const DatePicker: React.FC<DatePickerProps & TestProps> = ({
         onChange(EMPTY_STATE);
       }
     },
-    [isClearable, filterConfig?.filterType, onChange, value, isRangePicker]
+    [isClearable, filterConfig?.filterType, onChange, onClear, isRangePicker, value.from, value.to]
   );
 
   const onApply = useCallback(() => {

@@ -170,7 +170,7 @@ export const DatePickerWithFilter = {
               <DatePicker
                 filterConfig={{ label: 'My date', filterType: 'added' }}
                 onClear={() => {
-                  console.log('cleared');
+                  setDate({ from: undefined, to: undefined });
                 }}
                 value={date}
                 onChange={setDate}
@@ -207,7 +207,7 @@ export const DatePickerWithFilter = {
                 value={date}
                 onChange={setDate}
                 onClear={() => {
-                  console.log('cleared');
+                  setDate({ from: undefined, to: undefined });
                 }}
                 isRangePicker
                 filterConfig={{ label: 'Annotation date', filterType: 'added' }}
