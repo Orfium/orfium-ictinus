@@ -1,7 +1,6 @@
-import type { Dayjs } from 'utils/date';
-
-import type { TextFieldProps } from '../TextField/TextField';
 import type { FilterType } from 'components/Filter/Filter.types';
+import type { Dayjs } from 'utils/date';
+import type { TextFieldProps } from '../TextField/TextField';
 
 export type DisabledDates = {
   daysOfWeek?: number[];
@@ -17,6 +16,8 @@ export type DatePickerProps = {
   isRangePicker?: boolean;
   /** A callback to return user selection */
   onChange?: (range: DateRange) => void;
+  /** A callback that runs ONLY on added filters when the users clears the date (presses the x button)  */
+  onClear?: () => void;
   /** Option to disable some dates */
   disableDates?: DisabledDates;
   /** Value to define if needed an initial state or to handle it externally */

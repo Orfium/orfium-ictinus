@@ -1,9 +1,10 @@
 import useKeyboardEvents from 'hooks/useKeyboardEvents';
-import React, { useCallback, memo, useMemo, useState } from 'react';
+import React, { memo, useCallback, useMemo, useState } from 'react';
 import isEqual from 'react-fast-compare';
 import type { Dayjs } from 'utils/date';
 import type { TestProps } from 'utils/types';
-
+import ClickAwayListener from '../utils/ClickAwayListener';
+import PositionInScreen from '../utils/PositionInScreen';
 import { EMPTY_STATE } from './constants';
 import { datePickerStyles } from './DatePicker.style';
 import type { DatePickerProps } from './DatePicker.types';
@@ -11,12 +12,11 @@ import DatePickInput from './DatePickInput';
 import type { Range } from './OverlayComponent/OverlayComponent';
 import OverlayComponent from './OverlayComponent/OverlayComponent';
 import { initDates } from './utils';
-import ClickAwayListener from '../utils/ClickAwayListener';
-import PositionInScreen from '../utils/PositionInScreen';
 
 const DatePicker: React.FC<DatePickerProps & TestProps> = ({
   isRangePicker = false,
   onChange = () => {},
+  onClear = () => {},
   disableDates,
   value: initialValue,
   inputProps,
@@ -140,6 +140,10 @@ const DatePicker: React.FC<DatePickerProps & TestProps> = ({
       if (filterConfig?.filterType) {
         setIsOpen(false);
         setRange(EMPTY_STATE);
+
+        if (filterConfig?.filterType === 'added') {
+          onClear();
+        }
 
         return onChange(EMPTY_STATE);
       }

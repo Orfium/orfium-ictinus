@@ -1,20 +1,18 @@
+import FilterButton from 'components/Filter/components/FilterButton';
+import Icon from 'components/Icon';
+import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
 import useTheme from 'hooks/useTheme';
-import type { InputHTMLAttributes } from 'react';
-import React, { useCallback, useMemo } from 'react';
+import React, { useCallback, useMemo, type InputHTMLAttributes } from 'react';
 import { rem } from 'theme/utils';
 import type { Dayjs } from 'utils/date';
 import dayjs from 'utils/date';
 import { getLocaleFormat } from 'utils/helpers';
 import type { TestProps } from 'utils/types';
-
 import type { TextFieldProps } from '../../TextField/TextField';
 import TextField from '../../TextField/TextField';
 import { DATE_PICKER_LABEL, DATE_RANGE_PICKER_LABEL } from '../constants';
 import type { DateFormatType, DatePickerProps } from '../DatePicker.types';
 import type { Range } from '../OverlayComponent/OverlayComponent';
-import FilterButton from 'components/Filter/components/FilterButton';
-import Icon from 'components/Icon';
-import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
 
 // TODO: Need to fix this (TextField onChange prop)
 const ON_CHANGE_MOCK = () => {};
