@@ -1,11 +1,10 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
+import type { TextFieldProps } from 'components/TextField/TextField';
 import { darken } from 'polished';
 import type { Theme } from 'theme';
 import { rem } from 'theme/utils';
-
 import type { SelectMenuProps } from './SelectMenu';
-import type { TextFieldProps } from 'components/TextField/TextField';
 
 export const optionStyle =
   ({
@@ -38,24 +37,22 @@ export const optionStyle =
   };
 
 export const menuStyle =
-  ({
-    status,
-    isVirtualized,
-    height,
-    sx,
-  }: SelectMenuProps & Omit<TextFieldProps, 'ref' | 'label'> & { height: number }) =>
-  (theme: Theme): SerializedStyles =>
-    css`
-      background-color: ${theme.globals.oldColors.white};
-      border-radius: 4px;
-      box-shadow: ${theme.globals.elevation['02']};
-      top: ${status?.type !== 'normal' ? '70%' : '110%'};
-      z-index: 500;
-      position: absolute;
-      max-height: ${rem(height)};
-      overflow-y: ${isVirtualized ? 'hidden' : 'auto'};
-      // TODO we need a technique to identify menu position left or right
-      min-width: 100%;
-      max-width: ${rem(620)};
-      ${sx};
-    `;
+  ({ status, isVirtualized, sx }: SelectMenuProps & Omit<TextFieldProps, 'ref' | 'label'>) =>
+  (theme: Theme): SerializedStyles => css`
+    background-color: ${theme.globals.oldColors.white};
+    border-radius: 4px;
+    box-shadow: ${theme.globals.elevation['02']};
+    top: ${status?.type !== 'normal' ? '70%' : '110%'};
+    z-index: 500;
+    position: absolute;
+    overflow-y: ${isVirtualized ? 'hidden' : 'auto'};
+    // TODO we need a technique to identify menu position left or right
+    min-width: 100%;
+    max-width: ${rem(620)};
+    max-height: inherit;
+    ${sx};
+  `;
+
+export const innerMenuStyle = ({ height }: { height: number }) => css`
+  max-height: ${rem(height)};
+`;

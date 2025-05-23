@@ -391,46 +391,44 @@
         <div
           class="emotion-8"
         >
-          <div>
-            <div
-              class="emotion-9"
+          <div
+            class="emotion-9"
+          >
+            <button
+              class="emotion-10"
+              data-active="false"
+              data-testid="search_search_filter_filter_button"
+              type="button"
             >
-              <button
-                class="emotion-10"
-                data-active="false"
-                data-testid="search_search_filter_filter_button"
-                type="button"
+              <div
+                class="emotion-11"
+                data-testid="search_search_filter_filter_label"
+              >
+                Friends: All
+              </div>
+              <div
+                class="emotion-12"
               >
                 <div
-                  class="emotion-11"
-                  data-testid="search_search_filter_filter_label"
+                  class="emotion-13"
+                  data-slot="icon"
                 >
-                  Friends: All
-                </div>
-                <div
-                  class="emotion-12"
-                >
-                  <div
-                    class="emotion-13"
-                    data-slot="icon"
+                  <svg
+                    class="emotion-14"
+                    fill="none"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <svg
-                      class="emotion-14"
-                      fill="none"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M6.09346 8.31215C5.65924 7.79108 6.02976 7 6.70803 7H13.292C13.9702 7 14.3408 7.79109 13.9065 8.31215L10.6146 12.2625C10.2947 12.6463 9.70526 12.6463 9.38542 12.2625L6.09346 8.31215Z"
-                        fill="#6265AD"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </div>
+                    <path
+                      clip-rule="evenodd"
+                      d="M6.09346 8.31215C5.65924 7.79108 6.02976 7 6.70803 7H13.292C13.9702 7 14.3408 7.79109 13.9065 8.31215L10.6146 12.2625C10.2947 12.6463 9.70526 12.6463 9.38542 12.2625L6.09346 8.31215Z"
+                      fill="#6265AD"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
-              </button>
-            </div>
+              </div>
+            </button>
           </div>
         </div>
       </div>
