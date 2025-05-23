@@ -1,12 +1,14 @@
+import { fireEvent, within } from '@storybook/testing-library';
+import Button from 'components/Button';
+import Icon from 'components/Icon';
+import TextField from 'components/TextField';
+import Typography from 'components/Typography';
+import BarChartShowCase from 'components/storyUtils/BarChartShowCase';
 import { useState } from 'react';
 import { FIGMA_URL } from 'utils/common';
-import Drawer, { DrawerHeader, DrawerContent, DrawerFooter } from './index';
-import Button from 'components/Button';
-import Typography from 'components/Typography';
-import TextField from 'components/TextField';
-import BarChartShowCase from 'components/storyUtils/BarChartShowCase';
-import Icon from 'components/Icon';
-import { fireEvent, within } from '@storybook/testing-library';
+import Filter, { FilterOption } from '../Filter';
+import Select from '../Select';
+import Drawer, { DrawerContent, DrawerFooter, DrawerHeader } from './index';
 
 export default {
   title: 'Updated Components/Drawer/Drawer',
@@ -117,6 +119,12 @@ export const Sizes = {
     const [isOpen2, setIsOpen2] = useState<boolean>(false);
     const [isOpen3, setIsOpen3] = useState<boolean>(false);
     const [isOpen4, setIsOpen4] = useState<boolean>(false);
+    const [isOpen5, setIsOpen5] = useState<boolean>(false);
+
+    const [selectedFilter, setSelectedFilter] = useState<FilterOption>(undefined);
+    const [selectedOption, setSelectedOption] = useState<FilterOption>(undefined);
+
+    const handleClear = () => setSelectedFilter(undefined);
 
     return (
       <div css={{ width: '100%' }}>
@@ -137,7 +145,32 @@ export const Sizes = {
             anchor={'right'}
           >
             <DrawerHeader>{drawerContent.header}</DrawerHeader>
-            <DrawerContent>{drawerContent.content}</DrawerContent>
+            <DrawerContent>
+              <Select
+                label={'Label'}
+                options={[
+                  { label: 'Option 1', value: '1' },
+                  { label: 'Option 2', value: '2' },
+                  { label: 'Option 3', value: '3' },
+                ]}
+                isSearchable={false}
+                selectedOption={selectedOption}
+                onChange={setSelectedOption}
+              />
+              <Filter
+                selectedFilter={selectedFilter}
+                onChange={setSelectedFilter}
+                onClear={handleClear}
+                defaultValue={{ label: 'All', value: 'all' }}
+                label="Friends"
+                items={[
+                  { label: 'Option 1', value: '1' },
+                  { label: 'Option 2', value: '2' },
+                  { label: 'Option 3', value: '3' },
+                ]}
+              />
+              {drawerContent.content}
+            </DrawerContent>
             <DrawerFooter>{drawerContent.footer}</DrawerFooter>
           </Drawer>
           <Button
@@ -199,15 +232,15 @@ export const Sizes = {
           </Drawer>
           <Button
             onClick={() => {
-              setIsOpen1(!isOpen1);
+              setIsOpen5(!isOpen5);
             }}
           >
             clamp(300px, 50%, 600px)
           </Button>
           <Drawer
-            isOpen={isOpen1}
+            isOpen={isOpen5}
             onClose={() => {
-              setIsOpen1(false);
+              setIsOpen5(false);
             }}
             size="clamp(300px, 50%, 600px)"
             anchor={'right'}

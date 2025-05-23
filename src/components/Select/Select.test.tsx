@@ -1,9 +1,8 @@
-import userEvent from '@testing-library/user-event';
-
-import { render, screen, selectDropdownOption, sleep, waitFor } from '../../test';
-import StatefulSelect from './StatefulSelect';
 import { fireEvent } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import { render, screen, selectDropdownOption, sleep, waitFor } from '~/test';
 import { SELECT_ALL_OPTION } from './constants';
+import StatefulSelect from './StatefulSelect';
 
 global.ResizeObserver = vi.fn().mockImplementation(() => ({
   observe: vi.fn(),
@@ -203,7 +202,7 @@ describe('Generic Select', () => {
         charCode: 40,
       });
 
-      await waitFor(() => expect(container.querySelector('#select__00')).toBeInTheDocument());
+      expect(await screen.findByRole('listbox')).toBeInTheDocument();
     });
 
     it('down arrow should open menu and close it with Escape', async () => {
@@ -225,12 +224,13 @@ describe('Generic Select', () => {
         charCode: 40,
       });
 
-      await waitFor(() => expect(container.querySelector('#select__00')).toBeInTheDocument());
+      expect(await screen.findByRole('listbox')).toBeInTheDocument();
 
       fireEvent.keyDown(select, {
         key: 'Escape',
       });
-      await waitFor(() => expect(container.querySelector('#select__00')).not.toBeInTheDocument());
+
+      expect(screen.queryByRole('listbox')).not.toBeInTheDocument();
     });
 
     it('escape on input should clear the value', async () => {

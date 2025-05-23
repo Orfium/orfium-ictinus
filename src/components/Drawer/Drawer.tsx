@@ -1,11 +1,12 @@
-import useEscape from 'hooks/useEscape';
+import type { RefObject } from 'react';
 import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
-
+import { useDOMRef } from '~/components/utils/useDOMRef';
+import useEscape from '~/hooks/useEscape';
+import { useOverlayStack } from '~/hooks/useOverlayStack';
 import { anchorStyle, backdropStyle, overlayStyle } from './Drawer.style';
 import type { DrawerProps } from './Drawer.types';
 import { DrawerContextProvider } from './DrawerContext';
-import ClickAwayListener from 'components/utils/ClickAwayListener';
 
 const Drawer = React.forwardRef<HTMLDivElement, React.PropsWithChildren<DrawerProps>>(
   (
@@ -20,19 +21,32 @@ const Drawer = React.forwardRef<HTMLDivElement, React.PropsWithChildren<DrawerPr
       parent = document.body,
       children,
     },
-    ref
+    ref: RefObject<HTMLDivElement>
   ) => {
+    const overlayRef = useDOMRef(ref);
+
     useEscape(() => {
       if (!isBackgroundActive) {
         onClose();
       }
     });
 
+    const { overlayProps } = useOverlayStack({
+      isVisible: isOpen,
+      isNonModal: false,
+      overlayRef: overlayRef,
+      onClose: () => {
+        if (!isBackgroundActive) {
+          onClose();
+        }
+      },
+    });
+
     useEffect(() => {
       if (isOpen) {
         parent.style.overflow = 'hidden';
       } else {
-        parent.style.overflow = 'unset';
+        parent.style.overflow = '';
       }
     }, [isOpen, parent.style]);
 
@@ -40,25 +54,22 @@ const Drawer = React.forwardRef<HTMLDivElement, React.PropsWithChildren<DrawerPr
       return null;
     }
 
+    // if (!isOpen) return null;
+
     return ReactDOM.createPortal(
       <DrawerContextProvider hasFixedLayout={hasFixedLayout} onClose={onClose}>
         <div css={backdropStyle({ isOpen, anchor, size, isBackgroundActive })}>
-          <ClickAwayListener
-            onClick={() => {
-              if (!isBackgroundActive) {
-                onClose();
-              }
-            }}
-            cssStyles={anchorStyle({ anchor, size, isBackgroundActive })}
-          >
+          <div css={anchorStyle({ anchor, size, isBackgroundActive })}>
             <div
-              ref={ref}
+              {...overlayProps}
+              ref={overlayRef}
               css={overlayStyle({ isOpen, anchor, hasFixedLayout })}
               data-testid={`${dataTestPrefixId}_drawer_container`}
+              tabIndex={-1}
             >
               {children}
             </div>
-          </ClickAwayListener>
+          </div>
         </div>
       </DrawerContextProvider>,
       parent
