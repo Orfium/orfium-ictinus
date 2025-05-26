@@ -1,7 +1,7 @@
 import MultiTextFieldBase from 'components/MultiTextFieldBase/MultiTextFieldBase';
 import ProgressIndicator from 'components/ProgressIndicator';
 import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
-import PositionInScreen from 'components/utils/PositionInScreen';
+import { PositionInScreen } from 'components/utils/PositionInScreen';
 import useKeyboard from 'hooks/useKeyboardEvents';
 import { debounce, differenceBy, head } from 'lodash-es';
 import React, { useCallback, useMemo, useRef, useState } from 'react';

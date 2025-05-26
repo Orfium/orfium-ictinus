@@ -25,21 +25,21 @@ const Drawer = React.forwardRef<HTMLDivElement, React.PropsWithChildren<DrawerPr
   ) => {
     const overlayRef = useDOMRef(ref);
 
-    useEscape(() => {
-      if (!isBackgroundActive) {
-        onClose();
-      }
-    });
-
     const { overlayProps } = useOverlayStack({
       isVisible: isOpen,
       isNonModal: false,
-      overlayRef: overlayRef,
+      overlayRef,
       onClose: () => {
         if (!isBackgroundActive) {
           onClose();
         }
       },
+    });
+
+    useEscape(() => {
+      if (!isBackgroundActive) {
+        onClose();
+      }
     });
 
     useEffect(() => {
@@ -53,8 +53,6 @@ const Drawer = React.forwardRef<HTMLDivElement, React.PropsWithChildren<DrawerPr
     if (parent === null) {
       return null;
     }
-
-    // if (!isOpen) return null;
 
     return ReactDOM.createPortal(
       <DrawerContextProvider hasFixedLayout={hasFixedLayout} onClose={onClose}>

@@ -1,4 +1,4 @@
-import PositionInScreen from 'components/utils/PositionInScreen';
+import { PositionInScreen } from 'components/utils/PositionInScreen';
 import useKeyboard from 'hooks/useKeyboardEvents';
 import { head, omit } from 'lodash-es';
 import React, { useRef, useState } from 'react';

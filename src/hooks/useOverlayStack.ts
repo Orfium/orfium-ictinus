@@ -43,7 +43,7 @@ export function useOverlayStack({
     if (!isVisible) return;
 
     const handleClickOutside = (e: MouseEvent) => {
-      // Filter out synthetic/programmatic events
+      // TODO: hack filter out synthetic/programmatic events
       if (!e.isTrusted || e.target === document.body) {
         return;
       }

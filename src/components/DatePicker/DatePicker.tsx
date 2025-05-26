@@ -1,9 +1,9 @@
+import { PositionInScreen } from 'components/utils/PositionInScreen';
 import useKeyboardEvents from 'hooks/useKeyboardEvents';
 import React, { memo, useCallback, useMemo, useState } from 'react';
 import isEqual from 'react-fast-compare';
 import type { Dayjs } from 'utils/date';
 import type { TestProps } from 'utils/types';
-import PositionInScreen from '../utils/PositionInScreen';
 import { EMPTY_STATE } from './constants';
 import { datePickerStyles } from './DatePicker.style';
 import type { DatePickerProps } from './DatePicker.types';

@@ -1,13 +1,16 @@
 import { fireEvent, within } from '@storybook/testing-library';
 import Button from 'components/Button';
+import DatePicker from 'components/DatePicker';
+import { currentDay } from 'components/DatePicker/utils';
+import Filter, { FilterOption } from 'components/Filter';
 import Icon from 'components/Icon';
+import Select from 'components/Select';
 import TextField from 'components/TextField';
 import Typography from 'components/Typography';
 import BarChartShowCase from 'components/storyUtils/BarChartShowCase';
 import { useState } from 'react';
 import { FIGMA_URL } from 'utils/common';
-import Filter, { FilterOption } from '../Filter';
-import Select from '../Select';
+import Stack from '../storyUtils/Stack';
 import Drawer, { DrawerContent, DrawerFooter, DrawerHeader } from './index';
 
 export default {
@@ -129,46 +132,35 @@ export const Sizes = {
     return (
       <div css={{ width: '100%' }}>
         <div css={{ display: 'flex', gap: '48px' }}>
-          <Button
-            onClick={() => {
-              setIsOpen1(!isOpen1);
-            }}
-          >
-            33%
-          </Button>
-          <Drawer
-            isOpen={isOpen1}
-            onClose={() => {
-              setIsOpen1(false);
-            }}
-            size={'33%'}
-            anchor={'right'}
-          >
+          <Button onClick={() => setIsOpen1(!isOpen1)}>33%</Button>
+          <Drawer isOpen={isOpen1} onClose={() => setIsOpen1(false)} size="33%" anchor="right">
             <DrawerHeader>{drawerContent.header}</DrawerHeader>
             <DrawerContent>
-              <Select
-                label={'Label'}
-                options={[
-                  { label: 'Option 1', value: '1' },
-                  { label: 'Option 2', value: '2' },
-                  { label: 'Option 3', value: '3' },
-                ]}
-                isSearchable={false}
-                selectedOption={selectedOption}
-                onChange={setSelectedOption}
-              />
-              <Filter
-                selectedFilter={selectedFilter}
-                onChange={setSelectedFilter}
-                onClear={handleClear}
-                defaultValue={{ label: 'All', value: 'all' }}
-                label="Friends"
-                items={[
-                  { label: 'Option 1', value: '1' },
-                  { label: 'Option 2', value: '2' },
-                  { label: 'Option 3', value: '3' },
-                ]}
-              />
+              <Stack isVertical>
+                <Select
+                  label={'Label'}
+                  options={[
+                    { label: 'Option 1', value: '1' },
+                    { label: 'Option 2', value: '2' },
+                    { label: 'Option 3', value: '3' },
+                  ]}
+                  isSearchable={false}
+                  selectedOption={selectedOption}
+                  onChange={setSelectedOption}
+                />
+                <Filter
+                  selectedFilter={selectedFilter}
+                  onChange={setSelectedFilter}
+                  onClear={handleClear}
+                  defaultValue={{ label: 'All', value: 'all' }}
+                  label="Friends"
+                  items={[
+                    { label: 'Option 1', value: '1' },
+                    { label: 'Option 2', value: '2' },
+                    { label: 'Option 3', value: '3' },
+                  ]}
+                />
+              </Stack>
               {drawerContent.content}
             </DrawerContent>
             <DrawerFooter>{drawerContent.footer}</DrawerFooter>
@@ -636,6 +628,65 @@ export const MoreExamples = {
   name: 'More Examples',
   parameters: {
     controls: { disable: true },
+  },
+};
+
+export const WithOverlays = {
+  render: () => {
+    const [isOpen, setIsOpen] = useState<boolean>(false);
+
+    const [selectedFilter, setSelectedFilter] = useState<FilterOption>(undefined);
+    const [selectedOption, setSelectedOption] = useState<FilterOption>(undefined);
+
+    const handleClear = () => setSelectedFilter(undefined);
+
+    const [date, setDate] = useState({ from: currentDay.toDate(), to: undefined });
+
+    return (
+      <div>
+        <Button onClick={() => setIsOpen(!isOpen)}>With Overlays</Button>
+        <Drawer
+          isOpen={isOpen}
+          onClose={() => setIsOpen(false)}
+          size="clamp(0px, 100%, 600px)"
+          anchor="right"
+        >
+          <DrawerHeader>With Overlays</DrawerHeader>
+          <DrawerContent>
+            <Stack isVertical>
+              <Select
+                label="Select"
+                options={[
+                  { label: 'Option 1', value: '1' },
+                  { label: 'Option 2', value: '2' },
+                  { label: 'Option 3', value: '3' },
+                ]}
+                selectedOption={selectedOption}
+                onChange={setSelectedOption}
+              />
+              <Filter
+                selectedFilter={selectedFilter}
+                onChange={setSelectedFilter}
+                onClear={handleClear}
+                defaultValue={{ label: 'All', value: 'all' }}
+                label="Filter"
+                items={[
+                  { label: 'Option 1', value: '1' },
+                  { label: 'Option 2', value: '2' },
+                  { label: 'Option 3', value: '3' },
+                ]}
+              />
+              <DatePicker
+                filterConfig={{ label: 'My date', filterType: 'added' }}
+                onClear={() => setDate({ from: undefined, to: undefined })}
+                value={date}
+                onChange={setDate}
+              />
+            </Stack>
+          </DrawerContent>
+        </Drawer>
+      </div>
+    );
   },
 };
 
