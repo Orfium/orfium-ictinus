@@ -273,7 +273,7 @@
   box-shadow: inset 0 0 0 0.125rem #175BF5;
 }
 
-.emotion-15>div>div>button {
+.emotion-15>div>button {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   border: none;
@@ -283,17 +283,17 @@
   margin-left: -1px;
 }
 
-.emotion-15>div>div>button:hover[data-active='false']:enabled {
+.emotion-15>div>button:hover[data-active='false']:enabled {
   background: rgba(200,206,255,0.20);
 }
 
-.emotion-15>div>div>button:focus-within:enabled {
+.emotion-15>div>button:focus-within:enabled {
   border-left: none;
   box-shadow: inset 0 0 0 0.125rem #175BF5;
   z-index: 1;
 }
 
-.emotion-15>div>div>button:focus-within:enabled[data-active='false'] {
+.emotion-15>div>button:focus-within:enabled[data-active='false'] {
   background: rgba(200,206,255,0.20);
 }
 
