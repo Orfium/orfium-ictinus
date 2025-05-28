@@ -1,122 +1,156 @@
-import { useTheme } from 'index';
-import * as React from 'react';
-import { useState } from 'react';
-import type { SemanticColorsKey } from 'theme/tokens/semantic/colors';
-import { generateTestDataId } from 'utils/helpers';
-import type { AcceptedColorComponentTypes } from 'utils/themeFunctions';
-import type { TestId } from 'utils/types';
-
-import {
-  toastContainer,
-  topContainer,
-  infoContainer,
-  infoIconContainer,
-  actionIconsContainer,
-  chevronIconContainer,
-  expandedContainer,
-} from './Toast.style';
+import type { ReactElement, RefObject } from 'react';
+import React, { forwardRef } from 'react';
+import { useToast, useToastRegion } from 'react-aria';
+import { createPortal, flushSync } from 'react-dom';
+import { ToastQueue, useToastQueue } from 'react-stately';
+import useTheme from '~/hooks/useTheme';
+import Box from '../Box';
 import Icon from '../Icon';
-import type { NotificationStyleType, NotificationTypes } from '../Notification/Notification';
-import { actionContainer, typeToColorStyle } from '../Notification/Notification.style';
-import { typeToIconName } from '../Notification/subcomponents/CompactNotification/CompactNotification';
+import { SlotProvider } from '../utils/Slots';
+import { useDOMRef } from '../utils/useDOMRef';
+import { styles } from './Toast.style';
+import type {
+  ToastContainerProps,
+  ToastOptions,
+  ToastProps,
+  ToastRegionProps,
+  ToastValue,
+} from './Toast.types';
 
-export type ToastProps = {
-  /** The informative message of the Toast */
-  message: string;
-  /** The type of the Toast, will determine the color and the icon */
-  type?: AcceptedColorComponentTypes;
-  /** The style type of the Notification. Defaults to elevated */
-  styleType?: NotificationStyleType;
-  /** The closing call-to-action of the Toast */
-  closeCTA: (() => void) | undefined;
-  /** Initialize toast as expanded */
-  isExpanded?: boolean;
-  /** If true, the Toast has a minimum-height */
-  hasMinimumHeight?: boolean;
-  /** The data test id if needed */
-  dataTestId?: TestId;
+const DEFAULT_TIMEOUT = 5000;
+const DEFAULT_MAX_VISIBLE_TOASTS = 5;
+
+function wrapInViewTransition(fn: () => void): void {
+  if ('startViewTransition' in document) {
+    document
+      .startViewTransition(() => {
+        flushSync(fn);
+      })
+      .ready.catch(() => {});
+  } else {
+    fn();
+  }
+}
+
+const toastQueue = new ToastQueue<ToastValue>({
+  maxVisibleToasts: DEFAULT_MAX_VISIBLE_TOASTS,
+  wrapUpdate: wrapInViewTransition,
+});
+
+export const toast = (
+  children: string,
+  { isDismissible = true, timeout = DEFAULT_TIMEOUT, ...options }: ToastOptions = {}
+) => {
+  const toastValue: ToastValue = {
+    children,
+    ...options,
+  };
+
+  return toastQueue.add(toastValue, {
+    timeout: isDismissible ? timeout : undefined,
+    onClose: options.onClose,
+  });
 };
 
-export const isNotificationTypes = (type: string): type is NotificationTypes => {
-  return ['success', 'error', 'warning', 'info'].includes(type);
+toast.dismiss = (key: string) => {
+  toastQueue.close(key);
 };
 
-const Toast: React.FCC<ToastProps> = ({
-  message,
-  type = 'primary',
-  styleType = 'elevated',
-  closeCTA,
-  isExpanded = false,
-  hasMinimumHeight = true,
-  children,
-  dataTestId,
-}) => {
-  const [isExpandedState, setIsExpandedState] = useState(isExpanded);
+export const Toast = forwardRef<HTMLDivElement, ToastProps>(
+  ({ state, ...props }: ToastProps, ref: RefObject<HTMLDivElement>) => {
+    const domRef = useDOMRef(ref);
+    const theme = useTheme();
+    const { toastProps, contentProps, titleProps } = useToast(props, state, domRef);
 
-  const theme = useTheme();
+    const actionElements =
+      props.toast.content.actions &&
+      (props.toast.content.actions as ReactElement).type === React.Fragment
+        ? (props.toast.content.actions as ReactElement).props.children
+        : props.toast.content.actions;
+    const actionsArray = React.Children.toArray(actionElements);
 
-  return (
-    <div
-      css={toastContainer(type, styleType)}
-      {...(isNotificationTypes(type) && { 'notification-type': 'toast' })}
-    >
-      <div css={topContainer(type)}>
-        <div css={infoContainer()}>
-          {isNotificationTypes(type) && (
-            <div css={infoIconContainer()}>
-              <Icon
-                name={typeToIconName(type)}
-                color={theme.tokens.colors.get(
-                  `textColor.default.${typeToColorStyle(type)}` as SemanticColorsKey
-                )}
-                size={24}
-              />
-            </div>
-          )}
-          <div>{message}</div>
-        </div>
-        <div css={actionIconsContainer()}>
-          <span
-            css={chevronIconContainer(isExpandedState)}
-            onClick={() => setIsExpandedState(!isExpandedState)}
-            data-testid={generateTestDataId('toast-expand', dataTestId)}
-          >
-            <Icon
-              name="chevronDown"
-              color={
-                isNotificationTypes(type)
-                  ? theme.tokens.colors.get('textColor.default.secondary')
-                  : '#ffffff'
-              }
-              size={24}
-            />
-          </span>
-
-          <span
-            css={actionContainer()}
-            onClick={closeCTA}
-            data-testid={generateTestDataId('toast-close', dataTestId)}
-          >
-            <Icon
-              name="close"
-              color={
-                isNotificationTypes(type)
-                  ? theme.tokens.colors.get('textColor.default.secondary')
-                  : '#ffffff'
-              }
-              size={24}
-            />
-          </span>
-        </div>
-      </div>
+    return (
       <div
-        css={expandedContainer(type, isExpandedState, hasMinimumHeight)}
-        data-testid={generateTestDataId('expanded-container', dataTestId)}
+        {...toastProps}
+        ref={domRef}
+        css={styles.toast}
+        className="toast"
+        style={
+          {
+            '--view-transition-name': props.toast.key,
+          } as React.CSSProperties
+        }
       >
-        {children}
+        <div {...contentProps} css={styles.toastContent}>
+          <SlotProvider
+            slots={{
+              icon: { size: 20 },
+            }}
+          >
+            {props.toast.content.icon}
+            <div {...titleProps}>{props.toast.content.children}</div>
+          </SlotProvider>
+        </div>
+        <Box display="flex" alignItems="center" gap="6">
+          {actionsArray.length > 0 ? (
+            <div css={styles.toastActions}>
+              <SlotProvider
+                slots={{
+                  button: { size: 'compact' },
+                  link: { size: 2, type: 'inverted' },
+                }}
+              >
+                {actionsArray}
+              </SlotProvider>
+            </div>
+          ) : null}
+          <Icon
+            role="button"
+            aria-label="Dismiss notification"
+            name="close"
+            onClick={() => state.close(props.toast.key)}
+            color={theme.tokens.colors.get('textColor.inverted.secondary')}
+            size={20}
+          />
+        </Box>
       </div>
-    </div>
-  );
-};
+    );
+  }
+);
 
-export default Toast;
+Toast.displayName = 'Toast';
+
+export const ToastContainer = forwardRef<HTMLDivElement, ToastContainerProps>(
+  (
+    { placement = 'bottom right', ...props }: ToastContainerProps,
+    ref: RefObject<HTMLDivElement>
+  ) => {
+    const state = useToastQueue(toastQueue);
+
+    return state.visibleToasts.length > 0
+      ? createPortal(
+          <ToastRegion ref={ref} {...props} placement={placement} state={state} />,
+          document.body
+        )
+      : null;
+  }
+);
+
+ToastContainer.displayName = 'ToastContainer';
+
+const ToastRegion = forwardRef<HTMLDivElement, ToastRegionProps>(
+  ({ placement, state, ...props }: ToastRegionProps, ref: RefObject<HTMLDivElement>) => {
+    const domRef = useDOMRef(ref);
+    const { regionProps } = useToastRegion(props, state, domRef);
+
+    return (
+      <div {...regionProps} ref={domRef} css={[styles.toastRegion, styles[placement]]}>
+        {state.visibleToasts.map((toast) => (
+          <Toast key={toast.key} toast={toast} state={state} />
+        ))}
+      </div>
+    );
+  }
+);
+
+ToastRegion.displayName = 'ToastRegion';

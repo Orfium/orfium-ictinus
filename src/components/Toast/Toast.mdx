@@ -1,0 +1,27 @@
+import { Meta, Canvas, ArgTypes, Story, Primary } from '@storybook/blocks';
+import * as ToastStories from './Toast.stories';
+import { Toast } from './Toast';
+
+<Meta of={ToastStories} />
+
+<SectionHeader
+  title="Toast"
+  sections={[
+    { title: 'Overview', href: '#overview' },
+    { title: 'Props', href: '#props' },
+    { title: 'Usage', href: '#usage' },
+    { title: 'Variants', href: '#variants' },
+  ]}
+/>
+
+## Overview
+
+A message from the system to the user that offers contextual and timely information pertaining to the user's current task.
+
+<Story of={ToastStories.Default} />
+
+## Props
+
+<ArgTypes of={Toast} />
+
+<Canvas of={ToastStories.Default} />

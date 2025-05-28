@@ -1,8 +1,6 @@
 import { css } from '@emotion/react';
-import React from 'react';
-
-import { render, fireEvent } from '../../test';
-import Toast from './Toast';
+import { fireEvent, render } from '../../test';
+import Toast from './ToastV4';
 
 describe('Generic Toast', () => {
   const data = {
@@ -14,7 +12,12 @@ describe('Generic Toast', () => {
 
     const { findByText } = render(
       <Toast {...data} closeCTA={closeCTA}>
-        <div css={css`"width: 1024px; height: 768px;"`}>
+        <div
+          css={css`
+            width: 1024px;
+            height: 768px;
+          `}
+        >
           <h1>container-test-data</h1>
         </div>
       </Toast>

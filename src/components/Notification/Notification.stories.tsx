@@ -1,14 +1,14 @@
-import Toast from '../Toast';
+import Banner from '../Notification/Banner';
+import InlineNotification from '../Notification/InlineNotification';
+import NotificationsContainer from '../Notification/NotificationsContainer';
 import NotificationVisual from '../Notification/NotificationVisual';
 import Snackbar from '../Notification/Snackbar';
-import InlineNotification from '../Notification/InlineNotification';
-import Banner from '../Notification/Banner';
-import NotificationsContainer from '../Notification/NotificationsContainer';
-import PresentComponent from '../storyUtils/PresentComponent';
-import Stack from '../storyUtils/Stack';
 import NotificationShowcase, {
   NotificationContainerWithinDOMElement,
 } from '../storyUtils/NotificationShowcase';
+import PresentComponent from '../storyUtils/PresentComponent';
+import Stack from '../storyUtils/Stack';
+import Toast from '../ToastV4';
 
 export default {
   title: 'Original Components/Notification',
