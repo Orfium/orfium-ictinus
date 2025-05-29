@@ -1,7 +1,5 @@
-import React from 'react';
-
-import { render, fireEvent } from '../../test';
-import Toast from '../Toast';
+import { fireEvent, render } from '../../test';
+import Toast from '../ToastV4';
 import Banner from './Banner';
 import InlineNotification from './InlineNotification';
 import { NotificationTypes } from './Notification';
