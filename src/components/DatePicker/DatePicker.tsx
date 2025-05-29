@@ -1,10 +1,9 @@
+import { PositionInScreen } from 'components/utils/PositionInScreen';
 import useKeyboardEvents from 'hooks/useKeyboardEvents';
 import React, { memo, useCallback, useMemo, useState } from 'react';
 import isEqual from 'react-fast-compare';
 import type { Dayjs } from 'utils/date';
 import type { TestProps } from 'utils/types';
-import ClickAwayListener from '../utils/ClickAwayListener';
-import PositionInScreen from '../utils/PositionInScreen';
 import { EMPTY_STATE } from './constants';
 import { datePickerStyles } from './DatePicker.style';
 import type { DatePickerProps } from './DatePicker.types';
@@ -117,10 +116,6 @@ const DatePicker: React.FC<DatePickerProps & TestProps> = ({
     [isRangePicker]
   );
 
-  const onCancel = useCallback(() => {
-    setIsOpen(false);
-  }, []);
-
   const onClearAll = useCallback(() => {
     setRange(EMPTY_STATE);
     onChange(EMPTY_STATE);
@@ -175,41 +170,40 @@ const DatePicker: React.FC<DatePickerProps & TestProps> = ({
   }, [applyRangeAndClose, range]);
 
   return (
-    <ClickAwayListener onClick={onCancel}>
-      <div {...keyboardProps}>
-        <PositionInScreen
-          isVisible={isOpen}
-          placement={placement}
-          parent={
-            <DatePickInput
-              filterConfig={filterConfig}
-              isRangePicker={isRangePicker}
-              selectedDay={value}
-              inputProps={inputProps}
-              dateFormatOverride={dateFormatOverride}
-              handleIconClick={handleIconClick}
-              handleClear={handleClear}
-              isOpen={isOpen}
-              dataTestId={dataTestId}
-            />
-          }
-        >
-          <div css={datePickerStyles()}>
-            <OverlayComponent
-              selectedOption={selectedOption}
-              setSelectedOption={handleSelectedOptions}
-              extraOptions={options}
-              isRangePicker={isRangePicker}
-              onDaySelect={setRangePick}
-              selectedDays={range}
-              disabledDates={disableDates}
-              onClearAll={onClearAll}
-              onApply={onApply}
-            />
-          </div>
-        </PositionInScreen>
-      </div>
-    </ClickAwayListener>
+    <div {...keyboardProps}>
+      <PositionInScreen
+        isVisible={isOpen}
+        setIsVisible={setIsOpen}
+        placement={placement}
+        parent={
+          <DatePickInput
+            filterConfig={filterConfig}
+            isRangePicker={isRangePicker}
+            selectedDay={value}
+            inputProps={inputProps}
+            dateFormatOverride={dateFormatOverride}
+            handleIconClick={handleIconClick}
+            handleClear={handleClear}
+            isOpen={isOpen}
+            dataTestId={dataTestId}
+          />
+        }
+      >
+        <div css={datePickerStyles()}>
+          <OverlayComponent
+            selectedOption={selectedOption}
+            setSelectedOption={handleSelectedOptions}
+            extraOptions={options}
+            isRangePicker={isRangePicker}
+            onDaySelect={setRangePick}
+            selectedDays={range}
+            disabledDates={disableDates}
+            onClearAll={onClearAll}
+            onApply={onApply}
+          />
+        </div>
+      </PositionInScreen>
+    </div>
   );
 };
 

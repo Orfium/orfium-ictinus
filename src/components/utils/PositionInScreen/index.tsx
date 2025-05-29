@@ -1,1 +1,1 @@
-export { default } from './PositionInScreen';
+export { PositionInScreen } from './PositionInScreen';

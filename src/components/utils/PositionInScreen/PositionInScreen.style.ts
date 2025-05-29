@@ -3,10 +3,12 @@ import { css } from '@emotion/react';
 import type { CSSObject } from '@emotion/serialize';
 import { rem } from 'polished';
 
-
 export const container =
-  (hasOverflow?: boolean, isVisible?: boolean,
-   sx?: { container?: CSSObject; itemContainer?: CSSObject }) =>
+  (
+    hasOverflow?: boolean,
+    isVisible?: boolean,
+    sx?: { container?: CSSObject; itemContainer?: CSSObject }
+  ) =>
   (): SerializedStyles =>
     css({
       overflow: hasOverflow ? 'hidden' : 'inherit',
@@ -22,8 +24,12 @@ export const container =
     });
 
 export const itemContainer =
-  (clientX: number, clientY: number, width?: number,
-   sx?: { container?: CSSObject; itemContainer?: CSSObject }) =>
+  (
+    clientX: number,
+    clientY: number,
+    width?: number,
+    sx?: { container?: CSSObject; itemContainer?: CSSObject }
+  ) =>
   (): SerializedStyles =>
     css({
       position: 'absolute',

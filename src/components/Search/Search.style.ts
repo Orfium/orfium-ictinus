@@ -1,10 +1,9 @@
 import { css, type SerializedStyles } from '@emotion/react';
+import { generateStylesFromTokens } from 'components/Typography/utils';
 import type { Theme } from 'theme';
 import { rem } from 'theme/utils';
-
 import { getSearchTokens } from './Search.tokens';
 import type { SearchProps } from './Search.types';
-import { generateStylesFromTokens } from 'components/Typography/utils';
 
 export const searchContainer = (): SerializedStyles => {
   return css`
@@ -35,7 +34,8 @@ export const filterStyles =
   () =>
   (theme: Theme): SerializedStyles => {
     return css`
-      > div > div > button {
+      /* TODO: avoid abstract overrides since the structure might change */
+      > div > button {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
         border: none;

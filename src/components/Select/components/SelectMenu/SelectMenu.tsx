@@ -1,16 +1,15 @@
 import type { CSSObject } from '@emotion/react';
-import useCombinedRefs from 'hooks/useCombinedRefs';
-import { flatMap, head, uniqueId } from 'lodash-es';
-import React, { forwardRef, useCallback, useEffect, useRef } from 'react';
-import type { ComponentSizes } from 'utils/types';
-
-import { menuStyle, optionStyle } from './SelectMenu.style';
-import type { SelectOption } from '../../types';
 import type { ListSelection } from 'components/List';
 import List, { ListItem, ListItemText, ListSection } from 'components/List';
 import { LIST_ITEM_HEIGHT, MAX_NON_VIRTUALIZED_ITEMS_SELECT } from 'components/List/utils';
 import { SELECT_ALL_OPTION } from 'components/Select/constants';
 import type { TextInputBaseProps } from 'components/TextInputBase';
+import useCombinedRefs from 'hooks/useCombinedRefs';
+import { flatMap, head, uniqueId } from 'lodash-es';
+import { forwardRef, useCallback, useEffect, useRef } from 'react';
+import type { ComponentSizes } from 'utils/types';
+import type { SelectOption } from '../../types';
+import { innerMenuStyle, menuStyle, optionStyle } from './SelectMenu.style';
 
 export type SelectMenuProps = {
   filteredOptions: SelectOption[];
@@ -105,12 +104,14 @@ const SelectMenu = forwardRef<HTMLUListElement, SelectMenuProps>((props, ref) =>
     );
 
   return (
-    <div css={menuStyle({ ...props, height: listHeight })} tabIndex={-1}>
-      {isLoading ? (
-        <div css={optionStyle({ isSelected: false, hasNoResultsExist: true })}>Loading...</div>
-      ) : (
-        renderOptions()
-      )}
+    <div css={menuStyle({ ...props })} tabIndex={-1}>
+      <div css={innerMenuStyle({ height: listHeight })}>
+        {isLoading ? (
+          <div css={optionStyle({ isSelected: false, hasNoResultsExist: true })}>Loading...</div>
+        ) : (
+          renderOptions()
+        )}
+      </div>
     </div>
   );
 });

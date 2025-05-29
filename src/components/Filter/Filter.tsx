@@ -1,13 +1,11 @@
+import { PositionInScreen } from 'components/utils/PositionInScreen';
 import useKeyboard from 'hooks/useKeyboardEvents';
 import { head, omit } from 'lodash-es';
 import React, { useRef, useState } from 'react';
-
 import FilterButton from './components/FilterButton';
 import FilterMenu from './components/FilterMenu';
 import type { FilterOption, FilterProps } from './Filter.types';
 import { useFilterWithSelectionUtils } from './hooks';
-import ClickAwayListener from 'components/utils/ClickAwayListener';
-import PositionInScreen from 'components/utils/PositionInScreen';
 
 const Filter = React.forwardRef<HTMLButtonElement, FilterProps>((props, ref) => {
   const {
@@ -27,6 +25,7 @@ const Filter = React.forwardRef<HTMLButtonElement, FilterProps>((props, ref) => 
     isLoading,
     isSearchable,
     minCharactersToSearch,
+    hasWrapperWidth = false,
     hasSelectAllOption = false,
     dataTestPrefixId = 'ictinus_filter',
   } = props;
@@ -123,33 +122,33 @@ const Filter = React.forwardRef<HTMLButtonElement, FilterProps>((props, ref) => 
   );
 
   return (
-    <ClickAwayListener onClick={() => setIsOpen(false)}>
-      <PositionInScreen
-        isVisible={isOpen}
-        offsetY={8}
-        hasWrapperWidth
-        sx={{ container: { width: 'max-content' } }}
-        parent={
-          <FilterButton
-            ref={ref}
-            {...omit(keyboardProps, 'onBlur')}
-            isMulti={isMulti}
-            isActive={isOpen}
-            moreFilters={moreFilters}
-            onClear={handleClear}
-            onClick={handleClick}
-            filterType={filterType}
-            isPopulated={Boolean(isMulti ? selectedFilter?.length : selectedFilter)}
-            dataTestPrefixId={dataTestPrefixId}
-            isDisabled={isDisabled}
-          >
-            {filterLabel}
-          </FilterButton>
-        }
-      >
-        {isOpen && filterOverlay}
-      </PositionInScreen>
-    </ClickAwayListener>
+    <PositionInScreen
+      isVisible={isOpen}
+      setIsVisible={setIsOpen}
+      offsetY={8}
+      hasWrapperWidth={hasWrapperWidth}
+      isNonModal={isMulti}
+      sx={{ container: { width: 'max-content' } }}
+      parent={
+        <FilterButton
+          ref={ref}
+          {...omit(keyboardProps, 'onBlur')}
+          isMulti={isMulti}
+          isActive={isOpen}
+          moreFilters={moreFilters}
+          onClear={handleClear}
+          onClick={handleClick}
+          filterType={filterType}
+          isPopulated={Boolean(isMulti ? selectedFilter?.length : selectedFilter)}
+          dataTestPrefixId={dataTestPrefixId}
+          isDisabled={isDisabled}
+        >
+          {filterLabel}
+        </FilterButton>
+      }
+    >
+      {filterOverlay}
+    </PositionInScreen>
   );
 });
 

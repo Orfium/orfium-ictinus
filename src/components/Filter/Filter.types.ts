@@ -68,6 +68,8 @@ export type FilterProps = {
   isVirtualized?: boolean;
   /** Whether the multi-filter should have a select-all option*/
   hasSelectAllOption?: boolean;
+  /** Whether to apply a wrapper width to the filter menu. */
+  hasWrapperWidth?: boolean;
   /** In case of custom filter menu */
   children?: React.FC<FilterChildrenProps>;
 } & FilterAsyncSearchProps &

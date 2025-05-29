@@ -1,8 +1,13 @@
-import PresentComponent from '../storyUtils/PresentComponent';
+import DatePicker from 'components/DatePicker';
+import { currentDay } from 'components/DatePicker/utils';
+import Filter, { FilterOption } from 'components/Filter';
+import Select from 'components/Select';
+import { useState } from 'react';
+import { FIGMA_URL } from 'utils/common';
 import ModalShowcase from '../storyUtils/ModalShowcase';
+import PresentComponent from '../storyUtils/PresentComponent';
 import Stack from '../storyUtils/Stack';
 import ModalComponent from './Modal';
-import { FIGMA_URL } from 'utils/common';
 
 export default {
   title: 'Original Components/Modal',
@@ -75,5 +80,55 @@ export const ModalContent = {
 
   parameters: {
     controls: { include: ['label', 'heading', 'message', 'primaryCTALabel', 'secondaryCTALabel'] },
+  },
+};
+
+export const WithOverlays = {
+  render: () => {
+    const [selectedFilter, setSelectedFilter] = useState<FilterOption>(undefined);
+    const [selectedOption, setSelectedOption] = useState<FilterOption>(undefined);
+
+    const handleClear = () => setSelectedFilter(undefined);
+
+    const [date, setDate] = useState({ from: currentDay.toDate(), to: undefined });
+
+    return (
+      <Stack>
+        <PresentComponent name="" width={768}>
+          <ModalShowcase>
+            <Stack isVertical>
+              <Select
+                label="Select"
+                options={[
+                  { label: 'Option 1', value: '1' },
+                  { label: 'Option 2', value: '2' },
+                  { label: 'Option 3', value: '3' },
+                ]}
+                selectedOption={selectedOption}
+                onChange={setSelectedOption}
+              />
+              <Filter
+                selectedFilter={selectedFilter}
+                onChange={setSelectedFilter}
+                onClear={handleClear}
+                defaultValue={{ label: 'All', value: 'all' }}
+                label="Filter"
+                items={[
+                  { label: 'Option 1', value: '1' },
+                  { label: 'Option 2', value: '2' },
+                  { label: 'Option 3', value: '3' },
+                ]}
+              />
+              <DatePicker
+                filterConfig={{ label: 'My date', filterType: 'added' }}
+                onClear={() => setDate({ from: undefined, to: undefined })}
+                value={date}
+                onChange={setDate}
+              />
+            </Stack>
+          </ModalShowcase>
+        </PresentComponent>
+      </Stack>
+    );
   },
 };
