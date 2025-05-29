@@ -25,6 +25,7 @@ const Filter = React.forwardRef<HTMLButtonElement, FilterProps>((props, ref) => 
     isLoading,
     isSearchable,
     minCharactersToSearch,
+    hasWrapperWidth = false,
     hasSelectAllOption = false,
     dataTestPrefixId = 'ictinus_filter',
   } = props;
@@ -125,7 +126,7 @@ const Filter = React.forwardRef<HTMLButtonElement, FilterProps>((props, ref) => 
       isVisible={isOpen}
       setIsVisible={setIsOpen}
       offsetY={8}
-      hasWrapperWidth
+      hasWrapperWidth={hasWrapperWidth}
       isNonModal={isMulti}
       sx={{ container: { width: 'max-content' } }}
       parent={

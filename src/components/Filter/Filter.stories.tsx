@@ -1,14 +1,14 @@
-import { FilterOption } from './Filter.types';
-import Stack from '../storyUtils/Stack';
-import { FIGMA_URL } from 'utils/common';
-import Filter from './Filter';
-import React from 'react';
 import Button from 'components/Button';
-import { options } from './constants';
 import DropdownButton from 'components/DropdownButton';
-import useTheme from 'hooks/useTheme';
 import TextField from 'components/TextField';
+import useTheme from 'hooks/useTheme';
+import React from 'react';
+import { FIGMA_URL } from 'utils/common';
 import * as DatePickerStories from '../DatePicker/DatePicker.stories';
+import Stack from '../storyUtils/Stack';
+import { options } from './constants';
+import Filter from './Filter';
+import { FilterOption } from './Filter.types';
 
 export default {
   title: 'Updated Components/Filter',
@@ -81,6 +81,7 @@ export const AddedFilter = {
       <Stack height={300}>
         {filtersShown.map((filterName, index) => (
           <Filter
+            hasWrapperWidth
             filterType="added"
             selectedFilter={states[filtersShown[index]][0]}
             onChange={states[filtersShown[index]][1]}
