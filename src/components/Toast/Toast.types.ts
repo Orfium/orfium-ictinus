@@ -2,25 +2,35 @@ import type { ReactElement, ReactNode } from 'react';
 import type { AriaToastProps, AriaToastRegionProps } from 'react-aria';
 import type { QueuedToast, ToastState } from 'react-stately';
 
+/** Placement of the toast @default 'bottom right' */
 export type ToastPlacement = 'bottom left' | 'bottom right';
 
-export type ToastOptions = {
+/** Represents the possible status values for a toast. */
+export type ToastStatus = 'neutral' | 'informational' | 'error' | 'warning' | 'success';
+
+export type ToastValue = {
+  /** The status of the toast. @default 'neutral' */
+  status?: ToastStatus;
+  /** Action buttons/links to display in the toast */
   actions?: ReactElement | ReactElement[];
-  icon?: ReactNode;
+  /** The main content of the toast */
+  children?: ReactNode;
+  /** Whether the toast can be manually dismissed */
   isDismissible?: boolean;
+  /** Whether the toast should close when an action is clicked */
+  // eslint-disable-next-line @typescript-eslint/naming-convention
+  shouldCloseOnAction?: boolean;
+};
+
+export type ToastOptions = Partial<ToastValue> & {
+  /** Container placement for this specific toast */
   placement?: ToastPlacement;
+  /** Maximum visible toasts for this specific toast */
   maxVisibleToasts?: number;
   /** Handler that is called when the toast is closed, either by the user or after a timeout. */
   onClose?: () => void;
   /** A timeout to automatically close the toast after, in milliseconds. */
   timeout?: number;
-};
-
-export type ToastValue = {
-  actions?: ReactElement | ReactElement[];
-  children?: ReactNode;
-  icon?: ReactNode;
-  isDismissible?: boolean;
 };
 
 export type ToastProps = AriaToastProps<ToastValue> & {

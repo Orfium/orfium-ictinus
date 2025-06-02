@@ -1,19 +1,11 @@
 .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.75rem;
-}
-
-.emotion-2 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-3 {
+.emotion-1 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -42,25 +34,25 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-3:focus-visible:not(:disabled) {
+.emotion-1:focus-visible:not(:disabled) {
   background-color: #5E8DF8;
 }
 
-.emotion-3:disabled {
+.emotion-1:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-3:hover:not(:disabled) {
+.emotion-1:hover:not(:disabled) {
   background-color: #5E8DF8;
 }
 
-.emotion-3:active:not(:disabled),
-.emotion-3[aria-expanded="true"] {
+.emotion-1:active:not(:disabled),
+.emotion-1[aria-expanded="true"] {
   background-color: #194DCC;
 }
 
-.emotion-4 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -78,25 +70,21 @@
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
   >
-    <div
-      class="emotion-2"
+    <button
+      class="emotion-1"
+      data-slot="button"
+      data-testid="button"
+      type="button"
     >
-      <button
-        class="emotion-3"
-        data-slot="button"
-        data-testid="button"
-        type="button"
+      <span
+        class="emotion-2"
       >
-        <span
-          class="emotion-4"
-        >
-          <span>
-            Controlled
-          </span>
+        <span>
+          Success
         </span>
-      </button>
-    </div>
+      </span>
+    </button>
   </div>
 </div>

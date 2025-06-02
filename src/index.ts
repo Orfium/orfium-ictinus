@@ -80,6 +80,7 @@ export { default as Snackbar } from './components/Notification/Snackbar';
 
 export { Broadcast } from './components/Broadcast';
 export { InlineAlert } from './components/InlineAlert';
+export { toast, ToastContainer } from './components/Toast';
 
 export { Radio, RadioGroup, Switch } from './components/Controls';
 export * from './components/Controls/Radio';

@@ -4,11 +4,10 @@ import { useToast, useToastRegion } from 'react-aria';
 import { createPortal, flushSync } from 'react-dom';
 import { ToastQueue, useToastQueue } from 'react-stately';
 import useTheme from '~/hooks/useTheme';
-import Box from '../Box';
 import Icon from '../Icon';
 import { SlotProvider } from '../utils/Slots';
 import { useDOMRef } from '../utils/useDOMRef';
-import { styles } from './Toast.style';
+import { getIconColor, styles } from './Toast.style';
 import type {
   ToastContainerProps,
   ToastOptions,
@@ -38,11 +37,12 @@ const toastQueue = new ToastQueue<ToastValue>({
 });
 
 export const toast = (
-  children: string,
+  children: string | ReactElement,
   { isDismissible = true, timeout = DEFAULT_TIMEOUT, ...options }: ToastOptions = {}
 ) => {
   const toastValue: ToastValue = {
     children,
+    status: options.status || 'neutral',
     ...options,
   };
 
@@ -69,11 +69,17 @@ export const Toast = forwardRef<HTMLDivElement, ToastProps>(
         : props.toast.content.actions;
     const actionsArray = React.Children.toArray(actionElements);
 
+    const handleActionClick = () => {
+      if (props.toast.content.shouldCloseOnAction) {
+        state.close(props.toast.key);
+      }
+    };
+
     return (
       <div
         {...toastProps}
         ref={domRef}
-        css={styles.toast}
+        css={styles.toast(props.toast.content)}
         className="toast"
         style={
           {
@@ -81,38 +87,45 @@ export const Toast = forwardRef<HTMLDivElement, ToastProps>(
           } as React.CSSProperties
         }
       >
+        {props.toast.content.status !== 'neutral' ? (
+          <Icon
+            role="img"
+            aria-hidden="true"
+            name={props.toast.content.status}
+            css={styles.icon}
+            color={getIconColor(props.toast.content.status, theme)}
+          />
+        ) : null}
         <div {...contentProps} css={styles.toastContent}>
           <SlotProvider
             slots={{
               icon: { size: 20 },
             }}
           >
-            {props.toast.content.icon}
             <div {...titleProps}>{props.toast.content.children}</div>
           </SlotProvider>
         </div>
-        <Box display="flex" alignItems="center" gap="6">
-          {actionsArray.length > 0 ? (
-            <div css={styles.toastActions}>
-              <SlotProvider
-                slots={{
-                  button: { size: 'compact' },
-                  link: { size: 2, type: 'inverted' },
-                }}
-              >
-                {actionsArray}
-              </SlotProvider>
-            </div>
-          ) : null}
-          <Icon
-            role="button"
-            aria-label="Dismiss notification"
-            name="close"
-            onClick={() => state.close(props.toast.key)}
-            color={theme.tokens.colors.get('textColor.inverted.secondary')}
-            size={20}
-          />
-        </Box>
+
+        {actionsArray.length > 0 ? (
+          <div css={styles.toastActions}>
+            <SlotProvider
+              slots={{
+                button: { size: 'compact', onClick: handleActionClick },
+                link: { size: 2, onClick: handleActionClick },
+              }}
+            >
+              {actionsArray}
+            </SlotProvider>
+          </div>
+        ) : null}
+        <Icon
+          role="button"
+          aria-label="Dismiss notification"
+          name="close"
+          onClick={() => state.close(props.toast.key)}
+          css={styles.dismiss}
+          size={20}
+        />
       </div>
     );
   }
