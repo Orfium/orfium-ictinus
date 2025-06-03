@@ -120,7 +120,7 @@ export const Toast = forwardRef<HTMLDivElement, ToastProps>(
         ) : null}
         <Icon
           role="button"
-          aria-label="Dismiss notification"
+          aria-label="Dismiss toast"
           name="close"
           onClick={() => state.close(props.toast.key)}
           css={styles.dismiss}
