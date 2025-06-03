@@ -19,6 +19,7 @@ export interface ToastStoryArgs {
   actions?: ReactElement | ReactElement[];
   timeout: number;
   placement: ToastPlacement;
+  hasIcon?: boolean;
   onClose?: () => void;
 }
 
@@ -42,6 +43,7 @@ const meta: Meta<ToastStoryArgs> = {
     shouldCloseOnAction: false,
     timeout: 5000,
     placement: 'bottom right',
+    hasIcon: true,
   },
   argTypes: {
     content: {
@@ -69,7 +71,7 @@ const meta: Meta<ToastStoryArgs> = {
     },
     isDismissible: {
       control: 'boolean',
-      description: 'Whether users can manually dismiss the toast',
+      description: 'Whether the toast is automatically dismissed',
       table: {
         type: { summary: 'boolean' },
         defaultValue: { summary: 'true' },
@@ -130,6 +132,15 @@ const meta: Meta<ToastStoryArgs> = {
         control: { disable: true },
       },
     },
+    hasIcon: {
+      control: 'boolean',
+      description: 'Whether to show the default icon based on status',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: 'true' },
+        category: 'ToastOptions',
+      },
+    },
     placement: {
       control: 'select',
       options: ['bottom left', 'bottom right'] as const,
@@ -179,7 +190,7 @@ export const Neutral: Story = {
 export const Informational: Story = {
   parameters: {
     controls: {
-      include: ['content'],
+      include: ['content', 'hasIcon'],
     },
   },
   render: (args) => {
@@ -188,6 +199,7 @@ export const Informational: Story = {
         onClick={() =>
           toast(args.content, {
             status: 'informational',
+            hasIcon: args.hasIcon,
             actions: <Link>Single Action</Link>,
           })
         }
@@ -207,7 +219,7 @@ export const Informational: Story = {
 export const Error: Story = {
   parameters: {
     controls: {
-      include: ['content'],
+      include: ['content', 'hasIcon'],
     },
   },
   render: (args) => {
@@ -216,6 +228,7 @@ export const Error: Story = {
         onClick={() =>
           toast(args.content, {
             status: 'error',
+            hasIcon: args.hasIcon,
             actions: <Link>Single Action</Link>,
           })
         }
@@ -235,7 +248,7 @@ export const Error: Story = {
 export const Warning: Story = {
   parameters: {
     controls: {
-      include: ['content'],
+      include: ['content', 'hasIcon'],
     },
   },
   render: (args) => {
@@ -244,6 +257,7 @@ export const Warning: Story = {
         onClick={() =>
           toast(args.content, {
             status: 'warning',
+            hasIcon: args.hasIcon,
             actions: <Link>Single Action</Link>,
           })
         }
@@ -263,7 +277,7 @@ export const Warning: Story = {
 export const Success: Story = {
   parameters: {
     controls: {
-      include: ['content'],
+      include: ['content', 'hasIcon'],
     },
   },
   render: (args) => {
@@ -272,6 +286,7 @@ export const Success: Story = {
         onClick={() =>
           toast(args.content, {
             status: 'success',
+            hasIcon: args.hasIcon,
             actions: <Link>Single Action</Link>,
           })
         }
@@ -331,7 +346,7 @@ export const WithCustomIcon: Story = {
         onClick={() =>
           toast(
             <Box display="flex" alignItems="center" gap="4">
-              <Icon name="check" color={theme.tokens.colors.get('indicators.success')} />
+              <Icon name="account" color={theme.tokens.colors.get('textColor.default.secondary')} />
               {args.content}
             </Box>
           )

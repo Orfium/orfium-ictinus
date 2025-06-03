@@ -15,11 +15,13 @@ export type ToastValue = {
   actions?: ReactElement | ReactElement[];
   /** The main content of the toast */
   children?: ReactNode;
-  /** Whether the toast can be manually dismissed */
+  /** Whether the toast is automatically dismissed */
   isDismissible?: boolean;
   /** Whether the toast should close when an action is clicked */
   // eslint-disable-next-line @typescript-eslint/naming-convention
   shouldCloseOnAction?: boolean;
+  /** Show the specified icon per status */
+  hasIcon?: boolean;
 };
 
 export type ToastOptions = Partial<ToastValue> & {

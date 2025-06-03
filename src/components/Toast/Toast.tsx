@@ -42,7 +42,8 @@ export const toast = (
 ) => {
   const toastValue: ToastValue = {
     children,
-    status: options.status || 'neutral',
+    status: options.status ?? 'neutral',
+    hasIcon: options.hasIcon ?? true,
     ...options,
   };
 
@@ -87,7 +88,7 @@ export const Toast = forwardRef<HTMLDivElement, ToastProps>(
           } as React.CSSProperties
         }
       >
-        {props.toast.content.status !== 'neutral' ? (
+        {props.toast.content.status !== 'neutral' && props.toast.content.hasIcon ? (
           <Icon
             role="img"
             aria-hidden="true"
