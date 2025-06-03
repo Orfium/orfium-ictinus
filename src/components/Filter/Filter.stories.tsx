@@ -1,3 +1,4 @@
+import { userEvent, within } from '@storybook/testing-library';
 import Button from 'components/Button';
 import DropdownButton from 'components/DropdownButton';
 import TextField from 'components/TextField';
@@ -13,7 +14,6 @@ import { FilterOption } from './Filter.types';
 export default {
   title: 'Updated Components/Filter',
   component: Filter,
-
   parameters: {
     design: [
       {
@@ -22,13 +22,12 @@ export default {
         url: `${FIGMA_URL}?node-id=10081%3A104078`,
       },
     ],
+    chromatic: { delay: 400 },
   },
-
   args: {
     singleFilterLabel: 'Single Filter',
     multiFilterLabel: 'Multi Filter',
   },
-
   argTypes: {
     filterType: { type: 'select', options: ['preset', 'added'] },
   },
@@ -54,9 +53,14 @@ export const PresetFilter = {
     );
   },
   name: 'Preset Filter',
-
   parameters: {
     controls: { disable: true },
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    const filter = await canvas.findByTestId('ictinus_filter_filter_button');
+    await userEvent.click(filter);
   },
 };
 

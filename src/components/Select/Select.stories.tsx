@@ -1,16 +1,16 @@
-import Select from './Select';
-import Stack from '../storyUtils/Stack';
-import { SelectShowcase, MultiSelectShowcase } from '../storyUtils/SelectShowcase';
-import EdgeCasesSelectShowcase from '../storyUtils/EdgeCasesSelectShowcase';
-import { FIGMA_URL, Function } from 'utils/common';
+import { userEvent, within } from '@storybook/testing-library';
 import { useState } from 'react';
+import { FIGMA_URL, Function } from 'utils/common';
+import EdgeCasesSelectShowcase from '../storyUtils/EdgeCasesSelectShowcase';
+import { MultiSelectShowcase, SelectShowcase } from '../storyUtils/SelectShowcase';
+import Stack from '../storyUtils/Stack';
 import { StatefulSelect } from './index';
-import { options, groupOptions, defaultValue } from './storyUtils';
+import Select from './Select';
+import { defaultValue, groupOptions, options } from './storyUtils';
 
 export default {
   title: 'Updated Components/Fields/Select',
   component: Select,
-
   parameters: {
     design: [
       {
@@ -29,14 +29,13 @@ export default {
         url: `${FIGMA_URL}?node-id=1879%3A101`,
       },
     ],
+    chromatic: { delay: 400 },
   },
-
   args: {
     hintMessage: 'Hint Message',
     label: 'Select',
     isSearchable: false,
   },
-
   argTypes: {
     status: { type: 'select', options: ['normal', 'error', 'read-only'] },
   },
@@ -94,7 +93,7 @@ export const SimpleSelect = {
               isSearchable={false}
               selectedOption={selectedOption}
               onChange={setSelectedOption}
-              label={'Select'}
+              label="Select"
               options={options}
             />
           );
@@ -102,11 +101,15 @@ export const SimpleSelect = {
       </Function>
     </Stack>
   ),
-
   name: 'Simple Select',
-
   parameters: {
     controls: { disable: true },
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    const filter = await canvas.findByPlaceholderText('Select');
+    await userEvent.click(filter);
   },
 };
 

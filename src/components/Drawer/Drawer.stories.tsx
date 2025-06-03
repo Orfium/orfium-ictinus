@@ -1,4 +1,4 @@
-import { fireEvent, within } from '@storybook/testing-library';
+import { fireEvent, screen, userEvent, within } from '@storybook/testing-library';
 import Button from 'components/Button';
 import DatePicker from 'components/DatePicker';
 import { currentDay } from 'components/DatePicker/utils';
@@ -26,7 +26,6 @@ export default {
     ],
     chromatic: { delay: 400 },
   },
-
   args: {
     anchor: 'right',
   },
@@ -135,34 +134,7 @@ export const Sizes = {
           <Button onClick={() => setIsOpen1(!isOpen1)}>33%</Button>
           <Drawer isOpen={isOpen1} onClose={() => setIsOpen1(false)} size="33%" anchor="right">
             <DrawerHeader>{drawerContent.header}</DrawerHeader>
-            <DrawerContent>
-              <Stack isVertical>
-                <Select
-                  label={'Label'}
-                  options={[
-                    { label: 'Option 1', value: '1' },
-                    { label: 'Option 2', value: '2' },
-                    { label: 'Option 3', value: '3' },
-                  ]}
-                  isSearchable={false}
-                  selectedOption={selectedOption}
-                  onChange={setSelectedOption}
-                />
-                <Filter
-                  selectedFilter={selectedFilter}
-                  onChange={setSelectedFilter}
-                  onClear={handleClear}
-                  defaultValue={{ label: 'All', value: 'all' }}
-                  label="Friends"
-                  items={[
-                    { label: 'Option 1', value: '1' },
-                    { label: 'Option 2', value: '2' },
-                    { label: 'Option 3', value: '3' },
-                  ]}
-                />
-              </Stack>
-              {drawerContent.content}
-            </DrawerContent>
+            <DrawerContent>{drawerContent.content}</DrawerContent>
             <DrawerFooter>{drawerContent.footer}</DrawerFooter>
           </Drawer>
           <Button
@@ -665,6 +637,7 @@ export const WithOverlays = {
                 onChange={setSelectedOption}
               />
               <Filter
+                hasWrapperWidth
                 selectedFilter={selectedFilter}
                 onChange={setSelectedFilter}
                 onClear={handleClear}
@@ -687,6 +660,18 @@ export const WithOverlays = {
         </Drawer>
       </div>
     );
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    const button = await canvas.findByRole('button', { name: 'With Overlays' });
+    await userEvent.click(button);
+
+    // wait for the drawer transition
+    await new Promise((resolve) => setTimeout(resolve, 300));
+
+    const filter = await screen.findByTestId('ictinus_filter_filter_button');
+    await userEvent.click(filter);
   },
 };
 

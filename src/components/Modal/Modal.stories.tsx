@@ -1,3 +1,4 @@
+import { userEvent, within } from '@storybook/testing-library';
 import DatePicker from 'components/DatePicker';
 import { currentDay } from 'components/DatePicker/utils';
 import Filter, { FilterOption } from 'components/Filter';
@@ -12,8 +13,8 @@ import ModalComponent from './Modal';
 export default {
   title: 'Original Components/Modal',
   component: ModalComponent,
-
   parameters: {
+    chromatic: { delay: 400 },
     design: [
       {
         type: 'figma',
@@ -22,7 +23,6 @@ export default {
       },
     ],
   },
-
   args: {
     message:
       'This is just a text inside the modal. This text serves really no purpose but for some reason here you are, continuing reading it. You are just like Alice in Wonderland, trying to see where this will lead you.',
@@ -48,9 +48,14 @@ export const Modal = {
   },
 
   name: 'Modal',
-
   parameters: {
     controls: { include: ['message'] },
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    const button = await canvas.findByRole('button', { name: 'Open Modal' });
+    await userEvent.click(button);
   },
 };
 
@@ -75,11 +80,15 @@ export const ModalContent = {
       </Stack>
     );
   },
-
   name: 'Modal Content',
-
   parameters: {
     controls: { include: ['label', 'heading', 'message', 'primaryCTALabel', 'secondaryCTALabel'] },
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    const button = await canvas.findByRole('button', { name: 'Open Modal' });
+    await userEvent.click(button);
   },
 };
 
@@ -108,6 +117,7 @@ export const WithOverlays = {
                 onChange={setSelectedOption}
               />
               <Filter
+                hasWrapperWidth
                 selectedFilter={selectedFilter}
                 onChange={setSelectedFilter}
                 onClear={handleClear}
@@ -130,5 +140,14 @@ export const WithOverlays = {
         </PresentComponent>
       </Stack>
     );
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    const button = await canvas.findByRole('button', { name: 'Open Modal' });
+    await userEvent.click(button);
+
+    const filter = await canvas.findByTestId('ictinus_filter_filter_button');
+    await userEvent.click(filter);
   },
 };
