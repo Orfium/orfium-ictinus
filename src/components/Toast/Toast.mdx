@@ -18,33 +18,15 @@ import { Toast } from './Toast';
 
 ## Overview
 
-Toasts are temporary messages that inform users of a process that an app has performed or will perform without disrupting their workflow
+Toasts are temporary messages that inform users of a process that an app has performed or will perform without disrupting their workflow.
 
 <Canvas of={ToastStories.Neutral} />
 
-## API Reference
+## Props
 
-### `toast(content, options)`
+The primary way to display toast notifications is through the `toast(<content>, <options>)` function.
 
-The primary way to display toast notifications is through the `toast()` function.
-
-#### Parameters
-
-| Parameter | Type                  | Description                                                 |
-| --------- | --------------------- | ----------------------------------------------------------- |
-| `content` | `string \| ReactNode` | The message or custom content to display in the toast       |
-| `options` | `ToastOptions`        | Configuration options for the toast behavior and appearance |
-
-#### Toast Options
-
-| Option                | Type                                                                | Default     | Description                                                      |
-| --------------------- | ------------------------------------------------------------------- | ----------- | ---------------------------------------------------------------- |
-| `status`              | `'neutral' \| 'informational' \| 'error' \| 'warning' \| 'success'` | `'neutral'` | Visual style and semantic meaning of the toast                   |
-| `actions`             | `ReactNode \| ReactNode[]`                                          | `undefined` | Action elements (links or buttons) to display in the toast       |
-| `isDismissible`       | `boolean`                                                           | `true`      | Whether users can manually close the toast                       |
-| `shouldCloseOnAction` | `boolean`                                                           | `false`     | Whether the toast closes automatically when an action is clicked |
-| `timeout`             | `number`                                                            | `5000`      | Time in milliseconds before auto-dismissal (1000-10000)          |
-| `onClose`             | `() => void`                                                        | `undefined` | Callback fired when the toast is closed                          |
+<ArgTypes of={ToastStories} />
 
 #### Return Value
 
@@ -53,6 +35,11 @@ Returns a unique toast ID that can be used with `toast.dismiss(id)` for programm
 #### Usage Examples
 
 ```javascript
+import { toast, ToastContainer } from '@orfium/ictinus';
+
+// First, render a toast container at the root of your app:
+<ToastContainer />;
+
 // Basic usage
 toast('Operation completed successfully');
 
@@ -79,13 +66,9 @@ const toastId = toast('Processing...', {
 toast.dismiss(toastId);
 ```
 
-### `<ToastContainer />`
+### ToastContainer
 
-The container component that manages toast positioning and rendering.
-
-| Prop        | Type                              | Default          | Description                               |
-| ----------- | --------------------------------- | ---------------- | ----------------------------------------- |
-| `placement` | `'bottom left' \| 'bottom right'` | `'bottom right'` | Position of the toast container on screen |
+The `<ToastContainer />` container component manages toast positioning and rendering.
 
 ## Usage
 
@@ -118,29 +101,19 @@ Configure placement at the container level to affect all toasts in your applicat
 
 ## Variants
 
-Toast notifications come in different variants to communicate the nature of the message:
-
 ### Informational
-
-Use for general information that doesn't require immediate action.
 
 <Canvas of={ToastStories.Informational} />
 
 ### Success
 
-Use to confirm successful completion of an action.
-
 <Canvas of={ToastStories.Success} />
 
 ### Warning
 
-Use to alert users about potential issues that need attention.
-
 <Canvas of={ToastStories.Warning} />
 
 ### Error
-
-Use to communicate errors or failed actions that require user attention.
 
 <Canvas of={ToastStories.Error} />
 
@@ -148,13 +121,9 @@ Use to communicate errors or failed actions that require user attention.
 
 ### Single Action
 
-Toasts can include a single action, typically displayed as a link, allowing users to take immediate steps related to the toast message.
-
 <Canvas of={ToastStories.Neutral} />
 
 ### Multiple Actions
-
-For more complex scenarios, toasts can include multiple button actions. Use this sparingly and ensure actions are clearly labeled.
 
 <Canvas of={ToastStories.WithButtons} />
 

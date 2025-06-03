@@ -107,7 +107,7 @@ const getBorderColor = (status: ToastOptions['status'], theme: Theme) => {
     case 'success':
       return theme.tokens.colors.get('indicators.success');
     default:
-      return theme.tokens.colors.get('borderColor.decorative.default');
+      return theme.tokens.colors.get('textColor.default.secondary');
   }
 };
 

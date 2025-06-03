@@ -1,22 +1,25 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { userEvent, within } from '@storybook/testing-library';
 import Button from 'components/Button';
-import { useState } from 'react';
+import { ReactElement, useState } from 'react';
 import useTheme from '~/hooks/useTheme';
 import Box from '../Box';
 import Icon from '../Icon';
 import Link from '../Link';
 import { toast, ToastContainer } from './Toast';
+import { ToastPlacement, ToastStatus } from './Toast.types';
 
 type ActionType = 'none' | 'link' | 'single-button' | 'multiple-buttons';
 
-interface ToastStoryArgs {
-  status: 'neutral' | 'informational' | 'error' | 'warning' | 'success';
-  content: string;
+export interface ToastStoryArgs {
+  content: string | ReactElement;
+  status: ToastStatus;
   isDismissible: boolean;
   shouldCloseOnAction: boolean;
+  actions?: ReactElement | ReactElement[];
   timeout: number;
-  placement: 'bottom left' | 'bottom right';
+  placement: ToastPlacement;
+  onClose?: () => void;
 }
 
 const meta: Meta<ToastStoryArgs> = {
@@ -33,36 +36,115 @@ const meta: Meta<ToastStoryArgs> = {
     ),
   ],
   args: {
-    status: 'neutral',
     content: 'Toast messages should be clear and short.',
+    status: 'neutral',
     isDismissible: true,
     shouldCloseOnAction: false,
     timeout: 5000,
     placement: 'bottom right',
   },
   argTypes: {
-    status: {
-      control: { type: 'select' },
-      options: ['neutral', 'informational', 'error', 'warning', 'success'],
-    },
     content: {
-      control: { type: 'text' },
+      control: 'text',
+      description: 'The main message content of the toast - can be text or React element',
+      table: {
+        type: {
+          summary: 'string | ReactElement',
+          detail: 'Text content or JSX element for rich content',
+        },
+      },
+    },
+    status: {
+      control: 'select',
+      options: ['neutral', 'informational', 'error', 'warning', 'success'] as const,
+      description: 'The visual status/type of the toast notification',
+      table: {
+        type: {
+          summary: "'neutral' | 'informational' | 'error' | 'warning' | 'success'",
+          detail: 'ToastStatus',
+        },
+        defaultValue: { summary: "'neutral'" },
+        category: 'ToastOptions',
+      },
     },
     isDismissible: {
-      control: { type: 'boolean' },
+      control: 'boolean',
+      description: 'Whether users can manually dismiss the toast',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: 'true' },
+        category: 'ToastOptions',
+      },
+    },
+    actions: {
+      control: 'select',
+      options: ['none', 'single action', 'multiple actions'],
+      mapping: {
+        none: undefined,
+        'single action': <Link>Single Action</Link>,
+        'multiple actions': [<Button type="tertiary">Tertiary</Button>, <Button>Primary</Button>],
+      },
+      description: 'Action elements (links or buttons) to display in the toast',
+      table: {
+        type: {
+          summary: 'ReactNode | ReactNode[]',
+          detail: 'Single action element or array of action elements',
+        },
+        defaultValue: { summary: 'undefined' },
+        category: 'ToastOptions',
+      },
     },
     shouldCloseOnAction: {
-      control: { type: 'boolean' },
+      control: 'boolean',
+      description: 'Whether the toast closes automatically when an action is clicked',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: 'false' },
+        category: 'ToastOptions',
+      },
     },
     timeout: {
-      control: { type: 'number', min: 1000, max: 10000, step: 500 },
+      control: {
+        type: 'number',
+        min: 1000,
+        max: 10000,
+        step: 500,
+      },
+      description: 'Auto-dismiss timeout in milliseconds',
+      table: {
+        type: { summary: 'number' },
+        defaultValue: { summary: '5000' },
+        category: 'ToastOptions',
+      },
+    },
+    onClose: {
+      action: 'onClose',
+      description: 'Callback fired when the toast is closed',
+      table: {
+        type: {
+          summary: '() => void',
+          detail: 'Function called when toast is dismissed',
+        },
+        defaultValue: { summary: 'undefined' },
+        category: 'ToastOptions',
+        control: { disable: true },
+      },
     },
     placement: {
-      control: { type: 'select' },
-      options: ['bottom left', 'bottom right'],
+      control: 'select',
+      options: ['bottom left', 'bottom right'] as const,
+      description: 'Where the toast appears on screen',
+      table: {
+        type: {
+          summary: "'bottom left' | 'bottom right'",
+          detail: 'ToastPlacement',
+        },
+        defaultValue: { summary: "'bottom right'" },
+        category: '<ToastContainer />',
+      },
     },
   },
-};
+} satisfies Meta<ToastStoryArgs>;
 
 export default meta;
 type Story = StoryObj<ToastStoryArgs>;
@@ -332,7 +414,7 @@ export const Playground: Story = {
             isDismissible: args.isDismissible,
             shouldCloseOnAction: args.shouldCloseOnAction,
             timeout: args.timeout,
-            actions: <Link>Single Action</Link>,
+            actions: args.actions,
           })
         }
       >
