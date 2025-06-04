@@ -1,64 +1,110 @@
-import { css } from '@emotion/react';
-import React from 'react';
+import userEvent from '@testing-library/user-event';
+import { render, screen } from '~/test';
+import Button from '../Button';
+import Link from '../Link';
+import { Toast } from './Toast';
 
-import { render, fireEvent } from '../../test';
-import Toast from './Toast';
-
-describe('Generic Toast', () => {
-  const data = {
-    message: 'message',
+describe('<Toast />', () => {
+  const mockState = {
+    close: vi.fn(),
+    visibleToasts: [],
+    add: vi.fn(),
+    pauseAll: vi.fn(),
+    resumeAll: vi.fn(),
   };
 
-  test('Generic Toast with simple visual renders correctly', async () => {
-    const closeCTA = vi.fn();
+  const mockToast = {
+    key: 'test-toast',
+    content: {
+      children: 'Toast messages should be clear and short.',
+      status: 'neutral' as const,
+      shouldCloseOnAction: false,
+    },
+  };
 
-    const { findByText } = render(
-      <Toast {...data} closeCTA={closeCTA}>
-        <div css={css`"width: 1024px; height: 768px;"`}>
-          <h1>container-test-data</h1>
-        </div>
-      </Toast>
-    );
+  const user = userEvent.setup();
 
-    const message = await findByText(data.message);
-    expect(message).toBeTruthy();
+  beforeEach(() => {
+    vi.clearAllMocks();
   });
 
-  test('Generic Toast with simple visual expands/shrinks correctly', async () => {
-    const closeCTA = vi.fn();
+  it('renders with basic content', () => {
+    render(<Toast toast={mockToast} state={mockState} />);
 
-    const { findByTestId, findByText } = render(
-      <Toast {...data} closeCTA={closeCTA}>
-        <h1>container-test-data</h1>
-      </Toast>
-    );
-
-    // Toast is initialized with isExpanded=false
-    // Note: The visual is rendered regardless of the isExpanded value, so it can be always found in document
-    // If isExpanded=false, the min-height of the visual is 0, else > 0.
-    // So to test if the visual is visible or not, the only way to check it is check the min-height
-
-    const expandButton = await findByTestId('toast-expand');
-    const expandedContainer = await findByTestId('expanded-container');
-    expect(expandedContainer).toHaveStyle('min-height: 0rem;');
-    fireEvent.click(expandButton);
-    expect(expandedContainer).toHaveStyle('min-height: 9.125rem;');
-
-    const containerText = await findByText('container-test-data');
-    expect(containerText).toBeTruthy();
+    expect(screen.getByText('Toast messages should be clear and short.')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Dismiss toast' })).toBeInTheDocument();
   });
 
-  test('Generic Toast with simple visual closeCTA works properly', async () => {
-    const closeCTA = vi.fn();
+  it('does not render status icon for neutral status', () => {
+    render(<Toast toast={mockToast} state={mockState} />);
 
-    const { findByTestId } = render(
-      <Toast {...data} closeCTA={closeCTA}>
-        <h1>container-test-data</h1>
-      </Toast>
-    );
+    expect(screen.queryByRole('img')).not.toBeInTheDocument();
+  });
 
-    const closeButton = await findByTestId('toast-close');
-    fireEvent.click(closeButton);
-    expect(closeCTA).toHaveBeenCalledTimes(1);
+  describe('actions', () => {
+    it('renders single action', () => {
+      const toastWithAction = {
+        ...mockToast,
+        content: {
+          ...mockToast.content,
+          actions: <Link>Single Action</Link>,
+        },
+      };
+
+      render(<Toast toast={toastWithAction} state={mockState} />);
+
+      expect(screen.getByText('Single Action')).toBeInTheDocument();
+    });
+
+    it('renders multiple actions', () => {
+      const toastWithActions = {
+        ...mockToast,
+        content: {
+          ...mockToast.content,
+          actions: [<Button>Tertiary</Button>, <Button>Primary</Button>],
+        },
+      };
+
+      render(<Toast toast={toastWithActions} state={mockState} />);
+
+      expect(screen.getByText('Tertiary')).toBeInTheDocument();
+      expect(screen.getByText('Primary')).toBeInTheDocument();
+    });
+
+    it('closes toast when action is clicked and shouldCloseOnAction is true', async () => {
+      const toastWithCloseAction = {
+        ...mockToast,
+        content: {
+          ...mockToast.content,
+          shouldCloseOnAction: true,
+          actions: <Link>Single Action</Link>,
+        },
+      };
+
+      render(<Toast toast={toastWithCloseAction} state={mockState} />);
+
+      const actionButton = screen.getByText('Single Action');
+      await user.click(actionButton);
+
+      expect(mockState.close).toHaveBeenCalledWith('test-toast');
+    });
+
+    it('does not close toast when action is clicked and shouldCloseOnAction is false', async () => {
+      const toastWithAction = {
+        ...mockToast,
+        content: {
+          ...mockToast.content,
+          shouldCloseOnAction: false,
+          actions: <Link>Single Action</Link>,
+        },
+      };
+
+      render(<Toast toast={toastWithAction} state={mockState} />);
+
+      const actionButton = screen.getByText('Single Action');
+      await user.click(actionButton);
+
+      expect(mockState.close).not.toHaveBeenCalled();
+    });
   });
 });
