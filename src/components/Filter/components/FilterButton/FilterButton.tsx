@@ -1,13 +1,12 @@
-import useTheme from 'hooks/useTheme';
-import React from 'react';
-import type { CommonButtonProps } from 'utils/common';
-import type { TestProps } from 'utils/types';
-
-import { buttonStyles, iconStyles } from './FilterButton.style';
 import type { EventButtonProps } from 'components/ButtonBase';
 import type { FilterProps } from 'components/Filter/Filter.types';
 import Icon from 'components/Icon';
 import Tag from 'components/Tag';
+import useTheme from 'hooks/useTheme';
+import React from 'react';
+import type { CommonButtonProps } from 'utils/common';
+import type { TestProps } from 'utils/types';
+import { buttonStyles, iconStyles } from './FilterButton.style';
 
 export type FilterButtonProps = Pick<FilterProps, 'filterType' | 'isMulti'> & {
   children?: React.ReactNode;
@@ -94,6 +93,7 @@ export const FilterButton = React.forwardRef<HTMLButtonElement, FilterButtonProp
           )}
           onClick={handleIconClick}
           dataTestPrefixId={`${dataTestPrefixId}_filter_close`}
+          aria-label="close"
         />
       )}
     </button>

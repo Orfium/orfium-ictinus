@@ -1,10 +1,10 @@
 import useTheme from 'hooks/useTheme';
 import React, { useMemo } from 'react';
 
-import type { Props as MultiTextFieldBase } from './MultiTextFieldBase';
-import type { SelectOption } from '../Select';
 import Icon from 'components/Icon';
 import type { TextFieldProps } from 'components/TextField/TextField';
+import type { SelectOption } from '../Select';
+import type { Props as MultiTextFieldBase } from './MultiTextFieldBase';
 
 type Props = {
   hasValue: boolean;
@@ -83,6 +83,7 @@ const useMultiTextFieldBaseUtils = ({
           color={theme.tokens.colors.get('textColor.default.secondary')}
           onClick={handleClick}
           dataTestId="select-right-icon"
+          aria-label="close"
         />
       );
     }

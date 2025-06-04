@@ -3,12 +3,12 @@ import { Range } from 'react-range';
 import type { IMarkProps, IThumbProps, ITrackProps } from 'react-range/lib/types';
 import type { TestProps } from 'utils/types';
 
+import useTheme from '../../hooks/useTheme';
+import TextField from '../TextField';
 import SliderMark from './components/SliderMark';
 import SliderThumb from './components/SliderThumb';
 import SliderTrack from './components/SliderTrack';
 import { Container, InputContainer, InputsContainer } from './Slider.style';
-import useTheme from '../../hooks/useTheme';
-import TextField from '../TextField';
 
 export type SliderProps = {
   /** Determines if the Slider is disabled or not */
@@ -132,7 +132,10 @@ const Slider: React.FC<SliderProps & TestProps> = ({
   };
 
   return (
-    <Container data-testid={`${dataTestPrefixId ?? ''}slider_component`}>
+    <Container
+      data-testid={`${dataTestPrefixId ?? ''}slider_component`}
+      aria-disabled={isDisabled ? 'true' : 'false'}
+    >
       <div css={{ opacity: isDisabled ? theme.tokens.disabledState.get('default') : 'inherit' }}>
         <Range
           step={hasIncrements ? STEP_WITH_INCREMENTS : STEP}

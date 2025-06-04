@@ -79,8 +79,6 @@ export const AddedFilter = {
       Buffay: React.useState<FilterOption>(undefined),
     };
 
-    const isFilterSelected = Object.values(states).some((friend) => friend[0]);
-
     return (
       <Stack height={300}>
         {filtersShown.map((filterName, index) => (
@@ -101,6 +99,7 @@ export const AddedFilter = {
             )}
           />
         ))}
+
         {Boolean(filters.length) && (
           <DropdownButton
             iconButtonName="plus"
@@ -112,7 +111,8 @@ export const AddedFilter = {
             }}
           />
         )}
-        {isFilterSelected && (
+
+        {Boolean(filtersShown.length) && (
           <Button
             type="tertiary"
             onClick={() => {
@@ -129,7 +129,6 @@ export const AddedFilter = {
     );
   },
   name: 'Added Filter',
-
   parameters: {
     controls: { disable: true },
   },
