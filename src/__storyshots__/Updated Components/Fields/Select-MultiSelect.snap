@@ -540,6 +540,7 @@
               >
                 <div
                   class="emotion-6"
+                  data-testid="selected-tags"
                 >
                   <span
                     class="emotion-7"
@@ -841,9 +842,11 @@
                   class="emotion-51"
                 >
                   <div
+                    aria-label="Remove all"
                     class="emotion-52"
                     data-slot="icon"
                     data-testid="select-right-icon"
+                    role="button"
                     tabindex="0"
                   >
                     <svg
@@ -894,6 +897,7 @@
               >
                 <div
                   class="emotion-6"
+                  data-testid="selected-tags"
                 >
                   <input
                     aria-controls="select__00"
@@ -920,9 +924,11 @@
                   class="emotion-51"
                 >
                   <div
+                    aria-label="Remove all"
                     class="emotion-64"
                     data-slot="icon"
                     data-testid="select-right-icon"
+                    role="button"
                   >
                     <svg
                       class="emotion-53"

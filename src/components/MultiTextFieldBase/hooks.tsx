@@ -1,10 +1,10 @@
 import useTheme from 'hooks/useTheme';
 import React, { useMemo } from 'react';
 
-import type { Props as MultiTextFieldBase } from './MultiTextFieldBase';
-import type { SelectOption } from '../Select';
 import Icon from 'components/Icon';
 import type { TextFieldProps } from 'components/TextField/TextField';
+import type { SelectOption } from '../Select';
+import type { Props as MultiTextFieldBase } from './MultiTextFieldBase';
 
 type Props = {
   hasValue: boolean;
@@ -78,6 +78,8 @@ const useMultiTextFieldBaseUtils = ({
     if (iconName) {
       return (
         <Icon
+          role="button"
+          aria-label="Remove all"
           size={20}
           name={iconName}
           color={theme.tokens.colors.get('textColor.default.secondary')}

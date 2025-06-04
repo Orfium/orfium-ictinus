@@ -1,19 +1,3 @@
-import useTheme from 'hooks/useTheme';
-import { last, merge, omit } from 'lodash-es';
-import React, { useMemo, useRef } from 'react';
-import { generateUniqueID, generateUniqueKey } from 'utils/helpers';
-import type { TestProps } from 'utils/types';
-
-import useMultiTextFieldBaseUtils from './hooks';
-import {
-  tagContent,
-  tagStyle,
-  inputContainer,
-  inputOverrides,
-  progressIndicatorStyles,
-  rightIconsContainer,
-  textInputBaseOverrides,
-} from './MultiTextFieldBase.style';
 import Label from 'components/Label';
 import ProgressIndicator from 'components/ProgressIndicator';
 import type { SelectOption } from 'components/Select';
@@ -21,6 +5,21 @@ import Tag from 'components/Tag';
 import type { InputProps, TextFieldProps } from 'components/TextField/TextField';
 import TextInputBase from 'components/TextInputBase';
 import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
+import useTheme from 'hooks/useTheme';
+import { last, merge, omit } from 'lodash-es';
+import React, { useMemo, useRef } from 'react';
+import { generateUniqueID, generateUniqueKey } from 'utils/helpers';
+import type { TestProps } from 'utils/types';
+import useMultiTextFieldBaseUtils from './hooks';
+import {
+  inputContainer,
+  inputOverrides,
+  progressIndicatorStyles,
+  rightIconsContainer,
+  tagContent,
+  tagStyle,
+  textInputBaseOverrides,
+} from './MultiTextFieldBase.style';
 
 export type Props = {
   /** the values of the MultiTextField if MultiTextField is controlled */
@@ -71,7 +70,7 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
 
     const isLocked = status?.type === 'read-only';
 
-    const hintMessageId = status?.hintMessage ? status?.id ?? `${id}_hintMessage` : undefined;
+    const hintMessageId = status?.hintMessage ? (status?.id ?? `${id}_hintMessage`) : undefined;
 
     const { inputPlaceholder, handleKeyDown, icon, hasLabel, TextfieldRef } =
       useMultiTextFieldBaseUtils({
@@ -131,7 +130,7 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
             sx
           )}
         >
-          <div css={inputContainer()}>
+          <div css={inputContainer()} data-testid="selected-tags">
             {tags}
             <input
               readOnly={isLocked || isReadOnly}
