@@ -1,25 +1,23 @@
+import MultiTextFieldBase from 'components/MultiTextFieldBase/MultiTextFieldBase';
+import ProgressIndicator from 'components/ProgressIndicator';
+import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
+import { PositionInScreen } from 'components/utils/PositionInScreen';
 import useKeyboard from 'hooks/useKeyboardEvents';
-import { differenceBy, head, debounce } from 'lodash-es';
+import { debounce, differenceBy, head } from 'lodash-es';
 import React, { useCallback, useMemo, useRef, useState } from 'react';
 import isEqual from 'react-fast-compare';
 import type { ChangeEvent } from 'utils/common';
 import { generateTestDataId, generateUniqueID } from 'utils/helpers';
-
-import SelectMenu from './components/SelectMenu/SelectMenu';
-import { SELECT_ALL_OPTION } from './constants';
-import { suffixContainer, selectWrapper } from './Select.style';
-import type { SelectOption, SelectProps } from './types';
 import useCombinedRefs from '../../hooks/useCombinedRefs';
 import useTheme from '../../hooks/useTheme';
 import Box from '../Box';
 import Icon from '../Icon';
 import TextField from '../TextField';
-import ClickAwayListener from '../utils/ClickAwayListener';
 import handleSearch from '../utils/handleSearch';
-import MultiTextFieldBase from 'components/MultiTextFieldBase/MultiTextFieldBase';
-import ProgressIndicator from 'components/ProgressIndicator';
-import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
-import PositionInScreen from 'components/utils/PositionInScreen';
+import SelectMenu from './components/SelectMenu/SelectMenu';
+import { SELECT_ALL_OPTION } from './constants';
+import { selectWrapper, suffixContainer } from './Select.style';
+import type { SelectOption, SelectProps } from './types';
 
 export const emptyValue: SelectOption = { label: '', value: '' };
 
@@ -334,90 +332,85 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
   const selectUniqueId = useRef(generateUniqueID('select_')).current;
 
   return (
-    <ClickAwayListener
-      onClick={() => {
-        setIsOpen(false);
-        setSearchValue('');
-      }}
+    <div
+      {...(!(isDisabled || status.type === 'read-only') && { onClick: handleClick })}
+      css={selectWrapper()}
+      {...menuKeyboardProps}
     >
-      <div
-        {...(!(isDisabled || status.type === 'read-only') && { onClick: handleClick })}
-        css={selectWrapper()}
-        {...menuKeyboardProps}
-      >
-        <PositionInScreen
-          id={selectUniqueId}
-          isVisible={isOpen}
-          hasWrapperWidth
-          offsetY={8}
-          parent={
-            isMulti ? (
-              <MultiTextFieldBase
-                selectedOptions={selectedOption as SelectOption[]}
-                onInput={handleOnInput}
-                onOptionDelete={(option) => {
-                  const items = Array.isArray(selectedOption)
-                    ? selectedOption.filter((o) =>
-                        typeof option !== 'string' && option
-                          ? o.value !== option.value
-                          : o.value !== option
-                      )
-                    : [];
+      <PositionInScreen
+        id={selectUniqueId}
+        isVisible={isOpen}
+        setIsVisible={setIsOpen}
+        hasWrapperWidth
+        isNonModal={isMulti || isSearchable}
+        offsetY={8}
+        parent={
+          isMulti ? (
+            <MultiTextFieldBase
+              selectedOptions={selectedOption as SelectOption[]}
+              onInput={handleOnInput}
+              onOptionDelete={(option) => {
+                const items = Array.isArray(selectedOption)
+                  ? selectedOption.filter((o) =>
+                      typeof option !== 'string' && option
+                        ? o.value !== option.value
+                        : o.value !== option
+                    )
+                  : [];
 
-                  if (onChange) onChange(items);
-                }}
-                onClearAllOptions={() => onChange && onChange([])}
-                isLoading={isLoading}
-                isDisabled={isDisabled}
-                readOnly={!isSearchable}
-                dataTestId={generateTestDataId('select-input', dataTestId)}
-                {...restInputProps}
-                status={status}
-                value={textFieldValue}
-                ref={combinedRefs}
-                autoComplete="off"
-                {...keyboardProps}
-                onClick={() => setIsOpen(true)}
-                role="combobox"
-                aria-expanded={isOpen}
-                aria-controls={selectUniqueId}
-              />
-            ) : (
-              <TextField
-                suffix={suffixRender}
-                {...keyboardProps}
-                onInput={handleOnInput}
-                isReadOnly={!isSearchable}
-                isDisabled={isDisabled}
-                dataTestId={generateTestDataId('select-input', dataTestId)}
-                {...restInputProps}
-                onClick={() => setIsOpen(true)}
-                status={status}
-                value={textFieldValue}
-                size={size}
-                ref={combinedRefs}
-                autoComplete="off"
-                role="combobox"
-                aria-expanded={isOpen}
-                aria-controls={selectUniqueId}
-              />
-            )
-          }
-        >
-          <SelectMenu
-            ref={listRef}
-            filteredOptions={filteredOptions}
-            handleOptionClick={handleOptionClick}
-            selectedOption={isMulti === true || !selectedOption ? emptyValue : selectedOption}
-            status={status}
-            isLoading={isLoading}
-            isVirtualized={isVirtualized}
-            size={size}
-            hasSelectAllOption={isMulti && hasSelectAllOption && !hasNoOptionsAndIsCreatable}
-          />
-        </PositionInScreen>
-      </div>
-    </ClickAwayListener>
+                if (onChange) onChange(items);
+              }}
+              onClearAllOptions={() => onChange && onChange([])}
+              isLoading={isLoading}
+              isDisabled={isDisabled}
+              readOnly={!isSearchable}
+              dataTestId={generateTestDataId('select-input', dataTestId)}
+              {...restInputProps}
+              status={status}
+              value={textFieldValue}
+              ref={combinedRefs}
+              autoComplete="off"
+              {...keyboardProps}
+              onClick={() => setIsOpen(true)}
+              role="combobox"
+              aria-expanded={isOpen}
+              aria-controls={selectUniqueId}
+            />
+          ) : (
+            <TextField
+              suffix={suffixRender}
+              {...keyboardProps}
+              onInput={handleOnInput}
+              isReadOnly={!isSearchable}
+              isDisabled={isDisabled}
+              dataTestId={generateTestDataId('select-input', dataTestId)}
+              {...restInputProps}
+              onClick={() => setIsOpen(true)}
+              status={status}
+              value={textFieldValue}
+              size={size}
+              ref={combinedRefs}
+              autoComplete="off"
+              role="combobox"
+              aria-expanded={isOpen}
+              aria-controls={selectUniqueId}
+            />
+          )
+        }
+      >
+        <SelectMenu
+          ref={listRef}
+          filteredOptions={filteredOptions}
+          handleOptionClick={handleOptionClick}
+          selectedOption={isMulti === true || !selectedOption ? emptyValue : selectedOption}
+          status={status}
+          isLoading={isLoading}
+          isVirtualized={isVirtualized}
+          size={size}
+          hasSelectAllOption={isMulti && hasSelectAllOption && !hasNoOptionsAndIsCreatable}
+        />
+      </PositionInScreen>
+    </div>
   );
 });
 

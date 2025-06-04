@@ -1,19 +1,19 @@
-import { FilterOption } from './Filter.types';
-import Stack from '../storyUtils/Stack';
-import { FIGMA_URL } from 'utils/common';
-import Filter from './Filter';
-import React from 'react';
+import { userEvent, within } from '@storybook/testing-library';
 import Button from 'components/Button';
-import { options } from './constants';
 import DropdownButton from 'components/DropdownButton';
-import useTheme from 'hooks/useTheme';
 import TextField from 'components/TextField';
+import useTheme from 'hooks/useTheme';
+import React from 'react';
+import { FIGMA_URL } from 'utils/common';
 import * as DatePickerStories from '../DatePicker/DatePicker.stories';
+import Stack from '../storyUtils/Stack';
+import { options } from './constants';
+import Filter from './Filter';
+import { FilterOption } from './Filter.types';
 
 export default {
   title: 'Updated Components/Filter',
   component: Filter,
-
   parameters: {
     design: [
       {
@@ -22,13 +22,12 @@ export default {
         url: `${FIGMA_URL}?node-id=10081%3A104078`,
       },
     ],
+    chromatic: { delay: 400 },
   },
-
   args: {
     singleFilterLabel: 'Single Filter',
     multiFilterLabel: 'Multi Filter',
   },
-
   argTypes: {
     filterType: { type: 'select', options: ['preset', 'added'] },
   },
@@ -54,9 +53,14 @@ export const PresetFilter = {
     );
   },
   name: 'Preset Filter',
-
   parameters: {
     controls: { disable: true },
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    const filter = await canvas.findByTestId('ictinus_filter_filter_button');
+    await userEvent.click(filter);
   },
 };
 
@@ -81,6 +85,7 @@ export const AddedFilter = {
       <Stack height={300}>
         {filtersShown.map((filterName, index) => (
           <Filter
+            hasWrapperWidth
             filterType="added"
             selectedFilter={states[filtersShown[index]][0]}
             onChange={states[filtersShown[index]][1]}

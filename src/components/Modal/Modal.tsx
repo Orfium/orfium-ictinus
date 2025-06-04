@@ -1,15 +1,14 @@
+import Card from 'components/Card';
+import IconButton from 'components/IconButton';
+import useEscape from 'hooks/useEscape';
+import { useOverlayStack } from 'hooks/useOverlayStack';
 import { rem, useTheme } from 'index';
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { generateTestDataId } from 'utils/helpers';
 import type { TestId } from 'utils/types';
-
 import { backgroundContainer, cardSizing, closeContainer, modalContainer } from './Modal.style';
 import type { ModalContentProps } from './ModalContent/ModalContent';
 import ModalContent from './ModalContent/ModalContent';
-import useEscape from '../../hooks/useEscape';
-import Card from '../Card';
-import IconButton from '../IconButton';
-import ClickAwayListener from '../utils/ClickAwayListener';
 
 export type ModalProps = {
   /**  If true, the modal is open. Defaults to false. */
@@ -38,11 +37,19 @@ const Modal: React.FCC<ModalProps> = ({
   maxWidth = `${rem(500)}`,
   maxHeight = `${rem(684)}`,
 }) => {
+  const overlayRef = useRef(null);
+  const theme = useTheme();
+
+  const { overlayProps } = useOverlayStack({
+    isVisible: isOpen,
+    isNonModal: false,
+    overlayRef,
+    onClose,
+  });
+
   useEscape(() => {
     onClose();
   });
-
-  const theme = useTheme();
 
   useEffect(() => {
     if (isOpen) {
@@ -50,7 +57,7 @@ const Modal: React.FCC<ModalProps> = ({
     }
 
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = '';
     };
   }, [isOpen]);
 
@@ -58,24 +65,22 @@ const Modal: React.FCC<ModalProps> = ({
 
   return (
     <div css={backgroundContainer} data-testid={generateTestDataId('modal-container', dataTestId)}>
-      <ClickAwayListener onClick={onClose}>
-        <div css={cardSizing(maxWidth, maxHeight)}>
-          <Card elevated="02" radius="3">
-            <div css={closeContainer}>
-              <IconButton
-                type="tertiary"
-                iconName="close"
-                onClick={onClose}
-                color={theme.tokens.colors.get('textColor.default.secondary')}
-                dataTestId="modal-close"
-              />
-            </div>
-            <div css={modalContainer({ isContentPadded })}>
-              {contentProps ? <ModalContent {...contentProps} /> : children}
-            </div>
-          </Card>
-        </div>
-      </ClickAwayListener>
+      <div {...overlayProps} ref={overlayRef} css={cardSizing(maxWidth, maxHeight)}>
+        <Card elevated="02" radius="3">
+          <div css={closeContainer}>
+            <IconButton
+              type="tertiary"
+              iconName="close"
+              onClick={onClose}
+              color={theme.tokens.colors.get('textColor.default.secondary')}
+              dataTestId="modal-close"
+            />
+          </div>
+          <div css={modalContainer({ isContentPadded })}>
+            {contentProps ? <ModalContent {...contentProps} /> : children}
+          </div>
+        </Card>
+      </div>
     </div>
   );
 };

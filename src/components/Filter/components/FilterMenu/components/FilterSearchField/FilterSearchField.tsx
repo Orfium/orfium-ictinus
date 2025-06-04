@@ -1,8 +1,3 @@
-import useTheme from 'hooks/useTheme';
-import React, { useMemo } from 'react';
-import { generateTestDataId } from 'utils/helpers';
-
-import { textFieldWrapper } from './FilterSearchField.style';
 import type {
   FilterProps,
   MultiFilterProps,
@@ -12,6 +7,10 @@ import Icon from 'components/Icon';
 import MultiTextFieldBase from 'components/MultiTextFieldBase';
 import ProgressIndicator from 'components/ProgressIndicator';
 import TextField from 'components/TextField';
+import useTheme from 'hooks/useTheme';
+import React, { useMemo } from 'react';
+import { generateTestDataId } from 'utils/helpers';
+import { textFieldWrapper } from './FilterSearchField.style';
 
 export type SearchInputProps = {
   value: string;
@@ -79,6 +78,7 @@ const FilterSearchField = ({
       )}
       {isMulti === true && (
         <MultiTextFieldBase
+          autoFocus
           selectedOptions={selectedFilter || []}
           dataTestPrefixId={`${dataTestPrefixId}_filter_search`}
           onInput={onInputChange}

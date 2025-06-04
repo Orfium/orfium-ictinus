@@ -1,15 +1,18 @@
 import type { CSSObject } from '@emotion/serialize';
 import React, { useRef } from 'react';
-
-import { useWrapperWidth, usePositionInScreen } from './hooks';
-import { container, itemContainer } from './PositionInScreen.style';
+import { Overlay } from '~/components/utils/Overlay';
+import { container } from './PositionInScreen.style';
 
 export type PositionInScreenProps = {
   id?: string;
   /** Whether the item to be positioned is visible */
   isVisible: boolean;
+  /** Function to set the visibility of the item */
+  setIsVisible: (visible: boolean) => void;
   /** Configures the container's overflow */
   isOverflowAllowed?: boolean;
+  /** Whether the overlay is able to interact outside */
+  isNonModal?: boolean;
   /** Whether the item to be positioned uses the parent's wrapper width */
   hasWrapperWidth?: boolean;
   /** Additional offset-x */
@@ -26,9 +29,11 @@ export type PositionInScreenProps = {
   };
 };
 
-const PositionInScreen: React.FCC<PositionInScreenProps> = ({
+export const PositionInScreen: React.FCC<PositionInScreenProps> = ({
   id = 'unique-tooltip-id',
   isVisible,
+  setIsVisible,
+  isNonModal = false,
   parent,
   isOverflowAllowed,
   hasWrapperWidth = false,
@@ -36,26 +41,26 @@ const PositionInScreen: React.FCC<PositionInScreenProps> = ({
   offsetY = 0,
   sx,
   children,
-  placement,
 }) => {
-  const wrapperRef = useRef(null);
-  const itemRef = useRef(null);
-
-  const [wrapperWidth] = useWrapperWidth(hasWrapperWidth, wrapperRef);
-  const { x, y } = usePositionInScreen(wrapperRef, itemRef, offsetX, offsetY, isVisible, placement);
-
-  const hasTooltip = isVisible && x !== -1 && y !== -1;
+  const triggerRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div css={container(isOverflowAllowed, hasTooltip, sx)} ref={wrapperRef}>
-      {parent}
-      {hasTooltip && (
-        <div css={itemContainer(x, y, wrapperWidth, sx)} id={id} ref={itemRef}>
-          {children}
-        </div>
-      )}
-    </div>
+    <>
+      <div ref={triggerRef} css={container(isOverflowAllowed, isVisible, sx)}>
+        {parent}
+      </div>
+      <Overlay
+        id={id}
+        isVisible={isVisible}
+        setIsVisible={setIsVisible}
+        triggerRef={triggerRef}
+        offsetX={offsetX}
+        offsetY={offsetY}
+        isNonModal={isNonModal}
+        hasWrapperWidth={hasWrapperWidth}
+      >
+        {children}
+      </Overlay>
+    </>
   );
 };
-
-export default PositionInScreen;

@@ -13,10 +13,8 @@ import {
 } from '../Typography/Typography.config.styles';
 
 export const scrollbar = (theme: Theme): SerializedStyles => css`
-  // for Chrome
   ::-webkit-scrollbar {
-    width: ${theme.globals.spacing.get('4')};
-    height: ${theme.globals.spacing.get('4')};
+    width: 5px;
   }
 
   ::-webkit-scrollbar-track {
@@ -25,18 +23,12 @@ export const scrollbar = (theme: Theme): SerializedStyles => css`
 
   ::-webkit-scrollbar-thumb {
     background: ${theme.tokens.colors.get('palette.primary.muted')};
-    border-radius: ${theme.globals.spacing.get('9')};
+    border-radius: 5px;
   }
 
-  ::-webkit-scrollbar-thumb:hover {
-    background: ${theme.tokens.colors.get('palette.primary.base')};
-  }
-
-  // for Firefox
-  @-moz-document url-prefix() {
-    * {
-      scrollbar-width: thin;
-    }
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: ${theme.tokens.colors.get('palette.primary.muted')} transparent;
   }
 `;
 
