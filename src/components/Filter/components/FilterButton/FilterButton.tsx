@@ -86,6 +86,8 @@ export const FilterButton = React.forwardRef<HTMLButtonElement, FilterButtonProp
 
       {isAdded && (
         <Icon
+          role="button"
+          aria-label="Remove filter"
           name="close"
           size={theme.dimension.sizing.get('icon.sm')}
           color={theme.tokens.colors.get(
@@ -93,7 +95,6 @@ export const FilterButton = React.forwardRef<HTMLButtonElement, FilterButtonProp
           )}
           onClick={handleIconClick}
           dataTestPrefixId={`${dataTestPrefixId}_filter_close`}
-          aria-label="close"
         />
       )}
     </button>

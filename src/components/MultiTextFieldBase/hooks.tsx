@@ -78,12 +78,13 @@ const useMultiTextFieldBaseUtils = ({
     if (iconName) {
       return (
         <Icon
+          role="button"
+          aria-label="Remove all"
           size={20}
           name={iconName}
           color={theme.tokens.colors.get('textColor.default.secondary')}
           onClick={handleClick}
           dataTestId="select-right-icon"
-          aria-label="close"
         />
       );
     }

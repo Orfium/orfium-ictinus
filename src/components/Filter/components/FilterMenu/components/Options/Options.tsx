@@ -58,7 +58,7 @@ const Options: React.FCC<Props> = ({
   );
 
   return items.length ? (
-    <div css={optionsStyles({ isMulti })} role="listbox" aria-label="List options">
+    <div css={optionsStyles({ isMulti })}>
       <List
         ref={listRef}
         label="filter-options"
@@ -68,6 +68,7 @@ const Options: React.FCC<Props> = ({
         isVirtualized={isVirtualized && isForcedVirtualized}
         height={height}
         dataTestPrefixId={`${dataTestPrefixId}_filter_list`}
+        aria-label="Available options"
       >
         {hasSelectAllOption ? (
           <ListItem key={SELECT_ALL_OPTION.value} textValue={SELECT_ALL_OPTION.label}>

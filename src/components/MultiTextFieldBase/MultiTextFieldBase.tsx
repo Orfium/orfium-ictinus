@@ -130,7 +130,7 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
             sx
           )}
         >
-          <div css={inputContainer()} role="listbox" aria-label="Selected tags">
+          <div css={inputContainer()} data-testid="selected-tags">
             {tags}
             <input
               readOnly={isLocked || isReadOnly}
