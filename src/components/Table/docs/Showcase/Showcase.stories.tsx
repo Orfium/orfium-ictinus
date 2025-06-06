@@ -19,6 +19,8 @@ export default {
     jobAlign: 'left',
     rowSize: 'sm',
     maxHeight: 280,
+    hasRowsCount: false,
+    rowsCount: undefined,
   },
 
   argTypes: {
@@ -53,6 +55,7 @@ export default {
     lastNameWidth: { name: 'Last Name Width', type: 'number' },
     ageWidth: { name: 'Age Width', type: 'number' },
     jobWidth: { name: 'Job Width', type: 'number' },
+    rowsCount: { name: 'Rows Count', type: 'number' },
   },
 };
 
@@ -75,6 +78,8 @@ export const Playground = {
       lastNameWidth,
       ageWidth,
       jobWidth,
+      hasRowsCount,
+      rowsCount,
     } = args;
 
     const columns: TableColumn<SimpleData>[] = [
@@ -132,6 +137,8 @@ export const Playground = {
         hasStickyHeader={hasStickyHeader}
         sx={hasStickyHeader ? { tbody: { maxHeight: `${maxHeight}px` } } : undefined}
         rowsConfig={{
+          hasRowsCount,
+          rowsCount,
           ...(hasRowSelection && {
             rowSelection: rowSelection[currentPage - 1],
             setRowSelection: (state) => {
@@ -222,6 +229,8 @@ export const Playground = {
         'Last Name Width',
         'Age Width',
         'Job Width',
+        'hasRowsCount',
+        'Rows Count',
       ],
     },
   },
