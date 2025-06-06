@@ -60,7 +60,7 @@ const Table = <TData extends NoUndefined<TData>>({
           columns={columns}
           rowsConfig={rowsConfig}
           containerRef={containerRef}
-          rowsCount={table.getRowModel().rows.length}
+          rowsCount={rowsConfig.rowsCount ?? table.getRowModel().rows.length}
           dataTestPrefixId={dataTestPrefixId}
         />
       )}
@@ -141,7 +141,7 @@ const Table = <TData extends NoUndefined<TData>>({
                         rowSize={rowSize}
                         width={cell.column.getSize() || 100 / cells}
                         metaData={cell.column.columnDef.meta}
-                        sx={sx?.td}
+                        sx={typeof sx?.td === 'function' ? sx.td(cell.row.original) : sx?.td}
                         dataTestPrefixId={dataTestPrefixId}
                       >
                         {flexRender(cell.column.columnDef.cell, cell.getContext())}

@@ -41,7 +41,7 @@ const TTitle: React.FCC<Props> = ({
     () => (
       <div data-testid={`${dataTestPrefixId}_title`}>
         <Typography
-          type={isSelectable ? 'active' : 'primary'}
+          type='active'
           variant="label02"
           data-testid={`${dataTestPrefixId}_title_items_count`}
         >

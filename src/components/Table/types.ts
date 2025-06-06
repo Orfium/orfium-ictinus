@@ -43,7 +43,7 @@ export type TableProps<TData extends NoUndefined<TData>> = {
     tbody?: CSSObject;
     th?: CSSObject;
     tr?: CSSObject;
-    td?: CSSObject;
+    td?: ((originalRow: TData) => CSSObject) | CSSObject;
   };
 } & TestProps;
 
@@ -102,6 +102,8 @@ export type TableColumn<TData> = {
 export type RowsConfig = {
   /** Whether a rows counter should be displayed, regardless of row selection functionality */
   hasRowsCount?: boolean;
+  /** The number of rows counter that will be displayed. If no number is provided it will default to the number of rows in the table */
+  rowsCount?: number;
   /** State which indicated which rows are selected */
   rowSelection?: RowSelectionState;
   /** Callback for row selection state change */
