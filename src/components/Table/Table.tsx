@@ -60,7 +60,7 @@ const Table = <TData extends NoUndefined<TData>>({
           columns={columns}
           rowsConfig={rowsConfig}
           containerRef={containerRef}
-          rowsCount={rowsConfig.rowsCount ?? table.getRowModel().rows.length}
+          rowsCount={rowsConfig?.rowsCount ?? table.getRowModel().rows.length}
           dataTestPrefixId={dataTestPrefixId}
         />
       )}
