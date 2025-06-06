@@ -49,6 +49,6 @@ export const getContent = (orientation: TabOrientation) => {
     bing: <div css={showcaseContent(orientation)}>{getTags('bing')}</div>,
     tribbiani: <div css={showcaseContent(orientation)}>{getTags('tribbiani')}</div>,
     green: <div css={showcaseContent(orientation)}>{getTags('green')}</div>,
-    buffay: <div css={showcaseContent(orientation)}>{getTags('buffay')}</div>,
+    buffay: <div css={showcaseContent(orientation)}>Empty state (0)</div>,
   };
 };
