@@ -1,7 +1,7 @@
-import { showcaseContent } from './Tabs.style';
-import type { TabOrientation } from './types';
 import { options } from '../Filter/constants';
 import Tag from '../Tag';
+import { showcaseContent } from './Tabs.style';
+import type { TabOrientation } from './types';
 
 export const getItems = (hasCounter = false) => {
   return [
@@ -28,7 +28,7 @@ export const getItems = (hasCounter = false) => {
     {
       id: 'buffay',
       label: 'Buffay',
-      ...(hasCounter ? { counter: 3 } : {}),
+      ...(hasCounter ? { counter: 0 } : {}),
     },
   ];
 };
