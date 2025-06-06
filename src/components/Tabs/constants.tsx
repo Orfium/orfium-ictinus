@@ -1,7 +1,7 @@
-import { showcaseContent } from './Tabs.style';
-import type { TabOrientation } from './types';
 import { options } from '../Filter/constants';
 import Tag from '../Tag';
+import { showcaseContent } from './Tabs.style';
+import type { TabOrientation } from './types';
 
 export const getItems = (hasCounter = false) => {
   return [
@@ -28,7 +28,7 @@ export const getItems = (hasCounter = false) => {
     {
       id: 'buffay',
       label: 'Buffay',
-      ...(hasCounter ? { counter: 3 } : {}),
+      ...(hasCounter ? { counter: 0 } : {}),
     },
   ];
 };
@@ -49,6 +49,6 @@ export const getContent = (orientation: TabOrientation) => {
     bing: <div css={showcaseContent(orientation)}>{getTags('bing')}</div>,
     tribbiani: <div css={showcaseContent(orientation)}>{getTags('tribbiani')}</div>,
     green: <div css={showcaseContent(orientation)}>{getTags('green')}</div>,
-    buffay: <div css={showcaseContent(orientation)}>{getTags('buffay')}</div>,
+    buffay: <div css={showcaseContent(orientation)}>Empty state (0)</div>,
   };
 };
