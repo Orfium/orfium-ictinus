@@ -33,17 +33,17 @@ const Icon = React.forwardRef<HTMLDivElement, IconProps>((props, ref) => {
     size = 20,
     onClick,
     dataTestId,
+    hasHover,
     ...rest
   } = props;
   const combinedRef = useCombinedRefs<HTMLDivElement>(ref, useRef(null));
   const isInteractive = Boolean(onClick);
-  const { hasHover = isInteractive } = props;
   const Icon = iconSelector[name];
 
   return (
     <div
       onClick={onClick}
-      css={iconContainerStyles({ size, hasHover, isInteractive })}
+      css={iconContainerStyles({ size, hasHover: hasHover ?? isInteractive, isInteractive })}
       data-testid={dataTestId}
       ref={combinedRef}
       tabIndex={isInteractive ? 0 : undefined}
