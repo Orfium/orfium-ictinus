@@ -14,20 +14,6 @@
 }
 
 .emotion-1 {
-  overflow: inherit;
-  text-overflow: inherit;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  height: inherit;
-  position: relative;
-}
-
-.emotion-1 #unique-tooltip-id {
-  display: none!important;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -55,18 +41,18 @@
   opacity: 1;
 }
 
-.emotion-2:not([disabled]):focus-visible,
-.emotion-2:not([disabled]):hover {
+.emotion-1:not([disabled]):focus-visible,
+.emotion-1:not([disabled]):hover {
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-3 {
+.emotion-2 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 
-.emotion-4 {
+.emotion-3 {
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
@@ -79,7 +65,7 @@
   transition: all 0.2s ease-in-out;
 }
 
-.emotion-5 {
+.emotion-4 {
   width: 1rem;
   height: 1rem;
   display: -webkit-box;
@@ -88,17 +74,17 @@
   display: flex;
 }
 
-.emotion-6 {
+.emotion-5 {
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-6 path,
-.emotion-6 rect {
+.emotion-5 path,
+.emotion-5 rect {
   fill: #194DCC!important;
 }
 
-.emotion-8 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -126,8 +112,8 @@
   opacity: 1;
 }
 
-.emotion-8:not([disabled]):focus-visible,
-.emotion-8:not([disabled]):hover {
+.emotion-6:not([disabled]):focus-visible,
+.emotion-6:not([disabled]):hover {
   background-color: rgba(200,206,255,0.20);
 }
 
@@ -138,30 +124,28 @@
     <div
       style="margin: 5px;"
     >
-      <div
-        class="emotion-1"
-      >
+      <div>
         <button
-          class="emotion-2"
+          class="emotion-1"
           data-active="false"
           data-testid="ictinus_filter_filter_button"
           type="button"
         >
           <div
-            class="emotion-3"
+            class="emotion-2"
             data-testid="ictinus_filter_filter_label"
           >
             Single Filter: All
           </div>
           <div
-            class="emotion-4"
+            class="emotion-3"
           >
             <div
-              class="emotion-5"
+              class="emotion-4"
               data-slot="icon"
             >
               <svg
-                class="emotion-6"
+                class="emotion-5"
                 fill="none"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -181,30 +165,28 @@
     <div
       style="margin: 5px;"
     >
-      <div
-        class="emotion-1"
-      >
+      <div>
         <button
-          class="emotion-8"
+          class="emotion-6"
           data-active="false"
           data-testid="ictinus_filter_filter_button"
           type="button"
         >
           <div
-            class="emotion-3"
+            class="emotion-2"
             data-testid="ictinus_filter_filter_label"
           >
             Multi Filter: All
           </div>
           <div
-            class="emotion-4"
+            class="emotion-3"
           >
             <div
-              class="emotion-5"
+              class="emotion-4"
               data-slot="icon"
             >
               <svg
-                class="emotion-6"
+                class="emotion-5"
                 fill="none"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"

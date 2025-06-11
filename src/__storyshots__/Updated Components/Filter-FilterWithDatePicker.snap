@@ -14,18 +14,6 @@
 }
 
 .emotion-1 {
-  overflow: inherit;
-  text-overflow: inherit;
-  width: 100%;
-  height: inherit;
-  position: relative;
-}
-
-.emotion-1 #unique-tooltip-id {
-  display: none!important;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -53,18 +41,18 @@
   opacity: 1;
 }
 
-.emotion-2:not([disabled]):focus-visible,
-.emotion-2:not([disabled]):hover {
+.emotion-1:not([disabled]):focus-visible,
+.emotion-1:not([disabled]):hover {
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-3 {
+.emotion-2 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 
-.emotion-4 {
+.emotion-3 {
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
@@ -77,7 +65,7 @@
   transition: all 0.2s ease-in-out;
 }
 
-.emotion-5 {
+.emotion-4 {
   width: 1rem;
   height: 1rem;
   display: -webkit-box;
@@ -86,17 +74,17 @@
   display: flex;
 }
 
-.emotion-6 {
+.emotion-5 {
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-6 path,
-.emotion-6 rect {
+.emotion-5 path,
+.emotion-5 rect {
   fill: #194DCC!important;
 }
 
-.emotion-13 {
+.emotion-11 {
   width: 1rem;
   height: 1rem;
   display: -webkit-box;
@@ -106,8 +94,8 @@
   cursor: pointer;
 }
 
-.emotion-13:hover,
-.emotion-13:focus-visible {
+.emotion-11:hover,
+.emotion-11:focus-visible {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   border-radius: 100%;
@@ -123,31 +111,29 @@
       style="margin: 5px;"
     >
       <div>
-        <div
-          class="emotion-1"
-        >
+        <div>
           <div>
             <button
-              class="emotion-2"
+              class="emotion-1"
               data-active="false"
               data-testid="undefined_filter_button"
               type="button"
             >
               <div
-                class="emotion-3"
+                class="emotion-2"
                 data-testid="undefined_filter_label"
               >
                 Select Date: 11/03/2020 
               </div>
               <div
-                class="emotion-4"
+                class="emotion-3"
               >
                 <div
-                  class="emotion-5"
+                  class="emotion-4"
                   data-slot="icon"
                 >
                   <svg
-                    class="emotion-6"
+                    class="emotion-5"
                     fill="none"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -170,31 +156,29 @@
       style="margin: 5px;"
     >
       <div>
-        <div
-          class="emotion-1"
-        >
+        <div>
           <div>
             <button
-              class="emotion-2"
+              class="emotion-1"
               data-active="false"
               data-testid="undefined_filter_button"
               type="button"
             >
               <div
-                class="emotion-3"
+                class="emotion-2"
                 data-testid="undefined_filter_label"
               >
                 My date: 11/03/2020 
               </div>
               <div
-                class="emotion-4"
+                class="emotion-3"
               >
                 <div
-                  class="emotion-5"
+                  class="emotion-4"
                   data-slot="icon"
                 >
                   <svg
-                    class="emotion-6"
+                    class="emotion-5"
                     fill="none"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -210,14 +194,14 @@
               </div>
               <div
                 aria-label="Remove filter"
-                class="emotion-13"
+                class="emotion-11"
                 data-slot="icon"
                 datatestprefixid="undefined_filter_close"
                 role="button"
                 tabindex="0"
               >
                 <svg
-                  class="emotion-6"
+                  class="emotion-5"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -237,31 +221,29 @@
       style="margin: 5px;"
     >
       <div>
-        <div
-          class="emotion-1"
-        >
+        <div>
           <div>
             <button
-              class="emotion-2"
+              class="emotion-1"
               data-active="false"
               data-testid="undefined_filter_button"
               type="button"
             >
               <div
-                class="emotion-3"
+                class="emotion-2"
                 data-testid="undefined_filter_label"
               >
                 Select Dates: 11/03/2020 - 11/03/2020
               </div>
               <div
-                class="emotion-4"
+                class="emotion-3"
               >
                 <div
-                  class="emotion-5"
+                  class="emotion-4"
                   data-slot="icon"
                 >
                   <svg
-                    class="emotion-6"
+                    class="emotion-5"
                     fill="none"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -284,31 +266,29 @@
       style="margin: 5px;"
     >
       <div>
-        <div
-          class="emotion-1"
-        >
+        <div>
           <div>
             <button
-              class="emotion-2"
+              class="emotion-1"
               data-active="false"
               data-testid="undefined_filter_button"
               type="button"
             >
               <div
-                class="emotion-3"
+                class="emotion-2"
                 data-testid="undefined_filter_label"
               >
                 Annotation date: 11/03/2020 - 11/03/2020
               </div>
               <div
-                class="emotion-4"
+                class="emotion-3"
               >
                 <div
-                  class="emotion-5"
+                  class="emotion-4"
                   data-slot="icon"
                 >
                   <svg
-                    class="emotion-6"
+                    class="emotion-5"
                     fill="none"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -324,14 +304,14 @@
               </div>
               <div
                 aria-label="Remove filter"
-                class="emotion-13"
+                class="emotion-11"
                 data-slot="icon"
                 datatestprefixid="undefined_filter_close"
                 role="button"
                 tabindex="0"
               >
                 <svg
-                  class="emotion-6"
+                  class="emotion-5"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"

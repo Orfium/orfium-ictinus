@@ -23,18 +23,6 @@
 }
 
 .emotion-3 {
-  overflow: inherit;
-  text-overflow: inherit;
-  width: 100%;
-  height: inherit;
-  position: relative;
-}
-
-.emotion-3 #unique-tooltip-id {
-  display: none!important;
-}
-
-.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -63,16 +51,16 @@
   min-height: 3.25rem!important;
 }
 
-.emotion-4:hover {
+.emotion-3:hover {
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-4:focus-within {
+.emotion-3:focus-within {
   box-shadow: 0 0 0 0.125rem #175BF5;
   background-color: rgba(200,206,255,0.30);
 }
 
-.emotion-4 label {
+.emotion-3 label {
   font-weight: 700;
   -webkit-transform: translate(0.1875rem, -82%) scale(0.8)!important;
   -moz-transform: translate(0.1875rem, -82%) scale(0.8)!important;
@@ -81,7 +69,7 @@
   bottom: auto;
 }
 
-.emotion-5 {
+.emotion-4 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -101,11 +89,11 @@
   padding: 1.3125rem 2.5rem 0.3125rem 0.75rem;
 }
 
-.emotion-5>div {
+.emotion-4>div {
   position: relative;
 }
 
-.emotion-6 {
+.emotion-5 {
   position: static;
   width: 100%;
   display: -webkit-box;
@@ -120,12 +108,12 @@
   z-index: 2;
 }
 
-.emotion-7 {
+.emotion-6 {
   position: relative;
   margin-right: 0.25rem;
 }
 
-.emotion-8 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -161,25 +149,25 @@
   text-overflow: ellipsis;
 }
 
-.emotion-8:focus-visible {
+.emotion-7:focus-visible {
   background: rgba(200,206,255,0.20);
   border-color: #175BF5;
+}
+
+.emotion-8 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .emotion-9 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-.emotion-10 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   max-width: unset;
 }
 
-.emotion-11 {
+.emotion-10 {
   width: 1rem;
   height: 1rem;
   display: -webkit-box;
@@ -197,12 +185,12 @@
   cursor: pointer;
 }
 
-.emotion-11:hover {
+.emotion-10:hover {
   background: rgba(200,206,255,0.20);
   border-radius: 624.9375rem;
 }
 
-.emotion-12 {
+.emotion-11 {
   width: 1rem;
   height: 1rem;
   display: -webkit-box;
@@ -212,17 +200,17 @@
   cursor: pointer;
 }
 
-.emotion-13 {
+.emotion-12 {
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-13 path,
-.emotion-13 rect {
+.emotion-12 path,
+.emotion-12 rect {
   fill: #194DCC!important;
 }
 
-.emotion-49 {
+.emotion-48 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -244,48 +232,48 @@
   flex: 1 1 0%;
 }
 
-.emotion-49::-webkit-input-placeholder {
+.emotion-48::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-49::-moz-placeholder {
+.emotion-48::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-49:-ms-input-placeholder {
+.emotion-48:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-49::placeholder {
+.emotion-48::placeholder {
   color: transparent;
 }
 
-.emotion-49:focus {
+.emotion-48:focus {
   outline: none;
 }
 
-.emotion-49:focus::-webkit-input-placeholder {
+.emotion-48:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-49:focus::-moz-placeholder {
+.emotion-48:focus::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-49:focus:-ms-input-placeholder {
+.emotion-48:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-49:focus::placeholder {
+.emotion-48:focus::placeholder {
   color: transparent;
 }
 
-.emotion-49:not(:focus):placeholder-shown+label {
+.emotion-48:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-49:focus-within+label,
-.emotion-49:not(:placeholder-shown)+label {
+.emotion-48:focus-within+label,
+.emotion-48:not(:placeholder-shown)+label {
   font-weight: 700!important;
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -293,24 +281,24 @@
   transform: translate(0.1875rem, -35%) scale(0.8);
 }
 
-.emotion-49:focus-within+label {
+.emotion-48:focus-within+label {
   font-weight: 700!important;
   color: #194DCC;
 }
 
-.emotion-49:disabled {
+.emotion-48:disabled {
   cursor: not-allowed;
 }
 
-.emotion-49:focus+label,
-.emotion-49:not(:placeholder-shown)+label {
+.emotion-48:focus+label,
+.emotion-48:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -82%) scale(0.8);
   -moz-transform: translate(0.1875rem, -82%) scale(0.8);
   -ms-transform: translate(0.1875rem, -82%) scale(0.8);
   transform: translate(0.1875rem, -82%) scale(0.8);
 }
 
-.emotion-50 {
+.emotion-49 {
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
@@ -346,7 +334,7 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-51 {
+.emotion-50 {
   position: absolute!important;
   bottom: 0;
   right: 0.5rem;
@@ -361,7 +349,7 @@
   align-items: center;
 }
 
-.emotion-52 {
+.emotion-51 {
   width: 1.25rem;
   height: 1.25rem;
   display: -webkit-box;
@@ -371,8 +359,8 @@
   cursor: pointer;
 }
 
-.emotion-52:hover,
-.emotion-52:focus-visible {
+.emotion-51:hover,
+.emotion-51:focus-visible {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   border-radius: 100%;
@@ -380,17 +368,17 @@
   box-shadow: 0px 0px 0px 8px rgba(200,206,255,0.20);
 }
 
-.emotion-53 {
+.emotion-52 {
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-53 path,
-.emotion-53 rect {
+.emotion-52 path,
+.emotion-52 rect {
   fill: #52567a!important;
 }
 
-.emotion-54 {
+.emotion-53 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -410,7 +398,7 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-54 span {
+.emotion-53 span {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -418,7 +406,7 @@
   padding: 0;
 }
 
-.emotion-58 {
+.emotion-56 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -447,16 +435,16 @@
   min-height: 3.25rem!important;
 }
 
-.emotion-58:hover {
+.emotion-56:hover {
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-58:focus-within {
+.emotion-56:focus-within {
   box-shadow: 0 0 0 0.125rem #175BF5;
   background-color: rgba(200,206,255,0.30);
 }
 
-.emotion-58 input:focus label {
+.emotion-56 input:focus label {
   font-weight: 700;
   -webkit-transform: translate(0.1875rem, -82%) scale(0.8)!important;
   -moz-transform: translate(0.1875rem, -82%) scale(0.8)!important;
@@ -465,14 +453,14 @@
   bottom: auto;
 }
 
-.emotion-58 label {
+.emotion-56 label {
   -webkit-transform: translate(0.1875rem, -8px);
   -moz-transform: translate(0.1875rem, -8px);
   -ms-transform: translate(0.1875rem, -8px);
   transform: translate(0.1875rem, -8px);
 }
 
-.emotion-62 {
+.emotion-60 {
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
@@ -508,7 +496,7 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-64 {
+.emotion-62 {
   width: 1.25rem;
   height: 1.25rem;
   display: -webkit-box;
@@ -527,36 +515,34 @@
       <div
         class="emotion-2"
       >
-        <div
-          class="emotion-3"
-        >
+        <div>
           <div>
             <div
-              class="emotion-4"
+              class="emotion-3"
               data-testid="select-input"
             >
               <div
-                class="emotion-5"
+                class="emotion-4"
               >
                 <div
-                  class="emotion-6"
+                  class="emotion-5"
                   data-testid="selected-tags"
                 >
                   <span
-                    class="emotion-7"
+                    class="emotion-6"
                   >
                     <div
                       aria-label="[object Object]"
                       aria-selected="false"
-                      class="emotion-8"
+                      class="emotion-7"
                       data-testid="tag_0_tag_container"
                       tabindex="0"
                     >
                       <div
-                        class="emotion-9"
+                        class="emotion-8"
                       >
                         <div
-                          class="emotion-10"
+                          class="emotion-9"
                           title="Strawberry"
                         >
                           Strawberry
@@ -564,17 +550,17 @@
                       </div>
                       <div
                         aria-hidden="true"
-                        class="emotion-11"
+                        class="emotion-10"
                         tabindex="-1"
                       >
                         <div
-                          class="emotion-12"
+                          class="emotion-11"
                           data-slot="icon"
                           data-testid="tag_0_tag_suffix"
                           tabindex="0"
                         >
                           <svg
-                            class="emotion-13"
+                            class="emotion-12"
                             fill="none"
                             viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg"
@@ -589,20 +575,20 @@
                     </div>
                   </span>
                   <span
-                    class="emotion-7"
+                    class="emotion-6"
                   >
                     <div
                       aria-label="[object Object]"
                       aria-selected="false"
-                      class="emotion-8"
+                      class="emotion-7"
                       data-testid="tag_1_tag_container"
                       tabindex="0"
                     >
                       <div
-                        class="emotion-9"
+                        class="emotion-8"
                       >
                         <div
-                          class="emotion-10"
+                          class="emotion-9"
                           title="Banana"
                         >
                           Banana
@@ -610,17 +596,17 @@
                       </div>
                       <div
                         aria-hidden="true"
-                        class="emotion-11"
+                        class="emotion-10"
                         tabindex="-1"
                       >
                         <div
-                          class="emotion-12"
+                          class="emotion-11"
                           data-slot="icon"
                           data-testid="tag_1_tag_suffix"
                           tabindex="0"
                         >
                           <svg
-                            class="emotion-13"
+                            class="emotion-12"
                             fill="none"
                             viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg"
@@ -635,20 +621,20 @@
                     </div>
                   </span>
                   <span
-                    class="emotion-7"
+                    class="emotion-6"
                   >
                     <div
                       aria-label="[object Object]"
                       aria-selected="false"
-                      class="emotion-8"
+                      class="emotion-7"
                       data-testid="tag_2_tag_container"
                       tabindex="0"
                     >
                       <div
-                        class="emotion-9"
+                        class="emotion-8"
                       >
                         <div
-                          class="emotion-10"
+                          class="emotion-9"
                           title="Citrus"
                         >
                           Citrus
@@ -656,17 +642,17 @@
                       </div>
                       <div
                         aria-hidden="true"
-                        class="emotion-11"
+                        class="emotion-10"
                         tabindex="-1"
                       >
                         <div
-                          class="emotion-12"
+                          class="emotion-11"
                           data-slot="icon"
                           data-testid="tag_2_tag_suffix"
                           tabindex="0"
                         >
                           <svg
-                            class="emotion-13"
+                            class="emotion-12"
                             fill="none"
                             viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg"
@@ -681,20 +667,20 @@
                     </div>
                   </span>
                   <span
-                    class="emotion-7"
+                    class="emotion-6"
                   >
                     <div
                       aria-label="[object Object]"
                       aria-selected="false"
-                      class="emotion-8"
+                      class="emotion-7"
                       data-testid="tag_3_tag_container"
                       tabindex="0"
                     >
                       <div
-                        class="emotion-9"
+                        class="emotion-8"
                       >
                         <div
-                          class="emotion-10"
+                          class="emotion-9"
                           title="Sorbet"
                         >
                           Sorbet
@@ -702,17 +688,17 @@
                       </div>
                       <div
                         aria-hidden="true"
-                        class="emotion-11"
+                        class="emotion-10"
                         tabindex="-1"
                       >
                         <div
-                          class="emotion-12"
+                          class="emotion-11"
                           data-slot="icon"
                           data-testid="tag_3_tag_suffix"
                           tabindex="0"
                         >
                           <svg
-                            class="emotion-13"
+                            class="emotion-12"
                             fill="none"
                             viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg"
@@ -727,20 +713,20 @@
                     </div>
                   </span>
                   <span
-                    class="emotion-7"
+                    class="emotion-6"
                   >
                     <div
                       aria-label="[object Object]"
                       aria-selected="false"
-                      class="emotion-8"
+                      class="emotion-7"
                       data-testid="tag_4_tag_container"
                       tabindex="0"
                     >
                       <div
-                        class="emotion-9"
+                        class="emotion-8"
                       >
                         <div
-                          class="emotion-10"
+                          class="emotion-9"
                           title="Cookie Dough"
                         >
                           Cookie Dough
@@ -748,17 +734,17 @@
                       </div>
                       <div
                         aria-hidden="true"
-                        class="emotion-11"
+                        class="emotion-10"
                         tabindex="-1"
                       >
                         <div
-                          class="emotion-12"
+                          class="emotion-11"
                           data-slot="icon"
                           data-testid="tag_4_tag_suffix"
                           tabindex="0"
                         >
                           <svg
-                            class="emotion-13"
+                            class="emotion-12"
                             fill="none"
                             viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg"
@@ -773,20 +759,20 @@
                     </div>
                   </span>
                   <span
-                    class="emotion-7"
+                    class="emotion-6"
                   >
                     <div
                       aria-label="[object Object]"
                       aria-selected="false"
-                      class="emotion-8"
+                      class="emotion-7"
                       data-testid="tag_5_tag_container"
                       tabindex="0"
                     >
                       <div
-                        class="emotion-9"
+                        class="emotion-8"
                       >
                         <div
-                          class="emotion-10"
+                          class="emotion-9"
                           title="Buttered Pecan"
                         >
                           Buttered Pecan
@@ -794,17 +780,17 @@
                       </div>
                       <div
                         aria-hidden="true"
-                        class="emotion-11"
+                        class="emotion-10"
                         tabindex="-1"
                       >
                         <div
-                          class="emotion-12"
+                          class="emotion-11"
                           data-slot="icon"
                           data-testid="tag_5_tag_suffix"
                           tabindex="0"
                         >
                           <svg
-                            class="emotion-13"
+                            class="emotion-12"
                             fill="none"
                             viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg"
@@ -824,14 +810,14 @@
                     aria-expanded="false"
                     aria-invalid="false"
                     autocomplete="off"
-                    class="emotion-49"
+                    class="emotion-48"
                     data-testid="input_select-input"
                     id="multiTextfield__00"
                     role="combobox"
                     value=""
                   />
                   <label
-                    class="emotion-50"
+                    class="emotion-49"
                     for="multiTextfield__00"
                   >
                     Multi Select
@@ -839,18 +825,18 @@
                   </label>
                 </div>
                 <div
-                  class="emotion-51"
+                  class="emotion-50"
                 >
                   <div
                     aria-label="Remove all"
-                    class="emotion-52"
+                    class="emotion-51"
                     data-slot="icon"
                     data-testid="select-right-icon"
                     role="button"
                     tabindex="0"
                   >
                     <svg
-                      class="emotion-53"
+                      class="emotion-52"
                       fill="none"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -865,7 +851,7 @@
               </div>
             </div>
             <div
-              class="emotion-54"
+              class="emotion-53"
               data-testid="error-select-input"
             >
               <span
@@ -884,19 +870,17 @@
       <div
         class="emotion-2"
       >
-        <div
-          class="emotion-3"
-        >
+        <div>
           <div>
             <div
-              class="emotion-58"
+              class="emotion-56"
               data-testid="select-input"
             >
               <div
-                class="emotion-5"
+                class="emotion-4"
               >
                 <div
-                  class="emotion-6"
+                  class="emotion-5"
                   data-testid="selected-tags"
                 >
                   <input
@@ -905,7 +889,7 @@
                     aria-expanded="false"
                     aria-invalid="false"
                     autocomplete="off"
-                    class="emotion-49"
+                    class="emotion-48"
                     data-testid="input_select-input"
                     id="multiTextfield__00"
                     placeholder="Multi Select - Async"
@@ -913,7 +897,7 @@
                     value=""
                   />
                   <label
-                    class="emotion-62"
+                    class="emotion-60"
                     for="multiTextfield__00"
                   >
                     Multi Select - Async
@@ -921,17 +905,17 @@
                   </label>
                 </div>
                 <div
-                  class="emotion-51"
+                  class="emotion-50"
                 >
                   <div
                     aria-label="Remove all"
-                    class="emotion-64"
+                    class="emotion-62"
                     data-slot="icon"
                     data-testid="select-right-icon"
                     role="button"
                   >
                     <svg
-                      class="emotion-53"
+                      class="emotion-52"
                       fill="none"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -946,7 +930,7 @@
               </div>
             </div>
             <div
-              class="emotion-54"
+              class="emotion-53"
               data-testid="error-select-input"
             >
               <span

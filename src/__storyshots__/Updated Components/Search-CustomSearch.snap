@@ -258,20 +258,6 @@
 }
 
 .emotion-9 {
-  overflow: inherit;
-  text-overflow: inherit;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  height: inherit;
-  position: relative;
-}
-
-.emotion-9 #unique-tooltip-id {
-  display: none!important;
-}
-
-.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -299,18 +285,18 @@
   opacity: 1;
 }
 
-.emotion-10:not([disabled]):focus-visible,
-.emotion-10:not([disabled]):hover {
+.emotion-9:not([disabled]):focus-visible,
+.emotion-9:not([disabled]):hover {
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-11 {
+.emotion-10 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 
-.emotion-12 {
+.emotion-11 {
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
@@ -323,7 +309,7 @@
   transition: all 0.2s ease-in-out;
 }
 
-.emotion-13 {
+.emotion-12 {
   width: 1rem;
   height: 1rem;
   display: -webkit-box;
@@ -332,13 +318,13 @@
   display: flex;
 }
 
-.emotion-14 {
+.emotion-13 {
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-14 path,
-.emotion-14 rect {
+.emotion-13 path,
+.emotion-13 rect {
   fill: #194DCC!important;
 }
 
@@ -391,30 +377,28 @@
         <div
           class="emotion-8"
         >
-          <div
-            class="emotion-9"
-          >
+          <div>
             <button
-              class="emotion-10"
+              class="emotion-9"
               data-active="false"
               data-testid="search_search_filter_filter_button"
               type="button"
             >
               <div
-                class="emotion-11"
+                class="emotion-10"
                 data-testid="search_search_filter_filter_label"
               >
                 Filter By: None
               </div>
               <div
-                class="emotion-12"
+                class="emotion-11"
               >
                 <div
-                  class="emotion-13"
+                  class="emotion-12"
                   data-slot="icon"
                 >
                   <svg
-                    class="emotion-14"
+                    class="emotion-13"
                     fill="none"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"

@@ -147,18 +147,6 @@
 }
 
 .emotion-148 {
-  overflow: inherit;
-  text-overflow: inherit;
-  width: 100%;
-  height: inherit;
-  position: relative;
-}
-
-.emotion-148 #unique-tooltip-id {
-  display: none!important;
-}
-
-.emotion-149 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -186,16 +174,16 @@
   background-color: rgba(200,206,255,0.30);
 }
 
-.emotion-149:hover {
+.emotion-148:hover {
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-149:focus-within {
+.emotion-148:focus-within {
   box-shadow: 0 0 0 0.125rem #175BF5;
   background-color: rgba(200,206,255,0.30);
 }
 
-.emotion-150 {
+.emotion-149 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -215,11 +203,11 @@
   padding: 0rem 0rem 0rem 0.75rem;
 }
 
-.emotion-150>div {
+.emotion-149>div {
   position: relative;
 }
 
-.emotion-151 {
+.emotion-150 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -229,7 +217,7 @@
   flex: 1;
 }
 
-.emotion-152 {
+.emotion-151 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1rem;
@@ -247,61 +235,61 @@
   min-width: 100%;
 }
 
-.emotion-152::-webkit-input-placeholder {
+.emotion-151::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-152::-moz-placeholder {
+.emotion-151::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-152:-ms-input-placeholder {
+.emotion-151:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-152::placeholder {
+.emotion-151::placeholder {
   color: transparent;
 }
 
-.emotion-152:focus {
+.emotion-151:focus {
   outline: none;
 }
 
-.emotion-152:focus::-webkit-input-placeholder {
+.emotion-151:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-152:focus::-moz-placeholder {
+.emotion-151:focus::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-152:focus:-ms-input-placeholder {
+.emotion-151:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-152:focus::placeholder {
+.emotion-151:focus::placeholder {
   color: transparent;
 }
 
-.emotion-152:not(:focus):placeholder-shown+label {
+.emotion-151:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-152:focus-within+label,
-.emotion-152:not(:placeholder-shown)+label {
+.emotion-151:focus-within+label,
+.emotion-151:not(:placeholder-shown)+label {
   display: none;
 }
 
-.emotion-152:focus-within+label {
+.emotion-151:focus-within+label {
   font-weight: 700!important;
   color: #194DCC;
 }
 
-.emotion-152:disabled {
+.emotion-151:disabled {
   cursor: not-allowed;
 }
 
-.emotion-153 {
+.emotion-152 {
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
@@ -337,7 +325,7 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-154 {
+.emotion-153 {
   min-width: 1.75rem;
   overflow: visible;
   display: -webkit-box;
@@ -355,7 +343,7 @@
   cursor: unset;
 }
 
-.emotion-155 {
+.emotion-154 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -373,7 +361,7 @@
   transition: all 0.2s ease-in-out;
 }
 
-.emotion-156 {
+.emotion-155 {
   width: 1rem;
   height: 1rem;
   display: -webkit-box;
@@ -383,17 +371,17 @@
   cursor: pointer;
 }
 
-.emotion-157 {
+.emotion-156 {
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-157 path,
-.emotion-157 rect {
+.emotion-156 path,
+.emotion-156 rect {
   fill: #52567a!important;
 }
 
-.emotion-158 {
+.emotion-157 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -405,7 +393,7 @@
   gap: 2rem;
 }
 
-.emotion-159 {
+.emotion-158 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -413,7 +401,7 @@
   gap: 0.25rem;
 }
 
-.emotion-160 {
+.emotion-159 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1rem;
@@ -422,7 +410,7 @@
   color: #52567a;
 }
 
-.emotion-161 {
+.emotion-160 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1rem;
@@ -431,21 +419,21 @@
   color: #111530;
 }
 
-.emotion-164 {
+.emotion-163 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-165 {
+.emotion-164 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-166 {
+.emotion-165 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1rem;
@@ -475,25 +463,25 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-166:focus-visible:not(:disabled) {
+.emotion-165:focus-visible:not(:disabled) {
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-166:disabled {
+.emotion-165:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-166:hover:not(:disabled) {
+.emotion-165:hover:not(:disabled) {
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-166:active:not(:disabled),
-.emotion-166[aria-expanded="true"] {
+.emotion-165:active:not(:disabled),
+.emotion-165[aria-expanded="true"] {
   background-color: rgba(200,206,255,0.30);
 }
 
-.emotion-167 {
+.emotion-166 {
   width: 1rem;
   height: 1rem;
   display: -webkit-box;
@@ -502,13 +490,13 @@
   display: flex;
 }
 
-.emotion-168 {
+.emotion-167 {
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-168 path,
-.emotion-168 rect {
+.emotion-167 path,
+.emotion-167 rect {
   fill: #194DCC!important;
 }
 
@@ -1195,26 +1183,24 @@
         <div
           class="emotion-147"
         >
-          <div
-            class="emotion-148"
-          >
+          <div>
             <div>
               <div
-                class="emotion-149"
+                class="emotion-148"
                 data-testid="select-input-ictinus_table_show_items"
               >
                 <div
-                  class="emotion-150"
+                  class="emotion-149"
                 >
                   <div
-                    class="emotion-151"
+                    class="emotion-150"
                   >
                     <input
                       aria-controls="select__00"
                       aria-expanded="false"
                       aria-invalid="false"
                       autocomplete="off"
-                      class="emotion-152"
+                      class="emotion-151"
                       data-testid="input_select-input-ictinus_table_show_items"
                       id="textfield__00"
                       placeholder=" "
@@ -1223,7 +1209,7 @@
                       value="10 rows per page"
                     />
                     <label
-                      class="emotion-153"
+                      class="emotion-152"
                       for="textfield__00"
                     >
                        
@@ -1231,19 +1217,19 @@
                   </div>
                   <div
                     aria-hidden="false"
-                    class="emotion-154"
+                    class="emotion-153"
                   >
                     <div
-                      class="emotion-155"
+                      class="emotion-154"
                     >
                       <div
-                        class="emotion-156"
+                        class="emotion-155"
                         data-slot="icon"
                         data-testid="select-right-icon"
                         tabindex="0"
                       >
                         <svg
-                          class="emotion-157"
+                          class="emotion-156"
                           fill="none"
                           viewBox="0 0 20 20"
                           xmlns="http://www.w3.org/2000/svg"
@@ -1265,43 +1251,43 @@
         </div>
       </div>
       <div
-        class="emotion-158"
+        class="emotion-157"
       >
         <div
-          class="emotion-159"
+          class="emotion-158"
           data-testid="ictinus_table_pages_info"
         >
           <p
-            class="emotion-160"
+            class="emotion-159"
           >
             page
           </p>
           <span
-            class="emotion-161"
+            class="emotion-160"
             data-testid="ictinus_table_current_page"
           >
             1
           </span>
           <p
-            class="emotion-160"
+            class="emotion-159"
           >
             of
           </p>
           <span
-            class="emotion-161"
+            class="emotion-160"
             data-testid="ictinus_table_total_pages"
           >
             2
           </span>
         </div>
         <div
-          class="emotion-164"
+          class="emotion-163"
         >
           <div
-            class="emotion-165"
+            class="emotion-164"
           >
             <button
-              class="emotion-166"
+              class="emotion-165"
               color="#52567a"
               data-slot="button"
               data-testid="ictinus_table_go_to_first_page-icon-button"
@@ -1309,11 +1295,11 @@
               type="button"
             >
               <div
-                class="emotion-167"
+                class="emotion-166"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-168"
+                  class="emotion-167"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1327,10 +1313,10 @@
             </button>
           </div>
           <div
-            class="emotion-165"
+            class="emotion-164"
           >
             <button
-              class="emotion-166"
+              class="emotion-165"
               color="#52567a"
               data-slot="button"
               data-testid="ictinus_table_go_to_prev_page-icon-button"
@@ -1338,11 +1324,11 @@
               type="button"
             >
               <div
-                class="emotion-167"
+                class="emotion-166"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-168"
+                  class="emotion-167"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1356,21 +1342,21 @@
             </button>
           </div>
           <div
-            class="emotion-165"
+            class="emotion-164"
           >
             <button
-              class="emotion-166"
+              class="emotion-165"
               color="#52567a"
               data-slot="button"
               data-testid="ictinus_table_go_to_next_page-icon-button"
               type="button"
             >
               <div
-                class="emotion-167"
+                class="emotion-166"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-168"
+                  class="emotion-167"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1384,21 +1370,21 @@
             </button>
           </div>
           <div
-            class="emotion-165"
+            class="emotion-164"
           >
             <button
-              class="emotion-166"
+              class="emotion-165"
               color="#52567a"
               data-slot="button"
               data-testid="ictinus_table_go_to_last_page-icon-button"
               type="button"
             >
               <div
-                class="emotion-167"
+                class="emotion-166"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-168"
+                  class="emotion-167"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"

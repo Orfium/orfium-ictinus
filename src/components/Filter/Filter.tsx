@@ -127,8 +127,6 @@ const Filter = React.forwardRef<HTMLButtonElement, FilterProps>((props, ref) => 
       setIsVisible={setIsOpen}
       offsetY={8}
       hasWrapperWidth={hasWrapperWidth}
-      isNonModal={isMulti}
-      sx={{ container: { width: 'max-content' } }}
       parent={
         <FilterButton
           ref={ref}

@@ -298,20 +298,6 @@
 }
 
 .emotion-16 {
-  overflow: inherit;
-  text-overflow: inherit;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  height: inherit;
-  position: relative;
-}
-
-.emotion-16 #unique-tooltip-id {
-  display: none!important;
-}
-
-.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -339,18 +325,18 @@
   opacity: 1;
 }
 
-.emotion-17:not([disabled]):focus-visible,
-.emotion-17:not([disabled]):hover {
+.emotion-16:not([disabled]):focus-visible,
+.emotion-16:not([disabled]):hover {
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-18 {
+.emotion-17 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 
-.emotion-19 {
+.emotion-18 {
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
@@ -363,7 +349,7 @@
   transition: all 0.2s ease-in-out;
 }
 
-.emotion-20 {
+.emotion-19 {
   width: 1rem;
   height: 1rem;
   display: -webkit-box;
@@ -372,13 +358,13 @@
   display: flex;
 }
 
-.emotion-21 {
+.emotion-20 {
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-21 path,
-.emotion-21 rect {
+.emotion-20 path,
+.emotion-20 rect {
   fill: #194DCC!important;
 }
 
@@ -475,30 +461,28 @@
         <div
           class="emotion-15"
         >
-          <div
-            class="emotion-16"
-          >
+          <div>
             <button
-              class="emotion-17"
+              class="emotion-16"
               data-active="false"
               data-testid="search_search_filter_filter_button"
               type="button"
             >
               <div
-                class="emotion-18"
+                class="emotion-17"
                 data-testid="search_search_filter_filter_label"
               >
                 Friends: All
               </div>
               <div
-                class="emotion-19"
+                class="emotion-18"
               >
                 <div
-                  class="emotion-20"
+                  class="emotion-19"
                   data-slot="icon"
                 >
                   <svg
-                    class="emotion-21"
+                    class="emotion-20"
                     fill="none"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"

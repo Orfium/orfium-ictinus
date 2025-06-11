@@ -1,14 +1,13 @@
-import React from 'react';
-
-import FilterSearchField from './components/FilterSearchField';
-import Options from './components/Options';
-import { menuStyle } from './FilterMenu.style';
 import type {
   FilterOption,
   FilterProps,
   MultiFilterProps,
   SingleFilterProps,
 } from 'components/Filter/Filter.types';
+import React from 'react';
+import FilterSearchField from './components/FilterSearchField';
+import Options from './components/Options';
+import { menuStyle } from './FilterMenu.style';
 
 type Props = Pick<
   FilterProps,
@@ -44,7 +43,7 @@ const FilterMenu: React.FCC<Props> = ({
   listRef,
 }) => {
   return (
-    <div css={menuStyle()}>
+    <div css={menuStyle({ isMulti })}>
       {(isMulti === true || isSearchable) && (
         // @ts-ignore
         <FilterSearchField

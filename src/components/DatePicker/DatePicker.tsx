@@ -175,6 +175,7 @@ const DatePicker: React.FC<DatePickerProps & TestProps> = ({
         isVisible={isOpen}
         setIsVisible={setIsOpen}
         placement={placement}
+        offsetY={8}
         parent={
           <DatePickInput
             filterConfig={filterConfig}
