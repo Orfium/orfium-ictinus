@@ -1,8 +1,10 @@
-import { userEvent, within } from '@storybook/testing-library';
+import { screen, userEvent, within } from '@storybook/testing-library';
+import Button from 'components/Button';
 import DatePicker from 'components/DatePicker';
 import { currentDay } from 'components/DatePicker/utils';
 import Filter, { FilterOption } from 'components/Filter';
 import Select from 'components/Select';
+import { toast, ToastContainer } from 'components/Toast';
 import { useState } from 'react';
 import { FIGMA_URL } from 'utils/common';
 import ModalShowcase from '../storyUtils/ModalShowcase';
@@ -149,5 +151,47 @@ export const WithOverlays = {
 
     const filter = await canvas.findByTestId('ictinus_filter_filter_button');
     await userEvent.click(filter);
+  },
+};
+
+export const WithToast = {
+  render: (args) => {
+    const { message } = args;
+    return (
+      <Stack>
+        <PresentComponent name="" width={768}>
+          <ModalShowcase>
+            <Stack>
+              <div>{message}</div>
+              <Button
+                onClick={() =>
+                  toast('Toast messages should be clear and short.', {
+                    status: 'success',
+                  })
+                }
+              >
+                Show toast
+              </Button>
+            </Stack>
+          </ModalShowcase>
+        </PresentComponent>
+        <ToastContainer />
+      </Stack>
+    );
+  },
+  parameters: {
+    controls: { include: ['message'] },
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    const button = await canvas.findByRole('button', { name: 'Open Modal' });
+    await userEvent.click(button);
+
+    const toastButton = await canvas.findByRole('button', { name: 'Show toast' });
+    await userEvent.click(toastButton);
+
+    const dismissToastButton = await screen.findByRole('button', { name: 'Dismiss toast' });
+    await userEvent.click(dismissToastButton);
   },
 };

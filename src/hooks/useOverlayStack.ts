@@ -48,6 +48,11 @@ export function useOverlayStack({
         return;
       }
 
+      // Filter out top layer elements i.e. toasts
+      if ((e.target as Element).closest('[data-react-aria-top-layer]')) {
+        return;
+      }
+
       const isWithinTrigger =
         isNonModal && triggerRef.current && triggerRef.current.contains(e.target as Node);
 
