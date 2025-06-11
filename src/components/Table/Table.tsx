@@ -1,7 +1,6 @@
 import { flexRender } from '@tanstack/react-table';
-import React, { useRef } from 'react';
+import React, { Fragment, useRef } from 'react';
 import isEqual from 'react-fast-compare';
-
 import type { NoUndefined } from '.';
 import { TBody, TD, TH, THead, TPagination, TR, TTitle, type TableProps } from '.';
 import useTable from './hooks/useTable';
@@ -33,7 +32,7 @@ const Table = <TData extends NoUndefined<TData>>({
     if (tBodyRef?.current) {
       setHasScrollbar(tBodyRef?.current?.scrollHeight > tBodyRef?.current?.clientHeight);
     }
-  }, [tBodyRef.current]);
+  }, []);
 
   const table = useTable<TData>({
     type,
@@ -113,16 +112,15 @@ const Table = <TData extends NoUndefined<TData>>({
             const cells = row.getVisibleCells().length - +isExpandable - +isSelectable;
 
             return (
-              <>
+              <Fragment key={row.id}>
                 <TR
-                  key={row.id}
                   sx={sx?.tr}
                   {...((isSelectable || isExpandable) && {
                     isSelectable,
                     isExpandable,
                     isSelected: row.getIsSelected(),
                     isExpanded: row.getIsExpanded(),
-                    onClick: (e) => {
+                    onClick: () => {
                       if (isExpandable) {
                         const isExpanded = row.getIsExpanded();
                         row.toggleExpanded(!isExpanded);
@@ -161,7 +159,7 @@ const Table = <TData extends NoUndefined<TData>>({
                     </TD>
                   </TR>
                 )}
-              </>
+              </Fragment>
             );
           })}
         </TBody>

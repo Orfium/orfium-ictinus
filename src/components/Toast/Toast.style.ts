@@ -15,7 +15,7 @@ export const styles = {
     right: ${theme.dimension.spacing.get('3xl')};
     gap: ${theme.dimension.spacing.get('sm')};
     pointer-events: none;
-    z-index: 10;
+    z-index: 9999;
   `,
   'bottom left': css`
     align-items: flex-start;
