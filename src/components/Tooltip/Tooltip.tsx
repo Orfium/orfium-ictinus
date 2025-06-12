@@ -34,6 +34,7 @@ const Tooltip = React.forwardRef<HTMLDivElement, TooltipProps>(
           clickable={isInteractive}
           className="tooltip"
           isOpen={isOpen}
+          opacity={1}
           role="tooltip"
         >
           {content}
