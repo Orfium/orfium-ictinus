@@ -27,6 +27,7 @@ type ReturnValue<TData> = {
   getAllLeafColumns: () => Column<TData, unknown>[];
 };
 
+// Moved getColumns outside and memoized it properly
 const getColumns = (
   columns: any[],
   hasCheckboxes: boolean,
@@ -157,19 +158,30 @@ const useTable = <TData,>({
 }): ReturnValue<TData> => {
   const theme = useTheme();
 
-  const isTableInteractive = type === 'interactive';
+  // Memoize computed values
+  const isTableInteractive = useMemo(() => type === 'interactive', [type]);
 
   const { rowSelection, setRowSelection, expanded, setExpanded } = rowsConfig ?? {};
 
-  const hasRowDetails = data.some((row) => row.details) && Boolean(expanded);
+  // Memoize hasRowDetails check to prevent re-computation
+  const hasRowDetails = useMemo(() => {
+    return data.some((row) => row.details) && Boolean(expanded);
+  }, [data, expanded]);
 
+  // Memoize table data transformation
   const tableData = useMemo(() => data.map((data) => data.cells), [data]);
 
-  const hasCheckboxes = Boolean(rowSelection && isTableInteractive);
+  // Memoize hasCheckboxes check
+  const hasCheckboxes = useMemo(() => {
+    return Boolean(rowSelection && isTableInteractive);
+  }, [rowSelection, isTableInteractive]);
 
-  const tColumns = getColumns(columns, hasCheckboxes, hasRowDetails, theme, dataTestPrefixId);
+  const tColumns = useMemo(() => {
+    return getColumns(columns, hasCheckboxes, hasRowDetails, theme, dataTestPrefixId);
+  }, [columns, dataTestPrefixId, hasCheckboxes, hasRowDetails, theme]);
 
-  const state = React.useMemo(() => {
+  // Memoize state object to prevent unnecessary re-renders
+  const state = useMemo(() => {
     return {
       ...(sorting && { sorting: sorting.sortingColumn }),
       ...(rowSelection && isTableInteractive && { rowSelection }),
@@ -178,47 +190,64 @@ const useTable = <TData,>({
     };
   }, [columnsConfig, expanded, isTableInteractive, rowSelection, sorting]);
 
-  const table = useReactTable<TData>({
-    /** Basic Functionality */
-    data: tableData,
-    columns: tColumns,
-    getCoreRowModel: getCoreRowModel(),
+  // Memoize table configuration to prevent unnecessary recreations
+  const tableConfig = useMemo(() => {
+    return {
+      /** Basic Functionality */
+      data: tableData,
+      columns: tColumns,
+      getCoreRowModel: getCoreRowModel(),
 
-    /** States */
+      /** States */
+      state,
+
+      /** States callbacks and extra config */
+
+      /** Sorting */
+      ...(sorting && {
+        manualSorting: true,
+        onSortingChange: sorting.handleSorting,
+        enableMultiSort: sorting.isMultiSortable ?? false,
+      }),
+
+      /** Row Selection */
+      ...(setRowSelection &&
+        isTableInteractive && {
+          enableRowSelection: true,
+          onRowSelectionChange: setRowSelection,
+        }),
+
+      /** Row Details */
+      ...(expanded &&
+        setExpanded && {
+          getExpandedRowModel: getExpandedRowModel(),
+          onExpandedChange: setExpanded,
+        }),
+
+      /** Column Visibility */
+      ...(columnsConfig && {
+        onColumnVisibilityChange: columnsConfig.setColumnVisibility,
+      }),
+
+      ...rest,
+    };
+  }, [
+    tableData,
+    tColumns,
     state,
+    sorting,
+    setRowSelection,
+    isTableInteractive,
+    expanded,
+    setExpanded,
+    columnsConfig,
+    rest,
+  ]);
 
-    /** States callbacks and extra config */
+  const table = useReactTable<TData>(tableConfig);
 
-    /** Sorting */
-    ...(sorting && {
-      manualSorting: true,
-      onSortingChange: sorting.handleSorting,
-      enableMultiSort: sorting.isMultiSortable ?? false,
-    }),
-
-    /** Row Selection */
-    ...(setRowSelection &&
-      isTableInteractive && {
-        enableRowSelection: true,
-        onRowSelectionChange: setRowSelection,
-      }),
-
-    /** Row Details */
-    ...(expanded &&
-      setExpanded && {
-        getExpandedRowModel: getExpandedRowModel(),
-        onExpandedChange: setExpanded,
-      }),
-
-    /** Column Visibility */
-    ...(columnsConfig && {
-      onColumnVisibilityChange: columnsConfig.setColumnVisibility,
-    }),
-
-    ...rest,
-  });
-
-  return {
+  // Memoize the return methods to prevent unnecessary function recreations
+  const returnValue = useMemo(() => ({
     getHeaderGroups: table.getHeaderGroups,
     getRowModel: table.getRowModel,
     getIsAllRowsSelected: table.getIsAllRowsSelected,
@@ -226,7 +255,9 @@ const useTable = <TData,>({
     getToggleAllRowsSelectedHandler: table.getToggleAllRowsSelectedHandler,
     toggleAllRowsSelected: table.toggleAllRowsSelected,
     getAllLeafColumns: table.getAllLeafColumns,
-  };
+  }), [table]);
+
+  return returnValue;
 };
 
 export default useTable;
