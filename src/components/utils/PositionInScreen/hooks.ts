@@ -72,7 +72,7 @@ export const usePositionInScreen = (
         y = parentY + parentHeight + offsetY;
         currentPlacement = 'bottom';
       } else {
-        y = parentY - childHeight - offsetY;
+        y = SCREEN_EDGE_BUFFER - offsetY;
         currentPlacement = 'top';
       }
     }

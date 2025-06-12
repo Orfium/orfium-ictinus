@@ -1,7 +1,6 @@
 import type { CSSObject } from '@emotion/serialize';
 import React, { useRef } from 'react';
 import { Overlay } from '~/components/utils/Overlay';
-import { container } from './PositionInScreen.style';
 
 export type PositionInScreenProps = {
   id?: string;
@@ -9,8 +8,6 @@ export type PositionInScreenProps = {
   isVisible: boolean;
   /** Function to set the visibility of the item */
   setIsVisible: (visible: boolean) => void;
-  /** Configures the container's overflow */
-  isOverflowAllowed?: boolean;
   /** Whether the overlay is able to interact outside */
   isNonModal?: boolean;
   /** Whether the item to be positioned uses the parent's wrapper width */
@@ -22,11 +19,7 @@ export type PositionInScreenProps = {
   /** The parent element */
   parent: JSX.Element;
   placement?: 'top' | 'bottom';
-  /** Sx prop to override specific properties */
-  sx?: {
-    container?: CSSObject;
-    itemContainer?: CSSObject;
-  };
+  sx?: CSSObject;
 };
 
 export const PositionInScreen: React.FCC<PositionInScreenProps> = ({
@@ -35,7 +28,6 @@ export const PositionInScreen: React.FCC<PositionInScreenProps> = ({
   setIsVisible,
   isNonModal = false,
   parent,
-  isOverflowAllowed,
   hasWrapperWidth = false,
   offsetX = 0,
   offsetY = 0,
@@ -46,7 +38,7 @@ export const PositionInScreen: React.FCC<PositionInScreenProps> = ({
 
   return (
     <>
-      <div ref={triggerRef} css={container(isOverflowAllowed, isVisible, sx)}>
+      <div ref={triggerRef} css={sx}>
         {parent}
       </div>
       <Overlay

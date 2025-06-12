@@ -1,7 +1,5 @@
 import userEvent from '@testing-library/user-event';
-import React from 'react';
 import { render, screen, waitFor } from 'test';
-
 import { selectDropdownOption } from '../../test';
 import Filter from '../Filter';
 import { SELECT_ALL_OPTION } from '../Select/constants';
@@ -149,7 +147,7 @@ describe('Multi Filter', () => {
     expect(screen.getByTestId('tag_0_tag_container')).toBeVisible();
     expect(screen.getByTestId('tag_1_tag_container')).toBeVisible();
 
-    await userEvent.click(button);
+    await userEvent.keyboard('{Escape}');
 
     moreOptionsTag = screen.getByTestId('ictinus_filter_1_more_filters_tag_container');
     expect(moreOptionsTag).toBeInTheDocument();
@@ -205,12 +203,13 @@ describe('Multi Filter', () => {
 
     expect(screen.getByText('No options')).toBeInTheDocument();
 
-    await userEvent.click(button);
+    // we disable pointer events on the body so click cannot work
+    await userEvent.keyboard('{Escape}');
 
-    filterLabel = screen.getByTestId('ictinus_filter_filter_label');
+    filterLabel = await screen.findByTestId('ictinus_filter_filter_label');
     expect(filterLabel).toHaveTextContent(`Label: ${options[0].label}`);
 
-    moreOptionsTag = screen.getByTestId(
+    moreOptionsTag = await screen.findByTestId(
       `ictinus_filter_${options.length - 1}_more_filters_tag_container`
     );
     expect(moreOptionsTag).toBeInTheDocument();
