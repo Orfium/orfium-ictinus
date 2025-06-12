@@ -157,19 +157,24 @@ const useTable = <TData,>({
 }): ReturnValue<TData> => {
   const theme = useTheme();
 
-  const isTableInteractive = type === 'interactive';
-
+  const isTableInteractive = useMemo(() => type === 'interactive', [type]);
   const { rowSelection, setRowSelection, expanded, setExpanded } = rowsConfig ?? {};
 
-  const hasRowDetails = data.some((row) => row.details) && Boolean(expanded);
+  const hasRowDetails = useMemo(() => {
+    return data.some((row) => row.details) && Boolean(expanded);
+  }, [data, expanded]);
 
   const tableData = useMemo(() => data.map((data) => data.cells), [data]);
 
-  const hasCheckboxes = Boolean(rowSelection && isTableInteractive);
+  const hasCheckboxes = useMemo(() => {
+    return Boolean(rowSelection && isTableInteractive);
+  }, [rowSelection, isTableInteractive]);
 
-  const tColumns = getColumns(columns, hasCheckboxes, hasRowDetails, theme, dataTestPrefixId);
+  const tColumns = useMemo(() => {
+    return getColumns(columns, hasCheckboxes, hasRowDetails, theme, dataTestPrefixId);
+  }, [columns, dataTestPrefixId, hasCheckboxes, hasRowDetails, theme]);
 
-  const state = React.useMemo(() => {
+  const state = useMemo(() => {
     return {
       ...(sorting && { sorting: sorting.sortingColumn }),
       ...(rowSelection && isTableInteractive && { rowSelection }),
@@ -178,47 +183,62 @@ const useTable = <TData,>({
     };
   }, [columnsConfig, expanded, isTableInteractive, rowSelection, sorting]);
 
-  const table = useReactTable<TData>({
-    /** Basic Functionality */
-    data: tableData,
-    columns: tColumns,
-    getCoreRowModel: getCoreRowModel(),
+  const tableConfig = useMemo(() => {
+    return {
+      /** Basic Functionality */
+      data: tableData,
+      columns: tColumns,
+      getCoreRowModel: getCoreRowModel(),
 
-    /** States */
+      /** States */
+      state,
+
+      /** States callbacks and extra config */
+
+      /** Sorting */
+      ...(sorting && {
+        manualSorting: true,
+        onSortingChange: sorting.handleSorting,
+        enableMultiSort: sorting.isMultiSortable ?? false,
+      }),
+
+      /** Row Selection */
+      ...(setRowSelection &&
+        isTableInteractive && {
+          enableRowSelection: true,
+          onRowSelectionChange: setRowSelection,
+        }),
+
+      /** Row Details */
+      ...(expanded &&
+        setExpanded && {
+          getExpandedRowModel: getExpandedRowModel(),
+          onExpandedChange: setExpanded,
+        }),
+
+      /** Column Visibility */
+      ...(columnsConfig && {
+        onColumnVisibilityChange: columnsConfig.setColumnVisibility,
+      }),
+
+      ...rest,
+    };
+  }, [
+    tableData,
+    tColumns,
     state,
+    sorting,
+    setRowSelection,
+    isTableInteractive,
+    expanded,
+    setExpanded,
+    columnsConfig,
+    rest,
+  ]);
 
-    /** States callbacks and extra config */
+  const table = useReactTable<TData>(tableConfig);
 
-    /** Sorting */
-    ...(sorting && {
-      manualSorting: true,
-      onSortingChange: sorting.handleSorting,
-      enableMultiSort: sorting.isMultiSortable ?? false,
-    }),
-
-    /** Row Selection */
-    ...(setRowSelection &&
-      isTableInteractive && {
-        enableRowSelection: true,
-        onRowSelectionChange: setRowSelection,
-      }),
-
-    /** Row Details */
-    ...(expanded &&
-      setExpanded && {
-        getExpandedRowModel: getExpandedRowModel(),
-        onExpandedChange: setExpanded,
-      }),
-
-    /** Column Visibility */
-    ...(columnsConfig && {
-      onColumnVisibilityChange: columnsConfig.setColumnVisibility,
-    }),
-
-    ...rest,
-  });
-
-  return {
+  const returnValue = useMemo(() => ({
     getHeaderGroups: table.getHeaderGroups,
     getRowModel: table.getRowModel,
     getIsAllRowsSelected: table.getIsAllRowsSelected,
@@ -226,7 +246,9 @@ const useTable = <TData,>({
     getToggleAllRowsSelectedHandler: table.getToggleAllRowsSelectedHandler,
     toggleAllRowsSelected: table.toggleAllRowsSelected,
     getAllLeafColumns: table.getAllLeafColumns,
-  };
+  }), [table]);
+
+  return returnValue;
 };
 
 export default useTable;
