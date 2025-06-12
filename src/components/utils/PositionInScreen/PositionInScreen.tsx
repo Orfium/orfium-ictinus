@@ -1,3 +1,4 @@
+import type { CSSObject } from '@emotion/serialize';
 import React, { useRef } from 'react';
 import { Overlay } from '~/components/utils/Overlay';
 
@@ -18,6 +19,7 @@ export type PositionInScreenProps = {
   /** The parent element */
   parent: JSX.Element;
   placement?: 'top' | 'bottom';
+  sx?: CSSObject;
 };
 
 export const PositionInScreen: React.FCC<PositionInScreenProps> = ({
@@ -29,13 +31,16 @@ export const PositionInScreen: React.FCC<PositionInScreenProps> = ({
   hasWrapperWidth = false,
   offsetX = 0,
   offsetY = 0,
+  sx,
   children,
 }) => {
   const triggerRef = useRef<HTMLDivElement>(null);
 
   return (
     <>
-      <div ref={triggerRef}>{parent}</div>
+      <div ref={triggerRef} css={sx}>
+        {parent}
+      </div>
       <Overlay
         id={id}
         isVisible={isVisible}

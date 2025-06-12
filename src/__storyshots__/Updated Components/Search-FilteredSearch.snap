@@ -258,6 +258,12 @@
 }
 
 .emotion-9 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -285,18 +291,18 @@
   opacity: 1;
 }
 
-.emotion-9:not([disabled]):focus-visible,
-.emotion-9:not([disabled]):hover {
+.emotion-10:not([disabled]):focus-visible,
+.emotion-10:not([disabled]):hover {
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-10 {
+.emotion-11 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 
-.emotion-11 {
+.emotion-12 {
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
@@ -309,7 +315,7 @@
   transition: all 0.2s ease-in-out;
 }
 
-.emotion-12 {
+.emotion-13 {
   width: 1rem;
   height: 1rem;
   display: -webkit-box;
@@ -318,13 +324,13 @@
   display: flex;
 }
 
-.emotion-13 {
+.emotion-14 {
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-13 path,
-.emotion-13 rect {
+.emotion-14 path,
+.emotion-14 rect {
   fill: #194DCC!important;
 }
 
@@ -377,28 +383,30 @@
         <div
           class="emotion-8"
         >
-          <div>
+          <div
+            class="emotion-9"
+          >
             <button
-              class="emotion-9"
+              class="emotion-10"
               data-active="false"
               data-testid="search_search_filter_filter_button"
               type="button"
             >
               <div
-                class="emotion-10"
+                class="emotion-11"
                 data-testid="search_search_filter_filter_label"
               >
                 Friends: All
               </div>
               <div
-                class="emotion-11"
+                class="emotion-12"
               >
                 <div
-                  class="emotion-12"
+                  class="emotion-13"
                   data-slot="icon"
                 >
                   <svg
-                    class="emotion-13"
+                    class="emotion-14"
                     fill="none"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"

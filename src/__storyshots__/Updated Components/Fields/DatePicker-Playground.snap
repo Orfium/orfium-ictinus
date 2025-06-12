@@ -1,4 +1,4 @@
-.emotion-0 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -26,16 +26,16 @@
   background-color: rgba(200,206,255,0.30);
 }
 
-.emotion-0:hover {
+.emotion-1:hover {
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-0:focus-within {
+.emotion-1:focus-within {
   box-shadow: 0 0 0 0.125rem #175BF5;
   background-color: rgba(200,206,255,0.30);
 }
 
-.emotion-1 {
+.emotion-2 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -55,11 +55,11 @@
   padding: 0rem 0rem 0rem 0.75rem;
 }
 
-.emotion-1>div {
+.emotion-2>div {
   position: relative;
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -69,7 +69,7 @@
   flex: 1;
 }
 
-.emotion-3 {
+.emotion-4 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -88,48 +88,48 @@
   min-width: 100%;
 }
 
-.emotion-3::-webkit-input-placeholder {
+.emotion-4::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-3::-moz-placeholder {
+.emotion-4::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-3:-ms-input-placeholder {
+.emotion-4:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-3::placeholder {
+.emotion-4::placeholder {
   color: transparent;
 }
 
-.emotion-3:focus {
+.emotion-4:focus {
   outline: none;
 }
 
-.emotion-3:focus::-webkit-input-placeholder {
+.emotion-4:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-3:focus::-moz-placeholder {
+.emotion-4:focus::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-3:focus:-ms-input-placeholder {
+.emotion-4:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-3:focus::placeholder {
+.emotion-4:focus::placeholder {
   color: transparent;
 }
 
-.emotion-3:not(:focus):placeholder-shown+label {
+.emotion-4:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-3:focus-within+label,
-.emotion-3:not(:placeholder-shown)+label {
+.emotion-4:focus-within+label,
+.emotion-4:not(:placeholder-shown)+label {
   font-weight: 700!important;
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -137,16 +137,16 @@
   transform: translate(0.1875rem, -35%) scale(0.8);
 }
 
-.emotion-3:focus-within+label {
+.emotion-4:focus-within+label {
   font-weight: 700!important;
   color: #194DCC;
 }
 
-.emotion-3:disabled {
+.emotion-4:disabled {
   cursor: not-allowed;
 }
 
-.emotion-4 {
+.emotion-5 {
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
@@ -182,7 +182,7 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-5 {
+.emotion-6 {
   min-width: 2.75rem;
   overflow: visible;
   display: -webkit-box;
@@ -200,7 +200,7 @@
   cursor: unset;
 }
 
-.emotion-6 {
+.emotion-7 {
   width: 1.25rem;
   height: 1.25rem;
   display: -webkit-box;
@@ -210,8 +210,8 @@
   cursor: pointer;
 }
 
-.emotion-6:hover,
-.emotion-6:focus-visible {
+.emotion-7:hover,
+.emotion-7:focus-visible {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   border-radius: 100%;
@@ -219,17 +219,17 @@
   box-shadow: 0px 0px 0px 8px rgba(200,206,255,0.20);
 }
 
-.emotion-7 {
+.emotion-8 {
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-7 path,
-.emotion-7 rect {
+.emotion-8 path,
+.emotion-8 rect {
   fill: #52567a!important;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -249,7 +249,7 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-8 span {
+.emotion-9 span {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -259,29 +259,31 @@
 
 <div>
   <div>
-    <div>
+    <div
+      class="emotion-0"
+    >
       <div>
         <div>
           <div
-            class="emotion-0"
+            class="emotion-1"
           >
             <div
-              class="emotion-1"
+              class="emotion-2"
             >
               <div
-                class="emotion-2"
+                class="emotion-3"
               >
                 <input
                   aria-describedby="textfield__00_hintMessage"
                   aria-invalid="false"
-                  class="emotion-3"
+                  class="emotion-4"
                   data-testid="input"
                   id="textfield__00"
                   placeholder="Custom Date"
                   value="11/03/2020"
                 />
                 <label
-                  class="emotion-4"
+                  class="emotion-5"
                   for="textfield__00"
                 >
                   Custom Date
@@ -290,16 +292,16 @@
               </div>
               <div
                 aria-hidden="false"
-                class="emotion-5"
+                class="emotion-6"
               >
                 <div
-                  class="emotion-6"
+                  class="emotion-7"
                   data-slot="icon"
                   data-testid="calendar_button"
                   tabindex="0"
                 >
                   <svg
-                    class="emotion-7"
+                    class="emotion-8"
                     fill="none"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -314,7 +316,7 @@
             </div>
           </div>
           <div
-            class="emotion-8"
+            class="emotion-9"
             data-testid="error"
           >
             <span
