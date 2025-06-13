@@ -1,10 +1,11 @@
 import type { TestProps } from 'utils/types';
 
 import type { LinkProps } from 'components/Link/Link.types';
+import type { ReactNode } from 'react';
 
 export type BreadcrumbItem = {
   /** Defines the label used for a link breadcrumb item */
-  label: string;
+  label: ReactNode;
 } & Pick<LinkProps, 'component' | 'href'>;
 
 export type BreadcrumbProps = {
