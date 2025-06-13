@@ -170,9 +170,7 @@ const useTable = <TData,>({
     return Boolean(rowSelection && isTableInteractive);
   }, [rowSelection, isTableInteractive]);
 
-  const tColumns = useMemo(() => {
-    return getColumns(columns, hasCheckboxes, hasRowDetails, theme, dataTestPrefixId);
-  }, [columns, dataTestPrefixId, hasCheckboxes, hasRowDetails, theme]);
+  const tColumns = getColumns(columns, hasCheckboxes, hasRowDetails, theme, dataTestPrefixId);
 
   const state = useMemo(() => {
     return {

@@ -48,15 +48,13 @@ const Table = <TData extends NoUndefined<TData>>({
     dataTestPrefixId,
   });
 
-  const rowsCount = useMemo(() => {
-    return rowsConfig?.rowsCount ?? table.getRowModel().rows.length;
-  }, [rowsConfig?.rowsCount, table.getRowModel().rows.length]);
+  const rowsCount = rowsConfig?.rowsCount ?? table.getRowModel().rows.length;
 
-  const headerGroups = useMemo(() => table.getHeaderGroups(), [table.getHeaderGroups]);
-  const rows = useMemo(() => table.getRowModel().rows, [table.getRowModel().rows]);
-  const allColumnsLength = useMemo(() => table.getAllLeafColumns().length, [table.getAllLeafColumns().length]);
+  const headerGroups = table.getHeaderGroups();
+  const rows = table.getRowModel().rows;
+  const allColumnsLength = table.getAllLeafColumns().length;
 
-  const renderedHeaders = useMemo(() => {
+  const renderedHeaders = () => {
     return headerGroups.map((headerGroup) => {
       const headers = headerGroup.headers.length - +isSelectable - +isExpandable;
 
@@ -98,7 +96,7 @@ const Table = <TData extends NoUndefined<TData>>({
         </TR>
       );
     });
-  }, [headerGroups, isSelectable, isExpandable, sx?.tr, sx?.th, rowSize, sorting, dataTestPrefixId]);
+  }
 
   const renderedRows = useMemo(() => {
     return rows.map((row, index) => (
@@ -136,7 +134,7 @@ const Table = <TData extends NoUndefined<TData>>({
       )}
       <table css={tableStyles({ sx: sx?.table })} data-testid={`${dataTestPrefixId}_table`}>
         <THead hasStickyHeader={hasStickyHeader} hasScrollbar={hasScrollbar} sx={sx?.thead}>
-          {renderedHeaders}
+          {renderedHeaders()}
         </THead>
         <TBody hasStickyHeader={hasStickyHeader} ref={tBodyRef} sx={sx?.tbody}>
           {renderedRows}
