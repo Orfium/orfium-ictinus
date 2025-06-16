@@ -4,7 +4,6 @@ import type { IMarkProps, IThumbProps, ITrackProps } from 'react-range/lib/types
 import type { TestProps } from 'utils/types';
 import useTheme from '../../hooks/useTheme';
 import NumberField from '../NumberField';
-import TextField from '../TextField';
 import SliderMark from './components/SliderMark';
 import SliderThumb from './components/SliderThumb';
 import SliderTrack from './components/SliderTrack';
@@ -159,23 +158,6 @@ const Slider: React.FC<SliderProps & TestProps> = ({
       {!isSelector && !hasIncrements && values.length === 2 && (
         <InputsContainer>
           <InputContainer>
-            <TextField
-              label="Start"
-              size="compact"
-              isDisabled={isDisabled}
-              value={values[0]}
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                const sanitizedValue = sanitizeValues(parseInt(e?.target.value || '0'));
-                onChange([sanitizedValue, values[1]]);
-              }}
-              onBlur={(e: React.FocusEvent<HTMLInputElement>) => {
-                if (onBlur) {
-                  const sanitizedValue = sanitizeValues(parseInt(e?.target.value || '0'));
-                  onBlur([sanitizedValue, values[1]]);
-                }
-              }}
-              suffix={<>%</>}
-            />
             <NumberField
               label="Start"
               size="compact"
@@ -194,26 +176,10 @@ const Slider: React.FC<SliderProps & TestProps> = ({
               suffix={<>%</>}
               minValue={MIN}
               maxValue={values[1]}
+              sx={{ wrapper: { width: '100%' } }}
             />
           </InputContainer>
           <InputContainer>
-            <TextField
-              label="End"
-              size="compact"
-              isDisabled={isDisabled}
-              value={values[1]}
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                const sanitizedValue = sanitizeValues(parseInt(e?.target.value || '100'));
-                onChange([values[0], sanitizedValue]);
-              }}
-              onBlur={(e: React.FocusEvent<HTMLInputElement>) => {
-                if (onBlur) {
-                  const sanitizedValue = sanitizeValues(parseInt(e?.target.value || '100'));
-                  onBlur([values[0], sanitizedValue]);
-                }
-              }}
-              suffix={<>%</>}
-            />
             <NumberField
               label="End"
               size="compact"
@@ -232,6 +198,7 @@ const Slider: React.FC<SliderProps & TestProps> = ({
               suffix={<>%</>}
               minValue={values[0]}
               maxValue={MAX}
+              sx={{ wrapper: { width: '100%' } }}
             />
           </InputContainer>
         </InputsContainer>
