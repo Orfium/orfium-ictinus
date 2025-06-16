@@ -1,5 +1,6 @@
-import Slider from './Slider';
 import SliderShowcase from '../storyUtils/SliderShowcase/SliderShowcase';
+import Stack from '../storyUtils/Stack';
+import Slider from './Slider';
 
 export default {
   title: 'Original Components/Slider',
@@ -9,7 +10,22 @@ export default {
 export const RangeSliderDontTest = {
   render: (args) => {
     const { isDisabled } = args;
-    return <SliderShowcase isSelector={false} isDisabled={isDisabled} />;
+    return (
+      <Stack isVertical>
+        <h2>Default</h2>
+        <SliderShowcase isSelector={false} isDisabled={isDisabled} />
+        <br />
+        <h2>With Formatting</h2>
+        <SliderShowcase
+          isSelector={false}
+          isDisabled={isDisabled}
+          formatOptions={{
+            minimumFractionDigits: 1,
+            maximumFractionDigits: 1,
+          }}
+        />
+      </Stack>
+    );
   },
 
   name: 'Range Slider (DontTest)',
