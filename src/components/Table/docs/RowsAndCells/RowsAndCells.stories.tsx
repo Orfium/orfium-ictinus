@@ -1,5 +1,9 @@
-import { useState } from 'react';
-import Table, { tableFunctionalUpdate, ExpandedState } from '~/components/Table';
+import { chunk, concat } from 'lodash-es';
+import { useMemo, useRef, useState } from 'react';
+import Button from '~/components/Button';
+import DropdownButton from '~/components/DropdownButton';
+import { SelectOptionValues } from '~/components/Select';
+import Table, { ExpandedState, tableFunctionalUpdate } from '~/components/Table';
 import {
   SimpleData,
   contentAlignOptions,
@@ -8,10 +12,6 @@ import {
   simpleData,
 } from '../../constants';
 import { TableColumn } from '../../types';
-import Button from '~/components/Button';
-import DropdownButton from '~/components/DropdownButton';
-import { SelectOptionValues } from '~/components/Select';
-import { concat, chunk } from 'lodash-es';
 
 export default {
   title: 'Updated Components/Table/Table/Rows and Cells',
@@ -98,24 +98,31 @@ export const RowSelection = {
       label: '10 rows per page',
     });
 
-    const data = chunk(concat(simpleData(), moreData()), Number(showItems.value));
+    const data = useMemo(
+      () => chunk(concat(simpleData(), moreData()), Number(showItems.value)),
+      [showItems.value]
+    );
 
     /** The state consists of an array (length = number of pages) and each array item is an object indicating which rows are selected */
     const [rowSelection, setRowSelection] = useState<Array<Record<string, boolean>>>(
       Array.from({ length: data.length }, () => ({}))
     );
 
+    const pagination = useMemo(() => {
+      return {
+        page: currentPage,
+        onChange: setCurrentPage,
+        totalPages: data.length,
+        onShowItemsChange: setShowItems,
+      };
+    }, [currentPage, data.length, setCurrentPage, setShowItems]);
+
     return (
       <Table
         data={data[currentPage - 1]}
         columns={simpleColumns as TableColumn<SimpleData>[]}
         type="interactive"
-        pagination={{
-          page: currentPage,
-          onChange: setCurrentPage,
-          totalPages: data.length,
-          onShowItemsChange: setShowItems,
-        }}
+        pagination={pagination}
         rowsConfig={{
           rowSelection: rowSelection[currentPage - 1],
           setRowSelection: (state) => {
@@ -157,7 +164,7 @@ export const RowSelection = {
     );
   },
 
-  name: 'Row Selection',
+  name: 'Row Selection (performance)',
 
   parameters: {
     controls: {
@@ -169,11 +176,12 @@ export const RowSelection = {
 export const RowDetails = {
   render: () => {
     const [expanded, setExpanded] = useState<ExpandedState>({ 1: true, 4: true });
+    const data = useRef(simpleData(true)).current;
 
     return (
       <Table
         type="interactive"
-        data={simpleData(true)}
+        data={data}
         columns={simpleColumns as TableColumn<SimpleData>[]}
         rowsConfig={{
           expanded,

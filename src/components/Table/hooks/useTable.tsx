@@ -46,6 +46,7 @@ const getColumns = (
                 isSelected={table.getIsAllRowsSelected()}
                 isIndeterminate={table.getIsSomeRowsSelected()}
                 onChange={() => {
+                  // we cannot use getToggleAllPageRowsSelectedHandler because it will not work with the react-aria checkbox events
                   const selected = table.getIsAllRowsSelected(); // get selected status of current row.
                   table.toggleAllRowsSelected(!selected);
                 }}
@@ -60,10 +61,7 @@ const getColumns = (
                   isSelected={row.getIsSelected()}
                   isDisabled={!row.getCanSelect()}
                   isIndeterminate={row.getIsSomeSelected()}
-                  onChange={() => {
-                    const selected = row.getIsSelected(); // get selected status of current row.
-                    row.toggleSelected(!selected); // reverse selected status of current row.
-                  }}
+                  onChange={row.getToggleSelectedHandler()}
                   dataTestPrefixId={`${dataTestPrefixId}_table_select_${row.id}`}
                 />
               </div>
@@ -167,7 +165,9 @@ const useTable = <TData,>({
 
   const hasCheckboxes = Boolean(rowSelection && isTableInteractive);
 
-  const tColumns = getColumns(columns, hasCheckboxes, hasRowDetails, theme, dataTestPrefixId);
+  const tColumns = useMemo(() => {
+    return getColumns(columns, hasCheckboxes, hasRowDetails, theme, dataTestPrefixId);
+  }, [columns, hasCheckboxes, hasRowDetails, theme, dataTestPrefixId]);
 
   const state = React.useMemo(() => {
     return {
