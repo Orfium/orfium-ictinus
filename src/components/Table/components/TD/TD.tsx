@@ -1,7 +1,6 @@
 import type { CSSObject } from '@emotion/react';
 import type { RowSize, TestProps } from 'index';
 import React from 'react';
-import isEqual from 'react-fast-compare';
 
 import { simpleTdContainer, tdContainer, tdContent } from './TD.style';
 
@@ -62,4 +61,4 @@ const TD: React.FCC<Props> = ({
   );
 };
 
-export default React.memo(TD, isEqual);
+export default TD;

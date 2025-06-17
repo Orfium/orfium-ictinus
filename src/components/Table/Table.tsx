@@ -1,8 +1,9 @@
 import { flexRender } from '@tanstack/react-table';
-import React, { Fragment, useRef } from 'react';
+import React, { useRef } from 'react';
 import isEqual from 'react-fast-compare';
 import type { NoUndefined } from '.';
-import { TBody, TD, TH, THead, TPagination, TR, TTitle, type TableProps } from '.';
+import { TBody, TH, THead, TPagination, TR, TTitle, type TableProps } from '.';
+import OptimizedTableRow from './components/OptimizedTableRow';
 import useTable from './hooks/useTable';
 import { tableContainer, tableStyles } from './Table.style';
 
@@ -45,6 +46,7 @@ const Table = <TData extends NoUndefined<TData>>({
   });
 
   const hasTitle = Boolean(columnsConfig || rowsConfig);
+  const allColumnsLength = table.getAllLeafColumns().length;
 
   return (
     <div
@@ -69,7 +71,14 @@ const Table = <TData extends NoUndefined<TData>>({
             const headers = headerGroup.headers.length - +isSelectable - +isExpandable;
 
             return (
-              <TR key={headerGroup.id} sx={sx?.tr}>
+              <TR
+                key={headerGroup.id}
+                sx={sx?.tr}
+                {...(isSelectable && {
+                  isSelectable,
+                  isSelected: table.getIsSomeRowsSelected() || table.getIsAllRowsSelected(),
+                })}
+              >
                 {headerGroup.headers.map((header) => (
                   <TH
                     id={header.id}
@@ -109,57 +118,19 @@ const Table = <TData extends NoUndefined<TData>>({
         </THead>
         <TBody hasStickyHeader={hasStickyHeader} ref={tBodyRef} sx={sx?.tbody}>
           {table.getRowModel().rows.map((row, index) => {
-            const cells = row.getVisibleCells().length - +isExpandable - +isSelectable;
-
             return (
-              <Fragment key={row.id}>
-                <TR
-                  sx={sx?.tr}
-                  {...((isSelectable || isExpandable) && {
-                    isSelectable,
-                    isExpandable,
-                    isSelected: row.getIsSelected(),
-                    isExpanded: row.getIsExpanded(),
-                    onClick: () => {
-                      if (isExpandable) {
-                        const isExpanded = row.getIsExpanded();
-                        row.toggleExpanded(!isExpanded);
-                      } else if (isSelectable) {
-                        row.toggleSelected();
-                      }
-                    },
-                  })}
-                >
-                  {row.getVisibleCells().map((cell) => {
-                    return (
-                      <TD
-                        columnId={cell.column.id}
-                        rowId={cell.id}
-                        key={cell.id}
-                        rowSize={rowSize}
-                        width={cell.column.getSize() || 100 / cells}
-                        metaData={cell.column.columnDef.meta}
-                        sx={typeof sx?.td === 'function' ? sx.td(cell.row.original) : sx?.td}
-                        dataTestPrefixId={dataTestPrefixId}
-                      >
-                        {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                      </TD>
-                    );
-                  })}
-                </TR>
-                {row.getIsExpanded() && (
-                  <TR>
-                    <TD
-                      rowId={row.id}
-                      colSpan={table.getAllLeafColumns().length}
-                      isDetails
-                      dataTestPrefixId={dataTestPrefixId}
-                    >
-                      {data[index].details}
-                    </TD>
-                  </TR>
-                )}
-              </Fragment>
+              <OptimizedTableRow
+                key={row.id}
+                row={row}
+                index={index}
+                rowSize={rowSize}
+                isSelectable={isSelectable}
+                isExpandable={isExpandable}
+                sx={{ tr: sx?.tr, td: sx?.td }}
+                dataTestPrefixId={dataTestPrefixId}
+                data={data}
+                allColumnsLength={allColumnsLength}
+              />
             );
           })}
         </TBody>

@@ -1,9 +1,8 @@
 import type { CSSObject } from '@emotion/react';
 import React from 'react';
-import isEqual from 'react-fast-compare';
 
-import { tBodyContainer } from './TBody.style';
 import type { TableProps } from 'components/Table/types';
+import { tBodyContainer } from './TBody.style';
 
 export type TBodyProps = Pick<TableProps<any>, 'hasStickyHeader'> & {
   children?: React.ReactNode;
@@ -23,4 +22,4 @@ const TBody = React.forwardRef<HTMLTableSectionElement, TBodyProps>(
 
 TBody.displayName = 'TBody';
 
-export default React.memo(TBody, isEqual);
+export default TBody;

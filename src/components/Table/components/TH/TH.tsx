@@ -1,13 +1,12 @@
 import type { CSSObject } from '@emotion/react';
 import type { ColumnSort } from '@tanstack/react-table';
 import React from 'react';
-import isEqual from 'react-fast-compare';
 import type { DivProps } from 'utils/common';
 
+import type { RowSize } from 'components/Table/types';
 import { THOptions } from './components';
 import SortingButton from './components/SortingButton';
-import { thContainer, optionsContainer, thContent } from './TH.style';
-import type { RowSize } from 'components/Table/types';
+import { optionsContainer, thContainer, thContent } from './TH.style';
 
 import type { TestProps } from '~/utils/types';
 
@@ -118,4 +117,4 @@ const TH: React.FCC<Props & Pick<DivProps, 'onClick' | 'id'>> = ({
   );
 };
 
-export default React.memo(TH, isEqual);
+export default TH;
