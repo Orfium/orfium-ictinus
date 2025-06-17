@@ -2,9 +2,8 @@ import React, { useRef } from 'react';
 import { Range } from 'react-range';
 import type { IMarkProps, IThumbProps, ITrackProps } from 'react-range/lib/types';
 import type { TestProps } from 'utils/types';
-
 import useTheme from '../../hooks/useTheme';
-import TextField from '../TextField';
+import NumberField from '../NumberField';
 import SliderMark from './components/SliderMark';
 import SliderThumb from './components/SliderThumb';
 import SliderTrack from './components/SliderTrack';
@@ -23,6 +22,8 @@ export type SliderProps = {
   /** Determines the position of the rendered thumbs and the type of the Slider. 1 value means it's a Selector,
    * while 2 values mean it's a Range. Defaults to [0, 100] */
   values: [number] | [number, number];
+  /** Formatting options for the values displayed in the number fields, following the Intl.NumberFormatOptions type */
+  formatOptions?: Intl.NumberFormatOptions;
 };
 
 const STEP = 1;
@@ -36,6 +37,10 @@ const Slider: React.FC<SliderProps & TestProps> = ({
   onBlur,
   hasIncrements = false,
   isDisabled = false,
+  formatOptions = {
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  },
   dataTestPrefixId,
 }) => {
   const theme = useTheme();
@@ -153,14 +158,13 @@ const Slider: React.FC<SliderProps & TestProps> = ({
       {!isSelector && !hasIncrements && values.length === 2 && (
         <InputsContainer>
           <InputContainer>
-            <TextField
+            <NumberField
               label="Start"
               size="compact"
               isDisabled={isDisabled}
               value={values[0]}
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                const sanitizedValue = sanitizeValues(parseInt(e?.target.value || '0'));
-                onChange([sanitizedValue, values[1]]);
+              onChange={(num: number) => {
+                onChange([num, values[1]]);
               }}
               onBlur={(e: React.FocusEvent<HTMLInputElement>) => {
                 if (onBlur) {
@@ -168,18 +172,21 @@ const Slider: React.FC<SliderProps & TestProps> = ({
                   onBlur([sanitizedValue, values[1]]);
                 }
               }}
+              formatOptions={formatOptions}
               suffix={<>%</>}
+              minValue={MIN}
+              maxValue={values[1]}
+              sx={{ wrapper: { width: '100%' } }}
             />
           </InputContainer>
           <InputContainer>
-            <TextField
+            <NumberField
               label="End"
               size="compact"
               isDisabled={isDisabled}
               value={values[1]}
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                const sanitizedValue = sanitizeValues(parseInt(e?.target.value || '100'));
-                onChange([values[0], sanitizedValue]);
+              onChange={(num: number) => {
+                onChange([values[0], num]);
               }}
               onBlur={(e: React.FocusEvent<HTMLInputElement>) => {
                 if (onBlur) {
@@ -187,7 +194,11 @@ const Slider: React.FC<SliderProps & TestProps> = ({
                   onBlur([values[0], sanitizedValue]);
                 }
               }}
+              formatOptions={formatOptions}
               suffix={<>%</>}
+              minValue={values[0]}
+              maxValue={MAX}
+              sx={{ wrapper: { width: '100%' } }}
             />
           </InputContainer>
         </InputsContainer>
