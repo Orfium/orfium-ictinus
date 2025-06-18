@@ -7,6 +7,7 @@ interface Props {
   isDisabled: boolean;
   hasIncrements?: boolean;
   onChange?: (values: number[]) => void;
+  formatOptions?: Intl.NumberFormatOptions;
 }
 
 const SliderShowcase: React.FCC<Props> = (props) => {
