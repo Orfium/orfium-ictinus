@@ -1,6 +1,5 @@
 import type { CSSObject } from '@emotion/react';
 import React from 'react';
-import isEqual from 'react-fast-compare';
 import type { DivProps } from 'utils/common';
 
 import { trContainer } from './TR.style';
@@ -37,4 +36,4 @@ const TR: React.FCC<TRProps & Pick<DivProps, 'onClick'>> = ({
   );
 };
 
-export default React.memo(TR, isEqual);
+export default TR;

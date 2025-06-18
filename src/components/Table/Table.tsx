@@ -48,6 +48,8 @@ const Table = <TData extends NoUndefined<TData>>({
   const hasTitle = Boolean(columnsConfig || rowsConfig);
   const allColumnsLength = table.getAllLeafColumns().length;
 
+  const memoTrSx = React.useMemo(() => ({ tr: sx?.tr, td: sx?.td }), [sx?.tr, sx?.td]);
+
   return (
     <div
       css={tableContainer()}
@@ -73,10 +75,10 @@ const Table = <TData extends NoUndefined<TData>>({
             return (
               <TR
                 key={headerGroup.id}
-                sx={sx?.tr}
+                sx={memoTrSx.tr}
                 {...(isSelectable && {
                   isSelectable,
-                  isSelected: table.getIsSomeRowsSelected() || table.getIsAllRowsSelected(),
+                  isSelected: table.getIsSomePageRowsSelected() || table.getIsAllPageRowsSelected(),
                 })}
               >
                 {headerGroup.headers.map((header) => (
@@ -118,6 +120,9 @@ const Table = <TData extends NoUndefined<TData>>({
         </THead>
         <TBody hasStickyHeader={hasStickyHeader} ref={tBodyRef} sx={sx?.tbody}>
           {table.getRowModel().rows.map((row, index) => {
+            const isSelected = row.getIsSelected();
+            const isExpanded = row.getIsExpanded();
+
             return (
               <OptimizedTableRow
                 key={row.id}
@@ -126,7 +131,9 @@ const Table = <TData extends NoUndefined<TData>>({
                 rowSize={rowSize}
                 isSelectable={isSelectable}
                 isExpandable={isExpandable}
-                sx={{ tr: sx?.tr, td: sx?.td }}
+                isSelected={isSelected}
+                isExpanded={isExpanded}
+                sx={memoTrSx}
                 dataTestPrefixId={dataTestPrefixId}
                 data={data}
                 allColumnsLength={allColumnsLength}
