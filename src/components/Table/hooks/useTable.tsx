@@ -25,6 +25,10 @@ type ReturnValue<TData> = {
   getToggleAllRowsSelectedHandler: () => (event: unknown) => void;
   toggleAllRowsSelected: (value: boolean) => void;
   getAllLeafColumns: () => Column<TData, unknown>[];
+  getIsAllPageRowsSelected: () => boolean;
+  getIsSomePageRowsSelected: () => boolean;
+  getToggleAllPageRowsSelectedHandler: () => (event: unknown) => void;
+  toggleAllPageRowsSelected: (value: boolean) => void;
 };
 
 const getColumns = (
@@ -43,12 +47,14 @@ const getColumns = (
           header: ({ table }) => {
             return (
               <CheckBox
-                isSelected={table.getIsAllRowsSelected()}
-                isIndeterminate={table.getIsSomeRowsSelected()}
+                isSelected={table.getIsAllPageRowsSelected()}
+                isIndeterminate={
+                  table.getIsSomePageRowsSelected() && !table.getIsAllPageRowsSelected()
+                }
                 onChange={() => {
                   // we cannot use getToggleAllPageRowsSelectedHandler because it will not work with the react-aria checkbox events
-                  const selected = table.getIsAllRowsSelected(); // get selected status of current row.
-                  table.toggleAllRowsSelected(!selected);
+                  const selected = table.getIsAllPageRowsSelected(); // get selected status of current row.
+                  table.toggleAllPageRowsSelected(!selected);
                 }}
                 dataTestPrefixId={`${dataTestPrefixId}_table_select_all`}
               />
@@ -60,7 +66,7 @@ const getColumns = (
                 <CheckBox
                   isSelected={row.getIsSelected()}
                   isDisabled={!row.getCanSelect()}
-                  isIndeterminate={row.getIsSomeSelected()}
+                  // isIndeterminate={row.getIsSomePageRowsSelected()}
                   onChange={row.getToggleSelectedHandler()}
                   dataTestPrefixId={`${dataTestPrefixId}_table_select_${row.id}`}
                 />
@@ -226,6 +232,10 @@ const useTable = <TData,>({
     getToggleAllRowsSelectedHandler: table.getToggleAllRowsSelectedHandler,
     toggleAllRowsSelected: table.toggleAllRowsSelected,
     getAllLeafColumns: table.getAllLeafColumns,
+    getIsAllPageRowsSelected: table.getIsAllPageRowsSelected,
+    getIsSomePageRowsSelected: table.getIsSomePageRowsSelected,
+    getToggleAllPageRowsSelectedHandler: table.getToggleAllPageRowsSelectedHandler,
+    toggleAllPageRowsSelected: table.toggleAllPageRowsSelected,
   };
 };
 

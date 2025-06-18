@@ -13,6 +13,8 @@ type OptimizedTableRowProps<TData> = {
   rowSize: RowSize;
   isSelectable: boolean;
   isExpandable: boolean;
+  isSelected: boolean;
+  isExpanded: boolean;
   sx?: {
     tr?: CSSObject;
     td?: ((originalRow: TData) => CSSObject) | CSSObject;
@@ -40,6 +42,8 @@ const OptimizedTableRow = <TData,>({
   rowSize,
   isSelectable,
   isExpandable,
+  isSelected,
+  isExpanded,
   sx,
   dataTestPrefixId,
   data,
@@ -51,11 +55,6 @@ const OptimizedTableRow = <TData,>({
   const cells = useMemo(() => {
     return rowLength - +isExpandable - +isSelectable;
   }, [rowLength, isExpandable, isSelectable]);
-
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const isSelected = useMemo(() => row.getIsSelected(), [row.getIsSelected()]);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const isExpanded = useMemo(() => row.getIsExpanded(), [row.getIsExpanded()]);
 
   const handleRowClick = useCallback(() => {
     if (isExpandable) {
@@ -85,22 +84,20 @@ const OptimizedTableRow = <TData,>({
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const visibleCells = useMemo(() => row.getVisibleCells(), [row.getVisibleCells()]);
 
-  const renderedCells = useMemo(() => {
-    return visibleCells.map((cell) => (
-      <TD
-        columnId={cell.column.id}
-        rowId={cell.id}
-        key={cell.id}
-        rowSize={rowSize}
-        width={cell.column.getSize() || 100 / cells}
-        metaData={cell.column.columnDef.meta}
-        sx={typeof sx?.td === 'function' ? sx.td(cell.row.original) : sx?.td}
-        dataTestPrefixId={dataTestPrefixId}
-      >
-        {flexRender(cell.column.columnDef.cell, cell.getContext())}
-      </TD>
-    ));
-  }, [visibleCells, rowSize, cells, sx, dataTestPrefixId]);
+  const renderedCells = visibleCells.map((cell) => (
+    <TD
+      columnId={cell.column.id}
+      rowId={cell.id}
+      key={cell.id}
+      rowSize={rowSize}
+      width={cell.column.getSize() || 100 / cells}
+      metaData={cell.column.columnDef.meta}
+      sx={typeof sx?.td === 'function' ? sx.td(cell.row.original) : sx?.td}
+      dataTestPrefixId={dataTestPrefixId}
+    >
+      {flexRender(cell.column.columnDef.cell, cell.getContext())}
+    </TD>
+  ));
 
   return (
     <>
