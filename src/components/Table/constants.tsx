@@ -171,7 +171,7 @@ export const simpleData = (isDetailed?: boolean): TableRow<SimpleData>[] => [
   {
     cells: {
       firstName: 'Rachel',
-      lastName: 'Berry',
+      lastName: 'Green',
       age: 30,
       job: 'Fashion Executive',
     },

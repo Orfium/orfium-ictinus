@@ -132,7 +132,6 @@ const Filter = React.forwardRef<HTMLButtonElement, FilterProps>((props, ref) => 
         <FilterButton
           ref={ref}
           {...omit(keyboardProps, 'onBlur')}
-          isMulti={isMulti}
           isActive={isOpen}
           moreFilters={moreFilters}
           onClear={handleClear}

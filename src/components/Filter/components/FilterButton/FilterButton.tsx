@@ -8,7 +8,7 @@ import type { CommonButtonProps } from 'utils/common';
 import type { TestProps } from 'utils/types';
 import { buttonStyles, iconStyles } from './FilterButton.style';
 
-export type FilterButtonProps = Pick<FilterProps, 'filterType' | 'isMulti'> & {
+export type FilterButtonProps = Pick<FilterProps, 'filterType'> & {
   children?: React.ReactNode;
   isDisabled?: boolean;
   onClear?: () => void;
@@ -30,7 +30,6 @@ export const FilterButton = React.forwardRef<HTMLButtonElement, FilterButtonProp
     isPopulated,
     moreFilters,
     dataTestPrefixId,
-    isMulti,
     ...rest
   } = props;
   const theme = useTheme();
@@ -50,7 +49,7 @@ export const FilterButton = React.forwardRef<HTMLButtonElement, FilterButtonProp
 
   return (
     <button
-      css={buttonStyles({ isActive, isPopulated, isMulti, isDisabled })}
+      css={buttonStyles({ isActive, isPopulated, isDisabled })}
       type="button"
       ref={ref}
       onClick={onClick}
