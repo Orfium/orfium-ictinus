@@ -31,7 +31,6 @@
   cursor: pointer;
   height: 2.25rem;
   padding: 0 0.75rem 0 1rem;
-  max-width: 18.75rem;
   gap: 0.25rem;
   background-color: rgba(200,206,255,0.30);
   color: #194DCC;
@@ -90,39 +89,6 @@
   fill: #194DCC!important;
 }
 
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  height: 2.25rem;
-  padding: 0 0.75rem 0 1rem;
-  max-width: 27.5rem;
-  gap: 0.25rem;
-  background-color: rgba(200,206,255,0.30);
-  color: #194DCC;
-  border: 0.0625rem solid #8EAAEC;
-  border-radius: 624.9375rem;
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-  -webkit-transition: background-color 0.1s ease-in-out;
-  transition: background-color 0.1s ease-in-out;
-  opacity: 1;
-}
-
-.emotion-8:not([disabled]):focus-visible,
-.emotion-8:not([disabled]):hover {
-  background-color: rgba(200,206,255,0.20);
-}
-
 <div>
   <div
     class="emotion-0"
@@ -177,7 +143,7 @@
         class="emotion-1"
       >
         <button
-          class="emotion-8"
+          class="emotion-2"
           data-active="false"
           data-testid="ictinus_filter_filter_button"
           type="button"
