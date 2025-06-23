@@ -1,20 +1,17 @@
 import { css, type SerializedStyles } from '@emotion/react';
 import type { Theme } from 'theme';
 import { transition } from 'theme/functions';
-import { rem } from 'theme/utils';
 
-import type { FilterButtonProps } from './FilterButton';
-import { FILTER_WIDTH } from 'components/Filter/constants';
 import { getFilterTokens } from 'components/Filter/Filter.tokens';
 import { generateStylesFromTokens } from 'components/Typography/utils';
+import type { FilterButtonProps } from './FilterButton';
 
 export const buttonStyles =
   ({
     isActive = false,
     isPopulated = false,
-    isMulti = false,
     isDisabled,
-  }: Pick<FilterButtonProps, 'isActive' | 'isPopulated' | 'isMulti' | 'isDisabled'>) =>
+  }: Pick<FilterButtonProps, 'isActive' | 'isPopulated' | 'isDisabled'>) =>
   (theme: Theme): SerializedStyles => {
     const tokens = getFilterTokens(theme);
 
@@ -42,8 +39,6 @@ export const buttonStyles =
 
       height: ${tokens('height')};
       padding: 0 ${theme.dimension.spacing.get('md')} 0 ${theme.dimension.spacing.get('lg')};
-
-      max-width: ${rem(FILTER_WIDTH[isMulti ? 'multi' : 'single'].maxWidth)};
 
       gap: ${theme.dimension.spacing.get('xs')};
 
