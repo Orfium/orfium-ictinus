@@ -76,6 +76,12 @@ const DatePicker: React.FC<DatePickerProps & TestProps> = ({
     [onChange]
   );
 
+  const clearSelectedOption = useCallback(() => {
+    if (selectedOption.length) {
+      setSelectedOption('');
+    }
+  }, [selectedOption]);
+
   const setRangePick = useCallback(
     (day: Dayjs) => {
       const startOfDay = day.startOf('day');
@@ -119,8 +125,9 @@ const DatePicker: React.FC<DatePickerProps & TestProps> = ({
   const onClearAll = useCallback(() => {
     setRange(EMPTY_STATE);
     onChange(EMPTY_STATE);
+    clearSelectedOption();
     setIsOpen(false);
-  }, [onChange]);
+  }, [onChange, clearSelectedOption]);
 
   const handleIconClick = useCallback(() => {
     setIsOpen(!isOpen);
@@ -135,6 +142,7 @@ const DatePicker: React.FC<DatePickerProps & TestProps> = ({
       if (filterConfig?.filterType) {
         setIsOpen(false);
         setRange(EMPTY_STATE);
+        clearSelectedOption();
 
         if (filterConfig?.filterType === 'added') {
           return onClear();
@@ -154,6 +162,9 @@ const DatePicker: React.FC<DatePickerProps & TestProps> = ({
           if (value.from && value.to) {
             setRange({ from: value.from, to: undefined });
 
+            /** Since we are clearing the "to" value, predefined option is not valid anymore */
+            clearSelectedOption();
+
             return onChange({ from: value.from.toDate(), to: undefined });
           }
         }
@@ -162,7 +173,16 @@ const DatePicker: React.FC<DatePickerProps & TestProps> = ({
         onChange(EMPTY_STATE);
       }
     },
-    [isClearable, filterConfig?.filterType, onChange, onClear, isRangePicker, value.from, value.to]
+    [
+      isClearable,
+      filterConfig?.filterType,
+      clearSelectedOption,
+      onChange,
+      onClear,
+      isRangePicker,
+      value.from,
+      value.to,
+    ]
   );
 
   const onApply = useCallback(() => {
