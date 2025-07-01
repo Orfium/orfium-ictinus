@@ -19,9 +19,12 @@ export const RangeSliderDontTest = {
         <SliderShowcase
           isSelector={false}
           isDisabled={isDisabled}
-          formatOptions={{
-            minimumFractionDigits: 1,
-            maximumFractionDigits: 1,
+          numberFieldOptions={{
+            formatOptions: {
+              minimumFractionDigits: 1,
+              maximumFractionDigits: 1,
+            },
+            suffix: <div>%</div>,
           }}
         />
       </Stack>

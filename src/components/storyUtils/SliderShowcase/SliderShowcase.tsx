@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import type { NumberFieldProps } from '~/components/NumberField';
 import Slider from '../../Slider';
 
 interface Props {
@@ -7,7 +8,7 @@ interface Props {
   isDisabled: boolean;
   hasIncrements?: boolean;
   onChange?: (values: number[]) => void;
-  formatOptions?: Intl.NumberFormatOptions;
+  numberFieldOptions?: Partial<NumberFieldProps>;
 }
 
 const SliderShowcase: React.FCC<Props> = (props) => {
