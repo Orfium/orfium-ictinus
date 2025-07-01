@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import SliderShowcase from '../storyUtils/SliderShowcase/SliderShowcase';
 import Stack from '../storyUtils/Stack';
 import Slider from './Slider';
@@ -10,6 +11,18 @@ export default {
 export const RangeSliderDontTest = {
   render: (args) => {
     const { isDisabled } = args;
+
+    const numberFieldOptions = useMemo(
+      () => ({
+        formatOptions: {
+          minimumFractionDigits: 1,
+          maximumFractionDigits: 1,
+        },
+        suffix: <div>%</div>,
+      }),
+      []
+    );
+
     return (
       <Stack isVertical>
         <h2>Default</h2>
@@ -19,13 +32,7 @@ export const RangeSliderDontTest = {
         <SliderShowcase
           isSelector={false}
           isDisabled={isDisabled}
-          numberFieldOptions={{
-            formatOptions: {
-              minimumFractionDigits: 1,
-              maximumFractionDigits: 1,
-            },
-            suffix: <div>%</div>,
-          }}
+          numberFieldOptions={numberFieldOptions}
         />
       </Stack>
     );
