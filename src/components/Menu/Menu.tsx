@@ -2,13 +2,13 @@ import * as React from 'react';
 import { MenuTrigger, Popover } from 'react-aria-components';
 import type { TestProps } from 'utils/types';
 
-import { MenuWrapper, MenuItemWrapper, popoverStyle } from './Menu.style';
-import MenuItemDivider from './MenuItemDivider';
-import { listStyle } from '../List/List.style';
 import type { ListRowSize } from 'components/List';
+import { listStyle } from '../List/List.style';
+import { MenuItemWrapper, MenuWrapper, popoverStyle } from './Menu.style';
+import MenuItemDivider from './MenuItemDivider';
 
 export type MenuProps = {
-  children?: React.ReactElement[] | React.ReactElement;
+  children?: React.ReactNode[] | React.ReactNode;
   /** A callback that is being triggered when selection change */
   onSelectionChange?: (e: Set<string>) => any;
   /** The keys of the items that are disabled */
@@ -59,9 +59,9 @@ const Menu: React.FC<MenuProps> = ({
           onAction={onAction}
         >
           {React.Children.map(children, (child) => {
-            const { key = '' } = child;
+            const key = React.isValidElement(child) ? (child.key ?? '') : '';
 
-            if (child.type === MenuItemDivider) {
+            if (React.isValidElement(child) && child.type === MenuItemDivider) {
               return child;
             }
 
