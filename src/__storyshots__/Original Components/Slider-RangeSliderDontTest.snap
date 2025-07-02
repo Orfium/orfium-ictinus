@@ -321,25 +321,7 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-20 {
-  min-width: 1.75rem;
-  overflow: visible;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  cursor: unset;
-}
-
-.emotion-28 {
+.emotion-27 {
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
@@ -373,6 +355,24 @@
   line-height: 1rem;
   font-size: 0.75rem;
   letter-spacing: 0.015625rem;
+}
+
+.emotion-47 {
+  min-width: 1.75rem;
+  overflow: visible;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  cursor: unset;
 }
 
 <div>
@@ -483,12 +483,6 @@
                         </div>
                       </div>
                     </div>
-                    <div
-                      aria-hidden="false"
-                      class="emotion-20"
-                    >
-                      %
-                    </div>
                   </div>
                 </div>
               </div>
@@ -533,7 +527,7 @@
                             value="100"
                           />
                           <label
-                            class="emotion-28"
+                            class="emotion-27"
                             for="numberfield__00"
                           >
                             End
@@ -541,12 +535,6 @@
                           </label>
                         </div>
                       </div>
-                    </div>
-                    <div
-                      aria-hidden="false"
-                      class="emotion-20"
-                    >
-                      %
                     </div>
                   </div>
                 </div>
@@ -667,9 +655,11 @@
                     </div>
                     <div
                       aria-hidden="false"
-                      class="emotion-20"
+                      class="emotion-47"
                     >
-                      %
+                      <div>
+                        %
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -715,7 +705,7 @@
                             value="100.0"
                           />
                           <label
-                            class="emotion-28"
+                            class="emotion-27"
                             for="numberfield__00"
                           >
                             End
@@ -726,9 +716,11 @@
                     </div>
                     <div
                       aria-hidden="false"
-                      class="emotion-20"
+                      class="emotion-47"
                     >
-                      %
+                      <div>
+                        %
+                      </div>
                     </div>
                   </div>
                 </div>

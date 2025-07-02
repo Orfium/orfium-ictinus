@@ -3,6 +3,7 @@ import { Range } from 'react-range';
 import type { IMarkProps, IThumbProps, ITrackProps } from 'react-range/lib/types';
 import type { TestProps } from 'utils/types';
 import useTheme from '../../hooks/useTheme';
+import type { NumberFieldProps } from '../NumberField';
 import NumberField from '../NumberField';
 import SliderMark from './components/SliderMark';
 import SliderThumb from './components/SliderThumb';
@@ -22,8 +23,8 @@ export type SliderProps = {
   /** Determines the position of the rendered thumbs and the type of the Slider. 1 value means it's a Selector,
    * while 2 values mean it's a Range. Defaults to [0, 100] */
   values: [number] | [number, number];
-  /** Formatting options for the values displayed in the number fields, following the Intl.NumberFormatOptions type */
-  formatOptions?: Intl.NumberFormatOptions;
+  /** NumberField props */
+  numberFieldOptions?: Partial<NumberFieldProps>;
 };
 
 const STEP = 1;
@@ -37,10 +38,7 @@ const Slider: React.FC<SliderProps & TestProps> = ({
   onBlur,
   hasIncrements = false,
   isDisabled = false,
-  formatOptions = {
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  },
+  numberFieldOptions,
   dataTestPrefixId,
 }) => {
   const theme = useTheme();
@@ -172,8 +170,7 @@ const Slider: React.FC<SliderProps & TestProps> = ({
                   onBlur([sanitizedValue, values[1]]);
                 }
               }}
-              formatOptions={formatOptions}
-              suffix={<>%</>}
+              {...numberFieldOptions}
               minValue={MIN}
               maxValue={values[1]}
               sx={{ wrapper: { width: '100%' } }}
@@ -194,8 +191,7 @@ const Slider: React.FC<SliderProps & TestProps> = ({
                   onBlur([values[0], sanitizedValue]);
                 }
               }}
-              formatOptions={formatOptions}
-              suffix={<>%</>}
+              {...numberFieldOptions}
               minValue={values[0]}
               maxValue={MAX}
               sx={{ wrapper: { width: '100%' } }}
