@@ -26,7 +26,7 @@ const Tabs = React.forwardRef<HTMLDivElement, TabsProps>((props, ref) => {
       <TabList aria-label={props['aria-label']} sx={sx?.tabList}>
         {items.map((item) => {
           const { id, label, counter = null } = item;
-          const hasCounterTag = typeof counter === 'number';
+          const hasCounterTag = counter !== null && counter !== undefined && counter !== '';
           const isActive = id === selectedKey;
 
           return (
