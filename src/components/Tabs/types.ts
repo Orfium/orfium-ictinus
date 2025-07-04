@@ -14,7 +14,7 @@ export type TabItem = {
   /** The label of the tab */
   label: string;
   /** Optional counter */
-  counter?: number;
+  counter?: number | string;
 };
 
 export type TabsStylesOverrides = {

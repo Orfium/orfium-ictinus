@@ -13,7 +13,7 @@ export const getItems = (hasCounter = false) => {
     {
       id: 'bing',
       label: 'Bing',
-      ...(hasCounter ? { counter: 3 } : {}),
+      ...(hasCounter ? { counter: '3k' } : {}),
     },
     {
       id: 'tribbiani',
