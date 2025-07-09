@@ -1,7 +1,5 @@
 import styled from '@emotion/styled';
 
-import { BoxWrapper } from '../../components/Box/Box.style';
-
 export const TipWrapper = styled.div`
   position: relative;
   padding: 16px;
@@ -21,8 +19,5 @@ export const TipWrapper = styled.div`
   p {
     margin: 0;
   }
-
-  ${BoxWrapper} {
-    margin: 0;
-  }
+  
 `;

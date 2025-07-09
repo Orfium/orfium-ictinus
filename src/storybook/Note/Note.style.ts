@@ -2,7 +2,6 @@ import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import type { Theme } from 'index';
 
-import { BoxWrapper } from 'components/Box/Box.style';
 import { generateStylesFromTokens } from 'components/Typography/utils';
 
 export const noteStyles =
@@ -17,10 +16,6 @@ export const noteStyles =
       p {
         margin: 0;
         color: inherit;
-      }
-
-      ${BoxWrapper} {
-        margin: 0;
       }
 
       ${generateStylesFromTokens(theme.tokens.typography.get('normal.body01'))};
