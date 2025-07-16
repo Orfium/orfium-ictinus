@@ -1,5 +1,6 @@
 import { FilterOption } from 'components/Filter';
 import Stack from 'components/storyUtils/Stack';
+import { rem } from 'polished';
 import { useState } from 'react';
 import { FIGMA_URL } from 'utils/common';
 import useTheme from '~/hooks/useTheme';
@@ -8,7 +9,6 @@ import Button from '../Button';
 import { CheckBox, Radio, RadioGroup } from '../Controls';
 import Typography from '../Typography';
 import Search from './Search';
-import { rem } from 'polished';
 
 export default {
   title: 'Updated Components/Search',
@@ -252,7 +252,7 @@ export const CustomSearch = {
                     }}
                   />
                 </Box>
-                <Box display="flex" gap="5" justifyContent="end" px="5" py="4">
+                <Box display="flex" gap="5" justifyContent="flex-end" px="5" py="4">
                   <Button
                     size="compact"
                     type="tertiary"

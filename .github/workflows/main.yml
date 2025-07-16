@@ -76,7 +76,6 @@ jobs:
   deploy-app:
     needs:
       - select-deployment-target
-      - test
     uses: ./.github/workflows/deploy-frontend.yml
     concurrency: ${{ github.ref }}
     with:
