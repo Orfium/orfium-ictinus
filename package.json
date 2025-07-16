@@ -16,13 +16,17 @@
         "default": "./dist/index.umd.cjs"
       },
       "default": "./dist/index.umd.cjs"
-    }
+    },
+    "./styles.css": "./dist/style.css"
   },
+  "sideEffects": [
+    "**/*.css",
+    "**/*.css.ts"
+  ],
   "license": "MIT",
   "bin": {
     "ictinus-migrate-v5": "./bin/migrate.mjs"
   },
-  "sideEffects": false,
   "devDependencies": {
     "@amanda-mitchell/semantic-release-npm-multiple": "^3.9.0",
     "@commitlint/cli": "^17.7.2",
@@ -119,6 +123,7 @@
   "dependencies": {
     "@storybook/addon-controls": "^7.6.17",
     "@tanstack/react-table": "^8.21.3",
+    "clsx": "^2.1.1",
     "dayjs": "^2.0.0-alpha.4",
     "emotion-reset": "^3.0.1",
     "eslint-plugin-unused-imports": "^3.0.0",
@@ -127,6 +132,7 @@
     "patch-package": "^8.0.0",
     "pluralize": "^8.0.0",
     "polished": "^4.3.1",
+    "rainbow-sprinkles": "^1.0.0",
     "react-aria": "^3.39.0",
     "react-aria-components": "^1.8.0",
     "react-fast-compare": "^3.2.0",
