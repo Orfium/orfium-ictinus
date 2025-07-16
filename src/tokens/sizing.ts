@@ -1,0 +1,27 @@
+export const sizing = {
+  '0': '0px' as const,
+  '1': '4px' as const,
+  '2': '8px' as const,
+  '3': '12px' as const,
+  '4': '16px' as const,
+  '5': '20px' as const,
+  '6': '24px' as const,
+  '7': '28px' as const,
+  '8': '32px' as const,
+  '9': '36px' as const,
+  '10': '40px' as const,
+  '11': '44px' as const,
+  '12': '48px' as const,
+  '13': '52px' as const,
+  '14': '56px' as const,
+  '15': '64px' as const,
+  '16': '72px' as const,
+  '17': '80px' as const,
+  '18': '88px' as const,
+  '19': '92px' as const,
+  '20': '100px' as const,
+  '21': '120px' as const,
+  '22': '140px' as const,
+} as const;
+
+export type Sizing = keyof typeof sizing;
