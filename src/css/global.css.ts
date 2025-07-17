@@ -1,4 +1,4 @@
-import { globalStyle } from '@vanilla-extract/css';
+import { globalFontFace, globalStyle } from '@vanilla-extract/css';
 import { layers } from './layers.css';
 import { vars } from './vars.css';
 
@@ -21,12 +21,10 @@ globalStyle('html, body', {
     [layers.reset]: {
       backgroundColor: vars.color.background.default,
       color: vars.color.text.default.primary,
-      fontFamily: '"Roboto", Tahoma, sans-serif',
+      fontFamily: vars.font.sans,
     },
   },
 });
-
-import { globalFontFace } from '@vanilla-extract/css';
 
 globalFontFace('Roboto', [
   {

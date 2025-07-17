@@ -1,4 +1,4 @@
-const palette = {
+export const colors = {
   neutral: {
     1: '#FFFFFF' as const,
     2: '#F2F4FF' as const,
@@ -80,45 +80,3 @@ const palette = {
     10: '#33123A' as const,
   } as const,
 } as const;
-
-export const colors = {
-  ...palette,
-  semantic: {
-    light: {
-      background: {
-        default: palette.neutral[1],
-        alt: palette.neutral[2],
-        inverted: palette.neutral[6],
-        invertedAlt: palette.neutral[5],
-      },
-      text: {
-        default: {
-          primary: palette.neutral[6],
-          secondary: palette.neutral[4],
-          active: palette.blue[7],
-          error: palette.red[7],
-          warning: palette.orange[7],
-          success: palette.teal[7],
-          visited: palette.purple[7],
-        },
-        inverted: {
-          primary: palette.neutral[1],
-          secondary: palette.neutral[3],
-          active: palette.blue[4],
-          error: palette.red[4],
-          warning: palette.orange[4],
-          success: palette.teal[4],
-          visited: palette.purple[4],
-        },
-      },
-    },
-    dark: {
-      background: {
-        default: palette.neutral[6],
-        alt: palette.neutral[5],
-        inverted: palette.neutral[1],
-        invertedAlt: palette.neutral[2],
-      },
-    },
-  },
-};

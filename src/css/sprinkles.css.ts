@@ -1,80 +1,8 @@
-import { createGlobalTheme } from '@vanilla-extract/css';
 import { createSprinkles, defineProperties } from '@vanilla-extract/sprinkles';
-import { borderRadius } from '~/tokens/borderRadius';
-import { colors } from '~/tokens/color';
-import { sizing } from '~/tokens/sizing';
-import { spacing } from '~/tokens/spacing';
-
-import './global.css';
-
 import { layers } from './layers.css';
-
 import { vars } from './vars.css';
 
-const theme = {
-  color: {
-    neutral: colors.neutral,
-    blue: colors.blue,
-    transparent: colors.transparent,
-    teal: colors.teal,
-    purple: colors.purple,
-    orange: colors.orange,
-    red: colors.red,
-    background: {
-      default: vars.color.neutral[1],
-      alt: vars.color.neutral[2],
-      inverted: vars.color.neutral[6],
-      invertedAlt: vars.color.neutral[5],
-    },
-    text: {
-      default: {
-        primary: vars.color.neutral[6],
-        secondary: vars.color.neutral[4],
-        active: vars.color.blue[7],
-        error: vars.color.red[7],
-        warning: vars.color.orange[7],
-        success: vars.color.teal[7],
-        visited: vars.color.purple[7],
-      },
-      inverted: {
-        primary: vars.color.neutral[1],
-        secondary: vars.color.neutral[3],
-        active: vars.color.blue[4],
-        error: vars.color.red[4],
-        warning: vars.color.orange[4],
-        success: vars.color.teal[4],
-        visited: vars.color.purple[4],
-      },
-    },
-  },
-  spacing: {
-    ...spacing,
-    none: vars.spacing[0],
-    '2xs': vars.spacing[2],
-    xs: vars.spacing[3],
-    sm: vars.spacing[4],
-    md: vars.spacing[5],
-    lg: vars.spacing[6],
-    xl: vars.spacing[7],
-    '2xl': vars.spacing[8],
-    '3xl': vars.spacing[9],
-    '4xl': vars.spacing[12],
-  },
-  sizing,
-  radii: borderRadius,
-};
-
-// const darkTheme = {
-//   ...globalColors,
-//   ...darkSemanticColors,
-// };
-
-createGlobalTheme(':root', vars, { '@layer': 'ictinus-theme', ...theme });
-
-// createGlobalTheme(':root.dark', vars.color, {
-//   '@layer': 'ictinus-theme',
-//   ...darkTheme,
-// });
+import './global.css';
 
 export const breakpoints = {
   sm: 640,
@@ -116,6 +44,10 @@ const backgroundTokens = {
   transparent: 'transparent',
 } as const;
 
+const borderTokens = {
+  'decorative.default': vars.color['border-color'].decorative.default,
+} as const;
+
 const sprinkleProperties = defineProperties({
   '@layer': layers.utilities,
   defaultCondition: 'xs',
@@ -148,6 +80,10 @@ const sprinkleProperties = defineProperties({
     },
     flexDirection: ['column', 'row', 'column-reverse', 'row-reverse'],
     position: ['absolute', 'fixed', 'relative', 'sticky'],
+    borderWidth: vars['border-width'],
+    borderColor: borderTokens,
+    borderStyle: ['solid', 'dashed'],
+    borderRadius: vars['border-radius'],
     gap: vars.spacing,
     gridGap: vars.spacing,
     margin: vars.spacing,
