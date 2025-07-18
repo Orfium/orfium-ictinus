@@ -26,6 +26,70 @@ globalStyle('html, body', {
   },
 });
 
+globalStyle(
+  'a, area, button, [role="button"], input:not([type="range"]), label, select, summary, textarea',
+  {
+    '@layer': {
+      [layers.reset]: {
+        textDecoration: 'none',
+      },
+    },
+  }
+);
+
+globalStyle('[role="button"]', {
+  '@layer': {
+    [layers.reset]: {
+      background: 'none',
+    },
+  },
+});
+
+globalStyle('input, button, select, optgroup, textarea', {
+  '@layer': {
+    [layers.reset]: {
+      border: 'none',
+      lineHeight: 'inherit',
+      color: 'inherit',
+      fontFamily: 'inherit',
+      fontSize: 'inherit',
+    },
+  },
+});
+
+globalStyle('button, html [type="button"], [type="reset"], [type="submit"]', {
+  '@layer': {
+    [layers.reset]: {
+      WebkitAppearance: 'none',
+    },
+  },
+});
+
+globalStyle('input, textarea', {
+  '@layer': {
+    [layers.reset]: {
+      appearance: 'none',
+      WebkitAppearance: 'none',
+    },
+  },
+});
+
+globalStyle('ul, ol', {
+  '@layer': {
+    [layers.reset]: {
+      listStyle: 'none',
+    },
+  },
+});
+
+globalStyle('button, a', {
+  '@layer': {
+    [layers.reset]: {
+      cursor: 'pointer',
+    },
+  },
+});
+
 globalFontFace('Roboto', [
   {
     src: 'url(https://fonts.gstatic.com/s/roboto/v48/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2) format("woff2")',

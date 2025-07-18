@@ -72,7 +72,39 @@ export const semantic = {
       decorative: {
         transparent: colors.transparent[1],
         default: colors.transparent[5],
+        inverted: colors.transparent[10],
+      },
+      interactive: {
+        default: '',
+        active: '',
+        error: '',
+        upsell: '',
+        warning: '',
+        success: '',
+        focused: '',
       },
     },
+    indicators: {
+      brand: '',
+      success: '',
+      pending: '',
+      warning: '',
+      error: '',
+      inactive: '',
+    },
+    palette: {
+      error: {},
+      warning: {},
+      primary: {
+        muted: colors.blue[5],
+        base: colors.blue[6],
+        contrast: colors.blue[7],
+      },
+      secondary: {},
+      success: {},
+      tertiary: {},
+      upsell: {},
+      'primary-alt': {},
+    },
   },
-};
+} as const;

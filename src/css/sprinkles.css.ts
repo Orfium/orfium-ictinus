@@ -42,6 +42,7 @@ const backgroundTokens = {
   inverted: vars.color.background.inverted,
   invertedAlt: vars.color.background.invertedAlt,
   transparent: 'transparent',
+  'palette.primary': vars.color.palette.primary.base,
 } as const;
 
 const borderTokens = {
@@ -71,13 +72,24 @@ const sprinkleProperties = defineProperties({
       'unset',
     ] as const,
     flexWrap: ['nowrap', 'wrap', 'wrap-reverse'] as const,
-    display: ['block', 'flex', 'grid', 'inline-block', 'none', 'contents'],
+    display: [
+      'block',
+      'flex',
+      'inline-flex',
+      'inline-grid',
+      'grid',
+      'inline-block',
+      'none',
+      'contents',
+    ] as const,
     flex: {
-      1: '1 1 0%',
+      '1': '1 1 0%',
       auto: '1 1 auto',
       initial: '0 1 auto',
       none: 'none',
     },
+    width: { ...vars.sizing, full: '100%' },
+    height: { ...vars.sizing, full: '100%' },
     flexDirection: ['column', 'row', 'column-reverse', 'row-reverse'],
     position: ['absolute', 'fixed', 'relative', 'sticky'],
     borderWidth: vars['border-width'],

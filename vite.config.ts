@@ -50,10 +50,11 @@ export default defineConfig(({ mode }) => {
     plugins,
     build: {
       lib: {
-        entry: path.resolve(__dirname, 'src/index.ts'),
+        entry: {
+          index: path.resolve(__dirname, 'src/index.ts'),
+          'vanilla/index': path.resolve(__dirname, 'src/vanilla/index.ts'),
+        },
         name: pkg.name,
-        // the proper extensions will be added
-        fileName: 'index',
       },
       minify: 'esbuild',
       outDir: 'dist',
