@@ -41,6 +41,7 @@ const backgroundTokens = {
   invertedAlt: vars.color.background.invertedAlt,
   transparent: 'transparent',
   'palette.primary': vars.color.palette.primary.base,
+  'palette.primary.contrast': vars.color.palette.primary.contrast,
 } as const;
 
 const borderTokens = {
@@ -129,6 +130,10 @@ const unresponsiveProperties = defineProperties({
   properties: {
     cursor: ['default', 'pointer', 'not-allowed'],
     fontFamily: vars.font,
+    fontSize: vars['font-size'],
+    fontWeight: vars.weight,
+    lineHeight: vars['line-height'],
+    letterSpacing: vars['letter-spacing'],
     isolation: ['isolate'],
     objectFit: ['contain', 'cover'],
     pointerEvents: ['none'],
@@ -138,6 +143,24 @@ const unresponsiveProperties = defineProperties({
     wordBreak: ['break-word'],
     wordWrap: ['normal', 'break-word', 'initial', 'inherit'],
     boxShadow: vars['box-shadow'],
+    transitionProperty: {
+      none: 'none',
+      all: 'all',
+      default:
+        'background-color, border-color, color, fill, stroke, opacity, box-shadow, transform',
+      colors: 'background-color, border-color, color, fill, stroke',
+      opacity: 'opacity',
+      shadow: 'box-shadow',
+      transform: 'transform',
+    },
+    transitionTimingFunction: {
+      linear: 'linear',
+      ease: 'ease',
+      in: 'cubic-bezier(0.4, 0, 1, 1)',
+      out: 'cubic-bezier(0, 0, 0.2, 1)',
+      inOut: 'cubic-bezier(0.42, 0, 0.58, 1)',
+    },
+    transitionDuration: ['150ms', '200ms'],
     zIndex: {
       '0': 0,
       '10': 10,
