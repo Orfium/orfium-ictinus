@@ -10,9 +10,7 @@ import { sizing } from '~/tokens/sizing';
 import { spacing } from '~/tokens/spacing';
 
 export const tokens = {
-  color: {
-    ...colors,
-  },
+  color: colors,
   font: fontFamily,
   spacing: {
     ...spacing,
@@ -36,6 +34,7 @@ export const tokens = {
   'letter-spacing': letterSpacing,
 } as const;
 
+// This acts as contract, alternatively we can map the tokens directly here
 export const semantic = {
   color: {
     background: {
@@ -93,18 +92,54 @@ export const semantic = {
       inactive: '',
     },
     palette: {
-      error: {},
-      warning: {},
+      error: {
+        muted: '',
+        base: '',
+        contrast: '',
+      },
+      warning: {
+        muted: '',
+        base: '',
+        contrast: '',
+      },
       primary: {
         muted: colors.blue[5],
         base: colors.blue[6],
         contrast: colors.blue[7],
       },
-      secondary: {},
-      success: {},
-      tertiary: {},
-      upsell: {},
-      'primary-alt': {},
+      secondary: {
+        muted: '',
+        base: '',
+        contrast: '',
+      },
+      success: {
+        muted: '',
+        base: '',
+        contrast: '',
+      },
+      tertiary: {
+        muted: '',
+        base: '',
+        contrast: '',
+      },
+      upsell: {
+        muted: '',
+        base: '',
+        contrast: '',
+      },
+      'primary-alt': {
+        muted: '',
+        base: '',
+        contrast: '',
+      },
     },
+  },
+  'box-shadow': {
+    '0': '',
+    '1': '',
+    '2': '',
+    '3': '',
+    '4': '',
+    '5': '',
   },
 } as const;
