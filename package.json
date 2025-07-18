@@ -17,6 +17,12 @@
       },
       "default": "./dist/index.umd.cjs"
     },
+    "./vanilla": {
+      "import": {
+        "types": "./dist/types/vanilla/index.d.ts",
+        "default": "./dist/vanilla/index.js"
+      }
+    },
     "./styles.css": "./dist/style.css"
   },
   "sideEffects": [

@@ -11,25 +11,17 @@ export default {
 
 export const BoxPaddingAllSides = {
   render: () => (
-    <Box data-theme="light" color="primary">
-      <Box display="flex" alignItems="center" mb="5" bg="default" p="xs" borderRadius="2">
+    <>
+      <Box backgroundColor={'default'} p={'3'} mb={'5'}>
         Padding 3
       </Box>
-      <Box backgroundColor="default" p="7" mb="5" borderRadius="2">
+      <Box backgroundColor={'default'} p={'7'} mb={'5'}>
         Padding 7
       </Box>
-      <Box
-        backgroundColor="alt"
-        p="12"
-        mb="5"
-        borderWidth="1"
-        borderColor="decorative.default"
-        borderStyle="solid"
-        borderRadius="3"
-      >
+      <Box backgroundColor={'default'} p={'12'} mb={'5'}>
         Padding 12
       </Box>
-    </Box>
+    </>
   ),
   name: 'Box padding (All sides)',
 };

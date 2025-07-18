@@ -10,7 +10,6 @@ import type { ButtonTypes } from 'components/Button/Button.types';
 import ButtonLoader from 'components/Button/ButtonLoader';
 import type { IconButtonShape } from 'components/IconButton';
 import { useSlotProps } from '../utils/Slots';
-import { styles } from './ButtonBase.css';
 import { buttonBaseStyle, buttonWrapperStyle } from './ButtonBase.style';
 
 export type EventButtonProps = {
@@ -73,7 +72,6 @@ const ButtonBase = React.forwardRef<HTMLButtonElement, ButtonBaseProps>((props, 
         ref={ref}
         type={htmlType}
         data-testid={generateTestDataId(testIdName, dataTestId)}
-        className={styles}
         css={buttonBaseStyle({
           type,
           size,
