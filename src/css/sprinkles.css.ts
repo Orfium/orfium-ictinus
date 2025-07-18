@@ -2,18 +2,16 @@ import { createSprinkles, defineProperties } from '@vanilla-extract/sprinkles';
 import { layers } from './layers.css';
 import { vars } from './vars.css';
 
+// Ensure global has lowest specificity
+/* DO NOT MOVE THIS LINE */
 import './global.css';
+/* DO NOT MOVE THIS LINE */
 
 export const breakpoints = {
-  sm: 640,
-  md: 768,
-  lg: 1024,
-  xl: 1280,
+  md: 768 as const,
+  lg: 1024 as const,
+  xl: 1280 as const,
 } as const;
-
-export type Breakpoint = keyof typeof breakpoints;
-
-export const breakpointNames = Object.keys(breakpoints) as Breakpoint[];
 
 const colorTokens = {
   'neutral.1': vars.color.neutral['1'],
@@ -49,12 +47,11 @@ const borderTokens = {
   'decorative.default': vars.color['border-color'].decorative.default,
 } as const;
 
-const sprinkleProperties = defineProperties({
+const responsiveProperties = defineProperties({
   '@layer': layers.utilities,
   defaultCondition: 'xs',
   conditions: {
     xs: {},
-    sm: { '@media': `(min-width: ${breakpoints.sm}px)` },
     md: { '@media': `(min-width: ${breakpoints.md}px)` },
     lg: { '@media': `(min-width: ${breakpoints.lg}px)` },
     xl: { '@media': `(min-width: ${breakpoints.xl}px)` },
@@ -108,11 +105,8 @@ const sprinkleProperties = defineProperties({
     paddingLeft: vars.spacing,
     paddingRight: vars.spacing,
     paddingTop: vars.spacing,
-    color: colorTokens,
-    backgroundColor: backgroundTokens,
   },
   shorthands: {
-    bg: ['backgroundColor'],
     p: ['padding'],
     pt: ['paddingTop'],
     pb: ['paddingBottom'],
@@ -130,5 +124,57 @@ const sprinkleProperties = defineProperties({
   },
 });
 
-export const sprinkles = createSprinkles(sprinkleProperties);
+const unresponsiveProperties = defineProperties({
+  '@layer': layers.utilities,
+  properties: {
+    cursor: ['default', 'pointer', 'not-allowed'],
+    fontFamily: vars.font,
+    isolation: ['isolate'],
+    objectFit: ['contain', 'cover'],
+    pointerEvents: ['none'],
+    textTransform: ['capitalize', 'lowercase', 'uppercase'],
+    visibility: ['hidden', 'visible'],
+    whiteSpace: ['normal', 'nowrap', 'pre', 'pre-line', 'pre-wrap', 'initial', 'inherit'],
+    wordBreak: ['break-word'],
+    wordWrap: ['normal', 'break-word', 'initial', 'inherit'],
+    boxShadow: vars['box-shadow'],
+    zIndex: {
+      '0': 0,
+      '10': 10,
+      '20': 20,
+      '30': 30,
+      '40': 40,
+      '50': 50,
+      '75': 75,
+      '100': 100,
+      auto: 'auto',
+    },
+  },
+});
+
+const colorProperties = defineProperties({
+  '@layer': layers.utilities,
+  conditions: {
+    base: {},
+    active: { selector: '&:active' },
+    focus: { selector: '&:focus' },
+    hover: { selector: '&:hover' },
+  },
+  defaultCondition: 'base',
+  properties: {
+    backgroundColor: backgroundTokens,
+    borderColor: borderTokens,
+    color: colorTokens,
+    outlineColor: borderTokens,
+  },
+  shorthands: {
+    bg: ['backgroundColor'],
+  },
+});
+
+export const sprinkles = createSprinkles(
+  responsiveProperties,
+  unresponsiveProperties,
+  colorProperties
+);
 export type Sprinkles = Parameters<typeof sprinkles>[0];

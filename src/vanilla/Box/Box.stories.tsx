@@ -12,11 +12,11 @@ export const Default = {
   render: () => (
     <Box data-theme="light" color="primary">
       <Box display="flex" alignItems="center" mb="5" bg="default" p="xs" borderRadius="2">
-        Padding 3
+        Box
       </Box>
       <Box data-testid="box-2" backgroundColor="default" p="7" mb="5" borderRadius="2">
         <Box as="span" color="primary">
-          Text
+          Box
         </Box>
       </Box>
       <Box
@@ -27,8 +27,9 @@ export const Default = {
         borderColor="decorative.default"
         borderStyle="solid"
         borderRadius="3"
+        boxShadow="2"
       >
-        Padding 12
+        Box
       </Box>
     </Box>
   ),
