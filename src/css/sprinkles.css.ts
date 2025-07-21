@@ -13,6 +13,7 @@ export const breakpoints = {
   xl: 1280 as const,
 } as const;
 
+// we can optimize these
 const colorTokens = {
   'neutral.1': vars.color.neutral['1'],
   'neutral.2': vars.color.neutral['2'],
