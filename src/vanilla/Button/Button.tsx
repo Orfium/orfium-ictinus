@@ -1,5 +1,6 @@
 import { type ReactNode } from 'react';
 import { Text } from '~/vanilla/Text';
+import { Box } from '../Box';
 import { button } from './Button.css';
 
 type ButtonProps = {
@@ -8,8 +9,8 @@ type ButtonProps = {
 
 export function Button({ children }: ButtonProps) {
   return (
-    <button className={button}>
+    <Box as="button" className={button}>
       <Text variant="label2">{children}</Text>
-    </button>
+    </Box>
   );
 }
