@@ -63,6 +63,8 @@ export * from './components/Menu';
 export { default as Menu } from './components/Menu';
 export * from './components/Modal';
 export { default as Modal } from './components/Modal';
+export * from './components/Modal/ModalContent';
+export { default as ModalContent } from './components/Modal/ModalContent';
 export * from './components/Navigation';
 export { default as Navigation } from './components/Navigation';
 
