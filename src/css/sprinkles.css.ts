@@ -199,6 +199,8 @@ const responsiveProperties = defineProperties({
     paddingTop: vars.spacing,
   },
   shorthands: {
+    w: ['width'],
+    h: ['height'],
     p: ['padding'],
     pt: ['paddingTop'],
     pb: ['paddingBottom'],
