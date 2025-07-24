@@ -252,7 +252,7 @@ export const CustomSearch = {
                     }}
                   />
                 </Box>
-                <Box display="flex" gap="5" justifyContent="flex-end" px="5" py="4">
+                <Box display="flex" gap="5" justifyContent="end" px="5" py="4">
                   <Button
                     size="compact"
                     type="tertiary"

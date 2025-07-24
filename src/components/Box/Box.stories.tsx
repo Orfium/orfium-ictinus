@@ -28,7 +28,7 @@ export const BoxPaddingAllSides = {
 
 export const BoxHorizontalPadding = {
   render: () => (
-    <Box backgroundColor="default" px="7">
+    <Box backgroundColor={'default'} px={'7'}>
       Padding Horizontal 7
     </Box>
   ),
@@ -37,7 +37,7 @@ export const BoxHorizontalPadding = {
 
 export const BoxVerticalPadding = {
   render: () => (
-    <Box backgroundColor="default" py="7">
+    <Box backgroundColor={'default'} py={'7'}>
       Padding Vertical 7
     </Box>
   ),
@@ -47,13 +47,13 @@ export const BoxVerticalPadding = {
 export const BoxBackground = {
   render: () => (
     <>
-      <Box backgroundColor="inverted" color="inverted.primary" mb="5">
+      <Box backgroundColor={'inverted'} color={'inverted.primary'} mb={'5'}>
         Background Inverted
       </Box>
-      <Box backgroundColor="default" mb="5">
+      <Box backgroundColor={'default'} mb={'5'}>
         Background Light
       </Box>
-      <Box backgroundColor="transparent" mb="5">
+      <Box backgroundColor={'transparent'} mb={'5'}>
         Background Transparent
       </Box>
     </>

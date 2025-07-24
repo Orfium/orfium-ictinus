@@ -1,9 +1,7 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import type { Theme } from 'theme';
-
 import {
-  body01,
   headline01,
   headline02,
   headline03,
@@ -11,44 +9,7 @@ import {
   headline05,
 } from '../Typography/Typography.config.styles';
 
-export const scrollbar = (theme: Theme): SerializedStyles => css`
-  ::-webkit-scrollbar {
-    width: 5px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: ${theme.tokens.colors.get('palette.primary.muted')};
-    border-radius: 5px;
-  }
-
-  * {
-    scrollbar-width: thin;
-    scrollbar-color: ${theme.tokens.colors.get('palette.primary.muted')} transparent;
-  }
-`;
-
 export const globalStyles = (theme: Theme): SerializedStyles => css`
-  /* @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700;900&family=Roboto:wght@300;400;500;700;900&display=swap'); */
-
-  /* ${scrollbar(theme)} */
-
-  /* body,
-  html {
-    font-family: 'Roboto', Tahoma, sans-serif;
-    font-size: 16px;
-    font-weight: normal;
-  } */
-  /* body {
-    ${body01(theme)};
-  } */
-
-  #root {
-  }
-
   h1 {
     ${headline01(theme)}
   }
