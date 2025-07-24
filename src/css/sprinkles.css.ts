@@ -179,6 +179,8 @@ const responsiveProperties = defineProperties({
     },
     width: { ...vars.sizing, full: '100%', screen: '100vw' },
     height: { ...vars.sizing, full: '100%', screen: '100vh' },
+    minWidth: { ...vars.sizing, full: '100%', screen: '100vw' },
+    minHeight: { ...vars.sizing, full: '100%', screen: '100vh' },
     flexDirection: ['column', 'row', 'column-reverse', 'row-reverse'],
     position: ['absolute', 'fixed', 'relative', 'sticky'],
     borderWidth: vars['border-width'],

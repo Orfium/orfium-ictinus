@@ -1,18 +1,4 @@
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-1 .tooltip {
+.emotion-0 .tooltip {
   background-color: #111530;
   border: 0.0625rem solid rgba(200,206,255,0);
   box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(200,206,255,0.45);
@@ -31,14 +17,14 @@
   word-break: break-word;
 }
 
-.emotion-2 {
+.emotion-1 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-3 {
+.emotion-2 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -67,25 +53,25 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-3:focus-visible:not(:disabled) {
+.emotion-2:focus-visible:not(:disabled) {
   background-color: #5E8DF8;
 }
 
-.emotion-3:disabled {
+.emotion-2:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-3:hover:not(:disabled) {
+.emotion-2:hover:not(:disabled) {
   background-color: #5E8DF8;
 }
 
-.emotion-3:active:not(:disabled),
-.emotion-3[aria-expanded="true"] {
+.emotion-2:active:not(:disabled),
+.emotion-2[aria-expanded="true"] {
   background-color: #194DCC;
 }
 
-.emotion-4 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -103,122 +89,118 @@
 
 <div>
   <div
-    class="emotion-0"
+    class="sprinkles_height_full_xs__2usfn68w sprinkles_display_flex_xs__2usfn62c sprinkles_flexDirection_column_xs__2usfn6eo sprinkles_alignItems_center_xs__2usfn64 sprinkles_justifyContent_center_xs__2usfn618 sprinkles_flex_1_xs__2usfn634"
   >
     <div
-      style="margin: 5px;"
+      class="sprinkles_display_flex_xs__2usfn62c sprinkles_alignItems_center_xs__2usfn64 sprinkles_gap_2xl_xs__2usfn6kc"
     >
       <div
-        style="padding: 48px 72px; width: 600px; gap: 32px; height: 100px; display: flex; justify-content: center; align-items: center;"
+        class="emotion-0"
       >
-        <div
-          class="emotion-1"
+        <span
+          data-testid="tooltip-button"
+          data-tooltip-id="tooltip315"
         >
-          <span
-            data-testid="tooltip-button"
-            data-tooltip-id="tooltip315"
+          <div
+            class="emotion-1"
           >
-            <div
+            <button
               class="emotion-2"
+              data-slot="button"
+              data-testid="button"
+              type="button"
             >
-              <button
+              <span
                 class="emotion-3"
-                data-slot="button"
-                data-testid="button"
-                type="button"
               >
-                <span
-                  class="emotion-4"
-                >
-                  <span>
-                    Left Tooltip
-                  </span>
+                <span>
+                  Left Tooltip
                 </span>
-              </button>
-            </div>
-          </span>
-        </div>
-        <div
-          class="emotion-1"
+              </span>
+            </button>
+          </div>
+        </span>
+      </div>
+      <div
+        class="emotion-0"
+      >
+        <span
+          data-testid="tooltip-button"
+          data-tooltip-id="tooltip316"
         >
-          <span
-            data-testid="tooltip-button"
-            data-tooltip-id="tooltip316"
+          <div
+            class="emotion-1"
           >
-            <div
+            <button
               class="emotion-2"
+              data-slot="button"
+              data-testid="button"
+              type="button"
             >
-              <button
+              <span
                 class="emotion-3"
-                data-slot="button"
-                data-testid="button"
-                type="button"
               >
-                <span
-                  class="emotion-4"
-                >
-                  <span>
-                    Top Tooltip
-                  </span>
+                <span>
+                  Top Tooltip
                 </span>
-              </button>
-            </div>
-          </span>
-        </div>
-        <div
-          class="emotion-1"
+              </span>
+            </button>
+          </div>
+        </span>
+      </div>
+      <div
+        class="emotion-0"
+      >
+        <span
+          data-testid="tooltip-button"
+          data-tooltip-id="tooltip317"
         >
-          <span
-            data-testid="tooltip-button"
-            data-tooltip-id="tooltip317"
+          <div
+            class="emotion-1"
           >
-            <div
+            <button
               class="emotion-2"
+              data-slot="button"
+              data-testid="button"
+              type="button"
             >
-              <button
+              <span
                 class="emotion-3"
-                data-slot="button"
-                data-testid="button"
-                type="button"
               >
-                <span
-                  class="emotion-4"
-                >
-                  <span>
-                    Bottom Tooltip
-                  </span>
+                <span>
+                  Bottom Tooltip
                 </span>
-              </button>
-            </div>
-          </span>
-        </div>
-        <div
-          class="emotion-1"
+              </span>
+            </button>
+          </div>
+        </span>
+      </div>
+      <div
+        class="emotion-0"
+      >
+        <span
+          data-testid="tooltip-button"
+          data-tooltip-id="tooltip318"
         >
-          <span
-            data-testid="tooltip-button"
-            data-tooltip-id="tooltip318"
+          <div
+            class="emotion-1"
           >
-            <div
+            <button
               class="emotion-2"
+              data-slot="button"
+              data-testid="button"
+              type="button"
             >
-              <button
+              <span
                 class="emotion-3"
-                data-slot="button"
-                data-testid="button"
-                type="button"
               >
-                <span
-                  class="emotion-4"
-                >
-                  <span>
-                    Right Tooltip
-                  </span>
+                <span>
+                  Right Tooltip
                 </span>
-              </button>
-            </div>
-          </span>
-        </div>
+              </span>
+            </button>
+          </div>
+        </span>
       </div>
     </div>
   </div>
