@@ -6,11 +6,11 @@ import type { CommonButtonProps } from 'utils/common';
 import { generateTestDataId } from 'utils/helpers';
 import type { ComponentSizes, TestProps } from 'utils/types';
 
+import { buttonBaseStyle, buttonWrapperStyle } from './ButtonBase.style';
+import { useSlotProps } from '../utils/Slots';
 import type { ButtonTypes } from 'components/Button/Button.types';
 import ButtonLoader from 'components/Button/ButtonLoader';
 import type { IconButtonShape } from 'components/IconButton';
-import { useSlotProps } from '../utils/Slots';
-import { buttonBaseStyle, buttonWrapperStyle } from './ButtonBase.style';
 
 export type EventButtonProps = {
   onClick?: (event: ClickEvent) => void;
