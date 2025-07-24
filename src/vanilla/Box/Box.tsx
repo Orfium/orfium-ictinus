@@ -1,5 +1,5 @@
 import clsx, { type ClassValue } from 'clsx';
-import React, { forwardRef, memo, type AllHTMLAttributes, type ElementType } from 'react';
+import React, { forwardRef, type AllHTMLAttributes, type ElementType } from 'react';
 import { atoms, type Atoms } from '~/css/atoms';
 import { sprinkles } from '~/css/sprinkles.css';
 
@@ -10,14 +10,12 @@ type HTMLProperties<T = HTMLElement> = Omit<
 
 type Props = Atoms &
   HTMLProperties & {
-    // eslint-disable-next-line react/no-unused-prop-types
     as?: ElementType;
-    // eslint-disable-next-line react/no-unused-prop-types
     className?: ClassValue;
   };
 
-export const Box = memo(
-  forwardRef<HTMLElement, Props>(({ as = 'div', className, ...props }: Props, ref) => {
+export const Box = forwardRef<HTMLElement, Props>(
+  ({ as = 'div', className, ...props }: Props, ref) => {
     const atomProps: Record<string, unknown> = {};
     const nativeProps: Record<string, unknown> = {};
 
@@ -38,7 +36,7 @@ export const Box = memo(
       ...nativeProps,
       ref,
     });
-  })
+  }
 );
 
 export type BoxProps = Parameters<typeof Box>[0];
