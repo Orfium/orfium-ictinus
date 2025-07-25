@@ -1,3 +1,4 @@
+import { css } from '@emotion/react';
 import { PositionInScreen } from 'components/utils/PositionInScreen';
 import useKeyboard from 'hooks/useKeyboardEvents';
 import { head, omit } from 'lodash-es';
@@ -116,7 +117,13 @@ const Filter = React.forwardRef<HTMLButtonElement, FilterProps>((props, ref) => 
       dataTestPrefixId={dataTestPrefixId}
     />
   ) : (
-    <div data-testid={`${dataTestPrefixId}_filter_overlay`}>
+    <div
+      data-testid={`${dataTestPrefixId}_filter_overlay`}
+      css={css({
+        maxHeight: 'inherit',
+        overflow: 'auto',
+      })}
+    >
       {children({ isOpen, setIsOpen, filterLabel, setFilterLabel })}
     </div>
   );
