@@ -12,6 +12,7 @@ export const colorSchemes = ['semantic', 'dark'] as const;
 /**
  * Here are listed all the colors available for our project
  * Flat colors are the actual colors of the system
+ * @deprecated use tokens instead
  **/
 export const flatColors = [
   'greyScale',
@@ -59,6 +60,7 @@ export const paleColors = [
  * E.g red.100 = color or yellow.500 = color
  * so there is no yellow but variations of yellow
  * default variation: 500
+ * @deprecated use tokens instead
  **/
 export const colorShades = [
   50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950,
