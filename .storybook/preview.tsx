@@ -1,26 +1,27 @@
 // THIS DECORATOR MUST GO FIRST, OR THE STORY SOURCE GENERATES INCORRECTLY
 // Add prop tables to components (based on component type interfaces)
-import React from 'react';
-import { DocsContainer } from '@storybook/addon-docs';
-import ThemeProvider from '../src/components/ThemeProvider';
 import styled from '@emotion/styled';
-import Typography from '../src/storybook/Typography';
-import Link from '../src/storybook/Link';
+import { DocsContainer } from '@storybook/addon-docs';
+import { Preview as SBPreview } from '@storybook/react';
+import ThemeProvider from '../src/components/ThemeProvider';
 import {
-  UsageGuidelines,
-  SubsectionHeader,
-  SectionHeader,
-  Tip,
+  Alert,
   Note,
   Preview,
-  Alert,
+  SectionHeader,
+  SubsectionHeader,
+  Tip,
+  UsageGuidelines,
 } from '../src/storybook';
+import Link from '../src/storybook/Link';
+import Typography from '../src/storybook/Typography';
 import {
-  TypographyResetFontSmooth,
   TypographyWrapper as SBTypographyWrapper,
+  TypographyResetFontSmooth,
 } from '../src/storybook/Typography/Typography.style';
-import Box from '../src/components/Box';
-import { Preview as SBPreview } from '@storybook/react';
+import { Box } from '../src/vanilla/Box';
+
+import '../src/css/global.css';
 
 const viewPorts = {
   desktop1920: {
@@ -89,22 +90,12 @@ const viewPorts = {
   },
 };
 
-const Wrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  return (
-    <Box flex={1} flexDirection={'column'} p={'3'} position={'relative'}>
-      {children}
-    </Box>
-  );
-};
-
 export const decorators = [
   (Story: any) => {
     return (
-      <Wrapper>
-        <Box m={'6'}>
-          <Story />
-        </Box>
-      </Wrapper>
+      <Box display="flex" flexDirection="column" position="relative" p="7" minHeight="screen">
+        <Story />
+      </Box>
     );
   },
   (Story: any) => (

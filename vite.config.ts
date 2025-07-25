@@ -2,13 +2,13 @@
 
 import path from 'path';
 
+import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
 import react from '@vitejs/plugin-react';
 import { defineConfig, loadEnv } from 'vite';
-import type * as vite from 'vite';
 import dts from 'vite-plugin-dts';
 import svgr from 'vite-plugin-svgr';
 import tsconfigPaths from 'vite-tsconfig-paths';
-import { coverageConfigDefaults, configDefaults } from 'vitest/config';
+import { configDefaults, coverageConfigDefaults } from 'vitest/config';
 
 // @ts-ignore
 import pkg from './package.json';
@@ -24,6 +24,7 @@ const plugins = [
   }),
   tsconfigPaths(),
   svgr(),
+  vanillaExtractPlugin(),
   dts({
     // eslint-disable-next-line @typescript-eslint/naming-convention
     insertTypesEntry: true,
@@ -50,10 +51,11 @@ export default defineConfig(({ mode }) => {
     plugins,
     build: {
       lib: {
-        entry: path.resolve(__dirname, 'src/index.ts'),
+        entry: {
+          index: path.resolve(__dirname, 'src/index.ts'),
+          'vanilla/index': path.resolve(__dirname, 'src/vanilla/index.ts'),
+        },
         name: pkg.name,
-        // the proper extensions will be added
-        fileName: 'index',
       },
       minify: 'esbuild',
       outDir: 'dist',
