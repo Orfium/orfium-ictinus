@@ -1,13 +1,11 @@
 import React from 'react';
 import { Tab as ReactAriaTab } from 'react-aria-components';
-
-import { stepContainer, stepStyles, stepSubtitle, stepTitle } from './TabStep.style';
-import type { TabStepProps } from '../../types';
-
 import type { AcceptedIconNames } from '~/components/Icon';
 import Icon from '~/components/Icon';
 import useTheme from '~/hooks/useTheme';
 import type { SemanticColorsKey } from '~/theme/tokens/semantic/colors';
+import type { TabStepProps } from '../../types';
+import { stepContainer, stepStyles, stepSubtitle, stepTitle } from './TabStep.style';
 
 const STATUS_ICON = {
   done: {
@@ -22,6 +20,7 @@ const STATUS_ICON = {
 
 const TabStep = React.forwardRef<HTMLDivElement, TabStepProps>((props, ref) => {
   const {
+    iconPosition = 'adjacent',
     children,
     id,
     title,
@@ -43,7 +42,11 @@ const TabStep = React.forwardRef<HTMLDivElement, TabStepProps>((props, ref) => {
       {children ?? (
         <div css={stepContainer()}>
           {title && (
-            <div css={stepTitle()} data-role="title" data-testid={`${dataTestPrefixId}_title`}>
+            <div
+              css={[stepTitle, iconPosition === 'end' && { justifyContent: 'space-between' }]}
+              data-role="title"
+              data-testid={`${dataTestPrefixId}_title`}
+            >
               {title}
               {hasIcon && (
                 <Icon
