@@ -179,8 +179,8 @@ export const TabStepperDisabled: Story = {
       },
       {
         id: 'tab-2',
-        title: 'Tab label',
-        subtitle: 'Secondary information line',
+        title: 'Tab disabled',
+        subtitle: 'This is disabled for this scenario',
         isDisabled: true,
       },
       {
