@@ -1,8 +1,6 @@
 import type { CSSObject } from '@emotion/react';
-import type { AriaAttributes } from 'react';
-
-import type { TabsProps } from '../Tabs';
-
+import type { AriaAttributes, ReactNode } from 'react';
+import type { TabsProps } from '~/components/Tabs';
 import type { TestProps } from '~/utils/types';
 
 export type TabStepItem = {
@@ -14,6 +12,8 @@ export type TabStepItem = {
   subtitle?: string;
   /** The status of the step */
   status?: 'pending' | 'done' | 'warning';
+  /** Disable step */
+  isDisabled?: boolean;
 };
 
 export type TabStepperStylesOverrides = {
@@ -25,14 +25,17 @@ export type TabStepperStylesOverrides = {
 export type StepperProps = {
   /** The items (steps) */
   items: TabStepItem[];
-  children?: any;
+  /** Position of status icon */
+  iconPosition?: 'adjacent' | 'end';
+  children?: ReactNode;
   /** Style overrides for TabSteps */
   sx?: TabStepperStylesOverrides;
 } & Pick<TabsProps, 'orientation' | 'selectedKey' | 'onSelectionChange'> &
   TestProps;
 
 export type TabStepProps = {
-  children?: any;
+  iconPosition?: 'adjacent' | 'end';
+  children?: ReactNode;
   /** Style overrides for TabStep */
   sx?: CSSObject;
 } & TabStepItem &
@@ -41,5 +44,5 @@ export type TabStepProps = {
 export type TabStepListProps = {
   /** Style overrides for TabStepList */
   sx?: CSSObject;
-  children: any;
+  children: ReactNode;
 } & AriaAttributes;

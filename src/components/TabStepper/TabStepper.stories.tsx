@@ -1,33 +1,51 @@
-import React from 'react';
+import { Meta, StoryObj } from '@storybook/react';
+import React, { ComponentProps } from 'react';
+import Box from '~/components/Box';
+import { TabKey, TabPanel } from '~/components/Tabs';
 import TabStepper from '~/components/TabStepper';
-import { TabKey, TabPanel } from '../Tabs';
-import { TabStepItem } from './types';
 import { getContent } from './constants';
+import { TabStepItem } from './types';
 
-export default {
+type Status = 'pending' | 'warning' | 'done';
+
+type StoryArgs = ComponentProps<typeof TabStepper> & {
+  status: Status;
+  status1: Status;
+  status2: Status;
+  status3: Status;
+  hasSubtitle: boolean;
+  isDisabled: boolean;
+};
+
+const meta: Meta<StoryArgs> = {
   title: 'Updated Components/Tabs/TabStepper',
   component: TabStepper,
-
   argTypes: {
-    orientation: { type: 'radio', options: ['horizontal', 'vertical'] },
-    status: { type: 'select', options: ['pending', 'warning', 'done'] },
-    status1: { name: 'Step 1 Status', type: 'select', options: ['pending', 'warning', 'done'] },
-    status2: { name: 'Step 2 Status', type: 'select', options: ['pending', 'warning', 'done'] },
-    status3: { name: 'Step 3 Status', type: 'select', options: ['pending', 'warning', 'done'] },
-    hasSubtitle: { name: 'has Subtitle', type: 'boolean' },
+    orientation: { control: 'radio', options: ['horizontal', 'vertical'] },
+    iconPosition: { control: 'radio', options: ['adjacent', 'end'] },
+    status: { control: 'select', options: ['pending', 'warning', 'done'] },
+    status1: { name: 'Step 1 Status', control: 'select', options: ['pending', 'warning', 'done'] },
+    status2: { name: 'Step 2 Status', control: 'select', options: ['pending', 'warning', 'done'] },
+    status3: { name: 'Step 3 Status', control: 'select', options: ['pending', 'warning', 'done'] },
+    hasSubtitle: { name: 'has Subtitle', control: 'boolean' },
+    isDisabled: { control: 'boolean' },
   },
-
   args: {
     orientation: 'horizontal',
+    iconPosition: 'adjacent',
     status: 'pending',
     status1: 'pending',
     status2: 'pending',
     status3: 'pending',
     hasSubtitle: false,
+    isDisabled: false,
   },
 };
 
-export const TabStepperTypes = {
+export default meta;
+type Story = StoryObj<StoryArgs>;
+
+export const TabStepperTypes: Story = {
   render: () => {
     const [key1, setKey1] = React.useState<TabKey>('step_1');
     const [key2, setKey2] = React.useState<TabKey>('step_1');
@@ -59,15 +77,13 @@ export const TabStepperTypes = {
       </div>
     );
   },
-
   name: 'TabStepper types',
-
   parameters: {
     controls: { disable: true },
   },
 };
 
-export const TabStepperWithContent = {
+export const TabStepperWithContent: Story = {
   render: () => {
     const [key, setKey] = React.useState<TabKey>('step_1');
 
@@ -99,15 +115,13 @@ export const TabStepperWithContent = {
       </TabStepper>
     );
   },
-
   name: 'TabStepper with content',
-
   parameters: {
     controls: { disable: true },
   },
 };
 
-export const TabStepperOrientation = {
+export const TabStepperOrientation: Story = {
   render: (args) => {
     const { orientation } = args;
 
@@ -146,15 +160,60 @@ export const TabStepperOrientation = {
       </TabStepper>
     );
   },
-
   name: 'Orientation',
-
   parameters: {
     controls: { include: ['orientation'] },
   },
 };
 
-export const TabStepperStatuses = {
+export const TabStepperDisabled: Story = {
+  render: () => {
+    const [key, setKey] = React.useState<TabKey>('tab-1');
+
+    const items: TabStepItem[] = [
+      {
+        id: 'tab-1',
+        title: 'Tab label',
+        subtitle: 'Secondary information line',
+        status: 'done',
+      },
+      {
+        id: 'tab-2',
+        title: 'Tab disabled',
+        subtitle: 'This is disabled for this scenario',
+        isDisabled: true,
+      },
+      {
+        id: 'tab-3',
+        title: 'Tab label',
+        subtitle: 'Secondary information line',
+      },
+    ];
+
+    return (
+      <Box display="flex" flexDirection="column" gap="8" backgroundColor="default">
+        <TabStepper
+          orientation="horizontal"
+          selectedKey={key}
+          onSelectionChange={setKey}
+          items={items}
+        />
+        <TabStepper
+          orientation="vertical"
+          iconPosition="end"
+          selectedKey={key}
+          onSelectionChange={setKey}
+          items={items}
+        />
+      </Box>
+    );
+  },
+  parameters: {
+    controls: { disable: true },
+  },
+};
+
+export const TabStepperStatuses: Story = {
   render: (args) => {
     const { status } = args;
 
@@ -191,17 +250,15 @@ export const TabStepperStatuses = {
       </TabStepper>
     );
   },
-
   name: 'TabStepper statuses',
-
   parameters: {
     controls: { include: ['status'] },
   },
 };
 
-export const Playground = {
+export const Playground: Story = {
   render: (args) => {
-    const { orientation, status1, status2, status3, hasSubtitle } = args;
+    const { orientation, iconPosition, status1, status2, status3, hasSubtitle, isDisabled } = args;
 
     const [key, setKey] = React.useState<TabKey>('step_1');
 
@@ -212,6 +269,7 @@ export const Playground = {
           title: 'Step 1',
           ...(hasSubtitle && { subtitle: 'This is subtitle for step 1' }),
           status: status1,
+          isDisabled: isDisabled,
         },
         {
           id: 'step_2',
@@ -231,6 +289,7 @@ export const Playground = {
     return (
       <TabStepper
         orientation={orientation}
+        iconPosition={iconPosition}
         selectedKey={key}
         onSelectionChange={setKey}
         items={getItems(hasSubtitle)}
@@ -245,12 +304,18 @@ export const Playground = {
       </TabStepper>
     );
   },
-
   name: 'Playground',
-
   parameters: {
     controls: {
-      include: ['orientation', 'Step 1 Status', 'Step 2 Status', 'Step 3 Status', 'has Subtitle'],
+      include: [
+        'orientation',
+        'iconPosition',
+        'Step 1 Status',
+        'Step 2 Status',
+        'Step 3 Status',
+        'has Subtitle',
+        'isDisabled',
+      ],
     },
   },
 };

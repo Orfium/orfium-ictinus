@@ -1,8 +1,7 @@
 import React from 'react';
-
+import { TabsContainer } from '~/components/Tabs';
 import { TabStep, TabStepList } from './components';
 import type { StepperProps } from './types';
-import { TabsContainer } from '../Tabs';
 
 const TabStepper = React.forwardRef<HTMLDivElement, StepperProps>((props, ref) => {
   const {
@@ -10,6 +9,7 @@ const TabStepper = React.forwardRef<HTMLDivElement, StepperProps>((props, ref) =
     selectedKey,
     onSelectionChange,
     items,
+    iconPosition = 'adjacent',
     dataTestPrefixId = 'ictinus',
     children,
     sx,
@@ -28,6 +28,7 @@ const TabStepper = React.forwardRef<HTMLDivElement, StepperProps>((props, ref) =
           <TabStep
             key={item.id}
             {...item}
+            iconPosition={iconPosition}
             dataTestPrefixId={`${dataTestPrefixId}_tabstep_${item.id}`}
             sx={sx?.tabStep}
           />
