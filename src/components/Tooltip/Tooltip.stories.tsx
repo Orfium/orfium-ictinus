@@ -1,9 +1,10 @@
-import Tooltip from './Tooltip';
-import Stack from '../storyUtils/Stack';
-import { hoverOnTooltips } from './utils';
 import { FIGMA_URL, Function } from 'utils/common';
+import { Box } from '~/vanilla';
 import Button from '../Button';
+import Stack from '../storyUtils/Stack';
 import TooltipShowcase from '../storyUtils/TooltipShowcase';
+import Tooltip from './Tooltip';
+import { hoverOnTooltips } from './utils';
 
 export default {
   title: 'Updated Components/Tooltip',
@@ -99,59 +100,33 @@ export const InteractiveTooltip = {
 
 export const TooltipPlacement = {
   render: () => (
-    <Stack>
-      <Function>
-        {() => {
-          return (
-            <div
-              style={{
-                padding: '48px 72px',
-                width: '600px',
-                gap: '32px',
-                height: '100px',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-            >
-              <Tooltip
-                data-testid={'tooltip-button'}
-                content={'This is a Tooltip'}
-                placement={'left'}
-              >
-                <Button>Left Tooltip</Button>
-              </Tooltip>
-              <Tooltip
-                data-testid={'tooltip-button'}
-                content={'This is a Tooltip'}
-                placement={'top'}
-              >
-                <Button>Top Tooltip</Button>
-              </Tooltip>
-              <Tooltip
-                data-testid={'tooltip-button'}
-                content={'This is a Tooltip'}
-                placement={'bottom'}
-              >
-                <Button>Bottom Tooltip</Button>
-              </Tooltip>
-              <Tooltip
-                data-testid={'tooltip-button'}
-                content={'This is a Tooltip'}
-                placement={'right'}
-              >
-                <Button>Right Tooltip</Button>
-              </Tooltip>
-            </div>
-          );
-        }}
-      </Function>
-    </Stack>
+    <Box
+      display="flex"
+      flexDirection="column"
+      alignItems="center"
+      justifyContent="center"
+      flex="1"
+      h="full"
+    >
+      <Box display="flex" alignItems="center" gap="2xl">
+        <Tooltip data-testid={'tooltip-button'} content={'This is a Tooltip'} placement={'left'}>
+          <Button>Left Tooltip</Button>
+        </Tooltip>
+        <Tooltip data-testid={'tooltip-button'} content={'This is a Tooltip'} placement={'top'}>
+          <Button>Top Tooltip</Button>
+        </Tooltip>
+        <Tooltip data-testid={'tooltip-button'} content={'This is a Tooltip'} placement={'bottom'}>
+          <Button>Bottom Tooltip</Button>
+        </Tooltip>
+        <Tooltip data-testid={'tooltip-button'} content={'This is a Tooltip'} placement={'right'}>
+          <Button>Right Tooltip</Button>
+        </Tooltip>
+      </Box>
+    </Box>
   ),
   autoplay: true,
   play: hoverOnTooltips,
   name: 'Tooltip placement',
-
   parameters: {
     controls: { disable: true },
   },
