@@ -1,10 +1,9 @@
-import { Unstyled } from '@storybook/blocks';
+import { Unstyled } from '@storybook/addon-docs/blocks';
 import type { FC } from 'react';
-import React from 'react';
 
-import { subsectionHeaderWrapper } from './SubsectionHeader.style';
 import type { TypographyVariant } from '../../components/Typography';
 import Typography from '../Typography';
+import { subsectionHeaderWrapper } from './SubsectionHeader.style';
 
 export type SectionHeaderProps = {
   title?: string;

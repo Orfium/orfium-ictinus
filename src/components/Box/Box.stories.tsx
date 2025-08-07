@@ -28,7 +28,7 @@ export const BoxPaddingAllSides = {
 
 export const BoxHorizontalPadding = {
   render: () => (
-    <Box backgroundColor={'default'} px={'7'}>
+    <Box backgroundColor={'default'} px={'8'}>
       Padding Horizontal 7
     </Box>
   ),

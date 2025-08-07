@@ -1,6 +1,5 @@
-import { Unstyled } from '@storybook/blocks';
+import { Unstyled } from '@storybook/addon-docs/blocks';
 import type { FCC } from 'react';
-import React from 'react';
 
 import { noteStyles } from './Note.style';
 

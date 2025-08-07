@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import { Unstyled } from '@storybook/blocks';
+import { Unstyled } from '@storybook/addon-docs/blocks';
 import type { FCC } from 'react';
 import React from 'react';
 
