@@ -1,4 +1,3 @@
-import { screen, userEvent, within } from '@storybook/testing-library';
 import Button from 'components/Button';
 import DatePicker from 'components/DatePicker';
 import { currentDay } from 'components/DatePicker/utils';
@@ -6,6 +5,7 @@ import Filter, { FilterOption } from 'components/Filter';
 import Select from 'components/Select';
 import { toast, ToastContainer } from 'components/Toast';
 import { useState } from 'react';
+import { screen, userEvent, within } from 'storybook/test';
 import { FIGMA_URL } from 'utils/common';
 import ModalShowcase from '../storyUtils/ModalShowcase';
 import PresentComponent from '../storyUtils/PresentComponent';

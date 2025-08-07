@@ -1,17 +1,17 @@
-import Menu from '../Menu';
-import Stack from '../storyUtils/Stack';
-import { FIGMA_URL } from 'utils/common';
-import { ListItem, ListItemAction, ListItemText } from '../List';
 import * as React from 'react';
 import { useCallback, useRef, useState } from 'react';
-import Link from '../Link';
-import { CheckBox, Switch } from '../Controls';
-import Button from '../Button';
-import IconButton from '../IconButton';
-import Avatar from '../Avatar';
-import MenuItemDivider from './MenuItemDivider';
+import { fireEvent, within } from 'storybook/test';
+import { FIGMA_URL } from 'utils/common';
 import { useTheme } from '../../index';
-import { fireEvent, within } from '@storybook/testing-library';
+import Avatar from '../Avatar';
+import Button from '../Button';
+import { CheckBox, Switch } from '../Controls';
+import IconButton from '../IconButton';
+import Link from '../Link';
+import { ListItem, ListItemAction, ListItemText } from '../List';
+import Menu from '../Menu';
+import Stack from '../storyUtils/Stack';
+import MenuItemDivider from './MenuItemDivider';
 
 const LIST_ITEMS = [
   'Audio Network',

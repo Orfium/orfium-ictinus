@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { userEvent, within } from '@storybook/testing-library';
 import Button from 'components/Button';
 import { ReactElement, useState } from 'react';
+import { userEvent, within } from 'storybook/test';
 import useTheme from '~/hooks/useTheme';
 import Box from '../Box';
 import Icon from '../Icon';

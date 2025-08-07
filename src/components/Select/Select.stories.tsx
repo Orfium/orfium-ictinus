@@ -1,5 +1,5 @@
-import { userEvent, within } from '@storybook/testing-library';
 import { useState } from 'react';
+import { userEvent, within } from 'storybook/test';
 import { FIGMA_URL, Function } from 'utils/common';
 import EdgeCasesSelectShowcase from '../storyUtils/EdgeCasesSelectShowcase';
 import { MultiSelectShowcase, SelectShowcase } from '../storyUtils/SelectShowcase';

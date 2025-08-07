@@ -112,9 +112,11 @@ const preview: SBPreview = {
     controls: {
       sort: 'requiredFirst',
     },
+
     viewport: {
       viewports: viewPorts,
     },
+
     options: {
       storySort: {
         method: 'alphabetical',
@@ -133,8 +135,10 @@ const preview: SBPreview = {
       },
       showPanel: true,
     },
+
     chromatic: { delay: 2000 },
     viewMode: 'docs',
+
     docs: {
       source: { type: 'code' },
 
@@ -245,6 +249,13 @@ const preview: SBPreview = {
       },
 
       codePanel: true,
+    },
+
+    a11y: {
+      // 'todo' - show a11y violations in the test UI only
+      // 'error' - fail CI on a11y violations
+      // 'off' - skip a11y checks entirely
+      test: 'todo',
     },
   },
 };

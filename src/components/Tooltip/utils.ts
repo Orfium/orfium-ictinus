@@ -1,4 +1,4 @@
-import { userEvent, within } from '@storybook/testing-library';
+import { userEvent, within } from 'storybook/test';
 
 export const hoverOnTooltips = async ({ canvasElement }: { canvasElement: HTMLElement }) => {
   const canvas = within(canvasElement);

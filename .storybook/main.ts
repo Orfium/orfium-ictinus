@@ -28,22 +28,16 @@ module.exports = {
     '../src/**/*.@(mdx|stories.@(ts|tsx))',
   ],
 
-  addons: [
-    '@storybook/addon-links',
-    '@storybook/addon-a11y',
-    {
-      name: '@storybook/addon-docs',
-      options: {
-        mdxPluginOptions: {
-          mdxCompileOptions: {
-            remarkPlugins: [remarkGfm],
-          },
+  addons: ['@storybook/addon-links', '@storybook/addon-a11y', {
+    name: '@storybook/addon-docs',
+    options: {
+      mdxPluginOptions: {
+        mdxCompileOptions: {
+          remarkPlugins: [remarkGfm],
         },
       },
     },
-    'storybook-addon-pseudo-states',
-    '@storybook/addon-designs',
-  ],
+  }, 'storybook-addon-pseudo-states', '@storybook/addon-designs', '@storybook/addon-vitest'],
 
   staticDirs: ['../public'],
 

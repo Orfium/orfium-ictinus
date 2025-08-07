@@ -1,4 +1,3 @@
-import { fireEvent, screen, userEvent, within } from '@storybook/testing-library';
 import Button from 'components/Button';
 import DatePicker from 'components/DatePicker';
 import { currentDay } from 'components/DatePicker/utils';
@@ -9,6 +8,7 @@ import TextField from 'components/TextField';
 import Typography from 'components/Typography';
 import BarChartShowCase from 'components/storyUtils/BarChartShowCase';
 import { useState } from 'react';
+import { fireEvent, screen, userEvent, within } from 'storybook/test';
 import { FIGMA_URL } from 'utils/common';
 import Stack from '../storyUtils/Stack';
 import Drawer, { DrawerContent, DrawerFooter, DrawerHeader } from './index';

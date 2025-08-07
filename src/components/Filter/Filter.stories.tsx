@@ -1,9 +1,9 @@
-import { userEvent, within } from '@storybook/testing-library';
 import Button from 'components/Button';
 import DropdownButton from 'components/DropdownButton';
 import TextField from 'components/TextField';
 import useTheme from 'hooks/useTheme';
 import React from 'react';
+import { userEvent, within } from 'storybook/test';
 import { FIGMA_URL } from 'utils/common';
 import * as DatePickerStories from '../DatePicker/DatePicker.stories';
 import Stack from '../storyUtils/Stack';
