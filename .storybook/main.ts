@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
-import turbosnap from 'vite-plugin-turbosnap';
 import { mergeConfig } from 'vite';
+import turbosnap from 'vite-plugin-turbosnap';
 
 function getPackageDir(filepath: string) {
   let currDir = path.dirname(require.resolve(filepath));
@@ -33,7 +33,6 @@ module.exports = {
     '@storybook/addon-docs',
     'storybook-addon-pseudo-states',
     '@storybook/addon-designs',
-    '@chromatic-com/storybook'
   ],
 
   staticDirs: ['../public'],
