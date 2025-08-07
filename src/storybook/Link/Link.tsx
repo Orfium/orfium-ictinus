@@ -1,8 +1,8 @@
-import { Unstyled } from '@storybook/blocks';
+import { Unstyled } from '@storybook/addon-docs/blocks';
 import type { FCC } from 'react';
 
-import { LinkResetFontSmooth, LinkWrapper } from './Link.style';
 import LinkComponent from '../../components/Link';
+import { LinkResetFontSmooth, LinkWrapper } from './Link.style';
 
 export type LinkProps = {
   href?: string;

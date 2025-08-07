@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Unstyled } from '@storybook/blocks';
+import { Unstyled } from '@storybook/addon-docs/blocks';
 
 import type { AlertStatus } from '~/components/InlineAlert';
 import { InlineAlert } from '~/components/InlineAlert';
