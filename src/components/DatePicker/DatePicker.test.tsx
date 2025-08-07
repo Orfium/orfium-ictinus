@@ -1,7 +1,7 @@
 import { waitFor } from '@testing-library/react';
 import dayjs from 'dayjs';
-import React from 'react';
 
+import userEvent from '@testing-library/user-event';
 import { fireEvent, render } from '../../test';
 import DatePicker from './DatePicker';
 import { currentDay, navigateOnElement } from './utils';
@@ -258,7 +258,7 @@ describe('DatePicker', () => {
     /** Make sure that only one day is focused */
     expect(selectedDayElements.length).toBe(1);
 
-    fireEvent.keyDown(selectedDayElements[0], { key: 'Enter', code: 'Enter', charCode: 13 });
+    userEvent.keyboard('{Enter}');
 
     /** Clicked keys path should lead to the following day being selected*/
     const newSelectedDay = await findByTestId('23_11_2020_selected');
