@@ -1,14 +1,12 @@
-import React from 'react';
-
 import { render } from 'test';
 
-import RadioGroup from './components/RadioGroup';
-import Radio from './Radio';
 import userEvent from '@testing-library/user-event';
 import { Mock } from 'vitest';
+import RadioGroup from './components/RadioGroup';
+import Radio from './Radio';
 
 describe('Radio', () => {
-  let mockOnClick: Mock<any, any>;
+  let mockOnClick: Mock;
 
   beforeEach(() => {
     mockOnClick = vi.fn();
