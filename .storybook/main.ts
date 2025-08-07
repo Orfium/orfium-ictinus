@@ -28,16 +28,12 @@ module.exports = {
   ],
 
   addons: [
-    '@storybook/addon-storysource',
-    '@storybook/addon-interactions',
     '@storybook/addon-links',
-    '@storybook/addon-viewport',
-    '@storybook/addon-controls',
     '@storybook/addon-a11y',
     '@storybook/addon-docs',
     'storybook-addon-pseudo-states',
     '@storybook/addon-designs',
-    '@storybook/addon-mdx-gfm',
+    '@chromatic-com/storybook'
   ],
 
   staticDirs: ['../public'],

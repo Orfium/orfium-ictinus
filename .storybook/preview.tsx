@@ -1,8 +1,8 @@
 // THIS DECORATOR MUST GO FIRST, OR THE STORY SOURCE GENERATES INCORRECTLY
 // Add prop tables to components (based on component type interfaces)
 import styled from '@emotion/styled';
-import { DocsContainer } from '@storybook/addon-docs';
-import { Preview as SBPreview } from '@storybook/react';
+import { DocsContainer } from '@storybook/addon-docs/blocks';
+import type { Preview as SBPreview } from '@storybook/react-vite';
 import ThemeProvider from '../src/components/ThemeProvider';
 import {
   Alert,
@@ -137,15 +137,18 @@ const preview: SBPreview = {
     viewMode: 'docs',
     docs: {
       source: { type: 'code' },
+
       story: {
         inline: true,
       },
+
       container: (props: any) => (
         // @ts-ignore
         <DocsContainer {...props}>
           <ThemeProvider>{props.children}</ThemeProvider>
         </DocsContainer>
       ),
+
       components: {
         h1: ({ children, rest }: any) => (
           <Box>
@@ -197,7 +200,12 @@ const preview: SBPreview = {
         ),
         p: ({ children, rest }: any) => (
           <Box my={'6'}>
-            <Typography {...rest} css={TypographyResetFontSmooth} variant={'body01'}>
+            <Typography
+              {...rest}
+              css={TypographyResetFontSmooth}
+              variant={'body01'}
+              component="span"
+            >
               {children}
             </Typography>
           </Box>
@@ -235,6 +243,8 @@ const preview: SBPreview = {
         SectionHeader,
         Alert,
       },
+
+      codePanel: true,
     },
   },
 };
