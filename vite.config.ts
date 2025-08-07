@@ -94,6 +94,10 @@ export default defineConfig(({ mode }) => {
         ],
       },
       exclude: [...configDefaults.exclude],
+      // Vitest 3.0 changes - sequence hooks to run serially like Jest
+      sequence: {
+        hooks: 'list',
+      },
     },
   };
 });

@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import remarkGfm from 'remark-gfm';
 import { mergeConfig } from 'vite';
 import turbosnap from 'vite-plugin-turbosnap';
 
@@ -30,7 +31,16 @@ module.exports = {
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-a11y',
-    '@storybook/addon-docs',
+    {
+      name: '@storybook/addon-docs',
+      options: {
+        mdxPluginOptions: {
+          mdxCompileOptions: {
+            remarkPlugins: [remarkGfm],
+          },
+        },
+      },
+    },
     'storybook-addon-pseudo-states',
     '@storybook/addon-designs',
   ],

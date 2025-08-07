@@ -117,12 +117,14 @@ exports[`Checkbox Component > it renders the Checkbox correctly 1`] = `
     <label
       class="emotion-1"
       data-rac=""
+      data-react-aria-pressable="true"
       data-testid="test_test_checkbox"
     >
       <span
         style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
       >
         <input
+          data-react-aria-pressable="true"
           tabindex="0"
           title=""
           type="checkbox"
