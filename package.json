@@ -1,6 +1,6 @@
 {
   "name": "@orfium/ictinus",
-  "version": "0.0.0",
+  "version": "5.38.0",
   "type": "module",
   "main": "./dist/index.umd.cjs",
   "module": "./dist/index.js",
@@ -36,6 +36,7 @@
   },
   "devDependencies": {
     "@amanda-mitchell/semantic-release-npm-multiple": "^3.9.0",
+    "@changesets/cli": "^2.29.5",
     "@commitlint/cli": "^17.7.2",
     "@commitlint/config-conventional": "^17.7.0",
     "@emotion/babel-plugin": "^11.11.0",
@@ -201,7 +202,8 @@
     "check": "pnpm check:ts && pnpm check:linting && pnpm check:formatting",
     "check:ts": "tsc --noEmit --pretty",
     "check:linting": "eslint src --color",
-    "check:formatting": "prettier src --check"
+    "check:formatting": "prettier src --check",
+    "release": "pnpm build:lib && changeset publish"
   },
   "keywords": [
     "Orfium",
