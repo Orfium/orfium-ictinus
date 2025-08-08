@@ -23,7 +23,8 @@
         "default": "./dist/vanilla/index.js"
       }
     },
-    "./styles.css": "./dist/style.css"
+    "./styles.css": "./dist/style.css",
+    "./vars.css": "./dist/vars/vars.css"
   },
   "sideEffects": [
     "**/*.css",
@@ -108,6 +109,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jsdom": "^25.0.0",
     "lint-staged": "^11.0.0",
+    "postcss-pxtorem": "^6.1.0",
     "prettier": "^3.5.3",
     "prettier-plugin-organize-imports": "^4.1.0",
     "react": "^18.2.0",
@@ -183,7 +185,8 @@
     "prebuild": "rimraf dist",
     "build:main": "vite build",
     "build:codemods": "vite build --config vite.codemods.config.ts",
-    "build:lib": "pnpm prebuild && pnpm build:main && pnpm build:codemods",
+    "build:vars": "vite build --config vite.vars.config.ts",
+    "build:lib": "pnpm prebuild && pnpm build:main && pnpm build:vars && pnpm build:codemods",
     "build": "storybook build -o build/",
     "test": "vitest --run",
     "test:storyshots": "pnpm test storybook.test.tsx --run",
