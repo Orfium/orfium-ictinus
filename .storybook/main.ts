@@ -1,7 +1,8 @@
 import fs from 'fs';
 import path from 'path';
-import turbosnap from 'vite-plugin-turbosnap';
+import remarkGfm from 'remark-gfm';
 import { mergeConfig } from 'vite';
+import turbosnap from 'vite-plugin-turbosnap';
 
 function getPackageDir(filepath: string) {
   let currDir = path.dirname(require.resolve(filepath));
@@ -28,16 +29,20 @@ module.exports = {
   ],
 
   addons: [
-    '@storybook/addon-storysource',
-    '@storybook/addon-interactions',
     '@storybook/addon-links',
-    '@storybook/addon-viewport',
-    '@storybook/addon-controls',
     '@storybook/addon-a11y',
-    '@storybook/addon-docs',
+    {
+      name: '@storybook/addon-docs',
+      options: {
+        mdxPluginOptions: {
+          mdxCompileOptions: {
+            remarkPlugins: [remarkGfm],
+          },
+        },
+      },
+    },
     'storybook-addon-pseudo-states',
     '@storybook/addon-designs',
-    '@storybook/addon-mdx-gfm',
   ],
 
   staticDirs: ['../public'],

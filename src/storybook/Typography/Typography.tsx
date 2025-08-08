@@ -1,6 +1,6 @@
-import { Unstyled } from '@storybook/blocks';
+import { Unstyled } from '@storybook/addon-docs/blocks';
 import type { FCC } from 'react';
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 
 import type { TypographyVariant } from '../../components/Typography';
 import TypographyComponent from '../../components/Typography';

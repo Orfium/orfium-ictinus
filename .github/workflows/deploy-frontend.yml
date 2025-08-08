@@ -7,11 +7,6 @@ on:
         description: Deployment Target
         required: true
         type: string
-      node-version:
-        description: The version of node to use
-        required: false
-        default: '20.9'
-        type: string
     secrets:
       ORG_PGP_TOKEN:
         description: Org token for npm
@@ -76,9 +71,6 @@ jobs:
       - name: Setup configuration
         id: config
         run: |
-          # Set default Node Version
-          NODE_VERSION=${{ inputs.node-version }}
-
           set -o allexport
           # Load optional common configuration
           if [ -f environments/common.env ]; then
@@ -101,7 +93,6 @@ jobs:
           fi
 
           # shellcheck disable=SC2129
-          echo "version=$NODE_VERSION" >> "$GITHUB_OUTPUT"
           echo "csp_header=$CSP_HEADER" >> "$GITHUB_OUTPUT"
           echo "cd_role=$CD_ROLE" >> "$GITHUB_OUTPUT"
           echo "cfn_role=$CFN_ROLE" >> "$GITHUB_OUTPUT"
@@ -117,7 +108,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ steps.config.outputs.version }}
+          node-version-file: 'package.json'
           cache: 'pnpm'
 
       - name: Sets pnpm config

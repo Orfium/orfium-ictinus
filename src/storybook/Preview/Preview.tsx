@@ -1,6 +1,5 @@
-import { Canvas as SBPreview } from '@storybook/addon-docs';
+import { Canvas as SBPreview } from '@storybook/addon-docs/blocks';
 import type { FCC } from 'react';
-import React from 'react';
 
 import useTheme from '../../hooks/useTheme';
 

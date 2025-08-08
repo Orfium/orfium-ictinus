@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { userEvent, within } from '@storybook/testing-library';
 import Button from 'components/Button';
 import { ReactElement, useState } from 'react';

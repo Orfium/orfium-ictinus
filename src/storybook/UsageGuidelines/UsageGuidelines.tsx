@@ -1,4 +1,4 @@
-import { Unstyled } from '@storybook/blocks';
+import { Unstyled } from '@storybook/addon-docs/blocks';
 import React, { useMemo } from 'react';
 
 import { iconStyle, WrapperStyle } from './UsageGuidelines.style';

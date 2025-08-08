@@ -1,16 +1,15 @@
-import { Unstyled } from '@storybook/blocks';
+import { Unstyled } from '@storybook/addon-docs/blocks';
 import { Link } from 'index';
 import type { FCC } from 'react';
-import React from 'react';
 
-import {
-  sectionHeaderWrapper,
-  sectionHeaderContainer,
-  sectionHeaderLinksDivider,
-} from './SectionHeader.style';
+import Tag from 'components/Tag';
 import Box from '../../components/Box';
 import Typography from '../Typography';
-import Tag from 'components/Tag';
+import {
+  sectionHeaderContainer,
+  sectionHeaderLinksDivider,
+  sectionHeaderWrapper,
+} from './SectionHeader.style';
 
 export type SectionHeaderProps = {
   title?: string;

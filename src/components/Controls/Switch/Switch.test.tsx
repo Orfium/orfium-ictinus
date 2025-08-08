@@ -1,12 +1,11 @@
 import userEvent from '@testing-library/user-event';
-import React from 'react';
 
+import { Mock } from 'vitest';
 import { render, screen } from '../../../test';
 import Switch from './Switch';
-import { Mock } from 'vitest';
 
 describe('Switch', () => {
-  let mockOnClick: Mock<any, any>;
+  let mockOnClick: Mock;
 
   beforeEach(() => {
     mockOnClick = vi.fn();
