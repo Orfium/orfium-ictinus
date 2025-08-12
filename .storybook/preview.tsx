@@ -93,7 +93,7 @@ const viewPorts = {
 export const decorators = [
   (Story: any) => {
     return (
-      <Box display="flex" flexDirection="column" position="relative" p="7" minHeight="screen">
+      <Box display="flex" flexDirection="column" position="relative" p="7" minHeight="full">
         <Story />
       </Box>
     );
@@ -109,6 +109,7 @@ const inputEmpty = styled.input(({ theme }) => ({}));
 const preview: SBPreview = {
   decorators,
   parameters: {
+    layout: 'fullscreen',
     controls: {
       sort: 'requiredFirst',
     },
@@ -137,7 +138,6 @@ const preview: SBPreview = {
     viewMode: 'docs',
     docs: {
       source: { type: 'code' },
-
       story: {
         inline: true,
       },
