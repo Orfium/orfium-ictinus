@@ -93,7 +93,7 @@ const viewPorts = {
 export const decorators = [
   (Story: any) => {
     return (
-      <Box display="flex" flexDirection="column" position="relative" p="7">
+      <Box display="flex" flexDirection="column" position="relative" p="7" h="full">
         <Story />
       </Box>
     );
