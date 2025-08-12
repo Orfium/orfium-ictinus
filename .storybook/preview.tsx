@@ -93,7 +93,7 @@ const viewPorts = {
 export const decorators = [
   (Story: any) => {
     return (
-      <Box display="flex" flexDirection="column" position="relative" p="7" minHeight="screen">
+      <Box display="flex" flexDirection="column" position="relative" p="7">
         <Story />
       </Box>
     );
@@ -137,9 +137,9 @@ const preview: SBPreview = {
     viewMode: 'docs',
     docs: {
       source: { type: 'code' },
-
       story: {
         inline: true,
+        height: '200px',
       },
 
       container: (props: any) => (
