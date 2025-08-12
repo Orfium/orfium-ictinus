@@ -139,7 +139,6 @@ const preview: SBPreview = {
       source: { type: 'code' },
       story: {
         inline: true,
-        height: '200px',
       },
 
       container: (props: any) => (
