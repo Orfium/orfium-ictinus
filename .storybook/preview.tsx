@@ -109,6 +109,7 @@ const inputEmpty = styled.input(({ theme }) => ({}));
 const preview: SBPreview = {
   decorators,
   parameters: {
+    layout: 'fullscreen',
     controls: {
       sort: 'requiredFirst',
     },
