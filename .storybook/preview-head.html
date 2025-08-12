@@ -1,13 +1,15 @@
 <style>
+  html,
+  body,
+  #storybook-root {
+    height: 100%;
+    overflow: auto;
+  }
+
   body {
     margin: 0 !important;
     padding: 0 !important;
     background: #f0f3ff !important;
-    min-height: 100vh;
-  }
-
-  #storybook-root {
-    height: 100%;
   }
 
   .css-qa4clq :where(h3:not(.sb-anchor, .sb-unstyled, .sb-unstyled h3)):first-of-type {
