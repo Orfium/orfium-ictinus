@@ -1,15 +1,14 @@
 {
-  "name": "storybook",
+  "name": "@app/storybook",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "storybook dev -p 6006",
     "build": "tsc -b && vite build",
     "build-storybook": "storybook build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "storybook": "storybook dev -p 6006",
     "test": "vitest --run",
     "test:storyshots": "pnpm test storybook.test.tsx --run",
     "test:update": "vitest -u",
