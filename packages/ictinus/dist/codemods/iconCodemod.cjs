@@ -1,1 +1,0 @@
-"use strict";const i=(n,r)=>{const o=r.jscodeshift,t=o(n.source);return t.findJSXElements("Icon").forEach(s=>{o(s).find(o.JSXAttribute).forEach(e=>{const c=e.node.name;["variant"].includes(c.name)&&o(e).remove()})}),t.toSource()};module.exports=i;

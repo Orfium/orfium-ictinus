@@ -1,2 +1,0 @@
-import { SerializedStyles } from '@emotion/react';
-export declare const listItemActionWrapper: () => () => SerializedStyles;
