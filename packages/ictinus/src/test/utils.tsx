@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, RenderResult, screen } from '@testing-library/react';
 import { renderHook } from '@testing-library/react-hooks';
 import userEvent from '@testing-library/user-event';
 
@@ -12,7 +12,7 @@ export const selectDropdownOption = async (
   await userEvent.click(screen.getByText(option)); // select the option from displayed options
 };
 
-const renderWithThemeProvider = (children: JSX.Element) => {
+const renderWithThemeProvider = (children: JSX.Element): RenderResult => {
   return render(<ThemeProvider>{children}</ThemeProvider>);
 };
 

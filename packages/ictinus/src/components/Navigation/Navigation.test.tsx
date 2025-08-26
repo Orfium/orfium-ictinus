@@ -1,8 +1,7 @@
-import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-import { fireEvent, render } from '../../test';
-import { menuItems } from '../storyUtils/NavigationShowcase/MenuItems';
+import { fireEvent, render } from '~/test';
+import { menuItems } from '~/utils/common';
 import Navigation from './Navigation';
 
 describe('Navigation', () => {

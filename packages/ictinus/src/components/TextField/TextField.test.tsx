@@ -1,7 +1,64 @@
 import userEvent from '@testing-library/user-event';
 
-import { fireEvent, render, screen } from '../../test';
-import { MultiTextFieldShowcase, TextFieldShowCase } from '../storyUtils/TextFieldShowcases';
+import { useState } from 'react';
+import { fireEvent, render, screen } from '~/test';
+import TextField from './TextField';
+
+const StatefulTextField = ({ values, mask }: { values?: string[]; mask?: string }) => {
+  const [value, setValue] = useState('');
+  const [tags, setTags] = useState<string[]>(values);
+
+  const addTag = (tag: string) => {
+    setTags([...tags, tag]);
+  };
+  const removeTag = (tag: string) => {
+    setTags(tags.filter((t) => t !== tag));
+  };
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) =>
+    setValue((event.target as HTMLInputElement).value);
+
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    switch (event.key) {
+      case 'Enter': {
+        if (!value) return;
+        addTag(value);
+        setValue('');
+
+        return;
+      }
+      case 'Backspace': {
+        if (value || !tags.length) return;
+        removeTag(tags[tags.length - 1]);
+
+        return;
+      }
+    }
+  };
+
+  const handleClearAll = () => {
+    setTags([]);
+    setValue('');
+  };
+
+  const isMaskedTextField = !!mask;
+
+  return (
+    // @ts-expect-error - this is a test component
+    <TextField
+      value={value}
+      mask={isMaskedTextField ? mask : undefined}
+      isMulti={true}
+      data-testid="input_showcase"
+      onKeyDown={handleKeyDown}
+      onMultiValueDelete={removeTag}
+      onMultiValueClearAll={handleClearAll}
+      onChange={handleChange}
+      tags={tags}
+      onInput={handleChange}
+    />
+  );
+};
 
 export const values = ['Value 1', 'Value 2'];
 
@@ -11,7 +68,7 @@ describe('Multi TextField', () => {
   let newTag: HTMLElement;
 
   beforeEach(() => {
-    render(<MultiTextFieldShowcase values={values} />);
+    render(<StatefulTextField values={values} />);
   });
 
   beforeEach(() => {
@@ -51,7 +108,7 @@ describe('Masked TextField', () => {
   let input: HTMLInputElement;
 
   beforeEach(() => {
-    render(<TextFieldShowCase mask={'+(999)'} />);
+    render(<StatefulTextField mask={'+(999)'} />);
   });
 
   beforeEach(() => {

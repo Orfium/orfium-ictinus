@@ -200,6 +200,18 @@
     "design system"
   ],
   "scripts": {
+    "prepare": "husky",
+    "dev": "turbo dev --env-mode=loose",
+    "build": "turbo build --env-mode=loose",
+    "lint": "turbo lint",
+    "test": "turbo test",
+    "test:coverage": "turbo run test:coverage",
+    "coverage:report": "turbo build --filter='./packages/*' && vitest run --coverage",
+    "check": "turbo check",
+    "check:ts": "turbo check:ts --affected",
+    "check:linting": "turbo run check:linting --affected",
+    "check:precommit": "turbo run check:precommit --affected",
+    "check:formatting": "turbo run check:formatting",
     "clean": "rm -rf node_modules && pnpm -r exec rm -rf node_modules"
   },
   "repository": {
@@ -208,15 +220,16 @@
   },
   "devDependencies": {
     "@types/react": "^18.2.21",
-    "@types/react-dom": "^18.2.7"
+    "@types/react-dom": "^18.2.7",
+    "turbo": "^2.5.6"
   },
   "dependencies": {
     "@emotion/babel-plugin": "^11.11.0",
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
     "@emotion/eslint-plugin": "^11.11.0",
     "@emotion/jest": "^11.11.0",
+    "@emotion/react": "^11.11.1",
     "@emotion/serialize": "^1.3.3",
+    "@emotion/styled": "^11.11.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router": "^6.21.3",

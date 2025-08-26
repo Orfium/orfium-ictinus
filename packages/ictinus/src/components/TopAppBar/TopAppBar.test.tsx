@@ -1,9 +1,9 @@
 import React from 'react';
 import { fireEvent, render } from 'test';
 
-import { DEFAULT_USER_MENU } from '../storyUtils/TopAppBarShowcase';
-import TopAppBar from './TopAppBar';
 import { Mock } from 'vitest';
+import { DEFAULT_USER_MENU } from '~/utils/common';
+import TopAppBar from './TopAppBar';
 
 describe('TopAppBar', () => {
   let onMenuIconClickMock: Mock;

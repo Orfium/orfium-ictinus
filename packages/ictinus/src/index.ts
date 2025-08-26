@@ -17,7 +17,14 @@ export type { Elevation } from './theme/globals/elevation';
 export type { Spacing, SpacingKey } from './theme/globals/spacing';
 export type { Typography as GlobalsTypography } from './theme/globals/typography';
 export type { Overrides } from './theme/overrides';
-export type { Palette, BASE_SHADE, neutralColors, colorShades, flatColors, paleColors } from './theme/palette';
+export type {
+  BASE_SHADE,
+  colorShades,
+  flatColors,
+  neutralColors,
+  paleColors,
+  Palette,
+} from './theme/palette';
 export type { AcceptedColorComponentTypes } from './utils/themeFunctions';
 export type { TestProps } from './utils/types';
 

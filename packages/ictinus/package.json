@@ -139,12 +139,11 @@
   },
   "scripts": {
     "postinstall": "patch-package",
-    "prepublishOnly": "pnpm build:lib",
-    "prebuild": "rimraf dist",
+    "prepublishOnly": "pnpm build",
+    "build": "pnpm build:main && pnpm build:vars && pnpm build:codemods",
     "build:main": "vite build",
     "build:codemods": "vite build --config vite.codemods.config.ts",
     "build:vars": "vite build --config vite.vars.config.ts",
-    "build:lib": "pnpm prebuild && pnpm build:main && pnpm build:vars && pnpm build:codemods",
     "test": "vitest --run",
     "test:watch": "vitest --watch",
     "test:update": "vitest -u",
@@ -156,7 +155,7 @@
     "check:ts": "tsc --noEmit --pretty",
     "check:linting": "eslint src --color",
     "check:formatting": "prettier src --check",
-    "release": "pnpm build:lib && changeset publish"
+    "release": "pnpm build && changeset publish"
   },
   "keywords": [
     "Orfium",
