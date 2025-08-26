@@ -1,0 +1,11 @@
+import { SerializedStyles } from '@emotion/react';
+import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
+import { Theme } from '../../theme';
+import { NotificationStyleType } from '../Notification/Notification';
+export declare const toastContainer: (type: AcceptedColorComponentTypes, styleType: NotificationStyleType) => (theme: Theme) => SerializedStyles;
+export declare const topContainer: (type: AcceptedColorComponentTypes) => (theme: Theme) => SerializedStyles;
+export declare const infoContainer: () => (theme: Theme) => SerializedStyles;
+export declare const infoIconContainer: () => (theme: Theme) => SerializedStyles;
+export declare const actionIconsContainer: () => (theme: Theme) => SerializedStyles;
+export declare const chevronIconContainer: (isExpanded: boolean) => () => SerializedStyles;
+export declare const expandedContainer: (type: AcceptedColorComponentTypes, isExpanded: boolean, hasMinimumHeight: boolean) => (theme: Theme) => SerializedStyles;

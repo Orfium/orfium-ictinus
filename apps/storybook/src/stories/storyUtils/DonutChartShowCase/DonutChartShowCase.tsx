@@ -1,0 +1,27 @@
+import React from 'react';
+
+import { DonutChart } from '@orfium/ictinus';
+
+const totalClaims = 1102545485;
+const orfiumViewsPercentage = 0.129;
+const otherViewsPercentage = 1 - orfiumViewsPercentage;
+
+const data = [
+  { name: 'Orfium', value: totalClaims * orfiumViewsPercentage, color: '#f5781b' },
+  { name: 'Others', value: totalClaims * otherViewsPercentage, color: '#dfdfdf' },
+];
+
+type DonutChartShowCaseProps = {
+  chartValue?: string | number;
+  chartUnits?: string;
+};
+
+const DonutChartShowCase: React.FCC<DonutChartShowCaseProps> = ({ chartValue, chartUnits }) => {
+  return (
+    <div style={{ width: 200, height: 200 }}>
+      <DonutChart data={data} value={chartValue} units={chartUnits} />
+    </div>
+  );
+};
+
+export default DonutChartShowCase;

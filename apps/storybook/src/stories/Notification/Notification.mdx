@@ -1,0 +1,166 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/addon-docs/blocks';
+import { ToastV4 as Toast, NotificationVisual, Snackbar, InlineNotification, Banner } from '@orfium/ictinus';
+import * as NotificationStories from './Notification.stories';
+
+<Meta of={NotificationStories} />
+
+<SectionHeader
+  title={'Notifications'}
+  isPending
+  sections={[
+    { title: 'Inline Notification', href: '#inline-notification' },
+    { title: 'Banner Notification', href: '#banner-notification' },
+    { title: 'Toast Notification', href: '#toast-notification' },
+    { title: 'Snackbar Notification', href: '#snackbar-notification' },
+  ]}
+/>
+
+## Overview
+
+the “Notification” group contains all elements that can be used to inform the user on the outcome of an action they previously took.
+Notification variants include:
+
+1. Inline: For use within forms and content containers. Use in close proximity to the element they are referring to
+2. Banner: For use above all content containers - use for more important, global notifications that need to appear above all content
+3. Toast: Use interchangeably as needed when conveying feedback on actions the user took that utilize immediate feedback within the same page
+4. Snackbar: Highly disruptive notification variant, used to help user confirm they want to do a -usually- destructive action (e.g. “Are you sure you want to leave?”)
+
+## Inline Notification
+
+<Alert
+  status="warning"
+  action={{
+    url: '../?path=/docs/updated-components-notifications-inline-alert--overview',
+    content: 'View inline alert docs',
+  }}
+  description="Inline Notification has been deprecated; use Inline Alert instead."
+/>
+
+### Props
+
+<ArgTypes of={InlineNotification} />
+
+### Usage
+
+```js
+import { InlineNotification } from '@orfium/ictinus';
+
+<InlineNotification
+  hasIcon
+  message="Message"
+  type="info"
+  primaryCTALabel="Action"
+  primaryCTA={() => null}
+  closeCTA={() => null}
+/>;
+```
+
+<Canvas of={NotificationStories.InlineNotificationStory} />
+
+## Banner Notification
+
+<Alert
+  status="warning"
+  action={{
+    url: '../?path=/docs/updated-components-notifications-broadcast--overview',
+    content: 'View broadcast docs',
+  }}
+  description="Banner Notification has been deprecated; use Broadcast instead."
+/>
+
+### Props
+
+<ArgTypes of={Banner} />
+
+### Usage
+
+```js
+import { NotificationsContainer, Banner } from '@orfium/ictinus';
+
+<NotificationsContainer position="bottom-right">
+  <Banner
+    hasIcon
+    title="Title"
+    message="Informative Message"
+    type="info"
+    primaryCTALabel="Action"
+    primaryCTA={() => null}
+    closeCTA={() => null}
+  />
+  // add more Banners components here if needed
+</NotificationsContainer>;
+```
+
+<Canvas of={NotificationStories.BannerNotification} />
+
+## Toast Notification
+
+### Toast Props
+
+<ArgTypes of={Toast} />
+
+### NotificationVisual Props
+
+<ArgTypes of={NotificationVisual} />
+
+### Usage
+
+```js
+import { Toast, NotificationVisual } from '@orfium/ictinus';
+
+<NotificationsContainer position="bottom-right">
+  <Toast message="message" type="info" isExpanded hasMinimumHeight={false} closeCTA={closeCTA}>
+    <NotificationVisual
+      title="title"
+      primaryCTALabel="Primary CTA Label"
+      primaryCTA={primaryCTA}
+      secondaryCTALabel="Secondary CTA Label"
+      secondaryCTA={secondaryCTA}
+      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est porttitor"
+    />
+  </Toast>
+</NotificationsContainer>;
+```
+
+<Canvas of={NotificationStories.ToastNotification} />
+
+## Snackbar Notification
+
+### Props
+
+<ArgTypes of={Snackbar} />
+
+### Usage
+
+```js
+import { Snackbar } from '@orfium/ictinus';
+
+<NotificationsContainer position="bottom-right">
+  <Snackbar
+    message="message"
+    type="info"
+    primaryCTALabel="Primary CTA Label"
+    primaryCTA={primaryCTA}
+    secondaryCTALabel="Secondary CTA Label"
+    secondaryCTA={secondaryCTA}
+    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est porttitor"
+    closeCTA={closeCTA}
+  />
+</NotificationsContainer>;
+```
+
+<Canvas of={NotificationStories.SnackbarNotification} />
+
+## Playground 1
+
+<Canvas of={NotificationStories.Playground1} />
+
+## Playground 2
+
+<Canvas of={NotificationStories.Playground2} />
+
+## Playground 3
+
+Notifications contained within a specific parent
+
+<Canvas of={NotificationStories.Playground3} />

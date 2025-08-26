@@ -199,9 +199,28 @@
     "emotion",
     "design system"
   ],
+  "scripts": {
+    "clean": "rm -rf node_modules && pnpm -r exec rm -rf node_modules"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Orfium/orfium-ictinus.git"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7"
+  },
+  "dependencies": {
+    "@emotion/babel-plugin": "^11.11.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@emotion/eslint-plugin": "^11.11.0",
+    "@emotion/jest": "^11.11.0",
+    "@emotion/serialize": "^1.3.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router": "^6.21.3",
+    "react-router-dom": "^6.21.3"
   },
   "bugs": {
     "url": "https://github.com/Orfium/orfium-ictinus/issues"

@@ -1,0 +1,1 @@
+"use strict";const u=(n,r)=>{const e=r.jscodeshift,o=e(n.source);return o.findJSXElements("RadioGroup").forEach(s=>{e(s).find(e.JSXAttribute).forEach(t=>{const c=t.node.name;["defaultValue","name"].includes(c.name)&&e(t).remove()})}),o.toSource({quote:"single"})};module.exports=u;

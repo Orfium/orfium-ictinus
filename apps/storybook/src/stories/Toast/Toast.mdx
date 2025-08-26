@@ -1,0 +1,154 @@
+import { Meta, Canvas, ArgTypes, Story, Primary } from '@storybook/addon-docs/blocks';
+import * as ToastStories from './Toast.stories';
+import { Toast } from '@orfium/ictinus';
+
+<Meta of={ToastStories} />
+
+<SectionHeader
+  title="Toast"
+  sections={[
+    { title: 'Overview', href: '#overview' },
+    { title: 'Props', href: '#props' },
+    { title: 'Usage', href: '#usage' },
+    { title: 'Variants', href: '#variants' },
+    { title: 'Actions', href: '#actions' },
+    { title: 'Advanced', href: '#advanced' },
+  ]}
+/>
+
+## Overview
+
+Toasts are temporary messages that inform users of a process that an app has performed or will perform without disrupting their workflow.
+
+<Canvas of={ToastStories.Neutral} />
+
+## Props
+
+The primary way to display toast notifications is through the `toast(<content>, <options>)` function.
+
+<ArgTypes of={ToastStories} />
+
+#### Return Value
+
+Returns a unique toast ID that can be used with `toast.dismiss(id)` for programmatic control.
+
+#### Usage Examples
+
+```javascript
+import { toast, ToastContainer } from '@orfium/ictinus';
+
+// First, render a toast container at the root of your app:
+<ToastContainer />;
+
+// Basic usage
+toast('Operation completed successfully');
+
+// With status
+toast('Something went wrong', { status: 'error' });
+
+// With actions
+toast('File uploaded', {
+  status: 'success',
+  actions: <Link>View file</Link>,
+});
+
+// With multiple actions
+toast('Confirm this action', {
+  actions: [<Button type="tertiary">Cancel</Button>, <Button>Confirm</Button>],
+});
+
+// Controlled toast
+const toastId = toast('Processing...', {
+  onClose: () => console.log('Toast closed'),
+});
+
+// Dismiss programmatically
+toast.dismiss(toastId);
+```
+
+### ToastContainer
+
+The `<ToastContainer />` container component manages toast positioning and rendering.
+
+## Usage
+
+<UsageGuidelines
+  guidelines={[
+    `To provide a contextual message based on a user's actions in the same view the action just took place in.`,
+  ]}
+  policies={[
+    'To communicate an error to a user, use an alert instead.',
+    `If it's an irreversible/destructive action, use a dialog instead.`,
+    'If a message needs to be communicated after a user visits a new page, use an alert instead.',
+    'If you want to promote a feature or communicate additional functionality, use a banner instead.',
+  ]}
+/>
+
+### Basic Toast
+
+The simplest form of a toast displays a message with neutral styling. Toasts automatically dismiss after a timeout period (default 5 seconds) and can be manually dismissed by users.
+
+<Canvas of={ToastStories.Neutral} />
+
+### Toast Placement
+
+Toasts can be positioned in different corners of the screen using the `placement` prop on the `ToastContainer`. The available options are:
+
+- `bottom right` (default)
+- `bottom left`
+
+Configure placement at the container level to affect all toasts in your application.
+
+## Variants
+
+### Informational
+
+<Canvas of={ToastStories.Informational} />
+
+### Success
+
+<Canvas of={ToastStories.Success} />
+
+### Warning
+
+<Canvas of={ToastStories.Warning} />
+
+### Error
+
+<Canvas of={ToastStories.Error} />
+
+## Actions
+
+### Single Action
+
+<Canvas of={ToastStories.Neutral} />
+
+### Multiple Actions
+
+<Canvas of={ToastStories.WithButtons} />
+
+### Close on Action
+
+Control whether the toast automatically closes when an action is clicked using the `shouldCloseOnAction` prop.
+
+<Canvas of={ToastStories.ShouldCloseOnAction} />
+
+## Advanced
+
+### Custom Content
+
+Toasts accept both string content and React elements, allowing for custom layouts and icons.
+
+<Canvas of={ToastStories.WithCustomIcon} />
+
+### Controlled Toasts
+
+For advanced use cases, you can programmatically control toast visibility and dismissal.
+
+<Canvas of={ToastStories.Controlled} />
+
+### Playground
+
+Experiment with different configurations using the interactive playground:
+
+<Canvas of={ToastStories.Playground} />

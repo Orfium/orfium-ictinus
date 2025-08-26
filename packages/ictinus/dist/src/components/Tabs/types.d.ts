@@ -1,0 +1,64 @@
+import { CSSObject } from '@emotion/react';
+import { AriaAttributes } from 'react';
+import { Orientation as TabOrientation } from 'react-aria';
+import { Key as TabKey } from 'react-aria-components';
+import { TestProps } from '../../utils/types';
+export type { Orientation as TabOrientation } from 'react-aria';
+export type { Key as TabKey } from 'react-aria-components';
+export type TabItem = {
+    /** A unique id for the tab item */
+    id: string;
+    /** The label of the tab */
+    label: string;
+    /** Optional counter */
+    counter?: number | string;
+};
+export type TabsStylesOverrides = {
+    tabsContainer?: CSSObject;
+    tabList?: CSSObject;
+    tab?: CSSObject;
+};
+export type TabsProps = {
+    /** The orientation of the Tab */
+    orientation?: TabOrientation;
+    /** The id of the selected tab */
+    selectedKey: TabKey;
+    /** Callback to change the selected tab */
+    onSelectionChange: (key: TabKey) => void;
+    /** The items (tabs) */
+    items: TabItem[];
+    children?: any;
+    /** Style overrides for Tabs */
+    sx?: TabsStylesOverrides;
+} & AriaAttributes & TestProps;
+export type TabsContainerProps = {
+    /** The orientation of the Tab */
+    orientation?: TabOrientation;
+    /** The id of the selected tab */
+    selectedKey: TabKey;
+    /** Callback to change the selected tab */
+    onSelectionChange: (key: TabKey) => void;
+    children: any;
+    /** Style overrides for TabContainer */
+    sx?: CSSObject;
+} & AriaAttributes;
+export type TabProps = {
+    /** The id of the tab; it's also used as an indicator of the tab when using selection state */
+    id: string;
+    children: any;
+    /** Style overrides for Tab */
+    sx?: CSSObject;
+};
+export type TabListProps = {
+    /** Style overrides for Tabs */
+    sx?: CSSObject;
+    children: any;
+} & AriaAttributes;
+export type TabPanelProps = {
+    /** The id of the tab the content corresponds to */
+    id: string;
+    /** The content of the tab panel */
+    children: any;
+    /** Style overrides for TabList */
+    sx?: CSSObject;
+};

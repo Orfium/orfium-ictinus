@@ -1,0 +1,99 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/addon-docs/blocks';
+import { DatePicker } from '@orfium/ictinus';
+import * as DatePickerStories from './DatePicker.stories';
+import {
+  DateRangeDummyStory,
+  DisabledDatesDummyStory,
+  ExtraOptionDummyStory,
+} from '../storyUtils/componentsForTypes';
+
+<Meta of={DatePickerStories} />
+
+<SectionHeader
+  title={'DatePicker'}
+  sections={[
+    { title: 'Overview', href: '#overview' },
+    { title: 'Props', href: '#props' },
+    { title: 'Usage', href: '#usage' },
+    { title: 'Variants', href: '#variants' },
+  ]}
+/>
+
+## Overview
+
+{' '}
+
+A universal DatePicker component that allows the user to select a single date or a range of dates.
+User may either type the date in the suggested format (text input) or click on the ‘calendar’ icon
+to the right to open the date picker modal.
+
+## Props
+
+<ArgTypes of={DatePicker} />
+
+#### DisabledDates Prop
+
+<ArgTypes of={DisabledDatesDummyStory} />
+
+#### DateRange Prop
+
+<ArgTypes of={DateRangeDummyStory} />
+
+#### ExtraOption Prop
+
+<ArgTypes of={ExtraOptionDummyStory} />
+
+## Usage
+
+<UsageGuidelines
+  guidelines={['Use when you need to enter a single date']}
+  policies={['If you need to enter a date range, use date range picker instead']}
+/>
+
+<SubsectionHeader title="Variants" />
+
+### DatePicker
+
+Implementation of the regular DatePicker
+
+<Canvas of={DatePickerStories.DatePickerStory} />
+
+### DateRangePicker
+
+Implementation of the regular DateRangePicker
+
+<Canvas of={DatePickerStories.DateRangePicker} />
+
+### DateRangePicker with preset options
+
+Implementation of the regular DatePicker with preset options
+
+<Canvas of={DatePickerStories.DateRangePickerWithPresetOptions} />
+
+### DatePicker with Filter
+
+Implementation of the DatePicker with a Filter instead of a TextField
+
+<Canvas of={DatePickerStories.DatePickerWithFilter} />
+
+### DatePicker with disabled dates
+
+Some disable dates functionality
+
+<Canvas of={DatePickerStories.DatePickerWithDisabledDates} />
+
+### DatePicker and DateRangePicker statuses
+
+DatePicker and DateRangePicker inherit all TextField statuses behavior.
+
+<Canvas of={DatePickerStories.DatePickerAndDateRangePickerStatuses} />
+
+### Disabled DatePicker & DateRangePicker
+
+Disabled DatePicker & DateRangePicker
+
+<Canvas of={DatePickerStories.DisabledDatePickerDateRangePicker} />
+
+### Playground
+
+<Canvas of={DatePickerStories.Playground} />

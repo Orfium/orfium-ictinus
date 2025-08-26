@@ -1,0 +1,1 @@
+"use strict";const i=(e,c)=>{const t=c.jscodeshift,o=t(e.source);return o.findJSXElements("InlineNotification").forEach(r=>{t(r).find(t.JSXAttribute).forEach(s=>{const n=s.node.name;n.name==="withIcon"&&(n.name="hasIcon")})}),o.toSource()};module.exports=i;

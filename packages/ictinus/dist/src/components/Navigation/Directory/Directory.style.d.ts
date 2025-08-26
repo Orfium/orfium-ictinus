@@ -1,0 +1,10 @@
+import { SerializedStyles } from '@emotion/react';
+import { Theme } from 'theme';
+export declare const directoryContainerStyle: (isExpanded: boolean) => () => SerializedStyles;
+export declare const menuItemStyle: () => (theme: Theme) => SerializedStyles;
+export declare const menuLinkStyle: () => (theme: Theme) => SerializedStyles;
+export declare const menuItemTextStyle: (isCurrent: boolean) => (theme: Theme) => SerializedStyles;
+export declare const subMenuLinkStyle: () => (theme: Theme) => SerializedStyles;
+export declare const arrowContainerStyle: (isOpen: boolean, isVisible: boolean) => () => SerializedStyles;
+export declare const menuIconStyle: () => (theme: Theme) => SerializedStyles;
+export declare const subMenuIconStyle: () => (theme: Theme) => SerializedStyles;

@@ -1,0 +1,21 @@
+import { Row, Selection, TableType } from '../../types';
+export type TableRowWrapperProps<T> = {
+    row: Row<T>;
+    isRowSelected: boolean;
+    onSelectionAdd: (selection: Selection) => void;
+    columnsWithWidth: number[];
+    isPadded: boolean;
+    hasOnSelectionChange: boolean;
+    columnCount: number;
+    columns: string[];
+    hasFixedHeader: boolean;
+    type: TableType;
+    isExpanded: boolean;
+    actionWidth?: number;
+    isInitiallyExpanded: boolean;
+    dataTestIdPrefix?: string;
+    rowIndex?: number;
+};
+declare const TableRowWrapper: <T extends Record<string, unknown>>(props: TableRowWrapperProps<T>) => import("@emotion/react/jsx-runtime").JSX.Element;
+declare const _default: typeof TableRowWrapper;
+export default _default;

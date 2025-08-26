@@ -1,0 +1,42 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/addon-docs/blocks';
+import { Card } from '@orfium/ictinus';
+import * as CardStories from './Card.stories';
+
+<Meta of={CardStories} />
+
+<SectionHeader
+  title={'Card'}
+  isPending
+  sections={[
+    { title: 'Overview', href: '#overview' },
+    { title: 'Props', href: '#props' },
+    { title: 'Usage', href: '#usage' },
+    { title: 'Variants', href: '#variants' },
+  ]}
+/>
+
+## Overview
+
+A universal Card component that is wrapper for other components
+
+## Props
+
+<ArgTypes of={Card} />
+
+## Usage
+
+```js
+import { Card } from '@orfium/ictinus';
+
+<Card elevated={'01'}>
+  <div>Content</div>
+</Card>;
+```
+
+<SubsectionHeader title="Variants" />
+
+### Card with Elevation
+
+Card with Elevation
+
+<Canvas of={CardStories.CardWithElevation} />
