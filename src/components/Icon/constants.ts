@@ -81,6 +81,7 @@ export const iconsSet: IconSet = {
     icons: [
       'chat',
       'mail',
+      'details',
       'externalLink',
       'moreOptions',
       'filter',
