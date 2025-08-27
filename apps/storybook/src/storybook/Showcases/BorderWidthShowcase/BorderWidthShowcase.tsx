@@ -2,9 +2,11 @@ import { useTheme } from '@orfium/ictinus';
 import { get } from 'lodash-es';
 import { rem } from 'polished';
 import { WrapperStyle } from 'storybook/styles/OverviewCard.style';
-import type { DimensionBorderWidthKey } from 'theme/dimension/borderWidth';
-import dimensionBorderWidth from 'theme/dimension/variables/borderWidth';
-import { convertRemToPixels } from 'theme/utils';
+import {
+  convertRemToPixels,
+  type DimensionBorderWidthKey,
+  dimensionVariables,
+} from '@orfium/ictinus';
 
 import { Typography } from '@orfium/ictinus';
 import { getAllPaths } from '../TokenColorsShowcase/utils';
@@ -12,7 +14,7 @@ import { getAllPaths } from '../TokenColorsShowcase/utils';
 const BorderWidthShowcase = () => {
   const theme = useTheme();
 
-  const keys = getAllPaths(dimensionBorderWidth);
+  const keys = getAllPaths(dimensionVariables.borderWidth);
 
   const boxSize = 64;
 
@@ -37,14 +39,14 @@ const BorderWidthShowcase = () => {
                 $borderRadius.{key}
               </Typography>
               <Typography variant="body02" type="secondary" component="div">
-                {`${get(dimensionBorderWidth, key).value} =
+                {`${get(dimensionVariables.borderWidth, key).value} =
                 ${convertRemToPixels(
                   theme.dimension.borderWidth.get(key as DimensionBorderWidthKey)
                 )}px`}
               </Typography>
-              {get(dimensionBorderWidth, key).description && (
+              {get(dimensionVariables.borderWidth, key).description && (
                 <Typography variant="body02" type="secondary" component="div">
-                  {get(dimensionBorderWidth, key).description}
+                  {get(dimensionVariables.borderWidth, key).description}
                 </Typography>
               )}
             </div>

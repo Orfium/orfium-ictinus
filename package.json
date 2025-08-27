@@ -212,7 +212,8 @@
     "check:linting": "turbo run check:linting --affected",
     "check:precommit": "turbo run check:precommit --affected",
     "check:formatting": "turbo run check:formatting",
-    "clean": "rm -rf node_modules && pnpm -r exec rm -rf node_modules"
+    "clean": "rm -rf node_modules && pnpm -r exec rm -rf node_modules",
+    "release": "turbo run build --filter='./packages/*' && changeset publish"
   },
   "repository": {
     "type": "git",
@@ -221,6 +222,7 @@
   "devDependencies": {
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
+    "husky": "^9.1.7",
     "turbo": "^2.5.6"
   },
   "dependencies": {
@@ -233,7 +235,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router": "^6.21.3",
-    "react-router-dom": "^6.21.3"
+    "react-router-dom": "^6.21.3",
+    "typescript": "^5.9.2"
   },
   "bugs": {
     "url": "https://github.com/Orfium/orfium-ictinus/issues"

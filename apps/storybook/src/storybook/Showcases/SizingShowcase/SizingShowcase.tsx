@@ -1,11 +1,12 @@
-import { useTheme } from '@orfium/ictinus';
+import {
+  convertRemToPixels,
+  type DimensionSizingKey,
+  dimensionVariables,
+  type SizingKey,
+  useTheme,
+} from '@orfium/ictinus';
 import { get } from 'lodash-es';
 import { WrapperStyle } from 'storybook/styles/OverviewCard.style';
-import type { DimensionSizingKey } from 'theme/dimension/sizing';
-import dimensionSizing from 'theme/dimension/variables/sizing';
-import globalSizing from 'theme/globals/constants/sizing';
-import type { SizingKey } from 'theme/globals/sizing';
-import { convertRemToPixels } from 'theme/utils';
 
 import { Typography } from '@orfium/ictinus';
 import { getAllPaths } from '../TokenColorsShowcase/utils';
@@ -16,7 +17,7 @@ type Props = {
 
 const SizingShowcase = ({ type = 'global' }: Props) => {
   const isGlobal = type === 'global';
-  const sizingObject = isGlobal ? globalSizing : dimensionSizing;
+  const sizingObject = isGlobal ? dimensionVariables.sizing : dimensionVariables.sizing;
 
   const theme = useTheme();
 

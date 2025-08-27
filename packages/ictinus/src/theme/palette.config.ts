@@ -1,9 +1,11 @@
 import type { flatColors, paleColors } from './palette';
 
-export type FlatPaletteConfig = Partial<Record<typeof flatColors[number], string>>;
+// @deprecated
+export type FlatPaletteConfig = Partial<Record<(typeof flatColors)[number], string>>;
 
 /** @TODO remove this when all components are revisited for v5 */
-export type PalePaletteConfig = Partial<Record<typeof paleColors[number], string>>;
+// @deprecated
+export type PalePaletteConfig = Partial<Record<(typeof paleColors)[number], string>>;
 
 /** @TODO remove this when all components are revisited for v5 */
 export type TextPaletteConfig = {
@@ -47,7 +49,7 @@ export type PaletteConfig = {
   black?: string;
 };
 
-export const flatPaletteConfig: Record<typeof flatColors[number], string> = {
+export const flatPaletteConfig: Record<(typeof flatColors)[number], string> = {
   orange: '#FF9F0F',
   red: '#FF176B',
   lightPurple: '#a8b1ff',
@@ -70,7 +72,7 @@ export const flatPaletteConfig: Record<typeof flatColors[number], string> = {
 };
 
 /** @TODO remove all these when all components are revisited for v5 */
-export const palePaletteConfig: Record<typeof paleColors[number], string> = {
+export const palePaletteConfig: Record<(typeof paleColors)[number], string> = {
   greyScale: '#F9F9F9',
   darkGrey: '#F5F5F6',
   lightGrey: '#F9FAFC',

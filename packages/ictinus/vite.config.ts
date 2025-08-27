@@ -47,7 +47,6 @@ export default defineConfig(({ mode }) => {
     // Define these to keep compatibility with ictinus, toolbox and SSO
     define: {
       'process.env.NODE_ENV': JSON.stringify(mode),
-      'process.env.STORYBOOK_ENV': JSON.stringify(env.STORYBOOK_ENV),
       'process.env.PORT': JSON.stringify(env.PORT),
     },
     plugins,

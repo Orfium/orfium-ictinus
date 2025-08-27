@@ -1,11 +1,12 @@
 import { useTheme } from '@orfium/ictinus';
 import { get } from 'lodash-es';
 import { WrapperStyle } from 'storybook/styles/OverviewCard.style';
-import type { DimensionSpacingKey } from 'theme/dimension/spacing';
-import dimensionSpacing from 'theme/dimension/variables/spacing';
-import globalSpacing from 'theme/globals/constants/spacing';
-import type { SpacingKey } from 'theme/globals/spacing';
-import { convertRemToPixels } from 'theme/utils';
+import {
+  convertRemToPixels,
+  type DimensionSpacingKey,
+  dimensionVariables,
+  type SpacingKey,
+} from '@orfium/ictinus';
 
 import { Typography } from '@orfium/ictinus';
 import { getAllPaths } from '../TokenColorsShowcase/utils';
@@ -16,7 +17,7 @@ type Props = {
 
 const SpacingSizingShowcase = ({ type = 'global' }: Props) => {
   const isGlobal = type === 'global';
-  const spacingObject = isGlobal ? globalSpacing : dimensionSpacing;
+  const spacingObject = isGlobal ? dimensionVariables.spacing : dimensionVariables.spacing;
 
   const theme = useTheme();
 

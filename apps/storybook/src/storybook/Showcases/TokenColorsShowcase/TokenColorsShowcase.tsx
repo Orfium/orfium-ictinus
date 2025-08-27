@@ -2,9 +2,11 @@ import { css } from '@emotion/react';
 import { useTheme } from '@orfium/ictinus';
 import { get } from 'lodash-es';
 import type { FCC } from 'react';
-import globalColors from 'theme/globals/constants/colors';
-import semColors from 'theme/tokens/semantic/variables/colors';
-import type { DotKeys } from 'theme/tokens/utils';
+import {
+  type DotKeys,
+  globalColors,
+  semanticVariablesColors,
+} from '@orfium/ictinus';
 
 import { Card, Typography } from '@orfium/ictinus';
 import { colorStyle, descriptionStyle, typeWrapperStyle } from './TokenColorsShowcase.style';
@@ -20,7 +22,7 @@ type Props = {
 const TokenColorsShowcase: FCC<Props> = ({ type = 'globals' }) => {
   const isGlobal = type === 'globals';
 
-  const colorsObjFigma = isGlobal ? globalColors : semColors;
+  const colorsObjFigma = isGlobal ? semanticVariablesColors : semanticVariablesColors;
 
   const colorsObj = getColors(colorsObjFigma);
 
@@ -46,7 +48,7 @@ const TokenColorsShowcase: FCC<Props> = ({ type = 'globals' }) => {
             <>
               {' = '}
               <Typography variant="label03" component="span" type="active">
-                {theme.tokens.colors.get(`${category}.${path}` as DotKeys<typeof semColors>)}
+                {theme.tokens.colors.get(`${category}.${path}` as DotKeys<typeof semanticVariablesColors>)}
               </Typography>
             </>
           )}
@@ -71,7 +73,7 @@ const TokenColorsShowcase: FCC<Props> = ({ type = 'globals' }) => {
                 `${color}.${colorsObj[color][variant]}` as DotKeys<typeof globalColors>
               )
             : theme.tokens.colors.get(
-                `${color}.${colorsObj[color][variant]}` as DotKeys<typeof semColors>
+                `${color}.${colorsObj[color][variant]}` as DotKeys<typeof semanticVariablesColors>
               )};
         `}
       />

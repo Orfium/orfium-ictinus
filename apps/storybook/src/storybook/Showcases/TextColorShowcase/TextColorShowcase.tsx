@@ -1,7 +1,9 @@
 import { useTheme } from '@orfium/ictinus';
 import { useMemo } from 'react';
-import type { SemanticColorsKey } from 'theme/tokens/semantic/colors';
-import colors from 'theme/tokens/semantic/variables/colors';
+import {
+  type SemanticColorsKey,
+  semanticVariablesColors,
+} from '@orfium/ictinus';
 
 import { Typography, type TextColorTypes } from '@orfium/ictinus';
 import { descriptionStyle, dividerStyle } from './TextColorShowcase.style';
@@ -13,7 +15,7 @@ const TextColorShowcase = () => {
     [key: string]: { label: string; type: string; value: string; hex: string }[];
   } = useMemo(
     () =>
-      Object.entries(colors.textColor).reduce((acc, [key, value]) => {
+      Object.entries(semanticVariablesColors.textColor).reduce((acc, [key, value]) => {
         acc[key] = Object.entries(value).map(([nestedKey, nestedValue]) => ({
           label: `sem.textColor.${key}.${nestedKey}`,
           type: nestedKey,

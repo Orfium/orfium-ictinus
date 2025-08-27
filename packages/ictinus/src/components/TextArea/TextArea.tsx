@@ -3,7 +3,8 @@ import isEqual from 'react-fast-compare';
 import type { TestProps } from 'utils/types';
 
 import { hintMessageStyle, sxProp } from './TextArea.style';
-import { Label, useTheme } from '../../index';
+import Label from '../Label';
+import useTheme from '~/hooks/useTheme';
 import type { TextInputBaseProps } from '../TextInputBase/TextInputBase';
 import TextInputBase from '../TextInputBase/TextInputBase';
 import { inputStyle as baseInputStyle } from 'components/TextInputBase/TextInputBase.style';

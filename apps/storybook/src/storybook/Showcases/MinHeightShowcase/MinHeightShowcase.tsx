@@ -1,9 +1,12 @@
-import { useTheme } from '@orfium/ictinus';
+import {
+  convertRemToPixels,
+  type DimensionMinHeightKey,
+  dimensionVariables,
+  rem,
+  useTheme,
+} from '@orfium/ictinus';
 import { get } from 'lodash-es';
 import { WrapperStyle } from 'storybook/styles/OverviewCard.style';
-import type { DimensionMinHeightKey } from 'theme/dimension/minHeight';
-import dimensionMinHeight from 'theme/dimension/variables/minHeight';
-import { convertRemToPixels, rem } from 'theme/utils';
 
 import { Typography } from '@orfium/ictinus';
 import { getAllPaths } from '../TokenColorsShowcase/utils';
@@ -11,7 +14,7 @@ import { getAllPaths } from '../TokenColorsShowcase/utils';
 const MinHeightShowcase = () => {
   const theme = useTheme();
 
-  const keys = getAllPaths(dimensionMinHeight);
+  const keys = getAllPaths(dimensionVariables.minHeight);
 
   const boxSize = 100;
 
@@ -33,14 +36,14 @@ const MinHeightShowcase = () => {
                 $minHeight.{key}
               </Typography>
               <Typography variant="body02" type="secondary" component="div">
-                {`${get(dimensionMinHeight, key).value} =
+                {`${get(dimensionVariables.minHeight, key).value} =
                 ${convertRemToPixels(
                   theme.dimension.minHeight.get(key as DimensionMinHeightKey)
                 )}px`}
               </Typography>
-              {get(dimensionMinHeight, key).description && (
+              {get(dimensionVariables.minHeight, key).description && (
                 <Typography variant="body02" type="secondary" component="div">
-                  {get(dimensionMinHeight, key).description}
+                  {get(dimensionVariables.minHeight, key).description}
                 </Typography>
               )}
             </div>

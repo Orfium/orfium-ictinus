@@ -1,9 +1,11 @@
-import { useTheme } from '@orfium/ictinus';
+import {
+  convertRemToPixels,
+  type DimensionStateKey,
+  dimensionVariables,
+  useTheme,
+} from '@orfium/ictinus';
 import { get } from 'lodash-es';
 import { WrapperStyle } from 'storybook/styles/OverviewCard.style';
-import type { DimensionStateKey } from 'theme/dimension/state';
-import dimensionState from 'theme/dimension/variables/state';
-import { convertRemToPixels } from 'theme/utils';
 
 import { Typography } from '@orfium/ictinus';
 import { getAllPaths } from '../TokenColorsShowcase/utils';
@@ -11,7 +13,7 @@ import { getAllPaths } from '../TokenColorsShowcase/utils';
 const StateShowcase = () => {
   const theme = useTheme();
 
-  const keys = getAllPaths(dimensionState);
+  const keys = getAllPaths(dimensionVariables.state);
 
   return (
     <div css={WrapperStyle}>
@@ -31,7 +33,7 @@ const StateShowcase = () => {
                 $state.{key}
               </Typography>
               <Typography variant="body02" type="secondary" component="div">
-                {`${get(dimensionState, key).value} = ${convertRemToPixels(
+                {`${get(dimensionVariables.state, key).value} = ${convertRemToPixels(
                   theme.dimension.state.get(key as DimensionStateKey)
                 )}px`}
               </Typography>

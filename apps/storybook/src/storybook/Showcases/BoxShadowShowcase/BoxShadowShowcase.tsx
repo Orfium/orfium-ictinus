@@ -2,8 +2,10 @@ import { useTheme } from '@orfium/ictinus';
 import { map } from 'lodash-es';
 import { rem } from 'polished';
 import { WrapperStyle } from 'storybook/styles/OverviewCard.style';
-import type { SemanticBoxShadowKey } from 'theme/tokens/semantic/boxShadow';
-import boxShadow from 'theme/tokens/semantic/variables/boxShadow';
+import {
+  type SemanticBoxShadowKey,
+  semanticVariablesBoxShadow,
+} from '@orfium/ictinus';
 
 import { Typography } from '@orfium/ictinus';
 
@@ -18,7 +20,7 @@ const BoxShadowShowcase = () => {
       type: string;
     };
     type: string;
-  }>(boxShadow);
+  }>(semanticVariablesBoxShadow);
   const boxSize = 72;
   const theme = useTheme();
 

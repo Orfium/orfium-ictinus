@@ -10,6 +10,7 @@ import * as spacing from './theme/globals/spacing';
 import * as typography from './theme/globals/typography';
 import * as overrides from './theme/overrides';
 import * as palette from './theme/palette';
+export { convertRemToPixels } from './theme/utils';
 export * from './theme/functions';
 
 export type { Theme } from './theme';
@@ -27,6 +28,25 @@ export type {
 } from './theme/palette';
 export type { AcceptedColorComponentTypes } from './utils/themeFunctions';
 export type { TestProps } from './utils/types';
+export { default as globalColors } from './theme/globals/constants/colors';
+
+import { default as dimensionOpacity } from './theme/dimension/variables/opacity';
+import { default as dimensionSizing } from './theme/dimension/variables/sizing';
+import { default as dimensionSpacing } from './theme/dimension/variables/spacing';
+import { default as dimensionState } from './theme/dimension/variables/state';
+import { default as dimensionBorderWidth } from './theme/dimension/variables/borderWidth';
+import { default as dimensionBorderRadius } from './theme/dimension/variables/borderRadius';
+import { default as dimensionMinHeight } from './theme/dimension/variables/minHeight';
+
+export const dimensionVariables = {
+  opacity: dimensionOpacity,
+  sizing: dimensionSizing,
+  spacing: dimensionSpacing,
+  state: dimensionState,
+  borderWidth: dimensionBorderWidth,
+  borderRadius: dimensionBorderRadius,
+  minHeight: dimensionMinHeight,
+};
 
 // Dimension types
 export type {
@@ -58,6 +78,8 @@ export type {
 
 // Semantic token types
 export type { SemanticBoxShadow, SemanticBoxShadowKey } from './theme/tokens/semantic/boxShadow';
+export { default as semanticVariablesColors } from './theme/tokens/semantic/variables/colors';
+export { default as semanticVariablesBoxShadow } from './theme/tokens/semantic/variables/boxShadow';
 export type { SemanticColors, SemanticColorsKey } from './theme/tokens/semantic/colors';
 export type { SemanticDisabledState } from './theme/tokens/semantic/disabledState';
 export type { SemanticState } from './theme/tokens/semantic/state';
@@ -67,6 +89,7 @@ export type {
   TypographyKeys,
   TypographyObject,
 } from './theme/tokens/semantic/typography';
+export { default as semanticVariablesTypography } from './theme/tokens/semantic/variables/typography';
 
 // Token utility types
 export type { DotKeys, Token, TokensObject } from './theme/tokens/utils/types';
@@ -243,6 +266,7 @@ export {
   getLocaleFormat,
   isComponentFunctionType,
 } from './utils/helpers';
+export { parseCompositionToken } from './theme/tokens/utils';
 export {
   backgroundPickerBasedOnType,
   calculateActualColorFromComponentProp,

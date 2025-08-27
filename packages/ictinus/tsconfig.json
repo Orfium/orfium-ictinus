@@ -32,8 +32,5 @@
   },
   "include": ["src", "__mocks__", "codemods"],
   "exclude": ["./dist", "node_modules"],
-  "references": [{ "path": "./tsconfig.node.json" }],
-  "mdx": {
-    "checkMdx": true
-  }
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

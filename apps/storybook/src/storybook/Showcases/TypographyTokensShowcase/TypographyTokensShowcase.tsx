@@ -1,15 +1,19 @@
 import { map } from 'lodash-es';
 import React from 'react';
-import typographyCollection from 'theme/tokens/semantic/variables/typography';
-import { parseCompositionToken } from 'theme/tokens/utils';
+import {
+  semanticVariablesTypography,
+  type TypographyVariant,
+  Typography,
+  parseCompositionToken
+} from '@orfium/ictinus';
 
 import { TableWrapperStyle, innerTableStyle } from './TypographyTokensShowcase.style';
-import { Typography, type TypographyVariant } from '@orfium/ictinus';
 
 const TypographyTokensShowcase = () => {
-  const typographyArray = map(typographyCollection.normal, (value, key) => ({ key, ...value }));
+  const typographyArray = map(semanticVariablesTypography.normal, (value, key) => ({ key, ...value }));
 
-  const parsedTypographyCompositionToken = parseCompositionToken(typographyCollection.normal);
+  const parsedTypographyCompositionToken = parseCompositionToken(
+    semanticVariablesTypography.normal);
 
   return (
     <table css={TableWrapperStyle} width="100%">

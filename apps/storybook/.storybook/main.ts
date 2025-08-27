@@ -50,10 +50,15 @@ module.exports = {
   typescript: {
     reactDocgen: 'react-docgen-typescript',
     reactDocgenTypescriptOptions: {
-      // Use the custom tsconfig that includes path mappings for ictinus package
-      tsconfigPath: path.resolve(process.cwd(), './tsconfig.app.json'),
       shouldExtractLiteralValuesFromEnum: true,
       shouldExtractValuesFromUnion: true,
+      compilerOptions: {
+        baseUrl: path.resolve(__dirname, '../../../packages/ictinus/src'),
+        paths: {
+          '~/*': [path.resolve(__dirname, '../../../packages/ictinus/src/*')],
+        },
+        esModuleInterop: true,
+      },
     },
   },
 

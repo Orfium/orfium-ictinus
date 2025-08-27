@@ -1,12 +1,13 @@
-import { useTheme } from '@orfium/ictinus';
+import {
+  type BorderRadiusKey,
+  convertRemToPixels,
+  type DimensionBorderRadiusKey,
+  dimensionVariables,
+  useTheme,
+} from '@orfium/ictinus';
 import { get } from 'lodash-es';
 import { rem } from 'polished';
 import { WrapperStyle } from 'storybook/styles/OverviewCard.style';
-import type { DimensionBorderRadiusKey } from 'theme/dimension/borderRadius';
-import dimensionBorderRadius from 'theme/dimension/variables/borderRadius';
-import type { BorderRadiusKey } from 'theme/globals/borderRadius';
-import globalBorderRadius from 'theme/globals/constants/borderRadius';
-import { convertRemToPixels } from 'theme/utils';
 
 import { Typography } from '@orfium/ictinus';
 import { getAllPaths } from '../TokenColorsShowcase/utils';
@@ -17,7 +18,9 @@ type Props = {
 
 const RadiusShowcase = ({ type = 'global' }: Props) => {
   const isGlobal = type === 'global';
-  const borderRadiusObject = isGlobal ? globalBorderRadius : dimensionBorderRadius;
+  const borderRadiusObject = isGlobal
+    ? dimensionVariables.borderRadius
+    : dimensionVariables.borderRadius;
 
   const theme = useTheme();
 
