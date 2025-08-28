@@ -56,6 +56,7 @@ export default defineConfig(({ mode }) => {
           'vanilla/index': path.resolve(__dirname, 'src/vanilla/index.ts'),
         },
         name: pkg.name,
+        cssFileName: 'styles',
       },
       minify: 'esbuild',
       outDir: 'dist',
