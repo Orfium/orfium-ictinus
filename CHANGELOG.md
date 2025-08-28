@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 5.39.3
+
+### Patch Changes
+
+- 9a6ce84: explicit generated css filename
+
 ## 5.39.2
 
 ### Patch Changes
