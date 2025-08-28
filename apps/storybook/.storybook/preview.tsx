@@ -1,10 +1,10 @@
 // THIS DECORATOR MUST GO FIRST, OR THE STORY SOURCE GENERATES INCORRECTLY
 // Add prop tables to components (based on component type interfaces)
 import styled from '@emotion/styled';
-import { ThemeProvider } from '@orfium/ictinus';
-import { Box } from '@orfium/ictinus/vanilla';
-import { DocsContainer } from '@storybook/addon-docs/blocks';
+import { Box, ThemeProvider } from '@orfium/ictinus';
+import { DocsContainer, type DocsContainerProps } from '@storybook/addon-docs/blocks';
 import type { Preview as SBPreview, StoryFn } from '@storybook/react-vite';
+import type { PropsWithChildren } from 'react';
 import {
   Alert,
   Note,
@@ -105,7 +105,7 @@ export const decorators = [
   ),
 ];
 
-const inputEmpty = styled.input(({ theme }) => ({}));
+const inputEmpty = styled.input(() => ({}));
 const preview: SBPreview = {
   decorators,
   parameters: {
@@ -146,14 +146,14 @@ const preview: SBPreview = {
         inline: true,
       },
 
-      container: (props: any) => (
+      container: (props: PropsWithChildren<DocsContainerProps>) => (
         <DocsContainer {...props}>
           <ThemeProvider>{props.children}</ThemeProvider>
         </DocsContainer>
       ),
 
       components: {
-        h1: ({ children, rest }: any) => (
+        h1: ({ children, ...rest }: PropsWithChildren) => (
           <Box>
             <Typography
               {...rest}
@@ -164,7 +164,7 @@ const preview: SBPreview = {
             </Typography>
           </Box>
         ),
-        h2: ({ children, rest }: any) => (
+        h2: ({ children, ...rest }: PropsWithChildren) => (
           <Box>
             <Typography
               {...rest}
@@ -175,7 +175,7 @@ const preview: SBPreview = {
             </Typography>
           </Box>
         ),
-        h3: ({ children, rest }: any) => (
+        h3: ({ children, ...rest }: PropsWithChildren) => (
           <Box>
             <Typography
               {...rest}
@@ -186,9 +186,8 @@ const preview: SBPreview = {
             </Typography>
           </Box>
         ),
-        h4: ({ children, rest }: any) => (
+        h4: ({ children, ...rest }: PropsWithChildren) => (
           <Box>
-            {/*// @ts-ignore*/}
             <Typography
               {...rest}
               css={[SBTypographyWrapper, TypographyResetFontSmooth]}
@@ -198,7 +197,7 @@ const preview: SBPreview = {
             </Typography>
           </Box>
         ),
-        p: ({ children, rest }: any) => (
+        p: ({ children, ...rest }: PropsWithChildren) => (
           <Box my={'6'}>
             <Typography
               {...rest}
@@ -210,7 +209,7 @@ const preview: SBPreview = {
             </Typography>
           </Box>
         ),
-        li: ({ children, rest }: any) => (
+        li: ({ children, ...rest }: PropsWithChildren) => (
           <li>
             <Box my={'6'}>
               <Typography {...rest} css={TypographyResetFontSmooth} variant={'body01'}>
@@ -219,17 +218,17 @@ const preview: SBPreview = {
             </Box>
           </li>
         ),
-        span: ({ children }: any) => (
+        span: ({ children }: PropsWithChildren) => (
           <Typography css={TypographyResetFontSmooth} variant={'body01'}>
             {children}
           </Typography>
         ),
-        div: ({ children }: any) => (
+        div: ({ children }: PropsWithChildren) => (
           <Typography css={TypographyResetFontSmooth} variant={'body01'}>
             {children}
           </Typography>
         ),
-        a: ({ href, children, ...args }: any) => (
+        a: ({ href, children, ...args }: PropsWithChildren<{ href: string }>) => (
           <Link href={href} {...args}>
             {children}
           </Link>

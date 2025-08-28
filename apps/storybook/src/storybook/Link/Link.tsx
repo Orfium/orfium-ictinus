@@ -6,7 +6,6 @@ import { LinkResetFontSmooth, LinkWrapper } from './Link.style';
 
 export type LinkProps = {
   href?: string;
-  children: string;
 };
 
 const Link: FCC<LinkProps> = ({ href, children, ...rest }) => {
