@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 5.39.2
+
+### Patch Changes
+
+- a6e53bf: fix: docs inline canvas height
+- fe92824: chore: upgrade vitest to version 3.2.4
+- 2aaf3b3: chore: add missing details icon
+
 ## 5.39.1
 
 ### Patch Changes
