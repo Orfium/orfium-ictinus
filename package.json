@@ -207,6 +207,8 @@
     "test": "turbo test",
     "test:coverage": "turbo run test:coverage",
     "coverage:report": "turbo build --filter='./packages/*' && vitest run --coverage",
+    "documentation:generate": "turbo build --filter='./packages/*' && typedoc",
+    "documentation:up": "node server/docs-server.js",
     "check": "turbo check",
     "check:ts": "turbo check:ts --affected",
     "check:linting": "turbo run check:linting --affected",
@@ -223,7 +225,8 @@
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
     "husky": "^9.1.7",
-    "turbo": "^2.5.6"
+    "turbo": "^2.5.6",
+    "typedoc": "^0.28.11"
   },
   "dependencies": {
     "@emotion/babel-plugin": "^11.11.0",

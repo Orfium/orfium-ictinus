@@ -2,15 +2,16 @@ import { flexRender } from '@tanstack/react-table';
 import React, { useRef } from 'react';
 import isEqual from 'react-fast-compare';
 import type { NoUndefined } from '.';
+import OptimizedTableRow from './components/OptimizedTableRow';
 import TBody from './components/TBody';
 import TH from './components/TH';
 import THead from './components/THead';
 import TPagination from './components/TPagination';
 import TR from './components/TR';
 import TTitle from './components/TTitle';
-import OptimizedTableRow from './components/OptimizedTableRow';
 import useTable from './hooks/useTable';
 import { tableContainer, tableStyles } from './Table.style';
+import type { TableProps } from './types';
 
 const Table = <TData extends NoUndefined<TData>>({
   type = 'read-only',

@@ -191,7 +191,7 @@ jobs:
           # We want to use literal backticks in "--query", not trying to expand to something else
           # shellcheck disable=SC2016
           DISTRIBUTION_ID=$(aws cloudformation describe-stacks --stack-name "$STACKNAME" --query 'Stacks[0].Outputs[?OutputKey==`FeCloudFrontDistributionId`].OutputValue' --output text)
-          aws s3 sync "$GITHUB_WORKSPACE/build/" "s3://${S3_BUCKET_NAME}/"
+          aws s3 sync "$GITHUB_WORKSPACE/apps/storybook/storybook-static/" "s3://${S3_BUCKET_NAME}/"
           INVALIDATION_ID=$(aws cloudfront create-invalidation --distribution-id "$DISTRIBUTION_ID" --paths "/*" | jq -r .Invalidation.Id)
           echo "INVALIDATION_ID is $INVALIDATION_ID"
 
