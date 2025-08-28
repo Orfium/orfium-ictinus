@@ -1,10 +1,22 @@
 import userEvent from '@testing-library/user-event';
 
+import type { ComponentProps} from 'react';
 import { useState } from 'react';
 import { fireEvent, render, screen } from '~/test';
 import TextField from './TextField';
 
-const StatefulTextField = ({ values, mask }: { values?: string[]; mask?: string }) => {
+const StatefulTextField = ({
+  values,
+  mask,
+  status,
+  suffix,
+  size,
+  label,
+  isDisabled,
+  isRequired,
+}: Omit<ComponentProps<typeof TextField>, 'value'> & {
+  values?: string[];
+}) => {
   const [value, setValue] = useState('');
   const [tags, setTags] = useState<string[]>(values);
 
@@ -44,11 +56,10 @@ const StatefulTextField = ({ values, mask }: { values?: string[]; mask?: string 
   const isMaskedTextField = !!mask;
 
   return (
-    // @ts-expect-error - this is a test component
     <TextField
       value={value}
       mask={isMaskedTextField ? mask : undefined}
-      isMulti={true}
+      isMulti={values?.length > 0}
       data-testid="input_showcase"
       onKeyDown={handleKeyDown}
       onMultiValueDelete={removeTag}
@@ -56,6 +67,12 @@ const StatefulTextField = ({ values, mask }: { values?: string[]; mask?: string 
       onChange={handleChange}
       tags={tags}
       onInput={handleChange}
+      status={status}
+      suffix={suffix}
+      size={size}
+      label={label}
+      isDisabled={isDisabled}
+      isRequired={isRequired}
     />
   );
 };
@@ -68,7 +85,7 @@ describe('Multi TextField', () => {
   let newTag: HTMLElement;
 
   beforeEach(() => {
-    render(<StatefulTextField values={values} />);
+    render(<StatefulTextField values={values} label="Multi TextField" />);
   });
 
   beforeEach(() => {
@@ -108,11 +125,11 @@ describe('Masked TextField', () => {
   let input: HTMLInputElement;
 
   beforeEach(() => {
-    render(<StatefulTextField mask={'+(999)'} />);
+    render(<StatefulTextField mask="+(999)" label="Masked TextField" />);
   });
 
   beforeEach(() => {
-    input = screen.getByTestId('input') as HTMLInputElement;
+    input = screen.getByTestId('input_showcase') as HTMLInputElement;
   });
 
   it('shows the mask as a placeholder when focused', async () => {

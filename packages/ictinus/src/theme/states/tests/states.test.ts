@@ -1,7 +1,7 @@
 import theme from '../../index';
 import { MAX_SHADE } from '../../palette';
 import { rem } from '../../utils';
-import { GetFocus } from '../focus';
+import type { GetFocus } from '../focus';
 import { getDisabled, getFocus, getHover, getPressed } from '../index';
 import { statesConfig } from '../statesConfig';
 import { getShadeWithStep } from '../utils';

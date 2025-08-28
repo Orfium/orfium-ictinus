@@ -42,7 +42,7 @@ describe('<InlineAlert />', () => {
 
     it('renders with buttons', () => {
       render(
-        <InlineAlert actions={[<Button>Button 1</Button>, <Button>Button 2</Button>]}>
+        <InlineAlert actions={[<Button key="button1">Button 1</Button>, <Button key="button2">Button 2</Button>]}>
           With actions
         </InlineAlert>
       );

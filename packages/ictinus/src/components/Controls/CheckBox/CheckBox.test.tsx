@@ -1,5 +1,5 @@
 import userEvent from '@testing-library/user-event';
-import { Mock } from 'vitest';
+import type { Mock } from 'vitest';
 import CheckBox from '.';
 import { render, screen } from '../../../test';
 
@@ -15,13 +15,13 @@ describe('Checkbox Component', () => {
   });
 
   it('it renders the Checkbox correctly', () => {
-    const { container } = render(<CheckBox value="test" dataTestPrefixId={'test'} />);
+    const { container } = render(<CheckBox value="test" dataTestPrefixId="test" />);
 
     expect(container).toMatchSnapshot();
   });
 
   it('should be able to change its check condition', async () => {
-    render(<CheckBox value="test" dataTestPrefixId={'test'} />);
+    render(<CheckBox value="test" dataTestPrefixId="test" />);
 
     const checkbox = screen.getByRole('checkbox');
 
@@ -35,7 +35,7 @@ describe('Checkbox Component', () => {
 
   it('should invoke the onChange function', async () => {
     const { getAllByTestId } = render(
-      <CheckBox onChange={mockOnChange} value="test" dataTestPrefixId={'test'} />
+      <CheckBox onChange={mockOnChange} value="test" dataTestPrefixId="test" />
     );
 
     const checkbox = getAllByTestId('test_test_checkbox');
@@ -49,7 +49,7 @@ describe('Checkbox Component', () => {
 
   it('should not invoke the onChange function if the checkbox is disabled', async () => {
     const { getAllByTestId } = render(
-      <CheckBox onChange={mockOnChange} value="test" dataTestPrefixId={'test'} isDisabled />
+      <CheckBox onChange={mockOnChange} value="test" dataTestPrefixId="test" isDisabled />
     );
 
     const checkbox = getAllByTestId('test_test_checkbox');
@@ -69,7 +69,7 @@ describe('Checkbox Component', () => {
         isSelected={isSelected}
         onChange={mockOnChange}
         value="test"
-        dataTestPrefixId={'test'}
+        dataTestPrefixId="test"
       />
     );
 

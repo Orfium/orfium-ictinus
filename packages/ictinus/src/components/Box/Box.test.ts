@@ -1,5 +1,5 @@
 import { pickCSSProperties, pickNonCSSProps } from './Box.utilities';
-import { BoxProps } from './Box';
+import type { BoxProps } from './Box';
 
 describe('pickCSSProperties', () => {
   it('should pick only the styled box props from the input object', () => {

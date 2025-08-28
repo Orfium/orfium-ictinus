@@ -263,7 +263,7 @@ function TableV4<T>({
         )}
         <tbody>
           {data.map((row, index) => (
-            /* @ts-ignore */
+            // @ts-expect-error - this is a test component
             <TableRowWrapper<T>
               key={row.id}
               {...{

@@ -1,8 +1,7 @@
-/* eslint-disable @typescript-eslint/naming-convention */
 import type { SortingState } from '@tanstack/react-table';
 
-import type { TableColumn, TableRow } from './types';
 import { Typography } from '@orfium/ictinus';
+import type { TableColumn, TableRow } from './types';
 
 export const ACTIONS_CELL_WIDTH = 52;
 export const ACTIONS_BAR_HEIGHT = 44;
@@ -62,10 +61,10 @@ export const sortDataByKey = (data, key, order = 'asc') => {
       key === 'age'
         ? parseInt(valueA, 10) - parseInt(valueB, 10)
         : valueA < valueB
-        ? -1
-        : valueA > valueB
-        ? 1
-        : 0;
+          ? -1
+          : valueA > valueB
+            ? 1
+            : 0;
 
     return order === 'desc' ? -comparison : comparison;
   });

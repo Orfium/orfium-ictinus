@@ -12,12 +12,7 @@ const meta: Meta<typeof Slider> = {
 export default meta;
 type Story = StoryObj<typeof Slider>;
 
-// export default {
-//   title: 'Original Components/Slider',
-//   component: Slider,
-// };
-
-export const RangeSliderDontTest = {
+export const RangeSliderDontTest: Story = {
   render: (args) => {
     const { isDisabled } = args;
 
@@ -54,7 +49,7 @@ export const RangeSliderDontTest = {
   },
 };
 
-export const RangeSliderWithIncrementsDontTest = {
+export const RangeSliderWithIncrementsDontTest: Story = {
   render: (args) => {
     const { isDisabled } = args;
     return <SliderShowcase isSelector={false} isDisabled={isDisabled} hasIncrements={true} />;
@@ -67,7 +62,7 @@ export const RangeSliderWithIncrementsDontTest = {
   },
 };
 
-export const SelectorSliderDontTest = {
+export const SelectorSliderDontTest: Story = {
   render: (args) => {
     const { isDisabled } = args;
     return <SliderShowcase isSelector={true} isDisabled={isDisabled} />;
@@ -79,7 +74,7 @@ export const SelectorSliderDontTest = {
   },
 };
 
-export const SelectorSliderWithIncrementsDontTest = {
+export const SelectorSliderWithIncrementsDontTest: Story = {
   render: (args) => {
     const { isDisabled } = args;
     return <SliderShowcase isDisabled={isDisabled} isSelector={true} hasIncrements={true} />;

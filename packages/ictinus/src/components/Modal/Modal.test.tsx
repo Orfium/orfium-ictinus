@@ -16,7 +16,7 @@ describe('Modal', () => {
     const closeCTA = vi.fn();
 
     const { findByText, findByTestId } = render(
-      <Modal isOpen={true} onClose={closeCTA} dataTestId={'modal'}>
+      <Modal isOpen={true} onClose={closeCTA} dataTestId="modal">
         {data.message}
       </Modal>
     );
@@ -32,8 +32,8 @@ describe('Modal', () => {
     const closeCTA = vi.fn();
 
     const { findByText, findByTestId } = render(
-      <Modal isOpen={true} onClose={closeCTA} dataTestId={'modal'}>
-        <ModalContent heading={data.heading} message={data.message} dataTestId={'content'} />
+      <Modal isOpen={true} onClose={closeCTA} dataTestId="modal">
+        <ModalContent heading={data.heading} message={data.message} dataTestId="content" />
       </Modal>
     );
 
@@ -51,7 +51,7 @@ describe('Modal', () => {
     const closeCTA = vi.fn();
 
     const { findByTestId } = render(
-      <Modal isOpen={true} onClose={closeCTA} dataTestId={'modal'}>
+      <Modal isOpen={true} onClose={closeCTA} dataTestId="modal">
         {data.message}
       </Modal>
     );
@@ -68,15 +68,15 @@ describe('Modal', () => {
     const secondaryCTA = vi.fn();
 
     const { findByTestId } = render(
-      <Modal isOpen={true} onClose={closeCTA} dataTestId={'modal'}>
+      <Modal isOpen={true} onClose={closeCTA} dataTestId="modal">
         <ModalContent
           heading={data.heading}
           message={data.message}
-          dataTestId={'content'}
+          dataTestId="content"
           primaryCTA={primaryCTA}
-          primaryCTALabel={'primaryCTALabel'}
+          primaryCTALabel="primaryCTALabel"
           secondaryCTA={secondaryCTA}
-          secondaryCTALabel={'secondaryCTA'}
+          secondaryCTALabel="secondaryCTA"
         />
       </Modal>
     );

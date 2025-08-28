@@ -31,7 +31,7 @@ describe('DatePicker', () => {
     const onChange = vi.fn();
     const { getByText, getByTestId } = render(
       <DatePicker
-        dataTestId={'input'}
+        dataTestId="input"
         value={{
           from: currentDay.toDate(),
           to: currentDay.toDate(),
@@ -65,7 +65,7 @@ describe('DatePicker', () => {
     const onChange = vi.fn();
     const { getByTestId, getAllByText } = render(
       <DatePicker
-        dataTestId={'input'}
+        dataTestId="input"
         isRangePicker
         value={{
           from: currentDay.toDate(),
@@ -103,7 +103,7 @@ describe('DatePicker', () => {
     const onChange = vi.fn();
     const { getByTestId, getAllByText } = render(
       <DatePicker
-        dataTestId={'input'}
+        dataTestId="input"
         isRangePicker
         value={{
           from: currentDay.toDate(),
@@ -143,7 +143,7 @@ describe('DatePicker', () => {
   it('should change months when arrow buttons are clicked', () => {
     const { getByTestId } = render(
       <DatePicker
-        dataTestId={'input'}
+        dataTestId="input"
         isClearable
         value={{
           from: currentDay.toDate(),
@@ -171,7 +171,7 @@ describe('DatePicker', () => {
   it('should render the calendars correctly when initial values are given', () => {
     const { getByTestId } = render(
       <DatePicker
-        dataTestId={'input'}
+        dataTestId="input"
         isClearable
         isRangePicker
         value={{
@@ -197,7 +197,7 @@ describe('DatePicker', () => {
     const onChange = vi.fn();
     const { getByTestId, getByPlaceholderText } = render(
       <DatePicker
-        dataTestId={'input'}
+        dataTestId="input"
         isClearable
         value={{
           from: currentDay.toDate(),
@@ -269,7 +269,7 @@ describe('DatePicker', () => {
     const onChange = vi.fn();
     const { getByPlaceholderText } = render(
       <DatePicker
-        dataTestId={'input'}
+        dataTestId="input"
         isClearable
         value={{
           from: currentDay.toDate(),
@@ -292,7 +292,7 @@ describe('DatePicker', () => {
     const onChange = vi.fn();
     const { getByPlaceholderText } = render(
       <DatePicker
-        dataTestId={'input'}
+        dataTestId="input"
         isClearable
         isRangePicker
         value={{

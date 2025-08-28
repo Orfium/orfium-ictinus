@@ -2,7 +2,7 @@ import { fireEvent, render } from '../../test';
 import Toast from '../ToastV4';
 import Banner from './Banner';
 import InlineNotification from './InlineNotification';
-import { NotificationTypes } from './Notification';
+import type { NotificationTypes } from './Notification';
 import NotificationsContainer from './NotificationsContainer';
 import NotificationVisual from './NotificationVisual';
 import Snackbar from './Snackbar';

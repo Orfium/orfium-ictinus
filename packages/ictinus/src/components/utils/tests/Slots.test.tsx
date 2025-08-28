@@ -37,6 +37,7 @@ describe('<SlotProvider />', () => {
   it('provides slot props to children', () => {
     const Component = () => {
       const props = useSlotProps({}, 'test');
+
       return <div {...props} />;
     };
 
@@ -53,6 +54,7 @@ describe('<SlotProvider />', () => {
   it('merges parent and child slot props', () => {
     const Component = () => {
       const props = useSlotProps({}, 'test');
+
       return <div {...props} />;
     };
 
@@ -74,6 +76,7 @@ describe('<ClearSlots />', () => {
   it('clears slot context for children', () => {
     const Component = () => {
       const props = useSlotProps({}, 'test');
+
       return <div {...props} />;
     };
 

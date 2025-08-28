@@ -9,6 +9,7 @@ type Props = {
   hasSearchHandler?: boolean;
 } & Partial<TopAppBarProps>;
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const DEFAULT_USER_MENU = {
   userName: 'Tom Cruise',
   onSelect: (selectedItem: string | number) => {

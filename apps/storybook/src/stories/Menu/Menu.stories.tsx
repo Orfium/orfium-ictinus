@@ -93,7 +93,7 @@ export const MenuTriggers = {
       const [isBtnOpen, setBtnOpen] = React.useState<boolean>(false);
       const btnRef = useRef(null);
       const handleBtnClick = (e) => {
-        e?.preventDefault && e?.preventDefault();
+        e?.preventDefault?.();
         setBtnOpen((state) => !state);
       };
       const [selectedKeys, setSelectedKeys] = useState(new Set<string>([]));
@@ -334,7 +334,7 @@ export const MenuComponents = {
       const [isBtnOpen, setBtnOpen] = React.useState<boolean>(false);
       const btnRef = useRef(null);
       const handleBtnClick = (e) => {
-        e?.preventDefault && e?.preventDefault();
+        e?.preventDefault?.();
         setBtnOpen((state) => !state);
       };
       const [selectedKeys, setSelectedKeys] = useState(new Set<string>([]));
@@ -511,7 +511,7 @@ export const MenuItemDividerStory = {
       const [isBtnOpen, setBtnOpen] = React.useState<boolean>(false);
       const btnRef = useRef(null);
       const handleBtnClick = (e) => {
-        e?.preventDefault && e?.preventDefault();
+        e?.preventDefault?.();
         setBtnOpen((state) => !state);
       };
       const [selectedKeys, setSelectedKeys] = useState(new Set<string>([]));
@@ -609,7 +609,7 @@ export const MenuDisabledKeys = {
       const [isBtnOpen, setBtnOpen] = React.useState<boolean>(false);
       const btnRef = useRef(null);
       const handleBtnClick = (e) => {
-        e?.preventDefault && e?.preventDefault();
+        e?.preventDefault?.();
         setBtnOpen((state) => !state);
       };
       const [selectedKeys, setSelectedKeys] = useState(new Set<string>([]));
@@ -671,7 +671,7 @@ export const MenuWithCustomListWidthAndHeight = {
       const [isBtnOpen, setBtnOpen] = React.useState<boolean>(false);
       const btnRef = useRef(null);
       const handleBtnClick = (e) => {
-        e?.preventDefault && e?.preventDefault();
+        e?.preventDefault?.();
         setBtnOpen((state) => !state);
       };
       const [selectedKeys, setSelectedKeys] = useState(new Set<string>([]));

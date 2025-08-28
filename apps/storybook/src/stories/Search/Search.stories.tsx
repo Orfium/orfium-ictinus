@@ -212,7 +212,7 @@ export const CustomSearch = {
                     gap="4"
                     display="flex"
                     flexDirection="column"
-                    style={{ opacity: !Boolean(selected) ? 0.5 : 1 }}
+                    style={{ opacity: !selected ? 0.5 : 1 }}
                   >
                     <Typography variant="title02">Found in</Typography>
                     <Typography variant="body03" type="secondary">
@@ -227,7 +227,7 @@ export const CustomSearch = {
                     }}
                   >
                     <CheckBox
-                      isDisabled={!Boolean(selected)}
+                      isDisabled={!selected}
                       value="source"
                       isSelected={selected1}
                       onChange={setSelected1}
@@ -235,7 +235,7 @@ export const CustomSearch = {
                       Source
                     </CheckBox>
                     <CheckBox
-                      isDisabled={!Boolean(selected)}
+                      isDisabled={!selected}
                       value="target"
                       isSelected={selected2}
                       onChange={setSelected2}

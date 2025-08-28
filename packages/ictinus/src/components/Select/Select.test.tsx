@@ -33,7 +33,7 @@ describe('Generic Select', () => {
     beforeEach(() => {
       render(
         <div>
-          <StatefulSelect label={'Country'} options={dropdownList} onChange={handleSubmit} />
+          <StatefulSelect label="Country" options={dropdownList} onChange={handleSubmit} />
         </div>
       );
     });
@@ -96,7 +96,7 @@ describe('Generic Select', () => {
           <StatefulSelect
             isAsync
             isLoading={isLoading}
-            label={'Country'}
+            label="Country"
             options={dropdownList}
             onChange={handleSubmit}
             asyncSearch={asyncSearch}
@@ -154,7 +154,7 @@ describe('Generic Select', () => {
         <div>
           <StatefulSelect
             isSearchable={false}
-            label={'Countries'}
+            label="Countries"
             options={dropdownListWithHelperText}
             onChange={handleSubmit}
           />
@@ -187,9 +187,9 @@ describe('Generic Select', () => {
       const { getByTestId, container } = render(
         <div>
           <StatefulSelect
-            dataTestId={'test'}
+            dataTestId="test"
             isSearchable={false}
-            label={'Countries'}
+            label="Countries"
             options={dropdownList}
           />
         </div>
@@ -209,9 +209,9 @@ describe('Generic Select', () => {
       const { getByTestId, container } = render(
         <div>
           <StatefulSelect
-            dataTestId={'test'}
+            dataTestId="test"
             isSearchable={false}
-            label={'Countries'}
+            label="Countries"
             options={dropdownList}
           />
         </div>
@@ -238,8 +238,8 @@ describe('Generic Select', () => {
         <div>
           <StatefulSelect
             selectedOption={dropdownList[0]}
-            dataTestId={'test'}
-            label={'Countries'}
+            dataTestId="test"
+            label="Countries"
             options={dropdownList}
           />
         </div>
@@ -267,8 +267,8 @@ describe('Generic Select', () => {
         <div>
           <StatefulSelect
             selectedOption={dropdownList[0]}
-            dataTestId={'test'}
-            label={'Countries'}
+            dataTestId="test"
+            label="Countries"
             options={dropdownList}
             onChange={handleSubmit}
           />
@@ -308,7 +308,7 @@ describe('Multi Select', () => {
         <StatefulSelect
           isMulti
           isCreatable
-          label={'Country'}
+          label="Country"
           options={dropdownList}
           hasSelectAllOption
         />

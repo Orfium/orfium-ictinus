@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { showcaseContainer } from './EdgeCasesSelectShowcase.style';
-import { StatefulSelect } from '@orfium/ictinus';
+import { StatefulSelect, type SelectOption } from '@orfium/ictinus';
 
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
@@ -11,7 +11,7 @@ const options = [
   { value: 'vanilla', label: 'Vanilla', isDisabled: true },
 ];
 const defaultValue = options[0];
-const handleSelectedOption = (selectedOption: any) => {
+const handleSelectedOption = (selectedOption: SelectOption) => {
   console.log('On option change', selectedOption);
 };
 

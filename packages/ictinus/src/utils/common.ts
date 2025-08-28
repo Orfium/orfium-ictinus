@@ -1,6 +1,6 @@
 import type * as React from 'react';
 import type { ButtonHTMLAttributes } from 'react';
-import { NavigationMenuItem } from '~/components/Navigation';
+import type { NavigationMenuItem } from '~/components/Navigation';
 
 type FunctionProps = {
   children: () => React.ReactNode;

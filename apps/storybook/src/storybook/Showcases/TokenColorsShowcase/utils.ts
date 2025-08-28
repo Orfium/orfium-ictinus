@@ -13,7 +13,7 @@
  *      ====> {b : [c.e, c.f, d]}
  *
  */
-export function getAllPaths(obj: any, parentPath: string = ''): string[] {
+export function getAllPaths(obj: Record<string, unknown>, parentPath: string = ''): string[] {
   let paths: string[] = [];
 
   for (const key in obj) {
@@ -36,11 +36,11 @@ export function getAllPaths(obj: any, parentPath: string = ''): string[] {
   return paths;
 }
 
-export const getColors = (colorObject: any) => {
+export const getColors = (colorObject: Record<string, unknown>) => {
   const g = {};
 
   Object.keys(colorObject).forEach((color) => {
-    g[color] = getAllPaths(colorObject[color]);
+    g[color] = getAllPaths(colorObject[color] as Record<string, unknown>);
   });
 
   return g;

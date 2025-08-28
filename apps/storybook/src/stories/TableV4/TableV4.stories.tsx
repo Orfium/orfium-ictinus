@@ -463,7 +463,7 @@ export const TableWithExpandableRows: Story = {
           <div>top right section</div>
         </div>
       )}
-      // @ts-ignore
+      // @ts-expect-error - this is a test component
       data={new Array(50).fill(null).map((item, index) => ({
         id: index + 1,
 
@@ -509,7 +509,7 @@ export const TableWithExpandableRowsExpandedOnPageLoad: Story = {
           <div>top right section</div>
         </div>
       )}
-      // @ts-ignore
+      // @ts-expect-error - this is a test component
       data={new Array(50).fill(null).map((item, index) => ({
         id: index + 1,
 
@@ -877,7 +877,7 @@ export const TableWithExpandableRowsAndSortDir: Story = {
           <div>top right section</div>
         </div>
       )}
-      // @ts-ignore
+      // @ts-expect-error - this is a test component
       data={new Array(50).fill(null).map((item, index) => ({
         id: index + 1,
 

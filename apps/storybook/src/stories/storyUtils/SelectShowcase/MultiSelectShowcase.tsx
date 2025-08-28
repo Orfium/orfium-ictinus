@@ -25,6 +25,7 @@ const selectedOptions = [
   { value: 'buttered_pecan', label: 'Buttered Pecan' },
 ];
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const dummyUndefinedData = new Array(15).fill(undefined).map((__, index) => ({
   value: index,
   label: `Test option ${index}`,

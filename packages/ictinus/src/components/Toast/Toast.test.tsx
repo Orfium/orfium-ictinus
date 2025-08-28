@@ -61,7 +61,7 @@ describe('<Toast />', () => {
         ...mockToast,
         content: {
           ...mockToast.content,
-          actions: [<Button>Tertiary</Button>, <Button>Primary</Button>],
+          actions: [<Button key="tertiary">Tertiary</Button>, <Button key="primary">Primary</Button>],
         },
       };
 

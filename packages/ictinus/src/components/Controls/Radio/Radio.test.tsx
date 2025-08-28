@@ -1,7 +1,7 @@
 import { render } from 'test';
 
 import userEvent from '@testing-library/user-event';
-import { Mock } from 'vitest';
+import type { Mock } from 'vitest';
 import RadioGroup from './components/RadioGroup';
 import Radio from './Radio';
 

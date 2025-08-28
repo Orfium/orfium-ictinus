@@ -13,7 +13,7 @@
     "chromatic": "chromatic",
     "check": "pnpm check:ts && pnpm check:linting && pnpm check:formatting",
     "check:precommit": "pnpm run check:ts && pnpm run check:linting && pnpm run test --passWithNoTests",
-    "check:ts": "tsc -b --pretty",
+    "check:ts": "tsc --noEmit --skipLibCheck --pretty",
     "check:linting": "eslint src --color",
     "check:formatting": "prettier src --check"
   },

@@ -10,7 +10,6 @@ export const UsageGuidelines: React.FCC<{ guidelines: string[]; policies?: strin
   const guidelinesElements = useMemo(
     () =>
       guidelines.map((guideline, index) => (
-        // eslint-disable-next-line react/no-array-index-key
         <span css={WrapperStyle} key={index}>
           <span css={iconStyle}>✅</span>
           <span>{guideline}</span>
@@ -22,7 +21,6 @@ export const UsageGuidelines: React.FCC<{ guidelines: string[]; policies?: strin
   const policiesElements = useMemo(
     () =>
       policies?.map((policy, index) => (
-        // eslint-disable-next-line react/no-array-index-key
         <span css={WrapperStyle} key={index}>
           <span css={iconStyle}>❌</span>
           <span>{policy}</span>

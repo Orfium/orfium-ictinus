@@ -4,7 +4,7 @@ import Filter from '.';
 import { selectDropdownOption } from '../../test';
 import { SELECT_ALL_OPTION } from '../Select/constants';
 import { options } from './constants';
-import { FilterProps } from './Filter.types';
+import type { FilterProps } from './Filter.types';
 import StatefulFilter from './StatefulFilter';
 
 global.ResizeObserver = vi.fn().mockImplementation(() => ({

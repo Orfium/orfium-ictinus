@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 
-import type { Theme } from '../../theme';
+import type { Theme } from '@orfium/ictinus';
 
 export const TypographyWrapper = (theme: Theme) =>
   css`
@@ -14,7 +14,7 @@ export const TypographyWrapper = (theme: Theme) =>
       height: 1px;
     }
   `;
-export const TypographyResetFontSmooth = (theme: Theme) =>
+export const TypographyResetFontSmooth = () =>
   css`
     font-smooth: initial !important;
     -webkit-font-smoothing: initial !important;

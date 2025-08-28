@@ -23,7 +23,7 @@ export const ExpandCollapseStory = {
           );
         }}
       >
-        {(expand) => {
+        {() => {
           return (
             <div>
               <div>Some</div>
@@ -43,7 +43,7 @@ export const ExpandCollapseStory = {
           );
         }}
       >
-        {(expand) => {
+        {() => {
           return (
             <div>
               <div>Some</div>
@@ -59,7 +59,7 @@ export const ExpandCollapseStory = {
                   );
                 }}
               >
-                {(expand) => {
+                {() => {
                   return (
                     <div>
                       <div>Some</div>
@@ -83,7 +83,7 @@ export const ExpandCollapseStory = {
           );
         }}
       >
-        {(expand) => {
+        {() => {
           return (
             <div>
               <div>Some</div>

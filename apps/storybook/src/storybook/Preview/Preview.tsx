@@ -11,7 +11,7 @@ const Canvas: FCC<PreviewProps> = ({ children, isInverted }) => {
   const theme = useTheme();
 
   return (
-    // @ts-ignore
+    // @ts-expect-error - preview component
     <SBPreview
       css={{
         background: theme.tokens.colors.get(
