@@ -1,7 +1,9 @@
 // THIS DECORATOR MUST GO FIRST, OR THE STORY SOURCE GENERATES INCORRECTLY
 // Add prop tables to components (based on component type interfaces)
 import styled from '@emotion/styled';
-import { Box, ThemeProvider } from '@orfium/ictinus';
+import React from 'react';
+import { ThemeProvider } from '@orfium/ictinus';
+import { Box } from '@orfium/ictinus/vanilla';
 import { DocsContainer, type DocsContainerProps } from '@storybook/addon-docs/blocks';
 import type { Preview as SBPreview, StoryFn } from '@storybook/react-vite';
 import type { PropsWithChildren } from 'react';
