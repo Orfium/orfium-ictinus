@@ -52,6 +52,7 @@ export type GenericIcons =
   | 'calendar'
   | 'chat'
   | 'delivery'
+  | 'details'
   | 'externalLink'
   | 'file'
   | 'filter'

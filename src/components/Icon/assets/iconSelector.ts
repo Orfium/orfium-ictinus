@@ -49,6 +49,7 @@ import TrendingUp from './dataAndFinance/trendingUp.svg?react';
 import Calendar from './generic/calendar.svg?react';
 import Chat from './generic/chat.svg?react';
 import Delivery from './generic/delivery.svg?react';
+import Details from './generic/details.svg?react';
 import ExternalLink from './generic/externalLink.svg?react';
 import File from './generic/file.svg?react';
 import Filter from './generic/filter.svg?react';
@@ -204,6 +205,7 @@ const iconSelector: { [key in AcceptedIconNames]: React.FunctionComponent } = {
   calendar: Calendar,
   chat: Chat,
   delivery: Delivery,
+  details: Details,
   externalLink: ExternalLink,
   file: File,
   filter: Filter,
