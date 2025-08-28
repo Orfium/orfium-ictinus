@@ -65,7 +65,6 @@ export default defineConfig(({ mode }) => {
         external: [
           'react',
           'react-dom',
-          'emotion-reset',
           /@emotion\/styled/,
           /@emotion\/react/,
           ...regexesOfPackages([

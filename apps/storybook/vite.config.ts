@@ -7,7 +7,7 @@ import react from '@vitejs/plugin-react';
 import { defineConfig, loadEnv } from 'vite';
 import svgr from 'vite-plugin-svgr';
 import tsconfigPaths from 'vite-tsconfig-paths';
-import { configDefaults, coverageConfigDefaults } from 'vitest/config';
+import { configDefaults } from 'vitest/config';
 
 const plugins = [
   react({
@@ -44,20 +44,7 @@ export default defineConfig(({ mode }) => {
     test: {
       globals: true,
       environment: 'jsdom',
-      coverage: {
-        reporter: ['text', 'html', 'json', 'lcov'],
-        provider: 'v8',
-        include: ['src'],
-        exclude: [
-          ...coverageConfigDefaults.exclude,
-          '**/*.stories.tsx',
-          '**/*.style.ts',
-          '**/*.styles.ts',
-          '**/styles.ts',
-          '**/__mocks__/',
-          'test',
-        ],
-      },
+      setupFiles: ['./src/test-setup.ts'],
       exclude: [...configDefaults.exclude],
     },
   };

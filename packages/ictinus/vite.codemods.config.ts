@@ -34,7 +34,7 @@ export default defineConfig({
         format: 'cjs',
         entryFileNames: '[name].cjs',
       },
-      external: ['react', 'react-dom', 'emotion-reset', /@emotion\/styled/, /@emotion\/react/],
+      external: ['react', 'react-dom', /@emotion\/styled/, /@emotion\/react/],
     },
   },
 });

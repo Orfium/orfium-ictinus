@@ -9,7 +9,6 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest --run",
-    "test:storyshots": "pnpm test storybook.test.tsx --run",
     "test:update": "vitest -u",
     "chromatic": "chromatic",
     "check": "pnpm check:ts && pnpm check:linting && pnpm check:formatting",
@@ -21,7 +20,9 @@
   "dependencies": {
     "@orfium/ictinus": "workspace:*",
     "@storybook/test": "^8.6.14",
-    "react-docgen-typescript": "^2.4.0"
+    "react-docgen-typescript": "^2.4.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^4.1.1",
