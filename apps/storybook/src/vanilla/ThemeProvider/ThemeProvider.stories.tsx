@@ -1,6 +1,5 @@
-import { ThemeProvider } from '@orfium/ictinus';
-import { Box } from '@orfium/ictinus/vanilla';
-import type { Meta, StoryObj } from '@storybook/react-vite';
+import { ThemeProvider, Box } from '@orfium/ictinus/vanilla';
+import { type Meta, type StoryObj } from '@storybook/react-vite';
 
 const meta: Meta<typeof ThemeProvider> = {
   title: 'Vanilla/ThemeProvider',
@@ -9,7 +8,7 @@ const meta: Meta<typeof ThemeProvider> = {
   decorators: [
     (Story) => (
       <ThemeProvider>
-        <Box height="screen" backgroundColor="alt" p="6">
+        <Box height="screen" bg="alt" p="lg">
           <Story />
         </Box>
       </ThemeProvider>
@@ -28,8 +27,8 @@ export const Default: Story = {
         alignItems="center"
         justifyContent="space-between"
         mb="5"
-        backgroundColor="default"
-        p="6"
+        bg="default"
+        p="lg"
         borderRadius="2"
       >
         System theme
@@ -41,7 +40,7 @@ export const Default: Story = {
             alignItems="center"
             justifyContent="space-between"
             backgroundColor="default"
-            p="6"
+            p="lg"
             mb="5"
             borderRadius="2"
           >
@@ -55,7 +54,7 @@ export const Default: Story = {
         <div>
           <Box
             backgroundColor="alt"
-            p="6"
+            p="lg"
             borderWidth="1"
             borderColor="decorative.default"
             borderStyle="solid"

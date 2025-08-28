@@ -1,5 +1,4 @@
-import { ThemeProvider } from '@orfium/ictinus';
-import { Box } from '@orfium/ictinus/vanilla';
+import { Box, ThemeProvider } from '@orfium/ictinus/vanilla';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta: Meta<typeof Box> = {

@@ -1,13 +1,6 @@
 import { createSerializer } from '@emotion/jest';
 import '@testing-library/jest-dom/vitest';
-import { beforeAll, vi } from 'vitest';
-
-// Import project-level annotations for Storybook decorators (ThemeProvider)
-import { setProjectAnnotations } from '@storybook/react';
-import * as previewAnnotations from '../.storybook/preview';
-
-// Set up Storybook annotations (decorators, etc.) for portable stories
-const annotations = setProjectAnnotations([previewAnnotations]);
+import { vi } from 'vitest';
 
 expect.addSnapshotSerializer(createSerializer());
 
@@ -57,6 +50,3 @@ Element.prototype.getBoundingClientRect = vi.fn(() => ({
   y: 0,
   toJSON: vi.fn(),
 }));
-
-// Run Storybook's beforeAll hook to apply decorators
-beforeAll(annotations.beforeAll);

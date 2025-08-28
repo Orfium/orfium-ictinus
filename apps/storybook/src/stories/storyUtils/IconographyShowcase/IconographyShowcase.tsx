@@ -4,10 +4,10 @@ import React, { useState } from 'react';
 
 import {
   Icon,
+  iconsSet as icons,
   Search,
   Typography,
   type AcceptedIconNames,
-  iconsSet as icons,
 } from '@orfium/ictinus';
 
 const IconographyShowcase: FCC = () => {
@@ -18,7 +18,7 @@ const IconographyShowcase: FCC = () => {
   React.useEffect(() => {
     const newIconSet: Record<string, { title: string; icons: string[] }> = {};
 
-    Object.keys(iconsSet).forEach((set) => {
+    Object.keys(icons).forEach((set) => {
       newIconSet[set] = {
         ...icons[set],
         icons: icons[set].icons.filter((name: string) =>
@@ -27,8 +27,8 @@ const IconographyShowcase: FCC = () => {
       };
     });
 
-    setIconSet(newIconSet as typeof iconsSet);
-  }, [iconsSet, searchTerm]);
+    setIconSet(newIconSet as typeof icons);
+  }, [searchTerm]);
 
   const totalResults = Object.values(iconsSet).reduce((acc, obj) => acc + obj.icons.length, 0);
 
@@ -51,7 +51,7 @@ const IconographyShowcase: FCC = () => {
             placeholder="Search icon"
             sx={{ wrapper: { minWidth: 'unset', width: '100%' } }}
             value={searchTerm}
-            onChange={(e: any) => setSearchTerm(e.target.value)}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchTerm(e.target.value)}
             onClear={() => setSearchTerm('')}
           />
         </div>

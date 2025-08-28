@@ -1,8 +1,8 @@
 /// <reference types="vite/client"/>
-import {type Meta, type StoryFn, composeStories } from '@storybook/react';
+import { ThemeProvider } from '@orfium/ictinus';
+import { type Meta, type StoryFn, composeStories } from '@storybook/react';
 import { render } from '@testing-library/react';
 import { describe, expect, test } from 'vitest';
-import { ThemeProvider } from '@orfium/ictinus';
 
 /**
  * This serializer identifies and replaces React Aria's dynamically generated IDs
