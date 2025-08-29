@@ -2,7 +2,7 @@ name: CI/CD
 on:
   push:
     branches:
-      - 'main'
+      - 'master'
       - 'next'
   pull_request:
     branches:
@@ -12,7 +12,7 @@ env:
   # ^ Is important to note that the above is used as:
   #   * SENTRY project to deploy so naming must match
   #   * Repo badges creation and SENTRY
-  MAIN_BRANCH: 'main'
+  MAIN_BRANCH: 'master'
   STAGING_BRANCH: 'next'
 
 permissions:
@@ -59,7 +59,7 @@ jobs:
           TARGET=review
           if [[ ${{ github.event_name }} == "push" ]]; then
             # TODO: The conditions here depend on the different deployment targets you have
-            if [[ ${{ github.ref }} == "refs/heads/main" ]]; then
+            if [[ ${{ github.ref }} == "refs/heads/master" ]]; then
               TARGET=prod
             elif [[ ${{ github.ref }} == "refs/heads/next" ]]; then
               TARGET=next
@@ -84,7 +84,7 @@ jobs:
       ORG_PGP_TOKEN: ${{ secrets.ORG_PGP_TOKEN }}
 
   deploy-docs:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     name: Deploy Docs
     runs-on: ubuntu-latest
     needs: deploy-app
