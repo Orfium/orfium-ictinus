@@ -1,10 +1,8 @@
 {
   "name": "Orfium Ictinus",
-  "out": "docs",
-  "theme": "default",
-  "excludePrivate": false,
-  "excludeExternals": false,
-  "excludeInternal": false,
-  "exclude": ["**/**style.ts*", "**/__tests__/*", "**/*index.ts*"],
-  "entryPointStrategy": "expand"
+  "entryPoints": ["packages/*"],
+  "entryPointStrategy": "packages",
+  "includeVersion": false,
+  "out": "typeDocs"
+  // "logLevel": "Verbose" // Uncomment this line to see verbose logs
 }

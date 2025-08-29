@@ -1,0 +1,48 @@
+import {
+  convertRemToPixels,
+  type DimensionStateKey,
+  dimensionVariables,
+  useTheme,
+} from '@orfium/ictinus';
+import { get } from 'lodash-es';
+import { WrapperStyle } from 'storybook/styles/OverviewCard.style';
+
+import { Typography } from '@orfium/ictinus';
+import { getAllPaths } from '../TokenColorsShowcase/utils';
+
+const StateShowcase = () => {
+  const theme = useTheme();
+
+  const keys = getAllPaths(dimensionVariables.state);
+
+  return (
+    <div css={WrapperStyle}>
+      {keys.map((key) => {
+        return (
+          <div key={key} css={{ display: 'flex', flex: '0 0 100%', alignItems: 'center' }}>
+            <div
+              css={() => ({
+                height: theme.dimension.state.get(key as DimensionStateKey),
+                width: theme.dimension.state.get(key as DimensionStateKey),
+                background: theme.tokens.colors.get('palette.secondary.contrast'),
+                borderRadius: theme.dimension.borderRadius.get('circle'),
+              })}
+            />
+            <div css={{ margin: 16, flex: 1 }}>
+              <Typography isBold variant="title01" type="primary">
+                $state.{key}
+              </Typography>
+              <Typography variant="body02" type="secondary" component="div">
+                {`${get(dimensionVariables.state, key).value} = ${convertRemToPixels(
+                  theme.dimension.state.get(key as DimensionStateKey)
+                )}px`}
+              </Typography>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
+export default StateShowcase;

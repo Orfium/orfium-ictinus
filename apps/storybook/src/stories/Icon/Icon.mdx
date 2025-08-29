@@ -1,0 +1,40 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/addon-docs/blocks';
+import { Icon } from '@orfium/ictinus';
+import * as IconStories from './Icon.stories';
+
+<Meta of={IconStories} />
+
+<SectionHeader
+  title={'Icon'}
+  sections={[
+    { title: 'Overview', href: '#overview' },
+    { title: 'Props', href: '#props' },
+    { title: 'Collection', href: '#collection' },
+    { title: 'Variants', href: '#variants' },
+  ]}
+/>
+
+## Overview
+
+A component that includes a collection of icons that can be either decorative or interactive.
+
+## Props
+
+<ArgTypes of={Icon} />
+
+## Collection
+
+<Canvas of={IconStories.Collection} />
+
+<SubsectionHeader title="Variants" />
+
+### Interactive Icon
+
+To make the icon interactive, provide the `onClick` prop. The `hasHover` prop defaults to `true` if the `onClick` prop is provided.
+Interactive icon's size is a prop provided by the user; suggested sizes (as shown below) are 12 (xs), 16 (sm), 20 (m), 24 (l)
+
+<Canvas of={IconStories.InteractiveIcon} />
+
+### Playground
+
+<Canvas of={IconStories.Playground} />

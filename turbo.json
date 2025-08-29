@@ -1,0 +1,41 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["**/.env.*local"],
+  "globalEnv": [
+    "NODE_ENV",
+    "MODE",
+    "GITHUB_TOKEN",
+    "NPM_TOKEN",
+    "PNPM_HOME",
+    "NODE_AUTH_TOKEN",
+    "GITHUB_SHA"
+  ],
+  "tasks": {
+    "check": {},
+    "check:precommit": {
+      "dependsOn": ["^build"]
+    },
+    "check:formatting": {},
+    "check:ts": {},
+    "check:linting": {},
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", "build/**"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true,
+      "dependsOn": ["^build"]
+    },
+    "test": {
+      "dependsOn": ["^build"]
+    },
+    "test:coverage": {
+      "dependsOn": ["^build"]
+    },
+    "release": {
+      "dependsOn": ["^release"],
+      "outputLogs": "new-only"
+    }
+  }
+}

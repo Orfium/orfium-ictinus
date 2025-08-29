@@ -1,0 +1,57 @@
+import { Meta, Canvas, ArgTypes, Story } from '@storybook/addon-docs/blocks';
+import { Menu } from '@orfium/ictinus';
+import * as MenuStories from './Menu.stories';
+
+<Meta of={MenuStories} />
+
+<SectionHeader
+  title={'Menu'}
+  sections={[
+    { title: 'Overview', href: '#overview' },
+    { title: 'Props', href: '#props' },
+    { title: 'Usage', href: '#usage' },
+    { title: 'Variants', href: '#variants' },
+  ]}
+/>
+
+## Overview
+
+A menu displays a list of choices on a temporary surface when the user interacts with its trigger element. A menu can take children as custom component or any `ListItem` from `List` by defining `parentType={'Menu'}` on the `ListItem`
+
+## Props
+
+<ArgTypes of={Menu} />
+
+## Usage
+
+<UsageGuidelines
+  guidelines={['Use menu for list of selections that can be accessible via arrows']}
+/>
+
+<SubsectionHeader title="Variants" />
+
+### Menu different triggers
+
+A menu can be triggered by different elements. You can customize trigger to css when active by targeting `[aria-expanded="true"]`
+
+<Canvas of={MenuStories.MenuTriggers} />
+
+### Menu different row sizes
+
+A menu can have different row sizes as `List` does
+
+<Canvas of={MenuStories.MenuComponents} />
+
+### Menu with divider
+
+A menu can have specific MenuItemDivider
+
+<Tip>To style the divider and bypass the default style include an `sx` prop</Tip>
+
+<Canvas of={MenuStories.MenuItemDividerStory} />
+
+### Menu with disabled items
+
+A menu can have specific disabled items
+
+<Canvas of={MenuStories.MenuDisabledKeys} />

@@ -1,0 +1,46 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/addon-docs/blocks';
+import { Pagination } from '@orfium/ictinus';
+import * as PaginationStories from './Pagination.stories';
+
+<Meta of={PaginationStories} />
+
+<SectionHeader
+  title={'Pagination'}
+  isPending
+  sections={[
+    { title: 'Overview', href: '#overview' },
+    { title: 'Props', href: '#props' },
+    { title: 'Usage', href: '#usage' },
+    { title: 'Variants', href: '#variants' },
+  ]}
+/>
+
+## Overview
+
+The pagination component that will be controlled by the parent on any product
+
+## Props
+
+<ArgTypes of={Pagination} />
+
+## Usage
+
+```js
+import { Pagination } from '@orfium/ictinus';
+
+<Pagination count={3} page={1} />;
+```
+
+<SubsectionHeader title="Variants" />
+
+### Pagination
+
+Simple pagination with all buttons
+
+<Canvas of={PaginationStories.PaginationStory} />
+
+### Pagination Without all buttons
+
+Simple pagination without jumping on first or last page
+
+<Canvas of={PaginationStories.PaginationWithoutAllButtons} />

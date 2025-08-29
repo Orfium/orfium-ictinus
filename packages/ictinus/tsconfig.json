@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "outDir": "dist",
+    "rootDir": "./",
+    "baseUrl": "./src",
+    "paths": {
+      "~/*": ["./*"],
+      "hooks/*": ["./hooks/*"],
+      "theme/*": ["./theme/*"],
+      "utils/*": ["./utils/*"],
+      "types": ["./types.d.ts"],
+      "components/*": ["./components/*"]
+    },
+    "lib": ["ES2020", "DOM", "DOM.Iterable", "ESNext"],
+    "moduleResolution": "bundler",
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "noEmit": false,
+    "jsx": "react-jsx",
+    "module": "ESNext",
+    "types": ["@emotion/react/types/css-prop"],
+    "allowUnreachableCode": false,
+    /* Linting */
+    //    "strict": true,
+    //    "noUnusedLocals": true,
+    //    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "jsxImportSource": "@emotion/react",
+    "skipLibCheck": true
+  },
+  "include": ["src", "__mocks__", "codemods"],
+  "exclude": ["./dist", "node_modules"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

@@ -1,7 +1,7 @@
 name: SonarQube
 on:
   push:
-    branches: [main]
+    branches: [master]
   pull_request:
 
 concurrency:
@@ -30,7 +30,7 @@ jobs:
         run: pnpm install
 
       - name: Run Tests
-        run: pnpm test --coverage
+        run: pnpm test:coverage
 
       - uses: sonarsource/sonarqube-scan-action@master
         env:

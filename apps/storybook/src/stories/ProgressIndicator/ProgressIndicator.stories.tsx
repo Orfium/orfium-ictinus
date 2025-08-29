@@ -1,0 +1,186 @@
+import { ProgressIndicator, Typography } from '@orfium/ictinus';
+import { FIGMA_URL, Function } from 'utils/common';
+import Stack from '../storyUtils/Stack';
+import { useEffect, useState } from 'react';
+
+export default {
+  title: 'Updated Components/Progress Indicator',
+  component: ProgressIndicator,
+  parameters: {
+    design: [
+      {
+        type: 'figma',
+        name: 'ProgressIndicator',
+        url: `${FIGMA_URL}?node-id=10283%3A104361`,
+      },
+    ],
+  },
+
+  args: {
+    status: 'normal',
+    type: 'linear',
+  },
+
+  argTypes: {
+    value: {
+      name: 'value (0-100)',
+    },
+  },
+};
+
+export const LinearProgressIndicatorWithPercentage = {
+  render: () => (
+    <Stack width={300}>
+      <Function>
+        {() => {
+          const [value, setValue] = useState(0);
+          useEffect(() => {
+            const interval = setInterval(
+              () =>
+                setValue((value) => {
+                  if (value + 20 > 100) return 0;
+                  return value + 20;
+                }),
+              1000
+            );
+            return () => {
+              clearInterval(interval);
+            };
+          }, []);
+          return (
+            <div
+              style={{
+                display: 'flex',
+                gap: '32px',
+                alignItems: 'center',
+                flexDirection: 'column',
+              }}
+            >
+              <ProgressIndicator value={value} />
+              <Typography variant="body03">Loading: {value}%</Typography>
+            </div>
+          );
+        }}
+      </Function>
+    </Stack>
+  ),
+  name: 'Linear ProgressIndicator with percentage',
+  parameters: {
+    controls: { disable: true },
+  },
+};
+
+export const LinearProgressIndicatorIndeterminate = {
+  render: () => (
+    <Stack width={300}>
+      <ProgressIndicator />
+    </Stack>
+  ),
+  name: 'Linear ProgressIndicator - indeterminate',
+  parameters: {
+    controls: { disable: true },
+  },
+};
+
+export const BlockProgressIndicator = {
+  render: () => (
+    <Stack isVertical>
+      <ProgressIndicator isBlock />
+    </Stack>
+  ),
+  name: 'Block ProgressIndicator',
+  parameters: {
+    controls: { disable: true },
+  },
+};
+
+export const CircularProgressIndicatorWithPercentage = {
+  render: () => (
+    <Stack>
+      <Function>
+        {() => {
+          const [value, setValue] = useState(0);
+          useEffect(() => {
+            const interval = setInterval(
+              () =>
+                setValue((value) => {
+                  if (value + 20 > 100) return 0;
+                  return value + 20;
+                }),
+              1000
+            );
+            return () => {
+              clearInterval(interval);
+            };
+          }, []);
+          return (
+            <div style={{ display: 'flex', gap: '32px', alignItems: 'center' }}>
+              <ProgressIndicator type={'circular'} value={value} />
+              <Typography variant="body03">Loading: {value}%</Typography>
+            </div>
+          );
+        }}
+      </Function>
+    </Stack>
+  ),
+  name: 'Circular ProgressIndicator with percentage',
+  parameters: {
+    controls: { disable: true },
+  },
+};
+
+export const CircularProgressIndicatorIndeterminate = {
+  render: () => (
+    <Stack>
+      <ProgressIndicator type={'circular'} />
+    </Stack>
+  ),
+  name: 'Circular ProgressIndicator - indeterminate',
+  parameters: {
+    controls: { disable: true },
+  },
+};
+
+export const CircularProgressIndicatorErrorStates = {
+  render: () => (
+    <>
+      <Stack>
+        <ProgressIndicator type={'circular'} value={60} status="error" />
+      </Stack>
+      <Stack width={300}>
+        <ProgressIndicator value={60} status="error" />
+      </Stack>
+    </>
+  ),
+  name: 'Circular ProgressIndicator - Error states',
+  parameters: {
+    controls: { disable: true },
+  },
+};
+
+export const Playground = {
+  render: (args) => {
+    const { type, status, isBlock, value } = args;
+    return (
+      <Stack width={400} isVertical>
+        <div css={{ display: 'flex', gap: '16px', flexDirection: 'column', marginBottom: '48px' }}>
+          <ProgressIndicator type={type} status={status} isBlock={isBlock} />
+          <Typography>Indeterminate State</Typography>
+        </div>
+        <div css={{ display: 'flex', gap: '16px', flexDirection: 'column' }}>
+          <ProgressIndicator value={value} type={type} status={status} isBlock={isBlock} />
+          <div css={{ display: 'flex', flexDirection: 'column' }}>
+            <Typography>Determinate State</Typography>
+            <Typography variant="body03">
+              Use the "value" control to create the determinate state
+            </Typography>
+          </div>
+        </div>
+      </Stack>
+    );
+  },
+  parameters: {
+    controls: { include: ['type', 'status', 'isBlock', 'value (0-100)'] },
+  },
+  name: 'Playground',
+};

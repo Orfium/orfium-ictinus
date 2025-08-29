@@ -1,0 +1,57 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/addon-docs/blocks';
+import { ExpandCollapse } from '@orfium/ictinus';
+import * as ExpandCollapseStories from './ExpandCollapse.stories';
+
+<Meta of={ExpandCollapseStories} />
+
+<SectionHeader
+  title={'ExpandeCollapse'}
+  isPending
+  sections={[
+    { title: 'Overview', href: '#overview' },
+    { title: 'Props', href: '#props' },
+    { title: 'Usage', href: '#usage' },
+    { title: 'Variants', href: '#variants' },
+  ]}
+/>
+
+## Overview
+
+A minimally visual component that allows to expand and collapse content
+
+## Props
+
+<ArgTypes of={ExpandCollapse} />
+
+## Usage
+
+```jsx
+import { ExpandCollapse } from '@orfium/ictinus';
+
+<ExpandCollapse
+  textAndControl={(handleClick) => {
+    return (
+      <Fragment>
+        <span>Text</span>
+        <button onClick={handleClick}>expand/collapse</button>
+      </Fragment>
+    );
+  }}
+>
+  {(expand) => {
+    return (
+      <div>
+        <div>Some</div>
+        <div>content</div>
+        <div>here</div>
+      </div>
+    );
+  }}
+</ExpandCollapse>;
+```
+
+<SubsectionHeader title="Variants" />
+
+### ExpandCollapse
+
+<Canvas of={ExpandCollapseStories.ExpandCollapseStory} />

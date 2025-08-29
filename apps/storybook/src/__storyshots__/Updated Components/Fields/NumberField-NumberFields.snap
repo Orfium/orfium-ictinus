@@ -1,0 +1,769 @@
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #8EAAEC;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: 3.25rem;
+  min-width: 8.75rem;
+  background-color: rgba(200,206,255,0.30);
+}
+
+.emotion-1:hover {
+  background-color: rgba(200,206,255,0.20);
+}
+
+.emotion-1:focus-within {
+  box-shadow: 0 0 0 0.125rem #175BF5;
+  background-color: rgba(200,206,255,0.30);
+}
+
+.emotion-2 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0rem 0rem 0rem 0.75rem;
+}
+
+.emotion-2>div {
+  position: relative;
+}
+
+.emotion-3 {
+  width: 100%;
+}
+
+.emotion-5 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #111530;
+  padding: 0;
+  display: block;
+  position: relative;
+  top: 0.4375rem;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-5::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-5::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-5:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-5::placeholder {
+  color: transparent;
+}
+
+.emotion-5:focus {
+  outline: none;
+}
+
+.emotion-5:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-5:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-5:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-5:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-5:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-5:focus-within+label,
+.emotion-5:not(:placeholder-shown)+label {
+  font-weight: 700!important;
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+}
+
+.emotion-5:focus-within+label {
+  font-weight: 700!important;
+  color: #194DCC;
+}
+
+.emotion-5:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-6 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, 0);
+  -moz-transform: translate(0.1875rem, 0);
+  -ms-transform: translate(0.1875rem, 0);
+  transform: translate(0.1875rem, 0);
+  color: #52567a;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0.1875rem;
+  margin: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-10 {
+  width: calc(100% - 2.75rem);
+}
+
+.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  width: 2.75rem;
+  top: -0.9375rem;
+  z-index: 1;
+}
+
+.emotion-14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  height: calc(3.25rem / 2);
+}
+
+.emotion-14:hover {
+  cursor: pointer;
+  background: rgba(200,206,255,0.20);
+}
+
+.emotion-15 {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-16 {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-16 path,
+.emotion-16 rect {
+  fill: #52567a!important;
+}
+
+.emotion-20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #8EAAEC;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: 1.75rem;
+  min-width: 5.625rem;
+  background-color: rgba(200,206,255,0.30);
+}
+
+.emotion-20:hover {
+  background-color: rgba(200,206,255,0.20);
+}
+
+.emotion-20:focus-within {
+  box-shadow: 0 0 0 0.125rem #175BF5;
+  background-color: rgba(200,206,255,0.30);
+}
+
+.emotion-24 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #111530;
+  padding: 0;
+  display: block;
+  position: relative;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-24::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-24::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-24:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-24::placeholder {
+  color: transparent;
+}
+
+.emotion-24:focus {
+  outline: none;
+}
+
+.emotion-24:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-24:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-24:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-24:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-24:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-24:focus-within+label,
+.emotion-24:not(:placeholder-shown)+label {
+  display: none;
+}
+
+.emotion-24:focus-within+label {
+  font-weight: 700!important;
+  color: #194DCC;
+}
+
+.emotion-24:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-25 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, 0);
+  -moz-transform: translate(0.1875rem, 0);
+  -ms-transform: translate(0.1875rem, 0);
+  transform: translate(0.1875rem, 0);
+  color: #52567a;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0.1875rem;
+  margin: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-29 {
+  width: calc(100% - 1.25rem);
+}
+
+.emotion-32 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  width: 1.25rem;
+  top: -0.5rem;
+  z-index: 1;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      style="margin: 5px;"
+    >
+      <div>
+        <div
+          class="emotion-1"
+        >
+          <div
+            class="emotion-2"
+          >
+            <div
+              class="emotion-3"
+            >
+              <div
+                class="react-aria-NumberField"
+                data-rac=""
+              >
+                <div
+                  class="emotion-4"
+                  data-rac=""
+                  role="group"
+                >
+                  <input
+                    aria-invalid="false"
+                    aria-roledescription="Number field"
+                    autocomplete="off"
+                    autocorrect="off"
+                    class="emotion-5"
+                    data-rac=""
+                    data-testid="input"
+                    id="numberfield__00"
+                    inputmode="numeric"
+                    placeholder="Number"
+                    spellcheck="false"
+                    tabindex="0"
+                    title=""
+                    type="text"
+                    value=""
+                  />
+                  <label
+                    class="emotion-6"
+                    for="numberfield__00"
+                  >
+                    Number
+                     
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div>
+        <div
+          class="emotion-1"
+        >
+          <div
+            class="emotion-2"
+          >
+            <div
+              class="emotion-3"
+            >
+              <div
+                class="react-aria-NumberField"
+                data-rac=""
+              >
+                <div
+                  class="emotion-10"
+                  data-rac=""
+                  role="group"
+                >
+                  <input
+                    aria-invalid="false"
+                    aria-roledescription="Number field"
+                    autocomplete="off"
+                    autocorrect="off"
+                    class="emotion-5"
+                    data-rac=""
+                    data-testid="input"
+                    id="numberfield__00"
+                    inputmode="numeric"
+                    placeholder="Number"
+                    spellcheck="false"
+                    tabindex="0"
+                    title=""
+                    type="text"
+                    value=""
+                  />
+                  <label
+                    class="emotion-6"
+                    for="numberfield__00"
+                  >
+                    Number
+                     
+                  </label>
+                  <div
+                    class="emotion-13"
+                  >
+                    <button
+                      aria-controls="numberfield__00"
+                      aria-label="Increase"
+                      class="emotion-14"
+                      data-rac=""
+                      data-react-aria-pressable="true"
+                      data-testid="number_increment"
+                      id="react-aria-:test-id:"
+                      slot="increment"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <div
+                        class="emotion-15"
+                        data-slot="icon"
+                      >
+                        <svg
+                          class="emotion-16"
+                          fill="none"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M6.09346 11.6879C5.65924 12.2089 6.02976 13 6.70803 13H13.292C13.9702 13 14.3408 12.2089 13.9065 11.6879L10.6146 7.73749C10.2947 7.35369 9.70526 7.35369 9.38542 7.73749L6.09346 11.6879Z"
+                            fill="#6265AD"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                      </div>
+                    </button>
+                    <button
+                      aria-controls="numberfield__00"
+                      aria-label="Decrease"
+                      class="emotion-14"
+                      data-rac=""
+                      data-react-aria-pressable="true"
+                      data-testid="number_decrement"
+                      id="react-aria-:test-id:"
+                      slot="decrement"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <div
+                        class="emotion-15"
+                        data-slot="icon"
+                      >
+                        <svg
+                          class="emotion-16"
+                          fill="none"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M6.09346 8.31215C5.65924 7.79108 6.02976 7 6.70803 7H13.292C13.9702 7 14.3408 7.79109 13.9065 8.31215L10.6146 12.2625C10.2947 12.6463 9.70526 12.6463 9.38542 12.2625L6.09346 8.31215Z"
+                            fill="#6265AD"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div>
+        <div
+          class="emotion-20"
+        >
+          <div
+            class="emotion-2"
+          >
+            <div
+              class="emotion-3"
+            >
+              <div
+                class="react-aria-NumberField"
+                data-rac=""
+              >
+                <div
+                  class="emotion-4"
+                  data-rac=""
+                  role="group"
+                >
+                  <input
+                    aria-invalid="false"
+                    aria-roledescription="Number field"
+                    autocomplete="off"
+                    autocorrect="off"
+                    class="emotion-24"
+                    data-rac=""
+                    data-testid="input"
+                    id="numberfield__00"
+                    inputmode="numeric"
+                    placeholder=" "
+                    spellcheck="false"
+                    tabindex="0"
+                    title=""
+                    type="text"
+                    value=""
+                  />
+                  <label
+                    class="emotion-25"
+                    for="numberfield__00"
+                  >
+                    Number
+                     
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div>
+        <div
+          class="emotion-20"
+        >
+          <div
+            class="emotion-2"
+          >
+            <div
+              class="emotion-3"
+            >
+              <div
+                class="react-aria-NumberField"
+                data-rac=""
+              >
+                <div
+                  class="emotion-29"
+                  data-rac=""
+                  role="group"
+                >
+                  <input
+                    aria-invalid="false"
+                    aria-roledescription="Number field"
+                    autocomplete="off"
+                    autocorrect="off"
+                    class="emotion-24"
+                    data-rac=""
+                    data-testid="input"
+                    id="numberfield__00"
+                    inputmode="numeric"
+                    placeholder=" "
+                    spellcheck="false"
+                    tabindex="0"
+                    title=""
+                    type="text"
+                    value=""
+                  />
+                  <label
+                    class="emotion-25"
+                    for="numberfield__00"
+                  >
+                    Number
+                     
+                  </label>
+                  <div
+                    class="emotion-32"
+                  >
+                    <button
+                      aria-controls="numberfield__00"
+                      aria-label="Increase"
+                      class="emotion-14"
+                      data-rac=""
+                      data-react-aria-pressable="true"
+                      data-testid="number_increment"
+                      id="react-aria-:test-id:"
+                      slot="increment"
+                      style="height: 0.9375rem;"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <div
+                        class="emotion-15"
+                        data-slot="icon"
+                      >
+                        <svg
+                          class="emotion-16"
+                          fill="none"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M6.09346 11.6879C5.65924 12.2089 6.02976 13 6.70803 13H13.292C13.9702 13 14.3408 12.2089 13.9065 11.6879L10.6146 7.73749C10.2947 7.35369 9.70526 7.35369 9.38542 7.73749L6.09346 11.6879Z"
+                            fill="#6265AD"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                      </div>
+                    </button>
+                    <button
+                      aria-controls="numberfield__00"
+                      aria-label="Decrease"
+                      class="emotion-14"
+                      data-rac=""
+                      data-react-aria-pressable="true"
+                      data-testid="number_decrement"
+                      id="react-aria-:test-id:"
+                      slot="decrement"
+                      style="height: 0.9375rem;"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <div
+                        class="emotion-15"
+                        data-slot="icon"
+                      >
+                        <svg
+                          class="emotion-16"
+                          fill="none"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M6.09346 8.31215C5.65924 7.79108 6.02976 7 6.70803 7H13.292C13.9702 7 14.3408 7.79109 13.9065 8.31215L10.6146 12.2625C10.2947 12.6463 9.70526 12.6463 9.38542 12.2625L6.09346 8.31215Z"
+                            fill="#6265AD"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
