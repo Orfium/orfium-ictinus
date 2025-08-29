@@ -1,95 +1,173 @@
-# Ictinus
+# Orfium Ictinus
 
-An internal UI kit library that is opinionated. Primary focus is to solve UI duplications and provide a unified and cross product UX, UI and accessibility.
-
-<hr />
+> A comprehensive design system and UI component library for Orfium products
 
 ![npm](https://img.shields.io/npm/v/@orfium/ictinus)
-[![pan](https://github.com/Orfium/orfium-ictinus/workflows/CI/badge.svg)](https://github.com/Orfium/orfium-ictinus/actions)
+[![CI](https://github.com/Orfium/orfium-ictinus/workflows/CI/badge.svg)](https://github.com/Orfium/orfium-ictinus/actions)
 ![min size](https://img.shields.io/bundlephobia/min/@orfium/ictinus)
 ![minzip size](https://img.shields.io/bundlephobia/minzip/@orfium/ictinus)
 
-## 📦 Installation
+This monorepo contains the Orfium Design System - an opinionated UI kit library focused on solving UI duplications and providing unified, cross-product UX, UI, and accessibility standards.
 
-```text
-$ npm install @orfium/ictinus
+## 🏗️ Repository Structure
+
+This is a **monorepo** managed with [Turbo](https://turbo.build/) and [pnpm](https://pnpm.io/):
+
+```
+orfium-ictinus/
+├── apps/
+│   └── storybook/          # Storybook documentation and component showcase
+├── packages/
+│   └── ictinus/            # Main design system package (@orfium/ictinus)
+└── typeDocs/               # Generated TypeScript documentation
 ```
 
-```text
-$ yarn add @orfium/ictinus
+### 📦 Packages
+
+- **[@orfium/ictinus](./packages/ictinus/)** - The main design system package containing all UI components, themes, tokens, and utilities
+
+### 🚀 Apps
+
+- **[Storybook](./apps/storybook/)** - Interactive documentation and component playground
+
+## 🛠️ Prerequisites
+
+- **Node.js** >= 22
+- **pnpm** >= 10
+
+## 🚀 Quick Start
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/Orfium/orfium-ictinus.git
+   cd orfium-ictinus
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   pnpm install
+   ```
+
+3. **Start development servers**
+
+   ```bash
+   # Start all development servers (Storybook, etc.)
+   pnpm dev
+
+   # Or start Storybook specifically
+   pnpm --filter storybook dev
+   ```
+
+4. **Build all packages**
+   ```bash
+   pnpm build
+   ```
+
+## 📋 Available Scripts
+
+| Script                        | Description                                      |
+| ----------------------------- | ------------------------------------------------ |
+| `pnpm dev`                    | Start all development servers                    |
+| `pnpm build`                  | Build all packages and apps                      |
+| `pnpm test`                   | Run all tests                                    |
+| `pnpm test:coverage`          | Run tests with coverage                          |
+| `pnpm lint`                   | Run linting across all packages                  |
+| `pnpm check`                  | Run all checks (TypeScript, linting, formatting) |
+| `pnpm clean`                  | Remove all node_modules                          |
+| `pnpm documentation:generate` | Generate TypeScript documentation                |
+| `pnpm documentation:up`       | Start documentation server                       |
+
+## 🧪 Testing
+
+We use [Vitest](https://vitest.dev/) for testing:
+
+```bash
+# Run all tests
+pnpm test
+
+# Run tests with coverage
+pnpm test:coverage
+
+# Generate coverage report
+pnpm coverage:report
 ```
 
-Please note that react >= 16.0.0 and react-dom >= 16.0.0 are peer dependencies. Also that emotion 11 is being used and that
-will not work in older emotion projects.
+## 📚 Documentation
 
-if you want the next version you can always use the next tag.
-Remember: this is a release candidate, we encourage you to lock version on installation to avoid any changes
+- **[Storybook](http://localhost:6006)** - Interactive component documentation (after running `pnpm dev`)
+- **[Package README](./packages/ictinus/README.md)** - Detailed usage instructions for the design system
+- **[TypeScript Docs](./typeDocs/)** - Generated API documentation
+- **[Contribution Guidelines](./CONTRIBUTING.md)** - How to contribute to this project
 
-```text
-$ yarn add @orfium/ictinus@next
-```
+## 🎨 Using the Design System
 
-## 🔨 Usage
+For detailed usage instructions, see the [Ictinus package README](./packages/ictinus/README.md).
 
-1. Start by wrapping your App with ictinus `ThemeProvider` component like below
+**Quick example:**
 
 ```jsx
-import { ThemeProvider } from '@orfium/ictinus';
+import '@orfium/ictinus/styles.css';
+import { ThemeProvider, Button, Select } from '@orfium/ictinus';
 
-const App = () => (
-  <ThemeProvider>
-    <Router>...</Router>
-  </ThemeProvider>
-);
+function App() {
+  return (
+    <ThemeProvider>
+      <Button>Click me</Button>
+      <Select options={[]} />
+    </ThemeProvider>
+  );
+}
 ```
 
-2.  That's it, now you are ready to go.
+## 🔄 Migration & Codemods
 
-```js
-import { Select, Button } from '@orfium/ictinus';
+The library includes codemods to help migrate between versions:
+
+```bash
+# Run migration codemods
+npx @orfium/ictinus migrate
 ```
 
-## ✨ Extra
+Available codemods can be found in [`packages/ictinus/codemods/`](./packages/ictinus/codemods/).
 
-### Theme usage
+## 🤝 Contributing
 
-Now you can can have access to the library's theme config by using the hook provided
+We welcome contributions! Please read our [Contributing Guidelines](./CONTRIBUTING.md) before submitting a PR.
 
-```
-import { useTheme } from '@orfium/ictinus';
+### Development Workflow
 
-const theme = useTheme();
-```
+1. Create a feature branch: `git checkout -b feature/new-feature`
+2. Make your changes
+3. Run checks: `pnpm check`
+4. Submit a PR with a [conventional commit](https://conventionalcommits.org/) title
 
-### Theme config
+### PR Guidelines
 
-You can apply your own branded colours for each product at the definition of the ThemeProvider. This way you can have access everywhere.
+- Use conventional commit format for PR titles (e.g., `feat(Button): add loading state`)
+- Provide detailed descriptions and screenshots
+- Ensure all tests pass
+- Update documentation as needed
 
-```
-<ThemeProvider>
-    ...
-</ThemeProvider>
-```
+## 🏷️ Versioning & Releases
 
-### Emotion Project - Merge theme configs from different providers
+This project uses [Changesets](https://github.com/changesets/changesets) for versioning and releases:
 
-If you are already using emotion and you have defined a different provider you still have to define Ictinus ThemeProvider as well. You must put the theme config example at the top of the providers and yours afterwards.
+```bash
+# Create a changeset
+pnpm changeset
 
-Then you must use the below function to create a new theme config for the second provider
-
-```
-export const defaultTheme = (ancestorTheme: IctinusTheme) => ({
-  ...ancestorTheme,
-  ...theme,
-});
+# Release (CI/CD handles this)
+pnpm release
 ```
 
-The final outcome will look like this.
+## 📄 License
 
-```
-<IctinusThemeProvider>
-  <ThemeProvider theme={defaultTheme}>
-    ....
-  </ThemeProvider>
-</IctinusThemeProvider>
-```
+MIT © [Orfium](https://github.com/Orfium)
+
+## 🔗 Links
+
+- [npm package](https://www.npmjs.com/package/@orfium/ictinus)
+- [GitHub repository](https://github.com/Orfium/orfium-ictinus)
+- [Issues](https://github.com/Orfium/orfium-ictinus/issues)
