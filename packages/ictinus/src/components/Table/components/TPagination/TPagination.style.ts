@@ -1,6 +1,6 @@
 import type { SerializedStyles, Theme } from '@emotion/react';
 import { css } from '@emotion/react';
-import { rem } from 'theme/utils';
+import { rem } from '@orfium/tokens';
 
 import type { TPaginationProps } from './TPagination';
 import { ACTIONS_BAR_HEIGHT } from '../../constants';

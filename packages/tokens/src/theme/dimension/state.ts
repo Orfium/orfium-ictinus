@@ -1,5 +1,5 @@
-import type { DotKeys } from 'theme/tokens/utils';
-import { getTokensValue } from 'theme/tokens/utils';
+import type { DotKeys } from '../tokens/utils';
+import { getTokensValue } from '../tokens/utils';
 
 import stateFigma from './variables/state';
 

@@ -4,7 +4,7 @@ import { css } from '@emotion/react';
 import { ACTIONS_CELL_WIDTH } from '../../constants';
 import type { ContentAlign, TableProps } from 'components/Table';
 
-import { rem } from '~/theme/utils';
+import { rem } from '@orfium/tokens';
 
 export const simpleTdContainer =
   () =>

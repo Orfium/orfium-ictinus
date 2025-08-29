@@ -3,7 +3,7 @@ import { Tab as ReactAriaTab } from 'react-aria-components';
 import type { AcceptedIconNames } from '~/components/Icon';
 import Icon from '~/components/Icon';
 import useTheme from '~/hooks/useTheme';
-import type { SemanticColorsKey } from '~/theme/tokens/semantic/colors';
+import type { SemanticColorsKey } from '@orfium/tokens';
 import type { TabStepProps } from '../../types';
 import { stepContainer, stepStyles, stepSubtitle, stepTitle } from './TabStep.style';
 

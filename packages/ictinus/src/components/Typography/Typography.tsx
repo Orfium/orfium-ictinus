@@ -1,5 +1,5 @@
+import type { FontSpacing } from '@orfium/tokens';
 import React from 'react';
-import type { FontSpacing } from 'theme/tokens/semantic/typography';
 
 import { typographyWrapper } from './Typography.style';
 

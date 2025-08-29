@@ -1,5 +1,5 @@
-import type { DotKeys } from 'theme/tokens/utils';
-import { FigmaTokenValueType, getFigmaTokensValue } from 'theme/utils';
+import type { DotKeys } from '../tokens/utils';
+import { FigmaTokenValueType, getFigmaTokensValue } from '../utils';
 
 import opacityFigma from './variables/opacity';
 

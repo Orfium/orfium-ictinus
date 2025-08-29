@@ -3,7 +3,7 @@ import Icon from 'components/Icon';
 import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
 import useTheme from 'hooks/useTheme';
 import React, { useCallback, useMemo, type InputHTMLAttributes } from 'react';
-import { rem } from 'theme/utils';
+import { rem } from '@orfium/tokens';
 import type { Dayjs } from 'utils/date';
 import dayjs from 'utils/date';
 import { getLocaleFormat } from 'utils/helpers';

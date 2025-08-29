@@ -1,15 +1,13 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
+import type { AcceptedColorComponentTypes, SemanticColorsKey } from '@orfium/tokens';
+import { flexCenter, rem, transition } from '@orfium/tokens';
 import {
   typeToBackgroundStyle,
   typeToColorStyle,
 } from 'components/Notification/Notification.style';
 import { label01 } from 'components/Typography/Typography.config.styles';
-import type { SemanticColorsKey } from 'theme/tokens/semantic/colors';
-import { rem } from 'theme/utils';
-import type { AcceptedColorComponentTypes } from 'utils/themeFunctions';
 import type { Theme } from '../../theme';
-import { flexCenter, transition } from '../../theme/functions';
 import type { NotificationStyleType } from '../Notification/Notification';
 import { isNotificationTypes } from './ToastV4';
 

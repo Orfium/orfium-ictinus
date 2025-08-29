@@ -1,7 +1,7 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import type { Theme } from 'theme';
-import { flex } from 'theme/functions';
+import { flex } from '@orfium/tokens';
 
 import type { AvatarTokens} from '../Avatar.tokens';
 import { getAvatarTokens, parseAvatarStackSize } from '../Avatar.tokens';

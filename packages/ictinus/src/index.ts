@@ -1,98 +1,98 @@
 import { rem } from 'polished';
 
 import { queriesSizes } from './hooks/useBreakpoints';
-import * as themeFunctions from './theme/functions';
-import * as elevation from './theme/globals/elevation';
+// Import from @orfium/tokens package
+import * as dimension from '@orfium/tokens';
+import * as elevation from '@orfium/tokens';
+import * as palette from '@orfium/tokens';
+import * as spacing from '@orfium/tokens';
+import * as themeFunctions from '@orfium/tokens';
+import * as typography from '@orfium/tokens';
 // Types
 import ClickAwayListener from 'components/utils/ClickAwayListener';
-import * as dimension from './theme/dimension';
-import * as spacing from './theme/globals/spacing';
-import * as typography from './theme/globals/typography';
 import * as overrides from './theme/overrides';
-import * as palette from './theme/palette';
-export { convertRemToPixels } from './theme/utils';
-export * from './theme/functions';
+// Note: We import specific items to avoid conflicts with local Typography TextColorTypes
+// export * from '@orfium/tokens'; // Commented out to avoid TextColorTypes conflict
+export { convertRemToPixels } from '@orfium/tokens';
 
-export type { Theme } from './theme';
-export type { Elevation } from './theme/globals/elevation';
-export type { Spacing, SpacingKey } from './theme/globals/spacing';
-export type { Typography as GlobalsTypography } from './theme/globals/typography';
-export type { Overrides } from './theme/overrides';
+export { globalColors } from '@orfium/tokens';
 export type {
+  AcceptedColorComponentTypes,
   BASE_SHADE,
   colorShades,
+  Elevation,
   flatColors,
+  Typography as GlobalsTypography,
   neutralColors,
   paleColors,
   Palette,
-} from './theme/palette';
-export type { AcceptedColorComponentTypes } from './utils/themeFunctions';
+  Spacing,
+  SpacingKey,
+} from '@orfium/tokens';
+export type { Theme } from './theme';
+export type { Overrides } from './theme/overrides';
 export type { TestProps } from './utils/types';
-export { default as globalColors } from './theme/globals/constants/colors';
 
-import { default as dimensionOpacity } from './theme/dimension/variables/opacity';
-import { default as dimensionSizing } from './theme/dimension/variables/sizing';
-import { default as dimensionSpacing } from './theme/dimension/variables/spacing';
-import { default as dimensionState } from './theme/dimension/variables/state';
-import { default as dimensionBorderWidth } from './theme/dimension/variables/borderWidth';
-import { default as dimensionBorderRadius } from './theme/dimension/variables/borderRadius';
-import { default as dimensionMinHeight } from './theme/dimension/variables/minHeight';
-
-export const dimensionVariables = {
-  opacity: dimensionOpacity,
-  sizing: dimensionSizing,
-  spacing: dimensionSpacing,
-  state: dimensionState,
-  borderWidth: dimensionBorderWidth,
-  borderRadius: dimensionBorderRadius,
-  minHeight: dimensionMinHeight,
-};
+// Re-export dimension variables from tokens package
+export { dimensionVariables } from '@orfium/tokens';
 
 // Dimension types
 export type {
   DimensionBorderRadius,
   DimensionBorderRadiusKey,
-} from './theme/dimension/borderRadius';
-export type { DimensionBorderWidth, DimensionBorderWidthKey } from './theme/dimension/borderWidth';
-export type { DimensionMinHeight, DimensionMinHeightKey } from './theme/dimension/minHeight';
-export type { DimensionOpacity, DimensionOpacityKey } from './theme/dimension/opacity';
-export type { DimensionSizing, DimensionSizingKey } from './theme/dimension/sizing';
-export type { DimensionSpacing, DimensionSpacingKey } from './theme/dimension/spacing';
-export type { DimensionState, DimensionStateKey } from './theme/dimension/state';
+  DimensionBorderWidth,
+  DimensionBorderWidthKey,
+  DimensionMinHeight,
+  DimensionMinHeightKey,
+  DimensionOpacity,
+  DimensionOpacityKey,
+  DimensionSizing,
+  DimensionSizingKey,
+  DimensionSpacing,
+  DimensionSpacingKey,
+  DimensionState,
+  DimensionStateKey,
+} from '@orfium/tokens';
 
 // Globals types
-export type { BorderRadiusKey } from './theme/globals/borderRadius';
-export type { BorderWidthKey } from './theme/globals/borderWidth';
-export type { Colors, ColorsKey } from './theme/globals/colors';
-export type { OpacityKey } from './theme/globals/opacity';
-export type { Sizing, SizingKey } from './theme/globals/sizing';
 export type {
+  BorderRadiusKey,
+  BorderWidthKey,
+  Colors,
+  ColorsKey,
   FontFamilyKey,
   FontSizeKey,
   FontWeightKey,
   LetterSpacingKey,
   LineHeightKey,
+  OpacityKey,
+  Sizing,
+  SizingKey,
   TextCaseKey,
   TextDecorationKey,
-} from './theme/globals/typography';
+} from '@orfium/tokens';
 
 // Semantic token types
-export type { SemanticBoxShadow, SemanticBoxShadowKey } from './theme/tokens/semantic/boxShadow';
-export { default as semanticVariablesColors } from './theme/tokens/semantic/variables/colors';
-export { default as semanticVariablesBoxShadow } from './theme/tokens/semantic/variables/boxShadow';
-export type { SemanticColors, SemanticColorsKey } from './theme/tokens/semantic/colors';
-export type { SemanticDisabledState } from './theme/tokens/semantic/disabledState';
-export type { SemanticState } from './theme/tokens/semantic/state';
+export {
+  semanticVariablesBoxShadow,
+  semanticVariablesColors,
+  semanticVariablesTypography,
+} from '@orfium/tokens';
 export type {
+  SemanticBoxShadow,
+  SemanticBoxShadowKey,
+  SemanticColors,
+  SemanticColorsKey,
+  SemanticDisabledState,
+  SemanticState,
   SemanticTypography,
   SemanticTypographyKey,
   TypographyKeys,
   TypographyObject,
-} from './theme/tokens/semantic/typography';
-export { default as semanticVariablesTypography } from './theme/tokens/semantic/variables/typography';
+} from '@orfium/tokens';
 
 // Token utility types
-export type { DotKeys, Token, TokensObject } from './theme/tokens/utils/types';
+export type { DotKeys, Token, TokensObject } from '@orfium/tokens';
 
 // Hook types
 export type { OnCheckHandler } from './hooks/useCheck';
@@ -103,6 +103,7 @@ export type { ClickEvent, ClickHandler } from './hooks/useLoading';
 export type { ModalContentProps } from './components/Modal/ModalContent/ModalContent';
 
 // Utility types
+export type { ColorShapeFromComponent } from '@orfium/tokens';
 export type {
   CommonButtonProps,
   DivProps,
@@ -111,7 +112,6 @@ export type {
   RequiredProperties,
 } from './utils/common';
 export type { Dayjs } from './utils/date';
-export type { ColorShapeFromComponent } from './utils/themeFunctions';
 export type { ComponentSizes, DeepPartial, TestId } from './utils/types';
 
 export * from './components/Avatar';
@@ -255,6 +255,14 @@ export {
 } from './hooks/useTypeColorToColorMatch';
 
 // utilities
+export {
+  backgroundPickerBasedOnType,
+  calculateActualColorFromComponentProp,
+  colorPickerBasedOnType,
+  fillPickerBasedOnType,
+  getColorFromType,
+  parseCompositionToken,
+} from '@orfium/tokens';
 export { Function } from './utils/common';
 export { default as dayjs } from './utils/date';
 export { PropsValidationError, ValidationError } from './utils/errors';
@@ -266,14 +274,6 @@ export {
   getLocaleFormat,
   isComponentFunctionType,
 } from './utils/helpers';
-export { parseCompositionToken } from './theme/tokens/utils';
-export {
-  backgroundPickerBasedOnType,
-  calculateActualColorFromComponentProp,
-  colorPickerBasedOnType,
-  fillPickerBasedOnType,
-  getColorFromType,
-} from './utils/themeFunctions';
 
 export { default as themeConfig } from './theme';
 export {

@@ -1,4 +1,4 @@
-import type { DimensionSizingKey } from 'theme/dimension/sizing';
+import type { DimensionSizingKey } from '@orfium/tokens';
 
 import type { LinkSizes } from './Link.types';
 

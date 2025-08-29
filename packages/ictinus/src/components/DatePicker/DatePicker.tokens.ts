@@ -1,6 +1,6 @@
-import datePicker from 'theme/tokens/components/variables/datePicker';
-import type { DotKeys } from 'theme/tokens/utils';
-import { getComponentTokens } from 'theme/tokens/utils';
+import { datePicker } from '@orfium/tokens';
+import type { DotKeys } from '@orfium/tokens';
+import { getComponentTokens } from '@orfium/tokens';
 
 import type { Theme } from '../../theme';
 

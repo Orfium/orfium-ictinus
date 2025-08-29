@@ -1,7 +1,5 @@
-import avatar from 'theme/tokens/components/variables/avatar';
-import type { DotKeys } from 'theme/tokens/utils';
-import { getComponentTokens } from 'theme/tokens/utils';
-import { rem } from 'theme/utils';
+import type { DotKeys } from '@orfium/tokens';
+import { avatar, getComponentTokens, rem } from '@orfium/tokens';
 
 import type { Theme } from '../../theme';
 

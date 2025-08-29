@@ -1,7 +1,7 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import type { Theme } from 'theme';
-import type { SemanticColorsKey } from 'theme/tokens/semantic/colors';
+import type { SemanticColorsKey } from '@orfium/tokens';
 
 import type { NotificationStyleType, NotificationTypes } from './Notification';
 

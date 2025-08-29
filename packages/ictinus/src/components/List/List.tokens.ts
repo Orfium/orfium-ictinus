@@ -1,6 +1,6 @@
-import listItem from 'theme/tokens/components/variables/listItem';
-import type { DotKeys } from 'theme/tokens/utils';
-import { getComponentTokens } from 'theme/tokens/utils';
+import { listItem } from '@orfium/tokens';
+import type { DotKeys } from '@orfium/tokens';
+import { getComponentTokens } from '@orfium/tokens';
 
 import type { Theme } from '../../theme';
 
