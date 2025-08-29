@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
+import { rem } from '@orfium/tokens';
 import type { Theme } from '~/theme';
-import { rem } from '~/theme/utils';
 import type { ToastOptions } from './Toast.types';
 
 export const styles = {

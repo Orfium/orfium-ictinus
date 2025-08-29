@@ -1,6 +1,6 @@
-import filter from 'theme/tokens/components/variables/filter';
-import type { DotKeys } from 'theme/tokens/utils';
-import { getComponentTokens } from 'theme/tokens/utils';
+import { filter } from '@orfium/tokens';
+import type { DotKeys } from '@orfium/tokens';
+import { getComponentTokens } from '@orfium/tokens';
 
 import type { Theme } from '../../theme';
 

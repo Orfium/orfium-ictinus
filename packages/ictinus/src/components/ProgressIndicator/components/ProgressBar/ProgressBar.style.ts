@@ -2,7 +2,7 @@ import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import { isUndefined } from 'lodash-es';
 import type { Theme } from 'theme';
-import { rem } from 'theme/utils';
+import { rem } from '@orfium/tokens';
 
 import { getProgressIndicatorTokens } from 'components/ProgressIndicator/ProgressIndicator.tokens';
 import type { ProgressIndicatorProps } from 'components/ProgressIndicator/ProgressIndicator.types';

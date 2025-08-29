@@ -1,9 +1,8 @@
+import type { AcceptedColorComponentTypes, SemanticColorsKey } from '@orfium/tokens';
 import { useTheme } from 'index';
 import * as React from 'react';
 import { useState } from 'react';
-import type { SemanticColorsKey } from 'theme/tokens/semantic/colors';
 import { generateTestDataId } from 'utils/helpers';
-import type { AcceptedColorComponentTypes } from 'utils/themeFunctions';
 import type { TestId } from 'utils/types';
 import Icon from '../Icon';
 import type { NotificationStyleType, NotificationTypes } from '../Notification/Notification';

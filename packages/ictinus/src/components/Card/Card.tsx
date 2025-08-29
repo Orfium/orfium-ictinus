@@ -1,6 +1,6 @@
+import type { SpacingKey } from '@orfium/tokens';
 import type { Elevation } from 'index';
 import React from 'react';
-import type { SpacingKey } from 'theme/globals/spacing';
 
 import { cardStyle } from './Card.style';
 

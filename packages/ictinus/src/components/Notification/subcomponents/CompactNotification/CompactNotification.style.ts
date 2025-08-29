@@ -1,6 +1,6 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
-import { rem } from 'theme/utils';
+import { rem } from '@orfium/tokens';
 
 import type { Theme } from '../../../../theme';
 import type { NotificationStyleType, NotificationTypes } from '../../Notification';

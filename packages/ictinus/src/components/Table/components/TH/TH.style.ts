@@ -5,8 +5,8 @@ import { ACTIONS_CELL_WIDTH, contentAlignToFlex } from '../../constants';
 import type { TableProps } from 'components/Table';
 import { generateStylesFromTokens } from 'components/Typography/utils';
 
-import { lineEllipsis } from '~/theme/functions';
-import { rem } from '~/theme/utils';
+import { lineEllipsis } from '@orfium/tokens';
+import { rem } from '@orfium/tokens';
 
 export const thContainer =
   ({

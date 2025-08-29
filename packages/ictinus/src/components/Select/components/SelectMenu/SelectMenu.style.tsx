@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 import type { TextFieldProps } from 'components/TextField/TextField';
 import { darken } from 'polished';
 import type { Theme } from 'theme';
-import { rem } from 'theme/utils';
+import { rem } from '@orfium/tokens';
 import type { SelectMenuProps } from './SelectMenu';
 
 export const optionStyle =

@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import { rem } from 'theme/utils';
+import { rem } from '@orfium/tokens';
 
 export const contentStyles = (isExpanded: boolean, transitionDuration: number) => css`
   transition: opacity ${isExpanded ? transitionDuration + 100 : 0}ms ease,

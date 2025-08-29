@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import type { TypographyObject } from 'theme/tokens/semantic/typography';
+import type { TypographyObject } from '@orfium/tokens';
 
 /** Generates a css object with the values included in the value object */
 export const generateStylesFromTokens = (value: TypographyObject) => css`

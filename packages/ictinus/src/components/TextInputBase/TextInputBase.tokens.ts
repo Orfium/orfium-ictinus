@@ -1,6 +1,5 @@
-import field from 'theme/tokens/components/variables/field';
-import type { DotKeys } from 'theme/tokens/utils';
-import { getComponentTokens } from 'theme/tokens/utils';
+import type { DotKeys } from '@orfium/tokens';
+import { field, getComponentTokens } from '@orfium/tokens';
 
 import type { Theme } from '../../theme';
 

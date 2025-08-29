@@ -1,6 +1,6 @@
 import { css, type CSSObject } from '@emotion/react';
 import { type Theme } from '~/theme';
-import { flex, flexCenterVertical } from '~/theme/functions';
+import { flex, flexCenterVertical } from '@orfium/tokens';
 
 export const stepStyles = (sx?: CSSObject) => css`
   box-sizing: border-box;

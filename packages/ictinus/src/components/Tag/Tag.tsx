@@ -5,7 +5,7 @@ import useGetTagUtils from './hooks/useGetTagUtils';
 import { tagContainerStyles } from './Tag.style';
 import type { TagProps } from './Tag.types';
 
-import { lineEllipsis } from '~/theme/functions';
+import { lineEllipsis } from '@orfium/tokens';
 
 const Tag = React.forwardRef<HTMLDivElement, DivProps & TagProps>(
   (

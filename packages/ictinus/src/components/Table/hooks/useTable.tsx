@@ -15,7 +15,7 @@ import { CheckBox } from 'components/Controls';
 import Icon from 'components/Icon';
 
 import Typography from '~/components/Typography';
-import { lineEllipsis } from '~/theme/functions';
+import { lineEllipsis } from '@orfium/tokens';
 
 type ReturnValue<TData> = {
   getHeaderGroups: () => HeaderGroup<TData>[];

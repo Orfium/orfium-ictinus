@@ -1,13 +1,13 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
-import { rem } from 'theme/utils';
+import { rem } from '@orfium/tokens';
 
 import type { AvatarTokens } from './Avatar.tokens';
 import { getAvatarTokens, parseAvatarIconSize } from './Avatar.tokens';
 import type { AvatarColors, AvatarProps, AvatarSizes } from './Avatar.types';
 import { avatarColorToSemColor } from './constants';
 import type { Theme } from '../../theme';
-import { flex } from '../../theme/functions';
+import { flex } from '@orfium/tokens';
 import { generateStylesFromTokens } from 'components/Typography/utils';
 
 export const iconStyles =

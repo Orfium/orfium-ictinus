@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { rem } from 'polished';
 
-import { flex } from '../../theme/functions';
+import { flex } from '@orfium/tokens';
 
 export const Container = styled.div`
   ${flex};

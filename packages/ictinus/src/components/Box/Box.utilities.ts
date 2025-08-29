@@ -1,6 +1,6 @@
 import { curry, omit, pick } from 'lodash-es';
 import type { Theme } from 'theme';
-import type { SemanticColorsKey } from 'theme/tokens/semantic/colors';
+import type { SemanticColorsKey } from '@orfium/tokens';
 
 import type { StyledBoxProps } from './Box.types';
 

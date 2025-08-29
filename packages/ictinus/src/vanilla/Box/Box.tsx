@@ -1,7 +1,6 @@
+import { atoms, sprinkles, type Atoms } from '@orfium/tokens/css';
 import clsx, { type ClassValue } from 'clsx';
 import React, { forwardRef, type AllHTMLAttributes, type ElementType } from 'react';
-import { atoms, type Atoms } from '~/css/atoms';
-import { sprinkles } from '~/css/sprinkles.css';
 
 type HTMLProperties<T = HTMLElement> = Omit<
   AllHTMLAttributes<T>,

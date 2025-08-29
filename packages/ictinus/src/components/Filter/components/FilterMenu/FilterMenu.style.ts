@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 import type { Theme } from 'theme';
-import { rem } from 'theme/utils';
+import { rem } from '@orfium/tokens';
 import { FILTER_WIDTH } from '../../constants';
 
 export const menuStyle =

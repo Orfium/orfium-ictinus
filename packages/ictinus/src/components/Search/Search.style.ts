@@ -1,7 +1,7 @@
 import { css, type SerializedStyles } from '@emotion/react';
 import { generateStylesFromTokens } from 'components/Typography/utils';
 import type { Theme } from 'theme';
-import { rem } from 'theme/utils';
+import { rem } from '@orfium/tokens';
 import { getSearchTokens } from './Search.tokens';
 import type { SearchProps } from './Search.types';
 

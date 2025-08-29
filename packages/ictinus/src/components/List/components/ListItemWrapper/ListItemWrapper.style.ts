@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import { rem } from 'theme/utils';
+import { rem } from '@orfium/tokens';
 
 import { body02, body03, label02, label03 } from 'components/Typography/Typography.config.styles';
 import type { ListRowSize } from '../../types';

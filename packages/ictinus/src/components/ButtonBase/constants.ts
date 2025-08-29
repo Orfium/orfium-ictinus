@@ -1,5 +1,5 @@
-import type { SemanticColorsKey } from 'theme/tokens/semantic/colors';
-import type { SemanticTypographyKey } from 'theme/tokens/semantic/typography';
+import type { SemanticColorsKey } from '@orfium/tokens';
+import type { SemanticTypographyKey } from '@orfium/tokens';
 import type { ComponentSizes } from 'utils/types';
 
 import type { ButtonTypes } from 'components/Button/Button.types';

@@ -2,7 +2,7 @@ import useTheme from 'hooks/useTheme';
 import { isUndefined } from 'lodash-es';
 import React from 'react';
 import { ProgressBar as AriaProgressBar } from 'react-aria-components';
-import { convertRemToPixels } from 'theme/utils';
+import { convertRemToPixels } from '@orfium/tokens';
 
 import { animationStyles } from './ProgressCircle.style';
 import type { ProgressIndicatorProps } from 'components/ProgressIndicator/ProgressIndicator.types';

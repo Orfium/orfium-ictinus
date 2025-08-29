@@ -1,4 +1,4 @@
-import type { SemanticColorsKey } from 'theme/tokens/semantic/colors';
+import type { SemanticColorsKey } from '@orfium/tokens';
 
 import type { TagColors } from './Tag.types';
 

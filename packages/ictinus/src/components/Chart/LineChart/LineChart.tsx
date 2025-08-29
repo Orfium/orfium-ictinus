@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
-import { rem } from 'theme/utils';
+import { rem } from '@orfium/tokens';
 
 import CustomTooltip from './components/CustomTooltip';
 import GradientLine from './components/GradientLine';
