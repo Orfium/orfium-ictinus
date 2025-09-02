@@ -27,6 +27,7 @@ const plugins = [
   }),
   svgr(),
   vanillaExtractPlugin(),
+  vanillaCssImportsPlugin(),
   dts({
     // eslint-disable-next-line @typescript-eslint/naming-convention
     insertTypesEntry: true,
@@ -57,10 +58,12 @@ export default defineConfig(({ mode }) => {
           'vanilla/index': path.resolve(__dirname, 'src/vanilla/index.ts'),
         },
         name: pkg.name,
-        cssFileName: 'styles',
       },
       minify: 'esbuild',
       outDir: 'dist',
+      // This is required to ensure CSS is split and imported properly. Because we are using build.lib the default differs and is set to false instead of true.
+      // https://vite.dev/config/build-options.html#build-csscodesplit
+      cssCodeSplit: true,
       rollupOptions: {
         external: [
           'react',
@@ -72,6 +75,12 @@ export default defineConfig(({ mode }) => {
             ...Object.keys(pkg.dependencies || {}),
             ...Object.keys(pkg.peerDependencies || {}),
           ]),
+        ],
+        output: [
+          {
+            preserveModules: true,
+            preserveModulesRoot: 'src',
+          },
         ],
       },
     },
@@ -98,3 +107,27 @@ export default defineConfig(({ mode }) => {
     },
   };
 });
+
+function vanillaCssImportsPlugin() {
+  return {
+    name: 'vanilla-css-imports',
+    generateBundle(__, bundle) {
+      Object.keys(bundle).forEach((fileName) => {
+        const chunk = bundle[fileName];
+        if (chunk.type === 'chunk' && fileName.endsWith('.js')) {
+          // Look for corresponding CSS file (either .css or .css.ts.vanilla.css pattern)
+          const baseName = fileName.replace('.js', '');
+          const possibleCssFiles = [`${baseName}.css`, `${baseName}.css.ts.vanilla.css`];
+
+          const cssFile = possibleCssFiles.find((cssFileName) => bundle[cssFileName]);
+
+          if (cssFile) {
+            // Add CSS import to the chunk
+            const cssImport = `import './${cssFile.split('/').pop()}';`;
+            chunk.code = cssImport + '\n' + chunk.code;
+          }
+        }
+      });
+    },
+  };
+}

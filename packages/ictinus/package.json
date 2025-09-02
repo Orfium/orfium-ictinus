@@ -128,7 +128,7 @@
   "scripts": {
     "prepublishOnly": "pnpm build",
     "build": "pnpm build:main && pnpm build:codemods",
-    "build:main": "vite build",
+    "build:main": "vite build --mode production",
     "build:codemods": "vite build --config vite.codemods.config.ts",
     "test": "vitest --run",
     "test:watch": "vitest --watch",

@@ -1,6 +1,6 @@
 import { get } from 'lodash-es';
-import { shade, tint, rem as polishedRem } from 'polished';
-import { PropsValidationError } from 'utils/errors';
+import { rem as polishedRem, shade, tint } from 'polished';
+import { PropsValidationError } from '../utils/errors';
 
 import type { GeneratedColorShades, Palette } from './palette';
 import type { FlatPaletteConfig, PaletteConfig, TextPaletteConfig } from './palette.config';
