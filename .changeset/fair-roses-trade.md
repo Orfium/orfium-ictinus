@@ -2,7 +2,7 @@
 "@app/storybook": patch
 "@app/tokens-example": patch
 "@app/vanilla-example": patch
-"packages/tokens": minor
+"@orfium/tokens": minor
 ---
 
 chore: split tokens from ictinus
