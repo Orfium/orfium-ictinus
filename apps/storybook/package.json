@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "storybook dev -p 6006",
-    "build": "storybook build",
+    "build": "storybook build --webpack-stats-json",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest --run",
