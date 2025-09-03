@@ -37,12 +37,9 @@ export default defineConfig(({ mode }) => {
     },
     plugins,
     resolve: {
-      alias:
-        mode === 'production'
-          ? {
-              '@orfium/ictinus': path.resolve(__dirname, '../../packages/ictinus/src'),
-            }
-          : {},
+      alias: {
+        '@orfium/ictinus': path.resolve(__dirname, '../../packages/ictinus/src'),
+      },
     },
     test: {
       globals: true,
