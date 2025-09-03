@@ -26,6 +26,9 @@ importers:
       '@emotion/styled':
         specifier: ^11.11.0
         version: 11.14.0(@emotion/react@11.14.0(@types/react@18.3.24)(react@18.3.1))(@types/react@18.3.24)(react@18.3.1)
+      chromatic:
+        specifier: ^13.1.4
+        version: 13.1.4
       jackspeak:
         specifier: 2.1.1
         version: 2.1.1
@@ -421,9 +424,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^3.2.4
         version: 3.2.4(@vitest/browser@3.2.4)(vitest@3.2.4)
-      chromatic:
-        specifier: ^7.5.0
-        version: 7.6.0
       cross-env:
         specifier: ^7.0.0
         version: 7.0.3
@@ -3873,9 +3873,17 @@ packages:
       '@chromatic-com/playwright':
         optional: true
 
-  chromatic@7.6.0:
-    resolution: {integrity: sha512-4MwlX8EDMyfQKf1NXTdUhJ2b0EYueByaVrF75pdFaOzHH7n3OhzknmQYbUSegLiFhKvHuvM8nZvf9SCajO+Cow==}
+  chromatic@13.1.4:
+    resolution: {integrity: sha512-6Voxdy2OvSyoA7mJjyiFiWii7d8ng0jBcW97TqL+ptlAWrJhIf10jrJ78KLPDUNOBIPxvx9Vcpe/bUwoLFIG5g==}
     hasBin: true
+    peerDependencies:
+      '@chromatic-com/cypress': ^0.*.* || ^1.0.0
+      '@chromatic-com/playwright': ^0.*.* || ^1.0.0
+    peerDependenciesMeta:
+      '@chromatic-com/cypress':
+        optional: true
+      '@chromatic-com/playwright':
+        optional: true
 
   chrome-trace-event@1.0.4:
     resolution: {integrity: sha512-rNjApaLzuwaOTjCiT8lSDdGN1APCiqkChLMJxJPWLunPAt5fy8xgU9/jNOchV84wfIxrA0lRQB7oCT8jrn/wrQ==}
@@ -12002,7 +12010,7 @@ snapshots:
 
   chromatic@12.2.0: {}
 
-  chromatic@7.6.0: {}
+  chromatic@13.1.4: {}
 
   chrome-trace-event@1.0.4: {}
 
