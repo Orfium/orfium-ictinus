@@ -27,7 +27,9 @@ jobs:
           cache: 'pnpm'
 
       - name: Install dependencies
-        run: pnpm install
+        run: |
+          pnpm install
+          pnpm build --filter @app/storybook
 
       - name: Publish to Chromatic
         uses: chromaui/action@v1
@@ -36,5 +38,6 @@ jobs:
           onlyChanged: true
           workingDir: apps/storybook
           buildScriptName: build
+          storybookBuildDir: apps/storybook/storybook-static
         env:
           STORYBOOK_ENV: true
