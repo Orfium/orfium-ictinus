@@ -29,6 +29,9 @@ jobs:
       - name: Install dependencies
         run: |
           pnpm install
+
+      - name: Build storybook
+        run: |
           pnpm build --filter @app/storybook
 
       - name: Publish to Chromatic
@@ -36,8 +39,6 @@ jobs:
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           onlyChanged: true
-          workingDir: apps/storybook
-          buildScriptName: build
           storybookBuildDir: apps/storybook/storybook-static
         env:
           STORYBOOK_ENV: true
