@@ -1,29 +1,14 @@
-# @orfium/ictinus
+# @app/tokens-example
 
-## 5.40.0
+## 0.0.1
 
-### Minor Changes
+### Patch Changes
 
-- ff25264: add code variant for tag
 - 4d88250: chore: split tokens from ictinus
 
   Split the token library from ictinus.
   Ensure the library can export CSS tokens.
   Create examples demonstrating the use of the CSS tokens.
 
-### Patch Changes
-
 - Updated dependencies [4d88250]
   - @orfium/tokens@5.1.0
-
-## 5.39.5
-
-### Patch Changes
-
-- d31fbb8: adding missing readme's
-
-## 5.39.4
-
-### Patch Changes
-
-- e8c779e: An empty release to test monorepo
