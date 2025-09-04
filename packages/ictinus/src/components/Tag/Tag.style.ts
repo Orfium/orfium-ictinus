@@ -15,7 +15,7 @@ export const tagContainerStyles =
     isSelectable,
     isClearable,
     isSelected,
-  }: Pick<TagProps, 'variant' | 'size' | 'color' | 'isSelected'> & {
+  }: Pick<TagProps, 'size' | 'color' | 'isSelected'> & {
     isSelectable?: boolean;
     isClearable?: boolean;
   }) =>
