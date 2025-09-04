@@ -1,15 +1,12 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import type { SemanticTypographyKey } from '@orfium/tokens';
-import { rem } from '@orfium/tokens';
-
+import { lineEllipsis, rem } from '@orfium/tokens';
+import { generateStylesFromTokens } from 'components/Typography/utils';
+import type { Theme } from '../../theme';
 import { tagColorToSemColor } from './constants';
 import { getTagTokens } from './Tag.tokens';
 import type { TagProps } from './Tag.types';
-import type { Theme } from '../../theme';
-import { generateStylesFromTokens } from 'components/Typography/utils';
-
-import { lineEllipsis } from '@orfium/tokens';
 
 export const tagContainerStyles =
   ({
@@ -83,6 +80,13 @@ export const tagContainerStyles =
       ${lineEllipsis};
     `;
   };
+
+export const code = (size: 'normal' | 'small') => (theme: Theme) => css`
+  ${theme.tokens.typography.get(size === 'normal' ? 'mono.body02' : 'mono.body03')};
+  background-color: ${theme.tokens.colors.get('palette.secondary.contrast')};
+  border-color: transparent;
+  color: ${theme.tokens.colors.get('textColor.default.primary')};
+`;
 
 export const iconStyles =
   () =>
