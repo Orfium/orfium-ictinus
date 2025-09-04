@@ -7,6 +7,10 @@ export type TagColors = 'neutral' | 'blue' | 'red' | 'purple' | 'teal' | 'orange
 export type TagSizes = 'normal' | 'small';
 
 export type TagProps = {
+  /** The variant of the Tag
+   *  @default 'default'
+   * */
+  variant?: 'default' | 'code';
   /** The color of the Tag
    *  @default 'neutral'
    * */

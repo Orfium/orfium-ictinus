@@ -3,12 +3,12 @@ import { useState } from 'react';
 
 import { Tag, type TagProps } from '@orfium/ictinus';
 
-type Props = Pick<TagProps, 'color' | 'size' | 'iconName'> & {
+type Props = Pick<TagProps, 'color' | 'size' | 'iconName' | 'variant'> & {
   text: string;
   type: 'read-only' | 'clearable' | 'selectable';
 };
 
-const TagShowcase: FC<Props> = ({ color, size, iconName, type, text }) => {
+const TagShowcase: FC<Props> = ({ color, size, iconName, type, text, variant }) => {
   const [isSelected, setIsSelected] = useState(false);
 
   const restProps =
@@ -25,7 +25,7 @@ const TagShowcase: FC<Props> = ({ color, size, iconName, type, text }) => {
 
   return (
     <div>
-      <Tag color={color} size={size} iconName={iconName} {...restProps}>
+      <Tag color={color} size={size} iconName={iconName} variant={variant} {...restProps}>
         {text}
       </Tag>
     </div>

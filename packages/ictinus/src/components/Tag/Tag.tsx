@@ -1,15 +1,14 @@
+import { lineEllipsis } from '@orfium/tokens';
 import React from 'react';
 import type { DivProps } from 'utils/common';
-
 import useGetTagUtils from './hooks/useGetTagUtils';
-import { tagContainerStyles } from './Tag.style';
+import * as styles from './Tag.style';
 import type { TagProps } from './Tag.types';
-
-import { lineEllipsis } from '@orfium/tokens';
 
 const Tag = React.forwardRef<HTMLDivElement, DivProps & TagProps>(
   (
     {
+      variant = 'default',
       color = 'neutral',
       size = 'normal',
       iconName,
@@ -31,7 +30,10 @@ const Tag = React.forwardRef<HTMLDivElement, DivProps & TagProps>(
         onClick={onSelect}
         onKeyDown={handleKeyDown}
         tabIndex={isInteractive ? 0 : -1}
-        css={tagContainerStyles({ size, color, isSelectable, isClearable, isSelected })}
+        css={[
+          styles.tagContainerStyles({ size, color, isSelectable, isClearable, isSelected }),
+          variant === 'code' && styles.code(size),
+        ]}
         ref={ref}
         data-testid={dataTestId ? dataTestId : `${dataTestPrefixId}_tag_container`}
         aria-label={children?.toString()}

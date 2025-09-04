@@ -1,15 +1,15 @@
-
+import { Tag, Typography } from '@orfium/ictinus';
 import { useState } from 'react';
 import { FIGMA_URL, Function } from 'utils/common';
 import Stack from '~/stories/storyUtils/Stack';
 import TagShowcase from '../../storybook/Showcases/TagShowcase';
-import { Typography, Tag } from '@orfium/ictinus';
 
 export default {
   title: 'Updated Components/Tag',
   component: Tag,
 
   args: {
+    variant: 'default',
     text: 'Label',
     size: 'normal',
     type: 'read-only',
@@ -118,6 +118,21 @@ export const ClearableTag = {
   name: 'Clearable Tag',
 };
 
+export const CodeTag = {
+  render: () => (
+    <Stack>
+      <Tag variant="code">c0d31a831</Tag>
+      <Tag variant="code" size="small">
+        c0d31a831
+      </Tag>
+    </Stack>
+  ),
+  name: 'Code Tag',
+  parameters: {
+    controls: { disable: true },
+  },
+};
+
 export const TagSizes = {
   render: () => (
     <>
@@ -222,6 +237,17 @@ export const TagSizes = {
           Small
         </Tag>
       </Stack>
+      <Stack>
+        <Typography>Code Tag</Typography>
+      </Stack>
+      <Stack>
+        <Tag variant="code">Normal</Tag>
+      </Stack>
+      <Stack>
+        <Tag variant="code" size="small">
+          Small
+        </Tag>
+      </Stack>
     </>
   ),
   name: 'Tag sizes',
@@ -232,11 +258,20 @@ export const TagSizes = {
 
 export const Playground = {
   render: (args: Parameters<typeof TagShowcase>[0]) => {
-    const { text, type, size, color, iconName } = args;
-    return <TagShowcase text={text} type={type} size={size} color={color} iconName={iconName} />;
+    const { variant, text, type, size, color, iconName } = args;
+    return (
+      <TagShowcase
+        text={text}
+        type={type}
+        size={size}
+        color={color}
+        iconName={iconName}
+        variant={variant}
+      />
+    );
   },
   name: 'Playground',
   parameters: {
-    controls: { include: ['text', 'type', 'size', 'color', 'iconName'] },
+    controls: { include: ['variant', 'text', 'type', 'size', 'color', 'iconName'] },
   },
 };
