@@ -3,6 +3,10 @@ import { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
 type ColorScheme = 'light' | 'dark';
 
+if (import.meta.env.MODE === 'production') {
+  import('@orfium/tokens/vars.css');
+}
+
 type ThemeContextValue = {
   /** Active color scheme */
   colorScheme: ColorScheme;

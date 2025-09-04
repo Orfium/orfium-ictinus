@@ -1,13 +1,13 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import type { CSSObject } from '@emotion/serialize';
-import { rem } from 'theme/utils';
+import { rem } from '@orfium/tokens';
 
-import type { TextAreaProps } from './TextArea';
-import type { Theme } from '../../theme';
 import { LABEL_TRANSFORM_LEFT_SPACING } from 'components/Label/Label.style';
 import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
 import { body03 } from 'components/Typography/Typography.config.styles';
+import type { Theme } from '../../theme';
+import type { TextAreaProps } from './TextArea';
 
 export const sxProp =
   ({ isResizeEnabled = false }: Partial<TextAreaProps>) =>

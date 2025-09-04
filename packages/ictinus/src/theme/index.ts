@@ -1,20 +1,20 @@
-import { get } from 'lodash-es';
-
-import dimension from './dimension';
-import globals from './globals';
-import overrides from './overrides';
+// Import from @orfium/tokens package
 import {
   BASE_SHADE,
   colorShades,
+  dimension,
   flatColors,
   getAAColor,
   getAAColorFromSwatches,
   getColor,
+  globals,
   neutralColors,
   paleColors,
-} from './palette';
-import tokens from './tokens';
-import type { ColorScheme, TextColorTypes, Theme, ThemeConfig } from './types';
+  semantic,
+} from '@orfium/tokens';
+
+import overrides from './overrides';
+import type { ColorScheme, SemanticTheme, TextColorTypes, Theme, ThemeConfig } from './types';
 
 const defaultTheme = (theming: ColorScheme): Theme => {
   return {
@@ -22,9 +22,7 @@ const defaultTheme = (theming: ColorScheme): Theme => {
     colorScheme: theming,
     overrides,
     dimension,
-    tokens: {
-      ...get(tokens, theming || 'semantic', tokens.semantic),
-    },
+    tokens: semantic as SemanticTheme,
     utils: {
       getColor: getColor(globals.oldColors),
       getAAColorFromSwatches: getAAColorFromSwatches(globals.oldColors),

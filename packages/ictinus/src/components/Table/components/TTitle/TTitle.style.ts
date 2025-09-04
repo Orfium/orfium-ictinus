@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 
 import { ACTIONS_BAR_HEIGHT } from '../../constants';
 
-import { rem } from '~/theme/utils';
+import { rem } from '@orfium/tokens';
 
 export const tTitleContainer =
   () =>

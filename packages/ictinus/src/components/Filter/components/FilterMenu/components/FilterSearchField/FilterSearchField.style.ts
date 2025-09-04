@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import { rem } from 'theme/utils';
+import { rem } from '@orfium/tokens';
 
 export const textFieldWrapper = () =>
   css`

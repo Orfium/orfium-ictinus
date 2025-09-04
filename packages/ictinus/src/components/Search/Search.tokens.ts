@@ -1,6 +1,6 @@
-import search from 'theme/tokens/components/variables/search';
-import type { DotKeys } from 'theme/tokens/utils';
-import { getComponentTokens } from 'theme/tokens/utils';
+import { search } from '@orfium/tokens';
+import type { DotKeys } from '@orfium/tokens';
+import { getComponentTokens } from '@orfium/tokens';
 
 import type { Theme } from '../../theme';
 

@@ -1,6 +1,6 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
-import { rem } from 'theme/utils';
+import { rem } from '@orfium/tokens';
 
 export const groupStyles = ({ size }: { size: 'compact' | 'normal' }): SerializedStyles => {
   return css`

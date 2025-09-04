@@ -1,6 +1,6 @@
-import controls from 'theme/tokens/components/variables/controls';
-import { getComponentTokens } from 'theme/tokens/utils';
-import type { DotKeys } from 'theme/tokens/utils';
+import { controls } from '@orfium/tokens';
+import { getComponentTokens } from '@orfium/tokens';
+import type { DotKeys } from '@orfium/tokens';
 
 import type { Theme } from '../../theme';
 

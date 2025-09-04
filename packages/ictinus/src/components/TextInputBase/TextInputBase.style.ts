@@ -1,15 +1,15 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
+import type { SemanticTypographyKey } from '@orfium/tokens';
+import { rem } from '@orfium/tokens';
 import type { Theme } from 'theme';
-import type { SemanticTypographyKey } from 'theme/tokens/semantic/typography';
-import { rem } from 'theme/utils';
 
-import type { TextInputBaseProps } from './TextInputBase';
-import { getTextInputBaseTokens } from './TextInputBase.tokens';
-import type { ColorScheme } from '../../theme/types';
 import { LABEL_TRANSFORM_LEFT_SPACING } from 'components/Label/Label.style';
 import { body03 } from 'components/Typography/Typography.config.styles';
 import { generateStylesFromTokens } from 'components/Typography/utils';
+import type { ColorScheme } from '../../theme/types';
+import type { TextInputBaseProps } from './TextInputBase';
+import { getTextInputBaseTokens } from './TextInputBase.tokens';
 
 // TODO:MERGE: remove theme as prop and do it as (theme) => ({}) because emotion should pass
 const wrapperStyleSwitch = ({
@@ -32,8 +32,8 @@ const wrapperStyleSwitch = ({
   const backgroundColor = hasError
     ? theme.tokens.colors.get('palette.error.base')
     : isLocked
-    ? theme.tokens.colors.get('palette.secondary.muted')
-    : theme.tokens.colors.get('palette.secondary.base');
+      ? theme.tokens.colors.get('palette.secondary.muted')
+      : theme.tokens.colors.get('palette.secondary.base');
 
   const backgroundHoveredColor = hasError
     ? theme.tokens.colors.get('palette.error.muted')

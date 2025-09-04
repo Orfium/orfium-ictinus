@@ -3,8 +3,8 @@ import { FILTER_WIDTH } from 'components/Filter/constants';
 import { getListItemTokens } from 'components/List/List.tokens';
 import { generateStylesFromTokens } from 'components/Typography/utils';
 import type { Theme } from 'theme';
-import { flexCenter } from 'theme/functions';
-import { rem } from 'theme/utils';
+import { flexCenter } from '@orfium/tokens';
+import { rem } from '@orfium/tokens';
 
 export const optionsStyles =
   ({ isMulti }) =>

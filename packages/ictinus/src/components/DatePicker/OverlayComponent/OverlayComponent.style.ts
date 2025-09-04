@@ -2,9 +2,9 @@ import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import type { Theme } from 'theme';
 
-import { flex } from '../../../theme/functions';
-import { getDatePickerTokens } from '../DatePicker.tokens';
+import { flex } from '@orfium/tokens';
 import { label02 } from 'components/Typography/Typography.config.styles';
+import { getDatePickerTokens } from '../DatePicker.tokens';
 
 export const overlayWrapperStyle =
   () =>
@@ -51,12 +51,11 @@ export const optionStyle =
     `;
   };
 
-export const buttonsMonthsWrapperStyle = (): SerializedStyles =>
-  css`
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  `;
+export const buttonsMonthsWrapperStyle = (): SerializedStyles => css`
+  display: flex;
+  flex-direction: column;
+  position: relative;
+`;
 
 export const monthsWrapperStyle = (): SerializedStyles => {
   return css`

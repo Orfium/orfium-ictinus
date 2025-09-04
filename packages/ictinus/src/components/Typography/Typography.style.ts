@@ -1,29 +1,28 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
+import type { FontSpacing } from '@orfium/tokens';
 import type { Theme } from 'theme';
-import type { FontSpacing } from 'theme/tokens/semantic/typography';
 
-import type { TypographyVariant, TextColorTypes } from './Typography';
+import type { semanticVariablesColors as colorsFigma, DotKeys } from '@orfium/tokens';
+import type { TextColorTypes, TypographyVariant } from './Typography';
 import {
+  body01,
+  body02,
+  body03,
+  body04,
   headline01,
   headline02,
   headline03,
   headline04,
   headline05,
-  title01,
-  title02,
-  title03,
   label01,
   label02,
   label03,
   label04,
-  body01,
-  body02,
-  body03,
-  body04,
+  title01,
+  title02,
+  title03,
 } from './Typography.config.styles';
-import type colorsFigma from '../../theme/tokens/semantic/variables/colors';
-import type { DotKeys } from '../../theme/tokens/utils';
 
 export const typographyWrapper =
   ({

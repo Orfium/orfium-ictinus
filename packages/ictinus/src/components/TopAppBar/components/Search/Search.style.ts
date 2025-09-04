@@ -1,11 +1,11 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
+import { rem } from '@orfium/tokens';
 import { darken, lighten } from 'polished';
-import { rem } from 'theme/utils';
 
+import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
 import { themeFunctions } from '../../../../index';
 import type { Theme } from '../../../../theme';
-import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
 
 const getBackground = (isDark: boolean, theme: Theme) =>
   isDark

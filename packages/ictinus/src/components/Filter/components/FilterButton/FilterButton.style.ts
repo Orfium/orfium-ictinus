@@ -1,6 +1,6 @@
 import { css, type SerializedStyles } from '@emotion/react';
 import type { Theme } from 'theme';
-import { transition } from 'theme/functions';
+import { transition } from '@orfium/tokens';
 
 import { getFilterTokens } from 'components/Filter/Filter.tokens';
 import { generateStylesFromTokens } from 'components/Typography/utils';

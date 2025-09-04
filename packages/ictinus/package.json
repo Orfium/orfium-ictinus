@@ -22,9 +22,7 @@
         "types": "./dist/types/vanilla/index.d.ts",
         "default": "./dist/vanilla/index.js"
       }
-    },
-    "./styles.css": "./dist/styles.css",
-    "./vars.css": "./dist/vars/vars.css"
+    }
   },
   "sideEffects": [
     "**/*.css",
@@ -61,7 +59,6 @@
     "@vanilla-extract/vite-plugin": "^5.1.1",
     "@vitejs/plugin-react": "^4.1.0",
     "@vitest/coverage-v8": "^3.2.4",
-    "chromatic": "^7.5.0",
     "cross-env": "^7.0.0",
     "eslint": "^8.0.0",
     "eslint-config-prettier": "^8.5.0",
@@ -85,6 +82,7 @@
     "url-loader": "^4.1.0"
   },
   "dependencies": {
+    "@orfium/tokens": "workspace:*",
     "@radix-ui/react-slot": "^1.2.3",
     "@tanstack/react-table": "^8.21.3",
     "clsx": "^2.1.1",
@@ -119,7 +117,6 @@
   "peerDependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
-    "jackspeak": "2.1.1",
     "prop-types": "^15.7.2",
     "react": ">=17.0.0",
     "react-dom": ">=17.0.0",
@@ -128,10 +125,9 @@
   },
   "scripts": {
     "prepublishOnly": "pnpm build",
-    "build": "pnpm build:main && pnpm build:vars && pnpm build:codemods",
-    "build:main": "vite build",
+    "build": "pnpm build:main && pnpm build:codemods",
+    "build:main": "vite build --mode production",
     "build:codemods": "vite build --config vite.codemods.config.ts",
-    "build:vars": "vite build --config vite.vars.config.ts",
     "test": "vitest --run",
     "test:watch": "vitest --watch",
     "test:update": "vitest -u",

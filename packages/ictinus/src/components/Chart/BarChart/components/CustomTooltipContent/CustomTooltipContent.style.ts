@@ -1,5 +1,5 @@
 import type { Theme } from 'theme';
-import { rem } from 'theme/utils';
+import { rem } from '@orfium/tokens';
 
 export const tooltipStyle = () => (theme: Theme) => {
   return {

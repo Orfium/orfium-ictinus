@@ -1,7 +1,7 @@
 import { css, type CSSObject } from '@emotion/react';
 
 import type { Theme } from '~/theme';
-import { flexCenterVertical } from '~/theme/functions';
+import { flexCenterVertical } from '@orfium/tokens';
 
 export const containerStyles = (sx?: CSSObject) => (theme: Theme) =>
   css`

@@ -1,10 +1,8 @@
+import type { ColorShapeFromComponent, FlatPalette, GeneratedColorShades } from '@orfium/tokens';
+import { BASE_SHADE, calculateActualColorFromComponentProp, mainTypes } from '@orfium/tokens';
 import useTheme from 'hooks/useTheme';
 import { keys, pick } from 'lodash-es';
 import * as React from 'react';
-import type { FlatPalette, GeneratedColorShades } from 'theme/palette';
-import { BASE_SHADE, mainTypes } from 'theme/palette';
-import type { ColorShapeFromComponent } from 'utils/themeFunctions';
-import { calculateActualColorFromComponentProp } from 'utils/themeFunctions';
 
 const defaultContextData = {
   typesShadesColor: {},

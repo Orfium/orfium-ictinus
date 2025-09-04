@@ -1,6 +1,6 @@
-import button from 'theme/tokens/components/variables/button';
-import type { DotKeys } from 'theme/tokens/utils';
-import { getComponentTokens } from 'theme/tokens/utils';
+import { button } from '@orfium/tokens';
+import type { DotKeys } from '@orfium/tokens';
+import { getComponentTokens } from '@orfium/tokens';
 
 import type { Theme } from '../../theme';
 

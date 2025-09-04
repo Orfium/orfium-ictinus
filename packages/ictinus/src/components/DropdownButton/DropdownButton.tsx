@@ -2,7 +2,7 @@ import type { ClickEvent } from 'hooks/useLoading';
 import useTheme from 'hooks/useTheme';
 import { head } from 'lodash-es';
 import React, { useCallback } from 'react';
-import { rem } from 'theme/utils';
+import { rem } from '@orfium/tokens';
 import { generateTestDataId } from 'utils/helpers';
 import type { ComponentSizes, TestProps } from 'utils/types';
 

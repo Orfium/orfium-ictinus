@@ -1,6 +1,4 @@
-import type { SpacingKey } from 'theme/globals/spacing';
-import type globalColors from 'theme/tokens/semantic/variables/colors';
-import type { DotKeys } from 'theme/tokens/utils';
+import type { DotKeys, semanticVariablesColors, SpacingKey } from '@orfium/tokens';
 
 export type Responsive<T> = T | Array<T>;
 
@@ -212,13 +210,13 @@ export type WhiteSpace =
 
 export type StyledBoxProps = {
   /** Accepts all themeable color properties. */
-  color?: DotKeys<typeof globalColors.textColor>;
+  color?: DotKeys<typeof semanticVariablesColors.textColor>;
   /** available values: https://developer.mozilla.org/en-US/docs/Web/CSS/background-attachment */
   backgroundAttachment?: string;
   /** available values: https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip */
   backgroundClip?: string;
   /** Accepts all themeable color properties. */
-  backgroundColor?: DotKeys<typeof globalColors.backgroundColor>;
+  backgroundColor?: DotKeys<typeof semanticVariablesColors.backgroundColor>;
   /** available values: https://developer.mozilla.org/en-US/docs/Web/CSS/background-image */
   backgroundImage?: string;
   /** available values: https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin */

@@ -1,5 +1,5 @@
+import type { FontSpacing, SemanticTypographyKey } from '@orfium/tokens';
 import type { Theme } from 'theme';
-import type { FontSpacing, SemanticTypographyKey } from 'theme/tokens/semantic/typography';
 
 import { generateStylesFromTokens } from './utils';
 

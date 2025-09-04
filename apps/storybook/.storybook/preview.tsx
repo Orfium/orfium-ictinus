@@ -1,9 +1,9 @@
 // THIS DECORATOR MUST GO FIRST, OR THE STORY SOURCE GENERATES INCORRECTLY
 // Add prop tables to components (based on component type interfaces)
 import styled from '@emotion/styled';
-import React from 'react';
 import { ThemeProvider } from '@orfium/ictinus';
-import { Box } from '@orfium/ictinus/vanilla';
+import { Box, ThemeProvider as VanillaThemeProvider } from '@orfium/ictinus/vanilla';
+import '@orfium/tokens/styles.css';
 import { DocsContainer, type DocsContainerProps } from '@storybook/addon-docs/blocks';
 import type { Preview as SBPreview, StoryFn } from '@storybook/react-vite';
 import type { PropsWithChildren } from 'react';
@@ -22,8 +22,6 @@ import {
   TypographyWrapper as SBTypographyWrapper,
   TypographyResetFontSmooth,
 } from '../src/storybook/Typography/Typography.style';
-
-// import '@orfium/ictinus/s';
 
 const viewPorts = {
   desktop1920: {
@@ -102,7 +100,9 @@ export const decorators = [
   },
   (Story: StoryFn) => (
     <ThemeProvider theme={{}}>
-      <Story />
+      <VanillaThemeProvider>
+        <Story />
+      </VanillaThemeProvider>
     </ThemeProvider>
   ),
 ];

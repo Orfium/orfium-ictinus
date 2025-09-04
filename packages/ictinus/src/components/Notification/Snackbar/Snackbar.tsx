@@ -1,5 +1,5 @@
 import * as React from 'react';
-import type { SemanticColorsKey } from 'theme/tokens/semantic/colors';
+import type { SemanticColorsKey } from '@orfium/tokens';
 import { generateTestDataId } from 'utils/helpers';
 import type { TestId } from 'utils/types';
 
