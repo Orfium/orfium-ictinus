@@ -3,6 +3,7 @@
 "@app/tokens-example": patch
 "@app/vanilla-example": patch
 "@orfium/tokens": minor
+"@orfium/ictinus": minor
 ---
 
 chore: split tokens from ictinus
