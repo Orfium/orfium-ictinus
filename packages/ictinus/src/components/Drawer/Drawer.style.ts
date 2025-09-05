@@ -2,7 +2,7 @@ import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import { rem, transparentize } from 'polished';
 import type { Theme } from 'theme';
-import { flex, transition } from '@orfium/tokens';
+import { flex, transition } from 'theme/functions';
 
 import type { AnchorType, DrawerProps } from './Drawer.types';
 

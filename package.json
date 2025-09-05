@@ -34,7 +34,8 @@
     "check:precommit": "turbo run check:precommit --affected",
     "check:formatting": "turbo run check:formatting",
     "clean": "rm -rf node_modules && pnpm -r exec rm -rf node_modules",
-    "release": "turbo run build --filter='./packages/*' && changeset publish"
+    "release": "turbo run build --filter='./packages/*' && changeset publish",
+    "release:experimental": "turbo run build --filter='./packages/*' && changeset publish --tag experimental"
   },
   "repository": {
     "type": "git",

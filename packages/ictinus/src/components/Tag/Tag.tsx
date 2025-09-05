@@ -1,5 +1,5 @@
-import { lineEllipsis } from '@orfium/tokens';
 import React from 'react';
+import { lineEllipsis } from 'theme/functions';
 import type { DivProps } from 'utils/common';
 import useGetTagUtils from './hooks/useGetTagUtils';
 import * as styles from './Tag.style';

@@ -4,7 +4,7 @@ import { rem } from '@orfium/tokens';
 import { darken, lighten } from 'polished';
 
 import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
-import { themeFunctions } from '../../../../index';
+import { flex, flexCenterVertical } from 'theme/functions';
 import type { Theme } from '../../../../theme';
 
 const getBackground = (isDark: boolean, theme: Theme) =>
@@ -20,8 +20,8 @@ export const searchWrapper =
     return css`
       flex-grow: 1;
       max-width: ${rem(520)};
-      ${themeFunctions.flex}
-      ${themeFunctions.flexCenterVertical}
+      ${flex}
+      ${flexCenterVertical}
     height: ${rem(36)};
       background-color: ${background};
       padding-left: ${theme.globals.spacing.get('6')};

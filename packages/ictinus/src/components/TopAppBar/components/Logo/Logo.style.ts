@@ -2,7 +2,7 @@ import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import { rem } from '@orfium/tokens';
 
-import { flexCenter } from '@orfium/tokens';
+import { flexCenter } from 'theme/functions';
 import type { Theme } from '../../../../theme';
 
 const wrapper = (theme: Theme): SerializedStyles => css`

@@ -1,10 +1,10 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
-import { transition } from '@orfium/tokens';
 import { rem } from '@orfium/tokens';
+import { transition } from 'theme/functions';
 
-import type { Theme } from '../../theme';
 import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
+import type { Theme } from '../../theme';
 
 export const selectWrapper =
   () =>

@@ -1,7 +1,8 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import type { AcceptedColorComponentTypes, SemanticColorsKey } from '@orfium/tokens';
-import { flexCenter, rem, transition } from '@orfium/tokens';
+import { rem } from '@orfium/tokens';
+import { flexCenter, transition } from 'theme/functions';
 import {
   typeToBackgroundStyle,
   typeToColorStyle,
