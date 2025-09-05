@@ -14,9 +14,6 @@ export * from './tokens/spacing';
 export * from './theme';
 export { default as theme } from './theme';
 
-// Export all theme functions
-export * from './theme/functions';
-
 // Export theme utilities
 export * from './theme/utils';
 
