@@ -1,17 +1,11 @@
+import { rem } from '@orfium/tokens';
 import type { ClickEvent } from 'hooks/useLoading';
 import useTheme from 'hooks/useTheme';
 import { head } from 'lodash-es';
 import React, { useCallback } from 'react';
-import { rem } from '@orfium/tokens';
 import { generateTestDataId } from 'utils/helpers';
 import type { ComponentSizes, TestProps } from 'utils/types';
 
-import {
-  buttonSpanStyle,
-  iconButtonSpanStyle,
-  iconButtonWrapper,
-  wrapperStyle,
-} from './DropdownButton.style';
 import Button from 'components/Button';
 import type { PrimitiveButtonTypes } from 'components/Button/Button.types';
 import type { AcceptedIconNames } from 'components/Icon';
@@ -21,6 +15,12 @@ import List, { ListItem, ListItemText } from 'components/List';
 import ClickAwayListener from 'components/utils/ClickAwayListener';
 import type { MenuPositionAllowed } from 'components/utils/DropdownOptions';
 import { optionsStyle } from 'components/utils/DropdownOptions';
+import {
+  buttonSpanStyle,
+  iconButtonSpanStyle,
+  iconButtonWrapper,
+  wrapperStyle,
+} from './DropdownButton.style';
 
 export type DropdownButtonProps = TestProps & {
   /** The size of the DropdownButton */
@@ -84,7 +84,7 @@ const DropdownButton = React.forwardRef<HTMLButtonElement, DropdownButtonProps>(
       setIsOpen(false);
       const keyFound = String(head(Array.from(keys)));
       const optionFound = items?.find((o) => o === keyFound);
-      optionFound && handleOptionClick(optionFound);
+      if (optionFound) handleOptionClick(optionFound);
     },
     [handleOptionClick, items]
   );

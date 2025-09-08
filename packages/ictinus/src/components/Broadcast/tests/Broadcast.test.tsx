@@ -1,4 +1,5 @@
 import { createRef } from 'react';
+import { vi } from 'vitest';
 import Button from '~/components/Button';
 import Link from '~/components/Link';
 import { fireEvent, render, screen } from '~/test';

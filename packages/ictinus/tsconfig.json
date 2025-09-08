@@ -28,7 +28,8 @@
     //    "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "jsxImportSource": "@emotion/react",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "composite": true
   },
   "include": ["src", "__mocks__", "codemods"],
   "exclude": ["./dist", "node_modules"],

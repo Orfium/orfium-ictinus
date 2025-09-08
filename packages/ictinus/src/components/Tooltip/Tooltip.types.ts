@@ -1,8 +1,10 @@
+import { type ReactNode } from 'react';
+
 export type TooltipPlacement = 'top' | 'right' | 'bottom' | 'left';
 
 export type InteractiveTooltip = {
   isInteractive: true;
-  content: React.ReactNode;
+  content: ReactNode;
 };
 
 export type TextTooltip = {
@@ -30,5 +32,5 @@ export type TooltipProps = TooltipContent & {
   delayOut?: number;
   /** The tooltip can be controlled or uncontrolled, this attribute can be used to handle show and hide tooltip outside tooltip  */
   isOpen?: boolean;
-  children: React.ReactElement;
+  children: ReactNode;
 };

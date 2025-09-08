@@ -1,6 +1,6 @@
 import userEvent from '@testing-library/user-event';
-
 import type { Mock } from 'vitest';
+import { vi } from 'vitest';
 import { render, screen } from '../../../test';
 import Switch from './Switch';
 

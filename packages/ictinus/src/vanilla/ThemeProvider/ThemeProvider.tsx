@@ -1,5 +1,12 @@
 import { Slot } from '@radix-ui/react-slot';
-import { createContext, useContext, useEffect, useMemo, useState } from 'react';
+import {
+  createContext,
+  type PropsWithChildren,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react';
 
 type ColorScheme = 'light' | 'dark';
 
@@ -22,6 +29,7 @@ export type ThemeProviderProps = {
   /** Default color scheme. If not provided, will use system preference */
   colorScheme?: ColorScheme;
   /** Element to bind theme (defaults to document.documentElement) */
+  // eslint-disable-next-line @typescript-eslint/naming-convention
   asChild?: boolean;
 };
 
@@ -34,8 +42,9 @@ const getSystemColorScheme = (): ColorScheme => {
 export const ThemeProvider = ({
   children,
   colorScheme: initialColorScheme,
+  // eslint-disable-next-line @typescript-eslint/naming-convention
   asChild,
-}: React.PropsWithChildren<ThemeProviderProps>) => {
+}: PropsWithChildren<ThemeProviderProps>) => {
   const [colorScheme, setColorScheme] = useState<ColorScheme>(
     () => initialColorScheme ?? getSystemColorScheme()
   );

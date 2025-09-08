@@ -1,3 +1,4 @@
+import { vi } from 'vitest';
 import { render, screen } from '~/test';
 import Tabs from './Tabs';
 

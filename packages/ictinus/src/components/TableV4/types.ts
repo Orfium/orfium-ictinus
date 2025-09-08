@@ -1,3 +1,4 @@
+import type React from 'react';
 import type { TooltipPlacement } from '~/components/Tooltip/Tooltip.types';
 
 export type ContentComponent<T> = (data: Cell<T>) => React.ReactNode;

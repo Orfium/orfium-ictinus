@@ -1,5 +1,6 @@
 import userEvent from '@testing-library/user-event';
 import { render, screen, waitFor } from 'test';
+import { vi } from 'vitest';
 import Filter from '.';
 import { selectDropdownOption } from '../../test';
 import { SELECT_ALL_OPTION } from '../Select/constants';

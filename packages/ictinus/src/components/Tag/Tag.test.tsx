@@ -1,6 +1,5 @@
-import React from 'react';
+import { vi } from 'vitest';
 import { fireEvent, render } from '../../test';
-
 import Tag from './Tag';
 
 const handleSelect = vi.fn();

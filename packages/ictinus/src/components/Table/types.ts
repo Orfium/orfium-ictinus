@@ -1,20 +1,19 @@
 import type { CSSObject } from '@emotion/react';
 import type {
-  SortingState,
+  ExpandedState,
   OnChangeFn,
   RowSelectionState,
-  ExpandedState,
+  SortingState,
 } from '@tanstack/react-table';
-
 import type { SelectOptionValues } from 'components/Select';
-
+import type React from 'react';
 import type { TestProps } from '~/utils/types';
 
 export type NoUndefined<T> = {
   [K in keyof T]-?: Exclude<T[K], undefined>;
 };
 
-export { SortingState, ExpandedState };
+export { ExpandedState, SortingState };
 
 export type TableProps<TData extends NoUndefined<TData>> = {
   /** If table is interactive, rows are selectable with actions */
@@ -109,9 +108,9 @@ export type RowsConfig = {
   /** Callback for row selection state change */
   setRowSelection?: (state: RowSelectionState) => void;
   /** Default action for rows */
-  defaultAction?: JSX.Element;
+  defaultAction?: React.JSX.Element;
   /** Bulk actions for rows */
-  bulkActions?: JSX.Element;
+  bulkActions?: React.JSX.Element;
   /** Expanded State */
   expanded?: ExpandedState;
   /** Callback for expanded state change */
@@ -122,7 +121,7 @@ export type TableRow<TData extends NoUndefined<TData>> = {
   /** The visible cells of the row */
   cells: TData;
   /** Details component which is displayed when clicking the arrow button */
-  details?: JSX.Element;
+  details?: React.JSX.Element;
 };
 
 export type RowSize = 'sm' | 'md' | 'lg';

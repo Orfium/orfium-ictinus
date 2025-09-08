@@ -1,6 +1,7 @@
+import userEvent from '@testing-library/user-event';
+import { vi } from 'vitest';
 import { render, screen } from '../../test';
 import DropdownButton from './DropdownButton';
-import userEvent from '@testing-library/user-event';
 
 const mockOnButtonClick = vi.fn();
 const mockonOptionSelect = vi.fn();

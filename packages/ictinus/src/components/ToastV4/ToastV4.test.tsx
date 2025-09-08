@@ -1,4 +1,5 @@
 import { css } from '@emotion/react';
+import { vi } from 'vitest';
 import { fireEvent, render } from '../../test';
 import Toast from './ToastV4';
 
