@@ -56,6 +56,8 @@ module.exports = {
         baseUrl: path.resolve(__dirname, '../../../packages/ictinus/src'),
         paths: {
           '~/*': [path.resolve(__dirname, '../../../packages/ictinus/src/*')],
+          '@orfium/ictinus': [path.resolve(__dirname, '../../../packages/ictinus/src')],
+          '@orfium/ictinus/*': [path.resolve(__dirname, '../../../packages/ictinus/src/*')],
         },
         esModuleInterop: true,
       },
