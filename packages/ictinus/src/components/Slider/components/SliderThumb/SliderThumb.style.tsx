@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { rem, rgba } from 'polished';
 import type { CSSProperties } from 'react';
 
-import { transition } from '@orfium/tokens';
+import { transition } from 'theme/functions';
 
 export const Thumb = styled.div<{
   isDisabled: boolean;

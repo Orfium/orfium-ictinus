@@ -1,3 +1,4 @@
+import type React from 'react';
 import type { TabStepItem, TabStepperStylesOverrides } from '../types';
 
 /** This is just a dummy component to be used in Storybook for showing the TabItem type on props */

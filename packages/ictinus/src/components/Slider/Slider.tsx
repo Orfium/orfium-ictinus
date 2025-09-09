@@ -1,4 +1,4 @@
-import { useRef, type FC } from 'react';
+import React, { useRef, type FC } from 'react';
 import { Range } from 'react-range';
 import type { IMarkProps, IThumbProps, ITrackProps } from 'react-range/lib/types';
 import type { TestProps } from 'utils/types';

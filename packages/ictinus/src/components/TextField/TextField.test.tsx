@@ -1,6 +1,5 @@
 import userEvent from '@testing-library/user-event';
-
-import type { ComponentProps} from 'react';
+import type { ChangeEvent, ComponentProps, KeyboardEvent } from 'react';
 import { useState } from 'react';
 import { fireEvent, render, screen } from '~/test';
 import TextField from './TextField';
@@ -27,10 +26,10 @@ const StatefulTextField = ({
     setTags(tags.filter((t) => t !== tag));
   };
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) =>
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) =>
     setValue((event.target as HTMLInputElement).value);
 
-  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+  const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
     switch (event.key) {
       case 'Enter': {
         if (!value) return;

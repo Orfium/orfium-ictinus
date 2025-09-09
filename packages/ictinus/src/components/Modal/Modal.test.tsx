@@ -1,6 +1,5 @@
-import React from 'react';
-
-import { render, fireEvent } from '../../test';
+import { vi } from 'vitest';
+import { fireEvent, render } from '../../test';
 import Modal from './Modal';
 import ModalContent from './ModalContent';
 

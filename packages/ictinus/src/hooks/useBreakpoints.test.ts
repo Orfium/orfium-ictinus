@@ -1,6 +1,7 @@
 import { renderHook } from '@testing-library/react-hooks';
 import { useMediaQuery } from 'react-responsive';
 import type { Mock } from 'vitest';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import useBreakpoints, { queriesKeys, queriesSizes } from './useBreakpoints';
 
 vi.mock('react-responsive');

@@ -1,8 +1,8 @@
-import type { RenderResult} from '@testing-library/react';
+import type { RenderResult } from '@testing-library/react';
 import { render, screen } from '@testing-library/react';
 import { renderHook } from '@testing-library/react-hooks';
 import userEvent from '@testing-library/user-event';
-
+import React from 'react';
 import ThemeProvider from '../components/ThemeProvider';
 
 export const selectDropdownOption = async (
@@ -13,7 +13,7 @@ export const selectDropdownOption = async (
   await userEvent.click(screen.getByText(option)); // select the option from displayed options
 };
 
-const renderWithThemeProvider = (children: JSX.Element): RenderResult => {
+const renderWithThemeProvider = (children: React.JSX.Element): RenderResult => {
   return render(<ThemeProvider>{children}</ThemeProvider>);
 };
 
@@ -23,4 +23,4 @@ function sleep(ms: number) {
 
 export * from '@testing-library/react';
 
-export { renderHook, sleep, renderWithThemeProvider as render };
+export { renderWithThemeProvider as render, renderHook, sleep };

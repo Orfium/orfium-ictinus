@@ -6,7 +6,6 @@ import * as dimension from '@orfium/tokens';
 import * as elevation from '@orfium/tokens';
 import * as palette from '@orfium/tokens';
 import * as spacing from '@orfium/tokens';
-import * as themeFunctions from '@orfium/tokens';
 import * as typography from '@orfium/tokens';
 // Types
 import ClickAwayListener from 'components/utils/ClickAwayListener';
@@ -275,6 +274,7 @@ export {
   isComponentFunctionType,
 } from './utils/helpers';
 
+export * from 'theme/functions';
 export { default as themeConfig } from './theme';
 export {
   ClickAwayListener,
@@ -285,6 +285,5 @@ export {
   queriesSizes,
   rem,
   spacing,
-  themeFunctions,
   typography,
 };

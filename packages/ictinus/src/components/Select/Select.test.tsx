@@ -1,5 +1,6 @@
 import { fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { vi } from 'vitest';
 import { render, screen, selectDropdownOption, sleep, waitFor } from '~/test';
 import { SELECT_ALL_OPTION } from './constants';
 import StatefulSelect from './StatefulSelect';

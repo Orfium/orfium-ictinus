@@ -1,4 +1,5 @@
 import userEvent from '@testing-library/user-event';
+import { vi } from 'vitest';
 import { render, screen } from '~/test';
 import Button from '../Button';
 import Link from '../Link';
@@ -61,7 +62,10 @@ describe('<Toast />', () => {
         ...mockToast,
         content: {
           ...mockToast.content,
-          actions: [<Button key="tertiary">Tertiary</Button>, <Button key="primary">Primary</Button>],
+          actions: [
+            <Button key="tertiary">Tertiary</Button>,
+            <Button key="primary">Primary</Button>,
+          ],
         },
       };
 

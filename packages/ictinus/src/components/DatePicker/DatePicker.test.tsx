@@ -1,7 +1,6 @@
 import { waitFor } from '@testing-library/react';
 import dayjs from 'dayjs';
-import React from 'react';
-
+import { vi } from 'vitest';
 import { fireEvent, render } from '../../test';
 import DatePicker from './DatePicker';
 import { currentDay, navigateOnElement } from './utils';

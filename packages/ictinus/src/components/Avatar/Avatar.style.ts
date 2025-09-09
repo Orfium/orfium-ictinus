@@ -7,7 +7,7 @@ import { getAvatarTokens, parseAvatarIconSize } from './Avatar.tokens';
 import type { AvatarColors, AvatarProps, AvatarSizes } from './Avatar.types';
 import { avatarColorToSemColor } from './constants';
 import type { Theme } from '../../theme';
-import { flex } from '@orfium/tokens';
+import { flex } from 'theme/functions';
 import { generateStylesFromTokens } from 'components/Typography/utils';
 
 export const iconStyles =

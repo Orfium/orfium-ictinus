@@ -151,6 +151,7 @@ import Users from './usersAndStatus/users.svg?react';
 import Verified from './usersAndStatus/verified.svg?react';
 import Warning from './usersAndStatus/warning.svg?react';
 /** Types */
+import type React from 'react';
 import type { AcceptedIconNames } from '../Icon.types';
 
 const iconSelector: { [key in AcceptedIconNames]: React.FunctionComponent } = {

@@ -1,7 +1,8 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
-import { flexCenter, flexCenterVertical, rem, transition } from '@orfium/tokens';
+import { rem } from '@orfium/tokens';
 import type { Theme } from 'theme';
+import { flexCenter, flexCenterVertical, transition } from 'theme/functions';
 
 import { getFocus } from '@orfium/tokens';
 

@@ -1,11 +1,10 @@
-import { useLayoutEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
-
 import type { NavigationMenuItem } from 'components/Navigation/types';
+import { type Dispatch, type SetStateAction, useLayoutEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const useLocationToGetCurrentMenuItem = (
   menuItems: NavigationMenuItem[],
-  setOpenMenuItems: React.Dispatch<React.SetStateAction<string[]>>
+  setOpenMenuItems: Dispatch<SetStateAction<string[]>>
 ): [string | undefined] => {
   const location = useLocation();
   const [currentMenuItem, setCurrentMenuItem] = useState<string>();

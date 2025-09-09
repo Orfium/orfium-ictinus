@@ -1,5 +1,4 @@
 import type React from 'react';
-
 import type { UserMenuProps } from './components/UserMenu/UserMenu';
 
 export interface TopAppBarProps {
@@ -14,11 +13,11 @@ export interface TopAppBarProps {
   /** Callback to be triggered on onKeyPress event of search component */
   onKeyPressHandler?: (event: React.KeyboardEvent<HTMLInputElement>) => void;
   /** Custom product logo */
-  logoIcon?: JSX.Element;
+  logoIcon?: React.JSX.Element;
   /** Handler for opening end closing the Navigation. Burger menu only visible from breakpoint [tab-1024] */
   onMenuIconClick: () => void;
   /** Whatever is needed can be placed here. It will be placed on the left side of the user menu */
-  additionalTools?: JSX.Element | JSX.Element[];
+  additionalTools?: React.JSX.Element | React.JSX.Element[];
   /** User menu props */
   userMenu: UserMenuProps;
   /** Flag indicating the theme mode */

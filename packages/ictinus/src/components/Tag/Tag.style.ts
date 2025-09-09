@@ -1,7 +1,8 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import type { SemanticTypographyKey } from '@orfium/tokens';
-import { lineEllipsis, rem } from '@orfium/tokens';
+import { rem } from '@orfium/tokens';
+import { lineEllipsis } from 'theme/functions';
 import { generateStylesFromTokens } from 'components/Typography/utils';
 import type { Theme } from '../../theme';
 import { tagColorToSemColor } from './constants';

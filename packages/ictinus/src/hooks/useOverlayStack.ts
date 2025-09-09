@@ -1,4 +1,4 @@
-import type { DOMAttributes, RefObject } from 'react';
+import type { DOMAttributes, KeyboardEvent, RefObject } from 'react';
 import { useCallback, useEffect } from 'react';
 
 const visibleOverlays: RefObject<Element | null>[] = [];
@@ -76,7 +76,7 @@ export function useOverlayStack({
     };
   }, [isNonModal, isVisible, onHide, overlayRef, triggerRef]);
 
-  const onKeyDown = (e: React.KeyboardEvent) => {
+  const onKeyDown = (e: KeyboardEvent) => {
     if (e.key === 'Escape' && !e.nativeEvent.isComposing) {
       e.stopPropagation();
       e.preventDefault();

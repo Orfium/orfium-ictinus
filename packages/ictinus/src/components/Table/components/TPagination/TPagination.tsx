@@ -1,18 +1,17 @@
-import useTheme from 'hooks/useTheme';
-
-import {
-  paginationContainer,
-  buttonsContainer,
-  itemsPerPageContainer,
-  counterWrapper,
-  counterContainer,
-} from './TPagination.style';
 import IconButton from 'components/IconButton';
 import Select from 'components/Select';
 import type { TableProps } from 'components/Table/types';
 import Typography from 'components/Typography';
-
+import useTheme from 'hooks/useTheme';
+import React from 'react';
 import type { TestProps } from '~/utils/types';
+import {
+  buttonsContainer,
+  counterContainer,
+  counterWrapper,
+  itemsPerPageContainer,
+  paginationContainer,
+} from './TPagination.style';
 
 export type TPaginationProps = Pick<TableProps<any>, 'pagination'> & {
   /** Whether the pagination footer is sticky */

@@ -324,7 +324,6 @@ export type StyledBoxProps = {
   placeItems?: string;
   /** available values: https://developer.mozilla.org/en-US/docs/Web/CSS/place-self */
   placeSelf?: string;
-  // eslint-disable-next-line @typescript-eslint/naming-convention
   flexWrap?: 'nowrap' | 'wrap' | 'wrap-reverse';
   left?: SpacingKey;
   top?: SpacingKey;

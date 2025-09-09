@@ -2,7 +2,7 @@ import type { AcceptedIconNames } from 'components/Icon';
 import Icon from 'components/Icon';
 import { ListItem, ListItemAction, ListItemText } from 'components/List';
 import { MenuItemWrapper } from 'components/Menu/Menu.style';
-
+import React from 'react';
 import useTheme from '~/hooks/useTheme';
 import type { TestProps } from '~/utils/types';
 
