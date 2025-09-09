@@ -1,5 +1,6 @@
-import '@testing-library/jest-dom/vitest';
 import { createSerializer } from '@emotion/jest';
+import '@testing-library/jest-dom/vitest';
+import { expect, vi } from 'vitest';
 
 expect.addSnapshotSerializer(createSerializer());
 
@@ -23,10 +24,11 @@ vi.mock(
     // if it exists, otherwise use the top-level uuid module
     // see the issue here https://github.com/wwayne/react-tooltip/issues/595
     try {
+      // eslint-disable-next-line @typescript-eslint/no-require-imports
       require('react-tooltip/node_modules/uuid');
 
       return 'react-tooltip/node_modules/uuid';
-    } catch (error) {
+    } catch {
       return 'uuid';
     }
   })(),

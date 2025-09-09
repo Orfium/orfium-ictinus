@@ -4,7 +4,7 @@ import React from 'react';
 import { descriptionStyles, listItemTextWrapperStyles } from './ListItemText.style';
 
 export type ListItemTextProps = {
-  description?: string | JSX.Element;
+  description?: string | React.JSX.Element;
 };
 
 const ListItemText: FC<React.PropsWithChildren<ListItemTextProps>> = (props) => {

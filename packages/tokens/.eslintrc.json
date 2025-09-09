@@ -48,7 +48,14 @@
         "prefix": ["is", "has"]
       }
     ],
-    "@typescript-eslint/no-unused-expressions": "warn",
+    "@typescript-eslint/no-unused-expressions": [
+      "warn",
+      {
+        "allowShortCircuit": false,
+        "allowTernary": false,
+        "allowTaggedTemplates": false
+      }
+    ],
     "@typescript-eslint/no-unused-vars": [
       "warn",
       {
@@ -80,6 +87,3 @@
     "project": ["./tsconfig.json", "./tsconfig.node.json"]
   }
 }
-
-
-

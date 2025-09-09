@@ -1,7 +1,7 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
-import type { Theme } from 'theme';
 import { rem } from '@orfium/tokens';
+import type { Theme } from 'theme';
 
 export const wrapperStyle =
   ({ width, isSearchable }: { width: number | undefined; isSearchable?: boolean }) =>
@@ -13,7 +13,7 @@ export const wrapperStyle =
             'borderColor.decorative.default'
           )}`};
       border-radius: ${isSearchable ? 'initial' : theme.dimension.borderRadius.get('md')};
-      width: ${`${width}px` || '100%'};
+      width: ${width !== undefined ? `${width}px` : '100%'};
       box-shadow: ${theme.tokens.boxShadow.get('2')};
     `;
   };

@@ -10,7 +10,7 @@ const PlaceHolder = () => (
 );
 
 interface LogoWrapperProps {
-  logoIcon?: JSX.Element;
+  logoIcon?: React.JSX.Element;
 }
 
 const LogoWrapper: FCC<LogoWrapperProps> = ({ logoIcon }) => (

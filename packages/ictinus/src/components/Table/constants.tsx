@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 import type { SortingState } from '@tanstack/react-table';
-
-import type { TableColumn, TableRow } from './types';
 import Typography from 'components/Typography';
+import type React from 'react';
+import type { TableColumn, TableRow } from './types';
 
 export const ACTIONS_CELL_WIDTH = 52;
 export const ACTIONS_BAR_HEIGHT = 44;
@@ -11,7 +11,7 @@ export type SimpleData = {
   firstName: string;
   lastName: string | undefined;
   age: number | undefined;
-  job: string | undefined | JSX.Element;
+  job: string | undefined | React.JSX.Element;
 };
 
 export const contentAlignOptions = ['left', 'center', 'right'];
@@ -62,10 +62,10 @@ export const sortDataByKey = (data, key, order = 'asc') => {
       key === 'age'
         ? parseInt(valueA, 10) - parseInt(valueB, 10)
         : valueA < valueB
-        ? -1
-        : valueA > valueB
-        ? 1
-        : 0;
+          ? -1
+          : valueA > valueB
+            ? 1
+            : 0;
 
     return order === 'desc' ? -comparison : comparison;
   });

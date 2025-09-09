@@ -120,7 +120,7 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
         <TextInputBase {...props} status={{ ...status, id: hintMessageId }} sx={sx}>
           <div css={{ display: 'flex', flex: 1 }}>
             {mask ? (
-              // @ts-ignore
+              // @ts-expect-error - too complex
               <InputMask
                 {...inputProps}
                 mask={mask}

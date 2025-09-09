@@ -1,3 +1,4 @@
+import { vi } from 'vitest';
 import { fireEvent, render } from '../../test';
 import Drawer from './Drawer';
 import { DrawerContent, DrawerFooter, DrawerHeader } from './components';

@@ -1,4 +1,11 @@
-import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
+import {
+  type MutableRefObject,
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from 'react';
 
 export const usePositionInScreen = (
   /** Ref of the parent element */
@@ -136,7 +143,7 @@ export const useWrapperWidth = (
   /** Whether the item to be positioned uses the parent's wrapper width */
   hasWrapperWidth: boolean,
   /** Ref of the wrapper */
-  wrapperRef: React.MutableRefObject<any>
+  wrapperRef: MutableRefObject<any>
 ): (number | undefined)[] => {
   const [width, setWidth] = useState();
 

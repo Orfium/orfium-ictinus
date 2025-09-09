@@ -1,3 +1,4 @@
+import { vi } from 'vitest';
 import { fireEvent, render } from '../../test';
 import Toast from '../ToastV4';
 import Banner from './Banner';

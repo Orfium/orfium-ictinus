@@ -1,7 +1,8 @@
-import { render, screen } from 'test';
-import StatefulSearch from './StatefulSearch';
-import { options, LABEL } from './constants';
 import userEvent from '@testing-library/user-event';
+import { render, screen } from 'test';
+import { vi } from 'vitest';
+import StatefulSearch from './StatefulSearch';
+import { LABEL, options } from './constants';
 
 describe('Search', () => {
   let input: HTMLInputElement;

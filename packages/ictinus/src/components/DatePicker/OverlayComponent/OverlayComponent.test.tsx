@@ -1,9 +1,8 @@
-import React from 'react';
 import { fireEvent, render } from 'test';
-
+import { vi } from 'vitest';
+import { APPLY, CALENDAR_DEFAULT_OPTIONS } from '../constants';
 import { currentDay } from '../utils';
 import OverlayComponent from './OverlayComponent';
-import { APPLY, CALENDAR_DEFAULT_OPTIONS } from '../constants';
 
 describe('OverlayComponent', () => {
   const mockDate = currentDay;

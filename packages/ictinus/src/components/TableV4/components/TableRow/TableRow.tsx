@@ -1,5 +1,4 @@
 import * as React from 'react';
-
 import useTheme from '../../../../hooks/useTheme';
 
 export type TableRowProps = {
@@ -20,11 +19,15 @@ const TableRow: React.FCC<TableRowProps> = ({
   return (
     <tr
       onClick={() => {
-        onClick && onClick();
+        if (onClick) {
+          onClick();
+        }
       }}
       css={[
         {
-          backgroundColor: isSelected ? theme.tokens.colors.get('palette.secondary.muted') : undefined,
+          backgroundColor: isSelected
+            ? theme.tokens.colors.get('palette.secondary.muted')
+            : undefined,
           paddingTop: theme.globals.spacing.get('3'),
           paddingBottom: theme.globals.spacing.get('3'),
           cursor: onClick && 'pointer',

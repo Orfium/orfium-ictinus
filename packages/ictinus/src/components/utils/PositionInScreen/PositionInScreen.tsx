@@ -17,7 +17,7 @@ export type PositionInScreenProps = {
   /** Additional offset-y */
   offsetY?: number;
   /** The parent element */
-  parent: JSX.Element;
+  parent: React.JSX.Element;
   placement?: 'top' | 'bottom';
   sx?: CSSObject;
 };

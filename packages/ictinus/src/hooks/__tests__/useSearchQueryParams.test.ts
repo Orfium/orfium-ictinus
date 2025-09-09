@@ -1,7 +1,7 @@
 import { renderHook } from '@testing-library/react-hooks';
 import { useLocation } from 'react-router-dom';
-
 import type { Mock } from 'vitest';
+import { vi } from 'vitest';
 import { useSearchQueryParams } from '..';
 
 vi.mock('react-router-dom', () => ({

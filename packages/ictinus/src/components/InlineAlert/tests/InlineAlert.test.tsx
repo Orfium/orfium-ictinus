@@ -1,8 +1,9 @@
+import { createRef } from 'react';
+import { vi } from 'vitest';
+import Button from '~/components/Button';
+import Link from '~/components/Link';
 import { fireEvent, render, screen } from '~/test';
 import { InlineAlert } from '../InlineAlert';
-import Link from '~/components/Link';
-import Button from '~/components/Button';
-import { createRef } from 'react';
 
 describe('<InlineAlert />', () => {
   it('renders with default props', () => {
@@ -42,7 +43,12 @@ describe('<InlineAlert />', () => {
 
     it('renders with buttons', () => {
       render(
-        <InlineAlert actions={[<Button key="button1">Button 1</Button>, <Button key="button2">Button 2</Button>]}>
+        <InlineAlert
+          actions={[
+            <Button key="button1">Button 1</Button>,
+            <Button key="button2">Button 2</Button>,
+          ]}
+        >
           With actions
         </InlineAlert>
       );

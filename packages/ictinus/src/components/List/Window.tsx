@@ -1,12 +1,11 @@
 import useElementSize from 'hooks/useElementSize';
 import { throttle } from 'lodash-es';
 import React, { forwardRef } from 'react';
-
 import useCombinedRefs from '../../hooks/useCombinedRefs';
 
 export type WindowProps = {
   rowHeight: number;
-  children: Array<JSX.Element>;
+  children: Array<React.JSX.Element>;
   gap?: number;
   isVirtualizationEnabled?: boolean;
 } & React.InputHTMLAttributes<HTMLUListElement>;

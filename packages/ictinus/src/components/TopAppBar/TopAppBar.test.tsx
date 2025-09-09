@@ -1,7 +1,6 @@
-import React from 'react';
 import { fireEvent, render } from 'test';
-
 import type { Mock } from 'vitest';
+import { vi } from 'vitest';
 import { DEFAULT_USER_MENU } from '~/utils/common';
 import TopAppBar from './TopAppBar';
 
