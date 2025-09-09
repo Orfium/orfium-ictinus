@@ -1,5 +1,13 @@
 # @app/vanilla-example
 
+## 0.0.2
+
+### Patch Changes
+
+- Updated dependencies [c39c33a]
+  - @orfium/ictinus@5.40.1
+  - @orfium/tokens@5.1.1
+
 ## 0.0.1
 
 ### Patch Changes
