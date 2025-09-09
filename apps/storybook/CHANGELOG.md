@@ -1,5 +1,14 @@
 # @app/storybook
 
+## 0.0.5
+
+### Patch Changes
+
+- c39c33a: chore: resolve any issues with exportation of libraries and how storybook consumes ictinus for DEV mode
+- Updated dependencies [c39c33a]
+  - @orfium/ictinus@5.40.1
+  - @orfium/tokens@5.1.1
+
 ## 0.0.4
 
 ### Patch Changes
