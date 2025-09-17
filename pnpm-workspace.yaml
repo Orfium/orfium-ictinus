@@ -1,3 +1,7 @@
 packages:
   - 'packages/*'
   - 'apps/*'
+# Security settings - this will limit the use of packages that have been published for at least 1440 minutes (24 hours)
+minimumReleaseAge: 1440
+minimumReleaseAgeExclude:
+  - '@orfium/*'
