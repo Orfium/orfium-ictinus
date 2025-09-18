@@ -1,43 +1,30 @@
-import { atoms, sprinkles, type Atoms } from '@orfium/tokens/css';
-import clsx, { type ClassValue } from 'clsx';
-import React, { forwardRef, type AllHTMLAttributes, type ElementType } from 'react';
+import { createSlot } from '@radix-ui/react-slot';
+import clsx from 'clsx';
+import { forwardRef, type ComponentPropsWithoutRef, type ElementType } from 'react';
+import { version } from '../../../package.json';
+import { sprinkles, type Sprinkles } from '../../sprinkles';
+import { extractBoxProps } from './extractBoxProps';
 
-type HTMLProperties<T = HTMLElement> = Omit<
-  AllHTMLAttributes<T>,
-  'as' | 'className' | 'color' | 'height' | 'width' | 'size'
->;
+const Slot = createSlot('@orfium/ictinus/Box');
 
-type Props = Atoms &
-  HTMLProperties & {
-    as?: ElementType;
-    className?: ClassValue;
+export type BoxProps<T extends ElementType = 'div'> = ComponentPropsWithoutRef<T> &
+  Sprinkles & {
+    asChild?: boolean;
+    className?: string;
   };
 
-export const Box = forwardRef<HTMLElement, Props>(
-  ({ as = 'div', className, ...props }: Props, ref) => {
-    const atomProps: Record<string, unknown> = {};
-    const nativeProps: Record<string, unknown> = {};
+export const Box = forwardRef<HTMLDivElement, BoxProps>(({ asChild, className, ...props }, ref) => {
+  const Comp = asChild ? Slot : 'div';
+  const { boxProps, restProps } = extractBoxProps(props);
 
-    for (const key in props) {
-      if (sprinkles.properties.has(key as keyof Atoms)) {
-        atomProps[key] = props[key as keyof typeof props];
-      } else {
-        nativeProps[key] = props[key as keyof typeof props];
-      }
-    }
-
-    const atomicClasses = atoms({
-      ...atomProps,
-    });
-
-    return React.createElement(as, {
-      className: clsx(atomicClasses, className),
-      ...nativeProps,
-      ref,
-    });
-  }
-);
-
-export type BoxProps = Parameters<typeof Box>[0];
+  return (
+    <Comp
+      data-ictinus={version}
+      ref={ref}
+      className={clsx(className, sprinkles(boxProps))}
+      {...restProps}
+    />
+  );
+});
 
 Box.displayName = 'Box';

@@ -1,16 +1,13 @@
 /// <reference types="vitest" />
 
-import path from 'path';
-
 import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
 import react from '@vitejs/plugin-react';
+import path from 'path';
 import { defineConfig, loadEnv } from 'vite';
 import dts from 'vite-plugin-dts';
 import svgr from 'vite-plugin-svgr';
 import tsconfigPaths from 'vite-tsconfig-paths';
 import { configDefaults, coverageConfigDefaults } from 'vitest/config';
-
-// @ts-ignore
 import pkg from './package.json';
 
 const regexesOfPackages = (externalPackages = []) =>
@@ -27,9 +24,7 @@ const plugins = [
   }),
   svgr(),
   vanillaExtractPlugin(),
-  vanillaCssImportsPlugin(),
   dts({
-    // eslint-disable-next-line @typescript-eslint/naming-convention
     insertTypesEntry: true,
     exclude: ['__mocks__'],
   }),
@@ -42,7 +37,6 @@ export default defineConfig(({ mode }) => {
   console.log(mode, __dirname);
 
   return {
-    // eslint-disable-next-line @typescript-eslint/naming-convention
     publicDir: false,
     envPrefix: 'REACT_APP_',
     // Define these to keep compatibility with ictinus, toolbox and SSO
@@ -55,7 +49,6 @@ export default defineConfig(({ mode }) => {
       lib: {
         entry: {
           index: path.resolve(__dirname, 'src/index.ts'),
-          'vanilla/index': path.resolve(__dirname, 'src/vanilla/index.ts'),
         },
         name: pkg.name,
       },
@@ -85,7 +78,6 @@ export default defineConfig(({ mode }) => {
       },
     },
     test: {
-      // eslint-disable-next-line @typescript-eslint/naming-convention
       globals: true,
       environment: 'jsdom',
       setupFiles: './src/test/setup.ts',
@@ -107,27 +99,3 @@ export default defineConfig(({ mode }) => {
     },
   };
 });
-
-function vanillaCssImportsPlugin() {
-  return {
-    name: 'vanilla-css-imports',
-    generateBundle(__, bundle) {
-      Object.keys(bundle).forEach((fileName) => {
-        const chunk = bundle[fileName];
-        if (chunk.type === 'chunk' && fileName.endsWith('.js')) {
-          // Look for corresponding CSS file (either .css or .css.ts.vanilla.css pattern)
-          const baseName = fileName.replace('.js', '');
-          const possibleCssFiles = [`${baseName}.css`, `${baseName}.css.ts.vanilla.css`];
-
-          const cssFile = possibleCssFiles.find((cssFileName) => bundle[cssFileName]);
-
-          if (cssFile) {
-            // Add CSS import to the chunk
-            const cssImport = `import './${cssFile.split('/').pop()}';`;
-            chunk.code = cssImport + '\n' + chunk.code;
-          }
-        }
-      });
-    },
-  };
-}

@@ -1,6 +1,6 @@
-import { createSprinkles, defineProperties } from '@vanilla-extract/sprinkles';
-import { layers } from './layers.css';
-import { vars } from './vars.css';
+import { vars } from '@orfium/tokens';
+import { defineProperties } from '@vanilla-extract/sprinkles';
+import { layers } from '../layers';
 
 // Ensure global has lowest specificity
 /* DO NOT MOVE THIS LINE */
@@ -139,7 +139,7 @@ const indicatorTokens = {
   'indicator.inactive': vars.color.indicators.inactive,
 } as const;
 
-const responsiveProperties = defineProperties({
+export const responsiveProps = defineProperties({
   '@layer': layers.utilities,
   defaultCondition: 'xs',
   conditions: {
@@ -181,12 +181,8 @@ const responsiveProperties = defineProperties({
     height: { ...vars.sizing, full: '100%', screen: '100vh' },
     minWidth: { ...vars.sizing, full: '100%', screen: '100vw' },
     minHeight: { ...vars.sizing, full: '100%', screen: '100vh' },
-    flexDirection: ['column', 'row', 'column-reverse', 'row-reverse'],
-    position: ['absolute', 'fixed', 'relative', 'sticky'],
-    borderWidth: vars['border-width'],
-    borderColor: borderTokens,
-    borderStyle: ['solid', 'dashed'],
-    borderRadius: vars['border-radius'],
+    flexDirection: ['column', 'row', 'column-reverse', 'row-reverse'] as const,
+    position: ['absolute', 'fixed', 'relative', 'sticky'] as const,
     gap: vars.spacing,
     gridGap: vars.spacing,
     margin: vars.spacing,
@@ -220,26 +216,35 @@ const responsiveProperties = defineProperties({
   },
 });
 
-const unresponsiveProperties = defineProperties({
+export const unresponsiveProps = defineProperties({
   '@layer': layers.utilities,
   properties: {
-    cursor: ['default', 'pointer', 'not-allowed'],
-    userSelect: ['none', 'all'],
-    touchAction: ['none', 'manipulation'],
+    borderColor: borderTokens,
+    borderStyle: ['solid', 'dashed'],
+    borderLeftWidth: vars['border-width'],
+    borderRadius: vars['border-radius'],
+    borderRightWidth: vars['border-width'],
+    borderTopWidth: vars['border-width'],
+    borderBottomWidth: vars['border-width'],
+    boxShadow: vars['box-shadow'],
+    cursor: ['default', 'pointer', 'not-allowed'] as const,
+    overflowX: ['auto', 'hidden', 'visible'] as const,
+    overflowY: ['auto', 'hidden', 'visible'] as const,
+    userSelect: ['none', 'all'] as const,
+    touchAction: ['none', 'manipulation'] as const,
     fontFamily: vars.font,
     fontSize: vars['font-size'],
     fontWeight: vars.weight,
     lineHeight: vars['line-height'],
     letterSpacing: vars['letter-spacing'],
-    isolation: ['isolate'],
-    objectFit: ['contain', 'cover'],
-    pointerEvents: ['none'],
-    textTransform: ['capitalize', 'lowercase', 'uppercase'],
-    visibility: ['hidden', 'visible'],
-    whiteSpace: ['normal', 'nowrap', 'pre', 'pre-line', 'pre-wrap', 'initial', 'inherit'],
-    wordBreak: ['break-word'],
-    wordWrap: ['normal', 'break-word', 'initial', 'inherit'],
-    boxShadow: vars['box-shadow'],
+    isolation: ['isolate'] as const,
+    objectFit: ['contain', 'cover'] as const,
+    pointerEvents: ['auto', 'none'] as const,
+    textTransform: ['capitalize', 'none', 'uppercase'] as const,
+    visibility: ['hidden', 'visible'] as const,
+    wordBreak: ['break-word'] as const,
+    wordWrap: ['normal', 'break-word'] as const,
+    textAlign: ['end', 'start', 'center', 'justify'] as const,
     transitionProperty: {
       none: 'none',
       all: 'all',
@@ -257,7 +262,8 @@ const unresponsiveProperties = defineProperties({
       out: 'cubic-bezier(0, 0, 0.2, 1)',
       inOut: 'cubic-bezier(0.42, 0, 0.58, 1)',
     },
-    transitionDuration: ['150ms', '200ms'],
+    transitionDuration: ['150ms', '200ms'] as const,
+    whiteSpace: ['nowrap'] as const,
     zIndex: {
       '0': 0,
       '10': 10,
@@ -270,9 +276,20 @@ const unresponsiveProperties = defineProperties({
       auto: 'auto',
     },
   },
+  shorthands: {
+    overflow: ['overflowX', 'overflowY'],
+    border: ['borderBottomWidth', 'borderLeftWidth', 'borderRightWidth', 'borderTopWidth'],
+    borderB: ['borderBottomWidth'],
+    borderL: ['borderLeftWidth'],
+    borderR: ['borderRightWidth'],
+    borderT: ['borderTopWidth'],
+    shadow: ['boxShadow'],
+    rounded: ['borderRadius'],
+    z: ['zIndex'],
+  },
 });
 
-const colorProperties = defineProperties({
+export const colorProps = defineProperties({
   '@layer': layers.utilities,
   conditions: {
     base: {},
@@ -291,10 +308,3 @@ const colorProperties = defineProperties({
     bg: ['backgroundColor'],
   },
 });
-
-export const sprinkles = createSprinkles(
-  responsiveProperties,
-  unresponsiveProperties,
-  colorProperties
-);
-export type Sprinkles = Parameters<typeof sprinkles>[0];

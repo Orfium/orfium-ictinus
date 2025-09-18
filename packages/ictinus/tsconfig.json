@@ -31,7 +31,7 @@
     "skipLibCheck": true,
     "composite": true
   },
-  "include": ["src", "__mocks__", "codemods"],
+  "include": ["src", "__mocks__", "codemods", "package.json"],
   "exclude": ["./dist", "node_modules"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

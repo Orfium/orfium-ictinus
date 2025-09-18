@@ -145,16 +145,6 @@ export default defineConfig([
       'no-debugger': 'warn',
       'no-console': 'warn',
 
-      '@typescript-eslint/naming-convention': [
-        'warn',
-        {
-          selector: ['variable', 'parameter', 'property'],
-          types: ['boolean'],
-          format: ['PascalCase'],
-          prefix: ['is', 'has'],
-        },
-      ],
-
       '@typescript-eslint/no-unused-expressions': [
         'warn',
         {

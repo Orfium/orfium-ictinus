@@ -1,13 +1,13 @@
-import { borderRadius } from '../tokens/borderRadius';
-import { borderWidth } from '../tokens/borderWidth';
-import { colors } from '../tokens/color';
-import { fontFamily } from '../tokens/fontFamily';
-import { fontSize } from '../tokens/fontSize';
-import { fontWeight } from '../tokens/fontWeight';
-import { letterSpacing } from '../tokens/letterSpacing';
-import { lineHeight } from '../tokens/lineHeight';
-import { sizing } from '../tokens/sizing';
-import { spacing } from '../tokens/spacing';
+import { borderRadius } from './tokens/borderRadius';
+import { borderWidth } from './tokens/borderWidth';
+import { colors } from './tokens/color';
+import { fontFamily } from './tokens/fontFamily';
+import { fontSize } from './tokens/fontSize';
+import { fontWeight } from './tokens/fontWeight';
+import { letterSpacing } from './tokens/letterSpacing';
+import { lineHeight } from './tokens/lineHeight';
+import { sizing } from './tokens/sizing';
+import { spacing } from './tokens/spacing';
 
 export const tokens = {
   color: colors,

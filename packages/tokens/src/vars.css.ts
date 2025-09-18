@@ -1,12 +1,11 @@
 import { createGlobalTheme, createGlobalThemeContract } from '@vanilla-extract/css';
-import { layers } from './layers.css';
 import { semantic, tokens } from './tokens';
 
 const getVarName = (__value: string | null, path: string[]) => `ictinus-${path.join('-')}` as const;
 
 const baseTokens = tokens;
 const baseVars = createGlobalThemeContract(baseTokens, getVarName);
-createGlobalTheme(':root', baseVars, { '@layer': layers.theme, ...baseTokens });
+createGlobalTheme(':root', baseVars, { '@layer': 'ictinus.theme', ...baseTokens });
 
 const createSemanticTokens = (mode: 'light' | 'dark') => {
   const ld = (lightValue: any, darkValue: any) => (mode === 'light' ? lightValue : darkValue);
@@ -142,12 +141,12 @@ const createSemanticTokens = (mode: 'light' | 'dark') => {
 const semanticTokens = semantic;
 const semanticVars = createGlobalThemeContract(semanticTokens, getVarName);
 createGlobalTheme('[data-theme="light"]', semanticVars, {
-  '@layer': layers.theme,
+  '@layer': 'ictinus.theme',
   ...createSemanticTokens('light'),
 });
 
 createGlobalTheme('[data-theme="dark"]', semanticVars, {
-  '@layer': layers.theme,
+  '@layer': 'ictinus.theme',
   ...createSemanticTokens('dark'),
 });
 
