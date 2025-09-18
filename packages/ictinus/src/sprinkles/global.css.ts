@@ -1,6 +1,6 @@
+import { vars } from '@orfium/tokens';
 import { globalFontFace, globalStyle } from '@vanilla-extract/css';
-import { layers } from './layers.css';
-import { vars } from './vars.css';
+import { layers } from '../layers';
 
 globalFontFace('Roboto', [
   {
