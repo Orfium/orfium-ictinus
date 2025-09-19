@@ -1,4 +1,4 @@
-# @app/vanilla-example
+# @app/playground
 
 ## 0.0.2
 
