@@ -12,14 +12,7 @@
         "default": "./dist/index.js"
       }
     },
-    "./css": {
-      "import": {
-        "types": "./dist/css/index.d.ts",
-        "default": "./dist/css/index.js"
-      }
-    },
-    "./vars.css": "./dist/vars/vars.css",
-    "./styles.css": "./dist/styles.css"
+    "./vars.css": "./dist/vars.css"
   },
   "sideEffects": [
     "**/*.css",
@@ -72,12 +65,9 @@
     "tslib": "^2.4.1",
     "vitest": "^3.2.4"
   },
-  "dependencies": {},
   "scripts": {
     "prepublishOnly": "pnpm build",
-    "build": "pnpm build:main && pnpm build:vars",
-    "build:main": "vite build",
-    "build:vars": "vite build --config vite.vars.config.ts",
+    "build": "vite build",
     "test": "vitest --run",
     "test:watch": "vitest --watch",
     "test:update": "vitest -u",

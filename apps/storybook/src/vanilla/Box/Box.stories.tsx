@@ -43,15 +43,15 @@ export const Default: Story = {
         mb="5"
         borderRadius="2"
       >
-        <Box as="span" color="primary" fontFamily="mono">
-          Box
+        <Box asChild color="primary" fontFamily="mono">
+          <span>Box</span>
         </Box>
       </Box>
       <Box
         backgroundColor="alt"
         p="12"
         mb="5"
-        borderWidth="1"
+        border="1"
         borderColor="decorative.default"
         borderStyle="solid"
         borderRadius="3"

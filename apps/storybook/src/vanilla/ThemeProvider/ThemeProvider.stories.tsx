@@ -1,4 +1,4 @@
-import { ThemeProvider, Box } from '@orfium/ictinus/vanilla';
+import { Box, ThemeProvider } from '@orfium/ictinus/vanilla';
 import { type Meta, type StoryObj } from '@storybook/react-vite';
 
 const meta: Meta<typeof ThemeProvider> = {
@@ -44,8 +44,8 @@ export const Default: Story = {
             mb="5"
             borderRadius="2"
           >
-            <Box as="span" color="primary">
-              Always dark
+            <Box asChild color="primary">
+              <span>Always dark</span>
             </Box>
           </Box>
         </div>
@@ -55,7 +55,7 @@ export const Default: Story = {
           <Box
             backgroundColor="alt"
             p="lg"
-            borderWidth="1"
+            border="1"
             borderColor="decorative.default"
             borderStyle="solid"
             borderRadius="3"
