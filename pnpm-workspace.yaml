@@ -1,6 +1,7 @@
 packages:
   - 'packages/*'
   - 'apps/*'
+  - 'examples/*'
 # Security settings - this will limit the use of packages that have been published for at least 1440 minutes (24 hours)
 minimumReleaseAge: 1440
 minimumReleaseAgeExclude:
