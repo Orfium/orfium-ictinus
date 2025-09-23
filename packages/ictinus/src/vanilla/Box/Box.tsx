@@ -7,8 +7,9 @@ import { extractBoxProps } from './extractBoxProps';
 
 const Slot = createSlot('@orfium/ictinus/Box');
 
-export type BoxProps<T extends ElementType = 'div'> = ComponentPropsWithoutRef<T> &
-  Sprinkles & {
+export type BoxProps<T extends ElementType = 'div', P = unknown> = ComponentPropsWithoutRef<T> &
+  Sprinkles &
+  P & {
     asChild?: boolean;
     className?: string;
   };

@@ -139,6 +139,105 @@ const indicatorTokens = {
   'indicator.inactive': vars.color.indicators.inactive,
 } as const;
 
+const typography = {
+  headline01: {
+    fontSize: vars['font-size'][10],
+    lineHeight: vars['line-height'][10],
+    fontWeight: vars.weight.bold,
+    letterSpacing: vars['letter-spacing'][0],
+  } as const,
+  headline02: {
+    fontSize: vars['font-size'][9],
+    lineHeight: vars['line-height'][9],
+    fontWeight: vars.weight.bold,
+    letterSpacing: vars['letter-spacing'][0],
+  } as const,
+  headline03: {
+    fontSize: vars['font-size'][8],
+    lineHeight: vars['line-height'][8],
+    fontWeight: vars.weight.bold,
+    letterSpacing: vars['letter-spacing'][0],
+  } as const,
+  headline04: {
+    fontSize: vars['font-size'][6],
+    lineHeight: vars['line-height'][7],
+    fontWeight: vars.weight.bold,
+    letterSpacing: vars['letter-spacing'][0],
+  } as const,
+  headline05: {
+    fontSize: vars['font-size'][5],
+    lineHeight: vars['line-height'][6],
+    fontWeight: vars.weight.bold,
+    letterSpacing: vars['letter-spacing'][0],
+  } as const,
+  title01: {
+    fontSize: vars['font-size'][4],
+    lineHeight: vars['line-height'][5],
+    fontWeight: vars.weight.bold,
+    letterSpacing: vars['letter-spacing'][1],
+  } as const,
+  title02: {
+    fontSize: vars['font-size'][3],
+    lineHeight: vars['line-height'][4],
+    fontWeight: vars.weight.bold,
+    letterSpacing: vars['letter-spacing'][1],
+  } as const,
+  title03: {
+    fontSize: vars['font-size'][2],
+    lineHeight: vars['line-height'][2],
+    fontWeight: vars.weight.bold,
+    letterSpacing: vars['letter-spacing'][2],
+  } as const,
+  label01: {
+    fontSize: vars['font-size'][4],
+    lineHeight: vars['line-height'][5],
+    fontWeight: vars.weight.medium,
+    letterSpacing: vars['letter-spacing'][1],
+  } as const,
+  label02: {
+    fontSize: vars['font-size'][3],
+    lineHeight: vars['line-height'][4],
+    fontWeight: vars.weight.medium,
+    letterSpacing: vars['letter-spacing'][2],
+  } as const,
+  label03: {
+    fontSize: vars['font-size'][2],
+    lineHeight: vars['line-height'][2],
+    fontWeight: vars.weight.medium,
+    letterSpacing: vars['letter-spacing'][2],
+  } as const,
+  label04: {
+    fontSize: vars['font-size'][1],
+    lineHeight: vars['line-height'][1],
+    fontWeight: vars.weight.medium,
+    letterSpacing: vars['letter-spacing'][1],
+  } as const,
+  body01: {
+    fontSize: vars['font-size'][4],
+    lineHeight: vars['line-height'][5],
+    fontWeight: vars.weight.regular,
+    letterSpacing: vars['letter-spacing'][2],
+  } as const,
+  body02: {
+    fontSize: vars['font-size'][3],
+    lineHeight: vars['line-height'][4],
+    fontWeight: vars.weight.regular,
+    letterSpacing: vars['letter-spacing'][2],
+  } as const,
+  body03: {
+    fontSize: vars['font-size'][2],
+    lineHeight: vars['line-height'][2],
+    fontWeight: vars.weight.regular,
+    letterSpacing: vars['letter-spacing'][2],
+  } as const,
+  body04: {
+    fontSize: vars['font-size'][1],
+    lineHeight: vars['line-height'][1],
+    fontWeight: vars.weight.regular,
+    letterSpacing: vars['letter-spacing'][1],
+  } as const,
+} as const;
+
 export const responsiveProps = defineProperties({
   '@layer': layers.utilities,
   defaultCondition: 'xs',
@@ -181,6 +280,8 @@ export const responsiveProps = defineProperties({
     height: { ...vars.sizing, full: '100%', screen: '100vh' },
     minWidth: { ...vars.sizing, full: '100%', screen: '100vw' },
     minHeight: { ...vars.sizing, full: '100%', screen: '100vh' },
+    maxWidth: { ...vars.sizing, full: '100%', screen: '100vw' },
+    maxHeight: { ...vars.sizing, full: '100%', screen: '100vh' },
     flexDirection: ['column', 'row', 'column-reverse', 'row-reverse'] as const,
     position: ['absolute', 'fixed', 'relative', 'sticky'] as const,
     gap: vars.spacing,
@@ -197,6 +298,9 @@ export const responsiveProps = defineProperties({
     paddingTop: vars.spacing,
   },
   shorthands: {
+    maxH: ['maxHeight'],
+    maxW: ['maxWidth'],
+    size: ['height', 'width'],
     w: ['width'],
     h: ['height'],
     p: ['padding'],
@@ -234,6 +338,7 @@ export const unresponsiveProps = defineProperties({
     touchAction: ['none', 'manipulation'] as const,
     fontFamily: vars.font,
     fontSize: vars['font-size'],
+    typography,
     fontWeight: vars.weight,
     lineHeight: vars['line-height'],
     letterSpacing: vars['letter-spacing'],
