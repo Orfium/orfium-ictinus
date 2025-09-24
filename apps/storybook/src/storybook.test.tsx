@@ -1,5 +1,6 @@
 /// <reference types="vite/client"/>
 import { ThemeProvider } from '@orfium/ictinus';
+import { ThemeProvider as VanillaThemeProvider } from '@orfium/ictinus/vanilla';
 import { type Meta, type StoryFn, composeStories } from '@storybook/react';
 import { render } from '@testing-library/react';
 import { describe, expect, test } from 'vitest';
@@ -26,6 +27,17 @@ expect.addSnapshotSerializer({
     val.replace(/react-aria-:\w+:([-\w$.\s]+)?/g, '"react-aria-:test-id:$1"'),
 });
 
+/**
+ * normalizes the data-ictinus version attribute to a fixed value.
+ */
+expect.addSnapshotSerializer({
+  test(val) {
+    return typeof val === 'string' && /^\d+\.\d+\.\d+(-.*)?$/.test(val) && val !== 'test-version';
+  },
+  serialize(val, config, indentation, depth, refs, printer) {
+    return printer('test-version', config, indentation, depth, refs);
+  },
+});
 type StoryFile = {
   default: Meta;
   [name: string]: StoryFn | Meta;
@@ -90,9 +102,11 @@ describe('Storybook Tests', () => {
 
         testFn(name, async () => {
           const mounted = render(
-            <ThemeProvider>
-              <Story />
-            </ThemeProvider>
+            <VanillaThemeProvider>
+              <ThemeProvider>
+                <Story />
+              </ThemeProvider>
+            </VanillaThemeProvider>
           );
 
           // add a slightly delay to allow a couple render cycles to complete, resulting in a more stable snapshot.
