@@ -1,5 +1,11 @@
 # @orfium/tokens
 
+## 5.1.2
+
+### Patch Changes
+
+- 68a6d1e: new box
+
 ## 5.1.1
 
 ### Patch Changes

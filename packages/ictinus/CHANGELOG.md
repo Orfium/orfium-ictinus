@@ -1,5 +1,13 @@
 # @orfium/ictinus
 
+## 5.40.2
+
+### Patch Changes
+
+- 68a6d1e: new box
+- Updated dependencies [68a6d1e]
+  - @orfium/tokens@5.1.2
+
 ## 5.40.1
 
 ### Patch Changes
