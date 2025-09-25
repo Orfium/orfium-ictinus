@@ -1,3 +1,4 @@
+import { Button, IconButton, Select } from '@orfium/ictinus';
 import {
   Box,
   Table,
@@ -22,66 +23,127 @@ type Story = StoryObj<typeof Table>;
 
 export const Default: Story = {
   render: () => (
-    <>
-      <Table layout="auto" mb="sm">
+    <Box display="flex" flexDirection="column" style={{ maxHeight: '280px' }}>
+      <Box
+        bg="default"
+        px="lg"
+        py="sm"
+        h="11"
+        borderT="1"
+        borderL="1"
+        borderR="1"
+        borderColor="decorative.default"
+        roundedT="2"
+        display="flex"
+        alignItems="center"
+        justifyContent="space-between"
+      >
+        <Box display="flex" alignItems="center" gap="sm">
+          <Text asChild typography="label02" color="active">
+            <span>250</span>
+          </Text>
+          <Text asChild typography="label02">
+            <span>Territories</span>
+          </Text>
+        </Box>
+        <Button type="secondary" size="compact">
+          Edit columns
+        </Button>
+      </Box>
+      <Table layout="auto" rounded="0">
         <TableHeader pinned>
           <TableRow>
-            <TableHeaderCell columnBorder>head</TableHeaderCell>
-            <TableHeaderCell columnBorder>head</TableHeaderCell>
-            <TableHeaderCell columnBorder>head</TableHeaderCell>
-            <TableHeaderCell columnBorder>head</TableHeaderCell>
-            <TableHeaderCell columnBorder>head</TableHeaderCell>
-            <TableHeaderCell columnBorder>head</TableHeaderCell>
-            <TableHeaderCell columnBorder>head</TableHeaderCell>
-            <TableHeaderCell columnBorder>head</TableHeaderCell>
-            <TableHeaderCell columnBorder>head</TableHeaderCell>
-            <TableHeaderCell columnBorder>head</TableHeaderCell>
-            <TableHeaderCell columnBorder>head</TableHeaderCell>
-            <TableHeaderCell columnBorder>head</TableHeaderCell>
+            <TableHeaderCell bordered>
+              <Box display="flex" alignItems="center" justifyContent="space-between">
+                <Text>head</Text>
+                <IconButton iconName="sort" type="tertiary" size="compact" />
+              </Box>
+            </TableHeaderCell>
+            <TableHeaderCell bordered>head</TableHeaderCell>
+            <TableHeaderCell bordered>head</TableHeaderCell>
+            <TableHeaderCell bordered>head</TableHeaderCell>
+            <TableHeaderCell bordered justifyContent="flex-end">
+              head
+            </TableHeaderCell>
+            <TableHeaderCell bordered>head</TableHeaderCell>
+            <TableHeaderCell bordered>head</TableHeaderCell>
+            <TableHeaderCell bordered>head</TableHeaderCell>
+            <TableHeaderCell bordered>head</TableHeaderCell>
+            <TableHeaderCell bordered>head</TableHeaderCell>
+            <TableHeaderCell bordered>head</TableHeaderCell>
+            <TableHeaderCell bordered>head</TableHeaderCell>
           </TableRow>
         </TableHeader>
         <TableBody>
           <TableRow>
-            <TableCell columnBorder bg="palette.primary-alt.muted">
+            <TableCell bordered bg="alt" alignItems="flex-start">
               cell
             </TableCell>
-            <TableCell columnBorder bg="palette.primary-alt.muted">
+            <TableCell bordered bg="alt" alignItems="flex-start">
               cell
             </TableCell>
-            <TableCell columnBorder bg="palette.primary-alt.muted">
+            <TableCell bordered bg="alt" alignItems="flex-start">
               cell
             </TableCell>
-            <TableCell columnBorder bg="palette.primary-alt.muted">
+            <TableCell bordered bg="alt" alignItems="flex-start">
               cell
             </TableCell>
-            <TableCell columnBorder bg="palette.primary-alt.muted">
-              <Box style={{ minWidth: '180px' }}>
-                <Text typography="body01" color="primary" lineClamp="1">
+            <TableCell bordered bg="alt" alignItems="flex-start">
+              <Box display="flex" alignItems="center" style={{ minWidth: '140px' }}>
+                <Text typography="body01" color="primary">
                   The quick brown fox jumps over the lazy dog.
                 </Text>
               </Box>
             </TableCell>
-            <TableCell columnBorder bg="palette.primary-alt.muted">
+            <TableCell bordered bg="alt" alignItems="flex-start">
               cell
             </TableCell>
-            <TableCell columnBorder bg="palette.primary-alt.muted">
+            <TableCell bordered bg="alt" alignItems="flex-start">
               cell
             </TableCell>
-            <TableCell columnBorder bg="palette.primary-alt.muted">
+            <TableCell bordered bg="alt" alignItems="flex-start">
               cell
             </TableCell>
-            <TableCell columnBorder bg="palette.primary-alt.muted">
+            <TableCell bordered bg="alt" alignItems="flex-start">
               cell
             </TableCell>
-            <TableCell columnBorder bg="palette.primary-alt.muted">
+            <TableCell bordered bg="alt" alignItems="flex-start">
               cell
             </TableCell>
-            <TableCell columnBorder bg="palette.primary-alt.muted">
+            <TableCell bordered bg="alt" alignItems="flex-start">
               cell
             </TableCell>
-            <TableCell columnBorder bg="palette.primary-alt.muted">
+            <TableCell bordered bg="alt" alignItems="flex-start">
               cell
             </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell bordered>head</TableCell>
+            <TableCell bordered>cell</TableCell>
+            <TableCell bordered>cell</TableCell>
+            <TableCell bordered>cell</TableCell>
+            <TableCell bordered>cell</TableCell>
+            <TableCell bordered>cell</TableCell>
+            <TableCell bordered>cell</TableCell>
+            <TableCell bordered>cell</TableCell>
+            <TableCell bordered>cell</TableCell>
+            <TableCell bordered>cell</TableCell>
+            <TableCell bordered>cell</TableCell>
+            <TableCell bordered>cell</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>cell</TableCell>
+            <TableCell>cell</TableCell>
+            <TableCell>cell</TableCell>
+            <TableCell>cell</TableCell>
+            <TableCell>cell</TableCell>
+            <TableCell>cell</TableCell>
+            <TableCell>cell</TableCell>
+            <TableCell>cell</TableCell>
+            <TableCell>cell</TableCell>
+            <TableCell>cell</TableCell>
+            <TableCell>cell</TableCell>
+            <TableCell>cell</TableCell>
           </TableRow>
           <TableRow>
             <TableCell>cell</TableCell>
@@ -98,33 +160,56 @@ export const Default: Story = {
             <TableCell>cell</TableCell>
           </TableRow>
         </TableBody>
-        <TableFooter>
+        <TableFooter pinned>
           <TableRow>
-            <TableHeaderCell borderTopWidth="1" borderRightWidth="1">
-              <Text typography="body01" color="primary">
-                head
-              </Text>
-            </TableHeaderCell>
-            <TableCell colSpan={3} textAlign="end" columnBorder>
-              Total
+            <TableCell
+              bordered
+              colSpan={3}
+              justifyContent="flex-end"
+              bg="palette.primary-alt.muted"
+            >
+              <Text typography="title02">Total</Text>
             </TableCell>
-            <TableCell colSpan={9} bg="palette.primary-alt">
-              10
+            <TableCell colSpan={9} bg="palette.primary-alt.muted">
+              <Text typography="title02">10</Text>
             </TableCell>
           </TableRow>
-          {/* <TableRow>
-            <TableHeaderCell borderTopWidth="1" borderRightWidth="1">
-              head
-            </TableHeaderCell>
-            <TableCell colSpan={3} textAlign="end" columnBorder>
-              Total
-            </TableCell>
-            <TableCell colSpan={9} bg="palette.primary-alt" typography="headline01">
-              10
-            </TableCell>
-          </TableRow> */}
         </TableFooter>
       </Table>
-    </>
+      <Box
+        display="flex"
+        alignItems="center"
+        justifyContent="space-between"
+        bg="default"
+        roundedB="2"
+        borderB="1"
+        borderL="1"
+        borderR="1"
+        borderColor="decorative.default"
+        pl="md"
+        pr="lg"
+        py="sm"
+      >
+        <Select
+          options={[{ label: '10 rows per page', value: '10' }]}
+          selectedOption={{ label: '10 rows per page', value: '10' }}
+          label=""
+          isSearchable={false}
+          size="compact"
+        />
+        <Box display="flex" alignItems="center">
+          <Text typography="body03" color="secondary">
+            page{' '}
+            <Text asChild typography="label03" color="primary">
+              <span>1</span>
+            </Text>{' '}
+            of{' '}
+            <Text asChild typography="label03" color="primary">
+              <span>1</span>
+            </Text>
+          </Text>
+        </Box>
+      </Box>
+    </Box>
   ),
 };

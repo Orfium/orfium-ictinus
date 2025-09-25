@@ -1,5 +1,6 @@
 import { vars } from '@orfium/tokens';
 import { recipe, type RecipeVariants } from '@vanilla-extract/recipes';
+
 import { sprinkles } from '../../sprinkles';
 import { style } from '../../vanilla-extract';
 
@@ -10,25 +11,10 @@ export const cell = recipe({
     }),
     style({
       textAlign: 'start',
-      border: '0 solid',
     }),
   ],
 
   variants: {
-    columnBorder: {
-      true: style({
-        borderRightWidth: '1px',
-
-        selectors: {
-          '&:last-child': {
-            borderRightWidth: 0,
-          },
-        },
-      }),
-    },
-    /**
-     * Whether to pin the header cell to left/right of table.
-     */
     pinned: {
       false: style({
         position: 'relative',
@@ -54,17 +40,42 @@ export const content = recipe({
   base: [
     sprinkles({
       alignItems: 'center',
-      // bg: 'default',
       color: 'secondary',
       display: 'flex',
-      fontSize: '3',
-      fontWeight: 'regular',
-      size: 'full',
+      typography: 'body02',
+      w: 'full',
+      h: 'full',
+      minHeight: '11',
+      borderColor: 'decorative.default',
     }),
     style({
       boxShadow: `0 1px 0 ${vars.color['border-color'].decorative.default}`,
     }),
   ],
+  variants: {
+    size: {
+      sm: sprinkles({
+        h: '11',
+      }),
+      md: sprinkles({
+        h: '13',
+      }),
+      lg: sprinkles({
+        h: '15',
+      }),
+    },
+    bordered: {
+      true: style({
+        borderRightWidth: '1px',
+
+        selectors: {
+          '[data-bordered]:last-child &': {
+            borderRightWidth: 0,
+          },
+        },
+      }),
+    },
+  },
 });
 
-export type CellVariants = RecipeVariants<typeof cell>;
+export type CellVariants = RecipeVariants<typeof cell> & RecipeVariants<typeof content>;

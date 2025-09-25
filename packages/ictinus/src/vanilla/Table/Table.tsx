@@ -1,6 +1,6 @@
 import { forwardRef } from 'react';
 
-import cn from 'clsx';
+import { cn } from '../../utils/cn';
 import { Box, type BoxProps, extractBoxProps } from '../Box';
 import * as styles from './Table.css';
 

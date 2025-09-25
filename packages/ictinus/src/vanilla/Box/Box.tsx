@@ -1,18 +1,24 @@
 import { createSlot } from '@radix-ui/react-slot';
-import clsx from 'clsx';
 import { forwardRef, type ComponentPropsWithoutRef, type ElementType } from 'react';
+
 import { version } from '../../../package.json';
 import { sprinkles, type Sprinkles } from '../../sprinkles';
+import { cn } from '../../utils/cn';
+import { type ExtendProps } from '../../utils/ExtendProps';
 import { extractBoxProps } from './extractBoxProps';
 
 const Slot = createSlot('@orfium/ictinus/Box');
 
-export type BoxProps<T extends ElementType = 'div', P = unknown> = ComponentPropsWithoutRef<T> &
-  Sprinkles &
-  P & {
-    asChild?: boolean;
-    className?: string;
-  };
+export type BoxProps<T extends ElementType = 'div', P = unknown> = ExtendProps<
+  ComponentPropsWithoutRef<T>,
+  ExtendProps<
+    Sprinkles & {
+      asChild?: boolean;
+      className?: string;
+    },
+    P
+  >
+>;
 
 export const Box = forwardRef<HTMLDivElement, BoxProps>(({ asChild, className, ...props }, ref) => {
   const Comp = asChild ? Slot : 'div';
@@ -22,7 +28,7 @@ export const Box = forwardRef<HTMLDivElement, BoxProps>(({ asChild, className, .
     <Comp
       data-ictinus={version}
       ref={ref}
-      className={clsx(className, sprinkles(boxProps))}
+      className={cn(className, sprinkles(boxProps))}
       {...restProps}
     />
   );

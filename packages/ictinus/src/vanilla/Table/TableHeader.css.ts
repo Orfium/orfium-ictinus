@@ -1,11 +1,12 @@
 import { recipe, type RecipeVariants } from '@vanilla-extract/recipes';
+
 import { style } from '../../vanilla-extract';
 
+export const className = style({});
+
 export const header = recipe({
+  base: [className],
   variants: {
-    /**
-     * Whether to pin the header cell to left/right of table.
-     */
     pinned: {
       false: {},
       true: style({

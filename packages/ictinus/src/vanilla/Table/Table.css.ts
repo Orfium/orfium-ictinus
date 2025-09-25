@@ -1,4 +1,5 @@
 import { recipe, type RecipeVariants } from '@vanilla-extract/recipes';
+
 import { sprinkles } from '../../sprinkles';
 import { style } from '../../vanilla-extract';
 
@@ -18,9 +19,6 @@ export const table = recipe({
   ],
 
   variants: {
-    /**
-     * Use default table layout or grid for rows and cells.
-     */
     layout: {
       auto: [
         style({

@@ -1,7 +1,7 @@
 import { createSlot } from '@radix-ui/react-slot';
 import { type ElementType, forwardRef } from 'react';
 
-import cn from 'clsx';
+import { cn } from '../../utils/cn';
 import { type ExtendProps } from '../../utils/ExtendProps';
 import { Box, type BoxProps } from '../Box';
 import * as styles from './Text.css';
@@ -30,4 +30,4 @@ export const Text = forwardRef<HTMLParagraphElement, TextProps>(
   }
 );
 
-Text.displayName = '@orfium/ictinus/Text';
+Text.displayName = 'Text';

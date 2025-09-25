@@ -1,10 +1,11 @@
 import { vars } from '@orfium/tokens';
 import { defineProperties } from '@vanilla-extract/sprinkles';
+
 import { layers } from '../layers';
 
 // Ensure global has lowest specificity
 /* DO NOT MOVE THIS LINE */
-import './global.css';
+import '../vanilla-extract/global.css';
 /* DO NOT MOVE THIS LINE */
 
 export const breakpoints = {
@@ -327,6 +328,10 @@ export const unresponsiveProps = defineProperties({
     borderStyle: ['solid', 'dashed'],
     borderLeftWidth: vars['border-width'],
     borderRadius: vars['border-radius'],
+    borderTopLeftRadius: vars['border-radius'],
+    borderTopRightRadius: vars['border-radius'],
+    borderBottomLeftRadius: vars['border-radius'],
+    borderBottomRightRadius: vars['border-radius'],
     borderRightWidth: vars['border-width'],
     borderTopWidth: vars['border-width'],
     borderBottomWidth: vars['border-width'],
@@ -390,6 +395,10 @@ export const unresponsiveProps = defineProperties({
     borderT: ['borderTopWidth'],
     shadow: ['boxShadow'],
     rounded: ['borderRadius'],
+    roundedT: ['borderTopLeftRadius', 'borderTopRightRadius'],
+    roundedB: ['borderBottomLeftRadius', 'borderBottomRightRadius'],
+    roundedL: ['borderTopLeftRadius', 'borderBottomLeftRadius'],
+    roundedR: ['borderTopRightRadius', 'borderBottomRightRadius'],
     z: ['zIndex'],
   },
 });
