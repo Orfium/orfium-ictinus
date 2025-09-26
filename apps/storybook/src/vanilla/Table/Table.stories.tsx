@@ -118,18 +118,44 @@ export const Default: Story = {
             </TableCell>
           </TableRow>
           <TableRow>
-            <TableCell bordered>head</TableCell>
-            <TableCell bordered>cell</TableCell>
-            <TableCell bordered>cell</TableCell>
-            <TableCell bordered>cell</TableCell>
-            <TableCell bordered>cell</TableCell>
-            <TableCell bordered>cell</TableCell>
-            <TableCell bordered>cell</TableCell>
-            <TableCell bordered>cell</TableCell>
-            <TableCell bordered>cell</TableCell>
-            <TableCell bordered>cell</TableCell>
-            <TableCell bordered>cell</TableCell>
-            <TableCell bordered>cell</TableCell>
+            <TableCell bordered size="sm">
+              head
+            </TableCell>
+            <TableCell bordered size="sm">
+              cell
+            </TableCell>
+            <TableCell bordered size="sm">
+              <Box style={{ maxWidth: '180px' }}>
+                <Text truncate>The quick brown fox jumps over the lazy dog.</Text>
+              </Box>
+            </TableCell>
+            <TableCell bordered size="sm">
+              cell
+            </TableCell>
+            <TableCell bordered size="sm">
+              cell
+            </TableCell>
+            <TableCell bordered size="sm">
+              cell
+            </TableCell>
+            <TableCell bordered size="sm">
+              cell
+            </TableCell>
+            <TableCell bordered size="sm">
+              cell
+            </TableCell>
+            <TableCell bordered size="sm">
+              cell
+            </TableCell>
+            <TableCell bordered size="sm">
+              cell
+            </TableCell>
+            <TableCell bordered size="sm">
+              cell
+            </TableCell>
+            <TableCell bordered size="sm">
+              cell
+            </TableCell>
           </TableRow>
           <TableRow>
             <TableCell>cell</TableCell>
