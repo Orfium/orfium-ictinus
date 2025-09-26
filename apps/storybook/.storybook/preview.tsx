@@ -98,11 +98,11 @@ export const decorators = [
     );
   },
   (Story: StoryFn) => (
-    <ThemeProvider theme={{}}>
-      <VanillaThemeProvider>
+    <VanillaThemeProvider colorScheme="light">
+      <ThemeProvider theme={{}}>
         <Story />
-      </VanillaThemeProvider>
-    </ThemeProvider>
+      </ThemeProvider>
+    </VanillaThemeProvider>
   ),
 ];
 

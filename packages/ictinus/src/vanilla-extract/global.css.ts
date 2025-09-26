@@ -1,5 +1,6 @@
 import { vars } from '@orfium/tokens';
 import { globalFontFace, globalStyle } from '@vanilla-extract/css';
+
 import { layers } from '../layers';
 
 globalFontFace('Roboto', [
@@ -94,7 +95,8 @@ globalStyle('*', {
       WebkitFontSmoothing: 'antialiased',
       MozOsxFontSmoothing: 'grayscale',
       scrollbarWidth: 'thin',
-      scrollbarColor: `${vars.color.blue[5]} transparent`,
+      scrollbarColor: `${vars.color.palette.primary.muted} transparent`,
+      border: '0 solid',
     },
   },
 });
