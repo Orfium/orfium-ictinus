@@ -1,2 +1,4 @@
-export { Box, type BoxProps } from './Box';
-export { ThemeProvider, useTheme } from './ThemeProvider';
+export * from './Box';
+export * from './Table';
+export * from './Text';
+export * from './ThemeProvider';
