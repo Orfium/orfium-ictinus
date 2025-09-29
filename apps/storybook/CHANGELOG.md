@@ -1,5 +1,15 @@
 # @app/storybook
 
+## 0.0.6
+
+### Patch Changes
+
+- 68a6d1e: new box
+- Updated dependencies [c3bd67e]
+- Updated dependencies [68a6d1e]
+  - @orfium/ictinus@5.41.0
+  - @orfium/tokens@5.1.2
+
 ## 0.0.5
 
 ### Patch Changes
