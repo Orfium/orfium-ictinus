@@ -1,5 +1,17 @@
 # @orfium/ictinus
 
+## 5.41.0
+
+### Minor Changes
+
+- c3bd67e: table composition
+
+### Patch Changes
+
+- 68a6d1e: new box
+- Updated dependencies [68a6d1e]
+  - @orfium/tokens@5.1.2
+
 ## 5.40.1
 
 ### Patch Changes
