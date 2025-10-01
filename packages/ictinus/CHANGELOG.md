@@ -1,5 +1,11 @@
 # @orfium/ictinus
 
+## 5.41.1
+
+### Patch Changes
+
+- 5ed22bd: fix vanilla runtime
+
 ## 5.41.0
 
 ### Minor Changes

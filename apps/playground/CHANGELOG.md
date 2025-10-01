@@ -1,5 +1,12 @@
 # @app/playground
 
+## 0.0.4
+
+### Patch Changes
+
+- Updated dependencies [5ed22bd]
+  - @orfium/ictinus@5.41.1
+
 ## 0.0.3
 
 ### Patch Changes
