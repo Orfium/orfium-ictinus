@@ -8,7 +8,12 @@ export type TableHeaderProps = BoxProps<'thead', NonNullable<styles.HeaderVarian
 
 export const TableHeader = forwardRef<HTMLTableSectionElement, TableHeaderProps>(
   ({ children, className, pinned, ...props }, ref) => (
-    <Box asChild className={cn(styles.header({ pinned }), className)} {...props}>
+    <Box
+      asChild
+      data-pinned={pinned ? '' : undefined}
+      className={cn(styles.header({ pinned }), className)}
+      {...props}
+    >
       <thead ref={ref}>{children}</thead>
     </Box>
   )

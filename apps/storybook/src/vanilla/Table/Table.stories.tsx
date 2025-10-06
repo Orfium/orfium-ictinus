@@ -73,6 +73,20 @@ export const Default: Story = {
             <TableHeaderCell bordered>head</TableHeaderCell>
             <TableHeaderCell bordered>head</TableHeaderCell>
           </TableRow>
+          <TableRow>
+            <TableHeaderCell>head</TableHeaderCell>
+            <TableHeaderCell>head</TableHeaderCell>
+            <TableHeaderCell>head</TableHeaderCell>
+            <TableHeaderCell>head</TableHeaderCell>
+            <TableHeaderCell justifyContent="flex-end">head</TableHeaderCell>
+            <TableHeaderCell>head</TableHeaderCell>
+            <TableHeaderCell>head</TableHeaderCell>
+            <TableHeaderCell>head</TableHeaderCell>
+            <TableHeaderCell>head</TableHeaderCell>
+            <TableHeaderCell>head</TableHeaderCell>
+            <TableHeaderCell>head</TableHeaderCell>
+            <TableHeaderCell>head</TableHeaderCell>
+          </TableRow>
         </TableHeader>
         <TableBody>
           <TableRow>
@@ -236,6 +250,43 @@ export const Default: Story = {
           </Text>
         </Box>
       </Box>
+    </Box>
+  ),
+};
+
+export const Simple: Story = {
+  render: () => (
+    <Box display="flex" flexDirection="column" maxWidth="full" maxHeight="full">
+      <Table>
+        <TableHeader>
+          <TableRow>
+            <TableHeaderCell>head</TableHeaderCell>
+            <TableHeaderCell>head</TableHeaderCell>
+            <TableHeaderCell>head</TableHeaderCell>
+            <TableHeaderCell>head</TableHeaderCell>
+          </TableRow>
+          <TableRow>
+            <TableHeaderCell>head</TableHeaderCell>
+            <TableHeaderCell>head</TableHeaderCell>
+            <TableHeaderCell>head</TableHeaderCell>
+            <TableHeaderCell>head</TableHeaderCell>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          <TableRow>
+            <TableCell>cell</TableCell>
+            <TableCell>cell</TableCell>
+            <TableCell>cell</TableCell>
+            <TableCell>cell</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>cell</TableCell>
+            <TableCell>cell</TableCell>
+            <TableCell>cell</TableCell>
+            <TableCell>cell</TableCell>
+          </TableRow>
+        </TableBody>
+      </Table>
     </Box>
   ),
 };
