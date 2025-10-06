@@ -1,37 +1,7 @@
-import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
-import type { Theme } from 'theme';
-import {
-  headline01,
-  headline02,
-  headline03,
-  headline04,
-  headline05,
-} from '../Typography/Typography.config.styles';
 
-export const globalStyles = (theme: Theme): SerializedStyles => css`
-  h1 {
-    ${headline01(theme)}
-  }
-  h2 {
-    ${headline02(theme)}
-  }
-  h3 {
-    ${headline03(theme)}
-  }
-  h4 {
-    ${headline04(theme)}
-  }
-  h5 {
-    ${headline05(theme)}
-  }
-
-  // default outline for all focused elements defined by the design team
-  // our lightGrey base color (500 shade) with opacity at 50%
-  *:focus {
-    outline: 0;
-  }
-
+// TODO: View transitions used by toast remove when toast is migrated to vanilla extract
+export const globalStyles = () => css`
   ::view-transition-group(*) {
     animation-duration: 250ms;
     /* swift out */
