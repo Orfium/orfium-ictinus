@@ -8,19 +8,19 @@ import * as styles from './Text.css';
 
 const Slot = createSlot('@orfium/ictinus/Text');
 
-export type TextProps<T extends ElementType = 'p', P = unknown> = BoxProps<
+export type TextProps<T extends ElementType = 'span', P = unknown> = BoxProps<
   T,
   ExtendProps<styles.TextVariants, P>
 >;
 
-export const Text = forwardRef<HTMLParagraphElement, TextProps>(
+export const Text = forwardRef<HTMLSpanElement, TextProps>(
   ({ asChild, children, className, lineClamp, truncate, ...props }, ref) => {
-    const Comp = asChild ? Slot : 'p';
+    const Comp = asChild ? Slot : 'span';
 
     return (
       <Box
         asChild
-        ref={ref}
+        ref={ref as any} // Box expects HTMLDivElement ref, but asChild forwards to span at runtime
         className={cn(styles.text({ lineClamp, truncate }), className)}
         {...props}
       >
