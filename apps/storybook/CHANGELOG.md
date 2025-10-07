@@ -1,5 +1,15 @@
 # @app/storybook
 
+## 0.0.8
+
+### Patch Changes
+
+- 4f8756d: fix table nested header borders
+- b3660fc: text fixes
+- Updated dependencies [4f8756d]
+- Updated dependencies [b3660fc]
+  - @orfium/ictinus@5.41.2
+
 ## 0.0.7
 
 ### Patch Changes

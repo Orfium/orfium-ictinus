@@ -1,5 +1,12 @@
 # @orfium/ictinus
 
+## 5.41.2
+
+### Patch Changes
+
+- 4f8756d: fix table nested header borders
+- b3660fc: text fixes
+
 ## 5.41.1
 
 ### Patch Changes
