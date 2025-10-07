@@ -1,8 +1,12 @@
-import { vars } from '@orfium/tokens';
 import { recipe, type RecipeVariants } from '@vanilla-extract/recipes';
 
 import { sprinkles } from '../../sprinkles';
 import { style } from '../../vanilla-extract';
+import * as headerStyles from './TableHeader.css';
+import * as rowStyles from './TableRow.css';
+
+const header = headerStyles.className;
+const row = rowStyles.className;
 
 export const cell = recipe({
   base: [
@@ -49,7 +53,13 @@ export const content = recipe({
       borderColor: 'decorative.default',
     }),
     style({
-      boxShadow: `0 1px 0 ${vars.color['border-color'].decorative.default}`,
+      borderBottomWidth: '1px',
+
+      selectors: {
+        [`${header}:not([data-pinned]) ${row}:last-child &`]: {
+          borderBottomWidth: 0,
+        },
+      },
     }),
   ],
   variants: {
