@@ -1,0 +1,169 @@
+.emotion-0 [data-disabled] {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-1 {
+  cursor: pointer;
+}
+
+.emotion-1>div>div:first-of-type {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+}
+
+.emotion-1 .bar {
+  width: 2.25rem;
+  height: 0.5rem;
+  background: #B8CCFA;
+  position: absolute;
+  border-radius: 624.9375rem;
+}
+
+.emotion-1 .indicator {
+  width: 2.25rem;
+  height: 1.25rem;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.emotion-1 .indicator:before {
+  content: '';
+  box-sizing: border-box;
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  background: #ffffff;
+  border: 0.125rem solid #8EAAEC;
+  border-radius: 100%;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.emotion-1[data-hovered] .indicator:before,
+.emotion-1[data-focus-visible='true'] .indicator:before {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  box-shadow: 0px 0px 0px 8px rgba(200,206,255,0.20);
+  border-radius: 100%;
+}
+
+.emotion-1[data-selected] .indicator:before {
+  -webkit-transform: translateX(80%);
+  -moz-transform: translateX(80%);
+  -ms-transform: translateX(80%);
+  transform: translateX(80%);
+  background: #175BF5;
+  border-color: #175BF5;
+}
+
+.emotion-2 {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.75rem;
+  -webkit-box-pack: unset;
+  -ms-flex-pack: unset;
+  -webkit-justify-content: unset;
+  justify-content: unset;
+}
+
+.emotion-6 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #111530;
+}
+
+<div>
+  <div
+    class="properties_display_flex_xs__19njorx2c properties_flexDirection_column_xs__19njorxk8 properties_alignItems_center_xs__19njorx4 properties_justifyContent_center_xs__19njorx18 properties_gap_lg_xs__19njorxnc properties_flex_1_xs__19njorx34"
+    data-ictinus="test-version"
+  >
+    <div
+      class="properties_display_flex_xs__19njorx2c properties_gap_2xl_xs__19njorxnk"
+      data-ictinus="test-version"
+    >
+      <div
+        class="properties_display_flex_xs__19njorx2c properties_alignItems_flex-start_xs__19njorx0 properties_flexDirection_column_xs__19njorxk8 properties_gap_lg_xs__19njorxnc"
+        data-ictinus="test-version"
+        style="width: 180px;"
+      >
+        <span
+          class="Text__ff5iyl6 Text_text_lineClamp_1__ff5iyl7 Text__ff5iyl0 Text__ff5iyl1 Text__ff5iyl2"
+          data-ictinus="test-version"
+          role="button"
+          tabindex="0"
+        >
+          It was a dark and stormy night
+        </span>
+        <span
+          class="Text__ff5iyl6"
+          data-ictinus="test-version"
+          role="button"
+          tabindex="0"
+        >
+          Sample non-clipped
+        </span>
+      </div>
+      <div
+        class="emotion-0"
+      >
+        <label
+          class="emotion-1"
+          data-rac=""
+          data-react-aria-pressable="true"
+          data-testid="ictinus_switch"
+        >
+          <span
+            style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+          >
+            <input
+              data-react-aria-pressable="true"
+              role="switch"
+              tabindex="0"
+              type="checkbox"
+            />
+          </span>
+          <div
+            class="emotion-2 emotion-3"
+          >
+            <div
+              class="emotion-4 emotion-3"
+            >
+              <div
+                class="bar"
+              />
+              <div
+                class="indicator"
+              />
+            </div>
+            <div
+              class="emotion-6"
+              data-testid="ictinus_switch_undefined_label"
+            >
+              Auto
+            </div>
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
