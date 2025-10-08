@@ -1,5 +1,11 @@
 # @orfium/ictinus
 
+## 5.41.3
+
+### Patch Changes
+
+- d6aba99: react aria tooltip
+
 ## 5.41.2
 
 ### Patch Changes
