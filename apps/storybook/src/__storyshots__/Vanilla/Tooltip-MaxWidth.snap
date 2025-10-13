@@ -1,0 +1,97 @@
+.emotion-0 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-1 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: #194DCC;
+  height: 2.25rem;
+  background-color: rgba(200,206,255,0.30);
+  padding: 0rem 1rem 0rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-1:focus-visible:not(:disabled) {
+  background-color: rgba(200,206,255,0.20);
+}
+
+.emotion-1:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-1:hover:not(:disabled) {
+  background-color: rgba(200,206,255,0.20);
+}
+
+.emotion-1:active:not(:disabled),
+.emotion-1[aria-expanded="true"] {
+  background-color: rgba(200,206,255,0.45);
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+<div>
+  <div
+    class="properties_display_flex_xs__19njorx2c properties_flexDirection_column_xs__19njorxk8 properties_alignItems_center_xs__19njorx4 properties_justifyContent_center_xs__19njorx18 properties_flex_1_xs__19njorx34"
+    data-ictinus="test-version"
+  >
+    <div
+      class="emotion-0"
+    >
+      <button
+        aria-describedby="react-aria-:test-id:"
+        class="emotion-1"
+        data-slot="button"
+        data-testid="button"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="emotion-2"
+        >
+          <span>
+            Hover me
+          </span>
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
