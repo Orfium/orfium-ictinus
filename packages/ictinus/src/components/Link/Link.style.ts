@@ -2,10 +2,10 @@ import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import type { Theme } from 'theme';
 
+import { generateStylesFromTokens } from 'components/Typography/utils';
 import type { LinkTokens } from './Link.tokens';
 import { getLinkTokens } from './Link.tokens';
 import type { LinkProps } from './Link.types';
-import { generateStylesFromTokens } from 'components/Typography/utils';
 
 export const linkContainer =
   ({
@@ -62,10 +62,9 @@ export const linkContainer =
 
       opacity: ${isDisabled ? theme.tokens.disabledState.get('default') : 1};
 
-      width: fit-content;
       align-items: center;
       cursor: ${isDisabled ? 'default' : 'pointer'};
-      pointer-events: ${isDisabled ? 'none' : 'default'};
+      pointer-events: ${isDisabled ? 'none' : 'auto'};
 
       ${generateStylesFromTokens(tokens(`${placement}.${size}` as LinkTokens))}
     `;

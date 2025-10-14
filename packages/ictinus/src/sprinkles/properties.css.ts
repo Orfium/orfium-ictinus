@@ -1,4 +1,4 @@
-import { vars } from '@orfium/tokens';
+import { breakpoints, vars } from '@orfium/tokens';
 import { defineProperties } from '@vanilla-extract/sprinkles';
 
 import { layers } from '../layers';
@@ -7,12 +7,6 @@ import { layers } from '../layers';
 /* DO NOT MOVE THIS LINE */
 import '../vanilla-extract/global.css';
 /* DO NOT MOVE THIS LINE */
-
-export const breakpoints = {
-  md: 768 as const,
-  lg: 1024 as const,
-  xl: 1280 as const,
-} as const;
 
 // Flattened colors for sprinkles - autogenerating them here breaks autocomplete
 // Can also supply them flattened from the actual tokens to avoid duplication
@@ -241,9 +235,9 @@ const typography = {
 
 export const responsiveProps = defineProperties({
   '@layer': layers.utilities,
-  defaultCondition: 'xs',
+  defaultCondition: 'base',
   conditions: {
-    xs: {},
+    base: {},
     md: { '@media': `(min-width: ${breakpoints.md}px)` },
     lg: { '@media': `(min-width: ${breakpoints.lg}px)` },
     xl: { '@media': `(min-width: ${breakpoints.xl}px)` },
@@ -298,6 +292,10 @@ export const responsiveProps = defineProperties({
     paddingLeft: vars.spacing,
     paddingRight: vars.spacing,
     paddingTop: vars.spacing,
+    borderTopWidth: vars['border-width'],
+    borderRightWidth: vars['border-width'],
+    borderBottomWidth: vars['border-width'],
+    borderLeftWidth: vars['border-width'],
   },
   shorthands: {
     maxH: ['maxHeight'],
@@ -319,6 +317,11 @@ export const responsiveProps = defineProperties({
     mr: ['marginRight'],
     mx: ['marginLeft', 'marginRight'],
     my: ['marginTop', 'marginBottom'],
+    border: ['borderBottomWidth', 'borderLeftWidth', 'borderRightWidth', 'borderTopWidth'],
+    borderB: ['borderBottomWidth'],
+    borderL: ['borderLeftWidth'],
+    borderR: ['borderRightWidth'],
+    borderT: ['borderTopWidth'],
   },
 });
 
@@ -327,15 +330,11 @@ export const unresponsiveProps = defineProperties({
   properties: {
     borderColor: borderTokens,
     borderStyle: ['solid', 'dashed'],
-    borderLeftWidth: vars['border-width'],
     borderRadius: vars['border-radius'],
     borderTopLeftRadius: vars['border-radius'],
     borderTopRightRadius: vars['border-radius'],
     borderBottomLeftRadius: vars['border-radius'],
     borderBottomRightRadius: vars['border-radius'],
-    borderRightWidth: vars['border-width'],
-    borderTopWidth: vars['border-width'],
-    borderBottomWidth: vars['border-width'],
     boxShadow: vars['box-shadow'],
     cursor: ['default', 'pointer', 'not-allowed'] as const,
     overflowX: ['auto', 'hidden', 'visible'] as const,
@@ -355,7 +354,7 @@ export const unresponsiveProps = defineProperties({
     textTransform: ['capitalize', 'none', 'uppercase'] as const,
     textDecoration: ['underline'] as const,
     visibility: ['hidden', 'visible'] as const,
-    wordBreak: ['break-word'] as const,
+    wordBreak: ['break-all', 'break-word'] as const,
     wordWrap: ['normal', 'break-word'] as const,
     textAlign: ['end', 'start', 'center', 'justify'] as const,
     transitionProperty: {
@@ -391,11 +390,6 @@ export const unresponsiveProps = defineProperties({
   },
   shorthands: {
     overflow: ['overflowX', 'overflowY'],
-    border: ['borderBottomWidth', 'borderLeftWidth', 'borderRightWidth', 'borderTopWidth'],
-    borderB: ['borderBottomWidth'],
-    borderL: ['borderLeftWidth'],
-    borderR: ['borderRightWidth'],
-    borderT: ['borderTopWidth'],
     shadow: ['boxShadow'],
     rounded: ['borderRadius'],
     roundedT: ['borderTopLeftRadius', 'borderTopRightRadius'],

@@ -287,3 +287,6 @@ export {
   spacing,
   typography,
 };
+
+export * from './layers';
+export * from './sprinkles';

@@ -23,15 +23,12 @@
   text-decoration: none;
   position: relative;
   opacity: 1;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  pointer-events: default;
+  pointer-events: auto;
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.375rem;
@@ -76,15 +73,12 @@
   text-decoration: none;
   position: relative;
   opacity: 1;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  pointer-events: default;
+  pointer-events: auto;
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -129,15 +123,12 @@
   text-decoration: none;
   position: relative;
   opacity: 1;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  pointer-events: default;
+  pointer-events: auto;
   font-family: Roboto;
   font-weight: 500;
   line-height: 1rem;
@@ -184,9 +175,7 @@
         data-testid="_link"
         href="#"
       >
-        <span>
-          Size 1
-        </span>
+        Size 1
       </a>
     </div>
     <div
@@ -198,9 +187,7 @@
         data-testid="_link"
         href="#"
       >
-        <span>
-          Size 2
-        </span>
+        Size 2
       </a>
     </div>
     <div
@@ -212,9 +199,7 @@
         data-testid="_link"
         href="#"
       >
-        <span>
-          Size 3
-        </span>
+        Size 3
       </a>
     </div>
   </div>

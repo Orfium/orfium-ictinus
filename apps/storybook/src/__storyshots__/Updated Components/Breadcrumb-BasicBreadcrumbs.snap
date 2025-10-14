@@ -64,15 +64,12 @@
   text-decoration: none;
   position: relative;
   opacity: 1;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  pointer-events: default;
+  pointer-events: auto;
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -167,9 +164,7 @@
               data-testid="_breadcrumb_link_Level 1_link"
               href="/first-level"
             >
-              <span>
-                Level 1
-              </span>
+              Level 1
             </a>
             <div
               class="emotion-5"
@@ -203,9 +198,7 @@
               data-testid="_breadcrumb_link_Level 2_link"
               href="/second-level"
             >
-              <span>
-                Level 2
-              </span>
+              Level 2
             </a>
             <div
               class="emotion-5"
@@ -239,9 +232,7 @@
               data-testid="_breadcrumb_link_Level 3_link"
               href="/third-level"
             >
-              <span>
-                Level 3
-              </span>
+              Level 3
             </a>
             <div
               class="emotion-5"
@@ -275,9 +266,7 @@
               data-testid="_breadcrumb_link_Level 4_link"
               href="/forth-level"
             >
-              <span>
-                Level 4
-              </span>
+              Level 4
             </a>
             <div
               class="emotion-5"
