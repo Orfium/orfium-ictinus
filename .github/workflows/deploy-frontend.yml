@@ -128,7 +128,7 @@ jobs:
               source environments/common.env
           fi
           source environments/${{ inputs.target-environment }}.env
-          pnpm build --filter @app/storybook
+          pnpm build --filter storybook
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4.0.2
