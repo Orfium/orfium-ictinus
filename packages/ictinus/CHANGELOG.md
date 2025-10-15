@@ -1,5 +1,11 @@
 # @orfium/ictinus
 
+## 5.41.4
+
+### Patch Changes
+
+- cc639ea: extend box props in tooltip content
+
 ## 5.41.3
 
 ### Patch Changes
