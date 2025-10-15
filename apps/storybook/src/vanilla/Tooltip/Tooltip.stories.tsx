@@ -165,3 +165,16 @@ export const Delay: Story = {
     </Box>
   ),
 };
+
+export const MaxWidth: Story = {
+  render: () => (
+    <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" flex="1">
+      <Tooltip defaultOpen>
+        <TooltipTrigger>
+          <Button type="secondary">Hover me</Button>
+        </TooltipTrigger>
+        <TooltipContent maxW="21">It was a dark and stormy night</TooltipContent>
+      </Tooltip>
+    </Box>
+  ),
+};
