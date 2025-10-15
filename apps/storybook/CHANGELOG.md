@@ -1,5 +1,12 @@
 # @app/storybook
 
+## 0.0.10
+
+### Patch Changes
+
+- Updated dependencies [cc639ea]
+  - @orfium/ictinus@5.41.4
+
 ## 0.0.9
 
 ### Patch Changes
