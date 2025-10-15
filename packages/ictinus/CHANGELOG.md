@@ -1,5 +1,16 @@
 # @orfium/ictinus
 
+## 5.42.0
+
+### Minor Changes
+
+- 5d46cd5: allow custom app styles
+
+### Patch Changes
+
+- Updated dependencies [5d46cd5]
+  - @orfium/tokens@5.1.3
+
 ## 5.41.4
 
 ### Patch Changes

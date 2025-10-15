@@ -1,5 +1,11 @@
 # @orfium/tokens
 
+## 5.1.3
+
+### Patch Changes
+
+- 5d46cd5: allow custom app styles
+
 ## 5.1.2
 
 ### Patch Changes
