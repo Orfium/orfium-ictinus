@@ -138,15 +138,12 @@
   text-decoration: none;
   position: relative;
   opacity: 1;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  pointer-events: default;
+  pointer-events: auto;
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -257,9 +254,7 @@
           data-slot="link"
           data-testid="_link"
         >
-          <span>
-            Single Action
-          </span>
+          Single Action
         </a>
       </div>
       <div

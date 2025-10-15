@@ -1,7 +1,7 @@
 {
-  "name": "@app/playground",
+  "name": "playground",
   "private": true,
-  "version": "0.0.7",
+  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,10 +11,12 @@
   },
   "dependencies": {
     "@orfium/ictinus": "workspace:*",
-    "@orfium/tokens": "workspace:*"
+    "@orfium/tokens": "workspace:*",
+    "@vanilla-extract/css": "^1.17.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",
+    "@vanilla-extract/vite-plugin": "^5.1.1",
     "@vitejs/plugin-react": "^5.0.0",
     "eslint": "^9.33.0",
     "eslint-plugin-react-hooks": "^5.2.0",

@@ -1,11 +1,11 @@
 import useTheme from 'hooks/useTheme';
 import React from 'react';
 
+import Icon from 'components/Icon';
+import { useSlotProps } from '../utils/Slots';
 import { iconSize } from './constants';
 import { linkContainer } from './Link.style';
 import type { LinkProps } from './Link.types';
-import { useSlotProps } from '../utils/Slots';
-import Icon from 'components/Icon';
 
 const Link = React.forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
   props = useSlotProps(props, 'link');
@@ -37,7 +37,7 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
       {...componentProps}
       {...rest}
     >
-      <span>{children}</span>
+      {children}
       {iconName && (
         <Icon
           name={iconName}

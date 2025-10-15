@@ -23,15 +23,12 @@
   text-decoration: none;
   position: relative;
   opacity: 1;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  pointer-events: default;
+  pointer-events: auto;
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.375rem;
@@ -91,15 +88,12 @@
   text-decoration: none;
   position: relative;
   opacity: 1;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  pointer-events: default;
+  pointer-events: auto;
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.375rem;
@@ -146,9 +140,7 @@
         data-testid="_link"
         href="#"
       >
-        <span>
-          Primary
-        </span>
+        Primary
       </a>
     </div>
   </div>
@@ -164,9 +156,7 @@
         data-testid="_link"
         href="#"
       >
-        <span>
-          Inverted
-        </span>
+        Inverted
       </a>
     </div>
   </div>

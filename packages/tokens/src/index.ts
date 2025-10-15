@@ -1,6 +1,7 @@
 // Export all base tokens (these export specific token values, not types)
 export * from './tokens/borderRadius';
 export * from './tokens/borderWidth';
+export * from './tokens/breakpoints';
 export * from './tokens/color';
 export * from './tokens/fontFamily';
 export * from './tokens/fontSize';
