@@ -1,44 +1,36 @@
-name: 'Chromatic'
+name: 'Visual'
+
 on:
-  push:
-    branches:
-      - 'master'
-      - 'next'
   pull_request:
-    branches:
-      - '*'
+    branches: [master]
+    types: [labeled]
+  push:
+    branches: [master]
 
 jobs:
-  chromatic-deployment:
+  chromatic:
+    if: ${{ github.event.label.name == 'visual' }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version-file: 'package.json'
-          cache: 'pnpm'
+          cache: pnpm
+          node-version-file: package.json
 
-      - name: Install dependencies
-        run: |
+      - run: |
           pnpm install
+          pnpm build
 
-      - name: Build storybook
-        run: |
-          pnpm build --filter @app/storybook
-
-      - name: Publish to Chromatic
-        uses: chromaui/action@v1
+      - uses: chromaui/action@latest
         with:
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           onlyChanged: true
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           storybookBuildDir: apps/storybook/dist
           storybookBaseDir: apps/storybook
         env:
