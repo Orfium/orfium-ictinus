@@ -1,5 +1,11 @@
 # @orfium/ictinus
 
+## 5.42.1
+
+### Patch Changes
+
+- 9b471e1: fix navigator ssr
+
 ## 5.42.0
 
 ### Minor Changes
