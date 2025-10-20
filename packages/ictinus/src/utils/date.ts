@@ -1,20 +1,19 @@
 import type { Dayjs as DayjsType } from 'dayjs';
 import dayjsLib from 'dayjs';
+import 'dayjs/locale/en';
+import 'dayjs/locale/en-gb';
 import localeData from 'dayjs/plugin/localeData';
 import localizedFormat from 'dayjs/plugin/localizedFormat';
-import 'dayjs/locale/en-gb';
-import 'dayjs/locale/en';
-/*
- * This file is for making the dayjs tree shakable when enabling "sideEffect": false on the package.json
- * by having a separate file webpack knows how to load it just once
- */
+
 const dayjs = dayjsLib;
 export type Dayjs = DayjsType;
 
-(function InitLocaleFormat(usLocale: string, euLocale: string) {
-  [localizedFormat, localeData].forEach(dayjs.extend);
-  const browserLanguage = navigator?.language === 'en-GB' ? euLocale : usLocale;
-  dayjs.locale(browserLanguage);
-})('en', 'en-gb');
+dayjs.extend(localizedFormat);
+dayjs.extend(localeData);
+
+const browserLanguage =
+  typeof navigator !== 'undefined' && navigator?.language === 'en-GB' ? 'en-gb' : 'en';
+
+dayjs.locale(browserLanguage);
 
 export default dayjs;
