@@ -101,6 +101,14 @@ globalStyle('*', {
   },
 });
 
+globalStyle('*:focus', {
+  '@layer': {
+    [layers.reset]: {
+      outline: 0,
+    },
+  },
+});
+
 globalStyle('html, body', {
   '@layer': {
     [layers.reset]: {
