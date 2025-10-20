@@ -1,4 +1,5 @@
-name: SonarQube
+name: Sonar
+
 on:
   push:
     branches: [master]
@@ -9,28 +10,23 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
-    name: Build
+  sonar:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version-file: 'package.json'
-          cache: 'pnpm'
+          cache: pnpm
+          node-version-file: package.json
 
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Run Tests
-        run: pnpm test:coverage
+      - run: |
+          pnpm install
+          pnpm coverage:report
 
       - uses: sonarsource/sonarqube-scan-action@master
         env:
