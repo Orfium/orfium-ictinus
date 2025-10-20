@@ -9,7 +9,7 @@ on:
 
 jobs:
   chromatic:
-    if: ${{ github.event.label.name == 'visual' }}
+    if: ${{ github.event_name == 'push' || github.event.label.name == 'visual' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -33,5 +33,6 @@ jobs:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           storybookBuildDir: apps/storybook/dist
           storybookBaseDir: apps/storybook
+          autoAcceptChanges: 'master'
         env:
           STORYBOOK_ENV: true
