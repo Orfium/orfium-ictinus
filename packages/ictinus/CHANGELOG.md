@@ -1,5 +1,11 @@
 # @orfium/ictinus
 
+## 5.42.2
+
+### Patch Changes
+
+- 1c9ac6d: react aria menu
+
 ## 5.42.1
 
 ### Patch Changes
