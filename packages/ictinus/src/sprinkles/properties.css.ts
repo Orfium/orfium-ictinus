@@ -264,6 +264,7 @@ export const responsiveProps = defineProperties({
       'inline-block',
       'none',
       'contents',
+      'inline',
     ] as const,
     flex: {
       '1': '1 1 0%',
