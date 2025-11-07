@@ -1,9 +1,9 @@
 import type { CSSObject } from '@emotion/react';
 import type {
-  SortingState,
+  ExpandedState,
   OnChangeFn,
   RowSelectionState,
-  ExpandedState,
+  SortingState,
 } from '@tanstack/react-table';
 
 import type { SelectOptionValues } from '@orfium/ictinus';
@@ -14,7 +14,7 @@ export type NoUndefined<T> = {
   [K in keyof T]-?: Exclude<T[K], undefined>;
 };
 
-export type { SortingState, ExpandedState };
+export type { ExpandedState, SortingState };
 
 export type TableProps<TData extends NoUndefined<TData>> = {
   /** If table is interactive, rows are selectable with actions */
@@ -103,7 +103,7 @@ export type RowsConfig = {
   /** Whether a rows counter should be displayed, regardless of row selection functionality */
   hasRowsCount?: boolean;
   /** The number of rows counter that will be displayed. If no number is provided it will default to the number of rows in the table */
-  rowsCount?: number;
+  rowsCount?: number | string;
   /** State which indicated which rows are selected */
   rowSelection?: RowSelectionState;
   /** Callback for row selection state change */
