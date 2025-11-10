@@ -1,10 +1,10 @@
 import React, { useMemo } from 'react';
 import isEqual from 'react-fast-compare';
 
-import ColumnChooser from './components/ColumnChooser';
-import { actionsContent, titleContent, tTitleContainer } from './TTitle.style';
 import type { TableProps } from 'components/Table/types';
 import Typography from 'components/Typography';
+import ColumnChooser from './components/ColumnChooser';
+import { actionsContent, titleContent, tTitleContainer } from './TTitle.style';
 
 import type { TestProps } from '~/utils/types';
 
@@ -12,7 +12,7 @@ type Props = Pick<TableProps<any>, 'columnsConfig' | 'columns' | 'rowsConfig' | 
   /** Element that that serves as the positioning boundary of the ColumnChooser Menu */
   containerRef: React.MutableRefObject<any>;
   /** Number of rows */
-  rowsCount?: number;
+  rowsCount?: number | string;
 } & TestProps;
 
 const TTitle: React.FCC<Props> = ({
@@ -31,17 +31,17 @@ const TTitle: React.FCC<Props> = ({
   const itemsToDisplay = isSelectable
     ? Object.keys(rowSelection).length
     : hasRowsCount
-    ? rowsCount
-    : 0;
+      ? rowsCount
+      : 0;
 
   const hasTitle = isSelectable || hasRowsCount;
-  const hasVisibleActions = isSelectable && itemsToDisplay > 0;
+  const hasVisibleActions = isSelectable && Number(itemsToDisplay) > 0;
 
   const title = useMemo(
     () => (
       <div data-testid={`${dataTestPrefixId}_title`}>
         <Typography
-          type='active'
+          type="active"
           variant="label02"
           data-testid={`${dataTestPrefixId}_title_items_count`}
         >

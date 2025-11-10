@@ -1,7 +1,6 @@
 import type { SortingState } from '@tanstack/react-table';
 
-import { Typography } from '@orfium/ictinus';
-import type { TableColumn, TableRow } from './types';
+import { Typography, type TableColumn, type TableRow } from '@orfium/ictinus';
 
 export const ACTIONS_CELL_WIDTH = 52;
 export const ACTIONS_BAR_HEIGHT = 44;
