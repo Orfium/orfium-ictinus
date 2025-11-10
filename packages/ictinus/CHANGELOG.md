@@ -1,5 +1,11 @@
 # @orfium/ictinus
 
+## 5.42.3
+
+### Patch Changes
+
+- 00aeba5: make rows count string or number
+
 ## 5.42.2
 
 ### Patch Changes
