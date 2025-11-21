@@ -4,6 +4,7 @@ import {
   type ExpandedState,
   type SelectOptionValues,
   Table,
+  type TableColumn,
   tableFunctionalUpdate,
 } from '@orfium/ictinus';
 import { chunk, concat } from 'lodash-es';
@@ -15,7 +16,6 @@ import {
   simpleColumns,
   simpleData,
 } from '../../constants';
-import type { TableColumn } from '../../types';
 
 export default {
   title: 'Updated Components/Table/Table/Rows and Cells',

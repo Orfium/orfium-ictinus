@@ -103,6 +103,8 @@ export type RowsConfig = {
   hasRowsCount?: boolean;
   /** The number of rows counter that will be displayed. If no number is provided it will default to the number of rows in the table */
   rowsCount?: number | string;
+  /** Label text to display next to the row count (e.g., "items", "users", "products"). Defaults to "items" if not provided. */
+  rowsCountLabel?: string;
   /** State which indicated which rows are selected */
   rowSelection?: RowSelectionState;
   /** Callback for row selection state change */
