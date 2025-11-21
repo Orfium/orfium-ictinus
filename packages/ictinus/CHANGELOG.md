@@ -1,5 +1,11 @@
 # @orfium/ictinus
 
+## 5.42.4
+
+### Patch Changes
+
+- b680d21: add rows count label
+
 ## 5.42.3
 
 ### Patch Changes
