@@ -1,0 +1,13 @@
+{
+  "name": "@orfium/ictinus-mcp-server",
+  "version": "0.0.0",
+  "private": "true",
+  "type": "module",
+  "scripts": {
+    "dev": "node --experimental-strip-types src/server.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.22.0",
+    "zod": "^4.1.12"
+  }
+}

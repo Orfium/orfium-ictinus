@@ -1,0 +1,18 @@
+### Text Component
+
+Use `Text` for all text content. Text accepts all sprinkles properties like Box:
+
+```tsx
+import { Text } from '@orfium/ictinus/vanilla';
+
+<Text asChild typography="headline01" color="active">
+  <h1>Headline 01 - H1</h1>
+</Text>;
+```
+
+Available typography variants:
+
+- `headline01` through `headline05` - Bold headlines
+- `title01` through `title03` - Bold titles
+- `label01` through `label04` - Medium weight labels
+- `body01` through `body04` - Regular body text
