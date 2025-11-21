@@ -1,9 +1,17 @@
+import {
+  Button,
+  DropdownButton,
+  Table,
+  tableFunctionalUpdate,
+  type ExpandedState,
+  type SelectOptionValues,
+  type SortingState,
+  type TableColumn,
+} from '@orfium/ictinus';
 import { chunk, concat } from 'lodash-es';
 import { useEffect, useState } from 'react';
-import { Button, DropdownButton, type SelectOptionValues, Table, tableFunctionalUpdate } from '@orfium/ictinus';
 import type { SimpleData } from '../../constants';
 import { contentAlignOptions, moreData, simpleData, sortedData } from '../../constants';
-import type { ExpandedState, SortingState, TableColumn } from '../../types';
 
 export default {
   title: 'Updated Components/Table/Table/Showcase',
@@ -18,6 +26,7 @@ export default {
     maxHeight: 280,
     hasRowsCount: false,
     rowsCount: undefined,
+    rowsCountLabel: '',
   },
 
   argTypes: {
@@ -53,6 +62,7 @@ export default {
     ageWidth: { name: 'Age Width', type: 'number' },
     jobWidth: { name: 'Job Width', type: 'number' },
     rowsCount: { name: 'Rows Count', type: 'number' },
+    rowsCountLabel: { name: 'Rows Count Label' },
   },
 };
 
@@ -77,6 +87,7 @@ export const Playground = {
       jobWidth,
       hasRowsCount,
       rowsCount,
+      rowsCountLabel,
     } = args;
 
     const columns: TableColumn<SimpleData>[] = [
@@ -135,6 +146,7 @@ export const Playground = {
         sx={hasStickyHeader ? { tbody: { maxHeight: `${maxHeight}px` } } : undefined}
         rowsConfig={{
           hasRowsCount,
+          rowsCountLabel,
           rowsCount,
           ...(hasRowSelection && {
             rowSelection: rowSelection[currentPage - 1],
@@ -228,6 +240,7 @@ export const Playground = {
         'Job Width',
         'hasRowsCount',
         'Rows Count',
+        'Rows Count Label',
       ],
     },
   },

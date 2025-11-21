@@ -24,7 +24,8 @@ const TTitle: React.FCC<Props> = ({
   containerRef,
   dataTestPrefixId,
 }) => {
-  const { hasRowsCount, rowSelection, bulkActions, defaultAction } = rowsConfig ?? {};
+  const { hasRowsCount, rowsCountLabel, rowSelection, bulkActions, defaultAction } =
+    rowsConfig ?? {};
 
   const isSelectable = type === 'interactive' && rowSelection;
 
@@ -47,10 +48,13 @@ const TTitle: React.FCC<Props> = ({
         >
           {itemsToDisplay}
         </Typography>
-        <Typography variant="label02"> items {isSelectable ? 'selected' : ''}</Typography>
+        <Typography variant="label02">
+          {' '}
+          {rowsCountLabel ? rowsCountLabel : 'items'} {isSelectable ? 'selected' : ''}
+        </Typography>
       </div>
     ),
-    [dataTestPrefixId, isSelectable, itemsToDisplay]
+    [dataTestPrefixId, isSelectable, itemsToDisplay, rowsCountLabel]
   );
 
   return (
