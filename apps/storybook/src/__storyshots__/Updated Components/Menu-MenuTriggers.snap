@@ -39,10 +39,10 @@
   -webkit-justify-content: center;
   justify-content: center;
   color: #ffffff;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: var(--ictinus-sizing-9);
+  height: var(--ictinus-sizing-9);
   background-color: #175BF5;
-  padding: 0rem 1rem 0rem 1rem;
+  padding: var(--ictinus-spacing-0) var(--ictinus-spacing-6) var(--ictinus-spacing-0) var(--ictinus-spacing-6);
   border-radius: var(--ictinus-border-radius-7);
   border: none;
   cursor: pointer;
@@ -106,9 +106,9 @@
   -webkit-justify-content: center;
   justify-content: center;
   color: #ffffff;
-  height: 2.25rem;
+  height: var(--ictinus-sizing-9);
   background-color: #175BF5;
-  padding: 0rem 1rem 0rem 1rem;
+  padding: var(--ictinus-spacing-0) var(--ictinus-spacing-6) var(--ictinus-spacing-0) var(--ictinus-spacing-6);
   border-radius: var(--ictinus-border-radius-2);
   border: none;
   cursor: pointer;

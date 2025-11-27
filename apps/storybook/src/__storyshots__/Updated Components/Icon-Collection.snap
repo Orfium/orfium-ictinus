@@ -56,7 +56,7 @@
   user-select: none;
   opacity: 1;
   cursor: text;
-  height: 2.25rem;
+  height: var(--ictinus-sizing-9);
   min-width: unset;
   background-color: var(--ictinus-color-palette-secondary-base);
   z-index: 1;
@@ -91,7 +91,7 @@
   width: -webkit-fill-available;
   width: -moz-available;
   width: fill-available;
-  padding: 0rem 0rem 0rem 0.75rem;
+  padding: var(--ictinus-spacing-0) var(--ictinus-spacing-0) var(--ictinus-spacing-0) var(--ictinus-spacing-5);
   gap: 0.5rem;
   padding-right: var(--ictinus-spacing-6);
   padding-left: var(--ictinus-spacing-6);

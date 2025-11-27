@@ -21,8 +21,8 @@
   user-select: none;
   opacity: 1;
   cursor: text;
-  height: 3.25rem;
-  min-width: 10rem;
+  height: var(--ictinus-sizing-13);
+  min-width: 160px;
   background-color: var(--ictinus-color-palette-secondary-base);
 }
 
@@ -52,7 +52,7 @@
   width: -webkit-fill-available;
   width: -moz-available;
   width: fill-available;
-  padding: 0rem 0rem 0rem 0.75rem;
+  padding: var(--ictinus-spacing-0) var(--ictinus-spacing-0) var(--ictinus-spacing-0) var(--ictinus-spacing-5);
 }
 
 .emotion-2>div {

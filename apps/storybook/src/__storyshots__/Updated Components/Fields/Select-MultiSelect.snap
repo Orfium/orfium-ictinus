@@ -19,7 +19,7 @@
 
 .emotion-2 {
   position: relative;
-  min-width: 8.75rem;
+  min-width: 140px;
 }
 
 .emotion-4 {
@@ -46,7 +46,7 @@
   opacity: 1;
   cursor: text;
   height: unset;
-  min-width: 8.75rem;
+  min-width: 140px;
   background-color: var(--ictinus-color-palette-secondary-base);
   min-height: 3.25rem!important;
 }
@@ -126,7 +126,7 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 1.5rem;
+  height: var(--ictinus-sizing-6);
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -430,7 +430,7 @@
   opacity: 1;
   cursor: text;
   height: unset;
-  min-width: 8.75rem;
+  min-width: 140px;
   background-color: var(--ictinus-color-palette-secondary-base);
   min-height: 3.25rem!important;
 }

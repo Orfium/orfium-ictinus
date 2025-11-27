@@ -29,13 +29,12 @@
   align-items: center;
   cursor: pointer;
   pointer-events: auto;
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1.375rem;
-  font-size: 1rem;
-  letter-spacing: 0.00625rem;
   -webkit-text-decoration: underline;
   text-decoration: underline;
+  font-weight: var(--ictinus-weight-medium);
+  font-size: var(--ictinus-font-size-4);
+  line-height: var(--ictinus-line-height-5);
+  letter-spacing: var(--ictinus-letter-spacing-1);
 }
 
 .emotion-1:hover,

@@ -7,7 +7,7 @@ exports[`Day > should render correctly 1`] = `
   cursor: pointer;
   position: relative;
   color: var(--ictinus-color-text-default-primary);
-  width: 2.25rem;
+  width: var(--ictinus-sizing-9);
   font-weight: bold;
   opacity: 1;
 }
@@ -25,8 +25,8 @@ exports[`Day > should render correctly 1`] = `
   letter-spacing: 0.015625rem;
   border: var(--ictinus-border-width-1) solid var(--ictinus-color-border-color-interactive-active);
   border-radius: var(--ictinus-border-radius-7);
-  width: 2.25rem;
-  height: 2.25rem;
+  width: var(--ictinus-sizing-9);
+  height: var(--ictinus-sizing-9);
   color: var(--ictinus-color-text-default-primary);
   box-sizing: border-box;
   display: -webkit-box;
@@ -80,7 +80,7 @@ exports[`Day > should render disabled correctly 1`] = `
   cursor: pointer;
   position: relative;
   color: var(--ictinus-color-text-default-primary);
-  width: 2.25rem;
+  width: var(--ictinus-sizing-9);
   font-weight: bold;
   opacity: 0.5;
 }
@@ -98,8 +98,8 @@ exports[`Day > should render disabled correctly 1`] = `
   letter-spacing: 0.015625rem;
   border: var(--ictinus-border-width-1) solid var(--ictinus-color-border-color-interactive-active);
   border-radius: var(--ictinus-border-radius-7);
-  width: 2.25rem;
-  height: 2.25rem;
+  width: var(--ictinus-sizing-9);
+  height: var(--ictinus-sizing-9);
   color: var(--ictinus-color-text-default-primary);
   box-sizing: border-box;
   display: -webkit-box;
@@ -148,7 +148,7 @@ exports[`Day > should render isFirst, isLast correctly 1`] = `
   cursor: pointer;
   position: relative;
   color: var(--ictinus-color-text-default-primary);
-  width: 2.25rem;
+  width: var(--ictinus-sizing-9);
   font-weight: bold;
   opacity: 1;
   background: var(--ictinus-color-palette-primary-contrast);
@@ -182,8 +182,8 @@ exports[`Day > should render isFirst, isLast correctly 1`] = `
   letter-spacing: 0.015625rem;
   border: var(--ictinus-border-width-1) solid var(--ictinus-color-border-color-interactive-active);
   border-radius: var(--ictinus-border-radius-7);
-  width: 2.25rem;
-  height: 2.25rem;
+  width: var(--ictinus-sizing-9);
+  height: var(--ictinus-sizing-9);
   color: var(--ictinus-color-text-default-primary);
   box-sizing: border-box;
   display: -webkit-box;
@@ -237,7 +237,7 @@ exports[`Day > should render isFirst, isLast correctly 2`] = `
   cursor: pointer;
   position: relative;
   color: var(--ictinus-color-text-default-primary);
-  width: 2.25rem;
+  width: var(--ictinus-sizing-9);
   font-weight: bold;
   opacity: 1;
   background: var(--ictinus-color-palette-primary-contrast);
@@ -271,8 +271,8 @@ exports[`Day > should render isFirst, isLast correctly 2`] = `
   letter-spacing: 0.015625rem;
   border: var(--ictinus-border-width-1) solid var(--ictinus-color-border-color-interactive-active);
   border-radius: var(--ictinus-border-radius-7);
-  width: 2.25rem;
-  height: 2.25rem;
+  width: var(--ictinus-sizing-9);
+  height: var(--ictinus-sizing-9);
   color: var(--ictinus-color-text-default-primary);
   box-sizing: border-box;
   display: -webkit-box;

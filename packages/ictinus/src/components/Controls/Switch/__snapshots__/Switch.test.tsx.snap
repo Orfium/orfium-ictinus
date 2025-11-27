@@ -27,15 +27,15 @@ exports[`Switch > it renders the Switch correctly 1`] = `
 }
 
 .emotion-1 .bar {
-  width: 2.25rem;
-  height: 0.5rem;
+  width: var(--ictinus-sizing-9);
+  height: var(--ictinus-sizing-2);
   background: var(--ictinus-color-palette-primary-alt-contrast);
   position: absolute;
   border-radius: var(--ictinus-border-radius-7);
 }
 
 .emotion-1 .indicator {
-  width: 2.25rem;
+  width: var(--ictinus-sizing-9);
   height: var(--ictinus-sizing-5);
   box-sizing: border-box;
   position: relative;
