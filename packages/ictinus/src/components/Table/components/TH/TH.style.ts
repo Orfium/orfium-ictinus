@@ -1,12 +1,18 @@
 import type { CSSObject, SerializedStyles, Theme } from '@emotion/react';
 import { css } from '@emotion/react';
 
-import { ACTIONS_CELL_WIDTH, contentAlignToFlex } from '../../constants';
 import type { TableProps } from 'components/Table';
 import { generateStylesFromTokens } from 'components/Typography/utils';
+import { ACTIONS_CELL_WIDTH, contentAlignToFlex } from '../../constants';
 
+import { rem, vars } from '@orfium/tokens';
 import { lineEllipsis } from 'theme/functions';
-import { rem } from '@orfium/tokens';
+
+const TH_HEIGHT = {
+  sm: vars.sizing['11'],
+  md: vars.sizing['13'],
+  lg: vars.sizing['15'],
+};
 
 export const thContainer =
   ({
@@ -30,15 +36,13 @@ export const thContainer =
       width: ${isCheckbox || isExpandedButton
         ? rem(ACTIONS_CELL_WIDTH)
         : width
-        ? `${width}%`
-        : '100%'};
-      height: ${theme.dimension.minHeight.get(`tableRow.${rowSize}`)};
+          ? `${width}%`
+          : '100%'};
+      height: ${TH_HEIGHT[rowSize]};
       align-content: center;
       box-sizing: border-box;
-      padding: ${theme.dimension.spacing.get('sm')} ${theme.dimension.spacing.get('lg')};
-      color: ${theme.tokens.colors.get(
-        `textColor.default.${hasVisibleOptions ? 'primary' : 'secondary'}`
-      )};
+      padding: ${vars.spacing['4']} ${vars.spacing['6']};
+      color: ${vars.color.text.default[hasVisibleOptions ? 'primary' : 'secondary']};
       ${generateStylesFromTokens(theme.tokens.typography.get('normal.body02'))};
 
       [data-header-role='options'],
@@ -48,7 +52,7 @@ export const thContainer =
 
       &:hover,
       &:focus-visible {
-        color: ${isSortable && theme.tokens.colors.get('textColor.default.primary')};
+        color: ${isSortable && vars.color.text.default.primary};
         ${isSortable && generateStylesFromTokens(theme.tokens.typography.get('normal.label02'))};
 
         [data-header-role='options'],
@@ -65,17 +69,15 @@ export const thContainer =
     `;
   };
 
-export const thContent =
-  ({ contentAlign }: { contentAlign: string }) =>
-  (theme: Theme): SerializedStyles => {
-    return css`
-      display: flex;
-      align-items: center;
-      justify-content: ${contentAlignToFlex[contentAlign]};
-      gap: ${theme.dimension.spacing.get('sm')};
-      ${lineEllipsis}
-    `;
-  };
+export const thContent = ({ contentAlign }: { contentAlign: string }): SerializedStyles => {
+  return css`
+    display: flex;
+    align-items: center;
+    justify-content: ${contentAlignToFlex[contentAlign]};
+    gap: ${vars.spacing['4']};
+    ${lineEllipsis}
+  `;
+};
 
 export const optionsContainer = (): SerializedStyles => {
   return css`

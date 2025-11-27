@@ -10,8 +10,8 @@ import {
   Menu,
   MenuItemDivider,
   Switch,
-  useTheme,
 } from '@orfium/ictinus';
+import { vars } from '@orfium/tokens';
 import { fireEvent, within } from '@storybook/test';
 import * as React from 'react';
 import { useCallback, useRef, useState } from 'react';
@@ -520,7 +520,6 @@ export const MenuItemDividerStory = {
     }, []);
     const btn1 = factory();
     const btn2 = factory();
-    const theme = useTheme();
 
     return (
       <Stack height={400}>
@@ -578,7 +577,7 @@ export const MenuItemDividerStory = {
           <MenuItemDivider
             sx={{
               borderBottomStyle: 'dashed',
-              borderBottomColor: theme.tokens.colors.get('borderColor.interactive.active'),
+              borderBottomColor: vars.color['border-color'].interactive.active,
               width: '90%',
             }}
           />

@@ -1,6 +1,6 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
-import type { FontSpacing } from '@orfium/tokens';
+import { vars, type FontSpacing } from '@orfium/tokens';
 import type { Theme } from 'theme';
 
 import type { semanticVariablesColors as colorsFigma, DotKeys } from '@orfium/tokens';
@@ -68,7 +68,7 @@ export const typographyWrapper =
     return css`
       ${allStyles[variant](theme, fontSpacing)};
       font-style: ${isItalic ? 'italic' : undefined};
-      font-weight: ${isBold ? theme.globals.typography.fontWeight.get('bold') : undefined};
+      font-weight: ${isBold ? vars.weight.bold : undefined};
       text-decoration: ${isUnderline
         ? theme.globals.typography.textDecoration.get('link')
         : undefined};

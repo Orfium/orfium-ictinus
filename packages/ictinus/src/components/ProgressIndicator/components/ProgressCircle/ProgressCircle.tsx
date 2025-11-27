@@ -1,11 +1,11 @@
-import useTheme from 'hooks/useTheme';
+import { convertRemToPixels, vars } from '@orfium/tokens';
 import { isUndefined } from 'lodash-es';
 import React from 'react';
 import { ProgressBar as AriaProgressBar } from 'react-aria-components';
-import { convertRemToPixels } from '@orfium/tokens';
 
-import { animationStyles } from './ProgressCircle.style';
 import type { ProgressIndicatorProps } from 'components/ProgressIndicator/ProgressIndicator.types';
+import { useTheme } from '~/index';
+import { animationStyles } from './ProgressCircle.style';
 
 const ProgressCircle = React.forwardRef<
   HTMLDivElement,
@@ -19,10 +19,8 @@ const ProgressCircle = React.forwardRef<
   const theme = useTheme();
 
   const center = 16;
-  const circleSize = theme.dimension.sizing.get('icon.sm');
-  const circleStroke = convertRemToPixels(
-    Number.parseFloat(theme.dimension.borderWidth.get('active'))
-  );
+  const circleSize = theme.globals.sizing.get('4');
+  const circleStroke = convertRemToPixels(Number.parseFloat(theme.globals.borderWidth.get('2')));
   const r = 16 - circleStroke;
   const c = 2 * r * Math.PI;
 
@@ -43,11 +41,7 @@ const ProgressCircle = React.forwardRef<
             cx={center}
             cy={center}
             r={14}
-            stroke={
-              hasError
-                ? theme.tokens.colors.get('textColor.inverted.error')
-                : theme.tokens.colors.get('palette.primary.muted')
-            }
+            stroke={hasError ? vars.color.text.inverted.error : vars.color.palette.primary.muted}
             strokeDasharray={`${c} ${c}`}
             strokeDashoffset={c - (percentage / 100) * c}
             strokeLinecap="round"

@@ -1,16 +1,11 @@
-import { useTheme } from '@orfium/ictinus';
+import { semanticVariablesColors } from '@orfium/ictinus';
 import { useMemo } from 'react';
-import {
-  type SemanticColorsKey,
-  semanticVariablesColors,
-} from '@orfium/ictinus';
 
 import { Typography, type TextColorTypes } from '@orfium/ictinus';
+import { vars } from '@orfium/tokens';
 import { descriptionStyle, dividerStyle } from './TextColorShowcase.style';
 
 const TextColorShowcase = () => {
-  const theme = useTheme();
-
   const colorArrays: {
     [key: string]: { label: string; type: string; value: string; hex: string }[];
   } = useMemo(
@@ -20,12 +15,12 @@ const TextColorShowcase = () => {
           label: `sem.textColor.${key}.${nestedKey}`,
           type: nestedKey,
           value: nestedValue.value,
-          hex: theme.tokens.colors.get(`textColor.${key}.${nestedKey}` as SemanticColorsKey),
+          hex: vars.color.text[key][nestedKey],
         }));
 
         return acc;
       }, {}),
-    [theme.tokens.colors]
+    []
   );
 
   return (
@@ -34,9 +29,7 @@ const TextColorShowcase = () => {
         <div
           key={`textColor_${index}`}
           css={{
-            background: theme.tokens.colors.get(
-              `backgroundColor.${colorCategory}` as SemanticColorsKey
-            ),
+            background: vars.color.background[colorCategory],
             width: '100%',
             padding: '16px',
             border: '1px solid #E4E7FF',

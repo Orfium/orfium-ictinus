@@ -1,4 +1,5 @@
 import { css, type CSSObject } from '@emotion/react';
+import { vars } from '@orfium/tokens';
 import { type Theme } from '~/theme';
 
 export const containerStyles = (sx?: CSSObject) => (theme: Theme) => css`
@@ -21,32 +22,31 @@ export const containerStyles = (sx?: CSSObject) => (theme: Theme) => css`
   }
 
   [role='tab']:not([data-selected], [data-disabled]):hover {
-    background-color: ${theme.tokens.colors.get('backgroundColor.alt')};
+    background-color: ${vars.color.background.alt};
     transition: background-color ease-out 150ms;
   }
 
   [role='tab'][data-focus-visible]::after {
     content: '';
     position: absolute;
-    border-radius: ${theme.dimension.borderRadius.get('sm')};
-    border: ${theme.dimension.borderWidth.get('focused')} solid
-      ${theme.tokens.colors.get('borderColor.interactive.focused')};
+    border-radius: ${vars['border-radius']['1']};
+    border: ${vars['border-width']['3']} solid ${vars.color['border-color'].interactive.focused};
   }
 
   [role='tab'][data-status='warning'] {
     [data-role='title'] {
-      color: ${theme.tokens.colors.get('textColor.default.error')};
+      color: ${vars.color.text.default.error};
     }
   }
 
   [role='tab'][data-selected]:not([data-status='warning']) {
     [data-role='title'] {
-      color: ${theme.tokens.colors.get('textColor.default.active')};
+      color: ${vars.color.text.default.active};
     }
   }
 
   &[data-orientation='horizontal'] {
-    gap: ${theme.globals.spacing.get('7')};
+    gap: ${vars.spacing['7']};
 
     ::before {
       content: '';
@@ -54,38 +54,38 @@ export const containerStyles = (sx?: CSSObject) => (theme: Theme) => css`
       bottom: 0;
       left: 0;
       width: 100%;
-      height: ${theme.globals.borderWidth.get('2')};
-      background-color: ${theme.tokens.colors.get('borderColor.decorative.default')};
+      height: ${vars['border-width']['2']};
+      background-color: ${vars.color['border-color'].decorative.default};
     }
 
     [role='tab'] {
-      border-bottom: ${theme.globals.borderWidth.get('2')} solid transparent;
-      padding: ${theme.dimension.spacing.get('md')} ${theme.dimension.spacing.get('sm')}
-        calc(${theme.dimension.spacing.get('md')} - ${theme.globals.borderWidth.get('2')});
+      border-bottom: ${vars['border-width']['2']} solid transparent;
+      padding: ${vars.spacing['5']} ${vars.spacing['4']}
+        calc(${vars.spacing['5']} - ${vars['border-width']['2']});
     }
 
     [role='tab']:not([data-selected]):hover {
-      border-bottom: ${theme.globals.borderWidth.get('2')} solid
-        ${theme.tokens.colors.get('borderColor.decorative.default')};
+      border-bottom: ${vars['border-width']['2']} solid
+        ${vars.color['border-color'].decorative.default};
     }
 
     [role='tab'][data-focus-visible]::after {
-      inset: -${theme.globals.borderWidth.get('2')};
+      inset: -${vars['border-width']['2']};
     }
 
     [role='tab'][data-selected] {
-      border-bottom: ${theme.globals.borderWidth.get('2')} solid
-        ${theme.tokens.colors.get('borderColor.interactive.active')};
+      border-bottom: ${vars['border-width']['2']} solid
+        ${vars.color['border-color'].interactive.active};
 
       &[data-status='warning'] {
-        border-color: ${theme.tokens.colors.get('borderColor.interactive.error')};
+        border-color: ${vars.color['border-color'].interactive.error};
       }
     }
   }
 
   &[data-orientation='vertical'] {
     flex-direction: column;
-    gap: ${theme.globals.spacing.get('6')};
+    gap: ${vars.spacing['6']};
 
     ::before {
       content: '';
@@ -93,32 +93,31 @@ export const containerStyles = (sx?: CSSObject) => (theme: Theme) => css`
       bottom: 0;
       left: 0;
       height: 100%;
-      width: ${theme.globals.borderWidth.get('2')};
-      background-color: ${theme.tokens.colors.get('borderColor.decorative.default')};
+      width: ${vars['border-width']['2']};
+      background-color: ${vars.color['border-color'].decorative.default};
     }
 
     [role='tab'][data-focus-visible]::after {
-      inset: -${theme.globals.borderWidth.get('2')};
+      inset: -${vars['border-width']['2']};
     }
 
     [role='tab']:not([data-selected]):hover {
-      border-left: ${theme.globals.borderWidth.get('2')} solid
-        ${theme.tokens.colors.get('borderColor.decorative.default')};
+      border-left: ${vars['border-width']['2']} solid
+        ${vars.color['border-color'].decorative.default};
     }
 
     [role='tab'] {
-      border-left: ${theme.globals.borderWidth.get('2')} solid transparent;
-      padding: ${theme.dimension.spacing.get('md')} ${theme.dimension.spacing.get('md')}
-        ${theme.dimension.spacing.get('md')}
-        calc(${theme.dimension.spacing.get('md')} - ${theme.globals.borderWidth.get('2')});
+      border-left: ${vars['border-width']['2']} solid transparent;
+      padding: ${vars.spacing['5']} ${vars.spacing['5']} ${vars.spacing['5']}
+        calc(${vars.spacing['5']} - ${vars['border-width']['2']});
     }
 
     [role='tab'][data-selected] {
-      border-left: ${theme.globals.borderWidth.get('2')} solid
-        ${theme.tokens.colors.get('borderColor.interactive.active')};
+      border-left: ${vars['border-width']['2']} solid
+        ${vars.color['border-color'].interactive.active};
 
       &[data-status='warning'] {
-        border-color: ${theme.tokens.colors.get('indicators.error')};
+        border-color: ${vars.color.indicators.error};
       }
     }
   }

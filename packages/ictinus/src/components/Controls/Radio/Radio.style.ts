@@ -2,6 +2,7 @@ import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import type { Theme } from 'theme';
 
+import { vars } from '@orfium/tokens';
 import type { LabelConfig } from '../Controls.types';
 
 export const radioContainerStyles =
@@ -17,7 +18,7 @@ export const radioContainerStyles =
         flex-direction: ${placement === 'right' ? 'row' : 'row-reverse'};
         align-items: center;
         justify-content: ${placement === 'left' ? 'space-between' : 'unset'};
-        gap: ${theme.dimension.spacing.get('md')};
+        gap: ${vars.spacing['5']};
 
         position: relative;
         cursor: pointer;
@@ -25,14 +26,14 @@ export const radioContainerStyles =
         &:before {
           content: '';
           display: inline-block;
-          width: ${theme.dimension.sizing.get('icon.md')};
-          height: ${theme.dimension.sizing.get('icon.md')};
+          width: ${vars.sizing['5']};
+          height: ${vars.sizing['5']};
           box-sizing: border-box;
-          border: ${theme.dimension.borderWidth.get('active')} solid
-            ${theme.tokens.colors.get('borderColor.interactive.default')};
-          border-radius: ${theme.dimension.borderRadius.get('circle')};
+          border: ${vars['border-width']['2']} solid
+            ${vars.color['border-color'].interactive.default};
+          border-radius: ${vars['border-radius']['7']};
           transition: all 200ms;
-          background: ${theme.tokens.colors.get('backgroundColor.transparent')};
+          background: ${vars.color.transparent['1']};
 
           ${isFocusVisible &&
           `
@@ -48,7 +49,7 @@ export const radioContainerStyles =
 
         &[data-selected='true'] {
           &:before {
-            border-color: ${theme.tokens.colors.get('palette.primary.base')};
+            border-color: ${vars.color.palette.primary.base};
             border-radius: 50%;
           }
 
@@ -62,9 +63,9 @@ export const radioContainerStyles =
             display: block;
             position: absolute;
             border-radius: 50%;
-            width: ${theme.dimension.sizing.get('icon.xs')};
-            height: ${theme.dimension.sizing.get('icon.xs')};
-            background: ${theme.tokens.colors.get('palette.primary.base')};
+            width: ${vars.sizing['3']};
+            height: ${vars.sizing['3']};
+            background: ${vars.color.palette.primary.base};
             ${placement === 'right' ? 'left' : 'right'}: 4px;
             animation: circle 0.15s ease-in-out;
           }

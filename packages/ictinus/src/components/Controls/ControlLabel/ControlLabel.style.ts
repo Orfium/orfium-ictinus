@@ -1,7 +1,7 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
+import { vars, type SemanticTypographyKey } from '@orfium/tokens';
 import type { Theme } from 'theme';
-import type { SemanticTypographyKey } from '@orfium/tokens';
 
 import { generateStylesFromTokens } from 'components/Typography/utils';
 import type { LabelConfig } from '../Controls.types';
@@ -11,11 +11,11 @@ const labelSize: Record<string, SemanticTypographyKey> = {
   large: 'normal.title01',
 };
 
-export const labelContainerStyles = () => (theme: Theme) => {
+export const labelContainerStyles = () => {
   return css`
     display: flex;
     flex-direction: column;
-    gap: ${theme.dimension.spacing.get('2xs')};
+    gap: ${vars.spacing['2']};
   `;
 };
 
@@ -24,7 +24,7 @@ export const labelStyles =
   (theme: Theme): SerializedStyles => {
     return css`
       ${generateStylesFromTokens(theme.tokens.typography.get(labelSize[size]))};
-      color: ${theme.tokens.colors.get('textColor.default.primary')};
+      color: ${vars.color.text.default.primary};
     `;
   };
 
@@ -33,7 +33,7 @@ export const helpTextStyles =
   (theme: Theme): SerializedStyles => {
     return css`
       ${generateStylesFromTokens(theme.tokens.typography.get('normal.body03'))};
-      color: ${theme.tokens.colors.get('textColor.default.secondary')};
-      padding-top: ${theme.globals.spacing.get('2')};
+      color: ${vars.color.text.default.secondary};
+      padding-top: ${vars.spacing['2']};
     `;
   };

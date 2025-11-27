@@ -1,5 +1,5 @@
+import { vars } from '@orfium/tokens';
 import * as React from 'react';
-import useTheme from '../../../../hooks/useTheme';
 
 export type TableRowProps = {
   isSelected?: boolean;
@@ -14,8 +14,6 @@ const TableRow: React.FCC<TableRowProps> = ({
   onClick,
   ...rest
 }) => {
-  const theme = useTheme();
-
   return (
     <tr
       onClick={() => {
@@ -25,14 +23,12 @@ const TableRow: React.FCC<TableRowProps> = ({
       }}
       css={[
         {
-          backgroundColor: isSelected
-            ? theme.tokens.colors.get('palette.secondary.muted')
-            : undefined,
-          paddingTop: theme.globals.spacing.get('3'),
-          paddingBottom: theme.globals.spacing.get('3'),
+          backgroundColor: isSelected ? vars.color.palette.secondary.muted : undefined,
+          paddingTop: vars.spacing['3'],
+          paddingBottom: vars.spacing['3'],
           cursor: onClick && 'pointer',
           '&:hover': {
-            backgroundColor: onClick && theme.tokens.colors.get('palette.secondary.base'),
+            backgroundColor: onClick && vars.color.palette.secondary.base,
           },
 
           '> td': {

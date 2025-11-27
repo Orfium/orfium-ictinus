@@ -2,9 +2,10 @@ import useTheme from 'hooks/useTheme';
 import { rem } from 'polished';
 import * as React from 'react';
 
+import { vars } from '@orfium/tokens';
+import { getBorderColor } from 'components/TableV4/utils';
 import { parentStyles } from './TableCell.style';
 import { getTestId } from './utils';
-import { getBorderColor } from 'components/TableV4/utils';
 
 export type TableCellProps = {
   textAlign?: 'left' | 'right';
@@ -52,28 +53,26 @@ const TableCell: React.FCC<TableCellProps> = React.memo(
           {
             position: 'relative',
             textAlign,
-            padding: `${theme.globals.spacing.get('3')} ${
-              isPadded ? theme.globals.spacing.get('4') : 0
-            }`,
+            padding: `${vars.spacing['3']} ${isPadded ? vars.spacing['4'] : 0}`,
             width,
           },
           component === 'th' && {
-            paddingTop: theme.globals.spacing.get('4'),
-            paddingBottom: theme.globals.spacing.get('4'),
-            fontWeight: theme.globals.typography.fontWeight.get('bold'),
-            fontSize: theme.globals.typography.fontSize.get('3'),
+            paddingTop: vars.spacing['4'],
+            paddingBottom: vars.spacing['4'],
+            fontWeight: vars.weight.bold,
+            fontSize: vars['font-size']['3'],
           },
-          component === 'th' && isSortable && { ...parentStyles({ isActive })(theme) },
+          component === 'th' && isSortable && { ...parentStyles({ isActive }) },
           isSticky && {
             top: isPaddedSticky ? rem(64) : 0,
             left: 0,
             zIndex: 2,
             position: 'sticky',
             background: theme.globals.oldColors.white,
-            boxShadow: `inset 0px -1px 0px 0px ${getBorderColor(theme)}`,
+            boxShadow: `inset 0px -1px 0px 0px ${getBorderColor()}`,
           },
           type === 'financial' && {
-            borderLeft: `1px solid ${getBorderColor(theme)}`,
+            borderLeft: `1px solid ${getBorderColor()}`,
           },
         ]}
         onClick={onClick}

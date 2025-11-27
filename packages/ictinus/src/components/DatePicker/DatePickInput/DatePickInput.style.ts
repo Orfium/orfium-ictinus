@@ -1,5 +1,6 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
+import { vars } from '@orfium/tokens';
 import { rem } from 'polished';
 import type { Theme } from 'theme';
 
@@ -19,7 +20,7 @@ export const iconStyles =
       &:focus-visible,
       &:hover {
         background: ${theme.tokens.state.get('backgroundColor.hover')};
-        border-radius: ${theme.globals.borderRadius.get('7')};
+        border-radius: ${vars['border-radius']['7']};
       }
     `;
   };

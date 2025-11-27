@@ -1,8 +1,9 @@
 import { css } from '@emotion/react';
-import { Button, Navigation, useTheme } from '@orfium/ictinus';
+import { Button, Navigation } from '@orfium/ictinus';
 import React, { Fragment, useState, type ComponentProps } from 'react';
 import { NavLink, Route, BrowserRouter as Router, Routes, useLocation } from 'react-router-dom';
 
+import { vars } from '@orfium/tokens';
 import { menuItems } from './MenuItems';
 
 const DisplayLocation = () => {
@@ -15,7 +16,6 @@ interface Props {
   renderHeader?: ComponentProps<typeof Navigation>['renderHeader'];
 }
 const NavigationShowcase: React.FCC<Props> = ({ renderHeader }) => {
-  const theme = useTheme();
   const [hasExpanded, setHasExpanded] = useState<boolean>(true);
   const flex = css({
     display: 'flex',
@@ -37,9 +37,7 @@ const NavigationShowcase: React.FCC<Props> = ({ renderHeader }) => {
         <div
           css={[
             flex,
-            `padding: 50px; flex-direction: column; align-items: center; background-color: ${theme.tokens.colors.get(
-              'backgroundColor.alt'
-            )}; width: 100%;`,
+            `padding: 50px; flex-direction: column; align-items: center; background-color: ${vars.color.background.alt}; width: 100%;`,
           ]}
         >
           <div css={[flex, 'flex-direction: column']}>

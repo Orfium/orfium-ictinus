@@ -1,10 +1,10 @@
-import type { Theme } from 'theme';
+import { vars } from '@orfium/tokens';
 
-export const buttonSpanStyle = () => (theme: Theme) => {
+export const buttonSpanStyle = () => {
   return {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: theme.globals.spacing.get('4'),
+    gap: vars.spacing['4'],
   };
 };

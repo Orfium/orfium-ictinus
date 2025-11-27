@@ -1,14 +1,12 @@
-import React, { forwardRef, useEffect, useRef } from 'react';
 import type { ReactElement, RefObject } from 'react';
+import React, { forwardRef, useEffect, useRef } from 'react';
 import { useId } from 'react-aria';
 
-import { getIconColor, styles } from './Broadcast.style';
-import type { BroadcastProps } from './Broadcast.types';
 import Icon from '../Icon';
 import { SlotProvider } from '../utils/Slots';
 import { useDOMRef } from '../utils/useDOMRef';
-
-import useTheme from '~/hooks/useTheme';
+import { getIconColor, styles } from './Broadcast.style';
+import type { BroadcastProps } from './Broadcast.types';
 
 export const Broadcast = forwardRef<HTMLDivElement, BroadcastProps>(
   (props: BroadcastProps, ref: RefObject<HTMLDivElement>) => {
@@ -21,7 +19,6 @@ export const Broadcast = forwardRef<HTMLDivElement, BroadcastProps>(
       hasAutoFocus,
       ...otherProps
     } = props;
-    const theme = useTheme();
     const dismissId = useId();
     const domRef = useDOMRef(ref);
 
@@ -56,7 +53,7 @@ export const Broadcast = forwardRef<HTMLDivElement, BroadcastProps>(
             aria-hidden="true"
             name={status}
             css={styles.icon}
-            color={getIconColor(status, theme)}
+            color={getIconColor(status)}
           />
         ) : null}
         <div css={styles.content}>{children}</div>

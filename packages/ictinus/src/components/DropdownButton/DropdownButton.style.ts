@@ -2,8 +2,9 @@ import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import type { Theme } from 'theme';
 
-import type { PrimitiveButtonTypes } from '../Button/Button.types';
+import { vars } from '@orfium/tokens';
 import { buttonColorToSemColor } from 'components/ButtonBase/constants';
+import type { PrimitiveButtonTypes } from '../Button/Button.types';
 
 const rotateSVG = (deg: number) => {
   return {
@@ -21,25 +22,23 @@ export const wrapperStyle = (): SerializedStyles => {
   });
 };
 
-export const buttonSpanStyle =
-  ({ type }: { type: PrimitiveButtonTypes }) =>
-  (theme: Theme): SerializedStyles => {
-    /** Style for the divider in Text Dropdown Buttons with type = 'primary' | 'secondary' */
-    const borderStyles =
-      type !== 'tertiary'
-        ? {
-            borderRight: `${theme.globals.borderWidth.get('1')} solid transparent`,
-          }
-        : {};
+export const buttonSpanStyle = ({ type }: { type: PrimitiveButtonTypes }): SerializedStyles => {
+  /** Style for the divider in Text Dropdown Buttons with type = 'primary' | 'secondary' */
+  const borderStyles =
+    type !== 'tertiary'
+      ? {
+          borderRight: `${vars['border-width']['1']} solid transparent`,
+        }
+      : {};
 
-    return css({
-      'button:first-of-type': {
-        borderTopRightRadius: 'unset',
-        borderBottomRightRadius: 'unset',
-      },
-      ...borderStyles,
-    });
-  };
+  return css({
+    'button:first-of-type': {
+      borderTopRightRadius: 'unset',
+      borderBottomRightRadius: 'unset',
+    },
+    ...borderStyles,
+  });
+};
 
 const getIconButtonActiveState = (theme: Theme, type: PrimitiveButtonTypes) => {
   return {

@@ -1,49 +1,47 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
-import { rem } from '@orfium/tokens';
+import { rem, vars } from '@orfium/tokens';
 
-import type { Theme } from '../../../theme';
-
-export const modalContentContainer = (theme: Theme): SerializedStyles => css`
+export const modalContentContainer = (): SerializedStyles => css`
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   text-align: left;
-  color: ${theme.tokens.colors.get('textColor.default.primary')};
-  font-weight: ${theme.globals.typography.fontWeight.get('regular')};
+  color: ${vars.color.text.default.primary};
+  font-weight: ${vars.weight.regular};
 `;
 
-export const labelContainer = (theme: Theme): SerializedStyles => css`
-  font-size: ${theme.globals.typography.fontSize.get('3')};
-  margin: 0 0 ${theme.globals.spacing.get('3')} 0;
+export const labelContainer = (): SerializedStyles => css`
+  font-size: ${vars['font-size']['3']};
+  margin: 0 0 ${vars.spacing['3']} 0;
 `;
 
-export const headingContainer = (theme: Theme): SerializedStyles => css`
-  font-size: ${theme.globals.typography.fontSize.get('9')};
-  color: ${theme.tokens.colors.get('textColor.default.primary')};
-  font-weight: ${theme.globals.typography.fontWeight.get('medium')};
-  margin: 0 0 ${theme.globals.spacing.get('9')} 0;
+export const headingContainer = (): SerializedStyles => css`
+  font-size: ${vars['font-size']['9']};
+  color: ${vars.color.text.default.primary};
+  font-weight: ${vars.weight.medium};
+  margin: 0 0 ${vars.spacing['9']} 0;
 `;
 
-export const messageContainer = (theme: Theme): SerializedStyles => css`
-  font-size: ${theme.globals.typography.fontSize.get('4')};
-  color: ${theme.tokens.colors.get('textColor.default.secondary')};
+export const messageContainer = (): SerializedStyles => css`
+  font-size: ${vars['font-size']['4']};
+  color: ${vars.color.text.default.secondary};
   max-height: ${rem(430)};
   overflow-y: hidden;
   margin: 0;
 `;
 
-export const actionsContainer = (theme: Theme): SerializedStyles => css`
+export const actionsContainer = (): SerializedStyles => css`
   width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-end;
-  margin: ${theme.globals.spacing.get('9')} 0 0 0;
+  margin: ${vars.spacing['9']} 0 0 0;
 
   button {
-    margin-left: ${theme.globals.spacing.get('6')};
+    margin-left: ${vars.spacing['6']};
   }
 `;

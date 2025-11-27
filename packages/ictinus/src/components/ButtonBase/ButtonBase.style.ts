@@ -1,11 +1,12 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 
-import type { ButtonBaseProps } from './ButtonBase';
-import { buttonColorToSemColor, typographySizes } from './constants';
+import { vars } from '@orfium/tokens';
+import { generateStylesFromTokens } from 'components/Typography/utils';
 import type { Theme } from '../../theme';
 import { getButtonTokens } from '../Button/Button.tokens';
-import { generateStylesFromTokens } from 'components/Typography/utils';
+import type { ButtonBaseProps } from './ButtonBase';
+import { buttonColorToSemColor, typographySizes } from './constants';
 
 export const buttonWrapperStyle = ({
   isBlock,
@@ -47,8 +48,8 @@ export const buttonBaseStyle =
       padding: tokens(`${size}.padding`),
       borderRadius:
         isIconButton && shape === 'circle'
-          ? theme.dimension.borderRadius.get('circle')
-          : theme.dimension.borderRadius.get('md'),
+          ? vars['border-radius']['7']
+          : vars['border-radius']['2'],
       border: 'none',
       cursor: 'pointer',
       transition: 'background-color,border 150ms linear',

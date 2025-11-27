@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { vars } from '@orfium/tokens';
 import { rem, rgba } from 'polished';
 import type { CSSProperties } from 'react';
 
@@ -16,18 +17,17 @@ export const Mark = styled.div<{
   cursor: ${({ isDisabled }) => (isDisabled ? 'not-allowed' : 'unset')};
 
   :hover {
-    background: ${({ theme, isDisabled }) =>
-      !isDisabled ? theme.tokens.colors.get('palette.primary.base') : undefined};
+    background: ${({ isDisabled }) => (!isDisabled ? vars.color.palette.primary.base : undefined)};
 
     ::before {
       content: '${({ labelValue }) => labelValue}';
       color: white;
       display: ${({ isDisabled }) => (isDisabled ? 'none' : 'flex')};
       justify-content: center;
-      font-size: ${({ theme }) => theme.globals.typography.fontSize[11]};
+      font-size: ${vars['font-size']['11']};
       background: black;
       position: absolute;
-      padding: ${({ theme }) => theme.globals.spacing.get('4')};
+      padding: ${vars.spacing['4']};
       box-sizing: border-box;
       top: ${rem(-35)};
       left: ${rem(-14.5)};

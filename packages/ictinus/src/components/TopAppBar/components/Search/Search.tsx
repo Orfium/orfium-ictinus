@@ -1,10 +1,10 @@
 import type { FCC } from 'react';
 import React from 'react';
 
-import { customInputStyle, searchWrapper } from './Search.style';
-import { useTheme } from '../../../../index';
+import { vars } from '@orfium/tokens';
 import Icon from '../../../Icon';
 import { iconWrapperStyle } from '../../../TextField/TextField.style';
+import { customInputStyle, searchWrapper } from './Search.style';
 
 export type SearchProps = {
   searchPlaceholder: string;
@@ -22,18 +22,12 @@ const Search: FCC<SearchProps> = ({
   isSearchDisabled = false,
   isDark = false,
 }) => {
-  const theme = useTheme();
-
   return (
     <div aria-disabled={isSearchDisabled} css={searchWrapper(isDark)}>
       <div css={iconWrapperStyle({ iconPosition: 'left' })}>
         <Icon
           name="search"
-          color={
-            isDark
-              ? theme.tokens.colors.get('textColor.inverted.primary')
-              : theme.tokens.colors.get('textColor.default.secondary')
-          }
+          color={isDark ? vars.color.text.inverted.primary : vars.color.text.default.secondary}
           size={20}
         />{' '}
       </div>

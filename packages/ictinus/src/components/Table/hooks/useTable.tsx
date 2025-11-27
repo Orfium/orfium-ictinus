@@ -14,8 +14,9 @@ import type { Theme } from 'theme';
 import { CheckBox } from 'components/Controls';
 import Icon from 'components/Icon';
 
-import Typography from '~/components/Typography';
+import { vars } from '@orfium/tokens';
 import { lineEllipsis } from 'theme/functions';
+import Typography from '~/components/Typography';
 
 type ReturnValue<TData> = {
   getHeaderGroups: () => HeaderGroup<TData>[];
@@ -91,8 +92,8 @@ const getColumns = (
             return (
               <Icon
                 name={row.getIsExpanded() ? 'triangleDown' : 'triangleRight'}
-                size={theme.dimension.sizing.get('icon.md')}
-                color={theme.tokens.colors.get('textColor.default.secondary')}
+                size={vars.sizing['5']}
+                color={vars.color.text.default.secondary}
                 onClick={() => {
                   const isExpanded = row.getIsExpanded();
                   row.toggleExpanded(!isExpanded);

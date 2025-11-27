@@ -1,13 +1,13 @@
+import { rem, vars } from '@orfium/tokens';
 import React, { useMemo } from 'react';
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
-import { rem } from '@orfium/tokens';
+import { Area, AreaChart, CartesianGrid, Legend, Tooltip, XAxis, YAxis } from 'recharts';
 
+import useTheme from '../../../hooks/useTheme';
+import Wrapper from '../Wrapper';
 import CustomTooltip from './components/CustomTooltip';
 import GradientLine from './components/GradientLine';
 import type { Data } from './utils';
-import { getKeyNames, colorPicker } from './utils';
-import useTheme from '../../../hooks/useTheme';
-import Wrapper from '../Wrapper';
+import { colorPicker, getKeyNames } from './utils';
 
 export type LineChartProps = {
   /** This property defines the data to be shown in the Line Chart */
@@ -77,7 +77,7 @@ const LineChart: React.FC<LineChartProps> = ({
         />
       )}
       <Tooltip
-        cursor={{ stroke: theme.tokens.colors.get('backgroundColor.inverted'), strokeWidth: 1 }}
+        cursor={{ stroke: vars.color.background.inverted, strokeWidth: 1 }}
         content={<CustomTooltip />}
       />
       {colors.map(([dataLabel, color]) => (

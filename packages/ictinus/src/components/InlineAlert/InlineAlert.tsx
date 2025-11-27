@@ -1,14 +1,12 @@
-import React, { forwardRef, useEffect, useRef } from 'react';
 import type { ReactElement, RefObject } from 'react';
+import React, { forwardRef, useEffect, useRef } from 'react';
 import { useId } from 'react-aria';
 
-import { getIconColor, styles } from './InlineAlert.style';
-import type { InlineAlertProps } from './InlineAlert.types';
 import Icon from '../Icon';
 import { SlotProvider, useSlotProps } from '../utils/Slots';
 import { useDOMRef } from '../utils/useDOMRef';
-
-import useTheme from '~/hooks/useTheme';
+import { getIconColor, styles } from './InlineAlert.style';
+import type { InlineAlertProps } from './InlineAlert.types';
 
 export const InlineAlert = forwardRef<HTMLDivElement, InlineAlertProps>(
   (props: InlineAlertProps, ref: RefObject<HTMLDivElement>) => {
@@ -22,7 +20,6 @@ export const InlineAlert = forwardRef<HTMLDivElement, InlineAlertProps>(
       hasAutoFocus,
       ...otherProps
     } = props;
-    const theme = useTheme();
     const dismissId = useId();
     const domRef = useDOMRef(ref);
 
@@ -56,7 +53,7 @@ export const InlineAlert = forwardRef<HTMLDivElement, InlineAlertProps>(
             aria-hidden="true"
             name={status}
             css={styles.icon}
-            color={getIconColor(status, theme)}
+            color={getIconColor(status)}
           />
         ) : null}
         <div css={styles.content}>{children}</div>

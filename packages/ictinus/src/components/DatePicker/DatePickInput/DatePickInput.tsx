@@ -1,9 +1,9 @@
+import { rem, vars } from '@orfium/tokens';
 import FilterButton from 'components/Filter/components/FilterButton';
 import Icon from 'components/Icon';
 import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
 import useTheme from 'hooks/useTheme';
 import React, { useCallback, useMemo, type InputHTMLAttributes } from 'react';
-import { rem } from '@orfium/tokens';
 import type { Dayjs } from 'utils/date';
 import dayjs from 'utils/date';
 import { getLocaleFormat } from 'utils/helpers';
@@ -87,8 +87,8 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
         <Icon
           tabIndex={0}
           name="calendar"
-          size={theme.dimension.sizing.get('icon.md')}
-          color={theme.tokens.colors.get('textColor.default.secondary')}
+          size={vars.sizing['5']}
+          color={vars.color.text.default.secondary}
           onClick={handleIconClick}
           dataTestId="calendar_button"
           onKeyDown={(e) => {
@@ -98,7 +98,7 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
           }}
         />
       ),
-      [handleIconClick, theme.dimension.sizing, theme.tokens.colors]
+      [handleIconClick]
     );
 
     const getLabel = useMemo(() => {

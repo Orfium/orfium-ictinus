@@ -1,13 +1,14 @@
 import styled from '@emotion/styled';
+import { Broadcast, Button, Link } from '@orfium/ictinus';
+import { vars } from '@orfium/tokens';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { useState } from 'react';
-import { Broadcast, Button, Link } from '@orfium/ictinus';
 
 const Container = styled.div`
   display: inline-flex;
   flex-direction: column;
   container-type: inline-size;
-  gap: ${({ theme }) => theme.dimension.spacing.get('sm')};
+  gap: ${vars.spacing['4']};
   width: 100%;
 `;
 

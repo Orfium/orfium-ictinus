@@ -1,6 +1,6 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
-import { rem } from '@orfium/tokens';
+import { rem, vars } from '@orfium/tokens';
 import type { Theme } from 'theme';
 import { flexCenter, flexCenterVertical, transition } from 'theme/functions';
 
@@ -24,77 +24,69 @@ export const directoryContainerStyle = (isExpanded: boolean) => (): SerializedSt
   }
 `;
 
-const itemStyle = (theme: Theme): SerializedStyles => css`
+const itemStyle = (): SerializedStyles => css`
   ${flexCenterVertical};
   height: ${rem(44)};
-  color: ${theme.tokens.colors.get('textColor.default.primary')};
+  color: ${vars.color.text.default.primary};
   cursor: default;
 `;
 
-export const menuItemStyle =
-  () =>
-  (theme: Theme): SerializedStyles => css`
-    ${itemStyle(theme)};
-    width: 100%;
-    font-size: ${rem(16)};
-    font-weight: ${theme.globals.typography.fontWeight.get('regular')};
-    padding: 0 ${theme.globals.spacing.get('6')};
-    background: transparent;
-    border: 0 solid transparent;
-    display: flex;
-    text-align: left;
-    text-decoration: none;
+export const menuItemStyle = (): SerializedStyles => css`
+  ${itemStyle()};
+  width: 100%;
+  font-size: ${rem(16)};
+  font-weight: ${vars.weight.regular};
+  padding: 0 ${vars.spacing['6']};
+  background: transparent;
+  border: 0 solid transparent;
+  display: flex;
+  text-align: left;
+  text-decoration: none;
 
-    &:hover {
-      background-color: ${theme.tokens.colors.get('palette.tertiary.muted')};
-    }
+  &:hover {
+    background-color: ${vars.color.palette.tertiary.muted};
+  }
 
-    &:focus-visible {
-      outline: ${theme.tokens.colors.get('palette.tertiary.muted')};
-    }
-  `;
+  &:focus-visible {
+    outline: ${vars.color.palette.tertiary.muted};
+  }
+`;
 
-export const menuLinkStyle =
-  () =>
-  (theme: Theme): SerializedStyles => css`
-    ${menuItemStyle()(theme)};
-    text-decoration: none;
-  `;
+export const menuLinkStyle = (): SerializedStyles => css`
+  ${menuItemStyle()};
+  text-decoration: none;
+`;
 
-export const menuItemTextStyle =
-  (isCurrent: boolean) =>
-  (theme: Theme): SerializedStyles => css`
-    ${transition(0.2)};
-    color: ${isCurrent
-      ? theme.tokens.colors.get('textColor.default.active')
-      : theme.tokens.colors.get('textColor.default.primary')};
-    font-weight: ${isCurrent ? theme.globals.typography.fontWeight.get('bold') : 'initial'};
-  `;
+export const menuItemTextStyle = (isCurrent: boolean): SerializedStyles => css`
+  ${transition(0.2)};
+  color: ${isCurrent ? vars.color.text.default.active : vars.color.text.default.primary};
+  font-weight: ${isCurrent ? vars.weight.bold : 'initial'};
+`;
 
 export const subMenuLinkStyle =
   () =>
   (theme: Theme): SerializedStyles => css`
-    ${itemStyle(theme)};
+    ${itemStyle()};
     ${transition(0.2)};
     box-sizing: border-box;
-    font-size: ${theme.globals.typography.fontSize.get('3')};
-    color: ${theme.tokens.colors.get('textColor.default.primary')};
-    margin: ${theme.globals.spacing.get('3')} 0 ${theme.globals.spacing.get('3')} 0;
+    font-size: ${vars['font-size']['3']};
+    color: ${vars.color.text.default.primary};
+    margin: ${vars.spacing['3']} 0 ${vars.spacing['3']} 0;
     padding-left: ${rem(ICON_PADDING)};
 
     &:hover {
-      background-color: ${theme.tokens.colors.get('palette.tertiary.muted')} !important;
+      background-color: ${vars.color.palette.tertiary.muted} !important;
     }
     &.active:hover {
-      background-color: ${theme.tokens.colors.get('palette.tertiary.contrast')} !important;
+      background-color: ${vars.color.palette.tertiary.contrast} !important;
     }
     &.active {
-      font-weight: ${theme.globals.typography.fontWeight.get('bold')};
-      background-color: ${theme.tokens.colors.get('palette.tertiary.muted')} !important;
-      color: ${theme.tokens.colors.get('textColor.default.active')};
+      font-weight: ${vars.weight.bold};
+      background-color: ${vars.color.palette.tertiary.muted} !important;
+      color: ${vars.color.text.default.active};
 
       path {
-        fill: ${theme.tokens.colors.get('textColor.default.active')} !important;
+        fill: ${vars.color.text.default.active} !important;
       }
     }
 
@@ -112,24 +104,20 @@ export const arrowContainerStyle =
     transform: ${isOpen ? 'rotate(90deg)' : 'rotate(0deg);'};
   `;
 
-export const menuIconStyle =
-  () =>
-  (theme: Theme): SerializedStyles => css`
-    ${transition(0.2)};
-    ${flexCenter};
-    margin-right: ${theme.globals.spacing.get('4')};
-    width: ${rem(32)};
-    height: ${rem(32)};
-    border-radius: 50%;
-    flex-shrink: 0;
-  `;
+export const menuIconStyle = (): SerializedStyles => css`
+  ${transition(0.2)};
+  ${flexCenter};
+  margin-right: ${vars.spacing['4']};
+  width: ${rem(32)};
+  height: ${rem(32)};
+  border-radius: 50%;
+  flex-shrink: 0;
+`;
 
-export const subMenuIconStyle =
-  () =>
-  (theme: Theme): SerializedStyles => css`
-    ${flexCenter};
-    width: ${rem(32)};
-    height: ${rem(32)};
-    margin-right: ${theme.globals.spacing.get('4')};
-    flex-shrink: 0;
-  `;
+export const subMenuIconStyle = (): SerializedStyles => css`
+  ${flexCenter};
+  width: ${rem(32)};
+  height: ${rem(32)};
+  margin-right: ${vars.spacing['4']};
+  flex-shrink: 0;
+`;

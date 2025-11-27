@@ -1,16 +1,9 @@
+import { vars, type SemanticColorsKey } from '@orfium/tokens';
 import * as React from 'react';
-import type { SemanticColorsKey } from '@orfium/tokens';
 import { generateTestDataId } from 'utils/helpers';
 import type { TestId } from 'utils/types';
 
-import {
-  actionsContainer,
-  infoContainer,
-  notificationsContainer,
-  headContainer,
-  primaryActionContainer,
-  messageContainer,
-} from './CompactNotification.style';
+import type { AcceptedIconNames } from 'components/Icon';
 import useTheme from '../../../../hooks/useTheme';
 import Button from '../../../Button';
 import Icon from '../../../Icon';
@@ -19,8 +12,15 @@ import type {
   NotificationStyleType,
   NotificationTypes,
 } from '../../Notification';
-import { iconContainer, actionContainer, typeToColorStyle } from '../../Notification.style';
-import type { AcceptedIconNames } from 'components/Icon';
+import { actionContainer, iconContainer, typeToColorStyle } from '../../Notification.style';
+import {
+  actionsContainer,
+  headContainer,
+  infoContainer,
+  messageContainer,
+  notificationsContainer,
+  primaryActionContainer,
+} from './CompactNotification.style';
 
 export type CompactNotificationVariants = 'inline' | 'banner' | 'card';
 
@@ -112,11 +112,7 @@ const CompactNotification: React.FCC<CompactNotificationProps> = ({
             onClick={closeCTA}
             data-testid={generateTestDataId('notification-close', dataTestId)}
           >
-            <Icon
-              name="close"
-              color={theme.tokens.colors.get('textColor.default.secondary')}
-              size={16}
-            />
+            <Icon name="close" color={vars.color.text.default.secondary} size={16} />
           </span>
         )}
       </div>

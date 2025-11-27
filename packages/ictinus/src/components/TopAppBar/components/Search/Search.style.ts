@@ -1,6 +1,6 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
-import { rem } from '@orfium/tokens';
+import { rem, vars } from '@orfium/tokens';
 import { darken, lighten } from 'polished';
 
 import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
@@ -24,8 +24,8 @@ export const searchWrapper =
       ${flexCenterVertical}
     height: ${rem(36)};
       background-color: ${background};
-      padding-left: ${theme.globals.spacing.get('6')};
-      border-radius: ${theme.globals.spacing.get('3')};
+      padding-left: ${vars.spacing['6']};
+      border-radius: ${vars.spacing['3']};
 
       &[aria-disabled='true'] {
         opacity: 0.5;
@@ -49,16 +49,16 @@ export const customInputStyle = (searchPlaceholder: string, isDark: boolean) => 
 
   const rest = `
     border-radius: ${rem(4)};
-      color: ${isDark ? theme.tokens.colors.get('textColor.inverted.secondary') : undefined};
+      color: ${isDark ? vars.color.text.inverted.secondary : undefined};
 
   
     &:focus {
-      color: ${isDark ? theme.tokens.colors.get('textColor.inverted.primary') : undefined};
+      color: ${isDark ? vars.color.text.inverted.primary : undefined};
       outline: none;
     }
    
     &::placeholder {
-        color: ${isDark ? theme.tokens.colors.get('textColor.inverted.secondary') : undefined};
+        color: ${isDark ? vars.color.text.inverted.secondary : undefined};
        outline: none;
       }
 

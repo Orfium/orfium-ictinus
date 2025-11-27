@@ -1,11 +1,7 @@
-import { useTheme } from '@orfium/ictinus';
+import { type SemanticBoxShadowKey, semanticVariablesBoxShadow, useTheme } from '@orfium/ictinus';
 import { map } from 'lodash-es';
 import { rem } from 'polished';
 import { WrapperStyle } from 'storybook/styles/OverviewCard.style';
-import {
-  type SemanticBoxShadowKey,
-  semanticVariablesBoxShadow,
-} from '@orfium/ictinus';
 
 import { Typography } from '@orfium/ictinus';
 

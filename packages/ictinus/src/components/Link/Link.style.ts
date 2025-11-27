@@ -2,6 +2,7 @@ import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import type { Theme } from 'theme';
 
+import { vars } from '@orfium/tokens';
 import { generateStylesFromTokens } from 'components/Typography/utils';
 import type { LinkTokens } from './Link.tokens';
 import { getLinkTokens } from './Link.tokens';
@@ -21,33 +22,23 @@ export const linkContainer =
 
     return css`
       display: ${placement === 'inline' ? 'inline-flex' : 'flex'};
-      gap: ${theme.dimension.spacing.get('xs')};
-      color: ${theme.tokens.colors.get(
-        isInverted ? 'textColor.inverted.active' : 'textColor.default.active'
-      )};
+      gap: ${vars.spacing['3']};
+      color: ${vars.color.text[isInverted ? 'inverted' : 'default'].active};
       text-decoration: none;
       position: relative;
 
       &:hover,
       &[aria-expanded='true'] {
-        color: ${theme.tokens.colors.get(
-          isInverted ? 'textColor.inverted.primary' : 'textColor.default.primary'
-        )};
+        color: ${vars.color.text[isInverted ? 'inverted' : 'default'].primary};
         path {
-          fill: ${theme.tokens.colors.get(
-            isInverted ? 'textColor.inverted.primary' : 'textColor.default.primary'
-          )} !important;
+          fill: ${vars.color.text[isInverted ? 'inverted' : 'default'].primary} !important;
         }
       }
 
       &:visited {
-        color: ${theme.tokens.colors.get(
-          isInverted ? 'textColor.inverted.visited' : 'textColor.default.visited'
-        )};
+        color: ${vars.color.text[isInverted ? 'inverted' : 'default'].visited};
         path {
-          fill: ${theme.tokens.colors.get(
-            isInverted ? 'textColor.inverted.visited' : 'textColor.default.visited'
-          )} !important;
+          fill: ${vars.color.text[isInverted ? 'inverted' : 'default'].visited} !important;
         }
       }
 
@@ -55,9 +46,8 @@ export const linkContainer =
         content: '';
         position: absolute;
         inset: -3px -6px;
-        border-radius: ${theme.globals.borderRadius.get('2')};
-        border: ${theme.dimension.borderWidth.get('focused')} solid
-          ${theme.tokens.colors.get('borderColor.interactive.upsell')};
+        border-radius: ${vars['border-radius']['2']};
+        border: ${vars['border-width']['3']} solid ${vars.color['border-color'].interactive.upsell};
       }
 
       opacity: ${isDisabled ? theme.tokens.disabledState.get('default') : 1};

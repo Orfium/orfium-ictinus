@@ -1,17 +1,15 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 
-import type { Theme } from '../../theme';
+import { vars } from '@orfium/tokens';
 
-export const datePickerStyles =
-  () =>
-  (theme: Theme): SerializedStyles => {
-    return css`
-      max-height: inherit;
-      overflow: auto;
-      background-color: ${theme.tokens.colors.get('palette.tertiary.base')};
-      box-shadow: ${theme.tokens.boxShadow.get('3')};
-      border-radius: ${theme.dimension.borderRadius.get('md')};
-      border-color: ${theme.tokens.colors.get('borderColor.decorative.default')};
-    `;
-  };
+export const datePickerStyles = (): SerializedStyles => {
+  return css`
+    max-height: inherit;
+    overflow: auto;
+    background-color: ${vars.color.palette.tertiary.base};
+    box-shadow: ${vars['box-shadow']['3']};
+    border-radius: ${vars['border-radius']['2']};
+    border-color: ${vars.color['border-color'].decorative.default};
+  `;
+};

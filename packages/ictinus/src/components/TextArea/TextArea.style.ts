@@ -1,7 +1,7 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import type { CSSObject } from '@emotion/serialize';
-import { rem } from '@orfium/tokens';
+import { rem, vars } from '@orfium/tokens';
 
 import { LABEL_TRANSFORM_LEFT_SPACING } from 'components/Label/Label.style';
 import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
@@ -28,7 +28,7 @@ export const sxProp =
         '&:focus-within, &:not(:placeholder-shown)': {
           '& + label': {
             transform: `translate(${LABEL_TRANSFORM_LEFT_SPACING}, -4px) scale(0.8)`,
-            fontWeight: theme.globals.typography.fontWeight.get('bold'),
+            fontWeight: vars.weight.bold,
           },
         },
       },
@@ -43,8 +43,8 @@ export const hintMessageStyle =
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'flex-end',
-        padding: `${theme.dimension.spacing.get('sm')} 0 0`,
-        color: theme.tokens.colors.get('textColor.default.secondary'),
+        padding: `${vars.spacing['4']} 0 0`,
+        color: vars.color.text.default.secondary,
         span: {
           alignItems: 'stretch',
           padding: 0,

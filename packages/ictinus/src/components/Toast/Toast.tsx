@@ -3,7 +3,6 @@ import React, { forwardRef } from 'react';
 import { useToast, useToastRegion } from 'react-aria';
 import { createPortal, flushSync } from 'react-dom';
 import { ToastQueue, useToastQueue } from 'react-stately';
-import useTheme from '~/hooks/useTheme';
 import Icon from '../Icon';
 import { SlotProvider } from '../utils/Slots';
 import { useDOMRef } from '../utils/useDOMRef';
@@ -60,7 +59,6 @@ toast.dismiss = (key: string) => {
 export const Toast = forwardRef<HTMLDivElement, ToastProps>(
   ({ state, ...props }: ToastProps, ref: RefObject<HTMLDivElement>) => {
     const domRef = useDOMRef(ref);
-    const theme = useTheme();
     const { toastProps, contentProps, titleProps } = useToast(props, state, domRef);
 
     const actionElements =
@@ -94,7 +92,7 @@ export const Toast = forwardRef<HTMLDivElement, ToastProps>(
             aria-hidden="true"
             name={props.toast.content.status}
             css={styles.icon}
-            color={getIconColor(props.toast.content.status, theme)}
+            color={getIconColor(props.toast.content.status)}
           />
         ) : null}
         <div {...contentProps} css={styles.toastContent}>

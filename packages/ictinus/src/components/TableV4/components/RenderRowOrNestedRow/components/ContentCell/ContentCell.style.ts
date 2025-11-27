@@ -1,13 +1,11 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
-import type { Theme } from 'theme';
+import { vars } from '@orfium/tokens';
 
-export const nestedHeaderStyle =
-  () =>
-  (theme: Theme): SerializedStyles =>
-    css({
-      color: theme.tokens.colors.get('textColor.default.primary'),
-      fontSize: theme.globals.typography.fontSize.get('2'),
-      paddingBottom: theme.globals.spacing.get('3'),
-      fontWeight: theme.globals.typography.fontWeight.get('bold'),
-    });
+export const nestedHeaderStyle = (): SerializedStyles =>
+  css({
+    color: vars.color.text.default.primary,
+    fontSize: vars['font-size']['2'],
+    paddingBottom: vars.spacing['3'],
+    fontWeight: vars.weight.bold,
+  });

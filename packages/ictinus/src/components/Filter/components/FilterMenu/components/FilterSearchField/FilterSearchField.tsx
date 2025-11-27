@@ -1,3 +1,4 @@
+import { vars } from '@orfium/tokens';
 import type {
   FilterProps,
   MultiFilterProps,
@@ -7,7 +8,6 @@ import Icon from 'components/Icon';
 import MultiTextFieldBase from 'components/MultiTextFieldBase';
 import ProgressIndicator from 'components/ProgressIndicator';
 import TextField from 'components/TextField';
-import useTheme from 'hooks/useTheme';
 import React, { useMemo } from 'react';
 import { generateTestDataId } from 'utils/helpers';
 import { textFieldWrapper } from './FilterSearchField.style';
@@ -34,8 +34,6 @@ const FilterSearchField = ({
   onFilterDelete,
   dataTestPrefixId,
 }: SearchInputProps) => {
-  const theme = useTheme();
-
   const suffix = useMemo(
     () =>
       isLoading ? (
@@ -43,12 +41,12 @@ const FilterSearchField = ({
       ) : (
         <Icon
           /** @TODO replace tokens with search tokens once Search component is revisited */
-          size={theme.dimension.sizing.get('icon.md')}
+          size={vars.sizing['5']}
           name="search"
-          color={theme.tokens.colors.get('textColor.default.secondary')}
+          color={vars.color.text.default.secondary}
         />
       ),
-    [isLoading, theme.dimension.sizing, theme.tokens.colors]
+    [isLoading]
   );
 
   return (

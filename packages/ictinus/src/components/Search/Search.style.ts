@@ -1,7 +1,7 @@
 import { css, type SerializedStyles } from '@emotion/react';
+import { rem, vars } from '@orfium/tokens';
 import { generateStylesFromTokens } from 'components/Typography/utils';
 import type { Theme } from 'theme';
-import { rem } from '@orfium/tokens';
 import { getSearchTokens } from './Search.tokens';
 import type { SearchProps } from './Search.types';
 
@@ -20,7 +20,7 @@ export const searchInputStyles =
         ${generateStylesFromTokens(theme.tokens.typography.get('normal.body02'))};
 
         &::placeholder {
-          color: ${theme.tokens.colors.get('textColor.default.secondary')};
+          color: ${vars.color.text.default.secondary};
         }
 
         ::-webkit-search-cancel-button {
@@ -30,41 +30,35 @@ export const searchInputStyles =
     `;
   };
 
-export const filterStyles =
-  () =>
-  (theme: Theme): SerializedStyles => {
-    return css`
-      /* TODO: avoid abstract overrides since the structure might change */
-      > div > button {
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-        border: none;
-        box-shadow: ${`inset 0 0 0 ${theme.dimension.borderWidth.get(
-          'default'
-        )} ${theme.tokens.colors.get('borderColor.interactive.default')}`};
-        position: relative;
-        z-index: 0;
+export const filterStyles = (): SerializedStyles => {
+  return css`
+    /* TODO: avoid abstract overrides since the structure might change */
+    > div > button {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border: none;
+      box-shadow: ${`inset 0 0 0 ${vars['border-width']['1']} ${vars.color['border-color'].interactive.default}`};
+      position: relative;
+      z-index: 0;
 
-        &:hover[data-active='false']:enabled {
-          background: ${theme.tokens.colors.get('palette.tertiary.muted')};
-        }
-
-        &:focus-within:enabled {
-          border-left: none;
-          box-shadow: ${`inset 0 0 0 ${theme.dimension.borderWidth.get(
-            'active'
-          )} ${theme.tokens.colors.get('borderColor.interactive.active')}`};
-          z-index: 1;
-
-          &[data-active='false'] {
-            background: ${theme.tokens.colors.get('palette.tertiary.muted')};
-          }
-        }
-
-        margin-left: -1px;
+      &:hover[data-active='false']:enabled {
+        background: ${vars.color.palette.tertiary.muted};
       }
-    `;
-  };
+
+      &:focus-within:enabled {
+        border-left: none;
+        box-shadow: ${`inset 0 0 0 ${vars['border-width']['2']} ${vars.color['border-color'].interactive.active}`};
+        z-index: 1;
+
+        &[data-active='false'] {
+          background: ${vars.color.palette.tertiary.muted};
+        }
+      }
+
+      margin-left: -1px;
+    }
+  `;
+};
 
 export const getSX =
   ({
@@ -81,32 +75,26 @@ export const getSX =
         ...(hasFilter && { minWidth: rem(240) }),
         zIndex: 1,
         borderRadius: hasFilter
-          ? `${theme.dimension.borderRadius.get('circle')} 0 0 ${theme.dimension.borderRadius.get(
-              'circle'
-            )}`
-          : theme.dimension.borderRadius.get('circle'),
-        background: theme.tokens.colors.get('backgroundColor.default'),
-        boxShadow: `inset 0 0 0 ${theme.dimension.borderWidth.get(
-          'default'
-        )} ${theme.tokens.colors.get('borderColor.interactive.default')}`,
+          ? `${vars['border-radius']['7']} 0 0 ${vars['border-radius']['7']}`
+          : vars['border-radius']['7'],
+        background: vars.color.background.default,
+        boxShadow: `inset 0 0 0 ${vars['border-width']['1']} ${vars.color['border-color'].interactive.default}`,
         ...(!isDisabled && {
           '&:hover': {
-            background: theme.tokens.colors.get('palette.tertiary.muted'),
+            background: vars.color.palette.tertiary.muted,
           },
           '&:focus-within': {
-            background: theme.tokens.colors.get('palette.tertiary.muted'),
+            background: vars.color.palette.tertiary.muted,
             outline: 'none',
-            boxShadow: `inset 0 0 0 ${theme.dimension.borderWidth.get(
-              'active'
-            )} ${theme.tokens.colors.get('borderColor.interactive.active')}`,
+            boxShadow: `inset 0 0 0 ${vars['border-width']['2']} ${vars.color['border-color'].interactive.active}`,
           },
         }),
         ...sx?.wrapper,
       },
       textField: {
         gap: rem(8),
-        paddingRight: theme.dimension.spacing.get('lg'),
-        paddingLeft: theme.dimension.spacing.get('lg'),
+        paddingRight: vars.spacing['6'],
+        paddingLeft: vars.spacing['6'],
         ...sx?.textField,
       },
     };

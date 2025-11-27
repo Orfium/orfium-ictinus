@@ -1,12 +1,12 @@
 import { css, type CSSObject } from '@emotion/react';
+import { vars } from '@orfium/tokens';
 
 import { flexCenterVertical } from 'theme/functions';
-import type { Theme } from '~/theme';
 
-export const containerStyles = (sx?: CSSObject) => (theme: Theme) => css`
+export const containerStyles = (sx?: CSSObject) => css`
   cursor: pointer;
   ${flexCenterVertical};
-  gap: ${theme.globals.spacing.get('4')};
-  padding: ${theme.globals.spacing.get('4')};
+  gap: ${vars.spacing['4']};
+  padding: ${vars.spacing['4']};
   ${sx};
 `;

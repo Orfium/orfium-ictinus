@@ -1,11 +1,11 @@
 import type { CSSObject } from '@emotion/serialize';
-import useTheme from 'hooks/useTheme';
 import type { FCC } from 'react';
 import React from 'react';
 import isEqual from 'react-fast-compare';
 import { generateTestDataId } from 'utils/helpers';
 import type { ComponentSizes, TestProps } from 'utils/types';
 
+import { vars } from '@orfium/tokens';
 import type { AcceptedIconNames } from 'components/Icon';
 import Icon from 'components/Icon';
 import { hintMessageStyle, textFieldStyle, wrapperStyle } from './TextInputBase.style';
@@ -55,11 +55,9 @@ const TextInputBase: FCC<
   children,
   sx,
 }) => {
-  const theme = useTheme();
-
   const statusColor = {
-    error: theme.tokens.colors.get('textColor.default.error'),
-    warning: theme.tokens.colors.get('indicators.warning'),
+    error: vars.color.text.default.error,
+    warning: vars.color.indicators.warning,
   };
 
   const hintMessageToShow = status.hintMessage && (
@@ -70,11 +68,7 @@ const TextInputBase: FCC<
       {!isDisabled &&
         (status.type === 'error' || status.type === 'warning') &&
         size === 'normal' && (
-          <Icon
-            color={statusColor[status.type]}
-            name="warning"
-            size={theme.dimension.sizing.get('icon.sm')}
-          />
+          <Icon color={statusColor[status.type]} name="warning" size={vars.sizing['4']} />
         )}
       <span id={status.id}>{status.hintMessage}</span>
     </div>

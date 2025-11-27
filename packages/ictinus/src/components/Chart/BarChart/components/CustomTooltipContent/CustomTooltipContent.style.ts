@@ -1,26 +1,25 @@
-import type { Theme } from 'theme';
-import { rem } from '@orfium/tokens';
+import { rem, vars } from '@orfium/tokens';
 
-export const tooltipStyle = () => (theme: Theme) => {
+export const tooltipStyle = () => {
   return {
-    fontSize: theme.globals.typography.fontSize.get('3'),
-    padding: `${theme.globals.spacing.get('4')} ${theme.globals.spacing.get('6')}`,
-    margin: theme.globals.spacing.get('4'),
-    color: theme.globals.colors.get('neutral.1'),
-    background: theme.tokens.colors.get('backgroundColor.inverted'),
+    fontSize: vars['font-size']['3'],
+    padding: `${vars.spacing['4']} ${vars.spacing['6']}`,
+    margin: vars.spacing['4'],
+    color: vars.color.neutral['1'],
+    background: vars.color.background.inverted,
     opacity: '90%',
-    borderRadius: theme.globals.spacing.get('3'),
+    borderRadius: vars.spacing['3'],
     minWidth: rem(200),
     whiteSpace: 'nowrap' as const,
   };
 };
 
-export const tooltipHrStyle = () => (theme: Theme) => {
+export const tooltipHrStyle = () => {
   return {
-    margin: `${theme.globals.spacing.get('6')} 0px`,
+    margin: `${vars.spacing['6']} 0px`,
     height: '1px',
     borderWidth: 0,
-    backgroundColor: theme.tokens.colors.get('backgroundColor.default'),
+    backgroundColor: vars.color.background.default,
     opacity: '10%',
   };
 };
@@ -29,18 +28,18 @@ export const tooltipUlStyle = () => () => {
   return { padding: '0px', margin: '0px' };
 };
 
-export const tooltipLiStyle = () => (theme: Theme) => {
+export const tooltipLiStyle = () => {
   return {
     listStyleType: 'none',
-    color: theme.globals.colors.get('neutral.1'),
+    color: vars.color.neutral['1'],
     width: '100%',
     display: 'flex',
     justifyContent: 'space-between',
-    height: theme.globals.spacing.get('6'),
-    padding: `${theme.globals.spacing.get('4')} 0px`,
+    height: vars.spacing['6'],
+    padding: `${vars.spacing['4']} 0px`,
     'div:last-child': {
-      marginLeft: theme.globals.spacing.get('6'),
-      span: { marginLeft: theme.globals.spacing.get('3') },
+      marginLeft: vars.spacing['6'],
+      span: { marginLeft: vars.spacing['3'] },
     },
   };
 };

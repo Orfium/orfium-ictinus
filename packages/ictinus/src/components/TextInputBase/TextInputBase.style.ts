@@ -1,7 +1,7 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import type { SemanticTypographyKey } from '@orfium/tokens';
-import { rem } from '@orfium/tokens';
+import { rem, vars } from '@orfium/tokens';
 import type { Theme } from 'theme';
 
 import { LABEL_TRANSFORM_LEFT_SPACING } from 'components/Label/Label.style';
@@ -13,36 +13,34 @@ import { getTextInputBaseTokens } from './TextInputBase.tokens';
 
 // TODO:MERGE: remove theme as prop and do it as (theme) => ({}) because emotion should pass
 const wrapperStyleSwitch = ({
-  theme,
   hasError,
   isLocked,
   isDisabled,
   isInteractive,
 }: {
-  theme: Theme;
   colorScheme: ColorScheme;
   isLocked?: boolean;
   hasError?: boolean;
   isInteractive?: boolean;
 } & Pick<TextInputBaseProps, 'isDisabled'>) => {
   const borderColor = isLocked
-    ? theme.tokens.colors.get('borderColor.interactive.default')
-    : theme.tokens.colors.get('borderColor.interactive.active');
+    ? vars.color['border-color'].interactive.default
+    : vars.color['border-color'].interactive.active;
 
   const backgroundColor = hasError
-    ? theme.tokens.colors.get('palette.error.base')
+    ? vars.color.palette.error.base
     : isLocked
-      ? theme.tokens.colors.get('palette.secondary.muted')
-      : theme.tokens.colors.get('palette.secondary.base');
+      ? vars.color.palette.secondary.muted
+      : vars.color.palette.secondary.base;
 
   const backgroundHoveredColor = hasError
-    ? theme.tokens.colors.get('palette.error.muted')
-    : theme.tokens.colors.get('palette.secondary.muted');
+    ? vars.color.palette.error.muted
+    : vars.color.palette.secondary.muted;
 
   const events = isDisabled
     ? {
         '&:focus-within': {
-          boxShadow: `0 0 0 ${theme.dimension.borderWidth.get('active')} transparent`,
+          boxShadow: `0 0 0 ${vars['border-width']['2']} transparent`,
         },
       }
     : {
@@ -50,8 +48,8 @@ const wrapperStyleSwitch = ({
           backgroundColor: backgroundHoveredColor,
         },
         '&:focus-within': {
-          boxShadow: `0 0 0 ${theme.dimension.borderWidth.get('active')} ${borderColor}`,
-          backgroundColor: theme.tokens.colors.get('palette.secondary.base'),
+          boxShadow: `0 0 0 ${vars['border-width']['2']} ${borderColor}`,
+          backgroundColor: vars.color.palette.secondary.base,
         },
       };
 
@@ -75,8 +73,8 @@ export const wrapperStyle =
     const tokens = getTextInputBaseTokens(theme);
 
     const borderColor = hasError
-      ? theme.tokens.colors.get('borderColor.interactive.error')
-      : theme.tokens.colors.get('borderColor.interactive.default');
+      ? vars.color['border-color'].interactive.error
+      : vars.color['border-color'].interactive.default;
 
     return css({
       display: 'flex',
@@ -85,17 +83,14 @@ export const wrapperStyle =
       position: 'relative',
       transition: `background-color 0.25s, box-shadow 0.25s, border-color 0.25s`,
 
-      boxShadow: `0 0 0 ${theme.dimension.borderWidth.get(
-        hasError ? 'active' : 'default'
-      )} ${borderColor}`,
-      borderRadius: theme.dimension.borderRadius.get('md'),
+      boxShadow: `0 0 0 ${vars['border-width'][hasError ? '2' : '1']} ${borderColor}`,
+      borderRadius: vars['border-radius']['2'],
       userSelect: 'none',
       opacity: isDisabled ? theme.tokens.disabledState.get('default') : 1,
       cursor: isDisabled ? 'not-allowed' : 'text',
       height: tokens(`container.${size}` as const),
       minWidth: rem(tokens(`minWidth.small.${size}` as const)),
       ...wrapperStyleSwitch({
-        theme,
         colorScheme,
         hasError,
         isLocked,
@@ -143,7 +138,7 @@ export const inputStyle =
     return css(generateStylesFromTokens(theme.tokens.typography.get(typography)), {
       background: 'transparent',
       border: 'none',
-      color: theme.tokens.colors.get('textColor.default.primary'),
+      color: vars.color.text.default.primary,
       padding: 0,
       display: 'block',
       position: 'relative',
@@ -163,9 +158,7 @@ export const inputStyle =
       '&:focus': {
         outline: 'none',
         '&::placeholder': {
-          color: placeholder
-            ? theme.tokens.colors.get('textColor.default.secondary')
-            : 'transparent',
+          color: placeholder ? vars.color.text.default.secondary : 'transparent',
         },
       },
 
@@ -179,7 +172,7 @@ export const inputStyle =
         '& + label':
           size === 'normal'
             ? {
-                fontWeight: `${theme.globals.typography.fontWeight.get('bold')} !important`,
+                fontWeight: `${vars.weight.bold} !important`,
                 transform: `translate(${LABEL_TRANSFORM_LEFT_SPACING}, -35%) scale(0.8)`,
               }
             : {
@@ -189,8 +182,8 @@ export const inputStyle =
 
       '&:focus-within': {
         '& + label': {
-          fontWeight: `${theme.globals.typography.fontWeight.get('bold')} !important`,
-          color: theme.tokens.colors.get('textColor.default.active'),
+          fontWeight: `${vars.weight.bold} !important`,
+          color: vars.color.text.default.active,
         },
       },
 
@@ -205,23 +198,23 @@ export const hintMessageStyle =
   ({ status, isDisabled }: Partial<TextInputBaseProps>) =>
   (theme: Theme): SerializedStyles => {
     const statusColor = {
-      error: theme.tokens.colors.get('textColor.default.error'),
-      warning: theme.tokens.colors.get('textColor.default.warning'),
+      error: vars.color.text.default.error,
+      warning: vars.color.text.default.warning,
     };
 
     const color =
       !isDisabled && status?.type && statusColor[status.type]
         ? statusColor[status.type]
-        : theme.tokens.colors.get('textColor.default.secondary');
+        : vars.color.text.default.secondary;
 
     return css(
       {
         display: 'flex',
         alignItems: 'center',
-        gap: theme.dimension.spacing.get('xs'),
+        gap: vars.spacing['3'],
         opacity: isDisabled ? theme.tokens.disabledState.get('default') : 1,
         color,
-        padding: `${theme.dimension.spacing.get('sm')} 0 0`,
+        padding: `${vars.spacing['4']} 0 0`,
         span: {
           alignItems: 'stretch',
           padding: 0,

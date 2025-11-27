@@ -3,6 +3,7 @@ import { css } from '@emotion/react';
 import type { Theme } from 'theme';
 
 import type { CSSObject } from '@emotion/react';
+import { vars } from '@orfium/tokens';
 import { getControlsTokens } from 'components/Controls/Controls.tokens';
 import type { LabelConfig } from 'components/Controls/Controls.types';
 
@@ -27,7 +28,7 @@ export const switchStyles =
         display: flex;
         flex-direction: ${placement === 'right' ? 'row' : 'row-reverse'};
         align-items: center;
-        gap: ${theme.dimension.spacing.get('md')};
+        gap: ${vars.spacing['5']};
         position: relative;
       }
       cursor: pointer;
@@ -35,14 +36,14 @@ export const switchStyles =
       .bar {
         width: ${tokens('switch.width.track')};
         height: ${tokens('switch.height.track')};
-        background: ${theme.tokens.colors.get('palette.primaryAlt.contrast')};
+        background: ${vars.color.palette['primary-alt'].contrast};
         position: absolute;
-        border-radius: ${theme.dimension.borderRadius.get('circle')};
+        border-radius: ${vars['border-radius']['7']};
       }
 
       .indicator {
         width: ${tokens('switch.width.track')};
-        height: ${theme.dimension.sizing.get('icon.md')};
+        height: ${vars.sizing['5']};
         box-sizing: border-box;
         position: relative;
 
@@ -50,11 +51,11 @@ export const switchStyles =
           content: '';
           box-sizing: border-box;
           display: block;
-          width: ${theme.dimension.sizing.get('icon.md')};
-          height: ${theme.dimension.sizing.get('icon.md')};
-          background: ${theme.tokens.colors.get('backgroundColor.default')};
-          border: ${theme.dimension.borderWidth.get('active')} solid
-            ${theme.tokens.colors.get('borderColor.interactive.default')};
+          width: ${vars.sizing['5']};
+          height: ${vars.sizing['5']};
+          background: ${vars.color.background.default};
+          border: ${vars['border-width']['2']} solid
+            ${vars.color['border-color'].interactive.default};
           border-radius: 100%;
           transition: all 200ms;
         }
@@ -75,8 +76,8 @@ export const switchStyles =
         .indicator {
           &:before {
             transform: translateX(80%);
-            background: ${theme.tokens.colors.get('palette.primary.base')};
-            border-color: ${theme.tokens.colors.get('borderColor.interactive.active')};
+            background: ${vars.color.palette.primary.base};
+            border-color: ${vars.color['border-color'].interactive.active};
           }
         }
       }

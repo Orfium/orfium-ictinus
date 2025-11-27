@@ -2,10 +2,11 @@ import useTheme from 'hooks/useTheme';
 import React, { useCallback, useMemo } from 'react';
 import type { TestProps } from 'utils/types';
 
+import { vars } from '@orfium/tokens';
+import Icon from 'components/Icon';
 import { tagColorToSemColor } from '../constants';
 import { iconStyles } from '../Tag.style';
 import type { TagProps } from '../Tag.types';
-import Icon from 'components/Icon';
 
 const useGetTagUtils = ({
   color = 'neutral',
@@ -39,16 +40,16 @@ const useGetTagUtils = ({
       return (
         <Icon
           dataTestId={`${dataTestPrefixId}_tag_prefix`}
-          size={theme.dimension.sizing.get('icon.sm')}
+          size={vars.sizing['4']}
           name="check"
-          color={theme.tokens.colors.get('textColor.default.active')}
+          color={vars.color.text.default.active}
         />
       );
 
     if (!isInteractive && iconName)
       return (
         <Icon
-          size={theme.dimension.sizing.get('icon.sm')}
+          size={vars.sizing['4']}
           name={iconName}
           color={theme.tokens.colors.get(tagColorToSemColor[color].text)}
         />
@@ -62,7 +63,6 @@ const useGetTagUtils = ({
     isInteractive,
     isSelectable,
     isSelected,
-    theme.dimension.sizing,
     theme.tokens.colors,
   ]);
 
@@ -73,14 +73,14 @@ const useGetTagUtils = ({
           <Icon
             onClick={onClear}
             hasHover={false}
-            size={theme.dimension.sizing.get('icon.sm')}
+            size={vars.sizing['4']}
             name="close"
-            color={theme.tokens.colors.get('textColor.default.active')}
+            color={vars.color.text.default.active}
             dataTestId={`${dataTestPrefixId}_tag_suffix`}
           />
         </div>
       ) : null,
-    [dataTestPrefixId, isClearable, onClear, theme.dimension.sizing, theme.tokens.colors]
+    [dataTestPrefixId, isClearable, onClear]
   );
 
   return {

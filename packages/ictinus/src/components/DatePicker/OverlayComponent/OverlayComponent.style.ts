@@ -2,31 +2,27 @@ import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import type { Theme } from 'theme';
 
+import { vars } from '@orfium/tokens';
 import { label02 } from 'components/Typography/Typography.config.styles';
 import { flex } from 'theme/functions';
 import { getDatePickerTokens } from '../DatePicker.tokens';
 
-export const overlayWrapperStyle =
-  () =>
-  (theme: Theme): SerializedStyles => {
-    return css`
-      ${flex};
-      border: ${theme.dimension.borderWidth.get('default')} solid
-        ${theme.tokens.colors.get('borderColor.decorative.default')};
-      border-radius: ${theme.dimension.borderRadius.get('md')};
-      width: fit-content;
-      background-color: ${theme.tokens.colors.get('backgroundColor.default')};
-    `;
-  };
+export const overlayWrapperStyle = (): SerializedStyles => {
+  return css`
+    ${flex};
+    border: ${vars['border-width']['1']} solid ${vars.color['border-color'].decorative.default};
+    border-radius: ${vars['border-radius']['2']};
+    width: fit-content;
+    background-color: ${vars.color.background.default};
+  `;
+};
 
-export const optionsWrapperStyle =
-  () =>
-  (theme: Theme): SerializedStyles => {
-    return css`
-      border-right: ${theme.dimension.borderWidth.get('default')} solid
-        ${theme.tokens.colors.get('borderColor.decorative.default')};
-    `;
-  };
+export const optionsWrapperStyle = (): SerializedStyles => {
+  return css`
+    border-right: ${vars['border-width']['1']} solid
+      ${vars.color['border-color'].decorative.default};
+  `;
+};
 
 export const optionStyle =
   ({ isSelected }: { isSelected?: boolean }) =>
@@ -34,19 +30,15 @@ export const optionStyle =
     return css`
       ${label02(theme)};
       white-space: nowrap;
-      padding: ${theme.globals.spacing.get('6')};
-      font-weight: ${isSelected
-        ? theme.globals.typography.fontWeight.get('medium')
-        : theme.globals.typography.fontWeight.get('regular')};
-      color: ${isSelected && theme.tokens.colors.get('textColor.default.active')};
+      padding: ${vars.spacing['6']};
+      font-weight: ${isSelected ? vars.weight.medium : vars.weight.regular};
+      color: ${isSelected && vars.color.text.default.active};
       cursor: pointer;
-      background-color: ${isSelected
-        ? theme.tokens.colors.get('palette.tertiary.muted')
-        : 'transparent'};
+      background-color: ${isSelected ? vars.color.palette.tertiary.muted : 'transparent'};
       position: relative;
 
       &:hover {
-        background-color: ${theme.tokens.colors.get('palette.tertiary.muted')};
+        background-color: ${vars.color.palette.tertiary.muted};
       }
     `;
   };
@@ -76,9 +68,9 @@ export const buttonsWrapperStyle =
       justify-content: flex-end;
       height: ${tokens('actionsContainer')};
       align-items: center;
-      gap: ${theme.dimension.spacing.get('sm')};
-      padding: 0 ${theme.dimension.spacing.get('xl')};
-      border-top: ${theme.dimension.borderWidth.get('default')} solid
-        ${theme.tokens.colors.get('borderColor.decorative.default')};
+      gap: ${vars.spacing['4']};
+      padding: 0 ${vars.spacing['7']};
+      border-top: ${vars['border-width']['1']} solid
+        ${vars.color['border-color'].decorative.default};
     `;
   };

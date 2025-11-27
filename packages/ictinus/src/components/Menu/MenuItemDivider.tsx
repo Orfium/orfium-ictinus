@@ -5,20 +5,18 @@ import { rem } from 'polished';
 import type { FC } from 'react';
 import { Separator } from 'react-aria-components';
 
-import { useTheme } from '../../index';
+import { vars } from '@orfium/tokens';
 
 export type Props = {
   sx?: CSSObject;
 };
 const MenuItemDivider: FC<Props> = ({ sx }) => {
-  const theme = useTheme();
-
   return (
     <Separator
       css={[
         css`
           height: ${rem(1)};
-          border-color: ${theme.tokens.colors.get('borderColor.decorative.default')};
+          border-color: ${vars.color['border-color'].decorative.default};
           width: 100%;
           margin: auto;
           border-bottom-width: ${rem(1)};

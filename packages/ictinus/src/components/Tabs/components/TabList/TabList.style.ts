@@ -1,86 +1,85 @@
 import type { CSSObject } from '@emotion/react';
 import { css } from '@emotion/react';
+import { vars } from '@orfium/tokens';
 
 import type { Theme } from '~/theme';
 
-export const containerStyles = (sx?: CSSObject) => (theme: Theme) =>
-  css`
-    display: flex;
+export const containerStyles = (sx?: CSSObject) => (theme: Theme) => css`
+  display: flex;
+  [role='tab'] {
+    position: relative;
+    width: fit-content;
+    ${theme.tokens.typography.get('normal.body01')};
+    color: ${vars.color.text.default.primary};
+  }
+
+  [role='tab'][data-selected] {
+    color: ${vars.color.text.default.active};
+    ${theme.tokens.typography.get('normal.label01')};
+  }
+
+  [role='tab'][data-focus-visible]:after {
+    content: '';
+    position: absolute;
+
+    border-radius: ${vars['border-radius']['1']};
+    border: ${vars['border-width']['3']} solid ${vars.color['border-color'].interactive.focused};
+  }
+
+  &[data-orientation='horizontal'] {
+    gap: ${vars.spacing['5']};
+
+    [role='tab'][data-focus-visible]:after {
+      inset: -3px -8px;
+    }
+
     [role='tab'] {
-      position: relative;
-      width: fit-content;
-      ${theme.tokens.typography.get('normal.body01')};
-      color: ${theme.tokens.colors.get('textColor.default.primary')};
+      border-bottom: ${vars['border-width']['2']} solid
+        ${vars.color['border-color'].decorative.transparent};
+      transition: color ease-in-out 0.2s;
+      transition: border-bottom 0.2s;
+    }
+
+    [role='tab']:hover {
+      border-color: ${vars.color['border-color'].interactive.default};
     }
 
     [role='tab'][data-selected] {
-      color: ${theme.tokens.colors.get('textColor.default.active')};
+      color: ${vars.color.text.default.active};
       ${theme.tokens.typography.get('normal.label01')};
+
+      border-color: ${vars.color['border-color'].interactive.active};
     }
+  }
+
+  &[data-orientation='vertical'] {
+    flex-direction: column;
+    gap: ${vars.spacing['4']};
 
     [role='tab'][data-focus-visible]:after {
-      content: '';
-      position: absolute;
-
-      border-radius: ${theme.dimension.borderRadius.get('sm')};
-      border: ${theme.dimension.borderWidth.get('focused')} solid
-        ${theme.tokens.colors.get('borderColor.interactive.focused')};
+      inset: -4px -2px;
     }
 
-    &[data-orientation='horizontal'] {
-      gap: ${theme.globals.spacing.get('5')};
+    [role='tab'] {
+      padding: ${vars.spacing['5']} ${vars.spacing['4']};
 
-      [role='tab'][data-focus-visible]:after {
-        inset: -3px -8px;
-      }
+      box-shadow: inset ${vars['border-width']['2']} 0 0 0
+        ${vars.color['border-color'].decorative.transparent};
 
-      [role='tab'] {
-        border-bottom: ${theme.globals.borderWidth.get('2')} solid
-          ${theme.tokens.colors.get('borderColor.decorative.transparent')};
-        transition: color ease-in-out 0.2s;
-        transition: border-bottom 0.2s;
-      }
-
-      [role='tab']:hover {
-        border-color: ${theme.tokens.colors.get('borderColor.interactive.default')};
-      }
-
-      [role='tab'][data-selected] {
-        color: ${theme.tokens.colors.get('textColor.default.active')};
-        ${theme.tokens.typography.get('normal.label01')};
-
-        border-color: ${theme.tokens.colors.get('borderColor.interactive.active')};
-      }
+      transition: color ease-in-out 0.2s;
+      transition: box-shadow 0.2s;
     }
 
-    &[data-orientation='vertical'] {
-      flex-direction: column;
-      gap: ${theme.globals.spacing.get('4')};
-
-      [role='tab'][data-focus-visible]:after {
-        inset: -4px -2px;
-      }
-
-      [role='tab'] {
-        padding: ${theme.globals.spacing.get('5')} ${theme.globals.spacing.get('4')};
-
-        box-shadow: inset ${theme.globals.borderWidth.get('2')} 0 0 0
-          ${theme.tokens.colors.get('borderColor.decorative.transparent')};
-
-        transition: color ease-in-out 0.2s;
-        transition: box-shadow 0.2s;
-      }
-
-      [role='tab']:hover {
-        box-shadow: inset ${theme.globals.borderWidth.get('2')} 0 0 0
-          ${theme.tokens.colors.get('borderColor.interactive.default')};
-      }
-
-      [role='tab'][data-selected] {
-        box-shadow: inset ${theme.globals.borderWidth.get('2')} 0 0 0
-          ${theme.tokens.colors.get('borderColor.interactive.active')};
-      }
+    [role='tab']:hover {
+      box-shadow: inset ${vars['border-width']['2']} 0 0 0
+        ${vars.color['border-color'].interactive.default};
     }
 
-    ${sx};
-  `;
+    [role='tab'][data-selected] {
+      box-shadow: inset ${vars['border-width']['2']} 0 0 0
+        ${vars.color['border-color'].interactive.active};
+    }
+  }
+
+  ${sx};
+`;

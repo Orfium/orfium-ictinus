@@ -1,8 +1,8 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
-import type { Theme } from 'theme';
+import { vars } from '@orfium/tokens';
 
-export const WrapperStyle = (theme: Theme): SerializedStyles => css`
+export const WrapperStyle = (): SerializedStyles => css`
   display: flex;
   flex-direction: row;
   border: 1px solid #bdc7ff;
@@ -13,5 +13,5 @@ export const WrapperStyle = (theme: Theme): SerializedStyles => css`
   flex-wrap: wrap;
   align-items: start;
   justify-content: start;
-  background: ${theme.tokens.colors.get('backgroundColor.default')};
+  background: ${vars.color.background.default};
 `;

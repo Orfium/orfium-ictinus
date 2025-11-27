@@ -1,6 +1,6 @@
+import { vars } from '@orfium/tokens';
 import { useSlotProps } from 'components/utils/Slots';
 import useCombinedRefs from 'hooks/useCombinedRefs';
-import useTheme from 'hooks/useTheme';
 import * as React from 'react';
 import { useRef } from 'react';
 import type { DivProps } from 'utils/common';
@@ -26,10 +26,9 @@ export type IconProps = {
 
 const Icon = React.forwardRef<HTMLDivElement, IconProps>((props, ref) => {
   props = useSlotProps(props, 'icon');
-  const theme = useTheme();
   const {
     name,
-    color = theme.tokens.colors.get('textColor.default.secondary'),
+    color = vars.color.text.default.secondary,
     size = 20,
     onClick,
     dataTestId,

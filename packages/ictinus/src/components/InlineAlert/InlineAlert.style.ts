@@ -2,116 +2,109 @@ import { css } from '@emotion/react';
 import { rem } from 'polished';
 import type { Theme } from 'theme';
 
-import type { InlineAlertProps } from './InlineAlert.types';
+import { vars } from '@orfium/tokens';
 import { generateStylesFromTokens } from '../Typography/utils';
+import type { InlineAlertProps } from './InlineAlert.types';
 
-const inlineAlertStyles = (props: InlineAlertProps) => (theme: Theme) =>
-  css`
-    --_border-width: ${theme.dimension.borderWidth.get('default')};
-    --_outline-width: ${theme.dimension.borderWidth.get('focused')};
-    --_min-height: ${rem(44)};
-    --_min-content-width: ${rem(100)};
+const inlineAlertStyles = (props: InlineAlertProps) => css`
+  --_border-width: ${vars['border-width']['1']};
+  --_outline-width: ${vars['border-width']['3']};
+  --_min-height: ${rem(44)};
+  --_min-content-width: ${rem(100)};
 
-    box-sizing: border-box;
-    position: relative;
-    isolation: isolate;
-    padding: calc(${theme.dimension.spacing.get('md')} - var(--_border-width))
-      calc(${theme.dimension.spacing.get('md')} - var(--_border-width));
-    display: inline-grid;
-    grid-template-columns: auto minmax(var(--_min-content-width), 1fr) auto;
-    grid-template-areas: 'icon content actions close';
-    align-items: center;
-    background: ${props.isAlt
-      ? theme.tokens.colors.get('backgroundColor.default')
-      : theme.tokens.colors.get('palette.secondary.muted')};
-    border-radius: ${theme.dimension.borderRadius.get('md')};
-    border: var(--_border-width) solid ${theme.tokens.colors.get('borderColor.decorative.default')};
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-family: sans-serif;
-    min-height: var(--_min-height);
-    outline: none;
-    outline-offset: ${rem(2)};
-    transition: outline-offset 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-sizing: border-box;
+  position: relative;
+  isolation: isolate;
+  padding: calc(${vars.spacing['5']} - var(--_border-width))
+    calc(${vars.spacing['5']} - var(--_border-width));
+  display: inline-grid;
+  grid-template-columns: auto minmax(var(--_min-content-width), 1fr) auto;
+  grid-template-areas: 'icon content actions close';
+  align-items: center;
+  background: ${props.isAlt ? vars.color.background.default : vars.color.palette.secondary.muted};
+  border-radius: ${vars['border-radius']['2']};
+  border: var(--_border-width) solid ${vars.color['border-color'].decorative.default};
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: sans-serif;
+  min-height: var(--_min-height);
+  outline: none;
+  outline-offset: ${rem(2)};
+  transition: outline-offset 150ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    &:focus-visible {
-      outline-offset: 0;
-      outline: var(--_outline-width) solid
-        ${theme.tokens.colors.get('borderColor.interactive.focused')};
-    }
+  &:focus-visible {
+    outline-offset: 0;
+    outline: var(--_outline-width) solid ${vars.color['border-color'].interactive.focused};
+  }
+
+  &:has([data-slot='button']) {
+    padding: calc(${vars.spacing['4']} - var(--_border-width))
+      calc(${vars.spacing['5']} - var(--_border-width));
+  }
+
+  /* Since we match desktop first, below 600px should become 599px */
+  @container (max-width: calc(600px - 1px)) {
+    grid-template-areas:
+      'icon content close'
+      'icon actions close';
+    align-items: flex-start;
 
     &:has([data-slot='button']) {
-      padding: calc(${theme.dimension.spacing.get('sm')} - var(--_border-width))
-        calc(${theme.dimension.spacing.get('md')} - var(--_border-width));
+      padding: calc(${vars.spacing['5']} - var(--_border-width))
+        calc(${vars.spacing['5']} - var(--_border-width));
     }
+  }
 
-    /* Since we match desktop first, below 600px should become 599px */
-    @container (max-width: calc(600px - 1px)) {
-      grid-template-areas:
-        'icon content close'
-        'icon actions close';
-      align-items: flex-start;
+  @media (prefers-reduced-motion) {
+    transition: none;
+  }
+`;
 
-      &:has([data-slot='button']) {
-        padding: calc(${theme.dimension.spacing.get('md')} - var(--_border-width))
-          calc(${theme.dimension.spacing.get('md')} - var(--_border-width));
-      }
-    }
+const iconStyles = () => css`
+  grid-area: icon;
+  margin-right: ${vars.spacing['5']};
+  pointer-events: none;
+`;
 
-    @media (prefers-reduced-motion) {
-      transition: none;
-    }
-  `;
+const contentStyles = () => (theme: Theme) => css`
+  ${generateStylesFromTokens(theme.tokens.typography.get('normal.body02'))};
 
-const iconStyles = () => (theme: Theme) =>
-  css`
-    grid-area: icon;
-    margin-right: ${theme.dimension.spacing.get('md')};
-    pointer-events: none;
-  `;
+  grid-area: content;
+  cursor: default;
+`;
 
-const contentStyles = () => (theme: Theme) =>
-  css`
-    ${generateStylesFromTokens(theme.tokens.typography.get('normal.body02'))};
+const actionsStyles = () => css`
+  grid-area: actions;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: ${vars.spacing['4']};
+  margin-left: ${vars.spacing['7']};
 
-    grid-area: content;
-    cursor: default;
-  `;
+  @container (max-width: calc(600px - 1px)) {
+    margin-left: 0;
+    margin-top: ${vars.spacing['4']};
+  }
+`;
 
-const actionsStyles = () => (theme: Theme) =>
-  css`
-    grid-area: actions;
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: ${theme.dimension.spacing.get('sm')};
-    margin-left: ${theme.globals.spacing.get('7')};
+const dismissStyles = () => css`
+  grid-area: close;
+  justify-self: end;
+  margin-left: ${vars.spacing['6']};
+`;
 
-    @container (max-width: calc(600px - 1px)) {
-      margin-left: 0;
-      margin-top: ${theme.dimension.spacing.get('sm')};
-    }
-  `;
-
-const dismissStyles = () => (theme: Theme) =>
-  css`
-    grid-area: close;
-    justify-self: end;
-    margin-left: ${theme.dimension.spacing.get('lg')};
-  `;
-
-export const getIconColor = (status: InlineAlertProps['status'], theme: Theme) => {
+export const getIconColor = (status: InlineAlertProps['status']) => {
   switch (status) {
     case 'informational':
-      return theme.tokens.colors.get('indicators.brand');
+      return vars.color.indicators.brand;
     case 'error':
-      return theme.tokens.colors.get('indicators.error');
+      return vars.color.indicators.error;
     case 'warning':
-      return theme.tokens.colors.get('indicators.warning');
+      return vars.color.indicators.warning;
     case 'success':
-      return theme.tokens.colors.get('indicators.success');
+      return vars.color.indicators.success;
     default:
-      return theme.tokens.colors.get('indicators.brand');
+      return vars.color.indicators.brand;
   }
 };
 

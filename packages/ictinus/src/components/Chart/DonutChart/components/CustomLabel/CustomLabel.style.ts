@@ -1,20 +1,16 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
-import type { Theme } from 'theme';
+import { vars } from '@orfium/tokens';
 
-export const flexContainer = () => (): SerializedStyles =>
-  css`
-    display: flex;
-    width: 100%;
-    justify-content: center;
-  `;
+export const flexContainer = () => (): SerializedStyles => css`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+`;
 
-export const labelUnitStyle =
-  () =>
-  (theme: Theme): SerializedStyles =>
-    css`
-      width: 80%;
-      font-size: ${theme.globals.typography.fontSize.get('2')};
-      color: ${theme.tokens.colors.get('textColor.default.secondary')};
-      text-align: center;
-    `;
+export const labelUnitStyle = (): SerializedStyles => css`
+  width: 80%;
+  font-size: ${vars['font-size']['2']};
+  color: ${vars.color.text.default.secondary};
+  text-align: center;
+`;

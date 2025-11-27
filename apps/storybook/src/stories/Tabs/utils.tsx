@@ -1,16 +1,14 @@
-import { options } from '../Filter/constants';
 import { css } from '@emotion/react';
-import { Tag, type TabOrientation, type Theme } from '@orfium/ictinus';
+import { Tag, type TabOrientation } from '@orfium/ictinus';
+import { vars } from '@orfium/tokens';
+import { options } from '../Filter/constants';
 
-export const showcaseContent = (orientation: TabOrientation) => (theme: Theme) =>
-    css`
-      display: flex;
-      flex-direction: ${orientation === 'horizontal' ? 'row' : 'column'};
-      gap: ${theme.globals.spacing.get('7')};
-      padding: ${`${theme.globals.spacing.get('5')} ${
-        orientation === 'horizontal' ? 0 : theme.globals.spacing.get('7')
-      }`};
-    `;
+export const showcaseContent = (orientation: TabOrientation) => css`
+  display: flex;
+  flex-direction: ${orientation === 'horizontal' ? 'row' : 'column'};
+  gap: ${vars.spacing['7']};
+  padding: ${`${vars.spacing['5']} ${orientation === 'horizontal' ? 0 : vars.spacing['7']}`};
+`;
 
 export const getItems = (hasCounter = false) => {
   return [

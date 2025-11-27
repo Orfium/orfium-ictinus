@@ -1,13 +1,13 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import type { AcceptedColorComponentTypes, SemanticColorsKey } from '@orfium/tokens';
-import { rem } from '@orfium/tokens';
-import { flexCenter, transition } from 'theme/functions';
+import { rem, vars } from '@orfium/tokens';
 import {
   typeToBackgroundStyle,
   typeToColorStyle,
 } from 'components/Notification/Notification.style';
 import { label01 } from 'components/Typography/Typography.config.styles';
+import { flexCenter, transition } from 'theme/functions';
 import type { Theme } from '../../theme';
 import type { NotificationStyleType } from '../Notification/Notification';
 import { isNotificationTypes } from './ToastV4';
@@ -30,7 +30,7 @@ const toastContainerPerType = (
       theme.utils.getColor(type, 500, 'normal');
 
   return styleType === 'outlined'
-    ? `border: ${theme.globals.borderWidth.get('2')} solid ${borderColor}`
+    ? `border: ${vars['border-width']['2']} solid ${borderColor}`
     : `box-shadow: ${theme.tokens.boxShadow.get('2')}
 `;
 };
@@ -62,26 +62,20 @@ export const topContainer =
         theme.utils.getColor(type, 500, 'normal')};
   `;
 
-export const infoContainer =
-  () =>
-  (theme: Theme): SerializedStyles => css`
-    ${flexCenter};
-    padding: 0 ${theme.globals.spacing.get('6')};
-  `;
+export const infoContainer = (): SerializedStyles => css`
+  ${flexCenter};
+  padding: 0 ${vars.spacing['6']};
+`;
 
-export const infoIconContainer =
-  () =>
-  (theme: Theme): SerializedStyles => css`
-    padding-right: ${theme.globals.spacing.get('4')};
-  `;
+export const infoIconContainer = (): SerializedStyles => css`
+  padding-right: ${vars.spacing['4']};
+`;
 
-export const actionIconsContainer =
-  () =>
-  (theme: Theme): SerializedStyles => css`
-    display: flex;
-    align-items: center;
-    padding-right: ${theme.globals.spacing.get('6')};
-  `;
+export const actionIconsContainer = (): SerializedStyles => css`
+  display: flex;
+  align-items: center;
+  padding-right: ${vars.spacing['6']};
+`;
 
 export const chevronIconContainer = (isExpanded: boolean) => (): SerializedStyles => css`
   cursor: pointer;
@@ -96,7 +90,7 @@ export const expandedContainer =
     min-height: ${hasMinimumHeight && isExpanded ? rem(146) : rem(0)};
     ${isNotificationTypes(type) ? maxHeightOptions['notification'] : maxHeightOptions['generic']}
     height: ${!isExpanded ? rem(0) : 'inherit'};
-    font-size: ${theme.globals.typography.fontSize.get('3')};
+    font-size: ${vars['font-size']['3']};
     position: relative;
     background: ${theme.globals.oldColors.white};
   `;

@@ -1,9 +1,8 @@
-import type { Theme } from '@emotion/react';
 import { css } from '@emotion/react';
+import { vars } from '@orfium/tokens';
 
-export const menuStyle = () => (theme: Theme) => {
+export const menuStyle = () => {
   return css`
-    border: ${theme.globals.borderWidth.get('1')} solid
-      ${theme.tokens.colors.get('borderColor.decorative.default')};
+    border: ${vars['border-width']['1']} solid ${vars.color['border-color'].decorative.default};
   `;
 };

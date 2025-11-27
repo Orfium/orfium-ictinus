@@ -3,12 +3,13 @@ import useTheme from 'hooks/useTheme';
 import React from 'react';
 import isEqual from 'react-fast-compare';
 
-import { filterStyles, getSX, searchContainer, searchInputStyles } from './Search.style';
-import type { SearchProps } from './Search.types';
+import { vars } from '@orfium/tokens';
 import Filter from 'components/Filter';
 import Icon from 'components/Icon';
 import TextInputBase from 'components/TextInputBase';
 import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
+import { filterStyles, getSX, searchContainer, searchInputStyles } from './Search.style';
+import type { SearchProps } from './Search.types';
 
 const Search = React.forwardRef<HTMLInputElement, SearchProps>((props, ref) => {
   const {
@@ -42,11 +43,7 @@ const Search = React.forwardRef<HTMLInputElement, SearchProps>((props, ref) => {
         isDisabled={isDisabled}
         sx={getSX({ hasFilter, isDisabled, sx })(theme)}
       >
-        <Icon
-          name="search"
-          size={theme.dimension.sizing.get('icon.md')}
-          color={theme.tokens.colors.get('textColor.default.secondary')}
-        />
+        <Icon name="search" size={vars.sizing['5']} color={vars.color.text.default.secondary} />
         <div css={searchInputStyles()}>
           <input
             type="search"
@@ -63,8 +60,8 @@ const Search = React.forwardRef<HTMLInputElement, SearchProps>((props, ref) => {
         {isClearVisible && !isDisabled && (
           <Icon
             name="close"
-            size={theme.dimension.sizing.get('icon.md')}
-            color={theme.tokens.colors.get('textColor.default.secondary')}
+            size={vars.sizing['5']}
+            color={vars.color.text.default.secondary}
             onClick={() => {
               onClear();
             }}

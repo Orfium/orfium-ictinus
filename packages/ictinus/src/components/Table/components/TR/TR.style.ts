@@ -1,32 +1,33 @@
 import { css, type SerializedStyles } from '@emotion/react';
-import type { Theme } from 'theme';
 
+import { vars } from '@orfium/tokens';
 import type { TRProps } from './TR';
 
-export const trContainer =
-  ({
-    isExpandable,
-    isSelected,
-    isExpanded,
-    isSelectable,
-    sx,
-  }: Pick<TRProps, 'sx' | 'isSelectable' | 'isSelected' | 'isExpandable' | 'isExpanded'>) =>
-  (theme: Theme): SerializedStyles => {
-    return css`
-      ${(isSelectable || isExpandable) &&
-      `
+export const trContainer = ({
+  isExpandable,
+  isSelected,
+  isExpanded,
+  isSelectable,
+  sx,
+}: Pick<
+  TRProps,
+  'sx' | 'isSelectable' | 'isSelected' | 'isExpandable' | 'isExpanded'
+>): SerializedStyles => {
+  return css`
+    ${(isSelectable || isExpandable) &&
+    `
          cursor: pointer;
          &:hover {
-           background: ${theme.tokens.colors.get('palette.tertiary.muted')};
+           background: ${vars.color.palette.tertiary.muted};
          }
       
       `}
 
-      ${(isSelected || isExpanded) &&
-      `
-      background: ${theme.tokens.colors.get('palette.tertiary.contrast')};
+    ${(isSelected || isExpanded) &&
+    `
+      background: ${vars.color.palette.tertiary.contrast};
       `}
 
       ${sx};
-    `;
-  };
+  `;
+};

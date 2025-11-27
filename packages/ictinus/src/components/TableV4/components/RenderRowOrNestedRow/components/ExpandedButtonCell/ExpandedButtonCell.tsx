@@ -1,9 +1,9 @@
 import useBreakpoints from 'hooks/useBreakpoints';
-import useTheme from 'hooks/useTheme';
 import React from 'react';
 
-import TableCell from '../../../TableCell';
+import { vars } from '@orfium/tokens';
 import IconButton from 'components/IconButton';
+import TableCell from '../../../TableCell';
 
 type ExpandedButtonCellProps = {
   isExpandedExists: boolean;
@@ -24,8 +24,6 @@ const ExpandedButtonCell: React.FCC<ExpandedButtonCellProps> = ({
   rowIndex,
   index,
 }) => {
-  const theme = useTheme();
-
   const breakpoints = useBreakpoints();
   const actionCellWidth = actionWidth ? `${actionWidth}%` : breakpoints.des1920 ? '5%' : '7%';
 
@@ -41,7 +39,7 @@ const ExpandedButtonCell: React.FCC<ExpandedButtonCellProps> = ({
           css={{
             display: 'flex',
             justifyContent: 'center',
-            padding: `${theme.globals.spacing.get('3')} ${theme.globals.spacing.get('4')}`,
+            padding: `${vars.spacing['3']} ${vars.spacing['4']}`,
           }}
         >
           <div

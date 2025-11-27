@@ -6,9 +6,9 @@ import {
   RadioGroup,
   Search,
   Typography,
-  useTheme,
   type FilterOption,
 } from '@orfium/ictinus';
+import { vars } from '@orfium/tokens';
 import { rem } from 'polished';
 import { useState } from 'react';
 import { FIGMA_URL } from 'utils/common';
@@ -140,7 +140,6 @@ export const CustomSearch = {
       { label: 'ISRC', value: 'isrc' },
       { label: 'ISWC', value: 'iswc' },
     ];
-    const theme = useTheme();
 
     const [value, setValue] = useState('');
 
@@ -187,7 +186,7 @@ export const CustomSearch = {
                 css={{
                   minWidth: '200px',
                   background: 'white',
-                  border: `1px solid ${theme.globals.colors.get('blue.2')}`,
+                  border: `1px solid ${vars.color.blue['2']}`,
                   borderRadius: '4px',
                 }}
               >
@@ -248,7 +247,7 @@ export const CustomSearch = {
                   <div
                     style={{
                       height: rem(1),
-                      borderColor: theme.tokens.colors.get('borderColor.decorative.default'),
+                      borderColor: vars.color['border-color'].decorative.default,
                       width: '100%',
                       margin: 'auto',
                       borderBottomWidth: rem(1),

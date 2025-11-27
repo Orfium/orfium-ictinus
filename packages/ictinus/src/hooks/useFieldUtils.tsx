@@ -1,11 +1,10 @@
 import React, { useMemo } from 'react';
 
-import useCombinedRefs from './useCombinedRefs';
-import useTheme from './useTheme';
+import { vars } from '@orfium/tokens';
 import type { AcceptedIconNames } from 'components/Icon';
 import Icon from 'components/Icon';
 import type { TextFieldProps } from 'components/TextField';
-import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
+import useCombinedRefs from './useCombinedRefs';
 
 /** A custom hook containing all the utils that are shared between field components */
 const useFieldUtils = ({
@@ -16,11 +15,8 @@ const useFieldUtils = ({
   isDisabled,
   ref,
 }: Partial<TextFieldProps> & { ref: React.ForwardedRef<HTMLInputElement> }) => {
-  const theme = useTheme();
-  const tokens = getTextInputBaseTokens(theme);
-
   const isLocked = status?.type === 'read-only';
-  const hintMessageId = status?.hintMessage ? status?.id ?? `${id}_hintMessage` : undefined;
+  const hintMessageId = status?.hintMessage ? (status?.id ?? `${id}_hintMessage`) : undefined;
 
   const inputRef = React.useRef<HTMLInputElement>(null);
   const combinedRefs = useCombinedRefs(inputRef, ref);
@@ -32,14 +28,14 @@ const useFieldUtils = ({
       return (
         <Icon
           name={iconName as AcceptedIconNames}
-          size={theme.dimension.sizing.get(`icon.${size === 'compact' ? 'sm' : 'md'}`)}
-          color={theme.tokens.colors.get('textColor.default.secondary')}
+          size={vars.sizing[size === 'compact' ? '4' : '5']}
+          color={vars.color.text.default.secondary}
         />
       );
     }
 
     return suffix;
-  }, [isDisabled, isLocked, size, suffix, tokens]);
+  }, [isDisabled, isLocked, size, suffix]);
 
   const handleContainerClick = () => {
     if (!isLocked && !isDisabled) {

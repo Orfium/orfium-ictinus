@@ -1,6 +1,6 @@
+import { vars } from '@orfium/tokens';
 import MultiTextFieldBase from 'components/MultiTextFieldBase/MultiTextFieldBase';
 import ProgressIndicator from 'components/ProgressIndicator';
-import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
 import { PositionInScreen } from 'components/utils/PositionInScreen';
 import useKeyboard from 'hooks/useKeyboardEvents';
 import { debounce, differenceBy, head } from 'lodash-es';
@@ -9,7 +9,6 @@ import isEqual from 'react-fast-compare';
 import type { ChangeEvent } from 'utils/common';
 import { generateTestDataId, generateUniqueID } from 'utils/helpers';
 import useCombinedRefs from '../../hooks/useCombinedRefs';
-import useTheme from '../../hooks/useTheme';
 import Box from '../Box';
 import Icon from '../Icon';
 import TextField from '../TextField';
@@ -114,8 +113,6 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
     },
   });
 
-  const theme = useTheme();
-  const tokens = getTextInputBaseTokens(theme);
   const [isOpen, setIsOpen] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const combinedRefs = useCombinedRefs(inputRef, ref);
@@ -292,9 +289,9 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
           </Box>
         ) : (
           <Icon
-            size={theme.dimension.sizing.get(`icon.${size === 'compact' ? 'sm' : 'md'}`)}
+            size={vars.sizing[size === 'compact' ? '4' : '5']}
             name={suffixNameSelector}
-            color={theme.tokens.colors.get('textColor.default.secondary')}
+            color={vars.color.text.default.secondary}
             onClick={handleIconClick}
             hasHover={false}
             dataTestId="select-right-icon"
@@ -302,16 +299,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
         )}
       </div>
     ),
-    [
-      isOpen,
-      isSearchable,
-      isLoading,
-      theme.dimension.sizing,
-      theme.tokens.colors,
-      size,
-      suffixNameSelector,
-      handleIconClick,
-    ]
+    [isOpen, isSearchable, isLoading, size, suffixNameSelector, handleIconClick]
   );
 
   const handleClick = () => {

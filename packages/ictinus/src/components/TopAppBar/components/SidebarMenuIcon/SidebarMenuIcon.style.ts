@@ -1,11 +1,11 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 
-import type { Theme } from '../../../../theme';
+import { vars } from '@orfium/tokens';
 
-const iconWrapper = (theme: Theme): SerializedStyles => css`
+const iconWrapper = (): SerializedStyles => css`
   cursor: pointer;
-  margin: ${theme.globals.spacing.get('8')} 0px ${theme.globals.spacing.get('8')} ${theme.globals.spacing.get('3')};
+  margin: ${vars.spacing['8']} 0px ${vars.spacing['8']} ${vars.spacing['3']};
 `;
 
 export default {

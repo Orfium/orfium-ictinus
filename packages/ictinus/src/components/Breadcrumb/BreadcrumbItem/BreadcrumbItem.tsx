@@ -1,8 +1,9 @@
-import useTheme from 'hooks/useTheme';
 import React from 'react';
 
-import { breadcrumbItemStyles, breadcrumbListStyles } from './BreadcrumbItem.style';
+import { vars } from '@orfium/tokens';
 import Icon from 'components/Icon';
+import { Box } from '~/vanilla';
+import { breadcrumbItemStyles, breadcrumbListStyles } from './BreadcrumbItem.style';
 
 export type BreadcrumbItemProps = {
   /** Defines the child element that will be rendered inside the list element */
@@ -12,20 +13,21 @@ export type BreadcrumbItemProps = {
 };
 
 const BreadcrumbItem: React.FC<BreadcrumbItemProps> = ({ childComponent, isLastItem = false }) => {
-  const theme = useTheme();
-
   return (
     <li css={breadcrumbListStyles()}>
-      <div css={breadcrumbItemStyles({ isLastItem })}>
+      <Box
+        css={breadcrumbItemStyles({ isLastItem })}
+        {...(isLastItem ? { typography: 'body02' } : {})}
+      >
         {childComponent}
         {!isLastItem && (
           <Icon
             name="triangleRight"
-            color={theme.tokens.colors.get('textColor.default.secondary')}
-            size={theme.dimension.sizing.get('icon.md')}
+            color={vars.color.text.default.secondary}
+            size={vars.sizing['5']}
           />
         )}
-      </div>
+      </Box>
     </li>
   );
 };

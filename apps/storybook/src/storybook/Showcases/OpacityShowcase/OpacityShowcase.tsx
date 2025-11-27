@@ -1,10 +1,10 @@
-import { useTheme } from '@orfium/ictinus';
+import { type DimensionOpacityKey, dimensionVariables, useTheme } from '@orfium/ictinus';
 import { get } from 'lodash-es';
 import { rem } from 'polished';
 import { WrapperStyle } from 'storybook/styles/OverviewCard.style';
-import { type DimensionOpacityKey, dimensionVariables } from '@orfium/ictinus';
 
 import { Typography } from '@orfium/ictinus';
+import { vars } from '@orfium/tokens';
 import { getAllPaths } from '../TokenColorsShowcase/utils';
 
 const OpacityShowcase = () => {
@@ -23,7 +23,7 @@ const OpacityShowcase = () => {
               css={() => ({
                 height: rem(boxSize),
                 width: rem(boxSize),
-                background: theme.tokens.colors.get('palette.secondary.contrast'),
+                background: vars.color.palette.secondary.contrast,
                 opacity: theme.dimension.opacity.get(key as DimensionOpacityKey),
                 margin: 'auto',
               })}

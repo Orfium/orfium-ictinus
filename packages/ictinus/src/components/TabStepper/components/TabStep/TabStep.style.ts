@@ -1,4 +1,5 @@
 import { css, type CSSObject } from '@emotion/react';
+import { vars } from '@orfium/tokens';
 import { flex, flexCenterVertical } from 'theme/functions';
 import { type Theme } from '~/theme';
 
@@ -10,19 +11,19 @@ export const stepStyles = (sx?: CSSObject) => css`
   ${sx};
 `;
 
-export const stepContainer = () => (theme: Theme) => css`
+export const stepContainer = () => css`
   ${flex};
   box-sizing: border-box;
   flex-direction: column;
-  gap: ${theme.globals.spacing.get('3')};
+  gap: ${vars.spacing['3']};
 `;
 
-export const stepTitle = () => (theme: Theme) => css`
+export const stepTitle = () => css`
   ${flexCenterVertical};
-  gap: ${theme.dimension.spacing.get('sm')};
+  gap: ${vars.spacing['4']};
 `;
 
 export const stepSubtitle = () => (theme: Theme) => css`
   ${theme.tokens.typography.get('normal.body03')}
-  color: ${theme.tokens.colors.get('textColor.default.secondary')}
+  color: ${vars.color.text.default.secondary}
 `;

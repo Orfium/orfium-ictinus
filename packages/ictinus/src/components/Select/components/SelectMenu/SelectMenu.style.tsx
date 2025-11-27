@@ -1,9 +1,9 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
+import { rem, vars } from '@orfium/tokens';
 import type { TextFieldProps } from 'components/TextField/TextField';
 import { darken } from 'polished';
 import type { Theme } from 'theme';
-import { rem } from '@orfium/tokens';
 import type { SelectMenuProps } from './SelectMenu';
 
 export const optionStyle =
@@ -16,15 +16,13 @@ export const optionStyle =
   >) =>
   (theme: Theme): SerializedStyles => {
     return css`
-      padding: ${theme.globals.spacing.get('6')};
-      font-size: ${theme.globals.typography.fontSize.get('4')};
+      padding: ${vars.spacing['6']};
+      font-size: ${vars['font-size']['4']};
       background-color: ${isSelected
         ? darken(0.07, theme.globals.oldColors.white)
         : theme.globals.oldColors.white};
       cursor: default;
-      color: ${hasNoResultsExist
-        ? theme.tokens.colors.get('textColor.default.secondary')
-        : 'initial'};
+      color: ${hasNoResultsExist ? vars.color.text.default.secondary : 'initial'};
       text-align: ${hasNoResultsExist ? 'center' : 'initial'};
       text-overflow: ellipsis;
       white-space: nowrap;

@@ -1,4 +1,4 @@
-import type { AcceptedColorComponentTypes, SemanticColorsKey } from '@orfium/tokens';
+import { vars, type AcceptedColorComponentTypes, type SemanticColorsKey } from '@orfium/tokens';
 import { useTheme } from 'index';
 import * as React from 'react';
 import { useState } from 'react';
@@ -86,11 +86,7 @@ const ToastV4: React.FCC<ToastV4Props> = ({
           >
             <Icon
               name="chevronDown"
-              color={
-                isNotificationTypes(type)
-                  ? theme.tokens.colors.get('textColor.default.secondary')
-                  : '#ffffff'
-              }
+              color={isNotificationTypes(type) ? vars.color.text.default.secondary : '#ffffff'}
               size={24}
             />
           </span>
@@ -102,11 +98,7 @@ const ToastV4: React.FCC<ToastV4Props> = ({
           >
             <Icon
               name="close"
-              color={
-                isNotificationTypes(type)
-                  ? theme.tokens.colors.get('textColor.default.secondary')
-                  : '#ffffff'
-              }
+              color={isNotificationTypes(type) ? vars.color.text.default.secondary : '#ffffff'}
               size={24}
             />
           </span>

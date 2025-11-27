@@ -3,14 +3,14 @@ import React from 'react';
 import type { CommonButtonProps } from 'utils/common';
 import type { TestProps } from 'utils/types';
 
-import { buttonSpanStyle } from './Button.style';
-import type { ButtonBaseProps } from '../ButtonBase/ButtonBase';
-import ButtonBase from '../ButtonBase/ButtonBase';
 import type { AvatarProps } from 'components/Avatar';
 import Avatar from 'components/Avatar';
 import { buttonColorToSemColor } from 'components/ButtonBase/constants';
 import type { AcceptedIconNames } from 'components/Icon';
 import Icon from 'components/Icon';
+import type { ButtonBaseProps } from '../ButtonBase/ButtonBase';
+import ButtonBase from '../ButtonBase/ButtonBase';
+import { buttonSpanStyle } from './Button.style';
 
 export type ButtonProps = ButtonBaseProps &
   TestProps &

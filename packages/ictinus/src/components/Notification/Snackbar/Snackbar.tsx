@@ -1,9 +1,9 @@
+import { vars, type SemanticColorsKey } from '@orfium/tokens';
 import * as React from 'react';
-import type { SemanticColorsKey } from '@orfium/tokens';
 import { generateTestDataId } from 'utils/helpers';
 import type { TestId } from 'utils/types';
 
-import { cardContainer, topContainer, infoContainer, descriptionContainer } from './Snackbar.style';
+import Icon from 'components/Icon';
 import useTheme from '../../../hooks/useTheme';
 import type {
   NotificationActions,
@@ -12,13 +12,13 @@ import type {
 } from '../Notification';
 import {
   actionContainer,
-  iconContainer,
   boldMessageContainer,
+  iconContainer,
   typeToColorStyle,
 } from '../Notification.style';
 import { typeToIconName } from '../subcomponents/CompactNotification/CompactNotification';
 import NotificationActionsArea from '../subcomponents/NotificationActionsArea';
-import Icon from 'components/Icon';
+import { cardContainer, descriptionContainer, infoContainer, topContainer } from './Snackbar.style';
 
 export type SnackbarProps = {
   /** The informative message of the Toast */
@@ -73,11 +73,7 @@ const Snackbar: React.FCC<SnackbarProps> = ({
           onClick={closeCTA}
           data-testid={generateTestDataId('snackbar-close', dataTestId)}
         >
-          <Icon
-            name="close"
-            color={theme.tokens.colors.get('textColor.default.secondary')}
-            size={24}
-          />
+          <Icon name="close" color={vars.color.text.default.secondary} size={24} />
         </span>
       </div>
       <div

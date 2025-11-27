@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import type { Theme } from 'theme';
+import { vars } from '@orfium/tokens';
 
 /** Examples */
 
@@ -17,15 +17,14 @@ export const containerStyle = () => css`
   width: 480px;
 `;
 
-export const siderStyle = () => (theme: Theme) =>
-  css`
-    background: ${theme.tokens.colors.get('palette.upsell.contrast')};
-    min-width: 97px;
-    max-width: 97px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  `;
+export const siderStyle = () => css`
+  background: ${vars.color.palette.upsell.contrast};
+  min-width: 97px;
+  max-width: 97px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
 export const mainContainerStyle = () => css`
   display: flex;
@@ -33,43 +32,39 @@ export const mainContainerStyle = () => css`
   width: 100%;
 `;
 
-export const headerFooterStyle = () => (theme: Theme) =>
-  css`
-    background: ${theme.tokens.colors.get('palette.warning.base')};
-    min-height: 40px;
-    max-height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  `;
+export const headerFooterStyle = () => css`
+  background: ${vars.color.palette.warning.base};
+  min-height: 40px;
+  max-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
-export const contentStyle = () => (theme: Theme) =>
-  css`
-    background: ${theme.tokens.colors.get('palette.success.base')};
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  `;
+export const contentStyle = () => css`
+  background: ${vars.color.palette.success.base};
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
 /** Grid */
 
-export const gridContainerStyle = () =>
-  css`
-    display: flex;
-    height: 240px;
-    gap: 32px;
-    margin-bottom: 32px;
-  `;
+export const gridContainerStyle = () => css`
+  display: flex;
+  height: 240px;
+  gap: 32px;
+  margin-bottom: 32px;
+`;
 
-export const gridStyle = (width: number) => (theme: Theme) =>
-  css`
-    background: ${theme.tokens.colors.get('palette.secondary.base')};
-    color: ${theme.tokens.colors.get('textColor.default.secondary')};
-    font-size: 28px;
-    font-weight: bold;
-    width: ${`${width}%`};
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  `;
+export const gridStyle = (width: number) => css`
+  background: ${vars.color.palette.secondary.base};
+  color: ${vars.color.text.default.secondary};
+  font-size: 28px;
+  font-weight: bold;
+  width: ${`${width}%`};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;

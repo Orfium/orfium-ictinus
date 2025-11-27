@@ -1,19 +1,19 @@
 import React, { memo, useMemo } from 'react';
 import { NavLink } from 'react-router-dom';
 
-import useTheme from '../../../../hooks/useTheme';
-import {
-  menuItemStyle,
-  arrowContainerStyle,
-  menuIconStyle,
-  menuItemTextStyle,
-  subMenuLinkStyle,
-  subMenuIconStyle,
-  menuLinkStyle,
-} from '../Directory.style';
+import { vars } from '@orfium/tokens';
 import ExpandCollapse from 'components/ExpandCollapse';
 import Icon from 'components/Icon';
 import type { NavigationMenuItem } from 'components/Navigation/types';
+import {
+  arrowContainerStyle,
+  menuIconStyle,
+  menuItemStyle,
+  menuItemTextStyle,
+  menuLinkStyle,
+  subMenuIconStyle,
+  subMenuLinkStyle,
+} from '../Directory.style';
 
 export type MenuItemProps = {
   /** Defines the current menu item whose submenu item is currently selected */
@@ -25,27 +25,17 @@ export type MenuItemProps = {
 
 const MenuItem: React.FCC<MenuItemProps> = memo(
   ({ isCurrent, isExpanded, name, url, iconName, options, toggleMenuItem, state: linkState }) => {
-    const theme = useTheme();
-
     const hasSubMenus = useMemo(() => options.length > 0, [options.length]);
 
     const MenuItemContent = (
       <React.Fragment>
         <div css={arrowContainerStyle(isExpanded, hasSubMenus)}>
-          <Icon
-            name="triangleRight"
-            color={theme.tokens.colors.get('textColor.default.primary')}
-            size={20}
-          />
+          <Icon name="triangleRight" color={vars.color.text.default.primary} size={20} />
         </div>
         <div css={menuIconStyle()}>
           <Icon
             name={iconName}
-            color={
-              isCurrent
-                ? theme.tokens.colors.get('textColor.default.active')
-                : theme.tokens.colors.get('textColor.default.primary')
-            }
+            color={isCurrent ? vars.color.text.default.active : vars.color.text.default.primary}
             size={20}
           />
         </div>
@@ -90,7 +80,7 @@ const MenuItem: React.FCC<MenuItemProps> = memo(
                           <div css={subMenuIconStyle()}>
                             <Icon
                               name={subMenuItem.iconName}
-                              color={theme.tokens.colors.get('textColor.default.primary')}
+                              color={vars.color.text.default.primary}
                               size={20}
                             />
                           </div>
