@@ -5,7 +5,7 @@ import type { Theme } from 'theme';
 import { vars } from '@orfium/tokens';
 import { label02 } from 'components/Typography/Typography.config.styles';
 import { flex } from 'theme/functions';
-import { getDatePickerTokens } from '../DatePicker.tokens';
+import { DATEPICKER_TOKENS } from '../Day/Day.style';
 
 export const overlayWrapperStyle = (): SerializedStyles => {
   return css`
@@ -58,19 +58,14 @@ export const monthsWrapperStyle = (): SerializedStyles => {
   `;
 };
 
-export const buttonsWrapperStyle =
-  () =>
-  (theme: Theme): SerializedStyles => {
-    const tokens = getDatePickerTokens(theme);
-
-    return css`
-      display: flex;
-      justify-content: flex-end;
-      height: ${tokens('actionsContainer')};
-      align-items: center;
-      gap: ${vars.spacing['4']};
-      padding: 0 ${vars.spacing['7']};
-      border-top: ${vars['border-width']['1']} solid
-        ${vars.color['border-color'].decorative.default};
-    `;
-  };
+export const buttonsWrapperStyle = (): SerializedStyles => {
+  return css`
+    display: flex;
+    justify-content: flex-end;
+    height: ${DATEPICKER_TOKENS.actionsContainer};
+    align-items: center;
+    gap: ${vars.spacing['4']};
+    padding: 0 ${vars.spacing['7']};
+    border-top: ${vars['border-width']['1']} solid ${vars.color['border-color'].decorative.default};
+  `;
+};

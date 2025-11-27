@@ -6,8 +6,12 @@ import { generateStylesFromTokens } from 'components/Typography/utils';
 import { lineEllipsis } from 'theme/functions';
 import type { Theme } from '../../theme';
 import { tagColorToSemColor } from './constants';
-import { getTagTokens } from './Tag.tokens';
 import type { TagProps } from './Tag.types';
+
+const TAG_TOKENS = {
+  normal: { height: vars.sizing['6'] },
+  small: { height: vars.sizing['5'] },
+};
 
 export const tagContainerStyles =
   ({
@@ -21,8 +25,6 @@ export const tagContainerStyles =
     isClearable?: boolean;
   }) =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getTagTokens(theme);
-
     const isInteractive = isSelectable || isClearable;
 
     const getBackgroundColor = () => {
@@ -43,7 +45,7 @@ export const tagContainerStyles =
       justify-content: center;
       align-items: center;
 
-      height: ${tokens(`${size}.height` as const)};
+      height: ${TAG_TOKENS[size].height};
       width: fit-content;
       box-sizing: border-box;
       gap: ${vars.spacing['3']};

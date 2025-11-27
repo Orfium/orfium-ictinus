@@ -41,7 +41,7 @@ const Search = React.forwardRef<HTMLInputElement, SearchProps>((props, ref) => {
       <TextInputBase
         dataTestPrefixId={dataTestPrefixId}
         isDisabled={isDisabled}
-        sx={getSX({ hasFilter, isDisabled, sx })(theme)}
+        sx={getSX({ hasFilter, isDisabled, sx })}
       >
         <Icon name="search" size={vars.sizing['5']} color={vars.color.text.default.secondary} />
         <div css={searchInputStyles()}>

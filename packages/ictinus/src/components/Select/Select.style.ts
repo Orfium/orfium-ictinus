@@ -1,21 +1,15 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
-import { rem } from '@orfium/tokens';
 import { transition } from 'theme/functions';
 
-import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
-import type { Theme } from '../../theme';
+import { FIELD_TOKENS } from '../DatePicker/DatePickInput/DatePickInput.style';
 
-export const selectWrapper =
-  () =>
-  (theme: Theme): SerializedStyles => {
-    const tokens = getTextInputBaseTokens(theme);
-
-    return css`
-      position: relative;
-      min-width: ${rem(tokens('minWidth.small.normal'))};
-    `;
-  };
+export const selectWrapper = (): SerializedStyles => {
+  return css`
+    position: relative;
+    min-width: ${FIELD_TOKENS.minWidth.small.normal};
+  `;
+};
 
 export const suffixContainer = (isOpen: boolean, isSearchable: boolean) => (): SerializedStyles => {
   return css`

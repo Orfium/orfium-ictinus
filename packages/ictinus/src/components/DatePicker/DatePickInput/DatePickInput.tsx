@@ -1,8 +1,6 @@
-import { rem, vars } from '@orfium/tokens';
+import { vars } from '@orfium/tokens';
 import FilterButton from 'components/Filter/components/FilterButton';
 import Icon from 'components/Icon';
-import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
-import useTheme from 'hooks/useTheme';
 import React, { useCallback, useMemo, type InputHTMLAttributes } from 'react';
 import type { Dayjs } from 'utils/date';
 import dayjs from 'utils/date';
@@ -13,6 +11,7 @@ import TextField from '../../TextField/TextField';
 import { DATE_PICKER_LABEL, DATE_RANGE_PICKER_LABEL } from '../constants';
 import type { DateFormatType, DatePickerProps } from '../DatePicker.types';
 import type { Range } from '../OverlayComponent/OverlayComponent';
+import { FIELD_TOKENS } from './DatePickInput.style';
 
 // TODO: Need to fix this (TextField onChange prop)
 const ON_CHANGE_MOCK = () => {};
@@ -61,10 +60,6 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
     },
     ref
   ) => {
-    const theme = useTheme();
-
-    const tokens = getTextInputBaseTokens(theme);
-
     const getDateFormatted = useCallback(formatDate(dateFormatOverride), [dateFormatOverride]);
 
     const formattedFrom = getDateFormatted(selectedDay.from);
@@ -77,8 +72,8 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
     const sx = {
       wrapper: {
         minWidth: isRangePicker
-          ? rem(tokens('minWidth.extraLarge.normal'))
-          : rem(tokens('minWidth.medium.normal')),
+          ? FIELD_TOKENS.minWidth.extraLarge.normal
+          : FIELD_TOKENS.minWidth.medium.normal,
       },
     };
 

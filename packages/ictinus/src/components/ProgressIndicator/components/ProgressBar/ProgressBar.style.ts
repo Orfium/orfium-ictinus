@@ -2,10 +2,15 @@ import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import { rem, vars } from '@orfium/tokens';
 import { isUndefined } from 'lodash-es';
-import type { Theme } from 'theme';
 
-import { getProgressIndicatorTokens } from 'components/ProgressIndicator/ProgressIndicator.tokens';
 import type { ProgressIndicatorProps } from 'components/ProgressIndicator/ProgressIndicator.types';
+
+const PROGRESS_INDICATOR_TOKENS = {
+  height: {
+    linear: vars.sizing['1'],
+    linearBlock: vars.sizing['2'],
+  },
+};
 
 export const progressBarContainer = ({
   isBlock,
@@ -40,20 +45,20 @@ export const progressBarContainer = ({
   `;
 };
 
-export const barStyles =
-  ({ isBlock }: Pick<ProgressIndicatorProps, 'isBlock'>) =>
-  (theme: Theme): SerializedStyles => {
-    const tokens = getProgressIndicatorTokens(theme);
-
-    return css`
-      grid-area: bar;
-      background-color: ${vars.color.palette['primary-alt'].muted};
-      height: ${isBlock ? tokens('height.linearBlock') : tokens('height.linear')};
-      border-radius: ${isBlock ? vars['border-radius']['0'] : vars['border-radius']['7']};
-      overflow: hidden;
-      will-change: transform;
-    `;
-  };
+export const barStyles = ({
+  isBlock,
+}: Pick<ProgressIndicatorProps, 'isBlock'>): SerializedStyles => {
+  return css`
+    grid-area: bar;
+    background-color: ${vars.color.palette['primary-alt'].muted};
+    height: ${isBlock
+      ? PROGRESS_INDICATOR_TOKENS.height.linearBlock
+      : PROGRESS_INDICATOR_TOKENS.height.linear};
+    border-radius: ${isBlock ? vars['border-radius']['0'] : vars['border-radius']['7']};
+    overflow: hidden;
+    will-change: transform;
+  `;
+};
 
 export const fillStyles = ({
   status,

@@ -1,39 +1,37 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import type { CSSObject } from '@emotion/serialize';
-import { rem, vars } from '@orfium/tokens';
+import { vars } from '@orfium/tokens';
 
 import { LABEL_TRANSFORM_LEFT_SPACING } from 'components/Label/Label.style';
-import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
 import { body03 } from 'components/Typography/Typography.config.styles';
 import type { Theme } from '../../theme';
+import { FIELD_TOKENS } from '../DatePicker/DatePickInput/DatePickInput.style';
 import type { TextAreaProps } from './TextArea';
 
-export const sxProp =
-  ({ isResizeEnabled = false }: Partial<TextAreaProps>) =>
-  (theme: Theme): { wrapper: CSSObject; textField: CSSObject; input: CSSObject } => {
-    const tokens = getTextInputBaseTokens(theme);
+export const sxProp = ({
+  isResizeEnabled = false,
+}: Partial<TextAreaProps>): { wrapper: CSSObject; textField: CSSObject; input: CSSObject } => {
+  return {
+    wrapper: { width: 'auto', height: 'auto', minWidth: FIELD_TOKENS.minWidth.large.normal },
+    textField: { padding: `${FIELD_TOKENS.addOn.padding.textArea}` },
+    input: {
+      maxWidth: '100%',
+      resize: !isResizeEnabled ? 'none' : 'both',
 
-    return {
-      wrapper: { width: 'auto', height: 'auto', minWidth: rem(tokens('minWidth.large.normal')) },
-      textField: { padding: `${tokens('addOn.padding.textArea')}` },
-      input: {
-        maxWidth: '100%',
-        resize: !isResizeEnabled ? 'none' : 'both',
+      '& + label': {
+        alignItems: 'flex-start',
+      },
 
+      '&:focus-within, &:not(:placeholder-shown)': {
         '& + label': {
-          alignItems: 'flex-start',
-        },
-
-        '&:focus-within, &:not(:placeholder-shown)': {
-          '& + label': {
-            transform: `translate(${LABEL_TRANSFORM_LEFT_SPACING}, -4px) scale(0.8)`,
-            fontWeight: vars.weight.bold,
-          },
+          transform: `translate(${LABEL_TRANSFORM_LEFT_SPACING}, -4px) scale(0.8)`,
+          fontWeight: vars.weight.bold,
         },
       },
-    };
+    },
   };
+};
 
 export const hintMessageStyle =
   ({ isDisabled }: Pick<TextAreaProps, 'isDisabled'>) =>

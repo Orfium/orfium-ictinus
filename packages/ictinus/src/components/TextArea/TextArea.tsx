@@ -2,12 +2,11 @@ import * as React from 'react';
 import isEqual from 'react-fast-compare';
 import type { TestProps } from 'utils/types';
 
-import { hintMessageStyle, sxProp } from './TextArea.style';
+import { inputStyle as baseInputStyle } from 'components/TextInputBase/TextInputBase.style';
 import Label from '../Label';
-import useTheme from '~/hooks/useTheme';
 import type { TextInputBaseProps } from '../TextInputBase/TextInputBase';
 import TextInputBase from '../TextInputBase/TextInputBase';
-import { inputStyle as baseInputStyle } from 'components/TextInputBase/TextInputBase.style';
+import { hintMessageStyle, sxProp } from './TextArea.style';
 
 export type TextAreaProps = {
   /** The id of the text field that will be used as for in label too */
@@ -56,14 +55,12 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>((props, re
 
   const isLocked = status?.type === 'read-only';
 
-  const theme = useTheme();
   const sx = sxProp({
     isResizeEnabled: !isDisabled && !isLocked && isResizeEnabled,
     label,
     placeholder,
-  })(theme);
+  });
 
-  // eslint-disable-next-line @typescript-eslint/naming-convention
   const shouldShowCounter = maxCharacters && status?.type != 'error';
 
   const counter = shouldShowCounter ? (

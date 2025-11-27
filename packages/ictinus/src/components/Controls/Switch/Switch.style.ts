@@ -4,8 +4,16 @@ import type { Theme } from 'theme';
 
 import type { CSSObject } from '@emotion/react';
 import { vars } from '@orfium/tokens';
-import { getControlsTokens } from 'components/Controls/Controls.tokens';
 import type { LabelConfig } from 'components/Controls/Controls.types';
+
+const CONTROLS_HEIGHTS = {
+  height: {
+    track: vars.sizing['2'],
+  },
+  width: {
+    track: vars.sizing['9'],
+  },
+};
 
 export const switchWrapperStyles =
   ({ sx }: { sx?: CSSObject }) =>
@@ -21,8 +29,6 @@ export const switchWrapperStyles =
 export const switchStyles =
   ({ placement = 'right' }: Pick<LabelConfig, 'placement'>) =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getControlsTokens(theme);
-
     return css`
       & > div > div:first-of-type {
         display: flex;
@@ -34,15 +40,15 @@ export const switchStyles =
       cursor: pointer;
 
       .bar {
-        width: ${tokens('switch.width.track')};
-        height: ${tokens('switch.height.track')};
+        width: ${CONTROLS_HEIGHTS.width.track};
+        height: ${CONTROLS_HEIGHTS.height.track};
         background: ${vars.color.palette['primary-alt'].contrast};
         position: absolute;
         border-radius: ${vars['border-radius']['7']};
       }
 
       .indicator {
-        width: ${tokens('switch.width.track')};
+        width: ${CONTROLS_HEIGHTS.width.track};
         height: ${vars.sizing['5']};
         box-sizing: border-box;
         position: relative;

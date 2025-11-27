@@ -3,9 +3,12 @@ import type { Theme } from 'theme';
 import { transition } from 'theme/functions';
 
 import { vars } from '@orfium/tokens';
-import { getFilterTokens } from 'components/Filter/Filter.tokens';
 import { generateStylesFromTokens } from 'components/Typography/utils';
 import type { FilterButtonProps } from './FilterButton';
+
+const FILTER_TOKENS = {
+  height: vars.sizing['9'],
+};
 
 export const buttonStyles =
   ({
@@ -14,8 +17,6 @@ export const buttonStyles =
     isDisabled,
   }: Pick<FilterButtonProps, 'isActive' | 'isPopulated' | 'isDisabled'>) =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getFilterTokens(theme);
-
     const getBackgroundColor = (hasHover = false) => {
       if (isActive) {
         return vars.color.palette.primary.contrast;
@@ -38,7 +39,7 @@ export const buttonStyles =
 
       cursor: ${isDisabled ? 'not-allowed' : 'pointer'};
 
-      height: ${tokens('height')};
+      height: ${FILTER_TOKENS.height};
       padding: 0 ${vars.spacing['5']} 0 ${vars.spacing['6']};
 
       gap: ${vars.spacing['3']};

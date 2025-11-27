@@ -8,8 +8,8 @@ import { LABEL_TRANSFORM_LEFT_SPACING } from 'components/Label/Label.style';
 import { body03 } from 'components/Typography/Typography.config.styles';
 import { generateStylesFromTokens } from 'components/Typography/utils';
 import type { ColorScheme } from '../../theme/types';
+import { FIELD_TOKENS } from '../DatePicker/DatePickInput/DatePickInput.style';
 import type { TextInputBaseProps } from './TextInputBase';
-import { getTextInputBaseTokens } from './TextInputBase.tokens';
 
 // TODO:MERGE: remove theme as prop and do it as (theme) => ({}) because emotion should pass
 const wrapperStyleSwitch = ({
@@ -70,8 +70,6 @@ export const wrapperStyle =
     const isLocked = !isDisabled && status?.type === 'read-only';
     const hasError = !isDisabled && status?.type === 'error';
 
-    const tokens = getTextInputBaseTokens(theme);
-
     const borderColor = hasError
       ? vars.color['border-color'].interactive.error
       : vars.color['border-color'].interactive.default;
@@ -88,8 +86,8 @@ export const wrapperStyle =
       userSelect: 'none',
       opacity: isDisabled ? theme.tokens.disabledState.get('default') : 1,
       cursor: isDisabled ? 'not-allowed' : 'text',
-      height: tokens(`container.${size}` as const),
-      minWidth: rem(tokens(`minWidth.small.${size}` as const)),
+      height: FIELD_TOKENS.container[size],
+      minWidth: FIELD_TOKENS.minWidth.small[size],
       ...wrapperStyleSwitch({
         colorScheme,
         hasError,
@@ -101,27 +99,23 @@ export const wrapperStyle =
     });
   };
 
-export const textFieldStyle =
-  ({ sx }: Partial<TextInputBaseProps>) =>
-  (theme: Theme): SerializedStyles => {
-    const tokens = getTextInputBaseTokens(theme);
+export const textFieldStyle = ({ sx }: Partial<TextInputBaseProps>): SerializedStyles => {
+  return css({
+    position: 'relative',
+    display: 'inline-flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    verticalAlign: 'top',
+    width: 'fill-available',
+    padding: FIELD_TOKENS.content.padding,
 
-    return css({
+    '> div': {
       position: 'relative',
-      display: 'inline-flex',
-      flexDirection: 'row',
-      alignItems: 'center',
-      verticalAlign: 'top',
-      width: 'fill-available',
-      padding: tokens('content.padding'),
+    },
 
-      '> div': {
-        position: 'relative',
-      },
-
-      ...sx?.textField,
-    });
-  };
+    ...sx?.textField,
+  });
+};
 
 export const inputStyle =
   ({
