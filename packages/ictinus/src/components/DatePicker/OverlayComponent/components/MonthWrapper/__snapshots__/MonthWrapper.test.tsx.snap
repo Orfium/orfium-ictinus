@@ -9,8 +9,8 @@ exports[`MonthWrapper > should render correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 0.75rem;
-  padding: 1.25rem;
+  gap: var(--ictinus-spacing-5);
+  padding: var(--ictinus-spacing-7);
 }
 
 .emotion-1 {
@@ -71,7 +71,7 @@ exports[`MonthWrapper > should render correctly 1`] = `
   height: 2.25rem;
   background-color: rgba(200,206,255,0);
   padding: 0rem 1rem 0rem 1rem;
-  border-radius: 624.9375rem;
+  border-radius: var(--ictinus-border-radius-7);
   border: none;
   cursor: pointer;
   -webkit-transition: background-color,border 150ms linear;
@@ -97,8 +97,8 @@ exports[`MonthWrapper > should render correctly 1`] = `
 }
 
 .emotion-5 {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: var(--ictinus-sizing-5);
+  height: var(--ictinus-sizing-5);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -106,8 +106,8 @@ exports[`MonthWrapper > should render correctly 1`] = `
 }
 
 .emotion-6 {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: var(--ictinus-sizing-5);
+  height: var(--ictinus-sizing-5);
 }
 
 .emotion-6 path,
@@ -140,7 +140,7 @@ exports[`MonthWrapper > should render correctly 1`] = `
 }
 
 .emotion-8 {
-  margin: 0 0.5rem;
+  margin: 0 var(--ictinus-spacing-4);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -150,7 +150,7 @@ exports[`MonthWrapper > should render correctly 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: var(--ictinus-weight-medium);
 }
 
 .emotion-10 {
@@ -175,7 +175,7 @@ exports[`MonthWrapper > should render correctly 1`] = `
   height: 2.25rem;
   background-color: rgba(200,206,255,0);
   padding: 0rem 1rem 0rem 1rem;
-  border-radius: 0.25rem;
+  border-radius: var(--ictinus-border-radius-2);
   border: none;
   cursor: pointer;
   -webkit-transition: background-color,border 150ms linear;
@@ -213,7 +213,7 @@ exports[`MonthWrapper > should render correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: var(--ictinus-spacing-4);
 }
 
 .emotion-12 {
@@ -253,18 +253,18 @@ exports[`MonthWrapper > should render correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #52567a;
+  color: var(--ictinus-color-text-default-secondary);
   width: 2.25rem;
   height: 2.25rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: var(--ictinus-font-size-3);
+  line-height: var(--ictinus-line-height-4);
   text-align: center;
-  font-weight: 500;
+  font-weight: var(--ictinus-weight-medium);
 }
 
 .emotion-25 {
   border-collapse: separate;
-  border-spacing: 0 0.75rem;
+  border-spacing: 0 var(--ictinus-spacing-5);
 }
 
 .emotion-26 {
@@ -272,7 +272,7 @@ exports[`MonthWrapper > should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  background: rgba(200,206,255,0);
+  background: var(--ictinus-color-palette-tertiary-base);
 }
 
 .emotion-32 {
@@ -280,14 +280,14 @@ exports[`MonthWrapper > should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #111530;
+  color: var(--ictinus-color-text-default-primary);
   width: 2.25rem;
   opacity: 1;
 }
 
 .emotion-32:focus-visible {
-  background-color: rgba(200,206,255,0.20);
-  border-radius: 624.9375rem;
+  background-color: var(--ictinus-color-palette-tertiary-muted);
+  border-radius: var(--ictinus-border-radius-7);
 }
 
 .emotion-33 {
@@ -296,10 +296,10 @@ exports[`MonthWrapper > should render correctly 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
-  border: 0.0625rem solid rgba(200,206,255,0);
+  border: var(--ictinus-border-width-1) solid var(--ictinus-color-border-color-decorative-transparent);
   width: 2.25rem;
   height: 2.25rem;
-  color: #111530;
+  color: var(--ictinus-color-text-default-primary);
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -317,8 +317,8 @@ exports[`MonthWrapper > should render correctly 1`] = `
 }
 
 .emotion-33:hover {
-  border-radius: 624.9375rem;
-  background: rgba(200,206,255,0.20);
+  border-radius: var(--ictinus-border-radius-7);
+  background: var(--ictinus-color-palette-tertiary-muted);
 }
 
 .emotion-36 {
@@ -326,15 +326,15 @@ exports[`MonthWrapper > should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #111530;
+  color: var(--ictinus-color-text-default-primary);
   width: 2.25rem;
   font-weight: bold;
   opacity: 1;
 }
 
 .emotion-36:focus-visible {
-  background-color: rgba(200,206,255,0.20);
-  border-radius: 624.9375rem;
+  background-color: var(--ictinus-color-palette-tertiary-muted);
+  border-radius: var(--ictinus-border-radius-7);
 }
 
 .emotion-37 {
@@ -343,11 +343,11 @@ exports[`MonthWrapper > should render correctly 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
-  border: 0.0625rem solid #175BF5;
-  border-radius: 624.9375rem;
+  border: var(--ictinus-border-width-1) solid var(--ictinus-color-border-color-interactive-active);
+  border-radius: var(--ictinus-border-radius-7);
   width: 2.25rem;
   height: 2.25rem;
-  color: #111530;
+  color: var(--ictinus-color-text-default-primary);
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -365,8 +365,8 @@ exports[`MonthWrapper > should render correctly 1`] = `
 }
 
 .emotion-37:hover {
-  border-radius: 624.9375rem;
-  background: rgba(200,206,255,0.20);
+  border-radius: var(--ictinus-border-radius-7);
+  background: var(--ictinus-color-palette-tertiary-muted);
 }
 
 .emotion-38 {
@@ -374,17 +374,17 @@ exports[`MonthWrapper > should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #ffffff;
+  color: var(--ictinus-color-text-inverted-primary);
   width: 2.25rem;
   opacity: 1;
-  background: #194DCC;
+  background: var(--ictinus-color-palette-primary-contrast);
   border-bottom-left-radius: 100%;
   border-top-left-radius: 100%;
 }
 
 .emotion-38:focus-visible {
-  background-color: rgba(200,206,255,0.20);
-  border-radius: 624.9375rem;
+  background-color: var(--ictinus-color-palette-tertiary-muted);
+  border-radius: var(--ictinus-border-radius-7);
 }
 
 .emotion-38:after {
@@ -408,11 +408,11 @@ exports[`MonthWrapper > should render correctly 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
-  border: 0 solid rgba(200,206,255,0);
-  border-radius: 624.9375rem;
+  border: 0 solid var(--ictinus-color-border-color-decorative-transparent);
+  border-radius: var(--ictinus-border-radius-7);
   width: 2.25rem;
   height: 2.25rem;
-  color: #ffffff;
+  color: var(--ictinus-color-text-inverted-primary);
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -426,11 +426,11 @@ exports[`MonthWrapper > should render correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  background: #194DCC;
+  background: var(--ictinus-color-palette-primary-contrast);
 }
 
 .emotion-39:hover {
-  border-radius: 624.9375rem;
+  border-radius: var(--ictinus-border-radius-7);
   background: false;
 }
 
@@ -439,15 +439,15 @@ exports[`MonthWrapper > should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #111530;
+  color: var(--ictinus-color-text-default-primary);
   width: 2.25rem;
   opacity: 1;
-  background: rgba(200,206,255,0.20);
+  background: var(--ictinus-color-palette-tertiary-muted);
 }
 
 .emotion-40:focus-visible {
-  background-color: rgba(200,206,255,0.20);
-  border-radius: 624.9375rem;
+  background-color: var(--ictinus-color-palette-tertiary-muted);
+  border-radius: var(--ictinus-border-radius-7);
 }
 
 .emotion-41 {
@@ -456,10 +456,10 @@ exports[`MonthWrapper > should render correctly 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
-  border: 0.0625rem solid rgba(200,206,255,0);
+  border: var(--ictinus-border-width-1) solid var(--ictinus-color-border-color-decorative-transparent);
   width: 2.25rem;
   height: 2.25rem;
-  color: #111530;
+  color: var(--ictinus-color-text-default-primary);
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -477,7 +477,7 @@ exports[`MonthWrapper > should render correctly 1`] = `
 }
 
 .emotion-41:hover {
-  border-radius: 624.9375rem;
+  border-radius: var(--ictinus-border-radius-7);
   background: transparent;
 }
 

@@ -48,7 +48,7 @@
   height: 2.25rem;
   background-color: rgba(200,206,255,0);
   padding: 0rem 1rem 0rem 1rem;
-  border-radius: 624.9375rem;
+  border-radius: var(--ictinus-border-radius-7);
   border: none;
   cursor: pointer;
   -webkit-transition: background-color,border 150ms linear;
@@ -74,8 +74,8 @@
 }
 
 .emotion-5 {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: var(--ictinus-sizing-5);
+  height: var(--ictinus-sizing-5);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -83,8 +83,8 @@
 }
 
 .emotion-6 {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: var(--ictinus-sizing-5);
+  height: var(--ictinus-sizing-5);
 }
 
 .emotion-6 path,

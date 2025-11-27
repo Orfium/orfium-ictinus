@@ -34,7 +34,7 @@
 
 .emotion-4:not([aria-valuenow]) .fill {
   width: 50%;
-  border-radius: 624.9375rem;
+  border-radius: var(--ictinus-border-radius-7);
   -webkit-animation: indeterminate 1.7s infinite ease-in-out;
   animation: indeterminate 1.7s infinite ease-in-out;
   will-change: transform;
@@ -42,17 +42,17 @@
 
 .emotion-5 {
   grid-area: bar;
-  background-color: #E9EFFB;
+  background-color: var(--ictinus-color-palette-primary-alt-muted);
   height: 0.25rem;
-  border-radius: 624.9375rem;
+  border-radius: var(--ictinus-border-radius-7);
   overflow: hidden;
   will-change: transform;
 }
 
 .emotion-6 {
-  background: #FF80AD;
+  background: var(--ictinus-color-text-inverted-error);
   height: 100%;
-  border-radius: 0 624.9375rem 624.9375rem 0;
+  border-radius: 0 var(--ictinus-border-radius-7) var(--ictinus-border-radius-7) 0;
   width: 60%;
   -webkit-transition: width 0.5s;
   transition: width 0.5s;
@@ -89,7 +89,7 @@
             cy="16"
             data-testid="undefined_circular_progress_value"
             r="14"
-            stroke="#FF80AD"
+            stroke="var(--ictinus-color-text-inverted-error)"
             stroke-dasharray="NaN NaN"
             stroke-dashoffset="NaN"
             stroke-linecap="round"

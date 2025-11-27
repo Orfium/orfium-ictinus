@@ -27,7 +27,7 @@
   height: 2.25rem;
   background-color: #175BF5;
   padding: 0rem 1rem 0rem 1rem;
-  border-radius: 0.25rem;
+  border-radius: var(--ictinus-border-radius-2);
   border: none;
   cursor: pointer;
   -webkit-transition: background-color,border 150ms linear;
@@ -65,7 +65,7 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: var(--ictinus-spacing-4);
 }
 
 .emotion-3 {
@@ -87,7 +87,7 @@
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   width: 19.25rem;
-  background-color: #ffffff;
+  background-color: var(--ictinus-color-background-default);
   overflow: hidden;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
@@ -100,7 +100,7 @@
   min-height: 100%;
   z-index: 100;
   position: absolute;
-  border-right: 0.0625rem solid rgba(200,206,255,0.70);
+  border-right: 0.0625rem solid var(--ictinus-color-border-color-decorative-default);
 }
 
 .emotion-5 {
@@ -140,12 +140,12 @@
   -ms-flex-align: center;
   align-items: center;
   height: 2.75rem;
-  color: #111530;
+  color: var(--ictinus-color-text-default-primary);
   cursor: default;
   width: 100%;
   font-size: 1rem;
-  font-weight: 400;
-  padding: 0 1rem;
+  font-weight: var(--ictinus-weight-regular);
+  padding: 0 var(--ictinus-spacing-6);
   background: transparent;
   border: 0 solid transparent;
   display: -webkit-box;
@@ -158,11 +158,11 @@
 }
 
 .emotion-6:hover {
-  background-color: rgba(200,206,255,0.20);
+  background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
 .emotion-6:focus-visible {
-  outline: rgba(200,206,255,0.20);
+  outline: var(--ictinus-color-palette-tertiary-muted);
 }
 
 .emotion-7 {
@@ -195,7 +195,7 @@
 
 .emotion-9 path,
 .emotion-9 rect {
-  fill: #111530!important;
+  fill: var(--ictinus-color-text-default-primary)!important;
 }
 
 .emotion-10 {
@@ -223,7 +223,7 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  margin-right: 0.5rem;
+  margin-right: var(--ictinus-spacing-4);
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
@@ -239,7 +239,7 @@
   -o-transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  color: #111530;
+  color: var(--ictinus-color-text-default-primary);
   font-weight: initial;
 }
 
@@ -269,7 +269,7 @@
   -ms-flex-align: center;
   align-items: center;
   height: 2.75rem;
-  color: #111530;
+  color: var(--ictinus-color-text-default-primary);
   cursor: default;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
@@ -278,30 +278,30 @@
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   box-sizing: border-box;
-  font-size: 0.875rem;
-  color: #111530;
-  margin: 0.25rem 0 0.25rem 0;
+  font-size: var(--ictinus-font-size-3);
+  color: var(--ictinus-color-text-default-primary);
+  margin: var(--ictinus-spacing-3) 0 var(--ictinus-spacing-3) 0;
   padding-left: 2.4375rem;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .emotion-15:hover {
-  background-color: rgba(200,206,255,0.20)!important;
+  background-color: var(--ictinus-color-palette-tertiary-muted)!important;
 }
 
 .emotion-15.active:hover {
-  background-color: rgba(200,206,255,0.30)!important;
+  background-color: var(--ictinus-color-palette-tertiary-contrast)!important;
 }
 
 .emotion-15.active {
-  font-weight: 700;
-  background-color: rgba(200,206,255,0.20)!important;
-  color: #194DCC;
+  font-weight: var(--ictinus-weight-bold);
+  background-color: var(--ictinus-color-palette-tertiary-muted)!important;
+  color: var(--ictinus-color-text-default-active);
 }
 
 .emotion-15.active path {
-  fill: #194DCC!important;
+  fill: var(--ictinus-color-text-default-active)!important;
 }
 
 .emotion-15:focus-visible {
@@ -329,7 +329,7 @@
   justify-content: center;
   width: 2rem;
   height: 2rem;
-  margin-right: 0.5rem;
+  margin-right: var(--ictinus-spacing-4);
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -351,12 +351,12 @@
   -ms-flex-align: center;
   align-items: center;
   height: 2.75rem;
-  color: #111530;
+  color: var(--ictinus-color-text-default-primary);
   cursor: default;
   width: 100%;
   font-size: 1rem;
-  font-weight: 400;
-  padding: 0 1rem;
+  font-weight: var(--ictinus-weight-regular);
+  padding: 0 var(--ictinus-spacing-6);
   background: transparent;
   border: 0 solid transparent;
   display: -webkit-box;
@@ -371,11 +371,11 @@
 }
 
 .emotion-69:hover {
-  background-color: rgba(200,206,255,0.20);
+  background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
 .emotion-69:focus-visible {
-  outline: rgba(200,206,255,0.20);
+  outline: var(--ictinus-color-palette-tertiary-muted);
 }
 
 .emotion-70 {
@@ -408,7 +408,7 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #F2F4FF;
+  background-color: var(--ictinus-color-background-alt);
   width: 100%;
 }
 

@@ -27,7 +27,7 @@
   height: 1.75rem;
   background-color: rgba(200,206,255,0.30);
   padding: 0rem 0.5rem 0rem 0.5rem;
-  border-radius: 0.25rem;
+  border-radius: var(--ictinus-border-radius-2);
   border: none;
   cursor: pointer;
   -webkit-transition: background-color,border 150ms linear;
@@ -65,7 +65,7 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: var(--ictinus-spacing-4);
 }
 
 .emotion-4 {
@@ -91,7 +91,7 @@
   height: 1.75rem;
   background-color: rgba(200,206,255,0);
   padding: 0rem 0.5rem 0rem 0.5rem;
-  border-radius: 624.9375rem;
+  border-radius: var(--ictinus-border-radius-7);
   border: none;
   cursor: pointer;
   -webkit-transition: background-color,border 150ms linear;
@@ -117,8 +117,8 @@
 }
 
 .emotion-5 {
-  width: 1rem;
-  height: 1rem;
+  width: var(--ictinus-sizing-4);
+  height: var(--ictinus-sizing-4);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -126,8 +126,8 @@
 }
 
 .emotion-6 {
-  width: 1rem;
-  height: 1rem;
+  width: var(--ictinus-sizing-4);
+  height: var(--ictinus-sizing-4);
 }
 
 .emotion-6 path,
@@ -155,8 +155,8 @@
   position: relative;
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #8EAAEC;
-  border-radius: 0.25rem;
+  box-shadow: 0 0 0 var(--ictinus-border-width-1) var(--ictinus-color-border-color-interactive-default);
+  border-radius: var(--ictinus-border-radius-2);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -165,16 +165,16 @@
   cursor: text;
   height: 1.75rem;
   min-width: 4.375rem;
-  background-color: rgba(200,206,255,0.30);
+  background-color: var(--ictinus-color-palette-secondary-base);
 }
 
 .emotion-9:hover {
-  background-color: rgba(200,206,255,0.20);
+  background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
 .emotion-9:focus-within {
-  box-shadow: 0 0 0 0.125rem #175BF5;
-  background-color: rgba(200,206,255,0.30);
+  box-shadow: 0 0 0 var(--ictinus-border-width-2) var(--ictinus-color-border-color-interactive-active);
+  background-color: var(--ictinus-color-palette-secondary-base);
 }
 
 .emotion-10 {
@@ -219,7 +219,7 @@
   letter-spacing: 0.015625rem;
   background: transparent;
   border: none;
-  color: #111530;
+  color: var(--ictinus-color-text-default-primary);
   padding: 0;
   display: block;
   position: relative;
@@ -275,8 +275,8 @@
 }
 
 .emotion-12:focus-within+label {
-  font-weight: 700!important;
-  color: #194DCC;
+  font-weight: var(--ictinus-weight-bold)!important;
+  color: var(--ictinus-color-text-default-active);
 }
 
 .emotion-12:disabled {
@@ -297,7 +297,7 @@
   -moz-transform: translate(0.1875rem, -95%) scale(0.8);
   -ms-transform: translate(0.1875rem, -95%) scale(0.8);
   transform: translate(0.1875rem, -95%) scale(0.8);
-  color: #52567a;
+  color: var(--ictinus-color-text-default-secondary);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -356,8 +356,8 @@
 }
 
 .emotion-16 {
-  width: 1rem;
-  height: 1rem;
+  width: var(--ictinus-sizing-4);
+  height: var(--ictinus-sizing-4);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -366,13 +366,13 @@
 }
 
 .emotion-17 {
-  width: 1rem;
-  height: 1rem;
+  width: var(--ictinus-sizing-4);
+  height: var(--ictinus-sizing-4);
 }
 
 .emotion-17 path,
 .emotion-17 rect {
-  fill: #52567a!important;
+  fill: var(--ictinus-color-text-default-secondary)!important;
 }
 
 <div>

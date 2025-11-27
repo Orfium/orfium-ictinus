@@ -6,15 +6,15 @@ exports[`Day > should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #111530;
+  color: var(--ictinus-color-text-default-primary);
   width: 2.25rem;
   font-weight: bold;
   opacity: 1;
 }
 
 .emotion-0:focus-visible {
-  background-color: rgba(200,206,255,0.20);
-  border-radius: 624.9375rem;
+  background-color: var(--ictinus-color-palette-tertiary-muted);
+  border-radius: var(--ictinus-border-radius-7);
 }
 
 .emotion-1 {
@@ -23,11 +23,11 @@ exports[`Day > should render correctly 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
-  border: 0.0625rem solid #175BF5;
-  border-radius: 624.9375rem;
+  border: var(--ictinus-border-width-1) solid var(--ictinus-color-border-color-interactive-active);
+  border-radius: var(--ictinus-border-radius-7);
   width: 2.25rem;
   height: 2.25rem;
-  color: #111530;
+  color: var(--ictinus-color-text-default-primary);
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -45,8 +45,8 @@ exports[`Day > should render correctly 1`] = `
 }
 
 .emotion-1:hover {
-  border-radius: 624.9375rem;
-  background: rgba(200,206,255,0.20);
+  border-radius: var(--ictinus-border-radius-7);
+  background: var(--ictinus-color-palette-tertiary-muted);
 }
 
 <div>
@@ -79,15 +79,15 @@ exports[`Day > should render disabled correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #111530;
+  color: var(--ictinus-color-text-default-primary);
   width: 2.25rem;
   font-weight: bold;
   opacity: 0.5;
 }
 
 .emotion-0:focus-visible {
-  background-color: rgba(200,206,255,0.20);
-  border-radius: 624.9375rem;
+  background-color: var(--ictinus-color-palette-tertiary-muted);
+  border-radius: var(--ictinus-border-radius-7);
 }
 
 .emotion-1 {
@@ -96,11 +96,11 @@ exports[`Day > should render disabled correctly 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
-  border: 0.0625rem solid #175BF5;
-  border-radius: 624.9375rem;
+  border: var(--ictinus-border-width-1) solid var(--ictinus-color-border-color-interactive-active);
+  border-radius: var(--ictinus-border-radius-7);
   width: 2.25rem;
   height: 2.25rem;
-  color: #111530;
+  color: var(--ictinus-color-text-default-primary);
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -147,16 +147,16 @@ exports[`Day > should render isFirst, isLast correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #111530;
+  color: var(--ictinus-color-text-default-primary);
   width: 2.25rem;
   font-weight: bold;
   opacity: 1;
-  background: #194DCC;
+  background: var(--ictinus-color-palette-primary-contrast);
 }
 
 .emotion-0:focus-visible {
-  background-color: rgba(200,206,255,0.20);
-  border-radius: 624.9375rem;
+  background-color: var(--ictinus-color-palette-tertiary-muted);
+  border-radius: var(--ictinus-border-radius-7);
 }
 
 .emotion-0:after {
@@ -180,11 +180,11 @@ exports[`Day > should render isFirst, isLast correctly 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
-  border: 0.0625rem solid #175BF5;
-  border-radius: 624.9375rem;
+  border: var(--ictinus-border-width-1) solid var(--ictinus-color-border-color-interactive-active);
+  border-radius: var(--ictinus-border-radius-7);
   width: 2.25rem;
   height: 2.25rem;
-  color: #111530;
+  color: var(--ictinus-color-text-default-primary);
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -202,8 +202,8 @@ exports[`Day > should render isFirst, isLast correctly 1`] = `
 }
 
 .emotion-1:hover {
-  border-radius: 624.9375rem;
-  background: rgba(200,206,255,0.20);
+  border-radius: var(--ictinus-border-radius-7);
+  background: var(--ictinus-color-palette-tertiary-muted);
 }
 
 <div>
@@ -236,16 +236,16 @@ exports[`Day > should render isFirst, isLast correctly 2`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #111530;
+  color: var(--ictinus-color-text-default-primary);
   width: 2.25rem;
   font-weight: bold;
   opacity: 1;
-  background: #194DCC;
+  background: var(--ictinus-color-palette-primary-contrast);
 }
 
 .emotion-0:focus-visible {
-  background-color: rgba(200,206,255,0.20);
-  border-radius: 624.9375rem;
+  background-color: var(--ictinus-color-palette-tertiary-muted);
+  border-radius: var(--ictinus-border-radius-7);
 }
 
 .emotion-0:after {
@@ -269,11 +269,11 @@ exports[`Day > should render isFirst, isLast correctly 2`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
-  border: 0.0625rem solid #175BF5;
-  border-radius: 624.9375rem;
+  border: var(--ictinus-border-width-1) solid var(--ictinus-color-border-color-interactive-active);
+  border-radius: var(--ictinus-border-radius-7);
   width: 2.25rem;
   height: 2.25rem;
-  color: #111530;
+  color: var(--ictinus-color-text-default-primary);
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -291,8 +291,8 @@ exports[`Day > should render isFirst, isLast correctly 2`] = `
 }
 
 .emotion-1:hover {
-  border-radius: 624.9375rem;
-  background: rgba(200,206,255,0.20);
+  border-radius: var(--ictinus-border-radius-7);
+  background: var(--ictinus-color-palette-tertiary-muted);
 }
 
 <div>

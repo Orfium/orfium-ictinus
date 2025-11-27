@@ -21,15 +21,15 @@ exports[`Checkbox Component > it renders the Checkbox correctly 1`] = `
 .emotion-1 [data-role='checkbox-icon']>div {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  width: 1.25rem;
-  height: 1.25rem;
+  width: var(--ictinus-sizing-5);
+  height: var(--ictinus-sizing-5);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   box-sizing: border-box;
-  border: 0.125rem solid #8EAAEC;
-  border-radius: 0.25rem;
+  border: var(--ictinus-border-width-2) solid var(--ictinus-color-border-color-interactive-default);
+  border-radius: var(--ictinus-border-radius-2);
 }
 
 .emotion-1 svg {
@@ -50,8 +50,8 @@ exports[`Checkbox Component > it renders the Checkbox correctly 1`] = `
 .emotion-1[data-indeterminate='true'] [data-role='checkbox-icon']>div {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  border-color: rgba(200,206,255,0);
-  background: #175BF5;
+  border-color: var(--ictinus-color-border-color-decorative-transparent);
+  background: var(--ictinus-color-palette-primary-base);
 }
 
 .emotion-1[data-selected='true'] svg,
@@ -92,8 +92,8 @@ exports[`Checkbox Component > it renders the Checkbox correctly 1`] = `
 }
 
 .emotion-6 {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: var(--ictinus-sizing-5);
+  height: var(--ictinus-sizing-5);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -101,13 +101,13 @@ exports[`Checkbox Component > it renders the Checkbox correctly 1`] = `
 }
 
 .emotion-7 {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: var(--ictinus-sizing-5);
+  height: var(--ictinus-sizing-5);
 }
 
 .emotion-7 path,
 .emotion-7 rect {
-  fill: #ffffff!important;
+  fill: var(--ictinus-color-text-inverted-primary)!important;
 }
 
 <div>

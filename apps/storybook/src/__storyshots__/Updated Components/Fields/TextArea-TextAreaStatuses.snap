@@ -27,8 +27,8 @@
   position: relative;
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #8EAAEC;
-  border-radius: 0.25rem;
+  box-shadow: 0 0 0 var(--ictinus-border-width-1) var(--ictinus-color-border-color-interactive-default);
+  border-radius: var(--ictinus-border-radius-2);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -37,17 +37,17 @@
   cursor: text;
   height: auto;
   min-width: 15rem;
-  background-color: rgba(200,206,255,0.30);
+  background-color: var(--ictinus-color-palette-secondary-base);
   width: auto;
 }
 
 .emotion-2:hover {
-  background-color: rgba(200,206,255,0.20);
+  background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
 .emotion-2:focus-within {
-  box-shadow: 0 0 0 0.125rem #175BF5;
-  background-color: rgba(200,206,255,0.30);
+  box-shadow: 0 0 0 var(--ictinus-border-width-2) var(--ictinus-color-border-color-interactive-active);
+  background-color: var(--ictinus-color-palette-secondary-base);
 }
 
 .emotion-3 {
@@ -86,7 +86,7 @@
   letter-spacing: 0.015625rem;
   background: transparent;
   border: none;
-  color: #111530;
+  color: var(--ictinus-color-text-default-primary);
   padding: 0;
   display: block;
   position: relative;
@@ -145,12 +145,12 @@
   -moz-transform: translate(0.1875rem, -4px) scale(0.8);
   -ms-transform: translate(0.1875rem, -4px) scale(0.8);
   transform: translate(0.1875rem, -4px) scale(0.8);
-  font-weight: 700;
+  font-weight: var(--ictinus-weight-bold);
 }
 
 .emotion-5:focus-within+label {
-  font-weight: 700!important;
-  color: #194DCC;
+  font-weight: var(--ictinus-weight-bold)!important;
+  color: var(--ictinus-color-text-default-active);
 }
 
 .emotion-5:disabled {
@@ -178,7 +178,7 @@
   -moz-transform: translate(0.1875rem, 0);
   -ms-transform: translate(0.1875rem, 0);
   transform: translate(0.1875rem, 0);
-  color: #52567a;
+  color: var(--ictinus-color-text-default-secondary);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -209,10 +209,10 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 0.25rem;
+  gap: var(--ictinus-spacing-3);
   opacity: 1;
-  color: #52567a;
-  padding: 0.5rem 0 0;
+  color: var(--ictinus-color-text-default-secondary);
+  padding: var(--ictinus-spacing-4) 0 0;
   font-family: Roboto;
   font-weight: 400;
   line-height: 1rem;
@@ -243,8 +243,8 @@
   position: relative;
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.125rem #FF4D8D;
-  border-radius: 0.25rem;
+  box-shadow: 0 0 0 var(--ictinus-border-width-2) var(--ictinus-color-border-color-interactive-error);
+  border-radius: var(--ictinus-border-radius-2);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -253,17 +253,17 @@
   cursor: text;
   height: auto;
   min-width: 15rem;
-  background-color: #FFD6E5;
+  background-color: var(--ictinus-color-palette-error-base);
   width: auto;
 }
 
 .emotion-8:hover {
-  background-color: #FFEBF1;
+  background-color: var(--ictinus-color-palette-error-muted);
 }
 
 .emotion-8:focus-within {
-  box-shadow: 0 0 0 0.125rem #175BF5;
-  background-color: rgba(200,206,255,0.30);
+  box-shadow: 0 0 0 var(--ictinus-border-width-2) var(--ictinus-color-border-color-interactive-active);
+  background-color: var(--ictinus-color-palette-secondary-base);
 }
 
 .emotion-12 {
@@ -280,7 +280,7 @@
   -moz-transform: translate(0.1875rem, 0);
   -ms-transform: translate(0.1875rem, 0);
   transform: translate(0.1875rem, 0);
-  color: #BF1250;
+  color: var(--ictinus-color-text-default-error);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -311,10 +311,10 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 0.25rem;
+  gap: var(--ictinus-spacing-3);
   opacity: 1;
-  color: #BF1250;
-  padding: 0.5rem 0 0;
+  color: var(--ictinus-color-text-default-error);
+  padding: var(--ictinus-spacing-4) 0 0;
   font-family: Roboto;
   font-weight: 400;
   line-height: 1rem;
@@ -331,8 +331,8 @@
 }
 
 .emotion-14 {
-  width: 1rem;
-  height: 1rem;
+  width: var(--ictinus-sizing-4);
+  height: var(--ictinus-sizing-4);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -340,13 +340,13 @@
 }
 
 .emotion-15 {
-  width: 1rem;
-  height: 1rem;
+  width: var(--ictinus-sizing-4);
+  height: var(--ictinus-sizing-4);
 }
 
 .emotion-15 path,
 .emotion-15 rect {
-  fill: #BF1250!important;
+  fill: var(--ictinus-color-text-default-error)!important;
 }
 
 .emotion-21 {
@@ -402,8 +402,8 @@
   position: relative;
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #8EAAEC;
-  border-radius: 0.25rem;
+  box-shadow: 0 0 0 var(--ictinus-border-width-1) var(--ictinus-color-border-color-interactive-default);
+  border-radius: var(--ictinus-border-radius-2);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -412,17 +412,17 @@
   cursor: text;
   height: auto;
   min-width: 15rem;
-  background-color: rgba(200,206,255,0.20);
+  background-color: var(--ictinus-color-palette-secondary-muted);
   width: auto;
 }
 
-.emotion-24:hover {
-  background-color: rgba(200,206,255,0.20);
+.emotion-16:hover {
+  background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
-.emotion-24:focus-within {
-  box-shadow: 0 0 0 0.125rem #8EAAEC;
-  background-color: rgba(200,206,255,0.30);
+.emotion-16:focus-within {
+  box-shadow: 0 0 0 var(--ictinus-border-width-2) var(--ictinus-color-border-color-interactive-default);
+  background-color: var(--ictinus-color-palette-secondary-base);
 }
 
 .emotion-27 {
@@ -433,7 +433,7 @@
   letter-spacing: 0.015625rem;
   background: transparent;
   border: none;
-  color: #111530;
+  color: var(--ictinus-color-text-default-primary);
   padding: 0;
   display: block;
   position: relative;
@@ -492,12 +492,12 @@
   -moz-transform: translate(0.1875rem, -4px) scale(0.8);
   -ms-transform: translate(0.1875rem, -4px) scale(0.8);
   transform: translate(0.1875rem, -4px) scale(0.8);
-  font-weight: 700;
+  font-weight: var(--ictinus-weight-bold);
 }
 
-.emotion-27:focus-within+label {
-  font-weight: 700!important;
-  color: #194DCC;
+.emotion-19:focus-within+label {
+  font-weight: var(--ictinus-weight-bold)!important;
+  color: var(--ictinus-color-text-default-active);
 }
 
 .emotion-27:disabled {

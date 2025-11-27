@@ -20,7 +20,7 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
+  gap: var(--ictinus-spacing-4);
   -webkit-box-flex-wrap: nowrap;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
@@ -35,21 +35,8 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-family: Roboto;
-  font-weight: 400;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-  color: #52567a;
-}
-
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  color: #194DCC;
+  gap: var(--ictinus-spacing-3);
+  color: var(--ictinus-color-text-default-active);
   -webkit-text-decoration: none;
   text-decoration: none;
   position: relative;
@@ -67,30 +54,30 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-3:hover,
-.emotion-3[aria-expanded='true'] {
-  color: #111530;
+.emotion-2:hover,
+.emotion-2[aria-expanded='true'] {
+  color: var(--ictinus-color-text-default-primary);
 }
 
-.emotion-3:hover path,
-.emotion-3[aria-expanded='true'] path {
-  fill: #111530!important;
+.emotion-2:hover path,
+.emotion-2[aria-expanded='true'] path {
+  fill: var(--ictinus-color-text-default-primary)!important;
 }
 
-.emotion-3:visited {
-  color: #5F33AC;
+.emotion-2:visited {
+  color: var(--ictinus-color-text-default-visited);
 }
 
-.emotion-3:visited path {
-  fill: #5F33AC!important;
+.emotion-2:visited path {
+  fill: var(--ictinus-color-text-default-visited)!important;
 }
 
-.emotion-3:focus-visible:after {
+.emotion-2:focus-visible:after {
   content: '';
   position: absolute;
   inset: -3px -6px;
-  border-radius: 0.25rem;
-  border: 0.25rem solid #A566FF;
+  border-radius: var(--ictinus-border-radius-2);
+  border: var(--ictinus-border-width-3) solid var(--ictinus-color-border-color-interactive-upsell);
 }
 
 <div>
@@ -105,18 +92,14 @@
         class="emotion-1"
         data-testid="_breadcrumb"
       >
-        <div
+        <a
           class="emotion-2"
+          data-slot="link"
+          data-testid="_breadcrumb_go_back_to_Level 1_link"
+          href="/first-level"
         >
-          <a
-            class="emotion-3"
-            data-slot="link"
-            data-testid="_breadcrumb_go_back_to_Level 1_link"
-            href="/first-level"
-          >
-            Go back to Level 1
-          </a>
-        </div>
+          Go back to Level 1
+        </a>
       </ol>
     </div>
   </div>

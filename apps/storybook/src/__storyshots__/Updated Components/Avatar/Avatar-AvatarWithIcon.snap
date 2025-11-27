@@ -20,14 +20,14 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 1.25rem;
-  height: 1.25rem;
-  border-radius: 624.9375rem;
-  border: 0.0625rem solid;
-  border-color: #B8CCFA;
+  width: var(--ictinus-sizing-5);
+  height: var(--ictinus-sizing-5);
+  border-radius: var(--ictinus-border-radius-7);
+  border: var(--ictinus-border-width-1) solid;
+  border-color: var(--ictinus-color-palette-primary-alt-contrast);
   box-sizing: border-box;
-  background-color: #DAE4FB;
-  color: #194DCC;
+  background-color: var(--ictinus-color-palette-primary-alt-base);
+  color: var(--ictinus-color-text-default-active);
   overflow: hidden;
   position: relative;
   -webkit-align-items: center;
@@ -45,26 +45,25 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 0.875rem;
-  font-size: 0.625rem;
-  letter-spacing: 0.00625rem;
+  font-family: var(--ictinus-weight-medium);
+  font-size: var(--ictinus-font-size-1);
+  line-height: var(--ictinus-line-height-1);
+  letter-spacing: var(--ictinus-letter-spacing-1);
 }
 
 .emotion-1 img {
-  border-radius: 624.9375rem;
+  border-radius: var(--ictinus-border-radius-7);
   width: 100%;
   height: 100%;
 }
 
 .emotion-2 {
-  width: 1rem;
-  height: 1rem;
+  width: calc(var(--ictinus-sizing-5) * 0.8);
+  height: calc(var(--ictinus-sizing-5) * 0.8);
 }
 
 .emotion-2 path {
-  fill: #194DCC;
+  fill: var(--ictinus-color-text-default-active);
 }
 
 .emotion-3 {
@@ -75,14 +74,14 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 624.9375rem;
-  border: 0.0625rem solid;
-  border-color: #B8CCFA;
+  width: var(--ictinus-sizing-6);
+  height: var(--ictinus-sizing-6);
+  border-radius: var(--ictinus-border-radius-7);
+  border: var(--ictinus-border-width-1) solid;
+  border-color: var(--ictinus-color-palette-primary-alt-contrast);
   box-sizing: border-box;
-  background-color: #DAE4FB;
-  color: #194DCC;
+  background-color: var(--ictinus-color-palette-primary-alt-base);
+  color: var(--ictinus-color-text-default-active);
   overflow: hidden;
   position: relative;
   -webkit-align-items: center;
@@ -100,26 +99,25 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1.125rem;
-  font-size: 0.75rem;
-  letter-spacing: 0.015625rem;
+  font-family: var(--ictinus-weight-medium);
+  font-size: var(--ictinus-font-size-2);
+  line-height: var(--ictinus-line-height-3);
+  letter-spacing: var(--ictinus-letter-spacing-2);
 }
 
 .emotion-3 img {
-  border-radius: 624.9375rem;
+  border-radius: var(--ictinus-border-radius-7);
   width: 100%;
   height: 100%;
 }
 
 .emotion-4 {
-  width: 1.2000000000000002rem;
-  height: 1.2000000000000002rem;
+  width: calc(var(--ictinus-sizing-6) * 0.8);
+  height: calc(var(--ictinus-sizing-6) * 0.8);
 }
 
 .emotion-4 path {
-  fill: #194DCC;
+  fill: var(--ictinus-color-text-default-active);
 }
 
 .emotion-5 {
@@ -130,14 +128,14 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 624.9375rem;
-  border: 0.0625rem solid;
-  border-color: #B8CCFA;
+  width: var(--ictinus-sizing-8);
+  height: var(--ictinus-sizing-8);
+  border-radius: var(--ictinus-border-radius-7);
+  border: var(--ictinus-border-width-1) solid;
+  border-color: var(--ictinus-color-palette-primary-alt-contrast);
   box-sizing: border-box;
-  background-color: #DAE4FB;
-  color: #194DCC;
+  background-color: var(--ictinus-color-palette-primary-alt-base);
+  color: var(--ictinus-color-text-default-active);
   overflow: hidden;
   position: relative;
   -webkit-align-items: center;
@@ -155,26 +153,25 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
+  font-family: var(--ictinus-weight-medium);
+  font-size: var(--ictinus-font-size-3);
+  line-height: var(--ictinus-line-height-4);
+  letter-spacing: var(--ictinus-letter-spacing-2);
 }
 
 .emotion-5 img {
-  border-radius: 624.9375rem;
+  border-radius: var(--ictinus-border-radius-7);
   width: 100%;
   height: 100%;
 }
 
 .emotion-6 {
-  width: 1.6rem;
-  height: 1.6rem;
+  width: calc(var(--ictinus-sizing-8) * 0.8);
+  height: calc(var(--ictinus-sizing-8) * 0.8);
 }
 
 .emotion-6 path {
-  fill: #194DCC;
+  fill: var(--ictinus-color-text-default-active);
 }
 
 .emotion-7 {
@@ -185,14 +182,14 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 624.9375rem;
-  border: 0.0625rem solid;
-  border-color: #B8CCFA;
+  width: var(--ictinus-sizing-12);
+  height: var(--ictinus-sizing-12);
+  border-radius: var(--ictinus-border-radius-7);
+  border: var(--ictinus-border-width-1) solid;
+  border-color: var(--ictinus-color-palette-primary-alt-contrast);
   box-sizing: border-box;
-  background-color: #DAE4FB;
-  color: #194DCC;
+  background-color: var(--ictinus-color-palette-primary-alt-base);
+  color: var(--ictinus-color-text-default-active);
   overflow: hidden;
   position: relative;
   -webkit-align-items: center;
@@ -210,26 +207,25 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1.375rem;
-  font-size: 1rem;
-  letter-spacing: 0.00625rem;
+  font-family: var(--ictinus-weight-medium);
+  font-size: var(--ictinus-font-size-4);
+  line-height: var(--ictinus-line-height-5);
+  letter-spacing: var(--ictinus-letter-spacing-1);
 }
 
 .emotion-7 img {
-  border-radius: 624.9375rem;
+  border-radius: var(--ictinus-border-radius-7);
   width: 100%;
   height: 100%;
 }
 
 .emotion-8 {
-  width: 2.4000000000000004rem;
-  height: 2.4000000000000004rem;
+  width: calc(var(--ictinus-sizing-12) * 0.8);
+  height: calc(var(--ictinus-sizing-12) * 0.8);
 }
 
 .emotion-8 path {
-  fill: #194DCC;
+  fill: var(--ictinus-color-text-default-active);
 }
 
 .emotion-9 {
@@ -240,14 +236,14 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 3.75rem;
-  height: 3.75rem;
-  border-radius: 624.9375rem;
-  border: 0.0625rem solid;
-  border-color: #B8CCFA;
+  width: var(--ictinus-sizing-15);
+  height: var(--ictinus-sizing-15);
+  border-radius: var(--ictinus-border-radius-7);
+  border: var(--ictinus-border-width-1) solid;
+  border-color: var(--ictinus-color-palette-primary-alt-contrast);
   box-sizing: border-box;
-  background-color: #DAE4FB;
-  color: #194DCC;
+  background-color: var(--ictinus-color-palette-primary-alt-base);
+  color: var(--ictinus-color-text-default-active);
   overflow: hidden;
   position: relative;
   -webkit-align-items: center;
@@ -265,26 +261,25 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 2rem;
-  font-size: 1.5rem;
-  letter-spacing: 0rem;
+  font-family: var(--ictinus-weight-medium);
+  font-size: var(--ictinus-font-size-8);
+  line-height: var(--ictinus-line-height-8);
+  letter-spacing: var(--ictinus-letter-spacing-0);
 }
 
 .emotion-9 img {
-  border-radius: 624.9375rem;
+  border-radius: var(--ictinus-border-radius-7);
   width: 100%;
   height: 100%;
 }
 
 .emotion-10 {
-  width: 3rem;
-  height: 3rem;
+  width: calc(var(--ictinus-sizing-15) * 0.8);
+  height: calc(var(--ictinus-sizing-15) * 0.8);
 }
 
 .emotion-10 path {
-  fill: #194DCC;
+  fill: var(--ictinus-color-text-default-active);
 }
 
 .emotion-11 {
@@ -295,14 +290,14 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 5.5rem;
-  height: 5.5rem;
-  border-radius: 624.9375rem;
-  border: 0.0625rem solid;
-  border-color: #B8CCFA;
+  width: var(--ictinus-sizing-18);
+  height: var(--ictinus-sizing-18);
+  border-radius: var(--ictinus-border-radius-7);
+  border: var(--ictinus-border-width-1) solid;
+  border-color: var(--ictinus-color-palette-primary-alt-contrast);
   box-sizing: border-box;
-  background-color: #DAE4FB;
-  color: #194DCC;
+  background-color: var(--ictinus-color-palette-primary-alt-base);
+  color: var(--ictinus-color-text-default-active);
   overflow: hidden;
   position: relative;
   -webkit-align-items: center;
@@ -320,26 +315,25 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 2.5rem;
-  font-size: 2rem;
-  letter-spacing: 0rem;
+  font-family: var(--ictinus-weight-medium);
+  font-size: var(--ictinus-font-size-10);
+  line-height: var(--ictinus-line-height-10);
+  letter-spacing: var(--ictinus-letter-spacing-0);
 }
 
 .emotion-11 img {
-  border-radius: 624.9375rem;
+  border-radius: var(--ictinus-border-radius-7);
   width: 100%;
   height: 100%;
 }
 
 .emotion-12 {
-  width: 4.4rem;
-  height: 4.4rem;
+  width: calc(var(--ictinus-sizing-18) * 0.8);
+  height: calc(var(--ictinus-sizing-18) * 0.8);
 }
 
 .emotion-12 path {
-  fill: #194DCC;
+  fill: var(--ictinus-color-text-default-active);
 }
 
 <div>

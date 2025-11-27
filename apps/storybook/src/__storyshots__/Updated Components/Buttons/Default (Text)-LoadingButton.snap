@@ -28,7 +28,7 @@
 }
 
 .emotion-1 {
-  background: rgba(200,206,255,0);
+  background: var(--ictinus-color-transparent-1);
   border-radius: 0;
 }
 
@@ -87,8 +87,8 @@
   width: 100%;
   height: 0.25rem;
   overflow: hidden;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
+  border-top-left-radius: var(--ictinus-border-radius-2);
+  border-top-right-radius: var(--ictinus-border-radius-2);
   position: relative;
 }
 
@@ -132,7 +132,7 @@
   height: 2.25rem;
   background-color: #194DCC;
   padding: 0rem 1rem 0rem 1rem;
-  border-radius: 0.25rem;
+  border-radius: var(--ictinus-border-radius-2);
   border: none;
   cursor: pointer;
   -webkit-transition: background-color,border 150ms linear;
@@ -171,7 +171,7 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: var(--ictinus-spacing-4);
 }
 
 .emotion-15 {
@@ -196,7 +196,7 @@
   height: 1.75rem;
   background-color: #194DCC;
   padding: 0rem 0.5rem 0rem 0.5rem;
-  border-radius: 0.25rem;
+  border-radius: var(--ictinus-border-radius-2);
   border: none;
   cursor: pointer;
   -webkit-transition: background-color,border 150ms linear;
@@ -244,7 +244,7 @@
   height: 2.25rem;
   background-color: rgba(200,206,255,0.45);
   padding: 0rem 1rem 0rem 1rem;
-  border-radius: 0.25rem;
+  border-radius: var(--ictinus-border-radius-2);
   border: none;
   cursor: pointer;
   -webkit-transition: background-color,border 150ms linear;
@@ -292,7 +292,7 @@
   height: 1.75rem;
   background-color: rgba(200,206,255,0.45);
   padding: 0rem 0.5rem 0rem 0.5rem;
-  border-radius: 0.25rem;
+  border-radius: var(--ictinus-border-radius-2);
   border: none;
   cursor: pointer;
   -webkit-transition: background-color,border 150ms linear;
@@ -340,7 +340,7 @@
   height: 2.25rem;
   background-color: rgba(200,206,255,0.30);
   padding: 0rem 1rem 0rem 1rem;
-  border-radius: 0.25rem;
+  border-radius: var(--ictinus-border-radius-2);
   border: none;
   cursor: pointer;
   -webkit-transition: background-color,border 150ms linear;
@@ -388,7 +388,7 @@
   height: 1.75rem;
   background-color: rgba(200,206,255,0.30);
   padding: 0rem 0.5rem 0rem 0.5rem;
-  border-radius: 0.25rem;
+  border-radius: var(--ictinus-border-radius-2);
   border: none;
   cursor: pointer;
   -webkit-transition: background-color,border 150ms linear;
@@ -436,7 +436,7 @@
   height: 2.25rem;
   background-color: #FFB2CE;
   padding: 0rem 1rem 0rem 1rem;
-  border-radius: 0.25rem;
+  border-radius: var(--ictinus-border-radius-2);
   border: none;
   cursor: pointer;
   -webkit-transition: background-color,border 150ms linear;
@@ -484,7 +484,7 @@
   height: 1.75rem;
   background-color: #FFB2CE;
   padding: 0rem 0.5rem 0rem 0.5rem;
-  border-radius: 0.25rem;
+  border-radius: var(--ictinus-border-radius-2);
   border: none;
   cursor: pointer;
   -webkit-transition: background-color,border 150ms linear;
@@ -544,7 +544,7 @@
   height: 2.25rem;
   background-color: #175BF5;
   padding: 0rem 1rem 0rem 1rem;
-  border-radius: 0.25rem;
+  border-radius: var(--ictinus-border-radius-2);
   border: none;
   cursor: pointer;
   -webkit-transition: background-color,border 150ms linear;
@@ -591,7 +591,7 @@
   height: 1.75rem;
   background-color: #175BF5;
   padding: 0rem 0.5rem 0rem 0.5rem;
-  border-radius: 0.25rem;
+  border-radius: var(--ictinus-border-radius-2);
   border: none;
   cursor: pointer;
   -webkit-transition: background-color,border 150ms linear;

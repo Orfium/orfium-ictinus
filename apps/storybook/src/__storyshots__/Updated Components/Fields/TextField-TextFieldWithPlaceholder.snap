@@ -27,8 +27,8 @@
   position: relative;
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #8EAAEC;
-  border-radius: 0.25rem;
+  box-shadow: 0 0 0 var(--ictinus-border-width-1) var(--ictinus-color-border-color-interactive-default);
+  border-radius: var(--ictinus-border-radius-2);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -37,16 +37,16 @@
   cursor: text;
   height: 3.25rem;
   min-width: 8.75rem;
-  background-color: rgba(200,206,255,0.30);
+  background-color: var(--ictinus-color-palette-secondary-base);
 }
 
 .emotion-1:hover {
-  background-color: rgba(200,206,255,0.20);
+  background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
 .emotion-1:focus-within {
-  box-shadow: 0 0 0 0.125rem #175BF5;
-  background-color: rgba(200,206,255,0.30);
+  box-shadow: 0 0 0 var(--ictinus-border-width-2) var(--ictinus-color-border-color-interactive-active);
+  background-color: var(--ictinus-color-palette-secondary-base);
 }
 
 .emotion-2 {
@@ -91,7 +91,7 @@
   letter-spacing: 0.015625rem;
   background: transparent;
   border: none;
-  color: #111530;
+  color: var(--ictinus-color-text-default-primary);
   padding: 0;
   display: block;
   position: relative;
@@ -144,7 +144,7 @@
 
 .emotion-4:focus-within+label,
 .emotion-4:not(:placeholder-shown)+label {
-  font-weight: 700!important;
+  font-weight: var(--ictinus-weight-bold)!important;
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -152,8 +152,8 @@
 }
 
 .emotion-4:focus-within+label {
-  font-weight: 700!important;
-  color: #194DCC;
+  font-weight: var(--ictinus-weight-bold)!important;
+  color: var(--ictinus-color-text-default-active);
 }
 
 .emotion-4:disabled {
@@ -174,7 +174,7 @@
   -moz-transform: translate(0.1875rem, 0);
   -ms-transform: translate(0.1875rem, 0);
   transform: translate(0.1875rem, 0);
-  color: #52567a;
+  color: var(--ictinus-color-text-default-secondary);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -204,7 +204,7 @@
   letter-spacing: 0.015625rem;
   background: transparent;
   border: none;
-  color: #111530;
+  color: var(--ictinus-color-text-default-primary);
   padding: 0;
   display: block;
   position: relative;
@@ -236,19 +236,19 @@
 }
 
 .emotion-9:focus::-webkit-input-placeholder {
-  color: #52567a;
+  color: var(--ictinus-color-text-default-secondary);
 }
 
 .emotion-9:focus::-moz-placeholder {
-  color: #52567a;
+  color: var(--ictinus-color-text-default-secondary);
 }
 
 .emotion-9:focus:-ms-input-placeholder {
-  color: #52567a;
+  color: var(--ictinus-color-text-default-secondary);
 }
 
 .emotion-9:focus::placeholder {
-  color: #52567a;
+  color: var(--ictinus-color-text-default-secondary);
 }
 
 .emotion-9:not(:focus):placeholder-shown+label {
@@ -257,7 +257,7 @@
 
 .emotion-9:focus-within+label,
 .emotion-9:not(:placeholder-shown)+label {
-  font-weight: 700!important;
+  font-weight: var(--ictinus-weight-bold)!important;
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -265,8 +265,8 @@
 }
 
 .emotion-9:focus-within+label {
-  font-weight: 700!important;
-  color: #194DCC;
+  font-weight: var(--ictinus-weight-bold)!important;
+  color: var(--ictinus-color-text-default-active);
 }
 
 .emotion-9:disabled {

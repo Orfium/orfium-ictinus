@@ -12,8 +12,8 @@
 
 .emotion-1 {
   width: 80%;
-  font-size: 0.75rem;
-  color: #52567a;
+  font-size: var(--ictinus-font-size-2);
+  color: var(--ictinus-color-text-default-secondary);
   text-align: center;
 }
 
@@ -76,7 +76,7 @@
                 alignment-baseline="middle"
                 dy="-7"
                 fill="black"
-                font-size="1rem"
+                font-size="var(--ictinus-font-size-4)"
                 x="50%"
               >
                 value

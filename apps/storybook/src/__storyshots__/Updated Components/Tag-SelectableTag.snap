@@ -30,14 +30,14 @@
   width: -moz-fit-content;
   width: fit-content;
   box-sizing: border-box;
-  gap: 0.25rem;
-  padding: 0.125rem 0.5rem;
+  gap: var(--ictinus-spacing-3);
+  padding: var(--ictinus-spacing-2) var(--ictinus-spacing-4);
   cursor: pointer;
-  background: rgba(200,206,255,0.30);
+  background: var(--ictinus-color-palette-secondary-base);
   color: #194DCC;
-  border: 0.0625rem solid;
-  border-color: #8EAAEC;
-  border-radius: 0.25rem;
+  border: var(--ictinus-border-width-1) solid;
+  border-color: var(--ictinus-color-border-color-interactive-default);
+  border-radius: var(--ictinus-border-radius-2);
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -49,12 +49,12 @@
 }
 
 .emotion-1:hover {
-  background: rgba(200,206,255,0.20);
+  background: var(--ictinus-color-palette-secondary-muted);
 }
 
 .emotion-1:focus-visible {
-  background: rgba(200,206,255,0.20);
-  border-color: #175BF5;
+  background: var(--ictinus-color-palette-secondary-muted);
+  border-color: var(--ictinus-color-border-color-interactive-active);
 }
 
 .emotion-2 {
@@ -81,14 +81,14 @@
   width: -moz-fit-content;
   width: fit-content;
   box-sizing: border-box;
-  gap: 0.25rem;
-  padding: 0.125rem 0.5rem;
+  gap: var(--ictinus-spacing-3);
+  padding: var(--ictinus-spacing-2) var(--ictinus-spacing-4);
   cursor: pointer;
-  background: rgba(200,206,255,0.20);
+  background: var(--ictinus-color-palette-secondary-muted);
   color: #194DCC;
-  border: 0.0625rem solid;
-  border-color: #8EAAEC;
-  border-radius: 0.25rem;
+  border: var(--ictinus-border-width-1) solid;
+  border-color: var(--ictinus-color-border-color-interactive-default);
+  border-radius: var(--ictinus-border-radius-2);
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -100,17 +100,17 @@
 }
 
 .emotion-3:hover {
-  background: rgba(200,206,255,0.20);
+  background: var(--ictinus-color-palette-secondary-muted);
 }
 
 .emotion-3:focus-visible {
-  background: rgba(200,206,255,0.20);
-  border-color: #175BF5;
+  background: var(--ictinus-color-palette-secondary-muted);
+  border-color: var(--ictinus-color-border-color-interactive-active);
 }
 
 .emotion-4 {
-  width: 1rem;
-  height: 1rem;
+  width: var(--ictinus-sizing-4);
+  height: var(--ictinus-sizing-4);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -118,13 +118,13 @@
 }
 
 .emotion-5 {
-  width: 1rem;
-  height: 1rem;
+  width: var(--ictinus-sizing-4);
+  height: var(--ictinus-sizing-4);
 }
 
 .emotion-5 path,
 .emotion-5 rect {
-  fill: #194DCC!important;
+  fill: var(--ictinus-color-text-default-active)!important;
 }
 
 <div>

@@ -1,8 +1,8 @@
 .emotion-0 {
   display: inline-block;
-  border: 0.0625rem solid rgba(200,206,255,0.70);
-  border-radius: 0.25rem;
-  background: #ffffff;
+  border: var(--ictinus-border-width-1) solid var(--ictinus-color-border-color-decorative-default);
+  border-radius: var(--ictinus-border-radius-2);
+  background: var(--ictinus-color-background-default);
 }
 
 .emotion-1 {
@@ -22,18 +22,18 @@
 
 .emotion-2 {
   position: relative;
-  box-shadow: 0 0.0625rem 0 0 rgba(200,206,255,0.70);
+  box-shadow: 0 var(--ictinus-border-width-1) 0 0 var(--ictinus-color-border-color-decorative-default);
 }
 
 .emotion-4 {
   width: 25%;
-  height: 2.75rem;
+  height: var(--ictinus-sizing-11);
   -webkit-align-content: center;
   -ms-flex-line-pack: center;
   align-content: center;
   box-sizing: border-box;
-  padding: 0.5rem 1rem;
-  color: #52567a;
+  padding: var(--ictinus-spacing-4) var(--ictinus-spacing-6);
+  color: var(--ictinus-color-text-default-secondary);
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -48,7 +48,7 @@
 
 .emotion-4:hover,
 .emotion-4:focus-visible {
-  color: #111530;
+  color: var(--ictinus-color-text-default-primary);
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -80,7 +80,7 @@
   -ms-flex-pack: start;
   -webkit-justify-content: flex-start;
   justify-content: flex-start;
-  gap: 0.5rem;
+  gap: var(--ictinus-spacing-4);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -131,7 +131,7 @@
   height: 1.75rem;
   background-color: rgba(200,206,255,0);
   padding: 0rem 0.5rem 0rem 0.5rem;
-  border-radius: 624.9375rem;
+  border-radius: var(--ictinus-border-radius-7);
   border: none;
   cursor: pointer;
   -webkit-transition: background-color,border 150ms linear;
@@ -157,8 +157,8 @@
 }
 
 .emotion-10 {
-  width: 1rem;
-  height: 1rem;
+  width: var(--ictinus-sizing-4);
+  height: var(--ictinus-sizing-4);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -166,8 +166,8 @@
 }
 
 .emotion-11 {
-  width: 1rem;
-  height: 1rem;
+  width: var(--ictinus-sizing-4);
+  height: var(--ictinus-sizing-4);
 }
 
 .emotion-11 path,
@@ -177,13 +177,13 @@
 
 .emotion-16 {
   width: 25%;
-  height: 2.75rem;
+  height: var(--ictinus-sizing-11);
   -webkit-align-content: center;
   -ms-flex-line-pack: center;
   align-content: center;
   box-sizing: border-box;
-  padding: 0.5rem 1rem;
-  color: #52567a;
+  padding: var(--ictinus-spacing-4) var(--ictinus-spacing-6);
+  color: var(--ictinus-color-text-default-secondary);
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -209,13 +209,13 @@
 
 .emotion-19 {
   width: 25%;
-  height: 2.75rem;
+  height: var(--ictinus-sizing-11);
   -webkit-align-content: center;
   -ms-flex-line-pack: center;
   align-content: center;
   box-sizing: border-box;
-  padding: 0.5rem 1rem;
-  color: #111530;
+  padding: var(--ictinus-spacing-4) var(--ictinus-spacing-6);
+  color: var(--ictinus-color-text-default-primary);
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -230,7 +230,7 @@
 
 .emotion-19:hover,
 .emotion-19:focus-visible {
-  color: #111530;
+  color: var(--ictinus-color-text-default-primary);
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -251,9 +251,9 @@
 
 .emotion-36 {
   width: 25%;
-  height: 2.75rem;
-  padding: 0.5rem 1rem;
-  border-bottom: 0.0625rem solid rgba(200,206,255,0.70);
+  height: var(--ictinus-sizing-11);
+  padding: var(--ictinus-spacing-4) var(--ictinus-spacing-6);
+  border-bottom: var(--ictinus-border-width-1) solid var(--ictinus-color-border-color-decorative-default);
   box-sizing: border-box;
   -webkit-align-content: center;
   -ms-flex-line-pack: center;

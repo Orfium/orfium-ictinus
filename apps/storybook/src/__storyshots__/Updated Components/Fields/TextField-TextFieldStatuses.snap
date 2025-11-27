@@ -27,8 +27,8 @@
   position: relative;
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #8EAAEC;
-  border-radius: 0.25rem;
+  box-shadow: 0 0 0 var(--ictinus-border-width-1) var(--ictinus-color-border-color-interactive-default);
+  border-radius: var(--ictinus-border-radius-2);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -37,16 +37,16 @@
   cursor: text;
   height: 3.25rem;
   min-width: 8.75rem;
-  background-color: rgba(200,206,255,0.30);
+  background-color: var(--ictinus-color-palette-secondary-base);
 }
 
 .emotion-1:hover {
-  background-color: rgba(200,206,255,0.20);
+  background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
 .emotion-1:focus-within {
-  box-shadow: 0 0 0 0.125rem #175BF5;
-  background-color: rgba(200,206,255,0.30);
+  box-shadow: 0 0 0 var(--ictinus-border-width-2) var(--ictinus-color-border-color-interactive-active);
+  background-color: var(--ictinus-color-palette-secondary-base);
 }
 
 .emotion-2 {
@@ -91,7 +91,7 @@
   letter-spacing: 0.015625rem;
   background: transparent;
   border: none;
-  color: #111530;
+  color: var(--ictinus-color-text-default-primary);
   padding: 0;
   display: block;
   position: relative;
@@ -144,7 +144,7 @@
 
 .emotion-4:focus-within+label,
 .emotion-4:not(:placeholder-shown)+label {
-  font-weight: 700!important;
+  font-weight: var(--ictinus-weight-bold)!important;
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -152,8 +152,8 @@
 }
 
 .emotion-4:focus-within+label {
-  font-weight: 700!important;
-  color: #194DCC;
+  font-weight: var(--ictinus-weight-bold)!important;
+  color: var(--ictinus-color-text-default-active);
 }
 
 .emotion-4:disabled {
@@ -174,7 +174,7 @@
   -moz-transform: translate(0.1875rem, 0);
   -ms-transform: translate(0.1875rem, 0);
   transform: translate(0.1875rem, 0);
-  color: #52567a;
+  color: var(--ictinus-color-text-default-secondary);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -205,10 +205,10 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 0.25rem;
+  gap: var(--ictinus-spacing-3);
   opacity: 1;
-  color: #52567a;
-  padding: 0.5rem 0 0;
+  color: var(--ictinus-color-text-default-secondary);
+  padding: var(--ictinus-spacing-4) 0 0;
   font-family: Roboto;
   font-weight: 400;
   line-height: 1rem;
@@ -239,8 +239,8 @@
   position: relative;
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.125rem #FF4D8D;
-  border-radius: 0.25rem;
+  box-shadow: 0 0 0 var(--ictinus-border-width-2) var(--ictinus-color-border-color-interactive-error);
+  border-radius: var(--ictinus-border-radius-2);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -249,16 +249,16 @@
   cursor: text;
   height: 3.25rem;
   min-width: 8.75rem;
-  background-color: #FFD6E5;
+  background-color: var(--ictinus-color-palette-error-base);
 }
 
 .emotion-7:hover {
-  background-color: #FFEBF1;
+  background-color: var(--ictinus-color-palette-error-muted);
 }
 
 .emotion-7:focus-within {
-  box-shadow: 0 0 0 0.125rem #175BF5;
-  background-color: rgba(200,206,255,0.30);
+  box-shadow: 0 0 0 var(--ictinus-border-width-2) var(--ictinus-color-border-color-interactive-active);
+  background-color: var(--ictinus-color-palette-secondary-base);
 }
 
 .emotion-11 {
@@ -275,7 +275,7 @@
   -moz-transform: translate(0.1875rem, 0);
   -ms-transform: translate(0.1875rem, 0);
   transform: translate(0.1875rem, 0);
-  color: #BF1250;
+  color: var(--ictinus-color-text-default-error);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -306,10 +306,10 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 0.25rem;
+  gap: var(--ictinus-spacing-3);
   opacity: 1;
-  color: #BF1250;
-  padding: 0.5rem 0 0;
+  color: var(--ictinus-color-text-default-error);
+  padding: var(--ictinus-spacing-4) 0 0;
   font-family: Roboto;
   font-weight: 400;
   line-height: 1rem;
@@ -326,8 +326,8 @@
 }
 
 .emotion-13 {
-  width: 1rem;
-  height: 1rem;
+  width: var(--ictinus-sizing-4);
+  height: var(--ictinus-sizing-4);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -335,13 +335,13 @@
 }
 
 .emotion-14 {
-  width: 1rem;
-  height: 1rem;
+  width: var(--ictinus-sizing-4);
+  height: var(--ictinus-sizing-4);
 }
 
 .emotion-14 path,
 .emotion-14 rect {
-  fill: #BF1250!important;
+  fill: var(--ictinus-color-text-default-error)!important;
 }
 
 .emotion-20 {
@@ -397,8 +397,8 @@
   position: relative;
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #8EAAEC;
-  border-radius: 0.25rem;
+  box-shadow: 0 0 0 var(--ictinus-border-width-1) var(--ictinus-color-border-color-interactive-default);
+  border-radius: var(--ictinus-border-radius-2);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -407,16 +407,16 @@
   cursor: text;
   height: 3.25rem;
   min-width: 8.75rem;
-  background-color: rgba(200,206,255,0.20);
+  background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
-.emotion-23:hover {
-  background-color: rgba(200,206,255,0.20);
+.emotion-15:hover {
+  background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
-.emotion-23:focus-within {
-  box-shadow: 0 0 0 0.125rem #8EAAEC;
-  background-color: rgba(200,206,255,0.30);
+.emotion-15:focus-within {
+  box-shadow: 0 0 0 var(--ictinus-border-width-2) var(--ictinus-color-border-color-interactive-default);
+  background-color: var(--ictinus-color-palette-secondary-base);
 }
 
 .emotion-26 {
@@ -427,7 +427,7 @@
   letter-spacing: 0.015625rem;
   background: transparent;
   border: none;
-  color: #111530;
+  color: var(--ictinus-color-text-default-primary);
   padding: 0;
   display: block;
   position: relative;
@@ -478,18 +478,18 @@
   font-weight: normal;
 }
 
-.emotion-26:focus-within+label,
-.emotion-26:not(:placeholder-shown)+label {
-  font-weight: 700!important;
+.emotion-18:focus-within+label,
+.emotion-18:not(:placeholder-shown)+label {
+  font-weight: var(--ictinus-weight-bold)!important;
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
   transform: translate(0.1875rem, -35%) scale(0.8);
 }
 
-.emotion-26:focus-within+label {
-  font-weight: 700!important;
-  color: #194DCC;
+.emotion-18:focus-within+label {
+  font-weight: var(--ictinus-weight-bold)!important;
+  color: var(--ictinus-color-text-default-active);
 }
 
 .emotion-26:disabled {
@@ -514,23 +514,23 @@
   cursor: unset;
 }
 
-.emotion-29 {
-  width: 1.25rem;
-  height: 1.25rem;
+.emotion-21 {
+  width: var(--ictinus-sizing-5);
+  height: var(--ictinus-sizing-5);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-30 {
-  width: 1.25rem;
-  height: 1.25rem;
+.emotion-22 {
+  width: var(--ictinus-sizing-5);
+  height: var(--ictinus-sizing-5);
 }
 
-.emotion-30 path,
-.emotion-30 rect {
-  fill: #52567a!important;
+.emotion-22 path,
+.emotion-22 rect {
+  fill: var(--ictinus-color-text-default-secondary)!important;
 }
 
 <div>

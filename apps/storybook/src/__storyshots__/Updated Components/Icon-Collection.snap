@@ -48,8 +48,8 @@
   position: relative;
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: inset 0 0 0 0.0625rem #8EAAEC;
-  border-radius: 624.9375rem;
+  box-shadow: inset 0 0 0 var(--ictinus-border-width-1) var(--ictinus-color-border-color-interactive-default);
+  border-radius: var(--ictinus-border-radius-7);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -58,20 +58,20 @@
   cursor: text;
   height: 2.25rem;
   min-width: unset;
-  background-color: rgba(200,206,255,0.30);
+  background-color: var(--ictinus-color-palette-secondary-base);
   z-index: 1;
-  background: #ffffff;
+  background: var(--ictinus-color-background-default);
   width: 100%;
 }
 
 .emotion-4:hover {
-  background: rgba(200,206,255,0.20);
+  background: var(--ictinus-color-palette-tertiary-muted);
 }
 
 .emotion-4:focus-within {
-  background: rgba(200,206,255,0.20);
+  background: var(--ictinus-color-palette-tertiary-muted);
   outline: none;
-  box-shadow: inset 0 0 0 0.125rem #175BF5;
+  box-shadow: inset 0 0 0 var(--ictinus-border-width-2) var(--ictinus-color-border-color-interactive-active);
 }
 
 .emotion-5 {
@@ -93,8 +93,8 @@
   width: fill-available;
   padding: 0rem 0rem 0rem 0.75rem;
   gap: 0.5rem;
-  padding-right: 1rem;
-  padding-left: 1rem;
+  padding-right: var(--ictinus-spacing-6);
+  padding-left: var(--ictinus-spacing-6);
 }
 
 .emotion-5>div {
@@ -102,8 +102,8 @@
 }
 
 .emotion-6 {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: var(--ictinus-sizing-5);
+  height: var(--ictinus-sizing-5);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -111,13 +111,13 @@
 }
 
 .emotion-7 {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: var(--ictinus-sizing-5);
+  height: var(--ictinus-sizing-5);
 }
 
 .emotion-7 path,
 .emotion-7 rect {
-  fill: #52567a!important;
+  fill: var(--ictinus-color-text-default-secondary)!important;
 }
 
 .emotion-8 {
@@ -133,19 +133,19 @@
 }
 
 .emotion-8 input::-webkit-input-placeholder {
-  color: #52567a;
+  color: var(--ictinus-color-text-default-secondary);
 }
 
 .emotion-8 input::-moz-placeholder {
-  color: #52567a;
+  color: var(--ictinus-color-text-default-secondary);
 }
 
 .emotion-8 input:-ms-input-placeholder {
-  color: #52567a;
+  color: var(--ictinus-color-text-default-secondary);
 }
 
 .emotion-8 input::placeholder {
-  color: #52567a;
+  color: var(--ictinus-color-text-default-secondary);
 }
 
 .emotion-8 input::-webkit-search-cancel-button {
@@ -163,7 +163,7 @@
   letter-spacing: 0.015625rem;
   background: transparent;
   border: none;
-  color: #111530;
+  color: var(--ictinus-color-text-default-primary);
   padding: 0;
   display: block;
   position: relative;
@@ -210,19 +210,19 @@
 }
 
 .emotion-9:focus::-webkit-input-placeholder {
-  color: #52567a;
+  color: var(--ictinus-color-text-default-secondary);
 }
 
 .emotion-9:focus::-moz-placeholder {
-  color: #52567a;
+  color: var(--ictinus-color-text-default-secondary);
 }
 
 .emotion-9:focus:-ms-input-placeholder {
-  color: #52567a;
+  color: var(--ictinus-color-text-default-secondary);
 }
 
 .emotion-9:focus::placeholder {
-  color: #52567a;
+  color: var(--ictinus-color-text-default-secondary);
 }
 
 .emotion-9:not(:focus):placeholder-shown+label {
@@ -231,7 +231,7 @@
 
 .emotion-9:focus-within+label,
 .emotion-9:not(:placeholder-shown)+label {
-  font-weight: 700!important;
+  font-weight: var(--ictinus-weight-bold)!important;
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -239,8 +239,8 @@
 }
 
 .emotion-9:focus-within+label {
-  font-weight: 700!important;
-  color: #194DCC;
+  font-weight: var(--ictinus-weight-bold)!important;
+  color: var(--ictinus-color-text-default-active);
 }
 
 .emotion-9:disabled {
@@ -278,6 +278,25 @@
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   row-gap: 48px;
+}
+
+.emotion-13 {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-14 {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-14 path,
+.emotion-14 rect {
+  fill: var(--ictinus-color-text-default-secondary)!important;
 }
 
 .emotion-15 {
@@ -360,11 +379,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -389,11 +408,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -418,11 +437,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -459,11 +478,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -488,11 +507,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -517,11 +536,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -546,11 +565,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -575,11 +594,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -606,11 +625,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -637,11 +656,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -666,11 +685,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -695,11 +714,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -730,11 +749,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -759,11 +778,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -788,11 +807,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -834,11 +853,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -863,11 +882,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -892,11 +911,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -921,11 +940,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -950,11 +969,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -979,11 +998,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1008,11 +1027,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1037,11 +1056,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1066,11 +1085,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1110,11 +1129,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1139,11 +1158,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1168,11 +1187,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1197,11 +1216,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1226,11 +1245,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1255,11 +1274,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1284,11 +1303,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1313,11 +1332,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1342,11 +1361,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1371,11 +1390,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1400,11 +1419,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1431,11 +1450,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1462,11 +1481,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1493,11 +1512,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1524,11 +1543,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1553,11 +1572,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1595,11 +1614,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1624,11 +1643,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1653,11 +1672,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1682,11 +1701,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1711,11 +1730,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1748,11 +1767,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1777,11 +1796,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1806,11 +1825,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1835,11 +1854,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1864,11 +1883,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1893,11 +1912,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1922,11 +1941,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1951,11 +1970,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1980,11 +1999,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2009,11 +2028,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2038,11 +2057,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2069,11 +2088,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2098,11 +2117,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2127,11 +2146,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2156,11 +2175,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2187,11 +2206,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2229,11 +2248,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2258,11 +2277,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2287,11 +2306,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2316,11 +2335,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2345,11 +2364,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2374,11 +2393,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2403,11 +2422,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2432,11 +2451,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2461,11 +2480,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2490,11 +2509,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2519,11 +2538,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2548,11 +2567,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2577,11 +2596,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2606,11 +2625,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2635,11 +2654,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2664,11 +2683,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2693,11 +2712,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2722,11 +2741,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2755,11 +2774,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2788,11 +2807,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2817,11 +2836,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2846,11 +2865,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2875,11 +2894,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2912,11 +2931,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2941,11 +2960,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2980,11 +2999,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -3019,11 +3038,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -3061,11 +3080,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -3090,11 +3109,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -3119,11 +3138,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -3150,11 +3169,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -3181,11 +3200,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -3210,11 +3229,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -3239,11 +3258,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -3268,11 +3287,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -3297,11 +3316,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -3326,11 +3345,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -3355,11 +3374,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -3384,11 +3403,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -3413,11 +3432,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -3442,11 +3461,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -3471,11 +3490,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -3502,11 +3521,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -3537,11 +3556,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -3566,11 +3585,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -3601,11 +3620,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -3630,11 +3649,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -3663,11 +3682,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -3692,11 +3711,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -3746,11 +3765,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -3775,11 +3794,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -3804,11 +3823,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -3837,11 +3856,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -3866,11 +3885,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -3895,11 +3914,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -3924,11 +3943,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -3953,11 +3972,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -3995,11 +4014,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -4024,11 +4043,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -4053,11 +4072,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -4082,11 +4101,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -4113,11 +4132,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -4150,11 +4169,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -4185,11 +4204,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -4214,11 +4233,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -4245,11 +4264,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -4276,11 +4295,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -4307,11 +4326,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -4336,11 +4355,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -4367,11 +4386,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -4396,11 +4415,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -4425,11 +4444,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -4454,11 +4473,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -4483,11 +4502,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -4512,11 +4531,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -4541,11 +4560,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -4570,11 +4589,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -4599,11 +4618,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -4638,11 +4657,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -4669,11 +4688,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -4698,11 +4717,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -4727,11 +4746,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -4756,11 +4775,11 @@
               style="display: flex; gap: 8px; justify-content: center; align-items: center;"
             >
               <div
-                class="emotion-6"
+                class="emotion-13"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-7"
+                  class="emotion-14"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"

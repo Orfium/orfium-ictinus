@@ -20,8 +20,8 @@
   position: relative;
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: inset 0 0 0 0.0625rem #8EAAEC;
-  border-radius: 624.9375rem;
+  box-shadow: inset 0 0 0 var(--ictinus-border-width-1) var(--ictinus-color-border-color-interactive-default);
+  border-radius: var(--ictinus-border-radius-7);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -30,13 +30,13 @@
   cursor: not-allowed;
   height: 2.25rem;
   min-width: 8.75rem;
-  background-color: rgba(200,206,255,0.30);
+  background-color: var(--ictinus-color-palette-secondary-base);
   z-index: 1;
-  background: #ffffff;
+  background: var(--ictinus-color-background-default);
 }
 
 .emotion-1:focus-within {
-  box-shadow: 0 0 0 0.125rem transparent;
+  box-shadow: 0 0 0 var(--ictinus-border-width-2) transparent;
 }
 
 .emotion-2 {
@@ -58,8 +58,8 @@
   width: fill-available;
   padding: 0rem 0rem 0rem 0.75rem;
   gap: 0.5rem;
-  padding-right: 1rem;
-  padding-left: 1rem;
+  padding-right: var(--ictinus-spacing-6);
+  padding-left: var(--ictinus-spacing-6);
 }
 
 .emotion-2>div {
@@ -67,8 +67,8 @@
 }
 
 .emotion-3 {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: var(--ictinus-sizing-5);
+  height: var(--ictinus-sizing-5);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -76,13 +76,13 @@
 }
 
 .emotion-4 {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: var(--ictinus-sizing-5);
+  height: var(--ictinus-sizing-5);
 }
 
 .emotion-4 path,
 .emotion-4 rect {
-  fill: #52567a!important;
+  fill: var(--ictinus-color-text-default-secondary)!important;
 }
 
 .emotion-5 {
@@ -98,19 +98,19 @@
 }
 
 .emotion-5 input::-webkit-input-placeholder {
-  color: #52567a;
+  color: var(--ictinus-color-text-default-secondary);
 }
 
 .emotion-5 input::-moz-placeholder {
-  color: #52567a;
+  color: var(--ictinus-color-text-default-secondary);
 }
 
 .emotion-5 input:-ms-input-placeholder {
-  color: #52567a;
+  color: var(--ictinus-color-text-default-secondary);
 }
 
 .emotion-5 input::placeholder {
-  color: #52567a;
+  color: var(--ictinus-color-text-default-secondary);
 }
 
 .emotion-5 input::-webkit-search-cancel-button {
@@ -128,7 +128,7 @@
   letter-spacing: 0.015625rem;
   background: transparent;
   border: none;
-  color: #111530;
+  color: var(--ictinus-color-text-default-primary);
   padding: 0;
   display: block;
   position: relative;
@@ -175,19 +175,19 @@
 }
 
 .emotion-6:focus::-webkit-input-placeholder {
-  color: #52567a;
+  color: var(--ictinus-color-text-default-secondary);
 }
 
 .emotion-6:focus::-moz-placeholder {
-  color: #52567a;
+  color: var(--ictinus-color-text-default-secondary);
 }
 
 .emotion-6:focus:-ms-input-placeholder {
-  color: #52567a;
+  color: var(--ictinus-color-text-default-secondary);
 }
 
 .emotion-6:focus::placeholder {
-  color: #52567a;
+  color: var(--ictinus-color-text-default-secondary);
 }
 
 .emotion-6:not(:focus):placeholder-shown+label {
@@ -196,7 +196,7 @@
 
 .emotion-6:focus-within+label,
 .emotion-6:not(:placeholder-shown)+label {
-  font-weight: 700!important;
+  font-weight: var(--ictinus-weight-bold)!important;
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -204,8 +204,8 @@
 }
 
 .emotion-6:focus-within+label {
-  font-weight: 700!important;
-  color: #194DCC;
+  font-weight: var(--ictinus-weight-bold)!important;
+  color: var(--ictinus-color-text-default-active);
 }
 
 .emotion-6:disabled {

@@ -20,14 +20,14 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 1.25rem;
-  height: 1.25rem;
-  border-radius: 624.9375rem;
-  border: 0.0625rem solid;
-  border-color: #B8CCFA;
+  width: var(--ictinus-sizing-5);
+  height: var(--ictinus-sizing-5);
+  border-radius: var(--ictinus-border-radius-7);
+  border: var(--ictinus-border-width-1) solid;
+  border-color: var(--ictinus-color-palette-primary-alt-contrast);
   box-sizing: border-box;
-  background-color: #DAE4FB;
-  color: #194DCC;
+  background-color: var(--ictinus-color-palette-primary-alt-base);
+  color: var(--ictinus-color-text-default-active);
   overflow: hidden;
   position: relative;
   -webkit-align-items: center;
@@ -45,26 +45,25 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 0.875rem;
-  font-size: 0.625rem;
-  letter-spacing: 0.00625rem;
+  font-family: var(--ictinus-weight-medium);
+  font-size: var(--ictinus-font-size-1);
+  line-height: var(--ictinus-line-height-1);
+  letter-spacing: var(--ictinus-letter-spacing-1);
 }
 
 .emotion-1 img {
-  border-radius: 624.9375rem;
+  border-radius: var(--ictinus-border-radius-7);
   width: 100%;
   height: 100%;
 }
 
 .emotion-4 {
-  width: 1rem;
-  height: 1rem;
+  width: calc(var(--ictinus-sizing-5) * 0.8);
+  height: calc(var(--ictinus-sizing-5) * 0.8);
 }
 
 .emotion-4 path {
-  fill: #194DCC;
+  fill: var(--ictinus-color-text-default-active);
 }
 
 <div>
