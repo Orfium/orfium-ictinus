@@ -131,6 +131,13 @@ export const TextFieldStatuses = {
           }}
         />
         <TextField
+          label="Warning"
+          status={{
+            type: 'warning',
+            hintMessage,
+          }}
+        />
+        <TextField
           label={'Read-only'}
           status={{
             type: 'read-only',

@@ -39,7 +39,7 @@ export default {
   argTypes: {
     disableDates: { type: 'select', options: Object.keys(options), mapping: options },
     filterType: { type: 'select', options: ['preset', 'added'] },
-    status: { type: 'select', options: ['normal', 'error', 'read-only'] },
+    status: { type: 'select', options: ['normal', 'error', 'warning', 'read-only'] },
     isDisabled: { type: 'boolean' },
   },
 };
@@ -312,6 +312,31 @@ export const DatePickerAndDateRangePickerStatuses = {
                   label: 'Error',
                   status: {
                     type: 'error',
+                    hintMessage,
+                  },
+                }}
+              />
+            );
+          }}
+        </Function>
+        <Function>
+          {() => {
+            const [date, setDate] = useState({
+              from: currentDay.toDate(),
+              to: currentDay.toDate(),
+            });
+            return (
+              <DatePicker
+                value={date}
+                isRangePicker={isRangePicker}
+                onChange={setDate}
+                isClearable={true}
+                disableDates={disableDates}
+                dateFormatOverride={dateFormatOverride}
+                inputProps={{
+                  label: 'Warning',
+                  status: {
+                    type: 'warning',
                     hintMessage,
                   },
                 }}
