@@ -20,7 +20,7 @@ export default {
     label: 'NumberField',
   },
   argTypes: {
-    status: { type: 'select', options: ['normal', 'error', 'read-only'] },
+    status: { type: 'select', options: ['normal', 'error', 'warning', 'read-only'] },
   },
 };
 
@@ -184,6 +184,13 @@ export const NumberFieldStatuses = {
             }}
           />
           <NumberField
+            label="Warning"
+            status={{
+              type: 'warning',
+              hintMessage,
+            }}
+          />
+          <NumberField
             label="Read-only"
             status={{
               type: 'read-only',
@@ -205,6 +212,14 @@ export const NumberFieldStatuses = {
             label="Error"
             status={{
               type: 'error',
+              hintMessage,
+            }}
+          />
+          <NumberField
+            size="compact"
+            label="Warning"
+            status={{
+              type: 'warning',
               hintMessage,
             }}
           />

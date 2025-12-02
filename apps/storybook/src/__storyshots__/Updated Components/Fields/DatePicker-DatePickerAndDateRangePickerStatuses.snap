@@ -392,7 +392,45 @@
   fill: #BF1250!important;
 }
 
-.emotion-24 {
+.emotion-32 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.25rem;
+  opacity: 1;
+  color: #8B391D;
+  padding: 0.5rem 0 0;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-32 span {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  padding: 0;
+}
+
+.emotion-34 {
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-34 path,
+.emotion-34 rect {
+  fill: #F5A300!important;
+}
+
+.emotion-36 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -420,16 +458,16 @@
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-24:hover {
+.emotion-36:hover {
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-24:focus-within {
+.emotion-36:focus-within {
   box-shadow: 0 0 0 0.125rem #8EAAEC;
   background-color: rgba(200,206,255,0.30);
 }
 
-.emotion-27 {
+.emotion-39 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -448,48 +486,48 @@
   min-width: 100%;
 }
 
-.emotion-27::-webkit-input-placeholder {
+.emotion-39::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-27::-moz-placeholder {
+.emotion-39::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-27:-ms-input-placeholder {
+.emotion-39:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-27::placeholder {
+.emotion-39::placeholder {
   color: transparent;
 }
 
-.emotion-27:focus {
+.emotion-39:focus {
   outline: none;
 }
 
-.emotion-27:focus::-webkit-input-placeholder {
+.emotion-39:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-27:focus::-moz-placeholder {
+.emotion-39:focus::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-27:focus:-ms-input-placeholder {
+.emotion-39:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-27:focus::placeholder {
+.emotion-39:focus::placeholder {
   color: transparent;
 }
 
-.emotion-27:not(:focus):placeholder-shown+label {
+.emotion-39:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-27:focus-within+label,
-.emotion-27:not(:placeholder-shown)+label {
+.emotion-39:focus-within+label,
+.emotion-39:not(:placeholder-shown)+label {
   font-weight: 700!important;
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -497,16 +535,16 @@
   transform: translate(0.1875rem, -35%) scale(0.8);
 }
 
-.emotion-27:focus-within+label {
+.emotion-39:focus-within+label {
   font-weight: 700!important;
   color: #194DCC;
 }
 
-.emotion-27:disabled {
+.emotion-39:disabled {
   cursor: text;
 }
 
-.emotion-30 {
+.emotion-42 {
   width: 1.25rem;
   height: 1.25rem;
   display: -webkit-box;
@@ -697,7 +735,7 @@
           <div>
             <div>
               <div
-                class="emotion-24"
+                class="emotion-2"
               >
                 <div
                   class="emotion-3"
@@ -708,7 +746,100 @@
                     <input
                       aria-describedby="textfield__00_hintMessage"
                       aria-invalid="false"
-                      class="emotion-27"
+                      class="emotion-5"
+                      data-testid="input"
+                      id="textfield__00"
+                      placeholder="Warning"
+                      value="11/03/2020"
+                    />
+                    <label
+                      class="emotion-6"
+                      for="textfield__00"
+                    >
+                      Warning
+                       
+                    </label>
+                  </div>
+                  <div
+                    aria-hidden="false"
+                    class="emotion-7"
+                  >
+                    <div
+                      class="emotion-8"
+                      data-slot="icon"
+                      data-testid="calendar_button"
+                      tabindex="0"
+                    >
+                      <svg
+                        class="emotion-9"
+                        fill="none"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M4.48202 17.5C3.9305 17.5 3.46229 17.3264 3.07738 16.9791C2.69246 16.6318 2.5 16.2093 2.5 15.7117V5.75467C2.5 5.25707 2.69246 4.83463 3.07738 4.48735C3.46229 4.14006 3.9305 3.96642 4.48202 3.96642H4.95349V3.29616C4.95349 3.07602 5.03957 2.88829 5.21172 2.73296C5.38386 2.57765 5.59193 2.5 5.83594 2.5C6.07993 2.5 6.288 2.57765 6.46015 2.73296C6.63229 2.88829 6.71836 3.07602 6.71836 3.29616V3.96642H13.3126V3.28217C13.3126 3.06668 13.3974 2.88245 13.567 2.72947C13.7365 2.57649 13.9407 2.5 14.1796 2.5C14.4184 2.5 14.6226 2.57649 14.7921 2.72947C14.9617 2.88245 15.0465 3.06668 15.0465 3.28217V3.96642H15.518C16.0695 3.96642 16.5377 4.14006 16.9226 4.48735C17.3075 4.83463 17.5 5.25707 17.5 5.75467V15.7117C17.5 16.2093 17.3075 16.6318 16.9226 16.9791C16.5377 17.3264 16.0695 17.5 15.518 17.5H4.48202ZM4.48202 15.9356H15.518C15.58 15.9356 15.6369 15.9123 15.6886 15.8657C15.7403 15.819 15.7661 15.7677 15.7661 15.7117V8.44684H4.23386V15.7117C4.23386 15.7677 4.2597 15.819 4.3114 15.8657C4.3631 15.9123 4.41998 15.9356 4.48202 15.9356Z"
+                          fill="#6265AD"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="emotion-32"
+                data-testid="error"
+              >
+                <div
+                  class="emotion-21"
+                  data-slot="icon"
+                >
+                  <svg
+                    class="emotion-34"
+                    fill="none"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M6.88122 2.6299C7.85478 2.20997 8.89481 2 10.0013 2C11.1111 2 12.1541 2.21043 13.1301 2.6313C14.1062 3.05217 14.9553 3.62335 15.6773 4.34484C16.3994 5.06632 16.967 5.91165 17.3802 6.88083C17.7934 7.85 18 8.88962 18 9.99969C18 11.1098 17.7933 12.1529 17.3799 13.1293C16.9666 14.1056 16.3986 14.9549 15.6761 15.6771C14.9536 16.3993 14.1042 16.967 13.1278 17.3802C12.1514 17.7934 11.1084 18 9.9987 18C8.89371 18 7.8553 17.7933 6.88345 17.3799C5.91159 16.9666 5.06506 16.3987 4.34387 15.6764C3.62269 14.954 3.05175 14.1046 2.63105 13.1281C2.21035 12.1516 2 11.1085 2 9.9987C2 8.89221 2.21005 7.85238 2.63016 6.87922C3.05026 5.90604 3.62041 5.0595 4.34059 4.33962C5.06076 3.61975 5.90763 3.04984 6.88122 2.6299ZM10.6094 6.24514C10.4461 6.08172 10.2495 6.00001 10.0197 6.00001C9.78983 6.00001 9.59317 6.08172 9.42969 6.24514C9.26622 6.40857 9.18448 6.60517 9.18448 6.83494V9.94177C9.18448 10.1715 9.26613 10.3681 9.42944 10.5316C9.59274 10.695 9.78931 10.7767 10.0192 10.7767C10.249 10.7767 10.4457 10.695 10.6091 10.5316C10.7726 10.3681 10.8544 10.1715 10.8544 9.94177V6.83494C10.8544 6.60517 10.7727 6.40857 10.6094 6.24514ZM9.9751 12.1C10.5964 12.1 11.1001 12.6037 11.1001 13.225C11.1001 13.8463 10.5964 14.35 9.9751 14.35C9.35378 14.35 8.8501 13.8463 8.8501 13.225C8.8501 12.6037 9.35378 12.1 9.9751 12.1Z"
+                      fill="#6265AD"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <span
+                  id="textfield__00_hintMessage"
+                >
+                  Hint Message
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div>
+        <div
+          class="emotion-1"
+        >
+          <div>
+            <div>
+              <div
+                class="emotion-36"
+              >
+                <div
+                  class="emotion-3"
+                >
+                  <div
+                    class="emotion-4"
+                  >
+                    <input
+                      aria-describedby="textfield__00_hintMessage"
+                      aria-invalid="false"
+                      class="emotion-39"
                       data-testid="input"
                       disabled=""
                       id="textfield__00"
@@ -729,7 +860,7 @@
                     class="emotion-7"
                   >
                     <div
-                      class="emotion-30"
+                      class="emotion-42"
                       data-slot="icon"
                     >
                       <svg

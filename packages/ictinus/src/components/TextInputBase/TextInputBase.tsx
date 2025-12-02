@@ -4,12 +4,11 @@ import type { FCC } from 'react';
 import React from 'react';
 import isEqual from 'react-fast-compare';
 import { generateTestDataId } from 'utils/helpers';
-import type { ComponentSizes } from 'utils/types';
-import type { TestProps } from 'utils/types';
+import type { ComponentSizes, TestProps } from 'utils/types';
 
-import { hintMessageStyle, textFieldStyle, wrapperStyle } from './TextInputBase.style';
-import Icon from 'components/Icon';
 import type { AcceptedIconNames } from 'components/Icon';
+import Icon from 'components/Icon';
+import { hintMessageStyle, textFieldStyle, wrapperStyle } from './TextInputBase.style';
 
 export type TextInputBaseProps = {
   /** The label of the text field that will be used as a placeholder and a label */
@@ -26,7 +25,7 @@ export type TextInputBaseProps = {
   isDisabled?: boolean;
   /** The status of the TextInput with an optional hint message */
   status?: {
-    type: 'normal' | 'error' | 'read-only';
+    type: 'normal' | 'error' | 'warning' | 'read-only';
     hintMessage?: string;
     id?: string;
   };
@@ -58,18 +57,25 @@ const TextInputBase: FCC<
 }) => {
   const theme = useTheme();
 
+  const statusColor = {
+    error: theme.tokens.colors.get('textColor.default.error'),
+    warning: theme.tokens.colors.get('indicators.warning'),
+  };
+
   const hintMessageToShow = status.hintMessage && (
     <div
       data-testid={generateTestDataId('error', dataTestId)}
       css={hintMessageStyle({ status, isDisabled })}
     >
-      {!isDisabled && status.type === 'error' && size === 'normal' && (
-        <Icon
-          color={theme.tokens.colors.get('textColor.default.error')}
-          name="warning"
-          size={theme.dimension.sizing.get('icon.sm')}
-        />
-      )}
+      {!isDisabled &&
+        (status.type === 'error' || status.type === 'warning') &&
+        size === 'normal' && (
+          <Icon
+            color={statusColor[status.type]}
+            name="warning"
+            size={theme.dimension.sizing.get('icon.sm')}
+          />
+        )}
       <span id={status.id}>{status.hintMessage}</span>
     </div>
   );

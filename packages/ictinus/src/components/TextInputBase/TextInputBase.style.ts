@@ -204,16 +204,23 @@ export const inputStyle =
 export const hintMessageStyle =
   ({ status, isDisabled }: Partial<TextInputBaseProps>) =>
   (theme: Theme): SerializedStyles => {
+    const statusColor = {
+      error: theme.tokens.colors.get('textColor.default.error'),
+      warning: theme.tokens.colors.get('textColor.default.warning'),
+    };
+
+    const color =
+      !isDisabled && status?.type && statusColor[status.type]
+        ? statusColor[status.type]
+        : theme.tokens.colors.get('textColor.default.secondary');
+
     return css(
       {
         display: 'flex',
         alignItems: 'center',
         gap: theme.dimension.spacing.get('xs'),
         opacity: isDisabled ? theme.tokens.disabledState.get('default') : 1,
-        color:
-          status?.type === 'error' && !isDisabled
-            ? theme.tokens.colors.get('textColor.default.error')
-            : theme.tokens.colors.get('textColor.default.secondary'),
+        color,
         padding: `${theme.dimension.spacing.get('sm')} 0 0`,
         span: {
           alignItems: 'stretch',

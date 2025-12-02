@@ -36,7 +36,7 @@ export default {
     isSearchable: false,
   },
   argTypes: {
-    status: { type: 'select', options: ['normal', 'error', 'read-only'] },
+    status: { type: 'select', options: ['normal', 'error', 'warning', 'read-only'] },
   },
 };
 
@@ -266,6 +266,25 @@ export const SelectStatuses = {
                 label={'Error'}
                 status={{
                   type: 'error',
+                  hintMessage,
+                }}
+                options={options}
+                selectedOption={selectedOption}
+                onChange={setSelectedOption}
+                isCreatable={isCreatable}
+                isVirtualized={isVirtualized}
+              />
+            );
+          }}
+        </Function>
+        <Function>
+          {() => {
+            const [selectedOption, setSelectedOption] = useState(defaultValue);
+            return (
+              <Select
+                label="Warning"
+                status={{
+                  type: 'warning',
                   hintMessage,
                 }}
                 options={options}

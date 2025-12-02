@@ -338,7 +338,45 @@
   fill: #BF1250!important;
 }
 
-.emotion-17 {
+.emotion-23 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.25rem;
+  opacity: 1;
+  color: #8B391D;
+  padding: 0.5rem 0 0;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-23 span {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  padding: 0;
+}
+
+.emotion-25 {
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-25 path,
+.emotion-25 rect {
+  fill: #F5A300!important;
+}
+
+.emotion-26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -366,16 +404,16 @@
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-17:hover {
+.emotion-26:hover {
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-17:focus-within {
+.emotion-26:focus-within {
   box-shadow: 0 0 0 0.125rem #8EAAEC;
   background-color: rgba(200,206,255,0.30);
 }
 
-.emotion-21 {
+.emotion-30 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -394,48 +432,48 @@
   min-width: 100%;
 }
 
-.emotion-21::-webkit-input-placeholder {
+.emotion-30::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-21::-moz-placeholder {
+.emotion-30::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-21:-ms-input-placeholder {
+.emotion-30:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-21::placeholder {
+.emotion-30::placeholder {
   color: transparent;
 }
 
-.emotion-21:focus {
+.emotion-30:focus {
   outline: none;
 }
 
-.emotion-21:focus::-webkit-input-placeholder {
+.emotion-30:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-21:focus::-moz-placeholder {
+.emotion-30:focus::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-21:focus:-ms-input-placeholder {
+.emotion-30:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-21:focus::placeholder {
+.emotion-30:focus::placeholder {
   color: transparent;
 }
 
-.emotion-21:not(:focus):placeholder-shown+label {
+.emotion-30:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-21:focus-within+label,
-.emotion-21:not(:placeholder-shown)+label {
+.emotion-30:focus-within+label,
+.emotion-30:not(:placeholder-shown)+label {
   font-weight: 700!important;
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -443,16 +481,16 @@
   transform: translate(0.1875rem, -35%) scale(0.8);
 }
 
-.emotion-21:focus-within+label {
+.emotion-30:focus-within+label {
   font-weight: 700!important;
   color: #194DCC;
 }
 
-.emotion-21:disabled {
+.emotion-30:disabled {
   cursor: text;
 }
 
-.emotion-23 {
+.emotion-32 {
   min-width: 2.75rem;
   overflow: visible;
   display: -webkit-box;
@@ -470,7 +508,7 @@
   cursor: unset;
 }
 
-.emotion-24 {
+.emotion-33 {
   width: 1.25rem;
   height: 1.25rem;
   display: -webkit-box;
@@ -479,17 +517,17 @@
   display: flex;
 }
 
-.emotion-25 {
+.emotion-34 {
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-25 path,
-.emotion-25 rect {
+.emotion-34 path,
+.emotion-34 rect {
   fill: #52567a!important;
 }
 
-.emotion-28 {
+.emotion-37 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -517,16 +555,16 @@
   background-color: rgba(200,206,255,0.30);
 }
 
-.emotion-28:hover {
+.emotion-37:hover {
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-28:focus-within {
+.emotion-37:focus-within {
   box-shadow: 0 0 0 0.125rem #175BF5;
   background-color: rgba(200,206,255,0.30);
 }
 
-.emotion-32 {
+.emotion-41 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1rem;
@@ -544,61 +582,61 @@
   min-width: 100%;
 }
 
-.emotion-32::-webkit-input-placeholder {
+.emotion-41::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-32::-moz-placeholder {
+.emotion-41::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-32:-ms-input-placeholder {
+.emotion-41:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-32::placeholder {
+.emotion-41::placeholder {
   color: transparent;
 }
 
-.emotion-32:focus {
+.emotion-41:focus {
   outline: none;
 }
 
-.emotion-32:focus::-webkit-input-placeholder {
+.emotion-41:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-32:focus::-moz-placeholder {
+.emotion-41:focus::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-32:focus:-ms-input-placeholder {
+.emotion-41:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-32:focus::placeholder {
+.emotion-41:focus::placeholder {
   color: transparent;
 }
 
-.emotion-32:not(:focus):placeholder-shown+label {
+.emotion-41:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-32:focus-within+label,
-.emotion-32:not(:placeholder-shown)+label {
+.emotion-41:focus-within+label,
+.emotion-41:not(:placeholder-shown)+label {
   display: none;
 }
 
-.emotion-32:focus-within+label {
+.emotion-41:focus-within+label {
   font-weight: 700!important;
   color: #194DCC;
 }
 
-.emotion-32:disabled {
+.emotion-41:disabled {
   cursor: not-allowed;
 }
 
-.emotion-33 {
+.emotion-42 {
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
@@ -634,7 +672,7 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-35 {
+.emotion-44 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -662,16 +700,16 @@
   background-color: #FFD6E5;
 }
 
-.emotion-35:hover {
+.emotion-44:hover {
   background-color: #FFEBF1;
 }
 
-.emotion-35:focus-within {
+.emotion-44:focus-within {
   box-shadow: 0 0 0 0.125rem #175BF5;
   background-color: rgba(200,206,255,0.30);
 }
 
-.emotion-40 {
+.emotion-49 {
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
@@ -707,7 +745,7 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-42 {
+.emotion-58 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -735,16 +773,16 @@
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-42:hover {
+.emotion-58:hover {
   background-color: rgba(200,206,255,0.20);
 }
 
-.emotion-42:focus-within {
+.emotion-58:focus-within {
   box-shadow: 0 0 0 0.125rem #8EAAEC;
   background-color: rgba(200,206,255,0.30);
 }
 
-.emotion-46 {
+.emotion-62 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1rem;
@@ -762,61 +800,61 @@
   min-width: 100%;
 }
 
-.emotion-46::-webkit-input-placeholder {
+.emotion-62::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-46::-moz-placeholder {
+.emotion-62::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-46:-ms-input-placeholder {
+.emotion-62:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-46::placeholder {
+.emotion-62::placeholder {
   color: transparent;
 }
 
-.emotion-46:focus {
+.emotion-62:focus {
   outline: none;
 }
 
-.emotion-46:focus::-webkit-input-placeholder {
+.emotion-62:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-46:focus::-moz-placeholder {
+.emotion-62:focus::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-46:focus:-ms-input-placeholder {
+.emotion-62:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-46:focus::placeholder {
+.emotion-62:focus::placeholder {
   color: transparent;
 }
 
-.emotion-46:not(:focus):placeholder-shown+label {
+.emotion-62:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-46:focus-within+label,
-.emotion-46:not(:placeholder-shown)+label {
+.emotion-62:focus-within+label,
+.emotion-62:not(:placeholder-shown)+label {
   display: none;
 }
 
-.emotion-46:focus-within+label {
+.emotion-62:focus-within+label {
   font-weight: 700!important;
   color: #194DCC;
 }
 
-.emotion-46:disabled {
+.emotion-62:disabled {
   cursor: text;
 }
 
-.emotion-48 {
+.emotion-64 {
   min-width: 1.75rem;
   overflow: visible;
   display: -webkit-box;
@@ -834,13 +872,13 @@
   cursor: unset;
 }
 
-.emotion-50 {
+.emotion-66 {
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-50 path,
-.emotion-50 rect {
+.emotion-66 path,
+.emotion-66 rect {
   fill: #52567a!important;
 }
 
@@ -1000,7 +1038,7 @@
     >
       <div>
         <div
-          class="emotion-17"
+          class="emotion-1"
         >
           <div
             class="emotion-2"
@@ -1023,7 +1061,89 @@
                     aria-roledescription="Number field"
                     autocomplete="off"
                     autocorrect="off"
-                    class="emotion-21"
+                    class="emotion-5"
+                    data-rac=""
+                    data-testid="input"
+                    id="numberfield__00"
+                    inputmode="numeric"
+                    placeholder="Warning"
+                    spellcheck="false"
+                    tabindex="0"
+                    title=""
+                    type="text"
+                    value=""
+                  />
+                  <label
+                    class="emotion-6"
+                    for="numberfield__00"
+                  >
+                    Warning
+                     
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="emotion-23"
+          data-testid="error"
+        >
+          <div
+            class="emotion-15"
+            data-slot="icon"
+          >
+            <svg
+              class="emotion-25"
+              fill="none"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M6.88122 2.6299C7.85478 2.20997 8.89481 2 10.0013 2C11.1111 2 12.1541 2.21043 13.1301 2.6313C14.1062 3.05217 14.9553 3.62335 15.6773 4.34484C16.3994 5.06632 16.967 5.91165 17.3802 6.88083C17.7934 7.85 18 8.88962 18 9.99969C18 11.1098 17.7933 12.1529 17.3799 13.1293C16.9666 14.1056 16.3986 14.9549 15.6761 15.6771C14.9536 16.3993 14.1042 16.967 13.1278 17.3802C12.1514 17.7934 11.1084 18 9.9987 18C8.89371 18 7.8553 17.7933 6.88345 17.3799C5.91159 16.9666 5.06506 16.3987 4.34387 15.6764C3.62269 14.954 3.05175 14.1046 2.63105 13.1281C2.21035 12.1516 2 11.1085 2 9.9987C2 8.89221 2.21005 7.85238 2.63016 6.87922C3.05026 5.90604 3.62041 5.0595 4.34059 4.33962C5.06076 3.61975 5.90763 3.04984 6.88122 2.6299ZM10.6094 6.24514C10.4461 6.08172 10.2495 6.00001 10.0197 6.00001C9.78983 6.00001 9.59317 6.08172 9.42969 6.24514C9.26622 6.40857 9.18448 6.60517 9.18448 6.83494V9.94177C9.18448 10.1715 9.26613 10.3681 9.42944 10.5316C9.59274 10.695 9.78931 10.7767 10.0192 10.7767C10.249 10.7767 10.4457 10.695 10.6091 10.5316C10.7726 10.3681 10.8544 10.1715 10.8544 9.94177V6.83494C10.8544 6.60517 10.7727 6.40857 10.6094 6.24514ZM9.9751 12.1C10.5964 12.1 11.1001 12.6037 11.1001 13.225C11.1001 13.8463 10.5964 14.35 9.9751 14.35C9.35378 14.35 8.8501 13.8463 8.8501 13.225C8.8501 12.6037 9.35378 12.1 9.9751 12.1Z"
+                fill="#6265AD"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <span
+            id="numberfield__00_hintMessage"
+          >
+            Hint Message
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div>
+        <div
+          class="emotion-26"
+        >
+          <div
+            class="emotion-2"
+          >
+            <div
+              class="emotion-3"
+            >
+              <div
+                class="react-aria-NumberField"
+                data-rac=""
+              >
+                <div
+                  class="emotion-4"
+                  data-rac=""
+                  role="group"
+                >
+                  <input
+                    aria-describedby="numberfield__00_hintMessage"
+                    aria-invalid="false"
+                    aria-roledescription="Number field"
+                    autocomplete="off"
+                    autocorrect="off"
+                    class="emotion-30"
                     data-disabled="true"
                     data-rac=""
                     data-testid="input"
@@ -1049,14 +1169,14 @@
             </div>
             <div
               aria-hidden="false"
-              class="emotion-23"
+              class="emotion-32"
             >
               <div
-                class="emotion-24"
+                class="emotion-33"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-25"
+                  class="emotion-34"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1091,7 +1211,7 @@
     >
       <div>
         <div
-          class="emotion-28"
+          class="emotion-37"
         >
           <div
             class="emotion-2"
@@ -1114,7 +1234,7 @@
                     aria-roledescription="Number field"
                     autocomplete="off"
                     autocorrect="off"
-                    class="emotion-32"
+                    class="emotion-41"
                     data-rac=""
                     data-testid="input"
                     id="numberfield__00"
@@ -1127,7 +1247,7 @@
                     value=""
                   />
                   <label
-                    class="emotion-33"
+                    class="emotion-42"
                     for="numberfield__00"
                   >
                     Number
@@ -1155,7 +1275,7 @@
     >
       <div>
         <div
-          class="emotion-35"
+          class="emotion-44"
         >
           <div
             class="emotion-2"
@@ -1178,7 +1298,7 @@
                     aria-roledescription="Number field"
                     autocomplete="off"
                     autocorrect="off"
-                    class="emotion-32"
+                    class="emotion-41"
                     data-invalid="true"
                     data-rac=""
                     data-testid="input"
@@ -1192,7 +1312,7 @@
                     value=""
                   />
                   <label
-                    class="emotion-40"
+                    class="emotion-49"
                     for="numberfield__00"
                   >
                     Error
@@ -1220,7 +1340,7 @@
     >
       <div>
         <div
-          class="emotion-42"
+          class="emotion-37"
         >
           <div
             class="emotion-2"
@@ -1243,7 +1363,71 @@
                     aria-roledescription="Number field"
                     autocomplete="off"
                     autocorrect="off"
-                    class="emotion-46"
+                    class="emotion-41"
+                    data-rac=""
+                    data-testid="input"
+                    id="numberfield__00"
+                    inputmode="numeric"
+                    placeholder=" "
+                    spellcheck="false"
+                    tabindex="0"
+                    title=""
+                    type="text"
+                    value=""
+                  />
+                  <label
+                    class="emotion-42"
+                    for="numberfield__00"
+                  >
+                    Warning
+                     
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="emotion-23"
+          data-testid="error"
+        >
+          <span
+            id="numberfield__00_hintMessage"
+          >
+            Hint Message
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div>
+        <div
+          class="emotion-58"
+        >
+          <div
+            class="emotion-2"
+          >
+            <div
+              class="emotion-3"
+            >
+              <div
+                class="react-aria-NumberField"
+                data-rac=""
+              >
+                <div
+                  class="emotion-4"
+                  data-rac=""
+                  role="group"
+                >
+                  <input
+                    aria-describedby="numberfield__00_hintMessage"
+                    aria-invalid="false"
+                    aria-roledescription="Number field"
+                    autocomplete="off"
+                    autocorrect="off"
+                    class="emotion-62"
                     data-disabled="true"
                     data-rac=""
                     data-testid="input"
@@ -1258,7 +1442,7 @@
                     value=""
                   />
                   <label
-                    class="emotion-33"
+                    class="emotion-42"
                     for="numberfield__00"
                   >
                     Read-only
@@ -1269,14 +1453,14 @@
             </div>
             <div
               aria-hidden="false"
-              class="emotion-48"
+              class="emotion-64"
             >
               <div
                 class="emotion-15"
                 data-slot="icon"
               >
                 <svg
-                  class="emotion-50"
+                  class="emotion-66"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"

@@ -22,7 +22,7 @@ export default {
   },
 
   argTypes: {
-    status: { type: 'select', options: ['normal', 'error', 'read-only'] },
+    status: { type: 'select', options: ['normal', 'error', 'warning', 'read-only'] },
     suffixIcon: { type: 'select', options: ['', ...Object.keys(iconSelector)] },
   },
 };
@@ -127,6 +127,13 @@ export const TextFieldStatuses = {
           label={'Error'}
           status={{
             type: 'error',
+            hintMessage,
+          }}
+        />
+        <TextField
+          label="Warning"
+          status={{
+            type: 'warning',
             hintMessage,
           }}
         />

@@ -28,7 +28,7 @@ export default {
   },
 
   argTypes: {
-    status: { type: 'select', options: ['normal', 'error', 'read-only'] },
+    status: { type: 'select', options: ['normal', 'error', 'warning', 'read-only'] },
   },
 };
 
@@ -72,7 +72,8 @@ export const TextAreaWithCounter = {
       <Function>
         {() => {
           const [value, setValue] = useState('');
-          const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => setValue(e.target.value);
+          const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) =>
+            setValue(e.target.value);
           return (
             <TextArea
               label={'TextArea'}
@@ -118,6 +119,16 @@ export const TextAreaStatuses = {
             isResizeEnabled={false}
             status={{
               type: 'error',
+              hintMessage,
+            }}
+          />
+          <TextArea
+            label="Warning"
+            cols={10}
+            rows={5}
+            isResizeEnabled={false}
+            status={{
+              type: 'warning',
               hintMessage,
             }}
           />
@@ -170,7 +181,8 @@ export const Playground = {
         <Function>
           {() => {
             const [value, setValue] = useState('');
-            const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => setValue(e.target.value);
+            const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) =>
+              setValue(e.target.value);
             return (
               <TextArea
                 value={value}
