@@ -1,5 +1,11 @@
 # @orfium/ictinus
 
+## 5.42.5
+
+### Patch Changes
+
+- 68f683e: add warning color to text field
+
 ## 5.42.4
 
 ### Patch Changes
