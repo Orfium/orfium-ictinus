@@ -415,10 +415,10 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 0.25rem;
+  gap: var(--ictinus-spacing-3);
   opacity: 1;
-  color: #8B391D;
-  padding: 0.5rem 0 0;
+  color: var(--ictinus-color-text-default-warning);
+  padding: var(--ictinus-spacing-4) 0 0;
   font-family: Roboto;
   font-weight: 400;
   line-height: 1rem;
@@ -435,13 +435,13 @@
 }
 
 .emotion-40 {
-  width: 1rem;
-  height: 1rem;
+  width: var(--ictinus-sizing-4);
+  height: var(--ictinus-sizing-4);
 }
 
 .emotion-40 path,
 .emotion-40 rect {
-  fill: #F5A300!important;
+  fill: var(--ictinus-color-indicators-warning)!important;
 }
 
 .emotion-43 {
@@ -472,11 +472,11 @@
   background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
-.emotion-29:hover {
+.emotion-43:hover {
   background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
-.emotion-29:focus-within {
+.emotion-43:focus-within {
   box-shadow: 0 0 0 var(--ictinus-border-width-2) var(--ictinus-color-border-color-interactive-default);
   background-color: var(--ictinus-color-palette-secondary-base);
 }
@@ -540,8 +540,8 @@
   font-weight: normal;
 }
 
-.emotion-32:focus-within+label,
-.emotion-32:not(:placeholder-shown)+label {
+.emotion-46:focus-within+label,
+.emotion-46:not(:placeholder-shown)+label {
   font-weight: var(--ictinus-weight-bold)!important;
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -549,7 +549,7 @@
   transform: translate(0.1875rem, -35%) scale(0.8);
 }
 
-.emotion-32:focus-within+label {
+.emotion-46:focus-within+label {
   font-weight: var(--ictinus-weight-bold)!important;
   color: var(--ictinus-color-text-default-active);
 }
@@ -558,7 +558,7 @@
   cursor: text;
 }
 
-.emotion-35 {
+.emotion-49 {
   width: var(--ictinus-sizing-5);
   height: var(--ictinus-sizing-5);
   display: -webkit-box;
