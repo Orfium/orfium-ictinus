@@ -22,7 +22,7 @@
 
 .emotion-1:not([aria-valuenow]) .fill {
   width: 50%;
-  border-radius: 624.9375rem;
+  border-radius: var(--ictinus-border-radius-7);
   -webkit-animation: indeterminate 1.7s infinite ease-in-out;
   animation: indeterminate 1.7s infinite ease-in-out;
   will-change: transform;
@@ -30,17 +30,17 @@
 
 .emotion-2 {
   grid-area: bar;
-  background-color: #E9EFFB;
-  height: 0.25rem;
-  border-radius: 624.9375rem;
+  background-color: var(--ictinus-color-palette-primary-alt-muted);
+  height: var(--ictinus-sizing-1);
+  border-radius: var(--ictinus-border-radius-7);
   overflow: hidden;
   will-change: transform;
 }
 
 .emotion-3 {
-  background: #5E8DF8;
+  background: var(--ictinus-color-palette-primary-muted);
   height: 100%;
-  border-radius: 0 624.9375rem 624.9375rem 0;
+  border-radius: 0 var(--ictinus-border-radius-7) var(--ictinus-border-radius-7) 0;
   width: 0%;
   -webkit-transition: width 0.5s;
   transition: width 0.5s;

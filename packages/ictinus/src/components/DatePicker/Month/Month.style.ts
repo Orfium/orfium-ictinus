@@ -1,39 +1,32 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
-import type { Theme } from 'theme';
 
-import { getDatePickerTokens } from '../DatePicker.tokens';
+import { vars } from '@orfium/tokens';
+import { DATEPICKER_TOKENS } from '../Day/Day.style';
 
-export const weekDaysWrapperStyle = (): SerializedStyles =>
-  css`
+export const weekDaysWrapperStyle = (): SerializedStyles => css`
+  display: flex;
+  justify-content: space-around;
+`;
+
+export const weekDayStyle = (): SerializedStyles => {
+  return css`
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
+    color: ${vars.color.text.default.secondary};
+    width: ${DATEPICKER_TOKENS.dateSize};
+    height: ${DATEPICKER_TOKENS.dateSize};
+    font-size: ${vars['font-size']['3']};
+    line-height: ${vars['line-height']['4']};
+    text-align: center;
+    font-weight: ${vars.weight.medium};
   `;
+};
 
-export const weekDayStyle =
-  () =>
-  (theme: Theme): SerializedStyles => {
-    const tokens = getDatePickerTokens(theme);
-
-    return css`
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: ${theme.tokens.colors.get('textColor.default.secondary')};
-      width: ${tokens('dateSize')};
-      height: ${tokens('dateSize')};
-      font-size: ${theme.globals.typography.fontSize.get('3')};
-      line-height: ${theme.globals.typography.lineHeight.get('4')};
-      text-align: center;
-      font-weight: ${theme.globals.typography.fontWeight.get('medium')};
-    `;
-  };
-
-export const datesWrapperStyle =
-  () =>
-  (theme: Theme): SerializedStyles => {
-    return css`
-      border-collapse: separate;
-      border-spacing: 0 ${theme.dimension.spacing.get('md')};
-    `;
-  };
+export const datesWrapperStyle = (): SerializedStyles => {
+  return css`
+    border-collapse: separate;
+    border-spacing: 0 ${vars.spacing['5']};
+  `;
+};

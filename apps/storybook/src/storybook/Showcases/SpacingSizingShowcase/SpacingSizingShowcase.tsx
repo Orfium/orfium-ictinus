@@ -1,14 +1,15 @@
-import { useTheme } from '@orfium/ictinus';
-import { get } from 'lodash-es';
-import { WrapperStyle } from 'storybook/styles/OverviewCard.style';
 import {
   convertRemToPixels,
   type DimensionSpacingKey,
   dimensionVariables,
   type SpacingKey,
+  useTheme,
 } from '@orfium/ictinus';
+import { get } from 'lodash-es';
+import { WrapperStyle } from 'storybook/styles/OverviewCard.style';
 
 import { Typography } from '@orfium/ictinus';
+import { vars } from '@orfium/tokens';
 import { getAllPaths } from '../TokenColorsShowcase/utils';
 
 type Props = {
@@ -48,7 +49,7 @@ const SpacingSizingShowcase = ({ type = 'global' }: Props) => {
                 width: '32px',
                 height: '32px',
                 borderRadius: '50%',
-                backgroundColor: theme.tokens.colors.get('palette.upsell.muted'),
+                backgroundColor: vars.color.palette.upsell.muted,
               }}
             />
             <div
@@ -57,7 +58,7 @@ const SpacingSizingShowcase = ({ type = 'global' }: Props) => {
                   ? theme.globals.spacing.get(key as SpacingKey)
                   : theme.dimension.spacing.get(key as DimensionSpacingKey),
                 height: '32px',
-                backgroundColor: theme.tokens.colors.get('palette.primary.muted'),
+                backgroundColor: vars.color.palette.primary.muted,
               }}
             />
             <div
@@ -65,7 +66,7 @@ const SpacingSizingShowcase = ({ type = 'global' }: Props) => {
                 width: '32px',
                 height: '32px',
                 borderRadius: '50%',
-                backgroundColor: theme.tokens.colors.get('palette.upsell.muted'),
+                backgroundColor: vars.color.palette.upsell.muted,
               }}
             />
           </div>

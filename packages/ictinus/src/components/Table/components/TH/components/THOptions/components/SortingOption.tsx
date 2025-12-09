@@ -1,9 +1,9 @@
+import { vars } from '@orfium/tokens';
 import type { AcceptedIconNames } from 'components/Icon';
 import Icon from 'components/Icon';
 import { ListItem, ListItemAction, ListItemText } from 'components/List';
 import { MenuItemWrapper } from 'components/Menu/Menu.style';
 import React from 'react';
-import useTheme from '~/hooks/useTheme';
 import type { TestProps } from '~/utils/types';
 
 type SortingOptionProps = {
@@ -17,8 +17,6 @@ const LABELS = {
 };
 
 const SortingOption: React.FC<SortingOptionProps> = ({ isDescending = false, dataTestId }) => {
-  const theme = useTheme();
-
   const iconName = `sort${isDescending ? 'Descending' : 'Ascending'}` as AcceptedIconNames;
 
   return (
@@ -31,7 +29,7 @@ const SortingOption: React.FC<SortingOptionProps> = ({ isDescending = false, dat
         data-testid={dataTestId}
       >
         <ListItemAction>
-          <Icon name={iconName} size={theme.dimension.sizing.get('icon.md')} />
+          <Icon name={iconName} size={vars.sizing['5']} />
         </ListItemAction>
         <ListItemText>{isDescending ? LABELS.SORT_DESCENDING : LABELS.SORT_ASCENDING}</ListItemText>
       </ListItem>

@@ -1,8 +1,8 @@
 .emotion-0 {
   display: inline-block;
-  border: 0.0625rem solid rgba(200,206,255,0.70);
-  border-radius: 0.25rem;
-  background: #ffffff;
+  border: var(--ictinus-border-width-1) solid var(--ictinus-color-border-color-decorative-default);
+  border-radius: var(--ictinus-border-radius-2);
+  background: var(--ictinus-color-background-default);
 }
 
 .emotion-1 {
@@ -22,18 +22,18 @@
 
 .emotion-2 {
   position: relative;
-  box-shadow: 0 0.0625rem 0 0 rgba(200,206,255,0.70);
+  box-shadow: 0 var(--ictinus-border-width-1) 0 0 var(--ictinus-color-border-color-decorative-default);
 }
 
 .emotion-4 {
   width: 25%;
-  height: 2.75rem;
+  height: var(--ictinus-sizing-11);
   -webkit-align-content: center;
   -ms-flex-line-pack: center;
   align-content: center;
   box-sizing: border-box;
-  padding: 0.5rem 1rem;
-  color: #52567a;
+  padding: var(--ictinus-spacing-4) var(--ictinus-spacing-6);
+  color: var(--ictinus-color-text-default-secondary);
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -70,7 +70,7 @@
   -ms-flex-pack: start;
   -webkit-justify-content: flex-start;
   justify-content: flex-start;
-  gap: 0.5rem;
+  gap: var(--ictinus-spacing-4);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -82,9 +82,9 @@
 
 .emotion-18 {
   width: 25%;
-  height: 2.75rem;
-  padding: 0.5rem 1rem;
-  border-bottom: 0.0625rem solid rgba(200,206,255,0.70);
+  height: var(--ictinus-sizing-11);
+  padding: var(--ictinus-spacing-4) var(--ictinus-spacing-6);
+  border-bottom: var(--ictinus-border-width-1) solid var(--ictinus-color-border-color-decorative-default);
   box-sizing: border-box;
   -webkit-align-content: center;
   -ms-flex-line-pack: center;
@@ -119,14 +119,14 @@
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  background: #ffffff;
+  background: var(--ictinus-color-background-default);
   height: 2.75rem;
   width: 100%;
-  padding: 0.5rem 1rem;
+  padding: var(--ictinus-spacing-4) var(--ictinus-spacing-6);
   box-sizing: border-box;
-  border-top: 0.0625rem solid rgba(200,206,255,0.70);
-  border-bottom-left-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
+  border-top: var(--ictinus-border-width-1) solid var(--ictinus-color-border-color-decorative-default);
+  border-bottom-left-radius: var(--ictinus-border-radius-2);
+  border-bottom-right-radius: var(--ictinus-border-radius-2);
 }
 
 .emotion-146 {
@@ -138,12 +138,12 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 0.5rem;
+  gap: var(--ictinus-spacing-4);
 }
 
 .emotion-147 {
   position: relative;
-  min-width: 8.75rem;
+  min-width: 140px;
 }
 
 .emotion-149 {
@@ -161,26 +161,26 @@
   position: relative;
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #8EAAEC;
-  border-radius: 0.25rem;
+  box-shadow: 0 0 0 var(--ictinus-border-width-1) var(--ictinus-color-border-color-interactive-default);
+  border-radius: var(--ictinus-border-radius-2);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
   cursor: text;
-  height: 1.75rem;
-  min-width: 4.375rem;
-  background-color: rgba(200,206,255,0.30);
+  height: var(--ictinus-sizing-7);
+  min-width: 70px;
+  background-color: var(--ictinus-color-palette-secondary-base);
 }
 
 .emotion-149:hover {
-  background-color: rgba(200,206,255,0.20);
+  background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
 .emotion-149:focus-within {
-  box-shadow: 0 0 0 0.125rem #175BF5;
-  background-color: rgba(200,206,255,0.30);
+  box-shadow: 0 0 0 var(--ictinus-border-width-2) var(--ictinus-color-border-color-interactive-active);
+  background-color: var(--ictinus-color-palette-secondary-base);
 }
 
 .emotion-150 {
@@ -200,7 +200,7 @@
   width: -webkit-fill-available;
   width: -moz-available;
   width: fill-available;
-  padding: 0rem 0rem 0rem 0.75rem;
+  padding: var(--ictinus-spacing-0) var(--ictinus-spacing-0) var(--ictinus-spacing-0) var(--ictinus-spacing-5);
 }
 
 .emotion-150>div {
@@ -225,7 +225,7 @@
   letter-spacing: 0.015625rem;
   background: transparent;
   border: none;
-  color: #111530;
+  color: var(--ictinus-color-text-default-primary);
   padding: 0;
   display: block;
   position: relative;
@@ -281,8 +281,8 @@
 }
 
 .emotion-152:focus-within+label {
-  font-weight: 700!important;
-  color: #194DCC;
+  font-weight: var(--ictinus-weight-bold)!important;
+  color: var(--ictinus-color-text-default-active);
 }
 
 .emotion-152:disabled {
@@ -303,7 +303,7 @@
   -moz-transform: translate(0.1875rem, -95%) scale(0.8);
   -ms-transform: translate(0.1875rem, -95%) scale(0.8);
   transform: translate(0.1875rem, -95%) scale(0.8);
-  color: #52567a;
+  color: var(--ictinus-color-text-default-secondary);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -362,8 +362,8 @@
 }
 
 .emotion-156 {
-  width: 1rem;
-  height: 1rem;
+  width: var(--ictinus-sizing-4);
+  height: var(--ictinus-sizing-4);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -372,13 +372,13 @@
 }
 
 .emotion-157 {
-  width: 1rem;
-  height: 1rem;
+  width: var(--ictinus-sizing-4);
+  height: var(--ictinus-sizing-4);
 }
 
 .emotion-157 path,
 .emotion-157 rect {
-  fill: #52567a!important;
+  fill: var(--ictinus-color-text-default-secondary)!important;
 }
 
 .emotion-158 {
@@ -390,7 +390,7 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 2rem;
+  gap: var(--ictinus-spacing-9);
 }
 
 .emotion-159 {
@@ -398,7 +398,7 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
+  gap: var(--ictinus-spacing-3);
 }
 
 .emotion-160 {
@@ -452,11 +452,11 @@
   -webkit-justify-content: center;
   justify-content: center;
   color: #194DCC;
-  width: 1.75rem;
-  height: 1.75rem;
+  width: var(--ictinus-sizing-7);
+  height: var(--ictinus-sizing-7);
   background-color: rgba(200,206,255,0);
-  padding: 0rem 0.5rem 0rem 0.5rem;
-  border-radius: 624.9375rem;
+  padding: var(--ictinus-spacing-0) var(--ictinus-spacing-4) var(--ictinus-spacing-0) var(--ictinus-spacing-4);
+  border-radius: var(--ictinus-border-radius-7);
   border: none;
   cursor: pointer;
   -webkit-transition: background-color,border 150ms linear;
@@ -482,8 +482,8 @@
 }
 
 .emotion-167 {
-  width: 1rem;
-  height: 1rem;
+  width: var(--ictinus-sizing-4);
+  height: var(--ictinus-sizing-4);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -491,8 +491,8 @@
 }
 
 .emotion-168 {
-  width: 1rem;
-  height: 1rem;
+  width: var(--ictinus-sizing-4);
+  height: var(--ictinus-sizing-4);
 }
 
 .emotion-168 path,
@@ -1290,7 +1290,7 @@
           >
             <button
               class="emotion-166"
-              color="#52567a"
+              color="var(--ictinus-color-text-default-secondary)"
               data-slot="button"
               data-testid="ictinus_table_go_to_first_page-icon-button"
               disabled=""
@@ -1319,7 +1319,7 @@
           >
             <button
               class="emotion-166"
-              color="#52567a"
+              color="var(--ictinus-color-text-default-secondary)"
               data-slot="button"
               data-testid="ictinus_table_go_to_prev_page-icon-button"
               disabled=""
@@ -1348,7 +1348,7 @@
           >
             <button
               class="emotion-166"
-              color="#52567a"
+              color="var(--ictinus-color-text-default-secondary)"
               data-slot="button"
               data-testid="ictinus_table_go_to_next_page-icon-button"
               type="button"
@@ -1376,7 +1376,7 @@
           >
             <button
               class="emotion-166"
-              color="#52567a"
+              color="var(--ictinus-color-text-default-secondary)"
               data-slot="button"
               data-testid="ictinus_table_go_to_last_page-icon-button"
               type="button"

@@ -1,11 +1,23 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 
+import type { ComponentSizes } from '@orfium/tokens';
+import { vars } from '@orfium/tokens';
+import { generateStylesFromTokens } from 'components/Typography/utils';
+import type { Theme } from '../../theme';
 import type { ButtonBaseProps } from './ButtonBase';
 import { buttonColorToSemColor, typographySizes } from './constants';
-import type { Theme } from '../../theme';
-import { getButtonTokens } from '../Button/Button.tokens';
-import { generateStylesFromTokens } from 'components/Typography/utils';
+
+const BUTTON_SIZE: Record<ComponentSizes, Record<string, string>> = {
+  compact: {
+    size: vars.sizing['7'],
+    padding: `${vars.spacing['0']} ${vars.spacing['4']} ${vars.spacing['0']} ${vars.spacing['4']}`,
+  },
+  normal: {
+    size: vars.sizing['9'],
+    padding: `${vars.spacing['0']} ${vars.spacing['6']} ${vars.spacing['0']} ${vars.spacing['6']}`,
+  },
+};
 
 export const buttonWrapperStyle = ({
   isBlock,
@@ -24,12 +36,10 @@ export const buttonBaseStyle =
     sx,
   }: Omit<ButtonBaseProps, 'htmlType' | 'ref'>) =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getButtonTokens(theme);
-
     const getButtonWidth = () => {
       if (isBlock) return '100%';
 
-      if (isIconButton) return tokens(`${size}.size`);
+      if (isIconButton) return BUTTON_SIZE[size].size;
 
       return undefined;
     };
@@ -40,15 +50,15 @@ export const buttonBaseStyle =
       justifyContent: 'center',
       color: theme.tokens.colors.get(buttonColorToSemColor[type].text),
       width: getButtonWidth(),
-      height: tokens(`${size}.size`),
+      height: BUTTON_SIZE[size].size,
       backgroundColor: theme.tokens.colors.get(
         buttonColorToSemColor[type][isLoading ? 'activeFill' : 'defaultFill']
       ),
-      padding: tokens(`${size}.padding`),
+      padding: BUTTON_SIZE[size].padding,
       borderRadius:
         isIconButton && shape === 'circle'
-          ? theme.dimension.borderRadius.get('circle')
-          : theme.dimension.borderRadius.get('md'),
+          ? vars['border-radius']['7']
+          : vars['border-radius']['2'],
       border: 'none',
       cursor: 'pointer',
       transition: 'background-color,border 150ms linear',

@@ -2,7 +2,7 @@ import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import type { Theme } from 'theme';
 
-import { getDatePickerTokens } from '../DatePicker.tokens';
+import { vars } from '@orfium/tokens';
 import { label02 } from 'components/Typography/Typography.config.styles';
 
 type DayStyleProps = {
@@ -15,46 +15,46 @@ type DayStyleProps = {
   isToday: boolean;
 };
 
-export const dayWrapperStyle =
-  ({
-    isSelected,
-    isBetween,
-    isLast,
-    isFirst,
-    isToday,
-    isDisabled,
-  }: DayStyleProps & { isToday: boolean }) =>
-  (theme: Theme): SerializedStyles => {
-    const tokens = getDatePickerTokens(theme);
+export const DATEPICKER_TOKENS = {
+  dateSize: vars.sizing['9'],
+  actionsContainer: vars.sizing['15'],
+  fieldWidth: vars.sizing['21'],
+};
 
-    return css`
-      vertical-align: middle;
-      text-align: center;
-      cursor: pointer;
-      position: relative;
-      color: ${isSelected
-        ? theme.tokens.colors.get('textColor.inverted.primary')
-        : theme.tokens.colors.get('textColor.default.primary')};
-      width: ${tokens('dateSize')};
-      font-weight: ${isToday && 'bold'};
-      opacity: ${isDisabled ? 0.5 : 1};
-      background: ${isLast || isFirst
-        ? theme.tokens.colors.get('palette.primary.contrast')
-        : (isSelected || isBetween) &&
-          typeof isBetween !== 'undefined' &&
-          theme.tokens.colors.get('palette.tertiary.muted')};
-      border-bottom-right-radius: ${isLast && isSelected && '100%'};
-      border-top-right-radius: ${isLast && isSelected && '100%'};
-      border-bottom-left-radius: ${isFirst && isSelected && '100%'};
-      border-top-left-radius: ${isFirst && isSelected && '100%'};
+export const dayWrapperStyle = ({
+  isSelected,
+  isBetween,
+  isLast,
+  isFirst,
+  isToday,
+  isDisabled,
+}: DayStyleProps & { isToday: boolean }): SerializedStyles => {
+  return css`
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    color: ${isSelected ? vars.color.text.inverted.primary : vars.color.text.default.primary};
+    width: ${DATEPICKER_TOKENS.dateSize};
+    font-weight: ${isToday && 'bold'};
+    opacity: ${isDisabled ? 0.5 : 1};
+    background: ${isLast || isFirst
+      ? vars.color.palette.primary.contrast
+      : (isSelected || isBetween) &&
+        typeof isBetween !== 'undefined' &&
+        vars.color.palette.tertiary.muted};
+    border-bottom-right-radius: ${isLast && isSelected && '100%'};
+    border-top-right-radius: ${isLast && isSelected && '100%'};
+    border-bottom-left-radius: ${isFirst && isSelected && '100%'};
+    border-top-left-radius: ${isFirst && isSelected && '100%'};
 
-      &:focus-visible {
-        background-color: ${theme.tokens.colors.get('palette.tertiary.muted')};
-        border-radius: ${theme.dimension.borderRadius.get('circle')};
-      }
+    &:focus-visible {
+      background-color: ${vars.color.palette.tertiary.muted};
+      border-radius: ${vars['border-radius']['7']};
+    }
 
-      ${(isSelected || isLast || isFirst) &&
-      `&:after {
+    ${(isSelected || isLast || isFirst) &&
+    `&:after {
           z-index: -1;
           content: ' ';
           height: 100%;
@@ -68,54 +68,43 @@ export const dayWrapperStyle =
           border-bottom-left-radius: ${isFirst && isSelected && '100%'};
           border-top-left-radius: ${isFirst && isSelected && '100%'};
       }`}
-    `;
-  };
+  `;
+};
 
-export const emptyDayStyle =
-  ({ isBetween }: { isBetween: boolean }) =>
-  (theme: Theme) => {
-    return css`
-      vertical-align: middle;
-      text-align: center;
-      cursor: pointer;
-      position: relative;
-      background: ${isBetween
-        ? theme.tokens.colors.get('palette.tertiary.muted')
-        : theme.tokens.colors.get('palette.tertiary.base')};
-    `;
-  };
+export const emptyDayStyle = ({ isBetween }: { isBetween: boolean }) => {
+  return css`
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    background: ${isBetween ? vars.color.palette.tertiary.muted : vars.color.palette.tertiary.base};
+  `;
+};
 
 export const dayStyle =
   ({ isSelected, isToday, isDisabled, isBetween }: DayStyleProps) =>
   (theme: Theme) => {
-    const tokens = getDatePickerTokens(theme);
-
     return css`
       ${label02(theme)};
-      border: ${isSelected ? 0 : theme.dimension.borderWidth.get('default')} solid
+      border: ${isSelected ? 0 : vars['border-width']['1']} solid
         ${isToday
-          ? theme.tokens.colors.get('borderColor.interactive.active')
-          : theme.tokens.colors.get('borderColor.decorative.transparent')};
-      border-radius: ${(isToday || isSelected) && theme.dimension.borderRadius.get('circle')};
-      width: ${tokens('dateSize')};
-      height: ${tokens('dateSize')};
-      color: ${isSelected
-        ? theme.tokens.colors.get('textColor.inverted.primary')
-        : theme.tokens.colors.get('textColor.default.primary')};
+          ? vars.color['border-color'].interactive.active
+          : vars.color['border-color'].decorative.transparent};
+      border-radius: ${(isToday || isSelected) && vars['border-radius']['7']};
+      width: ${DATEPICKER_TOKENS.dateSize};
+      height: ${DATEPICKER_TOKENS.dateSize};
+      color: ${isSelected ? vars.color.text.inverted.primary : vars.color.text.default.primary};
       box-sizing: border-box;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: ${isSelected
-        ? theme.tokens.colors.get('palette.primary.contrast')
-        : 'transparent'};
+      background: ${isSelected ? vars.color.palette.primary.contrast : 'transparent'};
 
       ${!isDisabled &&
       `&:hover {
-            border-radius: ${theme.dimension.borderRadius.get('circle')};
+            border-radius: ${vars['border-radius']['7']};
             background: ${
-              !isSelected &&
-              (!isBetween ? theme.tokens.colors.get('palette.tertiary.muted') : 'transparent')
+              !isSelected && (!isBetween ? vars.color.palette.tertiary.muted : 'transparent')
             };
           }`}
     `;

@@ -1,6 +1,6 @@
-import useTheme from 'hooks/useTheme';
 import React, { useMemo } from 'react';
 
+import { vars } from '@orfium/tokens';
 import Icon from 'components/Icon';
 import type { TextFieldProps } from 'components/TextField/TextField';
 import type { SelectOption } from '../Select';
@@ -25,7 +25,6 @@ const useMultiTextFieldBaseUtils = ({
   onKeyDown,
 }: Props & { isLocked: boolean }) => {
   const TextfieldRef = React.useRef<HTMLDivElement>(null);
-  const theme = useTheme();
   const hasLabel = Boolean(label);
 
   const inputPlaceholder = useMemo(() => {
@@ -82,7 +81,7 @@ const useMultiTextFieldBaseUtils = ({
           aria-label="Remove all"
           size={20}
           name={iconName}
-          color={theme.tokens.colors.get('textColor.default.secondary')}
+          color={vars.color.text.default.secondary}
           onClick={handleClick}
           dataTestId="select-right-icon"
         />
@@ -90,7 +89,7 @@ const useMultiTextFieldBaseUtils = ({
     }
 
     return undefined;
-  }, [iconName, onClearAllOptions, theme.tokens.colors]);
+  }, [iconName, onClearAllOptions]);
 
   return { inputPlaceholder, handleKeyDown, icon, hasLabel, TextfieldRef };
 };

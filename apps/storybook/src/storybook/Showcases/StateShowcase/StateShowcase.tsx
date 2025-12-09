@@ -8,6 +8,7 @@ import { get } from 'lodash-es';
 import { WrapperStyle } from 'storybook/styles/OverviewCard.style';
 
 import { Typography } from '@orfium/ictinus';
+import { vars } from '@orfium/tokens';
 import { getAllPaths } from '../TokenColorsShowcase/utils';
 
 const StateShowcase = () => {
@@ -24,7 +25,7 @@ const StateShowcase = () => {
               css={() => ({
                 height: theme.dimension.state.get(key as DimensionStateKey),
                 width: theme.dimension.state.get(key as DimensionStateKey),
-                background: theme.tokens.colors.get('palette.secondary.contrast'),
+                background: vars.color.palette.secondary.contrast,
                 borderRadius: theme.dimension.borderRadius.get('circle'),
               })}
             />

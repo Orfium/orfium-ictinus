@@ -1,9 +1,9 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
+import type { SemanticTypographyKey } from '@orfium/tokens';
+import { rem, vars } from '@orfium/tokens';
 import { generateStylesFromTokens } from 'components/Typography/utils';
 import type { Theme } from 'theme';
-import type { SemanticTypographyKey } from '@orfium/tokens';
-import { rem } from '@orfium/tokens';
 import type { LabelProps } from './Label';
 
 export const LABEL_TRANSFORM_LEFT_SPACING = rem(3);
@@ -28,9 +28,7 @@ export const labelStyle =
       transform: ${!isAnimated
         ? `translate(${LABEL_TRANSFORM_LEFT_SPACING}, 0)`
         : `translate(${LABEL_TRANSFORM_LEFT_SPACING}, -95%) scale(0.8);`};
-      color: ${hasError
-        ? theme.tokens.colors.get('textColor.default.error')
-        : theme.tokens.colors.get('textColor.default.secondary')};
+      color: ${hasError ? vars.color.text.default.error : vars.color.text.default.secondary};
       align-items: center;
       display: flex;
       top: 0;

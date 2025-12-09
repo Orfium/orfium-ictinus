@@ -1,11 +1,11 @@
-import useTheme from 'hooks/useTheme';
 import React from 'react';
 
-import { containerStyles, contentStyles } from './ExtendedColumnItem.style';
-import type { ExtendedColumn, Sort } from '../../types';
-import { hasTooltipOrSortingKey, isItemString } from '../../utils';
+import { vars } from '@orfium/tokens';
 import Icon from 'components/Icon';
 import Tooltip from 'components/Tooltip';
+import type { ExtendedColumn, Sort } from '../../types';
+import { hasTooltipOrSortingKey, isItemString } from '../../utils';
+import { containerStyles, contentStyles } from './ExtendedColumnItem.style';
 
 export type ExtendedColumnItemProps = {
   item: ExtendedColumn | string;
@@ -14,8 +14,6 @@ export type ExtendedColumnItemProps = {
 };
 
 const ExtendedColumnItem: React.FCC<ExtendedColumnItemProps> = ({ item, sorting, isNumerical }) => {
-  const theme = useTheme();
-
   const itemContentLowerCase = !isItemString(item)
     ? item.content.sortingKey.trim().toLowerCase().replace(/ /g, '_')
     : item.trim().toLowerCase().replace(/ /g, '_');
@@ -39,7 +37,7 @@ const ExtendedColumnItem: React.FCC<ExtendedColumnItemProps> = ({ item, sorting,
           dataTestId={`table_icon_sort_${itemContentLowerCase}_${
             sorting.order === 'desc' ? 'desc' : 'asc'
           }`}
-          color={theme.tokens.colors.get('textColor.default.secondary')}
+          color={vars.color.text.default.secondary}
         />
       </div>
     ) : (
@@ -52,7 +50,7 @@ const ExtendedColumnItem: React.FCC<ExtendedColumnItemProps> = ({ item, sorting,
         <Icon
           name="sort"
           dataTestId={`table_icon_sort_${itemContentLowerCase}`}
-          color={theme.tokens.colors.get('textColor.default.secondary')}
+          color={vars.color.text.default.secondary}
         />
       </div>
     ));
@@ -71,7 +69,7 @@ const ExtendedColumnItem: React.FCC<ExtendedColumnItemProps> = ({ item, sorting,
           <Icon
             name="informational"
             dataTestId={`table_icon_tooltip_${itemContentLowerCase}`}
-            color={theme.tokens.colors.get('textColor.default.secondary')}
+            color={vars.color.text.default.secondary}
           />
         </Tooltip>
       </div>

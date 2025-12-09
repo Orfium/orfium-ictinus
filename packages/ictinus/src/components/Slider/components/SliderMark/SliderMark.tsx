@@ -3,7 +3,7 @@ import { useMemo } from 'react';
 import type { IMarkProps } from 'react-range/lib/types';
 import type { TestProps } from 'utils/types';
 
-import useTheme from '../../../../hooks/useTheme';
+import { vars } from '@orfium/tokens';
 import { STEP_WITH_INCREMENTS } from '../../Slider';
 import { Mark, MarkHoverCircle } from './SliderMark.style';
 
@@ -23,19 +23,17 @@ const SliderMark: FCC<SliderMarkProps & TestProps> = ({
   dataTestPrefixId = '',
   restProps,
 }) => {
-  const theme = useTheme();
-
   const backgroundStyle = useMemo(() => {
     if (!isSelector) {
       return index * 20 < values[0] || index * 20 > values[1]
-        ? theme.tokens.colors.get('palette.primaryAlt.base')
-        : theme.tokens.colors.get('palette.primary.base');
+        ? vars.color.palette['primary-alt'].base
+        : vars.color.palette.primary.base;
     }
 
     return index * 20 > values[0]
-      ? theme.tokens.colors.get('palette.primaryAlt.base')
-      : theme.tokens.colors.get('palette.primary.base');
-  }, [isSelector, index, values, theme.tokens.colors]);
+      ? vars.color.palette['primary-alt'].base
+      : vars.color.palette.primary.base;
+  }, [isSelector, index, values]);
 
   const labelValue = useMemo(() => (STEP_WITH_INCREMENTS * index).toString(), [index]);
 

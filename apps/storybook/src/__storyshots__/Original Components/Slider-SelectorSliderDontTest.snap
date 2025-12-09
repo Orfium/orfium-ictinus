@@ -19,7 +19,7 @@
 .emotion-3 {
   height: 0.1875rem;
   border-radius: 4px;
-  background: linear-gradient(to right, #175BF5 0%, #175BF5 0%, #DAE4FB 0%, #DAE4FB 100%);
+  background: linear-gradient(to right, var(--ictinus-color-palette-primary-base) 0%, var(--ictinus-color-palette-primary-base) 0%, var(--ictinus-color-palette-primary-alt-base) 0%, var(--ictinus-color-palette-primary-alt-base) 100%);
   cursor: unset!important;
 }
 
@@ -28,7 +28,7 @@
   width: 1rem;
   border-radius: 100px;
   background-color: #fff;
-  border: 2px solid #175BF5;
+  border: 2px solid var(--ictinus-color-palette-primary-base);
   position: absolute;
   z-index: 0;
   cursor: -webkit-grab;

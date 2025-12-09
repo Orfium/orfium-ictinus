@@ -1,19 +1,20 @@
+import { vars } from '@orfium/tokens';
 import type { EventButtonProps } from 'components/ButtonBase';
 import type { FilterProps } from 'components/Filter/Filter.types';
 import Icon from 'components/Icon';
 import Tag from 'components/Tag';
-import useTheme from 'hooks/useTheme';
 import React from 'react';
 import type { CommonButtonProps } from 'utils/common';
 import type { TestProps } from 'utils/types';
 import { buttonStyles, iconStyles } from './FilterButton.style';
 
-export type FilterButtonProps = Pick<FilterProps, 'filterType'> & React.PropsWithChildren<{
-  isDisabled?: boolean;
-  onClear?: () => void;
-  isActive?: boolean;
-  isPopulated?: boolean;
-  moreFilters?: number;
+export type FilterButtonProps = Pick<FilterProps, 'filterType'> &
+  React.PropsWithChildren<{
+    isDisabled?: boolean;
+    onClear?: () => void;
+    isActive?: boolean;
+    isPopulated?: boolean;
+    moreFilters?: number;
   }> &
   TestProps &
   EventButtonProps &
@@ -32,7 +33,6 @@ export const FilterButton = React.forwardRef<HTMLButtonElement, FilterButtonProp
     dataTestPrefixId,
     ...rest
   } = props;
-  const theme = useTheme();
 
   const isAdded = filterType === 'added';
 
@@ -76,10 +76,8 @@ export const FilterButton = React.forwardRef<HTMLButtonElement, FilterButtonProp
       <div css={iconStyles({ isActive })}>
         <Icon
           name="triangleDown"
-          size={theme.dimension.sizing.get('icon.sm')}
-          color={theme.tokens.colors.get(
-            isActive ? 'textColor.inverted.primary' : 'textColor.default.active'
-          )}
+          size={vars.sizing['4']}
+          color={isActive ? vars.color.text.inverted.primary : vars.color.text.default.active}
         />
       </div>
 
@@ -88,10 +86,8 @@ export const FilterButton = React.forwardRef<HTMLButtonElement, FilterButtonProp
           role="button"
           aria-label="Remove filter"
           name="close"
-          size={theme.dimension.sizing.get('icon.sm')}
-          color={theme.tokens.colors.get(
-            isActive ? 'textColor.inverted.primary' : 'textColor.default.active'
-          )}
+          size={vars.sizing['4']}
+          color={isActive ? vars.color.text.inverted.primary : vars.color.text.default.active}
           onClick={handleIconClick}
           dataTestPrefixId={`${dataTestPrefixId}_filter_close`}
         />

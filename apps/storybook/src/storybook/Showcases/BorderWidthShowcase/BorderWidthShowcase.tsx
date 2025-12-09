@@ -1,14 +1,15 @@
-import { useTheme } from '@orfium/ictinus';
-import { get } from 'lodash-es';
-import { rem } from 'polished';
-import { WrapperStyle } from 'storybook/styles/OverviewCard.style';
 import {
   convertRemToPixels,
   type DimensionBorderWidthKey,
   dimensionVariables,
+  useTheme,
 } from '@orfium/ictinus';
+import { get } from 'lodash-es';
+import { rem } from 'polished';
+import { WrapperStyle } from 'storybook/styles/OverviewCard.style';
 
 import { Typography } from '@orfium/ictinus';
+import { vars } from '@orfium/tokens';
 import { getAllPaths } from '../TokenColorsShowcase/utils';
 
 const BorderWidthShowcase = () => {
@@ -30,7 +31,7 @@ const BorderWidthShowcase = () => {
                 background: 'linear-gradient(45deg, #a8b1ff 0%, #cad0ff 100%)',
                 border: `${theme.dimension.borderWidth.get(
                   key as DimensionBorderWidthKey
-                )} solid ${theme.tokens.colors.get('borderColor.interactive.upsell')}`,
+                )} solid ${vars.color['border-color'].interactive.upsell}`,
                 margin: 'auto',
               })}
             />

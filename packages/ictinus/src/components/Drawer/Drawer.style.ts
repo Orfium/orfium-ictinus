@@ -1,9 +1,10 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import { rem, transparentize } from 'polished';
-import type { Theme } from 'theme';
 import { flex, transition } from 'theme/functions';
 
+import { vars } from '@orfium/tokens';
+import type { Theme } from '~/theme';
 import type { AnchorType, DrawerProps } from './Drawer.types';
 
 const getStyleBasedOnAnchor = (anchor: AnchorType) => {
@@ -121,75 +122,83 @@ export const anchorStyle = ({
     : { display: 'flex', height: '100%', width: isBackgroundActive ? '100%' : size };
 };
 
-export const overlayStyle =
-  ({ isOpen, anchor, hasFixedLayout }: Pick<DrawerProps, 'isOpen' | 'anchor' | 'hasFixedLayout'>) =>
-  (theme: Theme): SerializedStyles => {
-    return css`
-      ${flex};
-      flex-direction: column;
-      overflow-y: ${hasFixedLayout ? undefined : 'auto'};
-      background-color: ${theme.tokens.colors.get('backgroundColor.default')};
-      box-shadow: ${theme.tokens.boxShadow.get('3')};
-      border: ${theme.dimension.borderWidth.get('default')} solid
-        ${theme.tokens.colors.get('borderColor.decorative.default')};
-      width: 100%;
-      height: 100%;
-      transform: ${transformBasedOnProps(isOpen, anchor)};
-      ${transition(0.3)}
-    `;
-  };
+export const overlayStyle = ({
+  isOpen,
+  anchor,
+  hasFixedLayout,
+}: Pick<DrawerProps, 'isOpen' | 'anchor' | 'hasFixedLayout'>): SerializedStyles => {
+  return css`
+    ${flex};
+    flex-direction: column;
+    overflow-y: ${hasFixedLayout ? undefined : 'auto'};
+    background-color: ${vars.color.background.default};
+    box-shadow: ${vars['box-shadow']['3']};
+    border: ${vars['border-width']['1']} solid ${vars.color['border-color'].decorative.default};
+    width: 100%;
+    height: 100%;
+    transform: ${transformBasedOnProps(isOpen, anchor)};
+    ${transition(0.3)}
+  `;
+};
 
-export const closeIconContainer =
-  () =>
-  (theme: Theme): SerializedStyles => {
-    return css`
-      position: absolute;
-      top: ${theme.dimension.spacing.get('2xl')};
-      right: ${theme.dimension.spacing.get('2xl')};
-    `;
-  };
+export const closeIconContainer = (): SerializedStyles => {
+  return css`
+    position: absolute;
+    top: ${vars.spacing['8']};
+    right: ${vars.spacing['8']};
+  `;
+};
 
-export const headerStyle =
-  ({ isFixed, hasBoxShadow }: { isFixed?: boolean; hasBoxShadow?: boolean }) =>
-  (theme: Theme): SerializedStyles => {
-    return isFixed
-      ? css`
-          padding: ${theme.dimension.spacing.get('2xl')};
-          position: sticky;
-          top: 0;
-          box-shadow: ${hasBoxShadow ? theme.tokens.boxShadow.get('2') : undefined};
-          transition: box-shadow 0.2s ease-in-out;
-        `
-      : css`
-          padding: ${theme.dimension.spacing.get('2xl')};
-          flex: 0;
-        `;
-  };
+export const headerStyle = ({
+  isFixed,
+  hasBoxShadow,
+}: {
+  isFixed?: boolean;
+  hasBoxShadow?: boolean;
+}): SerializedStyles => {
+  return isFixed
+    ? css`
+        padding: ${vars.spacing['8']};
+        position: sticky;
+        top: 0;
+        box-shadow: ${hasBoxShadow ? vars['box-shadow']['2'] : undefined};
+        transition: box-shadow 0.2s ease-in-out;
+      `
+    : css`
+        padding: ${vars.spacing['8']};
+        flex: 0;
+      `;
+};
 
-export const contentStyle =
-  ({ hasFixedHeader }: { hasFixedHeader?: boolean }) =>
-  (theme: Theme): SerializedStyles => {
-    return css`
-      flex: 1;
-      overflow-y: ${hasFixedHeader ? 'auto' : undefined};
-      /** Padding-top and Padding-bottom are -1px because of extra 1px-height elements added for scrollbar observation */
-      padding: calc(${theme.dimension.spacing.get('2xl')} - ${rem(1)})
-        ${theme.dimension.spacing.get('2xl')};
-    `;
-  };
+export const contentStyle = ({
+  hasFixedHeader,
+}: {
+  hasFixedHeader?: boolean;
+}): SerializedStyles => {
+  return css`
+    flex: 1;
+    overflow-y: ${hasFixedHeader ? 'auto' : undefined};
+    /** Padding-top and Padding-bottom are -1px because of extra 1px-height elements added for scrollbar observation */
+    padding: calc(${vars.spacing['8']} - ${rem(1)}) ${vars.spacing['8']};
+  `;
+};
 
-export const footerStyle =
-  ({ isFixed, hasBoxShadow }: { isFixed?: boolean; hasBoxShadow?: boolean }) =>
-  (theme: Theme): SerializedStyles => {
-    return isFixed
-      ? css`
-          position: sticky;
-          bottom: 0;
-          padding: ${theme.dimension.spacing.get('2xl')};
-          box-shadow: ${hasBoxShadow ? theme.tokens.boxShadow.get('5') : undefined};
-          transition: box-shadow 0.2s ease-in-out;
-        `
-      : css`
-          padding: ${theme.dimension.spacing.get('2xl')};
-        `;
-  };
+export const footerStyle = ({
+  isFixed,
+  hasBoxShadow,
+}: {
+  isFixed?: boolean;
+  hasBoxShadow?: boolean;
+}): SerializedStyles => {
+  return isFixed
+    ? css`
+        position: sticky;
+        bottom: 0;
+        padding: ${vars.spacing['8']};
+        box-shadow: ${hasBoxShadow ? vars['box-shadow']['5'] : undefined};
+        transition: box-shadow 0.2s ease-in-out;
+      `
+    : css`
+        padding: ${vars.spacing['8']};
+      `;
+};

@@ -3,7 +3,7 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2rem;
+  gap: var(--ictinus-spacing-9);
   -webkit-box-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
@@ -19,7 +19,7 @@
 
 .emotion-2 {
   position: relative;
-  min-width: 8.75rem;
+  min-width: 140px;
 }
 
 .emotion-4 {
@@ -37,8 +37,8 @@
   position: relative;
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #8EAAEC;
-  border-radius: 0.25rem;
+  box-shadow: 0 0 0 var(--ictinus-border-width-1) var(--ictinus-color-border-color-interactive-default);
+  border-radius: var(--ictinus-border-radius-2);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -46,22 +46,22 @@
   opacity: 1;
   cursor: text;
   height: unset;
-  min-width: 8.75rem;
-  background-color: rgba(200,206,255,0.30);
+  min-width: 140px;
+  background-color: var(--ictinus-color-palette-secondary-base);
   min-height: 3.25rem!important;
 }
 
 .emotion-4:hover {
-  background-color: rgba(200,206,255,0.20);
+  background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
 .emotion-4:focus-within {
-  box-shadow: 0 0 0 0.125rem #175BF5;
-  background-color: rgba(200,206,255,0.30);
+  box-shadow: 0 0 0 var(--ictinus-border-width-2) var(--ictinus-color-border-color-interactive-active);
+  background-color: var(--ictinus-color-palette-secondary-base);
 }
 
 .emotion-4 label {
-  font-weight: 700;
+  font-weight: var(--ictinus-weight-bold);
   -webkit-transform: translate(0.1875rem, -82%) scale(0.8)!important;
   -moz-transform: translate(0.1875rem, -82%) scale(0.8)!important;
   -ms-transform: translate(0.1875rem, -82%) scale(0.8)!important;
@@ -86,7 +86,7 @@
   width: -webkit-fill-available;
   width: -moz-available;
   width: fill-available;
-  padding: 1.3125rem 2.5rem 0.3125rem 0.75rem;
+  padding: 1.3125rem 2.5rem 0.3125rem var(--ictinus-spacing-5);
 }
 
 .emotion-5>div {
@@ -104,13 +104,13 @@
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  row-gap: 0.25rem;
+  row-gap: var(--ictinus-spacing-3);
   z-index: 2;
 }
 
 .emotion-7 {
   position: relative;
-  margin-right: 0.25rem;
+  margin-right: var(--ictinus-spacing-3);
 }
 
 .emotion-8 {
@@ -126,19 +126,19 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 1.5rem;
+  height: var(--ictinus-sizing-6);
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   box-sizing: border-box;
-  gap: 0.25rem;
-  padding: 0.125rem 0.5rem;
+  gap: var(--ictinus-spacing-3);
+  padding: var(--ictinus-spacing-2) var(--ictinus-spacing-4);
   cursor: auto;
-  background: rgba(200,206,255,0.30);
+  background: var(--ictinus-color-palette-secondary-base);
   color: #194DCC;
-  border: 0.0625rem solid;
-  border-color: #8EAAEC;
-  border-radius: 0.25rem;
+  border: var(--ictinus-border-width-1) solid;
+  border-color: var(--ictinus-color-border-color-interactive-default);
+  border-radius: var(--ictinus-border-radius-2);
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -150,8 +150,8 @@
 }
 
 .emotion-8:focus-visible {
-  background: rgba(200,206,255,0.20);
-  border-color: #175BF5;
+  background: var(--ictinus-color-palette-secondary-muted);
+  border-color: var(--ictinus-color-border-color-interactive-active);
 }
 
 .emotion-9 {
@@ -187,12 +187,12 @@
 
 .emotion-11:hover {
   background: rgba(200,206,255,0.20);
-  border-radius: 624.9375rem;
+  border-radius: var(--ictinus-border-radius-7);
 }
 
 .emotion-12 {
-  width: 1rem;
-  height: 1rem;
+  width: var(--ictinus-sizing-4);
+  height: var(--ictinus-sizing-4);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -201,13 +201,13 @@
 }
 
 .emotion-13 {
-  width: 1rem;
-  height: 1rem;
+  width: var(--ictinus-sizing-4);
+  height: var(--ictinus-sizing-4);
 }
 
 .emotion-13 path,
 .emotion-13 rect {
-  fill: #194DCC!important;
+  fill: var(--ictinus-color-text-default-active)!important;
 }
 
 .emotion-49 {
@@ -218,7 +218,7 @@
   letter-spacing: 0.015625rem;
   background: transparent;
   border: none;
-  color: #111530;
+  color: var(--ictinus-color-text-default-primary);
   padding: 0;
   display: block;
   position: relative;
@@ -274,7 +274,7 @@
 
 .emotion-49:focus-within+label,
 .emotion-49:not(:placeholder-shown)+label {
-  font-weight: 700!important;
+  font-weight: var(--ictinus-weight-bold)!important;
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -282,8 +282,8 @@
 }
 
 .emotion-49:focus-within+label {
-  font-weight: 700!important;
-  color: #194DCC;
+  font-weight: var(--ictinus-weight-bold)!important;
+  color: var(--ictinus-color-text-default-active);
 }
 
 .emotion-49:disabled {
@@ -312,7 +312,7 @@
   -moz-transform: translate(0.1875rem, -95%) scale(0.8);
   -ms-transform: translate(0.1875rem, -95%) scale(0.8);
   transform: translate(0.1875rem, -95%) scale(0.8);
-  color: #52567a;
+  color: var(--ictinus-color-text-default-secondary);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -337,7 +337,7 @@
 .emotion-51 {
   position: absolute!important;
   bottom: 0;
-  right: 0.5rem;
+  right: var(--ictinus-spacing-4);
   top: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -375,7 +375,7 @@
 
 .emotion-53 path,
 .emotion-53 rect {
-  fill: #52567a!important;
+  fill: var(--ictinus-color-text-default-secondary)!important;
 }
 
 .emotion-54 {
@@ -387,10 +387,10 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 0.25rem;
+  gap: var(--ictinus-spacing-3);
   opacity: 1;
-  color: #52567a;
-  padding: 0.5rem 0 0;
+  color: var(--ictinus-color-text-default-secondary);
+  padding: var(--ictinus-spacing-4) 0 0;
   font-family: Roboto;
   font-weight: 400;
   line-height: 1rem;
@@ -421,8 +421,8 @@
   position: relative;
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #8EAAEC;
-  border-radius: 0.25rem;
+  box-shadow: 0 0 0 var(--ictinus-border-width-1) var(--ictinus-color-border-color-interactive-default);
+  border-radius: var(--ictinus-border-radius-2);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -430,22 +430,22 @@
   opacity: 1;
   cursor: text;
   height: unset;
-  min-width: 8.75rem;
-  background-color: rgba(200,206,255,0.30);
+  min-width: 140px;
+  background-color: var(--ictinus-color-palette-secondary-base);
   min-height: 3.25rem!important;
 }
 
 .emotion-58:hover {
-  background-color: rgba(200,206,255,0.20);
+  background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
 .emotion-58:focus-within {
-  box-shadow: 0 0 0 0.125rem #175BF5;
-  background-color: rgba(200,206,255,0.30);
+  box-shadow: 0 0 0 var(--ictinus-border-width-2) var(--ictinus-color-border-color-interactive-active);
+  background-color: var(--ictinus-color-palette-secondary-base);
 }
 
 .emotion-58 input:focus label {
-  font-weight: 700;
+  font-weight: var(--ictinus-weight-bold);
   -webkit-transform: translate(0.1875rem, -82%) scale(0.8)!important;
   -moz-transform: translate(0.1875rem, -82%) scale(0.8)!important;
   -ms-transform: translate(0.1875rem, -82%) scale(0.8)!important;
@@ -474,7 +474,7 @@
   -moz-transform: translate(0.1875rem, 0);
   -ms-transform: translate(0.1875rem, 0);
   transform: translate(0.1875rem, 0);
-  color: #52567a;
+  color: var(--ictinus-color-text-default-secondary);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;

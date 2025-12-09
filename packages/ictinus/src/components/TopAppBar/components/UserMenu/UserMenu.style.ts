@@ -1,10 +1,10 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 
-import type { Theme } from '../../../../theme';
+import { vars } from '@orfium/tokens';
 
-const buttonTextStyle = (theme: Theme): SerializedStyles => css`
-  font-weight: ${theme.globals.typography.fontWeight.get('medium')};
+const buttonTextStyle = (): SerializedStyles => css`
+  font-weight: ${vars.weight.medium};
 `;
 
 export default {

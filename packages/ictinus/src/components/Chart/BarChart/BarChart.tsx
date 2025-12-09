@@ -2,21 +2,22 @@ import useTheme from 'hooks/useTheme';
 import { max } from 'lodash-es';
 import React, { useCallback, useMemo } from 'react';
 import {
-  BarChart as RechartsBarChart,
   Bar,
+  CartesianGrid,
   Cell,
+  LabelList,
+  BarChart as RechartsBarChart,
+  Tooltip,
   XAxis,
   YAxis,
-  CartesianGrid,
-  Tooltip,
-  LabelList,
 } from 'recharts';
 
+import { vars } from '@orfium/tokens';
+import Wrapper from '../Wrapper';
 import CustomLabel from './components/CustomLabel';
 import CustomTooltip from './components/CustomTooltip';
 import CustomTooltipContent from './components/CustomTooltipContent';
-import { getValues, customTickFormatter, getBarColors, getColoringOptions } from './utils';
-import Wrapper from '../Wrapper';
+import { customTickFormatter, getBarColors, getColoringOptions, getValues } from './utils';
 
 const multiplyFactor = 9.5;
 const yAxisWidthDefault = 160;
@@ -127,10 +128,7 @@ const BarChart: React.FCC<BarChartProps> = ({ data }) => {
           return customTickFormatter(tick, maxDomainValue);
         }}
       />
-      <Tooltip
-        cursor={{ fill: theme.tokens.colors.get('backgroundColor.alt') }}
-        content={<CustomTooltipContent />}
-      />
+      <Tooltip cursor={{ fill: vars.color.background.alt }} content={<CustomTooltipContent />} />
       <Bar dataKey="value">
         <LabelList
           dataKey="barLabel"

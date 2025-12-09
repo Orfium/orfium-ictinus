@@ -1,4 +1,5 @@
-import { useTheme, rem } from '@orfium/ictinus';
+import { rem } from '@orfium/ictinus';
+import { vars } from '@orfium/tokens';
 import React from 'react';
 
 type StackProps = {
@@ -15,12 +16,10 @@ const Stack: React.FCC<StackProps> = ({
   width,
   children,
 }) => {
-  const theme = useTheme();
-
   return (
     <div
       css={{
-        background: isInverted ? theme.tokens.colors.get('backgroundColor.inverted') : undefined,
+        background: isInverted ? vars.color.background.inverted : undefined,
         display: 'flex',
         flexDirection: isVertical ? 'column' : 'row',
         flexWrap: 'wrap',

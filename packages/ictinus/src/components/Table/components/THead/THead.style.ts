@@ -1,27 +1,22 @@
 import { css, type SerializedStyles } from '@emotion/react';
-import type { Theme } from 'theme';
 
+import { vars } from '@orfium/tokens';
 import type { THeadProps } from './THead';
 
-export const tHeadContainer =
-  ({
-    hasStickyHeader,
-    hasScrollbar,
-    sx,
-  }: Pick<THeadProps, 'hasStickyHeader' | 'sx'> & { hasScrollbar?: boolean }) =>
-  (theme: Theme): SerializedStyles => {
-    return css`
-      position: relative;
-      box-shadow: 0 ${theme.dimension.borderWidth.get('default')} 0 0
-        ${theme.tokens.colors.get('borderColor.decorative.default')};
+export const tHeadContainer = ({
+  hasStickyHeader,
+  hasScrollbar,
+  sx,
+}: Pick<THeadProps, 'hasStickyHeader' | 'sx'> & { hasScrollbar?: boolean }): SerializedStyles => {
+  return css`
+    position: relative;
+    box-shadow: 0 ${vars['border-width']['1']} 0 0 ${vars.color['border-color'].decorative.default};
 
-      ${hasStickyHeader &&
-      `
+    ${hasStickyHeader &&
+    `
          display: block;  
          width: calc(100%);
-         padding-right: ${
-           hasScrollbar ? /** srollbar width */ theme.globals.spacing.get('4') : '0px'
-         };
+         padding-right: ${hasScrollbar ? /** srollbar width */ vars.spacing['4'] : '0px'};
          box-sizing: border-box;
 
          tr {
@@ -29,13 +24,11 @@ export const tHeadContainer =
          }
       `}
 
-      ${hasScrollbar &&
-      `
-        box-shadow: ${theme.tokens.boxShadow.get('2')}, 0 ${theme.dimension.borderWidth.get(
-        'default'
-      )} 0 0 ${theme.tokens.colors.get('borderColor.decorative.default')} ;
+    ${hasScrollbar &&
+    `
+        box-shadow: ${vars['box-shadow']['2']}, 0 ${vars['border-width']['1']} 0 0 ${vars.color['border-color'].decorative.default} ;
       `}
 
       ${sx};
-    `;
-  };
+  `;
+};

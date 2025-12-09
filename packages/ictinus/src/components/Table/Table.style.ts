@@ -1,18 +1,15 @@
 import type { CSSObject, SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
-import type { Theme } from 'theme';
+import { vars } from '@orfium/tokens';
 
-export const tableContainer =
-  () =>
-  (theme: Theme): SerializedStyles => {
-    return css`
-      display: inline-block;
-      border: ${theme.dimension.borderWidth.get('default')} solid
-        ${theme.tokens.colors.get('borderColor.decorative.default')};
-      border-radius: ${theme.dimension.borderRadius.get('md')};
-      background: ${theme.tokens.colors.get('backgroundColor.default')};
-    `;
-  };
+export const tableContainer = (): SerializedStyles => {
+  return css`
+    display: inline-block;
+    border: ${vars['border-width']['1']} solid ${vars.color['border-color'].decorative.default};
+    border-radius: ${vars['border-radius']['2']};
+    background: ${vars.color.background.default};
+  `;
+};
 
 export const tableStyles = ({ sx }: { sx?: CSSObject }): SerializedStyles => {
   return css`

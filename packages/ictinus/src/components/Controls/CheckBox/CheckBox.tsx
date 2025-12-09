@@ -1,9 +1,9 @@
-import useTheme from 'hooks/useTheme';
 import React from 'react';
 import type { CheckboxAria } from 'react-aria';
 import { Checkbox as ReactAriaCheckbox } from 'react-aria-components';
 import type { TestProps } from 'utils/types';
 
+import { vars } from '@orfium/tokens';
 import type { LabelConfig } from 'components/Controls/Controls.types';
 import Icon from 'components/Icon';
 import Box from '~/components/Box';
@@ -38,8 +38,6 @@ const CheckBox = React.forwardRef<HTMLLabelElement, CheckBoxProps>((props, ref) 
   } = props;
   const { placement = 'right', size = 'normal', helpText, sx } = labelConfig;
 
-  const theme = useTheme();
-
   return (
     <div css={checkboxWrapperStyles({ sx })}>
       <ReactAriaCheckbox
@@ -63,8 +61,8 @@ const CheckBox = React.forwardRef<HTMLLabelElement, CheckBoxProps>((props, ref) 
           <Box data-role="checkbox-icon">
             <Icon
               name={isIndeterminate ? 'minus' : 'check'}
-              size={theme.dimension.sizing.get('icon.md')}
-              color={theme.tokens.colors.get('textColor.inverted.primary')}
+              size={vars.sizing['5']}
+              color={vars.color.text.inverted.primary}
               dataTestId={`${dataTestPrefixId}${value ? `_${value}` : ''}_${
                 isIndeterminate ? 'minus' : isSelected ? 'checkmark' : 'unselected'
               }`}

@@ -2,9 +2,13 @@ import { css, type SerializedStyles } from '@emotion/react';
 import type { Theme } from 'theme';
 import { transition } from 'theme/functions';
 
-import { getFilterTokens } from 'components/Filter/Filter.tokens';
+import { vars } from '@orfium/tokens';
 import { generateStylesFromTokens } from 'components/Typography/utils';
 import type { FilterButtonProps } from './FilterButton';
+
+const FILTER_TOKENS = {
+  height: vars.sizing['9'],
+};
 
 export const buttonStyles =
   ({
@@ -13,22 +17,20 @@ export const buttonStyles =
     isDisabled,
   }: Pick<FilterButtonProps, 'isActive' | 'isPopulated' | 'isDisabled'>) =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getFilterTokens(theme);
-
     const getBackgroundColor = (hasHover = false) => {
       if (isActive) {
-        return theme.tokens.colors.get('palette.primary.contrast');
+        return vars.color.palette.primary.contrast;
       }
 
       if (isPopulated) {
-        if (hasHover) return theme.tokens.colors.get('palette.secondary.muted');
+        if (hasHover) return vars.color.palette.secondary.muted;
 
-        return theme.tokens.colors.get('palette.secondary.base');
+        return vars.color.palette.secondary.base;
       }
 
-      if (hasHover) return theme.tokens.colors.get('palette.secondary.muted');
+      if (hasHover) return vars.color.palette.secondary.muted;
 
-      return theme.tokens.colors.get('palette.secondary.base');
+      return vars.color.palette.secondary.base;
     };
 
     return css`
@@ -37,18 +39,15 @@ export const buttonStyles =
 
       cursor: ${isDisabled ? 'not-allowed' : 'pointer'};
 
-      height: ${tokens('height')};
-      padding: 0 ${theme.dimension.spacing.get('md')} 0 ${theme.dimension.spacing.get('lg')};
+      height: ${FILTER_TOKENS.height};
+      padding: 0 ${vars.spacing['5']} 0 ${vars.spacing['6']};
 
-      gap: ${theme.dimension.spacing.get('xs')};
+      gap: ${vars.spacing['3']};
 
       background-color: ${getBackgroundColor()};
-      color: ${theme.tokens.colors.get(
-        isActive ? 'textColor.inverted.primary' : 'textColor.default.active'
-      )};
-      border: ${theme.dimension.borderWidth.get('default')} solid
-        ${theme.tokens.colors.get('borderColor.interactive.default')};
-      border-radius: ${theme.dimension.borderRadius.get('circle')};
+      color: ${isActive ? vars.color.text.inverted.primary : vars.color.text.default.active};
+      border: ${vars['border-width']['1']} solid ${vars.color['border-color'].interactive.default};
+      border-radius: ${vars['border-radius']['7']};
 
       ${generateStylesFromTokens(theme.tokens.typography.get('normal.label02'))};
 

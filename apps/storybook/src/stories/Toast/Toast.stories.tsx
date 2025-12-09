@@ -1,4 +1,5 @@
-import { Box, Button, Icon, Link, toast, ToastContainer, useTheme } from '@orfium/ictinus';
+import { Box, Button, Icon, Link, toast, ToastContainer } from '@orfium/ictinus';
+import { vars } from '@orfium/tokens';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { userEvent, within } from '@storybook/test';
 import { useState, type ComponentProps, type ReactElement } from 'react';
@@ -331,14 +332,12 @@ export const WithCustomIcon: Story = {
     },
   },
   render: (args) => {
-    const theme = useTheme();
-
     return (
       <Button
         onClick={() =>
           toast(
             <Box display="flex" alignItems="center" gap="4">
-              <Icon name="account" color={theme.tokens.colors.get('textColor.default.secondary')} />
+              <Icon name="account" color={vars.color.text.default.secondary} />
               {args.content as string}
             </Box>
           )

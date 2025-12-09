@@ -1,8 +1,9 @@
+import { vars } from '@orfium/tokens';
 import Card from 'components/Card';
 import IconButton from 'components/IconButton';
 import useEscape from 'hooks/useEscape';
 import { useOverlayStack } from 'hooks/useOverlayStack';
-import { rem, useTheme } from 'index';
+import { rem } from 'index';
 import React, { useEffect, useRef } from 'react';
 import { generateTestDataId } from 'utils/helpers';
 import type { TestId } from 'utils/types';
@@ -38,7 +39,6 @@ const Modal: React.FCC<ModalProps> = ({
   maxHeight = `${rem(684)}`,
 }) => {
   const overlayRef = useRef(null);
-  const theme = useTheme();
 
   const { overlayProps } = useOverlayStack({
     isVisible: isOpen,
@@ -72,7 +72,7 @@ const Modal: React.FCC<ModalProps> = ({
               type="tertiary"
               iconName="close"
               onClick={onClose}
-              color={theme.tokens.colors.get('textColor.default.secondary')}
+              color={vars.color.text.default.secondary}
               dataTestId="modal-close"
             />
           </div>

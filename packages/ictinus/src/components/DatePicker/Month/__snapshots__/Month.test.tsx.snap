@@ -25,18 +25,18 @@ exports[`Month > should render correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #52567a;
-  width: 2.25rem;
-  height: 2.25rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  color: var(--ictinus-color-text-default-secondary);
+  width: var(--ictinus-sizing-9);
+  height: var(--ictinus-sizing-9);
+  font-size: var(--ictinus-font-size-3);
+  line-height: var(--ictinus-line-height-4);
   text-align: center;
-  font-weight: 500;
+  font-weight: var(--ictinus-weight-medium);
 }
 
 .emotion-8 {
   border-collapse: separate;
-  border-spacing: 0 0.75rem;
+  border-spacing: 0 var(--ictinus-spacing-5);
 }
 
 .emotion-9 {
@@ -44,7 +44,7 @@ exports[`Month > should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  background: rgba(200,206,255,0);
+  background: var(--ictinus-color-palette-tertiary-base);
 }
 
 .emotion-15 {
@@ -52,14 +52,14 @@ exports[`Month > should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #111530;
-  width: 2.25rem;
+  color: var(--ictinus-color-text-default-primary);
+  width: var(--ictinus-sizing-9);
   opacity: 1;
 }
 
 .emotion-15:focus-visible {
-  background-color: rgba(200,206,255,0.20);
-  border-radius: 624.9375rem;
+  background-color: var(--ictinus-color-palette-tertiary-muted);
+  border-radius: var(--ictinus-border-radius-7);
 }
 
 .emotion-16 {
@@ -68,10 +68,10 @@ exports[`Month > should render correctly 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
-  border: 0.0625rem solid rgba(200,206,255,0);
-  width: 2.25rem;
-  height: 2.25rem;
-  color: #111530;
+  border: var(--ictinus-border-width-1) solid var(--ictinus-color-border-color-decorative-transparent);
+  width: var(--ictinus-sizing-9);
+  height: var(--ictinus-sizing-9);
+  color: var(--ictinus-color-text-default-primary);
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -89,8 +89,8 @@ exports[`Month > should render correctly 1`] = `
 }
 
 .emotion-16:hover {
-  border-radius: 624.9375rem;
-  background: rgba(200,206,255,0.20);
+  border-radius: var(--ictinus-border-radius-7);
+  background: var(--ictinus-color-palette-tertiary-muted);
 }
 
 .emotion-19 {
@@ -98,15 +98,15 @@ exports[`Month > should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #111530;
-  width: 2.25rem;
+  color: var(--ictinus-color-text-default-primary);
+  width: var(--ictinus-sizing-9);
   font-weight: bold;
   opacity: 1;
 }
 
 .emotion-19:focus-visible {
-  background-color: rgba(200,206,255,0.20);
-  border-radius: 624.9375rem;
+  background-color: var(--ictinus-color-palette-tertiary-muted);
+  border-radius: var(--ictinus-border-radius-7);
 }
 
 .emotion-20 {
@@ -115,11 +115,11 @@ exports[`Month > should render correctly 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
-  border: 0.0625rem solid #175BF5;
-  border-radius: 624.9375rem;
-  width: 2.25rem;
-  height: 2.25rem;
-  color: #111530;
+  border: var(--ictinus-border-width-1) solid var(--ictinus-color-border-color-interactive-active);
+  border-radius: var(--ictinus-border-radius-7);
+  width: var(--ictinus-sizing-9);
+  height: var(--ictinus-sizing-9);
+  color: var(--ictinus-color-text-default-primary);
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -137,8 +137,8 @@ exports[`Month > should render correctly 1`] = `
 }
 
 .emotion-20:hover {
-  border-radius: 624.9375rem;
-  background: rgba(200,206,255,0.20);
+  border-radius: var(--ictinus-border-radius-7);
+  background: var(--ictinus-color-palette-tertiary-muted);
 }
 
 .emotion-21 {
@@ -146,17 +146,17 @@ exports[`Month > should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #ffffff;
-  width: 2.25rem;
+  color: var(--ictinus-color-text-inverted-primary);
+  width: var(--ictinus-sizing-9);
   opacity: 1;
-  background: #194DCC;
+  background: var(--ictinus-color-palette-primary-contrast);
   border-bottom-left-radius: 100%;
   border-top-left-radius: 100%;
 }
 
 .emotion-21:focus-visible {
-  background-color: rgba(200,206,255,0.20);
-  border-radius: 624.9375rem;
+  background-color: var(--ictinus-color-palette-tertiary-muted);
+  border-radius: var(--ictinus-border-radius-7);
 }
 
 .emotion-21:after {
@@ -180,11 +180,11 @@ exports[`Month > should render correctly 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
-  border: 0 solid rgba(200,206,255,0);
-  border-radius: 624.9375rem;
-  width: 2.25rem;
-  height: 2.25rem;
-  color: #ffffff;
+  border: 0 solid var(--ictinus-color-border-color-decorative-transparent);
+  border-radius: var(--ictinus-border-radius-7);
+  width: var(--ictinus-sizing-9);
+  height: var(--ictinus-sizing-9);
+  color: var(--ictinus-color-text-inverted-primary);
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -198,11 +198,11 @@ exports[`Month > should render correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  background: #194DCC;
+  background: var(--ictinus-color-palette-primary-contrast);
 }
 
 .emotion-22:hover {
-  border-radius: 624.9375rem;
+  border-radius: var(--ictinus-border-radius-7);
   background: false;
 }
 
@@ -211,15 +211,15 @@ exports[`Month > should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #111530;
-  width: 2.25rem;
+  color: var(--ictinus-color-text-default-primary);
+  width: var(--ictinus-sizing-9);
   opacity: 1;
-  background: rgba(200,206,255,0.20);
+  background: var(--ictinus-color-palette-tertiary-muted);
 }
 
 .emotion-23:focus-visible {
-  background-color: rgba(200,206,255,0.20);
-  border-radius: 624.9375rem;
+  background-color: var(--ictinus-color-palette-tertiary-muted);
+  border-radius: var(--ictinus-border-radius-7);
 }
 
 .emotion-24 {
@@ -228,10 +228,10 @@ exports[`Month > should render correctly 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
-  border: 0.0625rem solid rgba(200,206,255,0);
-  width: 2.25rem;
-  height: 2.25rem;
-  color: #111530;
+  border: var(--ictinus-border-width-1) solid var(--ictinus-color-border-color-decorative-transparent);
+  width: var(--ictinus-sizing-9);
+  height: var(--ictinus-sizing-9);
+  color: var(--ictinus-color-text-default-primary);
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -249,7 +249,7 @@ exports[`Month > should render correctly 1`] = `
 }
 
 .emotion-24:hover {
-  border-radius: 624.9375rem;
+  border-radius: var(--ictinus-border-radius-7);
   background: transparent;
 }
 

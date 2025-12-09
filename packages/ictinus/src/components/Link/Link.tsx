@@ -1,11 +1,16 @@
-import useTheme from 'hooks/useTheme';
 import React from 'react';
 
+import { vars } from '@orfium/tokens';
 import Icon from 'components/Icon';
 import { useSlotProps } from '../utils/Slots';
-import { iconSize } from './constants';
 import { linkContainer } from './Link.style';
 import type { LinkProps } from './Link.types';
+
+const ICON_SIZE = {
+  1: vars.sizing['5'],
+  2: vars.sizing['4'],
+  3: vars.sizing['3'],
+};
 
 const Link = React.forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
   props = useSlotProps(props, 'link');
@@ -20,8 +25,6 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
     children,
     ...rest
   } = props;
-
-  const theme = useTheme();
 
   const Component = component ?? 'a';
 
@@ -41,10 +44,8 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
       {iconName && (
         <Icon
           name={iconName}
-          color={theme.tokens.colors.get(
-            isInverted ? 'textColor.inverted.active' : 'textColor.default.active'
-          )}
-          size={theme.dimension.sizing.get(iconSize[size])}
+          color={vars.color.text[isInverted ? 'inverted' : 'default'].active}
+          size={ICON_SIZE[size]}
           dataTestId={`${dataTestPrefixId}_link_icon`}
         />
       )}

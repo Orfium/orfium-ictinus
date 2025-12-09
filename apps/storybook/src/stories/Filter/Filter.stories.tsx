@@ -1,11 +1,5 @@
-import {
-  Button,
-  DropdownButton,
-  Filter,
-  TextField,
-  useTheme,
-  type FilterOption,
-} from '@orfium/ictinus';
+import { Button, DropdownButton, Filter, TextField, type FilterOption } from '@orfium/ictinus';
+import { vars } from '@orfium/tokens';
 import { userEvent, within } from '@storybook/test';
 import React from 'react';
 import { FIGMA_URL } from 'utils/common';
@@ -355,7 +349,6 @@ export const CustomFilter = {
   render: () => {
     const [selectedFilter, setSelectedFilter] = React.useState<FilterOption>();
     const [selectedFilter2, setSelectedFilter2] = React.useState<FilterOption>();
-    const theme = useTheme();
 
     const [value, setValue] = React.useState('');
     const [value2, setValue2] = React.useState('');
@@ -379,7 +372,7 @@ export const CustomFilter = {
                   width: '200px',
                   height: '100px',
                   background: 'white',
-                  border: `1px solid ${theme.globals.colors.get('blue.2')}`,
+                  border: `1px solid ${vars.color.blue['2']}`,
                   borderRadius: '4px',
                   padding: '16px',
                   display: 'flex',
@@ -426,7 +419,7 @@ export const CustomFilter = {
                   width: '200px',
                   height: '100px',
                   background: 'white',
-                  border: `1px solid ${theme.globals.colors.get('blue.2')}`,
+                  border: `1px solid ${vars.color.blue['2']}`,
                   borderRadius: '4px',
                   padding: '16px',
                   display: 'flex',

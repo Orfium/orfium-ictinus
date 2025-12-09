@@ -1,6 +1,7 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import { type Theme, generateStylesFromTokens } from '@orfium/ictinus';
+import { vars } from '@orfium/tokens';
 
 export const noteStyles =
   () =>
@@ -9,7 +10,7 @@ export const noteStyles =
       display: flex;
       position: relative;
       justify-content: flex-end;
-      color: ${theme.tokens.colors.get('textColor.default.secondary')} !important;
+      color: ${vars.color.text.default.secondary} !important;
 
       p {
         margin: 0;

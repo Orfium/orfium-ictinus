@@ -39,11 +39,11 @@
   -webkit-justify-content: center;
   justify-content: center;
   color: #ffffff;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: var(--ictinus-sizing-9);
+  height: var(--ictinus-sizing-9);
   background-color: #175BF5;
-  padding: 0rem 1rem 0rem 1rem;
-  border-radius: 624.9375rem;
+  padding: var(--ictinus-spacing-0) var(--ictinus-spacing-6) var(--ictinus-spacing-0) var(--ictinus-spacing-6);
+  border-radius: var(--ictinus-border-radius-7);
   border: none;
   cursor: pointer;
   -webkit-transition: background-color,border 150ms linear;
@@ -69,8 +69,8 @@
 }
 
 .emotion-3 {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: var(--ictinus-sizing-5);
+  height: var(--ictinus-sizing-5);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -78,8 +78,8 @@
 }
 
 .emotion-4 {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: var(--ictinus-sizing-5);
+  height: var(--ictinus-sizing-5);
 }
 
 .emotion-4 path,
@@ -106,10 +106,10 @@
   -webkit-justify-content: center;
   justify-content: center;
   color: #ffffff;
-  height: 2.25rem;
+  height: var(--ictinus-sizing-9);
   background-color: #175BF5;
-  padding: 0rem 1rem 0rem 1rem;
-  border-radius: 0.25rem;
+  padding: var(--ictinus-spacing-0) var(--ictinus-spacing-6) var(--ictinus-spacing-0) var(--ictinus-spacing-6);
+  border-radius: var(--ictinus-border-radius-2);
   border: none;
   cursor: pointer;
   -webkit-transition: background-color,border 150ms linear;
@@ -147,7 +147,7 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: var(--ictinus-spacing-4);
 }
 
 .emotion-8 {
@@ -155,8 +155,8 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  color: #194DCC;
+  gap: var(--ictinus-spacing-3);
+  color: var(--ictinus-color-text-default-active);
   -webkit-text-decoration: none;
   text-decoration: none;
   position: relative;
@@ -176,28 +176,28 @@
 
 .emotion-8:hover,
 .emotion-8[aria-expanded='true'] {
-  color: #111530;
+  color: var(--ictinus-color-text-default-primary);
 }
 
 .emotion-8:hover path,
 .emotion-8[aria-expanded='true'] path {
-  fill: #111530!important;
+  fill: var(--ictinus-color-text-default-primary)!important;
 }
 
 .emotion-8:visited {
-  color: #5F33AC;
+  color: var(--ictinus-color-text-default-visited);
 }
 
 .emotion-8:visited path {
-  fill: #5F33AC!important;
+  fill: var(--ictinus-color-text-default-visited)!important;
 }
 
 .emotion-8:focus-visible:after {
   content: '';
   position: absolute;
   inset: -3px -6px;
-  border-radius: 0.25rem;
-  border: 0.25rem solid #A566FF;
+  border-radius: var(--ictinus-border-radius-2);
+  border: var(--ictinus-border-width-3) solid var(--ictinus-color-border-color-interactive-upsell);
 }
 
 <div>

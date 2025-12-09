@@ -1,9 +1,7 @@
+import { vars } from '@orfium/tokens';
 import FilterButton from 'components/Filter/components/FilterButton';
 import Icon from 'components/Icon';
-import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
-import useTheme from 'hooks/useTheme';
 import React, { useCallback, useMemo, type InputHTMLAttributes } from 'react';
-import { rem } from '@orfium/tokens';
 import type { Dayjs } from 'utils/date';
 import dayjs from 'utils/date';
 import { getLocaleFormat } from 'utils/helpers';
@@ -13,6 +11,7 @@ import TextField from '../../TextField/TextField';
 import { DATE_PICKER_LABEL, DATE_RANGE_PICKER_LABEL } from '../constants';
 import type { DateFormatType, DatePickerProps } from '../DatePicker.types';
 import type { Range } from '../OverlayComponent/OverlayComponent';
+import { FIELD_TOKENS } from './DatePickInput.style';
 
 // TODO: Need to fix this (TextField onChange prop)
 const ON_CHANGE_MOCK = () => {};
@@ -61,10 +60,6 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
     },
     ref
   ) => {
-    const theme = useTheme();
-
-    const tokens = getTextInputBaseTokens(theme);
-
     const getDateFormatted = useCallback(formatDate(dateFormatOverride), [dateFormatOverride]);
 
     const formattedFrom = getDateFormatted(selectedDay.from);
@@ -77,8 +72,8 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
     const sx = {
       wrapper: {
         minWidth: isRangePicker
-          ? rem(tokens('minWidth.extraLarge.normal'))
-          : rem(tokens('minWidth.medium.normal')),
+          ? FIELD_TOKENS.minWidth.extraLarge.normal
+          : FIELD_TOKENS.minWidth.medium.normal,
       },
     };
 
@@ -87,8 +82,8 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
         <Icon
           tabIndex={0}
           name="calendar"
-          size={theme.dimension.sizing.get('icon.md')}
-          color={theme.tokens.colors.get('textColor.default.secondary')}
+          size={vars.sizing['5']}
+          color={vars.color.text.default.secondary}
           onClick={handleIconClick}
           dataTestId="calendar_button"
           onKeyDown={(e) => {
@@ -98,7 +93,7 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
           }}
         />
       ),
-      [handleIconClick, theme.dimension.sizing, theme.tokens.colors]
+      [handleIconClick]
     );
 
     const getLabel = useMemo(() => {

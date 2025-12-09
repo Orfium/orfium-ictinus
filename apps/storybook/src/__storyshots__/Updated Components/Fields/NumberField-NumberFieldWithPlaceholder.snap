@@ -27,26 +27,26 @@
   position: relative;
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #8EAAEC;
-  border-radius: 0.25rem;
+  box-shadow: 0 0 0 var(--ictinus-border-width-1) var(--ictinus-color-border-color-interactive-default);
+  border-radius: var(--ictinus-border-radius-2);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
   cursor: text;
-  height: 3.25rem;
-  min-width: 8.75rem;
-  background-color: rgba(200,206,255,0.30);
+  height: var(--ictinus-sizing-13);
+  min-width: 140px;
+  background-color: var(--ictinus-color-palette-secondary-base);
 }
 
 .emotion-1:hover {
-  background-color: rgba(200,206,255,0.20);
+  background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
 .emotion-1:focus-within {
-  box-shadow: 0 0 0 0.125rem #175BF5;
-  background-color: rgba(200,206,255,0.30);
+  box-shadow: 0 0 0 var(--ictinus-border-width-2) var(--ictinus-color-border-color-interactive-active);
+  background-color: var(--ictinus-color-palette-secondary-base);
 }
 
 .emotion-2 {
@@ -66,7 +66,7 @@
   width: -webkit-fill-available;
   width: -moz-available;
   width: fill-available;
-  padding: 0rem 0rem 0rem 0.75rem;
+  padding: var(--ictinus-spacing-0) var(--ictinus-spacing-0) var(--ictinus-spacing-0) var(--ictinus-spacing-5);
 }
 
 .emotion-2>div {
@@ -85,7 +85,7 @@
   letter-spacing: 0.015625rem;
   background: transparent;
   border: none;
-  color: #111530;
+  color: var(--ictinus-color-text-default-primary);
   padding: 0;
   display: block;
   position: relative;
@@ -138,7 +138,7 @@
 
 .emotion-5:focus-within+label,
 .emotion-5:not(:placeholder-shown)+label {
-  font-weight: 700!important;
+  font-weight: var(--ictinus-weight-bold)!important;
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -146,8 +146,8 @@
 }
 
 .emotion-5:focus-within+label {
-  font-weight: 700!important;
-  color: #194DCC;
+  font-weight: var(--ictinus-weight-bold)!important;
+  color: var(--ictinus-color-text-default-active);
 }
 
 .emotion-5:disabled {
@@ -168,7 +168,7 @@
   -moz-transform: translate(0.1875rem, 0);
   -ms-transform: translate(0.1875rem, 0);
   transform: translate(0.1875rem, 0);
-  color: #52567a;
+  color: var(--ictinus-color-text-default-secondary);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -198,7 +198,7 @@
   letter-spacing: 0.015625rem;
   background: transparent;
   border: none;
-  color: #111530;
+  color: var(--ictinus-color-text-default-primary);
   padding: 0;
   display: block;
   position: relative;
@@ -230,19 +230,19 @@
 }
 
 .emotion-11:focus::-webkit-input-placeholder {
-  color: #52567a;
+  color: var(--ictinus-color-text-default-secondary);
 }
 
 .emotion-11:focus::-moz-placeholder {
-  color: #52567a;
+  color: var(--ictinus-color-text-default-secondary);
 }
 
 .emotion-11:focus:-ms-input-placeholder {
-  color: #52567a;
+  color: var(--ictinus-color-text-default-secondary);
 }
 
 .emotion-11:focus::placeholder {
-  color: #52567a;
+  color: var(--ictinus-color-text-default-secondary);
 }
 
 .emotion-11:not(:focus):placeholder-shown+label {
@@ -251,7 +251,7 @@
 
 .emotion-11:focus-within+label,
 .emotion-11:not(:placeholder-shown)+label {
-  font-weight: 700!important;
+  font-weight: var(--ictinus-weight-bold)!important;
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -259,8 +259,8 @@
 }
 
 .emotion-11:focus-within+label {
-  font-weight: 700!important;
-  color: #194DCC;
+  font-weight: var(--ictinus-weight-bold)!important;
+  color: var(--ictinus-color-text-default-active);
 }
 
 .emotion-11:disabled {
@@ -282,26 +282,26 @@
   position: relative;
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #8EAAEC;
-  border-radius: 0.25rem;
+  box-shadow: 0 0 0 var(--ictinus-border-width-1) var(--ictinus-color-border-color-interactive-default);
+  border-radius: var(--ictinus-border-radius-2);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
   cursor: text;
-  height: 1.75rem;
+  height: var(--ictinus-sizing-7);
   min-width: 5.625rem;
-  background-color: rgba(200,206,255,0.30);
+  background-color: var(--ictinus-color-palette-secondary-base);
 }
 
 .emotion-13:hover {
-  background-color: rgba(200,206,255,0.20);
+  background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
 .emotion-13:focus-within {
-  box-shadow: 0 0 0 0.125rem #175BF5;
-  background-color: rgba(200,206,255,0.30);
+  box-shadow: 0 0 0 var(--ictinus-border-width-2) var(--ictinus-color-border-color-interactive-active);
+  background-color: var(--ictinus-color-palette-secondary-base);
 }
 
 .emotion-17 {
@@ -312,7 +312,7 @@
   letter-spacing: 0.015625rem;
   background: transparent;
   border: none;
-  color: #111530;
+  color: var(--ictinus-color-text-default-primary);
   padding: 0;
   display: block;
   position: relative;
@@ -343,19 +343,19 @@
 }
 
 .emotion-17:focus::-webkit-input-placeholder {
-  color: #52567a;
+  color: var(--ictinus-color-text-default-secondary);
 }
 
 .emotion-17:focus::-moz-placeholder {
-  color: #52567a;
+  color: var(--ictinus-color-text-default-secondary);
 }
 
 .emotion-17:focus:-ms-input-placeholder {
-  color: #52567a;
+  color: var(--ictinus-color-text-default-secondary);
 }
 
 .emotion-17:focus::placeholder {
-  color: #52567a;
+  color: var(--ictinus-color-text-default-secondary);
 }
 
 .emotion-17:not(:focus):placeholder-shown+label {
@@ -368,8 +368,8 @@
 }
 
 .emotion-17:focus-within+label {
-  font-weight: 700!important;
-  color: #194DCC;
+  font-weight: var(--ictinus-weight-bold)!important;
+  color: var(--ictinus-color-text-default-active);
 }
 
 .emotion-17:disabled {
@@ -390,7 +390,7 @@
   -moz-transform: translate(0.1875rem, 0);
   -ms-transform: translate(0.1875rem, 0);
   transform: translate(0.1875rem, 0);
-  color: #52567a;
+  color: var(--ictinus-color-text-default-secondary);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;

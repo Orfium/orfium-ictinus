@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { vars } from '@orfium/tokens';
 import { rem, rgba } from 'polished';
 import type { CSSProperties } from 'react';
 
@@ -12,9 +13,8 @@ export const Thumb = styled.div<{
   height: ${rem(16)};
   width: ${rem(16)};
   border-radius: 100px;
-  background-color: ${({ theme, isChanged }) =>
-    isChanged ? theme.tokens.colors.get('palette.primary.base') : '#fff'};
-  border: 2px solid ${({ theme }) => theme.tokens.colors.get('palette.primary.base')};
+  background-color: ${({ isChanged }) => (isChanged ? vars.color.palette.primary.base : '#fff')};
+  border: 2px solid ${vars.color.palette.primary.base};
   ${({ restStyleProps }) => ({ ...restStyleProps })};
   box-sizing: border-box;
   cursor: ${({ isDisabled }) => (isDisabled ? 'not-allowed' : 'unset')} !important;

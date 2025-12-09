@@ -125,10 +125,7 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
           status={isInteractive ? { ...status, id: hintMessageId } : { type: 'normal' }}
           {...rest}
           isInteractive={isInteractive}
-          sx={merge(
-            textInputBaseOverrides({ hasValue, hasLabel, isResponsive, isTextfield })(theme),
-            sx
-          )}
+          sx={merge(textInputBaseOverrides({ hasValue, hasLabel, isResponsive, isTextfield }), sx)}
         >
           <div css={inputContainer()} data-testid="selected-tags">
             {tags}

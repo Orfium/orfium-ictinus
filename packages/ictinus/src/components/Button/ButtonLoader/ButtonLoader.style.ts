@@ -1,7 +1,6 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css, keyframes } from '@emotion/react';
-import type { Theme } from 'theme';
-import { rem } from '@orfium/tokens';
+import { rem, vars } from '@orfium/tokens';
 
 export const loaderWrapperStyle = (): SerializedStyles => {
   return css({
@@ -10,25 +9,23 @@ export const loaderWrapperStyle = (): SerializedStyles => {
   });
 };
 
-export const barWrapperStyle =
-  () =>
-  (theme: Theme): SerializedStyles => {
-    return css({
-      width: '100%',
-      height: rem(4),
-      overflow: 'hidden',
-      borderTopLeftRadius: theme.dimension.borderRadius.get('md'),
-      borderTopRightRadius: theme.dimension.borderRadius.get('md'),
-      position: 'relative',
+export const barWrapperStyle = (): SerializedStyles => {
+  return css({
+    width: '100%',
+    height: rem(4),
+    overflow: 'hidden',
+    borderTopLeftRadius: vars['border-radius']['2'],
+    borderTopRightRadius: vars['border-radius']['2'],
+    position: 'relative',
 
-      ':before': {
-        content: '""',
-        width: '100%',
-        height: rem(2),
-        display: 'block',
-      },
-    });
-  };
+    ':before': {
+      content: '""',
+      width: '100%',
+      height: rem(2),
+      display: 'block',
+    },
+  });
+};
 
 export const barStyle = (): SerializedStyles => {
   const barAnimation = keyframes({

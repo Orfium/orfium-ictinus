@@ -1,19 +1,19 @@
 import { css } from '@emotion/react';
-import { rem } from '@orfium/tokens';
+import { rem, vars } from '@orfium/tokens';
 import type { Theme } from '~/theme';
 import type { ToastOptions } from './Toast.types';
 
 export const styles = {
-  toastRegion: (theme: Theme) => css`
+  toastRegion: () => css`
     isolation: isolate;
     position: fixed;
     display: flex;
     flex-direction: column-reverse;
     container-type: inline-size;
-    bottom: ${theme.dimension.spacing.get('3xl')};
-    left: ${theme.dimension.spacing.get('3xl')};
-    right: ${theme.dimension.spacing.get('3xl')};
-    gap: ${theme.dimension.spacing.get('sm')};
+    bottom: ${vars.spacing['9']};
+    left: ${vars.spacing['9']};
+    right: ${vars.spacing['9']};
+    gap: ${vars.spacing['4']};
     pointer-events: none;
     z-index: 9999;
   `,
@@ -24,7 +24,7 @@ export const styles = {
     align-items: flex-end;
   `,
   toast: (props: ToastOptions) => (theme: Theme) => css`
-    --toast-border-width: ${theme.dimension.borderWidth.get('default')};
+    --toast-border-width: ${vars['border-width']['1']};
     --toast-min-content-width: ${rem(100)};
 
     ${theme.tokens.typography.get('normal.body02')};
@@ -36,18 +36,18 @@ export const styles = {
     grid-template-columns: auto minmax(var(--toast-min-content-width), 1fr) auto;
     grid-template-areas: 'icon content actions close';
     align-items: center;
-    padding: calc(${theme.dimension.spacing.get('md')} - ${rem(1)});
-    border-radius: ${theme.dimension.borderRadius.get('md')};
-    background: ${theme.tokens.colors.get('backgroundColor.alt')};
-    border: ${rem(1)} solid ${getBorderColor(props.status, theme)};
+    padding: calc(${vars.spacing['5']} - ${rem(1)});
+    border-radius: ${vars['border-radius']['2']};
+    background: ${vars.color.background.alt};
+    border: ${rem(1)} solid ${getBorderColor(props.status)};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     view-transition-class: toast;
     view-transition-name: var(--view-transition-name);
 
     &:has([data-slot='button']) {
-      padding: calc(${theme.dimension.spacing.get('sm')} - var(--toast-border-width))
-        calc(${theme.dimension.spacing.get('md')} - var(--toast-border-width));
+      padding: calc(${vars.spacing['4']} - var(--toast-border-width))
+        calc(${vars.spacing['5']} - var(--toast-border-width));
     }
 
     @container (max-width: calc(600px - 1px)) {
@@ -57,8 +57,8 @@ export const styles = {
       align-items: flex-start;
 
       &:has([data-slot='button']) {
-        padding: calc(${theme.dimension.spacing.get('md')} - var(--toast-border-width))
-          calc(${theme.dimension.spacing.get('md')} - var(--toast-border-width));
+        padding: calc(${vars.spacing['5']} - var(--toast-border-width))
+          calc(${vars.spacing['5']} - var(--toast-border-width));
       }
     }
 
@@ -67,61 +67,61 @@ export const styles = {
       view-transition-class: none;
     }
   `,
-  icon: (theme: Theme) => css`
+  icon: () => css`
     grid-area: icon;
-    margin-right: ${theme.dimension.spacing.get('md')};
+    margin-right: ${vars.spacing['5']};
     pointer-events: none;
   `,
-  dismiss: (theme: Theme) => css`
+  dismiss: () => css`
     grid-area: close;
     justify-self: end;
-    margin-left: ${theme.dimension.spacing.get('lg')};
+    margin-left: ${vars.spacing['6']};
   `,
   toastContent: css`
     grid-area: content;
     cursor: default;
   `,
-  toastActions: (theme: Theme) => css`
+  toastActions: () => css`
     grid-area: actions;
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
-    gap: ${theme.dimension.spacing.get('sm')};
-    margin-left: ${theme.globals.spacing.get('7')};
+    gap: ${vars.spacing['4']};
+    margin-left: ${vars.spacing['7']};
 
     @container (max-width: calc(600px - 1px)) {
       margin-left: 0;
-      margin-top: ${theme.dimension.spacing.get('sm')};
+      margin-top: ${vars.spacing['4']};
     }
   `,
 };
 
-const getBorderColor = (status: ToastOptions['status'], theme: Theme) => {
+const getBorderColor = (status: ToastOptions['status']) => {
   switch (status) {
     case 'informational':
-      return theme.tokens.colors.get('indicators.brand');
+      return vars.color.indicators.brand;
     case 'error':
-      return theme.tokens.colors.get('textColor.default.error');
+      return vars.color.text.default.error;
     case 'warning':
-      return theme.tokens.colors.get('indicators.warning');
+      return vars.color.indicators.warning;
     case 'success':
-      return theme.tokens.colors.get('indicators.success');
+      return vars.color.indicators.success;
     default:
-      return theme.tokens.colors.get('textColor.default.secondary');
+      return vars.color.text.default.secondary;
   }
 };
 
-export const getIconColor = (status: ToastOptions['status'], theme: Theme) => {
+export const getIconColor = (status: ToastOptions['status']) => {
   switch (status) {
     case 'informational':
-      return theme.tokens.colors.get('indicators.brand');
+      return vars.color.indicators.brand;
     case 'error':
-      return theme.tokens.colors.get('indicators.error');
+      return vars.color.indicators.error;
     case 'warning':
-      return theme.tokens.colors.get('indicators.warning');
+      return vars.color.indicators.warning;
     case 'success':
-      return theme.tokens.colors.get('indicators.success');
+      return vars.color.indicators.success;
     default:
-      return theme.tokens.colors.get('indicators.brand');
+      return vars.color.indicators.brand;
   }
 };

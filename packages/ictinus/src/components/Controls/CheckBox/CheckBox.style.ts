@@ -2,6 +2,7 @@ import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import type { Theme } from 'theme';
 
+import { vars } from '@orfium/tokens';
 import type { LabelConfig } from 'components/Controls/Controls.types';
 
 export const checkboxWrapperStyles =
@@ -29,14 +30,13 @@ export const checkboxStyles =
 
       [data-role='checkbox-icon'] > div {
         transition: all 0.2s;
-        width: ${theme.dimension.sizing.get('icon.md')};
-        height: ${theme.dimension.sizing.get('icon.md')};
+        width: ${vars.sizing['5']};
+        height: ${vars.sizing['5']};
         align-items: center;
         box-sizing: border-box;
 
-        border: ${theme.dimension.borderWidth.get('active')} solid
-          ${theme.tokens.colors.get('borderColor.interactive.default')};
-        border-radius: ${theme.dimension.borderRadius.get('md')};
+        border: ${vars['border-width']['2']} solid ${vars.color['border-color'].interactive.default};
+        border-radius: ${vars['border-radius']['2']};
       }
 
       svg {
@@ -59,8 +59,8 @@ export const checkboxStyles =
         [data-role='checkbox-icon'] > div {
           transition: all 0.2s;
 
-          border-color: ${theme.tokens.colors.get('borderColor.decorative.transparent')};
-          background: ${theme.tokens.colors.get('palette.primary.base')};
+          border-color: ${vars.color['border-color'].decorative.transparent};
+          background: ${vars.color.palette.primary.base};
         }
 
         svg {

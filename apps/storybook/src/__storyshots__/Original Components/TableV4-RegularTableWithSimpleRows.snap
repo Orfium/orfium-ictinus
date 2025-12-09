@@ -5,20 +5,20 @@
 }
 
 .emotion-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+  padding-top: var(--ictinus-spacing-3);
+  padding-bottom: var(--ictinus-spacing-3);
 }
 
 .emotion-2 {
   position: relative;
   text-align: left;
-  padding: 0.25rem 0.5rem;
+  padding: var(--ictinus-spacing-3) var(--ictinus-spacing-4);
 }
 
 .emotion-3 {
   position: relative;
   text-align: right;
-  padding: 0.25rem 0.5rem;
+  padding: var(--ictinus-spacing-3) var(--ictinus-spacing-4);
 }
 
 .emotion-4 {
@@ -28,68 +28,68 @@
 }
 
 .emotion-5 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: var(--ictinus-spacing-3);
+  padding-bottom: var(--ictinus-spacing-3);
+  padding-top: var(--ictinus-spacing-6);
+  padding-bottom: var(--ictinus-spacing-6);
   border-bottom-width: 0.0625rem;
   border-bottom-style: solid;
-  border-bottom-color: rgba(200,206,255,0.70);
+  border-bottom-color: var(--ictinus-color-border-color-decorative-default);
 }
 
 .emotion-5 th:first-of-type {
-  padding-left: 1rem;
+  padding-left: var(--ictinus-spacing-6);
 }
 
 .emotion-5 th:last-child {
-  padding-right: 1rem;
+  padding-right: var(--ictinus-spacing-6);
 }
 
 .emotion-6 {
   position: relative;
   text-align: left;
-  padding: 0.25rem 0.5rem;
+  padding: var(--ictinus-spacing-3) var(--ictinus-spacing-4);
   width: initial;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  font-weight: 700;
-  font-size: 0.875rem;
+  padding-top: var(--ictinus-spacing-4);
+  padding-bottom: var(--ictinus-spacing-4);
+  font-weight: var(--ictinus-weight-bold);
+  font-size: var(--ictinus-font-size-3);
 }
 
 .emotion-7 {
-  font-weight: 500;
-  color: #52567a;
+  font-weight: var(--ictinus-weight-medium);
+  color: var(--ictinus-color-text-default-secondary);
 }
 
 .emotion-12 {
   position: relative;
   text-align: right;
-  padding: 0.25rem 0.5rem;
+  padding: var(--ictinus-spacing-3) var(--ictinus-spacing-4);
   width: initial;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  font-weight: 700;
-  font-size: 0.875rem;
+  padding-top: var(--ictinus-spacing-4);
+  padding-bottom: var(--ictinus-spacing-4);
+  font-weight: var(--ictinus-weight-bold);
+  font-size: var(--ictinus-font-size-3);
 }
 
 .emotion-16 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  border-bottom: 0.0625rem solid rgba(200,206,255,0.70);
+  padding-top: var(--ictinus-spacing-3);
+  padding-bottom: var(--ictinus-spacing-3);
+  border-bottom: 0.0625rem solid var(--ictinus-color-border-color-decorative-default);
 }
 
 .emotion-16 td:first-of-type {
-  padding-left: 1rem;
+  padding-left: var(--ictinus-spacing-6);
 }
 
 .emotion-16 td:last-child {
-  padding-right: 1rem;
+  padding-right: var(--ictinus-spacing-6);
 }
 
 .emotion-17 {
   position: relative;
   text-align: left;
-  padding: 0.25rem 0.5rem;
+  padding: var(--ictinus-spacing-3) var(--ictinus-spacing-4);
   width: initial;
 }
 
@@ -102,7 +102,7 @@
 .emotion-26 {
   position: relative;
   text-align: right;
-  padding: 0.25rem 0.5rem;
+  padding: var(--ictinus-spacing-3) var(--ictinus-spacing-4);
   width: initial;
 }
 

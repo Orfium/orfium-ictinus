@@ -1,6 +1,6 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
-import { rem } from '@orfium/tokens';
+import { rem, vars } from '@orfium/tokens';
 
 import { generateStylesFromTokens } from 'components/Typography/utils';
 import type { TooltipProps } from './Tooltip.types';
@@ -13,9 +13,7 @@ export const tooltipStyle =
     isInteractive = false,
   }: Pick<TooltipProps, 'isInverted' | 'isInteractive'>) =>
   (theme: Theme): SerializedStyles => {
-    const backgroundColor = theme.tokens.colors.get(
-      isInverted ? 'backgroundColor.alt' : 'backgroundColor.inverted'
-    );
+    const backgroundColor = vars.color.background[isInverted ? 'alt' : 'inverted'];
 
     const textWrap: SerializedStyles = css`
       text-align: start;
@@ -26,21 +24,16 @@ export const tooltipStyle =
     return css`
       .tooltip {
         background-color: ${backgroundColor};
-        border: ${theme.dimension.borderWidth.get('default')} solid
-          ${theme.tokens.colors.get(
-            isInverted ? 'borderColor.decorative.default' : 'borderColor.decorative.transparent'
-          )};
-        box-shadow: ${theme.tokens.boxShadow.get('2')};
+        border: ${vars['border-width']['1']} solid
+          ${vars.color['border-color'].decorative[isInverted ? 'default' : 'transparent']};
+        box-shadow: ${vars['box-shadow']['2']};
 
         z-index: 1000;
 
         max-width: ${!isInteractive && rem(256)};
-        padding: ${theme.dimension.spacing.get(isInteractive ? 'lg' : 'sm')};
-        border-radius: ${theme.dimension.borderRadius.get('md')};
-        color: ${!isInteractive &&
-        theme.tokens.colors.get(
-          isInverted ? 'textColor.default.primary' : 'textColor.inverted.primary'
-        )};
+        padding: ${vars.spacing[isInteractive ? '6' : '4']};
+        border-radius: ${vars['border-radius']['2']};
+        color: ${!isInteractive && vars.color.text[isInverted ? 'default' : 'inverted'].primary};
 
         ${!isInteractive && generateStylesFromTokens(theme.tokens.typography.get('normal.body03'))};
 

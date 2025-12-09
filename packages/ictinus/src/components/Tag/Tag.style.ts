@@ -1,13 +1,17 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import type { SemanticTypographyKey } from '@orfium/tokens';
-import { rem } from '@orfium/tokens';
-import { lineEllipsis } from 'theme/functions';
+import { rem, vars } from '@orfium/tokens';
 import { generateStylesFromTokens } from 'components/Typography/utils';
+import { lineEllipsis } from 'theme/functions';
 import type { Theme } from '../../theme';
 import { tagColorToSemColor } from './constants';
-import { getTagTokens } from './Tag.tokens';
 import type { TagProps } from './Tag.types';
+
+const TAG_TOKENS = {
+  normal: { height: vars.sizing['6'] },
+  small: { height: vars.sizing['5'] },
+};
 
 export const tagContainerStyles =
   ({
@@ -21,15 +25,13 @@ export const tagContainerStyles =
     isClearable?: boolean;
   }) =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getTagTokens(theme);
-
     const isInteractive = isSelectable || isClearable;
 
     const getBackgroundColor = () => {
       if (isInteractive) {
-        if (isSelected) return theme.tokens.colors.get('palette.secondary.muted');
+        if (isSelected) return vars.color.palette.secondary.muted;
 
-        return theme.tokens.colors.get('palette.secondary.base');
+        return vars.color.palette.secondary.base;
       }
 
       return theme.tokens.colors.get(tagColorToSemColor[color].fill);
@@ -43,37 +45,33 @@ export const tagContainerStyles =
       justify-content: center;
       align-items: center;
 
-      height: ${tokens(`${size}.height` as const)};
+      height: ${TAG_TOKENS[size].height};
       width: fit-content;
       box-sizing: border-box;
-      gap: ${theme.dimension.spacing.get('xs')};
+      gap: ${vars.spacing['3']};
 
-      padding: ${`${theme.dimension.spacing.get('2xs')}  ${theme.dimension.spacing.get(
-        size === 'normal' ? 'sm' : 'xs'
-      )}`};
+      padding: ${`${vars.spacing['2']}  ${vars.spacing[size === 'normal' ? '4' : '3']}`};
 
       cursor: ${isSelectable ? 'pointer' : 'auto'};
       background: ${getBackgroundColor()};
       color: ${isInteractive
         ? theme.tokens.colors.get(tagColorToSemColor.blue.text)
         : theme.tokens.colors.get(tagColorToSemColor[color].text)};
-      border: ${theme.dimension.borderWidth.get('default')} solid;
+      border: ${vars['border-width']['1']} solid;
 
       border-color: ${isInteractive
-        ? theme.tokens.colors.get('borderColor.interactive.default')
+        ? vars.color['border-color'].interactive.default
         : theme.tokens.colors.get(tagColorToSemColor[color].border)};
 
-      border-radius: ${theme.dimension.borderRadius.get(size === 'normal' ? 'md' : 'sm')};
+      border-radius: ${vars['border-radius'][size === 'normal' ? '2' : '1']};
 
       &:hover {
-        background: ${isSelectable ? theme.tokens.colors.get('palette.secondary.muted') : null};
+        background: ${isSelectable ? vars.color.palette.secondary.muted : null};
       }
 
       &:focus-visible {
-        background: ${isInteractive ? theme.tokens.colors.get('palette.secondary.muted') : null};
-        border-color: ${isInteractive
-          ? theme.tokens.colors.get('borderColor.interactive.active')
-          : null};
+        background: ${isInteractive ? vars.color.palette.secondary.muted : null};
+        border-color: ${isInteractive ? vars.color['border-color'].interactive.active : null};
       }
 
       ${generateStylesFromTokens(theme.tokens.typography.get(typography))}
@@ -84,9 +82,9 @@ export const tagContainerStyles =
 
 export const code = (size: 'normal' | 'small') => (theme: Theme) => css`
   ${theme.tokens.typography.get(size === 'normal' ? 'mono.body02' : 'mono.body03')};
-  background-color: ${theme.tokens.colors.get('palette.secondary.contrast')};
+  background-color: ${vars.color.palette.secondary.contrast};
   border-color: transparent;
-  color: ${theme.tokens.colors.get('textColor.default.primary')};
+  color: ${vars.color.text.default.primary};
 `;
 
 export const iconStyles =
@@ -104,7 +102,7 @@ export const iconStyles =
 
       &:hover {
         background: ${theme.tokens.state.get('backgroundColor.hover')};
-        border-radius: ${theme.globals.borderRadius.get('7')};
+        border-radius: ${vars['border-radius']['7']};
       }
     `;
   };

@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import { rem } from '@orfium/tokens';
+import { rem, vars } from '@orfium/tokens';
 
 import { body02, body03, label02, label03 } from 'components/Typography/Typography.config.styles';
 import type { ListRowSize } from '../../types';
@@ -12,11 +12,11 @@ export const ListItemWrapperStyled = styled('li', { target: '' })<{
 }>(({ rowSize = 'normal', isDisabled, theme }) => {
   const isCompact = rowSize === 'compact';
   const height = rem(LIST_ITEM_HEIGHT[rowSize]);
-  const padding = css`0 ${theme.dimension.spacing.get('md')}`;
+  const padding = css`0 ${vars.spacing['5']}`;
   const itemTypographyStyle = isCompact ? body03(theme) : body02(theme);
 
   return css`
-    background-color: ${theme.tokens.colors.get('palette.tertiary.base')};
+    background-color: ${vars.color.palette.tertiary.base};
 
     & > div {
       ${itemTypographyStyle}
@@ -28,7 +28,7 @@ export const ListItemWrapperStyled = styled('li', { target: '' })<{
       align-items: center;
       display: flex;
       ${itemTypographyStyle};
-      font-weight: ${theme.globals.typography.fontWeight.get('bold')};
+      font-weight: ${vars.weight.bold};
     }
     &[role='option'] {
       padding: ${padding};
@@ -38,26 +38,24 @@ export const ListItemWrapperStyled = styled('li', { target: '' })<{
       gap: ${rem(12)};
 
       &:hover {
-        background-color: ${!isDisabled
-          ? theme.tokens.colors.get('palette.tertiary.muted')
-          : undefined};
+        background-color: ${!isDisabled ? vars.color.palette.tertiary.muted : undefined};
         cursor: ${!isDisabled ? 'pointer' : 'initial'};
       }
     }
 
     &[data-focus-visible] {
-      background-color: ${theme.tokens.colors.get('palette.tertiary.muted')};
+      background-color: ${vars.color.palette.tertiary.muted};
     }
 
     &[aria-selected='true'] {
-      background-color: ${theme.tokens.colors.get('palette.tertiary.muted')};
+      background-color: ${vars.color.palette.tertiary.muted};
       & > div {
-        color: ${theme.tokens.colors.get('textColor.default.active')};
+        color: ${vars.color.text.default.active};
         ${isCompact ? label03(theme) : label02(theme)}
       }
 
       &[data-focus-visible] {
-        background-color: ${theme.tokens.colors.get('palette.tertiary.muted')};
+        background-color: ${vars.color.palette.tertiary.muted};
       }
     }
 

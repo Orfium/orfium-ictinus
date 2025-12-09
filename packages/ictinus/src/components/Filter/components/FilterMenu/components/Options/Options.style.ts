@@ -1,10 +1,14 @@
 import { css } from '@emotion/react';
+import { rem, vars } from '@orfium/tokens';
 import { FILTER_WIDTH } from 'components/Filter/constants';
-import { getListItemTokens } from 'components/List/List.tokens';
 import { generateStylesFromTokens } from 'components/Typography/utils';
 import type { Theme } from 'theme';
 import { flexCenter } from 'theme/functions';
-import { rem } from '@orfium/tokens';
+
+const LIST_ITEM_TOKENS = {
+  height: vars.sizing['13'],
+  heightCompact: vars.sizing['10'],
+};
 
 export const optionsStyles =
   ({ isMulti }) =>
@@ -23,12 +27,10 @@ export const optionsStyles =
   `;
 
 export const emptyStyle = () => (theme: Theme) => {
-  const tokens = getListItemTokens(theme);
-
   return css`
-    color: ${theme.tokens.colors.get('textColor.default.secondary')};
-    height: ${tokens('height')};
-    padding: 0 ${theme.dimension.spacing.get('md')};
+    color: ${vars.color.text.default.secondary};
+    height: ${LIST_ITEM_TOKENS.height};
+    padding: 0 ${vars.spacing['5']};
 
     ${flexCenter};
 

@@ -9,6 +9,7 @@ import { get } from 'lodash-es';
 import { WrapperStyle } from 'storybook/styles/OverviewCard.style';
 
 import { Typography } from '@orfium/ictinus';
+import { vars } from '@orfium/tokens';
 import { getAllPaths } from '../TokenColorsShowcase/utils';
 
 const MinHeightShowcase = () => {
@@ -27,7 +28,7 @@ const MinHeightShowcase = () => {
               css={() => ({
                 height: theme.dimension.minHeight.get(key as DimensionMinHeightKey),
                 width: rem(boxSize),
-                background: theme.tokens.colors.get('palette.secondary.contrast'),
+                background: vars.color.palette.secondary.contrast,
                 margin: 'auto',
               })}
             />

@@ -1,9 +1,9 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
-import type { Theme } from 'theme';
 import { rem } from '@orfium/tokens';
+import type { Theme } from 'theme';
 
-import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
+import { FIELD_TOKENS } from '~/components/DatePicker/DatePickInput/DatePickInput.style';
 
 export const stepperContainerStyle = (size: 'normal' | 'compact'): SerializedStyles => {
   return css`
@@ -21,15 +21,13 @@ export const stepperContainerStyle = (size: 'normal' | 'compact'): SerializedSty
 export const buttonWrapperStyle =
   () =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getTextInputBaseTokens(theme);
-
     return css`
       display: flex;
       justify-content: center;
       align-items: center;
       background: transparent;
       border: none;
-      height: calc(${tokens('container.normal')} / 2);
+      height: calc(${FIELD_TOKENS.container.normal} / 2);
 
       &:hover {
         cursor: pointer;

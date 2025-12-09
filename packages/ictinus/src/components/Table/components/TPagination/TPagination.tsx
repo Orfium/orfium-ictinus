@@ -1,8 +1,8 @@
+import { vars } from '@orfium/tokens';
 import IconButton from 'components/IconButton';
 import Select from 'components/Select';
 import type { TableProps } from 'components/Table/types';
 import Typography from 'components/Typography';
-import useTheme from 'hooks/useTheme';
 import React from 'react';
 import type { TestProps } from '~/utils/types';
 import {
@@ -30,7 +30,6 @@ const TPagination: React.FC<TPaginationProps> = ({ pagination, isSticky, dataTes
     isNextPageDisabled,
     isPrevPageDisabled,
   } = pagination;
-  const theme = useTheme();
 
   return (
     <div css={paginationContainer({ isSticky })}>
@@ -65,7 +64,7 @@ const TPagination: React.FC<TPaginationProps> = ({ pagination, isSticky, dataTes
         <div css={buttonsContainer()}>
           {isEnhancedPaginationVisible && (
             <IconButton
-              color={theme.tokens.colors.get('textColor.default.secondary')}
+              color={vars.color.text.default.secondary}
               iconName="pageFirst"
               size="compact"
               type="tertiary"
@@ -75,7 +74,7 @@ const TPagination: React.FC<TPaginationProps> = ({ pagination, isSticky, dataTes
             />
           )}
           <IconButton
-            color={theme.tokens.colors.get('textColor.default.secondary')}
+            color={vars.color.text.default.secondary}
             iconName="chevronLeft"
             size="compact"
             type="tertiary"
@@ -84,7 +83,7 @@ const TPagination: React.FC<TPaginationProps> = ({ pagination, isSticky, dataTes
             dataTestPrefixId={`${dataTestPrefixId}_table_go_to_prev_page`}
           />
           <IconButton
-            color={theme.tokens.colors.get('textColor.default.secondary')}
+            color={vars.color.text.default.secondary}
             iconName="chevronRight"
             size="compact"
             type="tertiary"
@@ -94,7 +93,7 @@ const TPagination: React.FC<TPaginationProps> = ({ pagination, isSticky, dataTes
           />
           {isEnhancedPaginationVisible && (
             <IconButton
-              color={theme.tokens.colors.get('textColor.default.secondary')}
+              color={vars.color.text.default.secondary}
               iconName="pageLast"
               size="compact"
               type="tertiary"

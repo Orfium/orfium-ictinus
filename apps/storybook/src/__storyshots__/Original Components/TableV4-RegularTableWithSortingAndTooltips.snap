@@ -5,32 +5,32 @@
 }
 
 .emotion-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: var(--ictinus-spacing-3);
+  padding-bottom: var(--ictinus-spacing-3);
+  padding-top: var(--ictinus-spacing-6);
+  padding-bottom: var(--ictinus-spacing-6);
   border-bottom-width: 0.0625rem;
   border-bottom-style: solid;
-  border-bottom-color: rgba(200,206,255,0.70);
+  border-bottom-color: var(--ictinus-color-border-color-decorative-default);
 }
 
 .emotion-1 th:first-of-type {
-  padding-left: 1rem;
+  padding-left: var(--ictinus-spacing-6);
 }
 
 .emotion-1 th:last-child {
-  padding-right: 1rem;
+  padding-right: var(--ictinus-spacing-6);
 }
 
 .emotion-2 {
   position: relative;
   text-align: left;
-  padding: 0.25rem 0.5rem;
+  padding: var(--ictinus-spacing-3) var(--ictinus-spacing-4);
   width: initial;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  font-weight: 700;
-  font-size: 0.875rem;
+  padding-top: var(--ictinus-spacing-4);
+  padding-bottom: var(--ictinus-spacing-4);
+  font-weight: var(--ictinus-weight-bold);
+  font-size: var(--ictinus-font-size-3);
   cursor: pointer;
   position: relative;
   height: 4rem;
@@ -42,7 +42,7 @@
 }
 
 .emotion-2:hover {
-  background-color: rgba(200,206,255,0.20);
+  background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
 .emotion-2:hover>div>span {
@@ -73,8 +73,8 @@
 }
 
 .emotion-4 {
-  font-weight: 500;
-  color: #52567a;
+  font-weight: var(--ictinus-weight-medium);
+  color: var(--ictinus-color-text-default-secondary);
 }
 
 .emotion-5 {
@@ -106,14 +106,14 @@
 }
 
 .emotion-7 .tooltip {
-  background-color: #111530;
-  border: 0.0625rem solid rgba(200,206,255,0);
-  box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(200,206,255,0.45);
+  background-color: var(--ictinus-color-background-inverted);
+  border: var(--ictinus-border-width-1) solid var(--ictinus-color-border-color-decorative-transparent);
+  box-shadow: var(--ictinus-box-shadow-2);
   z-index: 1000;
   max-width: 16rem;
-  padding: 0.5rem;
-  border-radius: 0.25rem;
-  color: #ffffff;
+  padding: var(--ictinus-spacing-4);
+  border-radius: var(--ictinus-border-radius-2);
+  color: var(--ictinus-color-text-inverted-primary);
   font-family: Roboto;
   font-weight: 400;
   line-height: 1rem;
@@ -140,7 +140,7 @@
 
 .emotion-9 path,
 .emotion-9 rect {
-  fill: #52567a!important;
+  fill: var(--ictinus-color-text-default-secondary)!important;
 }
 
 .emotion-10 {
@@ -159,30 +159,30 @@
 .emotion-13 {
   position: relative;
   text-align: left;
-  padding: 0.25rem 0.5rem;
+  padding: var(--ictinus-spacing-3) var(--ictinus-spacing-4);
   width: initial;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  font-weight: 700;
-  font-size: 0.875rem;
+  padding-top: var(--ictinus-spacing-4);
+  padding-bottom: var(--ictinus-spacing-4);
+  font-weight: var(--ictinus-weight-bold);
+  font-size: var(--ictinus-font-size-3);
 }
 
 .emotion-23 {
   position: relative;
   text-align: right;
-  padding: 0.25rem 0.5rem;
+  padding: var(--ictinus-spacing-3) var(--ictinus-spacing-4);
   width: initial;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  font-weight: 700;
-  font-size: 0.875rem;
+  padding-top: var(--ictinus-spacing-4);
+  padding-bottom: var(--ictinus-spacing-4);
+  font-weight: var(--ictinus-weight-bold);
+  font-size: var(--ictinus-font-size-3);
   cursor: pointer;
   position: relative;
   height: 4rem;
 }
 
 .emotion-23:hover {
-  background-color: rgba(200,206,255,0.20);
+  background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
 .emotion-23:hover>div>span {
@@ -197,23 +197,23 @@
 }
 
 .emotion-34 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  border-bottom: 0.0625rem solid rgba(200,206,255,0.70);
+  padding-top: var(--ictinus-spacing-3);
+  padding-bottom: var(--ictinus-spacing-3);
+  border-bottom: 0.0625rem solid var(--ictinus-color-border-color-decorative-default);
 }
 
 .emotion-34 td:first-of-type {
-  padding-left: 1rem;
+  padding-left: var(--ictinus-spacing-6);
 }
 
 .emotion-34 td:last-child {
-  padding-right: 1rem;
+  padding-right: var(--ictinus-spacing-6);
 }
 
 .emotion-35 {
   position: relative;
   text-align: left;
-  padding: 0.25rem 0.5rem;
+  padding: var(--ictinus-spacing-3) var(--ictinus-spacing-4);
   width: initial;
 }
 
@@ -226,7 +226,7 @@
 .emotion-44 {
   position: relative;
   text-align: right;
-  padding: 0.25rem 0.5rem;
+  padding: var(--ictinus-spacing-3) var(--ictinus-spacing-4);
   width: initial;
 }
 

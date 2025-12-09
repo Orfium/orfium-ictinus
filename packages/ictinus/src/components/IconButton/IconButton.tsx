@@ -1,12 +1,13 @@
 import useTheme from 'hooks/useTheme';
 import React from 'react';
 
-import Icon from '../Icon';
-import type { AcceptedIconNames } from '../Icon';
+import { vars } from '@orfium/tokens';
 import type { PrimitiveButtonTypes } from 'components/Button/Button.types';
 import type { ButtonBaseProps } from 'components/ButtonBase/ButtonBase';
 import ButtonBase from 'components/ButtonBase/ButtonBase';
 import { buttonColorToSemColor } from 'components/ButtonBase/constants';
+import type { AcceptedIconNames } from '../Icon';
+import Icon from '../Icon';
 
 export type IconButtonShape = 'circle' | 'square';
 
@@ -36,11 +37,7 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>((props, 
       shape={shape}
       dataTestPrefixId={dataTestPrefixId ? `${dataTestPrefixId}-icon-` : 'icon-'}
     >
-      <Icon
-        size={theme.dimension.sizing.get(`icon.${size === 'compact' ? 'sm' : 'md'}`)}
-        name={iconName}
-        color={iconColor}
-      />
+      <Icon size={vars.sizing[size === 'compact' ? '4' : '5']} name={iconName} color={iconColor} />
     </ButtonBase>
   );
 });

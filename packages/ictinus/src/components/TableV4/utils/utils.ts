@@ -1,5 +1,4 @@
-import type { Theme } from 'theme';
-
+import { vars } from '@orfium/tokens';
 import type { ExtendedColumn } from '../types';
 
 export const isItemString = (prop: string | ExtendedColumn): prop is string =>
@@ -8,5 +7,4 @@ export const isItemString = (prop: string | ExtendedColumn): prop is string =>
 export const hasTooltipOrSortingKey = (prop: ExtendedColumn): boolean =>
   Boolean(prop.isSortable || prop.tooltip);
 
-export const getBorderColor = (theme: Theme): string =>
-  theme.tokens.colors.get('borderColor.decorative.default');
+export const getBorderColor = (): string => vars.color['border-color'].decorative.default;

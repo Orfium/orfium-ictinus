@@ -1,13 +1,12 @@
 import type { FCC } from 'react';
-import * as React from 'react';
 import { useMemo } from 'react';
 import { getTrackBackground } from 'react-range';
 import type { ITrackProps } from 'react-range/lib/types';
 import type { TestProps } from 'utils/types';
 
-import { Track } from './SliderTrack.style';
-import useTheme from '../../../../hooks/useTheme';
+import { vars } from '@orfium/tokens';
 import { MAX, MIN } from '../../Slider';
+import { Track } from './SliderTrack.style';
 
 export type SliderTrackProps = {
   values: number[];
@@ -24,28 +23,23 @@ const SliderTrack: FCC<SliderTrackProps & TestProps> = ({
   restProps,
   children,
 }) => {
-  const theme = useTheme();
-
   const backgroundStyle = useMemo(
     () =>
       getTrackBackground({
         values,
         colors: isSelector
-          ? [
-              theme.tokens.colors.get('palette.primary.base'),
-              theme.tokens.colors.get('palette.primaryAlt.base'),
-            ]
+          ? [vars.color.palette.primary.base, vars.color.palette['primary-alt'].base]
           : [
-              theme.tokens.colors.get('palette.primaryAlt.base'),
-              theme.tokens.colors.get('palette.primary.base'),
-              theme.tokens.colors.get('palette.primaryAlt.base'),
+              vars.color.palette['primary-alt'].base,
+              vars.color.palette.primary.base,
+              vars.color.palette['primary-alt'].base,
             ],
         min: MIN,
         max: MAX,
-        // eslint-disable-next-line @typescript-eslint/naming-convention
+
         rtl: false,
       }),
-    [isSelector, theme.tokens.colors, values]
+    [isSelector, values]
   );
 
   return (

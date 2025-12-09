@@ -1,7 +1,5 @@
-import React from 'react';
-
+import { vars } from '@orfium/tokens';
 import usePagination from '../../hooks/usePagination';
-import useTheme from '../../hooks/useTheme';
 import IconButton from '../IconButton';
 
 export type PaginationProps = {
@@ -27,7 +25,6 @@ const Pagination = ({
   isNextPageDisabled,
   isPrevPageDisabled,
 }: PaginationProps) => {
-  const theme = useTheme();
   const {
     currentPage,
     hasNextPage,
@@ -45,8 +42,8 @@ const Pagination = ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        color: theme.tokens.colors.get('textColor.default.primary'),
-        '> *': { padding: theme.globals.spacing.get('4') },
+        color: vars.color.text.default.primary,
+        '> *': { padding: vars.spacing['4'] },
       }}
     >
       {isEnhancedPaginationVisible && (

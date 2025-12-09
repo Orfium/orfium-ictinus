@@ -2,6 +2,7 @@ import useTheme from 'hooks/useTheme';
 import React from 'react';
 import type { LabelProps, PolarAngleAxisProps } from 'recharts';
 
+import { vars } from '@orfium/tokens';
 import { flexContainer, labelUnitStyle } from './CustomLabel.style';
 
 type CustomLabelProps = LabelProps & {
@@ -26,7 +27,7 @@ const CustomLabel: React.FCC<CustomLabelProps> = ({ viewBox, value, units }) => 
           x="50%"
           dy="-7"
           alignmentBaseline="middle"
-          fontSize={theme.globals.typography.fontSize.get('4')}
+          fontSize={vars['font-size']['4']}
           fill={theme.globals.oldColors.black}
         >
           {value}

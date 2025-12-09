@@ -1,41 +1,40 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
-import { rem } from '@orfium/tokens';
+import { rem, vars } from '@orfium/tokens';
 
 import { getBorderColor } from './utils';
-import type { Theme } from '../../theme';
 
 export const tableStyle = () => (): SerializedStyles =>
   css({ width: '100%', borderCollapse: 'collapse', tableLayout: 'fixed' });
 
-export const tableCTAStyle =
-  (isFixed: boolean) =>
-  (theme: Theme): SerializedStyles =>
-    css({
-      width: '100%',
-      borderCollapse: 'collapse',
-      tableLayout: 'fixed',
-      position: isFixed ? 'sticky' : undefined,
-      top: isFixed ? 0 : undefined,
-      background: isFixed ? theme.tokens.colors.get('backgroundColor.default') : undefined,
-      zIndex: isFixed ? 3 : undefined,
-    });
+export const tableCTAStyle = (isFixed: boolean): SerializedStyles =>
+  css({
+    width: '100%',
+    borderCollapse: 'collapse',
+    tableLayout: 'fixed',
+    position: isFixed ? 'sticky' : undefined,
+    top: isFixed ? 0 : undefined,
+    background: isFixed ? vars.color.background.default : undefined,
+    zIndex: isFixed ? 3 : undefined,
+  });
 
-export const tableRowHeadersStyle =
-  (hasExpandableRows: boolean, hasOnCheck: boolean, hasFixedHeader: boolean) =>
-  (theme: Theme): SerializedStyles =>
-    css({
-      paddingTop: theme.globals.spacing.get('6'),
-      paddingBottom: theme.globals.spacing.get('6'),
-      borderBottomWidth: rem(hasExpandableRows || hasFixedHeader ? 0 : 1),
-      borderBottomStyle: 'solid',
-      borderBottomColor: getBorderColor(theme),
+export const tableRowHeadersStyle = (
+  hasExpandableRows: boolean,
+  hasOnCheck: boolean,
+  hasFixedHeader: boolean
+): SerializedStyles =>
+  css({
+    paddingTop: vars.spacing['6'],
+    paddingBottom: vars.spacing['6'],
+    borderBottomWidth: rem(hasExpandableRows || hasFixedHeader ? 0 : 1),
+    borderBottomStyle: 'solid',
+    borderBottomColor: getBorderColor(),
 
-      'th:first-of-type': {
-        paddingLeft: hasOnCheck ? undefined : theme.globals.spacing.get('6'),
-      },
+    'th:first-of-type': {
+      paddingLeft: hasOnCheck ? undefined : vars.spacing['6'],
+    },
 
-      'th:last-child': {
-        paddingRight: hasExpandableRows ? undefined : theme.globals.spacing.get('6'),
-      },
-    });
+    'th:last-child': {
+      paddingRight: hasExpandableRows ? undefined : vars.spacing['6'],
+    },
+  });

@@ -1,5 +1,5 @@
+import { vars } from '@orfium/tokens';
 import Icon from 'components/Icon';
-import useTheme from 'hooks/useTheme';
 import { rem } from 'polished';
 import React from 'react';
 import { Button } from 'react-aria-components';
@@ -12,7 +12,6 @@ type Props = {
 };
 
 const Stepper: React.FCC<Props> = ({ size, isDisabled, dataTestIdPrefix }) => {
-  const theme = useTheme();
   const dataTestId = dataTestIdPrefix ? `${dataTestIdPrefix}_number` : 'number';
   const compactSizeBtnStyles = size === 'compact' ? { height: rem(15) } : {};
 
@@ -25,11 +24,7 @@ const Stepper: React.FCC<Props> = ({ size, isDisabled, dataTestIdPrefix }) => {
         data-testid={`${dataTestId}_increment`}
         style={compactSizeBtnStyles}
       >
-        <Icon
-          name="triangleUp"
-          color={theme.tokens.colors.get('textColor.default.secondary')}
-          size={theme.dimension.sizing.get('icon.md')}
-        />
+        <Icon name="triangleUp" color={vars.color.text.default.secondary} size={vars.sizing['5']} />
       </Button>
       <Button
         isDisabled={isDisabled}
@@ -40,8 +35,8 @@ const Stepper: React.FCC<Props> = ({ size, isDisabled, dataTestIdPrefix }) => {
       >
         <Icon
           name="triangleDown"
-          color={theme.tokens.colors.get('textColor.default.secondary')}
-          size={theme.dimension.sizing.get('icon.md')}
+          color={vars.color.text.default.secondary}
+          size={vars.sizing['5']}
         />
       </Button>
     </div>
