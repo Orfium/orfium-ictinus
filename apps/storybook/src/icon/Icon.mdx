@@ -1,0 +1,26 @@
+import { Meta, ArgTypes, IconGallery, IconItem, Canvas } from '@storybook/addon-docs/blocks';
+import { Icon, ICONS } from '@orfium/ictinus/vanilla';
+import SectionHeader from '../storybook/SectionHeader';
+import * as IconStories from './Icon.stories';
+
+<SectionHeader
+  title="Icon"
+  sections={[
+    { title: 'Overview', href: '#overview' },
+    { title: 'Props', href: '#props' },
+  ]}
+/>
+
+## Overview
+
+All icons available in the library.
+
+<Meta of={IconStories} />
+
+## Props
+
+<ArgTypes of={Icon} />
+
+## Iconography
+
+<Canvas of={IconStories.Iconography} />
