@@ -3,7 +3,7 @@ import { Box, type BoxProps } from '../vanilla/Box';
 export function FreezeIcon(props: BoxProps) {
   return (
     <Box asChild size="4" {...props}>
-      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
         <path
           fillRule="evenodd"
           clipRule="evenodd"

@@ -3,7 +3,7 @@ import { Box, type BoxProps } from '../vanilla/Box';
 export function WriterIcon(props: BoxProps) {
   return (
     <Box asChild size="4" {...props}>
-      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M5.80753 8.63011C6.36357 9.21221 7.04129 9.50326 7.8407 9.50326C8.6401 9.50326 9.31783 9.21221 9.87388 8.63011C10.4299 8.048 10.7079 7.33851 10.7079 6.50164C10.7079 5.66476 10.4299 4.95527 9.87388 4.37317C9.31783 3.79106 8.6401 3.5 7.8407 3.5C7.04129 3.5 6.36357 3.79106 5.80753 4.37317C5.25148 4.95527 4.97346 5.66476 4.97346 6.50164C4.97346 7.33851 5.25148 8.048 5.80753 8.63011Z"
           fill="currentColor"

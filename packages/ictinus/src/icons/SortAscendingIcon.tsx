@@ -3,7 +3,7 @@ import { Box, type BoxProps } from '../vanilla/Box';
 export function SortAscendingIcon(props: BoxProps) {
   return (
     <Box asChild size="4" {...props}>
-      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M8.02888 7.07089C7.16777 7.07089 6.68904 6.17334 7.22697 5.56745L9.19808 3.34729C9.6092 2.88423 10.3908 2.88424 10.8019 3.34729L12.773 5.56745C13.311 6.17335 12.8322 7.07089 11.9711 7.07089H8.02888Z"
           fill="currentColor"
