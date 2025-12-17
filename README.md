@@ -3,7 +3,7 @@
 > A comprehensive design system and UI component library for Orfium products
 
 ![npm](https://img.shields.io/npm/v/@orfium/ictinus)
-[![CI](https://github.com/Orfium/orfium-ictinus/workflows/CI/badge.svg)](https://github.com/Orfium/orfium-ictinus/actions)
+[![CI/CD](https://github.com/Orfium/orfium-ictinus/actions/workflows/main.yml/badge.svg)](https://github.com/Orfium/orfium-ictinus/actions/workflows/main.yml)
 ![min size](https://img.shields.io/bundlephobia/min/@orfium/ictinus)
 ![minzip size](https://img.shields.io/bundlephobia/minzip/@orfium/ictinus)
 
@@ -19,7 +19,6 @@ orfium-ictinus/
 │   └── storybook/          # Storybook documentation and component showcase
 ├── packages/
 │   └── ictinus/            # Main design system package (@orfium/ictinus)
-└── typeDocs/               # Generated TypeScript documentation
 ```
 
 ### 📦 Packages
@@ -98,7 +97,6 @@ pnpm coverage:report
 
 - **[Storybook](http://localhost:6006)** - Interactive component documentation (after running `pnpm dev`)
 - **[Package README](./packages/ictinus/README.md)** - Detailed usage instructions for the design system
-- **[TypeScript Docs](./typeDocs/)** - Generated API documentation
 - **[Contribution Guidelines](./CONTRIBUTING.md)** - How to contribute to this project
 
 ## 🎨 Using the Design System
