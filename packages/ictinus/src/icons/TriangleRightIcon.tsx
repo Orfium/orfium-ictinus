@@ -1,0 +1,16 @@
+import { Box, type BoxProps } from '../vanilla/Box';
+
+export function TriangleRightIcon(props: BoxProps) {
+  return (
+    <Box asChild size="4" {...props}>
+      <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M9.64018 13.6332C8.98886 14.176 8 13.7128 8 12.865V7.13504C8 6.2872 8.98886 5.82405 9.64018 6.36682L13.0781 9.23178C13.5579 9.63157 13.5579 10.3684 13.0781 10.7682L9.64018 13.6332Z"
+          fill="currentColor"
+        />
+      </svg>
+    </Box>
+  );
+}
