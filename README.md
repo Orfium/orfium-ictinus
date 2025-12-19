@@ -9,7 +9,7 @@
 
 This monorepo contains the Orfium Design System - an opinionated UI kit library focused on solving UI duplications and providing unified, cross-product UX, UI, and accessibility standards.
 
-## 🏗️ Repository Structure
+## Repository Structure
 
 This is a **monorepo** managed with [Turbo](https://turbo.build/) and [pnpm](https://pnpm.io/):
 
@@ -21,20 +21,21 @@ orfium-ictinus/
 │   └── ictinus/            # Main design system package (@orfium/ictinus)
 ```
 
-### 📦 Packages
+### Packages
 
 - **[@orfium/ictinus](./packages/ictinus/)** - The main design system package containing all UI components, themes, tokens, and utilities
+- **[@orfium/tokens](./packages/tokens/)** - A dedicated package containing the design system tokens for external system usage
 
-### 🚀 Apps
+### Apps
 
 - **[Storybook](./apps/storybook/)** - Interactive documentation and component playground
 
-## 🛠️ Prerequisites
+## Prerequisites
 
 - **Node.js** >= 22
 - **pnpm** >= 10
 
-## 🚀 Quick Start
+## Quick Start
 
 1. **Clone the repository**
 
@@ -66,19 +67,17 @@ orfium-ictinus/
 
 ## 📋 Available Scripts
 
-| Script                        | Description                                      |
-| ----------------------------- | ------------------------------------------------ |
-| `pnpm dev`                    | Start all development servers                    |
-| `pnpm build`                  | Build all packages and apps                      |
-| `pnpm test`                   | Run all tests                                    |
-| `pnpm test:coverage`          | Run tests with coverage                          |
-| `pnpm lint`                   | Run linting across all packages                  |
-| `pnpm check`                  | Run all checks (TypeScript, linting, formatting) |
-| `pnpm clean`                  | Remove all node_modules                          |
-| `pnpm documentation:generate` | Generate TypeScript documentation                |
-| `pnpm documentation:up`       | Start documentation server                       |
+| Script               | Description                                      |
+| -------------------- | ------------------------------------------------ |
+| `pnpm dev`           | Start all development servers                    |
+| `pnpm build`         | Build all packages and apps                      |
+| `pnpm test`          | Run all tests                                    |
+| `pnpm test:coverage` | Run tests with coverage                          |
+| `pnpm lint`          | Run linting across all packages                  |
+| `pnpm check`         | Run all checks (TypeScript, linting, formatting) |
+| `pnpm clean`         | Remove all node_modules                          |
 
-## 🧪 Testing
+## Testing
 
 We use [Vitest](https://vitest.dev/) for testing:
 
@@ -93,20 +92,19 @@ pnpm test:coverage
 pnpm coverage:report
 ```
 
-## 📚 Documentation
+## Documentation
 
 - **[Storybook](http://localhost:6006)** - Interactive component documentation (after running `pnpm dev`)
 - **[Package README](./packages/ictinus/README.md)** - Detailed usage instructions for the design system
 - **[Contribution Guidelines](./CONTRIBUTING.md)** - How to contribute to this project
 
-## 🎨 Using the Design System
+## Using the Design System
 
 For detailed usage instructions, see the [Ictinus package README](./packages/ictinus/README.md).
 
 **Quick example:**
 
 ```jsx
-import '@orfium/ictinus/styles.css';
 import { ThemeProvider, Button, Select } from '@orfium/ictinus';
 
 function App() {
@@ -119,7 +117,7 @@ function App() {
 }
 ```
 
-## 🔄 Migration & Codemods
+## Migration & Codemods
 
 The library includes codemods to help migrate between versions:
 
@@ -130,7 +128,7 @@ npx @orfium/ictinus migrate
 
 Available codemods can be found in [`packages/ictinus/codemods/`](./packages/ictinus/codemods/).
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Please read our [Contributing Guidelines](./CONTRIBUTING.md) before submitting a PR.
 
@@ -148,7 +146,7 @@ We welcome contributions! Please read our [Contributing Guidelines](./CONTRIBUTI
 - Ensure all tests pass
 - Update documentation as needed
 
-## 🏷️ Versioning & Releases
+## Versioning & Releases
 
 This project uses [Changesets](https://github.com/changesets/changesets) for versioning and releases:
 
@@ -159,10 +157,6 @@ pnpm changeset
 # Release (CI/CD handles this)
 pnpm release
 ```
-
-## 📄 License
-
-MIT © [Orfium](https://github.com/Orfium)
 
 ## 🔗 Links
 
