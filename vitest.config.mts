@@ -13,7 +13,6 @@ export default defineConfig({
         'examples/**',
         'packages/tokens/**',
         'server/**',
-        'typeDocs/**',
         '**/page.tsx',
         '**/build/**',
         '**/dist/**',
