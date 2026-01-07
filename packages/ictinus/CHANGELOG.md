@@ -1,5 +1,11 @@
 # @orfium/ictinus
 
+## 5.42.6
+
+### Patch Changes
+
+- 9200f97: added vanilla icons
+
 ## 5.42.5
 
 ### Patch Changes
