@@ -22,6 +22,9 @@
     "@emotion/styled": "^11.11.0",
     "@orfium/ictinus": "workspace:*",
     "@orfium/tokens": "workspace:*",
+    "dayjs": "2.0.0-alpha.4",
+    "lodash-es": "^4.17.21",
+    "polished": "^4.3.1",
     "react-docgen-typescript": "^2.4.0"
   },
   "devDependencies": {
@@ -37,6 +40,8 @@
     "@storybook/addon-vitest": "^10.1.11",
     "@storybook/cli": "^10.1.11",
     "@storybook/react-vite": "^10.1.11",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^14.3.1",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@vanilla-extract/vite-plugin": "^5.1.1",
     "@vitejs/plugin-react": "^5.0.1",
@@ -49,7 +54,9 @@
     "eslint-plugin-storybook": "^10.1.11",
     "globals": "^16.3.0",
     "playwright": "^1.55.0",
+    "prettier-plugin-organize-imports": "^4.2.0",
     "storybook": "^10.1.11",
+    "typescript-eslint": "^8.52.0",
     "vite": "^7.3.1",
     "vite-plugin-svgr": "^4.5.0",
     "vite-tsconfig-paths": "^5.1.4"
