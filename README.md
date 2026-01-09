@@ -158,7 +158,7 @@ pnpm changeset
 pnpm release
 ```
 
-## 🔗 Links
+## Links
 
 - [npm package](https://www.npmjs.com/package/@orfium/ictinus)
 - [GitHub repository](https://github.com/Orfium/orfium-ictinus)

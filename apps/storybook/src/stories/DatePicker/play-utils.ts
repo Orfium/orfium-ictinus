@@ -1,4 +1,4 @@
-import { userEvent as TLUserEvent, within } from '@storybook/test';
+import { userEvent as TLUserEvent, within } from 'storybook/test';
 
 export const openDatePicker = async ({ canvasElement }: { canvasElement: HTMLElement }) => {
   const canvas = within(canvasElement);

@@ -8,7 +8,7 @@ import {
   toast,
   type FilterOption,
 } from '@orfium/ictinus';
-import { screen, userEvent, within } from '@storybook/test';
+import { screen, userEvent, within } from 'storybook/test';
 import { useState } from 'react';
 import { FIGMA_URL } from 'utils/common';
 import { currentDay } from '../DatePicker/utils';
