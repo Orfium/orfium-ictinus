@@ -104,21 +104,32 @@ export const pickCSSProperties = (obj: Record<string, any>): StyledBoxProps => {
 /**
  * Omit from any given object only css properties defined styledBoxPropsKeys
  **/
-export const pickNonCSSProps = (obj: Record<string, any>) => {
+export const pickNonCSSProps = (obj: Record<string, any>): Record<string, any> => {
   return omit(obj, styledBoxPropsKeys);
+};
+
+type CSSResolverCurried = {
+  (
+    theme: Theme,
+    obj: StyledBoxProps
+  ): (
+    cssKey: string,
+    key: string,
+    type: 'spacing' | 'color' | 'backgroundColor'
+  ) => Record<string, string> | undefined;
 };
 
 /**
  * Resolves any value from the given theme based on type if css property exists on the object given.
  **/
-export const cssResolver = curry(
+export const cssResolver: CSSResolverCurried = curry(
   (
     theme: Theme,
     obj: StyledBoxProps,
     cssKey: string,
     key: string,
     type: 'spacing' | 'color' | 'backgroundColor'
-  ) => {
+  ): Record<string, string> | undefined => {
     if (!obj[key]) {
       return undefined;
     }

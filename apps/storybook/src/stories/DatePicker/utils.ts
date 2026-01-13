@@ -1,6 +1,6 @@
 import { DatePicker, KEYBOARD_EVENT_KEYS } from '@orfium/ictinus';
-import { fireEvent } from '@storybook/test';
 import type { ComponentProps } from 'react';
+import { fireEvent } from 'storybook/test';
 import type { Dayjs } from 'utils/date';
 import dayjs from 'utils/date';
 

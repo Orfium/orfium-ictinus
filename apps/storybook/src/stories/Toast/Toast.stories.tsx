@@ -1,7 +1,7 @@
 import { Box, Button, Icon, Link, toast, ToastContainer } from '@orfium/ictinus';
 import { vars } from '@orfium/tokens';
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { userEvent, within } from '@storybook/test';
+import { userEvent, within } from 'storybook/test';
 import { useState, type ComponentProps, type ReactElement } from 'react';
 
 export interface ToastStoryArgs {

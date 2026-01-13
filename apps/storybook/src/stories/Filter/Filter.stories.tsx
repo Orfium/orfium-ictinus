@@ -1,6 +1,6 @@
 import { Button, DropdownButton, Filter, TextField, type FilterOption } from '@orfium/ictinus';
 import { vars } from '@orfium/tokens';
-import { userEvent, within } from '@storybook/test';
+import { userEvent, within } from 'storybook/test';
 import React from 'react';
 import { FIGMA_URL } from 'utils/common';
 import * as DatePickerStories from '../DatePicker/DatePicker.stories';

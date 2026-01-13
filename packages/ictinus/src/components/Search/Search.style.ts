@@ -1,4 +1,5 @@
 import { css, type SerializedStyles } from '@emotion/react';
+import type { CSSObject } from '@emotion/serialize';
 import { rem, vars } from '@orfium/tokens';
 import { generateStylesFromTokens } from 'components/Typography/utils';
 import type { Theme } from 'theme';
@@ -67,7 +68,10 @@ export const getSX = ({
   hasFilter,
   isDisabled,
   sx,
-}: { hasFilter: boolean } & Pick<SearchProps, 'isDisabled' | 'sx'>) => {
+}: { hasFilter: boolean } & Pick<SearchProps, 'isDisabled' | 'sx'>): {
+  wrapper: CSSObject;
+  textField: CSSObject;
+} => {
   return {
     wrapper: {
       height: SEARCH_TOKENS.height.normal,

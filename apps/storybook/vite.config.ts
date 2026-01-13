@@ -1,13 +1,15 @@
 /// <reference types="vitest" />
 
-import path from 'path';
-
 import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
 import react from '@vitejs/plugin-react';
+import { dirname, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { defineConfig, loadEnv } from 'vite';
 import svgr from 'vite-plugin-svgr';
 import tsconfigPaths from 'vite-tsconfig-paths';
 import { configDefaults } from 'vitest/config';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const plugins = [
   react({
@@ -38,8 +40,17 @@ export default defineConfig(({ mode }) => {
     plugins,
     resolve: {
       alias: {
-        '@orfium/ictinus': path.resolve(__dirname, '../../packages/ictinus/src'),
+        '@orfium/ictinus': resolve(__dirname, '../../packages/ictinus/src'),
       },
+    },
+    server: {
+      // If the dev server starts serving requests before optimization
+      // completes, it causes intermittent ESM/CJS loading errors, which locally
+      // shows up as an infinite loading spinner in the web browser, and an
+      // error in the browser console about missing exports.
+      // Disabling pre-transform ensures the server waits for optimization to
+      // complete before processing requests.
+      preTransformRequests: false,
     },
     test: {
       globals: true,

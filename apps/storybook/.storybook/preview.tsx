@@ -128,7 +128,7 @@ const preview: SBPreview = {
     },
 
     viewport: {
-      viewports: viewPorts,
+      options: viewPorts,
     },
 
     options: {

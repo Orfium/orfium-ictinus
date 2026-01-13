@@ -1,3 +1,5 @@
+export * from '../icon';
+export * from '../icons';
 export * from './Box';
 export * from './Dialog';
 export * from './Menu';

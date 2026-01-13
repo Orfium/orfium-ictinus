@@ -1,7 +1,7 @@
 /// <reference types="vite/client"/>
 import { ThemeProvider } from '@orfium/ictinus';
 import { ThemeProvider as VanillaThemeProvider } from '@orfium/ictinus/vanilla';
-import { type Meta, type StoryFn, composeStories } from '@storybook/react';
+import { type Meta, type StoryFn, composeStories } from '@storybook/react-vite';
 import { render } from '@testing-library/react';
 import { describe, expect, test } from 'vitest';
 
