@@ -10,7 +10,7 @@ import { body02, body03, label02, label03 } from '../Typography/Typography.confi
 
 export const popoverStyle = css`
   min-width: 150px;
-  background: #ffffff;
+  background: ${vars.color.background.default};
 `;
 export const MenuItemWrapper = styled(MenuItem)<{
   isDisabled?: boolean;

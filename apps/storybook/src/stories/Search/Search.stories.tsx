@@ -185,8 +185,8 @@ export const CustomSearch = {
               <div
                 css={{
                   minWidth: '200px',
-                  background: 'white',
-                  border: `1px solid ${vars.color.blue['2']}`,
+                  background: vars.color.background.default,
+                  border: `1px solid ${vars.color['border-color'].decorative.default}`,
                   borderRadius: '4px',
                 }}
               >

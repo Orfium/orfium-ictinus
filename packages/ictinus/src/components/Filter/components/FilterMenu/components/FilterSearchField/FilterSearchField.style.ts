@@ -1,30 +1,31 @@
 import { css } from '@emotion/react';
-import { rem } from '@orfium/tokens';
+import { rem, vars } from '@orfium/tokens';
 
-export const textFieldWrapper = () =>
-  css`
-    /** @TODO replace with search tokens */
-    border-bottom: 1px solid #b9cdfc;
+export const textFieldWrapper = () => css`
+  border-bottom: 1px solid ${vars.color['border-color'].decorative.default};
 
-    label {
-      display: none;
-    }
+  label {
+    display: none;
+  }
 
-    input {
+  & > div > div {
+    border-radius: unset;
+  }
+
+  input {
+    border: none;
+
+    top: 0;
+
+    &:focus {
+      outline: none;
       border: none;
-
-      top: 0;
-
-      &:focus {
-        outline: none;
-        border: none;
-        box-shadow: none;
-      }
+      box-shadow: none;
     }
-  `;
+  }
+`;
 
-export const iconWrapper = () => () =>
-  css`
-    display: flex;
-    gap: ${rem(25)};
-  `;
+export const iconWrapper = () => () => css`
+  display: flex;
+  gap: ${rem(25)};
+`;
