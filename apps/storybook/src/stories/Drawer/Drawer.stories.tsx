@@ -11,7 +11,7 @@ import {
   TextField,
   Typography,
 } from '@orfium/ictinus';
-import { fireEvent, screen, userEvent, within } from '@storybook/test';
+import { fireEvent, screen, userEvent, within } from 'storybook/test';
 import { useState } from 'react';
 import { currentDay } from '~/stories/DatePicker/utils';
 import { FIGMA_URL } from '~/utils/common';

@@ -1,5 +1,5 @@
 import { Select, StatefulSelect } from '@orfium/ictinus';
-import { userEvent, within } from '@storybook/test';
+import { userEvent, within } from 'storybook/test';
 import { useState } from 'react';
 import { FIGMA_URL, Function } from 'utils/common';
 import EdgeCasesSelectShowcase from '../storyUtils/EdgeCasesSelectShowcase';

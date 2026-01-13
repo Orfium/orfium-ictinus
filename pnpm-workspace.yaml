@@ -1,8 +1,12 @@
 packages:
-  - 'packages/*'
-  - 'apps/*'
-  - 'examples/*'
-# Security settings - this will limit the use of packages that have been published for at least 1440 minutes (24 hours)
+  - packages/*
+  - apps/*
+  - examples/*
+
 minimumReleaseAge: 1440
+
 minimumReleaseAgeExclude:
   - '@orfium/*'
+
+onlyBuiltDependencies:
+  - esbuild
