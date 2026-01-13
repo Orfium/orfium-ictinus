@@ -508,10 +508,10 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #194DCC;
+  color: var(--ictinus-color-text-default-active);
   width: var(--ictinus-sizing-9);
   height: var(--ictinus-sizing-9);
-  background-color: rgba(200,206,255,0);
+  background-color: var(--ictinus-color-palette-tertiary-base);
   padding: var(--ictinus-spacing-0) var(--ictinus-spacing-6) var(--ictinus-spacing-0) var(--ictinus-spacing-6);
   border-radius: var(--ictinus-border-radius-7);
   border: none;
@@ -521,7 +521,7 @@
 }
 
 .emotion-79:focus-visible:not(:disabled) {
-  background-color: rgba(200,206,255,0.20);
+  background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
 .emotion-79:disabled {
@@ -530,12 +530,12 @@
 }
 
 .emotion-79:hover:not(:disabled) {
-  background-color: rgba(200,206,255,0.20);
+  background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
 .emotion-79:active:not(:disabled),
 .emotion-79[aria-expanded="true"] {
-  background-color: rgba(200,206,255,0.30);
+  background-color: var(--ictinus-color-palette-tertiary-contrast);
 }
 
 .emotion-81 {
@@ -545,7 +545,7 @@
 
 .emotion-81 path,
 .emotion-81 rect {
-  fill: #194DCC!important;
+  fill: var(--ictinus-color-text-default-active)!important;
 }
 
 <div>

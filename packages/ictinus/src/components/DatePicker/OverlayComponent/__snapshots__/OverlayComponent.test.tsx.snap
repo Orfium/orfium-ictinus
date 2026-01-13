@@ -112,10 +112,10 @@ exports[`OverlayComponent > should render correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #194DCC;
+  color: var(--ictinus-color-text-default-active);
   width: var(--ictinus-sizing-9);
   height: var(--ictinus-sizing-9);
-  background-color: rgba(200,206,255,0);
+  background-color: var(--ictinus-color-palette-tertiary-base);
   padding: var(--ictinus-spacing-0) var(--ictinus-spacing-6) var(--ictinus-spacing-0) var(--ictinus-spacing-6);
   border-radius: var(--ictinus-border-radius-7);
   border: none;
@@ -125,7 +125,7 @@ exports[`OverlayComponent > should render correctly 1`] = `
 }
 
 .emotion-8:focus-visible:not(:disabled) {
-  background-color: rgba(200,206,255,0.20);
+  background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
 .emotion-8:disabled {
@@ -134,12 +134,12 @@ exports[`OverlayComponent > should render correctly 1`] = `
 }
 
 .emotion-8:hover:not(:disabled) {
-  background-color: rgba(200,206,255,0.20);
+  background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
 .emotion-8:active:not(:disabled),
 .emotion-8[aria-expanded="true"] {
-  background-color: rgba(200,206,255,0.30);
+  background-color: var(--ictinus-color-palette-tertiary-contrast);
 }
 
 .emotion-9 {
@@ -158,7 +158,7 @@ exports[`OverlayComponent > should render correctly 1`] = `
 
 .emotion-10 path,
 .emotion-10 rect {
-  fill: #194DCC!important;
+  fill: var(--ictinus-color-text-default-active)!important;
 }
 
 .emotion-11 {
@@ -217,9 +217,9 @@ exports[`OverlayComponent > should render correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #194DCC;
+  color: var(--ictinus-color-text-default-active);
   height: var(--ictinus-sizing-9);
-  background-color: rgba(200,206,255,0);
+  background-color: var(--ictinus-color-palette-tertiary-base);
   padding: var(--ictinus-spacing-0) var(--ictinus-spacing-6) var(--ictinus-spacing-0) var(--ictinus-spacing-6);
   border-radius: var(--ictinus-border-radius-2);
   border: none;
@@ -229,7 +229,7 @@ exports[`OverlayComponent > should render correctly 1`] = `
 }
 
 .emotion-14:focus-visible:not(:disabled) {
-  background-color: rgba(200,206,255,0.20);
+  background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
 .emotion-14:disabled {
@@ -238,12 +238,12 @@ exports[`OverlayComponent > should render correctly 1`] = `
 }
 
 .emotion-14:hover:not(:disabled) {
-  background-color: rgba(200,206,255,0.20);
+  background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
 .emotion-14:active:not(:disabled),
 .emotion-14[aria-expanded="true"] {
-  background-color: rgba(200,206,255,0.30);
+  background-color: var(--ictinus-color-palette-tertiary-contrast);
 }
 
 .emotion-15 {
@@ -564,9 +564,9 @@ exports[`OverlayComponent > should render correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #ffffff;
+  color: var(--ictinus-color-text-inverted-primary);
   height: var(--ictinus-sizing-9);
-  background-color: #175BF5;
+  background-color: var(--ictinus-color-palette-primary-base);
   padding: var(--ictinus-spacing-0) var(--ictinus-spacing-6) var(--ictinus-spacing-0) var(--ictinus-spacing-6);
   border-radius: var(--ictinus-border-radius-2);
   border: none;
@@ -576,7 +576,7 @@ exports[`OverlayComponent > should render correctly 1`] = `
 }
 
 .emotion-107:focus-visible:not(:disabled) {
-  background-color: #5E8DF8;
+  background-color: var(--ictinus-color-palette-primary-muted);
 }
 
 .emotion-107:disabled {
@@ -585,12 +585,12 @@ exports[`OverlayComponent > should render correctly 1`] = `
 }
 
 .emotion-107:hover:not(:disabled) {
-  background-color: #5E8DF8;
+  background-color: var(--ictinus-color-palette-primary-muted);
 }
 
 .emotion-107:active:not(:disabled),
 .emotion-107[aria-expanded="true"] {
-  background-color: #194DCC;
+  background-color: var(--ictinus-color-palette-primary-contrast);
 }
 
 <div>
@@ -1438,10 +1438,10 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #194DCC;
+  color: var(--ictinus-color-text-default-active);
   width: var(--ictinus-sizing-9);
   height: var(--ictinus-sizing-9);
-  background-color: rgba(200,206,255,0);
+  background-color: var(--ictinus-color-palette-tertiary-base);
   padding: var(--ictinus-spacing-0) var(--ictinus-spacing-6) var(--ictinus-spacing-0) var(--ictinus-spacing-6);
   border-radius: var(--ictinus-border-radius-7);
   border: none;
@@ -1451,7 +1451,7 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
 }
 
 .emotion-12:focus-visible:not(:disabled) {
-  background-color: rgba(200,206,255,0.20);
+  background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
 .emotion-12:disabled {
@@ -1460,12 +1460,12 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
 }
 
 .emotion-12:hover:not(:disabled) {
-  background-color: rgba(200,206,255,0.20);
+  background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
 .emotion-12:active:not(:disabled),
 .emotion-12[aria-expanded="true"] {
-  background-color: rgba(200,206,255,0.30);
+  background-color: var(--ictinus-color-palette-tertiary-contrast);
 }
 
 .emotion-13 {
@@ -1484,7 +1484,7 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
 
 .emotion-14 path,
 .emotion-14 rect {
-  fill: #194DCC!important;
+  fill: var(--ictinus-color-text-default-active)!important;
 }
 
 .emotion-15 {
@@ -1542,9 +1542,9 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #194DCC;
+  color: var(--ictinus-color-text-default-active);
   height: var(--ictinus-sizing-9);
-  background-color: rgba(200,206,255,0);
+  background-color: var(--ictinus-color-palette-tertiary-base);
   padding: var(--ictinus-spacing-0) var(--ictinus-spacing-6) var(--ictinus-spacing-0) var(--ictinus-spacing-6);
   border-radius: var(--ictinus-border-radius-2);
   border: none;
@@ -1554,7 +1554,7 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
 }
 
 .emotion-18:focus-visible:not(:disabled) {
-  background-color: rgba(200,206,255,0.20);
+  background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
 .emotion-18:disabled {
@@ -1563,12 +1563,12 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
 }
 
 .emotion-18:hover:not(:disabled) {
-  background-color: rgba(200,206,255,0.20);
+  background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
 .emotion-18:active:not(:disabled),
 .emotion-18[aria-expanded="true"] {
-  background-color: rgba(200,206,255,0.30);
+  background-color: var(--ictinus-color-palette-tertiary-contrast);
 }
 
 .emotion-19 {
@@ -1922,9 +1922,9 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #ffffff;
+  color: var(--ictinus-color-text-inverted-primary);
   height: var(--ictinus-sizing-9);
-  background-color: #175BF5;
+  background-color: var(--ictinus-color-palette-primary-base);
   padding: var(--ictinus-spacing-0) var(--ictinus-spacing-6) var(--ictinus-spacing-0) var(--ictinus-spacing-6);
   border-radius: var(--ictinus-border-radius-2);
   border: none;
@@ -1934,7 +1934,7 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
 }
 
 .emotion-193:focus-visible:not(:disabled) {
-  background-color: #5E8DF8;
+  background-color: var(--ictinus-color-palette-primary-muted);
 }
 
 .emotion-193:disabled {
@@ -1943,12 +1943,12 @@ exports[`OverlayComponent > should render datepicker correctly 1`] = `
 }
 
 .emotion-193:hover:not(:disabled) {
-  background-color: #5E8DF8;
+  background-color: var(--ictinus-color-palette-primary-muted);
 }
 
 .emotion-193:active:not(:disabled),
 .emotion-193[aria-expanded="true"] {
-  background-color: #194DCC;
+  background-color: var(--ictinus-color-palette-primary-contrast);
 }
 
 <div>
