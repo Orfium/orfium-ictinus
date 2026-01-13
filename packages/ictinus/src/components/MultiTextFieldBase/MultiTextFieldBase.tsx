@@ -5,7 +5,6 @@ import Tag from 'components/Tag';
 import type { InputProps, TextFieldProps } from 'components/TextField/TextField';
 import TextInputBase from 'components/TextInputBase';
 import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
-import useTheme from 'hooks/useTheme';
 import { last, merge, omit } from 'lodash-es';
 import React, { useMemo, useRef } from 'react';
 import { generateUniqueID, generateUniqueKey } from 'utils/helpers';
@@ -65,7 +64,6 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
     } = props;
     const id = useRef(userDefinedId || generateUniqueID('multiTextfield_')).current;
 
-    const theme = useTheme();
     const hasValue = Boolean(value || (selectedOptions?.length && selectedOptions?.length > 0));
 
     const isLocked = status?.type === 'read-only';

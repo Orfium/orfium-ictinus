@@ -1,33 +1,32 @@
-import type { SemanticColorsKey } from '@orfium/tokens';
-import type { SemanticTypographyKey } from '@orfium/tokens';
+import { vars, type SemanticTypographyKey } from '@orfium/tokens';
 import type { ComponentSizes } from 'utils/types';
 
 import type { ButtonTypes } from 'components/Button/Button.types';
 
-export const buttonColorToSemColor: Record<ButtonTypes, Record<string, SemanticColorsKey>> = {
+export const BUTTON_COLOR: Record<ButtonTypes, Record<string, `var(--${string})`>> = {
   primary: {
-    defaultFill: 'palette.primary.base',
-    hoverFill: 'palette.primary.muted',
-    activeFill: 'palette.primary.contrast',
-    text: 'textColor.inverted.primary',
+    defaultFill: vars.color.palette.primary.base,
+    hoverFill: vars.color.palette.primary.muted,
+    activeFill: vars.color.palette.primary.contrast,
+    text: vars.color.text.inverted.primary,
   },
   secondary: {
-    defaultFill: 'palette.secondary.base',
-    hoverFill: 'palette.secondary.muted',
-    activeFill: 'palette.secondary.contrast',
-    text: 'textColor.default.active',
+    defaultFill: vars.color.palette.secondary.base,
+    hoverFill: vars.color.palette.secondary.muted,
+    activeFill: vars.color.palette.secondary.contrast,
+    text: vars.color.text.default.active,
   },
   tertiary: {
-    defaultFill: 'palette.tertiary.base',
-    hoverFill: 'palette.tertiary.muted',
-    activeFill: 'palette.tertiary.contrast',
-    text: 'textColor.default.active',
+    defaultFill: vars.color.palette.tertiary.base,
+    hoverFill: vars.color.palette.tertiary.muted,
+    activeFill: vars.color.palette.tertiary.contrast,
+    text: vars.color.text.default.active,
   },
   danger: {
-    defaultFill: 'palette.error.base',
-    hoverFill: 'palette.error.muted',
-    activeFill: 'palette.error.contrast',
-    text: 'textColor.default.error',
+    defaultFill: vars.color.palette.error.base,
+    hoverFill: vars.color.palette.error.muted,
+    activeFill: vars.color.palette.error.contrast,
+    text: vars.color.text.default.error,
   },
 };
 

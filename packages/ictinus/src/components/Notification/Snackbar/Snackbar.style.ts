@@ -1,6 +1,5 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
-import type { SemanticColorsKey } from '@orfium/tokens';
 import { rem, vars } from '@orfium/tokens';
 
 import type { Theme } from '../../../theme';
@@ -15,14 +14,10 @@ const snackbarContainerPerType = (
   styleType === 'outlined'
     ? `
     border: ${vars['border-width']['2']} solid
-    ${theme.tokens.colors.get(
-      `borderColor.interactive.${typeToColorStyle(type)}` as SemanticColorsKey
-    )};
+    ${vars.color['border-color'].interactive[typeToColorStyle(type)]};
       `
     : `
-    border-left: ${theme.tokens.colors.get(
-      `borderColor.interactive.${typeToColorStyle(type)}` as SemanticColorsKey
-    )} ${vars['border-width']['3']} solid;
+    border-left: ${vars.color['border-color'].interactive[typeToColorStyle(type)]} ${vars['border-width']['3']} solid;
     box-shadow: ${theme.globals.elevation['02']};
 `;
 

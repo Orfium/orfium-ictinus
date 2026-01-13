@@ -1,9 +1,8 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
-import type { Theme } from 'theme';
 
 import { vars } from '@orfium/tokens';
-import { buttonColorToSemColor } from 'components/ButtonBase/constants';
+import { BUTTON_COLOR } from 'components/ButtonBase/constants';
 import type { PrimitiveButtonTypes } from '../Button/Button.types';
 
 const rotateSVG = (deg: number) => {
@@ -40,44 +39,52 @@ export const buttonSpanStyle = ({ type }: { type: PrimitiveButtonTypes }): Seria
   });
 };
 
-const getIconButtonActiveState = (theme: Theme, type: PrimitiveButtonTypes) => {
+const getIconButtonActiveState = (type: PrimitiveButtonTypes) => {
   return {
-    backgroundColor: theme.tokens.colors.get(buttonColorToSemColor[type].activeFill),
+    backgroundColor: BUTTON_COLOR[type].activeFill,
     ':hover:not(:disabled)': {
-      backgroundColor: theme.tokens.colors.get(buttonColorToSemColor[type].activeFill),
+      backgroundColor: BUTTON_COLOR[type].activeFill,
     },
   };
 };
 
-export const iconButtonWrapper =
-  ({ isOpen, type }: { isOpen: boolean; type: PrimitiveButtonTypes }) =>
-  (theme: Theme): SerializedStyles => {
-    const openDropdownStyles = isOpen
-      ? {
-          button: getIconButtonActiveState(theme, type),
-        }
-      : {};
+export const iconButtonWrapper = ({
+  isOpen,
+  type,
+}: {
+  isOpen: boolean;
+  type: PrimitiveButtonTypes;
+}) => {
+  const openDropdownStyles = isOpen
+    ? {
+        button: getIconButtonActiveState(type),
+      }
+    : {};
 
-    return css(openDropdownStyles);
-  };
+  return css(openDropdownStyles);
+};
 
-export const iconButtonSpanStyle =
-  ({ isOpen, type }: { isOpen: boolean; type: PrimitiveButtonTypes }) =>
-  (theme: Theme): SerializedStyles => {
-    const openDropdownStyles = isOpen
-      ? {
-          button: getIconButtonActiveState(theme, type),
-          ...rotateSVG(180),
-        }
-      : {
-          ...rotateSVG(0),
-        };
+export const iconButtonSpanStyle = ({
+  isOpen,
+  type,
+}: {
+  isOpen: boolean;
+  type: PrimitiveButtonTypes;
+}) => {
+  const openDropdownStyles = isOpen
+    ? {
+        button: getIconButtonActiveState(type),
+        ...rotateSVG(180),
+      }
+    : {
+        ...rotateSVG(0),
+      };
 
-    return css({
-      'button:last-child': {
-        borderTopLeftRadius: 'unset',
-        borderBottomLeftRadius: 'unset',
-      },
-      ...openDropdownStyles,
-    });
-  };
+  return css({
+    'button:last-child': {
+      borderTopLeftRadius: 'unset',
+      borderBottomLeftRadius: 'unset',
+    },
+    ...openDropdownStyles,
+  });
+};

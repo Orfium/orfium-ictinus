@@ -1,6 +1,6 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
-import { vars, type SemanticColorsKey } from '@orfium/tokens';
+import { vars } from '@orfium/tokens';
 import type { Theme } from 'theme';
 
 import type { NotificationStyleType, NotificationTypes } from './Notification';
@@ -9,7 +9,7 @@ export const typeToColorStyle = (type: NotificationTypes): string =>
   type === 'info' ? 'active' : type;
 
 export const typeToBackgroundStyle = (type: NotificationTypes): string =>
-  type === 'info' ? 'primaryAlt' : type;
+  type === 'info' ? 'primary-alt' : type;
 // Generic SerializedStyles for all Notification Types
 
 export const notificationsContainerPerType = (
@@ -18,9 +18,7 @@ export const notificationsContainerPerType = (
   theme: Theme
 ): SerializedStyles => css`
   border: ${vars['border-width']['2']} solid
-    ${theme.tokens.colors.get(
-      `borderColor.interactive.${typeToColorStyle(type)}` as SemanticColorsKey
-    )};
+    ${vars.color['border-color'].interactive[typeToColorStyle(type)]};
 
   &[notification-type='banner'] {
     box-shadow: ${theme.globals.elevation['02']};
@@ -31,9 +29,8 @@ export const notificationsContainerPerType = (
     background: ${vars.color.background.default};
       `
     : `
-    background: ${theme.tokens.colors.get(
-      `palette.${typeToBackgroundStyle(type)}.muted` as SemanticColorsKey
-    )};
+    background:  ${vars.color.palette[typeToBackgroundStyle(type)].muted};
+
 `}
 `;
 
@@ -56,11 +53,7 @@ export const iconContainer = (): SerializedStyles => css`
   padding-right: ${vars.spacing['4']};
 `;
 
-export const boldMessageContainer =
-  (type?: NotificationTypes) =>
-  (theme: Theme): SerializedStyles => css`
-    color: ${type
-      ? theme.tokens.colors.get(`textColor.default.${typeToColorStyle(type)}` as SemanticColorsKey)
-      : undefined};
-    font-weight: ${vars.weight.bold};
-  `;
+export const boldMessageContainer = (type?: NotificationTypes): SerializedStyles => css`
+  color: ${type ? vars.color.text.default[typeToColorStyle(type)] : undefined};
+  font-weight: ${vars.weight.bold};
+`;

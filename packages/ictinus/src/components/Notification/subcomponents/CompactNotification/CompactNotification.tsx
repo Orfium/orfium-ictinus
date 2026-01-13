@@ -1,10 +1,9 @@
-import { vars, type SemanticColorsKey } from '@orfium/tokens';
+import { vars } from '@orfium/tokens';
 import * as React from 'react';
 import { generateTestDataId } from 'utils/helpers';
 import type { TestId } from 'utils/types';
 
 import type { AcceptedIconNames } from 'components/Icon';
-import useTheme from '../../../../hooks/useTheme';
 import Button from '../../../Button';
 import Icon from '../../../Icon';
 import type {
@@ -60,8 +59,6 @@ const CompactNotification: React.FCC<CompactNotificationProps> = ({
   title,
   dataTestId,
 }) => {
-  const theme = useTheme();
-
   return (
     <div
       css={notificationsContainer(type, styleType)}
@@ -73,9 +70,7 @@ const CompactNotification: React.FCC<CompactNotificationProps> = ({
           <div css={iconContainer()}>
             <Icon
               name={typeToIconName(type)}
-              color={theme.tokens.colors.get(
-                `textColor.default.${typeToColorStyle(type)}` as SemanticColorsKey
-              )}
+              color={vars.color.text.default[typeToColorStyle(type)]}
               size={24}
             />
           </div>

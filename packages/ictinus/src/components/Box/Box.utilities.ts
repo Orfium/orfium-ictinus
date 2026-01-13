@@ -1,6 +1,6 @@
-import { curry, omit, pick } from 'lodash-es';
+import { vars } from '@orfium/tokens';
+import { curry, get, omit, pick } from 'lodash-es';
 import type { Theme } from 'theme';
-import type { SemanticColorsKey } from '@orfium/tokens';
 
 import type { StyledBoxProps } from './Box.types';
 
@@ -149,12 +149,12 @@ export const cssResolver = curry(
     }
     if (type === 'color') {
       return {
-        [cssKey]: theme.tokens.colors.get(`textColor.${obj[key]}` as SemanticColorsKey),
+        [cssKey]: get(vars.color.text, obj[key]),
       };
     }
 
     return {
-      [cssKey]: theme.tokens.colors.get(`backgroundColor.${obj[key]}` as SemanticColorsKey),
+      [cssKey]: get(vars.color.background, obj[key]),
     };
   }
 );

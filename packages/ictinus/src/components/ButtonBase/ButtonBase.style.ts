@@ -6,7 +6,7 @@ import { vars } from '@orfium/tokens';
 import { generateStylesFromTokens } from 'components/Typography/utils';
 import type { Theme } from '../../theme';
 import type { ButtonBaseProps } from './ButtonBase';
-import { buttonColorToSemColor, typographySizes } from './constants';
+import { BUTTON_COLOR, typographySizes } from './constants';
 
 const BUTTON_SIZE: Record<ComponentSizes, Record<string, string>> = {
   compact: {
@@ -48,12 +48,10 @@ export const buttonBaseStyle =
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      color: theme.tokens.colors.get(buttonColorToSemColor[type].text),
+      color: BUTTON_COLOR[type].text,
       width: getButtonWidth(),
       height: BUTTON_SIZE[size].size,
-      backgroundColor: theme.tokens.colors.get(
-        buttonColorToSemColor[type][isLoading ? 'activeFill' : 'defaultFill']
-      ),
+      backgroundColor: BUTTON_COLOR[type][isLoading ? 'activeFill' : 'defaultFill'],
       padding: BUTTON_SIZE[size].padding,
       borderRadius:
         isIconButton && shape === 'circle'
@@ -64,17 +62,17 @@ export const buttonBaseStyle =
       transition: 'background-color,border 150ms linear',
 
       ':focus-visible:not(:disabled)': {
-        backgroundColor: theme.tokens.colors.get(buttonColorToSemColor[type].hoverFill),
+        backgroundColor: BUTTON_COLOR[type].hoverFill,
       },
       ':disabled': {
         opacity: theme.tokens.disabledState.get('default'),
         cursor: 'not-allowed',
       },
       ':hover:not(:disabled)': {
-        backgroundColor: theme.tokens.colors.get(buttonColorToSemColor[type].hoverFill),
+        backgroundColor: BUTTON_COLOR[type].hoverFill,
       },
       ':active:not(:disabled), &[aria-expanded="true"]': {
-        backgroundColor: theme.tokens.colors.get(buttonColorToSemColor[type].activeFill),
+        backgroundColor: BUTTON_COLOR[type].activeFill,
       },
     };
 

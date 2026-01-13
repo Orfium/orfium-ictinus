@@ -3,7 +3,6 @@ import { css } from '@emotion/react';
 import { vars, type FontSpacing } from '@orfium/tokens';
 import type { Theme } from 'theme';
 
-import type { semanticVariablesColors as colorsFigma, DotKeys } from '@orfium/tokens';
 import type { TextColorTypes, TypographyVariant } from './Typography';
 import {
   body01,
@@ -63,7 +62,6 @@ export const typographyWrapper =
     };
 
     const textColorCategory = isInverted ? 'inverted' : 'default';
-    const textColor = `textColor.${textColorCategory}.${type}` as DotKeys<typeof colorsFigma>;
 
     return css`
       ${allStyles[variant](theme, fontSpacing)};
@@ -72,6 +70,6 @@ export const typographyWrapper =
       text-decoration: ${isUnderline
         ? theme.globals.typography.textDecoration.get('link')
         : undefined};
-      color: ${theme.tokens.colors.get(textColor)};
+      color: ${vars.color.text[textColorCategory][type]};
     `;
   };

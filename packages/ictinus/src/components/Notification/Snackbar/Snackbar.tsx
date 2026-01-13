@@ -1,10 +1,9 @@
-import { vars, type SemanticColorsKey } from '@orfium/tokens';
+import { vars } from '@orfium/tokens';
 import * as React from 'react';
 import { generateTestDataId } from 'utils/helpers';
 import type { TestId } from 'utils/types';
 
 import Icon from 'components/Icon';
-import useTheme from '../../../hooks/useTheme';
 import type {
   NotificationActions,
   NotificationStyleType,
@@ -49,8 +48,6 @@ const Snackbar: React.FCC<SnackbarProps> = ({
 }) => {
   const hasActions = (primaryCTA && primaryCTALabel) || (secondaryCTA && secondaryCTALabel);
 
-  const theme = useTheme();
-
   return (
     // @TODO remove the below or change to data-
     // eslint-disable-next-line react/no-unknown-property
@@ -60,9 +57,7 @@ const Snackbar: React.FCC<SnackbarProps> = ({
           <div css={iconContainer()}>
             <Icon
               name={typeToIconName(type)}
-              color={theme.tokens.colors.get(
-                `textColor.default.${typeToColorStyle(type)}` as SemanticColorsKey
-              )}
+              color={vars.color.text.default[typeToColorStyle(type)]}
               size={24}
             />
           </div>

@@ -1,5 +1,4 @@
 import useEscape from 'hooks/useEscape';
-import useTheme from 'hooks/useTheme';
 import React from 'react';
 import isEqual from 'react-fast-compare';
 
@@ -23,8 +22,6 @@ const Search = React.forwardRef<HTMLInputElement, SearchProps>((props, ref) => {
     children,
     ...rest
   } = props;
-
-  const theme = useTheme();
 
   const isClearVisible = value && (value as string).length > 0;
 

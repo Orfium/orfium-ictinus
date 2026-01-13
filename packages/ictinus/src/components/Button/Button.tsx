@@ -1,11 +1,10 @@
-import useTheme from 'hooks/useTheme';
 import React from 'react';
 import type { CommonButtonProps } from 'utils/common';
 import type { TestProps } from 'utils/types';
 
 import type { AvatarProps } from 'components/Avatar';
 import Avatar from 'components/Avatar';
-import { buttonColorToSemColor } from 'components/ButtonBase/constants';
+import { BUTTON_COLOR } from 'components/ButtonBase/constants';
 import type { AcceptedIconNames } from 'components/Icon';
 import Icon from 'components/Icon';
 import type { ButtonBaseProps } from '../ButtonBase/ButtonBase';
@@ -37,8 +36,6 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => 
 
   const hasAvatar = ['primary', 'secondary', 'tertiary'].includes(type) && avatar;
 
-  const theme = useTheme();
-
   return (
     <ButtonBase {...props} ref={ref} isLoading={isLoading} onClick={onClick}>
       <span css={buttonSpanStyle()}>
@@ -48,18 +45,10 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => 
           <>
             {hasAvatar && <Avatar src={avatar?.src}>{avatar?.label}</Avatar>}
             {iconLeftName && !hasAvatar && (
-              <Icon
-                name={iconLeftName}
-                color={theme.tokens.colors.get(buttonColorToSemColor[type].text)}
-              />
+              <Icon name={iconLeftName} color={BUTTON_COLOR[type].text} />
             )}
             <span>{children}</span>
-            {iconRightName && (
-              <Icon
-                name={iconRightName}
-                color={theme.tokens.colors.get(buttonColorToSemColor[type].text)}
-              />
-            )}
+            {iconRightName && <Icon name={iconRightName} color={BUTTON_COLOR[type].text} />}
           </>
         )}
       </span>
