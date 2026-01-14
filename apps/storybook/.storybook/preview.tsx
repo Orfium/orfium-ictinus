@@ -91,10 +91,12 @@ const viewPorts = {
 
 export const withTheme: Decorator = (
   StoryFn,
-  { globals: { theme = 'light' as 'light' | 'dark' } }
+  { globals: { theme = 'light' as 'light' | 'dark' }, viewMode }
 ) => {
+  const effectiveTheme = viewMode === 'story' ? theme : 'light';
+
   return (
-    <VanillaThemeProvider key={theme} colorScheme={theme}>
+    <VanillaThemeProvider key={effectiveTheme} colorScheme={effectiveTheme}>
       <ThemeProvider theme={{}}>
         <Box display="flex" flexDirection="column" position="relative" p="7" minHeight="full">
           <StoryFn />

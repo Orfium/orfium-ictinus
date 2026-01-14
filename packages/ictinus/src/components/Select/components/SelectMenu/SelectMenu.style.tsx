@@ -41,7 +41,6 @@ export const menuStyle = ({
   overflow-y: ${isVirtualized ? 'hidden' : 'auto'};
   border: ${rem(1)} solid ${vars.color['border-color'].decorative.default};
   border-radius: ${vars.spacing['3']};
-  background-color: ${vars.color.neutral['1']};
   box-shadow: ${vars['box-shadow']['2']};
   min-width: 100%;
   max-width: ${rem(620)};
