@@ -68,7 +68,7 @@ const FilterSearchField = ({
                 outline: 'none',
                 border: 'none',
                 boxShadow: 'none',
-                backgroundColor: 'white',
+                backgroundColor: vars.color.background.default,
               },
             },
           }}
@@ -90,7 +90,12 @@ const FilterSearchField = ({
           isLoading={isLoading}
           sx={{
             textField: { paddingTop: '12px', paddingBottom: '12px', width: '100%', minWidth: '' },
-            wrapper: { boxShadow: 'none', borderRadius: 0, background: 'white', minWidth: '' },
+            wrapper: {
+              boxShadow: 'none',
+              borderRadius: 0,
+              background: vars.color.background.default,
+              minWidth: '',
+            },
           }}
         />
       )}

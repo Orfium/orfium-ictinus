@@ -13,7 +13,8 @@ export const Thumb = styled.div<{
   height: ${rem(16)};
   width: ${rem(16)};
   border-radius: 100px;
-  background-color: ${({ isChanged }) => (isChanged ? vars.color.palette.primary.base : '#fff')};
+  background-color: ${({ isChanged }) =>
+    isChanged ? vars.color.palette.primary.base : vars.color.background.default};
   border: 2px solid ${vars.color.palette.primary.base};
   ${({ restStyleProps }) => ({ ...restStyleProps })};
   box-sizing: border-box;

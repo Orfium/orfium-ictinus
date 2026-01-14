@@ -10,7 +10,6 @@ export const menuStyle = ({ isMulti }) => {
     overflow: auto;
     border: ${rem(1)} solid ${vars.color['border-color'].decorative.default};
     border-radius: ${vars.spacing['3']};
-    background-color: ${vars.color.neutral['1']};
     box-shadow: ${vars['box-shadow']['2']};
   `;
 };

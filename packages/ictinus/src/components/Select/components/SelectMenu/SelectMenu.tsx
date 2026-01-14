@@ -9,7 +9,7 @@ import { flatMap, head, uniqueId } from 'lodash-es';
 import { forwardRef, useCallback, useEffect, useRef } from 'react';
 import type { ComponentSizes } from 'utils/types';
 import type { SelectOption } from '../../types';
-import { innerMenuStyle, menuStyle, optionStyle } from './SelectMenu.style';
+import { emptyAndLoadingStyle, innerMenuStyle, menuStyle, optionStyle } from './SelectMenu.style';
 
 export type SelectMenuProps = {
   filteredOptions: SelectOption[];
@@ -61,56 +61,54 @@ const SelectMenu = forwardRef<HTMLUListElement, SelectMenuProps>((props, ref) =>
 
   const renderOptions = () =>
     filteredOptions.length > 0 ? (
-      <List
-        label={uniqueId('menu_list')}
-        ref={combinedRefs}
-        height={listHeight}
-        isVirtualized={isVirtualized && filteredOptions.length > MAX_NON_VIRTUALIZED_ITEMS_SELECT}
-        onSelectionChange={onSelectionChange}
-        selectedKeys={[selectedOption.value]}
-        disabledKeys={filteredOptions.filter((o) => o.isDisabled).map((o) => o.value)}
-      >
-        {hasSelectAllOption ? (
-          <ListItem
-            rowSize={size}
-            key={SELECT_ALL_OPTION.value}
-            textValue={SELECT_ALL_OPTION.label}
-          >
-            <ListItemText>{SELECT_ALL_OPTION.label}</ListItemText>
-          </ListItem>
-        ) : null}
-        {filteredOptions.map((option) => {
-          if (option.options && option.options?.length > 0) {
-            return (
-              <ListSection key={option.value} title={option.value}>
-                {option.options.map((o) => (
-                  <ListItem rowSize={size} key={o.value} textValue={o.label}>
-                    <ListItemText description={o.helperText}>{o.label}</ListItemText>
-                  </ListItem>
-                ))}
-              </ListSection>
-            );
-          }
-
-          return (
-            <ListItem rowSize={size} key={option.value} textValue={option.label}>
-              <ListItemText description={option.helperText}>{option.label}</ListItemText>
+      <div css={optionStyle}>
+        <List
+          label={uniqueId('menu_list')}
+          ref={combinedRefs}
+          height={listHeight}
+          isVirtualized={isVirtualized && filteredOptions.length > MAX_NON_VIRTUALIZED_ITEMS_SELECT}
+          onSelectionChange={onSelectionChange}
+          selectedKeys={[selectedOption.value]}
+          disabledKeys={filteredOptions.filter((o) => o.isDisabled).map((o) => o.value)}
+        >
+          {hasSelectAllOption ? (
+            <ListItem
+              rowSize={size}
+              key={SELECT_ALL_OPTION.value}
+              textValue={SELECT_ALL_OPTION.label}
+            >
+              <ListItemText>{SELECT_ALL_OPTION.label}</ListItemText>
             </ListItem>
-          );
-        })}
-      </List>
+          ) : null}
+          {filteredOptions.map((option) => {
+            if (option.options && option.options?.length > 0) {
+              return (
+                <ListSection key={option.value} title={option.value}>
+                  {option.options.map((o) => (
+                    <ListItem rowSize={size} key={o.value} textValue={o.label}>
+                      <ListItemText description={o.helperText}>{o.label}</ListItemText>
+                    </ListItem>
+                  ))}
+                </ListSection>
+              );
+            }
+
+            return (
+              <ListItem rowSize={size} key={option.value} textValue={option.label}>
+                <ListItemText description={option.helperText}>{option.label}</ListItemText>
+              </ListItem>
+            );
+          })}
+        </List>
+      </div>
     ) : (
-      <div css={optionStyle({ isSelected: false, hasNoResultsExist: true })}>No options</div>
+      <div css={emptyAndLoadingStyle}>No options</div>
     );
 
   return (
     <div css={menuStyle({ ...props })} tabIndex={-1}>
       <div css={innerMenuStyle({ height: listHeight })}>
-        {isLoading ? (
-          <div css={optionStyle({ isSelected: false, hasNoResultsExist: true })}>Loading...</div>
-        ) : (
-          renderOptions()
-        )}
+        {isLoading ? <div css={emptyAndLoadingStyle}>Loading...</div> : renderOptions()}
       </div>
     </div>
   );

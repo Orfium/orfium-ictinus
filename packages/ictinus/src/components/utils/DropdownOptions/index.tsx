@@ -23,7 +23,6 @@ export const optionsStyle =
     max-width: ${rem(620)};
     width: fit-content;
     height: auto;
-    background-color: ${theme.globals.oldColors.white};
     box-shadow: ${theme.globals.elevation['02']};
     border-radius: ${rem(4)};
     z-index: 1;

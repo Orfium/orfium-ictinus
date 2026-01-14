@@ -152,9 +152,9 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #194DCC;
+  color: var(--ictinus-color-text-default-active);
   height: var(--ictinus-sizing-7);
-  background-color: rgba(200,206,255,0);
+  background-color: var(--ictinus-color-palette-tertiary-base);
   padding: var(--ictinus-spacing-0) var(--ictinus-spacing-4) var(--ictinus-spacing-0) var(--ictinus-spacing-4);
   border-radius: var(--ictinus-border-radius-2);
   border: none;
@@ -164,7 +164,7 @@
 }
 
 .emotion-8:focus-visible:not(:disabled) {
-  background-color: rgba(200,206,255,0.20);
+  background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
 .emotion-8:disabled {
@@ -173,12 +173,12 @@
 }
 
 .emotion-8:hover:not(:disabled) {
-  background-color: rgba(200,206,255,0.20);
+  background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
 .emotion-8:active:not(:disabled),
 .emotion-8[aria-expanded="true"] {
-  background-color: rgba(200,206,255,0.30);
+  background-color: var(--ictinus-color-palette-tertiary-contrast);
 }
 
 .emotion-9 {
@@ -215,9 +215,9 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #ffffff;
+  color: var(--ictinus-color-text-inverted-primary);
   height: var(--ictinus-sizing-7);
-  background-color: #175BF5;
+  background-color: var(--ictinus-color-palette-primary-base);
   padding: var(--ictinus-spacing-0) var(--ictinus-spacing-4) var(--ictinus-spacing-0) var(--ictinus-spacing-4);
   border-radius: var(--ictinus-border-radius-2);
   border: none;
@@ -227,7 +227,7 @@
 }
 
 .emotion-11:focus-visible:not(:disabled) {
-  background-color: #5E8DF8;
+  background-color: var(--ictinus-color-palette-primary-muted);
 }
 
 .emotion-11:disabled {
@@ -236,12 +236,12 @@
 }
 
 .emotion-11:hover:not(:disabled) {
-  background-color: #5E8DF8;
+  background-color: var(--ictinus-color-palette-primary-muted);
 }
 
 .emotion-11:active:not(:disabled),
 .emotion-11[aria-expanded="true"] {
-  background-color: #194DCC;
+  background-color: var(--ictinus-color-palette-primary-contrast);
 }
 
 .emotion-13 {

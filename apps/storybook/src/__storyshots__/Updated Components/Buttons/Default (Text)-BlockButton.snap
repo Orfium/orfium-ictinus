@@ -45,10 +45,10 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #ffffff;
+  color: var(--ictinus-color-text-inverted-primary);
   width: 100%;
   height: var(--ictinus-sizing-9);
-  background-color: #175BF5;
+  background-color: var(--ictinus-color-palette-primary-base);
   padding: var(--ictinus-spacing-0) var(--ictinus-spacing-6) var(--ictinus-spacing-0) var(--ictinus-spacing-6);
   border-radius: var(--ictinus-border-radius-2);
   border: none;
@@ -58,7 +58,7 @@
 }
 
 .emotion-2:focus-visible:not(:disabled) {
-  background-color: #5E8DF8;
+  background-color: var(--ictinus-color-palette-primary-muted);
 }
 
 .emotion-2:disabled {
@@ -67,12 +67,12 @@
 }
 
 .emotion-2:hover:not(:disabled) {
-  background-color: #5E8DF8;
+  background-color: var(--ictinus-color-palette-primary-muted);
 }
 
 .emotion-2:active:not(:disabled),
 .emotion-2[aria-expanded="true"] {
-  background-color: #194DCC;
+  background-color: var(--ictinus-color-palette-primary-contrast);
 }
 
 .emotion-3 {
@@ -109,10 +109,10 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #ffffff;
+  color: var(--ictinus-color-text-inverted-primary);
   width: 100%;
   height: var(--ictinus-sizing-7);
-  background-color: #175BF5;
+  background-color: var(--ictinus-color-palette-primary-base);
   padding: var(--ictinus-spacing-0) var(--ictinus-spacing-4) var(--ictinus-spacing-0) var(--ictinus-spacing-4);
   border-radius: var(--ictinus-border-radius-2);
   border: none;
@@ -122,7 +122,7 @@
 }
 
 .emotion-5:focus-visible:not(:disabled) {
-  background-color: #5E8DF8;
+  background-color: var(--ictinus-color-palette-primary-muted);
 }
 
 .emotion-5:disabled {
@@ -131,12 +131,12 @@
 }
 
 .emotion-5:hover:not(:disabled) {
-  background-color: #5E8DF8;
+  background-color: var(--ictinus-color-palette-primary-muted);
 }
 
 .emotion-5:active:not(:disabled),
 .emotion-5[aria-expanded="true"] {
-  background-color: #194DCC;
+  background-color: var(--ictinus-color-palette-primary-contrast);
 }
 
 .emotion-8 {
@@ -189,10 +189,10 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #ffffff;
+  color: var(--ictinus-color-text-inverted-primary);
   width: 100%;
   height: var(--ictinus-sizing-9);
-  background-color: #194DCC;
+  background-color: var(--ictinus-color-palette-primary-contrast);
   padding: var(--ictinus-spacing-0) var(--ictinus-spacing-6) var(--ictinus-spacing-0) var(--ictinus-spacing-6);
   border-radius: var(--ictinus-border-radius-2);
   border: none;
@@ -203,7 +203,7 @@
 }
 
 .emotion-11:focus-visible:not(:disabled) {
-  background-color: #5E8DF8;
+  background-color: var(--ictinus-color-palette-primary-muted);
 }
 
 .emotion-11:disabled {
@@ -212,12 +212,12 @@
 }
 
 .emotion-11:hover:not(:disabled) {
-  background-color: #5E8DF8;
+  background-color: var(--ictinus-color-palette-primary-muted);
 }
 
 .emotion-11:active:not(:disabled),
 .emotion-11[aria-expanded="true"] {
-  background-color: #194DCC;
+  background-color: var(--ictinus-color-palette-primary-contrast);
 }
 
 .emotion-17 {
@@ -238,10 +238,10 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #ffffff;
+  color: var(--ictinus-color-text-inverted-primary);
   width: 100%;
   height: var(--ictinus-sizing-7);
-  background-color: #194DCC;
+  background-color: var(--ictinus-color-palette-primary-contrast);
   padding: var(--ictinus-spacing-0) var(--ictinus-spacing-4) var(--ictinus-spacing-0) var(--ictinus-spacing-4);
   border-radius: var(--ictinus-border-radius-2);
   border: none;
@@ -252,7 +252,7 @@
 }
 
 .emotion-17:focus-visible:not(:disabled) {
-  background-color: #5E8DF8;
+  background-color: var(--ictinus-color-palette-primary-muted);
 }
 
 .emotion-17:disabled {
@@ -261,12 +261,12 @@
 }
 
 .emotion-17:hover:not(:disabled) {
-  background-color: #5E8DF8;
+  background-color: var(--ictinus-color-palette-primary-muted);
 }
 
 .emotion-17:active:not(:disabled),
 .emotion-17[aria-expanded="true"] {
-  background-color: #194DCC;
+  background-color: var(--ictinus-color-palette-primary-contrast);
 }
 
 <div>

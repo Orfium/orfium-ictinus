@@ -5,7 +5,7 @@ import { rem, vars } from '@orfium/tokens';
 import { generateStylesFromTokens } from 'components/Typography/utils';
 import { lineEllipsis } from 'theme/functions';
 import type { Theme } from '../../theme';
-import { tagColorToSemColor } from './constants';
+import { TAG_COLOR } from './constants';
 import type { TagProps } from './Tag.types';
 
 const TAG_TOKENS = {
@@ -34,7 +34,7 @@ export const tagContainerStyles =
         return vars.color.palette.secondary.base;
       }
 
-      return theme.tokens.colors.get(tagColorToSemColor[color].fill);
+      return TAG_COLOR[color].fill;
     };
 
     const typography: SemanticTypographyKey =
@@ -54,14 +54,12 @@ export const tagContainerStyles =
 
       cursor: ${isSelectable ? 'pointer' : 'auto'};
       background: ${getBackgroundColor()};
-      color: ${isInteractive
-        ? theme.tokens.colors.get(tagColorToSemColor.blue.text)
-        : theme.tokens.colors.get(tagColorToSemColor[color].text)};
+      color: ${isInteractive ? TAG_COLOR.blue.text : TAG_COLOR[color].text};
       border: ${vars['border-width']['1']} solid;
 
       border-color: ${isInteractive
         ? vars.color['border-color'].interactive.default
-        : theme.tokens.colors.get(tagColorToSemColor[color].border)};
+        : TAG_COLOR[color].border};
 
       border-radius: ${vars['border-radius'][size === 'normal' ? '2' : '1']};
 

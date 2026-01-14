@@ -128,9 +128,9 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #ffffff;
+  color: var(--ictinus-color-text-inverted-primary);
   height: var(--ictinus-sizing-9);
-  background-color: #194DCC;
+  background-color: var(--ictinus-color-palette-primary-contrast);
   padding: var(--ictinus-spacing-0) var(--ictinus-spacing-6) var(--ictinus-spacing-0) var(--ictinus-spacing-6);
   border-radius: var(--ictinus-border-radius-2);
   border: none;
@@ -141,7 +141,7 @@
 }
 
 .emotion-9:focus-visible:not(:disabled) {
-  background-color: #5E8DF8;
+  background-color: var(--ictinus-color-palette-primary-muted);
 }
 
 .emotion-9:disabled {
@@ -150,12 +150,12 @@
 }
 
 .emotion-9:hover:not(:disabled) {
-  background-color: #5E8DF8;
+  background-color: var(--ictinus-color-palette-primary-muted);
 }
 
 .emotion-9:active:not(:disabled),
 .emotion-9[aria-expanded="true"] {
-  background-color: #194DCC;
+  background-color: var(--ictinus-color-palette-primary-contrast);
 }
 
 .emotion-10 {
@@ -192,9 +192,9 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #ffffff;
+  color: var(--ictinus-color-text-inverted-primary);
   height: var(--ictinus-sizing-7);
-  background-color: #194DCC;
+  background-color: var(--ictinus-color-palette-primary-contrast);
   padding: var(--ictinus-spacing-0) var(--ictinus-spacing-4) var(--ictinus-spacing-0) var(--ictinus-spacing-4);
   border-radius: var(--ictinus-border-radius-2);
   border: none;
@@ -205,7 +205,7 @@
 }
 
 .emotion-15:focus-visible:not(:disabled) {
-  background-color: #5E8DF8;
+  background-color: var(--ictinus-color-palette-primary-muted);
 }
 
 .emotion-15:disabled {
@@ -214,12 +214,12 @@
 }
 
 .emotion-15:hover:not(:disabled) {
-  background-color: #5E8DF8;
+  background-color: var(--ictinus-color-palette-primary-muted);
 }
 
 .emotion-15:active:not(:disabled),
 .emotion-15[aria-expanded="true"] {
-  background-color: #194DCC;
+  background-color: var(--ictinus-color-palette-primary-contrast);
 }
 
 .emotion-22 {
@@ -240,9 +240,9 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #194DCC;
+  color: var(--ictinus-color-text-default-active);
   height: var(--ictinus-sizing-9);
-  background-color: rgba(200,206,255,0.45);
+  background-color: var(--ictinus-color-palette-secondary-contrast);
   padding: var(--ictinus-spacing-0) var(--ictinus-spacing-6) var(--ictinus-spacing-0) var(--ictinus-spacing-6);
   border-radius: var(--ictinus-border-radius-2);
   border: none;
@@ -253,7 +253,7 @@
 }
 
 .emotion-22:focus-visible:not(:disabled) {
-  background-color: rgba(200,206,255,0.20);
+  background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
 .emotion-22:disabled {
@@ -262,12 +262,12 @@
 }
 
 .emotion-22:hover:not(:disabled) {
-  background-color: rgba(200,206,255,0.20);
+  background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
 .emotion-22:active:not(:disabled),
 .emotion-22[aria-expanded="true"] {
-  background-color: rgba(200,206,255,0.45);
+  background-color: var(--ictinus-color-palette-secondary-contrast);
 }
 
 .emotion-28 {
@@ -288,9 +288,9 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #194DCC;
+  color: var(--ictinus-color-text-default-active);
   height: var(--ictinus-sizing-7);
-  background-color: rgba(200,206,255,0.45);
+  background-color: var(--ictinus-color-palette-secondary-contrast);
   padding: var(--ictinus-spacing-0) var(--ictinus-spacing-4) var(--ictinus-spacing-0) var(--ictinus-spacing-4);
   border-radius: var(--ictinus-border-radius-2);
   border: none;
@@ -301,7 +301,7 @@
 }
 
 .emotion-28:focus-visible:not(:disabled) {
-  background-color: rgba(200,206,255,0.20);
+  background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
 .emotion-28:disabled {
@@ -310,12 +310,12 @@
 }
 
 .emotion-28:hover:not(:disabled) {
-  background-color: rgba(200,206,255,0.20);
+  background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
 .emotion-28:active:not(:disabled),
 .emotion-28[aria-expanded="true"] {
-  background-color: rgba(200,206,255,0.45);
+  background-color: var(--ictinus-color-palette-secondary-contrast);
 }
 
 .emotion-35 {
@@ -336,9 +336,9 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #194DCC;
+  color: var(--ictinus-color-text-default-active);
   height: var(--ictinus-sizing-9);
-  background-color: rgba(200,206,255,0.30);
+  background-color: var(--ictinus-color-palette-tertiary-contrast);
   padding: var(--ictinus-spacing-0) var(--ictinus-spacing-6) var(--ictinus-spacing-0) var(--ictinus-spacing-6);
   border-radius: var(--ictinus-border-radius-2);
   border: none;
@@ -349,7 +349,7 @@
 }
 
 .emotion-35:focus-visible:not(:disabled) {
-  background-color: rgba(200,206,255,0.20);
+  background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
 .emotion-35:disabled {
@@ -358,12 +358,12 @@
 }
 
 .emotion-35:hover:not(:disabled) {
-  background-color: rgba(200,206,255,0.20);
+  background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
 .emotion-35:active:not(:disabled),
 .emotion-35[aria-expanded="true"] {
-  background-color: rgba(200,206,255,0.30);
+  background-color: var(--ictinus-color-palette-tertiary-contrast);
 }
 
 .emotion-41 {
@@ -384,9 +384,9 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #194DCC;
+  color: var(--ictinus-color-text-default-active);
   height: var(--ictinus-sizing-7);
-  background-color: rgba(200,206,255,0.30);
+  background-color: var(--ictinus-color-palette-tertiary-contrast);
   padding: var(--ictinus-spacing-0) var(--ictinus-spacing-4) var(--ictinus-spacing-0) var(--ictinus-spacing-4);
   border-radius: var(--ictinus-border-radius-2);
   border: none;
@@ -397,7 +397,7 @@
 }
 
 .emotion-41:focus-visible:not(:disabled) {
-  background-color: rgba(200,206,255,0.20);
+  background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
 .emotion-41:disabled {
@@ -406,12 +406,12 @@
 }
 
 .emotion-41:hover:not(:disabled) {
-  background-color: rgba(200,206,255,0.20);
+  background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
 .emotion-41:active:not(:disabled),
 .emotion-41[aria-expanded="true"] {
-  background-color: rgba(200,206,255,0.30);
+  background-color: var(--ictinus-color-palette-tertiary-contrast);
 }
 
 .emotion-48 {
@@ -432,9 +432,9 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #BF1250;
+  color: var(--ictinus-color-text-default-error);
   height: var(--ictinus-sizing-9);
-  background-color: #FFB2CE;
+  background-color: var(--ictinus-color-palette-error-contrast);
   padding: var(--ictinus-spacing-0) var(--ictinus-spacing-6) var(--ictinus-spacing-0) var(--ictinus-spacing-6);
   border-radius: var(--ictinus-border-radius-2);
   border: none;
@@ -445,7 +445,7 @@
 }
 
 .emotion-48:focus-visible:not(:disabled) {
-  background-color: #FFEBF1;
+  background-color: var(--ictinus-color-palette-error-muted);
 }
 
 .emotion-48:disabled {
@@ -454,12 +454,12 @@
 }
 
 .emotion-48:hover:not(:disabled) {
-  background-color: #FFEBF1;
+  background-color: var(--ictinus-color-palette-error-muted);
 }
 
 .emotion-48:active:not(:disabled),
 .emotion-48[aria-expanded="true"] {
-  background-color: #FFB2CE;
+  background-color: var(--ictinus-color-palette-error-contrast);
 }
 
 .emotion-54 {
@@ -480,9 +480,9 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #BF1250;
+  color: var(--ictinus-color-text-default-error);
   height: var(--ictinus-sizing-7);
-  background-color: #FFB2CE;
+  background-color: var(--ictinus-color-palette-error-contrast);
   padding: var(--ictinus-spacing-0) var(--ictinus-spacing-4) var(--ictinus-spacing-0) var(--ictinus-spacing-4);
   border-radius: var(--ictinus-border-radius-2);
   border: none;
@@ -493,7 +493,7 @@
 }
 
 .emotion-54:focus-visible:not(:disabled) {
-  background-color: #FFEBF1;
+  background-color: var(--ictinus-color-palette-error-muted);
 }
 
 .emotion-54:disabled {
@@ -502,12 +502,12 @@
 }
 
 .emotion-54:hover:not(:disabled) {
-  background-color: #FFEBF1;
+  background-color: var(--ictinus-color-palette-error-muted);
 }
 
 .emotion-54:active:not(:disabled),
 .emotion-54[aria-expanded="true"] {
-  background-color: #FFB2CE;
+  background-color: var(--ictinus-color-palette-error-contrast);
 }
 
 .emotion-56 {
@@ -540,9 +540,9 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #ffffff;
+  color: var(--ictinus-color-text-inverted-primary);
   height: var(--ictinus-sizing-9);
-  background-color: #175BF5;
+  background-color: var(--ictinus-color-palette-primary-base);
   padding: var(--ictinus-spacing-0) var(--ictinus-spacing-6) var(--ictinus-spacing-0) var(--ictinus-spacing-6);
   border-radius: var(--ictinus-border-radius-2);
   border: none;
@@ -552,7 +552,7 @@
 }
 
 .emotion-58:focus-visible:not(:disabled) {
-  background-color: #5E8DF8;
+  background-color: var(--ictinus-color-palette-primary-muted);
 }
 
 .emotion-58:disabled {
@@ -561,12 +561,12 @@
 }
 
 .emotion-58:hover:not(:disabled) {
-  background-color: #5E8DF8;
+  background-color: var(--ictinus-color-palette-primary-muted);
 }
 
 .emotion-58:active:not(:disabled),
 .emotion-58[aria-expanded="true"] {
-  background-color: #194DCC;
+  background-color: var(--ictinus-color-palette-primary-contrast);
 }
 
 .emotion-61 {
@@ -587,9 +587,9 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #ffffff;
+  color: var(--ictinus-color-text-inverted-primary);
   height: var(--ictinus-sizing-7);
-  background-color: #175BF5;
+  background-color: var(--ictinus-color-palette-primary-base);
   padding: var(--ictinus-spacing-0) var(--ictinus-spacing-4) var(--ictinus-spacing-0) var(--ictinus-spacing-4);
   border-radius: var(--ictinus-border-radius-2);
   border: none;
@@ -599,7 +599,7 @@
 }
 
 .emotion-61:focus-visible:not(:disabled) {
-  background-color: #5E8DF8;
+  background-color: var(--ictinus-color-palette-primary-muted);
 }
 
 .emotion-61:disabled {
@@ -608,12 +608,12 @@
 }
 
 .emotion-61:hover:not(:disabled) {
-  background-color: #5E8DF8;
+  background-color: var(--ictinus-color-palette-primary-muted);
 }
 
 .emotion-61:active:not(:disabled),
 .emotion-61[aria-expanded="true"] {
-  background-color: #194DCC;
+  background-color: var(--ictinus-color-palette-primary-contrast);
 }
 
 <div>

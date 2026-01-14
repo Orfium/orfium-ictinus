@@ -1,10 +1,9 @@
-import useTheme from 'hooks/useTheme';
 import React, { useCallback, useMemo } from 'react';
 import type { TestProps } from 'utils/types';
 
 import { vars } from '@orfium/tokens';
 import Icon from 'components/Icon';
-import { tagColorToSemColor } from '../constants';
+import { TAG_COLOR } from '../constants';
 import { iconStyles } from '../Tag.style';
 import type { TagProps } from '../Tag.types';
 
@@ -16,8 +15,6 @@ const useGetTagUtils = ({
   isSelected,
   dataTestPrefixId,
 }: Pick<TagProps, 'iconName' | 'color' | 'onSelect' | 'onClear' | 'isSelected'> & TestProps) => {
-  const theme = useTheme();
-
   const isSelectable = onSelect && !onClear;
   const isClearable = Boolean(onClear);
   const isInteractive = isSelectable || isClearable;
@@ -47,24 +44,10 @@ const useGetTagUtils = ({
       );
 
     if (!isInteractive && iconName)
-      return (
-        <Icon
-          size={vars.sizing['4']}
-          name={iconName}
-          color={theme.tokens.colors.get(tagColorToSemColor[color].text)}
-        />
-      );
+      return <Icon size={vars.sizing['4']} name={iconName} color={TAG_COLOR[color].text} />;
 
     return null;
-  }, [
-    color,
-    dataTestPrefixId,
-    iconName,
-    isInteractive,
-    isSelectable,
-    isSelected,
-    theme.tokens.colors,
-  ]);
+  }, [color, dataTestPrefixId, iconName, isInteractive, isSelectable, isSelected]);
 
   const suffix = useMemo(
     () =>

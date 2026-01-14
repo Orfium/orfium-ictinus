@@ -4,8 +4,8 @@ import styled from '@emotion/styled';
 import { ThemeProvider } from '@orfium/ictinus';
 import { Box, ThemeProvider as VanillaThemeProvider } from '@orfium/ictinus/vanilla';
 import { DocsContainer, type DocsContainerProps } from '@storybook/addon-docs/blocks';
-import type { Preview as SBPreview, StoryFn } from '@storybook/react-vite';
-import type { PropsWithChildren } from 'react';
+import type { Decorator, Preview as SBPreview } from '@storybook/react-vite';
+import React from 'react';
 import {
   Alert,
   Note,
@@ -89,26 +89,40 @@ const viewPorts = {
   },
 };
 
-export const decorators = [
-  (Story: StoryFn) => {
-    return (
-      <Box display="flex" flexDirection="column" position="relative" p="7" minHeight="full">
-        <Story />
-      </Box>
-    );
-  },
-  (Story: StoryFn) => (
-    <VanillaThemeProvider colorScheme="light">
+export const withTheme: Decorator = (
+  StoryFn,
+  { globals: { theme = 'light' as 'light' | 'dark' }, viewMode }
+) => {
+  const effectiveTheme = viewMode === 'story' ? theme : 'light';
+
+  return (
+    <VanillaThemeProvider key={effectiveTheme} colorScheme={effectiveTheme}>
       <ThemeProvider theme={{}}>
-        <Story />
+        <Box display="flex" flexDirection="column" position="relative" p="7" minHeight="full">
+          <StoryFn />
+        </Box>
       </ThemeProvider>
     </VanillaThemeProvider>
-  ),
-];
+  );
+};
 
 const inputEmpty = styled.input(() => ({}));
 const preview: SBPreview = {
-  decorators,
+  decorators: [withTheme],
+  globalTypes: {
+    theme: {
+      name: 'Theme',
+      description: 'Theme for the components',
+      defaultValue: 'light',
+      toolbar: {
+        icon: 'circlehollow',
+        items: [
+          { value: 'light', icon: 'sun', title: 'light' },
+          { value: 'dark', icon: 'moon', title: 'dark' },
+        ],
+      },
+    },
+  },
   parameters: {
     layout: 'fullscreen',
     controls: {
@@ -147,14 +161,16 @@ const preview: SBPreview = {
         inline: true,
       },
 
-      container: (props: PropsWithChildren<DocsContainerProps>) => (
+      container: (props: React.PropsWithChildren<DocsContainerProps>) => (
         <DocsContainer {...props}>
-          <ThemeProvider>{props.children}</ThemeProvider>
+          <VanillaThemeProvider colorScheme="light">
+            <ThemeProvider>{props.children}</ThemeProvider>
+          </VanillaThemeProvider>
         </DocsContainer>
       ),
 
       components: {
-        h1: ({ children, ...rest }: PropsWithChildren) => (
+        h1: ({ children, ...rest }: React.PropsWithChildren) => (
           <Box>
             <Typography
               {...rest}
@@ -165,7 +181,7 @@ const preview: SBPreview = {
             </Typography>
           </Box>
         ),
-        h2: ({ children, ...rest }: PropsWithChildren) => (
+        h2: ({ children, ...rest }: React.PropsWithChildren) => (
           <Box>
             <Typography
               {...rest}
@@ -176,7 +192,7 @@ const preview: SBPreview = {
             </Typography>
           </Box>
         ),
-        h3: ({ children, ...rest }: PropsWithChildren) => (
+        h3: ({ children, ...rest }: React.PropsWithChildren) => (
           <Box>
             <Typography
               {...rest}
@@ -187,7 +203,7 @@ const preview: SBPreview = {
             </Typography>
           </Box>
         ),
-        h4: ({ children, ...rest }: PropsWithChildren) => (
+        h4: ({ children, ...rest }: React.PropsWithChildren) => (
           <Box>
             <Typography
               {...rest}
@@ -198,7 +214,7 @@ const preview: SBPreview = {
             </Typography>
           </Box>
         ),
-        p: ({ children, ...rest }: PropsWithChildren) => (
+        p: ({ children, ...rest }: React.PropsWithChildren) => (
           <Box my={'6'}>
             <Typography
               {...rest}
@@ -210,7 +226,7 @@ const preview: SBPreview = {
             </Typography>
           </Box>
         ),
-        li: ({ children, ...rest }: PropsWithChildren) => (
+        li: ({ children, ...rest }: React.PropsWithChildren) => (
           <li>
             <Box my={'6'}>
               <Typography {...rest} css={TypographyResetFontSmooth} variant={'body01'}>
@@ -219,17 +235,17 @@ const preview: SBPreview = {
             </Box>
           </li>
         ),
-        span: ({ children }: PropsWithChildren) => (
+        span: ({ children }: React.PropsWithChildren) => (
           <Typography css={TypographyResetFontSmooth} variant={'body01'}>
             {children}
           </Typography>
         ),
-        div: ({ children }: PropsWithChildren) => (
+        div: ({ children }: React.PropsWithChildren) => (
           <Typography css={TypographyResetFontSmooth} variant={'body01'}>
             {children}
           </Typography>
         ),
-        a: ({ href, children, ...args }: PropsWithChildren<{ href: string }>) => (
+        a: ({ href, children, ...args }: React.PropsWithChildren<{ href: string }>) => (
           <Link href={href} {...args}>
             {children}
           </Link>

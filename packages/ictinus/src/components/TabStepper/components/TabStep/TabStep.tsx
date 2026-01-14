@@ -1,9 +1,9 @@
+import { vars, type SemanticColorsKey } from '@orfium/tokens';
+import get from 'lodash-es/get';
 import React from 'react';
 import { Tab as ReactAriaTab } from 'react-aria-components';
 import type { AcceptedIconNames } from '~/components/Icon';
 import Icon from '~/components/Icon';
-import useTheme from '~/hooks/useTheme';
-import type { SemanticColorsKey } from '@orfium/tokens';
 import type { TabStepProps } from '../../types';
 import { stepContainer, stepStyles, stepSubtitle, stepTitle } from './TabStep.style';
 
@@ -33,8 +33,6 @@ const TabStep = React.forwardRef<HTMLDivElement, TabStepProps>((props, ref) => {
 
   const hasIcon = status !== 'pending';
 
-  const theme = useTheme();
-
   const icon = status !== 'pending' ? STATUS_ICON[status] : null;
 
   return (
@@ -51,7 +49,7 @@ const TabStep = React.forwardRef<HTMLDivElement, TabStepProps>((props, ref) => {
               {hasIcon && (
                 <Icon
                   name={icon.name}
-                  color={theme.tokens.colors.get(icon.color)}
+                  color={get(vars.color, icon.color)}
                   dataTestPrefixId={`${dataTestPrefixId}_icon`}
                 />
               )}

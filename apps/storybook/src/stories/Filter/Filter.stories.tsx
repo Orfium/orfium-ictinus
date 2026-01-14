@@ -371,8 +371,8 @@ export const CustomFilter = {
                 css={{
                   width: '200px',
                   height: '100px',
-                  background: 'white',
-                  border: `1px solid ${vars.color.blue['2']}`,
+                  background: vars.color.background.default,
+                  border: vars.color['border-color'].decorative.default,
                   borderRadius: '4px',
                   padding: '16px',
                   display: 'flex',
@@ -418,8 +418,8 @@ export const CustomFilter = {
                 css={{
                   width: '200px',
                   height: '100px',
-                  background: 'white',
-                  border: `1px solid ${vars.color.blue['2']}`,
+                  background: vars.color.background.default,
+                  border: vars.color['border-color'].decorative.default,
                   borderRadius: '4px',
                   padding: '16px',
                   display: 'flex',

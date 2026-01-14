@@ -1,6 +1,6 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
-import type { AcceptedColorComponentTypes, SemanticColorsKey } from '@orfium/tokens';
+import type { AcceptedColorComponentTypes } from '@orfium/tokens';
 import { rem, vars } from '@orfium/tokens';
 import {
   typeToBackgroundStyle,
@@ -23,9 +23,7 @@ const toastContainerPerType = (
   theme: Theme
 ) => {
   const borderColor = isNotificationTypes(type)
-    ? theme.tokens.colors.get(
-        `borderColor.interactive.${typeToColorStyle(type)}` as SemanticColorsKey
-      )
+    ? vars.color['border-color'].interactive[typeToColorStyle(type)]
     : /** @TODO: remove this when Toast component is either removed or refactored */
       theme.utils.getColor(type, 500, 'normal');
 
@@ -50,14 +48,14 @@ export const topContainer =
   (theme: Theme): SerializedStyles => css`
     ${label01(theme)};
     color: ${isNotificationTypes(type)
-      ? theme.tokens.colors.get(`textColor.default.${typeToColorStyle(type)}` as SemanticColorsKey)
-      : theme.globals.oldColors.white};
+      ? vars.color.text.default[typeToColorStyle(type)]
+      : vars.color.background.default};
     display: flex;
     justify-content: space-between;
     overflow: hidden;
     height: ${rem(58)};
     background: ${isNotificationTypes(type)
-      ? theme.tokens.colors.get(`palette.${typeToBackgroundStyle(type)}.muted` as SemanticColorsKey)
+      ? vars.color.palette[typeToBackgroundStyle(type)].muted
       : /** @TODO: remove this when Toast component is either removed or refactored */
         theme.utils.getColor(type, 500, 'normal')};
   `;
@@ -83,14 +81,16 @@ export const chevronIconContainer = (isExpanded: boolean) => (): SerializedStyle
   ${transition(0.2)}
 `;
 
-export const expandedContainer =
-  (type: AcceptedColorComponentTypes, isExpanded: boolean, hasMinimumHeight: boolean) =>
-  (theme: Theme): SerializedStyles => css`
-    ${transition(0.1)};
-    min-height: ${hasMinimumHeight && isExpanded ? rem(146) : rem(0)};
-    ${isNotificationTypes(type) ? maxHeightOptions['notification'] : maxHeightOptions['generic']}
-    height: ${!isExpanded ? rem(0) : 'inherit'};
-    font-size: ${vars['font-size']['3']};
-    position: relative;
-    background: ${theme.globals.oldColors.white};
-  `;
+export const expandedContainer = (
+  type: AcceptedColorComponentTypes,
+  isExpanded: boolean,
+  hasMinimumHeight: boolean
+): SerializedStyles => css`
+  ${transition(0.1)};
+  min-height: ${hasMinimumHeight && isExpanded ? rem(146) : rem(0)};
+  ${isNotificationTypes(type) ? maxHeightOptions['notification'] : maxHeightOptions['generic']}
+  height: ${!isExpanded ? rem(0) : 'inherit'};
+  font-size: ${vars['font-size']['3']};
+  position: relative;
+  background: ${vars.color.background.default};
+`;

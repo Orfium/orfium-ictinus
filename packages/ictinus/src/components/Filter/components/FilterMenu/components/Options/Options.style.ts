@@ -31,6 +31,7 @@ export const emptyStyle = () => (theme: Theme) => {
     color: ${vars.color.text.default.secondary};
     height: ${LIST_ITEM_TOKENS.height};
     padding: 0 ${vars.spacing['5']};
+    background: ${vars.color.background.default};
 
     ${flexCenter};
 

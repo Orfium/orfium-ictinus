@@ -1,5 +1,4 @@
-import { vars, type AcceptedColorComponentTypes, type SemanticColorsKey } from '@orfium/tokens';
-import { useTheme } from 'index';
+import { vars, type AcceptedColorComponentTypes } from '@orfium/tokens';
 import * as React from 'react';
 import { useState } from 'react';
 import { generateTestDataId } from 'utils/helpers';
@@ -56,8 +55,6 @@ const ToastV4: React.FCC<ToastV4Props> = ({
 }) => {
   const [isExpandedState, setIsExpandedState] = useState(isExpanded);
 
-  const theme = useTheme();
-
   return (
     <div
       css={toastContainer(type, styleType)}
@@ -69,9 +66,7 @@ const ToastV4: React.FCC<ToastV4Props> = ({
             <div css={infoIconContainer()}>
               <Icon
                 name={typeToIconName(type)}
-                color={theme.tokens.colors.get(
-                  `textColor.default.${typeToColorStyle(type)}` as SemanticColorsKey
-                )}
+                color={vars.color.text.default[typeToColorStyle(type)]}
                 size={24}
               />
             </div>

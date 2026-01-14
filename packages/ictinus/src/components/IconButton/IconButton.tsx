@@ -1,11 +1,10 @@
-import useTheme from 'hooks/useTheme';
 import React from 'react';
 
 import { vars } from '@orfium/tokens';
 import type { PrimitiveButtonTypes } from 'components/Button/Button.types';
 import type { ButtonBaseProps } from 'components/ButtonBase/ButtonBase';
 import ButtonBase from 'components/ButtonBase/ButtonBase';
-import { buttonColorToSemColor } from 'components/ButtonBase/constants';
+import { BUTTON_COLOR } from 'components/ButtonBase/constants';
 import type { AcceptedIconNames } from '../Icon';
 import Icon from '../Icon';
 
@@ -25,9 +24,8 @@ export type IconButtonProps = Omit<
 
 const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>((props, ref) => {
   const { iconName, size = 'normal', type = 'primary', shape = 'circle', dataTestPrefixId } = props;
-  const theme = useTheme();
 
-  const iconColor = theme.tokens.colors.get(buttonColorToSemColor[type].text);
+  const iconColor = BUTTON_COLOR[type].text;
 
   return (
     <ButtonBase
