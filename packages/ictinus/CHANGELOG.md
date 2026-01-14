@@ -1,5 +1,11 @@
 # @orfium/ictinus
 
+## 5.43.0
+
+### Minor Changes
+
+- e1297fb: dark mode
+
 ## 5.42.6
 
 ### Patch Changes
