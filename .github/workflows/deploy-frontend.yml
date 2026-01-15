@@ -20,7 +20,7 @@ jobs:
       url: ${{ steps.get-env.outputs.url }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 #v6.0.1
 
       - id: get-env
         run: |
@@ -57,10 +57,10 @@ jobs:
       deployments: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 #v6.0.1
 
       - name: Create GitHub deployment
-        uses: chrnorm/deployment-action@v2
+        uses: chrnorm/deployment-action@55729fcebec3d284f60f5bcabbd8376437d696b1 #v2.0.7
         id: deployment
         with:
           token: '${{ github.token }}'
@@ -103,10 +103,10 @@ jobs:
           echo "stackname=$STACKNAME" >> "$GITHUB_OUTPUT"
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 #v4.2.0
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f #v6.1.0
         with:
           node-version-file: 'package.json'
           cache: 'pnpm'
@@ -131,7 +131,7 @@ jobs:
           pnpm build --filter @app/storybook
 
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v4.0.2
+        uses: aws-actions/configure-aws-credentials@61815dcd50bd041e203e49132bacad1fd04d2708 #v5.1.1
         with:
           role-to-assume: ${{ steps.config.outputs.cd_role }}
           aws-region: 'us-east-1'
@@ -161,7 +161,7 @@ jobs:
       - name: Set up S3-Cloudfront
         if: steps.check-stack-state.outputs.create_or_update_stack == '1'
         id: cloudfront-app-setup
-        uses: aws-actions/aws-cloudformation-github-deploy@v1.3.0
+        uses: aws-actions/aws-cloudformation-github-deploy@33527b83bddcf6b3f0b135d9550bde8475325c73 #v1.3.0
         with:
           name: ${{ steps.config.outputs.stackname }}
           role-arn: ${{ steps.config.outputs.cfn_role }}
@@ -197,7 +197,7 @@ jobs:
 
       - name: Update deployment status (success)
         if: success()
-        uses: chrnorm/deployment-status@v2
+        uses: chrnorm/deployment-status@9a72af4586197112e0491ea843682b5dc280d806 #v2.0.3
         with:
           token: '${{ github.token }}'
           environment-url: ${{ steps.deployment.outputs.environment_url }}
@@ -207,7 +207,7 @@ jobs:
 
       - name: Update deployment status (failure)
         if: failure()
-        uses: chrnorm/deployment-status@v2
+        uses: chrnorm/deployment-status@9a72af4586197112e0491ea843682b5dc280d806 #v2.0.3
         with:
           token: '${{ github.token }}'
           environment-url: ${{ steps.deployment.outputs.environment_url }}
