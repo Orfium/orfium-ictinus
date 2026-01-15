@@ -1,9 +1,4 @@
-import type { SortingState } from '@tanstack/react-table';
-
-import { Typography, type TableColumn, type TableRow } from '@orfium/ictinus';
-
-export const ACTIONS_CELL_WIDTH = 52;
-export const ACTIONS_BAR_HEIGHT = 44;
+import { Typography, type SortingState, type TableColumn, type TableRow } from '@orfium/ictinus';
 
 export type SimpleData = {
   firstName: string;
@@ -17,19 +12,6 @@ export const contentAlignOptions = ['left', 'center', 'right'];
 export const simpleColumns: TableColumn<SimpleData>[] = [
   { id: 'firstName', header: 'First Name' },
   { id: 'lastName', header: 'Last Name' },
-  { id: 'age', header: 'Age' },
-  { id: 'job', header: 'Job' },
-];
-
-export const groupedColumns = [
-  {
-    id: 'personalDetails',
-    header: 'Personal Details',
-    columns: [
-      { id: 'firstName', header: 'First Name' },
-      { id: 'lastName', header: 'Last Name' },
-    ],
-  },
   { id: 'age', header: 'Age' },
   { id: 'job', header: 'Job' },
 ];
@@ -340,9 +322,3 @@ export const moreData = (isDetailed?: boolean): TableRow<SimpleData>[] => [
     ...(isDetailed && { details: getDetails('paul') }),
   },
 ];
-
-export const contentAlignToFlex = {
-  left: 'flex-start',
-  center: 'center',
-  right: 'flex-end',
-};

@@ -2,11 +2,6 @@ import type * as React from 'react';
 import type { ButtonHTMLAttributes } from 'react';
 import type { NavigationMenuItem } from '~/components/Navigation';
 
-type FunctionProps = {
-  children: () => React.ReactNode;
-};
-export const Function = ({ children }: FunctionProps) => children();
-
 /** A type to turn any type optional properties to required */
 export type RequiredProperties<T> = { [K in keyof T]-?: T[K] };
 

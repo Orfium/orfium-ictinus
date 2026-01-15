@@ -64,7 +64,7 @@ export const FilterButton = React.forwardRef<HTMLButtonElement, FilterButtonProp
       >
         {children}
       </div>
-      {moreFilters && !isActive && (
+      {moreFilters > 0 && !isActive && (
         <Tag
           css={{ cursor: 'pointer' }}
           color="blue"

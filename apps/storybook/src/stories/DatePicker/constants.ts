@@ -1,14 +1,6 @@
 import type { ExtraOption } from '@orfium/ictinus';
 import { currentDay } from './utils';
 
-export const APPLY = 'Apply';
-export const CLEAR_ALL = 'Clear All';
-
-export const DATE_PICKER_LABEL = 'Select Date';
-export const DATE_RANGE_PICKER_LABEL = 'Enter Date Range';
-
-export const EMPTY_STATE = { from: undefined, to: undefined };
-
 export const CALENDAR_DEFAULT_OPTIONS: ExtraOption[] = [
   {
     value: 'last-7-days',
@@ -30,8 +22,6 @@ export const CALENDAR_DEFAULT_OPTIONS: ExtraOption[] = [
 /** Stories constants */
 
 export const mockDate = currentDay;
-export const rangePickerOptions = [true, false];
-export const filterTypeOptions = ['preset', 'added'] as const;
 
 export const disableDates = {
   days: [
@@ -54,16 +44,4 @@ export const options = {
     after: mockDate.add(7, 'day').toDate(),
   },
   'Array of disabled dates(Today, last 2 days, and the 4th day to today)': disableDates,
-};
-
-export const dateFormatOptions = {
-  "Enables system's locale format": undefined,
-  'MM/DD/YYYY': 'MM/DD/YYYY',
-  'DD/MM/YYYY': 'DD/MM/YYYY',
-  'MMMM D, YYYY': 'MMMM D, YYYY',
-  'dddd, MMMM D, YYYY': 'dddd, MMMM D, YYYY',
-  'M/D/YYYY': 'M/D/YYYY',
-  'MMM D, YYYY': 'MMM D, YYYY',
-  'ddd, MMM D, YYYY': 'ddd, MMM D, YYYY',
-  'DD MMM YYYY': 'DD MMM YYYY',
 };

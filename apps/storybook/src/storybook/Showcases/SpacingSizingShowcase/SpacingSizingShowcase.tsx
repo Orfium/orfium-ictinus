@@ -18,7 +18,7 @@ type Props = {
 
 const SpacingSizingShowcase = ({ type = 'global' }: Props) => {
   const isGlobal = type === 'global';
-  const spacingObject = isGlobal ? dimensionVariables.spacing : dimensionVariables.spacing;
+  const spacingObject = dimensionVariables.spacing;
 
   const theme = useTheme();
 

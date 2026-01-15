@@ -1,6 +1,6 @@
 import { Button, Tooltip } from '@orfium/ictinus';
 import { Box } from '@orfium/ictinus/vanilla';
-import { FIGMA_URL, Function } from 'utils/common';
+import { FIGMA_URL } from 'utils/common';
 import Stack from '../storyUtils/Stack';
 import TooltipShowcase from '../storyUtils/TooltipShowcase';
 import { hoverOnTooltips } from './utils';
@@ -32,39 +32,23 @@ export const TextTooltip = {
   render: () => (
     <>
       <Stack>
-        <Function>
-          {() => {
-            return (
-              <div style={{ padding: '16px' }}>
-                <Tooltip
-                  data-testid={'tooltip-button'}
-                  content={'This is a Tooltip'}
-                  placement={'right'}
-                >
-                  <Button>Hover here</Button>
-                </Tooltip>
-              </div>
-            );
-          }}
-        </Function>
+        <div style={{ padding: '16px' }}>
+          <Tooltip data-testid={'tooltip-button'} content={'This is a Tooltip'} placement={'right'}>
+            <Button>Hover here</Button>
+          </Tooltip>
+        </div>
       </Stack>
       <Stack isInverted>
-        <Function>
-          {() => {
-            return (
-              <div style={{ padding: '16px' }}>
-                <Tooltip
-                  data-testid={'tooltip-button'}
-                  content={'This is a Tooltip'}
-                  placement={'right'}
-                  isInverted
-                >
-                  <Button>Hover here</Button>
-                </Tooltip>
-              </div>
-            );
-          }}
-        </Function>
+        <div style={{ padding: '16px' }}>
+          <Tooltip
+            data-testid={'tooltip-button'}
+            content={'This is a Tooltip'}
+            placement={'right'}
+            isInverted
+          >
+            <Button>Hover here</Button>
+          </Tooltip>
+        </div>
       </Stack>
     </>
   ),
@@ -136,38 +120,32 @@ export const Playground = {
     const { content, placement, isInverted, delayIn, delayOut } = args;
     return (
       <Stack isInverted={isInverted} height={500}>
-        <Function>
-          {() => {
-            return (
-              <div
-                style={{
-                  padding: '16px',
-                  display: 'flex',
-                  gap: '128px',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                }}
-              >
-                <Tooltip
-                  content={content}
-                  placement={placement}
-                  isInverted={isInverted}
-                  delayIn={delayIn}
-                  delayOut={delayOut}
-                >
-                  <Button>Text</Button>
-                </Tooltip>
-                <TooltipShowcase
-                  buttonText={'Interactive'}
-                  placement={placement}
-                  isInverted={isInverted}
-                  delayIn={delayIn}
-                  delayOut={delayOut}
-                />
-              </div>
-            );
+        <div
+          style={{
+            padding: '16px',
+            display: 'flex',
+            gap: '128px',
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
-        </Function>
+        >
+          <Tooltip
+            content={content}
+            placement={placement}
+            isInverted={isInverted}
+            delayIn={delayIn}
+            delayOut={delayOut}
+          >
+            <Button>Text</Button>
+          </Tooltip>
+          <TooltipShowcase
+            buttonText={'Interactive'}
+            placement={placement}
+            isInverted={isInverted}
+            delayIn={delayIn}
+            delayOut={delayOut}
+          />
+        </div>
       </Stack>
     );
   },

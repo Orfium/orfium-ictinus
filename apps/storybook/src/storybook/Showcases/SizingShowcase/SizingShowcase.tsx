@@ -17,7 +17,7 @@ type Props = {
 
 const SizingShowcase = ({ type = 'global' }: Props) => {
   const isGlobal = type === 'global';
-  const sizingObject = isGlobal ? dimensionVariables.sizing : dimensionVariables.sizing;
+  const sizingObject = dimensionVariables.sizing;
 
   const theme = useTheme();
 

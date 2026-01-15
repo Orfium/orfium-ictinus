@@ -1,5 +1,5 @@
-import { List, ListItemText, ListItem } from '@orfium/ictinus';
-import { FIGMA_URL, Function } from 'utils/common';
+import { List, ListItem, ListItemText } from '@orfium/ictinus';
+import { FIGMA_URL } from 'utils/common';
 import Stack from '../../storyUtils/Stack';
 
 export default {
@@ -21,20 +21,14 @@ export default {
 export const ListItemTextNormal = {
   render: () => (
     <Stack>
-      <Function>
-        {() => {
-          return (
-            <List label={'ListItem'}>
-              <ListItem>
-                <ListItemText>Item 1</ListItemText>
-              </ListItem>
-              <ListItem>
-                <ListItemText>Item 2</ListItemText>
-              </ListItem>
-            </List>
-          );
-        }}
-      </Function>
+      <List label={'ListItem'}>
+        <ListItem>
+          <ListItemText>Item 1</ListItemText>
+        </ListItem>
+        <ListItem>
+          <ListItemText>Item 2</ListItemText>
+        </ListItem>
+      </List>
     </Stack>
   ),
 
@@ -44,24 +38,14 @@ export const ListItemTextNormal = {
 export const ListItemTextWithSecondaryText = {
   render: () => (
     <Stack>
-      <Function>
-        {() => {
-          return (
-            <List label={'ListItem with secondary text'}>
-              <ListItem>
-                <ListItemText description={'This is a secondary text on this item'}>
-                  Item 1
-                </ListItemText>
-              </ListItem>
-              <ListItem>
-                <ListItemText description={'This is a secondary text on this item'}>
-                  Item 2
-                </ListItemText>
-              </ListItem>
-            </List>
-          );
-        }}
-      </Function>
+      <List label={'ListItem with secondary text'}>
+        <ListItem>
+          <ListItemText description={'This is a secondary text on this item'}>Item 1</ListItemText>
+        </ListItem>
+        <ListItem>
+          <ListItemText description={'This is a secondary text on this item'}>Item 2</ListItemText>
+        </ListItem>
+      </List>
     </Stack>
   ),
 

@@ -262,7 +262,6 @@ export {
   getColorFromType,
   parseCompositionToken,
 } from '@orfium/tokens';
-export { Function } from './utils/common';
 export { default as dayjs } from './utils/date';
 export { PropsValidationError, ValidationError } from './utils/errors';
 export {
