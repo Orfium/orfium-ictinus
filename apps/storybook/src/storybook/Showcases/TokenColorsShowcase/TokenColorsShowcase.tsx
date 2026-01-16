@@ -18,7 +18,7 @@ type Props = {
 const TokenColorsShowcase: FCC<Props> = ({ type = 'globals' }) => {
   const isGlobal = type === 'globals';
 
-  const colorsObjFigma = isGlobal ? semanticVariablesColors : semanticVariablesColors;
+  const colorsObjFigma = semanticVariablesColors;
 
   const colorsObj = getColors(colorsObjFigma);
 

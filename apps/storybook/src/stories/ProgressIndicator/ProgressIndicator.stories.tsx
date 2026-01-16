@@ -1,7 +1,7 @@
 import { ProgressIndicator, Typography } from '@orfium/ictinus';
-import { FIGMA_URL, Function } from 'utils/common';
-import Stack from '../storyUtils/Stack';
 import { useEffect, useState } from 'react';
+import { FIGMA_URL } from 'utils/common';
+import Stack from '../storyUtils/Stack';
 
 export default {
   title: 'Updated Components/Progress Indicator',
@@ -29,41 +29,38 @@ export default {
 };
 
 export const LinearProgressIndicatorWithPercentage = {
-  render: () => (
-    <Stack width={300}>
-      <Function>
-        {() => {
-          const [value, setValue] = useState(0);
-          useEffect(() => {
-            const interval = setInterval(
-              () =>
-                setValue((value) => {
-                  if (value + 20 > 100) return 0;
-                  return value + 20;
-                }),
-              1000
-            );
-            return () => {
-              clearInterval(interval);
-            };
-          }, []);
-          return (
-            <div
-              style={{
-                display: 'flex',
-                gap: '32px',
-                alignItems: 'center',
-                flexDirection: 'column',
-              }}
-            >
-              <ProgressIndicator value={value} />
-              <Typography variant="body03">Loading: {value}%</Typography>
-            </div>
-          );
-        }}
-      </Function>
-    </Stack>
-  ),
+  render: () => {
+    const [value, setValue] = useState(0);
+    useEffect(() => {
+      const interval = setInterval(
+        () =>
+          setValue((value) => {
+            if (value + 20 > 100) return 0;
+            return value + 20;
+          }),
+        1000
+      );
+      return () => {
+        clearInterval(interval);
+      };
+    }, []);
+
+    return (
+      <Stack width={300}>
+        <div
+          style={{
+            display: 'flex',
+            gap: '32px',
+            alignItems: 'center',
+            flexDirection: 'column',
+          }}
+        >
+          <ProgressIndicator value={value} />
+          <Typography variant="body03">Loading: {value}%</Typography>
+        </div>
+      </Stack>
+    );
+  },
   name: 'Linear ProgressIndicator with percentage',
   parameters: {
     controls: { disable: true },
@@ -95,34 +92,31 @@ export const BlockProgressIndicator = {
 };
 
 export const CircularProgressIndicatorWithPercentage = {
-  render: () => (
-    <Stack>
-      <Function>
-        {() => {
-          const [value, setValue] = useState(0);
-          useEffect(() => {
-            const interval = setInterval(
-              () =>
-                setValue((value) => {
-                  if (value + 20 > 100) return 0;
-                  return value + 20;
-                }),
-              1000
-            );
-            return () => {
-              clearInterval(interval);
-            };
-          }, []);
-          return (
-            <div style={{ display: 'flex', gap: '32px', alignItems: 'center' }}>
-              <ProgressIndicator type={'circular'} value={value} />
-              <Typography variant="body03">Loading: {value}%</Typography>
-            </div>
-          );
-        }}
-      </Function>
-    </Stack>
-  ),
+  render: () => {
+    const [value, setValue] = useState(0);
+    useEffect(() => {
+      const interval = setInterval(
+        () =>
+          setValue((value) => {
+            if (value + 20 > 100) return 0;
+            return value + 20;
+          }),
+        1000
+      );
+      return () => {
+        clearInterval(interval);
+      };
+    }, []);
+
+    return (
+      <Stack>
+        <div style={{ display: 'flex', gap: '32px', alignItems: 'center' }}>
+          <ProgressIndicator type={'circular'} value={value} />
+          <Typography variant="body03">Loading: {value}%</Typography>
+        </div>
+      </Stack>
+    );
+  },
   name: 'Circular ProgressIndicator with percentage',
   parameters: {
     controls: { disable: true },

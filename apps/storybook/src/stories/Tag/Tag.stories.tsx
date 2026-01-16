@@ -1,6 +1,6 @@
 import { Tag, Typography } from '@orfium/ictinus';
 import { useState } from 'react';
-import { FIGMA_URL, Function } from 'utils/common';
+import { FIGMA_URL } from 'utils/common';
 import Stack from '~/stories/storyUtils/Stack';
 import TagShowcase from '../../storybook/Showcases/TagShowcase';
 
@@ -77,36 +77,15 @@ export const ReadOnlyTagWithIcon = {
 };
 
 export const SelectableTag = {
-  render: () => (
-    <Stack>
-      <Function>
-        {() => {
-          const [isSelected, setIsSelected] = useState(false);
-          return (
-            <Tag
-              isSelected={isSelected}
-              onSelect={() => setIsSelected((isSelected) => !isSelected)}
-            >
-              Label
-            </Tag>
-          );
-        }}
-      </Function>
-      <Function>
-        {() => {
-          const [isSelected, setIsSelected] = useState(true);
-          return (
-            <Tag
-              isSelected={isSelected}
-              onSelect={() => setIsSelected((isSelected) => !isSelected)}
-            >
-              Label
-            </Tag>
-          );
-        }}
-      </Function>
-    </Stack>
-  ),
+  render: () => {
+    const [isSelected, setIsSelected] = useState(false);
+
+    return (
+      <Tag isSelected={isSelected} onSelect={() => setIsSelected((isSelected) => !isSelected)}>
+        Label
+      </Tag>
+    );
+  },
   name: 'Selectable Tag',
   parameters: {
     controls: { disable: true },
@@ -134,122 +113,93 @@ export const CodeTag = {
 };
 
 export const TagSizes = {
-  render: () => (
-    <>
-      <Stack>
-        <Typography>Read-only Tag</Typography>
-      </Stack>
-      <Stack>
-        <Tag>Normal</Tag>
-        <Tag color="blue">Normal</Tag>
-        <Tag color="red">Normal</Tag>
-        <Tag color="purple">Normal</Tag>
-        <Tag color="teal">Normal</Tag>
-        <Tag color="orange">Normal</Tag>
-      </Stack>
-      <Stack>
-        <Tag size="small">Small</Tag>
-        <Tag size="small" color="blue">
-          Small
-        </Tag>
-        <Tag size="small" color="red">
-          Small
-        </Tag>
-        <Tag size="small" color="purple">
-          Small
-        </Tag>
-        <Tag size="small" color="teal">
-          Small
-        </Tag>
-        <Tag size="small" color="orange">
-          Small
-        </Tag>
-      </Stack>
-      <Stack>
-        <Typography>Selectable Tag</Typography>
-      </Stack>
-      <Stack>
-        <Function>
-          {() => {
-            const [isSelected, setIsSelected] = useState(false);
-            return (
-              <Tag
-                isSelected={isSelected}
-                onSelect={() => setIsSelected((isSelected) => !isSelected)}
-              >
-                Normal
-              </Tag>
-            );
-          }}
-        </Function>
-        <Function>
-          {() => {
-            const [isSelected, setIsSelected] = useState(true);
-            return (
-              <Tag
-                isSelected={isSelected}
-                onSelect={() => setIsSelected((isSelected) => !isSelected)}
-              >
-                Normal
-              </Tag>
-            );
-          }}
-        </Function>
-      </Stack>
-      <Stack>
-        <Function>
-          {() => {
-            const [isSelected, setIsSelected] = useState(false);
-            return (
-              <Tag
-                size="small"
-                isSelected={isSelected}
-                onSelect={() => setIsSelected((isSelected) => !isSelected)}
-              >
-                Small
-              </Tag>
-            );
-          }}
-        </Function>
-        <Function>
-          {() => {
-            const [isSelected, setIsSelected] = useState(true);
-            return (
-              <Tag
-                size="small"
-                isSelected={isSelected}
-                onSelect={() => setIsSelected((isSelected) => !isSelected)}
-              >
-                Small
-              </Tag>
-            );
-          }}
-        </Function>
-      </Stack>
-      <Stack>
-        <Typography>Clearable Tag</Typography>
-      </Stack>
-      <Stack>
-        <Tag onClear={() => console.log('clear')}>Normal</Tag>
-      </Stack>
-      <Stack>
-        <Tag size="small" onClear={() => console.log('clear')}>
-          Small
-        </Tag>
-      </Stack>
-      <Stack>
-        <Typography>Code Tag</Typography>
-      </Stack>
-      <Stack>
-        <Tag variant="code">Normal</Tag>
-      </Stack>
-      <Stack>
-        <Tag variant="code" size="small">
-          Small
-        </Tag>
-      </Stack>
-    </>
-  ),
+  render: () => {
+    const [isSelected, setIsSelected] = useState(false);
+    return (
+      <>
+        <Stack>
+          <Typography>Read-only Tag</Typography>
+        </Stack>
+        <Stack>
+          <Tag>Normal</Tag>
+          <Tag color="blue">Normal</Tag>
+          <Tag color="red">Normal</Tag>
+          <Tag color="purple">Normal</Tag>
+          <Tag color="teal">Normal</Tag>
+          <Tag color="orange">Normal</Tag>
+        </Stack>
+        <Stack>
+          <Tag size="small">Small</Tag>
+          <Tag size="small" color="blue">
+            Small
+          </Tag>
+          <Tag size="small" color="red">
+            Small
+          </Tag>
+          <Tag size="small" color="purple">
+            Small
+          </Tag>
+          <Tag size="small" color="teal">
+            Small
+          </Tag>
+          <Tag size="small" color="orange">
+            Small
+          </Tag>
+        </Stack>
+        <Stack>
+          <Typography>Selectable Tag</Typography>
+        </Stack>
+        <Stack>
+          <Tag isSelected={isSelected} onSelect={() => setIsSelected((isSelected) => !isSelected)}>
+            Normal
+          </Tag>
+
+          <Tag isSelected={isSelected} onSelect={() => setIsSelected((isSelected) => !isSelected)}>
+            Normal
+          </Tag>
+        </Stack>
+        <Stack>
+          <Tag
+            size="small"
+            isSelected={isSelected}
+            onSelect={() => setIsSelected((isSelected) => !isSelected)}
+          >
+            Small
+          </Tag>
+
+          <Tag
+            size="small"
+            isSelected={isSelected}
+            onSelect={() => setIsSelected((isSelected) => !isSelected)}
+          >
+            Small
+          </Tag>
+        </Stack>
+        <Stack>
+          <Typography>Clearable Tag</Typography>
+        </Stack>
+        <Stack>
+          <Tag onClear={() => console.log('clear')}>Normal</Tag>
+        </Stack>
+        <Stack>
+          <Tag size="small" onClear={() => console.log('clear')}>
+            Small
+          </Tag>
+        </Stack>
+        <Stack>
+          <Typography>Code Tag</Typography>
+        </Stack>
+        <Stack>
+          <Tag variant="code">Normal</Tag>
+        </Stack>
+        <Stack>
+          <Tag variant="code" size="small">
+            Small
+          </Tag>
+        </Stack>
+      </>
+    );
+  },
   name: 'Tag sizes',
   parameters: {
     controls: { disable: true },

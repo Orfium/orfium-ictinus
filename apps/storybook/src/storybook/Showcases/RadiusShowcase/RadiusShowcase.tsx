@@ -18,9 +18,7 @@ type Props = {
 
 const RadiusShowcase = ({ type = 'global' }: Props) => {
   const isGlobal = type === 'global';
-  const borderRadiusObject = isGlobal
-    ? dimensionVariables.borderRadius
-    : dimensionVariables.borderRadius;
+  const borderRadiusObject = dimensionVariables.borderRadius;
 
   const theme = useTheme();
 

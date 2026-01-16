@@ -1,9 +1,8 @@
+import { fireEvent } from '@testing-library/react';
 import { KEYBOARD_EVENT_KEYS } from 'hooks/useKeyboardEvents';
 import type { Dayjs } from 'utils/date';
 import dayjs from 'utils/date';
-
 import type { Range } from './OverlayComponent/OverlayComponent';
-import { fireEvent } from '@testing-library/react';
 
 const fakeDate = dayjs('11-03-2020 12:00:00');
 const getDefaultDate = (date?: undefined | Dayjs) =>

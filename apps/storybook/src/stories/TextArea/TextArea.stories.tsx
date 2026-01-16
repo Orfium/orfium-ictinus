@@ -1,6 +1,6 @@
 import { TextArea } from '@orfium/ictinus';
 import { useState } from 'react';
-import { FIGMA_URL, Function } from 'utils/common';
+import { FIGMA_URL } from 'utils/common';
 import Stack from '../storyUtils/Stack';
 
 export default {
@@ -67,28 +67,24 @@ export const TextAreaWithResizingOption = {
 };
 
 export const TextAreaWithCounter = {
-  render: () => (
-    <Stack>
-      <Function>
-        {() => {
-          const [value, setValue] = useState('');
-          const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) =>
-            setValue(e.target.value);
-          return (
-            <TextArea
-              label={'TextArea'}
-              value={value}
-              onChange={handleChange}
-              cols={10}
-              rows={5}
-              isResizeEnabled={false}
-              maxCharacters={10}
-            />
-          );
-        }}
-      </Function>
-    </Stack>
-  ),
+  render: () => {
+    const [value, setValue] = useState('');
+    const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => setValue(e.target.value);
+
+    return (
+      <Stack>
+        <TextArea
+          label={'TextArea'}
+          value={value}
+          onChange={handleChange}
+          cols={10}
+          rows={5}
+          isResizeEnabled={false}
+          maxCharacters={10}
+        />
+      </Stack>
+    );
+  },
   name: 'TextArea with counter',
 
   parameters: {
@@ -176,32 +172,26 @@ export const Playground = {
   render: (args) => {
     const { label, placeholder, isDisabled, isResizeEnabled, maxCharacters, status, hintMessage } =
       args;
+    const [value, setValue] = useState('');
+    const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => setValue(e.target.value);
+
     return (
       <Stack>
-        <Function>
-          {() => {
-            const [value, setValue] = useState('');
-            const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) =>
-              setValue(e.target.value);
-            return (
-              <TextArea
-                value={value}
-                label={label}
-                onChange={handleChange}
-                placeholder={placeholder}
-                isDisabled={isDisabled}
-                isResizeEnabled={isResizeEnabled}
-                maxCharacters={maxCharacters}
-                cols={10}
-                rows={5}
-                status={{
-                  type: status,
-                  hintMessage,
-                }}
-              />
-            );
+        <TextArea
+          value={value}
+          label={label}
+          onChange={handleChange}
+          placeholder={placeholder}
+          isDisabled={isDisabled}
+          isResizeEnabled={isResizeEnabled}
+          maxCharacters={maxCharacters}
+          cols={10}
+          rows={5}
+          status={{
+            type: status,
+            hintMessage,
           }}
-        </Function>
+        />
       </Stack>
     );
   },

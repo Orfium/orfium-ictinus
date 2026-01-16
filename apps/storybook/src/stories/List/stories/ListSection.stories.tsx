@@ -1,5 +1,5 @@
-import { List, ListSection, ListItem, ListItemText } from '@orfium/ictinus';
-import { FIGMA_URL, Function } from 'utils/common';
+import { List, ListItem, ListItemText, ListSection } from '@orfium/ictinus';
+import { FIGMA_URL } from 'utils/common';
 import Stack from '../../storyUtils/Stack';
 
 export default {
@@ -21,30 +21,24 @@ export default {
 export const NormalListSection = {
   render: () => (
     <Stack>
-      <Function>
-        {() => {
-          return (
-            <List label={'ListSection'}>
-              <ListSection title="Section 1">
-                <ListItem>
-                  <ListItemText>...</ListItemText>
-                </ListItem>
-                <ListItem>
-                  <ListItemText>...</ListItemText>
-                </ListItem>
-              </ListSection>
-              <ListSection title="Section 2">
-                <ListItem>
-                  <ListItemText>...</ListItemText>
-                </ListItem>
-                <ListItem>
-                  <ListItemText>...</ListItemText>
-                </ListItem>
-              </ListSection>
-            </List>
-          );
-        }}
-      </Function>
+      <List label={'ListSection'}>
+        <ListSection title="Section 1">
+          <ListItem>
+            <ListItemText>...</ListItemText>
+          </ListItem>
+          <ListItem>
+            <ListItemText>...</ListItemText>
+          </ListItem>
+        </ListSection>
+        <ListSection title="Section 2">
+          <ListItem>
+            <ListItemText>...</ListItemText>
+          </ListItem>
+          <ListItem>
+            <ListItemText>...</ListItemText>
+          </ListItem>
+        </ListSection>
+      </List>
     </Stack>
   ),
 
@@ -54,30 +48,24 @@ export const NormalListSection = {
 export const CompactListSection = {
   render: () => (
     <Stack>
-      <Function>
-        {() => {
-          return (
-            <List label={'ListSection'}>
-              <ListSection title="Section 1" rowSize={'compact'}>
-                <ListItem>
-                  <ListItemText>...</ListItemText>
-                </ListItem>
-                <ListItem>
-                  <ListItemText>...</ListItemText>
-                </ListItem>
-              </ListSection>
-              <ListSection title="Section 2" rowSize={'compact'}>
-                <ListItem>
-                  <ListItemText>...</ListItemText>
-                </ListItem>
-                <ListItem>
-                  <ListItemText>...</ListItemText>
-                </ListItem>
-              </ListSection>
-            </List>
-          );
-        }}
-      </Function>
+      <List label={'ListSection'}>
+        <ListSection title="Section 1" rowSize={'compact'}>
+          <ListItem>
+            <ListItemText>...</ListItemText>
+          </ListItem>
+          <ListItem>
+            <ListItemText>...</ListItemText>
+          </ListItem>
+        </ListSection>
+        <ListSection title="Section 2" rowSize={'compact'}>
+          <ListItem>
+            <ListItemText>...</ListItemText>
+          </ListItem>
+          <ListItem>
+            <ListItemText>...</ListItemText>
+          </ListItem>
+        </ListSection>
+      </List>
     </Stack>
   ),
 

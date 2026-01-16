@@ -1,7 +1,7 @@
 import { Select, StatefulSelect } from '@orfium/ictinus';
-import { userEvent, within } from 'storybook/test';
 import { useState } from 'react';
-import { FIGMA_URL, Function } from 'utils/common';
+import { userEvent, within } from 'storybook/test';
+import { FIGMA_URL } from 'utils/common';
 import EdgeCasesSelectShowcase from '../storyUtils/EdgeCasesSelectShowcase';
 import { MultiSelectShowcase, SelectShowcase } from '../storyUtils/SelectShowcase';
 import Stack from '../storyUtils/Stack';
@@ -41,65 +41,51 @@ export default {
 };
 
 export const SelectSizes = {
-  render: () => (
-    <Stack height={300}>
-      <Function>
-        {() => {
-          const [selectedOption, setSelectedOption] = useState(defaultValue);
-          return (
-            <Select
-              label={'Label'}
-              options={options}
-              isSearchable={false}
-              selectedOption={selectedOption}
-              onChange={setSelectedOption}
-            />
-          );
-        }}
-      </Function>
-      <Function>
-        {() => {
-          const [selectedOption, setSelectedOption] = useState(defaultValue);
-          return (
-            <Select
-              label={'Label'}
-              options={options}
-              size={'compact'}
-              isSearchable={false}
-              selectedOption={selectedOption}
-              onChange={setSelectedOption}
-            />
-          );
-        }}
-      </Function>
-    </Stack>
-  ),
+  render: () => {
+    const [selectedOption, setSelectedOption] = useState(defaultValue);
 
+    return (
+      <Stack height={300}>
+        <Select
+          label={'Label'}
+          options={options}
+          isSearchable={false}
+          selectedOption={selectedOption}
+          onChange={setSelectedOption}
+        />
+        <Select
+          label={'Label'}
+          options={options}
+          size={'compact'}
+          isSearchable={false}
+          selectedOption={selectedOption}
+          onChange={setSelectedOption}
+        />
+      </Stack>
+    );
+  },
   name: 'Select Sizes',
-
   parameters: {
     controls: { disable: true },
   },
 };
+
 export const SimpleSelect = {
-  render: () => (
-    <Stack height={350}>
-      <Function>
-        {() => {
-          const [selectedOption, setSelectedOption] = useState(defaultValue);
-          return (
-            <Select
-              isSearchable={false}
-              selectedOption={selectedOption}
-              onChange={setSelectedOption}
-              label="Select"
-              options={options}
-            />
-          );
-        }}
-      </Function>
-    </Stack>
-  ),
+  render: () => {
+    const [selectedOption, setSelectedOption] = useState(defaultValue);
+
+    return (
+      <Stack height={350}>
+        <Select
+          isSearchable={false}
+          selectedOption={selectedOption}
+          onChange={setSelectedOption}
+          label="Select"
+          options={options}
+        />
+      </Stack>
+    );
+  },
   name: 'Simple Select',
   parameters: {
     controls: { disable: true },
@@ -115,33 +101,27 @@ export const SimpleSelect = {
 export const SearchableSelect = {
   render: (args) => {
     const { isCreatable, isVirtualized } = args;
+    const [selectedOption, setSelectedOption] = useState(defaultValue);
+
     return (
       <Stack height={300}>
-        <Function>
-          {() => {
-            const [selectedOption, setSelectedOption] = useState(defaultValue);
-            return (
-              <Select
-                label={'Select'}
-                options={options}
-                selectedOption={selectedOption}
-                onChange={setSelectedOption}
-                isCreatable={isCreatable}
-                isVirtualized={isVirtualized}
-              />
-            );
-          }}
-        </Function>
+        <Select
+          label={'Select'}
+          options={options}
+          selectedOption={selectedOption}
+          onChange={setSelectedOption}
+          isCreatable={isCreatable}
+          isVirtualized={isVirtualized}
+        />
       </Stack>
     );
   },
-
   name: 'Searchable Select',
-
   parameters: {
     controls: { include: ['isCreatable', 'isVirtualized'] },
   },
 };
+
 export const SelectWithUncontrolledState = {
   render: (args) => {
     const { hintMessage } = args;
@@ -168,27 +148,22 @@ export const SelectWithUncontrolledState = {
 };
 
 export const SimpleSelectWithGroups = {
-  render: () => (
-    <Stack height={350}>
-      <Function>
-        {() => {
-          const [selectedOption, setSelectedOption] = useState(defaultValue);
-          return (
-            <Select
-              label={'Group Select'}
-              hasHighlightSearch
-              selectedOption={selectedOption}
-              onChange={setSelectedOption}
-              options={groupOptions}
-            />
-          );
-        }}
-      </Function>
-    </Stack>
-  ),
+  render: () => {
+    const [selectedOption, setSelectedOption] = useState(defaultValue);
 
+    return (
+      <Stack height={350}>
+        <Select
+          label={'Group Select'}
+          hasHighlightSearch
+          selectedOption={selectedOption}
+          onChange={setSelectedOption}
+          options={groupOptions}
+        />
+      </Stack>
+    );
+  },
   name: 'Simple Select with groups',
-
   parameters: {
     controls: { disable: true },
   },
@@ -237,84 +212,61 @@ export const MultiSelect = {
 export const SelectStatuses = {
   render: (args) => {
     const { isCreatable, isVirtualized, hintMessage } = args;
+    const [selectedOption, setSelectedOption] = useState(defaultValue);
+
     return (
       <Stack height={350}>
-        <Function>
-          {() => {
-            const [selectedOption, setSelectedOption] = useState(defaultValue);
-            return (
-              <Select
-                label={'Normal'}
-                status={{
-                  type: 'normal',
-                  hintMessage,
-                }}
-                options={options}
-                selectedOption={selectedOption}
-                onChange={setSelectedOption}
-                isCreatable={isCreatable}
-                isVirtualized={isVirtualized}
-              />
-            );
+        <Select
+          label={'Normal'}
+          status={{
+            type: 'normal',
+            hintMessage,
           }}
-        </Function>
-        <Function>
-          {() => {
-            const [selectedOption, setSelectedOption] = useState(defaultValue);
-            return (
-              <Select
-                label={'Error'}
-                status={{
-                  type: 'error',
-                  hintMessage,
-                }}
-                options={options}
-                selectedOption={selectedOption}
-                onChange={setSelectedOption}
-                isCreatable={isCreatable}
-                isVirtualized={isVirtualized}
-              />
-            );
+          options={options}
+          selectedOption={selectedOption}
+          onChange={setSelectedOption}
+          isCreatable={isCreatable}
+          isVirtualized={isVirtualized}
+        />
+
+        <Select
+          label={'Error'}
+          status={{
+            type: 'error',
+            hintMessage,
           }}
-        </Function>
-        <Function>
-          {() => {
-            const [selectedOption, setSelectedOption] = useState(defaultValue);
-            return (
-              <Select
-                label="Warning"
-                status={{
-                  type: 'warning',
-                  hintMessage,
-                }}
-                options={options}
-                selectedOption={selectedOption}
-                onChange={setSelectedOption}
-                isCreatable={isCreatable}
-                isVirtualized={isVirtualized}
-              />
-            );
+          options={options}
+          selectedOption={selectedOption}
+          onChange={setSelectedOption}
+          isCreatable={isCreatable}
+          isVirtualized={isVirtualized}
+        />
+
+        <Select
+          label="Warning"
+          status={{
+            type: 'warning',
+            hintMessage,
           }}
-        </Function>
-        <Function>
-          {() => {
-            const [selectedOption, setSelectedOption] = useState(defaultValue);
-            return (
-              <Select
-                label={'Read-only'}
-                status={{
-                  type: 'read-only',
-                  hintMessage,
-                }}
-                options={options}
-                selectedOption={selectedOption}
-                onChange={setSelectedOption}
-                isCreatable={isCreatable}
-                isVirtualized={isVirtualized}
-              />
-            );
+          options={options}
+          selectedOption={selectedOption}
+          onChange={setSelectedOption}
+          isCreatable={isCreatable}
+          isVirtualized={isVirtualized}
+        />
+
+        <Select
+          label={'Read-only'}
+          status={{
+            type: 'read-only',
+            hintMessage,
           }}
-        </Function>
+          options={options}
+          selectedOption={selectedOption}
+          onChange={setSelectedOption}
+          isCreatable={isCreatable}
+          isVirtualized={isVirtualized}
+        />
       </Stack>
     );
   },
@@ -346,31 +298,25 @@ export const DisabledSelect = {
 export const Playground = {
   render: (args) => {
     const { label, status, hintMessage, isSearchable, isDisabled } = args;
+    const [selectedOption, setSelectedOption] = useState(defaultValue);
+
     return (
       <Stack height={350}>
-        <Function>
-          {() => {
-            const [selectedOption, setSelectedOption] = useState(defaultValue);
-            return (
-              <Select
-                label={label}
-                status={{
-                  type: status,
-                  hintMessage,
-                }}
-                isSearchable={isSearchable}
-                isDisabled={isDisabled}
-                options={options}
-                selectedOption={selectedOption}
-                onChange={setSelectedOption}
-              />
-            );
+        <Select
+          label={label}
+          status={{
+            type: status,
+            hintMessage,
           }}
-        </Function>
+          isSearchable={isSearchable}
+          isDisabled={isDisabled}
+          options={options}
+          selectedOption={selectedOption}
+          onChange={setSelectedOption}
+        />
       </Stack>
     );
   },
-
   name: 'Playground',
   parameters: {
     controls: { include: ['label', 'status', 'hintMessage', 'isSearchable', 'isDisabled'] },
