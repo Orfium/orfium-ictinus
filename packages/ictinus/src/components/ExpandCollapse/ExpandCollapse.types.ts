@@ -1,5 +1,5 @@
-import type { ReactComponentLike } from 'prop-types';
-import type * as React from 'react';
+
+import { type ElementType, type ReactElement, type ReactEventHandler, type ReactNode } from 'react';
 import type { TestProps } from 'utils/types';
 
 export type SharedProps = {
@@ -7,14 +7,14 @@ export type SharedProps = {
    * A function accepting a click handler and a boolean representing the current expansion state. Returns the elements containing the text and the
    * expand/collapse button
    * */
-  textAndControl: (x: React.ReactEventHandler, y: boolean) => React.ReactElement;
+  textAndControl: (x: ReactEventHandler, y: boolean) => ReactElement;
   /**
    * The type of the component that wraps the action and content. Must be able to hold a
    * `data-testid` prop
    *
    * @default div
    */
-  component?: ReactComponentLike;
+  component?: ElementType;
   /**
    * Initial expansion state.
    *
@@ -31,12 +31,12 @@ export type SharedProps = {
    * A function accepting a boolean representing the current expansion state. Returns the
    * collapsible/expandable content. Mutually exclusive with children.
    */
-  content?: (x: boolean) => React.ReactNode;
+  content?: (x: boolean) => ReactNode;
   /**
    * A function accepting a boolean representing the current expansion state. Returns the
    * collapsible/expandable content. Mutually exclusive with content.
    */
-  children?: (x: boolean) => React.ReactNode;
+  children?: (x: boolean) => ReactNode;
 } & TestProps;
 
 export type ExternalProps = {
@@ -49,7 +49,7 @@ export type ExternalProps = {
   /**
    * Change handler for the case when the component is controlled
    */
-  onChange: React.ReactEventHandler;
+  onChange: ReactEventHandler;
 };
 
 export type InternalProps = {

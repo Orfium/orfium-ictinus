@@ -1,5 +1,3 @@
-// THIS DECORATOR MUST GO FIRST, OR THE STORY SOURCE GENERATES INCORRECTLY
-// Add prop tables to components (based on component type interfaces)
 import styled from '@emotion/styled';
 import { ThemeProvider } from '@orfium/ictinus';
 import { Box, ThemeProvider as VanillaThemeProvider } from '@orfium/ictinus/vanilla';

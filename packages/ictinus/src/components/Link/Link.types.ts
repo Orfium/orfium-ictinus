@@ -1,5 +1,5 @@
-import type { ReactComponentLike } from 'prop-types';
-import type { AnchorHTMLAttributes } from 'react';
+
+import type { AnchorHTMLAttributes, ElementType } from 'react';
 
 import type { AcceptedIconNames } from 'components/Icon';
 
@@ -17,7 +17,7 @@ export type LinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
   /** Whether the link is disabled*/
   isDisabled?: boolean;
   /** The component used for the root node */
-  component?: ReactComponentLike;
+  component?: ElementType;
   /** Data Test Id prefix **/
   dataTestPrefixId?: string;
 };

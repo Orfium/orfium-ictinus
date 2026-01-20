@@ -1,6 +1,6 @@
 import { uniqueId } from 'lodash-es';
 import React, { useEffect, useState } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router';
 
 import { Breadcrumb, Button, type BreadcrumbItem } from '@orfium/ictinus';
 
