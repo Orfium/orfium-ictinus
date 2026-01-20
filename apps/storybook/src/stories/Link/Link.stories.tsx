@@ -1,5 +1,5 @@
 import { Link } from '@orfium/ictinus';
-import { Link as ReactRouterLink, MemoryRouter as Router } from 'react-router-dom';
+import { MemoryRouter, NavLink } from "react-router";
 import { FIGMA_URL } from 'utils/common';
 import Stack from '../storyUtils/Stack';
 
@@ -120,11 +120,11 @@ export const LinkWithIcon = {
 };
 export const ThirdPartyRoutingLibrary = {
   render: () => (
-    <Router>
-      <Link component={ReactRouterLink} href="/">
+    <MemoryRouter>
+      <Link component={NavLink} href="/">
         Link
       </Link>
-    </Router>
+    </MemoryRouter>
   ),
 
   name: 'Third-party Routing Library',
