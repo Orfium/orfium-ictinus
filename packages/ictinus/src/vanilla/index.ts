@@ -1,3 +1,4 @@
+export * from '../data-table';
 export * from '../icon';
 export * from '../icons';
 export * from './Box';
