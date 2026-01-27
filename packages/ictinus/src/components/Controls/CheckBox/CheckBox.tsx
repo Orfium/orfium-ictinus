@@ -3,10 +3,10 @@ import type { CheckboxAria } from 'react-aria';
 import { Checkbox as ReactAriaCheckbox } from 'react-aria-components';
 import type { TestProps } from 'utils/types';
 
-import { vars } from '@orfium/tokens';
 import type { LabelConfig } from 'components/Controls/Controls.types';
-import Icon from 'components/Icon';
+// import Icon from 'components/Icon';
 import Box from '~/components/Box';
+import { Icon } from '../../../icon';
 import { ControlHelpText, ControlLabelText } from '../ControlLabel';
 import { checkboxStyles, checkboxWrapperStyles } from './CheckBox.style';
 
@@ -61,9 +61,9 @@ const CheckBox = React.forwardRef<HTMLLabelElement, CheckBoxProps>((props, ref) 
           <Box data-role="checkbox-icon">
             <Icon
               name={isIndeterminate ? 'minus' : 'check'}
-              size={vars.sizing['5']}
-              color={vars.color.text.inverted.primary}
-              dataTestId={`${dataTestPrefixId}${value ? `_${value}` : ''}_${
+              size="md"
+              color="primary"
+              data-testid={`${dataTestPrefixId}${value ? `_${value}` : ''}_${
                 isIndeterminate ? 'minus' : isSelected ? 'checkmark' : 'unselected'
               }`}
             />

@@ -35,7 +35,6 @@ export const handle = recipe({
   base: [
     sprinkles({
       h: 'full',
-      z: '10',
       borderColor: 'decorative.default',
     }),
     style({
@@ -47,6 +46,7 @@ export const handle = recipe({
       touchAction: 'none',
       userSelect: 'none',
       opacity: 0,
+      zIndex: 15,
 
       selectors: {
         [`${header}:hover &`]: {

@@ -1,5 +1,6 @@
 import { recipe } from '@vanilla-extract/recipes';
 
+import { vars } from '@orfium/tokens';
 import { sprinkles } from '../../sprinkles';
 import { style } from '../../vanilla-extract';
 
@@ -17,7 +18,15 @@ export const row = recipe({
       selectors: {
         '&[data-focus-visible]:focus-visible': {
           outline: 'none',
-          zIndex: '10',
+          zIndex: '11',
+        },
+        '&[data-focus-visible]:focus-visible::before': {
+          border: `2px solid ${vars.color['border-color'].interactive.active}`,
+          borderRadius: vars['border-radius'][1],
+          content: '',
+          inset: '0',
+          position: 'absolute',
+          zIndex: '11',
         },
       },
     }),

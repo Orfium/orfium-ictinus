@@ -1,17 +1,16 @@
-// import { useComposedRefs } from '@radix-ui/react-compose-refs';
 import { flexRender } from '@tanstack/react-table';
 import { useVirtualizer } from '@tanstack/react-virtual';
 import { assignInlineVars } from '@vanilla-extract/dynamic';
 import { forwardRef, type RefObject, useEffect, useRef } from 'react';
-
 import { useDOMRef } from '~/components/utils/useDOMRef';
 import { cn } from '../utils/cn';
 import { Box, type BoxProps } from '../vanilla/Box';
 import { Table, TableBody, TableCell, TableHeader, TableRow } from '../vanilla/Table';
-import * as styles from './DataTableBody.css';
 import { useDataTableContext } from './DataTableContext';
 import { DataTableHeaderCell } from './DataTableHeaderCell';
-// import { DataTableHeaderCell } from "./DataTableHeaderCell";
+import { DataTableRow } from './DataTableRow';
+
+import * as styles from './DataTableBody.css';
 
 export type DataTableBodyProps = BoxProps<
   'div',
@@ -25,11 +24,9 @@ const ROW_VIRTUALIZATION_THRESHOLD = 20;
 
 export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
   (
-    { className, estimatedRowHeight = 52, style, ...props }: DataTableBodyProps,
+    { className, estimatedRowHeight = 44, style, ...props }: DataTableBodyProps,
     ref: RefObject<HTMLDivElement>
   ) => {
-    // const innerRef = useRef<HTMLDivElement>(null);
-    // const ref = useComposedRefs(innerRef, outerRef);
     const domRef = useDOMRef(ref);
 
     const { table } = useDataTableContext();
@@ -56,6 +53,7 @@ export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
       }
     };
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(calculateScrollTimeline, []);
 
     const centerColumns = table.getCenterVisibleLeafColumns();
@@ -82,9 +80,16 @@ export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
     });
     const virtualRows = rowVirtualizer.getVirtualItems();
 
+    const isSelectable = table.options.enableRowSelection !== false;
+    const hasLeftPinned = table.getLeftTotalSize() > 0;
+    const hasRightPinned = table.getRightTotalSize() > 0;
+
     return (
       <Box
         ref={domRef}
+        data-selectable={isSelectable ? '' : undefined}
+        data-has-left-pinned={hasLeftPinned ? '' : undefined}
+        data-has-right-pinned={hasRightPinned ? '' : undefined}
         style={{
           ...assignInlineVars({
             [styles.leftTotalSizeVar]: `${table.getLeftTotalSize()}px`,
@@ -101,10 +106,14 @@ export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
           ...style,
         }}
         className={cn(styles.root({}), className)}
-        // {...styles.root({}, className)}
         {...props}
       >
-        <Table layout="fixed" onScroll={calculateScrollTimeline} ref={scrollContainerRef}>
+        <Table
+          rounded="inherit"
+          layout="fixed"
+          onScroll={calculateScrollTimeline}
+          ref={scrollContainerRef}
+        >
           <TableHeader display="grid" pinned>
             {table.getHeaderGroups().map((headerGroup) => (
               <TableRow display="flex" key={headerGroup.id}>
@@ -122,17 +131,9 @@ export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
                     className={cn(
                       styles.cell({
                         pinned: header.column.getIsPinned() || undefined,
-                        pinnedType: header.column.getIsPinned() ? 'header' : undefined,
                         resizable: header.column.getCanResize(),
                       })
                     )}
-                    // {...styles.cell({
-                    //   pinned: header.column.getIsPinned() || undefined,
-                    //   pinnedType: header.column.getIsPinned()
-                    //     ? "header"
-                    //     : undefined,
-                    //   resizable: header.column.getCanResize(),
-                    // })}
                   >
                     {header.isPlaceholder
                       ? null
@@ -162,11 +163,13 @@ export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
                     virtualRow,
                   }))
               : rows.map((row) => ({ row, virtualRow: undefined }))
-            ).map(({ row, virtualRow }) => (
-              <TableRow
+            ).map(({ row, virtualRow }, index) => (
+              <DataTableRow
                 data-index={virtualRow?.index}
                 display="flex"
                 key={row.id}
+                index={virtualRow?.index ?? index}
+                row={row}
                 ref={virtualRow ? rowVirtualizer.measureElement : undefined}
                 style={
                   virtualRow
@@ -190,15 +193,9 @@ export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
                     className={cn(
                       styles.cell({
                         pinned: 'left',
-                        pinnedType: 'body',
                         resizable: cell.column.getCanResize(),
                       })
                     )}
-                    // {...styles.cell({
-                    //   pinned: "left",
-                    //   pinnedType: "body",
-                    //   resizable: cell.column.getCanResize(),
-                    // })}
                   >
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
                   </TableCell>
@@ -228,9 +225,6 @@ export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
                         resizable: cell.column.getCanResize(),
                       })
                     )}
-                    // {...styles.cell({
-                    //   resizable: cell.column.getCanResize(),
-                    // })}
                   >
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
                   </TableCell>
@@ -249,20 +243,14 @@ export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
                     className={cn(
                       styles.cell({
                         pinned: 'right',
-                        pinnedType: 'body',
                         resizable: cell.column.getCanResize(),
                       })
                     )}
-                    // {...styles.cell({
-                    //   pinned: "right",
-                    //   pinnedType: "body",
-                    //   resizable: cell.column.getCanResize(),
-                    // })}
                   >
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
                   </TableCell>
                 ))}
-              </TableRow>
+              </DataTableRow>
             ))}
           </TableBody>
         </Table>

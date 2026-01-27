@@ -104,25 +104,6 @@
 }
 
 .emotion-7 {
-  width: var(--ictinus-sizing-5);
-  height: var(--ictinus-sizing-5);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-8 {
-  width: var(--ictinus-sizing-5);
-  height: var(--ictinus-sizing-5);
-}
-
-.emotion-8 path,
-.emotion-8 rect {
-  fill: var(--ictinus-color-text-inverted-primary)!important;
-}
-
-.emotion-9 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -131,7 +112,7 @@
   color: var(--ictinus-color-text-default-primary);
 }
 
-.emotion-10 {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -145,11 +126,11 @@
   flex-wrap: wrap;
 }
 
-.emotion-20 {
+.emotion-16 {
   padding-left: 2rem;
 }
 
-.emotion-22 {
+.emotion-18 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1rem;
@@ -193,26 +174,21 @@
               class="emotion-5 emotion-4"
               data-role="checkbox-icon"
             >
-              <div
-                class="emotion-7"
-                data-slot="icon"
+              <svg
+                class="properties_color_primary_base__19njorx22y properties_height_5_base__19njorx70 properties_width_5_base__19njorx48"
+                data-ictinus="test-version"
                 data-testid="ictinus_label_unselected"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <svg
-                  class="emotion-8"
-                  fill="none"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                    fill="#6265AD"
-                  />
-                </svg>
-              </div>
+                <path
+                  d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
+                  fill="currentColor"
+                />
+              </svg>
             </div>
             <div
-              class="emotion-9"
+              class="emotion-7"
               data-testid="ictinus_checkbox_label_label"
             >
               Option
@@ -223,7 +199,7 @@
     </div>
   </div>
   <div
-    class="emotion-10"
+    class="emotion-8"
   >
     <div
       style="margin: 5px;"
@@ -255,26 +231,21 @@
               class="emotion-5 emotion-4"
               data-role="checkbox-icon"
             >
-              <div
-                class="emotion-7"
-                data-slot="icon"
+              <svg
+                class="properties_color_primary_base__19njorx22y properties_height_5_base__19njorx70 properties_width_5_base__19njorx48"
+                data-ictinus="test-version"
                 data-testid="ictinus_label_unselected"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <svg
-                  class="emotion-8"
-                  fill="none"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                    fill="#6265AD"
-                  />
-                </svg>
-              </div>
+                <path
+                  d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
+                  fill="currentColor"
+                />
+              </svg>
             </div>
             <div
-              class="emotion-9"
+              class="emotion-7"
               data-testid="ictinus_checkbox_label_label"
             >
               Option
@@ -282,11 +253,11 @@
           </div>
         </label>
         <div
-          class="emotion-20 emotion-4"
+          class="emotion-16 emotion-4"
           data-disabled="true"
         >
           <div
-            class="emotion-22"
+            class="emotion-18"
             data-testid="ictinus_checkbox_label_helpText"
           >
             This option is disabled

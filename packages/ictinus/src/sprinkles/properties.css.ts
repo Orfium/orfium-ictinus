@@ -331,7 +331,7 @@ export const unresponsiveProps = defineProperties({
   properties: {
     borderColor: borderTokens,
     borderStyle: ['solid', 'dashed'],
-    borderRadius: vars['border-radius'],
+    borderRadius: { ...vars['border-radius'], inherit: 'inherit' },
     borderTopLeftRadius: vars['border-radius'],
     borderTopRightRadius: vars['border-radius'],
     borderBottomLeftRadius: vars['border-radius'],

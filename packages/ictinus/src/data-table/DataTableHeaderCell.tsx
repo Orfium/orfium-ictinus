@@ -1,17 +1,9 @@
 import { type Header } from '@tanstack/react-table';
 import { forwardRef } from 'react';
-
-// import { ActionsContent, ActionsRoot } from "../actions";
-import { Box, type BoxProps } from '../vanilla/Box';
-// import { Cover } from "../cover";
 import { Icon } from '../icon';
-// import { IconSort } from "../icons/IconSort";
-// import { IconSortDown } from "../icons/IconSortDown";
-// import { IconSortUp } from "../icons/IconSortUp";
-// import { Separator } from "../separator";
+import { cn } from '../utils/cn';
+import { Box, type BoxProps } from '../vanilla/Box';
 import { TableHeaderCell } from '../vanilla/Table';
-// import { VisuallyHidden } from "../visually-hidden";
-import { cn } from '~/utils/cn';
 import * as styles from './DataTableHeaderCell.css';
 
 export type DataTableHeaderCellProps = Omit<
@@ -49,8 +41,10 @@ export const DataTableHeaderCell = forwardRef<HTMLTableCellElement, DataTableHea
         {header.column.getCanResize() && (
           <Box
             onDoubleClick={() => header.column.resetSize()}
-            onMouseDown={header.getResizeHandler()}
-            onTouchStart={header.getResizeHandler()}
+            onPointerDown={(event) => {
+              event.currentTarget.setPointerCapture(event.pointerId);
+              header.getResizeHandler()(event);
+            }}
             // orientation="vertical"
             style={{
               transform:
@@ -87,7 +81,7 @@ export const DataTableHeaderCell = forwardRef<HTMLTableCellElement, DataTableHea
           </ActionsContent>
         )} */}
         {children}
-        {header.column.getCanSort() ? (
+        {header.column.getCanSort() && (
           <button
             type="button"
             onClick={() => header.column.toggleSorting()}
@@ -102,17 +96,17 @@ export const DataTableHeaderCell = forwardRef<HTMLTableCellElement, DataTableHea
             <Box display="grid">
               <Icon name="sort" className={cn(styles.icon({ active: sortDir === false }))} />
               <Icon
-                name="sortAscending"
+                name="arrowUp"
+                color="active"
                 className={cn(styles.icon({ active: sortDir === 'asc' }))}
               />
               <Icon
-                name="sortDescending"
+                name="arrowDown"
+                color="active"
                 className={cn(styles.icon({ active: sortDir === 'desc' }))}
               />
             </Box>
           </button>
-        ) : (
-          children
         )}
       </TableHeaderCell>
     );
