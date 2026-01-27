@@ -445,26 +445,7 @@
   justify-content: unset;
 }
 
-.emotion-28 {
-  width: var(--ictinus-sizing-5);
-  height: var(--ictinus-sizing-5);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-29 {
-  width: var(--ictinus-sizing-5);
-  height: var(--ictinus-sizing-5);
-}
-
-.emotion-29 path,
-.emotion-29 rect {
-  fill: var(--ictinus-color-text-inverted-primary)!important;
-}
-
-.emotion-34 label {
+.emotion-32 label {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -485,7 +466,7 @@
   cursor: pointer;
 }
 
-.emotion-34 label:before {
+.emotion-32 label:before {
   content: '';
   display: inline-block;
   width: var(--ictinus-sizing-5);
@@ -498,22 +479,22 @@
   background: var(--ictinus-color-transparent-1);
 }
 
-.emotion-34 label:hover::before {
+.emotion-32 label:hover::before {
   background: rgba(200,206,255,0.20);
   box-shadow: 0px 0px 0px 8px rgba(200,206,255,0.20);
 }
 
-.emotion-34 label[data-selected='true']:before {
+.emotion-32 label[data-selected='true']:before {
   border-color: var(--ictinus-color-palette-primary-base);
   border-radius: 50%;
 }
 
-.emotion-34 label[data-selected='true']:hover::before {
+.emotion-32 label[data-selected='true']:hover::before {
   background: none;
   box-shadow: none;
 }
 
-.emotion-34 label[data-selected='true']:after {
+.emotion-32 label[data-selected='true']:after {
   content: '';
   display: block;
   position: absolute;
@@ -526,12 +507,12 @@
   animation: circle 0.15s ease-in-out;
 }
 
-.emotion-34 [data-disabled='true'] {
+.emotion-32 [data-disabled='true'] {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-34 [data-disabled='true']:hover::before {
+.emotion-32 [data-disabled='true']:hover::before {
   background: none;
   box-shadow: none;
 }
@@ -715,23 +696,18 @@
                         class="emotion-13 emotion-1"
                         data-role="checkbox-icon"
                       >
-                        <div
-                          class="emotion-28"
-                          data-slot="icon"
+                        <svg
+                          class="properties_color_primary_base__19njorx22y properties_height_5_base__19njorx70 properties_width_5_base__19njorx48"
+                          data-ictinus="test-version"
                           data-testid="ictinus_unselected"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
-                          <svg
-                            class="emotion-29"
-                            fill="none"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                              fill="#6265AD"
-                            />
-                          </svg>
-                        </div>
+                          <path
+                            d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
+                            fill="currentColor"
+                          />
+                        </svg>
                       </div>
                     </div>
                   </label>
@@ -761,13 +737,13 @@
                 <div
                   aria-disabled="true"
                   aria-orientation="vertical"
-                  class="emotion-33"
+                  class="emotion-31"
                   data-testid="undefined_radio_group_container"
                   id="react-aria-:test-id:"
                   role="radiogroup"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-32"
                     data-testid="undefined_radio_6_container"
                   >
                     <label

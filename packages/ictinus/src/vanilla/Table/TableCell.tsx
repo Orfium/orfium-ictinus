@@ -17,7 +17,7 @@ export const TableCell = forwardRef<HTMLTableCellElement, TableCellProps>(
       px = 'lg',
       py = 'md',
       p,
-      bg = 'default',
+      // bg = 'default',
       size,
       alignItems,
       justifyContent,
@@ -39,7 +39,7 @@ export const TableCell = forwardRef<HTMLTableCellElement, TableCellProps>(
             className={cn(styles.content({ bordered, size }))}
             px={p ?? px}
             py={p ?? py}
-            bg={bg}
+            // bg={bg}
             alignItems={alignItems}
             justifyContent={justifyContent}
             textAlign={textAlign}

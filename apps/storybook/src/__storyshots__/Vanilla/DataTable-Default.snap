@@ -1,19 +1,111 @@
+.emotion-0 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-0 [data-disabled] {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-1 {
+  display: block;
+  cursor: pointer;
+  position: relative;
+}
+
+.emotion-1 [data-role='checkbox-icon']>div {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  width: var(--ictinus-sizing-5);
+  height: var(--ictinus-sizing-5);
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  border: var(--ictinus-border-width-2) solid var(--ictinus-color-border-color-interactive-default);
+  border-radius: var(--ictinus-border-radius-2);
+}
+
+.emotion-1 svg {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.emotion-1[data-hovered='true'] [data-role='checkbox-icon'],
+.emotion-1[data-focus-visible='true'] [data-role='checkbox-icon'] {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  background: rgba(200,206,255,0.20);
+  box-shadow: 0px 0px 0px 8px rgba(200,206,255,0.20);
+  border-radius: 100%;
+}
+
+.emotion-1[data-selected='true'] [data-role='checkbox-icon']>div,
+.emotion-1[data-indeterminate='true'] [data-role='checkbox-icon']>div {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border-color: var(--ictinus-color-border-color-decorative-transparent);
+  background: var(--ictinus-color-palette-primary-base);
+}
+
+.emotion-1[data-selected='true'] svg,
+.emotion-1[data-indeterminate='true'] svg {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.emotion-1[data-disabled='true'] {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-1[data-disabled='true']:hover {
+  background: none;
+  box-shadow: none;
+}
+
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.75rem;
+  -webkit-box-pack: unset;
+  -ms-flex-pack: unset;
+  -webkit-justify-content: unset;
+  justify-content: unset;
+}
+
 <div>
   <div
-    class="properties_maxHeight_full_base__19njorxk4 properties_maxWidth_full_base__19njorxhc properties_flexDirection_column_base__19njorxkc properties_gap_8_base__19njorxmc"
+    class="properties_maxHeight_full_base__19njorxk4 properties_maxWidth_full_base__19njorxhc properties_display_flex_base__19njorx2c properties_flexDirection_column_base__19njorxkc"
     data-ictinus="test-version"
   >
     <div
-      class="DataTableBody_root__1boh8d77 DataTableBody__1boh8d76 properties_overflowX_hidden__19njorx1jm properties_overflowY_hidden__19njorx1jp properties_borderRadius_2__19njorx1ia properties_maxWidth_full_base__19njorxhc properties_display_flex_base__19njorx2c properties_flexDirection_column_base__19njorxkc"
+      class="DataTableBody_root__1boh8d77 DataTableBody__1boh8d76 properties_overflowX_hidden__19njorx1jn properties_overflowY_hidden__19njorx1jq properties_borderRadius_2__19njorx1ia properties_maxWidth_full_base__19njorxhc properties_display_flex_base__19njorx2c properties_flexDirection_column_base__19njorxkc"
+      data-has-left-pinned=""
       data-ictinus="test-version"
-      style="--_1boh8d72: 150px; --_1boh8d73: 0px; --_1boh8d74: 600;"
+      data-selectable=""
+      style="--_1boh8d72: 198px; --_1boh8d73: 0px; --_1boh8d74: 600;"
     >
       <div
-        class="Table_wrapper__5wqoik7 properties_backgroundColor_default_base__19njorx1md properties_borderColor_decorative.default_base__19njorx1vx Table__5wqoik6 properties_overflowX_auto__19njorx1jl properties_overflowY_auto__19njorx1jo properties_borderRadius_2__19njorx1ia properties_maxWidth_full_base__19njorxhc properties_borderBottomWidth_1_base__19njorx1h4 properties_borderLeftWidth_1_base__19njorx1hk properties_borderRightWidth_1_base__19njorx1go properties_borderTopWidth_1_base__19njorx1g8 properties_borderStyle_solid__19njorx1i6"
+        class="Table_wrapper__5wqoik7 properties_backgroundColor_default_base__19njorx1me properties_borderColor_decorative.default_base__19njorx1vy Table__5wqoik6 properties_overflowX_auto__19njorx1jm properties_overflowY_auto__19njorx1jp properties_borderRadius_inherit__19njorx1ig properties_maxWidth_full_base__19njorxhc properties_borderBottomWidth_1_base__19njorx1h4 properties_borderLeftWidth_1_base__19njorx1hk properties_borderRightWidth_1_base__19njorx1go properties_borderTopWidth_1_base__19njorx1g8 properties_borderStyle_solid__19njorx1i6"
         data-ictinus="test-version"
       >
         <table
-          class="Table_table__5wqoik3 properties_color_primary_base__19njorx22x Table__5wqoik0 Table_table_layout_fixed__5wqoik5 Table__5wqoik2 properties_width_full_base__19njorx68 properties_fontSize_3__19njorx1jz"
+          class="Table_table__5wqoik3 properties_color_primary_base__19njorx22y Table__5wqoik0 Table_table_layout_fixed__5wqoik5 Table__5wqoik2 properties_width_full_base__19njorx68 properties_fontSize_3__19njorx1k0"
           data-ictinus="test-version"
         >
           <thead
@@ -26,22 +118,82 @@
               data-ictinus="test-version"
             >
               <th
-                aria-sort="none"
-                class="TableHeaderCell_cell__u8v29c4 properties_borderColor_decorative.default_base__19njorx1vx TableHeaderCell__u8v29c1 TableHeaderCell__u8v29c0 TableHeaderCell_cell_pinned_true__u8v29c6 TableHeaderCell__u8v29c3 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_pinned_left__1boh8d7e DataTableBody__1boh8d79 DataTableBody_cell_pinnedType_header__1boh8d7h DataTableBody_cell_resizable_true__1boh8d7j DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                class="TableHeaderCell_cell__u8v29c4 properties_borderColor_decorative.default_base__19njorx1vy TableHeaderCell__u8v29c1 TableHeaderCell__u8v29c0 TableHeaderCell_cell_pinned_true__u8v29c6 TableHeaderCell__u8v29c3 DataTableBody_cell__1boh8d7d properties_backgroundColor_default_base__19njorx1me DataTableBody__1boh8d78 DataTableBody_cell_pinned_left__1boh8d7e DataTableBody__1boh8d79 DataTableBody_cell_resizable_false__1boh8d7g DataTableBody__1boh8d7b properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
                 colspan="1"
                 data-ictinus="test-version"
                 data-pinned=""
-                style="--_1boh8d71: 0px; --_1boh8d70: 150;"
+                style="--_1boh8d71: 0px; --_1boh8d70: 48;"
               >
                 <div
-                  class="TableHeaderCell_content__u8v29c9 properties_color_secondary_base__19njorx231 properties_borderColor_decorative.default_base__19njorx1vx TableHeaderCell__u8v29c7 TableHeaderCell_content_size_sm__u8v29ca properties_backgroundColor_default_base__19njorx1md properties_width_full_base__19njorx68 properties_height_11_base__19njorx7o properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kk properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  class="TableHeaderCell_content__u8v29c9 properties_color_secondary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1vy TableHeaderCell__u8v29c7 TableHeaderCell_content_size_sm__u8v29ca properties_backgroundColor_default_base__19njorx1me properties_width_full_base__19njorx68 properties_height_11_base__19njorx7o properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
                   data-ictinus="test-version"
                 >
                   <div
-                    class="DataTableHeaderCell_handle__17goizn7 properties_borderColor_decorative.default_base__19njorx1vx DataTableHeaderCell__17goizn6 DataTableHeaderCell_handle_resizing_false__17goizn8 properties_zIndex_10__19njorx1m5 properties_height_full_base__19njorx90"
+                    class="emotion-0"
+                  >
+                    <label
+                      class="emotion-1"
+                      data-rac=""
+                      data-react-aria-pressable="true"
+                      data-testid="ictinus_checkbox"
+                    >
+                      <span
+                        style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                      >
+                        <input
+                          data-react-aria-pressable="true"
+                          tabindex="0"
+                          title=""
+                          type="checkbox"
+                        />
+                      </span>
+                      <div
+                        class="emotion-2 emotion-3"
+                      >
+                        <div
+                          class="emotion-4 emotion-3"
+                          data-role="checkbox-icon"
+                        >
+                          <svg
+                            class="properties_color_primary_base__19njorx22y properties_height_5_base__19njorx70 properties_width_5_base__19njorx48"
+                            data-ictinus="test-version"
+                            data-testid="ictinus_unselected"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
+                              fill="currentColor"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </th>
+              <th
+                aria-sort="none"
+                class="TableHeaderCell_cell__u8v29c4 properties_borderColor_decorative.default_base__19njorx1vy TableHeaderCell__u8v29c1 TableHeaderCell__u8v29c0 TableHeaderCell_cell_pinned_true__u8v29c6 TableHeaderCell__u8v29c3 DataTableBody_cell__1boh8d7d properties_backgroundColor_default_base__19njorx1me DataTableBody__1boh8d78 DataTableBody_cell_pinned_left__1boh8d7e DataTableBody__1boh8d79 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                colspan="1"
+                data-ictinus="test-version"
+                data-pinned=""
+                style="--_1boh8d71: 48px; --_1boh8d70: 150;"
+              >
+                <div
+                  class="TableHeaderCell_content__u8v29c9 properties_color_secondary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1vy TableHeaderCell__u8v29c7 TableHeaderCell_content_size_sm__u8v29ca properties_backgroundColor_default_base__19njorx1me properties_width_full_base__19njorx68 properties_height_11_base__19njorx7o properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  data-ictinus="test-version"
+                >
+                  <div
+                    class="DataTableHeaderCell_handle__17goizn7 properties_borderColor_decorative.default_base__19njorx1vy DataTableHeaderCell__17goizn6 DataTableHeaderCell_handle_resizing_false__17goizn8 properties_height_full_base__19njorx90"
                     data-ictinus="test-version"
                   />
-                  First Name
+                  <span
+                    class="Text__ff5iyl6 Text_text_lineClamp_1__ff5iyl7 Text__ff5iyl0 Text__ff5iyl1 Text__ff5iyl2"
+                    data-ictinus="test-version"
+                  >
+                    First Name
+                  </span>
                   <button
                     style="background-color: transparent;"
                     type="button"
@@ -70,44 +222,24 @@
                         />
                       </svg>
                       <svg
-                        class="DataTableHeaderCell_icon__17goizn3 DataTableHeaderCell__17goizn0 DataTableHeaderCell_icon_active_false__17goizn4 DataTableHeaderCell__17goizn1 properties_height_5_base__19njorx70 properties_marginLeft_2_base__19njorxvw properties_marginRight_2_base__19njorxyg properties_width_5_base__19njorx48"
+                        class="DataTableHeaderCell_icon__17goizn3 DataTableHeaderCell__17goizn0 DataTableHeaderCell_icon_active_false__17goizn4 DataTableHeaderCell__17goizn1 properties_color_active_base__19njorx236 properties_height_5_base__19njorx70 properties_marginLeft_2_base__19njorxvw properties_marginRight_2_base__19njorxyg properties_width_5_base__19njorx48"
                         data-ictinus="test-version"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M8.02888 7.07089C7.16777 7.07089 6.68904 6.17334 7.22697 5.56745L9.19808 3.34729C9.6092 2.88423 10.3908 2.88424 10.8019 3.34729L12.773 5.56745C13.311 6.17335 12.8322 7.07089 11.9711 7.07089H8.02888Z"
-                          fill="currentColor"
-                        />
-                        <path
-                          clip-rule="evenodd"
-                          d="M2.56699 16.9319C2.61909 16.9773 2.67491 17 2.73445 17H4.10768C4.23421 17 4.32353 16.9735 4.37563 16.9206C4.42773 16.86 4.46123 16.8071 4.47611 16.7617L4.90036 15.6043H7.88128L8.31669 16.7617C8.33158 16.8071 8.36507 16.86 8.41717 16.9206C8.47671 16.9735 8.56231 17 8.67395 17H10.0472C10.1142 17 10.17 16.9773 10.2147 16.9319C10.2668 16.879 10.2928 16.8222 10.2928 16.7617C10.2928 16.7239 10.2854 16.6898 10.2705 16.6596L7.65799 9.37453C7.63566 9.29132 7.58728 9.21945 7.51285 9.15893C7.44586 9.09085 7.3491 9.05681 7.22257 9.05681H5.57023C5.4437 9.05681 5.34322 9.09085 5.26879 9.15893C5.2018 9.21945 5.15714 9.29132 5.13482 9.37453L2.51116 16.6596C2.50372 16.6898 2.5 16.7239 2.5 16.7617C2.5 16.8222 2.52233 16.879 2.56699 16.9319ZM7.4347 13.9702H5.3581L6.38524 10.9745L7.4347 13.9702Z"
-                          fill="currentColor"
-                          fill-rule="evenodd"
-                        />
-                        <path
-                          d="M11.0693 16.7163C11.0693 16.792 11.0953 16.86 11.1474 16.9206C11.1995 16.9735 11.2665 17 11.3484 17H17.2097C17.2916 17 17.3586 16.9735 17.4107 16.9206C17.4702 16.8676 17.5 16.7995 17.5 16.7163V15.5816C17.5 15.4984 17.4702 15.4303 17.4107 15.3773C17.3586 15.3168 17.2916 15.2865 17.2097 15.2865H13.7264L17.2209 10.827C17.2655 10.774 17.299 10.7173 17.3214 10.6568C17.3511 10.5963 17.366 10.5244 17.366 10.4412V9.34049C17.366 9.25728 17.3363 9.18919 17.2767 9.13624C17.2246 9.08328 17.1576 9.05681 17.0757 9.05681H11.4489C11.3744 9.05681 11.3074 9.08328 11.2479 9.13624C11.1958 9.18919 11.1697 9.25728 11.1697 9.34049V10.4639C11.1697 10.5471 11.1958 10.6152 11.2479 10.6681C11.3074 10.7211 11.3744 10.7476 11.4489 10.7476H14.8317L11.2367 15.1958C11.207 15.226 11.1697 15.2752 11.1251 15.3433C11.0879 15.4114 11.0693 15.4984 11.0693 15.6043V16.7163Z"
+                          d="M15.7443 9.22808L10.6663 4.26717C10.5687 4.17185 10.464 4.10349 10.3522 4.06209C10.2403 4.0207 10.1253 4 10.007 4C9.88872 4 9.77366 4.0207 9.66182 4.06209C9.54995 4.10349 9.44524 4.17185 9.34768 4.26717L4.24311 9.25406C4.07261 9.42063 3.99179 9.61079 4.00066 9.82454C4.00954 10.0383 4.09922 10.2284 4.26971 10.395C4.44513 10.5616 4.64544 10.6436 4.87063 10.6412C5.09582 10.6388 5.29366 10.5543 5.46416 10.3878L9.18064 6.75696V15.1927C9.18064 15.4151 9.26145 15.6053 9.42307 15.7632C9.58469 15.9211 9.77933 16 10.007 16C10.2346 16 10.4293 15.9211 10.5909 15.7632C10.7525 15.6053 10.8333 15.4151 10.8333 15.1927V6.75696L14.5764 10.4138C14.7469 10.5803 14.9403 10.6593 15.1566 10.6506C15.373 10.6419 15.5688 10.5543 15.7443 10.3878C15.9148 10.2164 16 10.0219 16 9.80432C16 9.58672 15.9148 9.39464 15.7443 9.22808Z"
                           fill="currentColor"
                         />
                       </svg>
                       <svg
-                        class="DataTableHeaderCell_icon__17goizn3 DataTableHeaderCell__17goizn0 DataTableHeaderCell_icon_active_false__17goizn4 DataTableHeaderCell__17goizn1 properties_height_5_base__19njorx70 properties_marginLeft_2_base__19njorxvw properties_marginRight_2_base__19njorxyg properties_width_5_base__19njorx48"
+                        class="DataTableHeaderCell_icon__17goizn3 DataTableHeaderCell__17goizn0 DataTableHeaderCell_icon_active_false__17goizn4 DataTableHeaderCell__17goizn1 properties_color_active_base__19njorx236 properties_height_5_base__19njorx70 properties_marginLeft_2_base__19njorxvw properties_marginRight_2_base__19njorxyg properties_width_5_base__19njorx48"
                         data-ictinus="test-version"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          clip-rule="evenodd"
-                          d="M2.56699 10.8752C2.61909 10.9206 2.67491 10.9433 2.73445 10.9433H4.10768C4.23421 10.9433 4.32353 10.9168 4.37563 10.8638C4.42773 10.8033 4.46123 10.7504 4.47611 10.705L4.90036 9.54752H7.88128L8.31669 10.705C8.33158 10.7504 8.36507 10.8033 8.41717 10.8638C8.47671 10.9168 8.56231 10.9433 8.67395 10.9433H10.0472C10.1142 10.9433 10.17 10.9206 10.2147 10.8752C10.2668 10.8222 10.2928 10.7655 10.2928 10.705C10.2928 10.6671 10.2854 10.6331 10.2705 10.6028L7.65799 3.31773C7.63566 3.23452 7.58728 3.16265 7.51285 3.10213C7.44586 3.03404 7.3491 3 7.22257 3H5.57023C5.4437 3 5.34322 3.03404 5.26879 3.10213C5.2018 3.16265 5.15714 3.23452 5.13482 3.31773L2.51116 10.6028C2.50372 10.6331 2.5 10.6671 2.5 10.705C2.5 10.7655 2.52233 10.8222 2.56699 10.8752ZM7.4347 7.91348H5.3581L6.38524 4.91773L7.4347 7.91348Z"
-                          fill="currentColor"
-                          fill-rule="evenodd"
-                        />
-                        <path
-                          d="M11.0693 10.6596C11.0693 10.7352 11.0953 10.8033 11.1474 10.8638C11.1995 10.9168 11.2665 10.9433 11.3484 10.9433H17.2097C17.2916 10.9433 17.3586 10.9168 17.4107 10.8638C17.4702 10.8109 17.5 10.7428 17.5 10.6596V9.52482C17.5 9.44161 17.4702 9.37352 17.4107 9.32057C17.3586 9.26005 17.2916 9.22979 17.2097 9.22979H13.7264L17.2209 4.77021C17.2655 4.71726 17.299 4.66052 17.3214 4.6C17.3511 4.53948 17.366 4.46761 17.366 4.3844V3.28369C17.366 3.20047 17.3363 3.13239 17.2767 3.07943C17.2246 3.02648 17.1576 3 17.0757 3H11.4489C11.3744 3 11.3074 3.02648 11.2479 3.07943C11.1958 3.13239 11.1697 3.20047 11.1697 3.28369V4.40709C11.1697 4.49031 11.1958 4.55839 11.2479 4.61135C11.3074 4.6643 11.3744 4.69078 11.4489 4.69078H14.8317L11.2367 9.13901C11.207 9.16927 11.1697 9.21844 11.1251 9.28652C11.0879 9.35461 11.0693 9.44161 11.0693 9.54752V10.6596Z"
-                          fill="currentColor"
-                        />
-                        <path
-                          d="M8.02888 12.9291C7.16777 12.9291 6.68904 13.8266 7.22697 14.4325L9.19808 16.6527C9.6092 17.1158 10.3908 17.1158 10.8019 16.6527L12.773 14.4325C13.311 13.8266 12.8322 12.9291 11.9711 12.9291H8.02888Z"
+                          d="M15.7443 10.7719L10.6663 15.7328C10.5687 15.8281 10.464 15.8965 10.3522 15.9379C10.2403 15.9793 10.1253 16 10.007 16C9.88872 16 9.77366 15.9793 9.66182 15.9379C9.54995 15.8965 9.44524 15.8281 9.34768 15.7328L4.24311 10.7459C4.07261 10.5794 3.99179 10.3892 4.00066 10.1755C4.00954 9.96173 4.09922 9.77157 4.26971 9.605C4.44513 9.43845 4.64544 9.35637 4.87063 9.35877C5.09582 9.36119 5.29366 9.44567 5.46416 9.61223L9.18064 13.243V4.8073C9.18064 4.58489 9.26145 4.39474 9.42307 4.23685C9.58469 4.07895 9.77933 4 10.007 4C10.2346 4 10.4293 4.07895 10.5909 4.23685C10.7525 4.39474 10.8333 4.58489 10.8333 4.8073V13.243L14.5764 9.58623C14.7469 9.41967 14.9403 9.34072 15.1566 9.34938C15.373 9.35806 15.5688 9.44567 15.7443 9.61223C15.9148 9.78361 16 9.97809 16 10.1957C16 10.4133 15.9148 10.6054 15.7443 10.7719Z"
                           fill="currentColor"
                         />
                       </svg>
@@ -117,17 +249,17 @@
               </th>
               <th
                 aria-sort="none"
-                class="TableHeaderCell_cell__u8v29c4 properties_borderColor_decorative.default_base__19njorx1vx TableHeaderCell__u8v29c1 TableHeaderCell__u8v29c0 TableHeaderCell_cell_pinned_false__u8v29c5 TableHeaderCell__u8v29c2 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7j DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                class="TableHeaderCell_cell__u8v29c4 properties_borderColor_decorative.default_base__19njorx1vy TableHeaderCell__u8v29c1 TableHeaderCell__u8v29c0 TableHeaderCell_cell_pinned_false__u8v29c5 TableHeaderCell__u8v29c2 DataTableBody_cell__1boh8d7d properties_backgroundColor_default_base__19njorx1me DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
                 colspan="1"
                 data-ictinus="test-version"
-                style="--_1boh8d71: 0px; --_1boh8d70: 150;"
+                style="--_1boh8d71: 48px; --_1boh8d70: 150;"
               >
                 <div
-                  class="TableHeaderCell_content__u8v29c9 properties_color_secondary_base__19njorx231 properties_borderColor_decorative.default_base__19njorx1vx TableHeaderCell__u8v29c7 TableHeaderCell_content_size_sm__u8v29ca properties_backgroundColor_default_base__19njorx1md properties_width_full_base__19njorx68 properties_height_11_base__19njorx7o properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kk properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  class="TableHeaderCell_content__u8v29c9 properties_color_secondary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1vy TableHeaderCell__u8v29c7 TableHeaderCell_content_size_sm__u8v29ca properties_backgroundColor_default_base__19njorx1me properties_width_full_base__19njorx68 properties_height_11_base__19njorx7o properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
                   data-ictinus="test-version"
                 >
                   <div
-                    class="DataTableHeaderCell_handle__17goizn7 properties_borderColor_decorative.default_base__19njorx1vx DataTableHeaderCell__17goizn6 DataTableHeaderCell_handle_resizing_false__17goizn8 properties_zIndex_10__19njorx1m5 properties_height_full_base__19njorx90"
+                    class="DataTableHeaderCell_handle__17goizn7 properties_borderColor_decorative.default_base__19njorx1vy DataTableHeaderCell__17goizn6 DataTableHeaderCell_handle_resizing_false__17goizn8 properties_height_full_base__19njorx90"
                     data-ictinus="test-version"
                   />
                   Last Name
@@ -159,44 +291,24 @@
                         />
                       </svg>
                       <svg
-                        class="DataTableHeaderCell_icon__17goizn3 DataTableHeaderCell__17goizn0 DataTableHeaderCell_icon_active_false__17goizn4 DataTableHeaderCell__17goizn1 properties_height_5_base__19njorx70 properties_marginLeft_2_base__19njorxvw properties_marginRight_2_base__19njorxyg properties_width_5_base__19njorx48"
+                        class="DataTableHeaderCell_icon__17goizn3 DataTableHeaderCell__17goizn0 DataTableHeaderCell_icon_active_false__17goizn4 DataTableHeaderCell__17goizn1 properties_color_active_base__19njorx236 properties_height_5_base__19njorx70 properties_marginLeft_2_base__19njorxvw properties_marginRight_2_base__19njorxyg properties_width_5_base__19njorx48"
                         data-ictinus="test-version"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M8.02888 7.07089C7.16777 7.07089 6.68904 6.17334 7.22697 5.56745L9.19808 3.34729C9.6092 2.88423 10.3908 2.88424 10.8019 3.34729L12.773 5.56745C13.311 6.17335 12.8322 7.07089 11.9711 7.07089H8.02888Z"
-                          fill="currentColor"
-                        />
-                        <path
-                          clip-rule="evenodd"
-                          d="M2.56699 16.9319C2.61909 16.9773 2.67491 17 2.73445 17H4.10768C4.23421 17 4.32353 16.9735 4.37563 16.9206C4.42773 16.86 4.46123 16.8071 4.47611 16.7617L4.90036 15.6043H7.88128L8.31669 16.7617C8.33158 16.8071 8.36507 16.86 8.41717 16.9206C8.47671 16.9735 8.56231 17 8.67395 17H10.0472C10.1142 17 10.17 16.9773 10.2147 16.9319C10.2668 16.879 10.2928 16.8222 10.2928 16.7617C10.2928 16.7239 10.2854 16.6898 10.2705 16.6596L7.65799 9.37453C7.63566 9.29132 7.58728 9.21945 7.51285 9.15893C7.44586 9.09085 7.3491 9.05681 7.22257 9.05681H5.57023C5.4437 9.05681 5.34322 9.09085 5.26879 9.15893C5.2018 9.21945 5.15714 9.29132 5.13482 9.37453L2.51116 16.6596C2.50372 16.6898 2.5 16.7239 2.5 16.7617C2.5 16.8222 2.52233 16.879 2.56699 16.9319ZM7.4347 13.9702H5.3581L6.38524 10.9745L7.4347 13.9702Z"
-                          fill="currentColor"
-                          fill-rule="evenodd"
-                        />
-                        <path
-                          d="M11.0693 16.7163C11.0693 16.792 11.0953 16.86 11.1474 16.9206C11.1995 16.9735 11.2665 17 11.3484 17H17.2097C17.2916 17 17.3586 16.9735 17.4107 16.9206C17.4702 16.8676 17.5 16.7995 17.5 16.7163V15.5816C17.5 15.4984 17.4702 15.4303 17.4107 15.3773C17.3586 15.3168 17.2916 15.2865 17.2097 15.2865H13.7264L17.2209 10.827C17.2655 10.774 17.299 10.7173 17.3214 10.6568C17.3511 10.5963 17.366 10.5244 17.366 10.4412V9.34049C17.366 9.25728 17.3363 9.18919 17.2767 9.13624C17.2246 9.08328 17.1576 9.05681 17.0757 9.05681H11.4489C11.3744 9.05681 11.3074 9.08328 11.2479 9.13624C11.1958 9.18919 11.1697 9.25728 11.1697 9.34049V10.4639C11.1697 10.5471 11.1958 10.6152 11.2479 10.6681C11.3074 10.7211 11.3744 10.7476 11.4489 10.7476H14.8317L11.2367 15.1958C11.207 15.226 11.1697 15.2752 11.1251 15.3433C11.0879 15.4114 11.0693 15.4984 11.0693 15.6043V16.7163Z"
+                          d="M15.7443 9.22808L10.6663 4.26717C10.5687 4.17185 10.464 4.10349 10.3522 4.06209C10.2403 4.0207 10.1253 4 10.007 4C9.88872 4 9.77366 4.0207 9.66182 4.06209C9.54995 4.10349 9.44524 4.17185 9.34768 4.26717L4.24311 9.25406C4.07261 9.42063 3.99179 9.61079 4.00066 9.82454C4.00954 10.0383 4.09922 10.2284 4.26971 10.395C4.44513 10.5616 4.64544 10.6436 4.87063 10.6412C5.09582 10.6388 5.29366 10.5543 5.46416 10.3878L9.18064 6.75696V15.1927C9.18064 15.4151 9.26145 15.6053 9.42307 15.7632C9.58469 15.9211 9.77933 16 10.007 16C10.2346 16 10.4293 15.9211 10.5909 15.7632C10.7525 15.6053 10.8333 15.4151 10.8333 15.1927V6.75696L14.5764 10.4138C14.7469 10.5803 14.9403 10.6593 15.1566 10.6506C15.373 10.6419 15.5688 10.5543 15.7443 10.3878C15.9148 10.2164 16 10.0219 16 9.80432C16 9.58672 15.9148 9.39464 15.7443 9.22808Z"
                           fill="currentColor"
                         />
                       </svg>
                       <svg
-                        class="DataTableHeaderCell_icon__17goizn3 DataTableHeaderCell__17goizn0 DataTableHeaderCell_icon_active_false__17goizn4 DataTableHeaderCell__17goizn1 properties_height_5_base__19njorx70 properties_marginLeft_2_base__19njorxvw properties_marginRight_2_base__19njorxyg properties_width_5_base__19njorx48"
+                        class="DataTableHeaderCell_icon__17goizn3 DataTableHeaderCell__17goizn0 DataTableHeaderCell_icon_active_false__17goizn4 DataTableHeaderCell__17goizn1 properties_color_active_base__19njorx236 properties_height_5_base__19njorx70 properties_marginLeft_2_base__19njorxvw properties_marginRight_2_base__19njorxyg properties_width_5_base__19njorx48"
                         data-ictinus="test-version"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          clip-rule="evenodd"
-                          d="M2.56699 10.8752C2.61909 10.9206 2.67491 10.9433 2.73445 10.9433H4.10768C4.23421 10.9433 4.32353 10.9168 4.37563 10.8638C4.42773 10.8033 4.46123 10.7504 4.47611 10.705L4.90036 9.54752H7.88128L8.31669 10.705C8.33158 10.7504 8.36507 10.8033 8.41717 10.8638C8.47671 10.9168 8.56231 10.9433 8.67395 10.9433H10.0472C10.1142 10.9433 10.17 10.9206 10.2147 10.8752C10.2668 10.8222 10.2928 10.7655 10.2928 10.705C10.2928 10.6671 10.2854 10.6331 10.2705 10.6028L7.65799 3.31773C7.63566 3.23452 7.58728 3.16265 7.51285 3.10213C7.44586 3.03404 7.3491 3 7.22257 3H5.57023C5.4437 3 5.34322 3.03404 5.26879 3.10213C5.2018 3.16265 5.15714 3.23452 5.13482 3.31773L2.51116 10.6028C2.50372 10.6331 2.5 10.6671 2.5 10.705C2.5 10.7655 2.52233 10.8222 2.56699 10.8752ZM7.4347 7.91348H5.3581L6.38524 4.91773L7.4347 7.91348Z"
-                          fill="currentColor"
-                          fill-rule="evenodd"
-                        />
-                        <path
-                          d="M11.0693 10.6596C11.0693 10.7352 11.0953 10.8033 11.1474 10.8638C11.1995 10.9168 11.2665 10.9433 11.3484 10.9433H17.2097C17.2916 10.9433 17.3586 10.9168 17.4107 10.8638C17.4702 10.8109 17.5 10.7428 17.5 10.6596V9.52482C17.5 9.44161 17.4702 9.37352 17.4107 9.32057C17.3586 9.26005 17.2916 9.22979 17.2097 9.22979H13.7264L17.2209 4.77021C17.2655 4.71726 17.299 4.66052 17.3214 4.6C17.3511 4.53948 17.366 4.46761 17.366 4.3844V3.28369C17.366 3.20047 17.3363 3.13239 17.2767 3.07943C17.2246 3.02648 17.1576 3 17.0757 3H11.4489C11.3744 3 11.3074 3.02648 11.2479 3.07943C11.1958 3.13239 11.1697 3.20047 11.1697 3.28369V4.40709C11.1697 4.49031 11.1958 4.55839 11.2479 4.61135C11.3074 4.6643 11.3744 4.69078 11.4489 4.69078H14.8317L11.2367 9.13901C11.207 9.16927 11.1697 9.21844 11.1251 9.28652C11.0879 9.35461 11.0693 9.44161 11.0693 9.54752V10.6596Z"
-                          fill="currentColor"
-                        />
-                        <path
-                          d="M8.02888 12.9291C7.16777 12.9291 6.68904 13.8266 7.22697 14.4325L9.19808 16.6527C9.6092 17.1158 10.3908 17.1158 10.8019 16.6527L12.773 14.4325C13.311 13.8266 12.8322 12.9291 11.9711 12.9291H8.02888Z"
+                          d="M15.7443 10.7719L10.6663 15.7328C10.5687 15.8281 10.464 15.8965 10.3522 15.9379C10.2403 15.9793 10.1253 16 10.007 16C9.88872 16 9.77366 15.9793 9.66182 15.9379C9.54995 15.8965 9.44524 15.8281 9.34768 15.7328L4.24311 10.7459C4.07261 10.5794 3.99179 10.3892 4.00066 10.1755C4.00954 9.96173 4.09922 9.77157 4.26971 9.605C4.44513 9.43845 4.64544 9.35637 4.87063 9.35877C5.09582 9.36119 5.29366 9.44567 5.46416 9.61223L9.18064 13.243V4.8073C9.18064 4.58489 9.26145 4.39474 9.42307 4.23685C9.58469 4.07895 9.77933 4 10.007 4C10.2346 4 10.4293 4.07895 10.5909 4.23685C10.7525 4.39474 10.8333 4.58489 10.8333 4.8073V13.243L14.5764 9.58623C14.7469 9.41967 14.9403 9.34072 15.1566 9.34938C15.373 9.35806 15.5688 9.44567 15.7443 9.61223C15.9148 9.78361 16 9.97809 16 10.1957C16 10.4133 15.9148 10.6054 15.7443 10.7719Z"
                           fill="currentColor"
                         />
                       </svg>
@@ -206,17 +318,17 @@
               </th>
               <th
                 aria-sort="none"
-                class="TableHeaderCell_cell__u8v29c4 properties_borderColor_decorative.default_base__19njorx1vx TableHeaderCell__u8v29c1 TableHeaderCell__u8v29c0 TableHeaderCell_cell_pinned_false__u8v29c5 TableHeaderCell__u8v29c2 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7j DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                class="TableHeaderCell_cell__u8v29c4 properties_borderColor_decorative.default_base__19njorx1vy TableHeaderCell__u8v29c1 TableHeaderCell__u8v29c0 TableHeaderCell_cell_pinned_false__u8v29c5 TableHeaderCell__u8v29c2 DataTableBody_cell__1boh8d7d properties_backgroundColor_default_base__19njorx1me DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
                 colspan="1"
                 data-ictinus="test-version"
-                style="--_1boh8d71: 0px; --_1boh8d70: 150;"
+                style="--_1boh8d71: 48px; --_1boh8d70: 150;"
               >
                 <div
-                  class="TableHeaderCell_content__u8v29c9 properties_color_secondary_base__19njorx231 properties_borderColor_decorative.default_base__19njorx1vx TableHeaderCell__u8v29c7 TableHeaderCell_content_size_sm__u8v29ca properties_backgroundColor_default_base__19njorx1md properties_width_full_base__19njorx68 properties_height_11_base__19njorx7o properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kk properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  class="TableHeaderCell_content__u8v29c9 properties_color_secondary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1vy TableHeaderCell__u8v29c7 TableHeaderCell_content_size_sm__u8v29ca properties_backgroundColor_default_base__19njorx1me properties_width_full_base__19njorx68 properties_height_11_base__19njorx7o properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
                   data-ictinus="test-version"
                 >
                   <div
-                    class="DataTableHeaderCell_handle__17goizn7 properties_borderColor_decorative.default_base__19njorx1vx DataTableHeaderCell__17goizn6 DataTableHeaderCell_handle_resizing_false__17goizn8 properties_zIndex_10__19njorx1m5 properties_height_full_base__19njorx90"
+                    class="DataTableHeaderCell_handle__17goizn7 properties_borderColor_decorative.default_base__19njorx1vy DataTableHeaderCell__17goizn6 DataTableHeaderCell_handle_resizing_false__17goizn8 properties_height_full_base__19njorx90"
                     data-ictinus="test-version"
                   />
                   Age
@@ -248,44 +360,24 @@
                         />
                       </svg>
                       <svg
-                        class="DataTableHeaderCell_icon__17goizn3 DataTableHeaderCell__17goizn0 DataTableHeaderCell_icon_active_false__17goizn4 DataTableHeaderCell__17goizn1 properties_height_5_base__19njorx70 properties_marginLeft_2_base__19njorxvw properties_marginRight_2_base__19njorxyg properties_width_5_base__19njorx48"
+                        class="DataTableHeaderCell_icon__17goizn3 DataTableHeaderCell__17goizn0 DataTableHeaderCell_icon_active_false__17goizn4 DataTableHeaderCell__17goizn1 properties_color_active_base__19njorx236 properties_height_5_base__19njorx70 properties_marginLeft_2_base__19njorxvw properties_marginRight_2_base__19njorxyg properties_width_5_base__19njorx48"
                         data-ictinus="test-version"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M8.02888 7.07089C7.16777 7.07089 6.68904 6.17334 7.22697 5.56745L9.19808 3.34729C9.6092 2.88423 10.3908 2.88424 10.8019 3.34729L12.773 5.56745C13.311 6.17335 12.8322 7.07089 11.9711 7.07089H8.02888Z"
-                          fill="currentColor"
-                        />
-                        <path
-                          clip-rule="evenodd"
-                          d="M2.56699 16.9319C2.61909 16.9773 2.67491 17 2.73445 17H4.10768C4.23421 17 4.32353 16.9735 4.37563 16.9206C4.42773 16.86 4.46123 16.8071 4.47611 16.7617L4.90036 15.6043H7.88128L8.31669 16.7617C8.33158 16.8071 8.36507 16.86 8.41717 16.9206C8.47671 16.9735 8.56231 17 8.67395 17H10.0472C10.1142 17 10.17 16.9773 10.2147 16.9319C10.2668 16.879 10.2928 16.8222 10.2928 16.7617C10.2928 16.7239 10.2854 16.6898 10.2705 16.6596L7.65799 9.37453C7.63566 9.29132 7.58728 9.21945 7.51285 9.15893C7.44586 9.09085 7.3491 9.05681 7.22257 9.05681H5.57023C5.4437 9.05681 5.34322 9.09085 5.26879 9.15893C5.2018 9.21945 5.15714 9.29132 5.13482 9.37453L2.51116 16.6596C2.50372 16.6898 2.5 16.7239 2.5 16.7617C2.5 16.8222 2.52233 16.879 2.56699 16.9319ZM7.4347 13.9702H5.3581L6.38524 10.9745L7.4347 13.9702Z"
-                          fill="currentColor"
-                          fill-rule="evenodd"
-                        />
-                        <path
-                          d="M11.0693 16.7163C11.0693 16.792 11.0953 16.86 11.1474 16.9206C11.1995 16.9735 11.2665 17 11.3484 17H17.2097C17.2916 17 17.3586 16.9735 17.4107 16.9206C17.4702 16.8676 17.5 16.7995 17.5 16.7163V15.5816C17.5 15.4984 17.4702 15.4303 17.4107 15.3773C17.3586 15.3168 17.2916 15.2865 17.2097 15.2865H13.7264L17.2209 10.827C17.2655 10.774 17.299 10.7173 17.3214 10.6568C17.3511 10.5963 17.366 10.5244 17.366 10.4412V9.34049C17.366 9.25728 17.3363 9.18919 17.2767 9.13624C17.2246 9.08328 17.1576 9.05681 17.0757 9.05681H11.4489C11.3744 9.05681 11.3074 9.08328 11.2479 9.13624C11.1958 9.18919 11.1697 9.25728 11.1697 9.34049V10.4639C11.1697 10.5471 11.1958 10.6152 11.2479 10.6681C11.3074 10.7211 11.3744 10.7476 11.4489 10.7476H14.8317L11.2367 15.1958C11.207 15.226 11.1697 15.2752 11.1251 15.3433C11.0879 15.4114 11.0693 15.4984 11.0693 15.6043V16.7163Z"
+                          d="M15.7443 9.22808L10.6663 4.26717C10.5687 4.17185 10.464 4.10349 10.3522 4.06209C10.2403 4.0207 10.1253 4 10.007 4C9.88872 4 9.77366 4.0207 9.66182 4.06209C9.54995 4.10349 9.44524 4.17185 9.34768 4.26717L4.24311 9.25406C4.07261 9.42063 3.99179 9.61079 4.00066 9.82454C4.00954 10.0383 4.09922 10.2284 4.26971 10.395C4.44513 10.5616 4.64544 10.6436 4.87063 10.6412C5.09582 10.6388 5.29366 10.5543 5.46416 10.3878L9.18064 6.75696V15.1927C9.18064 15.4151 9.26145 15.6053 9.42307 15.7632C9.58469 15.9211 9.77933 16 10.007 16C10.2346 16 10.4293 15.9211 10.5909 15.7632C10.7525 15.6053 10.8333 15.4151 10.8333 15.1927V6.75696L14.5764 10.4138C14.7469 10.5803 14.9403 10.6593 15.1566 10.6506C15.373 10.6419 15.5688 10.5543 15.7443 10.3878C15.9148 10.2164 16 10.0219 16 9.80432C16 9.58672 15.9148 9.39464 15.7443 9.22808Z"
                           fill="currentColor"
                         />
                       </svg>
                       <svg
-                        class="DataTableHeaderCell_icon__17goizn3 DataTableHeaderCell__17goizn0 DataTableHeaderCell_icon_active_false__17goizn4 DataTableHeaderCell__17goizn1 properties_height_5_base__19njorx70 properties_marginLeft_2_base__19njorxvw properties_marginRight_2_base__19njorxyg properties_width_5_base__19njorx48"
+                        class="DataTableHeaderCell_icon__17goizn3 DataTableHeaderCell__17goizn0 DataTableHeaderCell_icon_active_false__17goizn4 DataTableHeaderCell__17goizn1 properties_color_active_base__19njorx236 properties_height_5_base__19njorx70 properties_marginLeft_2_base__19njorxvw properties_marginRight_2_base__19njorxyg properties_width_5_base__19njorx48"
                         data-ictinus="test-version"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          clip-rule="evenodd"
-                          d="M2.56699 10.8752C2.61909 10.9206 2.67491 10.9433 2.73445 10.9433H4.10768C4.23421 10.9433 4.32353 10.9168 4.37563 10.8638C4.42773 10.8033 4.46123 10.7504 4.47611 10.705L4.90036 9.54752H7.88128L8.31669 10.705C8.33158 10.7504 8.36507 10.8033 8.41717 10.8638C8.47671 10.9168 8.56231 10.9433 8.67395 10.9433H10.0472C10.1142 10.9433 10.17 10.9206 10.2147 10.8752C10.2668 10.8222 10.2928 10.7655 10.2928 10.705C10.2928 10.6671 10.2854 10.6331 10.2705 10.6028L7.65799 3.31773C7.63566 3.23452 7.58728 3.16265 7.51285 3.10213C7.44586 3.03404 7.3491 3 7.22257 3H5.57023C5.4437 3 5.34322 3.03404 5.26879 3.10213C5.2018 3.16265 5.15714 3.23452 5.13482 3.31773L2.51116 10.6028C2.50372 10.6331 2.5 10.6671 2.5 10.705C2.5 10.7655 2.52233 10.8222 2.56699 10.8752ZM7.4347 7.91348H5.3581L6.38524 4.91773L7.4347 7.91348Z"
-                          fill="currentColor"
-                          fill-rule="evenodd"
-                        />
-                        <path
-                          d="M11.0693 10.6596C11.0693 10.7352 11.0953 10.8033 11.1474 10.8638C11.1995 10.9168 11.2665 10.9433 11.3484 10.9433H17.2097C17.2916 10.9433 17.3586 10.9168 17.4107 10.8638C17.4702 10.8109 17.5 10.7428 17.5 10.6596V9.52482C17.5 9.44161 17.4702 9.37352 17.4107 9.32057C17.3586 9.26005 17.2916 9.22979 17.2097 9.22979H13.7264L17.2209 4.77021C17.2655 4.71726 17.299 4.66052 17.3214 4.6C17.3511 4.53948 17.366 4.46761 17.366 4.3844V3.28369C17.366 3.20047 17.3363 3.13239 17.2767 3.07943C17.2246 3.02648 17.1576 3 17.0757 3H11.4489C11.3744 3 11.3074 3.02648 11.2479 3.07943C11.1958 3.13239 11.1697 3.20047 11.1697 3.28369V4.40709C11.1697 4.49031 11.1958 4.55839 11.2479 4.61135C11.3074 4.6643 11.3744 4.69078 11.4489 4.69078H14.8317L11.2367 9.13901C11.207 9.16927 11.1697 9.21844 11.1251 9.28652C11.0879 9.35461 11.0693 9.44161 11.0693 9.54752V10.6596Z"
-                          fill="currentColor"
-                        />
-                        <path
-                          d="M8.02888 12.9291C7.16777 12.9291 6.68904 13.8266 7.22697 14.4325L9.19808 16.6527C9.6092 17.1158 10.3908 17.1158 10.8019 16.6527L12.773 14.4325C13.311 13.8266 12.8322 12.9291 11.9711 12.9291H8.02888Z"
+                          d="M15.7443 10.7719L10.6663 15.7328C10.5687 15.8281 10.464 15.8965 10.3522 15.9379C10.2403 15.9793 10.1253 16 10.007 16C9.88872 16 9.77366 15.9793 9.66182 15.9379C9.54995 15.8965 9.44524 15.8281 9.34768 15.7328L4.24311 10.7459C4.07261 10.5794 3.99179 10.3892 4.00066 10.1755C4.00954 9.96173 4.09922 9.77157 4.26971 9.605C4.44513 9.43845 4.64544 9.35637 4.87063 9.35877C5.09582 9.36119 5.29366 9.44567 5.46416 9.61223L9.18064 13.243V4.8073C9.18064 4.58489 9.26145 4.39474 9.42307 4.23685C9.58469 4.07895 9.77933 4 10.007 4C10.2346 4 10.4293 4.07895 10.5909 4.23685C10.7525 4.39474 10.8333 4.58489 10.8333 4.8073V13.243L14.5764 9.58623C14.7469 9.41967 14.9403 9.34072 15.1566 9.34938C15.373 9.35806 15.5688 9.44567 15.7443 9.61223C15.9148 9.78361 16 9.97809 16 10.1957C16 10.4133 15.9148 10.6054 15.7443 10.7719Z"
                           fill="currentColor"
                         />
                       </svg>
@@ -295,17 +387,17 @@
               </th>
               <th
                 aria-sort="none"
-                class="TableHeaderCell_cell__u8v29c4 properties_borderColor_decorative.default_base__19njorx1vx TableHeaderCell__u8v29c1 TableHeaderCell__u8v29c0 TableHeaderCell_cell_pinned_false__u8v29c5 TableHeaderCell__u8v29c2 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7j DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                class="TableHeaderCell_cell__u8v29c4 properties_borderColor_decorative.default_base__19njorx1vy TableHeaderCell__u8v29c1 TableHeaderCell__u8v29c0 TableHeaderCell_cell_pinned_false__u8v29c5 TableHeaderCell__u8v29c2 DataTableBody_cell__1boh8d7d properties_backgroundColor_default_base__19njorx1me DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
                 colspan="1"
                 data-ictinus="test-version"
-                style="--_1boh8d71: 0px; --_1boh8d70: 150;"
+                style="--_1boh8d71: 48px; --_1boh8d70: 150;"
               >
                 <div
-                  class="TableHeaderCell_content__u8v29c9 properties_color_secondary_base__19njorx231 properties_borderColor_decorative.default_base__19njorx1vx TableHeaderCell__u8v29c7 TableHeaderCell_content_size_sm__u8v29ca properties_backgroundColor_default_base__19njorx1md properties_width_full_base__19njorx68 properties_height_11_base__19njorx7o properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kk properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  class="TableHeaderCell_content__u8v29c9 properties_color_secondary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1vy TableHeaderCell__u8v29c7 TableHeaderCell_content_size_sm__u8v29ca properties_backgroundColor_default_base__19njorx1me properties_width_full_base__19njorx68 properties_height_11_base__19njorx7o properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
                   data-ictinus="test-version"
                 >
                   <div
-                    class="DataTableHeaderCell_handle__17goizn7 properties_borderColor_decorative.default_base__19njorx1vx DataTableHeaderCell__17goizn6 DataTableHeaderCell_handle_resizing_false__17goizn8 properties_zIndex_10__19njorx1m5 properties_height_full_base__19njorx90"
+                    class="DataTableHeaderCell_handle__17goizn7 properties_borderColor_decorative.default_base__19njorx1vy DataTableHeaderCell__17goizn6 DataTableHeaderCell_handle_resizing_false__17goizn8 properties_height_full_base__19njorx90"
                     data-ictinus="test-version"
                   />
                   Job
@@ -337,44 +429,24 @@
                         />
                       </svg>
                       <svg
-                        class="DataTableHeaderCell_icon__17goizn3 DataTableHeaderCell__17goizn0 DataTableHeaderCell_icon_active_false__17goizn4 DataTableHeaderCell__17goizn1 properties_height_5_base__19njorx70 properties_marginLeft_2_base__19njorxvw properties_marginRight_2_base__19njorxyg properties_width_5_base__19njorx48"
+                        class="DataTableHeaderCell_icon__17goizn3 DataTableHeaderCell__17goizn0 DataTableHeaderCell_icon_active_false__17goizn4 DataTableHeaderCell__17goizn1 properties_color_active_base__19njorx236 properties_height_5_base__19njorx70 properties_marginLeft_2_base__19njorxvw properties_marginRight_2_base__19njorxyg properties_width_5_base__19njorx48"
                         data-ictinus="test-version"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M8.02888 7.07089C7.16777 7.07089 6.68904 6.17334 7.22697 5.56745L9.19808 3.34729C9.6092 2.88423 10.3908 2.88424 10.8019 3.34729L12.773 5.56745C13.311 6.17335 12.8322 7.07089 11.9711 7.07089H8.02888Z"
-                          fill="currentColor"
-                        />
-                        <path
-                          clip-rule="evenodd"
-                          d="M2.56699 16.9319C2.61909 16.9773 2.67491 17 2.73445 17H4.10768C4.23421 17 4.32353 16.9735 4.37563 16.9206C4.42773 16.86 4.46123 16.8071 4.47611 16.7617L4.90036 15.6043H7.88128L8.31669 16.7617C8.33158 16.8071 8.36507 16.86 8.41717 16.9206C8.47671 16.9735 8.56231 17 8.67395 17H10.0472C10.1142 17 10.17 16.9773 10.2147 16.9319C10.2668 16.879 10.2928 16.8222 10.2928 16.7617C10.2928 16.7239 10.2854 16.6898 10.2705 16.6596L7.65799 9.37453C7.63566 9.29132 7.58728 9.21945 7.51285 9.15893C7.44586 9.09085 7.3491 9.05681 7.22257 9.05681H5.57023C5.4437 9.05681 5.34322 9.09085 5.26879 9.15893C5.2018 9.21945 5.15714 9.29132 5.13482 9.37453L2.51116 16.6596C2.50372 16.6898 2.5 16.7239 2.5 16.7617C2.5 16.8222 2.52233 16.879 2.56699 16.9319ZM7.4347 13.9702H5.3581L6.38524 10.9745L7.4347 13.9702Z"
-                          fill="currentColor"
-                          fill-rule="evenodd"
-                        />
-                        <path
-                          d="M11.0693 16.7163C11.0693 16.792 11.0953 16.86 11.1474 16.9206C11.1995 16.9735 11.2665 17 11.3484 17H17.2097C17.2916 17 17.3586 16.9735 17.4107 16.9206C17.4702 16.8676 17.5 16.7995 17.5 16.7163V15.5816C17.5 15.4984 17.4702 15.4303 17.4107 15.3773C17.3586 15.3168 17.2916 15.2865 17.2097 15.2865H13.7264L17.2209 10.827C17.2655 10.774 17.299 10.7173 17.3214 10.6568C17.3511 10.5963 17.366 10.5244 17.366 10.4412V9.34049C17.366 9.25728 17.3363 9.18919 17.2767 9.13624C17.2246 9.08328 17.1576 9.05681 17.0757 9.05681H11.4489C11.3744 9.05681 11.3074 9.08328 11.2479 9.13624C11.1958 9.18919 11.1697 9.25728 11.1697 9.34049V10.4639C11.1697 10.5471 11.1958 10.6152 11.2479 10.6681C11.3074 10.7211 11.3744 10.7476 11.4489 10.7476H14.8317L11.2367 15.1958C11.207 15.226 11.1697 15.2752 11.1251 15.3433C11.0879 15.4114 11.0693 15.4984 11.0693 15.6043V16.7163Z"
+                          d="M15.7443 9.22808L10.6663 4.26717C10.5687 4.17185 10.464 4.10349 10.3522 4.06209C10.2403 4.0207 10.1253 4 10.007 4C9.88872 4 9.77366 4.0207 9.66182 4.06209C9.54995 4.10349 9.44524 4.17185 9.34768 4.26717L4.24311 9.25406C4.07261 9.42063 3.99179 9.61079 4.00066 9.82454C4.00954 10.0383 4.09922 10.2284 4.26971 10.395C4.44513 10.5616 4.64544 10.6436 4.87063 10.6412C5.09582 10.6388 5.29366 10.5543 5.46416 10.3878L9.18064 6.75696V15.1927C9.18064 15.4151 9.26145 15.6053 9.42307 15.7632C9.58469 15.9211 9.77933 16 10.007 16C10.2346 16 10.4293 15.9211 10.5909 15.7632C10.7525 15.6053 10.8333 15.4151 10.8333 15.1927V6.75696L14.5764 10.4138C14.7469 10.5803 14.9403 10.6593 15.1566 10.6506C15.373 10.6419 15.5688 10.5543 15.7443 10.3878C15.9148 10.2164 16 10.0219 16 9.80432C16 9.58672 15.9148 9.39464 15.7443 9.22808Z"
                           fill="currentColor"
                         />
                       </svg>
                       <svg
-                        class="DataTableHeaderCell_icon__17goizn3 DataTableHeaderCell__17goizn0 DataTableHeaderCell_icon_active_false__17goizn4 DataTableHeaderCell__17goizn1 properties_height_5_base__19njorx70 properties_marginLeft_2_base__19njorxvw properties_marginRight_2_base__19njorxyg properties_width_5_base__19njorx48"
+                        class="DataTableHeaderCell_icon__17goizn3 DataTableHeaderCell__17goizn0 DataTableHeaderCell_icon_active_false__17goizn4 DataTableHeaderCell__17goizn1 properties_color_active_base__19njorx236 properties_height_5_base__19njorx70 properties_marginLeft_2_base__19njorxvw properties_marginRight_2_base__19njorxyg properties_width_5_base__19njorx48"
                         data-ictinus="test-version"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          clip-rule="evenodd"
-                          d="M2.56699 10.8752C2.61909 10.9206 2.67491 10.9433 2.73445 10.9433H4.10768C4.23421 10.9433 4.32353 10.9168 4.37563 10.8638C4.42773 10.8033 4.46123 10.7504 4.47611 10.705L4.90036 9.54752H7.88128L8.31669 10.705C8.33158 10.7504 8.36507 10.8033 8.41717 10.8638C8.47671 10.9168 8.56231 10.9433 8.67395 10.9433H10.0472C10.1142 10.9433 10.17 10.9206 10.2147 10.8752C10.2668 10.8222 10.2928 10.7655 10.2928 10.705C10.2928 10.6671 10.2854 10.6331 10.2705 10.6028L7.65799 3.31773C7.63566 3.23452 7.58728 3.16265 7.51285 3.10213C7.44586 3.03404 7.3491 3 7.22257 3H5.57023C5.4437 3 5.34322 3.03404 5.26879 3.10213C5.2018 3.16265 5.15714 3.23452 5.13482 3.31773L2.51116 10.6028C2.50372 10.6331 2.5 10.6671 2.5 10.705C2.5 10.7655 2.52233 10.8222 2.56699 10.8752ZM7.4347 7.91348H5.3581L6.38524 4.91773L7.4347 7.91348Z"
-                          fill="currentColor"
-                          fill-rule="evenodd"
-                        />
-                        <path
-                          d="M11.0693 10.6596C11.0693 10.7352 11.0953 10.8033 11.1474 10.8638C11.1995 10.9168 11.2665 10.9433 11.3484 10.9433H17.2097C17.2916 10.9433 17.3586 10.9168 17.4107 10.8638C17.4702 10.8109 17.5 10.7428 17.5 10.6596V9.52482C17.5 9.44161 17.4702 9.37352 17.4107 9.32057C17.3586 9.26005 17.2916 9.22979 17.2097 9.22979H13.7264L17.2209 4.77021C17.2655 4.71726 17.299 4.66052 17.3214 4.6C17.3511 4.53948 17.366 4.46761 17.366 4.3844V3.28369C17.366 3.20047 17.3363 3.13239 17.2767 3.07943C17.2246 3.02648 17.1576 3 17.0757 3H11.4489C11.3744 3 11.3074 3.02648 11.2479 3.07943C11.1958 3.13239 11.1697 3.20047 11.1697 3.28369V4.40709C11.1697 4.49031 11.1958 4.55839 11.2479 4.61135C11.3074 4.6643 11.3744 4.69078 11.4489 4.69078H14.8317L11.2367 9.13901C11.207 9.16927 11.1697 9.21844 11.1251 9.28652C11.0879 9.35461 11.0693 9.44161 11.0693 9.54752V10.6596Z"
-                          fill="currentColor"
-                        />
-                        <path
-                          d="M8.02888 12.9291C7.16777 12.9291 6.68904 13.8266 7.22697 14.4325L9.19808 16.6527C9.6092 17.1158 10.3908 17.1158 10.8019 16.6527L12.773 14.4325C13.311 13.8266 12.8322 12.9291 11.9711 12.9291H8.02888Z"
+                          d="M15.7443 10.7719L10.6663 15.7328C10.5687 15.8281 10.464 15.8965 10.3522 15.9379C10.2403 15.9793 10.1253 16 10.007 16C9.88872 16 9.77366 15.9793 9.66182 15.9379C9.54995 15.8965 9.44524 15.8281 9.34768 15.7328L4.24311 10.7459C4.07261 10.5794 3.99179 10.3892 4.00066 10.1755C4.00954 9.96173 4.09922 9.77157 4.26971 9.605C4.44513 9.43845 4.64544 9.35637 4.87063 9.35877C5.09582 9.36119 5.29366 9.44567 5.46416 9.61223L9.18064 13.243V4.8073C9.18064 4.58489 9.26145 4.39474 9.42307 4.23685C9.58469 4.07895 9.77933 4 10.007 4C10.2346 4 10.4293 4.07895 10.5909 4.23685C10.7525 4.39474 10.8333 4.58489 10.8333 4.8073V13.243L14.5764 9.58623C14.7469 9.41967 14.9403 9.34072 15.1566 9.34938C15.373 9.35806 15.5688 9.44567 15.7443 9.61223C15.9148 9.78361 16 9.97809 16 10.1957C16 10.4133 15.9148 10.6054 15.7443 10.7719Z"
                           fill="currentColor"
                         />
                       </svg>
@@ -389,53 +461,116 @@
             data-ictinus="test-version"
           >
             <tr
+              aria-labelledby=":r1:"
+              aria-selected="false"
               class="TableRow_row__7cjz1b2 TableRow__7cjz1b0 TableRow__7cjz1b1 properties_width_full_base__19njorx68 properties_display_flex_base__19njorx2c"
+              data-focus-visible=""
               data-ictinus="test-version"
+              tabindex="0"
             >
               <td
-                class="TableCell_cell__f31ya33 properties_borderColor_decorative.default_base__19njorx1vx TableCell__f31ya30 TableCell_cell_pinned_true__f31ya35 TableCell__f31ya32 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_pinned_left__1boh8d7e DataTableBody__1boh8d79 DataTableBody_cell_pinnedType_body__1boh8d7g DataTableBody__1boh8d7b DataTableBody_cell_resizable_true__1boh8d7j DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1me properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya30 TableCell_cell_pinned_true__f31ya35 TableCell__f31ya32 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_pinned_left__1boh8d7e DataTableBody__1boh8d79 DataTableBody_cell_resizable_false__1boh8d7g DataTableBody__1boh8d7b properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
                 data-ictinus="test-version"
                 data-pinned=""
-                style="--_1boh8d71: 0px; --_1boh8d70: 150;"
+                style="--_1boh8d71: 0px; --_1boh8d70: 48;"
               >
                 <div
-                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22x properties_borderColor_decorative.default_base__19njorx1vx TableCell__f31ya36 properties_backgroundColor_default_base__19njorx1md properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kk properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22y properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya36 properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
                   data-ictinus="test-version"
                 >
-                  Rachel
+                  <div
+                    class="emotion-0"
+                  >
+                    <label
+                      class="emotion-1"
+                      data-rac=""
+                      data-react-aria-pressable="true"
+                      data-testid="ictinus_checkbox"
+                    >
+                      <span
+                        style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                      >
+                        <input
+                          data-react-aria-pressable="true"
+                          tabindex="0"
+                          title=""
+                          type="checkbox"
+                        />
+                      </span>
+                      <div
+                        class="emotion-2 emotion-3"
+                      >
+                        <div
+                          class="emotion-4 emotion-3"
+                          data-role="checkbox-icon"
+                        >
+                          <svg
+                            class="properties_color_primary_base__19njorx22y properties_height_5_base__19njorx70 properties_width_5_base__19njorx48"
+                            data-ictinus="test-version"
+                            data-testid="ictinus_unselected"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
+                              fill="currentColor"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
                 </div>
               </td>
               <td
-                class="TableCell_cell__f31ya33 properties_borderColor_decorative.default_base__19njorx1vx TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7j DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1me properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya30 TableCell_cell_pinned_true__f31ya35 TableCell__f31ya32 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_pinned_left__1boh8d7e DataTableBody__1boh8d79 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                data-ictinus="test-version"
+                data-pinned=""
+                style="--_1boh8d71: 48px; --_1boh8d70: 150;"
+              >
+                <div
+                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22y properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya36 properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  data-ictinus="test-version"
+                >
+                  <span
+                    class="Text__ff5iyl6 Text_text_lineClamp_1__ff5iyl7 Text__ff5iyl0 Text__ff5iyl1 Text__ff5iyl2"
+                    data-ictinus="test-version"
+                  >
+                    Rachel
+                  </span>
+                </div>
+              </td>
+              <td
+                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1me properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
                 data-ictinus="test-version"
                 style="--_1boh8d70: 150;"
               >
                 <div
-                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22x properties_borderColor_decorative.default_base__19njorx1vx TableCell__f31ya36 properties_backgroundColor_default_base__19njorx1md properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kk properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22y properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya36 properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
                   data-ictinus="test-version"
                 >
                   Green
                 </div>
               </td>
               <td
-                class="TableCell_cell__f31ya33 properties_borderColor_decorative.default_base__19njorx1vx TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7j DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1me properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
                 data-ictinus="test-version"
                 style="--_1boh8d70: 150;"
               >
                 <div
-                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22x properties_borderColor_decorative.default_base__19njorx1vx TableCell__f31ya36 properties_backgroundColor_default_base__19njorx1md properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kk properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22y properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya36 properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
                   data-ictinus="test-version"
                 >
                   30
                 </div>
               </td>
               <td
-                class="TableCell_cell__f31ya33 properties_borderColor_decorative.default_base__19njorx1vx TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7j DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1me properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
                 data-ictinus="test-version"
                 style="--_1boh8d70: 150;"
               >
                 <div
-                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22x properties_borderColor_decorative.default_base__19njorx1vx TableCell__f31ya36 properties_backgroundColor_default_base__19njorx1md properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kk properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22y properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya36 properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
                   data-ictinus="test-version"
                 >
                   Fashion Executive
@@ -443,53 +578,116 @@
               </td>
             </tr>
             <tr
+              aria-labelledby=":r3:"
+              aria-selected="false"
               class="TableRow_row__7cjz1b2 TableRow__7cjz1b0 TableRow__7cjz1b1 properties_width_full_base__19njorx68 properties_display_flex_base__19njorx2c"
+              data-focus-visible=""
               data-ictinus="test-version"
+              tabindex="0"
             >
               <td
-                class="TableCell_cell__f31ya33 properties_borderColor_decorative.default_base__19njorx1vx TableCell__f31ya30 TableCell_cell_pinned_true__f31ya35 TableCell__f31ya32 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_pinned_left__1boh8d7e DataTableBody__1boh8d79 DataTableBody_cell_pinnedType_body__1boh8d7g DataTableBody__1boh8d7b DataTableBody_cell_resizable_true__1boh8d7j DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1me properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya30 TableCell_cell_pinned_true__f31ya35 TableCell__f31ya32 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_pinned_left__1boh8d7e DataTableBody__1boh8d79 DataTableBody_cell_resizable_false__1boh8d7g DataTableBody__1boh8d7b properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
                 data-ictinus="test-version"
                 data-pinned=""
-                style="--_1boh8d71: 0px; --_1boh8d70: 150;"
+                style="--_1boh8d71: 0px; --_1boh8d70: 48;"
               >
                 <div
-                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22x properties_borderColor_decorative.default_base__19njorx1vx TableCell__f31ya36 properties_backgroundColor_default_base__19njorx1md properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kk properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22y properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya36 properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
                   data-ictinus="test-version"
                 >
-                  Ross
+                  <div
+                    class="emotion-0"
+                  >
+                    <label
+                      class="emotion-1"
+                      data-rac=""
+                      data-react-aria-pressable="true"
+                      data-testid="ictinus_checkbox"
+                    >
+                      <span
+                        style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                      >
+                        <input
+                          data-react-aria-pressable="true"
+                          tabindex="0"
+                          title=""
+                          type="checkbox"
+                        />
+                      </span>
+                      <div
+                        class="emotion-2 emotion-3"
+                      >
+                        <div
+                          class="emotion-4 emotion-3"
+                          data-role="checkbox-icon"
+                        >
+                          <svg
+                            class="properties_color_primary_base__19njorx22y properties_height_5_base__19njorx70 properties_width_5_base__19njorx48"
+                            data-ictinus="test-version"
+                            data-testid="ictinus_unselected"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
+                              fill="currentColor"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
                 </div>
               </td>
               <td
-                class="TableCell_cell__f31ya33 properties_borderColor_decorative.default_base__19njorx1vx TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7j DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1me properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya30 TableCell_cell_pinned_true__f31ya35 TableCell__f31ya32 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_pinned_left__1boh8d7e DataTableBody__1boh8d79 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                data-ictinus="test-version"
+                data-pinned=""
+                style="--_1boh8d71: 48px; --_1boh8d70: 150;"
+              >
+                <div
+                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22y properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya36 properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  data-ictinus="test-version"
+                >
+                  <span
+                    class="Text__ff5iyl6 Text_text_lineClamp_1__ff5iyl7 Text__ff5iyl0 Text__ff5iyl1 Text__ff5iyl2"
+                    data-ictinus="test-version"
+                  >
+                    Ross
+                  </span>
+                </div>
+              </td>
+              <td
+                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1me properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
                 data-ictinus="test-version"
                 style="--_1boh8d70: 150;"
               >
                 <div
-                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22x properties_borderColor_decorative.default_base__19njorx1vx TableCell__f31ya36 properties_backgroundColor_default_base__19njorx1md properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kk properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22y properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya36 properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
                   data-ictinus="test-version"
                 >
                   Geller
                 </div>
               </td>
               <td
-                class="TableCell_cell__f31ya33 properties_borderColor_decorative.default_base__19njorx1vx TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7j DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1me properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
                 data-ictinus="test-version"
                 style="--_1boh8d70: 150;"
               >
                 <div
-                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22x properties_borderColor_decorative.default_base__19njorx1vx TableCell__f31ya36 properties_backgroundColor_default_base__19njorx1md properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kk properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22y properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya36 properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
                   data-ictinus="test-version"
                 >
                   32
                 </div>
               </td>
               <td
-                class="TableCell_cell__f31ya33 properties_borderColor_decorative.default_base__19njorx1vx TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7j DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1me properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
                 data-ictinus="test-version"
                 style="--_1boh8d70: 150;"
               >
                 <div
-                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22x properties_borderColor_decorative.default_base__19njorx1vx TableCell__f31ya36 properties_backgroundColor_default_base__19njorx1md properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kk properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22y properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya36 properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
                   data-ictinus="test-version"
                 >
                   Paleontologist
@@ -497,53 +695,116 @@
               </td>
             </tr>
             <tr
+              aria-labelledby=":r5:"
+              aria-selected="false"
               class="TableRow_row__7cjz1b2 TableRow__7cjz1b0 TableRow__7cjz1b1 properties_width_full_base__19njorx68 properties_display_flex_base__19njorx2c"
+              data-focus-visible=""
               data-ictinus="test-version"
+              tabindex="0"
             >
               <td
-                class="TableCell_cell__f31ya33 properties_borderColor_decorative.default_base__19njorx1vx TableCell__f31ya30 TableCell_cell_pinned_true__f31ya35 TableCell__f31ya32 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_pinned_left__1boh8d7e DataTableBody__1boh8d79 DataTableBody_cell_pinnedType_body__1boh8d7g DataTableBody__1boh8d7b DataTableBody_cell_resizable_true__1boh8d7j DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1me properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya30 TableCell_cell_pinned_true__f31ya35 TableCell__f31ya32 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_pinned_left__1boh8d7e DataTableBody__1boh8d79 DataTableBody_cell_resizable_false__1boh8d7g DataTableBody__1boh8d7b properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
                 data-ictinus="test-version"
                 data-pinned=""
-                style="--_1boh8d71: 0px; --_1boh8d70: 150;"
+                style="--_1boh8d71: 0px; --_1boh8d70: 48;"
               >
                 <div
-                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22x properties_borderColor_decorative.default_base__19njorx1vx TableCell__f31ya36 properties_backgroundColor_default_base__19njorx1md properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kk properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22y properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya36 properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
                   data-ictinus="test-version"
                 >
-                  Monica
+                  <div
+                    class="emotion-0"
+                  >
+                    <label
+                      class="emotion-1"
+                      data-rac=""
+                      data-react-aria-pressable="true"
+                      data-testid="ictinus_checkbox"
+                    >
+                      <span
+                        style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                      >
+                        <input
+                          data-react-aria-pressable="true"
+                          tabindex="0"
+                          title=""
+                          type="checkbox"
+                        />
+                      </span>
+                      <div
+                        class="emotion-2 emotion-3"
+                      >
+                        <div
+                          class="emotion-4 emotion-3"
+                          data-role="checkbox-icon"
+                        >
+                          <svg
+                            class="properties_color_primary_base__19njorx22y properties_height_5_base__19njorx70 properties_width_5_base__19njorx48"
+                            data-ictinus="test-version"
+                            data-testid="ictinus_unselected"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
+                              fill="currentColor"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
                 </div>
               </td>
               <td
-                class="TableCell_cell__f31ya33 properties_borderColor_decorative.default_base__19njorx1vx TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7j DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1me properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya30 TableCell_cell_pinned_true__f31ya35 TableCell__f31ya32 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_pinned_left__1boh8d7e DataTableBody__1boh8d79 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                data-ictinus="test-version"
+                data-pinned=""
+                style="--_1boh8d71: 48px; --_1boh8d70: 150;"
+              >
+                <div
+                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22y properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya36 properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  data-ictinus="test-version"
+                >
+                  <span
+                    class="Text__ff5iyl6 Text_text_lineClamp_1__ff5iyl7 Text__ff5iyl0 Text__ff5iyl1 Text__ff5iyl2"
+                    data-ictinus="test-version"
+                  >
+                    Monica
+                  </span>
+                </div>
+              </td>
+              <td
+                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1me properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
                 data-ictinus="test-version"
                 style="--_1boh8d70: 150;"
               >
                 <div
-                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22x properties_borderColor_decorative.default_base__19njorx1vx TableCell__f31ya36 properties_backgroundColor_default_base__19njorx1md properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kk properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22y properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya36 properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
                   data-ictinus="test-version"
                 >
                   Geller
                 </div>
               </td>
               <td
-                class="TableCell_cell__f31ya33 properties_borderColor_decorative.default_base__19njorx1vx TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7j DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1me properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
                 data-ictinus="test-version"
                 style="--_1boh8d70: 150;"
               >
                 <div
-                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22x properties_borderColor_decorative.default_base__19njorx1vx TableCell__f31ya36 properties_backgroundColor_default_base__19njorx1md properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kk properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22y properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya36 properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
                   data-ictinus="test-version"
                 >
                   31
                 </div>
               </td>
               <td
-                class="TableCell_cell__f31ya33 properties_borderColor_decorative.default_base__19njorx1vx TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7j DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1me properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
                 data-ictinus="test-version"
                 style="--_1boh8d70: 150;"
               >
                 <div
-                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22x properties_borderColor_decorative.default_base__19njorx1vx TableCell__f31ya36 properties_backgroundColor_default_base__19njorx1md properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kk properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22y properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya36 properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
                   data-ictinus="test-version"
                 >
                   Chef
