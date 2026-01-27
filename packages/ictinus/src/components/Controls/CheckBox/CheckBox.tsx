@@ -59,14 +59,16 @@ const CheckBox = React.forwardRef<HTMLLabelElement, CheckBoxProps>((props, ref) 
           justifyContent={placement === 'left' ? 'space-between' : 'unset'}
         >
           <Box data-role="checkbox-icon">
-            <Icon
-              name={isIndeterminate ? 'minus' : 'check'}
-              size="md"
-              color="primary"
-              data-testid={`${dataTestPrefixId}${value ? `_${value}` : ''}_${
-                isIndeterminate ? 'minus' : isSelected ? 'checkmark' : 'unselected'
-              }`}
-            />
+            <div>
+              <Icon
+                name={isIndeterminate ? 'minus' : 'check'}
+                size="md"
+                color="inverted.primary"
+                data-testid={`${dataTestPrefixId}${value ? `_${value}` : ''}_${
+                  isIndeterminate ? 'minus' : isSelected ? 'checkmark' : 'unselected'
+                }`}
+              />
+            </div>
           </Box>
           {children && (
             <ControlLabelText
