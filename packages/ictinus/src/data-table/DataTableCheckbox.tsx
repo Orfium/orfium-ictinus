@@ -1,18 +1,13 @@
-// import { useComposedRefs } from "@radix-ui/react-compose-refs";
-// import { useId } from "@radix-ui/react-id";
-// import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import clsx from 'clsx';
 import type { RefObject } from 'react';
 import { type ComponentPropsWithoutRef, forwardRef, useEffect, useId } from 'react';
 
-import Checkbox from '../components/Controls/CheckBox';
-// import { DataTableAction } from "./DataTableAction";
 import { useDOMRef } from '~/components/utils/useDOMRef';
+import Checkbox from '../components/Controls/CheckBox';
 import { useDataTableContext } from './DataTableContext';
 import { useDataTableRowContext } from './DataTableRowContext';
 
 export type DataTableCheckboxProps = ComponentPropsWithoutRef<typeof Checkbox>;
-//   Pick<ComponentPropsWithoutRef<typeof DataTableAction>, 'visible'>;
 
 /**
  * @group DataTable
@@ -43,14 +38,6 @@ export const DataTableCheckbox = forwardRef<HTMLLabelElement, DataTableCheckboxP
 
     return (
       <>
-        {/* {row && (
-          <VisuallyHidden id={labelPrefixId}>
-            Check to {row.getIsSelected() ? 'unselect' : 'select'}
-          </VisuallyHidden>
-        )} */}
-        {/* <DataTableAction
-          visible={(visible ?? (table.getIsSomeRowsSelected() || !row)) ? 'always' : undefined}
-        > */}
         <Checkbox
           aria-label={!row ? 'Select all' : undefined}
           aria-labelledby={row && clsx(labelPrefixId, labelId)}
@@ -73,7 +60,6 @@ export const DataTableCheckbox = forwardRef<HTMLLabelElement, DataTableCheckboxP
         >
           {children}
         </Checkbox>
-        {/* </DataTableAction> */}
       </>
     );
   }

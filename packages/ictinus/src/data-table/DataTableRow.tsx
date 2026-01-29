@@ -197,19 +197,6 @@ export const DataTableRow = forwardRef<HTMLTableRowElement, DataTableRowProps<un
             setHighlightedIndex: handleSetHighlightedIndex,
             setSelector,
           }}
-          //   actions={actions.map(({ ref }) => ref)}
-          //   focusManaged={focusManaged}
-          //   highlightedIndex={subHighlightedIndex}
-          //   labelId={labelId}
-          //   onActionMount={onActionMount}
-          //   row={row}
-          //   setHighlightedIndex={(nextIndex: number) => {
-          //     setSubHighlightedIndex(nextIndex);
-          //     if (nextIndex === -1) {
-          //       domRef.current?.focus();
-          //     }
-          //   }}
-          //   setSelector={setSelector}
         >
           {children}
         </DataTableRowProvider>

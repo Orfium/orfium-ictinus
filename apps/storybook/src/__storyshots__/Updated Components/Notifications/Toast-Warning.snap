@@ -1,11 +1,4 @@
 .emotion-0 {
-  position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.emotion-1 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -23,6 +16,7 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  gap: var(--ictinus-spacing-4);
   color: var(--ictinus-color-text-inverted-primary);
   height: var(--ictinus-sizing-9);
   background-color: var(--ictinus-color-palette-primary-base);
@@ -34,57 +28,36 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-1:focus-visible:not(:disabled) {
+.emotion-0:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-primary-muted);
 }
 
-.emotion-1:disabled {
+.emotion-0:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-1:hover:not(:disabled) {
+.emotion-0:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-primary-muted);
 }
 
-.emotion-1:active:not(:disabled),
-.emotion-1[aria-expanded="true"] {
+.emotion-0:active:not(:disabled),
+.emotion-0[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-primary-contrast);
 }
 
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  gap: var(--ictinus-spacing-4);
-}
-
 <div>
-  <div
+  <button
     class="emotion-0"
+    data-slot="button"
+    data-testid="button"
+    type="button"
   >
-    <button
-      class="emotion-1"
-      data-slot="button"
-      data-testid="button"
-      type="button"
+    <span
+      class="Text__ff5iyl6"
+      data-ictinus="test-version"
     >
-      <span
-        class="emotion-2"
-      >
-        <span>
-          Warning
-        </span>
-      </span>
-    </button>
-  </div>
+      Warning
+    </span>
+  </button>
 </div>

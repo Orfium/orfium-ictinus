@@ -1,21 +1,69 @@
 .emotion-0 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  gap: var(--ictinus-spacing-4);
+  color: var(--ictinus-color-text-default-active);
+  height: var(--ictinus-sizing-7);
+  background-color: var(--ictinus-color-palette-secondary-base);
+  padding: var(--ictinus-spacing-0) var(--ictinus-spacing-4) var(--ictinus-spacing-0) var(--ictinus-spacing-4);
+  border-radius: var(--ictinus-border-radius-2);
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-0:focus-visible:not(:disabled) {
+  background-color: var(--ictinus-color-palette-secondary-muted);
+}
+
+.emotion-0:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: var(--ictinus-color-palette-secondary-muted);
+}
+
+.emotion-0:active:not(:disabled),
+.emotion-0[aria-expanded="true"] {
+  background-color: var(--ictinus-color-palette-secondary-contrast);
+}
+
+.emotion-1 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-0 [data-disabled] {
+.emotion-1 [data-disabled] {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: block;
   cursor: pointer;
   position: relative;
 }
 
-.emotion-1 [data-role='checkbox-icon']>div {
+.emotion-2 [data-role='checkbox-icon']>div {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   width: var(--ictinus-sizing-5);
@@ -33,13 +81,13 @@
   border-radius: var(--ictinus-border-radius-2);
 }
 
-.emotion-1 svg {
+.emotion-2 svg {
   visibility: hidden;
   opacity: 0;
 }
 
-.emotion-1[data-hovered='true'] [data-role='checkbox-icon'],
-.emotion-1[data-focus-visible='true'] [data-role='checkbox-icon'] {
+.emotion-2[data-hovered='true'] [data-role='checkbox-icon'],
+.emotion-2[data-focus-visible='true'] [data-role='checkbox-icon'] {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   background: rgba(200,206,255,0.20);
@@ -47,33 +95,33 @@
   border-radius: 100%;
 }
 
-.emotion-1[data-selected='true'] [data-role='checkbox-icon']>div,
-.emotion-1[data-indeterminate='true'] [data-role='checkbox-icon']>div {
+.emotion-2[data-selected='true'] [data-role='checkbox-icon']>div,
+.emotion-2[data-indeterminate='true'] [data-role='checkbox-icon']>div {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   border-color: var(--ictinus-color-border-color-decorative-transparent);
   background: var(--ictinus-color-palette-primary-base);
 }
 
-.emotion-1[data-selected='true'] svg,
-.emotion-1[data-indeterminate='true'] svg {
+.emotion-2[data-selected='true'] svg,
+.emotion-2[data-indeterminate='true'] svg {
   visibility: visible;
   opacity: 1;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
-.emotion-1[data-disabled='true'] {
+.emotion-2[data-disabled='true'] {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-1[data-disabled='true']:hover {
+.emotion-2[data-disabled='true']:hover {
   background: none;
   box-shadow: none;
 }
 
-.emotion-2 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -92,51 +140,151 @@
   justify-content: unset;
 }
 
+.emotion-7 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  gap: var(--ictinus-spacing-4);
+  color: var(--ictinus-color-text-default-active);
+  width: var(--ictinus-sizing-7);
+  height: var(--ictinus-sizing-7);
+  background-color: var(--ictinus-color-palette-tertiary-base);
+  padding: 0;
+  border-radius: var(--ictinus-border-radius-7);
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-7:focus-visible:not(:disabled) {
+  background-color: var(--ictinus-color-palette-tertiary-muted);
+}
+
+.emotion-7:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-7:hover:not(:disabled) {
+  background-color: var(--ictinus-color-palette-tertiary-muted);
+}
+
+.emotion-7:active:not(:disabled),
+.emotion-7[aria-expanded="true"] {
+  background-color: var(--ictinus-color-palette-tertiary-contrast);
+}
+
 <div>
   <div
-    class="properties_maxHeight_full_base__19njorxk4 properties_maxWidth_full_base__19njorxhc properties_display_flex_base__19njorx2c properties_flexDirection_column_base__19njorxkc"
+    class="properties_maxHeight_full_base__19njorxk8 properties_maxWidth_full_base__19njorxhg properties_display_flex_base__19njorx2g properties_flexDirection_column_base__19njorxkg"
     data-ictinus="test-version"
   >
     <div
-      class="DataTableBody_root__1boh8d77 DataTableBody__1boh8d76 properties_overflowX_hidden__19njorx1jn properties_overflowY_hidden__19njorx1jq properties_borderRadius_2__19njorx1ia properties_maxWidth_full_base__19njorxhc properties_display_flex_base__19njorx2c properties_flexDirection_column_base__19njorxkc"
+      class="properties_backgroundColor_default_base__19njorx1mi properties_borderColor_decorative.default_base__19njorx1w2 properties_borderTopLeftRadius_2__19njorx1in properties_borderTopRightRadius_2__19njorx1iv properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_sm_base__19njorx1fg properties_paddingBottom_sm_base__19njorx17s properties_borderLeftWidth_1_base__19njorx1ho properties_borderRightWidth_1_base__19njorx1gs properties_borderTopWidth_1_base__19njorx1gc properties_display_flex_base__19njorx2g properties_alignItems_center_base__19njorx4 properties_justifyContent_space-between_base__19njorx1k"
+      data-ictinus="test-version"
+    >
+      <div
+        class="properties_display_flex_base__19njorx2g properties_alignItems_center_base__19njorx4 properties_gap_sm_base__19njorxnc"
+        data-ictinus="test-version"
+      >
+        <span
+          class="Text__ff5iyl6 properties_color_active_base__19njorx23a properties_typography_label02__19njorx1kl"
+          data-ictinus="test-version"
+        >
+          3
+        </span>
+        <span
+          class="Text__ff5iyl6 properties_typography_label02__19njorx1kl"
+          data-ictinus="test-version"
+        >
+          items
+        </span>
+      </div>
+      <button
+        aria-expanded="false"
+        aria-haspopup="true"
+        class="emotion-0"
+        data-react-aria-pressable="true"
+        data-slot="button"
+        data-testid="button"
+        id="react-aria-:test-id:"
+        tabindex="0"
+        type="button"
+      >
+        <svg
+          class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
+          data-ictinus="test-version"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M2.5 15.25V4.75C2.5 4.14583 2.65737 3.61979 2.9721 3.17188C3.28683 2.72396 3.66518 2.5 4.10714 2.5H15.8929C16.3348 2.5 16.7132 2.72396 17.0279 3.17188C17.3426 3.61979 17.5 4.14583 17.5 4.75V15.25C17.5 15.8542 17.3426 16.3802 17.0279 16.8281C16.7132 17.276 16.3348 17.5 15.8929 17.5H4.10714C3.66518 17.5 3.28683 17.276 2.9721 16.8281C2.65737 16.3802 2.5 15.8542 2.5 15.25ZM8.57143 15.9375H11.4286V4.0625H8.57143V15.9375ZM13.0357 15.9375H15.8929V4.0625H13.0357V15.9375Z"
+            fill="currentColor"
+          />
+        </svg>
+        <span
+          class="Text__ff5iyl6"
+          data-ictinus="test-version"
+        >
+          Edit columns
+        </span>
+      </button>
+    </div>
+    <div
+      class="DataTableBody_root__1boh8d77 DataTableBody__1boh8d76 properties_overflowX_hidden__19njorx1jr properties_overflowY_hidden__19njorx1ju properties_borderRadius_2__19njorx1ie properties_maxWidth_full_base__19njorxhg properties_display_flex_base__19njorx2g properties_flexDirection_column_base__19njorxkg properties_borderTopLeftRadius_0__19njorx1il properties_borderTopRightRadius_0__19njorx1it"
       data-has-left-pinned=""
       data-ictinus="test-version"
       data-selectable=""
-      style="--_1boh8d72: 198px; --_1boh8d73: 0px; --_1boh8d74: 600;"
+      style="--_1boh8d72: 198px; --_1boh8d73: 0px; --_1boh8d74: 750;"
     >
       <div
-        class="Table_wrapper__5wqoik7 properties_backgroundColor_default_base__19njorx1me properties_borderColor_decorative.default_base__19njorx1vy Table__5wqoik6 properties_overflowX_auto__19njorx1jm properties_overflowY_auto__19njorx1jp properties_borderRadius_inherit__19njorx1ig properties_maxWidth_full_base__19njorxhc properties_borderBottomWidth_1_base__19njorx1h4 properties_borderLeftWidth_1_base__19njorx1hk properties_borderRightWidth_1_base__19njorx1go properties_borderTopWidth_1_base__19njorx1g8 properties_borderStyle_solid__19njorx1i6"
+        class="Table_wrapper__5wqoik7 properties_backgroundColor_default_base__19njorx1mi properties_borderColor_decorative.default_base__19njorx1w2 Table__5wqoik6 properties_overflowX_auto__19njorx1jq properties_overflowY_auto__19njorx1jt properties_borderRadius_inherit__19njorx1ik properties_maxWidth_full_base__19njorxhg properties_borderBottomWidth_1_base__19njorx1h8 properties_borderLeftWidth_1_base__19njorx1ho properties_borderRightWidth_1_base__19njorx1gs properties_borderTopWidth_1_base__19njorx1gc properties_borderStyle_solid__19njorx1ia"
         data-ictinus="test-version"
       >
         <table
-          class="Table_table__5wqoik3 properties_color_primary_base__19njorx22y Table__5wqoik0 Table_table_layout_fixed__5wqoik5 Table__5wqoik2 properties_width_full_base__19njorx68 properties_fontSize_3__19njorx1k0"
+          class="Table_table__5wqoik3 properties_color_primary_base__19njorx232 Table__5wqoik0 Table_table_layout_fixed__5wqoik5 Table__5wqoik2 properties_width_full_base__19njorx6c properties_fontSize_3__19njorx1k4"
           data-ictinus="test-version"
         >
           <thead
-            class="TableHeader_header__1gbtnuj2 TableHeader__1gbtnuj0 TableHeader_header_pinned_true__1gbtnuj4 TableHeader__1gbtnuj1 properties_display_grid_base__19njorx2o"
+            class="TableHeader_header__1gbtnuj2 TableHeader__1gbtnuj0 TableHeader_header_pinned_true__1gbtnuj4 TableHeader__1gbtnuj1 properties_display_grid_base__19njorx2s"
             data-ictinus="test-version"
             data-pinned=""
           >
             <tr
-              class="TableRow_row__7cjz1b2 TableRow__7cjz1b0 TableRow__7cjz1b1 properties_width_full_base__19njorx68 properties_display_flex_base__19njorx2c"
+              class="TableRow_row__7cjz1b2 TableRow__7cjz1b0 TableRow__7cjz1b1 properties_width_full_base__19njorx6c properties_display_flex_base__19njorx2g"
               data-ictinus="test-version"
             >
               <th
-                class="TableHeaderCell_cell__u8v29c4 properties_borderColor_decorative.default_base__19njorx1vy TableHeaderCell__u8v29c1 TableHeaderCell__u8v29c0 TableHeaderCell_cell_pinned_true__u8v29c6 TableHeaderCell__u8v29c3 DataTableBody_cell__1boh8d7d properties_backgroundColor_default_base__19njorx1me DataTableBody__1boh8d78 DataTableBody_cell_pinned_left__1boh8d7e DataTableBody__1boh8d79 DataTableBody_cell_resizable_false__1boh8d7g DataTableBody__1boh8d7b properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                class="TableHeaderCell_cell__u8v29c4 properties_borderColor_decorative.default_base__19njorx1w2 TableHeaderCell__u8v29c1 TableHeaderCell__u8v29c0 TableHeaderCell_cell_pinned_true__u8v29c6 TableHeaderCell__u8v29c3 ActionsRoot__11x85c11 ActionsRoot__11x85c10 DataTableBody_cell__1boh8d7d properties_backgroundColor_default_base__19njorx1mi DataTableBody__1boh8d78 DataTableBody_cell_pinned_left__1boh8d7e DataTableBody__1boh8d79 DataTableBody_cell_resizable_false__1boh8d7g DataTableBody__1boh8d7b properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2g"
                 colspan="1"
                 data-ictinus="test-version"
                 data-pinned=""
                 style="--_1boh8d71: 0px; --_1boh8d70: 48;"
               >
                 <div
-                  class="TableHeaderCell_content__u8v29c9 properties_color_secondary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1vy TableHeaderCell__u8v29c7 TableHeaderCell_content_size_sm__u8v29ca properties_backgroundColor_default_base__19njorx1me properties_width_full_base__19njorx68 properties_height_11_base__19njorx7o properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  class="TableHeaderCell_content__u8v29c9 properties_color_secondary_base__19njorx236 properties_borderColor_decorative.default_base__19njorx1w2 TableHeaderCell__u8v29c7 TableHeaderCell_content_size_sm__u8v29ca properties_backgroundColor_default_base__19njorx1mi properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w"
                   data-ictinus="test-version"
                 >
                   <div
-                    class="emotion-0"
+                    class="emotion-1"
                   >
                     <label
-                      class="emotion-1"
+                      class="emotion-2"
                       data-rac=""
                       data-react-aria-pressable="true"
                       data-testid="ictinus_checkbox"
@@ -152,15 +300,15 @@
                         />
                       </span>
                       <div
-                        class="emotion-2 emotion-3"
+                        class="emotion-3 emotion-4"
                       >
                         <div
-                          class="emotion-4 emotion-3"
+                          class="emotion-5 emotion-4"
                           data-role="checkbox-icon"
                         >
                           <div>
                             <svg
-                              class="properties_color_inverted.primary_base__19njorx23q properties_height_5_base__19njorx70 properties_width_5_base__19njorx48"
+                              class="properties_color_inverted.primary_base__19njorx23u properties_height_5_base__19njorx74 properties_width_5_base__19njorx4c"
                               data-ictinus="test-version"
                               data-testid="ictinus_unselected"
                               viewBox="0 0 20 20"
@@ -180,315 +328,593 @@
               </th>
               <th
                 aria-sort="none"
-                class="TableHeaderCell_cell__u8v29c4 properties_borderColor_decorative.default_base__19njorx1vy TableHeaderCell__u8v29c1 TableHeaderCell__u8v29c0 TableHeaderCell_cell_pinned_true__u8v29c6 TableHeaderCell__u8v29c3 DataTableBody_cell__1boh8d7d properties_backgroundColor_default_base__19njorx1me DataTableBody__1boh8d78 DataTableBody_cell_pinned_left__1boh8d7e DataTableBody__1boh8d79 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                class="TableHeaderCell_cell__u8v29c4 properties_borderColor_decorative.default_base__19njorx1w2 TableHeaderCell__u8v29c1 TableHeaderCell__u8v29c0 TableHeaderCell_cell_pinned_true__u8v29c6 TableHeaderCell__u8v29c3 ActionsRoot__11x85c11 ActionsRoot__11x85c10 DataTableBody_cell__1boh8d7d properties_backgroundColor_default_base__19njorx1mi DataTableBody__1boh8d78 DataTableBody_cell_pinned_left__1boh8d7e DataTableBody__1boh8d79 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2g"
                 colspan="1"
                 data-ictinus="test-version"
                 data-pinned=""
                 style="--_1boh8d71: 48px; --_1boh8d70: 150;"
               >
                 <div
-                  class="TableHeaderCell_content__u8v29c9 properties_color_secondary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1vy TableHeaderCell__u8v29c7 TableHeaderCell_content_size_sm__u8v29ca properties_backgroundColor_default_base__19njorx1me properties_width_full_base__19njorx68 properties_height_11_base__19njorx7o properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  class="TableHeaderCell_content__u8v29c9 properties_color_secondary_base__19njorx236 properties_borderColor_decorative.default_base__19njorx1w2 TableHeaderCell__u8v29c7 TableHeaderCell_content_size_sm__u8v29ca properties_backgroundColor_default_base__19njorx1mi properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w"
                   data-ictinus="test-version"
                 >
                   <div
-                    class="DataTableHeaderCell_handle__17goizn7 properties_borderColor_decorative.default_base__19njorx1vy DataTableHeaderCell__17goizn6 DataTableHeaderCell_handle_resizing_false__17goizn8 properties_height_full_base__19njorx90"
+                    class="properties_display_flex_base__19njorx2g properties_alignItems_center_base__19njorx4 properties_gap_sm_base__19njorxnc properties_justifyContent_space-between_base__19njorx1k properties_flex_1_base__19njorx3c properties_flexDirection_row_base__19njorxkk"
                     data-ictinus="test-version"
-                  />
-                  <span
-                    class="Text__ff5iyl6 Text_text_lineClamp_1__ff5iyl7 Text__ff5iyl0 Text__ff5iyl1 Text__ff5iyl2"
-                    data-ictinus="test-version"
-                  >
-                    First Name
-                  </span>
-                  <button
-                    style="background-color: transparent;"
-                    type="button"
                   >
                     <div
-                      class="properties_display_grid_base__19njorx2o"
+                      class="properties_display_flex_base__19njorx2g properties_alignItems_center_base__19njorx4 properties_gap_sm_base__19njorxnc properties_flexDirection_row_base__19njorxkk"
                       data-ictinus="test-version"
                     >
-                      <svg
-                        class="DataTableHeaderCell_icon__17goizn3 DataTableHeaderCell__17goizn0 DataTableHeaderCell_icon_active_true__17goizn5 DataTableHeaderCell__17goizn2 properties_height_5_base__19njorx70 properties_marginLeft_2_base__19njorxvw properties_marginRight_2_base__19njorxyg properties_width_5_base__19njorx48"
+                      <div
+                        class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 DataTableHeaderCell_handle__17goizn7 properties_borderColor_decorative.default_base__19njorx1w2 DataTableHeaderCell__17goizn6 DataTableHeaderCell_handle_resizing_false__17goizn8 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_justifyContent_space-between_base__19njorx1k properties_height_full_base__19njorx94"
                         data-ictinus="test-version"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          clip-rule="evenodd"
-                          d="M7.22697 12.9148C6.68904 12.3047 7.16777 11.4009 8.02888 11.4009H11.9711C12.8322 11.4009 13.311 12.3047 12.773 12.9148L10.8019 15.1503C10.3908 15.6166 9.6092 15.6166 9.19808 15.1503L7.22697 12.9148Z"
-                          fill="currentColor"
-                          fill-rule="evenodd"
-                        />
-                        <path
-                          clip-rule="evenodd"
-                          d="M7.22697 7.08522C6.68904 7.6953 7.16777 8.59906 8.02888 8.59906H11.9711C12.8322 8.59906 13.311 7.6953 12.773 7.08522L10.8019 4.8497C10.3908 4.38343 9.6092 4.38343 9.19808 4.8497L7.22697 7.08522Z"
-                          fill="currentColor"
-                          fill-rule="evenodd"
-                        />
-                      </svg>
-                      <svg
-                        class="DataTableHeaderCell_icon__17goizn3 DataTableHeaderCell__17goizn0 DataTableHeaderCell_icon_active_false__17goizn4 DataTableHeaderCell__17goizn1 properties_color_active_base__19njorx236 properties_height_5_base__19njorx70 properties_marginLeft_2_base__19njorxvw properties_marginRight_2_base__19njorxyg properties_width_5_base__19njorx48"
+                      />
+                      <span
+                        class="Text__ff5iyl6 Text_text_lineClamp_1__ff5iyl7 Text__ff5iyl0 Text__ff5iyl1 Text__ff5iyl2 properties_color_secondary_base__19njorx236"
                         data-ictinus="test-version"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
+                        role="button"
+                        tabindex="0"
                       >
-                        <path
-                          d="M15.7443 9.22808L10.6663 4.26717C10.5687 4.17185 10.464 4.10349 10.3522 4.06209C10.2403 4.0207 10.1253 4 10.007 4C9.88872 4 9.77366 4.0207 9.66182 4.06209C9.54995 4.10349 9.44524 4.17185 9.34768 4.26717L4.24311 9.25406C4.07261 9.42063 3.99179 9.61079 4.00066 9.82454C4.00954 10.0383 4.09922 10.2284 4.26971 10.395C4.44513 10.5616 4.64544 10.6436 4.87063 10.6412C5.09582 10.6388 5.29366 10.5543 5.46416 10.3878L9.18064 6.75696V15.1927C9.18064 15.4151 9.26145 15.6053 9.42307 15.7632C9.58469 15.9211 9.77933 16 10.007 16C10.2346 16 10.4293 15.9211 10.5909 15.7632C10.7525 15.6053 10.8333 15.4151 10.8333 15.1927V6.75696L14.5764 10.4138C14.7469 10.5803 14.9403 10.6593 15.1566 10.6506C15.373 10.6419 15.5688 10.5543 15.7443 10.3878C15.9148 10.2164 16 10.0219 16 9.80432C16 9.58672 15.9148 9.39464 15.7443 9.22808Z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                      <svg
-                        class="DataTableHeaderCell_icon__17goizn3 DataTableHeaderCell__17goizn0 DataTableHeaderCell_icon_active_false__17goizn4 DataTableHeaderCell__17goizn1 properties_color_active_base__19njorx236 properties_height_5_base__19njorx70 properties_marginLeft_2_base__19njorxvw properties_marginRight_2_base__19njorxyg properties_width_5_base__19njorx48"
+                        First Name
+                      </span>
+                      <div
+                        class="properties_height_3_base__19njorx6w properties_width_3_base__19njorx44 properties_display_flex_base__19njorx2g properties_alignItems_center_base__19njorx4 properties_justifyContent_center_base__19njorx1c"
                         data-ictinus="test-version"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
+                        tabindex="0"
                       >
-                        <path
-                          d="M15.7443 10.7719L10.6663 15.7328C10.5687 15.8281 10.464 15.8965 10.3522 15.9379C10.2403 15.9793 10.1253 16 10.007 16C9.88872 16 9.77366 15.9793 9.66182 15.9379C9.54995 15.8965 9.44524 15.8281 9.34768 15.7328L4.24311 10.7459C4.07261 10.5794 3.99179 10.3892 4.00066 10.1755C4.00954 9.96173 4.09922 9.77157 4.26971 9.605C4.44513 9.43845 4.64544 9.35637 4.87063 9.35877C5.09582 9.36119 5.29366 9.44567 5.46416 9.61223L9.18064 13.243V4.8073C9.18064 4.58489 9.26145 4.39474 9.42307 4.23685C9.58469 4.07895 9.77933 4 10.007 4C10.2346 4 10.4293 4.07895 10.5909 4.23685C10.7525 4.39474 10.8333 4.58489 10.8333 4.8073V13.243L14.5764 9.58623C14.7469 9.41967 14.9403 9.34072 15.1566 9.34938C15.373 9.35806 15.5688 9.44567 15.7443 9.61223C15.9148 9.78361 16 9.97809 16 10.1957C16 10.4133 15.9148 10.6054 15.7443 10.7719Z"
-                          fill="currentColor"
-                        />
-                      </svg>
+                        <svg
+                          class="properties_height_3_base__19njorx6w properties_width_3_base__19njorx44"
+                          data-ictinus="test-version"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M6.88122 17.3701C7.85478 17.79 8.89481 18 10.0013 18C11.1111 18 12.1541 17.7896 13.1301 17.3687C14.1062 16.9478 14.9553 16.3766 15.6773 15.6552C16.3994 14.9337 16.967 14.0884 17.3802 13.1192C17.7934 12.15 18 11.1104 18 10.0003C18 8.89025 17.7933 7.84706 17.3799 6.87073C16.9666 5.8944 16.3986 5.04513 15.6761 4.32292C14.9536 3.60072 14.1042 3.03301 13.1278 2.61981C12.1514 2.2066 11.1084 2 9.9987 2C8.89371 2 7.8553 2.20669 6.88345 2.62006C5.91159 3.03343 5.06506 3.60129 4.34387 4.32362C3.62269 5.04596 3.05175 5.89538 2.63105 6.87186C2.21035 7.84835 2 8.8915 2 10.0013C2 11.1078 2.21005 12.1476 2.63016 13.1208C3.05026 14.094 3.62041 14.9405 4.34059 15.6604C5.06076 16.3803 5.90763 16.9502 6.88122 17.3701ZM10.6094 13.7549C10.4461 13.9183 10.2495 14 10.0197 14C9.78983 14 9.59317 13.9183 9.42969 13.7549C9.26622 13.5914 9.18448 13.3948 9.18448 13.1651V10.0582C9.18448 9.82847 9.26613 9.63188 9.42944 9.46844C9.59274 9.30501 9.78931 9.2233 10.0192 9.2233C10.249 9.2233 10.4457 9.30501 10.6091 9.46844C10.7726 9.63188 10.8544 9.82847 10.8544 10.0582V13.1651C10.8544 13.3948 10.7727 13.5914 10.6094 13.7549ZM9.9751 7.90001C10.5964 7.90001 11.1001 7.39633 11.1001 6.77501C11.1001 6.15369 10.5964 5.65001 9.9751 5.65001C9.35378 5.65001 8.8501 6.15369 8.8501 6.77501C8.8501 7.39633 9.35378 7.90001 9.9751 7.90001Z"
+                            fill="currentColor"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                      </div>
+                      <div
+                        class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 properties_alignItems_center_base__19njorx4 properties_display_grid_base__19njorx2s properties_justifyContent_space-between_base__19njorx1k properties_placeItems_center_base__19njorx14 properties_position_relative_base__19njorxlc properties_flexDirection_row_base__19njorxkk"
+                        data-ictinus="test-version"
+                      >
+                        <button
+                          class="emotion-7"
+                          data-slot="button"
+                          data-testid="icon-button"
+                          type="button"
+                        >
+                          <svg
+                            class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
+                            data-ictinus="test-version"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              clip-rule="evenodd"
+                              d="M7.22697 12.9148C6.68904 12.3047 7.16777 11.4009 8.02888 11.4009H11.9711C12.8322 11.4009 13.311 12.3047 12.773 12.9148L10.8019 15.1503C10.3908 15.6166 9.6092 15.6166 9.19808 15.1503L7.22697 12.9148Z"
+                              fill="currentColor"
+                              fill-rule="evenodd"
+                            />
+                            <path
+                              clip-rule="evenodd"
+                              d="M7.22697 7.08522C6.68904 7.6953 7.16777 8.59906 8.02888 8.59906H11.9711C12.8322 8.59906 13.311 7.6953 12.773 7.08522L10.8019 4.8497C10.3908 4.38343 9.6092 4.38343 9.19808 4.8497L7.22697 7.08522Z"
+                              fill="currentColor"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
+                        </button>
+                      </div>
                     </div>
-                  </button>
+                    <div
+                      class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_justifyContent_space-between_base__19njorx1k"
+                      data-ictinus="test-version"
+                    >
+                      <button
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        class="emotion-7"
+                        data-react-aria-pressable="true"
+                        data-slot="button"
+                        data-testid="icon-button"
+                        id="react-aria-:test-id:"
+                        tabindex="0"
+                        type="button"
+                      >
+                        <svg
+                          class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
+                          data-ictinus="test-version"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                            fill="currentColor"
+                          />
+                          <path
+                            d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                            fill="currentColor"
+                          />
+                          <path
+                            d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </th>
               <th
                 aria-sort="none"
-                class="TableHeaderCell_cell__u8v29c4 properties_borderColor_decorative.default_base__19njorx1vy TableHeaderCell__u8v29c1 TableHeaderCell__u8v29c0 TableHeaderCell_cell_pinned_false__u8v29c5 TableHeaderCell__u8v29c2 DataTableBody_cell__1boh8d7d properties_backgroundColor_default_base__19njorx1me DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                class="TableHeaderCell_cell__u8v29c4 properties_borderColor_decorative.default_base__19njorx1w2 TableHeaderCell__u8v29c1 TableHeaderCell__u8v29c0 TableHeaderCell_cell_pinned_false__u8v29c5 TableHeaderCell__u8v29c2 ActionsRoot__11x85c11 ActionsRoot__11x85c10 DataTableBody_cell__1boh8d7d properties_backgroundColor_default_base__19njorx1mi DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2g"
                 colspan="1"
                 data-ictinus="test-version"
                 style="--_1boh8d71: 48px; --_1boh8d70: 150;"
               >
                 <div
-                  class="TableHeaderCell_content__u8v29c9 properties_color_secondary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1vy TableHeaderCell__u8v29c7 TableHeaderCell_content_size_sm__u8v29ca properties_backgroundColor_default_base__19njorx1me properties_width_full_base__19njorx68 properties_height_11_base__19njorx7o properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  class="TableHeaderCell_content__u8v29c9 properties_color_secondary_base__19njorx236 properties_borderColor_decorative.default_base__19njorx1w2 TableHeaderCell__u8v29c7 TableHeaderCell_content_size_sm__u8v29ca properties_backgroundColor_default_base__19njorx1mi properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w"
                   data-ictinus="test-version"
                 >
                   <div
-                    class="DataTableHeaderCell_handle__17goizn7 properties_borderColor_decorative.default_base__19njorx1vy DataTableHeaderCell__17goizn6 DataTableHeaderCell_handle_resizing_false__17goizn8 properties_height_full_base__19njorx90"
+                    class="properties_display_flex_base__19njorx2g properties_alignItems_center_base__19njorx4 properties_gap_sm_base__19njorxnc properties_justifyContent_space-between_base__19njorx1k properties_flex_1_base__19njorx3c properties_flexDirection_row_base__19njorxkk"
                     data-ictinus="test-version"
-                  />
-                  Last Name
-                  <button
-                    style="background-color: transparent;"
-                    type="button"
                   >
                     <div
-                      class="properties_display_grid_base__19njorx2o"
+                      class="properties_display_flex_base__19njorx2g properties_alignItems_center_base__19njorx4 properties_gap_sm_base__19njorxnc properties_flexDirection_row_base__19njorxkk"
                       data-ictinus="test-version"
                     >
-                      <svg
-                        class="DataTableHeaderCell_icon__17goizn3 DataTableHeaderCell__17goizn0 DataTableHeaderCell_icon_active_true__17goizn5 DataTableHeaderCell__17goizn2 properties_height_5_base__19njorx70 properties_marginLeft_2_base__19njorxvw properties_marginRight_2_base__19njorxyg properties_width_5_base__19njorx48"
+                      <div
+                        class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 DataTableHeaderCell_handle__17goizn7 properties_borderColor_decorative.default_base__19njorx1w2 DataTableHeaderCell__17goizn6 DataTableHeaderCell_handle_resizing_false__17goizn8 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_justifyContent_space-between_base__19njorx1k properties_height_full_base__19njorx94"
                         data-ictinus="test-version"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          clip-rule="evenodd"
-                          d="M7.22697 12.9148C6.68904 12.3047 7.16777 11.4009 8.02888 11.4009H11.9711C12.8322 11.4009 13.311 12.3047 12.773 12.9148L10.8019 15.1503C10.3908 15.6166 9.6092 15.6166 9.19808 15.1503L7.22697 12.9148Z"
-                          fill="currentColor"
-                          fill-rule="evenodd"
-                        />
-                        <path
-                          clip-rule="evenodd"
-                          d="M7.22697 7.08522C6.68904 7.6953 7.16777 8.59906 8.02888 8.59906H11.9711C12.8322 8.59906 13.311 7.6953 12.773 7.08522L10.8019 4.8497C10.3908 4.38343 9.6092 4.38343 9.19808 4.8497L7.22697 7.08522Z"
-                          fill="currentColor"
-                          fill-rule="evenodd"
-                        />
-                      </svg>
-                      <svg
-                        class="DataTableHeaderCell_icon__17goizn3 DataTableHeaderCell__17goizn0 DataTableHeaderCell_icon_active_false__17goizn4 DataTableHeaderCell__17goizn1 properties_color_active_base__19njorx236 properties_height_5_base__19njorx70 properties_marginLeft_2_base__19njorxvw properties_marginRight_2_base__19njorxyg properties_width_5_base__19njorx48"
+                      />
+                      <span
+                        class="Text__ff5iyl6 Text_text_lineClamp_1__ff5iyl7 Text__ff5iyl0 Text__ff5iyl1 Text__ff5iyl2 properties_color_secondary_base__19njorx236"
                         data-ictinus="test-version"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
+                        role="button"
+                        tabindex="0"
                       >
-                        <path
-                          d="M15.7443 9.22808L10.6663 4.26717C10.5687 4.17185 10.464 4.10349 10.3522 4.06209C10.2403 4.0207 10.1253 4 10.007 4C9.88872 4 9.77366 4.0207 9.66182 4.06209C9.54995 4.10349 9.44524 4.17185 9.34768 4.26717L4.24311 9.25406C4.07261 9.42063 3.99179 9.61079 4.00066 9.82454C4.00954 10.0383 4.09922 10.2284 4.26971 10.395C4.44513 10.5616 4.64544 10.6436 4.87063 10.6412C5.09582 10.6388 5.29366 10.5543 5.46416 10.3878L9.18064 6.75696V15.1927C9.18064 15.4151 9.26145 15.6053 9.42307 15.7632C9.58469 15.9211 9.77933 16 10.007 16C10.2346 16 10.4293 15.9211 10.5909 15.7632C10.7525 15.6053 10.8333 15.4151 10.8333 15.1927V6.75696L14.5764 10.4138C14.7469 10.5803 14.9403 10.6593 15.1566 10.6506C15.373 10.6419 15.5688 10.5543 15.7443 10.3878C15.9148 10.2164 16 10.0219 16 9.80432C16 9.58672 15.9148 9.39464 15.7443 9.22808Z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                      <svg
-                        class="DataTableHeaderCell_icon__17goizn3 DataTableHeaderCell__17goizn0 DataTableHeaderCell_icon_active_false__17goizn4 DataTableHeaderCell__17goizn1 properties_color_active_base__19njorx236 properties_height_5_base__19njorx70 properties_marginLeft_2_base__19njorxvw properties_marginRight_2_base__19njorxyg properties_width_5_base__19njorx48"
+                        Last Name
+                      </span>
+                      <div
+                        class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 properties_alignItems_center_base__19njorx4 properties_display_grid_base__19njorx2s properties_justifyContent_space-between_base__19njorx1k properties_placeItems_center_base__19njorx14 properties_position_relative_base__19njorxlc properties_flexDirection_row_base__19njorxkk"
                         data-ictinus="test-version"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        <path
-                          d="M15.7443 10.7719L10.6663 15.7328C10.5687 15.8281 10.464 15.8965 10.3522 15.9379C10.2403 15.9793 10.1253 16 10.007 16C9.88872 16 9.77366 15.9793 9.66182 15.9379C9.54995 15.8965 9.44524 15.8281 9.34768 15.7328L4.24311 10.7459C4.07261 10.5794 3.99179 10.3892 4.00066 10.1755C4.00954 9.96173 4.09922 9.77157 4.26971 9.605C4.44513 9.43845 4.64544 9.35637 4.87063 9.35877C5.09582 9.36119 5.29366 9.44567 5.46416 9.61223L9.18064 13.243V4.8073C9.18064 4.58489 9.26145 4.39474 9.42307 4.23685C9.58469 4.07895 9.77933 4 10.007 4C10.2346 4 10.4293 4.07895 10.5909 4.23685C10.7525 4.39474 10.8333 4.58489 10.8333 4.8073V13.243L14.5764 9.58623C14.7469 9.41967 14.9403 9.34072 15.1566 9.34938C15.373 9.35806 15.5688 9.44567 15.7443 9.61223C15.9148 9.78361 16 9.97809 16 10.1957C16 10.4133 15.9148 10.6054 15.7443 10.7719Z"
-                          fill="currentColor"
-                        />
-                      </svg>
+                        <button
+                          class="emotion-7"
+                          data-slot="button"
+                          data-testid="icon-button"
+                          type="button"
+                        >
+                          <svg
+                            class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
+                            data-ictinus="test-version"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              clip-rule="evenodd"
+                              d="M7.22697 12.9148C6.68904 12.3047 7.16777 11.4009 8.02888 11.4009H11.9711C12.8322 11.4009 13.311 12.3047 12.773 12.9148L10.8019 15.1503C10.3908 15.6166 9.6092 15.6166 9.19808 15.1503L7.22697 12.9148Z"
+                              fill="currentColor"
+                              fill-rule="evenodd"
+                            />
+                            <path
+                              clip-rule="evenodd"
+                              d="M7.22697 7.08522C6.68904 7.6953 7.16777 8.59906 8.02888 8.59906H11.9711C12.8322 8.59906 13.311 7.6953 12.773 7.08522L10.8019 4.8497C10.3908 4.38343 9.6092 4.38343 9.19808 4.8497L7.22697 7.08522Z"
+                              fill="currentColor"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
+                        </button>
+                      </div>
                     </div>
-                  </button>
+                    <div
+                      class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_justifyContent_space-between_base__19njorx1k"
+                      data-ictinus="test-version"
+                    >
+                      <button
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        class="emotion-7"
+                        data-react-aria-pressable="true"
+                        data-slot="button"
+                        data-testid="icon-button"
+                        id="react-aria-:test-id:"
+                        tabindex="0"
+                        type="button"
+                      >
+                        <svg
+                          class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
+                          data-ictinus="test-version"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                            fill="currentColor"
+                          />
+                          <path
+                            d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                            fill="currentColor"
+                          />
+                          <path
+                            d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </th>
               <th
                 aria-sort="none"
-                class="TableHeaderCell_cell__u8v29c4 properties_borderColor_decorative.default_base__19njorx1vy TableHeaderCell__u8v29c1 TableHeaderCell__u8v29c0 TableHeaderCell_cell_pinned_false__u8v29c5 TableHeaderCell__u8v29c2 DataTableBody_cell__1boh8d7d properties_backgroundColor_default_base__19njorx1me DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                class="TableHeaderCell_cell__u8v29c4 properties_borderColor_decorative.default_base__19njorx1w2 TableHeaderCell__u8v29c1 TableHeaderCell__u8v29c0 TableHeaderCell_cell_pinned_false__u8v29c5 TableHeaderCell__u8v29c2 ActionsRoot__11x85c11 ActionsRoot__11x85c10 DataTableBody_cell__1boh8d7d properties_backgroundColor_default_base__19njorx1mi DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2g"
                 colspan="1"
                 data-ictinus="test-version"
                 style="--_1boh8d71: 48px; --_1boh8d70: 150;"
               >
                 <div
-                  class="TableHeaderCell_content__u8v29c9 properties_color_secondary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1vy TableHeaderCell__u8v29c7 TableHeaderCell_content_size_sm__u8v29ca properties_backgroundColor_default_base__19njorx1me properties_width_full_base__19njorx68 properties_height_11_base__19njorx7o properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  class="TableHeaderCell_content__u8v29c9 properties_color_secondary_base__19njorx236 properties_borderColor_decorative.default_base__19njorx1w2 TableHeaderCell__u8v29c7 TableHeaderCell_content_size_sm__u8v29ca properties_backgroundColor_default_base__19njorx1mi properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w properties_justifyContent_flex-end_base__19njorx1g"
                   data-ictinus="test-version"
                 >
                   <div
-                    class="DataTableHeaderCell_handle__17goizn7 properties_borderColor_decorative.default_base__19njorx1vy DataTableHeaderCell__17goizn6 DataTableHeaderCell_handle_resizing_false__17goizn8 properties_height_full_base__19njorx90"
+                    class="properties_display_flex_base__19njorx2g properties_alignItems_center_base__19njorx4 properties_gap_sm_base__19njorxnc properties_justifyContent_space-between_base__19njorx1k properties_flex_1_base__19njorx3c properties_flexDirection_row-reverse_base__19njorxks"
                     data-ictinus="test-version"
-                  />
-                  Age
-                  <button
-                    style="background-color: transparent;"
-                    type="button"
                   >
                     <div
-                      class="properties_display_grid_base__19njorx2o"
+                      class="properties_display_flex_base__19njorx2g properties_alignItems_center_base__19njorx4 properties_gap_sm_base__19njorxnc properties_flexDirection_row-reverse_base__19njorxks"
                       data-ictinus="test-version"
                     >
-                      <svg
-                        class="DataTableHeaderCell_icon__17goizn3 DataTableHeaderCell__17goizn0 DataTableHeaderCell_icon_active_true__17goizn5 DataTableHeaderCell__17goizn2 properties_height_5_base__19njorx70 properties_marginLeft_2_base__19njorxvw properties_marginRight_2_base__19njorxyg properties_width_5_base__19njorx48"
+                      <div
+                        class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 DataTableHeaderCell_handle__17goizn7 properties_borderColor_decorative.default_base__19njorx1w2 DataTableHeaderCell__17goizn6 DataTableHeaderCell_handle_resizing_false__17goizn8 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_justifyContent_space-between_base__19njorx1k properties_height_full_base__19njorx94"
                         data-ictinus="test-version"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          clip-rule="evenodd"
-                          d="M7.22697 12.9148C6.68904 12.3047 7.16777 11.4009 8.02888 11.4009H11.9711C12.8322 11.4009 13.311 12.3047 12.773 12.9148L10.8019 15.1503C10.3908 15.6166 9.6092 15.6166 9.19808 15.1503L7.22697 12.9148Z"
-                          fill="currentColor"
-                          fill-rule="evenodd"
-                        />
-                        <path
-                          clip-rule="evenodd"
-                          d="M7.22697 7.08522C6.68904 7.6953 7.16777 8.59906 8.02888 8.59906H11.9711C12.8322 8.59906 13.311 7.6953 12.773 7.08522L10.8019 4.8497C10.3908 4.38343 9.6092 4.38343 9.19808 4.8497L7.22697 7.08522Z"
-                          fill="currentColor"
-                          fill-rule="evenodd"
-                        />
-                      </svg>
-                      <svg
-                        class="DataTableHeaderCell_icon__17goizn3 DataTableHeaderCell__17goizn0 DataTableHeaderCell_icon_active_false__17goizn4 DataTableHeaderCell__17goizn1 properties_color_active_base__19njorx236 properties_height_5_base__19njorx70 properties_marginLeft_2_base__19njorxvw properties_marginRight_2_base__19njorxyg properties_width_5_base__19njorx48"
+                      />
+                      <span
+                        class="Text__ff5iyl6 Text_text_lineClamp_1__ff5iyl7 Text__ff5iyl0 Text__ff5iyl1 Text__ff5iyl2 properties_color_secondary_base__19njorx236"
                         data-ictinus="test-version"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
+                        role="button"
+                        tabindex="0"
                       >
-                        <path
-                          d="M15.7443 9.22808L10.6663 4.26717C10.5687 4.17185 10.464 4.10349 10.3522 4.06209C10.2403 4.0207 10.1253 4 10.007 4C9.88872 4 9.77366 4.0207 9.66182 4.06209C9.54995 4.10349 9.44524 4.17185 9.34768 4.26717L4.24311 9.25406C4.07261 9.42063 3.99179 9.61079 4.00066 9.82454C4.00954 10.0383 4.09922 10.2284 4.26971 10.395C4.44513 10.5616 4.64544 10.6436 4.87063 10.6412C5.09582 10.6388 5.29366 10.5543 5.46416 10.3878L9.18064 6.75696V15.1927C9.18064 15.4151 9.26145 15.6053 9.42307 15.7632C9.58469 15.9211 9.77933 16 10.007 16C10.2346 16 10.4293 15.9211 10.5909 15.7632C10.7525 15.6053 10.8333 15.4151 10.8333 15.1927V6.75696L14.5764 10.4138C14.7469 10.5803 14.9403 10.6593 15.1566 10.6506C15.373 10.6419 15.5688 10.5543 15.7443 10.3878C15.9148 10.2164 16 10.0219 16 9.80432C16 9.58672 15.9148 9.39464 15.7443 9.22808Z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                      <svg
-                        class="DataTableHeaderCell_icon__17goizn3 DataTableHeaderCell__17goizn0 DataTableHeaderCell_icon_active_false__17goizn4 DataTableHeaderCell__17goizn1 properties_color_active_base__19njorx236 properties_height_5_base__19njorx70 properties_marginLeft_2_base__19njorxvw properties_marginRight_2_base__19njorxyg properties_width_5_base__19njorx48"
+                        Age
+                      </span>
+                      <div
+                        class="properties_height_3_base__19njorx6w properties_width_3_base__19njorx44 properties_display_flex_base__19njorx2g properties_alignItems_center_base__19njorx4 properties_justifyContent_center_base__19njorx1c"
                         data-ictinus="test-version"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
+                        tabindex="0"
                       >
-                        <path
-                          d="M15.7443 10.7719L10.6663 15.7328C10.5687 15.8281 10.464 15.8965 10.3522 15.9379C10.2403 15.9793 10.1253 16 10.007 16C9.88872 16 9.77366 15.9793 9.66182 15.9379C9.54995 15.8965 9.44524 15.8281 9.34768 15.7328L4.24311 10.7459C4.07261 10.5794 3.99179 10.3892 4.00066 10.1755C4.00954 9.96173 4.09922 9.77157 4.26971 9.605C4.44513 9.43845 4.64544 9.35637 4.87063 9.35877C5.09582 9.36119 5.29366 9.44567 5.46416 9.61223L9.18064 13.243V4.8073C9.18064 4.58489 9.26145 4.39474 9.42307 4.23685C9.58469 4.07895 9.77933 4 10.007 4C10.2346 4 10.4293 4.07895 10.5909 4.23685C10.7525 4.39474 10.8333 4.58489 10.8333 4.8073V13.243L14.5764 9.58623C14.7469 9.41967 14.9403 9.34072 15.1566 9.34938C15.373 9.35806 15.5688 9.44567 15.7443 9.61223C15.9148 9.78361 16 9.97809 16 10.1957C16 10.4133 15.9148 10.6054 15.7443 10.7719Z"
-                          fill="currentColor"
-                        />
-                      </svg>
+                        <svg
+                          class="properties_height_3_base__19njorx6w properties_width_3_base__19njorx44"
+                          data-ictinus="test-version"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M6.88122 17.3701C7.85478 17.79 8.89481 18 10.0013 18C11.1111 18 12.1541 17.7896 13.1301 17.3687C14.1062 16.9478 14.9553 16.3766 15.6773 15.6552C16.3994 14.9337 16.967 14.0884 17.3802 13.1192C17.7934 12.15 18 11.1104 18 10.0003C18 8.89025 17.7933 7.84706 17.3799 6.87073C16.9666 5.8944 16.3986 5.04513 15.6761 4.32292C14.9536 3.60072 14.1042 3.03301 13.1278 2.61981C12.1514 2.2066 11.1084 2 9.9987 2C8.89371 2 7.8553 2.20669 6.88345 2.62006C5.91159 3.03343 5.06506 3.60129 4.34387 4.32362C3.62269 5.04596 3.05175 5.89538 2.63105 6.87186C2.21035 7.84835 2 8.8915 2 10.0013C2 11.1078 2.21005 12.1476 2.63016 13.1208C3.05026 14.094 3.62041 14.9405 4.34059 15.6604C5.06076 16.3803 5.90763 16.9502 6.88122 17.3701ZM10.6094 13.7549C10.4461 13.9183 10.2495 14 10.0197 14C9.78983 14 9.59317 13.9183 9.42969 13.7549C9.26622 13.5914 9.18448 13.3948 9.18448 13.1651V10.0582C9.18448 9.82847 9.26613 9.63188 9.42944 9.46844C9.59274 9.30501 9.78931 9.2233 10.0192 9.2233C10.249 9.2233 10.4457 9.30501 10.6091 9.46844C10.7726 9.63188 10.8544 9.82847 10.8544 10.0582V13.1651C10.8544 13.3948 10.7727 13.5914 10.6094 13.7549ZM9.9751 7.90001C10.5964 7.90001 11.1001 7.39633 11.1001 6.77501C11.1001 6.15369 10.5964 5.65001 9.9751 5.65001C9.35378 5.65001 8.8501 6.15369 8.8501 6.77501C8.8501 7.39633 9.35378 7.90001 9.9751 7.90001Z"
+                            fill="currentColor"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                      </div>
+                      <div
+                        class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 properties_alignItems_center_base__19njorx4 properties_display_grid_base__19njorx2s properties_justifyContent_space-between_base__19njorx1k properties_placeItems_center_base__19njorx14 properties_position_relative_base__19njorxlc properties_flexDirection_row-reverse_base__19njorxks"
+                        data-ictinus="test-version"
+                      >
+                        <button
+                          class="emotion-7"
+                          data-slot="button"
+                          data-testid="icon-button"
+                          type="button"
+                        >
+                          <svg
+                            class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
+                            data-ictinus="test-version"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              clip-rule="evenodd"
+                              d="M7.22697 12.9148C6.68904 12.3047 7.16777 11.4009 8.02888 11.4009H11.9711C12.8322 11.4009 13.311 12.3047 12.773 12.9148L10.8019 15.1503C10.3908 15.6166 9.6092 15.6166 9.19808 15.1503L7.22697 12.9148Z"
+                              fill="currentColor"
+                              fill-rule="evenodd"
+                            />
+                            <path
+                              clip-rule="evenodd"
+                              d="M7.22697 7.08522C6.68904 7.6953 7.16777 8.59906 8.02888 8.59906H11.9711C12.8322 8.59906 13.311 7.6953 12.773 7.08522L10.8019 4.8497C10.3908 4.38343 9.6092 4.38343 9.19808 4.8497L7.22697 7.08522Z"
+                              fill="currentColor"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
+                        </button>
+                      </div>
                     </div>
-                  </button>
+                    <div
+                      class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_justifyContent_space-between_base__19njorx1k"
+                      data-ictinus="test-version"
+                    >
+                      <button
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        class="emotion-7"
+                        data-react-aria-pressable="true"
+                        data-slot="button"
+                        data-testid="icon-button"
+                        id="react-aria-:test-id:"
+                        tabindex="0"
+                        type="button"
+                      >
+                        <svg
+                          class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
+                          data-ictinus="test-version"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                            fill="currentColor"
+                          />
+                          <path
+                            d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                            fill="currentColor"
+                          />
+                          <path
+                            d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </th>
               <th
                 aria-sort="none"
-                class="TableHeaderCell_cell__u8v29c4 properties_borderColor_decorative.default_base__19njorx1vy TableHeaderCell__u8v29c1 TableHeaderCell__u8v29c0 TableHeaderCell_cell_pinned_false__u8v29c5 TableHeaderCell__u8v29c2 DataTableBody_cell__1boh8d7d properties_backgroundColor_default_base__19njorx1me DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                class="TableHeaderCell_cell__u8v29c4 properties_borderColor_decorative.default_base__19njorx1w2 TableHeaderCell__u8v29c1 TableHeaderCell__u8v29c0 TableHeaderCell_cell_pinned_false__u8v29c5 TableHeaderCell__u8v29c2 ActionsRoot__11x85c11 ActionsRoot__11x85c10 DataTableBody_cell__1boh8d7d properties_backgroundColor_default_base__19njorx1mi DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2g"
                 colspan="1"
                 data-ictinus="test-version"
                 style="--_1boh8d71: 48px; --_1boh8d70: 150;"
               >
                 <div
-                  class="TableHeaderCell_content__u8v29c9 properties_color_secondary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1vy TableHeaderCell__u8v29c7 TableHeaderCell_content_size_sm__u8v29ca properties_backgroundColor_default_base__19njorx1me properties_width_full_base__19njorx68 properties_height_11_base__19njorx7o properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  class="TableHeaderCell_content__u8v29c9 properties_color_secondary_base__19njorx236 properties_borderColor_decorative.default_base__19njorx1w2 TableHeaderCell__u8v29c7 TableHeaderCell_content_size_sm__u8v29ca properties_backgroundColor_default_base__19njorx1mi properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w"
                   data-ictinus="test-version"
                 >
                   <div
-                    class="DataTableHeaderCell_handle__17goizn7 properties_borderColor_decorative.default_base__19njorx1vy DataTableHeaderCell__17goizn6 DataTableHeaderCell_handle_resizing_false__17goizn8 properties_height_full_base__19njorx90"
+                    class="properties_display_flex_base__19njorx2g properties_alignItems_center_base__19njorx4 properties_gap_sm_base__19njorxnc properties_justifyContent_space-between_base__19njorx1k properties_flex_1_base__19njorx3c properties_flexDirection_row_base__19njorxkk"
                     data-ictinus="test-version"
-                  />
-                  Job
-                  <button
-                    style="background-color: transparent;"
-                    type="button"
                   >
                     <div
-                      class="properties_display_grid_base__19njorx2o"
+                      class="properties_display_flex_base__19njorx2g properties_alignItems_center_base__19njorx4 properties_gap_sm_base__19njorxnc properties_flexDirection_row_base__19njorxkk"
                       data-ictinus="test-version"
                     >
-                      <svg
-                        class="DataTableHeaderCell_icon__17goizn3 DataTableHeaderCell__17goizn0 DataTableHeaderCell_icon_active_true__17goizn5 DataTableHeaderCell__17goizn2 properties_height_5_base__19njorx70 properties_marginLeft_2_base__19njorxvw properties_marginRight_2_base__19njorxyg properties_width_5_base__19njorx48"
+                      <div
+                        class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 DataTableHeaderCell_handle__17goizn7 properties_borderColor_decorative.default_base__19njorx1w2 DataTableHeaderCell__17goizn6 DataTableHeaderCell_handle_resizing_false__17goizn8 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_justifyContent_space-between_base__19njorx1k properties_height_full_base__19njorx94"
                         data-ictinus="test-version"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          clip-rule="evenodd"
-                          d="M7.22697 12.9148C6.68904 12.3047 7.16777 11.4009 8.02888 11.4009H11.9711C12.8322 11.4009 13.311 12.3047 12.773 12.9148L10.8019 15.1503C10.3908 15.6166 9.6092 15.6166 9.19808 15.1503L7.22697 12.9148Z"
-                          fill="currentColor"
-                          fill-rule="evenodd"
-                        />
-                        <path
-                          clip-rule="evenodd"
-                          d="M7.22697 7.08522C6.68904 7.6953 7.16777 8.59906 8.02888 8.59906H11.9711C12.8322 8.59906 13.311 7.6953 12.773 7.08522L10.8019 4.8497C10.3908 4.38343 9.6092 4.38343 9.19808 4.8497L7.22697 7.08522Z"
-                          fill="currentColor"
-                          fill-rule="evenodd"
-                        />
-                      </svg>
-                      <svg
-                        class="DataTableHeaderCell_icon__17goizn3 DataTableHeaderCell__17goizn0 DataTableHeaderCell_icon_active_false__17goizn4 DataTableHeaderCell__17goizn1 properties_color_active_base__19njorx236 properties_height_5_base__19njorx70 properties_marginLeft_2_base__19njorxvw properties_marginRight_2_base__19njorxyg properties_width_5_base__19njorx48"
+                      />
+                      <span
+                        class="Text__ff5iyl6 Text_text_lineClamp_1__ff5iyl7 Text__ff5iyl0 Text__ff5iyl1 Text__ff5iyl2 properties_color_secondary_base__19njorx236"
                         data-ictinus="test-version"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
+                        role="button"
+                        tabindex="0"
                       >
-                        <path
-                          d="M15.7443 9.22808L10.6663 4.26717C10.5687 4.17185 10.464 4.10349 10.3522 4.06209C10.2403 4.0207 10.1253 4 10.007 4C9.88872 4 9.77366 4.0207 9.66182 4.06209C9.54995 4.10349 9.44524 4.17185 9.34768 4.26717L4.24311 9.25406C4.07261 9.42063 3.99179 9.61079 4.00066 9.82454C4.00954 10.0383 4.09922 10.2284 4.26971 10.395C4.44513 10.5616 4.64544 10.6436 4.87063 10.6412C5.09582 10.6388 5.29366 10.5543 5.46416 10.3878L9.18064 6.75696V15.1927C9.18064 15.4151 9.26145 15.6053 9.42307 15.7632C9.58469 15.9211 9.77933 16 10.007 16C10.2346 16 10.4293 15.9211 10.5909 15.7632C10.7525 15.6053 10.8333 15.4151 10.8333 15.1927V6.75696L14.5764 10.4138C14.7469 10.5803 14.9403 10.6593 15.1566 10.6506C15.373 10.6419 15.5688 10.5543 15.7443 10.3878C15.9148 10.2164 16 10.0219 16 9.80432C16 9.58672 15.9148 9.39464 15.7443 9.22808Z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                      <svg
-                        class="DataTableHeaderCell_icon__17goizn3 DataTableHeaderCell__17goizn0 DataTableHeaderCell_icon_active_false__17goizn4 DataTableHeaderCell__17goizn1 properties_color_active_base__19njorx236 properties_height_5_base__19njorx70 properties_marginLeft_2_base__19njorxvw properties_marginRight_2_base__19njorxyg properties_width_5_base__19njorx48"
+                        Job
+                      </span>
+                      <div
+                        class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 properties_alignItems_center_base__19njorx4 properties_display_grid_base__19njorx2s properties_justifyContent_space-between_base__19njorx1k properties_placeItems_center_base__19njorx14 properties_position_relative_base__19njorxlc properties_flexDirection_row_base__19njorxkk"
                         data-ictinus="test-version"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        <path
-                          d="M15.7443 10.7719L10.6663 15.7328C10.5687 15.8281 10.464 15.8965 10.3522 15.9379C10.2403 15.9793 10.1253 16 10.007 16C9.88872 16 9.77366 15.9793 9.66182 15.9379C9.54995 15.8965 9.44524 15.8281 9.34768 15.7328L4.24311 10.7459C4.07261 10.5794 3.99179 10.3892 4.00066 10.1755C4.00954 9.96173 4.09922 9.77157 4.26971 9.605C4.44513 9.43845 4.64544 9.35637 4.87063 9.35877C5.09582 9.36119 5.29366 9.44567 5.46416 9.61223L9.18064 13.243V4.8073C9.18064 4.58489 9.26145 4.39474 9.42307 4.23685C9.58469 4.07895 9.77933 4 10.007 4C10.2346 4 10.4293 4.07895 10.5909 4.23685C10.7525 4.39474 10.8333 4.58489 10.8333 4.8073V13.243L14.5764 9.58623C14.7469 9.41967 14.9403 9.34072 15.1566 9.34938C15.373 9.35806 15.5688 9.44567 15.7443 9.61223C15.9148 9.78361 16 9.97809 16 10.1957C16 10.4133 15.9148 10.6054 15.7443 10.7719Z"
-                          fill="currentColor"
-                        />
-                      </svg>
+                        <button
+                          class="emotion-7"
+                          data-slot="button"
+                          data-testid="icon-button"
+                          type="button"
+                        >
+                          <svg
+                            class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
+                            data-ictinus="test-version"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              clip-rule="evenodd"
+                              d="M7.22697 12.9148C6.68904 12.3047 7.16777 11.4009 8.02888 11.4009H11.9711C12.8322 11.4009 13.311 12.3047 12.773 12.9148L10.8019 15.1503C10.3908 15.6166 9.6092 15.6166 9.19808 15.1503L7.22697 12.9148Z"
+                              fill="currentColor"
+                              fill-rule="evenodd"
+                            />
+                            <path
+                              clip-rule="evenodd"
+                              d="M7.22697 7.08522C6.68904 7.6953 7.16777 8.59906 8.02888 8.59906H11.9711C12.8322 8.59906 13.311 7.6953 12.773 7.08522L10.8019 4.8497C10.3908 4.38343 9.6092 4.38343 9.19808 4.8497L7.22697 7.08522Z"
+                              fill="currentColor"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
+                        </button>
+                      </div>
                     </div>
-                  </button>
+                    <div
+                      class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_justifyContent_space-between_base__19njorx1k"
+                      data-ictinus="test-version"
+                    >
+                      <button
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        class="emotion-7"
+                        data-react-aria-pressable="true"
+                        data-slot="button"
+                        data-testid="icon-button"
+                        id="react-aria-:test-id:"
+                        tabindex="0"
+                        type="button"
+                      >
+                        <svg
+                          class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
+                          data-ictinus="test-version"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                            fill="currentColor"
+                          />
+                          <path
+                            d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                            fill="currentColor"
+                          />
+                          <path
+                            d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
                 </div>
+              </th>
+              <th
+                aria-sort="none"
+                class="TableHeaderCell_cell__u8v29c4 properties_borderColor_decorative.default_base__19njorx1w2 TableHeaderCell__u8v29c1 TableHeaderCell__u8v29c0 TableHeaderCell_cell_pinned_false__u8v29c5 TableHeaderCell__u8v29c2 ActionsRoot__11x85c11 ActionsRoot__11x85c10 DataTableBody_cell__1boh8d7d properties_backgroundColor_default_base__19njorx1mi DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2g"
+                colspan="1"
+                data-ictinus="test-version"
+                style="--_1boh8d71: 48px; --_1boh8d70: 150;"
+              >
+                <div
+                  class="TableHeaderCell_content__u8v29c9 properties_color_secondary_base__19njorx236 properties_borderColor_decorative.default_base__19njorx1w2 TableHeaderCell__u8v29c7 TableHeaderCell_content_size_sm__u8v29ca properties_backgroundColor_default_base__19njorx1mi properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w"
+                  data-ictinus="test-version"
+                >
+                  <div
+                    class="properties_display_flex_base__19njorx2g properties_alignItems_center_base__19njorx4 properties_gap_sm_base__19njorxnc properties_justifyContent_space-between_base__19njorx1k properties_flex_1_base__19njorx3c properties_flexDirection_row_base__19njorxkk"
+                    data-ictinus="test-version"
+                  >
+                    <div
+                      class="properties_display_flex_base__19njorx2g properties_alignItems_center_base__19njorx4 properties_gap_sm_base__19njorxnc properties_flexDirection_row_base__19njorxkk"
+                      data-ictinus="test-version"
+                    >
+                      <div
+                        class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 DataTableHeaderCell_handle__17goizn7 properties_borderColor_decorative.default_base__19njorx1w2 DataTableHeaderCell__17goizn6 DataTableHeaderCell_handle_resizing_false__17goizn8 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_justifyContent_space-between_base__19njorx1k properties_height_full_base__19njorx94"
+                        data-ictinus="test-version"
+                      />
+                      <span
+                        class="Text__ff5iyl6 Text_text_lineClamp_1__ff5iyl7 Text__ff5iyl0 Text__ff5iyl1 Text__ff5iyl2 properties_color_secondary_base__19njorx236"
+                        data-ictinus="test-version"
+                        role="button"
+                        tabindex="0"
+                      >
+                        Address
+                      </span>
+                      <div
+                        class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 properties_alignItems_center_base__19njorx4 properties_display_grid_base__19njorx2s properties_justifyContent_space-between_base__19njorx1k properties_placeItems_center_base__19njorx14 properties_position_relative_base__19njorxlc properties_flexDirection_row_base__19njorxkk"
+                        data-ictinus="test-version"
+                      >
+                        <button
+                          class="emotion-7"
+                          data-slot="button"
+                          data-testid="icon-button"
+                          type="button"
+                        >
+                          <svg
+                            class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
+                            data-ictinus="test-version"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              clip-rule="evenodd"
+                              d="M7.22697 12.9148C6.68904 12.3047 7.16777 11.4009 8.02888 11.4009H11.9711C12.8322 11.4009 13.311 12.3047 12.773 12.9148L10.8019 15.1503C10.3908 15.6166 9.6092 15.6166 9.19808 15.1503L7.22697 12.9148Z"
+                              fill="currentColor"
+                              fill-rule="evenodd"
+                            />
+                            <path
+                              clip-rule="evenodd"
+                              d="M7.22697 7.08522C6.68904 7.6953 7.16777 8.59906 8.02888 8.59906H11.9711C12.8322 8.59906 13.311 7.6953 12.773 7.08522L10.8019 4.8497C10.3908 4.38343 9.6092 4.38343 9.19808 4.8497L7.22697 7.08522Z"
+                              fill="currentColor"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <div
+                      class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_justifyContent_space-between_base__19njorx1k"
+                      data-ictinus="test-version"
+                    >
+                      <button
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        class="emotion-7"
+                        data-react-aria-pressable="true"
+                        data-slot="button"
+                        data-testid="icon-button"
+                        id="react-aria-:test-id:"
+                        tabindex="0"
+                        type="button"
+                      >
+                        <svg
+                          class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
+                          data-ictinus="test-version"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                            fill="currentColor"
+                          />
+                          <path
+                            d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                            fill="currentColor"
+                          />
+                          <path
+                            d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </th>
+              <th
+                class="TableHeaderCell_cell__u8v29c4 properties_borderColor_decorative.default_base__19njorx1w2 TableHeaderCell__u8v29c1 TableHeaderCell__u8v29c0 TableHeaderCell_cell_pinned_false__u8v29c5 TableHeaderCell__u8v29c2 ActionsRoot__11x85c11 ActionsRoot__11x85c10 DataTableBody_cell__1boh8d7d properties_backgroundColor_default_base__19njorx1mi DataTableBody__1boh8d78 DataTableBody_cell_resizable_false__1boh8d7g DataTableBody__1boh8d7b properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2g"
+                colspan="1"
+                data-ictinus="test-version"
+                style="--_1boh8d71: 48px; --_1boh8d70: 48;"
+              >
+                <div
+                  class="TableHeaderCell_content__u8v29c9 properties_color_secondary_base__19njorx236 properties_borderColor_decorative.default_base__19njorx1w2 TableHeaderCell__u8v29c7 TableHeaderCell_content_size_sm__u8v29ca properties_backgroundColor_default_base__19njorx1mi properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w"
+                  data-ictinus="test-version"
+                />
               </th>
             </tr>
           </thead>
           <tbody
-            class="TableBody__1vz5ise0 properties_display_grid_base__19njorx2o"
+            class="TableBody__1vz5ise0 properties_display_grid_base__19njorx2s"
             data-ictinus="test-version"
           >
             <tr
-              aria-labelledby=":r1:"
+              aria-labelledby=":rk:"
               aria-selected="false"
-              class="TableRow_row__7cjz1b2 TableRow__7cjz1b0 TableRow__7cjz1b1 properties_width_full_base__19njorx68 properties_display_flex_base__19njorx2c"
+              class="TableRow_row__7cjz1b2 TableRow__7cjz1b0 TableRow__7cjz1b1 properties_width_full_base__19njorx6c properties_display_flex_base__19njorx2g"
               data-focus-visible=""
               data-ictinus="test-version"
               tabindex="0"
             >
               <td
-                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1me properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya30 TableCell_cell_pinned_true__f31ya35 TableCell__f31ya32 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_pinned_left__1boh8d7e DataTableBody__1boh8d79 DataTableBody_cell_resizable_false__1boh8d7g DataTableBody__1boh8d7b properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1mi properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya30 TableCell_cell_pinned_true__f31ya35 TableCell__f31ya32 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_pinned_left__1boh8d7e DataTableBody__1boh8d79 DataTableBody_cell_resizable_false__1boh8d7g DataTableBody__1boh8d7b properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2g"
                 data-ictinus="test-version"
                 data-pinned=""
                 style="--_1boh8d71: 0px; --_1boh8d70: 48;"
               >
                 <div
-                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22y properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya36 properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya36 TableCell_content_size_sm__f31ya39 properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w"
                   data-ictinus="test-version"
                 >
                   <div
-                    class="emotion-0"
+                    class="emotion-1"
                   >
                     <label
-                      class="emotion-1"
+                      class="emotion-2"
                       data-rac=""
                       data-react-aria-pressable="true"
                       data-testid="ictinus_checkbox"
@@ -504,15 +930,15 @@
                         />
                       </span>
                       <div
-                        class="emotion-2 emotion-3"
+                        class="emotion-3 emotion-4"
                       >
                         <div
-                          class="emotion-4 emotion-3"
+                          class="emotion-5 emotion-4"
                           data-role="checkbox-icon"
                         >
                           <div>
                             <svg
-                              class="properties_color_inverted.primary_base__19njorx23q properties_height_5_base__19njorx70 properties_width_5_base__19njorx48"
+                              class="properties_color_inverted.primary_base__19njorx23u properties_height_5_base__19njorx74 properties_width_5_base__19njorx4c"
                               data-ictinus="test-version"
                               data-testid="ictinus_unselected"
                               viewBox="0 0 20 20"
@@ -531,13 +957,13 @@
                 </div>
               </td>
               <td
-                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1me properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya30 TableCell_cell_pinned_true__f31ya35 TableCell__f31ya32 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_pinned_left__1boh8d7e DataTableBody__1boh8d79 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1mi properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya30 TableCell_cell_pinned_true__f31ya35 TableCell__f31ya32 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_pinned_left__1boh8d7e DataTableBody__1boh8d79 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2g"
                 data-ictinus="test-version"
                 data-pinned=""
                 style="--_1boh8d71: 48px; --_1boh8d70: 150;"
               >
                 <div
-                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22y properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya36 properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya36 TableCell_content_size_sm__f31ya39 properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w"
                   data-ictinus="test-version"
                 >
                   <span
@@ -549,65 +975,110 @@
                 </div>
               </td>
               <td
-                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1me properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1mi properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2g"
                 data-ictinus="test-version"
                 style="--_1boh8d70: 150;"
               >
                 <div
-                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22y properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya36 properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya36 TableCell_content_size_sm__f31ya39 properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w"
                   data-ictinus="test-version"
                 >
                   Green
                 </div>
               </td>
               <td
-                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1me properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1mi properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2g"
                 data-ictinus="test-version"
                 style="--_1boh8d70: 150;"
               >
                 <div
-                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22y properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya36 properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya36 TableCell_content_size_sm__f31ya39 properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w properties_justifyContent_flex-end_base__19njorx1g"
                   data-ictinus="test-version"
                 >
                   30
                 </div>
               </td>
               <td
-                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1me properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1mi properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2g"
                 data-ictinus="test-version"
                 style="--_1boh8d70: 150;"
               >
                 <div
-                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22y properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya36 properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya36 TableCell_content_size_sm__f31ya39 properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w"
                   data-ictinus="test-version"
                 >
                   Fashion Executive
                 </div>
               </td>
+              <td
+                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1mi properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2g"
+                data-ictinus="test-version"
+                style="--_1boh8d70: 150;"
+              >
+                <div
+                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya36 TableCell_content_size_sm__f31ya39 properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w"
+                  data-ictinus="test-version"
+                >
+                  <span
+                    class="Text__ff5iyl6 Text_text_lineClamp_1__ff5iyl7 Text__ff5iyl0 Text__ff5iyl1 Text__ff5iyl2"
+                    data-ictinus="test-version"
+                    tabindex="0"
+                  />
+                </div>
+              </td>
+              <td
+                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1mi properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_false__1boh8d7g DataTableBody__1boh8d7b properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2g"
+                data-ictinus="test-version"
+                style="--_1boh8d70: 48;"
+              >
+                <div
+                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya36 TableCell_content_size_sm__f31ya39 properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w"
+                  data-ictinus="test-version"
+                >
+                  <button
+                    class="emotion-7"
+                    data-slot="button"
+                    data-testid="icon-button"
+                    type="button"
+                  >
+                    <svg
+                      class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
+                      data-ictinus="test-version"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.64194 14.702L12.6836 10.7466C12.7965 10.6361 12.8774 10.5161 12.9264 10.3867C12.9755 10.2572 13 10.1283 13 10C13 9.86608 12.9755 9.7358 12.9264 9.60915C12.8774 9.48249 12.7965 9.36392 12.6836 9.25345L8.64194 5.29797C8.43898 5.09932 8.21607 5 7.9732 5C7.73034 5 7.50742 5.09932 7.30446 5.29797C7.10149 5.49661 7 5.71477 7 5.95246C7 6.19014 7.10149 6.40831 7.30446 6.60694L10.7714 10L7.30446 13.3931C7.10149 13.5917 7 13.8099 7 14.0475C7 14.2852 7.10149 14.5034 7.30446 14.702C7.50742 14.9007 7.73034 15 7.9732 15C8.21607 15 8.43898 14.9007 8.64194 14.702Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </td>
             </tr>
             <tr
-              aria-labelledby=":r3:"
+              aria-labelledby=":rn:"
               aria-selected="false"
-              class="TableRow_row__7cjz1b2 TableRow__7cjz1b0 TableRow__7cjz1b1 properties_width_full_base__19njorx68 properties_display_flex_base__19njorx2c"
+              class="TableRow_row__7cjz1b2 TableRow__7cjz1b0 TableRow__7cjz1b1 properties_width_full_base__19njorx6c properties_display_flex_base__19njorx2g"
               data-focus-visible=""
               data-ictinus="test-version"
               tabindex="0"
             >
               <td
-                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1me properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya30 TableCell_cell_pinned_true__f31ya35 TableCell__f31ya32 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_pinned_left__1boh8d7e DataTableBody__1boh8d79 DataTableBody_cell_resizable_false__1boh8d7g DataTableBody__1boh8d7b properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1mi properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya30 TableCell_cell_pinned_true__f31ya35 TableCell__f31ya32 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_pinned_left__1boh8d7e DataTableBody__1boh8d79 DataTableBody_cell_resizable_false__1boh8d7g DataTableBody__1boh8d7b properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2g"
                 data-ictinus="test-version"
                 data-pinned=""
                 style="--_1boh8d71: 0px; --_1boh8d70: 48;"
               >
                 <div
-                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22y properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya36 properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya36 TableCell_content_size_sm__f31ya39 properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w"
                   data-ictinus="test-version"
                 >
                   <div
-                    class="emotion-0"
+                    class="emotion-1"
                   >
                     <label
-                      class="emotion-1"
+                      class="emotion-2"
                       data-rac=""
                       data-react-aria-pressable="true"
                       data-testid="ictinus_checkbox"
@@ -623,15 +1094,15 @@
                         />
                       </span>
                       <div
-                        class="emotion-2 emotion-3"
+                        class="emotion-3 emotion-4"
                       >
                         <div
-                          class="emotion-4 emotion-3"
+                          class="emotion-5 emotion-4"
                           data-role="checkbox-icon"
                         >
                           <div>
                             <svg
-                              class="properties_color_inverted.primary_base__19njorx23q properties_height_5_base__19njorx70 properties_width_5_base__19njorx48"
+                              class="properties_color_inverted.primary_base__19njorx23u properties_height_5_base__19njorx74 properties_width_5_base__19njorx4c"
                               data-ictinus="test-version"
                               data-testid="ictinus_unselected"
                               viewBox="0 0 20 20"
@@ -650,13 +1121,13 @@
                 </div>
               </td>
               <td
-                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1me properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya30 TableCell_cell_pinned_true__f31ya35 TableCell__f31ya32 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_pinned_left__1boh8d7e DataTableBody__1boh8d79 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1mi properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya30 TableCell_cell_pinned_true__f31ya35 TableCell__f31ya32 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_pinned_left__1boh8d7e DataTableBody__1boh8d79 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2g"
                 data-ictinus="test-version"
                 data-pinned=""
                 style="--_1boh8d71: 48px; --_1boh8d70: 150;"
               >
                 <div
-                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22y properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya36 properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya36 TableCell_content_size_sm__f31ya39 properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w"
                   data-ictinus="test-version"
                 >
                   <span
@@ -668,65 +1139,110 @@
                 </div>
               </td>
               <td
-                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1me properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1mi properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2g"
                 data-ictinus="test-version"
                 style="--_1boh8d70: 150;"
               >
                 <div
-                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22y properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya36 properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya36 TableCell_content_size_sm__f31ya39 properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w"
                   data-ictinus="test-version"
                 >
                   Geller
                 </div>
               </td>
               <td
-                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1me properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1mi properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2g"
                 data-ictinus="test-version"
                 style="--_1boh8d70: 150;"
               >
                 <div
-                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22y properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya36 properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya36 TableCell_content_size_sm__f31ya39 properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w properties_justifyContent_flex-end_base__19njorx1g"
                   data-ictinus="test-version"
                 >
                   32
                 </div>
               </td>
               <td
-                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1me properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1mi properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2g"
                 data-ictinus="test-version"
                 style="--_1boh8d70: 150;"
               >
                 <div
-                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22y properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya36 properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya36 TableCell_content_size_sm__f31ya39 properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w"
                   data-ictinus="test-version"
                 >
                   Paleontologist
                 </div>
               </td>
+              <td
+                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1mi properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2g"
+                data-ictinus="test-version"
+                style="--_1boh8d70: 150;"
+              >
+                <div
+                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya36 TableCell_content_size_sm__f31ya39 properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w"
+                  data-ictinus="test-version"
+                >
+                  <span
+                    class="Text__ff5iyl6 Text_text_lineClamp_1__ff5iyl7 Text__ff5iyl0 Text__ff5iyl1 Text__ff5iyl2"
+                    data-ictinus="test-version"
+                    tabindex="0"
+                  />
+                </div>
+              </td>
+              <td
+                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1mi properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_false__1boh8d7g DataTableBody__1boh8d7b properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2g"
+                data-ictinus="test-version"
+                style="--_1boh8d70: 48;"
+              >
+                <div
+                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya36 TableCell_content_size_sm__f31ya39 properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w"
+                  data-ictinus="test-version"
+                >
+                  <button
+                    class="emotion-7"
+                    data-slot="button"
+                    data-testid="icon-button"
+                    type="button"
+                  >
+                    <svg
+                      class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
+                      data-ictinus="test-version"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.64194 14.702L12.6836 10.7466C12.7965 10.6361 12.8774 10.5161 12.9264 10.3867C12.9755 10.2572 13 10.1283 13 10C13 9.86608 12.9755 9.7358 12.9264 9.60915C12.8774 9.48249 12.7965 9.36392 12.6836 9.25345L8.64194 5.29797C8.43898 5.09932 8.21607 5 7.9732 5C7.73034 5 7.50742 5.09932 7.30446 5.29797C7.10149 5.49661 7 5.71477 7 5.95246C7 6.19014 7.10149 6.40831 7.30446 6.60694L10.7714 10L7.30446 13.3931C7.10149 13.5917 7 13.8099 7 14.0475C7 14.2852 7.10149 14.5034 7.30446 14.702C7.50742 14.9007 7.73034 15 7.9732 15C8.21607 15 8.43898 14.9007 8.64194 14.702Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </td>
             </tr>
             <tr
-              aria-labelledby=":r5:"
+              aria-labelledby=":rq:"
               aria-selected="false"
-              class="TableRow_row__7cjz1b2 TableRow__7cjz1b0 TableRow__7cjz1b1 properties_width_full_base__19njorx68 properties_display_flex_base__19njorx2c"
+              class="TableRow_row__7cjz1b2 TableRow__7cjz1b0 TableRow__7cjz1b1 properties_width_full_base__19njorx6c properties_display_flex_base__19njorx2g"
               data-focus-visible=""
               data-ictinus="test-version"
               tabindex="0"
             >
               <td
-                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1me properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya30 TableCell_cell_pinned_true__f31ya35 TableCell__f31ya32 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_pinned_left__1boh8d7e DataTableBody__1boh8d79 DataTableBody_cell_resizable_false__1boh8d7g DataTableBody__1boh8d7b properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1mi properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya30 TableCell_cell_pinned_true__f31ya35 TableCell__f31ya32 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_pinned_left__1boh8d7e DataTableBody__1boh8d79 DataTableBody_cell_resizable_false__1boh8d7g DataTableBody__1boh8d7b properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2g"
                 data-ictinus="test-version"
                 data-pinned=""
                 style="--_1boh8d71: 0px; --_1boh8d70: 48;"
               >
                 <div
-                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22y properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya36 properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya36 TableCell_content_size_sm__f31ya39 properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w"
                   data-ictinus="test-version"
                 >
                   <div
-                    class="emotion-0"
+                    class="emotion-1"
                   >
                     <label
-                      class="emotion-1"
+                      class="emotion-2"
                       data-rac=""
                       data-react-aria-pressable="true"
                       data-testid="ictinus_checkbox"
@@ -742,15 +1258,15 @@
                         />
                       </span>
                       <div
-                        class="emotion-2 emotion-3"
+                        class="emotion-3 emotion-4"
                       >
                         <div
-                          class="emotion-4 emotion-3"
+                          class="emotion-5 emotion-4"
                           data-role="checkbox-icon"
                         >
                           <div>
                             <svg
-                              class="properties_color_inverted.primary_base__19njorx23q properties_height_5_base__19njorx70 properties_width_5_base__19njorx48"
+                              class="properties_color_inverted.primary_base__19njorx23u properties_height_5_base__19njorx74 properties_width_5_base__19njorx4c"
                               data-ictinus="test-version"
                               data-testid="ictinus_unselected"
                               viewBox="0 0 20 20"
@@ -769,13 +1285,13 @@
                 </div>
               </td>
               <td
-                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1me properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya30 TableCell_cell_pinned_true__f31ya35 TableCell__f31ya32 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_pinned_left__1boh8d7e DataTableBody__1boh8d79 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1mi properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya30 TableCell_cell_pinned_true__f31ya35 TableCell__f31ya32 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_pinned_left__1boh8d7e DataTableBody__1boh8d79 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2g"
                 data-ictinus="test-version"
                 data-pinned=""
                 style="--_1boh8d71: 48px; --_1boh8d70: 150;"
               >
                 <div
-                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22y properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya36 properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya36 TableCell_content_size_sm__f31ya39 properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w"
                   data-ictinus="test-version"
                 >
                   <span
@@ -787,39 +1303,86 @@
                 </div>
               </td>
               <td
-                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1me properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1mi properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2g"
                 data-ictinus="test-version"
                 style="--_1boh8d70: 150;"
               >
                 <div
-                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22y properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya36 properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya36 TableCell_content_size_sm__f31ya39 properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w"
                   data-ictinus="test-version"
                 >
                   Geller
                 </div>
               </td>
               <td
-                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1me properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1mi properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2g"
                 data-ictinus="test-version"
                 style="--_1boh8d70: 150;"
               >
                 <div
-                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22y properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya36 properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya36 TableCell_content_size_sm__f31ya39 properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w properties_justifyContent_flex-end_base__19njorx1g"
                   data-ictinus="test-version"
                 >
                   31
                 </div>
               </td>
               <td
-                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1me properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2c"
+                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1mi properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2g"
                 data-ictinus="test-version"
                 style="--_1boh8d70: 150;"
               >
                 <div
-                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx22y properties_borderColor_decorative.default_base__19njorx1vy TableCell__f31ya36 properties_width_full_base__19njorx68 properties_height_full_base__19njorx90 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2c properties_typography_body02__19njorx1kl properties_minHeight_11_base__19njorxd8 properties_paddingLeft_lg_base__19njorx1ag properties_paddingRight_lg_base__19njorx1d0 properties_paddingTop_md_base__19njorx1fg properties_paddingBottom_md_base__19njorx17s"
+                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya36 TableCell_content_size_sm__f31ya39 properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w"
                   data-ictinus="test-version"
                 >
                   Chef
+                </div>
+              </td>
+              <td
+                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1mi properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2g"
+                data-ictinus="test-version"
+                style="--_1boh8d70: 150;"
+              >
+                <div
+                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya36 TableCell_content_size_sm__f31ya39 properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w"
+                  data-ictinus="test-version"
+                >
+                  <span
+                    class="Text__ff5iyl6 Text_text_lineClamp_1__ff5iyl7 Text__ff5iyl0 Text__ff5iyl1 Text__ff5iyl2"
+                    data-ictinus="test-version"
+                    tabindex="0"
+                  >
+                    Park Ave., New York, NY
+                  </span>
+                </div>
+              </td>
+              <td
+                class="TableCell_cell__f31ya33 properties_backgroundColor_default_base__19njorx1mi properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya30 TableCell_cell_pinned_false__f31ya34 TableCell__f31ya31 DataTableBody_cell__1boh8d7d DataTableBody__1boh8d78 DataTableBody_cell_resizable_false__1boh8d7g DataTableBody__1boh8d7b properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2g"
+                data-ictinus="test-version"
+                style="--_1boh8d70: 48;"
+              >
+                <div
+                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya36 TableCell_content_size_sm__f31ya39 properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w"
+                  data-ictinus="test-version"
+                >
+                  <button
+                    class="emotion-7"
+                    data-slot="button"
+                    data-testid="icon-button"
+                    type="button"
+                  >
+                    <svg
+                      class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
+                      data-ictinus="test-version"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.64194 14.702L12.6836 10.7466C12.7965 10.6361 12.8774 10.5161 12.9264 10.3867C12.9755 10.2572 13 10.1283 13 10C13 9.86608 12.9755 9.7358 12.9264 9.60915C12.8774 9.48249 12.7965 9.36392 12.6836 9.25345L8.64194 5.29797C8.43898 5.09932 8.21607 5 7.9732 5C7.73034 5 7.50742 5.09932 7.30446 5.29797C7.10149 5.49661 7 5.71477 7 5.95246C7 6.19014 7.10149 6.40831 7.30446 6.60694L10.7714 10L7.30446 13.3931C7.10149 13.5917 7 13.8099 7 14.0475C7 14.2852 7.10149 14.5034 7.30446 14.702C7.50742 14.9007 7.73034 15 7.9732 15C8.21607 15 8.43898 14.9007 8.64194 14.702Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </button>
                 </div>
               </td>
             </tr>

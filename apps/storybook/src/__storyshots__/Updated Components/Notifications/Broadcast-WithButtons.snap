@@ -128,10 +128,51 @@
 }
 
 .emotion-7 {
-  position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  gap: var(--ictinus-spacing-4);
+  color: var(--ictinus-color-text-default-active);
+  height: var(--ictinus-sizing-7);
+  background-color: var(--ictinus-color-palette-tertiary-base);
+  padding: var(--ictinus-spacing-0) var(--ictinus-spacing-4) var(--ictinus-spacing-0) var(--ictinus-spacing-4);
+  border-radius: var(--ictinus-border-radius-2);
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-7:focus-visible:not(:disabled) {
+  background-color: var(--ictinus-color-palette-tertiary-muted);
+}
+
+.emotion-7:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-7:hover:not(:disabled) {
+  background-color: var(--ictinus-color-palette-tertiary-muted);
+}
+
+.emotion-7:active:not(:disabled),
+.emotion-7[aria-expanded="true"] {
+  background-color: var(--ictinus-color-palette-tertiary-contrast);
 }
 
 .emotion-8 {
@@ -152,69 +193,7 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: var(--ictinus-color-text-default-active);
-  height: var(--ictinus-sizing-7);
-  background-color: var(--ictinus-color-palette-tertiary-base);
-  padding: var(--ictinus-spacing-0) var(--ictinus-spacing-4) var(--ictinus-spacing-0) var(--ictinus-spacing-4);
-  border-radius: var(--ictinus-border-radius-2);
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-8:focus-visible:not(:disabled) {
-  background-color: var(--ictinus-color-palette-tertiary-muted);
-}
-
-.emotion-8:disabled {
-  opacity: 50%;
-  cursor: not-allowed;
-}
-
-.emotion-8:hover:not(:disabled) {
-  background-color: var(--ictinus-color-palette-tertiary-muted);
-}
-
-.emotion-8:active:not(:disabled),
-.emotion-8[aria-expanded="true"] {
-  background-color: var(--ictinus-color-palette-tertiary-contrast);
-}
-
-.emotion-9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
   gap: var(--ictinus-spacing-4);
-}
-
-.emotion-11 {
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1rem;
-  font-size: 0.75rem;
-  letter-spacing: 0.015625rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
   color: var(--ictinus-color-text-inverted-primary);
   height: var(--ictinus-sizing-7);
   background-color: var(--ictinus-color-palette-primary-base);
@@ -226,25 +205,25 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-11:focus-visible:not(:disabled) {
+.emotion-8:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-primary-muted);
 }
 
-.emotion-11:disabled {
+.emotion-8:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-11:hover:not(:disabled) {
+.emotion-8:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-primary-muted);
 }
 
-.emotion-11:active:not(:disabled),
-.emotion-11[aria-expanded="true"] {
+.emotion-8:active:not(:disabled),
+.emotion-8[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-primary-contrast);
 }
 
-.emotion-13 {
+.emotion-9 {
   width: 1.25rem;
   height: 1.25rem;
   display: -webkit-box;
@@ -257,8 +236,8 @@
   margin-left: var(--ictinus-spacing-6);
 }
 
-.emotion-13:hover,
-.emotion-13:focus-visible {
+.emotion-9:hover,
+.emotion-9:focus-visible {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   border-radius: 100%;
@@ -266,13 +245,13 @@
   box-shadow: 0px 0px 0px 8px rgba(200,206,255,0.20);
 }
 
-.emotion-14 {
+.emotion-10 {
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-14 path,
-.emotion-14 rect {
+.emotion-10 path,
+.emotion-10 rect {
   fill: var(--ictinus-color-text-default-secondary)!important;
 }
 
@@ -316,46 +295,36 @@
       <div
         class="emotion-6"
       >
-        <div
+        <button
           class="emotion-7"
+          data-slot="button"
+          data-testid="button"
+          type="button"
         >
-          <button
-            class="emotion-8"
-            data-slot="button"
-            data-testid="button"
-            type="button"
+          <span
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
           >
-            <span
-              class="emotion-9"
-            >
-              <span>
-                Tertiary
-              </span>
-            </span>
-          </button>
-        </div>
-        <div
-          class="emotion-7"
+            Tertiary
+          </span>
+        </button>
+        <button
+          class="emotion-8"
+          data-slot="button"
+          data-testid="button"
+          type="button"
         >
-          <button
-            class="emotion-11"
-            data-slot="button"
-            data-testid="button"
-            type="button"
+          <span
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
           >
-            <span
-              class="emotion-9"
-            >
-              <span>
-                Primary
-              </span>
-            </span>
-          </button>
-        </div>
+            Primary
+          </span>
+        </button>
       </div>
       <div
         aria-label="Dismiss notification"
-        class="emotion-13"
+        class="emotion-9"
         data-slot="icon"
         data-testid="broadcast_dismiss"
         id="react-aria-:test-id:"
@@ -363,7 +332,7 @@
         tabindex="0"
       >
         <svg
-          class="emotion-14"
+          class="emotion-10"
           fill="none"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"

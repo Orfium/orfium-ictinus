@@ -18,13 +18,6 @@
 }
 
 .emotion-1 {
-  position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.emotion-2 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -42,6 +35,7 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  gap: var(--ictinus-spacing-4);
   color: var(--ictinus-color-text-inverted-primary);
   height: var(--ictinus-sizing-9);
   background-color: var(--ictinus-color-palette-primary-base);
@@ -53,47 +47,31 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-2:focus-visible:not(:disabled) {
+.emotion-1:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-primary-muted);
 }
 
-.emotion-2:disabled {
+.emotion-1:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-2:hover:not(:disabled) {
+.emotion-1:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-primary-muted);
 }
 
-.emotion-2:active:not(:disabled),
-.emotion-2[aria-expanded="true"] {
+.emotion-1:active:not(:disabled),
+.emotion-1[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-primary-contrast);
-}
-
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  gap: var(--ictinus-spacing-4);
 }
 
 <div>
   <div
-    class="properties_height_full_base__19njorx90 properties_display_flex_base__19njorx2c properties_flexDirection_column_base__19njorxkc properties_alignItems_center_base__19njorx4 properties_justifyContent_center_base__19njorx18 properties_flex_1_base__19njorx38"
+    class="properties_height_full_base__19njorx94 properties_display_flex_base__19njorx2g properties_flexDirection_column_base__19njorxkg properties_alignItems_center_base__19njorx4 properties_justifyContent_center_base__19njorx1c properties_flex_1_base__19njorx3c"
     data-ictinus="test-version"
   >
     <div
-      class="properties_display_flex_base__19njorx2c properties_alignItems_center_base__19njorx4 properties_gap_2xl_base__19njorxno"
+      class="properties_display_flex_base__19njorx2g properties_alignItems_center_base__19njorx4 properties_gap_2xl_base__19njorxns"
       data-ictinus="test-version"
     >
       <div
@@ -103,24 +81,19 @@
           data-testid="tooltip-button"
           data-tooltip-id="tooltip317"
         >
-          <div
+          <button
             class="emotion-1"
+            data-slot="button"
+            data-testid="button"
+            type="button"
           >
-            <button
-              class="emotion-2"
-              data-slot="button"
-              data-testid="button"
-              type="button"
+            <span
+              class="Text__ff5iyl6"
+              data-ictinus="test-version"
             >
-              <span
-                class="emotion-3"
-              >
-                <span>
-                  Left Tooltip
-                </span>
-              </span>
-            </button>
-          </div>
+              Left Tooltip
+            </span>
+          </button>
         </span>
       </div>
       <div
@@ -130,24 +103,19 @@
           data-testid="tooltip-button"
           data-tooltip-id="tooltip318"
         >
-          <div
+          <button
             class="emotion-1"
+            data-slot="button"
+            data-testid="button"
+            type="button"
           >
-            <button
-              class="emotion-2"
-              data-slot="button"
-              data-testid="button"
-              type="button"
+            <span
+              class="Text__ff5iyl6"
+              data-ictinus="test-version"
             >
-              <span
-                class="emotion-3"
-              >
-                <span>
-                  Top Tooltip
-                </span>
-              </span>
-            </button>
-          </div>
+              Top Tooltip
+            </span>
+          </button>
         </span>
       </div>
       <div
@@ -157,24 +125,19 @@
           data-testid="tooltip-button"
           data-tooltip-id="tooltip319"
         >
-          <div
+          <button
             class="emotion-1"
+            data-slot="button"
+            data-testid="button"
+            type="button"
           >
-            <button
-              class="emotion-2"
-              data-slot="button"
-              data-testid="button"
-              type="button"
+            <span
+              class="Text__ff5iyl6"
+              data-ictinus="test-version"
             >
-              <span
-                class="emotion-3"
-              >
-                <span>
-                  Bottom Tooltip
-                </span>
-              </span>
-            </button>
-          </div>
+              Bottom Tooltip
+            </span>
+          </button>
         </span>
       </div>
       <div
@@ -184,24 +147,19 @@
           data-testid="tooltip-button"
           data-tooltip-id="tooltip320"
         >
-          <div
+          <button
             class="emotion-1"
+            data-slot="button"
+            data-testid="button"
+            type="button"
           >
-            <button
-              class="emotion-2"
-              data-slot="button"
-              data-testid="button"
-              type="button"
+            <span
+              class="Text__ff5iyl6"
+              data-ictinus="test-version"
             >
-              <span
-                class="emotion-3"
-              >
-                <span>
-                  Right Tooltip
-                </span>
-              </span>
-            </button>
-          </div>
+              Right Tooltip
+            </span>
+          </button>
         </span>
       </div>
     </div>

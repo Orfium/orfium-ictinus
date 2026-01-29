@@ -16,6 +16,8 @@ export type DataTableBodyProps = BoxProps<
   'div',
   {
     estimatedRowHeight?: number;
+    bordered?: boolean;
+    size?: 'sm' | 'md' | 'lg';
   }
 >;
 
@@ -24,7 +26,14 @@ const ROW_VIRTUALIZATION_THRESHOLD = 20;
 
 export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
   (
-    { className, estimatedRowHeight = 44, style, ...props }: DataTableBodyProps,
+    {
+      className,
+      estimatedRowHeight = 44,
+      bordered = false,
+      size = 'sm',
+      style,
+      ...props
+    }: DataTableBodyProps,
     ref: RefObject<HTMLDivElement>
   ) => {
     const domRef = useDOMRef(ref);
@@ -119,6 +128,8 @@ export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
               <TableRow display="flex" key={headerGroup.id}>
                 {headerGroup.headers.map((header) => (
                   <DataTableHeaderCell
+                    justifyContent={header.column.columnDef.meta?.align}
+                    bordered={bordered}
                     header={header}
                     key={header.id}
                     pinned={!!header.column.getIsPinned()}
@@ -182,6 +193,10 @@ export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
               >
                 {row.getLeftVisibleCells().map((cell) => (
                   <TableCell
+                    bordered={bordered}
+                    size={size}
+                    // flex="1"
+                    justifyContent={cell.column.columnDef.meta?.align}
                     key={cell.id}
                     pinned
                     style={{
@@ -215,6 +230,9 @@ export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
                 ).map((cell) => (
                   <TableCell
                     key={cell.id}
+                    size={size}
+                    bordered={bordered}
+                    justifyContent={cell.column.columnDef.meta?.align}
                     style={{
                       ...assignInlineVars({
                         [styles.cellSizeVar]: `${cell.column.getSize()}`,
@@ -233,6 +251,9 @@ export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
                 {row.getRightVisibleCells().map((cell) => (
                   <TableCell
                     key={cell.id}
+                    size={size}
+                    bordered={bordered}
+                    justifyContent={cell.column.columnDef.meta?.align}
                     pinned
                     style={{
                       ...assignInlineVars({

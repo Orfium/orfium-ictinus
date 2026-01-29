@@ -3,10 +3,6 @@ import { style } from '../vanilla-extract';
 import { recipe } from '@vanilla-extract/recipes';
 import { sprinkles } from '../sprinkles';
 
-import * as styles from '../vanilla/Table/TableHeaderCell.css';
-
-const header = styles.className;
-
 export const icon = recipe({
   base: [
     sprinkles({
@@ -45,18 +41,7 @@ export const handle = recipe({
       top: '0',
       touchAction: 'none',
       userSelect: 'none',
-      opacity: 0,
       zIndex: 15,
-
-      selectors: {
-        [`${header}:hover &`]: {
-          opacity: 1,
-        },
-      },
-
-      // ':hover': {
-      //   opacity: 1,
-      // },
     }),
   ],
 

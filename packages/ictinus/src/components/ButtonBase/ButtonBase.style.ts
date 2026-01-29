@@ -48,11 +48,12 @@ export const buttonBaseStyle =
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
+      gap: vars.spacing['4'],
       color: BUTTON_COLOR[type].text,
       width: getButtonWidth(),
       height: BUTTON_SIZE[size].size,
       backgroundColor: BUTTON_COLOR[type][isLoading ? 'activeFill' : 'defaultFill'],
-      padding: BUTTON_SIZE[size].padding,
+      padding: isIconButton ? 0 : BUTTON_SIZE[size].padding,
       borderRadius:
         isIconButton && shape === 'circle'
           ? vars['border-radius']['7']
@@ -90,14 +91,3 @@ export const buttonBaseStyle =
       ${sx?.container};
     `;
   };
-
-export const buttonSpanStyle = () => () => {
-  return {
-    display: 'flex',
-    alignItems: 'center',
-  };
-};
-
-export const iconStyle = () => () => ({
-  display: 'inline-flex',
-});

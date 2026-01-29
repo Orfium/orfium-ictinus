@@ -6,11 +6,11 @@ import type { CommonButtonProps } from 'utils/common';
 import { generateTestDataId } from 'utils/helpers';
 import type { ComponentSizes, TestProps } from 'utils/types';
 
-import { buttonBaseStyle, buttonWrapperStyle } from './ButtonBase.style';
-import { useSlotProps } from '../utils/Slots';
 import type { ButtonTypes } from 'components/Button/Button.types';
 import ButtonLoader from 'components/Button/ButtonLoader';
 import type { IconButtonShape } from 'components/IconButton';
+import { useSlotProps } from '../utils/Slots';
+import { buttonBaseStyle, buttonWrapperStyle } from './ButtonBase.style';
 
 export type EventButtonProps = {
   onClick?: (event: ClickEvent) => void;
@@ -64,36 +64,45 @@ const ButtonBase = React.forwardRef<HTMLButtonElement, ButtonBaseProps>((props, 
   } = props;
   const testIdName = `${dataTestPrefixId}button`;
 
-  return (
-    <div css={buttonWrapperStyle({ isBlock })}>
-      {isLoading && !isDisabled && <ButtonLoader dataTestId={testIdName} />}
-      <button
-        {...omit(rest, ['avatar', 'iconRightName', 'iconLeftName', 'iconName'])}
-        ref={ref}
-        type={htmlType}
-        data-testid={generateTestDataId(testIdName, dataTestId)}
-        css={buttonBaseStyle({
-          type,
-          size,
-          isLoading,
-          isBlock,
-          isDisabled,
-          isIconButton,
-          shape,
-          sx,
-        })}
-        onClick={(event) => {
-          if (onClick) {
-            onClick(event);
-          }
-        }}
-        onBlur={onBlur}
-        disabled={isDisabled}
-      >
-        {children}
-      </button>
-    </div>
+  const buttonElement = (
+    <button
+      {...omit(rest, ['avatar', 'iconRightName', 'iconLeftName', 'iconName'])}
+      ref={ref}
+      // eslint-disable-next-line react/button-has-type
+      type={htmlType}
+      data-testid={generateTestDataId(testIdName, dataTestId)}
+      css={buttonBaseStyle({
+        type,
+        size,
+        isLoading,
+        isBlock,
+        isDisabled,
+        isIconButton,
+        shape,
+        sx,
+      })}
+      onClick={(event) => {
+        if (onClick) {
+          onClick(event);
+        }
+      }}
+      onBlur={onBlur}
+      disabled={isDisabled}
+    >
+      {children}
+    </button>
   );
+
+  if (isLoading && !isDisabled) {
+    return (
+      <div css={buttonWrapperStyle({ isBlock })}>
+        <ButtonLoader dataTestId={testIdName} />
+        {buttonElement}
+      </div>
+    );
+  }
+
+  return buttonElement;
 });
 
 ButtonBase.displayName = 'ButtonBase';

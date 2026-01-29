@@ -1,3 +1,5 @@
-export { DataTable } from './DataTable';
-export { DataTableBody } from './DataTableBody';
-export { DataTableCheckbox } from './DataTableCheckbox';
+export * from './DataTable';
+export * from './DataTableBody';
+export * from './DataTableCheckbox';
+export * from './DataTableEditColumns';
+export * from './DataTableHeader';

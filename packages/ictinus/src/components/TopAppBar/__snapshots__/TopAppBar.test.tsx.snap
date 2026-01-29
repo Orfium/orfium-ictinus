@@ -190,13 +190,6 @@ exports[`TopAppBar > should render correctly 1`] = `
 }
 
 .emotion-9 {
-  position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.emotion-10 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -214,6 +207,7 @@ exports[`TopAppBar > should render correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  gap: var(--ictinus-spacing-4);
   color: var(--ictinus-color-text-default-active);
   height: var(--ictinus-sizing-9);
   background-color: var(--ictinus-color-palette-tertiary-base);
@@ -225,41 +219,25 @@ exports[`TopAppBar > should render correctly 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-10:focus-visible:not(:disabled) {
+.emotion-9:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
-.emotion-10:disabled {
+.emotion-9:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-10:hover:not(:disabled) {
+.emotion-9:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
-.emotion-10:active:not(:disabled),
-.emotion-10[aria-expanded="true"] {
+.emotion-9:active:not(:disabled),
+.emotion-9[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-tertiary-contrast);
 }
 
-.emotion-11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  gap: var(--ictinus-spacing-4);
-}
-
-.emotion-12 {
+.emotion-10 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -298,29 +276,10 @@ exports[`TopAppBar > should render correctly 1`] = `
   letter-spacing: var(--ictinus-letter-spacing-1);
 }
 
-.emotion-12 img {
+.emotion-10 img {
   border-radius: var(--ictinus-border-radius-7);
   width: 100%;
   height: 100%;
-}
-
-.emotion-13 {
-  width: 1.25rem;
-  height: 1.25rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-14 {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.emotion-14 path,
-.emotion-14 rect {
-  fill: var(--ictinus-color-text-default-active)!important;
 }
 
 <div>
@@ -372,50 +331,40 @@ exports[`TopAppBar > should render correctly 1`] = `
     <div
       class="emotion-8"
     >
-      <div
+      <button
+        aria-haspopup="true"
+        aria-label="Menu"
         class="emotion-9"
+        data-slot="button"
+        data-testid="button-userMenu"
+        type="button"
       >
-        <button
-          aria-haspopup="true"
-          aria-label="Menu"
+        <div
           class="emotion-10"
-          data-slot="button"
-          data-testid="button-userMenu"
-          type="button"
+          data-testid="_avatar"
         >
-          <span
-            class="emotion-11"
-          >
-            <div
-              class="emotion-12"
-              data-testid="_avatar"
-            >
-              <img
-                src="https://mui.com/static/images/avatar/1.jpg"
-              />
-            </div>
-            <span>
-              Tom Cruise
-            </span>
-            <div
-              class="emotion-13"
-              data-slot="icon"
-            >
-              <svg
-                class="emotion-14"
-                fill="none"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M5.29797 8.64196L9.25345 12.6836C9.36392 12.7965 9.48388 12.8774 9.61333 12.9265C9.74278 12.9755 9.87167 13 10 13C10.1339 13 10.2642 12.9755 10.3908 12.9265C10.5175 12.8774 10.6361 12.7965 10.7466 12.6836L14.702 8.64196C14.9007 8.439 15 8.21608 15 7.97322C15 7.73035 14.9007 7.50744 14.702 7.30448C14.5034 7.1015 14.2852 7.00002 14.0475 7.00002C13.8099 7.00002 13.5917 7.1015 13.3931 7.30448L10 10.7714L6.60694 7.30448C6.40831 7.1015 6.19014 7.00002 5.95246 7.00002C5.71477 7.00002 5.49661 7.1015 5.29797 7.30448C5.09932 7.50744 5 7.73035 5 7.97322C5 8.21608 5.09932 8.439 5.29797 8.64196Z"
-                  fill="#6265AD"
-                />
-              </svg>
-            </div>
-          </span>
-        </button>
-      </div>
+          <img
+            src="https://mui.com/static/images/avatar/1.jpg"
+          />
+        </div>
+        <span
+          class="Text__t6529w6"
+          data-ictinus="5.43.0"
+        >
+          Tom Cruise
+        </span>
+        <svg
+          class="properties_color_active_base__146hxcf23a properties_height_5_base__146hxcf74 properties_width_5_base__146hxcf4c"
+          data-ictinus="5.43.0"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5.29797 8.64196L9.25345 12.6836C9.36392 12.7965 9.48388 12.8774 9.61333 12.9265C9.74278 12.9755 9.87167 13 10 13C10.1339 13 10.2642 12.9755 10.3908 12.9265C10.5175 12.8774 10.6361 12.7965 10.7466 12.6836L14.702 8.64196C14.9007 8.439 15 8.21608 15 7.97322C15 7.73035 14.9007 7.50744 14.702 7.30448C14.5034 7.1015 14.2852 7.00002 14.0475 7.00002C13.8099 7.00002 13.5917 7.1015 13.3931 7.30448L10 10.7714L6.60694 7.30448C6.40831 7.1015 6.19014 7.00002 5.95246 7.00002C5.71477 7.00002 5.49661 7.1015 5.29797 7.30448C5.09932 7.50744 5 7.73035 5 7.97322C5 8.21608 5.09932 8.439 5.29797 8.64196Z"
+            fill="currentColor"
+          />
+        </svg>
+      </button>
     </div>
   </div>
 </div>
@@ -611,13 +560,6 @@ exports[`TopAppBar > should render correctly on dark 1`] = `
 }
 
 .emotion-9 {
-  position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.emotion-10 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -635,6 +577,7 @@ exports[`TopAppBar > should render correctly on dark 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  gap: var(--ictinus-spacing-4);
   color: var(--ictinus-color-text-default-active);
   height: var(--ictinus-sizing-9);
   background-color: var(--ictinus-color-palette-tertiary-base);
@@ -646,41 +589,25 @@ exports[`TopAppBar > should render correctly on dark 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-10:focus-visible:not(:disabled) {
+.emotion-9:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
-.emotion-10:disabled {
+.emotion-9:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-10:hover:not(:disabled) {
+.emotion-9:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
-.emotion-10:active:not(:disabled),
-.emotion-10[aria-expanded="true"] {
+.emotion-9:active:not(:disabled),
+.emotion-9[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-tertiary-contrast);
 }
 
-.emotion-11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  gap: var(--ictinus-spacing-4);
-}
-
-.emotion-12 {
+.emotion-10 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -719,29 +646,10 @@ exports[`TopAppBar > should render correctly on dark 1`] = `
   letter-spacing: var(--ictinus-letter-spacing-1);
 }
 
-.emotion-12 img {
+.emotion-10 img {
   border-radius: var(--ictinus-border-radius-7);
   width: 100%;
   height: 100%;
-}
-
-.emotion-13 {
-  width: 1.25rem;
-  height: 1.25rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-14 {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.emotion-14 path,
-.emotion-14 rect {
-  fill: var(--ictinus-color-text-default-active)!important;
 }
 
 <div>
@@ -793,50 +701,40 @@ exports[`TopAppBar > should render correctly on dark 1`] = `
     <div
       class="emotion-8"
     >
-      <div
+      <button
+        aria-haspopup="true"
+        aria-label="Menu"
         class="emotion-9"
+        data-slot="button"
+        data-testid="button-userMenu"
+        type="button"
       >
-        <button
-          aria-haspopup="true"
-          aria-label="Menu"
+        <div
           class="emotion-10"
-          data-slot="button"
-          data-testid="button-userMenu"
-          type="button"
+          data-testid="_avatar"
         >
-          <span
-            class="emotion-11"
-          >
-            <div
-              class="emotion-12"
-              data-testid="_avatar"
-            >
-              <img
-                src="https://mui.com/static/images/avatar/1.jpg"
-              />
-            </div>
-            <span>
-              Tom Cruise
-            </span>
-            <div
-              class="emotion-13"
-              data-slot="icon"
-            >
-              <svg
-                class="emotion-14"
-                fill="none"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M5.29797 8.64196L9.25345 12.6836C9.36392 12.7965 9.48388 12.8774 9.61333 12.9265C9.74278 12.9755 9.87167 13 10 13C10.1339 13 10.2642 12.9755 10.3908 12.9265C10.5175 12.8774 10.6361 12.7965 10.7466 12.6836L14.702 8.64196C14.9007 8.439 15 8.21608 15 7.97322C15 7.73035 14.9007 7.50744 14.702 7.30448C14.5034 7.1015 14.2852 7.00002 14.0475 7.00002C13.8099 7.00002 13.5917 7.1015 13.3931 7.30448L10 10.7714L6.60694 7.30448C6.40831 7.1015 6.19014 7.00002 5.95246 7.00002C5.71477 7.00002 5.49661 7.1015 5.29797 7.30448C5.09932 7.50744 5 7.73035 5 7.97322C5 8.21608 5.09932 8.439 5.29797 8.64196Z"
-                  fill="#6265AD"
-                />
-              </svg>
-            </div>
-          </span>
-        </button>
-      </div>
+          <img
+            src="https://mui.com/static/images/avatar/1.jpg"
+          />
+        </div>
+        <span
+          class="Text__t6529w6"
+          data-ictinus="5.43.0"
+        >
+          Tom Cruise
+        </span>
+        <svg
+          class="properties_color_active_base__146hxcf23a properties_height_5_base__146hxcf74 properties_width_5_base__146hxcf4c"
+          data-ictinus="5.43.0"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5.29797 8.64196L9.25345 12.6836C9.36392 12.7965 9.48388 12.8774 9.61333 12.9265C9.74278 12.9755 9.87167 13 10 13C10.1339 13 10.2642 12.9755 10.3908 12.9265C10.5175 12.8774 10.6361 12.7965 10.7466 12.6836L14.702 8.64196C14.9007 8.439 15 8.21608 15 7.97322C15 7.73035 14.9007 7.50744 14.702 7.30448C14.5034 7.1015 14.2852 7.00002 14.0475 7.00002C13.8099 7.00002 13.5917 7.1015 13.3931 7.30448L10 10.7714L6.60694 7.30448C6.40831 7.1015 6.19014 7.00002 5.95246 7.00002C5.71477 7.00002 5.49661 7.1015 5.29797 7.30448C5.09932 7.50744 5 7.73035 5 7.97322C5 8.21608 5.09932 8.439 5.29797 8.64196Z"
+            fill="currentColor"
+          />
+        </svg>
+      </button>
     </div>
   </div>
 </div>

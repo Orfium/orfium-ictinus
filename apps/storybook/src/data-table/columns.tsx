@@ -1,4 +1,11 @@
-import { DataTableCheckbox, Text } from '@orfium/ictinus/vanilla';
+import { IconButton } from '@orfium/ictinus';
+import {
+  DataTableCheckbox,
+  Text,
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from '@orfium/ictinus/vanilla';
 import { createColumnHelper } from '@tanstack/react-table';
 
 export const data = [
@@ -19,6 +26,9 @@ export const data = [
     lastName: 'Geller',
     age: 31,
     job: 'Chef',
+    address: {
+      street: 'Park Ave., New York, NY',
+    },
   },
 ];
 
@@ -27,6 +37,9 @@ const columnHelper = createColumnHelper<{
   lastName: string;
   age: number;
   job: string;
+  address?: {
+    street?: string;
+  };
 }>();
 
 export const columns = [
@@ -39,16 +52,50 @@ export const columns = [
   }),
   columnHelper.accessor('firstName', {
     cell: ({ getValue }) => <Text lineClamp="1">{getValue()}</Text>,
-    header: () => <Text lineClamp="1">First Name</Text>,
+    header: 'First Name',
+    enableHiding: false,
+    meta: {
+      label: 'First Name',
+      tooltip: 'The quick brown fox',
+    },
   }),
   columnHelper.accessor('lastName', {
     header: 'Last Name',
+    meta: { label: 'Last Name' },
   }),
   columnHelper.accessor('age', {
     header: 'Age',
+    meta: { label: 'Age', align: 'flex-end', tooltip: 'The quick brown fox' },
+    enableHiding: false,
   }),
   columnHelper.accessor('job', {
     header: 'Job',
+    meta: { label: 'Job' },
+  }),
+  columnHelper.accessor('address', {
+    cell: ({ getValue }) => (
+      <Tooltip auto>
+        <TooltipTrigger>
+          <Text lineClamp="1">{getValue()?.street ?? ''}</Text>
+        </TooltipTrigger>
+        <TooltipContent>{getValue()?.street ?? ''}</TooltipContent>
+      </Tooltip>
+    ),
+    header: 'Address',
+    meta: { label: 'Address' },
+  }),
+  columnHelper.display({
+    cell: () => (
+      <IconButton
+        onClick={(evt) => evt.stopPropagation()}
+        iconName="chevronRight"
+        size="compact"
+        type="tertiary"
+      />
+    ),
+    id: 'action',
+    size: 48,
+    enableResizing: false,
   }),
 ];
 
@@ -56,6 +103,7 @@ export const simpleColumns = [
   columnHelper.accessor('firstName', {
     header: 'First Name',
     meta: { label: 'First Name' },
+    enableHiding: false,
   }),
   columnHelper.accessor('lastName', {
     header: 'Last Name',

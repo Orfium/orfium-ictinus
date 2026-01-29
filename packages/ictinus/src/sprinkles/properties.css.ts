@@ -245,6 +245,7 @@ export const responsiveProps = defineProperties({
   properties: {
     alignItems: ['flex-start', 'center', 'flex-end', 'stretch', 'baseline'] as const,
     alignSelf: ['flex-start', 'center', 'flex-end', 'stretch', 'baseline'] as const,
+    placeItems: ['center'] as const,
     justifyContent: [
       'flex-start',
       'center',

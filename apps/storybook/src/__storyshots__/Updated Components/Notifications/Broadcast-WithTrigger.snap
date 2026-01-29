@@ -12,13 +12,6 @@
 }
 
 .emotion-2 {
-  position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.emotion-3 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -36,6 +29,7 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  gap: var(--ictinus-spacing-4);
   color: var(--ictinus-color-text-inverted-primary);
   height: var(--ictinus-sizing-9);
   background-color: var(--ictinus-color-palette-primary-base);
@@ -47,62 +41,41 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-3:focus-visible:not(:disabled) {
+.emotion-2:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-primary-muted);
 }
 
-.emotion-3:disabled {
+.emotion-2:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-3:hover:not(:disabled) {
+.emotion-2:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-primary-muted);
 }
 
-.emotion-3:active:not(:disabled),
-.emotion-3[aria-expanded="true"] {
+.emotion-2:active:not(:disabled),
+.emotion-2[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-primary-contrast);
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  gap: var(--ictinus-spacing-4);
 }
 
 <div>
   <div
     class="emotion-0 emotion-1"
   >
-    <div
+    <button
       class="emotion-2"
+      data-slot="button"
+      data-testid="button"
+      type="button"
     >
-      <button
-        class="emotion-3"
-        data-slot="button"
-        data-testid="button"
-        type="button"
+      <span
+        class="Text__ff5iyl6"
+        data-ictinus="test-version"
       >
-        <span
-          class="emotion-4"
-        >
-          <span>
-            Show
-             Broadcast
-          </span>
-        </span>
-      </button>
-    </div>
+        Show
+         Broadcast
+      </span>
+    </button>
   </div>
 </div>
