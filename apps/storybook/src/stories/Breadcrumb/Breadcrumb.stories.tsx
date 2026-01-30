@@ -1,6 +1,6 @@
 import { Breadcrumb } from '@orfium/ictinus';
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { Route, MemoryRouter as Router, Link as RouterLink, Routes } from 'react-router-dom';
+import { Route, MemoryRouter as Router, Link as RouterLink, Routes } from 'react-router';
 import { FIGMA_URL } from 'utils/common';
 import BreadcrumbShowcase from '../storyUtils/BreadcrumbShowcase/BreadcrumbShowcase';
 import Stack from '../storyUtils/Stack';

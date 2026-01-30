@@ -8,7 +8,8 @@ import { omit } from 'lodash-es';
 import type { InputHTMLAttributes } from 'react';
 import React, { useRef } from 'react';
 import isEqual from 'react-fast-compare';
-import InputMask from 'react-input-mask';
+// TODO: this allows backwards compatibility for React 19. Migrate to a more popular library
+import InputMask from '@mona-health/react-input-mask';
 import { generateUniqueID } from 'utils/helpers';
 import type { TestProps } from 'utils/types';
 import Label from '../Label';
@@ -81,20 +82,16 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
     });
 
   const inputProps = {
-    // eslint-disable-next-line @typescript-eslint/naming-convention
     readOnly: isLocked || isReadOnly,
     css: inputStyle({ label, placeholder, isLocked, isDisabled, size }),
     ...(size === 'normal'
       ? { placeholder: placeholder ? `${placeholder} ${isRequired ? '*' : ''}` : label }
       : { placeholder: ' ' }),
-    // eslint-disable-next-line @typescript-eslint/naming-convention
     required: isRequired,
     id: id,
-    // eslint-disable-next-line @typescript-eslint/naming-convention
     disabled: isDisabled || isLocked,
     onInput: onInput,
     'data-testid': rest.dataTestId ? `input_${rest.dataTestId}` : 'input',
-    // eslint-disable-next-line @typescript-eslint/naming-convention
     'aria-invalid': status?.type === 'error',
     'aria-describedby': hintMessageId,
     ...omit(rest, 'dataTestId'),
@@ -120,12 +117,11 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
         <TextInputBase {...props} status={{ ...status, id: hintMessageId }} sx={sx}>
           <div css={{ display: 'flex', flex: 1 }}>
             {mask ? (
-              // @ts-expect-error - too complex
               <InputMask
                 {...inputProps}
+                ref={combinedRefs}
                 mask={mask}
-                maskChar={' '}
-                inputRef={combinedRefs}
+                maskPlaceholder={' '}
                 dangerouslySetInnerHTML={undefined}
               />
             ) : (
