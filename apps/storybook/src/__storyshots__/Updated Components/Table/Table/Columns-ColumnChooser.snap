@@ -64,6 +64,10 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: var(--ictinus-spacing-4);
   color: var(--ictinus-color-text-default-active);
   height: var(--ictinus-sizing-7);
   background-color: var(--ictinus-color-palette-secondary-base);
@@ -94,42 +98,26 @@
 }
 
 .emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  gap: var(--ictinus-spacing-4);
-}
-
-.emotion-7 {
   width: 100%;
   border-collapse: collapse;
   table-layout: fixed;
 }
 
-.emotion-7 thead>tr>th:last-child,
-.emotion-7 tbody>tr>td:last-child {
+.emotion-6 thead>tr>th:last-child,
+.emotion-6 tbody>tr>td:last-child {
   border-right: none;
 }
 
-.emotion-7 tbody>tr:last-child>td {
+.emotion-6 tbody>tr:last-child>td {
   border-bottom: none;
 }
 
-.emotion-8 {
+.emotion-7 {
   position: relative;
   box-shadow: 0 var(--ictinus-border-width-1) 0 0 var(--ictinus-color-border-color-decorative-default);
 }
 
-.emotion-10 {
+.emotion-9 {
   width: 25%;
   height: var(--ictinus-sizing-11);
   -webkit-align-content: center;
@@ -145,23 +133,23 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-10 [data-header-role='options'],
-.emotion-10 [data-header-role='sorting-button'] {
+.emotion-9 [data-header-role='options'],
+.emotion-9 [data-header-role='sorting-button'] {
   opacity: 0;
 }
 
-.emotion-10:hover [data-header-role='options'],
-.emotion-10:focus-visible [data-header-role='options'],
-.emotion-10:hover [data-header-role='sorting-button'],
-.emotion-10:focus-visible [data-header-role='sorting-button'] {
+.emotion-9:hover [data-header-role='options'],
+.emotion-9:focus-visible [data-header-role='options'],
+.emotion-9:hover [data-header-role='sorting-button'],
+.emotion-9:focus-visible [data-header-role='sorting-button'] {
   opacity: 1;
 }
 
-.emotion-10 button:focus-visible {
+.emotion-9 button:focus-visible {
   opacity: 1;
 }
 
-.emotion-11 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -180,11 +168,11 @@
   text-overflow: ellipsis;
 }
 
-.emotion-12 {
+.emotion-11 {
   text-wrap: nowrap;
 }
 
-.emotion-24 {
+.emotion-23 {
   width: 25%;
   height: var(--ictinus-sizing-11);
   padding: var(--ictinus-spacing-4) var(--ictinus-spacing-6);
@@ -195,11 +183,11 @@
   align-content: center;
 }
 
-.emotion-25 {
+.emotion-24 {
   text-align: left;
 }
 
-.emotion-26 {
+.emotion-25 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -237,36 +225,35 @@
             type="button"
           >
             <span
-              class="emotion-6"
+              class="Text__ff5iyl6"
+              data-ictinus="test-version"
             >
-              <span>
-                Edit Columns
-              </span>
+              Edit Columns
             </span>
           </button>
         </div>
       </div>
     </div>
     <table
-      class="emotion-7"
+      class="emotion-6"
       data-testid="ictinus_table"
     >
       <thead
-        class="emotion-8"
+        class="emotion-7"
       >
         <tr
-          class="emotion-9"
+          class="emotion-8"
         >
           <th
-            class="emotion-10"
+            class="emotion-9"
             colspan="1"
             data-testid="ictinus_table_th_firstName"
           >
             <div
-              class="emotion-11"
+              class="emotion-10"
             >
               <div
-                class="emotion-12"
+                class="emotion-11"
                 data-testid="ictinus_table_th_firstName_title"
               >
                 First Name
@@ -274,15 +261,15 @@
             </div>
           </th>
           <th
-            class="emotion-10"
+            class="emotion-9"
             colspan="1"
             data-testid="ictinus_table_th_lastName"
           >
             <div
-              class="emotion-11"
+              class="emotion-10"
             >
               <div
-                class="emotion-12"
+                class="emotion-11"
                 data-testid="ictinus_table_th_lastName_title"
               >
                 Last Name
@@ -290,15 +277,15 @@
             </div>
           </th>
           <th
-            class="emotion-10"
+            class="emotion-9"
             colspan="1"
             data-testid="ictinus_table_th_age"
           >
             <div
-              class="emotion-11"
+              class="emotion-10"
             >
               <div
-                class="emotion-12"
+                class="emotion-11"
                 data-testid="ictinus_table_th_age_title"
               >
                 Age
@@ -306,15 +293,15 @@
             </div>
           </th>
           <th
-            class="emotion-10"
+            class="emotion-9"
             colspan="1"
             data-testid="ictinus_table_th_job"
           >
             <div
-              class="emotion-11"
+              class="emotion-10"
             >
               <div
-                class="emotion-12"
+                class="emotion-11"
                 data-testid="ictinus_table_th_job_title"
               >
                 Job
@@ -324,62 +311,62 @@
         </tr>
       </thead>
       <tbody
-        class="emotion-22"
+        class="emotion-21"
       >
         <tr
-          class="emotion-9"
+          class="emotion-8"
         >
           <td
-            class="emotion-24"
+            class="emotion-23"
             data-testid="ictinus_table_row_0_firstName"
           >
             <div
-              class="emotion-25"
+              class="emotion-24"
             >
               <span
-                class="emotion-26"
+                class="emotion-25"
               >
                 Rachel
               </span>
             </div>
           </td>
           <td
-            class="emotion-24"
+            class="emotion-23"
             data-testid="ictinus_table_row_0_lastName"
           >
             <div
-              class="emotion-25"
+              class="emotion-24"
             >
               <span
-                class="emotion-26"
+                class="emotion-25"
               >
                 Green
               </span>
             </div>
           </td>
           <td
-            class="emotion-24"
+            class="emotion-23"
             data-testid="ictinus_table_row_0_age"
           >
             <div
-              class="emotion-25"
+              class="emotion-24"
             >
               <span
-                class="emotion-26"
+                class="emotion-25"
               >
                 30
               </span>
             </div>
           </td>
           <td
-            class="emotion-24"
+            class="emotion-23"
             data-testid="ictinus_table_row_0_job"
           >
             <div
-              class="emotion-25"
+              class="emotion-24"
             >
               <span
-                class="emotion-26"
+                class="emotion-25"
               >
                 Fashion Executive
               </span>
@@ -387,59 +374,59 @@
           </td>
         </tr>
         <tr
-          class="emotion-9"
+          class="emotion-8"
         >
           <td
-            class="emotion-24"
+            class="emotion-23"
             data-testid="ictinus_table_row_1_firstName"
           >
             <div
-              class="emotion-25"
+              class="emotion-24"
             >
               <span
-                class="emotion-26"
+                class="emotion-25"
               >
                 Ross
               </span>
             </div>
           </td>
           <td
-            class="emotion-24"
+            class="emotion-23"
             data-testid="ictinus_table_row_1_lastName"
           >
             <div
-              class="emotion-25"
+              class="emotion-24"
             >
               <span
-                class="emotion-26"
+                class="emotion-25"
               >
                 Geller
               </span>
             </div>
           </td>
           <td
-            class="emotion-24"
+            class="emotion-23"
             data-testid="ictinus_table_row_1_age"
           >
             <div
-              class="emotion-25"
+              class="emotion-24"
             >
               <span
-                class="emotion-26"
+                class="emotion-25"
               >
                 32
               </span>
             </div>
           </td>
           <td
-            class="emotion-24"
+            class="emotion-23"
             data-testid="ictinus_table_row_1_job"
           >
             <div
-              class="emotion-25"
+              class="emotion-24"
             >
               <span
-                class="emotion-26"
+                class="emotion-25"
               >
                 Paleontologist
               </span>
@@ -447,59 +434,59 @@
           </td>
         </tr>
         <tr
-          class="emotion-9"
+          class="emotion-8"
         >
           <td
-            class="emotion-24"
+            class="emotion-23"
             data-testid="ictinus_table_row_2_firstName"
           >
             <div
-              class="emotion-25"
+              class="emotion-24"
             >
               <span
-                class="emotion-26"
+                class="emotion-25"
               >
                 Monica
               </span>
             </div>
           </td>
           <td
-            class="emotion-24"
+            class="emotion-23"
             data-testid="ictinus_table_row_2_lastName"
           >
             <div
-              class="emotion-25"
+              class="emotion-24"
             >
               <span
-                class="emotion-26"
+                class="emotion-25"
               >
                 Geller
               </span>
             </div>
           </td>
           <td
-            class="emotion-24"
+            class="emotion-23"
             data-testid="ictinus_table_row_2_age"
           >
             <div
-              class="emotion-25"
+              class="emotion-24"
             >
               <span
-                class="emotion-26"
+                class="emotion-25"
               >
                 31
               </span>
             </div>
           </td>
           <td
-            class="emotion-24"
+            class="emotion-23"
             data-testid="ictinus_table_row_2_job"
           >
             <div
-              class="emotion-25"
+              class="emotion-24"
             >
               <span
-                class="emotion-26"
+                class="emotion-25"
               >
                 Chef
               </span>
@@ -507,59 +494,59 @@
           </td>
         </tr>
         <tr
-          class="emotion-9"
+          class="emotion-8"
         >
           <td
-            class="emotion-24"
+            class="emotion-23"
             data-testid="ictinus_table_row_3_firstName"
           >
             <div
-              class="emotion-25"
+              class="emotion-24"
             >
               <span
-                class="emotion-26"
+                class="emotion-25"
               >
                 Chandler
               </span>
             </div>
           </td>
           <td
-            class="emotion-24"
+            class="emotion-23"
             data-testid="ictinus_table_row_3_lastName"
           >
             <div
-              class="emotion-25"
+              class="emotion-24"
             >
               <span
-                class="emotion-26"
+                class="emotion-25"
               >
                 Bing
               </span>
             </div>
           </td>
           <td
-            class="emotion-24"
+            class="emotion-23"
             data-testid="ictinus_table_row_3_age"
           >
             <div
-              class="emotion-25"
+              class="emotion-24"
             >
               <span
-                class="emotion-26"
+                class="emotion-25"
               >
                 32
               </span>
             </div>
           </td>
           <td
-            class="emotion-24"
+            class="emotion-23"
             data-testid="ictinus_table_row_3_job"
           >
             <div
-              class="emotion-25"
+              class="emotion-24"
             >
               <span
-                class="emotion-26"
+                class="emotion-25"
               >
                 ?
               </span>
@@ -567,59 +554,59 @@
           </td>
         </tr>
         <tr
-          class="emotion-9"
+          class="emotion-8"
         >
           <td
-            class="emotion-24"
+            class="emotion-23"
             data-testid="ictinus_table_row_4_firstName"
           >
             <div
-              class="emotion-25"
+              class="emotion-24"
             >
               <span
-                class="emotion-26"
+                class="emotion-25"
               >
                 Joey
               </span>
             </div>
           </td>
           <td
-            class="emotion-24"
+            class="emotion-23"
             data-testid="ictinus_table_row_4_lastName"
           >
             <div
-              class="emotion-25"
+              class="emotion-24"
             >
               <span
-                class="emotion-26"
+                class="emotion-25"
               >
                 Tribbiani
               </span>
             </div>
           </td>
           <td
-            class="emotion-24"
+            class="emotion-23"
             data-testid="ictinus_table_row_4_age"
           >
             <div
-              class="emotion-25"
+              class="emotion-24"
             >
               <span
-                class="emotion-26"
+                class="emotion-25"
               >
                 30
               </span>
             </div>
           </td>
           <td
-            class="emotion-24"
+            class="emotion-23"
             data-testid="ictinus_table_row_4_job"
           >
             <div
-              class="emotion-25"
+              class="emotion-24"
             >
               <span
-                class="emotion-26"
+                class="emotion-25"
               >
                 Actor
               </span>
@@ -627,59 +614,59 @@
           </td>
         </tr>
         <tr
-          class="emotion-9"
+          class="emotion-8"
         >
           <td
-            class="emotion-24"
+            class="emotion-23"
             data-testid="ictinus_table_row_5_firstName"
           >
             <div
-              class="emotion-25"
+              class="emotion-24"
             >
               <span
-                class="emotion-26"
+                class="emotion-25"
               >
                 Phoebe
               </span>
             </div>
           </td>
           <td
-            class="emotion-24"
+            class="emotion-23"
             data-testid="ictinus_table_row_5_lastName"
           >
             <div
-              class="emotion-25"
+              class="emotion-24"
             >
               <span
-                class="emotion-26"
+                class="emotion-25"
               >
                 Buffay
               </span>
             </div>
           </td>
           <td
-            class="emotion-24"
+            class="emotion-23"
             data-testid="ictinus_table_row_5_age"
           >
             <div
-              class="emotion-25"
+              class="emotion-24"
             >
               <span
-                class="emotion-26"
+                class="emotion-25"
               >
                 31
               </span>
             </div>
           </td>
           <td
-            class="emotion-24"
+            class="emotion-23"
             data-testid="ictinus_table_row_5_job"
           >
             <div
-              class="emotion-25"
+              class="emotion-24"
             >
               <span
-                class="emotion-26"
+                class="emotion-25"
               >
                 Massage Therapist
               </span>

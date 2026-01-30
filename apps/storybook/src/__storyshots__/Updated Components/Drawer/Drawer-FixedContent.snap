@@ -42,6 +42,10 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: var(--ictinus-spacing-4);
   color: var(--ictinus-color-text-inverted-primary);
   height: var(--ictinus-sizing-9);
   background-color: var(--ictinus-color-palette-primary-base);
@@ -71,22 +75,6 @@
   background-color: var(--ictinus-color-palette-primary-contrast);
 }
 
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  gap: var(--ictinus-spacing-4);
-}
-
 <div>
   <div
     class="emotion-0"
@@ -104,11 +92,10 @@
           type="button"
         >
           <span
-            class="emotion-4"
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
           >
-            <span>
-              Fixed Layout
-            </span>
+            Fixed Layout
           </span>
         </button>
       </div>

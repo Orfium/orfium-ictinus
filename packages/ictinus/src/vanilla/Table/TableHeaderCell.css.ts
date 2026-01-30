@@ -8,6 +8,8 @@ import * as rowStyles from './TableRow.css';
 const header = headerStyles.className;
 const row = rowStyles.className;
 
+export const className = style({});
+
 export const cell = recipe({
   base: [
     sprinkles({
@@ -16,6 +18,7 @@ export const cell = recipe({
     style({
       textAlign: 'start',
     }),
+    className,
   ],
 
   variants: {
@@ -26,15 +29,6 @@ export const cell = recipe({
       true: style({
         position: 'sticky',
         zIndex: '10',
-
-        selectors: {
-          '&:has(+ :not([data-pinned]))': {
-            borderRightWidth: '1px',
-          },
-          ':not([data-pinned]) + &': {
-            borderLeftWidth: '1px',
-          },
-        },
       }),
     },
   },

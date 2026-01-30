@@ -45,6 +45,10 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: var(--ictinus-spacing-4);
   color: var(--ictinus-color-text-inverted-primary);
   width: 100%;
   height: var(--ictinus-sizing-9);
@@ -75,23 +79,7 @@
   background-color: var(--ictinus-color-palette-primary-contrast);
 }
 
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  gap: var(--ictinus-spacing-4);
-}
-
-.emotion-5 {
+.emotion-4 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1rem;
@@ -109,6 +97,10 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: var(--ictinus-spacing-4);
   color: var(--ictinus-color-text-inverted-primary);
   width: 100%;
   height: var(--ictinus-sizing-7);
@@ -121,30 +113,30 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-5:focus-visible:not(:disabled) {
+.emotion-4:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-primary-muted);
 }
 
-.emotion-5:disabled {
+.emotion-4:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-5:hover:not(:disabled) {
+.emotion-4:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-primary-muted);
 }
 
-.emotion-5:active:not(:disabled),
-.emotion-5[aria-expanded="true"] {
+.emotion-4:active:not(:disabled),
+.emotion-4[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-primary-contrast);
 }
 
-.emotion-8 {
+.emotion-6 {
   width: 100%;
   position: absolute;
 }
 
-.emotion-9 {
+.emotion-7 {
   width: 100%;
   height: 0.25rem;
   overflow: hidden;
@@ -153,14 +145,14 @@
   position: relative;
 }
 
-.emotion-9:before {
+.emotion-7:before {
   content: "";
   width: 100%;
   height: 0.125rem;
   display: block;
 }
 
-.emotion-10 {
+.emotion-8 {
   width: 50%;
   background: linear-gradient(270deg, #F814E1 0.02%, #4945EE 100%);
   height: 0.125rem;
@@ -171,7 +163,7 @@
   animation: animation-0 1.5s infinite;
 }
 
-.emotion-11 {
+.emotion-9 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -189,6 +181,10 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: var(--ictinus-spacing-4);
   color: var(--ictinus-color-text-inverted-primary);
   width: 100%;
   height: var(--ictinus-sizing-9);
@@ -202,25 +198,25 @@
   pointer-events: none;
 }
 
-.emotion-11:focus-visible:not(:disabled) {
+.emotion-9:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-primary-muted);
 }
 
-.emotion-11:disabled {
+.emotion-9:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-11:hover:not(:disabled) {
+.emotion-9:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-primary-muted);
 }
 
-.emotion-11:active:not(:disabled),
-.emotion-11[aria-expanded="true"] {
+.emotion-9:active:not(:disabled),
+.emotion-9[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-primary-contrast);
 }
 
-.emotion-17 {
+.emotion-14 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1rem;
@@ -238,6 +234,10 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: var(--ictinus-spacing-4);
   color: var(--ictinus-color-text-inverted-primary);
   width: 100%;
   height: var(--ictinus-sizing-7);
@@ -251,21 +251,21 @@
   pointer-events: none;
 }
 
-.emotion-17:focus-visible:not(:disabled) {
+.emotion-14:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-primary-muted);
 }
 
-.emotion-17:disabled {
+.emotion-14:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-17:hover:not(:disabled) {
+.emotion-14:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-primary-muted);
 }
 
-.emotion-17:active:not(:disabled),
-.emotion-17[aria-expanded="true"] {
+.emotion-14:active:not(:disabled),
+.emotion-14[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-primary-contrast);
 }
 
@@ -286,11 +286,10 @@
           type="button"
         >
           <span
-            class="emotion-3"
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
           >
-            <span>
-              Hello world
-            </span>
+            Hello world
           </span>
         </button>
       </div>
@@ -302,51 +301,16 @@
         class="emotion-1"
       >
         <button
-          class="emotion-5"
+          class="emotion-4"
           data-slot="button"
           data-testid="button"
           type="button"
         >
           <span
-            class="emotion-3"
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
           >
-            <span>
-              Hello world
-            </span>
-          </span>
-        </button>
-      </div>
-    </div>
-    <div
-      style="margin: 5px;"
-    >
-      <div
-        class="emotion-1"
-      >
-        <div
-          class="emotion-8"
-          data-testid="button"
-        >
-          <div
-            class="emotion-9"
-          >
-            <div
-              class="emotion-10"
-            />
-          </div>
-        </div>
-        <button
-          class="emotion-11"
-          data-slot="button"
-          data-testid="button"
-          type="button"
-        >
-          <span
-            class="emotion-3"
-          >
-            <span>
-              Hello world
-            </span>
+            Hello world
           </span>
         </button>
       </div>
@@ -358,29 +322,61 @@
         class="emotion-1"
       >
         <div
-          class="emotion-8"
+          class="emotion-6"
           data-testid="button"
         >
           <div
-            class="emotion-9"
+            class="emotion-7"
           >
             <div
-              class="emotion-10"
+              class="emotion-8"
             />
           </div>
         </div>
         <button
-          class="emotion-17"
+          class="emotion-9"
           data-slot="button"
           data-testid="button"
           type="button"
         >
           <span
-            class="emotion-3"
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
           >
-            <span>
-              Hello world
-            </span>
+            Hello world
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        class="emotion-1"
+      >
+        <div
+          class="emotion-6"
+          data-testid="button"
+        >
+          <div
+            class="emotion-7"
+          >
+            <div
+              class="emotion-8"
+            />
+          </div>
+        </div>
+        <button
+          class="emotion-14"
+          data-slot="button"
+          data-testid="button"
+          type="button"
+        >
+          <span
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
+          >
+            Hello world
           </span>
         </button>
       </div>
@@ -399,11 +395,10 @@
           type="button"
         >
           <span
-            class="emotion-3"
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
           >
-            <span>
-              Hello world
-            </span>
+            Hello world
           </span>
         </button>
       </div>
@@ -415,18 +410,17 @@
         class="emotion-1"
       >
         <button
-          class="emotion-5"
+          class="emotion-4"
           data-slot="button"
           data-testid="button"
           disabled=""
           type="button"
         >
           <span
-            class="emotion-3"
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
           >
-            <span>
-              Hello world
-            </span>
+            Hello world
           </span>
         </button>
       </div>

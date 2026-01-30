@@ -8,6 +8,7 @@ export const cell = recipe({
   base: [
     sprinkles({
       borderColor: 'decorative.default',
+      bg: 'default',
     }),
     style({
       textAlign: 'start',

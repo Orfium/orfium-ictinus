@@ -18,6 +18,7 @@
     "build": "turbo build --env-mode=loose",
     "lint": "turbo lint",
     "test": "turbo test",
+    "test:update": "turbo test:update",
     "test:coverage": "turbo run test:coverage",
     "coverage:report": "turbo build --filter='./packages/*' && vitest run --coverage",
     "check": "turbo check",

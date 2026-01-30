@@ -14,6 +14,8 @@ import {
   Separator,
   Text,
 } from 'react-aria-components';
+import { cn } from '../../utils/cn';
+import * as styles from './Dropdown.css';
 
 interface DropdownSectionProps<T> extends SectionProps<T> {
   title?: string;
@@ -59,7 +61,7 @@ const DropdownDescription = ({ className, ref, ...props }: DropdownDescriptionPr
 );
 
 const DropdownSeparator = ({ className, ...props }: SeparatorProps) => (
-  <Separator orientation="horizontal" className={className} {...props} />
+  <Separator orientation="horizontal" className={cn(styles.separator({}), className)} {...props} />
 );
 
 /**

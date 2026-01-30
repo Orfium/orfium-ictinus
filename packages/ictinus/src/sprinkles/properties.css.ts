@@ -245,6 +245,7 @@ export const responsiveProps = defineProperties({
   properties: {
     alignItems: ['flex-start', 'center', 'flex-end', 'stretch', 'baseline'] as const,
     alignSelf: ['flex-start', 'center', 'flex-end', 'stretch', 'baseline'] as const,
+    placeItems: ['center'] as const,
     justifyContent: [
       'flex-start',
       'center',
@@ -331,7 +332,7 @@ export const unresponsiveProps = defineProperties({
   properties: {
     borderColor: borderTokens,
     borderStyle: ['solid', 'dashed'],
-    borderRadius: vars['border-radius'],
+    borderRadius: { ...vars['border-radius'], inherit: 'inherit' },
     borderTopLeftRadius: vars['border-radius'],
     borderTopRightRadius: vars['border-radius'],
     borderBottomLeftRadius: vars['border-radius'],

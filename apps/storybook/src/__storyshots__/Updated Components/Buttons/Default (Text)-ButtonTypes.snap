@@ -37,6 +37,10 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: var(--ictinus-spacing-4);
   color: var(--ictinus-color-text-inverted-primary);
   height: var(--ictinus-sizing-9);
   background-color: var(--ictinus-color-palette-primary-base);
@@ -66,23 +70,7 @@
   background-color: var(--ictinus-color-palette-primary-contrast);
 }
 
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  gap: var(--ictinus-spacing-4);
-}
-
-.emotion-5 {
+.emotion-4 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -100,6 +88,10 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: var(--ictinus-spacing-4);
   color: var(--ictinus-color-text-default-active);
   height: var(--ictinus-sizing-9);
   background-color: var(--ictinus-color-palette-secondary-base);
@@ -111,22 +103,73 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-5:focus-visible:not(:disabled) {
+.emotion-4:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
-.emotion-5:disabled {
+.emotion-4:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-5:hover:not(:disabled) {
+.emotion-4:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
-.emotion-5:active:not(:disabled),
-.emotion-5[aria-expanded="true"] {
+.emotion-4:active:not(:disabled),
+.emotion-4[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-secondary-contrast);
+}
+
+.emotion-6 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: var(--ictinus-spacing-4);
+  color: var(--ictinus-color-text-default-active);
+  height: var(--ictinus-sizing-9);
+  background-color: var(--ictinus-color-palette-tertiary-base);
+  padding: var(--ictinus-spacing-0) var(--ictinus-spacing-6) var(--ictinus-spacing-0) var(--ictinus-spacing-6);
+  border-radius: var(--ictinus-border-radius-2);
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-6:focus-visible:not(:disabled) {
+  background-color: var(--ictinus-color-palette-tertiary-muted);
+}
+
+.emotion-6:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-6:hover:not(:disabled) {
+  background-color: var(--ictinus-color-palette-tertiary-muted);
+}
+
+.emotion-6:active:not(:disabled),
+.emotion-6[aria-expanded="true"] {
+  background-color: var(--ictinus-color-palette-tertiary-contrast);
 }
 
 .emotion-8 {
@@ -147,53 +190,10 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: var(--ictinus-color-text-default-active);
-  height: var(--ictinus-sizing-9);
-  background-color: var(--ictinus-color-palette-tertiary-base);
-  padding: var(--ictinus-spacing-0) var(--ictinus-spacing-6) var(--ictinus-spacing-0) var(--ictinus-spacing-6);
-  border-radius: var(--ictinus-border-radius-2);
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-8:focus-visible:not(:disabled) {
-  background-color: var(--ictinus-color-palette-tertiary-muted);
-}
-
-.emotion-8:disabled {
-  opacity: 50%;
-  cursor: not-allowed;
-}
-
-.emotion-8:hover:not(:disabled) {
-  background-color: var(--ictinus-color-palette-tertiary-muted);
-}
-
-.emotion-8:active:not(:disabled),
-.emotion-8[aria-expanded="true"] {
-  background-color: var(--ictinus-color-palette-tertiary-contrast);
-}
-
-.emotion-11 {
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: var(--ictinus-spacing-4);
   color: var(--ictinus-color-text-default-error);
   height: var(--ictinus-sizing-9);
   background-color: var(--ictinus-color-palette-error-base);
@@ -205,25 +205,25 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-11:focus-visible:not(:disabled) {
+.emotion-8:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-error-muted);
 }
 
-.emotion-11:disabled {
+.emotion-8:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-11:hover:not(:disabled) {
+.emotion-8:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-error-muted);
 }
 
-.emotion-11:active:not(:disabled),
-.emotion-11[aria-expanded="true"] {
+.emotion-8:active:not(:disabled),
+.emotion-8[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-error-contrast);
 }
 
-.emotion-28 {
+.emotion-20 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1rem;
@@ -241,6 +241,10 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: var(--ictinus-spacing-4);
   color: var(--ictinus-color-text-inverted-primary);
   height: var(--ictinus-sizing-7);
   background-color: var(--ictinus-color-palette-primary-base);
@@ -252,25 +256,25 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-28:focus-visible:not(:disabled) {
+.emotion-20:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-primary-muted);
 }
 
-.emotion-28:disabled {
+.emotion-20:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-28:hover:not(:disabled) {
+.emotion-20:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-primary-muted);
 }
 
-.emotion-28:active:not(:disabled),
-.emotion-28[aria-expanded="true"] {
+.emotion-20:active:not(:disabled),
+.emotion-20[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-primary-contrast);
 }
 
-.emotion-31 {
+.emotion-22 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1rem;
@@ -288,6 +292,10 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: var(--ictinus-spacing-4);
   color: var(--ictinus-color-text-default-active);
   height: var(--ictinus-sizing-7);
   background-color: var(--ictinus-color-palette-secondary-base);
@@ -299,25 +307,25 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-31:focus-visible:not(:disabled) {
+.emotion-22:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
-.emotion-31:disabled {
+.emotion-22:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-31:hover:not(:disabled) {
+.emotion-22:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
-.emotion-31:active:not(:disabled),
-.emotion-31[aria-expanded="true"] {
+.emotion-22:active:not(:disabled),
+.emotion-22[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-secondary-contrast);
 }
 
-.emotion-34 {
+.emotion-24 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1rem;
@@ -335,6 +343,10 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: var(--ictinus-spacing-4);
   color: var(--ictinus-color-text-default-active);
   height: var(--ictinus-sizing-7);
   background-color: var(--ictinus-color-palette-tertiary-base);
@@ -346,25 +358,25 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-34:focus-visible:not(:disabled) {
+.emotion-24:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
-.emotion-34:disabled {
+.emotion-24:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-34:hover:not(:disabled) {
+.emotion-24:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
-.emotion-34:active:not(:disabled),
-.emotion-34[aria-expanded="true"] {
+.emotion-24:active:not(:disabled),
+.emotion-24[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-tertiary-contrast);
 }
 
-.emotion-37 {
+.emotion-26 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1rem;
@@ -382,6 +394,10 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: var(--ictinus-spacing-4);
   color: var(--ictinus-color-text-default-error);
   height: var(--ictinus-sizing-7);
   background-color: var(--ictinus-color-palette-error-base);
@@ -393,21 +409,21 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-37:focus-visible:not(:disabled) {
+.emotion-26:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-error-muted);
 }
 
-.emotion-37:disabled {
+.emotion-26:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-37:hover:not(:disabled) {
+.emotion-26:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-error-muted);
 }
 
-.emotion-37:active:not(:disabled),
-.emotion-37[aria-expanded="true"] {
+.emotion-26:active:not(:disabled),
+.emotion-26[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-error-contrast);
 }
 
@@ -428,11 +444,10 @@
           type="button"
         >
           <span
-            class="emotion-3"
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
           >
-            <span>
-              Primary
-            </span>
+            Primary
           </span>
         </button>
       </div>
@@ -444,17 +459,37 @@
         class="emotion-1"
       >
         <button
-          class="emotion-5"
+          class="emotion-4"
           data-slot="button"
           data-testid="button"
           type="button"
         >
           <span
-            class="emotion-3"
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
           >
-            <span>
-              Secondary
-            </span>
+            Secondary
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        class="emotion-1"
+      >
+        <button
+          class="emotion-6"
+          data-slot="button"
+          data-testid="button"
+          type="button"
+        >
+          <span
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
+          >
+            Tertiary
           </span>
         </button>
       </div>
@@ -472,33 +507,10 @@
           type="button"
         >
           <span
-            class="emotion-3"
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
           >
-            <span>
-              Tertiary
-            </span>
-          </span>
-        </button>
-      </div>
-    </div>
-    <div
-      style="margin: 5px;"
-    >
-      <div
-        class="emotion-1"
-      >
-        <button
-          class="emotion-11"
-          data-slot="button"
-          data-testid="button"
-          type="button"
-        >
-          <span
-            class="emotion-3"
-          >
-            <span>
-              Danger
-            </span>
+            Danger
           </span>
         </button>
       </div>
@@ -521,11 +533,10 @@
           type="button"
         >
           <span
-            class="emotion-3"
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
           >
-            <span>
-              Primary
-            </span>
+            Primary
           </span>
         </button>
       </div>
@@ -537,18 +548,39 @@
         class="emotion-1"
       >
         <button
-          class="emotion-5"
+          class="emotion-4"
           data-slot="button"
           data-testid="button"
           disabled=""
           type="button"
         >
           <span
-            class="emotion-3"
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
           >
-            <span>
-              Secondary
-            </span>
+            Secondary
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        class="emotion-1"
+      >
+        <button
+          class="emotion-6"
+          data-slot="button"
+          data-testid="button"
+          disabled=""
+          type="button"
+        >
+          <span
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
+          >
+            Tertiary
           </span>
         </button>
       </div>
@@ -567,34 +599,10 @@
           type="button"
         >
           <span
-            class="emotion-3"
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
           >
-            <span>
-              Tertiary
-            </span>
-          </span>
-        </button>
-      </div>
-    </div>
-    <div
-      style="margin: 5px;"
-    >
-      <div
-        class="emotion-1"
-      >
-        <button
-          class="emotion-11"
-          data-slot="button"
-          data-testid="button"
-          disabled=""
-          type="button"
-        >
-          <span
-            class="emotion-3"
-          >
-            <span>
-              Danger
-            </span>
+            Danger
           </span>
         </button>
       </div>
@@ -610,17 +618,16 @@
         class="emotion-1"
       >
         <button
-          class="emotion-28"
+          class="emotion-20"
           data-slot="button"
           data-testid="button"
           type="button"
         >
           <span
-            class="emotion-3"
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
           >
-            <span>
-              Primary
-            </span>
+            Primary
           </span>
         </button>
       </div>
@@ -632,17 +639,16 @@
         class="emotion-1"
       >
         <button
-          class="emotion-31"
+          class="emotion-22"
           data-slot="button"
           data-testid="button"
           type="button"
         >
           <span
-            class="emotion-3"
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
           >
-            <span>
-              Secondary
-            </span>
+            Secondary
           </span>
         </button>
       </div>
@@ -654,17 +660,16 @@
         class="emotion-1"
       >
         <button
-          class="emotion-34"
+          class="emotion-24"
           data-slot="button"
           data-testid="button"
           type="button"
         >
           <span
-            class="emotion-3"
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
           >
-            <span>
-              Tertiary
-            </span>
+            Tertiary
           </span>
         </button>
       </div>
@@ -676,17 +681,16 @@
         class="emotion-1"
       >
         <button
-          class="emotion-37"
+          class="emotion-26"
           data-slot="button"
           data-testid="button"
           type="button"
         >
           <span
-            class="emotion-3"
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
           >
-            <span>
-              Danger
-            </span>
+            Danger
           </span>
         </button>
       </div>
@@ -702,18 +706,17 @@
         class="emotion-1"
       >
         <button
-          class="emotion-28"
+          class="emotion-20"
           data-slot="button"
           data-testid="button"
           disabled=""
           type="button"
         >
           <span
-            class="emotion-3"
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
           >
-            <span>
-              Primary
-            </span>
+            Primary
           </span>
         </button>
       </div>
@@ -725,18 +728,17 @@
         class="emotion-1"
       >
         <button
-          class="emotion-31"
+          class="emotion-22"
           data-slot="button"
           data-testid="button"
           disabled=""
           type="button"
         >
           <span
-            class="emotion-3"
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
           >
-            <span>
-              Secondary
-            </span>
+            Secondary
           </span>
         </button>
       </div>
@@ -748,18 +750,17 @@
         class="emotion-1"
       >
         <button
-          class="emotion-34"
+          class="emotion-24"
           data-slot="button"
           data-testid="button"
           disabled=""
           type="button"
         >
           <span
-            class="emotion-3"
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
           >
-            <span>
-              Tertiary
-            </span>
+            Tertiary
           </span>
         </button>
       </div>
@@ -771,18 +772,17 @@
         class="emotion-1"
       >
         <button
-          class="emotion-37"
+          class="emotion-26"
           data-slot="button"
           data-testid="button"
           disabled=""
           type="button"
         >
           <span
-            class="emotion-3"
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
           >
-            <span>
-              Danger
-            </span>
+            Danger
           </span>
         </button>
       </div>

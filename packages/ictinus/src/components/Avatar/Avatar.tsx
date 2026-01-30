@@ -1,8 +1,8 @@
 import { forwardRef, useMemo, type PropsWithChildren } from 'react';
 
-import UserAvatar from './assets/user-avatar.svg?react';
 import { avatarStyle, iconStyles } from './Avatar.style';
 import type { AvatarProps } from './Avatar.types';
+import { UserAvatar } from './UserAvatar';
 
 const Avatar = forwardRef<HTMLDivElement, PropsWithChildren<AvatarProps>>(
   ({ src = '', size = 1, color = 'blue', className, dataTestPrefixId = '', children }, ref) => {
