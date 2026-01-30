@@ -35,8 +35,6 @@ export const DataTableRow = forwardRef<HTMLTableRowElement, DataTableRowProps<un
     const [subHighlightedIndex, setSubHighlightedIndex] = useState(-1);
     const labelId = useId();
 
-    // const innerRef = useRef<HTMLTableRowElement>(null);
-    // const ref = useComposedRefs(innerRef, outerRef);
     const domRef = useDOMRef(ref);
 
     useEffect(() => {
@@ -89,7 +87,6 @@ export const DataTableRow = forwardRef<HTMLTableRowElement, DataTableRowProps<un
         data-selected={row.getIsSelected() ? '' : undefined}
         onClick={(event) => {
           if (selector && getAssociatedControl(event) !== selector.current) {
-            // table.setRowSelection({ [row.id]: true });
             row.toggleSelected();
           }
         }}

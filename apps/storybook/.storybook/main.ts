@@ -41,21 +41,6 @@ const config: StorybookConfig = {
     reactDocgenTypescriptOptions: {
       shouldExtractLiteralValuesFromEnum: true,
       shouldExtractValuesFromUnion: true,
-      // Sanitize component names to avoid invalid JS identifiers
-      // componentNameResolver: (exp, source) => {
-      //   const name = exp.getName();
-
-      //   // Handle default exports - use filename instead
-      //   if (name === 'default') {
-      //     const sourceFile = source.getSourceFile();
-      //     // Use fileName property of SourceFile, which is a string
-      //     const fileNameStr = sourceFile.fileName || '';
-      //     const match = fileNameStr.match(/([^/\\]+)\.(tsx?|jsx?)$/);
-      //     return match ? match[1] : 'Component';
-      //   }
-
-      //   return name;
-      // },
       compilerOptions: {
         baseUrl: resolve(__dirname, '../../../packages/ictinus/src'),
         paths: {

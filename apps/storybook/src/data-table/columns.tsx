@@ -96,6 +96,9 @@ export const columns = [
     id: 'action',
     size: 48,
     enableResizing: false,
+    meta: {
+      align: 'center',
+    },
   }),
 ];
 

@@ -4,7 +4,6 @@ import { Checkbox as ReactAriaCheckbox } from 'react-aria-components';
 import type { TestProps } from 'utils/types';
 
 import type { LabelConfig } from 'components/Controls/Controls.types';
-// import Icon from 'components/Icon';
 import Box from '~/components/Box';
 import { Icon } from '../../../icon';
 import { ControlHelpText, ControlLabelText } from '../ControlLabel';

@@ -37,6 +37,7 @@ export const DataTableHeaderCell = forwardRef<HTMLTableCellElement, DataTableHea
           aria-sort={getAriaSort(header.column.getCanSort(), sortDir)}
           colSpan={header.colSpan}
           ref={ref}
+          data-test
           {...props}
         >
           {typeof children !== 'string' || !header.column.getCanSort() ? (
@@ -76,7 +77,11 @@ export const DataTableHeaderCell = forwardRef<HTMLTableCellElement, DataTableHea
 
                 <Tooltip auto>
                   <TooltipTrigger>
-                    <Text role="button" color={sortDir ? 'primary' : 'secondary'} lineClamp="1">
+                    <Text
+                      role="button"
+                      lineClamp="1"
+                      className={styles.label({ sortDir: !!sortDir })}
+                    >
                       {children}
                     </Text>
                   </TooltipTrigger>
@@ -88,7 +93,7 @@ export const DataTableHeaderCell = forwardRef<HTMLTableCellElement, DataTableHea
                     <TooltipTrigger>
                       {/* temporary work around, need to forward ref icon */}
                       <Box display="flex" alignItems="center" justifyContent="center" size="3">
-                        <Icon name="informational" size="xs" />
+                        <Icon name="informational" size="xs" color="secondary" />
                       </Box>
                     </TooltipTrigger>
                     <TooltipContent maxW="22">

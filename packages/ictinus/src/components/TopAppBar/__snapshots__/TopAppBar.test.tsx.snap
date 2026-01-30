@@ -207,6 +207,9 @@ exports[`TopAppBar > should render correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   gap: var(--ictinus-spacing-4);
   color: var(--ictinus-color-text-default-active);
   height: var(--ictinus-sizing-9);
@@ -577,6 +580,9 @@ exports[`TopAppBar > should render correctly on dark 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   gap: var(--ictinus-spacing-4);
   color: var(--ictinus-color-text-default-active);
   height: var(--ictinus-sizing-9);

@@ -16,6 +16,9 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   gap: var(--ictinus-spacing-4);
   color: var(--ictinus-color-text-default-active);
   height: var(--ictinus-sizing-7);
@@ -158,6 +161,9 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   gap: var(--ictinus-spacing-4);
   color: var(--ictinus-color-text-default-active);
   width: var(--ictinus-sizing-7);
@@ -274,6 +280,7 @@
                 colspan="1"
                 data-ictinus="test-version"
                 data-pinned=""
+                data-test="true"
                 style="--_1boh8d71: 0px; --_1boh8d70: 48;"
               >
                 <div
@@ -332,6 +339,7 @@
                 colspan="1"
                 data-ictinus="test-version"
                 data-pinned=""
+                data-test="true"
                 style="--_1boh8d71: 48px; --_1boh8d70: 150;"
               >
                 <div
@@ -347,11 +355,11 @@
                       data-ictinus="test-version"
                     >
                       <div
-                        class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 DataTableHeaderCell_handle__17goizn7 properties_borderColor_decorative.default_base__19njorx1w2 DataTableHeaderCell__17goizn6 DataTableHeaderCell_handle_resizing_false__17goizn8 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_justifyContent_space-between_base__19njorx1k properties_height_full_base__19njorx94"
+                        class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 DataTableHeaderCell_handle__17goiznb properties_borderColor_decorative.default_base__19njorx1w2 DataTableHeaderCell__17goizna DataTableHeaderCell_handle_resizing_false__17goiznc properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_justifyContent_space-between_base__19njorx1k properties_height_full_base__19njorx94"
                         data-ictinus="test-version"
                       />
                       <span
-                        class="Text__ff5iyl6 Text_text_lineClamp_1__ff5iyl7 Text__ff5iyl0 Text__ff5iyl1 Text__ff5iyl2 properties_color_secondary_base__19njorx236"
+                        class="Text__ff5iyl6 Text_text_lineClamp_1__ff5iyl7 Text__ff5iyl0 Text__ff5iyl1 Text__ff5iyl2 DataTableHeaderCell_label__17goizn1 DataTableHeaderCell__17goizn0 DataTableHeaderCell_label_sortDir_false__17goizn2"
                         data-ictinus="test-version"
                         role="button"
                         tabindex="0"
@@ -364,7 +372,7 @@
                         tabindex="0"
                       >
                         <svg
-                          class="properties_height_3_base__19njorx6w properties_width_3_base__19njorx44"
+                          class="properties_color_secondary_base__19njorx236 properties_height_3_base__19njorx6w properties_width_3_base__19njorx44"
                           data-ictinus="test-version"
                           viewBox="0 0 20 20"
                           xmlns="http://www.w3.org/2000/svg"
@@ -453,6 +461,7 @@
                 class="TableHeaderCell_cell__u8v29c4 properties_borderColor_decorative.default_base__19njorx1w2 TableHeaderCell__u8v29c1 TableHeaderCell__u8v29c0 TableHeaderCell_cell_pinned_false__u8v29c5 TableHeaderCell__u8v29c2 ActionsRoot__11x85c11 ActionsRoot__11x85c10 DataTableBody_cell__1boh8d7d properties_backgroundColor_default_base__19njorx1mi DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2g"
                 colspan="1"
                 data-ictinus="test-version"
+                data-test="true"
                 style="--_1boh8d71: 48px; --_1boh8d70: 150;"
               >
                 <div
@@ -468,11 +477,11 @@
                       data-ictinus="test-version"
                     >
                       <div
-                        class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 DataTableHeaderCell_handle__17goizn7 properties_borderColor_decorative.default_base__19njorx1w2 DataTableHeaderCell__17goizn6 DataTableHeaderCell_handle_resizing_false__17goizn8 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_justifyContent_space-between_base__19njorx1k properties_height_full_base__19njorx94"
+                        class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 DataTableHeaderCell_handle__17goiznb properties_borderColor_decorative.default_base__19njorx1w2 DataTableHeaderCell__17goizna DataTableHeaderCell_handle_resizing_false__17goiznc properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_justifyContent_space-between_base__19njorx1k properties_height_full_base__19njorx94"
                         data-ictinus="test-version"
                       />
                       <span
-                        class="Text__ff5iyl6 Text_text_lineClamp_1__ff5iyl7 Text__ff5iyl0 Text__ff5iyl1 Text__ff5iyl2 properties_color_secondary_base__19njorx236"
+                        class="Text__ff5iyl6 Text_text_lineClamp_1__ff5iyl7 Text__ff5iyl0 Text__ff5iyl1 Text__ff5iyl2 DataTableHeaderCell_label__17goizn1 DataTableHeaderCell__17goizn0 DataTableHeaderCell_label_sortDir_false__17goizn2"
                         data-ictinus="test-version"
                         role="button"
                         tabindex="0"
@@ -555,6 +564,7 @@
                 class="TableHeaderCell_cell__u8v29c4 properties_borderColor_decorative.default_base__19njorx1w2 TableHeaderCell__u8v29c1 TableHeaderCell__u8v29c0 TableHeaderCell_cell_pinned_false__u8v29c5 TableHeaderCell__u8v29c2 ActionsRoot__11x85c11 ActionsRoot__11x85c10 DataTableBody_cell__1boh8d7d properties_backgroundColor_default_base__19njorx1mi DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2g"
                 colspan="1"
                 data-ictinus="test-version"
+                data-test="true"
                 style="--_1boh8d71: 48px; --_1boh8d70: 150;"
               >
                 <div
@@ -570,11 +580,11 @@
                       data-ictinus="test-version"
                     >
                       <div
-                        class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 DataTableHeaderCell_handle__17goizn7 properties_borderColor_decorative.default_base__19njorx1w2 DataTableHeaderCell__17goizn6 DataTableHeaderCell_handle_resizing_false__17goizn8 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_justifyContent_space-between_base__19njorx1k properties_height_full_base__19njorx94"
+                        class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 DataTableHeaderCell_handle__17goiznb properties_borderColor_decorative.default_base__19njorx1w2 DataTableHeaderCell__17goizna DataTableHeaderCell_handle_resizing_false__17goiznc properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_justifyContent_space-between_base__19njorx1k properties_height_full_base__19njorx94"
                         data-ictinus="test-version"
                       />
                       <span
-                        class="Text__ff5iyl6 Text_text_lineClamp_1__ff5iyl7 Text__ff5iyl0 Text__ff5iyl1 Text__ff5iyl2 properties_color_secondary_base__19njorx236"
+                        class="Text__ff5iyl6 Text_text_lineClamp_1__ff5iyl7 Text__ff5iyl0 Text__ff5iyl1 Text__ff5iyl2 DataTableHeaderCell_label__17goizn1 DataTableHeaderCell__17goizn0 DataTableHeaderCell_label_sortDir_false__17goizn2"
                         data-ictinus="test-version"
                         role="button"
                         tabindex="0"
@@ -587,7 +597,7 @@
                         tabindex="0"
                       >
                         <svg
-                          class="properties_height_3_base__19njorx6w properties_width_3_base__19njorx44"
+                          class="properties_color_secondary_base__19njorx236 properties_height_3_base__19njorx6w properties_width_3_base__19njorx44"
                           data-ictinus="test-version"
                           viewBox="0 0 20 20"
                           xmlns="http://www.w3.org/2000/svg"
@@ -676,6 +686,7 @@
                 class="TableHeaderCell_cell__u8v29c4 properties_borderColor_decorative.default_base__19njorx1w2 TableHeaderCell__u8v29c1 TableHeaderCell__u8v29c0 TableHeaderCell_cell_pinned_false__u8v29c5 TableHeaderCell__u8v29c2 ActionsRoot__11x85c11 ActionsRoot__11x85c10 DataTableBody_cell__1boh8d7d properties_backgroundColor_default_base__19njorx1mi DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2g"
                 colspan="1"
                 data-ictinus="test-version"
+                data-test="true"
                 style="--_1boh8d71: 48px; --_1boh8d70: 150;"
               >
                 <div
@@ -691,11 +702,11 @@
                       data-ictinus="test-version"
                     >
                       <div
-                        class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 DataTableHeaderCell_handle__17goizn7 properties_borderColor_decorative.default_base__19njorx1w2 DataTableHeaderCell__17goizn6 DataTableHeaderCell_handle_resizing_false__17goizn8 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_justifyContent_space-between_base__19njorx1k properties_height_full_base__19njorx94"
+                        class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 DataTableHeaderCell_handle__17goiznb properties_borderColor_decorative.default_base__19njorx1w2 DataTableHeaderCell__17goizna DataTableHeaderCell_handle_resizing_false__17goiznc properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_justifyContent_space-between_base__19njorx1k properties_height_full_base__19njorx94"
                         data-ictinus="test-version"
                       />
                       <span
-                        class="Text__ff5iyl6 Text_text_lineClamp_1__ff5iyl7 Text__ff5iyl0 Text__ff5iyl1 Text__ff5iyl2 properties_color_secondary_base__19njorx236"
+                        class="Text__ff5iyl6 Text_text_lineClamp_1__ff5iyl7 Text__ff5iyl0 Text__ff5iyl1 Text__ff5iyl2 DataTableHeaderCell_label__17goizn1 DataTableHeaderCell__17goizn0 DataTableHeaderCell_label_sortDir_false__17goizn2"
                         data-ictinus="test-version"
                         role="button"
                         tabindex="0"
@@ -778,6 +789,7 @@
                 class="TableHeaderCell_cell__u8v29c4 properties_borderColor_decorative.default_base__19njorx1w2 TableHeaderCell__u8v29c1 TableHeaderCell__u8v29c0 TableHeaderCell_cell_pinned_false__u8v29c5 TableHeaderCell__u8v29c2 ActionsRoot__11x85c11 ActionsRoot__11x85c10 DataTableBody_cell__1boh8d7d properties_backgroundColor_default_base__19njorx1mi DataTableBody__1boh8d78 DataTableBody_cell_resizable_true__1boh8d7h DataTableBody__1boh8d7c properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2g"
                 colspan="1"
                 data-ictinus="test-version"
+                data-test="true"
                 style="--_1boh8d71: 48px; --_1boh8d70: 150;"
               >
                 <div
@@ -793,11 +805,11 @@
                       data-ictinus="test-version"
                     >
                       <div
-                        class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 DataTableHeaderCell_handle__17goizn7 properties_borderColor_decorative.default_base__19njorx1w2 DataTableHeaderCell__17goizn6 DataTableHeaderCell_handle_resizing_false__17goizn8 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_justifyContent_space-between_base__19njorx1k properties_height_full_base__19njorx94"
+                        class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 DataTableHeaderCell_handle__17goiznb properties_borderColor_decorative.default_base__19njorx1w2 DataTableHeaderCell__17goizna DataTableHeaderCell_handle_resizing_false__17goiznc properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_justifyContent_space-between_base__19njorx1k properties_height_full_base__19njorx94"
                         data-ictinus="test-version"
                       />
                       <span
-                        class="Text__ff5iyl6 Text_text_lineClamp_1__ff5iyl7 Text__ff5iyl0 Text__ff5iyl1 Text__ff5iyl2 properties_color_secondary_base__19njorx236"
+                        class="Text__ff5iyl6 Text_text_lineClamp_1__ff5iyl7 Text__ff5iyl0 Text__ff5iyl1 Text__ff5iyl2 DataTableHeaderCell_label__17goizn1 DataTableHeaderCell__17goizn0 DataTableHeaderCell_label_sortDir_false__17goizn2"
                         data-ictinus="test-version"
                         role="button"
                         tabindex="0"
@@ -879,10 +891,11 @@
                 class="TableHeaderCell_cell__u8v29c4 properties_borderColor_decorative.default_base__19njorx1w2 TableHeaderCell__u8v29c1 TableHeaderCell__u8v29c0 TableHeaderCell_cell_pinned_false__u8v29c5 TableHeaderCell__u8v29c2 ActionsRoot__11x85c11 ActionsRoot__11x85c10 DataTableBody_cell__1boh8d7d properties_backgroundColor_default_base__19njorx1mi DataTableBody__1boh8d78 DataTableBody_cell_resizable_false__1boh8d7g DataTableBody__1boh8d7b properties_alignItems_flex-start_base__19njorx0 properties_display_flex_base__19njorx2g"
                 colspan="1"
                 data-ictinus="test-version"
+                data-test="true"
                 style="--_1boh8d71: 48px; --_1boh8d70: 48;"
               >
                 <div
-                  class="TableHeaderCell_content__u8v29c9 properties_color_secondary_base__19njorx236 properties_borderColor_decorative.default_base__19njorx1w2 TableHeaderCell__u8v29c7 TableHeaderCell_content_size_sm__u8v29ca properties_backgroundColor_default_base__19njorx1mi properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w"
+                  class="TableHeaderCell_content__u8v29c9 properties_color_secondary_base__19njorx236 properties_borderColor_decorative.default_base__19njorx1w2 TableHeaderCell__u8v29c7 TableHeaderCell_content_size_sm__u8v29ca properties_backgroundColor_default_base__19njorx1mi properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w properties_justifyContent_center_base__19njorx1c"
                   data-ictinus="test-version"
                 />
               </th>
@@ -1032,7 +1045,7 @@
                 style="--_1boh8d70: 48;"
               >
                 <div
-                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya36 TableCell_content_size_sm__f31ya39 properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w"
+                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya36 TableCell_content_size_sm__f31ya39 properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w properties_justifyContent_center_base__19njorx1c"
                   data-ictinus="test-version"
                 >
                   <button
@@ -1196,7 +1209,7 @@
                 style="--_1boh8d70: 48;"
               >
                 <div
-                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya36 TableCell_content_size_sm__f31ya39 properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w"
+                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya36 TableCell_content_size_sm__f31ya39 properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w properties_justifyContent_center_base__19njorx1c"
                   data-ictinus="test-version"
                 >
                   <button
@@ -1362,7 +1375,7 @@
                 style="--_1boh8d70: 48;"
               >
                 <div
-                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya36 TableCell_content_size_sm__f31ya39 properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w"
+                  class="TableCell_content__f31ya38 properties_color_primary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya36 TableCell_content_size_sm__f31ya39 properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w properties_justifyContent_center_base__19njorx1c"
                   data-ictinus="test-version"
                 >
                   <button

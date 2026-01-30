@@ -1,7 +1,41 @@
 import { style } from '../vanilla-extract';
 
+import { vars } from '@orfium/tokens';
 import { recipe } from '@vanilla-extract/recipes';
 import { sprinkles } from '../sprinkles';
+
+import * as headerCellStyles from '../vanilla/Table/TableHeaderCell.css';
+
+const headerCell = headerCellStyles.className;
+
+export const label = recipe({
+  base: [
+    style({
+      color: vars.color.text.default.secondary,
+      fontWeight: vars.weight.regular,
+
+      '@media': {
+        '(hover: hover)': {
+          selectors: {
+            [`${headerCell}:hover &`]: {
+              color: vars.color.text.default.primary,
+              fontWeight: vars.weight.medium,
+            },
+          },
+        },
+      },
+    }),
+  ],
+
+  variants: {
+    sortDir: {
+      false: {},
+      true: {
+        color: vars.color.text.default.primary,
+      },
+    },
+  },
+});
 
 export const icon = recipe({
   base: [

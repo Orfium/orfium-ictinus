@@ -195,7 +195,6 @@ export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
                   <TableCell
                     bordered={bordered}
                     size={size}
-                    // flex="1"
                     justifyContent={cell.column.columnDef.meta?.align}
                     key={cell.id}
                     pinned

@@ -48,6 +48,7 @@ export const buttonBaseStyle =
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
+      flexShrink: 0,
       gap: vars.spacing['4'],
       color: BUTTON_COLOR[type].text,
       width: getButtonWidth(),
