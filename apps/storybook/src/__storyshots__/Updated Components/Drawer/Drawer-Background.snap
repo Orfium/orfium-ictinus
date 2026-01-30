@@ -18,6 +18,13 @@
 }
 
 .emotion-2 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-3 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -50,25 +57,25 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-2:focus-visible:not(:disabled) {
+.emotion-3:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-primary-muted);
 }
 
-.emotion-2:disabled {
+.emotion-3:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-2:hover:not(:disabled) {
+.emotion-3:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-primary-muted);
 }
 
-.emotion-2:active:not(:disabled),
-.emotion-2[aria-expanded="true"] {
+.emotion-3:active:not(:disabled),
+.emotion-3[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-primary-contrast);
 }
 
-.emotion-4 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -83,7 +90,7 @@
   align-items: center;
 }
 
-.emotion-5 {
+.emotion-7 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.375rem;
@@ -99,54 +106,66 @@
     <div
       class="emotion-1"
     >
-      <button
+      <div
         class="emotion-2"
-        data-slot="button"
-        data-testid="button"
-        type="button"
       >
-        <span
-          class="Text__ff5iyl6"
-          data-ictinus="test-version"
+        <button
+          class="emotion-3"
+          data-slot="button"
+          data-testid="button"
+          type="button"
         >
-          Non-interactive Background
-        </span>
-      </button>
-      <button
+          <span
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
+          >
+            Non-interactive Background
+          </span>
+        </button>
+      </div>
+      <div
         class="emotion-2"
-        data-slot="button"
-        data-testid="button"
-        type="button"
       >
-        <span
-          class="Text__ff5iyl6"
-          data-ictinus="test-version"
+        <button
+          class="emotion-3"
+          data-slot="button"
+          data-testid="button"
+          type="button"
         >
-          Interactive Background
-        </span>
-      </button>
+          <span
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
+          >
+            Interactive Background
+          </span>
+        </button>
+      </div>
     </div>
     <div
-      class="emotion-4"
+      class="emotion-6"
     >
       <p
-        class="emotion-5"
+        class="emotion-7"
       >
         Copy Paste this Text
       </p>
-      <button
+      <div
         class="emotion-2"
-        data-slot="button"
-        data-testid="button"
-        type="button"
       >
-        <span
-          class="Text__ff5iyl6"
-          data-ictinus="test-version"
+        <button
+          class="emotion-3"
+          data-slot="button"
+          data-testid="button"
+          type="button"
         >
-          Click this Button
-        </span>
-      </button>
+          <span
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
+          >
+            Click this Button
+          </span>
+        </button>
+      </div>
     </div>
   </div>
 </div>

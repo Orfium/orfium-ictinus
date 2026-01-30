@@ -131,6 +131,13 @@
 }
 
 .emotion-7 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-8 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1rem;
@@ -163,25 +170,25 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-7:focus-visible:not(:disabled) {
+.emotion-8:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
-.emotion-7:disabled {
+.emotion-8:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-7:hover:not(:disabled) {
+.emotion-8:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
-.emotion-7:active:not(:disabled),
-.emotion-7[aria-expanded="true"] {
+.emotion-8:active:not(:disabled),
+.emotion-8[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-tertiary-contrast);
 }
 
-.emotion-8 {
+.emotion-10 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1rem;
@@ -214,25 +221,25 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-8:focus-visible:not(:disabled) {
+.emotion-10:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-primary-muted);
 }
 
-.emotion-8:disabled {
+.emotion-10:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-8:hover:not(:disabled) {
+.emotion-10:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-primary-muted);
 }
 
-.emotion-8:active:not(:disabled),
-.emotion-8[aria-expanded="true"] {
+.emotion-10:active:not(:disabled),
+.emotion-10[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-primary-contrast);
 }
 
-.emotion-9 {
+.emotion-11 {
   width: 1.25rem;
   height: 1.25rem;
   display: -webkit-box;
@@ -245,8 +252,8 @@
   margin-left: var(--ictinus-spacing-6);
 }
 
-.emotion-9:hover,
-.emotion-9:focus-visible {
+.emotion-11:hover,
+.emotion-11:focus-visible {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   border-radius: 100%;
@@ -254,13 +261,13 @@
   box-shadow: 0px 0px 0px 8px rgba(200,206,255,0.20);
 }
 
-.emotion-10 {
+.emotion-12 {
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-10 path,
-.emotion-10 rect {
+.emotion-12 path,
+.emotion-12 rect {
   fill: var(--ictinus-color-text-default-secondary)!important;
 }
 
@@ -304,36 +311,44 @@
       <div
         class="emotion-6"
       >
-        <button
+        <div
           class="emotion-7"
-          data-slot="button"
-          data-testid="button"
-          type="button"
         >
-          <span
-            class="Text__ff5iyl6"
-            data-ictinus="test-version"
+          <button
+            class="emotion-8"
+            data-slot="button"
+            data-testid="button"
+            type="button"
           >
-            Tertiary
-          </span>
-        </button>
-        <button
-          class="emotion-8"
-          data-slot="button"
-          data-testid="button"
-          type="button"
+            <span
+              class="Text__ff5iyl6"
+              data-ictinus="test-version"
+            >
+              Tertiary
+            </span>
+          </button>
+        </div>
+        <div
+          class="emotion-7"
         >
-          <span
-            class="Text__ff5iyl6"
-            data-ictinus="test-version"
+          <button
+            class="emotion-10"
+            data-slot="button"
+            data-testid="button"
+            type="button"
           >
-            Primary
-          </span>
-        </button>
+            <span
+              class="Text__ff5iyl6"
+              data-ictinus="test-version"
+            >
+              Primary
+            </span>
+          </button>
+        </div>
       </div>
       <div
         aria-label="Dismiss notification"
-        class="emotion-9"
+        class="emotion-11"
         data-slot="icon"
         data-testid="_inline_alert_dismiss"
         id="react-aria-:test-id:"
@@ -341,7 +356,7 @@
         tabindex="0"
       >
         <svg
-          class="emotion-10"
+          class="emotion-12"
           fill="none"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"

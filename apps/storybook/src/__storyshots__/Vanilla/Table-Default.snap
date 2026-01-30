@@ -1,4 +1,11 @@
 .emotion-0 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-1 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1rem;
@@ -31,25 +38,25 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-0:focus-visible:not(:disabled) {
+.emotion-1:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
-.emotion-0:disabled {
+.emotion-1:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-0:hover:not(:disabled) {
+.emotion-1:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
-.emotion-0:active:not(:disabled),
-.emotion-0[aria-expanded="true"] {
+.emotion-1:active:not(:disabled),
+.emotion-1[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-secondary-contrast);
 }
 
-.emotion-1 {
+.emotion-3 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1rem;
@@ -83,30 +90,30 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-1:focus-visible:not(:disabled) {
+.emotion-3:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
-.emotion-1:disabled {
+.emotion-3:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-1:hover:not(:disabled) {
+.emotion-3:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
-.emotion-1:active:not(:disabled),
-.emotion-1[aria-expanded="true"] {
+.emotion-3:active:not(:disabled),
+.emotion-3[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-tertiary-contrast);
 }
 
-.emotion-2 {
+.emotion-4 {
   position: relative;
   min-width: 140px;
 }
 
-.emotion-4 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -134,16 +141,16 @@
   background-color: var(--ictinus-color-palette-secondary-base);
 }
 
-.emotion-4:hover {
+.emotion-6:hover {
   background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
-.emotion-4:focus-within {
+.emotion-6:focus-within {
   box-shadow: 0 0 0 var(--ictinus-border-width-2) var(--ictinus-color-border-color-interactive-active);
   background-color: var(--ictinus-color-palette-secondary-base);
 }
 
-.emotion-5 {
+.emotion-7 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -163,11 +170,11 @@
   padding: var(--ictinus-spacing-0) var(--ictinus-spacing-0) var(--ictinus-spacing-0) var(--ictinus-spacing-5);
 }
 
-.emotion-5>div {
+.emotion-7>div {
   position: relative;
 }
 
-.emotion-6 {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -177,7 +184,7 @@
   flex: 1;
 }
 
-.emotion-7 {
+.emotion-9 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1rem;
@@ -195,61 +202,61 @@
   min-width: 100%;
 }
 
-.emotion-7::-webkit-input-placeholder {
+.emotion-9::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-7::-moz-placeholder {
+.emotion-9::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-7:-ms-input-placeholder {
+.emotion-9:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-7::placeholder {
+.emotion-9::placeholder {
   color: transparent;
 }
 
-.emotion-7:focus {
+.emotion-9:focus {
   outline: none;
 }
 
-.emotion-7:focus::-webkit-input-placeholder {
+.emotion-9:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-7:focus::-moz-placeholder {
+.emotion-9:focus::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-7:focus:-ms-input-placeholder {
+.emotion-9:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-7:focus::placeholder {
+.emotion-9:focus::placeholder {
   color: transparent;
 }
 
-.emotion-7:not(:focus):placeholder-shown+label {
+.emotion-9:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-7:focus-within+label,
-.emotion-7:not(:placeholder-shown)+label {
+.emotion-9:focus-within+label,
+.emotion-9:not(:placeholder-shown)+label {
   display: none;
 }
 
-.emotion-7:focus-within+label {
+.emotion-9:focus-within+label {
   font-weight: var(--ictinus-weight-bold)!important;
   color: var(--ictinus-color-text-default-active);
 }
 
-.emotion-7:disabled {
+.emotion-9:disabled {
   cursor: not-allowed;
 }
 
-.emotion-8 {
+.emotion-10 {
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
@@ -285,7 +292,7 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-9 {
+.emotion-11 {
   min-width: 1.75rem;
   overflow: visible;
   display: -webkit-box;
@@ -303,7 +310,7 @@
   cursor: unset;
 }
 
-.emotion-10 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -321,7 +328,7 @@
   transition: all 0.2s ease-in-out;
 }
 
-.emotion-11 {
+.emotion-13 {
   width: var(--ictinus-sizing-4);
   height: var(--ictinus-sizing-4);
   display: -webkit-box;
@@ -331,13 +338,13 @@
   cursor: pointer;
 }
 
-.emotion-12 {
+.emotion-14 {
   width: var(--ictinus-sizing-4);
   height: var(--ictinus-sizing-4);
 }
 
-.emotion-12 path,
-.emotion-12 rect {
+.emotion-14 path,
+.emotion-14 rect {
   fill: var(--ictinus-color-text-default-secondary)!important;
 }
 
@@ -368,19 +375,23 @@
           Territories
         </span>
       </div>
-      <button
+      <div
         class="emotion-0"
-        data-slot="button"
-        data-testid="button"
-        type="button"
       >
-        <span
-          class="Text__ff5iyl6"
-          data-ictinus="test-version"
+        <button
+          class="emotion-1"
+          data-slot="button"
+          data-testid="button"
+          type="button"
         >
-          Edit columns
-        </span>
-      </button>
+          <span
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
+          >
+            Edit columns
+          </span>
+        </button>
+      </div>
     </div>
     <div
       class="Table_wrapper__5wqoik7 properties_backgroundColor_default_base__19njorx1mi properties_borderColor_decorative.default_base__19njorx1w2 Table__5wqoik6 properties_overflowX_auto__19njorx1jq properties_overflowY_auto__19njorx1jt properties_borderRadius_0__19njorx1ic properties_maxWidth_full_base__19njorxhg properties_borderBottomWidth_1_base__19njorx1h8 properties_borderLeftWidth_1_base__19njorx1ho properties_borderRightWidth_1_base__19njorx1gs properties_borderTopWidth_1_base__19njorx1gc properties_borderStyle_solid__19njorx1ia"
@@ -418,32 +429,36 @@
                   >
                     head
                   </span>
-                  <button
-                    class="emotion-1"
-                    data-slot="button"
-                    data-testid="icon-button"
-                    type="button"
+                  <div
+                    class="emotion-0"
                   >
-                    <svg
-                      class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
-                      data-ictinus="test-version"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <button
+                      class="emotion-3"
+                      data-slot="button"
+                      data-testid="icon-button"
+                      type="button"
                     >
-                      <path
-                        clip-rule="evenodd"
-                        d="M7.22697 12.9148C6.68904 12.3047 7.16777 11.4009 8.02888 11.4009H11.9711C12.8322 11.4009 13.311 12.3047 12.773 12.9148L10.8019 15.1503C10.3908 15.6166 9.6092 15.6166 9.19808 15.1503L7.22697 12.9148Z"
-                        fill="currentColor"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        clip-rule="evenodd"
-                        d="M7.22697 7.08522C6.68904 7.6953 7.16777 8.59906 8.02888 8.59906H11.9711C12.8322 8.59906 13.311 7.6953 12.773 7.08522L10.8019 4.8497C10.3908 4.38343 9.6092 4.38343 9.19808 4.8497L7.22697 7.08522Z"
-                        fill="currentColor"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </button>
+                      <svg
+                        class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
+                        data-ictinus="test-version"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M7.22697 12.9148C6.68904 12.3047 7.16777 11.4009 8.02888 11.4009H11.9711C12.8322 11.4009 13.311 12.3047 12.773 12.9148L10.8019 15.1503C10.3908 15.6166 9.6092 15.6166 9.19808 15.1503L7.22697 12.9148Z"
+                          fill="currentColor"
+                          fill-rule="evenodd"
+                        />
+                        <path
+                          clip-rule="evenodd"
+                          d="M7.22697 7.08522C6.68904 7.6953 7.16777 8.59906 8.02888 8.59906H11.9711C12.8322 8.59906 13.311 7.6953 12.773 7.08522L10.8019 4.8497C10.3908 4.38343 9.6092 4.38343 9.19808 4.8497L7.22697 7.08522Z"
+                          fill="currentColor"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
               </div>
             </th>
@@ -1369,28 +1384,28 @@
       data-ictinus="test-version"
     >
       <div
-        class="emotion-2"
+        class="emotion-4"
       >
         <div
-          class="emotion-3"
+          class="emotion-5"
         >
           <div>
             <div
-              class="emotion-4"
+              class="emotion-6"
               data-testid="select-input"
             >
               <div
-                class="emotion-5"
+                class="emotion-7"
               >
                 <div
-                  class="emotion-6"
+                  class="emotion-8"
                 >
                   <input
                     aria-controls="select__00"
                     aria-expanded="false"
                     aria-invalid="false"
                     autocomplete="off"
-                    class="emotion-7"
+                    class="emotion-9"
                     data-testid="input_select-input"
                     id="textfield__00"
                     placeholder=" "
@@ -1399,7 +1414,7 @@
                     value="10 rows per page"
                   />
                   <label
-                    class="emotion-8"
+                    class="emotion-10"
                     for="textfield__00"
                   >
                      
@@ -1407,19 +1422,19 @@
                 </div>
                 <div
                   aria-hidden="false"
-                  class="emotion-9"
+                  class="emotion-11"
                 >
                   <div
-                    class="emotion-10"
+                    class="emotion-12"
                   >
                     <div
-                      class="emotion-11"
+                      class="emotion-13"
                       data-slot="icon"
                       data-testid="select-right-icon"
                       tabindex="0"
                     >
                       <svg
-                        class="emotion-12"
+                        class="emotion-14"
                         fill="none"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"

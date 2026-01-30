@@ -13,54 +13,10 @@
 }
 
 .emotion-1 {
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  gap: var(--ictinus-spacing-4);
-  color: var(--ictinus-color-text-inverted-primary);
-  height: var(--ictinus-sizing-9);
-  background-color: var(--ictinus-color-palette-primary-base);
-  padding: var(--ictinus-spacing-0) var(--ictinus-spacing-6) var(--ictinus-spacing-0) var(--ictinus-spacing-6);
-  border-radius: var(--ictinus-border-radius-2);
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-1:focus-visible:not(:disabled) {
-  background-color: var(--ictinus-color-palette-primary-muted);
-}
-
-.emotion-1:disabled {
-  opacity: 50%;
-  cursor: not-allowed;
-}
-
-.emotion-1:hover:not(:disabled) {
-  background-color: var(--ictinus-color-palette-primary-muted);
-}
-
-.emotion-1:active:not(:disabled),
-.emotion-1[aria-expanded="true"] {
-  background-color: var(--ictinus-color-palette-primary-contrast);
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .emotion-2 {
@@ -85,6 +41,57 @@
   -ms-flex-negative: 0;
   flex-shrink: 0;
   gap: var(--ictinus-spacing-4);
+  color: var(--ictinus-color-text-inverted-primary);
+  height: var(--ictinus-sizing-9);
+  background-color: var(--ictinus-color-palette-primary-base);
+  padding: var(--ictinus-spacing-0) var(--ictinus-spacing-6) var(--ictinus-spacing-0) var(--ictinus-spacing-6);
+  border-radius: var(--ictinus-border-radius-2);
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-2:focus-visible:not(:disabled) {
+  background-color: var(--ictinus-color-palette-primary-muted);
+}
+
+.emotion-2:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-2:hover:not(:disabled) {
+  background-color: var(--ictinus-color-palette-primary-muted);
+}
+
+.emotion-2:active:not(:disabled),
+.emotion-2[aria-expanded="true"] {
+  background-color: var(--ictinus-color-palette-primary-contrast);
+}
+
+.emotion-4 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: var(--ictinus-spacing-4);
   color: var(--ictinus-color-text-default-active);
   height: var(--ictinus-sizing-9);
   background-color: var(--ictinus-color-palette-secondary-base);
@@ -96,25 +103,25 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-2:focus-visible:not(:disabled) {
+.emotion-4:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
-.emotion-2:disabled {
+.emotion-4:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-2:hover:not(:disabled) {
+.emotion-4:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
-.emotion-2:active:not(:disabled),
-.emotion-2[aria-expanded="true"] {
+.emotion-4:active:not(:disabled),
+.emotion-4[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-secondary-contrast);
 }
 
-.emotion-3 {
+.emotion-6 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -147,25 +154,25 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-3:focus-visible:not(:disabled) {
+.emotion-6:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
-.emotion-3:disabled {
+.emotion-6:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-3:hover:not(:disabled) {
+.emotion-6:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
-.emotion-3:active:not(:disabled),
-.emotion-3[aria-expanded="true"] {
+.emotion-6:active:not(:disabled),
+.emotion-6[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-tertiary-contrast);
 }
 
-.emotion-4 {
+.emotion-8 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -198,25 +205,25 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-4:focus-visible:not(:disabled) {
+.emotion-8:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-error-muted);
 }
 
-.emotion-4:disabled {
+.emotion-8:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-4:hover:not(:disabled) {
+.emotion-8:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-error-muted);
 }
 
-.emotion-4:active:not(:disabled),
-.emotion-4[aria-expanded="true"] {
+.emotion-8:active:not(:disabled),
+.emotion-8[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-error-contrast);
 }
 
-.emotion-11 {
+.emotion-20 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1rem;
@@ -249,25 +256,25 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-11:focus-visible:not(:disabled) {
+.emotion-20:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-primary-muted);
 }
 
-.emotion-11:disabled {
+.emotion-20:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-11:hover:not(:disabled) {
+.emotion-20:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-primary-muted);
 }
 
-.emotion-11:active:not(:disabled),
-.emotion-11[aria-expanded="true"] {
+.emotion-20:active:not(:disabled),
+.emotion-20[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-primary-contrast);
 }
 
-.emotion-12 {
+.emotion-22 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1rem;
@@ -300,25 +307,25 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-12:focus-visible:not(:disabled) {
+.emotion-22:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
-.emotion-12:disabled {
+.emotion-22:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-12:hover:not(:disabled) {
+.emotion-22:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
-.emotion-12:active:not(:disabled),
-.emotion-12[aria-expanded="true"] {
+.emotion-22:active:not(:disabled),
+.emotion-22[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-secondary-contrast);
 }
 
-.emotion-13 {
+.emotion-24 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1rem;
@@ -351,25 +358,25 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-13:focus-visible:not(:disabled) {
+.emotion-24:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
-.emotion-13:disabled {
+.emotion-24:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-13:hover:not(:disabled) {
+.emotion-24:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
-.emotion-13:active:not(:disabled),
-.emotion-13[aria-expanded="true"] {
+.emotion-24:active:not(:disabled),
+.emotion-24[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-tertiary-contrast);
 }
 
-.emotion-14 {
+.emotion-26 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1rem;
@@ -402,21 +409,21 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-14:focus-visible:not(:disabled) {
+.emotion-26:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-error-muted);
 }
 
-.emotion-14:disabled {
+.emotion-26:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-14:hover:not(:disabled) {
+.emotion-26:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-error-muted);
 }
 
-.emotion-14:active:not(:disabled),
-.emotion-14[aria-expanded="true"] {
+.emotion-26:active:not(:disabled),
+.emotion-26[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-error-contrast);
 }
 
@@ -427,146 +434,86 @@
     <div
       style="margin: 5px;"
     >
-      <button
+      <div
         class="emotion-1"
-        data-slot="button"
-        data-testid="button"
-        type="button"
       >
-        <span
-          class="Text__ff5iyl6"
-          data-ictinus="test-version"
+        <button
+          class="emotion-2"
+          data-slot="button"
+          data-testid="button"
+          type="button"
         >
-          Primary
-        </span>
-      </button>
+          <span
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
+          >
+            Primary
+          </span>
+        </button>
+      </div>
     </div>
     <div
       style="margin: 5px;"
     >
-      <button
-        class="emotion-2"
-        data-slot="button"
-        data-testid="button"
-        type="button"
-      >
-        <span
-          class="Text__ff5iyl6"
-          data-ictinus="test-version"
-        >
-          Secondary
-        </span>
-      </button>
-    </div>
-    <div
-      style="margin: 5px;"
-    >
-      <button
-        class="emotion-3"
-        data-slot="button"
-        data-testid="button"
-        type="button"
-      >
-        <span
-          class="Text__ff5iyl6"
-          data-ictinus="test-version"
-        >
-          Tertiary
-        </span>
-      </button>
-    </div>
-    <div
-      style="margin: 5px;"
-    >
-      <button
-        class="emotion-4"
-        data-slot="button"
-        data-testid="button"
-        type="button"
-      >
-        <span
-          class="Text__ff5iyl6"
-          data-ictinus="test-version"
-        >
-          Danger
-        </span>
-      </button>
-    </div>
-  </div>
-  <div
-    class="emotion-0"
-  >
-    <div
-      style="margin: 5px;"
-    >
-      <button
+      <div
         class="emotion-1"
-        data-slot="button"
-        data-testid="button"
-        disabled=""
-        type="button"
       >
-        <span
-          class="Text__ff5iyl6"
-          data-ictinus="test-version"
+        <button
+          class="emotion-4"
+          data-slot="button"
+          data-testid="button"
+          type="button"
         >
-          Primary
-        </span>
-      </button>
+          <span
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
+          >
+            Secondary
+          </span>
+        </button>
+      </div>
     </div>
     <div
       style="margin: 5px;"
     >
-      <button
-        class="emotion-2"
-        data-slot="button"
-        data-testid="button"
-        disabled=""
-        type="button"
+      <div
+        class="emotion-1"
       >
-        <span
-          class="Text__ff5iyl6"
-          data-ictinus="test-version"
+        <button
+          class="emotion-6"
+          data-slot="button"
+          data-testid="button"
+          type="button"
         >
-          Secondary
-        </span>
-      </button>
+          <span
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
+          >
+            Tertiary
+          </span>
+        </button>
+      </div>
     </div>
     <div
       style="margin: 5px;"
     >
-      <button
-        class="emotion-3"
-        data-slot="button"
-        data-testid="button"
-        disabled=""
-        type="button"
+      <div
+        class="emotion-1"
       >
-        <span
-          class="Text__ff5iyl6"
-          data-ictinus="test-version"
+        <button
+          class="emotion-8"
+          data-slot="button"
+          data-testid="button"
+          type="button"
         >
-          Tertiary
-        </span>
-      </button>
-    </div>
-    <div
-      style="margin: 5px;"
-    >
-      <button
-        class="emotion-4"
-        data-slot="button"
-        data-testid="button"
-        disabled=""
-        type="button"
-      >
-        <span
-          class="Text__ff5iyl6"
-          data-ictinus="test-version"
-        >
-          Danger
-        </span>
-      </button>
+          <span
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
+          >
+            Danger
+          </span>
+        </button>
+      </div>
     </div>
   </div>
   <div
@@ -575,70 +522,90 @@
     <div
       style="margin: 5px;"
     >
-      <button
-        class="emotion-11"
-        data-slot="button"
-        data-testid="button"
-        type="button"
+      <div
+        class="emotion-1"
       >
-        <span
-          class="Text__ff5iyl6"
-          data-ictinus="test-version"
+        <button
+          class="emotion-2"
+          data-slot="button"
+          data-testid="button"
+          disabled=""
+          type="button"
         >
-          Primary
-        </span>
-      </button>
+          <span
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
+          >
+            Primary
+          </span>
+        </button>
+      </div>
     </div>
     <div
       style="margin: 5px;"
     >
-      <button
-        class="emotion-12"
-        data-slot="button"
-        data-testid="button"
-        type="button"
+      <div
+        class="emotion-1"
       >
-        <span
-          class="Text__ff5iyl6"
-          data-ictinus="test-version"
+        <button
+          class="emotion-4"
+          data-slot="button"
+          data-testid="button"
+          disabled=""
+          type="button"
         >
-          Secondary
-        </span>
-      </button>
+          <span
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
+          >
+            Secondary
+          </span>
+        </button>
+      </div>
     </div>
     <div
       style="margin: 5px;"
     >
-      <button
-        class="emotion-13"
-        data-slot="button"
-        data-testid="button"
-        type="button"
+      <div
+        class="emotion-1"
       >
-        <span
-          class="Text__ff5iyl6"
-          data-ictinus="test-version"
+        <button
+          class="emotion-6"
+          data-slot="button"
+          data-testid="button"
+          disabled=""
+          type="button"
         >
-          Tertiary
-        </span>
-      </button>
+          <span
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
+          >
+            Tertiary
+          </span>
+        </button>
+      </div>
     </div>
     <div
       style="margin: 5px;"
     >
-      <button
-        class="emotion-14"
-        data-slot="button"
-        data-testid="button"
-        type="button"
+      <div
+        class="emotion-1"
       >
-        <span
-          class="Text__ff5iyl6"
-          data-ictinus="test-version"
+        <button
+          class="emotion-8"
+          data-slot="button"
+          data-testid="button"
+          disabled=""
+          type="button"
         >
-          Danger
-        </span>
-      </button>
+          <span
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
+          >
+            Danger
+          </span>
+        </button>
+      </div>
     </div>
   </div>
   <div
@@ -647,74 +614,178 @@
     <div
       style="margin: 5px;"
     >
-      <button
-        class="emotion-11"
-        data-slot="button"
-        data-testid="button"
-        disabled=""
-        type="button"
+      <div
+        class="emotion-1"
       >
-        <span
-          class="Text__ff5iyl6"
-          data-ictinus="test-version"
+        <button
+          class="emotion-20"
+          data-slot="button"
+          data-testid="button"
+          type="button"
         >
-          Primary
-        </span>
-      </button>
+          <span
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
+          >
+            Primary
+          </span>
+        </button>
+      </div>
     </div>
     <div
       style="margin: 5px;"
     >
-      <button
-        class="emotion-12"
-        data-slot="button"
-        data-testid="button"
-        disabled=""
-        type="button"
+      <div
+        class="emotion-1"
       >
-        <span
-          class="Text__ff5iyl6"
-          data-ictinus="test-version"
+        <button
+          class="emotion-22"
+          data-slot="button"
+          data-testid="button"
+          type="button"
         >
-          Secondary
-        </span>
-      </button>
+          <span
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
+          >
+            Secondary
+          </span>
+        </button>
+      </div>
     </div>
     <div
       style="margin: 5px;"
     >
-      <button
-        class="emotion-13"
-        data-slot="button"
-        data-testid="button"
-        disabled=""
-        type="button"
+      <div
+        class="emotion-1"
       >
-        <span
-          class="Text__ff5iyl6"
-          data-ictinus="test-version"
+        <button
+          class="emotion-24"
+          data-slot="button"
+          data-testid="button"
+          type="button"
         >
-          Tertiary
-        </span>
-      </button>
+          <span
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
+          >
+            Tertiary
+          </span>
+        </button>
+      </div>
     </div>
     <div
       style="margin: 5px;"
     >
-      <button
-        class="emotion-14"
-        data-slot="button"
-        data-testid="button"
-        disabled=""
-        type="button"
+      <div
+        class="emotion-1"
       >
-        <span
-          class="Text__ff5iyl6"
-          data-ictinus="test-version"
+        <button
+          class="emotion-26"
+          data-slot="button"
+          data-testid="button"
+          type="button"
         >
-          Danger
-        </span>
-      </button>
+          <span
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
+          >
+            Danger
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        class="emotion-1"
+      >
+        <button
+          class="emotion-20"
+          data-slot="button"
+          data-testid="button"
+          disabled=""
+          type="button"
+        >
+          <span
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
+          >
+            Primary
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        class="emotion-1"
+      >
+        <button
+          class="emotion-22"
+          data-slot="button"
+          data-testid="button"
+          disabled=""
+          type="button"
+        >
+          <span
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
+          >
+            Secondary
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        class="emotion-1"
+      >
+        <button
+          class="emotion-24"
+          data-slot="button"
+          data-testid="button"
+          disabled=""
+          type="button"
+        >
+          <span
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
+          >
+            Tertiary
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        class="emotion-1"
+      >
+        <button
+          class="emotion-26"
+          data-slot="button"
+          data-testid="button"
+          disabled=""
+          type="button"
+        >
+          <span
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
+          >
+            Danger
+          </span>
+        </button>
+      </div>
     </div>
   </div>
 </div>

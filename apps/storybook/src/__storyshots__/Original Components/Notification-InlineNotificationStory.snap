@@ -97,6 +97,13 @@
 }
 
 .emotion-16 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-17 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -130,30 +137,30 @@
   cursor: pointer;
 }
 
-.emotion-16:focus-visible:not(:disabled) {
+.emotion-17:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
-.emotion-16:disabled {
+.emotion-17:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-16:hover:not(:disabled) {
+.emotion-17:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
-.emotion-16:active:not(:disabled),
-.emotion-16[aria-expanded="true"] {
+.emotion-17:active:not(:disabled),
+.emotion-17[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-tertiary-contrast);
 }
 
-.emotion-17 {
+.emotion-18 {
   cursor: pointer;
   margin-left: var(--ictinus-spacing-6);
 }
 
-.emotion-18 {
+.emotion-19 {
   width: 1rem;
   height: 1rem;
   display: -webkit-box;
@@ -162,13 +169,13 @@
   display: flex;
 }
 
-.emotion-19 {
+.emotion-20 {
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-19 path,
-.emotion-19 rect {
+.emotion-20 path,
+.emotion-20 rect {
   fill: var(--ictinus-color-text-default-secondary)!important;
 }
 
@@ -275,29 +282,33 @@
             <div
               class="emotion-7"
             >
-              <button
+              <div
                 class="emotion-16"
-                data-slot="button"
-                data-testid="button"
-                type="button"
               >
-                <span
-                  class="Text__ff5iyl6"
-                  data-ictinus="test-version"
+                <button
+                  class="emotion-17"
+                  data-slot="button"
+                  data-testid="button"
+                  type="button"
                 >
-                  Action
-                </span>
-              </button>
+                  <span
+                    class="Text__ff5iyl6"
+                    data-ictinus="test-version"
+                  >
+                    Action
+                  </span>
+                </button>
+              </div>
               <span
-                class="emotion-17"
+                class="emotion-18"
                 data-testid="notification-close"
               >
                 <div
-                  class="emotion-18"
+                  class="emotion-19"
                   data-slot="icon"
                 >
                   <svg
-                    class="emotion-19"
+                    class="emotion-20"
                     fill="none"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -363,19 +374,23 @@
             <div
               class="emotion-7"
             >
-              <button
+              <div
                 class="emotion-16"
-                data-slot="button"
-                data-testid="button"
-                type="button"
               >
-                <span
-                  class="Text__ff5iyl6"
-                  data-ictinus="test-version"
+                <button
+                  class="emotion-17"
+                  data-slot="button"
+                  data-testid="button"
+                  type="button"
                 >
-                  Action
-                </span>
-              </button>
+                  <span
+                    class="Text__ff5iyl6"
+                    data-ictinus="test-version"
+                  >
+                    Action
+                  </span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -431,15 +446,15 @@
               class="emotion-7"
             >
               <span
-                class="emotion-17"
+                class="emotion-18"
                 data-testid="notification-close"
               >
                 <div
-                  class="emotion-18"
+                  class="emotion-19"
                   data-slot="icon"
                 >
                   <svg
-                    class="emotion-19"
+                    class="emotion-20"
                     fill="none"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"

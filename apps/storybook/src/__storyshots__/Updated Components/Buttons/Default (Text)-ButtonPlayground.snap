@@ -13,6 +13,13 @@
 }
 
 .emotion-1 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-2 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -45,21 +52,21 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-1:focus-visible:not(:disabled) {
+.emotion-2:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-primary-muted);
 }
 
-.emotion-1:disabled {
+.emotion-2:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-1:hover:not(:disabled) {
+.emotion-2:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-primary-muted);
 }
 
-.emotion-1:active:not(:disabled),
-.emotion-1[aria-expanded="true"] {
+.emotion-2:active:not(:disabled),
+.emotion-2[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-primary-contrast);
 }
 
@@ -70,19 +77,23 @@
     <div
       style="margin: 5px;"
     >
-      <button
+      <div
         class="emotion-1"
-        data-slot="button"
-        data-testid="button"
-        type="button"
       >
-        <span
-          class="Text__ff5iyl6"
-          data-ictinus="test-version"
+        <button
+          class="emotion-2"
+          data-slot="button"
+          data-testid="button"
+          type="button"
         >
-          Label
-        </span>
-      </button>
+          <span
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
+          >
+            Label
+          </span>
+        </button>
+      </div>
     </div>
   </div>
 </div>

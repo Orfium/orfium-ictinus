@@ -1,4 +1,11 @@
 .emotion-0 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-1 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -31,21 +38,21 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-0:focus-visible:not(:disabled) {
+.emotion-1:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
-.emotion-0:disabled {
+.emotion-1:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-0:hover:not(:disabled) {
+.emotion-1:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
-.emotion-0:active:not(:disabled),
-.emotion-0[aria-expanded="true"] {
+.emotion-1:active:not(:disabled),
+.emotion-1[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-secondary-contrast);
 }
 
@@ -54,20 +61,24 @@
     class="properties_display_flex_base__19njorx2g properties_flexDirection_column_base__19njorxkg properties_alignItems_center_base__19njorx4 properties_justifyContent_center_base__19njorx1c properties_flex_1_base__19njorx3c"
     data-ictinus="test-version"
   >
-    <button
-      aria-describedby="react-aria-:test-id:"
+    <div
       class="emotion-0"
-      data-slot="button"
-      data-testid="button"
-      tabindex="0"
-      type="button"
     >
-      <span
-        class="Text__ff5iyl6"
-        data-ictinus="test-version"
+      <button
+        aria-describedby="react-aria-:test-id:"
+        class="emotion-1"
+        data-slot="button"
+        data-testid="button"
+        tabindex="0"
+        type="button"
       >
-        Hover me
-      </span>
-    </button>
+        <span
+          class="Text__ff5iyl6"
+          data-ictinus="test-version"
+        >
+          Hover me
+        </span>
+      </button>
+    </div>
   </div>
 </div>

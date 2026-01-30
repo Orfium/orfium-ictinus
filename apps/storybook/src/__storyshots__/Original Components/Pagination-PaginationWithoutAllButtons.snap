@@ -21,6 +21,13 @@
 }
 
 .emotion-1 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-2 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -54,21 +61,21 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-1:focus-visible:not(:disabled) {
+.emotion-2:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
-.emotion-1:disabled {
+.emotion-2:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-1:hover:not(:disabled) {
+.emotion-2:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
-.emotion-1:active:not(:disabled),
-.emotion-1[aria-expanded="true"] {
+.emotion-2:active:not(:disabled),
+.emotion-2[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-tertiary-contrast);
 }
 
@@ -76,48 +83,56 @@
   <div
     class="emotion-0"
   >
-    <button
+    <div
       class="emotion-1"
-      data-slot="button"
-      data-testid="icon-button"
-      disabled=""
-      type="button"
     >
-      <svg
-        class="properties_color_active_base__19njorx23a properties_height_5_base__19njorx74 properties_width_5_base__19njorx4c"
-        data-ictinus="test-version"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
+      <button
+        class="emotion-2"
+        data-slot="button"
+        data-testid="icon-button"
+        disabled=""
+        type="button"
       >
-        <path
-          d="M11.3581 14.702L7.31643 10.7466C7.20353 10.6361 7.12257 10.5161 7.07355 10.3867C7.02452 10.2572 7 10.1283 7 10C7 9.86608 7.02452 9.7358 7.07355 9.60915C7.12257 9.48249 7.20353 9.36392 7.31643 9.25345L11.3581 5.29797C11.561 5.09932 11.7839 5 12.0268 5C12.2697 5 12.4926 5.09932 12.6955 5.29797C12.8985 5.49661 13 5.71477 13 5.95246C13 6.19014 12.8985 6.40831 12.6955 6.60694L9.22859 10L12.6955 13.3931C12.8985 13.5917 13 13.8099 13 14.0475C13 14.2852 12.8985 14.5034 12.6955 14.702C12.4926 14.9007 12.2697 15 12.0268 15C11.7839 15 11.561 14.9007 11.3581 14.702Z"
-          fill="currentColor"
-        />
-      </svg>
-    </button>
+        <svg
+          class="properties_color_active_base__19njorx23a properties_height_5_base__19njorx74 properties_width_5_base__19njorx4c"
+          data-ictinus="test-version"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11.3581 14.702L7.31643 10.7466C7.20353 10.6361 7.12257 10.5161 7.07355 10.3867C7.02452 10.2572 7 10.1283 7 10C7 9.86608 7.02452 9.7358 7.07355 9.60915C7.12257 9.48249 7.20353 9.36392 7.31643 9.25345L11.3581 5.29797C11.561 5.09932 11.7839 5 12.0268 5C12.2697 5 12.4926 5.09932 12.6955 5.29797C12.8985 5.49661 13 5.71477 13 5.95246C13 6.19014 12.8985 6.40831 12.6955 6.60694L9.22859 10L12.6955 13.3931C12.8985 13.5917 13 13.8099 13 14.0475C13 14.2852 12.8985 14.5034 12.6955 14.702C12.4926 14.9007 12.2697 15 12.0268 15C11.7839 15 11.561 14.9007 11.3581 14.702Z"
+            fill="currentColor"
+          />
+        </svg>
+      </button>
+    </div>
     <div>
       Page 
       1
        of 
       3
     </div>
-    <button
+    <div
       class="emotion-1"
-      data-slot="button"
-      data-testid="icon-button"
-      type="button"
     >
-      <svg
-        class="properties_color_active_base__19njorx23a properties_height_5_base__19njorx74 properties_width_5_base__19njorx4c"
-        data-ictinus="test-version"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
+      <button
+        class="emotion-2"
+        data-slot="button"
+        data-testid="icon-button"
+        type="button"
       >
-        <path
-          d="M8.64194 14.702L12.6836 10.7466C12.7965 10.6361 12.8774 10.5161 12.9264 10.3867C12.9755 10.2572 13 10.1283 13 10C13 9.86608 12.9755 9.7358 12.9264 9.60915C12.8774 9.48249 12.7965 9.36392 12.6836 9.25345L8.64194 5.29797C8.43898 5.09932 8.21607 5 7.9732 5C7.73034 5 7.50742 5.09932 7.30446 5.29797C7.10149 5.49661 7 5.71477 7 5.95246C7 6.19014 7.10149 6.40831 7.30446 6.60694L10.7714 10L7.30446 13.3931C7.10149 13.5917 7 13.8099 7 14.0475C7 14.2852 7.10149 14.5034 7.30446 14.702C7.50742 14.9007 7.73034 15 7.9732 15C8.21607 15 8.43898 14.9007 8.64194 14.702Z"
-          fill="currentColor"
-        />
-      </svg>
-    </button>
+        <svg
+          class="properties_color_active_base__19njorx23a properties_height_5_base__19njorx74 properties_width_5_base__19njorx4c"
+          data-ictinus="test-version"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8.64194 14.702L12.6836 10.7466C12.7965 10.6361 12.8774 10.5161 12.9264 10.3867C12.9755 10.2572 13 10.1283 13 10C13 9.86608 12.9755 9.7358 12.9264 9.60915C12.8774 9.48249 12.7965 9.36392 12.6836 9.25345L8.64194 5.29797C8.43898 5.09932 8.21607 5 7.9732 5C7.73034 5 7.50742 5.09932 7.30446 5.29797C7.10149 5.49661 7 5.71477 7 5.95246C7 6.19014 7.10149 6.40831 7.30446 6.60694L10.7714 10L7.30446 13.3931C7.10149 13.5917 7 13.8099 7 14.0475C7 14.2852 7.10149 14.5034 7.30446 14.702C7.50742 14.9007 7.73034 15 7.9732 15C8.21607 15 8.43898 14.9007 8.64194 14.702Z"
+            fill="currentColor"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
 </div>

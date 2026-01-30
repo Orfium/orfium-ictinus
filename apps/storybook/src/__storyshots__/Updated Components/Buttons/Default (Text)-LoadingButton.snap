@@ -538,7 +538,7 @@
   align-items: flex-end;
 }
 
-.emotion-49 {
+.emotion-50 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -571,25 +571,25 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-49:focus-visible:not(:disabled) {
+.emotion-50:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-primary-muted);
 }
 
-.emotion-49:disabled {
+.emotion-50:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-49:hover:not(:disabled) {
+.emotion-50:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-primary-muted);
 }
 
-.emotion-49:active:not(:disabled),
-.emotion-49[aria-expanded="true"] {
+.emotion-50:active:not(:disabled),
+.emotion-50[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-primary-contrast);
 }
 
-.emotion-50 {
+.emotion-52 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1rem;
@@ -622,21 +622,21 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-50:focus-visible:not(:disabled) {
+.emotion-52:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-primary-muted);
 }
 
-.emotion-50:disabled {
+.emotion-52:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-50:hover:not(:disabled) {
+.emotion-52:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-primary-muted);
 }
 
-.emotion-50:active:not(:disabled),
-.emotion-50[aria-expanded="true"] {
+.emotion-52:active:not(:disabled),
+.emotion-52[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-primary-contrast);
 }
 
@@ -908,32 +908,40 @@
         <div
           class="emotion-48"
         >
-          <button
-            class="emotion-49"
-            data-slot="button"
-            data-testid="button"
-            type="button"
+          <div
+            class="emotion-5"
           >
-            <span
-              class="Text__ff5iyl6"
-              data-ictinus="test-version"
+            <button
+              class="emotion-50"
+              data-slot="button"
+              data-testid="button"
+              type="button"
             >
-              Click here
-            </span>
-          </button>
-          <button
-            class="emotion-50"
-            data-slot="button"
-            data-testid="button"
-            type="button"
+              <span
+                class="Text__ff5iyl6"
+                data-ictinus="test-version"
+              >
+                Click here
+              </span>
+            </button>
+          </div>
+          <div
+            class="emotion-5"
           >
-            <span
-              class="Text__ff5iyl6"
-              data-ictinus="test-version"
+            <button
+              class="emotion-52"
+              data-slot="button"
+              data-testid="button"
+              type="button"
             >
-              Click here
-            </span>
-          </button>
+              <span
+                class="Text__ff5iyl6"
+                data-ictinus="test-version"
+              >
+                Click here
+              </span>
+            </button>
+          </div>
         </div>
       </div>
     </div>

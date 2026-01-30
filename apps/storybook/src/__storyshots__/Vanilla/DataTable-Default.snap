@@ -1,4 +1,11 @@
 .emotion-0 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-1 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1rem;
@@ -31,42 +38,42 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-0:focus-visible:not(:disabled) {
+.emotion-1:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
-.emotion-0:disabled {
+.emotion-1:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-0:hover:not(:disabled) {
+.emotion-1:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
-.emotion-0:active:not(:disabled),
-.emotion-0[aria-expanded="true"] {
+.emotion-1:active:not(:disabled),
+.emotion-1[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-secondary-contrast);
 }
 
-.emotion-1 {
+.emotion-2 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-1 [data-disabled] {
+.emotion-2 [data-disabled] {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-2 {
+.emotion-3 {
   display: block;
   cursor: pointer;
   position: relative;
 }
 
-.emotion-2 [data-role='checkbox-icon']>div {
+.emotion-3 [data-role='checkbox-icon']>div {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   width: var(--ictinus-sizing-5);
@@ -84,13 +91,13 @@
   border-radius: var(--ictinus-border-radius-2);
 }
 
-.emotion-2 svg {
+.emotion-3 svg {
   visibility: hidden;
   opacity: 0;
 }
 
-.emotion-2[data-hovered='true'] [data-role='checkbox-icon'],
-.emotion-2[data-focus-visible='true'] [data-role='checkbox-icon'] {
+.emotion-3[data-hovered='true'] [data-role='checkbox-icon'],
+.emotion-3[data-focus-visible='true'] [data-role='checkbox-icon'] {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   background: rgba(200,206,255,0.20);
@@ -98,33 +105,33 @@
   border-radius: 100%;
 }
 
-.emotion-2[data-selected='true'] [data-role='checkbox-icon']>div,
-.emotion-2[data-indeterminate='true'] [data-role='checkbox-icon']>div {
+.emotion-3[data-selected='true'] [data-role='checkbox-icon']>div,
+.emotion-3[data-indeterminate='true'] [data-role='checkbox-icon']>div {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   border-color: var(--ictinus-color-border-color-decorative-transparent);
   background: var(--ictinus-color-palette-primary-base);
 }
 
-.emotion-2[data-selected='true'] svg,
-.emotion-2[data-indeterminate='true'] svg {
+.emotion-3[data-selected='true'] svg,
+.emotion-3[data-indeterminate='true'] svg {
   visibility: visible;
   opacity: 1;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
-.emotion-2[data-disabled='true'] {
+.emotion-3[data-disabled='true'] {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-2[data-disabled='true']:hover {
+.emotion-3[data-disabled='true']:hover {
   background: none;
   box-shadow: none;
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -143,7 +150,7 @@
   justify-content: unset;
 }
 
-.emotion-7 {
+.emotion-9 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1rem;
@@ -177,21 +184,21 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-7:focus-visible:not(:disabled) {
+.emotion-9:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
-.emotion-7:disabled {
+.emotion-9:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-7:hover:not(:disabled) {
+.emotion-9:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
-.emotion-7:active:not(:disabled),
-.emotion-7[aria-expanded="true"] {
+.emotion-9:active:not(:disabled),
+.emotion-9[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-tertiary-contrast);
 }
 
@@ -221,35 +228,39 @@
           items
         </span>
       </div>
-      <button
-        aria-expanded="false"
-        aria-haspopup="true"
+      <div
         class="emotion-0"
-        data-react-aria-pressable="true"
-        data-slot="button"
-        data-testid="button"
-        id="react-aria-:test-id:"
-        tabindex="0"
-        type="button"
       >
-        <svg
-          class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
-          data-ictinus="test-version"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
+        <button
+          aria-expanded="false"
+          aria-haspopup="true"
+          class="emotion-1"
+          data-react-aria-pressable="true"
+          data-slot="button"
+          data-testid="button"
+          id="react-aria-:test-id:"
+          tabindex="0"
+          type="button"
         >
-          <path
-            d="M2.5 15.25V4.75C2.5 4.14583 2.65737 3.61979 2.9721 3.17188C3.28683 2.72396 3.66518 2.5 4.10714 2.5H15.8929C16.3348 2.5 16.7132 2.72396 17.0279 3.17188C17.3426 3.61979 17.5 4.14583 17.5 4.75V15.25C17.5 15.8542 17.3426 16.3802 17.0279 16.8281C16.7132 17.276 16.3348 17.5 15.8929 17.5H4.10714C3.66518 17.5 3.28683 17.276 2.9721 16.8281C2.65737 16.3802 2.5 15.8542 2.5 15.25ZM8.57143 15.9375H11.4286V4.0625H8.57143V15.9375ZM13.0357 15.9375H15.8929V4.0625H13.0357V15.9375Z"
-            fill="currentColor"
-          />
-        </svg>
-        <span
-          class="Text__ff5iyl6"
-          data-ictinus="test-version"
-        >
-          Edit columns
-        </span>
-      </button>
+          <svg
+            class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
+            data-ictinus="test-version"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M2.5 15.25V4.75C2.5 4.14583 2.65737 3.61979 2.9721 3.17188C3.28683 2.72396 3.66518 2.5 4.10714 2.5H15.8929C16.3348 2.5 16.7132 2.72396 17.0279 3.17188C17.3426 3.61979 17.5 4.14583 17.5 4.75V15.25C17.5 15.8542 17.3426 16.3802 17.0279 16.8281C16.7132 17.276 16.3348 17.5 15.8929 17.5H4.10714C3.66518 17.5 3.28683 17.276 2.9721 16.8281C2.65737 16.3802 2.5 15.8542 2.5 15.25ZM8.57143 15.9375H11.4286V4.0625H8.57143V15.9375ZM13.0357 15.9375H15.8929V4.0625H13.0357V15.9375Z"
+              fill="currentColor"
+            />
+          </svg>
+          <span
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
+          >
+            Edit columns
+          </span>
+        </button>
+      </div>
     </div>
     <div
       class="DataTableBody_root__1boh8d77 DataTableBody__1boh8d76 properties_overflowX_hidden__19njorx1jr properties_overflowY_hidden__19njorx1ju properties_borderRadius_2__19njorx1ie properties_maxWidth_full_base__19njorxhg properties_display_flex_base__19njorx2g properties_flexDirection_column_base__19njorxkg properties_borderTopLeftRadius_0__19njorx1il properties_borderTopRightRadius_0__19njorx1it"
@@ -288,10 +299,10 @@
                   data-ictinus="test-version"
                 >
                   <div
-                    class="emotion-1"
+                    class="emotion-2"
                   >
                     <label
-                      class="emotion-2"
+                      class="emotion-3"
                       data-rac=""
                       data-react-aria-pressable="true"
                       data-testid="ictinus_checkbox"
@@ -307,10 +318,10 @@
                         />
                       </span>
                       <div
-                        class="emotion-3 emotion-4"
+                        class="emotion-4 emotion-5"
                       >
                         <div
-                          class="emotion-5 emotion-4"
+                          class="emotion-6 emotion-5"
                           data-role="checkbox-icon"
                         >
                           <div>
@@ -389,10 +400,54 @@
                         class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 properties_alignItems_center_base__19njorx4 properties_display_grid_base__19njorx2s properties_justifyContent_space-between_base__19njorx1k properties_placeItems_center_base__19njorx14 properties_position_relative_base__19njorxlc properties_flexDirection_row_base__19njorxkk"
                         data-ictinus="test-version"
                       >
+                        <div
+                          class="emotion-0"
+                        >
+                          <button
+                            class="emotion-9"
+                            data-slot="button"
+                            data-testid="icon-button"
+                            type="button"
+                          >
+                            <svg
+                              class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
+                              data-ictinus="test-version"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M7.22697 12.9148C6.68904 12.3047 7.16777 11.4009 8.02888 11.4009H11.9711C12.8322 11.4009 13.311 12.3047 12.773 12.9148L10.8019 15.1503C10.3908 15.6166 9.6092 15.6166 9.19808 15.1503L7.22697 12.9148Z"
+                                fill="currentColor"
+                                fill-rule="evenodd"
+                              />
+                              <path
+                                clip-rule="evenodd"
+                                d="M7.22697 7.08522C6.68904 7.6953 7.16777 8.59906 8.02888 8.59906H11.9711C12.8322 8.59906 13.311 7.6953 12.773 7.08522L10.8019 4.8497C10.3908 4.38343 9.6092 4.38343 9.19808 4.8497L7.22697 7.08522Z"
+                                fill="currentColor"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_justifyContent_space-between_base__19njorx1k"
+                      data-ictinus="test-version"
+                    >
+                      <div
+                        class="emotion-0"
+                      >
                         <button
-                          class="emotion-7"
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          class="emotion-9"
+                          data-react-aria-pressable="true"
                           data-slot="button"
                           data-testid="icon-button"
+                          id="react-aria-:test-id:"
+                          tabindex="0"
                           type="button"
                         >
                           <svg
@@ -402,56 +457,20 @@
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path
-                              clip-rule="evenodd"
-                              d="M7.22697 12.9148C6.68904 12.3047 7.16777 11.4009 8.02888 11.4009H11.9711C12.8322 11.4009 13.311 12.3047 12.773 12.9148L10.8019 15.1503C10.3908 15.6166 9.6092 15.6166 9.19808 15.1503L7.22697 12.9148Z"
+                              d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
                               fill="currentColor"
-                              fill-rule="evenodd"
                             />
                             <path
-                              clip-rule="evenodd"
-                              d="M7.22697 7.08522C6.68904 7.6953 7.16777 8.59906 8.02888 8.59906H11.9711C12.8322 8.59906 13.311 7.6953 12.773 7.08522L10.8019 4.8497C10.3908 4.38343 9.6092 4.38343 9.19808 4.8497L7.22697 7.08522Z"
+                              d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
                               fill="currentColor"
-                              fill-rule="evenodd"
+                            />
+                            <path
+                              d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                              fill="currentColor"
                             />
                           </svg>
                         </button>
                       </div>
-                    </div>
-                    <div
-                      class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_justifyContent_space-between_base__19njorx1k"
-                      data-ictinus="test-version"
-                    >
-                      <button
-                        aria-expanded="false"
-                        aria-haspopup="true"
-                        class="emotion-7"
-                        data-react-aria-pressable="true"
-                        data-slot="button"
-                        data-testid="icon-button"
-                        id="react-aria-:test-id:"
-                        tabindex="0"
-                        type="button"
-                      >
-                        <svg
-                          class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
-                          data-ictinus="test-version"
-                          viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
-                            fill="currentColor"
-                          />
-                          <path
-                            d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
-                            fill="currentColor"
-                          />
-                          <path
-                            d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </button>
                     </div>
                   </div>
                 </div>
@@ -492,10 +511,54 @@
                         class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 properties_alignItems_center_base__19njorx4 properties_display_grid_base__19njorx2s properties_justifyContent_space-between_base__19njorx1k properties_placeItems_center_base__19njorx14 properties_position_relative_base__19njorxlc properties_flexDirection_row_base__19njorxkk"
                         data-ictinus="test-version"
                       >
+                        <div
+                          class="emotion-0"
+                        >
+                          <button
+                            class="emotion-9"
+                            data-slot="button"
+                            data-testid="icon-button"
+                            type="button"
+                          >
+                            <svg
+                              class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
+                              data-ictinus="test-version"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M7.22697 12.9148C6.68904 12.3047 7.16777 11.4009 8.02888 11.4009H11.9711C12.8322 11.4009 13.311 12.3047 12.773 12.9148L10.8019 15.1503C10.3908 15.6166 9.6092 15.6166 9.19808 15.1503L7.22697 12.9148Z"
+                                fill="currentColor"
+                                fill-rule="evenodd"
+                              />
+                              <path
+                                clip-rule="evenodd"
+                                d="M7.22697 7.08522C6.68904 7.6953 7.16777 8.59906 8.02888 8.59906H11.9711C12.8322 8.59906 13.311 7.6953 12.773 7.08522L10.8019 4.8497C10.3908 4.38343 9.6092 4.38343 9.19808 4.8497L7.22697 7.08522Z"
+                                fill="currentColor"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_justifyContent_space-between_base__19njorx1k"
+                      data-ictinus="test-version"
+                    >
+                      <div
+                        class="emotion-0"
+                      >
                         <button
-                          class="emotion-7"
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          class="emotion-9"
+                          data-react-aria-pressable="true"
                           data-slot="button"
                           data-testid="icon-button"
+                          id="react-aria-:test-id:"
+                          tabindex="0"
                           type="button"
                         >
                           <svg
@@ -505,56 +568,20 @@
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path
-                              clip-rule="evenodd"
-                              d="M7.22697 12.9148C6.68904 12.3047 7.16777 11.4009 8.02888 11.4009H11.9711C12.8322 11.4009 13.311 12.3047 12.773 12.9148L10.8019 15.1503C10.3908 15.6166 9.6092 15.6166 9.19808 15.1503L7.22697 12.9148Z"
+                              d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
                               fill="currentColor"
-                              fill-rule="evenodd"
                             />
                             <path
-                              clip-rule="evenodd"
-                              d="M7.22697 7.08522C6.68904 7.6953 7.16777 8.59906 8.02888 8.59906H11.9711C12.8322 8.59906 13.311 7.6953 12.773 7.08522L10.8019 4.8497C10.3908 4.38343 9.6092 4.38343 9.19808 4.8497L7.22697 7.08522Z"
+                              d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
                               fill="currentColor"
-                              fill-rule="evenodd"
+                            />
+                            <path
+                              d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                              fill="currentColor"
                             />
                           </svg>
                         </button>
                       </div>
-                    </div>
-                    <div
-                      class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_justifyContent_space-between_base__19njorx1k"
-                      data-ictinus="test-version"
-                    >
-                      <button
-                        aria-expanded="false"
-                        aria-haspopup="true"
-                        class="emotion-7"
-                        data-react-aria-pressable="true"
-                        data-slot="button"
-                        data-testid="icon-button"
-                        id="react-aria-:test-id:"
-                        tabindex="0"
-                        type="button"
-                      >
-                        <svg
-                          class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
-                          data-ictinus="test-version"
-                          viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
-                            fill="currentColor"
-                          />
-                          <path
-                            d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
-                            fill="currentColor"
-                          />
-                          <path
-                            d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </button>
                     </div>
                   </div>
                 </div>
@@ -614,10 +641,54 @@
                         class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 properties_alignItems_center_base__19njorx4 properties_display_grid_base__19njorx2s properties_justifyContent_space-between_base__19njorx1k properties_placeItems_center_base__19njorx14 properties_position_relative_base__19njorxlc properties_flexDirection_row-reverse_base__19njorxks"
                         data-ictinus="test-version"
                       >
+                        <div
+                          class="emotion-0"
+                        >
+                          <button
+                            class="emotion-9"
+                            data-slot="button"
+                            data-testid="icon-button"
+                            type="button"
+                          >
+                            <svg
+                              class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
+                              data-ictinus="test-version"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M7.22697 12.9148C6.68904 12.3047 7.16777 11.4009 8.02888 11.4009H11.9711C12.8322 11.4009 13.311 12.3047 12.773 12.9148L10.8019 15.1503C10.3908 15.6166 9.6092 15.6166 9.19808 15.1503L7.22697 12.9148Z"
+                                fill="currentColor"
+                                fill-rule="evenodd"
+                              />
+                              <path
+                                clip-rule="evenodd"
+                                d="M7.22697 7.08522C6.68904 7.6953 7.16777 8.59906 8.02888 8.59906H11.9711C12.8322 8.59906 13.311 7.6953 12.773 7.08522L10.8019 4.8497C10.3908 4.38343 9.6092 4.38343 9.19808 4.8497L7.22697 7.08522Z"
+                                fill="currentColor"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_justifyContent_space-between_base__19njorx1k"
+                      data-ictinus="test-version"
+                    >
+                      <div
+                        class="emotion-0"
+                      >
                         <button
-                          class="emotion-7"
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          class="emotion-9"
+                          data-react-aria-pressable="true"
                           data-slot="button"
                           data-testid="icon-button"
+                          id="react-aria-:test-id:"
+                          tabindex="0"
                           type="button"
                         >
                           <svg
@@ -627,56 +698,20 @@
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path
-                              clip-rule="evenodd"
-                              d="M7.22697 12.9148C6.68904 12.3047 7.16777 11.4009 8.02888 11.4009H11.9711C12.8322 11.4009 13.311 12.3047 12.773 12.9148L10.8019 15.1503C10.3908 15.6166 9.6092 15.6166 9.19808 15.1503L7.22697 12.9148Z"
+                              d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
                               fill="currentColor"
-                              fill-rule="evenodd"
                             />
                             <path
-                              clip-rule="evenodd"
-                              d="M7.22697 7.08522C6.68904 7.6953 7.16777 8.59906 8.02888 8.59906H11.9711C12.8322 8.59906 13.311 7.6953 12.773 7.08522L10.8019 4.8497C10.3908 4.38343 9.6092 4.38343 9.19808 4.8497L7.22697 7.08522Z"
+                              d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
                               fill="currentColor"
-                              fill-rule="evenodd"
+                            />
+                            <path
+                              d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                              fill="currentColor"
                             />
                           </svg>
                         </button>
                       </div>
-                    </div>
-                    <div
-                      class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_justifyContent_space-between_base__19njorx1k"
-                      data-ictinus="test-version"
-                    >
-                      <button
-                        aria-expanded="false"
-                        aria-haspopup="true"
-                        class="emotion-7"
-                        data-react-aria-pressable="true"
-                        data-slot="button"
-                        data-testid="icon-button"
-                        id="react-aria-:test-id:"
-                        tabindex="0"
-                        type="button"
-                      >
-                        <svg
-                          class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
-                          data-ictinus="test-version"
-                          viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
-                            fill="currentColor"
-                          />
-                          <path
-                            d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
-                            fill="currentColor"
-                          />
-                          <path
-                            d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </button>
                     </div>
                   </div>
                 </div>
@@ -717,10 +752,54 @@
                         class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 properties_alignItems_center_base__19njorx4 properties_display_grid_base__19njorx2s properties_justifyContent_space-between_base__19njorx1k properties_placeItems_center_base__19njorx14 properties_position_relative_base__19njorxlc properties_flexDirection_row_base__19njorxkk"
                         data-ictinus="test-version"
                       >
+                        <div
+                          class="emotion-0"
+                        >
+                          <button
+                            class="emotion-9"
+                            data-slot="button"
+                            data-testid="icon-button"
+                            type="button"
+                          >
+                            <svg
+                              class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
+                              data-ictinus="test-version"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M7.22697 12.9148C6.68904 12.3047 7.16777 11.4009 8.02888 11.4009H11.9711C12.8322 11.4009 13.311 12.3047 12.773 12.9148L10.8019 15.1503C10.3908 15.6166 9.6092 15.6166 9.19808 15.1503L7.22697 12.9148Z"
+                                fill="currentColor"
+                                fill-rule="evenodd"
+                              />
+                              <path
+                                clip-rule="evenodd"
+                                d="M7.22697 7.08522C6.68904 7.6953 7.16777 8.59906 8.02888 8.59906H11.9711C12.8322 8.59906 13.311 7.6953 12.773 7.08522L10.8019 4.8497C10.3908 4.38343 9.6092 4.38343 9.19808 4.8497L7.22697 7.08522Z"
+                                fill="currentColor"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_justifyContent_space-between_base__19njorx1k"
+                      data-ictinus="test-version"
+                    >
+                      <div
+                        class="emotion-0"
+                      >
                         <button
-                          class="emotion-7"
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          class="emotion-9"
+                          data-react-aria-pressable="true"
                           data-slot="button"
                           data-testid="icon-button"
+                          id="react-aria-:test-id:"
+                          tabindex="0"
                           type="button"
                         >
                           <svg
@@ -730,56 +809,20 @@
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path
-                              clip-rule="evenodd"
-                              d="M7.22697 12.9148C6.68904 12.3047 7.16777 11.4009 8.02888 11.4009H11.9711C12.8322 11.4009 13.311 12.3047 12.773 12.9148L10.8019 15.1503C10.3908 15.6166 9.6092 15.6166 9.19808 15.1503L7.22697 12.9148Z"
+                              d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
                               fill="currentColor"
-                              fill-rule="evenodd"
                             />
                             <path
-                              clip-rule="evenodd"
-                              d="M7.22697 7.08522C6.68904 7.6953 7.16777 8.59906 8.02888 8.59906H11.9711C12.8322 8.59906 13.311 7.6953 12.773 7.08522L10.8019 4.8497C10.3908 4.38343 9.6092 4.38343 9.19808 4.8497L7.22697 7.08522Z"
+                              d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
                               fill="currentColor"
-                              fill-rule="evenodd"
+                            />
+                            <path
+                              d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                              fill="currentColor"
                             />
                           </svg>
                         </button>
                       </div>
-                    </div>
-                    <div
-                      class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_justifyContent_space-between_base__19njorx1k"
-                      data-ictinus="test-version"
-                    >
-                      <button
-                        aria-expanded="false"
-                        aria-haspopup="true"
-                        class="emotion-7"
-                        data-react-aria-pressable="true"
-                        data-slot="button"
-                        data-testid="icon-button"
-                        id="react-aria-:test-id:"
-                        tabindex="0"
-                        type="button"
-                      >
-                        <svg
-                          class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
-                          data-ictinus="test-version"
-                          viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
-                            fill="currentColor"
-                          />
-                          <path
-                            d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
-                            fill="currentColor"
-                          />
-                          <path
-                            d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </button>
                     </div>
                   </div>
                 </div>
@@ -820,10 +863,54 @@
                         class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 properties_alignItems_center_base__19njorx4 properties_display_grid_base__19njorx2s properties_justifyContent_space-between_base__19njorx1k properties_placeItems_center_base__19njorx14 properties_position_relative_base__19njorxlc properties_flexDirection_row_base__19njorxkk"
                         data-ictinus="test-version"
                       >
+                        <div
+                          class="emotion-0"
+                        >
+                          <button
+                            class="emotion-9"
+                            data-slot="button"
+                            data-testid="icon-button"
+                            type="button"
+                          >
+                            <svg
+                              class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
+                              data-ictinus="test-version"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M7.22697 12.9148C6.68904 12.3047 7.16777 11.4009 8.02888 11.4009H11.9711C12.8322 11.4009 13.311 12.3047 12.773 12.9148L10.8019 15.1503C10.3908 15.6166 9.6092 15.6166 9.19808 15.1503L7.22697 12.9148Z"
+                                fill="currentColor"
+                                fill-rule="evenodd"
+                              />
+                              <path
+                                clip-rule="evenodd"
+                                d="M7.22697 7.08522C6.68904 7.6953 7.16777 8.59906 8.02888 8.59906H11.9711C12.8322 8.59906 13.311 7.6953 12.773 7.08522L10.8019 4.8497C10.3908 4.38343 9.6092 4.38343 9.19808 4.8497L7.22697 7.08522Z"
+                                fill="currentColor"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_justifyContent_space-between_base__19njorx1k"
+                      data-ictinus="test-version"
+                    >
+                      <div
+                        class="emotion-0"
+                      >
                         <button
-                          class="emotion-7"
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          class="emotion-9"
+                          data-react-aria-pressable="true"
                           data-slot="button"
                           data-testid="icon-button"
+                          id="react-aria-:test-id:"
+                          tabindex="0"
                           type="button"
                         >
                           <svg
@@ -833,56 +920,20 @@
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path
-                              clip-rule="evenodd"
-                              d="M7.22697 12.9148C6.68904 12.3047 7.16777 11.4009 8.02888 11.4009H11.9711C12.8322 11.4009 13.311 12.3047 12.773 12.9148L10.8019 15.1503C10.3908 15.6166 9.6092 15.6166 9.19808 15.1503L7.22697 12.9148Z"
+                              d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
                               fill="currentColor"
-                              fill-rule="evenodd"
                             />
                             <path
-                              clip-rule="evenodd"
-                              d="M7.22697 7.08522C6.68904 7.6953 7.16777 8.59906 8.02888 8.59906H11.9711C12.8322 8.59906 13.311 7.6953 12.773 7.08522L10.8019 4.8497C10.3908 4.38343 9.6092 4.38343 9.19808 4.8497L7.22697 7.08522Z"
+                              d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
                               fill="currentColor"
-                              fill-rule="evenodd"
+                            />
+                            <path
+                              d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                              fill="currentColor"
                             />
                           </svg>
                         </button>
                       </div>
-                    </div>
-                    <div
-                      class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_justifyContent_space-between_base__19njorx1k"
-                      data-ictinus="test-version"
-                    >
-                      <button
-                        aria-expanded="false"
-                        aria-haspopup="true"
-                        class="emotion-7"
-                        data-react-aria-pressable="true"
-                        data-slot="button"
-                        data-testid="icon-button"
-                        id="react-aria-:test-id:"
-                        tabindex="0"
-                        type="button"
-                      >
-                        <svg
-                          class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
-                          data-ictinus="test-version"
-                          viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
-                            fill="currentColor"
-                          />
-                          <path
-                            d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
-                            fill="currentColor"
-                          />
-                          <path
-                            d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </button>
                     </div>
                   </div>
                 </div>
@@ -924,10 +975,10 @@
                   data-ictinus="test-version"
                 >
                   <div
-                    class="emotion-1"
+                    class="emotion-2"
                   >
                     <label
-                      class="emotion-2"
+                      class="emotion-3"
                       data-rac=""
                       data-react-aria-pressable="true"
                       data-testid="ictinus_checkbox"
@@ -943,10 +994,10 @@
                         />
                       </span>
                       <div
-                        class="emotion-3 emotion-4"
+                        class="emotion-4 emotion-5"
                       >
                         <div
-                          class="emotion-5 emotion-4"
+                          class="emotion-6 emotion-5"
                           data-role="checkbox-icon"
                         >
                           <div>
@@ -1048,24 +1099,28 @@
                   class="TableCell_content__f31ya38 properties_color_primary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya36 TableCell_content_size_sm__f31ya39 properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w properties_justifyContent_center_base__19njorx1c"
                   data-ictinus="test-version"
                 >
-                  <button
-                    class="emotion-7"
-                    data-slot="button"
-                    data-testid="icon-button"
-                    type="button"
+                  <div
+                    class="emotion-0"
                   >
-                    <svg
-                      class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
-                      data-ictinus="test-version"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <button
+                      class="emotion-9"
+                      data-slot="button"
+                      data-testid="icon-button"
+                      type="button"
                     >
-                      <path
-                        d="M8.64194 14.702L12.6836 10.7466C12.7965 10.6361 12.8774 10.5161 12.9264 10.3867C12.9755 10.2572 13 10.1283 13 10C13 9.86608 12.9755 9.7358 12.9264 9.60915C12.8774 9.48249 12.7965 9.36392 12.6836 9.25345L8.64194 5.29797C8.43898 5.09932 8.21607 5 7.9732 5C7.73034 5 7.50742 5.09932 7.30446 5.29797C7.10149 5.49661 7 5.71477 7 5.95246C7 6.19014 7.10149 6.40831 7.30446 6.60694L10.7714 10L7.30446 13.3931C7.10149 13.5917 7 13.8099 7 14.0475C7 14.2852 7.10149 14.5034 7.30446 14.702C7.50742 14.9007 7.73034 15 7.9732 15C8.21607 15 8.43898 14.9007 8.64194 14.702Z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </button>
+                      <svg
+                        class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
+                        data-ictinus="test-version"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8.64194 14.702L12.6836 10.7466C12.7965 10.6361 12.8774 10.5161 12.9264 10.3867C12.9755 10.2572 13 10.1283 13 10C13 9.86608 12.9755 9.7358 12.9264 9.60915C12.8774 9.48249 12.7965 9.36392 12.6836 9.25345L8.64194 5.29797C8.43898 5.09932 8.21607 5 7.9732 5C7.73034 5 7.50742 5.09932 7.30446 5.29797C7.10149 5.49661 7 5.71477 7 5.95246C7 6.19014 7.10149 6.40831 7.30446 6.60694L10.7714 10L7.30446 13.3931C7.10149 13.5917 7 13.8099 7 14.0475C7 14.2852 7.10149 14.5034 7.30446 14.702C7.50742 14.9007 7.73034 15 7.9732 15C8.21607 15 8.43898 14.9007 8.64194 14.702Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
               </td>
             </tr>
@@ -1088,10 +1143,10 @@
                   data-ictinus="test-version"
                 >
                   <div
-                    class="emotion-1"
+                    class="emotion-2"
                   >
                     <label
-                      class="emotion-2"
+                      class="emotion-3"
                       data-rac=""
                       data-react-aria-pressable="true"
                       data-testid="ictinus_checkbox"
@@ -1107,10 +1162,10 @@
                         />
                       </span>
                       <div
-                        class="emotion-3 emotion-4"
+                        class="emotion-4 emotion-5"
                       >
                         <div
-                          class="emotion-5 emotion-4"
+                          class="emotion-6 emotion-5"
                           data-role="checkbox-icon"
                         >
                           <div>
@@ -1212,24 +1267,28 @@
                   class="TableCell_content__f31ya38 properties_color_primary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya36 TableCell_content_size_sm__f31ya39 properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w properties_justifyContent_center_base__19njorx1c"
                   data-ictinus="test-version"
                 >
-                  <button
-                    class="emotion-7"
-                    data-slot="button"
-                    data-testid="icon-button"
-                    type="button"
+                  <div
+                    class="emotion-0"
                   >
-                    <svg
-                      class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
-                      data-ictinus="test-version"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <button
+                      class="emotion-9"
+                      data-slot="button"
+                      data-testid="icon-button"
+                      type="button"
                     >
-                      <path
-                        d="M8.64194 14.702L12.6836 10.7466C12.7965 10.6361 12.8774 10.5161 12.9264 10.3867C12.9755 10.2572 13 10.1283 13 10C13 9.86608 12.9755 9.7358 12.9264 9.60915C12.8774 9.48249 12.7965 9.36392 12.6836 9.25345L8.64194 5.29797C8.43898 5.09932 8.21607 5 7.9732 5C7.73034 5 7.50742 5.09932 7.30446 5.29797C7.10149 5.49661 7 5.71477 7 5.95246C7 6.19014 7.10149 6.40831 7.30446 6.60694L10.7714 10L7.30446 13.3931C7.10149 13.5917 7 13.8099 7 14.0475C7 14.2852 7.10149 14.5034 7.30446 14.702C7.50742 14.9007 7.73034 15 7.9732 15C8.21607 15 8.43898 14.9007 8.64194 14.702Z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </button>
+                      <svg
+                        class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
+                        data-ictinus="test-version"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8.64194 14.702L12.6836 10.7466C12.7965 10.6361 12.8774 10.5161 12.9264 10.3867C12.9755 10.2572 13 10.1283 13 10C13 9.86608 12.9755 9.7358 12.9264 9.60915C12.8774 9.48249 12.7965 9.36392 12.6836 9.25345L8.64194 5.29797C8.43898 5.09932 8.21607 5 7.9732 5C7.73034 5 7.50742 5.09932 7.30446 5.29797C7.10149 5.49661 7 5.71477 7 5.95246C7 6.19014 7.10149 6.40831 7.30446 6.60694L10.7714 10L7.30446 13.3931C7.10149 13.5917 7 13.8099 7 14.0475C7 14.2852 7.10149 14.5034 7.30446 14.702C7.50742 14.9007 7.73034 15 7.9732 15C8.21607 15 8.43898 14.9007 8.64194 14.702Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
               </td>
             </tr>
@@ -1252,10 +1311,10 @@
                   data-ictinus="test-version"
                 >
                   <div
-                    class="emotion-1"
+                    class="emotion-2"
                   >
                     <label
-                      class="emotion-2"
+                      class="emotion-3"
                       data-rac=""
                       data-react-aria-pressable="true"
                       data-testid="ictinus_checkbox"
@@ -1271,10 +1330,10 @@
                         />
                       </span>
                       <div
-                        class="emotion-3 emotion-4"
+                        class="emotion-4 emotion-5"
                       >
                         <div
-                          class="emotion-5 emotion-4"
+                          class="emotion-6 emotion-5"
                           data-role="checkbox-icon"
                         >
                           <div>
@@ -1378,24 +1437,28 @@
                   class="TableCell_content__f31ya38 properties_color_primary_base__19njorx232 properties_borderColor_decorative.default_base__19njorx1w2 TableCell__f31ya36 TableCell_content_size_sm__f31ya39 properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w properties_justifyContent_center_base__19njorx1c"
                   data-ictinus="test-version"
                 >
-                  <button
-                    class="emotion-7"
-                    data-slot="button"
-                    data-testid="icon-button"
-                    type="button"
+                  <div
+                    class="emotion-0"
                   >
-                    <svg
-                      class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
-                      data-ictinus="test-version"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <button
+                      class="emotion-9"
+                      data-slot="button"
+                      data-testid="icon-button"
+                      type="button"
                     >
-                      <path
-                        d="M8.64194 14.702L12.6836 10.7466C12.7965 10.6361 12.8774 10.5161 12.9264 10.3867C12.9755 10.2572 13 10.1283 13 10C13 9.86608 12.9755 9.7358 12.9264 9.60915C12.8774 9.48249 12.7965 9.36392 12.6836 9.25345L8.64194 5.29797C8.43898 5.09932 8.21607 5 7.9732 5C7.73034 5 7.50742 5.09932 7.30446 5.29797C7.10149 5.49661 7 5.71477 7 5.95246C7 6.19014 7.10149 6.40831 7.30446 6.60694L10.7714 10L7.30446 13.3931C7.10149 13.5917 7 13.8099 7 14.0475C7 14.2852 7.10149 14.5034 7.30446 14.702C7.50742 14.9007 7.73034 15 7.9732 15C8.21607 15 8.43898 14.9007 8.64194 14.702Z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </button>
+                      <svg
+                        class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
+                        data-ictinus="test-version"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8.64194 14.702L12.6836 10.7466C12.7965 10.6361 12.8774 10.5161 12.9264 10.3867C12.9755 10.2572 13 10.1283 13 10C13 9.86608 12.9755 9.7358 12.9264 9.60915C12.8774 9.48249 12.7965 9.36392 12.6836 9.25345L8.64194 5.29797C8.43898 5.09932 8.21607 5 7.9732 5C7.73034 5 7.50742 5.09932 7.30446 5.29797C7.10149 5.49661 7 5.71477 7 5.95246C7 6.19014 7.10149 6.40831 7.30446 6.60694L10.7714 10L7.30446 13.3931C7.10149 13.5917 7 13.8099 7 14.0475C7 14.2852 7.10149 14.5034 7.30446 14.702C7.50742 14.9007 7.73034 15 7.9732 15C8.21607 15 8.43898 14.9007 8.64194 14.702Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
               </td>
             </tr>

@@ -33,6 +33,13 @@
 }
 
 .emotion-2 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-3 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -65,25 +72,25 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-2:focus-visible:not(:disabled) {
+.emotion-3:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-primary-muted);
 }
 
-.emotion-2:disabled {
+.emotion-3:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-2:hover:not(:disabled) {
+.emotion-3:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-primary-muted);
 }
 
-.emotion-2:active:not(:disabled),
-.emotion-2[aria-expanded="true"] {
+.emotion-3:active:not(:disabled),
+.emotion-3[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-primary-contrast);
 }
 
-.emotion-3 .tooltip {
+.emotion-4 .tooltip {
   background-color: var(--ictinus-color-background-inverted);
   border: var(--ictinus-border-width-1) solid var(--ictinus-color-border-color-decorative-transparent);
   box-shadow: var(--ictinus-box-shadow-2);
@@ -108,33 +115,11 @@
           <span
             data-tooltip-id="tooltip321"
           >
-            <button
+            <div
               class="emotion-2"
-              data-slot="button"
-              data-testid="button"
-              type="button"
-            >
-              <span
-                class="Text__ff5iyl6"
-                data-ictinus="test-version"
-              >
-                Text
-              </span>
-            </button>
-          </span>
-        </div>
-        <div
-          style="padding: 128px;"
-        >
-          <div
-            class="emotion-3"
-          >
-            <span
-              data-testid="tooltip-button"
-              data-tooltip-id="tooltip322"
             >
               <button
-                class="emotion-2"
+                class="emotion-3"
                 data-slot="button"
                 data-testid="button"
                 type="button"
@@ -143,9 +128,39 @@
                   class="Text__ff5iyl6"
                   data-ictinus="test-version"
                 >
-                  Interactive
+                  Text
                 </span>
               </button>
+            </div>
+          </span>
+        </div>
+        <div
+          style="padding: 128px;"
+        >
+          <div
+            class="emotion-4"
+          >
+            <span
+              data-testid="tooltip-button"
+              data-tooltip-id="tooltip322"
+            >
+              <div
+                class="emotion-2"
+              >
+                <button
+                  class="emotion-3"
+                  data-slot="button"
+                  data-testid="button"
+                  type="button"
+                >
+                  <span
+                    class="Text__ff5iyl6"
+                    data-ictinus="test-version"
+                  >
+                    Interactive
+                  </span>
+                </button>
+              </div>
             </span>
           </div>
         </div>

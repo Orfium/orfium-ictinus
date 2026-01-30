@@ -64,45 +64,37 @@ const ButtonBase = React.forwardRef<HTMLButtonElement, ButtonBaseProps>((props, 
   } = props;
   const testIdName = `${dataTestPrefixId}button`;
 
-  const buttonElement = (
-    <button
-      {...omit(rest, ['avatar', 'iconRightName', 'iconLeftName', 'iconName'])}
-      ref={ref}
-      // eslint-disable-next-line react/button-has-type
-      type={htmlType}
-      data-testid={generateTestDataId(testIdName, dataTestId)}
-      css={buttonBaseStyle({
-        type,
-        size,
-        isLoading,
-        isBlock,
-        isDisabled,
-        isIconButton,
-        shape,
-        sx,
-      })}
-      onClick={(event) => {
-        if (onClick) {
-          onClick(event);
-        }
-      }}
-      onBlur={onBlur}
-      disabled={isDisabled}
-    >
-      {children}
-    </button>
+  return (
+    <div css={buttonWrapperStyle({ isBlock })}>
+      {isLoading && !isDisabled && <ButtonLoader dataTestId={testIdName} />}
+      <button
+        {...omit(rest, ['avatar', 'iconRightName', 'iconLeftName', 'iconName'])}
+        ref={ref}
+        // eslint-disable-next-line react/button-has-type
+        type={htmlType}
+        data-testid={generateTestDataId(testIdName, dataTestId)}
+        css={buttonBaseStyle({
+          type,
+          size,
+          isLoading,
+          isBlock,
+          isDisabled,
+          isIconButton,
+          shape,
+          sx,
+        })}
+        onClick={(event) => {
+          if (onClick) {
+            onClick(event);
+          }
+        }}
+        onBlur={onBlur}
+        disabled={isDisabled}
+      >
+        {children}
+      </button>
+    </div>
   );
-
-  if (isLoading && !isDisabled) {
-    return (
-      <div css={buttonWrapperStyle({ isBlock })}>
-        <ButtonLoader dataTestId={testIdName} />
-        {buttonElement}
-      </div>
-    );
-  }
-
-  return buttonElement;
 });
 
 ButtonBase.displayName = 'ButtonBase';

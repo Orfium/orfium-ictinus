@@ -19,6 +19,13 @@
 }
 
 .emotion-3 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-4 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -52,25 +59,25 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-3:focus-visible:not(:disabled) {
+.emotion-4:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-primary-muted);
 }
 
-.emotion-3:disabled {
+.emotion-4:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-3:hover:not(:disabled) {
+.emotion-4:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-primary-muted);
 }
 
-.emotion-3:active:not(:disabled),
-.emotion-3[aria-expanded="true"] {
+.emotion-4:active:not(:disabled),
+.emotion-4[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-primary-contrast);
 }
 
-.emotion-6 {
+.emotion-8 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -104,25 +111,25 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-6:focus-visible:not(:disabled) {
+.emotion-8:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
-.emotion-6:disabled {
+.emotion-8:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-6:hover:not(:disabled) {
+.emotion-8:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
-.emotion-6:active:not(:disabled),
-.emotion-6[aria-expanded="true"] {
+.emotion-8:active:not(:disabled),
+.emotion-8[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-secondary-contrast);
 }
 
-.emotion-9 {
+.emotion-12 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -148,58 +155,6 @@
   width: var(--ictinus-sizing-9);
   height: var(--ictinus-sizing-9);
   background-color: var(--ictinus-color-palette-tertiary-base);
-  padding: 0;
-  border-radius: var(--ictinus-border-radius-7);
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-9:focus-visible:not(:disabled) {
-  background-color: var(--ictinus-color-palette-tertiary-muted);
-}
-
-.emotion-9:disabled {
-  opacity: 50%;
-  cursor: not-allowed;
-}
-
-.emotion-9:hover:not(:disabled) {
-  background-color: var(--ictinus-color-palette-tertiary-muted);
-}
-
-.emotion-9:active:not(:disabled),
-.emotion-9[aria-expanded="true"] {
-  background-color: var(--ictinus-color-palette-tertiary-contrast);
-}
-
-.emotion-12 {
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1rem;
-  font-size: 0.75rem;
-  letter-spacing: 0.015625rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  gap: var(--ictinus-spacing-4);
-  color: var(--ictinus-color-text-inverted-primary);
-  width: var(--ictinus-sizing-7);
-  height: var(--ictinus-sizing-7);
-  background-color: var(--ictinus-color-palette-primary-base);
   padding: 0;
   border-radius: var(--ictinus-border-radius-7);
   border: none;
@@ -209,7 +164,7 @@
 }
 
 .emotion-12:focus-visible:not(:disabled) {
-  background-color: var(--ictinus-color-palette-primary-muted);
+  background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
 .emotion-12:disabled {
@@ -218,15 +173,67 @@
 }
 
 .emotion-12:hover:not(:disabled) {
-  background-color: var(--ictinus-color-palette-primary-muted);
+  background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
 .emotion-12:active:not(:disabled),
 .emotion-12[aria-expanded="true"] {
+  background-color: var(--ictinus-color-palette-tertiary-contrast);
+}
+
+.emotion-16 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: var(--ictinus-spacing-4);
+  color: var(--ictinus-color-text-inverted-primary);
+  width: var(--ictinus-sizing-7);
+  height: var(--ictinus-sizing-7);
+  background-color: var(--ictinus-color-palette-primary-base);
+  padding: 0;
+  border-radius: var(--ictinus-border-radius-7);
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-16:focus-visible:not(:disabled) {
+  background-color: var(--ictinus-color-palette-primary-muted);
+}
+
+.emotion-16:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-16:hover:not(:disabled) {
+  background-color: var(--ictinus-color-palette-primary-muted);
+}
+
+.emotion-16:active:not(:disabled),
+.emotion-16[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-primary-contrast);
 }
 
-.emotion-15 {
+.emotion-20 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1rem;
@@ -260,25 +267,25 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-15:focus-visible:not(:disabled) {
+.emotion-20:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
-.emotion-15:disabled {
+.emotion-20:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-15:hover:not(:disabled) {
+.emotion-20:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
-.emotion-15:active:not(:disabled),
-.emotion-15[aria-expanded="true"] {
+.emotion-20:active:not(:disabled),
+.emotion-20[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-secondary-contrast);
 }
 
-.emotion-18 {
+.emotion-24 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1rem;
@@ -312,21 +319,21 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-18:focus-visible:not(:disabled) {
+.emotion-24:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
-.emotion-18:disabled {
+.emotion-24:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-18:hover:not(:disabled) {
+.emotion-24:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
-.emotion-18:active:not(:disabled),
-.emotion-18[aria-expanded="true"] {
+.emotion-24:active:not(:disabled),
+.emotion-24[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-tertiary-contrast);
 }
 
@@ -344,32 +351,36 @@
           <div
             class="emotion-2"
           >
-            <button
+            <div
               class="emotion-3"
-              data-slot="button"
-              data-testid="icon-dropdown-icon-button"
-              type="button"
             >
-              <svg
-                class="properties_color_inverted.primary_base__19njorx23u properties_height_5_base__19njorx74 properties_width_5_base__19njorx4c"
-                data-ictinus="test-version"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
+              <button
+                class="emotion-4"
+                data-slot="button"
+                data-testid="icon-dropdown-icon-button"
+                type="button"
               >
-                <path
-                  d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
-                  fill="currentColor"
-                />
-                <path
-                  d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
-                  fill="currentColor"
-                />
-                <path
-                  d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </button>
+                <svg
+                  class="properties_color_inverted.primary_base__19njorx23u properties_height_5_base__19njorx74 properties_width_5_base__19njorx4c"
+                  data-ictinus="test-version"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -384,32 +395,36 @@
           <div
             class="emotion-2"
           >
-            <button
-              class="emotion-6"
-              data-slot="button"
-              data-testid="icon-dropdown-icon-button"
-              type="button"
+            <div
+              class="emotion-3"
             >
-              <svg
-                class="properties_color_active_base__19njorx23a properties_height_5_base__19njorx74 properties_width_5_base__19njorx4c"
-                data-ictinus="test-version"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
+              <button
+                class="emotion-8"
+                data-slot="button"
+                data-testid="icon-dropdown-icon-button"
+                type="button"
               >
-                <path
-                  d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
-                  fill="currentColor"
-                />
-                <path
-                  d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
-                  fill="currentColor"
-                />
-                <path
-                  d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </button>
+                <svg
+                  class="properties_color_active_base__19njorx23a properties_height_5_base__19njorx74 properties_width_5_base__19njorx4c"
+                  data-ictinus="test-version"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -424,32 +439,36 @@
           <div
             class="emotion-2"
           >
-            <button
-              class="emotion-9"
-              data-slot="button"
-              data-testid="icon-dropdown-icon-button"
-              type="button"
+            <div
+              class="emotion-3"
             >
-              <svg
-                class="properties_color_active_base__19njorx23a properties_height_5_base__19njorx74 properties_width_5_base__19njorx4c"
-                data-ictinus="test-version"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
+              <button
+                class="emotion-12"
+                data-slot="button"
+                data-testid="icon-dropdown-icon-button"
+                type="button"
               >
-                <path
-                  d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
-                  fill="currentColor"
-                />
-                <path
-                  d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
-                  fill="currentColor"
-                />
-                <path
-                  d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </button>
+                <svg
+                  class="properties_color_active_base__19njorx23a properties_height_5_base__19njorx74 properties_width_5_base__19njorx4c"
+                  data-ictinus="test-version"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -464,32 +483,36 @@
           <div
             class="emotion-2"
           >
-            <button
-              class="emotion-12"
-              data-slot="button"
-              data-testid="icon-dropdown-icon-button"
-              type="button"
+            <div
+              class="emotion-3"
             >
-              <svg
-                class="properties_color_inverted.primary_base__19njorx23u properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
-                data-ictinus="test-version"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
+              <button
+                class="emotion-16"
+                data-slot="button"
+                data-testid="icon-dropdown-icon-button"
+                type="button"
               >
-                <path
-                  d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
-                  fill="currentColor"
-                />
-                <path
-                  d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
-                  fill="currentColor"
-                />
-                <path
-                  d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </button>
+                <svg
+                  class="properties_color_inverted.primary_base__19njorx23u properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
+                  data-ictinus="test-version"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -504,32 +527,36 @@
           <div
             class="emotion-2"
           >
-            <button
-              class="emotion-15"
-              data-slot="button"
-              data-testid="icon-dropdown-icon-button"
-              type="button"
+            <div
+              class="emotion-3"
             >
-              <svg
-                class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
-                data-ictinus="test-version"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
+              <button
+                class="emotion-20"
+                data-slot="button"
+                data-testid="icon-dropdown-icon-button"
+                type="button"
               >
-                <path
-                  d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
-                  fill="currentColor"
-                />
-                <path
-                  d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
-                  fill="currentColor"
-                />
-                <path
-                  d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </button>
+                <svg
+                  class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
+                  data-ictinus="test-version"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -544,32 +571,36 @@
           <div
             class="emotion-2"
           >
-            <button
-              class="emotion-18"
-              data-slot="button"
-              data-testid="icon-dropdown-icon-button"
-              type="button"
+            <div
+              class="emotion-3"
             >
-              <svg
-                class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
-                data-ictinus="test-version"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
+              <button
+                class="emotion-24"
+                data-slot="button"
+                data-testid="icon-dropdown-icon-button"
+                type="button"
               >
-                <path
-                  d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
-                  fill="currentColor"
-                />
-                <path
-                  d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
-                  fill="currentColor"
-                />
-                <path
-                  d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </button>
+                <svg
+                  class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
+                  data-ictinus="test-version"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
