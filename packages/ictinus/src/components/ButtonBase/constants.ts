@@ -30,6 +30,13 @@ export const BUTTON_COLOR: Record<ButtonTypes, Record<string, `var(--${string})`
   },
 };
 
+export const BUTTON_ICON_COLOR = {
+  primary: 'inverted.primary',
+  secondary: 'active',
+  tertiary: 'active',
+  danger: 'error',
+} as const;
+
 export const typographySizes: Record<ComponentSizes, SemanticTypographyKey> = {
   normal: 'normal.label02',
   compact: 'normal.label03',

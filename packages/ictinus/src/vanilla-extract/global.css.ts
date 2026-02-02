@@ -95,7 +95,7 @@ globalStyle('*', {
       WebkitFontSmoothing: 'antialiased',
       MozOsxFontSmoothing: 'grayscale',
       scrollbarWidth: 'thin',
-      scrollbarColor: `${vars.color.palette.primary.muted} transparent`,
+      scrollbarColor: `${vars.color.palette.secondary.contrast} transparent`,
       border: '0 solid',
     },
   },

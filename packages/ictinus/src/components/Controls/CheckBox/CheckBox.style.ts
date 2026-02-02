@@ -34,6 +34,7 @@ export const checkboxStyles =
         height: ${vars.sizing['5']};
         align-items: center;
         box-sizing: border-box;
+        display: flex;
 
         border: ${vars['border-width']['2']} solid ${vars.color['border-color'].interactive.default};
         border-radius: ${vars['border-radius']['2']};

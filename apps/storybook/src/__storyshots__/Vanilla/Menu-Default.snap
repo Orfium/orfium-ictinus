@@ -23,6 +23,10 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: var(--ictinus-spacing-4);
   color: var(--ictinus-color-text-inverted-primary);
   height: var(--ictinus-sizing-9);
   background-color: var(--ictinus-color-palette-primary-base);
@@ -52,44 +56,32 @@
   background-color: var(--ictinus-color-palette-primary-contrast);
 }
 
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  gap: var(--ictinus-spacing-4);
-}
-
 <div>
   <div
-    class="emotion-0"
+    class=""
+    data-ictinus="test-version"
   >
-    <button
-      aria-expanded="false"
-      aria-haspopup="true"
-      class="emotion-1"
-      data-react-aria-pressable="true"
-      data-slot="button"
-      data-testid="button"
-      id="react-aria-:test-id:"
-      tabindex="0"
-      type="button"
+    <div
+      class="emotion-0"
     >
-      <span
-        class="emotion-2"
+      <button
+        aria-expanded="false"
+        aria-haspopup="true"
+        class="emotion-1"
+        data-react-aria-pressable="true"
+        data-slot="button"
+        data-testid="button"
+        id="react-aria-:test-id:"
+        tabindex="0"
+        type="button"
       >
-        <span>
+        <span
+          class="Text__ff5iyl6"
+          data-ictinus="test-version"
+        >
           Open
         </span>
-      </span>
-    </button>
+      </button>
+    </div>
   </div>
 </div>

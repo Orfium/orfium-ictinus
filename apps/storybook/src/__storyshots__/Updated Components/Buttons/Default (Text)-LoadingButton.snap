@@ -128,6 +128,10 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: var(--ictinus-spacing-4);
   color: var(--ictinus-color-text-inverted-primary);
   height: var(--ictinus-sizing-9);
   background-color: var(--ictinus-color-palette-primary-contrast);
@@ -158,23 +162,7 @@
   background-color: var(--ictinus-color-palette-primary-contrast);
 }
 
-.emotion-10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  gap: var(--ictinus-spacing-4);
-}
-
-.emotion-15 {
+.emotion-14 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1rem;
@@ -192,6 +180,10 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: var(--ictinus-spacing-4);
   color: var(--ictinus-color-text-inverted-primary);
   height: var(--ictinus-sizing-7);
   background-color: var(--ictinus-color-palette-primary-contrast);
@@ -204,25 +196,25 @@
   pointer-events: none;
 }
 
-.emotion-15:focus-visible:not(:disabled) {
+.emotion-14:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-primary-muted);
 }
 
-.emotion-15:disabled {
+.emotion-14:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-15:hover:not(:disabled) {
+.emotion-14:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-primary-muted);
 }
 
-.emotion-15:active:not(:disabled),
-.emotion-15[aria-expanded="true"] {
+.emotion-14:active:not(:disabled),
+.emotion-14[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-primary-contrast);
 }
 
-.emotion-22 {
+.emotion-20 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -240,6 +232,10 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: var(--ictinus-spacing-4);
   color: var(--ictinus-color-text-default-active);
   height: var(--ictinus-sizing-9);
   background-color: var(--ictinus-color-palette-secondary-contrast);
@@ -252,25 +248,25 @@
   pointer-events: none;
 }
 
-.emotion-22:focus-visible:not(:disabled) {
+.emotion-20:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
-.emotion-22:disabled {
+.emotion-20:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-22:hover:not(:disabled) {
+.emotion-20:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
-.emotion-22:active:not(:disabled),
-.emotion-22[aria-expanded="true"] {
+.emotion-20:active:not(:disabled),
+.emotion-20[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-secondary-contrast);
 }
 
-.emotion-28 {
+.emotion-25 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1rem;
@@ -288,6 +284,10 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: var(--ictinus-spacing-4);
   color: var(--ictinus-color-text-default-active);
   height: var(--ictinus-sizing-7);
   background-color: var(--ictinus-color-palette-secondary-contrast);
@@ -300,25 +300,25 @@
   pointer-events: none;
 }
 
-.emotion-28:focus-visible:not(:disabled) {
+.emotion-25:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
-.emotion-28:disabled {
+.emotion-25:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-28:hover:not(:disabled) {
+.emotion-25:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
-.emotion-28:active:not(:disabled),
-.emotion-28[aria-expanded="true"] {
+.emotion-25:active:not(:disabled),
+.emotion-25[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-secondary-contrast);
 }
 
-.emotion-35 {
+.emotion-31 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -336,6 +336,10 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: var(--ictinus-spacing-4);
   color: var(--ictinus-color-text-default-active);
   height: var(--ictinus-sizing-9);
   background-color: var(--ictinus-color-palette-tertiary-contrast);
@@ -348,25 +352,25 @@
   pointer-events: none;
 }
 
-.emotion-35:focus-visible:not(:disabled) {
+.emotion-31:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
-.emotion-35:disabled {
+.emotion-31:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-35:hover:not(:disabled) {
+.emotion-31:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
-.emotion-35:active:not(:disabled),
-.emotion-35[aria-expanded="true"] {
+.emotion-31:active:not(:disabled),
+.emotion-31[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-tertiary-contrast);
 }
 
-.emotion-41 {
+.emotion-36 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1rem;
@@ -384,6 +388,10 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: var(--ictinus-spacing-4);
   color: var(--ictinus-color-text-default-active);
   height: var(--ictinus-sizing-7);
   background-color: var(--ictinus-color-palette-tertiary-contrast);
@@ -396,121 +404,129 @@
   pointer-events: none;
 }
 
-.emotion-41:focus-visible:not(:disabled) {
+.emotion-36:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
-.emotion-41:disabled {
+.emotion-36:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-41:hover:not(:disabled) {
+.emotion-36:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
-.emotion-41:active:not(:disabled),
-.emotion-41[aria-expanded="true"] {
+.emotion-36:active:not(:disabled),
+.emotion-36[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-tertiary-contrast);
+}
+
+.emotion-42 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: var(--ictinus-spacing-4);
+  color: var(--ictinus-color-text-default-error);
+  height: var(--ictinus-sizing-9);
+  background-color: var(--ictinus-color-palette-error-contrast);
+  padding: var(--ictinus-spacing-0) var(--ictinus-spacing-6) var(--ictinus-spacing-0) var(--ictinus-spacing-6);
+  border-radius: var(--ictinus-border-radius-2);
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+  pointer-events: none;
+}
+
+.emotion-42:focus-visible:not(:disabled) {
+  background-color: var(--ictinus-color-palette-error-muted);
+}
+
+.emotion-42:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-42:hover:not(:disabled) {
+  background-color: var(--ictinus-color-palette-error-muted);
+}
+
+.emotion-42:active:not(:disabled),
+.emotion-42[aria-expanded="true"] {
+  background-color: var(--ictinus-color-palette-error-contrast);
+}
+
+.emotion-47 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: var(--ictinus-spacing-4);
+  color: var(--ictinus-color-text-default-error);
+  height: var(--ictinus-sizing-7);
+  background-color: var(--ictinus-color-palette-error-contrast);
+  padding: var(--ictinus-spacing-0) var(--ictinus-spacing-4) var(--ictinus-spacing-0) var(--ictinus-spacing-4);
+  border-radius: var(--ictinus-border-radius-2);
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+  pointer-events: none;
+}
+
+.emotion-47:focus-visible:not(:disabled) {
+  background-color: var(--ictinus-color-palette-error-muted);
+}
+
+.emotion-47:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-47:hover:not(:disabled) {
+  background-color: var(--ictinus-color-palette-error-muted);
+}
+
+.emotion-47:active:not(:disabled),
+.emotion-47[aria-expanded="true"] {
+  background-color: var(--ictinus-color-palette-error-contrast);
 }
 
 .emotion-48 {
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  color: var(--ictinus-color-text-default-error);
-  height: var(--ictinus-sizing-9);
-  background-color: var(--ictinus-color-palette-error-contrast);
-  padding: var(--ictinus-spacing-0) var(--ictinus-spacing-6) var(--ictinus-spacing-0) var(--ictinus-spacing-6);
-  border-radius: var(--ictinus-border-radius-2);
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-  pointer-events: none;
-}
-
-.emotion-48:focus-visible:not(:disabled) {
-  background-color: var(--ictinus-color-palette-error-muted);
-}
-
-.emotion-48:disabled {
-  opacity: 50%;
-  cursor: not-allowed;
-}
-
-.emotion-48:hover:not(:disabled) {
-  background-color: var(--ictinus-color-palette-error-muted);
-}
-
-.emotion-48:active:not(:disabled),
-.emotion-48[aria-expanded="true"] {
-  background-color: var(--ictinus-color-palette-error-contrast);
-}
-
-.emotion-54 {
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1rem;
-  font-size: 0.75rem;
-  letter-spacing: 0.015625rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  color: var(--ictinus-color-text-default-error);
-  height: var(--ictinus-sizing-7);
-  background-color: var(--ictinus-color-palette-error-contrast);
-  padding: var(--ictinus-spacing-0) var(--ictinus-spacing-4) var(--ictinus-spacing-0) var(--ictinus-spacing-4);
-  border-radius: var(--ictinus-border-radius-2);
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-  pointer-events: none;
-}
-
-.emotion-54:focus-visible:not(:disabled) {
-  background-color: var(--ictinus-color-palette-error-muted);
-}
-
-.emotion-54:disabled {
-  opacity: 50%;
-  cursor: not-allowed;
-}
-
-.emotion-54:hover:not(:disabled) {
-  background-color: var(--ictinus-color-palette-error-muted);
-}
-
-.emotion-54:active:not(:disabled),
-.emotion-54[aria-expanded="true"] {
-  background-color: var(--ictinus-color-palette-error-contrast);
-}
-
-.emotion-56 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -522,7 +538,7 @@
   align-items: flex-end;
 }
 
-.emotion-58 {
+.emotion-50 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -540,6 +556,10 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: var(--ictinus-spacing-4);
   color: var(--ictinus-color-text-inverted-primary);
   height: var(--ictinus-sizing-9);
   background-color: var(--ictinus-color-palette-primary-base);
@@ -551,25 +571,25 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-58:focus-visible:not(:disabled) {
+.emotion-50:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-primary-muted);
 }
 
-.emotion-58:disabled {
+.emotion-50:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-58:hover:not(:disabled) {
+.emotion-50:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-primary-muted);
 }
 
-.emotion-58:active:not(:disabled),
-.emotion-58[aria-expanded="true"] {
+.emotion-50:active:not(:disabled),
+.emotion-50[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-primary-contrast);
 }
 
-.emotion-61 {
+.emotion-52 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1rem;
@@ -587,6 +607,10 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: var(--ictinus-spacing-4);
   color: var(--ictinus-color-text-inverted-primary);
   height: var(--ictinus-sizing-7);
   background-color: var(--ictinus-color-palette-primary-base);
@@ -598,21 +622,21 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-61:focus-visible:not(:disabled) {
+.emotion-52:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-primary-muted);
 }
 
-.emotion-61:disabled {
+.emotion-52:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-61:hover:not(:disabled) {
+.emotion-52:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-primary-muted);
 }
 
-.emotion-61:active:not(:disabled),
-.emotion-61[aria-expanded="true"] {
+.emotion-52:active:not(:disabled),
+.emotion-52[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-primary-contrast);
 }
 
@@ -654,11 +678,10 @@
                 type="button"
               >
                 <span
-                  class="emotion-10"
+                  class="Text__ff5iyl6"
+                  data-ictinus="test-version"
                 >
-                  <span>
-                    Primary
-                  </span>
+                  Primary
                 </span>
               </button>
             </div>
@@ -678,81 +701,16 @@
                 </div>
               </div>
               <button
-                class="emotion-15"
+                class="emotion-14"
                 data-slot="button"
                 data-testid="button"
                 type="button"
               >
                 <span
-                  class="emotion-10"
+                  class="Text__ff5iyl6"
+                  data-ictinus="test-version"
                 >
-                  <span>
-                    Primary
-                  </span>
-                </span>
-              </button>
-            </div>
-          </div>
-          <div
-            class="emotion-4"
-          >
-            <div
-              class="emotion-5"
-            >
-              <div
-                class="emotion-6"
-                data-testid="button"
-              >
-                <div
-                  class="emotion-7"
-                >
-                  <div
-                    class="emotion-8"
-                  />
-                </div>
-              </div>
-              <button
-                class="emotion-22"
-                data-slot="button"
-                data-testid="button"
-                type="button"
-              >
-                <span
-                  class="emotion-10"
-                >
-                  <span>
-                    Secondary
-                  </span>
-                </span>
-              </button>
-            </div>
-            <div
-              class="emotion-5"
-            >
-              <div
-                class="emotion-6"
-                data-testid="button"
-              >
-                <div
-                  class="emotion-7"
-                >
-                  <div
-                    class="emotion-8"
-                  />
-                </div>
-              </div>
-              <button
-                class="emotion-28"
-                data-slot="button"
-                data-testid="button"
-                type="button"
-              >
-                <span
-                  class="emotion-10"
-                >
-                  <span>
-                    Secondary
-                  </span>
+                  Primary
                 </span>
               </button>
             </div>
@@ -776,17 +734,16 @@
                 </div>
               </div>
               <button
-                class="emotion-35"
+                class="emotion-20"
                 data-slot="button"
                 data-testid="button"
                 type="button"
               >
                 <span
-                  class="emotion-10"
+                  class="Text__ff5iyl6"
+                  data-ictinus="test-version"
                 >
-                  <span>
-                    Tertiary
-                  </span>
+                  Secondary
                 </span>
               </button>
             </div>
@@ -806,17 +763,16 @@
                 </div>
               </div>
               <button
-                class="emotion-41"
+                class="emotion-25"
                 data-slot="button"
                 data-testid="button"
                 type="button"
               >
                 <span
-                  class="emotion-10"
+                  class="Text__ff5iyl6"
+                  data-ictinus="test-version"
                 >
-                  <span>
-                    Tertiary
-                  </span>
+                  Secondary
                 </span>
               </button>
             </div>
@@ -840,17 +796,16 @@
                 </div>
               </div>
               <button
-                class="emotion-48"
+                class="emotion-31"
                 data-slot="button"
                 data-testid="button"
                 type="button"
               >
                 <span
-                  class="emotion-10"
+                  class="Text__ff5iyl6"
+                  data-ictinus="test-version"
                 >
-                  <span>
-                    Danger
-                  </span>
+                  Tertiary
                 </span>
               </button>
             </div>
@@ -870,17 +825,78 @@
                 </div>
               </div>
               <button
-                class="emotion-54"
+                class="emotion-36"
                 data-slot="button"
                 data-testid="button"
                 type="button"
               >
                 <span
-                  class="emotion-10"
+                  class="Text__ff5iyl6"
+                  data-ictinus="test-version"
                 >
-                  <span>
-                    Danger
-                  </span>
+                  Tertiary
+                </span>
+              </button>
+            </div>
+          </div>
+          <div
+            class="emotion-4"
+          >
+            <div
+              class="emotion-5"
+            >
+              <div
+                class="emotion-6"
+                data-testid="button"
+              >
+                <div
+                  class="emotion-7"
+                >
+                  <div
+                    class="emotion-8"
+                  />
+                </div>
+              </div>
+              <button
+                class="emotion-42"
+                data-slot="button"
+                data-testid="button"
+                type="button"
+              >
+                <span
+                  class="Text__ff5iyl6"
+                  data-ictinus="test-version"
+                >
+                  Danger
+                </span>
+              </button>
+            </div>
+            <div
+              class="emotion-5"
+            >
+              <div
+                class="emotion-6"
+                data-testid="button"
+              >
+                <div
+                  class="emotion-7"
+                >
+                  <div
+                    class="emotion-8"
+                  />
+                </div>
+              </div>
+              <button
+                class="emotion-47"
+                data-slot="button"
+                data-testid="button"
+                type="button"
+              >
+                <span
+                  class="Text__ff5iyl6"
+                  data-ictinus="test-version"
+                >
+                  Danger
                 </span>
               </button>
             </div>
@@ -890,23 +906,22 @@
           Press the Button below to trigger loading for 4s
         </div>
         <div
-          class="emotion-56"
+          class="emotion-48"
         >
           <div
             class="emotion-5"
           >
             <button
-              class="emotion-58"
+              class="emotion-50"
               data-slot="button"
               data-testid="button"
               type="button"
             >
               <span
-                class="emotion-10"
+                class="Text__ff5iyl6"
+                data-ictinus="test-version"
               >
-                <span>
-                  Click here
-                </span>
+                Click here
               </span>
             </button>
           </div>
@@ -914,17 +929,16 @@
             class="emotion-5"
           >
             <button
-              class="emotion-61"
+              class="emotion-52"
               data-slot="button"
               data-testid="button"
               type="button"
             >
               <span
-                class="emotion-10"
+                class="Text__ff5iyl6"
+                data-ictinus="test-version"
               >
-                <span>
-                  Click here
-                </span>
+                Click here
               </span>
             </button>
           </div>

@@ -37,6 +37,10 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: var(--ictinus-spacing-4);
   color: var(--ictinus-color-text-inverted-primary);
   height: var(--ictinus-sizing-9);
   background-color: var(--ictinus-color-palette-primary-base);
@@ -67,22 +71,6 @@
 }
 
 .emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  gap: var(--ictinus-spacing-4);
-}
-
-.emotion-4 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -121,18 +109,18 @@
   letter-spacing: var(--ictinus-letter-spacing-1);
 }
 
-.emotion-4 img {
+.emotion-3 img {
   border-radius: var(--ictinus-border-radius-7);
   width: 100%;
   height: 100%;
 }
 
-.emotion-13 {
+.emotion-10 {
   width: calc(var(--ictinus-sizing-5) * 0.8);
   height: calc(var(--ictinus-sizing-5) * 0.8);
 }
 
-.emotion-13 path {
+.emotion-10 path {
   fill: var(--ictinus-color-text-default-active);
 }
 
@@ -152,18 +140,17 @@
           data-testid="button"
           type="button"
         >
-          <span
+          <div
             class="emotion-3"
+            data-testid="_avatar"
           >
-            <div
-              class="emotion-4"
-              data-testid="_avatar"
-            >
-              PR
-            </div>
-            <span>
-              Text Avatar
-            </span>
+            PR
+          </div>
+          <span
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
+          >
+            Text Avatar
           </span>
         </button>
       </div>
@@ -180,62 +167,60 @@
           data-testid="button"
           type="button"
         >
-          <span
+          <div
             class="emotion-3"
+            data-testid="_avatar"
           >
-            <div
-              class="emotion-4"
-              data-testid="_avatar"
+            <img
+              src="https://mui.com/static/images/avatar/1.jpg"
+            />
+          </div>
+          <span
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
+          >
+            Img Avatar
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      style="margin: 5px;"
+    >
+      <div
+        class="emotion-1"
+      >
+        <button
+          class="emotion-2"
+          data-slot="button"
+          data-testid="button"
+          type="button"
+        >
+          <div
+            class="emotion-3"
+            data-testid="_avatar"
+          >
+            <svg
+              class="emotion-10"
+              data-ictinus="test-version"
+              viewBox="0 0 14 17"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <img
-                src="https://mui.com/static/images/avatar/1.jpg"
+              <path
+                d="M6.96625 6.55647C8.77677 6.55647 10.2445 5.08876 10.2445 3.27824C10.2445 1.46772 8.77677 0 6.96625 0C5.15573 0 3.68801 1.46772 3.68801 3.27824C3.68801 5.08876 5.15573 6.55647 6.96625 6.55647Z"
+                fill="currentColor"
               />
-            </div>
-            <span>
-              Img Avatar
-            </span>
-          </span>
-        </button>
-      </div>
-    </div>
-    <div
-      style="margin: 5px;"
-    >
-      <div
-        class="emotion-1"
-      >
-        <button
-          class="emotion-2"
-          data-slot="button"
-          data-testid="button"
-          type="button"
-        >
+              <path
+                d="M0 12.2113C0 12.1401 0.0171683 12.0699 0.0515269 12.0076C1.31285 9.7198 3.95046 8.09435 7 8.09435C10.0495 8.09435 12.6872 9.7198 13.9485 12.0076C13.9828 12.0699 14 12.1401 14 12.2113C14 12.2824 13.9828 12.3528 13.9483 12.4151C12.687 14.6941 10.0518 16.0044 7.00244 16.0044C3.95304 16.0044 1.31314 14.6941 0.0516988 12.4151C0.0172363 12.3528 0 12.2824 0 12.2113Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
           <span
-            class="emotion-3"
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
           >
-            <div
-              class="emotion-4"
-              data-testid="_avatar"
-            >
-              <svg
-                class="emotion-13"
-                fill="none"
-                viewBox="0 0 14 17"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M6.96625 6.55647C8.77677 6.55647 10.2445 5.08876 10.2445 3.27824C10.2445 1.46772 8.77677 0 6.96625 0C5.15573 0 3.68801 1.46772 3.68801 3.27824C3.68801 5.08876 5.15573 6.55647 6.96625 6.55647Z"
-                  fill="#54587F"
-                />
-                <path
-                  d="M0 12.2113C0 12.1401 0.0171683 12.0699 0.0515269 12.0076C1.31285 9.7198 3.95046 8.09435 7 8.09435C10.0495 8.09435 12.6872 9.7198 13.9485 12.0076C13.9828 12.0699 14 12.1401 14 12.2113C14 12.2824 13.9828 12.3528 13.9483 12.4151C12.687 14.6941 10.0518 16.0044 7.00244 16.0044C3.95304 16.0044 1.31314 14.6941 0.0516988 12.4151C0.0172363 12.3528 0 12.2824 0 12.2113Z"
-                  fill="#54587F"
-                />
-              </svg>
-            </div>
-            <span>
-              Empty Avatar
-            </span>
+            Empty Avatar
           </span>
         </button>
       </div>

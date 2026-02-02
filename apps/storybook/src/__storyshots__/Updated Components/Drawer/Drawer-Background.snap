@@ -42,6 +42,10 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: var(--ictinus-spacing-4);
   color: var(--ictinus-color-text-inverted-primary);
   height: var(--ictinus-sizing-9);
   background-color: var(--ictinus-color-palette-primary-base);
@@ -71,23 +75,7 @@
   background-color: var(--ictinus-color-palette-primary-contrast);
 }
 
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  gap: var(--ictinus-spacing-4);
-}
-
-.emotion-8 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -102,7 +90,7 @@
   align-items: center;
 }
 
-.emotion-9 {
+.emotion-7 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.375rem;
@@ -128,11 +116,10 @@
           type="button"
         >
           <span
-            class="emotion-4"
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
           >
-            <span>
-              Non-interactive Background
-            </span>
+            Non-interactive Background
           </span>
         </button>
       </div>
@@ -146,20 +133,19 @@
           type="button"
         >
           <span
-            class="emotion-4"
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
           >
-            <span>
-              Interactive Background
-            </span>
+            Interactive Background
           </span>
         </button>
       </div>
     </div>
     <div
-      class="emotion-8"
+      class="emotion-6"
     >
       <p
-        class="emotion-9"
+        class="emotion-7"
       >
         Copy Paste this Text
       </p>
@@ -173,11 +159,10 @@
           type="button"
         >
           <span
-            class="emotion-4"
+            class="Text__ff5iyl6"
+            data-ictinus="test-version"
           >
-            <span>
-              Click this Button
-            </span>
+            Click this Button
           </span>
         </button>
       </div>
