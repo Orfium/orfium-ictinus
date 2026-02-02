@@ -1,5 +1,11 @@
 # @orfium/ictinus
 
+## 5.43.1
+
+### Patch Changes
+
+- f2ec1d7: data table alpha
+
 ## 5.43.0
 
 ### Minor Changes
