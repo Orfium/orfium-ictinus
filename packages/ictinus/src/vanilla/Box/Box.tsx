@@ -1,10 +1,10 @@
 import { createSlot } from '@radix-ui/react-slot';
 import { forwardRef, type ComponentPropsWithoutRef, type ElementType } from 'react';
 
-import { version } from '../../../package.json';
 import { sprinkles, type Sprinkles } from '../../sprinkles';
 import { cn } from '../../utils/cn';
 import { type ExtendProps } from '../../utils/ExtendProps';
+import { version } from '../../version';
 import { extractBoxProps } from './extractBoxProps';
 
 const Slot = createSlot('@orfium/ictinus/Box');
