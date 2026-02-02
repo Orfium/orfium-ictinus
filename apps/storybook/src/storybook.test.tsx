@@ -27,17 +27,6 @@ expect.addSnapshotSerializer({
     val.replace(/react-aria-:\w+:([-\w$.\s]+)?/g, '"react-aria-:test-id:$1"'),
 });
 
-/**
- * normalizes the data-ictinus version attribute to a fixed value.
- */
-expect.addSnapshotSerializer({
-  test(val) {
-    return typeof val === 'string' && /^\d+\.\d+\.\d+(-.*)?$/.test(val) && val !== 'test-version';
-  },
-  serialize(val, config, indentation, depth, refs, printer) {
-    return printer('test-version', config, indentation, depth, refs);
-  },
-});
 type StoryFile = {
   default: Meta;
   [name: string]: StoryFn | Meta;
