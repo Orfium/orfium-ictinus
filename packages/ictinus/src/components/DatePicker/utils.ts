@@ -1,5 +1,3 @@
-import { fireEvent } from '@testing-library/react';
-import { KEYBOARD_EVENT_KEYS } from 'hooks/useKeyboardEvents';
 import type { Dayjs } from 'utils/date';
 import dayjs from 'utils/date';
 import type { Range } from './OverlayComponent/OverlayComponent';
@@ -16,31 +14,4 @@ export const initDates = (value: { from?: Date; to?: Date }): Range => {
     from: value.from ? dayjs(value.from) : undefined,
     to: value.to ? dayjs(value.to) : undefined,
   };
-};
-
-export const clickOnElement = (element: HTMLElement, key: string, charCode: number) =>
-  fireEvent.keyDown(element, {
-    key: key,
-    code: key,
-    charCode: charCode,
-  });
-
-export const navigateOnElement = (
-  element: HTMLElement,
-  path: (keyof typeof KEYBOARD_EVENT_KEYS)[]
-) => {
-  path.forEach((key) => {
-    switch (key) {
-      case KEYBOARD_EVENT_KEYS.ArrowLeft:
-        return clickOnElement(element, KEYBOARD_EVENT_KEYS.ArrowLeft, 37);
-      case KEYBOARD_EVENT_KEYS.ArrowUp:
-        return clickOnElement(element, KEYBOARD_EVENT_KEYS.ArrowUp, 38);
-      case KEYBOARD_EVENT_KEYS.ArrowRight:
-        return clickOnElement(element, KEYBOARD_EVENT_KEYS.ArrowRight, 39);
-      case KEYBOARD_EVENT_KEYS.ArrowDown:
-        return clickOnElement(element, KEYBOARD_EVENT_KEYS.ArrowDown, 40);
-      default:
-        return null;
-    }
-  });
 };

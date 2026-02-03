@@ -1,9 +1,37 @@
 import { waitFor } from '@testing-library/react';
 import dayjs from 'dayjs';
 import { vi } from 'vitest';
+import { KEYBOARD_EVENT_KEYS } from '../../hooks/useKeyboardEvents';
 import { fireEvent, render } from '../../test';
 import DatePicker from './DatePicker';
-import { currentDay, navigateOnElement } from './utils';
+import { currentDay } from './utils';
+
+export const clickOnElement = (element: HTMLElement, key: string, charCode: number) =>
+  fireEvent.keyDown(element, {
+    key: key,
+    code: key,
+    charCode: charCode,
+  });
+
+export const navigateOnElement = (
+  element: HTMLElement,
+  path: (keyof typeof KEYBOARD_EVENT_KEYS)[]
+) => {
+  path.forEach((key) => {
+    switch (key) {
+      case KEYBOARD_EVENT_KEYS.ArrowLeft:
+        return clickOnElement(element, KEYBOARD_EVENT_KEYS.ArrowLeft, 37);
+      case KEYBOARD_EVENT_KEYS.ArrowUp:
+        return clickOnElement(element, KEYBOARD_EVENT_KEYS.ArrowUp, 38);
+      case KEYBOARD_EVENT_KEYS.ArrowRight:
+        return clickOnElement(element, KEYBOARD_EVENT_KEYS.ArrowRight, 39);
+      case KEYBOARD_EVENT_KEYS.ArrowDown:
+        return clickOnElement(element, KEYBOARD_EVENT_KEYS.ArrowDown, 40);
+      default:
+        return null;
+    }
+  });
+};
 
 global.ResizeObserver = vi.fn().mockImplementation(() => ({
   observe: vi.fn(),
