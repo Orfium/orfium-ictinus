@@ -1,5 +1,11 @@
 # @orfium/ictinus
 
+## 5.43.2
+
+### Patch Changes
+
+- 6490de2: fix imports
+
 ## 5.43.1
 
 ### Patch Changes
