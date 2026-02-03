@@ -1,9 +1,19 @@
 /// <reference types="vite/client"/>
-import { ThemeProvider } from '@orfium/ictinus';
+import { ThemeProvider, version } from '@orfium/ictinus';
 import { ThemeProvider as VanillaThemeProvider } from '@orfium/ictinus/vanilla';
 import { type Meta, type StoryFn, composeStories } from '@storybook/react-vite';
 import { render } from '@testing-library/react';
 import { describe, expect, test } from 'vitest';
+
+/**
+ * Normalizes the ictinus package version to a fixed value in snapshots.
+ * This prevents snapshot changes when the package version changes.
+ * Only matches the exact package version from the built ictinus package.
+ */
+expect.addSnapshotSerializer({
+  test: (val) => val === version,
+  print: () => '"test-version"',
+});
 
 /**
  * This serializer identifies and replaces React Aria's dynamically generated IDs

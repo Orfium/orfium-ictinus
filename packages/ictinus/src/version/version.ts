@@ -1,2 +1,3 @@
-import { version as pkgVersion } from '../../package.json';
-export const version = process.env.VITEST ? 'test-version' : pkgVersion;
+import { version } from '../../package.json';
+
+export { version };

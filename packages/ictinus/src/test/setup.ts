@@ -2,6 +2,14 @@ import { createSerializer } from '@emotion/jest';
 import '@testing-library/jest-dom/vitest';
 import { expect, vi } from 'vitest';
 
+/**
+ * Mock the version module to return a fixed value in tests.
+ * This prevents snapshot changes when the package version changes.
+ */
+vi.mock('../version', () => ({
+  version: 'test-version',
+}));
+
 expect.addSnapshotSerializer(createSerializer());
 
 global.ResizeObserver = vi.fn().mockImplementation(() => ({
