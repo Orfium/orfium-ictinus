@@ -111,7 +111,7 @@ export default defineConfig([
       ],
 
       'react/prop-types': 'off',
-      'react/button-has-type': 'warn',
+      'react/button-has-type': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
       'react/no-array-index-key': 'warn',
       'react/no-render-return-value': 0,

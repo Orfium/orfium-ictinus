@@ -59,6 +59,11 @@ export const detectComponentBasedOnType = (variant: TypographyVariant): Typograp
   return 'p';
 };
 
+/**
+ *
+ * @deprecated {@link Typography} has been deprecated; use vanilla Text instead.
+ *
+ */
 // display name breaks storybook props
 // https://github.com/storybookjs/storybook/issues/13304
 // eslint-disable-next-line react/display-name

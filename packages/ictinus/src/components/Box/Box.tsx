@@ -10,6 +10,11 @@ import { cssResolver, omitedCSSprops, pickCSSProperties, pickNonCSSProps } from 
 
 export type BoxProps = StyledBoxProps & React.HTMLAttributes<HTMLDivElement>;
 
+/**
+ *
+ * @deprecated {@link Box} has been deprecated; use vanilla Box instead.
+ *
+ */
 const Box = forwardRef<HTMLDivElement, BoxProps>(({ children, ...rest }, ref) => {
   const theme = useTheme();
   const cssPropsOnly = pickCSSProperties(rest);

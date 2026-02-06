@@ -56,6 +56,58 @@
   background-color: var(--ictinus-color-palette-secondary-contrast);
 }
 
+.emotion-3 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: var(--ictinus-spacing-4);
+  color: var(--ictinus-color-text-default-active);
+  width: var(--ictinus-sizing-7);
+  height: var(--ictinus-sizing-7);
+  background-color: var(--ictinus-color-palette-tertiary-base);
+  padding: 0;
+  border-radius: var(--ictinus-border-radius-7);
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-3:focus-visible:not(:disabled) {
+  background-color: var(--ictinus-color-palette-tertiary-muted);
+}
+
+.emotion-3:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-3:hover:not(:disabled) {
+  background-color: var(--ictinus-color-palette-tertiary-muted);
+}
+
+.emotion-3:active:not(:disabled),
+.emotion-3[aria-expanded="true"] {
+  background-color: var(--ictinus-color-palette-tertiary-contrast);
+}
+
 <div>
   <div
     class="properties_maxHeight_full_base__19njorxk8 properties_maxWidth_full_base__19njorxhg properties_display_flex_base__19njorx2g properties_flexDirection_column_base__19njorxkg"
@@ -149,7 +201,64 @@
                   class="TableHeaderCell_content__u8v29c9 properties_color_secondary_base__19njorx236 properties_borderColor_decorative.default_base__19njorx1w2 TableHeaderCell__u8v29c7 TableHeaderCell_content_size_sm__u8v29ca properties_backgroundColor_default_base__19njorx1mi properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w"
                   data-ictinus="test-version"
                 >
-                  First Name
+                  <div
+                    class="properties_display_flex_base__19njorx2g properties_alignItems_center_base__19njorx4 properties_gap_sm_base__19njorxnc properties_justifyContent_space-between_base__19njorx1k properties_flex_1_base__19njorx3c properties_flexDirection_row_base__19njorxkk"
+                    data-ictinus="test-version"
+                  >
+                    <div
+                      class="properties_display_flex_base__19njorx2g properties_alignItems_center_base__19njorx4 properties_gap_sm_base__19njorxnc properties_flexDirection_row_base__19njorxkk"
+                      data-ictinus="test-version"
+                    >
+                      <span
+                        class="Text__ff5iyl6 Text_text_lineClamp_1__ff5iyl7 Text__ff5iyl0 Text__ff5iyl1 Text__ff5iyl2 DataTableHeaderCell_label__17goizn1 DataTableHeaderCell__17goizn0 DataTableHeaderCell_label_sortDir_false__17goizn2"
+                        data-ictinus="test-version"
+                        role="button"
+                        tabindex="0"
+                      >
+                        First Name
+                      </span>
+                    </div>
+                    <div
+                      class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_justifyContent_space-between_base__19njorx1k"
+                      data-ictinus="test-version"
+                    >
+                      <div
+                        class="emotion-0"
+                      >
+                        <button
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          class="emotion-3"
+                          data-react-aria-pressable="true"
+                          data-slot="button"
+                          data-testid="icon-button"
+                          id="react-aria-:test-id:"
+                          tabindex="0"
+                          type="button"
+                        >
+                          <svg
+                            class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
+                            data-ictinus="test-version"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                              fill="currentColor"
+                            />
+                            <path
+                              d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                              fill="currentColor"
+                            />
+                            <path
+                              d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                              fill="currentColor"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </th>
               <th
@@ -163,7 +272,64 @@
                   class="TableHeaderCell_content__u8v29c9 properties_color_secondary_base__19njorx236 properties_borderColor_decorative.default_base__19njorx1w2 TableHeaderCell__u8v29c7 TableHeaderCell_content_size_sm__u8v29ca properties_backgroundColor_default_base__19njorx1mi properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w"
                   data-ictinus="test-version"
                 >
-                  Last Name
+                  <div
+                    class="properties_display_flex_base__19njorx2g properties_alignItems_center_base__19njorx4 properties_gap_sm_base__19njorxnc properties_justifyContent_space-between_base__19njorx1k properties_flex_1_base__19njorx3c properties_flexDirection_row_base__19njorxkk"
+                    data-ictinus="test-version"
+                  >
+                    <div
+                      class="properties_display_flex_base__19njorx2g properties_alignItems_center_base__19njorx4 properties_gap_sm_base__19njorxnc properties_flexDirection_row_base__19njorxkk"
+                      data-ictinus="test-version"
+                    >
+                      <span
+                        class="Text__ff5iyl6 Text_text_lineClamp_1__ff5iyl7 Text__ff5iyl0 Text__ff5iyl1 Text__ff5iyl2 DataTableHeaderCell_label__17goizn1 DataTableHeaderCell__17goizn0 DataTableHeaderCell_label_sortDir_false__17goizn2"
+                        data-ictinus="test-version"
+                        role="button"
+                        tabindex="0"
+                      >
+                        Last Name
+                      </span>
+                    </div>
+                    <div
+                      class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_justifyContent_space-between_base__19njorx1k"
+                      data-ictinus="test-version"
+                    >
+                      <div
+                        class="emotion-0"
+                      >
+                        <button
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          class="emotion-3"
+                          data-react-aria-pressable="true"
+                          data-slot="button"
+                          data-testid="icon-button"
+                          id="react-aria-:test-id:"
+                          tabindex="0"
+                          type="button"
+                        >
+                          <svg
+                            class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
+                            data-ictinus="test-version"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                              fill="currentColor"
+                            />
+                            <path
+                              d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                              fill="currentColor"
+                            />
+                            <path
+                              d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                              fill="currentColor"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </th>
               <th
@@ -177,7 +343,64 @@
                   class="TableHeaderCell_content__u8v29c9 properties_color_secondary_base__19njorx236 properties_borderColor_decorative.default_base__19njorx1w2 TableHeaderCell__u8v29c7 TableHeaderCell_content_size_sm__u8v29ca properties_backgroundColor_default_base__19njorx1mi properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w"
                   data-ictinus="test-version"
                 >
-                  Age
+                  <div
+                    class="properties_display_flex_base__19njorx2g properties_alignItems_center_base__19njorx4 properties_gap_sm_base__19njorxnc properties_justifyContent_space-between_base__19njorx1k properties_flex_1_base__19njorx3c properties_flexDirection_row_base__19njorxkk"
+                    data-ictinus="test-version"
+                  >
+                    <div
+                      class="properties_display_flex_base__19njorx2g properties_alignItems_center_base__19njorx4 properties_gap_sm_base__19njorxnc properties_flexDirection_row_base__19njorxkk"
+                      data-ictinus="test-version"
+                    >
+                      <span
+                        class="Text__ff5iyl6 Text_text_lineClamp_1__ff5iyl7 Text__ff5iyl0 Text__ff5iyl1 Text__ff5iyl2 DataTableHeaderCell_label__17goizn1 DataTableHeaderCell__17goizn0 DataTableHeaderCell_label_sortDir_false__17goizn2"
+                        data-ictinus="test-version"
+                        role="button"
+                        tabindex="0"
+                      >
+                        Age
+                      </span>
+                    </div>
+                    <div
+                      class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_justifyContent_space-between_base__19njorx1k"
+                      data-ictinus="test-version"
+                    >
+                      <div
+                        class="emotion-0"
+                      >
+                        <button
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          class="emotion-3"
+                          data-react-aria-pressable="true"
+                          data-slot="button"
+                          data-testid="icon-button"
+                          id="react-aria-:test-id:"
+                          tabindex="0"
+                          type="button"
+                        >
+                          <svg
+                            class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
+                            data-ictinus="test-version"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                              fill="currentColor"
+                            />
+                            <path
+                              d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                              fill="currentColor"
+                            />
+                            <path
+                              d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                              fill="currentColor"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </th>
               <th
@@ -191,7 +414,64 @@
                   class="TableHeaderCell_content__u8v29c9 properties_color_secondary_base__19njorx236 properties_borderColor_decorative.default_base__19njorx1w2 TableHeaderCell__u8v29c7 TableHeaderCell_content_size_sm__u8v29ca properties_backgroundColor_default_base__19njorx1mi properties_width_full_base__19njorx6c properties_height_11_base__19njorx7s properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_typography_body02__19njorx1kp properties_minHeight_11_base__19njorxdc properties_paddingLeft_lg_base__19njorx1ak properties_paddingRight_lg_base__19njorx1d4 properties_paddingTop_md_base__19njorx1fk properties_paddingBottom_md_base__19njorx17w"
                   data-ictinus="test-version"
                 >
-                  Job
+                  <div
+                    class="properties_display_flex_base__19njorx2g properties_alignItems_center_base__19njorx4 properties_gap_sm_base__19njorxnc properties_justifyContent_space-between_base__19njorx1k properties_flex_1_base__19njorx3c properties_flexDirection_row_base__19njorxkk"
+                    data-ictinus="test-version"
+                  >
+                    <div
+                      class="properties_display_flex_base__19njorx2g properties_alignItems_center_base__19njorx4 properties_gap_sm_base__19njorxnc properties_flexDirection_row_base__19njorxkk"
+                      data-ictinus="test-version"
+                    >
+                      <span
+                        class="Text__ff5iyl6 Text_text_lineClamp_1__ff5iyl7 Text__ff5iyl0 Text__ff5iyl1 Text__ff5iyl2 DataTableHeaderCell_label__17goizn1 DataTableHeaderCell__17goizn0 DataTableHeaderCell_label_sortDir_false__17goizn2"
+                        data-ictinus="test-version"
+                        role="button"
+                        tabindex="0"
+                      >
+                        Job
+                      </span>
+                    </div>
+                    <div
+                      class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 properties_alignItems_center_base__19njorx4 properties_display_flex_base__19njorx2g properties_justifyContent_space-between_base__19njorx1k"
+                      data-ictinus="test-version"
+                    >
+                      <div
+                        class="emotion-0"
+                      >
+                        <button
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          class="emotion-3"
+                          data-react-aria-pressable="true"
+                          data-slot="button"
+                          data-testid="icon-button"
+                          id="react-aria-:test-id:"
+                          tabindex="0"
+                          type="button"
+                        >
+                          <svg
+                            class="properties_color_active_base__19njorx23a properties_height_4_base__19njorx70 properties_width_4_base__19njorx48"
+                            data-ictinus="test-version"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                              fill="currentColor"
+                            />
+                            <path
+                              d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                              fill="currentColor"
+                            />
+                            <path
+                              d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                              fill="currentColor"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </th>
             </tr>
@@ -201,7 +481,7 @@
             data-ictinus="test-version"
           >
             <tr
-              aria-labelledby=":rv:"
+              aria-labelledby=":r1a:"
               class="TableRow_row__7cjz1b2 TableRow__7cjz1b0 TableRow__7cjz1b1 properties_width_full_base__19njorx6c properties_display_flex_base__19njorx2g"
               data-ictinus="test-version"
             >
@@ -255,7 +535,7 @@
               </td>
             </tr>
             <tr
-              aria-labelledby=":r10:"
+              aria-labelledby=":r1b:"
               class="TableRow_row__7cjz1b2 TableRow__7cjz1b0 TableRow__7cjz1b1 properties_width_full_base__19njorx6c properties_display_flex_base__19njorx2g"
               data-ictinus="test-version"
             >
@@ -309,7 +589,7 @@
               </td>
             </tr>
             <tr
-              aria-labelledby=":r11:"
+              aria-labelledby=":r1c:"
               class="TableRow_row__7cjz1b2 TableRow__7cjz1b0 TableRow__7cjz1b1 properties_width_full_base__19njorx6c properties_display_flex_base__19njorx2g"
               data-ictinus="test-version"
             >

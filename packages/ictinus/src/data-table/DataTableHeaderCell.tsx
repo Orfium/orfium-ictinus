@@ -40,7 +40,7 @@ export const DataTableHeaderCell = forwardRef<HTMLTableCellElement, DataTableHea
           data-test
           {...props}
         >
-          {typeof children !== 'string' || !header.column.getCanSort() ? (
+          {typeof children !== 'string' ? (
             children
           ) : (
             <Box
@@ -87,7 +87,6 @@ export const DataTableHeaderCell = forwardRef<HTMLTableCellElement, DataTableHea
                   </TooltipTrigger>
                   <TooltipContent>{children}</TooltipContent>
                 </Tooltip>
-
                 {header.column.columnDef.meta?.tooltip && (
                   <Tooltip>
                     <TooltipTrigger>
@@ -101,94 +100,101 @@ export const DataTableHeaderCell = forwardRef<HTMLTableCellElement, DataTableHea
                     </TooltipContent>
                   </Tooltip>
                 )}
-
-                <ActionsContent
-                  display="grid"
-                  placeItems="center"
-                  position="relative"
-                  visible={sortDir ? 'always' : 'if-needed'}
-                  flexDirection={flexDir}
-                >
-                  <IconButton
-                    onClick={() =>
-                      header.column.toggleSorting(undefined, header.column.getCanMultiSort())
-                    }
-                    type="tertiary"
-                    size="compact"
-                    iconName={getSortIcon(sortDir)}
-                  />
-                  {header.column.getCanMultiSort() && header.column.getSortIndex() > -1 && (
-                    <Text
-                      typography="label04"
-                      color="primary"
-                      position="absolute"
-                      pointerEvents="none"
-                      style={{ top: 0, right: 0 }}
-                    >
-                      {header.column.getSortIndex() + 1}
-                    </Text>
-                  )}
-                </ActionsContent>
+                {header.column.getCanSort() && (
+                  <ActionsContent
+                    display="grid"
+                    placeItems="center"
+                    position="relative"
+                    visible={sortDir ? 'always' : 'if-needed'}
+                    flexDirection={flexDir}
+                  >
+                    <IconButton
+                      onClick={() =>
+                        header.column.toggleSorting(undefined, header.column.getCanMultiSort())
+                      }
+                      type="tertiary"
+                      size="compact"
+                      iconName={getSortIcon(sortDir)}
+                    />
+                    {header.column.getCanMultiSort() && header.column.getSortIndex() > -1 && (
+                      <Text
+                        typography="label04"
+                        color="primary"
+                        position="absolute"
+                        pointerEvents="none"
+                        style={{ top: 0, right: 0 }}
+                      >
+                        {header.column.getSortIndex() + 1}
+                      </Text>
+                    )}
+                  </ActionsContent>
+                )}
               </Box>
 
-              <ActionsContent visible={sortDir ? 'always' : 'if-needed'}>
-                <Menu>
-                  <MenuTrigger>
-                    <IconButton type="tertiary" size="compact" iconName="moreOptions" />
-                  </MenuTrigger>
-                  <MenuContent style={{ minWidth: '220px' }}>
-                    <MenuItem onAction={() => header.column.toggleSorting(true)}>
-                      <Box display="flex" alignItems="center" gap="sm">
-                        <Icon name="sortDescending" />
-                        <Text typography="body03">Sort descending (z-a)</Text>
-                      </Box>
-                    </MenuItem>
-                    <MenuItem onAction={() => header.column.toggleSorting(false)}>
-                      <Box display="flex" alignItems="center" gap="sm">
-                        <Icon name="sortAscending" />
-                        <Text typography="body03">Sort ascending (a-z)</Text>
-                      </Box>
-                    </MenuItem>
-                    {header.column.getCanPin() && (
-                      <>
-                        <MenuSeparator />
-                        <MenuItem
-                          onAction={() => {
-                            const isPinnedLeft = header.column.getIsPinned() === 'left';
-                            header.column.pin(isPinnedLeft ? false : 'left');
-                          }}
-                        >
-                          <Box display="flex" alignItems="center" gap="sm" w="full">
-                            <Icon name="freeze" />
-                            <Text typography="body03">Freeze column (left)</Text>
-                            <Box flex="1" />
-                            <Switch
-                              isSelected={header.column.getIsPinned() === 'left'}
-                              isReadOnly
-                            />
-                          </Box>
-                        </MenuItem>
-                        <MenuItem
-                          onAction={() => {
-                            const isPinnedRight = header.column.getIsPinned() === 'right';
-                            header.column.pin(isPinnedRight ? false : 'right');
-                          }}
-                        >
-                          <Box display="flex" alignItems="center" gap="sm" w="full">
-                            <Icon name="freeze" />
-                            <Text typography="body03">Freeze column (right)</Text>
-                            <Box flex="1" />
-                            <Switch
-                              isSelected={header.column.getIsPinned() === 'right'}
-                              isReadOnly
-                            />
-                          </Box>
-                        </MenuItem>
-                      </>
-                    )}
-                  </MenuContent>
-                </Menu>
-              </ActionsContent>
+              {(header.column.getCanSort() || header.column.getCanPin()) && (
+                <ActionsContent visible={sortDir ? 'always' : 'if-needed'}>
+                  <Menu>
+                    <MenuTrigger>
+                      <IconButton type="tertiary" size="compact" iconName="moreOptions" />
+                    </MenuTrigger>
+                    <MenuContent style={{ minWidth: '220px' }}>
+                      {header.column.getCanSort() && (
+                        <>
+                          <MenuItem onAction={() => header.column.toggleSorting(true)}>
+                            <Box display="flex" alignItems="center" gap="sm">
+                              <Icon name="sortDescending" />
+                              <Text typography="body03">Sort descending (z-a)</Text>
+                            </Box>
+                          </MenuItem>
+                          <MenuItem onAction={() => header.column.toggleSorting(false)}>
+                            <Box display="flex" alignItems="center" gap="sm">
+                              <Icon name="sortAscending" />
+                              <Text typography="body03">Sort ascending (a-z)</Text>
+                            </Box>
+                          </MenuItem>
+                        </>
+                      )}
+                      {header.column.getCanPin() && (
+                        <>
+                          {header.column.getCanSort() && <MenuSeparator />}
+                          <MenuItem
+                            onAction={() => {
+                              const isPinnedLeft = header.column.getIsPinned() === 'left';
+                              header.column.pin(isPinnedLeft ? false : 'left');
+                            }}
+                          >
+                            <Box display="flex" alignItems="center" gap="sm" w="full">
+                              <Icon name="freeze" />
+                              <Text typography="body03">Freeze column (left)</Text>
+                              <Box flex="1" />
+                              <Switch
+                                isSelected={header.column.getIsPinned() === 'left'}
+                                isReadOnly
+                              />
+                            </Box>
+                          </MenuItem>
+                          <MenuItem
+                            onAction={() => {
+                              const isPinnedRight = header.column.getIsPinned() === 'right';
+                              header.column.pin(isPinnedRight ? false : 'right');
+                            }}
+                          >
+                            <Box display="flex" alignItems="center" gap="sm" w="full">
+                              <Icon name="freeze" />
+                              <Text typography="body03">Freeze column (right)</Text>
+                              <Box flex="1" />
+                              <Switch
+                                isSelected={header.column.getIsPinned() === 'right'}
+                                isReadOnly
+                              />
+                            </Box>
+                          </MenuItem>
+                        </>
+                      )}
+                    </MenuContent>
+                  </Menu>
+                </ActionsContent>
+              )}
             </Box>
           )}
         </TableHeaderCell>

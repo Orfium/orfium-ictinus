@@ -82,7 +82,10 @@ export const columns = [
       </Tooltip>
     ),
     header: 'Address',
-    meta: { label: 'Address' },
+    enableSorting: false,
+    enablePinning: false,
+    enableResizing: false,
+    meta: { tooltip: 'The quick brown fox' },
   }),
   columnHelper.display({
     cell: () => (
