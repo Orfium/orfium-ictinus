@@ -40,9 +40,7 @@ export const DataTableHeaderCell = forwardRef<HTMLTableCellElement, DataTableHea
           data-test
           {...props}
         >
-          {typeof children !== 'string' ? (
-            children
-          ) : (
+          {typeof children === 'string' ? (
             <Box
               display="flex"
               alignItems="center"
@@ -196,6 +194,8 @@ export const DataTableHeaderCell = forwardRef<HTMLTableCellElement, DataTableHea
                 </ActionsContent>
               )}
             </Box>
+          ) : (
+            children
           )}
         </TableHeaderCell>
       </ActionsRoot>
