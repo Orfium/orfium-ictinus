@@ -1,5 +1,11 @@
 # @orfium/ictinus
 
+## 5.43.3
+
+### Patch Changes
+
+- 9e38725: table counter + bulk actions
+
 ## 5.43.2
 
 ### Patch Changes
