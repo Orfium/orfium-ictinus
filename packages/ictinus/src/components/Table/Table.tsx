@@ -13,6 +13,11 @@ import useTable from './hooks/useTable';
 import { tableContainer, tableStyles } from './Table.style';
 import type { TableProps } from './types';
 
+/**
+ *
+ * @deprecated {@link Table} has been deprecated; use DataTable instead.
+ *
+ */
 const Table = <TData extends NoUndefined<TData>>({
   type = 'read-only',
   rowsConfig,

@@ -55,7 +55,9 @@ export function DataTableEditColumns() {
         {allColumns.map((column) => {
           const canHide = column.getCanHide();
           const isSelected = canHide ? selectedColumns.has(column.id) : true;
-          const label = (column.columnDef.meta as { label?: string })?.label;
+          const label =
+            (column.columnDef.meta as { label?: string })?.label ??
+            (typeof column.columnDef.header === 'string' ? column.columnDef.header : undefined);
 
           if (!label) {
             return null;

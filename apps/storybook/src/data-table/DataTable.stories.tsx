@@ -1,10 +1,12 @@
+import { Button } from '@orfium/ictinus';
 import {
   Box,
   DataTable,
   DataTableBody,
+  DataTableBulkActions,
+  DataTableCounter,
   DataTableEditColumns,
   DataTableHeader,
-  Text,
 } from '@orfium/ictinus/vanilla';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import {
@@ -52,19 +54,23 @@ export const Default: Story = {
       onRowSelectionChange: setRowSelection,
     });
 
-    const selectedCount = table.getSelectedRowModel().rows.length;
-    const totalCount = table.getRowModel().rows.length;
-    const displayCount = selectedCount > 0 ? selectedCount : totalCount;
-    const label = selectedCount > 0 ? 'selected' : displayCount === 1 ? 'item' : 'items';
-
     return (
       <DataTable table={table}>
         <DataTableHeader>
-          <Box display="flex" alignItems="center" gap="sm">
-            <Text typography="label02" color="active">
-              {displayCount}
-            </Text>
-            <Text typography="label02">{label}</Text>
+          <Box display="flex" alignItems="center" gap="lg">
+            <DataTableCounter singular="Friend" plural="Friends" />
+            <DataTableBulkActions>
+              <Button
+                size="compact"
+                onClick={() => {
+                  const selectedData = table.getSelectedRowModel().rows.map((row) => row.original);
+                  alert(JSON.stringify(selectedData, null, 2));
+                }}
+              >
+                Bulk
+              </Button>
+              <Button size="compact">Bulk 2</Button>
+            </DataTableBulkActions>
           </Box>
           <DataTableEditColumns />
         </DataTableHeader>
@@ -91,17 +97,10 @@ export const Simple: Story = {
       onColumnVisibilityChange: setColumnVisibility,
     });
 
-    const totalCount = table.getRowModel().rows.length;
-
     return (
       <DataTable table={table}>
         <DataTableHeader>
-          <Box display="flex" alignItems="center" gap="sm">
-            <Text typography="label02" color="active">
-              {totalCount}
-            </Text>
-            <Text typography="label02">{totalCount === 1 ? 'item' : 'items'}</Text>
-          </Box>
+          <DataTableCounter />
           <DataTableEditColumns />
         </DataTableHeader>
         <DataTableBody roundedT="0" />
