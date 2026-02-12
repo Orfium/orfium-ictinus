@@ -25,7 +25,6 @@ const meta: Meta<typeof IconButton> = {
     size: 'normal',
     type: 'primary',
     iconName: 'check',
-    color: '',
   },
 };
 
@@ -88,12 +87,12 @@ export const IconButtonTypesAndSizes: Story = {
 
 export const Playground: Story = {
   render: (args) => {
-    const { iconName, size, type, shape, color } = args;
+    const { iconName, size, type, shape } = args;
 
-    return <IconButton iconName={iconName} size={size} type={type} shape={shape} color={color} />;
+    return <IconButton iconName={iconName} size={size} type={type} shape={shape} />;
   },
   name: 'Playground',
   parameters: {
-    controls: { include: ['iconName', 'size', 'type', 'shape', 'color'] },
+    controls: { include: ['iconName', 'size', 'type', 'shape'] },
   },
 };

@@ -44,7 +44,7 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>((props, 
       <Icon
         size={size === 'compact' ? 'sm' : 'md'}
         name={iconName}
-        color={color ? color : BUTTON_ICON_COLOR[type]}
+        color={color ?? BUTTON_ICON_COLOR[type]}
       />
     </ButtonBase>
   );
