@@ -1,6 +1,5 @@
-import { Icon, Link } from '@orfium/ictinus';
+import { Icon, Link, vars } from '@orfium/ictinus';
 import { Box, Text } from '@orfium/ictinus/vanilla';
-import { vars } from '@orfium/tokens';
 
 import * as styles from './App.css';
 
@@ -42,7 +41,7 @@ function App() {
             </Text>
             <Box display="flex" alignItems="center" justifyContent="space-between" gap="sm">
               <Box display="inline-flex" alignItems="center" gap="sm">
-                <Icon name="file" size={20} color={vars.color.palette.primary.muted} />
+                <Icon name="file" size={20} color={vars.color.palette.primary.contrast} />
                 <Link>
                   <Text wordBreak="break-all" lineClamp="1">
                     tmp4ftmtjcn_modified_relinquish_automation_tests.V22

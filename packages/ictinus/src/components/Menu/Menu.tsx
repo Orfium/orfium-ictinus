@@ -30,6 +30,11 @@ export type MenuProps = {
   sx?: { listProps?: { maxHeight?: number; width?: number } };
 } & TestProps;
 
+/**
+ *
+ * @deprecated {@link Menu} has been deprecated; use vanilla Menu instead.
+ *
+ */
 const Menu: React.FC<MenuProps> = ({
   selectionMode = 'single',
   rowSize = 'normal',

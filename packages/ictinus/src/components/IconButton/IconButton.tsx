@@ -5,6 +5,7 @@ import type { ButtonBaseProps } from 'components/ButtonBase/ButtonBase';
 import ButtonBase from 'components/ButtonBase/ButtonBase';
 import { BUTTON_ICON_COLOR } from 'components/ButtonBase/constants';
 import { Icon, type IconProps } from '../../icon';
+import { type BoxProps } from '../../vanilla/Box';
 
 export type IconButtonShape = 'circle' | 'square';
 
@@ -18,10 +19,19 @@ export type IconButtonProps = Omit<
   iconName: IconProps['name'];
   /** This property defines the shape of the IconButton */
   shape?: IconButtonShape;
+  /** Custom icon color */
+  color?: BoxProps['color'];
 };
 
 const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>((props, ref) => {
-  const { iconName, size = 'normal', type = 'primary', shape = 'circle', dataTestPrefixId } = props;
+  const {
+    iconName,
+    size = 'normal',
+    type = 'primary',
+    shape = 'circle',
+    color,
+    dataTestPrefixId,
+  } = props;
 
   return (
     <ButtonBase
@@ -34,7 +44,7 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>((props, 
       <Icon
         size={size === 'compact' ? 'sm' : 'md'}
         name={iconName}
-        color={BUTTON_ICON_COLOR[type]}
+        color={color ? color : BUTTON_ICON_COLOR[type]}
       />
     </ButtonBase>
   );

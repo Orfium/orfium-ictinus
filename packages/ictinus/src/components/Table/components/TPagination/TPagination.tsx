@@ -1,4 +1,3 @@
-import { vars } from '@orfium/tokens';
 import IconButton from 'components/IconButton';
 import Select from 'components/Select';
 import type { TableProps } from 'components/Table/types';
@@ -64,7 +63,6 @@ const TPagination: React.FC<TPaginationProps> = ({ pagination, isSticky, dataTes
         <div css={buttonsContainer()}>
           {isEnhancedPaginationVisible && (
             <IconButton
-              color={vars.color.text.default.secondary}
               iconName="pageFirst"
               size="compact"
               type="tertiary"
@@ -74,7 +72,6 @@ const TPagination: React.FC<TPaginationProps> = ({ pagination, isSticky, dataTes
             />
           )}
           <IconButton
-            color={vars.color.text.default.secondary}
             iconName="chevronLeft"
             size="compact"
             type="tertiary"
@@ -83,7 +80,6 @@ const TPagination: React.FC<TPaginationProps> = ({ pagination, isSticky, dataTes
             dataTestPrefixId={`${dataTestPrefixId}_table_go_to_prev_page`}
           />
           <IconButton
-            color={vars.color.text.default.secondary}
             iconName="chevronRight"
             size="compact"
             type="tertiary"
@@ -93,7 +89,6 @@ const TPagination: React.FC<TPaginationProps> = ({ pagination, isSticky, dataTes
           />
           {isEnhancedPaginationVisible && (
             <IconButton
-              color={vars.color.text.default.secondary}
               iconName="pageLast"
               size="compact"
               type="tertiary"

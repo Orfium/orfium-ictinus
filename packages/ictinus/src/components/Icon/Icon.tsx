@@ -24,6 +24,11 @@ export type IconProps = {
 } & DivProps &
   TestProps;
 
+/**
+ *
+ * @deprecated {@link Icon} has been deprecated; use vanilla Icon instead.
+ *
+ */
 const Icon = React.forwardRef<HTMLDivElement, IconProps>((props, ref) => {
   props = useSlotProps(props, 'icon');
   const {
