@@ -71,7 +71,7 @@ const Modal: React.FCC<ModalProps> = ({
               type="tertiary"
               iconName="close"
               onClick={onClose}
-              color="secondary"
+              iconColor="secondary"
               dataTestId="modal-close"
             />
           </div>
