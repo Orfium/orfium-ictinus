@@ -1,5 +1,11 @@
 # @orfium/ictinus
 
+## 5.43.4
+
+### Patch Changes
+
+- 6faf00e: icon button color
+
 ## 5.43.3
 
 ### Patch Changes
