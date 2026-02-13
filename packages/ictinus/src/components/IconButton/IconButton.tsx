@@ -15,40 +15,44 @@ export type IconButtonProps = Omit<
 > & {
   /** This property defines the type of the IconButton */
   type?: PrimitiveButtonTypes;
-  /** This property defines witch icon to use */
-  iconName: IconProps['name'];
   /** This property defines the shape of the IconButton */
   shape?: IconButtonShape;
+  /** This property defines witch icon to use */
+  iconName: IconProps['name'];
   /** Custom icon color */
-  color?: BoxProps['color'];
+  iconColor?: BoxProps['color'];
 };
 
-const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>((props, ref) => {
-  const {
-    iconName,
-    size = 'normal',
-    type = 'primary',
-    shape = 'circle',
-    color,
-    dataTestPrefixId,
-  } = props;
-
-  return (
+const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
+  (
+    {
+      size = 'normal',
+      type = 'primary',
+      shape = 'circle',
+      iconName,
+      iconColor,
+      dataTestPrefixId,
+      ...props
+    },
+    ref
+  ) => (
     <ButtonBase
       {...props}
       ref={ref}
       isIconButton
       shape={shape}
+      size={size}
+      type={type}
       dataTestPrefixId={dataTestPrefixId ? `${dataTestPrefixId}-icon-` : 'icon-'}
     >
       <Icon
         size={size === 'compact' ? 'sm' : 'md'}
         name={iconName}
-        color={color ?? BUTTON_ICON_COLOR[type]}
+        color={iconColor ?? BUTTON_ICON_COLOR[type]}
       />
     </ButtonBase>
-  );
-});
+  )
+);
 
 IconButton.displayName = 'IconButton';
 

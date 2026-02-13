@@ -25,6 +25,7 @@ const meta: Meta<typeof IconButton> = {
     size: 'normal',
     type: 'primary',
     iconName: 'check',
+    iconColor: 'inverted.primary',
   },
 };
 
@@ -60,21 +61,21 @@ export const IconButtonTypesAndSizes: Story = {
           type="secondary"
           shape="square"
           size="compact"
-          color="indicator.success"
+          iconColor="indicator.success"
         />
         <IconButton
           iconName="warning"
           type="secondary"
           shape="square"
           size="compact"
-          color="indicator.warning"
+          iconColor="indicator.warning"
         />
         <IconButton
           iconName="edit"
           type="tertiary"
           shape="square"
           size="compact"
-          color="secondary"
+          iconColor="secondary"
         />
       </Box>
     </Box>
@@ -87,12 +88,14 @@ export const IconButtonTypesAndSizes: Story = {
 
 export const Playground: Story = {
   render: (args) => {
-    const { iconName, size, type, shape } = args;
+    const { size, type, shape, iconName, iconColor } = args;
 
-    return <IconButton iconName={iconName} size={size} type={type} shape={shape} />;
+    return (
+      <IconButton iconName={iconName} size={size} type={type} shape={shape} iconColor={iconColor} />
+    );
   },
   name: 'Playground',
   parameters: {
-    controls: { include: ['iconName', 'size', 'type', 'shape'] },
+    controls: { include: ['iconName', 'size', 'type', 'shape', 'iconColor'] },
   },
 };
