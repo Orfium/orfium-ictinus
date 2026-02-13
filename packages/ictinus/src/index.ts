@@ -93,6 +93,8 @@ export type {
 // Token utility types
 export type { DotKeys, Token, TokensObject } from '@orfium/tokens';
 
+export { vars } from '@orfium/tokens';
+
 // Hook types
 export type { OnCheckHandler } from './hooks/useCheck';
 

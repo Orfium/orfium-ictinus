@@ -1,4 +1,3 @@
-import { vars } from '@orfium/tokens';
 import Card from 'components/Card';
 import IconButton from 'components/IconButton';
 import useEscape from 'hooks/useEscape';
@@ -72,7 +71,7 @@ const Modal: React.FCC<ModalProps> = ({
               type="tertiary"
               iconName="close"
               onClick={onClose}
-              color={vars.color.text.default.secondary}
+              iconColor="secondary"
               dataTestId="modal-close"
             />
           </div>
