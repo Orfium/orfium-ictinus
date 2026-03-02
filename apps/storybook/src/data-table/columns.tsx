@@ -1,6 +1,7 @@
 import { IconButton } from '@orfium/ictinus';
 import {
   DataTableCheckbox,
+  Icon,
   Text,
   Tooltip,
   TooltipContent,
@@ -20,6 +21,7 @@ export const data = [
     lastName: 'Geller',
     age: 32,
     job: 'Paleontologist',
+    locked: true,
   },
   {
     firstName: 'Monica',
@@ -37,6 +39,7 @@ const columnHelper = createColumnHelper<{
   lastName: string;
   age: number;
   job: string;
+  locked?: boolean;
   address?: {
     street?: string;
   };
@@ -44,7 +47,7 @@ const columnHelper = createColumnHelper<{
 
 export const columns = [
   columnHelper.display({
-    cell: () => <DataTableCheckbox />,
+    cell: ({ row }) => <DataTableCheckbox isDisabled={row.original.locked} />,
     header: () => <DataTableCheckbox />,
     id: 'select',
     size: 48,
@@ -88,14 +91,17 @@ export const columns = [
     meta: { tooltip: 'The quick brown fox' },
   }),
   columnHelper.display({
-    cell: () => (
-      <IconButton
-        onClick={(evt) => evt.stopPropagation()}
-        iconName="chevronRight"
-        size="compact"
-        type="tertiary"
-      />
-    ),
+    cell: ({ row }) =>
+      row.original.locked ? (
+        <Icon name="lock" size="sm" color="secondary" />
+      ) : (
+        <IconButton
+          onClick={(evt) => evt.stopPropagation()}
+          iconName="chevronRight"
+          size="compact"
+          type="tertiary"
+        />
+      ),
     id: 'action',
     size: 48,
     enableResizing: false,

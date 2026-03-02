@@ -44,6 +44,7 @@ export const Default: Story = {
       getCoreRowModel: getCoreRowModel(),
       getSortedRowModel: getSortedRowModel(),
       enableMultiSort: true,
+      enableRowSelection: (row) => !row.original.locked,
       state: {
         columnPinning,
         columnVisibility,
@@ -52,6 +53,14 @@ export const Default: Story = {
       onColumnPinningChange: setColumnPinning,
       onColumnVisibilityChange: setColumnVisibility,
       onRowSelectionChange: setRowSelection,
+      meta: {
+        getCellProps: (row) =>
+          row.original.locked && {
+            bg: 'alt',
+            pointerEvents: 'none',
+            'data-locked': '',
+          },
+      },
     });
 
     return (

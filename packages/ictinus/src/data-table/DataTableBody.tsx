@@ -21,8 +21,8 @@ export type DataTableBodyProps = BoxProps<
   }
 >;
 
-const COL_VIRTUALIZATION_THRESHOLD = 20;
-const ROW_VIRTUALIZATION_THRESHOLD = 20;
+const COL_VIRTUALIZATION_THRESHOLD = 25;
+const ROW_VIRTUALIZATION_THRESHOLD = 25;
 
 export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
   (
@@ -174,104 +174,117 @@ export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
                     virtualRow,
                   }))
               : rows.map((row) => ({ row, virtualRow: undefined }))
-            ).map(({ row, virtualRow }, index) => (
-              <DataTableRow
-                data-index={virtualRow?.index}
-                display="flex"
-                key={row.id}
-                index={virtualRow?.index ?? index}
-                row={row}
-                ref={virtualRow ? rowVirtualizer.measureElement : undefined}
-                style={
-                  virtualRow
-                    ? {
-                        position: 'absolute',
-                        transform: `translateY(${virtualRow.start}px)`,
-                      }
-                    : undefined
-                }
-              >
-                {row.getLeftVisibleCells().map((cell) => (
-                  <TableCell
-                    bordered={bordered}
-                    size={size}
-                    justifyContent={cell.column.columnDef.meta?.align}
-                    key={cell.id}
-                    pinned
-                    style={{
-                      ...assignInlineVars({
-                        [styles.cellOffsetVar]: `${cell.column.getStart('left')}px`,
-                        [styles.cellSizeVar]: `${cell.column.getSize()}`,
-                      }),
-                    }}
-                    className={cn(
-                      styles.cell({
-                        pinned: 'left',
-                        resizable: cell.column.getCanResize(),
+            ).map(({ row, virtualRow }, index) => {
+              const cellProps = table.options.meta?.getCellProps?.(row);
+
+              return (
+                <DataTableRow
+                  data-index={virtualRow?.index}
+                  display="flex"
+                  key={row.id}
+                  index={virtualRow?.index ?? index}
+                  row={row}
+                  ref={virtualRow ? rowVirtualizer.measureElement : undefined}
+                  style={
+                    virtualRow
+                      ? {
+                          position: 'absolute',
+                          transform: `translateY(${virtualRow.start}px)`,
+                        }
+                      : undefined
+                  }
+                >
+                  {row.getLeftVisibleCells().map((cell) => (
+                    <TableCell
+                      bordered={bordered}
+                      size={size}
+                      justifyContent={cell.column.columnDef.meta?.align}
+                      key={cell.id}
+                      pinned
+                      {...cellProps}
+                      style={{
+                        ...assignInlineVars({
+                          [styles.cellOffsetVar]: `${cell.column.getStart('left')}px`,
+                          [styles.cellSizeVar]: `${cell.column.getSize()}`,
+                        }),
+                        ...cellProps?.style,
+                      }}
+                      className={cn(
+                        styles.cell({
+                          pinned: 'left',
+                          resizable: cell.column.getCanResize(),
+                        }),
+                        cellProps?.className
+                      )}
+                    >
+                      {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                    </TableCell>
+                  ))}
+
+                  {columnVirtualizer.options.enabled && virtualColumnsOffset > 0 && (
+                    <TableCell style={{ width: virtualColumnsOffset }} />
+                  )}
+
+                  {(columnVirtualizer.options.enabled
+                    ? virtualColumns.map((virtualCell) => {
+                        const cells = row.getCenterVisibleCells();
+
+                        return cells[virtualCell.index];
                       })
-                    )}
-                  >
-                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                  </TableCell>
-                ))}
+                    : row.getCenterVisibleCells()
+                  ).map((cell) => (
+                    <TableCell
+                      key={cell.id}
+                      size={size}
+                      bordered={bordered}
+                      justifyContent={cell.column.columnDef.meta?.align}
+                      {...cellProps}
+                      style={{
+                        ...assignInlineVars({
+                          [styles.cellSizeVar]: `${cell.column.getSize()}`,
+                        }),
+                        ...cellProps?.style,
+                      }}
+                      className={cn(
+                        styles.cell({
+                          resizable: cell.column.getCanResize(),
+                        }),
+                        cellProps?.className
+                      )}
+                    >
+                      {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                    </TableCell>
+                  ))}
 
-                {columnVirtualizer.options.enabled && virtualColumnsOffset > 0 && (
-                  <TableCell style={{ width: virtualColumnsOffset }} />
-                )}
-
-                {(columnVirtualizer.options.enabled
-                  ? virtualColumns.map((virtualCell) => {
-                      const cells = row.getCenterVisibleCells();
-
-                      return cells[virtualCell.index];
-                    })
-                  : row.getCenterVisibleCells()
-                ).map((cell) => (
-                  <TableCell
-                    key={cell.id}
-                    size={size}
-                    bordered={bordered}
-                    justifyContent={cell.column.columnDef.meta?.align}
-                    style={{
-                      ...assignInlineVars({
-                        [styles.cellSizeVar]: `${cell.column.getSize()}`,
-                      }),
-                    }}
-                    className={cn(
-                      styles.cell({
-                        resizable: cell.column.getCanResize(),
-                      })
-                    )}
-                  >
-                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                  </TableCell>
-                ))}
-
-                {row.getRightVisibleCells().map((cell) => (
-                  <TableCell
-                    key={cell.id}
-                    size={size}
-                    bordered={bordered}
-                    justifyContent={cell.column.columnDef.meta?.align}
-                    pinned
-                    style={{
-                      ...assignInlineVars({
-                        [styles.cellOffsetVar]: `${cell.column.getStart('right')}px`,
-                        [styles.cellSizeVar]: `${cell.column.getSize()}`,
-                      }),
-                    }}
-                    className={cn(
-                      styles.cell({
-                        pinned: 'right',
-                        resizable: cell.column.getCanResize(),
-                      })
-                    )}
-                  >
-                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                  </TableCell>
-                ))}
-              </DataTableRow>
-            ))}
+                  {row.getRightVisibleCells().map((cell) => (
+                    <TableCell
+                      key={cell.id}
+                      size={size}
+                      bordered={bordered}
+                      justifyContent={cell.column.columnDef.meta?.align}
+                      pinned
+                      {...cellProps}
+                      style={{
+                        ...assignInlineVars({
+                          [styles.cellOffsetVar]: `${cell.column.getStart('right')}px`,
+                          [styles.cellSizeVar]: `${cell.column.getSize()}`,
+                        }),
+                        ...cellProps?.style,
+                      }}
+                      className={cn(
+                        styles.cell({
+                          pinned: 'right',
+                          resizable: cell.column.getCanResize(),
+                        }),
+                        cellProps?.className
+                      )}
+                    >
+                      {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                    </TableCell>
+                  ))}
+                </DataTableRow>
+              );
+            })}
           </TableBody>
         </Table>
       </Box>
