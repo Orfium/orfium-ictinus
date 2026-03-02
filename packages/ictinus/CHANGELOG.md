@@ -1,5 +1,11 @@
 # @orfium/ictinus
 
+## 5.43.5
+
+### Patch Changes
+
+- c672159: control cell props in data table
+
 ## 5.43.4
 
 ### Patch Changes
