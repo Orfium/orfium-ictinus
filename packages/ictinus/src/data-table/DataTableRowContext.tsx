@@ -1,7 +1,8 @@
-import type { Row } from '@tanstack/table-core';
-import { createContext, useContext, type RefObject } from 'react';
+import type { CellContext, Column, Table } from '@tanstack/table-core';
+import { createContext, createElement, useContext, type RefObject } from 'react';
+import { Skeleton } from '../skeleton';
 
-export type DataTableRowContextValue<TData = unknown> = {
+export type DataTableRowContextValue = {
   actions: Array<RefObject<HTMLDivElement>>;
   focusManaged: boolean | undefined;
   highlightedIndex: number;
@@ -9,7 +10,7 @@ export type DataTableRowContextValue<TData = unknown> = {
   onActionMount:
     | ((params: { primary: boolean | undefined; ref: RefObject<HTMLDivElement> }) => () => void)
     | undefined;
-  row: Row<TData> | undefined;
+  row: ReturnType<typeof fakeRow> | undefined;
   setHighlightedIndex: ((highlightedIndex: number) => void) | undefined;
   setSelector: ((ref: RefObject<HTMLLabelElement> | undefined) => void) | undefined;
 };
@@ -36,3 +37,31 @@ export function useDataTableRowContext() {
 
   return context;
 }
+
+const fakeCellsFactory = (columns: Column<unknown, unknown>[], rowIndex: number) => () =>
+  columns.map((column, columnIndex) => ({
+    column: {
+      ...column,
+      columnDef: {
+        ...column.columnDef,
+        cell: () =>
+          createElement(Skeleton, {
+            w: (['1/2', 'full', '3/4'] as const)[(rowIndex + columnIndex) % 3],
+          }),
+      },
+    } as Column<unknown, unknown>,
+    getContext: () => ({}) as CellContext<unknown, unknown>,
+    id: column.id,
+  }));
+
+export const fakeRow = (table: Table<unknown>, rowIndex: number) => ({
+  getCanMultiSelect: () => false,
+  getCanSelect: () => false,
+  getCenterVisibleCells: fakeCellsFactory(table.getCenterVisibleLeafColumns(), rowIndex),
+  getIsSelected: () => false,
+  getLeftVisibleCells: fakeCellsFactory(table.getLeftVisibleLeafColumns(), rowIndex),
+  getRightVisibleCells: fakeCellsFactory(table.getRightVisibleLeafColumns(), rowIndex),
+  getToggleSelectedHandler: () => (__event: unknown) => {},
+  id: 'loading' + rowIndex,
+  toggleSelected: (__value?: boolean) => {},
+});

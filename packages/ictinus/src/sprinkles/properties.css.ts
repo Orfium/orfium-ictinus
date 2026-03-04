@@ -1,4 +1,5 @@
 import { breakpoints, vars } from '@orfium/tokens';
+import { keyframes } from '@vanilla-extract/css';
 import { defineProperties } from '@vanilla-extract/sprinkles';
 
 import { layers } from '../layers';
@@ -233,6 +234,16 @@ const typography = {
   } as const,
 } as const;
 
+const animations = {
+  ping: keyframes({
+    '75%, 100%': { opacity: 0, scale: 2 },
+  }),
+  pulse: keyframes({
+    '0%, 100%': { opacity: 1 },
+    '50%': { opacity: 0.5 },
+  }),
+};
+
 export const responsiveProps = defineProperties({
   '@layer': layers.utilities,
   defaultCondition: 'base',
@@ -273,12 +284,78 @@ export const responsiveProps = defineProperties({
       initial: '0 1 auto',
       none: 'none',
     },
-    width: { ...vars.sizing, full: '100%', screen: '100vw' },
-    height: { ...vars.sizing, full: '100%', screen: '100vh' },
-    minWidth: { ...vars.sizing, full: '100%', screen: '100vw' },
-    minHeight: { ...vars.sizing, full: '100%', screen: '100vh' },
-    maxWidth: { ...vars.sizing, full: '100%', screen: '100vw' },
-    maxHeight: { ...vars.sizing, full: '100%', screen: '100vh' },
+    width: {
+      ...vars.sizing,
+      full: '100%',
+      screen: '100vw',
+      '1/2': '50%',
+
+      '1/3': '33.333333%',
+      '2/3': '66.666666%',
+
+      '1/4': '25%',
+      '3/4': '75%',
+    },
+    height: {
+      ...vars.sizing,
+      full: '100%',
+      screen: '100vh',
+      '1/2': '50%',
+
+      '1/3': '33.333333%',
+      '2/3': '66.666666%',
+
+      '1/4': '25%',
+      '3/4': '75%',
+    },
+    minWidth: {
+      ...vars.sizing,
+      full: '100%',
+      screen: '100vw',
+      '1/2': '50%',
+
+      '1/3': '33.333333%',
+      '2/3': '66.666666%',
+
+      '1/4': '25%',
+      '3/4': '75%',
+    },
+    minHeight: {
+      ...vars.sizing,
+      full: '100%',
+      screen: '100vh',
+      '1/2': '50%',
+
+      '1/3': '33.333333%',
+      '2/3': '66.666666%',
+
+      '1/4': '25%',
+      '3/4': '75%',
+    },
+    maxWidth: {
+      ...vars.sizing,
+      full: '100%',
+      screen: '100vw',
+      '1/2': '50%',
+
+      '1/3': '33.333333%',
+      '2/3': '66.666666%',
+
+      '1/4': '25%',
+      '3/4': '75%',
+    },
+    maxHeight: {
+      ...vars.sizing,
+      full: '100%',
+      screen: '100vh',
+      '1/2': '50%',
+
+      '1/3': '33.333333%',
+      '2/3': '66.666666%',
+
+      '1/4': '25%',
+      '3/4': '75%',
+    },
     flexDirection: ['column', 'row', 'column-reverse', 'row-reverse'] as const,
     flexShrink: ['0', '1'] as const,
     position: ['absolute', 'fixed', 'relative', 'sticky'] as const,
@@ -359,6 +436,10 @@ export const unresponsiveProps = defineProperties({
     wordBreak: ['break-all', 'break-word'] as const,
     wordWrap: ['normal', 'break-word'] as const,
     textAlign: ['end', 'start', 'center', 'justify'] as const,
+    animation: {
+      ping: `${animations.ping} 1s cubic-bezier(0, 0, 0.2, 1) infinite`,
+      pulse: `${animations.pulse} 2s ease-in-out infinite`,
+    },
     transitionProperty: {
       none: 'none',
       all: 'all',

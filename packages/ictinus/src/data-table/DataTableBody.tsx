@@ -1,7 +1,7 @@
-import { flexRender } from '@tanstack/react-table';
+import { flexRender, type Row } from '@tanstack/react-table';
 import { useVirtualizer } from '@tanstack/react-virtual';
 import { assignInlineVars } from '@vanilla-extract/dynamic';
-import { forwardRef, type RefObject, useEffect, useRef } from 'react';
+import { forwardRef, type RefObject, useEffect, useMemo, useRef } from 'react';
 import { useDOMRef } from '~/components/utils/useDOMRef';
 import { cn } from '../utils/cn';
 import { Box, type BoxProps } from '../vanilla/Box';
@@ -9,8 +9,13 @@ import { Table, TableBody, TableCell, TableHeader, TableRow } from '../vanilla/T
 import { useDataTableContext } from './DataTableContext';
 import { DataTableHeaderCell } from './DataTableHeaderCell';
 import { DataTableRow } from './DataTableRow';
+import { fakeRow } from './DataTableRowContext';
 
 import * as styles from './DataTableBody.css';
+
+function isTableRow(row: Row<unknown> | ReturnType<typeof fakeRow>): row is Row<unknown> {
+  return 'original' in row;
+}
 
 export type DataTableBodyProps = BoxProps<
   'div',
@@ -18,6 +23,7 @@ export type DataTableBodyProps = BoxProps<
     estimatedRowHeight?: number;
     bordered?: boolean;
     size?: 'sm' | 'md' | 'lg';
+    loading?: boolean | Record<string, 'sub-rows' | false>;
   }
 >;
 
@@ -31,6 +37,7 @@ export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
       estimatedRowHeight = 44,
       bordered = false,
       size = 'sm',
+      loading,
       style,
       ...props
     }: DataTableBodyProps,
@@ -40,7 +47,24 @@ export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
 
     const { table } = useDataTableContext();
 
-    const rows = table.getRowModel().rows;
+    const { rows: rawRows } = table.getRowModel();
+    const rows = useMemo(() => {
+      let index = 0;
+
+      return rawRows.reduce<Array<(typeof rawRows)[number] | ReturnType<typeof fakeRow>>>(
+        (result, row) => {
+          result.push(row);
+          index++;
+          if (loading && typeof loading === 'object' && loading[row.id] === 'sub-rows') {
+            result.push(fakeRow(table, index++), fakeRow(table, index++));
+          }
+
+          return result;
+        },
+        []
+      );
+    }, [loading, rawRows, table]);
+
     const previousRowsRef = useRef(rows);
     useEffect(() => {
       previousRowsRef.current = rows;
@@ -163,19 +187,26 @@ export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
                 : undefined
             }
           >
-            {(rowVirtualizer.options.enabled
-              ? virtualRows.length === 0 && rows.length > 0
-                ? previousRowsRef.current.map((row) => ({
-                    row,
-                    virtualRow: undefined,
-                  }))
-                : virtualRows.map((virtualRow) => ({
-                    row: rows[virtualRow.index],
-                    virtualRow,
-                  }))
-              : rows.map((row) => ({ row, virtualRow: undefined }))
+            {(loading === true
+              ? Array.from({ length: 10 }, (__, rowIndex) => ({
+                  row: fakeRow(table, rowIndex),
+                  virtualRow: undefined,
+                }))
+              : rowVirtualizer.options.enabled
+                ? virtualRows.length === 0 && rows.length > 0
+                  ? previousRowsRef.current.map((row) => ({
+                      row,
+                      virtualRow: undefined,
+                    }))
+                  : virtualRows.map((virtualRow) => ({
+                      row: rows[virtualRow.index],
+                      virtualRow,
+                    }))
+                : rows.map((row) => ({ row, virtualRow: undefined }))
             ).map(({ row, virtualRow }, index) => {
-              const cellProps = table.options.meta?.getCellProps?.(row);
+              const cellProps = isTableRow(row)
+                ? table.options.meta?.getCellProps?.(row)
+                : undefined;
 
               return (
                 <DataTableRow

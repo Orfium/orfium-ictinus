@@ -117,3 +117,32 @@ export const Simple: Story = {
     );
   },
 };
+
+export const Loading: Story = {
+  render: () => {
+    const [columnVisibility, setColumnVisibility] = useState<VisibilityState>({});
+
+    const table = useReactTable({
+      columns: simpleColumns,
+      data,
+      getCoreRowModel: getCoreRowModel(),
+      enableRowSelection: false,
+      enableSorting: false,
+      enableColumnResizing: false,
+      state: {
+        columnVisibility,
+      },
+      onColumnVisibilityChange: setColumnVisibility,
+    });
+
+    return (
+      <DataTable table={table}>
+        <DataTableHeader>
+          <DataTableCounter loading />
+          <DataTableEditColumns />
+        </DataTableHeader>
+        <DataTableBody loading roundedT="0" />
+      </DataTable>
+    );
+  },
+};
