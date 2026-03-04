@@ -25,7 +25,7 @@ export const Skeleton = forwardRef<HTMLSpanElement, SkeletonProps>(
         className={cn(styles.skeleton({}), className)}
         {...props}
       >
-        <Slot ref={ref}>{children ? children : <span />}</Slot>
+        <Slot ref={ref}>{children ?? <span />}</Slot>
       </Box>
     );
   }
