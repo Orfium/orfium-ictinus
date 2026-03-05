@@ -1,3 +1,4 @@
+import { Skeleton } from '../skeleton';
 import { Box, type BoxProps } from '../vanilla/Box';
 import { Text } from '../vanilla/Text';
 import { useDataTableContext } from './DataTableContext';
@@ -6,6 +7,7 @@ export type DataTableCounterProps = BoxProps<
   'div',
   {
     count?: number;
+    loading?: boolean;
     singular?: string;
     plural?: string;
   }
@@ -13,6 +15,7 @@ export type DataTableCounterProps = BoxProps<
 
 export function DataTableCounter({
   count: countProp,
+  loading = false,
   singular = 'item',
   plural = 'items',
   ...props
@@ -28,10 +31,16 @@ export function DataTableCounter({
 
   return (
     <Box display="flex" alignItems="center" gap="sm" {...props}>
-      <Text typography="label02" color="active">
-        {count.toLocaleString()}
-      </Text>
-      <Text typography="label02">{hasSelection ? `${label} selected` : label}</Text>
+      {loading ? (
+        <Skeleton w="20" />
+      ) : (
+        <>
+          <Text typography="label02" color="active">
+            {count.toLocaleString()}
+          </Text>
+          <Text typography="label02">{hasSelection ? `${label} selected` : label}</Text>
+        </>
+      )}
     </Box>
   );
 }

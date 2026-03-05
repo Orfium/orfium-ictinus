@@ -1,4 +1,3 @@
-import type { Row } from '@tanstack/table-core';
 import {
   forwardRef,
   type MouseEvent,
@@ -12,9 +11,9 @@ import { useDOMRef } from '../components/utils/useDOMRef';
 import type { BoxProps } from '../vanilla/Box';
 import { TableRow } from '../vanilla/Table';
 import { useDataTableContext } from './DataTableContext';
-import { DataTableRowProvider } from './DataTableRowContext';
+import { DataTableRowProvider, type fakeRow } from './DataTableRowContext';
 
-export type DataTableRowProps<TData> = BoxProps<
+export type DataTableRowProps = BoxProps<
   typeof TableRow,
   {
     /**
@@ -24,11 +23,11 @@ export type DataTableRowProps<TData> = BoxProps<
     /**
      * The Row instance to render.
      */
-    row: Row<TData>;
+    row: ReturnType<typeof fakeRow>;
   }
 >;
 
-export const DataTableRow = forwardRef<HTMLTableRowElement, DataTableRowProps<unknown>>(
+export const DataTableRow = forwardRef<HTMLTableRowElement, DataTableRowProps>(
   ({ children, index, row, ...props }, ref: RefObject<HTMLTableRowElement>) => {
     const { highlightedIndex, setHighlightedIndex, table } = useDataTableContext();
 
