@@ -13,10 +13,10 @@ const config: StorybookConfig = {
     '../src/**/*.@(mdx|stories.@(ts|tsx))',
   ],
   addons: [
-    '@storybook/addon-links',
-    '@storybook/addon-a11y',
+    getAbsolutePath('@storybook/addon-links'),
+    getAbsolutePath('@storybook/addon-a11y'),
     {
-      name: '@storybook/addon-docs',
+      name: getAbsolutePath('@storybook/addon-docs'),
       options: {
         mdxPluginOptions: {
           mdxCompileOptions: {
@@ -25,8 +25,8 @@ const config: StorybookConfig = {
         },
       },
     },
-    '@storybook/addon-designs',
-    '@storybook/addon-vitest',
+    getAbsolutePath('@storybook/addon-designs'),
+    getAbsolutePath('@storybook/addon-vitest'),
   ],
   staticDirs: ['../public'],
   env: (config) => ({
@@ -53,12 +53,27 @@ const config: StorybookConfig = {
     },
   },
   framework: {
-    name: '@storybook/react-vite',
+    name: getAbsolutePath('@storybook/react-vite'),
     options: {},
   },
   async viteFinal(config) {
     return {
       ...config,
+      build: {
+        ...config.build,
+        rollupOptions: {
+          ...config.build?.rollupOptions,
+          output: {
+            ...config.build?.rollupOptions?.output,
+            manualChunks(id) {
+              // Make ictinus a single chunk to avoid circular dependencies
+              if (id.includes('packages/ictinus/src')) {
+                return 'ictinus';
+              }
+            },
+          },
+        },
+      },
       server: {
         ...config.server,
         // If the dev server starts serving requests before optimization
@@ -74,3 +89,8 @@ const config: StorybookConfig = {
 };
 
 export default config;
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function getAbsolutePath(value: string): any {
+  return dirname(fileURLToPath(import.meta.resolve(`${value}/package.json`)));
+}

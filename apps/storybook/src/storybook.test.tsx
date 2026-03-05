@@ -31,10 +31,10 @@ expect.addSnapshotSerializer({
  * This serializer may add quotes even if they weren't in the original string.
  */
 expect.addSnapshotSerializer({
-  test: (val) => typeof val === 'string' && /react-aria-:\w+:/.test(val),
+  test: (val) => typeof val === 'string' && /react-aria-[_:]\w+[_:]/.test(val),
   print: (val) =>
     typeof val === 'string' &&
-    val.replace(/react-aria-:\w+:([-\w$.\s]+)?/g, '"react-aria-:test-id:$1"'),
+    val.replace(/react-aria-[_:]\w+[_:]([-\w$.\s]+)?/g, '"react-aria-:test-id:$1"'),
 });
 
 type StoryFile = {
