@@ -1,5 +1,11 @@
 # @orfium/ictinus
 
+## 5.43.6
+
+### Patch Changes
+
+- 5be44b3: data table loading
+
 ## 5.43.5
 
 ### Patch Changes
