@@ -1,5 +1,11 @@
 # @orfium/ictinus
 
+## 5.43.7
+
+### Patch Changes
+
+- aa2cec7: fix right pinned columns position
+
 ## 5.43.6
 
 ### Patch Changes
