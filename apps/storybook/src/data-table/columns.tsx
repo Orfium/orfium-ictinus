@@ -32,6 +32,55 @@ export const data = [
       street: 'Park Ave., New York, NY',
     },
   },
+  {
+    firstName: 'Chandler',
+    lastName: 'Bing',
+    age: 30,
+    job: 'Advertising Copywriter',
+  },
+  {
+    firstName: 'Joey',
+    lastName: 'Tribbiani',
+    age: 29,
+    job: 'Actor',
+    address: {
+      street: 'West Village, New York, NY',
+    },
+  },
+  {
+    firstName: 'Phoebe',
+    lastName: 'Buffay',
+    age: 30,
+    job: 'Masseuse & Musician',
+  },
+  {
+    firstName: 'Janice',
+    lastName: 'Litman',
+    age: 32,
+    job: 'Real Estate',
+  },
+  {
+    firstName: 'Mike',
+    lastName: 'Hannigan',
+    age: 31,
+    job: 'Pianist',
+    locked: true,
+  },
+  {
+    firstName: 'Carol',
+    lastName: 'Willick',
+    age: 33,
+    job: 'Marketing',
+    address: {
+      street: 'Long Island, NY',
+    },
+  },
+  {
+    firstName: 'Gunther',
+    lastName: 'Central Perk',
+    age: 35,
+    job: 'Coffee House Manager',
+  },
 ];
 
 const columnHelper = createColumnHelper<{
@@ -52,6 +101,9 @@ export const columns = [
     id: 'select',
     size: 48,
     enableResizing: false,
+    meta: {
+      align: 'center',
+    },
   }),
   columnHelper.accessor('firstName', {
     cell: ({ getValue }) => <Text lineClamp="1">{getValue()}</Text>,

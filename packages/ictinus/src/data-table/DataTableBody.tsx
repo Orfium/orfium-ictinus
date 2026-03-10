@@ -159,7 +159,11 @@ export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
                     pinned={!!header.column.getIsPinned()}
                     style={{
                       ...assignInlineVars({
-                        [styles.cellOffsetVar]: `${header.column.getStart(header.column.getIsPinned() || 'left')}px`,
+                        [styles.cellOffsetVar]: `${
+                          header.column.getIsPinned() === 'right'
+                            ? header.column.getAfter('right')
+                            : header.column.getStart(header.column.getIsPinned() || 'left')
+                        }px`,
                         [styles.cellSizeVar]: `${header.getSize()}`,
                       }),
                     }}
@@ -297,7 +301,7 @@ export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
                       {...cellProps}
                       style={{
                         ...assignInlineVars({
-                          [styles.cellOffsetVar]: `${cell.column.getStart('right')}px`,
+                          [styles.cellOffsetVar]: `${cell.column.getAfter('right')}px`,
                           [styles.cellSizeVar]: `${cell.column.getSize()}`,
                         }),
                         ...cellProps?.style,

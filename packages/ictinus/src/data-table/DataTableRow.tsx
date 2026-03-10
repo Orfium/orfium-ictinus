@@ -125,8 +125,19 @@ export const DataTableRow = forwardRef<HTMLTableRowElement, DataTableRowProps>(
 
           const { rows } = table.getRowModel();
           if (focusManaged && (event.key === 'ArrowDown' || event.key === 'ArrowUp')) {
-            const nextIndex =
-              event.key === 'ArrowDown' ? highlightedIndex + 1 : highlightedIndex - 1;
+            let nextIndex = event.key === 'ArrowDown' ? highlightedIndex + 1 : highlightedIndex - 1;
+
+            if (selector) {
+              // Skip locked rows
+              while (
+                nextIndex >= 0 &&
+                nextIndex <= rows.length - 1 &&
+                !rows[nextIndex].getCanSelect()
+              ) {
+                nextIndex += event.key === 'ArrowDown' ? 1 : -1;
+              }
+            }
+
             if (nextIndex >= 0 && nextIndex <= rows.length - 1) {
               event.preventDefault();
               setHighlightedIndex(nextIndex);
