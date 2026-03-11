@@ -1,5 +1,11 @@
 # @orfium/ictinus
 
+## 5.43.8
+
+### Patch Changes
+
+- 5c9dbc4: fix sprinkles circular dependency
+
 ## 5.43.7
 
 ### Patch Changes
