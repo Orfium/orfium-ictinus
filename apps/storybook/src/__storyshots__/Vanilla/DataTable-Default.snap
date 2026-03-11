@@ -57,23 +57,42 @@
 }
 
 .emotion-2 {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-3 {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-3 path,
+.emotion-3 rect {
+  fill: var(--ictinus-color-text-default-active)!important;
+}
+
+.emotion-4 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-2 [data-disabled] {
+.emotion-4 [data-disabled] {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-3 {
+.emotion-5 {
   display: block;
   cursor: pointer;
   position: relative;
 }
 
-.emotion-3 [data-role='checkbox-icon']>div {
+.emotion-5 [data-role='checkbox-icon']>div {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   width: var(--ictinus-sizing-5);
@@ -91,13 +110,13 @@
   border-radius: var(--ictinus-border-radius-2);
 }
 
-.emotion-3 svg {
+.emotion-5 svg {
   visibility: hidden;
   opacity: 0;
 }
 
-.emotion-3[data-hovered='true'] [data-role='checkbox-icon'],
-.emotion-3[data-focus-visible='true'] [data-role='checkbox-icon'] {
+.emotion-5[data-hovered='true'] [data-role='checkbox-icon'],
+.emotion-5[data-focus-visible='true'] [data-role='checkbox-icon'] {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   background: rgba(200,206,255,0.20);
@@ -105,33 +124,33 @@
   border-radius: 100%;
 }
 
-.emotion-3[data-selected='true'] [data-role='checkbox-icon']>div,
-.emotion-3[data-indeterminate='true'] [data-role='checkbox-icon']>div {
+.emotion-5[data-selected='true'] [data-role='checkbox-icon']>div,
+.emotion-5[data-indeterminate='true'] [data-role='checkbox-icon']>div {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   border-color: var(--ictinus-color-border-color-decorative-transparent);
   background: var(--ictinus-color-palette-primary-base);
 }
 
-.emotion-3[data-selected='true'] svg,
-.emotion-3[data-indeterminate='true'] svg {
+.emotion-5[data-selected='true'] svg,
+.emotion-5[data-indeterminate='true'] svg {
   visibility: visible;
   opacity: 1;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
-.emotion-3[data-disabled='true'] {
+.emotion-5[data-disabled='true'] {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-3[data-disabled='true']:hover {
+.emotion-5[data-disabled='true']:hover {
   background: none;
   box-shadow: none;
 }
 
-.emotion-4 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -150,7 +169,26 @@
   justify-content: unset;
 }
 
-.emotion-9 {
+.emotion-10 {
+  width: var(--ictinus-sizing-5);
+  height: var(--ictinus-sizing-5);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-11 {
+  width: var(--ictinus-sizing-5);
+  height: var(--ictinus-sizing-5);
+}
+
+.emotion-11 path,
+.emotion-11 rect {
+  fill: var(--ictinus-color-text-inverted-primary)!important;
+}
+
+.emotion-13 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1rem;
@@ -184,22 +222,41 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-9:focus-visible:not(:disabled) {
+.emotion-13:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
-.emotion-9:disabled {
+.emotion-13:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-9:hover:not(:disabled) {
+.emotion-13:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
-.emotion-9:active:not(:disabled),
-.emotion-9[aria-expanded="true"] {
+.emotion-13:active:not(:disabled),
+.emotion-13[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-tertiary-contrast);
+}
+
+.emotion-14 {
+  width: var(--ictinus-sizing-4);
+  height: var(--ictinus-sizing-4);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-15 {
+  width: var(--ictinus-sizing-4);
+  height: var(--ictinus-sizing-4);
+}
+
+.emotion-15 path,
+.emotion-15 rect {
+  fill: var(--ictinus-color-text-default-active)!important;
 }
 
 <div>
@@ -247,21 +304,23 @@
           tabindex="0"
           type="button"
         >
-          <svg
-            class="properties_color_active_base__19njorx26q properties_height_4_base__19njorx7m properties_width_4_base__19njorx4a"
-            data-ictinus="test-version"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            class="emotion-2"
+            data-slot="icon"
           >
-            <path
-              d="M2.5 15.25V4.75C2.5 4.14583 2.65737 3.61979 2.9721 3.17188C3.28683 2.72396 3.66518 2.5 4.10714 2.5H15.8929C16.3348 2.5 16.7132 2.72396 17.0279 3.17188C17.3426 3.61979 17.5 4.14583 17.5 4.75V15.25C17.5 15.8542 17.3426 16.3802 17.0279 16.8281C16.7132 17.276 16.3348 17.5 15.8929 17.5H4.10714C3.66518 17.5 3.28683 17.276 2.9721 16.8281C2.65737 16.3802 2.5 15.8542 2.5 15.25ZM8.57143 15.9375H11.4286V4.0625H8.57143V15.9375ZM13.0357 15.9375H15.8929V4.0625H13.0357V15.9375Z"
-              fill="currentColor"
-            />
-          </svg>
-          <span
-            class="Text__ff5iyl6"
-            data-ictinus="test-version"
-          >
+            <svg
+              class="emotion-3"
+              fill="none"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.5 15.25V4.75C2.5 4.14583 2.65737 3.61979 2.9721 3.17188C3.28683 2.72396 3.66518 2.5 4.10714 2.5H15.8929C16.3348 2.5 16.7132 2.72396 17.0279 3.17188C17.3426 3.61979 17.5 4.14583 17.5 4.75V15.25C17.5 15.8542 17.3426 16.3802 17.0279 16.8281C16.7132 17.276 16.3348 17.5 15.8929 17.5H4.10714C3.66518 17.5 3.28683 17.276 2.9721 16.8281C2.65737 16.3802 2.5 15.8542 2.5 15.25ZM8.57143 15.9375H11.4286V4.0625H8.57143V15.9375ZM13.0357 15.9375H15.8929V4.0625H13.0357V15.9375Z"
+                fill="#6265AD"
+              />
+            </svg>
+          </div>
+          <span>
             Edit columns
           </span>
         </button>
@@ -304,10 +363,10 @@
                   data-ictinus="test-version"
                 >
                   <div
-                    class="emotion-2"
+                    class="emotion-4"
                   >
                     <label
-                      class="emotion-3"
+                      class="emotion-5"
                       data-rac=""
                       data-react-aria-pressable="true"
                       data-testid="ictinus_checkbox"
@@ -323,23 +382,26 @@
                         />
                       </span>
                       <div
-                        class="emotion-4 emotion-5"
+                        class="emotion-6 emotion-7"
                       >
                         <div
-                          class="emotion-6 emotion-5"
+                          class="emotion-8 emotion-7"
                           data-role="checkbox-icon"
                         >
-                          <div>
+                          <div
+                            class="emotion-10"
+                            data-slot="icon"
+                            data-testid="ictinus_unselected"
+                          >
                             <svg
-                              class="properties_color_inverted.primary_base__19njorx27a properties_height_5_base__19njorx7q properties_width_5_base__19njorx4e"
-                              data-ictinus="test-version"
-                              data-testid="ictinus_unselected"
+                              class="emotion-11"
+                              fill="none"
                               viewBox="0 0 20 20"
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
                                 d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                                fill="currentColor"
+                                fill="#6265AD"
                               />
                             </svg>
                           </div>
@@ -409,30 +471,35 @@
                           class="emotion-0"
                         >
                           <button
-                            class="emotion-9"
+                            class="emotion-13"
                             data-slot="button"
                             data-testid="icon-button"
                             type="button"
                           >
-                            <svg
-                              class="properties_color_active_base__19njorx26q properties_height_4_base__19njorx7m properties_width_4_base__19njorx4a"
-                              data-ictinus="test-version"
-                              viewBox="0 0 20 20"
-                              xmlns="http://www.w3.org/2000/svg"
+                            <div
+                              class="emotion-14"
+                              data-slot="icon"
                             >
-                              <path
-                                clip-rule="evenodd"
-                                d="M7.22697 12.9148C6.68904 12.3047 7.16777 11.4009 8.02888 11.4009H11.9711C12.8322 11.4009 13.311 12.3047 12.773 12.9148L10.8019 15.1503C10.3908 15.6166 9.6092 15.6166 9.19808 15.1503L7.22697 12.9148Z"
-                                fill="currentColor"
-                                fill-rule="evenodd"
-                              />
-                              <path
-                                clip-rule="evenodd"
-                                d="M7.22697 7.08522C6.68904 7.6953 7.16777 8.59906 8.02888 8.59906H11.9711C12.8322 8.59906 13.311 7.6953 12.773 7.08522L10.8019 4.8497C10.3908 4.38343 9.6092 4.38343 9.19808 4.8497L7.22697 7.08522Z"
-                                fill="currentColor"
-                                fill-rule="evenodd"
-                              />
-                            </svg>
+                              <svg
+                                class="emotion-15"
+                                fill="none"
+                                viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M7.22697 12.9148C6.68904 12.3047 7.16777 11.4009 8.02888 11.4009H11.9711C12.8322 11.4009 13.311 12.3047 12.773 12.9148L10.8019 15.1503C10.3908 15.6166 9.6092 15.6166 9.19808 15.1503L7.22697 12.9148Z"
+                                  fill="#6265AD"
+                                  fill-rule="evenodd"
+                                />
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M7.22697 7.08522C6.68904 7.6953 7.16777 8.59906 8.02888 8.59906H11.9711C12.8322 8.59906 13.311 7.6953 12.773 7.08522L10.8019 4.8497C10.3908 4.38343 9.6092 4.38343 9.19808 4.8497L7.22697 7.08522Z"
+                                  fill="#6265AD"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </div>
                           </button>
                         </div>
                       </div>
@@ -447,7 +514,7 @@
                         <button
                           aria-expanded="false"
                           aria-haspopup="true"
-                          class="emotion-9"
+                          class="emotion-13"
                           data-react-aria-pressable="true"
                           data-slot="button"
                           data-testid="icon-button"
@@ -455,25 +522,30 @@
                           tabindex="0"
                           type="button"
                         >
-                          <svg
-                            class="properties_color_active_base__19njorx26q properties_height_4_base__19njorx7m properties_width_4_base__19njorx4a"
-                            data-ictinus="test-version"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
+                          <div
+                            class="emotion-14"
+                            data-slot="icon"
                           >
-                            <path
-                              d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
-                              fill="currentColor"
-                            />
-                            <path
-                              d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
-                              fill="currentColor"
-                            />
-                            <path
-                              d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
-                              fill="currentColor"
-                            />
-                          </svg>
+                            <svg
+                              class="emotion-15"
+                              fill="none"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                                fill="#6265AD"
+                              />
+                              <path
+                                d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                                fill="#6265AD"
+                              />
+                              <path
+                                d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                                fill="#6265AD"
+                              />
+                            </svg>
+                          </div>
                         </button>
                       </div>
                     </div>
@@ -520,30 +592,35 @@
                           class="emotion-0"
                         >
                           <button
-                            class="emotion-9"
+                            class="emotion-13"
                             data-slot="button"
                             data-testid="icon-button"
                             type="button"
                           >
-                            <svg
-                              class="properties_color_active_base__19njorx26q properties_height_4_base__19njorx7m properties_width_4_base__19njorx4a"
-                              data-ictinus="test-version"
-                              viewBox="0 0 20 20"
-                              xmlns="http://www.w3.org/2000/svg"
+                            <div
+                              class="emotion-14"
+                              data-slot="icon"
                             >
-                              <path
-                                clip-rule="evenodd"
-                                d="M7.22697 12.9148C6.68904 12.3047 7.16777 11.4009 8.02888 11.4009H11.9711C12.8322 11.4009 13.311 12.3047 12.773 12.9148L10.8019 15.1503C10.3908 15.6166 9.6092 15.6166 9.19808 15.1503L7.22697 12.9148Z"
-                                fill="currentColor"
-                                fill-rule="evenodd"
-                              />
-                              <path
-                                clip-rule="evenodd"
-                                d="M7.22697 7.08522C6.68904 7.6953 7.16777 8.59906 8.02888 8.59906H11.9711C12.8322 8.59906 13.311 7.6953 12.773 7.08522L10.8019 4.8497C10.3908 4.38343 9.6092 4.38343 9.19808 4.8497L7.22697 7.08522Z"
-                                fill="currentColor"
-                                fill-rule="evenodd"
-                              />
-                            </svg>
+                              <svg
+                                class="emotion-15"
+                                fill="none"
+                                viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M7.22697 12.9148C6.68904 12.3047 7.16777 11.4009 8.02888 11.4009H11.9711C12.8322 11.4009 13.311 12.3047 12.773 12.9148L10.8019 15.1503C10.3908 15.6166 9.6092 15.6166 9.19808 15.1503L7.22697 12.9148Z"
+                                  fill="#6265AD"
+                                  fill-rule="evenodd"
+                                />
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M7.22697 7.08522C6.68904 7.6953 7.16777 8.59906 8.02888 8.59906H11.9711C12.8322 8.59906 13.311 7.6953 12.773 7.08522L10.8019 4.8497C10.3908 4.38343 9.6092 4.38343 9.19808 4.8497L7.22697 7.08522Z"
+                                  fill="#6265AD"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </div>
                           </button>
                         </div>
                       </div>
@@ -558,7 +635,7 @@
                         <button
                           aria-expanded="false"
                           aria-haspopup="true"
-                          class="emotion-9"
+                          class="emotion-13"
                           data-react-aria-pressable="true"
                           data-slot="button"
                           data-testid="icon-button"
@@ -566,25 +643,30 @@
                           tabindex="0"
                           type="button"
                         >
-                          <svg
-                            class="properties_color_active_base__19njorx26q properties_height_4_base__19njorx7m properties_width_4_base__19njorx4a"
-                            data-ictinus="test-version"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
+                          <div
+                            class="emotion-14"
+                            data-slot="icon"
                           >
-                            <path
-                              d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
-                              fill="currentColor"
-                            />
-                            <path
-                              d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
-                              fill="currentColor"
-                            />
-                            <path
-                              d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
-                              fill="currentColor"
-                            />
-                          </svg>
+                            <svg
+                              class="emotion-15"
+                              fill="none"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                                fill="#6265AD"
+                              />
+                              <path
+                                d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                                fill="#6265AD"
+                              />
+                              <path
+                                d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                                fill="#6265AD"
+                              />
+                            </svg>
+                          </div>
                         </button>
                       </div>
                     </div>
@@ -650,30 +732,35 @@
                           class="emotion-0"
                         >
                           <button
-                            class="emotion-9"
+                            class="emotion-13"
                             data-slot="button"
                             data-testid="icon-button"
                             type="button"
                           >
-                            <svg
-                              class="properties_color_active_base__19njorx26q properties_height_4_base__19njorx7m properties_width_4_base__19njorx4a"
-                              data-ictinus="test-version"
-                              viewBox="0 0 20 20"
-                              xmlns="http://www.w3.org/2000/svg"
+                            <div
+                              class="emotion-14"
+                              data-slot="icon"
                             >
-                              <path
-                                clip-rule="evenodd"
-                                d="M7.22697 12.9148C6.68904 12.3047 7.16777 11.4009 8.02888 11.4009H11.9711C12.8322 11.4009 13.311 12.3047 12.773 12.9148L10.8019 15.1503C10.3908 15.6166 9.6092 15.6166 9.19808 15.1503L7.22697 12.9148Z"
-                                fill="currentColor"
-                                fill-rule="evenodd"
-                              />
-                              <path
-                                clip-rule="evenodd"
-                                d="M7.22697 7.08522C6.68904 7.6953 7.16777 8.59906 8.02888 8.59906H11.9711C12.8322 8.59906 13.311 7.6953 12.773 7.08522L10.8019 4.8497C10.3908 4.38343 9.6092 4.38343 9.19808 4.8497L7.22697 7.08522Z"
-                                fill="currentColor"
-                                fill-rule="evenodd"
-                              />
-                            </svg>
+                              <svg
+                                class="emotion-15"
+                                fill="none"
+                                viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M7.22697 12.9148C6.68904 12.3047 7.16777 11.4009 8.02888 11.4009H11.9711C12.8322 11.4009 13.311 12.3047 12.773 12.9148L10.8019 15.1503C10.3908 15.6166 9.6092 15.6166 9.19808 15.1503L7.22697 12.9148Z"
+                                  fill="#6265AD"
+                                  fill-rule="evenodd"
+                                />
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M7.22697 7.08522C6.68904 7.6953 7.16777 8.59906 8.02888 8.59906H11.9711C12.8322 8.59906 13.311 7.6953 12.773 7.08522L10.8019 4.8497C10.3908 4.38343 9.6092 4.38343 9.19808 4.8497L7.22697 7.08522Z"
+                                  fill="#6265AD"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </div>
                           </button>
                         </div>
                       </div>
@@ -688,7 +775,7 @@
                         <button
                           aria-expanded="false"
                           aria-haspopup="true"
-                          class="emotion-9"
+                          class="emotion-13"
                           data-react-aria-pressable="true"
                           data-slot="button"
                           data-testid="icon-button"
@@ -696,25 +783,30 @@
                           tabindex="0"
                           type="button"
                         >
-                          <svg
-                            class="properties_color_active_base__19njorx26q properties_height_4_base__19njorx7m properties_width_4_base__19njorx4a"
-                            data-ictinus="test-version"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
+                          <div
+                            class="emotion-14"
+                            data-slot="icon"
                           >
-                            <path
-                              d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
-                              fill="currentColor"
-                            />
-                            <path
-                              d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
-                              fill="currentColor"
-                            />
-                            <path
-                              d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
-                              fill="currentColor"
-                            />
-                          </svg>
+                            <svg
+                              class="emotion-15"
+                              fill="none"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                                fill="#6265AD"
+                              />
+                              <path
+                                d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                                fill="#6265AD"
+                              />
+                              <path
+                                d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                                fill="#6265AD"
+                              />
+                            </svg>
+                          </div>
                         </button>
                       </div>
                     </div>
@@ -761,30 +853,35 @@
                           class="emotion-0"
                         >
                           <button
-                            class="emotion-9"
+                            class="emotion-13"
                             data-slot="button"
                             data-testid="icon-button"
                             type="button"
                           >
-                            <svg
-                              class="properties_color_active_base__19njorx26q properties_height_4_base__19njorx7m properties_width_4_base__19njorx4a"
-                              data-ictinus="test-version"
-                              viewBox="0 0 20 20"
-                              xmlns="http://www.w3.org/2000/svg"
+                            <div
+                              class="emotion-14"
+                              data-slot="icon"
                             >
-                              <path
-                                clip-rule="evenodd"
-                                d="M7.22697 12.9148C6.68904 12.3047 7.16777 11.4009 8.02888 11.4009H11.9711C12.8322 11.4009 13.311 12.3047 12.773 12.9148L10.8019 15.1503C10.3908 15.6166 9.6092 15.6166 9.19808 15.1503L7.22697 12.9148Z"
-                                fill="currentColor"
-                                fill-rule="evenodd"
-                              />
-                              <path
-                                clip-rule="evenodd"
-                                d="M7.22697 7.08522C6.68904 7.6953 7.16777 8.59906 8.02888 8.59906H11.9711C12.8322 8.59906 13.311 7.6953 12.773 7.08522L10.8019 4.8497C10.3908 4.38343 9.6092 4.38343 9.19808 4.8497L7.22697 7.08522Z"
-                                fill="currentColor"
-                                fill-rule="evenodd"
-                              />
-                            </svg>
+                              <svg
+                                class="emotion-15"
+                                fill="none"
+                                viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M7.22697 12.9148C6.68904 12.3047 7.16777 11.4009 8.02888 11.4009H11.9711C12.8322 11.4009 13.311 12.3047 12.773 12.9148L10.8019 15.1503C10.3908 15.6166 9.6092 15.6166 9.19808 15.1503L7.22697 12.9148Z"
+                                  fill="#6265AD"
+                                  fill-rule="evenodd"
+                                />
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M7.22697 7.08522C6.68904 7.6953 7.16777 8.59906 8.02888 8.59906H11.9711C12.8322 8.59906 13.311 7.6953 12.773 7.08522L10.8019 4.8497C10.3908 4.38343 9.6092 4.38343 9.19808 4.8497L7.22697 7.08522Z"
+                                  fill="#6265AD"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </div>
                           </button>
                         </div>
                       </div>
@@ -799,7 +896,7 @@
                         <button
                           aria-expanded="false"
                           aria-haspopup="true"
-                          class="emotion-9"
+                          class="emotion-13"
                           data-react-aria-pressable="true"
                           data-slot="button"
                           data-testid="icon-button"
@@ -807,25 +904,30 @@
                           tabindex="0"
                           type="button"
                         >
-                          <svg
-                            class="properties_color_active_base__19njorx26q properties_height_4_base__19njorx7m properties_width_4_base__19njorx4a"
-                            data-ictinus="test-version"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
+                          <div
+                            class="emotion-14"
+                            data-slot="icon"
                           >
-                            <path
-                              d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
-                              fill="currentColor"
-                            />
-                            <path
-                              d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
-                              fill="currentColor"
-                            />
-                            <path
-                              d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
-                              fill="currentColor"
-                            />
-                          </svg>
+                            <svg
+                              class="emotion-15"
+                              fill="none"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                                fill="#6265AD"
+                              />
+                              <path
+                                d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                                fill="#6265AD"
+                              />
+                              <path
+                                d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                                fill="#6265AD"
+                              />
+                            </svg>
+                          </div>
                         </button>
                       </div>
                     </div>
@@ -919,10 +1021,10 @@
                   data-ictinus="test-version"
                 >
                   <div
-                    class="emotion-2"
+                    class="emotion-4"
                   >
                     <label
-                      class="emotion-3"
+                      class="emotion-5"
                       data-rac=""
                       data-react-aria-pressable="true"
                       data-testid="ictinus_checkbox"
@@ -938,23 +1040,26 @@
                         />
                       </span>
                       <div
-                        class="emotion-4 emotion-5"
+                        class="emotion-6 emotion-7"
                       >
                         <div
-                          class="emotion-6 emotion-5"
+                          class="emotion-8 emotion-7"
                           data-role="checkbox-icon"
                         >
-                          <div>
+                          <div
+                            class="emotion-10"
+                            data-slot="icon"
+                            data-testid="ictinus_unselected"
+                          >
                             <svg
-                              class="properties_color_inverted.primary_base__19njorx27a properties_height_5_base__19njorx7q properties_width_5_base__19njorx4e"
-                              data-ictinus="test-version"
-                              data-testid="ictinus_unselected"
+                              class="emotion-11"
+                              fill="none"
                               viewBox="0 0 20 20"
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
                                 d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                                fill="currentColor"
+                                fill="#6265AD"
                               />
                             </svg>
                           </div>
@@ -1047,22 +1152,27 @@
                     class="emotion-0"
                   >
                     <button
-                      class="emotion-9"
+                      class="emotion-13"
                       data-slot="button"
                       data-testid="icon-button"
                       type="button"
                     >
-                      <svg
-                        class="properties_color_active_base__19njorx26q properties_height_4_base__19njorx7m properties_width_4_base__19njorx4a"
-                        data-ictinus="test-version"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        class="emotion-14"
+                        data-slot="icon"
                       >
-                        <path
-                          d="M8.64194 14.702L12.6836 10.7466C12.7965 10.6361 12.8774 10.5161 12.9264 10.3867C12.9755 10.2572 13 10.1283 13 10C13 9.86608 12.9755 9.7358 12.9264 9.60915C12.8774 9.48249 12.7965 9.36392 12.6836 9.25345L8.64194 5.29797C8.43898 5.09932 8.21607 5 7.9732 5C7.73034 5 7.50742 5.09932 7.30446 5.29797C7.10149 5.49661 7 5.71477 7 5.95246C7 6.19014 7.10149 6.40831 7.30446 6.60694L10.7714 10L7.30446 13.3931C7.10149 13.5917 7 13.8099 7 14.0475C7 14.2852 7.10149 14.5034 7.30446 14.702C7.50742 14.9007 7.73034 15 7.9732 15C8.21607 15 8.43898 14.9007 8.64194 14.702Z"
-                          fill="currentColor"
-                        />
-                      </svg>
+                        <svg
+                          class="emotion-15"
+                          fill="none"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M8.64194 14.702L12.6836 10.7466C12.7965 10.6361 12.8774 10.5161 12.9264 10.3867C12.9755 10.2572 13 10.1283 13 10C13 9.86608 12.9755 9.7358 12.9264 9.60915C12.8774 9.48249 12.7965 9.36392 12.6836 9.25345L8.64194 5.29797C8.43898 5.09932 8.21607 5 7.9732 5C7.73034 5 7.50742 5.09932 7.30446 5.29797C7.10149 5.49661 7 5.71477 7 5.95246C7 6.19014 7.10149 6.40831 7.30446 6.60694L10.7714 10L7.30446 13.3931C7.10149 13.5917 7 13.8099 7 14.0475C7 14.2852 7.10149 14.5034 7.30446 14.702C7.50742 14.9007 7.73034 15 7.9732 15C8.21607 15 8.43898 14.9007 8.64194 14.702Z"
+                            fill="#6265AD"
+                          />
+                        </svg>
+                      </div>
                     </button>
                   </div>
                 </div>
@@ -1085,10 +1195,10 @@
                   data-ictinus="test-version"
                 >
                   <div
-                    class="emotion-2"
+                    class="emotion-4"
                   >
                     <label
-                      class="emotion-3"
+                      class="emotion-5"
                       data-disabled="true"
                       data-rac=""
                       data-react-aria-pressable="true"
@@ -1104,23 +1214,26 @@
                         />
                       </span>
                       <div
-                        class="emotion-4 emotion-5"
+                        class="emotion-6 emotion-7"
                       >
                         <div
-                          class="emotion-6 emotion-5"
+                          class="emotion-8 emotion-7"
                           data-role="checkbox-icon"
                         >
-                          <div>
+                          <div
+                            class="emotion-10"
+                            data-slot="icon"
+                            data-testid="ictinus_unselected"
+                          >
                             <svg
-                              class="properties_color_inverted.primary_base__19njorx27a properties_height_5_base__19njorx7q properties_width_5_base__19njorx4e"
-                              data-ictinus="test-version"
-                              data-testid="ictinus_unselected"
+                              class="emotion-11"
+                              fill="none"
                               viewBox="0 0 20 20"
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
                                 d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                                fill="currentColor"
+                                fill="#6265AD"
                               />
                             </svg>
                           </div>
@@ -1248,10 +1361,10 @@
                   data-ictinus="test-version"
                 >
                   <div
-                    class="emotion-2"
+                    class="emotion-4"
                   >
                     <label
-                      class="emotion-3"
+                      class="emotion-5"
                       data-rac=""
                       data-react-aria-pressable="true"
                       data-testid="ictinus_checkbox"
@@ -1267,23 +1380,26 @@
                         />
                       </span>
                       <div
-                        class="emotion-4 emotion-5"
+                        class="emotion-6 emotion-7"
                       >
                         <div
-                          class="emotion-6 emotion-5"
+                          class="emotion-8 emotion-7"
                           data-role="checkbox-icon"
                         >
-                          <div>
+                          <div
+                            class="emotion-10"
+                            data-slot="icon"
+                            data-testid="ictinus_unselected"
+                          >
                             <svg
-                              class="properties_color_inverted.primary_base__19njorx27a properties_height_5_base__19njorx7q properties_width_5_base__19njorx4e"
-                              data-ictinus="test-version"
-                              data-testid="ictinus_unselected"
+                              class="emotion-11"
+                              fill="none"
                               viewBox="0 0 20 20"
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
                                 d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                                fill="currentColor"
+                                fill="#6265AD"
                               />
                             </svg>
                           </div>
@@ -1378,22 +1494,27 @@
                     class="emotion-0"
                   >
                     <button
-                      class="emotion-9"
+                      class="emotion-13"
                       data-slot="button"
                       data-testid="icon-button"
                       type="button"
                     >
-                      <svg
-                        class="properties_color_active_base__19njorx26q properties_height_4_base__19njorx7m properties_width_4_base__19njorx4a"
-                        data-ictinus="test-version"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        class="emotion-14"
+                        data-slot="icon"
                       >
-                        <path
-                          d="M8.64194 14.702L12.6836 10.7466C12.7965 10.6361 12.8774 10.5161 12.9264 10.3867C12.9755 10.2572 13 10.1283 13 10C13 9.86608 12.9755 9.7358 12.9264 9.60915C12.8774 9.48249 12.7965 9.36392 12.6836 9.25345L8.64194 5.29797C8.43898 5.09932 8.21607 5 7.9732 5C7.73034 5 7.50742 5.09932 7.30446 5.29797C7.10149 5.49661 7 5.71477 7 5.95246C7 6.19014 7.10149 6.40831 7.30446 6.60694L10.7714 10L7.30446 13.3931C7.10149 13.5917 7 13.8099 7 14.0475C7 14.2852 7.10149 14.5034 7.30446 14.702C7.50742 14.9007 7.73034 15 7.9732 15C8.21607 15 8.43898 14.9007 8.64194 14.702Z"
-                          fill="currentColor"
-                        />
-                      </svg>
+                        <svg
+                          class="emotion-15"
+                          fill="none"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M8.64194 14.702L12.6836 10.7466C12.7965 10.6361 12.8774 10.5161 12.9264 10.3867C12.9755 10.2572 13 10.1283 13 10C13 9.86608 12.9755 9.7358 12.9264 9.60915C12.8774 9.48249 12.7965 9.36392 12.6836 9.25345L8.64194 5.29797C8.43898 5.09932 8.21607 5 7.9732 5C7.73034 5 7.50742 5.09932 7.30446 5.29797C7.10149 5.49661 7 5.71477 7 5.95246C7 6.19014 7.10149 6.40831 7.30446 6.60694L10.7714 10L7.30446 13.3931C7.10149 13.5917 7 13.8099 7 14.0475C7 14.2852 7.10149 14.5034 7.30446 14.702C7.50742 14.9007 7.73034 15 7.9732 15C8.21607 15 8.43898 14.9007 8.64194 14.702Z"
+                            fill="#6265AD"
+                          />
+                        </svg>
+                      </div>
                     </button>
                   </div>
                 </div>
@@ -1418,10 +1539,10 @@
                   data-ictinus="test-version"
                 >
                   <div
-                    class="emotion-2"
+                    class="emotion-4"
                   >
                     <label
-                      class="emotion-3"
+                      class="emotion-5"
                       data-rac=""
                       data-react-aria-pressable="true"
                       data-testid="ictinus_checkbox"
@@ -1437,23 +1558,26 @@
                         />
                       </span>
                       <div
-                        class="emotion-4 emotion-5"
+                        class="emotion-6 emotion-7"
                       >
                         <div
-                          class="emotion-6 emotion-5"
+                          class="emotion-8 emotion-7"
                           data-role="checkbox-icon"
                         >
-                          <div>
+                          <div
+                            class="emotion-10"
+                            data-slot="icon"
+                            data-testid="ictinus_unselected"
+                          >
                             <svg
-                              class="properties_color_inverted.primary_base__19njorx27a properties_height_5_base__19njorx7q properties_width_5_base__19njorx4e"
-                              data-ictinus="test-version"
-                              data-testid="ictinus_unselected"
+                              class="emotion-11"
+                              fill="none"
                               viewBox="0 0 20 20"
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
                                 d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                                fill="currentColor"
+                                fill="#6265AD"
                               />
                             </svg>
                           </div>
@@ -1546,22 +1670,27 @@
                     class="emotion-0"
                   >
                     <button
-                      class="emotion-9"
+                      class="emotion-13"
                       data-slot="button"
                       data-testid="icon-button"
                       type="button"
                     >
-                      <svg
-                        class="properties_color_active_base__19njorx26q properties_height_4_base__19njorx7m properties_width_4_base__19njorx4a"
-                        data-ictinus="test-version"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        class="emotion-14"
+                        data-slot="icon"
                       >
-                        <path
-                          d="M8.64194 14.702L12.6836 10.7466C12.7965 10.6361 12.8774 10.5161 12.9264 10.3867C12.9755 10.2572 13 10.1283 13 10C13 9.86608 12.9755 9.7358 12.9264 9.60915C12.8774 9.48249 12.7965 9.36392 12.6836 9.25345L8.64194 5.29797C8.43898 5.09932 8.21607 5 7.9732 5C7.73034 5 7.50742 5.09932 7.30446 5.29797C7.10149 5.49661 7 5.71477 7 5.95246C7 6.19014 7.10149 6.40831 7.30446 6.60694L10.7714 10L7.30446 13.3931C7.10149 13.5917 7 13.8099 7 14.0475C7 14.2852 7.10149 14.5034 7.30446 14.702C7.50742 14.9007 7.73034 15 7.9732 15C8.21607 15 8.43898 14.9007 8.64194 14.702Z"
-                          fill="currentColor"
-                        />
-                      </svg>
+                        <svg
+                          class="emotion-15"
+                          fill="none"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M8.64194 14.702L12.6836 10.7466C12.7965 10.6361 12.8774 10.5161 12.9264 10.3867C12.9755 10.2572 13 10.1283 13 10C13 9.86608 12.9755 9.7358 12.9264 9.60915C12.8774 9.48249 12.7965 9.36392 12.6836 9.25345L8.64194 5.29797C8.43898 5.09932 8.21607 5 7.9732 5C7.73034 5 7.50742 5.09932 7.30446 5.29797C7.10149 5.49661 7 5.71477 7 5.95246C7 6.19014 7.10149 6.40831 7.30446 6.60694L10.7714 10L7.30446 13.3931C7.10149 13.5917 7 13.8099 7 14.0475C7 14.2852 7.10149 14.5034 7.30446 14.702C7.50742 14.9007 7.73034 15 7.9732 15C8.21607 15 8.43898 14.9007 8.64194 14.702Z"
+                            fill="#6265AD"
+                          />
+                        </svg>
+                      </div>
                     </button>
                   </div>
                 </div>
@@ -1586,10 +1715,10 @@
                   data-ictinus="test-version"
                 >
                   <div
-                    class="emotion-2"
+                    class="emotion-4"
                   >
                     <label
-                      class="emotion-3"
+                      class="emotion-5"
                       data-rac=""
                       data-react-aria-pressable="true"
                       data-testid="ictinus_checkbox"
@@ -1605,23 +1734,26 @@
                         />
                       </span>
                       <div
-                        class="emotion-4 emotion-5"
+                        class="emotion-6 emotion-7"
                       >
                         <div
-                          class="emotion-6 emotion-5"
+                          class="emotion-8 emotion-7"
                           data-role="checkbox-icon"
                         >
-                          <div>
+                          <div
+                            class="emotion-10"
+                            data-slot="icon"
+                            data-testid="ictinus_unselected"
+                          >
                             <svg
-                              class="properties_color_inverted.primary_base__19njorx27a properties_height_5_base__19njorx7q properties_width_5_base__19njorx4e"
-                              data-ictinus="test-version"
-                              data-testid="ictinus_unselected"
+                              class="emotion-11"
+                              fill="none"
                               viewBox="0 0 20 20"
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
                                 d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                                fill="currentColor"
+                                fill="#6265AD"
                               />
                             </svg>
                           </div>
@@ -1716,22 +1848,27 @@
                     class="emotion-0"
                   >
                     <button
-                      class="emotion-9"
+                      class="emotion-13"
                       data-slot="button"
                       data-testid="icon-button"
                       type="button"
                     >
-                      <svg
-                        class="properties_color_active_base__19njorx26q properties_height_4_base__19njorx7m properties_width_4_base__19njorx4a"
-                        data-ictinus="test-version"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        class="emotion-14"
+                        data-slot="icon"
                       >
-                        <path
-                          d="M8.64194 14.702L12.6836 10.7466C12.7965 10.6361 12.8774 10.5161 12.9264 10.3867C12.9755 10.2572 13 10.1283 13 10C13 9.86608 12.9755 9.7358 12.9264 9.60915C12.8774 9.48249 12.7965 9.36392 12.6836 9.25345L8.64194 5.29797C8.43898 5.09932 8.21607 5 7.9732 5C7.73034 5 7.50742 5.09932 7.30446 5.29797C7.10149 5.49661 7 5.71477 7 5.95246C7 6.19014 7.10149 6.40831 7.30446 6.60694L10.7714 10L7.30446 13.3931C7.10149 13.5917 7 13.8099 7 14.0475C7 14.2852 7.10149 14.5034 7.30446 14.702C7.50742 14.9007 7.73034 15 7.9732 15C8.21607 15 8.43898 14.9007 8.64194 14.702Z"
-                          fill="currentColor"
-                        />
-                      </svg>
+                        <svg
+                          class="emotion-15"
+                          fill="none"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M8.64194 14.702L12.6836 10.7466C12.7965 10.6361 12.8774 10.5161 12.9264 10.3867C12.9755 10.2572 13 10.1283 13 10C13 9.86608 12.9755 9.7358 12.9264 9.60915C12.8774 9.48249 12.7965 9.36392 12.6836 9.25345L8.64194 5.29797C8.43898 5.09932 8.21607 5 7.9732 5C7.73034 5 7.50742 5.09932 7.30446 5.29797C7.10149 5.49661 7 5.71477 7 5.95246C7 6.19014 7.10149 6.40831 7.30446 6.60694L10.7714 10L7.30446 13.3931C7.10149 13.5917 7 13.8099 7 14.0475C7 14.2852 7.10149 14.5034 7.30446 14.702C7.50742 14.9007 7.73034 15 7.9732 15C8.21607 15 8.43898 14.9007 8.64194 14.702Z"
+                            fill="#6265AD"
+                          />
+                        </svg>
+                      </div>
                     </button>
                   </div>
                 </div>
@@ -1756,10 +1893,10 @@
                   data-ictinus="test-version"
                 >
                   <div
-                    class="emotion-2"
+                    class="emotion-4"
                   >
                     <label
-                      class="emotion-3"
+                      class="emotion-5"
                       data-rac=""
                       data-react-aria-pressable="true"
                       data-testid="ictinus_checkbox"
@@ -1775,23 +1912,26 @@
                         />
                       </span>
                       <div
-                        class="emotion-4 emotion-5"
+                        class="emotion-6 emotion-7"
                       >
                         <div
-                          class="emotion-6 emotion-5"
+                          class="emotion-8 emotion-7"
                           data-role="checkbox-icon"
                         >
-                          <div>
+                          <div
+                            class="emotion-10"
+                            data-slot="icon"
+                            data-testid="ictinus_unselected"
+                          >
                             <svg
-                              class="properties_color_inverted.primary_base__19njorx27a properties_height_5_base__19njorx7q properties_width_5_base__19njorx4e"
-                              data-ictinus="test-version"
-                              data-testid="ictinus_unselected"
+                              class="emotion-11"
+                              fill="none"
                               viewBox="0 0 20 20"
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
                                 d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                                fill="currentColor"
+                                fill="#6265AD"
                               />
                             </svg>
                           </div>
@@ -1884,22 +2024,27 @@
                     class="emotion-0"
                   >
                     <button
-                      class="emotion-9"
+                      class="emotion-13"
                       data-slot="button"
                       data-testid="icon-button"
                       type="button"
                     >
-                      <svg
-                        class="properties_color_active_base__19njorx26q properties_height_4_base__19njorx7m properties_width_4_base__19njorx4a"
-                        data-ictinus="test-version"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        class="emotion-14"
+                        data-slot="icon"
                       >
-                        <path
-                          d="M8.64194 14.702L12.6836 10.7466C12.7965 10.6361 12.8774 10.5161 12.9264 10.3867C12.9755 10.2572 13 10.1283 13 10C13 9.86608 12.9755 9.7358 12.9264 9.60915C12.8774 9.48249 12.7965 9.36392 12.6836 9.25345L8.64194 5.29797C8.43898 5.09932 8.21607 5 7.9732 5C7.73034 5 7.50742 5.09932 7.30446 5.29797C7.10149 5.49661 7 5.71477 7 5.95246C7 6.19014 7.10149 6.40831 7.30446 6.60694L10.7714 10L7.30446 13.3931C7.10149 13.5917 7 13.8099 7 14.0475C7 14.2852 7.10149 14.5034 7.30446 14.702C7.50742 14.9007 7.73034 15 7.9732 15C8.21607 15 8.43898 14.9007 8.64194 14.702Z"
-                          fill="currentColor"
-                        />
-                      </svg>
+                        <svg
+                          class="emotion-15"
+                          fill="none"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M8.64194 14.702L12.6836 10.7466C12.7965 10.6361 12.8774 10.5161 12.9264 10.3867C12.9755 10.2572 13 10.1283 13 10C13 9.86608 12.9755 9.7358 12.9264 9.60915C12.8774 9.48249 12.7965 9.36392 12.6836 9.25345L8.64194 5.29797C8.43898 5.09932 8.21607 5 7.9732 5C7.73034 5 7.50742 5.09932 7.30446 5.29797C7.10149 5.49661 7 5.71477 7 5.95246C7 6.19014 7.10149 6.40831 7.30446 6.60694L10.7714 10L7.30446 13.3931C7.10149 13.5917 7 13.8099 7 14.0475C7 14.2852 7.10149 14.5034 7.30446 14.702C7.50742 14.9007 7.73034 15 7.9732 15C8.21607 15 8.43898 14.9007 8.64194 14.702Z"
+                            fill="#6265AD"
+                          />
+                        </svg>
+                      </div>
                     </button>
                   </div>
                 </div>
@@ -1924,10 +2069,10 @@
                   data-ictinus="test-version"
                 >
                   <div
-                    class="emotion-2"
+                    class="emotion-4"
                   >
                     <label
-                      class="emotion-3"
+                      class="emotion-5"
                       data-rac=""
                       data-react-aria-pressable="true"
                       data-testid="ictinus_checkbox"
@@ -1943,23 +2088,26 @@
                         />
                       </span>
                       <div
-                        class="emotion-4 emotion-5"
+                        class="emotion-6 emotion-7"
                       >
                         <div
-                          class="emotion-6 emotion-5"
+                          class="emotion-8 emotion-7"
                           data-role="checkbox-icon"
                         >
-                          <div>
+                          <div
+                            class="emotion-10"
+                            data-slot="icon"
+                            data-testid="ictinus_unselected"
+                          >
                             <svg
-                              class="properties_color_inverted.primary_base__19njorx27a properties_height_5_base__19njorx7q properties_width_5_base__19njorx4e"
-                              data-ictinus="test-version"
-                              data-testid="ictinus_unselected"
+                              class="emotion-11"
+                              fill="none"
                               viewBox="0 0 20 20"
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
                                 d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                                fill="currentColor"
+                                fill="#6265AD"
                               />
                             </svg>
                           </div>
@@ -2052,22 +2200,27 @@
                     class="emotion-0"
                   >
                     <button
-                      class="emotion-9"
+                      class="emotion-13"
                       data-slot="button"
                       data-testid="icon-button"
                       type="button"
                     >
-                      <svg
-                        class="properties_color_active_base__19njorx26q properties_height_4_base__19njorx7m properties_width_4_base__19njorx4a"
-                        data-ictinus="test-version"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        class="emotion-14"
+                        data-slot="icon"
                       >
-                        <path
-                          d="M8.64194 14.702L12.6836 10.7466C12.7965 10.6361 12.8774 10.5161 12.9264 10.3867C12.9755 10.2572 13 10.1283 13 10C13 9.86608 12.9755 9.7358 12.9264 9.60915C12.8774 9.48249 12.7965 9.36392 12.6836 9.25345L8.64194 5.29797C8.43898 5.09932 8.21607 5 7.9732 5C7.73034 5 7.50742 5.09932 7.30446 5.29797C7.10149 5.49661 7 5.71477 7 5.95246C7 6.19014 7.10149 6.40831 7.30446 6.60694L10.7714 10L7.30446 13.3931C7.10149 13.5917 7 13.8099 7 14.0475C7 14.2852 7.10149 14.5034 7.30446 14.702C7.50742 14.9007 7.73034 15 7.9732 15C8.21607 15 8.43898 14.9007 8.64194 14.702Z"
-                          fill="currentColor"
-                        />
-                      </svg>
+                        <svg
+                          class="emotion-15"
+                          fill="none"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M8.64194 14.702L12.6836 10.7466C12.7965 10.6361 12.8774 10.5161 12.9264 10.3867C12.9755 10.2572 13 10.1283 13 10C13 9.86608 12.9755 9.7358 12.9264 9.60915C12.8774 9.48249 12.7965 9.36392 12.6836 9.25345L8.64194 5.29797C8.43898 5.09932 8.21607 5 7.9732 5C7.73034 5 7.50742 5.09932 7.30446 5.29797C7.10149 5.49661 7 5.71477 7 5.95246C7 6.19014 7.10149 6.40831 7.30446 6.60694L10.7714 10L7.30446 13.3931C7.10149 13.5917 7 13.8099 7 14.0475C7 14.2852 7.10149 14.5034 7.30446 14.702C7.50742 14.9007 7.73034 15 7.9732 15C8.21607 15 8.43898 14.9007 8.64194 14.702Z"
+                            fill="#6265AD"
+                          />
+                        </svg>
+                      </div>
                     </button>
                   </div>
                 </div>
@@ -2090,10 +2243,10 @@
                   data-ictinus="test-version"
                 >
                   <div
-                    class="emotion-2"
+                    class="emotion-4"
                   >
                     <label
-                      class="emotion-3"
+                      class="emotion-5"
                       data-disabled="true"
                       data-rac=""
                       data-react-aria-pressable="true"
@@ -2109,23 +2262,26 @@
                         />
                       </span>
                       <div
-                        class="emotion-4 emotion-5"
+                        class="emotion-6 emotion-7"
                       >
                         <div
-                          class="emotion-6 emotion-5"
+                          class="emotion-8 emotion-7"
                           data-role="checkbox-icon"
                         >
-                          <div>
+                          <div
+                            class="emotion-10"
+                            data-slot="icon"
+                            data-testid="ictinus_unselected"
+                          >
                             <svg
-                              class="properties_color_inverted.primary_base__19njorx27a properties_height_5_base__19njorx7q properties_width_5_base__19njorx4e"
-                              data-ictinus="test-version"
-                              data-testid="ictinus_unselected"
+                              class="emotion-11"
+                              fill="none"
                               viewBox="0 0 20 20"
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
                                 d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                                fill="currentColor"
+                                fill="#6265AD"
                               />
                             </svg>
                           </div>
@@ -2253,10 +2409,10 @@
                   data-ictinus="test-version"
                 >
                   <div
-                    class="emotion-2"
+                    class="emotion-4"
                   >
                     <label
-                      class="emotion-3"
+                      class="emotion-5"
                       data-rac=""
                       data-react-aria-pressable="true"
                       data-testid="ictinus_checkbox"
@@ -2272,23 +2428,26 @@
                         />
                       </span>
                       <div
-                        class="emotion-4 emotion-5"
+                        class="emotion-6 emotion-7"
                       >
                         <div
-                          class="emotion-6 emotion-5"
+                          class="emotion-8 emotion-7"
                           data-role="checkbox-icon"
                         >
-                          <div>
+                          <div
+                            class="emotion-10"
+                            data-slot="icon"
+                            data-testid="ictinus_unselected"
+                          >
                             <svg
-                              class="properties_color_inverted.primary_base__19njorx27a properties_height_5_base__19njorx7q properties_width_5_base__19njorx4e"
-                              data-ictinus="test-version"
-                              data-testid="ictinus_unselected"
+                              class="emotion-11"
+                              fill="none"
                               viewBox="0 0 20 20"
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
                                 d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                                fill="currentColor"
+                                fill="#6265AD"
                               />
                             </svg>
                           </div>
@@ -2383,22 +2542,27 @@
                     class="emotion-0"
                   >
                     <button
-                      class="emotion-9"
+                      class="emotion-13"
                       data-slot="button"
                       data-testid="icon-button"
                       type="button"
                     >
-                      <svg
-                        class="properties_color_active_base__19njorx26q properties_height_4_base__19njorx7m properties_width_4_base__19njorx4a"
-                        data-ictinus="test-version"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        class="emotion-14"
+                        data-slot="icon"
                       >
-                        <path
-                          d="M8.64194 14.702L12.6836 10.7466C12.7965 10.6361 12.8774 10.5161 12.9264 10.3867C12.9755 10.2572 13 10.1283 13 10C13 9.86608 12.9755 9.7358 12.9264 9.60915C12.8774 9.48249 12.7965 9.36392 12.6836 9.25345L8.64194 5.29797C8.43898 5.09932 8.21607 5 7.9732 5C7.73034 5 7.50742 5.09932 7.30446 5.29797C7.10149 5.49661 7 5.71477 7 5.95246C7 6.19014 7.10149 6.40831 7.30446 6.60694L10.7714 10L7.30446 13.3931C7.10149 13.5917 7 13.8099 7 14.0475C7 14.2852 7.10149 14.5034 7.30446 14.702C7.50742 14.9007 7.73034 15 7.9732 15C8.21607 15 8.43898 14.9007 8.64194 14.702Z"
-                          fill="currentColor"
-                        />
-                      </svg>
+                        <svg
+                          class="emotion-15"
+                          fill="none"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M8.64194 14.702L12.6836 10.7466C12.7965 10.6361 12.8774 10.5161 12.9264 10.3867C12.9755 10.2572 13 10.1283 13 10C13 9.86608 12.9755 9.7358 12.9264 9.60915C12.8774 9.48249 12.7965 9.36392 12.6836 9.25345L8.64194 5.29797C8.43898 5.09932 8.21607 5 7.9732 5C7.73034 5 7.50742 5.09932 7.30446 5.29797C7.10149 5.49661 7 5.71477 7 5.95246C7 6.19014 7.10149 6.40831 7.30446 6.60694L10.7714 10L7.30446 13.3931C7.10149 13.5917 7 13.8099 7 14.0475C7 14.2852 7.10149 14.5034 7.30446 14.702C7.50742 14.9007 7.73034 15 7.9732 15C8.21607 15 8.43898 14.9007 8.64194 14.702Z"
+                            fill="#6265AD"
+                          />
+                        </svg>
+                      </div>
                     </button>
                   </div>
                 </div>
@@ -2423,10 +2587,10 @@
                   data-ictinus="test-version"
                 >
                   <div
-                    class="emotion-2"
+                    class="emotion-4"
                   >
                     <label
-                      class="emotion-3"
+                      class="emotion-5"
                       data-rac=""
                       data-react-aria-pressable="true"
                       data-testid="ictinus_checkbox"
@@ -2442,23 +2606,26 @@
                         />
                       </span>
                       <div
-                        class="emotion-4 emotion-5"
+                        class="emotion-6 emotion-7"
                       >
                         <div
-                          class="emotion-6 emotion-5"
+                          class="emotion-8 emotion-7"
                           data-role="checkbox-icon"
                         >
-                          <div>
+                          <div
+                            class="emotion-10"
+                            data-slot="icon"
+                            data-testid="ictinus_unselected"
+                          >
                             <svg
-                              class="properties_color_inverted.primary_base__19njorx27a properties_height_5_base__19njorx7q properties_width_5_base__19njorx4e"
-                              data-ictinus="test-version"
-                              data-testid="ictinus_unselected"
+                              class="emotion-11"
+                              fill="none"
                               viewBox="0 0 20 20"
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
                                 d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                                fill="currentColor"
+                                fill="#6265AD"
                               />
                             </svg>
                           </div>
@@ -2551,22 +2718,27 @@
                     class="emotion-0"
                   >
                     <button
-                      class="emotion-9"
+                      class="emotion-13"
                       data-slot="button"
                       data-testid="icon-button"
                       type="button"
                     >
-                      <svg
-                        class="properties_color_active_base__19njorx26q properties_height_4_base__19njorx7m properties_width_4_base__19njorx4a"
-                        data-ictinus="test-version"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <div
+                        class="emotion-14"
+                        data-slot="icon"
                       >
-                        <path
-                          d="M8.64194 14.702L12.6836 10.7466C12.7965 10.6361 12.8774 10.5161 12.9264 10.3867C12.9755 10.2572 13 10.1283 13 10C13 9.86608 12.9755 9.7358 12.9264 9.60915C12.8774 9.48249 12.7965 9.36392 12.6836 9.25345L8.64194 5.29797C8.43898 5.09932 8.21607 5 7.9732 5C7.73034 5 7.50742 5.09932 7.30446 5.29797C7.10149 5.49661 7 5.71477 7 5.95246C7 6.19014 7.10149 6.40831 7.30446 6.60694L10.7714 10L7.30446 13.3931C7.10149 13.5917 7 13.8099 7 14.0475C7 14.2852 7.10149 14.5034 7.30446 14.702C7.50742 14.9007 7.73034 15 7.9732 15C8.21607 15 8.43898 14.9007 8.64194 14.702Z"
-                          fill="currentColor"
-                        />
-                      </svg>
+                        <svg
+                          class="emotion-15"
+                          fill="none"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M8.64194 14.702L12.6836 10.7466C12.7965 10.6361 12.8774 10.5161 12.9264 10.3867C12.9755 10.2572 13 10.1283 13 10C13 9.86608 12.9755 9.7358 12.9264 9.60915C12.8774 9.48249 12.7965 9.36392 12.6836 9.25345L8.64194 5.29797C8.43898 5.09932 8.21607 5 7.9732 5C7.73034 5 7.50742 5.09932 7.30446 5.29797C7.10149 5.49661 7 5.71477 7 5.95246C7 6.19014 7.10149 6.40831 7.30446 6.60694L10.7714 10L7.30446 13.3931C7.10149 13.5917 7 13.8099 7 14.0475C7 14.2852 7.10149 14.5034 7.30446 14.702C7.50742 14.9007 7.73034 15 7.9732 15C8.21607 15 8.43898 14.9007 8.64194 14.702Z"
+                            fill="#6265AD"
+                          />
+                        </svg>
+                      </div>
                     </button>
                   </div>
                 </div>

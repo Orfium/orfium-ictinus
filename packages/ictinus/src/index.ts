@@ -285,6 +285,4 @@ export {
   typography,
 };
 
-export * from './layers';
-export * from './sprinkles';
 export { version } from './version';

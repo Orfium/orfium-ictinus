@@ -2,7 +2,7 @@ import React from 'react';
 
 import { vars } from '@orfium/tokens';
 import Icon from 'components/Icon';
-import { Box } from '~/vanilla';
+
 import { breadcrumbItemStyles, breadcrumbListStyles } from './BreadcrumbItem.style';
 
 export type BreadcrumbItemProps = {
@@ -15,7 +15,7 @@ export type BreadcrumbItemProps = {
 const BreadcrumbItem: React.FC<BreadcrumbItemProps> = ({ childComponent, isLastItem = false }) => {
   return (
     <li css={breadcrumbListStyles()}>
-      <Box
+      <div
         css={breadcrumbItemStyles({ isLastItem })}
         {...(isLastItem ? { typography: 'body02' } : {})}
       >
@@ -27,7 +27,7 @@ const BreadcrumbItem: React.FC<BreadcrumbItemProps> = ({ childComponent, isLastI
             size={vars.sizing['5']}
           />
         )}
-      </Box>
+      </div>
     </li>
   );
 };

@@ -1,20 +1,25 @@
-import { layers, sprinkles } from '@orfium/ictinus';
-import { vars } from '@orfium/tokens';
+import { vars } from '@orfium/ictinus';
+import { layers, sprinkles } from '@orfium/ictinus/vanilla';
 import { style } from '@vanilla-extract/css';
 
-export const container = style({
-  '@layer': {
-    [layers.components]: {
-      flexDirection: 'column',
+export const container = style([
+  sprinkles({
+    position: 'relative',
+  }),
+  {
+    '@layer': {
+      [layers.components]: {
+        flexDirection: 'column',
 
-      '@container': {
-        '(min-width: 1220px)': {
-          flexDirection: 'row',
+        '@container': {
+          '(min-width: 1220px)': {
+            flexDirection: 'row',
+          },
         },
       },
     },
   },
-});
+]);
 
 export const grid = style([
   sprinkles({

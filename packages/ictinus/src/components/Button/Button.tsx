@@ -4,10 +4,9 @@ import type { TestProps } from 'utils/types';
 
 import type { AvatarProps } from 'components/Avatar';
 import Avatar from 'components/Avatar';
-import { BUTTON_ICON_COLOR } from 'components/ButtonBase/constants';
+import { BUTTON_COLOR } from 'components/ButtonBase/constants';
 import type { AcceptedIconNames } from 'components/Icon';
-import { Icon } from '../../icon';
-import { Text } from '../../vanilla/Text';
+import Icon from 'components/Icon';
 import type { ButtonBaseProps } from '../ButtonBase/ButtonBase';
 import ButtonBase from '../ButtonBase/ButtonBase';
 
@@ -35,19 +34,13 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => 
   } = props;
 
   const hasAvatar = ['primary', 'secondary', 'tertiary'].includes(type) && avatar;
-  const isCompact = size === 'compact';
-  const iconSize = isCompact ? 'sm' : 'md';
 
   return (
     <ButtonBase {...props} ref={ref} isLoading={isLoading} onClick={onClick}>
       {hasAvatar && <Avatar src={avatar?.src}>{avatar?.label}</Avatar>}
-      {iconLeftName && !hasAvatar && (
-        <Icon name={iconLeftName} color={BUTTON_ICON_COLOR[type]} size={iconSize} />
-      )}
-      <Text>{children}</Text>
-      {iconRightName && (
-        <Icon name={iconRightName} color={BUTTON_ICON_COLOR[type]} size={iconSize} />
-      )}
+      {iconLeftName && !hasAvatar && <Icon name={iconLeftName} color={BUTTON_COLOR[type].text} />}
+      <span>{children}</span>
+      {iconRightName && <Icon name={iconRightName} color={BUTTON_COLOR[type].text} />}
     </ButtonBase>
   );
 });

@@ -115,15 +115,6 @@
   height: 100%;
 }
 
-.emotion-10 {
-  width: calc(var(--ictinus-sizing-5) * 0.8);
-  height: calc(var(--ictinus-sizing-5) * 0.8);
-}
-
-.emotion-10 path {
-  fill: var(--ictinus-color-text-default-active);
-}
-
 <div>
   <div
     class="emotion-0"
@@ -146,10 +137,7 @@
           >
             PR
           </div>
-          <span
-            class="Text__ff5iyl6"
-            data-ictinus="test-version"
-          >
+          <span>
             Text Avatar
           </span>
         </button>
@@ -175,10 +163,7 @@
               src="https://mui.com/static/images/avatar/1.jpg"
             />
           </div>
-          <span
-            class="Text__ff5iyl6"
-            data-ictinus="test-version"
-          >
+          <span>
             Img Avatar
           </span>
         </button>
@@ -201,8 +186,6 @@
             data-testid="_avatar"
           >
             <svg
-              class="emotion-10"
-              data-ictinus="test-version"
               viewBox="0 0 14 17"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -216,10 +199,7 @@
               />
             </svg>
           </div>
-          <span
-            class="Text__ff5iyl6"
-            data-ictinus="test-version"
-          >
+          <span>
             Empty Avatar
           </span>
         </button>
