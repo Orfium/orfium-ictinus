@@ -2,6 +2,8 @@ import '@orfium/tokens/vars.css';
 import { Slot } from '@radix-ui/react-slot';
 import { createContext, type ReactNode, useContext, useEffect, useMemo, useState } from 'react';
 
+import '../../vanilla-extract/global.css';
+
 type ColorScheme = 'light' | 'dark';
 
 type ThemeContextValue = {

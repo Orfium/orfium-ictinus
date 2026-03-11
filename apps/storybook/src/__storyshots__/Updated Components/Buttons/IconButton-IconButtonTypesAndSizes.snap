@@ -57,56 +57,23 @@
   background-color: var(--ictinus-color-palette-primary-contrast);
 }
 
-.emotion-3 {
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
+.emotion-2 {
+  width: var(--ictinus-sizing-5);
+  height: var(--ictinus-sizing-5);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  gap: var(--ictinus-spacing-4);
-  color: var(--ictinus-color-text-default-active);
-  width: var(--ictinus-sizing-9);
-  height: var(--ictinus-sizing-9);
-  background-color: var(--ictinus-color-palette-secondary-base);
-  padding: 0;
-  border-radius: var(--ictinus-border-radius-7);
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
 }
 
-.emotion-3:focus-visible:not(:disabled) {
-  background-color: var(--ictinus-color-palette-secondary-muted);
+.emotion-3 {
+  width: var(--ictinus-sizing-5);
+  height: var(--ictinus-sizing-5);
 }
 
-.emotion-3:disabled {
-  opacity: 50%;
-  cursor: not-allowed;
-}
-
-.emotion-3:hover:not(:disabled) {
-  background-color: var(--ictinus-color-palette-secondary-muted);
-}
-
-.emotion-3:active:not(:disabled),
-.emotion-3[aria-expanded="true"] {
-  background-color: var(--ictinus-color-palette-secondary-contrast);
+.emotion-3 path,
+.emotion-3 rect {
+  fill: var(--ictinus-color-text-inverted-primary)!important;
 }
 
 .emotion-5 {
@@ -134,7 +101,7 @@
   color: var(--ictinus-color-text-default-active);
   width: var(--ictinus-sizing-9);
   height: var(--ictinus-sizing-9);
-  background-color: var(--ictinus-color-palette-tertiary-base);
+  background-color: var(--ictinus-color-palette-secondary-base);
   padding: 0;
   border-radius: var(--ictinus-border-radius-7);
   border: none;
@@ -144,7 +111,7 @@
 }
 
 .emotion-5:focus-visible:not(:disabled) {
-  background-color: var(--ictinus-color-palette-tertiary-muted);
+  background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
 .emotion-5:disabled {
@@ -153,64 +120,22 @@
 }
 
 .emotion-5:hover:not(:disabled) {
-  background-color: var(--ictinus-color-palette-tertiary-muted);
+  background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
 .emotion-5:active:not(:disabled),
 .emotion-5[aria-expanded="true"] {
-  background-color: var(--ictinus-color-palette-tertiary-contrast);
+  background-color: var(--ictinus-color-palette-secondary-contrast);
 }
 
 .emotion-7 {
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  gap: var(--ictinus-spacing-4);
-  color: var(--ictinus-color-text-inverted-primary);
-  width: var(--ictinus-sizing-9);
-  height: var(--ictinus-sizing-9);
-  background-color: var(--ictinus-color-palette-primary-base);
-  padding: 0;
-  border-radius: var(--ictinus-border-radius-2);
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
+  width: var(--ictinus-sizing-5);
+  height: var(--ictinus-sizing-5);
 }
 
-.emotion-7:focus-visible:not(:disabled) {
-  background-color: var(--ictinus-color-palette-primary-muted);
-}
-
-.emotion-7:disabled {
-  opacity: 50%;
-  cursor: not-allowed;
-}
-
-.emotion-7:hover:not(:disabled) {
-  background-color: var(--ictinus-color-palette-primary-muted);
-}
-
-.emotion-7:active:not(:disabled),
-.emotion-7[aria-expanded="true"] {
-  background-color: var(--ictinus-color-palette-primary-contrast);
+.emotion-7 path,
+.emotion-7 rect {
+  fill: var(--ictinus-color-text-default-active)!important;
 }
 
 .emotion-9 {
@@ -238,6 +163,110 @@
   color: var(--ictinus-color-text-default-active);
   width: var(--ictinus-sizing-9);
   height: var(--ictinus-sizing-9);
+  background-color: var(--ictinus-color-palette-tertiary-base);
+  padding: 0;
+  border-radius: var(--ictinus-border-radius-7);
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-9:focus-visible:not(:disabled) {
+  background-color: var(--ictinus-color-palette-tertiary-muted);
+}
+
+.emotion-9:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-9:hover:not(:disabled) {
+  background-color: var(--ictinus-color-palette-tertiary-muted);
+}
+
+.emotion-9:active:not(:disabled),
+.emotion-9[aria-expanded="true"] {
+  background-color: var(--ictinus-color-palette-tertiary-contrast);
+}
+
+.emotion-13 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: var(--ictinus-spacing-4);
+  color: var(--ictinus-color-text-inverted-primary);
+  width: var(--ictinus-sizing-9);
+  height: var(--ictinus-sizing-9);
+  background-color: var(--ictinus-color-palette-primary-base);
+  padding: 0;
+  border-radius: var(--ictinus-border-radius-2);
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-13:focus-visible:not(:disabled) {
+  background-color: var(--ictinus-color-palette-primary-muted);
+}
+
+.emotion-13:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-13:hover:not(:disabled) {
+  background-color: var(--ictinus-color-palette-primary-muted);
+}
+
+.emotion-13:active:not(:disabled),
+.emotion-13[aria-expanded="true"] {
+  background-color: var(--ictinus-color-palette-primary-contrast);
+}
+
+.emotion-17 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: var(--ictinus-spacing-4);
+  color: var(--ictinus-color-text-default-active);
+  width: var(--ictinus-sizing-9);
+  height: var(--ictinus-sizing-9);
   background-color: var(--ictinus-color-palette-secondary-base);
   padding: 0;
   border-radius: var(--ictinus-border-radius-2);
@@ -247,25 +276,25 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-9:focus-visible:not(:disabled) {
+.emotion-17:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
-.emotion-9:disabled {
+.emotion-17:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-9:hover:not(:disabled) {
+.emotion-17:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
-.emotion-9:active:not(:disabled),
-.emotion-9[aria-expanded="true"] {
+.emotion-17:active:not(:disabled),
+.emotion-17[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-secondary-contrast);
 }
 
-.emotion-11 {
+.emotion-21 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -299,268 +328,8 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-11:focus-visible:not(:disabled) {
-  background-color: var(--ictinus-color-palette-tertiary-muted);
-}
-
-.emotion-11:disabled {
-  opacity: 50%;
-  cursor: not-allowed;
-}
-
-.emotion-11:hover:not(:disabled) {
-  background-color: var(--ictinus-color-palette-tertiary-muted);
-}
-
-.emotion-11:active:not(:disabled),
-.emotion-11[aria-expanded="true"] {
-  background-color: var(--ictinus-color-palette-tertiary-contrast);
-}
-
-.emotion-13 {
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1rem;
-  font-size: 0.75rem;
-  letter-spacing: 0.015625rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  gap: var(--ictinus-spacing-4);
-  color: var(--ictinus-color-text-inverted-primary);
-  width: var(--ictinus-sizing-7);
-  height: var(--ictinus-sizing-7);
-  background-color: var(--ictinus-color-palette-primary-base);
-  padding: 0;
-  border-radius: var(--ictinus-border-radius-7);
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-13:focus-visible:not(:disabled) {
-  background-color: var(--ictinus-color-palette-primary-muted);
-}
-
-.emotion-13:disabled {
-  opacity: 50%;
-  cursor: not-allowed;
-}
-
-.emotion-13:hover:not(:disabled) {
-  background-color: var(--ictinus-color-palette-primary-muted);
-}
-
-.emotion-13:active:not(:disabled),
-.emotion-13[aria-expanded="true"] {
-  background-color: var(--ictinus-color-palette-primary-contrast);
-}
-
-.emotion-15 {
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1rem;
-  font-size: 0.75rem;
-  letter-spacing: 0.015625rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  gap: var(--ictinus-spacing-4);
-  color: var(--ictinus-color-text-default-active);
-  width: var(--ictinus-sizing-7);
-  height: var(--ictinus-sizing-7);
-  background-color: var(--ictinus-color-palette-secondary-base);
-  padding: 0;
-  border-radius: var(--ictinus-border-radius-7);
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-15:focus-visible:not(:disabled) {
-  background-color: var(--ictinus-color-palette-secondary-muted);
-}
-
-.emotion-15:disabled {
-  opacity: 50%;
-  cursor: not-allowed;
-}
-
-.emotion-15:hover:not(:disabled) {
-  background-color: var(--ictinus-color-palette-secondary-muted);
-}
-
-.emotion-15:active:not(:disabled),
-.emotion-15[aria-expanded="true"] {
-  background-color: var(--ictinus-color-palette-secondary-contrast);
-}
-
-.emotion-17 {
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1rem;
-  font-size: 0.75rem;
-  letter-spacing: 0.015625rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  gap: var(--ictinus-spacing-4);
-  color: var(--ictinus-color-text-default-active);
-  width: var(--ictinus-sizing-7);
-  height: var(--ictinus-sizing-7);
-  background-color: var(--ictinus-color-palette-tertiary-base);
-  padding: 0;
-  border-radius: var(--ictinus-border-radius-7);
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-17:focus-visible:not(:disabled) {
-  background-color: var(--ictinus-color-palette-tertiary-muted);
-}
-
-.emotion-17:disabled {
-  opacity: 50%;
-  cursor: not-allowed;
-}
-
-.emotion-17:hover:not(:disabled) {
-  background-color: var(--ictinus-color-palette-tertiary-muted);
-}
-
-.emotion-17:active:not(:disabled),
-.emotion-17[aria-expanded="true"] {
-  background-color: var(--ictinus-color-palette-tertiary-contrast);
-}
-
-.emotion-19 {
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1rem;
-  font-size: 0.75rem;
-  letter-spacing: 0.015625rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  gap: var(--ictinus-spacing-4);
-  color: var(--ictinus-color-text-inverted-primary);
-  width: var(--ictinus-sizing-7);
-  height: var(--ictinus-sizing-7);
-  background-color: var(--ictinus-color-palette-primary-base);
-  padding: 0;
-  border-radius: var(--ictinus-border-radius-2);
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-19:focus-visible:not(:disabled) {
-  background-color: var(--ictinus-color-palette-primary-muted);
-}
-
-.emotion-19:disabled {
-  opacity: 50%;
-  cursor: not-allowed;
-}
-
-.emotion-19:hover:not(:disabled) {
-  background-color: var(--ictinus-color-palette-primary-muted);
-}
-
-.emotion-19:active:not(:disabled),
-.emotion-19[aria-expanded="true"] {
-  background-color: var(--ictinus-color-palette-primary-contrast);
-}
-
-.emotion-21 {
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1rem;
-  font-size: 0.75rem;
-  letter-spacing: 0.015625rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  gap: var(--ictinus-spacing-4);
-  color: var(--ictinus-color-text-default-active);
-  width: var(--ictinus-sizing-7);
-  height: var(--ictinus-sizing-7);
-  background-color: var(--ictinus-color-palette-secondary-base);
-  padding: 0;
-  border-radius: var(--ictinus-border-radius-2);
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
 .emotion-21:focus-visible:not(:disabled) {
-  background-color: var(--ictinus-color-palette-secondary-muted);
+  background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
 .emotion-21:disabled {
@@ -569,15 +338,304 @@
 }
 
 .emotion-21:hover:not(:disabled) {
-  background-color: var(--ictinus-color-palette-secondary-muted);
+  background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
 .emotion-21:active:not(:disabled),
 .emotion-21[aria-expanded="true"] {
+  background-color: var(--ictinus-color-palette-tertiary-contrast);
+}
+
+.emotion-25 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: var(--ictinus-spacing-4);
+  color: var(--ictinus-color-text-inverted-primary);
+  width: var(--ictinus-sizing-7);
+  height: var(--ictinus-sizing-7);
+  background-color: var(--ictinus-color-palette-primary-base);
+  padding: 0;
+  border-radius: var(--ictinus-border-radius-7);
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-25:focus-visible:not(:disabled) {
+  background-color: var(--ictinus-color-palette-primary-muted);
+}
+
+.emotion-25:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-25:hover:not(:disabled) {
+  background-color: var(--ictinus-color-palette-primary-muted);
+}
+
+.emotion-25:active:not(:disabled),
+.emotion-25[aria-expanded="true"] {
+  background-color: var(--ictinus-color-palette-primary-contrast);
+}
+
+.emotion-26 {
+  width: var(--ictinus-sizing-4);
+  height: var(--ictinus-sizing-4);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-27 {
+  width: var(--ictinus-sizing-4);
+  height: var(--ictinus-sizing-4);
+}
+
+.emotion-27 path,
+.emotion-27 rect {
+  fill: var(--ictinus-color-text-inverted-primary)!important;
+}
+
+.emotion-29 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: var(--ictinus-spacing-4);
+  color: var(--ictinus-color-text-default-active);
+  width: var(--ictinus-sizing-7);
+  height: var(--ictinus-sizing-7);
+  background-color: var(--ictinus-color-palette-secondary-base);
+  padding: 0;
+  border-radius: var(--ictinus-border-radius-7);
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-29:focus-visible:not(:disabled) {
+  background-color: var(--ictinus-color-palette-secondary-muted);
+}
+
+.emotion-29:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-29:hover:not(:disabled) {
+  background-color: var(--ictinus-color-palette-secondary-muted);
+}
+
+.emotion-29:active:not(:disabled),
+.emotion-29[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-secondary-contrast);
 }
 
-.emotion-23 {
+.emotion-31 {
+  width: var(--ictinus-sizing-4);
+  height: var(--ictinus-sizing-4);
+}
+
+.emotion-31 path,
+.emotion-31 rect {
+  fill: var(--ictinus-color-text-default-active)!important;
+}
+
+.emotion-33 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: var(--ictinus-spacing-4);
+  color: var(--ictinus-color-text-default-active);
+  width: var(--ictinus-sizing-7);
+  height: var(--ictinus-sizing-7);
+  background-color: var(--ictinus-color-palette-tertiary-base);
+  padding: 0;
+  border-radius: var(--ictinus-border-radius-7);
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-33:focus-visible:not(:disabled) {
+  background-color: var(--ictinus-color-palette-tertiary-muted);
+}
+
+.emotion-33:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-33:hover:not(:disabled) {
+  background-color: var(--ictinus-color-palette-tertiary-muted);
+}
+
+.emotion-33:active:not(:disabled),
+.emotion-33[aria-expanded="true"] {
+  background-color: var(--ictinus-color-palette-tertiary-contrast);
+}
+
+.emotion-37 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: var(--ictinus-spacing-4);
+  color: var(--ictinus-color-text-inverted-primary);
+  width: var(--ictinus-sizing-7);
+  height: var(--ictinus-sizing-7);
+  background-color: var(--ictinus-color-palette-primary-base);
+  padding: 0;
+  border-radius: var(--ictinus-border-radius-2);
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-37:focus-visible:not(:disabled) {
+  background-color: var(--ictinus-color-palette-primary-muted);
+}
+
+.emotion-37:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-37:hover:not(:disabled) {
+  background-color: var(--ictinus-color-palette-primary-muted);
+}
+
+.emotion-37:active:not(:disabled),
+.emotion-37[aria-expanded="true"] {
+  background-color: var(--ictinus-color-palette-primary-contrast);
+}
+
+.emotion-41 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: var(--ictinus-spacing-4);
+  color: var(--ictinus-color-text-default-active);
+  width: var(--ictinus-sizing-7);
+  height: var(--ictinus-sizing-7);
+  background-color: var(--ictinus-color-palette-secondary-base);
+  padding: 0;
+  border-radius: var(--ictinus-border-radius-2);
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-41:focus-visible:not(:disabled) {
+  background-color: var(--ictinus-color-palette-secondary-muted);
+}
+
+.emotion-41:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-41:hover:not(:disabled) {
+  background-color: var(--ictinus-color-palette-secondary-muted);
+}
+
+.emotion-41:active:not(:disabled),
+.emotion-41[aria-expanded="true"] {
+  background-color: var(--ictinus-color-palette-secondary-contrast);
+}
+
+.emotion-45 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1rem;
@@ -611,22 +669,52 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-23:focus-visible:not(:disabled) {
+.emotion-45:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
-.emotion-23:disabled {
+.emotion-45:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-23:hover:not(:disabled) {
+.emotion-45:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
-.emotion-23:active:not(:disabled),
-.emotion-23[aria-expanded="true"] {
+.emotion-45:active:not(:disabled),
+.emotion-45[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-tertiary-contrast);
+}
+
+.emotion-51 {
+  width: var(--ictinus-sizing-4);
+  height: var(--ictinus-sizing-4);
+}
+
+.emotion-51 path,
+.emotion-51 rect {
+  fill: indicator.success!important;
+}
+
+.emotion-55 {
+  width: var(--ictinus-sizing-4);
+  height: var(--ictinus-sizing-4);
+}
+
+.emotion-55 path,
+.emotion-55 rect {
+  fill: indicator.warning!important;
+}
+
+.emotion-59 {
+  width: var(--ictinus-sizing-4);
+  height: var(--ictinus-sizing-4);
+}
+
+.emotion-59 path,
+.emotion-59 rect {
+  fill: secondary!important;
 }
 
 <div>
@@ -647,55 +735,30 @@
           data-testid="icon-button"
           type="button"
         >
-          <svg
-            class="properties_color_inverted.primary_base__19njorx27a properties_height_5_base__19njorx7q properties_width_5_base__19njorx4e"
-            data-ictinus="test-version"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            class="emotion-2"
+            data-slot="icon"
           >
-            <path
-              d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
-              fill="currentColor"
-            />
-            <path
-              d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
-              fill="currentColor"
-            />
-            <path
-              d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
-              fill="currentColor"
-            />
-          </svg>
-        </button>
-      </div>
-      <div
-        class="emotion-0"
-      >
-        <button
-          class="emotion-3"
-          data-slot="button"
-          data-testid="icon-button"
-          type="button"
-        >
-          <svg
-            class="properties_color_active_base__19njorx26q properties_height_5_base__19njorx7q properties_width_5_base__19njorx4e"
-            data-ictinus="test-version"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
-              fill="currentColor"
-            />
-            <path
-              d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
-              fill="currentColor"
-            />
-            <path
-              d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
-              fill="currentColor"
-            />
-          </svg>
+            <svg
+              class="emotion-3"
+              fill="none"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                fill="#6265AD"
+              />
+            </svg>
+          </div>
         </button>
       </div>
       <div
@@ -707,60 +770,30 @@
           data-testid="icon-button"
           type="button"
         >
-          <svg
-            class="properties_color_active_base__19njorx26q properties_height_5_base__19njorx7q properties_width_5_base__19njorx4e"
-            data-ictinus="test-version"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            class="emotion-2"
+            data-slot="icon"
           >
-            <path
-              d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
-              fill="currentColor"
-            />
-            <path
-              d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
-              fill="currentColor"
-            />
-            <path
-              d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
-              fill="currentColor"
-            />
-          </svg>
-        </button>
-      </div>
-    </div>
-    <div
-      class="properties_display_flex_base__19njorx2i properties_alignItems_center_base__19njorx6 properties_gap_sm_base__19njorxqq"
-      data-ictinus="test-version"
-    >
-      <div
-        class="emotion-0"
-      >
-        <button
-          class="emotion-7"
-          data-slot="button"
-          data-testid="icon-button"
-          type="button"
-        >
-          <svg
-            class="properties_color_inverted.primary_base__19njorx27a properties_height_5_base__19njorx7q properties_width_5_base__19njorx4e"
-            data-ictinus="test-version"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
-              fill="currentColor"
-            />
-            <path
-              d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
-              fill="currentColor"
-            />
-            <path
-              d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
-              fill="currentColor"
-            />
-          </svg>
+            <svg
+              class="emotion-7"
+              fill="none"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                fill="#6265AD"
+              />
+            </svg>
+          </div>
         </button>
       </div>
       <div
@@ -772,55 +805,30 @@
           data-testid="icon-button"
           type="button"
         >
-          <svg
-            class="properties_color_active_base__19njorx26q properties_height_5_base__19njorx7q properties_width_5_base__19njorx4e"
-            data-ictinus="test-version"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            class="emotion-2"
+            data-slot="icon"
           >
-            <path
-              d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
-              fill="currentColor"
-            />
-            <path
-              d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
-              fill="currentColor"
-            />
-            <path
-              d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
-              fill="currentColor"
-            />
-          </svg>
-        </button>
-      </div>
-      <div
-        class="emotion-0"
-      >
-        <button
-          class="emotion-11"
-          data-slot="button"
-          data-testid="icon-button"
-          type="button"
-        >
-          <svg
-            class="properties_color_active_base__19njorx26q properties_height_5_base__19njorx7q properties_width_5_base__19njorx4e"
-            data-ictinus="test-version"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
-              fill="currentColor"
-            />
-            <path
-              d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
-              fill="currentColor"
-            />
-            <path
-              d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
-              fill="currentColor"
-            />
-          </svg>
+            <svg
+              class="emotion-7"
+              fill="none"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                fill="#6265AD"
+              />
+            </svg>
+          </div>
         </button>
       </div>
     </div>
@@ -837,55 +845,30 @@
           data-testid="icon-button"
           type="button"
         >
-          <svg
-            class="properties_color_inverted.primary_base__19njorx27a properties_height_4_base__19njorx7m properties_width_4_base__19njorx4a"
-            data-ictinus="test-version"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            class="emotion-2"
+            data-slot="icon"
           >
-            <path
-              d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
-              fill="currentColor"
-            />
-            <path
-              d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
-              fill="currentColor"
-            />
-            <path
-              d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
-              fill="currentColor"
-            />
-          </svg>
-        </button>
-      </div>
-      <div
-        class="emotion-0"
-      >
-        <button
-          class="emotion-15"
-          data-slot="button"
-          data-testid="icon-button"
-          type="button"
-        >
-          <svg
-            class="properties_color_active_base__19njorx26q properties_height_4_base__19njorx7m properties_width_4_base__19njorx4a"
-            data-ictinus="test-version"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
-              fill="currentColor"
-            />
-            <path
-              d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
-              fill="currentColor"
-            />
-            <path
-              d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
-              fill="currentColor"
-            />
-          </svg>
+            <svg
+              class="emotion-3"
+              fill="none"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                fill="#6265AD"
+              />
+            </svg>
+          </div>
         </button>
       </div>
       <div
@@ -897,25 +880,65 @@
           data-testid="icon-button"
           type="button"
         >
-          <svg
-            class="properties_color_active_base__19njorx26q properties_height_4_base__19njorx7m properties_width_4_base__19njorx4a"
-            data-ictinus="test-version"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            class="emotion-2"
+            data-slot="icon"
           >
-            <path
-              d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
-              fill="currentColor"
-            />
-            <path
-              d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
-              fill="currentColor"
-            />
-            <path
-              d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
-              fill="currentColor"
-            />
-          </svg>
+            <svg
+              class="emotion-7"
+              fill="none"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                fill="#6265AD"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
+      <div
+        class="emotion-0"
+      >
+        <button
+          class="emotion-21"
+          data-slot="button"
+          data-testid="icon-button"
+          type="button"
+        >
+          <div
+            class="emotion-2"
+            data-slot="icon"
+          >
+            <svg
+              class="emotion-7"
+              fill="none"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                fill="#6265AD"
+              />
+            </svg>
+          </div>
         </button>
       </div>
     </div>
@@ -927,90 +950,105 @@
         class="emotion-0"
       >
         <button
-          class="emotion-19"
+          class="emotion-25"
           data-slot="button"
           data-testid="icon-button"
           type="button"
         >
-          <svg
-            class="properties_color_inverted.primary_base__19njorx27a properties_height_4_base__19njorx7m properties_width_4_base__19njorx4a"
-            data-ictinus="test-version"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            class="emotion-26"
+            data-slot="icon"
           >
-            <path
-              d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
-              fill="currentColor"
-            />
-            <path
-              d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
-              fill="currentColor"
-            />
-            <path
-              d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
-              fill="currentColor"
-            />
-          </svg>
+            <svg
+              class="emotion-27"
+              fill="none"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                fill="#6265AD"
+              />
+            </svg>
+          </div>
         </button>
       </div>
       <div
         class="emotion-0"
       >
         <button
-          class="emotion-21"
+          class="emotion-29"
           data-slot="button"
           data-testid="icon-button"
           type="button"
         >
-          <svg
-            class="properties_color_active_base__19njorx26q properties_height_4_base__19njorx7m properties_width_4_base__19njorx4a"
-            data-ictinus="test-version"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            class="emotion-26"
+            data-slot="icon"
           >
-            <path
-              d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
-              fill="currentColor"
-            />
-            <path
-              d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
-              fill="currentColor"
-            />
-            <path
-              d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
-              fill="currentColor"
-            />
-          </svg>
+            <svg
+              class="emotion-31"
+              fill="none"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                fill="#6265AD"
+              />
+            </svg>
+          </div>
         </button>
       </div>
       <div
         class="emotion-0"
       >
         <button
-          class="emotion-23"
+          class="emotion-33"
           data-slot="button"
           data-testid="icon-button"
           type="button"
         >
-          <svg
-            class="properties_color_active_base__19njorx26q properties_height_4_base__19njorx7m properties_width_4_base__19njorx4a"
-            data-ictinus="test-version"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            class="emotion-26"
+            data-slot="icon"
           >
-            <path
-              d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
-              fill="currentColor"
-            />
-            <path
-              d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
-              fill="currentColor"
-            />
-            <path
-              d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
-              fill="currentColor"
-            />
-          </svg>
+            <svg
+              class="emotion-31"
+              fill="none"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                fill="#6265AD"
+              />
+            </svg>
+          </div>
         </button>
       </div>
     </div>
@@ -1022,68 +1060,193 @@
         class="emotion-0"
       >
         <button
-          class="emotion-21"
+          class="emotion-37"
           data-slot="button"
           data-testid="icon-button"
           type="button"
         >
-          <svg
-            class="properties_color_indicator.success_base__19njorx286 properties_height_4_base__19njorx7m properties_width_4_base__19njorx4a"
-            data-ictinus="test-version"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            class="emotion-26"
+            data-slot="icon"
           >
-            <path
-              d="M8.89769 11.3563L7.22926 9.68784C7.06994 9.52852 6.87652 9.44761 6.64898 9.44512C6.42145 9.44263 6.22553 9.52353 6.06123 9.68784C5.89693 9.85214 5.81479 10.0468 5.81479 10.2718C5.81479 10.4969 5.89693 10.6915 6.06123 10.8558L8.23151 13.0261C8.42134 13.2183 8.64281 13.3144 8.89592 13.3144C9.14902 13.3144 9.37166 13.2183 9.56384 13.0261L13.9627 8.62732C14.122 8.468 14.2029 8.27458 14.2054 8.04704C14.2079 7.81951 14.127 7.62359 13.9627 7.45929C13.7984 7.295 13.6037 7.21285 13.3786 7.21285C13.1536 7.21285 12.9589 7.295 12.7946 7.45929L8.89769 11.3563ZM10.0013 18C8.89481 18 7.85478 17.79 6.88122 17.3701C5.90763 16.9502 5.06076 16.3803 4.34059 15.6604C3.62041 14.9405 3.05026 14.094 2.63016 13.1208C2.21005 12.1476 2 11.1078 2 10.0013C2 8.8915 2.21035 7.84835 2.63105 6.87186C3.05175 5.89538 3.62269 5.04596 4.34387 4.32362C5.06506 3.60129 5.91159 3.03343 6.88345 2.62006C7.8553 2.20669 8.89371 2 9.9987 2C11.1084 2 12.1514 2.2066 13.1278 2.61981C14.1042 3.03301 14.9536 3.60072 15.6761 4.32292C16.3986 5.04513 16.9666 5.8944 17.3799 6.87073C17.7933 7.84706 18 8.89025 18 10.0003C18 11.1104 17.7934 12.15 17.3802 13.1192C16.967 14.0884 16.3994 14.9337 15.6773 15.6552C14.9553 16.3766 14.1062 16.9478 13.1301 17.3687C12.1541 17.7896 11.1111 18 10.0013 18Z"
-              fill="currentColor"
-            />
-          </svg>
+            <svg
+              class="emotion-27"
+              fill="none"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                fill="#6265AD"
+              />
+            </svg>
+          </div>
         </button>
       </div>
       <div
         class="emotion-0"
       >
         <button
-          class="emotion-21"
+          class="emotion-41"
           data-slot="button"
           data-testid="icon-button"
           type="button"
         >
-          <svg
-            class="properties_color_indicator.warning_base__19njorx28e properties_height_4_base__19njorx7m properties_width_4_base__19njorx4a"
-            data-ictinus="test-version"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            class="emotion-26"
+            data-slot="icon"
           >
-            <path
-              clip-rule="evenodd"
-              d="M6.88122 2.6299C7.85478 2.20997 8.89481 2 10.0013 2C11.1111 2 12.1541 2.21043 13.1301 2.6313C14.1062 3.05217 14.9553 3.62335 15.6773 4.34484C16.3994 5.06632 16.967 5.91165 17.3802 6.88083C17.7934 7.85 18 8.88962 18 9.99969C18 11.1098 17.7933 12.1529 17.3799 13.1293C16.9666 14.1056 16.3986 14.9549 15.6761 15.6771C14.9536 16.3993 14.1042 16.967 13.1278 17.3802C12.1514 17.7934 11.1084 18 9.9987 18C8.89371 18 7.8553 17.7933 6.88345 17.3799C5.91159 16.9666 5.06506 16.3987 4.34387 15.6764C3.62269 14.954 3.05175 14.1046 2.63105 13.1281C2.21035 12.1516 2 11.1085 2 9.9987C2 8.89221 2.21005 7.85238 2.63016 6.87922C3.05026 5.90604 3.62041 5.0595 4.34059 4.33962C5.06076 3.61975 5.90763 3.04984 6.88122 2.6299ZM10.6094 6.24514C10.4461 6.08172 10.2495 6.00001 10.0197 6.00001C9.78983 6.00001 9.59317 6.08172 9.42969 6.24514C9.26622 6.40857 9.18448 6.60517 9.18448 6.83494V9.94177C9.18448 10.1715 9.26613 10.3681 9.42944 10.5316C9.59274 10.695 9.78931 10.7767 10.0192 10.7767C10.249 10.7767 10.4457 10.695 10.6091 10.5316C10.7726 10.3681 10.8544 10.1715 10.8544 9.94177V6.83494C10.8544 6.60517 10.7727 6.40857 10.6094 6.24514ZM9.9751 12.1C10.5964 12.1 11.1001 12.6037 11.1001 13.225C11.1001 13.8463 10.5964 14.35 9.9751 14.35C9.35378 14.35 8.8501 13.8463 8.8501 13.225C8.8501 12.6037 9.35378 12.1 9.9751 12.1Z"
-              fill="currentColor"
-              fill-rule="evenodd"
-            />
-          </svg>
+            <svg
+              class="emotion-31"
+              fill="none"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                fill="#6265AD"
+              />
+            </svg>
+          </div>
         </button>
       </div>
       <div
         class="emotion-0"
       >
         <button
-          class="emotion-23"
+          class="emotion-45"
           data-slot="button"
           data-testid="icon-button"
           type="button"
         >
-          <svg
-            class="properties_color_secondary_base__19njorx26m properties_height_4_base__19njorx7m properties_width_4_base__19njorx4a"
-            data-ictinus="test-version"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            class="emotion-26"
+            data-slot="icon"
           >
-            <path
-              d="M5.26469 17C4.9027 17 4.60142 16.8776 4.36085 16.6328C4.12028 16.388 4 16.0814 4 15.7131C4 15.3486 4.12123 15.043 4.36368 14.7963C4.60614 14.5496 4.90648 14.4262 5.26469 14.4262H14.7353C15.0973 14.4262 15.3986 14.5486 15.6391 14.7934C15.8797 15.0382 16 15.3448 16 15.7131C16 16.0776 15.8788 16.3832 15.6363 16.6299C15.3939 16.8766 15.0935 17 14.7353 17H5.26469ZM6.17875 12.9298C5.97815 12.9298 5.80998 12.8607 5.67424 12.7226C5.53848 12.5845 5.4706 12.4133 5.4706 12.2092V10.8314C5.4706 10.7293 5.48588 10.6382 5.51643 10.558C5.54697 10.4778 5.59957 10.3998 5.67424 10.3238L10.7704 5.14967L13.1165 7.53698L8.03166 12.7226C7.95701 12.7986 7.88027 12.8521 7.80146 12.8832C7.72265 12.9143 7.6331 12.9298 7.53279 12.9298H6.17875ZM13.9457 6.71857L11.5996 4.31284L12.7308 3.1917C12.8484 3.06584 12.9887 3.00196 13.1516 3.00004C13.3145 2.99813 13.4548 3.06201 13.5724 3.1917L15.0656 4.71109C15.1832 4.83081 15.2439 4.97201 15.2477 5.1347C15.2515 5.29738 15.1945 5.44165 15.0769 5.5675L13.9457 6.71857Z"
-              fill="currentColor"
-            />
-          </svg>
+            <svg
+              class="emotion-31"
+              fill="none"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                fill="#6265AD"
+              />
+              <path
+                d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                fill="#6265AD"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
+    </div>
+    <div
+      class="properties_display_flex_base__19njorx2i properties_alignItems_center_base__19njorx6 properties_gap_sm_base__19njorxqq"
+      data-ictinus="test-version"
+    >
+      <div
+        class="emotion-0"
+      >
+        <button
+          class="emotion-41"
+          data-slot="button"
+          data-testid="icon-button"
+          type="button"
+        >
+          <div
+            class="emotion-26"
+            data-slot="icon"
+          >
+            <svg
+              class="emotion-51"
+              fill="none"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8.89769 11.3563L7.22926 9.68784C7.06994 9.52852 6.87652 9.44761 6.64898 9.44512C6.42145 9.44263 6.22553 9.52353 6.06123 9.68784C5.89693 9.85214 5.81479 10.0468 5.81479 10.2718C5.81479 10.4969 5.89693 10.6915 6.06123 10.8558L8.23151 13.0261C8.42134 13.2183 8.64281 13.3144 8.89592 13.3144C9.14902 13.3144 9.37166 13.2183 9.56384 13.0261L13.9627 8.62732C14.122 8.468 14.2029 8.27458 14.2054 8.04704C14.2079 7.81951 14.127 7.62359 13.9627 7.45929C13.7984 7.295 13.6037 7.21285 13.3786 7.21285C13.1536 7.21285 12.9589 7.295 12.7946 7.45929L8.89769 11.3563ZM10.0013 18C8.89481 18 7.85478 17.79 6.88122 17.3701C5.90763 16.9502 5.06076 16.3803 4.34059 15.6604C3.62041 14.9405 3.05026 14.094 2.63016 13.1208C2.21005 12.1476 2 11.1078 2 10.0013C2 8.8915 2.21035 7.84835 2.63105 6.87186C3.05175 5.89538 3.62269 5.04596 4.34387 4.32362C5.06506 3.60129 5.91159 3.03343 6.88345 2.62006C7.8553 2.20669 8.89371 2 9.9987 2C11.1084 2 12.1514 2.2066 13.1278 2.61981C14.1042 3.03301 14.9536 3.60072 15.6761 4.32292C16.3986 5.04513 16.9666 5.8944 17.3799 6.87073C17.7933 7.84706 18 8.89025 18 10.0003C18 11.1104 17.7934 12.15 17.3802 13.1192C16.967 14.0884 16.3994 14.9337 15.6773 15.6552C14.9553 16.3766 14.1062 16.9478 13.1301 17.3687C12.1541 17.7896 11.1111 18 10.0013 18Z"
+                fill="#6265AD"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
+      <div
+        class="emotion-0"
+      >
+        <button
+          class="emotion-41"
+          data-slot="button"
+          data-testid="icon-button"
+          type="button"
+        >
+          <div
+            class="emotion-26"
+            data-slot="icon"
+          >
+            <svg
+              class="emotion-55"
+              fill="none"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M6.88122 2.6299C7.85478 2.20997 8.89481 2 10.0013 2C11.1111 2 12.1541 2.21043 13.1301 2.6313C14.1062 3.05217 14.9553 3.62335 15.6773 4.34484C16.3994 5.06632 16.967 5.91165 17.3802 6.88083C17.7934 7.85 18 8.88962 18 9.99969C18 11.1098 17.7933 12.1529 17.3799 13.1293C16.9666 14.1056 16.3986 14.9549 15.6761 15.6771C14.9536 16.3993 14.1042 16.967 13.1278 17.3802C12.1514 17.7934 11.1084 18 9.9987 18C8.89371 18 7.8553 17.7933 6.88345 17.3799C5.91159 16.9666 5.06506 16.3987 4.34387 15.6764C3.62269 14.954 3.05175 14.1046 2.63105 13.1281C2.21035 12.1516 2 11.1085 2 9.9987C2 8.89221 2.21005 7.85238 2.63016 6.87922C3.05026 5.90604 3.62041 5.0595 4.34059 4.33962C5.06076 3.61975 5.90763 3.04984 6.88122 2.6299ZM10.6094 6.24514C10.4461 6.08172 10.2495 6.00001 10.0197 6.00001C9.78983 6.00001 9.59317 6.08172 9.42969 6.24514C9.26622 6.40857 9.18448 6.60517 9.18448 6.83494V9.94177C9.18448 10.1715 9.26613 10.3681 9.42944 10.5316C9.59274 10.695 9.78931 10.7767 10.0192 10.7767C10.249 10.7767 10.4457 10.695 10.6091 10.5316C10.7726 10.3681 10.8544 10.1715 10.8544 9.94177V6.83494C10.8544 6.60517 10.7727 6.40857 10.6094 6.24514ZM9.9751 12.1C10.5964 12.1 11.1001 12.6037 11.1001 13.225C11.1001 13.8463 10.5964 14.35 9.9751 14.35C9.35378 14.35 8.8501 13.8463 8.8501 13.225C8.8501 12.6037 9.35378 12.1 9.9751 12.1Z"
+                fill="#6265AD"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
+      <div
+        class="emotion-0"
+      >
+        <button
+          class="emotion-45"
+          data-slot="button"
+          data-testid="icon-button"
+          type="button"
+        >
+          <div
+            class="emotion-26"
+            data-slot="icon"
+          >
+            <svg
+              class="emotion-59"
+              fill="none"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5.26469 17C4.9027 17 4.60142 16.8776 4.36085 16.6328C4.12028 16.388 4 16.0814 4 15.7131C4 15.3486 4.12123 15.043 4.36368 14.7963C4.60614 14.5496 4.90648 14.4262 5.26469 14.4262H14.7353C15.0973 14.4262 15.3986 14.5486 15.6391 14.7934C15.8797 15.0382 16 15.3448 16 15.7131C16 16.0776 15.8788 16.3832 15.6363 16.6299C15.3939 16.8766 15.0935 17 14.7353 17H5.26469ZM6.17875 12.9298C5.97815 12.9298 5.80998 12.8607 5.67424 12.7226C5.53848 12.5845 5.4706 12.4133 5.4706 12.2092V10.8314C5.4706 10.7293 5.48588 10.6382 5.51643 10.558C5.54697 10.4778 5.59957 10.3998 5.67424 10.3238L10.7704 5.14967L13.1165 7.53698L8.03166 12.7226C7.95701 12.7986 7.88027 12.8521 7.80146 12.8832C7.72265 12.9143 7.6331 12.9298 7.53279 12.9298H6.17875ZM13.9457 6.71857L11.5996 4.31284L12.7308 3.1917C12.8484 3.06584 12.9887 3.00196 13.1516 3.00004C13.3145 2.99813 13.4548 3.06201 13.5724 3.1917L15.0656 4.71109C15.1832 4.83081 15.2439 4.97201 15.2477 5.1347C15.2515 5.29738 15.1945 5.44165 15.0769 5.5675L13.9457 6.71857Z"
+                fill="#6265AD"
+              />
+            </svg>
+          </div>
         </button>
       </div>
     </div>

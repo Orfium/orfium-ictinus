@@ -1,12 +1,12 @@
 import { type Header } from '@tanstack/react-table';
 import { forwardRef } from 'react';
-import { Menu, MenuContent, MenuItem, MenuSeparator, MenuTrigger } from '~/vanilla/Menu';
 import { ActionsContent, ActionsRoot } from '../actions';
 import { Switch } from '../components/Controls';
 import IconButton from '../components/IconButton';
 import { Icon, type IconProps } from '../icon';
 import { cn } from '../utils/cn';
 import { Box, type BoxProps } from '../vanilla/Box';
+import { Menu, MenuContent, MenuItem, MenuSeparator, MenuTrigger } from '../vanilla/Menu';
 import { TableHeaderCell } from '../vanilla/Table';
 import { Text } from '../vanilla/Text';
 import { Tooltip, TooltipContent, TooltipTrigger } from '../vanilla/Tooltip';

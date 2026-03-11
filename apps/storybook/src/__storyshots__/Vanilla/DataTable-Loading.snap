@@ -56,7 +56,26 @@
   background-color: var(--ictinus-color-palette-secondary-contrast);
 }
 
+.emotion-2 {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-3 {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-3 path,
+.emotion-3 rect {
+  fill: var(--ictinus-color-text-default-active)!important;
+}
+
+.emotion-5 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1rem;
@@ -90,22 +109,41 @@
   transition: background-color,border 150ms linear;
 }
 
-.emotion-3:focus-visible:not(:disabled) {
+.emotion-5:focus-visible:not(:disabled) {
   background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
-.emotion-3:disabled {
+.emotion-5:disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-3:hover:not(:disabled) {
+.emotion-5:hover:not(:disabled) {
   background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
-.emotion-3:active:not(:disabled),
-.emotion-3[aria-expanded="true"] {
+.emotion-5:active:not(:disabled),
+.emotion-5[aria-expanded="true"] {
   background-color: var(--ictinus-color-palette-tertiary-contrast);
+}
+
+.emotion-6 {
+  width: var(--ictinus-sizing-4);
+  height: var(--ictinus-sizing-4);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-7 {
+  width: var(--ictinus-sizing-4);
+  height: var(--ictinus-sizing-4);
+}
+
+.emotion-7 path,
+.emotion-7 rect {
+  fill: var(--ictinus-color-text-default-active)!important;
 }
 
 <div>
@@ -140,21 +178,23 @@
           tabindex="0"
           type="button"
         >
-          <svg
-            class="properties_color_active_base__19njorx26q properties_height_4_base__19njorx7m properties_width_4_base__19njorx4a"
-            data-ictinus="test-version"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            class="emotion-2"
+            data-slot="icon"
           >
-            <path
-              d="M2.5 15.25V4.75C2.5 4.14583 2.65737 3.61979 2.9721 3.17188C3.28683 2.72396 3.66518 2.5 4.10714 2.5H15.8929C16.3348 2.5 16.7132 2.72396 17.0279 3.17188C17.3426 3.61979 17.5 4.14583 17.5 4.75V15.25C17.5 15.8542 17.3426 16.3802 17.0279 16.8281C16.7132 17.276 16.3348 17.5 15.8929 17.5H4.10714C3.66518 17.5 3.28683 17.276 2.9721 16.8281C2.65737 16.3802 2.5 15.8542 2.5 15.25ZM8.57143 15.9375H11.4286V4.0625H8.57143V15.9375ZM13.0357 15.9375H15.8929V4.0625H13.0357V15.9375Z"
-              fill="currentColor"
-            />
-          </svg>
-          <span
-            class="Text__ff5iyl6"
-            data-ictinus="test-version"
-          >
+            <svg
+              class="emotion-3"
+              fill="none"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.5 15.25V4.75C2.5 4.14583 2.65737 3.61979 2.9721 3.17188C3.28683 2.72396 3.66518 2.5 4.10714 2.5H15.8929C16.3348 2.5 16.7132 2.72396 17.0279 3.17188C17.3426 3.61979 17.5 4.14583 17.5 4.75V15.25C17.5 15.8542 17.3426 16.3802 17.0279 16.8281C16.7132 17.276 16.3348 17.5 15.8929 17.5H4.10714C3.66518 17.5 3.28683 17.276 2.9721 16.8281C2.65737 16.3802 2.5 15.8542 2.5 15.25ZM8.57143 15.9375H11.4286V4.0625H8.57143V15.9375ZM13.0357 15.9375H15.8929V4.0625H13.0357V15.9375Z"
+                fill="#6265AD"
+              />
+            </svg>
+          </div>
+          <span>
             Edit columns
           </span>
         </button>
@@ -220,7 +260,7 @@
                         <button
                           aria-expanded="false"
                           aria-haspopup="true"
-                          class="emotion-3"
+                          class="emotion-5"
                           data-react-aria-pressable="true"
                           data-slot="button"
                           data-testid="icon-button"
@@ -228,25 +268,30 @@
                           tabindex="0"
                           type="button"
                         >
-                          <svg
-                            class="properties_color_active_base__19njorx26q properties_height_4_base__19njorx7m properties_width_4_base__19njorx4a"
-                            data-ictinus="test-version"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
+                          <div
+                            class="emotion-6"
+                            data-slot="icon"
                           >
-                            <path
-                              d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
-                              fill="currentColor"
-                            />
-                            <path
-                              d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
-                              fill="currentColor"
-                            />
-                            <path
-                              d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
-                              fill="currentColor"
-                            />
-                          </svg>
+                            <svg
+                              class="emotion-7"
+                              fill="none"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                                fill="#6265AD"
+                              />
+                              <path
+                                d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                                fill="#6265AD"
+                              />
+                              <path
+                                d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                                fill="#6265AD"
+                              />
+                            </svg>
+                          </div>
                         </button>
                       </div>
                     </div>
@@ -291,7 +336,7 @@
                         <button
                           aria-expanded="false"
                           aria-haspopup="true"
-                          class="emotion-3"
+                          class="emotion-5"
                           data-react-aria-pressable="true"
                           data-slot="button"
                           data-testid="icon-button"
@@ -299,25 +344,30 @@
                           tabindex="0"
                           type="button"
                         >
-                          <svg
-                            class="properties_color_active_base__19njorx26q properties_height_4_base__19njorx7m properties_width_4_base__19njorx4a"
-                            data-ictinus="test-version"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
+                          <div
+                            class="emotion-6"
+                            data-slot="icon"
                           >
-                            <path
-                              d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
-                              fill="currentColor"
-                            />
-                            <path
-                              d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
-                              fill="currentColor"
-                            />
-                            <path
-                              d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
-                              fill="currentColor"
-                            />
-                          </svg>
+                            <svg
+                              class="emotion-7"
+                              fill="none"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                                fill="#6265AD"
+                              />
+                              <path
+                                d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                                fill="#6265AD"
+                              />
+                              <path
+                                d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                                fill="#6265AD"
+                              />
+                            </svg>
+                          </div>
                         </button>
                       </div>
                     </div>
@@ -362,7 +412,7 @@
                         <button
                           aria-expanded="false"
                           aria-haspopup="true"
-                          class="emotion-3"
+                          class="emotion-5"
                           data-react-aria-pressable="true"
                           data-slot="button"
                           data-testid="icon-button"
@@ -370,25 +420,30 @@
                           tabindex="0"
                           type="button"
                         >
-                          <svg
-                            class="properties_color_active_base__19njorx26q properties_height_4_base__19njorx7m properties_width_4_base__19njorx4a"
-                            data-ictinus="test-version"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
+                          <div
+                            class="emotion-6"
+                            data-slot="icon"
                           >
-                            <path
-                              d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
-                              fill="currentColor"
-                            />
-                            <path
-                              d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
-                              fill="currentColor"
-                            />
-                            <path
-                              d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
-                              fill="currentColor"
-                            />
-                          </svg>
+                            <svg
+                              class="emotion-7"
+                              fill="none"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                                fill="#6265AD"
+                              />
+                              <path
+                                d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                                fill="#6265AD"
+                              />
+                              <path
+                                d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                                fill="#6265AD"
+                              />
+                            </svg>
+                          </div>
                         </button>
                       </div>
                     </div>
@@ -433,7 +488,7 @@
                         <button
                           aria-expanded="false"
                           aria-haspopup="true"
-                          class="emotion-3"
+                          class="emotion-5"
                           data-react-aria-pressable="true"
                           data-slot="button"
                           data-testid="icon-button"
@@ -441,25 +496,30 @@
                           tabindex="0"
                           type="button"
                         >
-                          <svg
-                            class="properties_color_active_base__19njorx26q properties_height_4_base__19njorx7m properties_width_4_base__19njorx4a"
-                            data-ictinus="test-version"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
+                          <div
+                            class="emotion-6"
+                            data-slot="icon"
                           >
-                            <path
-                              d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
-                              fill="currentColor"
-                            />
-                            <path
-                              d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
-                              fill="currentColor"
-                            />
-                            <path
-                              d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
-                              fill="currentColor"
-                            />
-                          </svg>
+                            <svg
+                              class="emotion-7"
+                              fill="none"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                                fill="#6265AD"
+                              />
+                              <path
+                                d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                                fill="#6265AD"
+                              />
+                              <path
+                                d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                                fill="#6265AD"
+                              />
+                            </svg>
+                          </div>
                         </button>
                       </div>
                     </div>

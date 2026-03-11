@@ -1,4 +1,6 @@
+import hash from '@emotion/hash';
 import json from '@rollup/plugin-json';
+import svgr from '@svgr/rollup';
 import { vanillaExtractPlugin } from '@vanilla-extract/rollup-plugin';
 import { readFileSync } from 'node:fs';
 import { defineConfig } from 'rollup';
@@ -16,6 +18,17 @@ const external = new RegExp(
     }).join('|') +
     ')(?:/.+)?$'
 );
+
+const stripSvgQuery = {
+  name: 'strip-svg-query',
+  resolveId(source, importer) {
+    if (source.endsWith('.svg?react')) {
+      const clean = source.replace('?react', '');
+      return this.resolve(clean, importer, { skipSelf: true });
+    }
+    return null;
+  },
+};
 
 export default defineConfig([
   {
@@ -43,7 +56,15 @@ export default defineConfig([
         target: 'esnext',
       }),
       json(),
-      vanillaExtractPlugin(),
+      stripSvgQuery,
+      svgr(),
+      vanillaExtractPlugin(
+        env === 'production'
+          ? {
+              identifiers: (options) => normalizeIdentifier(hash(`${pkg.version}_${options.hash}`)),
+            }
+          : {}
+      ),
     ],
   },
   {
@@ -64,3 +85,7 @@ export default defineConfig([
     ],
   },
 ]);
+
+function normalizeIdentifier(identifier) {
+  return identifier.match(/^[0-9]/) ? '_'.concat(identifier) : identifier;
+}

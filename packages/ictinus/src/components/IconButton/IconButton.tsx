@@ -1,11 +1,12 @@
 import React from 'react';
 
+import { vars } from '@orfium/tokens';
 import type { PrimitiveButtonTypes } from 'components/Button/Button.types';
 import type { ButtonBaseProps } from 'components/ButtonBase/ButtonBase';
 import ButtonBase from 'components/ButtonBase/ButtonBase';
-import { BUTTON_ICON_COLOR } from 'components/ButtonBase/constants';
-import { Icon, type IconProps } from '../../icon';
-import { type BoxProps } from '../../vanilla/Box';
+import { BUTTON_COLOR } from 'components/ButtonBase/constants';
+import Icon from '../Icon';
+import { type AcceptedIconNames } from '../Icon/Icon.types';
 
 export type IconButtonShape = 'circle' | 'square';
 
@@ -18,9 +19,9 @@ export type IconButtonProps = Omit<
   /** This property defines the shape of the IconButton */
   shape?: IconButtonShape;
   /** This property defines witch icon to use */
-  iconName: IconProps['name'];
+  iconName: AcceptedIconNames;
   /** Custom icon color */
-  iconColor?: BoxProps['color'];
+  iconColor?: string;
 };
 
 const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
@@ -46,9 +47,9 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
       dataTestPrefixId={dataTestPrefixId ? `${dataTestPrefixId}-icon-` : 'icon-'}
     >
       <Icon
-        size={size === 'compact' ? 'sm' : 'md'}
+        size={vars.sizing[size === 'compact' ? '4' : '5']}
         name={iconName}
-        color={iconColor ?? BUTTON_ICON_COLOR[type]}
+        color={iconColor ?? BUTTON_COLOR[type].text}
       />
     </ButtonBase>
   )

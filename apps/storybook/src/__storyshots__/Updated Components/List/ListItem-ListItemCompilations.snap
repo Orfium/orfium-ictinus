@@ -404,16 +404,35 @@
   justify-content: unset;
 }
 
-.emotion-61 [data-disabled] {
+.emotion-44 {
+  width: var(--ictinus-sizing-5);
+  height: var(--ictinus-sizing-5);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-45 {
+  width: var(--ictinus-sizing-5);
+  height: var(--ictinus-sizing-5);
+}
+
+.emotion-45 path,
+.emotion-45 rect {
+  fill: var(--ictinus-color-text-inverted-primary)!important;
+}
+
+.emotion-65 [data-disabled] {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-62 {
+.emotion-66 {
   cursor: pointer;
 }
 
-.emotion-62>div>div:first-of-type {
+.emotion-66>div>div:first-of-type {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -429,7 +448,7 @@
   position: relative;
 }
 
-.emotion-62 .bar {
+.emotion-66 .bar {
   width: var(--ictinus-sizing-9);
   height: var(--ictinus-sizing-2);
   background: var(--ictinus-color-palette-primary-alt-contrast);
@@ -437,14 +456,14 @@
   border-radius: var(--ictinus-border-radius-7);
 }
 
-.emotion-62 .indicator {
+.emotion-66 .indicator {
   width: var(--ictinus-sizing-9);
   height: var(--ictinus-sizing-5);
   box-sizing: border-box;
   position: relative;
 }
 
-.emotion-62 .indicator:before {
+.emotion-66 .indicator:before {
   content: '';
   box-sizing: border-box;
   display: block;
@@ -457,15 +476,15 @@
   transition: all 200ms;
 }
 
-.emotion-62[data-hovered] .indicator:before,
-.emotion-62[data-focus-visible='true'] .indicator:before {
+.emotion-66[data-hovered] .indicator:before,
+.emotion-66[data-focus-visible='true'] .indicator:before {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   box-shadow: 0px 0px 0px 8px rgba(200,206,255,0.20);
   border-radius: 100%;
 }
 
-.emotion-62[data-selected] .indicator:before {
+.emotion-66[data-selected] .indicator:before {
   -webkit-transform: translateX(80%);
   -moz-transform: translateX(80%);
   -ms-transform: translateX(80%);
@@ -474,7 +493,7 @@
   border-color: var(--ictinus-color-border-color-interactive-active);
 }
 
-.emotion-63 {
+.emotion-67 {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -489,7 +508,7 @@
   justify-content: unset;
 }
 
-.emotion-82 {
+.emotion-86 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -528,19 +547,10 @@
   letter-spacing: var(--ictinus-letter-spacing-1);
 }
 
-.emotion-82 img {
+.emotion-86 img {
   border-radius: var(--ictinus-border-radius-7);
   width: 100%;
   height: 100%;
-}
-
-.emotion-83 {
-  width: calc(var(--ictinus-sizing-5) * 0.8);
-  height: calc(var(--ictinus-sizing-5) * 0.8);
-}
-
-.emotion-83 path {
-  fill: var(--ictinus-color-text-default-active);
 }
 
 <div>
@@ -874,17 +884,20 @@
                         class="emotion-42 emotion-1"
                         data-role="checkbox-icon"
                       >
-                        <div>
+                        <div
+                          class="emotion-44"
+                          data-slot="icon"
+                          data-testid="ictinus_7_unselected"
+                        >
                           <svg
-                            class="properties_color_inverted.primary_base__19njorx27a properties_height_5_base__19njorx7q properties_width_5_base__19njorx4e"
-                            data-ictinus="test-version"
-                            data-testid="ictinus_7_unselected"
+                            class="emotion-45"
+                            fill="none"
                             viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path
                               d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                              fill="currentColor"
+                              fill="#6265AD"
                             />
                           </svg>
                         </div>
@@ -942,17 +955,20 @@
                         class="emotion-42 emotion-1"
                         data-role="checkbox-icon"
                       >
-                        <div>
+                        <div
+                          class="emotion-44"
+                          data-slot="icon"
+                          data-testid="ictinus_8_unselected"
+                        >
                           <svg
-                            class="properties_color_inverted.primary_base__19njorx27a properties_height_5_base__19njorx7q properties_width_5_base__19njorx4e"
-                            data-ictinus="test-version"
-                            data-testid="ictinus_8_unselected"
+                            class="emotion-45"
+                            fill="none"
                             viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path
                               d="M7.98578 15C7.86013 15 7.73789 14.9759 7.61906 14.9277C7.50021 14.8796 7.38896 14.8 7.28531 14.6891L3.75302 10.9092C3.58026 10.7244 3.49597 10.5031 3.50015 10.2454C3.50434 9.9877 3.59282 9.76641 3.76558 9.58154C3.93834 9.39666 4.14304 9.30421 4.37969 9.30421C4.61632 9.30421 4.82101 9.39666 4.99377 9.58154L7.98578 12.7832L15.0001 5.27733C15.1729 5.09244 15.3797 5 15.6205 5C15.8613 5 16.0681 5.09244 16.2409 5.27733C16.4136 5.4622 16.5 5.68348 16.5 5.94118C16.5 6.19888 16.4136 6.42016 16.2409 6.60503L8.68626 14.6891C8.5826 14.8 8.47135 14.8796 8.35251 14.9277C8.23368 14.9759 8.11143 15 7.98578 15Z"
-                              fill="currentColor"
+                              fill="#6265AD"
                             />
                           </svg>
                         </div>
@@ -1017,10 +1033,10 @@
                 class="emotion-23"
               >
                 <div
-                  class="emotion-61"
+                  class="emotion-65"
                 >
                   <label
-                    class="emotion-62"
+                    class="emotion-66"
                     data-rac=""
                     data-react-aria-pressable="true"
                     data-testid="ictinus_switch"
@@ -1036,7 +1052,7 @@
                       />
                     </span>
                     <div
-                      class="emotion-63 emotion-1"
+                      class="emotion-67 emotion-1"
                     >
                       <div
                         class="emotion-42 emotion-1"
@@ -1075,10 +1091,10 @@
                 class="emotion-23"
               >
                 <div
-                  class="emotion-61"
+                  class="emotion-65"
                 >
                   <label
-                    class="emotion-62"
+                    class="emotion-66"
                     data-rac=""
                     data-react-aria-pressable="true"
                     data-testid="ictinus_switch"
@@ -1094,7 +1110,7 @@
                       />
                     </span>
                     <div
-                      class="emotion-63 emotion-1"
+                      class="emotion-67 emotion-1"
                     >
                       <div
                         class="emotion-42 emotion-1"
@@ -1152,12 +1168,10 @@
                 class="emotion-23"
               >
                 <div
-                  class="emotion-82"
+                  class="emotion-86"
                   data-testid="_avatar"
                 >
                   <svg
-                    class="emotion-83"
-                    data-ictinus="test-version"
                     viewBox="0 0 14 17"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -1195,12 +1209,10 @@
                 class="emotion-23"
               >
                 <div
-                  class="emotion-82"
+                  class="emotion-86"
                   data-testid="_avatar"
                 >
                   <svg
-                    class="emotion-83"
-                    data-ictinus="test-version"
                     viewBox="0 0 14 17"
                     xmlns="http://www.w3.org/2000/svg"
                   >

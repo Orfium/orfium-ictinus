@@ -2,8 +2,8 @@ import clsx from 'clsx';
 import type { RefObject } from 'react';
 import { type ComponentPropsWithoutRef, forwardRef, useEffect, useId } from 'react';
 
-import { useDOMRef } from '~/components/utils/useDOMRef';
 import Checkbox from '../components/Controls/CheckBox';
+import { useDOMRef } from '../components/utils/useDOMRef';
 import { useDataTableContext } from './DataTableContext';
 import { useDataTableRowContext } from './DataTableRowContext';
 
