@@ -67,6 +67,9 @@ function App() {
     <>
       <Box display="flex">
         <Skeleton w="22" h="8" />
+        <Text typography="headline02" fontFamily="outfit" fontWeight="semibold" color="active">
+          Earnings & Reports
+        </Text>
       </Box>
       <Box display="flex">
         <Box display="flex" flexShrink="0" bg="alt" style={{ width: '308px' }}></Box>

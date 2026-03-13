@@ -20,6 +20,7 @@ export function createSprinklesMerge(
   for (const [name, definition] of Object.entries({
     ...properties[0]?.styles,
     ...properties[1]?.styles,
+    ...properties[2]?.styles,
   })) {
     if ('values' in definition) {
       for (const value of Object.values(definition.values)) {
