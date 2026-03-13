@@ -1,9 +1,8 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
-import type { Theme } from 'index';
-
 import { vars } from '@orfium/tokens';
 import { generateStylesFromTokens } from 'components/Typography/utils';
+import { type Theme } from '../../../../theme/types';
 
 export const listItemTextWrapperStyles = (
   isGroupItem?: boolean,

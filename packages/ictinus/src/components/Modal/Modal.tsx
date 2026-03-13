@@ -1,8 +1,8 @@
+import { rem } from '@orfium/tokens';
 import Card from 'components/Card';
 import IconButton from 'components/IconButton';
 import useEscape from 'hooks/useEscape';
 import { useOverlayStack } from 'hooks/useOverlayStack';
-import { rem } from 'index';
 import React, { useEffect, useRef } from 'react';
 import { generateTestDataId } from 'utils/helpers';
 import type { TestId } from 'utils/types';

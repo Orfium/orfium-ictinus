@@ -4,7 +4,7 @@ import React from 'react';
 import { ProgressBar as AriaProgressBar } from 'react-aria-components';
 
 import type { ProgressIndicatorProps } from 'components/ProgressIndicator/ProgressIndicator.types';
-import { useTheme } from '~/index';
+import useTheme from '../../../../hooks/useTheme';
 import { animationStyles } from './ProgressCircle.style';
 
 const ProgressCircle = React.forwardRef<

@@ -4,6 +4,11 @@ import { defineProperties } from '@vanilla-extract/sprinkles';
 
 import { layers } from '../layers';
 
+// Ensure global has lowest specificity
+/* DO NOT MOVE THIS LINE */
+import './global.css';
+/* DO NOT MOVE THIS LINE */
+
 // Flattened colors for sprinkles - autogenerating them here breaks autocomplete
 // Can also supply them flattened from the actual tokens to avoid duplication
 const colors = {

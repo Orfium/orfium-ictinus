@@ -1,4 +1,4 @@
 import { createSprinklesMerge } from './createSprinklesMerge';
-import { responsiveProps, unresponsiveProps } from './properties.css';
+import { colorProps, responsiveProps, unresponsiveProps } from './properties.css';
 
-export const sprinklesMerge = createSprinklesMerge(unresponsiveProps, responsiveProps);
+export const sprinklesMerge = createSprinklesMerge(unresponsiveProps, responsiveProps, colorProps);

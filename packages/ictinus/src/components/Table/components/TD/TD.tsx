@@ -1,7 +1,7 @@
 import type { CSSObject } from '@emotion/react';
-import type { RowSize, TestProps } from 'index';
 import React from 'react';
-
+import { type TestProps } from '../../../../utils/types';
+import { type RowSize } from '../../types';
 import { simpleTdContainer, tdContainer, tdContent } from './TD.style';
 
 type Props = {
