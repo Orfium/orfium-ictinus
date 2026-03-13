@@ -1,5 +1,11 @@
 # @orfium/tokens
 
+## 5.2.0
+
+### Minor Changes
+
+- 658075a: correct global styles and outfit font option
+
 ## 5.1.3
 
 ### Patch Changes

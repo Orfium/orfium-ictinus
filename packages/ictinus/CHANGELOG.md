@@ -1,5 +1,13 @@
 # @orfium/ictinus
 
+## 5.43.9
+
+### Patch Changes
+
+- 658075a: correct global styles and outfit font option
+- Updated dependencies [658075a]
+  - @orfium/tokens@5.2.0
+
 ## 5.43.8
 
 ### Patch Changes
