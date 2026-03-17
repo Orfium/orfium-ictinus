@@ -440,6 +440,7 @@ export const unresponsiveProps = defineProperties({
       ping: `${animations.ping} 1s cubic-bezier(0, 0, 0.2, 1) infinite`,
       pulse: `${animations.pulse} 2s ease-in-out infinite`,
     },
+    opacity: ['0', '0.5', '1'] as const,
     transitionProperty: {
       none: 'none',
       all: 'all',
