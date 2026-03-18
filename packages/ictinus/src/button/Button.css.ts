@@ -64,6 +64,14 @@ export const button = recipe({
         },
         color: 'active',
       }),
+      danger: sprinkles({
+        bg: {
+          base: 'palette.error',
+          hover: 'palette.error.muted',
+          active: 'palette.error.contrast',
+        },
+        color: 'error',
+      }),
     },
     size: {
       normal: sprinkles({
@@ -136,6 +144,16 @@ export const button = recipe({
       }),
     },
     {
+      variants: { isPending: true, variant: 'danger' },
+      style: sprinkles({
+        bg: {
+          base: 'palette.error.contrast',
+          hover: 'palette.error.contrast',
+          active: 'palette.error.contrast',
+        },
+      }),
+    },
+    {
       variants: { isDisabled: true, variant: 'primary' },
       style: sprinkles({
         bg: {
@@ -162,6 +180,16 @@ export const button = recipe({
           base: 'palette.tertiary',
           hover: 'palette.tertiary',
           active: 'palette.tertiary',
+        },
+      }),
+    },
+    {
+      variants: { isDisabled: true, variant: 'danger' },
+      style: sprinkles({
+        bg: {
+          base: 'palette.error',
+          hover: 'palette.error',
+          active: 'palette.error',
         },
       }),
     },
