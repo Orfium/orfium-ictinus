@@ -49,7 +49,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           <SlotProvider
             slots={{
               icon: {
-                size: size === 'normal' ? '5' : '4',
+                size: size === 'normal' ? 'md' : 'sm',
                 flexShrink: '0',
                 visibility: isPending ? 'hidden' : 'visible',
               },
