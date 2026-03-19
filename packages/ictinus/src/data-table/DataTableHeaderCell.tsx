@@ -113,6 +113,7 @@ export const DataTableHeaderCell = forwardRef<HTMLTableCellElement, DataTableHea
                     flexDirection={flexDir}
                   >
                     <Button
+                      aria-label="sort"
                       variant="tertiary"
                       size="compact"
                       iconOnly
@@ -147,7 +148,13 @@ export const DataTableHeaderCell = forwardRef<HTMLTableCellElement, DataTableHea
               {(header.column.getCanSort() || header.column.getCanPin()) && (
                 <ActionsContent visible={sortDir ? 'always' : 'if-needed'}>
                   <Menu>
-                    <Button variant="tertiary" size="compact" iconOnly circle>
+                    <Button
+                      aria-label="Column options"
+                      variant="tertiary"
+                      size="compact"
+                      iconOnly
+                      circle
+                    >
                       <MoreOptionsIcon />
                     </Button>
                     <MenuContent style={{ minWidth: '220px' }}>
