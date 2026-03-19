@@ -488,7 +488,7 @@ export const colorProps = defineProperties({
   '@layer': layers.utilities,
   conditions: {
     base: {},
-    active: { selector: '&:active' },
+    active: { selector: '&:active, &[data-pressed]' },
     focus: { selector: '&:focus' },
     hover: { selector: '&:hover' },
   },

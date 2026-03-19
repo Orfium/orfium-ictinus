@@ -1,151 +1,3 @@
-.emotion-0 {
-  position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.emotion-1 {
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1rem;
-  font-size: 0.75rem;
-  letter-spacing: 0.015625rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  gap: var(--ictinus-spacing-4);
-  color: var(--ictinus-color-text-default-active);
-  height: var(--ictinus-sizing-7);
-  background-color: var(--ictinus-color-palette-secondary-base);
-  padding: var(--ictinus-spacing-0) var(--ictinus-spacing-4) var(--ictinus-spacing-0) var(--ictinus-spacing-4);
-  border-radius: var(--ictinus-border-radius-2);
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-1:focus-visible:not(:disabled) {
-  background-color: var(--ictinus-color-palette-secondary-muted);
-}
-
-.emotion-1:disabled {
-  opacity: 50%;
-  cursor: not-allowed;
-}
-
-.emotion-1:hover:not(:disabled) {
-  background-color: var(--ictinus-color-palette-secondary-muted);
-}
-
-.emotion-1:active:not(:disabled),
-.emotion-1[aria-expanded="true"] {
-  background-color: var(--ictinus-color-palette-secondary-contrast);
-}
-
-.emotion-2 {
-  width: 1.25rem;
-  height: 1.25rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-3 {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.emotion-3 path,
-.emotion-3 rect {
-  fill: var(--ictinus-color-text-default-active)!important;
-}
-
-.emotion-5 {
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1rem;
-  font-size: 0.75rem;
-  letter-spacing: 0.015625rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  gap: var(--ictinus-spacing-4);
-  color: var(--ictinus-color-text-default-active);
-  width: var(--ictinus-sizing-7);
-  height: var(--ictinus-sizing-7);
-  background-color: var(--ictinus-color-palette-tertiary-base);
-  padding: 0;
-  border-radius: var(--ictinus-border-radius-7);
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-5:focus-visible:not(:disabled) {
-  background-color: var(--ictinus-color-palette-tertiary-muted);
-}
-
-.emotion-5:disabled {
-  opacity: 50%;
-  cursor: not-allowed;
-}
-
-.emotion-5:hover:not(:disabled) {
-  background-color: var(--ictinus-color-palette-tertiary-muted);
-}
-
-.emotion-5:active:not(:disabled),
-.emotion-5[aria-expanded="true"] {
-  background-color: var(--ictinus-color-palette-tertiary-contrast);
-}
-
-.emotion-6 {
-  width: var(--ictinus-sizing-4);
-  height: var(--ictinus-sizing-4);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-7 {
-  width: var(--ictinus-sizing-4);
-  height: var(--ictinus-sizing-4);
-}
-
-.emotion-7 path,
-.emotion-7 rect {
-  fill: var(--ictinus-color-text-default-active)!important;
-}
-
 <div>
   <div
     class="properties_maxHeight_full_base__19njorxn2 properties_maxWidth_full_base__19njorxjq properties_display_flex_base__19njorx2i properties_flexDirection_column_base__19njorxnu"
@@ -174,41 +26,41 @@
           items
         </span>
       </div>
-      <div
-        class="emotion-0"
+      <button
+        aria-expanded="false"
+        aria-haspopup="true"
+        class="Button_button__154w52c1 Button__154w52c0 Button_button_variant_secondary__154w52c3 Button_button_size_compact__154w52c7 properties_position_relative_base__19njorxoq properties_display_inline-flex_base__19njorx2m properties_alignItems_center_base__19njorx6 properties_flexShrink_0_base__19njorxoa properties_borderRadius_2__19njorx1ls properties_transitionProperty_colors__19njorx1pi properties_transitionDuration_150ms__19njorx1pr properties_transitionTimingFunction_out__19njorx1pp properties_userSelect_none__19njorx1na properties_isolation_isolate__19njorx1or properties_backgroundColor_palette.secondary_base__19njorx1qz properties_backgroundColor_palette.secondary.muted_hover__19njorx1r6 properties_backgroundColor_palette.secondary.contrast_active__19njorx1r8 properties_color_active_base__19njorx26v properties_height_7_base__19njorx7y properties_paddingLeft_xs_base__19njorx1dm properties_paddingRight_xs_base__19njorx1g6"
+        data-ictinus="test-version"
+        data-rac=""
+        data-react-aria-pressable="true"
+        data-size="compact"
+        data-slot="button"
+        data-variant="secondary"
+        id="react-aria-:test-id:"
+        tabindex="0"
+        type="button"
       >
-        <button
-          aria-expanded="false"
-          aria-haspopup="true"
-          class="emotion-1"
-          data-react-aria-pressable="true"
-          data-slot="button"
-          data-testid="button"
-          id="react-aria-:test-id:"
-          tabindex="0"
-          type="button"
+        <svg
+          class="properties_height_4_base__19njorx7m properties_width_4_base__19njorx4a properties_flexShrink_0_base__19njorxoa properties_visibility_visible__19njorx1p1"
+          data-ictinus="test-version"
+          data-slot="icon"
+          role="img"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <div
-            class="emotion-2"
-            data-slot="icon"
-          >
-            <svg
-              class="emotion-3"
-              fill="none"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M2.5 15.25V4.75C2.5 4.14583 2.65737 3.61979 2.9721 3.17188C3.28683 2.72396 3.66518 2.5 4.10714 2.5H15.8929C16.3348 2.5 16.7132 2.72396 17.0279 3.17188C17.3426 3.61979 17.5 4.14583 17.5 4.75V15.25C17.5 15.8542 17.3426 16.3802 17.0279 16.8281C16.7132 17.276 16.3348 17.5 15.8929 17.5H4.10714C3.66518 17.5 3.28683 17.276 2.9721 16.8281C2.65737 16.3802 2.5 15.8542 2.5 15.25ZM8.57143 15.9375H11.4286V4.0625H8.57143V15.9375ZM13.0357 15.9375H15.8929V4.0625H13.0357V15.9375Z"
-                fill="#6265AD"
-              />
-            </svg>
-          </div>
-          <span>
-            Edit columns
-          </span>
-        </button>
-      </div>
+          <path
+            d="M2.5 15.25V4.75C2.5 4.14583 2.65737 3.61979 2.9721 3.17188C3.28683 2.72396 3.66518 2.5 4.10714 2.5H15.8929C16.3348 2.5 16.7132 2.72396 17.0279 3.17188C17.3426 3.61979 17.5 4.14583 17.5 4.75V15.25C17.5 15.8542 17.3426 16.3802 17.0279 16.8281C16.7132 17.276 16.3348 17.5 15.8929 17.5H4.10714C3.66518 17.5 3.28683 17.276 2.9721 16.8281C2.65737 16.3802 2.5 15.8542 2.5 15.25ZM8.57143 15.9375H11.4286V4.0625H8.57143V15.9375ZM13.0357 15.9375H15.8929V4.0625H13.0357V15.9375Z"
+            fill="currentColor"
+          />
+        </svg>
+        <span
+          class="Button_text__154w52cc Button_text_size_compact__154w52ce properties_paddingLeft_xs_base__19njorx1dm properties_paddingRight_xs_base__19njorx1g6 properties_typography_label03__19njorx1o1"
+          data-ictinus="test-version"
+          data-slot="text"
+        >
+          Edit columns
+        </span>
+      </button>
     </div>
     <div
       class="DataTableBody_root__1boh8d77 DataTableBody__1boh8d76 properties_overflowX_hidden__19njorx1n5 properties_overflowY_hidden__19njorx1n8 properties_borderRadius_2__19njorx1ls properties_maxWidth_full_base__19njorxjq properties_display_flex_base__19njorx2i properties_flexDirection_column_base__19njorxnu properties_borderTopLeftRadius_0__19njorx1lz properties_borderTopRightRadius_0__19njorx1m7"
@@ -265,46 +117,43 @@
                       class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 properties_alignItems_center_base__19njorx6 properties_display_flex_base__19njorx2i properties_justifyContent_space-between_base__19njorx1m"
                       data-ictinus="test-version"
                     >
-                      <div
-                        class="emotion-0"
+                      <button
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        aria-label="Column options"
+                        class="Button_button__154w52c1 Button__154w52c0 Button_button_variant_tertiary__154w52c4 Button_button_size_compact__154w52c7 Button_button_iconOnly_true__154w52c8 Button_button_circle_true__154w52c9 properties_position_relative_base__19njorxoq properties_display_inline-flex_base__19njorx2m properties_alignItems_center_base__19njorx6 properties_flexShrink_0_base__19njorxoa properties_borderRadius_7__19njorx1lx properties_transitionProperty_colors__19njorx1pi properties_transitionDuration_150ms__19njorx1pr properties_transitionTimingFunction_out__19njorx1pp properties_userSelect_none__19njorx1na properties_isolation_isolate__19njorx1or properties_backgroundColor_palette.tertiary_base__19njorx1rb properties_backgroundColor_palette.tertiary.muted_hover__19njorx1ri properties_backgroundColor_palette.tertiary.contrast_active__19njorx1rk properties_color_active_base__19njorx26v properties_height_7_base__19njorx7y properties_paddingLeft_0_base__19njorx1by properties_paddingRight_0_base__19njorx1ei properties_justifyContent_center_base__19njorx1e properties_width_7_base__19njorx4m"
+                        data-ictinus="test-version"
+                        data-rac=""
+                        data-react-aria-pressable="true"
+                        data-size="compact"
+                        data-slot="button"
+                        data-variant="tertiary"
+                        id="react-aria-:test-id:"
+                        tabindex="0"
+                        type="button"
                       >
-                        <button
-                          aria-expanded="false"
-                          aria-haspopup="true"
-                          class="emotion-5"
-                          data-react-aria-pressable="true"
-                          data-slot="button"
-                          data-testid="icon-button"
-                          id="react-aria-:test-id:"
-                          tabindex="0"
-                          type="button"
+                        <svg
+                          class="properties_height_4_base__19njorx7m properties_width_4_base__19njorx4a properties_flexShrink_0_base__19njorxoa properties_visibility_visible__19njorx1p1"
+                          data-ictinus="test-version"
+                          data-slot="icon"
+                          role="img"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
-                          <div
-                            class="emotion-6"
-                            data-slot="icon"
-                          >
-                            <svg
-                              class="emotion-7"
-                              fill="none"
-                              viewBox="0 0 20 20"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
-                                fill="#6265AD"
-                              />
-                              <path
-                                d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
-                                fill="#6265AD"
-                              />
-                              <path
-                                d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
-                                fill="#6265AD"
-                              />
-                            </svg>
-                          </div>
-                        </button>
-                      </div>
+                          <path
+                            d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                            fill="currentColor"
+                          />
+                          <path
+                            d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                            fill="currentColor"
+                          />
+                          <path
+                            d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -342,46 +191,43 @@
                       class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 properties_alignItems_center_base__19njorx6 properties_display_flex_base__19njorx2i properties_justifyContent_space-between_base__19njorx1m"
                       data-ictinus="test-version"
                     >
-                      <div
-                        class="emotion-0"
+                      <button
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        aria-label="Column options"
+                        class="Button_button__154w52c1 Button__154w52c0 Button_button_variant_tertiary__154w52c4 Button_button_size_compact__154w52c7 Button_button_iconOnly_true__154w52c8 Button_button_circle_true__154w52c9 properties_position_relative_base__19njorxoq properties_display_inline-flex_base__19njorx2m properties_alignItems_center_base__19njorx6 properties_flexShrink_0_base__19njorxoa properties_borderRadius_7__19njorx1lx properties_transitionProperty_colors__19njorx1pi properties_transitionDuration_150ms__19njorx1pr properties_transitionTimingFunction_out__19njorx1pp properties_userSelect_none__19njorx1na properties_isolation_isolate__19njorx1or properties_backgroundColor_palette.tertiary_base__19njorx1rb properties_backgroundColor_palette.tertiary.muted_hover__19njorx1ri properties_backgroundColor_palette.tertiary.contrast_active__19njorx1rk properties_color_active_base__19njorx26v properties_height_7_base__19njorx7y properties_paddingLeft_0_base__19njorx1by properties_paddingRight_0_base__19njorx1ei properties_justifyContent_center_base__19njorx1e properties_width_7_base__19njorx4m"
+                        data-ictinus="test-version"
+                        data-rac=""
+                        data-react-aria-pressable="true"
+                        data-size="compact"
+                        data-slot="button"
+                        data-variant="tertiary"
+                        id="react-aria-:test-id:"
+                        tabindex="0"
+                        type="button"
                       >
-                        <button
-                          aria-expanded="false"
-                          aria-haspopup="true"
-                          class="emotion-5"
-                          data-react-aria-pressable="true"
-                          data-slot="button"
-                          data-testid="icon-button"
-                          id="react-aria-:test-id:"
-                          tabindex="0"
-                          type="button"
+                        <svg
+                          class="properties_height_4_base__19njorx7m properties_width_4_base__19njorx4a properties_flexShrink_0_base__19njorxoa properties_visibility_visible__19njorx1p1"
+                          data-ictinus="test-version"
+                          data-slot="icon"
+                          role="img"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
-                          <div
-                            class="emotion-6"
-                            data-slot="icon"
-                          >
-                            <svg
-                              class="emotion-7"
-                              fill="none"
-                              viewBox="0 0 20 20"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
-                                fill="#6265AD"
-                              />
-                              <path
-                                d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
-                                fill="#6265AD"
-                              />
-                              <path
-                                d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
-                                fill="#6265AD"
-                              />
-                            </svg>
-                          </div>
-                        </button>
-                      </div>
+                          <path
+                            d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                            fill="currentColor"
+                          />
+                          <path
+                            d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                            fill="currentColor"
+                          />
+                          <path
+                            d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -419,46 +265,43 @@
                       class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 properties_alignItems_center_base__19njorx6 properties_display_flex_base__19njorx2i properties_justifyContent_space-between_base__19njorx1m"
                       data-ictinus="test-version"
                     >
-                      <div
-                        class="emotion-0"
+                      <button
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        aria-label="Column options"
+                        class="Button_button__154w52c1 Button__154w52c0 Button_button_variant_tertiary__154w52c4 Button_button_size_compact__154w52c7 Button_button_iconOnly_true__154w52c8 Button_button_circle_true__154w52c9 properties_position_relative_base__19njorxoq properties_display_inline-flex_base__19njorx2m properties_alignItems_center_base__19njorx6 properties_flexShrink_0_base__19njorxoa properties_borderRadius_7__19njorx1lx properties_transitionProperty_colors__19njorx1pi properties_transitionDuration_150ms__19njorx1pr properties_transitionTimingFunction_out__19njorx1pp properties_userSelect_none__19njorx1na properties_isolation_isolate__19njorx1or properties_backgroundColor_palette.tertiary_base__19njorx1rb properties_backgroundColor_palette.tertiary.muted_hover__19njorx1ri properties_backgroundColor_palette.tertiary.contrast_active__19njorx1rk properties_color_active_base__19njorx26v properties_height_7_base__19njorx7y properties_paddingLeft_0_base__19njorx1by properties_paddingRight_0_base__19njorx1ei properties_justifyContent_center_base__19njorx1e properties_width_7_base__19njorx4m"
+                        data-ictinus="test-version"
+                        data-rac=""
+                        data-react-aria-pressable="true"
+                        data-size="compact"
+                        data-slot="button"
+                        data-variant="tertiary"
+                        id="react-aria-:test-id:"
+                        tabindex="0"
+                        type="button"
                       >
-                        <button
-                          aria-expanded="false"
-                          aria-haspopup="true"
-                          class="emotion-5"
-                          data-react-aria-pressable="true"
-                          data-slot="button"
-                          data-testid="icon-button"
-                          id="react-aria-:test-id:"
-                          tabindex="0"
-                          type="button"
+                        <svg
+                          class="properties_height_4_base__19njorx7m properties_width_4_base__19njorx4a properties_flexShrink_0_base__19njorxoa properties_visibility_visible__19njorx1p1"
+                          data-ictinus="test-version"
+                          data-slot="icon"
+                          role="img"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
-                          <div
-                            class="emotion-6"
-                            data-slot="icon"
-                          >
-                            <svg
-                              class="emotion-7"
-                              fill="none"
-                              viewBox="0 0 20 20"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
-                                fill="#6265AD"
-                              />
-                              <path
-                                d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
-                                fill="#6265AD"
-                              />
-                              <path
-                                d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
-                                fill="#6265AD"
-                              />
-                            </svg>
-                          </div>
-                        </button>
-                      </div>
+                          <path
+                            d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                            fill="currentColor"
+                          />
+                          <path
+                            d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                            fill="currentColor"
+                          />
+                          <path
+                            d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -496,46 +339,43 @@
                       class="ActionsContent_content__1a2qwu63 ActionsContent__1a2qwu60 ActionsContent_content_visible_if-needed__1a2qwu65 ActionsContent__1a2qwu62 properties_alignItems_center_base__19njorx6 properties_display_flex_base__19njorx2i properties_justifyContent_space-between_base__19njorx1m"
                       data-ictinus="test-version"
                     >
-                      <div
-                        class="emotion-0"
+                      <button
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        aria-label="Column options"
+                        class="Button_button__154w52c1 Button__154w52c0 Button_button_variant_tertiary__154w52c4 Button_button_size_compact__154w52c7 Button_button_iconOnly_true__154w52c8 Button_button_circle_true__154w52c9 properties_position_relative_base__19njorxoq properties_display_inline-flex_base__19njorx2m properties_alignItems_center_base__19njorx6 properties_flexShrink_0_base__19njorxoa properties_borderRadius_7__19njorx1lx properties_transitionProperty_colors__19njorx1pi properties_transitionDuration_150ms__19njorx1pr properties_transitionTimingFunction_out__19njorx1pp properties_userSelect_none__19njorx1na properties_isolation_isolate__19njorx1or properties_backgroundColor_palette.tertiary_base__19njorx1rb properties_backgroundColor_palette.tertiary.muted_hover__19njorx1ri properties_backgroundColor_palette.tertiary.contrast_active__19njorx1rk properties_color_active_base__19njorx26v properties_height_7_base__19njorx7y properties_paddingLeft_0_base__19njorx1by properties_paddingRight_0_base__19njorx1ei properties_justifyContent_center_base__19njorx1e properties_width_7_base__19njorx4m"
+                        data-ictinus="test-version"
+                        data-rac=""
+                        data-react-aria-pressable="true"
+                        data-size="compact"
+                        data-slot="button"
+                        data-variant="tertiary"
+                        id="react-aria-:test-id:"
+                        tabindex="0"
+                        type="button"
                       >
-                        <button
-                          aria-expanded="false"
-                          aria-haspopup="true"
-                          class="emotion-5"
-                          data-react-aria-pressable="true"
-                          data-slot="button"
-                          data-testid="icon-button"
-                          id="react-aria-:test-id:"
-                          tabindex="0"
-                          type="button"
+                        <svg
+                          class="properties_height_4_base__19njorx7m properties_width_4_base__19njorx4a properties_flexShrink_0_base__19njorxoa properties_visibility_visible__19njorx1p1"
+                          data-ictinus="test-version"
+                          data-slot="icon"
+                          role="img"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
-                          <div
-                            class="emotion-6"
-                            data-slot="icon"
-                          >
-                            <svg
-                              class="emotion-7"
-                              fill="none"
-                              viewBox="0 0 20 20"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
-                                fill="#6265AD"
-                              />
-                              <path
-                                d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
-                                fill="#6265AD"
-                              />
-                              <path
-                                d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
-                                fill="#6265AD"
-                              />
-                            </svg>
-                          </div>
-                        </button>
-                      </div>
+                          <path
+                            d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
+                            fill="currentColor"
+                          />
+                          <path
+                            d="M11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10Z"
+                            fill="currentColor"
+                          />
+                          <path
+                            d="M11.5 14.5C11.5 15.3284 10.8284 16 10 16C9.17157 16 8.5 15.3284 8.5 14.5C8.5 13.6716 9.17157 13 10 13C10.8284 13 11.5 13.6716 11.5 14.5Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -547,7 +387,7 @@
             data-ictinus="test-version"
           >
             <tr
-              aria-labelledby=":rb5:"
+              aria-labelledby=":rch:"
               class="TableRow_row__7cjz1b2 TableRow__7cjz1b0 TableRow__7cjz1b1 properties_width_full_base__19njorx6e properties_display_flex_base__19njorx2i"
               data-ictinus="test-version"
             >
@@ -601,7 +441,7 @@
               </td>
             </tr>
             <tr
-              aria-labelledby=":rb6:"
+              aria-labelledby=":rci:"
               class="TableRow_row__7cjz1b2 TableRow__7cjz1b0 TableRow__7cjz1b1 properties_width_full_base__19njorx6e properties_display_flex_base__19njorx2i"
               data-ictinus="test-version"
             >
@@ -655,7 +495,7 @@
               </td>
             </tr>
             <tr
-              aria-labelledby=":rb7:"
+              aria-labelledby=":rcj:"
               class="TableRow_row__7cjz1b2 TableRow__7cjz1b0 TableRow__7cjz1b1 properties_width_full_base__19njorx6e properties_display_flex_base__19njorx2i"
               data-ictinus="test-version"
             >
@@ -709,7 +549,7 @@
               </td>
             </tr>
             <tr
-              aria-labelledby=":rb8:"
+              aria-labelledby=":rck:"
               class="TableRow_row__7cjz1b2 TableRow__7cjz1b0 TableRow__7cjz1b1 properties_width_full_base__19njorx6e properties_display_flex_base__19njorx2i"
               data-ictinus="test-version"
             >
@@ -763,7 +603,7 @@
               </td>
             </tr>
             <tr
-              aria-labelledby=":rb9:"
+              aria-labelledby=":rcl:"
               class="TableRow_row__7cjz1b2 TableRow__7cjz1b0 TableRow__7cjz1b1 properties_width_full_base__19njorx6e properties_display_flex_base__19njorx2i"
               data-ictinus="test-version"
             >
@@ -817,7 +657,7 @@
               </td>
             </tr>
             <tr
-              aria-labelledby=":rba:"
+              aria-labelledby=":rcm:"
               class="TableRow_row__7cjz1b2 TableRow__7cjz1b0 TableRow__7cjz1b1 properties_width_full_base__19njorx6e properties_display_flex_base__19njorx2i"
               data-ictinus="test-version"
             >
@@ -871,7 +711,7 @@
               </td>
             </tr>
             <tr
-              aria-labelledby=":rbb:"
+              aria-labelledby=":rcn:"
               class="TableRow_row__7cjz1b2 TableRow__7cjz1b0 TableRow__7cjz1b1 properties_width_full_base__19njorx6e properties_display_flex_base__19njorx2i"
               data-ictinus="test-version"
             >
@@ -925,7 +765,7 @@
               </td>
             </tr>
             <tr
-              aria-labelledby=":rbc:"
+              aria-labelledby=":rco:"
               class="TableRow_row__7cjz1b2 TableRow__7cjz1b0 TableRow__7cjz1b1 properties_width_full_base__19njorx6e properties_display_flex_base__19njorx2i"
               data-ictinus="test-version"
             >
@@ -979,7 +819,7 @@
               </td>
             </tr>
             <tr
-              aria-labelledby=":rbd:"
+              aria-labelledby=":rcp:"
               class="TableRow_row__7cjz1b2 TableRow__7cjz1b0 TableRow__7cjz1b1 properties_width_full_base__19njorx6e properties_display_flex_base__19njorx2i"
               data-ictinus="test-version"
             >
@@ -1033,7 +873,7 @@
               </td>
             </tr>
             <tr
-              aria-labelledby=":rbe:"
+              aria-labelledby=":rcq:"
               class="TableRow_row__7cjz1b2 TableRow__7cjz1b0 TableRow__7cjz1b1 properties_width_full_base__19njorx6e properties_display_flex_base__19njorx2i"
               data-ictinus="test-version"
             >

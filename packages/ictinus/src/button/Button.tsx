@@ -1,13 +1,18 @@
 import { forwardRef, type RefObject } from 'react';
 import {
   Button as ButtonPrimitive,
+  composeRenderProps,
+  ProgressBar,
   type ButtonProps as ButtonPrimitiveProps,
+  type ProgressBarProps,
 } from 'react-aria-components';
 
 import { SlotProvider, useSlotProps } from '../components/utils/Slots';
+import { useDOMRef } from '../components/utils/useDOMRef';
 import { cn } from '../utils/cn';
 import { Box, extractBoxProps, type BoxProps } from '../vanilla/Box';
 import { Text } from '../vanilla/Text';
+
 import * as styles from './Button.css';
 
 export type ButtonProps = BoxProps<'button', NonNullable<styles.ButtonVariants>> &
@@ -75,15 +80,11 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
 Button.displayName = 'Button';
 
-import type { ProgressBarProps } from 'react-aria-components';
-import { composeRenderProps, ProgressBar } from 'react-aria-components';
-import { useDOMRef } from '~/components/utils/useDOMRef';
-
-export interface ProgressCircleProps extends ProgressBarProps {
+interface ProgressCircleProps extends ProgressBarProps {
   size?: number;
 }
 
-export function ProgressCircle(props: ProgressCircleProps) {
+function ProgressCircle(props: ProgressCircleProps) {
   // SVG strokes are centered, so subtract half the stroke width from the radius to create an inner stroke.
   const strokeWidth = 4;
   const radius = `calc(50% - ${strokeWidth / 2}px)`;

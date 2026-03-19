@@ -1,7 +1,8 @@
-import { IconButton } from '@orfium/ictinus';
 import {
+  Button,
+  ChevronRightIcon,
   DataTableCheckbox,
-  Icon,
+  LockIcon,
   Text,
   Tooltip,
   TooltipContent,
@@ -145,14 +146,11 @@ export const columns = [
   columnHelper.display({
     cell: ({ row }) =>
       row.original.locked ? (
-        <Icon name="lock" size="sm" color="secondary" />
+        <LockIcon size="sm" color="secondary" />
       ) : (
-        <IconButton
-          onClick={(evt) => evt.stopPropagation()}
-          iconName="chevronRight"
-          size="compact"
-          type="tertiary"
-        />
+        <Button variant="tertiary" size="compact" iconOnly circle>
+          <ChevronRightIcon />
+        </Button>
       ),
     id: 'action',
     size: 48,

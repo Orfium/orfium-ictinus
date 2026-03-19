@@ -11,29 +11,19 @@ export const button = recipe({
       alignItems: 'center',
       flexShrink: '0',
       borderRadius: '2',
+      transitionProperty: 'colors',
       transitionDuration: '150ms',
       transitionTimingFunction: 'out',
       userSelect: 'none',
       isolation: 'isolate',
     }),
     style({
-      willChange: 'transform',
-      transitionProperty: 'background-color, border-color, color, fill, stroke',
-
       selectors: {
         '&[data-focus-visible]': {
           outline: `${vars['border-width'][3]} solid ${vars.color['border-color'].interactive.focused}`,
         },
         '&[data-react-aria-pressable]': {
           touchAction: 'pan-x pan-y pinch-zoom',
-        },
-        '&[data-pressed][data-size=normal]': {
-          transitionProperty: 'transform, background-color, border-color, color, fill, stroke',
-          transform: `perspective(${vars.sizing[9]}) translate3d(0, 0, -1px)`,
-        },
-        '&[data-pressed][data-size=compact]': {
-          transitionProperty: 'transform, background-color, border-color, color, fill, stroke',
-          transform: `perspective(${vars.sizing[7]}) translate3d(0, 0, -1px)`,
         },
       },
     }),
