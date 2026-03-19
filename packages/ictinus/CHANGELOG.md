@@ -1,5 +1,11 @@
 # @orfium/ictinus
 
+## 5.44.0
+
+### Minor Changes
+
+- 509022c: vanilla button
+
 ## 5.43.9
 
 ### Patch Changes
