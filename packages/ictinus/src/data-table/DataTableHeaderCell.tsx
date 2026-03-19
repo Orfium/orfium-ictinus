@@ -1,12 +1,21 @@
 import { type Header } from '@tanstack/react-table';
 import { forwardRef } from 'react';
 import { ActionsContent, ActionsRoot } from '../actions';
+import { Button } from '../button';
 import { Switch } from '../components/Controls';
-import IconButton from '../components/IconButton';
-import { Icon, type IconProps } from '../icon';
+import {
+  ArrowDownIcon,
+  ArrowUpIcon,
+  FreezeIcon,
+  InformationalIcon,
+  MoreOptionsIcon,
+  SortAscendingIcon,
+  SortDescendingIcon,
+  SortIcon,
+} from '../icons';
 import { cn } from '../utils/cn';
 import { Box, type BoxProps } from '../vanilla/Box';
-import { Menu, MenuContent, MenuItem, MenuSeparator, MenuTrigger } from '../vanilla/Menu';
+import { Menu, MenuContent, MenuItem, MenuSeparator } from '../vanilla/Menu';
 import { TableHeaderCell } from '../vanilla/Table';
 import { Text } from '../vanilla/Text';
 import { Tooltip, TooltipContent, TooltipTrigger } from '../vanilla/Tooltip';
@@ -88,10 +97,7 @@ export const DataTableHeaderCell = forwardRef<HTMLTableCellElement, DataTableHea
                 {header.column.columnDef.meta?.tooltip && (
                   <Tooltip>
                     <TooltipTrigger>
-                      {/* temporary work around, need to forward ref icon */}
-                      <Box display="flex" alignItems="center" justifyContent="center" size="3">
-                        <Icon name="informational" size="xs" color="secondary" />
-                      </Box>
+                      <InformationalIcon size="xs" color="secondary" flexShrink="0" />
                     </TooltipTrigger>
                     <TooltipContent maxW="22">
                       {header.column.columnDef.meta.tooltip}
@@ -106,14 +112,24 @@ export const DataTableHeaderCell = forwardRef<HTMLTableCellElement, DataTableHea
                     visible={sortDir ? 'always' : 'if-needed'}
                     flexDirection={flexDir}
                   >
-                    <IconButton
-                      onClick={() =>
+                    <Button
+                      aria-label="sort"
+                      variant="tertiary"
+                      size="compact"
+                      iconOnly
+                      circle
+                      onPress={() =>
                         header.column.toggleSorting(undefined, header.column.getCanMultiSort())
                       }
-                      type="tertiary"
-                      size="compact"
-                      iconName={getSortIcon(sortDir)}
-                    />
+                    >
+                      {sortDir === 'asc' ? (
+                        <ArrowUpIcon />
+                      ) : sortDir === 'desc' ? (
+                        <ArrowDownIcon />
+                      ) : (
+                        <SortIcon />
+                      )}
+                    </Button>
                     {header.column.getCanMultiSort() && header.column.getSortIndex() > -1 && (
                       <Text
                         typography="label04"
@@ -132,21 +148,27 @@ export const DataTableHeaderCell = forwardRef<HTMLTableCellElement, DataTableHea
               {(header.column.getCanSort() || header.column.getCanPin()) && (
                 <ActionsContent visible={sortDir ? 'always' : 'if-needed'}>
                   <Menu>
-                    <MenuTrigger>
-                      <IconButton type="tertiary" size="compact" iconName="moreOptions" />
-                    </MenuTrigger>
+                    <Button
+                      aria-label="Column options"
+                      variant="tertiary"
+                      size="compact"
+                      iconOnly
+                      circle
+                    >
+                      <MoreOptionsIcon />
+                    </Button>
                     <MenuContent style={{ minWidth: '220px' }}>
                       {header.column.getCanSort() && (
                         <>
                           <MenuItem onAction={() => header.column.toggleSorting(true)}>
                             <Box display="flex" alignItems="center" gap="sm">
-                              <Icon name="sortDescending" />
+                              <SortDescendingIcon flexShrink="0" />
                               <Text typography="body03">Sort descending (z-a)</Text>
                             </Box>
                           </MenuItem>
                           <MenuItem onAction={() => header.column.toggleSorting(false)}>
                             <Box display="flex" alignItems="center" gap="sm">
-                              <Icon name="sortAscending" />
+                              <SortAscendingIcon flexShrink="0" />
                               <Text typography="body03">Sort ascending (a-z)</Text>
                             </Box>
                           </MenuItem>
@@ -162,7 +184,7 @@ export const DataTableHeaderCell = forwardRef<HTMLTableCellElement, DataTableHea
                             }}
                           >
                             <Box display="flex" alignItems="center" gap="sm" w="full">
-                              <Icon name="freeze" />
+                              <FreezeIcon flexShrink="0" />
                               <Text typography="body03">Freeze column (left)</Text>
                               <Box flex="1" />
                               <Switch
@@ -178,7 +200,7 @@ export const DataTableHeaderCell = forwardRef<HTMLTableCellElement, DataTableHea
                             }}
                           >
                             <Box display="flex" alignItems="center" gap="sm" w="full">
-                              <Icon name="freeze" />
+                              <FreezeIcon flexShrink="0" />
                               <Text typography="body03">Freeze column (right)</Text>
                               <Box flex="1" />
                               <Switch
@@ -210,11 +232,4 @@ const getAriaSort = (canSort: boolean, sortDir: false | 'asc' | 'desc') => {
   if (sortDir === false) return 'none';
 
   return sortDir === 'asc' ? 'ascending' : 'descending';
-};
-
-const getSortIcon = (sortDir: false | 'asc' | 'desc'): IconProps['name'] => {
-  if (sortDir === 'asc') return 'arrowUp';
-  if (sortDir === 'desc') return 'arrowDown';
-
-  return 'sort';
 };

@@ -1,6 +1,8 @@
-import { Button, IconButton, Link } from '@orfium/ictinus';
+import { Link } from '@orfium/ictinus';
 import {
   Box,
+  Button,
+  ChevronRightIcon,
   DataTable,
   DataTableBody,
   DataTableBulkActions,
@@ -8,7 +10,9 @@ import {
   DataTableCounter,
   DataTableEditColumns,
   DataTableHeader,
-  Icon,
+  DownloadIcon,
+  FileIcon,
+  LockIcon,
   Skeleton,
   Text,
   Tooltip,
@@ -107,14 +111,16 @@ function App() {
               </Text>
               <Box display="flex" alignItems="center" justifyContent="space-between" gap="sm">
                 <Box display="inline-flex" alignItems="center" gap="sm">
-                  <Icon name="file" color="indicator.brand" />
+                  <FileIcon color="indicator.brand" />
                   <Link>
                     <Text wordBreak="break-all" lineClamp="1">
                       tmp4ftmtjcn_modified_relinquish_automation_tests.V22
                     </Text>
                   </Link>
                 </Box>
-                <IconButton type="tertiary" iconName="download" iconColor="secondary" />
+                <Button variant="tertiary" iconOnly circle>
+                  <DownloadIcon />
+                </Button>
               </Box>
             </Box>
           </Box>
@@ -127,7 +133,7 @@ function App() {
             <DataTableBulkActions>
               <Button
                 size="compact"
-                onClick={() => {
+                onPress={() => {
                   const selectedData = table.getSelectedRowModel().rows.map((row) => row.original);
                   alert(JSON.stringify(selectedData, null, 2));
                 }}
@@ -283,14 +289,11 @@ export const columns = [
   columnHelper.display({
     cell: ({ row }) =>
       row.original.locked ? (
-        <Icon name="lock" size="sm" color="secondary" />
+        <LockIcon size="sm" color="secondary" />
       ) : (
-        <IconButton
-          onClick={(evt) => evt?.stopPropagation()}
-          iconName="chevronRight"
-          size="compact"
-          type="tertiary"
-        />
+        <Button variant="tertiary" size="compact" iconOnly onPress={() => {}}>
+          <ChevronRightIcon />
+        </Button>
       ),
     id: 'action',
     size: 48,

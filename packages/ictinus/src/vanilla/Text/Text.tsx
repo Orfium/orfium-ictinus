@@ -1,6 +1,7 @@
 import { createSlot } from '@radix-ui/react-slot';
 import { type ElementType, forwardRef } from 'react';
 
+import { useSlotProps } from '../../components/utils/Slots';
 import { cn } from '../../utils/cn';
 import { type ExtendProps } from '../../utils/ExtendProps';
 import { Box, type BoxProps } from '../Box';
@@ -15,6 +16,7 @@ export type TextProps<T extends ElementType = 'span', P = unknown> = BoxProps<
 
 export const Text = forwardRef<HTMLSpanElement, TextProps>(
   ({ asChild, children, className, lineClamp, truncate, ...props }, ref) => {
+    props = useSlotProps(props, 'text');
     const Comp = asChild ? Slot : 'span';
 
     return (
