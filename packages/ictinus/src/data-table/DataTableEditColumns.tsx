@@ -1,8 +1,9 @@
 import type { VisibilityState } from '@tanstack/react-table';
 import { useMemo } from 'react';
 
-import Button from '../components/Button';
+import { Button } from '../button';
 import { Switch } from '../components/Controls';
+import { ColumnChooserIcon } from '../icons';
 import { Box } from '../vanilla/Box';
 import { Menu, MenuContent, MenuItem, MenuLabel, MenuTrigger } from '../vanilla/Menu';
 import { Text } from '../vanilla/Text';
@@ -41,8 +42,9 @@ export function DataTableEditColumns() {
   return (
     <Menu>
       <MenuTrigger>
-        <Button type="secondary" size="compact" iconLeftName="columnChooser">
-          Edit columns
+        <Button variant="secondary" size="compact">
+          <ColumnChooserIcon />
+          <Text>Edit columns</Text>
         </Button>
       </MenuTrigger>
       <MenuContent
