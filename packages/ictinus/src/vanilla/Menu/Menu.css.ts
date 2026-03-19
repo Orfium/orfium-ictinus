@@ -7,8 +7,6 @@ import { style } from '../../vanilla-extract';
 export const menu = recipe({
   base: [
     sprinkles({
-      display: 'flex',
-      flexDirection: 'column',
       typography: 'body02',
       overflowY: 'auto',
     }),
