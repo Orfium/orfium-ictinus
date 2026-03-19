@@ -20,9 +20,14 @@ const meta: Meta<typeof Menu> = {
 export default meta;
 type Story = StoryObj<typeof Menu>;
 
+const MENU_ITEMS_COUNT = 15;
+const INITIAL_SELECTED_COUNT = 5;
+
 export const Default: Story = {
   render: () => {
-    const [selected, setSelected] = useState<Selection>('all');
+    const [selected, setSelected] = useState<Selection>(
+      () => new Set(Array.from({ length: INITIAL_SELECTED_COUNT }, (_, i) => `item-${i + 1}`))
+    );
 
     return (
       <Box>
@@ -37,45 +42,26 @@ export const Default: Story = {
             selectedKeys={selected}
             onSelectionChange={setSelected}
           >
-            <MenuItem id="item-1">
-              <Box display="flex" alignItems="center" justifyContent="space-between" gap="sm">
-                <MenuLabel>
-                  <Text
-                    color={selected === 'all' || selected.has('item-1') ? 'active' : 'primary'}
-                    typography={selected === 'all' || selected.has('item-1') ? 'label02' : 'body02'}
-                  >
-                    Item 1
-                  </Text>
-                </MenuLabel>
-                <Switch isSelected={selected === 'all' || selected.has('item-1')} />
-              </Box>
-            </MenuItem>
-            <MenuItem id="item-2">
-              <Box display="flex" alignItems="center" justifyContent="space-between" gap="sm">
-                <MenuLabel>
-                  <Text
-                    color={selected === 'all' || selected.has('item-2') ? 'active' : 'primary'}
-                    typography={selected === 'all' || selected.has('item-2') ? 'label02' : 'body02'}
-                  >
-                    Item 2
-                  </Text>
-                </MenuLabel>
-                <Switch isSelected={selected === 'all' || selected.has('item-2')} />
-              </Box>
-            </MenuItem>
-            <MenuItem id="item-3">
-              <Box display="flex" alignItems="center" justifyContent="space-between" gap="sm">
-                <MenuLabel>
-                  <Text
-                    color={selected === 'all' || selected.has('item-3') ? 'active' : 'primary'}
-                    typography={selected === 'all' || selected.has('item-3') ? 'label02' : 'body02'}
-                  >
-                    Item 3
-                  </Text>
-                </MenuLabel>
-                <Switch isSelected={selected === 'all' || selected.has('item-3')} />
-              </Box>
-            </MenuItem>
+            {Array.from({ length: MENU_ITEMS_COUNT }, (_, i) => {
+              const id = `item-${i + 1}`;
+              const isSelected =
+                selected === 'all' || (selected instanceof Set && selected.has(id));
+              return (
+                <MenuItem key={id} id={id}>
+                  <Box display="flex" alignItems="center" justifyContent="space-between" gap="sm">
+                    <MenuLabel>
+                      <Text
+                        color={isSelected ? 'active' : 'primary'}
+                        typography={isSelected ? 'label02' : 'body02'}
+                      >
+                        Item {i + 1}
+                      </Text>
+                    </MenuLabel>
+                    <Switch isSelected={isSelected} />
+                  </Box>
+                </MenuItem>
+              );
+            })}
           </MenuContent>
         </Menu>
       </Box>
