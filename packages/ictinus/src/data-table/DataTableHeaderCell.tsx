@@ -97,7 +97,7 @@ export const DataTableHeaderCell = forwardRef<HTMLTableCellElement, DataTableHea
                 {header.column.columnDef.meta?.tooltip && (
                   <Tooltip>
                     <TooltipTrigger>
-                      <InformationalIcon size="xs" color="secondary" />
+                      <InformationalIcon size="xs" color="secondary" flexShrink="0" />
                     </TooltipTrigger>
                     <TooltipContent maxW="22">
                       {header.column.columnDef.meta.tooltip}
@@ -162,13 +162,13 @@ export const DataTableHeaderCell = forwardRef<HTMLTableCellElement, DataTableHea
                         <>
                           <MenuItem onAction={() => header.column.toggleSorting(true)}>
                             <Box display="flex" alignItems="center" gap="sm">
-                              <SortDescendingIcon />
+                              <SortDescendingIcon flexShrink="0" />
                               <Text typography="body03">Sort descending (z-a)</Text>
                             </Box>
                           </MenuItem>
                           <MenuItem onAction={() => header.column.toggleSorting(false)}>
                             <Box display="flex" alignItems="center" gap="sm">
-                              <SortAscendingIcon />
+                              <SortAscendingIcon flexShrink="0" />
                               <Text typography="body03">Sort ascending (a-z)</Text>
                             </Box>
                           </MenuItem>
@@ -184,7 +184,7 @@ export const DataTableHeaderCell = forwardRef<HTMLTableCellElement, DataTableHea
                             }}
                           >
                             <Box display="flex" alignItems="center" gap="sm" w="full">
-                              <FreezeIcon />
+                              <FreezeIcon flexShrink="0" />
                               <Text typography="body03">Freeze column (left)</Text>
                               <Box flex="1" />
                               <Switch
@@ -200,7 +200,7 @@ export const DataTableHeaderCell = forwardRef<HTMLTableCellElement, DataTableHea
                             }}
                           >
                             <Box display="flex" alignItems="center" gap="sm" w="full">
-                              <FreezeIcon />
+                              <FreezeIcon flexShrink="0" />
                               <Text typography="body03">Freeze column (right)</Text>
                               <Box flex="1" />
                               <Switch
