@@ -57,7 +57,7 @@ export const Default: Story = {
                         Item {i + 1}
                       </Text>
                     </MenuLabel>
-                    <Switch isSelected={isSelected} />
+                    <Switch isVisualOnly isSelected={isSelected} />
                   </Box>
                 </MenuItem>
               );

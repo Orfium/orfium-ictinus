@@ -81,7 +81,7 @@ export function DataTableEditColumns() {
                     {label}
                   </Text>
                 </MenuLabel>
-                <Switch isSelected={isSelected} isDisabled={!canHide} />
+                <Switch isVisualOnly isSelected={isSelected} isDisabled={!canHide} />
               </Box>
             </MenuItem>
           );

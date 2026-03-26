@@ -12,6 +12,11 @@
   flex-wrap: wrap;
 }
 
+.emotion-1 {
+  position: relative;
+  isolation: isolate;
+}
+
 .emotion-1 [data-disabled] {
   opacity: 50%;
   cursor: not-allowed;

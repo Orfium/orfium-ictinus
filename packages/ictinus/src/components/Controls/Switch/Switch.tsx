@@ -18,6 +18,9 @@ export type SwitchProps = Partial<SwitchAria> & {
   onChange?: (isSelected: boolean) => void;
   /** Label configuration; includes placement, size, helpText and sx */
   labelConfig?: LabelConfig;
+  /** When true, removes the switch from the accessibility tree.
+   *  Use for visual-only indicators inside other interactive elements. */
+  isVisualOnly?: boolean;
   children?: React.ReactNode;
 } & TestProps;
 
@@ -27,6 +30,7 @@ const Switch = React.forwardRef<HTMLLabelElement, SwitchProps>((props, ref) => {
     value,
     isSelected,
     isDisabled,
+    isVisualOnly,
     onChange,
     labelConfig = {},
     dataTestPrefixId = 'ictinus',
@@ -45,6 +49,9 @@ const Switch = React.forwardRef<HTMLLabelElement, SwitchProps>((props, ref) => {
         css={switchStyles({ placement })}
         data-testid={`${dataTestPrefixId}${value ? `_${value}` : ''}_switch`}
         ref={ref}
+        excludeFromTabOrder={isVisualOnly}
+        aria-hidden={isVisualOnly || undefined}
+        style={isVisualOnly ? { pointerEvents: 'none' } : undefined}
       >
         <Box
           display="flex"

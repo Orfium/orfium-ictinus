@@ -18,6 +18,9 @@ const CONTROLS_HEIGHTS = {
 export const switchWrapperStyles =
   ({ sx }: { sx?: CSSObject }) =>
   (theme: Theme): SerializedStyles => css`
+    position: relative;
+    isolation: isolate;
+
     [data-disabled] {
       opacity: ${theme.tokens.disabledState.get('default')};
       cursor: not-allowed;
