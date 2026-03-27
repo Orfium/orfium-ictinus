@@ -58,7 +58,9 @@ const PopoverContent = ({
               </svg>
             </OverlayArrow>
           )}
-          {typeof children === 'function' ? children(values) : children}
+          <div data-slot="popover-inner" style={{ maxHeight: 'inherit', overflowY: 'auto' }}>
+            {typeof children === 'function' ? children(values) : children}
+          </div>
         </>
       )}
     </PopoverPrimitive>

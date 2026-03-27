@@ -24,6 +24,7 @@ export const menu = recipe({
 export const item = recipe({
   base: [
     sprinkles({
+      position: 'relative',
       px: 'md',
       py: 'lg',
       cursor: 'pointer',
