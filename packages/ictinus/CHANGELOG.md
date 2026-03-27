@@ -1,5 +1,11 @@
 # @orfium/ictinus
 
+## 5.44.1
+
+### Patch Changes
+
+- 624c8c8: correct switch positioning styles
+
 ## 5.44.0
 
 ### Minor Changes
