@@ -2,10 +2,43 @@
 alwaysApply: true
 ---
 
+# Ictinus Component Priority Rules
+
+## Component Usage Hierarchy
+
+- Orfium Ictinus is the primary design system for React in this project.
+- The JS package is `@orfium/ictinus` for web React apps.
+- ALWAYS prioritize Ictinus components over ANY other UI components when an Ictinus equivalent exists. For web this includes any HTML native elements.
+- NEVER suggest using alternative UI libraries or components without first confirming an Ictinus component doesn't exist for the use case.
+- ALWAYS use Ictinus components even if other local components or screens in the codebase are not currently using them - the goal is to standardize on Ictinus.
+
+## Component Research Order
+
+1. FIRST check if there's an Ictinus component that satisfies the requirement - this is MANDATORY.
+2. ONLY if neither Ictinus components work, suggest custom implementations.
+
 ## Documentation Location
 
-- ALWAYS use the ictinus mcp server's list-ictinus-routes mcp tool to list all ictinus routes before trying to use a component.
-- ALWAYS inspect the documentation for a component with the get-ictinus-doc mcp tool before using it to understand how to import and how to use it.
+- ALWAYS use the ictinus mcp server's list-ictinus-routes mcp tool to list all Ictinus routes before trying to use a component.
+- ALWAYS inspect the documentation for a component with the get-ictinus-route mcp tool before using it to understand how to import and how to use it.
 - ALWAYS check examples in the documentation before implementing.
 - THOROUGHLY read all relevant documentation before making component suggestions.
 - CAREFULLY review the component APIs, props, and usage examples in the documentation.
+
+## Implementation Guidelines
+
+- MAINTAIN consistent styling and behavior with existing Ictinus implementations in the codebase.
+- FOLLOW Ictinus-specific theming and styling patterns.
+- RESPECT Ictinus component hierarchy and composition patterns.
+- DO NOT mix Ictinus and non-Ictinus component styling approaches unless absolutely necessary.
+
+## When Suggesting Code
+
+- ALWAYS import from @orfium/ictinus or @orfium/ictinus/vanilla for web explicitly.
+- INCLUDE complete imports in your code examples.
+- DEMONSTRATE proper usage of Ictinus theming and styling.
+- SHOW prop usage according to Ictinus documentation.
+
+## Lint Errors
+
+- If there's a lint error, do not discard other components that don't have lint errors.
