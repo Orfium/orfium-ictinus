@@ -1,9 +1,9 @@
-name: Teardown review env
+name: Teardown Review
 on:
   pull_request:
     types: [closed]
 
-concurrency: 
+concurrency:
   group: ${{ github.ref }}
   cancel-in-progress: false
 
@@ -13,9 +13,68 @@ permissions:
   issues: write
   pull-requests: write
   id-token: write
+  deployments: write
 
 jobs:
   delete-review-app:
-    uses: Orfium/orfium-github-actions/.github/workflows/teardown-frontend.yml@master
-    secrets:
-      REVIEW_TEARDOWN_TOKEN: ${{ secrets.REVIEW_TEARDOWN_TOKEN }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 #v6.0.1
+      - name: Setup configuration
+        id: config
+        run: |
+          set -o allexport
+          # Load optional common configuration
+          if [ -f environments/common.env ]; then
+              source environments/common.env
+          fi
+          source environments/review.env
+          STACKNAME=${PRODUCT}-pr-${{ github.event.pull_request.number }}
+          echo "stackname=$STACKNAME" >> "$GITHUB_OUTPUT"
+          echo "cd_role=$CD_ROLE" >> "$GITHUB_OUTPUT"
+
+      - name: Delete deployment environment
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd #v.8.0.0
+        with:
+          script: |
+            const environment = `review-${context.payload.pull_request.number}`;
+            const { owner, repo } = context.repo;
+
+            const { data: deployments } = await github.rest.repos.listDeployments({
+              owner,
+              repo,
+              environment,
+            });
+
+            for (const deployment of deployments) {
+              await github.rest.repos.createDeploymentStatus({
+                owner,
+                repo,
+                deployment_id: deployment.id,
+                state: 'inactive',
+              });
+              await github.rest.repos.deleteDeployment({
+                owner,
+                repo,
+                deployment_id: deployment.id,
+              });
+            }
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@61815dcd50bd041e203e49132bacad1fd04d2708 #v5.1.1
+        with:
+          role-to-assume: ${{ steps.config.outputs.cd_role }}
+          aws-region: 'us-east-1'
+
+      - name: Delete Cloudformation stack, S3 files and S3 bucket
+        run: |
+          STACKNAME=${{ steps.config.outputs.stackname }}
+          if aws cloudformation describe-stacks --stack-name $STACKNAME; then
+            # We want to use literal backticks in "--query", not trying to expand to something else
+            # shellcheck disable=SC2016
+            S3_BUCKET_NAME=$(aws cloudformation describe-stacks --stack-name "$STACKNAME" --query 'Stacks[0].Outputs[?OutputKey==`S3BucketName`].OutputValue' --output text)
+            aws cloudformation delete-stack --stack-name "$STACKNAME"
+            aws s3 rb "s3://$S3_BUCKET_NAME" --force
+          else
+            echo "Stack $STACKNAME  does not exist. Skipping deletion"
+          fi
