@@ -60,12 +60,6 @@ jobs:
               });
             }
 
-            await github.rest.repos.deleteAnEnvironment({
-              owner,
-              repo,
-              environment_name: environment,
-            });
-
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@61815dcd50bd041e203e49132bacad1fd04d2708 #v5.1.1
         with:
