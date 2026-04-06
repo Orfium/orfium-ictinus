@@ -36,6 +36,7 @@ jobs:
       - name: Delete deployment environment
         uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd #v.8.0.0
         with:
+          github-token: ${{ secrets.REVIEW_TEARDOWN_TOKEN }}
           script: |
             const environment = `review-${context.payload.pull_request.number}`;
             const { owner, repo } = context.repo;
@@ -60,6 +61,11 @@ jobs:
               });
             }
 
+            await github.rest.repos.deleteAnEnvironment({
+              owner,
+              repo,
+              environment_name: environment,
+            });
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@61815dcd50bd041e203e49132bacad1fd04d2708 #v5.1.1
         with:
