@@ -1,5 +1,11 @@
 # @orfium/ictinus
 
+## 5.44.2
+
+### Patch Changes
+
+- 643680f: data table test ids
+
 ## 5.44.1
 
 ### Patch Changes
