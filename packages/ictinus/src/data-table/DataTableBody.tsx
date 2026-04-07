@@ -149,9 +149,10 @@ export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
         >
           <TableHeader display="grid" pinned>
             {table.getHeaderGroups().map((headerGroup) => (
-              <TableRow display="flex" key={headerGroup.id}>
+              <TableRow data-header-group={headerGroup.id} display="flex" key={headerGroup.id}>
                 {headerGroup.headers.map((header) => (
                   <DataTableHeaderCell
+                    data-col-id={header.column.id}
                     justifyContent={header.column.columnDef.meta?.align}
                     bordered={bordered}
                     header={header}
@@ -214,6 +215,7 @@ export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
 
               return (
                 <DataTableRow
+                  data-row-index={virtualRow?.index ?? index}
                   data-index={virtualRow?.index}
                   display="flex"
                   key={row.id}
@@ -231,6 +233,7 @@ export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
                 >
                   {row.getLeftVisibleCells().map((cell) => (
                     <TableCell
+                      data-col-id={cell.column.id}
                       bordered={bordered}
                       size={size}
                       justifyContent={cell.column.columnDef.meta?.align}
@@ -269,6 +272,7 @@ export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
                     : row.getCenterVisibleCells()
                   ).map((cell) => (
                     <TableCell
+                      data-col-id={cell.column.id}
                       key={cell.id}
                       size={size}
                       bordered={bordered}
@@ -293,6 +297,7 @@ export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
 
                   {row.getRightVisibleCells().map((cell) => (
                     <TableCell
+                      data-col-id={cell.column.id}
                       key={cell.id}
                       size={size}
                       bordered={bordered}
