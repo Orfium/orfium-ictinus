@@ -423,3 +423,76 @@ describe('DataTable integration', () => {
     expect(screen.getByText('Alice')).toBeInTheDocument();
   });
 });
+
+describe('DataTableBody data attributes', () => {
+  it('renders data-col-id on headers and cells, and data-row-index on rows', () => {
+    render(
+      <DataTableFixture>
+        <DataTableBody />
+      </DataTableFixture>
+    );
+
+    const headers = screen.getAllByRole('columnheader');
+    expect(headers[0]).toHaveAttribute('data-col-id', 'firstName');
+    expect(headers[1]).toHaveAttribute('data-col-id', 'lastName');
+    expect(headers[2]).toHaveAttribute('data-col-id', 'age');
+
+    expect(document.querySelector('th[data-col-id="firstName"]')).toHaveTextContent('First Name');
+    expect(document.querySelector('th[data-col-id="age"]')).toHaveTextContent('Age');
+
+    const rows = screen.getAllByRole('row').filter((row) => row.hasAttribute('data-row-index'));
+    expect(rows).toHaveLength(3);
+    expect(rows[0]).toHaveAttribute('data-row-index', '0');
+    expect(rows[1]).toHaveAttribute('data-row-index', '1');
+    expect(rows[2]).toHaveAttribute('data-row-index', '2');
+
+    const firstRow = rows[0];
+    const cells = firstRow.querySelectorAll('td');
+    expect(cells[0]).toHaveAttribute('data-col-id', 'firstName');
+    expect(cells[1]).toHaveAttribute('data-col-id', 'lastName');
+    expect(cells[2]).toHaveAttribute('data-col-id', 'age');
+
+    const aliceAge = document.querySelector('tr[data-row-index="0"] td[data-col-id="age"]');
+    expect(aliceAge).toHaveTextContent('25');
+
+    const charlieLastName = document.querySelector(
+      'tr[data-row-index="2"] td[data-col-id="lastName"]'
+    );
+    expect(charlieLastName).toHaveTextContent('Brown');
+  });
+
+  it('preserves data-col-id on headers and cells after hiding a column', async () => {
+    const user = userEvent.setup();
+
+    render(
+      <DataTableFixture>
+        <DataTableHeader>
+          <DataTableEditColumns />
+        </DataTableHeader>
+        <DataTableBody />
+      </DataTableFixture>
+    );
+
+    expect(document.querySelector('th[data-col-id="lastName"]')).toHaveTextContent('Last Name');
+    expect(
+      document.querySelector('tr[data-row-index="0"] td[data-col-id="age"]')
+    ).toHaveTextContent('25');
+
+    await user.click(screen.getByRole('button', { name: 'Edit columns' }));
+    await user.click(screen.getByRole('menuitemcheckbox', { name: 'Last Name' }));
+
+    expect(document.querySelector('th[data-col-id="lastName"]')).toBeNull();
+    expect(document.querySelector('tr[data-row-index="0"] td[data-col-id="lastName"]')).toBeNull();
+
+    expect(document.querySelector('th[data-col-id="firstName"]')).toHaveTextContent('First Name');
+    expect(document.querySelector('th[data-col-id="age"]')).toHaveTextContent('Age');
+
+    expect(
+      document.querySelector('tr[data-row-index="0"] td[data-col-id="age"]')
+    ).toHaveTextContent('25');
+
+    expect(
+      document.querySelector('tr[data-row-index="0"] td[data-col-id="firstName"]')
+    ).toHaveTextContent('Alice');
+  });
+});
