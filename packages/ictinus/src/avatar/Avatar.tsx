@@ -73,8 +73,10 @@ export const Avatar = forwardRef<HTMLDivElement, AvatarProps>(
     const getAccessibleLabel = () => {
       if (ariaLabel) return ariaLabel;
       if (alt) return alt;
+
+      // Base label on what content is actually displayed
+      if (src && !imageError) return 'User avatar';
       if (initials) return `Avatar with initials ${initials}`;
-      if (src) return 'User avatar';
 
       return 'User avatar';
     };
