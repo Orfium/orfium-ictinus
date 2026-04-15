@@ -37,31 +37,39 @@ jobs:
             const environment = `review-${context.payload.pull_request.number}`;
             const { owner, repo } = context.repo;
 
-            const { data: deployments } = await github.rest.repos.listDeployments({
-              owner,
-              repo,
-              environment,
-            });
+            try {
+              const { data: deployments } = await github.rest.repos.listDeployments({
+                owner,
+                repo,
+                environment,
+              });
 
-            for (const deployment of deployments) {
-              await github.rest.repos.createDeploymentStatus({
+              for (const deployment of deployments) {
+                await github.rest.repos.createDeploymentStatus({
+                  owner,
+                  repo,
+                  deployment_id: deployment.id,
+                  state: 'inactive',
+                });
+                await github.rest.repos.deleteDeployment({
+                  owner,
+                  repo,
+                  deployment_id: deployment.id,
+                });
+              }
+
+              await github.rest.repos.deleteAnEnvironment({
                 owner,
                 repo,
-                deployment_id: deployment.id,
-                state: 'inactive',
+                environment_name: environment,
               });
-              await github.rest.repos.deleteDeployment({
-                owner,
-                repo,
-                deployment_id: deployment.id,
-              });
+            } catch (error) {
+              if (error.status === 404) {
+                console.log(`Environment "${environment}" not found, skipping cleanup`);
+              } else {
+                throw error;
+              }
             }
-
-            await github.rest.repos.deleteAnEnvironment({
-              owner,
-              repo,
-              environment_name: environment,
-            });
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@61815dcd50bd041e203e49132bacad1fd04d2708 #v5.1.1
