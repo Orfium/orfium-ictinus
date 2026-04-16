@@ -18,7 +18,7 @@ export const AvatarGroup = forwardRef<HTMLDivElement, AvatarGroupProps>(
 
     return (
       <Box asChild {...restProps}>
-        <div ref={domRef} className={cn(styles.avatarGroup({ size }), props.className)}>
+        <div ref={domRef} className={cn(styles.avatarGroup({}), props.className)}>
           <SlotProvider slots={{ avatar: { size } }}>{children}</SlotProvider>
         </div>
       </Box>

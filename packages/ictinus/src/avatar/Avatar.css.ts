@@ -1,7 +1,9 @@
 import { vars } from '@orfium/tokens';
 import { recipe, type RecipeVariants } from '@vanilla-extract/recipes';
+
 import { sprinkles } from '../sprinkles';
 import { style } from '../vanilla-extract';
+import * as groupStyles from './AvatarGroup.css';
 
 export const avatar = recipe({
   base: [
@@ -75,6 +77,13 @@ export const avatar = recipe({
           lineHeight: '1',
           letterSpacing: '1',
         }),
+        style({
+          selectors: {
+            [`${groupStyles.className} &:not(:first-child)`]: {
+              marginLeft: '-2px',
+            },
+          },
+        }),
       ],
       '2': [
         sprinkles({
@@ -83,6 +92,13 @@ export const avatar = recipe({
           fontSize: '2',
           lineHeight: '3',
           letterSpacing: '2',
+        }),
+        style({
+          selectors: {
+            [`${groupStyles.className} &:not(:first-child)`]: {
+              marginLeft: '-4px',
+            },
+          },
         }),
       ],
       '3': [
@@ -93,6 +109,13 @@ export const avatar = recipe({
           lineHeight: '4',
           letterSpacing: '2',
         }),
+        style({
+          selectors: {
+            [`${groupStyles.className} &:not(:first-child)`]: {
+              marginLeft: '-6px',
+            },
+          },
+        }),
       ],
       '4': [
         sprinkles({
@@ -101,6 +124,13 @@ export const avatar = recipe({
           fontSize: '4',
           lineHeight: '5',
           letterSpacing: '1',
+        }),
+        style({
+          selectors: {
+            [`${groupStyles.className} &:not(:first-child)`]: {
+              marginLeft: '-8px',
+            },
+          },
         }),
       ],
       '5': [
@@ -111,6 +141,13 @@ export const avatar = recipe({
           lineHeight: '8',
           letterSpacing: '0',
         }),
+        style({
+          selectors: {
+            [`${groupStyles.className} &:not(:first-child)`]: {
+              marginLeft: '-12px',
+            },
+          },
+        }),
       ],
       '6': [
         sprinkles({
@@ -119,6 +156,13 @@ export const avatar = recipe({
           fontSize: '10',
           lineHeight: '10',
           letterSpacing: '0',
+        }),
+        style({
+          selectors: {
+            [`${groupStyles.className} &:not(:first-child)`]: {
+              marginLeft: '-16px',
+            },
+          },
         }),
       ],
     },
