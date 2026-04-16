@@ -14,10 +14,10 @@ export const Basic: Story = {
   render: () => (
     <Box display="flex" flexDirection="column" gap="2xl">
       <Box display="flex" gap="md" alignItems="center">
-        <AvatarGroup>
-          <Avatar initials="JD" color="blue" />
-          <Avatar initials="SM" color="red" />
-          <Avatar initials="AL" color="purple" />
+        <AvatarGroup size="1">
+          <Avatar initials="JD" colorScheme="blue" />
+          <Avatar initials="SM" colorScheme="red" />
+          <Avatar initials="AL" colorScheme="purple" />
         </AvatarGroup>
       </Box>
     </Box>
@@ -28,21 +28,21 @@ export const WithOverflow: Story = {
   render: () => (
     <Box display="flex" flexDirection="column" gap="2xl">
       <Box display="flex" gap="md" alignItems="center">
-        <AvatarGroup maxAvatars={3}>
-          <Avatar initials="JD" color="blue" />
-          <Avatar initials="SM" color="red" />
-          <Avatar initials="AL" color="purple" />
-          <Avatar initials="MK" color="teal" />
-          <Avatar initials="RB" color="orange" />
+        <AvatarGroup size="3">
+          <Avatar initials="JD" colorScheme="blue" />
+          <Avatar initials="SM" colorScheme="red" />
+          <Avatar initials="AL" colorScheme="purple" />
+          <Avatar initials="MK" colorScheme="teal" />
+          <Avatar initials="+3" colorScheme="orange" />
         </AvatarGroup>
       </Box>
       <Box display="flex" gap="md" alignItems="center">
-        <AvatarGroup maxAvatars={2} color="orange">
-          <Avatar initials="JD" color="blue" />
-          <Avatar initials="SM" color="red" />
-          <Avatar initials="AL" color="purple" />
-          <Avatar initials="MK" color="teal" />
-          <Avatar initials="RB" color="orange" />
+        <AvatarGroup size="4">
+          <Avatar initials="JD" colorScheme="blue" />
+          <Avatar initials="SM" colorScheme="red" />
+          <Avatar initials="AL" colorScheme="purple" />
+          <Avatar initials="MK" colorScheme="teal" />
+          <Avatar initials="+4" colorScheme="orange" />
         </AvatarGroup>
       </Box>
     </Box>
@@ -53,25 +53,25 @@ export const Sizes: Story = {
   render: () => (
     <Box display="flex" flexDirection="column" gap="2xl">
       <Box display="flex" gap="md" alignItems="center">
-        <AvatarGroup size="1" maxAvatars={3}>
+        <AvatarGroup size="1">
           <Avatar initials="JD" />
           <Avatar initials="SM" />
           <Avatar initials="AL" />
           <Avatar initials="MK" />
         </AvatarGroup>
-        <AvatarGroup size="2" maxAvatars={3}>
+        <AvatarGroup size="2">
           <Avatar initials="JD" />
           <Avatar initials="SM" />
           <Avatar initials="AL" />
           <Avatar initials="MK" />
         </AvatarGroup>
-        <AvatarGroup size="3" maxAvatars={3}>
+        <AvatarGroup size="3">
           <Avatar initials="JD" />
           <Avatar initials="SM" />
           <Avatar initials="AL" />
           <Avatar initials="MK" />
         </AvatarGroup>
-        <AvatarGroup size="4" maxAvatars={3}>
+        <AvatarGroup size="4">
           <Avatar initials="JD" />
           <Avatar initials="SM" />
           <Avatar initials="AL" />
@@ -79,13 +79,13 @@ export const Sizes: Story = {
         </AvatarGroup>
       </Box>
       <Box display="flex" gap="md" alignItems="center">
-        <AvatarGroup size="5" maxAvatars={3}>
+        <AvatarGroup size="5">
           <Avatar initials="JD" />
           <Avatar initials="SM" />
           <Avatar initials="AL" />
           <Avatar initials="MK" />
         </AvatarGroup>
-        <AvatarGroup size="6" maxAvatars={3}>
+        <AvatarGroup size="6">
           <Avatar initials="JD" />
           <Avatar initials="SM" />
           <Avatar initials="AL" />
@@ -100,7 +100,7 @@ export const WithImages: Story = {
   render: () => (
     <Box display="flex" flexDirection="column" gap="2xl">
       <Box display="flex" gap="md" alignItems="center">
-        <AvatarGroup size="3" maxAvatars={4}>
+        <AvatarGroup size="3">
           <Avatar
             src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=48&h=48&fit=crop&crop=face"
             alt="John Doe"
@@ -131,14 +131,14 @@ export const Mixed: Story = {
   render: () => (
     <Box display="flex" flexDirection="column" gap="2xl">
       <Box display="flex" gap="md" alignItems="center">
-        <AvatarGroup size="3" maxAvatars={3} color="purple">
+        <AvatarGroup size="3">
           <Avatar
             src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=48&h=48&fit=crop&crop=face"
             alt="John Doe"
           />
-          <Avatar initials="SM" color="red" />
-          <Avatar color="teal" />
-          <Avatar initials="MK" color="orange" />
+          <Avatar initials="SM" colorScheme="red" />
+          <Avatar colorScheme="teal" />
+          <Avatar initials="MK" colorScheme="orange" />
         </AvatarGroup>
       </Box>
     </Box>

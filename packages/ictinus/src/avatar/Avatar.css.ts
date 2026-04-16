@@ -17,12 +17,9 @@ export const avatar = recipe({
       overflow: 'hidden',
       userSelect: 'none',
     }),
-    style({
-      boxSizing: 'border-box',
-    }),
   ],
   variants: {
-    color: {
+    colorScheme: {
       blue: [
         sprinkles({
           bg: 'palette.primary-alt',
@@ -74,72 +71,60 @@ export const avatar = recipe({
         sprinkles({
           w: '5',
           h: '5',
-        }),
-        style({
-          fontSize: vars['font-size']['1'],
-          lineHeight: vars['line-height']['1'],
-          letterSpacing: vars['letter-spacing']['1'],
+          fontSize: '1',
+          lineHeight: '1',
+          letterSpacing: '1',
         }),
       ],
       '2': [
         sprinkles({
           w: '6',
           h: '6',
-        }),
-        style({
-          fontSize: vars['font-size']['2'],
-          lineHeight: vars['line-height']['3'],
-          letterSpacing: vars['letter-spacing']['2'],
+          fontSize: '2',
+          lineHeight: '3',
+          letterSpacing: '2',
         }),
       ],
       '3': [
         sprinkles({
           w: '8',
           h: '8',
-        }),
-        style({
-          fontSize: vars['font-size']['3'],
-          lineHeight: vars['line-height']['4'],
-          letterSpacing: vars['letter-spacing']['2'],
+          fontSize: '3',
+          lineHeight: '4',
+          letterSpacing: '2',
         }),
       ],
       '4': [
         sprinkles({
           w: '12',
           h: '12',
-        }),
-        style({
-          fontSize: vars['font-size']['4'],
-          lineHeight: vars['line-height']['5'],
-          letterSpacing: vars['letter-spacing']['1'],
+          fontSize: '4',
+          lineHeight: '5',
+          letterSpacing: '1',
         }),
       ],
       '5': [
         sprinkles({
           w: '15',
           h: '15',
-        }),
-        style({
-          fontSize: vars['font-size']['8'],
-          lineHeight: vars['line-height']['8'],
-          letterSpacing: vars['letter-spacing']['0'],
+          fontSize: '8',
+          lineHeight: '8',
+          letterSpacing: '0',
         }),
       ],
       '6': [
         sprinkles({
           w: '18',
           h: '18',
-        }),
-        style({
-          fontSize: vars['font-size']['10'],
-          lineHeight: vars['line-height']['10'],
-          letterSpacing: vars['letter-spacing']['0'],
+          fontSize: '10',
+          lineHeight: '10',
+          letterSpacing: '0',
         }),
       ],
     },
   },
   defaultVariants: {
-    color: 'blue',
+    colorScheme: 'blue',
     size: '1',
   },
 });
@@ -147,10 +132,8 @@ export const avatar = recipe({
 export const image = style([
   sprinkles({
     borderRadius: '7',
-  }),
-  style({
-    width: '100%',
-    height: '100%',
+    width: 'full',
+    height: 'full',
     objectFit: 'cover',
   }),
 ]);
