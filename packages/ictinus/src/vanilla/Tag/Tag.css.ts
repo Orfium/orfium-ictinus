@@ -35,9 +35,8 @@ export const tag = recipe({
     sprinkles({
       display: 'inline-flex',
       alignItems: 'center',
-      gap: 'xs',
       py: '2',
-      typography: 'body03',
+      gap: 'xs',
       cursor: 'default',
       userSelect: 'none',
       borderStyle: 'solid',
@@ -108,7 +107,6 @@ export const tag = recipe({
     },
   },
   compoundVariants: [
-    // Read-only tag styles (interactive: false)
     {
       variants: { interactive: false, color: 'neutral' },
       style: [
@@ -169,42 +167,6 @@ export const tag = recipe({
         }),
       ],
     },
-    // Interactive tag styles (interactive: true) - only neutral colors with interaction states
-    // {
-    //   variants: { interactive: true },
-    //   style: [
-    //     sprinkles({
-    //       backgroundColor: 'default',
-    //       borderColor: 'decorative.default',
-    //       color: 'active',
-    //     }),
-    //     style({
-    //       cursor: 'pointer',
-
-    //       selectors: {
-    //         '&[data-selected]': {
-    //           backgroundColor: vars.color.palette.primary.base,
-    //           borderColor: vars.color.palette.primary.base,
-    //           color: vars.color.text.inverted.primary,
-    //         },
-    //         '&[data-focused]': {
-    //           boxShadow: `0 0 0 2px ${vars.color['border-color'].interactive.focused}`,
-    //         },
-    //         '&[data-hovered]:not([data-selected])': {
-    //           backgroundColor: vars.color.background.alt,
-    //           borderColor: vars.color['border-color'].interactive.default,
-    //         },
-    //         '&[data-pressed]:not([data-selected])': {
-    //           backgroundColor: vars.color.palette.primary.muted,
-    //         },
-    //         '&[data-disabled]': {
-    //           opacity: '0.5',
-    //           cursor: 'not-allowed',
-    //         },
-    //       },
-    //     }),
-    //   ],
-    // },
   ],
   defaultVariants: {
     size: 'normal',
@@ -250,14 +212,17 @@ export const text = recipe({
   variants: {
     size: {
       normal: sprinkles({
-        px: 'xs',
+        // px: 'xs',
         typography: 'label02',
       }),
       small: sprinkles({
-        px: 'xs',
+        // px: 'xs',
         typography: 'label03',
       }),
     },
+  },
+  defaultVariants: {
+    size: 'normal',
   },
 });
 

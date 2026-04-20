@@ -1,4 +1,12 @@
-import { Box, Tag, TagGroup, TagList, TagRemoveButton } from '@orfium/ictinus/vanilla';
+import {
+  BookmarkIcon,
+  Box,
+  Tag,
+  TagGroup,
+  TagList,
+  TagRemoveButton,
+  Text,
+} from '@orfium/ictinus/vanilla';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import React from 'react';
 
@@ -43,48 +51,34 @@ export const ReadOnlyTags: Story = {
   ),
 };
 
-export const SizesAndColors: Story = {
-  name: 'Tag Sizes',
+export const ReadOnlyTagsWithIcons: Story = {
+  name: 'Read-only Tags with Icons',
   render: () => (
-    <Box display="flex" flexDirection="column" gap="xl" padding="lg">
-      <TagGroup size="small">
+    <Box display="flex" flexDirection="column" gap="lg" padding="lg">
+      <TagGroup>
         <TagList>
-          <Tag id="default">Small</Tag>
+          <Tag id="default">
+            <BookmarkIcon /> <Text>Default</Text>
+          </Tag>
           <Tag id="blue" color="blue">
-            Small
+            <BookmarkIcon />
+            <Text>Blue</Text>
           </Tag>
           <Tag id="red" color="red">
-            Small
+            <BookmarkIcon />
+            <Text>Red</Text>
           </Tag>
           <Tag id="purple" color="purple">
-            Small
+            <BookmarkIcon />
+            <Text>Purple</Text>
           </Tag>
           <Tag id="teal" color="teal">
-            Small
+            <BookmarkIcon />
+            <Text>Teal</Text>
           </Tag>
           <Tag id="orange" color="orange">
-            Small
-          </Tag>
-        </TagList>
-      </TagGroup>
-
-      <TagGroup size="normal">
-        <TagList>
-          <Tag id="default">Normal</Tag>
-          <Tag id="blue" color="blue">
-            Normal
-          </Tag>
-          <Tag id="red" color="red">
-            Normal
-          </Tag>
-          <Tag id="purple" color="purple">
-            Normal
-          </Tag>
-          <Tag id="teal" color="teal">
-            Normal
-          </Tag>
-          <Tag id="orange" color="orange">
-            Normal
+            <BookmarkIcon />
+            <Text>Orange</Text>
           </Tag>
         </TagList>
       </TagGroup>
@@ -92,8 +86,213 @@ export const SizesAndColors: Story = {
   ),
 };
 
-export const SelectableTags: Story = {
-  name: 'Selectable Tags',
+export const SizesAndColors: Story = {
+  name: 'Tag Sizes',
+  render() {
+    function TagSizesExample() {
+      const [selectedKeysSmall, setSelectedKeysSmall] = React.useState<Set<string>>(new Set());
+      const [selectedKeysNormal, setSelectedKeysNormal] = React.useState<Set<string>>(new Set());
+      const [removableTagsSmall, setRemovableTagsSmall] = React.useState([
+        { id: 'small-remove1', label: 'Small' },
+        { id: 'small-remove2', label: 'Small' },
+      ]);
+      const [removableTagsNormal, setRemovableTagsNormal] = React.useState([
+        { id: 'normal-remove1', label: 'Normal' },
+        { id: 'normal-remove2', label: 'Normal' },
+      ]);
+
+      const handleRemoveSmall = (tagId: string) => {
+        setRemovableTagsSmall((prev) => prev.filter((tag) => tag.id !== tagId));
+      };
+
+      const handleRemoveNormal = (tagId: string) => {
+        setRemovableTagsNormal((prev) => prev.filter((tag) => tag.id !== tagId));
+      };
+
+      return (
+        <Box display="flex" flexDirection="column" gap="xl" padding="lg">
+          {/* Read-only */}
+          <Box display="flex" flexDirection="column" gap="lg">
+            <Text typography="headline04">Read-only</Text>
+            <Box display="flex" flexDirection="column" gap="md">
+              <TagGroup size="small">
+                <TagList>
+                  <Tag id="small-default">Small</Tag>
+                  <Tag id="small-blue" color="blue">
+                    Small
+                  </Tag>
+                  <Tag id="small-red" color="red">
+                    Small
+                  </Tag>
+                </TagList>
+              </TagGroup>
+              <TagGroup size="normal">
+                <TagList>
+                  <Tag id="normal-default">Normal</Tag>
+                  <Tag id="normal-blue" color="blue">
+                    Normal
+                  </Tag>
+                  <Tag id="normal-red" color="red">
+                    Normal
+                  </Tag>
+                </TagList>
+              </TagGroup>
+            </Box>
+          </Box>
+
+          {/* Read-only with Icons */}
+          <Box display="flex" flexDirection="column" gap="lg">
+            <Text typography="headline04">Read-only with Icons</Text>
+            <Box display="flex" flexDirection="column" gap="md">
+              <TagGroup size="small">
+                <TagList>
+                  <Tag id="small-icon-default">
+                    <BookmarkIcon />
+                    <Text>Small</Text>
+                  </Tag>
+                  <Tag id="small-icon-blue" color="blue">
+                    <BookmarkIcon />
+                    <Text>Small</Text>
+                  </Tag>
+                  <Tag id="small-icon-red" color="red">
+                    <BookmarkIcon />
+                    <Text>Small</Text>
+                  </Tag>
+                </TagList>
+              </TagGroup>
+              <TagGroup size="normal">
+                <TagList>
+                  <Tag id="normal-icon-default">
+                    <BookmarkIcon />
+                    <Text>Normal</Text>
+                  </Tag>
+                  <Tag id="normal-icon-blue" color="blue">
+                    <BookmarkIcon />
+                    <Text>Normal</Text>
+                  </Tag>
+                  <Tag id="normal-icon-red" color="red">
+                    <BookmarkIcon />
+                    Normal
+                  </Tag>
+                </TagList>
+              </TagGroup>
+            </Box>
+          </Box>
+
+          {/* Selectable */}
+          <Box display="flex" flexDirection="column" gap="lg">
+            <Text typography="headline04">Selectable</Text>
+            <Box display="flex" flexDirection="column" gap="md">
+              <TagGroup
+                size="small"
+                selectionMode="multiple"
+                selectedKeys={selectedKeysSmall}
+                onSelectionChange={(keys) =>
+                  setSelectedKeysSmall(new Set(Array.from(keys).map(String)))
+                }
+              >
+                <TagList>
+                  <Tag id="small-select1">Small</Tag>
+                </TagList>
+              </TagGroup>
+              <TagGroup
+                size="normal"
+                selectionMode="multiple"
+                selectedKeys={selectedKeysNormal}
+                onSelectionChange={(keys) =>
+                  setSelectedKeysNormal(new Set(Array.from(keys).map(String)))
+                }
+              >
+                <TagList>
+                  <Tag id="normal-select1">Normal</Tag>
+                </TagList>
+              </TagGroup>
+            </Box>
+          </Box>
+
+          {/* Clearable */}
+          <Box display="flex" flexDirection="column" gap="lg">
+            <Text typography="headline04">Clearable</Text>
+            <Box display="flex" flexDirection="column" gap="md">
+              <TagGroup
+                size="small"
+                onRemove={(keys) => {
+                  const keysArray = Array.from(keys);
+                  keysArray.forEach((key) => handleRemoveSmall(key as string));
+                }}
+              >
+                <TagList>
+                  {removableTagsSmall.map((tag) => (
+                    <Tag key={tag.id} id={tag.id}>
+                      <Text>{tag.label}</Text>
+                      <TagRemoveButton />
+                    </Tag>
+                  ))}
+                </TagList>
+              </TagGroup>
+              <TagGroup
+                size="normal"
+                onRemove={(keys) => {
+                  const keysArray = Array.from(keys);
+                  keysArray.forEach((key) => handleRemoveNormal(key as string));
+                }}
+              >
+                <TagList>
+                  {removableTagsNormal.map((tag) => (
+                    <Tag key={tag.id} id={tag.id}>
+                      <Text>{tag.label}</Text>
+                      <TagRemoveButton />
+                    </Tag>
+                  ))}
+                </TagList>
+              </TagGroup>
+            </Box>
+          </Box>
+        </Box>
+      );
+    }
+
+    return <TagSizesExample />;
+  },
+};
+
+export const SelectableTagsSingle: Story = {
+  name: 'Selectable Tags - Single Selection',
+  render() {
+    function SelectableTagsExample() {
+      const [selectedKey, setSelectedKey] = React.useState<string>('');
+
+      return (
+        <Box display="flex" flexDirection="column" gap="lg" padding="lg">
+          <TagGroup
+            selectionMode="single"
+            selectedKeys={selectedKey ? new Set([selectedKey]) : new Set()}
+            onSelectionChange={(keys) => {
+              const keysArray = Array.from(keys);
+              setSelectedKey(keysArray.length > 0 ? String(keysArray[0]) : '');
+            }}
+          >
+            <TagList>
+              <Tag id="frontend">Frontend</Tag>
+              <Tag id="backend">Backend</Tag>
+              <Tag id="fullstack">Full Stack</Tag>
+              <Tag id="mobile">Mobile</Tag>
+              <Tag id="devops">DevOps</Tag>
+            </TagList>
+          </TagGroup>
+          <Box>
+            <strong>Selected:</strong> {selectedKey || 'None'}
+          </Box>
+        </Box>
+      );
+    }
+
+    return <SelectableTagsExample />;
+  },
+};
+
+export const SelectableTagsMultiple: Story = {
+  name: 'Selectable Tags - Multiple Selection',
   render() {
     function SelectableTagsExample() {
       const [selectedKeys, setSelectedKeys] = React.useState<Set<string>>(new Set());
@@ -110,10 +309,11 @@ export const SelectableTags: Story = {
               <Tag id="python">Python</Tag>
               <Tag id="rust">Rust</Tag>
               <Tag id="go">Go</Tag>
+              <Tag id="typescript">TypeScript</Tag>
             </TagList>
           </TagGroup>
           <Box>
-            <strong>Selected:</strong> {Array.from(selectedKeys).join(', ')}
+            <strong>Selected:</strong> {Array.from(selectedKeys).join(', ') || 'None'}
           </Box>
         </Box>
       );
@@ -148,7 +348,7 @@ export const RemovableTags: Story = {
             <TagList>
               {tags.map((tag) => (
                 <Tag key={tag.id} id={tag.id}>
-                  {tag.label}
+                  <Text>{tag.label}</Text>
                   <TagRemoveButton />
                 </Tag>
               ))}
@@ -164,27 +364,6 @@ export const RemovableTags: Story = {
 
     return <RemovableTagsExample />;
   },
-};
-
-export const WithDescriptionAndErrorMessage: Story = {
-  name: 'With Description and Error Message',
-  render: () => (
-    <Box display="flex" flexDirection="column" gap="xl" padding="lg">
-      <TagGroup>
-        <TagList>
-          <Tag id="react">React</Tag>
-          <Tag id="vue">Vue</Tag>
-          <Tag id="angular">Angular</Tag>
-        </TagList>
-      </TagGroup>
-
-      <TagGroup>
-        <TagList>
-          <Tag id="invalid">Invalid Option</Tag>
-        </TagList>
-      </TagGroup>
-    </Box>
-  ),
 };
 
 export const Variants: Story = {
@@ -255,7 +434,9 @@ export const AllExamples: Story = {
         >
           {/* Read-only tags */}
           <section>
-            <h3 style={{ marginBottom: '1rem' }}>Read-only Tags</h3>
+            <Text typography="headline04" style={{ marginBottom: '1rem' }}>
+              Read-only Tags
+            </Text>
             <TagGroup>
               <TagList>
                 <Tag id="react">React</Tag>
@@ -267,7 +448,9 @@ export const AllExamples: Story = {
 
           {/* Selectable tags */}
           <section>
-            <h3 style={{ marginBottom: '1rem' }}>Selectable tags</h3>
+            <Text typography="headline04" style={{ marginBottom: '1rem' }}>
+              Selectable tags
+            </Text>
             <TagGroup
               selectionMode="multiple"
               selectedKeys={selectedKeys}
@@ -287,19 +470,21 @@ export const AllExamples: Story = {
 
           {/* Removable tags */}
           <section>
-            <h3 style={{ marginBottom: '1rem' }}>Removable Tags</h3>
+            <Text typography="headline04" style={{ marginBottom: '1rem' }}>
+              Removable Tags
+            </Text>
             <TagGroup>
               <TagList>
                 <Tag id="urgent">
-                  Urgent
+                  <Text>Urgent</Text>
                   <TagRemoveButton />
                 </Tag>
                 <Tag id="bug">
-                  Bug
+                  <Text>Bug</Text>
                   <TagRemoveButton />
                 </Tag>
                 <Tag id="feature">
-                  Feature Request
+                  <Text>Feature Request</Text>
                   <TagRemoveButton />
                 </Tag>
               </TagList>
@@ -308,7 +493,9 @@ export const AllExamples: Story = {
 
           {/* Different sizes and colors */}
           <section>
-            <h3 style={{ marginBottom: '1rem' }}>Sizes and Colors</h3>
+            <Text typography="headline04" style={{ marginBottom: '1rem' }}>
+              Sizes and Colors
+            </Text>
             <Box display="flex" flexDirection="column" gap="lg">
               <TagGroup size="small" color="blue">
                 <TagList>
