@@ -1,12 +1,4 @@
-import {
-  BookmarkIcon,
-  Box,
-  Tag,
-  TagGroup,
-  TagList,
-  TagRemoveButton,
-  Text,
-} from '@orfium/ictinus/vanilla';
+import { BookmarkIcon, Box, CodeTag, Tag, TagGroup, Text } from '@orfium/ictinus/vanilla';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import React from 'react';
 
@@ -27,25 +19,23 @@ export const ReadOnlyTags: Story = {
   name: 'Read-only Tags',
   render: () => (
     <Box display="flex" flexDirection="column" gap="lg" padding="lg">
-      <TagGroup>
-        <TagList>
-          <Tag id="default">Default</Tag>
-          <Tag id="blue" color="blue">
-            Blue
-          </Tag>
-          <Tag id="red" color="red">
-            Red
-          </Tag>
-          <Tag id="purple" color="purple">
-            Purple
-          </Tag>
-          <Tag id="teal" color="teal">
-            Teal
-          </Tag>
-          <Tag id="orange" color="orange">
-            Orange
-          </Tag>
-        </TagList>
+      <TagGroup aria-label="Color tag examples">
+        <Tag id="default">Default</Tag>
+        <Tag id="blue" color="blue">
+          Blue
+        </Tag>
+        <Tag id="red" color="red">
+          Red
+        </Tag>
+        <Tag id="purple" color="purple">
+          Purple
+        </Tag>
+        <Tag id="teal" color="teal">
+          Teal
+        </Tag>
+        <Tag id="orange" color="orange">
+          Orange
+        </Tag>
       </TagGroup>
     </Box>
   ),
@@ -55,32 +45,42 @@ export const ReadOnlyTagsWithIcons: Story = {
   name: 'Read-only Tags with Icons',
   render: () => (
     <Box display="flex" flexDirection="column" gap="lg" padding="lg">
-      <TagGroup>
-        <TagList>
-          <Tag id="default">
-            <BookmarkIcon /> <Text>Default</Text>
-          </Tag>
-          <Tag id="blue" color="blue">
-            <BookmarkIcon />
-            <Text>Blue</Text>
-          </Tag>
-          <Tag id="red" color="red">
-            <BookmarkIcon />
-            <Text>Red</Text>
-          </Tag>
-          <Tag id="purple" color="purple">
-            <BookmarkIcon />
-            <Text>Purple</Text>
-          </Tag>
-          <Tag id="teal" color="teal">
-            <BookmarkIcon />
-            <Text>Teal</Text>
-          </Tag>
-          <Tag id="orange" color="orange">
-            <BookmarkIcon />
-            <Text>Orange</Text>
-          </Tag>
-        </TagList>
+      <TagGroup aria-label="Icon tag examples">
+        <Tag id="default" textValue="Default">
+          <BookmarkIcon aria-hidden="true" />
+          <Text>Default</Text>
+        </Tag>
+        <Tag id="blue" color="blue" textValue="Blue">
+          <BookmarkIcon aria-hidden="true" />
+          <Text>Blue</Text>
+        </Tag>
+        <Tag id="red" color="red" textValue="Red">
+          <BookmarkIcon aria-hidden="true" />
+          <Text>Red</Text>
+        </Tag>
+        <Tag id="purple" color="purple" textValue="Purple">
+          <BookmarkIcon aria-hidden="true" />
+          <Text>Purple</Text>
+        </Tag>
+        <Tag id="teal" color="teal" textValue="Teal">
+          <BookmarkIcon aria-hidden="true" />
+          <Text>Teal</Text>
+        </Tag>
+        <Tag id="orange" color="orange" textValue="Orange">
+          <BookmarkIcon aria-hidden="true" />
+          <Text>Orange</Text>
+        </Tag>
+      </TagGroup>
+    </Box>
+  ),
+};
+
+export const ReadOnlyCodeTags: Story = {
+  name: 'Read-only Code Tags',
+  render: () => (
+    <Box display="flex" flexDirection="column" gap="lg" padding="lg">
+      <TagGroup aria-label="Code tag examples">
+        <CodeTag>c0d31a831</CodeTag>
       </TagGroup>
     </Box>
   ),
@@ -115,27 +115,23 @@ export const SizesAndColors: Story = {
           <Box display="flex" flexDirection="column" gap="lg">
             <Text typography="headline04">Read-only</Text>
             <Box display="flex" flexDirection="column" gap="md">
-              <TagGroup size="small">
-                <TagList>
-                  <Tag id="small-default">Small</Tag>
-                  <Tag id="small-blue" color="blue">
-                    Small
-                  </Tag>
-                  <Tag id="small-red" color="red">
-                    Small
-                  </Tag>
-                </TagList>
+              <TagGroup size="small" aria-label="Small read-only tags">
+                <Tag id="small-default">Small</Tag>
+                <Tag id="small-blue" color="blue">
+                  Small
+                </Tag>
+                <Tag id="small-red" color="red">
+                  Small
+                </Tag>
               </TagGroup>
-              <TagGroup size="normal">
-                <TagList>
-                  <Tag id="normal-default">Normal</Tag>
-                  <Tag id="normal-blue" color="blue">
-                    Normal
-                  </Tag>
-                  <Tag id="normal-red" color="red">
-                    Normal
-                  </Tag>
-                </TagList>
+              <TagGroup size="normal" aria-label="Normal read-only tags">
+                <Tag id="normal-default">Normal</Tag>
+                <Tag id="normal-blue" color="blue">
+                  Normal
+                </Tag>
+                <Tag id="normal-red" color="red">
+                  Normal
+                </Tag>
               </TagGroup>
             </Box>
           </Box>
@@ -144,37 +140,46 @@ export const SizesAndColors: Story = {
           <Box display="flex" flexDirection="column" gap="lg">
             <Text typography="headline04">Read-only with Icons</Text>
             <Box display="flex" flexDirection="column" gap="md">
-              <TagGroup size="small">
-                <TagList>
-                  <Tag id="small-icon-default">
-                    <BookmarkIcon />
-                    <Text>Small</Text>
-                  </Tag>
-                  <Tag id="small-icon-blue" color="blue">
-                    <BookmarkIcon />
-                    <Text>Small</Text>
-                  </Tag>
-                  <Tag id="small-icon-red" color="red">
-                    <BookmarkIcon />
-                    <Text>Small</Text>
-                  </Tag>
-                </TagList>
+              <TagGroup size="small" aria-label="Small read-only icon tags">
+                <Tag id="small-icon-default" textValue="Small">
+                  <BookmarkIcon aria-hidden="true" />
+                  <Text>Small</Text>
+                </Tag>
+                <Tag id="small-icon-blue" color="blue" textValue="Small">
+                  <BookmarkIcon aria-hidden="true" />
+                  <Text>Small</Text>
+                </Tag>
+                <Tag id="small-icon-red" color="red" textValue="Small">
+                  <BookmarkIcon aria-hidden="true" />
+                  <Text>Small</Text>
+                </Tag>
               </TagGroup>
-              <TagGroup size="normal">
-                <TagList>
-                  <Tag id="normal-icon-default">
-                    <BookmarkIcon />
-                    <Text>Normal</Text>
-                  </Tag>
-                  <Tag id="normal-icon-blue" color="blue">
-                    <BookmarkIcon />
-                    <Text>Normal</Text>
-                  </Tag>
-                  <Tag id="normal-icon-red" color="red">
-                    <BookmarkIcon />
-                    Normal
-                  </Tag>
-                </TagList>
+              <TagGroup size="normal" aria-label="Normal read-only icon tags">
+                <Tag id="normal-icon-default" textValue="Normal">
+                  <BookmarkIcon aria-hidden="true" />
+                  <Text>Normal</Text>
+                </Tag>
+                <Tag id="normal-icon-blue" color="blue" textValue="Normal">
+                  <BookmarkIcon aria-hidden="true" />
+                  <Text>Normal</Text>
+                </Tag>
+                <Tag id="normal-icon-red" color="red" textValue="Normal">
+                  <BookmarkIcon aria-hidden="true" />
+                  <Text>Normal</Text>
+                </Tag>
+              </TagGroup>
+            </Box>
+          </Box>
+
+          {/* Read-only Code*/}
+          <Box display="flex" flexDirection="column" gap="lg">
+            <Text typography="headline04">Read-only Code Tag</Text>
+            <Box display="flex" flexDirection="column" gap="md">
+              <TagGroup size="small" aria-label="Small read-only code tags">
+                <CodeTag id="small-code">Small</CodeTag>
+              </TagGroup>
+              <TagGroup size="normal" aria-label="Normal read-only code tags">
+                <CodeTag id="normal-code">Normal</CodeTag>
               </TagGroup>
             </Box>
           </Box>
@@ -185,27 +190,25 @@ export const SizesAndColors: Story = {
             <Box display="flex" flexDirection="column" gap="md">
               <TagGroup
                 size="small"
+                aria-label="Small multiple selection tags"
                 selectionMode="multiple"
                 selectedKeys={selectedKeysSmall}
                 onSelectionChange={(keys) =>
                   setSelectedKeysSmall(new Set(Array.from(keys).map(String)))
                 }
               >
-                <TagList>
-                  <Tag id="small-select1">Small</Tag>
-                </TagList>
+                <Tag id="small-select1">Small</Tag>
               </TagGroup>
               <TagGroup
                 size="normal"
+                aria-label="Normal multiple selection tags"
                 selectionMode="multiple"
                 selectedKeys={selectedKeysNormal}
                 onSelectionChange={(keys) =>
                   setSelectedKeysNormal(new Set(Array.from(keys).map(String)))
                 }
               >
-                <TagList>
-                  <Tag id="normal-select1">Normal</Tag>
-                </TagList>
+                <Tag id="normal-select1">Normal</Tag>
               </TagGroup>
             </Box>
           </Box>
@@ -216,35 +219,31 @@ export const SizesAndColors: Story = {
             <Box display="flex" flexDirection="column" gap="md">
               <TagGroup
                 size="small"
+                aria-label="Small removable tags"
                 onRemove={(keys) => {
                   const keysArray = Array.from(keys);
                   keysArray.forEach((key) => handleRemoveSmall(key as string));
                 }}
               >
-                <TagList>
-                  {removableTagsSmall.map((tag) => (
-                    <Tag key={tag.id} id={tag.id}>
-                      <Text>{tag.label}</Text>
-                      <TagRemoveButton />
-                    </Tag>
-                  ))}
-                </TagList>
+                {removableTagsSmall.map((tag) => (
+                  <Tag key={tag.id} id={tag.id} textValue={tag.label}>
+                    <Text>{tag.label}</Text>
+                  </Tag>
+                ))}
               </TagGroup>
               <TagGroup
                 size="normal"
+                aria-label="Normal removable tags"
                 onRemove={(keys) => {
                   const keysArray = Array.from(keys);
                   keysArray.forEach((key) => handleRemoveNormal(key as string));
                 }}
               >
-                <TagList>
-                  {removableTagsNormal.map((tag) => (
-                    <Tag key={tag.id} id={tag.id}>
-                      <Text>{tag.label}</Text>
-                      <TagRemoveButton />
-                    </Tag>
-                  ))}
-                </TagList>
+                {removableTagsNormal.map((tag) => (
+                  <Tag key={tag.id} id={tag.id} textValue={tag.label}>
+                    <Text>{tag.label}</Text>
+                  </Tag>
+                ))}
               </TagGroup>
             </Box>
           </Box>
@@ -265,6 +264,7 @@ export const SelectableTagsSingle: Story = {
       return (
         <Box display="flex" flexDirection="column" gap="lg" padding="lg">
           <TagGroup
+            aria-label="Technology selection"
             selectionMode="single"
             selectedKeys={selectedKey ? new Set([selectedKey]) : new Set()}
             onSelectionChange={(keys) => {
@@ -272,13 +272,11 @@ export const SelectableTagsSingle: Story = {
               setSelectedKey(keysArray.length > 0 ? String(keysArray[0]) : '');
             }}
           >
-            <TagList>
-              <Tag id="frontend">Frontend</Tag>
-              <Tag id="backend">Backend</Tag>
-              <Tag id="fullstack">Full Stack</Tag>
-              <Tag id="mobile">Mobile</Tag>
-              <Tag id="devops">DevOps</Tag>
-            </TagList>
+            <Tag id="frontend">Frontend</Tag>
+            <Tag id="backend">Backend</Tag>
+            <Tag id="fullstack">Full Stack</Tag>
+            <Tag id="mobile">Mobile</Tag>
+            <Tag id="devops">DevOps</Tag>
           </TagGroup>
           <Box>
             <strong>Selected:</strong> {selectedKey || 'None'}
@@ -300,17 +298,16 @@ export const SelectableTagsMultiple: Story = {
       return (
         <Box display="flex" flexDirection="column" gap="lg" padding="lg">
           <TagGroup
+            aria-label="Programming language selection"
             selectionMode="multiple"
             selectedKeys={selectedKeys}
             onSelectionChange={(keys) => setSelectedKeys(new Set(Array.from(keys).map(String)))}
           >
-            <TagList>
-              <Tag id="javascript">JavaScript</Tag>
-              <Tag id="python">Python</Tag>
-              <Tag id="rust">Rust</Tag>
-              <Tag id="go">Go</Tag>
-              <Tag id="typescript">TypeScript</Tag>
-            </TagList>
+            <Tag id="javascript">JavaScript</Tag>
+            <Tag id="python">Python</Tag>
+            <Tag id="rust">Rust</Tag>
+            <Tag id="go">Go</Tag>
+            <Tag id="typescript">TypeScript</Tag>
           </TagGroup>
           <Box>
             <strong>Selected:</strong> {Array.from(selectedKeys).join(', ') || 'None'}
@@ -340,19 +337,17 @@ export const RemovableTags: Story = {
       return (
         <Box display="flex" flexDirection="column" gap="lg" padding="lg">
           <TagGroup
+            aria-label="Removable task tags"
             onRemove={(keys) => {
               const keysArray = Array.from(keys);
               keysArray.forEach((key) => handleRemove(key as string));
             }}
           >
-            <TagList>
-              {tags.map((tag) => (
-                <Tag key={tag.id} id={tag.id}>
-                  <Text>{tag.label}</Text>
-                  <TagRemoveButton />
-                </Tag>
-              ))}
-            </TagList>
+            {tags.map((tag) => (
+              <Tag key={tag.id} id={tag.id} textValue={tag.label}>
+                <Text>{tag.label}</Text>
+              </Tag>
+            ))}
           </TagGroup>
           <p>
             <strong>Remaining tags:</strong>{' '}
@@ -363,169 +358,5 @@ export const RemovableTags: Story = {
     }
 
     return <RemovableTagsExample />;
-  },
-};
-
-export const Variants: Story = {
-  name: 'Variants',
-  render: () => (
-    <Box display="flex" flexDirection="column" gap="xl" padding="lg">
-      <div>
-        <TagGroup>
-          <TagList>
-            <Tag id="default1">Standard Tag</Tag>
-            <Tag id="default2">Another Tag</Tag>
-            <Tag id="default3">Third Tag</Tag>
-          </TagList>
-        </TagGroup>
-      </div>
-
-      <div>
-        <TagGroup>
-          <TagList>
-            <Tag id="code1">useState</Tag>
-            <Tag id="code2">useEffect</Tag>
-            <Tag id="code3">useCallback</Tag>
-          </TagList>
-        </TagGroup>
-      </div>
-
-      <div>
-        <TagGroup color="blue">
-          <TagList>
-            <Tag id="mixed1">Default Blue</Tag>
-            <Tag id="mixed2">Code Blue</Tag>
-            <Tag id="mixed3" size="small">
-              Default Blue
-            </Tag>
-            <Tag id="mixed4" size="small">
-              Code Blue
-            </Tag>
-          </TagList>
-        </TagGroup>
-      </div>
-
-      <div>
-        <TagGroup size="small">
-          <TagList>
-            <Tag id="small-code1">map()</Tag>
-            <Tag id="small-code2">filter()</Tag>
-            <Tag id="small-code3">reduce()</Tag>
-          </TagList>
-        </TagGroup>
-      </div>
-    </Box>
-  ),
-};
-
-export const AllExamples: Story = {
-  name: 'All Examples',
-  render() {
-    function AllExamplesComponent() {
-      const [selectedKeys, setSelectedKeys] = React.useState<Set<string>>(new Set());
-
-      return (
-        <Box
-          display="flex"
-          flexDirection="column"
-          gap="3xl"
-          padding="lg"
-          style={{ maxWidth: '600px' }}
-        >
-          {/* Read-only tags */}
-          <section>
-            <Text typography="headline04" style={{ marginBottom: '1rem' }}>
-              Read-only Tags
-            </Text>
-            <TagGroup>
-              <TagList>
-                <Tag id="react">React</Tag>
-                <Tag id="typescript">TypeScript</Tag>
-                <Tag id="vanilla-extract">Vanilla Extract</Tag>
-              </TagList>
-            </TagGroup>
-          </section>
-
-          {/* Selectable tags */}
-          <section>
-            <Text typography="headline04" style={{ marginBottom: '1rem' }}>
-              Selectable tags
-            </Text>
-            <TagGroup
-              selectionMode="multiple"
-              selectedKeys={selectedKeys}
-              onSelectionChange={(keys) => setSelectedKeys(new Set(Array.from(keys).map(String)))}
-            >
-              <TagList>
-                <Tag id="javascript">JavaScript</Tag>
-                <Tag id="python">Python</Tag>
-                <Tag id="rust">Rust</Tag>
-                <Tag id="go">Go</Tag>
-              </TagList>
-            </TagGroup>
-            <p style={{ marginTop: '0.5rem' }}>
-              <strong>Selected:</strong> {Array.from(selectedKeys).join(', ')}
-            </p>
-          </section>
-
-          {/* Removable tags */}
-          <section>
-            <Text typography="headline04" style={{ marginBottom: '1rem' }}>
-              Removable Tags
-            </Text>
-            <TagGroup>
-              <TagList>
-                <Tag id="urgent">
-                  <Text>Urgent</Text>
-                  <TagRemoveButton />
-                </Tag>
-                <Tag id="bug">
-                  <Text>Bug</Text>
-                  <TagRemoveButton />
-                </Tag>
-                <Tag id="feature">
-                  <Text>Feature Request</Text>
-                  <TagRemoveButton />
-                </Tag>
-              </TagList>
-            </TagGroup>
-          </section>
-
-          {/* Different sizes and colors */}
-          <section>
-            <Text typography="headline04" style={{ marginBottom: '1rem' }}>
-              Sizes and Colors
-            </Text>
-            <Box display="flex" flexDirection="column" gap="lg">
-              <TagGroup size="small" color="blue">
-                <TagList>
-                  <Tag id="small1">Small</Tag>
-                  <Tag id="small2">Blue</Tag>
-                  <Tag id="small3">Tags</Tag>
-                </TagList>
-              </TagGroup>
-
-              <TagGroup size="normal" color="red">
-                <TagList>
-                  <Tag id="red1" size="small">
-                    Error
-                  </Tag>
-                  <Tag id="red2">Critical</Tag>
-                </TagList>
-              </TagGroup>
-
-              <TagGroup size="normal" color="purple">
-                <TagList>
-                  <Tag id="purple1">Premium</Tag>
-                  <Tag id="purple2">VIP</Tag>
-                </TagList>
-              </TagGroup>
-            </Box>
-          </section>
-        </Box>
-      );
-    }
-
-    return <AllExamplesComponent />;
   },
 };
