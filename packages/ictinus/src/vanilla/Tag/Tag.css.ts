@@ -185,21 +185,18 @@ export const removeButton = recipe({
       cursor: 'pointer',
     }),
     style({
-      width: '16px',
-      height: '16px',
       border: 'none',
       background: 'none',
       color: 'currentColor',
-      opacity: '0.7',
-      transition: 'opacity 0.2s ease',
+      transition: 'background-color 0.2s ease',
 
       selectors: {
         '&:hover': {
-          opacity: '1',
+          backgroundColor: vars.color.palette.secondary.contrast,
         },
         '&[data-focused]': {
-          opacity: '1',
-          outline: `2px solid ${vars.color['border-color'].interactive.focused}`,
+          backgroundColor: vars.color.palette.secondary.contrast,
+          outline: `${vars['border-width'][2]} solid ${vars.color['border-color'].interactive.focused}`,
           outlineOffset: '1px',
         },
       },
@@ -212,11 +209,9 @@ export const text = recipe({
   variants: {
     size: {
       normal: sprinkles({
-        // px: 'xs',
         typography: 'label02',
       }),
       small: sprinkles({
-        // px: 'xs',
         typography: 'label03',
       }),
     },
@@ -226,32 +221,52 @@ export const text = recipe({
   },
 });
 
-export const label = recipe({
+export const codeTag = recipe({
   base: [
     sprinkles({
-      typography: 'body02',
-      color: 'primary',
-      mb: 'xs',
+      display: 'inline-flex',
+      alignItems: 'center',
+      py: '1',
+      cursor: 'default',
+      userSelect: 'none',
+      backgroundColor: 'palette.secondary.contrast',
+      borderRadius: '1',
     }),
   ],
+  variants: {
+    size: {
+      normal: sprinkles({
+        borderRadius: '2',
+        px: '4',
+      }),
+      small: sprinkles({
+        borderRadius: '1',
+        px: '3',
+      }),
+    },
+  },
+  defaultVariants: {
+    size: 'normal',
+  },
 });
 
-export const description = recipe({
+export const codeTagText = recipe({
   base: [
     sprinkles({
-      typography: 'body04',
-      color: 'secondary',
-      mt: 'xs',
+      fontFamily: 'mono',
     }),
   ],
-});
-
-export const errorMessage = recipe({
-  base: [
-    sprinkles({
-      typography: 'body04',
-      color: 'error',
-      mt: 'xs',
-    }),
-  ],
+  variants: {
+    size: {
+      normal: sprinkles({
+        typography: 'body02',
+      }),
+      small: sprinkles({
+        typography: 'body03',
+      }),
+    },
+  },
+  defaultVariants: {
+    size: 'normal',
+  },
 });
