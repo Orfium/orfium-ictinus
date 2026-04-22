@@ -90,8 +90,12 @@ export const SizesAndColors: Story = {
   name: 'Tag Sizes',
   render() {
     function TagSizesExample() {
-      const [selectedKeysSmall, setSelectedKeysSmall] = React.useState<Set<string>>(new Set());
-      const [selectedKeysNormal, setSelectedKeysNormal] = React.useState<Set<string>>(new Set());
+      const [selectedKeysSmall, setSelectedKeysSmall] = React.useState<Set<string>>(
+        new Set(['small-select1'])
+      );
+      const [selectedKeysNormal, setSelectedKeysNormal] = React.useState<Set<string>>(
+        new Set(['normal-select1'])
+      );
       const [removableTagsSmall, setRemovableTagsSmall] = React.useState([
         { id: 'small-remove1', label: 'Small' },
         { id: 'small-remove2', label: 'Small' },
