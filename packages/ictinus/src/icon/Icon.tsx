@@ -1,3 +1,4 @@
+import { useSlotProps } from 'components/utils/Slots';
 import {
   AccountIcon,
   AlbumIcon,
@@ -152,6 +153,7 @@ export type IconProps = {
 } & Omit<BoxProps, 'size'>;
 
 export function Icon({ name, size = 'md', ...props }: IconProps) {
+  props = useSlotProps(props, 'icon');
   const IconComponent = ICONS[name];
 
   return <IconComponent size={size} {...props} />;
