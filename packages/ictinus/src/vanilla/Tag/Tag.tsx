@@ -1,4 +1,4 @@
-import { forwardRef, type ReactNode, type Ref } from 'react';
+import { forwardRef, type ReactNode, type RefObject } from 'react';
 import {
   Button,
   TagGroup as TagGroupPrimitive,
@@ -11,6 +11,7 @@ import {
 } from 'react-aria-components';
 
 import { SlotProvider, useSlotProps } from '../../components/utils/Slots';
+import { useDOMRef } from '../../components/utils/useDOMRef';
 import { cn } from '../../utils/cn';
 import { Box, extractBoxProps, type BoxProps } from '../Box';
 import { Text } from '../Text';
@@ -32,36 +33,37 @@ type TagGroupProps = BoxProps<'div', TagsVariants> & TagGroupPrimitiveProps;
 
 const TagGroup = forwardRef<HTMLDivElement, TagGroupProps>(
   (
-    { size = 'normal', color = 'neutral', children, selectionMode, onRemove, ...props },
-    ref: Ref<HTMLDivElement>
+    { size = 'normal', color = 'neutral', selectionMode, onRemove, children, ...props },
+    ref: RefObject<HTMLDivElement>
   ) => {
-    // Extract Box props before passing to useSlotProps to avoid conflicts
+    props = useSlotProps(props, 'tag-group');
+    const domRef = useDOMRef(ref);
     const { boxProps, restProps } = extractBoxProps(props);
-
-    const componentProps = useSlotProps(restProps, 'tag-group');
 
     // Determine if this tag group is interactive
     const isInteractive = (selectionMode && selectionMode !== 'none') || Boolean(onRemove);
 
     return (
-      <SlotProvider
-        slots={{
-          'tag-list': { size, color, interactive: isInteractive },
-          'tag-item': { size, color, interactive: isInteractive },
-        }}
-      >
-        <Box asChild {...boxProps}>
-          <TagGroupPrimitive
-            ref={ref}
-            className={cn(styles.tagGroup({}), boxProps.className)}
-            selectionMode={selectionMode}
-            onRemove={onRemove}
-            {...componentProps}
-          >
-            <TagList>{children}</TagList>
-          </TagGroupPrimitive>
-        </Box>
-      </SlotProvider>
+      <Box asChild {...boxProps}>
+        <TagGroupPrimitive
+          ref={domRef}
+          className={cn(styles.tagGroup({}), boxProps.className)}
+          selectionMode={selectionMode}
+          onRemove={onRemove}
+          {...restProps}
+        >
+          <TagList>
+            <SlotProvider
+              slots={{
+                'tag-list': { size, color, interactive: isInteractive },
+                'tag-item': { size, color, interactive: isInteractive },
+              }}
+            >
+              {children}
+            </SlotProvider>
+          </TagList>
+        </TagGroupPrimitive>
+      </Box>
     );
   }
 );
@@ -72,35 +74,28 @@ TagGroup.displayName = 'TagGroup';
 type TagListProps = BoxProps<'div', TagsVariants> & TagListPrimitiveProps<object>;
 
 const TagList = forwardRef<HTMLDivElement, TagListProps>(
-  ({ size, color, children, ...props }, ref: Ref<HTMLDivElement>) => {
-    // Get inherited props from SlotProvider, but let direct props override them
-    const inheritedProps = useSlotProps({}, 'tag-list');
+  ({ size, color, children, ...props }, ref: RefObject<HTMLDivElement>) => {
+    const inheritedProps = useSlotProps(props, 'tag-list');
+    const domRef = useDOMRef(ref);
 
     const finalSize = size ?? inheritedProps.size;
     const finalColor = color ?? inheritedProps.color;
-    const finalInteractive = inheritedProps.interactive;
-
-    // Extract Box props before passing to useSlotProps to avoid conflicts
     const { boxProps, restProps } = extractBoxProps(props);
-
-    const componentProps = useSlotProps(
-      {
-        size: finalSize,
-        color: finalColor,
-        interactive: finalInteractive,
-        ...restProps,
-      },
-      'tag-list'
-    );
 
     return (
       <Box asChild {...boxProps}>
         <TagListPrimitive
-          ref={ref}
+          ref={domRef}
           className={cn(styles.tagList({}), boxProps.className)}
-          {...componentProps}
+          {...restProps}
         >
-          {children}
+          <SlotProvider
+            slots={{
+              'tag-item': { size: finalSize, color: finalColor },
+            }}
+          >
+            {children}
+          </SlotProvider>
         </TagListPrimitive>
       </Box>
     );
@@ -113,23 +108,21 @@ TagList.displayName = 'TagList';
 type TagProps = BoxProps<'div', NonNullable<TagsVariants>> & TagPrimitiveProps;
 
 const Tag = forwardRef<HTMLDivElement, TagProps>(
-  ({ size, color, textValue, children, ...props }, ref: Ref<HTMLDivElement>) => {
-    // Get inherited props from SlotProvider, but let direct props override them
-    const inheritedProps = useSlotProps({}, 'tag-item');
+  ({ size, color, textValue, children, ...props }, ref: RefObject<HTMLDivElement>) => {
+    const inheritedProps = useSlotProps(props, 'tag-item');
+    const domRef = useDOMRef(ref);
 
     const finalSize = size ?? inheritedProps.size;
     const finalColor = color ?? inheritedProps.color;
     const finalInteractive = inheritedProps.interactive ?? false;
-
-    // Extract Box props before passing to useSlotProps to avoid conflicts
     const { boxProps, restProps } = extractBoxProps(props);
-
-    const componentProps = useSlotProps(restProps, 'tag-item');
 
     return (
       <Box asChild {...boxProps}>
         <TagPrimitive
-          ref={ref}
+          ref={domRef}
+          data-size={finalSize}
+          data-color={finalColor}
           className={cn(
             styles.tag({
               size: finalSize,
@@ -139,7 +132,7 @@ const Tag = forwardRef<HTMLDivElement, TagProps>(
             boxProps.className
           )}
           textValue={textValue || (typeof children === 'string' ? children : undefined)}
-          {...componentProps}
+          {...restProps}
         >
           {(renderProps) => {
             // Check if this tag is removable (onRemove is available in the TagGroup)
@@ -161,7 +154,7 @@ const Tag = forwardRef<HTMLDivElement, TagProps>(
                 }}
               >
                 {finalInteractive && renderProps.isSelected && (
-                  <Icon name="check" aria-hidden="true" />
+                  <Icon name="check" aria-label={`Selected ${textValue || (typeof children === 'string' ? children : 'tag')}`} />
                 )}
                 {typeof children === 'string' ? <Text>{children}</Text> : children}
                 {isRemovable && <TagRemoveButton />}
@@ -183,19 +176,18 @@ type TagRemoveButtonProps = BoxProps<'button'> &
   };
 
 const TagRemoveButton = forwardRef<HTMLButtonElement, TagRemoveButtonProps>(
-  ({ children, ...props }, ref: Ref<HTMLButtonElement>) => {
-    // Extract Box props before passing to useSlotProps to avoid conflicts
+  ({ children, ...props }, ref: RefObject<HTMLButtonElement>) => {
+    props = useSlotProps(props, 'remove-button');
+    const domRef = useDOMRef(ref);
     const { boxProps, restProps } = extractBoxProps(props);
-
-    const componentProps = useSlotProps(restProps, 'remove-button');
 
     return (
       <Box asChild {...boxProps}>
         <Button
-          ref={ref}
+          ref={domRef}
           slot="remove"
           className={cn(styles.removeButton({}), boxProps.className)}
-          {...componentProps}
+          {...restProps}
         >
           {children || <Icon name="close" aria-hidden="true" />}
         </Button>
@@ -210,16 +202,17 @@ TagRemoveButton.displayName = 'TagRemoveButton';
 type CodeTagProps = BoxProps<'div', NonNullable<Pick<TagsVariants, 'size'>>> & TagPrimitiveProps;
 
 const CodeTag = forwardRef<HTMLDivElement, CodeTagProps>(
-  ({ size, children, textValue, ...props }, ref: Ref<HTMLDivElement>) => {
-    const inheritedProps = useSlotProps({}, 'tag-item');
-
+  ({ size, textValue, children, ...props }, ref: RefObject<HTMLDivElement>) => {
+    const inheritedProps = useSlotProps(props, 'tag-item');
+    const domRef = useDOMRef(ref);
     const finalSize = size ?? inheritedProps.size;
     const { boxProps, restProps } = extractBoxProps(props);
 
     return (
       <Box asChild {...boxProps}>
         <TagPrimitive
-          ref={ref}
+          ref={domRef}
+          data-size={finalSize}
           className={cn(styles.codeTag({ size: finalSize }), boxProps.className)}
           textValue={textValue || (typeof children === 'string' ? children : undefined)}
           {...restProps}
