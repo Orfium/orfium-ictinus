@@ -198,5 +198,12 @@ export const subLink = recipe({
         color: 'active',
       }),
     },
+    isDisabled: {
+      true: sprinkles({
+        opacity: '0.5',
+        cursor: 'not-allowed',
+        pointerEvents: 'none',
+      }),
+    },
   },
 });
