@@ -1,7 +1,7 @@
 import { createContext, forwardRef, useContext, type MouseEvent, type RefObject } from 'react';
 
 import { Slot } from '@radix-ui/react-slot';
-import { SlotProvider } from '../components/utils/Slots';
+import { SlotProvider, useSlotProps } from '../components/utils/Slots';
 import { StatusIndicatorIcon } from '../icons';
 import { cn } from '../utils/cn';
 import { Box, extractBoxProps, type BoxProps } from '../vanilla/Box';
@@ -52,7 +52,6 @@ NavItem.displayName = 'NavItem';
 type NavLinkProps = BoxProps<
   'a',
   {
-    count?: string;
     href?: string;
     isActive?: boolean;
     isDisabled?: boolean;
@@ -65,7 +64,6 @@ export const NavLink = forwardRef(
   (
     {
       asChild,
-      count,
       href,
       isActive: isActiveProp,
       isDisabled: isDisabledProp,
@@ -80,38 +78,73 @@ export const NavLink = forwardRef(
 
     const ctx = useContext(NavItemContext);
     const isActive = isActiveProp ?? ctx.isActive;
-    const isDisabled = isDisabledProp ?? ctx.isDisabled;
+    const isDisabled = Boolean(isDisabledProp) || Boolean(ctx.isDisabled);
+
+    const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
+      if (isDisabled) {
+        e.preventDefault();
+
+        return;
+      }
+      onClick?.(e);
+    };
 
     return (
-      <Box asChild {...boxProps}>
-        <Comp
-          ref={ref}
-          href={isDisabled ? undefined : href}
-          aria-current={isActive ? 'page' : undefined}
-          role="link"
-          aria-disabled={isDisabled}
-          onClick={onClick}
-          className={cn(styles.navLink({ isActive, isDisabled }))}
-          {...restProps}
-        >
-          <SlotProvider
-            slots={{
-              icon: {
-                size: 'sm',
-                flexShrink: '0',
-              },
-            }}
+      <SlotProvider
+        slots={{
+          icon: {
+            size: 'sm',
+            flexShrink: '0',
+          },
+          navCount: {
+            isActive,
+          },
+        }}
+      >
+        <Box asChild {...boxProps}>
+          <Comp
+            ref={ref}
+            href={isDisabled ? undefined : href}
+            role="link"
+            aria-current={isActive ? 'page' : undefined}
+            aria-disabled={isDisabled}
+            onClick={handleClick}
+            className={cn(styles.navLink({ isActive, isDisabled }))}
+            {...restProps}
           >
             {children}
-          </SlotProvider>
-          {count !== undefined && <span className={styles.counter({ isActive })}>{count}</span>}
-        </Comp>
-      </Box>
+          </Comp>
+        </Box>
+      </SlotProvider>
     );
   }
 );
 
 NavLink.displayName = 'NavLink';
+
+type NavCountProps = BoxProps<
+  'span',
+  {
+    isActive?: boolean;
+  }
+>;
+
+export const NavCount = forwardRef((props: NavCountProps, ref: RefObject<HTMLSpanElement>) => {
+  props = useSlotProps(props, 'navCount');
+  const { boxProps, restProps } = extractBoxProps(props);
+
+  const { isActive, children, ...otherProps } = restProps;
+
+  return (
+    <Box asChild {...boxProps}>
+      <span ref={ref} className={styles.counter({ isActive })} {...otherProps}>
+        {children}
+      </span>
+    </Box>
+  );
+});
+
+NavCount.displayName = 'NavCount';
 
 type SubNavListProps = BoxProps<'ul'>;
 
@@ -169,7 +202,6 @@ export const SubNavLink = forwardRef(
   (
     {
       asChild,
-      count,
       href,
       isActive: isActiveProp,
       isDisabled: isDisabledProp,
@@ -184,34 +216,46 @@ export const SubNavLink = forwardRef(
 
     const ctx = useContext(SubNavItemContext);
     const isActive = isActiveProp ?? ctx.isActive;
-    const isDisabled = isDisabledProp ?? ctx.isDisabled;
+    const isDisabled = Boolean(isDisabledProp) || Boolean(ctx.isDisabled);
+
+    const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
+      if (isDisabled) {
+        e.preventDefault();
+
+        return;
+      }
+      onClick?.(e);
+    };
 
     return (
-      <Box asChild {...boxProps}>
-        <Comp
-          ref={ref}
-          href={isDisabled ? undefined : href}
-          aria-current={isActive ? 'page' : undefined}
-          role="link"
-          aria-disabled={isDisabled}
-          onClick={onClick}
-          className={styles.subLink({ isActive, isDisabled })}
-          {...restProps}
-        >
-          {isActive && <StatusIndicatorIcon flexShrink="0" color="active" />}
-          <SlotProvider
-            slots={{
-              icon: {
-                size: 'sm',
-                flexShrink: '0',
-              },
-            }}
+      <SlotProvider
+        slots={{
+          icon: {
+            size: 'sm',
+            flexShrink: '0',
+          },
+          navCount: {
+            isActive,
+          },
+        }}
+      >
+        <Box asChild {...boxProps}>
+          <Comp
+            ref={ref}
+            href={isDisabled ? undefined : href}
+            role="link"
+            aria-current={isActive ? 'page' : undefined}
+            aria-disabled={isDisabled}
+            onClick={handleClick}
+            className={styles.subLink({ isActive, isDisabled })}
+            {...restProps}
           >
+            {isActive && <StatusIndicatorIcon flexShrink="0" color="active" />}
+
             {children}
-          </SlotProvider>
-          {count !== undefined && <span className={styles.counter({ isActive })}>{count}</span>}
-        </Comp>
-      </Box>
+          </Comp>
+        </Box>
+      </SlotProvider>
     );
   }
 );
