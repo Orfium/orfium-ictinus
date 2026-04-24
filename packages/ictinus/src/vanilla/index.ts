@@ -4,6 +4,7 @@ export * from '../data-table';
 export * from '../icon';
 export * from '../icons';
 export * from '../layers';
+export * from '../nav';
 export * from '../skeleton';
 export * from '../sprinkles';
 export * from '../utils/cn';
