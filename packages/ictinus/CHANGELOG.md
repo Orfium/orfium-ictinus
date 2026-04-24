@@ -1,5 +1,12 @@
 # @orfium/ictinus
 
+## 5.45.0
+
+### Minor Changes
+
+- a87f2e5: feat: vanilla avatar and avatargroup
+- db45560: navigation component
+
 ## 5.44.2
 
 ### Patch Changes
