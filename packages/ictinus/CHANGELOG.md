@@ -1,5 +1,11 @@
 # @orfium/ictinus
 
+## 5.45.1
+
+### Patch Changes
+
+- 2510567: sub nav link router support
+
 ## 5.45.0
 
 ### Minor Changes
