@@ -1,6 +1,6 @@
+import { Slot, Slottable } from '@radix-ui/react-slot';
 import { createContext, forwardRef, useContext, type MouseEvent, type RefObject } from 'react';
 
-import { Slot } from '@radix-ui/react-slot';
 import { SlotProvider, useSlotProps } from '../components/utils/Slots';
 import { StatusIndicatorIcon } from '../icons';
 import { cn } from '../utils/cn';
@@ -187,7 +187,7 @@ export const SubNavItem = forwardRef(
     return (
       <SubNavItemContext.Provider value={{ isActive, isDisabled }}>
         <Box asChild {...boxProps}>
-          <li ref={ref} className={styles.subItem({ isActive })} {...restProps}>
+          <li ref={ref} className={styles.subItem({})} {...restProps}>
             {children}
           </li>
         </Box>
@@ -250,9 +250,11 @@ export const SubNavLink = forwardRef(
             className={styles.subLink({ isActive, isDisabled })}
             {...restProps}
           >
-            {isActive && <StatusIndicatorIcon flexShrink="0" color="active" />}
-
-            {children}
+            <StatusIndicatorIcon
+              aria-hidden
+              className={styles.subLinkStatusIndicator({ isActive })}
+            />
+            <Slottable>{children}</Slottable>
           </Comp>
         </Box>
       </SlotProvider>
