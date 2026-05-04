@@ -46,9 +46,11 @@ export const Default: Story = {
               </NavLink>
               <SubNavList>
                 <SubNavItem isActive={activeId === 'bing-sub-1'}>
-                  <SubNavLink href="#bing-sub-1" onClick={select('bing-sub-1')}>
-                    Sub-tab 1
-                    <FavoriteIcon />
+                  <SubNavLink onClick={select('bing-sub-1')} asChild>
+                    <Link to="#bing-sub-1">
+                      Sub-tab 1
+                      <FavoriteIcon />
+                    </Link>
                   </SubNavLink>
                 </SubNavItem>
                 <SubNavItem isActive={activeId === 'bing-sub-2'}>

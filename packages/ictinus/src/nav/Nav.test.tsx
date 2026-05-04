@@ -167,38 +167,6 @@ describe('Nav', () => {
       expect(onClick).not.toHaveBeenCalled();
     });
 
-    it('renders the status indicator only when the sub link is active', () => {
-      const { rerender } = render(
-        <Nav>
-          <NavItem>
-            <SubNavList>
-              <SubNavItem isActive>
-                <SubNavLink href="/active-sub">Active sub</SubNavLink>
-              </SubNavItem>
-            </SubNavList>
-          </NavItem>
-        </Nav>
-      );
-
-      const activeLink = screen.getByRole('link', { name: 'Active sub' });
-      expect(within(activeLink).getByRole('img')).toBeInTheDocument();
-
-      rerender(
-        <Nav>
-          <NavItem>
-            <SubNavList>
-              <SubNavItem>
-                <SubNavLink href="/inactive-sub">Inactive sub</SubNavLink>
-              </SubNavItem>
-            </SubNavList>
-          </NavItem>
-        </Nav>
-      );
-
-      const inactiveLink = screen.getByRole('link', { name: 'Inactive sub' });
-      expect(within(inactiveLink).queryByRole('img')).not.toBeInTheDocument();
-    });
-
     it('lets SubNavLink isDisabled override a non-disabled SubNavItem', () => {
       render(
         <Nav>

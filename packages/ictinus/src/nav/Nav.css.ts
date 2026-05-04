@@ -159,20 +159,13 @@ export const subItem = recipe({
       gap: 'sm',
     }),
   ],
-  variants: {
-    isActive: {
-      false: sprinkles({
-        pl: '2xl',
-      }),
-      true: sprinkles({
-        pl: '0',
-      }),
-    },
-  },
 });
+
+const subLinkBase = style({});
 
 export const subLink = recipe({
   base: [
+    subLinkBase,
     sprinkles({
       position: 'relative',
       isolation: 'isolate',
@@ -203,6 +196,36 @@ export const subLink = recipe({
         opacity: '0.5',
         cursor: 'not-allowed',
         pointerEvents: 'none',
+      }),
+    },
+  },
+});
+
+export const subLinkStatusIndicator = recipe({
+  base: [
+    sprinkles({
+      flexShrink: '0',
+    }),
+    style({
+      opacity: 0,
+
+      '@media': {
+        '(hover: hover)': {
+          selectors: {
+            [`${subLinkBase}:hover &`]: {
+              opacity: 1,
+              color: vars.color['border-color'].interactive.default,
+            },
+          },
+        },
+      },
+    }),
+  ],
+  variants: {
+    isActive: {
+      true: sprinkles({
+        color: 'active',
+        opacity: '1',
       }),
     },
   },
