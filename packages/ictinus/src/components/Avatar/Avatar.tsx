@@ -4,6 +4,11 @@ import { avatarStyle, iconStyles } from './Avatar.style';
 import type { AvatarProps } from './Avatar.types';
 import { UserAvatar } from './UserAvatar';
 
+/**
+ *
+ * @deprecated {@link Avatar} has been deprecated; use vanilla Avatar instead.
+ *
+ */
 const Avatar = forwardRef<HTMLDivElement, PropsWithChildren<AvatarProps>>(
   ({ src = '', size = 1, color = 'blue', className, dataTestPrefixId = '', children }, ref) => {
     const avatarContent = useMemo(() => {

@@ -21,6 +21,11 @@ export type ButtonProps = ButtonBaseProps &
     avatar?: Pick<AvatarProps, 'src' | 'color'> & { label?: string };
   };
 
+/**
+ *
+ * @deprecated {@link Button} has been deprecated; use vanilla Button instead.
+ *
+ */
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
   const {
     type = 'primary',
