@@ -6,6 +6,11 @@ import { avatarStackStyle, avatarWrapperStyle } from './AvatarStack.style';
 import type { AvatarStackProps } from './AvatarStack.types';
 import { errors } from './utils';
 
+/**
+ *
+ * @deprecated {@link AvatarStack} has been deprecated; use vanilla AvatarGroup instead.
+ *
+ */
 const AvatarStack = forwardRef<HTMLDivElement, AvatarStackProps>(
   ({ maxAvatars = 4, size = 1, color = 'blue', dataTestId = '', children: childrenProp }, ref) => {
     errorHandler<AvatarStackProps>(errors, { maxAvatars });
