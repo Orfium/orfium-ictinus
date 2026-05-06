@@ -1,5 +1,12 @@
 # @orfium/ictinus
 
+## 5.45.1
+
+### Patch Changes
+
+- 1f238f0: deprecate button avatar
+- 2510567: sub nav link router support
+
 ## 5.45.0
 
 ### Minor Changes
