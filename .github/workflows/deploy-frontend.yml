@@ -114,7 +114,7 @@ jobs:
           fi
           source "environments/${TARGET_ENV}.env"
 
-          pnpm build --filter @app/storybook
+          pnpm -F storybook... build
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@61815dcd50bd041e203e49132bacad1fd04d2708 #v5.1.1
         with:
