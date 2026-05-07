@@ -7,10 +7,6 @@ on:
         description: Deployment Target
         required: true
         type: string
-    secrets:
-      ORG_PGP_TOKEN:
-        description: Org token for npm
-        required: true
 
 jobs:
   get-environment-name:
@@ -21,28 +17,28 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 #v6.0.1
-
       - id: get-env
+        env:
+          TARGET_ENV: ${{ inputs.target-environment }}
+          EVENT_NAME: ${{ github.event_name }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
         run: |
           set -o allexport
-          # Load optional common configuration
           if [ -f environments/common.env ]; then
-              source environments/common.env
+            source environments/common.env
           fi
-          source environments/${{ inputs.target-environment }}.env
+          source "environments/${TARGET_ENV}.env"
 
           SUBDOMAIN=$PRODUCT
-          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
-              SUBDOMAIN=${SUBDOMAIN}-pr-${{ github.event.pull_request.number }}
+          ENV="$TARGET_ENV"
+          if [[ "$EVENT_NAME" == "pull_request" ]]; then
+            SUBDOMAIN="${SUBDOMAIN}-pr-${PR_NUMBER}"
+            ENV="review-${PR_NUMBER}"
           fi
-          ENV=${{ inputs.target-environment }}
-          if [[ ${{ github.event_name }} == "pull_request" ]]; then
-            ENV=review-${{ github.event.pull_request.number }}
-          fi
+
           # shellcheck disable=SC2129
           echo "env-name=$ENV" >> "$GITHUB_OUTPUT"
           echo "url=https://${SUBDOMAIN}.${BASE_DOMAIN}" >> "$GITHUB_OUTPUT"
-
   deploy-front-end:
     if: ${{ github.actor != 'dependabot[bot]' }}
     runs-on: ubuntu-latest
@@ -58,7 +54,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 #v6.0.1
-
       - name: Create GitHub deployment
         uses: chrnorm/deployment-action@55729fcebec3d284f60f5bcabbd8376437d696b1 #v2.0.7
         id: deployment
@@ -67,75 +62,64 @@ jobs:
           log-url: ${{ needs.get-environment-name.outputs.url }}
           environment-url: ${{ needs.get-environment-name.outputs.url }}
           environment: ${{ needs.get-environment-name.outputs.env-name }}
-
       - name: Setup configuration
         id: config
+        env:
+          TARGET_ENV: ${{ inputs.target-environment }}
+          EVENT_NAME: ${{ github.event_name }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
         run: |
           set -o allexport
-          # Load optional common configuration
           if [ -f environments/common.env ]; then
-              source environments/common.env
+            source environments/common.env
           fi
-          source environments/${{ inputs.target-environment }}.env
+          source "environments/${TARGET_ENV}.env"
 
           SUBDOMAIN=$PRODUCT
-          STACKNAME=${PRODUCT}-${{ inputs.target-environment }}
-          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
-              SUBDOMAIN=${SUBDOMAIN}-pr-${{ github.event.pull_request.number }}
-              STACKNAME=${PRODUCT}-pr-${{ github.event.pull_request.number }}
-          fi
+          STACKNAME="${PRODUCT}-${TARGET_ENV}"
+          if [[ "$EVENT_NAME" == "pull_request" ]]; then
+            SUBDOMAIN="${SUBDOMAIN}-pr-${PR_NUMBER}"
+            STACKNAME="${PRODUCT}-pr-${PR_NUMBER}"
 
-          # FIXME: Temporarily disable response headers policy creation for review environments (deployed for PRs) by
-          # setting CSP headers to an empty string in order to avoid hitting the limit for response headers policies.
-          # We should find a better way to do this :'(
-          if [ ${{ github.event_name }} == 'pull_request' ]; then
-              CSP_HEADER=""
+            # FIXME: Temporarily disable response headers policy creation for review environments (deployed for PRs) by
+            # setting CSP headers to an empty string in order to avoid hitting the limit for response headers policies.
+            CSP_HEADER=""
           fi
 
           # shellcheck disable=SC2129
           echo "csp_header=$CSP_HEADER" >> "$GITHUB_OUTPUT"
-          echo "cd_role=$CD_ROLE" >> "$GITHUB_OUTPUT"
-          echo "cfn_role=$CFN_ROLE" >> "$GITHUB_OUTPUT"
-          echo "cert_arn=$CERT_ARN" >> "$GITHUB_OUTPUT"
-          echo "domain=$BASE_DOMAIN" >> "$GITHUB_OUTPUT"
+          echo "cd_role=$CD_ROLE"     >> "$GITHUB_OUTPUT"
+          echo "cfn_role=$CFN_ROLE"   >> "$GITHUB_OUTPUT"
+          echo "cert_arn=$CERT_ARN"   >> "$GITHUB_OUTPUT"
+          echo "domain=$BASE_DOMAIN"  >> "$GITHUB_OUTPUT"
           echo "subdomain=$SUBDOMAIN" >> "$GITHUB_OUTPUT"
-          echo "product=$PRODUCT" >> "$GITHUB_OUTPUT"
+          echo "product=$PRODUCT"     >> "$GITHUB_OUTPUT"
           echo "stackname=$STACKNAME" >> "$GITHUB_OUTPUT"
-
       - name: Install pnpm
         uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 #v4.2.0
-
       - name: Setup Node
         uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f #v6.1.0
         with:
           node-version-file: 'package.json'
           cache: 'pnpm'
-
-      - name: Sets pnpm config
-        run: |
-          pnpm config set //npm.pkg.github.com/:_authToken ${{ secrets.ORG_PGP_TOKEN }}
-          pnpm config set @orfium:registry https://npm.pkg.github.com
-          pnpm config set always-auth true || echo "This fails for versions > 18.13"
-
       - name: Install dependencies
         run: pnpm install
-
       - name: Setup env, Build app
+        env:
+          TARGET_ENV: ${{ inputs.target-environment }}
         run: |
           set -o allexport
-          # Load optional common configuration
           if [ -f environments/common.env ]; then
-              source environments/common.env
+            source environments/common.env
           fi
-          source environments/${{ inputs.target-environment }}.env
-          pnpm build --filter @app/storybook
+          source "environments/${TARGET_ENV}.env"
 
+          pnpm build --filter @app/storybook
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@61815dcd50bd041e203e49132bacad1fd04d2708 #v5.1.1
         with:
           role-to-assume: ${{ steps.config.outputs.cd_role }}
           aws-region: 'us-east-1'
-
       - name: Check if deployment exists and is up to date
         id: check-stack-state
         run: |
@@ -157,7 +141,6 @@ jobs:
             create_or_update_stack=0
           fi
           echo "create_or_update_stack=$create_or_update_stack" >> "$GITHUB_OUTPUT";
-
       - name: Set up S3-Cloudfront
         if: steps.check-stack-state.outputs.create_or_update_stack == '1'
         id: cloudfront-app-setup
@@ -181,7 +164,6 @@ jobs:
               {"Key": "info:product", "Value": "${{ steps.config.outputs.product }}"},
               {"Key": "info:env", "Value": "${{ inputs.target-environment }}"}
             ]
-
       - name: Upload to S3
         run: |
           STACKNAME=${{ steps.config.outputs.stackname }}
@@ -194,7 +176,6 @@ jobs:
           aws s3 sync "$GITHUB_WORKSPACE/apps/storybook/dist/" "s3://${S3_BUCKET_NAME}/"
           INVALIDATION_ID=$(aws cloudfront create-invalidation --distribution-id "$DISTRIBUTION_ID" --paths "/*" | jq -r .Invalidation.Id)
           echo "INVALIDATION_ID is $INVALIDATION_ID"
-
       - name: Update deployment status (success)
         if: success()
         uses: chrnorm/deployment-status@9a72af4586197112e0491ea843682b5dc280d806 #v2.0.3
@@ -204,7 +185,6 @@ jobs:
           log-url: ${{ steps.deployment.outputs.environment_url }}
           deployment-id: ${{ steps.deployment.outputs.deployment_id }}
           state: 'success'
-
       - name: Update deployment status (failure)
         if: failure()
         uses: chrnorm/deployment-status@9a72af4586197112e0491ea843682b5dc280d806 #v2.0.3
