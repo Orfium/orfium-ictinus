@@ -80,5 +80,3 @@ jobs:
     concurrency: ${{ github.ref }}
     with:
       target-environment: ${{ needs.select-deployment-target.outputs.target }}
-    secrets:
-      ORG_PGP_TOKEN: ${{ secrets.ORG_PGP_TOKEN }}
