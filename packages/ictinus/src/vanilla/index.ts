@@ -10,6 +10,7 @@ export * from '../nav';
 export * from '../skeleton';
 export * from '../sprinkles';
 export * from '../utils/cn';
+export * from './Badge';
 export * from './Box';
 export * from './Dialog';
 export * from './Menu';

@@ -3,6 +3,115 @@ import { recipe } from '@vanilla-extract/recipes';
 
 import { sprinkles } from '../../sprinkles';
 import { style } from '../../vanilla-extract';
+import { type TagColors } from './Tag';
+
+export const tagBase = sprinkles({
+  display: 'inline-flex',
+  alignItems: 'center',
+  cursor: 'default',
+  userSelect: 'none',
+  gap: 'xs',
+});
+
+export const defaultTagBase = [
+  tagBase,
+  sprinkles({
+    py: '2',
+    borderStyle: 'solid',
+    borderBottomWidth: '1',
+    borderLeftWidth: '1',
+    borderRightWidth: '1',
+    borderTopWidth: '1',
+  }),
+];
+
+export const defaultTagSizeVariants = {
+  normal: sprinkles({
+    h: '6',
+    px: '4',
+    borderRadius: '2',
+  }),
+  small: sprinkles({
+    h: '5',
+    px: '3',
+    borderRadius: '1',
+  }),
+};
+
+export const defaultTagColorVariants = {
+  neutral: [] as string[],
+  blue: [] as string[],
+  red: [] as string[],
+  purple: [] as string[],
+  teal: [] as string[],
+  orange: [] as string[],
+};
+
+export const defaultTagColorCompoundVariants: Array<{
+  variants: { color: TagColors };
+  style: string[];
+}> = [
+  {
+    variants: { color: 'neutral' },
+    style: [
+      sprinkles({
+        backgroundColor: 'default',
+        borderColor: 'decorative.default',
+        color: 'active',
+      }),
+    ],
+  },
+  {
+    variants: { color: 'blue' },
+    style: [
+      sprinkles({
+        backgroundColor: 'palette.primary-alt.muted',
+        borderColor: 'decorative.default',
+        color: 'active',
+      }),
+    ],
+  },
+  {
+    variants: { color: 'red' },
+    style: [
+      sprinkles({
+        backgroundColor: 'palette.error.muted',
+        borderColor: 'interactive.error',
+        color: 'error',
+      }),
+    ],
+  },
+  {
+    variants: { color: 'purple' },
+    style: [
+      sprinkles({
+        backgroundColor: 'palette.upsell.muted',
+        borderColor: 'interactive.upsell',
+        color: 'visited',
+      }),
+    ],
+  },
+  {
+    variants: { color: 'teal' },
+    style: [
+      sprinkles({
+        backgroundColor: 'palette.success.muted',
+        borderColor: 'interactive.success',
+        color: 'success',
+      }),
+    ],
+  },
+  {
+    variants: { color: 'orange' },
+    style: [
+      sprinkles({
+        backgroundColor: 'palette.warning.muted',
+        borderColor: 'interactive.warning',
+        color: 'warning',
+      }),
+    ],
+  },
+];
 
 export const tagGroup = recipe({
   base: [
@@ -10,9 +119,6 @@ export const tagGroup = recipe({
       display: 'flex',
       flexDirection: 'column',
       gap: 'sm',
-    }),
-    style({
-      outline: 'none',
     }),
   ],
 });
@@ -24,51 +130,14 @@ export const tagList = recipe({
       flexWrap: 'wrap',
       gap: 'sm',
     }),
-    style({
-      outline: 'none',
-    }),
   ],
 });
 
 export const tag = recipe({
-  base: [
-    sprinkles({
-      display: 'inline-flex',
-      alignItems: 'center',
-      py: '2',
-      gap: 'xs',
-      cursor: 'default',
-      userSelect: 'none',
-      borderStyle: 'solid',
-      borderBottomWidth: '1',
-      borderLeftWidth: '1',
-      borderRightWidth: '1',
-      borderTopWidth: '1',
-    }),
-  ],
+  base: [...defaultTagBase],
   variants: {
-    size: {
-      normal: sprinkles({
-        h: '6',
-        px: '4',
-        borderRadius: '2',
-      }),
-      small: [
-        sprinkles({
-          h: '5',
-          px: '3',
-          borderRadius: '1',
-        }),
-      ],
-    },
-    color: {
-      neutral: [],
-      blue: [],
-      red: [],
-      purple: [],
-      teal: [],
-      orange: [],
-    },
+    size: defaultTagSizeVariants,
+    color: defaultTagColorVariants,
     interactive: {
       true: [
         sprinkles({
@@ -107,66 +176,10 @@ export const tag = recipe({
     },
   },
   compoundVariants: [
-    {
-      variants: { interactive: false, color: 'neutral' },
-      style: [
-        sprinkles({
-          backgroundColor: 'default',
-          borderColor: 'decorative.default',
-          color: 'active',
-        }),
-      ],
-    },
-    {
-      variants: { interactive: false, color: 'blue' },
-      style: [
-        sprinkles({
-          backgroundColor: 'palette.primary-alt.muted',
-          borderColor: 'decorative.default',
-          color: 'active',
-        }),
-      ],
-    },
-    {
-      variants: { interactive: false, color: 'red' },
-      style: [
-        sprinkles({
-          backgroundColor: 'palette.error.muted',
-          borderColor: 'interactive.error',
-          color: 'error',
-        }),
-      ],
-    },
-    {
-      variants: { interactive: false, color: 'purple' },
-      style: [
-        sprinkles({
-          backgroundColor: 'palette.upsell.muted',
-          borderColor: 'interactive.upsell',
-          color: 'visited',
-        }),
-      ],
-    },
-    {
-      variants: { interactive: false, color: 'teal' },
-      style: [
-        sprinkles({
-          backgroundColor: 'palette.success.muted',
-          borderColor: 'interactive.success',
-          color: 'success',
-        }),
-      ],
-    },
-    {
-      variants: { interactive: false, color: 'orange' },
-      style: [
-        sprinkles({
-          backgroundColor: 'palette.warning.muted',
-          borderColor: 'interactive.warning',
-          color: 'warning',
-        }),
-      ],
-    },
+    ...defaultTagColorCompoundVariants.map((cv) => ({
+      ...cv,
+      variants: { ...cv.variants, interactive: false },
+    })),
   ],
   defaultVariants: {
     size: 'normal',
@@ -223,14 +236,10 @@ export const text = recipe({
 
 export const codeTag = recipe({
   base: [
+    tagBase,
     sprinkles({
-      display: 'inline-flex',
-      alignItems: 'center',
       py: '1',
-      cursor: 'default',
-      userSelect: 'none',
       backgroundColor: 'palette.secondary.contrast',
-      borderRadius: '1',
     }),
   ],
   variants: {
