@@ -1,6 +1,6 @@
-import { Button } from '@orfium/ictinus';
 import {
   Box,
+  Button,
   DataTable,
   DataTableBody,
   DataTableBulkActions,
@@ -45,6 +45,7 @@ export const Default: Story = {
       getSortedRowModel: getSortedRowModel(),
       enableMultiSort: true,
       enableRowSelection: (row) => !row.original.locked,
+      selectOnRowClick: false,
       state: {
         columnPinning,
         columnVisibility,
@@ -83,7 +84,7 @@ export const Default: Story = {
           </Box>
           <DataTableEditColumns />
         </DataTableHeader>
-        <DataTableBody roundedT="0" />
+        <DataTableBody size="auto" roundedT="0" />
       </DataTable>
     );
   },

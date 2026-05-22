@@ -40,13 +40,23 @@ declare module '@tanstack/react-table' {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars, unused-imports/no-unused-vars
   interface ColumnMeta<TData extends RowData, TValue> {
     align?: 'flex-start' | 'center' | 'flex-end';
+    verticalAlign?: 'flex-start' | 'center' | 'flex-end';
     label?: string;
     tooltip?: string;
-    // backward compatibility with old v5 table
+    // backwards compatibility with old v5 table
     contentAlign?: 'left' | 'center' | 'right';
   }
 
   interface TableMeta<TData extends RowData> {
     getCellProps?: (row: Row<TData>) => Omit<BoxProps<'td'>, 'size'>;
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars, unused-imports/no-unused-vars
+  interface TableOptionsResolved<TData extends RowData> {
+    /**
+     * When `true`, clicking a row toggles its selection (checkbox clicks are handled separately).
+     * @default true
+     */
+    selectOnRowClick?: boolean;
   }
 }

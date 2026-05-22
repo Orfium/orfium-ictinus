@@ -30,6 +30,7 @@ export type DataTableRowProps = BoxProps<
 export const DataTableRow = forwardRef<HTMLTableRowElement, DataTableRowProps>(
   ({ children, index, row, ...props }, ref: RefObject<HTMLTableRowElement>) => {
     const { highlightedIndex, setHighlightedIndex, table } = useDataTableContext();
+    const selectOnRowClick = table.options.selectOnRowClick ?? true;
 
     const [subHighlightedIndex, setSubHighlightedIndex] = useState(-1);
     const labelId = useId();
@@ -85,7 +86,7 @@ export const DataTableRow = forwardRef<HTMLTableRowElement, DataTableRowProps>(
         data-focus-visible={focusManaged ? '' : undefined}
         data-selected={row.getIsSelected() ? '' : undefined}
         onClick={(event) => {
-          if (selector && getAssociatedControl(event) !== selector.current) {
+          if (selectOnRowClick && selector && getAssociatedControl(event) !== selector.current) {
             row.toggleSelected();
           }
         }}
@@ -118,7 +119,7 @@ export const DataTableRow = forwardRef<HTMLTableRowElement, DataTableRowProps>(
             event.target instanceof HTMLElement &&
             event.target !== selector?.current &&
             (event.target.isContentEditable ||
-              ['input', 'select', 'textarea'].includes(event.target.localName))
+              ['button', 'a', 'input', 'select', 'textarea'].includes(event.target.localName))
           ) {
             return;
           }
@@ -141,27 +142,6 @@ export const DataTableRow = forwardRef<HTMLTableRowElement, DataTableRowProps>(
             if (nextIndex >= 0 && nextIndex <= rows.length - 1) {
               event.preventDefault();
               setHighlightedIndex(nextIndex);
-
-              if (selector) {
-                const nextRow = rows[nextIndex];
-                if (event.shiftKey && row.getCanMultiSelect()) {
-                  table.setRowSelection((selection) =>
-                    selection[nextRow.id]
-                      ? {
-                          ...selection,
-                          [row.id]: false,
-                        }
-                      : {
-                          ...selection,
-                          [nextRow.id]: true,
-                        }
-                  );
-                } else {
-                  table.setRowSelection({
-                    [nextRow.id]: true,
-                  });
-                }
-              }
             }
           } else if (
             focusManaged &&
@@ -173,11 +153,25 @@ export const DataTableRow = forwardRef<HTMLTableRowElement, DataTableRowProps>(
               event.preventDefault();
               setSubHighlightedIndex(nextIndex);
             }
-          } else if (event.currentTarget === document.activeElement) {
-            if (event.key === ' ' && selector) {
+          } else if (isSpaceKey(event) && focusManaged && selector && row.getCanSelect()) {
+            const checkboxFocused =
+              selector.current &&
+              (document.activeElement === selector.current ||
+                selector.current.contains(document.activeElement));
+
+            const rowFocused =
+              subHighlightedIndex === -1 &&
+              (document.activeElement === event.currentTarget ||
+                (document.activeElement instanceof Node &&
+                  event.currentTarget.contains(document.activeElement) &&
+                  !checkboxFocused));
+
+            if (rowFocused) {
               event.preventDefault();
               row.toggleSelected();
-            } else if (event.key === 'Enter' && primary) {
+            }
+          } else if (event.currentTarget === document.activeElement) {
+            if (event.key === 'Enter' && primary) {
               event.preventDefault();
               primary.ref.current?.click();
             }
@@ -213,6 +207,8 @@ export const DataTableRow = forwardRef<HTMLTableRowElement, DataTableRowProps>(
 );
 
 DataTableRow.displayName = 'DataTableRow';
+
+const isSpaceKey = (event: { key: string }) => event.key === ' ' || event.key === 'Spacebar';
 
 const getAssociatedControl = (event: MouseEvent) => {
   if (event.target instanceof Element) {
