@@ -9,6 +9,7 @@ import {
 } from 'react-aria-components';
 
 import { cn } from '../../utils/cn';
+import { Box, extractBoxProps, type BoxProps } from '../Box';
 import {
   DialogBody,
   DialogDescription,
@@ -29,41 +30,43 @@ const PopoverHeader = DialogHeader;
 const PopoverBody = DialogBody;
 const PopoverFooter = DialogFooter;
 
-interface PopoverContentProps extends Omit<PopoverPrimitiveProps, 'className'> {
-  showArrow?: boolean;
-  className?: string;
-}
+type PopoverContentProps = BoxProps<
+  typeof PopoverPrimitive,
+  {
+    showArrow?: boolean;
+  }
+> &
+  PopoverPrimitiveProps;
 
 const PopoverContent = ({
   children,
   showArrow = false,
   className,
+  offset: offsetProp,
   ...props
 }: PopoverContentProps) => {
-  const offset = props.offset ?? (showArrow ? 12 : 8);
+  const { boxProps, restProps } = extractBoxProps(props);
+  const offset = offsetProp ?? (showArrow ? 12 : 8);
 
   return (
-    <PopoverPrimitive offset={offset} className={cn(styles.popover({}), className)} {...props}>
-      {(values) => (
-        <>
-          {showArrow && (
-            <OverlayArrow className="group">
-              <svg
-                width={12}
-                height={12}
-                viewBox="0 0 12 12"
-                className="group-placement-left:-rotate-90 block fill-overlay stroke-border group-placement-bottom:rotate-180 group-placement-right:rotate-90 forced-colors:fill-[Canvas] forced-colors:stroke-[ButtonBorder]"
-              >
-                <path d="M0 0 L6 6 L12 0" />
-              </svg>
-            </OverlayArrow>
-          )}
-          <div data-slot="popover-inner" style={{ maxHeight: 'inherit', overflowY: 'auto' }}>
-            {typeof children === 'function' ? children(values) : children}
-          </div>
-        </>
-      )}
-    </PopoverPrimitive>
+    <Box asChild className={cn(styles.popover({}), className)} {...boxProps}>
+      <PopoverPrimitive offset={offset} {...restProps}>
+        {(values) => (
+          <>
+            {showArrow && (
+              <OverlayArrow className="group">
+                <svg width={15} height={6} viewBox="0 0 15 6" className={styles.arrow()}>
+                  <path d="M7.5 6L0.500001 -1.22392e-06L14.5 0L7.5 6Z" />
+                </svg>
+              </OverlayArrow>
+            )}
+            <div data-slot="popover-inner" style={{ maxHeight: 'inherit', overflowY: 'auto' }}>
+              {typeof children === 'function' ? children(values) : children}
+            </div>
+          </>
+        )}
+      </PopoverPrimitive>
+    </Box>
   );
 };
 

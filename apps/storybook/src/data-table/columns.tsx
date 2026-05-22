@@ -1,4 +1,7 @@
 import {
+  ActionsContent,
+  ActionsRoot,
+  Box,
   Button,
   ChevronRightIcon,
   DataTableCheckbox,
@@ -9,8 +12,9 @@ import {
   TooltipTrigger,
 } from '@orfium/ictinus/vanilla';
 import { createColumnHelper } from '@tanstack/react-table';
+import { FriendDetailsPopover, type FriendRecord } from './FriendComparePopover';
 
-export const data = [
+export const data: FriendRecord[] = [
   {
     firstName: 'Rachel',
     lastName: 'Green',
@@ -84,16 +88,7 @@ export const data = [
   },
 ];
 
-const columnHelper = createColumnHelper<{
-  firstName: string;
-  lastName: string;
-  age: number;
-  job: string;
-  locked?: boolean;
-  address?: {
-    street?: string;
-  };
-}>();
+const columnHelper = createColumnHelper<FriendRecord>();
 
 export const columns = [
   columnHelper.display({
@@ -107,17 +102,37 @@ export const columns = [
     },
   }),
   columnHelper.accessor('firstName', {
-    cell: ({ getValue }) => <Text lineClamp="1">{getValue()}</Text>,
+    cell: ({ getValue, row }) => {
+      const friend = row.original;
+      const compare = data[(data.indexOf(friend) + 1) % data.length];
+
+      return (
+        <ActionsRoot asChild>
+          <Box display="flex" flexDirection="column">
+            <Text onClick={() => console.log('copy')}>{getValue()} this is a long name</Text>
+            <ActionsContent>
+              <Button>Test</Button>
+            </ActionsContent>
+            <Box display="flex" alignItems="center" flexWrap="wrap" gap="sm">
+              <Text color="secondary">
+                {friend.firstName} {friend.lastName}
+              </Text>
+              <FriendDetailsPopover friend={friend} compare={compare} />
+            </Box>
+          </Box>
+        </ActionsRoot>
+      );
+    },
     header: 'First Name',
     enableHiding: false,
     meta: {
-      label: 'First Name',
+      verticalAlign: 'flex-start',
       tooltip: 'The quick brown fox',
     },
   }),
   columnHelper.accessor('lastName', {
     header: 'Last Name',
-    meta: { label: 'Last Name' },
+    meta: { verticalAlign: 'flex-start', label: 'Last Name' },
   }),
   columnHelper.accessor('age', {
     header: 'Age',
@@ -132,7 +147,7 @@ export const columns = [
     cell: ({ getValue }) => (
       <Tooltip auto>
         <TooltipTrigger>
-          <Text lineClamp="1">{getValue()?.street ?? ''}</Text>
+          <Text>{getValue()?.street ?? ''}</Text>
         </TooltipTrigger>
         <TooltipContent>{getValue()?.street ?? ''}</TooltipContent>
       </Tooltip>
@@ -144,14 +159,28 @@ export const columns = [
     meta: { tooltip: 'The quick brown fox' },
   }),
   columnHelper.display({
-    cell: ({ row }) =>
-      row.original.locked ? (
-        <LockIcon size="sm" color="secondary" />
-      ) : (
+    header: ({ table }) => {
+      if (table.getSelectedRowModel().rows.length > 0) {
+        return null;
+      }
+
+      return 'Actions';
+    },
+    cell: ({ row, table }) => {
+      if (row.original.locked) {
+        return <LockIcon size="sm" color="secondary" />;
+      }
+
+      if (table.getSelectedRowModel().rows.length > 0) {
+        return null;
+      }
+
+      return (
         <Button variant="tertiary" size="compact" iconOnly circle>
           <ChevronRightIcon />
         </Button>
-      ),
+      );
+    },
     id: 'action',
     size: 48,
     enableResizing: false,

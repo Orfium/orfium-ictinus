@@ -63,6 +63,7 @@ export const content = recipe({
       lg: sprinkles({
         h: '15',
       }),
+      auto: {},
     },
     bordered: {
       true: style({

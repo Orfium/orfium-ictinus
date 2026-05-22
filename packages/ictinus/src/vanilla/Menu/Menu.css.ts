@@ -16,7 +16,7 @@ export const menu = recipe({
       maxHeight: 'inherit',
       overscrollBehavior: 'contain',
       outline: 'none',
-      clipPath: `inset(0 0 0 0 round calc(${vars['border-radius'][2]} - 2px))`,
+      clipPath: `inset(0 0 0 0 round calc(${vars['border-radius'][2]} - 0px))`,
     }),
   ],
 });

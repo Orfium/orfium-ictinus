@@ -22,7 +22,7 @@ export type DataTableBodyProps = BoxProps<
   {
     estimatedRowHeight?: number;
     bordered?: boolean;
-    size?: 'sm' | 'md' | 'lg';
+    size?: 'sm' | 'md' | 'lg' | 'auto';
     loading?: boolean | Record<string, 'sub-rows' | false>;
   }
 >;
@@ -236,6 +236,7 @@ export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
                       data-col-id={cell.column.id}
                       bordered={bordered}
                       size={size}
+                      alignItems={cell.column.columnDef.meta?.verticalAlign}
                       justifyContent={cell.column.columnDef.meta?.align}
                       key={cell.id}
                       pinned
@@ -276,6 +277,7 @@ export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
                       key={cell.id}
                       size={size}
                       bordered={bordered}
+                      alignItems={cell.column.columnDef.meta?.verticalAlign}
                       justifyContent={cell.column.columnDef.meta?.align}
                       {...cellProps}
                       style={{
@@ -301,6 +303,7 @@ export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
                       key={cell.id}
                       size={size}
                       bordered={bordered}
+                      alignItems={cell.column.columnDef.meta?.verticalAlign}
                       justifyContent={cell.column.columnDef.meta?.align}
                       pinned
                       {...cellProps}

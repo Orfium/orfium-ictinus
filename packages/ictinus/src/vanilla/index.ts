@@ -1,5 +1,7 @@
+export * from '../actions';
 export * from '../avatar';
 export * from '../button';
+export * from '../cover';
 export * from '../data-table';
 export * from '../icon';
 export * from '../icons';
