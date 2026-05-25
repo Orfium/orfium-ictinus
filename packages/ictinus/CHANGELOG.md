@@ -1,5 +1,11 @@
 # @orfium/ictinus
 
+## 5.45.2
+
+### Patch Changes
+
+- 0dcc5b1: table adjustments for condensed
+
 ## 5.45.1
 
 ### Patch Changes
