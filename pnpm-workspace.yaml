@@ -3,10 +3,11 @@ packages:
   - apps/*
   - examples/*
 
-minimumReleaseAge: 1440
+allowBuilds:
+  esbuild: false
+  unrs-resolver: false
 
+minimumReleaseAge: 2880 # 2 days
 minimumReleaseAgeExclude:
   - '@orfium/*'
 
-onlyBuiltDependencies:
-  - esbuild

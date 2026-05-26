@@ -65,7 +65,7 @@ orfium-ictinus/
    pnpm build
    ```
 
-## 📋 Available Scripts
+## Available Scripts
 
 | Script               | Description                                      |
 | -------------------- | ------------------------------------------------ |
