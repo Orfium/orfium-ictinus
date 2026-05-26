@@ -21,8 +21,7 @@ const meta: Meta<typeof Badge> = {
 export default meta;
 type Story = StoryObj<typeof Badge>;
 
-export const ReadOnlyBadges: Story = {
-  name: 'Variants',
+export const Variants: Story = {
   render: () => (
     <Box display="flex" flexDirection="column" gap="2xl">
       <Box display="flex" flexWrap="wrap" gap="sm">
@@ -39,7 +38,6 @@ export const ReadOnlyBadges: Story = {
 };
 
 export const Sizes: Story = {
-  name: 'Sizes',
   render: () => (
     <Box display="flex" flexDirection="column" gap="2xl">
       <Box display="flex" flexWrap="wrap" gap="sm">
@@ -74,8 +72,7 @@ export const Sizes: Story = {
   ),
 };
 
-export const WithIcons: Story = {
-  name: 'With Icon',
+export const WithIcon: Story = {
   render: () => (
     <Box display="flex" flexDirection="column" gap="2xl">
       <Box display="flex" flexWrap="wrap" gap="sm">
