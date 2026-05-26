@@ -1,4 +1,3 @@
-import React from 'react';
 import { ResponsiveContainer } from 'recharts';
 import type { CategoricalChartProps } from 'recharts/types/chart/generateCategoricalChart';
 
@@ -10,7 +9,7 @@ type ChartWrapperProps = ChartProps & {
 
 function Wrapper(Component: any) {
   const WrappedChart = ({ children, ...rest }: ChartWrapperProps) => {
-    if (process.env.NODE_ENV !== 'test') {
+    if (import.meta.env.MODE !== 'test') {
       return (
         <ResponsiveContainer aspect={rest?.aspect}>
           <Component {...rest}>{children}</Component>

@@ -82,7 +82,7 @@ export default defineConfig(({ mode }) => {
       environment: 'jsdom',
       setupFiles: './src/test/setup.ts',
       coverage: {
-        reporter: ['text', 'html', 'json', 'lcov'],
+        reporter: ['lcov'],
         provider: 'v8',
         include: ['src'],
         exclude: [
