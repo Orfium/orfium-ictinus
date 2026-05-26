@@ -1,5 +1,6 @@
 export * from '../actions';
 export * from '../avatar';
+export * from '../badge';
 export * from '../button';
 export * from '../cover';
 export * from '../data-table';
@@ -9,6 +10,7 @@ export * from '../layers';
 export * from '../nav';
 export * from '../skeleton';
 export * from '../sprinkles';
+export * from '../tag-group';
 export * from '../utils/cn';
 export * from './Box';
 export * from './Dialog';
