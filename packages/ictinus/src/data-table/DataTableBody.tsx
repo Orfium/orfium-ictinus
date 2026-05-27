@@ -2,7 +2,7 @@ import { flexRender, type Row } from '@tanstack/react-table';
 import { useVirtualizer } from '@tanstack/react-virtual';
 import { assignInlineVars } from '@vanilla-extract/dynamic';
 import { forwardRef, type RefObject, useEffect, useMemo, useRef } from 'react';
-import { useDOMRef } from '~/components/utils/useDOMRef';
+import { useDOMRef } from '../components/utils/useDOMRef';
 import { cn } from '../utils/cn';
 import { Box, type BoxProps } from '../vanilla/Box';
 import { Table, TableBody, TableCell, TableHeader, TableRow } from '../vanilla/Table';

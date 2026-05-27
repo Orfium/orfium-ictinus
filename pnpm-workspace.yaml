@@ -7,7 +7,11 @@ allowBuilds:
   esbuild: false
   unrs-resolver: false
 
+catalog:
+  '@vitest/coverage-v8': ^4.1.7
+  vite: ^7.3.3
+  vitest: ^4.1.7
+
 minimumReleaseAge: 2880 # 2 days
 minimumReleaseAgeExclude:
   - '@orfium/*'
-
