@@ -178,7 +178,7 @@ jobs:
           echo "INVALIDATION_ID is $INVALIDATION_ID"
       - name: Update deployment status (success)
         if: success()
-        uses: chrnorm/deployment-status@9a72af4586197112e0491ea843682b5dc280d806 #v2.0.3
+        uses: chrnorm/deployment-status@6df8d036fd2fee9eb82936733953da1f8382b41e #v2.0.4
         with:
           token: '${{ github.token }}'
           environment-url: ${{ steps.deployment.outputs.environment_url }}
@@ -187,7 +187,7 @@ jobs:
           state: 'success'
       - name: Update deployment status (failure)
         if: failure()
-        uses: chrnorm/deployment-status@9a72af4586197112e0491ea843682b5dc280d806 #v2.0.3
+        uses: chrnorm/deployment-status@6df8d036fd2fee9eb82936733953da1f8382b41e #v2.0.4
         with:
           token: '${{ github.token }}'
           environment-url: ${{ steps.deployment.outputs.environment_url }}
