@@ -1,8 +1,8 @@
 import { forwardRef } from 'react';
-import { Icon, type IconProps } from './Icon';
+import { IconPrimitive, type IconPrimitiveProps } from './IconPrimitive';
 
-export const UsersIcon = forwardRef<SVGSVGElement, IconProps>((props, ref) => (
-  <Icon ref={ref} {...props}>
+export const UsersIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, ref) => (
+  <IconPrimitive ref={ref} {...props}>
     <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M2.23712 15.7656C2.39521 15.9219 2.59109 16 2.82478 16H12.4967C12.7304 16 12.9263 15.9216 13.0844 15.7647C13.2424 15.6078 13.3215 15.4168 13.3215 15.1916V13.9692C13.3215 13.541 13.2179 13.1654 13.0106 12.8423C12.8034 12.5191 12.5268 12.2684 12.1809 12.0902C11.4841 11.7415 10.7726 11.4733 10.0465 11.2857C9.3204 11.0982 8.528 11.0044 7.66931 11.0044C6.80674 11.0044 6.0105 11.0982 5.2806 11.2857C4.55072 11.4733 3.83739 11.7415 3.14061 12.0902C2.79468 12.2684 2.5181 12.5191 2.31087 12.8423C2.10362 13.1654 2 13.541 2 13.9692V15.1845C2 15.4156 2.07904 15.6093 2.23712 15.7656Z"
@@ -21,7 +21,7 @@ export const UsersIcon = forwardRef<SVGSVGElement, IconProps>((props, ref) => (
         fill="currentColor"
       />
     </svg>
-  </Icon>
+  </IconPrimitive>
 ));
 
 UsersIcon.displayName = 'UsersIcon';

@@ -1,5 +1,5 @@
 import { forwardRef } from 'react';
-import { useSlotProps } from '~/components/utils/Slots';
+import { useSlotProps } from '../components/utils/Slots';
 import { Box, type BoxProps } from '../vanilla/Box';
 
 const SIZE = {
@@ -9,11 +9,11 @@ const SIZE = {
   lg: '6',
 } as const;
 
-export type IconProps = Omit<BoxProps, 'size'> & {
+export type IconPrimitiveProps = Omit<BoxProps, 'size'> & {
   size?: keyof typeof SIZE;
 };
 
-export const Icon = forwardRef<SVGSVGElement, IconProps>((props, ref) => {
+export const IconPrimitive = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, ref) => {
   props = useSlotProps(props, 'icon');
   const { children, size = 'sm', ...restProps } = props;
 
@@ -24,4 +24,4 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>((props, ref) => {
   );
 });
 
-Icon.displayName = 'Icon';
+IconPrimitive.displayName = 'IconPrimitive';

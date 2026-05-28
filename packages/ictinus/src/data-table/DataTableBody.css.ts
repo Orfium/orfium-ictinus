@@ -89,7 +89,10 @@ export const cell = recipe({
       '@media': {
         '(hover: hover)': {
           selectors: {
-            [`[data-selectable] ${row}:hover &`]: {
+            [`[data-selectable] ${row}:is(
+              :hover,
+              :has([data-state=open], [aria-expanded=true])
+            ) &`]: {
               vars: {
                 [bgHoverColor]: vars.color.palette.tertiary.muted,
               },

@@ -1,8 +1,8 @@
 import { forwardRef } from 'react';
-import { Icon, type IconProps } from './Icon';
+import { IconPrimitive, type IconPrimitiveProps } from './IconPrimitive';
 
-export const MoreOptionsIcon = forwardRef<SVGSVGElement, IconProps>((props, ref) => (
-  <Icon ref={ref} {...props}>
+export const MoreOptionsIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, ref) => (
+  <IconPrimitive ref={ref} {...props}>
     <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M11.5 5.5C11.5 6.32843 10.8284 7 10 7C9.17157 7 8.5 6.32843 8.5 5.5C8.5 4.67157 9.17157 4 10 4C10.8284 4 11.5 4.67157 11.5 5.5Z"
@@ -17,7 +17,7 @@ export const MoreOptionsIcon = forwardRef<SVGSVGElement, IconProps>((props, ref)
         fill="currentColor"
       />
     </svg>
-  </Icon>
+  </IconPrimitive>
 ));
 
 MoreOptionsIcon.displayName = 'MoreOptionsIcon';

@@ -1,8 +1,8 @@
 import { forwardRef } from 'react';
-import { Icon, type IconProps } from './Icon';
+import { IconPrimitive, type IconPrimitiveProps } from './IconPrimitive';
 
-export const AudioOffIcon = forwardRef<SVGSVGElement, IconProps>((props, ref) => (
-  <Icon ref={ref} {...props}>
+export const AudioOffIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, ref) => (
+  <IconPrimitive ref={ref} {...props}>
     <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M16.3037 9.99651C16.3037 8.60618 15.9144 7.35154 15.1359 6.23262C14.3575 5.11371 13.3504 4.28822 12.1147 3.75615C11.8871 3.66559 11.712 3.51047 11.5893 3.29078C11.4666 3.0711 11.4577 2.84915 11.5625 2.62492C11.6618 2.38588 11.8291 2.20945 12.0644 2.09563C12.2997 1.98181 12.5301 1.96959 12.7555 2.05898C14.3425 2.70263 15.6133 3.74611 16.568 5.18942C17.5227 6.63274 18 8.24092 18 10.014C18 11.7233 17.5564 13.275 16.6691 14.6692L15.3826 13.3826C15.9966 12.36 16.3037 11.2313 16.3037 9.99651Z"
@@ -21,7 +21,7 @@ export const AudioOffIcon = forwardRef<SVGSVGElement, IconProps>((props, ref) =>
         fill="currentColor"
       />
     </svg>
-  </Icon>
+  </IconPrimitive>
 ));
 
 AudioOffIcon.displayName = 'AudioOffIcon';

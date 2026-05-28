@@ -1,8 +1,8 @@
 import { forwardRef } from 'react';
-import { Icon, type IconProps } from './Icon';
+import { IconPrimitive, type IconPrimitiveProps } from './IconPrimitive';
 
-export const VideoOffIcon = forwardRef<SVGSVGElement, IconProps>((props, ref) => (
-  <Icon ref={ref} {...props}>
+export const VideoOffIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, ref) => (
+  <IconPrimitive ref={ref} {...props}>
     <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M3.34194 3.14487C3.14933 2.95171 2.83706 2.95171 2.64445 3.14487C2.45185 3.33803 2.45185 3.65121 2.64445 3.84438L4.24064 5.44518C4.21992 5.46202 4.19946 5.47941 4.17925 5.49735C3.85344 5.78671 3.69053 6.14168 3.69053 6.56226V13.4568C3.69053 13.8697 3.85344 14.2227 4.17925 14.5159C4.50508 14.8092 4.89735 14.9558 5.35606 14.9558H13.017C13.2364 14.9558 13.4398 14.9234 13.6271 14.8588L15.6176 16.8551C15.8103 17.0483 16.1225 17.0483 16.3151 16.8551C16.5077 16.662 16.5077 16.3488 16.3151 16.1556L3.34194 3.14487Z"
@@ -13,7 +13,7 @@ export const VideoOffIcon = forwardRef<SVGSVGElement, IconProps>((props, ref) =>
         fill="currentColor"
       />
     </svg>
-  </Icon>
+  </IconPrimitive>
 ));
 
 VideoOffIcon.displayName = 'VideoOffIcon';
