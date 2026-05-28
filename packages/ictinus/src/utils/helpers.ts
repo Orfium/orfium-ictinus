@@ -9,7 +9,7 @@ export const generateUniqueKey = (elementType = ''): string =>
 
 /** A function that generates a unique id using lodash's uniqueId util */
 export const generateUniqueID = (prefix = ''): string =>
-  process.env.NODE_ENV !== 'test' ? uniqueId(prefix) : `${prefix}_00`;
+  import.meta.env.MODE !== 'test' ? uniqueId(prefix) : `${prefix}_00`;
 
 /** A function that takes two strings to generate a test data id by combining them if both exist */
 export const generateTestDataId = (defaultId: TestId, customId?: TestId) =>

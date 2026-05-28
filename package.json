@@ -26,7 +26,6 @@
     "check:linting": "turbo run check:linting --affected",
     "check:precommit": "turbo run check:precommit --affected",
     "check:formatting": "turbo run check:formatting",
-    "clean": "rm -rf node_modules && pnpm -r exec rm -rf node_modules",
     "release": "turbo run build --filter='./packages/*' && changeset publish",
     "release:experimental": "turbo run build --filter='./packages/*' && changeset publish --tag experimental"
   },
@@ -38,21 +37,20 @@
     "@changesets/cli": "^2.29.7",
     "@types/react": "^18.3.27",
     "@types/react-dom": "^18.3.7",
-    "@vitest/coverage-v8": "^3.2.4",
     "husky": "^9.1.7",
     "prettier": "^3.6.2",
     "prettier-plugin-organize-imports": "^4.3.0",
-    "turbo": "^2.5.6",
+    "turbo": "^2.9.14",
     "typescript": "^5.9.2",
-    "vitest": "^3.2.4"
+    "vitest": "catalog:"
   },
   "bugs": {
     "url": "https://github.com/Orfium/orfium-ictinus/issues"
   },
   "homepage": "https://github.com/Orfium/orfium-ictinus#readme",
-  "packageManager": "pnpm@10.27.0",
+  "packageManager": "pnpm@11.3.0",
   "engines": {
     "node": ">=24",
-    "pnpm": ">=10"
+    "pnpm": ">=11"
   }
 }

@@ -1,5 +1,5 @@
 import { recipe, type RecipeVariants } from '@vanilla-extract/recipes';
-import { sprinkles } from '~/sprinkles';
+import { sprinkles } from '../sprinkles';
 import { style } from '../vanilla-extract';
 import * as rootStyles from './ActionsRoot.css';
 
