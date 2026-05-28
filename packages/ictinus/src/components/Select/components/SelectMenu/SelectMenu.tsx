@@ -49,7 +49,9 @@ const SelectMenu = forwardRef<HTMLUListElement, SelectMenuProps>((props, ref) =>
         const optionFound = flatMap(filteredOptions, (o) => o.options || o).find(
           (o) => String(o.value) === keyFound
         );
-        optionFound && handleOptionClick(optionFound);
+        if (optionFound) {
+          handleOptionClick(optionFound);
+        }
       }
     },
     [filteredOptions, handleOptionClick]

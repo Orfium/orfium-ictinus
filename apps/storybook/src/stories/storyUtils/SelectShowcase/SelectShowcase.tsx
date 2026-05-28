@@ -2,11 +2,12 @@ import { css } from '@emotion/react';
 import { rem, Select, type SelectOption } from '@orfium/ictinus';
 import React, { useState } from 'react';
 
-// eslint-disable-next-line react-refresh/only-export-components
-export const dummyUnrefinedData = new Array(15).fill(undefined).map((__value, index) => ({
-  value: index,
-  label: `Test option ${index}`,
-}));
+export const dummyUnrefinedData = Array.from({ length: 15 })
+  .fill(undefined)
+  .map((__value, index) => ({
+    value: index,
+    label: `Test option ${index}`,
+  }));
 
 type SelectShowcaseProps = {
   minCharactersToSearch?: number;

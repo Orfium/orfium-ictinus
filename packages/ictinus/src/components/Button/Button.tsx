@@ -29,7 +29,6 @@ export type ButtonProps = ButtonBaseProps &
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
   const {
     type = 'primary',
-    size = 'normal',
     iconLeftName,
     iconRightName,
     avatar,

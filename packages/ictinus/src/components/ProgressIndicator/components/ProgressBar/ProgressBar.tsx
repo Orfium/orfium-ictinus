@@ -9,9 +9,7 @@ const ProgressBar = React.forwardRef<
   HTMLDivElement,
   Pick<ProgressIndicatorProps, 'value' | 'status' | 'isBlock' | 'dataTestPrefixId'>
 >(({ value, status, isBlock = false, dataTestPrefixId }, ref) => {
-  const props = {
-    ...(isUndefined(value) ? { isIndeterminate: true } : { value }),
-  };
+  const props = (isUndefined(value) ? { isIndeterminate: true } : { value });
 
   return (
     <AriaProgressBar {...props} css={progressBarContainer({ isBlock })} ref={ref}>

@@ -464,30 +464,32 @@ export const TableWithExpandableRows: Story = {
         </div>
       )}
       // @ts-expect-error - this is a test component
-      data={new Array(50).fill(null).map((item, index) => ({
-        id: index + 1,
+      data={Array.from({ length: 50 })
+        .fill(null)
+        .map((item, index) => ({
+          id: index + 1,
 
-        cells: [
-          {
-            content: (
-              <a href="www.youtube.com" onClick={(e) => e.stopPropagation()}>
-                'title'
-              </a>
-            ),
-          },
-          {
-            content: 'firstname',
-          },
-          {
-            content: 'lastname',
-          },
-          {
-            content: 4.221,
-          },
-        ],
+          cells: [
+            {
+              content: (
+                <a href="www.youtube.com" onClick={(e) => e.stopPropagation()}>
+                  'title'
+                </a>
+              ),
+            },
+            {
+              content: 'firstname',
+            },
+            {
+              content: 'lastname',
+            },
+            {
+              content: 4.221,
+            },
+          ],
 
-        expanded: () => <div>Hey i am an expandable content</div>,
-      }))}
+          expanded: () => <div>Hey i am an expandable content</div>,
+        }))}
       actionWidth={3}
     />
   ),
@@ -510,30 +512,32 @@ export const TableWithExpandableRowsExpandedOnPageLoad: Story = {
         </div>
       )}
       // @ts-expect-error - this is a test component
-      data={new Array(50).fill(null).map((item, index) => ({
-        id: index + 1,
+      data={Array.from({ length: 50 })
+        .fill(null)
+        .map((item, index) => ({
+          id: index + 1,
 
-        cells: [
-          {
-            content: (
-              <a href="www.youtube.com" onClick={(e) => e.stopPropagation()}>
-                'title'
-              </a>
-            ),
-          },
-          {
-            content: 'firstname',
-          },
-          {
-            content: 'lastname',
-          },
-          {
-            content: 4.221,
-          },
-        ],
+          cells: [
+            {
+              content: (
+                <a href="www.youtube.com" onClick={(e) => e.stopPropagation()}>
+                  'title'
+                </a>
+              ),
+            },
+            {
+              content: 'firstname',
+            },
+            {
+              content: 'lastname',
+            },
+            {
+              content: 4.221,
+            },
+          ],
 
-        expanded: () => <div>Hey i am an expandable content</div>,
-      }))}
+          expanded: () => <div>Hey i am an expandable content</div>,
+        }))}
       actionWidth={3}
       isInitiallyExpanded
     />
@@ -878,30 +882,32 @@ export const TableWithExpandableRowsAndSortDir: Story = {
         </div>
       )}
       // @ts-expect-error - this is a test component
-      data={new Array(50).fill(null).map((item, index) => ({
-        id: index + 1,
+      data={Array.from({ length: 50 })
+        .fill(null)
+        .map((item, index) => ({
+          id: index + 1,
 
-        cells: [
-          {
-            content: (
-              <a href="www.youtube.com" onClick={(e) => e.stopPropagation()}>
-                'title'
-              </a>
-            ),
-          },
-          {
-            content: 'firstname',
-          },
-          {
-            content: 'lastname',
-          },
-          {
-            content: 4.221,
-          },
-        ],
+          cells: [
+            {
+              content: (
+                <a href="www.youtube.com" onClick={(e) => e.stopPropagation()}>
+                  'title'
+                </a>
+              ),
+            },
+            {
+              content: 'firstname',
+            },
+            {
+              content: 'lastname',
+            },
+            {
+              content: 4.221,
+            },
+          ],
 
-        expanded: () => <div>Hey i am an expandable content</div>,
-      }))}
+          expanded: () => <div>Hey i am an expandable content</div>,
+        }))}
       actionWidth={3}
     />
   ),

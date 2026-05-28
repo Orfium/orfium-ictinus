@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/naming-convention */
 import type { Column, HeaderGroup, RowModel } from '@tanstack/react-table';
 import {
   createColumnHelper,
@@ -6,10 +5,8 @@ import {
   getExpandedRowModel,
   useReactTable,
 } from '@tanstack/react-table';
-import useTheme from 'hooks/useTheme';
 import { concat } from 'lodash-es';
 import React, { useMemo } from 'react';
-import type { Theme } from 'theme';
 
 import { CheckBox } from 'components/Controls';
 import Icon from 'components/Icon';
@@ -36,7 +33,6 @@ const getColumns = (
   columns: any[],
   hasCheckboxes: boolean,
   hasRowDetails: boolean,
-  theme: Theme,
   dataTestPrefixId: string
 ) => {
   const columnHelper = createColumnHelper();
@@ -114,7 +110,7 @@ const getColumns = (
       const groupConfig = {
         id: column.id,
         header: column.header,
-        columns: getColumns(column.columns, false, false, theme, dataTestPrefixId),
+        columns: getColumns(column.columns, false, false, dataTestPrefixId),
       };
       tColumns.push(columnHelper.group(groupConfig));
     } else {
@@ -160,8 +156,6 @@ const useTable = <TData,>({
   dataTestPrefixId,
   ...rest
 }): ReturnValue<TData> => {
-  const theme = useTheme();
-
   const isTableInteractive = type === 'interactive';
 
   const { rowSelection, setRowSelection, expanded, setExpanded } = rowsConfig ?? {};
@@ -173,8 +167,8 @@ const useTable = <TData,>({
   const hasCheckboxes = Boolean(rowSelection && isTableInteractive);
 
   const tColumns = useMemo(() => {
-    return getColumns(columns, hasCheckboxes, hasRowDetails, theme, dataTestPrefixId);
-  }, [columns, hasCheckboxes, hasRowDetails, theme, dataTestPrefixId]);
+    return getColumns(columns, hasCheckboxes, hasRowDetails, dataTestPrefixId);
+  }, [columns, hasCheckboxes, hasRowDetails, dataTestPrefixId]);
 
   const state = React.useMemo(() => {
     return {

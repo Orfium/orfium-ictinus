@@ -8,7 +8,7 @@ import type {
 } from '../Notification';
 import CompactNotification from '../subcomponents/CompactNotification';
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars, unused-imports/no-unused-imports
+// oxlint-disable-next-line no-unused-vars
 import type { Broadcast } from '~/components/Broadcast';
 
 export type BannerProps = {

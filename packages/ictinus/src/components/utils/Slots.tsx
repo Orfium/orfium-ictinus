@@ -56,7 +56,6 @@ export function useSlotProps<T>(props: T, defaultSlot?: string) {
  *
  */
 export function SlotProvider({ slots = {}, children }: { slots?: object; children: ReactNode }) {
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   const parentSlots = useContext(SlotContext) || {};
 
   const value = useMemo(() => {
@@ -69,6 +68,7 @@ export function SlotProvider({ slots = {}, children }: { slots?: object; childre
         }),
         {}
       );
+    // oxlint-disable-next-line react-hooks/exhaustive-deps
   }, [parentSlots, slots]);
 
   return <SlotContext.Provider value={value}>{children}</SlotContext.Provider>;

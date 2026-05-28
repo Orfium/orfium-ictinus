@@ -76,7 +76,7 @@ const Switch = React.forwardRef<HTMLLabelElement, SwitchProps>((props, ref) => {
       {helpText && (
         <Box
           /** switchWidth (36px) + gap (12px) = 48px, which we don't have in our preset spacing values */
-          css={{ ...(placement === 'left' ? { paddingRight: rem(48) } : { paddingLeft: rem(48) }) }}
+          css={(placement === 'left' ? { paddingRight: rem(48) } : { paddingLeft: rem(48) })}
           data-disabled={isDisabled}
         >
           <ControlHelpText helpText={helpText}>{helpText}</ControlHelpText>

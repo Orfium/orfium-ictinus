@@ -76,7 +76,12 @@ export const WithButtons: Story = {
   render: (args) => (
     <Broadcast
       status="informational"
-      actions={[<Button type="tertiary">Tertiary</Button>, <Button>Primary</Button>]}
+      actions={[
+        <Button key="tertiary" type="tertiary">
+          Tertiary
+        </Button>,
+        <Button key="primary">Primary</Button>,
+      ]}
       onDismiss={() => {}}
       {...args}
     >

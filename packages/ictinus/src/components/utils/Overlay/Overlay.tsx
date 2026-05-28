@@ -89,9 +89,7 @@ export function Overlay({
     });
 
     overlayMutationObserverRef.current.observe(overlayRef.current, {
-      // eslint-disable-next-line @typescript-eslint/naming-convention
       childList: true,
-      // eslint-disable-next-line @typescript-eslint/naming-convention
       subtree: true,
     });
 

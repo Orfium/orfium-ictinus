@@ -38,26 +38,40 @@ const useKeyboardEvents = ({ events: { keydown }, hasPropagation = false }: Prop
       switch (event.key) {
         case KEYBOARD_EVENT_KEYS.ArrowUp:
           event.preventDefault();
-          keydown.onArrowUp && keydown.onArrowUp(event);
+          if (keydown.onArrowUp) {
+            keydown.onArrowUp(event);
+          }
           break;
         case KEYBOARD_EVENT_KEYS.ArrowDown:
           event.preventDefault();
-          keydown.onArrowDown && keydown.onArrowDown(event);
+          if (keydown.onArrowDown) {
+            keydown.onArrowDown(event);
+          }
           break;
         case KEYBOARD_EVENT_KEYS.ArrowLeft:
-          keydown.onArrowMove && keydown.onArrowMove(text, 'left');
+          if (keydown.onArrowMove) {
+            keydown.onArrowMove(text, 'left');
+          }
           break;
         case KEYBOARD_EVENT_KEYS.ArrowRight:
-          keydown.onArrowMove && keydown.onArrowMove(text, 'right');
+          if (keydown.onArrowMove) {
+            keydown.onArrowMove(text, 'right');
+          }
           break;
         case KEYBOARD_EVENT_KEYS.Escape:
-          keydown.onEscape && keydown.onEscape();
+          if (keydown.onEscape) {
+            keydown.onEscape();
+          }
           break;
         case KEYBOARD_EVENT_KEYS.Enter:
-          keydown.onEnter && keydown.onEnter(event);
+          if (keydown.onEnter) {
+            keydown.onEnter(event);
+          }
           break;
         case KEYBOARD_EVENT_KEYS.Backspace:
-          keydown.onBackspace && keydown.onBackspace(text);
+          if (keydown.onBackspace) {
+            keydown.onBackspace(text);
+          }
           break;
       }
 
@@ -65,7 +79,9 @@ const useKeyboardEvents = ({ events: { keydown }, hasPropagation = false }: Prop
       const regex = /^(?!Shift$)[a-zA-Z0-9\s\S]$/;
       const isMatched = regex.test(event.key);
       if (isMatched) {
-        keydown.onAlphaNumerical && keydown.onAlphaNumerical();
+        if (keydown.onAlphaNumerical) {
+          keydown.onAlphaNumerical();
+        }
       }
     },
   });

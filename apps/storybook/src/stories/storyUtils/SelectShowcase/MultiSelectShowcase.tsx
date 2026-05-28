@@ -25,11 +25,12 @@ const selectedOptions = [
   { value: 'buttered_pecan', label: 'Buttered Pecan' },
 ];
 
-// eslint-disable-next-line react-refresh/only-export-components
-export const dummyUndefinedData = new Array(15).fill(undefined).map((__, index) => ({
-  value: index,
-  label: `Test option ${index}`,
-}));
+export const dummyUndefinedData = Array.from({ length: 15 })
+  .fill(undefined)
+  .map((__, index) => ({
+    value: index,
+    label: `Test option ${index}`,
+  }));
 
 const SelectShowcase: React.FCC<
   Pick<SelectProps, 'isDisabled' | 'hasSelectAllOption' | 'isCreatable' | 'status'>

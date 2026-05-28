@@ -50,7 +50,6 @@ const Snackbar: React.FCC<SnackbarProps> = ({
 
   return (
     // @TODO remove the below or change to data-
-    // eslint-disable-next-line react/no-unknown-property
     <div css={cardContainer(type, styleType)} notification-type="snackbar">
       <div css={topContainer()}>
         <div css={infoContainer()}>

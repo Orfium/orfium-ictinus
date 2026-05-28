@@ -66,11 +66,12 @@ const useFilterWithSelectionUtils = ({
     }
   };
 
-  const debouncedOnChange = React.useCallback(
-    debounce((value: string) => {
-      onAsyncSearch?.(value);
-    }, 400),
-    []
+  const debouncedOnChange = React.useMemo(
+    () =>
+      debounce((value: string) => {
+        onAsyncSearch?.(value);
+      }, 400),
+    [onAsyncSearch]
   );
 
   const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {

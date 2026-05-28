@@ -1,8 +1,8 @@
 import React from 'react';
 import type { TestProps } from 'utils/types';
 
-import { ListItemWrapperStyled } from './ListItemWrapper.style';
 import type { ListRowSize } from '../../types';
+import { ListItemWrapperStyled } from './ListItemWrapper.style';
 
 export type ListItemProps = {
   /** Whether the text of the ListItem is highlighted or not. eg: Filter - Default Value */
@@ -19,18 +19,7 @@ export type ListItemProps = {
   Omit<React.LiHTMLAttributes<HTMLLIElement>, 'value'>;
 
 const ListItemWrapper = React.forwardRef<HTMLLIElement, ListItemProps>(
-  (
-    {
-      children,
-      rowSize,
-      isDisabled = false,
-      isHighlighted = false,
-      searchTerm,
-      dataTestId,
-      ...rest
-    },
-    ref
-  ) => {
+  ({ children, rowSize, isDisabled = false, ...rest }, ref) => {
     return (
       <ListItemWrapperStyled
         data-testid={`ictinus_list_item_${rest['data-key']?.replace(/ /g, '_')}`}
