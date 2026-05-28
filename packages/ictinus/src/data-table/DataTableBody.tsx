@@ -86,7 +86,7 @@ export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
       }
     };
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // oxlint-disable-next-line react-hooks/exhaustive-deps
     useEffect(calculateScrollTimeline, []);
 
     const centerColumns = table.getCenterVisibleLeafColumns();

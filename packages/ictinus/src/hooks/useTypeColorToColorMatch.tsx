@@ -6,7 +6,7 @@ import * as React from 'react';
 
 const defaultContextData = {
   typesShadesColor: {},
-  calculateColorBetweenColorAndType: (color: string, type: (typeof mainTypes)[number]) => {},
+  calculateColorBetweenColorAndType: (_color: string, _type: (typeof mainTypes)[number]) => {},
 };
 
 type ContextProps = {
@@ -83,7 +83,7 @@ const TypeColorToColorMatchProvider: React.FCC = ({ children }) => {
 
       return calculatedColor ? calculatedColor : typesShadesColor[type];
     },
-    [types, theme, typesShadesColor]
+    [typesShadesColor]
   );
 
   return (

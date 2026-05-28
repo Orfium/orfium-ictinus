@@ -70,7 +70,6 @@ const ButtonBase = React.forwardRef<HTMLButtonElement, ButtonBaseProps>((props, 
       <button
         {...omit(rest, ['avatar', 'iconRightName', 'iconLeftName', 'iconName'])}
         ref={ref}
-        // eslint-disable-next-line react/button-has-type
         type={htmlType}
         data-testid={generateTestDataId(testIdName, dataTestId)}
         css={buttonBaseStyle({

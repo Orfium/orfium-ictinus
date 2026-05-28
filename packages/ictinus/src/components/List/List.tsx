@@ -57,13 +57,11 @@ const List = React.forwardRef<HTMLUListElement, ListProps>((props, ref) => {
     dataTestId,
   } = props;
   /** ignore the change on the `onSelectionChange` from any to unknown **/
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   const state = useListState<SelectOption>({ ...props, selectionMode: 'single' });
   const myRef = React.useRef(null);
   const combinedRefs = useCombinedRefs(myRef, ref);
   /** ignore the change on the `onSelectionChange` from any to unknown **/
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   const { listBoxProps } = useListBox(props, state, combinedRefs);
 

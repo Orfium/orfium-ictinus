@@ -187,7 +187,7 @@ describe('Generic Select', () => {
       vi.useRealTimers();
     });
     it('down arrow should open menu', async () => {
-      const { getByTestId, container } = render(
+      const { getByTestId } = render(
         <div>
           <StatefulSelect
             dataTestId="test"
@@ -209,7 +209,7 @@ describe('Generic Select', () => {
     });
 
     it('down arrow should open menu and close it with Escape', async () => {
-      const { getByTestId, container } = render(
+      const { getByTestId } = render(
         <div>
           <StatefulSelect
             dataTestId="test"
@@ -237,7 +237,7 @@ describe('Generic Select', () => {
     });
 
     it('escape on input should clear the value', async () => {
-      const { getByTestId, container } = render(
+      const { getByTestId } = render(
         <div>
           <StatefulSelect
             selectedOption={dropdownList[0]}

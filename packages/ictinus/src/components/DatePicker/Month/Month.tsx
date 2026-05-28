@@ -1,10 +1,14 @@
 import isBetween from 'dayjs/plugin/isBetween';
 import { chunk, inRange } from 'lodash-es';
-import { useCallback } from 'react';
 import * as React from 'react';
+import { useCallback } from 'react';
 import type { Dayjs } from 'utils/date';
 import dayjs from 'utils/date';
 
+import type { DisabledDates } from '../DatePicker.types';
+import Day from '../Day/Day';
+import type { Range } from '../OverlayComponent/OverlayComponent';
+import { currentDay } from '../utils';
 import useMonthKeyboardNavigation from './hooks/useMonthKeyboardNavigation';
 import { datesWrapperStyle, weekDayStyle, weekDaysWrapperStyle } from './Month.style';
 import {
@@ -14,10 +18,6 @@ import {
   calculateSelectedDayPosition,
   getNumWeeksForMonth,
 } from './Month.utils';
-import type { DisabledDates } from '../DatePicker.types';
-import Day from '../Day/Day';
-import type { Range } from '../OverlayComponent/OverlayComponent';
-import { currentDay } from '../utils';
 
 dayjs.extend(isBetween);
 
@@ -101,13 +101,9 @@ const Month: React.FCC<MonthProps> = ({
       >
         <tbody>
           {weeksWithDays.map((week, weekIndex) => (
-            <tr
-              // eslint-disable-next-line react/no-array-index-key
-              key={`${year}-${month}-${weekIndex}-week`}
-            >
+            <tr key={`${year}-${month}-${weekIndex}-week`}>
               {week.map((day, dayIndex) => (
                 <Day
-                  // eslint-disable-next-line react/no-array-index-key
                   key={`${year}-${month}-${weekIndex}-${dayIndex}-day`}
                   tabIndex={focusedDay === day ? 0 : -1}
                   year={year}

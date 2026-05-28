@@ -9,17 +9,18 @@ const tooltip = {
 };
 
 describe('TableV4', () => {
-  const data = new Array(50).fill(null).map((item, index) => ({
-    id: index + 1,
-    cells: [
-      { content: 'title', widthPercentage: 40 },
-      { content: 'firstname' },
-      { content: 'lastname' },
-      { content: 4.221 },
-    ],
-    // eslint-disable-next-line react/display-name
-    expanded: () => <div>Hey i am an expandable content</div>,
-  }));
+  const data = Array.from({ length: 50 })
+    .fill(null)
+    .map((item, index) => ({
+      id: index + 1,
+      cells: [
+        { content: 'title', widthPercentage: 40 },
+        { content: 'firstname' },
+        { content: 'lastname' },
+        { content: 4.221 },
+      ],
+      expanded: () => <div>Hey i am an expandable content</div>,
+    }));
 
   test('the expandable table that shows the content when clicking', async () => {
     const { getAllByText, findByText } = render(

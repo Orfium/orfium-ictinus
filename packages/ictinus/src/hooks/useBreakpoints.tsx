@@ -29,7 +29,6 @@ const useIctinusMediaQuery = (key: (typeof queriesKeys)[number]) =>
 
 export const useBreakpoints = () => {
   const breakpoints: Record<(typeof queriesKeys)[number], boolean> = {
-    /* eslint-disable @typescript-eslint/naming-convention */
     des1920: useIctinusMediaQuery('des1920'),
     des1440: useIctinusMediaQuery('des1440'),
     des1366: useIctinusMediaQuery('des1366'),

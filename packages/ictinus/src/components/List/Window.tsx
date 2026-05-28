@@ -26,7 +26,7 @@ const Window = forwardRef<HTMLUListElement, WindowProps>(
     // get the children to be renderd
     const visibleChildren = React.useMemo(() => {
       if (!isVirtualizationEnabled) {
-        return children.map((child, index) => React.cloneElement(child, {}));
+        return children.map((child) => React.cloneElement(child, {}));
       }
       const startIndex = Math.max(Math.floor(scrollPosition / rowHeight) - bufferedItems, 0);
       const endIndex = Math.min(
@@ -55,7 +55,6 @@ const Window = forwardRef<HTMLUListElement, WindowProps>(
             setScrollPosition(e.target.scrollTop);
           },
           50,
-          // eslint-disable-next-line @typescript-eslint/naming-convention
           { leading: false }
         ),
       []

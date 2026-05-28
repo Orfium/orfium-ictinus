@@ -37,7 +37,6 @@ export const DataTable = forwardRef<HTMLDivElement, DataTableProps>(
 DataTable.displayName = 'DataTable';
 
 declare module '@tanstack/react-table' {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars, unused-imports/no-unused-vars
   interface ColumnMeta<TData extends RowData, TValue> {
     align?: 'flex-start' | 'center' | 'flex-end';
     verticalAlign?: 'flex-start' | 'center' | 'flex-end';
@@ -51,7 +50,6 @@ declare module '@tanstack/react-table' {
     getCellProps?: (row: Row<TData>) => Omit<BoxProps<'td'>, 'size'>;
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars, unused-imports/no-unused-vars
   interface TableOptionsResolved<TData extends RowData> {
     /**
      * When `true`, clicking a row toggles its selection (checkbox clicks are handled separately).

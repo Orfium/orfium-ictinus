@@ -33,7 +33,6 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
     asyncSearch = () => {},
     status = { type: 'normal' },
     minCharactersToSearch = 0,
-    hasHighlightSearch = false,
     isSearchable = true,
     isVirtualized = false,
     isDisabled,
@@ -174,7 +173,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
     combinedRefs.current?.focus();
   };
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+  // oxlint-disable-next-line react-hooks/exhaustive-deps
   const debouncedOnChange = useCallback(
     debounce((term) => {
       asyncSearch(term);

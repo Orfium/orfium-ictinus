@@ -24,10 +24,6 @@
     "@vanilla-extract/vite-plugin": "^5.1.1",
     "@vitejs/plugin-react": "^4.1.0",
     "@vitest/coverage-v8": "catalog:",
-    "eslint": "^8.0.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-import-resolver-typescript": "^3.2.4",
-    "eslint-plugin-import": "^2.27.5",
     "jsdom": "^25.0.0",
     "lodash-es": "^4.17.21",
     "polished": "^4.3.1",
@@ -45,10 +41,10 @@
     "test": "vitest --run",
     "test:watch": "vitest --watch",
     "test:update": "vitest -u",
-    "check": "pnpm check:ts && pnpm check:linting && pnpm check:formatting",
-    "check:precommit": "pnpm run check:ts && pnpm run check:linting && pnpm run test --passWithNoTests",
-    "check:ts": "tsc --noEmit --pretty",
-    "check:linting": "eslint src --color",
-    "check:formatting": "prettier src --check"
+    "lint": "oxlint",
+    "tsc": "tsc --noEmit",
+    "fmt": "prettier src --check",
+    "check": "pnpm tsc && pnpm lint && pnpm fmt",
+    "check:precommit": "pnpm tsc && pnpm lint && pnpm test"
   }
 }

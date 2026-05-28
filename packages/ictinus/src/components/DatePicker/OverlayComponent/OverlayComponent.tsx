@@ -51,7 +51,7 @@ const OverlayComponent: React.FCC<OverlayComponentProps> = ({
       setDate((curDate) => curDate.month(curDate.month() + (direction === 'forward' ? 1 : -1)));
       setDate2((curDate) => curDate.month(curDate.month() + (direction === 'forward' ? 1 : -1)));
     },
-    [date, date2]
+    []
   );
 
   return (

@@ -49,7 +49,7 @@ const OptimizedTableRow = <TData,>({
   data,
   allColumnsLength,
 }: OptimizedTableRowProps<TData>) => {
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+  // oxlint-disable-next-line react-hooks/exhaustive-deps
   const rowLength = useMemo(() => row.getVisibleCells().length, [row.getVisibleCells().length]);
 
   const cells = useMemo(() => {
@@ -81,7 +81,7 @@ const OptimizedTableRow = <TData,>({
   }, [sx?.tr, isSelectable, isExpandable, isSelected, isExpanded, handleRowClick]);
 
   // Memoize visible cells to prevent unnecessary recalculations
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+  // oxlint-disable-next-line react-hooks/exhaustive-deps
   const visibleCells = useMemo(() => row.getVisibleCells(), [row.getVisibleCells()]);
 
   const renderedCells = visibleCells.map((cell) => (

@@ -18,7 +18,6 @@ export type ToastValue = {
   /** Whether the toast is automatically dismissed */
   isDismissible?: boolean;
   /** Whether the toast should close when an action is clicked */
-  // eslint-disable-next-line @typescript-eslint/naming-convention
   shouldCloseOnAction?: boolean;
   /** Show the specified icon per status */
   hasIcon?: boolean;

@@ -102,9 +102,7 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
               >
                 <div
                   title={typeof option === 'string' ? option : option.label}
-                  css={tagContent({
-                    maxWidth: TextfieldRef.current?.getBoundingClientRect().width,
-                  })}
+                  css={tagContent({})}
                 >
                   {typeof option === 'string' ? option : option.label}
                 </div>

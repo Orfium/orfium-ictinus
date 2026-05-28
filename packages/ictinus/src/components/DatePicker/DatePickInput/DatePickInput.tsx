@@ -1,7 +1,7 @@
 import { vars } from '@orfium/tokens';
 import FilterButton from 'components/Filter/components/FilterButton';
 import Icon from 'components/Icon';
-import React, { useCallback, useMemo, type InputHTMLAttributes } from 'react';
+import React, { useMemo, type InputHTMLAttributes } from 'react';
 import type { Dayjs } from 'utils/date';
 import dayjs from 'utils/date';
 import { getLocaleFormat } from 'utils/helpers';
@@ -60,7 +60,7 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
     },
     ref
   ) => {
-    const getDateFormatted = useCallback(formatDate(dateFormatOverride), [dateFormatOverride]);
+    const getDateFormatted = formatDate(dateFormatOverride);
 
     const formattedFrom = getDateFormatted(selectedDay.from);
     const formattedTo = getDateFormatted(selectedDay.to);

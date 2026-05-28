@@ -2,11 +2,11 @@ import { isEmpty, omit } from 'lodash-es';
 import * as React from 'react';
 import { generateUniqueKey } from 'utils/helpers';
 
+import Link from 'components/Link';
 import BackToItem from './BackToItem';
 import { breadcrumbStyles } from './Breadcrumb.style';
-import type { BreadcrumbProps, BreadcrumbItem as BreadcrumbItemType } from './Breadcrumb.types';
+import type { BreadcrumbItem as BreadcrumbItemType, BreadcrumbProps } from './Breadcrumb.types';
 import BreadcrumbItem from './BreadcrumbItem';
-import Link from 'components/Link';
 
 const isLastItem = (dataItems: BreadcrumbItemType[], itemIndex: number) =>
   itemIndex === dataItems.length - 1;
@@ -36,7 +36,6 @@ const Breadcrumb = React.forwardRef<HTMLOListElement, BreadcrumbProps>(
     );
 
     const getBreadcrumbItem = React.useMemo(
-      // eslint-disable-next-line react/display-name
       () => (child: React.ReactNode, index: number) => {
         const itemKey = generateUniqueKey('data_item_');
 

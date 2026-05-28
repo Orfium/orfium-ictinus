@@ -1,8 +1,8 @@
 import { Box, Button, Icon, Link, toast, ToastContainer } from '@orfium/ictinus';
 import { vars } from '@orfium/tokens';
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { userEvent, within } from 'storybook/test';
 import { useState, type ComponentProps, type ReactElement } from 'react';
+import { userEvent, within } from 'storybook/test';
 
 export interface ToastStoryArgs {
   content: string | ReactElement;
@@ -77,7 +77,12 @@ const meta: Meta<ToastStoryArgs> = {
       mapping: {
         none: undefined,
         'single action': <Link>Single Action</Link>,
-        'multiple actions': [<Button type="tertiary">Tertiary</Button>, <Button>Primary</Button>],
+        'multiple actions': [
+          <Button key="tertiary" type="tertiary">
+            Tertiary
+          </Button>,
+          <Button key="primary">Primary</Button>,
+        ],
       },
       description: 'Action elements (links or buttons) to display in the toast',
       table: {
@@ -309,7 +314,12 @@ export const WithButtons: Story = {
           toast(args.content as string, {
             status: args.status,
             isDismissible: args.isDismissible,
-            actions: [<Button type="tertiary">Tertiary</Button>, <Button>Primary</Button>],
+            actions: [
+              <Button key="tertiary" type="tertiary">
+                Tertiary
+              </Button>,
+              <Button key="primary">Primary</Button>,
+            ],
           })
         }
       >
@@ -366,7 +376,12 @@ export const ShouldCloseOnAction: Story = {
             status: args.status,
             isDismissible: args.isDismissible,
             shouldCloseOnAction: args.shouldCloseOnAction,
-            actions: [<Button type="tertiary">Tertiary</Button>, <Button>Primary</Button>],
+            actions: [
+              <Button key="tertiary" type="tertiary">
+                Tertiary
+              </Button>,
+              <Button key="primary">Primary</Button>,
+            ],
           })
         }
       >
@@ -419,7 +434,6 @@ export const Playground: Story = {
             isDismissible: args.isDismissible,
             shouldCloseOnAction: args.shouldCloseOnAction,
             timeout: args.timeout,
-            // @ts-expect-error - args.actions is not typed
             actions: args.actions,
           })
         }

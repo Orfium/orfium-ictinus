@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
+import { Button, InlineAlert, Link } from '@orfium/ictinus';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { useState } from 'react';
-import { Button, InlineAlert, Link } from '@orfium/ictinus';
 
 const Container = styled.div`
   display: inline-flex;
@@ -85,7 +85,12 @@ export const WithButtons: Story = {
   render: (args) => (
     <InlineAlert
       status="informational"
-      actions={[<Button type="tertiary">Tertiary</Button>, <Button>Primary</Button>]}
+      actions={[
+        <Button key="tertiary" type="tertiary">
+          Tertiary
+        </Button>,
+        <Button key="primary">Primary</Button>,
+      ]}
       onDismiss={() => {}}
       {...args}
     >
