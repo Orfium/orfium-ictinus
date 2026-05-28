@@ -144,7 +144,7 @@ jobs:
       - name: Set up S3-Cloudfront
         if: steps.check-stack-state.outputs.create_or_update_stack == '1'
         id: cloudfront-app-setup
-        uses: aws-actions/aws-cloudformation-github-deploy@33527b83bddcf6b3f0b135d9550bde8475325c73 #v1.3.0
+        uses: aws-actions/aws-cloudformation-github-deploy@81e3b03d2266bcb76c4bcc37a7d71d9cb67838bb #v2.2.0
         with:
           name: ${{ steps.config.outputs.stackname }}
           role-arn: ${{ steps.config.outputs.cfn_role }}
