@@ -90,7 +90,7 @@ describe('Drawer', () => {
 
     const contentComputedStyle = getComputedStyle(drawerContent);
 
-    expect('').toContain(contentComputedStyle.overflowY);
+    expect('visible').toContain(contentComputedStyle.overflowY);
   });
 
   test('Drawer with fixed header/footer has the content scrollable', async () => {
@@ -115,7 +115,7 @@ describe('Drawer', () => {
 
     const containerComputedStyle = getComputedStyle(drawerContainer);
 
-    expect('').toContain(containerComputedStyle.overflowY);
+    expect('visible').toContain(containerComputedStyle.overflowY);
 
     const drawerContent = await findByTestId('ictinus_drawer_content');
     expect(drawerContent).toBeTruthy();

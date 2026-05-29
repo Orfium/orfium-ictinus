@@ -27,6 +27,8 @@ describe('Radio', () => {
   });
 
   it('should change to checked on click', async () => {
+    const user = userEvent.setup();
+
     const { container } = render(
       <RadioGroup onChange={mockOnClick}>
         <Radio value="Test Option">Test Option</Radio>
@@ -35,13 +37,15 @@ describe('Radio', () => {
 
     const radio = container.querySelector('input[type="radio"]') as HTMLInputElement;
 
-    await userEvent.click(radio);
+    await user.click(radio);
 
     expect(mockOnClick).toHaveBeenCalledTimes(1);
     expect(radio.checked).toBeTruthy();
   });
 
-  it('should not change to checked on click when disabled', () => {
+  it('should not change to checked on click when disabled', async () => {
+    const user = userEvent.setup();
+
     const { container } = render(
       <RadioGroup onChange={mockOnClick}>
         <Radio value="Test Option" isDisabled>
@@ -54,7 +58,7 @@ describe('Radio', () => {
 
     expect(radio).toBeDisabled();
 
-    userEvent.click(radio);
+    await user.click(radio);
 
     expect(mockOnClick).toHaveBeenCalledTimes(0);
     expect(radio.checked).toBeFalsy();
