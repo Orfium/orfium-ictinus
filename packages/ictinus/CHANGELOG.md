@@ -1,5 +1,11 @@
 # @orfium/ictinus
 
+## 5.46.0
+
+### Minor Changes
+
+- 50abb88: badge and tag group
+
 ## 5.45.2
 
 ### Patch Changes
