@@ -1,101 +1,64 @@
 # Ictinus
 
-An internal UI kit library that is opinionated. Primary focus is to solve UI duplications and provide a unified and cross product UX, UI and accessibility.
+React implementation of Orfium's Ictinus Design System.
 
-<hr />
+## Installation
 
-![npm](https://img.shields.io/npm/v/@orfium/ictinus)
-[![pan](https://github.com/Orfium/orfium-ictinus/workflows/CI/badge.svg)](https://github.com/Orfium/orfium-ictinus/actions)
-![min size](https://img.shields.io/bundlephobia/min/@orfium/ictinus)
-![minzip size](https://img.shields.io/bundlephobia/minzip/@orfium/ictinus)
+Install the package using your package manager of choice:
 
-## 📦 Installation
-
-```text
-$ npm install @orfium/ictinus
+```sh
+pnpm install @orfium/ictinus
 ```
 
-```text
-$ yarn add @orfium/ictinus
-```
+## Getting Started
 
-Please note that react >= 16.0.0 and react-dom >= 16.0.0 are peer dependencies. Also that emotion 11 is being used and that
-will not work in older emotion projects.
+### 1. Add the Provider
 
-if you want the next version you can always use the next tag.
-Remember: this is a release candidate, we encourage you to lock version on installation to avoid any changes
-
-```text
-$ yarn add @orfium/ictinus@next
-```
-
-## 🔨 Usage
-
-1. Import the CSS styles at the top of your main entry file (e.g., `main.tsx` or `index.tsx`)
-
-```js
-import '@orfium/ictinus/styles.css';
-```
-
-2. Start by wrapping your App with ictinus `ThemeProvider` component like below
+Wrap your application with `ThemeProvider` and `VanillaThemeProvider`:
 
 ```jsx
 import { ThemeProvider } from '@orfium/ictinus';
+import { ThemeProvider as VanillaThemeProvider } from '@orfium/ictinus/vanilla';
 
-const App = () => (
-  <ThemeProvider>
-    <Router>...</Router>
-  </ThemeProvider>
-);
+export function App() {
+  return (
+    <ThemeProvider>
+      <VanillaThemeProvider>{/* Your app code here */}</VanillaThemeProvider>
+    </ThemeProvider>
+  );
+}
 ```
 
-3.  That's it, now you are ready to go.
+### 3. Use Components
 
-```js
-import { Select, Button } from '@orfium/ictinus';
+Import and use components in your application:
+
+```jsx
+import { Box, Button } from '@orfium/ictinus/vanilla';
+
+export function MyComponent() {
+  return (
+    <Box display="flex" alignItems="start" flexDirection="column">
+      <Button>Submit</Button>
+    </Box>
+  );
+}
 ```
 
-## ✨ Extra
+## Migrating from Emotion to Vanilla CSS
 
-### Theme usage
+Components are gradually moving from Emotion (`@orfium/ictinus`) to Vanilla Extract (`@orfium/ictinus/vanilla`); switch imports per component and keep both theme providers until Ictinus no longer uses Emotion.
 
-Now you can can have access to the library's theme config by using the hook provided
+## Documentation
 
-```
-import { useTheme } from '@orfium/ictinus';
+For comprehensive guides, component API reference, and more examples:
 
-const theme = useTheme();
-```
+- [Storybook](https://designlab.orfium.com/)
 
-### Theme config
+## Contributing
 
-You can apply your own branded colours for each product at the definition of the ThemeProvider. This way you can have access everywhere.
+See the [main repository](https://github.com/Orfium/orfium-ictinus) for contribution guidelines.
 
-```
-<ThemeProvider>
-    ...
-</ThemeProvider>
-```
+## License
 
-### Emotion Project - Merge theme configs from different providers
-
-If you are already using emotion and you have defined a different provider you still have to define Ictinus ThemeProvider as well. You must put the theme config example at the top of the providers and yours afterwards.
-
-Then you must use the below function to create a new theme config for the second provider
-
-```
-export const defaultTheme = (ancestorTheme: IctinusTheme) => ({
-  ...ancestorTheme,
-  ...theme,
-});
-```
-
-The final outcome will look like this.
-
-```
-<IctinusThemeProvider>
-  <ThemeProvider theme={defaultTheme}>
-    ....
-  </ThemeProvider>
-</IctinusThemeProvider>
-```
+Apache-2.0
