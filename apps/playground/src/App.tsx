@@ -1,5 +1,6 @@
 import { Link } from '@orfium/ictinus';
 import {
+  Badge,
   Box,
   Button,
   ChevronRightIcon,
@@ -70,6 +71,7 @@ function App() {
   return (
     <>
       <Box display="flex">
+        <Badge colorScheme="purple">Test</Badge>
         <Skeleton w="22" h="8" />
         <Text typography="headline02" fontFamily="outfit" fontWeight="semibold" color="active">
           Earnings & Reports
