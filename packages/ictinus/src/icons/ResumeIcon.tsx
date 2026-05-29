@@ -1,8 +1,8 @@
 import { forwardRef } from 'react';
-import { Icon, type IconProps } from './Icon';
+import { IconPrimitive, type IconPrimitiveProps } from './IconPrimitive';
 
-export const ResumeIcon = forwardRef<SVGSVGElement, IconProps>((props, ref) => (
-  <Icon ref={ref} {...props}>
+export const ResumeIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, ref) => (
+  <IconPrimitive ref={ref} {...props}>
     <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M9.00952 15.338C9.34921 15.5606 9.6829 15.5538 10.0106 15.3175L16.0393 10.9962C16.3464 10.7599 16.5 10.4279 16.5 10.0001C16.5 9.57236 16.3464 9.24025 16.0393 9.00382L10.0106 4.68248C9.6829 4.44622 9.34921 4.43938 9.00952 4.66196C8.66984 4.88454 8.5 5.22015 8.5 5.66881V14.3312C8.5 14.7798 8.66984 15.1155 9.00952 15.338Z"
@@ -13,7 +13,7 @@ export const ResumeIcon = forwardRef<SVGSVGElement, IconProps>((props, ref) => (
         fill="currentColor"
       />
     </svg>
-  </Icon>
+  </IconPrimitive>
 ));
 
 ResumeIcon.displayName = 'ResumeIcon';

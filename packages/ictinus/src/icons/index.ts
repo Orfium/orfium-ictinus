@@ -56,6 +56,7 @@ export * from './FlagOffIcon';
 export * from './ForwardIcon';
 export * from './FreezeIcon';
 export * from './HelpIcon';
+export * from './IconPrimitive';
 export * from './ImageIcon';
 export * from './ImageOffIcon';
 export * from './IncomeIcon';

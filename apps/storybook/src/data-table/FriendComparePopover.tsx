@@ -119,8 +119,14 @@ export function FriendDetailsPopover({
       <PopoverContent showArrow bg="inverted" border="0" shadow="5" maxW="full">
         <Box display="flex" flexDirection="column">
           <Box display="flex" justifyContent="flex-end" px="lg" pt="lg" pb="sm">
-            <Button variant="tertiary" circle iconOnly onPress={() => setIsOpen(false)}>
-              <CloseIcon color="inverted.secondary" />
+            <Button
+              data-theme="dark"
+              variant="tertiary"
+              circle
+              iconOnly
+              onPress={() => setIsOpen(false)}
+            >
+              <CloseIcon />
             </Button>
           </Box>
           <FriendComparePopoverContent friend={friend} compare={compare} />

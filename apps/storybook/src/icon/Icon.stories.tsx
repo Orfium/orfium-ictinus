@@ -1,5 +1,15 @@
-import { AccountIcon, Box, Icon, ICONS, Text } from '@orfium/ictinus/vanilla';
+import {
+  AccountIcon,
+  Box,
+  Button,
+  Icon,
+  IconPrimitive,
+  ICONS,
+  Text,
+  type IconPrimitiveProps,
+} from '@orfium/ictinus/vanilla';
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { forwardRef } from 'react';
 
 const meta: Meta<typeof Icon> = {
   title: 'Vanilla/Icon',
@@ -50,3 +60,25 @@ export const IconComponent: Story = {
     </Box>
   ),
 };
+
+export const CustomIcon: Story = {
+  render: () => (
+    <Box display="flex" flexDirection="column" gap="md">
+      <ClockOutlinedIcon size="lg" />
+      <Button variant="secondary" iconOnly>
+        <ClockOutlinedIcon />
+      </Button>
+    </Box>
+  ),
+};
+
+const ClockOutlinedIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, ref) => (
+  <IconPrimitive ref={ref} {...props}>
+    <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M9.992 2C5.576 2 2 5.584 2 10C2 14.416 5.576 18 9.992 18C14.416 18 18 14.416 18 10C18 5.584 14.416 2 9.992 2ZM10 16.4C6.464 16.4 3.6 13.536 3.6 10C3.6 6.464 6.464 3.6 10 3.6C13.536 3.6 16.4 6.464 16.4 10C16.4 13.536 13.536 16.4 10 16.4ZM10.4 6H9.2V10.8L13.4 13.32L14 12.336L10.4 10.2V6Z"
+        fill="currentColor"
+      />
+    </svg>
+  </IconPrimitive>
+));
