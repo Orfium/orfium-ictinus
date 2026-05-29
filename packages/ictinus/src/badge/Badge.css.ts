@@ -1,9 +1,13 @@
 import { recipe, type RecipeVariants } from '@vanilla-extract/recipes';
 
 import { sprinkles } from '../sprinkles';
+import { style } from '../vanilla-extract';
+
+const className = style({});
 
 export const badge = recipe({
   base: [
+    className,
     sprinkles({
       position: 'relative',
       display: 'inline-flex',
