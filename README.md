@@ -4,10 +4,8 @@
 
 ![npm](https://img.shields.io/npm/v/@orfium/ictinus)
 [![CI/CD](https://github.com/Orfium/orfium-ictinus/actions/workflows/main.yml/badge.svg)](https://github.com/Orfium/orfium-ictinus/actions/workflows/main.yml)
-![min size](https://img.shields.io/bundlephobia/min/@orfium/ictinus)
-![minzip size](https://img.shields.io/bundlephobia/minzip/@orfium/ictinus)
 
-This monorepo contains the Orfium Design System - an opinionated UI kit library focused on solving UI duplications and providing unified, cross-product UX, UI, and accessibility standards.
+This monorepo contains the Orfium Design System - an opinionated UI kit library providing unified, cross-product UX, UI, and accessibility standards.
 
 ## Repository Structure
 
@@ -32,8 +30,8 @@ orfium-ictinus/
 
 ## Prerequisites
 
-- **Node.js** >= 22
-- **pnpm** >= 10
+- **Node.js** >= 24
+- **pnpm** >= 11
 
 ## Quick Start
 
@@ -105,17 +103,25 @@ For detailed usage instructions, see the [Ictinus package README](./packages/ict
 **Quick example:**
 
 ```jsx
-import { ThemeProvider, Button, Select } from '@orfium/ictinus';
+import { ThemeProvider } from '@orfium/ictinus';
+import { Box, Button, ThemeProvider as VanillaThemeProvider } from '@orfium/ictinus/vanilla';
 
-function App() {
+export function App() {
   return (
     <ThemeProvider>
-      <Button>Click me</Button>
-      <Select options={[]} />
+      <VanillaThemeProvider>
+        <Box display="flex" alignItems="start" flexDirection="column">
+          <Button>Submit</Button>
+        </Box>
+      </VanillaThemeProvider>
     </ThemeProvider>
   );
 }
 ```
+
+## Migrating from Emotion to Vanilla CSS
+
+Components are gradually moving from Emotion (`@orfium/ictinus`) to Vanilla Extract (`@orfium/ictinus/vanilla`); switch imports per component and keep both theme providers until Ictinus no longer uses Emotion.
 
 ## Migration & Codemods
 
@@ -163,3 +169,7 @@ pnpm release
 - [npm package](https://www.npmjs.com/package/@orfium/ictinus)
 - [GitHub repository](https://github.com/Orfium/orfium-ictinus)
 - [Issues](https://github.com/Orfium/orfium-ictinus/issues)
+
+## License
+
+Apache-2.0
