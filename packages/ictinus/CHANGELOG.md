@@ -1,5 +1,11 @@
 # @orfium/ictinus
 
+## 5.46.1
+
+### Patch Changes
+
+- 0cd92be: fix badge css import
+
 ## 5.46.0
 
 ### Minor Changes
