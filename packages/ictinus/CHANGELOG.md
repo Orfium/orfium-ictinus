@@ -1,5 +1,11 @@
 # @orfium/ictinus
 
+## 5.46.2
+
+### Patch Changes
+
+- 98e1f88: text forward props
+
 ## 5.46.1
 
 ### Patch Changes
