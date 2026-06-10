@@ -14,22 +14,21 @@ export type TextProps<T extends ElementType = 'span', P = unknown> = BoxProps<
   ExtendProps<styles.TextVariants, P>
 >;
 
-export const Text = forwardRef<HTMLSpanElement, TextProps>(
-  ({ asChild, children, className, lineClamp, truncate, ...props }, ref) => {
-    props = useSlotProps(props, 'text');
-    const Comp = asChild ? Slot : 'span';
+export const Text = forwardRef<HTMLSpanElement, TextProps>((props, ref) => {
+  props = useSlotProps(props, 'text');
+  const { asChild, children, className, lineClamp, truncate, ...restProps } = props;
+  const Comp = asChild ? Slot : 'span';
 
-    return (
-      <Box
-        asChild
-        ref={ref as any} // Box expects HTMLDivElement ref, but asChild forwards to span at runtime
-        className={cn(styles.text({ lineClamp, truncate }), className)}
-        {...props}
-      >
-        <Comp>{children}</Comp>
-      </Box>
-    );
-  }
-);
+  return (
+    <Box
+      asChild
+      ref={ref as any} // Box expects HTMLDivElement ref, but asChild forwards to span at runtime
+      className={cn(styles.text({ lineClamp, truncate }), className)}
+      {...restProps}
+    >
+      <Comp>{children}</Comp>
+    </Box>
+  );
+});
 
 Text.displayName = 'Text';
