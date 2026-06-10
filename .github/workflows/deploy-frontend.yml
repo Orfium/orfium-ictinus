@@ -156,7 +156,6 @@ jobs:
             CreateDNSRecord=true,
             HostedZoneName=${{ steps.config.outputs.domain }},
             TLSCertificateArn=${{ steps.config.outputs.cert_arn }}
-          no-fail-on-empty-changeset: '1'
           tags: >
             [
               {"Key": "info:creator", "Value": "github-actions"},
