@@ -1,5 +1,11 @@
 # @orfium/ictinus
 
+## 5.46.3
+
+### Patch Changes
+
+- 1400c7a: fix data table scroll indicator on element resize
+
 ## 5.46.2
 
 ### Patch Changes
