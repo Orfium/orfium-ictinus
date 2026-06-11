@@ -6,7 +6,7 @@ import { useDataTableContext } from './DataTableContext';
 export type DataTableCounterProps = BoxProps<
   'div',
   {
-    count?: number;
+    count?: string | number;
     loading?: boolean;
     singular?: string;
     plural?: string;
@@ -36,7 +36,7 @@ export function DataTableCounter({
       ) : (
         <>
           <Text typography="label02" color="active">
-            {count.toLocaleString()}
+            {typeof count === 'number' ? count.toLocaleString() : count}
           </Text>
           <Text typography="label02">{hasSelection ? `${label} selected` : label}</Text>
         </>
