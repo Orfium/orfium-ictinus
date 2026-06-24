@@ -1,95 +1,47 @@
-.emotion-0 {
-  position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.emotion-1 {
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  gap: var(--ictinus-spacing-4);
-  color: var(--ictinus-color-text-default-active);
-  height: var(--ictinus-sizing-9);
-  background-color: var(--ictinus-color-palette-secondary-base);
-  padding: var(--ictinus-spacing-0) var(--ictinus-spacing-6) var(--ictinus-spacing-0) var(--ictinus-spacing-6);
-  border-radius: var(--ictinus-border-radius-2);
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-1:focus-visible:not(:disabled) {
-  background-color: var(--ictinus-color-palette-secondary-muted);
-}
-
-.emotion-1:disabled {
-  opacity: 50%;
-  cursor: not-allowed;
-}
-
-.emotion-1:hover:not(:disabled) {
-  background-color: var(--ictinus-color-palette-secondary-muted);
-}
-
-.emotion-1:active:not(:disabled),
-.emotion-1[aria-expanded="true"] {
-  background-color: var(--ictinus-color-palette-secondary-contrast);
-}
-
 <div>
   <div
     class="properties_display_flex_base__19njorx2i properties_alignItems_center_base__19njorx6 properties_justifyContent_center_base__19njorx1e properties_flex_1_base__19njorx3e properties_gap_lg_base__19njorxqy"
     data-ictinus="test-version"
   >
-    <div
-      class="emotion-0"
+    <button
+      class="Button_button__154w52c1 Button__154w52c0 Button_button_variant_secondary__154w52c3 Button_button_size_normal__154w52c6 properties_position_relative_base__19njorxoq properties_display_inline-flex_base__19njorx2m properties_alignItems_center_base__19njorx6 properties_flexShrink_0_base__19njorxoa properties_borderRadius_2__19njorx1ls properties_transitionProperty_colors__19njorx1pi properties_transitionDuration_150ms__19njorx1pr properties_transitionTimingFunction_out__19njorx1pp properties_userSelect_none__19njorx1na properties_isolation_isolate__19njorx1or properties_backgroundColor_palette.secondary_base__19njorx1qz properties_backgroundColor_palette.secondary.muted_hover__19njorx1r6 properties_backgroundColor_palette.secondary.contrast_active__19njorx1r8 properties_color_active_base__19njorx2gb properties_height_9_base__19njorx86 properties_paddingLeft_md_base__19njorx1du properties_paddingRight_md_base__19njorx1ge"
+      data-ictinus="test-version"
+      data-rac=""
+      data-react-aria-pressable="true"
+      data-size="normal"
+      data-slot="button"
+      data-variant="secondary"
+      id="react-aria-:test-id:"
+      tabindex="0"
+      type="button"
     >
-      <button
-        class="emotion-1"
-        data-slot="button"
-        data-testid="button"
-        tabindex="0"
-        type="button"
+      <span
+        class="Text__ff5iyl6 Button_text__154w52cc Button_text_size_normal__154w52cd properties_paddingLeft_xs_base__19njorx1dm properties_paddingRight_xs_base__19njorx1g6 properties_typography_label02__19njorx1o0"
+        data-ictinus="test-version"
+        data-slot="text"
       >
-        <span>
-          Delay duration 0ms
-        </span>
-      </button>
-    </div>
-    <div
-      class="emotion-0"
+        Delay duration 0ms
+      </span>
+    </button>
+    <button
+      class="Button_button__154w52c1 Button__154w52c0 Button_button_variant_secondary__154w52c3 Button_button_size_normal__154w52c6 properties_position_relative_base__19njorxoq properties_display_inline-flex_base__19njorx2m properties_alignItems_center_base__19njorx6 properties_flexShrink_0_base__19njorxoa properties_borderRadius_2__19njorx1ls properties_transitionProperty_colors__19njorx1pi properties_transitionDuration_150ms__19njorx1pr properties_transitionTimingFunction_out__19njorx1pp properties_userSelect_none__19njorx1na properties_isolation_isolate__19njorx1or properties_backgroundColor_palette.secondary_base__19njorx1qz properties_backgroundColor_palette.secondary.muted_hover__19njorx1r6 properties_backgroundColor_palette.secondary.contrast_active__19njorx1r8 properties_color_active_base__19njorx2gb properties_height_9_base__19njorx86 properties_paddingLeft_md_base__19njorx1du properties_paddingRight_md_base__19njorx1ge"
+      data-ictinus="test-version"
+      data-rac=""
+      data-react-aria-pressable="true"
+      data-size="normal"
+      data-slot="button"
+      data-variant="secondary"
+      id="react-aria-:test-id:"
+      tabindex="0"
+      type="button"
     >
-      <button
-        class="emotion-1"
-        data-slot="button"
-        data-testid="button"
-        tabindex="0"
-        type="button"
+      <span
+        class="Text__ff5iyl6 Button_text__154w52cc Button_text_size_normal__154w52cd properties_paddingLeft_xs_base__19njorx1dm properties_paddingRight_xs_base__19njorx1g6 properties_typography_label02__19njorx1o0"
+        data-ictinus="test-version"
+        data-slot="text"
       >
-        <span>
-          Delay duration 500ms
-        </span>
-      </button>
-    </div>
+        Delay duration 500ms
+      </span>
+    </button>
   </div>
 </div>

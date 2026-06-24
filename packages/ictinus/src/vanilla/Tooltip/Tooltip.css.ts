@@ -44,46 +44,20 @@ export const trigger = style([
   }),
 ]);
 
-export const arrow = recipe({
-  base: [
-    style({
-      display: 'block',
-      fill: vars.color.background.inverted,
+export const arrow = style({
+  display: 'block',
 
-      selectors: {
-        '[data-placement=bottom] &': {
-          transform: 'rotate(180deg)',
-        },
-        '[data-placement=right] &': {
-          transform: 'rotate(90deg) translateY(-5px)',
-        },
-        '[data-placement=left] &': {
-          transform: 'rotate(-90deg) translateY(-5px)',
-        },
-      },
-    }),
-  ],
-});
-
-export const arrowInverse = recipe({
-  base: [
-    style({
-      display: 'block',
-      fill: vars.color.background.alt,
-
-      selectors: {
-        '[data-placement=bottom] &': {
-          transform: 'rotate(180deg)',
-        },
-        '[data-placement=right] &': {
-          transform: 'rotate(90deg) translateY(-5px)',
-        },
-        '[data-placement=left] &': {
-          transform: 'rotate(-90deg) translateY(-5px)',
-        },
-      },
-    }),
-  ],
+  selectors: {
+    '[data-placement=bottom] &': {
+      transform: 'rotate(180deg)',
+    },
+    '[data-placement=right] &': {
+      transform: 'rotate(90deg) translateY(-5px)',
+    },
+    '[data-placement=left] &': {
+      transform: 'rotate(-90deg) translateY(-5px)',
+    },
+  },
 });
 
 export const arrowInverseBorder = style({
