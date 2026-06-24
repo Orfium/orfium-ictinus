@@ -495,6 +495,7 @@ export const colorProps = defineProperties({
   defaultCondition: 'base',
   properties: {
     backgroundColor: { ...backgroundTokens, ...indicatorTokens, ...colors },
+    fill: { ...backgroundTokens, ...indicatorTokens, ...colors },
     borderColor: { ...borderTokens, ...indicatorTokens, ...colors },
     color: { ...colorTokens, ...indicatorTokens, ...colors },
     outlineColor: { ...borderTokens, ...indicatorTokens, ...colors },

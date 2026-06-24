@@ -1,5 +1,13 @@
-import { Button, IconButton, Switch } from '@orfium/ictinus';
-import { Box, Text, Tooltip, TooltipContent, TooltipTrigger } from '@orfium/ictinus/vanilla';
+import { Switch } from '@orfium/ictinus';
+import {
+  Box,
+  Button,
+  InformationalIcon,
+  Text,
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from '@orfium/ictinus/vanilla';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { useState } from 'react';
 
@@ -16,7 +24,7 @@ export const Default: Story = {
     <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" flex="1">
       <Tooltip>
         <TooltipTrigger>
-          <Button type="secondary">Hover me</Button>
+          <Button variant="secondary">Hover me</Button>
         </TooltipTrigger>
         <TooltipContent>It was a dark and stormy night</TooltipContent>
       </Tooltip>
@@ -29,7 +37,9 @@ export const Inverse: Story = {
     <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" flex="1">
       <Tooltip>
         <TooltipTrigger>
-          <IconButton iconName="informational" type="secondary" aria-label="More info" />
+          <Button variant="secondary" circle iconOnly aria-label="More info">
+            <InformationalIcon />
+          </Button>
         </TooltipTrigger>
         <TooltipContent inverse>It was a dark and stormy night</TooltipContent>
       </Tooltip>
@@ -52,7 +62,7 @@ export const Controlled: Story = {
       >
         <Tooltip onOpenChange={setOpen} isOpen={open}>
           <TooltipTrigger>
-            <Button type="secondary">Hover me</Button>
+            <Button variant="secondary">Hover me</Button>
           </TooltipTrigger>
           <TooltipContent>This is a controlled tooltip</TooltipContent>
         </Tooltip>
@@ -75,25 +85,33 @@ export const Placement: Story = {
     >
       <Tooltip defaultOpen>
         <TooltipTrigger>
-          <IconButton iconName="informational" type="secondary" aria-label="More info" />
+          <Button variant="secondary" circle iconOnly aria-label="More info">
+            <InformationalIcon />
+          </Button>
         </TooltipTrigger>
         <TooltipContent placement="top">It was a dark and stormy night</TooltipContent>
       </Tooltip>
       <Tooltip defaultOpen>
         <TooltipTrigger>
-          <IconButton iconName="informational" type="secondary" aria-label="More info" />
+          <Button variant="secondary" circle iconOnly aria-label="More info">
+            <InformationalIcon />
+          </Button>
         </TooltipTrigger>
         <TooltipContent placement="right">It was a dark and stormy night</TooltipContent>
       </Tooltip>
       <Tooltip defaultOpen>
         <TooltipTrigger>
-          <IconButton iconName="informational" type="secondary" aria-label="More info" />
+          <Button variant="secondary" circle iconOnly aria-label="More info">
+            <InformationalIcon />
+          </Button>
         </TooltipTrigger>
         <TooltipContent placement="left">It was a dark and stormy night</TooltipContent>
       </Tooltip>
       <Tooltip defaultOpen>
         <TooltipTrigger>
-          <IconButton iconName="informational" type="secondary" aria-label="More info" />
+          <Button variant="secondary" circle iconOnly aria-label="More info">
+            <InformationalIcon />
+          </Button>
         </TooltipTrigger>
         <TooltipContent placement="bottom">It was a dark and stormy night</TooltipContent>
       </Tooltip>
@@ -151,14 +169,14 @@ export const Delay: Story = {
     <Box display="flex" alignItems="center" justifyContent="center" flex="1" gap="lg">
       <Tooltip delay={0} closeDelay={0}>
         <TooltipTrigger>
-          <Button type="secondary">Delay duration 0ms</Button>
+          <Button variant="secondary">Delay duration 0ms</Button>
         </TooltipTrigger>
         <TooltipContent>It was a dark and stormy night</TooltipContent>
       </Tooltip>
 
       <Tooltip>
         <TooltipTrigger>
-          <Button type="secondary">Delay duration 500ms</Button>
+          <Button variant="secondary">Delay duration 500ms</Button>
         </TooltipTrigger>
         <TooltipContent>It was a dark and stormy night</TooltipContent>
       </Tooltip>
@@ -171,9 +189,24 @@ export const MaxWidth: Story = {
     <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" flex="1">
       <Tooltip defaultOpen>
         <TooltipTrigger>
-          <Button type="secondary">Hover me</Button>
+          <Button variant="secondary">Hover me</Button>
         </TooltipTrigger>
         <TooltipContent maxW="21">It was a dark and stormy night</TooltipContent>
+      </Tooltip>
+    </Box>
+  ),
+};
+
+export const CustomTheme: Story = {
+  render: () => (
+    <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" flex="1">
+      <Tooltip defaultOpen>
+        <TooltipTrigger>
+          <Button variant="secondary">Hover me</Button>
+        </TooltipTrigger>
+        <TooltipContent maxW="21" bg="palette.warning.muted" color="active">
+          It was a dark and stormy night
+        </TooltipContent>
       </Tooltip>
     </Box>
   ),
