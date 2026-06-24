@@ -1,5 +1,11 @@
 # @orfium/ictinus
 
+## 5.46.4
+
+### Patch Changes
+
+- 0b638de: allow tooltip arrow to inherit color
+
 ## 5.46.3
 
 ### Patch Changes
