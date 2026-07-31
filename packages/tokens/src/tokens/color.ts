@@ -79,4 +79,9 @@ export const colors = {
     9: '#601649' as const,
     10: '#33123A' as const,
   } as const,
+  gradient: {
+    1: 'linear-gradient(270deg, #F814A1 0%, #4945EE 100%)' as const,
+    2: 'linear-gradient(90deg, #B9CDFC 0%, #B9C0FF 100%)' as const,
+    3: 'linear-gradient(270deg, #1B214F 0%, #020D25 100%)' as const,
+  } as const,
 } as const;
