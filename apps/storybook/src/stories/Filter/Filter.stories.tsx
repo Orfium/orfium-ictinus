@@ -1,6 +1,7 @@
 import { Button, DropdownButton, Filter, TextField, type FilterOption } from '@orfium/ictinus';
+import { IconPrimitive, type IconPrimitiveProps } from '@orfium/ictinus/vanilla';
 import { vars } from '@orfium/tokens';
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { userEvent, within } from 'storybook/test';
 import { FIGMA_URL } from 'utils/common';
 import * as DatePickerStories from '../DatePicker/DatePicker.stories';
@@ -281,6 +282,8 @@ export const MultiFilter = {
             defaultValue={{ label: 'All', value: 'all' }}
             label={'Friends (Simple Search)'}
             items={options}
+            iconLeft={<SparklesIcon />}
+            colorScheme="ai"
           />
           <Filter
             isSearchable
@@ -520,3 +523,27 @@ export const Playground = {
     },
   },
 };
+
+const SparklesIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, ref) => (
+  <IconPrimitive ref={ref} {...props}>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+      <path
+        d="M15.8335 7.50004L16.8752 5.20837L19.1668 4.16671L16.8752 3.12504L15.8335 0.833374L14.7918 3.12504L12.5002 4.16671L14.7918 5.20837L15.8335 7.50004ZM9.5835 7.91671L7.50016 3.33337L5.41683 7.91671L0.833496 10L5.41683 12.0834L7.50016 16.6667L9.5835 12.0834L14.1668 10L9.5835 7.91671ZM15.8335 12.5L14.7918 14.7917L12.5002 15.8334L14.7918 16.875L15.8335 19.1667L16.8752 16.875L19.1668 15.8334L16.8752 14.7917L15.8335 12.5Z"
+        fill="url(#paint0_linear_4538_7176)"
+      />
+      <defs>
+        <linearGradient
+          id="paint0_linear_4538_7176"
+          x1="19.1668"
+          y1="10"
+          x2="0.833496"
+          y2="10"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#F814A1" />
+          <stop offset="1" stopColor="#4945EE" />
+        </linearGradient>
+      </defs>
+    </svg>
+  </IconPrimitive>
+));

@@ -29,6 +29,8 @@ const Filter = React.forwardRef<HTMLButtonElement, FilterProps>((props, ref) => 
     hasWrapperWidth = false,
     hasSelectAllOption = false,
     dataTestPrefixId = 'ictinus_filter',
+    iconLeft,
+    colorScheme = 'default',
   } = props;
 
   const [isOpen, setIsOpen] = React.useState(false);
@@ -147,6 +149,8 @@ const Filter = React.forwardRef<HTMLButtonElement, FilterProps>((props, ref) => 
           isPopulated={Boolean(isMulti ? selectedFilter?.length : selectedFilter)}
           dataTestPrefixId={dataTestPrefixId}
           isDisabled={isDisabled}
+          iconLeft={iconLeft}
+          colorScheme={colorScheme}
         >
           {filterLabel}
         </FilterButton>

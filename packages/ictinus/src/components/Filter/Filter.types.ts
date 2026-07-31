@@ -52,6 +52,11 @@ export type FilterProps = {
   label: string;
   /** The type of the filter */
   filterType?: FilterType;
+  /**
+   * Color scheme of the filter button.
+   * `ai` applies the brand gradient when the filter is open/active.
+   */
+  colorScheme?: 'default' | 'ai';
   /** Whether the Filter is disabled */
   isDisabled?: boolean;
   /** Items that are being declared as filter options */
@@ -70,6 +75,10 @@ export type FilterProps = {
   hasSelectAllOption?: boolean;
   /** Whether to apply a wrapper width to the filter menu. */
   hasWrapperWidth?: boolean;
+  /**
+   * Provide a left icon to the filter button
+   */
+  iconLeft?: React.ReactNode;
   /** In case of custom filter menu */
   children?: (props: FilterChildrenProps) => React.ReactNode;
 } & FilterAsyncSearchProps &

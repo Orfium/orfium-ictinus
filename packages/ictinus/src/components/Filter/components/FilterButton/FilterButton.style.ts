@@ -15,9 +15,16 @@ export const buttonStyles =
     isActive = false,
     isPopulated = false,
     isDisabled,
-  }: Pick<FilterButtonProps, 'isActive' | 'isPopulated' | 'isDisabled'>) =>
+    colorScheme = 'default',
+  }: Pick<FilterButtonProps, 'isActive' | 'isPopulated' | 'isDisabled' | 'colorScheme'>) =>
   (theme: Theme): SerializedStyles => {
+    const isGradientActive = colorScheme === 'ai' && isActive;
+
     const getBackgroundColor = (hasHover = false) => {
+      if (isGradientActive) {
+        return 'transparent';
+      }
+
       if (isActive) {
         return vars.color.palette.primary.contrast;
       }
@@ -45,11 +52,23 @@ export const buttonStyles =
       gap: ${vars.spacing['3']};
 
       background-color: ${getBackgroundColor()};
+      background-image: ${isGradientActive ? vars.color.gradient['1'] : 'none'};
+      background-origin: border-box;
       color: ${isActive ? vars.color.text.inverted.primary : vars.color.text.default.active};
-      border: ${vars['border-width']['1']} solid ${vars.color['border-color'].interactive.default};
+      border: ${vars['border-width']['1']} solid
+        ${isGradientActive ? 'transparent' : vars.color['border-color'].interactive.default};
       border-radius: ${vars['border-radius']['7']};
 
       ${generateStylesFromTokens(theme.tokens.typography.get('normal.label02'))};
+
+      /* Override hardcoded SVG fills (e.g. gradient icons) so they inherit button color when active */
+      ${isActive
+        ? css`
+            & > svg path {
+              fill: currentColor;
+            }
+          `
+        : ''}
 
       &:not([disabled]) {
         &:focus-visible,

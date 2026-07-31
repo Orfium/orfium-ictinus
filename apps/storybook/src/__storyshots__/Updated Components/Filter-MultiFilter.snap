@@ -41,6 +41,8 @@
   padding: 0 var(--ictinus-spacing-5) 0 var(--ictinus-spacing-6);
   gap: var(--ictinus-spacing-3);
   background-color: var(--ictinus-color-palette-secondary-base);
+  background-image: none;
+  background-origin: border-box;
   color: var(--ictinus-color-text-default-active);
   border: var(--ictinus-border-width-1) solid var(--ictinus-color-border-color-interactive-default);
   border-radius: var(--ictinus-border-radius-7);
@@ -116,6 +118,37 @@
             data-testid="ictinus_filter_filter_button"
             type="button"
           >
+            <svg
+              class="properties_height_4_base__19njorx7m properties_width_4_base__19njorx4a"
+              data-ictinus="test-version"
+              data-slot="icon"
+              role="img"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15.8335 7.50004L16.8752 5.20837L19.1668 4.16671L16.8752 3.12504L15.8335 0.833374L14.7918 3.12504L12.5002 4.16671L14.7918 5.20837L15.8335 7.50004ZM9.5835 7.91671L7.50016 3.33337L5.41683 7.91671L0.833496 10L5.41683 12.0834L7.50016 16.6667L9.5835 12.0834L14.1668 10L9.5835 7.91671ZM15.8335 12.5L14.7918 14.7917L12.5002 15.8334L14.7918 16.875L15.8335 19.1667L16.8752 16.875L19.1668 15.8334L16.8752 14.7917L15.8335 12.5Z"
+                fill="url(#paint0_linear_4538_7176)"
+              />
+              <defs>
+                <lineargradient
+                  gradientUnits="userSpaceOnUse"
+                  id="paint0_linear_4538_7176"
+                  x1="19.1668"
+                  x2="0.833496"
+                  y1="10"
+                  y2="10"
+                >
+                  <stop
+                    stop-color="#F814A1"
+                  />
+                  <stop
+                    offset="1"
+                    stop-color="#4945EE"
+                  />
+                </lineargradient>
+              </defs>
+            </svg>
             <div
               class="emotion-4"
               data-testid="ictinus_filter_filter_label"
