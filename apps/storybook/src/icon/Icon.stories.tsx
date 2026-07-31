@@ -23,7 +23,7 @@ type Story = StoryObj<typeof Icon>;
 export const Iconography: Story = {
   render: () => (
     <Box display="flex" flexWrap="wrap" gap="2xl">
-      {Object.keys(ICONS).map((icon: keyof typeof ICONS) => (
+      {(Object.keys(ICONS) as Array<keyof typeof ICONS>).map((icon) => (
         <Box key={icon} display="flex" flexDirection="column" alignItems="center" gap="sm">
           <Icon name={icon} />
           <Text typography="label04">{icon}</Text>
