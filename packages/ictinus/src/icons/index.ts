@@ -112,6 +112,7 @@ export * from './ShareIcon';
 export * from './SortAscendingIcon';
 export * from './SortDescendingIcon';
 export * from './SortIcon';
+export * from './SparklesIcon';
 export * from './StatusIndicatorIcon';
 export * from './StopIcon';
 export * from './SuccessIcon';
