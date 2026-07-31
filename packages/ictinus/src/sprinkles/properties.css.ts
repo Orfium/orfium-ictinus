@@ -62,6 +62,12 @@ const colors = {
   'purple.10': vars.color.purple['10'],
 } as const;
 
+const gradientTokens = {
+  'gradient.1': vars.color.gradient['1'],
+  'gradient.2': vars.color.gradient['2'],
+  'gradient.3': vars.color.gradient['3'],
+} as const;
+
 const colorTokens = {
   primary: vars.color.text.default.primary,
   secondary: vars.color.text.default.secondary,
@@ -124,6 +130,7 @@ const borderTokens = {
   'interactive.warning': vars.color['border-color'].interactive.warning,
   'interactive.success': vars.color['border-color'].interactive.success,
   'interactive.focused': vars.color['border-color'].interactive.focused,
+  transparent: 'transparent',
 } as const;
 
 const indicatorTokens = {
@@ -495,6 +502,7 @@ export const colorProps = defineProperties({
   defaultCondition: 'base',
   properties: {
     backgroundColor: { ...backgroundTokens, ...indicatorTokens, ...colors },
+    backgroundImage: gradientTokens,
     fill: { ...backgroundTokens, ...indicatorTokens, ...colors },
     borderColor: { ...borderTokens, ...indicatorTokens, ...colors },
     color: { ...colorTokens, ...indicatorTokens, ...colors },
