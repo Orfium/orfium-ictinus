@@ -31,6 +31,7 @@ export const Variants: Story = {
         <Badge colorScheme="purple">Purple</Badge>
         <Badge colorScheme="teal">Teal</Badge>
         <Badge colorScheme="orange">Orange</Badge>
+        <Badge colorScheme="ai">AI</Badge>
         <CodeBadge>Code</CodeBadge>
       </Box>
     </Box>
@@ -47,6 +48,7 @@ export const Sizes: Story = {
         <Badge colorScheme="purple">Purple</Badge>
         <Badge colorScheme="teal">Teal</Badge>
         <Badge colorScheme="orange">Orange</Badge>
+        <Badge colorScheme="ai">AI</Badge>
         <CodeBadge>Code</CodeBadge>
       </Box>
       <Box display="flex" flexWrap="wrap" gap="sm">
@@ -65,6 +67,9 @@ export const Sizes: Story = {
         </Badge>
         <Badge size="small" colorScheme="orange">
           Orange
+        </Badge>
+        <Badge size="small" colorScheme="ai">
+          AI
         </Badge>
         <CodeBadge size="small">Code</CodeBadge>
       </Box>
@@ -100,6 +105,10 @@ export const WithIcon: Story = {
           <BookmarkIcon />
           <Text>Orange</Text>
         </Badge>
+        <Badge colorScheme="ai">
+          <BookmarkIcon />
+          <Text>AI</Text>
+        </Badge>
         <CodeBadge>
           <BookmarkIcon />
           <Text>Code</Text>
@@ -129,6 +138,10 @@ export const WithIcon: Story = {
         <Badge size="small" colorScheme="orange">
           <BookmarkIcon />
           <Text>Orange</Text>
+        </Badge>
+        <Badge size="small" colorScheme="ai">
+          <BookmarkIcon />
+          <Text>AI</Text>
         </Badge>
         <CodeBadge size="small">
           <BookmarkIcon />
@@ -164,6 +177,11 @@ export const WithIcon: Story = {
         <Badge colorScheme="orange">
           <BookmarkIcon />
           <Text>Orange</Text>
+          <MoreOptionsIcon />
+        </Badge>
+        <Badge colorScheme="ai">
+          <BookmarkIcon />
+          <Text>AI</Text>
           <MoreOptionsIcon />
         </Badge>
         <CodeBadge>
