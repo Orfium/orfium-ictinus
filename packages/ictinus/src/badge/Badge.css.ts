@@ -62,6 +62,16 @@ export const badge = recipe({
         borderColor: 'interactive.warning',
         color: 'warning',
       }),
+      ai: [
+        sprinkles({
+          backgroundImage: 'gradient.1',
+          borderColor: 'transparent',
+          color: 'inverted.primary',
+        }),
+        style({
+          backgroundOrigin: 'border-box',
+        }),
+      ],
     },
   },
   defaultVariants: {
