@@ -42,7 +42,7 @@
     "tsc": "tsc --noEmit",
     "fmt": "prettier src --check",
     "check": "pnpm tsc && pnpm lint && pnpm fmt",
-    "check:precommit": "pnpm tsc && pnpm lint && pnpm test"
+    "precommit": "pnpm tsc && pnpm lint && pnpm test"
   },
   "devDependencies": {
     "@vanilla-extract/css": "^1.17.4",
