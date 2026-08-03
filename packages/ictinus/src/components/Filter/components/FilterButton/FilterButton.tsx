@@ -8,13 +8,14 @@ import type { CommonButtonProps } from 'utils/common';
 import type { TestProps } from 'utils/types';
 import { buttonStyles, iconStyles } from './FilterButton.style';
 
-export type FilterButtonProps = Pick<FilterProps, 'filterType'> &
+export type FilterButtonProps = Pick<FilterProps, 'filterType' | 'colorScheme'> &
   React.PropsWithChildren<{
     isDisabled?: boolean;
     onClear?: () => void;
     isActive?: boolean;
     isPopulated?: boolean;
     moreFilters?: number;
+    iconLeft?: React.ReactNode;
   }> &
   TestProps &
   EventButtonProps &
@@ -23,6 +24,7 @@ export type FilterButtonProps = Pick<FilterProps, 'filterType'> &
 export const FilterButton = React.forwardRef<HTMLButtonElement, FilterButtonProps>((props, ref) => {
   const {
     filterType = 'preset',
+    colorScheme = 'default',
     children,
     onClick,
     isDisabled,
@@ -31,6 +33,7 @@ export const FilterButton = React.forwardRef<HTMLButtonElement, FilterButtonProp
     isPopulated,
     moreFilters,
     dataTestPrefixId,
+    iconLeft,
     ...rest
   } = props;
 
@@ -49,7 +52,7 @@ export const FilterButton = React.forwardRef<HTMLButtonElement, FilterButtonProp
 
   return (
     <button
-      css={buttonStyles({ isActive, isPopulated, isDisabled })}
+      css={buttonStyles({ isActive, isPopulated, isDisabled, colorScheme })}
       type="button"
       ref={ref}
       onClick={onClick}
@@ -58,6 +61,7 @@ export const FilterButton = React.forwardRef<HTMLButtonElement, FilterButtonProp
       data-active={isActive}
       {...rest}
     >
+      {iconLeft}
       <div
         css={{ textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap' }}
         data-testid={`${dataTestPrefixId}_filter_label`}
