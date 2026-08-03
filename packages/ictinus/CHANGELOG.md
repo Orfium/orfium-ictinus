@@ -1,5 +1,14 @@
 # @orfium/ictinus
 
+## 5.46.5
+
+### Patch Changes
+
+- c3ddf68: ai badge
+- 05390bb: ai filter
+- Updated dependencies [7562704]
+  - @orfium/tokens@5.2.1
+
 ## 5.46.4
 
 ### Patch Changes

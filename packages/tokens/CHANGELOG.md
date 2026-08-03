@@ -1,5 +1,11 @@
 # @orfium/tokens
 
+## 5.2.1
+
+### Patch Changes
+
+- 7562704: gradient tokens
+
 ## 5.2.0
 
 ### Minor Changes
