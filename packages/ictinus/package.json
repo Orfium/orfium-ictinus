@@ -1,8 +1,29 @@
 {
   "name": "@orfium/ictinus",
+  "homepage": "https://github.com/Orfium/orfium-ictinus/tree/master/packages/ictinus#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Orfium/orfium-ictinus.git",
+    "directory": "packages/ictinus"
+  },
+  "bugs": {
+    "url": "https://github.com/Orfium/orfium-ictinus/issues"
+  },
   "version": "5.46.5",
+  "license": "Apache-2.0",
   "type": "module",
-  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**",
+    "bin",
+    "LICENSE"
+  ],
+  "bin": {
+    "ictinus-migrate-v5": "./bin/migrate.mjs"
+  },
+  "sideEffects": [
+    "*.css",
+    "global.css.ts"
+  ],
   "exports": {
     ".": {
       "import": {
@@ -22,17 +43,48 @@
       }
     }
   },
-  "sideEffects": [
-    "*.css",
-    "global.css.ts"
-  ],
-  "files": [
-    "dist/**",
-    "bin"
-  ],
-  "license": "MIT",
-  "bin": {
-    "ictinus-migrate-v5": "./bin/migrate.mjs"
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "prepublishOnly": "pnpm build",
+    "build": "pnpm build:main && pnpm build:codemods && pnpm build:vanilla",
+    "build:main": "vite build --mode production",
+    "build:vanilla": "rm -rf dist/vanilla && NODE_ENV=production rollup -c",
+    "build:codemods": "vite build --config vite.codemods.config.ts",
+    "test": "vitest --run",
+    "test:watch": "vitest --watch",
+    "test:update": "vitest -u",
+    "lint": "oxlint",
+    "tsc": "tsc --noEmit",
+    "fmt": "prettier src --check",
+    "check": "pnpm tsc && pnpm lint && pnpm fmt",
+    "precommit": "pnpm tsc && pnpm lint && pnpm test"
+  },
+  "dependencies": {
+    "@mona-health/react-input-mask": "^3.0.3",
+    "@orfium/tokens": "workspace:*",
+    "@radix-ui/react-slot": "^1.2.3",
+    "@radix-ui/react-use-controllable-state": "^1.2.2",
+    "@tanstack/react-virtual": "^3.13.18",
+    "@vanilla-extract/dynamic": "^2.1.5",
+    "@vanilla-extract/recipes": "^0.5.7",
+    "@vanilla-extract/sprinkles": "^1.6.5",
+    "clsx": "^2.1.1",
+    "dayjs": "^2.0.0-alpha.4",
+    "jscodeshift": "^17.3.0",
+    "lodash-es": "^4.18.1",
+    "pluralize": "^8.0.0",
+    "polished": "^4.3.1",
+    "react-aria": "^3.43.1",
+    "react-aria-components": "^1.12.1",
+    "react-fast-compare": "^3.2.0",
+    "react-highlight-words": "^0.20.0",
+    "react-range": "^1.8.12",
+    "react-responsive": "^10.0.0",
+    "react-stately": "^3.47.0",
+    "react-textarea-autosize": "^8.5.3",
+    "react-tooltip": "^5.26.4",
+    "react-window": "^1.8.6",
+    "recharts": "^2.8.0"
   },
   "devDependencies": {
     "@emotion/babel-plugin": "^11.13.5",
@@ -83,33 +135,6 @@
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "catalog:"
   },
-  "dependencies": {
-    "@mona-health/react-input-mask": "^3.0.3",
-    "@orfium/tokens": "workspace:*",
-    "@radix-ui/react-slot": "^1.2.3",
-    "@radix-ui/react-use-controllable-state": "^1.2.2",
-    "@tanstack/react-virtual": "^3.13.18",
-    "@vanilla-extract/dynamic": "^2.1.5",
-    "@vanilla-extract/recipes": "^0.5.7",
-    "@vanilla-extract/sprinkles": "^1.6.5",
-    "clsx": "^2.1.1",
-    "dayjs": "^2.0.0-alpha.4",
-    "jscodeshift": "^17.3.0",
-    "lodash-es": "^4.18.1",
-    "pluralize": "^8.0.0",
-    "polished": "^4.3.1",
-    "react-aria": "^3.43.1",
-    "react-aria-components": "^1.12.1",
-    "react-fast-compare": "^3.2.0",
-    "react-highlight-words": "^0.20.0",
-    "react-range": "^1.8.12",
-    "react-responsive": "^10.0.0",
-    "react-stately": "^3.47.0",
-    "react-textarea-autosize": "^8.5.3",
-    "react-tooltip": "^5.26.4",
-    "react-window": "^1.8.6",
-    "recharts": "^2.8.0"
-  },
   "peerDependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
@@ -117,36 +142,5 @@
     "@tanstack/table-core": "^8.21.3",
     "react": "^18.0.0 || ^19.0.0",
     "react-dom": "^18.0.0 || ^19.0.0"
-  },
-  "scripts": {
-    "prepublishOnly": "pnpm build",
-    "build": "pnpm build:main && pnpm build:codemods && pnpm build:vanilla",
-    "build:main": "vite build --mode production",
-    "build:vanilla": "rm -rf dist/vanilla && NODE_ENV=production rollup -c",
-    "build:codemods": "vite build --config vite.codemods.config.ts",
-    "test": "vitest --run",
-    "test:watch": "vitest --watch",
-    "test:update": "vitest -u",
-    "lint": "oxlint",
-    "tsc": "tsc --noEmit",
-    "fmt": "prettier src --check",
-    "check": "pnpm tsc && pnpm lint && pnpm fmt",
-    "precommit": "pnpm tsc && pnpm lint && pnpm test"
-  },
-  "keywords": [
-    "Orfium",
-    "typescript",
-    "react",
-    "styled-system",
-    "emotion",
-    "design system"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Orfium/orfium-ictinus.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Orfium/orfium-ictinus/issues"
-  },
-  "homepage": "https://github.com/Orfium/orfium-ictinus#readme"
+  }
 }
