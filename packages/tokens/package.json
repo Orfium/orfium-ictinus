@@ -1,10 +1,25 @@
 {
   "name": "@orfium/tokens",
+  "homepage": "https://github.com/Orfium/orfium-ictinus/tree/master/packages/tokens#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Orfium/orfium-ictinus.git",
+    "directory": "packages/tokens"
+  },
+  "bugs": {
+    "url": "https://github.com/Orfium/orfium-ictinus/issues"
+  },
   "version": "5.2.1",
+  "license": "Apache-2.0",
   "type": "module",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**",
+    "LICENSE"
+  ],
+  "sideEffects": [
+    "**/*.css",
+    "**/*.css.ts"
+  ],
   "exports": {
     ".": {
       "import": {
@@ -14,11 +29,21 @@
     },
     "./vars.css": "./dist/vars.css"
   },
-  "sideEffects": [
-    "**/*.css",
-    "**/*.css.ts"
-  ],
-  "license": "MIT",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "prepublishOnly": "pnpm build",
+    "build": "vite build",
+    "test": "vitest --run",
+    "test:watch": "vitest --watch",
+    "test:update": "vitest -u",
+    "lint": "oxlint",
+    "tsc": "tsc --noEmit",
+    "fmt": "prettier src --check",
+    "check": "pnpm tsc && pnpm lint && pnpm fmt",
+    "check:precommit": "pnpm tsc && pnpm lint && pnpm test"
+  },
   "devDependencies": {
     "@vanilla-extract/css": "^1.17.4",
     "@vanilla-extract/vite-plugin": "^5.1.1",
@@ -34,17 +59,5 @@
     "vite-plugin-dts": "catalog:",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "catalog:"
-  },
-  "scripts": {
-    "prepublishOnly": "pnpm build",
-    "build": "vite build",
-    "test": "vitest --run",
-    "test:watch": "vitest --watch",
-    "test:update": "vitest -u",
-    "lint": "oxlint",
-    "tsc": "tsc --noEmit",
-    "fmt": "prettier src --check",
-    "check": "pnpm tsc && pnpm lint && pnpm fmt",
-    "check:precommit": "pnpm tsc && pnpm lint && pnpm test"
   }
 }
