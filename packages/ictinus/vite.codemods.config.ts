@@ -1,8 +1,7 @@
-import path from 'path';
 import fg from 'fast-glob';
+import path from 'node:path';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
-import tsconfigPaths from 'vite-tsconfig-paths';
 
 const codemodsEntries = Object.fromEntries(
   fg
@@ -14,10 +13,12 @@ const codemodsEntries = Object.fromEntries(
 );
 
 export default defineConfig({
+  resolve: {
+    tsconfigPaths: true,
+  },
   plugins: [
-    tsconfigPaths(),
     dts({
-      outDir: path.resolve(__dirname, 'dist/codemods'),
+      outDirs: path.resolve(import.meta.dirname, 'dist/codemods'),
       include: ['codemods/**/*.ts'],
       exclude: ['__mocks__'],
     }),
@@ -27,10 +28,10 @@ export default defineConfig({
       entry: codemodsEntries,
       formats: ['cjs'],
     },
-    rollupOptions: {
+    rolldownOptions: {
       input: codemodsEntries,
       output: {
-        dir: path.resolve(__dirname, 'dist/codemods'),
+        dir: path.resolve(import.meta.dirname, 'dist/codemods'),
         format: 'cjs',
         entryFileNames: '[name].cjs',
       },

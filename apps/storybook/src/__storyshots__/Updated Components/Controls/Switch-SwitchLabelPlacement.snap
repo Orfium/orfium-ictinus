@@ -103,7 +103,7 @@
   justify-content: unset;
 }
 
-.emotion-7 {
+.emotion-5 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -112,7 +112,7 @@
   color: var(--ictinus-color-text-default-primary);
 }
 
-.emotion-8 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -126,11 +126,11 @@
   flex-wrap: wrap;
 }
 
-.emotion-10 {
+.emotion-8 {
   cursor: pointer;
 }
 
-.emotion-10>div>div:first-of-type {
+.emotion-8>div>div:first-of-type {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -146,7 +146,7 @@
   position: relative;
 }
 
-.emotion-10 .bar {
+.emotion-8 .bar {
   width: var(--ictinus-sizing-9);
   height: var(--ictinus-sizing-2);
   background: var(--ictinus-color-palette-primary-alt-contrast);
@@ -154,14 +154,14 @@
   border-radius: var(--ictinus-border-radius-7);
 }
 
-.emotion-10 .indicator {
+.emotion-8 .indicator {
   width: var(--ictinus-sizing-9);
   height: var(--ictinus-sizing-5);
   box-sizing: border-box;
   position: relative;
 }
 
-.emotion-10 .indicator:before {
+.emotion-8 .indicator:before {
   content: '';
   box-sizing: border-box;
   display: block;
@@ -174,15 +174,15 @@
   transition: all 200ms;
 }
 
-.emotion-10[data-hovered] .indicator:before,
-.emotion-10[data-focus-visible='true'] .indicator:before {
+.emotion-8[data-hovered] .indicator:before,
+.emotion-8[data-focus-visible='true'] .indicator:before {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   box-shadow: 0px 0px 0px 8px rgba(200,206,255,0.20);
   border-radius: 100%;
 }
 
-.emotion-10[data-selected] .indicator:before {
+.emotion-8[data-selected] .indicator:before {
   -webkit-transform: translateX(80%);
   -moz-transform: translateX(80%);
   -ms-transform: translateX(80%);
@@ -191,7 +191,7 @@
   border-color: var(--ictinus-color-border-color-interactive-active);
 }
 
-.emotion-11 {
+.emotion-9 {
   -webkit-flex-direction: row-reverse;
   -ms-flex-direction: row-reverse;
   flex-direction: row-reverse;
@@ -232,10 +232,10 @@
             />
           </span>
           <div
-            class="emotion-3 emotion-4"
+            class="emotion-3"
           >
             <div
-              class="emotion-5 emotion-4"
+              class="emotion-4"
             >
               <div
                 class="bar"
@@ -245,7 +245,7 @@
               />
             </div>
             <div
-              class="emotion-7"
+              class="emotion-5"
               data-testid="ictinus_switch_undefined_label"
             >
               Right Label
@@ -256,7 +256,7 @@
     </div>
   </div>
   <div
-    class="emotion-8"
+    class="emotion-6"
   >
     <div
       style="margin: 5px;"
@@ -265,7 +265,7 @@
         class="emotion-1"
       >
         <label
-          class="emotion-10"
+          class="emotion-8"
           data-rac=""
           data-react-aria-pressable="true"
           data-testid="ictinus_switch"
@@ -281,10 +281,10 @@
             />
           </span>
           <div
-            class="emotion-11 emotion-4"
+            class="emotion-9"
           >
             <div
-              class="emotion-5 emotion-4"
+              class="emotion-4"
             >
               <div
                 class="bar"
@@ -294,7 +294,7 @@
               />
             </div>
             <div
-              class="emotion-7"
+              class="emotion-5"
               data-testid="ictinus_switch_undefined_label"
             >
               Left Label

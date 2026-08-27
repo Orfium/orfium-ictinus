@@ -10,7 +10,7 @@
   gap: 1.5rem;
 }
 
-.emotion-2 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -23,7 +23,7 @@
   width: fit-content;
 }
 
-.emotion-3 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -32,7 +32,7 @@
   isolation: isolate;
 }
 
-.emotion-3 [role='tab'] {
+.emotion-2 [role='tab'] {
   box-sizing: border-box;
   position: relative;
   font-family: Roboto;
@@ -42,11 +42,11 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-3 [role='tab'][data-disabled] {
+.emotion-2 [role='tab'][data-disabled] {
   cursor: default;
 }
 
-.emotion-3 [role='tab'][data-selected] {
+.emotion-2 [role='tab'][data-selected] {
   font-family: Roboto;
   font-weight: 700;
   line-height: 1.375rem;
@@ -54,32 +54,32 @@
   letter-spacing: 0.00625rem;
 }
 
-.emotion-3 [role='tab']:not([data-selected], [data-disabled]):hover {
+.emotion-2 [role='tab']:not([data-selected], [data-disabled]):hover {
   background-color: var(--ictinus-color-background-alt);
   -webkit-transition: background-color ease-out 150ms;
   transition: background-color ease-out 150ms;
 }
 
-.emotion-3 [role='tab'][data-focus-visible]::after {
+.emotion-2 [role='tab'][data-focus-visible]::after {
   content: '';
   position: absolute;
   border-radius: var(--ictinus-border-radius-1);
   border: var(--ictinus-border-width-3) solid var(--ictinus-color-border-color-interactive-focused);
 }
 
-.emotion-3 [role='tab'][data-status='warning'] [data-role='title'] {
+.emotion-2 [role='tab'][data-status='warning'] [data-role='title'] {
   color: var(--ictinus-color-text-default-error);
 }
 
-.emotion-3 [role='tab'][data-selected]:not([data-status='warning']) [data-role='title'] {
+.emotion-2 [role='tab'][data-selected]:not([data-status='warning']) [data-role='title'] {
   color: var(--ictinus-color-text-default-active);
 }
 
-.emotion-3[data-orientation='horizontal'] {
+.emotion-2[data-orientation='horizontal'] {
   gap: var(--ictinus-spacing-7);
 }
 
-.emotion-3[data-orientation='horizontal']::before {
+.emotion-2[data-orientation='horizontal']::before {
   content: '';
   position: absolute;
   bottom: 0;
@@ -89,35 +89,35 @@
   background-color: var(--ictinus-color-border-color-decorative-default);
 }
 
-.emotion-3[data-orientation='horizontal'] [role='tab'] {
+.emotion-2[data-orientation='horizontal'] [role='tab'] {
   border-bottom: var(--ictinus-border-width-2) solid transparent;
   padding: var(--ictinus-spacing-5) var(--ictinus-spacing-4) calc(var(--ictinus-spacing-5) - var(--ictinus-border-width-2));
 }
 
-.emotion-3[data-orientation='horizontal'] [role='tab']:not([data-selected]):hover {
+.emotion-2[data-orientation='horizontal'] [role='tab']:not([data-selected]):hover {
   border-bottom: var(--ictinus-border-width-2) solid var(--ictinus-color-border-color-decorative-default);
 }
 
-.emotion-3[data-orientation='horizontal'] [role='tab'][data-focus-visible]::after {
+.emotion-2[data-orientation='horizontal'] [role='tab'][data-focus-visible]::after {
   inset: -var(--ictinus-border-width-2);
 }
 
-.emotion-3[data-orientation='horizontal'] [role='tab'][data-selected] {
+.emotion-2[data-orientation='horizontal'] [role='tab'][data-selected] {
   border-bottom: var(--ictinus-border-width-2) solid var(--ictinus-color-border-color-interactive-active);
 }
 
-.emotion-3[data-orientation='horizontal'] [role='tab'][data-selected][data-status='warning'] {
+.emotion-2[data-orientation='horizontal'] [role='tab'][data-selected][data-status='warning'] {
   border-color: var(--ictinus-color-border-color-interactive-error);
 }
 
-.emotion-3[data-orientation='vertical'] {
+.emotion-2[data-orientation='vertical'] {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
   gap: var(--ictinus-spacing-6);
 }
 
-.emotion-3[data-orientation='vertical']::before {
+.emotion-2[data-orientation='vertical']::before {
   content: '';
   position: absolute;
   bottom: 0;
@@ -127,28 +127,28 @@
   background-color: var(--ictinus-color-border-color-decorative-default);
 }
 
-.emotion-3[data-orientation='vertical'] [role='tab'][data-focus-visible]::after {
+.emotion-2[data-orientation='vertical'] [role='tab'][data-focus-visible]::after {
   inset: -var(--ictinus-border-width-2);
 }
 
-.emotion-3[data-orientation='vertical'] [role='tab']:not([data-selected]):hover {
+.emotion-2[data-orientation='vertical'] [role='tab']:not([data-selected]):hover {
   border-left: var(--ictinus-border-width-2) solid var(--ictinus-color-border-color-decorative-default);
 }
 
-.emotion-3[data-orientation='vertical'] [role='tab'] {
+.emotion-2[data-orientation='vertical'] [role='tab'] {
   border-left: var(--ictinus-border-width-2) solid transparent;
   padding: var(--ictinus-spacing-5) var(--ictinus-spacing-5) var(--ictinus-spacing-5) calc(var(--ictinus-spacing-5) - var(--ictinus-border-width-2));
 }
 
-.emotion-3[data-orientation='vertical'] [role='tab'][data-selected] {
+.emotion-2[data-orientation='vertical'] [role='tab'][data-selected] {
   border-left: var(--ictinus-border-width-2) solid var(--ictinus-color-border-color-interactive-active);
 }
 
-.emotion-3[data-orientation='vertical'] [role='tab'][data-selected][data-status='warning'] {
+.emotion-2[data-orientation='vertical'] [role='tab'][data-selected][data-status='warning'] {
   border-color: var(--ictinus-color-indicators-error);
 }
 
-.emotion-4 {
+.emotion-3 {
   box-sizing: border-box;
   cursor: pointer;
   display: -webkit-box;
@@ -160,7 +160,7 @@
   flex-direction: column;
 }
 
-.emotion-5 {
+.emotion-4 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -175,7 +175,7 @@
   gap: var(--ictinus-spacing-3);
 }
 
-.emotion-6 {
+.emotion-5 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -193,7 +193,7 @@
   gap: var(--ictinus-spacing-4);
 }
 
-.emotion-7 {
+.emotion-6 {
   width: 1.25rem;
   height: 1.25rem;
   display: -webkit-box;
@@ -202,17 +202,17 @@
   display: flex;
 }
 
-.emotion-8 {
+.emotion-7 {
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-8 path,
-.emotion-8 rect {
+.emotion-7 path,
+.emotion-7 rect {
   fill: var(--ictinus-color-indicators-brand)!important;
 }
 
-.emotion-9 {
+.emotion-8 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1rem;
@@ -221,7 +221,7 @@
   color: var(--ictinus-color-text-default-secondary);
 }
 
-.emotion-18 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -234,7 +234,7 @@
   height: fit-content;
 }
 
-.emotion-22 {
+.emotion-21 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -257,17 +257,17 @@
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
   >
     <template />
     <div
-      class="emotion-2"
+      class="emotion-1"
       data-orientation="horizontal"
       data-rac=""
     >
       <div
         aria-orientation="horizontal"
-        class="emotion-3"
+        class="emotion-2"
         data-collection="react-aria-:test-id:"
         data-orientation="horizontal"
         data-rac=""
@@ -277,7 +277,7 @@
         <div
           aria-controls="react-aria-:test-id:-tabpanel-tab-1"
           aria-selected="true"
-          class="emotion-4"
+          class="emotion-3"
           data-collection="react-aria-:test-id:"
           data-key="tab-1"
           data-rac=""
@@ -289,21 +289,21 @@
           tabindex="0"
         >
           <div
-            class="emotion-5"
+            class="emotion-4"
           >
             <div
-              class="emotion-6"
+              class="emotion-5"
               data-role="title"
               data-testid="ictinus_tabstep_tab-1_title"
             >
               Tab label
               <div
-                class="emotion-7"
+                class="emotion-6"
                 data-slot="icon"
                 datatestprefixid="ictinus_tabstep_tab-1_icon"
               >
                 <svg
-                  class="emotion-8"
+                  class="emotion-7"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -316,7 +316,7 @@
               </div>
             </div>
             <div
-              class="emotion-9"
+              class="emotion-8"
               data-role="subtitle"
               data-testid="ictinus_tabstep_tab-1_subtitle"
             >
@@ -327,7 +327,7 @@
         <div
           aria-disabled="true"
           aria-selected="false"
-          class="emotion-4"
+          class="emotion-3"
           data-collection="react-aria-:test-id:"
           data-disabled="true"
           data-key="tab-2"
@@ -337,17 +337,17 @@
           role="tab"
         >
           <div
-            class="emotion-5"
+            class="emotion-4"
           >
             <div
-              class="emotion-6"
+              class="emotion-5"
               data-role="title"
               data-testid="ictinus_tabstep_tab-2_title"
             >
               Tab disabled
             </div>
             <div
-              class="emotion-9"
+              class="emotion-8"
               data-role="subtitle"
               data-testid="ictinus_tabstep_tab-2_subtitle"
             >
@@ -357,7 +357,7 @@
         </div>
         <div
           aria-selected="false"
-          class="emotion-4"
+          class="emotion-3"
           data-collection="react-aria-:test-id:"
           data-key="tab-3"
           data-rac=""
@@ -368,17 +368,17 @@
           tabindex="-1"
         >
           <div
-            class="emotion-5"
+            class="emotion-4"
           >
             <div
-              class="emotion-6"
+              class="emotion-5"
               data-role="title"
               data-testid="ictinus_tabstep_tab-3_title"
             >
               Tab label
             </div>
             <div
-              class="emotion-9"
+              class="emotion-8"
               data-role="subtitle"
               data-testid="ictinus_tabstep_tab-3_subtitle"
             >
@@ -390,13 +390,13 @@
     </div>
     <template />
     <div
-      class="emotion-18"
+      class="emotion-17"
       data-orientation="vertical"
       data-rac=""
     >
       <div
         aria-orientation="vertical"
-        class="emotion-3"
+        class="emotion-2"
         data-collection="react-aria-:test-id:"
         data-orientation="vertical"
         data-rac=""
@@ -406,7 +406,7 @@
         <div
           aria-controls="react-aria-:test-id:-tabpanel-tab-1"
           aria-selected="true"
-          class="emotion-4"
+          class="emotion-3"
           data-collection="react-aria-:test-id:"
           data-key="tab-1"
           data-rac=""
@@ -418,21 +418,21 @@
           tabindex="0"
         >
           <div
-            class="emotion-5"
+            class="emotion-4"
           >
             <div
-              class="emotion-22"
+              class="emotion-21"
               data-role="title"
               data-testid="ictinus_tabstep_tab-1_title"
             >
               Tab label
               <div
-                class="emotion-7"
+                class="emotion-6"
                 data-slot="icon"
                 datatestprefixid="ictinus_tabstep_tab-1_icon"
               >
                 <svg
-                  class="emotion-8"
+                  class="emotion-7"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -445,7 +445,7 @@
               </div>
             </div>
             <div
-              class="emotion-9"
+              class="emotion-8"
               data-role="subtitle"
               data-testid="ictinus_tabstep_tab-1_subtitle"
             >
@@ -456,7 +456,7 @@
         <div
           aria-disabled="true"
           aria-selected="false"
-          class="emotion-4"
+          class="emotion-3"
           data-collection="react-aria-:test-id:"
           data-disabled="true"
           data-key="tab-2"
@@ -466,17 +466,17 @@
           role="tab"
         >
           <div
-            class="emotion-5"
+            class="emotion-4"
           >
             <div
-              class="emotion-22"
+              class="emotion-21"
               data-role="title"
               data-testid="ictinus_tabstep_tab-2_title"
             >
               Tab disabled
             </div>
             <div
-              class="emotion-9"
+              class="emotion-8"
               data-role="subtitle"
               data-testid="ictinus_tabstep_tab-2_subtitle"
             >
@@ -486,7 +486,7 @@
         </div>
         <div
           aria-selected="false"
-          class="emotion-4"
+          class="emotion-3"
           data-collection="react-aria-:test-id:"
           data-key="tab-3"
           data-rac=""
@@ -497,17 +497,17 @@
           tabindex="-1"
         >
           <div
-            class="emotion-5"
+            class="emotion-4"
           >
             <div
-              class="emotion-22"
+              class="emotion-21"
               data-role="title"
               data-testid="ictinus_tabstep_tab-3_title"
             >
               Tab label
             </div>
             <div
-              class="emotion-9"
+              class="emotion-8"
               data-role="subtitle"
               data-testid="ictinus_tabstep_tab-3_subtitle"
             >
