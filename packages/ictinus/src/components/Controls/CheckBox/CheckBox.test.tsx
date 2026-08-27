@@ -35,29 +35,25 @@ describe('Checkbox Component', () => {
   });
 
   it('should invoke the onChange function', async () => {
-    const { getAllByTestId } = render(
-      <CheckBox onChange={mockOnChange} value="test" dataTestPrefixId="test" />
-    );
+    render(<CheckBox onChange={mockOnChange} value="test" dataTestPrefixId="test" />);
 
-    const checkbox = getAllByTestId('test_test_checkbox');
-    const input = checkbox[0];
-    expect(input).toBeInTheDocument();
+    const checkbox = screen.getByRole('checkbox');
+    expect(checkbox).toBeInTheDocument();
 
-    await userEvent.click(input);
+    await userEvent.click(checkbox);
 
     expect(mockOnChange).toHaveBeenCalledTimes(1);
   });
 
   it('should not invoke the onChange function if the checkbox is disabled', async () => {
-    const { getAllByTestId } = render(
+    render(
       <CheckBox onChange={mockOnChange} value="test" dataTestPrefixId="test" isDisabled />
     );
 
-    const checkbox = getAllByTestId('test_test_checkbox');
-    const input = checkbox[0];
-    expect(input).toBeInTheDocument();
+    const checkbox = screen.getByRole('checkbox');
+    expect(checkbox).toBeInTheDocument();
 
-    await userEvent.click(input);
+    await userEvent.click(checkbox);
 
     expect(mockOnChange).toHaveBeenCalledTimes(0);
   });
@@ -65,7 +61,7 @@ describe('Checkbox Component', () => {
   it('should work properly as a controlled component', async () => {
     const isSelected = true;
 
-    const { getAllByTestId } = render(
+    render(
       <CheckBox
         isSelected={isSelected}
         onChange={mockOnChange}
@@ -74,13 +70,13 @@ describe('Checkbox Component', () => {
       />
     );
 
-    const checkbox = getAllByTestId('test_test_checkbox');
-    const input = checkbox[0];
+    const checkbox = screen.getByRole('checkbox');
+    const label = checkbox.closest('label');
 
-    await userEvent.click(input);
+    await userEvent.click(checkbox);
 
     expect(mockOnChange).toHaveBeenCalledTimes(1);
 
-    expect(input.getAttribute('data-selected')).toEqual('true');
+    expect(label?.getAttribute('data-selected')).toEqual('true');
   });
 });

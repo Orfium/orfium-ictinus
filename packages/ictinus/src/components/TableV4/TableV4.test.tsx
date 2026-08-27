@@ -58,10 +58,9 @@ describe('TableV4', () => {
     );
 
     const row = getAllByText('Title')[0].closest('tr') as HTMLElement;
-    const rowUtils = within(row);
-    const checkbox = await rowUtils.findAllByTestId('row-check_checkbox');
+    const checkbox = within(row).getByRole('checkbox');
 
-    await userEvent.click(checkbox[0]);
+    await userEvent.click(checkbox);
 
     expect(onCheck).toHaveBeenCalledTimes(1);
     expect(onCheck).toHaveBeenCalledWith([data[0].id]);
@@ -81,10 +80,9 @@ describe('TableV4', () => {
     );
 
     const row = getByText(topLeftText).closest('tr') as HTMLElement;
-    const rowUtils = within(row);
-    const checkbox = await rowUtils.findAllByTestId('ictinus_checkbox');
+    const checkbox = within(row).getByRole('checkbox');
 
-    await userEvent.click(checkbox[0]);
+    await userEvent.click(checkbox);
 
     expect(onCheck).toHaveBeenCalledTimes(1);
     expect(onCheck).toHaveBeenCalledWith(data.map(({ id }) => id));
