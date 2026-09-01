@@ -11,7 +11,7 @@
   width: 100%;
 }
 
-.emotion-2 {
+.emotion-1 {
   --_border-width: var(--ictinus-border-width-1);
   --_outline-width: var(--ictinus-border-width-3);
   --_min-height: 2.75rem;
@@ -40,17 +40,17 @@
   transition: outline-offset 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.emotion-2:focus-visible {
+.emotion-1:focus-visible {
   outline-offset: 0;
   outline: var(--_outline-width) solid var(--ictinus-color-border-color-interactive-focused);
 }
 
-.emotion-2:has([data-slot='button']) {
+.emotion-1:has([data-slot='button']) {
   padding: calc(var(--ictinus-spacing-4) - var(--_border-width)) calc(var(--ictinus-spacing-5) - var(--_border-width));
 }
 
 @container (max-width: calc(600px - 1px)) {
-  .emotion-2 {
+  .emotion-1 {
     grid-template-areas: 'icon content close' 'icon actions close';
     -webkit-align-items: flex-start;
     -webkit-box-align: flex-start;
@@ -58,19 +58,19 @@
     align-items: flex-start;
   }
 
-  .emotion-2:has([data-slot='button']) {
+  .emotion-1:has([data-slot='button']) {
     padding: calc(var(--ictinus-spacing-5) - var(--_border-width)) calc(var(--ictinus-spacing-5) - var(--_border-width));
   }
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-2 {
+  .emotion-1 {
     -webkit-transition: none;
     transition: none;
   }
 }
 
-.emotion-3 {
+.emotion-2 {
   width: 1.25rem;
   height: 1.25rem;
   display: -webkit-box;
@@ -82,17 +82,17 @@
   pointer-events: none;
 }
 
-.emotion-4 {
+.emotion-3 {
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-4 path,
-.emotion-4 rect {
+.emotion-3 path,
+.emotion-3 rect {
   fill: var(--ictinus-color-indicators-brand)!important;
 }
 
-.emotion-5 {
+.emotion-4 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -104,10 +104,10 @@
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
   >
     <div
-      class="emotion-2"
+      class="emotion-1"
       data-slot="inline-alert"
       data-testid="broadcast"
       role="status"
@@ -115,12 +115,12 @@
     >
       <div
         aria-hidden="true"
-        class="emotion-3"
+        class="emotion-2"
         data-slot="icon"
         role="img"
       >
         <svg
-          class="emotion-4"
+          class="emotion-3"
           fill="none"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
@@ -134,7 +134,7 @@
         </svg>
       </div>
       <div
-        class="emotion-5"
+        class="emotion-4"
       >
         Broadcast copy should be short, easy to understand and actionable.
       </div>

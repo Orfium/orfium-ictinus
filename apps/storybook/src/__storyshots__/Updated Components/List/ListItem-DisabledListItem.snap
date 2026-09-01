@@ -2,14 +2,14 @@
   margin-bottom: 0.25rem;
 }
 
-.emotion-2 {
+.emotion-1 {
   border: var(--ictinus-border-width-1) solid var(--ictinus-color-border-color-decorative-default);
   border-radius: var(--ictinus-border-radius-2);
   width: 100%;
   box-shadow: var(--ictinus-box-shadow-2);
 }
 
-.emotion-3 {
+.emotion-2 {
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
@@ -22,13 +22,13 @@
   background: var(--ictinus-color-background-default);
 }
 
-.emotion-4 {
+.emotion-3 {
   background-color: var(--ictinus-color-palette-tertiary-base);
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.emotion-4>div {
+.emotion-3>div {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -36,7 +36,7 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-4 span[role='presentation'] {
+.emotion-3 span[role='presentation'] {
   padding: 0 var(--ictinus-spacing-5);
   min-height: 3.25rem;
   -webkit-align-items: center;
@@ -55,7 +55,7 @@
   font-weight: var(--ictinus-weight-bold);
 }
 
-.emotion-4[role='option'] {
+.emotion-3[role='option'] {
   padding: 0 var(--ictinus-spacing-5);
   min-height: 3.25rem;
   display: -webkit-box;
@@ -68,19 +68,19 @@
   gap: 0.75rem;
 }
 
-.emotion-4[role='option']:hover {
+.emotion-3[role='option']:hover {
   cursor: initial;
 }
 
-.emotion-4[data-focus-visible] {
+.emotion-3[data-focus-visible] {
   background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
-.emotion-4[aria-selected='true'] {
+.emotion-3[aria-selected='true'] {
   background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
-.emotion-4[aria-selected='true']>div {
+.emotion-3[aria-selected='true']>div {
   color: var(--ictinus-color-text-default-active);
   font-family: Roboto;
   font-weight: 500;
@@ -89,11 +89,11 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-4[aria-selected='true'][data-focus-visible] {
+.emotion-3[aria-selected='true'][data-focus-visible] {
   background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
-.emotion-5 {
+.emotion-4 {
   color: var(--ictinus-color-text-default-primary);
   font-weight: initial;
   white-space: nowrap;
@@ -116,18 +116,18 @@
   justify-content: center;
 }
 
-.emotion-5 strong {
+.emotion-4 strong {
   font-weight: bold;
 }
 
-.emotion-5 span {
+.emotion-4 span {
   display: block;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.emotion-8 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -145,21 +145,21 @@
   justify-content: center;
 }
 
-.emotion-9 {
+.emotion-8 {
   position: relative;
   isolation: isolate;
 }
 
-.emotion-9 [data-disabled] {
+.emotion-8 [data-disabled] {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-10 {
+.emotion-9 {
   cursor: pointer;
 }
 
-.emotion-10>div>div:first-of-type {
+.emotion-9>div>div:first-of-type {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -175,7 +175,7 @@
   position: relative;
 }
 
-.emotion-10 .bar {
+.emotion-9 .bar {
   width: var(--ictinus-sizing-9);
   height: var(--ictinus-sizing-2);
   background: var(--ictinus-color-palette-primary-alt-contrast);
@@ -183,14 +183,14 @@
   border-radius: var(--ictinus-border-radius-7);
 }
 
-.emotion-10 .indicator {
+.emotion-9 .indicator {
   width: var(--ictinus-sizing-9);
   height: var(--ictinus-sizing-5);
   box-sizing: border-box;
   position: relative;
 }
 
-.emotion-10 .indicator:before {
+.emotion-9 .indicator:before {
   content: '';
   box-sizing: border-box;
   display: block;
@@ -203,15 +203,15 @@
   transition: all 200ms;
 }
 
-.emotion-10[data-hovered] .indicator:before,
-.emotion-10[data-focus-visible='true'] .indicator:before {
+.emotion-9[data-hovered] .indicator:before,
+.emotion-9[data-focus-visible='true'] .indicator:before {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   box-shadow: 0px 0px 0px 8px rgba(200,206,255,0.20);
   border-radius: 100%;
 }
 
-.emotion-10[data-selected] .indicator:before {
+.emotion-9[data-selected] .indicator:before {
   -webkit-transform: translateX(80%);
   -moz-transform: translateX(80%);
   -ms-transform: translateX(80%);
@@ -220,7 +220,7 @@
   border-color: var(--ictinus-color-border-color-interactive-active);
 }
 
-.emotion-11 {
+.emotion-10 {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -235,13 +235,13 @@
   justify-content: unset;
 }
 
-.emotion-15 {
+.emotion-12 {
   background-color: var(--ictinus-color-palette-tertiary-base);
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.emotion-15>div {
+.emotion-12>div {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1rem;
@@ -249,7 +249,7 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-15 span[role='presentation'] {
+.emotion-12 span[role='presentation'] {
   padding: 0 var(--ictinus-spacing-5);
   min-height: 2.5rem;
   -webkit-align-items: center;
@@ -268,7 +268,7 @@
   font-weight: var(--ictinus-weight-bold);
 }
 
-.emotion-15[role='option'] {
+.emotion-12[role='option'] {
   padding: 0 var(--ictinus-spacing-5);
   min-height: 2.5rem;
   display: -webkit-box;
@@ -281,19 +281,19 @@
   gap: 0.75rem;
 }
 
-.emotion-15[role='option']:hover {
+.emotion-12[role='option']:hover {
   cursor: initial;
 }
 
-.emotion-15[data-focus-visible] {
+.emotion-12[data-focus-visible] {
   background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
-.emotion-15[aria-selected='true'] {
+.emotion-12[aria-selected='true'] {
   background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
-.emotion-15[aria-selected='true']>div {
+.emotion-12[aria-selected='true']>div {
   color: var(--ictinus-color-text-default-active);
   font-family: Roboto;
   font-weight: 500;
@@ -302,11 +302,11 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-15[aria-selected='true'][data-focus-visible] {
+.emotion-12[aria-selected='true'][data-focus-visible] {
   background-color: var(--ictinus-color-palette-tertiary-muted);
 }
 
-.emotion-17 {
+.emotion-14 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -345,30 +345,30 @@
   letter-spacing: var(--ictinus-letter-spacing-1);
 }
 
-.emotion-17 img {
+.emotion-14 img {
   border-radius: var(--ictinus-border-radius-7);
   width: 100%;
   height: 100%;
 }
 
-.emotion-21 {
+.emotion-18 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-21 [data-disabled] {
+.emotion-18 [data-disabled] {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-22 {
+.emotion-19 {
   display: block;
   cursor: pointer;
   position: relative;
 }
 
-.emotion-22 [data-role='checkbox-icon']>div {
+.emotion-19 [data-role='checkbox-icon']>div {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   width: var(--ictinus-sizing-5);
@@ -386,13 +386,13 @@
   border-radius: var(--ictinus-border-radius-2);
 }
 
-.emotion-22 svg {
+.emotion-19 svg {
   visibility: hidden;
   opacity: 0;
 }
 
-.emotion-22[data-hovered='true'] [data-role='checkbox-icon'],
-.emotion-22[data-focus-visible='true'] [data-role='checkbox-icon'] {
+.emotion-19[data-hovered='true'] [data-role='checkbox-icon'],
+.emotion-19[data-focus-visible='true'] [data-role='checkbox-icon'] {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   background: rgba(200,206,255,0.20);
@@ -400,33 +400,33 @@
   border-radius: 100%;
 }
 
-.emotion-22[data-selected='true'] [data-role='checkbox-icon']>div,
-.emotion-22[data-indeterminate='true'] [data-role='checkbox-icon']>div {
+.emotion-19[data-selected='true'] [data-role='checkbox-icon']>div,
+.emotion-19[data-indeterminate='true'] [data-role='checkbox-icon']>div {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   border-color: var(--ictinus-color-border-color-decorative-transparent);
   background: var(--ictinus-color-palette-primary-base);
 }
 
-.emotion-22[data-selected='true'] svg,
-.emotion-22[data-indeterminate='true'] svg {
+.emotion-19[data-selected='true'] svg,
+.emotion-19[data-indeterminate='true'] svg {
   visibility: visible;
   opacity: 1;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
-.emotion-22[data-disabled='true'] {
+.emotion-19[data-disabled='true'] {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-22[data-disabled='true']:hover {
+.emotion-19[data-disabled='true']:hover {
   background: none;
   box-shadow: none;
 }
 
-.emotion-23 {
+.emotion-20 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -445,7 +445,7 @@
   justify-content: unset;
 }
 
-.emotion-27 {
+.emotion-22 {
   width: var(--ictinus-sizing-5);
   height: var(--ictinus-sizing-5);
   display: -webkit-box;
@@ -454,17 +454,17 @@
   display: flex;
 }
 
-.emotion-28 {
+.emotion-23 {
   width: var(--ictinus-sizing-5);
   height: var(--ictinus-sizing-5);
 }
 
-.emotion-28 path,
-.emotion-28 rect {
+.emotion-23 path,
+.emotion-23 rect {
   fill: var(--ictinus-color-text-inverted-primary)!important;
 }
 
-.emotion-33 label {
+.emotion-28 label {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -485,7 +485,7 @@
   cursor: pointer;
 }
 
-.emotion-33 label:before {
+.emotion-28 label:before {
   content: '';
   display: inline-block;
   width: var(--ictinus-sizing-5);
@@ -498,22 +498,22 @@
   background: var(--ictinus-color-transparent-1);
 }
 
-.emotion-33 label:hover::before {
+.emotion-28 label:hover::before {
   background: rgba(200,206,255,0.20);
   box-shadow: 0px 0px 0px 8px rgba(200,206,255,0.20);
 }
 
-.emotion-33 label[data-selected='true']:before {
+.emotion-28 label[data-selected='true']:before {
   border-color: var(--ictinus-color-palette-primary-base);
   border-radius: 50%;
 }
 
-.emotion-33 label[data-selected='true']:hover::before {
+.emotion-28 label[data-selected='true']:hover::before {
   background: none;
   box-shadow: none;
 }
 
-.emotion-33 label[data-selected='true']:after {
+.emotion-28 label[data-selected='true']:after {
   content: '';
   display: block;
   position: absolute;
@@ -526,22 +526,22 @@
   animation: circle 0.15s ease-in-out;
 }
 
-.emotion-33 [data-disabled='true'] {
+.emotion-28 [data-disabled='true'] {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-33 [data-disabled='true']:hover::before {
+.emotion-28 [data-disabled='true']:hover::before {
   background: none;
   box-shadow: none;
 }
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
   >
     <div
-      class="emotion-2"
+      class="emotion-1"
     >
       <div
         data-testid="ictinus_list"
@@ -552,7 +552,7 @@
           <ul
             aria-labelledby="react-aria-:test-id:"
             aria-orientation="vertical"
-            class="emotion-3"
+            class="emotion-2"
             data-collection="react-aria-:test-id:"
             id="react-aria-:test-id:"
             role="listbox"
@@ -562,7 +562,7 @@
             <li
               aria-disabled="true"
               aria-selected="false"
-              class="emotion-4 "
+              class="emotion-3 "
               data-collection="react-aria-:test-id:"
               data-key="1"
               data-testid="ictinus_list_item_1"
@@ -570,7 +570,7 @@
               role="option"
             >
               <div
-                class="emotion-5"
+                class="emotion-4"
               >
                 <span>
                   This text option is disabled
@@ -580,7 +580,7 @@
             <li
               aria-disabled="true"
               aria-selected="false"
-              class="emotion-4 "
+              class="emotion-3 "
               data-collection="react-aria-:test-id:"
               data-key="3"
               data-testid="ictinus_list_item_3"
@@ -588,20 +588,20 @@
               role="option"
             >
               <div
-                class="emotion-5"
+                class="emotion-4"
               >
                 <span>
                   This Switch Option is disabled
                 </span>
               </div>
               <div
-                class="emotion-8"
+                class="emotion-7"
               >
                 <div
-                  class="emotion-9"
+                  class="emotion-8"
                 >
                   <label
-                    class="emotion-10"
+                    class="emotion-9"
                     data-disabled="true"
                     data-rac=""
                     data-react-aria-pressable="true"
@@ -618,10 +618,10 @@
                       />
                     </span>
                     <div
-                      class="emotion-11 emotion-1"
+                      class="emotion-10"
                     >
                       <div
-                        class="emotion-13 emotion-1"
+                        class="emotion-11"
                       >
                         <div
                           class="bar"
@@ -638,7 +638,7 @@
             <li
               aria-disabled="true"
               aria-selected="false"
-              class="emotion-15 "
+              class="emotion-12 "
               data-collection="react-aria-:test-id:"
               data-key="4"
               data-testid="ictinus_list_item_4"
@@ -646,10 +646,10 @@
               role="option"
             >
               <div
-                class="emotion-8"
+                class="emotion-7"
               >
                 <div
-                  class="emotion-17"
+                  class="emotion-14"
                   data-testid="_avatar"
                 >
                   <svg
@@ -668,7 +668,7 @@
                 </div>
               </div>
               <div
-                class="emotion-5"
+                class="emotion-4"
               >
                 <span>
                   This Avatar Option is disabled
@@ -678,7 +678,7 @@
             <li
               aria-disabled="true"
               aria-selected="false"
-              class="emotion-4 "
+              class="emotion-3 "
               data-collection="react-aria-:test-id:"
               data-key="5"
               data-testid="ictinus_list_item_5"
@@ -686,13 +686,13 @@
               role="option"
             >
               <div
-                class="emotion-8"
+                class="emotion-7"
               >
                 <div
-                  class="emotion-21"
+                  class="emotion-18"
                 >
                   <label
-                    class="emotion-22"
+                    class="emotion-19"
                     data-disabled="true"
                     data-rac=""
                     data-react-aria-pressable="true"
@@ -708,19 +708,19 @@
                       />
                     </span>
                     <div
-                      class="emotion-23 emotion-1"
+                      class="emotion-20"
                     >
                       <div
-                        class="emotion-13 emotion-1"
+                        class="emotion-11"
                         data-role="checkbox-icon"
                       >
                         <div
-                          class="emotion-27"
+                          class="emotion-22"
                           data-slot="icon"
                           data-testid="ictinus_unselected"
                         >
                           <svg
-                            class="emotion-28"
+                            class="emotion-23"
                             fill="none"
                             viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg"
@@ -737,7 +737,7 @@
                 </div>
               </div>
               <div
-                class="emotion-5"
+                class="emotion-4"
               >
                 <span>
                   This Checkbox Option is disabled
@@ -747,7 +747,7 @@
             <li
               aria-disabled="true"
               aria-selected="false"
-              class="emotion-4 "
+              class="emotion-3 "
               data-collection="react-aria-:test-id:"
               data-key="6"
               data-testid="ictinus_list_item_6"
@@ -755,18 +755,18 @@
               role="option"
             >
               <div
-                class="emotion-8"
+                class="emotion-7"
               >
                 <div
                   aria-disabled="true"
                   aria-orientation="vertical"
-                  class="emotion-32"
+                  class="emotion-27"
                   data-testid="undefined_radio_group_container"
                   id="react-aria-:test-id:"
                   role="radiogroup"
                 >
                   <div
-                    class="emotion-33"
+                    class="emotion-28"
                     data-testid="undefined_radio_6_container"
                   >
                     <label
@@ -790,7 +790,7 @@
                 </div>
               </div>
               <div
-                class="emotion-5"
+                class="emotion-4"
               >
                 <span>
                   This Radio Option is disabled

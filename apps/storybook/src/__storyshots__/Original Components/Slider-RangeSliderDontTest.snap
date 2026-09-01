@@ -26,18 +26,18 @@
   gap: 1.375rem;
 }
 
-.emotion-3 {
+.emotion-2 {
   opacity: inherit;
 }
 
-.emotion-4 {
+.emotion-3 {
   height: 0.1875rem;
   border-radius: 4px;
   background: linear-gradient(to right, var(--ictinus-color-palette-primary-alt-base) 0%, var(--ictinus-color-palette-primary-alt-base) 0%, var(--ictinus-color-palette-primary-base) 0%, var(--ictinus-color-palette-primary-base) 100%, var(--ictinus-color-palette-primary-alt-base) 100%, var(--ictinus-color-palette-primary-alt-base) 100%);
   cursor: unset!important;
 }
 
-.emotion-6 {
+.emotion-4 {
   height: 1rem;
   width: 1rem;
   border-radius: 100px;
@@ -59,7 +59,7 @@
   cursor: unset!important;
 }
 
-.emotion-6::after {
+.emotion-4::after {
   content: '';
   height: 1rem;
   width: 1rem;
@@ -76,11 +76,11 @@
   transition: all 0.15s ease-in-out;
 }
 
-.emotion-6:hover::after {
+.emotion-4:hover::after {
   border-color: rgba(14,14,23,0.1);
 }
 
-.emotion-8 {
+.emotion-5 {
   height: 1rem;
   width: 1rem;
   border-radius: 100px;
@@ -102,7 +102,7 @@
   cursor: unset!important;
 }
 
-.emotion-8::after {
+.emotion-5::after {
   content: '';
   height: 1rem;
   width: 1rem;
@@ -119,11 +119,11 @@
   transition: all 0.15s ease-in-out;
 }
 
-.emotion-8:hover::after {
+.emotion-5:hover::after {
   border-color: rgba(14,14,23,0.1);
 }
 
-.emotion-10 {
+.emotion-6 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -143,11 +143,11 @@
   justify-content: space-between;
 }
 
-.emotion-12 {
+.emotion-7 {
   width: 5rem;
 }
 
-.emotion-14 {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -176,16 +176,16 @@
   width: 100%;
 }
 
-.emotion-14:hover {
+.emotion-8:hover {
   background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
-.emotion-14:focus-within {
+.emotion-8:focus-within {
   box-shadow: 0 0 0 var(--ictinus-border-width-2) var(--ictinus-color-border-color-interactive-active);
   background-color: var(--ictinus-color-palette-secondary-base);
 }
 
-.emotion-15 {
+.emotion-9 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -205,15 +205,15 @@
   padding: var(--ictinus-spacing-0) var(--ictinus-spacing-0) var(--ictinus-spacing-0) var(--ictinus-spacing-5);
 }
 
-.emotion-15>div {
+.emotion-9>div {
   position: relative;
 }
 
-.emotion-16 {
+.emotion-10 {
   width: 100%;
 }
 
-.emotion-18 {
+.emotion-12 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1rem;
@@ -231,61 +231,61 @@
   min-width: 100%;
 }
 
-.emotion-18::-webkit-input-placeholder {
+.emotion-12::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-18::-moz-placeholder {
+.emotion-12::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-18:-ms-input-placeholder {
+.emotion-12:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-18::placeholder {
+.emotion-12::placeholder {
   color: transparent;
 }
 
-.emotion-18:focus {
+.emotion-12:focus {
   outline: none;
 }
 
-.emotion-18:focus::-webkit-input-placeholder {
+.emotion-12:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-18:focus::-moz-placeholder {
+.emotion-12:focus::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-18:focus:-ms-input-placeholder {
+.emotion-12:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-18:focus::placeholder {
+.emotion-12:focus::placeholder {
   color: transparent;
 }
 
-.emotion-18:not(:focus):placeholder-shown+label {
+.emotion-12:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-18:focus-within+label,
-.emotion-18:not(:placeholder-shown)+label {
+.emotion-12:focus-within+label,
+.emotion-12:not(:placeholder-shown)+label {
   display: none;
 }
 
-.emotion-18:focus-within+label {
+.emotion-12:focus-within+label {
   font-weight: var(--ictinus-weight-bold)!important;
   color: var(--ictinus-color-text-default-active);
 }
 
-.emotion-18:disabled {
+.emotion-12:disabled {
   cursor: not-allowed;
 }
 
-.emotion-19 {
+.emotion-13 {
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
@@ -321,7 +321,7 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-27 {
+.emotion-20 {
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
@@ -357,7 +357,7 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-47 {
+.emotion-34 {
   min-width: 1.75rem;
   overflow: visible;
   display: -webkit-box;
@@ -394,14 +394,14 @@
       >
         <div
           aria-disabled="false"
-          class="emotion-1 emotion-2"
+          class="emotion-1"
           data-testid="slider_component"
         >
           <div
-            class="emotion-3"
+            class="emotion-2"
           >
             <div
-              class="emotion-4 emotion-5"
+              class="emotion-3"
               data-testid="track_component"
               style="transform: scale(1); cursor: inherit;"
             >
@@ -410,7 +410,7 @@
                 aria-valuemax="100"
                 aria-valuemin="0"
                 aria-valuenow="0"
-                class="emotion-6 emotion-7"
+                class="emotion-4"
                 data-testid="thumb_0"
                 draggable="false"
                 role="slider"
@@ -422,7 +422,7 @@
                 aria-valuemax="100"
                 aria-valuemin="0"
                 aria-valuenow="100"
-                class="emotion-8 emotion-7"
+                class="emotion-5"
                 data-testid="thumb_1"
                 draggable="false"
                 role="slider"
@@ -432,27 +432,27 @@
             </div>
           </div>
           <div
-            class="emotion-10 emotion-11"
+            class="emotion-6"
           >
             <div
-              class="emotion-12 emotion-13"
+              class="emotion-7"
             >
               <div>
                 <div
-                  class="emotion-14"
+                  class="emotion-8"
                 >
                   <div
-                    class="emotion-15"
+                    class="emotion-9"
                   >
                     <div
-                      class="emotion-16"
+                      class="emotion-10"
                     >
                       <div
                         class="react-aria-NumberField"
                         data-rac=""
                       >
                         <div
-                          class="emotion-17"
+                          class="emotion-11"
                           data-rac=""
                           role="group"
                         >
@@ -461,7 +461,7 @@
                             aria-roledescription="Number field"
                             autocomplete="off"
                             autocorrect="off"
-                            class="emotion-18"
+                            class="emotion-12"
                             data-rac=""
                             data-testid="input"
                             id="numberfield__00"
@@ -474,7 +474,7 @@
                             value="0"
                           />
                           <label
-                            class="emotion-19"
+                            class="emotion-13"
                             for="numberfield__00"
                           >
                             Start
@@ -488,24 +488,24 @@
               </div>
             </div>
             <div
-              class="emotion-12 emotion-13"
+              class="emotion-7"
             >
               <div>
                 <div
-                  class="emotion-14"
+                  class="emotion-8"
                 >
                   <div
-                    class="emotion-15"
+                    class="emotion-9"
                   >
                     <div
-                      class="emotion-16"
+                      class="emotion-10"
                     >
                       <div
                         class="react-aria-NumberField"
                         data-rac=""
                       >
                         <div
-                          class="emotion-17"
+                          class="emotion-11"
                           data-rac=""
                           role="group"
                         >
@@ -514,7 +514,7 @@
                             aria-roledescription="Number field"
                             autocomplete="off"
                             autocorrect="off"
-                            class="emotion-18"
+                            class="emotion-12"
                             data-rac=""
                             data-testid="input"
                             id="numberfield__00"
@@ -527,7 +527,7 @@
                             value="100"
                           />
                           <label
-                            class="emotion-27"
+                            class="emotion-20"
                             for="numberfield__00"
                           >
                             End
@@ -564,14 +564,14 @@
       >
         <div
           aria-disabled="false"
-          class="emotion-1 emotion-2"
+          class="emotion-1"
           data-testid="slider_component"
         >
           <div
-            class="emotion-3"
+            class="emotion-2"
           >
             <div
-              class="emotion-4 emotion-5"
+              class="emotion-3"
               data-testid="track_component"
               style="transform: scale(1); cursor: inherit;"
             >
@@ -580,7 +580,7 @@
                 aria-valuemax="100"
                 aria-valuemin="0"
                 aria-valuenow="0"
-                class="emotion-6 emotion-7"
+                class="emotion-4"
                 data-testid="thumb_0"
                 draggable="false"
                 role="slider"
@@ -592,7 +592,7 @@
                 aria-valuemax="100"
                 aria-valuemin="0"
                 aria-valuenow="100"
-                class="emotion-8 emotion-7"
+                class="emotion-5"
                 data-testid="thumb_1"
                 draggable="false"
                 role="slider"
@@ -602,27 +602,27 @@
             </div>
           </div>
           <div
-            class="emotion-10 emotion-11"
+            class="emotion-6"
           >
             <div
-              class="emotion-12 emotion-13"
+              class="emotion-7"
             >
               <div>
                 <div
-                  class="emotion-14"
+                  class="emotion-8"
                 >
                   <div
-                    class="emotion-15"
+                    class="emotion-9"
                   >
                     <div
-                      class="emotion-16"
+                      class="emotion-10"
                     >
                       <div
                         class="react-aria-NumberField"
                         data-rac=""
                       >
                         <div
-                          class="emotion-17"
+                          class="emotion-11"
                           data-rac=""
                           role="group"
                         >
@@ -631,7 +631,7 @@
                             aria-roledescription="Number field"
                             autocomplete="off"
                             autocorrect="off"
-                            class="emotion-18"
+                            class="emotion-12"
                             data-rac=""
                             data-testid="input"
                             id="numberfield__00"
@@ -644,7 +644,7 @@
                             value="0.0"
                           />
                           <label
-                            class="emotion-19"
+                            class="emotion-13"
                             for="numberfield__00"
                           >
                             Start
@@ -655,7 +655,7 @@
                     </div>
                     <div
                       aria-hidden="false"
-                      class="emotion-47"
+                      class="emotion-34"
                     >
                       <div>
                         %
@@ -666,24 +666,24 @@
               </div>
             </div>
             <div
-              class="emotion-12 emotion-13"
+              class="emotion-7"
             >
               <div>
                 <div
-                  class="emotion-14"
+                  class="emotion-8"
                 >
                   <div
-                    class="emotion-15"
+                    class="emotion-9"
                   >
                     <div
-                      class="emotion-16"
+                      class="emotion-10"
                     >
                       <div
                         class="react-aria-NumberField"
                         data-rac=""
                       >
                         <div
-                          class="emotion-17"
+                          class="emotion-11"
                           data-rac=""
                           role="group"
                         >
@@ -692,7 +692,7 @@
                             aria-roledescription="Number field"
                             autocomplete="off"
                             autocorrect="off"
-                            class="emotion-18"
+                            class="emotion-12"
                             data-rac=""
                             data-testid="input"
                             id="numberfield__00"
@@ -705,7 +705,7 @@
                             value="100.0"
                           />
                           <label
-                            class="emotion-27"
+                            class="emotion-20"
                             for="numberfield__00"
                           >
                             End
@@ -716,7 +716,7 @@
                     </div>
                     <div
                       aria-hidden="false"
-                      class="emotion-47"
+                      class="emotion-34"
                     >
                       <div>
                         %
