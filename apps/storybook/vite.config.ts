@@ -11,6 +11,8 @@ export default defineConfig({
   plugins: [react({ jsxImportSource: '@emotion/react' }), svgr(), vanillaExtractPlugin()],
   resolve: {
     tsconfigPaths: true,
+    // these dependencies come from both storybook and ictinus
+    dedupe: ['@emotion/react', '@emotion/styled', 'react', 'react-dom'],
     alias: {
       '@orfium/ictinus': resolve(import.meta.dirname, '../../packages/ictinus/src'),
     },
