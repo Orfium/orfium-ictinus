@@ -67,6 +67,9 @@ export default defineConfig(({ mode }) => {
           {
             preserveModules: true,
             preserveModulesRoot: 'src',
+            // Vite 8 / Rolldown: ? from *.svg?react leaks into filenames under preserveModules
+            // https://github.com/rolldown/rolldown/issues/8761
+            entryFileNames: (chunk) => `${chunk.name.replaceAll('?', '_')}.js`,
           },
         ],
       },
