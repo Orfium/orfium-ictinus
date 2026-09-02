@@ -29,6 +29,9 @@ const tokenCategories = [
   'boxShadow',
 ] as const;
 
+/** Vanilla components that do not inherit Box/sprinkles layout props. */
+const NO_BOX_EXTENDS = new Set(['Box', 'ThemeProvider']);
+
 function synthesizeExample(component: ComponentInfo) {
   const propEntries = Object.entries(component.props)
     .filter(([, def]) => def.defaultValue != null)
@@ -47,27 +50,34 @@ function synthesizeExample(component: ComponentInfo) {
   };
 }
 
+function boxExtends(component: ComponentInfo): 'Box' | undefined {
+  if (component.api !== 'vanilla') return undefined;
+  if (NO_BOX_EXTENDS.has(component.name)) return undefined;
+  return 'Box';
+}
+
 export const server = new McpServer({
-  name: 'ictinus',
+  name: 'Ictinus',
   version: packageInfo.version,
 });
 
 server.registerTool(
   'get_component',
   {
-    description: `Get information about an Ictinus component. Returns description, import statement, api (vanilla|legacy), prop definitions (type/default), and a starter example.
+    description: `Get information about an Ictinus component. Returns description, import, api (vanilla|legacy), sub-example titles, and a starter example by default — no full prop definitions.
 
-Use optional "props" to search prop definitions by name/description.
-Use optional "api" to force vanilla or legacy when both exist.
+Use optional "props" to search component-specific prop definitions by name/description (e.g. "size variant", "isDisabled"). Pass props as an empty string or "*" to return all known component-specific props.
 
-Prefer vanilla (@orfium/ictinus/vanilla) for new code.`,
+Vanilla components extend Box: layout/spacing/color sprinkle props (p, m, gap, display, …) are inherited. Use get_component({ name: "Box", props: "…" }) or get_tokens for styling.
+
+Use optional "api" to force vanilla or legacy when both exist. Prefer vanilla (@orfium/ictinus/vanilla) for new code.`,
     inputSchema: {
       name: z.string().describe('Component name (e.g. "Button", "InlineAlert", "Tooltip")'),
       props: z
         .string()
         .optional()
         .describe(
-          'Search query for props (e.g. "size variant", "isDisabled"). Omit to return all prop definitions.',
+          'Search query for props (e.g. "size variant", "isDisabled"). Omit for overview only. Use "" or "*" for all component-specific props.',
         ),
       api: z
         .enum(['vanilla', 'legacy'])
@@ -95,11 +105,6 @@ Prefer vanilla (@orfium/ictinus/vanilla) for new code.`,
       .filter((c) => c.id !== component.id)
       .map((c) => ({ id: c.id, api: c.api, import: c.import }));
 
-    const props =
-      propsQuery?.trim()
-        ? searchProps({ props: component.props, query: propsQuery })
-        : component.props;
-
     const starter = component.examples?.[0];
     const example = starter
       ? {
@@ -107,6 +112,17 @@ Prefer vanilla (@orfium/ictinus/vanilla) for new code.`,
           code: starter.code?.[0]?.content?.slice(0, 1500),
         }
       : synthesizeExample(component);
+
+    const extendsBox = boxExtends(component);
+    const propNames = Object.keys(component.props).sort((a, b) => a.localeCompare(b));
+    const includeProps = propsQuery !== undefined;
+    const props =
+      includeProps
+        ? searchProps({
+            props: component.props,
+            query: propsQuery === '*' ? '' : propsQuery,
+          })
+        : undefined;
 
     return {
       content: [
@@ -120,15 +136,23 @@ Prefer vanilla (@orfium/ictinus/vanilla) for new code.`,
             import: component.import,
             deprecated: component.deprecated,
             category: component.category,
+            ...(extendsBox
+              ? {
+                  extends: extendsBox,
+                  styling:
+                    'Inherits Box/sprinkles props (p, m, gap, display, color, …). Query props on this component for component-specific API; use get_component({ name: "Box", props: "…" }) or get_tokens for layout/spacing.',
+                }
+              : {}),
             examples: component.examples?.map((e) => e.title),
             example,
-            props,
+            propNames,
+            ...(includeProps ? { props } : {}),
             alternatives: alternatives.length ? alternatives : undefined,
           }),
         },
       ],
     };
-  },
+  }
 );
 
 server.registerTool(
@@ -146,7 +170,7 @@ server.registerTool(
         .string()
         .optional()
         .describe(
-          'Filter: form, layout, navigation, feedback, overlay, data-display, actions, display, theming',
+          'Filter: form, layout, navigation, feedback, overlay, data-display, actions, display, theming'
         ),
       api: z.enum(['vanilla', 'legacy']).optional().describe('Filter by API surface'),
       limit: z.number().optional().default(8).describe('Max results (default 8)'),
@@ -171,7 +195,7 @@ server.registerTool(
     return {
       content: [{ type: 'text' as const, text: JSON.stringify(results) }],
     };
-  },
+  }
 );
 
 server.registerTool(
@@ -202,11 +226,11 @@ server.registerTool(
             api,
             limit,
             data: getAllComponents(),
-          }),
+          })
         ),
       },
     ],
-  }),
+  })
 );
 
 server.registerTool(
@@ -230,7 +254,7 @@ server.registerTool(
     return {
       content: [{ type: 'text' as const, text: JSON.stringify(result) }],
     };
-  },
+  }
 );
 
 server.registerTool(
@@ -257,11 +281,11 @@ Legacy: import Icon from '@orfium/ictinus'; <Icon name="edit" />.`,
             api: icon.api,
             category: icon.category,
             import: icon.import,
-          })),
+          }))
         ),
       },
     ],
-  }),
+  })
 );
 
 server.registerTool(
@@ -270,10 +294,7 @@ server.registerTool(
     description:
       'Setup and foundation guides (installation, theme, tokens, migration, vanilla-vs-legacy). Omit names to list available guides.',
     inputSchema: {
-      names: z
-        .string()
-        .optional()
-        .describe('Space-separated guide names. Omit to list all.'),
+      names: z.string().optional().describe('Space-separated guide names. Omit to list all.'),
     },
   },
   ({ names }) => {
@@ -308,5 +329,5 @@ server.registerTool(
         },
       ],
     };
-  },
+  }
 );

@@ -1,7 +1,7 @@
 {
   "name": "@orfium/ictinus-mcp",
   "version": "0.1.0",
-  "description": "MCP server for the Ictinus design system — component APIs, tokens, icons, and docs for AI agents",
+  "description": "MCP server for the Ictinus design system - component APIs, tokens, icons, and docs for AI agents",
   "homepage": "https://github.com/Orfium/orfium-ictinus/tree/master/packages/mcp-server#readme",
   "repository": {
     "type": "git",
@@ -28,16 +28,6 @@
     "dist",
     "README.md"
   ],
-  "keywords": [
-    "mcp",
-    "model-context-protocol",
-    "ictinus",
-    "orfium",
-    "design-system",
-    "ai",
-    "cursor",
-    "claude"
-  ],
   "scripts": {
     "generate": "node ./scripts/generate.mjs",
     "build": "pnpm generate && tsc -p tsconfig.json && cp src/data.json dist/data.json",
@@ -56,8 +46,5 @@
   "devDependencies": {
     "@types/node": "^24.0.0",
     "typescript": "^5.9.2"
-  },
-  "engines": {
-    "node": ">=20"
   }
 }

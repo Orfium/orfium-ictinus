@@ -36,6 +36,23 @@ export interface ExampleSearchOptions {
   query?: string;
 }
 
+function terms(query: string): string[] {
+  return query.toLowerCase().trim().split(/\s+/).filter(Boolean);
+}
+
+function matchesAll(haystack: string, queryTerms: string[]): boolean {
+  const lower = haystack.toLowerCase();
+  return queryTerms.every((term) => lower.includes(term));
+}
+
+function vanillaFirst<T extends { api: 'vanilla' | 'legacy'; name: string }>(
+  a: T,
+  b: T,
+): number {
+  if (a.api !== b.api) return a.api === 'vanilla' ? -1 : 1;
+  return a.name.localeCompare(b.name);
+}
+
 export function searchComponents({
   api,
   category,
@@ -56,56 +73,33 @@ export function searchComponents({
     );
   }
 
-  if (!query.trim()) {
-    // Prefer vanilla when listing
-    return [...filtered]
-      .sort((a, b) => {
-        if (a.api !== b.api) return a.api === 'vanilla' ? -1 : 1;
-        return a.name.localeCompare(b.name);
-      })
-      .slice(0, limit);
+  const queryTerms = terms(query);
+  if (queryTerms.length) {
+    filtered = filtered.filter((c) => {
+      const haystack = [c.name, c.description, c.api, ...(c.category ?? [])].join(' ');
+      return matchesAll(haystack, queryTerms);
+    });
   }
 
-  return filtered
-    .map((component) => ({
-      component,
-      score: calculateRelevanceScore({
-        deprecated: Boolean(component.deprecated),
-        description: component.description,
-        keywords: [component.api, ...(component.category ?? [])],
-        name: component.name,
-        query,
-      }),
-    }))
-    .filter((r) => r.score > 0)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, limit)
-    .map((r) => r.component);
+  return [...filtered].sort(vanillaFirst).slice(0, limit);
 }
 
+/** Filter prop definitions by name/description. Blank query returns all props. */
 export function searchProps({
-  limit = 8,
+  limit = 40,
   props,
   query,
 }: PropSearchOptions): Record<string, PropDefinition> {
-  // Blank query = no filter (same as omitting `props` on get_component).
   if (!query.trim()) return props;
 
-  const results = Object.entries(props)
-    .map(([name, definition]) => ({
-      definition,
-      name,
-      score: calculateRelevanceScore({
-        description: definition.description,
-        name,
-        query,
-      }),
-    }))
-    .filter((r) => r.score > 0)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, limit);
+  const queryTerms = terms(query);
+  const matched = Object.entries(props).filter(([name, definition]) => {
+    const haystack = [name, definition.description ?? '', definition.type].join(' ').toLowerCase();
+    // Any term may match (e.g. "size variant" → both props)
+    return queryTerms.some((term) => haystack.includes(term));
+  });
 
-  return Object.fromEntries(results.map(({ name, definition }) => [name, definition]));
+  return Object.fromEntries(matched.slice(0, limit));
 }
 
 export function searchIcons({
@@ -119,29 +113,15 @@ export function searchIcons({
     filtered = filtered.filter((icon) => icon.api === api);
   }
 
-  if (!query.trim()) {
-    return [...filtered]
-      .sort((a, b) => {
-        if (a.api !== b.api) return a.api === 'vanilla' ? -1 : 1;
-        return a.name.localeCompare(b.name);
-      })
-      .slice(0, limit);
+  const queryTerms = terms(query);
+  if (queryTerms.length) {
+    filtered = filtered.filter((icon) => {
+      const haystack = [icon.name, icon.category, ...icon.keywords].join(' ');
+      return matchesAll(haystack, queryTerms);
+    });
   }
 
-  return filtered
-    .map((icon) => ({
-      icon,
-      score:
-        calculateRelevanceScore({
-          keywords: icon.keywords,
-          name: icon.name,
-          query,
-        }) + (icon.api === 'vanilla' ? 15 : 0),
-    }))
-    .filter((r) => r.score > 0)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, limit)
-    .map((r) => r.icon);
+  return [...filtered].sort(vanillaFirst).slice(0, limit);
 }
 
 export function searchExamples({
@@ -157,10 +137,7 @@ export function searchExamples({
   }
 > {
   const requested = components.trim().split(/\s+/).filter(Boolean);
-  const queryTerms = query
-    ?.toLowerCase()
-    .split(/\s+/)
-    .filter((t) => t.length > 0);
+  const queryTerms = terms(query ?? '');
 
   const deprecations = new Map(
     data
@@ -173,32 +150,22 @@ export function searchExamples({
     filtered = filtered.filter((c) => c.api === api);
   }
 
-  return filtered
-    .flatMap((component) =>
-      (component.examples ?? []).flatMap((example) => {
-        const matches = requested.filter((c) => example.components.includes(c)).length;
-        const titleOk =
-          !queryTerms?.length ||
-          queryTerms.some((term) => example.title.toLowerCase().includes(term));
-        return matches > 0 && titleOk
-          ? [{ api: component.api, component: component.name, deprecated: Boolean(component.deprecated), example, matches }]
-          : [];
-      }),
-    )
-    .map((entry) => ({
-      ...entry,
-      score:
-        (queryTerms?.length
-          ? queryTerms.filter((t) => entry.example.title.toLowerCase().includes(t)).length *
-            50
-          : 0) +
-        entry.matches * 20 +
-        (requested.includes(entry.component) ? 15 : 0) +
-        (entry.api === 'vanilla' ? 40 : 0) -
-        (entry.deprecated ? 30 : 0) -
-        entry.example.components.length,
-    }))
-    .sort((a, b) => b.score - a.score)
+  const matches = filtered.flatMap((component) =>
+    (component.examples ?? []).flatMap((example) => {
+      const hit = requested.some((name) => example.components.includes(name));
+      const titleOk =
+        !queryTerms.length || matchesAll(example.title, queryTerms);
+      return hit && titleOk
+        ? [{ api: component.api, component: component.name, example }]
+        : [];
+    }),
+  );
+
+  return [...matches]
+    .sort((a, b) => {
+      if (a.api !== b.api) return a.api === 'vanilla' ? -1 : 1;
+      return a.example.title.localeCompare(b.example.title);
+    })
     .slice(0, limit)
     .map(({ api: exampleApi, component, example }) => {
       const deprecated = example.components
@@ -214,61 +181,4 @@ export function searchExamples({
         ...(deprecated.length ? { deprecated } : {}),
       };
     });
-}
-
-function calculateRelevanceScore({
-  deprecated,
-  description,
-  keywords,
-  name,
-  query,
-}: {
-  deprecated?: boolean;
-  description?: string;
-  keywords?: string[];
-  name: string;
-  query: string;
-}): number {
-  const normalizedQuery = query.toLowerCase().trim();
-  const normalizedName = name.toLowerCase();
-  const normalizedDescription = description?.toLowerCase();
-  const terms = normalizedQuery.split(/\s+/).filter(Boolean);
-
-  if (normalizedName === normalizedQuery) return deprecated ? 80 : 100;
-
-  let totalScore = 0;
-  let matchedTerms = 0;
-
-  for (const term of terms) {
-    let termScore = 0;
-    if (normalizedName === term) termScore = 100;
-    else if (normalizedName.startsWith(term)) termScore = 75;
-    else if (normalizedName.includes(term)) termScore = 50;
-    else if (keywords?.some((kw) => kw.toLowerCase() === term)) termScore = 40;
-    else if (keywords?.some((kw) => kw.toLowerCase().includes(term))) termScore = 30;
-    else if (normalizedDescription?.includes(term)) termScore = 25;
-    else if (fuzzyIncludes(normalizedName, term)) termScore = 10;
-
-    if (termScore > 0) {
-      matchedTerms++;
-      totalScore += termScore;
-    }
-  }
-
-  if (matchedTerms === 0) return 0;
-
-  let score = (totalScore / matchedTerms) * (matchedTerms / terms.length);
-  if (deprecated) score -= 20;
-  return score;
-}
-
-function fuzzyIncludes(haystack: string, needle: string): boolean {
-  let hi = 0;
-  for (let ni = 0; ni < needle.length; ni++) {
-    const ch = needle[ni];
-    const found = haystack.indexOf(ch, hi);
-    if (found === -1) return false;
-    hi = found + 1;
-  }
-  return true;
 }

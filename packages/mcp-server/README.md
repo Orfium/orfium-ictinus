@@ -42,20 +42,21 @@ Refresh metadata when APIs/docs change: `pnpm --filter @orfium/ictinus-mcp gener
 
 ## Tools
 
-| Tool                | Purpose                                                          |
-| ------------------- | ---------------------------------------------------------------- |
-| `search_components` | Find components by name, category, or API (`vanilla` / `legacy`) |
-| `get_component`     | Description, import, prop definitions, starter example           |
-| `get_patterns`      | Storybook composition examples (vanilla ranked first)            |
-| `get_tokens`        | Design token maps from `@orfium/tokens`                          |
-| `search_icons`      | Vanilla `*Icon` components and legacy `<Icon name>`              |
-| `get_guides`        | Installation, theme, migration, vanilla-vs-legacy                |
+| Tool                | Purpose                                                                 |
+| ------------------- | ----------------------------------------------------------------------- |
+| `search_components` | Find components by name, category, or API (`vanilla` / `legacy`)        |
+| `get_component`     | Overview (import, examples); optional `props` search for definitions    |
+| `get_patterns`      | Storybook composition examples (vanilla ranked first)                   |
+| `get_tokens`        | Design token maps from `@orfium/tokens`                                 |
+| `search_icons`      | Vanilla `*Icon` components and legacy `<Icon name>`                     |
+| `get_guides`        | Installation, theme, migration, vanilla-vs-legacy                       |
 
 ## Agent tips
 
 1. Prefer **`@orfium/ictinus/vanilla`** when both APIs exist.
 2. Call `get_guides({ names: "vanilla-vs-legacy getting-started-installation" })` before scaffolding.
-3. Use `get_component` for props/defaults, then `get_patterns` before composing multiple components.
+3. Call `get_component` for overview, then `get_component({ props: "…" })` when you need prop types; then `get_patterns` before composing.
+4. Vanilla components extend **Box** — use sprinkle layout props / `get_tokens` for spacing and color.
 
 ## Development
 

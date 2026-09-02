@@ -2,10 +2,6 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-/**
- * Paths are resolved from this module's location (like CDS MCP),
- * not from process.cwd() — so Cursor's multi-root cwd cannot break data loading.
- */
 export const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export const packageRoot = path.join(__dirname, '..');

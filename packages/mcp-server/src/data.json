@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T10:53:26.490Z",
+  "generatedAt": "2026-09-02T14:57:06.918Z",
   "components": {
     "legacy:Avatar": {
       "id": "legacy:Avatar",
@@ -5295,7 +5295,7 @@
       "id": "vanilla:Button",
       "name": "Button",
       "api": "vanilla",
-      "description": "Primary action control for forms, dialogs, and toolbars.\n\nPrefer this over the legacy Emotion `Button` from `@orfium/ictinus`.\nVariant props come from `ButtonVariants` in `Button.css.ts` (recipe).\n\nExample:\nimport { Button } from '@orfium/ictinus/vanilla';\n<Button variant=\"primary\" size=\"compact\">Save</Button>\n\nExample:\n<Button variant=\"secondary\" iconOnly circle aria-label=\"Edit\">\n  <EditIcon />\n</Button>",
+      "description": "Primary action control for forms, dialogs, and toolbars.\n\nPrefer this over the legacy Emotion `Button` from `@orfium/ictinus`.",
       "import": "import { Button } from '@orfium/ictinus/vanilla';",
       "category": [
         "actions"
@@ -7308,12 +7308,12 @@
     "vanilla-vs-legacy": {
       "name": "vanilla-vs-legacy",
       "title": "Vanilla vs Legacy API",
-      "content": "# Vanilla vs Legacy API\n\nIctinus currently ships two component APIs:\n\n## Preferred: Vanilla (`@orfium/ictinus/vanilla`)\n\nModern components built with vanilla-extract, React Aria, and sprinkles.\n\n```tsx\nimport { Button, Box, Text, ThemeProvider } from '@orfium/ictinus/vanilla';\n\nexport function App() {\n  return (\n    <ThemeProvider>\n      <Box p=\"4\">\n        <Button variant=\"primary\">Save</Button>\n        <Text>Hello</Text>\n      </Box>\n    </ThemeProvider>\n  );\n}\n```\n\n## Legacy (`@orfium/ictinus`)\n\nOlder Emotion-based components. Still widely used; some are deprecated in favor of vanilla.\n\n```tsx\nimport { ThemeProvider, Button } from '@orfium/ictinus';\n\nexport function App() {\n  return (\n    <ThemeProvider>\n      <Button type=\"primary\">Save</Button>\n    </ThemeProvider>\n  );\n}\n```\n\n## Agent rules\n\n1. Prefer **vanilla** when both exist (Button, Tooltip, Table, Menu, etc.).\n2. Always wrap the app in the matching `ThemeProvider`.\n3. Use `get_component` / `search_components` with the `api` field to disambiguate.\n4. Design tokens live in `@orfium/tokens` and are re-exported from `@orfium/ictinus`.\n5. Icons (legacy): `<Icon name=\"search\" />` from `@orfium/ictinus`.\n"
+      "content": "# Vanilla vs Legacy API\n\nIctinus currently ships two component APIs:\n\n## Preferred: Vanilla (`@orfium/ictinus/vanilla`)\n\nModern components built with vanilla-extract, React Aria, and sprinkles.\n\n```tsx\nimport { Button, Box, Text, ThemeProvider } from '@orfium/ictinus/vanilla';\n\nexport function App() {\n  return (\n    <ThemeProvider>\n      <Box p=\"4\">\n        <Button variant=\"primary\">Save</Button>\n        <Text>Hello</Text>\n      </Box>\n    </ThemeProvider>\n  );\n}\n```\n\n## Legacy (`@orfium/ictinus`)\n\nOlder Emotion-based components. Still widely used; some are deprecated in favor of vanilla.\n\n```tsx\nimport { ThemeProvider, Button } from '@orfium/ictinus';\n\nexport function App() {\n  return (\n    <ThemeProvider>\n      <Button type=\"primary\">Save</Button>\n    </ThemeProvider>\n  );\n}\n```\n\n## Agent rules\n\n1. Prefer **vanilla** when both exist (Button, Tooltip, Table, Menu, etc.).\n2. Always wrap the app in the matching `ThemeProvider`.\n3. Use `get_component` / `search_components` with the `api` field to disambiguate.\n4. Design tokens live in `@orfium/tokens` and are re-exported from `@orfium/ictinus`.\n5. Icons (legacy): `<Icon name=\"search\" />` from `@orfium/ictinus`.\n6. Vanilla components extend **Box** — layout/spacing/color via sprinkle props; query `props` on `get_component` only for component-specific API.\n"
     },
     "mcp-usage": {
       "name": "mcp-usage",
       "title": "Using the Ictinus MCP",
-      "content": "# Using the Ictinus MCP\n\n## Tools\n\n- `search_components` — find components by name/keyword/category\n- `get_component` — description, import, **all prop definitions** (type/default), starter example\n- `get_patterns` — Storybook usage examples\n- `get_tokens` — design token maps\n- `search_icons` — icon names for `<Icon name=\"…\" />`\n- `get_guides` — setup and foundation docs\n\n## Workflow\n\n1. `search_components` to discover candidates\n2. `get_component` for import + **full props** (omit `props` unless filtering)\n3. `get_component({ props: \"size variant\" })` only to narrow prop definitions\n4. `get_patterns` before composing multiple components\n5. `get_guides({ names: \"getting-started-installation vanilla-vs-legacy\" })` for setup\n"
+      "content": "# Using the Ictinus MCP\n\n## Tools\n\n- `search_components` — find components by name/keyword/category\n- `get_component` — description, import, example titles, starter (overview by default)\n- `get_patterns` — Storybook usage examples\n- `get_tokens` — design token maps\n- `search_icons` — icon names for `<Icon name=\"…\" />`\n- `get_guides` — setup and foundation docs\n\n## Workflow\n\n1. `search_components` to discover candidates\n2. `get_component` for import + overview (`propNames`, `extends`)\n3. `get_component({ props: \"size variant\" })` when you need prop types/defaults (`props: \"*\"` for all component-specific props)\n4. `get_patterns` before composing multiple components\n5. `get_guides({ names: \"getting-started-installation vanilla-vs-legacy\" })` for setup\n\n## Styling (vanilla)\n\nMost vanilla components **extend Box** and accept sprinkle layout props (`p`, `m`, `gap`, `display`, color tokens, …).\nComponent-specific props are listed under `propNames`; Box/sprinkle props are inherited — use `get_component({ name: \"Box\", props: \"…\" })` or `get_tokens` for styling.\n"
     }
   },
   "icons": {

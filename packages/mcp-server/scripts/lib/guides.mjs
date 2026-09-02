@@ -85,6 +85,7 @@ export function App() {
 3. Use \`get_component\` / \`search_components\` with the \`api\` field to disambiguate.
 4. Design tokens live in \`@orfium/tokens\` and are re-exported from \`@orfium/ictinus\`.
 5. Icons (legacy): \`<Icon name="search" />\` from \`@orfium/ictinus\`.
+6. Vanilla components extend **Box** — layout/spacing/color via sprinkle props; query \`props\` on \`get_component\` only for component-specific API.
 `,
   };
 
@@ -96,7 +97,7 @@ export function App() {
 ## Tools
 
 - \`search_components\` — find components by name/keyword/category
-- \`get_component\` — description, import, **all prop definitions** (type/default), starter example
+- \`get_component\` — description, import, example titles, starter (overview by default)
 - \`get_patterns\` — Storybook usage examples
 - \`get_tokens\` — design token maps
 - \`search_icons\` — icon names for \`<Icon name="…" />\`
@@ -105,10 +106,15 @@ export function App() {
 ## Workflow
 
 1. \`search_components\` to discover candidates
-2. \`get_component\` for import + **full props** (omit \`props\` unless filtering)
-3. \`get_component({ props: "size variant" })\` only to narrow prop definitions
+2. \`get_component\` for import + overview (\`propNames\`, \`extends\`)
+3. \`get_component({ props: "size variant" })\` when you need prop types/defaults (\`props: "*"\` for all component-specific props)
 4. \`get_patterns\` before composing multiple components
 5. \`get_guides({ names: "getting-started-installation vanilla-vs-legacy" })\` for setup
+
+## Styling (vanilla)
+
+Most vanilla components **extend Box** and accept sprinkle layout props (\`p\`, \`m\`, \`gap\`, \`display\`, color tokens, …).
+Component-specific props are listed under \`propNames\`; Box/sprinkle props are inherited — use \`get_component({ name: "Box", props: "…" })\` or \`get_tokens\` for styling.
 `,
   };
 
