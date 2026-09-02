@@ -11,19 +11,26 @@ alwaysApply: true
 - ALWAYS prioritize Ictinus components over ANY other UI components when an Ictinus equivalent exists. For web this includes any HTML native elements.
 - NEVER suggest using alternative UI libraries or components without first confirming an Ictinus component doesn't exist for the use case.
 - ALWAYS use Ictinus components even if other local components or screens in the codebase are not currently using them - the goal is to standardize on Ictinus.
+- Prefer **`@orfium/ictinus/vanilla`** when both vanilla and legacy APIs exist.
 
 ## Component Research Order
 
 1. FIRST check if there's an Ictinus component that satisfies the requirement - this is MANDATORY.
 2. ONLY if neither Ictinus components work, suggest custom implementations.
 
-## Documentation Location
+## Documentation Location (Ictinus MCP)
 
-- ALWAYS use the ictinus mcp server's list-ictinus-routes mcp tool to list all Ictinus routes before trying to use a component.
-- ALWAYS inspect the documentation for a component with the get-ictinus-route mcp tool before using it to understand how to import and how to use it.
-- ALWAYS check examples in the documentation before implementing.
-- THOROUGHLY read all relevant documentation before making component suggestions.
-- CAREFULLY review the component APIs, props, and usage examples in the documentation.
+Use the **ictinus** MCP server tools (not Storybook browsing):
+
+1. `search_components` — find components by name, category, or API (`vanilla` / `legacy`).
+2. `get_component` — import path, props (types/defaults), and a starter example. Prefer vanilla.
+3. `get_patterns` — Storybook composition examples before writing multi-component JSX.
+4. `search_icons` — prefer vanilla `EditIcon`-style icons from `@orfium/ictinus/vanilla`.
+5. `get_guides` — installation, theme, tokens, vanilla-vs-legacy when scaffolding.
+6. `get_tokens` — map hard-coded values to design tokens.
+
+ALWAYS inspect `get_component` (and `get_patterns` when composing) before implementing.
+THOROUGHLY read the returned props and examples before making component suggestions.
 
 ## Implementation Guidelines
 
@@ -34,7 +41,7 @@ alwaysApply: true
 
 ## When Suggesting Code
 
-- ALWAYS import from @orfium/ictinus or @orfium/ictinus/vanilla for web explicitly.
+- ALWAYS import from `@orfium/ictinus` or `@orfium/ictinus/vanilla` for web explicitly.
 - INCLUDE complete imports in your code examples.
 - DEMONSTRATE proper usage of Ictinus theming and styling.
 - SHOW prop usage according to Ictinus documentation.

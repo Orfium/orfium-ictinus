@@ -1,8 +1,9 @@
 {
   "mcpServers": {
     "ictinus": {
-      "command": "npx",
-      "args": ["-y", "tsx", "./packages/mcp-server/src/server.ts"]
+      "command": "node",
+      "args": ["/Users/george/orfium-ictinus/packages/mcp-server/dist/index.js"],
+      "cwd": "/Users/george/orfium-ictinus/packages/mcp-server"
     }
   }
 }

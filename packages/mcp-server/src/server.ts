@@ -1,98 +1,312 @@
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
-import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
-import fs from 'node:fs';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
-import * as z from 'zod/v3';
+import { z } from 'zod';
 
-import pkg from '../package.json' with { type: 'json' };
+import {
+  getAllComponents,
+  getAllGuides,
+  getAllIcons,
+  getComponent,
+  getComponentsByName,
+  getGuide,
+  getTokens,
+} from './loaders.js';
+import { packageInfo } from './paths.js';
+import { searchComponents, searchExamples, searchIcons, searchProps } from './search.js';
+import type { ComponentInfo } from './types.js';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const DOCS_PATH = path.join(__dirname, '../docs');
+const tokenCategories = [
+  'colors',
+  'spacing',
+  'sizing',
+  'borderRadius',
+  'borderWidth',
+  'fontSize',
+  'fontWeight',
+  'fontFamily',
+  'letterSpacing',
+  'lineHeight',
+  'semanticColors',
+  'boxShadow',
+] as const;
 
-const log = (...message: string[]) => {
-  // Using console.error to prevent conflicts with the mcp server which uses stdio to communicate with the client
-  console.error('[ICTINUS MCP]', ...message);
-};
+function synthesizeExample(component: ComponentInfo) {
+  const propEntries = Object.entries(component.props)
+    .filter(([, def]) => def.defaultValue != null)
+    .slice(0, 3);
+  const attrs = propEntries
+    .map(([name, def]) => {
+      const value = def.defaultValue!;
+      if (def.type === 'boolean') return value === 'true' ? ` ${name}` : '';
+      return ` ${name}="${value}"`;
+    })
+    .join('');
 
-const fetchRoute = (route: string) => {
-  const filePath = path.join(DOCS_PATH, route);
+  return {
+    title: 'starter',
+    code: `${component.import}\n\n<${component.name}${attrs}>Label</${component.name}>`,
+  };
+}
 
-  try {
-    return fs.readFileSync(filePath, 'utf-8');
-  } catch {
-    return null;
-  }
-};
-
-const server = new McpServer({
+export const server = new McpServer({
   name: 'ictinus',
-  version: pkg.version,
+  version: packageInfo.version,
 });
 
 server.registerTool(
-  'list-ictinus-routes',
+  'get_component',
   {
-    title: 'List Ictinus Routes',
-    description:
-      'Lists all available documentation routes for the Ictinus Design System. Call this FIRST before requesting specific documentation to see what routes are available.',
-    inputSchema: {},
-    outputSchema: {
-      routes: z.string(),
+    description: `Get information about an Ictinus component. Returns description, import statement, api (vanilla|legacy), prop definitions (type/default), and a starter example.
+
+Use optional "props" to search prop definitions by name/description.
+Use optional "api" to force vanilla or legacy when both exist.
+
+Prefer vanilla (@orfium/ictinus/vanilla) for new code.`,
+    inputSchema: {
+      name: z.string().describe('Component name (e.g. "Button", "InlineAlert", "Tooltip")'),
+      props: z
+        .string()
+        .optional()
+        .describe(
+          'Search query for props (e.g. "size variant", "isDisabled"). Omit to return all prop definitions.',
+        ),
+      api: z
+        .enum(['vanilla', 'legacy'])
+        .optional()
+        .describe('Disambiguate when both APIs exist. Defaults to vanilla if available.'),
     },
   },
-  async () => {
-    const content = fetchRoute(path.join('routes.txt'));
+  ({ name, props: propsQuery, api }) => {
+    const matches = getComponentsByName(name);
+    const component = getComponent(name, api);
 
-    if (!content) {
+    if (!component) {
       return {
-        content: [{ type: 'text', text: 'Error: No routes found' }],
+        content: [
+          {
+            type: 'text' as const,
+            text: `Component "${name}" not found.\n\nUse search_components to browse available components.`,
+          },
+        ],
         isError: true,
       };
     }
 
+    const alternatives = matches
+      .filter((c) => c.id !== component.id)
+      .map((c) => ({ id: c.id, api: c.api, import: c.import }));
+
+    const props =
+      propsQuery?.trim()
+        ? searchProps({ props: component.props, query: propsQuery })
+        : component.props;
+
+    const starter = component.examples?.[0];
+    const example = starter
+      ? {
+          title: starter.title,
+          code: starter.code?.[0]?.content?.slice(0, 1500),
+        }
+      : synthesizeExample(component);
+
     return {
-      content: [{ type: 'text', text: content }],
-      structuredContent: { routes: content },
+      content: [
+        {
+          type: 'text' as const,
+          text: JSON.stringify({
+            id: component.id,
+            name: component.name,
+            api: component.api,
+            description: component.description,
+            import: component.import,
+            deprecated: component.deprecated,
+            category: component.category,
+            examples: component.examples?.map((e) => e.title),
+            example,
+            props,
+            alternatives: alternatives.length ? alternatives : undefined,
+          }),
+        },
+      ],
     };
-  }
+  },
 );
 
 server.registerTool(
-  'get-ictinus-doc',
+  'search_components',
   {
-    title: 'Get Ictinus Documentation',
-    description: 'Get a specific Ictinus doc route based on the routes available from list-routes',
+    description:
+      'Search Ictinus components by name, description, or category. Use get_component for details and get_patterns for composition examples.',
     inputSchema: {
-      route: z
+      query: z
         .string()
+        .optional()
+        .default('')
+        .describe('Search query. Empty lists components (optionally filtered).'),
+      category: z
+        .string()
+        .optional()
         .describe(
-          'The route to the Ictinus docs. The path should always have a /<route> format and end in .txt'
+          'Filter: form, layout, navigation, feedback, overlay, data-display, actions, display, theming',
         ),
-    },
-    outputSchema: {
-      content: z.string(),
+      api: z.enum(['vanilla', 'legacy']).optional().describe('Filter by API surface'),
+      limit: z.number().optional().default(8).describe('Max results (default 8)'),
     },
   },
-  async ({ route }) => {
-    const content = fetchRoute(route);
+  ({ query, category, api, limit }) => {
+    const results = searchComponents({
+      query: query ?? '',
+      category,
+      api,
+      limit,
+      components: getAllComponents(),
+    }).map((c) => ({
+      id: c.id,
+      name: c.name,
+      api: c.api,
+      description: c.description,
+      import: c.import,
+      ...(c.deprecated ? { deprecated: c.deprecated } : {}),
+    }));
 
-    if (!content) {
+    return {
+      content: [{ type: 'text' as const, text: JSON.stringify(results) }],
+    };
+  },
+);
+
+server.registerTool(
+  'get_patterns',
+  {
+    description:
+      'Find Storybook usage examples showing how Ictinus components are composed. Call before writing JSX that combines components. Vanilla examples rank higher by default.',
+    inputSchema: {
+      components: z
+        .string()
+        .describe('Space-separated component names (e.g. "Button Icon", "Modal")'),
+      query: z.string().optional().describe('Filter example titles (e.g. "disabled", "loading")'),
+      api: z
+        .enum(['vanilla', 'legacy'])
+        .optional()
+        .describe('Filter by API. Omit to prefer vanilla ranking.'),
+      limit: z.number().min(1).max(10).optional().default(5),
+    },
+  },
+  ({ components, query, api, limit }) => ({
+    content: [
+      {
+        type: 'text' as const,
+        text: JSON.stringify(
+          searchExamples({
+            components,
+            query,
+            api,
+            limit,
+            data: getAllComponents(),
+          }),
+        ),
+      },
+    ],
+  }),
+);
+
+server.registerTool(
+  'get_tokens',
+  {
+    description:
+      'Get Ictinus / @orfium/tokens mappings (colors, spacing, sizing, borderRadius, typography, semanticColors, boxShadow). Use to convert hard-coded values to tokens.',
+    inputSchema: {
+      categories: z
+        .array(z.enum(tokenCategories))
+        .optional()
+        .describe('Filter categories. Omit for all.'),
+    },
+  },
+  ({ categories }) => {
+    const tokens = getTokens();
+    const result = categories
+      ? Object.fromEntries(categories.map((cat) => [cat, tokens[cat]]))
+      : tokens;
+
+    return {
+      content: [{ type: 'text' as const, text: JSON.stringify(result) }],
+    };
+  },
+);
+
+server.registerTool(
+  'search_icons',
+  {
+    description: `Search icons. Prefer vanilla: import { EditIcon } from '@orfium/ictinus/vanilla'; <EditIcon />.
+Legacy: import Icon from '@orfium/ictinus'; <Icon name="edit" />.`,
+    inputSchema: {
+      query: z.string().describe('Icon keyword or name (e.g. "arrow", "user", "play", "EditIcon")'),
+      api: z
+        .enum(['vanilla', 'legacy'])
+        .optional()
+        .describe('Filter by API. Defaults to ranking vanilla first.'),
+      limit: z.number().optional().default(10),
+    },
+  },
+  ({ query, api, limit }) => ({
+    content: [
+      {
+        type: 'text' as const,
+        text: JSON.stringify(
+          searchIcons({ icons: getAllIcons(), query, api, limit }).map((icon) => ({
+            name: icon.name,
+            api: icon.api,
+            category: icon.category,
+            import: icon.import,
+          })),
+        ),
+      },
+    ],
+  }),
+);
+
+server.registerTool(
+  'get_guides',
+  {
+    description:
+      'Setup and foundation guides (installation, theme, tokens, migration, vanilla-vs-legacy). Omit names to list available guides.',
+    inputSchema: {
+      names: z
+        .string()
+        .optional()
+        .describe('Space-separated guide names. Omit to list all.'),
+    },
+  },
+  ({ names }) => {
+    const requested = names?.trim().split(/\s+/).filter(Boolean);
+
+    if (!requested?.length) {
       return {
-        content: [{ type: 'text', text: `Error: route ${route} not found` }],
-        isError: true,
+        content: [
+          {
+            type: 'text' as const,
+            text: JSON.stringify(getAllGuides().map((g) => ({ name: g.name, title: g.title }))),
+          },
+        ],
       };
     }
 
+    const guides = requested.map((name) => {
+      const guide = getGuide(name);
+      return guide
+        ? { name: guide.name, title: guide.title, content: guide.content }
+        : { name, error: `Guide not found: ${name}` };
+    });
+
     return {
-      content: [{ type: 'text', text: content }],
-      structuredContent: { content },
+      content: [
+        {
+          type: 'text' as const,
+          text: JSON.stringify({
+            available: getAllGuides().map((g) => g.name),
+            guides,
+          }),
+        },
+      ],
     };
-  }
+  },
 );
-
-const transport = new StdioServerTransport();
-
-log(`Starting MCP Server version ${pkg.version}`);
-
-await server.connect(transport);
