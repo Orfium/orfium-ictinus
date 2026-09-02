@@ -27,45 +27,29 @@ After publishing:
 
 ## Cursor (local monorepo)
 
-Prefer the cwd-independent launcher (works even if Cursor’s process cwd is not the repo root):
-
 ```json
 {
   "mcpServers": {
     "ictinus": {
-      "command": "node",
-      "args": ["/Users/george/orfium-ictinus/packages/mcp-server/bin/ictinus-mcp.mjs"]
+      "command": "npx",
+      "args": ["-y", "tsx", "${workspaceFolder}/packages/mcp-server/src/index.ts"]
     }
   }
 }
 ```
 
-Or with workspace-relative paths + explicit `cwd`:
-
-```json
-{
-  "mcpServers": {
-    "ictinus": {
-      "command": "node",
-      "args": ["./bin/ictinus-mcp.mjs"],
-      "cwd": "/Users/george/orfium-ictinus/packages/mcp-server"
-    }
-  }
-}
-```
-
-Rebuild before connecting: `pnpm --filter @orfium/ictinus-mcp build`. Then toggle the server off/on in Cursor MCP settings.
+Refresh metadata when APIs/docs change: `pnpm --filter @orfium/ictinus-mcp generate`. Then toggle the server off/on in Cursor MCP settings.
 
 ## Tools
 
-| Tool | Purpose |
-| --- | --- |
+| Tool                | Purpose                                                          |
+| ------------------- | ---------------------------------------------------------------- |
 | `search_components` | Find components by name, category, or API (`vanilla` / `legacy`) |
-| `get_component` | Description, import, prop definitions, starter example |
-| `get_patterns` | Storybook composition examples (vanilla ranked first) |
-| `get_tokens` | Design token maps from `@orfium/tokens` |
-| `search_icons` | Vanilla `*Icon` components and legacy `<Icon name>` |
-| `get_guides` | Installation, theme, migration, vanilla-vs-legacy |
+| `get_component`     | Description, import, prop definitions, starter example           |
+| `get_patterns`      | Storybook composition examples (vanilla ranked first)            |
+| `get_tokens`        | Design token maps from `@orfium/tokens`                          |
+| `search_icons`      | Vanilla `*Icon` components and legacy `<Icon name>`              |
+| `get_guides`        | Installation, theme, migration, vanilla-vs-legacy                |
 
 ## Agent tips
 
