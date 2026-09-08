@@ -37,44 +37,6 @@ export const label = recipe({
   ],
 });
 
-export const floatingLabel = recipe({
-  base: [
-    sprinkles({
-      typography: 'label02',
-      color: 'primary',
-      px: 'sm',
-    }),
-    style({
-      position: 'absolute',
-      left: 0,
-      top: '50%',
-      transform: 'translateY(-50%)',
-      pointerEvents: 'none',
-      zIndex: 20,
-      background: `linear-gradient(to right, ${vars.color.background.default} 0%, ${vars.color.background.default} 100%)`,
-      backgroundClip: 'padding-box',
-      transition: 'all 150ms ease-out',
-
-      selectors: {
-        '&[data-floating="true"]': {
-          top: 0,
-          fontSize: vars['font-size'][1],
-          lineHeight: vars['line-height'][1],
-          transform: 'translateY(-50%)',
-          fontWeight: vars.weight.medium,
-          color: vars.color.text.default.secondary,
-        },
-        '&[data-floating="true"][data-invalid]': {
-          color: vars.color.text.default.error,
-        },
-        '&[data-disabled]': {
-          opacity: 0.5,
-        },
-      },
-    }),
-  ],
-});
-
 export const inputWrapper = recipe({
   base: [
     sprinkles({
@@ -84,6 +46,40 @@ export const inputWrapper = recipe({
     }),
     style({
       isolation: 'isolate',
+    }),
+  ],
+});
+
+export const floatingLabel = recipe({
+  base: [
+    sprinkles({
+      px: 'md',
+    }),
+    style({
+      position: 'absolute',
+      left: 0,
+      top: '50%',
+      transform: 'translateY(-50%)',
+      zIndex: 20,
+      transformOrigin: '0 0',
+      transition: 'transform 250ms, opacity 250ms ease-in-out',
+      fontSize: vars['font-size'][3],
+      color: vars.color.text.default.secondary,
+      pointerEvents: 'none',
+      background: 'transparent',
+      selectors: {
+        [`${inputWrapper.classNames.base}:has(> input[data-focused]) > &, ${inputWrapper.classNames.base}:has(> input:not(:placeholder-shown)) > &`]:
+          {
+            color: vars.color.text.default.active,
+            transform: 'translate(3px, -135%) scale(0.8)',
+            transformOrigin: '0 0',
+            fontWeight: vars.weight.bold,
+            lineHeight: vars['line-height'][1],
+          },
+        [`${inputWrapper.classNames.base}:has(> input[data-invalid]) > &`]: {
+          color: vars.color.text.default.error,
+        },
+      },
     }),
   ],
 });
@@ -224,6 +220,14 @@ export const input = recipe({
           borderColor: 'transparent',
           borderWidth: 0,
         },
+        [`${inputWrapper.classNames.base}:has(> ${floatingLabel.classNames.base}) > &::placeholder`]:
+          {
+            color: 'transparent',
+          },
+        [`${inputWrapper.classNames.base}:has(> ${floatingLabel.classNames.base}) > &[data-focused]::placeholder`]:
+          {
+            color: vars.color.text.default.secondary,
+          },
       },
     }),
   ],

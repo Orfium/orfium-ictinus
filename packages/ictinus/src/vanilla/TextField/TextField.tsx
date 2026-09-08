@@ -36,7 +36,6 @@ type TextFieldInputWrapperProps = BoxProps<'div', { children?: ReactNode }>;
 type TextFieldFloatingLabelProps = BoxProps<
   'div',
   {
-    floating?: boolean;
     children?: ReactNode;
   }
 >;
@@ -114,16 +113,12 @@ const TextFieldInputWrapper = (props: TextFieldInputWrapperProps) => {
   );
 };
 
-const TextFieldFloatingLabel = ({ floating, ...props }: TextFieldFloatingLabelProps) => {
+const TextFieldFloatingLabel = (props: TextFieldFloatingLabelProps) => {
   const { boxProps, restProps } = extractBoxProps(props);
 
   return (
     <Box asChild {...boxProps}>
-      <div
-        data-floating={floating ? 'true' : undefined}
-        className={cn(styles.floatingLabel(), boxProps.className)}
-        {...restProps}
-      />
+      <div className={cn(styles.floatingLabel(), boxProps.className)} {...restProps} />
     </Box>
   );
 };

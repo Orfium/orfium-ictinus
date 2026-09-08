@@ -41,7 +41,7 @@ export const Default: Story = {
       <TextField>
         <TextField.Label>Search</TextField.Label>
         <TextField.InputWrapper>
-          <TextField.FloatingLabel floating={false}>Search</TextField.FloatingLabel>
+          <TextField.FloatingLabel>Search</TextField.FloatingLabel>
           <TextField.Input type="search" placeholder="Search products" />
         </TextField.InputWrapper>
       </TextField>
@@ -102,7 +102,7 @@ export const Addons: Story = {
             <TextField.Addon align="inline-end">
               <Tooltip>
                 <TooltipTrigger>
-                  <InformationalIcon color='active' aria-label="Website URL information" />
+                  <InformationalIcon color="active" aria-label="Website URL information" />
                 </TooltipTrigger>
                 <TooltipContent>Use the domain without https://.</TooltipContent>
               </Tooltip>
@@ -133,7 +133,7 @@ export const Addons: Story = {
                   event.preventDefault();
                 }
               }}
-              px='2xs'
+              px="2xs"
             />
             <TextField.Addon align="inline-end">USD</TextField.Addon>
           </TextField.Group>
@@ -144,4 +144,45 @@ export const Addons: Story = {
       </Box>
     );
   },
+};
+
+export const FloatingLabel: Story = {
+  render: () => (
+    <Box display="flex" flexDirection="column" gap="lg" style={{ maxWidth: '24rem' }}>
+      <TextField>
+        <TextField.Label>Email</TextField.Label>
+        <TextField.InputWrapper>
+          <TextField.FloatingLabel>Email</TextField.FloatingLabel>
+          <TextField.Input type="email" placeholder="name@example.com" />
+        </TextField.InputWrapper>
+        <TextField.Description>We’ll only use this for product updates.</TextField.Description>
+      </TextField>
+
+      <TextField isInvalid>
+        <TextField.Label>Password</TextField.Label>
+        <TextField.InputWrapper>
+          <TextField.FloatingLabel>Password</TextField.FloatingLabel>
+          <TextField.Input type="password" placeholder="Enter password" />
+        </TextField.InputWrapper>
+        <TextField.Error>Please enter a valid password.</TextField.Error>
+      </TextField>
+
+      <TextField isDisabled>
+        <TextField.Label>Search</TextField.Label>
+        <TextField.InputWrapper>
+          <TextField.FloatingLabel>Search</TextField.FloatingLabel>
+          <TextField.Input type="search" placeholder="Search products" />
+        </TextField.InputWrapper>
+      </TextField>
+
+      <TextField>
+        <TextField.Label>Email</TextField.Label>
+        <TextField.InputWrapper>
+          <TextField.FloatingLabel>Email</TextField.FloatingLabel>
+          <TextField.Input type="email" placeholder="name@example.com" variant="compact" />
+        </TextField.InputWrapper>
+        <TextField.Description>We’ll only use this for product updates.</TextField.Description>
+      </TextField>
+    </Box>
+  ),
 };
