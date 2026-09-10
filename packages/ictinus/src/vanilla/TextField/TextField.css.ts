@@ -141,7 +141,7 @@ export const floatingLabel = recipe({
         [`${inputWrapper.classNames.base}:has(> input[data-focused]) > &, ${inputWrapper.classNames.base}:has(> input:not(:placeholder-shown)) > &`]:
           {
             color: vars.color.text.default.active,
-            transform: `translate(calc(${vars.spacing.md} * 0.2), -135%) scale(0.8)`,
+            transform: `translate(calc(${vars.spacing.md} * 0.2), -115%) scale(0.8)`,
             transformOrigin: '0 0',
             fontWeight: vars.weight.bold,
             lineHeight: vars['line-height'][1],
@@ -155,7 +155,7 @@ export const floatingLabel = recipe({
         },
         [`${inputGroup.classNames.base} ${inputWrapper.classNames.base}:has(> input[data-focused]) &, ${inputGroup.classNames.base} ${inputWrapper.classNames.base}:has(> input:not(:placeholder-shown)) &`]:
           {
-            transform: 'translate(0, -135%) scale(0.8)',
+            transform: 'translate(0, -115%) scale(0.8)',
           },
         [`${inputWrapper.classNames.base}:has(> input.${inputCompact}[data-focused]) > &, ${inputGroup.classNames.base} ${inputWrapper.classNames.base}:has(> input.${inputCompact}[data-focused]) &, ${inputWrapper.classNames.base}:has(> input.${inputCompact}:not(:placeholder-shown)) > &, ${inputGroup.classNames.base} ${inputWrapper.classNames.base}:has(> input.${inputCompact}:not(:placeholder-shown)) &`]:
           {
@@ -248,6 +248,10 @@ export const input = recipe({
         [`${inputWrapper.classNames.base}:has(> ${floatingLabel.classNames.base}) > &[data-focused]::placeholder`]:
           {
             color: vars.color.text.default.secondary,
+          },
+        [`${inputWrapper.classNames.base}:has(> ${floatingLabel.classNames.base}) > &:not(.${inputCompact})`]:
+          {
+            paddingTop: vars.spacing.md,
           },
       },
     }),
