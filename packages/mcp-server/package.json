@@ -1,0 +1,50 @@
+{
+  "name": "@orfium/ictinus-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for the Ictinus design system - component APIs, tokens, icons, and docs for AI agents",
+  "homepage": "https://github.com/Orfium/orfium-ictinus/tree/master/packages/mcp-server#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Orfium/orfium-ictinus.git",
+    "directory": "packages/mcp-server"
+  },
+  "bugs": {
+    "url": "https://github.com/Orfium/orfium-ictinus/issues"
+  },
+  "license": "Apache-2.0",
+  "type": "module",
+  "bin": {
+    "ictinus-mcp": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "generate": "node ./scripts/generate.mjs",
+    "build": "pnpm generate && tsc -p tsconfig.json && cp src/data.json dist/data.json",
+    "dev": "pnpm generate && tsc -p tsconfig.json --watch",
+    "prepublishOnly": "pnpm build",
+    "lint": "oxlint",
+    "tsc": "tsc -p tsconfig.json --noEmit",
+    "fmt": "prettier src scripts --check",
+    "check": "pnpm tsc && pnpm lint && pnpm fmt",
+    "precommit": "pnpm tsc && pnpm lint"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.22.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.2"
+  }
+}

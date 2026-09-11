@@ -18,6 +18,12 @@ import * as styles from './Button.css';
 export type ButtonProps = BoxProps<'button', NonNullable<styles.ButtonVariants>> &
   ButtonPrimitiveProps;
 
+/**
+ * Primary action control for forms, dialogs, and toolbars.
+ *
+ * Prefer this over the legacy Emotion `Button` from `@orfium/ictinus`.
+ *
+ */
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
@@ -99,45 +105,43 @@ function ProgressCircle(props: ProgressCircleProps) {
       }))}
     >
       {({ percentage, isIndeterminate }) => (
-        <>
-          <svg fill="none" width="100%" height="100%" viewBox="0 0 32 32">
-            <circle
-              cx="50%"
-              cy="50%"
-              r={radius}
-              stroke="currentcolor"
-              opacity={0.5}
-              strokeWidth={strokeWidth}
-            />
-            <circle
-              cx="50%"
-              cy="50%"
-              r={radius}
-              stroke="currentcolor"
-              strokeWidth={strokeWidth}
-              // Normalize the path length to 100 so we can easily set stroke-dashoffset to a percentage.
-              pathLength="100"
-              // Add extra gap between dashes so 0% works in Chrome.
-              strokeDasharray="100 200"
-              strokeDashoffset={100 - (isIndeterminate || percentage == null ? 25 : percentage)}
-              strokeLinecap="round"
-              style={{
-                rotate: '-90deg',
-                transformOrigin: 'center center',
-              }}
-            >
-              {isIndeterminate && (
-                <animateTransform
-                  attributeName="transform"
-                  type="rotate"
-                  dur="0.75s"
-                  values="0;360"
-                  repeatCount="indefinite"
-                />
-              )}
-            </circle>
-          </svg>
-        </>
+        <svg fill="none" width="100%" height="100%" viewBox="0 0 32 32">
+          <circle
+            cx="50%"
+            cy="50%"
+            r={radius}
+            stroke="currentcolor"
+            opacity={0.5}
+            strokeWidth={strokeWidth}
+          />
+          <circle
+            cx="50%"
+            cy="50%"
+            r={radius}
+            stroke="currentcolor"
+            strokeWidth={strokeWidth}
+            // Normalize the path length to 100 so we can easily set stroke-dashoffset to a percentage.
+            pathLength="100"
+            // Add extra gap between dashes so 0% works in Chrome.
+            strokeDasharray="100 200"
+            strokeDashoffset={100 - (isIndeterminate || percentage == null ? 25 : percentage)}
+            strokeLinecap="round"
+            style={{
+              rotate: '-90deg',
+              transformOrigin: 'center center',
+            }}
+          >
+            {isIndeterminate && (
+              <animateTransform
+                attributeName="transform"
+                type="rotate"
+                dur="0.75s"
+                values="0;360"
+                repeatCount="indefinite"
+              />
+            )}
+          </circle>
+        </svg>
       )}
     </ProgressBar>
   );
