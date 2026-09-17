@@ -14,6 +14,23 @@ globalFontFace('Roboto', [
       'U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD',
   },
   {
+    src: 'url(https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3CUBGEe.woff2) format("woff2")',
+    fontStyle: 'normal',
+    fontWeight: 300,
+    fontStretch: '100%',
+    fontDisplay: 'swap',
+    unicodeRange: 'U+1F00-1FFF',
+  },
+  {
+    src: 'url(https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3-UBGEe.woff2) format("woff2")',
+    fontStyle: 'normal',
+    fontWeight: 300,
+    fontStretch: '100%',
+    fontDisplay: 'swap',
+    unicodeRange:
+      'U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF',
+  },
+  {
     src: 'url(https://fonts.gstatic.com/s/roboto/v48/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2) format("woff2")',
     fontStyle: 'normal',
     fontWeight: 400,
@@ -21,6 +38,23 @@ globalFontFace('Roboto', [
     fontDisplay: 'swap',
     unicodeRange:
       'U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD',
+  },
+  {
+    src: 'url(https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3CUBGEe.woff2) format("woff2")',
+    fontStyle: 'normal',
+    fontWeight: 400,
+    fontStretch: '100%',
+    fontDisplay: 'swap',
+    unicodeRange: 'U+1F00-1FFF',
+  },
+  {
+    src: 'url(https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3-UBGEe.woff2) format("woff2")',
+    fontStyle: 'normal',
+    fontWeight: 400,
+    fontStretch: '100%',
+    fontDisplay: 'swap',
+    unicodeRange:
+      'U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF',
   },
   {
     src: 'url(https://fonts.gstatic.com/s/roboto/v48/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2) format("woff2")',
@@ -32,6 +66,23 @@ globalFontFace('Roboto', [
       'U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD',
   },
   {
+    src: 'url(https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3CUBGEe.woff2) format("woff2")',
+    fontStyle: 'normal',
+    fontWeight: 500,
+    fontStretch: '100%',
+    fontDisplay: 'swap',
+    unicodeRange: 'U+1F00-1FFF',
+  },
+  {
+    src: 'url(https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3-UBGEe.woff2) format("woff2")',
+    fontStyle: 'normal',
+    fontWeight: 500,
+    fontStretch: '100%',
+    fontDisplay: 'swap',
+    unicodeRange:
+      'U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF',
+  },
+  {
     src: 'url(https://fonts.gstatic.com/s/roboto/v48/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2) format("woff2")',
     fontStyle: 'normal',
     fontWeight: 700,
@@ -41,6 +92,23 @@ globalFontFace('Roboto', [
       'U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD',
   },
   {
+    src: 'url(https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3CUBGEe.woff2) format("woff2")',
+    fontStyle: 'normal',
+    fontWeight: 700,
+    fontStretch: '100%',
+    fontDisplay: 'swap',
+    unicodeRange: 'U+1F00-1FFF',
+  },
+  {
+    src: 'url(https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3-UBGEe.woff2) format("woff2")',
+    fontStyle: 'normal',
+    fontWeight: 700,
+    fontStretch: '100%',
+    fontDisplay: 'swap',
+    unicodeRange:
+      'U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF',
+  },
+  {
     src: 'url(https://fonts.gstatic.com/s/roboto/v48/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2) format("woff2")',
     fontStyle: 'normal',
     fontWeight: 900,
@@ -48,6 +116,23 @@ globalFontFace('Roboto', [
     fontDisplay: 'swap',
     unicodeRange:
       'U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD',
+  },
+  {
+    src: 'url(https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3CUBGEe.woff2) format("woff2")',
+    fontStyle: 'normal',
+    fontWeight: 900,
+    fontStretch: '100%',
+    fontDisplay: 'swap',
+    unicodeRange: 'U+1F00-1FFF',
+  },
+  {
+    src: 'url(https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3-UBGEe.woff2) format("woff2")',
+    fontStyle: 'normal',
+    fontWeight: 900,
+    fontStretch: '100%',
+    fontDisplay: 'swap',
+    unicodeRange:
+      'U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF',
   },
 ]);
 
