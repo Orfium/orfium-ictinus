@@ -20,7 +20,6 @@
     "lint": "turbo lint",
     "test": "turbo test",
     "check": "turbo check",
-    "changeset": "pnpm changeset",
     "precommit": "turbo run precommit --affected",
     "coverage:report": "turbo build --filter='./packages/*' && vitest run --coverage",
     "release": "turbo run build --filter='./packages/*' && changeset publish",

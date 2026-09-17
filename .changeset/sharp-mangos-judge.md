@@ -1,5 +1,5 @@
 ---
-'@orfium/ictinus': major
+'@orfium/ictinus': patch
 ---
 
 add font support for more languages
