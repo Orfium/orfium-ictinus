@@ -2,26 +2,18 @@
 
 import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
 import react from '@vitejs/plugin-react';
-import path from 'path';
+import path from 'node:path';
 import { defineConfig, loadEnv } from 'vite';
 import dts from 'vite-plugin-dts';
 import svgr from 'vite-plugin-svgr';
-import tsconfigPaths from 'vite-tsconfig-paths';
 import { configDefaults, coverageConfigDefaults } from 'vitest/config';
-import pkg from './package.json';
+import pkg from './package.json' with { type: 'json' };
 
-const regexesOfPackages = (externalPackages = []) =>
+const regexesOfPackages = (externalPackages: string[] = []) =>
   externalPackages.map((packageName) => new RegExp(`^${packageName}(/.*)?`));
 
 const plugins = [
-  react({
-    babel: {
-      plugins: ['@emotion/babel-plugin'],
-    },
-  }),
-  tsconfigPaths({
-    projects: ['./tsconfig.json', './tsconfig.node.json'],
-  }),
+  react({ jsxImportSource: '@emotion/react' }),
   svgr(),
   vanillaExtractPlugin(),
   dts({
@@ -34,7 +26,7 @@ export default defineConfig(({ mode }) => {
   // Load env file based on `mode` in the current working directory.
   // Set the third parameter to '' to load all env regardless of the `REACT_APP_` prefix.
   const env = loadEnv(mode, process.cwd(), '');
-  console.log(mode, __dirname);
+  console.log(mode, import.meta.dirname);
 
   return {
     publicDir: false,
@@ -44,20 +36,22 @@ export default defineConfig(({ mode }) => {
       'process.env.NODE_ENV': JSON.stringify(mode),
       'process.env.PORT': JSON.stringify(env.PORT),
     },
+    resolve: {
+      tsconfigPaths: true,
+    },
     plugins,
     build: {
       lib: {
         entry: {
-          index: path.resolve(__dirname, 'src/index.ts'),
+          index: path.resolve(import.meta.dirname, 'src/index.ts'),
         },
         name: pkg.name,
       },
-      minify: 'esbuild',
       outDir: 'dist',
       // This is required to ensure CSS is split and imported properly. Because we are using build.lib the default differs and is set to false instead of true.
       // https://vite.dev/config/build-options.html#build-csscodesplit
       cssCodeSplit: true,
-      rollupOptions: {
+      rolldownOptions: {
         external: [
           'react',
           'react-dom',
@@ -73,6 +67,9 @@ export default defineConfig(({ mode }) => {
           {
             preserveModules: true,
             preserveModulesRoot: 'src',
+            // Vite 8 / Rolldown: ? from *.svg?react leaks into filenames under preserveModules
+            // https://github.com/rolldown/rolldown/issues/8761
+            entryFileNames: (chunk) => `${chunk.name.replaceAll('?', '_')}.js`,
           },
         ],
       },

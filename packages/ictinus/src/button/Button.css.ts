@@ -29,6 +29,10 @@ export const button = recipe({
     }),
   ],
   variants: {
+    /**
+     * Visual style of the button.
+     * @default 'primary'
+     */
     variant: {
       primary: sprinkles({
         bg: {
@@ -63,6 +67,10 @@ export const button = recipe({
         color: 'error',
       }),
     },
+    /**
+     * Control height and horizontal padding.
+     * @default 'normal'
+     */
     size: {
       normal: sprinkles({
         h: '9',
@@ -73,26 +81,34 @@ export const button = recipe({
         px: 'xs',
       }),
     },
+    /** Square padding for a single icon child (pair with an icon, no text label). */
     iconOnly: {
       true: sprinkles({
         px: '0',
         justifyContent: 'center',
       }),
     },
+    /** Fully rounded (pill/circle) shape — typically used with `iconOnly`. */
     circle: {
       true: sprinkles({ rounded: '7' }),
     },
+    /** Shows a loading indicator, sets `aria-disabled`, and blocks presses. */
     isPending: {
       true: sprinkles({
         cursor: 'default',
       }),
     },
+    /** Disables the button. Prefer over native `disabled` for consistent styling. */
     isDisabled: {
       true: sprinkles({
         cursor: 'not-allowed',
         opacity: '0.5',
       }),
     },
+  },
+  defaultVariants: {
+    variant: 'primary',
+    size: 'normal',
   },
   compoundVariants: [
     {

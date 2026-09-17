@@ -92,7 +92,7 @@
   justify-content: unset;
 }
 
-.emotion-6 {
+.emotion-4 {
   width: var(--ictinus-sizing-5);
   height: var(--ictinus-sizing-5);
   display: -webkit-box;
@@ -101,17 +101,17 @@
   display: flex;
 }
 
-.emotion-7 {
+.emotion-5 {
   width: var(--ictinus-sizing-5);
   height: var(--ictinus-sizing-5);
 }
 
-.emotion-7 path,
-.emotion-7 rect {
+.emotion-5 path,
+.emotion-5 rect {
   fill: var(--ictinus-color-text-inverted-primary)!important;
 }
 
-.emotion-8 {
+.emotion-6 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -142,19 +142,19 @@
         />
       </span>
       <div
-        class="emotion-2 emotion-3"
+        class="emotion-2"
       >
         <div
-          class="emotion-4 emotion-3"
+          class="emotion-3"
           data-role="checkbox-icon"
         >
           <div
-            class="emotion-6"
+            class="emotion-4"
             data-slot="icon"
             data-testid="ictinus_label_unselected"
           >
             <svg
-              class="emotion-7"
+              class="emotion-5"
               fill="none"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
@@ -167,7 +167,7 @@
           </div>
         </div>
         <div
-          class="emotion-8"
+          class="emotion-6"
           data-testid="ictinus_checkbox_label_label"
         >
           Label

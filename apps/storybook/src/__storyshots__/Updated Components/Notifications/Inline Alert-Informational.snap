@@ -14,7 +14,7 @@
   width: 100%;
 }
 
-.emotion-2 {
+.emotion-1 {
   --_border-width: var(--ictinus-border-width-1);
   --_outline-width: var(--ictinus-border-width-3);
   --_min-height: 2.75rem;
@@ -43,17 +43,17 @@
   transition: outline-offset 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.emotion-2:focus-visible {
+.emotion-1:focus-visible {
   outline-offset: 0;
   outline: var(--_outline-width) solid var(--ictinus-color-border-color-interactive-focused);
 }
 
-.emotion-2:has([data-slot='button']) {
+.emotion-1:has([data-slot='button']) {
   padding: calc(var(--ictinus-spacing-4) - var(--_border-width)) calc(var(--ictinus-spacing-5) - var(--_border-width));
 }
 
 @container (max-width: calc(600px - 1px)) {
-  .emotion-2 {
+  .emotion-1 {
     grid-template-areas: 'icon content close' 'icon actions close';
     -webkit-align-items: flex-start;
     -webkit-box-align: flex-start;
@@ -61,19 +61,19 @@
     align-items: flex-start;
   }
 
-  .emotion-2:has([data-slot='button']) {
+  .emotion-1:has([data-slot='button']) {
     padding: calc(var(--ictinus-spacing-5) - var(--_border-width)) calc(var(--ictinus-spacing-5) - var(--_border-width));
   }
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-2 {
+  .emotion-1 {
     -webkit-transition: none;
     transition: none;
   }
 }
 
-.emotion-3 {
+.emotion-2 {
   width: 1.25rem;
   height: 1.25rem;
   display: -webkit-box;
@@ -85,17 +85,17 @@
   pointer-events: none;
 }
 
-.emotion-4 {
+.emotion-3 {
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-4 path,
-.emotion-4 rect {
+.emotion-3 path,
+.emotion-3 rect {
   fill: var(--ictinus-color-indicators-brand)!important;
 }
 
-.emotion-5 {
+.emotion-4 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -105,7 +105,7 @@
   cursor: default;
 }
 
-.emotion-6 {
+.emotion-5 {
   grid-area: actions;
   display: -webkit-box;
   display: -webkit-flex;
@@ -124,13 +124,13 @@
 }
 
 @container (max-width: calc(600px - 1px)) {
-  .emotion-6 {
+  .emotion-5 {
     margin-left: 0;
     margin-top: var(--ictinus-spacing-4);
   }
 }
 
-.emotion-7 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -154,25 +154,25 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-7:hover,
-.emotion-7[aria-expanded='true'] {
+.emotion-6:hover,
+.emotion-6[aria-expanded='true'] {
   color: var(--ictinus-color-text-default-primary);
 }
 
-.emotion-7:hover path,
-.emotion-7[aria-expanded='true'] path {
+.emotion-6:hover path,
+.emotion-6[aria-expanded='true'] path {
   fill: var(--ictinus-color-text-default-primary)!important;
 }
 
-.emotion-7:visited {
+.emotion-6:visited {
   color: var(--ictinus-color-text-default-visited);
 }
 
-.emotion-7:visited path {
+.emotion-6:visited path {
   fill: var(--ictinus-color-text-default-visited)!important;
 }
 
-.emotion-7:focus-visible:after {
+.emotion-6:focus-visible:after {
   content: '';
   position: absolute;
   inset: -3px -6px;
@@ -180,7 +180,7 @@
   border: var(--ictinus-border-width-3) solid var(--ictinus-color-border-color-interactive-upsell);
 }
 
-.emotion-8 {
+.emotion-7 {
   width: 1.25rem;
   height: 1.25rem;
   display: -webkit-box;
@@ -193,8 +193,8 @@
   margin-left: var(--ictinus-spacing-6);
 }
 
-.emotion-8:hover,
-.emotion-8:focus-visible {
+.emotion-7:hover,
+.emotion-7:focus-visible {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   border-radius: 100%;
@@ -202,23 +202,23 @@
   box-shadow: 0px 0px 0px 8px rgba(200,206,255,0.20);
 }
 
-.emotion-9 {
+.emotion-8 {
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-9 path,
-.emotion-9 rect {
+.emotion-8 path,
+.emotion-8 rect {
   fill: var(--ictinus-color-text-default-secondary)!important;
 }
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
   >
     <div
       aria-describedby="react-aria-:test-id:"
-      class="emotion-2"
+      class="emotion-1"
       data-slot="inline-alert"
       data-testid="_inline_alert"
       role="status"
@@ -226,12 +226,12 @@
     >
       <div
         aria-hidden="true"
-        class="emotion-3"
+        class="emotion-2"
         data-slot="icon"
         role="img"
       >
         <svg
-          class="emotion-4"
+          class="emotion-3"
           fill="none"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
@@ -245,15 +245,15 @@
         </svg>
       </div>
       <div
-        class="emotion-5"
+        class="emotion-4"
       >
         Alert copy should be short, easy to understand and actionable.
       </div>
       <div
-        class="emotion-6"
+        class="emotion-5"
       >
         <a
-          class="emotion-7"
+          class="emotion-6"
           data-slot="link"
           data-testid="_link"
         >
@@ -262,7 +262,7 @@
       </div>
       <div
         aria-label="Dismiss notification"
-        class="emotion-8"
+        class="emotion-7"
         data-slot="icon"
         data-testid="_inline_alert_dismiss"
         id="react-aria-:test-id:"
@@ -270,7 +270,7 @@
         tabindex="0"
       >
         <svg
-          class="emotion-9"
+          class="emotion-8"
           fill="none"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"

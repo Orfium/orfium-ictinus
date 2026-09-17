@@ -1,5 +1,5 @@
 import type { KeyboardEvent } from 'react';
-import { useKeyboard } from 'react-aria';
+import { useKeyboard, type KeyboardResult } from 'react-aria';
 
 export const KEYBOARD_EVENT_KEYS = {
   ArrowUp: 'ArrowUp',
@@ -27,7 +27,10 @@ type Props = {
   };
   hasPropagation?: boolean;
 };
-const useKeyboardEvents = ({ events: { keydown }, hasPropagation = false }: Props) => {
+const useKeyboardEvents = ({
+  events: { keydown },
+  hasPropagation = false,
+}: Props): KeyboardResult => {
   const { keyboardProps } = useKeyboard({
     onKeyDown: (event) => {
       if (hasPropagation) {

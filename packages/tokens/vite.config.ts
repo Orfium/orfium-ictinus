@@ -1,20 +1,13 @@
 /// <reference types="vitest" />
 
-import path from 'path';
-
 import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
+import path from 'node:path';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
-import tsconfigPaths from 'vite-tsconfig-paths';
 import { configDefaults, coverageConfigDefaults } from 'vitest/config';
-
-// @ts-ignore
-import pkg from './package.json';
+import pkg from './package.json' with { type: 'json' };
 
 const plugins = [
-  tsconfigPaths({
-    projects: ['./tsconfig.json', './tsconfig.node.json'],
-  }),
   vanillaExtractPlugin(),
   dts({
     insertTypesEntry: true,
@@ -29,16 +22,18 @@ export default defineConfig(({ mode }) => {
     define: {
       'process.env.NODE_ENV': JSON.stringify(mode),
     },
+    resolve: {
+      tsconfigPaths: true,
+    },
     plugins,
     build: {
       lib: {
         entry: {
-          index: path.resolve(__dirname, 'src/index.ts'),
+          index: path.resolve(import.meta.dirname, 'src/index.ts'),
         },
         name: pkg.name,
         cssFileName: 'vars',
       },
-      minify: 'esbuild',
       outDir: 'dist',
     },
     test: {

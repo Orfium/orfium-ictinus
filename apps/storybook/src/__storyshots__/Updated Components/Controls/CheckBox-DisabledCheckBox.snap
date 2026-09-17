@@ -107,7 +107,7 @@
   justify-content: unset;
 }
 
-.emotion-7 {
+.emotion-5 {
   width: var(--ictinus-sizing-5);
   height: var(--ictinus-sizing-5);
   display: -webkit-box;
@@ -116,17 +116,17 @@
   display: flex;
 }
 
-.emotion-8 {
+.emotion-6 {
   width: var(--ictinus-sizing-5);
   height: var(--ictinus-sizing-5);
 }
 
-.emotion-8 path,
-.emotion-8 rect {
+.emotion-6 path,
+.emotion-6 rect {
   fill: var(--ictinus-color-text-inverted-primary)!important;
 }
 
-.emotion-9 {
+.emotion-7 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -135,7 +135,7 @@
   color: var(--ictinus-color-text-default-primary);
 }
 
-.emotion-10 {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -149,11 +149,11 @@
   flex-wrap: wrap;
 }
 
-.emotion-20 {
+.emotion-16 {
   padding-left: 2rem;
 }
 
-.emotion-22 {
+.emotion-17 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1rem;
@@ -191,19 +191,19 @@
             />
           </span>
           <div
-            class="emotion-3 emotion-4"
+            class="emotion-3"
           >
             <div
-              class="emotion-5 emotion-4"
+              class="emotion-4"
               data-role="checkbox-icon"
             >
               <div
-                class="emotion-7"
+                class="emotion-5"
                 data-slot="icon"
                 data-testid="ictinus_label_unselected"
               >
                 <svg
-                  class="emotion-8"
+                  class="emotion-6"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -216,7 +216,7 @@
               </div>
             </div>
             <div
-              class="emotion-9"
+              class="emotion-7"
               data-testid="ictinus_checkbox_label_label"
             >
               Option
@@ -227,7 +227,7 @@
     </div>
   </div>
   <div
-    class="emotion-10"
+    class="emotion-8"
   >
     <div
       style="margin: 5px;"
@@ -253,19 +253,19 @@
             />
           </span>
           <div
-            class="emotion-3 emotion-4"
+            class="emotion-3"
           >
             <div
-              class="emotion-5 emotion-4"
+              class="emotion-4"
               data-role="checkbox-icon"
             >
               <div
-                class="emotion-7"
+                class="emotion-5"
                 data-slot="icon"
                 data-testid="ictinus_label_unselected"
               >
                 <svg
-                  class="emotion-8"
+                  class="emotion-6"
                   fill="none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -278,7 +278,7 @@
               </div>
             </div>
             <div
-              class="emotion-9"
+              class="emotion-7"
               data-testid="ictinus_checkbox_label_label"
             >
               Option
@@ -286,11 +286,11 @@
           </div>
         </label>
         <div
-          class="emotion-20 emotion-4"
+          class="emotion-16"
           data-disabled="true"
         >
           <div
-            class="emotion-22"
+            class="emotion-17"
             data-testid="ictinus_checkbox_label_helpText"
           >
             This option is disabled

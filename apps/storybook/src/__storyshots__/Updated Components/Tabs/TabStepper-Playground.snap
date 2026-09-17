@@ -1,9 +1,4 @@
 .emotion-0 {
-  width: 488px;
-  height: 220px;
-}
-
-.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -16,7 +11,7 @@
   width: fit-content;
 }
 
-.emotion-2 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -25,7 +20,7 @@
   isolation: isolate;
 }
 
-.emotion-2 [role='tab'] {
+.emotion-1 [role='tab'] {
   box-sizing: border-box;
   position: relative;
   font-family: Roboto;
@@ -35,11 +30,11 @@
   letter-spacing: 0.015625rem;
 }
 
-.emotion-2 [role='tab'][data-disabled] {
+.emotion-1 [role='tab'][data-disabled] {
   cursor: default;
 }
 
-.emotion-2 [role='tab'][data-selected] {
+.emotion-1 [role='tab'][data-selected] {
   font-family: Roboto;
   font-weight: 700;
   line-height: 1.375rem;
@@ -47,32 +42,32 @@
   letter-spacing: 0.00625rem;
 }
 
-.emotion-2 [role='tab']:not([data-selected], [data-disabled]):hover {
+.emotion-1 [role='tab']:not([data-selected], [data-disabled]):hover {
   background-color: var(--ictinus-color-background-alt);
   -webkit-transition: background-color ease-out 150ms;
   transition: background-color ease-out 150ms;
 }
 
-.emotion-2 [role='tab'][data-focus-visible]::after {
+.emotion-1 [role='tab'][data-focus-visible]::after {
   content: '';
   position: absolute;
   border-radius: var(--ictinus-border-radius-1);
   border: var(--ictinus-border-width-3) solid var(--ictinus-color-border-color-interactive-focused);
 }
 
-.emotion-2 [role='tab'][data-status='warning'] [data-role='title'] {
+.emotion-1 [role='tab'][data-status='warning'] [data-role='title'] {
   color: var(--ictinus-color-text-default-error);
 }
 
-.emotion-2 [role='tab'][data-selected]:not([data-status='warning']) [data-role='title'] {
+.emotion-1 [role='tab'][data-selected]:not([data-status='warning']) [data-role='title'] {
   color: var(--ictinus-color-text-default-active);
 }
 
-.emotion-2[data-orientation='horizontal'] {
+.emotion-1[data-orientation='horizontal'] {
   gap: var(--ictinus-spacing-7);
 }
 
-.emotion-2[data-orientation='horizontal']::before {
+.emotion-1[data-orientation='horizontal']::before {
   content: '';
   position: absolute;
   bottom: 0;
@@ -82,35 +77,35 @@
   background-color: var(--ictinus-color-border-color-decorative-default);
 }
 
-.emotion-2[data-orientation='horizontal'] [role='tab'] {
+.emotion-1[data-orientation='horizontal'] [role='tab'] {
   border-bottom: var(--ictinus-border-width-2) solid transparent;
   padding: var(--ictinus-spacing-5) var(--ictinus-spacing-4) calc(var(--ictinus-spacing-5) - var(--ictinus-border-width-2));
 }
 
-.emotion-2[data-orientation='horizontal'] [role='tab']:not([data-selected]):hover {
+.emotion-1[data-orientation='horizontal'] [role='tab']:not([data-selected]):hover {
   border-bottom: var(--ictinus-border-width-2) solid var(--ictinus-color-border-color-decorative-default);
 }
 
-.emotion-2[data-orientation='horizontal'] [role='tab'][data-focus-visible]::after {
+.emotion-1[data-orientation='horizontal'] [role='tab'][data-focus-visible]::after {
   inset: -var(--ictinus-border-width-2);
 }
 
-.emotion-2[data-orientation='horizontal'] [role='tab'][data-selected] {
+.emotion-1[data-orientation='horizontal'] [role='tab'][data-selected] {
   border-bottom: var(--ictinus-border-width-2) solid var(--ictinus-color-border-color-interactive-active);
 }
 
-.emotion-2[data-orientation='horizontal'] [role='tab'][data-selected][data-status='warning'] {
+.emotion-1[data-orientation='horizontal'] [role='tab'][data-selected][data-status='warning'] {
   border-color: var(--ictinus-color-border-color-interactive-error);
 }
 
-.emotion-2[data-orientation='vertical'] {
+.emotion-1[data-orientation='vertical'] {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
   gap: var(--ictinus-spacing-6);
 }
 
-.emotion-2[data-orientation='vertical']::before {
+.emotion-1[data-orientation='vertical']::before {
   content: '';
   position: absolute;
   bottom: 0;
@@ -120,28 +115,28 @@
   background-color: var(--ictinus-color-border-color-decorative-default);
 }
 
-.emotion-2[data-orientation='vertical'] [role='tab'][data-focus-visible]::after {
+.emotion-1[data-orientation='vertical'] [role='tab'][data-focus-visible]::after {
   inset: -var(--ictinus-border-width-2);
 }
 
-.emotion-2[data-orientation='vertical'] [role='tab']:not([data-selected]):hover {
+.emotion-1[data-orientation='vertical'] [role='tab']:not([data-selected]):hover {
   border-left: var(--ictinus-border-width-2) solid var(--ictinus-color-border-color-decorative-default);
 }
 
-.emotion-2[data-orientation='vertical'] [role='tab'] {
+.emotion-1[data-orientation='vertical'] [role='tab'] {
   border-left: var(--ictinus-border-width-2) solid transparent;
   padding: var(--ictinus-spacing-5) var(--ictinus-spacing-5) var(--ictinus-spacing-5) calc(var(--ictinus-spacing-5) - var(--ictinus-border-width-2));
 }
 
-.emotion-2[data-orientation='vertical'] [role='tab'][data-selected] {
+.emotion-1[data-orientation='vertical'] [role='tab'][data-selected] {
   border-left: var(--ictinus-border-width-2) solid var(--ictinus-color-border-color-interactive-active);
 }
 
-.emotion-2[data-orientation='vertical'] [role='tab'][data-selected][data-status='warning'] {
+.emotion-1[data-orientation='vertical'] [role='tab'][data-selected][data-status='warning'] {
   border-color: var(--ictinus-color-indicators-error);
 }
 
-.emotion-3 {
+.emotion-2 {
   box-sizing: border-box;
   cursor: pointer;
   display: -webkit-box;
@@ -153,7 +148,7 @@
   flex-direction: column;
 }
 
-.emotion-4 {
+.emotion-3 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -168,7 +163,7 @@
   gap: var(--ictinus-spacing-3);
 }
 
-.emotion-5 {
+.emotion-4 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -186,7 +181,12 @@
   gap: var(--ictinus-spacing-4);
 }
 
-.emotion-14 {
+.emotion-11 {
+  width: 488px;
+  height: 220px;
+}
+
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -198,7 +198,7 @@
   gap: 16px;
 }
 
-.emotion-15 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -226,16 +226,16 @@
   background-color: var(--ictinus-color-palette-secondary-base);
 }
 
-.emotion-15:hover {
+.emotion-14:hover {
   background-color: var(--ictinus-color-palette-secondary-muted);
 }
 
-.emotion-15:focus-within {
+.emotion-14:focus-within {
   box-shadow: 0 0 0 var(--ictinus-border-width-2) var(--ictinus-color-border-color-interactive-active);
   background-color: var(--ictinus-color-palette-secondary-base);
 }
 
-.emotion-16 {
+.emotion-15 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -255,11 +255,11 @@
   padding: var(--ictinus-spacing-0) var(--ictinus-spacing-0) var(--ictinus-spacing-0) var(--ictinus-spacing-5);
 }
 
-.emotion-16>div {
+.emotion-15>div {
   position: relative;
 }
 
-.emotion-17 {
+.emotion-16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -269,7 +269,7 @@
   flex: 1;
 }
 
-.emotion-18 {
+.emotion-17 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -288,48 +288,48 @@
   min-width: 100%;
 }
 
-.emotion-18::-webkit-input-placeholder {
+.emotion-17::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-18::-moz-placeholder {
+.emotion-17::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-18:-ms-input-placeholder {
+.emotion-17:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-18::placeholder {
+.emotion-17::placeholder {
   color: transparent;
 }
 
-.emotion-18:focus {
+.emotion-17:focus {
   outline: none;
 }
 
-.emotion-18:focus::-webkit-input-placeholder {
+.emotion-17:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-18:focus::-moz-placeholder {
+.emotion-17:focus::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-18:focus:-ms-input-placeholder {
+.emotion-17:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-18:focus::placeholder {
+.emotion-17:focus::placeholder {
   color: transparent;
 }
 
-.emotion-18:not(:focus):placeholder-shown+label {
+.emotion-17:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-18:focus-within+label,
-.emotion-18:not(:placeholder-shown)+label {
+.emotion-17:focus-within+label,
+.emotion-17:not(:placeholder-shown)+label {
   font-weight: var(--ictinus-weight-bold)!important;
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -337,16 +337,16 @@
   transform: translate(0.1875rem, -35%) scale(0.8);
 }
 
-.emotion-18:focus-within+label {
+.emotion-17:focus-within+label {
   font-weight: var(--ictinus-weight-bold)!important;
   color: var(--ictinus-color-text-default-active);
 }
 
-.emotion-18:disabled {
+.emotion-17:disabled {
   cursor: not-allowed;
 }
 
-.emotion-19 {
+.emotion-18 {
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
@@ -383,21 +383,15 @@
 }
 
 <div>
-  <template
-    data-react-aria-hidden="true"
-  >
-    <div
-      class="emotion-0"
-    />
-  </template>
+  <template />
   <div
-    class="emotion-1"
+    class="emotion-0"
     data-orientation="horizontal"
     data-rac=""
   >
     <div
       aria-orientation="horizontal"
-      class="emotion-2"
+      class="emotion-1"
       data-collection="react-aria-:test-id:"
       data-orientation="horizontal"
       data-rac=""
@@ -407,7 +401,7 @@
       <div
         aria-controls="react-aria-:test-id:-tabpanel-step_1"
         aria-selected="true"
-        class="emotion-3"
+        class="emotion-2"
         data-collection="react-aria-:test-id:"
         data-key="step_1"
         data-rac=""
@@ -419,10 +413,10 @@
         tabindex="0"
       >
         <div
-          class="emotion-4"
+          class="emotion-3"
         >
           <div
-            class="emotion-5"
+            class="emotion-4"
             data-role="title"
             data-testid="ictinus_tabstep_step_1_title"
           >
@@ -432,7 +426,7 @@
       </div>
       <div
         aria-selected="false"
-        class="emotion-3"
+        class="emotion-2"
         data-collection="react-aria-:test-id:"
         data-key="step_2"
         data-rac=""
@@ -443,10 +437,10 @@
         tabindex="-1"
       >
         <div
-          class="emotion-4"
+          class="emotion-3"
         >
           <div
-            class="emotion-5"
+            class="emotion-4"
             data-role="title"
             data-testid="ictinus_tabstep_step_2_title"
           >
@@ -456,7 +450,7 @@
       </div>
       <div
         aria-selected="false"
-        class="emotion-3"
+        class="emotion-2"
         data-collection="react-aria-:test-id:"
         data-key="step_3"
         data-rac=""
@@ -467,10 +461,10 @@
         tabindex="-1"
       >
         <div
-          class="emotion-4"
+          class="emotion-3"
         >
           <div
-            class="emotion-5"
+            class="emotion-4"
             data-role="title"
             data-testid="ictinus_tabstep_step_3_title"
           >
@@ -480,38 +474,38 @@
       </div>
     </div>
     <div
-      class="emotion-0"
+      class="emotion-11"
     >
       <div
         aria-labelledby="react-aria-:test-id:-tab-step_1"
-        class="emotion-13"
+        class="emotion-12"
         data-rac=""
         id="react-aria-:test-id:-tabpanel-step_1"
         role="tabpanel"
       >
         <div
-          class="emotion-14"
+          class="emotion-13"
         >
           <div>
             <div
-              class="emotion-15"
+              class="emotion-14"
             >
               <div
-                class="emotion-16"
+                class="emotion-15"
               >
                 <div
-                  class="emotion-17"
+                  class="emotion-16"
                 >
                   <input
                     aria-invalid="false"
-                    class="emotion-18"
+                    class="emotion-17"
                     data-testid="input"
                     id="textfield__00"
                     placeholder="First Name"
                     required=""
                   />
                   <label
-                    class="emotion-19"
+                    class="emotion-18"
                     for="textfield__00"
                   >
                     First Name
@@ -524,23 +518,23 @@
           </div>
           <div>
             <div
-              class="emotion-15"
+              class="emotion-14"
             >
               <div
-                class="emotion-16"
+                class="emotion-15"
               >
                 <div
-                  class="emotion-17"
+                  class="emotion-16"
                 >
                   <input
                     aria-invalid="false"
-                    class="emotion-18"
+                    class="emotion-17"
                     data-testid="input"
                     id="textfield__00"
                     placeholder="Middle Name"
                   />
                   <label
-                    class="emotion-19"
+                    class="emotion-18"
                     for="textfield__00"
                   >
                     Middle Name
@@ -552,24 +546,24 @@
           </div>
           <div>
             <div
-              class="emotion-15"
+              class="emotion-14"
             >
               <div
-                class="emotion-16"
+                class="emotion-15"
               >
                 <div
-                  class="emotion-17"
+                  class="emotion-16"
                 >
                   <input
                     aria-invalid="false"
-                    class="emotion-18"
+                    class="emotion-17"
                     data-testid="input"
                     id="textfield__00"
                     placeholder="Last Name"
                     required=""
                   />
                   <label
-                    class="emotion-19"
+                    class="emotion-18"
                     for="textfield__00"
                   >
                     Last Name
