@@ -5,7 +5,7 @@ import { layers } from '../layers';
 
 globalFontFace('Roboto', [
   {
-    src: 'url(https://fonts.gstatic.com/s/roboto/v48/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2) format("woff2")',
+    src: 'url(https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2) format("woff2")',
     fontStyle: 'normal',
     fontWeight: 300,
     fontStretch: '100%',
@@ -31,7 +31,7 @@ globalFontFace('Roboto', [
       'U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF',
   },
   {
-    src: 'url(https://fonts.gstatic.com/s/roboto/v48/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2) format("woff2")',
+    src: 'url(https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2) format("woff2")',
     fontStyle: 'normal',
     fontWeight: 400,
     fontStretch: '100%',
@@ -57,7 +57,7 @@ globalFontFace('Roboto', [
       'U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF',
   },
   {
-    src: 'url(https://fonts.gstatic.com/s/roboto/v48/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2) format("woff2")',
+    src: 'url(https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2) format("woff2")',
     fontStyle: 'normal',
     fontWeight: 500,
     fontStretch: '100%',
@@ -83,7 +83,7 @@ globalFontFace('Roboto', [
       'U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF',
   },
   {
-    src: 'url(https://fonts.gstatic.com/s/roboto/v48/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2) format("woff2")',
+    src: 'url(https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2) format("woff2")',
     fontStyle: 'normal',
     fontWeight: 700,
     fontStretch: '100%',
@@ -109,7 +109,7 @@ globalFontFace('Roboto', [
       'U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF',
   },
   {
-    src: 'url(https://fonts.gstatic.com/s/roboto/v48/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2) format("woff2")',
+    src: 'url(https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2) format("woff2")',
     fontStyle: 'normal',
     fontWeight: 900,
     fontStretch: '100%',
@@ -138,7 +138,7 @@ globalFontFace('Roboto', [
 
 globalFontFace('Roboto Mono', [
   {
-    src: 'url(https://fonts.gstatic.com/s/robotomono/v30/L0x5DF4xlVMF-BfR8bXMIjhLq3-cXbKD.woff2) format("woff2")',
+    src: 'url(https://fonts.gstatic.com/s/robotomono/v31/L0x5DF4xlVMF-BfR8bXMIjhLq38.woff2) format("woff2")',
     fontStyle: 'normal',
     fontWeight: 300,
     fontDisplay: 'swap',
@@ -146,7 +146,15 @@ globalFontFace('Roboto Mono', [
       'U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD',
   },
   {
-    src: 'url(https://fonts.gstatic.com/s/robotomono/v30/L0x5DF4xlVMF-BfR8bXMIjhLq3-cXbKD.woff2) format("woff2")',
+    src: 'url(https://fonts.gstatic.com/s/robotomono/v31/L0x5DF4xlVMF-BfR8bXMIjhIq3-OXg.woff2) format("woff2")',
+    fontStyle: 'normal',
+    fontWeight: 300,
+    fontDisplay: 'swap',
+    unicodeRange:
+      'U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF',
+  },
+  {
+    src: 'url(https://fonts.gstatic.com/s/robotomono/v31/L0x5DF4xlVMF-BfR8bXMIjhLq38.woff2) format("woff2")',
     fontStyle: 'normal',
     fontWeight: 400,
     fontDisplay: 'swap',
@@ -154,7 +162,15 @@ globalFontFace('Roboto Mono', [
       'U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD',
   },
   {
-    src: 'url(https://fonts.gstatic.com/s/robotomono/v30/L0x5DF4xlVMF-BfR8bXMIjhLq3-cXbKD.woff2) format("woff2")',
+    src: 'url(https://fonts.gstatic.com/s/robotomono/v31/L0x5DF4xlVMF-BfR8bXMIjhIq3-OXg.woff2) format("woff2")',
+    fontStyle: 'normal',
+    fontWeight: 400,
+    fontDisplay: 'swap',
+    unicodeRange:
+      'U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF',
+  },
+  {
+    src: 'url(https://fonts.gstatic.com/s/robotomono/v31/L0x5DF4xlVMF-BfR8bXMIjhLq38.woff2) format("woff2")',
     fontStyle: 'normal',
     fontWeight: 500,
     fontDisplay: 'swap',
@@ -162,18 +178,34 @@ globalFontFace('Roboto Mono', [
       'U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD',
   },
   {
-    src: 'url(https://fonts.gstatic.com/s/robotomono/v30/L0x5DF4xlVMF-BfR8bXMIjhLq3-cXbKD.woff2) format("woff2")',
+    src: 'url(https://fonts.gstatic.com/s/robotomono/v31/L0x5DF4xlVMF-BfR8bXMIjhIq3-OXg.woff2) format("woff2")',
+    fontStyle: 'normal',
+    fontWeight: 500,
+    fontDisplay: 'swap',
+    unicodeRange:
+      'U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF',
+  },
+  {
+    src: 'url(https://fonts.gstatic.com/s/robotomono/v31/L0x5DF4xlVMF-BfR8bXMIjhLq38.woff2) format("woff2")',
     fontStyle: 'normal',
     fontWeight: 700,
     fontDisplay: 'swap',
     unicodeRange:
       'U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD',
   },
+  {
+    src: 'url(https://fonts.gstatic.com/s/robotomono/v31/L0x5DF4xlVMF-BfR8bXMIjhIq3-OXg.woff2) format("woff2")',
+    fontStyle: 'normal',
+    fontWeight: 700,
+    fontDisplay: 'swap',
+    unicodeRange:
+      'U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF',
+  },
 ]);
 
 globalFontFace('Outfit', [
   {
-    src: 'url(https://fonts.gstatic.com/s/outfit/v15/QGYvz_MVcBeNP4NJtEtqUYLknw.woff2) format("woff2")',
+    src: 'url(https://fonts.gstatic.com/s/outfit/v15/QGYvz_MVcBeNP4NJtEtq.woff2) format("woff2")',
     fontStyle: 'normal',
     fontWeight: '100 900',
     fontDisplay: 'swap',
