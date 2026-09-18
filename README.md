@@ -2,7 +2,6 @@
 
 > A comprehensive design system and UI component library for Orfium products
 
-
 ![npm](https://img.shields.io/npm/v/@orfium/ictinus)
 [![CI/CD](https://github.com/Orfium/orfium-ictinus/actions/workflows/main.yml/badge.svg)](https://github.com/Orfium/orfium-ictinus/actions/workflows/main.yml)
 
