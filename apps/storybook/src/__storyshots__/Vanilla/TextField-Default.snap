@@ -1,0 +1,119 @@
+<div>
+  <div
+    class="properties_display_flex_base__19njorx2i properties_flexDirection_column_base__19njorxnu properties_gap_lg_base__19njorxqy"
+    data-ictinus="test-version"
+    style="max-width: 24rem;"
+  >
+    <div
+      class="TextField_textField__1fsoq0f2 TextField__1fsoq0f1 properties_display_flex_base__19njorx2i properties_flexDirection_column_base__19njorxnu properties_gap_xs_base__19njorxqm"
+      data-ictinus="test-version"
+      data-rac=""
+    >
+      <label
+        class="TextField_label__1fsoq0f4 TextField__1fsoq0f3 properties_typography_label02__19njorx1o1"
+        data-ictinus="test-version"
+        for="react-aria-:test-id:"
+        id="react-aria-:test-id:"
+      >
+        Email
+      </label>
+      <input
+        aria-describedby="react-aria-:test-id:"
+        aria-labelledby="react-aria-:test-id:"
+        class="TextField_input__1fsoq0fc TextField__1fsoq0fb TextField_input_type_normal__1fsoq0fd properties_borderRadius_2__19njorx1lt properties_typography_body02__19njorx1o5 properties_color_primary_base__19njorx2gk properties_cursor_default__19njorx1n2 properties_width_full_base__19njorx6e properties_height_13_base__19njorx8m"
+        data-ictinus="test-version"
+        data-rac=""
+        id="react-aria-:test-id:"
+        placeholder="name@example.com"
+        tabindex="0"
+        title=""
+        type="email"
+        value=""
+      />
+      <span
+        class="TextField_description__1fsoq0ff properties_typography_body03__19njorx1o6 properties_color_secondary_base__19njorx2go"
+        data-ictinus="test-version"
+        id="react-aria-:test-id:"
+        slot="description"
+      >
+        We’ll only use this for product updates.
+      </span>
+    </div>
+    <div
+      class="TextField_textField__1fsoq0f2 TextField__1fsoq0f1 properties_display_flex_base__19njorx2i properties_flexDirection_column_base__19njorxnu properties_gap_xs_base__19njorxqm"
+      data-ictinus="test-version"
+      data-invalid="true"
+      data-rac=""
+    >
+      <label
+        class="TextField_label__1fsoq0f4 TextField__1fsoq0f3 properties_typography_label02__19njorx1o1"
+        data-ictinus="test-version"
+        for="react-aria-:test-id:"
+        id="react-aria-:test-id:"
+      >
+        Password
+      </label>
+      <input
+        aria-describedby="react-aria-:test-id:"
+        aria-invalid="true"
+        aria-labelledby="react-aria-:test-id:"
+        class="TextField_input__1fsoq0fc TextField__1fsoq0fb TextField_input_type_normal__1fsoq0fd properties_borderRadius_2__19njorx1lt properties_typography_body02__19njorx1o5 properties_color_primary_base__19njorx2gk properties_cursor_default__19njorx1n2 properties_width_full_base__19njorx6e properties_height_13_base__19njorx8m"
+        data-ictinus="test-version"
+        data-invalid="true"
+        data-rac=""
+        id="react-aria-:test-id:"
+        placeholder="Enter password"
+        tabindex="0"
+        title=""
+        type="password"
+        value=""
+      />
+      <span
+        class="TextField_error__1fsoq0fg properties_marginTop_xs_base__19njorx15y properties_typography_body03__19njorx1o6 properties_color_error_base__19njorx2gw"
+        data-ictinus="test-version"
+        data-rac=""
+        id="react-aria-:test-id:"
+        slot="errorMessage"
+      >
+        Please enter a valid password.
+      </span>
+    </div>
+    <div
+      class="TextField_textField__1fsoq0f2 TextField__1fsoq0f1 properties_display_flex_base__19njorx2i properties_flexDirection_column_base__19njorxnu properties_gap_xs_base__19njorxqm"
+      data-ictinus="test-version"
+      data-rac=""
+    >
+      <label
+        class="TextField_label__1fsoq0f4 TextField__1fsoq0f3 properties_typography_label02__19njorx1o1"
+        data-ictinus="test-version"
+        for="react-aria-:test-id:"
+        id="react-aria-:test-id:"
+      >
+        Search
+      </label>
+      <div
+        class="TextField_inputWrapper__1fsoq0f8 TextField__1fsoq0f7 properties_position_relative_base__19njorxoq properties_display_flex_base__19njorx2i properties_alignItems_center_base__19njorx6 properties_width_full_base__19njorx6e"
+        data-ictinus="test-version"
+      >
+        <div
+          class="TextField_floatingLabel__1fsoq0fa TextField__1fsoq0f9"
+          data-ictinus="test-version"
+        >
+          Search
+        </div>
+        <input
+          aria-labelledby="react-aria-:test-id:"
+          class="TextField_input__1fsoq0fc TextField__1fsoq0fb TextField_input_type_normal__1fsoq0fd properties_borderRadius_2__19njorx1lt properties_typography_body02__19njorx1o5 properties_color_primary_base__19njorx2gk properties_cursor_default__19njorx1n2 properties_width_full_base__19njorx6e properties_height_13_base__19njorx8m"
+          data-ictinus="test-version"
+          data-rac=""
+          id="react-aria-:test-id:"
+          placeholder="Search products"
+          tabindex="0"
+          title=""
+          type="search"
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+</div>
