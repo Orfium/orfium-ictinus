@@ -1,5 +1,11 @@
 # @orfium/ictinus
 
+## 5.46.6
+
+### Patch Changes
+
+- 9140b23: add font support for more languages
+
 ## 5.46.5
 
 ### Patch Changes
