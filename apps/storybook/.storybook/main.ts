@@ -9,18 +9,26 @@ const config: StorybookConfig = {
     '../docs/Utilities/**/*.mdx',
     '../src/**/*.@(mdx|stories.@(ts|tsx))',
   ],
+
   addons: [getAbsolutePath('@storybook/addon-a11y'), getAbsolutePath('@storybook/addon-docs')],
   staticDirs: ['../public'],
+
   typescript: {
     reactDocgen: false,
   },
+
   core: {
     disableTelemetry: true,
   },
+
   framework: {
     name: getAbsolutePath('@storybook/react-vite'),
     options: {},
   },
+
+  features: {
+    experimentalDocgenServer: true
+  }
 };
 
 export default config;
