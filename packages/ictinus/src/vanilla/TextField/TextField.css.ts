@@ -12,7 +12,7 @@ export const textField = recipe({
     sprinkles({
       display: 'flex',
       flexDirection: 'column',
-      gap: 'xs'
+      gap: 'xs',
     }),
     style({
       selectors: {
