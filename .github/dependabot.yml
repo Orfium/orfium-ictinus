@@ -4,11 +4,13 @@ updates:
     directory: /
     schedule:
       interval: weekly
+      day: monday
 
   - package-ecosystem: npm
     directory: /
     schedule:
       interval: weekly
+      day: monday
     allow:
       - dependency-type: all
         update-types:
