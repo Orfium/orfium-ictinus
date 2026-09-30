@@ -43,10 +43,10 @@ export const Default: Story = {
 
       <TextField>
         <TextField.Label>Search</TextField.Label>
-        <TextField.InputWrapper>
+        <TextField.FloatingLabelWrapper>
           <TextField.FloatingLabel>Search</TextField.FloatingLabel>
           <TextField.Input type="search" placeholder="Search products" />
-        </TextField.InputWrapper>
+        </TextField.FloatingLabelWrapper>
       </TextField>
     </Box>
   ),
@@ -243,53 +243,53 @@ export const FloatingLabel: Story = {
       <Box display="flex" flexDirection="column" gap="lg" style={{ maxWidth: '24rem' }}>
         <TextField>
           <TextField.Label>Email</TextField.Label>
-          <TextField.InputWrapper>
+          <TextField.FloatingLabelWrapper>
             <TextField.FloatingLabel>Email</TextField.FloatingLabel>
             <TextField.Input type="email" placeholder="name@example.com" />
-          </TextField.InputWrapper>
+          </TextField.FloatingLabelWrapper>
           <TextField.Description>We’ll only use this for product updates.</TextField.Description>
         </TextField>
 
         <TextField isInvalid>
           <TextField.Label>Password</TextField.Label>
-          <TextField.InputWrapper>
+          <TextField.FloatingLabelWrapper>
             <TextField.FloatingLabel>Password</TextField.FloatingLabel>
             <TextField.Input type="password" placeholder="Enter password" />
-          </TextField.InputWrapper>
+          </TextField.FloatingLabelWrapper>
           <TextField.Error>Please enter a valid password.</TextField.Error>
         </TextField>
 
         <TextField isInvalid>
           <TextField.Label>Password</TextField.Label>
-          <TextField.InputWrapper>
+          <TextField.FloatingLabelWrapper>
             <TextField.FloatingLabel>Password</TextField.FloatingLabel>
             <TextField.Input type="password" placeholder="Enter password" variant="compact" />
-          </TextField.InputWrapper>
+          </TextField.FloatingLabelWrapper>
           <TextField.Error>Please enter a valid password.</TextField.Error>
         </TextField>
 
         <TextField isDisabled>
           <TextField.Label>Search</TextField.Label>
-          <TextField.InputWrapper>
+          <TextField.FloatingLabelWrapper>
             <TextField.FloatingLabel>Search</TextField.FloatingLabel>
             <TextField.Input type="search" placeholder="Search products" />
-          </TextField.InputWrapper>
+          </TextField.FloatingLabelWrapper>
         </TextField>
 
         <TextField isDisabled>
           <TextField.Label>Search</TextField.Label>
-          <TextField.InputWrapper>
+          <TextField.FloatingLabelWrapper>
             <TextField.FloatingLabel>Search</TextField.FloatingLabel>
             <TextField.Input type="search" placeholder="Search products" variant="compact" />
-          </TextField.InputWrapper>
+          </TextField.FloatingLabelWrapper>
         </TextField>
 
         <TextField>
           <TextField.Label>Email</TextField.Label>
-          <TextField.InputWrapper>
+          <TextField.FloatingLabelWrapper>
             <TextField.FloatingLabel>Email</TextField.FloatingLabel>
             <TextField.Input type="email" placeholder="name@example.com" variant="compact" />
-          </TextField.InputWrapper>
+          </TextField.FloatingLabelWrapper>
           <TextField.Description>We’ll only use this for product updates.</TextField.Description>
         </TextField>
 
@@ -299,7 +299,7 @@ export const FloatingLabel: Story = {
             <TextField.Addon align="inline-start">
               <SearchIcon aria-hidden="true" />
             </TextField.Addon>
-            <TextField.InputWrapper mx="sm">
+            <TextField.FloatingLabelWrapper mx="sm">
               <TextField.FloatingLabel>Search</TextField.FloatingLabel>
               <TextField.Input
                 type="text"
@@ -308,7 +308,7 @@ export const FloatingLabel: Story = {
                 placeholder="Search products"
                 onChange={(event) => setSearch(event.currentTarget.value)}
               />
-            </TextField.InputWrapper>
+            </TextField.FloatingLabelWrapper>
             <TextField.Addon align="inline-end">
               <Button
                 variant="tertiary"
@@ -330,7 +330,7 @@ export const FloatingLabel: Story = {
             <TextField.Addon align="inline-start">
               <SearchIcon aria-hidden="true" />
             </TextField.Addon>
-            <TextField.InputWrapper mx="sm">
+            <TextField.FloatingLabelWrapper mx="sm">
               <TextField.FloatingLabel>Search</TextField.FloatingLabel>
               <TextField.Input
                 type="text"
@@ -340,7 +340,7 @@ export const FloatingLabel: Story = {
                 variant="compact"
                 onChange={(event) => setSearch(event.currentTarget.value)}
               />
-            </TextField.InputWrapper>
+            </TextField.FloatingLabelWrapper>
             <TextField.Addon align="inline-end">
               <Button
                 variant="tertiary"

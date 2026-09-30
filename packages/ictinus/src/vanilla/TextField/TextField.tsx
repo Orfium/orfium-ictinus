@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import { useEffect, useRef } from 'react';
 import type {
   FieldErrorProps,
   InputProps,
@@ -31,7 +32,7 @@ type TextFieldErrorProps = BoxProps<'div', BoxCompatibleProps<FieldErrorProps>>;
 
 type TextFieldGroupProps = BoxProps<'div', { children?: ReactNode }>;
 
-type TextFieldInputWrapperProps = BoxProps<'div', { children?: ReactNode }>;
+type TextFieldFloatingLabelWrapperProps = BoxProps<'div', { children?: ReactNode }>;
 
 type TextFieldFloatingLabelProps = BoxProps<
   'div',
@@ -103,12 +104,36 @@ const TextFieldGroup = (props: TextFieldGroupProps) => {
   );
 };
 
-const TextFieldInputWrapper = (props: TextFieldInputWrapperProps) => {
+const TextFieldFloatingLabelWrapper = (props: TextFieldFloatingLabelWrapperProps) => {
   const { boxProps, restProps } = extractBoxProps(props);
+  const wrapperRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const wrapper = wrapperRef.current;
+    const textArea = wrapper?.querySelector<HTMLTextAreaElement>(':scope > textarea');
+    const floatingLabel = wrapper?.querySelector<HTMLElement>('[data-floating-label]');
+
+    if (!textArea || !floatingLabel) return;
+
+    const resizeObserver = new ResizeObserver(() => {
+      floatingLabel.style.setProperty(
+        '--floating-label-clip-width',
+        `${textArea.getBoundingClientRect().width}px`
+      );
+    });
+
+    resizeObserver.observe(textArea);
+
+    return () => resizeObserver.disconnect();
+  }, []);
 
   return (
     <Box asChild {...boxProps}>
-      <div className={cn(styles.inputWrapper(), boxProps.className)} {...restProps} />
+      <div
+        ref={wrapperRef}
+        className={cn(styles.floatingLabelWrapper(), boxProps.className)}
+        {...restProps}
+      />
     </Box>
   );
 };
@@ -118,7 +143,11 @@ const TextFieldFloatingLabel = (props: TextFieldFloatingLabelProps) => {
 
   return (
     <Box asChild {...boxProps}>
-      <div className={cn(styles.floatingLabel(), boxProps.className)} {...restProps} />
+      <div
+        data-floating-label
+        className={cn(styles.floatingLabel(), boxProps.className)}
+        {...restProps}
+      />
     </Box>
   );
 };
@@ -151,7 +180,7 @@ const TextField = Object.assign(
     Description: TextFieldDescription,
     Error: TextFieldError,
     Group: TextFieldGroup,
-    InputWrapper: TextFieldInputWrapper,
+    FloatingLabelWrapper: TextFieldFloatingLabelWrapper,
     FloatingLabel: TextFieldFloatingLabel,
     Addon: TextFieldAddon,
   }
@@ -163,9 +192,9 @@ export {
   TextFieldDescription,
   TextFieldError,
   TextFieldFloatingLabel,
+  TextFieldFloatingLabelWrapper,
   TextFieldGroup,
   TextFieldInput,
-  TextFieldInputWrapper,
   TextFieldLabel,
 };
 
@@ -174,9 +203,9 @@ export type {
   TextFieldDescriptionProps,
   TextFieldErrorProps,
   TextFieldFloatingLabelProps,
+  TextFieldFloatingLabelWrapperProps,
   TextFieldGroupProps,
   TextFieldInputProps,
-  TextFieldInputWrapperProps,
   TextFieldLabelProps,
 };
 

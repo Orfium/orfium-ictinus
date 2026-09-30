@@ -52,7 +52,7 @@ export const CharacterCounter: Story = {
 
 export const States: Story = {
   render: () => (
-    <Box display="flex" flexDirection="column" gap="lg" style={{ maxWidth: '24rem' }}>
+    <Box display="flex" flexDirection="column" gap="lg" style={{ width: '24rem' }}>
       <TextField>
         <TextField.Label>Normal</TextField.Label>
         <TextArea placeholder="This field is ready for input." />
@@ -73,21 +73,21 @@ export const States: Story = {
   ),
 };
 
-export const Playground: Story = {
+export const FloatingLabel: Story = {
   render: () => {
     const [value, setValue] = useState('');
 
     return (
-      <Box style={{ maxWidth: '24rem' }}>
+      <Box style={{ width: '24rem' }}>
         <TextField>
-          <TextField.InputWrapper>
-            <TextField.FloatingLabel>Playground</TextField.FloatingLabel>
+          <TextField.FloatingLabelWrapper>
+            <TextField.FloatingLabel>Floating Label</TextField.FloatingLabel>
             <TextArea
               value={value}
               placeholder="Try typing here."
               onChange={(event) => setValue(event.target.value)}
             />
-          </TextField.InputWrapper>
+          </TextField.FloatingLabelWrapper>
           <TextField.Description>Use this field to try different text.</TextField.Description>
         </TextField>
       </Box>
