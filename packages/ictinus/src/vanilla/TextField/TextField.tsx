@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import { forwardRef, type ReactNode } from 'react';
 import type {
   FieldErrorProps,
   InputProps,
@@ -46,105 +46,146 @@ interface TextFieldAddonProps extends BoxProps<'div', { children?: ReactNode }> 
   align?: TextFieldAddonAlign;
 }
 
-const TextFieldLabel = (props: TextFieldLabelProps) => {
+const TextFieldLabel = forwardRef<HTMLLabelElement, TextFieldLabelProps>((props, ref) => {
   const { boxProps, restProps } = extractBoxProps(props);
 
   return (
     <Box asChild {...boxProps}>
-      <LabelPrimitive className={cn(styles.label(), boxProps.className)} {...restProps} />
+      <LabelPrimitive ref={ref} className={cn(styles.label(), boxProps.className)} {...restProps} />
     </Box>
   );
-};
+});
 
-const TextFieldInput = ({ variant = 'normal', ...props }: TextFieldInputProps) => {
-  const { boxProps, restProps } = extractBoxProps(props);
+TextFieldLabel.displayName = 'TextField.Label';
 
-  return (
-    <Box asChild {...boxProps}>
-      <InputPrimitive
-        className={cn(styles.input({ type: variant }), boxProps.className)}
-        {...restProps}
-      />
-    </Box>
-  );
-};
-
-const TextFieldDescription = (props: TextFieldDescriptionProps) => {
-  const { boxProps, restProps } = extractBoxProps(props);
-
-  return (
-    <Box asChild {...boxProps}>
-      <TextPrimitive
-        slot="description"
-        className={cn(styles.description(), boxProps.className)}
-        {...restProps}
-      />
-    </Box>
-  );
-};
-
-const TextFieldError = (props: TextFieldErrorProps) => {
-  const { boxProps, restProps } = extractBoxProps(props);
-
-  return (
-    <Box asChild {...boxProps}>
-      <FieldErrorPrimitive className={cn(styles.error(), boxProps.className)} {...restProps} />
-    </Box>
-  );
-};
-
-const TextFieldGroup = (props: TextFieldGroupProps) => {
-  const { boxProps, restProps } = extractBoxProps(props);
-
-  return (
-    <Box asChild {...boxProps}>
-      <div className={cn(styles.inputGroup(), boxProps.className)} {...restProps} />
-    </Box>
-  );
-};
-
-const TextFieldInputWrapper = (props: TextFieldInputWrapperProps) => {
-  const { boxProps, restProps } = extractBoxProps(props);
-
-  return (
-    <Box asChild {...boxProps}>
-      <div className={cn(styles.inputWrapper(), boxProps.className)} {...restProps} />
-    </Box>
-  );
-};
-
-const TextFieldFloatingLabel = (props: TextFieldFloatingLabelProps) => {
-  const { boxProps, restProps } = extractBoxProps(props);
-
-  return (
-    <Box asChild {...boxProps}>
-      <div className={cn(styles.floatingLabel(), boxProps.className)} {...restProps} />
-    </Box>
-  );
-};
-
-const TextFieldAddon = ({ align, ...props }: TextFieldAddonProps) => {
-  const { boxProps, restProps } = extractBoxProps(props);
-
-  return (
-    <Box asChild {...boxProps}>
-      <div data-align={align} className={cn(styles.addon(), boxProps.className)} {...restProps} />
-    </Box>
-  );
-};
-
-const TextField = Object.assign(
-  ({ children, ...props }: TextFieldProps) => {
+const TextFieldInput = forwardRef<HTMLInputElement, TextFieldInputProps>(
+  ({ variant = 'normal', ...props }, ref) => {
     const { boxProps, restProps } = extractBoxProps(props);
 
     return (
       <Box asChild {...boxProps}>
-        <PrimitiveTextField className={cn(styles.textField(), boxProps.className)} {...restProps}>
+        <InputPrimitive
+          ref={ref}
+          className={cn(styles.input({ type: variant }), boxProps.className)}
+          {...restProps}
+        />
+      </Box>
+    );
+  }
+);
+
+TextFieldInput.displayName = 'TextField.Input';
+
+const TextFieldDescription = forwardRef<HTMLSpanElement, TextFieldDescriptionProps>(
+  (props, ref) => {
+    const { boxProps, restProps } = extractBoxProps(props);
+
+    return (
+      <Box asChild {...boxProps}>
+        <TextPrimitive
+          ref={ref}
+          slot="description"
+          className={cn(styles.description(), boxProps.className)}
+          {...restProps}
+        />
+      </Box>
+    );
+  }
+);
+
+TextFieldDescription.displayName = 'TextField.Description';
+
+const TextFieldError = forwardRef<HTMLDivElement, TextFieldErrorProps>((props, ref) => {
+  const { boxProps, restProps } = extractBoxProps(props);
+
+  return (
+    <Box asChild {...boxProps}>
+      <FieldErrorPrimitive
+        ref={ref}
+        className={cn(styles.error(), boxProps.className)}
+        {...restProps}
+      />
+    </Box>
+  );
+});
+
+TextFieldError.displayName = 'TextField.Error';
+
+const TextFieldGroup = forwardRef<HTMLDivElement, TextFieldGroupProps>((props, ref) => {
+  const { boxProps, restProps } = extractBoxProps(props);
+
+  return (
+    <Box asChild {...boxProps}>
+      <div ref={ref} className={cn(styles.inputGroup(), boxProps.className)} {...restProps} />
+    </Box>
+  );
+});
+
+TextFieldGroup.displayName = 'TextField.Group';
+
+const TextFieldInputWrapper = forwardRef<HTMLDivElement, TextFieldInputWrapperProps>(
+  (props, ref) => {
+    const { boxProps, restProps } = extractBoxProps(props);
+
+    return (
+      <Box asChild {...boxProps}>
+        <div ref={ref} className={cn(styles.inputWrapper(), boxProps.className)} {...restProps} />
+      </Box>
+    );
+  }
+);
+
+TextFieldInputWrapper.displayName = 'TextField.InputWrapper';
+
+const TextFieldFloatingLabel = forwardRef<HTMLDivElement, TextFieldFloatingLabelProps>(
+  (props, ref) => {
+    const { boxProps, restProps } = extractBoxProps(props);
+
+    return (
+      <Box asChild {...boxProps}>
+        <div ref={ref} className={cn(styles.floatingLabel(), boxProps.className)} {...restProps} />
+      </Box>
+    );
+  }
+);
+
+TextFieldFloatingLabel.displayName = 'TextField.FloatingLabel';
+
+const TextFieldAddon = forwardRef<HTMLDivElement, TextFieldAddonProps>(
+  ({ align, ...props }, ref) => {
+    const { boxProps, restProps } = extractBoxProps(props);
+
+    return (
+      <Box asChild {...boxProps}>
+        <div
+          ref={ref}
+          data-align={align}
+          className={cn(styles.addon(), boxProps.className)}
+          {...restProps}
+        />
+      </Box>
+    );
+  }
+);
+
+TextFieldAddon.displayName = 'TextField.Addon';
+
+const TextField = Object.assign(
+  forwardRef<HTMLDivElement, TextFieldProps>(({ children, ...props }, ref) => {
+    const { boxProps, restProps } = extractBoxProps(props);
+
+    return (
+      <Box asChild {...boxProps}>
+        <PrimitiveTextField
+          ref={ref}
+          className={cn(styles.textField(), boxProps.className)}
+          {...restProps}
+        >
           {children}
         </PrimitiveTextField>
       </Box>
     );
-  },
+  }),
   {
     Label: TextFieldLabel,
     Input: TextFieldInput,
@@ -156,6 +197,8 @@ const TextField = Object.assign(
     Addon: TextFieldAddon,
   }
 );
+
+TextField.displayName = 'TextField';
 
 export {
   TextField,
