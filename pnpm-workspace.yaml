@@ -15,6 +15,9 @@ catalog:
   vite-plugin-dts: ^5.0.1
   vitest: ^4.1.9
 
+# https://pnpm.io/settings/dependency-resolution#autodedupe
+autoDedupe: true
+
 minimumReleaseAge: 2880 # 2 days
 minimumReleaseAgeExclude:
   - '@orfium/*'
