@@ -59,7 +59,7 @@ const TextFieldLabel = forwardRef<HTMLLabelElement, TextFieldLabelProps>((props,
 TextFieldLabel.displayName = 'TextField.Label';
 
 const TextFieldInput = forwardRef<HTMLInputElement, TextFieldInputProps>(
-  ({ variant = 'normal', placeholder = '', ...props }, ref) => {
+  ({ variant = 'normal', placeholder = ' ', ...props }, ref) => {
     const { boxProps, restProps } = extractBoxProps(props);
 
     return (
