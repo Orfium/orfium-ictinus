@@ -12,8 +12,6 @@ pnpm add -D @orfium/ictinus-mcp
 npx @orfium/ictinus-mcp
 ```
 
-After publishing:
-
 ```json
 {
   "mcpServers": {
@@ -25,7 +23,7 @@ After publishing:
 }
 ```
 
-## Cursor (local monorepo)
+## Local
 
 ```json
 {
@@ -48,7 +46,7 @@ Refresh metadata when APIs/docs change: `pnpm --filter @orfium/ictinus-mcp gener
 | `get_component`     | Overview (import, examples); optional `props` search for definitions    |
 | `get_patterns`      | Storybook composition examples (vanilla ranked first)                   |
 | `get_tokens`        | Design token maps from `@orfium/tokens`                                 |
-| `search_icons`      | Vanilla `*Icon` components and legacy `<Icon name>`                     |
+| `search_icons`      | Vanilla `*Icon` components (`EditIcon`, extends IconPrimitive)          |
 | `get_guides`        | Installation, theme, migration, vanilla-vs-legacy                       |
 
 ## Agent tips
@@ -69,11 +67,9 @@ pnpm --filter @orfium/ictinus-mcp build      # generate + tsc → dist/
 
 Metadata is generated at build time from:
 
-- Component exports + JSDoc/props in `packages/ictinus`
-- Storybook MDX guides in `apps/storybook/docs`
-- CSF stories for usage patterns
-- Token sources in `packages/tokens`
-- Icon unions in `Icon.types.ts`
+- `@orfium/shared` `getDocs()` (react-docgen-typescript → `docs.json`)
+- Storybook MDX guides + CSF patterns
+- Token source files in `packages/tokens`
 
 Commit regenerated `src/data.json` whenever upstream APIs/docs change. The running MCP
 reloads `data.json` when its mtime changes; after code changes, restart the MCP server in Cursor.

@@ -48,7 +48,7 @@ const DialogTrigger = (props: DialogTriggerProps) => <ButtonPrimitive {...props}
 /**
  * Dialog header shortcuts. Prefer `title` / `description` over hand-rolling titles.
  */
-export interface DialogHeaderOwnProps {
+export interface DialogHeaderProps extends Omit<ComponentProps<'div'>, 'title'> {
   /**
    * Renders a `DialogTitle`. When omitted, string `children` are promoted to the title.
    */
@@ -59,10 +59,6 @@ export interface DialogHeaderOwnProps {
   description?: string;
   children?: ReactNode;
 }
-
-export interface DialogHeaderProps
-  extends Omit<ComponentProps<'div'>, 'title'>,
-    DialogHeaderOwnProps {}
 
 /**
  * Dialog chrome for title + description. Prefer `title` / `description` props.

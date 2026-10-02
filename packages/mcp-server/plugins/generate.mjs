@@ -2,28 +2,25 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { generateComponents } from './lib/components.mjs';
-import { generateGuides } from './lib/guides.mjs';
-import { generateIcons } from './lib/icons.mjs';
-import { attachPatterns } from './lib/patterns.mjs';
-import { generateTokens } from './lib/tokens.mjs';
+import {
+  generateComponents,
+  generateGuides,
+  generateIcons,
+  generateTokens,
+} from './generators.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const packageRoot = join(__dirname, '..');
-const repoRoot = join(packageRoot, '..', '..');
-const outPath = join(packageRoot, 'src', 'data.json');
+const outPath = join(__dirname, '..', 'src', 'data.json');
 
 async function main() {
   console.log('Generating Ictinus MCP metadata…');
 
   const [components, guides, icons, tokens] = await Promise.all([
-    generateComponents(repoRoot),
-    generateGuides(repoRoot),
-    generateIcons(repoRoot),
-    generateTokens(repoRoot),
+    generateComponents(),
+    generateGuides(),
+    generateIcons(),
+    generateTokens(),
   ]);
-
-  await attachPatterns(repoRoot, components);
 
   const data = {
     generatedAt: new Date().toISOString(),

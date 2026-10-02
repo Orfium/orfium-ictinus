@@ -3,6 +3,7 @@ export interface PropDefinition {
   description?: string;
   defaultValue?: string;
   required?: boolean;
+  sprinkle?: true;
 }
 
 export interface DeprecationInfo {
@@ -32,6 +33,7 @@ export interface ComponentInfo {
   api: 'vanilla' | 'legacy';
   category?: string[];
   deprecated?: DeprecationInfo;
+  extends?: string;
   props: Record<string, PropDefinition>;
   examples?: Example[];
   sourcePath?: string;
@@ -45,11 +47,12 @@ export interface Guide {
 
 export interface IconInfo {
   name: string;
-  /** `vanilla` = `EditIcon` from `@orfium/ictinus/vanilla`; `legacy` = `<Icon name="edit" />` */
+  /** Prefer vanilla `EditIcon` from `@orfium/ictinus/vanilla` */
   api: 'vanilla' | 'legacy';
   category: string;
   keywords: string[];
   import: string;
+  extends?: string;
 }
 
 export interface DesignTokens {
