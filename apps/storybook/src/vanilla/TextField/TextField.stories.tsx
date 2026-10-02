@@ -41,8 +41,7 @@ export const Default: Story = {
         <TextField.Error>Please enter a valid password.</TextField.Error>
       </TextField>
 
-      <TextField>
-        <TextField.Label>Search</TextField.Label>
+      <TextField aria-label="Search">
         <TextField.InputWrapper>
           <TextField.FloatingLabel>Search</TextField.FloatingLabel>
           <TextField.Input type="search" placeholder="Search products" />
@@ -66,14 +65,26 @@ export const Sizes: Story = {
       </TextField>
 
       <TextField isInvalid>
-        <TextField.Label>Invalid</TextField.Label>
+        <TextField.Label>Invalid (normal)</TextField.Label>
         <TextField.Input variant="normal" placeholder="Invalid value" />
         <TextField.Error>This value is invalid.</TextField.Error>
       </TextField>
 
+      <TextField isInvalid>
+        <TextField.Label>Invalid (compact)</TextField.Label>
+        <TextField.Input variant="compact" placeholder="Invalid value" />
+        <TextField.Error>This value is invalid.</TextField.Error>
+      </TextField>
+
       <TextField isDisabled>
-        <TextField.Label>Disabled</TextField.Label>
+        <TextField.Label>Disabled (normal)</TextField.Label>
         <TextField.Input variant="normal" placeholder="Disabled field" />
+        <TextField.Description>This field is disabled.</TextField.Description>
+      </TextField>
+
+      <TextField isDisabled>
+        <TextField.Label>Disabled (compact)</TextField.Label>
+        <TextField.Input variant="compact" placeholder="Disabled field" />
         <TextField.Description>This field is disabled.</TextField.Description>
       </TextField>
     </Box>
@@ -241,8 +252,7 @@ export const FloatingLabel: Story = {
 
     return (
       <Box display="flex" flexDirection="column" gap="lg" style={{ maxWidth: '24rem' }}>
-        <TextField>
-          <TextField.Label>Email</TextField.Label>
+        <TextField aria-label="Email">
           <TextField.InputWrapper>
             <TextField.FloatingLabel>Email</TextField.FloatingLabel>
             <TextField.Input type="email" placeholder="name@example.com" />
@@ -250,42 +260,7 @@ export const FloatingLabel: Story = {
           <TextField.Description>We’ll only use this for product updates.</TextField.Description>
         </TextField>
 
-        <TextField isInvalid>
-          <TextField.Label>Password</TextField.Label>
-          <TextField.InputWrapper>
-            <TextField.FloatingLabel>Password</TextField.FloatingLabel>
-            <TextField.Input type="password" placeholder="Enter password" />
-          </TextField.InputWrapper>
-          <TextField.Error>Please enter a valid password.</TextField.Error>
-        </TextField>
-
-        <TextField isInvalid>
-          <TextField.Label>Password</TextField.Label>
-          <TextField.InputWrapper>
-            <TextField.FloatingLabel>Password</TextField.FloatingLabel>
-            <TextField.Input type="password" placeholder="Enter password" variant="compact" />
-          </TextField.InputWrapper>
-          <TextField.Error>Please enter a valid password.</TextField.Error>
-        </TextField>
-
-        <TextField isDisabled>
-          <TextField.Label>Search</TextField.Label>
-          <TextField.InputWrapper>
-            <TextField.FloatingLabel>Search</TextField.FloatingLabel>
-            <TextField.Input type="search" placeholder="Search products" />
-          </TextField.InputWrapper>
-        </TextField>
-
-        <TextField isDisabled>
-          <TextField.Label>Search</TextField.Label>
-          <TextField.InputWrapper>
-            <TextField.FloatingLabel>Search</TextField.FloatingLabel>
-            <TextField.Input type="search" placeholder="Search products" variant="compact" />
-          </TextField.InputWrapper>
-        </TextField>
-
-        <TextField>
-          <TextField.Label>Email</TextField.Label>
+        <TextField aria-label="Email">
           <TextField.InputWrapper>
             <TextField.FloatingLabel>Email</TextField.FloatingLabel>
             <TextField.Input type="email" placeholder="name@example.com" variant="compact" />
@@ -293,8 +268,37 @@ export const FloatingLabel: Story = {
           <TextField.Description>We’ll only use this for product updates.</TextField.Description>
         </TextField>
 
-        <TextField>
-          <TextField.Label>Search</TextField.Label>
+        <TextField isInvalid aria-label="Password">
+          <TextField.InputWrapper>
+            <TextField.FloatingLabel>Password</TextField.FloatingLabel>
+            <TextField.Input type="password" placeholder="Enter password" />
+          </TextField.InputWrapper>
+          <TextField.Error>Please enter a valid password.</TextField.Error>
+        </TextField>
+
+        <TextField isInvalid aria-label="Password">
+          <TextField.InputWrapper>
+            <TextField.FloatingLabel>Password</TextField.FloatingLabel>
+            <TextField.Input type="password" placeholder="Enter password" variant="compact" />
+          </TextField.InputWrapper>
+          <TextField.Error>Please enter a valid password.</TextField.Error>
+        </TextField>
+
+        <TextField isDisabled aria-label="Search">
+          <TextField.InputWrapper>
+            <TextField.FloatingLabel>Search</TextField.FloatingLabel>
+            <TextField.Input type="search" placeholder="Search products" />
+          </TextField.InputWrapper>
+        </TextField>
+
+        <TextField isDisabled aria-label="Search">
+          <TextField.InputWrapper>
+            <TextField.FloatingLabel>Search</TextField.FloatingLabel>
+            <TextField.Input type="search" placeholder="Search products" variant="compact" />
+          </TextField.InputWrapper>
+        </TextField>
+
+        <TextField aria-label="Search">
           <TextField.Group>
             <TextField.Addon align="inline-start">
               <SearchIcon aria-hidden="true" />
@@ -324,8 +328,7 @@ export const FloatingLabel: Story = {
           </TextField.Group>
         </TextField>
 
-        <TextField>
-          <TextField.Label>Search</TextField.Label>
+        <TextField aria-label="Search">
           <TextField.Group>
             <TextField.Addon align="inline-start">
               <SearchIcon aria-hidden="true" />

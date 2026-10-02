@@ -12,7 +12,7 @@ export const textField = recipe({
     sprinkles({
       display: 'flex',
       flexDirection: 'column',
-      gap: 'xs'
+      gap: 'xs',
     }),
     style({
       selectors: {
@@ -290,7 +290,6 @@ export const error = recipe({
     sprinkles({
       typography: 'body03',
       color: 'error',
-      mt: 'xs',
     }),
   ],
 });
@@ -325,11 +324,8 @@ export const addon = recipe({
           width: '100%',
           order: 1,
         },
-        '&[data-invalid]': {
+        [`${textField.classNames.base}[data-invalid] &`]: {
           color: vars.color.text.default.error,
-        },
-        '&[data-disabled]': {
-          opacity: 0.5,
         },
       },
     }),
