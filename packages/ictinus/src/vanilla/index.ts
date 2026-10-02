@@ -18,5 +18,6 @@ export * from './Menu';
 export * from './Popover';
 export * from './Table';
 export * from './Text';
+export * from './TextField';
 export * from './ThemeProvider';
 export * from './Tooltip';
