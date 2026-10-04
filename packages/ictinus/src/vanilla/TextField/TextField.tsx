@@ -3,6 +3,7 @@ import type {
   FieldErrorProps,
   InputProps,
   LabelProps,
+  TextAreaProps as PrimitiveTextAreaProps,
   TextFieldProps as PrimitiveTextFieldProps,
   TextProps,
 } from 'react-aria-components';
@@ -10,6 +11,7 @@ import {
   FieldError as FieldErrorPrimitive,
   Input as InputPrimitive,
   Label as LabelPrimitive,
+  TextArea as PrimitiveTextArea,
   TextField as PrimitiveTextField,
   Text as TextPrimitive,
 } from 'react-aria-components';
@@ -23,6 +25,7 @@ import * as styles from './TextField.css';
 type BoxCompatibleProps<P> = Omit<P, keyof Sprinkles | 'className'>;
 
 export type TextFieldProps = BoxProps<'div', BoxCompatibleProps<PrimitiveTextFieldProps>>;
+export type TextAreaProps = BoxProps<'textarea', BoxCompatibleProps<PrimitiveTextAreaProps>>;
 type TextFieldLabelProps = BoxProps<'label', BoxCompatibleProps<LabelProps>>;
 type TextFieldInputProps = BoxProps<'input', BoxCompatibleProps<InputProps>> & {
   variant?: 'normal' | 'compact';
@@ -77,6 +80,22 @@ const TextFieldInput = forwardRef<HTMLInputElement, TextFieldInputProps>(
 );
 
 TextFieldInput.displayName = 'TextField.Input';
+
+const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>((props, ref) => {
+  const { boxProps, restProps } = extractBoxProps(props);
+
+  return (
+    <Box asChild {...boxProps}>
+      <PrimitiveTextArea
+        ref={ref}
+        className={cn(styles.input({ type: 'normal' }), styles.textArea, boxProps.className)}
+        {...restProps}
+      />
+    </Box>
+  );
+});
+
+TextArea.displayName = 'TextArea';
 
 const TextFieldDescription = forwardRef<HTMLSpanElement, TextFieldDescriptionProps>(
   (props, ref) => {
@@ -192,6 +211,7 @@ const TextField = Object.assign(
   {
     Label: TextFieldLabel,
     Input: TextFieldInput,
+    TextArea,
     Description: TextFieldDescription,
     Error: TextFieldError,
     Group: TextFieldGroup,
@@ -204,6 +224,7 @@ const TextField = Object.assign(
 TextField.displayName = 'TextField';
 
 export {
+  TextArea,
   TextField,
   TextFieldAddon,
   TextFieldDescription,

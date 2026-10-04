@@ -293,6 +293,16 @@ export const input = recipe({
   },
 });
 
+export const textArea = style({
+  paddingTop: vars.spacing.lg,
+  paddingBottom: vars.spacing.lg,
+  selectors: {
+    [`${floatingLabelWrapper.classNames.base}:has(> ${floatingLabel.classNames.base}) > &`]: {
+      paddingTop: vars.spacing['2xl'],
+    },
+  },
+});
+
 export const description = recipe({
   base: [
     sprinkles({
