@@ -111,7 +111,6 @@ export const floatingLabelWrapper = recipe({
     }),
     style({
       isolation: 'isolate',
-      overflow: 'hidden',
       selectors: {
         [`${inputGroup.classNames.base} > &`]: {
           flex: 1,
@@ -286,6 +285,9 @@ export const input = recipe({
           h: '7',
         }),
       ],
+      textarea: sprinkles({
+        typography: 'body02',
+      }),
     },
   },
   defaultVariants: {

@@ -22,7 +22,8 @@ export const Default: Story = {
         <TextField.Label>Feedback</TextField.Label>
         <TextField.TextArea
           placeholder="Share your thoughts about our service."
-          style={{ width: '100%', height: '8rem' }}
+          rows={5}
+          style={{ width: '100%' }}
         />
         <TextField.Description>Your feedback helps us improve.</TextField.Description>
       </TextField>

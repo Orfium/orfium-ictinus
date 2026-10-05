@@ -81,19 +81,22 @@ const TextFieldInput = forwardRef<HTMLInputElement, TextFieldInputProps>(
 
 TextFieldInput.displayName = 'TextField.Input';
 
-const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>((props, ref) => {
-  const { boxProps, restProps } = extractBoxProps(props);
+const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
+  ({ placeholder = ' ', ...props }, ref) => {
+    const { boxProps, restProps } = extractBoxProps(props);
 
-  return (
-    <Box asChild {...boxProps}>
-      <PrimitiveTextArea
-        ref={ref}
-        className={cn(styles.input({ type: 'normal' }), styles.textArea, boxProps.className)}
-        {...restProps}
-      />
-    </Box>
-  );
-});
+    return (
+      <Box asChild {...boxProps}>
+        <PrimitiveTextArea
+          ref={ref}
+          placeholder={placeholder}
+          className={cn(styles.input({ type: 'textarea' }), styles.textArea, boxProps.className)}
+          {...restProps}
+        />
+      </Box>
+    );
+  }
+);
 
 TextArea.displayName = 'TextArea';
 
