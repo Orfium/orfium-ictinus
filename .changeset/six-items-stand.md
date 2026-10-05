@@ -1,5 +1,5 @@
 ---
-'@orfium/ictinus': major
+'@orfium/ictinus': minor
 ---
 
 Create vanilla TextArea
