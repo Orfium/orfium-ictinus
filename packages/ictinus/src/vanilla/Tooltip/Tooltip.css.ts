@@ -16,6 +16,15 @@ export const tooltip = recipe({
     style({
       transform: 'translate3d(0, 0, 0)',
       transformOrigin: 'var(--trigger-anchor-point)',
+      // Hide until RAC has computed placement; otherwise unmeasured overlays flash at
+      // fixed top/left 0.
+      // https://github.com/adobe/react-spectrum/issues/10496
+      // https://github.com/adobe/react-spectrum/issues/10680
+      selectors: {
+        '&:not([data-placement])': {
+          visibility: 'hidden',
+        },
+      },
     }),
   ],
   variants: {
