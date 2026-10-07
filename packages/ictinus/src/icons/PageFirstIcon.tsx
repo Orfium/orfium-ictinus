@@ -12,4 +12,4 @@ export const PageFirstIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((prop
   </IconPrimitive>
 ));
 
-PageFirstIcon.displayName = 'PageFirstIcon';
+PageFirstIcon.displayName = '@orfium/ictinus/vanilla/PageFirstIcon';

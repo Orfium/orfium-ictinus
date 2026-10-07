@@ -18,4 +18,4 @@ export const Table = forwardRef<HTMLDivElement, TableProps>(
   }
 );
 
-Table.displayName = 'Table';
+Table.displayName = '@orfium/ictinus/vanilla/Table';

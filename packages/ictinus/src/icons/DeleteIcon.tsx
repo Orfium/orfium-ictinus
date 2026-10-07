@@ -12,4 +12,4 @@ export const DeleteIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, 
   </IconPrimitive>
 ));
 
-DeleteIcon.displayName = 'DeleteIcon';
+DeleteIcon.displayName = '@orfium/ictinus/vanilla/DeleteIcon';

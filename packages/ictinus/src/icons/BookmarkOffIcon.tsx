@@ -14,4 +14,4 @@ export const BookmarkOffIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((pr
   </IconPrimitive>
 ));
 
-BookmarkOffIcon.displayName = 'BookmarkOffIcon';
+BookmarkOffIcon.displayName = '@orfium/ictinus/vanilla/BookmarkOffIcon';

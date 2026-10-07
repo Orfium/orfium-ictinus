@@ -24,4 +24,4 @@ export const UsersIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, r
   </IconPrimitive>
 ));
 
-UsersIcon.displayName = 'UsersIcon';
+UsersIcon.displayName = '@orfium/ictinus/vanilla/UsersIcon';

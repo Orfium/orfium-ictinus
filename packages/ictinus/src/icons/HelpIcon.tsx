@@ -12,4 +12,4 @@ export const HelpIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, re
   </IconPrimitive>
 ));
 
-HelpIcon.displayName = 'HelpIcon';
+HelpIcon.displayName = '@orfium/ictinus/vanilla/HelpIcon';

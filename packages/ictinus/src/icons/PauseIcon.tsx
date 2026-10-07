@@ -12,4 +12,4 @@ export const PauseIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, r
   </IconPrimitive>
 ));
 
-PauseIcon.displayName = 'PauseIcon';
+PauseIcon.displayName = '@orfium/ictinus/vanilla/PauseIcon';

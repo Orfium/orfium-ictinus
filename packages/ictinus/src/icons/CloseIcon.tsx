@@ -12,4 +12,4 @@ export const CloseIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, r
   </IconPrimitive>
 ));
 
-CloseIcon.displayName = 'CloseIcon';
+CloseIcon.displayName = '@orfium/ictinus/vanilla/CloseIcon';

@@ -12,4 +12,4 @@ export const AppsIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, re
   </IconPrimitive>
 ));
 
-AppsIcon.displayName = 'AppsIcon';
+AppsIcon.displayName = '@orfium/ictinus/vanilla/AppsIcon';

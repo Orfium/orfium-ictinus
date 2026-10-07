@@ -12,4 +12,4 @@ export const UnpairIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, 
   </IconPrimitive>
 ));
 
-UnpairIcon.displayName = 'UnpairIcon';
+UnpairIcon.displayName = '@orfium/ictinus/vanilla/UnpairIcon';

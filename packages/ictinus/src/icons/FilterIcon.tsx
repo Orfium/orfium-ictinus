@@ -12,4 +12,4 @@ export const FilterIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, 
   </IconPrimitive>
 ));
 
-FilterIcon.displayName = 'FilterIcon';
+FilterIcon.displayName = '@orfium/ictinus/vanilla/FilterIcon';

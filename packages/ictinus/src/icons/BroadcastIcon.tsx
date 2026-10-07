@@ -12,4 +12,4 @@ export const BroadcastIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((prop
   </IconPrimitive>
 ));
 
-BroadcastIcon.displayName = 'BroadcastIcon';
+BroadcastIcon.displayName = '@orfium/ictinus/vanilla/BroadcastIcon';

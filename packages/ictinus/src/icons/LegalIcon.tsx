@@ -12,4 +12,4 @@ export const LegalIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, r
   </IconPrimitive>
 ));
 
-LegalIcon.displayName = 'LegalIcon';
+LegalIcon.displayName = '@orfium/ictinus/vanilla/LegalIcon';

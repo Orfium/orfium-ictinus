@@ -14,4 +14,4 @@ export const YouTubeIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props,
   </IconPrimitive>
 ));
 
-YouTubeIcon.displayName = 'YouTubeIcon';
+YouTubeIcon.displayName = '@orfium/ictinus/vanilla/YouTubeIcon';

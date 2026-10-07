@@ -12,4 +12,4 @@ export const UploadIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, 
   </IconPrimitive>
 ));
 
-UploadIcon.displayName = 'UploadIcon';
+UploadIcon.displayName = '@orfium/ictinus/vanilla/UploadIcon';

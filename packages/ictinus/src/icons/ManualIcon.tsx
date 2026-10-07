@@ -12,4 +12,4 @@ export const ManualIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, 
   </IconPrimitive>
 ));
 
-ManualIcon.displayName = 'ManualIcon';
+ManualIcon.displayName = '@orfium/ictinus/vanilla/ManualIcon';

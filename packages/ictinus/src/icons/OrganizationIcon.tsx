@@ -12,4 +12,4 @@ export const OrganizationIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((p
   </IconPrimitive>
 ));
 
-OrganizationIcon.displayName = 'OrganizationIcon';
+OrganizationIcon.displayName = '@orfium/ictinus/vanilla/OrganizationIcon';

@@ -12,4 +12,4 @@ export const ArrowLeftIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((prop
   </IconPrimitive>
 ));
 
-ArrowLeftIcon.displayName = 'ArrowLeftIcon';
+ArrowLeftIcon.displayName = '@orfium/ictinus/vanilla/ArrowLeftIcon';

@@ -12,4 +12,4 @@ export const FavoriteIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props
   </IconPrimitive>
 ));
 
-FavoriteIcon.displayName = 'FavoriteIcon';
+FavoriteIcon.displayName = '@orfium/ictinus/vanilla/FavoriteIcon';

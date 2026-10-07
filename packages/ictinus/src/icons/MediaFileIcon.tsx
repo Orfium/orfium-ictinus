@@ -12,4 +12,4 @@ export const MediaFileIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((prop
   </IconPrimitive>
 ));
 
-MediaFileIcon.displayName = 'MediaFileIcon';
+MediaFileIcon.displayName = '@orfium/ictinus/vanilla/MediaFileIcon';

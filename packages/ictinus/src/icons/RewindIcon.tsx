@@ -12,4 +12,4 @@ export const RewindIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, 
   </IconPrimitive>
 ));
 
-RewindIcon.displayName = 'RewindIcon';
+RewindIcon.displayName = '@orfium/ictinus/vanilla/RewindIcon';

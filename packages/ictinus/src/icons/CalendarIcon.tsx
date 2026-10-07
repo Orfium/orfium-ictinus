@@ -12,4 +12,4 @@ export const CalendarIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props
   </IconPrimitive>
 ));
 
-CalendarIcon.displayName = 'CalendarIcon';
+CalendarIcon.displayName = '@orfium/ictinus/vanilla/CalendarIcon';

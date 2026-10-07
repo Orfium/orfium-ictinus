@@ -14,4 +14,4 @@ export const LicenseIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props,
   </IconPrimitive>
 ));
 
-LicenseIcon.displayName = 'LicenseIcon';
+LicenseIcon.displayName = '@orfium/ictinus/vanilla/LicenseIcon';

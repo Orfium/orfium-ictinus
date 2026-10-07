@@ -44,3 +44,4 @@ export function DataTableCounter({
     </Box>
   );
 }
+DataTableCounter.displayName = '@orfium/ictinus/vanilla/DataTableCounter';

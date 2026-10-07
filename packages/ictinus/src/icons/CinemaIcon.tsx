@@ -12,4 +12,4 @@ export const CinemaIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, 
   </IconPrimitive>
 ));
 
-CinemaIcon.displayName = 'CinemaIcon';
+CinemaIcon.displayName = '@orfium/ictinus/vanilla/CinemaIcon';

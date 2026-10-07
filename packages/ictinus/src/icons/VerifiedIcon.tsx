@@ -12,4 +12,4 @@ export const VerifiedIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props
   </IconPrimitive>
 ));
 
-VerifiedIcon.displayName = 'VerifiedIcon';
+VerifiedIcon.displayName = '@orfium/ictinus/vanilla/VerifiedIcon';

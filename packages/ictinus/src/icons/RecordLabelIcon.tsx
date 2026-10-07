@@ -14,4 +14,4 @@ export const RecordLabelIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((pr
   </IconPrimitive>
 ));
 
-RecordLabelIcon.displayName = 'RecordLabelIcon';
+RecordLabelIcon.displayName = '@orfium/ictinus/vanilla/RecordLabelIcon';

@@ -12,4 +12,4 @@ export const SuccessIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props,
   </IconPrimitive>
 ));
 
-SuccessIcon.displayName = 'SuccessIcon';
+SuccessIcon.displayName = '@orfium/ictinus/vanilla/SuccessIcon';

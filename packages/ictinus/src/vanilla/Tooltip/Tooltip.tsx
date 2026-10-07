@@ -67,7 +67,7 @@ const Tooltip = ({
   );
 };
 
-Tooltip.displayName = 'Tooltip';
+Tooltip.displayName = '@orfium/ictinus/vanilla/Tooltip';
 
 type TooltipContentProps = Omit<TooltipPrimitiveProps, 'children'> &
   ExtendProps<BoxProps, NonNullable<styles.TooltipVariants>> & {
@@ -115,7 +115,7 @@ const TooltipContent = ({
   );
 };
 
-TooltipContent.displayName = 'TooltipContent';
+TooltipContent.displayName = '@orfium/ictinus/vanilla/TooltipContent';
 
 function TooltipTrigger({ ...props }: ComponentProps<typeof Focusable>) {
   const { triggerRef } = useContext(TooltipContext);
@@ -123,7 +123,7 @@ function TooltipTrigger({ ...props }: ComponentProps<typeof Focusable>) {
   return <Focusable ref={triggerRef} data-slot="tooltip-trigger" {...props} />;
 }
 
-TooltipTrigger.displayName = 'TooltipTrigger';
+TooltipTrigger.displayName = '@orfium/ictinus/vanilla/TooltipTrigger';
 
 const hasTruncatedContent = (element: HTMLElement) => {
   let truncated = false;

@@ -12,4 +12,4 @@ export const ConflictIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props
   </IconPrimitive>
 ));
 
-ConflictIcon.displayName = 'ConflictIcon';
+ConflictIcon.displayName = '@orfium/ictinus/vanilla/ConflictIcon';

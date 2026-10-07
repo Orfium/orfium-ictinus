@@ -19,7 +19,7 @@ export const Nav = forwardRef(({ children, ...props }: NavProps, ref: RefObject<
   );
 });
 
-Nav.displayName = 'Nav';
+Nav.displayName = '@orfium/ictinus/vanilla/Nav';
 
 const NavItemContext = createContext<{ isActive?: boolean; isDisabled?: boolean }>({});
 
@@ -47,7 +47,7 @@ export const NavItem = forwardRef(
   }
 );
 
-NavItem.displayName = 'NavItem';
+NavItem.displayName = '@orfium/ictinus/vanilla/NavItem';
 
 type NavLinkProps = BoxProps<
   'a',
@@ -120,7 +120,7 @@ export const NavLink = forwardRef(
   }
 );
 
-NavLink.displayName = 'NavLink';
+NavLink.displayName = '@orfium/ictinus/vanilla/NavLink';
 
 type NavCountProps = BoxProps<
   'span',
@@ -144,7 +144,7 @@ export const NavCount = forwardRef((props: NavCountProps, ref: RefObject<HTMLSpa
   );
 });
 
-NavCount.displayName = 'NavCount';
+NavCount.displayName = '@orfium/ictinus/vanilla/NavCount';
 
 type SubNavListProps = BoxProps<'ul'>;
 
@@ -162,7 +162,7 @@ export const SubNavList = forwardRef(
   }
 );
 
-SubNavList.displayName = 'SubNavList';
+SubNavList.displayName = '@orfium/ictinus/vanilla/SubNavList';
 
 const SubNavItemContext = createContext<{ isActive?: boolean; isDisabled?: boolean }>({});
 
@@ -196,7 +196,7 @@ export const SubNavItem = forwardRef(
   }
 );
 
-SubNavItem.displayName = 'SubNavItem';
+SubNavItem.displayName = '@orfium/ictinus/vanilla/SubNavItem';
 
 export const SubNavLink = forwardRef(
   (
@@ -262,4 +262,4 @@ export const SubNavLink = forwardRef(
   }
 );
 
-SubNavLink.displayName = 'SubNavLink';
+SubNavLink.displayName = '@orfium/ictinus/vanilla/SubNavLink';

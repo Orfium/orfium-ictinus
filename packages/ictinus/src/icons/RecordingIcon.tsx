@@ -12,4 +12,4 @@ export const RecordingIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((prop
   </IconPrimitive>
 ));
 
-RecordingIcon.displayName = 'RecordingIcon';
+RecordingIcon.displayName = '@orfium/ictinus/vanilla/RecordingIcon';

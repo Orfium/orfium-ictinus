@@ -12,4 +12,4 @@ export const CompositionIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((pr
   </IconPrimitive>
 ));
 
-CompositionIcon.displayName = 'CompositionIcon';
+CompositionIcon.displayName = '@orfium/ictinus/vanilla/CompositionIcon';

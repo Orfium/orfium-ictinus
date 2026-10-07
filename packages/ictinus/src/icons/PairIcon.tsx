@@ -12,4 +12,4 @@ export const PairIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, re
   </IconPrimitive>
 ));
 
-PairIcon.displayName = 'PairIcon';
+PairIcon.displayName = '@orfium/ictinus/vanilla/PairIcon';

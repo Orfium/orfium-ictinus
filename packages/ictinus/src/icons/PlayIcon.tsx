@@ -12,4 +12,4 @@ export const PlayIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, re
   </IconPrimitive>
 ));
 
-PlayIcon.displayName = 'PlayIcon';
+PlayIcon.displayName = '@orfium/ictinus/vanilla/PlayIcon';
