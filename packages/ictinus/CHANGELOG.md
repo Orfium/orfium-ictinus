@@ -1,5 +1,11 @@
 # @orfium/ictinus
 
+## 5.46.7
+
+### Patch Changes
+
+- 14babf2: fix tooltip flash on exit
+
 ## 5.46.6
 
 ### Patch Changes
