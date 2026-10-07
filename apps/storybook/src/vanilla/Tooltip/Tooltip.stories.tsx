@@ -23,9 +23,7 @@ export const Default: Story = {
   render: () => (
     <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" flex="1">
       <Tooltip>
-        <TooltipTrigger>
-          <Button variant="secondary">Hover me</Button>
-        </TooltipTrigger>
+        <Button variant="secondary">Hover me</Button>
         <TooltipContent>It was a dark and stormy night</TooltipContent>
       </Tooltip>
     </Box>
@@ -36,11 +34,9 @@ export const Inverse: Story = {
   render: () => (
     <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" flex="1">
       <Tooltip>
-        <TooltipTrigger>
-          <Button variant="secondary" circle iconOnly aria-label="More info">
-            <InformationalIcon />
-          </Button>
-        </TooltipTrigger>
+        <Button variant="secondary" circle iconOnly aria-label="More info">
+          <InformationalIcon />
+        </Button>
         <TooltipContent inverse>It was a dark and stormy night</TooltipContent>
       </Tooltip>
     </Box>
@@ -61,12 +57,9 @@ export const Controlled: Story = {
         flex="1"
       >
         <Tooltip onOpenChange={setOpen} isOpen={open}>
-          <TooltipTrigger>
-            <Button variant="secondary">Hover me</Button>
-          </TooltipTrigger>
+          <Button variant="secondary">Hover me</Button>
           <TooltipContent>This is a controlled tooltip</TooltipContent>
         </Tooltip>
-
         <Text typography="body02">Open: {open ? 'true' : 'false'}</Text>
       </Box>
     );
@@ -84,35 +77,27 @@ export const Placement: Story = {
       gap="3xl"
     >
       <Tooltip defaultOpen>
-        <TooltipTrigger>
-          <Button variant="secondary" circle iconOnly aria-label="More info">
-            <InformationalIcon />
-          </Button>
-        </TooltipTrigger>
+        <Button variant="secondary" circle iconOnly aria-label="More info">
+          <InformationalIcon />
+        </Button>
         <TooltipContent placement="top">It was a dark and stormy night</TooltipContent>
       </Tooltip>
       <Tooltip defaultOpen>
-        <TooltipTrigger>
-          <Button variant="secondary" circle iconOnly aria-label="More info">
-            <InformationalIcon />
-          </Button>
-        </TooltipTrigger>
+        <Button variant="secondary" circle iconOnly aria-label="More info">
+          <InformationalIcon />
+        </Button>
         <TooltipContent placement="right">It was a dark and stormy night</TooltipContent>
       </Tooltip>
       <Tooltip defaultOpen>
-        <TooltipTrigger>
-          <Button variant="secondary" circle iconOnly aria-label="More info">
-            <InformationalIcon />
-          </Button>
-        </TooltipTrigger>
+        <Button variant="secondary" circle iconOnly aria-label="More info">
+          <InformationalIcon />
+        </Button>
         <TooltipContent placement="left">It was a dark and stormy night</TooltipContent>
       </Tooltip>
       <Tooltip defaultOpen>
-        <TooltipTrigger>
-          <Button variant="secondary" circle iconOnly aria-label="More info">
-            <InformationalIcon />
-          </Button>
-        </TooltipTrigger>
+        <Button variant="secondary" circle iconOnly aria-label="More info">
+          <InformationalIcon />
+        </Button>
         <TooltipContent placement="bottom">It was a dark and stormy night</TooltipContent>
       </Tooltip>
     </Box>
@@ -168,16 +153,11 @@ export const Delay: Story = {
   render: () => (
     <Box display="flex" alignItems="center" justifyContent="center" flex="1" gap="lg">
       <Tooltip delay={0} closeDelay={0}>
-        <TooltipTrigger>
-          <Button variant="secondary">Delay duration 0ms</Button>
-        </TooltipTrigger>
+        <Button variant="secondary">Delay duration 0ms</Button>
         <TooltipContent>It was a dark and stormy night</TooltipContent>
       </Tooltip>
-
       <Tooltip>
-        <TooltipTrigger>
-          <Button variant="secondary">Delay duration 500ms</Button>
-        </TooltipTrigger>
+        <Button variant="secondary">Delay duration 500ms</Button>
         <TooltipContent>It was a dark and stormy night</TooltipContent>
       </Tooltip>
     </Box>
@@ -188,9 +168,7 @@ export const MaxWidth: Story = {
   render: () => (
     <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" flex="1">
       <Tooltip defaultOpen>
-        <TooltipTrigger>
-          <Button variant="secondary">Hover me</Button>
-        </TooltipTrigger>
+        <Button variant="secondary">Hover me</Button>
         <TooltipContent maxW="21">It was a dark and stormy night</TooltipContent>
       </Tooltip>
     </Box>
@@ -201,9 +179,7 @@ export const CustomTheme: Story = {
   render: () => (
     <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" flex="1">
       <Tooltip defaultOpen>
-        <TooltipTrigger>
-          <Button variant="secondary">Hover me</Button>
-        </TooltipTrigger>
+        <Button variant="secondary">Hover me</Button>
         <TooltipContent maxW="21" bg="palette.warning.muted" color="active">
           It was a dark and stormy night
         </TooltipContent>
