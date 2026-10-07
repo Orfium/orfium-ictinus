@@ -12,4 +12,4 @@ export const EyeIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, ref
   </IconPrimitive>
 ));
 
-EyeIcon.displayName = 'EyeIcon';
+EyeIcon.displayName = '@orfium/ictinus/vanilla/EyeIcon';

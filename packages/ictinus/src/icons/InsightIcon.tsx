@@ -12,4 +12,4 @@ export const InsightIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props,
   </IconPrimitive>
 ));
 
-InsightIcon.displayName = 'InsightIcon';
+InsightIcon.displayName = '@orfium/ictinus/vanilla/InsightIcon';

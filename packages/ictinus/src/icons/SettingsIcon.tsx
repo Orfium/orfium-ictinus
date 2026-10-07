@@ -12,4 +12,4 @@ export const SettingsIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props
   </IconPrimitive>
 ));
 
-SettingsIcon.displayName = 'SettingsIcon';
+SettingsIcon.displayName = '@orfium/ictinus/vanilla/SettingsIcon';

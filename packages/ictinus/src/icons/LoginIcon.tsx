@@ -12,4 +12,4 @@ export const LoginIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, r
   </IconPrimitive>
 ));
 
-LoginIcon.displayName = 'LoginIcon';
+LoginIcon.displayName = '@orfium/ictinus/vanilla/LoginIcon';

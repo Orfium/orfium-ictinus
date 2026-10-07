@@ -14,4 +14,4 @@ export const KeywordIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props,
   </IconPrimitive>
 ));
 
-KeywordIcon.displayName = 'KeywordIcon';
+KeywordIcon.displayName = '@orfium/ictinus/vanilla/KeywordIcon';

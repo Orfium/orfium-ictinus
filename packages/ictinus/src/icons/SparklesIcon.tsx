@@ -12,4 +12,4 @@ export const SparklesIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props
   </IconPrimitive>
 ));
 
-SparklesIcon.displayName = 'SparklesIcon';
+SparklesIcon.displayName = '@orfium/ictinus/vanilla/SparklesIcon';

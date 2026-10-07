@@ -12,4 +12,4 @@ export const CheckIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, r
   </IconPrimitive>
 ));
 
-CheckIcon.displayName = 'CheckIcon';
+CheckIcon.displayName = '@orfium/ictinus/vanilla/CheckIcon';

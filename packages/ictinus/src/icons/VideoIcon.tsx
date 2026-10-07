@@ -12,4 +12,4 @@ export const VideoIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, r
   </IconPrimitive>
 ));
 
-VideoIcon.displayName = 'VideoIcon';
+VideoIcon.displayName = '@orfium/ictinus/vanilla/VideoIcon';

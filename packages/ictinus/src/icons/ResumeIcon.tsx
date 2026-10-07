@@ -16,4 +16,4 @@ export const ResumeIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, 
   </IconPrimitive>
 ));
 
-ResumeIcon.displayName = 'ResumeIcon';
+ResumeIcon.displayName = '@orfium/ictinus/vanilla/ResumeIcon';

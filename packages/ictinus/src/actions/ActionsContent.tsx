@@ -16,4 +16,4 @@ export const ActionsContent = forwardRef<HTMLDivElement, ActionsContentProps>(
   }
 );
 
-ActionsContent.displayName = 'ActionsContent';
+ActionsContent.displayName = '@orfium/ictinus/vanilla/ActionsContent';

@@ -12,4 +12,4 @@ export const UnlockIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, 
   </IconPrimitive>
 ));
 
-UnlockIcon.displayName = 'UnlockIcon';
+UnlockIcon.displayName = '@orfium/ictinus/vanilla/UnlockIcon';

@@ -12,4 +12,4 @@ export const LockIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, re
   </IconPrimitive>
 ));
 
-LockIcon.displayName = 'LockIcon';
+LockIcon.displayName = '@orfium/ictinus/vanilla/LockIcon';

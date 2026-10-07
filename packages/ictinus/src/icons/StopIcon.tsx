@@ -12,4 +12,4 @@ export const StopIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, re
   </IconPrimitive>
 ));
 
-StopIcon.displayName = 'StopIcon';
+StopIcon.displayName = '@orfium/ictinus/vanilla/StopIcon';

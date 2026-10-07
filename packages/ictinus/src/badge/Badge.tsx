@@ -33,7 +33,7 @@ export const Badge = forwardRef<HTMLSpanElement, BadgeProps>(
   }
 );
 
-Badge.displayName = 'Badge';
+Badge.displayName = '@orfium/ictinus/vanilla/Badge';
 
 export type CodeBadgeProps = Omit<BadgeProps, 'colorScheme'>;
 
@@ -61,4 +61,4 @@ export const CodeBadge = forwardRef<HTMLSpanElement, CodeBadgeProps>(
   }
 );
 
-CodeBadge.displayName = 'CodeBadge';
+CodeBadge.displayName = '@orfium/ictinus/vanilla/CodeBadge';

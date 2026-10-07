@@ -9,4 +9,4 @@ export const StatusIndicatorIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>
   </IconPrimitive>
 ));
 
-StatusIndicatorIcon.displayName = 'StatusIndicatorIcon';
+StatusIndicatorIcon.displayName = '@orfium/ictinus/vanilla/StatusIndicatorIcon';

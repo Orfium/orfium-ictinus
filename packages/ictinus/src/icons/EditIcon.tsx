@@ -12,4 +12,4 @@ export const EditIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, re
   </IconPrimitive>
 ));
 
-EditIcon.displayName = 'EditIcon';
+EditIcon.displayName = '@orfium/ictinus/vanilla/EditIcon';

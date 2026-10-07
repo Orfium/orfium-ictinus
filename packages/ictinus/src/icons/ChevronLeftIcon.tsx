@@ -12,4 +12,4 @@ export const ChevronLeftIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((pr
   </IconPrimitive>
 ));
 
-ChevronLeftIcon.displayName = 'ChevronLeftIcon';
+ChevronLeftIcon.displayName = '@orfium/ictinus/vanilla/ChevronLeftIcon';

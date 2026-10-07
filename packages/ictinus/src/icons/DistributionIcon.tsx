@@ -12,4 +12,4 @@ export const DistributionIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((p
   </IconPrimitive>
 ));
 
-DistributionIcon.displayName = 'DistributionIcon';
+DistributionIcon.displayName = '@orfium/ictinus/vanilla/DistributionIcon';

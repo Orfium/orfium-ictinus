@@ -12,4 +12,4 @@ export const TelevisionIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((pro
   </IconPrimitive>
 ));
 
-TelevisionIcon.displayName = 'TelevisionIcon';
+TelevisionIcon.displayName = '@orfium/ictinus/vanilla/TelevisionIcon';

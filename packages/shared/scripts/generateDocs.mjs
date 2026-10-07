@@ -87,7 +87,8 @@ function normalizeDisplayName(displayName, filePath, surfaces) {
 }
 
 function generateDocs() {
-  const { legacy, vanilla } = getExportedComponentsFromSource();
+  const surfaces = getExportedComponentsFromSource();
+  const { legacy, vanilla } = surfaces;
   const parser = docgen.withCustomConfig(path.resolve(ictinusRoot, 'tsconfig.json'), {
     savePropValueAsString: true,
     shouldExtractValuesFromUnion: true,
@@ -182,8 +183,96 @@ function generateDocs() {
       return false;
     });
 
-  return collapseIconDocs(dedupeByDisplayName(processed));
+  const withStubs = addMissingExportStubs(processed, surfaces);
+  return collapseIconDocs(dedupeByDisplayName(withStubs));
 }
+
+/**
+ * react-docgen-typescript skips some public components (zero-arg functions,
+ * generic forwardRef casts). Emit minimal stubs so agents can still find them.
+ *
+ * @param {Array<{ displayName: string }>} docs
+ * @param {{ legacy: Set<string>, vanilla: Set<string>, program: ts.Program, typeChecker: ts.TypeChecker }} surfaces
+ */
+function addMissingExportStubs(docs, { legacy, vanilla, program, typeChecker }) {
+  const documented = new Set(
+    docs.map((doc) => `${resolveApi(doc.displayName)}:${docsShortName(doc.displayName)}`),
+  );
+
+  /** @type {Array<{ displayName: string, props: [], tags: { api: string } }>} */
+  const stubs = [];
+
+  /** @type {Array<{ api: 'vanilla' | 'legacy', prefix: string, names: Set<string>, entry: string }>} */
+  const entries = [
+    {
+      api: 'vanilla',
+      prefix: VANILLA_PREFIX,
+      names: vanilla,
+      entry: path.join(srcRoot, 'vanilla/index.ts'),
+    },
+    {
+      api: 'legacy',
+      prefix: LEGACY_PREFIX,
+      names: legacy,
+      entry: path.join(srcRoot, 'index.ts'),
+    },
+  ];
+
+  for (const { api, prefix, names, entry } of entries) {
+    const sourceFile = program.getSourceFile(entry);
+    if (!sourceFile) continue;
+
+    const moduleSymbol = typeChecker.getSymbolAtLocation(sourceFile);
+    if (!moduleSymbol) continue;
+
+    /** @type {Map<string, ts.Symbol>} */
+    const exportSymbols = new Map();
+    for (const exportSymbol of typeChecker.getExportsOfModule(moduleSymbol)) {
+      exportSymbols.set(exportSymbol.getName(), exportSymbol);
+    }
+
+    for (const name of names) {
+      if (api === 'legacy' && vanilla.has(name)) continue;
+      if (documented.has(`${api}:${name}`)) continue;
+
+      const exportSymbol = exportSymbols.get(name);
+      if (!exportSymbol || !isCallableComponentExport(exportSymbol, sourceFile, typeChecker)) {
+        continue;
+      }
+
+      console.warn(
+        `docgen missed ${api}:${name}; emitting minimal stub (props unknown)`,
+      );
+      stubs.push({
+        displayName: `${prefix}${name}`,
+        props: [],
+        tags: { api },
+      });
+      documented.add(`${api}:${name}`);
+    }
+  }
+
+  return stubs.length ? [...docs, ...stubs] : docs;
+}
+
+/**
+ * @param {ts.Symbol} exportSymbol
+ * @param {ts.SourceFile} sourceFile
+ * @param {ts.TypeChecker} typeChecker
+ */
+function isCallableComponentExport(exportSymbol, sourceFile, typeChecker) {
+  const resolved =
+    exportSymbol.flags & ts.SymbolFlags.Alias
+      ? typeChecker.getAliasedSymbol(exportSymbol)
+      : exportSymbol;
+  if (!(resolved.flags & ts.SymbolFlags.Value)) return false;
+
+  const type = typeChecker.getTypeOfSymbolAtLocation(resolved, sourceFile);
+  return type.getCallSignatures().length > 0;
+}
+
+/** Glyph icons are `FooIcon`; bare `Icon` is the named-icon component. */
+const isGlyphIcon = (name) => /.+Icon$/.test(name);
 
 /**
  * @param {Array<{ displayName: string, props: unknown[], tags: Record<string, string> }>} docs
@@ -191,7 +280,7 @@ function generateDocs() {
 function collapseIconDocs(docs) {
   return docs.map((doc) => {
     const name = docsShortName(doc.displayName);
-    if (!name.endsWith('Icon') || name === 'IconPrimitive') return doc;
+    if (!isGlyphIcon(name)) return doc;
     return {
       ...doc,
       props: [],
@@ -210,7 +299,14 @@ function dedupeByDisplayName(docs) {
   });
 }
 
-/** @returns {{ legacy: Set<string>, vanilla: Set<string> }} */
+/**
+ * @returns {{
+ *   legacy: Set<string>,
+ *   vanilla: Set<string>,
+ *   program: ts.Program,
+ *   typeChecker: ts.TypeChecker,
+ * }}
+ */
 function getExportedComponentsFromSource() {
   const pkg = JSON.parse(fs.readFileSync(path.join(ictinusRoot, 'package.json'), 'utf8'));
 
@@ -256,7 +352,7 @@ function getExportedComponentsFromSource() {
     });
   }
 
-  return { legacy, vanilla };
+  return { legacy, vanilla, program, typeChecker };
 }
 
 const docs = generateDocs();

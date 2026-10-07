@@ -49,10 +49,34 @@ const CATEGORY_BY_NAME = [
 
 /**
  * @typedef {import('../src/types.js').ComponentInfo} ComponentInfo
+ * @typedef {import('../src/types.js').DeprecationInfo} DeprecationInfo
  * @typedef {import('../src/types.js').DesignTokens} DesignTokens
  * @typedef {import('../src/types.js').Guide} Guide
  * @typedef {import('../src/types.js').IconInfo} IconInfo
  */
+
+/** Glyph icons are `FooIcon`; bare `Icon` is the named-icon component. */
+const isGlyphIcon = (name) => /.+Icon$/.test(name);
+
+/**
+ * @param {string} text
+ * @returns {DeprecationInfo}
+ */
+function parseDeprecatedTag(text) {
+  const message = text?.trim() || 'deprecated';
+  const sinceMatch = message.match(/since\s+([\d.]+)/i);
+  // Prefer "use … instead" over the first `{@link}` (often the deprecated name).
+  const useMatch = message.match(
+    /use\s+(?:vanilla\s+)?(?:\{@link\s+([^}]+)\}|`?([A-Za-z0-9_./]+)`?)/i,
+  );
+  const replacement = (useMatch?.[1] || useMatch?.[2])?.trim();
+
+  return {
+    message,
+    ...(sinceMatch?.[1] ? { since: sinceMatch[1] } : {}),
+    ...(replacement ? { replacement } : {}),
+  };
+}
 
 /**
  * @returns {Promise<Record<string, ComponentInfo>>}
@@ -65,7 +89,7 @@ export async function generateComponents() {
   for (const doc of docs) {
     const name = docsShortName(doc.displayName);
     if (SKIP.has(name)) continue;
-    if (name.endsWith('Icon') && name !== 'IconPrimitive') continue;
+    if (isGlyphIcon(name)) continue;
 
     const api = resolveApi(doc.displayName);
     if (api !== 'vanilla' && api !== 'legacy') continue;
@@ -92,6 +116,9 @@ export async function generateComponents() {
     };
 
     if (doc.tags?.extends) component.extends = doc.tags.extends;
+    if (doc.tags?.deprecated) {
+      component.deprecated = parseDeprecatedTag(doc.tags.deprecated);
+    }
 
     components[id] = component;
   }
@@ -114,7 +141,7 @@ export async function generateIcons() {
 
   for (const doc of docs) {
     const name = docsShortName(doc.displayName);
-    if (!name.endsWith('Icon') || name === 'IconPrimitive') continue;
+    if (!isGlyphIcon(name)) continue;
 
     const api = resolveApi(doc.displayName) ?? 'vanilla';
     if (api !== 'vanilla') continue;

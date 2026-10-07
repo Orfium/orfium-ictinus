@@ -12,4 +12,4 @@ export const ThumbsUpIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props
   </IconPrimitive>
 ));
 
-ThumbsUpIcon.displayName = 'ThumbsUpIcon';
+ThumbsUpIcon.displayName = '@orfium/ictinus/vanilla/ThumbsUpIcon';

@@ -1,5 +1,6 @@
 import { Link } from '@orfium/ictinus';
 import {
+  Avatar,
   Badge,
   Box,
   Button,
@@ -12,9 +13,16 @@ import {
   DataTableEditColumns,
   DataTableHeader,
   DownloadIcon,
+  FavoriteIcon,
   FileIcon,
   LockIcon,
-  Skeleton,
+  Nav,
+  NavCount,
+  NavItem,
+  NavLink,
+  SubNavItem,
+  SubNavLink,
+  SubNavList,
   Text,
   Tooltip,
   TooltipContent,
@@ -30,10 +38,19 @@ import {
   type VisibilityState,
 } from '@tanstack/react-table';
 
-import { useState } from 'react';
+import { useState, type MouseEvent } from 'react';
 import * as styles from './App.css';
 
 function App() {
+  const [activeId, setActiveId] = useState('bing-sub-1');
+
+  const select = (id: string) => (e: MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    setActiveId(id);
+  };
+
+  const bingActive = activeId === 'bing' || activeId.startsWith('bing-sub-');
+
   const [columnPinning, setColumnPinning] = useState<ColumnPinningState>({
     left: ['select', 'firstName'],
   });
@@ -70,35 +87,147 @@ function App() {
 
   return (
     <>
-      <Box display="flex">
-        <Badge colorScheme="purple">Test</Badge>
-        <Skeleton w="22" h="8" />
-        <Text typography="headline02" fontFamily="outfit" fontWeight="semibold" color="active">
-          Earnings & Reports
-        </Text>
+      <Box
+        position="relative"
+        px="lg"
+        py="sm"
+        display="flex"
+        alignItems="center"
+        justifyContent="space-between"
+        bg="default"
+        boxShadow="1"
+      >
+        <Box display="flex" alignItems="center" gap="md">
+          <Text typography="headline02" fontFamily="outfit" fontWeight="semibold" color="active">
+            App
+          </Text>
+          <Badge colorScheme="purple">Badge</Badge>
+        </Box>
+        <Avatar colorScheme="orange" size="3" initials="G" />
       </Box>
       <Box display="flex">
-        <Box display="flex" flexShrink="0" bg="alt" style={{ width: '308px' }}></Box>
-        <Box p="3xl" w="full" style={{ containerType: 'inline-size' }}>
-          <Box p="2xl" boxShadow="2" display="flex" gap="lg" w="full" className={styles.container}>
-            <Box display="grid" gap="lg" flex="1" w="full" className={styles.grid}>
-              <Box p="lg" border="1" rounded="2">
-                <Text typography="title01">Include other works</Text>
+        <Box py="lg" display="flex" flexShrink="0" bg="alt" style={{ width: '308px' }}>
+          <Nav>
+            <NavItem isActive={bingActive}>
+              <NavLink href="#bing" onClick={select('bing-sub-1')}>
+                <FavoriteIcon />
+                Bing
+                <NavCount>000</NavCount>
+              </NavLink>
+              <SubNavList>
+                <SubNavItem isActive={activeId === 'bing-sub-1'}>
+                  <SubNavLink onClick={select('bing-sub-1')}>
+                    Sub-tab 1
+                    <FavoriteIcon />
+                  </SubNavLink>
+                </SubNavItem>
+                <SubNavItem isActive={activeId === 'bing-sub-2'}>
+                  <SubNavLink href="#bing-sub-2" onClick={select('bing-sub-2')}>
+                    Sub-tab 2
+                  </SubNavLink>
+                </SubNavItem>
+                <SubNavItem isDisabled isActive={activeId === 'bing-sub-3'}>
+                  <SubNavLink href="#bing-sub-3" onClick={select('bing-sub-3')}>
+                    Sub-tab 3
+                  </SubNavLink>
+                </SubNavItem>
+              </SubNavList>
+            </NavItem>
+            <NavItem isActive={activeId === 'geller'}>
+              <NavLink href="#geller" onClick={select('geller')}>
+                Geller
+              </NavLink>
+            </NavItem>
+            <NavItem isDisabled isActive={activeId === 'green'}>
+              <NavLink href="#green" onClick={select('green')}>
+                Green
+              </NavLink>
+              <SubNavList>
+                <Tooltip>
+                  <TooltipTrigger>
+                    <SubNavItem isActive={activeId === 'green-sub-1'}>
+                      <SubNavLink href="#green-sub-1" onClick={select('green-sub-1')}>
+                        Sub-tab 1
+                        <FavoriteIcon />
+                      </SubNavLink>
+                    </SubNavItem>
+                  </TooltipTrigger>
+                  <TooltipContent placement="right">
+                    To enable Green, Bing must be completed first
+                  </TooltipContent>
+                </Tooltip>
+                <SubNavItem isActive={activeId === 'green-sub-2'}>
+                  <SubNavLink href="#green-sub-2" onClick={select('green-sub-2')}>
+                    Sub-tab 2
+                  </SubNavLink>
+                </SubNavItem>
+                <SubNavItem isDisabled isActive={activeId === 'green-sub-3'}>
+                  <SubNavLink href="#green-sub-3" onClick={select('green-sub-3')}>
+                    Sub-tab 3
+                  </SubNavLink>
+                </SubNavItem>
+              </SubNavList>
+            </NavItem>
+          </Nav>
+        </Box>
+        <Box
+          p="3xl"
+          w="full"
+          display="flex"
+          flexDirection="column"
+          gap="2xl"
+          style={{ containerType: 'inline-size' }}
+        >
+          <DataTable table={table}>
+            <DataTableHeader>
+              <Box display="flex" alignItems="center" gap="lg">
+                <DataTableCounter singular="Friend" plural="Friends" />
+                <DataTableBulkActions>
+                  <Button
+                    size="compact"
+                    onPress={() => {
+                      const selectedData = table
+                        .getSelectedRowModel()
+                        .rows.map((row) => row.original);
+                      alert(JSON.stringify(selectedData, null, 2));
+                    }}
+                  >
+                    Bulk
+                  </Button>
+                  <Button size="compact">Bulk 2</Button>
+                </DataTableBulkActions>
               </Box>
-              <Box p="lg" border="1" rounded="2">
+              <DataTableEditColumns />
+            </DataTableHeader>
+            <DataTableBody roundedT="0" />
+          </DataTable>
+          <Box
+            p="2xl"
+            borderRadius="3"
+            boxShadow="2"
+            display="flex"
+            gap="lg"
+            w="full"
+            className={styles.container}
+          >
+            <Box display="grid" gap="lg" flex="1" w="full" className={styles.grid}>
+              <Box p="lg" border="1" borderColor="decorative.default" rounded="2">
+                <Text typography="title01">Item</Text>
+              </Box>
+              <Box p="lg" border="1" borderColor="decorative.default" rounded="2">
                 <Text typography="title01">-</Text>
               </Box>
-              <Box p="lg" border="1" rounded="2">
-                <Text typography="title01">25.08.2022 15:40 PM</Text>
+              <Box p="lg" border="1" borderColor="decorative.default" rounded="2">
+                <Text typography="title01">Item</Text>
               </Box>
-              <Box p="lg" border="1" rounded="2">
-                <Text typography="title01">Include other works</Text>
+              <Box p="lg" border="1" borderColor="decorative.default" rounded="2">
+                <Text typography="title01">Item</Text>
               </Box>
-              <Box p="lg" border="1" rounded="2">
-                <Text typography="title01">Include other works</Text>
+              <Box p="lg" border="1" borderColor="decorative.default" rounded="2">
+                <Text typography="title01">Item</Text>
               </Box>
-              <Box p="lg" border="1" rounded="2">
-                <Text typography="title01">25.08.2022 15:40 PM</Text>
+              <Box p="lg" border="1" borderColor="decorative.default" rounded="2">
+                <Text typography="title01">Item</Text>
               </Box>
             </Box>
             <Box
@@ -116,7 +245,7 @@ function App() {
                   <FileIcon color="indicator.brand" />
                   <Link>
                     <Text wordBreak="break-all" lineClamp="1">
-                      tmp4ftmtjcn_modified_relinquish_automation_tests.V22
+                      file
                     </Text>
                   </Link>
                 </Box>
@@ -128,33 +257,11 @@ function App() {
           </Box>
         </Box>
       </Box>
-      <DataTable table={table}>
-        <DataTableHeader>
-          <Box display="flex" alignItems="center" gap="lg">
-            <DataTableCounter singular="Friend" plural="Friends" />
-            <DataTableBulkActions>
-              <Button
-                size="compact"
-                onPress={() => {
-                  const selectedData = table.getSelectedRowModel().rows.map((row) => row.original);
-                  alert(JSON.stringify(selectedData, null, 2));
-                }}
-              >
-                Bulk
-              </Button>
-              <Button size="compact">Bulk 2</Button>
-            </DataTableBulkActions>
-          </Box>
-          <DataTableEditColumns />
-        </DataTableHeader>
-        <DataTableBody roundedT="0" />
-      </DataTable>
     </>
   );
 }
 
 export default App;
-
 export const data = [
   {
     firstName: 'Rachel',

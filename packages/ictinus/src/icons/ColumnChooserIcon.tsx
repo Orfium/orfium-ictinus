@@ -12,4 +12,4 @@ export const ColumnChooserIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((
   </IconPrimitive>
 ));
 
-ColumnChooserIcon.displayName = 'ColumnChooserIcon';
+ColumnChooserIcon.displayName = '@orfium/ictinus/vanilla/ColumnChooserIcon';

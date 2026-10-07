@@ -12,4 +12,4 @@ export const PolicyIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, 
   </IconPrimitive>
 ));
 
-PolicyIcon.displayName = 'PolicyIcon';
+PolicyIcon.displayName = '@orfium/ictinus/vanilla/PolicyIcon';

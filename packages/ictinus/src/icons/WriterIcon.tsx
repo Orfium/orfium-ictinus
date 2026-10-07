@@ -20,4 +20,4 @@ export const WriterIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, 
   </IconPrimitive>
 ));
 
-WriterIcon.displayName = 'WriterIcon';
+WriterIcon.displayName = '@orfium/ictinus/vanilla/WriterIcon';

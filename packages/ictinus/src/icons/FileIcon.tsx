@@ -12,4 +12,4 @@ export const FileIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, re
   </IconPrimitive>
 ));
 
-FileIcon.displayName = 'FileIcon';
+FileIcon.displayName = '@orfium/ictinus/vanilla/FileIcon';

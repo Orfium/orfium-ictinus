@@ -12,4 +12,4 @@ export const IssueIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, r
   </IconPrimitive>
 ));
 
-IssueIcon.displayName = 'IssueIcon';
+IssueIcon.displayName = '@orfium/ictinus/vanilla/IssueIcon';

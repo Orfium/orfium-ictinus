@@ -12,4 +12,4 @@ export const RoleIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, re
   </IconPrimitive>
 ));
 
-RoleIcon.displayName = 'RoleIcon';
+RoleIcon.displayName = '@orfium/ictinus/vanilla/RoleIcon';
