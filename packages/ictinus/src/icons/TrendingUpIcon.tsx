@@ -12,4 +12,4 @@ export const TrendingUpIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((pro
   </IconPrimitive>
 ));
 
-TrendingUpIcon.displayName = 'TrendingUpIcon';
+TrendingUpIcon.displayName = '@orfium/ictinus/vanilla/TrendingUpIcon';

@@ -10,6 +10,7 @@ export const container = style([
     '@layer': {
       [layers.components]: {
         flexDirection: 'column',
+        minWidth: 'min-content',
 
         '@container': {
           '(min-width: 1220px)': {

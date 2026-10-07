@@ -26,4 +26,4 @@ export const AvatarGroup = forwardRef<HTMLDivElement, AvatarGroupProps>(
   }
 );
 
-AvatarGroup.displayName = 'AvatarGroup';
+AvatarGroup.displayName = '@orfium/ictinus/vanilla/AvatarGroup';

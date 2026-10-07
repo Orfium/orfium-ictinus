@@ -34,7 +34,7 @@ export const DataTable = forwardRef<HTMLDivElement, DataTableProps>(
   }
 );
 
-DataTable.displayName = 'DataTable';
+DataTable.displayName = '@orfium/ictinus/vanilla/DataTable';
 
 declare module '@tanstack/react-table' {
   interface ColumnMeta<TData extends RowData, TValue> {

@@ -20,4 +20,4 @@ export const SortIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, re
   </IconPrimitive>
 ));
 
-SortIcon.displayName = 'SortIcon';
+SortIcon.displayName = '@orfium/ictinus/vanilla/SortIcon';

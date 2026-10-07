@@ -24,18 +24,21 @@ import { PopoverContent, type PopoverContentProps } from '../Popover';
 import * as styles from './Menu.css';
 
 const Menu = (props: MenuTriggerPrimitiveProps) => <MenuTriggerPrimitive {...props} />;
+Menu.displayName = '@orfium/ictinus/vanilla/Menu';
 
 const MenuSubmenu = ({ delay = 0, ...props }) => (
   <SubmenuTriggerPrimitive {...props} delay={delay}>
     {props.children}
   </SubmenuTriggerPrimitive>
 );
+MenuSubmenu.displayName = '@orfium/ictinus/vanilla/MenuSubmenu';
 
 interface MenuTriggerProps extends ButtonProps {
   ref?: Ref<HTMLButtonElement>;
 }
 
 const MenuTrigger = ({ ...props }: ComponentProps<typeof Pressable>) => <Pressable {...props} />;
+MenuTrigger.displayName = '@orfium/ictinus/vanilla/MenuTrigger';
 
 interface MenuContentProps<T>
   extends MenuPrimitiveProps<T>,
@@ -72,6 +75,7 @@ const MenuContent = <T extends object>({
     </PopoverContent>
   );
 };
+MenuContent.displayName = '@orfium/ictinus/vanilla/MenuContent';
 
 interface MenuItemProps extends Omit<MenuItemPrimitiveProps, 'className'> {
   className?: string;
@@ -86,12 +90,14 @@ const MenuItem = ({ className, children, ...props }: MenuItemProps) => {
     </MenuItemPrimitive>
   );
 };
+MenuItem.displayName = '@orfium/ictinus/vanilla/MenuItem';
 
 export interface MenuHeaderProps extends ComponentProps<typeof Header> {
   separator?: boolean;
 }
 
 const MenuHeader = ({ ...props }: MenuHeaderProps) => <Header {...props} />;
+MenuHeader.displayName = '@orfium/ictinus/vanilla/MenuHeader';
 
 interface MenuSectionProps<T> extends MenuSectionPrimitiveProps<T> {
   ref?: Ref<HTMLDivElement>;
@@ -106,6 +112,7 @@ const MenuSection = <T extends object>({ ...props }: MenuSectionProps<T>) => {
     </MenuSectionPrimitive>
   );
 };
+MenuSection.displayName = '@orfium/ictinus/vanilla/MenuSection';
 
 const MenuSeparator = DropdownSeparator;
 const MenuLabel = DropdownLabel;

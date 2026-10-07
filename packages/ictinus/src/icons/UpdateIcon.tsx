@@ -16,4 +16,4 @@ export const UpdateIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, 
   </IconPrimitive>
 ));
 
-UpdateIcon.displayName = 'UpdateIcon';
+UpdateIcon.displayName = '@orfium/ictinus/vanilla/UpdateIcon';

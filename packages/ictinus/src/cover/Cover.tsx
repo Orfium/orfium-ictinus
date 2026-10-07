@@ -15,4 +15,4 @@ export const Cover = forwardRef<HTMLDivElement, CoverProps>(
   )
 );
 
-Cover.displayName = 'Cover';
+Cover.displayName = '@orfium/ictinus/vanilla/Cover';

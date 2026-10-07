@@ -12,4 +12,4 @@ export const ArrowDownIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((prop
   </IconPrimitive>
 ));
 
-ArrowDownIcon.displayName = 'ArrowDownIcon';
+ArrowDownIcon.displayName = '@orfium/ictinus/vanilla/ArrowDownIcon';

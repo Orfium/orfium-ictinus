@@ -34,4 +34,4 @@ export const Box = forwardRef<HTMLDivElement, BoxProps>(({ asChild, className, .
   );
 });
 
-Box.displayName = 'Box';
+Box.displayName = '@orfium/ictinus/vanilla/Box';

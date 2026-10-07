@@ -12,4 +12,4 @@ export const UnlinkIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, 
   </IconPrimitive>
 ));
 
-UnlinkIcon.displayName = 'UnlinkIcon';
+UnlinkIcon.displayName = '@orfium/ictinus/vanilla/UnlinkIcon';

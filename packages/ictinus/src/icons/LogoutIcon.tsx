@@ -12,4 +12,4 @@ export const LogoutIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, 
   </IconPrimitive>
 ));
 
-LogoutIcon.displayName = 'LogoutIcon';
+LogoutIcon.displayName = '@orfium/ictinus/vanilla/LogoutIcon';

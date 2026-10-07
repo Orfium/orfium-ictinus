@@ -12,4 +12,4 @@ export const PendingIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props,
   </IconPrimitive>
 ));
 
-PendingIcon.displayName = 'PendingIcon';
+PendingIcon.displayName = '@orfium/ictinus/vanilla/PendingIcon';

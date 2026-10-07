@@ -36,6 +36,7 @@ export type DialogProps = ComponentProps<typeof DialogPrimitive>;
 const Dialog = ({ role = 'dialog', className, ...props }: DialogProps) => {
   return <DialogPrimitive role={role} className={className} {...props} />;
 };
+Dialog.displayName = '@orfium/ictinus/vanilla/Dialog';
 
 export type DialogTriggerProps = ComponentProps<typeof ButtonPrimitive>;
 
@@ -44,6 +45,7 @@ export type DialogTriggerProps = ComponentProps<typeof ButtonPrimitive>;
  * Place label text or compose with a styled Button as needed.
  */
 const DialogTrigger = (props: DialogTriggerProps) => <ButtonPrimitive {...props} />;
+DialogTrigger.displayName = '@orfium/ictinus/vanilla/DialogTrigger';
 
 /**
  * Dialog header shortcuts. Prefer `title` / `description` over hand-rolling titles.
@@ -98,6 +100,7 @@ const DialogHeader = ({ className, ...props }: DialogHeaderProps) => {
     </div>
   );
 };
+DialogHeader.displayName = '@orfium/ictinus/vanilla/DialogHeader';
 
 export interface DialogTitleProps extends HeadingProps {
   ref?: Ref<HTMLHeadingElement>;
@@ -109,6 +112,7 @@ export interface DialogTitleProps extends HeadingProps {
 const DialogTitle = ({ className, ref, ...props }: DialogTitleProps) => (
   <Heading slot="title" ref={ref} className={className} {...props} />
 );
+DialogTitle.displayName = '@orfium/ictinus/vanilla/DialogTitle';
 
 export interface DialogDescriptionProps extends TextProps {
   ref?: Ref<HTMLDivElement>;
@@ -120,6 +124,7 @@ export interface DialogDescriptionProps extends TextProps {
 const DialogDescription = ({ className, ref, ...props }: DialogDescriptionProps) => (
   <Text slot="description" className={className} ref={ref} {...props} />
 );
+DialogDescription.displayName = '@orfium/ictinus/vanilla/DialogDescription';
 
 export type DialogBodyProps = ComponentProps<'div'>;
 
@@ -129,6 +134,7 @@ export type DialogBodyProps = ComponentProps<'div'>;
 const DialogBody = ({ className, ref, ...props }: DialogBodyProps) => (
   <div data-slot="dialog-body" ref={ref} className={className} {...props} />
 );
+DialogBody.displayName = '@orfium/ictinus/vanilla/DialogBody';
 
 export type DialogFooterProps = ComponentProps<'div'>;
 
@@ -163,6 +169,7 @@ const DialogFooter = ({ className, ...props }: DialogFooterProps) => {
 
   return <div ref={footerRef} data-slot="dialog-footer" className={className} {...props} />;
 };
+DialogFooter.displayName = '@orfium/ictinus/vanilla/DialogFooter';
 
 export {
   Dialog,

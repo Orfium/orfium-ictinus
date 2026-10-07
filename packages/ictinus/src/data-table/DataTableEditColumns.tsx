@@ -9,6 +9,7 @@ import { Menu, MenuContent, MenuItem, MenuLabel, MenuTrigger } from '../vanilla/
 import { Text } from '../vanilla/Text';
 import { useDataTableContext } from './DataTableContext';
 
+/** Column visibility menu for DataTable. */
 export function DataTableEditColumns() {
   const { table } = useDataTableContext();
 
@@ -90,3 +91,4 @@ export function DataTableEditColumns() {
     </Menu>
   );
 }
+DataTableEditColumns.displayName = '@orfium/ictinus/vanilla/DataTableEditColumns';

@@ -12,4 +12,4 @@ export const MinusIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, r
   </IconPrimitive>
 ));
 
-MinusIcon.displayName = 'MinusIcon';
+MinusIcon.displayName = '@orfium/ictinus/vanilla/MinusIcon';

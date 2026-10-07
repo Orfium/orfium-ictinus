@@ -12,4 +12,4 @@ export const RefreshIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props,
   </IconPrimitive>
 ));
 
-RefreshIcon.displayName = 'RefreshIcon';
+RefreshIcon.displayName = '@orfium/ictinus/vanilla/RefreshIcon';

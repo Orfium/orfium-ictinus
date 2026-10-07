@@ -15,3 +15,4 @@ export function DataTableBulkActions({ children, ...props }: DataTableBulkAction
     </Box>
   );
 }
+DataTableBulkActions.displayName = '@orfium/ictinus/vanilla/DataTableBulkActions';

@@ -66,4 +66,4 @@ const UserIcon = ({ size }: { size: AvatarSize }) => (
   </svg>
 );
 
-Avatar.displayName = 'Avatar';
+Avatar.displayName = '@orfium/ictinus/vanilla/Avatar';

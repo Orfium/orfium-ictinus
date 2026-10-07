@@ -12,4 +12,4 @@ export const ClaimIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, r
   </IconPrimitive>
 ));
 
-ClaimIcon.displayName = 'ClaimIcon';
+ClaimIcon.displayName = '@orfium/ictinus/vanilla/ClaimIcon';

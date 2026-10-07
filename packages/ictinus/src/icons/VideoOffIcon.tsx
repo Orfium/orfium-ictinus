@@ -16,4 +16,4 @@ export const VideoOffIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props
   </IconPrimitive>
 ));
 
-VideoOffIcon.displayName = 'VideoOffIcon';
+VideoOffIcon.displayName = '@orfium/ictinus/vanilla/VideoOffIcon';

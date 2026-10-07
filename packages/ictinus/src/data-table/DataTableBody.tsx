@@ -344,4 +344,4 @@ export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
   }
 );
 
-DataTableBody.displayName = 'DataTableBody';
+DataTableBody.displayName = '@orfium/ictinus/vanilla/DataTableBody';

@@ -12,4 +12,4 @@ export const AnalyticsIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((prop
   </IconPrimitive>
 ));
 
-AnalyticsIcon.displayName = 'AnalyticsIcon';
+AnalyticsIcon.displayName = '@orfium/ictinus/vanilla/AnalyticsIcon';

@@ -12,4 +12,4 @@ export const ForwardIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props,
   </IconPrimitive>
 ));
 
-ForwardIcon.displayName = 'ForwardIcon';
+ForwardIcon.displayName = '@orfium/ictinus/vanilla/ForwardIcon';

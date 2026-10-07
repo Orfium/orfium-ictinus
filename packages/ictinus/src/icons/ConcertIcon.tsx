@@ -12,4 +12,4 @@ export const ConcertIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props,
   </IconPrimitive>
 ));
 
-ConcertIcon.displayName = 'ConcertIcon';
+ConcertIcon.displayName = '@orfium/ictinus/vanilla/ConcertIcon';

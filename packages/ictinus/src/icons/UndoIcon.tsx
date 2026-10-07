@@ -12,4 +12,4 @@ export const UndoIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, re
   </IconPrimitive>
 ));
 
-UndoIcon.displayName = 'UndoIcon';
+UndoIcon.displayName = '@orfium/ictinus/vanilla/UndoIcon';

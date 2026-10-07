@@ -157,6 +157,7 @@ export function Icon({ name, size = 'md', ...props }: IconProps) {
 
   return <IconComponent size={size} {...props} />;
 }
+Icon.displayName = '@orfium/ictinus/vanilla/Icon';
 
 export const ICONS = {
   account: AccountIcon,

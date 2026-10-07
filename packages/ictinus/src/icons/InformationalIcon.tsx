@@ -14,4 +14,4 @@ export const InformationalIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((
   </IconPrimitive>
 ));
 
-InformationalIcon.displayName = 'InformationalIcon';
+InformationalIcon.displayName = '@orfium/ictinus/vanilla/InformationalIcon';

@@ -14,4 +14,4 @@ export const AlbumIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, r
   </IconPrimitive>
 ));
 
-AlbumIcon.displayName = 'AlbumIcon';
+AlbumIcon.displayName = '@orfium/ictinus/vanilla/AlbumIcon';

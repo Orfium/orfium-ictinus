@@ -14,4 +14,4 @@ export const TriangleRightIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((
   </IconPrimitive>
 ));
 
-TriangleRightIcon.displayName = 'TriangleRightIcon';
+TriangleRightIcon.displayName = '@orfium/ictinus/vanilla/TriangleRightIcon';

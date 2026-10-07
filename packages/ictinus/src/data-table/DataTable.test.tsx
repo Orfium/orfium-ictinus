@@ -102,7 +102,7 @@ describe('DataTable', () => {
   });
 
   it('renders with the DataTable displayName', () => {
-    expect(DataTable.displayName).toBe('DataTable');
+    expect(DataTable.displayName).toBe('@orfium/ictinus/vanilla/DataTable');
   });
 });
 

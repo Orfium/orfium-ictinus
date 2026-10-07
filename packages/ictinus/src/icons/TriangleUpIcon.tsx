@@ -14,4 +14,4 @@ export const TriangleUpIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((pro
   </IconPrimitive>
 ));
 
-TriangleUpIcon.displayName = 'TriangleUpIcon';
+TriangleUpIcon.displayName = '@orfium/ictinus/vanilla/TriangleUpIcon';

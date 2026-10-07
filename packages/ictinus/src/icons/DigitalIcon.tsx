@@ -14,4 +14,4 @@ export const DigitalIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props,
   </IconPrimitive>
 ));
 
-DigitalIcon.displayName = 'DigitalIcon';
+DigitalIcon.displayName = '@orfium/ictinus/vanilla/DigitalIcon';

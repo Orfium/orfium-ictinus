@@ -18,4 +18,4 @@ export const UnfreezeIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props
   </IconPrimitive>
 ));
 
-UnfreezeIcon.displayName = 'UnfreezeIcon';
+UnfreezeIcon.displayName = '@orfium/ictinus/vanilla/UnfreezeIcon';

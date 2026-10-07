@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T09:40:40.745Z",
+  "generatedAt": "2026-10-02T10:29:58.196Z",
   "components": {
     "vanilla:ActionsContent": {
       "id": "vanilla:ActionsContent",
@@ -6740,6 +6740,17 @@
       },
       "extends": "Box"
     },
+    "vanilla:DataTableEditColumns": {
+      "id": "vanilla:DataTableEditColumns",
+      "name": "DataTableEditColumns",
+      "api": "vanilla",
+      "description": "Column visibility menu for DataTable.",
+      "import": "import { DataTableEditColumns } from '@orfium/ictinus/vanilla';",
+      "category": [
+        "data-display"
+      ],
+      "props": {}
+    },
     "vanilla:DataTableHeader": {
       "id": "vanilla:DataTableHeader",
       "name": "DataTableHeader",
@@ -7249,6 +7260,591 @@
         }
       },
       "extends": "Box"
+    },
+    "vanilla:Icon": {
+      "id": "vanilla:Icon",
+      "name": "Icon",
+      "api": "vanilla",
+      "description": "Icon from @orfium/ictinus/vanilla (preferred modern API).",
+      "import": "import { Icon } from '@orfium/ictinus/vanilla';",
+      "category": [
+        "display"
+      ],
+      "props": {
+        "alignItems": {
+          "type": "ConditionalStyle<Values<readonly [\"flex-start\", \"center\", \"flex-end\", \"stretch\", \"baseline\"], { defaultClass: string; conditions: { base: string; md: string; lg: string; xl: string; }; }>>",
+          "sprinkle": true
+        },
+        "alignSelf": {
+          "type": "ConditionalStyle<Values<readonly [\"flex-start\", \"center\", \"flex-end\", \"stretch\", \"baseline\"], { defaultClass: string; conditions: { base: string; md: string; lg: string; xl: string; }; }>>",
+          "sprinkle": true
+        },
+        "animation": {
+          "type": "\"ping\" | \"pulse\"",
+          "sprinkle": true
+        },
+        "asChild": {
+          "type": "boolean",
+          "sprinkle": true
+        },
+        "backgroundColor": {
+          "type": "ConditionalStyle<Values<{ 'neutral.1': `var(--${string})`; 'neutral.2': `var(--${string})`; 'neutral.3': `var(--${string})`; 'neutral.4': `var(--${string})`; 'neutral.5': `var(--${string})`; 'neutral.6': `var(--${string})`; 'blue.1': `var(--${string})`; 'blue.2': `var(--${string})`; 'blue.3': `var(--${string})`; 'bl...",
+          "sprinkle": true
+        },
+        "backgroundImage": {
+          "type": "ConditionalStyle<Values<{ readonly 'gradient.1': `var(--${string})`; readonly 'gradient.2': `var(--${string})`; readonly 'gradient.3': `var(--${string})`; }, { defaultClass: string; conditions: { base: string; active: string; focus: string; hover: string; }; }>>",
+          "sprinkle": true
+        },
+        "bg": {
+          "type": "ConditionalStyle<Values<{ 'neutral.1': `var(--${string})`; 'neutral.2': `var(--${string})`; 'neutral.3': `var(--${string})`; 'neutral.4': `var(--${string})`; 'neutral.5': `var(--${string})`; 'neutral.6': `var(--${string})`; 'blue.1': `var(--${string})`; 'blue.2': `var(--${string})`; 'blue.3': `var(--${string})`; 'bl...",
+          "sprinkle": true
+        },
+        "border": {
+          "type": "ConditionalStyle<Values<{ readonly '0': `var(--${string})`; readonly '1': `var(--${string})`; readonly '2': `var(--${string})`; readonly '3': `var(--${string})`; }, { defaultClass: string; conditions: { base: string; md: string; lg: string; xl: string; }; }>>",
+          "sprinkle": true
+        },
+        "borderB": {
+          "type": "ConditionalStyle<Values<{ readonly '0': `var(--${string})`; readonly '1': `var(--${string})`; readonly '2': `var(--${string})`; readonly '3': `var(--${string})`; }, { defaultClass: string; conditions: { base: string; md: string; lg: string; xl: string; }; }>>",
+          "sprinkle": true
+        },
+        "borderBottomLeftRadius": {
+          "type": "\"0\" | \"1\" | \"2\" | \"3\" | \"4\" | \"5\" | \"6\" | \"7\"",
+          "sprinkle": true
+        },
+        "borderBottomRightRadius": {
+          "type": "\"0\" | \"1\" | \"2\" | \"3\" | \"4\" | \"5\" | \"6\" | \"7\"",
+          "sprinkle": true
+        },
+        "borderBottomWidth": {
+          "type": "ConditionalStyle<Values<{ readonly '0': `var(--${string})`; readonly '1': `var(--${string})`; readonly '2': `var(--${string})`; readonly '3': `var(--${string})`; }, { defaultClass: string; conditions: { base: string; md: string; lg: string; xl: string; }; }>>",
+          "sprinkle": true
+        },
+        "borderColor": {
+          "type": "(\"transparent\" | \"decorative.transparent\" | \"decorative.default\" | \"decorative.inverted\" | \"interactive.default\" | \"interactive.active\" | \"interactive.error\" | \"interactive.upsell\" | \"interactive.warning\" | \"interactive.success\" | \"interactive.focused\") & ConditionalStyle<...>",
+          "sprinkle": true
+        },
+        "borderL": {
+          "type": "ConditionalStyle<Values<{ readonly '0': `var(--${string})`; readonly '1': `var(--${string})`; readonly '2': `var(--${string})`; readonly '3': `var(--${string})`; }, { defaultClass: string; conditions: { base: string; md: string; lg: string; xl: string; }; }>>",
+          "sprinkle": true
+        },
+        "borderLeftWidth": {
+          "type": "ConditionalStyle<Values<{ readonly '0': `var(--${string})`; readonly '1': `var(--${string})`; readonly '2': `var(--${string})`; readonly '3': `var(--${string})`; }, { defaultClass: string; conditions: { base: string; md: string; lg: string; xl: string; }; }>>",
+          "sprinkle": true
+        },
+        "borderR": {
+          "type": "ConditionalStyle<Values<{ readonly '0': `var(--${string})`; readonly '1': `var(--${string})`; readonly '2': `var(--${string})`; readonly '3': `var(--${string})`; }, { defaultClass: string; conditions: { base: string; md: string; lg: string; xl: string; }; }>>",
+          "sprinkle": true
+        },
+        "borderRadius": {
+          "type": "\"inherit\" | \"0\" | \"1\" | \"2\" | \"3\" | \"4\" | \"5\" | \"6\" | \"7\"",
+          "sprinkle": true
+        },
+        "borderRightWidth": {
+          "type": "ConditionalStyle<Values<{ readonly '0': `var(--${string})`; readonly '1': `var(--${string})`; readonly '2': `var(--${string})`; readonly '3': `var(--${string})`; }, { defaultClass: string; conditions: { base: string; md: string; lg: string; xl: string; }; }>>",
+          "sprinkle": true
+        },
+        "borderStyle": {
+          "type": "\"dashed\" | \"solid\"",
+          "sprinkle": true
+        },
+        "borderT": {
+          "type": "ConditionalStyle<Values<{ readonly '0': `var(--${string})`; readonly '1': `var(--${string})`; readonly '2': `var(--${string})`; readonly '3': `var(--${string})`; }, { defaultClass: string; conditions: { base: string; md: string; lg: string; xl: string; }; }>>",
+          "sprinkle": true
+        },
+        "borderTopLeftRadius": {
+          "type": "\"0\" | \"1\" | \"2\" | \"3\" | \"4\" | \"5\" | \"6\" | \"7\"",
+          "sprinkle": true
+        },
+        "borderTopRightRadius": {
+          "type": "\"0\" | \"1\" | \"2\" | \"3\" | \"4\" | \"5\" | \"6\" | \"7\"",
+          "sprinkle": true
+        },
+        "borderTopWidth": {
+          "type": "ConditionalStyle<Values<{ readonly '0': `var(--${string})`; readonly '1': `var(--${string})`; readonly '2': `var(--${string})`; readonly '3': `var(--${string})`; }, { defaultClass: string; conditions: { base: string; md: string; lg: string; xl: string; }; }>>",
+          "sprinkle": true
+        },
+        "boxShadow": {
+          "type": "\"0\" | \"1\" | \"2\" | \"3\" | \"4\" | \"5\"",
+          "sprinkle": true
+        },
+        "children": {
+          "type": "ReactNode",
+          "sprinkle": true
+        },
+        "className": {
+          "type": "string",
+          "sprinkle": true
+        },
+        "color": {
+          "type": "ConditionalStyle<Values<{ 'neutral.1': `var(--${string})`; 'neutral.2': `var(--${string})`; 'neutral.3': `var(--${string})`; 'neutral.4': `var(--${string})`; 'neutral.5': `var(--${string})`; 'neutral.6': `var(--${string})`; 'blue.1': `var(--${string})`; 'blue.2': `var(--${string})`; 'blue.3': `var(--${string})`; 'bl...",
+          "sprinkle": true
+        },
+        "css": {
+          "type": "Interpolation<Theme>",
+          "sprinkle": true
+        },
+        "cursor": {
+          "type": "\"default\" | \"not-allowed\" | \"pointer\"",
+          "sprinkle": true
+        },
+        "data-tooltip-class-name": {
+          "type": "string",
+          "sprinkle": true
+        },
+        "data-tooltip-content": {
+          "type": "string",
+          "sprinkle": true
+        },
+        "data-tooltip-delay-hide": {
+          "type": "number",
+          "sprinkle": true
+        },
+        "data-tooltip-delay-show": {
+          "type": "number",
+          "sprinkle": true
+        },
+        "data-tooltip-events": {
+          "type": "EventsType[]",
+          "description": "@deprecated Use `openOnClick` tooltip prop instead.",
+          "sprinkle": true
+        },
+        "data-tooltip-float": {
+          "type": "boolean",
+          "sprinkle": true
+        },
+        "data-tooltip-hidden": {
+          "type": "boolean",
+          "sprinkle": true
+        },
+        "data-tooltip-html": {
+          "type": "string",
+          "sprinkle": true
+        },
+        "data-tooltip-id": {
+          "type": "string",
+          "sprinkle": true
+        },
+        "data-tooltip-offset": {
+          "type": "number",
+          "sprinkle": true
+        },
+        "data-tooltip-place": {
+          "type": "PlacesType",
+          "sprinkle": true
+        },
+        "data-tooltip-position-strategy": {
+          "type": "PositionStrategy",
+          "sprinkle": true
+        },
+        "data-tooltip-variant": {
+          "type": "VariantType",
+          "sprinkle": true
+        },
+        "data-tooltip-wrapper": {
+          "type": "WrapperType",
+          "sprinkle": true
+        },
+        "display": {
+          "type": "ConditionalStyle<Values<readonly [\"block\", \"flex\", \"inline-flex\", \"inline-grid\", \"grid\", \"inline-block\", \"none\", \"contents\", \"inline\"], { defaultClass: string; conditions: { base: string; md: string; lg: string; xl: string; }; }>>",
+          "sprinkle": true
+        },
+        "fill": {
+          "type": "ConditionalStyle<Values<{ 'neutral.1': `var(--${string})`; 'neutral.2': `var(--${string})`; 'neutral.3': `var(--${string})`; 'neutral.4': `var(--${string})`; 'neutral.5': `var(--${string})`; 'neutral.6': `var(--${string})`; 'blue.1': `var(--${string})`; 'blue.2': `var(--${string})`; 'blue.3': `var(--${string})`; 'bl...",
+          "sprinkle": true
+        },
+        "flex": {
+          "type": "ConditionalStyle<Values<{ '1': \"1 1 0%\"; auto: \"1 1 auto\"; initial: \"0 1 auto\"; none: \"none\"; }, { defaultClass: string; conditions: { base: string; md: string; lg: string; xl: string; }; }>>",
+          "sprinkle": true
+        },
+        "flexDirection": {
+          "type": "ConditionalStyle<Values<readonly [\"column\", \"row\", \"column-reverse\", \"row-reverse\"], { defaultClass: string; conditions: { base: string; md: string; lg: string; xl: string; }; }>>",
+          "sprinkle": true
+        },
+        "flexShrink": {
+          "type": "ConditionalStyle<Values<readonly [\"0\", \"1\"], { defaultClass: string; conditions: { base: string; md: string; lg: string; xl: string; }; }>>",
+          "sprinkle": true
+        },
+        "flexWrap": {
+          "type": "ConditionalStyle<Values<readonly [\"nowrap\", \"wrap\", \"wrap-reverse\"], { defaultClass: string; conditions: { base: string; md: string; lg: string; xl: string; }; }>>",
+          "sprinkle": true
+        },
+        "fontFamily": {
+          "type": "\"sans\" | \"mono\" | \"outfit\"",
+          "sprinkle": true
+        },
+        "fontSize": {
+          "type": "\"1\" | \"2\" | \"3\" | \"10\" | \"4\" | \"5\" | \"6\" | \"7\" | \"8\" | \"9\"",
+          "sprinkle": true
+        },
+        "fontStyle": {
+          "type": "\"italic\"",
+          "sprinkle": true
+        },
+        "fontWeight": {
+          "type": "\"bold\" | \"medium\" | \"regular\" | \"semibold\"",
+          "sprinkle": true
+        },
+        "gap": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "gridGap": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "h": {
+          "type": "ConditionalStyle<Values<{ full: \"100%\"; screen: \"100vh\"; '1/2': \"50%\"; '1/3': \"33.333333%\"; '2/3': \"66.666666%\"; '1/4': \"25%\"; '3/4': \"75%\"; '0': `var(--${string})`; '1': `var(--${string})`; '2': `var(--${string})`; '3': `var(--${string})`; '4': `var(--${string})`; '5': `var(--${string})`; '6': `var(--${string})`; '...",
+          "sprinkle": true
+        },
+        "height": {
+          "type": "ConditionalStyle<Values<{ full: \"100%\"; screen: \"100vh\"; '1/2': \"50%\"; '1/3': \"33.333333%\"; '2/3': \"66.666666%\"; '1/4': \"25%\"; '3/4': \"75%\"; '0': `var(--${string})`; '1': `var(--${string})`; '2': `var(--${string})`; '3': `var(--${string})`; '4': `var(--${string})`; '5': `var(--${string})`; '6': `var(--${string})`; '...",
+          "sprinkle": true
+        },
+        "isolation": {
+          "type": "\"isolate\"",
+          "sprinkle": true
+        },
+        "justifyContent": {
+          "type": "ConditionalStyle<Values<readonly [\"flex-start\", \"center\", \"flex-end\", \"space-between\", \"space-around\", \"space-evenly\", \"unset\"], { defaultClass: string; conditions: { base: string; md: string; lg: string; xl: string; }; }>>",
+          "sprinkle": true
+        },
+        "letterSpacing": {
+          "type": "\"0\" | \"1\" | \"2\" | \"3\"",
+          "sprinkle": true
+        },
+        "lineHeight": {
+          "type": "\"1\" | \"2\" | \"3\" | \"10\" | \"4\" | \"5\" | \"6\" | \"7\" | \"8\" | \"9\" | \"11\"",
+          "sprinkle": true
+        },
+        "m": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "margin": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "marginBottom": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "marginLeft": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "marginRight": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "marginTop": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "maxH": {
+          "type": "ConditionalStyle<Values<{ full: \"100%\"; screen: \"100vh\"; '1/2': \"50%\"; '1/3': \"33.333333%\"; '2/3': \"66.666666%\"; '1/4': \"25%\"; '3/4': \"75%\"; '0': `var(--${string})`; '1': `var(--${string})`; '2': `var(--${string})`; '3': `var(--${string})`; '4': `var(--${string})`; '5': `var(--${string})`; '6': `var(--${string})`; '...",
+          "sprinkle": true
+        },
+        "maxHeight": {
+          "type": "ConditionalStyle<Values<{ full: \"100%\"; screen: \"100vh\"; '1/2': \"50%\"; '1/3': \"33.333333%\"; '2/3': \"66.666666%\"; '1/4': \"25%\"; '3/4': \"75%\"; '0': `var(--${string})`; '1': `var(--${string})`; '2': `var(--${string})`; '3': `var(--${string})`; '4': `var(--${string})`; '5': `var(--${string})`; '6': `var(--${string})`; '...",
+          "sprinkle": true
+        },
+        "maxW": {
+          "type": "ConditionalStyle<Values<{ full: \"100%\"; screen: \"100vw\"; '1/2': \"50%\"; '1/3': \"33.333333%\"; '2/3': \"66.666666%\"; '1/4': \"25%\"; '3/4': \"75%\"; '0': `var(--${string})`; '1': `var(--${string})`; '2': `var(--${string})`; '3': `var(--${string})`; '4': `var(--${string})`; '5': `var(--${string})`; '6': `var(--${string})`; '...",
+          "sprinkle": true
+        },
+        "maxWidth": {
+          "type": "ConditionalStyle<Values<{ full: \"100%\"; screen: \"100vw\"; '1/2': \"50%\"; '1/3': \"33.333333%\"; '2/3': \"66.666666%\"; '1/4': \"25%\"; '3/4': \"75%\"; '0': `var(--${string})`; '1': `var(--${string})`; '2': `var(--${string})`; '3': `var(--${string})`; '4': `var(--${string})`; '5': `var(--${string})`; '6': `var(--${string})`; '...",
+          "sprinkle": true
+        },
+        "mb": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "minHeight": {
+          "type": "ConditionalStyle<Values<{ full: \"100%\"; screen: \"100vh\"; '1/2': \"50%\"; '1/3': \"33.333333%\"; '2/3': \"66.666666%\"; '1/4': \"25%\"; '3/4': \"75%\"; '0': `var(--${string})`; '1': `var(--${string})`; '2': `var(--${string})`; '3': `var(--${string})`; '4': `var(--${string})`; '5': `var(--${string})`; '6': `var(--${string})`; '...",
+          "sprinkle": true
+        },
+        "minWidth": {
+          "type": "ConditionalStyle<Values<{ full: \"100%\"; screen: \"100vw\"; '1/2': \"50%\"; '1/3': \"33.333333%\"; '2/3': \"66.666666%\"; '1/4': \"25%\"; '3/4': \"75%\"; '0': `var(--${string})`; '1': `var(--${string})`; '2': `var(--${string})`; '3': `var(--${string})`; '4': `var(--${string})`; '5': `var(--${string})`; '6': `var(--${string})`; '...",
+          "sprinkle": true
+        },
+        "ml": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "mr": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "mt": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "mx": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "my": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "name": {
+          "type": "\"filter\" | \"radio\" | \"copy\" | \"help\" | \"manual\" | \"next\" | \"menu\" | \"error\" | \"warning\" | \"success\" | \"sort\" | \"search\" | \"link\" | \"audio\" | \"details\" | \"video\" | \"image\" | \"stop\" | ... 126 more ... | \"sparkles\"",
+          "required": true
+        },
+        "objectFit": {
+          "type": "\"contain\" | \"cover\"",
+          "sprinkle": true
+        },
+        "opacity": {
+          "type": "\"0\" | \"1\" | \"0.5\"",
+          "sprinkle": true
+        },
+        "outlineColor": {
+          "type": "ConditionalStyle<Values<{ 'neutral.1': `var(--${string})`; 'neutral.2': `var(--${string})`; 'neutral.3': `var(--${string})`; 'neutral.4': `var(--${string})`; 'neutral.5': `var(--${string})`; 'neutral.6': `var(--${string})`; 'blue.1': `var(--${string})`; 'blue.2': `var(--${string})`; 'blue.3': `var(--${string})`; 'bl...",
+          "sprinkle": true
+        },
+        "overflow": {
+          "type": "\"auto\" | \"hidden\" | \"visible\"",
+          "sprinkle": true
+        },
+        "overflowX": {
+          "type": "\"auto\" | \"hidden\" | \"visible\"",
+          "sprinkle": true
+        },
+        "overflowY": {
+          "type": "\"auto\" | \"hidden\" | \"visible\"",
+          "sprinkle": true
+        },
+        "p": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "padding": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "paddingBottom": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "paddingLeft": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "paddingRight": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "paddingTop": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "pb": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "pl": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "placeItems": {
+          "type": "ConditionalStyle<Values<readonly [\"center\"], { defaultClass: string; conditions: { base: string; md: string; lg: string; xl: string; }; }>>",
+          "sprinkle": true
+        },
+        "pointerEvents": {
+          "type": "\"auto\" | \"none\"",
+          "sprinkle": true
+        },
+        "position": {
+          "type": "ConditionalStyle<Values<readonly [\"absolute\", \"fixed\", \"relative\", \"sticky\"], { defaultClass: string; conditions: { base: string; md: string; lg: string; xl: string; }; }>>",
+          "sprinkle": true
+        },
+        "pr": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "pt": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "px": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "py": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "rounded": {
+          "type": "\"inherit\" | \"0\" | \"1\" | \"2\" | \"3\" | \"4\" | \"5\" | \"6\" | \"7\"",
+          "sprinkle": true
+        },
+        "roundedB": {
+          "type": "\"0\" | \"1\" | \"2\" | \"3\" | \"4\" | \"5\" | \"6\" | \"7\"",
+          "sprinkle": true
+        },
+        "roundedL": {
+          "type": "\"0\" | \"1\" | \"2\" | \"3\" | \"4\" | \"5\" | \"6\" | \"7\"",
+          "sprinkle": true
+        },
+        "roundedR": {
+          "type": "\"0\" | \"1\" | \"2\" | \"3\" | \"4\" | \"5\" | \"6\" | \"7\"",
+          "sprinkle": true
+        },
+        "roundedT": {
+          "type": "\"0\" | \"1\" | \"2\" | \"3\" | \"4\" | \"5\" | \"6\" | \"7\"",
+          "sprinkle": true
+        },
+        "shadow": {
+          "type": "\"0\" | \"1\" | \"2\" | \"3\" | \"4\" | \"5\"",
+          "sprinkle": true
+        },
+        "size": {
+          "type": "\"md\" | \"lg\" | \"xs\" | \"sm\"",
+          "defaultValue": "md"
+        },
+        "textAlign": {
+          "type": "\"center\" | \"end\" | \"start\" | \"justify\"",
+          "sprinkle": true
+        },
+        "textDecoration": {
+          "type": "\"underline\"",
+          "sprinkle": true
+        },
+        "textTransform": {
+          "type": "\"none\" | \"capitalize\" | \"uppercase\"",
+          "sprinkle": true
+        },
+        "touchAction": {
+          "type": "\"none\" | \"manipulation\"",
+          "sprinkle": true
+        },
+        "transitionDuration": {
+          "type": "\"150ms\" | \"200ms\"",
+          "sprinkle": true
+        },
+        "transitionProperty": {
+          "type": "\"opacity\" | \"transform\" | \"all\" | \"none\" | \"default\" | \"colors\" | \"shadow\"",
+          "sprinkle": true
+        },
+        "transitionTimingFunction": {
+          "type": "\"ease\" | \"linear\" | \"in\" | \"out\" | \"inOut\"",
+          "sprinkle": true
+        },
+        "typography": {
+          "type": "\"headline01\" | \"headline02\" | \"headline03\" | \"headline04\" | \"headline05\" | \"title01\" | \"title02\" | \"title03\" | \"label01\" | \"label02\" | \"label03\" | \"label04\" | \"body01\" | \"body02\" | \"body03\" | \"body04\"",
+          "sprinkle": true
+        },
+        "userSelect": {
+          "type": "\"all\" | \"none\"",
+          "sprinkle": true
+        },
+        "visibility": {
+          "type": "\"hidden\" | \"visible\"",
+          "sprinkle": true
+        },
+        "w": {
+          "type": "ConditionalStyle<Values<{ full: \"100%\"; screen: \"100vw\"; '1/2': \"50%\"; '1/3': \"33.333333%\"; '2/3': \"66.666666%\"; '1/4': \"25%\"; '3/4': \"75%\"; '0': `var(--${string})`; '1': `var(--${string})`; '2': `var(--${string})`; '3': `var(--${string})`; '4': `var(--${string})`; '5': `var(--${string})`; '6': `var(--${string})`; '...",
+          "sprinkle": true
+        },
+        "whiteSpace": {
+          "type": "\"nowrap\"",
+          "sprinkle": true
+        },
+        "width": {
+          "type": "ConditionalStyle<Values<{ full: \"100%\"; screen: \"100vw\"; '1/2': \"50%\"; '1/3': \"33.333333%\"; '2/3': \"66.666666%\"; '1/4': \"25%\"; '3/4': \"75%\"; '0': `var(--${string})`; '1': `var(--${string})`; '2': `var(--${string})`; '3': `var(--${string})`; '4': `var(--${string})`; '5': `var(--${string})`; '6': `var(--${string})`; '...",
+          "sprinkle": true
+        },
+        "wordBreak": {
+          "type": "\"break-word\" | \"break-all\"",
+          "sprinkle": true
+        },
+        "wordWrap": {
+          "type": "\"normal\" | \"break-word\"",
+          "sprinkle": true
+        },
+        "z": {
+          "type": "\"auto\" | \"0\" | \"10\" | \"20\" | \"30\" | \"40\" | \"50\" | \"75\" | \"100\"",
+          "sprinkle": true
+        },
+        "zIndex": {
+          "type": "\"auto\" | \"0\" | \"10\" | \"20\" | \"30\" | \"40\" | \"50\" | \"75\" | \"100\"",
+          "sprinkle": true
+        }
+      },
+      "extends": "Box",
+      "examples": [
+        {
+          "title": "Vanilla/Icon / Iconography",
+          "components": [
+            "Icon",
+            "Box",
+            "Text"
+          ],
+          "code": [
+            {
+              "filename": "icon/Icon.stories.tsx",
+              "content": "export const Iconography: Story = {\n  render: () => (\n    <Box display=\"flex\" flexWrap=\"wrap\" gap=\"2xl\">\n      {(Object.keys(ICONS) as Array<keyof typeof ICONS>).map((icon) => (\n        <Box key={icon} display=\"flex\" flexDirection=\"column\" alignItems=\"center\" gap=\"sm\">\n          <Icon name={icon} />\n          <Text typography=\"label04\">{icon}</Text>\n        </Box>\n      ))}\n    </Box>\n  ),\n};"
+            }
+          ]
+        },
+        {
+          "title": "Vanilla/Icon / Color",
+          "components": [
+            "Icon",
+            "Box"
+          ],
+          "code": [
+            {
+              "filename": "icon/Icon.stories.tsx",
+              "content": "export const Color: Story = {\n  render: () => (\n    <Box display=\"flex\" flexDirection=\"column\" gap=\"md\">\n      <Icon name=\"account\" color=\"active\" />\n      <Icon name=\"user\" color=\"secondary\" />\n    </Box>\n  ),\n};"
+            }
+          ]
+        },
+        {
+          "title": "Vanilla/Icon / Size",
+          "components": [
+            "Icon",
+            "Box"
+          ],
+          "code": [
+            {
+              "filename": "icon/Icon.stories.tsx",
+              "content": "export const Size: Story = {\n  render: () => (\n    <Box display=\"flex\" flexDirection=\"column\" gap=\"md\">\n      <Icon name=\"account\" size=\"lg\" />\n      <Icon name=\"account\" size=\"md\" />\n      <Icon name=\"account\" size=\"sm\" />\n      <Icon name=\"account\" size=\"xs\" />\n    </Box>\n  ),\n};"
+            }
+          ]
+        },
+        {
+          "title": "Vanilla/Icon / IconComponent",
+          "components": [
+            "Icon",
+            "AccountIcon",
+            "Box"
+          ],
+          "code": [
+            {
+              "filename": "icon/Icon.stories.tsx",
+              "content": "export const IconComponent: Story = {\n  render: () => (\n    <Box display=\"flex\" flexDirection=\"column\" gap=\"md\">\n      <AccountIcon />\n    </Box>\n  ),\n};"
+            }
+          ]
+        },
+        {
+          "title": "Vanilla/Icon / CustomIcon",
+          "components": [
+            "Icon",
+            "Box",
+            "Button",
+            "IconPrimitive"
+          ],
+          "code": [
+            {
+              "filename": "icon/Icon.stories.tsx",
+              "content": "export const CustomIcon: Story = {\n  render: () => (\n    <Box display=\"flex\" flexDirection=\"column\" gap=\"md\">\n      <ClockOutlinedIcon size=\"lg\" />\n      <Button variant=\"secondary\" iconOnly>\n        <ClockOutlinedIcon />\n      </Button>\n    </Box>\n  ),\n};\n\nconst ClockOutlinedIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, ref) => (\n  <IconPrimitive ref={ref} {...props}>\n    <svg viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path\n        d=\"M9.992 2C5.576 2 2 5.584 2 10C2 14.416 5.576 18 9.992 18C14.416 18 18 14.416 18 10C18 5.584 14.416 2 9.992 2ZM10 16.4C6.464 16.4 3.6 13.536 3.6 10C3.6 6.464 6.464 3.6 10 3.6C13.536 3.6 16.4 6.464 16.4 10C16.4 13.536 13.536 16.4 10 16.4ZM10.4 6H9.2V10.8L13.4 13.32L14 12.336L10.4 10.2V6Z\"\n        fill=\"currentColor\"\n      />\n    </svg>\n  </IconPrimitive>\n));"
+            }
+          ]
+        }
+      ]
     },
     "vanilla:IconPrimitive": {
       "id": "vanilla:IconPrimitive",
@@ -12729,6 +13325,554 @@
         }
       ]
     },
+    "vanilla:TagList": {
+      "id": "vanilla:TagList",
+      "name": "TagList",
+      "api": "vanilla",
+      "description": "TagList from @orfium/ictinus/vanilla (preferred modern API).",
+      "import": "import { TagList } from '@orfium/ictinus/vanilla';",
+      "category": [
+        "display"
+      ],
+      "props": {
+        "alignItems": {
+          "type": "ConditionalStyle<Values<readonly [\"flex-start\", \"center\", \"flex-end\", \"stretch\", \"baseline\"], { defaultClass: string; conditions: { base: string; md: string; lg: string; xl: string; }; }>>",
+          "sprinkle": true
+        },
+        "alignSelf": {
+          "type": "ConditionalStyle<Values<readonly [\"flex-start\", \"center\", \"flex-end\", \"stretch\", \"baseline\"], { defaultClass: string; conditions: { base: string; md: string; lg: string; xl: string; }; }>>",
+          "sprinkle": true
+        },
+        "animation": {
+          "type": "\"ping\" | \"pulse\"",
+          "sprinkle": true
+        },
+        "asChild": {
+          "type": "boolean",
+          "sprinkle": true
+        },
+        "backgroundColor": {
+          "type": "ConditionalStyle<Values<{ 'neutral.1': `var(--${string})`; 'neutral.2': `var(--${string})`; 'neutral.3': `var(--${string})`; 'neutral.4': `var(--${string})`; 'neutral.5': `var(--${string})`; 'neutral.6': `var(--${string})`; 'blue.1': `var(--${string})`; 'blue.2': `var(--${string})`; 'blue.3': `var(--${string})`; 'bl...",
+          "sprinkle": true
+        },
+        "backgroundImage": {
+          "type": "ConditionalStyle<Values<{ readonly 'gradient.1': `var(--${string})`; readonly 'gradient.2': `var(--${string})`; readonly 'gradient.3': `var(--${string})`; }, { defaultClass: string; conditions: { base: string; active: string; focus: string; hover: string; }; }>>",
+          "sprinkle": true
+        },
+        "bg": {
+          "type": "ConditionalStyle<Values<{ 'neutral.1': `var(--${string})`; 'neutral.2': `var(--${string})`; 'neutral.3': `var(--${string})`; 'neutral.4': `var(--${string})`; 'neutral.5': `var(--${string})`; 'neutral.6': `var(--${string})`; 'blue.1': `var(--${string})`; 'blue.2': `var(--${string})`; 'blue.3': `var(--${string})`; 'bl...",
+          "sprinkle": true
+        },
+        "border": {
+          "type": "ConditionalStyle<Values<{ readonly '0': `var(--${string})`; readonly '1': `var(--${string})`; readonly '2': `var(--${string})`; readonly '3': `var(--${string})`; }, { defaultClass: string; conditions: { base: string; md: string; lg: string; xl: string; }; }>>",
+          "sprinkle": true
+        },
+        "borderB": {
+          "type": "ConditionalStyle<Values<{ readonly '0': `var(--${string})`; readonly '1': `var(--${string})`; readonly '2': `var(--${string})`; readonly '3': `var(--${string})`; }, { defaultClass: string; conditions: { base: string; md: string; lg: string; xl: string; }; }>>",
+          "sprinkle": true
+        },
+        "borderBottomLeftRadius": {
+          "type": "\"0\" | \"1\" | \"2\" | \"3\" | \"4\" | \"5\" | \"6\" | \"7\"",
+          "sprinkle": true
+        },
+        "borderBottomRightRadius": {
+          "type": "\"0\" | \"1\" | \"2\" | \"3\" | \"4\" | \"5\" | \"6\" | \"7\"",
+          "sprinkle": true
+        },
+        "borderBottomWidth": {
+          "type": "ConditionalStyle<Values<{ readonly '0': `var(--${string})`; readonly '1': `var(--${string})`; readonly '2': `var(--${string})`; readonly '3': `var(--${string})`; }, { defaultClass: string; conditions: { base: string; md: string; lg: string; xl: string; }; }>>",
+          "sprinkle": true
+        },
+        "borderColor": {
+          "type": "(\"transparent\" | \"decorative.transparent\" | \"decorative.default\" | \"decorative.inverted\" | \"interactive.default\" | \"interactive.active\" | \"interactive.error\" | \"interactive.upsell\" | \"interactive.warning\" | \"interactive.success\" | \"interactive.focused\") & ConditionalStyle<...>",
+          "sprinkle": true
+        },
+        "borderL": {
+          "type": "ConditionalStyle<Values<{ readonly '0': `var(--${string})`; readonly '1': `var(--${string})`; readonly '2': `var(--${string})`; readonly '3': `var(--${string})`; }, { defaultClass: string; conditions: { base: string; md: string; lg: string; xl: string; }; }>>",
+          "sprinkle": true
+        },
+        "borderLeftWidth": {
+          "type": "ConditionalStyle<Values<{ readonly '0': `var(--${string})`; readonly '1': `var(--${string})`; readonly '2': `var(--${string})`; readonly '3': `var(--${string})`; }, { defaultClass: string; conditions: { base: string; md: string; lg: string; xl: string; }; }>>",
+          "sprinkle": true
+        },
+        "borderR": {
+          "type": "ConditionalStyle<Values<{ readonly '0': `var(--${string})`; readonly '1': `var(--${string})`; readonly '2': `var(--${string})`; readonly '3': `var(--${string})`; }, { defaultClass: string; conditions: { base: string; md: string; lg: string; xl: string; }; }>>",
+          "sprinkle": true
+        },
+        "borderRadius": {
+          "type": "\"inherit\" | \"0\" | \"1\" | \"2\" | \"3\" | \"4\" | \"5\" | \"6\" | \"7\"",
+          "sprinkle": true
+        },
+        "borderRightWidth": {
+          "type": "ConditionalStyle<Values<{ readonly '0': `var(--${string})`; readonly '1': `var(--${string})`; readonly '2': `var(--${string})`; readonly '3': `var(--${string})`; }, { defaultClass: string; conditions: { base: string; md: string; lg: string; xl: string; }; }>>",
+          "sprinkle": true
+        },
+        "borderStyle": {
+          "type": "\"dashed\" | \"solid\"",
+          "sprinkle": true
+        },
+        "borderT": {
+          "type": "ConditionalStyle<Values<{ readonly '0': `var(--${string})`; readonly '1': `var(--${string})`; readonly '2': `var(--${string})`; readonly '3': `var(--${string})`; }, { defaultClass: string; conditions: { base: string; md: string; lg: string; xl: string; }; }>>",
+          "sprinkle": true
+        },
+        "borderTopLeftRadius": {
+          "type": "\"0\" | \"1\" | \"2\" | \"3\" | \"4\" | \"5\" | \"6\" | \"7\"",
+          "sprinkle": true
+        },
+        "borderTopRightRadius": {
+          "type": "\"0\" | \"1\" | \"2\" | \"3\" | \"4\" | \"5\" | \"6\" | \"7\"",
+          "sprinkle": true
+        },
+        "borderTopWidth": {
+          "type": "ConditionalStyle<Values<{ readonly '0': `var(--${string})`; readonly '1': `var(--${string})`; readonly '2': `var(--${string})`; readonly '3': `var(--${string})`; }, { defaultClass: string; conditions: { base: string; md: string; lg: string; xl: string; }; }>>",
+          "sprinkle": true
+        },
+        "boxShadow": {
+          "type": "\"0\" | \"1\" | \"2\" | \"3\" | \"4\" | \"5\"",
+          "sprinkle": true
+        },
+        "children": {
+          "type": "ReactNode | ((item: T) => ReactNode)",
+          "description": "The contents of the collection."
+        },
+        "className": {
+          "type": "string & ClassNameOrFunction<TagListRenderProps>",
+          "description": "The CSS [className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className) for the\nelement. A function may be provided to compute the class based on component state.",
+          "defaultValue": "'react-aria-TagList'"
+        },
+        "color": {
+          "type": "ConditionalStyle<Values<{ 'neutral.1': `var(--${string})`; 'neutral.2': `var(--${string})`; 'neutral.3': `var(--${string})`; 'neutral.4': `var(--${string})`; 'neutral.5': `var(--${string})`; 'neutral.6': `var(--${string})`; 'blue.1': `var(--${string})`; 'blue.2': `var(--${string})`; 'blue.3': `var(--${string})`; 'bl...",
+          "sprinkle": true
+        },
+        "css": {
+          "type": "Interpolation<Theme>",
+          "sprinkle": true
+        },
+        "cursor": {
+          "type": "\"default\" | \"not-allowed\" | \"pointer\"",
+          "sprinkle": true
+        },
+        "data-tooltip-class-name": {
+          "type": "string",
+          "sprinkle": true
+        },
+        "data-tooltip-content": {
+          "type": "string",
+          "sprinkle": true
+        },
+        "data-tooltip-delay-hide": {
+          "type": "number",
+          "sprinkle": true
+        },
+        "data-tooltip-delay-show": {
+          "type": "number",
+          "sprinkle": true
+        },
+        "data-tooltip-events": {
+          "type": "EventsType[]",
+          "description": "@deprecated Use `openOnClick` tooltip prop instead.",
+          "sprinkle": true
+        },
+        "data-tooltip-float": {
+          "type": "boolean",
+          "sprinkle": true
+        },
+        "data-tooltip-hidden": {
+          "type": "boolean",
+          "sprinkle": true
+        },
+        "data-tooltip-html": {
+          "type": "string",
+          "sprinkle": true
+        },
+        "data-tooltip-id": {
+          "type": "string",
+          "sprinkle": true
+        },
+        "data-tooltip-offset": {
+          "type": "number",
+          "sprinkle": true
+        },
+        "data-tooltip-place": {
+          "type": "PlacesType",
+          "sprinkle": true
+        },
+        "data-tooltip-position-strategy": {
+          "type": "PositionStrategy",
+          "sprinkle": true
+        },
+        "data-tooltip-variant": {
+          "type": "VariantType",
+          "sprinkle": true
+        },
+        "data-tooltip-wrapper": {
+          "type": "WrapperType",
+          "sprinkle": true
+        },
+        "dependencies": {
+          "type": "readonly any[]",
+          "description": "Values that should invalidate the item cache when using dynamic collections."
+        },
+        "display": {
+          "type": "ConditionalStyle<Values<readonly [\"block\", \"flex\", \"inline-flex\", \"inline-grid\", \"grid\", \"inline-block\", \"none\", \"contents\", \"inline\"], { defaultClass: string; conditions: { base: string; md: string; lg: string; xl: string; }; }>>",
+          "sprinkle": true
+        },
+        "fill": {
+          "type": "ConditionalStyle<Values<{ 'neutral.1': `var(--${string})`; 'neutral.2': `var(--${string})`; 'neutral.3': `var(--${string})`; 'neutral.4': `var(--${string})`; 'neutral.5': `var(--${string})`; 'neutral.6': `var(--${string})`; 'blue.1': `var(--${string})`; 'blue.2': `var(--${string})`; 'blue.3': `var(--${string})`; 'bl...",
+          "sprinkle": true
+        },
+        "flex": {
+          "type": "ConditionalStyle<Values<{ '1': \"1 1 0%\"; auto: \"1 1 auto\"; initial: \"0 1 auto\"; none: \"none\"; }, { defaultClass: string; conditions: { base: string; md: string; lg: string; xl: string; }; }>>",
+          "sprinkle": true
+        },
+        "flexDirection": {
+          "type": "ConditionalStyle<Values<readonly [\"column\", \"row\", \"column-reverse\", \"row-reverse\"], { defaultClass: string; conditions: { base: string; md: string; lg: string; xl: string; }; }>>",
+          "sprinkle": true
+        },
+        "flexShrink": {
+          "type": "ConditionalStyle<Values<readonly [\"0\", \"1\"], { defaultClass: string; conditions: { base: string; md: string; lg: string; xl: string; }; }>>",
+          "sprinkle": true
+        },
+        "flexWrap": {
+          "type": "ConditionalStyle<Values<readonly [\"nowrap\", \"wrap\", \"wrap-reverse\"], { defaultClass: string; conditions: { base: string; md: string; lg: string; xl: string; }; }>>",
+          "sprinkle": true
+        },
+        "fontFamily": {
+          "type": "\"sans\" | \"mono\" | \"outfit\"",
+          "sprinkle": true
+        },
+        "fontSize": {
+          "type": "\"1\" | \"2\" | \"3\" | \"10\" | \"4\" | \"5\" | \"6\" | \"7\" | \"8\" | \"9\"",
+          "sprinkle": true
+        },
+        "fontStyle": {
+          "type": "\"italic\"",
+          "sprinkle": true
+        },
+        "fontWeight": {
+          "type": "\"bold\" | \"medium\" | \"regular\" | \"semibold\"",
+          "sprinkle": true
+        },
+        "gap": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "gridGap": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "h": {
+          "type": "ConditionalStyle<Values<{ full: \"100%\"; screen: \"100vh\"; '1/2': \"50%\"; '1/3': \"33.333333%\"; '2/3': \"66.666666%\"; '1/4': \"25%\"; '3/4': \"75%\"; '0': `var(--${string})`; '1': `var(--${string})`; '2': `var(--${string})`; '3': `var(--${string})`; '4': `var(--${string})`; '5': `var(--${string})`; '6': `var(--${string})`; '...",
+          "sprinkle": true
+        },
+        "height": {
+          "type": "ConditionalStyle<Values<{ full: \"100%\"; screen: \"100vh\"; '1/2': \"50%\"; '1/3': \"33.333333%\"; '2/3': \"66.666666%\"; '1/4': \"25%\"; '3/4': \"75%\"; '0': `var(--${string})`; '1': `var(--${string})`; '2': `var(--${string})`; '3': `var(--${string})`; '4': `var(--${string})`; '5': `var(--${string})`; '6': `var(--${string})`; '...",
+          "sprinkle": true
+        },
+        "inert": {
+          "type": "boolean"
+        },
+        "isolation": {
+          "type": "\"isolate\"",
+          "sprinkle": true
+        },
+        "items": {
+          "type": "Iterable<T>",
+          "description": "Item objects in the collection."
+        },
+        "justifyContent": {
+          "type": "ConditionalStyle<Values<readonly [\"flex-start\", \"center\", \"flex-end\", \"space-between\", \"space-around\", \"space-evenly\", \"unset\"], { defaultClass: string; conditions: { base: string; md: string; lg: string; xl: string; }; }>>",
+          "sprinkle": true
+        },
+        "letterSpacing": {
+          "type": "\"0\" | \"1\" | \"2\" | \"3\"",
+          "sprinkle": true
+        },
+        "lineHeight": {
+          "type": "\"1\" | \"2\" | \"3\" | \"10\" | \"4\" | \"5\" | \"6\" | \"7\" | \"8\" | \"9\" | \"11\"",
+          "sprinkle": true
+        },
+        "m": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "margin": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "marginBottom": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "marginLeft": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "marginRight": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "marginTop": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "maxH": {
+          "type": "ConditionalStyle<Values<{ full: \"100%\"; screen: \"100vh\"; '1/2': \"50%\"; '1/3': \"33.333333%\"; '2/3': \"66.666666%\"; '1/4': \"25%\"; '3/4': \"75%\"; '0': `var(--${string})`; '1': `var(--${string})`; '2': `var(--${string})`; '3': `var(--${string})`; '4': `var(--${string})`; '5': `var(--${string})`; '6': `var(--${string})`; '...",
+          "sprinkle": true
+        },
+        "maxHeight": {
+          "type": "ConditionalStyle<Values<{ full: \"100%\"; screen: \"100vh\"; '1/2': \"50%\"; '1/3': \"33.333333%\"; '2/3': \"66.666666%\"; '1/4': \"25%\"; '3/4': \"75%\"; '0': `var(--${string})`; '1': `var(--${string})`; '2': `var(--${string})`; '3': `var(--${string})`; '4': `var(--${string})`; '5': `var(--${string})`; '6': `var(--${string})`; '...",
+          "sprinkle": true
+        },
+        "maxW": {
+          "type": "ConditionalStyle<Values<{ full: \"100%\"; screen: \"100vw\"; '1/2': \"50%\"; '1/3': \"33.333333%\"; '2/3': \"66.666666%\"; '1/4': \"25%\"; '3/4': \"75%\"; '0': `var(--${string})`; '1': `var(--${string})`; '2': `var(--${string})`; '3': `var(--${string})`; '4': `var(--${string})`; '5': `var(--${string})`; '6': `var(--${string})`; '...",
+          "sprinkle": true
+        },
+        "maxWidth": {
+          "type": "ConditionalStyle<Values<{ full: \"100%\"; screen: \"100vw\"; '1/2': \"50%\"; '1/3': \"33.333333%\"; '2/3': \"66.666666%\"; '1/4': \"25%\"; '3/4': \"75%\"; '0': `var(--${string})`; '1': `var(--${string})`; '2': `var(--${string})`; '3': `var(--${string})`; '4': `var(--${string})`; '5': `var(--${string})`; '6': `var(--${string})`; '...",
+          "sprinkle": true
+        },
+        "mb": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "minHeight": {
+          "type": "ConditionalStyle<Values<{ full: \"100%\"; screen: \"100vh\"; '1/2': \"50%\"; '1/3': \"33.333333%\"; '2/3': \"66.666666%\"; '1/4': \"25%\"; '3/4': \"75%\"; '0': `var(--${string})`; '1': `var(--${string})`; '2': `var(--${string})`; '3': `var(--${string})`; '4': `var(--${string})`; '5': `var(--${string})`; '6': `var(--${string})`; '...",
+          "sprinkle": true
+        },
+        "minWidth": {
+          "type": "ConditionalStyle<Values<{ full: \"100%\"; screen: \"100vw\"; '1/2': \"50%\"; '1/3': \"33.333333%\"; '2/3': \"66.666666%\"; '1/4': \"25%\"; '3/4': \"75%\"; '0': `var(--${string})`; '1': `var(--${string})`; '2': `var(--${string})`; '3': `var(--${string})`; '4': `var(--${string})`; '5': `var(--${string})`; '6': `var(--${string})`; '...",
+          "sprinkle": true
+        },
+        "ml": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "mr": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "mt": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "mx": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "my": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "objectFit": {
+          "type": "\"contain\" | \"cover\"",
+          "sprinkle": true
+        },
+        "onTransitionCancel": {
+          "type": "TransitionEventHandler<HTMLButtonElement>"
+        },
+        "onTransitionCancelCapture": {
+          "type": "TransitionEventHandler<HTMLButtonElement>"
+        },
+        "onTransitionRun": {
+          "type": "TransitionEventHandler<HTMLButtonElement>"
+        },
+        "onTransitionRunCapture": {
+          "type": "TransitionEventHandler<HTMLButtonElement>"
+        },
+        "onTransitionStart": {
+          "type": "TransitionEventHandler<HTMLButtonElement>"
+        },
+        "onTransitionStartCapture": {
+          "type": "TransitionEventHandler<HTMLButtonElement>"
+        },
+        "opacity": {
+          "type": "\"0\" | \"1\" | \"0.5\"",
+          "sprinkle": true
+        },
+        "outlineColor": {
+          "type": "ConditionalStyle<Values<{ 'neutral.1': `var(--${string})`; 'neutral.2': `var(--${string})`; 'neutral.3': `var(--${string})`; 'neutral.4': `var(--${string})`; 'neutral.5': `var(--${string})`; 'neutral.6': `var(--${string})`; 'blue.1': `var(--${string})`; 'blue.2': `var(--${string})`; 'blue.3': `var(--${string})`; 'bl...",
+          "sprinkle": true
+        },
+        "overflow": {
+          "type": "\"auto\" | \"hidden\" | \"visible\"",
+          "sprinkle": true
+        },
+        "overflowX": {
+          "type": "\"auto\" | \"hidden\" | \"visible\"",
+          "sprinkle": true
+        },
+        "overflowY": {
+          "type": "\"auto\" | \"hidden\" | \"visible\"",
+          "sprinkle": true
+        },
+        "p": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "padding": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "paddingBottom": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "paddingLeft": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "paddingRight": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "paddingTop": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "pb": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "pl": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "placeItems": {
+          "type": "ConditionalStyle<Values<readonly [\"center\"], { defaultClass: string; conditions: { base: string; md: string; lg: string; xl: string; }; }>>",
+          "sprinkle": true
+        },
+        "pointerEvents": {
+          "type": "\"auto\" | \"none\"",
+          "sprinkle": true
+        },
+        "position": {
+          "type": "ConditionalStyle<Values<readonly [\"absolute\", \"fixed\", \"relative\", \"sticky\"], { defaultClass: string; conditions: { base: string; md: string; lg: string; xl: string; }; }>>",
+          "sprinkle": true
+        },
+        "pr": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "pt": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "px": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "py": {
+          "type": "ConditionalStyle<Values<{ readonly none: `var(--${string})`; readonly '2xs': `var(--${string})`; readonly xs: `var(--${string})`; readonly sm: `var(--${string})`; readonly md: `var(--${string})`; readonly lg: `var(--${string})`; readonly xl: `var(--${string})`; readonly '2xl': `var(--${string})`; ... 14 more ...; re...",
+          "sprinkle": true
+        },
+        "render": {
+          "type": "DOMRenderFunction<\"button\", ButtonRenderProps>",
+          "description": "Overrides the default DOM element with a custom render function.\nThis allows rendering existing components with built-in styles and behaviors\nsuch as router links, animation libraries, and pre-styled components.\n\nRequirements:\n\n- You must render the expected element type (e.g. if `<button>` is expected, you cannot render an\n  `<a>`).\n- Only a single root DOM element can be rendered (no fragments).\n- You must pass through props and ref to the underlying DOM element, merging with your own prop\n  as appropriate."
+        },
+        "renderEmptyState": {
+          "type": "(props: TagListRenderProps) => ReactNode",
+          "description": "Provides content to display when there are no items in the tag list."
+        },
+        "rounded": {
+          "type": "\"inherit\" | \"0\" | \"1\" | \"2\" | \"3\" | \"4\" | \"5\" | \"6\" | \"7\"",
+          "sprinkle": true
+        },
+        "roundedB": {
+          "type": "\"0\" | \"1\" | \"2\" | \"3\" | \"4\" | \"5\" | \"6\" | \"7\"",
+          "sprinkle": true
+        },
+        "roundedL": {
+          "type": "\"0\" | \"1\" | \"2\" | \"3\" | \"4\" | \"5\" | \"6\" | \"7\"",
+          "sprinkle": true
+        },
+        "roundedR": {
+          "type": "\"0\" | \"1\" | \"2\" | \"3\" | \"4\" | \"5\" | \"6\" | \"7\"",
+          "sprinkle": true
+        },
+        "roundedT": {
+          "type": "\"0\" | \"1\" | \"2\" | \"3\" | \"4\" | \"5\" | \"6\" | \"7\"",
+          "sprinkle": true
+        },
+        "shadow": {
+          "type": "\"0\" | \"1\" | \"2\" | \"3\" | \"4\" | \"5\"",
+          "sprinkle": true
+        },
+        "size": {
+          "type": "ConditionalStyle<Values<{ full: \"100%\"; screen: \"100vw\"; '1/2': \"50%\"; '1/3': \"33.333333%\"; '2/3': \"66.666666%\"; '1/4': \"25%\"; '3/4': \"75%\"; '0': `var(--${string})`; '1': `var(--${string})`; '2': `var(--${string})`; '3': `var(--${string})`; '4': `var(--${string})`; '5': `var(--${string})`; '6': `var(--${string})`; '...",
+          "sprinkle": true
+        },
+        "textAlign": {
+          "type": "\"center\" | \"end\" | \"start\" | \"justify\"",
+          "sprinkle": true
+        },
+        "textDecoration": {
+          "type": "\"underline\"",
+          "sprinkle": true
+        },
+        "textTransform": {
+          "type": "\"none\" | \"capitalize\" | \"uppercase\"",
+          "sprinkle": true
+        },
+        "touchAction": {
+          "type": "\"none\" | \"manipulation\"",
+          "sprinkle": true
+        },
+        "transitionDuration": {
+          "type": "\"150ms\" | \"200ms\"",
+          "sprinkle": true
+        },
+        "transitionProperty": {
+          "type": "\"opacity\" | \"transform\" | \"all\" | \"none\" | \"default\" | \"colors\" | \"shadow\"",
+          "sprinkle": true
+        },
+        "transitionTimingFunction": {
+          "type": "\"ease\" | \"linear\" | \"in\" | \"out\" | \"inOut\"",
+          "sprinkle": true
+        },
+        "typography": {
+          "type": "\"headline01\" | \"headline02\" | \"headline03\" | \"headline04\" | \"headline05\" | \"title01\" | \"title02\" | \"title03\" | \"label01\" | \"label02\" | \"label03\" | \"label04\" | \"body01\" | \"body02\" | \"body03\" | \"body04\"",
+          "sprinkle": true
+        },
+        "userSelect": {
+          "type": "\"all\" | \"none\"",
+          "sprinkle": true
+        },
+        "visibility": {
+          "type": "\"hidden\" | \"visible\"",
+          "sprinkle": true
+        },
+        "w": {
+          "type": "ConditionalStyle<Values<{ full: \"100%\"; screen: \"100vw\"; '1/2': \"50%\"; '1/3': \"33.333333%\"; '2/3': \"66.666666%\"; '1/4': \"25%\"; '3/4': \"75%\"; '0': `var(--${string})`; '1': `var(--${string})`; '2': `var(--${string})`; '3': `var(--${string})`; '4': `var(--${string})`; '5': `var(--${string})`; '6': `var(--${string})`; '...",
+          "sprinkle": true
+        },
+        "whiteSpace": {
+          "type": "\"nowrap\"",
+          "sprinkle": true
+        },
+        "width": {
+          "type": "ConditionalStyle<Values<{ full: \"100%\"; screen: \"100vw\"; '1/2': \"50%\"; '1/3': \"33.333333%\"; '2/3': \"66.666666%\"; '1/4': \"25%\"; '3/4': \"75%\"; '0': `var(--${string})`; '1': `var(--${string})`; '2': `var(--${string})`; '3': `var(--${string})`; '4': `var(--${string})`; '5': `var(--${string})`; '6': `var(--${string})`; '...",
+          "sprinkle": true
+        },
+        "wordBreak": {
+          "type": "\"break-word\" | \"break-all\"",
+          "sprinkle": true
+        },
+        "wordWrap": {
+          "type": "\"normal\" | \"break-word\"",
+          "sprinkle": true
+        },
+        "z": {
+          "type": "\"auto\" | \"0\" | \"10\" | \"20\" | \"30\" | \"40\" | \"50\" | \"75\" | \"100\"",
+          "sprinkle": true
+        },
+        "zIndex": {
+          "type": "\"auto\" | \"0\" | \"10\" | \"20\" | \"30\" | \"40\" | \"50\" | \"75\" | \"100\"",
+          "sprinkle": true
+        }
+      },
+      "extends": "Box"
+    },
     "vanilla:Tag": {
       "id": "vanilla:Tag",
       "name": "Tag",
@@ -17621,6 +18765,10 @@
           "description": "The variant of the Typography is the style of the text (font size, weight, line height, etc)",
           "defaultValue": "body01"
         }
+      },
+      "deprecated": {
+        "message": "{@link Typography } has been deprecated; use vanilla Text instead.",
+        "replacement": "Text"
       },
       "examples": [
         {
@@ -27569,6 +28717,10 @@
           "defaultValue": "1"
         }
       },
+      "deprecated": {
+        "message": "{@link AvatarStack } has been deprecated; use vanilla AvatarGroup instead.",
+        "replacement": "AvatarGroup"
+      },
       "examples": [
         {
           "title": "Updated Components/Avatar/AvatarStack / AvatarStackStory",
@@ -28167,6 +29319,10 @@
           "required": true
         }
       },
+      "deprecated": {
+        "message": "{@link InlineNotification } has been deprecated; use {@link InlineAlert } instead.",
+        "replacement": "InlineAlert"
+      },
       "examples": [
         {
           "title": "Original Components/Notification / InlineNotificationStory",
@@ -28736,6 +29892,318 @@
           "description": "The current selected value"
         }
       }
+    },
+    "legacy:BarChart": {
+      "id": "legacy:BarChart",
+      "name": "BarChart",
+      "api": "legacy",
+      "description": "BarChart component from @orfium/ictinus (legacy Emotion API). Prefer @orfium/ictinus/vanilla when a vanilla equivalent exists.",
+      "import": "import { BarChart } from '@orfium/ictinus';",
+      "category": [
+        "data-display"
+      ],
+      "props": {}
+    },
+    "legacy:DonutChart": {
+      "id": "legacy:DonutChart",
+      "name": "DonutChart",
+      "api": "legacy",
+      "description": "DonutChart component from @orfium/ictinus (legacy Emotion API). Prefer @orfium/ictinus/vanilla when a vanilla equivalent exists.",
+      "import": "import { DonutChart } from '@orfium/ictinus';",
+      "category": [
+        "data-display"
+      ],
+      "props": {}
+    },
+    "legacy:Label": {
+      "id": "legacy:Label",
+      "name": "Label",
+      "api": "legacy",
+      "description": "Label component from @orfium/ictinus (legacy Emotion API). Prefer @orfium/ictinus/vanilla when a vanilla equivalent exists.",
+      "import": "import { Label } from '@orfium/ictinus';",
+      "category": [
+        "display"
+      ],
+      "props": {}
+    },
+    "legacy:Modal": {
+      "id": "legacy:Modal",
+      "name": "Modal",
+      "api": "legacy",
+      "description": "Modal component from @orfium/ictinus (legacy Emotion API). Prefer @orfium/ictinus/vanilla when a vanilla equivalent exists.",
+      "import": "import { Modal } from '@orfium/ictinus';",
+      "category": [
+        "overlay"
+      ],
+      "props": {}
+    },
+    "legacy:ModalContent": {
+      "id": "legacy:ModalContent",
+      "name": "ModalContent",
+      "api": "legacy",
+      "description": "ModalContent component from @orfium/ictinus (legacy Emotion API). Prefer @orfium/ictinus/vanilla when a vanilla equivalent exists.",
+      "import": "import { ModalContent } from '@orfium/ictinus';",
+      "category": [
+        "overlay"
+      ],
+      "props": {}
+    },
+    "legacy:Banner": {
+      "id": "legacy:Banner",
+      "name": "Banner",
+      "api": "legacy",
+      "description": "Banner component from @orfium/ictinus (legacy Emotion API). Prefer @orfium/ictinus/vanilla when a vanilla equivalent exists.",
+      "import": "import { Banner } from '@orfium/ictinus';",
+      "category": [
+        "feedback"
+      ],
+      "props": {}
+    },
+    "legacy:Snackbar": {
+      "id": "legacy:Snackbar",
+      "name": "Snackbar",
+      "api": "legacy",
+      "description": "Snackbar component from @orfium/ictinus (legacy Emotion API). Prefer @orfium/ictinus/vanilla when a vanilla equivalent exists.",
+      "import": "import { Snackbar } from '@orfium/ictinus';",
+      "category": [
+        "feedback"
+      ],
+      "props": {}
+    },
+    "legacy:ToastV4": {
+      "id": "legacy:ToastV4",
+      "name": "ToastV4",
+      "api": "legacy",
+      "description": "ToastV4 component from @orfium/ictinus (legacy Emotion API). Prefer @orfium/ictinus/vanilla when a vanilla equivalent exists.",
+      "import": "import { ToastV4 } from '@orfium/ictinus';",
+      "category": [
+        "feedback"
+      ],
+      "props": {}
+    },
+    "legacy:TopNavBar": {
+      "id": "legacy:TopNavBar",
+      "name": "TopNavBar",
+      "api": "legacy",
+      "description": "TopNavBar component from @orfium/ictinus (legacy Emotion API). Prefer @orfium/ictinus/vanilla when a vanilla equivalent exists.",
+      "import": "import { TopNavBar } from '@orfium/ictinus';",
+      "category": [
+        "navigation"
+      ],
+      "props": {}
+    },
+    "legacy:TruncatedContent": {
+      "id": "legacy:TruncatedContent",
+      "name": "TruncatedContent",
+      "api": "legacy",
+      "description": "TruncatedContent component from @orfium/ictinus (legacy Emotion API). Prefer @orfium/ictinus/vanilla when a vanilla equivalent exists.",
+      "import": "import { TruncatedContent } from '@orfium/ictinus';",
+      "category": [
+        "display"
+      ],
+      "props": {},
+      "examples": [
+        {
+          "title": "Utilities/Truncated Text with Tooltip / RegularTextWithTruncationAndTooltip",
+          "components": [
+            "TruncatedContent"
+          ],
+          "code": [
+            {
+              "filename": "TruncatedContent/TruncatedContent.stories.tsx",
+              "content": "export const RegularTextWithTruncationAndTooltip = {\n  render: () => (\n    <div\n      style={{\n        width: 150,\n      }}\n    >\n      <TruncatedContent tooltipContent=\"This is a long text that will overflow\">\n        This is a long text that will overflow\n      </TruncatedContent>\n    </div>\n  ),\n\n  name: 'Regular Text with truncation and tooltip',\n\n  parameters: {\n    controls: { disable: true },\n  },\n};"
+            }
+          ]
+        },
+        {
+          "title": "Utilities/Truncated Text with Tooltip / RegularTableWithCellTooltips",
+          "components": [
+            "TruncatedContent",
+            "TableV4"
+          ],
+          "code": [
+            {
+              "filename": "TruncatedContent/TruncatedContent.stories.tsx",
+              "content": "export const RegularTableWithCellTooltips = {\n  render: () => (\n    <TableV4\n      columns={['Column 1', 'Column 2', 'Column 3', 'Column 4']}\n      dataTestIdPrefix=\"ictinus\"\n      onSort={(column, order) => console.log(column, order)}\n      initialSort={{\n        column: 'title',\n        order: 'asc',\n      }}\n      isPadded\n      data={[\n        {\n          id: 1,\n\n          cells: [\n            {\n              content: `Generated tooltip from the element's text content`,\n            },\n            {\n              content: 'No tooltip',\n              hasTruncatedTooltip: false,\n            },\n            {\n              content: () => <span>JSX Content without tooltip</span>,\n            },\n            {\n              content: () => <span>JSX Content with forced tooltip</span>,\n              tooltipContent: 'This is a kinda long (that could be longer) tooltip from a prop',\n            },\n          ],\n        },\n      ]}\n    />\n  ),\n\n  name: 'Regular Table with cell tooltips',\n};"
+            }
+          ]
+        }
+      ]
+    },
+    "legacy:ThemeSwitchProvider": {
+      "id": "legacy:ThemeSwitchProvider",
+      "name": "ThemeSwitchProvider",
+      "api": "legacy",
+      "description": "ThemeSwitchProvider component from @orfium/ictinus (legacy Emotion API). Prefer @orfium/ictinus/vanilla when a vanilla equivalent exists.",
+      "import": "import { ThemeSwitchProvider } from '@orfium/ictinus';",
+      "category": [
+        "form"
+      ],
+      "props": {}
+    },
+    "legacy:TypeColorToColorMatchProvider": {
+      "id": "legacy:TypeColorToColorMatchProvider",
+      "name": "TypeColorToColorMatchProvider",
+      "api": "legacy",
+      "description": "TypeColorToColorMatchProvider component from @orfium/ictinus (legacy Emotion API). Prefer @orfium/ictinus/vanilla when a vanilla equivalent exists.",
+      "import": "import { TypeColorToColorMatchProvider } from '@orfium/ictinus';",
+      "category": [
+        "components"
+      ],
+      "props": {}
+    },
+    "legacy:ListItemAction": {
+      "id": "legacy:ListItemAction",
+      "name": "ListItemAction",
+      "api": "legacy",
+      "description": "ListItemAction component from @orfium/ictinus (legacy Emotion API). Prefer @orfium/ictinus/vanilla when a vanilla equivalent exists.",
+      "import": "import { ListItemAction } from '@orfium/ictinus';",
+      "category": [
+        "components"
+      ],
+      "props": {}
+    },
+    "legacy:ListSection": {
+      "id": "legacy:ListSection",
+      "name": "ListSection",
+      "api": "legacy",
+      "description": "ListSection component from @orfium/ictinus (legacy Emotion API). Prefer @orfium/ictinus/vanilla when a vanilla equivalent exists.",
+      "import": "import { ListSection } from '@orfium/ictinus';",
+      "category": [
+        "components"
+      ],
+      "props": {},
+      "examples": [
+        {
+          "title": "Updated Components/List/ListSection / NormalListSection",
+          "components": [
+            "ListSection",
+            "List",
+            "ListItem",
+            "ListItemText"
+          ],
+          "code": [
+            {
+              "filename": "stories/ListSection.stories.tsx",
+              "content": "export const NormalListSection = {\n  render: () => (\n    <Stack>\n      <List label={'ListSection'}>\n        <ListSection title=\"Section 1\">\n          <ListItem>\n            <ListItemText>...</ListItemText>\n          </ListItem>\n          <ListItem>\n            <ListItemText>...</ListItemText>\n          </ListItem>\n        </ListSection>\n        <ListSection title=\"Section 2\">\n          <ListItem>\n            <ListItemText>...</ListItemText>\n          </ListItem>\n          <ListItem>\n            <ListItemText>...</ListItemText>\n          </ListItem>\n        </ListSection>\n      </List>\n    </Stack>\n  ),\n\n  name: 'Normal ListSection',\n};"
+            }
+          ]
+        },
+        {
+          "title": "Updated Components/List/ListSection / CompactListSection",
+          "components": [
+            "ListSection",
+            "List",
+            "ListItem",
+            "ListItemText"
+          ],
+          "code": [
+            {
+              "filename": "stories/ListSection.stories.tsx",
+              "content": "export const CompactListSection = {\n  render: () => (\n    <Stack>\n      <List label={'ListSection'}>\n        <ListSection title=\"Section 1\" rowSize={'compact'}>\n          <ListItem>\n            <ListItemText>...</ListItemText>\n          </ListItem>\n          <ListItem>\n            <ListItemText>...</ListItemText>\n          </ListItem>\n        </ListSection>\n        <ListSection title=\"Section 2\" rowSize={'compact'}>\n          <ListItem>\n            <ListItemText>...</ListItemText>\n          </ListItem>\n          <ListItem>\n            <ListItemText>...</ListItemText>\n          </ListItem>\n        </ListSection>\n      </List>\n    </Stack>\n  ),\n\n  name: 'Compact ListSection',\n};"
+            }
+          ]
+        }
+      ]
+    },
+    "legacy:DrawerHeader": {
+      "id": "legacy:DrawerHeader",
+      "name": "DrawerHeader",
+      "api": "legacy",
+      "description": "DrawerHeader component from @orfium/ictinus (legacy Emotion API). Prefer @orfium/ictinus/vanilla when a vanilla equivalent exists.",
+      "import": "import { DrawerHeader } from '@orfium/ictinus';",
+      "category": [
+        "overlay"
+      ],
+      "props": {}
+    },
+    "legacy:DrawerContent": {
+      "id": "legacy:DrawerContent",
+      "name": "DrawerContent",
+      "api": "legacy",
+      "description": "DrawerContent component from @orfium/ictinus (legacy Emotion API). Prefer @orfium/ictinus/vanilla when a vanilla equivalent exists.",
+      "import": "import { DrawerContent } from '@orfium/ictinus';",
+      "category": [
+        "overlay"
+      ],
+      "props": {}
+    },
+    "legacy:DrawerFooter": {
+      "id": "legacy:DrawerFooter",
+      "name": "DrawerFooter",
+      "api": "legacy",
+      "description": "DrawerFooter component from @orfium/ictinus (legacy Emotion API). Prefer @orfium/ictinus/vanilla when a vanilla equivalent exists.",
+      "import": "import { DrawerFooter } from '@orfium/ictinus';",
+      "category": [
+        "overlay"
+      ],
+      "props": {}
+    },
+    "legacy:DrawerContextProvider": {
+      "id": "legacy:DrawerContextProvider",
+      "name": "DrawerContextProvider",
+      "api": "legacy",
+      "description": "DrawerContextProvider component from @orfium/ictinus (legacy Emotion API). Prefer @orfium/ictinus/vanilla when a vanilla equivalent exists.",
+      "import": "import { DrawerContextProvider } from '@orfium/ictinus';",
+      "category": [
+        "overlay"
+      ],
+      "props": {}
+    },
+    "legacy:THead": {
+      "id": "legacy:THead",
+      "name": "THead",
+      "api": "legacy",
+      "description": "THead component from @orfium/ictinus (legacy Emotion API). Prefer @orfium/ictinus/vanilla when a vanilla equivalent exists.",
+      "import": "import { THead } from '@orfium/ictinus';",
+      "category": [
+        "components"
+      ],
+      "props": {}
+    },
+    "legacy:TH": {
+      "id": "legacy:TH",
+      "name": "TH",
+      "api": "legacy",
+      "description": "TH component from @orfium/ictinus (legacy Emotion API). Prefer @orfium/ictinus/vanilla when a vanilla equivalent exists.",
+      "import": "import { TH } from '@orfium/ictinus';",
+      "category": [
+        "components"
+      ],
+      "props": {}
+    },
+    "legacy:TR": {
+      "id": "legacy:TR",
+      "name": "TR",
+      "api": "legacy",
+      "description": "TR component from @orfium/ictinus (legacy Emotion API). Prefer @orfium/ictinus/vanilla when a vanilla equivalent exists.",
+      "import": "import { TR } from '@orfium/ictinus';",
+      "category": [
+        "components"
+      ],
+      "props": {}
+    },
+    "legacy:TD": {
+      "id": "legacy:TD",
+      "name": "TD",
+      "api": "legacy",
+      "description": "TD component from @orfium/ictinus (legacy Emotion API). Prefer @orfium/ictinus/vanilla when a vanilla equivalent exists.",
+      "import": "import { TD } from '@orfium/ictinus';",
+      "category": [
+        "components"
+      ],
+      "props": {}
+    },
+    "legacy:TTitle": {
+      "id": "legacy:TTitle",
+      "name": "TTitle",
+      "api": "legacy",
+      "description": "TTitle component from @orfium/ictinus (legacy Emotion API). Prefer @orfium/ictinus/vanilla when a vanilla equivalent exists.",
+      "import": "import { TTitle } from '@orfium/ictinus';",
+      "category": [
+        "components"
+      ],
+      "props": {}
     }
   },
   "guides": {
@@ -28886,17 +30354,6 @@
     }
   },
   "icons": {
-    "vanilla:Icon": {
-      "name": "Icon",
-      "api": "vanilla",
-      "category": "icon",
-      "keywords": [
-        "",
-        "icon"
-      ],
-      "import": "import { Icon } from '@orfium/ictinus/vanilla';\n// <Icon />",
-      "extends": "IconPrimitive"
-    },
     "vanilla:AccountIcon": {
       "name": "AccountIcon",
       "api": "vanilla",

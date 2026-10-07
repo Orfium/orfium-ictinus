@@ -14,4 +14,4 @@ export const SearchFilledIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((p
   </IconPrimitive>
 ));
 
-SearchFilledIcon.displayName = 'SearchFilledIcon';
+SearchFilledIcon.displayName = '@orfium/ictinus/vanilla/SearchFilledIcon';

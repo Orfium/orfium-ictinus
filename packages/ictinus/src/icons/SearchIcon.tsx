@@ -12,4 +12,4 @@ export const SearchIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, 
   </IconPrimitive>
 ));
 
-SearchIcon.displayName = 'SearchIcon';
+SearchIcon.displayName = '@orfium/ictinus/vanilla/SearchIcon';

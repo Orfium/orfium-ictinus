@@ -24,4 +24,4 @@ export const IconPrimitive = forwardRef<SVGSVGElement, IconPrimitiveProps>((prop
   );
 });
 
-IconPrimitive.displayName = 'IconPrimitive';
+IconPrimitive.displayName = '@orfium/ictinus/vanilla/IconPrimitive';
