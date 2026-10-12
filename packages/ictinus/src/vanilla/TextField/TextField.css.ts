@@ -101,7 +101,7 @@ export const inputGroup = recipe({
   ],
 });
 
-export const inputWrapper = recipe({
+export const floatingLabelWrapper = recipe({
   base: [
     sprinkles({
       position: 'relative',
@@ -138,7 +138,7 @@ export const floatingLabel = recipe({
       paddingLeft: vars.spacing.md,
       paddingRight: vars.spacing.md,
       selectors: {
-        [`${inputWrapper.classNames.base}:has(> input[data-focused]) > &, ${inputWrapper.classNames.base}:has(> input:not(:placeholder-shown)) > &`]:
+        [`${floatingLabelWrapper.classNames.base}:has(> :is(input, textarea)[data-focused]) > &, ${floatingLabelWrapper.classNames.base}:has(> :is(input, textarea):not(:placeholder-shown)) > &`]:
           {
             color: vars.color.text.default.active,
             transform: `translate(calc(${vars.spacing.md} * 0.2), -115%) scale(0.8)`,
@@ -146,23 +146,39 @@ export const floatingLabel = recipe({
             fontWeight: vars.weight.bold,
             lineHeight: vars['line-height'][1],
           },
-        [`${inputWrapper.classNames.base}:has(> input[data-invalid]) > &`]: {
+        [`${floatingLabelWrapper.classNames.base}:has(> :is(input, textarea)[data-invalid]) > &`]: {
           color: vars.color.text.default.error,
         },
+        [`${floatingLabelWrapper.classNames.base}:has(> textarea) > &`]: {
+          top: vars.spacing.lg,
+          transform: 'translateY(0)',
+          boxSizing: 'border-box',
+          width: 'var(--floating-label-clip-width, 100%)',
+          overflow: 'hidden',
+          whiteSpace: 'nowrap',
+        },
+        [`${floatingLabelWrapper.classNames.base}:has(> textarea[data-focused]) > &, ${floatingLabelWrapper.classNames.base}:has(> textarea:not(:placeholder-shown)) > &`]:
+          {
+            transform: `translate(calc(${vars.spacing.md} * 0.2), -35%) scale(0.8)`,
+          },
         [`${inputGroup.classNames.base} &`]: {
           paddingLeft: vars.spacing.none,
           paddingRight: vars.spacing.none,
         },
-        [`${inputGroup.classNames.base} ${inputWrapper.classNames.base}:has(> input[data-focused]) &, ${inputGroup.classNames.base} ${inputWrapper.classNames.base}:has(> input:not(:placeholder-shown)) &`]:
+        [`${inputGroup.classNames.base} ${floatingLabelWrapper.classNames.base}:has(> :is(input, textarea)[data-focused]) &, ${inputGroup.classNames.base} ${floatingLabelWrapper.classNames.base}:has(> :is(input, textarea):not(:placeholder-shown)) &`]:
           {
             transform: 'translate(0, -115%) scale(0.8)',
           },
-        [`${inputWrapper.classNames.base}:has(> input.${inputCompact}[data-focused]) > &, ${inputGroup.classNames.base} ${inputWrapper.classNames.base}:has(> input.${inputCompact}[data-focused]) &, ${inputWrapper.classNames.base}:has(> input.${inputCompact}:not(:placeholder-shown)) > &, ${inputGroup.classNames.base} ${inputWrapper.classNames.base}:has(> input.${inputCompact}:not(:placeholder-shown)) &`]:
+        [`${inputGroup.classNames.base} ${floatingLabelWrapper.classNames.base}:has(> textarea[data-focused]) &, ${inputGroup.classNames.base} ${floatingLabelWrapper.classNames.base}:has(> textarea:not(:placeholder-shown)) &`]:
+          {
+            transform: 'translate(0, -50%) scale(0.8)',
+          },
+        [`${floatingLabelWrapper.classNames.base}:has(> :is(input, textarea).${inputCompact}[data-focused]) > &, ${inputGroup.classNames.base} ${floatingLabelWrapper.classNames.base}:has(> :is(input, textarea).${inputCompact}[data-focused]) &, ${floatingLabelWrapper.classNames.base}:has(> :is(input, textarea).${inputCompact}:not(:placeholder-shown)) > &, ${inputGroup.classNames.base} ${floatingLabelWrapper.classNames.base}:has(> :is(input, textarea).${inputCompact}:not(:placeholder-shown)) &`]:
           {
             transition: 'none',
             opacity: 0,
           },
-        [`${inputWrapper.classNames.base}:has(> input.${inputCompact}) > &, ${inputGroup.classNames.base} ${inputWrapper.classNames.base}:has(> input.${inputCompact}) &`]:
+        [`${floatingLabelWrapper.classNames.base}:has(> :is(input, textarea).${inputCompact}) > &, ${inputGroup.classNames.base} ${floatingLabelWrapper.classNames.base}:has(> :is(input, textarea).${inputCompact}) &`]:
           {
             fontSize: vars['font-size'][2],
             lineHeight: vars['line-height'][2],
@@ -241,15 +257,15 @@ export const input = recipe({
             borderWidth: 0,
             outline: 'none',
           },
-        [`${inputWrapper.classNames.base}:has(> ${floatingLabel.classNames.base}) > &::placeholder`]:
+        [`${floatingLabelWrapper.classNames.base}:has(> ${floatingLabel.classNames.base}) > &::placeholder`]:
           {
             color: 'transparent',
           },
-        [`${inputWrapper.classNames.base}:has(> ${floatingLabel.classNames.base}) > &[data-focused]::placeholder`]:
+        [`${floatingLabelWrapper.classNames.base}:has(> ${floatingLabel.classNames.base}) > &[data-focused]::placeholder`]:
           {
             color: vars.color.text.default.secondary,
           },
-        [`${inputWrapper.classNames.base}:has(> ${floatingLabel.classNames.base}) > &:not(.${inputCompact})`]:
+        [`${floatingLabelWrapper.classNames.base}:has(> ${floatingLabel.classNames.base}) > &:not(textarea):not(.${inputCompact})`]:
           {
             paddingTop: vars.spacing.md,
           },
@@ -269,10 +285,23 @@ export const input = recipe({
           h: '7',
         }),
       ],
+      textarea: sprinkles({
+        typography: 'body02',
+      }),
     },
   },
   defaultVariants: {
     type: 'normal',
+  },
+});
+
+export const textArea = style({
+  paddingTop: vars.spacing.lg,
+  paddingBottom: vars.spacing.lg,
+  selectors: {
+    [`${floatingLabelWrapper.classNames.base}:has(> ${floatingLabel.classNames.base}) > &`]: {
+      paddingTop: vars.spacing['2xl'],
+    },
   },
 });
 
