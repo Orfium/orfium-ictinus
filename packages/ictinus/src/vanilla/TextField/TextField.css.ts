@@ -64,34 +64,35 @@ export const inputGroup = recipe({
       paddingRight: vars.spacing.md,
 
       selectors: {
-        '&:hover:not(:has(input[data-disabled]))': {
+        '&:hover:not(:has(:is(input, textarea)[data-disabled]))': {
           backgroundColor: vars.color.palette.secondary.muted,
           borderColor: vars.color['border-color'].interactive.active,
         },
-        '&:has(input[data-focused])': {
+        '&:has(:is(input, textarea)[data-focused])': {
           backgroundColor: vars.color.palette.secondary.base,
           borderColor: vars.color['border-color'].interactive.active,
           outline: `${vars['border-width'][1]} solid ${vars.color['border-color'].interactive.active}`,
         },
-        '&:has(input[data-focus-visible])': {
+        '&:has(:is(input, textarea)[data-focus-visible])': {
           transition: 'none',
           borderColor: vars.color['border-color'].interactive.focused,
           outline: `${vars['border-width'][3]} solid ${vars.color['border-color'].interactive.focused}`,
         },
-        '&:has(input[data-invalid])': {
+        '&:has(:is(input, textarea)[data-invalid])': {
           backgroundColor: vars.color.palette.error.base,
           borderColor: vars.color['border-color'].interactive.error,
         },
-        '&:has(input[data-invalid]):hover:not(:has(input[data-disabled]))': {
-          backgroundColor: vars.color.palette.error.muted,
-          borderColor: vars.color['border-color'].interactive.error,
-        },
-        '&:has(input[data-invalid][data-focused])': {
+        '&:has(:is(input, textarea)[data-invalid]):hover:not(:has(:is(input, textarea)[data-disabled]))':
+          {
+            backgroundColor: vars.color.palette.error.muted,
+            borderColor: vars.color['border-color'].interactive.error,
+          },
+        '&:has(:is(input, textarea)[data-invalid][data-focused])': {
           backgroundColor: vars.color.palette.error.base,
           borderColor: vars.color['border-color'].interactive.error,
           outline: `${vars['border-width'][1]} solid ${vars.color['border-color'].interactive.error}`,
         },
-        '&:has(input[data-invalid][data-focus-visible])': {
+        '&:has(:is(input, textarea)[data-invalid][data-focus-visible])': {
           transition: 'none',
           borderColor: vars.color['border-color'].interactive.focused,
           outline: `${vars['border-width'][3]} solid ${vars.color['border-color'].interactive.focused}`,
