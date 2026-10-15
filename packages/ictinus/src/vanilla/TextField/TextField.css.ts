@@ -49,7 +49,6 @@ export const inputGroup = recipe({
       typography: 'body02',
       color: 'primary',
       rounded: '2',
-      cursor: 'default',
       width: 'full',
     }),
     style({
@@ -195,7 +194,6 @@ export const input = recipe({
       typography: 'body02',
       color: 'primary',
       rounded: '2',
-      cursor: 'default',
       width: 'full',
     }),
     style({
