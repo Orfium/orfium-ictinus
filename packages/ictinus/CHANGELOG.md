@@ -1,5 +1,12 @@
 # @orfium/ictinus
 
+## 5.47.0
+
+### Minor Changes
+
+- e55117a: Create vanilla TextField
+- e55117a: Create vanilla TextArea
+
 ## 5.46.7
 
 ### Patch Changes
