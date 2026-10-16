@@ -22,6 +22,9 @@ export declare function getDocs(): ComponentDoc[];
 export declare const VANILLA_PREFIX: '@orfium/ictinus/vanilla/';
 export declare const LEGACY_PREFIX: '@orfium/ictinus/';
 
+/** Internal / non-public pieces that still appear in export graphs. */
+export declare const DOCS_SKIP: Set<string>;
+
 export declare function resolveApi(
   displayName: string,
 ): 'vanilla' | 'legacy' | null;

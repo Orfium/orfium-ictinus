@@ -1,4 +1,5 @@
 import {
+  DOCS_SKIP,
   docsShortName,
   getDocs,
   resolveApi,
@@ -19,18 +20,6 @@ import {
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const repoRoot = join(__dirname, '..', '..', '..');
-
-/** Internal / non-public pieces that still appear in export graphs. */
-const SKIP = new Set([
-  'ClickAwayListener',
-  'NotificationsContainer',
-  'NotificationVisual',
-  'MultiTextFieldBase',
-  'TextInputBase',
-  'ButtonBase',
-  'ButtonLoader',
-  'sprinkles',
-]);
 
 const CATEGORY_BY_NAME = [
   [/Chart|BarChart|DonutChart|LineChart|DataTable|Table/, 'data-display'],
@@ -88,7 +77,7 @@ export async function generateComponents() {
 
   for (const doc of docs) {
     const name = docsShortName(doc.displayName);
-    if (SKIP.has(name)) continue;
+    if (DOCS_SKIP.has(name)) continue;
     if (isGlyphIcon(name)) continue;
 
     const api = resolveApi(doc.displayName);

@@ -6,6 +6,7 @@ import docgen from 'react-docgen-typescript';
 import ts from 'typescript';
 
 import {
+  DOCS_SKIP,
   LEGACY_PREFIX,
   VANILLA_PREFIX,
   docsShortName,
@@ -16,50 +17,6 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const sharedRoot = path.resolve(__dirname, '..');
 const ictinusRoot = path.resolve(sharedRoot, '../ictinus');
 const srcRoot = path.resolve(ictinusRoot, 'src');
-
-/**
- * @param {docgen.ComponentDoc[]} docs
- * @returns {Record<string, string>}
- */
-function buildTypeExpansions(docs) {
-  /** @type {Record<string, string>} */
-  const expansions = {};
-
-  for (const doc of docs) {
-    const match = doc.displayName.match(
-      /^@orfium\/ictinus\/(?:vanilla\/)?(\w+)Doc$/,
-    );
-    if (!match) continue;
-
-    const typeName = match[1];
-    const props = Object.entries(doc.props)
-      .filter(
-        ([, prop]) => prop.declarations?.length && prop.type.name !== 'undefined',
-      )
-      .map(([name, prop]) => {
-        const type = prop.type.raw || prop.type.name || 'unknown';
-        return `${name}${prop.required ? '' : '?'}: ${type}`;
-      });
-
-    if (props.length > 0) {
-      expansions[typeName] = `{ ${props.join('; ')} }`;
-    }
-  }
-
-  return expansions;
-}
-
-/**
- * @param {string} rawType
- * @param {Record<string, string>} expansions
- */
-function expandTypeReferences(rawType, expansions) {
-  let result = rawType;
-  for (const [typeName, shape] of Object.entries(expansions)) {
-    result = result.replaceAll(typeName, shape);
-  }
-  return result;
-}
 
 /**
  * Prefer explicit displayName prefix; else infer from export surfaces (+ path ties).
@@ -97,12 +54,10 @@ function generateDocs() {
   });
 
   const docs = parser.parse(
-    fg.globSync(path.join(srcRoot, '**/{*.css.ts,*.tsx}'), {
+    fg.globSync(path.join(srcRoot, '**/*.tsx'), {
       ignore: ['**/*.spec.*', '**/*.test.*'],
     }),
   );
-
-  const typeExpansions = buildTypeExpansions(docs);
 
   const processed = docs
     .map(
@@ -132,10 +87,6 @@ function generateDocs() {
                 { declarations: _declarations, defaultValue, description: propDescription, required, ...prop },
               ]) => {
                 delete prop.parent;
-
-                if (prop.type.raw) {
-                  prop.type.raw = expandTypeReferences(prop.type.raw, typeExpansions);
-                }
 
                 const typeName = prop.type.raw || prop.type.name || 'unknown';
 
@@ -176,6 +127,7 @@ function generateDocs() {
     )
     .filter((doc) => {
       const name = docsShortName(doc.displayName);
+      if (DOCS_SKIP.has(name)) return false;
       const api = resolveApi(doc.displayName);
       if (api === 'vanilla') return vanilla.has(name);
       // Prefer vanilla when both exist.
@@ -232,6 +184,7 @@ function addMissingExportStubs(docs, { legacy, vanilla, program, typeChecker }) 
     }
 
     for (const name of names) {
+      if (DOCS_SKIP.has(name)) continue;
       if (api === 'legacy' && vanilla.has(name)) continue;
       if (documented.has(`${api}:${name}`)) continue;
 
@@ -243,10 +196,25 @@ function addMissingExportStubs(docs, { legacy, vanilla, program, typeChecker }) 
       console.warn(
         `docgen missed ${api}:${name}; emitting minimal stub (props unknown)`,
       );
+
+      const resolved =
+        exportSymbol.flags & ts.SymbolFlags.Alias
+          ? typeChecker.getAliasedSymbol(exportSymbol)
+          : exportSymbol;
+      const jsTags = Object.fromEntries(
+        resolved
+          .getJsDocTags(typeChecker)
+          .map((t) => [t.name, ts.displayPartsToString(t.text)]),
+      );
+      const description = ts.displayPartsToString(
+        resolved.getDocumentationComment(typeChecker),
+      );
+
       stubs.push({
         displayName: `${prefix}${name}`,
         props: [],
-        tags: { api },
+        tags: { ...jsTags, api },
+        ...(description && { description }),
       });
       documented.add(`${api}:${name}`);
     }
