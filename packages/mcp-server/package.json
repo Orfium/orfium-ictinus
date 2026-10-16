@@ -29,21 +29,22 @@
     "README.md"
   ],
   "scripts": {
-    "generate": "node ./scripts/generate.mjs",
+    "generate": "pnpm --filter @orfium/shared generate:docs && node ./plugins/generate.mjs",
     "build": "pnpm generate && tsc -p tsconfig.json && cp src/data.json dist/data.json",
     "dev": "pnpm generate && tsc -p tsconfig.json --watch",
     "prepublishOnly": "pnpm build",
     "lint": "oxlint",
     "tsc": "tsc -p tsconfig.json --noEmit",
-    "fmt": "prettier src scripts --check",
+    "fmt": "prettier src plugins --check",
     "check": "pnpm tsc && pnpm lint && pnpm fmt",
     "precommit": "pnpm tsc && pnpm lint"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.22.0",
-    "zod": "^3.23.8"
+    "@modelcontextprotocol/sdk": "^1.31.0",
+    "zod": "^3.25.76"
   },
   "devDependencies": {
+    "@orfium/shared": "workspace:*",
     "@types/node": "^24.0.0",
     "typescript": "^5.9.2"
   }

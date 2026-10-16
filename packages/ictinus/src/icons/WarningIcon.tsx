@@ -14,4 +14,4 @@ export const WarningIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props,
   </IconPrimitive>
 ));
 
-WarningIcon.displayName = 'WarningIcon';
+WarningIcon.displayName = '@orfium/ictinus/vanilla/WarningIcon';

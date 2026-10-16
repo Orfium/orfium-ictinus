@@ -12,4 +12,4 @@ export const ReviewIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, 
   </IconPrimitive>
 ));
 
-ReviewIcon.displayName = 'ReviewIcon';
+ReviewIcon.displayName = '@orfium/ictinus/vanilla/ReviewIcon';

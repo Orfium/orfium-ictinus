@@ -12,4 +12,4 @@ export const ArtistIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, 
   </IconPrimitive>
 ));
 
-ArtistIcon.displayName = 'ArtistIcon';
+ArtistIcon.displayName = '@orfium/ictinus/vanilla/ArtistIcon';

@@ -12,4 +12,4 @@ export const FlagIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, re
   </IconPrimitive>
 ));
 
-FlagIcon.displayName = 'FlagIcon';
+FlagIcon.displayName = '@orfium/ictinus/vanilla/FlagIcon';

@@ -12,4 +12,4 @@ export const RadioIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, r
   </IconPrimitive>
 ));
 
-RadioIcon.displayName = 'RadioIcon';
+RadioIcon.displayName = '@orfium/ictinus/vanilla/RadioIcon';

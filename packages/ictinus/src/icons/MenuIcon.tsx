@@ -12,4 +12,4 @@ export const MenuIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, re
   </IconPrimitive>
 ));
 
-MenuIcon.displayName = 'MenuIcon';
+MenuIcon.displayName = '@orfium/ictinus/vanilla/MenuIcon';

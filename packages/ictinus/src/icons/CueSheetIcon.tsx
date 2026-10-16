@@ -12,4 +12,4 @@ export const CueSheetIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props
   </IconPrimitive>
 ));
 
-CueSheetIcon.displayName = 'CueSheetIcon';
+CueSheetIcon.displayName = '@orfium/ictinus/vanilla/CueSheetIcon';

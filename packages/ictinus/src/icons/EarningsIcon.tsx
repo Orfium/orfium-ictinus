@@ -12,4 +12,4 @@ export const EarningsIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props
   </IconPrimitive>
 ));
 
-EarningsIcon.displayName = 'EarningsIcon';
+EarningsIcon.displayName = '@orfium/ictinus/vanilla/EarningsIcon';

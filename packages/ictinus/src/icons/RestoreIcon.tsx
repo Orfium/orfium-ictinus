@@ -16,4 +16,4 @@ export const RestoreIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props,
   </IconPrimitive>
 ));
 
-RestoreIcon.displayName = 'RestoreIcon';
+RestoreIcon.displayName = '@orfium/ictinus/vanilla/RestoreIcon';

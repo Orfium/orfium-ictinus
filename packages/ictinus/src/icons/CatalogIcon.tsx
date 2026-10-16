@@ -12,4 +12,4 @@ export const CatalogIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props,
   </IconPrimitive>
 ));
 
-CatalogIcon.displayName = 'CatalogIcon';
+CatalogIcon.displayName = '@orfium/ictinus/vanilla/CatalogIcon';

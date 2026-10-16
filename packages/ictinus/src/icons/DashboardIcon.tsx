@@ -12,4 +12,4 @@ export const DashboardIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((prop
   </IconPrimitive>
 ));
 
-DashboardIcon.displayName = 'DashboardIcon';
+DashboardIcon.displayName = '@orfium/ictinus/vanilla/DashboardIcon';

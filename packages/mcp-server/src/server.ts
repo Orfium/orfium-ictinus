@@ -29,11 +29,10 @@ const tokenCategories = [
   'boxShadow',
 ] as const;
 
-/** Vanilla components that do not inherit Box/sprinkles layout props. */
-const NO_BOX_EXTENDS = new Set(['Box', 'ThemeProvider']);
+const NO_BOX_EXTENDS = new Set(['Box', 'ThemeProvider', 'IconPrimitive']);
 
 function synthesizeExample(component: ComponentInfo) {
-  const propEntries = Object.entries(component.props)
+  const propEntries = Object.entries(componentSpecificProps(component))
     .filter(([, def]) => def.defaultValue != null)
     .slice(0, 3);
   const attrs = propEntries
@@ -50,10 +49,20 @@ function synthesizeExample(component: ComponentInfo) {
   };
 }
 
-function boxExtends(component: ComponentInfo): 'Box' | undefined {
-  if (component.api !== 'vanilla') return undefined;
+function componentSpecificProps(component: ComponentInfo) {
+  if (component.name === 'Box' || component.name === 'IconPrimitive') {
+    return component.props;
+  }
+  return Object.fromEntries(
+    Object.entries(component.props).filter(([, def]) => !def.sprinkle),
+  );
+}
+
+function boxExtends(component: ComponentInfo): string | undefined {
   if (NO_BOX_EXTENDS.has(component.name)) return undefined;
-  return 'Box';
+  if (component.extends) return component.extends;
+  if (component.api === 'vanilla') return 'Box';
+  return undefined;
 }
 
 export const server = new McpServer({
@@ -114,12 +123,13 @@ Use optional "api" to force vanilla or legacy when both exist. Prefer vanilla (@
       : synthesizeExample(component);
 
     const extendsBox = boxExtends(component);
-    const propNames = Object.keys(component.props).sort((a, b) => a.localeCompare(b));
+    const specificProps = componentSpecificProps(component);
+    const propNames = Object.keys(specificProps).sort((a, b) => a.localeCompare(b));
     const includeProps = propsQuery !== undefined;
     const props =
       includeProps
         ? searchProps({
-            props: component.props,
+            props: specificProps,
             query: propsQuery === '*' ? '' : propsQuery,
           })
         : undefined;
@@ -140,7 +150,9 @@ Use optional "api" to force vanilla or legacy when both exist. Prefer vanilla (@
               ? {
                   extends: extendsBox,
                   styling:
-                    'Inherits Box/sprinkles props (p, m, gap, display, color, …). Query props on this component for component-specific API; use get_component({ name: "Box", props: "…" }) or get_tokens for layout/spacing.',
+                    extendsBox === 'IconPrimitive'
+                      ? 'Extends IconPrimitive (size/color + Box sprinkles). Use get_component({ name: "IconPrimitive", props: "*" }) or get_component({ name: "Box", props: "…" }).'
+                      : 'Inherits Box/sprinkles props (p, m, gap, display, color, …). Query props on this component for component-specific API; use get_component({ name: "Box", props: "…" }) or get_tokens for layout/spacing.',
                 }
               : {}),
             examples: component.examples?.map((e) => e.title),
@@ -261,7 +273,7 @@ server.registerTool(
   'search_icons',
   {
     description: `Search icons. Prefer vanilla: import { EditIcon } from '@orfium/ictinus/vanilla'; <EditIcon />.
-Legacy: import Icon from '@orfium/ictinus'; <Icon name="edit" />.`,
+Icons extend IconPrimitive (see get_component).`,
     inputSchema: {
       query: z.string().describe('Icon keyword or name (e.g. "arrow", "user", "play", "EditIcon")'),
       api: z

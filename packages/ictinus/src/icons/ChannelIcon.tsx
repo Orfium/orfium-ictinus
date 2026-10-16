@@ -22,4 +22,4 @@ export const ChannelIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props,
   </IconPrimitive>
 ));
 
-ChannelIcon.displayName = 'ChannelIcon';
+ChannelIcon.displayName = '@orfium/ictinus/vanilla/ChannelIcon';

@@ -12,4 +12,4 @@ export const MailIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, re
   </IconPrimitive>
 ));
 
-MailIcon.displayName = 'MailIcon';
+MailIcon.displayName = '@orfium/ictinus/vanilla/MailIcon';

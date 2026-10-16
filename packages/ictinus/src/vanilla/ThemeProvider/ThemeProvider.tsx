@@ -82,6 +82,7 @@ export const ThemeProvider = ({
 
   return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
 };
+ThemeProvider.displayName = '@orfium/ictinus/vanilla/ThemeProvider';
 
 export const useTheme = () => {
   const context = useContext(ThemeContext);

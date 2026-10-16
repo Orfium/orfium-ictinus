@@ -12,4 +12,4 @@ export const LanguageIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props
   </IconPrimitive>
 ));
 
-LanguageIcon.displayName = 'LanguageIcon';
+LanguageIcon.displayName = '@orfium/ictinus/vanilla/LanguageIcon';

@@ -12,4 +12,4 @@ export const PublicPerformanceIcon = forwardRef<SVGSVGElement, IconPrimitiveProp
   </IconPrimitive>
 ));
 
-PublicPerformanceIcon.displayName = 'PublicPerformanceIcon';
+PublicPerformanceIcon.displayName = '@orfium/ictinus/vanilla/PublicPerformanceIcon';

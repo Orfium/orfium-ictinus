@@ -12,4 +12,4 @@ export const RedoIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, re
   </IconPrimitive>
 ));
 
-RedoIcon.displayName = 'RedoIcon';
+RedoIcon.displayName = '@orfium/ictinus/vanilla/RedoIcon';

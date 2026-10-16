@@ -14,4 +14,4 @@ export const TableFooter = forwardRef<HTMLTableSectionElement, TableFooterProps>
   )
 );
 
-TableFooter.displayName = 'TableFooter';
+TableFooter.displayName = '@orfium/ictinus/vanilla/TableFooter';

@@ -18,4 +18,4 @@ export const PublisherIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((prop
   </IconPrimitive>
 ));
 
-PublisherIcon.displayName = 'PublisherIcon';
+PublisherIcon.displayName = '@orfium/ictinus/vanilla/PublisherIcon';

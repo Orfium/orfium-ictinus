@@ -65,4 +65,4 @@ export const DataTableCheckbox = forwardRef<HTMLLabelElement, DataTableCheckboxP
   }
 );
 
-DataTableCheckbox.displayName = 'DataTableCheckbox';
+DataTableCheckbox.displayName = '@orfium/ictinus/vanilla/DataTableCheckbox';

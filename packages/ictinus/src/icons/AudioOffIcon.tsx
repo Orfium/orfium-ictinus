@@ -24,4 +24,4 @@ export const AudioOffIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props
   </IconPrimitive>
 ));
 
-AudioOffIcon.displayName = 'AudioOffIcon';
+AudioOffIcon.displayName = '@orfium/ictinus/vanilla/AudioOffIcon';

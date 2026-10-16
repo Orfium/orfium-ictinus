@@ -12,4 +12,4 @@ export const PlaycountIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((prop
   </IconPrimitive>
 ));
 
-PlaycountIcon.displayName = 'PlaycountIcon';
+PlaycountIcon.displayName = '@orfium/ictinus/vanilla/PlaycountIcon';

@@ -12,4 +12,4 @@ export const NotificationIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((p
   </IconPrimitive>
 ));
 
-NotificationIcon.displayName = 'NotificationIcon';
+NotificationIcon.displayName = '@orfium/ictinus/vanilla/NotificationIcon';
