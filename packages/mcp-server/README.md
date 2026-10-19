@@ -1,7 +1,5 @@
 # @orfium/ictinus-mcp
 
-## Overview
-
 Ictinus MCP enables AI tools in **VS Code**, **Cursor**, and **Claude Code** to access Orfium's Ictinus design-system documentation, components, patterns, icons, and tokens through the [Model Context Protocol](https://modelcontextprotocol.io/).
 
 ## Installation Guide
@@ -19,8 +17,6 @@ npx --version
 ```
 
 ### Add the MCP server
-
-Pick your AI client below. Each client uses its native MCP config file.
 
 #### VS Code
 
@@ -90,10 +86,10 @@ Check that Node.js is installed and meets the required version. Then test that t
 npx -y @orfium/ictinus-mcp
 ```
 
-The MCP server communicates over standard input/output, so it may not display a normal web server page or remain visibly interactive in the terminal.
+The MCP server communicates over standard input/output.
 
 - **VS Code:** [Troubleshoot and debug MCP servers](https://code.visualstudio.com/docs/agent-customization/mcp-servers#_troubleshoot-and-debug-mcp-servers)
-- **Cursor:** Check **Cursor Settings / Customize / MCP** for error output on the Ictinus server — [MCP integrations](https://cursor.com/docs/context/mcp)
+- **Cursor:** Check **Cursor Settings / Customize / MCP** for error output on the Ictinus server [MCP integrations](https://cursor.com/docs/context/mcp)
 
 ### Removing Ictinus MCP
 
@@ -106,9 +102,9 @@ The MCP server communicates over standard input/output, so it may not display a 
 | ------------------- | -------------------------------------------------------------------- |
 | `search_components` | Find components by name, category, or API (`vanilla` / `legacy`)     |
 | `get_component`     | Overview (import, examples); optional `props` search for definitions |
-| `get_patterns`      | Storybook composition examples (vanilla ranked first)                |
+| `get_patterns`      | Storybook composition examples                                       |
 | `get_tokens`        | Design token maps from `@orfium/tokens`                              |
-| `search_icons`      | Vanilla `*Icon` components (`EditIcon`, extends IconPrimitive)       |
+| `search_icons`      | Vanilla `*Icon` components                                           |
 | `get_guides`        | Installation, theme, migration, vanilla-vs-legacy                    |
 
 ## Agent tips
@@ -116,7 +112,7 @@ The MCP server communicates over standard input/output, so it may not display a 
 1. Prefer **`@orfium/ictinus/vanilla`** when both APIs exist.
 2. Call `get_guides({ names: "vanilla-vs-legacy getting-started-installation" })` before scaffolding.
 3. Call `get_component` for overview, then `get_component({ props: "…" })` when you need prop types; then `get_patterns` before composing.
-4. Vanilla components extend **Box** — use sprinkle layout props / `get_tokens` for spacing and color.
+4. Vanilla components extend **Box**; use sprinkle layout props / `get_tokens` for spacing and color.
 
 ## Development
 
