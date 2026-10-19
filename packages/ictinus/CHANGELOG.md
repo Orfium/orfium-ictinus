@@ -9,7 +9,7 @@
 
 ### Patch Changes
 
-- b3f1ce4: Prefix vanilla component displayNames with `@orfium/ictinus/vanilla/` for docgen API resolution (Optiaxiom-style). Also ship shared react-docgen docs + MCP metadata generation.
+- b3f1ce4: Prefix vanilla component displayNames with `@orfium/ictinus/vanilla/` for docgen API resolution. Also ship shared react-docgen docs + MCP metadata generation.
 
 ## 5.46.7
 
