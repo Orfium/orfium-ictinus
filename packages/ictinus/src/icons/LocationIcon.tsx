@@ -12,4 +12,4 @@ export const LocationIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props
   </IconPrimitive>
 ));
 
-LocationIcon.displayName = 'LocationIcon';
+LocationIcon.displayName = '@orfium/ictinus/vanilla/LocationIcon';

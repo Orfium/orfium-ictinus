@@ -12,4 +12,4 @@ export const DatasetIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props,
   </IconPrimitive>
 ));
 
-DatasetIcon.displayName = 'DatasetIcon';
+DatasetIcon.displayName = '@orfium/ictinus/vanilla/DatasetIcon';

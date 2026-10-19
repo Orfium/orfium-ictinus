@@ -18,4 +18,4 @@ export const ImageOffIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props
   </IconPrimitive>
 ));
 
-ImageOffIcon.displayName = 'ImageOffIcon';
+ImageOffIcon.displayName = '@orfium/ictinus/vanilla/ImageOffIcon';

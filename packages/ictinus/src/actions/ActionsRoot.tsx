@@ -16,4 +16,4 @@ export const ActionsRoot = forwardRef<HTMLDivElement, ActionsRootProps>(
   }
 );
 
-ActionsRoot.displayName = 'ActionsRoot';
+ActionsRoot.displayName = '@orfium/ictinus/vanilla/ActionsRoot';

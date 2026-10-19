@@ -12,4 +12,4 @@ export const FlagOffIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props,
   </IconPrimitive>
 ));
 
-FlagOffIcon.displayName = 'FlagOffIcon';
+FlagOffIcon.displayName = '@orfium/ictinus/vanilla/FlagOffIcon';

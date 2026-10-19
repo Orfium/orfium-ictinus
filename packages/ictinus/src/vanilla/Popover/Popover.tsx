@@ -24,6 +24,7 @@ type PopoverProps = DialogTriggerProps;
 const Popover = (props: PopoverProps) => {
   return <DialogTriggerPrimitive {...props} />;
 };
+Popover.displayName = '@orfium/ictinus/vanilla/Popover';
 
 const PopoverTitle = DialogTitle;
 const PopoverHeader = DialogHeader;
@@ -69,6 +70,7 @@ const PopoverContent = ({
     </Box>
   );
 };
+PopoverContent.displayName = '@orfium/ictinus/vanilla/PopoverContent';
 
 const PopoverTrigger = DialogTrigger;
 const PopoverDescription = DialogDescription;

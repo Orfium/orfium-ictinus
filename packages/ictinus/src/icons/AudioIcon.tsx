@@ -12,4 +12,4 @@ export const AudioIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, r
   </IconPrimitive>
 ));
 
-AudioIcon.displayName = 'AudioIcon';
+AudioIcon.displayName = '@orfium/ictinus/vanilla/AudioIcon';

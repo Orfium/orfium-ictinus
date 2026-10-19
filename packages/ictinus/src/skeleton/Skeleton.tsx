@@ -31,4 +31,4 @@ export const Skeleton = forwardRef<HTMLSpanElement, SkeletonProps>(
   }
 );
 
-Skeleton.displayName = 'Skeleton';
+Skeleton.displayName = '@orfium/ictinus/vanilla/Skeleton';

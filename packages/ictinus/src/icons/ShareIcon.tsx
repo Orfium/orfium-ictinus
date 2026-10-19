@@ -12,4 +12,4 @@ export const ShareIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, r
   </IconPrimitive>
 ));
 
-ShareIcon.displayName = 'ShareIcon';
+ShareIcon.displayName = '@orfium/ictinus/vanilla/ShareIcon';

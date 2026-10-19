@@ -12,4 +12,4 @@ export const TagIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, ref
   </IconPrimitive>
 ));
 
-TagIcon.displayName = 'TagIcon';
+TagIcon.displayName = '@orfium/ictinus/vanilla/TagIcon';

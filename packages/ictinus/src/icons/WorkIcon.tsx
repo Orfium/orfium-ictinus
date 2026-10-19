@@ -14,4 +14,4 @@ export const WorkIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, re
   </IconPrimitive>
 ));
 
-WorkIcon.displayName = 'WorkIcon';
+WorkIcon.displayName = '@orfium/ictinus/vanilla/WorkIcon';

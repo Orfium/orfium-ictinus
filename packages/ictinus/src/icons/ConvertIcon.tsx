@@ -12,4 +12,4 @@ export const ConvertIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props,
   </IconPrimitive>
 ));
 
-ConvertIcon.displayName = 'ConvertIcon';
+ConvertIcon.displayName = '@orfium/ictinus/vanilla/ConvertIcon';

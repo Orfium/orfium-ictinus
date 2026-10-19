@@ -14,4 +14,4 @@ export const TableRow = forwardRef<HTMLTableRowElement, TableRowProps>(
   )
 );
 
-TableRow.displayName = 'TableRow';
+TableRow.displayName = '@orfium/ictinus/vanilla/TableRow';

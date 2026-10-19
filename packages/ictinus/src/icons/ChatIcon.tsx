@@ -12,4 +12,4 @@ export const ChatIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, re
   </IconPrimitive>
 ));
 
-ChatIcon.displayName = 'ChatIcon';
+ChatIcon.displayName = '@orfium/ictinus/vanilla/ChatIcon';

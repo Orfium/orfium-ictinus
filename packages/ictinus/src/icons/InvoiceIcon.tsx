@@ -14,4 +14,4 @@ export const InvoiceIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props,
   </IconPrimitive>
 ));
 
-InvoiceIcon.displayName = 'InvoiceIcon';
+InvoiceIcon.displayName = '@orfium/ictinus/vanilla/InvoiceIcon';

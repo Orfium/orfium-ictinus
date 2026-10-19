@@ -12,4 +12,4 @@ export const ExternalLinkIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((p
   </IconPrimitive>
 ));
 
-ExternalLinkIcon.displayName = 'ExternalLinkIcon';
+ExternalLinkIcon.displayName = '@orfium/ictinus/vanilla/ExternalLinkIcon';

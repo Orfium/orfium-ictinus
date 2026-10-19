@@ -50,4 +50,4 @@ export const TableHeaderCell = forwardRef<HTMLTableCellElement, TableHeaderCellP
   )
 );
 
-TableHeaderCell.displayName = 'TableHeaderCell';
+TableHeaderCell.displayName = '@orfium/ictinus/vanilla/TableHeaderCell';

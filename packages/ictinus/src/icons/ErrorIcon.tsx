@@ -12,4 +12,4 @@ export const ErrorIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, r
   </IconPrimitive>
 ));
 
-ErrorIcon.displayName = 'ErrorIcon';
+ErrorIcon.displayName = '@orfium/ictinus/vanilla/ErrorIcon';

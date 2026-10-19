@@ -12,4 +12,4 @@ export const CopyIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, re
   </IconPrimitive>
 ));
 
-CopyIcon.displayName = 'CopyIcon';
+CopyIcon.displayName = '@orfium/ictinus/vanilla/CopyIcon';

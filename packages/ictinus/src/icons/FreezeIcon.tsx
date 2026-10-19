@@ -14,4 +14,4 @@ export const FreezeIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props, 
   </IconPrimitive>
 ));
 
-FreezeIcon.displayName = 'FreezeIcon';
+FreezeIcon.displayName = '@orfium/ictinus/vanilla/FreezeIcon';

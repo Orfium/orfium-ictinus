@@ -12,4 +12,4 @@ export const DeliveryIcon = forwardRef<SVGSVGElement, IconPrimitiveProps>((props
   </IconPrimitive>
 ));
 
-DeliveryIcon.displayName = 'DeliveryIcon';
+DeliveryIcon.displayName = '@orfium/ictinus/vanilla/DeliveryIcon';
