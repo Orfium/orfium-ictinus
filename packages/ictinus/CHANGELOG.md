@@ -1,5 +1,16 @@
 # @orfium/ictinus
 
+## 5.47.0
+
+### Minor Changes
+
+- e55117a: Create vanilla TextField
+- e55117a: Create vanilla TextArea
+
+### Patch Changes
+
+- b3f1ce4: Prefix vanilla component displayNames with `@orfium/ictinus/vanilla/` for docgen API resolution (Optiaxiom-style). Also ship shared react-docgen docs + MCP metadata generation.
+
 ## 5.46.7
 
 ### Patch Changes
