@@ -1,5 +1,5 @@
 import { Link } from '@orfium/ictinus';
-import { MemoryRouter, NavLink } from "react-router";
+import { MemoryRouter, NavLink } from 'react-router';
 import { FIGMA_URL } from 'utils/common';
 import Stack from '../storyUtils/Stack';
 
@@ -118,6 +118,57 @@ export const LinkWithIcon = {
     controls: { include: ['iconName'] },
   },
 };
+
+export const Multilingual = {
+  render: () => (
+    <Stack isVertical>
+      <Link href="#" placement="block" size={1}>
+        Hello
+      </Link>
+      <Link href="#" placement="block" size={1}>
+        Привет
+      </Link>
+      <Link href="#" placement="block" size={1}>
+        Γεια σας
+      </Link>
+      <Link href="#" placement="block" size={1}>
+        Cześć Łódź
+      </Link>
+      <Link href="#" placement="block" size={1}>
+        Xin chào
+      </Link>
+      <Link href="#" placement="block" size={1}>
+        こんにちは
+      </Link>
+      <Link href="#" placement="block" size={1}>
+        你好
+      </Link>
+      <div>
+        Inline:{' '}
+        <Link href="#" placement="inline" size={2}>
+          English
+        </Link>
+        {', '}
+        <Link href="#" placement="inline" size={2}>
+          Русский
+        </Link>
+        {', '}
+        <Link href="#" placement="inline" size={2}>
+          Ελληνικά
+        </Link>
+        {', '}
+        <Link href="#" placement="inline" size={2}>
+          Polski Łódź
+        </Link>
+      </div>
+    </Stack>
+  ),
+  name: 'Multilingual',
+  parameters: {
+    controls: { disable: true },
+  },
+};
+
 export const ThirdPartyRoutingLibrary = {
   render: () => (
     <MemoryRouter>
