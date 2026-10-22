@@ -1,5 +1,13 @@
 # @orfium/ictinus
 
+## 5.47.1
+
+### Patch Changes
+
+- eeb861c: multilingual support
+- Updated dependencies [eeb861c]
+  - @orfium/tokens@5.2.2
+
 ## 5.47.0
 
 ### Minor Changes
