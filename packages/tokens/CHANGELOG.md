@@ -1,5 +1,11 @@
 # @orfium/tokens
 
+## 5.2.2
+
+### Patch Changes
+
+- eeb861c: multilingual support
+
 ## 5.2.1
 
 ### Patch Changes
