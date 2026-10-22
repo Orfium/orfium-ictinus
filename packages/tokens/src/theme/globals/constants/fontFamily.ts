@@ -1,10 +1,10 @@
 const fontFamily = {
   roboto: {
-    value: 'Roboto',
+    value: 'Roboto, system-ui, sans-serif',
     type: 'fontFamilies',
   },
   robotoMono: {
-    value: 'Roboto Mono',
+    value: 'Roboto Mono, ui-monospace, monospace',
     type: 'fontFamilies',
     description: 'alternative font family used for numerical table cells',
   },
