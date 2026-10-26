@@ -32,7 +32,7 @@ export const Default: Story = {
       <TextField>
         <TextField.Label>Email</TextField.Label>
         <TextField.Input type="email" placeholder="name@example.com" />
-        <TextField.Description>We’ll only use this for product updates.</TextField.Description>
+        <TextField.Description>We'll only use this for product updates.</TextField.Description>
       </TextField>
 
       <TextField isInvalid>
@@ -42,10 +42,10 @@ export const Default: Story = {
       </TextField>
 
       <TextField aria-label="Search">
-        <TextField.FloatingLabelWrapper>
+        <TextField.Control>
           <TextField.FloatingLabel>Search</TextField.FloatingLabel>
           <TextField.Input type="search" placeholder="Search products" />
-        </TextField.FloatingLabelWrapper>
+        </TextField.Control>
       </TextField>
     </Box>
   ),
@@ -117,8 +117,8 @@ export const Addons: Story = {
         <TextField>
           <TextField.Label>Website URL</TextField.Label>
           <TextField.Group>
-            <TextField.Addon align="inline-start">https://</TextField.Addon>
             <TextField.Input type="url" placeholder="example.com" />
+            <TextField.Addon>https://</TextField.Addon>
             <TextField.Addon align="inline-end">
               <Tooltip>
                 <TooltipTrigger>
@@ -134,8 +134,8 @@ export const Addons: Story = {
         <TextField>
           <TextField.Label>Website URL</TextField.Label>
           <TextField.Group>
-            <TextField.Addon align="inline-start">https://</TextField.Addon>
             <TextField.Input type="url" placeholder="example.com" variant="compact" />
+            <TextField.Addon>https://</TextField.Addon>
             <TextField.Addon align="inline-end">
               <Tooltip>
                 <TooltipTrigger>
@@ -151,7 +151,6 @@ export const Addons: Story = {
         <TextField>
           <TextField.Label>Monthly budget</TextField.Label>
           <TextField.Group>
-            <TextField.Addon align="inline-start">$</TextField.Addon>
             <TextField.Input
               type="text"
               inputMode="decimal"
@@ -172,6 +171,7 @@ export const Addons: Story = {
               }}
               px="2xs"
             />
+            <TextField.Addon>$</TextField.Addon>
             <TextField.Addon align="inline-end">USD</TextField.Addon>
           </TextField.Group>
           <TextField.Description>
@@ -182,7 +182,6 @@ export const Addons: Story = {
         <TextField>
           <TextField.Label>Monthly budget</TextField.Label>
           <TextField.Group>
-            <TextField.Addon align="inline-start">$</TextField.Addon>
             <TextField.Input
               type="text"
               inputMode="decimal"
@@ -204,6 +203,7 @@ export const Addons: Story = {
               }}
               px="2xs"
             />
+            <TextField.Addon>$</TextField.Addon>
             <TextField.Addon align="inline-end">USD</TextField.Addon>
           </TextField.Group>
           <TextField.Description>
@@ -253,57 +253,54 @@ export const FloatingLabel: Story = {
     return (
       <Box display="flex" flexDirection="column" gap="lg" style={{ maxWidth: '24rem' }}>
         <TextField aria-label="Email">
-          <TextField.FloatingLabelWrapper>
+          <TextField.Control>
             <TextField.FloatingLabel>Email</TextField.FloatingLabel>
             <TextField.Input type="email" placeholder="name@example.com" />
-          </TextField.FloatingLabelWrapper>
-          <TextField.Description>We’ll only use this for product updates.</TextField.Description>
+          </TextField.Control>
+          <TextField.Description>We'll only use this for product updates.</TextField.Description>
         </TextField>
 
         <TextField aria-label="Email">
-          <TextField.FloatingLabelWrapper>
+          <TextField.Control>
             <TextField.FloatingLabel>Email</TextField.FloatingLabel>
             <TextField.Input type="email" placeholder="name@example.com" variant="compact" />
-          </TextField.FloatingLabelWrapper>
-          <TextField.Description>We’ll only use this for product updates.</TextField.Description>
+          </TextField.Control>
+          <TextField.Description>We'll only use this for product updates.</TextField.Description>
         </TextField>
 
         <TextField isInvalid aria-label="Password">
-          <TextField.FloatingLabelWrapper>
+          <TextField.Control>
             <TextField.FloatingLabel>Password</TextField.FloatingLabel>
             <TextField.Input type="password" placeholder="Enter password" />
-          </TextField.FloatingLabelWrapper>
+          </TextField.Control>
           <TextField.Error>Please enter a valid password.</TextField.Error>
         </TextField>
 
         <TextField isInvalid aria-label="Password">
-          <TextField.FloatingLabelWrapper>
+          <TextField.Control>
             <TextField.FloatingLabel>Password</TextField.FloatingLabel>
             <TextField.Input type="password" placeholder="Enter password" variant="compact" />
-          </TextField.FloatingLabelWrapper>
+          </TextField.Control>
           <TextField.Error>Please enter a valid password.</TextField.Error>
         </TextField>
 
         <TextField isDisabled aria-label="Search">
-          <TextField.FloatingLabelWrapper>
+          <TextField.Control>
             <TextField.FloatingLabel>Search</TextField.FloatingLabel>
             <TextField.Input type="search" placeholder="Search products" />
-          </TextField.FloatingLabelWrapper>
+          </TextField.Control>
         </TextField>
 
         <TextField isDisabled aria-label="Search">
-          <TextField.FloatingLabelWrapper>
+          <TextField.Control>
             <TextField.FloatingLabel>Search</TextField.FloatingLabel>
             <TextField.Input type="search" placeholder="Search products" variant="compact" />
-          </TextField.FloatingLabelWrapper>
+          </TextField.Control>
         </TextField>
 
         <TextField aria-label="Search">
           <TextField.Group>
-            <TextField.Addon align="inline-start">
-              <SearchIcon aria-hidden="true" />
-            </TextField.Addon>
-            <TextField.FloatingLabelWrapper mx="sm">
+            <TextField.Control>
               <TextField.FloatingLabel>Search</TextField.FloatingLabel>
               <TextField.Input
                 type="text"
@@ -312,7 +309,10 @@ export const FloatingLabel: Story = {
                 placeholder="Search products"
                 onChange={(event) => setSearch(event.currentTarget.value)}
               />
-            </TextField.FloatingLabelWrapper>
+            </TextField.Control>
+            <TextField.Addon>
+              <SearchIcon aria-hidden="true" />
+            </TextField.Addon>
             <TextField.Addon align="inline-end">
               <Button
                 variant="tertiary"
@@ -320,7 +320,8 @@ export const FloatingLabel: Story = {
                 circle
                 size="compact"
                 aria-label="Clear search"
-                onClick={() => setSearch('')}
+                onMouseDown={(event) => event.preventDefault()}
+                onPress={() => setSearch('')}
               >
                 <CloseIcon aria-hidden="true" />
               </Button>
@@ -330,10 +331,7 @@ export const FloatingLabel: Story = {
 
         <TextField aria-label="Search">
           <TextField.Group>
-            <TextField.Addon align="inline-start">
-              <SearchIcon aria-hidden="true" />
-            </TextField.Addon>
-            <TextField.FloatingLabelWrapper mx="sm">
+            <TextField.Control>
               <TextField.FloatingLabel>Search</TextField.FloatingLabel>
               <TextField.Input
                 type="text"
@@ -343,7 +341,10 @@ export const FloatingLabel: Story = {
                 variant="compact"
                 onChange={(event) => setSearch(event.currentTarget.value)}
               />
-            </TextField.FloatingLabelWrapper>
+            </TextField.Control>
+            <TextField.Addon>
+              <SearchIcon aria-hidden="true" />
+            </TextField.Addon>
             <TextField.Addon align="inline-end">
               <Button
                 variant="tertiary"
@@ -351,7 +352,8 @@ export const FloatingLabel: Story = {
                 circle
                 size="compact"
                 aria-label="Clear search"
-                onClick={() => setSearch('')}
+                onMouseDown={(event) => event.preventDefault()}
+                onPress={() => setSearch('')}
               >
                 <CloseIcon aria-hidden="true" />
               </Button>

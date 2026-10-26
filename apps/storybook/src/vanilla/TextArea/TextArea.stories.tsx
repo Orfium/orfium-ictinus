@@ -84,14 +84,14 @@ export const FloatingLabel: Story = {
     return (
       <Box style={{ width: '24rem' }}>
         <TextField>
-          <TextField.FloatingLabelWrapper>
+          <TextField.Control>
             <TextField.FloatingLabel>Floating Label</TextField.FloatingLabel>
             <TextField.TextArea
               value={value}
               placeholder="Try typing here."
               onChange={(event) => setValue(event.target.value)}
             />
-          </TextField.FloatingLabelWrapper>
+          </TextField.Control>
           <TextField.Description>Use this field to try different text.</TextField.Description>
         </TextField>
       </Box>
