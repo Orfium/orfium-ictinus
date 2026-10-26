@@ -19,10 +19,10 @@ import {
   Text as TextPrimitive,
 } from 'react-aria-components';
 
-import { useSlotProps } from '../../components/utils/Slots';
-import type { Sprinkles } from '../../sprinkles';
-import { cn } from '../../utils/cn';
-import { Box, extractBoxProps, type BoxProps } from '../Box';
+import { useSlotProps } from '../components/utils/Slots';
+import type { Sprinkles } from '../sprinkles';
+import { cn } from '../utils/cn';
+import { Box, extractBoxProps, type BoxProps } from '../vanilla/Box';
 import * as styles from './TextField.css';
 
 type BoxCompatibleProps<P> = Omit<P, keyof Sprinkles | 'className'>;
@@ -189,12 +189,7 @@ TextFieldControl.displayName = 'TextField.Control';
 
 const TextFieldFloatingLabel = forwardRef<HTMLDivElement, TextFieldFloatingLabelProps>(
   ({ className, ...props }, ref) => (
-    <Box
-      ref={ref}
-      data-floating-label
-      className={cn(styles.floatingLabel, className)}
-      {...props}
-    />
+    <Box ref={ref} data-floating-label className={cn(styles.floatingLabel, className)} {...props} />
   )
 );
 
@@ -257,9 +252,9 @@ export {
   TextArea,
   TextField,
   TextFieldAddon,
+  TextFieldControl,
   TextFieldDescription,
   TextFieldError,
-  TextFieldControl,
   TextFieldFloatingLabel,
   TextFieldGroup,
   TextFieldInput,
@@ -268,9 +263,9 @@ export {
 
 export type {
   TextFieldAddonProps,
+  TextFieldControlProps,
   TextFieldDescriptionProps,
   TextFieldErrorProps,
-  TextFieldControlProps,
   TextFieldFloatingLabelProps,
   TextFieldGroupProps,
   TextFieldInputProps,

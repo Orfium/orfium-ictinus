@@ -1,8 +1,8 @@
 import { vars } from '@orfium/tokens';
 import { recipe } from '@vanilla-extract/recipes';
 
-import { sprinkles } from '../../sprinkles';
-import { style } from '../../vanilla-extract';
+import { sprinkles } from '../sprinkles';
+import { style } from '../vanilla-extract';
 
 export const textField = style([
   sprinkles({
@@ -128,6 +128,7 @@ export const floatingLabel = style([
     color: vars.color.text.default.secondary,
     paddingLeft: vars.spacing.md,
     paddingRight: vars.spacing.md,
+
     selectors: {
       [`${control}:has(> :is(input, textarea)[data-focused]) > &, ${control}:has(> :is(input, textarea):not(:placeholder-shown)) > &`]:
         {
@@ -152,34 +153,25 @@ export const floatingLabel = style([
         {
           transform: `translate(calc(${vars.spacing.md} * 0.2), -35%) scale(0.8)`,
         },
-      [`${inputGroup} &`]: {
-        paddingLeft: vars.spacing.md,
-        paddingRight: vars.spacing.md,
-      },
       [`${inputGroup}:has(> [data-align="inline-start"]) &`]: {
         paddingLeft: vars.spacing.sm,
       },
       [`${inputGroup}:has(> [data-align="inline-end"]) &`]: {
         paddingRight: vars.spacing.sm,
       },
-      [`${inputGroup} ${control}:has(> :is(input, textarea)[data-focused]) &, ${inputGroup} ${control}:has(> :is(input, textarea):not(:placeholder-shown)) &`]:
-        {
-          transform: 'translate(0, -115%) scale(0.8)',
-        },
       [`${inputGroup} ${control}:has(> textarea[data-focused]) &, ${inputGroup} ${control}:has(> textarea:not(:placeholder-shown)) &`]:
         {
           transform: 'translate(0, -50%) scale(0.8)',
         },
-      [`${control}:has(> :is(input, textarea)[data-variant="compact"][data-focused]) > &, ${inputGroup} ${control}:has(> :is(input, textarea)[data-variant="compact"][data-focused]) &, ${control}:has(> :is(input, textarea)[data-variant="compact"]:not(:placeholder-shown)) > &, ${inputGroup} ${control}:has(> :is(input, textarea)[data-variant="compact"]:not(:placeholder-shown)) &`]:
+      [`${control}:has(> :is(input, textarea)[data-variant="compact"][data-focused]) > &, ${control}:has(> :is(input, textarea)[data-variant="compact"]:not(:placeholder-shown)) > &`]:
         {
           transition: 'none',
           opacity: 0,
         },
-      [`${control}:has(> :is(input, textarea)[data-variant="compact"]) > &, ${inputGroup} ${control}:has(> :is(input, textarea)[data-variant="compact"]) &`]:
-        {
-          fontSize: vars['font-size'][2],
-          lineHeight: vars['line-height'][2],
-        },
+      [`${control}:has(> :is(input, textarea)[data-variant="compact"]) > &`]: {
+        fontSize: vars['font-size'][2],
+        lineHeight: vars['line-height'][2],
+      },
     },
   },
 ]);
@@ -203,6 +195,9 @@ export const input = recipe({
       paddingRight: vars.spacing.md,
 
       selectors: {
+        '&::-webkit-search-cancel-button': {
+          appearance: 'none',
+        },
         '&[data-hovered]:not([data-disabled])': {
           backgroundColor: vars.color.palette.secondary.muted,
           borderColor: vars.color['border-color'].interactive.active,
@@ -245,7 +240,11 @@ export const input = recipe({
           borderStyle: 'none',
           borderWidth: 0,
           outline: 'none',
+        },
+        [`${inputGroup}:has(> [data-align="inline-start"]) &[data-slot="input-group-control"]`]: {
           paddingLeft: vars.spacing.sm,
+        },
+        [`${inputGroup}:has(> [data-align="inline-end"]) &[data-slot="input-group-control"]`]: {
           paddingRight: vars.spacing.sm,
         },
         [`${inputGroup} &[data-slot="input-group-control"][data-hovered], ${inputGroup} &[data-slot="input-group-control"][data-focused], ${inputGroup} &[data-slot="input-group-control"][data-focus-visible], ${inputGroup} &[data-slot="input-group-control"][data-invalid]`]:
@@ -317,8 +316,6 @@ export const addon = style([
     display: 'flex',
     position: 'relative',
     alignItems: 'center',
-    justifyContent: 'center',
-    alignSelf: 'stretch',
     gap: 'sm',
     flexShrink: '0',
     pointerEvents: 'auto',
@@ -328,6 +325,8 @@ export const addon = style([
     transitionTimingFunction: 'out',
   }),
   {
+    justifyContent: 'center',
+    alignSelf: 'stretch',
     cursor: 'text',
     color: vars.color.text.default.primary,
     height: 'auto',

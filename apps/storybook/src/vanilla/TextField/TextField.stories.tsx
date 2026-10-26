@@ -246,6 +246,53 @@ export const Addons: Story = {
   },
 };
 
+export const FloatingLabelInGroup: Story = {
+  name: 'Floating Label in Group',
+  render: () => (
+    <Box display="flex" flexDirection="column" gap="lg" style={{ maxWidth: '24rem' }}>
+      <TextField aria-label="Email">
+        <TextField.Group>
+          <TextField.Control>
+            <TextField.FloatingLabel>Email</TextField.FloatingLabel>
+            <TextField.Input type="email" placeholder="name@example.com" />
+          </TextField.Control>
+        </TextField.Group>
+        <TextField.Description>Group with no addon — label vs input padding.</TextField.Description>
+      </TextField>
+
+      <TextField aria-label="Email">
+        <TextField.Group>
+          <TextField.Control>
+            <TextField.FloatingLabel>Email</TextField.FloatingLabel>
+            <TextField.Input type="email" placeholder="name@example.com" />
+          </TextField.Control>
+          <TextField.Addon align="inline-end">
+            <InformationalIcon color="active" aria-label="Email information" />
+          </TextField.Addon>
+        </TextField.Group>
+        <TextField.Description>
+          Group with end addon only — label vs input padding.
+        </TextField.Description>
+      </TextField>
+
+      <TextField aria-label="Search">
+        <TextField.Group>
+          <TextField.Control>
+            <TextField.FloatingLabel>Search</TextField.FloatingLabel>
+            <TextField.Input type="search" placeholder="Search products" />
+          </TextField.Control>
+          <TextField.Addon>
+            <SearchIcon aria-hidden="true" />
+          </TextField.Addon>
+        </TextField.Group>
+        <TextField.Description>
+          Group with start addon — expected aligned case.
+        </TextField.Description>
+      </TextField>
+    </Box>
+  ),
+};
+
 export const FloatingLabel: Story = {
   render: () => {
     const [search, setSearch] = useState('Orfium');
