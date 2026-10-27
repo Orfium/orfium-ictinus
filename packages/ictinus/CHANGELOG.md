@@ -1,5 +1,11 @@
 # @orfium/ictinus
 
+## 5.47.2
+
+### Patch Changes
+
+- f1a0e31: fix textfield css
+
 ## 5.47.1
 
 ### Patch Changes
