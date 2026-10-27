@@ -1,5 +1,11 @@
 # @orfium/ictinus-mcp
 
+## 0.2.2
+
+### Patch Changes
+
+- f1a0e31: fix textfield css
+
 ## 0.2.1
 
 ### Patch Changes
