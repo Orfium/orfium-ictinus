@@ -2,6 +2,7 @@ import { forwardRef, useEffect, type ReactNode } from 'react';
 import { useObjectRef } from 'react-aria';
 import type {
   FieldErrorProps,
+  GroupProps,
   InputProps,
   LabelProps,
   TextAreaProps as PrimitiveTextAreaProps,
@@ -10,6 +11,7 @@ import type {
 } from 'react-aria-components';
 import {
   FieldError as FieldErrorPrimitive,
+  Group as GroupPrimitive,
   Input as InputPrimitive,
   Label as LabelPrimitive,
   TextArea as PrimitiveTextArea,
@@ -17,9 +19,10 @@ import {
   Text as TextPrimitive,
 } from 'react-aria-components';
 
-import type { Sprinkles } from '../../sprinkles';
-import { cn } from '../../utils/cn';
-import { Box, extractBoxProps, type BoxProps } from '../Box';
+import { useSlotProps } from '../components/utils/Slots';
+import type { Sprinkles } from '../sprinkles';
+import { cn } from '../utils/cn';
+import { Box, extractBoxProps, type BoxProps } from '../vanilla/Box';
 import * as styles from './TextField.css';
 
 type BoxCompatibleProps<P> = Omit<P, keyof Sprinkles | 'className'>;
@@ -33,9 +36,9 @@ type TextFieldInputProps = BoxProps<'input', BoxCompatibleProps<InputProps>> & {
 type TextFieldDescriptionProps = BoxProps<'span', BoxCompatibleProps<TextProps>>;
 type TextFieldErrorProps = BoxProps<'div', BoxCompatibleProps<FieldErrorProps>>;
 
-type TextFieldGroupProps = BoxProps<'div', { children?: ReactNode }>;
+type TextFieldGroupProps = BoxProps<'div', BoxCompatibleProps<GroupProps>>;
 
-type TextFieldFloatingLabelWrapperProps = BoxProps<'div', { children?: ReactNode }>;
+type TextFieldControlProps = BoxProps<'div', { children?: ReactNode }>;
 
 type TextFieldFloatingLabelProps = BoxProps<
   'div',
@@ -55,7 +58,7 @@ const TextFieldLabel = forwardRef<HTMLLabelElement, TextFieldLabelProps>((props,
 
   return (
     <Box asChild {...boxProps}>
-      <LabelPrimitive ref={ref} className={cn(styles.label(), boxProps.className)} {...restProps} />
+      <LabelPrimitive ref={ref} className={cn(styles.label, boxProps.className)} {...restProps} />
     </Box>
   );
 });
@@ -64,12 +67,14 @@ TextFieldLabel.displayName = 'TextField.Label';
 
 const TextFieldInput = forwardRef<HTMLInputElement, TextFieldInputProps>(
   ({ variant = 'normal', placeholder = ' ', ...props }, ref) => {
+    props = useSlotProps(props, 'input-group-control');
     const { boxProps, restProps } = extractBoxProps(props);
 
     return (
       <Box asChild {...boxProps}>
         <InputPrimitive
           ref={ref}
+          data-variant={variant}
           placeholder={placeholder}
           className={cn(styles.input({ type: variant }), boxProps.className)}
           {...restProps}
@@ -83,6 +88,7 @@ TextFieldInput.displayName = 'TextField.Input';
 
 const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
   ({ placeholder = ' ', ...props }, ref) => {
+    props = useSlotProps(props, 'input-group-control');
     const { boxProps, restProps } = extractBoxProps(props);
 
     return (
@@ -109,7 +115,7 @@ const TextFieldDescription = forwardRef<HTMLSpanElement, TextFieldDescriptionPro
         <TextPrimitive
           ref={ref}
           slot="description"
-          className={cn(styles.description(), boxProps.className)}
+          className={cn(styles.description, boxProps.className)}
           {...restProps}
         />
       </Box>
@@ -126,7 +132,7 @@ const TextFieldError = forwardRef<HTMLDivElement, TextFieldErrorProps>((props, r
     <Box asChild {...boxProps}>
       <FieldErrorPrimitive
         ref={ref}
-        className={cn(styles.error(), boxProps.className)}
+        className={cn(styles.error, boxProps.className)}
         {...restProps}
       />
     </Box>
@@ -135,62 +141,77 @@ const TextFieldError = forwardRef<HTMLDivElement, TextFieldErrorProps>((props, r
 
 TextFieldError.displayName = 'TextField.Error';
 
-const TextFieldGroup = forwardRef<HTMLDivElement, TextFieldGroupProps>(
-  ({ className, ...props }, ref) => (
-    <Box ref={ref} className={cn(styles.inputGroup(), className)} {...props} />
-  )
-);
-
-TextFieldGroup.displayName = 'TextField.Group';
-
-const TextFieldFloatingLabelWrapper = forwardRef<
-  HTMLDivElement,
-  TextFieldFloatingLabelWrapperProps
->(({ className, ...props }, ref) => {
-  const wrapperRef = useObjectRef(ref);
-
-  useEffect(() => {
-    const wrapper = wrapperRef.current;
-    const textArea = wrapper?.querySelector<HTMLTextAreaElement>(':scope > textarea');
-    const floatingLabel = wrapper?.querySelector<HTMLElement>('[data-floating-label]');
-
-    if (!textArea || !floatingLabel) return;
-
-    const resizeObserver = new ResizeObserver(() => {
-      floatingLabel.style.setProperty(
-        '--floating-label-clip-width',
-        `${textArea.getBoundingClientRect().width}px`
-      );
-    });
-
-    resizeObserver.observe(textArea);
-
-    return () => resizeObserver.disconnect();
-  }, [wrapperRef]);
+const TextFieldGroup = forwardRef<HTMLDivElement, TextFieldGroupProps>((props, ref) => {
+  props = useSlotProps(props, 'input-group');
+  const { boxProps, restProps } = extractBoxProps(props);
 
   return (
-    <Box ref={wrapperRef} className={cn(styles.floatingLabelWrapper(), className)} {...props} />
+    <Box asChild {...boxProps}>
+      <GroupPrimitive
+        ref={ref}
+        className={cn(styles.inputGroup, boxProps.className)}
+        {...restProps}
+      />
+    </Box>
   );
 });
 
-TextFieldFloatingLabelWrapper.displayName = 'TextField.FloatingLabelWrapper';
+TextFieldGroup.displayName = 'TextField.Group';
+
+const TextFieldControl = forwardRef<HTMLDivElement, TextFieldControlProps>(
+  ({ className, ...props }, ref) => {
+    const wrapperRef = useObjectRef(ref);
+
+    useEffect(() => {
+      const wrapper = wrapperRef.current;
+      const textArea = wrapper?.querySelector<HTMLTextAreaElement>(':scope > textarea');
+      const floatingLabel = wrapper?.querySelector<HTMLElement>('[data-floating-label]');
+
+      if (!textArea || !floatingLabel) return;
+
+      const resizeObserver = new ResizeObserver(() => {
+        floatingLabel.style.setProperty(
+          '--floating-label-clip-width',
+          `${textArea.getBoundingClientRect().width}px`
+        );
+      });
+
+      resizeObserver.observe(textArea);
+
+      return () => resizeObserver.disconnect();
+    }, [wrapperRef]);
+
+    return <Box ref={wrapperRef} className={cn(styles.control, className)} {...props} />;
+  }
+);
+
+TextFieldControl.displayName = 'TextField.Control';
 
 const TextFieldFloatingLabel = forwardRef<HTMLDivElement, TextFieldFloatingLabelProps>(
   ({ className, ...props }, ref) => (
-    <Box
-      ref={ref}
-      data-floating-label
-      className={cn(styles.floatingLabel(), className)}
-      {...props}
-    />
+    <Box ref={ref} data-floating-label className={cn(styles.floatingLabel, className)} {...props} />
   )
 );
 
 TextFieldFloatingLabel.displayName = 'TextField.FloatingLabel';
 
 const TextFieldAddon = forwardRef<HTMLDivElement, TextFieldAddonProps>(
-  ({ align, className, ...props }, ref) => (
-    <Box ref={ref} data-align={align} className={cn(styles.addon(), className)} {...props} />
+  ({ align = 'inline-start', className, onClick, ...props }, ref) => (
+    <Box
+      ref={ref}
+      data-align={align}
+      className={cn(styles.addon, className)}
+      onClick={(event) => {
+        onClick?.(event);
+        if (event.defaultPrevented) return;
+        if ((event.target as HTMLElement).closest('button')) return;
+
+        event.currentTarget.parentElement
+          ?.querySelector<HTMLInputElement | HTMLTextAreaElement>('input, textarea')
+          ?.focus();
+      }}
+      {...props}
+    />
   )
 );
 
@@ -204,7 +225,7 @@ const TextField = Object.assign(
       <Box asChild {...boxProps}>
         <PrimitiveTextField
           ref={ref}
-          className={cn(styles.textField(), boxProps.className)}
+          className={cn(styles.textField, boxProps.className)}
           {...restProps}
         >
           {children}
@@ -219,7 +240,7 @@ const TextField = Object.assign(
     Description: TextFieldDescription,
     Error: TextFieldError,
     Group: TextFieldGroup,
-    FloatingLabelWrapper: TextFieldFloatingLabelWrapper,
+    Control: TextFieldControl,
     FloatingLabel: TextFieldFloatingLabel,
     Addon: TextFieldAddon,
   }
@@ -231,10 +252,10 @@ export {
   TextArea,
   TextField,
   TextFieldAddon,
+  TextFieldControl,
   TextFieldDescription,
   TextFieldError,
   TextFieldFloatingLabel,
-  TextFieldFloatingLabelWrapper,
   TextFieldGroup,
   TextFieldInput,
   TextFieldLabel,
@@ -242,10 +263,10 @@ export {
 
 export type {
   TextFieldAddonProps,
+  TextFieldControlProps,
   TextFieldDescriptionProps,
   TextFieldErrorProps,
   TextFieldFloatingLabelProps,
-  TextFieldFloatingLabelWrapperProps,
   TextFieldGroupProps,
   TextFieldInputProps,
   TextFieldLabelProps,

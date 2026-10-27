@@ -5,6 +5,7 @@ import {
   Box,
   Button,
   ChevronRightIcon,
+  CloseIcon,
   DataTable,
   DataTableBody,
   DataTableBulkActions,
@@ -20,10 +21,12 @@ import {
   NavCount,
   NavItem,
   NavLink,
+  SearchIcon,
   SubNavItem,
   SubNavLink,
   SubNavList,
   Text,
+  TextField,
   Tooltip,
   TooltipContent,
   TooltipTrigger,
@@ -43,6 +46,7 @@ import * as styles from './App.css';
 
 function App() {
   const [activeId, setActiveId] = useState('bing-sub-1');
+  const [search, setSearch] = useState('');
 
   const select = (id: string) => (e: MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -178,6 +182,41 @@ function App() {
           gap="2xl"
           style={{ containerType: 'inline-size' }}
         >
+          <Box display="flex" flexDirection="column" gap="lg" style={{ maxWidth: '24rem' }}>
+            <TextField aria-label="Search">
+              <TextField.Group>
+                <TextField.Control>
+                  <TextField.FloatingLabel>Search</TextField.FloatingLabel>
+                  <TextField.Input
+                    type="text"
+                    inputMode="search"
+                    value={search}
+                    placeholder="Search friends"
+                    onChange={(event) => setSearch(event.currentTarget.value)}
+                  />
+                </TextField.Control>
+                <TextField.Addon>
+                  <SearchIcon aria-hidden="true" />
+                </TextField.Addon>
+                {search ? (
+                  <TextField.Addon align="inline-end">
+                    <Button
+                      variant="tertiary"
+                      iconOnly
+                      circle
+                      size="compact"
+                      aria-label="Clear search"
+                      onMouseDown={(event) => event.preventDefault()}
+                      onPress={() => setSearch('')}
+                    >
+                      <CloseIcon aria-hidden="true" color="secondary" />
+                    </Button>
+                  </TextField.Addon>
+                ) : null}
+              </TextField.Group>
+            </TextField>
+          </Box>
+
           <DataTable table={table}>
             <DataTableHeader>
               <Box display="flex" alignItems="center" gap="lg">
