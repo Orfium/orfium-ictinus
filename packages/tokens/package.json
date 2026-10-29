@@ -1,25 +1,28 @@
 {
   "name": "@orfium/tokens",
+  "version": "5.2.2",
   "homepage": "https://github.com/Orfium/orfium-ictinus/tree/master/packages/tokens#readme",
+  "bugs": {
+    "url": "https://github.com/Orfium/orfium-ictinus/issues"
+  },
+  "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Orfium/orfium-ictinus.git",
     "directory": "packages/tokens"
   },
-  "bugs": {
-    "url": "https://github.com/Orfium/orfium-ictinus/issues"
-  },
-  "version": "5.2.2",
-  "license": "Apache-2.0",
-  "type": "module",
   "files": [
     "dist/**",
     "LICENSE"
   ],
+  "type": "module",
   "sideEffects": [
     "**/*.css",
     "**/*.css.ts"
   ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "import": {
@@ -29,9 +32,6 @@
     },
     "./vars.css": "./dist/vars.css"
   },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "scripts": {
     "prepublishOnly": "pnpm build",
     "build": "vite build",
@@ -40,8 +40,9 @@
     "test:update": "vitest -u",
     "lint": "oxlint",
     "tsc": "tsc --noEmit",
-    "fmt": "prettier src --check",
-    "check": "pnpm tsc && pnpm lint && pnpm fmt",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
+    "check": "pnpm tsc && pnpm lint && pnpm fmt:check",
     "precommit": "pnpm tsc && pnpm lint && pnpm test"
   },
   "devDependencies": {
@@ -53,8 +54,6 @@
     "lodash-es": "^4.18.1",
     "polished": "^4.3.1",
     "postcss-pxtorem": "^6.1.0",
-    "prettier": "^3.9.10",
-    "prettier-plugin-organize-imports": "^4.1.0",
     "vite": "catalog:",
     "vite-plugin-dts": "catalog:",
     "vitest": "catalog:"

@@ -1,29 +1,30 @@
 {
   "name": "@orfium/ictinus",
+  "version": "5.47.2",
   "homepage": "https://github.com/Orfium/orfium-ictinus/tree/master/packages/ictinus#readme",
+  "bugs": {
+    "url": "https://github.com/Orfium/orfium-ictinus/issues"
+  },
+  "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Orfium/orfium-ictinus.git",
     "directory": "packages/ictinus"
   },
-  "bugs": {
-    "url": "https://github.com/Orfium/orfium-ictinus/issues"
+  "bin": {
+    "ictinus-migrate-v5": "./bin/migrate.mjs"
   },
-  "version": "5.47.2",
-  "license": "Apache-2.0",
-  "type": "module",
   "files": [
     "dist/**",
     "bin",
     "LICENSE"
   ],
-  "bin": {
-    "ictinus-migrate-v5": "./bin/migrate.mjs"
-  },
+  "type": "module",
   "sideEffects": [
     "*.css",
     "global.css.ts"
   ],
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "import": {
@@ -43,7 +44,6 @@
       }
     }
   },
-  "types": "./dist/index.d.ts",
   "scripts": {
     "prepublishOnly": "pnpm build",
     "build": "pnpm build:main && pnpm build:codemods && pnpm build:vanilla",
@@ -55,8 +55,9 @@
     "test:update": "vitest -u",
     "lint": "oxlint",
     "tsc": "tsc --noEmit",
-    "fmt": "prettier src --check",
-    "check": "pnpm tsc && pnpm lint && pnpm fmt",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
+    "check": "pnpm tsc && pnpm lint && pnpm fmt:check",
     "precommit": "pnpm tsc && pnpm lint && pnpm test"
   },
   "dependencies": {
@@ -120,8 +121,6 @@
     "globals": "^16.3.0",
     "jsdom": "catalog:",
     "postcss-pxtorem": "^6.1.0",
-    "prettier": "^3.9.10",
-    "prettier-plugin-organize-imports": "^4.1.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "rollup": "^4.60.4",
