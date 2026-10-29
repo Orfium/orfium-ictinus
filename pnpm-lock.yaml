@@ -830,8 +830,8 @@ packages:
     peerDependencies:
       '@babel/core': ^7.0.0-0
 
-  '@babel/plugin-syntax-jsx@7.27.1':
-    resolution: {integrity: sha512-y8YTNIeKoyhGd9O0Jiyzyyqk8gdjnumGTQPsz0xOZOQ2RmkVJeZ1vmmfIvFEKqucBG6axJGBZDE/7iI5suUI/w==}
+  '@babel/plugin-syntax-jsx@7.29.7':
+    resolution: {integrity: sha512-TSu8+mHCoEaaCDEZ0I3+6mvTBYR4PCxQwf2z9/r5Tbztv6NaLR3B9thGTTxX2WGuGHJqRiAbKPeGTJ5XWXVg6A==}
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -5871,7 +5871,7 @@ snapshots:
       '@babel/core': 7.29.7(supports-color@5.5.0)
       '@babel/helper-plugin-utils': 7.29.7
 
-  '@babel/plugin-syntax-jsx@7.27.1(@babel/core@7.29.7(supports-color@5.5.0))':
+  '@babel/plugin-syntax-jsx@7.29.7(@babel/core@7.29.7(supports-color@5.5.0))':
     dependencies:
       '@babel/core': 7.29.7(supports-color@5.5.0)
       '@babel/helper-plugin-utils': 7.29.7
@@ -6178,7 +6178,7 @@ snapshots:
       '@babel/helper-annotate-as-pure': 7.29.7
       '@babel/helper-module-imports': 7.29.7(supports-color@5.5.0)
       '@babel/helper-plugin-utils': 7.29.7
-      '@babel/plugin-syntax-jsx': 7.27.1(@babel/core@7.29.7(supports-color@5.5.0))
+      '@babel/plugin-syntax-jsx': 7.29.7(@babel/core@7.29.7(supports-color@5.5.0))
       '@babel/types': 7.29.7
     transitivePeerDependencies:
       - supports-color
@@ -6373,7 +6373,7 @@ snapshots:
       '@babel/core': 7.29.7(supports-color@5.5.0)
       '@babel/helper-plugin-utils': 7.29.7
       '@babel/helper-validator-option': 7.29.7
-      '@babel/plugin-syntax-jsx': 7.27.1(@babel/core@7.29.7(supports-color@5.5.0))
+      '@babel/plugin-syntax-jsx': 7.29.7(@babel/core@7.29.7(supports-color@5.5.0))
       '@babel/plugin-transform-modules-commonjs': 7.27.1(@babel/core@7.29.7(supports-color@5.5.0))(supports-color@5.5.0)
       '@babel/plugin-transform-typescript': 7.27.1(@babel/core@7.29.7(supports-color@5.5.0))(supports-color@5.5.0)
     transitivePeerDependencies:
@@ -8552,7 +8552,7 @@ snapshots:
     dependencies:
       '@babel/helper-annotate-as-pure': 7.29.7
       '@babel/helper-module-imports': 7.29.7(supports-color@5.5.0)
-      '@babel/plugin-syntax-jsx': 7.27.1(@babel/core@7.29.7(supports-color@5.5.0))
+      '@babel/plugin-syntax-jsx': 7.29.7(@babel/core@7.29.7(supports-color@5.5.0))
       lodash: 4.17.21
       picomatch: 2.3.1
       styled-components: 5.3.11(@babel/core@7.29.7(supports-color@5.5.0))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)
