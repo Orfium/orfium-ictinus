@@ -1,7 +1,7 @@
 {
   "name": "@app/storybook",
-  "private": true,
   "version": "0.0.0",
+  "private": true,
   "type": "module",
   "scripts": {
     "dev": "storybook dev -p 6006",
@@ -12,8 +12,9 @@
     "chromatic": "chromatic",
     "lint": "oxlint",
     "tsc": "tsc --noEmit",
-    "fmt": "prettier src --check",
-    "check": "pnpm tsc && pnpm lint && pnpm fmt",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
+    "check": "pnpm tsc && pnpm lint && pnpm fmt:check",
     "precommit": "pnpm tsc && pnpm lint && pnpm test"
   },
   "dependencies": {
@@ -50,7 +51,6 @@
     "chromatic": "^13.3.5",
     "globals": "^16.3.0",
     "jsdom": "catalog:",
-    "prettier-plugin-organize-imports": "^4.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "storybook": "^10.6.0",

@@ -1,17 +1,25 @@
 {
   "name": "design-system",
-  "private": true,
-  "type": "module",
   "version": "0.0.0",
-  "license": "MIT",
+  "private": true,
   "keywords": [
     "Orfium",
-    "typescript",
+    "design system",
+    "emotion",
     "react",
     "styled-system",
-    "emotion",
-    "design system"
+    "typescript"
   ],
+  "homepage": "https://github.com/Orfium/orfium-ictinus#readme",
+  "bugs": {
+    "url": "https://github.com/Orfium/orfium-ictinus/issues"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Orfium/orfium-ictinus.git"
+  },
+  "type": "module",
   "scripts": {
     "prepare": "husky",
     "dev": "turbo dev",
@@ -25,29 +33,20 @@
     "release": "turbo run build --filter='./packages/*' && changeset publish",
     "release:experimental": "turbo run build --filter='./packages/*' && changeset publish --tag experimental"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Orfium/orfium-ictinus.git"
-  },
   "devDependencies": {
     "@changesets/cli": "^3.0.1",
     "@types/react": "^18.3.27",
     "@types/react-dom": "^18.3.7",
     "husky": "^9.1.7",
+    "oxfmt": "^0.75.0",
     "oxlint": "^1.67.0",
-    "prettier": "^3.9.10",
-    "prettier-plugin-organize-imports": "^4.3.0",
     "turbo": "^2.10.0",
     "typescript": "^5.9.2",
     "vitest": "catalog:"
   },
-  "bugs": {
-    "url": "https://github.com/Orfium/orfium-ictinus/issues"
-  },
-  "homepage": "https://github.com/Orfium/orfium-ictinus#readme",
-  "packageManager": "pnpm@12.16.1",
   "engines": {
     "node": ">=24",
     "pnpm": ">=12"
-  }
+  },
+  "packageManager": "pnpm@12.16.1"
 }
