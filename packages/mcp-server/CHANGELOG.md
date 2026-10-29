@@ -1,5 +1,11 @@
 # @orfium/ictinus-mcp
 
+## 0.2.3
+
+### Patch Changes
+
+- 8d9c367: CVE-2023-54404
+
 ## 0.2.2
 
 ### Patch Changes
