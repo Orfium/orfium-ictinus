@@ -4,6 +4,7 @@ export * from '../badge';
 export * from '../button';
 export * from '../cover';
 export * from '../data-table';
+export * from '../filter';
 export * from '../icon';
 export * from '../icons';
 export * from '../layers';
