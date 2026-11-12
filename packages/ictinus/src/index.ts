@@ -131,14 +131,6 @@ export * from './components/Card';
 export { default as Card } from './components/Card';
 export * from './components/DropdownButton';
 export { default as DropdownButton } from './components/DropdownButton';
-
-export * from './components/Chart/BarChart';
-export { default as BarChart } from './components/Chart/BarChart';
-export * from './components/Chart/DonutChart';
-export { default as DonutChart } from './components/Chart/DonutChart';
-export * from './components/Chart/LineChart';
-export { default as LineChart } from './components/Chart/LineChart';
-
 export { CheckBox } from './components/Controls';
 export * from './components/Controls/CheckBox';
 export * from './components/DatePicker';
