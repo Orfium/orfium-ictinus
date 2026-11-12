@@ -14,8 +14,8 @@
     "tsc": "tsc --noEmit",
     "fmt": "oxfmt",
     "fmt:check": "oxfmt --check",
-    "check": "pnpm tsc && pnpm lint && pnpm fmt:check",
-    "precommit": "pnpm tsc && pnpm lint && pnpm test"
+    "check": "pnpm tsc && pnpm lint",
+    "precommit": "pnpm check && pnpm test"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",

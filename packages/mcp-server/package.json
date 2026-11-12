@@ -37,8 +37,8 @@
     "tsc": "tsc -p tsconfig.json --noEmit",
     "fmt": "oxfmt",
     "fmt:check": "oxfmt --check",
-    "check": "pnpm tsc && pnpm lint && pnpm fmt:check",
-    "precommit": "pnpm tsc && pnpm lint"
+    "check": "pnpm tsc && pnpm lint",
+    "precommit": "pnpm check"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.31.0",

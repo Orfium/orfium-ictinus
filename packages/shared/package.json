@@ -1,15 +1,15 @@
 {
   "name": "@orfium/shared",
-  "private": true,
-  "type": "module",
   "version": "0.0.0",
+  "private": true,
   "homepage": "https://github.com/Orfium/orfium-ictinus/tree/master/packages/shared#readme",
+  "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Orfium/orfium-ictinus.git",
     "directory": "packages/shared"
   },
-  "license": "Apache-2.0",
+  "type": "module",
   "main": "src/index.mjs",
   "types": "src/index.d.mts",
   "exports": {
@@ -19,7 +19,9 @@
     }
   },
   "scripts": {
-    "generate:docs": "node ./scripts/generateDocs.mjs"
+    "generate:docs": "node ./scripts/generateDocs.mjs",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check"
   },
   "devDependencies": {
     "@types/node": "^24.0.0",

@@ -1,19 +1,8 @@
 name: CI/CD
 on:
   push:
-    branches:
-      - 'master'
-      - 'next'
+    branches: ['master', 'next']
   pull_request:
-    branches:
-      - '**'
-env:
-  PROJECT: designlab
-  # ^ Is important to note that the above is used as:
-  #   * SENTRY project to deploy so naming must match
-  #   * Repo badges creation and SENTRY
-  MAIN_BRANCH: 'master'
-  STAGING_BRANCH: 'next'
 
 permissions:
   deployments: write
@@ -22,18 +11,32 @@ permissions:
   id-token: write
 
 jobs:
-  test:
-    name: Run Tests 🔬
+  precommit:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 📥
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 #v7.0.1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 #v7.0.1
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 #v6.1.1
+      - uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 #v6.1.1
 
-      - name: Setup Node
-        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 #v7.1.0
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 #v7.1.0
+        with:
+          node-version-file: 'package.json'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Run precommit checks
+        run: pnpm check
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 #v7.0.1
+
+      - uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 #v6.1.1
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 #v7.1.0
         with:
           node-version-file: 'package.json'
           cache: 'pnpm'
@@ -49,8 +52,7 @@ jobs:
     outputs:
       target: ${{ steps.get-target.outputs.target }}
     steps:
-      - name: Checkout 📥
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 #v7.0.1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 #v7.0.1
         with:
           fetch-depth: 0
 
@@ -75,6 +77,7 @@ jobs:
   deploy-app:
     needs:
       - select-deployment-target
+      - precommit
       - test
     uses: ./.github/workflows/deploy-frontend.yml
     concurrency: ${{ github.ref }}
