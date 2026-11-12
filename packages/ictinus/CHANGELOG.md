@@ -1,5 +1,11 @@
 # @orfium/ictinus
 
+## 5.48.0
+
+### Minor Changes
+
+- 692a831: remove v4 charts
+
 ## 5.47.2
 
 ### Patch Changes

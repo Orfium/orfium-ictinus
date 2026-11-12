@@ -1,5 +1,11 @@
 # @orfium/ictinus-mcp
 
+## 0.3.0
+
+### Minor Changes
+
+- 692a831: remove v4 charts
+
 ## 0.2.3
 
 ### Patch Changes
