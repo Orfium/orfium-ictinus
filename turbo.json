@@ -1,13 +1,6 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "tasks": {
-    "check": {},
-    "precommit": {
-      "dependsOn": ["^build"]
-    },
-    "fmt": {},
-    "tsc": {},
-    "lint": {},
     "build": {
       "dependsOn": ["^build"],
       "outputs": ["dist/**", "build/**"]
@@ -17,6 +10,16 @@
       "persistent": true,
       "dependsOn": ["^build"]
     },
+    "check": {
+      "dependsOn": ["^build"]
+    },
+    "precommit": {
+      "dependsOn": ["^build"]
+    },
+    "tsc": {
+      "dependsOn": ["^build"]
+    },
+    "lint": {},
     "test": {
       "dependsOn": ["^build"]
     }
