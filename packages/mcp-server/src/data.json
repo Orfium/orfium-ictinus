@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T17:01:45.903Z",
+  "generatedAt": "2026-11-12T12:03:38.075Z",
   "components": {
     "vanilla:ActionsContent": {
       "id": "vanilla:ActionsContent",
@@ -29873,40 +29873,6 @@
         }
       }
     },
-    "legacy:LineChart": {
-      "id": "legacy:LineChart",
-      "name": "LineChart",
-      "api": "legacy",
-      "description": "LineChart component from @orfium/ictinus (legacy Emotion API). Prefer @orfium/ictinus/vanilla when a vanilla equivalent exists.",
-      "import": "import { LineChart } from '@orfium/ictinus';",
-      "category": [
-        "data-display"
-      ],
-      "props": {
-        "color": {
-          "type": "(dataLabel: string) => string",
-          "description": "Function passed as property, so that the user can select colors for each line. If no function is passed or no color is picked for one or more lines, color will be selected randomly"
-        },
-        "data": {
-          "type": "Data[]",
-          "description": "This property defines the data to be shown in the Line Chart",
-          "required": true
-        },
-        "isLegendVisible": {
-          "type": "boolean",
-          "description": "Define if the legend will be displayed",
-          "defaultValue": "false"
-        },
-        "labelX": {
-          "type": "string",
-          "description": "Property indicating the label name to be displayed for X axis"
-        },
-        "labelY": {
-          "type": "string",
-          "description": "Property indicating the label name to be displayed for Y axis"
-        }
-      }
-    },
     "legacy:CheckBox": {
       "id": "legacy:CheckBox",
       "name": "CheckBox",
@@ -31092,28 +31058,6 @@
       "import": "import { TextFieldLabel } from '@orfium/ictinus/vanilla';",
       "category": [
         "form"
-      ],
-      "props": {}
-    },
-    "legacy:BarChart": {
-      "id": "legacy:BarChart",
-      "name": "BarChart",
-      "api": "legacy",
-      "description": "BarChart component from @orfium/ictinus (legacy Emotion API). Prefer @orfium/ictinus/vanilla when a vanilla equivalent exists.",
-      "import": "import { BarChart } from '@orfium/ictinus';",
-      "category": [
-        "data-display"
-      ],
-      "props": {}
-    },
-    "legacy:DonutChart": {
-      "id": "legacy:DonutChart",
-      "name": "DonutChart",
-      "api": "legacy",
-      "description": "DonutChart component from @orfium/ictinus (legacy Emotion API). Prefer @orfium/ictinus/vanilla when a vanilla equivalent exists.",
-      "import": "import { DonutChart } from '@orfium/ictinus';",
-      "category": [
-        "data-display"
       ],
       "props": {}
     },

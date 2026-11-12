@@ -17,7 +17,7 @@ const __dirname = dirname(__filename);
 const repoRoot = join(__dirname, '..', '..', '..');
 
 const CATEGORY_BY_NAME = [
-  [/Chart|BarChart|DonutChart|LineChart|DataTable|Table/, 'data-display'],
+  [/DataTable|Table/, 'data-display'],
   [
     /CheckBox|Radio|Switch|TextField|TextArea|NumberField|Select|Search|Filter|Slider|DatePicker/,
     'form',
