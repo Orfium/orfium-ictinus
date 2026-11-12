@@ -93,7 +93,7 @@ export const AddedFilter = {
             defaultValue={{ label: 'All', value: 'all' }}
             label={filterName}
             items={options.filter((option) =>
-              option.label.toLowerCase().includes(filterName.toLowerCase())
+              option.label.toLowerCase().includes(filterName.toLowerCase()),
             )}
           />
         ))}
@@ -200,7 +200,7 @@ export const AsyncFilter = {
         }, 1500);
       }).then((values) => {
         const filteredValues = values.filter((option) =>
-          option.label.toLowerCase().includes(term.toLowerCase())
+          option.label.toLowerCase().includes(term.toLowerCase()),
         );
         setOptions(filteredValues);
         setIsLoading(false);
@@ -256,7 +256,7 @@ export const MultiFilter = {
         }, 1500);
       }).then((values) => {
         const filteredValues = values.filter((option) =>
-          option.label.toLowerCase().includes(term.toLowerCase())
+          option.label.toLowerCase().includes(term.toLowerCase()),
         );
 
         setAsyncItems(filteredValues);

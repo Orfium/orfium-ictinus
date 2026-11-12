@@ -64,7 +64,7 @@ const DropdownButton = React.forwardRef<HTMLButtonElement, DropdownButtonProps>(
       onButtonClick?.(event);
       setIsOpen(false);
     },
-    [onButtonClick]
+    [onButtonClick],
   );
 
   /** The CTA for the Options inside the Dropdown */
@@ -73,7 +73,7 @@ const DropdownButton = React.forwardRef<HTMLButtonElement, DropdownButtonProps>(
       setIsOpen(false);
       onOptionSelect(option);
     },
-    [onOptionSelect]
+    [onOptionSelect],
   );
 
   /** The CTA for the IconButton and the ClickAwayListener */
@@ -86,7 +86,7 @@ const DropdownButton = React.forwardRef<HTMLButtonElement, DropdownButtonProps>(
       const optionFound = items?.find((o) => o === keyFound);
       if (optionFound) handleOptionClick(optionFound);
     },
-    [handleOptionClick, items]
+    [handleOptionClick, items],
   );
 
   return (

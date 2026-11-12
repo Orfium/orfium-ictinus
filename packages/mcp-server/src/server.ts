@@ -53,9 +53,7 @@ function componentSpecificProps(component: ComponentInfo) {
   if (component.name === 'Box' || component.name === 'IconPrimitive') {
     return component.props;
   }
-  return Object.fromEntries(
-    Object.entries(component.props).filter(([, def]) => !def.sprinkle),
-  );
+  return Object.fromEntries(Object.entries(component.props).filter(([, def]) => !def.sprinkle));
 }
 
 function boxExtends(component: ComponentInfo): string | undefined {
@@ -126,13 +124,12 @@ Use optional "api" to force vanilla or legacy when both exist. Prefer vanilla (@
     const specificProps = componentSpecificProps(component);
     const propNames = Object.keys(specificProps).sort((a, b) => a.localeCompare(b));
     const includeProps = propsQuery !== undefined;
-    const props =
-      includeProps
-        ? searchProps({
-            props: specificProps,
-            query: propsQuery === '*' ? '' : propsQuery,
-          })
-        : undefined;
+    const props = includeProps
+      ? searchProps({
+          props: specificProps,
+          query: propsQuery === '*' ? '' : propsQuery,
+        })
+      : undefined;
 
     return {
       content: [
@@ -164,7 +161,7 @@ Use optional "api" to force vanilla or legacy when both exist. Prefer vanilla (@
         },
       ],
     };
-  }
+  },
 );
 
 server.registerTool(
@@ -182,7 +179,7 @@ server.registerTool(
         .string()
         .optional()
         .describe(
-          'Filter: form, layout, navigation, feedback, overlay, data-display, actions, display, theming'
+          'Filter: form, layout, navigation, feedback, overlay, data-display, actions, display, theming',
         ),
       api: z.enum(['vanilla', 'legacy']).optional().describe('Filter by API surface'),
       limit: z.number().optional().default(8).describe('Max results (default 8)'),
@@ -207,7 +204,7 @@ server.registerTool(
     return {
       content: [{ type: 'text' as const, text: JSON.stringify(results) }],
     };
-  }
+  },
 );
 
 server.registerTool(
@@ -238,11 +235,11 @@ server.registerTool(
             api,
             limit,
             data: getAllComponents(),
-          })
+          }),
         ),
       },
     ],
-  })
+  }),
 );
 
 server.registerTool(
@@ -266,7 +263,7 @@ server.registerTool(
     return {
       content: [{ type: 'text' as const, text: JSON.stringify(result) }],
     };
-  }
+  },
 );
 
 server.registerTool(
@@ -293,11 +290,11 @@ Icons extend IconPrimitive (see get_component).`,
             api: icon.api,
             category: icon.category,
             import: icon.import,
-          }))
+          })),
         ),
       },
     ],
-  })
+  }),
 );
 
 server.registerTool(
@@ -341,5 +338,5 @@ server.registerTool(
         },
       ],
     };
-  }
+  },
 );

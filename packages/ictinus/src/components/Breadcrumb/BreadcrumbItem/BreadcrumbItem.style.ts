@@ -17,9 +17,11 @@ export const breadcrumbItemStyles = ({
     align-items: center;
     gap: ${vars.spacing['4']};
 
-    ${isLastItem &&
-    `
+    ${
+      isLastItem &&
+      `
           color: ${vars.color.text.default.secondary};
-      `};
+      `
+    };
   `;
 };

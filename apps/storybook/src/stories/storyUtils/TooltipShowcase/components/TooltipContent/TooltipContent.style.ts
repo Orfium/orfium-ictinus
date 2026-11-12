@@ -15,8 +15,6 @@ export const illustrationStyles = (isInverted?: boolean): SerializedStyles => {
   `;
 };
 
-
-
 export const containerStyles =
   (isInverted?: boolean) =>
   (theme: Theme): SerializedStyles => {

@@ -20,7 +20,7 @@ const Tag = React.forwardRef<HTMLDivElement, DivProps & TagProps>(
       dataTestId,
       ...rest
     },
-    ref
+    ref,
   ) => {
     const { isSelectable, isClearable, isInteractive, handleKeyDown, prefix, suffix } =
       useGetTagUtils({ color, iconName, onSelect, onClear, isSelected, dataTestPrefixId });
@@ -45,7 +45,7 @@ const Tag = React.forwardRef<HTMLDivElement, DivProps & TagProps>(
         {suffix}
       </div>
     );
-  }
+  },
 );
 
 Tag.displayName = 'Tag';

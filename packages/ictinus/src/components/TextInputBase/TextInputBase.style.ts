@@ -214,6 +214,6 @@ export const hintMessageStyle =
           padding: 0,
         },
       },
-      body03(theme)
+      body03(theme),
     );
   };

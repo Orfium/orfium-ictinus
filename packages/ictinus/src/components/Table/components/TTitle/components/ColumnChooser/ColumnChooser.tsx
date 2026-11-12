@@ -35,9 +35,9 @@ const ColumnChooser: React.FC<Props> = ({
   const [selectedKeys, setSelectedKeys] = React.useState(
     new Set<string>(
       Object.keys(columnsConfig.columnVisibility).filter(
-        (col) => columnsConfig.columnVisibility[col] === true
-      )
-    )
+        (col) => columnsConfig.columnVisibility[col] === true,
+      ),
+    ),
   );
 
   const disabledKeys = options
@@ -63,7 +63,7 @@ const ColumnChooser: React.FC<Props> = ({
         obj[item.id] = keysArray.includes(item.id);
 
         return obj;
-      }, {})
+      }, {}),
     );
   };
 

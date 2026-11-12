@@ -29,7 +29,7 @@ describe('TableV4', () => {
         type="nested-header"
         isPadded
         data={data}
-      />
+      />,
     );
 
     // check nested table data are rendered by checking row header
@@ -54,7 +54,7 @@ describe('TableV4', () => {
         type="nested-header"
         onCheck={onCheck}
         data={data}
-      />
+      />,
     );
 
     const row = getAllByText('Title')[0].closest('tr') as HTMLElement;
@@ -76,7 +76,7 @@ describe('TableV4', () => {
         onCheck={onCheck}
         data={data}
         topLeftText={topLeftText}
-      />
+      />,
     );
 
     const row = getByText(topLeftText).closest('tr') as HTMLElement;
@@ -114,7 +114,7 @@ describe('TableV4', () => {
         initialSort={{ column: 'title', order: 'asc' }}
         onSort={onSort}
         data={data}
-      />
+      />,
     );
 
     const titleHeader = screen.getByTestId('header_title');
@@ -145,7 +145,7 @@ describe('TableV4', () => {
         initialSort={{ column: 'title', order: 'asc' }}
         onSort={onSort}
         data={data}
-      />
+      />,
     );
 
     await userEvent.click(screen.getByTestId('header_title'));
@@ -169,7 +169,7 @@ describe('TableV4', () => {
           'Age',
         ]}
         data={data}
-      />
+      />,
     );
 
     const tooltipIcon = screen.getByTestId('table_icon_tooltip_title');
@@ -209,11 +209,11 @@ describe('TableV4', () => {
         initialSort={{ column: 'title', order: 'asc' }}
         onSort={onSort}
         data={data}
-      />
+      />,
     );
 
     const titleElements = within(screen.getByTestId('header_title')).queryAllByTestId(
-      new RegExp('table_icon')
+      new RegExp('table_icon'),
     );
 
     expect(titleElements[0]).toStrictEqual(screen.getByTestId('table_icon_tooltip_title'));

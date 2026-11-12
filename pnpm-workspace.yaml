@@ -8,15 +8,18 @@ allowBuilds:
   unrs-resolver: false
 
 catalog:
-  '@vitest/coverage-v8': ^4.1.9
+  '@vitest/browser': 4.1.12
+  '@vitest/coverage-v8': 4.1.12
   '@vitejs/plugin-react': ^6.1.0
   jsdom: ^29.1.1
   vite: ^8.2.2
   vite-plugin-dts: ^5.0.1
-  vitest: ^4.1.9
+  vitest: 4.1.12
 
 # https://pnpm.io/settings/dependency-resolution#autodedupe
 autoDedupe: true
+lockfile:
+  includeResolutionSettings: true
 
 minimumReleaseAge: 2880 # 2 days
 minimumReleaseAgeExclude:

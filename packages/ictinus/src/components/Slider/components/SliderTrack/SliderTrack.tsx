@@ -39,7 +39,7 @@ const SliderTrack: FCC<SliderTrackProps & TestProps> = ({
 
         rtl: false,
       }),
-    [isSelector, values]
+    [isSelector, values],
   );
 
   return (

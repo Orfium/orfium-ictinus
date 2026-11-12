@@ -37,7 +37,7 @@ const toastQueue = new ToastQueue<ToastValue>({
 
 export const toast = (
   children: string | ReactElement,
-  { isDismissible = true, timeout = DEFAULT_TIMEOUT, ...options }: ToastOptions = {}
+  { isDismissible = true, timeout = DEFAULT_TIMEOUT, ...options }: ToastOptions = {},
 ) => {
   const toastValue: ToastValue = {
     children,
@@ -127,7 +127,7 @@ export const Toast = forwardRef<HTMLDivElement, ToastProps>(
         />
       </div>
     );
-  }
+  },
 );
 
 Toast.displayName = 'Toast';
@@ -135,17 +135,17 @@ Toast.displayName = 'Toast';
 export const ToastContainer = forwardRef<HTMLDivElement, ToastContainerProps>(
   (
     { placement = 'bottom right', ...props }: ToastContainerProps,
-    ref: RefObject<HTMLDivElement>
+    ref: RefObject<HTMLDivElement>,
   ) => {
     const state = useToastQueue(toastQueue);
 
     return state.visibleToasts.length > 0
       ? createPortal(
           <ToastRegion ref={ref} {...props} placement={placement} state={state} />,
-          document.body
+          document.body,
         )
       : null;
-  }
+  },
 );
 
 ToastContainer.displayName = 'ToastContainer';
@@ -162,7 +162,7 @@ const ToastRegion = forwardRef<HTMLDivElement, ToastRegionProps>(
         ))}
       </div>
     );
-  }
+  },
 );
 
 ToastRegion.displayName = 'ToastRegion';

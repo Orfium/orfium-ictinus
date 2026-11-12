@@ -36,7 +36,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       children,
       ...props
     },
-    ref: RefObject<HTMLButtonElement>
+    ref: RefObject<HTMLButtonElement>,
   ) => {
     props = useSlotProps(props, 'button');
     const domRef = useDOMRef(ref);
@@ -54,7 +54,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           {...restProps}
           className={cn(
             styles.button({ variant, size, iconOnly, circle, isPending, isDisabled }),
-            boxProps.className
+            boxProps.className,
           )}
         >
           <SlotProvider
@@ -81,7 +81,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         </ButtonPrimitive>
       </Box>
     );
-  }
+  },
 );
 
 Button.displayName = '@orfium/ictinus/vanilla/Button';

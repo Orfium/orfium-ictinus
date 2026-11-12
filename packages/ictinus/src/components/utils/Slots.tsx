@@ -66,7 +66,7 @@ export function SlotProvider({ slots = {}, children }: { slots?: object; childre
           ...acc,
           [slot]: mergeProps(parentSlots[slot] || {}, slots[slot] || {}),
         }),
-        {}
+        {},
       );
     // oxlint-disable-next-line react-hooks/exhaustive-deps
   }, [parentSlots, slots]);

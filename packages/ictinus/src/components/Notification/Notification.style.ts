@@ -15,7 +15,7 @@ export const typeToBackgroundStyle = (type: NotificationTypes): string =>
 export const notificationsContainerPerType = (
   type: NotificationTypes,
   styleType: NotificationStyleType,
-  theme: Theme
+  theme: Theme,
 ): SerializedStyles => css`
   border: ${vars['border-width']['2']} solid
     ${vars.color['border-color'].interactive[typeToColorStyle(type)]};
@@ -24,14 +24,16 @@ export const notificationsContainerPerType = (
     box-shadow: ${theme.globals.elevation['02']};
   }
 
-  ${styleType === 'outlined'
-    ? `
+  ${
+    styleType === 'outlined'
+      ? `
     background: ${vars.color.background.default};
       `
-    : `
+      : `
     background:  ${vars.color.palette[typeToBackgroundStyle(type)].muted};
 
-`}
+`
+  }
 `;
 
 export const actionsContainer = (): SerializedStyles => css`

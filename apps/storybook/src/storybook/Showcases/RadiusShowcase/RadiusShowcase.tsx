@@ -50,7 +50,7 @@ const RadiusShowcase = ({ type = 'global' }: Props) => {
                 {get(borderRadiusObject, key).value}
                 {!isGlobal
                   ? ` = ${convertRemToPixels(
-                      theme.dimension.borderRadius.get(key as DimensionBorderRadiusKey)
+                      theme.dimension.borderRadius.get(key as DimensionBorderRadiusKey),
                     )}px`
                   : ``}
               </Typography>

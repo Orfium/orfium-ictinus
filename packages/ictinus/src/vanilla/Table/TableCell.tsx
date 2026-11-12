@@ -23,7 +23,7 @@ export const TableCell = forwardRef<HTMLTableCellElement, TableCellProps>(
       textAlign,
       ...props
     },
-    ref
+    ref,
   ) => {
     return (
       <Box
@@ -47,7 +47,7 @@ export const TableCell = forwardRef<HTMLTableCellElement, TableCellProps>(
         </td>
       </Box>
     );
-  }
+  },
 );
 
 TableCell.displayName = '@orfium/ictinus/vanilla/TableCell';

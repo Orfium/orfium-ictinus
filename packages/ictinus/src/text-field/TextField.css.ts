@@ -260,10 +260,9 @@ export const input = recipe({
         [`${control}:has(> ${floatingLabel}) > &[data-focused]::placeholder`]: {
           color: vars.color.text.default.secondary,
         },
-        [`${control}:has(> ${floatingLabel}) > &:not(textarea):not([data-variant="compact"])`]:
-          {
-            paddingTop: vars.spacing.md,
-          },
+        [`${control}:has(> ${floatingLabel}) > &:not(textarea):not([data-variant="compact"])`]: {
+          paddingTop: vars.spacing.md,
+        },
       },
     }),
   ],

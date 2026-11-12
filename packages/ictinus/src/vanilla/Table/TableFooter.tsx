@@ -11,7 +11,7 @@ export const TableFooter = forwardRef<HTMLTableSectionElement, TableFooterProps>
     <Box asChild className={cn(styles.footer({ pinned }), className)} {...props}>
       <tfoot ref={ref}>{children}</tfoot>
     </Box>
-  )
+  ),
 );
 
 TableFooter.displayName = '@orfium/ictinus/vanilla/TableFooter';

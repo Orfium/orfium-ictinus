@@ -26,7 +26,7 @@ const INITIAL_SELECTED_COUNT = 5;
 export const Default: Story = {
   render: () => {
     const [selected, setSelected] = useState<Selection>(
-      () => new Set(Array.from({ length: INITIAL_SELECTED_COUNT }, (_, i) => `item-${i + 1}`))
+      () => new Set(Array.from({ length: INITIAL_SELECTED_COUNT }, (_, i) => `item-${i + 1}`)),
     );
 
     return (

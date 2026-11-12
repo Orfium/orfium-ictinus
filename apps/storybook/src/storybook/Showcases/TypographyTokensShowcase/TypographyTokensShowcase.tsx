@@ -4,16 +4,20 @@ import {
   semanticVariablesTypography,
   type TypographyVariant,
   Typography,
-  parseCompositionToken
+  parseCompositionToken,
 } from '@orfium/ictinus';
 
 import { TableWrapperStyle, innerTableStyle } from './TypographyTokensShowcase.style';
 
 const TypographyTokensShowcase = () => {
-  const typographyArray = map(semanticVariablesTypography.normal, (value, key) => ({ key, ...value }));
+  const typographyArray = map(semanticVariablesTypography.normal, (value, key) => ({
+    key,
+    ...value,
+  }));
 
   const parsedTypographyCompositionToken = parseCompositionToken(
-    semanticVariablesTypography.normal);
+    semanticVariablesTypography.normal,
+  );
 
   return (
     <table css={TableWrapperStyle} width="100%">

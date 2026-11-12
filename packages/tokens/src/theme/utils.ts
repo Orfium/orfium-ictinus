@@ -22,7 +22,7 @@ export const convertRemToPixels = (rem) => {
 export const colorShadesCreator = (
   base: string,
   per: number = BASE_PERCENTAGE,
-  shadesCount: number = SHADES / 2
+  shadesCount: number = SHADES / 2,
 ): GeneratedColorShades => {
   const newArray = (fn: (item: undefined, i: number) => string, length: number) =>
     Array.from({ length }, fn);
@@ -56,7 +56,7 @@ export const colorShadesCreator = (
 // @TODO fix this type in the future when v5 settle
 export const iterateObject = <T extends object>(
   obj: T,
-  func: (value: string, name: string) => GeneratedColorShades | string
+  func: (value: string, name: string) => GeneratedColorShades | string,
 ): Record<string, unknown> =>
   Object.keys(obj).reduce((acc, value) => {
     if (typeof obj[value] !== 'object') {
@@ -72,7 +72,7 @@ export const iterateObject = <T extends object>(
 
 export const enhancePaletteWithShades = (obj: PaletteConfig): Palette =>
   iterateObject<PaletteConfig>(obj, (value: string, name: string) =>
-    EXCLUDED.includes(name) ? value : colorShadesCreator(value, BASE_PERCENTAGE)
+    EXCLUDED.includes(name) ? value : colorShadesCreator(value, BASE_PERCENTAGE),
   ) as Palette;
 
 export const rem = (px: number | string): string => polishedRem(px, 16);
@@ -107,7 +107,7 @@ const addPxSuffix = (val: string) => (val.endsWith('px') ? val : `${val}px`);
 
 const getFigmaTokensBoxShadowValue = <T extends string | symbol>(
   figmaTokensObject: FigmaTokensObject<T>,
-  val: T
+  val: T,
 ) => {
   const x = rem(addPxSuffix(get(figmaTokensObject, [val, 'value', 'x'], '0')));
   const y = rem(addPxSuffix(get(figmaTokensObject, [val, 'value', 'y'], '0')));
@@ -127,19 +127,19 @@ const getFigmaTokensBoxShadowValue = <T extends string | symbol>(
 export const getFigmaTokensValue: {
   <T extends string | symbol>(
     figmaTokensObject: FigmaTokensObject<T>,
-    type: FigmaTokenValueType.Number
+    type: FigmaTokenValueType.Number,
   ): (val: T) => number;
   <T extends string | symbol>(
     figmaTokensObject: FigmaTokensObject<T>,
-    type: FigmaTokenValueType.String
+    type: FigmaTokenValueType.String,
   ): (val: T) => string;
   <T extends string | symbol>(
     figmaTokensObject: FigmaTokensObject<T>,
-    type: FigmaTokenValueType.Pixels
+    type: FigmaTokenValueType.Pixels,
   ): (val: T) => string;
   <T extends string | symbol>(
     figmaTokensObject: FigmaTokensObject<T>,
-    type: FigmaTokenValueType.BoxShadow
+    type: FigmaTokenValueType.BoxShadow,
   ): (val: T) => string;
 } =
   <T extends string | symbol>(figmaTokensObject: FigmaTokensObject<T>, type: FigmaTokenValueType) =>

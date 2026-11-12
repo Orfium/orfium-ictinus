@@ -19,7 +19,7 @@ const Tooltip = React.forwardRef<HTMLDivElement, TooltipProps>(
       isOpen,
       ...rest
     },
-    ref
+    ref,
   ) => {
     return (
       <div css={tooltipStyle({ isInverted, isInteractive })}>
@@ -41,7 +41,7 @@ const Tooltip = React.forwardRef<HTMLDivElement, TooltipProps>(
         </ReactTooltip>
       </div>
     );
-  }
+  },
 );
 
 Tooltip.displayName = 'Tooltip';

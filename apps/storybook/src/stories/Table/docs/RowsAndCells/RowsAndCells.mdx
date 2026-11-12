@@ -96,7 +96,7 @@ If you want to keep the state of selected rows for all pages, use the state as i
 ```ts
 /** Multi Page State */
 const [rowSelection, setRowSelection] = useState<Array<Record<string, boolean>>>(
-  Array.from({ length: data.length }, () => ({}))
+  Array.from({ length: data.length }, () => ({})),
 );
 ```
 

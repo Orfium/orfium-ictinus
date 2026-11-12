@@ -44,12 +44,13 @@ export type TokensObject = {
  * type AvatarKeys = "color.red.backgroundColor" | "size.1"
  * ```
  */
-export type DotKeys<T> = T extends Record<string, unknown>
-  ?
-      | {
-          [K in keyof T & string]: T[K] extends { value: unknown }
-            ? `${K}`
-            : `${K}${DotKeys<T[K]> extends infer S ? (S extends string ? `.${S}` : '') : ''}`;
-        }[keyof T & string]
-      | (keyof T extends number ? `${keyof T}` : never)
-  : never;
+export type DotKeys<T> =
+  T extends Record<string, unknown>
+    ?
+        | {
+            [K in keyof T & string]: T[K] extends { value: unknown }
+              ? `${K}`
+              : `${K}${DotKeys<T[K]> extends infer S ? (S extends string ? `.${S}` : '') : ''}`;
+          }[keyof T & string]
+        | (keyof T extends number ? `${keyof T}` : never)
+    : never;

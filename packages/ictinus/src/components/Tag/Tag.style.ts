@@ -57,9 +57,9 @@ export const tagContainerStyles =
       color: ${isInteractive ? TAG_COLOR.blue.text : TAG_COLOR[color].text};
       border: ${vars['border-width']['1']} solid;
 
-      border-color: ${isInteractive
-        ? vars.color['border-color'].interactive.default
-        : TAG_COLOR[color].border};
+      border-color: ${
+        isInteractive ? vars.color['border-color'].interactive.default : TAG_COLOR[color].border
+      };
 
       border-radius: ${vars['border-radius'][size === 'normal' ? '2' : '1']};
 
@@ -78,12 +78,13 @@ export const tagContainerStyles =
     `;
   };
 
-export const code = (size: 'normal' | 'small') => (theme: Theme) => css`
-  ${theme.tokens.typography.get(size === 'normal' ? 'mono.body02' : 'mono.body03')};
-  background-color: ${vars.color.palette.secondary.contrast};
-  border-color: transparent;
-  color: ${vars.color.text.default.primary};
-`;
+export const code = (size: 'normal' | 'small') => (theme: Theme) =>
+  css`
+    ${theme.tokens.typography.get(size === 'normal' ? 'mono.body02' : 'mono.body03')};
+    background-color: ${vars.color.palette.secondary.contrast};
+    border-color: transparent;
+    color: ${vars.color.text.default.primary};
+  `;
 
 export const iconStyles =
   () =>

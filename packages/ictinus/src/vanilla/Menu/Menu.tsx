@@ -41,8 +41,7 @@ const MenuTrigger = ({ ...props }: ComponentProps<typeof Pressable>) => <Pressab
 MenuTrigger.displayName = '@orfium/ictinus/vanilla/MenuTrigger';
 
 interface MenuContentProps<T>
-  extends MenuPrimitiveProps<T>,
-    Pick<PopoverContentProps, 'placement'> {
+  extends MenuPrimitiveProps<T>, Pick<PopoverContentProps, 'placement'> {
   className?: string;
   popover?: Pick<
     PopoverContentProps,

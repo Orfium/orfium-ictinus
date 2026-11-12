@@ -34,7 +34,7 @@ const StatefulSearch = forwardRef<HTMLInputElement, Partial<SearchProps>>((props
   };
 
   const hasFilter = Boolean(
-    filterConfig?.defaultValue && filterConfig?.label && filterConfig?.items
+    filterConfig?.defaultValue && filterConfig?.label && filterConfig?.items,
   );
 
   const filterProps = hasFilter

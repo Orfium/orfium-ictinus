@@ -25,7 +25,8 @@ export const textFieldWrapper = () => css`
   }
 `;
 
-export const iconWrapper = () => () => css`
-  display: flex;
-  gap: ${rem(25)};
-`;
+export const iconWrapper = () => () =>
+  css`
+    display: flex;
+    gap: ${rem(25)};
+  `;

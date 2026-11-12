@@ -12,7 +12,7 @@ export type CoverProps = BoxProps<'div', styles.CoverVariants>;
 export const Cover = forwardRef<HTMLDivElement, CoverProps>(
   ({ className, disabled = false, inset = false, ...props }, ref) => (
     <Box ref={ref} className={cn(styles.cover({ disabled, inset }), className)} {...props} />
-  )
+  ),
 );
 
 Cover.displayName = '@orfium/ictinus/vanilla/Cover';

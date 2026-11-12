@@ -18,7 +18,7 @@ export const generateTestDataId = (defaultId: TestId, customId?: TestId) =>
 /** A function that determines if the element passed is a function and a react element */
 export function isComponentFunctionType(
   // TODO this must be fixed @Panagiotis
-  element: string | number | React.JSX.Element | Function
+  element: string | number | React.JSX.Element | Function,
 ): element is Function {
   return typeof element === 'function' && React.isValidElement(element());
 }
@@ -36,7 +36,7 @@ export const getLocaleFormat = (dateFormat: string | undefined) => {
  * */
 export const errorHandler = <T>(
   errors: { condition: (p: T) => boolean; error: Error | ((p: T) => Error) }[],
-  props: T
+  props: T,
 ) =>
   errors.map(({ condition, error }) => {
     if (condition(props)) {

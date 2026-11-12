@@ -8,7 +8,7 @@ export const calculateDisabledDays = (
   day: number | undefined,
   month: number,
   year: number,
-  disabledDates?: DisabledDates
+  disabledDates?: DisabledDates,
 ) => {
   if (!day) return false;
 
@@ -38,7 +38,7 @@ export const calculatedDayIsBetween = (
   month: number,
   year: number,
   from: Dayjs | undefined,
-  to: Dayjs | undefined
+  to: Dayjs | undefined,
 ) => {
   if (!day) return false;
 
@@ -53,7 +53,7 @@ export const calculateSelectedDayPosition = (
   month: number,
   year: number,
   from: Dayjs | undefined,
-  to: Dayjs | undefined
+  to: Dayjs | undefined,
 ) => {
   if (day && from && to) {
     const startDate = from.isAfter(to) ? to : from;
@@ -71,7 +71,7 @@ export const calculateSelectedDay = (
   month: number,
   year: number,
   from: Dayjs | undefined,
-  to: Dayjs | undefined
+  to: Dayjs | undefined,
 ) => {
   if (!day) return false;
 

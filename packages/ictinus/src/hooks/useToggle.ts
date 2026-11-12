@@ -7,7 +7,7 @@ const useToggle = (isToggledInitialState = false): [boolean, () => void] => {
       setIsToggled((isToggledOldState) => {
         return !isToggledOldState;
       }),
-    [setIsToggled]
+    [setIsToggled],
   );
 
   return [isToggled, toggle];

@@ -43,8 +43,8 @@ const transform: Transform = (file, api) => {
             j.objectProperty(j.identifier('hintMessage'), hintMsgValue),
             // Add 'id' if needed
             // j.objectProperty(j.identifier('id'), j.literal('some-id')),
-          ])
-        )
+          ]),
+        ),
       );
 
       // Add transformed hintMsg as 'hint' attribute

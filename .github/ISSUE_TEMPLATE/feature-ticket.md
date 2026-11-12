@@ -1,11 +1,12 @@
 ---
-
 name: Feature Ticket
 about: 'Create a new feature request '
 title: '[enhancement]'
 labels: enhancement
 assignees: ''
----## Description
+---
+
+## Description
 
 A clear and concise description of what needs to happen.
 

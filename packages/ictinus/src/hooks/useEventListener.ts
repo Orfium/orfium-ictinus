@@ -1,4 +1,4 @@
-import type { RefObject} from 'react';
+import type { RefObject } from 'react';
 import { useEffect, useRef } from 'react';
 
 import useIsomorphicLayoutEffect from './useIsoMorphicLayoutEffect';
@@ -8,11 +8,11 @@ import useIsomorphicLayoutEffect from './useIsoMorphicLayoutEffect';
 function useEventListener<
   KW extends keyof WindowEventMap,
   KH extends keyof HTMLElementEventMap,
-  T extends HTMLElement | void = void
+  T extends HTMLElement | void = void,
 >(
   eventName: KW | KH,
   handler: (event: WindowEventMap[KW] | HTMLElementEventMap[KH] | Event) => void,
-  element?: RefObject<T>
+  element?: RefObject<T>,
 ) {
   // Create a ref that stores handler
   const savedHandler = useRef(handler);

@@ -67,9 +67,9 @@ export const typographyWrapper =
       ${allStyles[variant](theme, fontSpacing)};
       font-style: ${isItalic ? 'italic' : undefined};
       font-weight: ${isBold ? vars.weight.bold : undefined};
-      text-decoration: ${isUnderline
-        ? theme.globals.typography.textDecoration.get('link')
-        : undefined};
+      text-decoration: ${
+        isUnderline ? theme.globals.typography.textDecoration.get('link') : undefined
+      };
       color: ${vars.color.text[textColorCategory][type]};
     `;
   };

@@ -16,7 +16,7 @@ const external = new RegExp(
       ...pkg.dependencies,
       ...pkg.peerDependencies,
     }).join('|') +
-    ')(?:/.+)?$'
+    ')(?:/.+)?$',
 );
 
 const stripSvgQuery = {
@@ -63,7 +63,7 @@ export default defineConfig([
           ? {
               identifiers: (options) => normalizeIdentifier(hash(`${pkg.version}_${options.hash}`)),
             }
-          : {}
+          : {},
       ),
     ],
   },

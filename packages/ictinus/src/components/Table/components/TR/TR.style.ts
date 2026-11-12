@@ -14,20 +14,24 @@ export const trContainer = ({
   'sx' | 'isSelectable' | 'isSelected' | 'isExpandable' | 'isExpanded'
 >): SerializedStyles => {
   return css`
-    ${(isSelectable || isExpandable) &&
-    `
+    ${
+      (isSelectable || isExpandable) &&
+      `
          cursor: pointer;
          &:hover {
            background: ${vars.color.palette.tertiary.muted};
          }
       
-      `}
+      `
+    }
 
-    ${(isSelected || isExpanded) &&
-    `
+    ${
+      (isSelected || isExpanded) &&
+      `
       background: ${vars.color.palette.tertiary.contrast};
-      `}
+      `
+    }
 
-      ${sx};
+    ${sx};
   `;
 };

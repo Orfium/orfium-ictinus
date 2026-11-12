@@ -25,8 +25,6 @@ export declare const LEGACY_PREFIX: '@orfium/ictinus/';
 /** Internal / non-public pieces that still appear in export graphs. */
 export declare const DOCS_SKIP: Set<string>;
 
-export declare function resolveApi(
-  displayName: string,
-): 'vanilla' | 'legacy' | null;
+export declare function resolveApi(displayName: string): 'vanilla' | 'legacy' | null;
 
 export declare function docsShortName(displayName: string): string;

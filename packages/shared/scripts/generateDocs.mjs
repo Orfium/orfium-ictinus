@@ -60,71 +60,68 @@ function generateDocs() {
   );
 
   const processed = docs
-    .map(
-      ({
-        description,
-        filePath,
-        methods: _methods,
-        props,
-        tags,
-        ...doc
-      }) => {
-        const filterProps = Object.fromEntries(
-          Object.entries(props)
-            .filter(([, prop]) =>
-              prop.parent
-                ? !(
-                    (prop.parent.fileName.includes('@types/react') ||
-                      prop.parent.fileName.endsWith('react/index.d.ts')) &&
-                    prop.name !== 'children'
-                  )
-                : prop.type.name !== 'undefined',
-            )
-            .filter(([, prop]) => !(prop.type.name === 'never'))
-            .map(
-              ([
-                name,
-                { declarations: _declarations, defaultValue, description: propDescription, required, ...prop },
-              ]) => {
-                delete prop.parent;
-
-                const typeName = prop.type.raw || prop.type.name || 'unknown';
-
-                return [
-                  name,
-                  {
-                    name,
-                    type: { name: typeName },
-                    ...(defaultValue && { defaultValue }),
-                    ...(propDescription && { description: propDescription }),
-                    ...(required && { required }),
-                  },
-                ];
+    .map(({ description, filePath, methods: _methods, props, tags, ...doc }) => {
+      const filterProps = Object.fromEntries(
+        Object.entries(props)
+          .filter(([, prop]) =>
+            prop.parent
+              ? !(
+                  (prop.parent.fileName.includes('@types/react') ||
+                    prop.parent.fileName.endsWith('react/index.d.ts')) &&
+                  prop.name !== 'children'
+                )
+              : prop.type.name !== 'undefined',
+          )
+          .filter(([, prop]) => !(prop.type.name === 'never'))
+          .map(
+            ([
+              name,
+              {
+                declarations: _declarations,
+                defaultValue,
+                description: propDescription,
+                required,
+                ...prop
               },
-            ),
-        );
+            ]) => {
+              delete prop.parent;
 
-        const displayName = normalizeDisplayName(doc.displayName, filePath, {
-          legacy,
-          vanilla,
-        });
-        const api = resolveApi(displayName);
+              const typeName = prop.type.raw || prop.type.name || 'unknown';
 
-        return {
-          ...doc,
-          displayName,
-          props: Object.values(filterProps).sort((a, b) => a.name.localeCompare(b.name)),
-          tags: {
-            ...(api ? { api } : undefined),
-            ...('asChild' in filterProps && 'className' in filterProps
-              ? { extends: 'Box' }
-              : undefined),
-            ...tags,
-          },
-          ...(description && { description }),
-        };
-      },
-    )
+              return [
+                name,
+                {
+                  name,
+                  type: { name: typeName },
+                  ...(defaultValue && { defaultValue }),
+                  ...(propDescription && { description: propDescription }),
+                  ...(required && { required }),
+                },
+              ];
+            },
+          ),
+      );
+
+      const displayName = normalizeDisplayName(doc.displayName, filePath, {
+        legacy,
+        vanilla,
+      });
+      const api = resolveApi(displayName);
+
+      return {
+        ...doc,
+        displayName,
+        props: Object.values(filterProps).sort((a, b) => a.name.localeCompare(b.name)),
+        tags: {
+          ...(api ? { api } : undefined),
+          ...('asChild' in filterProps && 'className' in filterProps
+            ? { extends: 'Box' }
+            : undefined),
+          ...tags,
+        },
+        ...(description && { description }),
+      };
+    })
     .filter((doc) => {
       const name = docsShortName(doc.displayName);
       if (DOCS_SKIP.has(name)) return false;
@@ -193,22 +190,16 @@ function addMissingExportStubs(docs, { legacy, vanilla, program, typeChecker }) 
         continue;
       }
 
-      console.warn(
-        `docgen missed ${api}:${name}; emitting minimal stub (props unknown)`,
-      );
+      console.warn(`docgen missed ${api}:${name}; emitting minimal stub (props unknown)`);
 
       const resolved =
         exportSymbol.flags & ts.SymbolFlags.Alias
           ? typeChecker.getAliasedSymbol(exportSymbol)
           : exportSymbol;
       const jsTags = Object.fromEntries(
-        resolved
-          .getJsDocTags(typeChecker)
-          .map((t) => [t.name, ts.displayPartsToString(t.text)]),
+        resolved.getJsDocTags(typeChecker).map((t) => [t.name, ts.displayPartsToString(t.text)]),
       );
-      const description = ts.displayPartsToString(
-        resolved.getDocumentationComment(typeChecker),
-      );
+      const description = ts.displayPartsToString(resolved.getDocumentationComment(typeChecker));
 
       stubs.push({
         displayName: `${prefix}${name}`,

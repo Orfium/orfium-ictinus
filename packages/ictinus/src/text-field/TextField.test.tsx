@@ -12,7 +12,7 @@ describe('TextField', () => {
         <TextField>
           <TextField.Label>Email</TextField.Label>
           <TextField.Input type="email" />
-        </TextField>
+        </TextField>,
       );
 
       expect(screen.getByRole('textbox', { name: 'Email' })).toBeInTheDocument();
@@ -24,12 +24,12 @@ describe('TextField', () => {
           <TextField.Label>Email</TextField.Label>
           <TextField.Input type="email" />
           <TextField.Description>We will not share your email.</TextField.Description>
-        </TextField>
+        </TextField>,
       );
 
       expect(screen.getByText('We will not share your email.')).toBeInTheDocument();
       expect(screen.getByRole('textbox', { name: 'Email' })).toHaveAccessibleDescription(
-        'We will not share your email.'
+        'We will not share your email.',
       );
     });
 
@@ -39,7 +39,7 @@ describe('TextField', () => {
           <TextField.Label>Password</TextField.Label>
           <TextField.Input type="password" />
           <TextField.Error>Password is required.</TextField.Error>
-        </TextField>
+        </TextField>,
       );
 
       expect(screen.getByText('Password is required.')).toBeInTheDocument();
@@ -51,7 +51,7 @@ describe('TextField', () => {
         <TextField>
           <TextField.Label>Name</TextField.Label>
           <TextField.Input />
-        </TextField>
+        </TextField>,
       );
 
       expect(screen.getByRole('textbox')).toHaveAttribute('data-variant', 'normal');
@@ -60,7 +60,7 @@ describe('TextField', () => {
         <TextField>
           <TextField.Label>Name</TextField.Label>
           <TextField.Input variant="compact" />
-        </TextField>
+        </TextField>,
       );
 
       expect(screen.getByRole('textbox')).toHaveAttribute('data-variant', 'compact');
@@ -71,7 +71,7 @@ describe('TextField', () => {
         <TextField>
           <TextField.Label>Notes</TextField.Label>
           <TextField.TextArea />
-        </TextField>
+        </TextField>,
       );
 
       expect(screen.getByRole('textbox', { name: 'Notes' })).toBeInTheDocument();
@@ -83,7 +83,7 @@ describe('TextField', () => {
         <TextField data-testid="field" className="field-class">
           <TextField.Label>Name</TextField.Label>
           <TextField.Input className="input-class" data-testid="input" />
-        </TextField>
+        </TextField>,
       );
 
       expect(screen.getByTestId('field')).toHaveClass('field-class');
@@ -98,7 +98,7 @@ describe('TextField', () => {
         <TextField ref={fieldRef} data-testid="field">
           <TextField.Label>Name</TextField.Label>
           <TextField.Input ref={inputRef} data-testid="input" />
-        </TextField>
+        </TextField>,
       );
 
       expect(fieldRef.current).toBe(screen.getByTestId('field'));
@@ -115,7 +115,7 @@ describe('TextField', () => {
         <TextField onChange={onChange}>
           <TextField.Label>Name</TextField.Label>
           <TextField.Input />
-        </TextField>
+        </TextField>,
       );
 
       await user.type(screen.getByRole('textbox'), 'Orfium');
@@ -131,7 +131,7 @@ describe('TextField', () => {
         <TextField isDisabled>
           <TextField.Label>Name</TextField.Label>
           <TextField.Input />
-        </TextField>
+        </TextField>,
       );
 
       const input = screen.getByRole('textbox', { name: 'Name' });
@@ -151,7 +151,7 @@ describe('TextField', () => {
             <TextField.FloatingLabel>Search</TextField.FloatingLabel>
             <TextField.Input />
           </TextField.Control>
-        </TextField>
+        </TextField>,
       );
 
       expect(screen.getByText('Search')).toHaveAttribute('data-floating-label');
@@ -170,7 +170,7 @@ describe('TextField', () => {
               .com
             </TextField.Addon>
           </TextField.Group>
-        </TextField>
+        </TextField>,
       );
 
       expect(screen.getByTestId('start-addon')).toHaveAttribute('data-align', 'inline-start');
@@ -187,7 +187,7 @@ describe('TextField', () => {
             <TextField.Input data-testid="input" />
             <TextField.Addon data-testid="addon">https://</TextField.Addon>
           </TextField.Group>
-        </TextField>
+        </TextField>,
       );
 
       await user.click(screen.getByTestId('addon'));
@@ -210,7 +210,7 @@ describe('TextField', () => {
               </button>
             </TextField.Addon>
           </TextField.Group>
-        </TextField>
+        </TextField>,
       );
 
       await user.click(screen.getByRole('button', { name: 'Clear' }));
@@ -236,7 +236,7 @@ describe('TextField', () => {
               https://
             </TextField.Addon>
           </TextField.Group>
-        </TextField>
+        </TextField>,
       );
 
       await user.click(screen.getByTestId('addon'));
@@ -251,7 +251,7 @@ describe('TextField', () => {
           <TextField.Group>
             <TextField.Input data-testid="input" />
           </TextField.Group>
-        </TextField>
+        </TextField>,
       );
 
       expect(screen.getByTestId('input')).toHaveAttribute('data-slot', 'input-group-control');

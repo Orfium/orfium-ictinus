@@ -24,7 +24,7 @@ const NotificationsContainer: React.FCC<NotificationsContainerProps> = (props) =
 
   return ReactDOM.createPortal(
     <div css={notificationsContainer(position, parent)}>{children}</div>,
-    parent
+    parent,
   );
 };
 

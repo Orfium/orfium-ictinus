@@ -12,8 +12,8 @@ type StateConfig = {
         step: number;
       };
       color: {
-        name: typeof flatColors[number];
-        shade: typeof colorShades[number];
+        name: (typeof flatColors)[number];
+        shade: (typeof colorShades)[number];
       };
     };
   };
@@ -96,7 +96,7 @@ export const darkStatesConfig: StateConfig = {
   },
 };
 
-export const statesConfig: Record<typeof colorSchemes[number], StateConfig> = {
+export const statesConfig: Record<(typeof colorSchemes)[number], StateConfig> = {
   semantic: semanticStatesConfig,
   dark: darkStatesConfig,
 };

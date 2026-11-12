@@ -158,7 +158,7 @@ export const Addons: Story = {
               placeholder="0.00"
               onChange={(event) =>
                 setAmount(
-                  event.currentTarget.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1')
+                  event.currentTarget.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1'),
                 )
               }
               onKeyDown={(event) => {
@@ -190,7 +190,7 @@ export const Addons: Story = {
               variant="compact"
               onChange={(event) =>
                 setAmount(
-                  event.currentTarget.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1')
+                  event.currentTarget.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1'),
                 )
               }
               onKeyDown={(event) => {

@@ -26,7 +26,7 @@ export const DataTableHeader = forwardRef<HTMLDivElement, DataTableHeaderProps>(
         {children}
       </Box>
     );
-  }
+  },
 );
 
 DataTableHeader.displayName = '@orfium/ictinus/vanilla/DataTableHeader';

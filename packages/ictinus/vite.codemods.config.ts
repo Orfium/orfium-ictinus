@@ -9,7 +9,7 @@ const codemodsEntries = Object.fromEntries(
     .map((file) => [
       path.relative('codemods', file.slice(0, file.length - path.extname(file).length)),
       path.resolve(file),
-    ])
+    ]),
 );
 
 export default defineConfig({

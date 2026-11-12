@@ -20,7 +20,7 @@ describe('Radio', () => {
     const { container } = render(
       <RadioGroup>
         <Radio value="Test Option">Test Option</Radio>
-      </RadioGroup>
+      </RadioGroup>,
     );
 
     expect(container).toMatchSnapshot();
@@ -32,7 +32,7 @@ describe('Radio', () => {
     const { container } = render(
       <RadioGroup onChange={mockOnClick}>
         <Radio value="Test Option">Test Option</Radio>
-      </RadioGroup>
+      </RadioGroup>,
     );
 
     const radio = container.querySelector('input[type="radio"]') as HTMLInputElement;
@@ -51,7 +51,7 @@ describe('Radio', () => {
         <Radio value="Test Option" isDisabled>
           Test Option
         </Radio>
-      </RadioGroup>
+      </RadioGroup>,
     );
 
     const radio = container.querySelector('input[type="radio"]') as HTMLInputElement;

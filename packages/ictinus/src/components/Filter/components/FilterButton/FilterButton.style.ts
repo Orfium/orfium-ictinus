@@ -62,13 +62,15 @@ export const buttonStyles =
       ${generateStylesFromTokens(theme.tokens.typography.get('normal.label02'))};
 
       /* Override hardcoded SVG fills (e.g. gradient icons) so they inherit button color when active */
-      ${isActive
-        ? css`
-            & > svg path {
-              fill: currentColor;
-            }
-          `
-        : ''}
+      ${
+        isActive
+          ? css`
+              & > svg path {
+                fill: currentColor;
+              }
+            `
+          : ''
+      }
 
       &:not([disabled]) {
         &:focus-visible,

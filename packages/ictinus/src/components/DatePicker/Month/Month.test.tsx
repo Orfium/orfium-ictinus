@@ -25,7 +25,7 @@ describe('Month', () => {
           from: mockDate.add(1, 'day'),
           to: mockDate.add(44, 'day'),
         }}
-      />
+      />,
     );
     expect(container).toMatchSnapshot();
   });
@@ -59,14 +59,14 @@ describe('Month', () => {
       month,
       year,
       wrongDate.startOf('day'),
-      wrongDate.endOf('day')
+      wrongDate.endOf('day'),
     );
     const isTruthyDay = calculatedDayIsBetween(
       day,
       month,
       year,
       correctDate.startOf('day'),
-      correctDate.endOf('day')
+      correctDate.endOf('day'),
     );
 
     expect(isFaultyDay).toBeFalsy();

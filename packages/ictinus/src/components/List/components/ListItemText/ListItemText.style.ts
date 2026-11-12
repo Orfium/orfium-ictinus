@@ -6,7 +6,7 @@ import { type Theme } from '../../../../theme/types';
 
 export const listItemTextWrapperStyles = (
   isGroupItem?: boolean,
-  isHighlighted?: boolean
+  isHighlighted?: boolean,
 ): SerializedStyles => {
   return css`
     color: ${vars.color.text.default.primary};

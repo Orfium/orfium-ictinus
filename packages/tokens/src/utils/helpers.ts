@@ -4,7 +4,7 @@
  * */
 export const errorHandler = <T>(
   errors: { condition: (p: T) => boolean; error: Error | ((p: T) => Error) }[],
-  props: T
+  props: T,
 ) =>
   errors.map(({ condition, error }) => {
     if (condition(props)) {
@@ -15,6 +15,3 @@ export const errorHandler = <T>(
       }
     }
   });
-
-
-

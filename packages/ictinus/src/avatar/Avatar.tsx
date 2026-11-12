@@ -50,7 +50,7 @@ export const Avatar = forwardRef<HTMLSpanElement, AvatarProps>(
         </span>
       </Box>
     );
-  }
+  },
 );
 
 const UserIcon = ({ size }: { size: AvatarSize }) => (

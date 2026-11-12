@@ -23,50 +23,51 @@ export const styles = {
   'bottom right': css`
     align-items: flex-end;
   `,
-  toast: (props: ToastOptions) => (theme: Theme) => css`
-    --toast-border-width: ${vars['border-width']['1']};
-    --toast-min-content-width: ${rem(100)};
+  toast: (props: ToastOptions) => (theme: Theme) =>
+    css`
+      --toast-border-width: ${vars['border-width']['1']};
+      --toast-min-content-width: ${rem(100)};
 
-    ${theme.tokens.typography.get('normal.body02')};
-    pointer-events: auto;
-    box-sizing: border-box;
-    position: relative;
-    isolation: isolate;
-    display: inline-grid;
-    grid-template-columns: auto minmax(var(--toast-min-content-width), 1fr) auto;
-    grid-template-areas: 'icon content actions close';
-    align-items: center;
-    padding: calc(${vars.spacing['5']} - ${rem(1)});
-    border-radius: ${vars['border-radius']['2']};
-    background: ${vars.color.background.alt};
-    border: ${rem(1)} solid ${getBorderColor(props.status)};
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    view-transition-class: toast;
-    view-transition-name: var(--view-transition-name);
-
-    &:has([data-slot='button']) {
-      padding: calc(${vars.spacing['4']} - var(--toast-border-width))
-        calc(${vars.spacing['5']} - var(--toast-border-width));
-    }
-
-    @container (max-width: calc(600px - 1px)) {
-      grid-template-areas:
-        'icon content close'
-        'icon actions close';
-      align-items: flex-start;
+      ${theme.tokens.typography.get('normal.body02')};
+      pointer-events: auto;
+      box-sizing: border-box;
+      position: relative;
+      isolation: isolate;
+      display: inline-grid;
+      grid-template-columns: auto minmax(var(--toast-min-content-width), 1fr) auto;
+      grid-template-areas: 'icon content actions close';
+      align-items: center;
+      padding: calc(${vars.spacing['5']} - ${rem(1)});
+      border-radius: ${vars['border-radius']['2']};
+      background: ${vars.color.background.alt};
+      border: ${rem(1)} solid ${getBorderColor(props.status)};
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      view-transition-class: toast;
+      view-transition-name: var(--view-transition-name);
 
       &:has([data-slot='button']) {
-        padding: calc(${vars.spacing['5']} - var(--toast-border-width))
+        padding: calc(${vars.spacing['4']} - var(--toast-border-width))
           calc(${vars.spacing['5']} - var(--toast-border-width));
       }
-    }
 
-    @media (prefers-reduced-motion) {
-      view-transition-name: none;
-      view-transition-class: none;
-    }
-  `,
+      @container (max-width: calc(600px - 1px)) {
+        grid-template-areas:
+          'icon content close'
+          'icon actions close';
+        align-items: flex-start;
+
+        &:has([data-slot='button']) {
+          padding: calc(${vars.spacing['5']} - var(--toast-border-width))
+            calc(${vars.spacing['5']} - var(--toast-border-width));
+        }
+      }
+
+      @media (prefers-reduced-motion) {
+        view-transition-name: none;
+        view-transition-class: none;
+      }
+    `,
   icon: () => css`
     grid-area: icon;
     margin-right: ${vars.spacing['5']};

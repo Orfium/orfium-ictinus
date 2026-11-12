@@ -17,21 +17,21 @@ describe('TopAppBar', () => {
 
   it('should render correctly', () => {
     const { container } = render(
-      <TopAppBar onMenuIconClick={onMenuIconClickMock} userMenu={DEFAULT_USER_MENU} />
+      <TopAppBar onMenuIconClick={onMenuIconClickMock} userMenu={DEFAULT_USER_MENU} />,
     );
     expect(container).toMatchSnapshot();
   });
 
   it('should render correctly on dark', () => {
     const { container } = render(
-      <TopAppBar onMenuIconClick={onMenuIconClickMock} userMenu={DEFAULT_USER_MENU} isDark />
+      <TopAppBar onMenuIconClick={onMenuIconClickMock} userMenu={DEFAULT_USER_MENU} isDark />,
     );
     expect(container).toMatchSnapshot();
   });
 
   it('should call onMenuClick One Time', async () => {
     const { findByTestId } = render(
-      <TopAppBar onMenuIconClick={onMenuIconClickMock} userMenu={DEFAULT_USER_MENU} />
+      <TopAppBar onMenuIconClick={onMenuIconClickMock} userMenu={DEFAULT_USER_MENU} />,
     );
 
     const menuHandler = await findByTestId('menu-handler');
@@ -46,7 +46,7 @@ describe('TopAppBar', () => {
         onSearchHandler={onSearchHandler}
         onKeyPressHandler={onKeyPressHandler}
         userMenu={DEFAULT_USER_MENU}
-      />
+      />,
     );
 
     const topNavSearch = (await findByTestId('top-nav-search')) as HTMLInputElement;

@@ -53,7 +53,7 @@ export const TagGroup = forwardRef<HTMLDivElement, TagGroupProps>(
         </TagGroupPrimitive>
       </Box>
     );
-  }
+  },
 );
 
 TagGroup.displayName = '@orfium/ictinus/vanilla/TagGroup';
@@ -62,12 +62,12 @@ export type TagListProps<T extends object> = Omit<BoxProps<'div'>, 'children'> &
   TagListPrimitiveProps<T>;
 
 type TagListComponent = (<T extends object>(
-  props: TagListProps<T> & RefAttributes<HTMLDivElement>
+  props: TagListProps<T> & RefAttributes<HTMLDivElement>,
 ) => ReactElement) & { displayName?: string };
 
 function TagListImpl<T extends object>(
   { children, ...props }: TagListProps<T>,
-  ref: ForwardedRef<HTMLDivElement>
+  ref: ForwardedRef<HTMLDivElement>,
 ) {
   const domRef = useDOMRef(ref as RefObject<HTMLDivElement>);
   const { boxProps, restProps } = extractBoxProps(props);
@@ -130,7 +130,7 @@ export const Tag = forwardRef<HTMLDivElement, TagProps>(
         </TagPrimitive>
       </Box>
     );
-  }
+  },
 );
 
 Tag.displayName = '@orfium/ictinus/vanilla/Tag';

@@ -111,7 +111,7 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
           ))}
         </>
       ),
-      [isDisabled, onOptionDelete, selectedOptions, status?.type]
+      [isDisabled, onOptionDelete, selectedOptions, status?.type],
     );
 
     return (
@@ -171,7 +171,7 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
         </TextInputBase>
       </div>
     );
-  }
+  },
 );
 
 MultiTextFieldBase.displayName = 'MultiTextFieldBase';

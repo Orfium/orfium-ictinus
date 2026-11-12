@@ -36,7 +36,7 @@ const ExpandCollapse = (props: ExpandCollapseProps) => {
   const handleStateChange = (e: React.SyntheticEvent) => {
     if (typeof isExternallyControlledExpanded !== 'boolean') {
       setInternallyControlledExpanded(
-        (isInternallyControlledExpandedOldState) => !isInternallyControlledExpandedOldState
+        (isInternallyControlledExpandedOldState) => !isInternallyControlledExpandedOldState,
       );
     } else if (onChange) {
       onChange(e);

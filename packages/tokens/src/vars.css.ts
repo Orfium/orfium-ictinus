@@ -112,27 +112,27 @@ const createSemanticTokens = (mode: 'light' | 'dark') => {
     'box-shadow': {
       '0': ld(
         `0 0 0 0 ${baseVars.color.transparent[4]}`,
-        `0 0 0 0 ${baseVars.color.transparent[6]}`
+        `0 0 0 0 ${baseVars.color.transparent[6]}`,
       ),
       '1': ld(
         `0 2px 4px 0 ${baseVars.color.transparent[4]}`,
-        `0 2px 4px 0 ${baseVars.color.transparent[6]}`
+        `0 2px 4px 0 ${baseVars.color.transparent[6]}`,
       ),
       '2': ld(
         `0 4px 8px 0 ${baseVars.color.transparent[4]}`,
-        `0 4px 8px 0 ${baseVars.color.transparent[6]}`
+        `0 4px 8px 0 ${baseVars.color.transparent[6]}`,
       ),
       '3': ld(
         `0 8px 16px 0 ${baseVars.color.transparent[4]}`,
-        `0 8px 16px 0 ${baseVars.color.transparent[6]}`
+        `0 8px 16px 0 ${baseVars.color.transparent[6]}`,
       ),
       '4': ld(
         `0 16px 24px 0 ${baseVars.color.transparent[4]}`,
-        `0 16px 24px 0 ${baseVars.color.transparent[6]}`
+        `0 16px 24px 0 ${baseVars.color.transparent[6]}`,
       ),
       '5': ld(
         `0 -2px 4px 0 ${baseVars.color.transparent[4]}`,
-        `0 -2px 4px 0 ${baseVars.color.transparent[6]}`
+        `0 -2px 4px 0 ${baseVars.color.transparent[6]}`,
       ),
     },
   };

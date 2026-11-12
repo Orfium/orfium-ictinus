@@ -39,7 +39,7 @@ export function createDOMRef<T extends HTMLElement = HTMLElement>(ref: RefObject
  */
 
 export function useDOMRef<T extends HTMLElement = HTMLElement>(
-  ref: RefObject<T>
+  ref: RefObject<T>,
 ): RefObject<T | null> {
   const domRef = useRef<T>(null);
 

@@ -20,7 +20,7 @@ const transform: Transform = (file, api) => {
           // Invert the boolean value
           if (attribute.value.type === 'JSXExpressionContainer') {
             attribute.value = j.jsxExpressionContainer(
-              j.logicalExpression('!', attribute.value.expression)
+              j.logicalExpression('!', attribute.value.expression),
             );
           } else if (attribute.value.type === 'BooleanLiteral') {
             attribute.value = j.booleanLiteral(!attribute.value.value);

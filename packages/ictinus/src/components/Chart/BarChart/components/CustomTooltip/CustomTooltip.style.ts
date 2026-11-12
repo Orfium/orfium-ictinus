@@ -2,14 +2,15 @@ import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import { rem, vars } from '@orfium/tokens';
 
-export const tickStyle = (fill: string) => (): SerializedStyles => css`
-  width: inherit;
-  height: inherit;
-  color: ${fill};
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-`;
+export const tickStyle = (fill: string) => (): SerializedStyles =>
+  css`
+    width: inherit;
+    height: inherit;
+    color: ${fill};
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  `;
 
 export const tooltipStyle = (): SerializedStyles => css`
   display: block;

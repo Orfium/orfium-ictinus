@@ -47,7 +47,7 @@ const compose = (entry: StoryFile): ReturnType<typeof composeStories<StoryFile>>
     return composeStories(entry);
   } catch (e) {
     throw new Error(
-      `There was an issue composing stories for the module: ${JSON.stringify(entry)}, ${e}`
+      `There was an issue composing stories for the module: ${JSON.stringify(entry)}, ${e}`,
     );
   }
 };
@@ -57,7 +57,7 @@ function getAllStoryFiles() {
   const storyFiles = Object.entries(
     import.meta.glob<StoryFile>(['./**/*.stories.ts(x)?', '!**/useSearchQueryParams.stories.tsx'], {
       eager: true,
-    })
+    }),
   );
 
   return storyFiles.map(([filePath, storyFile]) => ({ filePath, storyFile }));
@@ -91,7 +91,7 @@ describe('Storybook Tests', () => {
 
       if (stories.length <= 0) {
         throw new Error(
-          `No stories found for this module: ${title}. Make sure there is at least one valid story for this module, without a disable parameter.`
+          `No stories found for this module: ${title}. Make sure there is at least one valid story for this module, without a disable parameter.`,
         );
       }
 
@@ -105,14 +105,14 @@ describe('Storybook Tests', () => {
               <ThemeProvider>
                 <Story />
               </ThemeProvider>
-            </VanillaThemeProvider>
+            </VanillaThemeProvider>,
           );
 
           // add a slightly delay to allow a couple render cycles to complete, resulting in a more stable snapshot.
           await new Promise((resolve) => setTimeout(resolve, 1));
 
           await expect(mounted.container).toMatchFileSnapshot(
-            `./__storyshots__/${meta.title}-${Story.storyName}.snap`
+            `./__storyshots__/${meta.title}-${Story.storyName}.snap`,
           );
         });
       });

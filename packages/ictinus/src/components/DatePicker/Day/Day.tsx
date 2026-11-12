@@ -32,7 +32,7 @@ const Day: React.FCC<DayProps> = ({
 }) => {
   const date = React.useMemo(
     () => day && currentDay.month(month).date(day).year(year),
-    [year, day, month]
+    [year, day, month],
   );
   const isToday = React.useMemo(() => {
     return currentDay.month() === month && currentDay.year() === year && currentDay.date() === day;
@@ -45,7 +45,7 @@ const Day: React.FCC<DayProps> = ({
         onSelect(date);
       }
     },
-    [onSelect, date]
+    [onSelect, date],
   );
 
   const { keyboardProps } = useKeyboardEvents({

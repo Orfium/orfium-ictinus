@@ -21,7 +21,7 @@ describe('Inline Notification', () => {
     const closeCTA = vi.fn();
 
     const { findByText } = render(
-      <InlineNotification {...data} primaryCTA={primaryCTA} closeCTA={closeCTA} />
+      <InlineNotification {...data} primaryCTA={primaryCTA} closeCTA={closeCTA} />,
     );
 
     const message = await findByText(data.message);
@@ -36,7 +36,7 @@ describe('Inline Notification', () => {
     const closeCTA = vi.fn();
 
     const { findByText } = render(
-      <InlineNotification {...data} primaryCTA={primaryCTA} closeCTA={closeCTA} />
+      <InlineNotification {...data} primaryCTA={primaryCTA} closeCTA={closeCTA} />,
     );
 
     const primaryCTALabel = await findByText(data.primaryCTALabel);
@@ -52,7 +52,7 @@ describe('Inline Notification', () => {
     const closeCTA = vi.fn();
 
     const { findByTestId } = render(
-      <InlineNotification {...data} primaryCTA={primaryCTA} closeCTA={closeCTA} />
+      <InlineNotification {...data} primaryCTA={primaryCTA} closeCTA={closeCTA} />,
     );
 
     const closeButton = await findByTestId('notification-close');
@@ -78,7 +78,7 @@ describe('Notifications Container', () => {
     const { findByText } = render(
       <NotificationsContainer position="top-right">
         <Banner {...data} primaryCTA={primaryCTA} closeCTA={closeCTA} />
-      </NotificationsContainer>
+      </NotificationsContainer>,
     );
 
     const message = await findByText(data.message);
@@ -95,7 +95,7 @@ describe('Notifications Container', () => {
     const { findByText } = render(
       <NotificationsContainer position="top-right">
         <Banner {...data} primaryCTA={primaryCTA} closeCTA={closeCTA} />
-      </NotificationsContainer>
+      </NotificationsContainer>,
     );
 
     const primaryCTALabel = await findByText(data.primaryCTALabel);
@@ -111,7 +111,7 @@ describe('Notifications Container', () => {
     const { findByTestId } = render(
       <NotificationsContainer position="top-right">
         <Banner {...data} primaryCTA={primaryCTA} closeCTA={closeCTA} />
-      </NotificationsContainer>
+      </NotificationsContainer>,
     );
 
     const closeButton = await findByTestId('notification-close');
@@ -143,7 +143,7 @@ describe('Toast Notification (Toast with NotificationVisual)', () => {
     const { findByText } = render(
       <Toast {...toastData} closeCTA={closeCTA}>
         <NotificationVisual {...visualData} primaryCTA={primaryCTA} secondaryCTA={secondaryCTA} />
-      </Toast>
+      </Toast>,
     );
 
     // Toast is initialized with expanded=false
@@ -160,7 +160,7 @@ describe('Toast Notification (Toast with NotificationVisual)', () => {
     const { findByTestId, findByText } = render(
       <Toast {...toastData} closeCTA={closeCTA}>
         <NotificationVisual {...visualData} primaryCTA={primaryCTA} secondaryCTA={secondaryCTA} />
-      </Toast>
+      </Toast>,
     );
 
     // Toast is initialized with expanded=false
@@ -195,7 +195,7 @@ describe('Toast Notification (Toast with NotificationVisual)', () => {
     const { findByTestId } = render(
       <Toast {...toastData} isExpanded closeCTA={closeCTA}>
         <NotificationVisual {...visualData} primaryCTA={primaryCTA} secondaryCTA={secondaryCTA} />
-      </Toast>
+      </Toast>,
     );
 
     const closeButton = await findByTestId('toast-close');
@@ -211,7 +211,7 @@ describe('Toast Notification (Toast with NotificationVisual)', () => {
     const { findByText } = render(
       <Toast {...toastData} isExpanded closeCTA={closeCTA}>
         <NotificationVisual {...visualData} primaryCTA={primaryCTA} secondaryCTA={secondaryCTA} />
-      </Toast>
+      </Toast>,
     );
 
     const primaryCTALabel = await findByText(visualData.primaryCTALabel);
@@ -241,7 +241,12 @@ describe('Snackbar Notification', () => {
     const closeCTA = vi.fn();
 
     const { findByText } = render(
-      <Snackbar {...data} primaryCTA={primaryCTA} secondaryCTA={secondaryCTA} closeCTA={closeCTA} />
+      <Snackbar
+        {...data}
+        primaryCTA={primaryCTA}
+        secondaryCTA={secondaryCTA}
+        closeCTA={closeCTA}
+      />,
     );
 
     const message = await findByText(data.message);
@@ -263,7 +268,12 @@ describe('Snackbar Notification', () => {
     const closeCTA = vi.fn();
 
     const { findByTestId } = render(
-      <Snackbar {...data} primaryCTA={primaryCTA} secondaryCTA={secondaryCTA} closeCTA={closeCTA} />
+      <Snackbar
+        {...data}
+        primaryCTA={primaryCTA}
+        secondaryCTA={secondaryCTA}
+        closeCTA={closeCTA}
+      />,
     );
 
     const closeButton = await findByTestId('snackbar-close');
@@ -277,7 +287,12 @@ describe('Snackbar Notification', () => {
     const closeCTA = vi.fn();
 
     const { findByText } = render(
-      <Snackbar {...data} primaryCTA={primaryCTA} secondaryCTA={secondaryCTA} closeCTA={closeCTA} />
+      <Snackbar
+        {...data}
+        primaryCTA={primaryCTA}
+        secondaryCTA={secondaryCTA}
+        closeCTA={closeCTA}
+      />,
     );
 
     const primaryCTALabel = await findByText(data.primaryCTALabel);

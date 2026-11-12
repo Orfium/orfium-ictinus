@@ -46,7 +46,7 @@ const FilterSearchField = ({
           color={vars.color.text.default.secondary}
         />
       ),
-    [isLoading]
+    [isLoading],
   );
 
   return (

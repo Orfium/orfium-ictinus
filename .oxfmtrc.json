@@ -1,5 +1,5 @@
 {
   "$schema": "./node_modules/oxfmt/configuration_schema.json",
   "singleQuote": true,
-  "ignorePatterns": []
+  "ignorePatterns": ["**/*.snap", "**/*.storyshot", "packages/mcp-server/src/data.json"]
 }

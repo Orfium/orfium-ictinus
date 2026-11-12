@@ -16,7 +16,7 @@ import { CheckBox } from '../Controls';
 const getColumnCount = (
   columns: (string | ExtendedColumn)[],
   onCheck: ((data: Selection[]) => void) | undefined,
-  hasExpandableRows: boolean
+  hasExpandableRows: boolean,
 ) => {
   if (!onCheck && !hasExpandableRows) {
     return columns.length;
@@ -72,7 +72,7 @@ function TableV4<T>({
     setSelectedIds((selectedIds: Selection[] = []) =>
       selectedIds.indexOf(rowId) === -1
         ? [...selectedIds, rowId]
-        : selectedIds.filter((item) => item !== rowId)
+        : selectedIds.filter((item) => item !== rowId),
     );
   }, []);
 
@@ -81,7 +81,7 @@ function TableV4<T>({
       head(data)?.cells?.map(({ content }) => {
         return !Number.isNaN(Number(content));
       }) || [],
-    [data]
+    [data],
   );
 
   const columnsHasCustomAlignment = React.useMemo(
@@ -89,7 +89,7 @@ function TableV4<T>({
       head(data)?.cells?.map(({ align }) => {
         return align;
       }) || [],
-    [data]
+    [data],
   );
 
   const columnsWithWidth = React.useMemo(
@@ -97,7 +97,7 @@ function TableV4<T>({
       head(data)?.cells?.map(({ widthPercentage }) => {
         return widthPercentage;
       }) || [],
-    [data]
+    [data],
   );
 
   const handleSorting = (column: string) => {
@@ -214,8 +214,8 @@ function TableV4<T>({
                         columnsHasCustomAlignment && columnsHasCustomAlignment[index]
                           ? columnsHasCustomAlignment[index]
                           : columnsHasNumberArr && columnsHasNumberArr[index]
-                          ? 'right'
-                          : 'left'
+                            ? 'right'
+                            : 'left'
                       }
                       component="th"
                       key={`${isItemString(item) ? item : item.content.sortingKey}`}

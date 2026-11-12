@@ -14,7 +14,7 @@ describe('Drawer', () => {
         <DrawerHeader>
           <div>{content}</div>
         </DrawerHeader>
-      </Drawer>
+      </Drawer>,
     );
 
     const drawerContainer = await findByTestId('ictinus_drawer_drawer_container');
@@ -32,7 +32,7 @@ describe('Drawer', () => {
         <DrawerHeader>
           <div>{content}</div>
         </DrawerHeader>
-      </Drawer>
+      </Drawer>,
     );
 
     const closeButton = await findByTestId('ictinus_drawer_close_button');
@@ -49,7 +49,7 @@ describe('Drawer', () => {
         <DrawerHeader>
           <div>{content}</div>
         </DrawerHeader>
-      </Drawer>
+      </Drawer>,
     );
 
     fireEvent.keyDown(document.body, {
@@ -75,7 +75,7 @@ describe('Drawer', () => {
         <DrawerFooter>
           <div>{content}</div>
         </DrawerFooter>
-      </Drawer>
+      </Drawer>,
     );
 
     const drawerContainer = await findByTestId('ictinus_drawer_drawer_container');
@@ -107,7 +107,7 @@ describe('Drawer', () => {
         <DrawerFooter>
           <div>{content}</div>
         </DrawerFooter>
-      </Drawer>
+      </Drawer>,
     );
 
     const drawerContainer = await findByTestId('ictinus_drawer_drawer_container');

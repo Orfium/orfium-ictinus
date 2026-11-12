@@ -17,7 +17,7 @@ export const usePositionInScreen = (
   /** Additional offset-y */
   offsetY: number,
   /** Whether the item to be positioned is visible */
-  isVisible?: boolean
+  isVisible?: boolean,
 ): {
   x: number;
   y: number;
@@ -143,7 +143,7 @@ export const useWrapperWidth = (
   /** Whether the item to be positioned uses the parent's wrapper width */
   hasWrapperWidth: boolean,
   /** Ref of the wrapper */
-  wrapperRef: MutableRefObject<any>
+  wrapperRef: MutableRefObject<any>,
 ): (number | undefined)[] => {
   const [width, setWidth] = useState();
 

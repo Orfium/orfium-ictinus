@@ -22,7 +22,7 @@ export const searchWrapper =
       max-width: ${rem(520)};
       ${flex}
       ${flexCenterVertical}
-    height: ${rem(36)};
+      height: ${rem(36)};
       background-color: ${background};
       padding-left: ${vars.spacing['6']};
       border-radius: ${vars.spacing['3']};

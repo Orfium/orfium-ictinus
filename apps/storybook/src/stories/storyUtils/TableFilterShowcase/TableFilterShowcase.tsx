@@ -43,8 +43,8 @@ const TableFilterShowcase: React.FCC = () => {
           user.username.includes(search) ||
           user.address.street.includes(search) ||
           user.address.city.includes(search) ||
-          user.address.zipcode.includes(search)
-      )
+          user.address.zipcode.includes(search),
+      ),
     );
   }, [search, users]);
   const columns = React.useMemo(() => ['name', 'username', 'address'], []);

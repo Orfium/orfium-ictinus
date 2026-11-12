@@ -17,7 +17,7 @@ const ProgressIndicator = React.forwardRef<HTMLDivElement, ProgressIndicatorProp
     ) : (
       <ProgressCircle value={value} status={status} ref={ref} dataTestPrefixId={dataTestPrefixId} />
     );
-  }
+  },
 );
 
 ProgressIndicator.displayName = 'ProgressIndicator';

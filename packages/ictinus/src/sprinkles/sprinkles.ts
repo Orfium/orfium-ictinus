@@ -9,7 +9,7 @@ import * as styles from './properties.css';
 export const sprinkles = createSprinkles(
   styles.unresponsiveProps,
   styles.responsiveProps,
-  styles.colorProps
+  styles.colorProps,
 );
 
 export const mapResponsiveValue = createMapValueFn(styles.responsiveProps);

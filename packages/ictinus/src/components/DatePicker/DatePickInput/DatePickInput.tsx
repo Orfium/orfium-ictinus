@@ -58,7 +58,7 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
       dateFormatOverride = 'MM/DD/YYYY',
       isOpen,
     },
-    ref
+    ref,
   ) => {
     const getDateFormatted = formatDate(dateFormatOverride);
 
@@ -93,7 +93,7 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
           }}
         />
       ),
-      [handleIconClick]
+      [handleIconClick],
     );
 
     const getLabel = useMemo(() => {
@@ -157,7 +157,7 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
         />
       </div>
     );
-  }
+  },
 );
 
 DatePickInput.displayName = 'DatePickInput';

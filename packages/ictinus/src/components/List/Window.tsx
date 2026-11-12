@@ -31,7 +31,7 @@ const Window = forwardRef<HTMLUListElement, WindowProps>(
       const startIndex = Math.max(Math.floor(scrollPosition / rowHeight) - bufferedItems, 0);
       const endIndex = Math.min(
         Math.ceil((scrollPosition + containerHeight) / rowHeight - 1) + bufferedItems,
-        children.length - 1
+        children.length - 1,
       );
 
       return children.slice(startIndex, endIndex + 1).map((child, index) =>
@@ -44,7 +44,7 @@ const Window = forwardRef<HTMLUListElement, WindowProps>(
             right: 0,
             lineHeight: `${rowHeight}px`,
           },
-        })
+        }),
       );
     }, [children, containerHeight, rowHeight, scrollPosition, gap, isVirtualizationEnabled]);
 
@@ -55,9 +55,9 @@ const Window = forwardRef<HTMLUListElement, WindowProps>(
             setScrollPosition(e.target.scrollTop);
           },
           50,
-          { leading: false }
+          { leading: false },
         ),
-      []
+      [],
     );
 
     return (
@@ -78,7 +78,7 @@ const Window = forwardRef<HTMLUListElement, WindowProps>(
         {visibleChildren}
       </ul>
     );
-  }
+  },
 );
 Window.displayName = 'Window';
 

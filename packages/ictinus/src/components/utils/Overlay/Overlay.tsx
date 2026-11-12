@@ -48,7 +48,7 @@ export function Overlay({
       overlayRef.current,
       offsetX,
       offsetY,
-      isMounted === true
+      isMounted === true,
     );
 
   useEffect(() => {
@@ -175,7 +175,7 @@ export function Overlay({
     >
       {children}
     </div>,
-    document.body
+    document.body,
   );
 }
 

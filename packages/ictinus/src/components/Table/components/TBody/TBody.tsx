@@ -17,7 +17,7 @@ const TBody = React.forwardRef<HTMLTableSectionElement, TBodyProps>(
         {children}
       </tbody>
     );
-  }
+  },
 );
 
 TBody.displayName = 'TBody';

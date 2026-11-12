@@ -33,7 +33,7 @@ const getColumns = (
   columns: any[],
   hasCheckboxes: boolean,
   hasRowDetails: boolean,
-  dataTestPrefixId: string
+  dataTestPrefixId: string,
 ) => {
   const columnHelper = createColumnHelper();
 
@@ -136,7 +136,7 @@ const getColumns = (
           meta: {
             contentAlign: column.contentAlign ?? 'left',
           },
-        })
+        }),
       );
     }
 

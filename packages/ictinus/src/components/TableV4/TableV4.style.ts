@@ -21,7 +21,7 @@ export const tableCTAStyle = (isFixed: boolean): SerializedStyles =>
 export const tableRowHeadersStyle = (
   hasExpandableRows: boolean,
   hasOnCheck: boolean,
-  hasFixedHeader: boolean
+  hasFixedHeader: boolean,
 ): SerializedStyles =>
   css({
     paddingTop: vars.spacing['6'],

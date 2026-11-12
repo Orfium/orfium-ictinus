@@ -1,12 +1,13 @@
-import type { SerializedStyles} from '@emotion/react';
+import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 
 export const animationStyles = (isIndeterminate?: boolean) => (): SerializedStyles =>
   css`
     transition: stroke-dashoffset 0.5s;
 
-    ${isIndeterminate &&
-    `
+    ${
+      isIndeterminate &&
+      `
         @keyframes rotating {
           from {
             transform: rotate(0deg);
@@ -20,5 +21,6 @@ export const animationStyles = (isIndeterminate?: boolean) => (): SerializedStyl
   
         animation: rotating 2s linear infinite;
       
-      `}
+      `
+    }
   `;

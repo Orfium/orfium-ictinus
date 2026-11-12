@@ -33,11 +33,9 @@ export const thContainer =
   }) =>
   (theme: Theme): SerializedStyles => {
     return css`
-      width: ${isCheckbox || isExpandedButton
-        ? rem(ACTIONS_CELL_WIDTH)
-        : width
-          ? `${width}%`
-          : '100%'};
+      width: ${
+        isCheckbox || isExpandedButton ? rem(ACTIONS_CELL_WIDTH) : width ? `${width}%` : '100%'
+      };
       height: ${TH_HEIGHT[rowSize]};
       align-content: center;
       box-sizing: border-box;

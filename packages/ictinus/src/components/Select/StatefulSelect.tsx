@@ -7,7 +7,7 @@ import type { SelectOption, SelectProps } from './types';
 const StatefulSelect = forwardRef<HTMLInputElement, SelectProps>(
   ({ isMulti, selectedOption, onChange = () => {}, ...rest }, ref) => {
     const [inputValue, setInputValue] = useState<SelectOption | SelectOption[]>(
-      isMulti ? selectedOption || [] : selectedOption || emptyValue
+      isMulti ? selectedOption || [] : selectedOption || emptyValue,
     );
 
     const callback = useCallback(
@@ -15,7 +15,7 @@ const StatefulSelect = forwardRef<HTMLInputElement, SelectProps>(
         setInputValue(option);
         onChange(option);
       },
-      [onChange]
+      [onChange],
     );
 
     return (
@@ -28,7 +28,7 @@ const StatefulSelect = forwardRef<HTMLInputElement, SelectProps>(
         ref={ref}
       />
     );
-  }
+  },
 );
 
 StatefulSelect.displayName = 'StatefulSelect';

@@ -41,7 +41,7 @@ describe('TruncatedContent', () => {
         <TruncatedContent tooltipContent={tooltipText}>
           <span data-testid="long-text">{longText}</span>
         </TruncatedContent>
-      </div>
+      </div>,
     );
 
     const text = await findByText(longText);
@@ -52,7 +52,7 @@ describe('TruncatedContent', () => {
       () => {
         expect(getByText(tooltipText)).toBeInTheDocument();
       },
-      { timeout: 1500 }
+      { timeout: 1500 },
     );
   });
 });

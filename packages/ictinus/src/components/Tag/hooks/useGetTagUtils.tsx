@@ -29,7 +29,7 @@ const useGetTagUtils = ({
         onClear();
       }
     },
-    [isClearable, isSelectable, onClear, onSelect]
+    [isClearable, isSelectable, onClear, onSelect],
   );
 
   const prefix = useMemo(() => {
@@ -63,7 +63,7 @@ const useGetTagUtils = ({
           />
         </div>
       ) : null,
-    [dataTestPrefixId, isClearable, onClear]
+    [dataTestPrefixId, isClearable, onClear],
   );
 
   return {

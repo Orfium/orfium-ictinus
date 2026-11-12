@@ -11,7 +11,7 @@ export const TableRow = forwardRef<HTMLTableRowElement, TableRowProps>(
     <Box asChild className={cn(styles.row({}), className)} {...props}>
       <tr ref={ref}>{children}</tr>
     </Box>
-  )
+  ),
 );
 
 TableRow.displayName = '@orfium/ictinus/vanilla/TableRow';

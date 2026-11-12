@@ -89,7 +89,7 @@ const viewPorts = {
 
 export const withTheme: Decorator = (
   StoryFn,
-  { globals: { theme = 'light' as 'light' | 'dark' }, viewMode }
+  { globals: { theme = 'light' as 'light' | 'dark' }, viewMode },
 ) => {
   const effectiveTheme = viewMode === 'story' ? theme : 'light';
 

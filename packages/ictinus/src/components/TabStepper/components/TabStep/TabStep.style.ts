@@ -23,7 +23,8 @@ export const stepTitle = () => css`
   gap: ${vars.spacing['4']};
 `;
 
-export const stepSubtitle = () => (theme: Theme) => css`
-  ${theme.tokens.typography.get('normal.body03')}
-  color: ${vars.color.text.default.secondary}
-`;
+export const stepSubtitle = () => (theme: Theme) =>
+  css`
+    ${theme.tokens.typography.get('normal.body03')}
+    color: ${vars.color.text.default.secondary}
+  `;

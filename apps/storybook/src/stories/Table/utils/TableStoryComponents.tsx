@@ -1,6 +1,12 @@
 import type React from 'react';
 
-import type { TableRow, ColumnsConfig, TableColumn, RowsConfig, PaginationConfig } from '@orfium/ictinus';
+import type {
+  TableRow,
+  ColumnsConfig,
+  TableColumn,
+  RowsConfig,
+  PaginationConfig,
+} from '@orfium/ictinus';
 
 /** This is just a dummy component to be used in Storybook for showing the ColumnsConfig type on props */
 export const ColumnsConfigStory: React.FC<ColumnsConfig<unknown>> = () => null;

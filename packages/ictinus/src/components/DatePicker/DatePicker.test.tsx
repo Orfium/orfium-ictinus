@@ -15,7 +15,7 @@ export const clickOnElement = (element: HTMLElement, key: string, charCode: numb
 
 export const navigateOnElement = (
   element: HTMLElement,
-  path: (keyof typeof KEYBOARD_EVENT_KEYS)[]
+  path: (keyof typeof KEYBOARD_EVENT_KEYS)[],
 ) => {
   path.forEach((key) => {
     switch (key) {
@@ -51,7 +51,7 @@ describe('DatePicker', () => {
           from: currentDay.toDate(),
           to: currentDay.toDate(),
         }}
-      />
+      />,
     );
     // Add assertions here to check if the component rendered correctly
   });
@@ -66,7 +66,7 @@ describe('DatePicker', () => {
           to: currentDay.toDate(),
         }}
         onChange={onChange}
-      />
+      />,
     );
     const calendarButton = getByTestId('calendar_button');
     // trigger overlay
@@ -101,7 +101,7 @@ describe('DatePicker', () => {
           to: currentDay.add(1).toDate(),
         }}
         onChange={onChange}
-      />
+      />,
     );
     const calendarButton = getByTestId('calendar_button');
     // trigger overlay
@@ -139,7 +139,7 @@ describe('DatePicker', () => {
           to: currentDay.add(1).toDate(),
         }}
         onChange={onChange}
-      />
+      />,
     );
     const calendarButton = getByTestId('calendar_button');
     // trigger overlay
@@ -178,7 +178,7 @@ describe('DatePicker', () => {
           from: currentDay.toDate(),
           to: currentDay.add(1, 'day').toDate(),
         }}
-      />
+      />,
     );
 
     const calendarButton = getByTestId('calendar_button');
@@ -207,14 +207,14 @@ describe('DatePicker', () => {
           from: currentDay.month(currentDay.month() - 1).toDate(),
           to: currentDay.add(1, 'day').toDate(),
         }}
-      />
+      />,
     );
 
     const calendarButton = getByTestId('calendar_button');
     fireEvent.click(calendarButton);
 
     const selectedFrom = getByTestId(
-      currentDay.month(currentDay.month() - 1).format('D_M_YYYY') + '_selected'
+      currentDay.month(currentDay.month() - 1).format('D_M_YYYY') + '_selected',
     );
     const selectedTo = getByTestId(currentDay.add(1, 'day').format('D_M_YYYY') + '_selected');
 
@@ -233,7 +233,7 @@ describe('DatePicker', () => {
           to: currentDay.add(1, 'day').toDate(),
         }}
         onChange={onChange}
-      />
+      />,
     );
     const calendarButton = getByTestId('calendar_button');
     const input = getByPlaceholderText('Select Date') as HTMLInputElement;
@@ -255,7 +255,7 @@ describe('DatePicker', () => {
           from: currentDay.toDate(),
           to: currentDay.toDate(),
         }}
-      />
+      />,
     );
 
     const calendarButton = getByTestId('calendar_button');
@@ -305,7 +305,7 @@ describe('DatePicker', () => {
           to: currentDay.add(1, 'day').toDate(),
         }}
         onChange={onChange}
-      />
+      />,
     );
     const input = getByPlaceholderText('Select Date') as HTMLInputElement;
     fireEvent.keyDown(input, { key: 'Backspace', keyCode: 8 });
@@ -329,7 +329,7 @@ describe('DatePicker', () => {
           to: currentDay.add(1, 'day').toDate(),
         }}
         onChange={onChange}
-      />
+      />,
     );
     const input = getByPlaceholderText('Enter Date Range') as HTMLInputElement;
     fireEvent.keyDown(input, { key: 'Backspace', keyCode: 8 });

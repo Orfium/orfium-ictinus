@@ -11,7 +11,7 @@ export type AcceptedColorComponentTypes = (typeof mainTypes)[number];
 export const getColorFromType = (
   type: AcceptedColorComponentTypes | string,
   theme: Theme,
-  variant: (typeof colorShades)[number] = 50
+  variant: (typeof colorShades)[number] = 50,
 ) => {
   const secondaryVariant = variant && variant !== 50 ? variant : BASE_SHADE;
 
@@ -73,7 +73,7 @@ export const errors = [
       Boolean(!flatColors.includes(colorAfterSplit[0] as (typeof flatColors)[number])),
     error: ({ color }: ErrorProp): PropsValidationError =>
       new PropsValidationError(
-        `You passed a wrong color for the first argument: ${color} - try something like red-500`
+        `You passed a wrong color for the first argument: ${color} - try something like red-500`,
       ),
   },
   {
@@ -81,7 +81,7 @@ export const errors = [
       Boolean(!colorShades.includes(Number(colorAfterSplit[1]) as (typeof colorShades)[number])),
     error: ({ color }: ErrorProp): PropsValidationError =>
       new PropsValidationError(
-        `You passed a wrong shade for the second argument: ${color} - try something like red-500`
+        `You passed a wrong shade for the second argument: ${color} - try something like red-500`,
       ),
   },
 ];

@@ -11,7 +11,7 @@ export const TableBody = forwardRef<HTMLTableSectionElement, TableBodyProps>(
     <Box asChild className={cn(styles.body, className)} {...props}>
       <tbody ref={ref}>{children}</tbody>
     </Box>
-  )
+  ),
 );
 
 TableBody.displayName = '@orfium/ictinus/vanilla/TableBody';

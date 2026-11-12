@@ -49,13 +49,13 @@ const Slider: FC<SliderProps & TestProps> = ({
 
   if (isSelector && values.length !== 1) {
     throw new Error(
-      'The Selector type Slider can only accept one initial value in the array, since it only has one thumb. Try changing the `values` prop.'
+      'The Selector type Slider can only accept one initial value in the array, since it only has one thumb. Try changing the `values` prop.',
     );
   }
 
   if (!isSelector && values.length !== 2) {
     throw new Error(
-      'The Range type Slider only accepts two initial values in the array, since it has two thumbs. Try changing the `values` prop.'
+      'The Range type Slider only accepts two initial values in the array, since it has two thumbs. Try changing the `values` prop.',
     );
   }
 

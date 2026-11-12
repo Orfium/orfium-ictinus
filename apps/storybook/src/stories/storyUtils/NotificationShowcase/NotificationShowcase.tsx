@@ -1,7 +1,11 @@
 import type { ReactNode } from 'react';
 import React, { useState } from 'react';
 
-import { Button, NotificationsContainer, type NotificationsContainerPositions } from '@orfium/ictinus';
+import {
+  Button,
+  NotificationsContainer,
+  type NotificationsContainerPositions,
+} from '@orfium/ictinus';
 
 const NotificationShowcase: React.FCC<{ id?: string }> = ({ children, id }) => {
   const [hasShow, setHasShow] = useState<boolean>(false);

@@ -35,7 +35,7 @@ export const ThemeProvider = ({
   asChild,
 }: ThemeProviderProps) => {
   const [colorScheme, setColorScheme] = useState<ColorScheme>(
-    () => initialColorScheme ?? getSystemColorScheme()
+    () => initialColorScheme ?? getSystemColorScheme(),
   );
 
   const isSystemScheme = !initialColorScheme;
@@ -45,7 +45,7 @@ export const ThemeProvider = ({
       colorScheme,
       setColorScheme,
     }),
-    [colorScheme]
+    [colorScheme],
   );
 
   useEffect(() => {

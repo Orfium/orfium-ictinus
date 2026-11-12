@@ -31,7 +31,7 @@ const ListItemWrapper = React.forwardRef<HTMLLIElement, ListItemProps>(
         {children}
       </ListItemWrapperStyled>
     );
-  }
+  },
 );
 ListItemWrapper.displayName = 'ListItem';
 

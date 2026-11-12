@@ -85,7 +85,7 @@ const SpacingSizingShowcase = ({ type = 'global' }: Props) => {
               {get(spacingObject, key).value}
               {!isGlobal
                 ? ` = ${convertRemToPixels(
-                    theme.dimension.spacing.get(key as DimensionSpacingKey)
+                    theme.dimension.spacing.get(key as DimensionSpacingKey),
                   )}px`
                 : ``}
             </Typography>

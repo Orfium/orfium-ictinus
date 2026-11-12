@@ -14,7 +14,7 @@ describe('Tag', () => {
     const { getByTestId } = render(
       <Tag onSelect={handleSelect} dataTestPrefixId="test">
         Tag
-      </Tag>
+      </Tag>,
     );
 
     const tag = getByTestId('test_tag_container');
@@ -29,7 +29,7 @@ describe('Tag', () => {
     const { getByTestId } = render(
       <Tag onSelect={handleSelect} dataTestPrefixId="test">
         Tag
-      </Tag>
+      </Tag>,
     );
 
     const tag = getByTestId('test_tag_container');
@@ -48,7 +48,7 @@ describe('Tag', () => {
     const { getByTestId } = render(
       <Tag onSelect={handleSelect} isSelected dataTestPrefixId="test">
         Tag
-      </Tag>
+      </Tag>,
     );
     const tag = getByTestId('test_tag_container');
     expect(tag).toBeInTheDocument();
@@ -61,7 +61,7 @@ describe('Tag', () => {
     const { getByTestId } = render(
       <Tag onClear={handleClear} dataTestPrefixId="test">
         Tag
-      </Tag>
+      </Tag>,
     );
     const tag = getByTestId('test_tag_container');
     expect(tag).toBeInTheDocument();
@@ -78,7 +78,7 @@ describe('Tag', () => {
     const { getByTestId } = render(
       <Tag onClear={handleClear} dataTestPrefixId="test">
         Tag
-      </Tag>
+      </Tag>,
     );
     const tag = getByTestId('test_tag_container');
     expect(tag).toBeInTheDocument();

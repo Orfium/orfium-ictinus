@@ -43,7 +43,7 @@ const transform: Transform = (file, api) => {
             j.objectExpression([
               j.objectProperty(j.identifier('type'), statusValue || j.literal(null)),
               j.objectProperty(j.identifier('hintMessage'), hintMsgValue),
-            ])
+            ]),
           );
         }
       });

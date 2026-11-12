@@ -41,7 +41,7 @@ export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
       style,
       ...props
     }: DataTableBodyProps,
-    ref: RefObject<HTMLDivElement>
+    ref: RefObject<HTMLDivElement>,
   ) => {
     const domRef = useDOMRef(ref);
 
@@ -61,7 +61,7 @@ export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
 
           return result;
         },
-        []
+        [],
       );
     }, [loading, rawRows, table]);
 
@@ -141,7 +141,7 @@ export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
                 .getHeaderGroups()[0]
                 ?.headers.reduce(
                   (sum, header) => sum + (header.column.getCanResize() ? header.getSize() : 0),
-                  0
+                  0,
                 ) ?? 0
             ).toString(),
           }),
@@ -181,7 +181,7 @@ export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
                       styles.cell({
                         pinned: header.column.getIsPinned() || undefined,
                         resizable: header.column.getCanResize(),
-                      })
+                      }),
                     )}
                   >
                     {header.isPlaceholder
@@ -262,7 +262,7 @@ export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
                           pinned: 'left',
                           resizable: cell.column.getCanResize(),
                         }),
-                        cellProps?.className
+                        cellProps?.className,
                       )}
                     >
                       {flexRender(cell.column.columnDef.cell, cell.getContext())}
@@ -299,7 +299,7 @@ export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
                         styles.cell({
                           resizable: cell.column.getCanResize(),
                         }),
-                        cellProps?.className
+                        cellProps?.className,
                       )}
                     >
                       {flexRender(cell.column.columnDef.cell, cell.getContext())}
@@ -328,7 +328,7 @@ export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
                           pinned: 'right',
                           resizable: cell.column.getCanResize(),
                         }),
-                        cellProps?.className
+                        cellProps?.className,
                       )}
                     >
                       {flexRender(cell.column.columnDef.cell, cell.getContext())}
@@ -341,7 +341,7 @@ export const DataTableBody = forwardRef<HTMLDivElement, DataTableBodyProps>(
         </Table>
       </Box>
     );
-  }
+  },
 );
 
 DataTableBody.displayName = '@orfium/ictinus/vanilla/DataTableBody';

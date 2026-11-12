@@ -79,18 +79,18 @@ const BarChart: React.FCC<BarChartProps> = ({ data }) => {
 
   const barColors = useMemo(
     () => getBarColors(data, theme.globals.oldColors.flat.darkBlue[100]),
-    [data, theme.globals.oldColors.flat.darkBlue]
+    [data, theme.globals.oldColors.flat.darkBlue],
   );
 
   const findMaxInData = useCallback(
     (operator: (obj: Data) => number | undefined) => max(data.map(operator)),
-    [data]
+    [data],
   );
 
   const setColoringOptions = useCallback(
     // @ts-ignore @TODO Ignoring this as this component will be under further investigation of what we need to keep
     (op: (obj: Data) => boolean | string) => getColoringOptions(data, op),
-    [data]
+    [data],
   );
 
   const maxLabelLength = findMaxInData((obj: Data) => obj.name.length);

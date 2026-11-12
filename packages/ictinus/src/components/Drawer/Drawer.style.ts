@@ -102,9 +102,11 @@ export const backdropStyle =
       ${getHeight()};
       z-index: 2500;
       ${getPositioning()};
-      background: ${isBackgroundActive
-        ? undefined
-        : transparentize(0.3, theme.tokens.colors.get('backgroundColor.invertedAlt'))};
+      background: ${
+        isBackgroundActive
+          ? undefined
+          : transparentize(0.3, theme.tokens.colors.get('backgroundColor.invertedAlt'))
+      };
       visibility: ${isOpen ? 'visible' : 'hidden'};
       opacity: ${isOpen ? 1 : 0};
       ${transition(0.2)}

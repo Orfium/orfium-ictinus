@@ -44,7 +44,7 @@ export const NavItem = forwardRef(
         </Box>
       </NavItemContext.Provider>
     );
-  }
+  },
 );
 
 NavItem.displayName = '@orfium/ictinus/vanilla/NavItem';
@@ -71,7 +71,7 @@ export const NavLink = forwardRef(
       children,
       ...props
     }: NavLinkProps,
-    ref: RefObject<HTMLAnchorElement>
+    ref: RefObject<HTMLAnchorElement>,
   ) => {
     const Comp = asChild ? Slot : 'a';
     const { boxProps, restProps } = extractBoxProps(props);
@@ -117,7 +117,7 @@ export const NavLink = forwardRef(
         </Box>
       </SlotProvider>
     );
-  }
+  },
 );
 
 NavLink.displayName = '@orfium/ictinus/vanilla/NavLink';
@@ -159,7 +159,7 @@ export const SubNavList = forwardRef(
         </ul>
       </Box>
     );
-  }
+  },
 );
 
 SubNavList.displayName = '@orfium/ictinus/vanilla/SubNavList';
@@ -177,7 +177,7 @@ type SubNavItemProps = BoxProps<
 export const SubNavItem = forwardRef(
   (
     { isActive, isDisabled: isDisabledProp, children, ...props }: SubNavItemProps,
-    ref: RefObject<HTMLLIElement>
+    ref: RefObject<HTMLLIElement>,
   ) => {
     const { boxProps, restProps } = extractBoxProps(props);
 
@@ -193,7 +193,7 @@ export const SubNavItem = forwardRef(
         </Box>
       </SubNavItemContext.Provider>
     );
-  }
+  },
 );
 
 SubNavItem.displayName = '@orfium/ictinus/vanilla/SubNavItem';
@@ -209,7 +209,7 @@ export const SubNavLink = forwardRef(
       children,
       ...props
     }: NavLinkProps,
-    ref: RefObject<HTMLAnchorElement>
+    ref: RefObject<HTMLAnchorElement>,
   ) => {
     const Comp = asChild ? Slot : 'a';
     const { boxProps, restProps } = extractBoxProps(props);
@@ -259,7 +259,7 @@ export const SubNavLink = forwardRef(
         </Box>
       </SlotProvider>
     );
-  }
+  },
 );
 
 SubNavLink.displayName = '@orfium/ictinus/vanilla/SubNavLink';

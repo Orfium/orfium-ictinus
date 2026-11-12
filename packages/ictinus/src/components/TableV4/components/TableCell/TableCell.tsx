@@ -81,7 +81,7 @@ const TableCell: React.FCC<TableCellProps> = React.memo(
         {children}
       </Component>
     );
-  }
+  },
 );
 
 TableCell.displayName = 'TableCell';

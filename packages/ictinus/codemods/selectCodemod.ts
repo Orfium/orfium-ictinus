@@ -68,11 +68,11 @@ const transform: Transform = (file, api) => {
               j.identifier('type'),
               statusValue.value === 'hint' || statusValue.value === 'success'
                 ? j.literal('normal')
-                : statusValue || j.literal(null)
+                : statusValue || j.literal(null),
             ),
             j.objectProperty(j.identifier('hintMessage'), hintMsgValue || j.literal(null)),
-          ])
-        )
+          ]),
+        ),
       );
 
       // Add transformed hintMsg as 'hint' attribute

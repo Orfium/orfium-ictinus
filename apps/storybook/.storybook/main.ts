@@ -27,8 +27,8 @@ const config: StorybookConfig = {
   },
 
   features: {
-    experimentalDocgenServer: true
-  }
+    experimentalDocgenServer: true,
+  },
 };
 
 export default config;

@@ -21,9 +21,9 @@ const transform: Transform = (file, api) => {
             j.objectExpression([
               j.objectProperty(
                 j.identifier('placement'),
-                labelPlacementValue.expression || labelPlacementValue
+                labelPlacementValue.expression || labelPlacementValue,
               ),
-            ])
+            ]),
           );
         }
 

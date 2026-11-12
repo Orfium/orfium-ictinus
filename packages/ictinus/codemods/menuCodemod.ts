@@ -22,7 +22,7 @@ const transform: Transform = (file, api) => {
     const staticListItem = j.jsxElement(
       j.jsxOpeningElement(j.jsxIdentifier('ListItem'), [], true),
       j.jsxClosingElement(j.jsxIdentifier('ListItem')),
-      [j.jsxText('Static Item')]
+      [j.jsxText('Static Item')],
     );
 
     // Ensure that children array exists

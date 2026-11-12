@@ -11,25 +11,27 @@ export const monthWrapperStyle = (): SerializedStyles => {
   `;
 };
 
-export const monthHeaderWrapperStyle = () => (): SerializedStyles => css`
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  position: relative;
-`;
+export const monthHeaderWrapperStyle = () => (): SerializedStyles =>
+  css`
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+  `;
 
 export const monthHeaderNavigationIconWrapperStyle =
   ({ position = 'left' }: { position: 'left' | 'right' }) =>
-  (): SerializedStyles => css`
-    cursor: pointer;
-    margin: auto ${rem(5)};
-    position: absolute;
-    ${position === 'left' ? 'left: 0' : 'right: 0'};
-    top: 0;
-    bottom: 0;
-    height: fit-content;
-    z-index: 10;
-  `;
+  (): SerializedStyles =>
+    css`
+      cursor: pointer;
+      margin: auto ${rem(5)};
+      position: absolute;
+      ${position === 'left' ? 'left: 0' : 'right: 0'};
+      top: 0;
+      bottom: 0;
+      height: fit-content;
+      z-index: 10;
+    `;
 
 export const monthHeaderTitleWrapperStyle = (): SerializedStyles => css`
   padding: 0;

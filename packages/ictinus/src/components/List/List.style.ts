@@ -10,9 +10,11 @@ export const wrapperStyle = ({
   isSearchable?: boolean;
 }): SerializedStyles => {
   return css`
-    border: ${isSearchable
-      ? 'initial'
-      : `${vars['border-width']['1']} solid ${vars.color['border-color'].decorative.default}`};
+    border: ${
+      isSearchable
+        ? 'initial'
+        : `${vars['border-width']['1']} solid ${vars.color['border-color'].decorative.default}`
+    };
     border-radius: ${isSearchable ? 'initial' : vars['border-radius']['2']};
     width: ${width !== undefined ? `${width}px` : '100%'};
     box-shadow: ${vars['box-shadow']['2']};

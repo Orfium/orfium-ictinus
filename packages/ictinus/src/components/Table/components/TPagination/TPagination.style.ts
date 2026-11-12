@@ -21,11 +21,13 @@ export const paginationContainer = ({
     border-bottom-left-radius: ${vars['border-radius']['2']};
     border-bottom-right-radius: ${vars['border-radius']['2']};
 
-    ${isSticky &&
-    `
+    ${
+      isSticky &&
+      `
         box-shadow: ${vars['box-shadow']['5']},
         0 ${vars['border-width']['1']}  0 0 ${vars.color['border-color'].decorative.default};
-      `}
+      `
+    }
   `;
 };
 

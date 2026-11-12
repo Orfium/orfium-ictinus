@@ -54,7 +54,7 @@ const TTitle: React.FCC<Props> = ({
         </Typography>
       </div>
     ),
-    [dataTestPrefixId, isSelectable, itemsToDisplay, rowsCountLabel]
+    [dataTestPrefixId, isSelectable, itemsToDisplay, rowsCountLabel],
   );
 
   return (
