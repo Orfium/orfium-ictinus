@@ -47,14 +47,14 @@ const SelectMenu = forwardRef<HTMLUListElement, SelectMenuProps>((props, ref) =>
         handleOptionClick(SELECT_ALL_OPTION);
       } else {
         const optionFound = flatMap(filteredOptions, (o) => o.options || o).find(
-          (o) => String(o.value) === keyFound
+          (o) => String(o.value) === keyFound,
         );
         if (optionFound) {
           handleOptionClick(optionFound);
         }
       }
     },
-    [filteredOptions, handleOptionClick]
+    [filteredOptions, handleOptionClick],
   );
 
   useEffect(() => {

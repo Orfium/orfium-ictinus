@@ -11,5 +11,5 @@ createRoot(document.getElementById('root')!).render(
         <App />
       </EmotionThemeProvider>
     </ThemeProvider>
-  </StrictMode>
+  </StrictMode>,
 );

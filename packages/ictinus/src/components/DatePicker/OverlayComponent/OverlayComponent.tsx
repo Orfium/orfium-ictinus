@@ -46,13 +46,10 @@ const OverlayComponent: React.FCC<OverlayComponentProps> = ({
   const [date, setDate] = useState(getLeftCalendarDate(selectedDays));
   const [date2, setDate2] = useState(getRightCalendarDate(selectedDays));
 
-  const handleArrow = useCallback(
-    (direction: 'forward' | 'back' = 'back') => {
-      setDate((curDate) => curDate.month(curDate.month() + (direction === 'forward' ? 1 : -1)));
-      setDate2((curDate) => curDate.month(curDate.month() + (direction === 'forward' ? 1 : -1)));
-    },
-    []
-  );
+  const handleArrow = useCallback((direction: 'forward' | 'back' = 'back') => {
+    setDate((curDate) => curDate.month(curDate.month() + (direction === 'forward' ? 1 : -1)));
+    setDate2((curDate) => curDate.month(curDate.month() + (direction === 'forward' ? 1 : -1)));
+  }, []);
 
   return (
     <div css={overlayWrapperStyle()}>

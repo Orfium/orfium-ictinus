@@ -2,11 +2,12 @@ import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import { vars } from '@orfium/tokens';
 
-export const flexContainer = () => (): SerializedStyles => css`
-  display: flex;
-  width: 100%;
-  justify-content: center;
-`;
+export const flexContainer = () => (): SerializedStyles =>
+  css`
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  `;
 
 export const labelUnitStyle = (): SerializedStyles => css`
   width: 80%;

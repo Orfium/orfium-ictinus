@@ -15,7 +15,7 @@ describe('OverlayComponent', () => {
           to: mockDate.add(44, 'day'),
         }}
         onDaySelect={() => {}}
-      />
+      />,
     );
     expect(container).toMatchSnapshot();
   });
@@ -29,7 +29,7 @@ describe('OverlayComponent', () => {
           to: mockDate.add(44, 'day'),
         }}
         onDaySelect={() => {}}
-      />
+      />,
     );
     expect(container).toMatchSnapshot();
   });
@@ -49,7 +49,7 @@ describe('OverlayComponent', () => {
         onApply={onApply}
         onClearAll={onClearAll}
         extraOptions={CALENDAR_DEFAULT_OPTIONS}
-      />
+      />,
     );
 
     const applyBtn = await findByText(APPLY);
@@ -73,7 +73,7 @@ describe('OverlayComponent', () => {
         }}
         onDaySelect={onDaySelect}
         extraOptions={CALENDAR_DEFAULT_OPTIONS}
-      />
+      />,
     );
 
     const dayCell = await findByText('4');
@@ -96,7 +96,7 @@ describe('OverlayComponent', () => {
         extraOptions={CALENDAR_DEFAULT_OPTIONS}
         setSelectedOption={onSelectedOption}
         onDaySelect={onDaySelect}
-      />
+      />,
     );
 
     const firstExtraOption = await findByText(CALENDAR_DEFAULT_OPTIONS[0].label);

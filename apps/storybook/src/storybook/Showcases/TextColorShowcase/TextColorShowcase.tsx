@@ -20,7 +20,7 @@ const TextColorShowcase = () => {
 
         return acc;
       }, {}),
-    []
+    [],
   );
 
   return (

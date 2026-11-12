@@ -39,7 +39,7 @@ const MinHeightShowcase = () => {
               <Typography variant="body02" type="secondary" component="div">
                 {`${get(dimensionVariables.minHeight, key).value} =
                 ${convertRemToPixels(
-                  theme.dimension.minHeight.get(key as DimensionMinHeightKey)
+                  theme.dimension.minHeight.get(key as DimensionMinHeightKey),
                 )}px`}
               </Typography>
               {get(dimensionVariables.minHeight, key).description && (

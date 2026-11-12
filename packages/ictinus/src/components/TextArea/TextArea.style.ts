@@ -49,6 +49,6 @@ export const hintMessageStyle =
         },
         opacity: isDisabled ? theme.tokens.disabledState.get('default') : 1,
       },
-      body03(theme)
+      body03(theme),
     );
   };

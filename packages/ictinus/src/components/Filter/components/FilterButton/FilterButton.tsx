@@ -47,7 +47,7 @@ export const FilterButton = React.forwardRef<HTMLButtonElement, FilterButtonProp
             onClear();
           }
         : undefined,
-    [isDisabled, onClear]
+    [isDisabled, onClear],
   );
 
   return (

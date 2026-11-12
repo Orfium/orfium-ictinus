@@ -12,19 +12,20 @@ const LIST_ITEM_TOKENS = {
 
 export const optionsStyles =
   ({ isMulti }) =>
-  () => css`
-    max-height: ${rem(FILTER_WIDTH.maxHeight)};
+  () =>
+    css`
+      max-height: ${rem(FILTER_WIDTH.maxHeight)};
 
-    & > div,
-    ul {
-      border: none;
-      border-radius: 0;
-    }
+      & > div,
+      ul {
+        border: none;
+        border-radius: 0;
+      }
 
-    & > div {
-      max-width: ${rem(FILTER_WIDTH[isMulti ? 'multi' : 'single'].maxWidth)};
-    }
-  `;
+      & > div {
+        max-width: ${rem(FILTER_WIDTH[isMulti ? 'multi' : 'single'].maxWidth)};
+      }
+    `;
 
 export const emptyStyle = () => (theme: Theme) => {
   return css`

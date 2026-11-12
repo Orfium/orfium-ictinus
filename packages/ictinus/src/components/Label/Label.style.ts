@@ -25,9 +25,11 @@ export const labelStyle =
       width: 100%;
       position: absolute;
       user-select: none;
-      transform: ${!isAnimated
-        ? `translate(${LABEL_TRANSFORM_LEFT_SPACING}, 0)`
-        : `translate(${LABEL_TRANSFORM_LEFT_SPACING}, -95%) scale(0.8);`};
+      transform: ${
+        !isAnimated
+          ? `translate(${LABEL_TRANSFORM_LEFT_SPACING}, 0)`
+          : `translate(${LABEL_TRANSFORM_LEFT_SPACING}, -95%) scale(0.8);`
+      };
       color: ${hasError ? vars.color.text.default.error : vars.color.text.default.secondary};
       align-items: center;
       display: flex;

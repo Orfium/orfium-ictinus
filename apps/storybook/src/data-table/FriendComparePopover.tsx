@@ -96,7 +96,7 @@ export function FriendComparePopoverContent({
       {field(
         'Address',
         friend.address?.street ? [friend.address.street] : [],
-        compare.address?.street ? [compare.address.street] : []
+        compare.address?.street ? [compare.address.street] : [],
       )}
     </Box>
   );

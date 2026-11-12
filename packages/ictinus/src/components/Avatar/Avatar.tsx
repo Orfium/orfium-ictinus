@@ -36,7 +36,7 @@ const Avatar = forwardRef<HTMLDivElement, PropsWithChildren<AvatarProps>>(
         {avatarContent}
       </div>
     );
-  }
+  },
 );
 Avatar.displayName = 'Avatar';
 

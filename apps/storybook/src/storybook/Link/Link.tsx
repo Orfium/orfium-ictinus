@@ -1,7 +1,7 @@
 import { Unstyled } from '@storybook/addon-docs/blocks';
 import type { FCC } from 'react';
 
-import { Link as LinkComponent} from '@orfium/ictinus';
+import { Link as LinkComponent } from '@orfium/ictinus';
 import { LinkResetFontSmooth, LinkWrapper } from './Link.style';
 
 export type LinkProps = {

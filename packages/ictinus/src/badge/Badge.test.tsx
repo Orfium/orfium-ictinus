@@ -27,7 +27,7 @@ describe('Badge', () => {
     render(
       <Badge data-testid="badge">
         <span data-testid="custom-child">Custom</span>
-      </Badge>
+      </Badge>,
     );
 
     const child = screen.getByTestId('custom-child');
@@ -40,7 +40,7 @@ describe('Badge', () => {
       <Badge data-testid="badge">
         <BookmarkIcon aria-label="bookmark" />
         <Text>Neutral</Text>
-      </Badge>
+      </Badge>,
     );
 
     const badge = screen.getByTestId('badge');
@@ -58,7 +58,7 @@ describe('Badge', () => {
         data-aria-describedby="badge-description"
       >
         Badge
-      </Badge>
+      </Badge>,
     );
 
     const badge = screen.getByTestId('badge');
@@ -71,7 +71,7 @@ describe('Badge', () => {
     render(
       <Badge data-testid="badge" className="custom-badge-class">
         Badge
-      </Badge>
+      </Badge>,
     );
 
     const badge = screen.getByTestId('badge');
@@ -83,7 +83,7 @@ describe('Badge', () => {
     render(
       <Badge ref={ref} data-testid="badge">
         Badge
-      </Badge>
+      </Badge>,
     );
 
     expect(ref.current).toBe(screen.getByTestId('badge'));
@@ -112,7 +112,7 @@ describe('CodeBadge', () => {
     render(
       <CodeBadge data-testid="code-badge">
         <span data-testid="custom-child">Custom</span>
-      </CodeBadge>
+      </CodeBadge>,
     );
 
     const child = screen.getByTestId('custom-child');
@@ -125,7 +125,7 @@ describe('CodeBadge', () => {
       <CodeBadge data-testid="code-badge">
         <BookmarkIcon aria-label="bookmark" />
         <Text>Code</Text>
-      </CodeBadge>
+      </CodeBadge>,
     );
 
     const badge = screen.getByTestId('code-badge');
@@ -143,7 +143,7 @@ describe('CodeBadge', () => {
         data-aria-describedby="code-badge-description"
       >
         c0d31a831
-      </CodeBadge>
+      </CodeBadge>,
     );
 
     const badge = screen.getByTestId('code-badge');
@@ -156,7 +156,7 @@ describe('CodeBadge', () => {
     render(
       <CodeBadge data-testid="code-badge" className="custom-code-badge-class">
         c0d31a831
-      </CodeBadge>
+      </CodeBadge>,
     );
 
     const badge = screen.getByTestId('code-badge');
@@ -168,7 +168,7 @@ describe('CodeBadge', () => {
     render(
       <CodeBadge ref={ref} data-testid="code-badge">
         c0d31a831
-      </CodeBadge>
+      </CodeBadge>,
     );
 
     expect(ref.current).toBe(screen.getByTestId('code-badge'));

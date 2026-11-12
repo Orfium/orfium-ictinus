@@ -49,12 +49,12 @@ const Options: React.FCC<Props> = ({
         onOptionSelect(SELECT_ALL_OPTION);
       } else {
         const optionFound = flatMap(items, (o) => o.options || o).find(
-          (o) => String(o.value) === keyFound
+          (o) => String(o.value) === keyFound,
         );
         if (optionFound) onOptionSelect(optionFound);
       }
     },
-    [items, onOptionSelect]
+    [items, onOptionSelect],
   );
 
   return items.length ? (

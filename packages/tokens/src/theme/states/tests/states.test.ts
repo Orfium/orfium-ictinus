@@ -38,20 +38,20 @@ describe('Global states - getFocus ', () => {
     expect(focusResponse.styleBorder).toBe(
       `${expectedResultBorder} solid ${testTheme.utils.getColor(
         statesConfig[themeMode].focus.border.color.name,
-        statesConfig[themeMode].focus.border.color.shade
-      )}`
+        statesConfig[themeMode].focus.border.color.shade,
+      )}`,
     );
     expect(focusResponse.focusColor).toBe(
       testTheme.utils.getColor(
         statesConfig[themeMode].focus.border.color.name,
-        statesConfig[themeMode].focus.border.color.shade
-      )
+        statesConfig[themeMode].focus.border.color.shade,
+      ),
     );
     expect(focusResponse.styleOutline).toBe(
       `${testTheme.utils.getColor(
         statesConfig[themeMode].focus.border.color.name,
-        statesConfig[themeMode].focus.border.color.shade
-      )} auto ${expectedResultBorder}`
+        statesConfig[themeMode].focus.border.color.shade,
+      )} auto ${expectedResultBorder}`,
     );
   };
 
@@ -65,7 +65,7 @@ describe('Global states - getFocus ', () => {
     const testBorderWidth = 1;
     const focusResponse = getFocus({ theme: testTheme, borderWidth: testBorderWidth });
     const expectedResultBorder = rem(
-      testBorderWidth + statesConfig[themeMode].focus.border.width.step
+      testBorderWidth + statesConfig[themeMode].focus.border.width.step,
     );
 
     expected(focusResponse, expectedResultBorder);

@@ -15,7 +15,7 @@ export const UsageGuidelines: React.FCC<{ guidelines: string[]; policies?: strin
           <span>{guideline}</span>
         </span>
       )),
-    [guidelines]
+    [guidelines],
   );
 
   const policiesElements = useMemo(
@@ -26,7 +26,7 @@ export const UsageGuidelines: React.FCC<{ guidelines: string[]; policies?: strin
           <span>{policy}</span>
         </span>
       )),
-    [policies]
+    [policies],
   );
 
   return (

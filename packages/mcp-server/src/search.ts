@@ -1,10 +1,4 @@
-import type {
-  ComponentInfo,
-  DeprecationInfo,
-  Example,
-  IconInfo,
-  PropDefinition,
-} from './types.js';
+import type { ComponentInfo, DeprecationInfo, Example, IconInfo, PropDefinition } from './types.js';
 
 export interface SearchOptions {
   category?: string;
@@ -45,10 +39,7 @@ function matchesAll(haystack: string, queryTerms: string[]): boolean {
   return queryTerms.every((term) => lower.includes(term));
 }
 
-function vanillaFirst<T extends { api: 'vanilla' | 'legacy'; name: string }>(
-  a: T,
-  b: T,
-): number {
+function vanillaFirst<T extends { api: 'vanilla' | 'legacy'; name: string }>(a: T, b: T): number {
   if (a.api !== b.api) return a.api === 'vanilla' ? -1 : 1;
   return a.name.localeCompare(b.name);
 }
@@ -68,9 +59,7 @@ export function searchComponents({
 
   if (category) {
     const normalized = category.toLowerCase();
-    filtered = filtered.filter((c) =>
-      c.category?.some((cat) => cat.toLowerCase() === normalized),
-    );
+    filtered = filtered.filter((c) => c.category?.some((cat) => cat.toLowerCase() === normalized));
   }
 
   const queryTerms = terms(query);
@@ -102,12 +91,7 @@ export function searchProps({
   return Object.fromEntries(matched.slice(0, limit));
 }
 
-export function searchIcons({
-  api,
-  icons,
-  limit = 10,
-  query,
-}: IconSearchOptions): IconInfo[] {
+export function searchIcons({ api, icons, limit = 10, query }: IconSearchOptions): IconInfo[] {
   let filtered = icons;
   if (api) {
     filtered = filtered.filter((icon) => icon.api === api);
@@ -140,9 +124,7 @@ export function searchExamples({
   const queryTerms = terms(query ?? '');
 
   const deprecations = new Map(
-    data
-      .filter((c) => c.deprecated)
-      .map((c) => [c.name, c.deprecated as DeprecationInfo]),
+    data.filter((c) => c.deprecated).map((c) => [c.name, c.deprecated as DeprecationInfo]),
   );
 
   let filtered = data;
@@ -153,11 +135,8 @@ export function searchExamples({
   const matches = filtered.flatMap((component) =>
     (component.examples ?? []).flatMap((example) => {
       const hit = requested.some((name) => example.components.includes(name));
-      const titleOk =
-        !queryTerms.length || matchesAll(example.title, queryTerms);
-      return hit && titleOk
-        ? [{ api: component.api, component: component.name, example }]
-        : [];
+      const titleOk = !queryTerms.length || matchesAll(example.title, queryTerms);
+      return hit && titleOk ? [{ api: component.api, component: component.name, example }] : [];
     }),
   );
 

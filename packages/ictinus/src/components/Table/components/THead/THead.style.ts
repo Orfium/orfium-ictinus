@@ -12,8 +12,9 @@ export const tHeadContainer = ({
     position: relative;
     box-shadow: 0 ${vars['border-width']['1']} 0 0 ${vars.color['border-color'].decorative.default};
 
-    ${hasStickyHeader &&
-    `
+    ${
+      hasStickyHeader &&
+      `
          display: block;  
          width: calc(100%);
          padding-right: ${hasScrollbar ? /** srollbar width */ vars.spacing['4'] : '0px'};
@@ -22,13 +23,16 @@ export const tHeadContainer = ({
          tr {
            display: flex;
          }
-      `}
+      `
+    }
 
-    ${hasScrollbar &&
-    `
+    ${
+      hasScrollbar &&
+      `
         box-shadow: ${vars['box-shadow']['2']}, 0 ${vars['border-width']['1']} 0 0 ${vars.color['border-color'].decorative.default} ;
-      `}
+      `
+    }
 
-      ${sx};
+    ${sx};
   `;
 };

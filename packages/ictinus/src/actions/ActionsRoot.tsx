@@ -13,7 +13,7 @@ export const ActionsRoot = forwardRef<HTMLDivElement, ActionsRootProps>(
         {children}
       </Box>
     );
-  }
+  },
 );
 
 ActionsRoot.displayName = '@orfium/ictinus/vanilla/ActionsRoot';

@@ -13,13 +13,13 @@ type ContextProps = {
   typesShadesColor: TypesShadeAndColors;
   calculateColorBetweenColorAndType: (
     color: string,
-    type: (typeof mainTypes)[number]
+    type: (typeof mainTypes)[number],
   ) => ColorShapeFromComponent;
 };
 
 const TypeColorToColorMatchContext = React.createContext<ContextProps>(
   // @ts-ignore
-  defaultContextData
+  defaultContextData,
 );
 
 /**
@@ -40,7 +40,7 @@ export type TypesShadeAndColors = Record<(typeof mainTypes)[number], ColorShapeF
  */
 const calculateTypesShadeAndColors = (
   types: Record<(typeof mainTypes)[number], GeneratedColorShades>,
-  palette: FlatPalette
+  palette: FlatPalette,
 ) => {
   // for each mainType
   return mainTypes.reduce((mainTypeAcc, mainType) => {
@@ -54,7 +54,7 @@ const calculateTypesShadeAndColors = (
     mainTypeAcc[mainType] = flatPaletteKeys.reduce((acc, paletteColor) => {
       const colorShadesKeys = keys(palette[paletteColor]); // the shades of the palette color currently in the iteration
       const foundShadeWithThatColor = colorShadesKeys.find(
-        (shade) => palette[paletteColor][shade].toLowerCase() === typeColor.toLowerCase()
+        (shade) => palette[paletteColor][shade].toLowerCase() === typeColor.toLowerCase(),
       );
 
       // return either the found color as e.g { shade: 500, color: 'orange'} or the object as it was
@@ -83,7 +83,7 @@ const TypeColorToColorMatchProvider: React.FCC = ({ children }) => {
 
       return calculatedColor ? calculatedColor : typesShadesColor[type];
     },
-    [typesShadesColor]
+    [typesShadesColor],
   );
 
   return (

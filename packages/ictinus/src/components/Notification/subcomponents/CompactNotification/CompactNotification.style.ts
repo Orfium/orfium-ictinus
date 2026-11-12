@@ -8,18 +8,19 @@ import { notificationsContainerPerType } from '../../Notification.style';
 
 export const notificationsContainer =
   (type: NotificationTypes, styleType: NotificationStyleType) =>
-  (theme: Theme): SerializedStyles => css`
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    overflow: hidden;
-    width: 100%;
-    min-height: ${rem(46)};
-    border-radius: ${vars['border-radius']['2']};
-    color: ${vars.color.text.default.primary};
-    font-size: ${vars['font-size']['3']};
-    ${notificationsContainerPerType(type, styleType, theme)};
-  `;
+  (theme: Theme): SerializedStyles =>
+    css`
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      overflow: hidden;
+      width: 100%;
+      min-height: ${rem(46)};
+      border-radius: ${vars['border-radius']['2']};
+      color: ${vars.color.text.default.primary};
+      font-size: ${vars['font-size']['3']};
+      ${notificationsContainerPerType(type, styleType, theme)};
+    `;
 
 export const infoContainer = (): SerializedStyles => css`
   display: flex;
@@ -43,6 +44,7 @@ export const headContainer = (): SerializedStyles => css`
   font-weight: ${vars.weight.medium};
 `;
 
-export const primaryActionContainer = () => (): SerializedStyles => css`
-  cursor: pointer;
-`;
+export const primaryActionContainer = () => (): SerializedStyles =>
+  css`
+    cursor: pointer;
+  `;

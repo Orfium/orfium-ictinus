@@ -25,7 +25,7 @@ const transform: Transform = (file, api) => {
 
         // Remove deprecated attributes
         return !attributesToRemove.includes(attributeName);
-      }
+      },
     );
   });
 

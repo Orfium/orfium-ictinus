@@ -16,7 +16,9 @@ export const handleSearch = ({
   onChange,
   minCharactersToSearch = 0,
 }: Props) => {
-  const { target: { value }} = event;
+  const {
+    target: { value },
+  } = event;
 
   if (isSearchable) {
     setSearchValue(value);
@@ -31,6 +33,6 @@ export const handleSearch = ({
 
     onChange(value.trim());
   }
-}
+};
 
 export default handleSearch;

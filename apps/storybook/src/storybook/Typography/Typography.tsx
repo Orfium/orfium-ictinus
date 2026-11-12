@@ -8,11 +8,12 @@ export type TypographyProps = {
   variant: TypographyVariant;
 };
 
-const Typography: FCC<TypographyProps & ComponentProps<typeof TypographyComponent>> = ({ children, variant, ...rest }) => {
-  const id = useMemo(
-    () => children?.toString().toLowerCase().split(' ').join('-'),
-    [children]
-  );
+const Typography: FCC<TypographyProps & ComponentProps<typeof TypographyComponent>> = ({
+  children,
+  variant,
+  ...rest
+}) => {
+  const id = useMemo(() => children?.toString().toLowerCase().split(' ').join('-'), [children]);
 
   return (
     <Unstyled>

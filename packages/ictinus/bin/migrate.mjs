@@ -11,12 +11,13 @@ const runCodemods = (targetPath) => {
   // Adjust the path to point to the 'dist/codemods' directory
   const codemodsPath = path.join(dirname, '../dist/codemods');
 
-  const codemods = fs.readdirSync(codemodsPath)
-    .filter(file => file.endsWith('.cjs'));
+  const codemods = fs.readdirSync(codemodsPath).filter((file) => file.endsWith('.cjs'));
 
-  codemods.forEach(codemod => {
+  codemods.forEach((codemod) => {
     const codemodPath = path.join(codemodsPath, codemod);
-    execSync(`npx jscodeshift --parser=tsx -t ${codemodPath} --extensions=ts,tsx ${targetPath}`, { stdio: 'inherit' });
+    execSync(`npx jscodeshift --parser=tsx -t ${codemodPath} --extensions=ts,tsx ${targetPath}`, {
+      stdio: 'inherit',
+    });
   });
 };
 

@@ -40,7 +40,7 @@ const TruncatedContent: React.FCC<TruncatedContentProps> = ({
       tooltipContent: string | undefined,
       isHovered: boolean,
       isTruncated: boolean,
-      isAlwaysVisible: boolean
+      isAlwaysVisible: boolean,
     ) => {
       if (tooltipContent === undefined) {
         return false;
@@ -52,7 +52,7 @@ const TruncatedContent: React.FCC<TruncatedContentProps> = ({
 
       return isHovered && isTruncated;
     },
-    []
+    [],
   );
 
   return showTooltip(tooltipContent, isHovered, isTruncated, isAlwaysVisible) && tooltipContent ? (

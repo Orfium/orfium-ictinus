@@ -125,11 +125,11 @@ export const Playground = {
       ? sortedData(simpleData(true), sortingColumn)
       : sortedData(
           chunk(concat(simpleData(true), moreData(true)), Number(showItems.value))[currentPage - 1],
-          sortingColumn
+          sortingColumn,
         );
 
     const [rowSelection, setRowSelection] = useState<Array<Record<string, boolean>>>(
-      Array.from({ length: data.length }, () => ({}))
+      Array.from({ length: data.length }, () => ({})),
     );
 
     useEffect(() => {

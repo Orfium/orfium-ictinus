@@ -57,7 +57,7 @@ describe('Button', () => {
       render(
         <Button className="custom-class" data-testid="btn">
           Label
-        </Button>
+        </Button>,
       );
       const button = screen.getByTestId('btn');
       expect(button).toHaveClass('custom-class');
@@ -67,7 +67,7 @@ describe('Button', () => {
       render(
         <Button data-testid="action-btn" id="submit-btn" aria-label="Custom label">
           Save
-        </Button>
+        </Button>,
       );
       const button = screen.getByTestId('action-btn');
       expect(button).toHaveAttribute('id', 'submit-btn');
@@ -88,7 +88,7 @@ describe('Button', () => {
       render(
         <Button onPress={mockOnPress} isDisabled>
           Click me
-        </Button>
+        </Button>,
       );
 
       const button = screen.getByRole('button', { name: 'Click me' });
@@ -103,7 +103,7 @@ describe('Button', () => {
       render(
         <Button onPress={mockOnPress} isPending aria-label="Saving">
           Saving
-        </Button>
+        </Button>,
       );
 
       const button = screen.getByRole('button');
@@ -130,7 +130,7 @@ describe('Button', () => {
       render(
         <Button isPending aria-label="Saving">
           Saving
-        </Button>
+        </Button>,
       );
       expect(screen.getByRole('button')).toHaveAttribute('aria-disabled', 'true');
     });
@@ -139,7 +139,7 @@ describe('Button', () => {
       const { container } = render(
         <Button isPending aria-label="Saving">
           Saving
-        </Button>
+        </Button>,
       );
 
       const svg = container.querySelector('svg');
@@ -150,7 +150,7 @@ describe('Button', () => {
       render(
         <Button isPending aria-label="Saving your changes">
           Save
-        </Button>
+        </Button>,
       );
       const button = screen.getByRole('button');
       const progressbar = screen.getByRole('progressbar', { name: 'Saving your changes' });
@@ -165,7 +165,7 @@ describe('Button', () => {
       render(
         <Button ref={ref} data-testid="ref-btn">
           Ref button
-        </Button>
+        </Button>,
       );
 
       const button = screen.getByTestId('ref-btn');
@@ -179,7 +179,7 @@ describe('Button', () => {
       render(
         <Button iconOnly aria-label="Close">
           <CloseIcon />
-        </Button>
+        </Button>,
       );
       const button = screen.getByRole('button', { name: 'Close' });
       expect(button).toBeInTheDocument();
@@ -191,7 +191,7 @@ describe('Button', () => {
       render(
         <Button iconOnly circle aria-label="Add">
           <PlusIcon />
-        </Button>
+        </Button>,
       );
       expect(screen.getByRole('button', { name: 'Add' })).toBeInTheDocument();
     });

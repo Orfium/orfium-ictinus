@@ -222,7 +222,7 @@ export const DataTableHeaderCell = forwardRef<HTMLTableCellElement, DataTableHea
         </TableHeaderCell>
       </ActionsRoot>
     );
-  }
+  },
 );
 
 DataTableHeaderCell.displayName = 'DataTableHeaderCell';

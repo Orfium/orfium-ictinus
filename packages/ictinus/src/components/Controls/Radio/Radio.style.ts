@@ -35,11 +35,13 @@ export const radioContainerStyles =
           transition: all 200ms;
           background: ${vars.color.transparent['1']};
 
-          ${isFocusVisible &&
-          `
+          ${
+            isFocusVisible &&
+            `
             background: ${theme.tokens.state.get('backgroundColor.hover')};
             box-shadow: 0px 0px 0px 8px ${theme.tokens.state.get('backgroundColor.hover')};
-          `}
+          `
+          }
         }
 
         &:hover::before {

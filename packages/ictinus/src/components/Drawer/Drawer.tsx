@@ -21,7 +21,7 @@ const Drawer = React.forwardRef<HTMLDivElement, React.PropsWithChildren<DrawerPr
       parent = document.body,
       children,
     },
-    ref: RefObject<HTMLDivElement>
+    ref: RefObject<HTMLDivElement>,
   ) => {
     const overlayRef = useDOMRef(ref);
 
@@ -70,9 +70,9 @@ const Drawer = React.forwardRef<HTMLDivElement, React.PropsWithChildren<DrawerPr
           </div>
         </div>
       </DrawerContextProvider>,
-      parent
+      parent,
     );
-  }
+  },
 );
 
 Drawer.displayName = 'Drawer';

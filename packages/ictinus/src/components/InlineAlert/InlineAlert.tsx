@@ -83,7 +83,7 @@ export const InlineAlert = forwardRef<HTMLDivElement, InlineAlertProps>(
         ) : null}
       </div>
     );
-  }
+  },
 );
 
 InlineAlert.displayName = 'InlineAlert';

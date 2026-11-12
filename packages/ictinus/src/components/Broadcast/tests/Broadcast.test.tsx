@@ -17,7 +17,7 @@ describe('<Broadcast />', () => {
     render(
       <Broadcast status="error" onDismiss={() => {}}>
         ARIA test
-      </Broadcast>
+      </Broadcast>,
     );
 
     const alert = screen.getByRole('alert');
@@ -50,7 +50,7 @@ describe('<Broadcast />', () => {
           ]}
         >
           With actions
-        </Broadcast>
+        </Broadcast>,
       );
 
       expect(screen.getByText('Button 1')).toBeInTheDocument();

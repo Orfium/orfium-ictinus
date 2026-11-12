@@ -46,9 +46,7 @@ describe('Checkbox Component', () => {
   });
 
   it('should not invoke the onChange function if the checkbox is disabled', async () => {
-    render(
-      <CheckBox onChange={mockOnChange} value="test" dataTestPrefixId="test" isDisabled />
-    );
+    render(<CheckBox onChange={mockOnChange} value="test" dataTestPrefixId="test" isDisabled />);
 
     const checkbox = screen.getByRole('checkbox');
     expect(checkbox).toBeInTheDocument();
@@ -67,7 +65,7 @@ describe('Checkbox Component', () => {
         onChange={mockOnChange}
         value="test"
         dataTestPrefixId="test"
-      />
+      />,
     );
 
     const checkbox = screen.getByRole('checkbox');

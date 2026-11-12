@@ -349,7 +349,7 @@ export const WithCustomIcon: Story = {
             <Box display="flex" alignItems="center" gap="4">
               <Icon name="account" color={vars.color.text.default.secondary} />
               {args.content as string}
-            </Box>
+            </Box>,
           )
         }
       >

@@ -16,7 +16,7 @@ export const TableHeader = forwardRef<HTMLTableSectionElement, TableHeaderProps>
     >
       <thead ref={ref}>{children}</thead>
     </Box>
-  )
+  ),
 );
 
 TableHeader.displayName = '@orfium/ictinus/vanilla/TableHeader';

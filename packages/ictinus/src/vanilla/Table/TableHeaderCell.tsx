@@ -24,7 +24,7 @@ export const TableHeaderCell = forwardRef<HTMLTableCellElement, TableHeaderCellP
       textAlign,
       ...props
     },
-    ref
+    ref,
   ) => (
     <Box
       asChild
@@ -47,7 +47,7 @@ export const TableHeaderCell = forwardRef<HTMLTableCellElement, TableHeaderCellP
         </Box>
       </th>
     </Box>
-  )
+  ),
 );
 
 TableHeaderCell.displayName = '@orfium/ictinus/vanilla/TableHeaderCell';

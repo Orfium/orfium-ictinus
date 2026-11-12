@@ -14,7 +14,7 @@ describe('MonthWrapper', () => {
           to: currentDay.add(44, 'day'),
         }}
         onDaySelect={() => {}}
-      />
+      />,
     );
     expect(container).toMatchSnapshot();
   });
@@ -34,7 +34,7 @@ describe('MonthWrapper', () => {
           to: currentDay.add(44, 'day'),
         }}
         onDaySelect={onDaySelect}
-      />
+      />,
     );
     const dayCell = await findByText('4');
     fireEvent.click(dayCell);

@@ -51,9 +51,11 @@ export const barStyles = ({
   return css`
     grid-area: bar;
     background-color: ${vars.color.palette['primary-alt'].muted};
-    height: ${isBlock
-      ? PROGRESS_INDICATOR_TOKENS.height.linearBlock
-      : PROGRESS_INDICATOR_TOKENS.height.linear};
+    height: ${
+      isBlock
+        ? PROGRESS_INDICATOR_TOKENS.height.linearBlock
+        : PROGRESS_INDICATOR_TOKENS.height.linear
+    };
     border-radius: ${isBlock ? vars['border-radius']['0'] : vars['border-radius']['7']};
     overflow: hidden;
     will-change: transform;

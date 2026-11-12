@@ -40,7 +40,7 @@ const useFilterWithSelectionUtils = ({
     if (isAsync) return optionsToBeFiltered;
 
     return optionsToBeFiltered.filter(
-      (item) => !searchValue || item.label.toLowerCase().includes(searchValue.toLowerCase())
+      (item) => !searchValue || item.label.toLowerCase().includes(searchValue.toLowerCase()),
     );
   }, [isAsync, items, isMulti, selectedFilter, searchValue]);
 
@@ -71,7 +71,7 @@ const useFilterWithSelectionUtils = ({
       debounce((value: string) => {
         onAsyncSearch?.(value);
       }, 400),
-    [onAsyncSearch]
+    [onAsyncSearch],
   );
 
   const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {

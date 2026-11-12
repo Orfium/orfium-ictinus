@@ -30,7 +30,7 @@ export const Badge = forwardRef<HTMLSpanElement, BadgeProps>(
         </span>
       </Box>
     );
-  }
+  },
 );
 
 Badge.displayName = '@orfium/ictinus/vanilla/Badge';
@@ -58,7 +58,7 @@ export const CodeBadge = forwardRef<HTMLSpanElement, CodeBadgeProps>(
         </span>
       </Box>
     );
-  }
+  },
 );
 
 CodeBadge.displayName = '@orfium/ictinus/vanilla/CodeBadge';

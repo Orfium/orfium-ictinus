@@ -83,7 +83,7 @@ export const Broadcast = forwardRef<HTMLDivElement, BroadcastProps>(
         ) : null}
       </div>
     );
-  }
+  },
 );
 
 Broadcast.displayName = 'Broadcast';

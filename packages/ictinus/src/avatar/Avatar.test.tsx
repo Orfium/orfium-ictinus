@@ -91,7 +91,7 @@ describe('Avatar', () => {
   describe('image error handling', () => {
     it('falls back to initials when image fails to load', async () => {
       render(
-        <Avatar src="https://broken-image.com/missing.jpg" initials="FB" data-testid="avatar" />
+        <Avatar src="https://broken-image.com/missing.jpg" initials="FB" data-testid="avatar" />,
       );
 
       const avatar = screen.getByTestId('avatar');

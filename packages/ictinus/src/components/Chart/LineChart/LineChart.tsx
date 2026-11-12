@@ -38,7 +38,7 @@ const LineChart: React.FC<LineChartProps> = ({
   const colorsPicked = useMemo(
     () => colorPicker({ theme, uniqueKeyNames, color }),
 
-    [theme, uniqueKeyNames, color]
+    [theme, uniqueKeyNames, color],
   );
 
   const colors = Object.entries(colorsPicked);

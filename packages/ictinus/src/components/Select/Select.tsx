@@ -178,7 +178,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
     debounce((term) => {
       asyncSearch(term);
     }, 400),
-    []
+    [],
   );
 
   const handleOnInput = React.useCallback(
@@ -200,7 +200,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
         minCharactersToSearch,
       });
     },
-    [debouncedOnChange, isAsync, isOpen, isSearchable, minCharactersToSearch]
+    [debouncedOnChange, isAsync, isOpen, isSearchable, minCharactersToSearch],
   );
 
   const filteredOptions = useMemo(() => {
@@ -220,8 +220,8 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
               !searchValue ||
               option.label.toLowerCase().includes(searchValue.toLowerCase()) ||
               !!option.options?.find((option) =>
-                option.label.toLowerCase().includes(searchValue.toLowerCase())
-              )
+                option.label.toLowerCase().includes(searchValue.toLowerCase()),
+              ),
           )
           .map((option) => {
             return option.label.toLowerCase().includes(searchValue.toLowerCase())
@@ -229,10 +229,10 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
               : {
                   ...option,
                   options: option.options?.filter((option) =>
-                    option.label.toLowerCase().includes(searchValue.toLowerCase())
+                    option.label.toLowerCase().includes(searchValue.toLowerCase()),
                   ),
                 };
-          })
+          }),
       );
     }
 
@@ -298,7 +298,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
         )}
       </div>
     ),
-    [isOpen, isSearchable, isLoading, size, suffixNameSelector, handleIconClick]
+    [isOpen, isSearchable, isLoading, size, suffixNameSelector, handleIconClick],
   );
 
   const handleClick = () => {
@@ -341,7 +341,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
                   ? selectedOption.filter((o) =>
                       typeof option !== 'string' && option
                         ? o.value !== option.value
-                        : o.value !== option
+                        : o.value !== option,
                     )
                   : [];
 

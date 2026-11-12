@@ -104,12 +104,12 @@ export const RowSelection = {
 
     const data = useMemo(
       () => chunk(concat(simpleData(), moreData()), Number(showItems.value)),
-      [showItems.value]
+      [showItems.value],
     );
 
     /** The state consists of an array (length = number of pages) and each array item is an object indicating which rows are selected */
     const [rowSelection, setRowSelection] = useState<Array<Record<string, boolean>>>(
-      Array.from({ length: data.length }, () => ({}))
+      Array.from({ length: data.length }, () => ({})),
     );
 
     const pagination = useMemo(() => {

@@ -15,7 +15,7 @@ export type DataTableCheckboxProps = ComponentPropsWithoutRef<typeof Checkbox>;
 export const DataTableCheckbox = forwardRef<HTMLLabelElement, DataTableCheckboxProps>(
   (
     { children, isDisabled, ...props }: DataTableCheckboxProps,
-    ref: RefObject<HTMLLabelElement>
+    ref: RefObject<HTMLLabelElement>,
   ) => {
     const { table } = useDataTableContext();
     const { labelId, row, setSelector } = useDataTableRowContext();
@@ -62,7 +62,7 @@ export const DataTableCheckbox = forwardRef<HTMLLabelElement, DataTableCheckboxP
         </Checkbox>
       </>
     );
-  }
+  },
 );
 
 DataTableCheckbox.displayName = '@orfium/ictinus/vanilla/DataTableCheckbox';

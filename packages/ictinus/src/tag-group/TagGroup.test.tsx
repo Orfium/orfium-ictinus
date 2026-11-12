@@ -17,7 +17,7 @@ describe('TagGroup', () => {
         <TagList>
           <Tag>Test Tag</Tag>
         </TagList>
-      </TagGroup>
+      </TagGroup>,
     );
 
     const tagGroup = screen.getByTestId('tag-group');
@@ -34,7 +34,7 @@ describe('TagGroup', () => {
         <TagList>
           <Tag>Test Tag</Tag>
         </TagList>
-      </TagGroup>
+      </TagGroup>,
     );
 
     const tagGroup = screen.getByTestId('tag-group');
@@ -49,7 +49,7 @@ describe('TagGroup', () => {
         <TagList>
           <Tag>Test Tag</Tag>
         </TagList>
-      </TagGroup>
+      </TagGroup>,
     );
 
     expect(ref.current).toBe(screen.getByTestId('tag-group'));
@@ -64,7 +64,7 @@ describe('TagGroup', () => {
             Interactive Tag
           </Tag>
         </TagList>
-      </TagGroup>
+      </TagGroup>,
     );
 
     const tag = screen.getByTestId('tag');
@@ -88,7 +88,7 @@ describe('TagGroup', () => {
             Tag 2
           </Tag>
         </TagList>
-      </TagGroup>
+      </TagGroup>,
     );
 
     const tag1 = screen.getByTestId('tag-1');
@@ -117,7 +117,7 @@ describe('TagGroup', () => {
             Tag 2
           </Tag>
         </TagList>
-      </TagGroup>
+      </TagGroup>,
     );
 
     const tag1 = screen.getByTestId('multi-tag-1');
@@ -139,7 +139,7 @@ describe('TagGroup', () => {
         <TagList>
           <Tag id="removable-tag">Removable Tag</Tag>
         </TagList>
-      </TagGroup>
+      </TagGroup>,
     );
 
     const removeButton = screen.getByRole('button');
@@ -156,7 +156,7 @@ describe('TagGroup', () => {
         <TagList>
           <Tag id="removable-tag">Removable Tag</Tag>
         </TagList>
-      </TagGroup>
+      </TagGroup>,
     );
 
     const removeButton = screen.getByRole('button');
@@ -181,7 +181,7 @@ describe('Tag', () => {
             Test Tag
           </Tag>
         </TagList>
-      </TagGroup>
+      </TagGroup>,
     );
 
     const tag = screen.getByTestId('tag');
@@ -199,7 +199,7 @@ describe('Tag', () => {
             Test Tag
           </Tag>
         </TagList>
-      </TagGroup>
+      </TagGroup>,
     );
 
     const tag = screen.getByTestId('tag');

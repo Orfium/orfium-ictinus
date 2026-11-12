@@ -7,4 +7,3 @@ const ThemeWrapper: React.FCC = ({ children }) => {
 };
 
 export default ThemeWrapper;
- 

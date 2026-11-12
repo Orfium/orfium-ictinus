@@ -16,14 +16,14 @@ const useDrawerContentObserver = () => {
     (payload) => {
       dispatch(toggleIsScrollbarOnTop(payload[0].isIntersecting));
     },
-    [dispatch]
+    [dispatch],
   );
 
   const obBottomCallback = useCallback(
     (payload) => {
       dispatch(toggleIsScrollbarOnBottom(payload[0].isIntersecting));
     },
-    [dispatch]
+    [dispatch],
   );
 
   useEffect(() => {

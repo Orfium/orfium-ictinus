@@ -14,7 +14,7 @@ const CustomTooltip: React.FCC<CustomTooltipProps> = ({ content, fill }) => {
 
   useEffect(() => {
     setIsTrancated(
-      wrapperRef.current ? wrapperRef.current.scrollWidth > wrapperRef.current.clientWidth : false
+      wrapperRef.current ? wrapperRef.current.scrollWidth > wrapperRef.current.clientWidth : false,
     );
   }, [setIsTrancated]);
 

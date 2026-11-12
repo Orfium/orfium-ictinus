@@ -94,7 +94,7 @@ describe('DataTable', () => {
     render(
       <DataTableFixture>
         <div data-testid="child">Hello</div>
-      </DataTableFixture>
+      </DataTableFixture>,
     );
 
     expect(screen.getByTestId('child')).toBeInTheDocument();
@@ -111,7 +111,7 @@ describe('DataTableCounter', () => {
     render(
       <DataTableFixture>
         <DataTableCounter />
-      </DataTableFixture>
+      </DataTableFixture>,
     );
 
     expect(screen.getByText('3')).toBeInTheDocument();
@@ -122,7 +122,7 @@ describe('DataTableCounter', () => {
     render(
       <DataTableFixture data={[testData[0]]}>
         <DataTableCounter />
-      </DataTableFixture>
+      </DataTableFixture>,
     );
 
     expect(screen.getByText('1')).toBeInTheDocument();
@@ -133,7 +133,7 @@ describe('DataTableCounter', () => {
     render(
       <DataTableFixture>
         <DataTableCounter singular="Friend" plural="Friends" />
-      </DataTableFixture>
+      </DataTableFixture>,
     );
 
     expect(screen.getByText('3')).toBeInTheDocument();
@@ -144,7 +144,7 @@ describe('DataTableCounter', () => {
     render(
       <DataTableFixture initialRowSelection={{ '0': true, '1': true }}>
         <DataTableCounter singular="Friend" plural="Friends" />
-      </DataTableFixture>
+      </DataTableFixture>,
     );
 
     expect(screen.getByText('2')).toBeInTheDocument();
@@ -155,7 +155,7 @@ describe('DataTableCounter', () => {
     render(
       <DataTableFixture initialRowSelection={{ '0': true }}>
         <DataTableCounter singular="Friend" plural="Friends" />
-      </DataTableFixture>
+      </DataTableFixture>,
     );
 
     expect(screen.getByText('1')).toBeInTheDocument();
@@ -166,7 +166,7 @@ describe('DataTableCounter', () => {
     render(
       <DataTableFixture>
         <DataTableCounter count={999} />
-      </DataTableFixture>
+      </DataTableFixture>,
     );
 
     expect(screen.getByText('999')).toBeInTheDocument();
@@ -181,7 +181,7 @@ describe('DataTableBulkActions', () => {
         <DataTableBulkActions>
           <button>Bulk Action</button>
         </DataTableBulkActions>
-      </DataTableFixture>
+      </DataTableFixture>,
     );
 
     expect(screen.queryByText('Bulk Action')).not.toBeInTheDocument();
@@ -193,7 +193,7 @@ describe('DataTableBulkActions', () => {
         <DataTableBulkActions>
           <button>Bulk Action</button>
         </DataTableBulkActions>
-      </DataTableFixture>
+      </DataTableFixture>,
     );
 
     expect(screen.getByText('Bulk Action')).toBeInTheDocument();
@@ -205,7 +205,7 @@ describe('DataTableBody', () => {
     render(
       <DataTableFixture>
         <DataTableBody />
-      </DataTableFixture>
+      </DataTableFixture>,
     );
 
     expect(screen.getByText('First Name')).toBeInTheDocument();
@@ -217,7 +217,7 @@ describe('DataTableBody', () => {
     render(
       <DataTableFixture>
         <DataTableBody />
-      </DataTableFixture>
+      </DataTableFixture>,
     );
 
     expect(screen.getByText('Alice')).toBeInTheDocument();
@@ -229,7 +229,7 @@ describe('DataTableBody', () => {
     render(
       <DataTableFixture>
         <DataTableBody />
-      </DataTableFixture>
+      </DataTableFixture>,
     );
 
     expect(screen.getByText('Smith')).toBeInTheDocument();
@@ -245,7 +245,7 @@ describe('DataTableBody', () => {
     render(
       <DataTableFixture initialVisibility={{ age: false }}>
         <DataTableBody />
-      </DataTableFixture>
+      </DataTableFixture>,
     );
 
     // Age column should be hidden
@@ -261,7 +261,7 @@ describe('DataTableBody', () => {
     render(
       <DataTableFixture data={[]}>
         <DataTableBody />
-      </DataTableFixture>
+      </DataTableFixture>,
     );
 
     // Headers should still render
@@ -277,7 +277,7 @@ describe('DataTableEditColumns', () => {
     render(
       <DataTableFixture>
         <DataTableEditColumns />
-      </DataTableFixture>
+      </DataTableFixture>,
     );
 
     expect(screen.getByText('Edit columns')).toBeInTheDocument();
@@ -289,7 +289,7 @@ describe('DataTableEditColumns', () => {
     render(
       <DataTableFixture>
         <DataTableEditColumns />
-      </DataTableFixture>
+      </DataTableFixture>,
     );
 
     await user.click(screen.getByText('Edit columns'));
@@ -306,7 +306,7 @@ describe('DataTableEditColumns', () => {
       <DataTableFixture>
         <DataTableEditColumns />
         <DataTableBody />
-      </DataTableFixture>
+      </DataTableFixture>,
     );
 
     expect(screen.getByText('35')).toBeInTheDocument();
@@ -329,7 +329,7 @@ describe('DataTableHeader', () => {
         <DataTableHeader>
           <span data-testid="header-child">Header Content</span>
         </DataTableHeader>
-      </DataTableFixture>
+      </DataTableFixture>,
     );
 
     expect(screen.getByTestId('header-child')).toBeInTheDocument();
@@ -348,7 +348,7 @@ describe('DataTable integration', () => {
           </DataTableBulkActions>
         </DataTableHeader>
         <DataTableBody />
-      </DataTableFixture>
+      </DataTableFixture>,
     );
 
     expect(screen.getByText('1')).toBeInTheDocument();
@@ -366,7 +366,7 @@ describe('DataTable integration', () => {
           </DataTableBulkActions>
         </DataTableHeader>
         <DataTableBody />
-      </DataTableFixture>
+      </DataTableFixture>,
     );
 
     expect(screen.getByText('3')).toBeInTheDocument();
@@ -383,7 +383,7 @@ describe('DataTable integration', () => {
           <DataTableEditColumns />
         </DataTableHeader>
         <DataTableBody />
-      </DataTableFixture>
+      </DataTableFixture>,
     );
 
     // Header
@@ -406,7 +406,7 @@ describe('DataTable integration', () => {
           <DataTableEditColumns />
         </DataTableHeader>
         <DataTableBody />
-      </DataTableFixture>
+      </DataTableFixture>,
     );
 
     expect(screen.getByText('Smith')).toBeInTheDocument();
@@ -429,7 +429,7 @@ describe('DataTableBody data attributes', () => {
     render(
       <DataTableFixture>
         <DataTableBody />
-      </DataTableFixture>
+      </DataTableFixture>,
     );
 
     const headers = screen.getAllByRole('columnheader');
@@ -456,7 +456,7 @@ describe('DataTableBody data attributes', () => {
     expect(aliceAge).toHaveTextContent('25');
 
     const charlieLastName = document.querySelector(
-      'tr[data-row-index="2"] td[data-col-id="lastName"]'
+      'tr[data-row-index="2"] td[data-col-id="lastName"]',
     );
     expect(charlieLastName).toHaveTextContent('Brown');
   });
@@ -470,12 +470,12 @@ describe('DataTableBody data attributes', () => {
           <DataTableEditColumns />
         </DataTableHeader>
         <DataTableBody />
-      </DataTableFixture>
+      </DataTableFixture>,
     );
 
     expect(document.querySelector('th[data-col-id="lastName"]')).toHaveTextContent('Last Name');
     expect(
-      document.querySelector('tr[data-row-index="0"] td[data-col-id="age"]')
+      document.querySelector('tr[data-row-index="0"] td[data-col-id="age"]'),
     ).toHaveTextContent('25');
 
     await user.click(screen.getByRole('button', { name: 'Edit columns' }));
@@ -488,11 +488,11 @@ describe('DataTableBody data attributes', () => {
     expect(document.querySelector('th[data-col-id="age"]')).toHaveTextContent('Age');
 
     expect(
-      document.querySelector('tr[data-row-index="0"] td[data-col-id="age"]')
+      document.querySelector('tr[data-row-index="0"] td[data-col-id="age"]'),
     ).toHaveTextContent('25');
 
     expect(
-      document.querySelector('tr[data-row-index="0"] td[data-col-id="firstName"]')
+      document.querySelector('tr[data-row-index="0"] td[data-col-id="firstName"]'),
     ).toHaveTextContent('Alice');
   });
 });

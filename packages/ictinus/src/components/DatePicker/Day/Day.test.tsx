@@ -17,7 +17,7 @@ describe('Day', () => {
             <Day day={day} month={month} year={year} />
           </tr>
         </tbody>
-      </table>
+      </table>,
     );
     expect(container).toMatchSnapshot();
   });
@@ -29,7 +29,7 @@ describe('Day', () => {
             <Day day={day} month={month} year={year} isFirst />
           </tr>
         </tbody>
-      </table>
+      </table>,
     );
     expect(container).toMatchSnapshot();
 
@@ -40,7 +40,7 @@ describe('Day', () => {
             <Day day={day} month={month} year={year} isLast />
           </tr>
         </tbody>
-      </table>
+      </table>,
     );
     expect(isLastContainer).toMatchSnapshot();
   });
@@ -52,7 +52,7 @@ describe('Day', () => {
             <Day day={day} month={month} year={year} isDisabled />
           </tr>
         </tbody>
-      </table>
+      </table>,
     );
     expect(container).toMatchSnapshot();
   });
@@ -67,7 +67,7 @@ describe('Day', () => {
             <Day day={day} month={month} year={year} onSelect={onDaySelect} />
           </tr>
         </tbody>
-      </table>
+      </table>,
     );
 
     const dayCell = await findByText(day.toString());
@@ -86,7 +86,7 @@ describe('Day', () => {
             <Day day={day} month={month} year={year} onSelect={onDaySelect} isDisabled />
           </tr>
         </tbody>
-      </table>
+      </table>,
     );
 
     const dayCell = await findByText(day.toString());

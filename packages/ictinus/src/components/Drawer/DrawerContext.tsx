@@ -82,7 +82,7 @@ const reducer = (state: DrawerContextState, action: DrawerContextAction) => {
 
 export type DrawerContextReducer = (
   state: DrawerContextState,
-  action: DrawerContextAction
+  action: DrawerContextAction,
 ) => DrawerContextState;
 
 export const DrawerContextProvider: FCC<{ hasFixedLayout?: boolean; onClose: () => void }> = ({

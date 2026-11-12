@@ -50,13 +50,13 @@ const DatePicker: React.FC<DatePickerProps & TestProps> = ({
         setRange(
           Array.isArray(foundOption.dates)
             ? { from: foundOption.dates[0], to: foundOption.dates[1] }
-            : { from: foundOption.dates, to: foundOption.dates }
+            : { from: foundOption.dates, to: foundOption.dates },
         );
 
         setSelectedOption(option);
       }
     },
-    [options]
+    [options],
   );
 
   const applyRangeAndClose = useCallback(
@@ -73,7 +73,7 @@ const DatePicker: React.FC<DatePickerProps & TestProps> = ({
 
       onChange({ from: newRange.from?.toDate(), to: newRange.to?.toDate() });
     },
-    [onChange]
+    [onChange],
   );
 
   const clearSelectedOption = useCallback(() => {
@@ -119,7 +119,7 @@ const DatePicker: React.FC<DatePickerProps & TestProps> = ({
         return { ...oldState, to: endOfDay };
       });
     },
-    [isRangePicker]
+    [isRangePicker],
   );
 
   const onClearAll = useCallback(() => {
@@ -182,7 +182,7 @@ const DatePicker: React.FC<DatePickerProps & TestProps> = ({
       isRangePicker,
       value.from,
       value.to,
-    ]
+    ],
   );
 
   const onApply = useCallback(() => {

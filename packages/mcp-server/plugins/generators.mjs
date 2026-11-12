@@ -1,9 +1,4 @@
-import {
-  DOCS_SKIP,
-  docsShortName,
-  getDocs,
-  resolveApi,
-} from '@orfium/shared';
+import { DOCS_SKIP, docsShortName, getDocs, resolveApi } from '@orfium/shared';
 import { readdir, readFile } from 'node:fs/promises';
 import { basename, dirname, join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -165,7 +160,10 @@ export async function generateGuides() {
       source.match(/SectionHeader\s+title=\{?['"]([^'"]+)['"]\}?/);
     const rel = relative(docsRoot, file).replace(/\\/g, '/');
     const name = toKebabCase(
-      rel.replace(/\.mdx$/i, '').replace(/\//g, '-').replace(/_/g, '-'),
+      rel
+        .replace(/\.mdx$/i, '')
+        .replace(/\//g, '-')
+        .replace(/_/g, '-'),
     );
     const title =
       titleMatch?.[1] ||
@@ -270,10 +268,7 @@ Component-specific props are listed under \`propNames\`; Box/sprinkle props are 
  */
 export async function generateTokens() {
   const tokensDir = join(repoRoot, 'packages/tokens/src/tokens');
-  const semanticDir = join(
-    repoRoot,
-    'packages/tokens/src/theme/tokens/semantic/variables',
-  );
+  const semanticDir = join(repoRoot, 'packages/tokens/src/theme/tokens/semantic/variables');
 
   const [
     colorsSrc,
@@ -307,31 +302,17 @@ export async function generateTokens() {
     colors: flattenTokens(extractExportedConstObject(colorsSrc, 'colors') ?? {}),
     spacing: flattenTokens(extractExportedConstObject(spacingSrc, 'spacing') ?? {}),
     sizing: flattenTokens(extractExportedConstObject(sizingSrc, 'sizing') ?? {}),
-    borderRadius: flattenTokens(
-      extractExportedConstObject(borderRadiusSrc, 'borderRadius') ?? {},
-    ),
-    borderWidth: flattenTokens(
-      extractExportedConstObject(borderWidthSrc, 'borderWidth') ?? {},
-    ),
+    borderRadius: flattenTokens(extractExportedConstObject(borderRadiusSrc, 'borderRadius') ?? {}),
+    borderWidth: flattenTokens(extractExportedConstObject(borderWidthSrc, 'borderWidth') ?? {}),
     fontSize: flattenTokens(extractExportedConstObject(fontSizeSrc, 'fontSize') ?? {}),
-    fontWeight: flattenTokens(
-      extractExportedConstObject(fontWeightSrc, 'fontWeight') ?? {},
-    ),
-    fontFamily: flattenTokens(
-      extractExportedConstObject(fontFamilySrc, 'fontFamily') ?? {},
-    ),
+    fontWeight: flattenTokens(extractExportedConstObject(fontWeightSrc, 'fontWeight') ?? {}),
+    fontFamily: flattenTokens(extractExportedConstObject(fontFamilySrc, 'fontFamily') ?? {}),
     letterSpacing: flattenTokens(
       extractExportedConstObject(letterSpacingSrc, 'letterSpacing') ?? {},
     ),
-    lineHeight: flattenTokens(
-      extractExportedConstObject(lineHeightSrc, 'lineHeight') ?? {},
-    ),
-    semanticColors: flattenTokens(
-      extractExportedConstObject(semanticColorsSrc, 'colors') ?? {},
-    ),
-    boxShadow: flattenTokens(
-      extractExportedConstObject(boxShadowSrc, 'boxShadow') ?? {},
-    ),
+    lineHeight: flattenTokens(extractExportedConstObject(lineHeightSrc, 'lineHeight') ?? {}),
+    semanticColors: flattenTokens(extractExportedConstObject(semanticColorsSrc, 'colors') ?? {}),
+    boxShadow: flattenTokens(extractExportedConstObject(boxShadowSrc, 'boxShadow') ?? {}),
   };
 }
 

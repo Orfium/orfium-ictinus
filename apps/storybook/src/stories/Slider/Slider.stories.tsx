@@ -24,7 +24,7 @@ export const RangeSliderDontTest: Story = {
         },
         suffix: <div>%</div>,
       }),
-      []
+      [],
     );
 
     return (

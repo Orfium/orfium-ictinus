@@ -20,7 +20,7 @@ const maxHeightOptions = {
 const toastContainerPerType = (
   type: AcceptedColorComponentTypes,
   styleType: NotificationStyleType,
-  theme: Theme
+  theme: Theme,
 ) => {
   const borderColor = isNotificationTypes(type)
     ? vars.color['border-color'].interactive[typeToColorStyle(type)]
@@ -35,30 +35,36 @@ const toastContainerPerType = (
 
 export const toastContainer =
   (type: AcceptedColorComponentTypes, styleType: NotificationStyleType) =>
-  (theme: Theme): SerializedStyles => css`
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    border-radius: ${rem(8)};
-    ${toastContainerPerType(type, styleType, theme)};
-  `;
+  (theme: Theme): SerializedStyles =>
+    css`
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border-radius: ${rem(8)};
+      ${toastContainerPerType(type, styleType, theme)};
+    `;
 
 export const topContainer =
   (type: AcceptedColorComponentTypes) =>
-  (theme: Theme): SerializedStyles => css`
-    ${label01(theme)};
-    color: ${isNotificationTypes(type)
-      ? vars.color.text.default[typeToColorStyle(type)]
-      : vars.color.background.default};
-    display: flex;
-    justify-content: space-between;
-    overflow: hidden;
-    height: ${rem(58)};
-    background: ${isNotificationTypes(type)
-      ? vars.color.palette[typeToBackgroundStyle(type)].muted
-      : /** @TODO: remove this when Toast component is either removed or refactored */
-        theme.utils.getColor(type, 500, 'normal')};
-  `;
+  (theme: Theme): SerializedStyles =>
+    css`
+      ${label01(theme)};
+      color: ${
+        isNotificationTypes(type)
+          ? vars.color.text.default[typeToColorStyle(type)]
+          : vars.color.background.default
+      };
+      display: flex;
+      justify-content: space-between;
+      overflow: hidden;
+      height: ${rem(58)};
+      background: ${
+        isNotificationTypes(type)
+          ? vars.color.palette[typeToBackgroundStyle(type)].muted
+          : /** @TODO: remove this when Toast component is either removed or refactored */
+            theme.utils.getColor(type, 500, 'normal')
+      };
+    `;
 
 export const infoContainer = (): SerializedStyles => css`
   ${flexCenter};
@@ -75,16 +81,17 @@ export const actionIconsContainer = (): SerializedStyles => css`
   padding-right: ${vars.spacing['6']};
 `;
 
-export const chevronIconContainer = (isExpanded: boolean) => (): SerializedStyles => css`
-  cursor: pointer;
-  transform: rotate(${isExpanded ? '180' : '0'}deg);
-  ${transition(0.2)}
-`;
+export const chevronIconContainer = (isExpanded: boolean) => (): SerializedStyles =>
+  css`
+    cursor: pointer;
+    transform: rotate(${isExpanded ? '180' : '0'}deg);
+    ${transition(0.2)}
+  `;
 
 export const expandedContainer = (
   type: AcceptedColorComponentTypes,
   isExpanded: boolean,
-  hasMinimumHeight: boolean
+  hasMinimumHeight: boolean,
 ): SerializedStyles => css`
   ${transition(0.1)};
   min-height: ${hasMinimumHeight && isExpanded ? rem(146) : rem(0)};

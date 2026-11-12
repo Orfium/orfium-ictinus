@@ -19,7 +19,7 @@ describe('Nav', () => {
               Settings
             </NavLink>
           </NavItem>
-        </Nav>
+        </Nav>,
       );
 
       const link = screen.getByRole('link', { name: 'Settings' });
@@ -33,7 +33,7 @@ describe('Nav', () => {
           <NavItem isActive isDisabled>
             <NavLink href="/billing">Billing</NavLink>
           </NavItem>
-        </Nav>
+        </Nav>,
       );
 
       const link = screen.getByRole('link', { name: 'Billing' });
@@ -50,12 +50,12 @@ describe('Nav', () => {
               Dashboard
             </NavLink>
           </NavItem>
-        </Nav>
+        </Nav>,
       );
 
       expect(screen.getByRole('link', { name: 'Dashboard' })).toHaveAttribute(
         'aria-current',
-        'page'
+        'page',
       );
     });
 
@@ -67,7 +67,7 @@ describe('Nav', () => {
               Reports
             </NavLink>
           </NavItem>
-        </Nav>
+        </Nav>,
       );
 
       const link = screen.getByRole('link', { name: 'Reports' });
@@ -83,7 +83,7 @@ describe('Nav', () => {
               <NavCount>000</NavCount>
             </NavLink>
           </NavItem>
-        </Nav>
+        </Nav>,
       );
 
       const link = screen.getByRole('link', { name: /Inbox/i });
@@ -100,7 +100,7 @@ describe('Nav', () => {
               Ref target
             </NavLink>
           </NavItem>
-        </Nav>
+        </Nav>,
       );
 
       expect(ref.current).toBeInstanceOf(HTMLAnchorElement);
@@ -118,7 +118,7 @@ describe('Nav', () => {
               Muted
             </NavLink>
           </NavItem>
-        </Nav>
+        </Nav>,
       );
 
       await user.click(screen.getByRole('link', { name: 'Muted' }));
@@ -137,7 +137,7 @@ describe('Nav', () => {
               </SubNavItem>
             </SubNavList>
           </NavItem>
-        </Nav>
+        </Nav>,
       );
 
       const link = screen.getByRole('link', { name: 'Nested' });
@@ -160,7 +160,7 @@ describe('Nav', () => {
               </SubNavItem>
             </SubNavList>
           </NavItem>
-        </Nav>
+        </Nav>,
       );
 
       await user.click(screen.getByRole('link', { name: 'Sub muted' }));
@@ -179,7 +179,7 @@ describe('Nav', () => {
               </SubNavItem>
             </SubNavList>
           </NavItem>
-        </Nav>
+        </Nav>,
       );
 
       const link = screen.getByRole('link', { name: 'Forced off' });
@@ -195,7 +195,7 @@ describe('Nav', () => {
           <NavItem>
             <NavLink href="/">Home</NavLink>
           </NavItem>
-        </Nav>
+        </Nav>,
       );
 
       const nav = screen.getByTestId('main-nav');

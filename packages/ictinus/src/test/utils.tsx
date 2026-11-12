@@ -6,7 +6,7 @@ import ThemeProvider from '../components/ThemeProvider';
 
 export const selectDropdownOption = async (
   dropdownInput: HTMLInputElement,
-  option: string
+  option: string,
 ): Promise<void> => {
   await userEvent.type(dropdownInput, option); // type option on the dropdown input
   await userEvent.click(screen.getByText(option)); // select the option from displayed options

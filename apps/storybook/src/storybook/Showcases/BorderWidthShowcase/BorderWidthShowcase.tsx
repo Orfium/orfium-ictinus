@@ -30,7 +30,7 @@ const BorderWidthShowcase = () => {
                 width: rem(boxSize),
                 background: 'linear-gradient(45deg, #a8b1ff 0%, #cad0ff 100%)',
                 border: `${theme.dimension.borderWidth.get(
-                  key as DimensionBorderWidthKey
+                  key as DimensionBorderWidthKey,
                 )} solid ${vars.color['border-color'].interactive.upsell}`,
                 margin: 'auto',
               })}
@@ -42,7 +42,7 @@ const BorderWidthShowcase = () => {
               <Typography variant="body02" type="secondary" component="div">
                 {`${get(dimensionVariables.borderWidth, key).value} =
                 ${convertRemToPixels(
-                  theme.dimension.borderWidth.get(key as DimensionBorderWidthKey)
+                  theme.dimension.borderWidth.get(key as DimensionBorderWidthKey),
                 )}px`}
               </Typography>
               {get(dimensionVariables.borderWidth, key).description && (

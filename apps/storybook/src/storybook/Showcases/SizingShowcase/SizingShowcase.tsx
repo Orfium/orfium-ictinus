@@ -48,7 +48,7 @@ const SizingShowcase = ({ type = 'global' }: Props) => {
                 {get(sizingObject, key).value}{' '}
                 {!isGlobal
                   ? ` = ${convertRemToPixels(
-                      theme.dimension.sizing.get(key as DimensionSizingKey)
+                      theme.dimension.sizing.get(key as DimensionSizingKey),
                     )}px`
                   : ``}
               </Typography>

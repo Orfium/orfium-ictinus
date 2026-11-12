@@ -31,9 +31,11 @@ export const modalContainer = ({
   flex-direction: row;
   flex-wrap: wrap;
 
-  padding: ${isContentPadded
-    ? `${vars.spacing['8']} ${vars.spacing['9']} ${vars.spacing['9']} ${vars.spacing['9']}`
-    : undefined};
+  padding: ${
+    isContentPadded
+      ? `${vars.spacing['8']} ${vars.spacing['9']} ${vars.spacing['9']} ${vars.spacing['9']}`
+      : undefined
+  };
 `;
 
 export const closeContainer = () => css`

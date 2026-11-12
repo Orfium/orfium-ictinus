@@ -44,7 +44,7 @@ describe('<SlotProvider />', () => {
     const { container } = render(
       <SlotProvider slots={{ test: { className: 'test-class' } }}>
         <Component />
-      </SlotProvider>
+      </SlotProvider>,
     );
 
     expect(container.firstChild).toHaveClass('test-class');
@@ -63,7 +63,7 @@ describe('<SlotProvider />', () => {
         <SlotProvider slots={{ test: { id: 'test-id' } }}>
           <Component />
         </SlotProvider>
-      </SlotProvider>
+      </SlotProvider>,
     );
 
     expect(container.firstChild).toHaveClass('test-class');
@@ -85,7 +85,7 @@ describe('<ClearSlots />', () => {
         <ClearSlots>
           <Component />
         </ClearSlots>
-      </SlotProvider>
+      </SlotProvider>,
     );
 
     expect(container.firstChild).not.toHaveClass('test-class');

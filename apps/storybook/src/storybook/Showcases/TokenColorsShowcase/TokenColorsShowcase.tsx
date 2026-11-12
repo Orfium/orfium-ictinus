@@ -62,13 +62,17 @@ const TokenColorsShowcase: FCC<Props> = ({ type = 'globals' }) => {
       <div
         css={(theme) => css`
           ${colorStyle()};
-          background: ${isGlobal
-            ? theme.globals.colors.get(
-                `${color}.${colorsObj[color][variant]}` as DotKeys<typeof globalColors>
-              )
-            : theme.tokens.colors.get(
-                `${color}.${colorsObj[color][variant]}` as DotKeys<typeof semanticVariablesColors>
-              )};
+          background: ${
+            isGlobal
+              ? theme.globals.colors.get(
+                  `${color}.${colorsObj[color][variant]}` as DotKeys<typeof globalColors>,
+                )
+              : theme.tokens.colors.get(
+                  `${color}.${colorsObj[color][variant]}` as DotKeys<
+                    typeof semanticVariablesColors
+                  >,
+                )
+          };
         `}
       />
       <div>

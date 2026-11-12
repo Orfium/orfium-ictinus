@@ -18,20 +18,24 @@ export const iconContainerStyles =
       height: ${iconSize};
       display: flex;
 
-      ${isInteractive &&
-      `
+      ${
+        isInteractive &&
+        `
         cursor: pointer;
-      `}
-
-      ${hasHover &&
       `
+      }
+
+      ${
+        hasHover &&
+        `
         &:hover, &:focus-visible {
           transition: all 0.2s;
           border-radius: 100%;
           background: ${theme.tokens.state.get('backgroundColor.hover')};
           box-shadow: 0px 0px 0px 8px ${theme.tokens.state.get('backgroundColor.hover')};
         }
-      `}
+      `
+      }
     `;
   };
 

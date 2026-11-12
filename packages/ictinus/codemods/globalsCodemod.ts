@@ -108,7 +108,7 @@ const transform = (file, api) => {
         });
         expression = j.callExpression(
           j.memberExpression(expression, j.identifier(methodName)),
-          args
+          args,
         );
       } else {
         expression = j.memberExpression(expression, j.identifier(part));

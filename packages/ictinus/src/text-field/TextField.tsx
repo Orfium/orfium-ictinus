@@ -81,7 +81,7 @@ const TextFieldInput = forwardRef<HTMLInputElement, TextFieldInputProps>(
         />
       </Box>
     );
-  }
+  },
 );
 
 TextFieldInput.displayName = 'TextField.Input';
@@ -101,7 +101,7 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
         />
       </Box>
     );
-  }
+  },
 );
 
 TextArea.displayName = 'TextArea';
@@ -120,7 +120,7 @@ const TextFieldDescription = forwardRef<HTMLSpanElement, TextFieldDescriptionPro
         />
       </Box>
     );
-  }
+  },
 );
 
 TextFieldDescription.displayName = 'TextField.Description';
@@ -172,7 +172,7 @@ const TextFieldControl = forwardRef<HTMLDivElement, TextFieldControlProps>(
       const resizeObserver = new ResizeObserver(() => {
         floatingLabel.style.setProperty(
           '--floating-label-clip-width',
-          `${textArea.getBoundingClientRect().width}px`
+          `${textArea.getBoundingClientRect().width}px`,
         );
       });
 
@@ -182,7 +182,7 @@ const TextFieldControl = forwardRef<HTMLDivElement, TextFieldControlProps>(
     }, [wrapperRef]);
 
     return <Box ref={wrapperRef} className={cn(styles.control, className)} {...props} />;
-  }
+  },
 );
 
 TextFieldControl.displayName = 'TextField.Control';
@@ -190,7 +190,7 @@ TextFieldControl.displayName = 'TextField.Control';
 const TextFieldFloatingLabel = forwardRef<HTMLDivElement, TextFieldFloatingLabelProps>(
   ({ className, ...props }, ref) => (
     <Box ref={ref} data-floating-label className={cn(styles.floatingLabel, className)} {...props} />
-  )
+  ),
 );
 
 TextFieldFloatingLabel.displayName = 'TextField.FloatingLabel';
@@ -212,7 +212,7 @@ const TextFieldAddon = forwardRef<HTMLDivElement, TextFieldAddonProps>(
       }}
       {...props}
     />
-  )
+  ),
 );
 
 TextFieldAddon.displayName = 'TextField.Addon';
@@ -243,7 +243,7 @@ const TextField = Object.assign(
     Control: TextFieldControl,
     FloatingLabel: TextFieldFloatingLabel,
     Addon: TextFieldAddon,
-  }
+  },
 );
 
 TextField.displayName = 'TextField';

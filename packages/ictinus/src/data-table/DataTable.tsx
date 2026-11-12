@@ -31,7 +31,7 @@ export const DataTable = forwardRef<HTMLDivElement, DataTableProps>(
         </DataTableProvider>
       </Box>
     );
-  }
+  },
 );
 
 DataTable.displayName = '@orfium/ictinus/vanilla/DataTable';

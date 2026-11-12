@@ -12,7 +12,7 @@ interface Props {
 
 const SliderShowcase: React.FCC<Props> = (props) => {
   const [values, setValues] = useState<[number] | [number, number]>(
-    props.isSelector ? [0] : [0, 100]
+    props.isSelector ? [0] : [0, 100],
   );
 
   const handleChange = (values: number[]) => {

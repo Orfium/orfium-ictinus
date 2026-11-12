@@ -35,7 +35,7 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
       dataTestPrefixId,
       ...props
     },
-    ref
+    ref,
   ) => (
     <ButtonBase
       {...props}
@@ -52,7 +52,7 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
         color={iconColor ?? BUTTON_COLOR[type].text}
       />
     </ButtonBase>
-  )
+  ),
 );
 
 IconButton.displayName = 'IconButton';

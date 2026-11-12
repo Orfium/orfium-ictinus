@@ -1,4 +1,4 @@
-import type { ChangeEvent} from 'react';
+import type { ChangeEvent } from 'react';
 import { useCallback, useEffect, useState } from 'react';
 
 export type OnCheckHandler = (val: boolean, e?: ChangeEvent) => void;
@@ -18,7 +18,7 @@ export const useCheck = (isChecked: boolean, onCheck?: OnCheckHandler) => {
 
       setIsCheckedState(isChecked);
     },
-    [onCheck, setIsCheckedState]
+    [onCheck, setIsCheckedState],
   );
 
   return { isCheckedState, handleCheck };

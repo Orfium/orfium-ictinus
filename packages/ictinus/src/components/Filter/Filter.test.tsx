@@ -78,7 +78,7 @@ describe('Single Filter', () => {
     await userEvent.type(selectInput, 'test');
 
     await waitFor(() =>
-      expect(screen.getByTestId('search_circular_progress_container')).toBeVisible()
+      expect(screen.getByTestId('search_circular_progress_container')).toBeVisible(),
     );
   });
 
@@ -127,7 +127,7 @@ describe('Multi Filter', () => {
         label="Label"
         items={options}
         defaultValue={defaultFilter}
-      />
+      />,
     );
   });
 
@@ -213,7 +213,7 @@ describe('Multi Filter', () => {
     expect(filterLabel).toHaveTextContent(`Label: ${options[0].label}`);
 
     moreOptionsTag = await screen.findByTestId(
-      `ictinus_filter_${options.length - 1}_more_filters_tag_container`
+      `ictinus_filter_${options.length - 1}_more_filters_tag_container`,
     );
     expect(moreOptionsTag).toBeInTheDocument();
   });

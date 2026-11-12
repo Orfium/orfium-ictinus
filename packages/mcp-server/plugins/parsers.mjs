@@ -134,8 +134,7 @@ export function stripMdx(content) {
 
   out = out.replace(/<(SectionHeader|SubsectionHeader)\b([^>]*)\/>/g, (_, tag, attrs) => {
     const title =
-      attrs.match(/title=\{['"]([^'"]+)['"]\}/)?.[1] ||
-      attrs.match(/title=['"]([^'"]+)['"]/)?.[1];
+      attrs.match(/title=\{['"]([^'"]+)['"]\}/)?.[1] || attrs.match(/title=['"]([^'"]+)['"]/)?.[1];
     if (!title) return '';
     return `\n${tag === 'SectionHeader' ? '#' : '##'} ${title}\n`;
   });
@@ -247,13 +246,9 @@ function extractStoryExamples(source, file) {
     let code = part.trim();
     if (code.length > 4000) code = `${code.slice(0, 4000)}\n/* … truncated … */`;
 
-    const storyComponents = usedComponents.filter((name) =>
-      new RegExp(`<${name}\\b`).test(part),
-    );
+    const storyComponents = usedComponents.filter((name) => new RegExp(`<${name}\\b`).test(part));
     const components =
-      storyComponents.length > 0
-        ? [...new Set([primary, ...storyComponents])]
-        : usedComponents;
+      storyComponents.length > 0 ? [...new Set([primary, ...storyComponents])] : usedComponents;
 
     examples.push({
       title: titleMatch ? `${titleMatch[1]} / ${storyName}` : storyName,
@@ -302,7 +297,10 @@ function detectIctinusComponents(source) {
     if (m[1] && /^[A-Z]/.test(m[1])) names.add(m[1]);
     if (m[2]) {
       for (const part of m[2].split(',')) {
-        const name = part.trim().split(/\s+as\s+/).pop();
+        const name = part
+          .trim()
+          .split(/\s+as\s+/)
+          .pop();
         if (name && /^[A-Z]/.test(name)) names.add(name);
       }
     }

@@ -1,5 +1,5 @@
 import stateFigma from './variables/state';
-import type { DotKeys} from '../utils';
+import type { DotKeys } from '../utils';
 import { getTokensValue } from '../utils';
 
 export type SemanticState = {

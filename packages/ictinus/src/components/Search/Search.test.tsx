@@ -43,7 +43,7 @@ describe('Search', () => {
           label: LABEL,
           items: options,
         }}
-      />
+      />,
     );
     input = screen.getByTestId('search_search_input');
     await userEvent.type(input, 'Test');
@@ -70,7 +70,7 @@ describe('Search', () => {
           label: LABEL,
           items: options,
         }}
-      />
+      />,
     );
     filterButton = screen.getByTestId('search_search_filter_filter_button');
 

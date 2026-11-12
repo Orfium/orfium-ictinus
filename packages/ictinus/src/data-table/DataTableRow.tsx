@@ -66,7 +66,7 @@ export const DataTableRow = forwardRef<HTMLTableRowElement, DataTableRowProps>(
 
         return () => setActions((actions) => actions.filter((action) => action.ref !== ref));
       },
-      []
+      [],
     );
 
     const handleSetHighlightedIndex = useCallback(
@@ -76,7 +76,7 @@ export const DataTableRow = forwardRef<HTMLTableRowElement, DataTableRowProps>(
           domRef.current?.focus();
         }
       },
-      [domRef]
+      [domRef],
     );
 
     return (
@@ -203,7 +203,7 @@ export const DataTableRow = forwardRef<HTMLTableRowElement, DataTableRowProps>(
         </DataTableRowProvider>
       </TableRow>
     );
-  }
+  },
 );
 
 DataTableRow.displayName = 'DataTableRow';

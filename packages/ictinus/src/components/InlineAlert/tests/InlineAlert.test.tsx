@@ -17,7 +17,7 @@ describe('<InlineAlert />', () => {
     render(
       <InlineAlert status="error" onDismiss={() => {}}>
         ARIA test
-      </InlineAlert>
+      </InlineAlert>,
     );
 
     const alert = screen.getByRole('alert');
@@ -50,7 +50,7 @@ describe('<InlineAlert />', () => {
           ]}
         >
           With actions
-        </InlineAlert>
+        </InlineAlert>,
       );
 
       expect(screen.getByText('Button 1')).toBeInTheDocument();

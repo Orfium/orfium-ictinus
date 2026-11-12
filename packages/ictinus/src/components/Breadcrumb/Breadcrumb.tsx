@@ -32,7 +32,7 @@ const Breadcrumb = React.forwardRef<HTMLOListElement, BreadcrumbProps>(
           <span data-testid={`${dataTestPrefixId}_breadcrumb_${label}`}>{label}</span>
         );
       },
-      [dataTestPrefixId, items]
+      [dataTestPrefixId, items],
     );
 
     const getBreadcrumbItem = React.useMemo(
@@ -43,7 +43,7 @@ const Breadcrumb = React.forwardRef<HTMLOListElement, BreadcrumbProps>(
 
         return <BreadcrumbItem key={itemKey} childComponent={child} isLastItem={isLast} />;
       },
-      [items]
+      [items],
     );
 
     const itemsToRender = React.useMemo(() => {
@@ -70,7 +70,7 @@ const Breadcrumb = React.forwardRef<HTMLOListElement, BreadcrumbProps>(
         {itemsToRender}
       </ol>
     );
-  }
+  },
 );
 
 Breadcrumb.displayName = 'Breadcrumb';

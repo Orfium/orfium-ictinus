@@ -38,11 +38,13 @@ export const dayWrapperStyle = ({
     width: ${DATEPICKER_TOKENS.dateSize};
     font-weight: ${isToday && 'bold'};
     opacity: ${isDisabled ? 0.5 : 1};
-    background: ${isLast || isFirst
-      ? vars.color.palette.primary.contrast
-      : (isSelected || isBetween) &&
-        typeof isBetween !== 'undefined' &&
-        vars.color.palette.tertiary.muted};
+    background: ${
+      isLast || isFirst
+        ? vars.color.palette.primary.contrast
+        : (isSelected || isBetween) &&
+          typeof isBetween !== 'undefined' &&
+          vars.color.palette.tertiary.muted
+    };
     border-bottom-right-radius: ${isLast && isSelected && '100%'};
     border-top-right-radius: ${isLast && isSelected && '100%'};
     border-bottom-left-radius: ${isFirst && isSelected && '100%'};
@@ -53,8 +55,9 @@ export const dayWrapperStyle = ({
       border-radius: ${vars['border-radius']['7']};
     }
 
-    ${(isSelected || isLast || isFirst) &&
-    `&:after {
+    ${
+      (isSelected || isLast || isFirst) &&
+      `&:after {
           z-index: -1;
           content: ' ';
           height: 100%;
@@ -67,7 +70,8 @@ export const dayWrapperStyle = ({
           border-top-right-radius: ${isLast && isSelected && '100%'};
           border-bottom-left-radius: ${isFirst && isSelected && '100%'};
           border-top-left-radius: ${isFirst && isSelected && '100%'};
-      }`}
+      }`
+    }
   `;
 };
 
@@ -87,9 +91,11 @@ export const dayStyle =
     return css`
       ${label02(theme)};
       border: ${isSelected ? 0 : vars['border-width']['1']} solid
-        ${isToday
-          ? vars.color['border-color'].interactive.active
-          : vars.color['border-color'].decorative.transparent};
+        ${
+          isToday
+            ? vars.color['border-color'].interactive.active
+            : vars.color['border-color'].decorative.transparent
+        };
       border-radius: ${(isToday || isSelected) && vars['border-radius']['7']};
       width: ${DATEPICKER_TOKENS.dateSize};
       height: ${DATEPICKER_TOKENS.dateSize};
@@ -100,12 +106,14 @@ export const dayStyle =
       justify-content: center;
       background: ${isSelected ? vars.color.palette.primary.contrast : 'transparent'};
 
-      ${!isDisabled &&
-      `&:hover {
+      ${
+        !isDisabled &&
+        `&:hover {
             border-radius: ${vars['border-radius']['7']};
             background: ${
               !isSelected && (!isBetween ? vars.color.palette.tertiary.muted : 'transparent')
             };
-          }`}
+          }`
+      }
     `;
   };

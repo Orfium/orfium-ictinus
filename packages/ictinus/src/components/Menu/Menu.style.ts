@@ -79,5 +79,5 @@ export const MenuWrapper = styled(Menu)(
     border-radius: ${vars['border-radius']['2']};
     box-shadow: ${vars['box-shadow']['2']};
     border-width: ${vars['border-width']['1']};
-  `
+  `,
 );

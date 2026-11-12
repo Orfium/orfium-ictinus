@@ -17,7 +17,7 @@ const positionOptions = {
 
 export const notificationsContainer = (
   currentPosition: string,
-  parent: HTMLElement
+  parent: HTMLElement,
 ): SerializedStyles => css`
   position: ${parent === document.body ? 'fixed' : 'absolute'};
   ${getPositionStyle(positionOptions[currentPosition])};

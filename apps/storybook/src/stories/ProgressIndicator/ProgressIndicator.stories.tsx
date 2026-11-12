@@ -38,7 +38,7 @@ export const LinearProgressIndicatorWithPercentage = {
             if (value + 20 > 100) return 0;
             return value + 20;
           }),
-        1000
+        1000,
       );
       return () => {
         clearInterval(interval);
@@ -101,7 +101,7 @@ export const CircularProgressIndicatorWithPercentage = {
             if (value + 20 > 100) return 0;
             return value + 20;
           }),
-        1000
+        1000,
       );
       return () => {
         clearInterval(interval);

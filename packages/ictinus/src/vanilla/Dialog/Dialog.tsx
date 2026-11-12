@@ -78,7 +78,7 @@ const DialogHeader = ({ className, ...props }: DialogHeaderProps) => {
       for (const entry of entries) {
         header.parentElement?.style.setProperty(
           '--dialog-header-height',
-          `${entry.target.clientHeight}px`
+          `${entry.target.clientHeight}px`,
         );
       }
     });
@@ -155,7 +155,7 @@ const DialogFooter = ({ className, ...props }: DialogFooterProps) => {
       for (const entry of entries) {
         footer.parentElement?.style.setProperty(
           '--dialog-footer-height',
-          `${entry.target.clientHeight}px`
+          `${entry.target.clientHeight}px`,
         );
       }
     });

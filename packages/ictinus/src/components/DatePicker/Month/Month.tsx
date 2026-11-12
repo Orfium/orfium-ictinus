@@ -112,10 +112,10 @@ const Month: React.FCC<MonthProps> = ({
                   onSelect={onDaySelect}
                   isDisabled={Boolean(disabledDatesCalculated(day, month, year, disabledDates))}
                   isSelected={Boolean(
-                    calculateSelected(day, month, year, selectedDays.from, selectedDays.to)
+                    calculateSelected(day, month, year, selectedDays.from, selectedDays.to),
                   )}
                   isBetween={Boolean(
-                    calculateIsBetween(day, month, year, selectedDays.from, selectedDays.to)
+                    calculateIsBetween(day, month, year, selectedDays.from, selectedDays.to),
                   )}
                   isLast={Boolean(
                     calculateSelectedDayFirstOrLast(
@@ -124,8 +124,8 @@ const Month: React.FCC<MonthProps> = ({
                       month,
                       year,
                       selectedDays.from,
-                      selectedDays.to
-                    )
+                      selectedDays.to,
+                    ),
                   )}
                   isFirst={Boolean(
                     calculateSelectedDayFirstOrLast(
@@ -134,8 +134,8 @@ const Month: React.FCC<MonthProps> = ({
                       month,
                       year,
                       selectedDays.from,
-                      selectedDays.to
-                    )
+                      selectedDays.to,
+                    ),
                   )}
                 />
               ))}

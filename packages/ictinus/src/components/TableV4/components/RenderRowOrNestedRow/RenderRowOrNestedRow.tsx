@@ -71,7 +71,7 @@ const RenderRowWithCells = React.memo(
         {row.cells?.map(
           (
             { content, tooltipContent, hasTruncatedTooltip = true, colSpan, type: cellType, align },
-            index
+            index,
           ) => (
             <ContentCell
               key={`${row.id}-${index}`}
@@ -82,7 +82,7 @@ const RenderRowWithCells = React.memo(
                 hasTruncatedTooltip
                   ? isComponentFunctionType(content)
                     ? tooltipContent
-                    : tooltipContent ?? content.toString()
+                    : (tooltipContent ?? content.toString())
                   : undefined
               }
               isPadded={isPadded}
@@ -95,7 +95,7 @@ const RenderRowWithCells = React.memo(
               rowIndex={rowIndex}
               index={index + 1}
             />
-          )
+          ),
         )}
 
         <ExpandedButtonCell
@@ -109,7 +109,7 @@ const RenderRowWithCells = React.memo(
         />
       </TableRow>
     );
-  }
+  },
 );
 RenderRowWithCells.displayName = 'RenderRowWithCells';
 

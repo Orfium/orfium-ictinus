@@ -8,12 +8,13 @@ import { FIELD_TOKENS } from '../DatePicker/DatePickInput/DatePickInput.style';
 
 export const tagContent =
   ({ maxWidth }: { maxWidth?: number }) =>
-  (): SerializedStyles => css`
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: ${maxWidth ? rem(maxWidth - 120) : 'unset'};
-  `;
+  (): SerializedStyles =>
+    css`
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: ${maxWidth ? rem(maxWidth - 120) : 'unset'};
+    `;
 
 export const rightIconsContainer = (): SerializedStyles => css`
   position: absolute !important;

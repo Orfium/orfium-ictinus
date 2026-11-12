@@ -78,7 +78,7 @@ const Typography = React.forwardRef<HTMLHeadingElement, TypographyProps>(
       children,
       ...rest
     },
-    ref
+    ref,
   ) => {
     const Component = component || detectComponentBasedOnType(variant);
 
@@ -99,7 +99,7 @@ const Typography = React.forwardRef<HTMLHeadingElement, TypographyProps>(
         {children}
       </Component>
     );
-  }
+  },
 );
 
 export default Typography;

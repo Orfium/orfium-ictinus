@@ -21,7 +21,7 @@ describe('Generic Toast', () => {
         >
           <h1>container-test-data</h1>
         </div>
-      </Toast>
+      </Toast>,
     );
 
     const message = await findByText(data.message);
@@ -34,7 +34,7 @@ describe('Generic Toast', () => {
     const { findByTestId, findByText } = render(
       <Toast {...data} closeCTA={closeCTA}>
         <h1>container-test-data</h1>
-      </Toast>
+      </Toast>,
     );
 
     // Toast is initialized with isExpanded=false
@@ -58,7 +58,7 @@ describe('Generic Toast', () => {
     const { findByTestId } = render(
       <Toast {...data} closeCTA={closeCTA}>
         <h1>container-test-data</h1>
-      </Toast>
+      </Toast>,
     );
 
     const closeButton = await findByTestId('toast-close');

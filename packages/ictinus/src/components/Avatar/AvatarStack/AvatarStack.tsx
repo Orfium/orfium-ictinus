@@ -28,7 +28,7 @@ const AvatarStack = forwardRef<HTMLDivElement, AvatarStackProps>(
             </div>
           );
         }),
-      [children, extraAvatars, size]
+      [children, extraAvatars, size],
     );
 
     return (
@@ -47,7 +47,7 @@ const AvatarStack = forwardRef<HTMLDivElement, AvatarStackProps>(
         ) : null}
       </div>
     );
-  }
+  },
 );
 AvatarStack.displayName = 'AvatarStack';
 

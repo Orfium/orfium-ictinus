@@ -29,7 +29,7 @@ test('ThemeProvider has default dark mode', () => {
   render(
     <ThemeProvider theme={{}}>
       <ThemeSwitcher />
-    </ThemeProvider>
+    </ThemeProvider>,
   );
   expect(screen.getByText(/turn dark on/i)).toBeInTheDocument();
 });
@@ -38,7 +38,7 @@ test('ThemeProvider changes default dark mode to light', async () => {
   render(
     <ThemeProvider theme={{}}>
       <ThemeSwitcher />
-    </ThemeProvider>
+    </ThemeProvider>,
   );
   await userEvent.click(screen.getByText(/turn dark on/i));
 

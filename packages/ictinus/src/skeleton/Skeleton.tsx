@@ -28,7 +28,7 @@ export const Skeleton = forwardRef<HTMLSpanElement, SkeletonProps>(
         <Slot ref={ref}>{children ?? <span />}</Slot>
       </Box>
     );
-  }
+  },
 );
 
 Skeleton.displayName = '@orfium/ictinus/vanilla/Skeleton';

@@ -1,4 +1,3 @@
-
 import type { AnchorHTMLAttributes, ElementType } from 'react';
 
 import type { AcceptedIconNames } from 'components/Icon';

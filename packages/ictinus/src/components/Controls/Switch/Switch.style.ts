@@ -17,17 +17,18 @@ const CONTROLS_HEIGHTS = {
 
 export const switchWrapperStyles =
   ({ sx }: { sx?: CSSObject }) =>
-  (theme: Theme): SerializedStyles => css`
-    position: relative;
-    isolation: isolate;
+  (theme: Theme): SerializedStyles =>
+    css`
+      position: relative;
+      isolation: isolate;
 
-    [data-disabled] {
-      opacity: ${theme.tokens.disabledState.get('default')};
-      cursor: not-allowed;
-    }
+      [data-disabled] {
+        opacity: ${theme.tokens.disabledState.get('default')};
+        cursor: not-allowed;
+      }
 
-    ${sx};
-  `;
+      ${sx};
+    `;
 
 export const switchStyles =
   ({ placement = 'right' }: Pick<LabelConfig, 'placement'>) =>

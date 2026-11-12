@@ -17,7 +17,7 @@ describe('Modal', () => {
     const { findByText, findByTestId } = render(
       <Modal isOpen={true} onClose={closeCTA} dataTestId="modal">
         {data.message}
-      </Modal>
+      </Modal>,
     );
 
     const modalContainer = await findByTestId('modal-container-modal');
@@ -33,7 +33,7 @@ describe('Modal', () => {
     const { findByText, findByTestId } = render(
       <Modal isOpen={true} onClose={closeCTA} dataTestId="modal">
         <ModalContent heading={data.heading} message={data.message} dataTestId="content" />
-      </Modal>
+      </Modal>,
     );
 
     const modalContent = await findByTestId('modal-content-content');
@@ -52,7 +52,7 @@ describe('Modal', () => {
     const { findByTestId } = render(
       <Modal isOpen={true} onClose={closeCTA} dataTestId="modal">
         {data.message}
-      </Modal>
+      </Modal>,
     );
 
     const closeButton = await findByTestId('icon-button-modal-close');
@@ -77,7 +77,7 @@ describe('Modal', () => {
           secondaryCTA={secondaryCTA}
           secondaryCTALabel="secondaryCTA"
         />
-      </Modal>
+      </Modal>,
     );
 
     const primaryButton = await findByTestId('button-modal-content-primaryCTA');

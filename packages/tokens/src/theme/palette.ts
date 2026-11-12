@@ -124,13 +124,13 @@ export type GetColor = {
   (
     color: (typeof flatColors)[number],
     variant: (typeof colorShades)[number],
-    scope: 'flat'
+    scope: 'flat',
   ): string;
   (color: TextColorTypes, variant: (typeof colorShades)[number], scope: 'text'): string;
   (
     color: (typeof mainTypes)[number],
     variant: (typeof colorShades)[number],
-    scope: 'normal'
+    scope: 'normal',
   ): string;
   (color: (typeof paleColors)[number], variant: null, scope: 'pale'): string;
 };
@@ -144,7 +144,7 @@ export const getColor =
       | (typeof mainTypes)[number]
       | (typeof paleColors)[number],
     variant: (typeof colorShades)[number] | null,
-    scope: 'flat' | 'text' | 'normal' | 'pale' = 'flat'
+    scope: 'flat' | 'text' | 'normal' | 'pale' = 'flat',
   ) => {
     let endColor;
 

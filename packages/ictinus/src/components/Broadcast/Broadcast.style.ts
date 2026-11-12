@@ -66,12 +66,13 @@ const iconStyles = () => css`
   pointer-events: none;
 `;
 
-const contentStyles = () => (theme: Theme) => css`
-  ${generateStylesFromTokens(theme.tokens.typography.get('normal.body02'))};
+const contentStyles = () => (theme: Theme) =>
+  css`
+    ${generateStylesFromTokens(theme.tokens.typography.get('normal.body02'))};
 
-  grid-area: content;
-  cursor: default;
-`;
+    grid-area: content;
+    cursor: default;
+  `;
 
 const actionsStyles = () => css`
   grid-area: actions;

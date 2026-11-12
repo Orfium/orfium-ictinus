@@ -7,7 +7,7 @@ import type { FilterOption, FilterProps } from './Filter.types';
 const StatefulFilter = forwardRef<HTMLButtonElement, FilterProps>(
   ({ isMulti, selectedFilter, onChange = () => {}, ...rest }, ref) => {
     const [inputValue, setInputValue] = useState<FilterOption | FilterOption[]>(
-      isMulti ? selectedFilter || [] : selectedFilter || undefined
+      isMulti ? selectedFilter || [] : selectedFilter || undefined,
     );
 
     const callback = useCallback(
@@ -15,7 +15,7 @@ const StatefulFilter = forwardRef<HTMLButtonElement, FilterProps>(
         setInputValue(option);
         onChange(option);
       },
-      [onChange]
+      [onChange],
     );
 
     return (
@@ -29,7 +29,7 @@ const StatefulFilter = forwardRef<HTMLButtonElement, FilterProps>(
         ref={ref}
       />
     );
-  }
+  },
 );
 
 StatefulFilter.displayName = 'StatefulFilter';

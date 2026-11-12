@@ -35,7 +35,7 @@ const StateShowcase = () => {
               </Typography>
               <Typography variant="body02" type="secondary" component="div">
                 {`${get(dimensionVariables.state, key).value} = ${convertRemToPixels(
-                  theme.dimension.state.get(key as DimensionStateKey)
+                  theme.dimension.state.get(key as DimensionStateKey),
                 )}px`}
               </Typography>
             </div>

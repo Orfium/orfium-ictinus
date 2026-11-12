@@ -111,11 +111,11 @@ export const pickNonCSSProps = (obj: Record<string, any>): Record<string, any> =
 type CSSResolverCurried = {
   (
     theme: Theme,
-    obj: StyledBoxProps
+    obj: StyledBoxProps,
   ): (
     cssKey: string,
     key: string,
-    type: 'spacing' | 'color' | 'backgroundColor'
+    type: 'spacing' | 'color' | 'backgroundColor',
   ) => Record<string, string> | undefined;
 };
 
@@ -128,7 +128,7 @@ export const cssResolver: CSSResolverCurried = curry(
     obj: StyledBoxProps,
     cssKey: string,
     key: string,
-    type: 'spacing' | 'color' | 'backgroundColor'
+    type: 'spacing' | 'color' | 'backgroundColor',
   ): Record<string, string> | undefined => {
     if (!obj[key]) {
       return undefined;
@@ -167,5 +167,5 @@ export const cssResolver: CSSResolverCurried = curry(
     return {
       [cssKey]: get(vars.color.background, obj[key]),
     };
-  }
+  },
 );

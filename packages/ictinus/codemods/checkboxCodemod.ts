@@ -23,9 +23,9 @@ const transform: Transform = (file, api) => {
               j.property(
                 'init',
                 j.identifier('helpText'),
-                attrPath.node.value.expression || j.stringLiteral('')
+                attrPath.node.value.expression || j.stringLiteral(''),
               ),
-            ])
+            ]),
           );
         }
 

@@ -37,7 +37,7 @@ describe('Generic Select', () => {
       render(
         <div>
           <StatefulSelect label="Country" options={dropdownList} onChange={handleSubmit} />
-        </div>
+        </div>,
       );
     });
 
@@ -105,7 +105,7 @@ describe('Generic Select', () => {
             asyncSearch={asyncSearch}
             minCharactersToSearch={minCharacters}
           />
-        </div>
+        </div>,
       );
     };
 
@@ -123,7 +123,7 @@ describe('Generic Select', () => {
       await sleep(500);
 
       await waitFor(() =>
-        expect(screen.getByTestId('select_circular_progress_container')).toBeVisible()
+        expect(screen.getByTestId('select_circular_progress_container')).toBeVisible(),
       );
     });
 
@@ -161,7 +161,7 @@ describe('Generic Select', () => {
             options={dropdownListWithHelperText}
             onChange={handleSubmit}
           />
-        </div>
+        </div>,
       );
     };
 
@@ -195,7 +195,7 @@ describe('Generic Select', () => {
             label="Countries"
             options={dropdownList}
           />
-        </div>
+        </div>,
       );
 
       const select = getByTestId('input_select-input-test');
@@ -217,7 +217,7 @@ describe('Generic Select', () => {
             label="Countries"
             options={dropdownList}
           />
-        </div>
+        </div>,
       );
 
       const select = getByTestId('input_select-input-test');
@@ -245,7 +245,7 @@ describe('Generic Select', () => {
             label="Countries"
             options={dropdownList}
           />
-        </div>
+        </div>,
       );
 
       const select = getByTestId('input_select-input-test');
@@ -275,7 +275,7 @@ describe('Generic Select', () => {
             options={dropdownList}
             onChange={handleSubmit}
           />
-        </div>
+        </div>,
       );
 
       const select = getByTestId('input_select-input-test');
@@ -315,7 +315,7 @@ describe('Multi Select', () => {
           options={dropdownList}
           hasSelectAllOption
         />
-      </div>
+      </div>,
     );
   });
 

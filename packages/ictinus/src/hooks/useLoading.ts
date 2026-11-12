@@ -13,7 +13,7 @@ export const useLoading = (clickHandler: ClickHandler, isLoadingInitialState = f
     (isLoadingProp: boolean) => {
       setIsLoading(isLoadingProp);
     },
-    [setIsLoading]
+    [setIsLoading],
   );
 
   const handleAsyncOperation = useCallback(
@@ -22,7 +22,7 @@ export const useLoading = (clickHandler: ClickHandler, isLoadingInitialState = f
         clickHandler(updateLoadingState, event);
       }
     },
-    [updateLoadingState, clickHandler]
+    [updateLoadingState, clickHandler],
   );
 
   return { isLoading, handleAsyncOperation };

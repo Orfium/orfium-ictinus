@@ -55,7 +55,7 @@ const Filter = React.forwardRef<HTMLButtonElement, FilterProps>((props, ref) => 
       minCharactersToSearch,
       items,
       onClear,
-    }
+    },
   );
 
   const getLabel = React.useMemo(() => {

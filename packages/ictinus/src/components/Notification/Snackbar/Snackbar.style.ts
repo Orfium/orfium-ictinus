@@ -9,7 +9,7 @@ import { typeToColorStyle } from '../Notification.style';
 const snackbarContainerPerType = (
   type: NotificationTypes,
   styleType: NotificationStyleType,
-  theme: Theme
+  theme: Theme,
 ) =>
   styleType === 'outlined'
     ? `
@@ -23,17 +23,18 @@ const snackbarContainerPerType = (
 
 export const cardContainer =
   (type: NotificationTypes, styleType: NotificationStyleType) =>
-  (theme: Theme): SerializedStyles => css`
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    padding: ${vars.spacing['6']};
-    box-sizing: border-box;
-    max-height: ${rem(294)};
-    border-radius: ${vars['border-radius']['3']};
-    background: ${vars.color.background.default};
-    ${snackbarContainerPerType(type, styleType, theme)};
-  `;
+  (theme: Theme): SerializedStyles =>
+    css`
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      padding: ${vars.spacing['6']};
+      box-sizing: border-box;
+      max-height: ${rem(294)};
+      border-radius: ${vars['border-radius']['3']};
+      background: ${vars.color.background.default};
+      ${snackbarContainerPerType(type, styleType, theme)};
+    `;
 
 export const topContainer = (): SerializedStyles => css`
   display: flex;
@@ -42,10 +43,11 @@ export const topContainer = (): SerializedStyles => css`
   padding-bottom: ${vars.spacing['6']};
 `;
 
-export const infoContainer = () => (): SerializedStyles => css`
-  display: flex;
-  align-items: center;
-`;
+export const infoContainer = () => (): SerializedStyles =>
+  css`
+    display: flex;
+    align-items: center;
+  `;
 
 export const descriptionContainer = (): SerializedStyles => css`
   font-size: ${vars['font-size']['3']};

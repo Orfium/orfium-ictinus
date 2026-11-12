@@ -22,7 +22,7 @@ const IconographyShowcase: FCC = () => {
       newIconSet[set] = {
         ...icons[set],
         icons: icons[set].icons.filter((name: string) =>
-          name.toLowerCase().includes(searchTerm.toLowerCase())
+          name.toLowerCase().includes(searchTerm.toLowerCase()),
         ),
       };
     });
