@@ -19,9 +19,7 @@
     }
   },
   "scripts": {
-    "generate:docs": "node ./scripts/generateDocs.mjs",
-    "fmt": "oxfmt",
-    "fmt:check": "oxfmt --check"
+    "generate:docs": "node ./scripts/generateDocs.mjs"
   },
   "devDependencies": {
     "@types/node": "^24.0.0",

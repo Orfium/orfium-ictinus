@@ -40,8 +40,6 @@
     "test:update": "vitest -u",
     "lint": "oxlint",
     "tsc": "tsc --noEmit",
-    "fmt": "oxfmt",
-    "fmt:check": "oxfmt --check",
     "check": "pnpm tsc && pnpm lint",
     "precommit": "pnpm check && pnpm test"
   },

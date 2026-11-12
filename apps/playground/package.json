@@ -7,9 +7,7 @@
     "dev": "vite",
     "build:app": "tsc -b && vite build",
     "lint": "oxlint",
-    "preview": "vite preview",
-    "fmt": "oxfmt",
-    "fmt:check": "oxfmt --check"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@orfium/ictinus": "workspace:*",

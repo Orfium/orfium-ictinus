@@ -35,8 +35,6 @@
     "prepublishOnly": "pnpm build",
     "lint": "oxlint",
     "tsc": "tsc -p tsconfig.json --noEmit",
-    "fmt": "oxfmt",
-    "fmt:check": "oxfmt --check",
     "check": "pnpm tsc && pnpm lint",
     "precommit": "pnpm check"
   },
