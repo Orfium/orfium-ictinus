@@ -27,7 +27,7 @@ jobs:
           pnpm install
           pnpm build
 
-      - uses: chromaui/action@6ac4c49524e1b1358b8c593c5eea877604228268 #v18.14.2
+      - uses: chromaui/action@2b75e3340bcec86b4ae38c6a10f14831114e8137 #v18.14.3
         with:
           onlyChanged: true
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
