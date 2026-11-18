@@ -1,5 +1,16 @@
 # @orfium/ictinus
 
+## 5.49.0
+
+### Minor Changes
+
+- 1ded2d9: typescript 6
+
+### Patch Changes
+
+- Updated dependencies [1ded2d9]
+  - @orfium/tokens@5.3.0
+
 ## 5.48.0
 
 ### Minor Changes

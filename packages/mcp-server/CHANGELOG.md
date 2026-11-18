@@ -1,5 +1,11 @@
 # @orfium/ictinus-mcp
 
+## 0.4.0
+
+### Minor Changes
+
+- 1ded2d9: typescript 6
+
 ## 0.3.0
 
 ### Minor Changes
