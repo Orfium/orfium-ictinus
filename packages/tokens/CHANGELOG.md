@@ -1,5 +1,11 @@
 # @orfium/tokens
 
+## 5.3.0
+
+### Minor Changes
+
+- 1ded2d9: typescript 6
+
 ## 5.2.2
 
 ### Patch Changes
