@@ -1,6 +1,12 @@
-import type { ColorShapeFromComponent, FlatPalette, GeneratedColorShades } from '@orfium/tokens';
-import { BASE_SHADE, calculateActualColorFromComponentProp, mainTypes } from '@orfium/tokens';
-import useTheme from 'hooks/useTheme';
+import {
+  BASE_SHADE,
+  calculateActualColorFromComponentProp,
+  mainTypes,
+  type ColorShapeFromComponent,
+  type FlatPalette,
+  type GeneratedColorShades,
+} from '@orfium/tokens';
+import useTheme from '~/hooks/useTheme';
 import { keys, pick } from 'lodash-es';
 import * as React from 'react';
 

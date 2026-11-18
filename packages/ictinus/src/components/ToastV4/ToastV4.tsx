@@ -1,8 +1,7 @@
 import { vars, type AcceptedColorComponentTypes } from '@orfium/tokens';
-import * as React from 'react';
-import { useState } from 'react';
-import { generateTestDataId } from 'utils/helpers';
-import type { TestId } from 'utils/types';
+import React, { useState } from 'react';
+import { generateTestDataId } from '~/utils/helpers';
+import type { TestId } from '~/utils/types';
 import Icon from '../Icon';
 import type { NotificationStyleType, NotificationTypes } from '../Notification/Notification';
 import { actionContainer, typeToColorStyle } from '../Notification/Notification.style';

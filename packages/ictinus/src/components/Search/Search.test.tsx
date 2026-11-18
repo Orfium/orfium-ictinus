@@ -1,5 +1,5 @@
 import userEvent from '@testing-library/user-event';
-import { render, screen } from 'test';
+import { render, screen } from '~/test';
 import { vi } from 'vitest';
 import StatefulSearch from './StatefulSearch';
 import { LABEL, options } from './constants';

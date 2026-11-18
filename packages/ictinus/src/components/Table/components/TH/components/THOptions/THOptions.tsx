@@ -3,9 +3,9 @@ import { Popover } from 'react-aria-components';
 
 import { SortingOption } from './components';
 import { menuStyle } from './THOptions.style';
-import IconButton from 'components/IconButton';
-import { listStyle } from 'components/List/List.style';
-import { MenuWrapper, popoverStyle } from 'components/Menu/Menu.style';
+import IconButton from '~/components/IconButton';
+import { listStyle } from '~/components/List/List.style';
+import { MenuWrapper, popoverStyle } from '~/components/Menu/Menu.style';
 
 import type { TestProps } from '~/utils/types';
 

@@ -1,4 +1,4 @@
-import useBreakpoints from 'hooks/useBreakpoints';
+import useBreakpoints from '~/hooks/useBreakpoints';
 import { head } from 'lodash-es';
 import pluralize from 'pluralize';
 import React, { memo, useEffect, useState } from 'react';

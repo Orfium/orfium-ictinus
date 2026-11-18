@@ -1,12 +1,12 @@
-import useEscape from 'hooks/useEscape';
+import useEscape from '~/hooks/useEscape';
 import React from 'react';
 import isEqual from 'react-fast-compare';
 
 import { vars } from '@orfium/tokens';
-import Filter from 'components/Filter';
-import Icon from 'components/Icon';
-import TextInputBase from 'components/TextInputBase';
-import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
+import Filter from '~/components/Filter';
+import Icon from '~/components/Icon';
+import TextInputBase from '~/components/TextInputBase';
+import { inputStyle } from '~/components/TextInputBase/TextInputBase.style';
 import { filterStyles, getSX, searchContainer, searchInputStyles } from './Search.style';
 import type { SearchProps } from './Search.types';
 

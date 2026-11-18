@@ -1,5 +1,4 @@
-import type { ChangeEvent } from 'react';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useState, type ChangeEvent } from 'react';
 
 export type OnCheckHandler = (val: boolean, e?: ChangeEvent) => void;
 

@@ -1,20 +1,18 @@
 import { rem } from '@orfium/tokens';
-import type { ClickEvent } from 'hooks/useLoading';
-import useTheme from 'hooks/useTheme';
+import type { ClickEvent } from '~/hooks/useLoading';
+import useTheme from '~/hooks/useTheme';
 import { head } from 'lodash-es';
 import React, { useCallback } from 'react';
-import { generateTestDataId } from 'utils/helpers';
-import type { ComponentSizes, TestProps } from 'utils/types';
+import { generateTestDataId } from '~/utils/helpers';
+import type { ComponentSizes, TestProps } from '~/utils/types';
 
-import Button from 'components/Button';
-import type { PrimitiveButtonTypes } from 'components/Button/Button.types';
-import type { AcceptedIconNames } from 'components/Icon';
-import IconButton from 'components/IconButton';
-import type { ListSelection } from 'components/List';
-import List, { ListItem, ListItemText } from 'components/List';
-import ClickAwayListener from 'components/utils/ClickAwayListener';
-import type { MenuPositionAllowed } from 'components/utils/DropdownOptions';
-import { optionsStyle } from 'components/utils/DropdownOptions';
+import Button from '~/components/Button';
+import type { PrimitiveButtonTypes } from '~/components/Button/Button.types';
+import type { AcceptedIconNames } from '~/components/Icon';
+import IconButton from '~/components/IconButton';
+import List, { ListItem, ListItemText, type ListSelection } from '~/components/List';
+import ClickAwayListener from '~/components/utils/ClickAwayListener';
+import { optionsStyle, type MenuPositionAllowed } from '~/components/utils/DropdownOptions';
 import {
   buttonSpanStyle,
   iconButtonSpanStyle,

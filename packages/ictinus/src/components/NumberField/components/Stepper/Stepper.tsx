@@ -1,5 +1,5 @@
 import { vars } from '@orfium/tokens';
-import Icon from 'components/Icon';
+import Icon from '~/components/Icon';
 import { rem } from 'polished';
 import React from 'react';
 import { Button } from 'react-aria-components';

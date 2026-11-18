@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react';
 import isEqual from 'react-fast-compare';
 
-import type { TableProps } from 'components/Table/types';
-import Typography from 'components/Typography';
+import type { TableProps } from '~/components/Table/types';
+import Typography from '~/components/Typography';
 import ColumnChooser from './components/ColumnChooser';
 import { actionsContent, titleContent, tTitleContainer } from './TTitle.style';
 

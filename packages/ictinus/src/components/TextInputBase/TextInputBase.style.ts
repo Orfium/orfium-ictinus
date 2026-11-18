@@ -1,12 +1,10 @@
-import type { SerializedStyles } from '@emotion/react';
-import { css } from '@emotion/react';
-import type { SemanticTypographyKey } from '@orfium/tokens';
-import { rem, vars } from '@orfium/tokens';
-import type { Theme } from 'theme';
+import { css, type SerializedStyles } from '@emotion/react';
+import { rem, vars, type SemanticTypographyKey } from '@orfium/tokens';
+import type { Theme } from '~/theme';
 
-import { LABEL_TRANSFORM_LEFT_SPACING } from 'components/Label/Label.style';
-import { body03 } from 'components/Typography/Typography.config.styles';
-import { generateStylesFromTokens } from 'components/Typography/utils';
+import { LABEL_TRANSFORM_LEFT_SPACING } from '~/components/Label/Label.style';
+import { body03 } from '~/components/Typography/Typography.config.styles';
+import { generateStylesFromTokens } from '~/components/Typography/utils';
 import type { ColorScheme } from '../../theme/types';
 import { FIELD_TOKENS } from '../DatePicker/DatePickInput/DatePickInput.style';
 import type { TextInputBaseProps } from './TextInputBase';

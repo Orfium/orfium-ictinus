@@ -1,8 +1,7 @@
-import type { SerializedStyles } from '@emotion/react';
-import { css } from '@emotion/react';
+import { css, type SerializedStyles } from '@emotion/react';
 
 import { vars } from '@orfium/tokens';
-import { BUTTON_COLOR } from 'components/ButtonBase/constants';
+import { BUTTON_COLOR } from '~/components/ButtonBase/constants';
 import type { PrimitiveButtonTypes } from '../Button/Button.types';
 
 const rotateSVG = (deg: number) => {

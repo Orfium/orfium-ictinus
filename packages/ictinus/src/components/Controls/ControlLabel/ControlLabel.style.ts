@@ -1,9 +1,8 @@
-import type { SerializedStyles } from '@emotion/react';
-import { css } from '@emotion/react';
+import { css, type SerializedStyles } from '@emotion/react';
 import { vars, type SemanticTypographyKey } from '@orfium/tokens';
-import type { Theme } from 'theme';
+import type { Theme } from '../../../theme';
 
-import { generateStylesFromTokens } from 'components/Typography/utils';
+import { generateStylesFromTokens } from '../../Typography/utils';
 import type { LabelConfig } from '../Controls.types';
 
 const labelSize: Record<string, SemanticTypographyKey> = {

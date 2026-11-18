@@ -1,8 +1,8 @@
-import useBreakpoints from 'hooks/useBreakpoints';
+import useBreakpoints from '~/hooks/useBreakpoints';
 import React from 'react';
 
 import { vars } from '@orfium/tokens';
-import IconButton from 'components/IconButton';
+import IconButton from '~/components/IconButton';
 import TableCell from '../../../TableCell';
 
 type ExpandedButtonCellProps = {

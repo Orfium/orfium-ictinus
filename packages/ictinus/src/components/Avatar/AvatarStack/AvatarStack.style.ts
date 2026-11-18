@@ -1,6 +1,5 @@
-import type { SerializedStyles } from '@emotion/react';
-import { css } from '@emotion/react';
-import { flex } from 'theme/functions';
+import { css, type SerializedStyles } from '@emotion/react';
+import { flex } from '~/theme/functions';
 
 import { AVATAR_SIZE } from '../Avatar.style';
 import type { AvatarSizes } from '../Avatar.types';

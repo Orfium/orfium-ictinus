@@ -1,5 +1,5 @@
 import { get } from 'lodash-es';
-import type { Theme } from 'theme/types';
+import type { Theme } from '~/theme/types';
 import globals from '../../globals';
 
 import type { ColorsKey } from '../../globals/colors';

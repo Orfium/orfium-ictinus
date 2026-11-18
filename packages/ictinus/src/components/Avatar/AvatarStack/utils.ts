@@ -1,4 +1,4 @@
-import { PropsValidationError } from 'utils/errors';
+import { PropsValidationError } from '~/utils/errors';
 
 import type { AvatarStackProps } from './AvatarStack.types';
 

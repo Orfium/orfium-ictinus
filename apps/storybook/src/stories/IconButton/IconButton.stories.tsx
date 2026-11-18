@@ -1,7 +1,7 @@
 import { IconButton } from '@orfium/ictinus';
 import { Box } from '@orfium/ictinus/vanilla';
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { FIGMA_URL } from 'utils/common';
+import { FIGMA_URL } from '~/utils/common';
 
 const meta: Meta<typeof IconButton> = {
   title: 'Updated Components/Buttons/IconButton',

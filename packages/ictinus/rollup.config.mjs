@@ -6,7 +6,6 @@ import { readFileSync } from 'node:fs';
 import { defineConfig } from 'rollup';
 import dts from 'rollup-plugin-dts';
 import esbuild from 'rollup-plugin-esbuild';
-import { typescriptPaths } from 'rollup-plugin-typescript-paths';
 
 const env = process.env.NODE_ENV ?? 'development';
 const pkg = JSON.parse(readFileSync('./package.json'));
@@ -46,9 +45,6 @@ export default defineConfig([
       preserveModulesRoot: 'src/vanilla',
     },
     plugins: [
-      typescriptPaths({
-        preserveExtensions: true,
-      }),
       esbuild({
         define: {
           'process.env.NODE_ENV': JSON.stringify(env),
@@ -75,9 +71,6 @@ export default defineConfig([
       format: 'es',
     },
     plugins: [
-      typescriptPaths({
-        preserveExtensions: true,
-      }),
       dts({
         respectExternal: true,
         tsconfig: 'tsconfig.vanilla.json',

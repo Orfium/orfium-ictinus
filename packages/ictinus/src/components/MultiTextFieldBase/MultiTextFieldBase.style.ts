@@ -1,9 +1,8 @@
-import type { SerializedStyles } from '@emotion/react';
-import { css } from '@emotion/react';
+import { css, type SerializedStyles } from '@emotion/react';
 import { rem } from 'polished';
 
 import { vars } from '@orfium/tokens';
-import { LABEL_TRANSFORM_LEFT_SPACING } from 'components/Label/Label.style';
+import { LABEL_TRANSFORM_LEFT_SPACING } from '~/components/Label/Label.style';
 import { FIELD_TOKENS } from '../DatePicker/DatePickInput/DatePickInput.style';
 
 export const tagContent =

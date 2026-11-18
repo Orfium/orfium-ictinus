@@ -1,7 +1,7 @@
 import { vars } from '@orfium/tokens';
 import { recipe } from '@vanilla-extract/recipes';
-import { sprinkles } from '~/sprinkles';
-import { style } from '~/vanilla-extract';
+import { sprinkles } from '../sprinkles';
+import { style } from '../vanilla-extract';
 
 export const nav = recipe({
   base: [

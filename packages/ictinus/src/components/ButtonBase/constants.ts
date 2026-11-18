@@ -1,7 +1,7 @@
 import { vars, type SemanticTypographyKey } from '@orfium/tokens';
-import type { ComponentSizes } from 'utils/types';
+import type { ComponentSizes } from '~/utils/types';
 
-import type { ButtonTypes } from 'components/Button/Button.types';
+import type { ButtonTypes } from '~/components/Button/Button.types';
 
 export const BUTTON_COLOR: Record<ButtonTypes, Record<string, `var(--${string})`>> = {
   primary: {

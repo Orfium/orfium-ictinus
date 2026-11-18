@@ -1,5 +1,4 @@
-import type { CSSObject, SerializedStyles } from '@emotion/react';
-import { css } from '@emotion/react';
+import { css, type CSSObject, type SerializedStyles } from '@emotion/react';
 
 import type { TBodyProps } from './TBody';
 

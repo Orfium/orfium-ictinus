@@ -1,5 +1,5 @@
 import { Card } from '@orfium/ictinus';
-import { FIGMA_URL } from 'utils/common';
+import { FIGMA_URL } from '~/utils/common';
 import CardShowcase from '../storyUtils/CardShowcase';
 import Stack from '../storyUtils/Stack';
 

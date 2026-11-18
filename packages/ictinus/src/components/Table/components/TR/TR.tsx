@@ -1,6 +1,6 @@
 import type { CSSObject } from '@emotion/react';
 import React from 'react';
-import type { DivProps } from 'utils/common';
+import type { DivProps } from '~/utils/common';
 
 import { trContainer } from './TR.style';
 

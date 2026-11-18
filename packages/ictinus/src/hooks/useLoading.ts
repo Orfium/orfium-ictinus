@@ -1,5 +1,4 @@
-import type { MouseEvent } from 'react';
-import { useCallback, useState } from 'react';
+import { useCallback, useState, type MouseEvent } from 'react';
 
 export type ClickEvent = MouseEvent<HTMLButtonElement> | undefined;
 export type ClickHandler =

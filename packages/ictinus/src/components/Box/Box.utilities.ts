@@ -1,6 +1,6 @@
 import { vars } from '@orfium/tokens';
 import { curry, get, omit, pick } from 'lodash-es';
-import type { Theme } from 'theme';
+import type { Theme } from '../../theme';
 
 import type { StyledBoxProps } from './Box.types';
 

@@ -1,6 +1,6 @@
 import { Link } from '@orfium/ictinus';
 import { MemoryRouter, NavLink } from 'react-router';
-import { FIGMA_URL } from 'utils/common';
+import { FIGMA_URL } from '~/utils/common';
 import Stack from '../storyUtils/Stack';
 
 export default {

@@ -1,6 +1,5 @@
 import userEvent from '@testing-library/user-event';
-import type { Mock } from 'vitest';
-import { vi } from 'vitest';
+import { vi, type Mock } from 'vitest';
 import CheckBox from '.';
 import { render, screen } from '../../../test';
 

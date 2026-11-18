@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'test';
+import { render } from '~/test';
 
 import { currentDay } from '../utils';
 import Month from './Month';

@@ -1,7 +1,5 @@
 import { css } from '@emotion/react';
-import type { Theme } from 'theme';
-
-import { TypographyConfigStyles } from '@orfium/ictinus';
+import { type Theme, TypographyConfigStyles } from '@orfium/ictinus';
 
 export const LinkWrapper = (theme: Theme) => css`
   span {

@@ -1,5 +1,4 @@
-import type { RefObject } from 'react';
-import { useImperativeHandle, useRef } from 'react';
+import { useImperativeHandle, useRef, type RefObject } from 'react';
 
 export function createDOMRef<T extends HTMLElement = HTMLElement>(ref: RefObject<T | null>): T {
   return ref.current;

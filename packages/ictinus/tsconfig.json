@@ -3,16 +3,10 @@
     "target": "ES2020",
     "outDir": "dist",
     "rootDir": "./",
-    "baseUrl": "./src",
     "paths": {
-      "~/*": ["./*"],
-      "hooks/*": ["./hooks/*"],
-      "theme/*": ["./theme/*"],
-      "utils/*": ["./utils/*"],
-      "types": ["./types.d.ts"],
-      "components/*": ["./components/*"]
+      "~/*": ["./src/*"]
     },
-    "lib": ["ES2020", "DOM", "DOM.Iterable", "ESNext"],
+    "lib": ["ES2020", "DOM", "ESNext"],
     "moduleResolution": "bundler",
     "sourceMap": true,
     "esModuleInterop": true,
@@ -22,8 +16,8 @@
     "module": "ESNext",
     "types": ["@emotion/react/types/css-prop"],
     "allowUnreachableCode": false,
-    /* Linting */
-    //    "strict": true,
+    /* Linting - explicit false preserves TS 5.x default */
+    "strict": false,
     //    "noUnusedLocals": true,
     //    "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,

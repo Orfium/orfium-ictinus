@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { rem, vars } from '@orfium/tokens';
 
-import { body02, body03, label02, label03 } from 'components/Typography/Typography.config.styles';
+import { body02, body03, label02, label03 } from '~/components/Typography/Typography.config.styles';
 import type { ListRowSize } from '../../types';
 import { LIST_ITEM_HEIGHT } from '../../utils';
 

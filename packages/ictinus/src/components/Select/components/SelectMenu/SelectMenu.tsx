@@ -1,13 +1,12 @@
 import type { CSSObject } from '@emotion/react';
-import type { ListSelection } from 'components/List';
-import List, { ListItem, ListItemText, ListSection } from 'components/List';
-import { LIST_ITEM_HEIGHT, MAX_NON_VIRTUALIZED_ITEMS_SELECT } from 'components/List/utils';
-import { SELECT_ALL_OPTION } from 'components/Select/constants';
-import type { TextInputBaseProps } from 'components/TextInputBase';
-import useCombinedRefs from 'hooks/useCombinedRefs';
+import List, { ListItem, ListItemText, ListSection, type ListSelection } from '~/components/List';
+import { LIST_ITEM_HEIGHT, MAX_NON_VIRTUALIZED_ITEMS_SELECT } from '~/components/List/utils';
+import { SELECT_ALL_OPTION } from '~/components/Select/constants';
+import type { TextInputBaseProps } from '~/components/TextInputBase';
+import useCombinedRefs from '~/hooks/useCombinedRefs';
 import { flatMap, head, uniqueId } from 'lodash-es';
 import { forwardRef, useCallback, useEffect, useRef } from 'react';
-import type { ComponentSizes } from 'utils/types';
+import type { ComponentSizes } from '~/utils/types';
 import type { SelectOption } from '../../types';
 import { emptyAndLoadingStyle, innerMenuStyle, menuStyle, optionStyle } from './SelectMenu.style';
 

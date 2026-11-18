@@ -1,7 +1,7 @@
 import type { CSSObject } from '@emotion/react';
 import React from 'react';
 
-import type { TableProps } from 'components/Table/types';
+import type { TableProps } from '~/components/Table/types';
 import { tHeadContainer } from './THead.style';
 
 export type THeadProps = Pick<TableProps<any>, 'hasStickyHeader'> & {

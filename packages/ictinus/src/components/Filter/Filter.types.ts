@@ -1,6 +1,6 @@
-import type { SelectOption } from 'components/Select';
+import type { SelectOption } from '~/components/Select';
 import type React from 'react';
-import type { TestProps } from 'utils/types';
+import type { TestProps } from '~/utils/types';
 
 export type FilterOption = SelectOption;
 

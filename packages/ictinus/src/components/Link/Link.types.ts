@@ -1,6 +1,6 @@
 import type { AnchorHTMLAttributes, ElementType } from 'react';
 
-import type { AcceptedIconNames } from 'components/Icon';
+import type { AcceptedIconNames } from '~/components/Icon';
 
 export type LinkSizes = 1 | 2 | 3;
 

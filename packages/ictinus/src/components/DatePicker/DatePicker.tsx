@@ -1,15 +1,14 @@
-import { PositionInScreen } from 'components/utils/PositionInScreen';
-import useKeyboardEvents from 'hooks/useKeyboardEvents';
+import { PositionInScreen } from '~/components/utils/PositionInScreen';
+import useKeyboardEvents from '~/hooks/useKeyboardEvents';
 import React, { memo, useCallback, useMemo, useState } from 'react';
 import isEqual from 'react-fast-compare';
-import type { Dayjs } from 'utils/date';
-import type { TestProps } from 'utils/types';
+import type { Dayjs } from '~/utils/date';
+import type { TestProps } from '~/utils/types';
 import { EMPTY_STATE } from './constants';
 import { datePickerStyles } from './DatePicker.style';
 import type { DatePickerProps } from './DatePicker.types';
 import DatePickInput from './DatePickInput';
-import type { Range } from './OverlayComponent/OverlayComponent';
-import OverlayComponent from './OverlayComponent/OverlayComponent';
+import OverlayComponent, { type Range } from './OverlayComponent/OverlayComponent';
 import { initDates } from './utils';
 
 const DatePicker: React.FC<DatePickerProps & TestProps> = ({

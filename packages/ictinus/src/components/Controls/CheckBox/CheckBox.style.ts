@@ -1,9 +1,8 @@
-import type { SerializedStyles } from '@emotion/react';
-import { css } from '@emotion/react';
-import type { Theme } from 'theme';
+import { css, type SerializedStyles } from '@emotion/react';
+import type { Theme } from '../../../theme';
 
 import { vars } from '@orfium/tokens';
-import type { LabelConfig } from 'components/Controls/Controls.types';
+import type { LabelConfig } from '../Controls.types';
 
 export const checkboxWrapperStyles =
   ({ sx }: Pick<LabelConfig, 'sx'>) =>

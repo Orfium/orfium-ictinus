@@ -1,12 +1,12 @@
 import * as React from 'react';
 import type { SwitchAria } from 'react-aria';
 import { Switch as ReactAriaSwitch } from 'react-aria-components';
-import type { TestProps } from 'utils/types';
+import type { TestProps } from '../../../utils/types';
 
-import { ControlHelpText, ControlLabelText } from 'components/Controls/ControlLabel';
-import type { LabelConfig } from 'components/Controls/Controls.types';
+import { ControlHelpText, ControlLabelText } from '../ControlLabel';
+import type { LabelConfig } from '../Controls.types';
 import { rem } from 'polished';
-import Box from '~/components/Box';
+import Box from '../../Box';
 import { switchStyles, switchWrapperStyles } from './Switch.style';
 
 export type SwitchProps = Partial<SwitchAria> & {

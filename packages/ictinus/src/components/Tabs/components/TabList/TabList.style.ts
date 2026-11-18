@@ -1,5 +1,4 @@
-import type { CSSObject } from '@emotion/react';
-import { css } from '@emotion/react';
+import { css, type CSSObject } from '@emotion/react';
 import { vars } from '@orfium/tokens';
 
 import type { Theme } from '~/theme';

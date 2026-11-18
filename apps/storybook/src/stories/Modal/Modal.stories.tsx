@@ -10,7 +10,7 @@ import {
 } from '@orfium/ictinus';
 import { screen, userEvent, within } from 'storybook/test';
 import { useState } from 'react';
-import { FIGMA_URL } from 'utils/common';
+import { FIGMA_URL } from '~/utils/common';
 import { currentDay } from '../DatePicker/utils';
 import ModalShowcase from '../storyUtils/ModalShowcase';
 import PresentComponent from '../storyUtils/PresentComponent';

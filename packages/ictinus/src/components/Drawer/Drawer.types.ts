@@ -1,4 +1,4 @@
-import type { TestProps } from 'utils/types';
+import type { TestProps } from '~/utils/types';
 
 export type AnchorType = 'bottom' | 'left' | 'right' | 'top';
 

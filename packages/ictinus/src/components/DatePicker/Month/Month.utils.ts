@@ -1,5 +1,4 @@
-import type { Dayjs } from 'utils/date';
-import dayjs from 'utils/date';
+import dayjs, { type Dayjs } from '~/utils/date';
 
 import type { DisabledDates } from '../DatePicker.types';
 import { currentDay } from '../utils';

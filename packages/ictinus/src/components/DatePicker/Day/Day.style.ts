@@ -1,9 +1,8 @@
-import type { SerializedStyles } from '@emotion/react';
-import { css } from '@emotion/react';
-import type { Theme } from 'theme';
+import { css, type SerializedStyles } from '@emotion/react';
+import type { Theme } from '~/theme';
 
 import { vars } from '@orfium/tokens';
-import { label02 } from 'components/Typography/Typography.config.styles';
+import { label02 } from '~/components/Typography/Typography.config.styles';
 
 type DayStyleProps = {
   day?: number;

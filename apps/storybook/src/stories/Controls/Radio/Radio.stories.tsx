@@ -1,8 +1,7 @@
-import { Radio } from '@orfium/ictinus';
+import { Radio, RadioGroup } from '@orfium/ictinus';
 import { useState } from 'react';
-import { FIGMA_URL } from 'utils/common';
+import { FIGMA_URL } from '~/utils/common';
 import Stack from '~/stories/storyUtils/Stack';
-import { RadioGroup } from '@orfium/ictinus';
 
 export default {
   title: 'Updated Components/Controls/Radio',

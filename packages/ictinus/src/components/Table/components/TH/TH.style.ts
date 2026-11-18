@@ -1,12 +1,11 @@
-import type { CSSObject, SerializedStyles, Theme } from '@emotion/react';
-import { css } from '@emotion/react';
+import { css, type CSSObject, type SerializedStyles, type Theme } from '@emotion/react';
 
-import type { TableProps } from 'components/Table';
-import { generateStylesFromTokens } from 'components/Typography/utils';
+import type { TableProps } from '~/components/Table';
+import { generateStylesFromTokens } from '~/components/Typography/utils';
 import { ACTIONS_CELL_WIDTH, contentAlignToFlex } from '../../constants';
 
 import { rem, vars } from '@orfium/tokens';
-import { lineEllipsis } from 'theme/functions';
+import { lineEllipsis } from '~/theme/functions';
 
 const TH_HEIGHT = {
   sm: vars.sizing['11'],

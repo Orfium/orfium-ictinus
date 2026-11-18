@@ -1,6 +1,6 @@
 import { Tag, Typography } from '@orfium/ictinus';
 import { useState } from 'react';
-import { FIGMA_URL } from 'utils/common';
+import { FIGMA_URL } from '~/utils/common';
 import Stack from '~/stories/storyUtils/Stack';
 import TagShowcase from '../../storybook/Showcases/TagShowcase';
 

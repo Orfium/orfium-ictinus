@@ -1,5 +1,4 @@
-import type { ReactElement, RefObject } from 'react';
-import React, { forwardRef, useEffect, useRef } from 'react';
+import React, { forwardRef, useEffect, useRef, type ReactElement, type RefObject } from 'react';
 import { useId } from 'react-aria';
 
 import Icon from '../Icon';

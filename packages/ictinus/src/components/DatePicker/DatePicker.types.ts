@@ -1,5 +1,5 @@
-import type { FilterType } from 'components/Filter/Filter.types';
-import type { Dayjs } from 'utils/date';
+import type { FilterType } from '~/components/Filter/Filter.types';
+import type { Dayjs } from '~/utils/date';
 import type { TextFieldProps } from '../TextField/TextField';
 
 export type DisabledDates = {

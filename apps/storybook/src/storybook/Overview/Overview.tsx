@@ -1,5 +1,5 @@
 import React from 'react';
-import Typography from 'storybook/Typography/Typography';
+import Typography from '../Typography/Typography';
 
 import { overviewStyles } from './Overview.style';
 

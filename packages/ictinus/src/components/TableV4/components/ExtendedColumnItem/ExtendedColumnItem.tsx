@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { vars } from '@orfium/tokens';
-import Icon from 'components/Icon';
-import Tooltip from 'components/Tooltip';
+import Icon from '~/components/Icon';
+import Tooltip from '~/components/Tooltip';
 import type { ExtendedColumn, Sort } from '../../types';
 import { hasTooltipOrSortingKey, isItemString } from '../../utils';
 import { containerStyles, contentStyles } from './ExtendedColumnItem.style';

@@ -3,13 +3,13 @@ import type {
   FilterProps,
   MultiFilterProps,
   SingleFilterProps,
-} from 'components/Filter/Filter.types';
-import Icon from 'components/Icon';
-import MultiTextFieldBase from 'components/MultiTextFieldBase';
-import ProgressIndicator from 'components/ProgressIndicator';
-import TextField from 'components/TextField';
+} from '~/components/Filter/Filter.types';
+import Icon from '~/components/Icon';
+import MultiTextFieldBase from '~/components/MultiTextFieldBase';
+import ProgressIndicator from '~/components/ProgressIndicator';
+import TextField from '~/components/TextField';
 import React, { useMemo } from 'react';
-import { generateTestDataId } from 'utils/helpers';
+import { generateTestDataId } from '~/utils/helpers';
 import { textFieldWrapper } from './FilterSearchField.style';
 
 export type SearchInputProps = {

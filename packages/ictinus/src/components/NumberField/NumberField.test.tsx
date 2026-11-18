@@ -1,7 +1,6 @@
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import type { NumberFieldProps as Props } from './NumberField';
-import NumberField from './NumberField';
+import NumberField, { type NumberFieldProps as Props } from './NumberField';
 import { render, screen } from '../../test';
 
 const renderNumberField = (props: Partial<Props> = {}) => {

@@ -1,7 +1,7 @@
 import { Select, StatefulSelect } from '@orfium/ictinus';
 import { useState } from 'react';
 import { userEvent, within } from 'storybook/test';
-import { FIGMA_URL } from 'utils/common';
+import { FIGMA_URL } from '~/utils/common';
 import EdgeCasesSelectShowcase from '../storyUtils/EdgeCasesSelectShowcase';
 import { MultiSelectShowcase, SelectShowcase } from '../storyUtils/SelectShowcase';
 import Stack from '../storyUtils/Stack';

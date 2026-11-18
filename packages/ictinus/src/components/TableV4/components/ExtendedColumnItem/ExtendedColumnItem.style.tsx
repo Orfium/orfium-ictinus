@@ -1,7 +1,6 @@
-import type { SerializedStyles } from '@emotion/react';
-import { css } from '@emotion/react';
+import { css, type SerializedStyles } from '@emotion/react';
 import { rem, vars } from '@orfium/tokens';
-import { flexCenterVertical } from 'theme/functions';
+import { flexCenterVertical } from '~/theme/functions';
 
 export const containerStyles = (gap: string) => (): SerializedStyles =>
   css`

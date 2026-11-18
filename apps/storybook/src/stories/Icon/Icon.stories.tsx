@@ -1,5 +1,5 @@
 import { Icon } from '@orfium/ictinus';
-import { FIGMA_URL } from 'utils/common';
+import { FIGMA_URL } from '~/utils/common';
 import IconographyShowcase from '~/stories/storyUtils/IconographyShowcase';
 import Stack from '~/stories/storyUtils/Stack';
 

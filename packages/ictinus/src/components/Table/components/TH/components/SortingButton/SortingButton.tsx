@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { badgeContainer } from './SortingButton.style';
-import IconButton from 'components/IconButton';
+import IconButton from '~/components/IconButton';
 
 import type { AcceptedIconNames } from '~/components/Icon';
 import type { TestProps } from '~/utils/types';

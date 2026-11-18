@@ -1,8 +1,6 @@
-import type { FCC } from 'react';
-import * as React from 'react';
-import { useMemo } from 'react';
+import { useMemo, type FCC } from 'react';
 import type { IThumbProps } from 'react-range/lib/types';
-import type { TestProps } from 'utils/types';
+import type { TestProps } from '~/utils/types';
 
 import { Thumb } from './SliderThumb.style';
 

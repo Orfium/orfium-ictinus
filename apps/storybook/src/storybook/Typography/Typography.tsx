@@ -1,6 +1,5 @@
 import { Unstyled } from '@storybook/addon-docs/blocks';
-import type { FCC } from 'react';
-import { type ComponentProps, useMemo } from 'react';
+import { useMemo, type ComponentProps, type FCC } from 'react';
 
 import { Typography as TypographyComponent, type TypographyVariant } from '@orfium/ictinus';
 

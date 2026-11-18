@@ -1,5 +1,5 @@
 import * as React from 'react';
-import type { TestId } from 'utils/types';
+import type { TestId } from '~/utils/types';
 
 import type {
   NotificationActions,

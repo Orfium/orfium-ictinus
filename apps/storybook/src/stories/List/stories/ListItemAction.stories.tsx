@@ -1,5 +1,5 @@
 import { ListItemAction } from '@orfium/ictinus';
-import { FIGMA_URL } from 'utils/common';
+import { FIGMA_URL } from '~/utils/common';
 
 export default {
   title: 'Updated Components/List/ListItemAction',

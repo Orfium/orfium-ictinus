@@ -1,5 +1,5 @@
 import { type ElementType, type ReactElement, type ReactEventHandler, type ReactNode } from 'react';
-import type { TestProps } from 'utils/types';
+import type { TestProps } from '~/utils/types';
 
 export type SharedProps = {
   /**

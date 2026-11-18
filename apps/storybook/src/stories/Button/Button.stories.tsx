@@ -1,7 +1,7 @@
 import { Button } from '@orfium/ictinus';
 import Stack from '../storyUtils/Stack';
 
-import { FIGMA_URL } from 'utils/common';
+import { FIGMA_URL } from '~/utils/common';
 import { ButtonShowcase, LoadingButtonShowcase } from '../storyUtils/ButtonShowcases';
 
 export default {

@@ -1,6 +1,6 @@
 import { waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { fireEvent, render, screen, within } from 'test';
+import { fireEvent, render, screen, within } from '~/test';
 import { vi } from 'vitest';
 import TableV4 from './TableV4';
 

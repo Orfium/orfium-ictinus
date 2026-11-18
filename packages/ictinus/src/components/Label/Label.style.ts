@@ -1,9 +1,7 @@
-import type { SerializedStyles } from '@emotion/react';
-import { css } from '@emotion/react';
-import type { SemanticTypographyKey } from '@orfium/tokens';
-import { rem, vars } from '@orfium/tokens';
-import { generateStylesFromTokens } from 'components/Typography/utils';
-import type { Theme } from 'theme';
+import { css, type SerializedStyles } from '@emotion/react';
+import { rem, vars, type SemanticTypographyKey } from '@orfium/tokens';
+import { generateStylesFromTokens } from '~/components/Typography/utils';
+import type { Theme } from '~/theme';
 import type { LabelProps } from './Label';
 
 export const LABEL_TRANSFORM_LEFT_SPACING = rem(3);

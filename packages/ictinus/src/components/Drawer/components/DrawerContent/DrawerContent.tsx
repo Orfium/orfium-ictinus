@@ -1,6 +1,6 @@
 import { rem } from 'polished';
 import { type FCC } from 'react';
-import type { TestProps } from 'utils/types';
+import type { TestProps } from '~/utils/types';
 
 import useDrawerContentObserver from './hooks/useDrawerContentObserver';
 import { contentStyle } from '../../Drawer.style';

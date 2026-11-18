@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react';
 
 import { vars } from '@orfium/tokens';
-import Icon from 'components/Icon';
-import type { TextFieldProps } from 'components/TextField/TextField';
+import Icon from '~/components/Icon';
+import type { TextFieldProps } from '~/components/TextField/TextField';
 import type { SelectOption } from '../Select';
 import type { Props as MultiTextFieldBase } from './MultiTextFieldBase';
 

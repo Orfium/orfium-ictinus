@@ -1,4 +1,4 @@
-import { fireEvent, render } from 'test';
+import { fireEvent, render } from '~/test';
 import { vi } from 'vitest';
 import { APPLY, CALENDAR_DEFAULT_OPTIONS } from '../constants';
 import { currentDay } from '../utils';

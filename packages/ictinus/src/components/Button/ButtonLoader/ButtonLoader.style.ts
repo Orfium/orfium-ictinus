@@ -1,5 +1,4 @@
-import type { SerializedStyles } from '@emotion/react';
-import { css, keyframes } from '@emotion/react';
+import { css, keyframes, type SerializedStyles } from '@emotion/react';
 import { rem, vars } from '@orfium/tokens';
 
 export const loaderWrapperStyle = (): SerializedStyles => {

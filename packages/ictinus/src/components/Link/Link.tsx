@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { vars } from '@orfium/tokens';
-import Icon from 'components/Icon';
+import Icon from '~/components/Icon';
 import { useSlotProps } from '../utils/Slots';
 import { linkContainer } from './Link.style';
 import type { LinkProps } from './Link.types';

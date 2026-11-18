@@ -1,12 +1,12 @@
 import React from 'react';
 import type { CheckboxAria } from 'react-aria';
 import { Checkbox as ReactAriaCheckbox } from 'react-aria-components';
-import type { TestProps } from 'utils/types';
+import type { TestProps } from '../../../utils/types';
 
 import { vars } from '@orfium/tokens';
-import type { LabelConfig } from 'components/Controls/Controls.types';
-import Box from '~/components/Box';
-import Icon from '~/components/Icon';
+import type { LabelConfig } from '../Controls.types';
+import Box from '../../Box';
+import Icon from '../../Icon';
 import { ControlHelpText, ControlLabelText } from '../ControlLabel';
 import { checkboxStyles, checkboxWrapperStyles } from './CheckBox.style';
 

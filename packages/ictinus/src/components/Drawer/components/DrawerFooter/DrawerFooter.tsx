@@ -1,5 +1,5 @@
 import type { FCC } from 'react';
-import type { TestProps } from 'utils/types';
+import type { TestProps } from '~/utils/types';
 
 import { footerStyle } from '../../Drawer.style';
 import { useDrawerContext } from '../../DrawerContext';

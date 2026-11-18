@@ -1,6 +1,6 @@
 import React from 'react';
-import { lineEllipsis } from 'theme/functions';
-import type { DivProps } from 'utils/common';
+import { lineEllipsis } from '~/theme/functions';
+import type { DivProps } from '~/utils/common';
 import useGetTagUtils from './hooks/useGetTagUtils';
 import * as styles from './Tag.style';
 import type { TagProps } from './Tag.types';

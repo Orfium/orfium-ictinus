@@ -8,7 +8,7 @@ import {
   type AriaListBoxProps,
 } from 'react-aria';
 import { useListState } from 'react-stately';
-import type { TestProps } from 'utils/types';
+import type { TestProps } from '~/utils/types';
 import useCombinedRefs from '../../hooks/useCombinedRefs';
 import type { SelectOption } from '../Select';
 import ListItemWrapper from './components/ListItemWrapper/ListItemWrapper';

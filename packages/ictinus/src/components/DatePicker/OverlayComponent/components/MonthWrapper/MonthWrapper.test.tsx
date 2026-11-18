@@ -1,4 +1,4 @@
-import { fireEvent, render } from 'test';
+import { fireEvent, render } from '~/test';
 import { vi } from 'vitest';
 import { currentDay } from '../../../utils';
 import MonthWrapper from './MonthWrapper';

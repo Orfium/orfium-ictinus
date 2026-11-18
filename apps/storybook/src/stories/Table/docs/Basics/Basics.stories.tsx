@@ -1,6 +1,5 @@
 import { Table } from '@orfium/ictinus';
-import type { SimpleData } from '../../constants';
-import { simpleData } from '../../constants';
+import { simpleData, type SimpleData } from '../../constants';
 import type { TableColumn } from '../../types';
 
 export default {

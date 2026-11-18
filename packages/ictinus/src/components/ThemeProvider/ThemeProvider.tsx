@@ -1,15 +1,14 @@
-import { ThemeProvider as EmotionThemeProvider } from '@emotion/react';
-import { Global } from '@emotion/react';
-import { ThemeSwitchProvider, useThemeSwitch } from 'hooks/useThemeSwitch';
-import { TypeColorToColorMatchProvider } from 'hooks/useTypeColorToColorMatch';
+import { Global, ThemeProvider as EmotionThemeProvider } from '@emotion/react';
+import { ThemeSwitchProvider, useThemeSwitch } from '~/hooks/useThemeSwitch';
+import { TypeColorToColorMatchProvider } from '~/hooks/useTypeColorToColorMatch';
 import { keys, merge, pick } from 'lodash-es';
 import * as React from 'react';
-import theme from 'theme';
-import type { ColorScheme, Theme, ThemeConfig } from 'theme/types';
-import type { DeepPartial } from 'utils/types';
+import theme from '~/theme';
+import type { ColorScheme, Theme, ThemeConfig } from '~/theme/types';
+import type { DeepPartial } from '~/utils/types';
 
 import { globalStyles } from './ThemeProvider.style';
-import 'utils/date';
+import '~/utils/date';
 
 export type ThemeProviderProps = {
   /** Theme properties to override or pass theming down to library */

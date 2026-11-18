@@ -1,9 +1,8 @@
-import type { SerializedStyles } from '@emotion/react';
-import { css } from '@emotion/react';
+import { css, type SerializedStyles } from '@emotion/react';
 import { rem, vars } from '@orfium/tokens';
 import { isUndefined } from 'lodash-es';
 
-import type { ProgressIndicatorProps } from 'components/ProgressIndicator/ProgressIndicator.types';
+import type { ProgressIndicatorProps } from '~/components/ProgressIndicator/ProgressIndicator.types';
 
 const PROGRESS_INDICATOR_TOKENS = {
   height: {

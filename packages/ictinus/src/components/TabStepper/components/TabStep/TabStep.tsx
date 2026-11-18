@@ -2,8 +2,7 @@ import { vars, type SemanticColorsKey } from '@orfium/tokens';
 import get from 'lodash-es/get';
 import React from 'react';
 import { Tab as ReactAriaTab } from 'react-aria-components';
-import type { AcceptedIconNames } from '~/components/Icon';
-import Icon from '~/components/Icon';
+import Icon, { type AcceptedIconNames } from '~/components/Icon';
 import type { TabStepProps } from '../../types';
 import { stepContainer, stepStyles, stepSubtitle, stepTitle } from './TabStep.style';
 

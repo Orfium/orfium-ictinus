@@ -1,9 +1,8 @@
-import type { SerializedStyles } from '@emotion/react';
-import { css } from '@emotion/react';
+import { css, type SerializedStyles } from '@emotion/react';
 import { rem } from 'polished';
 
 import { vars } from '@orfium/tokens';
-import { getBorderColor } from 'components/TableV4/utils';
+import { getBorderColor } from '~/components/TableV4/utils';
 
 export const borderedRowStyle = ({
   isBordered,

@@ -1,9 +1,9 @@
 import { css } from '@emotion/react';
 import { rem, vars } from '@orfium/tokens';
-import { FILTER_WIDTH } from 'components/Filter/constants';
-import { generateStylesFromTokens } from 'components/Typography/utils';
-import type { Theme } from 'theme';
-import { flexCenter } from 'theme/functions';
+import { FILTER_WIDTH } from '~/components/Filter/constants';
+import { generateStylesFromTokens } from '~/components/Typography/utils';
+import type { Theme } from '~/theme';
+import { flexCenter } from '~/theme/functions';
 
 const LIST_ITEM_TOKENS = {
   height: vars.sizing['13'],

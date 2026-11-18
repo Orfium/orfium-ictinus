@@ -1,10 +1,9 @@
 import React from 'react';
 
 import { vars } from '@orfium/tokens';
-import type { PrimitiveButtonTypes } from 'components/Button/Button.types';
-import type { ButtonBaseProps } from 'components/ButtonBase/ButtonBase';
-import ButtonBase from 'components/ButtonBase/ButtonBase';
-import { BUTTON_COLOR } from 'components/ButtonBase/constants';
+import type { PrimitiveButtonTypes } from '~/components/Button/Button.types';
+import ButtonBase, { type ButtonBaseProps } from '~/components/ButtonBase/ButtonBase';
+import { BUTTON_COLOR } from '~/components/ButtonBase/constants';
 import Icon from '../Icon';
 import { type AcceptedIconNames } from '../Icon/Icon.types';
 

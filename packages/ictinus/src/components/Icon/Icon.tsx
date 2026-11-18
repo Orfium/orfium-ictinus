@@ -1,10 +1,9 @@
 import { vars } from '@orfium/tokens';
-import { useSlotProps } from 'components/utils/Slots';
-import useCombinedRefs from 'hooks/useCombinedRefs';
-import * as React from 'react';
-import { useRef } from 'react';
-import type { DivProps } from 'utils/common';
-import type { TestProps } from 'utils/types';
+import { useSlotProps } from '../utils/Slots';
+import useCombinedRefs from '../../hooks/useCombinedRefs';
+import React, { useRef } from 'react';
+import type { DivProps } from '../../utils/common';
+import type { TestProps } from '../../utils/types';
 import iconSelector from './assets/iconSelector';
 import { iconContainerStyles, iconStyles } from './Icon.style';
 import type { AcceptedIconNames } from './Icon.types';

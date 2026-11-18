@@ -1,7 +1,7 @@
 import React, { useCallback, useMemo, useRef, useState } from 'react';
 
 import { TruncationDiv } from './TruncatedContent.style';
-import Tooltip from 'components/Tooltip';
+import Tooltip from '~/components/Tooltip';
 
 export type TruncatedContentProps = {
   /** The content of the tooltip */

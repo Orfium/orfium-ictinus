@@ -1,11 +1,10 @@
-import useCombinedRefs from 'hooks/useCombinedRefs';
+import useCombinedRefs from '../../../hooks/useCombinedRefs';
 import * as React from 'react';
-import type { RadioAria } from 'react-aria';
-import { mergeProps, useFocusRing, useRadio, VisuallyHidden } from 'react-aria';
+import { mergeProps, useFocusRing, useRadio, VisuallyHidden, type RadioAria } from 'react-aria';
 import type { RadioGroupState } from 'react-stately';
-import type { TestProps } from 'utils/types';
+import type { TestProps } from '../../../utils/types';
 
-import Box from '~/components/Box';
+import Box from '../../Box';
 import { ControlHelpText, ControlLabelText } from '../ControlLabel';
 import type { LabelConfig } from '../Controls.types';
 import { useRadioGroupContent } from './components/RadioGroup';
