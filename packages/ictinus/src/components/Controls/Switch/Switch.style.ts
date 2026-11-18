@@ -1,10 +1,8 @@
-import type { SerializedStyles } from '@emotion/react';
-import { css } from '@emotion/react';
-import type { Theme } from 'theme';
+import { css, type CSSObject, type SerializedStyles } from '@emotion/react';
+import type { Theme } from '../../../theme';
 
-import type { CSSObject } from '@emotion/react';
 import { vars } from '@orfium/tokens';
-import type { LabelConfig } from 'components/Controls/Controls.types';
+import type { LabelConfig } from '../Controls.types';
 
 const CONTROLS_HEIGHTS = {
   height: {

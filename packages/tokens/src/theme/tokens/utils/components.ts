@@ -1,5 +1,5 @@
 import { get, isEmpty } from 'lodash-es';
-import type { Theme } from 'theme';
+import type { Theme } from '~/theme';
 
 import { parseComponentToken, parseCompositionToken } from './parsers';
 import type { Token, TokensObject } from './types';

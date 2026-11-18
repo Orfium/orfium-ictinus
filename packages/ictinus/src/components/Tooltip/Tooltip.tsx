@@ -3,7 +3,7 @@ import React from 'react';
 import { Tooltip as ReactTooltip } from 'react-tooltip';
 
 import type { TooltipProps } from './Tooltip.types';
-import { tooltipStyle } from 'components/Tooltip/Tooltip.style';
+import { tooltipStyle } from '~/components/Tooltip/Tooltip.style';
 
 const Tooltip = React.forwardRef<HTMLDivElement, TooltipProps>(
   (

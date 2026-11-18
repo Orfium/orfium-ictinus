@@ -1,5 +1,4 @@
-import type { Dispatch, FCC } from 'react';
-import React, { createContext, useContext } from 'react';
+import React, { createContext, useContext, type Dispatch, type FCC } from 'react';
 
 const SET_HAS_FIXED_LAYOUT = 'SET_HAS_FIXED_LAYOUT';
 const SET_ON_CLOSE = 'SET_ON_CLOSE';

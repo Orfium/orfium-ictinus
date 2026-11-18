@@ -1,5 +1,4 @@
-import type { ReactElement, RefObject } from 'react';
-import React, { forwardRef } from 'react';
+import React, { forwardRef, type ReactElement, type RefObject } from 'react';
 import { useToast, useToastRegion } from 'react-aria';
 import { createPortal, flushSync } from 'react-dom';
 import { ToastQueue, useToastQueue } from 'react-stately';

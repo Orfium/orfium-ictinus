@@ -6,7 +6,7 @@ import {
   useTheme,
 } from '@orfium/ictinus';
 import { get } from 'lodash-es';
-import { WrapperStyle } from 'storybook/styles/OverviewCard.style';
+import { WrapperStyle } from '../../styles/OverviewCard.style';
 
 import { Typography } from '@orfium/ictinus';
 import { getAllPaths } from '../TokenColorsShowcase/utils';

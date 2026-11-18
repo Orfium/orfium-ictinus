@@ -1,7 +1,7 @@
 import type { Key } from 'react';
-import type { ComponentSizes } from 'utils/types';
+import type { ComponentSizes } from '~/utils/types';
 
-import type { SelectOption } from 'components/Select';
+import type { SelectOption } from '~/components/Select';
 
 export type ListSelection = Set<Key>;
 export type ListSelected = 'all' | Iterable<Key>;

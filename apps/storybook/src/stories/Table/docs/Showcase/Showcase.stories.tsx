@@ -10,8 +10,13 @@ import {
 } from '@orfium/ictinus';
 import { chunk, concat } from 'lodash-es';
 import { useEffect, useState } from 'react';
-import type { SimpleData } from '../../constants';
-import { contentAlignOptions, moreData, simpleData, sortedData } from '../../constants';
+import {
+  contentAlignOptions,
+  moreData,
+  simpleData,
+  sortedData,
+  type SimpleData,
+} from '../../constants';
 
 export default {
   title: 'Updated Components/Table/Table/Showcase',

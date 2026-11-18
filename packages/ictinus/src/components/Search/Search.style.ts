@@ -1,8 +1,8 @@
 import { css, type SerializedStyles } from '@emotion/react';
 import type { CSSObject } from '@emotion/serialize';
 import { rem, vars } from '@orfium/tokens';
-import { generateStylesFromTokens } from 'components/Typography/utils';
-import type { Theme } from 'theme';
+import { generateStylesFromTokens } from '~/components/Typography/utils';
+import type { Theme } from '~/theme';
 import type { SearchProps } from './Search.types';
 
 const SEARCH_TOKENS = {

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { errorHandler, generateTestDataId } from 'utils/helpers';
+import { errorHandler, generateTestDataId } from '~/utils/helpers';
 
 import { contentStyles } from './ExpandCollapse.style';
 import type { ExpandCollapseProps } from './ExpandCollapse.types';

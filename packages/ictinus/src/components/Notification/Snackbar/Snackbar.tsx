@@ -1,9 +1,9 @@
 import { vars } from '@orfium/tokens';
 import * as React from 'react';
-import { generateTestDataId } from 'utils/helpers';
-import type { TestId } from 'utils/types';
+import { generateTestDataId } from '~/utils/helpers';
+import type { TestId } from '~/utils/types';
 
-import Icon from 'components/Icon';
+import Icon from '~/components/Icon';
 import type {
   NotificationActions,
   NotificationStyleType,

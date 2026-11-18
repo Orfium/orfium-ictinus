@@ -1,5 +1,4 @@
-import type { RenderResult } from '@testing-library/react';
-import { render, screen, renderHook } from '@testing-library/react';
+import { render, renderHook, screen, type RenderResult } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import ThemeProvider from '../components/ThemeProvider';

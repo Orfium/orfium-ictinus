@@ -1,7 +1,6 @@
-import type { CSSObject, SerializedStyles } from '@emotion/react';
-import { css } from '@emotion/react';
+import { css, type CSSObject, type SerializedStyles } from '@emotion/react';
 
-import type { ContentAlign, TableProps } from 'components/Table';
+import type { ContentAlign, TableProps } from '~/components/Table';
 import { ACTIONS_CELL_WIDTH } from '../../constants';
 
 import { rem, vars } from '@orfium/tokens';

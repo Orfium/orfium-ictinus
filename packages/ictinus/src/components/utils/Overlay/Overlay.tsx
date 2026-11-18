@@ -1,5 +1,5 @@
 import type { CSSObject } from '@emotion/serialize';
-import { useOverlayStack } from 'hooks/useOverlayStack';
+import { useOverlayStack } from '~/hooks/useOverlayStack';
 import { rem } from 'polished';
 import React, { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';

@@ -1,6 +1,5 @@
 import userEvent from '@testing-library/user-event';
-import type { ChangeEvent, ComponentProps, KeyboardEvent } from 'react';
-import { useState } from 'react';
+import { useState, type ChangeEvent, type ComponentProps, type KeyboardEvent } from 'react';
 import { fireEvent, render, screen } from '~/test';
 import TextField from './TextField';
 

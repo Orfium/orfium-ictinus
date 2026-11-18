@@ -1,9 +1,12 @@
-import { type SemanticBoxShadowKey, semanticVariablesBoxShadow, useTheme } from '@orfium/ictinus';
+import {
+  type SemanticBoxShadowKey,
+  Typography,
+  semanticVariablesBoxShadow,
+  useTheme,
+} from '@orfium/ictinus';
 import { map } from 'lodash-es';
 import { rem } from 'polished';
-import { WrapperStyle } from 'storybook/styles/OverviewCard.style';
-
-import { Typography } from '@orfium/ictinus';
+import { WrapperStyle } from '../../styles/OverviewCard.style';
 
 const BoxShadowShowcase = () => {
   const spaces = map<{

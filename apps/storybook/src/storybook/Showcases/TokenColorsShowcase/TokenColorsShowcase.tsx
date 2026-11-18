@@ -1,10 +1,14 @@
 import { css } from '@emotion/react';
-import { type DotKeys, globalColors, semanticVariablesColors } from '@orfium/ictinus';
+import {
+  Card,
+  type DotKeys,
+  Typography,
+  globalColors,
+  semanticVariablesColors,
+} from '@orfium/ictinus';
+import { vars } from '@orfium/tokens';
 import { get } from 'lodash-es';
 import type { FCC } from 'react';
-
-import { Card, Typography } from '@orfium/ictinus';
-import { vars } from '@orfium/tokens';
 import { colorStyle, descriptionStyle, typeWrapperStyle } from './TokenColorsShowcase.style';
 import { getColors } from './utils';
 

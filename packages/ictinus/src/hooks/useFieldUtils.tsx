@@ -1,9 +1,8 @@
 import React, { useMemo } from 'react';
 
 import { vars } from '@orfium/tokens';
-import type { AcceptedIconNames } from 'components/Icon';
-import Icon from 'components/Icon';
-import type { TextFieldProps } from 'components/TextField';
+import Icon, { type AcceptedIconNames } from '~/components/Icon';
+import type { TextFieldProps } from '~/components/TextField';
 import useCombinedRefs from './useCombinedRefs';
 
 /** A custom hook containing all the utils that are shared between field components */

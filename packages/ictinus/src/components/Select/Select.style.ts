@@ -1,6 +1,5 @@
-import type { SerializedStyles } from '@emotion/react';
-import { css } from '@emotion/react';
-import { transition } from 'theme/functions';
+import { css, type SerializedStyles } from '@emotion/react';
+import { transition } from '~/theme/functions';
 
 import { FIELD_TOKENS } from '../DatePicker/DatePickInput/DatePickInput.style';
 

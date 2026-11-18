@@ -1,14 +1,13 @@
-import { FILTER_OPTIONS_MAX_HEIGHT } from 'components/Filter/constants';
+import { FILTER_OPTIONS_MAX_HEIGHT } from '~/components/Filter/constants';
 import type {
   FilterOption,
   FilterProps,
   MultiFilterProps,
   SingleFilterProps,
-} from 'components/Filter/Filter.types';
-import type { ListSelection } from 'components/List';
-import List, { ListItem, ListItemText } from 'components/List';
-import { MAX_NON_VIRTUALIZED_ITEMS_FILTER } from 'components/List/utils';
-import { SELECT_ALL_OPTION } from 'components/Select/constants';
+} from '~/components/Filter/Filter.types';
+import List, { ListItem, ListItemText, type ListSelection } from '~/components/List';
+import { MAX_NON_VIRTUALIZED_ITEMS_FILTER } from '~/components/List/utils';
+import { SELECT_ALL_OPTION } from '~/components/Select/constants';
 import { flatMap, head } from 'lodash-es';
 import React, { useCallback } from 'react';
 import { emptyStyle, optionsStyles } from './Options.style';

@@ -1,13 +1,11 @@
 import type { CSSObject } from '@emotion/serialize';
-import type { FCC } from 'react';
-import React from 'react';
+import React, { type FCC } from 'react';
 import isEqual from 'react-fast-compare';
-import { generateTestDataId } from 'utils/helpers';
-import type { ComponentSizes, TestProps } from 'utils/types';
+import { generateTestDataId } from '~/utils/helpers';
+import type { ComponentSizes, TestProps } from '~/utils/types';
 
 import { vars } from '@orfium/tokens';
-import type { AcceptedIconNames } from 'components/Icon';
-import Icon from 'components/Icon';
+import Icon, { type AcceptedIconNames } from '~/components/Icon';
 import { hintMessageStyle, textFieldStyle, wrapperStyle } from './TextInputBase.style';
 
 export type TextInputBaseProps = {

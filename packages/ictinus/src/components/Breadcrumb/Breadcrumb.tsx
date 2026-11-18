@@ -1,8 +1,8 @@
 import { isEmpty, omit } from 'lodash-es';
 import * as React from 'react';
-import { generateUniqueKey } from 'utils/helpers';
+import { generateUniqueKey } from '~/utils/helpers';
 
-import Link from 'components/Link';
+import Link from '~/components/Link';
 import BackToItem from './BackToItem';
 import { breadcrumbStyles } from './Breadcrumb.style';
 import type { BreadcrumbItem as BreadcrumbItemType, BreadcrumbProps } from './Breadcrumb.types';

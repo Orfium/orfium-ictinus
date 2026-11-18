@@ -1,5 +1,10 @@
-import type { DOMAttributes, KeyboardEvent, RefObject } from 'react';
-import { useCallback, useEffect } from 'react';
+import {
+  useCallback,
+  useEffect,
+  type DOMAttributes,
+  type KeyboardEvent,
+  type RefObject,
+} from 'react';
 
 const visibleOverlays: RefObject<Element | null>[] = [];
 

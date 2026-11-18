@@ -1,7 +1,7 @@
 import React from 'react';
-import type { TestProps } from 'utils/types';
+import type { TestProps } from '~/utils/types';
 
-import Link from 'components/Link';
+import Link from '~/components/Link';
 import type { BreadcrumbItem } from '../Breadcrumb.types';
 
 const GO_BACK_TO = 'Go back to';

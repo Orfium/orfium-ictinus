@@ -1,6 +1,5 @@
-import type { SerializedStyles } from '@emotion/react';
-import { css } from '@emotion/react';
-import { flex } from 'theme/functions';
+import { css, type SerializedStyles } from '@emotion/react';
+import { flex } from '~/theme/functions';
 
 import { vars } from '@orfium/tokens';
 

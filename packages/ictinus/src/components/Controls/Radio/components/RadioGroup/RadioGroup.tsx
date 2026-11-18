@@ -2,7 +2,7 @@ import type { CSSObject } from '@emotion/react';
 import * as React from 'react';
 import { useRadioGroup } from 'react-aria';
 import { useRadioGroupState } from 'react-stately';
-import type { TestProps } from 'utils/types';
+import type { TestProps } from '../../../../../utils/types';
 
 import { RadioContext } from './RadioGroupContext';
 

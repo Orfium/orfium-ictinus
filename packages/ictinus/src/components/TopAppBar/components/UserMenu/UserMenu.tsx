@@ -1,6 +1,4 @@
-import type { FC } from 'react';
-import { useRef, useState } from 'react';
-import React from 'react';
+import React, { useRef, useState, type FC } from 'react';
 
 import Button from '../../../Button';
 import { ListItem, ListItemText } from '../../../List';

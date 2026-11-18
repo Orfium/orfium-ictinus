@@ -1,4 +1,4 @@
-import useTheme from 'hooks/useTheme';
+import useTheme from '~/hooks/useTheme';
 import React from 'react';
 
 import Styles from './SidebarMenuIcon.style';

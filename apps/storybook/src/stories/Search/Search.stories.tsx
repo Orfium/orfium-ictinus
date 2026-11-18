@@ -11,7 +11,7 @@ import {
 import { vars } from '@orfium/tokens';
 import { rem } from 'polished';
 import { useState } from 'react';
-import { FIGMA_URL } from 'utils/common';
+import { FIGMA_URL } from '~/utils/common';
 import Stack from '~/stories/storyUtils/Stack';
 
 export default {

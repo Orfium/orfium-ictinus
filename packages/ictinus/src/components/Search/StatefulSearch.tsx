@@ -3,7 +3,7 @@ import isEqual from 'react-fast-compare';
 
 import Search from './Search';
 import type { SearchProps } from './Search.types';
-import type { FilterOption } from 'components/Filter';
+import type { FilterOption } from '~/components/Filter';
 
 const StatefulSearch = forwardRef<HTMLInputElement, Partial<SearchProps>>((props, ref) => {
   const { onClear, onInput, filterConfig, ...rest } = props;

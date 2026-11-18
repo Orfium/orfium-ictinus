@@ -1,8 +1,6 @@
-import { semanticVariablesColors } from '@orfium/ictinus';
-import { useMemo } from 'react';
-
-import { Typography, type TextColorTypes } from '@orfium/ictinus';
+import { type TextColorTypes, Typography, semanticVariablesColors } from '@orfium/ictinus';
 import { vars } from '@orfium/tokens';
+import { useMemo } from 'react';
 import { descriptionStyle, dividerStyle } from './TextColorShowcase.style';
 
 const TextColorShowcase = () => {

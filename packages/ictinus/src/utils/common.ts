@@ -1,5 +1,4 @@
-import type * as React from 'react';
-import type { ButtonHTMLAttributes } from 'react';
+import type { ButtonHTMLAttributes, ChangeEvent as ReactChangeEvent, HTMLProps } from 'react';
 
 /** A type to turn any type optional properties to required */
 export type RequiredProperties<T> = { [K in keyof T]-?: T[K] };
@@ -19,11 +18,11 @@ export type CommonButtonProps = Partial<
 >;
 
 //@TODO fix props to not overwrite div props from base
-export type DivProps = Partial<Omit<React.HTMLProps<HTMLDivElement>, 'color' | 'size' | 'css'>>;
+export type DivProps = Partial<Omit<HTMLProps<HTMLDivElement>, 'color' | 'size' | 'css'>>;
 
 export type FlexDirectionProperty = 'row' | 'column' | 'row-reverse' | 'column-reverse';
 
-export type ChangeEvent = React.ChangeEvent<HTMLInputElement>;
+export type ChangeEvent = ReactChangeEvent<HTMLInputElement>;
 
 export const DEFAULT_USER_MENU = {
   userName: 'Tom Cruise',

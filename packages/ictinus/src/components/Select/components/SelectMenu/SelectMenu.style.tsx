@@ -1,8 +1,7 @@
-import type { SerializedStyles } from '@emotion/react';
-import { css } from '@emotion/react';
+import { css, type SerializedStyles } from '@emotion/react';
 import { rem, vars } from '@orfium/tokens';
-import type { TextFieldProps } from 'components/TextField/TextField';
-import type { Theme } from 'theme';
+import type { TextFieldProps } from '~/components/TextField/TextField';
+import type { Theme } from '~/theme';
 import { generateStylesFromTokens } from '~/components/Typography';
 import { flexCenter } from '~/theme/functions';
 import type { SelectMenuProps } from './SelectMenu';

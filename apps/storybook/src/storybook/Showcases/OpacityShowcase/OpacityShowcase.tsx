@@ -1,10 +1,13 @@
-import { type DimensionOpacityKey, dimensionVariables, useTheme } from '@orfium/ictinus';
+import {
+  type DimensionOpacityKey,
+  Typography,
+  dimensionVariables,
+  useTheme,
+} from '@orfium/ictinus';
+import { vars } from '@orfium/tokens';
 import { get } from 'lodash-es';
 import { rem } from 'polished';
-import { WrapperStyle } from 'storybook/styles/OverviewCard.style';
-
-import { Typography } from '@orfium/ictinus';
-import { vars } from '@orfium/tokens';
+import { WrapperStyle } from '../../styles/OverviewCard.style';
 import { getAllPaths } from '../TokenColorsShowcase/utils';
 
 const OpacityShowcase = () => {

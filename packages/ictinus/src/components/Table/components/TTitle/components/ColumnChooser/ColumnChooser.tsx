@@ -3,13 +3,13 @@ import { Popover } from 'react-aria-components';
 
 import { menuStyle } from './ColumnChooser.style';
 import { flattenColumns } from '../utils';
-import Button from 'components/Button';
-import { Switch } from 'components/Controls';
-import { ListItem, ListItemAction, ListItemText } from 'components/List';
-import { listStyle } from 'components/List/List.style';
-import { MenuItemWrapper, MenuWrapper, popoverStyle } from 'components/Menu/Menu.style';
-import MenuItemDivider from 'components/Menu/MenuItemDivider';
-import type { TableProps } from 'components/Table/types';
+import Button from '~/components/Button';
+import { Switch } from '~/components/Controls';
+import { ListItem, ListItemAction, ListItemText } from '~/components/List';
+import { listStyle } from '~/components/List/List.style';
+import { MenuItemWrapper, MenuWrapper, popoverStyle } from '~/components/Menu/Menu.style';
+import MenuItemDivider from '~/components/Menu/MenuItemDivider';
+import type { TableProps } from '~/components/Table/types';
 
 import type { TestProps } from '~/utils/types';
 

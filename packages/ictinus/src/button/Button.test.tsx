@@ -1,6 +1,5 @@
 import userEvent from '@testing-library/user-event';
-import type { Mock } from 'vitest';
-import { vi } from 'vitest';
+import { vi, type Mock } from 'vitest';
 import { CloseIcon, PlusIcon } from '../icons';
 import { render, screen } from '../test';
 import { Button } from './Button';

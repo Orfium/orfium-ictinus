@@ -1,11 +1,11 @@
 import { vars } from '@orfium/tokens';
-import type { EventButtonProps } from 'components/ButtonBase';
-import type { FilterProps } from 'components/Filter/Filter.types';
-import Icon from 'components/Icon';
-import Tag from 'components/Tag';
+import type { EventButtonProps } from '~/components/ButtonBase';
+import type { FilterProps } from '~/components/Filter/Filter.types';
+import Icon from '~/components/Icon';
+import Tag from '~/components/Tag';
 import React from 'react';
-import type { CommonButtonProps } from 'utils/common';
-import type { TestProps } from 'utils/types';
+import type { CommonButtonProps } from '~/utils/common';
+import type { TestProps } from '~/utils/types';
 import { buttonStyles, iconStyles } from './FilterButton.style';
 
 export type FilterButtonProps = Pick<FilterProps, 'filterType' | 'colorScheme'> &

@@ -1,9 +1,9 @@
 import type { CSSObject } from '@emotion/react';
 import type { ColumnSort } from '@tanstack/react-table';
 import React from 'react';
-import type { DivProps } from 'utils/common';
+import type { DivProps } from '~/utils/common';
 
-import type { RowSize } from 'components/Table/types';
+import type { RowSize } from '~/components/Table/types';
 import { THOptions } from './components';
 import SortingButton from './components/SortingButton';
 import { optionsContainer, thContainer, thContent } from './TH.style';

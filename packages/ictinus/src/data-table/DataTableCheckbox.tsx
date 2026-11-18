@@ -1,6 +1,5 @@
 import clsx from 'clsx';
-import type { RefObject } from 'react';
-import { type ComponentPropsWithoutRef, forwardRef, useEffect, useId } from 'react';
+import { forwardRef, useEffect, useId, type ComponentPropsWithoutRef, type RefObject } from 'react';
 
 import Checkbox from '../components/Controls/CheckBox';
 import { useDOMRef } from '../components/utils/useDOMRef';

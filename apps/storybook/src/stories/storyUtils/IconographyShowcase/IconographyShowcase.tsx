@@ -1,6 +1,5 @@
 import { uniqueId } from 'lodash-es';
-import type { FCC } from 'react';
-import React, { useState } from 'react';
+import React, { useState, type FCC } from 'react';
 
 import {
   Icon,

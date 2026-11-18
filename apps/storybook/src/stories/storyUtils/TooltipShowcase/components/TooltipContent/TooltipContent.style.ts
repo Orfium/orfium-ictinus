@@ -1,5 +1,4 @@
-import type { SerializedStyles } from '@emotion/react';
-import { css } from '@emotion/react';
+import { css, type SerializedStyles } from '@emotion/react';
 import { generateStylesFromTokens, rem, type Theme } from '@orfium/ictinus';
 import { vars } from '@orfium/tokens';
 

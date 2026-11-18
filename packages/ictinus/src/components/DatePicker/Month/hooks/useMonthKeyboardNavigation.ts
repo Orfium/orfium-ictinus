@@ -1,8 +1,8 @@
-import useKeyboardEvents from 'hooks/useKeyboardEvents';
+import useKeyboardEvents from '~/hooks/useKeyboardEvents';
 import React from 'react';
 import type { KeyboardResult } from 'react-aria';
 
-import { currentDay } from 'components/DatePicker/utils';
+import { currentDay } from '~/components/DatePicker/utils';
 import type { MonthProps } from '../Month';
 
 type Props = Omit<MonthProps, 'onDaySelect' | 'disabledDates'>;

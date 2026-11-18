@@ -1,5 +1,5 @@
 import React from 'react';
-import type { TestProps } from 'utils/types';
+import type { TestProps } from '~/utils/types';
 
 import type { ListRowSize } from '../../types';
 import { ListItemWrapperStyled } from './ListItemWrapper.style';

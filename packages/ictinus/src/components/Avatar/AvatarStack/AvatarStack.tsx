@@ -1,5 +1,5 @@
 import React, { forwardRef, useCallback } from 'react';
-import { errorHandler, generateTestDataId } from 'utils/helpers';
+import { errorHandler, generateTestDataId } from '~/utils/helpers';
 
 import Avatar from '../Avatar';
 import { avatarStackStyle, avatarWrapperStyle } from './AvatarStack.style';

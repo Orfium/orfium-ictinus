@@ -1,10 +1,9 @@
-import type { SerializedStyles } from '@emotion/react';
-import { css } from '@emotion/react';
-import type { Theme } from 'theme';
+import { css, type SerializedStyles } from '@emotion/react';
+import type { Theme } from '~/theme';
 
 import { vars } from '@orfium/tokens';
-import { label02 } from 'components/Typography/Typography.config.styles';
-import { flex } from 'theme/functions';
+import { label02 } from '~/components/Typography/Typography.config.styles';
+import { flex } from '~/theme/functions';
 import { DATEPICKER_TOKENS } from '../Day/Day.style';
 
 export const overlayWrapperStyle = (): SerializedStyles => {

@@ -1,14 +1,14 @@
-import Label from 'components/Label';
-import ProgressIndicator from 'components/ProgressIndicator';
-import type { SelectOption } from 'components/Select';
-import Tag from 'components/Tag';
-import type { InputProps, TextFieldProps } from 'components/TextField/TextField';
-import TextInputBase from 'components/TextInputBase';
-import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
+import Label from '~/components/Label';
+import ProgressIndicator from '~/components/ProgressIndicator';
+import type { SelectOption } from '~/components/Select';
+import Tag from '~/components/Tag';
+import type { InputProps, TextFieldProps } from '~/components/TextField/TextField';
+import TextInputBase from '~/components/TextInputBase';
+import { inputStyle } from '~/components/TextInputBase/TextInputBase.style';
 import { last, merge, omit } from 'lodash-es';
 import React, { useMemo, useRef } from 'react';
-import { generateUniqueID, generateUniqueKey } from 'utils/helpers';
-import type { TestProps } from 'utils/types';
+import { generateUniqueID, generateUniqueKey } from '~/utils/helpers';
+import type { TestProps } from '~/utils/types';
 import useMultiTextFieldBaseUtils from './hooks';
 import {
   inputContainer,

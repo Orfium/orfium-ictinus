@@ -1,6 +1,5 @@
 import type { CSSObject } from '@emotion/react';
-import type { Row } from '@tanstack/react-table';
-import { flexRender } from '@tanstack/react-table';
+import { flexRender, type Row } from '@tanstack/react-table';
 import React, { useCallback, useMemo } from 'react';
 
 import type { RowSize } from '../types';

@@ -1,8 +1,7 @@
-import type { FCC } from 'react';
-import { useMemo } from 'react';
+import { useMemo, type FCC } from 'react';
 import { getTrackBackground } from 'react-range';
 import type { ITrackProps } from 'react-range/lib/types';
-import type { TestProps } from 'utils/types';
+import type { TestProps } from '~/utils/types';
 
 import { vars } from '@orfium/tokens';
 import { MAX, MIN } from '../../Slider';

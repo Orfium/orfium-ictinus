@@ -1,5 +1,4 @@
-import type { DotKeys } from '../tokens/utils';
-import { getTokensValue } from '../tokens/utils';
+import { getTokensValue, type DotKeys } from '../tokens/utils';
 
 import minHeightFigma from './variables/minHeight';
 

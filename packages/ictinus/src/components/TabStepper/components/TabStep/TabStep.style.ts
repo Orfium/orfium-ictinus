@@ -1,6 +1,6 @@
 import { css, type CSSObject } from '@emotion/react';
 import { vars } from '@orfium/tokens';
-import { flex, flexCenterVertical } from 'theme/functions';
+import { flex, flexCenterVertical } from '~/theme/functions';
 import { type Theme } from '~/theme';
 
 export const stepStyles = (sx?: CSSObject) => css`

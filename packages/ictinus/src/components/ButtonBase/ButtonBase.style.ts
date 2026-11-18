@@ -1,9 +1,7 @@
-import type { SerializedStyles } from '@emotion/react';
-import { css } from '@emotion/react';
+import { css, type SerializedStyles } from '@emotion/react';
 
-import type { ComponentSizes } from '@orfium/tokens';
-import { vars } from '@orfium/tokens';
-import { generateStylesFromTokens } from 'components/Typography/utils';
+import { vars, type ComponentSizes } from '@orfium/tokens';
+import { generateStylesFromTokens } from '~/components/Typography/utils';
 import type { Theme } from '../../theme';
 import type { ButtonBaseProps } from './ButtonBase';
 import { BUTTON_COLOR, typographySizes } from './constants';

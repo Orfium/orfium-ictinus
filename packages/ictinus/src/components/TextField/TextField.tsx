@@ -1,17 +1,15 @@
-import MultiTextFieldBase from 'components/MultiTextFieldBase/MultiTextFieldBase';
-import type { SelectOption } from 'components/Select';
-import type { TextInputBaseProps } from 'components/TextInputBase';
-import TextInputBase from 'components/TextInputBase';
-import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
-import useFieldUtils from 'hooks/useFieldUtils';
+import MultiTextFieldBase from '~/components/MultiTextFieldBase/MultiTextFieldBase';
+import type { SelectOption } from '~/components/Select';
+import TextInputBase, { type TextInputBaseProps } from '~/components/TextInputBase';
+import { inputStyle } from '~/components/TextInputBase/TextInputBase.style';
+import useFieldUtils from '~/hooks/useFieldUtils';
 import { omit } from 'lodash-es';
-import type { InputHTMLAttributes } from 'react';
-import React, { useRef } from 'react';
+import React, { useRef, type InputHTMLAttributes } from 'react';
 import isEqual from 'react-fast-compare';
 // TODO: this allows backwards compatibility for React 19. Migrate to a more popular library
 import InputMask from '@mona-health/react-input-mask';
-import { generateUniqueID } from 'utils/helpers';
-import type { TestProps } from 'utils/types';
+import { generateUniqueID } from '~/utils/helpers';
+import type { TestProps } from '~/utils/types';
 import Label from '../Label';
 import { suffixContainerStyle } from './TextField.style';
 

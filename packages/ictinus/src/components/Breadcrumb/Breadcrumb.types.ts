@@ -1,6 +1,6 @@
 import type { TestProps } from '~/utils/types';
 
-import type { LinkProps } from 'components/Link/Link.types';
+import type { LinkProps } from '~/components/Link/Link.types';
 import type { ReactNode } from 'react';
 
 export type BreadcrumbItem = {

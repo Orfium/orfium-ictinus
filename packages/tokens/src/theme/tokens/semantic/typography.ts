@@ -1,6 +1,5 @@
 import typographyFigma from './variables/typography';
-import type { DotKeys } from '../utils';
-import { parseCompositionToken } from '../utils';
+import { parseCompositionToken, type DotKeys } from '../utils';
 
 export type TypographyKeys =
   | 'fontSize'

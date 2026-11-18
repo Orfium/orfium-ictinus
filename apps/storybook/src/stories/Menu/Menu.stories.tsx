@@ -13,9 +13,8 @@ import {
 } from '@orfium/ictinus';
 import { vars } from '@orfium/tokens';
 import { fireEvent, within } from 'storybook/test';
-import * as React from 'react';
-import { useCallback, useRef, useState } from 'react';
-import { FIGMA_URL } from 'utils/common';
+import React, { useCallback, useRef, useState } from 'react';
+import { FIGMA_URL } from '~/utils/common';
 import Stack from '../storyUtils/Stack';
 
 const LIST_ITEMS = [

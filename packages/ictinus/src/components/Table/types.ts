@@ -5,7 +5,7 @@ import type {
   RowSelectionState,
   SortingState,
 } from '@tanstack/react-table';
-import type { SelectOptionValues } from 'components/Select';
+import type { SelectOptionValues } from '~/components/Select';
 import type React from 'react';
 import type { TestProps } from '~/utils/types';
 

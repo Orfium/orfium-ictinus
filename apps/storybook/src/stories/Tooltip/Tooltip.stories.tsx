@@ -1,6 +1,6 @@
 import { Button, Tooltip } from '@orfium/ictinus';
 import { Box } from '@orfium/ictinus/vanilla';
-import { FIGMA_URL } from 'utils/common';
+import { FIGMA_URL } from '~/utils/common';
 import Stack from '../storyUtils/Stack';
 import TooltipShowcase from '../storyUtils/TooltipShowcase';
 import { hoverOnTooltips } from './utils';

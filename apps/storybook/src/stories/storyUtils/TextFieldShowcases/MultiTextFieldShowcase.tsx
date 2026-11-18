@@ -1,5 +1,4 @@
-import type { FC } from 'react';
-import React, { useState } from 'react';
+import React, { useState, type FC } from 'react';
 
 import { TextField } from '@orfium/ictinus';
 

@@ -1,11 +1,10 @@
 import * as React from 'react';
 import isEqual from 'react-fast-compare';
-import type { TestProps } from 'utils/types';
+import type { TestProps } from '~/utils/types';
 
-import { inputStyle as baseInputStyle } from 'components/TextInputBase/TextInputBase.style';
+import { inputStyle as baseInputStyle } from '~/components/TextInputBase/TextInputBase.style';
 import Label from '../Label';
-import type { TextInputBaseProps } from '../TextInputBase/TextInputBase';
-import TextInputBase from '../TextInputBase/TextInputBase';
+import TextInputBase, { type TextInputBaseProps } from '../TextInputBase/TextInputBase';
 import { hintMessageStyle, sxProp } from './TextArea.style';
 
 export type TextAreaProps = {

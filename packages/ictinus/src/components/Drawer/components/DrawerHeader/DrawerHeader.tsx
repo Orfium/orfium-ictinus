@@ -1,10 +1,9 @@
-import type { FCC } from 'react';
-import React from 'react';
-import type { TestProps } from 'utils/types';
+import React, { type FCC } from 'react';
+import type { TestProps } from '~/utils/types';
 
 import { closeIconContainer, headerStyle } from '../../Drawer.style';
 import { useDrawerContext } from '../../DrawerContext';
-import Icon from 'components/Icon';
+import Icon from '~/components/Icon';
 
 const DrawerHeader: FCC<TestProps> = ({ children, dataTestPrefixId = 'ictinus_drawer' }) => {
   const [{ hasFixedLayout, onClose = () => null, isScrollbarOnTop }] = useDrawerContext();

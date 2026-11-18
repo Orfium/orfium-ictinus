@@ -1,7 +1,6 @@
-import type { SerializedStyles } from '@emotion/react';
-import { css } from '@emotion/react';
+import { css, type SerializedStyles } from '@emotion/react';
 import { vars } from '@orfium/tokens';
-import { generateStylesFromTokens } from 'components/Typography/utils';
+import { generateStylesFromTokens } from '~/components/Typography/utils';
 import { type Theme } from '../../../../theme/types';
 
 export const listItemTextWrapperStyles = (

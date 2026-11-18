@@ -1,6 +1,6 @@
-import useToggle from 'hooks/useToggle';
+import useToggle from '~/hooks/useToggle';
 import * as React from 'react';
-import { isComponentFunctionType } from 'utils/helpers';
+import { isComponentFunctionType } from '~/utils/helpers';
 
 import ContentCell from './components/ContentCell';
 import ExpandedButtonCell from './components/ExpandedButtonCell';

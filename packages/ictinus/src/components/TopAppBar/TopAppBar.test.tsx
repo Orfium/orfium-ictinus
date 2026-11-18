@@ -1,6 +1,5 @@
-import { fireEvent, render } from 'test';
-import type { Mock } from 'vitest';
-import { vi } from 'vitest';
+import { fireEvent, render } from '~/test';
+import { vi, type Mock } from 'vitest';
 import { DEFAULT_USER_MENU } from '~/utils/common';
 import TopAppBar from './TopAppBar';
 

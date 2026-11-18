@@ -1,5 +1,4 @@
-import type { Dayjs as DayjsType } from 'dayjs';
-import dayjsLib from 'dayjs';
+import dayjsLib, { type Dayjs as DayjsType } from 'dayjs';
 import localeData from 'dayjs/plugin/localeData';
 import localizedFormat from 'dayjs/plugin/localizedFormat';
 import 'dayjs/locale/en-gb';

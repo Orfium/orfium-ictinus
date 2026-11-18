@@ -1,5 +1,4 @@
-import type { RefObject } from 'react';
-import React, { useEffect } from 'react';
+import React, { useEffect, type RefObject } from 'react';
 import ReactDOM from 'react-dom';
 import { useDOMRef } from '~/components/utils/useDOMRef';
 import useEscape from '~/hooks/useEscape';

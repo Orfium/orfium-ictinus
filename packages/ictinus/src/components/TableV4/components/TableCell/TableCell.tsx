@@ -1,9 +1,9 @@
-import useTheme from 'hooks/useTheme';
+import useTheme from '~/hooks/useTheme';
 import { rem } from 'polished';
 import * as React from 'react';
 
 import { vars } from '@orfium/tokens';
-import { getBorderColor } from 'components/TableV4/utils';
+import { getBorderColor } from '~/components/TableV4/utils';
 import { parentStyles } from './TableCell.style';
 import { getTestId } from './utils';
 

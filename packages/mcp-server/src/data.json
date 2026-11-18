@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-12T12:03:38.075Z",
+  "generatedAt": "2026-11-18T10:42:09.945Z",
   "components": {
     "vanilla:ActionsContent": {
       "id": "vanilla:ActionsContent",
@@ -13201,6 +13201,10 @@
           "type": "CSSProperties",
           "description": "The inline [style](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style) for the\nelement."
         },
+        "suppressHydrationWarning": {
+          "type": "boolean",
+          "description": "A React-only flag that suppresses the warning React normally logs when an element's\nserver-rendered content doesn't match the client render during hydration. See [React\ndocs](https://react.dev/reference/react-dom/client/hydrateRoot#suppressing-unavoidable-hydration-mismatch-errors)."
+        },
         "textAlign": {
           "type": "\"center\" | \"end\" | \"start\" | \"justify\"",
           "sprinkle": true
@@ -14607,6 +14611,10 @@
         "style": {
           "type": "CSSProperties",
           "description": "The inline [style](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style) for the\nelement."
+        },
+        "suppressHydrationWarning": {
+          "type": "boolean",
+          "description": "A React-only flag that suppresses the warning React normally logs when an element's\nserver-rendered content doesn't match the client render during hydration. See [React\ndocs](https://react.dev/reference/react-dom/client/hydrateRoot#suppressing-unavoidable-hydration-mismatch-errors)."
         },
         "target": {
           "type": "HTMLAttributeAnchorTarget",
@@ -16044,6 +16052,10 @@
           "type": "CSSProperties",
           "description": "The inline [style](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style) for the\nelement."
         },
+        "suppressHydrationWarning": {
+          "type": "boolean",
+          "description": "A React-only flag that suppresses the warning React normally logs when an element's\nserver-rendered content doesn't match the client render during hydration. See [React\ndocs](https://react.dev/reference/react-dom/client/hydrateRoot#suppressing-unavoidable-hydration-mismatch-errors)."
+        },
         "textAlign": {
           "type": "\"center\" | \"end\" | \"start\" | \"justify\"",
           "sprinkle": true
@@ -16228,7 +16240,7 @@
           "code": [
             {
               "filename": "TextField/TextField.stories.tsx",
-              "content": "export const Addons: Story = {\n  render: () => {\n    const [amount, setAmount] = useState('');\n    const [teamSize, setTeamSize] = useState('0');\n\n    return (\n      <Box display=\"flex\" flexDirection=\"column\" gap=\"2xl\" style={{ maxWidth: '24rem' }}>\n        <TextField>\n          <TextField.Label\n            display=\"flex\"\n            alignItems=\"center\"\n            gap=\"xs\"\n            justifyContent=\"space-between\"\n          >\n            Workspace name\n            <Badge size=\"small\" colorScheme=\"blue\">\n              Recommended\n            </Badge>\n          </TextField.Label>\n          <TextField.Input placeholder=\"Acme workspace\" />\n          <TextField.Description>Choose a name your team will recognize.</TextField.Description>\n        </TextField>\n\n        <TextField>\n          <TextField.Label>Website URL</TextField.Label>\n          <TextField.Group>\n            <TextField.Input type=\"url\" placeholder=\"example.com\" />\n            <TextField.Addon>https://</TextField.Addon>\n            <TextField.Addon align=\"inline-end\">\n              <Tooltip>\n                <TooltipTrigger>\n                  <InformationalIcon color=\"active\" aria-label=\"Website URL information\" />\n                </TooltipTrigger>\n                <TooltipContent>Use the domain without https://.</TooltipContent>\n              </Tooltip>\n            </TextField.Addon>\n          </TextField.Group>\n          <TextField.Description>Your public website address.</TextField.Description>\n        </TextField>\n\n        <TextField>\n          <TextField.Label>Website URL</TextField.Label>\n          <TextField.Group>\n            <TextField.Input type=\"url\" placeholder=\"example.com\" variant=\"compact\" />\n            <TextField.Addon>https://</TextField.Addon>\n            <TextField.Addon align=\"inline-end\">\n              <Tooltip>\n                <TooltipTrigger>\n                  <InformationalIcon color=\"active\" aria-label=\"Website URL information\" />\n                </TooltipTrigger>\n                <TooltipContent>Use the domain without https://.</TooltipContent>\n              </Tooltip>\n            </TextField.Addon>\n          </TextField.Group>\n          <TextField.Description>Your public website address.</TextField.Description>\n        </TextField>\n\n        <TextField>\n          <TextField.Label>Monthly budget</TextField.Label>\n          <TextField.Group>\n            <TextField.Input\n              type=\"text\"\n              inputMode=\"decimal\"\n              value={amount}\n              placeholder=\"0.00\"\n              onChange={(event) =>\n                setAmount(\n                  event.currentTarget.value.replace(/[^0-9.]/g, '').replace(/(\\..*)\\./g, '$1')\n                )\n              }\n              onKeyDown={(event) => {\n                if (\n                  (event.key.length === 1 && !/[0-9.]/.test(event.key)) ||\n                  (event.key === '.' && event.currentTarget.value.includes('.'))\n                ) {\n                  event.preventDefault();\n                }\n              }}\n              px=\"2xs\"\n            />\n            <TextField.Addon>$</TextField.Addon>\n            <TextField.Addon align=\"inline-end\">USD</TextField.Addon>\n          </TextField.Group>\n          <TextField.Description>\n            Only numbers and one decimal point are accepted.\n          </TextField.Description>\n        </TextField>\n\n        <TextField>\n          <TextField.Label>Monthly budget</TextField.Label>\n          <TextField.Group>\n            <TextField.Input\n              type=\"text\"\n              inputMode=\"decimal\"\n              value={amount}\n              placeholder=\"0.00\"\n              variant=\"compact\"\n              onChange={(event) =>\n                setAmount(\n                  event.currentTarget.value.replace(/[^0-9.]/g, '').replace(/(\\..*)\\./g, '$1')\n                )\n              }\n              onKeyDown={(event) => {\n                if (\n                  (event.key.length === 1 && !/[0-9.]/.test(event.key)) ||\n                  (event.ke\n/* … truncated … */"
+              "content": "export const Addons: Story = {\n  render: () => {\n    const [amount, setAmount] = useState('');\n    const [teamSize, setTeamSize] = useState('0');\n\n    return (\n      <Box display=\"flex\" flexDirection=\"column\" gap=\"2xl\" style={{ maxWidth: '24rem' }}>\n        <TextField>\n          <TextField.Label\n            display=\"flex\"\n            alignItems=\"center\"\n            gap=\"xs\"\n            justifyContent=\"space-between\"\n          >\n            Workspace name\n            <Badge size=\"small\" colorScheme=\"blue\">\n              Recommended\n            </Badge>\n          </TextField.Label>\n          <TextField.Input placeholder=\"Acme workspace\" />\n          <TextField.Description>Choose a name your team will recognize.</TextField.Description>\n        </TextField>\n\n        <TextField>\n          <TextField.Label>Website URL</TextField.Label>\n          <TextField.Group>\n            <TextField.Input type=\"url\" placeholder=\"example.com\" />\n            <TextField.Addon>https://</TextField.Addon>\n            <TextField.Addon align=\"inline-end\">\n              <Tooltip>\n                <TooltipTrigger>\n                  <InformationalIcon color=\"active\" aria-label=\"Website URL information\" />\n                </TooltipTrigger>\n                <TooltipContent>Use the domain without https://.</TooltipContent>\n              </Tooltip>\n            </TextField.Addon>\n          </TextField.Group>\n          <TextField.Description>Your public website address.</TextField.Description>\n        </TextField>\n\n        <TextField>\n          <TextField.Label>Website URL</TextField.Label>\n          <TextField.Group>\n            <TextField.Input type=\"url\" placeholder=\"example.com\" variant=\"compact\" />\n            <TextField.Addon>https://</TextField.Addon>\n            <TextField.Addon align=\"inline-end\">\n              <Tooltip>\n                <TooltipTrigger>\n                  <InformationalIcon color=\"active\" aria-label=\"Website URL information\" />\n                </TooltipTrigger>\n                <TooltipContent>Use the domain without https://.</TooltipContent>\n              </Tooltip>\n            </TextField.Addon>\n          </TextField.Group>\n          <TextField.Description>Your public website address.</TextField.Description>\n        </TextField>\n\n        <TextField>\n          <TextField.Label>Monthly budget</TextField.Label>\n          <TextField.Group>\n            <TextField.Input\n              type=\"text\"\n              inputMode=\"decimal\"\n              value={amount}\n              placeholder=\"0.00\"\n              onChange={(event) =>\n                setAmount(\n                  event.currentTarget.value.replace(/[^0-9.]/g, '').replace(/(\\..*)\\./g, '$1'),\n                )\n              }\n              onKeyDown={(event) => {\n                if (\n                  (event.key.length === 1 && !/[0-9.]/.test(event.key)) ||\n                  (event.key === '.' && event.currentTarget.value.includes('.'))\n                ) {\n                  event.preventDefault();\n                }\n              }}\n              px=\"2xs\"\n            />\n            <TextField.Addon>$</TextField.Addon>\n            <TextField.Addon align=\"inline-end\">USD</TextField.Addon>\n          </TextField.Group>\n          <TextField.Description>\n            Only numbers and one decimal point are accepted.\n          </TextField.Description>\n        </TextField>\n\n        <TextField>\n          <TextField.Label>Monthly budget</TextField.Label>\n          <TextField.Group>\n            <TextField.Input\n              type=\"text\"\n              inputMode=\"decimal\"\n              value={amount}\n              placeholder=\"0.00\"\n              variant=\"compact\"\n              onChange={(event) =>\n                setAmount(\n                  event.currentTarget.value.replace(/[^0-9.]/g, '').replace(/(\\..*)\\./g, '$1'),\n                )\n              }\n              onKeyDown={(event) => {\n                if (\n                  (event.key.length === 1 && !/[0-9.]/.test(event.key)) ||\n                  (event.\n/* … truncated … */"
             }
           ]
         },
@@ -17148,7 +17160,7 @@
           "code": [
             {
               "filename": "Filter/Filter.stories.tsx",
-              "content": "export const AddedFilter = {\n  render: () => {\n    const names = ['Geller', 'Bing', 'Tribbiani', 'Green', 'Buffay'];\n\n    const [filters, setFilters] = React.useState(names);\n    const [filtersShown, setFiltersShown] = React.useState([]);\n\n    const states = {\n      Geller: React.useState<FilterOption>(undefined),\n      Bing: React.useState<FilterOption>(undefined),\n      Tribbiani: React.useState<FilterOption>(undefined),\n      Green: React.useState<FilterOption>(undefined),\n      Buffay: React.useState<FilterOption>(undefined),\n    };\n\n    return (\n      <Stack height={300}>\n        {filtersShown.map((filterName, index) => (\n          <Filter\n            key={filterName}\n            hasWrapperWidth\n            filterType=\"added\"\n            selectedFilter={states[filtersShown[index]][0]}\n            onChange={states[filtersShown[index]][1]}\n            onClear={() => {\n              states[filtersShown[index]][1](undefined);\n              setFilters([...filters, filterName]);\n              setFiltersShown(filtersShown.filter((filter) => filter !== filterName));\n            }}\n            defaultValue={{ label: 'All', value: 'all' }}\n            label={filterName}\n            items={options.filter((option) =>\n              option.label.toLowerCase().includes(filterName.toLowerCase())\n            )}\n          />\n        ))}\n\n        {Boolean(filters.length) && (\n          <DropdownButton\n            iconButtonName=\"plus\"\n            type=\"tertiary\"\n            items={filters}\n            onOptionSelect={(option) => {\n              setFiltersShown([...filtersShown, option]);\n              setFilters(filters.filter((filter) => filter !== option));\n            }}\n          />\n        )}\n\n        {Boolean(filtersShown.length) && (\n          <Button\n            type=\"tertiary\"\n            onClick={() => {\n              setFiltersShown([]);\n              setFilters(names);\n              /** Reset all filters states */\n              Object.values(states).forEach((friend) => friend[1](undefined));\n            }}\n          >\n            Reset\n          </Button>\n        )}\n      </Stack>\n    );\n  },\n  name: 'Added Filter',\n  parameters: {\n    controls: { disable: true },\n  },\n};"
+              "content": "export const AddedFilter = {\n  render: () => {\n    const names = ['Geller', 'Bing', 'Tribbiani', 'Green', 'Buffay'];\n\n    const [filters, setFilters] = React.useState(names);\n    const [filtersShown, setFiltersShown] = React.useState([]);\n\n    const states = {\n      Geller: React.useState<FilterOption>(undefined),\n      Bing: React.useState<FilterOption>(undefined),\n      Tribbiani: React.useState<FilterOption>(undefined),\n      Green: React.useState<FilterOption>(undefined),\n      Buffay: React.useState<FilterOption>(undefined),\n    };\n\n    return (\n      <Stack height={300}>\n        {filtersShown.map((filterName, index) => (\n          <Filter\n            key={filterName}\n            hasWrapperWidth\n            filterType=\"added\"\n            selectedFilter={states[filtersShown[index]][0]}\n            onChange={states[filtersShown[index]][1]}\n            onClear={() => {\n              states[filtersShown[index]][1](undefined);\n              setFilters([...filters, filterName]);\n              setFiltersShown(filtersShown.filter((filter) => filter !== filterName));\n            }}\n            defaultValue={{ label: 'All', value: 'all' }}\n            label={filterName}\n            items={options.filter((option) =>\n              option.label.toLowerCase().includes(filterName.toLowerCase()),\n            )}\n          />\n        ))}\n\n        {Boolean(filters.length) && (\n          <DropdownButton\n            iconButtonName=\"plus\"\n            type=\"tertiary\"\n            items={filters}\n            onOptionSelect={(option) => {\n              setFiltersShown([...filtersShown, option]);\n              setFilters(filters.filter((filter) => filter !== option));\n            }}\n          />\n        )}\n\n        {Boolean(filtersShown.length) && (\n          <Button\n            type=\"tertiary\"\n            onClick={() => {\n              setFiltersShown([]);\n              setFilters(names);\n              /** Reset all filters states */\n              Object.values(states).forEach((friend) => friend[1](undefined));\n            }}\n          >\n            Reset\n          </Button>\n        )}\n      </Stack>\n    );\n  },\n  name: 'Added Filter',\n  parameters: {\n    controls: { disable: true },\n  },\n};"
             }
           ]
         },
@@ -17184,7 +17196,7 @@
           "code": [
             {
               "filename": "Filter/Filter.stories.tsx",
-              "content": "export const AsyncFilter = {\n  render: () => {\n    const [stateItem, setStateItem] = React.useState<FilterOption | undefined>();\n    const [items, setOptions] = React.useState<FilterOption[]>(options);\n    const [isLoading, setIsLoading] = React.useState(false);\n\n    const handleAsyncSearch = async (term: string) => {\n      setIsLoading(true);\n\n      return new Promise<FilterOption[]>((resolve) => {\n        setTimeout(() => {\n          resolve(options);\n        }, 1500);\n      }).then((values) => {\n        const filteredValues = values.filter((option) =>\n          option.label.toLowerCase().includes(term.toLowerCase())\n        );\n        setOptions(filteredValues);\n        setIsLoading(false);\n      });\n    };\n\n    const handleSelectItem = (item: FilterOption) => {\n      setStateItem(item);\n      setOptions(options);\n    };\n\n    return (\n      <Stack height={450}>\n        <Filter\n          isSearchable\n          isAsync\n          isLoading={isLoading}\n          selectedFilter={stateItem}\n          onChange={handleSelectItem}\n          onAsyncSearch={handleAsyncSearch}\n          onClear={() => setStateItem(undefined)}\n          defaultValue={{ label: 'All', value: 'all' }}\n          label={'Friends'}\n          items={items}\n        />\n      </Stack>\n    );\n  },\n  name: 'Filter with async search',\n\n  parameters: {\n    controls: { disable: true },\n  },\n};"
+              "content": "export const AsyncFilter = {\n  render: () => {\n    const [stateItem, setStateItem] = React.useState<FilterOption | undefined>();\n    const [items, setOptions] = React.useState<FilterOption[]>(options);\n    const [isLoading, setIsLoading] = React.useState(false);\n\n    const handleAsyncSearch = async (term: string) => {\n      setIsLoading(true);\n\n      return new Promise<FilterOption[]>((resolve) => {\n        setTimeout(() => {\n          resolve(options);\n        }, 1500);\n      }).then((values) => {\n        const filteredValues = values.filter((option) =>\n          option.label.toLowerCase().includes(term.toLowerCase()),\n        );\n        setOptions(filteredValues);\n        setIsLoading(false);\n      });\n    };\n\n    const handleSelectItem = (item: FilterOption) => {\n      setStateItem(item);\n      setOptions(options);\n    };\n\n    return (\n      <Stack height={450}>\n        <Filter\n          isSearchable\n          isAsync\n          isLoading={isLoading}\n          selectedFilter={stateItem}\n          onChange={handleSelectItem}\n          onAsyncSearch={handleAsyncSearch}\n          onClear={() => setStateItem(undefined)}\n          defaultValue={{ label: 'All', value: 'all' }}\n          label={'Friends'}\n          items={items}\n        />\n      </Stack>\n    );\n  },\n  name: 'Filter with async search',\n\n  parameters: {\n    controls: { disable: true },\n  },\n};"
             }
           ]
         },
@@ -17196,7 +17208,7 @@
           "code": [
             {
               "filename": "Filter/Filter.stories.tsx",
-              "content": "export const MultiFilter = {\n  render: () => {\n    const [selectedFilters, setSelectedFilters] = React.useState<FilterOption[]>([]);\n\n    const handleClear = () => setSelectedFilters([]);\n\n    /** Async */\n    const [selectedFilters1, setSelectedFilters1] = React.useState<FilterOption[]>([]);\n    const [asyncItems, setAsyncItems] = React.useState<FilterOption[]>(options);\n    const [isLoading, setIsLoading] = React.useState(false);\n\n    const handleAsyncSearch = (term: string) => {\n      setIsLoading(true);\n\n      return new Promise<FilterOption[]>((resolve) => {\n        setTimeout(() => {\n          resolve(options);\n        }, 1500);\n      }).then((values) => {\n        const filteredValues = values.filter((option) =>\n          option.label.toLowerCase().includes(term.toLowerCase())\n        );\n\n        setAsyncItems(filteredValues);\n        setIsLoading(false);\n      });\n    };\n\n    const handleClear1 = () => {\n      setSelectedFilters1([]);\n      setAsyncItems(options);\n    };\n\n    return (\n      <Stack height={600}>\n        <div css={{ display: 'flex', gap: '72px' }}>\n          <Filter\n            isSearchable\n            isMulti\n            hasSelectAllOption\n            selectedFilter={selectedFilters}\n            onChange={setSelectedFilters}\n            onClear={handleClear}\n            defaultValue={{ label: 'All', value: 'all' }}\n            label={'Friends (Simple Search)'}\n            items={options}\n            iconLeft={<SparklesIcon />}\n            colorScheme=\"ai\"\n          />\n          <Filter\n            isSearchable\n            isMulti\n            isAsync\n            onAsyncSearch={handleAsyncSearch}\n            selectedFilter={selectedFilters1}\n            isLoading={isLoading}\n            onChange={setSelectedFilters1}\n            onClear={handleClear1}\n            defaultValue={{ label: 'All', value: 'all' }}\n            label={'Friends (Async Search)'}\n            items={asyncItems}\n          />\n        </div>\n      </Stack>\n    );\n  },\n  name: 'Multi Filter',\n\n  parameters: {\n    controls: { disable: true },\n  },\n};"
+              "content": "export const MultiFilter = {\n  render: () => {\n    const [selectedFilters, setSelectedFilters] = React.useState<FilterOption[]>([]);\n\n    const handleClear = () => setSelectedFilters([]);\n\n    /** Async */\n    const [selectedFilters1, setSelectedFilters1] = React.useState<FilterOption[]>([]);\n    const [asyncItems, setAsyncItems] = React.useState<FilterOption[]>(options);\n    const [isLoading, setIsLoading] = React.useState(false);\n\n    const handleAsyncSearch = (term: string) => {\n      setIsLoading(true);\n\n      return new Promise<FilterOption[]>((resolve) => {\n        setTimeout(() => {\n          resolve(options);\n        }, 1500);\n      }).then((values) => {\n        const filteredValues = values.filter((option) =>\n          option.label.toLowerCase().includes(term.toLowerCase()),\n        );\n\n        setAsyncItems(filteredValues);\n        setIsLoading(false);\n      });\n    };\n\n    const handleClear1 = () => {\n      setSelectedFilters1([]);\n      setAsyncItems(options);\n    };\n\n    return (\n      <Stack height={600}>\n        <div css={{ display: 'flex', gap: '72px' }}>\n          <Filter\n            isSearchable\n            isMulti\n            hasSelectAllOption\n            selectedFilter={selectedFilters}\n            onChange={setSelectedFilters}\n            onClear={handleClear}\n            defaultValue={{ label: 'All', value: 'all' }}\n            label={'Friends (Simple Search)'}\n            items={options}\n            iconLeft={<SparklesIcon />}\n            colorScheme=\"ai\"\n          />\n          <Filter\n            isSearchable\n            isMulti\n            isAsync\n            onAsyncSearch={handleAsyncSearch}\n            selectedFilter={selectedFilters1}\n            isLoading={isLoading}\n            onChange={setSelectedFilters1}\n            onClear={handleClear1}\n            defaultValue={{ label: 'All', value: 'all' }}\n            label={'Friends (Async Search)'}\n            items={asyncItems}\n          />\n        </div>\n      </Stack>\n    );\n  },\n  name: 'Multi Filter',\n\n  parameters: {\n    controls: { disable: true },\n  },\n};"
             }
           ]
         },
@@ -18399,7 +18411,7 @@
           "code": [
             {
               "filename": "ProgressIndicator/ProgressIndicator.stories.tsx",
-              "content": "export const LinearProgressIndicatorWithPercentage = {\n  render: () => {\n    const [value, setValue] = useState(0);\n    useEffect(() => {\n      const interval = setInterval(\n        () =>\n          setValue((value) => {\n            if (value + 20 > 100) return 0;\n            return value + 20;\n          }),\n        1000\n      );\n      return () => {\n        clearInterval(interval);\n      };\n    }, []);\n\n    return (\n      <Stack width={300}>\n        <div\n          style={{\n            display: 'flex',\n            gap: '32px',\n            alignItems: 'center',\n            flexDirection: 'column',\n          }}\n        >\n          <ProgressIndicator value={value} />\n          <Typography variant=\"body03\">Loading: {value}%</Typography>\n        </div>\n      </Stack>\n    );\n  },\n  name: 'Linear ProgressIndicator with percentage',\n  parameters: {\n    controls: { disable: true },\n  },\n};"
+              "content": "export const LinearProgressIndicatorWithPercentage = {\n  render: () => {\n    const [value, setValue] = useState(0);\n    useEffect(() => {\n      const interval = setInterval(\n        () =>\n          setValue((value) => {\n            if (value + 20 > 100) return 0;\n            return value + 20;\n          }),\n        1000,\n      );\n      return () => {\n        clearInterval(interval);\n      };\n    }, []);\n\n    return (\n      <Stack width={300}>\n        <div\n          style={{\n            display: 'flex',\n            gap: '32px',\n            alignItems: 'center',\n            flexDirection: 'column',\n          }}\n        >\n          <ProgressIndicator value={value} />\n          <Typography variant=\"body03\">Loading: {value}%</Typography>\n        </div>\n      </Stack>\n    );\n  },\n  name: 'Linear ProgressIndicator with percentage',\n  parameters: {\n    controls: { disable: true },\n  },\n};"
             }
           ]
         },
@@ -18436,7 +18448,7 @@
           "code": [
             {
               "filename": "ProgressIndicator/ProgressIndicator.stories.tsx",
-              "content": "export const CircularProgressIndicatorWithPercentage = {\n  render: () => {\n    const [value, setValue] = useState(0);\n    useEffect(() => {\n      const interval = setInterval(\n        () =>\n          setValue((value) => {\n            if (value + 20 > 100) return 0;\n            return value + 20;\n          }),\n        1000\n      );\n      return () => {\n        clearInterval(interval);\n      };\n    }, []);\n\n    return (\n      <Stack>\n        <div style={{ display: 'flex', gap: '32px', alignItems: 'center' }}>\n          <ProgressIndicator type={'circular'} value={value} />\n          <Typography variant=\"body03\">Loading: {value}%</Typography>\n        </div>\n      </Stack>\n    );\n  },\n  name: 'Circular ProgressIndicator with percentage',\n  parameters: {\n    controls: { disable: true },\n  },\n};"
+              "content": "export const CircularProgressIndicatorWithPercentage = {\n  render: () => {\n    const [value, setValue] = useState(0);\n    useEffect(() => {\n      const interval = setInterval(\n        () =>\n          setValue((value) => {\n            if (value + 20 > 100) return 0;\n            return value + 20;\n          }),\n        1000,\n      );\n      return () => {\n        clearInterval(interval);\n      };\n    }, []);\n\n    return (\n      <Stack>\n        <div style={{ display: 'flex', gap: '32px', alignItems: 'center' }}>\n          <ProgressIndicator type={'circular'} value={value} />\n          <Typography variant=\"body03\">Loading: {value}%</Typography>\n        </div>\n      </Stack>\n    );\n  },\n  name: 'Circular ProgressIndicator with percentage',\n  parameters: {\n    controls: { disable: true },\n  },\n};"
             }
           ]
         },
@@ -19347,7 +19359,7 @@
           "code": [
             {
               "filename": "Slider/Slider.stories.tsx",
-              "content": "export const RangeSliderDontTest: Story = {\n  render: (args) => {\n    const { isDisabled } = args;\n\n    const numberFieldOptions = useMemo(\n      () => ({\n        formatOptions: {\n          minimumFractionDigits: 1,\n          maximumFractionDigits: 1,\n        },\n        suffix: <div>%</div>,\n      }),\n      []\n    );\n\n    return (\n      <Stack isVertical>\n        <h2>Default</h2>\n        <SliderShowcase isSelector={false} isDisabled={isDisabled} />\n        <br />\n        <h2>With Formatting</h2>\n        <SliderShowcase\n          isSelector={false}\n          isDisabled={isDisabled}\n          numberFieldOptions={numberFieldOptions}\n        />\n      </Stack>\n    );\n  },\n\n  name: 'Range Slider (DontTest)',\n\n  parameters: {\n    controls: { include: ['isDisabled'] },\n  },\n};"
+              "content": "export const RangeSliderDontTest: Story = {\n  render: (args) => {\n    const { isDisabled } = args;\n\n    const numberFieldOptions = useMemo(\n      () => ({\n        formatOptions: {\n          minimumFractionDigits: 1,\n          maximumFractionDigits: 1,\n        },\n        suffix: <div>%</div>,\n      }),\n      [],\n    );\n\n    return (\n      <Stack isVertical>\n        <h2>Default</h2>\n        <SliderShowcase isSelector={false} isDisabled={isDisabled} />\n        <br />\n        <h2>With Formatting</h2>\n        <SliderShowcase\n          isSelector={false}\n          isDisabled={isDisabled}\n          numberFieldOptions={numberFieldOptions}\n        />\n      </Stack>\n    );\n  },\n\n  name: 'Range Slider (DontTest)',\n\n  parameters: {\n    controls: { include: ['isDisabled'] },\n  },\n};"
             }
           ]
         },
@@ -20417,6 +20429,10 @@
         "inert": {
           "type": "boolean"
         },
+        "isEntering": {
+          "type": "boolean",
+          "description": "Whether the dialog is currently performing an entry animation. Focus is not moved into the\ndialog until the animation completes, since moving the screen reader cursor may cause scrolling\nthat interrupts the animation."
+        },
         "lang": {
           "type": "string"
         },
@@ -20628,6 +20644,10 @@
         "style": {
           "type": "CSSProperties",
           "description": "The inline [style](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style) for the\nelement."
+        },
+        "suppressHydrationWarning": {
+          "type": "boolean",
+          "description": "A React-only flag that suppresses the warning React normally logs when an element's\nserver-rendered content doesn't match the client render during hydration. See [React\ndocs](https://react.dev/reference/react-dom/client/hydrateRoot#suppressing-unavoidable-hydration-mismatch-errors)."
         },
         "translate": {
           "type": "\"yes\" | \"no\""
@@ -21351,6 +21371,10 @@
           "type": "CSSProperties",
           "description": "The inline [style](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style) for the\nelement."
         },
+        "suppressHydrationWarning": {
+          "type": "boolean",
+          "description": "A React-only flag that suppresses the warning React normally logs when an element's\nserver-rendered content doesn't match the client render during hydration. See [React\ndocs](https://react.dev/reference/react-dom/client/hydrateRoot#suppressing-unavoidable-hydration-mismatch-errors)."
+        },
         "translate": {
           "type": "\"yes\" | \"no\""
         },
@@ -21414,7 +21438,7 @@
           "code": [
             {
               "filename": "Menu/Menu.stories.tsx",
-              "content": "export const Default: Story = {\n  render: () => {\n    const [selected, setSelected] = useState<Selection>(\n      () => new Set(Array.from({ length: INITIAL_SELECTED_COUNT }, (_, i) => `item-${i + 1}`))\n    );\n\n    return (\n      <Box>\n        <Menu>\n          <MenuTrigger>\n            <Button>Open</Button>\n          </MenuTrigger>\n          <MenuContent\n            selectionMode=\"multiple\"\n            popover={{ placement: 'bottom left' }}\n            style={{ minWidth: '280px' }}\n            selectedKeys={selected}\n            onSelectionChange={setSelected}\n          >\n            {Array.from({ length: MENU_ITEMS_COUNT }, (_, i) => {\n              const id = `item-${i + 1}`;\n              const isSelected =\n                selected === 'all' || (selected instanceof Set && selected.has(id));\n              return (\n                <MenuItem key={id} id={id}>\n                  <Box display=\"flex\" alignItems=\"center\" justifyContent=\"space-between\" gap=\"sm\">\n                    <MenuLabel>\n                      <Text\n                        color={isSelected ? 'active' : 'primary'}\n                        typography={isSelected ? 'label02' : 'body02'}\n                      >\n                        Item {i + 1}\n                      </Text>\n                    </MenuLabel>\n                    <Switch isVisualOnly isSelected={isSelected} />\n                  </Box>\n                </MenuItem>\n              );\n            })}\n          </MenuContent>\n        </Menu>\n      </Box>\n    );\n  },\n};"
+              "content": "export const Default: Story = {\n  render: () => {\n    const [selected, setSelected] = useState<Selection>(\n      () => new Set(Array.from({ length: INITIAL_SELECTED_COUNT }, (_, i) => `item-${i + 1}`)),\n    );\n\n    return (\n      <Box>\n        <Menu>\n          <MenuTrigger>\n            <Button>Open</Button>\n          </MenuTrigger>\n          <MenuContent\n            selectionMode=\"multiple\"\n            popover={{ placement: 'bottom left' }}\n            style={{ minWidth: '280px' }}\n            selectedKeys={selected}\n            onSelectionChange={setSelected}\n          >\n            {Array.from({ length: MENU_ITEMS_COUNT }, (_, i) => {\n              const id = `item-${i + 1}`;\n              const isSelected =\n                selected === 'all' || (selected instanceof Set && selected.has(id));\n              return (\n                <MenuItem key={id} id={id}>\n                  <Box display=\"flex\" alignItems=\"center\" justifyContent=\"space-between\" gap=\"sm\">\n                    <MenuLabel>\n                      <Text\n                        color={isSelected ? 'active' : 'primary'}\n                        typography={isSelected ? 'label02' : 'body02'}\n                      >\n                        Item {i + 1}\n                      </Text>\n                    </MenuLabel>\n                    <Switch isVisualOnly isSelected={isSelected} />\n                  </Box>\n                </MenuItem>\n              );\n            })}\n          </MenuContent>\n        </Menu>\n      </Box>\n    );\n  },\n};"
             }
           ]
         }
@@ -21742,6 +21766,10 @@
         "style": {
           "type": "CSSProperties",
           "description": "The inline [style](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style) for the\nelement."
+        },
+        "suppressHydrationWarning": {
+          "type": "boolean",
+          "description": "A React-only flag that suppresses the warning React normally logs when an element's\nserver-rendered content doesn't match the client render during hydration. See [React\ndocs](https://react.dev/reference/react-dom/client/hydrateRoot#suppressing-unavoidable-hydration-mismatch-errors)."
         },
         "translate": {
           "type": "\"yes\" | \"no\""
@@ -22202,6 +22230,10 @@
           "type": "CSSProperties",
           "description": "The inline [style](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style) for the\nelement."
         },
+        "suppressHydrationWarning": {
+          "type": "boolean",
+          "description": "A React-only flag that suppresses the warning React normally logs when an element's\nserver-rendered content doesn't match the client render during hydration. See [React\ndocs](https://react.dev/reference/react-dom/client/hydrateRoot#suppressing-unavoidable-hydration-mismatch-errors)."
+        },
         "target": {
           "type": "HTMLAttributeAnchorTarget",
           "description": "The target window for the link. See\n[MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#target)."
@@ -22561,6 +22593,10 @@
           "type": "CSSProperties",
           "description": "The inline [style](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style) for the\nelement."
         },
+        "suppressHydrationWarning": {
+          "type": "boolean",
+          "description": "A React-only flag that suppresses the warning React normally logs when an element's\nserver-rendered content doesn't match the client render during hydration. See [React\ndocs](https://react.dev/reference/react-dom/client/hydrateRoot#suppressing-unavoidable-hydration-mismatch-errors)."
+        },
         "title": {
           "type": "string"
         },
@@ -22832,6 +22868,10 @@
         "style": {
           "type": "CSSProperties",
           "description": "The inline [style](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style) for the\nelement."
+        },
+        "suppressHydrationWarning": {
+          "type": "boolean",
+          "description": "A React-only flag that suppresses the warning React normally logs when an element's\nserver-rendered content doesn't match the client render during hydration. See [React\ndocs](https://react.dev/reference/react-dom/client/hydrateRoot#suppressing-unavoidable-hydration-mismatch-errors)."
         },
         "translate": {
           "type": "\"yes\" | \"no\""
@@ -23729,6 +23769,10 @@
           "type": "CSSProperties",
           "description": "The inline [style](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style) for the\nelement."
         },
+        "suppressHydrationWarning": {
+          "type": "boolean",
+          "description": "A React-only flag that suppresses the warning React normally logs when an element's\nserver-rendered content doesn't match the client render during hydration. See [React\ndocs](https://react.dev/reference/react-dom/client/hydrateRoot#suppressing-unavoidable-hydration-mismatch-errors)."
+        },
         "textAlign": {
           "type": "\"center\" | \"end\" | \"start\" | \"justify\"",
           "sprinkle": true
@@ -24471,6 +24515,10 @@
         "style": {
           "type": "CSSProperties",
           "description": "The inline [style](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style) for the\nelement."
+        },
+        "suppressHydrationWarning": {
+          "type": "boolean",
+          "description": "A React-only flag that suppresses the warning React normally logs when an element's\nserver-rendered content doesn't match the client render during hydration. See [React\ndocs](https://react.dev/reference/react-dom/client/hydrateRoot#suppressing-unavoidable-hydration-mismatch-errors)."
         },
         "translate": {
           "type": "\"yes\" | \"no\""
@@ -28722,7 +28770,7 @@
         },
         "closeDelay": {
           "type": "number",
-          "description": "The delay time for the tooltip to close. [See\nguidelines](https://spectrum.adobe.com/page/tooltip/#Warmup-and-cooldown).",
+          "description": "The delay time for the tooltip to close. [See\nguidelines](https://spectrum.adobe.com/web/rsp/components/tooltip#behaviors).",
           "defaultValue": "500"
         },
         "defaultOpen": {
@@ -28731,7 +28779,7 @@
         },
         "delay": {
           "type": "number",
-          "description": "The delay time for the tooltip to show up. [See\nguidelines](https://spectrum.adobe.com/page/tooltip/#Immediate-or-delayed-appearance).",
+          "description": "The delay time for the tooltip to show up. [See\nguidelines](https://spectrum.adobe.com/web/rsp/components/tooltip#behaviors).",
           "defaultValue": "500"
         },
         "isDisabled": {
@@ -29610,6 +29658,10 @@
         "style": {
           "type": "CSSProperties",
           "description": "The inline [style](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style) for the\nelement."
+        },
+        "suppressHydrationWarning": {
+          "type": "boolean",
+          "description": "A React-only flag that suppresses the warning React normally logs when an element's\nserver-rendered content doesn't match the client render during hydration. See [React\ndocs](https://react.dev/reference/react-dom/client/hydrateRoot#suppressing-unavoidable-hydration-mismatch-errors)."
         },
         "textAlign": {
           "type": "\"center\" | \"end\" | \"start\" | \"justify\"",

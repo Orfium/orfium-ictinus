@@ -3,7 +3,7 @@ import type {
   FilterProps,
   MultiFilterProps,
   SingleFilterProps,
-} from 'components/Filter/Filter.types';
+} from '~/components/Filter/Filter.types';
 import React from 'react';
 import FilterSearchField from './components/FilterSearchField';
 import Options from './components/Options';

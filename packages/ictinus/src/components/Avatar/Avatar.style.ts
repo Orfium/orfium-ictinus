@@ -1,8 +1,7 @@
-import type { SerializedStyles } from '@emotion/react';
-import { css } from '@emotion/react';
+import { css, type SerializedStyles } from '@emotion/react';
 import { vars } from '@orfium/tokens';
 
-import { flex } from 'theme/functions';
+import { flex } from '~/theme/functions';
 import type { AvatarColors, AvatarProps, AvatarSizes } from './Avatar.types';
 
 export const AVATAR_COLOR: Record<AvatarColors, Record<string, string>> = {

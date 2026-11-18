@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { MenuTrigger, Popover } from 'react-aria-components';
-import type { TestProps } from 'utils/types';
+import type { TestProps } from '~/utils/types';
 
-import type { ListRowSize } from 'components/List';
+import type { ListRowSize } from '~/components/List';
 import { listStyle } from '../List/List.style';
 import { MenuItemWrapper, MenuWrapper, popoverStyle } from './Menu.style';
 import MenuItemDivider from './MenuItemDivider';

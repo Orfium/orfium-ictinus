@@ -1,7 +1,7 @@
 import { css, type CSSObject } from '@emotion/react';
 import { vars } from '@orfium/tokens';
 
-import { flexCenterVertical } from 'theme/functions';
+import { flexCenterVertical } from '~/theme/functions';
 
 export const containerStyles = (sx?: CSSObject) => css`
   cursor: pointer;

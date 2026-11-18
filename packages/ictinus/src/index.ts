@@ -8,7 +8,7 @@ import * as palette from '@orfium/tokens';
 import * as spacing from '@orfium/tokens';
 import * as typography from '@orfium/tokens';
 // Types
-import ClickAwayListener from 'components/utils/ClickAwayListener';
+import ClickAwayListener from './components/utils/ClickAwayListener';
 import * as overrides from './theme/overrides';
 // Note: We import specific items to avoid conflicts with local Typography TextColorTypes
 // export * from '@orfium/tokens'; // Commented out to avoid TextColorTypes conflict
@@ -263,7 +263,7 @@ export {
   isComponentFunctionType,
 } from './utils/helpers';
 
-export * from 'theme/functions';
+export * from './theme/functions';
 export { default as themeConfig } from './theme';
 export {
   ClickAwayListener,

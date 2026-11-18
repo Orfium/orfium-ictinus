@@ -276,7 +276,7 @@ function getExportedComponentsFromSource() {
     {
       allowJs: true,
       esModuleInterop: true,
-      moduleResolution: ts.ModuleResolutionKind.Node10,
+      moduleResolution: ts.ModuleResolutionKind.Bundler,
       target: ts.ScriptTarget.Latest,
     },
   );

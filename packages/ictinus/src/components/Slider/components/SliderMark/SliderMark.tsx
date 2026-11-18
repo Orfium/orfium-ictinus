@@ -1,7 +1,6 @@
-import type { FCC } from 'react';
-import { useMemo } from 'react';
+import { useMemo, type FCC } from 'react';
 import type { IMarkProps } from 'react-range/lib/types';
-import type { TestProps } from 'utils/types';
+import type { TestProps } from '~/utils/types';
 
 import { vars } from '@orfium/tokens';
 import { STEP_WITH_INCREMENTS } from '../../Slider';

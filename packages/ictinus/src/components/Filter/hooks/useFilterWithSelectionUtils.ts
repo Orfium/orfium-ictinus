@@ -1,6 +1,5 @@
 import { debounce, differenceBy, isEqual } from 'lodash-es';
-import { useState } from 'react';
-import React from 'react';
+import React, { useState } from 'react';
 
 import type {
   FilterOption,
@@ -8,7 +7,7 @@ import type {
   MultiFilterProps,
   SingleFilterProps,
 } from '../Filter.types';
-import { SELECT_ALL_OPTION } from 'components/Select/constants';
+import { SELECT_ALL_OPTION } from '~/components/Select/constants';
 
 const useFilterWithSelectionUtils = ({
   isMulti,

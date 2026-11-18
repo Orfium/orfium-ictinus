@@ -1,6 +1,5 @@
-import * as React from 'react';
-import { useCallback, useState } from 'react';
-import type { Dayjs } from 'utils/date';
+import React, { useCallback, useState } from 'react';
+import type { Dayjs } from '~/utils/date';
 
 import MonthWrapper from './components/MonthWrapper/MonthWrapper';
 import {

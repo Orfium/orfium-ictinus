@@ -1,14 +1,13 @@
 import { rem } from '@orfium/tokens';
-import Card from 'components/Card';
-import IconButton from 'components/IconButton';
-import useEscape from 'hooks/useEscape';
-import { useOverlayStack } from 'hooks/useOverlayStack';
+import Card from '~/components/Card';
+import IconButton from '~/components/IconButton';
+import useEscape from '~/hooks/useEscape';
+import { useOverlayStack } from '~/hooks/useOverlayStack';
 import React, { useEffect, useRef } from 'react';
-import { generateTestDataId } from 'utils/helpers';
-import type { TestId } from 'utils/types';
+import { generateTestDataId } from '~/utils/helpers';
+import type { TestId } from '~/utils/types';
 import { backgroundContainer, cardSizing, closeContainer, modalContainer } from './Modal.style';
-import type { ModalContentProps } from './ModalContent/ModalContent';
-import ModalContent from './ModalContent/ModalContent';
+import ModalContent, { type ModalContentProps } from './ModalContent/ModalContent';
 
 export type ModalProps = {
   /**  If true, the modal is open. Defaults to false. */

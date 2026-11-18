@@ -1,5 +1,4 @@
-import type { FCC } from 'react';
-import React, { useState } from 'react';
+import React, { useState, type FCC } from 'react';
 
 import { TextField, TopNavBar, type TopAppBarProps } from '@orfium/ictinus';
 

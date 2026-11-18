@@ -1,9 +1,8 @@
-import type { SerializedStyles } from '@emotion/react';
-import { css } from '@emotion/react';
-import type { Theme } from 'theme';
+import { css, type SerializedStyles } from '@emotion/react';
+import type { Theme } from '~/theme';
 
 import { vars } from '@orfium/tokens';
-import { generateStylesFromTokens } from 'components/Typography/utils';
+import { generateStylesFromTokens } from '~/components/Typography/utils';
 import type { LinkProps } from './Link.types';
 
 const LINK_TOKENS = (theme: Theme) => {

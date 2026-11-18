@@ -1,8 +1,7 @@
-import type { SerializedStyles } from '@emotion/react';
-import { css } from '@emotion/react';
+import { css, type SerializedStyles } from '@emotion/react';
 import { rem, vars } from '@orfium/tokens';
 
-import { generateStylesFromTokens } from 'components/Typography/utils';
+import { generateStylesFromTokens } from '~/components/Typography/utils';
 import type { TooltipProps } from './Tooltip.types';
 
 import type { Theme } from '~/theme';

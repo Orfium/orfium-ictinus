@@ -1,7 +1,7 @@
 import { DatePicker } from '@orfium/ictinus';
 import dayjs from 'dayjs';
 import { useState } from 'react';
-import { FIGMA_URL } from 'utils/common';
+import { FIGMA_URL } from '~/utils/common';
 import Stack from '../storyUtils/Stack';
 import { CALENDAR_DEFAULT_OPTIONS, options } from './constants';
 import { openDatePicker } from './play-utils';

@@ -1,5 +1,5 @@
-import type { FilterChildrenProps, FilterProps, SingleFilterProps } from 'components/Filter';
-import type { TextFieldProps } from 'components/TextField';
+import type { FilterChildrenProps, FilterProps, SingleFilterProps } from '~/components/Filter';
+import type { TextFieldProps } from '~/components/TextField';
 import type React from 'react';
 
 export type filterConfig = Pick<

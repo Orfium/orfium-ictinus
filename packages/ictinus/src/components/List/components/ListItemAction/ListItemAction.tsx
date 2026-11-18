@@ -1,5 +1,4 @@
-import type { FCC } from 'react';
-import React from 'react';
+import React, { type FCC } from 'react';
 
 import { listItemActionWrapper } from './ListItemAction.style';
 

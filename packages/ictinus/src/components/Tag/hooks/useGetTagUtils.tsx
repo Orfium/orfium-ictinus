@@ -1,8 +1,8 @@
 import React, { useCallback, useMemo } from 'react';
-import type { TestProps } from 'utils/types';
+import type { TestProps } from '~/utils/types';
 
 import { vars } from '@orfium/tokens';
-import Icon from 'components/Icon';
+import Icon from '~/components/Icon';
 import { TAG_COLOR } from '../constants';
 import { iconStyles } from '../Tag.style';
 import type { TagProps } from '../Tag.types';

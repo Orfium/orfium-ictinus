@@ -8,11 +8,11 @@ import {
 import { concat } from 'lodash-es';
 import React, { useMemo } from 'react';
 
-import { CheckBox } from 'components/Controls';
-import Icon from 'components/Icon';
+import { CheckBox } from '~/components/Controls';
+import Icon from '~/components/Icon';
 
 import { vars } from '@orfium/tokens';
-import { lineEllipsis } from 'theme/functions';
+import { lineEllipsis } from '~/theme/functions';
 import Typography from '~/components/Typography';
 
 type ReturnValue<TData> = {

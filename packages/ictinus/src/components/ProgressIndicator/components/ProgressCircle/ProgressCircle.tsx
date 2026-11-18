@@ -3,7 +3,7 @@ import { isUndefined } from 'lodash-es';
 import React from 'react';
 import { ProgressBar as AriaProgressBar } from 'react-aria-components';
 
-import type { ProgressIndicatorProps } from 'components/ProgressIndicator/ProgressIndicator.types';
+import type { ProgressIndicatorProps } from '~/components/ProgressIndicator/ProgressIndicator.types';
 import useTheme from '../../../../hooks/useTheme';
 import { animationStyles } from './ProgressCircle.style';
 

@@ -3,7 +3,7 @@ import { vars } from '@orfium/tokens';
 import { rem, rgba } from 'polished';
 import type { CSSProperties } from 'react';
 
-import { transition } from 'theme/functions';
+import { transition } from '~/theme/functions';
 
 export const Thumb = styled.div<{
   isDisabled: boolean;

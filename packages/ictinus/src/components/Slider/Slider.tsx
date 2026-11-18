@@ -1,10 +1,9 @@
 import React, { useRef, type FC } from 'react';
 import { Range } from 'react-range';
 import type { IMarkProps, IThumbProps, ITrackProps } from 'react-range/lib/types';
-import type { TestProps } from 'utils/types';
+import type { TestProps } from '~/utils/types';
 import useTheme from '../../hooks/useTheme';
-import type { NumberFieldProps } from '../NumberField';
-import NumberField from '../NumberField';
+import NumberField, { type NumberFieldProps } from '../NumberField';
 import SliderMark from './components/SliderMark';
 import SliderThumb from './components/SliderThumb';
 import SliderTrack from './components/SliderTrack';

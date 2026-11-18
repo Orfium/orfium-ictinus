@@ -1,14 +1,11 @@
 import React from 'react';
-import type { CommonButtonProps } from 'utils/common';
-import type { TestProps } from 'utils/types';
+import type { CommonButtonProps } from '~/utils/common';
+import type { TestProps } from '~/utils/types';
 
-import type { AvatarProps } from 'components/Avatar';
-import Avatar from 'components/Avatar';
-import { BUTTON_COLOR } from 'components/ButtonBase/constants';
-import type { AcceptedIconNames } from 'components/Icon';
-import Icon from 'components/Icon';
-import type { ButtonBaseProps } from '../ButtonBase/ButtonBase';
-import ButtonBase from '../ButtonBase/ButtonBase';
+import Avatar, { type AvatarProps } from '~/components/Avatar';
+import { BUTTON_COLOR } from '~/components/ButtonBase/constants';
+import Icon, { type AcceptedIconNames } from '~/components/Icon';
+import ButtonBase, { type ButtonBaseProps } from '../ButtonBase/ButtonBase';
 
 export type ButtonProps = ButtonBaseProps &
   TestProps &

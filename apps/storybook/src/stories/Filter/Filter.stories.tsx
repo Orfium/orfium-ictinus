@@ -3,7 +3,7 @@ import { IconPrimitive, type IconPrimitiveProps } from '@orfium/ictinus/vanilla'
 import { vars } from '@orfium/tokens';
 import React, { forwardRef } from 'react';
 import { userEvent, within } from 'storybook/test';
-import { FIGMA_URL } from 'utils/common';
+import { FIGMA_URL } from '~/utils/common';
 import * as DatePickerStories from '../DatePicker/DatePicker.stories';
 import Stack from '../storyUtils/Stack';
 import { options } from './constants';

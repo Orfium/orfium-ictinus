@@ -1,5 +1,5 @@
 import React from 'react';
-import { isComponentFunctionType } from 'utils/helpers';
+import { isComponentFunctionType } from '~/utils/helpers';
 
 import { nestedHeaderStyle } from './ContentCell.style';
 import TruncatedContent from '../../../../../TruncatedContent';

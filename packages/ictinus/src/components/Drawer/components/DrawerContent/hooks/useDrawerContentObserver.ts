@@ -4,7 +4,7 @@ import {
   toggleIsScrollbarOnBottom,
   toggleIsScrollbarOnTop,
   useDrawerContext,
-} from 'components/Drawer/DrawerContext';
+} from '~/components/Drawer/DrawerContext';
 
 const useDrawerContentObserver = () => {
   const [, dispatch] = useDrawerContext();

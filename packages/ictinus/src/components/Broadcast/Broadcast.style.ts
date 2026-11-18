@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 import { rem } from 'polished';
-import type { Theme } from 'theme';
+import type { Theme } from '~/theme';
 
 import { vars } from '@orfium/tokens';
 import { generateStylesFromTokens } from '../Typography/utils';

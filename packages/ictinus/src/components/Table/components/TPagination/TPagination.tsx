@@ -1,7 +1,7 @@
-import IconButton from 'components/IconButton';
-import Select from 'components/Select';
-import type { TableProps } from 'components/Table/types';
-import Typography from 'components/Typography';
+import IconButton from '~/components/IconButton';
+import Select from '~/components/Select';
+import type { TableProps } from '~/components/Table/types';
+import Typography from '~/components/Typography';
 import React from 'react';
 import type { TestProps } from '~/utils/types';
 import {

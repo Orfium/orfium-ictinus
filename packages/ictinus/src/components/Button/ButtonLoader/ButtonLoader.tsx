@@ -1,5 +1,5 @@
 import React from 'react';
-import type { TestProps } from 'utils/types';
+import type { TestProps } from '~/utils/types';
 
 import { barStyle, barWrapperStyle, loaderWrapperStyle } from './ButtonLoader.style';
 
