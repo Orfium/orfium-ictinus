@@ -401,8 +401,8 @@ importers:
         specifier: ^0.5.7
         version: 0.5.7(@vanilla-extract/css@1.21.2(babel-plugin-macros@3.1.0))
       '@vanilla-extract/sprinkles':
-        specifier: ^1.6.5
-        version: 1.6.5(@vanilla-extract/css@1.21.2(babel-plugin-macros@3.1.0))
+        specifier: ^1.7.1
+        version: 1.7.1(@vanilla-extract/css@1.21.2(babel-plugin-macros@3.1.0))
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -2998,8 +2998,8 @@ packages:
     peerDependencies:
       rollup: ^2.0.0 || ^3.0.0 || ^4.0.0
 
-  '@vanilla-extract/sprinkles@1.6.5':
-    resolution: {integrity: sha512-HOYidLONR/SeGk8NBAeI64I4gYdsMX9vJmniL13ZcLVwawyK0s2GUENEAcGA+GYLIoeyQB61UqmhqPodJry7zA==}
+  '@vanilla-extract/sprinkles@1.7.1':
+    resolution: {integrity: sha512-2s44Y0pC6rm7VBCrJqj77ImqjxOkmLL5mtv16adMjuedHVHjAeJxFL8K8jg8kGM31IxX484ej1myQjv4qz5JLg==}
     peerDependencies:
       '@vanilla-extract/css': ^1.0.0
 
@@ -8032,7 +8032,7 @@ snapshots:
       - babel-plugin-macros
       - supports-color
 
-  '@vanilla-extract/sprinkles@1.6.5(@vanilla-extract/css@1.21.2(babel-plugin-macros@3.1.0))':
+  '@vanilla-extract/sprinkles@1.7.1(@vanilla-extract/css@1.21.2(babel-plugin-macros@3.1.0))':
     dependencies:
       '@vanilla-extract/css': 1.21.2(babel-plugin-macros@3.1.0)
 
